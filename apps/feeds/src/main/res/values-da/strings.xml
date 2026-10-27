@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Boostet af %1$s</string>
     <string name="feeds_pinned">Fastgjort</string>
     <string name="feeds_visibility_followers">Kun følgere</string>
-    <string name="feeds_show_more">Vis mere</string>
-    <string name="feeds_show_less">Vis mindre</string>
+    <string name="feeds_show_post">Vis indlæg</string>
+    <string name="feeds_hide_post">Skjul indlæg</string>
     <string name="feeds_also_on">Også på %1$s</string>
     <string name="feeds_show_sensitive_media">Vis følsomt medieindhold</string>
     <string name="feeds_poll_closed">Lukket</string>

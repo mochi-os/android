@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s бөлүштү</string>
     <string name="feeds_pinned">Бекитилген</string>
     <string name="feeds_visibility_followers">Жазылуучулар үчүн гана</string>
-    <string name="feeds_show_more">Көбүрөөк көрсөтүү</string>
-    <string name="feeds_show_less">Азыраак көрсөтүү</string>
+    <string name="feeds_show_post">Постту көрсөтүү</string>
+    <string name="feeds_hide_post">Постту жашыруу</string>
     <string name="feeds_also_on">%1$s тармагында да</string>
     <string name="feeds_show_sensitive_media">Сезимтал медианы көрсөтүү</string>
     <string name="feeds_poll_closed">Жабылды</string>

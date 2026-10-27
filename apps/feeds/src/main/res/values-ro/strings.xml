@@ -240,8 +240,8 @@
     <string name="feeds_boosted_by">Distribuit de %1$s</string>
     <string name="feeds_pinned">Fixat</string>
     <string name="feeds_visibility_followers">Doar urmăritori</string>
-    <string name="feeds_show_more">Afișează mai mult</string>
-    <string name="feeds_show_less">Afișează mai puțin</string>
+    <string name="feeds_show_post">Afișează postarea</string>
+    <string name="feeds_hide_post">Ascunde postarea</string>
     <string name="feeds_also_on">Și pe %1$s</string>
     <string name="feeds_show_sensitive_media">Afișează conținutul media sensibil</string>
     <string name="feeds_poll_closed">Închis</string>

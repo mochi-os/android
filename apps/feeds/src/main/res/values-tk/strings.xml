@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s paýlaşdy</string>
     <string name="feeds_pinned">Berkidilen</string>
     <string name="feeds_visibility_followers">Diňe yzarlaýjylar</string>
-    <string name="feeds_show_more">Köpräk görkez</string>
-    <string name="feeds_show_less">Azrak görkez</string>
+    <string name="feeds_show_post">Ýazgyny görkez</string>
+    <string name="feeds_hide_post">Ýazgyny gizle</string>
     <string name="feeds_also_on">Şeýle hem %1$s</string>
     <string name="feeds_show_sensitive_media">Duýgur mediany görkez</string>
     <string name="feeds_poll_closed">Ýapyldy</string>

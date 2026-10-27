@@ -226,8 +226,8 @@
     <string name="feeds_boosted_by">%1$s がブースト</string>
     <string name="feeds_pinned">ピン留め済み</string>
     <string name="feeds_visibility_followers">フォロワーのみ</string>
-    <string name="feeds_show_more">もっと見る</string>
-    <string name="feeds_show_less">折りたたむ</string>
+    <string name="feeds_show_post">投稿を表示</string>
+    <string name="feeds_hide_post">投稿を隠す</string>
     <string name="feeds_also_on">%1$s にも投稿</string>
     <string name="feeds_show_sensitive_media">センシティブなメディアを表示</string>
     <string name="feeds_poll_closed">終了</string>

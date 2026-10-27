@@ -227,8 +227,8 @@
     <string name="feeds_boosted_by">Impulsado por %1$s</string>
     <string name="feeds_pinned">Fijado</string>
     <string name="feeds_visibility_followers">Solo seguidores</string>
-    <string name="feeds_show_more">Mostrar más</string>
-    <string name="feeds_show_less">Mostrar menos</string>
+    <string name="feeds_show_post">Mostrar publicación</string>
+    <string name="feeds_hide_post">Ocultar publicación</string>
     <string name="feeds_also_on">También en %1$s</string>
     <string name="feeds_show_sensitive_media">Mostrar contenido sensible</string>
     <string name="feeds_poll_closed">Cerrada</string>

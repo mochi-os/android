@@ -231,8 +231,8 @@
     <string name="feeds_boosted_by">%1$s mast\'arirqan</string>
     <string name="feeds_pinned">Fijasqa</string>
     <string name="feeds_visibility_followers">Qatiqkunallapaq</string>
-    <string name="feeds_show_more">Astawan rikuchiy</string>
-    <string name="feeds_show_less">Pisita rikuchiy</string>
+    <string name="feeds_show_post">Qillqata rikuchiy</string>
+    <string name="feeds_hide_post">Qillqata pakay</string>
     <string name="feeds_also_on">%1$s-pipas</string>
     <string name="feeds_show_sensitive_media">Sensible multimediata rikuchiy</string>
     <string name="feeds_poll_closed">Wichq\'asqa</string>

@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s द्वारा बूस्ट किया गया</string>
     <string name="feeds_pinned">पिन किया गया</string>
     <string name="feeds_visibility_followers">केवल फ़ॉलोअर्स</string>
-    <string name="feeds_show_more">और दिखाएँ</string>
-    <string name="feeds_show_less">कम दिखाएँ</string>
+    <string name="feeds_show_post">पोस्ट दिखाएँ</string>
+    <string name="feeds_hide_post">पोस्ट छिपाएँ</string>
     <string name="feeds_also_on">%1$s पर भी</string>
     <string name="feeds_show_sensitive_media">संवेदनशील मीडिया दिखाएँ</string>
     <string name="feeds_poll_closed">बंद</string>

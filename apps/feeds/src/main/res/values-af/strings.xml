@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Versterk deur %1$s</string>
     <string name="feeds_pinned">Vasgespeld</string>
     <string name="feeds_visibility_followers">Slegs volgers</string>
-    <string name="feeds_show_more">Wys meer</string>
-    <string name="feeds_show_less">Wys minder</string>
+    <string name="feeds_show_post">Wys plasing</string>
+    <string name="feeds_hide_post">Versteek plasing</string>
     <string name="feeds_also_on">Ook op %1$s</string>
     <string name="feeds_show_sensitive_media">Wys sensitiewe media</string>
     <string name="feeds_poll_closed">Gesluit</string>

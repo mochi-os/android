@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Imeshirikiwa na %1$s</string>
     <string name="feeds_pinned">Imebandikwa</string>
     <string name="feeds_visibility_followers">Wafuasi pekee</string>
-    <string name="feeds_show_more">Onyesha zaidi</string>
-    <string name="feeds_show_less">Onyesha kidogo</string>
+    <string name="feeds_show_post">Onyesha chapisho</string>
+    <string name="feeds_hide_post">Ficha chapisho</string>
     <string name="feeds_also_on">Pia kwenye %1$s</string>
     <string name="feeds_show_sensitive_media">Onyesha midia nyeti</string>
     <string name="feeds_poll_closed">Imefungwa</string>

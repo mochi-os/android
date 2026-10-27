@@ -256,8 +256,8 @@
     <string name="feeds_boosted_by">Maqsum minn %1$s</string>
     <string name="feeds_pinned">Pinnjat</string>
     <string name="feeds_visibility_followers">Segwaċi biss</string>
-    <string name="feeds_show_more">Uri aktar</string>
-    <string name="feeds_show_less">Uri inqas</string>
+    <string name="feeds_show_post">Uri l-post</string>
+    <string name="feeds_hide_post">Aħbi l-post</string>
     <string name="feeds_also_on">Ukoll fuq %1$s</string>
     <string name="feeds_show_sensitive_media">Uri l-midja sensittiva</string>
     <string name="feeds_poll_closed">Magħluq</string>

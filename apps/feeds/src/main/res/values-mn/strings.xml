@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s хуваалцсан</string>
     <string name="feeds_pinned">Бэхлэгдсэн</string>
     <string name="feeds_visibility_followers">Зөвхөн дагагчид</string>
-    <string name="feeds_show_more">Илүү харуулах</string>
-    <string name="feeds_show_less">Хураах</string>
+    <string name="feeds_show_post">Нийтлэлийг харуулах</string>
+    <string name="feeds_hide_post">Нийтлэлийг нуух</string>
     <string name="feeds_also_on">Мөн %1$s дээр</string>
     <string name="feeds_show_sensitive_media">Эмзэг медиаг харуулах</string>
     <string name="feeds_poll_closed">Хаагдсан</string>

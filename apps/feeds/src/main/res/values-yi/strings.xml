@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">פֿאַרשפּרייט דורך %1$s</string>
     <string name="feeds_pinned">פֿעסטגעמאַכט</string>
     <string name="feeds_visibility_followers">נאָר נאָכפֿאָלגער</string>
-    <string name="feeds_show_more">ווײַזן מער</string>
-    <string name="feeds_show_less">ווײַזן ווייניקער</string>
+    <string name="feeds_show_post">ווײַזן פּאָסט</string>
+    <string name="feeds_hide_post">באַהאַלטן פּאָסט</string>
     <string name="feeds_also_on">אויך אויף %1$s</string>
     <string name="feeds_show_sensitive_media">ווײַזן סענסיטיווע מעדיע</string>
     <string name="feeds_poll_closed">פֿאַרמאַכט</string>

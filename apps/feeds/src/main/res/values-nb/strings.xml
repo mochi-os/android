@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Fremhevet av %1$s</string>
     <string name="feeds_pinned">Festet</string>
     <string name="feeds_visibility_followers">Bare følgere</string>
-    <string name="feeds_show_more">Vis mer</string>
-    <string name="feeds_show_less">Vis mindre</string>
+    <string name="feeds_show_post">Vis innlegg</string>
+    <string name="feeds_hide_post">Skjul innlegg</string>
     <string name="feeds_also_on">Også på %1$s</string>
     <string name="feeds_show_sensitive_media">Vis sensitive medier</string>
     <string name="feeds_poll_closed">Avsluttet</string>

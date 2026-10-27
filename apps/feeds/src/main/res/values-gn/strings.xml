@@ -231,8 +231,8 @@
     <string name="feeds_boosted_by">Omombarete %1$s</string>
     <string name="feeds_pinned">Oñembojáma</string>
     <string name="feeds_visibility_followers">Tapykuerihakuéra añoite</string>
-    <string name="feeds_show_more">Ehechauka hetave</string>
-    <string name="feeds_show_less">Ehechauka sa\'ive</string>
+    <string name="feeds_show_post">Ehechauka marandu</string>
+    <string name="feeds_hide_post">Ekañymi marandu</string>
     <string name="feeds_also_on">%1$s-pe avei</string>
     <string name="feeds_show_sensitive_media">Ehechauka ta\'ãnga sensible</string>
     <string name="feeds_poll_closed">Oñembotýma</string>

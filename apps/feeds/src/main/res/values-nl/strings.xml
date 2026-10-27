@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Geboost door %1$s</string>
     <string name="feeds_pinned">Vastgemaakt</string>
     <string name="feeds_visibility_followers">Alleen volgers</string>
-    <string name="feeds_show_more">Meer tonen</string>
-    <string name="feeds_show_less">Minder tonen</string>
+    <string name="feeds_show_post">Bericht tonen</string>
+    <string name="feeds_hide_post">Bericht verbergen</string>
     <string name="feeds_also_on">Ook op %1$s</string>
     <string name="feeds_show_sensitive_media">Gevoelige media tonen</string>
     <string name="feeds_poll_closed">Gesloten</string>

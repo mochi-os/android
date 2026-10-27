@@ -240,8 +240,8 @@
     <string name="feeds_boosted_by">Kopīgoja %1$s</string>
     <string name="feeds_pinned">Piesprausts</string>
     <string name="feeds_visibility_followers">Tikai sekotājiem</string>
-    <string name="feeds_show_more">Rādīt vairāk</string>
-    <string name="feeds_show_less">Rādīt mazāk</string>
+    <string name="feeds_show_post">Rādīt ierakstu</string>
+    <string name="feeds_hide_post">Paslēpt ierakstu</string>
     <string name="feeds_also_on">Arī tīklā %1$s</string>
     <string name="feeds_show_sensitive_media">Rādīt sensitīvo multivides saturu</string>
     <string name="feeds_poll_closed">Slēgta</string>

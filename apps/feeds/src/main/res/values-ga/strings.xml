@@ -254,8 +254,8 @@
     <string name="feeds_boosted_by">Treisithe ag %1$s</string>
     <string name="feeds_pinned">Pionnáilte</string>
     <string name="feeds_visibility_followers">Lucht leanúna amháin</string>
-    <string name="feeds_show_more">Taispeáin níos mó</string>
-    <string name="feeds_show_less">Taispeáin níos lú</string>
+    <string name="feeds_show_post">Taispeáin postáil</string>
+    <string name="feeds_hide_post">Folaigh postáil</string>
     <string name="feeds_also_on">Ar %1$s freisin</string>
     <string name="feeds_show_sensitive_media">Taispeáin meáin íogaire</string>
     <string name="feeds_poll_closed">Dúnta</string>

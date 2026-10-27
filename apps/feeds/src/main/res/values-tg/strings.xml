@@ -231,8 +231,8 @@
     <string name="feeds_boosted_by">%1$s мубодила кард</string>
     <string name="feeds_pinned">Часпонидашуда</string>
     <string name="feeds_visibility_followers">Танҳо обуначиён</string>
-    <string name="feeds_show_more">Бештар нишон додан</string>
-    <string name="feeds_show_less">Камтар нишон додан</string>
+    <string name="feeds_show_post">Нишон додани паём</string>
+    <string name="feeds_hide_post">Пинҳон кардани паём</string>
     <string name="feeds_also_on">Инчунин дар %1$s</string>
     <string name="feeds_show_sensitive_media">Нишон додани медиаи ҳассос</string>
     <string name="feeds_poll_closed">Баста шуд</string>

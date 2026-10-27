@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s نے بوسٹ کیا</string>
     <string name="feeds_pinned">pin شدہ</string>
     <string name="feeds_visibility_followers">صرف فالوورز</string>
-    <string name="feeds_show_more">مزید دکھائیں</string>
-    <string name="feeds_show_less">کم دکھائیں</string>
+    <string name="feeds_show_post">پوسٹ دکھائیں</string>
+    <string name="feeds_hide_post">پوسٹ چھپائیں</string>
     <string name="feeds_also_on">%1$s پر بھی</string>
     <string name="feeds_show_sensitive_media">حساس میڈیا دکھائیں</string>
     <string name="feeds_poll_closed">بند</string>

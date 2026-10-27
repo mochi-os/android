@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Տարածել է %1$s-ը</string>
     <string name="feeds_pinned">Ամրացված</string>
     <string name="feeds_visibility_followers">Միայն հետևորդներ</string>
-    <string name="feeds_show_more">Ցույց տալ ավելին</string>
-    <string name="feeds_show_less">Ցույց տալ ավելի քիչ</string>
+    <string name="feeds_show_post">Ցույց տալ գրառումը</string>
+    <string name="feeds_hide_post">Թաքցնել գրառումը</string>
     <string name="feeds_also_on">Նաև %1$s-ում</string>
     <string name="feeds_show_sensitive_media">Ցույց տալ զգայուն մեդիան</string>
     <string name="feeds_poll_closed">Փակված է</string>

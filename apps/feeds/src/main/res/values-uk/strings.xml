@@ -247,8 +247,8 @@
     <string name="feeds_boosted_by">%1$s поширив(ла)</string>
     <string name="feeds_pinned">Закріплено</string>
     <string name="feeds_visibility_followers">Лише для підписників</string>
-    <string name="feeds_show_more">Показати більше</string>
-    <string name="feeds_show_less">Згорнути</string>
+    <string name="feeds_show_post">Показати допис</string>
+    <string name="feeds_hide_post">Сховати допис</string>
     <string name="feeds_also_on">Також у %1$s</string>
     <string name="feeds_show_sensitive_media">Показати делікатні медіа</string>
     <string name="feeds_poll_closed">Завершено</string>

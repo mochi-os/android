@@ -235,8 +235,8 @@
     <string name="feeds_boosted_by">Framheva av %1$s</string>
     <string name="feeds_pinned">Festa</string>
     <string name="feeds_visibility_followers">Berre følgjarar</string>
-    <string name="feeds_show_more">Vis meir</string>
-    <string name="feeds_show_less">Vis mindre</string>
+    <string name="feeds_show_post">Vis innlegget</string>
+    <string name="feeds_hide_post">Gøym innlegget</string>
     <string name="feeds_also_on">Òg på %1$s</string>
     <string name="feeds_show_sensitive_media">Vis sensitivt medieinnhald</string>
     <string name="feeds_poll_closed">Avslutta</string>

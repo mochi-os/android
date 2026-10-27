@@ -235,8 +235,8 @@
     <string name="feeds_boosted_by">%1$s بڵاوی کردەوە</string>
     <string name="feeds_pinned">چەسپێنراو</string>
     <string name="feeds_visibility_followers">تەنها شوێنکەوتووان</string>
-    <string name="feeds_show_more">زیاتر پیشان بدە</string>
-    <string name="feeds_show_less">کەمتر پیشان بدە</string>
+    <string name="feeds_show_post">پۆست پیشان بدە</string>
+    <string name="feeds_hide_post">پۆست بشارەوە</string>
     <string name="feeds_also_on">هەروەها لە %1$s</string>
     <string name="feeds_show_sensitive_media">میدیای هەستیار پیشان بدە</string>
     <string name="feeds_poll_closed">داخراوە</string>

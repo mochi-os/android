@@ -275,8 +275,8 @@
     <string name="feeds_pinned">Pinned</string>
     <string name="feeds_visibility_followers">Followers only</string>
     <string name="feeds_visibility_unlisted">Unlisted</string>
-    <string name="feeds_show_more">Show more</string>
-    <string name="feeds_show_less">Show less</string>
+    <string name="feeds_show_post">Show post</string>
+    <string name="feeds_hide_post">Hide post</string>
     <string name="feeds_also_on">Also on %1$s</string>
     <plurals name="feeds_boosted_times">
         <item quantity="one">Boosted %s time</item>

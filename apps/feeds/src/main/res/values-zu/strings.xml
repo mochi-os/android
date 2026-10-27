@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Kukhuthazwe ngu-%1$s</string>
     <string name="feeds_pinned">Kuphiniwe</string>
     <string name="feeds_visibility_followers">Abalandeli kuphela</string>
-    <string name="feeds_show_more">Bonisa okuningi</string>
-    <string name="feeds_show_less">Bonisa okuncane</string>
+    <string name="feeds_show_post">Bonisa okuthunyelwe</string>
+    <string name="feeds_hide_post">Fihla okuthunyelwe</string>
     <string name="feeds_also_on">Futhi ku-%1$s</string>
     <string name="feeds_show_sensitive_media">Bonisa imidiya ebucayi</string>
     <string name="feeds_poll_closed">Kuvaliwe</string>

@@ -231,8 +231,8 @@
     <string name="feeds_boosted_by">Dibagikeun ku %1$s</string>
     <string name="feeds_pinned">Dipin</string>
     <string name="feeds_visibility_followers">Ngan pengikut</string>
-    <string name="feeds_show_more">Témbongkeun leuwih loba</string>
-    <string name="feeds_show_less">Témbongkeun saeutik</string>
+    <string name="feeds_show_post">Témbongkeun pos</string>
+    <string name="feeds_hide_post">Sumputkeun pos</string>
     <string name="feeds_also_on">Ogé di %1$s</string>
     <string name="feeds_show_sensitive_media">Témbongkeun média sénsitip</string>
     <string name="feeds_poll_closed">Ditutup</string>

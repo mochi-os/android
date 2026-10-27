@@ -240,8 +240,8 @@
     <string name="feeds_boosted_by">%1$s je podijelio/la</string>
     <string name="feeds_pinned">Pričvršćeno</string>
     <string name="feeds_visibility_followers">Samo pratitelji</string>
-    <string name="feeds_show_more">Prikaži više</string>
-    <string name="feeds_show_less">Prikaži manje</string>
+    <string name="feeds_show_post">Prikaži objavu</string>
+    <string name="feeds_hide_post">Sakrij objavu</string>
     <string name="feeds_also_on">Također na %1$s</string>
     <string name="feeds_show_sensitive_media">Prikaži osjetljive medije</string>
     <string name="feeds_poll_closed">Zatvorena</string>

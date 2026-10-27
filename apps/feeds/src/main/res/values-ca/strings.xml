@@ -235,8 +235,8 @@
     <string name="feeds_boosted_by">Impulsat per %1$s</string>
     <string name="feeds_pinned">Fixat</string>
     <string name="feeds_visibility_followers">Només seguidors</string>
-    <string name="feeds_show_more">Mostra\'n més</string>
-    <string name="feeds_show_less">Mostra\'n menys</string>
+    <string name="feeds_show_post">Mostra la publicació</string>
+    <string name="feeds_hide_post">Amaga la publicació</string>
     <string name="feeds_also_on">També a %1$s</string>
     <string name="feeds_show_sensitive_media">Mostra el contingut multimèdia sensible</string>
     <string name="feeds_poll_closed">Tancada</string>

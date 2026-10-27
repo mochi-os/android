@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Jagas %1$s</string>
     <string name="feeds_pinned">Kinnitatud</string>
     <string name="feeds_visibility_followers">Ainult jälgijad</string>
-    <string name="feeds_show_more">Näita rohkem</string>
-    <string name="feeds_show_less">Näita vähem</string>
+    <string name="feeds_show_post">Näita postitust</string>
+    <string name="feeds_hide_post">Peida postitus</string>
     <string name="feeds_also_on">Ka võrgus %1$s</string>
     <string name="feeds_show_sensitive_media">Näita tundlikku meediat</string>
     <string name="feeds_poll_closed">Suletud</string>

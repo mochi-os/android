@@ -235,8 +235,8 @@
     <string name="feeds_boosted_by">%1$s paylaşıb</string>
     <string name="feeds_pinned">Sancaqlanıb</string>
     <string name="feeds_visibility_followers">Yalnız izləyicilər</string>
-    <string name="feeds_show_more">Daha çox göstər</string>
-    <string name="feeds_show_less">Daha az göstər</string>
+    <string name="feeds_show_post">Postu göstər</string>
+    <string name="feeds_hide_post">Postu gizlət</string>
     <string name="feeds_also_on">Həmçinin: %1$s</string>
     <string name="feeds_show_sensitive_media">Həssas medianı göstər</string>
     <string name="feeds_poll_closed">Bağlanıb</string>

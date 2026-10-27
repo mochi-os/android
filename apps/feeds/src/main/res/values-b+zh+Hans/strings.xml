@@ -226,8 +226,8 @@
     <string name="feeds_boosted_by">%1$s 转发了</string>
     <string name="feeds_pinned">已置顶</string>
     <string name="feeds_visibility_followers">仅关注者</string>
-    <string name="feeds_show_more">显示更多</string>
-    <string name="feeds_show_less">收起</string>
+    <string name="feeds_show_post">显示帖子</string>
+    <string name="feeds_hide_post">隐藏帖子</string>
     <string name="feeds_also_on">也发布于 %1$s</string>
     <string name="feeds_show_sensitive_media">显示敏感媒体</string>
     <string name="feeds_poll_closed">已结束</string>

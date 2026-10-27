@@ -247,8 +247,8 @@
     <string name="feeds_boosted_by">Podbity przez %1$s</string>
     <string name="feeds_pinned">Przypięto</string>
     <string name="feeds_visibility_followers">Tylko obserwujący</string>
-    <string name="feeds_show_more">Pokaż więcej</string>
-    <string name="feeds_show_less">Pokaż mniej</string>
+    <string name="feeds_show_post">Pokaż wpis</string>
+    <string name="feeds_hide_post">Ukryj wpis</string>
     <string name="feeds_also_on">Również w serwisie %1$s</string>
     <string name="feeds_show_sensitive_media">Pokaż wrażliwe multimedia</string>
     <string name="feeds_poll_closed">Zakończona</string>

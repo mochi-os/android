@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s பூஸ்ட் செய்தார்</string>
     <string name="feeds_pinned">Pin செய்யப்பட்டது</string>
     <string name="feeds_visibility_followers">பின்தொடர்பவர்கள் மட்டும்</string>
-    <string name="feeds_show_more">மேலும் காட்டு</string>
-    <string name="feeds_show_less">குறைவாகக் காட்டு</string>
+    <string name="feeds_show_post">பதிவைக் காட்டு</string>
+    <string name="feeds_hide_post">பதிவை மறை</string>
     <string name="feeds_also_on">%1$s இலும்</string>
     <string name="feeds_show_sensitive_media">உணர்திறன் மிக்க ஊடகத்தைக் காட்டு</string>
     <string name="feeds_poll_closed">மூடப்பட்டது</string>

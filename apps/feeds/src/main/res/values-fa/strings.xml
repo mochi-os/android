@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">بازنشرشده توسط %1$s</string>
     <string name="feeds_pinned">سنجاق‌شده</string>
     <string name="feeds_visibility_followers">فقط دنبال‌کنندگان</string>
-    <string name="feeds_show_more">نمایش بیشتر</string>
-    <string name="feeds_show_less">نمایش کمتر</string>
+    <string name="feeds_show_post">نمایش پست</string>
+    <string name="feeds_hide_post">پنهان کردن پست</string>
     <string name="feeds_also_on">همچنین در %1$s</string>
     <string name="feeds_show_sensitive_media">نمایش رسانه حساس</string>
     <string name="feeds_poll_closed">بسته‌شده</string>

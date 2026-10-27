@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s විසින් බෙදාගන්නා ලදී</string>
     <string name="feeds_pinned">pin කර ඇත</string>
     <string name="feeds_visibility_followers">අනුගාමිකයන්ට පමණි</string>
-    <string name="feeds_show_more">තවත් පෙන්වන්න</string>
-    <string name="feeds_show_less">අඩුවෙන් පෙන්වන්න</string>
+    <string name="feeds_show_post">පළ කිරීම පෙන්වන්න</string>
+    <string name="feeds_hide_post">පළ කිරීම සඟවන්න</string>
     <string name="feeds_also_on">%1$s හි ද</string>
     <string name="feeds_show_sensitive_media">සංවේදී මාධ්‍ය පෙන්වන්න</string>
     <string name="feeds_poll_closed">වසා ඇත</string>

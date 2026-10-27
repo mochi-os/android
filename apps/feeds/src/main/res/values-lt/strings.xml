@@ -247,8 +247,8 @@
     <string name="feeds_boosted_by">Pasidalino %1$s</string>
     <string name="feeds_pinned">Prisegta</string>
     <string name="feeds_visibility_followers">Tik sekėjams</string>
-    <string name="feeds_show_more">Rodyti daugiau</string>
-    <string name="feeds_show_less">Rodyti mažiau</string>
+    <string name="feeds_show_post">Rodyti įrašą</string>
+    <string name="feeds_hide_post">Slėpti įrašą</string>
     <string name="feeds_also_on">Taip pat tinkle %1$s</string>
     <string name="feeds_show_sensitive_media">Rodyti jautrią mediją</string>
     <string name="feeds_poll_closed">Uždaryta</string>

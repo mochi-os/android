@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s بوسٽ ڪيو</string>
     <string name="feeds_pinned">پن ٿيل</string>
     <string name="feeds_visibility_followers">صرف فالوورز</string>
-    <string name="feeds_show_more">وڌيڪ ڏيکاريو</string>
-    <string name="feeds_show_less">گهٽ ڏيکاريو</string>
+    <string name="feeds_show_post">پوسٽ ڏيکاريو</string>
+    <string name="feeds_hide_post">پوسٽ لڪايو</string>
     <string name="feeds_also_on">%1$s تي پڻ</string>
     <string name="feeds_show_sensitive_media">حساس ميڊيا ڏيکاريو</string>
     <string name="feeds_poll_closed">بند</string>

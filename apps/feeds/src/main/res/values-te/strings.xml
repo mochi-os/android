@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s బూస్ట్ చేశారు</string>
     <string name="feeds_pinned">పిన్ చేయబడింది</string>
     <string name="feeds_visibility_followers">అనుచరులకు మాత్రమే</string>
-    <string name="feeds_show_more">మరింత చూపించండి</string>
-    <string name="feeds_show_less">తక్కువ చూపించండి</string>
+    <string name="feeds_show_post">పోస్ట్‌ను చూపించండి</string>
+    <string name="feeds_hide_post">పోస్ట్‌ను దాచండి</string>
     <string name="feeds_also_on">%1$sలో కూడా</string>
     <string name="feeds_show_sensitive_media">సున్నితమైన మీడియాను చూపించండి</string>
     <string name="feeds_poll_closed">ముగిసింది</string>

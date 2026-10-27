@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Përforcuar nga %1$s</string>
     <string name="feeds_pinned">I fiksuar</string>
     <string name="feeds_visibility_followers">Vetëm ndjekësit</string>
-    <string name="feeds_show_more">Shfaq më shumë</string>
-    <string name="feeds_show_less">Shfaq më pak</string>
+    <string name="feeds_show_post">Shfaq postimin</string>
+    <string name="feeds_hide_post">Fshih postimin</string>
     <string name="feeds_also_on">Edhe në %1$s</string>
     <string name="feeds_show_sensitive_media">Shfaq median me ndjeshmëri</string>
     <string name="feeds_poll_closed">E mbyllur</string>

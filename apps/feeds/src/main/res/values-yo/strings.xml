@@ -231,8 +231,8 @@
     <string name="feeds_boosted_by">%1$s ló gbé e ga</string>
     <string name="feeds_pinned">Ti tẹ̀</string>
     <string name="feeds_visibility_followers">Àwọn olùtẹ̀lé nìkan</string>
-    <string name="feeds_show_more">Fi púpọ̀ sí i hàn</string>
-    <string name="feeds_show_less">Fi díẹ̀ hàn</string>
+    <string name="feeds_show_post">Fi ìfìránṣẹ́ hàn</string>
+    <string name="feeds_hide_post">Fi ìfìránṣẹ́ pamọ́</string>
     <string name="feeds_also_on">Ó tún wà lórí %1$s</string>
     <string name="feeds_show_sensitive_media">Fi mídíà tó lè kàn ní hàn</string>
     <string name="feeds_poll_closed">Ó ti parí</string>

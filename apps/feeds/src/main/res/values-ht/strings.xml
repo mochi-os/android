@@ -232,8 +232,8 @@
     <string name="feeds_boosted_by">Pataje pa %1$s</string>
     <string name="feeds_pinned">Pini</string>
     <string name="feeds_visibility_followers">Abòne sèlman</string>
-    <string name="feeds_show_more">Montre plis</string>
-    <string name="feeds_show_less">Montre mwens</string>
+    <string name="feeds_show_post">Montre piblikasyon</string>
+    <string name="feeds_hide_post">Kache piblikasyon</string>
     <string name="feeds_also_on">Sou %1$s tou</string>
     <string name="feeds_show_sensitive_media">Montre medya sansib</string>
     <string name="feeds_poll_closed">Fèmen</string>

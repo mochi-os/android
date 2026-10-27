@@ -226,8 +226,8 @@
     <string name="feeds_boosted_by">ចែករំលែកដោយ %1$s</string>
     <string name="feeds_pinned">បានខ្ទាស់</string>
     <string name="feeds_visibility_followers">សម្រាប់តែអ្នកតាមដាន</string>
-    <string name="feeds_show_more">បង្ហាញបន្ថែម</string>
-    <string name="feeds_show_less">បង្ហាញតិច</string>
+    <string name="feeds_show_post">បង្ហាញការបង្ហោះ</string>
+    <string name="feeds_hide_post">លាក់ការបង្ហោះ</string>
     <string name="feeds_also_on">មាននៅលើ %1$s ផងដែរ</string>
     <string name="feeds_show_sensitive_media">បង្ហាញមេឌៀរសើប</string>
     <string name="feeds_poll_closed">បានបិទ</string>

@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$sn qoodame</string>
     <string name="feeds_pinned">Maxxanfame</string>
     <string name="feeds_visibility_followers">Hordoftoota qofa</string>
-    <string name="feeds_show_more">Dabalataan agarsiisi</string>
-    <string name="feeds_show_less">Xiqqaa agarsiisi</string>
+    <string name="feeds_show_post">Maxxansa agarsiisi</string>
+    <string name="feeds_hide_post">Maxxansa dhoksi</string>
     <string name="feeds_also_on">%1$s irrattis</string>
     <string name="feeds_show_sensitive_media">Miidiyaa miira tuqu agarsiisi</string>
     <string name="feeds_poll_closed">Cufameera</string>

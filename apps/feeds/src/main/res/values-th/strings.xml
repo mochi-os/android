@@ -226,8 +226,8 @@
     <string name="feeds_boosted_by">บูสต์โดย %1$s</string>
     <string name="feeds_pinned">ปักหมุดแล้ว</string>
     <string name="feeds_visibility_followers">เฉพาะผู้ติดตาม</string>
-    <string name="feeds_show_more">แสดงเพิ่มเติม</string>
-    <string name="feeds_show_less">แสดงน้อยลง</string>
+    <string name="feeds_show_post">แสดงโพสต์</string>
+    <string name="feeds_hide_post">ซ่อนโพสต์</string>
     <string name="feeds_also_on">มีบน %1$s ด้วย</string>
     <string name="feeds_show_sensitive_media">แสดงสื่อที่ละเอียดอ่อน</string>
     <string name="feeds_poll_closed">ปิดแล้ว</string>

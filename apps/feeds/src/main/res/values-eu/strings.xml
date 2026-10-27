@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s(e)k bultzatua</string>
     <string name="feeds_pinned">Finkatuta</string>
     <string name="feeds_visibility_followers">Jarraitzaileentzat soilik</string>
-    <string name="feeds_show_more">Erakutsi gehiago</string>
-    <string name="feeds_show_less">Erakutsi gutxiago</string>
+    <string name="feeds_show_post">Erakutsi argitalpena</string>
+    <string name="feeds_hide_post">Ezkutatu argitalpena</string>
     <string name="feeds_also_on">%1$s(e)n ere bai</string>
     <string name="feeds_show_sensitive_media">Erakutsi multimedia hunkigarria</string>
     <string name="feeds_poll_closed">Itxita</string>

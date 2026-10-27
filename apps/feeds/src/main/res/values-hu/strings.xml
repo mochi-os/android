@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Megosztotta: %1$s</string>
     <string name="feeds_pinned">Rögzítve</string>
     <string name="feeds_visibility_followers">Csak követőknek</string>
-    <string name="feeds_show_more">Több megjelenítése</string>
-    <string name="feeds_show_less">Kevesebb</string>
+    <string name="feeds_show_post">Bejegyzés megjelenítése</string>
+    <string name="feeds_hide_post">Bejegyzés elrejtése</string>
     <string name="feeds_also_on">Itt is: %1$s</string>
     <string name="feeds_show_sensitive_media">Érzékeny média megjelenítése</string>
     <string name="feeds_poll_closed">Lezárva</string>

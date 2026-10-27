@@ -226,8 +226,8 @@
     <string name="feeds_boosted_by">%1$s님이 부스트함</string>
     <string name="feeds_pinned">고정됨</string>
     <string name="feeds_visibility_followers">팔로워만</string>
-    <string name="feeds_show_more">더 보기</string>
-    <string name="feeds_show_less">간략히 보기</string>
+    <string name="feeds_show_post">게시물 보기</string>
+    <string name="feeds_hide_post">게시물 숨기기</string>
     <string name="feeds_also_on">%1$s에도 게시됨</string>
     <string name="feeds_show_sensitive_media">민감한 미디어 보기</string>
     <string name="feeds_poll_closed">마감됨</string>

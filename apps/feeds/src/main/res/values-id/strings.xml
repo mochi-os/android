@@ -230,8 +230,8 @@
     <string name="feeds_boosted_by">Dibagikan oleh %1$s</string>
     <string name="feeds_pinned">Disematkan</string>
     <string name="feeds_visibility_followers">Hanya pengikut</string>
-    <string name="feeds_show_more">Tampilkan lebih banyak</string>
-    <string name="feeds_show_less">Tampilkan lebih sedikit</string>
+    <string name="feeds_show_post">Tampilkan postingan</string>
+    <string name="feeds_hide_post">Sembunyikan postingan</string>
     <string name="feeds_also_on">Juga di %1$s</string>
     <string name="feeds_show_sensitive_media">Tampilkan media sensitif</string>
     <string name="feeds_poll_closed">Ditutup</string>

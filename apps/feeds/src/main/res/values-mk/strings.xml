@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Споделено од %1$s</string>
     <string name="feeds_pinned">Закачено</string>
     <string name="feeds_visibility_followers">Само следбеници</string>
-    <string name="feeds_show_more">Прикажи повеќе</string>
-    <string name="feeds_show_less">Прикажи помалку</string>
+    <string name="feeds_show_post">Прикажи објава</string>
+    <string name="feeds_hide_post">Скриј објава</string>
     <string name="feeds_also_on">Исто така на %1$s</string>
     <string name="feeds_show_sensitive_media">Прикажи чувствителни медиуми</string>
     <string name="feeds_poll_closed">Затворена</string>

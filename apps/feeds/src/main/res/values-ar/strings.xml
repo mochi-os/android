@@ -261,8 +261,8 @@
     <string name="feeds_boosted_by">أعاد نشره %1$s</string>
     <string name="feeds_pinned">مثبت</string>
     <string name="feeds_visibility_followers">المتابعون فقط</string>
-    <string name="feeds_show_more">عرض المزيد</string>
-    <string name="feeds_show_less">عرض أقل</string>
+    <string name="feeds_show_post">عرض المنشور</string>
+    <string name="feeds_hide_post">إخفاء المنشور</string>
     <string name="feeds_also_on">أيضًا على %1$s</string>
     <string name="feeds_show_sensitive_media">عرض الوسائط الحساسة</string>
     <string name="feeds_poll_closed">مغلق</string>

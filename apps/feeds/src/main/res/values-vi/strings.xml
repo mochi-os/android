@@ -226,8 +226,8 @@
     <string name="feeds_boosted_by">%1$s đã chia sẻ lại</string>
     <string name="feeds_pinned">Đã ghim</string>
     <string name="feeds_visibility_followers">Chỉ người theo dõi</string>
-    <string name="feeds_show_more">Xem thêm</string>
-    <string name="feeds_show_less">Thu gọn</string>
+    <string name="feeds_show_post">Hiện bài viết</string>
+    <string name="feeds_hide_post">Ẩn bài viết</string>
     <string name="feeds_also_on">Cũng có trên %1$s</string>
     <string name="feeds_show_sensitive_media">Hiện phương tiện nhạy cảm</string>
     <string name="feeds_poll_closed">Đã đóng</string>

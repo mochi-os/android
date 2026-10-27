@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">በ%1$s ተጋርቷል</string>
     <string name="feeds_pinned">ተሰክቷል</string>
     <string name="feeds_visibility_followers">ለተከታዮች ብቻ</string>
-    <string name="feeds_show_more">ተጨማሪ አሳይ</string>
-    <string name="feeds_show_less">ያነሰ አሳይ</string>
+    <string name="feeds_show_post">ልጥፍ አሳይ</string>
+    <string name="feeds_hide_post">ልጥፍ ደብቅ</string>
     <string name="feeds_also_on">በ%1$s ላይም</string>
     <string name="feeds_show_sensitive_media">ስሱ ሚዲያ አሳይ</string>
     <string name="feeds_poll_closed">ተዘግቷል</string>

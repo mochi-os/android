@@ -142,7 +142,7 @@ class PostNetworksScreenTest {
     }
 
     @Test
-    fun `a warning hides what follows until the reader shows more`() {
+    fun `a warning hides what follows until the reader opens its strip`() {
         rule.setContent {
             var revealed by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(false) }
             androidx.compose.foundation.layout.Column {
@@ -151,9 +151,12 @@ class PostNetworksScreenTest {
             }
         }
         rule.onAllNodesWithText("Behind the warning").assertCountEquals(0)
-        rule.onNodeWithText("Show more").performClick()
+        rule.onNodeWithText("Show post").assertIsDisplayed()
+        // A tap anywhere on the strip opens it, the warning's own text too.
+        rule.onNodeWithText("Spoilers").performClick()
         rule.onNodeWithText("Behind the warning").assertIsDisplayed()
-        rule.onNodeWithText("Show less").assertIsDisplayed()
+        rule.onNodeWithText("Hide post").performClick()
+        rule.onAllNodesWithText("Behind the warning").assertCountEquals(0)
     }
 
     @Test

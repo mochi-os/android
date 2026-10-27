@@ -247,8 +247,8 @@
     <string name="feeds_boosted_by">הודהד על ידי %1$s</string>
     <string name="feeds_pinned">מוצמד</string>
     <string name="feeds_visibility_followers">עוקבים בלבד</string>
-    <string name="feeds_show_more">הצג עוד</string>
-    <string name="feeds_show_less">הצג פחות</string>
+    <string name="feeds_show_post">הצג פוסט</string>
+    <string name="feeds_hide_post">הסתר פוסט</string>
     <string name="feeds_also_on">גם ב-%1$s</string>
     <string name="feeds_show_sensitive_media">הצג מדיה רגישה</string>
     <string name="feeds_poll_closed">נסגר</string>

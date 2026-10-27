@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">د %1$s له خوا شریک شوی</string>
     <string name="feeds_pinned">پن شوی</string>
     <string name="feeds_visibility_followers">یوازې پیروان</string>
-    <string name="feeds_show_more">نور وښایاست</string>
-    <string name="feeds_show_less">لږ وښایاست</string>
+    <string name="feeds_show_post">پوسټ وښایاست</string>
+    <string name="feeds_hide_post">پوسټ پټ کړئ</string>
     <string name="feeds_also_on">په %1$s کې هم</string>
     <string name="feeds_show_sensitive_media">حساسه رسنۍ وښایاست</string>
     <string name="feeds_poll_closed">تړل شوی</string>

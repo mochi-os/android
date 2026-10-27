@@ -230,8 +230,8 @@
     <string name="feeds_pinned">已置頂</string>
     <string name="feeds_visibility_followers">只限追蹤者</string>
     <string name="feeds_visibility_unlisted">唔公開列出</string>
-    <string name="feeds_show_more">顯示更多</string>
-    <string name="feeds_show_less">顯示少啲</string>
+    <string name="feeds_show_post">顯示貼文</string>
+    <string name="feeds_hide_post">隱藏貼文</string>
     <string name="feeds_also_on">%1$s 上面都有</string>
     <string name="feeds_show_sensitive_media">顯示敏感媒體</string>
     <string name="feeds_poll_closed">已結束</string>

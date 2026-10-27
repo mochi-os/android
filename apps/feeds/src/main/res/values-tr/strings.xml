@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s boostladı</string>
     <string name="feeds_pinned">Sabitlendi</string>
     <string name="feeds_visibility_followers">Yalnızca takipçiler</string>
-    <string name="feeds_show_more">Daha fazla göster</string>
-    <string name="feeds_show_less">Daha az göster</string>
+    <string name="feeds_show_post">Gönderiyi göster</string>
+    <string name="feeds_hide_post">Gönderiyi gizle</string>
     <string name="feeds_also_on">%1$s üzerinde de</string>
     <string name="feeds_show_sensitive_media">Hassas medyayı göster</string>
     <string name="feeds_poll_closed">Kapandı</string>

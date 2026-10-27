@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s ya haɓaka</string>
     <string name="feeds_pinned">An pin</string>
     <string name="feeds_visibility_followers">Mabiya kawai</string>
-    <string name="feeds_show_more">Nuna ƙari</string>
-    <string name="feeds_show_less">Nuna kaɗan</string>
+    <string name="feeds_show_post">Nuna post</string>
+    <string name="feeds_hide_post">Ɓoye post</string>
     <string name="feeds_also_on">Har ila yau a %1$s</string>
     <string name="feeds_show_sensitive_media">Nuna hotuna masu tayar da hankali</string>
     <string name="feeds_poll_closed">An rufe</string>

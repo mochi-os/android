@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Endurbirt af %1$s</string>
     <string name="feeds_pinned">Fest</string>
     <string name="feeds_visibility_followers">Aðeins fylgjendur</string>
-    <string name="feeds_show_more">Sýna meira</string>
-    <string name="feeds_show_less">Sýna minna</string>
+    <string name="feeds_show_post">Sýna færslu</string>
+    <string name="feeds_hide_post">Fela færslu</string>
     <string name="feeds_also_on">Einnig á %1$s</string>
     <string name="feeds_show_sensitive_media">Sýna viðkvæmt myndefni</string>
     <string name="feeds_poll_closed">Lokuð</string>

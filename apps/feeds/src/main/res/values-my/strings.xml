@@ -226,8 +226,8 @@
     <string name="feeds_boosted_by">%1$s က မျှဝေထားသည်</string>
     <string name="feeds_pinned">Pin ထားသည်</string>
     <string name="feeds_visibility_followers">နောက်လိုက်များသာ</string>
-    <string name="feeds_show_more">ပိုပြရန်</string>
-    <string name="feeds_show_less">လျှော့ပြရန်</string>
+    <string name="feeds_show_post">ပို့စ်ကို ပြရန်</string>
+    <string name="feeds_hide_post">ပို့စ်ကို ဝှက်ရန်</string>
     <string name="feeds_also_on">%1$s တွင်လည်း ရှိသည်</string>
     <string name="feeds_show_sensitive_media">ထိခိုက်လွယ်သော မီဒီယာကို ပြရန်</string>
     <string name="feeds_poll_closed">ပိတ်ပြီး</string>

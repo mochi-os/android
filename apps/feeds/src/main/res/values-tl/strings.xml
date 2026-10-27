@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Ni-boost ni %1$s</string>
     <string name="feeds_pinned">Naka-pin</string>
     <string name="feeds_visibility_followers">Mga tagasunod lang</string>
-    <string name="feeds_show_more">Magpakita ng higit pa</string>
-    <string name="feeds_show_less">Magpakita ng mas kaunti</string>
+    <string name="feeds_show_post">Ipakita ang post</string>
+    <string name="feeds_hide_post">Itago ang post</string>
     <string name="feeds_also_on">Nasa %1$s din</string>
     <string name="feeds_show_sensitive_media">Ipakita ang sensitibong media</string>
     <string name="feeds_poll_closed">Sarado na</string>

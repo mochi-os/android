@@ -247,8 +247,8 @@
     <string name="feeds_boosted_by">Продвинуто пользователем %1$s</string>
     <string name="feeds_pinned">Закреплено</string>
     <string name="feeds_visibility_followers">Только подписчики</string>
-    <string name="feeds_show_more">Показать больше</string>
-    <string name="feeds_show_less">Свернуть</string>
+    <string name="feeds_show_post">Показать публикацию</string>
+    <string name="feeds_hide_post">Скрыть публикацию</string>
     <string name="feeds_also_on">Также в %1$s</string>
     <string name="feeds_show_sensitive_media">Показать деликатные медиафайлы</string>
     <string name="feeds_poll_closed">Завершён</string>

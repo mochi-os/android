@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Tehostanut %1$s</string>
     <string name="feeds_pinned">Kiinnitetty</string>
     <string name="feeds_visibility_followers">Vain seuraajat</string>
-    <string name="feeds_show_more">Näytä lisää</string>
-    <string name="feeds_show_less">Näytä vähemmän</string>
+    <string name="feeds_show_post">Näytä julkaisu</string>
+    <string name="feeds_hide_post">Piilota julkaisu</string>
     <string name="feeds_also_on">Myös palvelussa %1$s</string>
     <string name="feeds_show_sensitive_media">Näytä arkaluonteinen media</string>
     <string name="feeds_poll_closed">Päättynyt</string>

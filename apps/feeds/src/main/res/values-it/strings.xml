@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">Condiviso da %1$s</string>
     <string name="feeds_pinned">Fissato</string>
     <string name="feeds_visibility_followers">Solo follower</string>
-    <string name="feeds_show_more">Mostra di più</string>
-    <string name="feeds_show_less">Mostra meno</string>
+    <string name="feeds_show_post">Mostra post</string>
+    <string name="feeds_hide_post">Nascondi post</string>
     <string name="feeds_also_on">Anche su %1$s</string>
     <string name="feeds_show_sensitive_media">Mostra contenuti multimediali sensibili</string>
     <string name="feeds_poll_closed">Chiuso</string>

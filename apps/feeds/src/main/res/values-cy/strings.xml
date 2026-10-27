@@ -261,8 +261,8 @@
     <string name="feeds_boosted_by">Wedi\'i hybu gan %1$s</string>
     <string name="feeds_pinned">Wedi\'i binio</string>
     <string name="feeds_visibility_followers">Dilynwyr yn unig</string>
-    <string name="feeds_show_more">Dangos mwy</string>
-    <string name="feeds_show_less">Dangos llai</string>
+    <string name="feeds_show_post">Dangos y postiad</string>
+    <string name="feeds_hide_post">Cuddio\'r postiad</string>
     <string name="feeds_also_on">Hefyd ar %1$s</string>
     <string name="feeds_show_sensitive_media">Dangos cyfryngau sensitif</string>
     <string name="feeds_poll_closed">Wedi cau</string>

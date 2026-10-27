@@ -230,8 +230,8 @@
     <string name="feeds_boosted_by">Dibagekaké déning %1$s</string>
     <string name="feeds_pinned">Dipin</string>
     <string name="feeds_visibility_followers">Mung pandherek</string>
-    <string name="feeds_show_more">Tampilaké luwih akèh</string>
-    <string name="feeds_show_less">Tampilake luwih sithik</string>
+    <string name="feeds_show_post">Tampilaké postingan</string>
+    <string name="feeds_hide_post">Delikaké postingan</string>
     <string name="feeds_also_on">Uga ing %1$s</string>
     <string name="feeds_show_sensitive_media">Tampilaké média sensitif</string>
     <string name="feeds_poll_closed">Ditutup</string>

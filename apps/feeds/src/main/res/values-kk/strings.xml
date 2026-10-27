@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">%1$s бөлісті</string>
     <string name="feeds_pinned">Бекітілген</string>
     <string name="feeds_visibility_followers">Тек жазылушылар</string>
-    <string name="feeds_show_more">Көбірек көрсету</string>
-    <string name="feeds_show_less">Қысқарту</string>
+    <string name="feeds_show_post">Жазбаны көрсету</string>
+    <string name="feeds_hide_post">Жазбаны жасыру</string>
     <string name="feeds_also_on">Сондай-ақ %1$s желісінде</string>
     <string name="feeds_show_sensitive_media">Сезімтал медианы көрсету</string>
     <string name="feeds_poll_closed">Жабылды</string>

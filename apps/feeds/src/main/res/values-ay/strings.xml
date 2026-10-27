@@ -231,8 +231,8 @@
     <string name="feeds_boosted_by">%1$s ukan yatiyata</string>
     <string name="feeds_pinned">Ch\'akuntata</string>
     <string name="feeds_visibility_followers">Arkirinakatakikiw</string>
-    <string name="feeds_show_more">Juk\'amp uñachayaña</string>
-    <string name="feeds_show_less">Juk\'a uñachayaña</string>
+    <string name="feeds_show_post">Qillqata uñachayaña</string>
+    <string name="feeds_hide_post">Qillqata imantaña</string>
     <string name="feeds_also_on">%1$s ukansa</string>
     <string name="feeds_show_sensitive_media">Sensible uñacht\'awinak uñachayaña</string>
     <string name="feeds_poll_closed">Jist\'antata</string>

@@ -247,8 +247,8 @@
     <string name="feeds_boosted_by">Sdílel(a) %1$s</string>
     <string name="feeds_pinned">Připnuto</string>
     <string name="feeds_visibility_followers">Pouze sledující</string>
-    <string name="feeds_show_more">Zobrazit více</string>
-    <string name="feeds_show_less">Zobrazit méně</string>
+    <string name="feeds_show_post">Zobrazit příspěvek</string>
+    <string name="feeds_hide_post">Skrýt příspěvek</string>
     <string name="feeds_also_on">Také na %1$s</string>
     <string name="feeds_show_sensitive_media">Zobrazit citlivá média</string>
     <string name="feeds_poll_closed">Ukončeno</string>

@@ -233,8 +233,8 @@
     <string name="feeds_boosted_by">გაზიარებულია %1$s-ის მიერ</string>
     <string name="feeds_pinned">მიმაგრებული</string>
     <string name="feeds_visibility_followers">მხოლოდ გამომწერები</string>
-    <string name="feeds_show_more">მეტის ჩვენება</string>
-    <string name="feeds_show_less">ნაკლების ჩვენება</string>
+    <string name="feeds_show_post">პოსტის ჩვენება</string>
+    <string name="feeds_hide_post">პოსტის დამალვა</string>
     <string name="feeds_also_on">ასევე %1$s-ზე</string>
     <string name="feeds_show_sensitive_media">სენსიტიური მედიის ჩვენება</string>
     <string name="feeds_poll_closed">დახურულია</string>
