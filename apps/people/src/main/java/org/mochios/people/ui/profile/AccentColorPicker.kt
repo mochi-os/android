@@ -6,7 +6,11 @@
 package org.mochios.people.ui.profile
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
@@ -22,6 +26,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -51,53 +56,60 @@ fun AccentColorPicker(
         if (!isSaving) pending = null
     }
 
-    ColorPicker(
-        hex = hex,
-        onHexChange = onHexChange,
-        modifier = modifier,
-        hexPlaceholder = stringResource(R.string.people_profile_accent_none),
-    ) {
-        val clearing = isSaving && pending == AccentAction.CLEAR
-        val saving = isSaving && pending == AccentAction.SAVE
-        MochiOutlinedButton(
-            onClick = {
-                pending = AccentAction.CLEAR
-                onClear()
-            },
-            enabled = !isSaving,
-            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        ColorPicker(
+            hex = hex,
+            onHexChange = onHexChange,
+            modifier = Modifier.fillMaxWidth(),
+            hexPlaceholder = stringResource(R.string.people_profile_accent_none),
+            collapsible = true,
+        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.End),
         ) {
-            if (clearing) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                    strokeWidth = 2.dp,
-                )
+            val clearing = isSaving && pending == AccentAction.CLEAR
+            val saving = isSaving && pending == AccentAction.SAVE
+            MochiOutlinedButton(
+                onClick = {
+                    pending = AccentAction.CLEAR
+                    onClear()
+                },
+                enabled = !isSaving,
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
+            ) {
+                if (clearing) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                        strokeWidth = 2.dp,
+                    )
+                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                }
+                Text(stringResource(R.string.people_profile_clear))
+            }
+            MochiButton(
+                onClick = {
+                    pending = AccentAction.SAVE
+                    onSave()
+                },
+                enabled = !isSaving,
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
+            ) {
+                if (saving) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                        strokeWidth = 2.dp,
+                    )
+                } else {
+                    Icon(
+                        Icons.Filled.Check,
+                        contentDescription = null,
+                        modifier = Modifier.size(ButtonDefaults.IconSize),
+                    )
+                }
                 Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                Text(stringResource(R.string.people_common_save))
             }
-            Text(stringResource(R.string.people_profile_clear))
-        }
-        MochiButton(
-            onClick = {
-                pending = AccentAction.SAVE
-                onSave()
-            },
-            enabled = !isSaving,
-            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-        ) {
-            if (saving) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                    strokeWidth = 2.dp,
-                )
-            } else {
-                Icon(
-                    Icons.Filled.Check,
-                    contentDescription = null,
-                    modifier = Modifier.size(ButtonDefaults.IconSize),
-                )
-            }
-            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-            Text(stringResource(R.string.people_common_save))
         }
     }
 }

@@ -84,6 +84,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.EntityAvatar
@@ -95,6 +96,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.UploadRing
 import org.mochios.android.ui.components.parseHexColour
@@ -277,15 +279,23 @@ private fun Editor(
                 .padding(horizontal = 16.dp, vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(20.dp),
         ) {
-            BioSection(state, info, viewModel)
-            AccentSection(state, viewModel)
-            FaviconSection(
-                faviconUrl = faviconUrl,
-                uploading = state.savingSlot == ImageSlot.FAVICON,
-                upload = upload.takeIf { state.savingSlot == ImageSlot.FAVICON },
-                onUpload = faviconPicker.launch,
-            )
-            PrivacySection(state, viewModel)
+            Section(title = stringResource(R.string.people_profile_title)) {
+                BioSection(state, info, viewModel)
+            }
+            Section(title = stringResource(MochiR.string.settings_appearance)) {
+                Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
+                    AccentSection(state, viewModel)
+                    FaviconSection(
+                        faviconUrl = faviconUrl,
+                        uploading = state.savingSlot == ImageSlot.FAVICON,
+                        upload = upload.takeIf { state.savingSlot == ImageSlot.FAVICON },
+                        onUpload = faviconPicker.launch,
+                    )
+                }
+            }
+            Section(title = stringResource(MochiR.string.auth_privacy_label)) {
+                PrivacySection(state, viewModel)
+            }
         }
     }
 
@@ -580,11 +590,6 @@ private fun BioSection(
     val progress = (length.toFloat() / ProfileViewModel.BIO_MAX).coerceIn(0f, 1f)
 
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Text(
-            stringResource(R.string.people_profile_title),
-            style = MaterialTheme.typography.titleSmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
         // The toolbar marks up a selection, so the cursor lives here rather
         // than inside the field.
         var bioField by remember { mutableStateOf(TextFieldValue(state.bioDraft)) }

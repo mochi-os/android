@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">名前を編集</string>
     <string name="people_profile_identity">アイデンティティ</string>
     <string name="people_profile_accent">アクセントカラー</string>
-    <string name="people_profile_directory_listing">ディレクトリで他のユーザーが自分を見つけられるようにする</string>
     <string name="people_profile_preview">プレビュー</string>
     <string name="people_profile_upload_avatar">アバターをアップロード</string>
     <string name="people_profile_upload">アップロード</string>

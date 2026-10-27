@@ -1068,6 +1068,7 @@ private fun LinkForm(
             hex = uiState.colour,
             onHexChange = onColour,
             modifier = Modifier.fillMaxWidth(),
+            collapsible = true,
         )
         Spacer(Modifier.height(16.dp))
         uiState.error?.let { failure ->
@@ -1135,6 +1136,7 @@ private fun AddressForm(
             hex = uiState.colour,
             onHexChange = onColour,
             modifier = Modifier.fillMaxWidth(),
+            collapsible = true,
         )
     }
 }

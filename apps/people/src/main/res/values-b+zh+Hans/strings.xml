@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">编辑姓名</string>
     <string name="people_profile_identity">身份</string>
     <string name="people_profile_accent">强调色</string>
-    <string name="people_profile_directory_listing">允许他人在目录中找到你</string>
     <string name="people_profile_preview">预览</string>
     <string name="people_profile_upload_avatar">上传头像</string>
     <string name="people_profile_upload">上传</string>

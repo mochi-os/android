@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">이름 편집</string>
     <string name="people_profile_identity">신원</string>
     <string name="people_profile_accent">강조</string>
-    <string name="people_profile_directory_listing">다른 사람이 디렉터리에서 회원님을 찾을 수 있도록 허용</string>
     <string name="people_profile_preview">미리보기</string>
     <string name="people_profile_upload_avatar">아바타 업로드</string>
     <string name="people_profile_upload">업로드</string>

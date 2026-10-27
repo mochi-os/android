@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">ແກ້ໄຂຊື່</string>
     <string name="people_profile_identity">ຕົວຕົນ</string>
     <string name="people_profile_accent">ສີເນັ້ນ</string>
-    <string name="people_profile_directory_listing">ອະນຸຍາດໃຫ້ຄົນອື່ນຊອກຫາທ່ານໃນສາລະບານ</string>
     <string name="people_profile_preview">ຕົວຢ່າງ</string>
     <string name="people_profile_upload_avatar">ອັບໂຫຼດອະວາຕາ</string>
     <string name="people_profile_upload">ອັບໂຫຼດ</string>

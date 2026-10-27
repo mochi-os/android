@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Изменить имя</string>
     <string name="people_profile_identity">Личность</string>
     <string name="people_profile_accent">Акцент</string>
-    <string name="people_profile_directory_listing">Разрешить другим находить вас в каталоге</string>
     <string name="people_profile_preview">Предпросмотр</string>
     <string name="people_profile_upload_avatar">Загрузить аватар</string>
     <string name="people_profile_upload">Загрузить</string>

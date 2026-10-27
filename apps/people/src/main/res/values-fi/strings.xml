@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Muokkaa nimeä</string>
     <string name="people_profile_identity">Identiteetti</string>
     <string name="people_profile_accent">Korostus</string>
-    <string name="people_profile_directory_listing">Salli muiden löytää sinut hakemistosta</string>
     <string name="people_profile_preview">Esikatselu</string>
     <string name="people_profile_upload_avatar">Lähetä profiilikuva</string>
     <string name="people_profile_upload">Lähetä</string>

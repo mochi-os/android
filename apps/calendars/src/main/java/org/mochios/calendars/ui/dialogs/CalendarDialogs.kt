@@ -87,7 +87,12 @@ fun ColourCalendarDialog(
         confirmLoading = saving,
         dismissText = stringResource(MochiR.string.common_cancel),
         content = {
-            ColorPicker(hex = colour, onHexChange = { colour = it }, modifier = Modifier.fillMaxWidth())
+            ColorPicker(
+                hex = colour,
+                onHexChange = { colour = it },
+                modifier = Modifier.fillMaxWidth(),
+                collapsible = true,
+            )
         },
     )
 }
