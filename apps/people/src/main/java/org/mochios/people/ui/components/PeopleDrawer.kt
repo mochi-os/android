@@ -49,9 +49,9 @@ data class PeopleDrawerNavigation(
 )
 
 /**
- * The People app's drawer, the same on every screen: All contacts, the address
- * books, Invitations, Groups and Profile, then Create address book, Connected
- * devices and Sync to this phone. [selectedId] is the row of the screen
+ * The People app's drawer, the same on every screen: Profile with the user's
+ * avatar, All contacts, the address books, Invitations and Groups, then Create
+ * address book, Connected devices and Sync to this phone. [selectedId] is the row of the screen
  * showing; tapping it only closes the drawer. The books are marked stale when
  * the app leaves the foreground and fetched again the next time the drawer
  * opens.
@@ -65,6 +65,7 @@ fun PeopleDrawer(
     content: @Composable () -> Unit,
 ) {
     val books by viewModel.books.collectAsState()
+    val identity by viewModel.identity.collectAsState()
     val scope = rememberCoroutineScope()
 
     (LocalActivity.current as? LifecycleOwner)?.let { activity ->
@@ -82,6 +83,7 @@ fun PeopleDrawer(
     MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
+        topItems = listOf(peopleProfileItem(identity)),
         allItem = peopleAllContactsItem(),
         items = peopleDrawerItems(books),
         selectedId = selectedId,

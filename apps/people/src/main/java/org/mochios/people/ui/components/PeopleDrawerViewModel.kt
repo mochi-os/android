@@ -8,8 +8,11 @@ package org.mochios.people.ui.components
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.mochios.android.auth.SessionManager
 import org.mochios.people.model.Book
 import org.mochios.people.repository.PeopleRepository
 import javax.inject.Inject
@@ -21,12 +24,22 @@ import javax.inject.Inject
 @HiltViewModel
 class PeopleDrawerViewModel @Inject constructor(
     private val repository: PeopleRepository,
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     /** The address books, as last fetched by any screen. */
     val books: StateFlow<List<Book>> = repository.books
 
+    private val _identity = MutableStateFlow<String?>(null)
+
+    /** The signed-in person's id, for the Profile row's avatar. */
+    val identity: StateFlow<String?> = _identity.asStateFlow()
+
     init {
+        viewModelScope.launch {
+            val identity = sessionManager.getBoundIdentity()
+            _identity.value = identity
+        }
         load()
     }
 

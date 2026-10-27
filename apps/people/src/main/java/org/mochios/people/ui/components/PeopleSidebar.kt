@@ -23,8 +23,8 @@ enum class PeopleSidebarSection { CONTACTS, INVITATIONS, GROUPS, PROFILE }
 private const val BOOK_PREFIX = "book:"
 
 /**
- * The drawer's rows: one per address book, then the app's other sections.
- * Contacts itself is the pinned [peopleAllContactsItem] above them.
+ * The drawer's rows: one per address book, then Invitations and Groups.
+ * [peopleProfileItem] and [peopleAllContactsItem] are pinned above them.
  */
 @Composable
 fun peopleDrawerItems(books: List<Book> = emptyList()): List<DrawerItem> =
@@ -45,12 +45,20 @@ fun peopleDrawerItems(books: List<Book> = emptyList()): List<DrawerItem> =
             title = stringResource(R.string.people_groups_title),
             icon = Icons.Outlined.Groups,
         ),
-        DrawerItem(
-            id = PeopleSidebarSection.PROFILE.name,
-            title = stringResource(R.string.people_profile_title),
-            icon = Icons.Outlined.AccountCircle,
-        ),
     )
+
+/**
+ * The Profile row pinned at the top, showing the user's avatar when their
+ * [identity] is known and the profile icon until then.
+ */
+@Composable
+fun peopleProfileItem(identity: String?): DrawerItem = DrawerItem(
+    id = PeopleSidebarSection.PROFILE.name,
+    title = stringResource(R.string.people_profile_title),
+    icon = Icons.Outlined.AccountCircle,
+    avatarUrl = identity?.let { person -> "/people/$person/-/avatar" },
+    seed = identity,
+)
 
 /** The aggregate row above the books, holding every contact. */
 @Composable
