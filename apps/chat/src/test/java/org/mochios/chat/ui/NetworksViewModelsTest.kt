@@ -104,6 +104,11 @@ class NetworksViewModelsTest {
                         override fun onOpen(webSocket: WebSocket, response: Response) {
                             frames = webSocket
                         }
+
+                        // Answer the client's close, or the server waits on it.
+                        override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
+                            webSocket.close(code, reason)
+                        }
                     })
                     "/chat/c1/-/view" -> ok("""{"chat": {"id": "c1", "key": "$key", "name": "Talk", "status": "$status", "account": "$account", "network": "$network", "members": $members}, "identity": "me"}""")
                     "/chat/c1/-/messages" -> if (query.contains("thread=r")) {
@@ -467,7 +472,8 @@ class NetworksViewModelsTest {
     fun `a verification under way is shown, its steps go to the server, and how it ended is said once`() {
         val model = VerificationViewModel(repository, context)
         val said = mutableListOf<String>()
-        val listen = CoroutineScope(Dispatchers.Main).launch { model.events.collect { said += it } }
+        // Listening from the start: the end is said inside runBlocking, past the main looper.
+        val listen = CoroutineScope(Dispatchers.Main.immediate).launch { model.events.collect { said += it } }
         runBlocking { model.read() }
         assertEquals("f", model.uiState.value.shown?.flow)
         model.act("confirm")
