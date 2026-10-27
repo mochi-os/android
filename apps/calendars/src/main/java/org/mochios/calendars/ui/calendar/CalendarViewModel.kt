@@ -197,6 +197,9 @@ class CalendarViewModel @Inject constructor(
 
     private var loading: Job? = null
 
+    /** The calendars and preferences being read again, which a newer read replaces. */
+    private var reading: Job? = null
+
     /** True once the calendars and preferences have been read, so a range can be fetched. */
     private var ready = false
 
@@ -251,10 +254,12 @@ class CalendarViewModel @Inject constructor(
      * The calendars, the preferences and the range, from cold. [refreshing]
      * only for the reader's own pull, which shows the pull's spinner; every
      * other reload is silent, and shows the full loader only the first time,
-     * before any calendar is known.
+     * before any calendar is known. [reset] as [load] takes it. A reload
+     * replaces one still under way.
      */
-    fun reload(refreshing: Boolean = false) {
-        viewModelScope.launch {
+    fun reload(refreshing: Boolean = false, reset: Boolean = true) {
+        reading?.cancel()
+        reading = viewModelScope.launch {
             val state = _uiState.value
             _uiState.value = state.copy(
                 isLoading = !refreshing && state.instances.isEmpty() && state.calendars.isEmpty(),
@@ -277,11 +282,13 @@ class CalendarViewModel @Inject constructor(
                     view = if (untouched) calendarsView(preferences.view) else _uiState.value.view,
                 )
                 ready = true
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, isRefreshing = false, error = e.toMochiError())
                 return@launch
             }
-            load(refreshing = refreshing)
+            load(refreshing = refreshing, reset = reset)
         }
     }
 
@@ -654,17 +661,21 @@ class CalendarViewModel @Inject constructor(
     }
 
     /**
-     * Back on screen: reads the range again, first moving a view left on
-     * today to the new today when the date has changed since, as the web's
-     * follows today until another day is chosen.
+     * Back on screen: reads the calendars, the preferences and the range
+     * again, as the web's reads them when its tab regains focus, so a
+     * preference changed on the web or another device applies here; a read
+     * already under way is left to finish. A view left on today first moves
+     * to the new today when the date has changed since, as the web's follows
+     * today until another day is chosen.
      */
-    fun resume(today: LocalDate = LocalDate.now(zone)) {
+    fun revisit(today: LocalDate = LocalDate.now(zone)) {
         val past = current
         current = today
         if (today != past && _uiState.value.anchor == past) {
-            anchor(today)
-        } else {
-            load(reset = false)
+            _uiState.value = _uiState.value.copy(anchor = today, focus = today, listed = null)
+            reload()
+        } else if (reading?.isActive != true) {
+            reload(reset = false)
         }
     }
 

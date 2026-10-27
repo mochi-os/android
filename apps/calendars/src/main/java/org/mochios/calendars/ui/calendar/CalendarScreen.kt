@@ -202,7 +202,7 @@ fun CalendarScreen(
     val saver = rememberFileSaveLauncher(Icalendar.TYPE) { uri -> viewModel.save(uri) }
 
     DisposableRefresh(lifecycle) {
-        viewModel.resume()
+        viewModel.revisit()
         viewModel.refresh()
     }
 

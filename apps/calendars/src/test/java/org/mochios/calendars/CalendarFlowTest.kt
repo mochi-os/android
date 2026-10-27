@@ -83,6 +83,9 @@ class CalendarFlowTest {
     @Volatile private var whole = false
     @Volatile private var written = ""
 
+    /** The preferences the server holds, as its JSON. */
+    @Volatile private var preferences = "{}"
+
     /**
      * Held until released: the preferences write, and a listing that starts
      * at or after [held], which answers with a concert at its start. [last]
@@ -109,7 +112,7 @@ class CalendarFlowTest {
                     "-/calendars" -> ok(
                         """{"calendars": [{"id": "c1", "name": "Home", "default": true}, {"id": "c2", "name": "Work"}]}""",
                     )
-                    "-/preferences/get" -> ok("""{"preferences": {}}""")
+                    "-/preferences/get" -> ok("""{"preferences": $preferences}""")
                     "-/preferences/set" -> {
                         saving?.await(10, TimeUnit.SECONDS)
                         ok("""{"preferences": {"view": "list"}}""")
@@ -298,19 +301,36 @@ class CalendarFlowTest {
     }
 
     @Test
+    fun `a preference changed elsewhere applies when the screen comes back, and the first read is not doubled`() {
+        val model = CalendarViewModel(context, repository, London)
+        // On screen at once, while the first read is still under way.
+        model.revisit()
+        until { !model.uiState.value.isLoading && listings().isNotEmpty() }
+        settle()
+        val reads = { asked.count { it.path.orEmpty().contains("/-/preferences/get") } }
+        assertEquals(1, reads())
+        assertEquals("first", model.uiState.value.preferences.allday)
+        // Set to last on the web, then back to the phone.
+        preferences = """{"allday": "last"}"""
+        model.revisit()
+        until { model.uiState.value.preferences.allday == "last" }
+        assertEquals(2, reads())
+    }
+
+    @Test
     fun `a view left on today moves on to the new today when the date changes, and one moved elsewhere stays`() {
         val model = model()
         val today = LocalDate.now(london)
         model.view(CalendarsSection.WEEK)
-        model.resume(today.plusDays(1))
+        model.revisit(today.plusDays(1))
         assertEquals(today.plusDays(1), model.uiState.value.anchor)
         assertEquals(today.plusDays(1), model.uiState.value.focus)
         // Paged away, the view stays where it was put.
         model.anchor(today.minusWeeks(2))
-        model.resume(today.plusDays(2))
+        model.revisit(today.plusDays(2))
         assertEquals(today.minusWeeks(2), model.uiState.value.anchor)
         // The same day again reads the range and moves nothing.
-        model.resume(today.plusDays(2))
+        model.revisit(today.plusDays(2))
         assertEquals(today.minusWeeks(2), model.uiState.value.anchor)
     }
 
