@@ -272,8 +272,11 @@ class PeopleRepository @Inject constructor(
         name: String,
         description: String? = null,
         id: String? = null,
-    ): String =
-        api.createGroup(id, name, description).unwrap().id
+    ): String {
+        val created = api.createGroup(id, name, description).unwrap().id
+        _groupsChanged.tryEmit(Unit)
+        return created
+    }
 
     suspend fun updateGroup(
         id: String,
