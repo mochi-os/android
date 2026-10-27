@@ -14,16 +14,17 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.launcher.LauncherIconToggle
+import org.mochios.staff.model.Me
 import org.mochios.staff.repository.StaffRepository
 import android.util.Log
-import java.lang.ref.WeakReference
 import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
  * Toggles the Mochi Staff launcher activity (declared `android:enabled="false"` in
- * the host manifest) on the bound identity's staff role. Only a 401/403 or a
- * blank role disables it; network errors leave the current state untouched.
+ * the host manifest) on the bound identity's staff role. This check is the only
+ * thing that switches it off: a request refused on a staff screen shows there as
+ * an error, since switching the activity off while it is open closes it.
  */
 @Singleton
 class StaffAccessController @Inject constructor(
@@ -31,14 +32,6 @@ class StaffAccessController @Inject constructor(
     private val sessionManager: SessionManager,
     private val staffRepository: StaffRepository,
 ) {
-
-    init {
-        // Publish a weak self-reference so the OkHttp interceptor (which runs
-        // off the controller scope and cannot inject the Hilt graph itself)
-        // can call back into disable() on 401/403 without holding a strong
-        // ref that would defeat process-death cleanup.
-        instanceRef = WeakReference(this)
-    }
 
     /**
      * Observes identity changes; [scope] must outlive any Activity (called from
@@ -61,33 +54,15 @@ class StaffAccessController @Inject constructor(
     }
 
     private suspend fun checkAccess() {
-        val me = try {
-            staffRepository.getMe()
-        } catch (e: MochiError.AuthError) {
-            Log.i(TAG, "getMe() rejected (401) — disabling staff launcher")
-            disable()
-            return
-        } catch (e: MochiError.ForbiddenError) {
-            Log.i(TAG, "getMe() rejected (403) — disabling staff launcher")
-            disable()
-            return
-        } catch (e: MochiError) {
-            Log.i(TAG, "getMe() failed transiently (${e.javaClass.simpleName}); leaving icon state untouched")
-            return
+        val shown = try {
+            access(staffRepository.getMe())
+        } catch (e: kotlinx.coroutines.CancellationException) {
+            throw e
         } catch (e: Exception) {
-            // Defensive: anything escaping the typed MochiError funnel is
-            // treated as transient (don't strip the icon on an unrelated
-            // crash either).
-            Log.w(TAG, "getMe() threw unexpectedly; leaving icon state untouched", e)
-            return
+            access(e)
         }
-        if (me.role.isBlank()) {
-            Log.i(TAG, "getMe() returned blank role for ${me.id.take(8)}… — disabling staff launcher")
-            disable()
-        } else {
-            Log.i(TAG, "getMe() returned role=${me.role} for ${me.id.take(8)}… — enabling staff launcher")
-            LauncherIconToggle.setVisible(context, LAUNCHER_CLASS_NAME, true)
-        }
+        Log.i(TAG, "staff access check: ${shown ?: "unchanged"}")
+        if (shown != null) LauncherIconToggle.setVisible(context, LAUNCHER_CLASS_NAME, shown)
     }
 
     /**
@@ -107,10 +82,16 @@ class StaffAccessController @Inject constructor(
          * [LauncherIconToggle.setVisible] adds the package prefix.
          */
         const val LAUNCHER_CLASS_NAME = "MochiStaffLauncher"
-
-        // Back-channel for [StaffAuthInterceptor]: injecting this singleton
-        // into the OkHttp client would make a Hilt provision cycle.
-        @Volatile
-        internal var instanceRef: WeakReference<StaffAccessController>? = null
     }
 }
+
+/** Whether the access check's answer shows the Staff launcher: shown for a role, hidden for none. */
+internal fun access(me: Me): Boolean = me.role.isNotBlank()
+
+/**
+ * Whether a failed access check shows the Staff launcher: hidden when the
+ * server refused (403); null, leaving it as it is, for anything else. A 401 is
+ * the app's token not being taken rather than an answer about the role, and a
+ * signed-out session switches the launcher off on its own.
+ */
+internal fun access(error: Exception): Boolean? = if (error is MochiError.ForbiddenError) false else null

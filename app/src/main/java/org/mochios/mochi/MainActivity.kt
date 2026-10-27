@@ -6,6 +6,7 @@
 package org.mochios.mochi
 
 import android.content.ComponentName
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -46,6 +47,7 @@ import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.launcher.launcherComponentFor
+import org.mochios.android.launcher.launcherEnabled
 import org.mochios.android.launcher.openInApp
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
@@ -382,21 +384,31 @@ open class MainActivity : ComponentActivity() {
      * The intent goes across whole - data, extras, flags - and the receiver
      * handles its URI once. Flags that would give the receiver a throwaway
      * task or history entry are dropped; a caller's launcher-style flags
-     * (clear top, clear task) are kept, as they were meant for the app.
+     * (clear top, clear task) are kept, as they were meant for the app. An
+     * app whose class cannot be started - none at all, or Staff's switched
+     * off until its access check passes - is handed to home instead, named as
+     * the one meant so that home does not hand a link of that app straight
+     * back.
      */
     private fun forward(app: String) {
-        val component = launcherComponentFor(this, app)
-            ?: launcherComponentFor(this, DEFAULT_APP)
-            ?: return
+        val open = if (launcherEnabled(this, app)) app else DEFAULT_APP
+        val component = launcherComponentFor(this, open) ?: return
         val forwarded = Intent(intent ?: Intent(Intent.ACTION_MAIN)).setComponent(component)
+        if (open != app) forwarded.putExtra(EXTRA_APP_HINT, open)
         val dropped = Intent.FLAG_ACTIVITY_NO_HISTORY or
             Intent.FLAG_ACTIVITY_MULTIPLE_TASK or
             Intent.FLAG_ACTIVITY_NEW_DOCUMENT or
             Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS or
             Intent.FLAG_ACTIVITY_FORWARD_RESULT
         forwarded.flags = (forwarded.flags and dropped.inv()) or Intent.FLAG_ACTIVITY_NEW_TASK
-        Log.i(TAG, "Forwarding ${intent?.data ?: intent?.action} to $app")
-        startActivity(forwarded)
+        Log.i(TAG, "Forwarding ${intent?.data ?: intent?.action} to $open")
+        try {
+            startActivity(forwarded)
+        } catch (e: ActivityNotFoundException) {
+            Log.w(TAG, "Could not forward to $open: ${e.message}")
+        } catch (e: SecurityException) {
+            Log.w(TAG, "Could not forward to $open: ${e.message}")
+        }
     }
 
     override fun onPause() {
