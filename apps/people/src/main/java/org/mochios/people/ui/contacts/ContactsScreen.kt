@@ -552,7 +552,7 @@ internal fun ContactRow(
                         }
                         if (contact.friend) {
                             MochiDropdownMenuItem(
-                                text = { Text(stringResource(R.string.people_contacts_unfriend)) },
+                                text = { Text(stringResource(R.string.people_contacts_menu_unfriend)) },
                                 leadingIcon = {
                                     Icon(Icons.Default.PersonRemove, contentDescription = null)
                                 },
@@ -563,7 +563,7 @@ internal fun ContactRow(
                             )
                         }
                         MochiDropdownMenuItem(
-                            text = { Text(stringResource(R.string.people_contacts_delete)) },
+                            text = { Text(stringResource(MochiR.string.common_delete)) },
                             leadingIcon = {
                                 Icon(Icons.Default.Delete, contentDescription = null)
                             },

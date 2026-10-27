@@ -25,6 +25,7 @@
     <string name="people_contacts_accept">Accept</string>
     <string name="people_contacts_message">Message</string>
     <string name="people_contacts_unfriend">Remove friend</string>
+    <string name="people_contacts_menu_unfriend">Unfriend</string>
     <string name="people_contacts_unfriend_confirm">%1$s will no longer be your friend. The contact stays in your address book.</string>
     <string name="people_contacts_delete">Delete contact</string>
     <string name="people_contacts_delete_confirm">Delete %1$s from your contacts?</string>

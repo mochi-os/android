@@ -434,7 +434,7 @@ private fun EditScaffold(
                         },
                     )
                     MochiDropdownMenuItem(
-                        text = { Text(stringResource(R.string.people_contacts_delete)) },
+                        text = { Text(stringResource(MochiR.string.common_delete)) },
                         onClick = {
                             menuOpen = false
                             onRequestDelete()
