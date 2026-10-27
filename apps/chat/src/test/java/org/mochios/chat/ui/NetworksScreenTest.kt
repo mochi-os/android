@@ -7,6 +7,9 @@ package org.mochios.chat.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.hasSetTextAction
@@ -50,8 +53,20 @@ import org.mochios.chat.ui.encryption.PersonDevices
 import org.mochios.chat.ui.encryption.SetupDialog
 import org.mochios.chat.ui.encryption.SetupState
 import org.mochios.chat.ui.encryption.VerificationDialog
+import okhttp3.mockwebserver.Dispatcher
+import okhttp3.mockwebserver.MockResponse
+import okhttp3.mockwebserver.MockWebServer
+import okhttp3.mockwebserver.RecordedRequest
+import org.mochios.android.files.FileStore
+import org.mochios.chat.api.ChatApi
+import org.mochios.chat.repository.ChatRepository
+import org.mochios.chat.ui.privacy.PrivacyDialog
 import org.mochios.chat.ui.privacy.PrivacyFields
 import org.mochios.chat.ui.privacy.PrivacyUiState
+import org.mochios.chat.ui.privacy.PrivacyViewModel
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.atomic.AtomicReference
 import org.mochios.chat.ui.settings.roleLabel
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -273,6 +288,96 @@ class NetworksScreenTest {
         assertEquals(ChatPreferences(typing = false), value)
         rule.onNodeWithText("Anyone").performClick()
         assertEquals(ChatPreferences(policy = "anyone"), value)
+    }
+
+    /** Idles the main thread until [done], a server's answer landing on it. */
+    private fun idleUntil(done: () -> Boolean) {
+        val deadline = System.currentTimeMillis() + 5_000
+        while (!done()) {
+            rule.waitForIdle()
+            check(System.currentTimeMillis() < deadline) { "timed out" }
+            Thread.sleep(10)
+        }
+    }
+
+    @Test
+    fun `the privacy dialog reads the settings again each time it opens, dropping an edit left unsaved`() {
+        val policy = AtomicReference("friends")
+        val server = MockWebServer()
+        server.dispatcher = object : Dispatcher() {
+            override fun dispatch(request: RecordedRequest): MockResponse =
+                if (request.path.orEmpty().substringBefore("?") == "/chat/-/preferences/get") {
+                    MockResponse().setBody("""{"data": {"policy": "${policy.get()}", "presence": true, "receipts": true, "typing": true}}""")
+                } else {
+                    MockResponse().setResponseCode(404)
+                }
+        }
+        server.start()
+        try {
+            val context = RuntimeEnvironment.getApplication()
+            val api = Retrofit.Builder()
+                .baseUrl(server.url("/chat/"))
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ChatApi::class.java)
+            val model = PrivacyViewModel(ChatRepository(api, FileStore(context), context))
+            var open by mutableStateOf(true)
+            rule.setContent {
+                if (open) PrivacyDialog(onDismiss = { open = false }, viewModel = model)
+            }
+            idleUntil { model.uiState.value.loaded != null }
+            rule.onNodeWithText("Show when I'm typing").performClick()
+            assertEquals(false, model.uiState.value.value.typing)
+            rule.onNodeWithText("Cancel").performClick()
+            rule.waitForIdle()
+            // Changed elsewhere while the dialog was closed.
+            policy.set("anyone")
+            rule.runOnIdle { open = true }
+            idleUntil { model.uiState.value.loaded?.policy == "anyone" }
+            assertEquals(model.uiState.value.loaded, model.uiState.value.value)
+            assertEquals(ChatPreferences(policy = "anyone"), model.uiState.value.value)
+        } finally {
+            server.shutdown()
+        }
+    }
+
+    @Test
+    fun `a privacy dialog reopened while the settings cannot be read offers nothing to save over them`() {
+        val down = java.util.concurrent.atomic.AtomicBoolean(false)
+        val server = MockWebServer()
+        server.dispatcher = object : Dispatcher() {
+            override fun dispatch(request: RecordedRequest): MockResponse = when {
+                request.path.orEmpty().substringBefore("?") != "/chat/-/preferences/get" -> MockResponse().setResponseCode(404)
+                down.get() -> MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
+                else -> MockResponse().setBody("""{"data": {"policy": "friends", "presence": true, "receipts": true, "typing": true}}""")
+            }
+        }
+        server.start()
+        try {
+            val context = RuntimeEnvironment.getApplication()
+            val api = Retrofit.Builder()
+                .baseUrl(server.url("/chat/"))
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ChatApi::class.java)
+            val model = PrivacyViewModel(ChatRepository(api, FileStore(context), context))
+            var open by mutableStateOf(true)
+            rule.setContent {
+                if (open) PrivacyDialog(onDismiss = { open = false }, viewModel = model)
+            }
+            idleUntil { model.uiState.value.loaded != null }
+            rule.onNodeWithText("Show when I'm typing").performClick()
+            rule.onNodeWithText("Cancel").performClick()
+            rule.waitForIdle()
+            down.set(true)
+            rule.runOnIdle { open = true }
+            idleUntil { model.uiState.value.failure != null }
+            assertEquals(null, model.uiState.value.loaded)
+            assertEquals(false, model.uiState.value.changed)
+            rule.onNodeWithText("Show when I'm typing").assertDoesNotExist()
+        } finally {
+            server.shutdown()
+        }
     }
 
     @Test

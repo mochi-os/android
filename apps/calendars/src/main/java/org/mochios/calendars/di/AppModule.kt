@@ -17,7 +17,12 @@ import org.mochios.android.i18n.PreferencesManager
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
 import retrofit2.Retrofit
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.ZoneId
 import javax.inject.Qualifier
@@ -113,6 +118,12 @@ object AppModule {
 
         override fun week(): Int = preferences.preferences.value.weekStartsOn
 
+        override fun changes(): Flow<Unit> = preferences.preferences
+            .map { values -> values.timezone to values.weekStartsOn }
+            .distinctUntilChanged()
+            .drop(1)
+            .map { }
+
         override suspend fun server(): String = session.serverUrl.first()
     }
 }
@@ -121,12 +132,15 @@ object AppModule {
  * The person looking at the calendar, as the screens need them: the zone
  * every range and new event is measured in, their own where their
  * preferences name one the platform knows; the first day of their week, 0
- * Sunday to 6 Saturday; and the server they are signed in to.
+ * Sunday to 6 Saturday; and the server they are signed in to. [changes]
+ * tells each time the zone or the first day changes after it is asked.
  */
 interface Viewer {
     fun zone(): String
 
     fun week(): Int
+
+    fun changes(): Flow<Unit> = emptyFlow()
 
     suspend fun server(): String
 }

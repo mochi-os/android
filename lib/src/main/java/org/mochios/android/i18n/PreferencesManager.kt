@@ -7,9 +7,15 @@ package org.mochios.android.i18n
 
 import dagger.hilt.android.qualifiers.ApplicationContext
 import android.content.Context
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.ShellApi
@@ -33,8 +39,8 @@ data class ThemeInfo(
 
 /**
  * Holds the user's [UserPreferences], resolved against the device for any
- * `auto` server value. No live-update path on Android: apps [refresh] on
- * launch.
+ * `auto` server value. Apps [refresh] on launch, and [watch] reads them again
+ * each time the app comes back to the foreground.
  */
 @Singleton
 class PreferencesManager @Inject internal constructor(
@@ -112,6 +118,28 @@ class PreferencesManager @Inject internal constructor(
         sessionManager.getToken("settings")
             ?: authRepository.fetchToken("settings").getOrNull()
 
+    /**
+     * Read the preferences again each time [lifecycle], the app's own, starts
+     * after its first start, so one changed on the web or another device
+     * applies without restarting the app. The first start is the app's
+     * bootstrap, which reads them itself; a signed-out app reads nothing.
+     */
+    fun watch(lifecycle: Lifecycle, scope: CoroutineScope) {
+        lifecycle.addObserver(object : DefaultLifecycleObserver {
+            private var started = false
+
+            override fun onStart(owner: LifecycleOwner) {
+                if (!started) {
+                    started = true
+                    return
+                }
+                scope.launch {
+                    if (sessionManager.isAuthenticated.first()) runCatching { refresh() }
+                }
+            }
+        })
+    }
+
     suspend fun refresh() {
         // Report the device's zone first, so a preference set to "auto" means
         // this device's zone on the server as well as here. Failure is fine:
@@ -138,6 +166,7 @@ class PreferencesManager @Inject internal constructor(
         val raw = body.preferences ?: return
         rawPrefs = raw
         _preferences.value = resolveAuto(raw)
+        cacheTheme()
 
         // Mirror the server's language onto the boot-time store and, when it
         // changed, apply it to the running app. On Android 13+ that sets the
@@ -146,6 +175,17 @@ class PreferencesManager @Inject internal constructor(
         val update = languageUpdate(LanguageStore.get(context), raw["language"])
         LanguageStore.set(context, update.tag)
         if (update.apply) LocaleHelper.apply(context, update.tag)
+    }
+
+    /**
+     * Keep the active theme's anchors where `MochiTheme` reads them: the
+     * user's theme, else the server's default. Left as they are when neither
+     * names a theme the server lists.
+     */
+    private suspend fun cacheTheme() {
+        val id = rawPrefs["theme"]?.takeIf { id -> id.isNotBlank() } ?: defaultThemeId ?: return
+        val theme = themes.firstOrNull { candidate -> candidate.id == id } ?: return
+        sessionManager.saveTheme(hue = theme.hue, chroma = theme.chroma, hueBg = theme.hueBg)
     }
 
     private fun resolveAuto(raw: Map<String, String>): UserPreferences {

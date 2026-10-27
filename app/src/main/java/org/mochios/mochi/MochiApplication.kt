@@ -7,6 +7,7 @@ package org.mochios.mochi
 
 import android.app.Application
 import android.content.Context
+import androidx.lifecycle.ProcessLifecycleOwner
 import coil3.ImageLoader
 import coil3.PlatformContext
 import coil3.SingletonImageLoader
@@ -23,6 +24,7 @@ import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.VideoFrameFetcher
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
+import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.PushServiceWatchdog
 import org.mochios.android.update.UpdateChecker
 import org.mochios.calendars.notifications.setupCalendarsNotificationChannel
@@ -49,6 +51,8 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     @Inject @AssetHttpClient lateinit var assetHttpClient: OkHttpClient
 
     @Inject lateinit var sessionManager: SessionManager
+
+    @Inject lateinit var preferencesManager: PreferencesManager
 
     /**
      * Coil loader authenticated like the API clients: attachment and avatar
@@ -94,5 +98,8 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
         // Shows and hides the Mochi Staff launcher alias as the bound
         // identity's staff role changes.
         staffAccessController.start(applicationScope)
+        // Reads the account's preferences again each time the app comes back
+        // to the foreground, so a change made on the web applies.
+        preferencesManager.watch(ProcessLifecycleOwner.get().lifecycle, applicationScope)
     }
 }

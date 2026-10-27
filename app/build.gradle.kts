@@ -112,6 +112,7 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.navigation.compose)
     implementation(libs.lifecycle.runtime)
+    implementation(libs.lifecycle.process)
     implementation(libs.activity.compose)
 
     implementation(platform(libs.compose.bom))

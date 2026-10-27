@@ -356,6 +356,7 @@ class NetworksViewModelsTest {
     @Test
     fun `privacy saves only what changed`() {
         val model = PrivacyViewModel(repository)
+        model.load()
         until("the settings") { model.uiState.value.loaded != null }
         model.change(model.uiState.value.value.copy(typing = false))
         model.save()
@@ -366,6 +367,7 @@ class NetworksViewModelsTest {
     @Test
     fun `privacy unchanged saves nothing`() {
         val model = PrivacyViewModel(repository)
+        model.load()
         until("the settings") { model.uiState.value.loaded != null }
         model.save()
         until("the close") { model.uiState.value.saved }

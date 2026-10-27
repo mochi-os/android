@@ -132,6 +132,10 @@ class ForumViewModel @Inject constructor(
 
     private var resumedBefore = false
 
+    /** Set when the screen comes back, until a refresh has read the saved sort
+     *  again; a refresh that replaces that one before it lands inherits it. */
+    private var resolving = false
+
     init {
         load()
         loadTags()
@@ -244,7 +248,8 @@ class ForumViewModel @Inject constructor(
      * lands with its response - makes one fetch, and only the latest one
      * updates the list.
      */
-    private fun refreshLatest() {
+    private fun refreshLatest(resolve: Boolean = false) {
+        resolving = resolving || resolve
         refreshJob?.cancel()
         refreshJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
@@ -260,6 +265,20 @@ class ForumViewModel @Inject constructor(
         null
     }
 
+    /** The sort the user has saved for this forum: [override], the forum's
+     *  own, else the account's default, else "new". Null when the default
+     *  cannot be read, which leaves the list in the order it has. */
+    private suspend fun saved(override: String): String? {
+        if (override.isNotEmpty()) return override
+        return try {
+            repository.forumsInformation().settings.sort.ifEmpty { DEFAULT_SORT }
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            null
+        }
+    }
+
     /** Pull the latest list silently (no spinner) and clear the new-posts count,
      *  since the fresh list already incorporates any queued posts. It may have
      *  replaced a [refresh] under way, whose spinner is then this one's to end. */
@@ -271,6 +290,15 @@ class ForumViewModel @Inject constructor(
                 sort = _uiState.value.sort.ifEmpty { null },
                 tag = _uiState.value.currentTag,
             )
+            if (resolving) {
+                // A sort saved elsewhere since lists the forum afresh in it.
+                val sort = saved(r.forum.sort)
+                resolving = false
+                if (sort != null && sort != _uiState.value.sort.ifEmpty { DEFAULT_SORT }) {
+                    load(sort)
+                    return
+                }
+            }
             _uiState.value = _uiState.value.copy(
                 forum = r.forum,
                 posts = r.posts,
@@ -296,15 +324,15 @@ class ForumViewModel @Inject constructor(
     /**
      * The screen's ON_RESUME. The first arrives as the screen opens, while
      * init is already loading, so only a later one - back from settings, say -
-     * refreshes.
+     * refreshes, reading the saved sort again on the way.
      */
     fun reloadOnForeground() {
-        if (isAll || forumId.isBlank()) return
+        if (forumId.isBlank()) return
         if (!resumedBefore) {
             resumedBefore = true
             return
         }
-        refreshLatest()
+        if (isAll) loadAll(null, refreshing = false, quiet = true) else refreshLatest(resolve = true)
     }
 
     override fun onCleared() {
@@ -386,16 +414,22 @@ class ForumViewModel @Inject constructor(
 
     /** Load the aggregate "All forums" feed from the class-level `-/list`
      *  endpoint. First page only — the endpoint takes no cursor, so there is no
-     *  load-more, live subscription, or per-forum tag filter. */
-    private fun loadAll(sort: String?, refreshing: Boolean) {
+     *  load-more, live subscription, or per-forum tag filter. A null [sort]
+     *  lists in the account's saved default; [quiet] shows no spinner. */
+    private fun loadAll(sort: String?, refreshing: Boolean, quiet: Boolean = false) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(
-                isLoading = !refreshing,
+                isLoading = !refreshing && !quiet,
                 isRefreshing = refreshing,
                 error = null,
             )
             try {
-                val r = repository.listForums(sort)
+                var r = repository.listForums(sort)
+                // The list is in "new" order unless asked otherwise, and the
+                // saved default only comes back in the answer, so it is asked
+                // for again in that.
+                val resolved = sort ?: r.settings.sort.ifEmpty { DEFAULT_SORT }
+                if (resolved != (sort ?: DEFAULT_SORT)) r = repository.listForums(resolved)
                 // The aggregate mixes every subscribed forum, and the rows
                 // carry only the forum id — the card's "which forum is this?"
                 // line needs the name, which the same response already lists.
@@ -408,7 +442,7 @@ class ForumViewModel @Inject constructor(
                     },
                     canManage = false,
                     canModerate = false,
-                    sort = sort ?: r.settings.sort,
+                    sort = resolved,
                     hasAi = r.hasAi,
                     hasMore = false,
                     nextCursor = null,

@@ -247,6 +247,12 @@ class CalendarViewModel @Inject constructor(
                 if (sole != null && calendar != sole) whole()
             }
         }
+        viewModelScope.launch {
+            // The user's zone or first day changed, on the web or in settings:
+            // every range is measured again in it. A read under way measures
+            // its range once the calendars are in, so it is in the new one.
+            viewer.changes().collect { revisit() }
+        }
         reload()
     }
 

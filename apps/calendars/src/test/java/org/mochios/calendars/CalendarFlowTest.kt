@@ -334,6 +334,37 @@ class CalendarFlowTest {
         assertEquals(today.minusWeeks(2), model.uiState.value.anchor)
     }
 
+    @Test
+    fun `a zone or first day of the week changed elsewhere is measured again in at once`() {
+        val zone = java.util.concurrent.atomic.AtomicReference("Europe/London")
+        val week = java.util.concurrent.atomic.AtomicInteger(1)
+        val changes = kotlinx.coroutines.flow.MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+        val viewer = object : org.mochios.calendars.di.Viewer {
+            override fun zone(): String = zone.get()
+            override fun week(): Int = week.get()
+            override fun changes(): kotlinx.coroutines.flow.Flow<Unit> = changes
+            override suspend fun server(): String = "https://example.org"
+        }
+        val model = CalendarViewModel(context, repository, viewer)
+        until { !model.uiState.value.isLoading && listings().isNotEmpty() }
+        model.view(CalendarsSection.WEEK)
+        settle()
+        // Sunday first, in Tokyo, set on the web while the week is on screen.
+        val tokyo = ZoneId.of("Asia/Tokyo")
+        zone.set(tokyo.id)
+        week.set(0)
+        changes.tryEmit(Unit)
+        until {
+            val anchor = model.uiState.value.anchor
+            val sunday = anchor.minusDays((anchor.dayOfWeek.value % 7).toLong())
+            listings().any { listing ->
+                listing.requestUrl?.queryParameter("timezone") == tokyo.id &&
+                    listing.requestUrl?.queryParameter("start") == sunday.atStartOfDay(tokyo).toEpochSecond().toString()
+            }
+        }
+        assertEquals(LocalDate.now(tokyo), model.uiState.value.anchor)
+    }
+
     // ---- search, views and refreshing ----
 
     @Test
