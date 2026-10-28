@@ -238,6 +238,8 @@
     <string name="feeds_poll_closed">Ó ti parí</string>
     <string name="feeds_poll_closes">Yóò parí ní %1$s</string>
     <string name="feeds_poll_vote">Dìbò</string>
+    <string name="feeds_poll_see_results">Fi àbájáde hàn</string>
+    <string name="feeds_poll_hide_results">Fi àbájáde pamọ́</string>
     <string name="feeds_reply_from">Dáhùn pẹ̀lú láti</string>
     <string name="feeds_reply_from_none">Kò sí àkàǹtì</string>
     <string name="feeds_mute">Pa ìró</string>

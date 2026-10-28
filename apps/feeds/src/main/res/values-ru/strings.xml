@@ -254,6 +254,8 @@
     <string name="feeds_poll_closed">Завершён</string>
     <string name="feeds_poll_closes">Завершится %1$s</string>
     <string name="feeds_poll_vote">Проголосовать</string>
+    <string name="feeds_poll_see_results">Показать результаты</string>
+    <string name="feeds_poll_hide_results">Скрыть результаты</string>
     <string name="feeds_reply_from">Также ответить от</string>
     <string name="feeds_reply_from_none">Без учётной записи</string>
     <string name="feeds_mute">Заглушить</string>

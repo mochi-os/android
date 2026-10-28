@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Imefungwa</string>
     <string name="feeds_poll_closes">Inafungwa %1$s</string>
     <string name="feeds_poll_vote">Piga kura</string>
+    <string name="feeds_poll_see_results">Onyesha matokeo</string>
+    <string name="feeds_poll_hide_results">Ficha matokeo</string>
     <string name="feeds_reply_from">Jibu pia kutoka</string>
     <string name="feeds_reply_from_none">Hakuna akaunti</string>
     <string name="feeds_mute">Nyamazisha</string>

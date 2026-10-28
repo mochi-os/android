@@ -233,6 +233,8 @@
     <string name="feeds_poll_closed">ປິດແລ້ວ</string>
     <string name="feeds_poll_closes">ປິດ %1$s</string>
     <string name="feeds_poll_vote">ລົງຄະແນນ</string>
+    <string name="feeds_poll_see_results">ສະແດງຜົນ</string>
+    <string name="feeds_poll_hide_results">ເຊື່ອງຜົນ</string>
     <string name="feeds_reply_from">ຕອບກັບຈາກນີ້ນຳ</string>
     <string name="feeds_reply_from_none">ບໍ່ມີບັນຊີ</string>
     <string name="feeds_mute">ປິດສຽງ</string>

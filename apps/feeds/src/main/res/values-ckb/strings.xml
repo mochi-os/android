@@ -242,6 +242,8 @@
     <string name="feeds_poll_closed">داخراوە</string>
     <string name="feeds_poll_closes">دادەخرێت لە %1$s</string>
     <string name="feeds_poll_vote">دەنگدان</string>
+    <string name="feeds_poll_see_results">ئەنجامەکان پیشان بدە</string>
+    <string name="feeds_poll_hide_results">ئەنجامەکان بشارەوە</string>
     <string name="feeds_reply_from">هەروەها وەڵام بدەرەوە لە</string>
     <string name="feeds_reply_from_none">هەژمار نییە</string>
     <string name="feeds_mute">بێدەنگکردن</string>

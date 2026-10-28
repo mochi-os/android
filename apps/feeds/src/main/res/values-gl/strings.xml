@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Pechada</string>
     <string name="feeds_poll_closes">Pecha %1$s</string>
     <string name="feeds_poll_vote">Votar</string>
+    <string name="feeds_poll_see_results">Mostrar resultados</string>
+    <string name="feeds_poll_hide_results">Ocultar resultados</string>
     <string name="feeds_reply_from">Responder tamén desde</string>
     <string name="feeds_reply_from_none">Sen conta</string>
     <string name="feeds_mute">Silenciar</string>

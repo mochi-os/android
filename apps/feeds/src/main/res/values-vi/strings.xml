@@ -233,6 +233,8 @@
     <string name="feeds_poll_closed">Đã đóng</string>
     <string name="feeds_poll_closes">Đóng lúc %1$s</string>
     <string name="feeds_poll_vote">Gửi bình chọn</string>
+    <string name="feeds_poll_see_results">Hiện kết quả</string>
+    <string name="feeds_poll_hide_results">Ẩn kết quả</string>
     <string name="feeds_reply_from">Cũng trả lời từ</string>
     <string name="feeds_reply_from_none">Không có tài khoản</string>
     <string name="feeds_mute">Tắt tiếng</string>

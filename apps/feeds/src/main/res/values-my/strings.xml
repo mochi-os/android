@@ -233,6 +233,8 @@
     <string name="feeds_poll_closed">ပိတ်ပြီး</string>
     <string name="feeds_poll_closes">%1$s တွင် ပိတ်မည်</string>
     <string name="feeds_poll_vote">မဲပေးမည်</string>
+    <string name="feeds_poll_see_results">ရလဒ်များကို ပြရန်</string>
+    <string name="feeds_poll_hide_results">ရလဒ်များကို ဝှက်ရန်</string>
     <string name="feeds_reply_from">ဤမှလည်း ပြန်ကြားရန်</string>
     <string name="feeds_reply_from_none">အကောင့်မရှိပါ</string>
     <string name="feeds_mute">အသံပိတ်</string>

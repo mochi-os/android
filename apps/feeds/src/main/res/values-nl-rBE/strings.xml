@@ -218,6 +218,8 @@
     <string name="feeds_poll_closed">Gesloten</string>
     <string name="feeds_poll_closes">Sluit op %1$s</string>
     <string name="feeds_poll_vote">Stemmen</string>
+    <string name="feeds_poll_see_results">Resultaten tonen</string>
+    <string name="feeds_poll_hide_results">Resultaten verbergen</string>
     <string name="feeds_reply_from">Ook reageren vanaf</string>
     <string name="feeds_reply_from_none">Geen account</string>
     <string name="feeds_mute">Dempen</string>

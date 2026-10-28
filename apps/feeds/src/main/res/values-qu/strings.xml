@@ -238,6 +238,8 @@
     <string name="feeds_poll_closed">Wichq\'asqa</string>
     <string name="feeds_poll_closes">%1$s wichq\'akunqa</string>
     <string name="feeds_poll_vote">Votay</string>
+    <string name="feeds_poll_see_results">Yupaykunata rikuchiy</string>
+    <string name="feeds_poll_hide_results">Yupaykunata pakay</string>
     <string name="feeds_reply_from">Kaymantapas kutichiy</string>
     <string name="feeds_reply_from_none">Mana cuentayuq</string>
     <string name="feeds_mute">Ch\'inyachiy</string>

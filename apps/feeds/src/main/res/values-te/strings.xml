@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">ముగిసింది</string>
     <string name="feeds_poll_closes">%1$sన ముగుస్తుంది</string>
     <string name="feeds_poll_vote">ఓటు వేయండి</string>
+    <string name="feeds_poll_see_results">ఫలితాలను చూపించండి</string>
+    <string name="feeds_poll_hide_results">ఫలితాలను దాచండి</string>
     <string name="feeds_reply_from">దీని నుండి కూడా బదులివ్వండి</string>
     <string name="feeds_reply_from_none">ఖాతా లేదు</string>
     <string name="feeds_mute">మ్యూట్</string>

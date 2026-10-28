@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Жабылды</string>
     <string name="feeds_poll_closes">Жабылады: %1$s</string>
     <string name="feeds_poll_vote">Дауыс беру</string>
+    <string name="feeds_poll_see_results">Нәтижелерді көрсету</string>
+    <string name="feeds_poll_hide_results">Нәтижелерді жасыру</string>
     <string name="feeds_reply_from">Сондай-ақ осыдан жауап беру</string>
     <string name="feeds_reply_from_none">Тіркелгі жоқ</string>
     <string name="feeds_mute">Үнсіз қылу</string>

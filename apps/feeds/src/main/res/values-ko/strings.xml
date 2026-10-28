@@ -233,6 +233,8 @@
     <string name="feeds_poll_closed">마감됨</string>
     <string name="feeds_poll_closes">%1$s 마감</string>
     <string name="feeds_poll_vote">투표하기</string>
+    <string name="feeds_poll_see_results">결과 보기</string>
+    <string name="feeds_poll_hide_results">결과 숨기기</string>
     <string name="feeds_reply_from">이 계정으로도 답글</string>
     <string name="feeds_reply_from_none">계정 없음</string>
     <string name="feeds_mute">음소거</string>

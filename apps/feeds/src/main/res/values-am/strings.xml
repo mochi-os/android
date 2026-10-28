@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">ተዘግቷል</string>
     <string name="feeds_poll_closes">%1$s ይዘጋል</string>
     <string name="feeds_poll_vote">ድምጽ ስጥ</string>
+    <string name="feeds_poll_see_results">ውጤቶችን አሳይ</string>
+    <string name="feeds_poll_hide_results">ውጤቶችን ደብቅ</string>
     <string name="feeds_reply_from">እንዲሁም ከዚህ ይመልሱ</string>
     <string name="feeds_reply_from_none">መለያ የለም</string>
     <string name="feeds_mute">ዝምታ</string>

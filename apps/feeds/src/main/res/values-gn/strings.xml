@@ -238,6 +238,8 @@
     <string name="feeds_poll_closed">Oñembotýma</string>
     <string name="feeds_poll_closes">Oñembotýta %1$s</string>
     <string name="feeds_poll_vote">Evota</string>
+    <string name="feeds_poll_see_results">Ehechauka voto papapy</string>
+    <string name="feeds_poll_hide_results">Ekañymi voto papapy</string>
     <string name="feeds_reply_from">Embohovái avei ko\'águi</string>
     <string name="feeds_reply_from_none">Ndaipóri cuenta</string>
     <string name="feeds_mute">Emokirirĩ</string>

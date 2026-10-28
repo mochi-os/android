@@ -261,6 +261,8 @@
     <string name="feeds_poll_closed">Dúnta</string>
     <string name="feeds_poll_closes">Dúntar %1$s</string>
     <string name="feeds_poll_vote">Vótáil</string>
+    <string name="feeds_poll_see_results">Taispeáin torthaí</string>
+    <string name="feeds_poll_hide_results">Folaigh torthaí</string>
     <string name="feeds_reply_from">Freagair freisin ó</string>
     <string name="feeds_reply_from_none">Gan chuntas</string>
     <string name="feeds_mute">Ciúnaigh</string>

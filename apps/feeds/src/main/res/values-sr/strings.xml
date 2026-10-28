@@ -247,6 +247,8 @@
     <string name="feeds_poll_closed">Затворена</string>
     <string name="feeds_poll_closes">Затвара се %1$s</string>
     <string name="feeds_poll_vote">Гласај</string>
+    <string name="feeds_poll_see_results">Прикажи резултате</string>
+    <string name="feeds_poll_hide_results">Сакриј резултате</string>
     <string name="feeds_reply_from">Одговори и са</string>
     <string name="feeds_reply_from_none">Без налога</string>
     <string name="feeds_mute">Утишај</string>

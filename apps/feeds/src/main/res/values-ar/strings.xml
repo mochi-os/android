@@ -268,6 +268,8 @@
     <string name="feeds_poll_closed">مغلق</string>
     <string name="feeds_poll_closes">يُغلق في %1$s</string>
     <string name="feeds_poll_vote">تصويت</string>
+    <string name="feeds_poll_see_results">عرض النتائج</string>
+    <string name="feeds_poll_hide_results">إخفاء النتائج</string>
     <string name="feeds_reply_from">الرد أيضًا من</string>
     <string name="feeds_reply_from_none">بدون حساب</string>
     <string name="feeds_mute">كتم</string>

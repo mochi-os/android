@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">மூடப்பட்டது</string>
     <string name="feeds_poll_closes">%1$s அன்று மூடப்படும்</string>
     <string name="feeds_poll_vote">வாக்களி</string>
+    <string name="feeds_poll_see_results">முடிவுகளைக் காட்டு</string>
+    <string name="feeds_poll_hide_results">முடிவுகளை மறை</string>
     <string name="feeds_reply_from">இதிலிருந்தும் பதிலளி</string>
     <string name="feeds_reply_from_none">கணக்கு இல்லை</string>
     <string name="feeds_mute">முடக்கு</string>

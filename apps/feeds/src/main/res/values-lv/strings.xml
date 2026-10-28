@@ -247,6 +247,8 @@
     <string name="feeds_poll_closed">Slēgta</string>
     <string name="feeds_poll_closes">Tiek slēgta %1$s</string>
     <string name="feeds_poll_vote">Balsot</string>
+    <string name="feeds_poll_see_results">Rādīt rezultātus</string>
+    <string name="feeds_poll_hide_results">Paslēpt rezultātus</string>
     <string name="feeds_reply_from">Atbildēt arī no</string>
     <string name="feeds_reply_from_none">Nav konta</string>
     <string name="feeds_mute">Apklusināt</string>

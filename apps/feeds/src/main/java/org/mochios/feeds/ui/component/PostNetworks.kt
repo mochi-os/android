@@ -69,6 +69,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.QuoteCard as LibQuoteCard
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.isWebUrl
 import org.mochios.android.util.openWeb
 import org.mochios.android.util.providerName
@@ -382,8 +383,11 @@ internal fun PostPollView(
     now: Long = System.currentTimeMillis() / 1000,
 ) {
     var chosen by remember(voted) { mutableStateOf(voted) }
+    // A reader who may still vote can look at the results first, and go back.
+    var peeking by remember { mutableStateOf(false) }
     val closed = poll.expires in 1..now
-    val results = closed || voted.isNotEmpty() || !canVote
+    val votable = !closed && voted.isEmpty() && canVote
+    val results = !votable || peeking
     val total = poll.options.sumOf { it.votes }
     val format = LocalFormat.current
     Column(
@@ -471,15 +475,20 @@ internal fun PostPollView(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f),
             )
-            if (!results) {
-                MochiButton(onClick = { onVote(chosen) }, enabled = chosen.isNotEmpty() && !busy) {
-                    if (busy) {
-                        CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
-                    } else {
-                        Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+            if (votable) {
+                MochiTextButton(onClick = { peeking = !peeking }) {
+                    Text(stringResource(if (peeking) R.string.feeds_poll_hide_results else R.string.feeds_poll_see_results))
+                }
+                if (!peeking) {
+                    MochiButton(onClick = { onVote(chosen) }, enabled = chosen.isNotEmpty() && !busy) {
+                        if (busy) {
+                            CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                        } else {
+                            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                        }
+                        Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                        Text(stringResource(R.string.feeds_poll_vote))
                     }
-                    Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.feeds_poll_vote))
                 }
             }
         }

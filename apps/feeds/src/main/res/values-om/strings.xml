@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Cufameera</string>
     <string name="feeds_poll_closes">%1$s cufama</string>
     <string name="feeds_poll_vote">Sagalee kenni</string>
+    <string name="feeds_poll_see_results">Bu\'aa agarsiisi</string>
+    <string name="feeds_poll_hide_results">Bu\'aa dhoksi</string>
     <string name="feeds_reply_from">Asiis irraa deebisi</string>
     <string name="feeds_reply_from_none">Herrega hin qabu</string>
     <string name="feeds_mute">Cal\'isiisi</string>

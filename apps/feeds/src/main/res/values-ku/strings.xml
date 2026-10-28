@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Girtî</string>
     <string name="feeds_poll_closes">Di %1$s de tê girtin</string>
     <string name="feeds_poll_vote">Deng bide</string>
+    <string name="feeds_poll_see_results">Encaman nîşan bide</string>
+    <string name="feeds_poll_hide_results">Encaman veşêre</string>
     <string name="feeds_reply_from">Herwiha ji vir bersiv bide</string>
     <string name="feeds_reply_from_none">Hesab tune</string>
     <string name="feeds_mute">Bêdeng bike</string>

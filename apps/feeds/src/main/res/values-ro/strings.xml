@@ -247,6 +247,8 @@
     <string name="feeds_poll_closed">Închis</string>
     <string name="feeds_poll_closes">Se închide pe %1$s</string>
     <string name="feeds_poll_vote">Votează</string>
+    <string name="feeds_poll_see_results">Afișează rezultatele</string>
+    <string name="feeds_poll_hide_results">Ascunde rezultatele</string>
     <string name="feeds_reply_from">Răspunde și de la</string>
     <string name="feeds_reply_from_none">Fără cont</string>
     <string name="feeds_mute">Dezactivează sunetul</string>

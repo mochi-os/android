@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Lokuð</string>
     <string name="feeds_poll_closes">Lokast %1$s</string>
     <string name="feeds_poll_vote">Greiða atkvæði</string>
+    <string name="feeds_poll_see_results">Sýna niðurstöður</string>
+    <string name="feeds_poll_hide_results">Fela niðurstöður</string>
     <string name="feeds_reply_from">Svara líka frá</string>
     <string name="feeds_reply_from_none">Enginn reikningur</string>
     <string name="feeds_mute">Þagga</string>

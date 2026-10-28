@@ -256,6 +256,8 @@
     <string name="feeds_poll_closed">Dùinte</string>
     <string name="feeds_poll_closes">Dùinidh e %1$s</string>
     <string name="feeds_poll_vote">Bhòt</string>
+    <string name="feeds_poll_see_results">Seall na toraidhean</string>
+    <string name="feeds_poll_hide_results">Falaich na toraidhean</string>
     <string name="feeds_reply_from">Freagair cuideachd o</string>
     <string name="feeds_reply_from_none">Gun chunntas</string>
     <string name="feeds_mute">Cuir na thosd</string>

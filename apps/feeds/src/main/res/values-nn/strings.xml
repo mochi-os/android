@@ -242,6 +242,8 @@
     <string name="feeds_poll_closed">Avslutta</string>
     <string name="feeds_poll_closes">Blir avslutta %1$s</string>
     <string name="feeds_poll_vote">Røyst</string>
+    <string name="feeds_poll_see_results">Vis resultata</string>
+    <string name="feeds_poll_hide_results">Gøym resultata</string>
     <string name="feeds_reply_from">Svar òg frå</string>
     <string name="feeds_reply_from_none">Ingen konto</string>
     <string name="feeds_mute">Stilla</string>

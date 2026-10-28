@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Avsluttet</string>
     <string name="feeds_poll_closes">Avsluttes %1$s</string>
     <string name="feeds_poll_vote">Stem</string>
+    <string name="feeds_poll_see_results">Vis resultater</string>
+    <string name="feeds_poll_hide_results">Skjul resultater</string>
     <string name="feeds_reply_from">Svar også fra</string>
     <string name="feeds_reply_from_none">Ingen konto</string>
     <string name="feeds_mute">Demp</string>

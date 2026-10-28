@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">بند</string>
     <string name="feeds_poll_closes">%1$s تي بند ٿيندو</string>
     <string name="feeds_poll_vote">ووٽ ڏيو</string>
+    <string name="feeds_poll_see_results">نتيجا ڏيکاريو</string>
+    <string name="feeds_poll_hide_results">نتيجا لڪايو</string>
     <string name="feeds_reply_from">هن مان به جواب ڏيو</string>
     <string name="feeds_reply_from_none">ڪو اڪائونٽ ناهي</string>
     <string name="feeds_mute">خاموش ڪريو</string>

@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Sarado na</string>
     <string name="feeds_poll_closes">Magsasara sa %1$s</string>
     <string name="feeds_poll_vote">Bumoto</string>
+    <string name="feeds_poll_see_results">Ipakita ang mga resulta</string>
+    <string name="feeds_poll_hide_results">Itago ang mga resulta</string>
     <string name="feeds_reply_from">Sumagot din mula sa</string>
     <string name="feeds_reply_from_none">Walang account</string>
     <string name="feeds_mute">I-mute</string>

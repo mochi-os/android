@@ -237,6 +237,8 @@
     <string name="feeds_poll_closed">Ditutup</string>
     <string name="feeds_poll_closes">Ditutup %1$s</string>
     <string name="feeds_poll_vote">Wènèhi swara</string>
+    <string name="feeds_poll_see_results">Tampilaké asil</string>
+    <string name="feeds_poll_hide_results">Delikaké asil</string>
     <string name="feeds_reply_from">Uga wangsulan saka</string>
     <string name="feeds_reply_from_none">Ora ana akun</string>
     <string name="feeds_mute">Bisuaké</string>

@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Gesluit</string>
     <string name="feeds_poll_closes">Sluit op %1$s</string>
     <string name="feeds_poll_vote">Stem</string>
+    <string name="feeds_poll_see_results">Wys resultate</string>
+    <string name="feeds_poll_hide_results">Versteek resultate</string>
     <string name="feeds_reply_from">Antwoord ook van</string>
     <string name="feeds_reply_from_none">Geen rekening</string>
     <string name="feeds_mute">Demp</string>

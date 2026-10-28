@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Փակված է</string>
     <string name="feeds_poll_closes">Փակվում է %1$s</string>
     <string name="feeds_poll_vote">Քվեարկել</string>
+    <string name="feeds_poll_see_results">Ցույց տալ արդյունքները</string>
+    <string name="feeds_poll_hide_results">Թաքցնել արդյունքները</string>
     <string name="feeds_reply_from">Պատասխանել նաև այս հաշվից</string>
     <string name="feeds_reply_from_none">Առանց հաշվի</string>
     <string name="feeds_mute">Անձայնեցնել</string>

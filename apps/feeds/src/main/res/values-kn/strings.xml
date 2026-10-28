@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">ಮುಚ್ಚಲಾಗಿದೆ</string>
     <string name="feeds_poll_closes">%1$s ರಂದು ಮುಚ್ಚುತ್ತದೆ</string>
     <string name="feeds_poll_vote">ಮತ ಹಾಕಿ</string>
+    <string name="feeds_poll_see_results">ಫಲಿತಾಂಶಗಳನ್ನು ತೋರಿಸಿ</string>
+    <string name="feeds_poll_hide_results">ಫಲಿತಾಂಶಗಳನ್ನು ಮರೆಮಾಡಿ</string>
     <string name="feeds_reply_from">ಇದರಿಂದಲೂ ಉತ್ತರಿಸಿ</string>
     <string name="feeds_reply_from_none">ಖಾತೆ ಇಲ್ಲ</string>
     <string name="feeds_mute">ಮ್ಯೂಟ್</string>

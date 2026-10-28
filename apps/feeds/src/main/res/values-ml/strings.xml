@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">അടച്ചു</string>
     <string name="feeds_poll_closes">%1$s-ന് അടയ്ക്കും</string>
     <string name="feeds_poll_vote">വോട്ട് ചെയ്യുക</string>
+    <string name="feeds_poll_see_results">ഫലങ്ങൾ കാണിക്കുക</string>
+    <string name="feeds_poll_hide_results">ഫലങ്ങൾ മറയ്ക്കുക</string>
     <string name="feeds_reply_from">ഇതിൽ നിന്നും മറുപടി നൽകുക</string>
     <string name="feeds_reply_from_none">അക്കൗണ്ട് ഇല്ല</string>
     <string name="feeds_mute">നിശബ്ദമാക്കുക</string>

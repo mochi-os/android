@@ -242,6 +242,8 @@
     <string name="feeds_poll_closed">Tancada</string>
     <string name="feeds_poll_closes">Es tanca %1$s</string>
     <string name="feeds_poll_vote">Vota</string>
+    <string name="feeds_poll_see_results">Mostra els resultats</string>
+    <string name="feeds_poll_hide_results">Amaga els resultats</string>
     <string name="feeds_reply_from">Respon també des de</string>
     <string name="feeds_reply_from_none">Cap compte</string>
     <string name="feeds_mute">Silencia</string>

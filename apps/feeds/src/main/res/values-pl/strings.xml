@@ -254,6 +254,8 @@
     <string name="feeds_poll_closed">Zakończona</string>
     <string name="feeds_poll_closes">Kończy się %1$s</string>
     <string name="feeds_poll_vote">Zagłosuj</string>
+    <string name="feeds_poll_see_results">Pokaż wyniki</string>
+    <string name="feeds_poll_hide_results">Ukryj wyniki</string>
     <string name="feeds_reply_from">Odpowiedz także z</string>
     <string name="feeds_reply_from_none">Brak konta</string>
     <string name="feeds_mute">Wycisz</string>

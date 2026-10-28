@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">बन्द भयो</string>
     <string name="feeds_poll_closes">%1$s मा बन्द हुन्छ</string>
     <string name="feeds_poll_vote">मत दिनुहोस्</string>
+    <string name="feeds_poll_see_results">नतिजा देखाउनुहोस्</string>
+    <string name="feeds_poll_hide_results">नतिजा लुकाउनुहोस्</string>
     <string name="feeds_reply_from">यसबाट पनि जवाफ दिनुहोस्</string>
     <string name="feeds_reply_from_none">खाता छैन</string>
     <string name="feeds_mute">म्युट</string>

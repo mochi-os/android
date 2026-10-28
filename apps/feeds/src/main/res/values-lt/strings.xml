@@ -254,6 +254,8 @@
     <string name="feeds_poll_closed">Uždaryta</string>
     <string name="feeds_poll_closes">Užsidaro %1$s</string>
     <string name="feeds_poll_vote">Balsuoti</string>
+    <string name="feeds_poll_see_results">Rodyti rezultatus</string>
+    <string name="feeds_poll_hide_results">Slėpti rezultatus</string>
     <string name="feeds_reply_from">Atsakyti ir iš</string>
     <string name="feeds_reply_from_none">Be paskyros</string>
     <string name="feeds_mute">Nutildyti</string>

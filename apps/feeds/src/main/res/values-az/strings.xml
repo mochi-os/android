@@ -242,6 +242,8 @@
     <string name="feeds_poll_closed">Bağlanıb</string>
     <string name="feeds_poll_closes">%1$s bağlanır</string>
     <string name="feeds_poll_vote">Səs ver</string>
+    <string name="feeds_poll_see_results">Nəticələri göstər</string>
+    <string name="feeds_poll_hide_results">Nəticələri gizlət</string>
     <string name="feeds_reply_from">Həmçinin buradan cavab ver</string>
     <string name="feeds_reply_from_none">Hesab yoxdur</string>
     <string name="feeds_mute">Sustur</string>

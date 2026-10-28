@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Ýapyldy</string>
     <string name="feeds_poll_closes">%1$s ýapylýar</string>
     <string name="feeds_poll_vote">Ses ber</string>
+    <string name="feeds_poll_see_results">Netijeleri görkez</string>
+    <string name="feeds_poll_hide_results">Netijeleri gizle</string>
     <string name="feeds_reply_from">Şundan hem jogap bermek</string>
     <string name="feeds_reply_from_none">Hasap ýok</string>
     <string name="feeds_mute">Sessiz et</string>

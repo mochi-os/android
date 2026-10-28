@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Yopilgan</string>
     <string name="feeds_poll_closes">Yopiladi: %1$s</string>
     <string name="feeds_poll_vote">Ovoz berish</string>
+    <string name="feeds_poll_see_results">Natijalarni koʻrsatish</string>
+    <string name="feeds_poll_hide_results">Natijalarni yashirish</string>
     <string name="feeds_reply_from">Bundan ham javob berish</string>
     <string name="feeds_reply_from_none">Hisob yo\'q</string>
     <string name="feeds_mute">Ovozsizlantirish</string>

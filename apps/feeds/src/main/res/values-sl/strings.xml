@@ -254,6 +254,8 @@
     <string name="feeds_poll_closed">Zaprto</string>
     <string name="feeds_poll_closes">Zapre se %1$s</string>
     <string name="feeds_poll_vote">Glasuj</string>
+    <string name="feeds_poll_see_results">Pokaži rezultate</string>
+    <string name="feeds_poll_hide_results">Skrij rezultate</string>
     <string name="feeds_reply_from">Odgovori tudi z</string>
     <string name="feeds_reply_from_none">Brez računa</string>
     <string name="feeds_mute">Utišaj</string>

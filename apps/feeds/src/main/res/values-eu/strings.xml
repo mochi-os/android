@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Itxita</string>
     <string name="feeds_poll_closes">Itxiera: %1$s</string>
     <string name="feeds_poll_vote">Bozkatu</string>
+    <string name="feeds_poll_see_results">Erakutsi emaitzak</string>
+    <string name="feeds_poll_hide_results">Ezkutatu emaitzak</string>
     <string name="feeds_reply_from">Erantzun hemendik ere</string>
     <string name="feeds_reply_from_none">Konturik ez</string>
     <string name="feeds_mute">Isilarazi</string>

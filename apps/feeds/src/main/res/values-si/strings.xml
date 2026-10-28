@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">වසා ඇත</string>
     <string name="feeds_poll_closes">%1$s දී වැසේ</string>
     <string name="feeds_poll_vote">ඡන්දය දෙන්න</string>
+    <string name="feeds_poll_see_results">ප්‍රතිඵල පෙන්වන්න</string>
+    <string name="feeds_poll_hide_results">ප්‍රතිඵල සඟවන්න</string>
     <string name="feeds_reply_from">මෙයින්ද පිළිතුරු දෙන්න</string>
     <string name="feeds_reply_from_none">ගිණුමක් නැත</string>
     <string name="feeds_mute">නිහඬ</string>

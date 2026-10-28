@@ -233,6 +233,8 @@
     <string name="feeds_poll_closed">已结束</string>
     <string name="feeds_poll_closes">%1$s 结束</string>
     <string name="feeds_poll_vote">投票</string>
+    <string name="feeds_poll_see_results">显示结果</string>
+    <string name="feeds_poll_hide_results">隐藏结果</string>
     <string name="feeds_reply_from">同时从此回复</string>
     <string name="feeds_reply_from_none">无账号</string>
     <string name="feeds_mute">禁言</string>

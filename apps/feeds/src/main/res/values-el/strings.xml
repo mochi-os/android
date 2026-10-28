@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Έκλεισε</string>
     <string name="feeds_poll_closes">Κλείνει %1$s</string>
     <string name="feeds_poll_vote">Ψήφιση</string>
+    <string name="feeds_poll_see_results">Εμφάνιση αποτελεσμάτων</string>
+    <string name="feeds_poll_hide_results">Απόκρυψη αποτελεσμάτων</string>
     <string name="feeds_reply_from">Απάντηση και από</string>
     <string name="feeds_reply_from_none">Χωρίς λογαριασμό</string>
     <string name="feeds_mute">Σίγαση</string>

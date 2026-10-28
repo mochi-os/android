@@ -254,6 +254,8 @@
     <string name="feeds_poll_closed">נסגר</string>
     <string name="feeds_poll_closes">נסגר ב-%1$s</string>
     <string name="feeds_poll_vote">הצבע</string>
+    <string name="feeds_poll_see_results">הצג תוצאות</string>
+    <string name="feeds_poll_hide_results">הסתר תוצאות</string>
     <string name="feeds_reply_from">להשיב גם מ</string>
     <string name="feeds_reply_from_none">ללא חשבון</string>
     <string name="feeds_mute">השתק</string>

@@ -238,6 +238,8 @@
     <string name="feeds_poll_closed">Баста шуд</string>
     <string name="feeds_poll_closes">%1$s баста мешавад</string>
     <string name="feeds_poll_vote">Овоз додан</string>
+    <string name="feeds_poll_see_results">Нишон додани натиҷаҳо</string>
+    <string name="feeds_poll_hide_results">Пинҳон кардани натиҷаҳо</string>
     <string name="feeds_reply_from">Инчунин аз ин ҷавоб додан</string>
     <string name="feeds_reply_from_none">Ҳисоб нест</string>
     <string name="feeds_mute">Хомӯш кардан</string>

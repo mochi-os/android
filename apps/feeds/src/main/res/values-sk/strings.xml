@@ -254,6 +254,8 @@
     <string name="feeds_poll_closed">Ukončená</string>
     <string name="feeds_poll_closes">Skončí %1$s</string>
     <string name="feeds_poll_vote">Hlasovať</string>
+    <string name="feeds_poll_see_results">Zobraziť výsledky</string>
+    <string name="feeds_poll_hide_results">Skryť výsledky</string>
     <string name="feeds_reply_from">Odpovedať aj z</string>
     <string name="feeds_reply_from_none">Žiadny účet</string>
     <string name="feeds_mute">Stlmiť</string>

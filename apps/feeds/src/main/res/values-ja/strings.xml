@@ -233,6 +233,8 @@
     <string name="feeds_poll_closed">終了</string>
     <string name="feeds_poll_closes">%1$s に終了</string>
     <string name="feeds_poll_vote">投票</string>
+    <string name="feeds_poll_see_results">結果を表示</string>
+    <string name="feeds_poll_hide_results">結果を隠す</string>
     <string name="feeds_reply_from">こちらからも返信</string>
     <string name="feeds_reply_from_none">アカウントなし</string>
     <string name="feeds_mute">ミュート</string>

@@ -263,6 +263,8 @@
     <string name="feeds_poll_closed">Magħluq</string>
     <string name="feeds_poll_closes">Jagħlaq %1$s</string>
     <string name="feeds_poll_vote">Ivvota</string>
+    <string name="feeds_poll_see_results">Uri r-riżultati</string>
+    <string name="feeds_poll_hide_results">Aħbi r-riżultati</string>
     <string name="feeds_reply_from">Wieġeb ukoll minn</string>
     <string name="feeds_reply_from_none">L-ebda kont</string>
     <string name="feeds_mute">Skiet</string>

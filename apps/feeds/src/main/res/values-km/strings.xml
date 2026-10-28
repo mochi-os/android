@@ -233,6 +233,8 @@
     <string name="feeds_poll_closed">បានបិទ</string>
     <string name="feeds_poll_closes">បិទនៅ %1$s</string>
     <string name="feeds_poll_vote">បោះឆ្នោត</string>
+    <string name="feeds_poll_see_results">បង្ហាញលទ្ធផល</string>
+    <string name="feeds_poll_hide_results">លាក់លទ្ធផល</string>
     <string name="feeds_reply_from">ឆ្លើយតបពីនេះផងដែរ</string>
     <string name="feeds_reply_from_none">គ្មានគណនី</string>
     <string name="feeds_mute">បិទសំឡេង</string>

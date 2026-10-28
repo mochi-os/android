@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">تړل شوی</string>
     <string name="feeds_poll_closes">په %1$s تړل کېږي</string>
     <string name="feeds_poll_vote">رایه ورکړئ</string>
+    <string name="feeds_poll_see_results">پایلې وښایاست</string>
+    <string name="feeds_poll_hide_results">پایلې پټ کړئ</string>
     <string name="feeds_reply_from">له دې څخه هم ځواب ورکړئ</string>
     <string name="feeds_reply_from_none">حساب نشته</string>
     <string name="feeds_mute">خاموش</string>

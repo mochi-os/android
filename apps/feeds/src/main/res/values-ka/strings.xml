@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">დახურულია</string>
     <string name="feeds_poll_closes">იხურება %1$s</string>
     <string name="feeds_poll_vote">ხმის მიცემა</string>
+    <string name="feeds_poll_see_results">შედეგების ჩვენება</string>
+    <string name="feeds_poll_hide_results">შედეგების დამალვა</string>
     <string name="feeds_reply_from">ასევე უპასუხე აქედან</string>
     <string name="feeds_reply_from_none">ანგარიშის გარეშე</string>
     <string name="feeds_mute">ჩაჩუმება</string>

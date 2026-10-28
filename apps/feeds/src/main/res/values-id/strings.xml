@@ -237,6 +237,8 @@
     <string name="feeds_poll_closed">Ditutup</string>
     <string name="feeds_poll_closes">Ditutup %1$s</string>
     <string name="feeds_poll_vote">Beri suara</string>
+    <string name="feeds_poll_see_results">Tampilkan hasil</string>
+    <string name="feeds_poll_hide_results">Sembunyikan hasil</string>
     <string name="feeds_reply_from">Balas juga dari</string>
     <string name="feeds_reply_from_none">Tanpa akun</string>
     <string name="feeds_mute">Bisukan</string>

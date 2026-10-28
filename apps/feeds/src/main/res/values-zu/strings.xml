@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">Kuvaliwe</string>
     <string name="feeds_poll_closes">Kuvalwa ngo-%1$s</string>
     <string name="feeds_poll_vote">Vota</string>
+    <string name="feeds_poll_see_results">Bonisa imiphumela</string>
+    <string name="feeds_poll_hide_results">Fihla imiphumela</string>
     <string name="feeds_reply_from">Phendula nakuyo</string>
     <string name="feeds_reply_from_none">Ayikho i-akhawunti</string>
     <string name="feeds_mute">Thulisa</string>

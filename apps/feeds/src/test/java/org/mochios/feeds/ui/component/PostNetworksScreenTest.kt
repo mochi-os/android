@@ -139,6 +139,38 @@ class PostNetworksScreenTest {
         rule.onNodeWithText("75%").assertIsDisplayed()
         rule.onAllNodesWithText("Vote").assertCountEquals(0)
         rule.onNodeWithText("4 votes · Closed").assertIsDisplayed()
+        rule.onAllNodesWithText("See results").assertCountEquals(0)
+    }
+
+    @Test
+    fun `a reader who may still vote sees the results first, and goes back to the vote`() {
+        var voted: List<Int>? = null
+        rule.setContent { PostPollView(poll = poll, voted = emptyList(), canVote = true, busy = false, onVote = { voted = it }) }
+        rule.onAllNodesWithText("75%").assertCountEquals(0)
+        rule.onNodeWithText("Coffee").performClick()
+        rule.onNodeWithText("See results").performClick()
+        rule.onNodeWithText("75%").assertIsDisplayed()
+        rule.onNodeWithText("25%").assertIsDisplayed()
+        // No vote from the results.
+        rule.onAllNodesWithText("Vote").assertCountEquals(0)
+        rule.onNodeWithText("Hide results").performClick()
+        rule.onAllNodesWithText("75%").assertCountEquals(0)
+        // Back to the vote, the choice as it was.
+        rule.onNodeWithText("Vote").assertIsEnabled().performClick()
+        assertEquals(listOf(1), voted)
+    }
+
+    @Test
+    fun `no link is offered where the results already show`() {
+        rule.setContent { PostPollView(poll = poll, voted = listOf(0), canVote = true, busy = false, onVote = {}) }
+        rule.onAllNodesWithText("See results").assertCountEquals(0)
+    }
+
+    @Test
+    fun `a reader who cannot vote sees the results and no link`() {
+        rule.setContent { PostPollView(poll = poll, voted = emptyList(), canVote = false, busy = false, onVote = {}) }
+        rule.onNodeWithText("75%").assertIsDisplayed()
+        rule.onAllNodesWithText("See results").assertCountEquals(0)
     }
 
     @Test

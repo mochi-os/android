@@ -240,6 +240,8 @@
     <string name="feeds_poll_closed">An rufe</string>
     <string name="feeds_poll_closes">Zai rufe %1$s</string>
     <string name="feeds_poll_vote">Jefa ƙuri\'a</string>
+    <string name="feeds_poll_see_results">Nuna sakamako</string>
+    <string name="feeds_poll_hide_results">Ɓoye sakamako</string>
     <string name="feeds_reply_from">Kuma amsa daga</string>
     <string name="feeds_reply_from_none">Babu asusu</string>
     <string name="feeds_mute">Yi shiru</string>

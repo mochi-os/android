@@ -256,6 +256,8 @@
     <string name="feeds_poll_closed">Закрыта</string>
     <string name="feeds_poll_closes">Закрываецца %1$s</string>
     <string name="feeds_poll_vote">Прагаласаваць</string>
+    <string name="feeds_poll_see_results">Паказаць вынікі</string>
+    <string name="feeds_poll_hide_results">Схаваць вынікі</string>
     <string name="feeds_reply_from">Таксама адказаць ад</string>
     <string name="feeds_reply_from_none">Без уліковага запісу</string>
     <string name="feeds_mute">Адключыць гук</string>
