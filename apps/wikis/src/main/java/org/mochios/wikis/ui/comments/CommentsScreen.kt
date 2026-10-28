@@ -152,9 +152,7 @@ fun CommentsScreen(
                             onSubmitReply = { parentId, uris ->
                                 viewModel.submitReply(parentId, uris)
                             },
-                            onEdit = if (state.permissions.edit) {
-                                { id, body -> viewModel.editComment(id, body) }
-                            } else null,
+                            onEdit = { id, body -> viewModel.editComment(id, body) },
                             onDelete = if (state.permissions.edit || state.permissions.delete) {
                                 { id -> viewModel.deleteComment(id) }
                             } else null,

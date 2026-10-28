@@ -72,6 +72,7 @@ fun ObjectDetailSheet(
     viewModel: ObjectDetailViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val identity by viewModel.identity.collectAsState()
     val context = LocalContext.current
     var showOverflow by remember { mutableStateOf(false) }
     var showDeleteConfirm by remember { mutableStateOf(false) }
@@ -229,6 +230,8 @@ fun ObjectDetailSheet(
                         )
                         1 -> CommentsTab(
                             comments = uiState.comments,
+                            currentUserId = identity,
+                            canManage = uiState.access == "owner" || uiState.access == "design",
                             crmId = crmId,
                             drafts = viewModel.drafts,
                             target = obj.id,

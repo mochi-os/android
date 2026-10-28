@@ -75,6 +75,18 @@ class ObjectDetailViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(ObjectDetailUiState())
     val uiState: StateFlow<ObjectDetailUiState> = _uiState.asStateFlow()
 
+    private val _identity = MutableStateFlow<String?>(null)
+
+    /** The signed-in person's id, to tell their own comments from others'. */
+    val identity: StateFlow<String?> = _identity.asStateFlow()
+
+    init {
+        viewModelScope.launch {
+            val identity = sessionManager.getBoundIdentity()
+            _identity.value = identity
+        }
+    }
+
     /**
      * Comments typed but not yet sent, by object. Held here, not in the sheet,
      * so one survives the sheet closing or its tab changing.

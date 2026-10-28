@@ -52,6 +52,8 @@ class CommentsTabDraftTest {
             if (shown) {
                 CommentsTab(
                     comments = comments,
+                    currentUserId = null,
+                    canManage = true,
                     projectId = "project",
                     drafts = drafts,
                     target = target,

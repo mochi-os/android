@@ -52,6 +52,8 @@ class CommentsTabDraftTest {
             if (shown) {
                 CommentsTab(
                     comments = comments,
+                    currentUserId = null,
+                    canManage = true,
                     crmId = "crm",
                     drafts = drafts,
                     target = target,
