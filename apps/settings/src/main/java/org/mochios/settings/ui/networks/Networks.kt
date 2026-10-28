@@ -99,6 +99,14 @@ internal fun serverAddress(account: NetworkAccount): String {
 internal fun homed(account: NetworkAccount): Boolean =
     account.hosted && account.kind != "group" && (account.type == "fediverse" || account.type == "bluesky")
 
+/**
+ * Whether a hosted account has keys of its own: a fediverse account signs with
+ * one, a Bluesky account has its signing and rotation keys. Matrix signs per
+ * domain and XMPP per device, so theirs have none.
+ */
+internal fun keyed(account: NetworkAccount): Boolean =
+    account.type == "fediverse" || account.type == "bluesky"
+
 /** What an account's card says of it, most pressing first, as the web's status column does. */
 internal sealed interface AccountStatus {
     data class Failed(val message: String) : AccountStatus

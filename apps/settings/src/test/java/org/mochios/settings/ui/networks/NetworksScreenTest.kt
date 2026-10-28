@@ -180,6 +180,32 @@ class NetworksScreenTest {
     }
 
     @Test
+    fun `a hosted fediverse account's menu offers its keys`() {
+        val fediverse = NetworkAccount(id = "f1", type = "fediverse", hosted = true, identifier = "@alice@a.example")
+        content(base.copy(accounts = listOf(fediverse)))
+        rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).performClick()
+        rule.onNodeWithText(text(R.string.networks_keys)).assertExists()
+    }
+
+    @Test
+    fun `a hosted Matrix account's menu offers no keys, which it has none of`() {
+        val matrix = NetworkAccount(id = "x1", type = "matrix", hosted = true, identifier = "@alice:a.example")
+        content(base.copy(accounts = listOf(matrix)))
+        rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).performClick()
+        rule.onNodeWithText(text(R.string.networks_profile)).assertExists()
+        rule.onNodeWithText(text(R.string.networks_keys)).assertDoesNotExist()
+    }
+
+    @Test
+    fun `a hosted XMPP account's menu offers no keys, which it has none of`() {
+        val xmpp = NetworkAccount(id = "j1", type = "xmpp", hosted = true, identifier = "alice@a.example")
+        content(base.copy(accounts = listOf(xmpp)))
+        rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).performClick()
+        rule.onNodeWithText(text(R.string.networks_profile)).assertExists()
+        rule.onNodeWithText(text(R.string.networks_keys)).assertDoesNotExist()
+    }
+
+    @Test
     fun `a linked account's menu tests it`() {
         val linked = NetworkAccount(id = "m1", type = "mastodon", identifier = "@bob@m.example", server = "m.example")
         val tested = mutableListOf<String>()
