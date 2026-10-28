@@ -18,7 +18,6 @@
     <string name="forums_moderation_restriction_type_muted">Silenciá</string>
     <string name="forums_report_submit">Enviá la denuncia</string>
     <string name="forums_comment_edit">Editá el comentario</string>
-    <string name="forums_comment_edit_title">Editá el comentario</string>
     <string name="forums_comment_delete">Eliminá el comentario</string>
     <string name="forums_comment_delete_title">Eliminá el comentario</string>
     <string name="forums_comment_reply">Respondé</string>
@@ -126,7 +125,6 @@
     <string name="forums_report_reason_offtopic">Fuera de tema</string>
     <string name="forums_no_comments">Aún no hay comentarios</string>
     <string name="forums_write_comment">Escribí un comentario…</string>
-    <string name="forums_comment_edit_body_field">Cuerpo</string>
     <string name="forums_comment_delete_message">¿Seguro que querés eliminar este comentario?</string>
     <string name="forums_comment_replying_to">Respondiendo a %1$s</string>
     <string name="forums_comment_clear_reply">Borrar respuesta</string>

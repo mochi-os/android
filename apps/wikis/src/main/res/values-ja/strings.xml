@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s に返信</string>
     <string name="wikis_comment_clear_reply">返信をキャンセル</string>
     <string name="wikis_comment_action_delete">削除</string>
-    <string name="wikis_comment_action_save">保存</string>
     <string name="wikis_comment_action_cancel">キャンセル</string>
     <string name="wikis_comment_edited">(編集済み)</string>
     <string name="wikis_comment_delete_confirm_title">コメントを削除</string>

@@ -7,7 +7,6 @@ package org.mochios.wikis.ui.comments
 
 import android.widget.TextView
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -35,11 +34,10 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.CommentActions
+import org.mochios.android.ui.components.CommentEditor
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiTextButton
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
@@ -208,32 +206,17 @@ fun WikiCommentThread(
                     // fallback: formatting was lost, and with it the selection
                     // capture the quote-reply below reads.
                     if (editing) {
-                        MochiTextField(
-                            value = editBody,
-                            onValueChange = { editBody = it },
-                            modifier = Modifier.fillMaxWidth(),
-                            minLines = 3,
-                            maxLines = 8,
+                        CommentEditor(
+                            text = editBody,
+                            onTextChange = { text -> editBody = text },
+                            onCancel = { editing = false },
+                            onSave = {
+                                if (editBody.isNotBlank()) {
+                                    onEdit?.invoke(comment.id, editBody.trim())
+                                    editing = false
+                                }
+                            },
                         )
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.End,
-                        ) {
-                            MochiTextButton(onClick = { editing = false }) {
-                                Text(stringResource(R.string.wikis_comment_action_cancel))
-                            }
-                            MochiTextButton(
-                                onClick = {
-                                    if (editBody.isNotBlank()) {
-                                        onEdit?.invoke(comment.id, editBody.trim())
-                                        editing = false
-                                    }
-                                },
-                                enabled = editBody.isNotBlank(),
-                            ) {
-                                Text(stringResource(R.string.wikis_comment_action_save))
-                            }
-                        }
                     } else if (comment.body.isNotBlank()) {
                         HtmlContent(
                             html = comment.body,

@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Umsebenzisi</string>
     <string name="forums_no_comments">Akukho zimvo okwangoku</string>
     <string name="forums_comment_edit">Hlela uluvo</string>
-    <string name="forums_comment_edit_title">Hlela uluvo</string>
     <string name="forums_comment_delete">Cima isiphawuli</string>
     <string name="forums_comment_delete_title">Cima isiphawuli</string>
     <string name="forums_comment_reply">Phendula</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Thumela</string>
     <string name="forums_post_body_field">Umzimba</string>
-    <string name="forums_comment_edit_body_field">Umzimba</string>
     <string name="forums_write_comment">Bhala igqabantshintshi…</string>
 
     <string name="notification_channel_forums">Izaziso zeenkundla</string>

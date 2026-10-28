@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">الرد على %1$s</string>
     <string name="wikis_comment_clear_reply">إلغاء الرد</string>
     <string name="wikis_comment_action_delete">حذف</string>
-    <string name="wikis_comment_action_save">حفظ</string>
     <string name="wikis_comment_action_cancel">إلغاء</string>
     <string name="wikis_comment_edited">(تم التعديل)</string>
     <string name="wikis_comment_delete_confirm_title">حذف التعليق</string>

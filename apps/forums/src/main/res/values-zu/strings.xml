@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Umsebenzisi</string>
     <string name="forums_no_comments">Awekho amazwana okwamanje</string>
     <string name="forums_comment_edit">Hlela ukuphawula</string>
-    <string name="forums_comment_edit_title">Hlela ukuphawula</string>
     <string name="forums_comment_delete">Susa umbono</string>
     <string name="forums_comment_delete_title">Susa umbono</string>
     <string name="forums_comment_reply">Phendula</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Thumela</string>
     <string name="forums_post_body_field">Okuqukethwe</string>
-    <string name="forums_comment_edit_body_field">Okuqukethwe</string>
     <string name="forums_write_comment">Bhala amazwana…</string>
 
     <string name="notification_channel_forums">Izaziso zezinkundla</string>

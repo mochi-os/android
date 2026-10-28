@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Antwort an %1$s</string>
     <string name="wikis_comment_clear_reply">Antwort abbrechen</string>
     <string name="wikis_comment_action_delete">Löschen</string>
-    <string name="wikis_comment_action_save">Speichern</string>
     <string name="wikis_comment_action_cancel">Abbrechen</string>
     <string name="wikis_comment_edited">(bearbeitet)</string>
     <string name="wikis_comment_delete_confirm_title">Kommentar löschen</string>

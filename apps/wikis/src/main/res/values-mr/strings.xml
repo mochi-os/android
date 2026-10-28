@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s ला प्रत्युत्तर देत आहे</string>
     <string name="wikis_comment_clear_reply">उत्तर रद्द करा</string>
     <string name="wikis_comment_action_delete">हटवा</string>
-    <string name="wikis_comment_action_save">जतन करा</string>
     <string name="wikis_comment_action_cancel">रद्द करा</string>
     <string name="wikis_comment_edited">(संपादित)</string>
     <string name="wikis_comment_delete_confirm_title">टिप्पणी हटवा</string>

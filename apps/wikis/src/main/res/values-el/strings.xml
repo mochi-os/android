@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Απάντηση σε %1$s</string>
     <string name="wikis_comment_clear_reply">Ακύρωση απάντησης</string>
     <string name="wikis_comment_action_delete">Διαγραφή</string>
-    <string name="wikis_comment_action_save">Αποθήκευση</string>
     <string name="wikis_comment_action_cancel">Ακύρωση</string>
     <string name="wikis_comment_edited">(επεξεργάστηκε)</string>
     <string name="wikis_comment_delete_confirm_title">Διαγραφή σχολίου</string>

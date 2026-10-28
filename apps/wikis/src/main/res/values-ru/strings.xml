@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Ответ %1$s</string>
     <string name="wikis_comment_clear_reply">Отменить ответ</string>
     <string name="wikis_comment_action_delete">Удалить</string>
-    <string name="wikis_comment_action_save">Сохранить</string>
     <string name="wikis_comment_action_cancel">Отмена</string>
     <string name="wikis_comment_edited">(изменено)</string>
     <string name="wikis_comment_delete_confirm_title">Удалить комментарий</string>

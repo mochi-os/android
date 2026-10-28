@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Användare</string>
     <string name="forums_no_comments">Inga kommentarer ännu</string>
     <string name="forums_comment_edit">Redigera kommentar</string>
-    <string name="forums_comment_edit_title">Redigera kommentar</string>
     <string name="forums_comment_delete">Ta bort kommentar</string>
     <string name="forums_comment_delete_title">Ta bort kommentar</string>
     <string name="forums_comment_reply">Svara</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Skicka</string>
     <string name="forums_post_body_field">Innehåll</string>
-    <string name="forums_comment_edit_body_field">Innehåll</string>
     <string name="forums_write_comment">Skriv en kommentar…</string>
 
     <string name="notification_channel_forums">Forum-aviseringar</string>

@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s билдирүүсүнө жооп берүүдө</string>
     <string name="wikis_comment_clear_reply">Жоопту жокко чыгаруу</string>
     <string name="wikis_comment_action_delete">Жок кылуу</string>
-    <string name="wikis_comment_action_save">Сактоо</string>
     <string name="wikis_comment_action_cancel">Жокко чыгаруу</string>
     <string name="wikis_comment_edited">(өзгөртүлгөн)</string>
     <string name="wikis_comment_delete_confirm_title">Комментарийди жок кылуу</string>

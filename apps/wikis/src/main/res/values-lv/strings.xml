@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Atbild %1$s</string>
     <string name="wikis_comment_clear_reply">Atcelt atbildi</string>
     <string name="wikis_comment_action_delete">Dzēst</string>
-    <string name="wikis_comment_action_save">Saglabāt</string>
     <string name="wikis_comment_action_cancel">Atcelt</string>
     <string name="wikis_comment_edited">(rediģēts)</string>
     <string name="wikis_comment_delete_confirm_title">Dzēst komentāru</string>

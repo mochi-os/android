@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">وەڵامدانەوەی %1$s</string>
     <string name="wikis_comment_clear_reply">هەڵوەشاندنەوەی وەڵام</string>
     <string name="wikis_comment_action_delete">سڕینەوە</string>
-    <string name="wikis_comment_action_save">پاشەکەوتکردن</string>
     <string name="wikis_comment_action_cancel">هەڵوەشاندنەوە</string>
     <string name="wikis_comment_edited">(دەستکاریکراو)</string>
     <string name="wikis_comment_delete_confirm_title">سڕینەوەی لێدوان</string>

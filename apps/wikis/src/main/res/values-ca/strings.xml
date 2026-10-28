@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">S\'està responent a %1$s</string>
     <string name="wikis_comment_clear_reply">Cancel·la la resposta</string>
     <string name="wikis_comment_action_delete">Suprimeix</string>
-    <string name="wikis_comment_action_save">Desa</string>
     <string name="wikis_comment_action_cancel">Cancel·la</string>
     <string name="wikis_comment_edited">(editat)</string>
     <string name="wikis_comment_delete_confirm_title">Suprimeix el comentari</string>

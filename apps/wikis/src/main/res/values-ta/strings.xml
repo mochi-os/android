@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s-க்கு பதிலளிக்கிறீர்கள்</string>
     <string name="wikis_comment_clear_reply">பதிலளிப்பை ரத்துசெய்</string>
     <string name="wikis_comment_action_delete">நீக்கு</string>
-    <string name="wikis_comment_action_save">சேமி</string>
     <string name="wikis_comment_action_cancel">ரத்துசெய்</string>
     <string name="wikis_comment_edited">(திருத்தப்பட்டது)</string>
     <string name="wikis_comment_delete_confirm_title">கருத்தை நீக்கு</string>

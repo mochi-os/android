@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Bruker</string>
     <string name="forums_no_comments">Ingen kommentarer ennå</string>
     <string name="forums_comment_edit">Rediger kommentar</string>
-    <string name="forums_comment_edit_title">Rediger kommentar</string>
     <string name="forums_comment_delete">Slett kommentar</string>
     <string name="forums_comment_delete_title">Slett kommentar</string>
     <string name="forums_comment_reply">Svar</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Send</string>
     <string name="forums_post_body_field">Innhold</string>
-    <string name="forums_comment_edit_body_field">Innhold</string>
     <string name="forums_write_comment">Skriv en kommentar…</string>
 
     <string name="notification_channel_forums">Forum-varsler</string>

@@ -57,7 +57,6 @@
     <string name="wikis_comment_replying_to">%1$s(r)i erantzuten</string>
     <string name="wikis_comment_clear_reply">Utzi erantzuna</string>
     <string name="wikis_comment_action_delete">Ezabatu</string>
-    <string name="wikis_comment_action_save">Gorde</string>
     <string name="wikis_comment_action_cancel">Utzi</string>
     <string name="wikis_comment_edited">(editatua)</string>
     <string name="wikis_comment_delete_confirm_title">Ezabatu iruzkina</string>

@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Foydalanuvchi</string>
     <string name="forums_no_comments">Hozircha izohlar yoʻq</string>
     <string name="forums_comment_edit">Izohni tahrirlash</string>
-    <string name="forums_comment_edit_title">Izohni tahrirlash</string>
     <string name="forums_comment_delete">Izohni oʻchirish</string>
     <string name="forums_comment_delete_title">Izohni oʻchirish</string>
     <string name="forums_comment_reply">Javob</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Yuborish</string>
     <string name="forums_post_body_field">Matn</string>
-    <string name="forums_comment_edit_body_field">Matn</string>
     <string name="forums_write_comment">Izoh yozing…</string>
 
     <string name="notification_channel_forums">Forum bildirishnomalari</string>

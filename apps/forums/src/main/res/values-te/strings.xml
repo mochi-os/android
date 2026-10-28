@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">యూజర్</string>
     <string name="forums_no_comments">ఇంకా కామెంట్‌లు లేవు</string>
     <string name="forums_comment_edit">వ్యాఖ్యను సవరించండి</string>
-    <string name="forums_comment_edit_title">వ్యాఖ్యను సవరించండి</string>
     <string name="forums_comment_delete">వ్యాఖ్యను తొలగించండి</string>
     <string name="forums_comment_delete_title">వ్యాఖ్యను తొలగించండి</string>
     <string name="forums_comment_reply">రిప్లై</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">పంపండి</string>
     <string name="forums_post_body_field">కంటెంట్</string>
-    <string name="forums_comment_edit_body_field">కంటెంట్</string>
     <string name="forums_write_comment">వ్యాఖ్య రాయండి…</string>
 
     <string name="notification_channel_forums">ఫోరమ్‌ల నోటిఫికేషన్‌లు</string>

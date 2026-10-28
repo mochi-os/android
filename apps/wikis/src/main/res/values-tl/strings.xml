@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Tumutugon kay %1$s</string>
     <string name="wikis_comment_clear_reply">Kanselahin ang sagot</string>
     <string name="wikis_comment_action_delete">I-delete</string>
-    <string name="wikis_comment_action_save">I-save</string>
     <string name="wikis_comment_action_cancel">Kanselahin</string>
     <string name="wikis_comment_edited">(in-edit)</string>
     <string name="wikis_comment_delete_confirm_title">I-delete ang komento</string>

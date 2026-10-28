@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Utilizator</string>
     <string name="forums_no_comments">Încă niciun comentariu</string>
     <string name="forums_comment_edit">Editează comentariul</string>
-    <string name="forums_comment_edit_title">Editează comentariul</string>
     <string name="forums_comment_delete">Șterge comentariul</string>
     <string name="forums_comment_delete_title">Șterge comentariul</string>
     <string name="forums_comment_reply">Răspunde</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Trimite</string>
     <string name="forums_post_body_field">Conținut</string>
-    <string name="forums_comment_edit_body_field">Conținut</string>
     <string name="forums_write_comment">Scrie un comentariu…</string>
 
     <string name="notification_channel_forums">Notificări forumuri</string>

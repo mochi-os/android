@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Карыстальнік</string>
     <string name="forums_no_comments">Пакуль няма каментароў</string>
     <string name="forums_comment_edit">Рэдагаваць каментарый</string>
-    <string name="forums_comment_edit_title">Рэдагаваць каментарый</string>
     <string name="forums_comment_delete">Выдаліць каментарый</string>
     <string name="forums_comment_delete_title">Выдаліць каментарый</string>
     <string name="forums_comment_reply">Адказаць</string>
@@ -133,7 +132,6 @@
     <string name="forums_moderation_restriction_permanent">Пастаянная</string>
     <string name="forums_report_reason_hate">Нянавісць</string>
     <string name="forums_write_comment">Напішыце каментар…</string>
-    <string name="forums_comment_edit_body_field">Тэкст</string>
     <string name="forums_comment_delete_message">Вы ўпэўнены, што хочаце выдаліць гэты каментар?</string>
     <string name="forums_comment_replying_to">Адказ для %1$s</string>
     <string name="forums_comment_clear_reply">Ачысціць адказ</string>

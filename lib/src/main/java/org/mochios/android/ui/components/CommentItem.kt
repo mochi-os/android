@@ -259,23 +259,12 @@ fun CommentItem(
             Spacer(modifier = Modifier.height(4.dp))
 
             if (isEditing) {
-                MochiTextField(
-                    value = editText,
-                    onValueChange = onEditTextChange,
-                    modifier = Modifier.fillMaxWidth(),
-                    minLines = 2
+                CommentEditor(
+                    text = editText,
+                    onTextChange = onEditTextChange,
+                    onCancel = onCancelEdit,
+                    onSave = onSaveEdit,
                 )
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    MochiTextButton(onClick = onCancelEdit) {
-                        Text(stringResource(R.string.common_cancel))
-                    }
-                    MochiTextButton(onClick = onSaveEdit) {
-                        Text(stringResource(R.string.common_save))
-                    }
-                }
             } else {
                 HtmlContent(
                     html = body,
@@ -428,5 +417,41 @@ fun CommentThreadBack(onClick: () -> Unit, modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.width(6.dp))
         Text(stringResource(R.string.comment_all))
+    }
+}
+
+/**
+ * The editor a comment turns into while it is edited in place: the text, then
+ * Cancel and Save beneath it on the right. Every app's comments edit through
+ * this, so they all look and behave the same. Save is off while [text] is
+ * blank.
+ */
+@Composable
+fun CommentEditor(
+    text: String,
+    onTextChange: (String) -> Unit,
+    onCancel: () -> Unit,
+    onSave: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Column(modifier = modifier.fillMaxWidth()) {
+        MochiTextField(
+            value = text,
+            onValueChange = onTextChange,
+            modifier = Modifier.fillMaxWidth(),
+            minLines = 2,
+            maxLines = 8,
+        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.End,
+        ) {
+            MochiTextButton(onClick = onCancel) {
+                Text(stringResource(R.string.common_cancel))
+            }
+            MochiTextButton(onClick = onSave, enabled = text.isNotBlank()) {
+                Text(stringResource(R.string.common_save))
+            }
+        }
     }
 }

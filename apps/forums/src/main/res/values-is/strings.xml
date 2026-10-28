@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Notandi</string>
     <string name="forums_no_comments">Engar athugasemdir ennþá</string>
     <string name="forums_comment_edit">Breyta athugasemd</string>
-    <string name="forums_comment_edit_title">Breyta athugasemd</string>
     <string name="forums_comment_delete">Eyða athugasemd</string>
     <string name="forums_comment_delete_title">Eyða athugasemd</string>
     <string name="forums_comment_reply">Svara</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Senda</string>
     <string name="forums_post_body_field">Meginmál</string>
-    <string name="forums_comment_edit_body_field">Meginmál</string>
     <string name="forums_write_comment">Skrifaðu athugasemd…</string>
 
     <string name="notification_channel_forums">Tilkynningar fyrir spjallborð</string>

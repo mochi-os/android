@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Відповідь для %1$s</string>
     <string name="wikis_comment_clear_reply">Скасувати відповідь</string>
     <string name="wikis_comment_action_delete">Видалити</string>
-    <string name="wikis_comment_action_save">Зберегти</string>
     <string name="wikis_comment_action_cancel">Скасувати</string>
     <string name="wikis_comment_edited">(відредаговано)</string>
     <string name="wikis_comment_delete_confirm_title">Видалити коментар</string>

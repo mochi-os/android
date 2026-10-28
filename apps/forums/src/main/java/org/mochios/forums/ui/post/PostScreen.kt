@@ -167,7 +167,8 @@ fun PostScreen(
     var draft by remember { mutableStateOf(TextFieldValue("")) }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
-    var editingComment by remember { mutableStateOf<ForumComment?>(null) }
+    var editingId by rememberSaveable { mutableStateOf<String?>(null) }
+    var editText by rememberSaveable { mutableStateOf("") }
     var showReportPost by remember { mutableStateOf(false) }
     var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
     val snackbar = remember { SnackbarHostState() }
@@ -232,7 +233,10 @@ fun PostScreen(
             viewModel.setReplyTo(comment)
             focusComposer()
         },
-        onEdit = { editingComment = it },
+        onEdit = { comment ->
+            editingId = comment.id
+            editText = comment.body
+        },
         onDelete = { commentToDelete = it },
         onApprove = { viewModel.approveComment(it.id) },
         onRemove = { viewModel.removeComment(it.id) },
@@ -248,6 +252,17 @@ fun PostScreen(
         onShare = { comment ->
             shareLink(context, viewModel.commentLink(comment.id), uiState.post.title.ifBlank { shareTitle })
         },
+        editing = editingId,
+        editText = editText,
+        onEditTextChange = { text -> editText = text },
+        onSaveEdit = {
+            val id = editingId
+            if (id != null && editText.isNotBlank()) {
+                viewModel.editComment(id, editText.trim())
+                editingId = null
+            }
+        },
+        onCancelEdit = { editingId = null },
     )
     val attachmentPanel: @Composable (Attachment) -> Unit = { att ->
         AttachmentComments(
@@ -575,17 +590,6 @@ fun PostScreen(
         )
     }
 
-    editingComment?.let { c ->
-        EditCommentDialog(
-            comment = c,
-            onConfirm = { body ->
-                viewModel.editComment(c.id, body)
-                editingComment = null
-            },
-            onDismiss = { editingComment = null },
-        )
-    }
-
     if (showReportPost) {
         ReportDialog(
             title = stringResource(R.string.forums_post_report),
@@ -607,35 +611,6 @@ fun PostScreen(
             onDismiss = { reportingComment = null }
         )
     }
-}
-
-@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
-@Composable
-private fun EditCommentDialog(
-    comment: ForumComment,
-    onConfirm: (body: String) -> Unit,
-    onDismiss: () -> Unit,
-) {
-    var body by remember { mutableStateOf(comment.body) }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.forums_comment_edit_title),
-        content = {
-            MochiTextField(
-                value = body,
-                onValueChange = { body = it },
-                label = { Text(stringResource(R.string.forums_comment_edit_body_field)) },
-                minLines = 3,
-                maxLines = 8,
-                modifier = Modifier.fillMaxWidth()
-            )
-        },
-        confirmText = stringResource(MochiR.string.common_save),
-        onConfirm = { onConfirm(body) },
-        confirmEnabled = body.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -1063,6 +1038,12 @@ private data class CommentActions(
     val onOpenAttachment: (String) -> Unit,
     val onBlock: (String) -> Unit = {},
     val onShare: (ForumComment) -> Unit = {},
+    /** The comment being edited in place, if any, and the text typed so far. */
+    val editing: String? = null,
+    val editText: String = "",
+    val onEditTextChange: (String) -> Unit = {},
+    val onSaveEdit: () -> Unit = {},
+    val onCancelEdit: () -> Unit = {},
 )
 
 /** A forum thread in reading order, the replies of every folded comment left out. */
@@ -1103,6 +1084,11 @@ private fun LazyListScope.commentsItems(
                 onOpenAttachment = actions.onOpenAttachment,
                 onBlock = actions.onBlock,
                 onShare = { actions.onShare(c) },
+                isEditing = actions.editing == c.id,
+                editText = actions.editText,
+                onEditTextChange = actions.onEditTextChange,
+                onSaveEdit = actions.onSaveEdit,
+                onCancelEdit = actions.onCancelEdit,
                 op = postAuthor.isNotEmpty() && c.member == postAuthor,
                 replies = row.replies,
                 collapsed = c.id in collapsed,
@@ -1271,6 +1257,11 @@ private fun CommentCard(
     onToggleCollapse: (() -> Unit)? = null,
     onCollapseParent: (() -> Unit)? = null,
     highlighted: Boolean = false,
+    isEditing: Boolean = false,
+    editText: String = "",
+    onEditTextChange: (String) -> Unit = {},
+    onSaveEdit: () -> Unit = {},
+    onCancelEdit: () -> Unit = {},
 ) {
     var showMenu by remember { mutableStateOf(false) }
     val anchor = comment.anchor
@@ -1298,6 +1289,11 @@ private fun CommentCard(
         onCollapseParent = onCollapseParent,
         highlighted = highlighted,
         badge = if (op) stringResource(R.string.forums_comment_op) else null,
+        isEditing = isEditing,
+        editText = editText,
+        onEditTextChange = onEditTextChange,
+        onSaveEdit = onSaveEdit,
+        onCancelEdit = onCancelEdit,
     ) {
         PostBadges(status = comment.status)
         // Same reaction row as the post: like · dislike, filled for the viewer's

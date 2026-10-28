@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">در پاسخ به %1$s</string>
     <string name="wikis_comment_clear_reply">لغو پاسخ</string>
     <string name="wikis_comment_action_delete">حذف</string>
-    <string name="wikis_comment_action_save">ذخیره</string>
     <string name="wikis_comment_action_cancel">لغو</string>
     <string name="wikis_comment_edited">(ویرایش‌شده)</string>
     <string name="wikis_comment_delete_confirm_title">حذف نظر</string>

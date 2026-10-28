@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Ҷавоб ба %1$s</string>
     <string name="wikis_comment_clear_reply">Бекор кардани ҷавоб</string>
     <string name="wikis_comment_action_delete">Нест кардан</string>
-    <string name="wikis_comment_action_save">Захира</string>
     <string name="wikis_comment_action_cancel">Бекор кардан</string>
     <string name="wikis_comment_edited">(таҳриршуда)</string>
     <string name="wikis_comment_delete_confirm_title">Нест кардани шарҳ</string>

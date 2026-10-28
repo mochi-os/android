@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Svar til %1$s</string>
     <string name="wikis_comment_clear_reply">Hætta við svar</string>
     <string name="wikis_comment_action_delete">Eyða</string>
-    <string name="wikis_comment_action_save">Vista</string>
     <string name="wikis_comment_action_cancel">Hætta við</string>
     <string name="wikis_comment_edited">(breytt)</string>
     <string name="wikis_comment_delete_confirm_title">Eyða athugasemd</string>

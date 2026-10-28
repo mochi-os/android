@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s നു മറുപടി നൽകുന്നു</string>
     <string name="wikis_comment_clear_reply">മറുപടി റദ്ദാക്കുക</string>
     <string name="wikis_comment_action_delete">ഇല്ലാതാക്കുക</string>
-    <string name="wikis_comment_action_save">സേവ് ചെയ്യുക</string>
     <string name="wikis_comment_action_cancel">റദ്ദാക്കുക</string>
     <string name="wikis_comment_edited">(എഡിറ്റ് ചെയ്തു)</string>
     <string name="wikis_comment_delete_confirm_title">അഭിപ്രായം ഇല്ലാതാക്കുക</string>

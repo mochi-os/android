@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s ukar jaysaski</string>
     <string name="wikis_comment_clear_reply">Jaysawi jaytaña</string>
     <string name="wikis_comment_action_delete">Chhaqtayaña</string>
-    <string name="wikis_comment_action_save">Imaña</string>
     <string name="wikis_comment_action_cancel">Jaytaña</string>
     <string name="wikis_comment_edited">(askichata)</string>
     <string name="wikis_comment_delete_confirm_title">Comentario chhaqtayaña</string>

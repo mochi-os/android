@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">អ្នកប្រើប្រាស់</string>
     <string name="forums_no_comments">មិនទាន់មានមតិយោបល់</string>
     <string name="forums_comment_edit">កែសម្រួលមតិយោបល់</string>
-    <string name="forums_comment_edit_title">កែសម្រួលមតិយោបល់</string>
     <string name="forums_comment_delete">លុបមតិយោបល់</string>
     <string name="forums_comment_delete_title">លុបមតិយោបល់</string>
     <string name="forums_comment_reply">ឆ្លើយតប</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">ផ្ញើ</string>
     <string name="forums_post_body_field">តួអត្ថបទ</string>
-    <string name="forums_comment_edit_body_field">តួអត្ថបទ</string>
     <string name="forums_write_comment">សរសេរមតិយោបល់…</string>
 
     <string name="notification_channel_forums">ការជូនដំណឹងវេទិកា</string>

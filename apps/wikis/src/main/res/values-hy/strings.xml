@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Պատասխանում եք %1$s-ին</string>
     <string name="wikis_comment_clear_reply">Չեղարկել պատասխանը</string>
     <string name="wikis_comment_action_delete">Ջնջել</string>
-    <string name="wikis_comment_action_save">Պահպանել</string>
     <string name="wikis_comment_action_cancel">Չեղարկել</string>
     <string name="wikis_comment_edited">(խմբագրված)</string>
     <string name="wikis_comment_delete_confirm_title">Ջնջել մեկնաբանությունը</string>

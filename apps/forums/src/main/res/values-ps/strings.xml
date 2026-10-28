@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">کاروونکی</string>
     <string name="forums_no_comments">تر اوسه هیڅ تبصرې نشته</string>
     <string name="forums_comment_edit">د تبصرې سمول</string>
-    <string name="forums_comment_edit_title">د تبصرې سمول</string>
     <string name="forums_comment_delete">تبصره ړنګه کړئ</string>
     <string name="forums_comment_delete_title">تبصره ړنګه کړئ</string>
     <string name="forums_comment_reply">ځواب</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">لیږل</string>
     <string name="forums_post_body_field">متن</string>
-    <string name="forums_comment_edit_body_field">متن</string>
     <string name="forums_write_comment">څرګندونه ولیکئ…</string>
 
     <string name="notification_channel_forums">د فورمونو خبرتیاوې</string>

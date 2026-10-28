@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Ag freagairt do %1$s</string>
     <string name="wikis_comment_clear_reply">Cealaigh freagra</string>
     <string name="wikis_comment_action_delete">Scrios</string>
-    <string name="wikis_comment_action_save">Sábháil</string>
     <string name="wikis_comment_action_cancel">Cealaigh</string>
     <string name="wikis_comment_edited">(curtha in eagar)</string>
     <string name="wikis_comment_delete_confirm_title">Scrios nóta tráchta</string>

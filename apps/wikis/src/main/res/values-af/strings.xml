@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Antwoord op %1$s</string>
     <string name="wikis_comment_clear_reply">Kanselleer antwoord</string>
     <string name="wikis_comment_action_delete">Verwyder</string>
-    <string name="wikis_comment_action_save">Stoor</string>
     <string name="wikis_comment_action_cancel">Kanselleer</string>
     <string name="wikis_comment_edited">(gewysig)</string>
     <string name="wikis_comment_delete_confirm_title">Verwyder kommentaar</string>

@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Gebruiker</string>
     <string name="forums_no_comments">Nog geen reacties</string>
     <string name="forums_comment_edit">Reactie bewerken</string>
-    <string name="forums_comment_edit_title">Reactie bewerken</string>
     <string name="forums_comment_delete">Reactie verwijderen</string>
     <string name="forums_comment_delete_title">Reactie verwijderen</string>
     <string name="forums_comment_reply">Antwoorden</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Verzenden</string>
     <string name="forums_post_body_field">Inhoud</string>
-    <string name="forums_comment_edit_body_field">Inhoud</string>
     <string name="forums_write_comment">Schrijf een opmerking…</string>
 
     <string name="notification_channel_forums">Forummeldingen</string>

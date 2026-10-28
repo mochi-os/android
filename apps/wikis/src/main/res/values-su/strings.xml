@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Ngabales ka %1$s</string>
     <string name="wikis_comment_clear_reply">Batalkeun balesan</string>
     <string name="wikis_comment_action_delete">Hapus</string>
-    <string name="wikis_comment_action_save">Simpen</string>
     <string name="wikis_comment_action_cancel">Batalkeun</string>
     <string name="wikis_comment_edited">(diédit)</string>
     <string name="wikis_comment_delete_confirm_title">Hapus koméntar</string>

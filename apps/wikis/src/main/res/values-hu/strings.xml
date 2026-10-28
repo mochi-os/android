@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Válasz neki: %1$s</string>
     <string name="wikis_comment_clear_reply">Válasz elvetése</string>
     <string name="wikis_comment_action_delete">Törlés</string>
-    <string name="wikis_comment_action_save">Mentés</string>
     <string name="wikis_comment_action_cancel">Mégse</string>
     <string name="wikis_comment_edited">(szerkesztve)</string>
     <string name="wikis_comment_delete_confirm_title">Megjegyzés törlése</string>
