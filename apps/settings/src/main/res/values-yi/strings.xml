@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">קיין צוריקשטעל־שליסל</string>
     <string name="networks_connected">פֿאַרבונדן</string>
     <string name="networks_not_connected">נישט פֿאַרבונדן</string>
+    <string name="networks_failure_unreachable">דער סערווער איז אומדערגרײכלעך</string>
+    <string name="networks_failure_status">דער סערווער האָט געענטפֿערט מיט פֿעלער %1$s</string>
+    <string name="networks_failure_closed">דער סערווער האָט פֿאַרענדיקט די פֿאַרבינדונג</string>
+    <string name="networks_failure_blocked">פֿאַרבינדונגען צום סערווער זענען בלאָקירט</string>
+    <string name="networks_failure_signed_out">דער סערווער נעמט מער נישט אָן דאָס אַרײַנלאָגירן פֿון דער קאָנטע; פֿאַרבינדט זי ווידער</string>
+    <string name="networks_failure_failed">די פֿאַרבינדונג מיטן סערווער איז נישט געלונגען</string>
+    <string name="networks_failure_retry">מע וועט פּרוּוון נאָך אַ מאָל אום %1$s</string>
     <string name="networks_profile">פּראָפֿיל</string>
     <string name="networks_profile_show">ווײַזן אויפֿן פּראָפֿיל</string>
     <string name="networks_profile_hide">באַהאַלטן פֿונעם פּראָפֿיל</string>

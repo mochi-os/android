@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">ರಿಕವರಿ ಕೀ ಇಲ್ಲ</string>
     <string name="networks_connected">ಸಂಪರ್ಕಿತ</string>
     <string name="networks_not_connected">ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ</string>
+    <string name="networks_failure_unreachable">ಸರ್ವರ್ ತಲುಪಲಾಗುತ್ತಿಲ್ಲ</string>
+    <string name="networks_failure_status">ಸರ್ವರ್ ದೋಷ %1$s ನೊಂದಿಗೆ ಉತ್ತರಿಸಿದೆ</string>
+    <string name="networks_failure_closed">ಸರ್ವರ್ ಸಂಪರ್ಕವನ್ನು ಕೊನೆಗೊಳಿಸಿದೆ</string>
+    <string name="networks_failure_blocked">ಸರ್ವರ್‌ಗೆ ಸಂಪರ್ಕಗಳನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ</string>
+    <string name="networks_failure_signed_out">ಸರ್ವರ್ ಇನ್ನು ಮುಂದೆ ಈ ಖಾತೆಯ ಸೈನ್-ಇನ್ ಅನ್ನು ಸ್ವೀಕರಿಸುವುದಿಲ್ಲ; ಇದನ್ನು ಮತ್ತೆ ಲಿಂಕ್ ಮಾಡಿ</string>
+    <string name="networks_failure_failed">ಸರ್ವರ್‌ಗೆ ಸಂಪರ್ಕ ವಿಫಲವಾಗಿದೆ</string>
+    <string name="networks_failure_retry">%1$s ಕ್ಕೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಲಾಗುವುದು</string>
     <string name="networks_profile">ಪ್ರೊಫೈಲ್</string>
     <string name="networks_profile_show">ಪ್ರೊಫೈಲ್‌ನಲ್ಲಿ ತೋರಿಸಿ</string>
     <string name="networks_profile_hide">ಪ್ರೊಫೈಲ್‌ನಿಂದ ಮರೆಮಾಡಿ</string>

@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Babu maɓallin dawowa</string>
     <string name="networks_connected">An haɗa</string>
     <string name="networks_not_connected">Ba a haɗa ba</string>
+    <string name="networks_failure_unreachable">Ba a iya kaiwa sabar ba</string>
+    <string name="networks_failure_status">Sabar ta amsa da kuskure %1$s</string>
+    <string name="networks_failure_closed">Sabar ta katse haɗin</string>
+    <string name="networks_failure_blocked">An toshe haɗi zuwa sabar</string>
+    <string name="networks_failure_signed_out">Sabar ba ta ƙara karɓar shigar wannan asusun; sake haɗa shi</string>
+    <string name="networks_failure_failed">Haɗi zuwa sabar ya gaza</string>
+    <string name="networks_failure_retry">Za a sake gwadawa da ƙarfe %1$s</string>
     <string name="networks_profile">Bayanin martaba</string>
     <string name="networks_profile_show">Nuna a bayanin martaba</string>
     <string name="networks_profile_hide">Ɓoye daga bayanin martaba</string>

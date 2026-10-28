@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">कौनो रिकवरी कुंजी नइखे</string>
     <string name="networks_connected">जुड़ल बा</string>
     <string name="networks_not_connected">जुड़ल नइखे</string>
+    <string name="networks_failure_unreachable">सर्वर तक पहुँचल ना जा सकल</string>
+    <string name="networks_failure_status">सर्वर त्रुटि %1$s के साथे जवाब दिहलस</string>
+    <string name="networks_failure_closed">सर्वर कनेक्शन बंद क दिहलस</string>
+    <string name="networks_failure_blocked">सर्वर से कनेक्शन ब्लॉक बा</string>
+    <string name="networks_failure_signed_out">सर्वर अब एह खाता के साइन-इन ना मानेला; एकरा के फेर से जोड़ीं</string>
+    <string name="networks_failure_failed">सर्वर से कनेक्शन फेल हो गइल</string>
+    <string name="networks_failure_retry">%1$s बजे फेर से कोसिस होई</string>
     <string name="networks_profile">प्रोफाइल</string>
     <string name="networks_profile_show">प्रोफाइल पर देखाईं</string>
     <string name="networks_profile_hide">प्रोफाइल से छिपाईं</string>

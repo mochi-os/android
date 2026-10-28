@@ -479,6 +479,13 @@
     <string name="networks_no_recovery">Aucune clé de récupération</string>
     <string name="networks_connected">Connecté</string>
     <string name="networks_not_connected">Non connecté</string>
+    <string name="networks_failure_unreachable">Le serveur est injoignable</string>
+    <string name="networks_failure_status">Le serveur a répondu avec l\'erreur %1$s</string>
+    <string name="networks_failure_closed">Le serveur a fermé la connexion</string>
+    <string name="networks_failure_blocked">Les connexions au serveur sont bloquées</string>
+    <string name="networks_failure_signed_out">Le serveur n\'accepte plus la connexion de ce compte ; liez-le à nouveau</string>
+    <string name="networks_failure_failed">La connexion au serveur a échoué</string>
+    <string name="networks_failure_retry">Nouvelle tentative à %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Afficher sur le profil</string>
     <string name="networks_profile_hide">Masquer du profil</string>

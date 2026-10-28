@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Dikeldiş açary ýok</string>
     <string name="networks_connected">Baglandy</string>
     <string name="networks_not_connected">Baglanmadyk</string>
+    <string name="networks_failure_unreachable">Serwere baryp bolmaýar</string>
+    <string name="networks_failure_status">Serwer %1$s ýalňyşlygy bilen jogap berdi</string>
+    <string name="networks_failure_closed">Serwer birikmäni kesdi</string>
+    <string name="networks_failure_blocked">Serwer bilen birikmeler petiklenen</string>
+    <string name="networks_failure_signed_out">Serwer indi bu hasabyň girişini kabul etmeýär; ony täzeden baglanyşdyryň</string>
+    <string name="networks_failure_failed">Serwer bilen birikme şowsuz boldy</string>
+    <string name="networks_failure_retry">Täzeden synanyşyk: %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Profilde görkezmek</string>
     <string name="networks_profile_hide">Profilden gizlemek</string>

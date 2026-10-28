@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Asnjë çelës rikuperimi</string>
     <string name="networks_connected">I lidhur</string>
     <string name="networks_not_connected">I palidhur</string>
+    <string name="networks_failure_unreachable">Serveri nuk mund të arrihet</string>
+    <string name="networks_failure_status">Serveri u përgjigj me gabimin %1$s</string>
+    <string name="networks_failure_closed">Serveri e mbylli lidhjen</string>
+    <string name="networks_failure_blocked">Lidhjet me serverin janë të bllokuara</string>
+    <string name="networks_failure_signed_out">Serveri nuk e pranon më hyrjen e kësaj llogarie; lidheni përsëri</string>
+    <string name="networks_failure_failed">Lidhja me serverin dështoi</string>
+    <string name="networks_failure_retry">Riprovim në orën %1$s</string>
     <string name="networks_profile">Profili</string>
     <string name="networks_profile_show">Shfaqe në profil</string>
     <string name="networks_profile_hide">Fshihe nga profili</string>

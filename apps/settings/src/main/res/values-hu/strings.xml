@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Nincs helyreállítási kulcs</string>
     <string name="networks_connected">Csatlakoztatva</string>
     <string name="networks_not_connected">Nincs csatlakoztatva</string>
+    <string name="networks_failure_unreachable">A kiszolgáló nem érhető el</string>
+    <string name="networks_failure_status">A kiszolgáló %1$s hibával válaszolt</string>
+    <string name="networks_failure_closed">A kiszolgáló bontotta a kapcsolatot</string>
+    <string name="networks_failure_blocked">A kiszolgálóval való kapcsolatok le vannak tiltva</string>
+    <string name="networks_failure_signed_out">A kiszolgáló már nem fogadja el ennek a fióknak a bejelentkezését; kapcsolja újra össze</string>
+    <string name="networks_failure_failed">A kapcsolódás a kiszolgálóhoz sikertelen</string>
+    <string name="networks_failure_retry">Újrapróbálkozás ekkor: %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Megjelenítés a profilon</string>
     <string name="networks_profile_hide">Elrejtés a profilról</string>

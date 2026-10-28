@@ -519,6 +519,13 @@
     <string name="networks_no_recovery">No recovery key</string>
     <string name="networks_connected">Connected</string>
     <string name="networks_not_connected">Not connected</string>
+    <string name="networks_failure_unreachable">The server can\'t be reached</string>
+    <string name="networks_failure_status">The server answered with error %1$s</string>
+    <string name="networks_failure_closed">The server ended the connection</string>
+    <string name="networks_failure_blocked">Connections to the server are blocked</string>
+    <string name="networks_failure_signed_out">The server no longer accepts this account\'s sign-in; link it again</string>
+    <string name="networks_failure_failed">The connection to the server failed</string>
+    <string name="networks_failure_retry">Trying again at %1$s</string>
     <string name="networks_profile">Profile</string>
     <string name="networks_profile_show">Show on profile</string>
     <string name="networks_profile_hide">Hide from profile</string>

@@ -490,6 +490,13 @@
     <string name="networks_no_recovery">אין מפתח שחזור</string>
     <string name="networks_connected">מחובר</string>
     <string name="networks_not_connected">לא מחובר</string>
+    <string name="networks_failure_unreachable">לא ניתן להגיע לשרת</string>
+    <string name="networks_failure_status">השרת השיב בשגיאה %1$s</string>
+    <string name="networks_failure_closed">השרת ניתק את החיבור</string>
+    <string name="networks_failure_blocked">החיבורים לשרת חסומים</string>
+    <string name="networks_failure_signed_out">השרת כבר לא מקבל את הכניסה של חשבון זה; יש לקשר אותו מחדש</string>
+    <string name="networks_failure_failed">החיבור לשרת נכשל</string>
+    <string name="networks_failure_retry">ניסיון נוסף בשעה %1$s</string>
     <string name="networks_profile">פרופיל</string>
     <string name="networks_profile_show">הצגה בפרופיל</string>
     <string name="networks_profile_hide">הסתרה מהפרופיל</string>

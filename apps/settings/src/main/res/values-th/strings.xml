@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">ไม่มีคีย์กู้คืน</string>
     <string name="networks_connected">เชื่อมต่อแล้ว</string>
     <string name="networks_not_connected">ไม่ได้เชื่อมต่อ</string>
+    <string name="networks_failure_unreachable">เข้าถึงเซิร์ฟเวอร์ไม่ได้</string>
+    <string name="networks_failure_status">เซิร์ฟเวอร์ตอบกลับด้วยข้อผิดพลาด %1$s</string>
+    <string name="networks_failure_closed">เซิร์ฟเวอร์ยุติการเชื่อมต่อ</string>
+    <string name="networks_failure_blocked">การเชื่อมต่อไปยังเซิร์ฟเวอร์ถูกบล็อก</string>
+    <string name="networks_failure_signed_out">เซิร์ฟเวอร์ไม่ยอมรับการลงชื่อเข้าใช้ของบัญชีนี้อีกต่อไป โปรดเชื่อมโยงใหม่</string>
+    <string name="networks_failure_failed">การเชื่อมต่อกับเซิร์ฟเวอร์ล้มเหลว</string>
+    <string name="networks_failure_retry">จะลองอีกครั้งเวลา %1$s</string>
     <string name="networks_profile">โปรไฟล์</string>
     <string name="networks_profile_show">แสดงบนโปรไฟล์</string>
     <string name="networks_profile_hide">ซ่อนจากโปรไฟล์</string>

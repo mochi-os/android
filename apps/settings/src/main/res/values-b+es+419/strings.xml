@@ -458,6 +458,13 @@
     <string name="networks_no_recovery">Sin clave de recuperación</string>
     <string name="networks_connected">Conectado</string>
     <string name="networks_not_connected">No conectado</string>
+    <string name="networks_failure_unreachable">No se puede acceder al servidor</string>
+    <string name="networks_failure_status">El servidor respondió con el error %1$s</string>
+    <string name="networks_failure_closed">El servidor cerró la conexión</string>
+    <string name="networks_failure_blocked">Las conexiones al servidor están bloqueadas</string>
+    <string name="networks_failure_signed_out">El servidor ya no acepta el inicio de sesión de esta cuenta; vuelve a vincularla</string>
+    <string name="networks_failure_failed">Falló la conexión con el servidor</string>
+    <string name="networks_failure_retry">Nuevo intento a las %1$s</string>
     <string name="networks_profile">Perfil</string>
     <string name="networks_profile_show">Mostrar en el perfil</string>
     <string name="networks_profile_hide">Ocultar del perfil</string>

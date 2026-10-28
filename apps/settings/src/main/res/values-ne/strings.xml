@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">कुनै रिकभरी कुञ्जी छैन</string>
     <string name="networks_connected">जडित</string>
     <string name="networks_not_connected">जडान गरिएको छैन</string>
+    <string name="networks_failure_unreachable">सर्भरमा पहुँच गर्न सकिँदैन</string>
+    <string name="networks_failure_status">सर्भरले त्रुटि %1$s सहित जवाफ दियो</string>
+    <string name="networks_failure_closed">सर्भरले जडान अन्त्य गर्‍यो</string>
+    <string name="networks_failure_blocked">सर्भरसँगका जडानहरू ब्लक गरिएका छन्</string>
+    <string name="networks_failure_signed_out">सर्भरले अब यस खाताको साइन इन स्वीकार गर्दैन; यसलाई पुनः लिङ्क गर्नुहोस्</string>
+    <string name="networks_failure_failed">सर्भरसँग जडान असफल भयो</string>
+    <string name="networks_failure_retry">%1$s मा पुनः प्रयास गरिनेछ</string>
     <string name="networks_profile">प्रोफाइल</string>
     <string name="networks_profile_show">प्रोफाइलमा देखाउनुहोस्</string>
     <string name="networks_profile_hide">प्रोफाइलबाट लुकाउनुहोस्</string>

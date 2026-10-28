@@ -490,6 +490,13 @@
     <string name="networks_no_recovery">Nėra atkūrimo rakto</string>
     <string name="networks_connected">Prijungta</string>
     <string name="networks_not_connected">Neprijungta</string>
+    <string name="networks_failure_unreachable">Serveris nepasiekiamas</string>
+    <string name="networks_failure_status">Serveris atsakė klaida %1$s</string>
+    <string name="networks_failure_closed">Serveris nutraukė ryšį</string>
+    <string name="networks_failure_blocked">Ryšys su serveriu užblokuotas</string>
+    <string name="networks_failure_signed_out">Serveris nebepriima šios paskyros prisijungimo; susiekite ją iš naujo</string>
+    <string name="networks_failure_failed">Ryšio su serveriu klaida</string>
+    <string name="networks_failure_retry">Bandoma dar kartą %1$s</string>
     <string name="networks_profile">Profilis</string>
     <string name="networks_profile_show">Rodyti profilyje</string>
     <string name="networks_profile_hide">Slėpti profilyje</string>

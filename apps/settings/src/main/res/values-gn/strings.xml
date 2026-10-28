@@ -477,6 +477,13 @@
     <string name="networks_no_recovery">Ndaipóri llave jeguerujeyrã</string>
     <string name="networks_connected">Oñembojuaju</string>
     <string name="networks_not_connected">Noñembojuajúi</string>
+    <string name="networks_failure_unreachable">Mohendaha ndaikatúi ojehupyty</string>
+    <string name="networks_failure_status">Mohendaha ombohovái jejavy %1$s reheve</string>
+    <string name="networks_failure_closed">Mohendaha omohu\'ã ñembojuaju</string>
+    <string name="networks_failure_blocked">Ñembojuaju mohendahápe ojejoko</string>
+    <string name="networks_failure_signed_out">Mohendaha nomoneĩvéima ko mba\'ete jeike; embojoaju jey</string>
+    <string name="networks_failure_failed">Ñembojuaju mohendahápe ndoikoporãi</string>
+    <string name="networks_failure_retry">Oñeha\'ã jeýta %1$s-pe</string>
     <string name="networks_profile">Perfil</string>
     <string name="networks_profile_show">Ehechauka perfil-pe</string>
     <string name="networks_profile_hide">Ekañy perfil-gui</string>

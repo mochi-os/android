@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">هیچ کلیلی گەڕاندنەوە نییە</string>
     <string name="networks_connected">پەیوەستکراو</string>
     <string name="networks_not_connected">پەیوەست نەکراوە</string>
+    <string name="networks_failure_unreachable">ڕاژەکار بەردەست نییە</string>
+    <string name="networks_failure_status">ڕاژەکار بە هەڵەی %1$s وەڵامی دایەوە</string>
+    <string name="networks_failure_closed">ڕاژەکار پەیوەندییەکەی کۆتایی پێهێنا</string>
+    <string name="networks_failure_blocked">پەیوەندییەکان بە ڕاژەکارەوە بلۆک کراون</string>
+    <string name="networks_failure_signed_out">ڕاژەکار چیتر چوونەژوورەوەی ئەم هەژمارە قبوڵ ناکات؛ دووبارە بیبەستەوە</string>
+    <string name="networks_failure_failed">پەیوەندی بە ڕاژەکارەوە سەرکەوتوو نەبوو</string>
+    <string name="networks_failure_retry">لە %1$s دووبارە هەوڵ دەدرێتەوە</string>
     <string name="networks_profile">پڕۆفایل</string>
     <string name="networks_profile_show">پیشاندان لە پڕۆفایل</string>
     <string name="networks_profile_hide">شاردنەوە لە پڕۆفایل</string>

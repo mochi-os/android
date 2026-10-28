@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">કોઈ રિકવરી કી નથી</string>
     <string name="networks_connected">જોડાયેલ</string>
     <string name="networks_not_connected">જોડાયેલ નથી</string>
+    <string name="networks_failure_unreachable">સર્વર સુધી પહોંચી શકાતું નથી</string>
+    <string name="networks_failure_status">સર્વરે ભૂલ %1$s સાથે જવાબ આપ્યો</string>
+    <string name="networks_failure_closed">સર્વરે કનેક્શન બંધ કર્યું</string>
+    <string name="networks_failure_blocked">સર્વર સાથેના કનેક્શન બ્લૉક કરેલા છે</string>
+    <string name="networks_failure_signed_out">સર્વર હવે આ ખાતાનું સાઇન-ઇન સ્વીકારતું નથી; તેને ફરી લિંક કરો</string>
+    <string name="networks_failure_failed">સર્વર સાથેનું કનેક્શન નિષ્ફળ થયું</string>
+    <string name="networks_failure_retry">%1$s વાગ્યે ફરી પ્રયાસ કરવામાં આવશે</string>
     <string name="networks_profile">પ્રોફાઇલ</string>
     <string name="networks_profile_show">પ્રોફાઇલ પર બતાવો</string>
     <string name="networks_profile_hide">પ્રોફાઇલમાંથી છુપાવો</string>

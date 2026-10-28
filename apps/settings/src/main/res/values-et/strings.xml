@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Taastevõtit pole</string>
     <string name="networks_connected">Ühendatud</string>
     <string name="networks_not_connected">Pole ühendatud</string>
+    <string name="networks_failure_unreachable">Server pole kättesaadav</string>
+    <string name="networks_failure_status">Server vastas veaga %1$s</string>
+    <string name="networks_failure_closed">Server katkestas ühenduse</string>
+    <string name="networks_failure_blocked">Ühendused serveriga on blokeeritud</string>
+    <string name="networks_failure_signed_out">Server ei aktsepteeri enam selle konto sisselogimist; seo konto uuesti</string>
+    <string name="networks_failure_failed">Ühendus serveriga ebaõnnestus</string>
+    <string name="networks_failure_retry">Uus katse kell %1$s</string>
     <string name="networks_profile">Profiil</string>
     <string name="networks_profile_show">Näita profiilis</string>
     <string name="networks_profile_hide">Peida profiilist</string>

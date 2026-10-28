@@ -488,6 +488,13 @@
     <string name="networks_no_recovery">Nicio cheie de recuperare</string>
     <string name="networks_connected">Conectat</string>
     <string name="networks_not_connected">Neconectat</string>
+    <string name="networks_failure_unreachable">Serverul nu poate fi accesat</string>
+    <string name="networks_failure_status">Serverul a răspuns cu eroarea %1$s</string>
+    <string name="networks_failure_closed">Serverul a închis conexiunea</string>
+    <string name="networks_failure_blocked">Conexiunile cu serverul sunt blocate</string>
+    <string name="networks_failure_signed_out">Serverul nu mai acceptă autentificarea acestui cont; conectați-l din nou</string>
+    <string name="networks_failure_failed">Conexiunea cu serverul a eșuat</string>
+    <string name="networks_failure_retry">Se reîncearcă la %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Afișează în profil</string>
     <string name="networks_profile_hide">Ascunde din profil</string>

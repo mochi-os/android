@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Ei palautusavainta</string>
     <string name="networks_connected">Yhdistetty</string>
     <string name="networks_not_connected">Ei yhdistetty</string>
+    <string name="networks_failure_unreachable">Palvelinta ei tavoiteta</string>
+    <string name="networks_failure_status">Palvelin vastasi virheellä %1$s</string>
+    <string name="networks_failure_closed">Palvelin katkaisi yhteyden</string>
+    <string name="networks_failure_blocked">Yhteydet palvelimeen on estetty</string>
+    <string name="networks_failure_signed_out">Palvelin ei enää hyväksy tämän tilin kirjautumista; yhdistä tili uudelleen</string>
+    <string name="networks_failure_failed">Yhteys palvelimeen epäonnistui</string>
+    <string name="networks_failure_retry">Yritetään uudelleen klo %1$s</string>
     <string name="networks_profile">Profiili</string>
     <string name="networks_profile_show">Näytä profiilissa</string>
     <string name="networks_profile_hide">Piilota profiilista</string>

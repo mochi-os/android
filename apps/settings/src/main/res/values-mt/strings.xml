@@ -508,6 +508,13 @@
     <string name="networks_no_recovery">L-ebda ċavetta ta\' rkupru</string>
     <string name="networks_connected">Konness</string>
     <string name="networks_not_connected">Mhux konness</string>
+    <string name="networks_failure_unreachable">Is-server ma jistax jintlaħaq</string>
+    <string name="networks_failure_status">Is-server wieġeb bl-iżball %1$s</string>
+    <string name="networks_failure_closed">Is-server temm il-konnessjoni</string>
+    <string name="networks_failure_blocked">Il-konnessjonijiet mas-server huma mblukkati</string>
+    <string name="networks_failure_signed_out">Is-server m\'għadux jaċċetta d-dħul ta\' dan il-kont; erġa\' llinkjah</string>
+    <string name="networks_failure_failed">Il-konnessjoni mas-server falliet</string>
+    <string name="networks_failure_retry">Tentattiv ieħor fil-%1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Uri fuq il-profil</string>
     <string name="networks_profile_hide">Aħbi mill-profil</string>

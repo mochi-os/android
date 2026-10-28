@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">د بیا رغونې کیلي نشته</string>
     <string name="networks_connected">وصل شو</string>
     <string name="networks_not_connected">وصل نه دی</string>
+    <string name="networks_failure_unreachable">سرور ته رسېدل ممکن نه دي</string>
+    <string name="networks_failure_status">سرور د تېروتنې %1$s سره ځواب ورکړ</string>
+    <string name="networks_failure_closed">سرور اړیکه پای ته ورسوله</string>
+    <string name="networks_failure_blocked">سرور ته اړیکې بندې شوې دي</string>
+    <string name="networks_failure_signed_out">سرور نور د دې حساب ننوتل نه مني؛ بیا یې ونښلوئ</string>
+    <string name="networks_failure_failed">له سرور سره اړیکه ناکامه شوه</string>
+    <string name="networks_failure_retry">په %1$s بیا هڅه کېږي</string>
     <string name="networks_profile">پروفایل</string>
     <string name="networks_profile_show">په پروفایل کې یې وښایاست</string>
     <string name="networks_profile_hide">له پروفایل څخه پټ کړئ</string>

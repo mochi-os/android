@@ -498,6 +498,13 @@
     <string name="networks_no_recovery">Brak klucza odzyskiwania</string>
     <string name="networks_connected">Połączono</string>
     <string name="networks_not_connected">Nie połączono</string>
+    <string name="networks_failure_unreachable">Serwer jest nieosiągalny</string>
+    <string name="networks_failure_status">Serwer odpowiedział błędem %1$s</string>
+    <string name="networks_failure_closed">Serwer zakończył połączenie</string>
+    <string name="networks_failure_blocked">Połączenia z serwerem są zablokowane</string>
+    <string name="networks_failure_signed_out">Serwer nie akceptuje już logowania tego konta; połącz je ponownie</string>
+    <string name="networks_failure_failed">Połączenie z serwerem nie powiodło się</string>
+    <string name="networks_failure_retry">Ponowna próba o %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Pokaż w profilu</string>
     <string name="networks_profile_hide">Ukryj w profilu</string>

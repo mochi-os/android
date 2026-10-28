@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Hakuna ufunguo wa kurejesha</string>
     <string name="networks_connected">Imeunganishwa</string>
     <string name="networks_not_connected">Haijaunganishwa</string>
+    <string name="networks_failure_unreachable">Seva haifikiki</string>
+    <string name="networks_failure_status">Seva imejibu kwa hitilafu %1$s</string>
+    <string name="networks_failure_closed">Seva imekatisha muunganisho</string>
+    <string name="networks_failure_blocked">Miunganisho kwenye seva imezuiwa</string>
+    <string name="networks_failure_signed_out">Seva haikubali tena kuingia kwa akaunti hii; iunganishe tena</string>
+    <string name="networks_failure_failed">Muunganisho kwenye seva umeshindwa</string>
+    <string name="networks_failure_retry">Itajaribu tena saa %1$s</string>
     <string name="networks_profile">Wasifu</string>
     <string name="networks_profile_show">Onyesha kwenye wasifu</string>
     <string name="networks_profile_hide">Ficha kwenye wasifu</string>

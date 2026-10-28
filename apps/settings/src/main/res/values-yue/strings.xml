@@ -475,6 +475,13 @@
     <string name="networks_home_private">主資訊流係私人嘅</string>
     <string name="networks_no_recovery">冇復原金鑰</string>
     <string name="networks_not_connected">未連接</string>
+    <string name="networks_failure_unreachable">連唔到伺服器</string>
+    <string name="networks_failure_status">伺服器回應錯誤 %1$s</string>
+    <string name="networks_failure_closed">伺服器中斷咗連接</string>
+    <string name="networks_failure_blocked">同伺服器嘅連接已經封鎖咗</string>
+    <string name="networks_failure_signed_out">伺服器唔再接受呢個帳戶嘅登入；請再連結一次</string>
+    <string name="networks_failure_failed">連接伺服器失敗</string>
+    <string name="networks_failure_retry">會喺 %1$s 再試</string>
     <string name="networks_profile">個人檔案</string>
     <string name="networks_profile_show">喺個人檔案顯示</string>
     <string name="networks_profile_hide">喺個人檔案隱藏</string>

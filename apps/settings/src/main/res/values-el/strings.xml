@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Χωρίς κλειδί ανάκτησης</string>
     <string name="networks_connected">Συνδεδεμένο</string>
     <string name="networks_not_connected">Μη συνδεδεμένο</string>
+    <string name="networks_failure_unreachable">Δεν είναι δυνατή η πρόσβαση στον διακομιστή</string>
+    <string name="networks_failure_status">Ο διακομιστής απάντησε με σφάλμα %1$s</string>
+    <string name="networks_failure_closed">Ο διακομιστής τερμάτισε τη σύνδεση</string>
+    <string name="networks_failure_blocked">Οι συνδέσεις στον διακομιστή είναι αποκλεισμένες</string>
+    <string name="networks_failure_signed_out">Ο διακομιστής δεν δέχεται πλέον την είσοδο αυτού του λογαριασμού· συνδέστε τον ξανά</string>
+    <string name="networks_failure_failed">Η σύνδεση με τον διακομιστή απέτυχε</string>
+    <string name="networks_failure_retry">Νέα προσπάθεια στις %1$s</string>
     <string name="networks_profile">Προφίλ</string>
     <string name="networks_profile_show">Εμφάνιση στο προφίλ</string>
     <string name="networks_profile_hide">Απόκρυψη από το προφίλ</string>

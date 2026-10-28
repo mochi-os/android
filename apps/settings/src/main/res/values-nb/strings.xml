@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Ingen gjenopprettingsnøkkel</string>
     <string name="networks_connected">Tilkoblet</string>
     <string name="networks_not_connected">Ikke tilkoblet</string>
+    <string name="networks_failure_unreachable">Serveren kan ikke nås</string>
+    <string name="networks_failure_status">Serveren svarte med feil %1$s</string>
+    <string name="networks_failure_closed">Serveren avsluttet tilkoblingen</string>
+    <string name="networks_failure_blocked">Tilkoblinger til serveren er blokkert</string>
+    <string name="networks_failure_signed_out">Serveren godtar ikke lenger innloggingen for denne kontoen; koble den til på nytt</string>
+    <string name="networks_failure_failed">Tilkoblingen til serveren mislyktes</string>
+    <string name="networks_failure_retry">Prøver igjen kl. %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Vis på profilen</string>
     <string name="networks_profile_hide">Skjul fra profilen</string>

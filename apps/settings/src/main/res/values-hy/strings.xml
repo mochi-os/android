@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Վերականգնման բանալի չկա</string>
     <string name="networks_connected">Միացված</string>
     <string name="networks_not_connected">Միացված չէ</string>
+    <string name="networks_failure_unreachable">Սերվերն անհասանելի է</string>
+    <string name="networks_failure_status">Սերվերը պատասխանեց %1$s սխալով</string>
+    <string name="networks_failure_closed">Սերվերը փակեց կապը</string>
+    <string name="networks_failure_blocked">Սերվերի հետ կապերն արգելափակված են</string>
+    <string name="networks_failure_signed_out">Սերվերն այլևս չի ընդունում այս հաշվի մուտքը․ նորից կապեք այն</string>
+    <string name="networks_failure_failed">Սերվերի հետ կապը չհաջողվեց</string>
+    <string name="networks_failure_retry">Նոր փորձ՝ %1$s-ին</string>
     <string name="networks_profile">Պրոֆիլ</string>
     <string name="networks_profile_show">Ցուցադրել պրոֆիլում</string>
     <string name="networks_profile_hide">Թաքցնել պրոֆիլից</string>

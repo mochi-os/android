@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Kein Wiederherstellungsschlüssel</string>
     <string name="networks_connected">Verbunden</string>
     <string name="networks_not_connected">Nicht verbunden</string>
+    <string name="networks_failure_unreachable">Der Server ist nicht erreichbar</string>
+    <string name="networks_failure_status">Der Server hat mit Fehler %1$s geantwortet</string>
+    <string name="networks_failure_closed">Der Server hat die Verbindung beendet</string>
+    <string name="networks_failure_blocked">Verbindungen zum Server sind blockiert</string>
+    <string name="networks_failure_signed_out">Der Server akzeptiert die Anmeldung dieses Kontos nicht mehr; verknüpfe es erneut</string>
+    <string name="networks_failure_failed">Die Verbindung zum Server ist fehlgeschlagen</string>
+    <string name="networks_failure_retry">Neuer Versuch um %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Im Profil anzeigen</string>
     <string name="networks_profile_hide">Im Profil ausblenden</string>

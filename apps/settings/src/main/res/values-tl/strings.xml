@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Walang key sa pagbawi</string>
     <string name="networks_connected">Konektado</string>
     <string name="networks_not_connected">Hindi konektado</string>
+    <string name="networks_failure_unreachable">Hindi maabot ang server</string>
+    <string name="networks_failure_status">Sumagot ang server ng kamalian %1$s</string>
+    <string name="networks_failure_closed">Tinapos ng server ang koneksyon</string>
+    <string name="networks_failure_blocked">Naka-block ang mga koneksyon sa server</string>
+    <string name="networks_failure_signed_out">Hindi na tinatanggap ng server ang pag-sign in ng account na ito; i-link itong muli</string>
+    <string name="networks_failure_failed">Nabigo ang koneksyon sa server</string>
+    <string name="networks_failure_retry">Susubukang muli sa %1$s</string>
     <string name="networks_profile">Profile</string>
     <string name="networks_profile_show">Ipakita sa profile</string>
     <string name="networks_profile_hide">Itago sa profile</string>

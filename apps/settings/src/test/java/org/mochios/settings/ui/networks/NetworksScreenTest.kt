@@ -5,6 +5,9 @@
 
 package org.mochios.settings.ui.networks
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.assertIsOn
@@ -17,12 +20,15 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.UserPreferences
 import org.mochios.settings.R
 import org.mochios.settings.api.Availability
 import org.mochios.settings.api.Handle
 import org.mochios.settings.api.Handles
 import org.mochios.settings.api.NetworkAccount
 import org.mochios.settings.api.NetworkBlock
+import org.mochios.settings.api.NetworkFailure
 import org.mochios.settings.api.NetworkMute
 import org.mochios.settings.api.NetworksData
 import org.robolectric.RobolectricTestRunner
@@ -166,6 +172,58 @@ class NetworksScreenTest {
         rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).performClick()
         rule.onNodeWithText(text(R.string.networks_aliases)).assertExists()
         rule.onNodeWithText(text(R.string.networks_move)).assertDoesNotExist()
+    }
+
+    @Test
+    fun `a linked account says why it is not working in words, and when it tries again`() {
+        val retry = 1_793_196_300L
+        val linked = NetworkAccount(id = "m1", type = "mastodon", identifier = "@alice@m.example", server = "m.example")
+        val failing = linked.copy(failure = NetworkFailure("status", 504, retry), error = "the server answered 504: failed to WebSocket dial")
+        content(base.copy(accounts = listOf(failing)))
+        val time = Format(UserPreferences()).formatTime(retry)
+        rule.onNodeWithText(text(R.string.networks_failure_status, "504") + "\n" + text(R.string.networks_failure_retry, time)).assertExists()
+        rule.onNodeWithText("WebSocket", substring = true).assertDoesNotExist()
+    }
+
+    @Test
+    fun `each reason a linked account is not working has its words, with no time while it tries`() {
+        val linked = NetworkAccount(id = "m1", type = "mastodon", identifier = "@alice@m.example", server = "m.example", error = "the raw error")
+        val worded = listOf(
+            "unreachable" to R.string.networks_failure_unreachable,
+            "closed" to R.string.networks_failure_closed,
+            "blocked" to R.string.networks_failure_blocked,
+            "signed_out" to R.string.networks_failure_signed_out,
+            "failed" to R.string.networks_failure_failed,
+            "unknown" to R.string.networks_failure_failed,
+        )
+        var shown by mutableStateOf(base)
+        rule.setContent {
+            NetworksContent(
+                data = shown,
+                busy = null,
+                check = { name, domain -> Availability(available = true, name = name, domain = domain) },
+                onReserve = { _, _, _ -> },
+                onLink = {},
+                onToggle = { _, _, _ -> },
+                onAddName = {},
+                onArrive = {},
+                onRelease = {},
+                actions = AccountActions(),
+                onBlock = { _, _ -> },
+                onUnblock = {},
+                onUnmute = {},
+            )
+        }
+        for ((reason, id) in worded) {
+            shown = base.copy(accounts = listOf(linked.copy(failure = NetworkFailure(reason))))
+            rule.waitForIdle()
+            rule.onNodeWithText(text(id)).assertExists()
+            rule.onNodeWithText("the raw error").assertDoesNotExist()
+        }
+        // A server too old to say why answers only the text.
+        shown = base.copy(accounts = listOf(linked))
+        rule.waitForIdle()
+        rule.onNodeWithText("the raw error").assertExists()
     }
 
     @Test

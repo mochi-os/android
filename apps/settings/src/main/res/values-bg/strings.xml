@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Няма ключ за възстановяване</string>
     <string name="networks_connected">Свързано</string>
     <string name="networks_not_connected">Не е свързан</string>
+    <string name="networks_failure_unreachable">Сървърът е недостъпен</string>
+    <string name="networks_failure_status">Сървърът отговори с грешка %1$s</string>
+    <string name="networks_failure_closed">Сървърът прекрати връзката</string>
+    <string name="networks_failure_blocked">Връзките към сървъра са блокирани</string>
+    <string name="networks_failure_signed_out">Сървърът вече не приема входа на този акаунт; свържете го отново</string>
+    <string name="networks_failure_failed">Връзката със сървъра е неуспешна</string>
+    <string name="networks_failure_retry">Нов опит в %1$s</string>
     <string name="networks_profile">Профил</string>
     <string name="networks_profile_show">Покажи в профила</string>
     <string name="networks_profile_hide">Скрий от профила</string>

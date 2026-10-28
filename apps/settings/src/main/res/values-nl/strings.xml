@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Geen herstelsleutel</string>
     <string name="networks_connected">Verbonden</string>
     <string name="networks_not_connected">Niet verbonden</string>
+    <string name="networks_failure_unreachable">De server is onbereikbaar</string>
+    <string name="networks_failure_status">De server antwoordde met fout %1$s</string>
+    <string name="networks_failure_closed">De server heeft de verbinding verbroken</string>
+    <string name="networks_failure_blocked">Verbindingen met de server zijn geblokkeerd</string>
+    <string name="networks_failure_signed_out">De server accepteert de aanmelding van dit account niet meer; koppel het opnieuw</string>
+    <string name="networks_failure_failed">De verbinding met de server is mislukt</string>
+    <string name="networks_failure_retry">Nieuwe poging om %1$s</string>
     <string name="networks_profile">Profiel</string>
     <string name="networks_profile_show">Tonen op profiel</string>
     <string name="networks_profile_hide">Verbergen op profiel</string>

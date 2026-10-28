@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Tiklash kaliti yoʻq</string>
     <string name="networks_connected">Ulangan</string>
     <string name="networks_not_connected">Ulanmagan</string>
+    <string name="networks_failure_unreachable">Serverga yetib boʻlmayapti</string>
+    <string name="networks_failure_status">Server %1$s xatosi bilan javob berdi</string>
+    <string name="networks_failure_closed">Server ulanishni uzdi</string>
+    <string name="networks_failure_blocked">Serverga ulanishlar bloklangan</string>
+    <string name="networks_failure_signed_out">Server bu hisobning kirishini endi qabul qilmaydi; uni qayta bogʻlang</string>
+    <string name="networks_failure_failed">Serverga ulanish muvaffaqiyatsiz tugadi</string>
+    <string name="networks_failure_retry">Soat %1$s da qayta uriniladi</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Profilda koʻrsatish</string>
     <string name="networks_profile_hide">Profildan yashirish</string>

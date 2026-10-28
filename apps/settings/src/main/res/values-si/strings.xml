@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">ප්‍රතිසාධන යතුරක් නැත</string>
     <string name="networks_connected">සම්බන්ධිතයි</string>
     <string name="networks_not_connected">සම්බන්ධ නැත</string>
+    <string name="networks_failure_unreachable">සේවාදායකයට ළඟා විය නොහැක</string>
+    <string name="networks_failure_status">සේවාදායකය %1$s දෝෂයෙන් පිළිතුරු දුනි</string>
+    <string name="networks_failure_closed">සේවාදායකය සම්බන්ධතාවය අවසන් කළේය</string>
+    <string name="networks_failure_blocked">සේවාදායකයට සම්බන්ධතා අවහිර කර ඇත</string>
+    <string name="networks_failure_signed_out">සේවාදායකය තවදුරටත් මෙම ගිණුමේ පුරනය වීම පිළිගන්නේ නැත; එය නැවත සම්බන්ධ කරන්න</string>
+    <string name="networks_failure_failed">සේවාදායකයට සම්බන්ධතාවය අසාර්ථක විය</string>
+    <string name="networks_failure_retry">%1$sට නැවත උත්සාහ කෙරේ</string>
     <string name="networks_profile">පැතිකඩ</string>
     <string name="networks_profile_show">පැතිකඩෙහි පෙන්වන්න</string>
     <string name="networks_profile_hide">පැතිකඩෙන් සඟවන්න</string>

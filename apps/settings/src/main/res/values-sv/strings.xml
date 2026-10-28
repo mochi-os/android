@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Ingen återställningsnyckel</string>
     <string name="networks_connected">Ansluten</string>
     <string name="networks_not_connected">Inte ansluten</string>
+    <string name="networks_failure_unreachable">Servern kan inte nås</string>
+    <string name="networks_failure_status">Servern svarade med fel %1$s</string>
+    <string name="networks_failure_closed">Servern avslutade anslutningen</string>
+    <string name="networks_failure_blocked">Anslutningar till servern är blockerade</string>
+    <string name="networks_failure_signed_out">Servern godtar inte längre kontots inloggning; länka det igen</string>
+    <string name="networks_failure_failed">Anslutningen till servern misslyckades</string>
+    <string name="networks_failure_retry">Försöker igen kl. %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Visa på profilen</string>
     <string name="networks_profile_hide">Dölj från profilen</string>

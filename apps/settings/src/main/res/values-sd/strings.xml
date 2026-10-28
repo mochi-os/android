@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">ڪا بحالي ڪنجي ناهي</string>
     <string name="networks_connected">ڳنڍيل</string>
     <string name="networks_not_connected">ڳنڍيل ناهي</string>
+    <string name="networks_failure_unreachable">سرور تائين پهچي نٿو سگهجي</string>
+    <string name="networks_failure_status">سرور غلطي %1$s سان جواب ڏنو</string>
+    <string name="networks_failure_closed">سرور ڪنيڪشن ختم ڪري ڇڏيو</string>
+    <string name="networks_failure_blocked">سرور سان ڪنيڪشن بلاڪ ٿيل آهن</string>
+    <string name="networks_failure_signed_out">سرور هاڻي هن اڪائونٽ جي سائن ان قبول نٿو ڪري؛ ان کي ٻيهر ڳنڍيو</string>
+    <string name="networks_failure_failed">سرور سان ڪنيڪشن ناڪام ٿيو</string>
+    <string name="networks_failure_retry">%1$s تي ٻيهر ڪوشش ڪئي ويندي</string>
     <string name="networks_profile">پروفائيل</string>
     <string name="networks_profile_show">پروفائيل تي ڏيکاريو</string>
     <string name="networks_profile_hide">پروفائيل مان لڪايو</string>

@@ -488,6 +488,13 @@
     <string name="networks_no_recovery">Nema ključa za oporavak</string>
     <string name="networks_connected">Povezano</string>
     <string name="networks_not_connected">Nije povezano</string>
+    <string name="networks_failure_unreachable">Poslužitelj nije dostupan</string>
+    <string name="networks_failure_status">Poslužitelj je odgovorio pogreškom %1$s</string>
+    <string name="networks_failure_closed">Poslužitelj je prekinuo vezu</string>
+    <string name="networks_failure_blocked">Veze s poslužiteljem su blokirane</string>
+    <string name="networks_failure_signed_out">Poslužitelj više ne prihvaća prijavu ovog računa; ponovno ga povežite</string>
+    <string name="networks_failure_failed">Povezivanje s poslužiteljem nije uspjelo</string>
+    <string name="networks_failure_retry">Ponovni pokušaj u %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Prikaži na profilu</string>
     <string name="networks_profile_hide">Sakrij s profila</string>

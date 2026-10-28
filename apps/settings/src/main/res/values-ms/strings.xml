@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">Tiada kunci pemulihan</string>
     <string name="networks_connected">Disambungkan</string>
     <string name="networks_not_connected">Tidak disambungkan</string>
+    <string name="networks_failure_unreachable">Pelayan tidak dapat dicapai</string>
+    <string name="networks_failure_status">Pelayan membalas dengan ralat %1$s</string>
+    <string name="networks_failure_closed">Pelayan menamatkan sambungan</string>
+    <string name="networks_failure_blocked">Sambungan ke pelayan disekat</string>
+    <string name="networks_failure_signed_out">Pelayan tidak lagi menerima log masuk akaun ini; pautkan semula</string>
+    <string name="networks_failure_failed">Sambungan ke pelayan gagal</string>
+    <string name="networks_failure_retry">Mencuba semula pada %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Tunjukkan pada profil</string>
     <string name="networks_profile_hide">Sembunyikan daripada profil</string>

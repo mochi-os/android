@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">აღდგენის გასაღები არ არის</string>
     <string name="networks_connected">დაკავშირებულია</string>
     <string name="networks_not_connected">არ არის დაკავშირებული</string>
+    <string name="networks_failure_unreachable">სერვერი მიუწვდომელია</string>
+    <string name="networks_failure_status">სერვერმა უპასუხა შეცდომით %1$s</string>
+    <string name="networks_failure_closed">სერვერმა კავშირი შეწყვიტა</string>
+    <string name="networks_failure_blocked">სერვერთან კავშირები დაბლოკილია</string>
+    <string name="networks_failure_signed_out">სერვერი აღარ იღებს ამ ანგარიშით შესვლას; ხელახლა დააკავშირეთ</string>
+    <string name="networks_failure_failed">სერვერთან დაკავშირება ვერ მოხერხდა</string>
+    <string name="networks_failure_retry">ხელახალი მცდელობა %1$s-ზე</string>
     <string name="networks_profile">პროფილი</string>
     <string name="networks_profile_show">პროფილზე ჩვენება</string>
     <string name="networks_profile_hide">პროფილიდან დამალვა</string>

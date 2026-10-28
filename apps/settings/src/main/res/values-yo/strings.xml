@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">Kò sí kọ́kọ́rọ́ ìmúpadàbọ̀sípò</string>
     <string name="networks_connected">Tí a so pọ̀</string>
     <string name="networks_not_connected">Kò so pọ̀</string>
+    <string name="networks_failure_unreachable">A kò lè dé ọ̀dọ̀ olupin náà</string>
+    <string name="networks_failure_status">Olupin náà dáhùn pẹ̀lú àṣìṣe %1$s</string>
+    <string name="networks_failure_closed">Olupin náà pa ìsopọ̀ náà</string>
+    <string name="networks_failure_blocked">A ti dínà àwọn ìsopọ̀ sí olupin náà</string>
+    <string name="networks_failure_signed_out">Olupin náà kò gba ìwọlé àkáǹtì yìí mọ́; tún so ó pọ̀</string>
+    <string name="networks_failure_failed">Ìsopọ̀ sí olupin náà kùnà</string>
+    <string name="networks_failure_retry">A ó tún gbìyànjú ní %1$s</string>
     <string name="networks_profile">Profáìlì</string>
     <string name="networks_profile_show">Fi hàn lórí profáìlì</string>
     <string name="networks_profile_hide">Má ṣe fi hàn lórí profáìlì</string>

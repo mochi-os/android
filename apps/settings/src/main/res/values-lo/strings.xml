@@ -468,6 +468,13 @@
     <string name="networks_no_recovery">ບໍ່ມີກະແຈກູ້ຄືນ</string>
     <string name="networks_connected">ເຊື່ອມຕໍ່ແລ້ວ</string>
     <string name="networks_not_connected">ບໍ່ໄດ້ເຊື່ອມຕໍ່</string>
+    <string name="networks_failure_unreachable">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີໄດ້</string>
+    <string name="networks_failure_status">ເຊີບເວີຕອບກັບດ້ວຍຂໍ້ຜິດພາດ %1$s</string>
+    <string name="networks_failure_closed">ເຊີບເວີໄດ້ຕັດການເຊື່ອມຕໍ່</string>
+    <string name="networks_failure_blocked">ການເຊື່ອມຕໍ່ຫາເຊີບເວີຖືກບລັອກ</string>
+    <string name="networks_failure_signed_out">ເຊີບເວີບໍ່ຍອມຮັບການເຂົ້າສູ່ລະບົບຂອງບັນຊີນີ້ອີກແລ້ວ; ກະລຸນາເຊື່ອມໂຍງຄືນໃໝ່</string>
+    <string name="networks_failure_failed">ການເຊື່ອມຕໍ່ຫາເຊີບເວີລົ້ມເຫຼວ</string>
+    <string name="networks_failure_retry">ຈະລອງໃໝ່ເວລາ %1$s</string>
     <string name="networks_profile">ໂປຣໄຟລ໌</string>
     <string name="networks_profile_show">ສະແດງໃນໂປຣໄຟລ໌</string>
     <string name="networks_profile_hide">ເຊື່ອງຈາກໂປຣໄຟລ໌</string>

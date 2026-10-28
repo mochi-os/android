@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Нема клуч за обновување</string>
     <string name="networks_connected">Поврзано</string>
     <string name="networks_not_connected">Не е поврзано</string>
+    <string name="networks_failure_unreachable">Серверот е недостапен</string>
+    <string name="networks_failure_status">Серверот одговори со грешка %1$s</string>
+    <string name="networks_failure_closed">Серверот ја прекина врската</string>
+    <string name="networks_failure_blocked">Врските до серверот се блокирани</string>
+    <string name="networks_failure_signed_out">Серверот веќе не ја прифаќа најавата на оваа сметка; поврзете ја повторно</string>
+    <string name="networks_failure_failed">Врската со серверот не успеа</string>
+    <string name="networks_failure_retry">Нов обид во %1$s</string>
     <string name="networks_profile">Профил</string>
     <string name="networks_profile_show">Прикажи на профилот</string>
     <string name="networks_profile_hide">Скриј од профилот</string>

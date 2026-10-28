@@ -468,6 +468,13 @@
     <string name="networks_no_recovery">Ora ana kunci pemulihan</string>
     <string name="networks_connected">Wis nyambung</string>
     <string name="networks_not_connected">Ora nyambung</string>
+    <string name="networks_failure_unreachable">Server ora bisa digayuh</string>
+    <string name="networks_failure_status">Server mangsuli kanthi kasalahan %1$s</string>
+    <string name="networks_failure_closed">Server mungkasi sambungan</string>
+    <string name="networks_failure_blocked">Sambungan menyang server diblokir</string>
+    <string name="networks_failure_signed_out">Server wis ora nampa mlebu saka akun iki; sambungke maneh</string>
+    <string name="networks_failure_failed">Sambungan menyang server gagal</string>
+    <string name="networks_failure_retry">Dicoba maneh jam %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Tampilaké ing profil</string>
     <string name="networks_profile_hide">Delikaké saka profil</string>

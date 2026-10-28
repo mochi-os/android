@@ -13,6 +13,7 @@ import org.junit.Test
 import org.mochios.settings.api.Handle
 import org.mochios.settings.api.Handles
 import org.mochios.settings.api.NetworkAccount
+import org.mochios.settings.api.NetworkFailure
 import org.mochios.settings.api.NetworkFeed
 import org.mochios.settings.api.NetworksData
 import org.mochios.settings.api.OtherToken
@@ -81,6 +82,7 @@ class NetworksRulesTest {
     fun `an account's card says the most pressing thing about it`() {
         val feeds = listOf(NetworkFeed(id = "f", privacy = "private"))
         val base = NetworkAccount(type = "fediverse", hosted = true, server = "a.example")
+        assertEquals(AccountStatus.Failure(NetworkFailure("closed")), accountStatus(base.copy(failure = NetworkFailure("closed"), error = "refused"), feeds))
         assertEquals(AccountStatus.Failed("refused"), accountStatus(base.copy(error = "refused", moved = "x"), feeds))
         assertEquals(AccountStatus.Moved("@a@b"), accountStatus(base.copy(moved = "@a@b", home = "gone"), feeds))
         assertEquals(AccountStatus.HomeDeleted, accountStatus(base.copy(home = "gone"), feeds))

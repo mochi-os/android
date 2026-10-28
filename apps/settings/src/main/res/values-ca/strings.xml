@@ -479,6 +479,13 @@
     <string name="networks_no_recovery">Sense clau de recuperació</string>
     <string name="networks_connected">Connectat</string>
     <string name="networks_not_connected">No connectat</string>
+    <string name="networks_failure_unreachable">No es pot accedir al servidor</string>
+    <string name="networks_failure_status">El servidor ha respost amb l\'error %1$s</string>
+    <string name="networks_failure_closed">El servidor ha tancat la connexió</string>
+    <string name="networks_failure_blocked">Les connexions al servidor estan blocades</string>
+    <string name="networks_failure_signed_out">El servidor ja no accepta l\'inici de sessió d\'aquest compte; torneu-lo a vincular</string>
+    <string name="networks_failure_failed">La connexió amb el servidor ha fallat</string>
+    <string name="networks_failure_retry">Es tornarà a provar a les %1$s</string>
     <string name="networks_profile">Perfil</string>
     <string name="networks_profile_show">Mostra al perfil</string>
     <string name="networks_profile_hide">Amaga del perfil</string>

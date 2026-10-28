@@ -489,6 +489,13 @@
     <string name="networks_no_recovery">Žádný klíč pro obnovení</string>
     <string name="networks_connected">Připojeno</string>
     <string name="networks_not_connected">Nepřipojeno</string>
+    <string name="networks_failure_unreachable">Server je nedostupný</string>
+    <string name="networks_failure_status">Server odpověděl chybou %1$s</string>
+    <string name="networks_failure_closed">Server ukončil připojení</string>
+    <string name="networks_failure_blocked">Připojení k serveru jsou zablokována</string>
+    <string name="networks_failure_signed_out">Server už nepřijímá přihlášení tohoto účtu; propojte jej znovu</string>
+    <string name="networks_failure_failed">Připojení k serveru se nezdařilo</string>
+    <string name="networks_failure_retry">Další pokus v %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Zobrazit v profilu</string>
     <string name="networks_profile_hide">Skrýt z profilu</string>

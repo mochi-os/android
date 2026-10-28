@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">无恢复密钥</string>
     <string name="networks_connected">已连接</string>
     <string name="networks_not_connected">未连接</string>
+    <string name="networks_failure_unreachable">无法访问服务器</string>
+    <string name="networks_failure_status">服务器返回错误 %1$s</string>
+    <string name="networks_failure_closed">服务器断开了连接</string>
+    <string name="networks_failure_blocked">与服务器的连接已被屏蔽</string>
+    <string name="networks_failure_signed_out">服务器不再接受此账户的登录；请重新关联</string>
+    <string name="networks_failure_failed">连接服务器失败</string>
+    <string name="networks_failure_retry">将于 %1$s 重试</string>
     <string name="networks_profile">个人资料</string>
     <string name="networks_profile_show">在个人资料中显示</string>
     <string name="networks_profile_hide">从个人资料中隐藏</string>

@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">Không có khoá khôi phục</string>
     <string name="networks_connected">Đã kết nối</string>
     <string name="networks_not_connected">Chưa kết nối</string>
+    <string name="networks_failure_unreachable">Không thể truy cập máy chủ</string>
+    <string name="networks_failure_status">Máy chủ trả về lỗi %1$s</string>
+    <string name="networks_failure_closed">Máy chủ đã ngắt kết nối</string>
+    <string name="networks_failure_blocked">Kết nối tới máy chủ bị chặn</string>
+    <string name="networks_failure_signed_out">Máy chủ không còn chấp nhận đăng nhập của tài khoản này; hãy liên kết lại</string>
+    <string name="networks_failure_failed">Kết nối tới máy chủ thất bại</string>
+    <string name="networks_failure_retry">Thử lại lúc %1$s</string>
     <string name="networks_profile">Hồ sơ</string>
     <string name="networks_profile_show">Hiển thị trên hồ sơ</string>
     <string name="networks_profile_hide">Ẩn khỏi hồ sơ</string>

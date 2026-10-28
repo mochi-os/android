@@ -479,6 +479,13 @@
     <string name="networks_no_recovery">Sem chave de recuperação</string>
     <string name="networks_connected">Ligado</string>
     <string name="networks_not_connected">Não ligado</string>
+    <string name="networks_failure_unreachable">Não é possível contactar o servidor</string>
+    <string name="networks_failure_status">O servidor respondeu com o erro %1$s</string>
+    <string name="networks_failure_closed">O servidor terminou a ligação</string>
+    <string name="networks_failure_blocked">As ligações ao servidor estão bloqueadas</string>
+    <string name="networks_failure_signed_out">O servidor já não aceita o início de sessão desta conta; volte a associá-la</string>
+    <string name="networks_failure_failed">A ligação ao servidor falhou</string>
+    <string name="networks_failure_retry">Nova tentativa às %1$s</string>
     <string name="networks_profile">Perfil</string>
     <string name="networks_profile_show">Mostrar no perfil</string>
     <string name="networks_profile_hide">Ocultar do perfil</string>

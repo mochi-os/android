@@ -498,6 +498,13 @@
     <string name="networks_no_recovery">Ключа аднаўлення няма</string>
     <string name="networks_connected">Падключана</string>
     <string name="networks_not_connected">Не падключана</string>
+    <string name="networks_failure_unreachable">Сервер недаступны</string>
+    <string name="networks_failure_status">Сервер адказаў памылкай %1$s</string>
+    <string name="networks_failure_closed">Сервер разарваў падключэнне</string>
+    <string name="networks_failure_blocked">Падключэнні да сервера заблакаваны</string>
+    <string name="networks_failure_signed_out">Сервер больш не прымае ўваход гэтага ўліковага запісу; звяжыце яго зноў</string>
+    <string name="networks_failure_failed">Не ўдалося падключыцца да сервера</string>
+    <string name="networks_failure_retry">Паўторная спроба ў %1$s</string>
     <string name="networks_profile">Профіль</string>
     <string name="networks_profile_show">Паказваць у профілі</string>
     <string name="networks_profile_hide">Схаваць з профілю</string>

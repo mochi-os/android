@@ -498,6 +498,13 @@
     <string name="networks_no_recovery">Gun iuchair aisig</string>
     <string name="networks_connected">Ceangailte</string>
     <string name="networks_not_connected">Gun cheangal</string>
+    <string name="networks_failure_unreachable">Chan urrainnear am frithealaiche a ruigsinn</string>
+    <string name="networks_failure_status">Fhreagair am frithealaiche le mearachd %1$s</string>
+    <string name="networks_failure_closed">Chuir am frithealaiche crìoch air a\' cheangal</string>
+    <string name="networks_failure_blocked">Tha ceanglaichean ris an fhrithealaiche air am bacadh</string>
+    <string name="networks_failure_signed_out">Chan eil am frithealaiche a\' gabhail ri clàradh a-steach a\' chunntais seo tuilleadh; ceangail e a-rithist</string>
+    <string name="networks_failure_failed">Dh\'fhàillig an ceangal ris an fhrithealaiche</string>
+    <string name="networks_failure_retry">Thèid feuchainn ris a-rithist aig %1$s</string>
     <string name="networks_profile">Pròifil</string>
     <string name="networks_profile_show">Seall air a\' phròifil</string>
     <string name="networks_profile_hide">Falaich on phròifil</string>

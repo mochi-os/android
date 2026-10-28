@@ -477,6 +477,13 @@
     <string name="networks_no_recovery">Jan qhispiyaña llave</string>
     <string name="networks_connected">Chikacht\'ata</string>
     <string name="networks_not_connected">Janiw chikacht\'atäkiti</string>
+    <string name="networks_failure_unreachable">Servidorax janiw puriñjamäkiti</string>
+    <string name="networks_failure_status">Servidorax %1$s pantjampiw jaysäna</string>
+    <string name="networks_failure_closed">Servidorax chikacht\'äwi tukuyäna</string>
+    <string name="networks_failure_blocked">Servidorar chikacht\'äwinakax jark\'atawa</string>
+    <string name="networks_failure_signed_out">Servidorax janiw aka cuentan mantäwip katuqxiti; wasitat chinum</string>
+    <string name="networks_failure_failed">Servidoramp chikacht\'äwix pantjasiwa</string>
+    <string name="networks_failure_retry">%1$s ukjax wasitat yant\'aniwa</string>
     <string name="networks_profile">Perfil</string>
     <string name="networks_profile_show">Perfilan uñacht\'ayaña</string>
     <string name="networks_profile_hide">Perfilat imantaña</string>

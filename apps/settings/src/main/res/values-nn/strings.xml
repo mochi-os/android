@@ -480,6 +480,13 @@
     <string name="networks_no_recovery">Ingen gjenopprettingsnøkkel</string>
     <string name="networks_connected">Tilkopla</string>
     <string name="networks_not_connected">Ikkje tilkopla</string>
+    <string name="networks_failure_unreachable">Tenaren kan ikkje nåast</string>
+    <string name="networks_failure_status">Tenaren svarte med feil %1$s</string>
+    <string name="networks_failure_closed">Tenaren avslutta sambandet</string>
+    <string name="networks_failure_blocked">Samband til tenaren er blokkerte</string>
+    <string name="networks_failure_signed_out">Tenaren godtek ikkje lenger innlogginga til denne kontoen; kople kontoen til på nytt</string>
+    <string name="networks_failure_failed">Sambandet til tenaren feila</string>
+    <string name="networks_failure_retry">Prøver igjen kl. %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Vis på profilen</string>
     <string name="networks_profile_hide">Gøym frå profilen</string>

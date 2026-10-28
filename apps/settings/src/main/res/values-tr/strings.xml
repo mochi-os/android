@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Kurtarma anahtarı yok</string>
     <string name="networks_connected">Bağlandı</string>
     <string name="networks_not_connected">Bağlı değil</string>
+    <string name="networks_failure_unreachable">Sunucuya ulaşılamıyor</string>
+    <string name="networks_failure_status">Sunucu %1$s hatasıyla yanıt verdi</string>
+    <string name="networks_failure_closed">Sunucu bağlantıyı sonlandırdı</string>
+    <string name="networks_failure_blocked">Sunucuya bağlantılar engellendi</string>
+    <string name="networks_failure_signed_out">Sunucu bu hesabın oturum açmasını artık kabul etmiyor; hesabı yeniden bağlayın</string>
+    <string name="networks_failure_failed">Sunucuya bağlantı başarısız oldu</string>
+    <string name="networks_failure_retry">Yeniden deneme saati: %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Profilde göster</string>
     <string name="networks_profile_hide">Profilden gizle</string>

@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Enginn endurheimtarlykill</string>
     <string name="networks_connected">Tengt</string>
     <string name="networks_not_connected">Ekki tengt</string>
+    <string name="networks_failure_unreachable">Ekki næst í netþjóninn</string>
+    <string name="networks_failure_status">Netþjónninn svaraði með villu %1$s</string>
+    <string name="networks_failure_closed">Netþjónninn sleit tengingunni</string>
+    <string name="networks_failure_blocked">Lokað er á tengingar við netþjóninn</string>
+    <string name="networks_failure_signed_out">Netþjónninn samþykkir ekki lengur innskráningu þessa reiknings; tengdu hann aftur</string>
+    <string name="networks_failure_failed">Tenging við netþjóninn mistókst</string>
+    <string name="networks_failure_retry">Reynt aftur kl. %1$s</string>
     <string name="networks_profile">Notandasnið</string>
     <string name="networks_profile_show">Sýna á notandasniði</string>
     <string name="networks_profile_hide">Fela á notandasniði</string>

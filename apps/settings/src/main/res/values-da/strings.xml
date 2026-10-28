@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Ingen gendannelsesnøgle</string>
     <string name="networks_connected">Forbundet</string>
     <string name="networks_not_connected">Ikke forbundet</string>
+    <string name="networks_failure_unreachable">Serveren kan ikke nås</string>
+    <string name="networks_failure_status">Serveren svarede med fejl %1$s</string>
+    <string name="networks_failure_closed">Serveren afbrød forbindelsen</string>
+    <string name="networks_failure_blocked">Forbindelser til serveren er blokeret</string>
+    <string name="networks_failure_signed_out">Serveren accepterer ikke længere kontoens login; tilknyt den igen</string>
+    <string name="networks_failure_failed">Forbindelsen til serveren mislykkedes</string>
+    <string name="networks_failure_retry">Prøver igen kl. %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Vis på profil</string>
     <string name="networks_profile_hide">Skjul fra profil</string>

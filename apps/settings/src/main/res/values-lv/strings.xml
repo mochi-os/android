@@ -488,6 +488,13 @@
     <string name="networks_no_recovery">Nav atkopšanas atslēgas</string>
     <string name="networks_connected">Savienots</string>
     <string name="networks_not_connected">Nav savienots</string>
+    <string name="networks_failure_unreachable">Serveris nav sasniedzams</string>
+    <string name="networks_failure_status">Serveris atbildēja ar kļūdu %1$s</string>
+    <string name="networks_failure_closed">Serveris pārtrauca savienojumu</string>
+    <string name="networks_failure_blocked">Savienojumi ar serveri ir bloķēti</string>
+    <string name="networks_failure_signed_out">Serveris vairs nepieņem šī konta pierakstīšanos; saistiet to atkārtoti</string>
+    <string name="networks_failure_failed">Savienojums ar serveri neizdevās</string>
+    <string name="networks_failure_retry">Atkārtots mēģinājums plkst. %1$s</string>
     <string name="networks_profile">Profils</string>
     <string name="networks_profile_show">Rādīt profilā</string>
     <string name="networks_profile_hide">Paslēpt profilā</string>

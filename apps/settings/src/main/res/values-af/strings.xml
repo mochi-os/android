@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Geen herstelsleutel nie</string>
     <string name="networks_connected">Verbind</string>
     <string name="networks_not_connected">Nie verbind nie</string>
+    <string name="networks_failure_unreachable">Die bediener kan nie bereik word nie</string>
+    <string name="networks_failure_status">Die bediener het met fout %1$s geantwoord</string>
+    <string name="networks_failure_closed">Die bediener het die verbinding beëindig</string>
+    <string name="networks_failure_blocked">Verbindings na die bediener is geblokkeer</string>
+    <string name="networks_failure_signed_out">Die bediener aanvaar nie meer hierdie rekening se aanmelding nie; koppel dit weer</string>
+    <string name="networks_failure_failed">Die verbinding met die bediener het misluk</string>
+    <string name="networks_failure_retry">Sal om %1$s weer probeer</string>
     <string name="networks_profile">Profiel</string>
     <string name="networks_profile_show">Wys op profiel</string>
     <string name="networks_profile_hide">Versteek van profiel</string>

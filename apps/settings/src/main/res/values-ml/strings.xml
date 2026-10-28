@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">വീണ്ടെടുക്കൽ കീ ഇല്ല</string>
     <string name="networks_connected">കണക്റ്റ് ചെയ്തു</string>
     <string name="networks_not_connected">കണക്റ്റ് ചെയ്തിട്ടില്ല</string>
+    <string name="networks_failure_unreachable">സെർവറിൽ എത്താനാകുന്നില്ല</string>
+    <string name="networks_failure_status">സെർവർ %1$s എന്ന പിശകോടെ മറുപടി നൽകി</string>
+    <string name="networks_failure_closed">സെർവർ കണക്ഷൻ അവസാനിപ്പിച്ചു</string>
+    <string name="networks_failure_blocked">സെർവറിലേക്കുള്ള കണക്ഷനുകൾ ബ്ലോക്ക് ചെയ്തിരിക്കുന്നു</string>
+    <string name="networks_failure_signed_out">സെർവർ ഇനി ഈ അക്കൗണ്ടിന്റെ സൈൻ ഇൻ സ്വീകരിക്കുന്നില്ല; അത് വീണ്ടും ലിങ്ക് ചെയ്യുക</string>
+    <string name="networks_failure_failed">സെർവറിലേക്കുള്ള കണക്ഷൻ പരാജയപ്പെട്ടു</string>
+    <string name="networks_failure_retry">%1$s-ന് വീണ്ടും ശ്രമിക്കും</string>
     <string name="networks_profile">പ്രൊഫൈൽ</string>
     <string name="networks_profile_show">പ്രൊഫൈലിൽ കാണിക്കുക</string>
     <string name="networks_profile_hide">പ്രൊഫൈലിൽ നിന്ന് മറയ്ക്കുക</string>

@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">Tidak ada kunci pemulihan</string>
     <string name="networks_connected">Terhubung</string>
     <string name="networks_not_connected">Tidak terhubung</string>
+    <string name="networks_failure_unreachable">Server tidak dapat dijangkau</string>
+    <string name="networks_failure_status">Server menjawab dengan kesalahan %1$s</string>
+    <string name="networks_failure_closed">Server memutuskan koneksi</string>
+    <string name="networks_failure_blocked">Koneksi ke server diblokir</string>
+    <string name="networks_failure_signed_out">Server tidak lagi menerima proses masuk akun ini; tautkan ulang</string>
+    <string name="networks_failure_failed">Koneksi ke server gagal</string>
+    <string name="networks_failure_retry">Mencoba lagi pukul %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Tampilkan di profil</string>
     <string name="networks_profile_hide">Sembunyikan dari profil</string>

@@ -468,6 +468,13 @@
     <string name="networks_no_recovery">គ្មានកូនសោស្តារ</string>
     <string name="networks_connected">បានភ្ជាប់</string>
     <string name="networks_not_connected">មិនបានភ្ជាប់</string>
+    <string name="networks_failure_unreachable">មិនអាចទៅដល់ម៉ាស៊ីនមេបានទេ</string>
+    <string name="networks_failure_status">ម៉ាស៊ីនមេបានឆ្លើយតបដោយកំហុស %1$s</string>
+    <string name="networks_failure_closed">ម៉ាស៊ីនមេបានបញ្ចប់ការតភ្ជាប់</string>
+    <string name="networks_failure_blocked">ការតភ្ជាប់ទៅម៉ាស៊ីនមេត្រូវបានរារាំង</string>
+    <string name="networks_failure_signed_out">ម៉ាស៊ីនមេលែងទទួលយកការចូលរបស់គណនីនេះទៀតហើយ សូមភ្ជាប់វាម្ដងទៀត</string>
+    <string name="networks_failure_failed">ការតភ្ជាប់ទៅម៉ាស៊ីនមេបានបរាជ័យ</string>
+    <string name="networks_failure_retry">នឹងព្យាយាមម្ដងទៀតនៅម៉ោង %1$s</string>
     <string name="networks_profile">ប្រវត្តិរូប</string>
     <string name="networks_profile_show">បង្ហាញនៅលើប្រវត្តិរូប</string>
     <string name="networks_profile_hide">លាក់ពីប្រវត្តិរូប</string>

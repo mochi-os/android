@@ -39,6 +39,9 @@ data class NetworkAccount(
     val url: String = "",
     val name: String = "",
     val connected: Boolean = false,
+    // Why a linked account is not working, which the card words. A server too
+    // old to answer it gives only error, the text itself.
+    val failure: NetworkFailure? = null,
     val error: String = "",
     // Shown on the user's profile page, with a rel="me" link.
     val profile: Boolean = false,
@@ -54,6 +57,16 @@ data class NetworkAccount(
     val labelers: List<String> = emptyList(),
     // A hosted fediverse or Bluesky account's home feed.
     val home: String = "",
+)
+
+/**
+ * Why a linked account is not working: a reason, the status its server
+ * answered with, and when it tries again, in seconds.
+ */
+data class NetworkFailure(
+    val reason: String = "",
+    val status: Int = 0,
+    val retry: Long = 0,
 )
 
 /** One of the user's feeds, as a home feed is chosen from them. */

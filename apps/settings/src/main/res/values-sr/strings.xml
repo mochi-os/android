@@ -488,6 +488,13 @@
     <string name="networks_no_recovery">Нема кључа за опоравак</string>
     <string name="networks_connected">Повезано</string>
     <string name="networks_not_connected">Није повезано</string>
+    <string name="networks_failure_unreachable">Сервер није доступан</string>
+    <string name="networks_failure_status">Сервер је одговорио грешком %1$s</string>
+    <string name="networks_failure_closed">Сервер је прекинуо везу</string>
+    <string name="networks_failure_blocked">Везе са сервером су блокиране</string>
+    <string name="networks_failure_signed_out">Сервер више не прихвата пријаву овог налога; поново га повежите</string>
+    <string name="networks_failure_failed">Повезивање са сервером није успело</string>
+    <string name="networks_failure_retry">Нови покушај у %1$s</string>
     <string name="networks_profile">Профил</string>
     <string name="networks_profile_show">Прикажи на профилу</string>
     <string name="networks_profile_hide">Сакриј са профила</string>

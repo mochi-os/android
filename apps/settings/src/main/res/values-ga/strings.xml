@@ -508,6 +508,13 @@
     <string name="networks_no_recovery">Gan eochair athshlánaithe</string>
     <string name="networks_connected">Ceangailte</string>
     <string name="networks_not_connected">Gan cheangal</string>
+    <string name="networks_failure_unreachable">Ní féidir an freastalaí a shroicheadh</string>
+    <string name="networks_failure_status">D\'fhreagair an freastalaí le hearráid %1$s</string>
+    <string name="networks_failure_closed">Chuir an freastalaí deireadh leis an gceangal</string>
+    <string name="networks_failure_blocked">Tá ceangail leis an bhfreastalaí blocáilte</string>
+    <string name="networks_failure_signed_out">Ní ghlacann an freastalaí le logáil isteach an chuntais seo a thuilleadh; nasc arís é</string>
+    <string name="networks_failure_failed">Theip ar an gceangal leis an bhfreastalaí</string>
+    <string name="networks_failure_retry">Triail eile ag %1$s</string>
     <string name="networks_profile">Próifíl</string>
     <string name="networks_profile_show">Taispeáin ar an bpróifíl</string>
     <string name="networks_profile_hide">Folaigh ón bpróifíl</string>

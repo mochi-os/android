@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">ਕੋਈ ਰਿਕਵਰੀ ਕੁੰਜੀ ਨਹੀਂ</string>
     <string name="networks_connected">ਜੁੜਿਆ</string>
     <string name="networks_not_connected">ਕਨੈਕਟ ਨਹੀਂ ਹੈ</string>
+    <string name="networks_failure_unreachable">ਸਰਵਰ ਤੱਕ ਪਹੁੰਚਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ</string>
+    <string name="networks_failure_status">ਸਰਵਰ ਨੇ ਗਲਤੀ %1$s ਨਾਲ ਜਵਾਬ ਦਿੱਤਾ</string>
+    <string name="networks_failure_closed">ਸਰਵਰ ਨੇ ਕਨੈਕਸ਼ਨ ਬੰਦ ਕਰ ਦਿੱਤਾ</string>
+    <string name="networks_failure_blocked">ਸਰਵਰ ਨਾਲ ਕਨੈਕਸ਼ਨ ਬਲੌਕ ਕੀਤੇ ਹੋਏ ਹਨ</string>
+    <string name="networks_failure_signed_out">ਸਰਵਰ ਹੁਣ ਇਸ ਖਾਤੇ ਦਾ ਸਾਈਨ-ਇਨ ਸਵੀਕਾਰ ਨਹੀਂ ਕਰਦਾ; ਇਸਨੂੰ ਮੁੜ-ਲਿੰਕ ਕਰੋ</string>
+    <string name="networks_failure_failed">ਸਰਵਰ ਨਾਲ ਕਨੈਕਸ਼ਨ ਅਸਫਲ ਰਿਹਾ</string>
+    <string name="networks_failure_retry">%1$s ਵਜੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ ਜਾਵੇਗੀ</string>
     <string name="networks_profile">ਪ੍ਰੋਫਾਈਲ</string>
     <string name="networks_profile_show">ਪ੍ਰੋਫਾਈਲ \'ਤੇ ਦਿਖਾਓ</string>
     <string name="networks_profile_hide">ਪ੍ਰੋਫਾਈਲ ਤੋਂ ਲੁਕਾਓ</string>

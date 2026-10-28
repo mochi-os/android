@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">कोई रिकवरी कुंजी नहीं</string>
     <string name="networks_connected">कनेक्ट किया गया</string>
     <string name="networks_not_connected">कनेक्ट नहीं है</string>
+    <string name="networks_failure_unreachable">सर्वर तक पहुँचा नहीं जा सकता</string>
+    <string name="networks_failure_status">सर्वर ने त्रुटि %1$s के साथ जवाब दिया</string>
+    <string name="networks_failure_closed">सर्वर ने कनेक्शन बंद कर दिया</string>
+    <string name="networks_failure_blocked">सर्वर से कनेक्शन ब्लॉक हैं</string>
+    <string name="networks_failure_signed_out">सर्वर अब इस खाते का साइन-इन स्वीकार नहीं करता; इसे पुनः लिंक करें</string>
+    <string name="networks_failure_failed">सर्वर से कनेक्शन विफल रहा</string>
+    <string name="networks_failure_retry">%1$s बजे फिर से प्रयास किया जाएगा</string>
     <string name="networks_profile">प्रोफ़ाइल</string>
     <string name="networks_profile_show">प्रोफ़ाइल पर दिखाएँ</string>
     <string name="networks_profile_hide">प्रोफ़ाइल से छिपाएँ</string>

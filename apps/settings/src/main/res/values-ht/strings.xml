@@ -477,6 +477,13 @@
     <string name="networks_no_recovery">Pa gen kle rekiperasyon</string>
     <string name="networks_connected">Konekte</string>
     <string name="networks_not_connected">Pa konekte</string>
+    <string name="networks_failure_unreachable">Sèvè a pa aksesib</string>
+    <string name="networks_failure_status">Sèvè a reponn ak erè %1$s</string>
+    <string name="networks_failure_closed">Sèvè a fèmen koneksyon an</string>
+    <string name="networks_failure_blocked">Koneksyon ak sèvè a bloke</string>
+    <string name="networks_failure_signed_out">Sèvè a pa aksepte idantifikasyon kont sa a ankò; lye l ankò</string>
+    <string name="networks_failure_failed">Koneksyon ak sèvè a echwe</string>
+    <string name="networks_failure_retry">N ap eseye ankò a %1$s</string>
     <string name="networks_profile">Pwofil</string>
     <string name="networks_profile_show">Montre sou pwofil la</string>
     <string name="networks_profile_hide">Kache sou pwofil la</string>

@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">복구 키가 없어요</string>
     <string name="networks_connected">연결됨</string>
     <string name="networks_not_connected">연결되지 않음</string>
+    <string name="networks_failure_unreachable">서버에 연결할 수 없습니다</string>
+    <string name="networks_failure_status">서버가 %1$s 오류로 응답했습니다</string>
+    <string name="networks_failure_closed">서버가 연결을 종료했습니다</string>
+    <string name="networks_failure_blocked">서버 연결이 차단되어 있습니다</string>
+    <string name="networks_failure_signed_out">서버가 이 계정의 로그인을 더 이상 허용하지 않습니다. 다시 연결하세요</string>
+    <string name="networks_failure_failed">서버 연결에 실패했습니다</string>
+    <string name="networks_failure_retry">%1$s에 다시 시도합니다</string>
     <string name="networks_profile">프로필</string>
     <string name="networks_profile_show">프로필에 표시</string>
     <string name="networks_profile_hide">프로필에서 숨기기</string>

@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Berreskuratze-gakorik ez</string>
     <string name="networks_connected">Konektatua</string>
     <string name="networks_not_connected">Konektatu gabe</string>
+    <string name="networks_failure_unreachable">Ezin da zerbitzarira iritsi</string>
+    <string name="networks_failure_status">Zerbitzariak %1$s errorearekin erantzun du</string>
+    <string name="networks_failure_closed">Zerbitzariak konexioa amaitu du</string>
+    <string name="networks_failure_blocked">Zerbitzarirako konexioak blokeatuta daude</string>
+    <string name="networks_failure_signed_out">Zerbitzariak jada ez du kontu honen saio-hasiera onartzen; estekatu berriro</string>
+    <string name="networks_failure_failed">Zerbitzarirako konexioak huts egin du</string>
+    <string name="networks_failure_retry">Berriro saiatuko da ordu honetan: %1$s</string>
     <string name="networks_profile">Profila</string>
     <string name="networks_profile_show">Erakutsi profilean</string>
     <string name="networks_profile_hide">Ezkutatu profiletik</string>

@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">کوئی بازیابی کلید نہیں</string>
     <string name="networks_connected">کنیکٹ ہو گیا</string>
     <string name="networks_not_connected">کنیکٹ نہیں ہے</string>
+    <string name="networks_failure_unreachable">سرور تک رسائی نہیں ہو سکتی</string>
+    <string name="networks_failure_status">سرور نے خرابی %1$s کے ساتھ جواب دیا</string>
+    <string name="networks_failure_closed">سرور نے کنکشن ختم کر دیا</string>
+    <string name="networks_failure_blocked">سرور سے کنکشنز بلاک ہیں</string>
+    <string name="networks_failure_signed_out">سرور اب اس اکاؤنٹ کا سائن اِن قبول نہیں کرتا؛ اسے دوبارہ لنک کریں</string>
+    <string name="networks_failure_failed">سرور سے کنکشن ناکام ہو گیا</string>
+    <string name="networks_failure_retry">%1$s پر دوبارہ کوشش کی جائے گی</string>
     <string name="networks_profile">پروفائل</string>
     <string name="networks_profile_show">پروفائل پر دکھائیں</string>
     <string name="networks_profile_hide">پروفائل سے چھپائیں</string>

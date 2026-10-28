@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">কোনো রিকভারি কী নেই</string>
     <string name="networks_connected">সংযুক্ত</string>
     <string name="networks_not_connected">সংযুক্ত নয়</string>
+    <string name="networks_failure_unreachable">সার্ভারে পৌঁছানো যাচ্ছে না</string>
+    <string name="networks_failure_status">সার্ভার ত্রুটি %1$s দিয়ে উত্তর দিয়েছে</string>
+    <string name="networks_failure_closed">সার্ভার সংযোগ বন্ধ করে দিয়েছে</string>
+    <string name="networks_failure_blocked">সার্ভারের সাথে সংযোগ ব্লক করা আছে</string>
+    <string name="networks_failure_signed_out">সার্ভার আর এই অ্যাকাউন্টের সাইন-ইন গ্রহণ করে না; এটি পুনরায় লিঙ্ক করুন</string>
+    <string name="networks_failure_failed">সার্ভারের সাথে সংযোগ ব্যর্থ হয়েছে</string>
+    <string name="networks_failure_retry">%1$s-এ আবার চেষ্টা করা হবে</string>
     <string name="networks_profile">প্রোফাইল</string>
     <string name="networks_profile_show">প্রোফাইলে দেখান</string>
     <string name="networks_profile_hide">প্রোফাইল থেকে লুকান</string>

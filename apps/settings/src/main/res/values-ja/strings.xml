@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">リカバリーキーがありません</string>
     <string name="networks_connected">接続済み</string>
     <string name="networks_not_connected">未接続</string>
+    <string name="networks_failure_unreachable">サーバーに到達できません</string>
+    <string name="networks_failure_status">サーバーがエラー %1$s で応答しました</string>
+    <string name="networks_failure_closed">サーバーが接続を終了しました</string>
+    <string name="networks_failure_blocked">サーバーへの接続はブロックされています</string>
+    <string name="networks_failure_signed_out">サーバーがこのアカウントのサインインを受け付けなくなりました。再リンクしてください</string>
+    <string name="networks_failure_failed">サーバーへの接続に失敗しました</string>
+    <string name="networks_failure_retry">%1$s に再試行します</string>
     <string name="networks_profile">プロフィール</string>
     <string name="networks_profile_show">プロフィールに表示</string>
     <string name="networks_profile_hide">プロフィールから非表示</string>

@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">रिकव्हरी की नाही</string>
     <string name="networks_connected">कनेक्ट केले</string>
     <string name="networks_not_connected">कनेक्ट केलेले नाही</string>
+    <string name="networks_failure_unreachable">सर्व्हरपर्यंत पोहोचता येत नाही</string>
+    <string name="networks_failure_status">सर्व्हरने त्रुटी %1$s सह उत्तर दिले</string>
+    <string name="networks_failure_closed">सर्व्हरने कनेक्शन बंद केले</string>
+    <string name="networks_failure_blocked">सर्व्हरशी कनेक्शन ब्लॉक केलेले आहेत</string>
+    <string name="networks_failure_signed_out">सर्व्हर आता या खात्याचे साइन-इन स्वीकारत नाही; ते पुन्हा जोडा</string>
+    <string name="networks_failure_failed">सर्व्हरशी कनेक्शन अयशस्वी झाले</string>
+    <string name="networks_failure_retry">%1$s वाजता पुन्हा प्रयत्न केला जाईल</string>
     <string name="networks_profile">प्रोफाइल</string>
     <string name="networks_profile_show">प्रोफाइलवर दाखवा</string>
     <string name="networks_profile_hide">प्रोफाइलवरून लपवा</string>

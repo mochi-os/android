@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Furtuun deebii hin jiru</string>
     <string name="networks_connected">Walitti hidhame</string>
     <string name="networks_not_connected">Walitti hin hidhamne</string>
+    <string name="networks_failure_unreachable">Sarvarii bira gahuun hin danda\'amu</string>
+    <string name="networks_failure_status">Sarvariin dogoggora %1$s deebiseera</string>
+    <string name="networks_failure_closed">Sarvariin walqunnamtii addaan kuteera</string>
+    <string name="networks_failure_blocked">Walqunnamtiiwwan gara sarvariitti uggurameera</string>
+    <string name="networks_failure_signed_out">Sarvariin seensa akkaawuntii kanaa kana booda hin fudhatu; irra deebi\'ii walitti hidhi</string>
+    <string name="networks_failure_failed">Walqunnamtiin sarvarii wajjin hin milkoofne</string>
+    <string name="networks_failure_retry">Sa\'aatii %1$s irra deebi\'ee yaalama</string>
     <string name="networks_profile">Piroofaayilii</string>
     <string name="networks_profile_show">Piroofaayilii irratti agarsiisi</string>
     <string name="networks_profile_hide">Piroofaayilii irraa dhoksi</string>

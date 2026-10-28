@@ -498,6 +498,13 @@
     <string name="networks_no_recovery">Немає ключа відновлення</string>
     <string name="networks_connected">Підключено</string>
     <string name="networks_not_connected">Не підключено</string>
+    <string name="networks_failure_unreachable">Сервер недоступний</string>
+    <string name="networks_failure_status">Сервер відповів помилкою %1$s</string>
+    <string name="networks_failure_closed">Сервер розірвав підключення</string>
+    <string name="networks_failure_blocked">Підключення до сервера заблоковано</string>
+    <string name="networks_failure_signed_out">Сервер більше не приймає вхід цього облікового запису; прив\'яжіть його повторно</string>
+    <string name="networks_failure_failed">Помилка підключення до сервера</string>
+    <string name="networks_failure_retry">Повторна спроба о %1$s</string>
     <string name="networks_profile">Профіль</string>
     <string name="networks_profile_show">Показувати в профілі</string>
     <string name="networks_profile_hide">Приховати з профілю</string>

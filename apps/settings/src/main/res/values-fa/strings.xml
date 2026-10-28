@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">بدون کلید بازیابی</string>
     <string name="networks_connected">متصل</string>
     <string name="networks_not_connected">متصل نیست</string>
+    <string name="networks_failure_unreachable">دسترسی به سرور ممکن نیست</string>
+    <string name="networks_failure_status">سرور با خطای %1$s پاسخ داد</string>
+    <string name="networks_failure_closed">سرور اتصال را قطع کرد</string>
+    <string name="networks_failure_blocked">اتصال به سرور مسدود شده است</string>
+    <string name="networks_failure_signed_out">سرور دیگر ورود این حساب را نمی‌پذیرد؛ آن را دوباره پیوند دهید</string>
+    <string name="networks_failure_failed">اتصال به سرور ناموفق بود</string>
+    <string name="networks_failure_retry">تلاش دوباره در ساعت %1$s</string>
     <string name="networks_profile">پروفایل</string>
     <string name="networks_profile_show">نمایش در پروفایل</string>
     <string name="networks_profile_hide">پنهان کردن از پروفایل</string>

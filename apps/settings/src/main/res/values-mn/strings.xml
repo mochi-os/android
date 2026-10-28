@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Сэргээх түлхүүр алга</string>
     <string name="networks_connected">Холбогдсон</string>
     <string name="networks_not_connected">Холбогдоогүй</string>
+    <string name="networks_failure_unreachable">Серверт хүрэх боломжгүй</string>
+    <string name="networks_failure_status">Сервер %1$s алдаатай хариу өгсөн</string>
+    <string name="networks_failure_closed">Сервер холболтыг тасалсан</string>
+    <string name="networks_failure_blocked">Сервертэй хийх холболтуудыг хориглосон</string>
+    <string name="networks_failure_signed_out">Сервер энэ бүртгэлийн нэвтрэлтийг цаашид хүлээн авахгүй; дахин холбоно уу</string>
+    <string name="networks_failure_failed">Сервертэй холбогдож чадсангүй</string>
+    <string name="networks_failure_retry">%1$s-д дахин оролдоно</string>
     <string name="networks_profile">Профайл</string>
     <string name="networks_profile_show">Профайл дээр харуулах</string>
     <string name="networks_profile_hide">Профайлаас нуух</string>

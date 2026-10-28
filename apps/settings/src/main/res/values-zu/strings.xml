@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Akukho khiye wokubuyisela</string>
     <string name="networks_connected">Kuxhunyiwe</string>
     <string name="networks_not_connected">Akuxhunyiwe</string>
+    <string name="networks_failure_unreachable">Iseva ayifinyeleleki</string>
+    <string name="networks_failure_status">Iseva iphendule ngephutha %1$s</string>
+    <string name="networks_failure_closed">Iseva iqede uxhumano</string>
+    <string name="networks_failure_blocked">Uxhumano neseva luvinjiwe</string>
+    <string name="networks_failure_signed_out">Iseva ayisakwamukeli ukungena kwale akhawunti; phinda uyixhume</string>
+    <string name="networks_failure_failed">Uxhumano neseva luhlulekile</string>
+    <string name="networks_failure_retry">Kuzozanywa futhi ngo-%1$s</string>
     <string name="networks_profile">Iphrofayela</string>
     <string name="networks_profile_show">Bonisa kuphrofayela</string>
     <string name="networks_profile_hide">Fihla kuphrofayela</string>

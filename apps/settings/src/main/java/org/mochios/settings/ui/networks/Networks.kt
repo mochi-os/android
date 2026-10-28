@@ -7,10 +7,12 @@ package org.mochios.settings.ui.networks
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.util.NaturalCompare
 import org.mochios.settings.R
 import org.mochios.settings.api.Handle
 import org.mochios.settings.api.NetworkAccount
+import org.mochios.settings.api.NetworkFailure
 import org.mochios.settings.api.NetworkFeed
 import org.mochios.settings.api.NetworksData
 import java.text.Normalizer
@@ -109,6 +111,7 @@ internal fun keyed(account: NetworkAccount): Boolean =
 
 /** What an account's card says of it, most pressing first, as the web's status column does. */
 internal sealed interface AccountStatus {
+    data class Failure(val failure: NetworkFailure) : AccountStatus
     data class Failed(val message: String) : AccountStatus
     data class Moved(val to: String) : AccountStatus
     data object HomeDeleted : AccountStatus
@@ -123,6 +126,7 @@ internal fun accountStatus(account: NetworkAccount, feeds: List<NetworkFeed>): A
     val chat = account.type == "xmpp" || account.type == "matrix"
     val home = if (account.home.isNotEmpty()) feeds.firstOrNull { it.id == account.home } else null
     return when {
+        account.failure != null -> AccountStatus.Failure(account.failure)
         account.error.isNotEmpty() -> AccountStatus.Failed(account.error)
         account.moved.isNotEmpty() -> AccountStatus.Moved(account.moved)
         account.home.isNotEmpty() && home == null -> AccountStatus.HomeDeleted
@@ -133,9 +137,25 @@ internal fun accountStatus(account: NetworkAccount, feeds: List<NetworkFeed>): A
     }
 }
 
+/** Why a linked account is not working, in the user's language, and when it tries again. */
+@Composable
+internal fun failureText(failure: NetworkFailure): String {
+    val reason = when (failure.reason) {
+        "unreachable" -> stringResource(R.string.networks_failure_unreachable)
+        "status" -> stringResource(R.string.networks_failure_status, failure.status.toString())
+        "closed" -> stringResource(R.string.networks_failure_closed)
+        "blocked" -> stringResource(R.string.networks_failure_blocked)
+        "signed_out" -> stringResource(R.string.networks_failure_signed_out)
+        else -> stringResource(R.string.networks_failure_failed)
+    }
+    if (failure.retry <= 0) return reason
+    return reason + "\n" + stringResource(R.string.networks_failure_retry, LocalFormat.current.formatTime(failure.retry))
+}
+
 /** The status in words, and whether it is a problem the user should see as one. */
 @Composable
 internal fun statusText(status: AccountStatus): Pair<String, Boolean> = when (status) {
+    is AccountStatus.Failure -> failureText(status.failure) to true
     is AccountStatus.Failed -> status.message to true
     is AccountStatus.Moved -> stringResource(R.string.networks_moved_to, status.to) to false
     AccountStatus.HomeDeleted -> stringResource(R.string.networks_home_deleted) to true

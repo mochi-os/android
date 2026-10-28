@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">Teu aya konci pamulihan</string>
     <string name="networks_connected">Tersambung</string>
     <string name="networks_not_connected">Teu tersambung</string>
+    <string name="networks_failure_unreachable">Server teu tiasa dihontal</string>
+    <string name="networks_failure_status">Server ngawalon ku kasalahan %1$s</string>
+    <string name="networks_failure_closed">Server mungkas sambungan</string>
+    <string name="networks_failure_blocked">Sambungan ka server diblokir</string>
+    <string name="networks_failure_signed_out">Server geus teu narima deui prosés asup akun ieu; hubungkeun deui</string>
+    <string name="networks_failure_failed">Sambungan ka server gagal</string>
+    <string name="networks_failure_retry">Nyobian deui jam %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Témbongkeun dina profil</string>
     <string name="networks_profile_hide">Sumputkeun tina profil</string>

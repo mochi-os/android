@@ -518,6 +518,13 @@
     <string name="networks_no_recovery">لا يوجد مفتاح استرداد</string>
     <string name="networks_connected">متصل</string>
     <string name="networks_not_connected">غير متصل</string>
+    <string name="networks_failure_unreachable">تعذّر الوصول إلى الخادم</string>
+    <string name="networks_failure_status">ردّ الخادم بالخطأ %1$s</string>
+    <string name="networks_failure_closed">أنهى الخادم الاتصال</string>
+    <string name="networks_failure_blocked">الاتصالات بالخادم محظورة</string>
+    <string name="networks_failure_signed_out">لم يعد الخادم يقبل تسجيل الدخول لهذا الحساب؛ أعد ربطه</string>
+    <string name="networks_failure_failed">فشل الاتصال بالخادم</string>
+    <string name="networks_failure_retry">إعادة المحاولة في %1$s</string>
     <string name="networks_profile">الملف الشخصي</string>
     <string name="networks_profile_show">إظهار في الملف الشخصي</string>
     <string name="networks_profile_hide">إخفاء من الملف الشخصي</string>

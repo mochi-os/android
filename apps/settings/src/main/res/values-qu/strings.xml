@@ -477,6 +477,13 @@
     <string name="networks_no_recovery">Mana kutichinapaq clave</string>
     <string name="networks_connected">T\'inkisqa</string>
     <string name="networks_not_connected">Mana t\'inkisqachu</string>
+    <string name="networks_failure_unreachable">Servidorman mana chayay atikunchu</string>
+    <string name="networks_failure_status">Servidorqa %1$s pantaywan kutichirqan</string>
+    <string name="networks_failure_closed">Servidorqa t\'inkiyta tukuchirqan</string>
+    <string name="networks_failure_blocked">Servidorman t\'inkiykunaqa hark\'asqa kanku</string>
+    <string name="networks_failure_signed_out">Servidorqa manañam kay cuentaq yaykusqanta chaskinchu; yapamanta t\'inkiy</string>
+    <string name="networks_failure_failed">Servidorwan t\'inkiyqa mana atikurqanchu</string>
+    <string name="networks_failure_retry">%1$s pachapi kutimanta kallpachakunqa</string>
     <string name="networks_profile">Perfil</string>
     <string name="networks_profile_show">Perfilpi rikuchiy</string>
     <string name="networks_profile_hide">Perfilmanta pakay</string>

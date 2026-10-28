@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Bərpa açarı yoxdur</string>
     <string name="networks_connected">Qoşuldu</string>
     <string name="networks_not_connected">Qoşulmayıb</string>
+    <string name="networks_failure_unreachable">Serverə çatmaq mümkün deyil</string>
+    <string name="networks_failure_status">Server %1$s xətası ilə cavab verdi</string>
+    <string name="networks_failure_closed">Server bağlantını kəsdi</string>
+    <string name="networks_failure_blocked">Serverə bağlantılar bloklanıb</string>
+    <string name="networks_failure_signed_out">Server artıq bu hesabın girişini qəbul etmir; onu yenidən əlaqələndirin</string>
+    <string name="networks_failure_failed">Serverə bağlantı uğursuz oldu</string>
+    <string name="networks_failure_retry">Yenidən cəhd ediləcək: %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Profildə göstər</string>
     <string name="networks_profile_hide">Profildə gizlət</string>

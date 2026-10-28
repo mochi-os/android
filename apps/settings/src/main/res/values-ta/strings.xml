@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">மீட்பு விசை இல்லை</string>
     <string name="networks_connected">இணைக்கப்பட்டது</string>
     <string name="networks_not_connected">இணைக்கப்படவில்லை</string>
+    <string name="networks_failure_unreachable">சேவையகத்தை அணுக முடியவில்லை</string>
+    <string name="networks_failure_status">சேவையகம் பிழை %1$s உடன் பதிலளித்தது</string>
+    <string name="networks_failure_closed">சேவையகம் இணைப்பைத் துண்டித்தது</string>
+    <string name="networks_failure_blocked">சேவையகத்துக்கான இணைப்புகள் தடுக்கப்பட்டுள்ளன</string>
+    <string name="networks_failure_signed_out">இந்தக் கணக்கின் உள்நுழைவைச் சேவையகம் இனி ஏற்காது; மீண்டும் இணைக்கவும்</string>
+    <string name="networks_failure_failed">சேவையகத்துடனான இணைப்பு தோல்வியடைந்தது</string>
+    <string name="networks_failure_retry">%1$s மணிக்கு மீண்டும் முயற்சிக்கப்படும்</string>
     <string name="networks_profile">சுயவிவரம்</string>
     <string name="networks_profile_show">சுயவிவரத்தில் காட்டு</string>
     <string name="networks_profile_hide">சுயவிவரத்திலிருந்து மறை</string>

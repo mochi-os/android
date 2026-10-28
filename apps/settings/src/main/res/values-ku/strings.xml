@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Mifteya vegerê tune</string>
     <string name="networks_connected">Girêdayî</string>
     <string name="networks_not_connected">Ne girêdayî ye</string>
+    <string name="networks_failure_unreachable">Gihîştina serverê ne gengaz e</string>
+    <string name="networks_failure_status">Serverê bi çewtiya %1$s bersiv da</string>
+    <string name="networks_failure_closed">Serverê girêdan qut kir</string>
+    <string name="networks_failure_blocked">Girêdanên bi serverê re hatine astengkirin</string>
+    <string name="networks_failure_signed_out">Server êdî têketina vî hesabî qebûl nake; wî ji nû ve girêde</string>
+    <string name="networks_failure_failed">Girêdana bi serverê re bi ser neket</string>
+    <string name="networks_failure_retry">Di saet %1$s de dîsa tê ceribandin</string>
     <string name="networks_profile">Profîl</string>
     <string name="networks_profile_show">Li ser profîlê nîşan bide</string>
     <string name="networks_profile_hide">Ji profîlê veşêre</string>

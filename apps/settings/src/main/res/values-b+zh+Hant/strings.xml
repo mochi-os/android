@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">無復原金鑰</string>
     <string name="networks_connected">已連結</string>
     <string name="networks_not_connected">未連線</string>
+    <string name="networks_failure_unreachable">無法連線到伺服器</string>
+    <string name="networks_failure_status">伺服器回應錯誤 %1$s</string>
+    <string name="networks_failure_closed">伺服器已中斷連線</string>
+    <string name="networks_failure_blocked">與伺服器的連線已遭封鎖</string>
+    <string name="networks_failure_signed_out">伺服器已不再接受此帳號的登入，請重新連結</string>
+    <string name="networks_failure_failed">與伺服器的連線失敗</string>
+    <string name="networks_failure_retry">將於 %1$s 重試</string>
     <string name="networks_profile">個人檔案</string>
     <string name="networks_profile_show">在個人檔案中顯示</string>
     <string name="networks_profile_hide">從個人檔案中隱藏</string>

@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Калыбына келтирүү ачкычы жок</string>
     <string name="networks_connected">Байланышты</string>
     <string name="networks_not_connected">Туташкан эмес</string>
+    <string name="networks_failure_unreachable">Серверге жетүү мүмкүн эмес</string>
+    <string name="networks_failure_status">Сервер %1$s катасы менен жооп берди</string>
+    <string name="networks_failure_closed">Сервер байланышты үздү</string>
+    <string name="networks_failure_blocked">Серверге байланыштар бөгөттөлгөн</string>
+    <string name="networks_failure_signed_out">Сервер бул аккаунттун кирүүсүн мындан ары кабыл албайт; аны кайра байланыштырыңыз</string>
+    <string name="networks_failure_failed">Серверге байланышуу ишке ашкан жок</string>
+    <string name="networks_failure_retry">Саат %1$s кайра аракет кылынат</string>
     <string name="networks_profile">Профиль</string>
     <string name="networks_profile_show">Профилде көрсөтүү</string>
     <string name="networks_profile_hide">Профилден жашыруу</string>

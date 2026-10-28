@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">రికవరీ కీ లేదు</string>
     <string name="networks_connected">కనెక్ట్ చేయబడింది</string>
     <string name="networks_not_connected">కనెక్ట్ కాలేదు</string>
+    <string name="networks_failure_unreachable">సర్వర్‌ను చేరుకోవడం సాధ్యం కాలేదు</string>
+    <string name="networks_failure_status">సర్వర్ %1$s లోపంతో స్పందించింది</string>
+    <string name="networks_failure_closed">సర్వర్ కనెక్షన్‌ను ముగించింది</string>
+    <string name="networks_failure_blocked">సర్వర్‌కు కనెక్షన్‌లు బ్లాక్ చేయబడ్డాయి</string>
+    <string name="networks_failure_signed_out">సర్వర్ ఇకపై ఈ ఖాతా సైన్-ఇన్‌ను అంగీకరించదు; దాన్ని మళ్ళీ లింక్ చేయండి</string>
+    <string name="networks_failure_failed">సర్వర్‌కు కనెక్షన్ విఫలమైంది</string>
+    <string name="networks_failure_retry">%1$sకి మళ్ళీ ప్రయత్నిస్తాము</string>
     <string name="networks_profile">ప్రొఫైల్</string>
     <string name="networks_profile_show">ప్రొఫైల్‌లో చూపించు</string>
     <string name="networks_profile_hide">ప్రొఫైల్ నుండి దాచు</string>
