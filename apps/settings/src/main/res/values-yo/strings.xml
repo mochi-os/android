@@ -540,6 +540,11 @@
     <string name="handles_title">Àwọn ìnagijẹ</string>
     <string name="handles_take">Gba orúkọ kan</string>
     <string name="handles_empty">Kò sí ìnagijẹ tí a ti gbà sílẹ̀.</string>
+    <string name="handles_empty_search">Kò sí ìnagijẹ tó bámu ìwákiri rẹ</string>
+    <string name="handles_search_placeholder">Wá àwọn ìnagijẹ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">Ń fi %1$s–%2$s hàn nínú ìnagijẹ %3$s</item>
+    </plurals>
     <string name="handles_community">Àwùjọ</string>
     <string name="handles_name_under">Orúkọ lábẹ́ %1$s</string>
     <string name="handles_taken_down">Ti dádúró</string>

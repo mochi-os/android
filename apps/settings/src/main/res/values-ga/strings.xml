@@ -579,6 +579,15 @@
     <string name="handles_title">Ainmneacha úsáideora</string>
     <string name="handles_take">Tóg ainm</string>
     <string name="handles_empty">Níor cuireadh aon ainm úsáideora in áirithe.</string>
+    <string name="handles_empty_search">Níl aon ainm úsáideora ag teacht le do chuardach</string>
+    <string name="handles_search_placeholder">Cuardaigh ainmneacha úsáideora…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Ag taispeáint %1$s–%2$s as %3$s ainm úsáideora</item>
+        <item quantity="two">Ag taispeáint %1$s–%2$s as %3$s ainm úsáideora</item>
+        <item quantity="few">Ag taispeáint %1$s–%2$s as %3$s ainm úsáideora</item>
+        <item quantity="many">Ag taispeáint %1$s–%2$s as %3$s n-ainm úsáideora</item>
+        <item quantity="other">Ag taispeáint %1$s–%2$s as %3$s ainm úsáideora</item>
+    </plurals>
     <string name="handles_community">Pobal</string>
     <string name="handles_name_under">Ainm faoi %1$s</string>
     <string name="handles_taken_down">Tógtha anuas</string>

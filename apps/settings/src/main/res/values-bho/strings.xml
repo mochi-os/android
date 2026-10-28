@@ -549,6 +549,12 @@
     <string name="handles_title">हैंडल</string>
     <string name="handles_take">नाम लीं</string>
     <string name="handles_empty">कौनो हैंडल आरक्षित नइखे भइल।</string>
+    <string name="handles_empty_search">कौनो हैंडल रउआ खोज से मेल ना खाइल</string>
+    <string name="handles_search_placeholder">हैंडल खोजीं…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s हैंडल में से %1$s–%2$s देखावल जा रहल बा</item>
+        <item quantity="other">%3$s हैंडल में से %1$s–%2$s देखावल जा रहल बा</item>
+    </plurals>
     <string name="handles_community">समुदाय</string>
     <string name="handles_name_under">%1$s के नीचे नाम</string>
     <string name="handles_taken_down">टेकडाउन भइल</string>

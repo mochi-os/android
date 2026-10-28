@@ -569,6 +569,14 @@
     <string name="handles_title">Pseudonimy</string>
     <string name="handles_take">Zajmij nazwę</string>
     <string name="handles_empty">Nie zarezerwowano żadnych pseudonimów.</string>
+    <string name="handles_empty_search">Żaden pseudonim nie pasuje do Twojego wyszukiwania</string>
+    <string name="handles_search_placeholder">Szukaj pseudonimów…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Wyświetlanie %1$s–%2$s z %3$s pseudonimu</item>
+        <item quantity="few">Wyświetlanie %1$s–%2$s z %3$s pseudonimów</item>
+        <item quantity="many">Wyświetlanie %1$s–%2$s z %3$s pseudonimów</item>
+        <item quantity="other">Wyświetlanie %1$s–%2$s z %3$s pseudonimu</item>
+    </plurals>
     <string name="handles_community">Społeczność</string>
     <string name="handles_name_under">Nazwa pod %1$s</string>
     <string name="handles_taken_down">Zdjęte</string>

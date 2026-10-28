@@ -549,6 +549,12 @@
     <string name="handles_title">ಬಳಕೆದಾರಹೆಸರುಗಳು</string>
     <string name="handles_take">ಹೆಸರನ್ನು ಪಡೆಯಿರಿ</string>
     <string name="handles_empty">ಯಾವುದೇ ಬಳಕೆದಾರಹೆಸರುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿಲ್ಲ.</string>
+    <string name="handles_empty_search">ಯಾವುದೇ ಬಳಕೆದಾರಹೆಸರುಗಳು ನಿಮ್ಮ ಹುಡುಕಾಟಕ್ಕೆ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ</string>
+    <string name="handles_search_placeholder">ಬಳಕೆದಾರಹೆಸರುಗಳನ್ನು ಹುಡುಕಿ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s ಬಳಕೆದಾರಹೆಸರಿನಲ್ಲಿ %1$s–%2$s ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
+        <item quantity="other">%3$s ಬಳಕೆದಾರಹೆಸರುಗಳಲ್ಲಿ %1$s–%2$s ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
+    </plurals>
     <string name="handles_community">ಸಮುದಾಯ</string>
     <string name="handles_name_under">%1$s ಅಡಿಯಲ್ಲಿನ ಹೆಸರು</string>
     <string name="handles_taken_down">ಕೆಳಗಿಳಿಸಲಾಗಿದೆ</string>

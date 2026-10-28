@@ -549,6 +549,12 @@
     <string name="handles_title">புனைப்பெயர்கள்</string>
     <string name="handles_take">ஒரு பெயரை எடு</string>
     <string name="handles_empty">புனைப்பெயர்கள் எதுவும் முன்பதிவு செய்யப்படவில்லை.</string>
+    <string name="handles_empty_search">உங்கள் தேடலுக்கு எந்த புனைப்பெயரும் பொருந்தவில்லை</string>
+    <string name="handles_search_placeholder">புனைப்பெயர்களைத் தேடு…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s புனைப்பெயரில் %1$s–%2$s காட்டப்படுகிறது</item>
+        <item quantity="other">%3$s புனைப்பெயர்களில் %1$s–%2$s காட்டப்படுகிறது</item>
+    </plurals>
     <string name="handles_community">சமூகம்</string>
     <string name="handles_name_under">%1$s இன் கீழ் உள்ள பெயர்</string>
     <string name="handles_taken_down">முடக்கப்பட்டது</string>

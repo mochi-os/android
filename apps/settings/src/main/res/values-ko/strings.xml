@@ -540,6 +540,11 @@
     <string name="handles_title">핸들</string>
     <string name="handles_take">이름 확보</string>
     <string name="handles_empty">예약된 핸들이 없습니다.</string>
+    <string name="handles_empty_search">검색과 일치하는 핸들이 없어요</string>
+    <string name="handles_search_placeholder">핸들 검색…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">핸들 %3$s개 중 %1$s–%2$s개 표시 중</item>
+    </plurals>
     <string name="handles_community">커뮤니티</string>
     <string name="handles_name_under">%1$s 아래의 이름</string>
     <string name="handles_taken_down">게시 중단됨</string>

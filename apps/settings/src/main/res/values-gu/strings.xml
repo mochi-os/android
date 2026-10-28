@@ -549,6 +549,12 @@
     <string name="handles_title">હેન્ડલ</string>
     <string name="handles_take">નામ લો</string>
     <string name="handles_empty">કોઈ હેન્ડલ આરક્ષિત કરવામાં આવ્યા નથી.</string>
+    <string name="handles_empty_search">તમારી શોધ સાથે મેળ ખાતા કોઈ હેન્ડલ નથી</string>
+    <string name="handles_search_placeholder">હેન્ડલ શોધો…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s હેન્ડલમાંથી %1$s–%2$s બતાવી રહ્યું છે</item>
+        <item quantity="other">%3$s હેન્ડલમાંથી %1$s–%2$s બતાવી રહ્યું છે</item>
+    </plurals>
     <string name="handles_community">સમુદાય</string>
     <string name="handles_name_under">%1$s હેઠળ નામ</string>
     <string name="handles_taken_down">ટેકડાઉન થયું</string>

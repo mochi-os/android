@@ -540,6 +540,11 @@
     <string name="handles_title">ハンドル</string>
     <string name="handles_take">名前を取得</string>
     <string name="handles_empty">予約されたハンドルはありません。</string>
+    <string name="handles_empty_search">検索に一致するハンドルはありません</string>
+    <string name="handles_search_placeholder">ハンドルを検索…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">%3$s件のハンドルのうち%1$s–%2$s件を表示中</item>
+    </plurals>
     <string name="handles_community">コミュニティ</string>
     <string name="handles_name_under">%1$s の下の名前</string>
     <string name="handles_taken_down">公開停止中</string>

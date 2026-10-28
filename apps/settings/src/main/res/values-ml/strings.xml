@@ -549,6 +549,12 @@
     <string name="handles_title">ഉപയോക്തൃനാമങ്ങൾ</string>
     <string name="handles_take">ഒരു പേര് എടുക്കുക</string>
     <string name="handles_empty">ഉപയോക്തൃനാമങ്ങളൊന്നും റിസർവ് ചെയ്തിട്ടില്ല.</string>
+    <string name="handles_empty_search">നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന ഉപയോക്തൃനാമങ്ങളൊന്നുമില്ല</string>
+    <string name="handles_search_placeholder">ഉപയോക്തൃനാമങ്ങൾ തിരയുക…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s ഉപയോക്തൃനാമത്തിൽ %1$s–%2$s കാണിക്കുന്നു</item>
+        <item quantity="other">%3$s ഉപയോക്തൃനാമങ്ങളിൽ %1$s–%2$s കാണിക്കുന്നു</item>
+    </plurals>
     <string name="handles_community">കമ്മ്യൂണിറ്റി</string>
     <string name="handles_name_under">%1$s-ന് കീഴിലുള്ള പേര്</string>
     <string name="handles_taken_down">പിൻവലിച്ചു</string>

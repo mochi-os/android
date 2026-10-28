@@ -540,6 +540,11 @@
     <string name="handles_title">ชื่อแฝง</string>
     <string name="handles_take">รับชื่อ</string>
     <string name="handles_empty">ไม่มีชื่อแฝงที่ถูกจอง</string>
+    <string name="handles_empty_search">ไม่มีชื่อแฝงที่ตรงกับการค้นหาของคุณ</string>
+    <string name="handles_search_placeholder">ค้นหาชื่อแฝง…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">แสดง %1$s–%2$s จาก %3$s ชื่อแฝง</item>
+    </plurals>
     <string name="handles_community">ชุมชน</string>
     <string name="handles_name_under">ชื่อภายใต้ %1$s</string>
     <string name="handles_taken_down">ถูกระงับ</string>

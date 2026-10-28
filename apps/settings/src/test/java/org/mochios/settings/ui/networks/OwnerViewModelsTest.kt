@@ -23,6 +23,7 @@ import org.mochios.settings.api.DomainsApi
 import org.mochios.settings.api.NetworksApi
 import org.mochios.settings.api.SessionsApi
 import org.mochios.settings.api.SystemStatusApi
+import org.mochios.settings.ui.handles.SystemHandlesViewModel
 import org.mochios.settings.ui.home.SettingsHomeViewModel
 import org.mochios.settings.ui.login.SettingsStepUpClient
 import org.mochios.settings.ui.sessions.SessionsViewModel
@@ -52,6 +53,12 @@ class OwnerViewModelsTest {
     /** How many tokens the sessions answer still lists. */
     @Volatile private var signins = 1
 
+    /** How many handles the registry says the search matches. */
+    @Volatile private var matched = 60
+
+    /** The query of each registry request, in order. */
+    private val registry = CopyOnWriteArrayList<Map<String, String>>()
+
     @Before
     fun begin() {
         AppContext.set(context)
@@ -76,6 +83,14 @@ class OwnerViewModelsTest {
                     "settings/-/system/networks/key/replace" -> json("""{"key": "ed25519:b"}""")
                     "settings/-/domains/data" -> json("""{"domains": [], "admin": true}""")
                     "settings/-/user/networks/data" -> json("""{"offered": $offered}""")
+                    "settings/-/system/handles/list" -> {
+                        val query = request.requestUrl!!.let { url -> url.queryParameterNames.associateWith { url.queryParameter(it).orEmpty() } }
+                        registry += query
+                        val offset = query["offset"]!!.toInt()
+                        val page = (offset until minOf(offset + query["limit"]!!.toInt(), matched))
+                            .joinToString(",") { """{"domain": "a.example", "name": "name$it"}""" }
+                        json("""{"handles": [$page], "count": $matched, "domains": ["a.example"]}""")
+                    }
                     else -> MockResponse().setResponseCode(404)
                 }
             }
@@ -104,6 +119,60 @@ class OwnerViewModelsTest {
     private fun form(path: String): Map<String, String> = requests.last { it.first == path }.second
         .split("&").filter { it.contains("=") }
         .associate { it.split("=", limit = 2).let { (k, v) -> URLDecoder.decode(k, "UTF-8") to URLDecoder.decode(v, "UTF-8") } }
+
+    @Test
+    fun `the registry is searched and paged on the server, a new search from the first page`() {
+        val model = SystemHandlesViewModel(retrofit.create(NetworksApi::class.java))
+        until { !model.uiState.value.isLoading }
+        assertEquals(mapOf("search" to "", "limit" to "25", "offset" to "0"), registry.last())
+        assertEquals(60, model.uiState.value.count)
+        assertEquals("name0", model.uiState.value.handles.first().name)
+        // On the first page there is no previous one to ask for.
+        model.previousPage()
+        Thread.sleep(300)
+        shadowOf(Looper.getMainLooper()).idleFor(10, TimeUnit.MILLISECONDS)
+        assertEquals(1, registry.size)
+        model.nextPage()
+        until { registry.size == 2 && !model.uiState.value.isLoading }
+        assertEquals("25", registry.last()["offset"])
+        assertEquals("name25", model.uiState.value.handles.first().name)
+        model.nextPage()
+        until { registry.size == 3 && !model.uiState.value.isLoading }
+        assertEquals("50", registry.last()["offset"])
+        // The last page: no further.
+        model.nextPage()
+        model.previousPage()
+        until { registry.size == 4 && !model.uiState.value.isLoading }
+        assertEquals("25", registry.last()["offset"])
+        model.setSearch("ali")
+        until { registry.size == 5 && !model.uiState.value.isLoading }
+        assertEquals(mapOf("search" to "ali", "limit" to "25", "offset" to "0"), registry.last())
+        model.nextPage()
+        until { registry.size == 6 && !model.uiState.value.isLoading }
+        assertEquals("25", registry.last()["offset"])
+        // A new page size starts from the first page.
+        model.setLimit(10)
+        until { registry.size == 7 && !model.uiState.value.isLoading }
+        assertEquals(mapOf("search" to "ali", "limit" to "10", "offset" to "0"), registry.last())
+    }
+
+    @Test
+    fun `a page left past the end steps back to the last page with handles`() {
+        val model = SystemHandlesViewModel(retrofit.create(NetworksApi::class.java))
+        until { !model.uiState.value.isLoading }
+        model.nextPage()
+        until { registry.size == 2 && !model.uiState.value.isLoading }
+        model.nextPage()
+        until { registry.size == 3 && !model.uiState.value.isLoading }
+        // The page's handles go, as a release of the last of them leaves it.
+        matched = 50
+        model.refresh(quiet = true)
+        until { registry.size == 5 && model.uiState.value.handles.firstOrNull()?.name == "name25" }
+        assertEquals("50", registry[3]["offset"])
+        assertEquals("25", registry[4]["offset"])
+        assertEquals(25, model.uiState.value.offset)
+        assertEquals("name25", model.uiState.value.handles.first().name)
+    }
 
     @Test
     fun `a sign-in is revoked by its hash and the list is read again`() {

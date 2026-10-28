@@ -549,6 +549,12 @@
     <string name="handles_title">Handles</string>
     <string name="handles_take">Namen beanspruchen</string>
     <string name="handles_empty">Es wurden keine Handles reserviert.</string>
+    <string name="handles_empty_search">Keine Handles entsprechen Ihrer Suche</string>
+    <string name="handles_search_placeholder">Handles suchen…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Zeige %1$s–%2$s von %3$s Handle</item>
+        <item quantity="other">Zeige %1$s–%2$s von %3$s Handles</item>
+    </plurals>
     <string name="handles_community">Gemeinschaft</string>
     <string name="handles_name_under">Name unter %1$s</string>
     <string name="handles_taken_down">Vom Netz genommen</string>

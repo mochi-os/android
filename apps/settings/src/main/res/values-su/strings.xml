@@ -540,6 +540,11 @@
     <string name="handles_title">Landihan</string>
     <string name="handles_take">Cokot ngaran</string>
     <string name="handles_empty">Teu aya landihan anu dipesen.</string>
+    <string name="handles_empty_search">Euweuh landihan cocog jeung paluruh anjeun</string>
+    <string name="handles_search_placeholder">Paluruh landihan…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">Némbongkeun %1$s–%2$s ti %3$s landihan</item>
+    </plurals>
     <string name="handles_community">Komunitas</string>
     <string name="handles_name_under">Ngaran di handapeun %1$s</string>
     <string name="handles_taken_down">Diturunkeun</string>

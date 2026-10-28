@@ -17,6 +17,7 @@ import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 import javax.inject.Singleton
 
 // Mirrors apps/settings/web/src/types/networks.ts: the Networks page's handles
@@ -201,8 +202,10 @@ data class RegistryHandle(
     val accounts: List<RegistryAccount> = emptyList(),
 )
 
+/** A page of the registry a search matches, how many it matches, and the server's domains. */
 data class SystemHandles(
     val handles: List<RegistryHandle> = emptyList(),
+    val count: Int = 0,
     val domains: List<String> = emptyList(),
 )
 
@@ -330,7 +333,11 @@ interface NetworksApi {
     ): Response<Unit>
 
     @GET("settings/-/system/handles/list")
-    suspend fun registry(): Response<SystemHandles>
+    suspend fun registry(
+        @Query("search") search: String,
+        @Query("limit") limit: Int,
+        @Query("offset") offset: Int,
+    ): Response<SystemHandles>
 
     @FormUrlEncoded
     @POST("settings/-/system/handles/release")

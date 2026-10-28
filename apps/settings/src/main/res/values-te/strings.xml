@@ -549,6 +549,12 @@
     <string name="handles_title">హ్యాండిల్‌లు</string>
     <string name="handles_take">ఒక పేరు తీసుకోండి</string>
     <string name="handles_empty">హ్యాండిల్‌లు ఏవీ రిజర్వ్ చేయబడలేదు.</string>
+    <string name="handles_empty_search">మీ సెర్చ్‌కు సరిపోయే హ్యాండిల్‌లు ఏవీ లేవు</string>
+    <string name="handles_search_placeholder">హ్యాండిల్‌లను శోధించండి…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s హ్యాండిల్‌లో %1$s–%2$s చూపుతోంది</item>
+        <item quantity="other">%3$s హ్యాండిల్‌లలో %1$s–%2$s చూపుతోంది</item>
+    </plurals>
     <string name="handles_community">సంఘం</string>
     <string name="handles_name_under">%1$s కింద పేరు</string>
     <string name="handles_taken_down">నిలిపివేయబడింది</string>

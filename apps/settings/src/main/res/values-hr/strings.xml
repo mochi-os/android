@@ -559,6 +559,13 @@
     <string name="handles_title">Korisnička imena</string>
     <string name="handles_take">Uzmite ime</string>
     <string name="handles_empty">Nijedno korisničko ime nije rezervirano.</string>
+    <string name="handles_empty_search">Nijedno korisničko ime ne odgovara vašoj pretrazi</string>
+    <string name="handles_search_placeholder">Pretraži korisnička imena…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Prikaz %1$s–%2$s od %3$s korisničkog imena</item>
+        <item quantity="few">Prikaz %1$s–%2$s od %3$s korisnička imena</item>
+        <item quantity="other">Prikaz %1$s–%2$s od %3$s korisničkih imena</item>
+    </plurals>
     <string name="handles_community">Zajednica</string>
     <string name="handles_name_under">Ime pod %1$s</string>
     <string name="handles_taken_down">Skinut</string>

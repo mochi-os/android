@@ -549,6 +549,12 @@
     <string name="handles_title">የተጠቃሚ ስሞች</string>
     <string name="handles_take">ስም ይውሰዱ</string>
     <string name="handles_empty">ምንም የተጠቃሚ ስሞች አልተያዙም።</string>
+    <string name="handles_empty_search">ከፍለጋዎ ጋር የሚዛመዱ የተጠቃሚ ስሞች የሉም</string>
+    <string name="handles_search_placeholder">የተጠቃሚ ስሞችን ይፈልጉ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">ከ%3$s የተጠቃሚ ስም %1$s–%2$s እየታየ ነው</item>
+        <item quantity="other">ከ%3$s የተጠቃሚ ስሞች %1$s–%2$s እየታዩ ነው</item>
+    </plurals>
     <string name="handles_community">ማህበረሰብ</string>
     <string name="handles_name_under">በ%1$s ስር ያለ ስም</string>
     <string name="handles_taken_down">ወርዷል</string>

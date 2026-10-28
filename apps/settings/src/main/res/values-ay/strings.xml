@@ -548,6 +548,12 @@
     <string name="handles_title">Apnaqiri sutinaka</string>
     <string name="handles_take">Mä suti katuña</string>
     <string name="handles_empty">Janiw kuna apnaqiri sutis reservatäkiti.</string>
+    <string name="handles_empty_search">Thaqhawimampi kikip apnaqiri sutinakax janiw utjkiti</string>
+    <string name="handles_search_placeholder">Apnaqiri sutinak thaqhama…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%1$s–%2$s uñstayasa, %3$s apnaqiri sutita</item>
+        <item quantity="other">%1$s–%2$s uñstayasa, %3$s apnaqiri sutinakata</item>
+    </plurals>
     <string name="handles_community">Ayllu</string>
     <string name="handles_name_under">%1$s manqhankir suti</string>
     <string name="handles_taken_down">Apaqata</string>

@@ -540,6 +540,11 @@
     <string name="handles_title">帳號代碼</string>
     <string name="handles_take">取用名稱</string>
     <string name="handles_empty">尚未保留任何帳號代碼。</string>
+    <string name="handles_empty_search">沒有帳號代碼符合您的搜尋</string>
+    <string name="handles_search_placeholder">搜尋帳號代碼…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">顯示 %3$s 個帳號代碼中的 %1$s–%2$s</item>
+    </plurals>
     <string name="handles_community">社群</string>
     <string name="handles_name_under">%1$s 下的名稱</string>
     <string name="handles_taken_down">已下架</string>

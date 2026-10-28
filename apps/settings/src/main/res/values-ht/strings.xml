@@ -548,6 +548,12 @@
     <string name="handles_title">Non itilizatè yo</string>
     <string name="handles_take">Pran yon non</string>
     <string name="handles_empty">Pa gen okenn non itilizatè ki rezève.</string>
+    <string name="handles_empty_search">Pa gen non itilizatè ki koresponn ak rechèch ou</string>
+    <string name="handles_search_placeholder">Chèche non itilizatè…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Ap montre %1$s–%2$s nan %3$s non itilizatè</item>
+        <item quantity="other">Ap montre %1$s–%2$s nan %3$s non itilizatè</item>
+    </plurals>
     <string name="handles_community">Kominote</string>
     <string name="handles_name_under">Non anba %1$s</string>
     <string name="handles_taken_down">Piblikasyon retire</string>

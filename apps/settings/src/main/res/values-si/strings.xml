@@ -549,6 +549,12 @@
     <string name="handles_title">අන්වර්ථ නාම</string>
     <string name="handles_take">නමක් ගන්න</string>
     <string name="handles_empty">කිසිදු අන්වර්ථ නාමයක් වෙන් කර නැත.</string>
+    <string name="handles_empty_search">ඔබේ සෙවීමට අන්වර්ථ නාම කිසිවක් නොගැලපේ</string>
+    <string name="handles_search_placeholder">අන්වර්ථ නාම සොයන්න…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">අන්වර්ථ නාම %3$s කින් %1$s–%2$s පෙන්වමින්</item>
+        <item quantity="other">අන්වර්ථ නාම %3$s කින් %1$s–%2$s පෙන්වමින්</item>
+    </plurals>
     <string name="handles_community">ප්‍රජාව</string>
     <string name="handles_name_under">%1$s යටතේ නම</string>
     <string name="handles_taken_down">අත්හිටුවා ඇත</string>

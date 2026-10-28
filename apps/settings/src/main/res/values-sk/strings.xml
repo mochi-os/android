@@ -561,6 +561,14 @@
     <string name="handles_title">Prezývky</string>
     <string name="handles_take">Vziať si meno</string>
     <string name="handles_empty">Nie sú rezervované žiadne prezývky.</string>
+    <string name="handles_empty_search">Žiadne prezývky nezodpovedajú hľadaniu</string>
+    <string name="handles_search_placeholder">Hľadať prezývky…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Zobrazené %1$s–%2$s z %3$s prezývky</item>
+        <item quantity="few">Zobrazené %1$s–%2$s z %3$s prezývok</item>
+        <item quantity="many">Zobrazené %1$s–%2$s z %3$s prezývky</item>
+        <item quantity="other">Zobrazené %1$s–%2$s z %3$s prezývok</item>
+    </plurals>
     <string name="handles_community">Komunita</string>
     <string name="handles_name_under">Meno pod %1$s</string>
     <string name="handles_taken_down">Zablokovaný</string>

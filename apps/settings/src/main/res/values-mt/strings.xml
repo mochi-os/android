@@ -579,6 +579,15 @@
     <string name="handles_title">Ismijiet tal-utent</string>
     <string name="handles_take">Ħu isem</string>
     <string name="handles_empty">Ma ġie riżervat l-ebda isem tal-utent.</string>
+    <string name="handles_empty_search">L-ebda ismijiet tal-utent ma jaqblu mat-tiftixa tiegħek</string>
+    <string name="handles_search_placeholder">Fittex ismijiet tal-utent…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Qed juri %1$s–%2$s minn %3$s isem tal-utent</item>
+        <item quantity="two">Qed juri %1$s–%2$s minn %3$s ismijiet tal-utent</item>
+        <item quantity="few">Qed juri %1$s–%2$s minn %3$s ismijiet tal-utent</item>
+        <item quantity="many">Qed juri %1$s–%2$s minn %3$s isem tal-utent</item>
+        <item quantity="other">Qed juri %1$s–%2$s minn %3$s isem tal-utent</item>
+    </plurals>
     <string name="handles_community">Komunità</string>
     <string name="handles_name_under">Isem taħt %1$s</string>
     <string name="handles_taken_down">Oskurat</string>

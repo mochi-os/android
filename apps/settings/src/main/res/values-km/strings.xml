@@ -539,6 +539,11 @@
     <string name="handles_title">ឈ្មោះអ្នកប្រើ</string>
     <string name="handles_take">យកឈ្មោះមួយ</string>
     <string name="handles_empty">មិនទាន់មានឈ្មោះអ្នកប្រើដែលបានកក់ទេ។</string>
+    <string name="handles_empty_search">មិនមានឈ្មោះអ្នកប្រើត្រូវនឹងការស្វែងរករបស់អ្នក</string>
+    <string name="handles_search_placeholder">ស្វែងរកឈ្មោះអ្នកប្រើ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">កំពុងបង្ហាញ %1$s–%2$s នៃ %3$s ឈ្មោះអ្នកប្រើ</item>
+    </plurals>
     <string name="handles_community">សហគមន៍</string>
     <string name="handles_name_under">ឈ្មោះនៅក្រោម %1$s</string>
     <string name="handles_taken_down">បានដកការផ្សាយ</string>

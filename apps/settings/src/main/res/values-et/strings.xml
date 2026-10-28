@@ -549,6 +549,12 @@
     <string name="handles_title">Kasutajanimed</string>
     <string name="handles_take">Võtke nimi</string>
     <string name="handles_empty">Ühtegi kasutajanime pole broneeritud.</string>
+    <string name="handles_empty_search">Otsingule vastavaid kasutajanimesid pole</string>
+    <string name="handles_search_placeholder">Otsi kasutajanimesid…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Näidatakse %1$s–%2$s, kokku %3$s kasutajanimi</item>
+        <item quantity="other">Näidatakse %1$s–%2$s, kokku %3$s kasutajanime</item>
+    </plurals>
     <string name="handles_community">Kogukond</string>
     <string name="handles_name_under">Nimi %1$s all</string>
     <string name="handles_taken_down">Maha võetud</string>

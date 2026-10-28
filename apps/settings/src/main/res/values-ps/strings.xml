@@ -549,6 +549,12 @@
     <string name="handles_title">مستعار نومونه</string>
     <string name="handles_take">یو نوم واخلئ</string>
     <string name="handles_empty">هېڅ مستعار نوم نه دی ریزرو شوی.</string>
+    <string name="handles_empty_search">هیڅ مستعار نوم ستاسو د لټون سره سمون نه خوري</string>
+    <string name="handles_search_placeholder">مستعار نومونه وپلټئ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">د %3$s مستعار نوم څخه %1$s–%2$s ښودل کیږي</item>
+        <item quantity="other">د %3$s مستعار نومونو څخه %1$s–%2$s ښودل کیږي</item>
+    </plurals>
     <string name="handles_community">ټولنه</string>
     <string name="handles_name_under">د %1$s لاندې نوم</string>
     <string name="handles_taken_down">بند شوی</string>

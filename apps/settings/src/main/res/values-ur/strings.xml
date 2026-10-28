@@ -549,6 +549,12 @@
     <string name="handles_title">ہینڈلز</string>
     <string name="handles_take">نام لیں</string>
     <string name="handles_empty">کوئی ہینڈل ریزرو نہیں کیا گیا۔</string>
+    <string name="handles_empty_search">کوئی ہینڈل آپ کی تلاش سے میل نہیں کھاتا</string>
+    <string name="handles_search_placeholder">ہینڈلز تلاش کریں…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s ہینڈل میں سے %1$s–%2$s دکھائے جا رہے ہیں</item>
+        <item quantity="other">%3$s ہینڈلز میں سے %1$s–%2$s دکھائے جا رہے ہیں</item>
+    </plurals>
     <string name="handles_community">کمیونٹی</string>
     <string name="handles_name_under">%1$s کے تحت نام</string>
     <string name="handles_taken_down">معطل</string>

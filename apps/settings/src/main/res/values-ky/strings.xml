@@ -549,6 +549,12 @@
     <string name="handles_title">Колдонуучу аттары</string>
     <string name="handles_take">Ат алыңыз</string>
     <string name="handles_empty">Эч бир колдонуучу аты ээлеп коюлган эмес.</string>
+    <string name="handles_empty_search">Колдонуучу аттары издөөңүзгө дал келген жок</string>
+    <string name="handles_search_placeholder">Колдонуучу аттарын издөө…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s колдонуучу атынын %1$s–%2$s көрсөтүлүүдө</item>
+        <item quantity="other">%3$s колдонуучу атынын %1$s–%2$s көрсөтүлүүдө</item>
+    </plurals>
     <string name="handles_community">Коомчулук</string>
     <string name="handles_name_under">%1$s астындагы ат</string>
     <string name="handles_taken_down">Жарыялоодон алынган</string>

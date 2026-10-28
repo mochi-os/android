@@ -560,6 +560,14 @@
     <string name="handles_title">Uživatelská jména</string>
     <string name="handles_take">Vezměte si jméno</string>
     <string name="handles_empty">Nebyla rezervována žádná uživatelská jména.</string>
+    <string name="handles_empty_search">Žádná uživatelská jména neodpovídají vašemu vyhledávání</string>
+    <string name="handles_search_placeholder">Hledat uživatelská jména…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Zobrazeno %1$s–%2$s z %3$s uživatelského jména</item>
+        <item quantity="few">Zobrazeno %1$s–%2$s z %3$s uživatelských jmen</item>
+        <item quantity="many">Zobrazeno %1$s–%2$s z %3$s uživatelského jména</item>
+        <item quantity="other">Zobrazeno %1$s–%2$s z %3$s uživatelských jmen</item>
+    </plurals>
     <string name="handles_community">Komunita</string>
     <string name="handles_name_under">Jméno pod %1$s</string>
     <string name="handles_taken_down">Stažen</string>

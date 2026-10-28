@@ -561,6 +561,14 @@
     <string name="handles_title">Vartotojo vardai</string>
     <string name="handles_take">Užimkite vardą</string>
     <string name="handles_empty">Nerezervuotas nė vienas vartotojo vardas.</string>
+    <string name="handles_empty_search">Pagal jūsų paiešką vartotojo vardų nerasta</string>
+    <string name="handles_search_placeholder">Ieškoti vartotojo vardų…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Rodoma %1$s–%2$s iš %3$s vartotojo vardo</item>
+        <item quantity="few">Rodoma %1$s–%2$s iš %3$s vartotojo vardų</item>
+        <item quantity="many">Rodoma %1$s–%2$s iš %3$s vartotojo vardo</item>
+        <item quantity="other">Rodoma %1$s–%2$s iš %3$s vartotojo vardų</item>
+    </plurals>
     <string name="handles_community">Bendruomenė</string>
     <string name="handles_name_under">Vardas po %1$s</string>
     <string name="handles_taken_down">Nuimta</string>

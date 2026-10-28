@@ -569,6 +569,14 @@
     <string name="handles_title">Vzdevki</string>
     <string name="handles_take">Prevzemi ime</string>
     <string name="handles_empty">Noben vzdevek ni rezerviran.</string>
+    <string name="handles_empty_search">Noben vzdevek ne ustreza vašemu iskanju</string>
+    <string name="handles_search_placeholder">Iskanje vzdevkov…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Prikaz %1$s–%2$s od %3$s vzdevka</item>
+        <item quantity="two">Prikaz %1$s–%2$s od %3$s vzdevkov</item>
+        <item quantity="few">Prikaz %1$s–%2$s od %3$s vzdevkov</item>
+        <item quantity="other">Prikaz %1$s–%2$s od %3$s vzdevkov</item>
+    </plurals>
     <string name="handles_community">Skupnost</string>
     <string name="handles_name_under">Ime pod %1$s</string>
     <string name="handles_taken_down">Umaknjen</string>

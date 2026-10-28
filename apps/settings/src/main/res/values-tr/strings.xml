@@ -549,6 +549,12 @@
     <string name="handles_title">Rumuzlar</string>
     <string name="handles_take">Bir ad al</string>
     <string name="handles_empty">Hiç rumuz ayrılmamış.</string>
+    <string name="handles_empty_search">Aramanızla eşleşen rumuz yok</string>
+    <string name="handles_search_placeholder">Rumuzlarda ara…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s rumuzdan %1$s–%2$s arası gösteriliyor</item>
+        <item quantity="other">%3$s rumuzdan %1$s–%2$s arası gösteriliyor</item>
+    </plurals>
     <string name="handles_community">Topluluk</string>
     <string name="handles_name_under">%1$s altındaki ad</string>
     <string name="handles_taken_down">Yayından kaldırıldı</string>

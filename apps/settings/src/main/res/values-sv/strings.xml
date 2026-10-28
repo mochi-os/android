@@ -549,6 +549,12 @@
     <string name="handles_title">Alias</string>
     <string name="handles_take">Ta ett namn</string>
     <string name="handles_empty">Inga alias har reserverats.</string>
+    <string name="handles_empty_search">Inga alias matchar din sökning</string>
+    <string name="handles_search_placeholder">Sök alias…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Visar %1$s–%2$s av %3$s alias</item>
+        <item quantity="other">Visar %1$s–%2$s av %3$s alias</item>
+    </plurals>
     <string name="handles_community">Gemenskap</string>
     <string name="handles_name_under">Namn under %1$s</string>
     <string name="handles_taken_down">Nedtaget</string>

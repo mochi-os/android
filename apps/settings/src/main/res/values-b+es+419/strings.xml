@@ -529,6 +529,12 @@
     <string name="handles_title">Identificadores</string>
     <string name="handles_take">Toma un nombre</string>
     <string name="handles_empty">No se reservó ningún identificador.</string>
+    <string name="handles_empty_search">Ningún identificador coincide con tu búsqueda</string>
+    <string name="handles_search_placeholder">Buscar identificadores…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Mostrando %1$s–%2$s de %3$s identificador</item>
+        <item quantity="other">Mostrando %1$s–%2$s de %3$s identificadores</item>
+    </plurals>
     <string name="handles_community">Comunidad</string>
     <string name="handles_name_under">Nombre bajo %1$s</string>
     <string name="handles_taken_down">Retirada</string>

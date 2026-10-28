@@ -549,6 +549,12 @@
     <string name="handles_title">Пайдаланушы аттары</string>
     <string name="handles_take">Атау алыңыз</string>
     <string name="handles_empty">Ешбір пайдаланушы аты брондалмаған.</string>
+    <string name="handles_empty_search">Іздеуіңізге сәйкес пайдаланушы аттары жоқ</string>
+    <string name="handles_search_placeholder">Пайдаланушы аттарын іздеу…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s пайдаланушы атының %1$s–%2$s көрсетілуде</item>
+        <item quantity="other">%3$s пайдаланушы атының %1$s–%2$s көрсетілуде</item>
+    </plurals>
     <string name="handles_community">Қауымдастық</string>
     <string name="handles_name_under">%1$s астындағы атау</string>
     <string name="handles_taken_down">Жариялаудан алынған</string>

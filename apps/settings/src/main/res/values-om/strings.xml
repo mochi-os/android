@@ -549,6 +549,12 @@
     <string name="handles_title">Maqaalee fayyadamaa</string>
     <string name="handles_take">Maqaa fudhadhu</string>
     <string name="handles_empty">Maqaan fayyadamaa tokkollee dursee hin qabamne.</string>
+    <string name="handles_empty_search">Maqaaleen fayyadamaa barbaacha keetiin walsiman hin jiran</string>
+    <string name="handles_search_placeholder">Maqaalee fayyadamaa barbaadi…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%1$s–%2$s maqaa fayyadamaa %3$s keessaa agarsiisaa jira</item>
+        <item quantity="other">%1$s–%2$s maqaalee fayyadamaa %3$s keessaa agarsiisaa jira</item>
+    </plurals>
     <string name="handles_community">Hawaasa</string>
     <string name="handles_name_under">Maqaa %1$s jala</string>
     <string name="handles_taken_down">Buufame</string>

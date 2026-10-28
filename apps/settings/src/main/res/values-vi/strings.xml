@@ -540,6 +540,11 @@
     <string name="handles_title">Biệt danh</string>
     <string name="handles_take">Lấy một tên</string>
     <string name="handles_empty">Chưa có biệt danh nào được đặt trước.</string>
+    <string name="handles_empty_search">Không có biệt danh nào khớp với tìm kiếm của bạn</string>
+    <string name="handles_search_placeholder">Tìm kiếm biệt danh…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">Đang hiển thị %1$s–%2$s trên %3$s biệt danh</item>
+    </plurals>
     <string name="handles_community">Cộng đồng</string>
     <string name="handles_name_under">Tên dưới %1$s</string>
     <string name="handles_taken_down">Đã gỡ xuống</string>

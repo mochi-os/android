@@ -549,6 +549,12 @@
     <string name="handles_title">प्रयोगकर्ता नामहरू</string>
     <string name="handles_take">नाम लिनुहोस्</string>
     <string name="handles_empty">कुनै प्रयोगकर्ता नाम आरक्षित गरिएको छैन।</string>
+    <string name="handles_empty_search">तपाईंको खोजसँग कुनै प्रयोगकर्ता नाम मेल खाँदैन</string>
+    <string name="handles_search_placeholder">प्रयोगकर्ता नामहरू खोज्नुहोस्…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s प्रयोगकर्ता नाममध्ये %1$s–%2$s देखाउँदै</item>
+        <item quantity="other">%3$s प्रयोगकर्ता नामहरूमध्ये %1$s–%2$s देखाउँदै</item>
+    </plurals>
     <string name="handles_community">समुदाय</string>
     <string name="handles_name_under">%1$s अन्तर्गतको नाम</string>
     <string name="handles_taken_down">झिकिएको</string>

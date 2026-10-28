@@ -561,6 +561,14 @@
     <string name="handles_title">שמות משתמש</string>
     <string name="handles_take">קח שם</string>
     <string name="handles_empty">לא שוריינו שמות משתמש.</string>
+    <string name="handles_empty_search">לא נמצאו שמות משתמש תואמים לחיפוש שלך</string>
+    <string name="handles_search_placeholder">חפש שמות משתמש…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">מציג %1$s–%2$s מתוך %3$s שם משתמש</item>
+        <item quantity="two">מציג %1$s–%2$s מתוך %3$s שמות משתמש</item>
+        <item quantity="many">מציג %1$s–%2$s מתוך %3$s שמות משתמש</item>
+        <item quantity="other">מציג %1$s–%2$s מתוך %3$s שמות משתמש</item>
+    </plurals>
     <string name="handles_community">קהילה</string>
     <string name="handles_name_under">שם תחת %1$s</string>
     <string name="handles_taken_down">הורד</string>

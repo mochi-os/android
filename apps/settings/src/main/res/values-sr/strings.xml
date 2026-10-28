@@ -559,6 +559,13 @@
     <string name="handles_title">Надимци</string>
     <string name="handles_take">Узми име</string>
     <string name="handles_empty">Ниједан надимак није резервисан.</string>
+    <string name="handles_empty_search">Ниједан надимак не одговара вашој претрази</string>
+    <string name="handles_search_placeholder">Претражи надимке…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Приказ %1$s–%2$s од %3$s надимка</item>
+        <item quantity="few">Приказ %1$s–%2$s од %3$s надимка</item>
+        <item quantity="other">Приказ %1$s–%2$s од %3$s надимака</item>
+    </plurals>
     <string name="handles_community">Заједница</string>
     <string name="handles_name_under">Име под %1$s</string>
     <string name="handles_taken_down">Суспендован</string>

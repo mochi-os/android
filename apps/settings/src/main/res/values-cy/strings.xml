@@ -589,6 +589,16 @@
     <string name="handles_title">Enwau defnyddiwr</string>
     <string name="handles_take">Cymerwch enw</string>
     <string name="handles_empty">Nid oes unrhyw enwau defnyddiwr wedi\'u neilltuo.</string>
+    <string name="handles_empty_search">Nid oes unrhyw enwau defnyddiwr yn cyfateb i\'ch chwiliad</string>
+    <string name="handles_search_placeholder">Chwilio enwau defnyddiwr…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="zero">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="one">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="two">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="few">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="many">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="other">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+    </plurals>
     <string name="handles_community">Cymuned</string>
     <string name="handles_name_under">Enw o dan %1$s</string>
     <string name="handles_taken_down">Wedi\'i dynnu i lawr</string>

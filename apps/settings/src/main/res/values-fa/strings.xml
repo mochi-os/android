@@ -549,6 +549,12 @@
     <string name="handles_title">نام‌های کاربری</string>
     <string name="handles_take">یک نام بگیرید</string>
     <string name="handles_empty">هیچ نام کاربری رزرو نشده است.</string>
+    <string name="handles_empty_search">هیچ نام کاربری با جست‌وجوی شما مطابقت ندارد</string>
+    <string name="handles_search_placeholder">جست‌وجوی نام‌های کاربری…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">نمایش %1$s–%2$s از %3$s نام کاربری</item>
+        <item quantity="other">نمایش %1$s–%2$s از %3$s نام کاربری</item>
+    </plurals>
     <string name="handles_community">جامعه</string>
     <string name="handles_name_under">نام زیر %1$s</string>
     <string name="handles_taken_down">از دسترس خارج شده</string>

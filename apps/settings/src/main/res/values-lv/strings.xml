@@ -559,6 +559,13 @@
     <string name="handles_title">Lietotājvārdi</string>
     <string name="handles_take">Aizņemiet vārdu</string>
     <string name="handles_empty">Neviens lietotājvārds nav rezervēts.</string>
+    <string name="handles_empty_search">Meklējumam neatbilst neviens lietotājvārds</string>
+    <string name="handles_search_placeholder">Meklēt lietotājvārdus…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="zero">Tiek rādīti %1$s–%2$s no %3$s lietotājvārdiem</item>
+        <item quantity="one">Tiek rādīti %1$s–%2$s no %3$s lietotājvārda</item>
+        <item quantity="other">Tiek rādīti %1$s–%2$s no %3$s lietotājvārdiem</item>
+    </plurals>
     <string name="handles_community">Kopiena</string>
     <string name="handles_name_under">Vārds zem %1$s</string>
     <string name="handles_taken_down">Atslēgts</string>

@@ -593,6 +593,12 @@
     <string name="handles_title">Handles</string>
     <string name="handles_take">Take a name</string>
     <string name="handles_empty">No handles have been reserved.</string>
+    <string name="handles_empty_search">No handles match your search</string>
+    <string name="handles_search_placeholder">Search handles…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Showing %1$s–%2$s of %3$s handle</item>
+        <item quantity="other">Showing %1$s–%2$s of %3$s handles</item>
+    </plurals>
     <string name="handles_community">Community</string>
     <string name="handles_name_under">Name under %1$s</string>
     <string name="handles_taken_down">Taken down</string>

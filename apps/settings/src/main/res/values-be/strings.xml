@@ -569,6 +569,14 @@
     <string name="handles_title">Імёны карыстальніка</string>
     <string name="handles_take">Займіце імя</string>
     <string name="handles_empty">Ніводнага імя карыстальніка не зарэзервавана.</string>
+    <string name="handles_empty_search">Імёны карыстальніка, што адпавядаюць пошуку, не знойдзены</string>
+    <string name="handles_search_placeholder">Пошук імёнаў карыстальніка…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Паказана %1$s–%2$s з %3$s імя карыстальніка</item>
+        <item quantity="few">Паказана %1$s–%2$s з %3$s імёнаў карыстальніка</item>
+        <item quantity="many">Паказана %1$s–%2$s з %3$s імёнаў карыстальніка</item>
+        <item quantity="other">Паказана %1$s–%2$s з %3$s імя карыстальніка</item>
+    </plurals>
     <string name="handles_community">Супольнасць</string>
     <string name="handles_name_under">Імя пад %1$s</string>
     <string name="handles_taken_down">Зняты</string>

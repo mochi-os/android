@@ -549,6 +549,12 @@
     <string name="handles_title">Iziteketiso</string>
     <string name="handles_take">Thatha igama</string>
     <string name="handles_empty">Akukho siteketiso sibhukishiweyo.</string>
+    <string name="handles_empty_search">Akukho ziteketiso zifanela uphendliso lwakho</string>
+    <string name="handles_search_placeholder">Khangela iziteketiso…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Kuboniswa %1$s–%2$s kwisiteketiso esingu-%3$s</item>
+        <item quantity="other">Kuboniswa %1$s–%2$s kwiziteketiso ezingu-%3$s</item>
+    </plurals>
     <string name="handles_community">Uluntu</string>
     <string name="handles_name_under">Igama phantsi kwe-%1$s</string>
     <string name="handles_taken_down">Inqumanyisiwe</string>

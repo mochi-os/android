@@ -549,6 +549,12 @@
     <string name="handles_title">Ονόματα χρήστη</string>
     <string name="handles_take">Πάρτε ένα όνομα</string>
     <string name="handles_empty">Δεν έχουν δεσμευτεί ονόματα χρήστη.</string>
+    <string name="handles_empty_search">Κανένα όνομα χρήστη δεν ταιριάζει με την αναζήτησή σας</string>
+    <string name="handles_search_placeholder">Αναζήτηση ονομάτων χρήστη…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Εμφάνιση %1$s–%2$s από %3$s όνομα χρήστη</item>
+        <item quantity="other">Εμφάνιση %1$s–%2$s από %3$s ονόματα χρήστη</item>
+    </plurals>
     <string name="handles_community">Κοινότητα</string>
     <string name="handles_name_under">Όνομα κάτω από το %1$s</string>
     <string name="handles_taken_down">Αποσυρμένος</string>

@@ -549,6 +549,12 @@
     <string name="handles_title">Sunayen mai amfani</string>
     <string name="handles_take">Ɗauki suna</string>
     <string name="handles_empty">Ba a keɓe wani sunan mai amfani ba.</string>
+    <string name="handles_empty_search">Babu sunayen mai amfani da suka yi daidai da binciken ka</string>
+    <string name="handles_search_placeholder">Bincika sunayen mai amfani…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Ana nuna %1$s–%2$s na sunan mai amfani %3$s</item>
+        <item quantity="other">Ana nuna %1$s–%2$s na sunayen mai amfani %3$s</item>
+    </plurals>
     <string name="handles_community">Al\'umma</string>
     <string name="handles_name_under">Suna ƙarƙashin %1$s</string>
     <string name="handles_taken_down">An sauke</string>

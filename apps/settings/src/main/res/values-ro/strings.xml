@@ -559,6 +559,13 @@
     <string name="handles_title">Pseudonime</string>
     <string name="handles_take">Ia un nume</string>
     <string name="handles_empty">Nu a fost rezervat niciun pseudonim.</string>
+    <string name="handles_empty_search">Niciun pseudonim nu corespunde căutării</string>
+    <string name="handles_search_placeholder">Caută pseudonime…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Se afișează %1$s–%2$s din %3$s pseudonim</item>
+        <item quantity="few">Se afișează %1$s–%2$s din %3$s pseudonime</item>
+        <item quantity="other">Se afișează %1$s–%2$s din %3$s de pseudonime</item>
+    </plurals>
     <string name="handles_community">Comunitate</string>
     <string name="handles_name_under">Nume sub %1$s</string>
     <string name="handles_taken_down">Retras</string>

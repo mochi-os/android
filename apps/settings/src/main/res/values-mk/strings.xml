@@ -549,6 +549,12 @@
     <string name="handles_title">Кориснички имиња</string>
     <string name="handles_take">Земете име</string>
     <string name="handles_empty">Не се резервирани кориснички имиња.</string>
+    <string name="handles_empty_search">Ниту едно корисничко име не одговара на пребарувањето</string>
+    <string name="handles_search_placeholder">Пребарај кориснички имиња…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Се прикажуваат %1$s–%2$s од %3$s корисничко име</item>
+        <item quantity="other">Се прикажуваат %1$s–%2$s од %3$s кориснички имиња</item>
+    </plurals>
     <string name="handles_community">Заедница</string>
     <string name="handles_name_under">Име под %1$s</string>
     <string name="handles_taken_down">Симната</string>

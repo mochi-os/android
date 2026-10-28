@@ -550,6 +550,12 @@
     <string name="handles_title">Nomi utente</string>
     <string name="handles_take">Prendi un nome</string>
     <string name="handles_empty">Nessun nome utente è stato riservato.</string>
+    <string name="handles_empty_search">Nessun nome utente corrisponde alla tua ricerca</string>
+    <string name="handles_search_placeholder">Cerca nomi utente…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Visualizzazione di %1$s–%2$s su %3$s nome utente</item>
+        <item quantity="other">Visualizzazione di %1$s–%2$s su %3$s nomi utente</item>
+    </plurals>
     <string name="handles_community">Comunità</string>
     <string name="handles_name_under">Nome sotto %1$s</string>
     <string name="handles_taken_down">Oscurato</string>

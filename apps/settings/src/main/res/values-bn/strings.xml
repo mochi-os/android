@@ -549,6 +549,12 @@
     <string name="handles_title">হ্যান্ডেল</string>
     <string name="handles_take">একটি নাম নিন</string>
     <string name="handles_empty">কোনো হ্যান্ডেল রিজার্ভ করা হয়নি।</string>
+    <string name="handles_empty_search">আপনার অনুসন্ধানের সাথে কোনো হ্যান্ডেল মিলছে না</string>
+    <string name="handles_search_placeholder">হ্যান্ডেল অনুসন্ধান করুন…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$sটি হ্যান্ডেলের মধ্যে %1$s–%2$s দেখানো হচ্ছে</item>
+        <item quantity="other">%3$sটি হ্যান্ডেলের মধ্যে %1$s–%2$s দেখানো হচ্ছে</item>
+    </plurals>
     <string name="handles_community">কমিউনিটি</string>
     <string name="handles_name_under">%1$s-এর অধীনে নাম</string>
     <string name="handles_taken_down">নামিয়ে নেওয়া হয়েছে</string>

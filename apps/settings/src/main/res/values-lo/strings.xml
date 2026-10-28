@@ -539,6 +539,11 @@
     <string name="handles_title">ຊື່ຜູ້ໃຊ້</string>
     <string name="handles_take">ເອົາຊື່</string>
     <string name="handles_empty">ບໍ່ມີຊື່ຜູ້ໃຊ້ທີ່ຖືກຈອງ.</string>
+    <string name="handles_empty_search">ບໍ່ມີຊື່ຜູ້ໃຊ້ທີ່ກົງກັບການຄົ້ນຫາຂອງທ່ານ</string>
+    <string name="handles_search_placeholder">ຄົ້ນຫາຊື່ຜູ້ໃຊ້…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">ກຳລັງສະແດງ %1$s–%2$s ຈາກ %3$s ຊື່ຜູ້ໃຊ້</item>
+    </plurals>
     <string name="handles_community">ຊຸມຊົນ</string>
     <string name="handles_name_under">ຊື່ພາຍໃຕ້ %1$s</string>
     <string name="handles_taken_down">ຖືກຖອນອອກ</string>

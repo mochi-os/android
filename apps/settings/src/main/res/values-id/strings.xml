@@ -540,6 +540,11 @@
     <string name="handles_title">Nama pengguna</string>
     <string name="handles_take">Ambil nama</string>
     <string name="handles_empty">Belum ada nama pengguna yang diklaim.</string>
+    <string name="handles_empty_search">Tidak ada nama pengguna yang cocok dengan pencarian Anda</string>
+    <string name="handles_search_placeholder">Cari nama pengguna…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">Menampilkan %1$s–%2$s dari %3$s nama pengguna</item>
+    </plurals>
     <string name="handles_community">Komunitas</string>
     <string name="handles_name_under">Nama di bawah %1$s</string>
     <string name="handles_taken_down">Diturunkan</string>

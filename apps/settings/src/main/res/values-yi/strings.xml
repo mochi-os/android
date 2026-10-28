@@ -549,6 +549,12 @@
     <string name="handles_title">צונעמען</string>
     <string name="handles_take">נעמען אַ נאָמען</string>
     <string name="handles_empty">קיין צונעמען זענען נישט רעזערווירט געוואָרן.</string>
+    <string name="handles_empty_search">קיין צונעמען שטימען מיט אײַער זוך</string>
+    <string name="handles_search_placeholder">זוך צונעמען…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">ווײַזט %1$s–%2$s פֿון %3$s צונאָמען</item>
+        <item quantity="other">ווײַזט %1$s–%2$s פֿון %3$s צונעמען</item>
+    </plurals>
     <string name="handles_community">קהילה</string>
     <string name="handles_name_under">נאָמען אונטער %1$s</string>
     <string name="handles_taken_down">אָפּגעשטעלט</string>

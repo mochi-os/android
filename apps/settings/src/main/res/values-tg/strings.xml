@@ -548,6 +548,12 @@
     <string name="handles_title">Тахаллусҳо</string>
     <string name="handles_take">Гирифтани ном</string>
     <string name="handles_empty">Ягон тахаллус захира нашудааст.</string>
+    <string name="handles_empty_search">Ягон тахаллус ба ҷустуҷӯи шумо мувофиқ нест</string>
+    <string name="handles_search_placeholder">Ҷустуҷӯи тахаллусҳо…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%1$s–%2$s аз %3$s тахаллус нишон дода мешавад</item>
+        <item quantity="other">%1$s–%2$s аз %3$s тахаллус нишон дода мешавад</item>
+    </plurals>
     <string name="handles_community">Ҷомеа</string>
     <string name="handles_name_under">Ном зери %1$s</string>
     <string name="handles_taken_down">Боздошташуда</string>

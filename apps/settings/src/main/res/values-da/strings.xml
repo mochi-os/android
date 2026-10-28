@@ -549,6 +549,12 @@
     <string name="handles_title">Brugernavne</string>
     <string name="handles_take">Tag et navn</string>
     <string name="handles_empty">Ingen brugernavne er reserveret.</string>
+    <string name="handles_empty_search">Ingen brugernavne matcher din søgning</string>
+    <string name="handles_search_placeholder">Søg efter brugernavne…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Viser %1$s–%2$s af %3$s brugernavn</item>
+        <item quantity="other">Viser %1$s–%2$s af %3$s brugernavne</item>
+    </plurals>
     <string name="handles_community">Fællesskab</string>
     <string name="handles_name_under">Navn under %1$s</string>
     <string name="handles_taken_down">Taget ned</string>

@@ -548,6 +548,12 @@
     <string name="handles_title">Puruhára rérakuéra</string>
     <string name="handles_take">Ejagarra peteĩ téra</string>
     <string name="handles_empty">Ndaipóri puruhára réra oñereservava\'ekue.</string>
+    <string name="handles_empty_search">Ndaipóri puruhára réra ojuajúva ne ñehekáre</string>
+    <string name="handles_search_placeholder">Eheka puruhára rérakuéra…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Ojehechauka %1$s–%2$s %3$s puruhára réra apytégui</item>
+        <item quantity="other">Ojehechauka %1$s–%2$s %3$s puruhára réra apytégui</item>
+    </plurals>
     <string name="handles_community">Aty</string>
     <string name="handles_name_under">Téra %1$s guýpe</string>
     <string name="handles_taken_down">Oñemboguejýma</string>

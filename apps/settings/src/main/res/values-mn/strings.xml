@@ -549,6 +549,12 @@
     <string name="handles_title">Хэрэглэгчийн нэрс</string>
     <string name="handles_take">Нэр авах</string>
     <string name="handles_empty">Нөөцөлсөн хэрэглэгчийн нэр алга.</string>
+    <string name="handles_empty_search">Хайлтанд тохирох хэрэглэгчийн нэр алга</string>
+    <string name="handles_search_placeholder">Хэрэглэгчийн нэрс хайх…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s хэрэглэгчийн нэрээс %1$s–%2$s харуулж байна</item>
+        <item quantity="other">%3$s хэрэглэгчийн нэрээс %1$s–%2$s харуулж байна</item>
+    </plurals>
     <string name="handles_community">Нийгэмлэг</string>
     <string name="handles_name_under">%1$s-ийн доорх нэр</string>
     <string name="handles_taken_down">Буулгасан</string>

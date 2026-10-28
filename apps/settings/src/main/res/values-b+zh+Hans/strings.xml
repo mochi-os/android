@@ -540,6 +540,11 @@
     <string name="handles_title">用户识别符</string>
     <string name="handles_take">领取名称</string>
     <string name="handles_empty">尚未预留任何用户识别符。</string>
+    <string name="handles_empty_search">没有用户识别符与你的搜索匹配</string>
+    <string name="handles_search_placeholder">搜索用户识别符…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">显示 %3$s 个用户识别符中的 %1$s–%2$s</item>
+    </plurals>
     <string name="handles_community">社区</string>
     <string name="handles_name_under">%1$s 下的名称</string>
     <string name="handles_taken_down">已下架</string>

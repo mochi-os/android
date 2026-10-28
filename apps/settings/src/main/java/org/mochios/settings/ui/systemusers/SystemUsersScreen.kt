@@ -662,6 +662,7 @@ private fun SessionRow(
     }
 }
 
+/** A list's place and page size, with Previous and Next; status names the list's items. */
 @Composable
 internal fun PaginationBar(
     offset: Int,
@@ -670,6 +671,7 @@ internal fun PaginationBar(
     onLimit: (Int) -> Unit,
     onPrev: () -> Unit,
     onNext: () -> Unit,
+    status: Int = R.plurals.system_users_pagination_status,
 ) {
     val from = offset + 1
     val to = minOf(offset + limit, count)
@@ -678,7 +680,7 @@ internal fun PaginationBar(
         Text(
             // The noun agrees with the total, the number it sits beside.
             text = pluralStringResource(
-                R.plurals.system_users_pagination_status,
+                status,
                 count,
                 format.formatNumber(from),
                 format.formatNumber(to),

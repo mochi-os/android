@@ -549,6 +549,12 @@
     <string name="handles_title">Notandanöfn</string>
     <string name="handles_take">Taktu nafn</string>
     <string name="handles_empty">Engin notandanöfn hafa verið tekin frá.</string>
+    <string name="handles_empty_search">Engin notandanöfn passa við leitina þína</string>
+    <string name="handles_search_placeholder">Leita að notandanöfnum…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Sýni %1$s–%2$s af %3$s notandanafni</item>
+        <item quantity="other">Sýni %1$s–%2$s af %3$s notandanöfnum</item>
+    </plurals>
     <string name="handles_community">Samfélag</string>
     <string name="handles_name_under">Nafn undir %1$s</string>
     <string name="handles_taken_down">Tekinn niður</string>

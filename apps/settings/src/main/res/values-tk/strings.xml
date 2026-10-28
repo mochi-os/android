@@ -549,6 +549,12 @@
     <string name="handles_title">Lakamlar</string>
     <string name="handles_take">At almak</string>
     <string name="handles_empty">Hiç hili lakam bronlanmadyk.</string>
+    <string name="handles_empty_search">Gözlegiňize laýyk gelýän lakamlar ýok</string>
+    <string name="handles_search_placeholder">Lakamlary gözle…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s lakamdan %1$s–%2$s aralygy görkezilýär</item>
+        <item quantity="other">%3$s lakamdan %1$s–%2$s aralygy görkezilýär</item>
+    </plurals>
     <string name="handles_community">Jemgyýet</string>
     <string name="handles_name_under">%1$s aşagyndaky at</string>
     <string name="handles_taken_down">Togtadyldy</string>

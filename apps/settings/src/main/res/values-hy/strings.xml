@@ -549,6 +549,12 @@
     <string name="handles_title">Օգտանուններ</string>
     <string name="handles_take">Վերցրեք անուն</string>
     <string name="handles_empty">Ոչ մի օգտանուն ամրագրված չէ։</string>
+    <string name="handles_empty_search">Ձեր որոնմանը համապատասխանող օգտանուններ չկան</string>
+    <string name="handles_search_placeholder">Որոնել օգտանուններ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Ցուցադրվում է %1$s–%2$s՝ %3$s օգտանունից</item>
+        <item quantity="other">Ցուցադրվում է %1$s–%2$s՝ %3$s օգտանունից</item>
+    </plurals>
     <string name="handles_community">Համայնք</string>
     <string name="handles_name_under">Անուն %1$s-ի տակ</string>
     <string name="handles_taken_down">Հանված է հրապարակումից</string>

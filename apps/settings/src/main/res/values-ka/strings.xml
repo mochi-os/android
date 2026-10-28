@@ -549,6 +549,12 @@
     <string name="handles_title">მომხმარებლის სახელები</string>
     <string name="handles_take">აიღეთ სახელი</string>
     <string name="handles_empty">მომხმარებლის სახელები არ არის დაჯავშნილი.</string>
+    <string name="handles_empty_search">თქვენი ძიების შესაბამისი მომხმარებლის სახელები არ არის</string>
+    <string name="handles_search_placeholder">მომხმარებლის სახელების ძიება…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">ნაჩვენებია %1$s–%2$s %3$s მომხმარებლის სახელიდან</item>
+        <item quantity="other">ნაჩვენებია %1$s–%2$s %3$s მომხმარებლის სახელიდან</item>
+    </plurals>
     <string name="handles_community">საზოგადოება</string>
     <string name="handles_name_under">სახელი %1$s-ის ქვეშ</string>
     <string name="handles_taken_down">ჩამოხსნილია</string>

@@ -549,6 +549,12 @@
     <string name="handles_title">Gebruikersnamen</string>
     <string name="handles_take">Neem een naam</string>
     <string name="handles_empty">Er zijn geen gebruikersnamen gereserveerd.</string>
+    <string name="handles_empty_search">Geen gebruikersnamen komen overeen met je zoekopdracht</string>
+    <string name="handles_search_placeholder">Zoek gebruikersnamen…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Toont %1$s–%2$s van %3$s gebruikersnaam</item>
+        <item quantity="other">Toont %1$s–%2$s van %3$s gebruikersnamen</item>
+    </plurals>
     <string name="handles_community">Gemeenschap</string>
     <string name="handles_name_under">Naam onder %1$s</string>
     <string name="handles_taken_down">Offline gehaald</string>

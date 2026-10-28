@@ -550,6 +550,12 @@
     <string name="handles_title">Identifiants</string>
     <string name="handles_take">Prenez un nom</string>
     <string name="handles_empty">Aucun identifiant n\'a été réservé.</string>
+    <string name="handles_empty_search">Aucun identifiant ne correspond à votre recherche</string>
+    <string name="handles_search_placeholder">Rechercher des identifiants…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Affichage de %1$s–%2$s sur %3$s identifiant</item>
+        <item quantity="other">Affichage de %1$s–%2$s sur %3$s identifiants</item>
+    </plurals>
     <string name="handles_community">Communauté</string>
     <string name="handles_name_under">Nom sous %1$s</string>
     <string name="handles_taken_down">Mis hors ligne</string>

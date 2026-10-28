@@ -548,6 +548,12 @@
     <string name="handles_title">Identificadorkuna</string>
     <string name="handles_take">Huk sutita hap\'iy</string>
     <string name="handles_empty">Mana ima identificadorpas reservasqachu.</string>
+    <string name="handles_empty_search">Mana identificadorkuna maskasqaykiwan tupanchu</string>
+    <string name="handles_search_placeholder">Identificadorkunata maskay…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s identificadormanta %1$s–%2$s rikuchichkan</item>
+        <item quantity="other">%3$s identificadorkunamanta %1$s–%2$s rikuchichkan</item>
+    </plurals>
     <string name="handles_community">Ayllu</string>
     <string name="handles_name_under">%1$s uranpi suti</string>
     <string name="handles_taken_down">Hark\'asqa</string>

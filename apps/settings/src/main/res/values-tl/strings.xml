@@ -549,6 +549,12 @@
     <string name="handles_title">Mga palayaw</string>
     <string name="handles_take">Kumuha ng pangalan</string>
     <string name="handles_empty">Walang nakareserbang palayaw.</string>
+    <string name="handles_empty_search">Walang palayaw na tumutugma sa iyong paghahanap</string>
+    <string name="handles_search_placeholder">Maghanap ng palayaw…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Ipinapakita ang %1$s–%2$s sa %3$s na palayaw</item>
+        <item quantity="other">Ipinapakita ang %1$s–%2$s sa %3$s na palayaw</item>
+    </plurals>
     <string name="handles_community">Komunidad</string>
     <string name="handles_name_under">Pangalan sa ilalim ng %1$s</string>
     <string name="handles_taken_down">Ibinaba</string>

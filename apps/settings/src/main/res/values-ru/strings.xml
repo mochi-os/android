@@ -569,6 +569,14 @@
     <string name="handles_title">Псевдонимы</string>
     <string name="handles_take">Занять имя</string>
     <string name="handles_empty">Нет зарезервированных псевдонимов.</string>
+    <string name="handles_empty_search">Под ваш поиск не подходит ни один псевдоним</string>
+    <string name="handles_search_placeholder">Поиск псевдонимов…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Показано %1$s–%2$s из %3$s псевдонима</item>
+        <item quantity="few">Показано %1$s–%2$s из %3$s псевдонимов</item>
+        <item quantity="many">Показано %1$s–%2$s из %3$s псевдонимов</item>
+        <item quantity="other">Показано %1$s–%2$s из %3$s псевдонима</item>
+    </plurals>
     <string name="handles_community">Сообщество</string>
     <string name="handles_name_under">Имя под %1$s</string>
     <string name="handles_taken_down">Заблокирован</string>

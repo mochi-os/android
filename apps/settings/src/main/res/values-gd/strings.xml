@@ -569,6 +569,14 @@
     <string name="handles_title">Ainmean-cleachdaiche</string>
     <string name="handles_take">Gabh ainm</string>
     <string name="handles_empty">Cha deach ainm-cleachdaiche sam bith a ghlèidheadh.</string>
+    <string name="handles_empty_search">Chan eil ainmean-cleachdaiche a\' freagairt air do lorg</string>
+    <string name="handles_search_placeholder">Lorg ainmean-cleachdaiche…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">A\' sealltainn %1$s–%2$s à %3$s ainm-cleachdaiche</item>
+        <item quantity="two">A\' sealltainn %1$s–%2$s à %3$s ainm-cleachdaiche</item>
+        <item quantity="few">A\' sealltainn %1$s–%2$s à %3$s ainmean-cleachdaiche</item>
+        <item quantity="other">A\' sealltainn %1$s–%2$s à %3$s ainm-cleachdaiche</item>
+    </plurals>
     <string name="handles_community">Coimhearsnachd</string>
     <string name="handles_name_under">Ainm fo %1$s</string>
     <string name="handles_taken_down">Air a thoirt sìos</string>

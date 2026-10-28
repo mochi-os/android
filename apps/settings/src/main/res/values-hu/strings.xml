@@ -549,6 +549,12 @@
     <string name="handles_title">Felhasználónevek</string>
     <string name="handles_take">Foglaljon le egy nevet</string>
     <string name="handles_empty">Nincs lefoglalt felhasználónév.</string>
+    <string name="handles_empty_search">A keresésnek nincs egyező felhasználóneve</string>
+    <string name="handles_search_placeholder">Felhasználónevek keresése…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s felhasználónévből %1$s–%2$s megjelenítése</item>
+        <item quantity="other">%3$s felhasználónévből %1$s–%2$s megjelenítése</item>
+    </plurals>
     <string name="handles_community">Közösség</string>
     <string name="handles_name_under">Név ez alatt: %1$s</string>
     <string name="handles_taken_down">Levéve</string>

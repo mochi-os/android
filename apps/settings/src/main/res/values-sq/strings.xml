@@ -549,6 +549,12 @@
     <string name="handles_title">Pseudonimet</string>
     <string name="handles_take">Merr një emër</string>
     <string name="handles_empty">Nuk është rezervuar asnjë pseudonim.</string>
+    <string name="handles_empty_search">Asnjë pseudonim nuk përputhet me kërkimin tuaj</string>
+    <string name="handles_search_placeholder">Kërko pseudonime…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Duke shfaqur %1$s–%2$s nga %3$s pseudonim</item>
+        <item quantity="other">Duke shfaqur %1$s–%2$s nga %3$s pseudonime</item>
+    </plurals>
     <string name="handles_community">Komuniteti</string>
     <string name="handles_name_under">Emër nën %1$s</string>
     <string name="handles_taken_down">E pezulluar</string>

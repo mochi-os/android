@@ -551,6 +551,12 @@
     <string name="handles_title">Brukarnamn</string>
     <string name="handles_take">Ta eit namn</string>
     <string name="handles_empty">Ingen brukarnamn er reserverte.</string>
+    <string name="handles_empty_search">Ingen brukarnamn samsvarar med søket ditt</string>
+    <string name="handles_search_placeholder">Søk i brukarnamn…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Viser %1$s–%2$s av %3$s brukarnamn</item>
+        <item quantity="other">Viser %1$s–%2$s av %3$s brukarnamn</item>
+    </plurals>
     <string name="handles_community">Fellesskap</string>
     <string name="handles_name_under">Namn under %1$s</string>
     <string name="handles_taken_down">Teken ned</string>

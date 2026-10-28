@@ -549,6 +549,12 @@
     <string name="handles_title">Erabiltzaile-izenak</string>
     <string name="handles_take">Hartu izen bat</string>
     <string name="handles_empty">Ez da erabiltzaile-izenik erreserbatu.</string>
+    <string name="handles_empty_search">Ez dago zure bilaketarekin bat datorren erabiltzaile-izenik</string>
+    <string name="handles_search_placeholder">Bilatu erabiltzaile-izenak…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s erabiltzaile-izenetik %1$s–%2$s erakusten</item>
+        <item quantity="other">%3$s erabiltzaile-izenetik %1$s–%2$s erakusten</item>
+    </plurals>
     <string name="handles_community">Komunitatea</string>
     <string name="handles_name_under">%1$s azpiko izena</string>
     <string name="handles_taken_down">Erretiratua</string>
