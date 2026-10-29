@@ -35,6 +35,7 @@ import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.SavedRepository
 import org.mochios.feeds.ui.feed.FeedViewModel
 import org.mochios.feeds.ui.find.FindFeedsViewModel
+import org.mochios.feeds.ui.post.CreatePostScreen
 import org.mochios.feeds.ui.post.CreatePostViewModel
 import org.mochios.feeds.ui.post.PostDetailViewModel
 import org.mochios.feeds.ui.settings.FeedSettingsViewModel
@@ -293,6 +294,20 @@ class NetworksViewModelsTest {
         assertEquals("true", part(body, "sensitive"))
         assertEquals("en", part(body, "language"))
         assertEquals("""{"options":["Tea","Coffee"],"multiple":false,"duration":3600}""", part(body, "poll"))
+    }
+
+    @Test
+    fun `a new post's accounts are chosen last, below what it says and carries`() {
+        val model = CreatePostViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, context)
+        until("the publish list") { model.publish.value != null }
+        rule.setContent { CreatePostScreen(onNavigateBack = {}, viewModel = model) }
+        rule.waitForIdle()
+        // Where each sits in the form, scrolled out of view or not.
+        val top = { text: String -> rule.onNodeWithText(text).fetchSemanticsNode().positionInRoot.y }
+        val publish = top("Publish to")
+        for (above in listOf("Post content", "Poll")) {
+            assertTrue("Publish to, at $publish, sits below $above, at ${top(above)}", publish > top(above))
+        }
     }
 
     @Test

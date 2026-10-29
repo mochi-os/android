@@ -315,17 +315,6 @@ fun CreatePostScreen(
                 Spacer(modifier = Modifier.height(16.dp))
             }
 
-            publish?.let { state ->
-                if (state.accounts.isNotEmpty()) {
-                    PublishSwitches(
-                        accounts = state.accounts,
-                        chosen = publishChosen ?: state.publish,
-                        onToggle = { account, on -> viewModel.setPublishing(account, on) },
-                    )
-                    Spacer(modifier = Modifier.height(16.dp))
-                }
-            }
-
             // Body text area
             Text(
                 text = stringResource(R.string.feeds_post_content),
@@ -670,6 +659,17 @@ fun CreatePostScreen(
                 }
             }
 
+            // Where the post goes out, the last choice before posting.
+            publish?.let { state ->
+                if (state.accounts.isNotEmpty()) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                    PublishSwitches(
+                        accounts = state.accounts,
+                        chosen = publishChosen ?: state.publish,
+                        onToggle = { account, on -> viewModel.setPublishing(account, on) },
+                    )
+                }
+            }
         }
     }
 
