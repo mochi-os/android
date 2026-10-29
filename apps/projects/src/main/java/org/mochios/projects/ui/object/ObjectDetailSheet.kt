@@ -53,6 +53,8 @@ import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectDetails
+import org.mochios.projects.model.Activity
+import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -239,6 +241,15 @@ fun ObjectDetailSheet(
                     Spacer(modifier = Modifier.height(8.dp))
 
                     // Tab content
+                    // One avatar address per person on each tab: the routes name a
+                    // comment or activity row, so building each row's own address
+                    // fetched and cached the same picture once per row.
+                    val commentAvatars = remember(uiState.comments, projectId) {
+                        commentAvatars(uiState.comments, projectId)
+                    }
+                    val activityAvatars = remember(uiState.activity, projectId) {
+                        activityAvatars(uiState.activity, projectId)
+                    }
                     when (shown) {
                         TAB_PROPERTIES -> PropertiesTab(
                             obj = obj,
@@ -268,14 +279,14 @@ fun ObjectDetailSheet(
                             },
                             onSearchUsers = { query -> viewModel.searchUsers(query) },
                             avatarUrlBuilder = { comment ->
-                                "/projects/$projectId/-/comment/${comment.id}/asset/avatar"
+                                commentAvatars[comment.authorId] ?: commentAvatar(projectId, comment.id)
                             }
                         )
                         TAB_ACTIVITY -> ActivityTab(
                             activity = uiState.activity,
                             projectDetails = projectDetails,
                             avatarUrlBuilder = { entry ->
-                                "/projects/$projectId/-/activity/${entry.id}/asset/avatar"
+                                activityAvatars[entry.user] ?: activityAvatar(projectId, entry.id)
                             }
                         )
                         TAB_REQUESTS -> RequestsTab(
@@ -326,3 +337,23 @@ internal fun sheetTabs(merge: Boolean): List<Int> = buildList {
 /** Every comment in a thread, replies included, as the web's count has it. */
 internal fun commentCount(comments: List<Comment>): Int =
     comments.sumOf { comment -> 1 + commentCount(comment.children) }
+
+/** Where a commenter's avatar is served: under one of their comments on the item. */
+internal fun commentAvatar(projectId: String, commentId: String) =
+    "/projects/$projectId/-/comment/$commentId/asset/avatar"
+
+/** Where a person's avatar is served from the activity tab: under one of their rows. */
+internal fun activityAvatar(projectId: String, activityId: String) =
+    "/projects/$projectId/-/activity/$activityId/asset/avatar"
+
+/**
+ * One avatar address per commenter, from each one's first comment in reading
+ * order, replies included. Any comment on the item answers with its author's
+ * picture, so every listed comment may stand in.
+ */
+internal fun commentAvatars(comments: List<Comment>, projectId: String): Map<String, String> =
+    addressByAuthor(comments, { it.authorId }, { commentAvatar(projectId, it.id) }, { it.children })
+
+/** One avatar address per person across the activity tab, from their first row. */
+internal fun activityAvatars(activity: List<Activity>, projectId: String): Map<String, String> =
+    addressByAuthor(activity, { it.user }, { activityAvatar(projectId, it.id) })

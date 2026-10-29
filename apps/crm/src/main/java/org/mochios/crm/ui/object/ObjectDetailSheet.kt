@@ -51,6 +51,9 @@ import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmDetails
+import org.mochios.crm.model.Activity
+import org.mochios.android.ui.components.addressByAuthor
+import org.mochios.android.model.Comment
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -219,6 +222,15 @@ fun ObjectDetailSheet(
                     Spacer(modifier = Modifier.height(8.dp))
 
                     // Tab content
+                    // One avatar address per person on each tab: the routes name a
+                    // comment or activity row, so building each row's own address
+                    // fetched and cached the same picture once per row.
+                    val commentAvatars = remember(uiState.comments, crmId) {
+                        commentAvatars(uiState.comments, crmId)
+                    }
+                    val activityAvatars = remember(uiState.activity, crmId) {
+                        activityAvatars(uiState.activity, crmId)
+                    }
                     when (uiState.selectedTab) {
                         0 -> PropertiesTab(
                             obj = obj,
@@ -247,14 +259,14 @@ fun ObjectDetailSheet(
                             },
                             onSearchUsers = { query -> viewModel.searchUsers(query) },
                             avatarUrlBuilder = { comment ->
-                                "/crm/$crmId/-/comment/${comment.id}/asset/avatar"
+                                commentAvatars[comment.authorId] ?: commentAvatar(crmId, comment.id)
                             }
                         )
                         2 -> ActivityTab(
                             activity = uiState.activity,
                             crmDetails = crmDetails,
                             avatarUrlBuilder = { entry ->
-                                "/crm/$crmId/-/activity/${entry.id}/asset/avatar"
+                                activityAvatars[entry.user] ?: activityAvatar(crmId, entry.id)
                             }
                         )
                     }
@@ -278,3 +290,23 @@ fun ObjectDetailSheet(
         )
     }
 }
+
+/** Where a commenter's avatar is served: under one of their comments on the item. */
+internal fun commentAvatar(crmId: String, commentId: String) =
+    "/crm/$crmId/-/comment/$commentId/asset/avatar"
+
+/** Where a person's avatar is served from the activity tab: under one of their rows. */
+internal fun activityAvatar(crmId: String, activityId: String) =
+    "/crm/$crmId/-/activity/$activityId/asset/avatar"
+
+/**
+ * One avatar address per commenter, from each one's first comment in reading
+ * order, replies included. Any comment on the item answers with its author's
+ * picture, so every listed comment may stand in.
+ */
+internal fun commentAvatars(comments: List<Comment>, crmId: String): Map<String, String> =
+    addressByAuthor(comments, { it.authorId }, { commentAvatar(crmId, it.id) }, { it.children })
+
+/** One avatar address per person across the activity tab, from their first row. */
+internal fun activityAvatars(activity: List<Activity>, crmId: String): Map<String, String> =
+    addressByAuthor(activity, { it.user }, { activityAvatar(crmId, it.id) })
