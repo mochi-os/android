@@ -98,6 +98,8 @@ import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.threadRows
+import org.mochios.feeds.ui.component.commentAvatar
+import org.mochios.feeds.ui.component.commenterAvatars
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
@@ -548,6 +550,9 @@ private fun PostSourceSheet(
     val currentUserId by viewModel.currentUserId.collectAsState()
     val collapsed = rememberCollapsedComments()
     val rows = threadRows(post?.comments.orEmpty(), collapsed.ids)
+    val avatars = remember(post?.comments) {
+        commenterAvatars(post?.comments.orEmpty(), viewModel.feedId, viewModel.postId)
+    }
     val context = LocalContext.current
     val shareTitle = stringResource(MochiR.string.comment_share)
     Column {
@@ -591,7 +596,8 @@ private fun PostSourceSheet(
                 CommentItem(
                     comment = comment,
                     depth = row.depth,
-                    avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
+                    avatarUrl = avatars[comment.authorId]
+                        ?: commentAvatar(viewModel.feedId, viewModel.postId, comment.id),
                     feedId = viewModel.feedId,
                     isEditing = editingCommentId == comment.id,
                     editText = if (editingCommentId == comment.id) editCommentText else "",

@@ -133,6 +133,8 @@ import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.PostBadges
+import org.mochios.forums.ui.components.authorAvatars
+import org.mochios.forums.ui.components.postAvatar
 import org.mochios.forums.ui.components.PostLinkCard
 import org.mochios.forums.ui.components.SensitiveBadge
 import org.mochios.forums.ui.components.SensitiveCover
@@ -341,6 +343,11 @@ private fun ForumContent(
     val rssRevokedMessage = stringResource(MochiR.string.rss_revoked)
     var showUnsubscribeConfirm by remember { mutableStateOf(false) }
     val forumIdForCallbacks = uiState.forum.fingerprint.ifEmpty { uiState.forum.id }
+    // One avatar address per author across the listed posts, each under the
+    // forum its card names.
+    val avatars = remember(uiState.posts, forumIdForCallbacks) {
+        authorAvatars(uiState.posts, { it.forum.ifBlank { forumIdForCallbacks } })
+    }
 
     val snackbar = remember { SnackbarHostState() }
     val copier = rememberCopier()
@@ -724,6 +731,7 @@ private fun ForumContent(
                                     post = post,
                                     // Aggregate rows each carry their own forum.
                                     forumId = post.forum.ifBlank { forumIdForCallbacks },
+                                    avatars = avatars,
                                     isSaved = savedIds.contains(post.id),
                                     showForumName = isAll,
                                     onClick = {
@@ -829,6 +837,8 @@ private fun shareLink(context: Context, link: String, title: String) {
 private fun PostCard(
     post: Post,
     forumId: String,
+    // One avatar address per author across the list (authorAvatars).
+    avatars: Map<String, String>,
     isSaved: Boolean,
     onClick: () -> Unit,
     onToggleSave: () -> Unit,
@@ -976,7 +986,7 @@ private fun PostCard(
                         name = authorName,
                         // Served per post so remote authors resolve without a
                         // separate member lookup; falls back to seeded initials.
-                        src = "/forums/$forumId/-/${post.id}/asset/avatar",
+                        src = avatars[post.member] ?: postAvatar(forumId, post.id),
                         seed = post.member.ifEmpty { authorName },
                         size = 20.dp,
                     )

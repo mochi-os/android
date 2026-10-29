@@ -177,6 +177,8 @@ import org.mochios.feeds.ui.component.QuoteCard
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.ui.component.countComments
+import org.mochios.feeds.ui.component.commentAvatar
+import org.mochios.feeds.ui.component.timelineAvatars
 import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.rssDisplayTitle
 import org.mochios.feeds.ui.component.stripHtml
@@ -838,6 +840,12 @@ fun FeedScreen(
                                     // FlipBook overlays the book-fold only
                                     // during a transition and draws nothing at
                                     // rest, so the live page shows through.
+                                    // One avatar address per commenter across the
+                                    // loaded posts, so the image cache holds each
+                                    // commenter's picture once.
+                                    val avatars = remember(posts) {
+                                        timelineAvatars(posts, viewModel.feedId)
+                                    }
                                     val renderPost: @Composable (Int) -> Unit = { index ->
                                         val post = posts[index]
                                         // Prefer the fingerprint, but fall back to the feed's
@@ -862,6 +870,7 @@ fun FeedScreen(
                                         PostCard(
                                             post = post,
                                             fallbackFeedId = viewModel.feedId,
+                                            avatars = avatars,
                                             upgradedRssImage = postImages[post.id],
                                             isSaved = savedIds.contains(post.id),
                                             onClick = {
@@ -1545,6 +1554,8 @@ internal fun GalleryTile(
 private fun PostCard(
     post: Post,
     fallbackFeedId: String,
+    // One avatar address per commenter across the timeline (timelineAvatars).
+    avatars: Map<String, String> = emptyMap(),
     // Article og:image resolved by the ViewModel, upgrading the RSS item's
     // (often tiny) thumbnail. Null = not resolved yet, "" = nothing better.
     upgradedRssImage: String?,
@@ -1838,6 +1849,7 @@ private fun PostCard(
             post = post,
             fallbackFeedId = fallbackFeedId,
             onViewComments = onViewComments,
+            avatars = avatars,
         )
 
         // Bottom action bar: react, tag, comment, save. Lives outside the
@@ -1882,6 +1894,7 @@ private fun PostCard(
                 if (id != null) {
                     LightboxCommentsPreview(
                         post = post,
+                        avatars = avatars,
                         attachmentId = id,
                         commentFeedId = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { fallbackFeedId },
                         onViewPost = {
@@ -1928,6 +1941,7 @@ internal fun PostCommentsPreview(
     post: Post,
     fallbackFeedId: String,
     onViewComments: () -> Unit,
+    avatars: Map<String, String> = emptyMap(),
 ) {
     if (post.comments.isEmpty()) return
 
@@ -1951,6 +1965,7 @@ internal fun PostCommentsPreview(
                 comment = comment,
                 commentFeedId = commentFeedId,
                 postId = post.id,
+                avatars = avatars,
                 modifier = Modifier
                     .fillMaxWidth()
                     .noRippleClickable(onViewComments),
@@ -2204,6 +2219,7 @@ private fun CommentPreviewRow(
     comment: Comment,
     commentFeedId: String,
     postId: String,
+    avatars: Map<String, String>,
     modifier: Modifier = Modifier,
 ) {
     val anonymous = stringResource(R.string.feeds_anonymous)
@@ -2211,7 +2227,7 @@ private fun CommentPreviewRow(
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
         EntityAvatar(
             name = displayName,
-            src = "/feeds/$commentFeedId/-/$postId/${comment.id}/asset/avatar",
+            src = avatars[comment.authorId] ?: commentAvatar(commentFeedId, postId, comment.id),
             seed = comment.authorId.ifEmpty { displayName },
             size = 20.dp,
         )
@@ -2258,6 +2274,7 @@ private fun CommentPreviewRow(
 @Composable
 private fun LightboxCommentsPreview(
     post: Post,
+    avatars: Map<String, String>,
     attachmentId: String,
     commentFeedId: String,
     onViewPost: () -> Unit,
@@ -2281,6 +2298,7 @@ private fun LightboxCommentsPreview(
                 comment = comment,
                 commentFeedId = commentFeedId,
                 postId = post.id,
+                avatars = avatars,
                 modifier = Modifier.fillMaxWidth().noRippleClickable(onViewPost),
             )
         }

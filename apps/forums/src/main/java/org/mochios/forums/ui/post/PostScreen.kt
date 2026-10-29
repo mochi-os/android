@@ -144,6 +144,9 @@ import org.mochios.forums.model.Post
 import org.mochios.forums.model.Tag
 import org.mochios.forums.model.countComments
 import org.mochios.forums.ui.components.PostBadges
+import org.mochios.forums.ui.components.authorAvatars
+import org.mochios.forums.ui.components.commentAvatar
+import org.mochios.forums.ui.components.postAvatar
 import org.mochios.forums.ui.components.Crossposts
 import org.mochios.forums.ui.components.PostLinkCard
 import org.mochios.forums.ui.components.SensitiveBadge
@@ -249,10 +252,16 @@ fun PostScreen(
             shareLink(context, viewModel.commentLink(comment.id), uiState.post.title.ifBlank { shareTitle })
         },
     )
+    // One avatar address per author across the post and its whole thread,
+    // shared by the thread and the lightbox's comments panel.
+    val avatars = remember(uiState.post, uiState.comments) {
+        authorAvatars(listOf(uiState.post), { viewModel.forumId }, uiState.comments, viewModel.forumId)
+    }
     val attachmentPanel: @Composable (Attachment) -> Unit = { att ->
         AttachmentComments(
             attachmentId = att.id,
             comments = uiState.comments,
+            avatars = avatars,
             postAuthor = uiState.post.member,
             forumId = viewModel.forumId,
             currentIdentity = uiState.identity,
@@ -475,6 +484,7 @@ fun PostScreen(
                             commentsItems(
                                 rows = forumRows(focused?.let { listOf(it) } ?: uiState.comments, collapsed),
                                 forumId = viewModel.forumId,
+                                avatars = avatars,
                                 currentIdentity = uiState.identity,
                                 canModerate = uiState.canModerate,
                                 actions = commentActions,
@@ -956,7 +966,7 @@ private fun PostHeader(
             }
             EntityAvatar(
                 name = authorName,
-                src = "/forums/$forumId/-/${post.id}/asset/avatar",
+                src = postAvatar(forumId, post.id),
                 seed = post.member.ifEmpty { authorName },
                 size = 24.dp,
             )
@@ -1072,6 +1082,7 @@ private fun forumRows(comments: List<ForumComment>, collapsed: CollapsedComments
 private fun LazyListScope.commentsItems(
     rows: List<CommentRow<ForumComment>>,
     forumId: String,
+    avatars: Map<String, String>,
     currentIdentity: String,
     canModerate: Boolean,
     actions: CommentActions,
@@ -1088,6 +1099,7 @@ private fun LazyListScope.commentsItems(
                 comment = c,
                 depth = row.depth,
                 forumId = forumId,
+                avatars = avatars,
                 canEdit = canEditThis,
                 canModerate = canModerate,
                 isAuthor = isAuthor,
@@ -1123,6 +1135,7 @@ private fun LazyListScope.commentsItems(
 private fun AttachmentComments(
     attachmentId: String,
     comments: List<ForumComment>,
+    avatars: Map<String, String>,
     postAuthor: String,
     forumId: String,
     currentIdentity: String,
@@ -1181,6 +1194,7 @@ private fun AttachmentComments(
             commentsItems(
                 rows = forumRows(shown, collapsed),
                 forumId = forumId,
+                avatars = avatars,
                 currentIdentity = currentIdentity,
                 canModerate = canModerate,
                 actions = panelActions,
@@ -1249,6 +1263,8 @@ private fun CommentCard(
     comment: ForumComment,
     depth: Int,
     forumId: String,
+    // One avatar address per author across the thread (authorAvatars).
+    avatars: Map<String, String>,
     canEdit: Boolean,
     canModerate: Boolean,
     isAuthor: Boolean,
@@ -1281,7 +1297,7 @@ private fun CommentCard(
         edited = comment.edited,
         depth = depth,
         seed = comment.member,
-        avatarUrl = "/forums/$forumId/-/${comment.post}/${comment.id}/asset/avatar",
+        avatarUrl = avatars[comment.member] ?: commentAvatar(forumId, comment.post, comment.id),
         attachments = comment.attachments,
         attachmentUrl = { att -> att.url ?: "/forums/$forumId/-/attachments/${att.id}" },
         attachmentThumbnailUrl = { att ->

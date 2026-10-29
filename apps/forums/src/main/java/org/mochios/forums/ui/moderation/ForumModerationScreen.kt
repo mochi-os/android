@@ -88,6 +88,9 @@ import org.mochios.forums.model.humanise
 import org.mochios.forums.model.moderationAction
 import org.mochios.forums.model.moderationReason
 import org.mochios.forums.model.moderationTarget
+import org.mochios.forums.ui.components.authorAvatars
+import org.mochios.forums.ui.components.commentAvatar
+import org.mochios.forums.ui.components.postAvatar
 
 /** A moderation tab as rendered: its label, icon, and the state it selects. */
 private data class ModerationTabEntry(
@@ -230,6 +233,12 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
         )
         return
     }
+    // One avatar address per author across the queue. Every row in it waits
+    // for approval, and the route answers for such a row by who asks, not by
+    // which of the author's rows it is, so any of them may stand in.
+    val avatars = remember(queue) {
+        authorAvatars(queue.posts, { viewModel.forumId }, queue.comments, viewModel.forumId, standIn = { true })
+    }
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
@@ -256,7 +265,7 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
                             name = post.name,
                             member = post.member,
                             created = post.created,
-                            avatarUrl = "/forums/${viewModel.forumId}/-/${post.id}/asset/avatar",
+                            avatarUrl = avatars[post.member] ?: postAvatar(viewModel.forumId, post.id),
                         )
                         Spacer(Modifier.height(8.dp))
                         QueueActions(
@@ -301,8 +310,8 @@ private fun QueueTab(uiState: ModerationUiState, viewModel: ModerationViewModel)
                             member = c.member,
                             created = c.created,
                             // Comment avatars hang off the comment, not the post.
-                            avatarUrl =
-                                "/forums/${viewModel.forumId}/-/${c.post}/${c.id}/asset/avatar",
+                            avatarUrl = avatars[c.member]
+                                ?: commentAvatar(viewModel.forumId, c.post, c.id),
                         )
                         Spacer(Modifier.height(8.dp))
                         QueueActions(

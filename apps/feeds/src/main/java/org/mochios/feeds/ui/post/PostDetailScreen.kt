@@ -131,6 +131,8 @@ import org.mochios.feeds.ui.component.hasBadges
 import org.mochios.feeds.ui.component.repliesElsewhere
 import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.threadRows
+import org.mochios.feeds.ui.component.commentAvatar
+import org.mochios.feeds.ui.component.commenterAvatars
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.android.R as MochiR
@@ -437,6 +439,9 @@ internal fun PostDetailContent(
                 findInThread(currentPost.comments, id, { it.id }, { it.children })
             }
             val rows = threadRows(focused?.let { listOf(it) } ?: currentPost.comments, collapsed.ids)
+            val avatars = remember(currentPost.comments) {
+                commenterAvatars(currentPost.comments, viewModel.feedId, viewModel.postId)
+            }
             // Land on the comment rather than the top of the post: the
             // post, then the comments heading, then the way back.
             LaunchedEffect(focused?.id) {
@@ -505,7 +510,8 @@ internal fun PostDetailContent(
                         CommentItem(
                             comment = comment,
                             depth = row.depth,
-                            avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
+                            avatarUrl = avatars[comment.authorId]
+                                ?: commentAvatar(viewModel.feedId, viewModel.postId, comment.id),
                             feedId = viewModel.feedId,
                             isEditing = editingCommentId == comment.id,
                             editText = if (editingCommentId == comment.id) editCommentText else "",

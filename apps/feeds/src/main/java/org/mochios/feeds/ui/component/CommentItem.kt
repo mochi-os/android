@@ -35,6 +35,8 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
+import org.mochios.android.ui.components.addressByAuthor
+import org.mochios.feeds.model.Post
 import org.mochios.android.ui.components.ReactionBar
 
 /**
@@ -180,6 +182,40 @@ private fun CommenterMenu(author: String, onModerate: (String) -> Unit) {
  */
 internal fun threadRows(comments: List<Comment>, collapsed: Set<String> = emptySet()) =
     org.mochios.android.ui.components.commentRows(comments, { it.id }, { it.children }, collapsed)
+
+/** Where a commenter's avatar is served: under one of their comments. */
+internal fun commentAvatar(feedId: String, postId: String, commentId: String) =
+    "/feeds/$feedId/-/$postId/$commentId/asset/avatar"
+
+/**
+ * One avatar address per commenter, from each one's first comment in
+ * [comments] on post [postId] of feed [feedId]. The route names a comment
+ * rather than the person, so building each comment's own address had the
+ * image cache fetch and store the same picture once per comment. Pass [found]
+ * to carry one map across several posts. Every listed comment may stand in:
+ * the route answers for any comment in a feed the viewer can see.
+ */
+internal fun commenterAvatars(
+    comments: List<Comment>,
+    feedId: String,
+    postId: String,
+    found: MutableMap<String, String> = mutableMapOf(),
+): Map<String, String> = addressByAuthor(
+    comments, { it.authorId }, { commentAvatar(feedId, postId, it.id) }, { it.children }, found,
+)
+
+/**
+ * [commenterAvatars] across a timeline, each post's comments addressed under
+ * its own feed, or [fallbackFeedId] where the post names none.
+ */
+internal fun timelineAvatars(posts: List<Post>, fallbackFeedId: String): Map<String, String> {
+    val found = mutableMapOf<String, String>()
+    for (post in posts) {
+        val feedId = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { fallbackFeedId }
+        commenterAvatars(post.comments, feedId, post.id, found)
+    }
+    return found
+}
 
 /**
  * Plain text from a comment body's limited HTML, to seed the edit field.

@@ -416,6 +416,33 @@ fun <T> findInThread(roots: List<T>, target: String, id: (T) -> String, children
 }
 
 /**
+ * One asset address per author: [address] of the first row each author has in
+ * [roots], in reading order with every reply. An author's avatar route names a
+ * row rather than the person, so a list that built each row's own address had
+ * the image cache fetch and store the same picture once per row. [address]
+ * answers null for a row that may not stand in for its author, one the server
+ * shows to some viewers only; seed [found] to put a row first, as a post goes
+ * before its comments.
+ */
+fun <T> addressByAuthor(
+    roots: List<T>,
+    author: (T) -> String,
+    address: (T) -> String?,
+    children: (T) -> List<T> = { emptyList() },
+    found: MutableMap<String, String> = mutableMapOf(),
+): Map<String, String> {
+    fun walk(rows: List<T>) {
+        for (row in rows) {
+            val who = author(row)
+            if (who.isNotEmpty() && who !in found) address(row)?.let { found[who] = it }
+            walk(children(row))
+        }
+    }
+    walk(roots)
+    return found
+}
+
+/**
  * Above a thread opened on one comment: back to the whole discussion.
  */
 @Composable

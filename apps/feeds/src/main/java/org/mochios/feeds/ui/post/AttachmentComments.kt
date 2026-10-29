@@ -35,6 +35,8 @@ import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.threadRows
+import org.mochios.feeds.ui.component.commentAvatar
+import org.mochios.feeds.ui.component.commenterAvatars
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
@@ -72,6 +74,9 @@ internal fun AttachmentComments(
     val anchored = post.comments.filter { it.anchor == attachmentId }
     val others = post.comments.size - anchored.size
     val shown = threadRows(if (showAll) post.comments else anchored, collapsed.ids)
+    val avatars = remember(post.comments) {
+        commenterAvatars(post.comments, viewModel.feedId, viewModel.postId)
+    }
 
     Column(modifier = Modifier.fillMaxWidth()) {
         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
@@ -91,7 +96,8 @@ internal fun AttachmentComments(
                 CommentItem(
                     comment = comment,
                     depth = row.depth,
-                    avatarUrl = "/feeds/${viewModel.feedId}/-/${viewModel.postId}/${comment.id}/asset/avatar",
+                    avatarUrl = avatars[comment.authorId]
+                        ?: commentAvatar(viewModel.feedId, viewModel.postId, comment.id),
                     feedId = viewModel.feedId,
                     isEditing = editingCommentId == comment.id,
                     editText = if (editingCommentId == comment.id) editCommentText else "",
