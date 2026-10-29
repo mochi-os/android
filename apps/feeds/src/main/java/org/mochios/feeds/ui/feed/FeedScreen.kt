@@ -127,7 +127,6 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.AttachmentCaptionScrim
-import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
@@ -141,7 +140,6 @@ import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MediaGrid
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -152,7 +150,6 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
@@ -183,11 +180,6 @@ import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.post.PostTagsButton
-import org.mochios.feeds.ui.post.feedsCommentAttachments
-import org.mochios.feeds.ui.post.feedsComposerBanner
-import org.mochios.feeds.ui.post.feedsReplyBanner
-import org.mochios.feeds.ui.post.replyFromBanner
-import org.mochios.feeds.ui.component.repliesElsewhere
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
 
@@ -312,15 +304,9 @@ fun FeedScreen(
     val savedIds by viewModel.savedIds.collectAsState()
     val postImages by viewModel.postImages.collectAsState()
     val hosted by viewModel.hosted.collectAsState()
-    val replyFrom by viewModel.replyFrom.collectAsState()
     val voting by viewModel.voting.collectAsState()
     LaunchedEffect(posts) { viewModel.loadHostedIfNeeded(posts) }
     val newPostsCount by viewModel.newPostsCount.collectAsState()
-    val commentTarget by viewModel.commentTarget.collectAsState()
-    val commentDraft by viewModel.commentDraft.collectAsState()
-    val commentAttachments by viewModel.commentAttachments.collectAsState()
-    val isSendingComment by viewModel.isSendingComment.collectAsState()
-    val commentUpload by viewModel.commentUpload.collectAsState()
 
     var showOverflowMenu by remember { mutableStateOf(false) }
     // Whether the overflow menu is showing its nested "RSS feed" submenu.
@@ -872,12 +858,14 @@ fun FeedScreen(
                                                     false
                                                 )
                                             },
-                                            // The comment icon opens the composer
-                                            // bottom sheet to add a comment.
+                                            // The comment icon opens the post at its
+                                            // comments, where the comment box is.
                                             onComments = {
-                                                viewModel.openCommentComposer(
+                                                onNavigateToPost(
                                                     routeFeedId,
-                                                    post.id
+                                                    post.id,
+                                                    sourceUrl,
+                                                    true
                                                 )
                                             },
                                             // "N more comments" opens the post with
@@ -995,62 +983,6 @@ fun FeedScreen(
                 dismissEnabled = !isUnsubscribing,
             )
         }
-
-        commentTarget?.let { target ->
-            MochiBottomSheet(
-                onDismissRequest = { viewModel.closeCommentComposer() },
-                sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
-            ) {
-                MochiSheetHeader(
-                    title = if (target.parentId != null) {
-                        stringResource(MochiR.string.comment_reply)
-                    } else {
-                        stringResource(R.string.feeds_comments)
-                    },
-                )
-                Column(modifier = Modifier.fillMaxWidth()) {
-                    // Chat-style reply preview: who/what you're replying to.
-                    if (target.parentId != null) {
-                        CommentReplyPreview(
-                            name = target.parentName.orEmpty(),
-                            body = target.parentBody.orEmpty(),
-                            onCancel = { viewModel.closeCommentComposer() },
-                        )
-                    }
-                    // Reuse the post detail's comment input (text + attach + send,
-                    // with @-mentions). The reply context is shown above, so the
-                    // input bar's own indicator is suppressed.
-                    ComposeBar(
-                        showDivider = false,
-                        value = commentDraft,
-                        onValueChange = { value -> viewModel.setCommentDraft(value) },
-                        onSend = { viewModel.sendComment() },
-                        isSending = isSendingComment,
-                        upload = commentUpload,
-                        sendLabel = stringResource(R.string.feeds_send),
-                        attachments = feedsCommentAttachments(
-                            attachments = commentAttachments,
-                            onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
-                            onRemove = { uri -> viewModel.removeCommentAttachment(uri) },
-                            resolveFileName = viewModel::fileName,
-                        ),
-                        // A comment needs a body; attachments alone will not do.
-                        requireText = true,
-                        onSearchMentions = { query -> viewModel.searchMembers(query) },
-                        windowInsets = ComposeBarDefaults.NoWindowInsets,
-                        banner = feedsComposerBanner(
-                            replyFromBanner(
-                                accounts = hosted,
-                                shown = posts.any { it.id == target.postId && repliesElsewhere(it) },
-                                chosen = replyFrom,
-                                onChoose = { viewModel.setReplyFrom(it) },
-                            ),
-                            feedsReplyBanner(null, { viewModel.closeCommentComposer() }),
-                        ),
-                    )
-                }
-            }
-        }
     }
 }
 
@@ -1074,57 +1006,6 @@ internal fun TopEffect(
         if (top.value && !refreshing) {
             top.value = false
             pagerState.requestScrollToPage(0)
-        }
-    }
-}
-
-/**
- * A chat-style reply preview shown above the comment composer: an accent bar,
- * the author being replied to, and a one-line snippet of their comment.
- */
-@Composable
-private fun CommentReplyPreview(
-    name: String,
-    body: String,
-    onCancel: () -> Unit,
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 16.dp, end = 4.dp, top = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
-    ) {
-        Box(
-            modifier = Modifier
-                .width(3.dp)
-                .height(36.dp)
-                .clip(RoundedCornerShape(2.dp))
-                .background(MaterialTheme.colorScheme.primary)
-        )
-        Spacer(modifier = Modifier.width(8.dp))
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = name,
-                style = MaterialTheme.typography.labelMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.primary,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-            Text(
-                text = body,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-            )
-        }
-        MochiIconButton(onClick = onCancel) {
-            Icon(
-                Icons.Default.Close,
-                contentDescription = stringResource(R.string.feeds_cancel_reply),
-                modifier = Modifier.size(18.dp),
-            )
         }
     }
 }

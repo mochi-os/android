@@ -57,6 +57,9 @@ fun WikiCommentThread(
     onEdit: ((commentId: String, body: String) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
     depth: Int = 0,
+    // The comment replied to, which draws [replyBox] under itself.
+    replyId: String? = null,
+    replyBox: @Composable () -> Unit = {},
 ) {
     val format = LocalFormat.current
     val wiki = LocalWikiContext.current
@@ -259,6 +262,10 @@ fun WikiCommentThread(
                         },
                         modifier = Modifier.padding(top = 2.dp),
                     )
+                    if (replyId == comment.id) {
+                        Spacer(Modifier.height(4.dp))
+                        replyBox()
+                    }
                 }
             }
 
@@ -273,6 +280,8 @@ fun WikiCommentThread(
                         onEdit = onEdit,
                         onDelete = onDelete,
                         depth = depth + 1,
+                        replyId = replyId,
+                        replyBox = replyBox,
                     )
                 }
             }

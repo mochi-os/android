@@ -29,15 +29,18 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.pluralStringResource
@@ -103,6 +106,8 @@ fun CommentItem(
     highlighted: Boolean = false,
     // A short mark after the name, such as the post author's in a forum.
     badge: String? = null,
+    // The reply box, drawn under the comment while it is the one replied to.
+    reply: (@Composable () -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
     // Replies are indented and marked with a coloured vertical bar so nested
@@ -284,6 +289,10 @@ fun CommentItem(
                 Spacer(modifier = Modifier.height(4.dp))
                 Row(verticalAlignment = Alignment.CenterVertically, content = actions)
             }
+            if (reply != null) {
+                Spacer(modifier = Modifier.height(4.dp))
+                reply()
+            }
         }
     }
 }
@@ -454,4 +463,17 @@ fun CommentEditor(
             }
         }
     }
+}
+
+/**
+ * A focus requester that asks for focus once its field is on screen, so a
+ * reply box opened under a comment is ready to type in.
+ */
+@Composable
+fun rememberAutoFocus(): FocusRequester {
+    val focus = remember { FocusRequester() }
+    LaunchedEffect(focus) {
+        focus.requestFocus()
+    }
+    return focus
 }
