@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.api.ApiException
@@ -163,6 +164,11 @@ class AppBootstrapViewModel @Inject constructor(
             adopt(snap)
             bootstrap()
         }
+    }
+
+    /** The host is about to rebuild the Activity for a new locale (see [ReadyStage]). */
+    fun localeApplied() {
+        _stage.update { stage -> stage.localeApplied() }
     }
 
     /** User declined every offered account; show the login flow. */
@@ -390,6 +396,14 @@ class AppBootstrapViewModel @Inject constructor(
         const val TAG = "AppBootstrap"
     }
 }
+
+/**
+ * The stage once the Activity has been asked to rebuild for a new locale: the
+ * same Ready, its epoch kept so the app's saved state survives, no longer
+ * asking for the rebuild.
+ */
+internal fun AuthStage.localeApplied(): AuthStage =
+    if (this is AuthStage.Ready && recreateForLocale) copy(recreateForLocale = false) else this
 
 /** What the start-up requests decided. */
 internal sealed class Startup {

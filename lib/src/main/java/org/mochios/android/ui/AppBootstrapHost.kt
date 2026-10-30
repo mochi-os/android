@@ -82,19 +82,41 @@ fun AppBootstrapHost(
             onSignOut = viewModel::logout,
         )
 
-        is AuthStage.Ready -> {
-            if (s.recreateForLocale) {
-                LaunchedEffect(Unit) { onLocaleChangeRequested() }
-                Loading()
-            } else {
-                // Re-key the ready scope on every fresh Ready so
-                // rememberSaveable state, notably the nav back stack, starts
-                // clean; otherwise a re-login restores the previous session's
-                // routes.
-                key(s.epoch) {
-                    ready(viewModel::logout)
-                }
-            }
+        is AuthStage.Ready -> ReadyStage(
+            stage = s,
+            onLocaleApplied = viewModel::localeApplied,
+            onLocaleChangeRequested = onLocaleChangeRequested,
+        ) {
+            ready(viewModel::logout)
+        }
+    }
+}
+
+/**
+ * The app, or a spinner while the Activity is rebuilt for a new locale. The
+ * flag goes before the rebuild is asked for: the view model outlives the
+ * Activity, so a flag left set had every rebuilt Activity ask again, without
+ * end (Android 8-12, where the app asks for the rebuild itself).
+ */
+@Composable
+internal fun ReadyStage(
+    stage: AuthStage.Ready,
+    onLocaleApplied: () -> Unit,
+    onLocaleChangeRequested: () -> Unit,
+    content: @Composable () -> Unit,
+) {
+    if (stage.recreateForLocale) {
+        LaunchedEffect(Unit) {
+            onLocaleApplied()
+            onLocaleChangeRequested()
+        }
+        Loading()
+    } else {
+        // Re-key the ready scope on every fresh Ready so rememberSaveable
+        // state, notably the nav back stack, starts clean; otherwise a
+        // re-login restores the previous session's routes.
+        key(stage.epoch) {
+            content()
         }
     }
 }
