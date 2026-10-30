@@ -263,7 +263,7 @@
     <string name="feeds_visibility_followers">المتابعون فقط</string>
     <string name="feeds_show_post">عرض المنشور</string>
     <string name="feeds_hide_post">إخفاء المنشور</string>
-    <string name="feeds_also_on">أيضًا على %1$s</string>
+    <string name="feeds_open_on">فتح على %1$s</string>
     <string name="feeds_show_sensitive_media">عرض الوسائط الحساسة</string>
     <string name="feeds_poll_closed">مغلق</string>
     <string name="feeds_poll_closes">يُغلق في %1$s</string>

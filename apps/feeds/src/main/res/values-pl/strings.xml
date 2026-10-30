@@ -249,7 +249,7 @@
     <string name="feeds_visibility_followers">Tylko obserwujący</string>
     <string name="feeds_show_post">Pokaż wpis</string>
     <string name="feeds_hide_post">Ukryj wpis</string>
-    <string name="feeds_also_on">Również w serwisie %1$s</string>
+    <string name="feeds_open_on">Otwórz w %1$s</string>
     <string name="feeds_show_sensitive_media">Pokaż wrażliwe multimedia</string>
     <string name="feeds_poll_closed">Zakończona</string>
     <string name="feeds_poll_closes">Kończy się %1$s</string>

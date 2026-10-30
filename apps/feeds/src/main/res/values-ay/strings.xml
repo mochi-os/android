@@ -233,7 +233,7 @@
     <string name="feeds_visibility_followers">Arkirinakatakikiw</string>
     <string name="feeds_show_post">Qillqata uñachayaña</string>
     <string name="feeds_hide_post">Qillqata imantaña</string>
-    <string name="feeds_also_on">%1$s ukansa</string>
+    <string name="feeds_open_on">%1$s ukan jist\'ara</string>
     <string name="feeds_show_sensitive_media">Sensible uñacht\'awinak uñachayaña</string>
     <string name="feeds_poll_closed">Jist\'antata</string>
     <string name="feeds_poll_closes">%1$s jist\'antasi</string>

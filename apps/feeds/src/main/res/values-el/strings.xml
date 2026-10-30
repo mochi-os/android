@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Μόνο ακόλουθοι</string>
     <string name="feeds_show_post">Εμφάνιση ανάρτησης</string>
     <string name="feeds_hide_post">Απόκρυψη ανάρτησης</string>
-    <string name="feeds_also_on">Επίσης στο %1$s</string>
+    <string name="feeds_open_on">Άνοιγμα στο %1$s</string>
     <string name="feeds_show_sensitive_media">Εμφάνιση ευαίσθητων πολυμέσων</string>
     <string name="feeds_poll_closed">Έκλεισε</string>
     <string name="feeds_poll_closes">Κλείνει %1$s</string>

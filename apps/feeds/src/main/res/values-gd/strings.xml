@@ -251,7 +251,7 @@
     <string name="feeds_visibility_followers">Luchd-leantainn a-mhàin</string>
     <string name="feeds_show_post">Seall am post</string>
     <string name="feeds_hide_post">Falaich am post</string>
-    <string name="feeds_also_on">Cuideachd air %1$s</string>
+    <string name="feeds_open_on">Fosgail air %1$s</string>
     <string name="feeds_show_sensitive_media">Seall na meadhanan frionasach</string>
     <string name="feeds_poll_closed">Dùinte</string>
     <string name="feeds_poll_closes">Dùinidh e %1$s</string>

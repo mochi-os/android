@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">נאָר נאָכפֿאָלגער</string>
     <string name="feeds_show_post">ווײַזן פּאָסט</string>
     <string name="feeds_hide_post">באַהאַלטן פּאָסט</string>
-    <string name="feeds_also_on">אויך אויף %1$s</string>
+    <string name="feeds_open_on">עפֿענען אויף %1$s</string>
     <string name="feeds_show_sensitive_media">ווײַזן סענסיטיווע מעדיע</string>
     <string name="feeds_poll_closed">פֿאַרמאַכט</string>
     <string name="feeds_poll_closes">פֿאַרמאַכט זיך %1$s</string>

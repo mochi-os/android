@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Tenê şopîner</string>
     <string name="feeds_show_post">Şandiyê nîşan bide</string>
     <string name="feeds_hide_post">Şandiyê veşêre</string>
-    <string name="feeds_also_on">Herwiha li ser %1$s</string>
+    <string name="feeds_open_on">Li ser %1$s veke</string>
     <string name="feeds_show_sensitive_media">Medyaya hestiyar nîşan bide</string>
     <string name="feeds_poll_closed">Girtî</string>
     <string name="feeds_poll_closes">Di %1$s de tê girtin</string>

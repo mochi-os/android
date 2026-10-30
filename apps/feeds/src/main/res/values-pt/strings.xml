@@ -237,7 +237,7 @@
     <string name="feeds_visibility_followers">Apenas seguidores</string>
     <string name="feeds_show_post">Mostrar publicação</string>
     <string name="feeds_hide_post">Ocultar publicação</string>
-    <string name="feeds_also_on">Também em %1$s</string>
+    <string name="feeds_open_on">Abrir no %1$s</string>
     <string name="feeds_show_sensitive_media">Mostrar multimédia sensível</string>
     <string name="feeds_poll_closed">Terminada</string>
     <string name="feeds_poll_closes">Termina a %1$s</string>

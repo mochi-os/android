@@ -31,6 +31,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.outlined.AttachFile
 import androidx.compose.material.icons.outlined.Lock
+import androidx.compose.material.icons.outlined.OpenInBrowser
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.Visibility
@@ -68,6 +69,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.QuoteCard as LibQuoteCard
 import org.mochios.android.ui.components.MochiButton
+import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.isWebUrl
@@ -230,30 +232,46 @@ internal fun PostWarning(
     }
 }
 
-/** Where else a post is: its copies on other networks, each a link, and how often it was boosted. */
-@OptIn(ExperimentalLayoutApi::class)
+/** The copies of a post on other networks that a reader can open: those with a web address. */
+internal fun openable(copies: List<PostCopy>): List<PostCopy> = copies.filter { isWebUrl(it.url) }
+
+/**
+ * A post's menu items for its [copies] on other networks, "Open on" each
+ * network, opening the copy in the browser. Offered to every reader.
+ */
 @Composable
-internal fun PostCopies(copies: List<PostCopy>, boosts: Int, modifier: Modifier = Modifier) {
-    if (copies.isEmpty() && boosts <= 0) return
+internal fun CopyItems(copies: List<PostCopy>, onDismiss: () -> Unit) {
     val context = LocalContext.current
-    FlowRow(modifier = modifier, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-        copies.forEach { copy ->
-            Text(
-                text = stringResource(R.string.feeds_also_on, providerName(copy.network)),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.then(
-                    if (isWebUrl(copy.url)) Modifier.clickable { openWeb(context, copy.url) } else Modifier,
-                ),
-            )
-        }
-        if (boosts > 0) {
-            Text(
-                text = pluralStringResource(R.plurals.feeds_boosted_times, boosts, LocalFormat.current.formatNumber(boosts)),
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
+    copies.forEach { copy ->
+        MochiDropdownMenuItem(
+            text = { Text(stringResource(R.string.feeds_open_on, providerName(copy.network))) },
+            leadingIcon = { Icon(Icons.Outlined.OpenInBrowser, contentDescription = null) },
+            onClick = {
+                onDismiss()
+                openWeb(context, copy.url)
+            },
+        )
+    }
+}
+
+/** How often a post was boosted, beside its reactions; nothing until it has been. */
+@Composable
+internal fun PostBoosts(boosts: Int, modifier: Modifier = Modifier) {
+    if (boosts <= 0) return
+    val format = LocalFormat.current
+    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+        Icon(
+            Icons.Outlined.Repeat,
+            contentDescription = pluralStringResource(R.plurals.feeds_boosted_times, boosts, format.formatNumber(boosts)),
+            modifier = Modifier.size(20.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Spacer(modifier = Modifier.width(4.dp))
+        Text(
+            text = format.formatNumber(boosts),
+            style = MaterialTheme.typography.labelMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
     }
 }
 

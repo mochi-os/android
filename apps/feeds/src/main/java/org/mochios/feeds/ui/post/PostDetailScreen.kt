@@ -120,7 +120,8 @@ import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.PostBody
-import org.mochios.feeds.ui.component.PostCopies
+import org.mochios.feeds.ui.component.CopyItems
+import org.mochios.feeds.ui.component.PostBoosts
 import org.mochios.feeds.ui.component.PostHeadline
 import org.mochios.feeds.ui.component.PostMediaGrid
 import org.mochios.feeds.ui.component.PostPollView
@@ -128,6 +129,7 @@ import org.mochios.feeds.ui.component.PostWarning
 import org.mochios.feeds.ui.component.QuoteCard
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.hasBadges
+import org.mochios.feeds.ui.component.openable
 import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.commentAvatar
@@ -225,9 +227,13 @@ fun PostDetailScreen(
                                 contentDescription = stringResource(MochiR.string.common_delete)
                             )
                         }
-                        // The post's source, pinning, and a boost of a post
-                        // from another network from the first hosted account.
-                        post?.let { current ->
+                    }
+                    // For managers the post's source, pinning, and a boost of a
+                    // post from another network from the first hosted account;
+                    // for every reader the post's copies on other networks.
+                    post?.let { current ->
+                        val copies = openable(current.copies)
+                        if (permissions.manage || copies.isNotEmpty()) {
                             val sourceUrl = current.source?.url?.takeIf { it.isNotEmpty() }
                             val booster = hosted.firstOrNull()?.takeIf { current.elsewhere }
                             Box {
@@ -241,44 +247,47 @@ fun PostDetailScreen(
                                     expanded = showOverflowMenu,
                                     onDismissRequest = { showOverflowMenu = false }
                                 ) {
-                                    if (sourceUrl != null) {
-                                        MochiDropdownMenuItem(
-                                            text = { Text(stringResource(R.string.feeds_tab_sources)) },
-                                            onClick = {
-                                                showOverflowMenu = false
-                                                onNavigateToSources(viewModel.feedId, sourceUrl)
-                                            },
-                                            leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
-                                        )
-                                    }
-                                    MochiDropdownMenuItem(
-                                        text = {
-                                            Text(stringResource(if (current.pinned > 0) R.string.feeds_unpin_post else R.string.feeds_pin_post))
-                                        },
-                                        onClick = {
-                                            showOverflowMenu = false
-                                            viewModel.togglePin()
-                                        },
-                                        leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
-                                    )
-                                    if (booster != null) {
+                                    if (permissions.manage) {
+                                        if (sourceUrl != null) {
+                                            MochiDropdownMenuItem(
+                                                text = { Text(stringResource(R.string.feeds_tab_sources)) },
+                                                onClick = {
+                                                    showOverflowMenu = false
+                                                    onNavigateToSources(viewModel.feedId, sourceUrl)
+                                                },
+                                                leadingIcon = { Icon(Icons.Outlined.Link, contentDescription = null) },
+                                            )
+                                        }
                                         MochiDropdownMenuItem(
                                             text = {
-                                                Text(
-                                                    if (boostedFrom(current, booster)) {
-                                                        stringResource(R.string.feeds_take_boost_back)
-                                                    } else {
-                                                        stringResource(R.string.feeds_boost_from, booster.identifier)
-                                                    }
-                                                )
+                                                Text(stringResource(if (current.pinned > 0) R.string.feeds_unpin_post else R.string.feeds_pin_post))
                                             },
                                             onClick = {
                                                 showOverflowMenu = false
-                                                viewModel.toggleBoost()
+                                                viewModel.togglePin()
                                             },
-                                            leadingIcon = { Icon(Icons.Outlined.Repeat, contentDescription = null) },
+                                            leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
                                         )
+                                        if (booster != null) {
+                                            MochiDropdownMenuItem(
+                                                text = {
+                                                    Text(
+                                                        if (boostedFrom(current, booster)) {
+                                                            stringResource(R.string.feeds_take_boost_back)
+                                                        } else {
+                                                            stringResource(R.string.feeds_boost_from, booster.identifier)
+                                                        }
+                                                    )
+                                                },
+                                                onClick = {
+                                                    showOverflowMenu = false
+                                                    viewModel.toggleBoost()
+                                                },
+                                                leadingIcon = { Icon(Icons.Outlined.Repeat, contentDescription = null) },
+                                            )
+                                        }
                                     }
+                                    CopyItems(copies, onDismiss = { showOverflowMenu = false })
                                 }
                             }
                         }
@@ -724,10 +733,6 @@ private fun PostContent(
                 Spacer(modifier = Modifier.height(8.dp))
                 PostWarning(warning = post.warning, revealed = revealed, onToggle = { revealed = !revealed })
             }
-            if (!hidden && (post.copies.isNotEmpty() || post.boosts > 0)) {
-                Spacer(modifier = Modifier.height(4.dp))
-                PostCopies(copies = post.copies, boosts = post.boosts)
-            }
             post.data?.quote?.takeIf { !hidden }?.let { quote ->
                 Spacer(modifier = Modifier.height(8.dp))
                 QuoteCard(quote)
@@ -861,6 +866,7 @@ private fun PostContent(
                 onRemoveReaction = { onReact(post.myReaction) },
                 currentReaction = currentReactionType(post.myReaction),
             )
+            PostBoosts(post.boosts, modifier = Modifier.padding(start = 16.dp))
             if (showBody) {
                 // The reaction add button is a filled circle, so its padding
                 // sits inside the background; this spacer makes the gap to the

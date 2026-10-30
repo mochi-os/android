@@ -168,13 +168,15 @@ import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.ui.component.PostBody
-import org.mochios.feeds.ui.component.PostCopies
+import org.mochios.feeds.ui.component.CopyItems
+import org.mochios.feeds.ui.component.PostBoosts
 import org.mochios.feeds.ui.component.PostHeadline
 import org.mochios.feeds.ui.component.PostMediaGrid
 import org.mochios.feeds.ui.component.PostPollView
 import org.mochios.feeds.ui.component.PostWarning
 import org.mochios.feeds.ui.component.QuoteCard
 import org.mochios.feeds.ui.component.boostedFrom
+import org.mochios.feeds.ui.component.openable
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.ui.component.countComments
 import org.mochios.feeds.ui.component.commentAvatar
@@ -1539,7 +1541,7 @@ internal fun GalleryTile(
 }
 
 @Composable
-private fun PostCard(
+internal fun PostCard(
     post: Post,
     fallbackFeedId: String,
     // One avatar address per commenter across the timeline (timelineAvatars).
@@ -1707,7 +1709,7 @@ private fun PostCard(
                     PostByline(post)
 
                     // Who wrote a post from another network, who boosted it,
-                    // its marks, its warning, where else it is and what it quotes.
+                    // its marks, its warning and what it quotes.
                     PostHeadline(post, modifier = Modifier.padding(top = 8.dp, end = 12.dp))
                     if (post.warning.isNotEmpty()) {
                         Spacer(modifier = Modifier.height(8.dp))
@@ -1719,7 +1721,6 @@ private fun PostCard(
                         )
                     }
                     if (!hidden) {
-                        PostCopies(copies = post.copies, boosts = post.boosts, modifier = Modifier.padding(top = 4.dp))
                         post.data?.quote?.let { quote ->
                             Spacer(modifier = Modifier.height(8.dp))
                             QuoteCard(quote, modifier = Modifier.padding(end = 12.dp))
@@ -1982,7 +1983,7 @@ internal fun PostCommentsPreview(
 // simply reflects whichever post is current (updating on swipe-commit), rather
 // than flipping or scrolling along with the card.
 @Composable
-private fun PostActionBar(
+internal fun PostActionBar(
     post: Post,
     isSaved: Boolean,
     canManage: Boolean,
@@ -2002,6 +2003,7 @@ private fun PostActionBar(
     onBoost: () -> Unit = {},
 ) {
     var more by remember { mutableStateOf(false) }
+    val copies = openable(post.copies)
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -2019,6 +2021,7 @@ private fun PostActionBar(
         // the background; this spacer makes the gap to the tag match the gaps
         // between the borderless icons (≈16dp everywhere).
         Spacer(modifier = Modifier.width(8.dp))
+        PostBoosts(post.boosts, modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp))
         PostTagsButton(
             tags = post.tags,
             onAddTag = onAddTag,
@@ -2088,7 +2091,10 @@ private fun PostActionBar(
                     .size(24.dp),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
-            // Pinning, and a boost of a post from another network.
+        }
+        // Pinning and a boost of a post from another network for managers, and
+        // the post's copies on other networks for every reader.
+        if (canManage || copies.isNotEmpty()) {
             Box {
                 Icon(
                     Icons.Default.MoreHoriz,
@@ -2101,29 +2107,32 @@ private fun PostActionBar(
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 MochiDropdownMenu(expanded = more, onDismissRequest = { more = false }) {
-                    MochiDropdownMenuItem(
-                        text = { Text(stringResource(if (pinned) R.string.feeds_unpin_post else R.string.feeds_pin_post)) },
-                        leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
-                        onClick = {
-                            more = false
-                            onPin()
-                        },
-                    )
-                    if (boost != null || boosted) {
+                    if (canManage) {
                         MochiDropdownMenuItem(
-                            text = {
-                                Text(
-                                    if (boosted) stringResource(R.string.feeds_take_boost_back)
-                                    else stringResource(R.string.feeds_boost_from, boost.orEmpty())
-                                )
-                            },
-                            leadingIcon = { Icon(Icons.Outlined.Repeat, contentDescription = null) },
+                            text = { Text(stringResource(if (pinned) R.string.feeds_unpin_post else R.string.feeds_pin_post)) },
+                            leadingIcon = { Icon(Icons.Outlined.PushPin, contentDescription = null) },
                             onClick = {
                                 more = false
-                                onBoost()
+                                onPin()
                             },
                         )
+                        if (boost != null || boosted) {
+                            MochiDropdownMenuItem(
+                                text = {
+                                    Text(
+                                        if (boosted) stringResource(R.string.feeds_take_boost_back)
+                                        else stringResource(R.string.feeds_boost_from, boost.orEmpty())
+                                    )
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.Repeat, contentDescription = null) },
+                                onClick = {
+                                    more = false
+                                    onBoost()
+                                },
+                            )
+                        }
                     }
+                    CopyItems(copies, onDismiss = { more = false })
                 }
             }
         }

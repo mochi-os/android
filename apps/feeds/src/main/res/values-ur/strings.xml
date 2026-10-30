@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">صرف فالوورز</string>
     <string name="feeds_show_post">پوسٹ دکھائیں</string>
     <string name="feeds_hide_post">پوسٹ چھپائیں</string>
-    <string name="feeds_also_on">%1$s پر بھی</string>
+    <string name="feeds_open_on">%1$s پر کھولیں</string>
     <string name="feeds_show_sensitive_media">حساس میڈیا دکھائیں</string>
     <string name="feeds_poll_closed">بند</string>
     <string name="feeds_poll_closes">%1$s کو بند ہو گا</string>

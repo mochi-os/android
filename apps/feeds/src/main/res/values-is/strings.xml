@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Aðeins fylgjendur</string>
     <string name="feeds_show_post">Sýna færslu</string>
     <string name="feeds_hide_post">Fela færslu</string>
-    <string name="feeds_also_on">Einnig á %1$s</string>
+    <string name="feeds_open_on">Opna á %1$s</string>
     <string name="feeds_show_sensitive_media">Sýna viðkvæmt myndefni</string>
     <string name="feeds_poll_closed">Lokuð</string>
     <string name="feeds_poll_closes">Lokast %1$s</string>

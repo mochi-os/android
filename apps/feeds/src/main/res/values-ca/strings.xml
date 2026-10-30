@@ -237,7 +237,7 @@
     <string name="feeds_visibility_followers">Només seguidors</string>
     <string name="feeds_show_post">Mostra la publicació</string>
     <string name="feeds_hide_post">Amaga la publicació</string>
-    <string name="feeds_also_on">També a %1$s</string>
+    <string name="feeds_open_on">Obre a %1$s</string>
     <string name="feeds_show_sensitive_media">Mostra el contingut multimèdia sensible</string>
     <string name="feeds_poll_closed">Tancada</string>
     <string name="feeds_poll_closes">Es tanca %1$s</string>

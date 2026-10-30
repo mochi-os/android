@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Diňe yzarlaýjylar</string>
     <string name="feeds_show_post">Ýazgyny görkez</string>
     <string name="feeds_hide_post">Ýazgyny gizle</string>
-    <string name="feeds_also_on">Şeýle hem %1$s</string>
+    <string name="feeds_open_on">%1$s-da aç</string>
     <string name="feeds_show_sensitive_media">Duýgur mediany görkez</string>
     <string name="feeds_poll_closed">Ýapyldy</string>
     <string name="feeds_poll_closes">%1$s ýapylýar</string>

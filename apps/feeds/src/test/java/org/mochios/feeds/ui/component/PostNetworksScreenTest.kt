@@ -5,15 +5,21 @@
 
 package org.mochios.feeds.ui.component
 
+import android.app.Activity
+import android.content.Intent
 import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.assertIsOn
+import androidx.compose.ui.test.getBoundsInRoot
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -21,9 +27,14 @@ import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.i18n.NumberFormat
+import org.mochios.android.i18n.UserPreferences
 import org.mochios.android.model.Comment
 import org.mochios.feeds.model.PollOption
 import org.mochios.feeds.model.Post
@@ -35,6 +46,8 @@ import org.mochios.feeds.model.PostPoll
 import org.mochios.feeds.model.PostQuote
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Source
+import org.mochios.feeds.ui.feed.PostActionBar
+import org.mochios.feeds.ui.feed.PostCard
 import org.mochios.feeds.ui.find.FollowMenu
 import org.mochios.feeds.ui.find.LookupResult
 import org.mochios.feeds.ui.find.PersonRow
@@ -47,6 +60,7 @@ import org.mochios.feeds.ui.post.PostFeaturesFields
 import org.mochios.feeds.ui.post.PublishSwitches
 import org.mochios.feeds.ui.settings.SourceCard
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 
 /**
@@ -79,13 +93,89 @@ class PostNetworksScreenTest {
         rule.onNodeWithText("Followers only").assertIsDisplayed()
     }
 
+    private val copied = Post(
+        id = "p1",
+        copies = listOf(
+            PostCopy(address = "@me@here.example", network = "fediverse", url = "https://here.example/@me/1"),
+            PostCopy(address = "me.bsky.social", network = "bluesky"),
+        ),
+        boosts = 2,
+    )
+
+    @Composable
+    private fun Bar(post: Post, canManage: Boolean) {
+        PostActionBar(
+            post = post, isSaved = false, canManage = canManage,
+            onReact = {}, onComments = {}, onToggleSave = {}, onAddTag = {}, onAdjustInterest = { _, _ -> },
+            onEdit = {}, onDelete = {},
+        )
+    }
+
     @Test
-    fun `a post names where else it is, and how often it was boosted`() {
+    fun `a reader who does not manage the post opens its copies elsewhere from its menu`() {
+        lateinit var activity: Activity
         rule.setContent {
-            PostCopies(copies = listOf(PostCopy(address = "@me@here.example", network = "fediverse")), boosts = 2)
+            activity = LocalContext.current as Activity
+            Bar(copied, canManage = false)
         }
-        rule.onNodeWithText("Also on Fediverse").assertIsDisplayed()
-        rule.onNodeWithText("Boosted 2 times").assertIsDisplayed()
+        rule.onAllNodesWithContentDescription("Edit").assertCountEquals(0)
+        rule.onNodeWithContentDescription("More options").performClick()
+        // A copy without an address has nothing to open.
+        rule.onAllNodesWithText("Open on Bluesky").assertCountEquals(0)
+        // The owner's items stay the owner's.
+        rule.onAllNodesWithText("Pin post").assertCountEquals(0)
+        rule.onNodeWithText("Open on Fediverse").performClick()
+        val started = shadowOf(activity).nextStartedActivity
+        assertEquals(Intent.ACTION_VIEW, started.action)
+        assertEquals("https://here.example/@me/1", started.dataString)
+    }
+
+    @Test
+    fun `a post with no copy to open offers a reader no menu, and its owner the owner's items`() {
+        rule.setContent {
+            androidx.compose.foundation.layout.Column {
+                Bar(Post(id = "p2", copies = listOf(PostCopy(network = "bluesky"))), canManage = false)
+                Bar(copied, canManage = true)
+            }
+        }
+        rule.onAllNodesWithContentDescription("More options").assertCountEquals(1)
+        rule.onNodeWithContentDescription("More options").performClick()
+        rule.onNodeWithText("Pin post").assertIsDisplayed()
+        rule.onNodeWithText("Open on Fediverse").assertIsDisplayed()
+    }
+
+    @Test
+    fun `a post's card no longer lists where else it is`() {
+        rule.setContent {
+            PostCard(
+                post = copied, fallbackFeedId = "f1", upgradedRssImage = null, isSaved = false,
+                onClick = {}, onComments = {}, onViewComments = {}, onReact = {}, onToggleSave = {},
+                onAddTag = {}, onAdjustInterest = { _, _ -> }, canManage = false, onEdit = {}, onDelete = {},
+            )
+        }
+        rule.onNodeWithContentDescription("Comments").assertIsDisplayed()
+        rule.onAllNodesWithText("Also on", substring = true).assertCountEquals(0)
+        rule.onAllNodesWithText("Boosted 2 times").assertCountEquals(0)
+    }
+
+    @Test
+    fun `how often a post was boosted sits beside its reactions, in the reader's number format`() {
+        rule.setContent {
+            CompositionLocalProvider(LocalFormat provides Format(UserPreferences(numberFormat = NumberFormat.EUROPEAN_DOT_COMMA))) {
+                Bar(copied.copy(boosts = 1234), canManage = false)
+            }
+        }
+        val boosts = rule.onNodeWithContentDescription("Boosted 1.234 times").assertIsDisplayed().getBoundsInRoot()
+        rule.onNodeWithText("1.234").assertIsDisplayed()
+        val reactions = rule.onNodeWithContentDescription("Add reaction").getBoundsInRoot()
+        val tags = rule.onNodeWithContentDescription("Tags").getBoundsInRoot()
+        assertTrue(boosts.left >= reactions.right && boosts.right <= tags.left)
+    }
+
+    @Test
+    fun `a post never boosted shows no count`() {
+        rule.setContent { Bar(copied.copy(boosts = 0), canManage = false) }
+        rule.onAllNodesWithContentDescriptionPrefix("Boosted").assertCountEquals(0)
     }
 
     @Test

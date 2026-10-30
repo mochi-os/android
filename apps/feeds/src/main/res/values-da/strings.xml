@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Kun følgere</string>
     <string name="feeds_show_post">Vis indlæg</string>
     <string name="feeds_hide_post">Skjul indlæg</string>
-    <string name="feeds_also_on">Også på %1$s</string>
+    <string name="feeds_open_on">Åbn på %1$s</string>
     <string name="feeds_show_sensitive_media">Vis følsomt medieindhold</string>
     <string name="feeds_poll_closed">Lukket</string>
     <string name="feeds_poll_closes">Lukker %1$s</string>

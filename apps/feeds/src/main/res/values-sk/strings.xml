@@ -249,7 +249,7 @@
     <string name="feeds_visibility_followers">Iba sledovatelia</string>
     <string name="feeds_show_post">Zobraziť príspevok</string>
     <string name="feeds_hide_post">Skryť príspevok</string>
-    <string name="feeds_also_on">Aj na %1$s</string>
+    <string name="feeds_open_on">Otvoriť na %1$s</string>
     <string name="feeds_show_sensitive_media">Zobraziť citlivé médiá</string>
     <string name="feeds_poll_closed">Ukončená</string>
     <string name="feeds_poll_closes">Skončí %1$s</string>

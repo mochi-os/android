@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Միայն հետևորդներ</string>
     <string name="feeds_show_post">Ցույց տալ գրառումը</string>
     <string name="feeds_hide_post">Թաքցնել գրառումը</string>
-    <string name="feeds_also_on">Նաև %1$s-ում</string>
+    <string name="feeds_open_on">Բացել %1$s-ում</string>
     <string name="feeds_show_sensitive_media">Ցույց տալ զգայուն մեդիան</string>
     <string name="feeds_poll_closed">Փակված է</string>
     <string name="feeds_poll_closes">Փակվում է %1$s</string>

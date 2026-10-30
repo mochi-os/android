@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Abalandeli kuphela</string>
     <string name="feeds_show_post">Bonisa iposi</string>
     <string name="feeds_hide_post">Fihla iposi</string>
-    <string name="feeds_also_on">Kwakhona ku-%1$s</string>
+    <string name="feeds_open_on">Vula ku-%1$s</string>
     <string name="feeds_show_sensitive_media">Bonisa imidiya ebuthathaka</string>
     <string name="feeds_poll_closed">Ivaliwe</string>
     <string name="feeds_poll_closes">Ivala nge-%1$s</string>

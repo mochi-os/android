@@ -233,7 +233,7 @@
     <string name="feeds_visibility_followers">Àwọn olùtẹ̀lé nìkan</string>
     <string name="feeds_show_post">Fi ìfìránṣẹ́ hàn</string>
     <string name="feeds_hide_post">Fi ìfìránṣẹ́ pamọ́</string>
-    <string name="feeds_also_on">Ó tún wà lórí %1$s</string>
+    <string name="feeds_open_on">Ṣí lórí %1$s</string>
     <string name="feeds_show_sensitive_media">Fi mídíà tó lè kàn ní hàn</string>
     <string name="feeds_poll_closed">Ó ti parí</string>
     <string name="feeds_poll_closes">Yóò parí ní %1$s</string>

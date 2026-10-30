@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Solo follower</string>
     <string name="feeds_show_post">Mostra post</string>
     <string name="feeds_hide_post">Nascondi post</string>
-    <string name="feeds_also_on">Anche su %1$s</string>
+    <string name="feeds_open_on">Apri su %1$s</string>
     <string name="feeds_show_sensitive_media">Mostra contenuti multimediali sensibili</string>
     <string name="feeds_poll_closed">Chiuso</string>
     <string name="feeds_poll_closes">Si chiude %1$s</string>

@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Mga tagasunod lang</string>
     <string name="feeds_show_post">Ipakita ang post</string>
     <string name="feeds_hide_post">Itago ang post</string>
-    <string name="feeds_also_on">Nasa %1$s din</string>
+    <string name="feeds_open_on">Buksan sa %1$s</string>
     <string name="feeds_show_sensitive_media">Ipakita ang sensitibong media</string>
     <string name="feeds_poll_closed">Sarado na</string>
     <string name="feeds_poll_closes">Magsasara sa %1$s</string>

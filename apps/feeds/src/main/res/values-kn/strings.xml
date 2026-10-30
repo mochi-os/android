@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">ಅನುಯಾಯಿಗಳಿಗೆ ಮಾತ್ರ</string>
     <string name="feeds_show_post">ಪೋಸ್ಟ್ ತೋರಿಸಿ</string>
     <string name="feeds_hide_post">ಪೋಸ್ಟ್ ಮರೆಮಾಡಿ</string>
-    <string name="feeds_also_on">%1$s ನಲ್ಲಿಯೂ ಇದೆ</string>
+    <string name="feeds_open_on">%1$s ನಲ್ಲಿ ತೆರೆಯಿರಿ</string>
     <string name="feeds_show_sensitive_media">ಸೂಕ್ಷ್ಮ ಮಾಧ್ಯಮ ತೋರಿಸಿ</string>
     <string name="feeds_poll_closed">ಮುಚ್ಚಲಾಗಿದೆ</string>
     <string name="feeds_poll_closes">%1$s ರಂದು ಮುಚ್ಚುತ್ತದೆ</string>

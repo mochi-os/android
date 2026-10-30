@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Wafuasi pekee</string>
     <string name="feeds_show_post">Onyesha chapisho</string>
     <string name="feeds_hide_post">Ficha chapisho</string>
-    <string name="feeds_also_on">Pia kwenye %1$s</string>
+    <string name="feeds_open_on">Fungua kwenye %1$s</string>
     <string name="feeds_show_sensitive_media">Onyesha midia nyeti</string>
     <string name="feeds_poll_closed">Imefungwa</string>
     <string name="feeds_poll_closes">Inafungwa %1$s</string>

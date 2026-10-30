@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Csak követőknek</string>
     <string name="feeds_show_post">Bejegyzés megjelenítése</string>
     <string name="feeds_hide_post">Bejegyzés elrejtése</string>
-    <string name="feeds_also_on">Itt is: %1$s</string>
+    <string name="feeds_open_on">Megnyitás itt: %1$s</string>
     <string name="feeds_show_sensitive_media">Érzékeny média megjelenítése</string>
     <string name="feeds_poll_closed">Lezárva</string>
     <string name="feeds_poll_closes">Lezárul: %1$s</string>

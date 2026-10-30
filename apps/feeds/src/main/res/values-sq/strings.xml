@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Vetëm ndjekësit</string>
     <string name="feeds_show_post">Shfaq postimin</string>
     <string name="feeds_hide_post">Fshih postimin</string>
-    <string name="feeds_also_on">Edhe në %1$s</string>
+    <string name="feeds_open_on">Hape në %1$s</string>
     <string name="feeds_show_sensitive_media">Shfaq median me ndjeshmëri</string>
     <string name="feeds_poll_closed">E mbyllur</string>
     <string name="feeds_poll_closes">Mbyllet më %1$s</string>

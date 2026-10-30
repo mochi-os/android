@@ -235,7 +235,7 @@
     <string name="feeds_visibility_followers">Jarraitzaileentzat soilik</string>
     <string name="feeds_show_post">Erakutsi argitalpena</string>
     <string name="feeds_hide_post">Ezkutatu argitalpena</string>
-    <string name="feeds_also_on">%1$s(e)n ere bai</string>
+    <string name="feeds_open_on">Ireki hemen: %1$s</string>
     <string name="feeds_show_sensitive_media">Erakutsi multimedia hunkigarria</string>
     <string name="feeds_poll_closed">Itxita</string>
     <string name="feeds_poll_closes">Itxiera: %1$s</string>
