@@ -5,7 +5,11 @@
 
 package org.mochios.people.repository
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -41,6 +45,7 @@ import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.PersonStyle
 import org.mochios.people.model.User
 import java.io.File
+import java.util.concurrent.atomic.AtomicBoolean
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -72,9 +77,40 @@ class PeopleRepository @Inject constructor(
 
     // ---- Contacts + invites ----
 
-    /** [book] limits the list to one address book; null lists them all. */
-    suspend fun listContacts(book: String? = null): ContactsListResponse =
-        api.listContacts(book).unwrap()
+    /**
+     * [book] limits the list to one address book; null lists them all. The
+     * friends' photos are left to [refreshPhotos], asked for just after: each
+     * is a fetch from the friend's server, five seconds when it is offline.
+     */
+    suspend fun listContacts(book: String? = null): ContactsListResponse {
+        val list = api.listContacts(book, photos = 0).unwrap()
+        refreshPhotos()
+        return list
+    }
+
+    private val photoScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val refreshingPhotos = AtomicBoolean(false)
+
+    /**
+     * Fetch the friends' photos a listing left stale, without the caller
+     * waiting: after every listing, from whichever screen, as the listing
+     * itself did before - an accepted friend's photo is due at once, and a
+     * screen left open still gets the daily refresh. One at a time; a change
+     * signals [contactsChanged], so list screens reload.
+     */
+    private fun refreshPhotos() {
+        if (!refreshingPhotos.compareAndSet(false, true)) return
+        photoScope.launch {
+            try {
+                if (api.refreshPhotos().unwrap().changed > 0) _contactsChanged.tryEmit(Unit)
+            } catch (_: Exception) {
+                // The photos travel on the cards phones sync, not on a screen; a
+                // server that predates the route fetched them inside the listing.
+            } finally {
+                refreshingPhotos.set(false)
+            }
+        }
+    }
 
     suspend fun getContact(contact: String): Contact =
         api.getContact(contact).unwrap().contact

@@ -68,6 +68,12 @@ class ContactsFlowTest {
     /** Answers every update as changed elsewhere. */
     @Volatile private var stale = false
 
+    /** How many friends' photos the next photos refresh answers as changed; later ones answer none. */
+    @Volatile private var changed = 0
+
+    /** Holds the photos refresh's reply until released. */
+    @Volatile private var photosHeld: CountDownLatch? = null
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -94,6 +100,12 @@ class ContactsFlowTest {
                         ok("""{"contact": $SAVED}""")
                     }
                     "-/contacts/create" -> ok("""{"contact": $MADE}""")
+                    "-/contacts/photos" -> {
+                        photosHeld?.await(10, TimeUnit.SECONDS)
+                        val answer = changed
+                        changed = 0
+                        ok("""{"changed": $answer}""")
+                    }
                     "-/books" -> {
                         books?.await(10, TimeUnit.SECONDS)
                         ok("""{"books": [{"id": "b1", "name": "Home"}]}""")
@@ -333,5 +345,56 @@ class ContactsFlowTest {
         rule.onNodeWithText("Ada Byron").assertExists()
         rule.onNodeWithText("Friend").assertDoesNotExist()
         rule.onNodeWithContentDescription("Message").assertExists()
+    }
+
+    private fun listed() = asked.filter { it.path.orEmpty().substringBefore("?").endsWith("/-/contacts") }
+
+    private fun photos() = asked.filter { it.path.orEmpty().endsWith("/-/contacts/photos") }
+
+    /** Lets a photos request the server has answered finish on the client, so the next listing may ask again. */
+    private fun settle() {
+        Thread.sleep(200)
+        shadowOf(Looper.getMainLooper()).idle()
+    }
+
+    // A friend's photo is a fetch from their server, five seconds when it is
+    // offline: no listing asks for them, and every listing is followed by one
+    // request that does, the screen not waiting for it.
+    @Test
+    fun `every listing asks for no photos and is followed by one request for them`() {
+        val model = ContactsViewModel(SavedStateHandle(), repository)
+        until { model.uiState.value.contacts.isNotEmpty() && photos().size == 1 }
+        assertEquals("POST", photos().single().method)
+        settle()
+        model.refresh()
+        until { listed().size == 2 && photos().size == 2 }
+        assertTrue(listed().joinToString { it.path.orEmpty() }, listed().all { it.path.orEmpty().contains("photos=0") })
+    }
+
+    @Test
+    fun `a changed photo reloads the list, and none changed leaves it alone`() {
+        changed = 1
+        ContactsViewModel(SavedStateHandle(), repository)
+        until { listed().size == 2 && photos().size == 2 }
+        shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(200))
+        Thread.sleep(100)
+        shadowOf(Looper.getMainLooper()).idle()
+        assertEquals(2, listed().size)
+    }
+
+    @Test
+    fun `one request for photos at a time, however many listings meanwhile`() {
+        val held = CountDownLatch(1)
+        photosHeld = held
+        val model = ContactsViewModel(SavedStateHandle(), repository)
+        until { photos().size == 1 }
+        model.refresh()
+        until { listed().size == 2 && !model.uiState.value.isRefreshing }
+        assertEquals(1, photos().size)
+        held.countDown()
+        photosHeld = null
+        settle()
+        model.refresh()
+        until { listed().size == 3 && photos().size == 2 }
     }
 }

@@ -32,6 +32,9 @@ import retrofit2.http.Query
 // Response wrappers: the inner shape of each action's `{"data": ...}` envelope,
 // which ApiResponse<T> already unwraps.
 
+/** How many friends' photos a refresh changed. */
+data class PhotosResponse(val changed: Int = 0)
+
 data class ContactsListResponse(
     val contacts: List<Contact> = emptyList(),
     val received: List<FriendInvite> = emptyList(),
@@ -172,10 +175,16 @@ interface PeopleApi {
 
     // ---- Contacts ----
 
+    // photos=0 leaves the friends' photos to refreshPhotos, so the list never
+    // waits on a friend's server; a server that predates it fetches them here.
     @GET("-/contacts")
     suspend fun listContacts(
         @Query("book") book: String? = null,
+        @Query("photos") photos: Int? = null,
     ): Response<ApiResponse<ContactsListResponse>>
+
+    @POST("-/contacts/photos")
+    suspend fun refreshPhotos(): Response<ApiResponse<PhotosResponse>>
 
     @FormUrlEncoded
     @POST("-/contacts/get")
