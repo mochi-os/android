@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Walang key sa pagbawi</string>
     <string name="networks_connected">Konektado</string>
     <string name="networks_not_connected">Hindi konektado</string>
+    <string name="networks_failure_unreachable">Hindi maabot ang server</string>
+    <string name="networks_failure_status">Sumagot ang server ng kamalian %1$s</string>
+    <string name="networks_failure_closed">Tinapos ng server ang koneksyon</string>
+    <string name="networks_failure_blocked">Naka-block ang mga koneksyon sa server</string>
+    <string name="networks_failure_signed_out">Hindi na tinatanggap ng server ang pag-sign in ng account na ito; i-link itong muli</string>
+    <string name="networks_failure_failed">Nabigo ang koneksyon sa server</string>
+    <string name="networks_failure_retry">Susubukang muli sa %1$s</string>
     <string name="networks_profile">Profile</string>
     <string name="networks_profile_show">Ipakita sa profile</string>
     <string name="networks_profile_hide">Itago sa profile</string>
@@ -549,6 +556,12 @@
     <string name="handles_title">Mga palayaw</string>
     <string name="handles_take">Kumuha ng pangalan</string>
     <string name="handles_empty">Walang nakareserbang palayaw.</string>
+    <string name="handles_empty_search">Walang palayaw na tumutugma sa iyong paghahanap</string>
+    <string name="handles_search_placeholder">Maghanap ng palayaw…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Ipinapakita ang %1$s–%2$s sa %3$s na palayaw</item>
+        <item quantity="other">Ipinapakita ang %1$s–%2$s sa %3$s na palayaw</item>
+    </plurals>
     <string name="handles_community">Komunidad</string>
     <string name="handles_name_under">Pangalan sa ilalim ng %1$s</string>
     <string name="handles_taken_down">Ibinaba</string>

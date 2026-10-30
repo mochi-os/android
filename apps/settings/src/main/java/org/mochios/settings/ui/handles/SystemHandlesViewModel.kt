@@ -8,6 +8,9 @@ package org.mochios.settings.ui.handles
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -21,7 +24,7 @@ import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.AppContext
-import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.settings.R
 import org.mochios.settings.api.Availability
 import org.mochios.settings.api.NetworksApi
@@ -31,20 +34,17 @@ import javax.inject.Inject
 
 data class SystemHandlesUiState(
     val isLoading: Boolean = true,
-    /** By domain, then each handle with the names under it. */
+    /** A page of the search, in the server's order: by domain, then each handle with the names under it. */
     val handles: List<RegistryHandle> = emptyList(),
+    /** How many handles the search matches. */
+    val count: Int = 0,
+    val search: String = "",
+    val limit: Int = 25,
+    val offset: Int = 0,
     val domains: List<String> = emptyList(),
     val error: MochiError? = null,
     val busy: String? = null,
 )
-
-/** Handles by domain, each handle followed by the names under it, by name. */
-internal fun registryOrder(handles: List<RegistryHandle>): List<RegistryHandle> =
-    handles.sortedWith(
-        compareBy<RegistryHandle, String>(NaturalCompare) { it.domain }
-            .thenBy(NaturalCompare) { it.parent.ifEmpty { it.name } }
-            .thenBy(NaturalCompare) { it.name },
-    )
 
 /**
  * The owner's list of every handle with its holder (the federation plan,
@@ -62,23 +62,68 @@ class SystemHandlesViewModel @Inject constructor(
     private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 4)
     val messages: SharedFlow<String> = _messages.asSharedFlow()
 
+    private var refreshJob: Job? = null
+    private var searchJob: Job? = null
+
     init { refresh() }
 
+    /** Load the page the current search and offset ask for, dropping any older load. */
     fun refresh(quiet: Boolean = false) {
-        viewModelScope.launch {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
             if (!quiet) _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            val s = _uiState.value
             try {
-                val answer = api.registry().unwrapRaw()
+                val answer = api.registry(search = s.search, limit = s.limit, offset = s.offset).unwrapRaw()
+                // Releasing the last handle of a page leaves the offset past
+                // the end: step back to the last page that still has handles.
+                if (s.offset > 0 && s.offset >= answer.count) {
+                    _uiState.value = _uiState.value.copy(offset = maxOf(0, (answer.count - 1) / s.limit * s.limit))
+                    refresh(quiet)
+                    return@launch
+                }
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
-                    handles = registryOrder(answer.handles),
+                    handles = answer.handles,
+                    count = answer.count,
                     domains = answer.domains,
                     error = null,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
         }
+    }
+
+    /** A new search starts at the first page, once typing pauses. */
+    fun setSearch(value: String) {
+        _uiState.value = _uiState.value.copy(search = value, offset = 0)
+        searchJob?.cancel()
+        searchJob = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
+            refresh()
+        }
+    }
+
+    fun setLimit(limit: Int) {
+        _uiState.value = _uiState.value.copy(limit = limit, offset = 0)
+        refresh()
+    }
+
+    fun nextPage() {
+        val s = _uiState.value
+        if (s.offset + s.limit >= s.count) return
+        _uiState.value = s.copy(offset = s.offset + s.limit)
+        refresh()
+    }
+
+    fun previousPage() {
+        val s = _uiState.value
+        if (s.offset == 0) return
+        _uiState.value = s.copy(offset = maxOf(0, s.offset - s.limit))
+        refresh()
     }
 
     fun clearError() {

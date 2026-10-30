@@ -469,6 +469,13 @@
     <string name="networks_no_recovery">リカバリーキーがありません</string>
     <string name="networks_connected">接続済み</string>
     <string name="networks_not_connected">未接続</string>
+    <string name="networks_failure_unreachable">サーバーに到達できません</string>
+    <string name="networks_failure_status">サーバーがエラー %1$s で応答しました</string>
+    <string name="networks_failure_closed">サーバーが接続を終了しました</string>
+    <string name="networks_failure_blocked">サーバーへの接続はブロックされています</string>
+    <string name="networks_failure_signed_out">サーバーがこのアカウントのサインインを受け付けなくなりました。再リンクしてください</string>
+    <string name="networks_failure_failed">サーバーへの接続に失敗しました</string>
+    <string name="networks_failure_retry">%1$s に再試行します</string>
     <string name="networks_profile">プロフィール</string>
     <string name="networks_profile_show">プロフィールに表示</string>
     <string name="networks_profile_hide">プロフィールから非表示</string>
@@ -540,6 +547,11 @@
     <string name="handles_title">ハンドル</string>
     <string name="handles_take">名前を取得</string>
     <string name="handles_empty">予約されたハンドルはありません。</string>
+    <string name="handles_empty_search">検索に一致するハンドルはありません</string>
+    <string name="handles_search_placeholder">ハンドルを検索…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">%3$s件のハンドルのうち%1$s–%2$s件を表示中</item>
+    </plurals>
     <string name="handles_community">コミュニティ</string>
     <string name="handles_name_under">%1$s の下の名前</string>
     <string name="handles_taken_down">公開停止中</string>

@@ -233,13 +233,15 @@
     <string name="feeds_boosted_by">Geboost door %1$s</string>
     <string name="feeds_pinned">Vastgemaakt</string>
     <string name="feeds_visibility_followers">Alleen volgers</string>
-    <string name="feeds_show_more">Meer tonen</string>
-    <string name="feeds_show_less">Minder tonen</string>
+    <string name="feeds_show_post">Bericht tonen</string>
+    <string name="feeds_hide_post">Bericht verbergen</string>
     <string name="feeds_also_on">Ook op %1$s</string>
     <string name="feeds_show_sensitive_media">Gevoelige media tonen</string>
     <string name="feeds_poll_closed">Gesloten</string>
     <string name="feeds_poll_closes">Sluit %1$s</string>
     <string name="feeds_poll_vote">Stemmen</string>
+    <string name="feeds_poll_see_results">Resultaten tonen</string>
+    <string name="feeds_poll_hide_results">Resultaten verbergen</string>
     <string name="feeds_reply_from">Ook reageren vanaf</string>
     <string name="feeds_reply_from_none">Geen account</string>
     <string name="feeds_mute">Dempen</string>

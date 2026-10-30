@@ -41,6 +41,8 @@ fun PrivacyDialog(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
+    LaunchedEffect(Unit) { viewModel.load() }
+
     LaunchedEffect(uiState.saved) {
         if (uiState.saved) {
             viewModel.consumeSaved()

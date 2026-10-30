@@ -230,13 +230,15 @@
     <string name="feeds_boosted_by">Dikongsi oleh %1$s</string>
     <string name="feeds_pinned">Dipin</string>
     <string name="feeds_visibility_followers">Pengikut sahaja</string>
-    <string name="feeds_show_more">Tunjukkan lagi</string>
-    <string name="feeds_show_less">Tunjukkan kurang</string>
+    <string name="feeds_show_post">Tunjukkan hantaran</string>
+    <string name="feeds_hide_post">Sembunyikan hantaran</string>
     <string name="feeds_also_on">Juga di %1$s</string>
     <string name="feeds_show_sensitive_media">Tunjukkan media sensitif</string>
     <string name="feeds_poll_closed">Ditutup</string>
     <string name="feeds_poll_closes">Ditutup pada %1$s</string>
     <string name="feeds_poll_vote">Undi</string>
+    <string name="feeds_poll_see_results">Tunjukkan keputusan</string>
+    <string name="feeds_poll_hide_results">Sembunyikan keputusan</string>
     <string name="feeds_reply_from">Balas juga daripada</string>
     <string name="feeds_reply_from_none">Tiada akaun</string>
     <string name="feeds_mute">Senyapkan</string>

@@ -249,13 +249,15 @@
     <string name="feeds_boosted_by">Air a bhrosnachadh le %1$s</string>
     <string name="feeds_pinned">Prìnichte</string>
     <string name="feeds_visibility_followers">Luchd-leantainn a-mhàin</string>
-    <string name="feeds_show_more">Seall barrachd</string>
-    <string name="feeds_show_less">Seall nas lugha</string>
+    <string name="feeds_show_post">Seall am post</string>
+    <string name="feeds_hide_post">Falaich am post</string>
     <string name="feeds_also_on">Cuideachd air %1$s</string>
     <string name="feeds_show_sensitive_media">Seall na meadhanan frionasach</string>
     <string name="feeds_poll_closed">Dùinte</string>
     <string name="feeds_poll_closes">Dùinidh e %1$s</string>
     <string name="feeds_poll_vote">Bhòt</string>
+    <string name="feeds_poll_see_results">Seall na toraidhean</string>
+    <string name="feeds_poll_hide_results">Falaich na toraidhean</string>
     <string name="feeds_reply_from">Freagair cuideachd o</string>
     <string name="feeds_reply_from_none">Gun chunntas</string>
     <string name="feeds_mute">Cuir na thosd</string>

@@ -488,6 +488,13 @@
     <string name="networks_no_recovery">Nav atkopšanas atslēgas</string>
     <string name="networks_connected">Savienots</string>
     <string name="networks_not_connected">Nav savienots</string>
+    <string name="networks_failure_unreachable">Serveris nav sasniedzams</string>
+    <string name="networks_failure_status">Serveris atbildēja ar kļūdu %1$s</string>
+    <string name="networks_failure_closed">Serveris pārtrauca savienojumu</string>
+    <string name="networks_failure_blocked">Savienojumi ar serveri ir bloķēti</string>
+    <string name="networks_failure_signed_out">Serveris vairs nepieņem šī konta pierakstīšanos; saistiet to atkārtoti</string>
+    <string name="networks_failure_failed">Savienojums ar serveri neizdevās</string>
+    <string name="networks_failure_retry">Atkārtots mēģinājums plkst. %1$s</string>
     <string name="networks_profile">Profils</string>
     <string name="networks_profile_show">Rādīt profilā</string>
     <string name="networks_profile_hide">Paslēpt profilā</string>
@@ -559,6 +566,13 @@
     <string name="handles_title">Lietotājvārdi</string>
     <string name="handles_take">Aizņemiet vārdu</string>
     <string name="handles_empty">Neviens lietotājvārds nav rezervēts.</string>
+    <string name="handles_empty_search">Meklējumam neatbilst neviens lietotājvārds</string>
+    <string name="handles_search_placeholder">Meklēt lietotājvārdus…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="zero">Tiek rādīti %1$s–%2$s no %3$s lietotājvārdiem</item>
+        <item quantity="one">Tiek rādīti %1$s–%2$s no %3$s lietotājvārda</item>
+        <item quantity="other">Tiek rādīti %1$s–%2$s no %3$s lietotājvārdiem</item>
+    </plurals>
     <string name="handles_community">Kopiena</string>
     <string name="handles_name_under">Vārds zem %1$s</string>
     <string name="handles_taken_down">Atslēgts</string>

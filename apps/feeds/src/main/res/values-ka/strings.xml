@@ -233,13 +233,15 @@
     <string name="feeds_boosted_by">გაზიარებულია %1$s-ის მიერ</string>
     <string name="feeds_pinned">მიმაგრებული</string>
     <string name="feeds_visibility_followers">მხოლოდ გამომწერები</string>
-    <string name="feeds_show_more">მეტის ჩვენება</string>
-    <string name="feeds_show_less">ნაკლების ჩვენება</string>
+    <string name="feeds_show_post">პოსტის ჩვენება</string>
+    <string name="feeds_hide_post">პოსტის დამალვა</string>
     <string name="feeds_also_on">ასევე %1$s-ზე</string>
     <string name="feeds_show_sensitive_media">სენსიტიური მედიის ჩვენება</string>
     <string name="feeds_poll_closed">დახურულია</string>
     <string name="feeds_poll_closes">იხურება %1$s</string>
     <string name="feeds_poll_vote">ხმის მიცემა</string>
+    <string name="feeds_poll_see_results">შედეგების ჩვენება</string>
+    <string name="feeds_poll_hide_results">შედეგების დამალვა</string>
     <string name="feeds_reply_from">ასევე უპასუხე აქედან</string>
     <string name="feeds_reply_from_none">ანგარიშის გარეშე</string>
     <string name="feeds_mute">ჩაჩუმება</string>

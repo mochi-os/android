@@ -37,6 +37,8 @@ import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import org.mochios.android.ui.components.LastViewedStore
+import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicInteger
@@ -67,6 +69,18 @@ class ForumRefreshTest {
     /** Holds the list's answer until released. */
     @Volatile private var hold: CountDownLatch? = null
 
+    /** The sort saved for the forum. */
+    @Volatile private var stored = "new"
+
+    /** The account's default sort, behind any forum's own. */
+    @Volatile private var standard = ""
+
+    /** The sort each list was asked for in, "" for none. */
+    private val sorts = ConcurrentLinkedQueue<String>()
+
+    private lateinit var api: ForumsApi
+    private lateinit var session: SessionManager
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -75,11 +89,18 @@ class ForumRefreshTest {
                 val path = request.path.orEmpty().substringBefore("?")
                 return when (path) {
                     "/forums/f1/-/posts" -> {
+                        sorts.add(request.requestUrl?.queryParameter("sort").orEmpty())
                         // Each answer holds one post more than the last.
                         val posts = (1..lists.incrementAndGet()).joinToString { number -> """{"id": "p$number"}""" }
                         hold?.await(10, TimeUnit.SECONDS)
                         if (down) MockResponse().setResponseCode(500).setBody("""{"error": "down"}""")
-                        else ok("""{"forum": {"id": "f1", "fingerprint": "fp1", "name": "Forum", "sort": "new"}, "posts": [$posts]}""")
+                        else ok("""{"forum": {"id": "f1", "fingerprint": "fp1", "name": "Forum", "sort": "$stored"}, "posts": [$posts]}""")
+                    }
+                    "/forums/-/information" -> ok("""{"forums": [], "settings": {"sort": "$standard"}}""")
+                    "/forums/-/list" -> {
+                        sorts.add(request.requestUrl?.queryParameter("sort").orEmpty())
+                        lists.incrementAndGet()
+                        ok("""{"forums": [], "posts": [{"id": "p1", "forum": "f1"}], "settings": {"sort": "$standard"}}""")
                     }
                     "/_/websocket" -> MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
                         override fun onOpen(webSocket: WebSocket, response: Response) {
@@ -97,12 +118,12 @@ class ForumRefreshTest {
         }
         server.start()
         val base = server.url("/").toString().trimEnd('/')
-        val api = Retrofit.Builder()
+        api = Retrofit.Builder()
             .baseUrl(server.url("/forums/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ForumsApi::class.java)
-        val session = SessionManager(context)
+        session = SessionManager(context)
         runBlocking { session.setServerUrl(base) }
         socket = MochiWebSocket(OkHttpClient(), Gson(), object : SocketSession {
             override suspend fun serverUrl(): String = base
@@ -112,14 +133,40 @@ class ForumRefreshTest {
             override suspend fun invalidate(app: String) {
             }
         })
-        model = ForumViewModel(
-            SavedStateHandle(mapOf("forumId" to "f1")),
-            ForumsRepository(api, FileStore(context), context),
-            SavedRepository(api, Gson()),
-            socket,
-            session,
-        )
+        model = build("f1")
         until { live != null }
+    }
+
+    /** The screen for [forum], as it opens. */
+    private fun build(forum: String) = ForumViewModel(
+        SavedStateHandle(mapOf("forumId" to forum)),
+        ForumsRepository(api, FileStore(context), context),
+        SavedRepository(api, Gson()),
+        socket,
+        session,
+    )
+
+    /** Opens [forum] afresh and waits for its list, past the first resume. */
+    private fun reopen(forum: String) {
+        model = build(forum)
+        until { model.uiState.value.posts.isNotEmpty() && !model.uiState.value.isLoading }
+        model.reloadOnForeground()
+    }
+
+    /** The reader leaves the app and comes back, and the list is read again. */
+    private fun comeBack() {
+        val before = lists.get()
+        model.reloadOnForeground()
+        until { lists.get() > before && !model.uiState.value.isLoading }
+        settle()
+    }
+
+    /** Lets everything already under way finish, a debounce included. */
+    private fun settle() {
+        repeat(20) {
+            shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS)
+            Thread.sleep(10)
+        }
     }
 
     @After
@@ -205,5 +252,63 @@ class ForumRefreshTest {
         held.countDown()
         until { !model.uiState.value.isRefreshing }
         assertEquals(1, model.uiState.value.posts.size)
+    }
+
+    @Test
+    fun `a sort saved for the forum elsewhere lists it in that order on coming back`() {
+        model.reloadOnForeground()
+        stored = "top"
+        comeBack()
+        assertEquals("top", model.uiState.value.sort)
+        assertEquals("top", sorts.last())
+    }
+
+    @Test
+    fun `a change to the forum arriving as the reader comes back still lists it in the sort saved elsewhere`() {
+        model.reloadOnForeground()
+        stored = "top"
+        val before = lists.get()
+        model.reloadOnForeground()
+        // Its reload replaces the one the return asked for.
+        live!!.send("""{"type": "post/edit", "post": "p1"}""")
+        until { lists.get() > before && model.uiState.value.sort == "top" && !model.uiState.value.isLoading }
+        settle()
+        assertEquals("top", sorts.last())
+    }
+
+    @Test
+    fun `a default sort saved elsewhere applies on coming back to a forum with none of its own`() {
+        stored = ""
+        reopen("f1")
+        standard = "top"
+        comeBack()
+        assertEquals("top", model.uiState.value.sort)
+        assertEquals("top", sorts.last())
+    }
+
+    @Test
+    fun `coming back with the sort as it was refreshes the list in it`() {
+        model.reloadOnForeground()
+        comeBack()
+        assertEquals("new", model.uiState.value.sort)
+        assertEquals("new", sorts.last())
+    }
+
+    @Test
+    fun `every forum at once opens in the default sort saved for it`() {
+        standard = "top"
+        reopen(LastViewedStore.ALL)
+        assertEquals("top", model.uiState.value.sort)
+        assertEquals("top", sorts.last())
+    }
+
+    @Test
+    fun `every forum at once follows a default sort saved elsewhere on coming back`() {
+        reopen(LastViewedStore.ALL)
+        assertEquals("new", model.uiState.value.sort)
+        standard = "top"
+        comeBack()
+        assertEquals("top", model.uiState.value.sort)
+        assertEquals("top", sorts.last())
     }
 }

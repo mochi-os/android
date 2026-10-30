@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">ڪا بحالي ڪنجي ناهي</string>
     <string name="networks_connected">ڳنڍيل</string>
     <string name="networks_not_connected">ڳنڍيل ناهي</string>
+    <string name="networks_failure_unreachable">سرور تائين پهچي نٿو سگهجي</string>
+    <string name="networks_failure_status">سرور غلطي %1$s سان جواب ڏنو</string>
+    <string name="networks_failure_closed">سرور ڪنيڪشن ختم ڪري ڇڏيو</string>
+    <string name="networks_failure_blocked">سرور سان ڪنيڪشن بلاڪ ٿيل آهن</string>
+    <string name="networks_failure_signed_out">سرور هاڻي هن اڪائونٽ جي سائن ان قبول نٿو ڪري؛ ان کي ٻيهر ڳنڍيو</string>
+    <string name="networks_failure_failed">سرور سان ڪنيڪشن ناڪام ٿيو</string>
+    <string name="networks_failure_retry">%1$s تي ٻيهر ڪوشش ڪئي ويندي</string>
     <string name="networks_profile">پروفائيل</string>
     <string name="networks_profile_show">پروفائيل تي ڏيکاريو</string>
     <string name="networks_profile_hide">پروفائيل مان لڪايو</string>
@@ -549,6 +556,12 @@
     <string name="handles_title">هينڊل</string>
     <string name="handles_take">نالو وٺو</string>
     <string name="handles_empty">ڪو به هينڊل مخصوص ناهي ڪيو ويو.</string>
+    <string name="handles_empty_search">ڪو هينڊل توهان جي ڳولا سان نه ملندو</string>
+    <string name="handles_search_placeholder">هينڊل ڳوليو…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s هينڊل مان %1$s–%2$s ڏيکاريا پيا وڃن</item>
+        <item quantity="other">%3$s هينڊلن مان %1$s–%2$s ڏيکاريا پيا وڃن</item>
+    </plurals>
     <string name="handles_community">برادري</string>
     <string name="handles_name_under">%1$s هيٺ نالو</string>
     <string name="handles_taken_down">بند ٿيل</string>

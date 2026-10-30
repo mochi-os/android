@@ -231,13 +231,15 @@
     <string name="feeds_boosted_by">%1$s mast\'arirqan</string>
     <string name="feeds_pinned">Fijasqa</string>
     <string name="feeds_visibility_followers">Qatiqkunallapaq</string>
-    <string name="feeds_show_more">Astawan rikuchiy</string>
-    <string name="feeds_show_less">Pisita rikuchiy</string>
+    <string name="feeds_show_post">Qillqata rikuchiy</string>
+    <string name="feeds_hide_post">Qillqata pakay</string>
     <string name="feeds_also_on">%1$s-pipas</string>
     <string name="feeds_show_sensitive_media">Sensible multimediata rikuchiy</string>
     <string name="feeds_poll_closed">Wichq\'asqa</string>
     <string name="feeds_poll_closes">%1$s wichq\'akunqa</string>
     <string name="feeds_poll_vote">Votay</string>
+    <string name="feeds_poll_see_results">Yupaykunata rikuchiy</string>
+    <string name="feeds_poll_hide_results">Yupaykunata pakay</string>
     <string name="feeds_reply_from">Kaymantapas kutichiy</string>
     <string name="feeds_reply_from_none">Mana cuentayuq</string>
     <string name="feeds_mute">Ch\'inyachiy</string>

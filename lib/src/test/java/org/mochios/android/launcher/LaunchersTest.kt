@@ -6,6 +6,9 @@
 package org.mochios.android.launcher
 
 import android.content.Intent
+import org.robolectric.Shadows.shadowOf
+import android.content.pm.PackageManager
+import android.content.pm.ActivityInfo
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
@@ -48,6 +51,33 @@ class LaunchersTest {
         assertFalse(launchable("air"))
         assertFalse(launchable(null))
         assertNull(launcherIntentFor(context, "air"))
+    }
+
+    @Test
+    fun `an app whose launcher activity is switched off cannot be started until it is switched on`() {
+        val component = launcherComponentFor(context, "staff")!!
+        shadowOf(context.packageManager).addOrUpdateActivity(
+            ActivityInfo().apply {
+                packageName = context.packageName
+                name = component.className
+                enabled = false
+            },
+        )
+        assertFalse(launcherEnabled(context, "staff"))
+        context.packageManager.setComponentEnabledSetting(
+            component,
+            PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+            PackageManager.DONT_KILL_APP,
+        )
+        assertTrue(launcherEnabled(context, "staff"))
+        context.packageManager.setComponentEnabledSetting(
+            component,
+            PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+            PackageManager.DONT_KILL_APP,
+        )
+        assertFalse(launcherEnabled(context, "staff"))
+        // No class at all: never startable.
+        assertFalse(launcherEnabled(context, "air"))
     }
 
     @Test

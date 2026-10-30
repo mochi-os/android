@@ -233,13 +233,15 @@
     <string name="feeds_boosted_by">Impulsado por %1$s</string>
     <string name="feeds_pinned">Fixado</string>
     <string name="feeds_visibility_followers">Só seguidores</string>
-    <string name="feeds_show_more">Mostrar máis</string>
-    <string name="feeds_show_less">Mostrar menos</string>
+    <string name="feeds_show_post">Mostrar publicación</string>
+    <string name="feeds_hide_post">Ocultar publicación</string>
     <string name="feeds_also_on">Tamén en %1$s</string>
     <string name="feeds_show_sensitive_media">Mostrar multimedia sensible</string>
     <string name="feeds_poll_closed">Pechada</string>
     <string name="feeds_poll_closes">Pecha %1$s</string>
     <string name="feeds_poll_vote">Votar</string>
+    <string name="feeds_poll_see_results">Mostrar resultados</string>
+    <string name="feeds_poll_hide_results">Ocultar resultados</string>
     <string name="feeds_reply_from">Responder tamén desde</string>
     <string name="feeds_reply_from_none">Sen conta</string>
     <string name="feeds_mute">Silenciar</string>

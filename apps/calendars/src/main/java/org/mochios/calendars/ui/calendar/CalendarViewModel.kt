@@ -71,7 +71,8 @@ import javax.inject.Inject
 /**
  * The calendar screen. [anchor] is the date the view is built around,
  * [focus] the day the user last chose, which the date panel circles and a new
- * event lands on, [listed] the day atop the list view as it scrolls, which
+ * event lands on while the view does not show today, [listed] the day atop
+ * the list view as it scrolls, which
  * its title names and a new event there lands on instead, until the anchor
  * changes, and [hidden] the calendars this device does not show,
  * which is a viewing choice and never leaves the phone. [sole] is a calendar
@@ -196,6 +197,9 @@ class CalendarViewModel @Inject constructor(
 
     private var loading: Job? = null
 
+    /** The calendars and preferences being read again, which a newer read replaces. */
+    private var reading: Job? = null
+
     /** True once the calendars and preferences have been read, so a range can be fetched. */
     private var ready = false
 
@@ -218,12 +222,16 @@ class CalendarViewModel @Inject constructor(
     // the editor showing a hidden calendar an event was just saved into.
     private val unwatch = VisibilityStore.watch(context) { shade() }
 
+    /**
+     * Today as of the last look, where the user is, as every view measures
+     * it, not where the phone's clock is set; a view left on it moves on with
+     * the date.
+     */
+    private var current: LocalDate = LocalDate.now(zone)
+
     init {
         val view = calendarsView(LastViewedStore.get(context, CALENDARS_FEATURE).orEmpty())
-        // Today where the user is, as every view measures it, not where the
-        // phone's clock is set.
-        val today = LocalDate.now(zone)
-        _uiState.value = _uiState.value.copy(view = view, anchor = today, focus = today)
+        _uiState.value = _uiState.value.copy(view = view, anchor = current, focus = current)
         viewModelScope.launch {
             repository.calendarsChanged.collect { reload() }
         }
@@ -239,6 +247,12 @@ class CalendarViewModel @Inject constructor(
                 if (sole != null && calendar != sole) whole()
             }
         }
+        viewModelScope.launch {
+            // The user's zone or first day changed, on the web or in settings:
+            // every range is measured again in it. A read under way measures
+            // its range once the calendars are in, so it is in the new one.
+            viewer.changes().collect { revisit() }
+        }
         reload()
     }
 
@@ -246,10 +260,12 @@ class CalendarViewModel @Inject constructor(
      * The calendars, the preferences and the range, from cold. [refreshing]
      * only for the reader's own pull, which shows the pull's spinner; every
      * other reload is silent, and shows the full loader only the first time,
-     * before any calendar is known.
+     * before any calendar is known. [reset] as [load] takes it. A reload
+     * replaces one still under way.
      */
-    fun reload(refreshing: Boolean = false) {
-        viewModelScope.launch {
+    fun reload(refreshing: Boolean = false, reset: Boolean = true) {
+        reading?.cancel()
+        reading = viewModelScope.launch {
             val state = _uiState.value
             _uiState.value = state.copy(
                 isLoading = !refreshing && state.instances.isEmpty() && state.calendars.isEmpty(),
@@ -272,11 +288,13 @@ class CalendarViewModel @Inject constructor(
                     view = if (untouched) calendarsView(preferences.view) else _uiState.value.view,
                 )
                 ready = true
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, isRefreshing = false, error = e.toMochiError())
                 return@launch
             }
-            load(refreshing = refreshing)
+            load(refreshing = refreshing, reset = reset)
         }
     }
 
@@ -646,6 +664,25 @@ class CalendarViewModel @Inject constructor(
 
     fun today() {
         anchor(LocalDate.now(zone))
+    }
+
+    /**
+     * Back on screen: reads the calendars, the preferences and the range
+     * again, as the web's reads them when its tab regains focus, so a
+     * preference changed on the web or another device applies here; a read
+     * already under way is left to finish. A view left on today first moves
+     * to the new today when the date has changed since, as the web's follows
+     * today until another day is chosen.
+     */
+    fun revisit(today: LocalDate = LocalDate.now(zone)) {
+        val past = current
+        current = today
+        if (today != past && _uiState.value.anchor == past) {
+            _uiState.value = _uiState.value.copy(anchor = today, focus = today, listed = null)
+            reload()
+        } else if (reading?.isActive != true) {
+            reload(reset = false)
+        }
     }
 
     /** Moves the view back one period: a day, week, multiweek or month. */
@@ -1169,14 +1206,24 @@ class CalendarViewModel @Inject constructor(
     /**
      * Where a new event with no time of its own starts, in epoch seconds: on
      * [day] when a day cell was tapped; in the list on the day it has scrolled
-     * to, as its title names; and otherwise on the day the user last chose,
-     * which is today until they pick, tap or page to another.
+     * to, as its title names; elsewhere on today while the view shows it, as
+     * the web's does, and otherwise on the day the user last chose.
      */
     fun creation(day: LocalDate? = null, state: CalendarUiState = _uiState.value): Long {
         val now = ZonedDateTime.now(zone)
         val today = now.toLocalDate()
-        val chosen = day ?: state.listed.takeIf { state.view == CalendarsSection.LIST } ?: state.focus
+        val chosen = day ?: when (state.view) {
+            CalendarsSection.LIST -> state.listed ?: state.focus
+            else -> today.takeIf { shows(it, state) } ?: state.focus
+        }
         return defaultStart(chosen, today, now.toLocalTime(), state.preferences.hours).atZone(zone).toEpochSecond()
+    }
+
+    /** Whether the view draws [day]: a week only the days it shows, a month its whole grid. */
+    fun shows(day: LocalDate, state: CalendarUiState = _uiState.value): Boolean {
+        if (state.view == CalendarsSection.WEEK) return day in days(state)
+        val (from, until) = range(state)
+        return day.atStartOfDay(zone).toEpochSecond() in from until until
     }
 
     // ---- ranges ----

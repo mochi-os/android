@@ -574,7 +574,7 @@ private fun AccountMenu(account: NetworkAccount, actions: AccountActions, close:
     if (account.hosted) {
         entry(R.string.networks_password_title, Icons.AutoMirrored.Filled.Login, actions.onPassword)
         if (homed(account)) entry(R.string.networks_home, Icons.Outlined.Home, actions.onHome)
-        entry(R.string.networks_keys, Icons.Outlined.Key, actions.onKeys)
+        if (keyed(account)) entry(R.string.networks_keys, Icons.Outlined.Key, actions.onKeys)
         if (account.type == "fediverse") {
             entry(
                 if (account.automated) R.string.networks_mark_person else R.string.networks_mark_automated,

@@ -319,8 +319,8 @@
           Staff (operator console). Off by default, so it cannot be started -
           switched on at runtime by StaffAccessController once the bound
           identity passes a `staffApi.me()` check, or by the home grid when the
-          server lists Staff for the user. Switched off again on sign-out, role
-          revocation, or any 401/403 from a staff endpoint.
+          server lists Staff for the user. Switched off again on sign-out, or
+          when that check finds no staff role.
         -->
         <activity
             android:name=".MochiStaffLauncher"

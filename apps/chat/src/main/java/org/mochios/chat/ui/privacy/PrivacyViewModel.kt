@@ -46,13 +46,14 @@ class PrivacyViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(PrivacyUiState())
     val uiState: StateFlow<PrivacyUiState> = _uiState.asStateFlow()
 
-    init {
-        load()
-    }
-
+    /**
+     * Read the settings afresh, as the dialog does each time it opens: the
+     * model outlives the dialog, and what it read last time, or an edit left
+     * unsaved, may no longer be what the user has.
+     */
     fun load() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, failure = null)
+            _uiState.value = PrivacyUiState(isLoading = true)
             try {
                 val preferences = repository.getPreferences()
                 _uiState.value = _uiState.value.copy(value = preferences, loaded = preferences, isLoading = false)

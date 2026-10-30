@@ -6,7 +6,12 @@
 package org.mochios.settings.ui.networks
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -30,6 +35,8 @@ import org.mochios.settings.api.SystemSetting
 import org.mochios.settings.api.TokenClient
 import org.mochios.settings.api.Usage
 import org.mochios.settings.ui.handles.RegistryCard
+import org.mochios.settings.ui.handles.SystemHandlesList
+import org.mochios.settings.ui.handles.SystemHandlesUiState
 import org.mochios.settings.ui.home.SettingsHomeScreen
 import org.mochios.settings.ui.sessions.TokenRow
 import org.mochios.settings.ui.systemsettings.SystemSettingsContent
@@ -140,17 +147,30 @@ class OwnerScreensTest {
             name = "alice",
             username = "alice@example.com",
             holder = "Alice",
+            // Out of order, so the card's own sort shows.
             accounts = listOf(
+                RegistryAccount(id = "f1", network = "fediverse", identifier = "@alice@a.example"),
                 RegistryAccount(id = "b1", network = "bluesky", identifier = "alice.a.example", did = "did:plc:1"),
                 RegistryAccount(id = "b2", network = "bluesky", identifier = "news.a.example", did = "did:plc:2", status = "takendown"),
-                RegistryAccount(id = "f1", network = "fediverse", identifier = "@alice@a.example"),
             ),
         )
         rule.setContent {
             RegistryCard(handle = handle, busy = null, onTakedown = { down += it.id }, onRestore = { restored += it.id }, onRelease = {})
         }
         rule.onNodeWithText("Alice · alice@example.com").assertExists()
-        rule.onNodeWithText("Bluesky · news.a.example · " + text(R.string.handles_taken_down)).assertExists()
+        // The networks by name, not the addresses; the taken-down one says so.
+        rule.onAllNodesWithText("Bluesky").assertCountEquals(2)
+        rule.onAllNodesWithText("Fediverse").assertCountEquals(1)
+        rule.onNodeWithText("@alice@a.example").assertDoesNotExist()
+        rule.onNodeWithText("news.a.example").assertDoesNotExist()
+        val gone = SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, text(R.string.handles_taken_down))
+        rule.onAllNodes(hasText("Bluesky") and gone).assertCountEquals(1)
+        rule.onAllNodes(hasText("Fediverse") and gone).assertCountEquals(0)
+        // Sorted by network name: Bluesky, Bluesky, Fediverse.
+        val names = rule.onAllNodes(hasText("Bluesky") or hasText("Fediverse")).fetchSemanticsNodes()
+            .sortedBy { it.positionInRoot.x }
+            .map { it.config[SemanticsProperties.Text].joinToString() }
+        assertEquals(listOf("Bluesky", "Bluesky", "Fediverse"), names)
         rule.onNodeWithContentDescription(text(R.string.networks_handle_actions)).performClick()
         rule.onNodeWithText(text(R.string.handles_take_down, "@alice@a.example")).assertDoesNotExist()
         rule.onNodeWithText(text(R.string.handles_take_down, "alice.a.example")).performClick()
@@ -158,6 +178,57 @@ class OwnerScreensTest {
         rule.onNodeWithText(text(R.string.handles_restore, "news.a.example")).performClick()
         assertEquals(listOf("b1"), down)
         assertEquals(listOf("b2"), restored)
+    }
+
+    private fun handles(state: SystemHandlesUiState, next: () -> Unit = {}) {
+        rule.setContent {
+            SystemHandlesList(
+                state = state,
+                onRetry = {},
+                check = { _, _ -> null },
+                onReserve = { _, _, _ -> },
+                onTakedown = {},
+                onRestore = {},
+                onRelease = {},
+                onLimit = {},
+                onPrevious = {},
+                onNext = next,
+            )
+        }
+    }
+
+    @Test
+    fun `the handles are paged, the line naming handles`() {
+        var nexted = 0
+        // A short page, so the lazy list composes the pages line too.
+        val page = (0 until 2).map { RegistryHandle(domain = "a.example", name = "name$it", username = "u@a.example") }
+        handles(SystemHandlesUiState(isLoading = false, handles = page, count = 60, limit = 25, offset = 0), next = { nexted++ })
+        val line = RuntimeEnvironment.getApplication().resources
+            .getQuantityString(R.plurals.handles_pagination_status, 60, "1", "25", "60")
+        assertEquals("Showing 1–25 of 60 handles", line)
+        rule.onNodeWithText(line).performScrollTo().assertExists()
+        rule.onNodeWithText(text(R.string.system_users_next)).performScrollTo().performClick()
+        assertEquals(1, nexted)
+    }
+
+    @Test
+    fun `one page of handles has no pages`() {
+        handles(SystemHandlesUiState(isLoading = false, handles = listOf(RegistryHandle(domain = "a.example", name = "alice")), count = 1))
+        rule.onNodeWithText(text(R.string.system_users_next)).assertDoesNotExist()
+    }
+
+    @Test
+    fun `an empty search says nothing matches, an empty registry that nothing is reserved`() {
+        handles(SystemHandlesUiState(isLoading = false, search = "zzz"))
+        rule.onNodeWithText(text(R.string.handles_empty_search)).assertExists()
+        rule.onNodeWithText(text(R.string.handles_empty)).assertDoesNotExist()
+    }
+
+    @Test
+    fun `an empty registry says nothing is reserved`() {
+        handles(SystemHandlesUiState(isLoading = false))
+        rule.onNodeWithText(text(R.string.handles_empty)).assertExists()
+        rule.onNodeWithText(text(R.string.handles_empty_search)).assertDoesNotExist()
     }
 
     @Test

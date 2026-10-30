@@ -27,9 +27,10 @@ import org.robolectric.annotation.GraphicsMode
 import java.time.LocalDate
 
 /**
- * The calendar's toolbar: a month title that opens the date panel, today, a
- * new event, the view switcher, and search from every view, as the web's box
- * is, with no arrows, the views paging by a swipe.
+ * The calendar's toolbar: a month title that opens the date panel, then
+ * today, a new event, search from every view, as the web's box is, and the
+ * view switcher, in the web's order, with no arrows, the views paging by a
+ * swipe.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "en-rGB-w400dp-h800dp")
@@ -92,6 +93,21 @@ class ToolbarTest {
         show(CalendarsSection.WEEK)
         rule.onNodeWithContentDescription(context.getString(R.string.calendars_event_new)).performClick()
         assertEquals(1, created)
+    }
+
+    @Test
+    fun `the bar's buttons run as the web's do, today, a new event, search, then the view`() {
+        show(CalendarsSection.MONTH)
+        val order = listOf(
+            R.string.calendars_today,
+            R.string.calendars_event_new,
+            R.string.calendars_list_search,
+            R.string.calendars_view,
+        ).map { label ->
+            rule.onNodeWithContentDescription(context.getString(label)).fetchSemanticsNode().boundsInRoot.left
+        }
+        assertEquals(order.sorted(), order)
+        assertEquals(order.size, order.toSet().size)
     }
 
     @Test

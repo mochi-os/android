@@ -233,13 +233,15 @@
     <string name="feeds_boosted_by">Versterk deur %1$s</string>
     <string name="feeds_pinned">Vasgespeld</string>
     <string name="feeds_visibility_followers">Slegs volgers</string>
-    <string name="feeds_show_more">Wys meer</string>
-    <string name="feeds_show_less">Wys minder</string>
+    <string name="feeds_show_post">Wys plasing</string>
+    <string name="feeds_hide_post">Versteek plasing</string>
     <string name="feeds_also_on">Ook op %1$s</string>
     <string name="feeds_show_sensitive_media">Wys sensitiewe media</string>
     <string name="feeds_poll_closed">Gesluit</string>
     <string name="feeds_poll_closes">Sluit op %1$s</string>
     <string name="feeds_poll_vote">Stem</string>
+    <string name="feeds_poll_see_results">Wys resultate</string>
+    <string name="feeds_poll_hide_results">Versteek resultate</string>
     <string name="feeds_reply_from">Antwoord ook van</string>
     <string name="feeds_reply_from_none">Geen rekening</string>
     <string name="feeds_mute">Demp</string>

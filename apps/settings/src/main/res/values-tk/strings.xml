@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Dikeldiş açary ýok</string>
     <string name="networks_connected">Baglandy</string>
     <string name="networks_not_connected">Baglanmadyk</string>
+    <string name="networks_failure_unreachable">Serwere baryp bolmaýar</string>
+    <string name="networks_failure_status">Serwer %1$s ýalňyşlygy bilen jogap berdi</string>
+    <string name="networks_failure_closed">Serwer birikmäni kesdi</string>
+    <string name="networks_failure_blocked">Serwer bilen birikmeler petiklenen</string>
+    <string name="networks_failure_signed_out">Serwer indi bu hasabyň girişini kabul etmeýär; ony täzeden baglanyşdyryň</string>
+    <string name="networks_failure_failed">Serwer bilen birikme şowsuz boldy</string>
+    <string name="networks_failure_retry">Täzeden synanyşyk: %1$s</string>
     <string name="networks_profile">Profil</string>
     <string name="networks_profile_show">Profilde görkezmek</string>
     <string name="networks_profile_hide">Profilden gizlemek</string>
@@ -549,6 +556,12 @@
     <string name="handles_title">Lakamlar</string>
     <string name="handles_take">At almak</string>
     <string name="handles_empty">Hiç hili lakam bronlanmadyk.</string>
+    <string name="handles_empty_search">Gözlegiňize laýyk gelýän lakamlar ýok</string>
+    <string name="handles_search_placeholder">Lakamlary gözle…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s lakamdan %1$s–%2$s aralygy görkezilýär</item>
+        <item quantity="other">%3$s lakamdan %1$s–%2$s aralygy görkezilýär</item>
+    </plurals>
     <string name="handles_community">Jemgyýet</string>
     <string name="handles_name_under">%1$s aşagyndaky at</string>
     <string name="handles_taken_down">Togtadyldy</string>

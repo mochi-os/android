@@ -518,6 +518,13 @@
     <string name="networks_no_recovery">لا يوجد مفتاح استرداد</string>
     <string name="networks_connected">متصل</string>
     <string name="networks_not_connected">غير متصل</string>
+    <string name="networks_failure_unreachable">تعذّر الوصول إلى الخادم</string>
+    <string name="networks_failure_status">ردّ الخادم بالخطأ %1$s</string>
+    <string name="networks_failure_closed">أنهى الخادم الاتصال</string>
+    <string name="networks_failure_blocked">الاتصالات بالخادم محظورة</string>
+    <string name="networks_failure_signed_out">لم يعد الخادم يقبل تسجيل الدخول لهذا الحساب؛ أعد ربطه</string>
+    <string name="networks_failure_failed">فشل الاتصال بالخادم</string>
+    <string name="networks_failure_retry">إعادة المحاولة في %1$s</string>
     <string name="networks_profile">الملف الشخصي</string>
     <string name="networks_profile_show">إظهار في الملف الشخصي</string>
     <string name="networks_profile_hide">إخفاء من الملف الشخصي</string>
@@ -589,6 +596,16 @@
     <string name="handles_title">المعرّفات</string>
     <string name="handles_take">احجز اسمًا</string>
     <string name="handles_empty">لم يتم حجز أي معرّف.</string>
+    <string name="handles_empty_search">لا توجد معرّفات تطابق بحثك</string>
+    <string name="handles_search_placeholder">البحث عن معرّفات…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="zero">عرض %1$s–%2$s من أصل %3$s معرّف</item>
+        <item quantity="one">عرض %1$s–%2$s من أصل %3$s معرّف</item>
+        <item quantity="two">عرض %1$s–%2$s من أصل %3$s معرّفَين</item>
+        <item quantity="few">عرض %1$s–%2$s من أصل %3$s معرّفات</item>
+        <item quantity="many">عرض %1$s–%2$s من أصل %3$s معرّفًا</item>
+        <item quantity="other">عرض %1$s–%2$s من أصل %3$s معرّف</item>
+    </plurals>
     <string name="handles_community">مجتمع</string>
     <string name="handles_name_under">اسم تحت %1$s</string>
     <string name="handles_taken_down">محجوب</string>

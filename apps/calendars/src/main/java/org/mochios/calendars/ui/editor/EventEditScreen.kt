@@ -523,8 +523,10 @@ private fun PlainField(
         keyboardOptions = keyboardOptions,
         keyboardActions = keyboardActions,
         cursorBrush = SolidColor(colours.primary),
+        // The placeholder sits on the first line, where the cursor and the
+        // text go, not across the middle of a field of several lines.
         decorationBox = { field ->
-            Box(modifier = Modifier.padding(vertical = 12.dp), contentAlignment = Alignment.CenterStart) {
+            Box(modifier = Modifier.padding(vertical = 12.dp), contentAlignment = Alignment.TopStart) {
                 if (value.text.isEmpty()) {
                     Text(
                         text = placeholder,

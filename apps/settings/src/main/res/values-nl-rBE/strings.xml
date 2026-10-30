@@ -445,6 +445,13 @@
     <string name="networks_no_recovery">Geen herstelsleutel</string>
     <string name="networks_connected">Verbonden</string>
     <string name="networks_not_connected">Niet verbonden</string>
+    <string name="networks_failure_unreachable">De server is onbereikbaar</string>
+    <string name="networks_failure_status">De server antwoordde met fout %1$s</string>
+    <string name="networks_failure_closed">De server heeft de verbinding verbroken</string>
+    <string name="networks_failure_blocked">Verbindingen met de server zijn geblokkeerd</string>
+    <string name="networks_failure_signed_out">De server aanvaardt de aanmelding van dit account niet meer; koppel het opnieuw</string>
+    <string name="networks_failure_failed">De verbinding met de server is mislukt</string>
+    <string name="networks_failure_retry">Nieuwe poging om %1$s</string>
     <string name="networks_profile">Profiel</string>
     <string name="networks_profile_show">Tonen op profiel</string>
     <string name="networks_profile_hide">Verbergen op profiel</string>
@@ -516,6 +523,12 @@
     <string name="handles_title">Gebruikersnamen</string>
     <string name="handles_take">Neem een naam</string>
     <string name="handles_empty">Er zijn geen gebruikersnamen gereserveerd.</string>
+    <string name="handles_empty_search">Geen gebruikersnamen komen overeen met je zoekopdracht</string>
+    <string name="handles_search_placeholder">Gebruikersnamen zoeken…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%1$s–%2$s van %3$s gebruikersnaam weergegeven</item>
+        <item quantity="other">%1$s–%2$s van %3$s gebruikersnamen weergegeven</item>
+    </plurals>
     <string name="handles_community">Gemeenschap</string>
     <string name="handles_name_under">Naam onder %1$s</string>
     <string name="handles_taken_down">Offline gehaald</string>

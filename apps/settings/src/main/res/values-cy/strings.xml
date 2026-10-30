@@ -518,6 +518,13 @@
     <string name="networks_no_recovery">Dim allwedd adfer</string>
     <string name="networks_connected">Wedi cysylltu</string>
     <string name="networks_not_connected">Heb gysylltu</string>
+    <string name="networks_failure_unreachable">Does dim modd cyrraedd y gweinydd</string>
+    <string name="networks_failure_status">Atebodd y gweinydd gyda gwall %1$s</string>
+    <string name="networks_failure_closed">Daeth y gweinydd â\'r cysylltiad i ben</string>
+    <string name="networks_failure_blocked">Mae cysylltiadau â\'r gweinydd wedi\'u rhwystro</string>
+    <string name="networks_failure_signed_out">Nid yw\'r gweinydd yn derbyn mewngofnodi\'r cyfrif hwn mwyach; cysylltwch ef eto</string>
+    <string name="networks_failure_failed">Methodd y cysylltiad â\'r gweinydd</string>
+    <string name="networks_failure_retry">Rhoi cynnig arall arni am %1$s</string>
     <string name="networks_profile">Proffil</string>
     <string name="networks_profile_show">Dangos ar y proffil</string>
     <string name="networks_profile_hide">Cuddio o\'r proffil</string>
@@ -589,6 +596,16 @@
     <string name="handles_title">Enwau defnyddiwr</string>
     <string name="handles_take">Cymerwch enw</string>
     <string name="handles_empty">Nid oes unrhyw enwau defnyddiwr wedi\'u neilltuo.</string>
+    <string name="handles_empty_search">Nid oes unrhyw enwau defnyddiwr yn cyfateb i\'ch chwiliad</string>
+    <string name="handles_search_placeholder">Chwilio enwau defnyddiwr…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="zero">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="one">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="two">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="few">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="many">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+        <item quantity="other">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
+    </plurals>
     <string name="handles_community">Cymuned</string>
     <string name="handles_name_under">Enw o dan %1$s</string>
     <string name="handles_taken_down">Wedi\'i dynnu i lawr</string>

@@ -13,11 +13,10 @@ import org.junit.Test
 import org.mochios.settings.api.Handle
 import org.mochios.settings.api.Handles
 import org.mochios.settings.api.NetworkAccount
+import org.mochios.settings.api.NetworkFailure
 import org.mochios.settings.api.NetworkFeed
 import org.mochios.settings.api.NetworksData
 import org.mochios.settings.api.OtherToken
-import org.mochios.settings.api.RegistryHandle
-import org.mochios.settings.ui.handles.registryOrder
 import org.mochios.settings.ui.sessions.recentFirst
 
 /** The rules the Networks screen shares with the web page. */
@@ -83,6 +82,7 @@ class NetworksRulesTest {
     fun `an account's card says the most pressing thing about it`() {
         val feeds = listOf(NetworkFeed(id = "f", privacy = "private"))
         val base = NetworkAccount(type = "fediverse", hosted = true, server = "a.example")
+        assertEquals(AccountStatus.Failure(NetworkFailure("closed")), accountStatus(base.copy(failure = NetworkFailure("closed"), error = "refused"), feeds))
         assertEquals(AccountStatus.Failed("refused"), accountStatus(base.copy(error = "refused", moved = "x"), feeds))
         assertEquals(AccountStatus.Moved("@a@b"), accountStatus(base.copy(moved = "@a@b", home = "gone"), feeds))
         assertEquals(AccountStatus.HomeDeleted, accountStatus(base.copy(home = "gone"), feeds))
@@ -103,20 +103,5 @@ class NetworksRulesTest {
             OtherToken(hash = "unused-new", used = 0, created = 60),
         )
         assertEquals(listOf("recent", "old", "unused-new", "unused"), recentFirst(tokens).map { it.hash })
-    }
-
-    @Test
-    fun `the registry lists each domain's handles with the names under each`() {
-        // By name alone alice2 would sit between alice and the name under it.
-        val handles = listOf(
-            RegistryHandle(domain = "b.example", name = "bob"),
-            RegistryHandle(domain = "a.example", name = "alice_news", parent = "alice"),
-            RegistryHandle(domain = "a.example", name = "alice2"),
-            RegistryHandle(domain = "a.example", name = "alice"),
-        )
-        assertEquals(
-            listOf("alice", "alice_news", "alice2", "bob"),
-            registryOrder(handles).map { it.name },
-        )
     }
 }

@@ -83,6 +83,9 @@ class CalendarFlowTest {
     @Volatile private var whole = false
     @Volatile private var written = ""
 
+    /** The preferences the server holds, as its JSON. */
+    @Volatile private var preferences = "{}"
+
     /**
      * Held until released: the preferences write, and a listing that starts
      * at or after [held], which answers with a concert at its start. [last]
@@ -109,7 +112,7 @@ class CalendarFlowTest {
                     "-/calendars" -> ok(
                         """{"calendars": [{"id": "c1", "name": "Home", "default": true}, {"id": "c2", "name": "Work"}]}""",
                     )
-                    "-/preferences/get" -> ok("""{"preferences": {}}""")
+                    "-/preferences/get" -> ok("""{"preferences": $preferences}""")
                     "-/preferences/set" -> {
                         saving?.await(10, TimeUnit.SECONDS)
                         ok("""{"preferences": {"view": "list"}}""")
@@ -273,8 +276,93 @@ class CalendarFlowTest {
         assertEquals(today.minusDays(20), day(model.creation()))
         // Another view has no day atop it, and goes on the day last chosen.
         model.listed(today.plusDays(40))
-        model.view(CalendarsSection.MONTH)
+        model.view(CalendarsSection.DAY)
         assertEquals(today.minusDays(20), day(model.creation()))
+    }
+
+    @Test
+    fun `a new event from the toolbar lands on today while the view shows it, whatever day was chosen, as the web's does`() {
+        val model = model()
+        val day = { seconds: Long -> Instant.ofEpochSecond(seconds).atZone(london).toLocalDate() }
+        val today = LocalDate.now(london)
+        // Today's own start may be tomorrow's working hours, late at night.
+        val expected = day(model.creation(today))
+        model.view(CalendarsSection.MONTH)
+        model.today()
+        // A day tapped on the grid yesterday is the chosen one, and today still wins.
+        model.focus(today.minusDays(1))
+        assertEquals(expected, day(model.creation()))
+        model.view(CalendarsSection.WEEK)
+        assertEquals(expected, day(model.creation()))
+        // A view that does not show today goes on the day chosen in it.
+        model.anchor(today.plusWeeks(3))
+        model.focus(today.plusWeeks(3).plusDays(1))
+        assertEquals(today.plusWeeks(3).plusDays(1), day(model.creation()))
+    }
+
+    @Test
+    fun `a preference changed elsewhere applies when the screen comes back, and the first read is not doubled`() {
+        val model = CalendarViewModel(context, repository, London)
+        // On screen at once, while the first read is still under way.
+        model.revisit()
+        until { !model.uiState.value.isLoading && listings().isNotEmpty() }
+        settle()
+        val reads = { asked.count { it.path.orEmpty().contains("/-/preferences/get") } }
+        assertEquals(1, reads())
+        assertEquals("first", model.uiState.value.preferences.allday)
+        // Set to last on the web, then back to the phone.
+        preferences = """{"allday": "last"}"""
+        model.revisit()
+        until { model.uiState.value.preferences.allday == "last" }
+        assertEquals(2, reads())
+    }
+
+    @Test
+    fun `a view left on today moves on to the new today when the date changes, and one moved elsewhere stays`() {
+        val model = model()
+        val today = LocalDate.now(london)
+        model.view(CalendarsSection.WEEK)
+        model.revisit(today.plusDays(1))
+        assertEquals(today.plusDays(1), model.uiState.value.anchor)
+        assertEquals(today.plusDays(1), model.uiState.value.focus)
+        // Paged away, the view stays where it was put.
+        model.anchor(today.minusWeeks(2))
+        model.revisit(today.plusDays(2))
+        assertEquals(today.minusWeeks(2), model.uiState.value.anchor)
+        // The same day again reads the range and moves nothing.
+        model.revisit(today.plusDays(2))
+        assertEquals(today.minusWeeks(2), model.uiState.value.anchor)
+    }
+
+    @Test
+    fun `a zone or first day of the week changed elsewhere is measured again in at once`() {
+        val zone = java.util.concurrent.atomic.AtomicReference("Europe/London")
+        val week = java.util.concurrent.atomic.AtomicInteger(1)
+        val changes = kotlinx.coroutines.flow.MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+        val viewer = object : org.mochios.calendars.di.Viewer {
+            override fun zone(): String = zone.get()
+            override fun week(): Int = week.get()
+            override fun changes(): kotlinx.coroutines.flow.Flow<Unit> = changes
+            override suspend fun server(): String = "https://example.org"
+        }
+        val model = CalendarViewModel(context, repository, viewer)
+        until { !model.uiState.value.isLoading && listings().isNotEmpty() }
+        model.view(CalendarsSection.WEEK)
+        settle()
+        // Sunday first, in Tokyo, set on the web while the week is on screen.
+        val tokyo = ZoneId.of("Asia/Tokyo")
+        zone.set(tokyo.id)
+        week.set(0)
+        changes.tryEmit(Unit)
+        until {
+            val anchor = model.uiState.value.anchor
+            val sunday = anchor.minusDays((anchor.dayOfWeek.value % 7).toLong())
+            listings().any { listing ->
+                listing.requestUrl?.queryParameter("timezone") == tokyo.id &&
+                    listing.requestUrl?.queryParameter("start") == sunday.atStartOfDay(tokyo).toEpochSecond().toString()
+            }
+        }
+        assertEquals(LocalDate.now(tokyo), model.uiState.value.anchor)
     }
 
     // ---- search, views and refreshing ----

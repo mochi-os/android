@@ -468,6 +468,13 @@
     <string name="networks_no_recovery">ပြန်လည်ရယူရေးသော့ မရှိပါ</string>
     <string name="networks_connected">ချိတ်ဆက်ပြီး</string>
     <string name="networks_not_connected">ချိတ်ဆက်မထားပါ</string>
+    <string name="networks_failure_unreachable">ဆာဗာသို့ မရောက်ရှိနိုင်ပါ</string>
+    <string name="networks_failure_status">ဆာဗာက အမှား %1$s ဖြင့် ပြန်ဖြေသည်</string>
+    <string name="networks_failure_closed">ဆာဗာက ချိတ်ဆက်မှုကို အဆုံးသတ်လိုက်သည်</string>
+    <string name="networks_failure_blocked">ဆာဗာသို့ ချိတ်ဆက်မှုများကို ပိတ်ဆို့ထားသည်</string>
+    <string name="networks_failure_signed_out">ဆာဗာက ဤအကောင့်၏ ဝင်ရောက်မှုကို လက်မခံတော့ပါ၊ ပြန်လည်ချိတ်ဆက်ပါ</string>
+    <string name="networks_failure_failed">ဆာဗာသို့ ချိတ်ဆက်မှု မအောင်မြင်ပါ</string>
+    <string name="networks_failure_retry">%1$s တွင် ထပ်မံကြိုးစားမည်</string>
     <string name="networks_profile">ပရိုဖိုင်</string>
     <string name="networks_profile_show">ပရိုဖိုင်တွင် ပြမည်</string>
     <string name="networks_profile_hide">ပရိုဖိုင်မှ ဝှက်မည်</string>
@@ -539,6 +546,11 @@
     <string name="handles_title">သုံးစွဲသူအမည်များ</string>
     <string name="handles_take">အမည်တစ်ခု ယူပါ</string>
     <string name="handles_empty">ကြိုတင်ယူထားသော သုံးစွဲသူအမည် မရှိပါ။</string>
+    <string name="handles_empty_search">သင့်ရှာဖွေချက်နှင့် ကိုက်ညီသော သုံးစွဲသူအမည်များ မရှိပါ</string>
+    <string name="handles_search_placeholder">သုံးစွဲသူအမည်များ ရှာဖွေ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">သုံးစွဲသူအမည် %3$s ထဲမှ %1$s–%2$s ကို ပြသနေသည်</item>
+    </plurals>
     <string name="handles_community">အသိုင်းအဝိုင်း</string>
     <string name="handles_name_under">%1$s အောက်ရှိ အမည်</string>
     <string name="handles_taken_down">ဖြုတ်ချထားသည်</string>

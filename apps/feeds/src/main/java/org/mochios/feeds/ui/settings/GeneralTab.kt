@@ -74,15 +74,11 @@ fun GeneralTab(
             onSave = { value -> viewModel.saveBanner(value) }
         )
 
-        // Where a public feed publishes, and the owner's keyword filters.
+        // The owner's keyword filters; where the feed publishes has a tab of
+        // its own.
         val publishing: PublishingViewModel = hiltViewModel()
-        val privacy = feedInfo?.privacy
-        LaunchedEffect(privacy) {
-            if (privacy == "public") publishing.loadPublish()
-            publishing.loadFilters()
-        }
+        LaunchedEffect(Unit) { publishing.loadFilters() }
         PublishingEvents(publishing)
-        if (privacy == "public") PublishingSection(publishing)
         FiltersSection(publishing)
 
         ConfirmActionSection(

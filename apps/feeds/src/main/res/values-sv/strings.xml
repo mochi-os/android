@@ -233,13 +233,15 @@
     <string name="feeds_boosted_by">Boostad av %1$s</string>
     <string name="feeds_pinned">Fäst</string>
     <string name="feeds_visibility_followers">Endast följare</string>
-    <string name="feeds_show_more">Visa mer</string>
-    <string name="feeds_show_less">Visa mindre</string>
+    <string name="feeds_show_post">Visa inlägg</string>
+    <string name="feeds_hide_post">Dölj inlägg</string>
     <string name="feeds_also_on">Även på %1$s</string>
     <string name="feeds_show_sensitive_media">Visa känslig media</string>
     <string name="feeds_poll_closed">Avslutad</string>
     <string name="feeds_poll_closes">Avslutas %1$s</string>
     <string name="feeds_poll_vote">Rösta</string>
+    <string name="feeds_poll_see_results">Visa resultat</string>
+    <string name="feeds_poll_hide_results">Dölj resultat</string>
     <string name="feeds_reply_from">Svara också från</string>
     <string name="feeds_reply_from_none">Inget konto</string>
     <string name="feeds_mute">Tysta</string>

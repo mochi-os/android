@@ -71,6 +71,15 @@ class FeedReloadTest {
     /** Each post the client has marked read. */
     private val reads = ConcurrentLinkedQueue<String>()
 
+    /** The sort saved for the feed. */
+    @Volatile private var stored = "new"
+
+    /** The account's default sort, behind any feed's own. */
+    @Volatile private var standard = ""
+
+    /** The sort each list was asked for in. */
+    private val sorts = ConcurrentLinkedQueue<String>()
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -79,9 +88,15 @@ class FeedReloadTest {
                 val path = request.path.orEmpty().substringBefore("?")
                 return when {
                     path == "/feeds/f1/-/info" ->
-                        ok("""{"feed": {"id": "f1", "fingerprint": "f1", "name": "Feed", "sort": "new"}, "permissions": {}}""")
+                        ok("""{"feed": {"id": "f1", "fingerprint": "f1", "name": "Feed", "sort": "$stored"}, "permissions": {}}""")
+                    path == "/feeds/-/info" -> ok("""{"settings": {"sort": "$standard"}}""")
+                    path == "/feeds/f1/-/sort/set" -> {
+                        stored = Regex("sort=([^&]+)").find(request.body.readUtf8())?.groupValues?.get(1).orEmpty()
+                        ok("""{"sort": "$stored"}""")
+                    }
                     path == "/feeds/f1/-/posts" || path == "/feeds/-/posts" -> {
                         lists.incrementAndGet()
+                        sorts.add(request.requestUrl?.queryParameter("sort").orEmpty())
                         ok("""{"posts": [${listing.joinToString { id -> post(id) }}]}""")
                     }
                     path == "/feeds/f1/-/posts/read" -> {
@@ -250,6 +265,33 @@ class FeedReloadTest {
         listing = listOf("n1") + listing
         comeBack()
         assertEquals(listing, ids())
+    }
+
+    @Test
+    fun `a sort saved for the feed elsewhere lists it in that order on coming back`() {
+        open()
+        stored = "top"
+        comeBack()
+        assertEquals("top", model.currentSort.value)
+        assertEquals("top", sorts.last())
+        assertEquals(listing, ids())
+    }
+
+    @Test
+    fun `every feed at once follows a default sort saved elsewhere on coming back`() {
+        open(feed = "__all__")
+        standard = "top"
+        comeBack()
+        assertEquals("top", model.currentSort.value)
+        assertEquals("top", sorts.last())
+    }
+
+    @Test
+    fun `coming back with the sort as it was keeps the list in it`() {
+        open()
+        comeBack()
+        assertEquals("new", model.currentSort.value)
+        assertEquals("new", sorts.last())
     }
 
     @Test

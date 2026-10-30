@@ -488,6 +488,13 @@
     <string name="networks_no_recovery">Нема кључа за опоравак</string>
     <string name="networks_connected">Повезано</string>
     <string name="networks_not_connected">Није повезано</string>
+    <string name="networks_failure_unreachable">Сервер није доступан</string>
+    <string name="networks_failure_status">Сервер је одговорио грешком %1$s</string>
+    <string name="networks_failure_closed">Сервер је прекинуо везу</string>
+    <string name="networks_failure_blocked">Везе са сервером су блокиране</string>
+    <string name="networks_failure_signed_out">Сервер више не прихвата пријаву овог налога; поново га повежите</string>
+    <string name="networks_failure_failed">Повезивање са сервером није успело</string>
+    <string name="networks_failure_retry">Нови покушај у %1$s</string>
     <string name="networks_profile">Профил</string>
     <string name="networks_profile_show">Прикажи на профилу</string>
     <string name="networks_profile_hide">Сакриј са профила</string>
@@ -559,6 +566,13 @@
     <string name="handles_title">Надимци</string>
     <string name="handles_take">Узми име</string>
     <string name="handles_empty">Ниједан надимак није резервисан.</string>
+    <string name="handles_empty_search">Ниједан надимак не одговара вашој претрази</string>
+    <string name="handles_search_placeholder">Претражи надимке…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Приказ %1$s–%2$s од %3$s надимка</item>
+        <item quantity="few">Приказ %1$s–%2$s од %3$s надимка</item>
+        <item quantity="other">Приказ %1$s–%2$s од %3$s надимака</item>
+    </plurals>
     <string name="handles_community">Заједница</string>
     <string name="handles_name_under">Име под %1$s</string>
     <string name="handles_taken_down">Суспендован</string>

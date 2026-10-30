@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">ምንም የመልሶ ማግኛ ቁልፍ የለም</string>
     <string name="networks_connected">ተገናኝቷል</string>
     <string name="networks_not_connected">አልተገናኘም</string>
+    <string name="networks_failure_unreachable">አገልጋዩ ሊደረስበት አልቻለም</string>
+    <string name="networks_failure_status">አገልጋዩ በስህተት %1$s መለሰ</string>
+    <string name="networks_failure_closed">አገልጋዩ ግንኙነቱን አቋረጠ</string>
+    <string name="networks_failure_blocked">ከአገልጋዩ ጋር የሚደረጉ ግንኙነቶች ታግደዋል</string>
+    <string name="networks_failure_signed_out">አገልጋዩ የዚህን መለያ መግቢያ ከእንግዲህ አይቀበልም፤ እንደገና ያገናኙት</string>
+    <string name="networks_failure_failed">ከአገልጋዩ ጋር ያለው ግንኙነት አልተሳካም</string>
+    <string name="networks_failure_retry">በ%1$s እንደገና ይሞከራል</string>
     <string name="networks_profile">መገለጫ</string>
     <string name="networks_profile_show">በመገለጫ ላይ አሳይ</string>
     <string name="networks_profile_hide">ከመገለጫ ደብቅ</string>
@@ -549,6 +556,12 @@
     <string name="handles_title">የተጠቃሚ ስሞች</string>
     <string name="handles_take">ስም ይውሰዱ</string>
     <string name="handles_empty">ምንም የተጠቃሚ ስሞች አልተያዙም።</string>
+    <string name="handles_empty_search">ከፍለጋዎ ጋር የሚዛመዱ የተጠቃሚ ስሞች የሉም</string>
+    <string name="handles_search_placeholder">የተጠቃሚ ስሞችን ይፈልጉ…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">ከ%3$s የተጠቃሚ ስም %1$s–%2$s እየታየ ነው</item>
+        <item quantity="other">ከ%3$s የተጠቃሚ ስሞች %1$s–%2$s እየታዩ ነው</item>
+    </plurals>
     <string name="handles_community">ማህበረሰብ</string>
     <string name="handles_name_under">በ%1$s ስር ያለ ስም</string>
     <string name="handles_taken_down">ወርዷል</string>

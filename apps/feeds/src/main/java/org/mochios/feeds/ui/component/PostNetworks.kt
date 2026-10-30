@@ -30,13 +30,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.outlined.AttachFile
-import androidx.compose.material.icons.outlined.ExpandLess
-import androidx.compose.material.icons.outlined.ExpandMore
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Repeat
 import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material.icons.outlined.VisibilityOff
+import androidx.compose.material.icons.outlined.WarningAmber
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
@@ -70,6 +69,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.QuoteCard as LibQuoteCard
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.util.isWebUrl
 import org.mochios.android.util.openWeb
 import org.mochios.android.util.providerName
@@ -188,8 +188,9 @@ private fun Badge(icon: androidx.compose.ui.graphics.vector.ImageVector, label: 
 }
 
 /**
- * A post's content warning, and the control that shows what is behind it.
- * The caller hides the post's text, media and poll until [revealed].
+ * A post's content warning: a quiet strip, opened or closed by a tap
+ * anywhere on it. The caller hides the post's text, media and poll until
+ * [revealed].
  */
 @Composable
 internal fun PostWarning(
@@ -198,23 +199,34 @@ internal fun PostWarning(
     onToggle: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(8.dp))
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .clickable(role = Role.Button, onClick = onToggle)
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            Icons.Outlined.WarningAmber,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.size(18.dp),
+        )
+        Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = warning,
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Medium,
-            modifier = Modifier.weight(1f, fill = false),
+            modifier = Modifier.weight(1f),
         )
         Spacer(modifier = Modifier.width(8.dp))
-        MochiOutlinedButton(onClick = onToggle) {
-            Icon(
-                if (revealed) Icons.Outlined.ExpandLess else Icons.Outlined.ExpandMore,
-                contentDescription = null,
-                modifier = Modifier.size(ButtonDefaults.IconSize),
-            )
-            Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
-            Text(stringResource(if (revealed) R.string.feeds_show_less else R.string.feeds_show_more))
-        }
+        Text(
+            text = stringResource(if (revealed) R.string.feeds_hide_post else R.string.feeds_show_post),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.primary,
+        )
     }
 }
 
@@ -371,8 +383,11 @@ internal fun PostPollView(
     now: Long = System.currentTimeMillis() / 1000,
 ) {
     var chosen by remember(voted) { mutableStateOf(voted) }
+    // A reader who may still vote can look at the results first, and go back.
+    var peeking by remember { mutableStateOf(false) }
     val closed = poll.expires in 1..now
-    val results = closed || voted.isNotEmpty() || !canVote
+    val votable = !closed && voted.isEmpty() && canVote
+    val results = !votable || peeking
     val total = poll.options.sumOf { it.votes }
     val format = LocalFormat.current
     Column(
@@ -460,15 +475,20 @@ internal fun PostPollView(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f),
             )
-            if (!results) {
-                MochiButton(onClick = { onVote(chosen) }, enabled = chosen.isNotEmpty() && !busy) {
-                    if (busy) {
-                        CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
-                    } else {
-                        Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+            if (votable) {
+                MochiTextButton(onClick = { peeking = !peeking }) {
+                    Text(stringResource(if (peeking) R.string.feeds_poll_hide_results else R.string.feeds_poll_see_results))
+                }
+                if (!peeking) {
+                    MochiButton(onClick = { onVote(chosen) }, enabled = chosen.isNotEmpty() && !busy) {
+                        if (busy) {
+                            CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                        } else {
+                            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                        }
+                        Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                        Text(stringResource(R.string.feeds_poll_vote))
                     }
-                    Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.feeds_poll_vote))
                 }
             }
         }

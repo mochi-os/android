@@ -468,6 +468,13 @@
     <string name="networks_no_recovery">ບໍ່ມີກະແຈກູ້ຄືນ</string>
     <string name="networks_connected">ເຊື່ອມຕໍ່ແລ້ວ</string>
     <string name="networks_not_connected">ບໍ່ໄດ້ເຊື່ອມຕໍ່</string>
+    <string name="networks_failure_unreachable">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີໄດ້</string>
+    <string name="networks_failure_status">ເຊີບເວີຕອບກັບດ້ວຍຂໍ້ຜິດພາດ %1$s</string>
+    <string name="networks_failure_closed">ເຊີບເວີໄດ້ຕັດການເຊື່ອມຕໍ່</string>
+    <string name="networks_failure_blocked">ການເຊື່ອມຕໍ່ຫາເຊີບເວີຖືກບລັອກ</string>
+    <string name="networks_failure_signed_out">ເຊີບເວີບໍ່ຍອມຮັບການເຂົ້າສູ່ລະບົບຂອງບັນຊີນີ້ອີກແລ້ວ; ກະລຸນາເຊື່ອມໂຍງຄືນໃໝ່</string>
+    <string name="networks_failure_failed">ການເຊື່ອມຕໍ່ຫາເຊີບເວີລົ້ມເຫຼວ</string>
+    <string name="networks_failure_retry">ຈະລອງໃໝ່ເວລາ %1$s</string>
     <string name="networks_profile">ໂປຣໄຟລ໌</string>
     <string name="networks_profile_show">ສະແດງໃນໂປຣໄຟລ໌</string>
     <string name="networks_profile_hide">ເຊື່ອງຈາກໂປຣໄຟລ໌</string>
@@ -539,6 +546,11 @@
     <string name="handles_title">ຊື່ຜູ້ໃຊ້</string>
     <string name="handles_take">ເອົາຊື່</string>
     <string name="handles_empty">ບໍ່ມີຊື່ຜູ້ໃຊ້ທີ່ຖືກຈອງ.</string>
+    <string name="handles_empty_search">ບໍ່ມີຊື່ຜູ້ໃຊ້ທີ່ກົງກັບການຄົ້ນຫາຂອງທ່ານ</string>
+    <string name="handles_search_placeholder">ຄົ້ນຫາຊື່ຜູ້ໃຊ້…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="other">ກຳລັງສະແດງ %1$s–%2$s ຈາກ %3$s ຊື່ຜູ້ໃຊ້</item>
+    </plurals>
     <string name="handles_community">ຊຸມຊົນ</string>
     <string name="handles_name_under">ຊື່ພາຍໃຕ້ %1$s</string>
     <string name="handles_taken_down">ຖືກຖອນອອກ</string>

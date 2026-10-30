@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Sen chave de recuperación</string>
     <string name="networks_connected">Conectado</string>
     <string name="networks_not_connected">Non conectado</string>
+    <string name="networks_failure_unreachable">Non se pode acceder ao servidor</string>
+    <string name="networks_failure_status">O servidor respondeu co erro %1$s</string>
+    <string name="networks_failure_closed">O servidor pechou a conexión</string>
+    <string name="networks_failure_blocked">As conexións co servidor están bloqueadas</string>
+    <string name="networks_failure_signed_out">O servidor xa non acepta o inicio de sesión desta conta; volve a vinculala</string>
+    <string name="networks_failure_failed">Fallou a conexión co servidor</string>
+    <string name="networks_failure_retry">Volverase tentar ás %1$s</string>
     <string name="networks_profile">Perfil</string>
     <string name="networks_profile_show">Mostrar no perfil</string>
     <string name="networks_profile_hide">Ocultar do perfil</string>
@@ -549,6 +556,12 @@
     <string name="handles_title">Identificadores</string>
     <string name="handles_take">Colle un nome</string>
     <string name="handles_empty">Non se reservou ningún identificador.</string>
+    <string name="handles_empty_search">Ningún identificador coincide coa túa busca</string>
+    <string name="handles_search_placeholder">Buscar identificadores…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">Mostrando %1$s–%2$s de %3$s identificador</item>
+        <item quantity="other">Mostrando %1$s–%2$s de %3$s identificadores</item>
+    </plurals>
     <string name="handles_community">Comunidade</string>
     <string name="handles_name_under">Nome baixo %1$s</string>
     <string name="handles_taken_down">Retirada</string>

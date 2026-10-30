@@ -1197,13 +1197,18 @@ class FeedViewModel @Inject constructor(
             foregroundReloadArmed = true
             return
         }
+        if (!isAllFeeds && feedId.isBlank()) return
         viewModelScope.launch {
+            // A sort saved elsewhere in the meantime, this feed's own or the
+            // account's default behind it, lists the posts afresh in that order.
+            val before = _currentSort.value
             if (isAllFeeds) {
-                refreshSilently()
-            } else if (feedId.isNotBlank()) {
+                loadGlobalSort()
+            } else {
                 refreshFeedInfo()
-                refreshSilently()
+                _feedInfo.value?.let { feed -> applyFeedSort(feed) }
             }
+            if (_currentSort.value != before) reloadPosts() else refreshSilently()
         }
     }
 

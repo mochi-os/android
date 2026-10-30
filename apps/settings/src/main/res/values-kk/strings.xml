@@ -478,6 +478,13 @@
     <string name="networks_no_recovery">Қалпына келтіру кілті жоқ</string>
     <string name="networks_connected">Қосылды</string>
     <string name="networks_not_connected">Қосылмаған</string>
+    <string name="networks_failure_unreachable">Сервер қолжетімсіз</string>
+    <string name="networks_failure_status">Сервер %1$s қатесімен жауап берді</string>
+    <string name="networks_failure_closed">Сервер қосылымды үзді</string>
+    <string name="networks_failure_blocked">Серверге қосылымдар бұғатталған</string>
+    <string name="networks_failure_signed_out">Сервер бұл тіркелгінің кіруін енді қабылдамайды; оны қайта байланыстырыңыз</string>
+    <string name="networks_failure_failed">Серверге қосылу сәтсіз аяқталды</string>
+    <string name="networks_failure_retry">%1$s уақытында қайта әрекет жасалады</string>
     <string name="networks_profile">Профиль</string>
     <string name="networks_profile_show">Профильде көрсету</string>
     <string name="networks_profile_hide">Профильден жасыру</string>
@@ -549,6 +556,12 @@
     <string name="handles_title">Пайдаланушы аттары</string>
     <string name="handles_take">Атау алыңыз</string>
     <string name="handles_empty">Ешбір пайдаланушы аты брондалмаған.</string>
+    <string name="handles_empty_search">Іздеуіңізге сәйкес пайдаланушы аттары жоқ</string>
+    <string name="handles_search_placeholder">Пайдаланушы аттарын іздеу…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">%3$s пайдаланушы атының %1$s–%2$s көрсетілуде</item>
+        <item quantity="other">%3$s пайдаланушы атының %1$s–%2$s көрсетілуде</item>
+    </plurals>
     <string name="handles_community">Қауымдастық</string>
     <string name="handles_name_under">%1$s астындағы атау</string>
     <string name="handles_taken_down">Жариялаудан алынған</string>

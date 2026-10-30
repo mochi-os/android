@@ -490,6 +490,13 @@
     <string name="networks_no_recovery">אין מפתח שחזור</string>
     <string name="networks_connected">מחובר</string>
     <string name="networks_not_connected">לא מחובר</string>
+    <string name="networks_failure_unreachable">לא ניתן להגיע לשרת</string>
+    <string name="networks_failure_status">השרת השיב בשגיאה %1$s</string>
+    <string name="networks_failure_closed">השרת ניתק את החיבור</string>
+    <string name="networks_failure_blocked">החיבורים לשרת חסומים</string>
+    <string name="networks_failure_signed_out">השרת כבר לא מקבל את הכניסה של חשבון זה; יש לקשר אותו מחדש</string>
+    <string name="networks_failure_failed">החיבור לשרת נכשל</string>
+    <string name="networks_failure_retry">ניסיון נוסף בשעה %1$s</string>
     <string name="networks_profile">פרופיל</string>
     <string name="networks_profile_show">הצגה בפרופיל</string>
     <string name="networks_profile_hide">הסתרה מהפרופיל</string>
@@ -561,6 +568,14 @@
     <string name="handles_title">שמות משתמש</string>
     <string name="handles_take">קח שם</string>
     <string name="handles_empty">לא שוריינו שמות משתמש.</string>
+    <string name="handles_empty_search">לא נמצאו שמות משתמש תואמים לחיפוש שלך</string>
+    <string name="handles_search_placeholder">חפש שמות משתמש…</string>
+    <plurals name="handles_pagination_status">
+        <item quantity="one">מציג %1$s–%2$s מתוך %3$s שם משתמש</item>
+        <item quantity="two">מציג %1$s–%2$s מתוך %3$s שמות משתמש</item>
+        <item quantity="many">מציג %1$s–%2$s מתוך %3$s שמות משתמש</item>
+        <item quantity="other">מציג %1$s–%2$s מתוך %3$s שמות משתמש</item>
+    </plurals>
     <string name="handles_community">קהילה</string>
     <string name="handles_name_under">שם תחת %1$s</string>
     <string name="handles_taken_down">הורד</string>

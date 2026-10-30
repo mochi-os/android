@@ -5,14 +5,18 @@
 
 package org.mochios.feeds.ui.settings
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.Settings
+import androidx.compose.material.icons.outlined.Share
 import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -37,6 +41,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiIconButton
@@ -45,6 +50,7 @@ import org.mochios.android.ui.components.MochiTabRow
 import org.mochios.android.ui.components.SubscriberSettings as SubscriberSettingsLayout
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
+import org.mochios.feeds.model.PublishState
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -67,10 +73,18 @@ fun FeedSettingsScreen(
     // read-only identity card plus an unsubscribe action.
     val canManage = permissions.manage
 
-    // The AI tab only appears once the account has an AI-capable account.
-    val tabIds = listOf(SettingsTab.General, SettingsTab.Access, SettingsTab.Ai).filter { tab ->
-        tab != SettingsTab.Ai || aiAccounts.isNotEmpty()
+    // Where a public feed publishes is a tab of its own, shown only where
+    // there is an account to publish to.
+    val publishing: PublishingViewModel = hiltViewModel()
+    val publishState by publishing.publish.collectAsState()
+    val privacy = feedInfo?.privacy
+    LaunchedEffect(privacy, canManage) {
+        if (canManage && privacy == "public") publishing.loadPublish()
     }
+    val tabIds = settingsTabs(
+        publishable = publishable(privacy, publishState),
+        ai = aiAccounts.isNotEmpty(),
+    )
 
     // Persist tab by stable key so it survives back/forward navigation and
     // process death.
@@ -168,6 +182,7 @@ fun FeedSettingsScreen(
                             viewModel = viewModel,
                             onFeedDeleted = onFeedDeleted
                         )
+                        SettingsTab.Publish -> PublishTab(publishing)
                         SettingsTab.Access -> AccessTab(viewModel = viewModel)
                         SettingsTab.Ai -> AiTab(viewModel = viewModel)
                     }
@@ -201,8 +216,37 @@ private fun SubscriberSettings(
     )
 }
 
-private enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
+internal enum class SettingsTab(val titleRes: Int, val icon: ImageVector) {
     General(R.string.feeds_settings, Icons.Outlined.Settings),
+    Publish(R.string.feeds_publish_to, Icons.Outlined.Share),
     Access(R.string.feeds_tab_access, Icons.Outlined.Shield),
     Ai(R.string.feeds_tab_ai, Icons.Outlined.AutoAwesome),
+}
+
+/**
+ * The owner's tabs: Publish to before Access where the feed has somewhere to
+ * publish, and AI once the user has an AI-capable account.
+ */
+internal fun settingsTabs(publishable: Boolean, ai: Boolean): List<SettingsTab> =
+    SettingsTab.entries.filter { tab ->
+        (tab != SettingsTab.Publish || publishable) && (tab != SettingsTab.Ai || ai)
+    }
+
+/** Whether a feed has somewhere to publish: it is public and the owner holds an account to publish to. */
+internal fun publishable(privacy: String?, state: PublishState?): Boolean =
+    privacy == "public" && state?.accounts.orEmpty().isNotEmpty()
+
+/** Where a public feed publishes, on a tab of its own. */
+@Composable
+private fun PublishTab(publishing: PublishingViewModel) {
+    PublishingEvents(publishing)
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+    ) {
+        PublishingSection(publishing)
+    }
 }

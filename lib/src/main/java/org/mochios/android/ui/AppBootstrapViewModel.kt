@@ -32,7 +32,6 @@ import org.mochios.android.notifications.NotificationsUnreadStore
 import org.mochios.android.push.MochiPushClient
 import org.mochios.android.push.PushService
 import org.mochios.android.push.PushTransport
-import org.mochios.android.ui.theme.ThemeRepository
 import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
@@ -75,7 +74,6 @@ sealed class AuthStage {
 class AppBootstrapViewModel @Inject constructor(
     private val sessionManager: SessionManager,
     private val authRepository: AuthRepository,
-    private val themeRepository: ThemeRepository,
     private val preferencesManager: PreferencesManager,
     private val webSocket: MochiWebSocket,
     private val unreadStore: NotificationsUnreadStore,
@@ -307,11 +305,9 @@ class AppBootstrapViewModel @Inject constructor(
         // after it always sees the new tag and can never detect a change.
         val previousTag = LanguageStore.get(context)
 
-        // Theme + preferences are best-effort warm-ups. One preferences fetch
-        // serves both: the theme is resolved from what the refresh stored.
+        // The preferences, the theme among them, are a best-effort warm-up.
         if (!unreachable) {
             runCatching { preferencesManager.refresh() }
-            runCatching { themeRepository.cacheActiveTheme() }
         }
 
         // The locale matters only after a fresh authentication; returning users

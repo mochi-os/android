@@ -13,7 +13,6 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import org.mochios.android.auth.SessionManager
-import org.mochios.staff.access.StaffAuthInterceptor
 import org.mochios.staff.api.StaffApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -53,7 +52,6 @@ object AppModule {
                 }
                 chain.proceed(request)
             })
-            .addInterceptor(StaffAuthInterceptor())
             .build()
         return Retrofit.Builder()
             .baseUrl("$serverUrl/staff/")

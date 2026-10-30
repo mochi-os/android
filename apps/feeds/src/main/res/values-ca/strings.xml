@@ -235,13 +235,15 @@
     <string name="feeds_boosted_by">Impulsat per %1$s</string>
     <string name="feeds_pinned">Fixat</string>
     <string name="feeds_visibility_followers">Només seguidors</string>
-    <string name="feeds_show_more">Mostra\'n més</string>
-    <string name="feeds_show_less">Mostra\'n menys</string>
+    <string name="feeds_show_post">Mostra la publicació</string>
+    <string name="feeds_hide_post">Amaga la publicació</string>
     <string name="feeds_also_on">També a %1$s</string>
     <string name="feeds_show_sensitive_media">Mostra el contingut multimèdia sensible</string>
     <string name="feeds_poll_closed">Tancada</string>
     <string name="feeds_poll_closes">Es tanca %1$s</string>
     <string name="feeds_poll_vote">Vota</string>
+    <string name="feeds_poll_see_results">Mostra els resultats</string>
+    <string name="feeds_poll_hide_results">Amaga els resultats</string>
     <string name="feeds_reply_from">Respon també des de</string>
     <string name="feeds_reply_from_none">Cap compte</string>
     <string name="feeds_mute">Silencia</string>
