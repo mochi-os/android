@@ -56,6 +56,8 @@ import org.mochios.wikis.ui.components.AvatarSize
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
 import org.mochios.android.R as MochiR
+import androidx.compose.runtime.remember
+import org.mochios.android.ui.components.addressByAuthor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -130,13 +132,17 @@ fun ChangesListScreen(
 }
 
 @Composable
-private fun ChangesBody(
+internal fun ChangesBody(
     changes: List<Change>,
     hasMore: Boolean,
     isLoadingMore: Boolean,
     onLoadMore: () -> Unit,
     onOpenPage: (String) -> Unit,
 ) {
+    // One revision per author across the list, the first each has: the
+    // avatar route names a revision, so naming each row's own had the image
+    // cache fetch and store the same picture once per row.
+    val avatars = remember(changes) { addressByAuthor(changes, { it.author }, { it.id }) }
     Column(modifier = Modifier.fillMaxSize()) {
         // Subtitle
         Text(
@@ -178,6 +184,7 @@ private fun ChangesBody(
                 items(changes, key = { it.id.ifEmpty { it.slug + "/" + it.version } }) { change ->
                     ChangeRow(
                         change = change,
+                        avatar = avatars[change.author] ?: change.id,
                         onClick = { onOpenPage(change.slug) },
                     )
                     HorizontalDivider()
@@ -199,6 +206,8 @@ private fun ChangesBody(
 @Composable
 private fun ChangeRow(
     change: Change,
+    // The revision the author's avatar is served under (see ChangesBody).
+    avatar: String,
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -232,7 +241,7 @@ private fun ChangeRow(
                 )
                 Spacer(Modifier.width(8.dp))
                 AuthorAvatar(
-                    revisionId = change.id,
+                    revisionId = avatar,
                     authorFingerprint = change.author,
                     authorName = change.name,
                     size = AvatarSize.XS,

@@ -64,6 +64,7 @@ import org.mochios.wikis.navigation.WikisApp
 import org.mochios.wikis.ui.components.AuthorAvatar
 import org.mochios.wikis.ui.components.AvatarSize
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.wikis.ui.components.WikiContextValue
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -188,7 +189,7 @@ fun PageHistoryScreen(
 }
 
 @Composable
-private fun PageHistoryBody(
+internal fun PageHistoryBody(
     slug: String,
     wikiId: String,
     revisions: List<Revision>,
@@ -199,6 +200,10 @@ private fun PageHistoryBody(
     onView: (Int) -> Unit,
     onRevert: (Int) -> Unit,
 ) {
+    // One revision per author across the list, the first each has: the
+    // avatar route names a revision, so naming each row's own had the image
+    // cache fetch and store the same picture once per row.
+    val avatars = remember(revisions) { addressByAuthor(revisions, { it.author }, { it.id }) }
     Column(modifier = Modifier.fillMaxSize()) {
         // Subtitle: "Viewing history for <slug>, current version N"
         Text(
@@ -244,6 +249,7 @@ private fun PageHistoryBody(
                 items(revisions, key = { it.id.ifEmpty { it.version.toString() } }) { revision ->
                     RevisionRow(
                         revision = revision,
+                        avatar = avatars[revision.author] ?: revision.id,
                         isCurrent = revision.version == currentVersion,
                         onView = { onView(revision.version) },
                         onRevert = { onRevert(revision.version) },
@@ -267,6 +273,8 @@ private fun PageHistoryBody(
 @Composable
 private fun RevisionRow(
     revision: Revision,
+    // The revision the author's avatar is served under (see PageHistoryBody).
+    avatar: String,
     isCurrent: Boolean,
     onView: () -> Unit,
     onRevert: () -> Unit,
@@ -307,7 +315,7 @@ private fun RevisionRow(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 AuthorAvatar(
-                    revisionId = revision.id,
+                    revisionId = avatar,
                     authorFingerprint = revision.author,
                     authorName = revision.name,
                     size = AvatarSize.XS,

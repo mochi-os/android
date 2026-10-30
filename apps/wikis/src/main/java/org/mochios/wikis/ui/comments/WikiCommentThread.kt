@@ -43,6 +43,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.android.ui.components.addressByAuthor
 
 /**
  * Renders one [WikiComment] and its descendants, indenting each child by 16dp.
@@ -59,6 +60,9 @@ fun WikiCommentThread(
     onEdit: ((commentId: String, body: String) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
     depth: Int = 0,
+    // One comment per author across the thread, the first each has
+    // (threadAvatars), its route serving the author's avatar.
+    avatars: Map<String, String> = emptyMap(),
 ) {
     val format = LocalFormat.current
     val wiki = LocalWikiContext.current
@@ -79,7 +83,7 @@ fun WikiCommentThread(
     val displayName = comment.name.ifBlank { comment.author.orEmpty() }
 
     val avatarSrc = wiki?.let { ctx ->
-        "/wikis/${ctx.wikiId}/-/comment/${comment.id}/asset/avatar"
+        "/wikis/${ctx.wikiId}/-/comment/${avatars[comment.author] ?: comment.id}/asset/avatar"
     }
 
     val totalDescendants = remember(comment) { countDescendants(comment) }
@@ -290,6 +294,7 @@ fun WikiCommentThread(
                         onEdit = onEdit,
                         onDelete = onDelete,
                         depth = depth + 1,
+                        avatars = avatars,
                     )
                 }
             }
@@ -320,3 +325,12 @@ private fun countDescendants(comment: WikiComment): Int {
     if (comment.children.isEmpty()) return 0
     return comment.children.size + comment.children.sumOf { countDescendants(it) }
 }
+
+/**
+ * One comment per author across a thread, replies included, the first each
+ * has: the avatar route names a comment, so a thread that named each
+ * comment's own had the image cache fetch and store the same picture once per
+ * comment.
+ */
+fun threadAvatars(comments: List<WikiComment>): Map<String, String> =
+    addressByAuthor(comments, { it.author }, { it.id }, { it.children })

@@ -105,6 +105,7 @@ import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.push.VisibleEntityEffect
+import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
@@ -654,6 +655,9 @@ private fun ChatContent(
                 else -> {
                     val showsReceipts = uiState.chat.receipts()
                     val opensThreads = uiState.chat.threads()
+                    val avatars = remember(uiState.messages, uiState.chat.id) {
+                        messageAvatars(uiState.messages, uiState.chat.id)
+                    }
                     val seen = remember(uiState.messages, uiState.receipts, uiState.identity, isGroupChat(uiState.chat)) {
                         if (isGroupChat(uiState.chat)) seenBy(uiState.messages, uiState.receipts, uiState.identity) else null
                     }
@@ -705,6 +709,7 @@ private fun ChatContent(
                                             },
                                             isGroup = uiState.chat.members.size > 2,
                                             chatId = uiState.chat.id,
+                                            avatar = avatars[entry.message.member],
                                             selectionMode = uiState.selectionMode,
                                             isSelected = entry.message.id in uiState.selectedIds,
                                             isSearchMatch = entry.message.id == activeMatchId,
@@ -983,6 +988,9 @@ internal fun MessageBubble(
     onReact: (String) -> Unit,
     onForward: () -> Unit,
     onEdit: () -> Unit,
+    // The sender's avatar as the list addresses it (messageAvatars); null for
+    // the message's own.
+    avatar: String? = null,
 ) {
     val format = LocalFormat.current
     var menuExpanded by remember { mutableStateOf(false) }
@@ -1016,7 +1024,7 @@ internal fun MessageBubble(
             ) {
                 EntityAvatar(
                     name = message.name,
-                    src = "/chat/$chatId/-/${message.id}/asset/avatar",
+                    src = avatar ?: messageAvatar(chatId, message.id),
                     seed = message.member,
                     size = 16.dp,
                 )
@@ -1572,3 +1580,15 @@ private fun DateSeparator(epochSeconds: Long) {
  * is no place to come back to.
  */
 internal fun pinnable(chat: ChatDetail): Boolean = chat.status == ChatStatus.ACTIVE && chat.name.isNotEmpty()
+
+/** Where a sender's avatar is served: under one of their messages in the chat. */
+internal fun messageAvatar(chatId: String, messageId: String) = "/chat/$chatId/-/$messageId/asset/avatar"
+
+/**
+ * One avatar address per sender across the loaded messages, from each one's
+ * first: the route names a message, and any message of the chat answers with
+ * its sender's picture, so a list that built each message's own address had
+ * the image cache fetch and store the same picture once per message.
+ */
+internal fun messageAvatars(messages: List<ChatMessage>, chatId: String): Map<String, String> =
+    addressByAuthor(messages, { it.member }, { messageAvatar(chatId, it.id) })

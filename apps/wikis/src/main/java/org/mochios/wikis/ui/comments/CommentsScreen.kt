@@ -187,6 +187,8 @@ private fun CommentsBody(
     val isOwner = state.permissions.owner
 
     Column(modifier = Modifier.fillMaxSize()) {
+        // One comment per author across the thread (threadAvatars).
+        val avatars = remember(state.comments) { threadAvatars(state.comments) }
         Box(modifier = Modifier.weight(1f)) {
             if (state.comments.isEmpty() && !state.isLoading) {
                 EmptyState(
@@ -203,6 +205,7 @@ private fun CommentsBody(
                     items(state.comments, key = { it.id }) { comment ->
                         WikiCommentThread(
                             comment = comment,
+                            avatars = avatars,
                             currentUserId = state.currentUserId,
                             isOwner = isOwner,
                             onStartReply = onStartReply,
