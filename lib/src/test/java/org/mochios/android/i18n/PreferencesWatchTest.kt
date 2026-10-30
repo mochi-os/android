@@ -13,6 +13,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -65,9 +66,21 @@ class PreferencesWatchTest {
     /** How many times the device's zone has been reported, ahead of a read. */
     private val boots = AtomicInteger()
 
+    /** How long the zone's report takes to answer. */
+    @Volatile private var booting = 0L
+
+    /** Reports of the zone still waiting for their answer when a read began. */
+    private val overlapped = AtomicInteger()
+
+    /** Reports of the zone answered. */
+    private val booted = AtomicInteger()
+
     private val api = object : PreferencesApi {
         override suspend fun getPreferences(token: String): Response<FullPrefsResponse> {
             reads.incrementAndGet()
+            // Long enough for a report sent alongside to be on its way.
+            delay(50)
+            overlapped.set(boots.get() - booted.get())
             return Response.success(
                 FullPrefsResponse(
                     preferences = served,
@@ -87,6 +100,8 @@ class PreferencesWatchTest {
     private val shell = object : ShellApi {
         override suspend fun boot(body: ShellRequest): Response<Map<String, Any>> {
             boots.incrementAndGet()
+            delay(booting)
+            booted.incrementAndGet()
             return Response.success(mapOf<String, Any>())
         }
     }
@@ -188,5 +203,17 @@ class PreferencesWatchTest {
         settle()
         assertEquals(0, boots.get())
         assertEquals(0, reads.get())
+    }
+
+    // The zone's report went first and the read waited for its answer: a
+    // round trip on every cold start for an order nothing needed, "auto" being
+    // resolved on the phone.
+    @Test
+    fun `the zone is reported alongside the read, and the refresh ends once both have answered`() {
+        signIn()
+        booting = 300
+        runBlocking { manager.refresh() }
+        assertEquals(1, overlapped.get())
+        assertEquals(1, booted.get())
     }
 }

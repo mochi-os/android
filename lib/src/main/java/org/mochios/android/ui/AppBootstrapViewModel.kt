@@ -12,8 +12,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,6 +27,7 @@ import org.mochios.android.account.MochiAccount
 import org.mochios.android.api.ApiException
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.Identity
+import org.mochios.android.auth.IdentityInfo
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
@@ -252,35 +256,48 @@ class AppBootstrapViewModel @Inject constructor(
         _stage.value = AuthStage.Bootstrapping
         remint?.cancel()
 
+        // Read the language before the warm-up starts: preferencesManager.refresh()
+        // stores and applies the server's tag itself, so a comparison made
+        // after it always sees the new tag and can never detect a change.
+        val previousTag = LanguageStore.get(context)
+        val fresh = justAuthenticated
+
         // Only an authoritative 401 means the session is dead. Transport
         // failures say nothing, so keep the session, run on the cached JWT and
         // re-mint in the background - clearing on any failure logs the user out
         // on every offline launch.
-        val result = authRepository.fetchToken(appName, fresh = true)
-        val failure = result.exceptionOrNull()
-        if (failure is ApiException && failure.code == 401) {
-            sessionManager.clearAll()
-            _stage.value = AuthStage.NeedsLogin
-            return
+        val outcome = startup(
+            mint = { authRepository.fetchToken(appName, fresh = true) },
+            // One `_/identity` fetch, shared with publishAccount below.
+            identity = {
+                runCatching { authRepository.getIdentityInfo() }
+                    .onFailure { e ->
+                        // Abandoned after a 401 or an unreachable mint: not a failure.
+                        if (e !is CancellationException) Log.w(TAG, "getIdentityInfo failed at bootstrap", e)
+                    }
+                    .getOrNull()
+            },
+            // The preferences, the theme among them, are a best-effort warm-up.
+            preferences = { preferencesManager.refresh() },
+        )
+        val going = when (outcome) {
+            Startup.SignedOut -> {
+                sessionManager.clearAll()
+                _stage.value = AuthStage.NeedsLogin
+                return
+            }
+            is Startup.Closing -> {
+                _stage.value = AuthStage.NeedsReactivation(outcome.purge)
+                return
+            }
+            is Startup.Continue -> outcome
         }
-        val unreachable = result.isFailure
+        val identityInfo = going.identity
+        val unreachable = going.unreachable
         if (unreachable) {
-            Log.w(TAG, "Token mint unreachable; continuing with cached credentials", failure)
+            Log.w(TAG, "Token mint unreachable; continuing with cached credentials", going.failure)
             remintWhenReachable(appName)
         }
-
-        // One `_/identity` fetch, shared with publishAccount below.
-        // Best-effort, and skipped when the mint was unreachable - further
-        // round-trips would only burn their connect timeouts on the spinner.
-        val identityInfo = if (unreachable) null else runCatching { authRepository.getIdentityInfo() }
-            .onFailure { e -> Log.w(TAG, "getIdentityInfo failed at bootstrap", e) }
-            .getOrNull()
-
-        if (identityInfo?.status?.status == "closing") {
-            _stage.value = AuthStage.NeedsReactivation(identityInfo.status.purge)
-            return
-        }
-
 
         // Prefetch the other apps' tokens so a launchpad or notification jump
         // does not hit "app token required". Off the bootstrap path so Ready is
@@ -300,16 +317,6 @@ class AppBootstrapViewModel @Inject constructor(
         // shares it.
         runCatching { publishAccount(identityInfo?.identity) }
 
-        // Read the language before the warm-up: preferencesManager.refresh()
-        // stores and applies the server's tag itself, so a comparison made
-        // after it always sees the new tag and can never detect a change.
-        val previousTag = LanguageStore.get(context)
-
-        // The preferences, the theme among them, are a best-effort warm-up.
-        if (!unreachable) {
-            runCatching { preferencesManager.refresh() }
-        }
-
         // The locale matters only after a fresh authentication; returning users
         // keep whatever they last set. refresh() has already stored and applied
         // the tag, so there is nothing left to fetch - only to decide whether
@@ -317,7 +324,7 @@ class AppBootstrapViewModel @Inject constructor(
         // On API 33+ LocaleManager triggers that recreate itself; below it
         // LocaleHelper only sets the default Locale, so we ask for it here.
         var recreate = false
-        if (justAuthenticated) {
+        if (fresh) {
             justAuthenticated = false
             val newTag = LanguageStore.get(context)
             if (newTag != null && newTag != previousTag &&
@@ -382,4 +389,65 @@ class AppBootstrapViewModel @Inject constructor(
     private companion object {
         const val TAG = "AppBootstrap"
     }
+}
+
+/** What the start-up requests decided. */
+internal sealed class Startup {
+    /** The session is dead: the mint answered 401. */
+    object SignedOut : Startup()
+
+    /** The account is being closed; the reactivation interstitial comes first. */
+    data class Closing(val purge: Long) : Startup()
+
+    /**
+     * Go on to Ready, with the identity when it was read. [unreachable] when
+     * the mint could not reach the server, [failure] saying why.
+     */
+    data class Continue(
+        val identity: IdentityInfo?,
+        val unreachable: Boolean = false,
+        val failure: Throwable? = null,
+    ) : Startup()
+}
+
+/**
+ * The start-up requests, sent together rather than one after another: the
+ * app token's mint, the identity read and the preferences warm-up. Each was a
+ * round trip in series behind the spinner, four or five of them with the
+ * warm-up's own, before a first screen that may have a cached copy to show.
+ * The preferences are waited for as well: only the theme's colours and the
+ * language are kept on the phone, so without them the first screen would
+ * draw with the default appearance, font size and formats and switch a round
+ * trip later - and sent alongside the rest they add no round trip of their
+ * own. A 401 from the mint signs out, "closing" shows the reactivation
+ * interstitial, and a transport failure goes on with the cached credentials;
+ * each abandons whatever is still in flight, which after a transport failure
+ * would only spend its connect timeout on the spinner.
+ */
+internal suspend fun startup(
+    mint: suspend () -> Result<String>,
+    identity: suspend () -> IdentityInfo?,
+    preferences: suspend () -> Unit,
+): Startup = coroutineScope {
+    val warm = async { runCatching { preferences() } }
+    val read = async { identity() }
+    val result = mint()
+    val failure = result.exceptionOrNull()
+    if (failure is ApiException && failure.code == 401) {
+        read.cancel()
+        warm.cancel()
+        return@coroutineScope Startup.SignedOut
+    }
+    if (failure != null) {
+        read.cancel()
+        warm.cancel()
+        return@coroutineScope Startup.Continue(null, unreachable = true, failure = failure)
+    }
+    val info = read.await()
+    if (info?.status?.status == "closing") {
+        warm.cancel()
+        return@coroutineScope Startup.Closing(info.status.purge)
+    }
+    // The scope ends only once the preferences have answered too.
+    Startup.Continue(info)
 }

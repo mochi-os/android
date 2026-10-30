@@ -11,6 +11,7 @@ import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -140,11 +141,18 @@ class PreferencesManager @Inject internal constructor(
         })
     }
 
-    suspend fun refresh() {
-        // Report the device's zone first, so a preference set to "auto" means
-        // this device's zone on the server as well as here. Failure is fine:
-        // the server then keeps whatever it last heard.
-        runCatching { shellApi.boot(shellRequest()) }
+    suspend fun refresh() = coroutineScope {
+        // Report the device's zone, so a preference set to "auto" means this
+        // device's zone on the server as well as here - alongside the read, not
+        // before it: "auto" is resolved here on the phone, so the read does not
+        // depend on the report, and in series the two cost every cold start an
+        // extra round trip. Failure is fine: the server then keeps whatever it
+        // last heard.
+        launch { runCatching { shellApi.boot(shellRequest()) } }
+        read()
+    }
+
+    private suspend fun read() {
         val token = sessionManager.getToken("settings")
             ?: authRepository.fetchToken("settings").getOrNull()
             ?: return
