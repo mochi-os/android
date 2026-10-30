@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Hanyoyin sadarwa</string>
     <string name="networks_not_offered">Wannan sabar ba ta bayar da wasu hanyoyin sadarwa.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Haɗa asusu</string>
     <string name="networks_link_action">Hanyar haɗi</string>
     <string name="networks_linked">An haɗa asusu</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">An kasa maye gurbin maɓallin sabar</string>
     <string name="system_setting_description">Bayanin sabar</string>
     <string name="system_setting_handles">Sunayen mai amfani da kowane mai amfani zai iya keɓewa</string>
-    <string name="system_setting_fediverse">Karɓi baƙuncin asusu a fediverse</string>
+    <string name="system_setting_fediverse">Karɓi baƙuncin asusu a ActivityPub</string>
     <string name="system_setting_bluesky">Karɓi baƙuncin asusu a Bluesky</string>
     <string name="system_setting_labelers">Masu lakabi na Bluesky</string>
     <string name="system_setting_xmpp">Karɓi baƙuncin asusu a XMPP</string>

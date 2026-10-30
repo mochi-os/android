@@ -284,7 +284,7 @@
     <string name="feeds_source_type_person">Şəxs və ya icma</string>
     <string name="feeds_source_type_hashtag">Heşteq</string>
     <string name="feeds_source_type_bluesky">Bluesky lenti və ya siyahısı</string>
-    <string name="feeds_source_type_fediverse_posts">Fediverse-dəki postlar</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub-dakı postlar</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky-dakı postlar</string>
     <string name="feeds_source_account">Hesab</string>
     <string name="feeds_source_follow_with">İzləmə hesabı</string>

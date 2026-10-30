@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">사람 또는 커뮤니티</string>
     <string name="feeds_source_type_hashtag">해시태그</string>
     <string name="feeds_source_type_bluesky">Bluesky 피드 또는 목록</string>
-    <string name="feeds_source_type_fediverse_posts">페디버스의 게시물</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub 게시물</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky 게시물</string>
     <string name="feeds_source_account">계정</string>
     <string name="feeds_source_follow_with">팔로우할 계정</string>

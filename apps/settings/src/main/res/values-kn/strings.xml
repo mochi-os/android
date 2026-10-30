@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">ನೆಟ್‌ವರ್ಕ್‌ಗಳು</string>
     <string name="networks_not_offered">ಈ ಸರ್ವರ್ ಇತರ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಒದಗಿಸುವುದಿಲ್ಲ.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ಖಾತೆಯನ್ನು ಲಿಂಕ್ ಮಾಡಿ</string>
     <string name="networks_link_action">ಲಿಂಕ್</string>
     <string name="networks_linked">ಖಾತೆ ಲಿಂಕ್ ಆಗಿದೆ</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">ಸರ್ವರ್ ಕೀ ಬದಲಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="system_setting_description">ಸರ್ವರ್ ವಿವರಣೆ</string>
     <string name="system_setting_handles">ಪ್ರತಿ ಬಳಕೆದಾರರು ಕಾಯ್ದಿರಿಸಬಹುದಾದ ಬಳಕೆದಾರಹೆಸರುಗಳು</string>
-    <string name="system_setting_fediverse">Fediverse ನಲ್ಲಿ ಖಾತೆಗಳನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ</string>
+    <string name="system_setting_fediverse">ActivityPub ನಲ್ಲಿ ಖಾತೆಗಳನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ</string>
     <string name="system_setting_bluesky">Bluesky ನಲ್ಲಿ ಖಾತೆಗಳನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ</string>
     <string name="system_setting_labelers">Bluesky ಲೇಬಲರ್‌ಗಳು</string>
     <string name="system_setting_xmpp">XMPP ನಲ್ಲಿ ಖಾತೆಗಳನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ</string>

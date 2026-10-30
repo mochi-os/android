@@ -436,7 +436,6 @@
     </plurals>
     <string name="networks_title">Tinklai</string>
     <string name="networks_not_offered">Šis serveris nesiūlo kitų tinklų.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Susieti paskyrą</string>
     <string name="networks_link_action">Nuoroda</string>
     <string name="networks_linked">Paskyra susieta</string>
@@ -613,7 +612,7 @@
     <string name="system_status_key_failed">Nepavyko pakeisti serverio rakto</string>
     <string name="system_setting_description">Serverio aprašymas</string>
     <string name="system_setting_handles">Kiek vartotojo vardų gali rezervuoti kiekvienas vartotojas</string>
-    <string name="system_setting_fediverse">Talpinti paskyras fediverse tinkluose</string>
+    <string name="system_setting_fediverse">Talpinti paskyras ActivityPub tinkle</string>
     <string name="system_setting_bluesky">Talpinti paskyras Bluesky tinkle</string>
     <string name="system_setting_labelers">Bluesky žymėtojai</string>
     <string name="system_setting_xmpp">Talpinti paskyras XMPP tinkle</string>

@@ -423,7 +423,6 @@
     </plurals>
     <string name="networks_title">Redanaka</string>
     <string name="networks_not_offered">Aka servidorax janiw yaqha redanak churkiti.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Mä cuenta chikachaña</string>
     <string name="networks_link_action">Enlace</string>
     <string name="networks_linked">Cuenta chikthapita</string>
@@ -598,7 +597,7 @@
     <string name="system_status_key_failed">Janiw servidor llave mayjt\'ayañjamäkiti</string>
     <string name="system_setting_description">Servidor qhanañchawi</string>
     <string name="system_setting_handles">Sapa apnaqirin reservañapa apnaqiri sutinaka</string>
-    <string name="system_setting_fediverse">fediverse ukan cuentanak utjayaña</string>
+    <string name="system_setting_fediverse">ActivityPub ukan cuentanak utjayaña</string>
     <string name="system_setting_bluesky">Bluesky ukan cuentanak utjayaña</string>
     <string name="system_setting_labelers">Bluesky etiquetirinaka</string>
     <string name="system_setting_xmpp">XMPP ukan cuentanak utjayaña</string>

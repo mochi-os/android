@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Einstaklingur eða samfélag</string>
     <string name="feeds_source_type_hashtag">Myllumerki</string>
     <string name="feeds_source_type_bluesky">Bluesky-streymi eða -listi</string>
-    <string name="feeds_source_type_fediverse_posts">Færslur á fediversinu</string>
+    <string name="feeds_source_type_fediverse_posts">Færslur á ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Færslur á Bluesky</string>
     <string name="feeds_source_account">Reikningur</string>
     <string name="feeds_source_follow_with">Fylgja með</string>

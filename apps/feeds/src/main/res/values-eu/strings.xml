@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Pertsona edo komunitatea</string>
     <string name="feeds_source_type_hashtag">Traola</string>
     <string name="feeds_source_type_bluesky">Bluesky jarioa edo zerrenda</string>
-    <string name="feeds_source_type_fediverse_posts">Fedibertsoko argitalpenak</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub-ko argitalpenak</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky-ko argitalpenak</string>
     <string name="feeds_source_account">Kontua</string>
     <string name="feeds_source_follow_with">Jarraitu honekin</string>

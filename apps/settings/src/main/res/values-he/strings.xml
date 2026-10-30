@@ -436,7 +436,6 @@
     </plurals>
     <string name="networks_title">רשתות</string>
     <string name="networks_not_offered">השרת הזה אינו מציע רשתות אחרות.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">קשר חשבון</string>
     <string name="networks_link_action">קישור</string>
     <string name="networks_linked">החשבון קושר</string>
@@ -613,7 +612,7 @@
     <string name="system_status_key_failed">לא ניתן היה להחליף את מפתח השרת</string>
     <string name="system_setting_description">תיאור השרת</string>
     <string name="system_setting_handles">שמות משתמש שכל משתמש רשאי לשריין</string>
-    <string name="system_setting_fediverse">ארח חשבונות ב-Fediverse</string>
+    <string name="system_setting_fediverse">ארח חשבונות ב-ActivityPub</string>
     <string name="system_setting_bluesky">ארח חשבונות ב-Bluesky</string>
     <string name="system_setting_labelers">מתייגים של Bluesky</string>
     <string name="system_setting_xmpp">ארח חשבונות ב-XMPP</string>

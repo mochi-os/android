@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Δίκτυα</string>
     <string name="networks_not_offered">Αυτός ο διακομιστής δεν προσφέρει άλλα δίκτυα.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Σύνδεση λογαριασμού</string>
     <string name="networks_link_action">Σύνδεσμος</string>
     <string name="networks_linked">Ο λογαριασμός συνδέθηκε</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Δεν ήταν δυνατή η αντικατάσταση του κλειδιού διακομιστή</string>
     <string name="system_setting_description">Περιγραφή διακομιστή</string>
     <string name="system_setting_handles">Ονόματα χρήστη που μπορεί να δεσμεύσει κάθε χρήστης</string>
-    <string name="system_setting_fediverse">Φιλοξενία λογαριασμών στο Fediverse</string>
+    <string name="system_setting_fediverse">Φιλοξενία λογαριασμών στο ActivityPub</string>
     <string name="system_setting_bluesky">Φιλοξενία λογαριασμών στο Bluesky</string>
     <string name="system_setting_labelers">Υπηρεσίες επισήμανσης Bluesky</string>
     <string name="system_setting_xmpp">Φιλοξενία λογαριασμών στο XMPP</string>

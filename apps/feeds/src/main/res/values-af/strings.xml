@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Persoon of gemeenskap</string>
     <string name="feeds_source_type_hashtag">Hutsetiket</string>
     <string name="feeds_source_type_bluesky">Bluesky-voer of -lys</string>
-    <string name="feeds_source_type_fediverse_posts">Plasings op die fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Plasings op ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Plasings op Bluesky</string>
     <string name="feeds_source_account">Rekening</string>
     <string name="feeds_source_follow_with">Volg met</string>

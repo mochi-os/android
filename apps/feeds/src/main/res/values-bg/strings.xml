@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Човек или общност</string>
     <string name="feeds_source_type_hashtag">Хаштаг</string>
     <string name="feeds_source_type_bluesky">Емисия или списък от Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Публикации във федиверса</string>
+    <string name="feeds_source_type_fediverse_posts">Публикации в ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Публикации в Bluesky</string>
     <string name="feeds_source_account">Акаунт</string>
     <string name="feeds_source_follow_with">Последвай с</string>

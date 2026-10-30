@@ -289,7 +289,7 @@
     <string name="feeds_source_type_person">Persona vai kopiena</string>
     <string name="feeds_source_type_hashtag">Tēmturis</string>
     <string name="feeds_source_type_bluesky">Bluesky plūsma vai saraksts</string>
-    <string name="feeds_source_type_fediverse_posts">Ieraksti fediverse tīklos</string>
+    <string name="feeds_source_type_fediverse_posts">Ieraksti ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Ieraksti Bluesky</string>
     <string name="feeds_source_account">Konts</string>
     <string name="feeds_source_follow_with">Sekot ar</string>

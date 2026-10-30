@@ -305,7 +305,7 @@
     <string name="feeds_source_type_person">Persuna jew komunità</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Feed jew lista ta\' Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Posts fuq il-fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Posts fuq ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Posts fuq Bluesky</string>
     <string name="feeds_source_account">Kont</string>
     <string name="feeds_source_follow_with">Segwi bil-kont</string>

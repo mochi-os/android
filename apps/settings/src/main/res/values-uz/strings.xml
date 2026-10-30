@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Tarmoqlar</string>
     <string name="networks_not_offered">Bu server boshqa tarmoqlarni taklif qilmaydi.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Hisobni bogʻlash</string>
     <string name="networks_link_action">Havola</string>
     <string name="networks_linked">Hisob bogʻlandi</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Server kalitini almashtirib bo‘lmadi</string>
     <string name="system_setting_description">Server tavsifi</string>
     <string name="system_setting_handles">Har bir foydalanuvchi band qila oladigan taxalluslar soni</string>
-    <string name="system_setting_fediverse">Hisoblarni fediverseda joylashtirish</string>
+    <string name="system_setting_fediverse">Hisoblarni ActivityPub tarmogʻida joylashtirish</string>
     <string name="system_setting_bluesky">Hisoblarni Bluesky tarmogʻida joylashtirish</string>
     <string name="system_setting_labelers">Bluesky belgilovchilari</string>
     <string name="system_setting_xmpp">Hisoblarni XMPP tarmogʻida joylashtirish</string>

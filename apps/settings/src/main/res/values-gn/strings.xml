@@ -423,7 +423,6 @@
     </plurals>
     <string name="networks_title">Ñandutikuéra</string>
     <string name="networks_not_offered">Ko mohendaha nome\'ẽi ambue ñanduti.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Ejoaju peteĩ mba\'ete</string>
     <string name="networks_link_action">Juajuha</string>
     <string name="networks_linked">Mba\'ete ojoajúma</string>
@@ -598,7 +597,7 @@
     <string name="system_status_key_failed">Ndaikatúi oñemoambue servidor ñe\'ẽñemi</string>
     <string name="system_setting_description">Mohendaha ñemombe\'u</string>
     <string name="system_setting_handles">Puruhára rérakuéra peteĩteĩ puruhára oreservakuaáva</string>
-    <string name="system_setting_fediverse">Eguereko mba\'etekuéra fediverse-pe</string>
+    <string name="system_setting_fediverse">Eguereko mba\'etekuéra ActivityPub-pe</string>
     <string name="system_setting_bluesky">Eguereko mba\'etekuéra Bluesky-pe</string>
     <string name="system_setting_labelers">Bluesky etiqueta moĩhára kuéra</string>
     <string name="system_setting_xmpp">Eguereko mba\'etekuéra XMPP-pe</string>

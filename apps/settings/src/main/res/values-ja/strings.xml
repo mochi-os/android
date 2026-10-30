@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">ネットワーク</string>
     <string name="networks_not_offered">このサーバーは他のネットワークを提供していません。</string>
-    <string name="networks_fediverse">フェディバース</string>
     <string name="networks_link">アカウントをリンク</string>
     <string name="networks_link_action">リンク</string>
     <string name="networks_linked">アカウントをリンクしました</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">サーバー鍵を置き換えられませんでした</string>
     <string name="system_setting_description">サーバーの説明</string>
     <string name="system_setting_handles">各ユーザーが予約できるハンドル数</string>
-    <string name="system_setting_fediverse">フェディバースでアカウントをホスト</string>
+    <string name="system_setting_fediverse">ActivityPub でアカウントをホスト</string>
     <string name="system_setting_bluesky">Bluesky でアカウントをホスト</string>
     <string name="system_setting_labelers">Bluesky ラベラー</string>
     <string name="system_setting_xmpp">XMPP でアカウントをホスト</string>

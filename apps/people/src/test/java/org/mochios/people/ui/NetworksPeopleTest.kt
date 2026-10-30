@@ -276,7 +276,7 @@ class NetworksPeopleTest {
         }
         rule.onNodeWithText("Ada Lovelace · @ada@example.social").assertExists()
         rule.onNodeWithText("Matrix").assertExists()
-        rule.onNodeWithText("Fediverse").assertExists()
+        rule.onNodeWithText("ActivityPub").assertExists()
     }
 
     @Test
@@ -371,7 +371,7 @@ class NetworksPeopleTest {
                 onOpenLink = { opened.add(it) },
             )
         }
-        rule.onNodeWithText("Fediverse · @ada@example.social").assertExists()
+        rule.onNodeWithText("ActivityPub · @ada@example.social").assertExists()
         rule.onNodeWithText("Bluesky · ada.example").assertDoesNotExist()
         rule.onNodeWithText("Forums").assertExists()
         rule.onNodeWithText("It weaves").assertExists()
@@ -401,7 +401,7 @@ class NetworksPeopleTest {
                 onOpenLink = {},
             )
         }
-        rule.onNodeWithText("Fediverse · @ada@example.social").assertExists()
+        rule.onNodeWithText("ActivityPub · @ada@example.social").assertExists()
     }
 
     @Test
@@ -409,7 +409,7 @@ class NetworksPeopleTest {
         rule.setContent {
             ProfilePreviewDialog(state = ProfileUiState(isLoading = false, info = shown, nameDraft = "Ada"), onDismiss = {}, onOpenLink = {})
         }
-        rule.onNodeWithText("Fediverse · @ada@example.social").assertExists()
+        rule.onNodeWithText("ActivityPub · @ada@example.social").assertExists()
     }
 
     @Test

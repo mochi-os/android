@@ -423,7 +423,6 @@
     </plurals>
     <string name="networks_title">Rezo</string>
     <string name="networks_not_offered">Sèvè sa a pa ofri lòt rezo.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Lye yon kont</string>
     <string name="networks_link_action">Lyen</string>
     <string name="networks_linked">Kont lye</string>
@@ -598,7 +597,7 @@
     <string name="system_status_key_failed">Pa t kapab ranplase kle sèvè a</string>
     <string name="system_setting_description">Deskripsyon sèvè a</string>
     <string name="system_setting_handles">Kantite non itilizatè chak itilizatè ka rezève</string>
-    <string name="system_setting_fediverse">Ebèje kont sou fediverse la</string>
+    <string name="system_setting_fediverse">Ebèje kont sou ActivityPub</string>
     <string name="system_setting_bluesky">Ebèje kont sou Bluesky</string>
     <string name="system_setting_labelers">Sèvis etikèt Bluesky</string>
     <string name="system_setting_xmpp">Ebèje kont sou XMPP</string>

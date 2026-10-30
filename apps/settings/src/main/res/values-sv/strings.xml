@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Nätverk</string>
     <string name="networks_not_offered">Den här servern erbjuder inga andra nätverk.</string>
-    <string name="networks_fediverse">Fediversum</string>
     <string name="networks_link">Länka ett konto</string>
     <string name="networks_link_action">Länk</string>
     <string name="networks_linked">Kontot har länkats</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Det gick inte att ersätta servernyckeln</string>
     <string name="system_setting_description">Serverbeskrivning</string>
     <string name="system_setting_handles">Antal alias som varje användare får reservera</string>
-    <string name="system_setting_fediverse">Var värd för konton i fediversum</string>
+    <string name="system_setting_fediverse">Var värd för konton på ActivityPub</string>
     <string name="system_setting_bluesky">Var värd för konton på Bluesky</string>
     <string name="system_setting_labelers">Bluesky-etiketterare</string>
     <string name="system_setting_xmpp">Var värd för konton på XMPP</string>

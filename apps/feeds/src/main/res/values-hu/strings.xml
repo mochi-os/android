@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Személy vagy közösség</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Bluesky-hírfolyam vagy -lista</string>
-    <string name="feeds_source_type_fediverse_posts">Bejegyzések a fediverzumban</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub-bejegyzések</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky-bejegyzések</string>
     <string name="feeds_source_account">Fiók</string>
     <string name="feeds_source_follow_with">Követés ezzel</string>

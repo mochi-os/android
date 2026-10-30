@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Mutum ko al\'umma</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Jerin labarai ko jeri na Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Sakonni a fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Saƙonni a ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Saƙonni a Bluesky</string>
     <string name="feeds_source_account">Asusu</string>
     <string name="feeds_source_follow_with">Asusun da zai bi</string>

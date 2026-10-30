@@ -464,7 +464,6 @@
     </plurals>
     <string name="networks_title">الشبكات</string>
     <string name="networks_not_offered">لا يوفّر هذا الخادم شبكات أخرى.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ربط حساب</string>
     <string name="networks_link_action">رابط</string>
     <string name="networks_linked">تم ربط الحساب</string>
@@ -643,7 +642,7 @@
     <string name="system_status_key_failed">تعذّر استبدال مفتاح الخادم</string>
     <string name="system_setting_description">وصف الخادم</string>
     <string name="system_setting_handles">عدد المعرّفات التي يمكن لكل مستخدم حجزها</string>
-    <string name="system_setting_fediverse">استضافة حسابات على Fediverse</string>
+    <string name="system_setting_fediverse">استضافة حسابات على ActivityPub</string>
     <string name="system_setting_bluesky">استضافة حسابات على Bluesky</string>
     <string name="system_setting_labelers">مُصنِّفو Bluesky</string>
     <string name="system_setting_xmpp">استضافة حسابات على XMPP</string>

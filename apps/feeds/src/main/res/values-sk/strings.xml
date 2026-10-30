@@ -296,7 +296,7 @@
     <string name="feeds_source_type_person">Osoba alebo komunita</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Kanál alebo zoznam Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Príspevky vo fediverze</string>
+    <string name="feeds_source_type_fediverse_posts">Príspevky na ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Príspevky na Bluesky</string>
     <string name="feeds_source_account">Účet</string>
     <string name="feeds_source_follow_with">Sledovať pomocou</string>

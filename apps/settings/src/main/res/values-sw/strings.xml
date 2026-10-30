@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Mitandao</string>
     <string name="networks_not_offered">Seva hii haitoi mitandao mingine.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Unganisha akaunti</string>
     <string name="networks_link_action">Kiungo</string>
     <string name="networks_linked">Akaunti imeunganishwa</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Imeshindwa kubadilisha ufunguo wa seva</string>
     <string name="system_setting_description">Maelezo ya seva</string>
     <string name="system_setting_handles">Majina ya utani ambayo kila mtumiaji anaweza kutenga</string>
-    <string name="system_setting_fediverse">Pangisha akaunti kwenye fediverse</string>
+    <string name="system_setting_fediverse">Pangisha akaunti kwenye ActivityPub</string>
     <string name="system_setting_bluesky">Pangisha akaunti kwenye Bluesky</string>
     <string name="system_setting_labelers">Waweka lebo wa Bluesky</string>
     <string name="system_setting_xmpp">Pangisha akaunti kwenye XMPP</string>

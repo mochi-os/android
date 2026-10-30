@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">شخص یا کمیونٹی</string>
     <string name="feeds_source_type_hashtag">ہیش ٹیگ</string>
     <string name="feeds_source_type_bluesky">Bluesky فیڈ یا فہرست</string>
-    <string name="feeds_source_type_fediverse_posts">fediverse پر پوسٹس</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub پر پوسٹس</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky پر پوسٹس</string>
     <string name="feeds_source_account">اکاؤنٹ</string>
     <string name="feeds_source_follow_with">فالو کرنے والا اکاؤنٹ</string>

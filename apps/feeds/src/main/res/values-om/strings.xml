@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Nama ykn hawaasa</string>
     <string name="feeds_source_type_hashtag">Haashtaagii</string>
     <string name="feeds_source_type_bluesky">Feed yookaan tarree Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Maxxansoota fediverse irratti</string>
+    <string name="feeds_source_type_fediverse_posts">Maxxansoota ActivityPub irratti</string>
     <string name="feeds_source_type_bluesky_posts">Maxxansoota Bluesky irratti</string>
     <string name="feeds_source_account">Akkaawuntii</string>
     <string name="feeds_source_follow_with">Kanaan hordofi</string>

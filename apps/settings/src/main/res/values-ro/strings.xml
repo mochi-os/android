@@ -434,7 +434,6 @@
     </plurals>
     <string name="networks_title">Rețele</string>
     <string name="networks_not_offered">Acest server nu oferă alte rețele.</string>
-    <string name="networks_fediverse">Fedivers</string>
     <string name="networks_link">Conectează un cont</string>
     <string name="networks_link_action">Link</string>
     <string name="networks_linked">Cont conectat</string>
@@ -610,7 +609,7 @@
     <string name="system_status_key_failed">Cheia serverului nu a putut fi înlocuită</string>
     <string name="system_setting_description">Descrierea serverului</string>
     <string name="system_setting_handles">Pseudonime pe care le poate rezerva fiecare utilizator</string>
-    <string name="system_setting_fediverse">Găzduiește conturi în fedivers</string>
+    <string name="system_setting_fediverse">Găzduiește conturi pe ActivityPub</string>
     <string name="system_setting_bluesky">Găzduiește conturi pe Bluesky</string>
     <string name="system_setting_labelers">Etichetatori Bluesky</string>
     <string name="system_setting_xmpp">Găzduiește conturi pe XMPP</string>

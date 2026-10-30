@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Shaxs yoki hamjamiyat</string>
     <string name="feeds_source_type_hashtag">Heshteg</string>
     <string name="feeds_source_type_bluesky">Bluesky tasmasi yoki roʻyxati</string>
-    <string name="feeds_source_type_fediverse_posts">Fediversedagi postlar</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub postlari</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky postlari</string>
     <string name="feeds_source_account">Hisob</string>
     <string name="feeds_source_follow_with">Obuna boʻlish hisobi</string>

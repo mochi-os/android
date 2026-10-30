@@ -71,7 +71,7 @@ class OwnerScreensTest {
         rule.setContent { TokenRow(token = token, revoking = false, onRevoke = { revoked += token.hash }) }
         rule.onNodeWithText("Ivory").assertExists()
         rule.onNodeWithText("Phone").assertExists()
-        rule.onNodeWithText("@alice@a.example · " + text(R.string.networks_fediverse)).assertExists()
+        rule.onNodeWithText("@alice@a.example · ActivityPub").assertExists()
         rule.onNodeWithText(text(R.string.account_last_used, text(R.string.sessions_never))).assertExists()
         rule.onNodeWithContentDescription(text(R.string.sessions_revoke)).performClick()
         rule.onNodeWithText(text(R.string.sessions_revoke_signin_message, "Ivory", "@alice@a.example")).assertExists()
@@ -160,17 +160,17 @@ class OwnerScreensTest {
         rule.onNodeWithText("Alice · alice@example.com").assertExists()
         // The networks by name, not the addresses; the taken-down one says so.
         rule.onAllNodesWithText("Bluesky").assertCountEquals(2)
-        rule.onAllNodesWithText("Fediverse").assertCountEquals(1)
+        rule.onAllNodesWithText("ActivityPub").assertCountEquals(1)
         rule.onNodeWithText("@alice@a.example").assertDoesNotExist()
         rule.onNodeWithText("news.a.example").assertDoesNotExist()
         val gone = SemanticsMatcher.expectValue(SemanticsProperties.StateDescription, text(R.string.handles_taken_down))
         rule.onAllNodes(hasText("Bluesky") and gone).assertCountEquals(1)
-        rule.onAllNodes(hasText("Fediverse") and gone).assertCountEquals(0)
-        // Sorted by network name: Bluesky, Bluesky, Fediverse.
-        val names = rule.onAllNodes(hasText("Bluesky") or hasText("Fediverse")).fetchSemanticsNodes()
+        rule.onAllNodes(hasText("ActivityPub") and gone).assertCountEquals(0)
+        // Sorted by network name: ActivityPub, Bluesky, Bluesky.
+        val names = rule.onAllNodes(hasText("Bluesky") or hasText("ActivityPub")).fetchSemanticsNodes()
             .sortedBy { it.positionInRoot.x }
             .map { it.config[SemanticsProperties.Text].joinToString() }
-        assertEquals(listOf("Bluesky", "Bluesky", "Fediverse"), names)
+        assertEquals(listOf("ActivityPub", "Bluesky", "Bluesky"), names)
         rule.onNodeWithContentDescription(text(R.string.networks_handle_actions)).performClick()
         rule.onNodeWithText(text(R.string.handles_take_down, "@alice@a.example")).assertDoesNotExist()
         rule.onNodeWithText(text(R.string.handles_take_down, "alice.a.example")).performClick()

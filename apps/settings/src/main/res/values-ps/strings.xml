@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">شبکې</string>
     <string name="networks_not_offered">دا سرور نورې شبکې نه وړاندې کوي.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">یو حساب وتړئ</string>
     <string name="networks_link_action">لینک</string>
     <string name="networks_linked">حساب وتړل شو</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">د سرور کیلي بدلول ونه شول</string>
     <string name="system_setting_description">د سرور تفصیل</string>
     <string name="system_setting_handles">هغه مستعار نومونه چې هر کاروونکی یې ریزرو کولی شي</string>
-    <string name="system_setting_fediverse">په fediverse کې حسابونه کوربه کړئ</string>
+    <string name="system_setting_fediverse">په ActivityPub کې حسابونه کوربه کړئ</string>
     <string name="system_setting_bluesky">په Bluesky کې حسابونه کوربه کړئ</string>
     <string name="system_setting_labelers">د Bluesky لیبل لګوونکي</string>
     <string name="system_setting_xmpp">په XMPP کې حسابونه کوربه کړئ</string>

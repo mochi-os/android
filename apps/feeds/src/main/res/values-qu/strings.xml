@@ -280,7 +280,7 @@
     <string name="feeds_source_type_person">Runa utaq ayllu</string>
     <string name="feeds_source_type_hashtag">Etiqueta</string>
     <string name="feeds_source_type_bluesky">Bluesky feed utaq lista</string>
-    <string name="feeds_source_type_fediverse_posts">Fediverse-pi qillqakuna</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub-pi qillqakuna</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky-pi qillqakuna</string>
     <string name="feeds_source_account">Cuenta</string>
     <string name="feeds_source_follow_with">Kaywan qatipay</string>

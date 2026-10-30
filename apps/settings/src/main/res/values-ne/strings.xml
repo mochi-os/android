@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">नेटवर्कहरू</string>
     <string name="networks_not_offered">यो सर्भरले अन्य नेटवर्कहरू प्रदान गर्दैन।</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">खाता लिङ्क गर्नुहोस्</string>
     <string name="networks_link_action">लिङ्क</string>
     <string name="networks_linked">खाता लिंक भयो</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">सर्भर कुञ्जी बदल्न सकिएन</string>
     <string name="system_setting_description">सर्भरको विवरण</string>
     <string name="system_setting_handles">प्रत्येक प्रयोगकर्ताले आरक्षित गर्न सक्ने प्रयोगकर्ता नामहरू</string>
-    <string name="system_setting_fediverse">Fediverse मा खाताहरू होस्ट गर्नुहोस्</string>
+    <string name="system_setting_fediverse">ActivityPub मा खाताहरू होस्ट गर्नुहोस्</string>
     <string name="system_setting_bluesky">Bluesky मा खाताहरू होस्ट गर्नुहोस्</string>
     <string name="system_setting_labelers">Bluesky लेबलकर्ताहरू</string>
     <string name="system_setting_xmpp">XMPP मा खाताहरू होस्ट गर्नुहोस्</string>

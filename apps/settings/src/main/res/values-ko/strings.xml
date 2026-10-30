@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">네트워크</string>
     <string name="networks_not_offered">이 서버는 다른 네트워크를 제공하지 않습니다.</string>
-    <string name="networks_fediverse">페디버스</string>
     <string name="networks_link">계정 연결</string>
     <string name="networks_link_action">링크</string>
     <string name="networks_linked">계정이 연결되었습니다</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">서버 키를 교체하지 못했습니다</string>
     <string name="system_setting_description">서버 설명</string>
     <string name="system_setting_handles">사용자별 예약 가능한 핸들 수</string>
-    <string name="system_setting_fediverse">페디버스 계정 호스팅</string>
+    <string name="system_setting_fediverse">ActivityPub 계정 호스팅</string>
     <string name="system_setting_bluesky">Bluesky 계정 호스팅</string>
     <string name="system_setting_labelers">Bluesky 라벨러</string>
     <string name="system_setting_xmpp">XMPP 계정 호스팅</string>

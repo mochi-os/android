@@ -198,7 +198,7 @@
     <string name="feeds_take_boost_back">Deshacé el impulso</string>
     <string name="feeds_poll_remove">Quitá la encuesta</string>
     <string name="feeds_poll_option_remove">Quitá la opción %1$s</string>
-    <string name="feeds_source_type_fediverse_posts">Posteos en el fediverso</string>
+    <string name="feeds_source_type_fediverse_posts">Posteos en ActivityPub</string>
     <string name="feeds_import_follows">Importá seguimientos desde un archivo</string>
     <string name="feeds_follows_importing">Importando %1$s seguimientos; %2$s agregados hasta ahora</string>
     <string name="feeds_filter_remove">Quitá %1$s</string>

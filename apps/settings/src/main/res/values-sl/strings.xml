@@ -444,7 +444,6 @@
     </plurals>
     <string name="networks_title">Omrežja</string>
     <string name="networks_not_offered">Ta strežnik ne ponuja drugih omrežij.</string>
-    <string name="networks_fediverse">Fediverzum</string>
     <string name="networks_link">Poveži račun</string>
     <string name="networks_link_action">Povezava</string>
     <string name="networks_linked">Račun povezan</string>
@@ -621,7 +620,7 @@
     <string name="system_status_key_failed">Ključa strežnika ni bilo mogoče zamenjati</string>
     <string name="system_setting_description">Opis strežnika</string>
     <string name="system_setting_handles">Število vzdevkov, ki jih lahko rezervira vsak uporabnik</string>
-    <string name="system_setting_fediverse">Gosti račune v fediverzumu</string>
+    <string name="system_setting_fediverse">Gosti račune v omrežju ActivityPub</string>
     <string name="system_setting_bluesky">Gosti račune v omrežju Bluesky</string>
     <string name="system_setting_labelers">Označevalci Bluesky</string>
     <string name="system_setting_xmpp">Gosti račune v omrežju XMPP</string>

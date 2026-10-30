@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Mtu au jumuiya</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Mlisho au orodha ya Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Machapisho kwenye fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Machapisho kwenye ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Machapisho kwenye Bluesky</string>
     <string name="feeds_source_account">Akaunti</string>
     <string name="feeds_source_follow_with">Fuata kwa</string>

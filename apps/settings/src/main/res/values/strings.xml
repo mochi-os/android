@@ -464,7 +464,6 @@
     <!-- Networks, sign-ins and the owner's handles (the federation plan, phase 31) -->
     <string name="networks_title">Networks</string>
     <string name="networks_not_offered">This server does not offer other networks.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Link an account</string>
     <string name="networks_link_action">Link</string>
     <string name="networks_linked">Account linked</string>
@@ -643,7 +642,7 @@
     <string name="system_status_key_failed">Failed to replace the server key</string>
     <string name="system_setting_description">Server description</string>
     <string name="system_setting_handles">Handles each user may reserve</string>
-    <string name="system_setting_fediverse">Host accounts on the fediverse</string>
+    <string name="system_setting_fediverse">Host accounts on ActivityPub</string>
     <string name="system_setting_bluesky">Host accounts on Bluesky</string>
     <string name="system_setting_labelers">Bluesky labellers</string>
     <string name="system_setting_xmpp">Host accounts on XMPP</string>

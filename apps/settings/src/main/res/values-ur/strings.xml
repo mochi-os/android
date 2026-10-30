@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">نیٹ ورکس</string>
     <string name="networks_not_offered">یہ سرور دوسرے نیٹ ورکس پیش نہیں کرتا۔</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">اکاؤنٹ منسلک کریں</string>
     <string name="networks_link_action">لنک</string>
     <string name="networks_linked">اکاؤنٹ منسلک ہو گیا</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">سرور کلید تبدیل نہیں کی جا سکی</string>
     <string name="system_setting_description">سرور کی تفصیل</string>
     <string name="system_setting_handles">ہر صارف جتنے ہینڈل ریزرو کر سکتا ہے</string>
-    <string name="system_setting_fediverse">اکاؤنٹس fediverse پر ہوسٹ کریں</string>
+    <string name="system_setting_fediverse">اکاؤنٹس ActivityPub پر ہوسٹ کریں</string>
     <string name="system_setting_bluesky">اکاؤنٹس Bluesky پر ہوسٹ کریں</string>
     <string name="system_setting_labelers">Bluesky لیبل لگانے والے</string>
     <string name="system_setting_xmpp">اکاؤنٹس XMPP پر ہوسٹ کریں</string>

@@ -296,7 +296,7 @@
     <string name="feeds_source_type_person">אדם או קהילה</string>
     <string name="feeds_source_type_hashtag">תגית</string>
     <string name="feeds_source_type_bluesky">פיד או רשימה של Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">פוסטים ב-Fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">פוסטים ב-ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">פוסטים ב-Bluesky</string>
     <string name="feeds_source_account">חשבון</string>
     <string name="feeds_source_follow_with">מעקב באמצעות</string>

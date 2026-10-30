@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Ցանցեր</string>
     <string name="networks_not_offered">Այս սերվերը այլ ցանցեր չի առաջարկում։</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Կապել հաշիվ</string>
     <string name="networks_link_action">Հղում</string>
     <string name="networks_linked">Հաշիվը կապակցվեց</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Չհաջողվեց փոխարինել սերվերի բանալին</string>
     <string name="system_setting_description">Սերվերի նկարագրություն</string>
     <string name="system_setting_handles">Օգտանունների քանակը, որ յուրաքանչյուր օգտատեր կարող է ամրագրել</string>
-    <string name="system_setting_fediverse">Հյուրընկալել հաշիվներ fediverse-ում</string>
+    <string name="system_setting_fediverse">Հյուրընկալել հաշիվներ ActivityPub ցանցում</string>
     <string name="system_setting_bluesky">Հյուրընկալել հաշիվներ Bluesky ցանցում</string>
     <string name="system_setting_labelers">Bluesky պիտակավորողներ</string>
     <string name="system_setting_xmpp">Հյուրընկալել հաշիվներ XMPP ցանցում</string>

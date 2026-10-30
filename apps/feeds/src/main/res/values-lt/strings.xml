@@ -296,7 +296,7 @@
     <string name="feeds_source_type_person">Asmuo arba bendruomenė</string>
     <string name="feeds_source_type_hashtag">Grotažymė</string>
     <string name="feeds_source_type_bluesky">Bluesky srautas arba sąrašas</string>
-    <string name="feeds_source_type_fediverse_posts">Įrašai fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Įrašai ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Įrašai Bluesky</string>
     <string name="feeds_source_account">Paskyra</string>
     <string name="feeds_source_follow_with">Sekti su</string>

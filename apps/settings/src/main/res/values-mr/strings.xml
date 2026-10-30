@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">नेटवर्क्स</string>
     <string name="networks_not_offered">हा सर्व्हर इतर नेटवर्क्स देत नाही.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">खाते लिंक करा</string>
     <string name="networks_link_action">दुवा</string>
     <string name="networks_linked">खाते लिंक झाले</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">सर्व्हर की बदलता आली नाही</string>
     <string name="system_setting_description">सर्व्हरचे वर्णन</string>
     <string name="system_setting_handles">प्रत्येक वापरकर्त्याला राखीव करता येणारी वापरकर्तानावे</string>
-    <string name="system_setting_fediverse">Fediverse वर खाती होस्ट करा</string>
+    <string name="system_setting_fediverse">ActivityPub वर खाती होस्ट करा</string>
     <string name="system_setting_bluesky">Bluesky वर खाती होस्ट करा</string>
     <string name="system_setting_labelers">Bluesky लेबलर</string>
     <string name="system_setting_xmpp">XMPP वर खाती होस्ट करा</string>

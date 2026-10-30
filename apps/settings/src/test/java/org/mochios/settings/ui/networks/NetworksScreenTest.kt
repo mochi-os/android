@@ -95,7 +95,7 @@ class NetworksScreenTest {
         content(base, onToggle = { _, network, account -> toggled += network to account?.id })
         // Each row names the address switching the network on makes.
         rule.onNodeWithText("alice.a.example").assertExists()
-        val fediverse = rule.onNodeWithContentDescription(text(R.string.networks_network_for, text(R.string.networks_fediverse), "alice"))
+        val fediverse = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "ActivityPub", "alice"))
         val bluesky = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice"))
         fediverse.assertIsOn()
         bluesky.assertIsOff()

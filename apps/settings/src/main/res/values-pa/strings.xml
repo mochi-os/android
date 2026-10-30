@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">ਨੈੱਟਵਰਕ</string>
     <string name="networks_not_offered">ਇਹ ਸਰਵਰ ਹੋਰ ਨੈੱਟਵਰਕ ਪੇਸ਼ ਨਹੀਂ ਕਰਦਾ।</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ਖਾਤਾ ਲਿੰਕ ਕਰੋ</string>
     <string name="networks_link_action">ਲਿੰਕ</string>
     <string name="networks_linked">ਖਾਤਾ ਲਿੰਕ ਹੋ ਗਿਆ</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">ਸਰਵਰ ਕੁੰਜੀ ਬਦਲੀ ਨਹੀਂ ਜਾ ਸਕੀ</string>
     <string name="system_setting_description">ਸਰਵਰ ਦਾ ਵੇਰਵਾ</string>
     <string name="system_setting_handles">ਹਰੇਕ ਉਪਭੋਗਤਾ ਵੱਲੋਂ ਰਾਖਵੇਂ ਕੀਤੇ ਜਾ ਸਕਣ ਵਾਲੇ ਉਪਭੋਗਤਾ ਨਾਮ</string>
-    <string name="system_setting_fediverse">Fediverse \'ਤੇ ਖਾਤੇ ਹੋਸਟ ਕਰੋ</string>
+    <string name="system_setting_fediverse">ActivityPub \'ਤੇ ਖਾਤੇ ਹੋਸਟ ਕਰੋ</string>
     <string name="system_setting_bluesky">Bluesky \'ਤੇ ਖਾਤੇ ਹੋਸਟ ਕਰੋ</string>
     <string name="system_setting_labelers">Bluesky ਲੇਬਲਰ</string>
     <string name="system_setting_xmpp">XMPP \'ਤੇ ਖਾਤੇ ਹੋਸਟ ਕਰੋ</string>

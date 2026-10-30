@@ -382,7 +382,7 @@ class ContactsMappingTest {
         assertEquals(Im.PROTOCOL_CUSTOM.toString(), rows[1].values[Im.PROTOCOL])
         assertEquals("Matrix", rows[1].values[Im.CUSTOM_PROTOCOL])
         assertEquals("@ada:example.org", rows[1].values[Im.DATA])
-        assertEquals("Fediverse", rows[2].values[Im.CUSTOM_PROTOCOL])
+        assertEquals("ActivityPub", rows[2].values[Im.CUSTOM_PROTOCOL])
         assertEquals("@ada@example.social", rows[2].values[Im.DATA])
         assertEquals("sip", rows[3].values[Im.CUSTOM_PROTOCOL])
         assertEquals("ada@example.org", rows[3].values[Im.DATA])
@@ -400,6 +400,9 @@ class ContactsMappingTest {
             row(Im.PROTOCOL_SKYPE, "ada.lovelace"),
             row(Im.PROTOCOL_CUSTOM, "@ada:example.org", "Matrix"),
             row(Im.PROTOCOL_CUSTOM, "@ada@example.social", "Mastodon"),
+            // The name this sync writes, and the one earlier versions wrote.
+            row(Im.PROTOCOL_CUSTOM, "@bob@example.social", "ActivityPub"),
+            row(Im.PROTOCOL_CUSTOM, "@cy@example.social", "Fediverse"),
             row(Im.PROTOCOL_CUSTOM, "ada", "Telegram"),
             row(Im.PROTOCOL_CUSTOM, "ada", "My chat"),
             row(Im.PROTOCOL_CUSTOM, "ada@example.net", null),
@@ -410,6 +413,8 @@ class ContactsMappingTest {
                 "skype:ada.lovelace",
                 "matrix:u/ada:example.org",
                 "acct:ada@example.social",
+                "acct:bob@example.social",
+                "acct:cy@example.social",
                 "telegram:ada",
                 "im:ada",
                 "im:ada@example.net",

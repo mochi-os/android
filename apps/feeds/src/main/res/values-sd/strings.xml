@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">شخص يا برادري</string>
     <string name="feeds_source_type_hashtag">هيش ٽيگ</string>
     <string name="feeds_source_type_bluesky">Bluesky فيڊ يا لسٽ</string>
-    <string name="feeds_source_type_fediverse_posts">Fediverse تي پوسٽون</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub تي پوسٽون</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky تي پوسٽون</string>
     <string name="feeds_source_account">اڪائونٽ</string>
     <string name="feeds_source_follow_with">هن سان فالو ڪريو</string>

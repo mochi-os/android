@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Adam ýa-da jemgyýet</string>
     <string name="feeds_source_type_hashtag">Heşteg</string>
     <string name="feeds_source_type_bluesky">Bluesky akymy ýa-da sanawy</string>
-    <string name="feeds_source_type_fediverse_posts">Fediwersdäki postlar</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub-daky postlar</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky-daky postlar</string>
     <string name="feeds_source_account">Hasap</string>
     <string name="feeds_source_follow_with">Şunuň bilen yzarla</string>

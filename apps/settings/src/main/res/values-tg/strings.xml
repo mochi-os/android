@@ -423,7 +423,6 @@
     </plurals>
     <string name="networks_title">Шабакаҳо</string>
     <string name="networks_not_offered">Ин сервер шабакаҳои дигар пешниҳод намекунад.</string>
-    <string name="networks_fediverse">Федиверс</string>
     <string name="networks_link">Пайваст кардани ҳисоб</string>
     <string name="networks_link_action">Пайванд</string>
     <string name="networks_linked">Ҳисоб пайваст шуд</string>
@@ -598,7 +597,7 @@
     <string name="system_status_key_failed">Иваз кардани калиди сервер муяссар нашуд</string>
     <string name="system_setting_description">Тавсифи сервер</string>
     <string name="system_setting_handles">Тахаллусҳое, ки ҳар корбар захира карда метавонад</string>
-    <string name="system_setting_fediverse">Ҷойгиркунии ҳисобҳо дар федиверс</string>
+    <string name="system_setting_fediverse">Ҷойгиркунии ҳисобҳо дар ActivityPub</string>
     <string name="system_setting_bluesky">Ҷойгиркунии ҳисобҳо дар Bluesky</string>
     <string name="system_setting_labelers">Тамғагузорони Bluesky</string>
     <string name="system_setting_xmpp">Ҷойгиркунии ҳисобҳо дар XMPP</string>

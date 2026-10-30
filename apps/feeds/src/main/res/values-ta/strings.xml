@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">நபர் அல்லது சமூகம்</string>
     <string name="feeds_source_type_hashtag">ஹேஷ்டேக்</string>
     <string name="feeds_source_type_bluesky">Bluesky ஊட்டம் அல்லது பட்டியல்</string>
-    <string name="feeds_source_type_fediverse_posts">fediverse-இல் உள்ள பதிவுகள்</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub இல் உள்ள பதிவுகள்</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky இல் உள்ள பதிவுகள்</string>
     <string name="feeds_source_account">கணக்கு</string>
     <string name="feeds_source_follow_with">இதன் மூலம் பின்தொடர்</string>

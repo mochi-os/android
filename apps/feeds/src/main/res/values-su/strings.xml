@@ -280,7 +280,7 @@
     <string name="feeds_source_type_person">Jalma atawa komunitas</string>
     <string name="feeds_source_type_hashtag">Tagar</string>
     <string name="feeds_source_type_bluesky">Feed atawa daptar Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Pos di fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Pos di ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Pos di Bluesky</string>
     <string name="feeds_source_account">Akun</string>
     <string name="feeds_source_follow_with">Turutan ku</string>

@@ -436,7 +436,6 @@
     </plurals>
     <string name="networks_title">Siete</string>
     <string name="networks_not_offered">Tento server neponúka iné siete.</string>
-    <string name="networks_fediverse">Fediverzum</string>
     <string name="networks_link">Prepojiť účet</string>
     <string name="networks_link_action">Odkaz</string>
     <string name="networks_linked">Účet prepojený</string>
@@ -613,7 +612,7 @@
     <string name="system_status_key_failed">Kľúč servera sa nepodarilo nahradiť</string>
     <string name="system_setting_description">Popis servera</string>
     <string name="system_setting_handles">Počet prezývok, ktoré si môže rezervovať každý používateľ</string>
-    <string name="system_setting_fediverse">Hostiť účty vo fediverze</string>
+    <string name="system_setting_fediverse">Hostiť účty v sieti ActivityPub</string>
     <string name="system_setting_bluesky">Hostiť účty v sieti Bluesky</string>
     <string name="system_setting_labelers">Označovače Bluesky</string>
     <string name="system_setting_xmpp">Hostiť účty v sieti XMPP</string>

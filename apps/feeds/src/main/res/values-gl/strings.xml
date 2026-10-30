@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Persoa ou comunidade</string>
     <string name="feeds_source_type_hashtag">Cancelo</string>
     <string name="feeds_source_type_bluesky">Fío ou lista de Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Publicacións no fediverso</string>
+    <string name="feeds_source_type_fediverse_posts">Publicacións en ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Publicacións en Bluesky</string>
     <string name="feeds_source_account">Conta</string>
     <string name="feeds_source_follow_with">Seguir con</string>

@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">شخص یا جامعه</string>
     <string name="feeds_source_type_hashtag">هشتگ</string>
     <string name="feeds_source_type_bluesky">فید یا فهرست Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">پست‌ها در Fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">پست‌ها در ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">پست‌ها در Bluesky</string>
     <string name="feeds_source_account">حساب</string>
     <string name="feeds_source_follow_with">دنبال کردن با</string>

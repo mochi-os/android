@@ -280,7 +280,7 @@
     <string name="feeds_source_type_person">Ènìyàn tàbí àwùjọ</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Fíìdì tàbí àkójọ Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Àwọn ìfìránṣẹ́ lórí fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Àwọn ìfìránṣẹ́ lórí ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Àwọn ìfìránṣẹ́ lórí Bluesky</string>
     <string name="feeds_source_account">Àkáǹtì</string>
     <string name="feeds_source_follow_with">Tẹ̀lé pẹ̀lú</string>

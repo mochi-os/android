@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">നെറ്റ്‌വർക്കുകൾ</string>
     <string name="networks_not_offered">ഈ സെർവർ മറ്റ് നെറ്റ്‌വർക്കുകൾ നൽകുന്നില്ല.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ഒരു അക്കൗണ്ട് ലിങ്ക് ചെയ്യുക</string>
     <string name="networks_link_action">ലിങ്ക്</string>
     <string name="networks_linked">അക്കൗണ്ട് ലിങ്ക് ചെയ്തു</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">സെർവർ കീ മാറ്റാനായില്ല</string>
     <string name="system_setting_description">സെർവർ വിവരണം</string>
     <string name="system_setting_handles">ഓരോ ഉപയോക്താവിനും റിസർവ് ചെയ്യാവുന്ന ഉപയോക്തൃനാമങ്ങൾ</string>
-    <string name="system_setting_fediverse">Fediverse-ൽ അക്കൗണ്ടുകൾ ഹോസ്റ്റ് ചെയ്യുക</string>
+    <string name="system_setting_fediverse">ActivityPub-ൽ അക്കൗണ്ടുകൾ ഹോസ്റ്റ് ചെയ്യുക</string>
     <string name="system_setting_bluesky">Bluesky-യിൽ അക്കൗണ്ടുകൾ ഹോസ്റ്റ് ചെയ്യുക</string>
     <string name="system_setting_labelers">Bluesky ലേബലറുകൾ</string>
     <string name="system_setting_xmpp">XMPP-യിൽ അക്കൗണ്ടുകൾ ഹോസ്റ്റ് ചെയ്യുക</string>

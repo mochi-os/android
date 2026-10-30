@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">ජාල</string>
     <string name="networks_not_offered">මෙම සේවාදායකය වෙනත් ජාල ලබා නොදේ.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ගිණුමක් සම්බන්ධ කරන්න</string>
     <string name="networks_link_action">සබැඳිය</string>
     <string name="networks_linked">ගිණුම සම්බන්ධ කළා</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">සේවාදායක යතුර ප්‍රතිස්ථාපනය කළ නොහැකි විය</string>
     <string name="system_setting_description">සේවාදායක විස්තරය</string>
     <string name="system_setting_handles">එක් එක් පරිශීලකයාට වෙන් කළ හැකි අන්වර්ථ නාම</string>
-    <string name="system_setting_fediverse">ගිණුම් සඳහා fediverse හි සත්කාරකත්වය සපයන්න</string>
+    <string name="system_setting_fediverse">ගිණුම් සඳහා ActivityPub හි සත්කාරකත්වය සපයන්න</string>
     <string name="system_setting_bluesky">ගිණුම් සඳහා Bluesky හි සත්කාරකත්වය සපයන්න</string>
     <string name="system_setting_labelers">Bluesky ලේබල්කරුවන්</string>
     <string name="system_setting_xmpp">ගිණුම් සඳහා XMPP හි සත්කාරකත්වය සපයන්න</string>

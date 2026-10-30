@@ -423,7 +423,6 @@
     <string name="networks_address">地址</string>
     <string name="networks_title">網絡</string>
     <string name="networks_not_offered">呢個伺服器冇提供其他網絡。</string>
-    <string name="networks_fediverse">聯邦宇宙</string>
     <string name="networks_link">連結帳戶</string>
     <string name="networks_link_action">連結</string>
     <string name="networks_linked">帳戶已經連結</string>
@@ -595,7 +594,7 @@
     <string name="system_status_key_failed">更換唔到伺服器金鑰</string>
     <string name="system_setting_description">伺服器簡介</string>
     <string name="system_setting_handles">每位用戶可以保留嘅帳號代碼數量</string>
-    <string name="system_setting_fediverse">喺聯邦宇宙代管帳戶</string>
+    <string name="system_setting_fediverse">喺 ActivityPub 代管帳戶</string>
     <string name="system_setting_bluesky">喺 Bluesky 代管帳戶</string>
     <string name="system_setting_labelers">Bluesky 標記者</string>
     <string name="system_setting_xmpp">喺 XMPP 代管帳戶</string>

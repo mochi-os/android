@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Ağlar</string>
     <string name="networks_not_offered">Bu sunucu başka ağ sunmuyor.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Hesap bağla</string>
     <string name="networks_link_action">Bağlantı</string>
     <string name="networks_linked">Hesap bağlandı</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Sunucu anahtarı değiştirilemedi</string>
     <string name="system_setting_description">Sunucu açıklaması</string>
     <string name="system_setting_handles">Her kullanıcının ayırabileceği rumuz sayısı</string>
-    <string name="system_setting_fediverse">Fediverse üzerinde hesap barındır</string>
+    <string name="system_setting_fediverse">ActivityPub üzerinde hesap barındır</string>
     <string name="system_setting_bluesky">Bluesky üzerinde hesap barındır</string>
     <string name="system_setting_labelers">Bluesky etiketleyicileri</string>
     <string name="system_setting_xmpp">XMPP üzerinde hesap barındır</string>

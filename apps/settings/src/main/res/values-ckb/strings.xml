@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">تۆڕەکان</string>
     <string name="networks_not_offered">ئەم ڕاژەکارە تۆڕی تر پێشکەش ناکات.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">هەژمارێک ببەستە</string>
     <string name="networks_link_action">بەستەر</string>
     <string name="networks_linked">هەژمار بەستراوە</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">نەتوانرا کلیلی ڕاژەکار بگۆڕدرێت</string>
     <string name="system_setting_description">وەسفی ڕاژەکار</string>
     <string name="system_setting_handles">ئەو ناوانەی بەکارهێنەر کە هەر بەکارهێنەرێک دەتوانێت تەرخانیان بکات</string>
-    <string name="system_setting_fediverse">هەژمار لەسەر Fediverse میوانداری بکە</string>
+    <string name="system_setting_fediverse">هەژمار لەسەر ActivityPub میوانداری بکە</string>
     <string name="system_setting_bluesky">هەژمار لەسەر Bluesky میوانداری بکە</string>
     <string name="system_setting_labelers">نیشانەکەرەکانی Bluesky</string>
     <string name="system_setting_xmpp">هەژمار لەسەر XMPP میوانداری بکە</string>

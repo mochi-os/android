@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">నెట్‌వర్క్‌లు</string>
     <string name="networks_not_offered">ఈ సర్వర్ ఇతర నెట్‌వర్క్‌లను అందించదు.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ఖాతాను లింక్ చేయండి</string>
     <string name="networks_link_action">లింక్</string>
     <string name="networks_linked">ఖాతా లింక్ అయింది</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">సర్వర్ కీని మార్చలేకపోయాము</string>
     <string name="system_setting_description">సర్వర్ వివరణ</string>
     <string name="system_setting_handles">ప్రతి వినియోగదారు రిజర్వ్ చేయగల హ్యాండిల్‌లు</string>
-    <string name="system_setting_fediverse">ఖాతాలను fediverse లో హోస్ట్ చేయండి</string>
+    <string name="system_setting_fediverse">ఖాతాలను ActivityPub లో హోస్ట్ చేయండి</string>
     <string name="system_setting_bluesky">ఖాతాలను Bluesky లో హోస్ట్ చేయండి</string>
     <string name="system_setting_labelers">Bluesky లేబులర్‌లు</string>
     <string name="system_setting_xmpp">ఖాతాలను XMPP లో హోస్ట్ చేయండి</string>

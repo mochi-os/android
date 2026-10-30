@@ -298,7 +298,7 @@
     <string name="feeds_source_type_person">Neach no coimhearsnachd</string>
     <string name="feeds_source_type_hashtag">Taga hais</string>
     <string name="feeds_source_type_bluesky">Inbhir no liosta Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Postaichean air an fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Postaichean air ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Postaichean air Bluesky</string>
     <string name="feeds_source_account">Cunntas</string>
     <string name="feeds_source_follow_with">Lean le</string>

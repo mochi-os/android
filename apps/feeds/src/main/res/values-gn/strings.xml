@@ -280,7 +280,7 @@
     <string name="feeds_source_type_person">Tapicha térã aty</string>
     <string name="feeds_source_type_hashtag">Teramoĩ</string>
     <string name="feeds_source_type_bluesky">Bluesky marandu syry térã tysýi</string>
-    <string name="feeds_source_type_fediverse_posts">Marandu fediverse-pe</string>
+    <string name="feeds_source_type_fediverse_posts">Marandu ActivityPub-pe</string>
     <string name="feeds_source_type_bluesky_posts">Marandu Bluesky-pe</string>
     <string name="feeds_source_account">Mba\'ete</string>
     <string name="feeds_source_follow_with">Emoirũ ko\'águi</string>

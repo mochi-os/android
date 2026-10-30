@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Şəbəkələr</string>
     <string name="networks_not_offered">Bu server başqa şəbəkələr təklif etmir.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Hesab əlaqələndir</string>
     <string name="networks_link_action">Keçid</string>
     <string name="networks_linked">Hesab bağlandı</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Server açarını dəyişdirmək mümkün olmadı</string>
     <string name="system_setting_description">Server təsviri</string>
     <string name="system_setting_handles">Hər istifadəçinin rezerv edə biləcəyi istifadəçi adları</string>
-    <string name="system_setting_fediverse">Fediverse-də hesabları yerləşdir</string>
+    <string name="system_setting_fediverse">ActivityPub şəbəkəsində hesabları yerləşdir</string>
     <string name="system_setting_bluesky">Bluesky şəbəkəsində hesabları yerləşdir</string>
     <string name="system_setting_labelers">Bluesky etiketləyiciləri</string>
     <string name="system_setting_xmpp">XMPP şəbəkəsində hesabları yerləşdir</string>

@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">נעצן</string>
     <string name="networks_not_offered">דער סערווער שטעלט נישט צו קיין אַנדערע נעצן.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">פֿאַרבינדן אַ קאָנטע</string>
     <string name="networks_link_action">לינק</string>
     <string name="networks_linked">קאָנטע פֿאַרבונדן</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">מען האָט נישט געקענט פֿאַרבײַטן דעם סערווער שליסל</string>
     <string name="system_setting_description">סערווער באַשרײַבונג</string>
     <string name="system_setting_handles">צונעמען וואָס יעדער באַניצער קען רעזערווירן</string>
-    <string name="system_setting_fediverse">האָסטן קאָנטעס אויפֿן fediverse</string>
+    <string name="system_setting_fediverse">האָסטן קאָנטעס אויף ActivityPub</string>
     <string name="system_setting_bluesky">האָסטן קאָנטעס אויף Bluesky</string>
     <string name="system_setting_labelers">Bluesky־עטיקעטירער</string>
     <string name="system_setting_xmpp">האָסטן קאָנטעס אויף XMPP</string>

@@ -454,7 +454,6 @@
     </plurals>
     <string name="networks_title">Líonraí</string>
     <string name="networks_not_offered">Ní thairgeann an freastalaí seo líonraí eile.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Nasc cuntas</string>
     <string name="networks_link_action">Nasc</string>
     <string name="networks_linked">Cuntas nasctha</string>
@@ -632,7 +631,7 @@
     <string name="system_status_key_failed">Níorbh fhéidir eochair an fhreastalaí a athsholáthar</string>
     <string name="system_setting_description">Cur síos ar an bhfreastalaí</string>
     <string name="system_setting_handles">Ainmneacha úsáideora is féidir le gach úsáideoir a chur in áirithe</string>
-    <string name="system_setting_fediverse">Óstáil cuntais ar an Fediverse</string>
+    <string name="system_setting_fediverse">Óstáil cuntais ar ActivityPub</string>
     <string name="system_setting_bluesky">Óstáil cuntais ar Bluesky</string>
     <string name="system_setting_labelers">Lipéadóirí Bluesky</string>
     <string name="system_setting_xmpp">Óstáil cuntais ar XMPP</string>

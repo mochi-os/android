@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Networkiiwwan</string>
     <string name="networks_not_offered">Sarvariin kun networkiiwwan biroo hin dhiyeessu.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Akkaawuntii walitti hidhi</string>
     <string name="networks_link_action">Hidhaa</string>
     <string name="networks_linked">Herregi walqabsiifame</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Furtuu sarvarii bakka buusuun hin danda\'amne</string>
     <string name="system_setting_description">Ibsa sarvarii</string>
     <string name="system_setting_handles">Maqaalee fayyadamaa fayyadamaan tokko tokkoon dursee qabachuu danda\'u</string>
-    <string name="system_setting_fediverse">Akkaawuntiiwwan fediverse irratti keessummeessi</string>
+    <string name="system_setting_fediverse">Akkaawuntiiwwan ActivityPub irratti keessummeessi</string>
     <string name="system_setting_bluesky">Akkaawuntiiwwan Bluesky irratti keessummeessi</string>
     <string name="system_setting_labelers">Mallatteessitoota Bluesky</string>
     <string name="system_setting_xmpp">Akkaawuntiiwwan XMPP irratti keessummeessi</string>

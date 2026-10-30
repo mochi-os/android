@@ -289,7 +289,7 @@
     <string name="feeds_source_type_person">Persoană sau comunitate</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Flux sau listă Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Postări în fedivers</string>
+    <string name="feeds_source_type_fediverse_posts">Postări pe ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Postări pe Bluesky</string>
     <string name="feeds_source_account">Cont</string>
     <string name="feeds_source_follow_with">Urmărește cu</string>

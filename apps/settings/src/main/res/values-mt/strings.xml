@@ -454,7 +454,6 @@
     </plurals>
     <string name="networks_title">Netwerks</string>
     <string name="networks_not_offered">Dan is-server ma joffrix netwerks oħra.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Illinkja kont</string>
     <string name="networks_link_action">Ħolqa</string>
     <string name="networks_linked">Il-kont ġie llinkjat</string>
@@ -632,7 +631,7 @@
     <string name="system_status_key_failed">Ma setgħetx tinbidel iċ-ċavetta tas-server</string>
     <string name="system_setting_description">Deskrizzjoni tas-server</string>
     <string name="system_setting_handles">Ismijiet tal-utent li kull utent jista\' jirriżerva</string>
-    <string name="system_setting_fediverse">Ospita kontijiet fuq il-fediverse</string>
+    <string name="system_setting_fediverse">Ospita kontijiet fuq ActivityPub</string>
     <string name="system_setting_bluesky">Ospita kontijiet fuq Bluesky</string>
     <string name="system_setting_labelers">Tikkettaturi ta\' Bluesky</string>
     <string name="system_setting_xmpp">Ospita kontijiet fuq XMPP</string>

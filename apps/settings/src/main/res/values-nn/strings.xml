@@ -426,7 +426,6 @@
     </plurals>
     <string name="networks_title">Nettverk</string>
     <string name="networks_not_offered">Denne tenaren tilbyr ikkje andre nettverk.</string>
-    <string name="networks_fediverse">Fediverset</string>
     <string name="networks_link">Kople til ein konto</string>
     <string name="networks_link_action">Lenkje</string>
     <string name="networks_linked">Konto kopla</string>
@@ -601,7 +600,7 @@
     <string name="system_status_key_failed">Kunne ikkje byte ut tenarnøkkelen</string>
     <string name="system_setting_description">Skildring av tenaren</string>
     <string name="system_setting_handles">Tal på brukarnamn kvar brukar kan reservere</string>
-    <string name="system_setting_fediverse">Ver vert for kontoar på fediverset</string>
+    <string name="system_setting_fediverse">Ver vert for kontoar på ActivityPub</string>
     <string name="system_setting_bluesky">Ver vert for kontoar på Bluesky</string>
     <string name="system_setting_labelers">Bluesky-merkingstenester</string>
     <string name="system_setting_xmpp">Ver vert for kontoar på XMPP</string>

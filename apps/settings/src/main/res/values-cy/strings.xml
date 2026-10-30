@@ -464,7 +464,6 @@
     </plurals>
     <string name="networks_title">Rhwydweithiau</string>
     <string name="networks_not_offered">Nid yw\'r gweinydd hwn yn cynnig rhwydweithiau eraill.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Cysylltu cyfrif</string>
     <string name="networks_link_action">Dolen</string>
     <string name="networks_linked">Cyfrif wedi\'i gysylltu</string>
@@ -643,7 +642,7 @@
     <string name="system_status_key_failed">Methu amnewid allwedd y gweinydd</string>
     <string name="system_setting_description">Disgrifiad y gweinydd</string>
     <string name="system_setting_handles">Enwau defnyddiwr y caiff pob defnyddiwr eu neilltuo</string>
-    <string name="system_setting_fediverse">Lletya cyfrifon ar y fediverse</string>
+    <string name="system_setting_fediverse">Lletya cyfrifon ar ActivityPub</string>
     <string name="system_setting_bluesky">Lletya cyfrifon ar Bluesky</string>
     <string name="system_setting_labelers">Labelwyr Bluesky</string>
     <string name="system_setting_xmpp">Lletya cyfrifon ar XMPP</string>

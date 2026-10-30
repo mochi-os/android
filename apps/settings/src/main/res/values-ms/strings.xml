@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">Rangkaian</string>
     <string name="networks_not_offered">Pelayan ini tidak menawarkan rangkaian lain.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Pautkan akaun</string>
     <string name="networks_link_action">Pautan</string>
     <string name="networks_linked">Akaun dipautkan</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">Gagal menggantikan kunci pelayan</string>
     <string name="system_setting_description">Penerangan pelayan</string>
     <string name="system_setting_handles">Bilangan nama pengguna yang boleh ditempah oleh setiap pengguna</string>
-    <string name="system_setting_fediverse">Hoskan akaun di fediverse</string>
+    <string name="system_setting_fediverse">Hoskan akaun di ActivityPub</string>
     <string name="system_setting_bluesky">Hoskan akaun di Bluesky</string>
     <string name="system_setting_labelers">Pelabel Bluesky</string>
     <string name="system_setting_xmpp">Hoskan akaun di XMPP</string>

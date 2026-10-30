@@ -260,7 +260,7 @@
     <string name="feeds_source_type_person">Persoon of gemeenschap</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Bluesky-feed of -lijst</string>
-    <string name="feeds_source_type_fediverse_posts">Berichten op de fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Berichten op ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Berichten op Bluesky</string>
     <string name="feeds_source_account">Account</string>
     <string name="feeds_source_follow_with">Volgen met</string>

@@ -281,7 +281,7 @@
     <string name="feeds_source_type_person">Moun oswa kominote</string>
     <string name="feeds_source_type_hashtag">Etikèt</string>
     <string name="feeds_source_type_bluesky">Fil oswa lis Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Pòs sou fediverse la</string>
+    <string name="feeds_source_type_fediverse_posts">Pòs sou ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Pòs sou Bluesky</string>
     <string name="feeds_source_account">Kont</string>
     <string name="feeds_source_follow_with">Swiv avèk</string>

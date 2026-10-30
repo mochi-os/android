@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Сүлжээнүүд</string>
     <string name="networks_not_offered">Энэ сервер өөр сүлжээ санал болгодоггүй.</string>
-    <string name="networks_fediverse">Федиверс</string>
     <string name="networks_link">Бүртгэл холбох</string>
     <string name="networks_link_action">Холбоос</string>
     <string name="networks_linked">Бүртгэл холбогдлоо</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Серверийн түлхүүрийг сольж чадсангүй</string>
     <string name="system_setting_description">Серверийн тайлбар</string>
     <string name="system_setting_handles">Хэрэглэгч бүрийн нөөцөлж болох хэрэглэгчийн нэрийн тоо</string>
-    <string name="system_setting_fediverse">Федиверс дээр бүртгэл байршуулах</string>
+    <string name="system_setting_fediverse">ActivityPub дээр бүртгэл байршуулах</string>
     <string name="system_setting_bluesky">Bluesky дээр бүртгэл байршуулах</string>
     <string name="system_setting_labelers">Bluesky шошгологчид</string>
     <string name="system_setting_xmpp">XMPP дээр бүртгэл байршуулах</string>

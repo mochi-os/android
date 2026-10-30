@@ -444,7 +444,6 @@
     </plurals>
     <string name="networks_title">Sieci</string>
     <string name="networks_not_offered">Ten serwer nie oferuje innych sieci.</string>
-    <string name="networks_fediverse">Fediwersum</string>
     <string name="networks_link">Połącz konto</string>
     <string name="networks_link_action">Link</string>
     <string name="networks_linked">Konto połączono</string>
@@ -621,7 +620,7 @@
     <string name="system_status_key_failed">Nie udało się zastąpić klucza serwera</string>
     <string name="system_setting_description">Opis serwera</string>
     <string name="system_setting_handles">Liczba pseudonimów, które może zarezerwować każdy użytkownik</string>
-    <string name="system_setting_fediverse">Hostuj konta w fediwersum</string>
+    <string name="system_setting_fediverse">Hostuj konta w sieci ActivityPub</string>
     <string name="system_setting_bluesky">Hostuj konta w sieci Bluesky</string>
     <string name="system_setting_labelers">Serwisy etykietujące Bluesky</string>
     <string name="system_setting_xmpp">Hostuj konta w sieci XMPP</string>

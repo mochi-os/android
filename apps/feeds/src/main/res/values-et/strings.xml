@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Inimene või kogukond</string>
     <string name="feeds_source_type_hashtag">Teemaviide</string>
     <string name="feeds_source_type_bluesky">Bluesky voog või loend</string>
-    <string name="feeds_source_type_fediverse_posts">Postitused fediverse\'is</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub postitused</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky postitused</string>
     <string name="feeds_source_account">Konto</string>
     <string name="feeds_source_follow_with">Jälgi kontoga</string>

@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">کس یا ټولنه</string>
     <string name="feeds_source_type_hashtag">هشټګ</string>
     <string name="feeds_source_type_bluesky">د Bluesky فیډ یا لیسټ</string>
-    <string name="feeds_source_type_fediverse_posts">په fediverse کې لیکنې</string>
+    <string name="feeds_source_type_fediverse_posts">په ActivityPub کې لیکنې</string>
     <string name="feeds_source_type_bluesky_posts">په Bluesky کې لیکنې</string>
     <string name="feeds_source_account">حساب</string>
     <string name="feeds_source_follow_with">په دې تعقیب کړئ</string>

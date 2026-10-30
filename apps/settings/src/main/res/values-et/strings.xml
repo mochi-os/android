@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Võrgud</string>
     <string name="networks_not_offered">See server ei paku teisi võrke.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Seo konto</string>
     <string name="networks_link_action">Link</string>
     <string name="networks_linked">Konto ühendatud</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Serveri võtit ei õnnestunud asendada</string>
     <string name="system_setting_description">Serveri kirjeldus</string>
     <string name="system_setting_handles">Kasutajanimed, mida iga kasutaja võib broneerida</string>
-    <string name="system_setting_fediverse">Majuta fediverse\'i kontosid</string>
+    <string name="system_setting_fediverse">Majuta ActivityPubi kontosid</string>
     <string name="system_setting_bluesky">Majuta Bluesky kontosid</string>
     <string name="system_setting_labelers">Bluesky märgendajad</string>
     <string name="system_setting_xmpp">Majuta XMPP kontosid</string>

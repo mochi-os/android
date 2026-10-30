@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">網路</string>
     <string name="networks_not_offered">此伺服器不提供其他網路。</string>
-    <string name="networks_fediverse">聯邦宇宙</string>
     <string name="networks_link">連結帳戶</string>
     <string name="networks_link_action">連結</string>
     <string name="networks_linked">帳戶已連結</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">無法替換伺服器金鑰</string>
     <string name="system_setting_description">伺服器說明</string>
     <string name="system_setting_handles">每位使用者可保留的帳號代碼數量</string>
-    <string name="system_setting_fediverse">在聯邦宇宙上代管帳戶</string>
+    <string name="system_setting_fediverse">在 ActivityPub 上代管帳戶</string>
     <string name="system_setting_bluesky">在 Bluesky 上代管帳戶</string>
     <string name="system_setting_labelers">Bluesky 標記者</string>
     <string name="system_setting_xmpp">在 XMPP 上代管帳戶</string>

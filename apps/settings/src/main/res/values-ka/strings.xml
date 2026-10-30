@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">ქსელები</string>
     <string name="networks_not_offered">ეს სერვერი სხვა ქსელებს არ გთავაზობთ.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ანგარიშის დაკავშირება</string>
     <string name="networks_link_action">ბმული</string>
     <string name="networks_linked">ანგარიში დაკავშირდა</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">სერვერის გასაღების ჩანაცვლება ვერ მოხერხდა</string>
     <string name="system_setting_description">სერვერის აღწერა</string>
     <string name="system_setting_handles">მომხმარებლის სახელების რაოდენობა, რომლის დაჯავშნაც თითოეულ მომხმარებელს შეუძლია</string>
-    <string name="system_setting_fediverse">ანგარიშების განთავსება fediverse-ში</string>
+    <string name="system_setting_fediverse">ანგარიშების განთავსება ActivityPub ქსელში</string>
     <string name="system_setting_bluesky">ანგარიშების განთავსება Bluesky ქსელში</string>
     <string name="system_setting_labelers">Bluesky-ის ეტიკეტირების სერვისები</string>
     <string name="system_setting_xmpp">ანგარიშების განთავსება XMPP ქსელში</string>

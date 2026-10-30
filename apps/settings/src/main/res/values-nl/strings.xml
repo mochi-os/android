@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Netwerken</string>
     <string name="networks_not_offered">Deze server biedt geen andere netwerken aan.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Een account koppelen</string>
     <string name="networks_link_action">Link</string>
     <string name="networks_linked">Account gekoppeld</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">De serversleutel kon niet worden vervangen</string>
     <string name="system_setting_description">Serverbeschrijving</string>
     <string name="system_setting_handles">Aantal gebruikersnamen dat elke gebruiker mag reserveren</string>
-    <string name="system_setting_fediverse">Accounts hosten op de fediverse</string>
+    <string name="system_setting_fediverse">Accounts hosten op ActivityPub</string>
     <string name="system_setting_bluesky">Accounts hosten op Bluesky</string>
     <string name="system_setting_labelers">Bluesky-labelers</string>
     <string name="system_setting_xmpp">Accounts hosten op XMPP</string>

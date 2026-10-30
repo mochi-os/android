@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Тармактар</string>
     <string name="networks_not_offered">Бул сервер башка тармактарды сунуштабайт.</string>
-    <string name="networks_fediverse">Федиверс</string>
     <string name="networks_link">Аккаунтту байланыштыруу</string>
     <string name="networks_link_action">Шилтеме</string>
     <string name="networks_linked">Аккаунт байланыштырылды</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Сервер ачкычын алмаштыруу мүмкүн болбоду</string>
     <string name="system_setting_description">Сервердин сүрөттөмөсү</string>
     <string name="system_setting_handles">Ар бир колдонуучу ээлеп кое турган колдонуучу аттарынын саны</string>
-    <string name="system_setting_fediverse">Федиверсте аккаунттарды жайгаштыруу</string>
+    <string name="system_setting_fediverse">ActivityPub тармагында аккаунттарды жайгаштыруу</string>
     <string name="system_setting_bluesky">Bluesky тармагында аккаунттарды жайгаштыруу</string>
     <string name="system_setting_labelers">Bluesky белгилөөчүлөрү</string>
     <string name="system_setting_xmpp">XMPP тармагында аккаунттарды жайгаштыруу</string>

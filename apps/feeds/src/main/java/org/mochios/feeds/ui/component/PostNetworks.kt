@@ -233,7 +233,10 @@ internal fun PostWarning(
 }
 
 /** The copies of a post on other networks that a reader can open: those with a web address. */
-internal fun openable(copies: List<PostCopy>): List<PostCopy> = copies.filter { isWebUrl(it.url) }
+internal fun openable(copies: List<PostCopy>): List<PostCopy> =
+    // A hosted account's copy is the post on the user's own server, and its
+    // link leads back to it.
+    copies.filter { isWebUrl(it.url) && it.network != "fediverse" }
 
 /**
  * A post's menu items for its [copies] on other networks, "Open on" each

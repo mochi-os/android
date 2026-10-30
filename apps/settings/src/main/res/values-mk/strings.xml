@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Мрежи</string>
     <string name="networks_not_offered">Овој сервер не нуди други мрежи.</string>
-    <string name="networks_fediverse">Федиверс</string>
     <string name="networks_link">Поврзи сметка</string>
     <string name="networks_link_action">Врска</string>
     <string name="networks_linked">Сметката е поврзана</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Клучот на серверот не можеше да се замени</string>
     <string name="system_setting_description">Опис на серверот</string>
     <string name="system_setting_handles">Број на кориснички имиња што секој корисник може да ги резервира</string>
-    <string name="system_setting_fediverse">Хостирај сметки на федиверсот</string>
+    <string name="system_setting_fediverse">Хостирај сметки на ActivityPub</string>
     <string name="system_setting_bluesky">Хостирај сметки на Bluesky</string>
     <string name="system_setting_labelers">Означувачи на Bluesky</string>
     <string name="system_setting_xmpp">Хостирај сметки на XMPP</string>

@@ -444,7 +444,6 @@
     </plurals>
     <string name="networks_title">Сети</string>
     <string name="networks_not_offered">Этот сервер не предлагает других сетей.</string>
-    <string name="networks_fediverse">Федиверс</string>
     <string name="networks_link">Связать аккаунт</string>
     <string name="networks_link_action">Ссылка</string>
     <string name="networks_linked">Аккаунт связан</string>
@@ -621,7 +620,7 @@
     <string name="system_status_key_failed">Не удалось заменить ключ сервера</string>
     <string name="system_setting_description">Описание сервера</string>
     <string name="system_setting_handles">Сколько псевдонимов может зарезервировать каждый пользователь</string>
-    <string name="system_setting_fediverse">Размещать аккаунты в федиверсе</string>
+    <string name="system_setting_fediverse">Размещать аккаунты в ActivityPub</string>
     <string name="system_setting_bluesky">Размещать аккаунты в Bluesky</string>
     <string name="system_setting_labelers">Маркировщики Bluesky</string>
     <string name="system_setting_xmpp">Размещать аккаунты в XMPP</string>

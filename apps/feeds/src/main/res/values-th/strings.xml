@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">บุคคลหรือชุมชน</string>
     <string name="feeds_source_type_hashtag">แฮชแท็ก</string>
     <string name="feeds_source_type_bluesky">ฟีดหรือรายการ Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">โพสต์บน fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">โพสต์บน ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">โพสต์บน Bluesky</string>
     <string name="feeds_source_account">บัญชี</string>
     <string name="feeds_source_follow_with">ติดตามด้วย</string>

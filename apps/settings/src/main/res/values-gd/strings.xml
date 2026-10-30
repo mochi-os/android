@@ -444,7 +444,6 @@
     </plurals>
     <string name="networks_title">Lìonraidhean</string>
     <string name="networks_not_offered">Chan eil am frithealaiche seo a\' tairgsinn lìonraidhean eile.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Ceangail cunntas</string>
     <string name="networks_link_action">Ceangal</string>
     <string name="networks_linked">Cunntas ceangailte</string>
@@ -621,7 +620,7 @@
     <string name="system_status_key_failed">Cha b\' urrainn iuchair an fhrithealaiche a chur an àite</string>
     <string name="system_setting_description">Tuairisgeul an fhrithealaiche</string>
     <string name="system_setting_handles">Ainmean-cleachdaiche as urrainn do gach cleachdaiche a ghlèidheadh</string>
-    <string name="system_setting_fediverse">Òstaich cunntasan air an fediverse</string>
+    <string name="system_setting_fediverse">Òstaich cunntasan air ActivityPub</string>
     <string name="system_setting_bluesky">Òstaich cunntasan air Bluesky</string>
     <string name="system_setting_labelers">Leubailearan Bluesky</string>
     <string name="system_setting_xmpp">Òstaich cunntasan air XMPP</string>

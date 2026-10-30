@@ -21,6 +21,8 @@ private val PROVIDER_NAMES = mapOf(
     "x" to "X",
     "stripe-customer" to "Stripe",
     "xmpp" to "XMPP",
+    // A hosted account on the fediverse, named by the protocol it speaks.
+    "fediverse" to "ActivityPub",
 )
 
 fun providerName(key: String): String =

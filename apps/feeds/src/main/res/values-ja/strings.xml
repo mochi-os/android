@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">人またはコミュニティ</string>
     <string name="feeds_source_type_hashtag">ハッシュタグ</string>
     <string name="feeds_source_type_bluesky">Bluesky のフィードまたはリスト</string>
-    <string name="feeds_source_type_fediverse_posts">フェディバースの投稿</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub の投稿</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky の投稿</string>
     <string name="feeds_source_account">アカウント</string>
     <string name="feeds_source_follow_with">フォローに使うアカウント</string>

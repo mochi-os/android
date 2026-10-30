@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Person ose komunitet</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Feed ose listë Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Postime në fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Postime në ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Postime në Bluesky</string>
     <string name="feeds_source_account">Llogaria</string>
     <string name="feeds_source_follow_with">Ndiq me</string>

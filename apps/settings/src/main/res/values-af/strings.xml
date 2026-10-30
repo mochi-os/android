@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Netwerke</string>
     <string name="networks_not_offered">Hierdie bediener bied nie ander netwerke aan nie.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Koppel \'n rekening</string>
     <string name="networks_link_action">Skakel</string>
     <string name="networks_linked">Rekening gekoppel</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Kon nie die bedienersleutel vervang nie</string>
     <string name="system_setting_description">Bedienerbeskrywing</string>
     <string name="system_setting_handles">Gebruikersname wat elke gebruiker mag bespreek</string>
-    <string name="system_setting_fediverse">Huisves rekeninge op die fediverse</string>
+    <string name="system_setting_fediverse">Huisves rekeninge op ActivityPub</string>
     <string name="system_setting_bluesky">Huisves rekeninge op Bluesky</string>
     <string name="system_setting_labelers">Bluesky-etiketteerders</string>
     <string name="system_setting_xmpp">Huisves rekeninge op XMPP</string>

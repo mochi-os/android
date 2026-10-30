@@ -93,10 +93,15 @@ class PostNetworksScreenTest {
         rule.onNodeWithText("Followers only").assertIsDisplayed()
     }
 
+    // A hosted account's copy is the post on the user's own server, and its
+    // link leads back to it.
+    private val hosted = PostCopy(address = "@me@here.example", network = "fediverse", url = "https://here.example/~me/1")
+
     private val copied = Post(
         id = "p1",
         copies = listOf(
-            PostCopy(address = "@me@here.example", network = "fediverse", url = "https://here.example/@me/1"),
+            hosted,
+            PostCopy(address = "@me@mastodon.example", network = "mastodon", url = "https://mastodon.example/@me/1"),
             PostCopy(address = "me.bsky.social", network = "bluesky"),
         ),
         boosts = 2,
@@ -120,14 +125,17 @@ class PostNetworksScreenTest {
         }
         rule.onAllNodesWithContentDescription("Edit").assertCountEquals(0)
         rule.onNodeWithContentDescription("More options").performClick()
-        // A copy without an address has nothing to open.
+        // A copy without an address has nothing to open, nor has the hosted
+        // account's.
         rule.onAllNodesWithText("Open on Bluesky").assertCountEquals(0)
+        rule.onAllNodesWithText("Open on ActivityPub").assertCountEquals(0)
+        rule.onAllNodesWithText("Open on Fediverse").assertCountEquals(0)
         // The owner's items stay the owner's.
         rule.onAllNodesWithText("Pin post").assertCountEquals(0)
-        rule.onNodeWithText("Open on Fediverse").performClick()
+        rule.onNodeWithText("Open on Mastodon").performClick()
         val started = shadowOf(activity).nextStartedActivity
         assertEquals(Intent.ACTION_VIEW, started.action)
-        assertEquals("https://here.example/@me/1", started.dataString)
+        assertEquals("https://mastodon.example/@me/1", started.dataString)
     }
 
     @Test
@@ -135,13 +143,14 @@ class PostNetworksScreenTest {
         rule.setContent {
             androidx.compose.foundation.layout.Column {
                 Bar(Post(id = "p2", copies = listOf(PostCopy(network = "bluesky"))), canManage = false)
+                Bar(Post(id = "p3", copies = listOf(hosted)), canManage = false)
                 Bar(copied, canManage = true)
             }
         }
         rule.onAllNodesWithContentDescription("More options").assertCountEquals(1)
         rule.onNodeWithContentDescription("More options").performClick()
         rule.onNodeWithText("Pin post").assertIsDisplayed()
-        rule.onNodeWithText("Open on Fediverse").assertIsDisplayed()
+        rule.onNodeWithText("Open on Mastodon").assertIsDisplayed()
     }
 
     @Test
@@ -345,7 +354,7 @@ class PostNetworksScreenTest {
                 onEdit = {}, onRemove = {}, onPoll = {},
             )
         }
-        rule.onNodeWithText("Posts on the fediverse").assertIsDisplayed()
+        rule.onNodeWithText("Posts on ActivityPub").assertIsDisplayed()
         rule.onNodeWithText("Follow pending").assertIsDisplayed()
         rule.onAllNodesWithText("https://there.example/u/a").assertCountEquals(0)
         rule.onAllNodesWithContentDescription("Poll").assertCountEquals(0)
@@ -363,7 +372,7 @@ class PostNetworksScreenTest {
                 onFollow = { feed, query -> followed = feed.id to query },
             )
         }
-        rule.onNodeWithText("!books@there.example · Fediverse · Community").assertIsDisplayed()
+        rule.onNodeWithText("!books@there.example · ActivityPub · Community").assertIsDisplayed()
         rule.onNodeWithText("Follow").performClick()
         rule.onNodeWithText("Mine").performClick()
         assertEquals("f1" to "https://there.example/c/books", followed)

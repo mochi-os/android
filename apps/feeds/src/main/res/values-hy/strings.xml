@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Անձ կամ համայնք</string>
     <string name="feeds_source_type_hashtag">Հեշթեգ</string>
     <string name="feeds_source_type_bluesky">Bluesky հոսք կամ ցանկ</string>
-    <string name="feeds_source_type_fediverse_posts">Գրառումներ fediverse-ում</string>
+    <string name="feeds_source_type_fediverse_posts">Գրառումներ ActivityPub-ում</string>
     <string name="feeds_source_type_bluesky_posts">Գրառումներ Bluesky-ում</string>
     <string name="feeds_source_account">Հաշիվ</string>
     <string name="feeds_source_follow_with">Հետևել հաշվով</string>

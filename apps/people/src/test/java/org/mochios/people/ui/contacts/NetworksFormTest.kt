@@ -31,7 +31,7 @@ class NetworksFormTest {
 
     private val card = listOf(
         ContactProperty("FN", emptyMap(), "Ada Lovelace"),
-        ContactProperty("SOCIALPROFILE", mapOf("SERVICE-TYPE" to listOf("Fediverse")), "@ada@example.social", "item1"),
+        ContactProperty("SOCIALPROFILE", mapOf("SERVICE-TYPE" to listOf("ActivityPub")), "@ada@example.social", "item1"),
         ContactProperty("SOCIALPROFILE", mapOf("SERVICE-TYPE" to listOf("Bluesky")), "ada.bsky.social"),
         ContactProperty("IMPP", mapOf("TYPE" to listOf("home")), "xmpp:ada@example.org"),
         ContactProperty("IMPP", emptyMap(), "matrix:u/ada:example.org"),
@@ -66,6 +66,9 @@ class NetworksFormTest {
     @Test
     fun `a handle's network comes from its service type, else from its shape`() {
         assertEquals(NETWORK_FEDIVERSE, handleNetwork(mapOf("SERVICE-TYPE" to listOf("Mastodon")), "ada.example"))
+        // The name a handle is written under, and the one earlier versions wrote.
+        assertEquals(NETWORK_FEDIVERSE, handleNetwork(mapOf("SERVICE-TYPE" to listOf("ActivityPub")), "ada.example"))
+        assertEquals(NETWORK_FEDIVERSE, handleNetwork(mapOf("SERVICE-TYPE" to listOf("Fediverse")), "ada.example"))
         assertEquals(NETWORK_BLUESKY, handleNetwork(mapOf("service-type" to listOf("bluesky")), "@ada@x"))
         assertEquals(NETWORK_FEDIVERSE, handleNetwork(emptyMap(), "@ada@example.social"))
         assertEquals(NETWORK_BLUESKY, handleNetwork(emptyMap(), "ada.bsky.social"))
@@ -76,7 +79,7 @@ class NetworksFormTest {
         val form = contactForm(card)
         val moved = form.copy(handles = listOf(form.handles[1].copy(network = NETWORK_FEDIVERSE)))
         val written = moved.properties().single { it.name == "SOCIALPROFILE" }
-        assertEquals(listOf("Fediverse"), written.params["SERVICE-TYPE"])
+        assertEquals(listOf("ActivityPub"), written.params["SERVICE-TYPE"])
         assertEquals("ada.bsky.social", written.value)
     }
 

@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">មនុស្ស ឬសហគមន៍</string>
     <string name="feeds_source_type_hashtag">ហាស់ថេក</string>
     <string name="feeds_source_type_bluesky">ព័ត៌មានបង្ហាញ ឬបញ្ជី Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">ការប្រកាសនៅលើ fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">ការបង្ហោះនៅលើ ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">ការបង្ហោះនៅលើ Bluesky</string>
     <string name="feeds_source_account">គណនី</string>
     <string name="feeds_source_follow_with">តាមដានដោយប្រើ</string>

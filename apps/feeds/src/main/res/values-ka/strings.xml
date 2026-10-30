@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">პიროვნება ან საზოგადოება</string>
     <string name="feeds_source_type_hashtag">ჰეშთეგი</string>
     <string name="feeds_source_type_bluesky">Bluesky-ის არხი ან სია</string>
-    <string name="feeds_source_type_fediverse_posts">პოსტები fediverse-ში</string>
+    <string name="feeds_source_type_fediverse_posts">პოსტები ActivityPub-ზე</string>
     <string name="feeds_source_type_bluesky_posts">პოსტები Bluesky-ზე</string>
     <string name="feeds_source_account">ანგარიში</string>
     <string name="feeds_source_follow_with">გამოწერა ანგარიშით</string>

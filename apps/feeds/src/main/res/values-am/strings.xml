@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">ሰው ወይም ማህበረሰብ</string>
     <string name="feeds_source_type_hashtag">ሃሽታግ</string>
     <string name="feeds_source_type_bluesky">የBluesky ፊድ ወይም ዝርዝር</string>
-    <string name="feeds_source_type_fediverse_posts">በFediverse ላይ ያሉ ልጥፎች</string>
+    <string name="feeds_source_type_fediverse_posts">በActivityPub ላይ ያሉ ልጥፎች</string>
     <string name="feeds_source_type_bluesky_posts">በBluesky ላይ ያሉ ልጥፎች</string>
     <string name="feeds_source_account">መለያ</string>
     <string name="feeds_source_follow_with">የሚከተሉበት መለያ</string>

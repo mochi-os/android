@@ -393,22 +393,23 @@ fun ContactForm.properties(): List<ContactProperty> {
 
 /**
  * The network a `SOCIALPROFILE` names: its `SERVICE-TYPE` where one is written
- * (Fediverse or Mastodon, Bluesky), else the handle's own shape - an @ in it
- * is a fediverse handle, a bare domain a Bluesky one.
+ * (ActivityPub, Mastodon or the Fediverse earlier versions wrote, Bluesky),
+ * else the handle's own shape - an @ in it is a fediverse handle, a bare
+ * domain a Bluesky one.
  */
 internal fun handleNetwork(params: Map<String, List<String>>, value: String): String {
     val service = params.entries
         .firstOrNull { it.key.equals("SERVICE-TYPE", ignoreCase = true) }?.value?.firstOrNull()?.lowercase()
     return when (service) {
         "bluesky" -> NETWORK_BLUESKY
-        "fediverse", "mastodon" -> NETWORK_FEDIVERSE
+        "activitypub", "fediverse", "mastodon" -> NETWORK_FEDIVERSE
         else -> if ('@' in value) NETWORK_FEDIVERSE else NETWORK_BLUESKY
     }
 }
 
-/** The `SERVICE-TYPE` a handle's network is written as. */
+/** The `SERVICE-TYPE` a handle's network is written as: the name a phone shows. */
 private fun serviceType(network: String): String =
-    if (network == NETWORK_BLUESKY) "Bluesky" else "Fediverse"
+    if (network == NETWORK_BLUESKY) "Bluesky" else "ActivityPub"
 
 /**
  * A messaging address as the editor shows it, with its network. A fediverse

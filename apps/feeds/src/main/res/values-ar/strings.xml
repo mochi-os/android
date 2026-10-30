@@ -310,7 +310,7 @@
     <string name="feeds_source_type_person">شخص أو مجتمع</string>
     <string name="feeds_source_type_hashtag">وسم</string>
     <string name="feeds_source_type_bluesky">تغذية أو قائمة Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">منشورات على Fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">منشورات على ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">منشورات على Bluesky</string>
     <string name="feeds_source_account">الحساب</string>
     <string name="feeds_source_follow_with">المتابعة باستخدام</string>

@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">Àwọn nẹ́tíwọ́kì</string>
     <string name="networks_not_offered">Sáfà yìí kò pèsè nẹ́tíwọ́kì mìíràn.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">So àkáǹtì kan pọ̀</string>
     <string name="networks_link_action">Ọna asopọ</string>
     <string name="networks_linked">A ti so àkàǹtì pọ̀</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">A kò lè rọ́pò kọ́kọ́rọ́ olupin</string>
     <string name="system_setting_description">Àpèjúwe sáfà</string>
     <string name="system_setting_handles">Iye ìnagijẹ tí olùmúlò kọ̀ọ̀kan lè gbà sílẹ̀</string>
-    <string name="system_setting_fediverse">Gba àwọn àkáǹtì lálejò lórí fediverse</string>
+    <string name="system_setting_fediverse">Gba àwọn àkáǹtì lálejò lórí ActivityPub</string>
     <string name="system_setting_bluesky">Gba àwọn àkáǹtì lálejò lórí Bluesky</string>
     <string name="system_setting_labelers">Àwọn olùsàmì Bluesky</string>
     <string name="system_setting_xmpp">Gba àwọn àkáǹtì lálejò lórí XMPP</string>

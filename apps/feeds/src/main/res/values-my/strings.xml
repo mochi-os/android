@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">လူ သို့မဟုတ် အသိုင်းအဝိုင်း</string>
     <string name="feeds_source_type_hashtag">ဟက်ရှ်တက်</string>
     <string name="feeds_source_type_bluesky">Bluesky ဖိဒ် သို့မဟုတ် စာရင်း</string>
-    <string name="feeds_source_type_fediverse_posts">Fediverse ရှိ ပို့စ်များ</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub ရှိ ပို့စ်များ</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky ရှိ ပို့စ်များ</string>
     <string name="feeds_source_account">အကောင့်</string>
     <string name="feeds_source_follow_with">စောင့်ကြည့်မည့် အကောင့်</string>

@@ -232,7 +232,7 @@ object ContactsMapping {
             }
             scheme == FEDIVERSE -> {
                 values[Im.PROTOCOL] = Im.PROTOCOL_CUSTOM.toString()
-                values[Im.CUSTOM_PROTOCOL] = "Fediverse"
+                values[Im.CUSTOM_PROTOCOL] = "ActivityPub"
                 values[Im.DATA] = "@$rest"
             }
             else -> {
@@ -256,7 +256,7 @@ object ContactsMapping {
                 val bare = data.removePrefix("$MATRIX:")
                 if (bare.startsWith("@")) "$MATRIX:u/" + bare.substring(1) else "$MATRIX:$bare"
             }
-            name == "fediverse" || name == "mastodon" -> "$FEDIVERSE:" + data.removePrefix("$FEDIVERSE:").removePrefix("@")
+            name == "activitypub" || name == "fediverse" || name == "mastodon" -> "$FEDIVERSE:" + data.removePrefix("$FEDIVERSE:").removePrefix("@")
             Regex("[a-z][a-z0-9+.-]*").matches(name) -> "$name:" + data.removePrefix("$name:")
             else -> "$GENERIC:$data"
         }

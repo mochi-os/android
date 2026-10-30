@@ -279,7 +279,7 @@
     <string name="feeds_source_type_person">人或者社群</string>
     <string name="feeds_source_type_hashtag">主題標籤</string>
     <string name="feeds_source_type_bluesky">Bluesky 資訊串或者清單</string>
-    <string name="feeds_source_type_fediverse_posts">聯邦宇宙上面嘅貼文</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub 上面嘅貼文</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky 上面嘅貼文</string>
     <string name="feeds_source_account">帳戶</string>
     <string name="feeds_source_follow_with">用呢個帳戶追蹤</string>

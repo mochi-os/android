@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Желілер</string>
     <string name="networks_not_offered">Бұл сервер басқа желілерді ұсынбайды.</string>
-    <string name="networks_fediverse">Федиверс</string>
     <string name="networks_link">Тіркелгіні байланыстыру</string>
     <string name="networks_link_action">Сілтеме</string>
     <string name="networks_linked">Тіркелгі байланыстырылды</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Сервер кілтін ауыстыру мүмкін болмады</string>
     <string name="system_setting_description">Сервер сипаттамасы</string>
     <string name="system_setting_handles">Әр пайдаланушы брондай алатын пайдаланушы аттарының саны</string>
-    <string name="system_setting_fediverse">Федиверсте тіркелгілерді орналастыру</string>
+    <string name="system_setting_fediverse">ActivityPub желісінде тіркелгілерді орналастыру</string>
     <string name="system_setting_bluesky">Bluesky желісінде тіркелгілерді орналастыру</string>
     <string name="system_setting_labelers">Bluesky белгілеушілері</string>
     <string name="system_setting_xmpp">XMPP желісінде тіркелгілерді орналастыру</string>

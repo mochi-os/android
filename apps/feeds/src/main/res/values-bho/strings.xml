@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">आदमी भा समुदाय</string>
     <string name="feeds_source_type_hashtag">हैशटैग</string>
     <string name="feeds_source_type_bluesky">Bluesky फीड भा सूची</string>
-    <string name="feeds_source_type_fediverse_posts">Fediverse पर पोस्ट</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub पर पोस्ट</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky पर पोस्ट</string>
     <string name="feeds_source_account">खाता</string>
     <string name="feeds_source_follow_with">फॉलो करे वाला खाता</string>

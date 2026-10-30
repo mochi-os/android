@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Amanethiwekhi</string>
     <string name="networks_not_offered">Le seva ayinikezi amanye amanethiwekhi.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Xhuma i-akhawunti</string>
     <string name="networks_link_action">Isixhumanisi</string>
     <string name="networks_linked">I-akhawunti ixhunyiwe</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Akukwazanga ukushintsha ukhiye weseva</string>
     <string name="system_setting_description">Incazelo yeseva</string>
     <string name="system_setting_handles">Izidlaliso umsebenzisi ngamunye angazibhukha</string>
-    <string name="system_setting_fediverse">Singatha ama-akhawunti ku-fediverse</string>
+    <string name="system_setting_fediverse">Singatha ama-akhawunti ku-ActivityPub</string>
     <string name="system_setting_bluesky">Singatha ama-akhawunti ku-Bluesky</string>
     <string name="system_setting_labelers">Abafaki-lebula be-Bluesky</string>
     <string name="system_setting_xmpp">Singatha ama-akhawunti ku-XMPP</string>

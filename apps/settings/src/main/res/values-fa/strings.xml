@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">شبکه‌ها</string>
     <string name="networks_not_offered">این سرور شبکهٔ دیگری ارائه نمی‌دهد.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">پیوند دادن حساب</string>
     <string name="networks_link_action">پیوند</string>
     <string name="networks_linked">حساب پیوند داده شد</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">جایگزینی کلید سرور ممکن نشد</string>
     <string name="system_setting_description">توضیحات سرور</string>
     <string name="system_setting_handles">تعداد نام‌های کاربری که هر کاربر می‌تواند رزرو کند</string>
-    <string name="system_setting_fediverse">میزبانی حساب‌ها در Fediverse</string>
+    <string name="system_setting_fediverse">میزبانی حساب‌ها در ActivityPub</string>
     <string name="system_setting_bluesky">میزبانی حساب‌ها در Bluesky</string>
     <string name="system_setting_labelers">برچسب‌گذارهای Bluesky</string>
     <string name="system_setting_xmpp">میزبانی حساب‌ها در XMPP</string>

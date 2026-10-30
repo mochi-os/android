@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Nettverk</string>
     <string name="networks_not_offered">Denne serveren tilbyr ikke andre nettverk.</string>
-    <string name="networks_fediverse">Fediverset</string>
     <string name="networks_link">Koble til en konto</string>
     <string name="networks_link_action">Lenke</string>
     <string name="networks_linked">Konto koblet</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Kunne ikke erstatte servernøkkelen</string>
     <string name="system_setting_description">Serverbeskrivelse</string>
     <string name="system_setting_handles">Antall brukernavn hver bruker kan reservere</string>
-    <string name="system_setting_fediverse">Vær vert for kontoer på fediverset</string>
+    <string name="system_setting_fediverse">Vær vert for kontoer på ActivityPub</string>
     <string name="system_setting_bluesky">Vær vert for kontoer på Bluesky</string>
     <string name="system_setting_labelers">Bluesky-merkingstjenester</string>
     <string name="system_setting_xmpp">Vær vert for kontoer på XMPP</string>

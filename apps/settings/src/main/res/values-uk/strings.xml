@@ -444,7 +444,6 @@
     </plurals>
     <string name="networks_title">Мережі</string>
     <string name="networks_not_offered">Цей сервер не пропонує інших мереж.</string>
-    <string name="networks_fediverse">Федіверс</string>
     <string name="networks_link">Пов\'язати обліковий запис</string>
     <string name="networks_link_action">Посилання</string>
     <string name="networks_linked">Обліковий запис пов\'язано</string>
@@ -621,7 +620,7 @@
     <string name="system_status_key_failed">Не вдалося замінити ключ сервера</string>
     <string name="system_setting_description">Опис сервера</string>
     <string name="system_setting_handles">Скільки псевдонімів може зарезервувати кожен користувач</string>
-    <string name="system_setting_fediverse">Розміщувати облікові записи у федіверсі</string>
+    <string name="system_setting_fediverse">Розміщувати облікові записи в ActivityPub</string>
     <string name="system_setting_bluesky">Розміщувати облікові записи в Bluesky</string>
     <string name="system_setting_labelers">Маркувальники Bluesky</string>
     <string name="system_setting_xmpp">Розміщувати облікові записи в XMPP</string>

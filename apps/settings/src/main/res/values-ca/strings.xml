@@ -425,7 +425,6 @@
     </plurals>
     <string name="networks_title">Xarxes</string>
     <string name="networks_not_offered">Aquest servidor no ofereix altres xarxes.</string>
-    <string name="networks_fediverse">Fedivers</string>
     <string name="networks_link">Vincula un compte</string>
     <string name="networks_link_action">Enllaç</string>
     <string name="networks_linked">Compte vinculat</string>
@@ -600,7 +599,7 @@
     <string name="system_status_key_failed">No s\'ha pogut substituir la clau del servidor</string>
     <string name="system_setting_description">Descripció del servidor</string>
     <string name="system_setting_handles">Identificadors que pot reservar cada usuari</string>
-    <string name="system_setting_fediverse">Allotja comptes al fedivers</string>
+    <string name="system_setting_fediverse">Allotja comptes a ActivityPub</string>
     <string name="system_setting_bluesky">Allotja comptes a Bluesky</string>
     <string name="system_setting_labelers">Etiquetadors de Bluesky</string>
     <string name="system_setting_xmpp">Allotja comptes a XMPP</string>

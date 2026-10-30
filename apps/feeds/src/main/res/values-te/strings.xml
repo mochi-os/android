@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">వ్యక్తి లేదా సంఘం</string>
     <string name="feeds_source_type_hashtag">హ్యాష్‌ట్యాగ్</string>
     <string name="feeds_source_type_bluesky">Bluesky ఫీడ్ లేదా జాబితా</string>
-    <string name="feeds_source_type_fediverse_posts">ఫెడివర్స్‌లో పోస్ట్‌లు</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPubలో పోస్ట్‌లు</string>
     <string name="feeds_source_type_bluesky_posts">Blueskyలో పోస్ట్‌లు</string>
     <string name="feeds_source_account">ఖాతా</string>
     <string name="feeds_source_follow_with">దీనితో అనుసరించండి</string>

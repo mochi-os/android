@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Tao o komunidad</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Bluesky feed o listahan</string>
-    <string name="feeds_source_type_fediverse_posts">Mga post sa fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Mga post sa ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Mga post sa Bluesky</string>
     <string name="feeds_source_account">Account</string>
     <string name="feeds_source_follow_with">Sundan gamit ang</string>

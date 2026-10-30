@@ -434,7 +434,6 @@
     </plurals>
     <string name="networks_title">Мреже</string>
     <string name="networks_not_offered">Овај сервер не нуди друге мреже.</string>
-    <string name="networks_fediverse">Федиверс</string>
     <string name="networks_link">Повежи налог</string>
     <string name="networks_link_action">Веза</string>
     <string name="networks_linked">Налог је повезан</string>
@@ -610,7 +609,7 @@
     <string name="system_status_key_failed">Замена кључа сервера није успела</string>
     <string name="system_setting_description">Опис сервера</string>
     <string name="system_setting_handles">Број надимака које сваки корисник може да резервише</string>
-    <string name="system_setting_fediverse">Хостуј налоге на федиверсу</string>
+    <string name="system_setting_fediverse">Хостуј налоге на мрежи ActivityPub</string>
     <string name="system_setting_bluesky">Хостуј налоге на мрежи Bluesky</string>
     <string name="system_setting_labelers">Bluesky означивачи</string>
     <string name="system_setting_xmpp">Хостуј налоге на мрежи XMPP</string>

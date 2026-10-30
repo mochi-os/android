@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Redes</string>
     <string name="networks_not_offered">Este servidor non ofrece outras redes.</string>
-    <string name="networks_fediverse">Fediverso</string>
     <string name="networks_link">Vincular unha conta</string>
     <string name="networks_link_action">Ligazón</string>
     <string name="networks_linked">Conta vinculada</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Non se puido substituír a chave do servidor</string>
     <string name="system_setting_description">Descrición do servidor</string>
     <string name="system_setting_handles">Identificadores que pode reservar cada usuario</string>
-    <string name="system_setting_fediverse">Aloxar contas no fediverso</string>
+    <string name="system_setting_fediverse">Aloxar contas en ActivityPub</string>
     <string name="system_setting_bluesky">Aloxar contas en Bluesky</string>
     <string name="system_setting_labelers">Etiquetadores de Bluesky</string>
     <string name="system_setting_xmpp">Aloxar contas en XMPP</string>

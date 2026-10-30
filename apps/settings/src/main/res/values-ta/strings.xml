@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">பிணையங்கள்</string>
     <string name="networks_not_offered">இந்தச் சர்வர் வேறு பிணையங்களை வழங்கவில்லை.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">கணக்கை இணை</string>
     <string name="networks_link_action">இணைப்பு</string>
     <string name="networks_linked">கணக்கு இணைக்கப்பட்டது</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">சேவையக விசையை மாற்ற முடியவில்லை</string>
     <string name="system_setting_description">சர்வர் விளக்கம்</string>
     <string name="system_setting_handles">ஒவ்வொரு பயனரும் முன்பதிவு செய்யக்கூடிய புனைப்பெயர்கள்</string>
-    <string name="system_setting_fediverse">கணக்குகளை fediverse இல் ஹோஸ்ட் செய்</string>
+    <string name="system_setting_fediverse">கணக்குகளை ActivityPub இல் ஹோஸ்ட் செய்</string>
     <string name="system_setting_bluesky">கணக்குகளை Bluesky இல் ஹோஸ்ட் செய்</string>
     <string name="system_setting_labelers">Bluesky லேபிளிடுபவர்கள்</string>
     <string name="system_setting_xmpp">கணக்குகளை XMPP இல் ஹோஸ்ட் செய்</string>

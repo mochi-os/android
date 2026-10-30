@@ -414,7 +414,6 @@
     </plurals>
     <string name="networks_title">ကွန်ရက်များ</string>
     <string name="networks_not_offered">ဤဆာဗာသည် အခြားကွန်ရက်များကို မပေးပါ။</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">အကောင့် ချိတ်ဆက်မည်</string>
     <string name="networks_link_action">လင့်ခ်</string>
     <string name="networks_linked">အကောင့် ချိတ်ဆက်ပြီး</string>
@@ -588,7 +587,7 @@
     <string name="system_status_key_failed">ဆာဗာ ကီးကို အစားထိုး၍ မရပါ</string>
     <string name="system_setting_description">ဆာဗာ ဖော်ပြချက်</string>
     <string name="system_setting_handles">သုံးစွဲသူတစ်ဦးစီ ကြိုတင်ယူနိုင်သော သုံးစွဲသူအမည် အရေအတွက်</string>
-    <string name="system_setting_fediverse">Fediverse တွင် အကောင့်များကို လက်ခံထားရှိမည်</string>
+    <string name="system_setting_fediverse">ActivityPub တွင် အကောင့်များကို လက်ခံထားရှိမည်</string>
     <string name="system_setting_bluesky">Bluesky တွင် အကောင့်များကို လက်ခံထားရှိမည်</string>
     <string name="system_setting_labelers">Bluesky တံဆိပ်ကပ်သူများ</string>
     <string name="system_setting_xmpp">XMPP တွင် အကောင့်များကို လက်ခံထားရှိမည်</string>

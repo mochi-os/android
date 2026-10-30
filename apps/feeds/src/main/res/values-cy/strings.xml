@@ -310,7 +310,7 @@
     <string name="feeds_source_type_person">Person neu gymuned</string>
     <string name="feeds_source_type_hashtag">Hashnod</string>
     <string name="feeds_source_type_bluesky">Ffrwd neu restr Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Postiadau ar y fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Postiadau ar ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Postiadau ar Bluesky</string>
     <string name="feeds_source_account">Cyfrif</string>
     <string name="feeds_source_follow_with">Dilyn gyda</string>

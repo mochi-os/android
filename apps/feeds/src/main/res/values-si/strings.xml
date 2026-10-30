@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">පුද්ගලයා හෝ ප්‍රජාව</string>
     <string name="feeds_source_type_hashtag">හැෂ්ටැගය</string>
     <string name="feeds_source_type_bluesky">Bluesky සංග්‍රහය හෝ ලැයිස්තුව</string>
-    <string name="feeds_source_type_fediverse_posts">ෆෙඩිවර්ස් හි පළ කිරීම්</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub හි පළ කිරීම්</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky හි පළ කිරීම්</string>
     <string name="feeds_source_account">ගිණුම</string>
     <string name="feeds_source_follow_with">මෙයින් අනුගමනය කරන්න</string>

@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">አውታረ መረቦች</string>
     <string name="networks_not_offered">ይህ ሰርቨር ሌሎች አውታረ መረቦችን አያቀርብም።</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">መለያ አገናኝ</string>
     <string name="networks_link_action">አገናኝ</string>
     <string name="networks_linked">መለያ ተገናኝቷል</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">የአገልጋዩን ቁልፍ መተካት አልተቻለም</string>
     <string name="system_setting_description">የሰርቨር መግለጫ</string>
     <string name="system_setting_handles">እያንዳንዱ ተጠቃሚ ሊይዛቸው የሚችላቸው የተጠቃሚ ስሞች</string>
-    <string name="system_setting_fediverse">በFediverse ላይ መለያዎችን አስተናግድ</string>
+    <string name="system_setting_fediverse">በActivityPub ላይ መለያዎችን አስተናግድ</string>
     <string name="system_setting_bluesky">በBluesky ላይ መለያዎችን አስተናግድ</string>
     <string name="system_setting_labelers">የBluesky ስያሜ ሰጪዎች</string>
     <string name="system_setting_xmpp">በXMPP ላይ መለያዎችን አስተናግድ</string>

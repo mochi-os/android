@@ -280,7 +280,7 @@
     <string name="feeds_source_type_person">Шахс ё ҷомеа</string>
     <string name="feeds_source_type_hashtag">Хештег</string>
     <string name="feeds_source_type_bluesky">Фид ё рӯйхати Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Постҳо дар федиверс</string>
+    <string name="feeds_source_type_fediverse_posts">Постҳо дар ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Постҳо дар Bluesky</string>
     <string name="feeds_source_account">Ҳисоб</string>
     <string name="feeds_source_follow_with">Обуна бо ҳисоб</string>

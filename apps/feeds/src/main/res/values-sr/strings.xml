@@ -289,7 +289,7 @@
     <string name="feeds_source_type_person">Особа или заједница</string>
     <string name="feeds_source_type_hashtag">Хештег</string>
     <string name="feeds_source_type_bluesky">Bluesky фид или листа</string>
-    <string name="feeds_source_type_fediverse_posts">Постови на федиверсу</string>
+    <string name="feeds_source_type_fediverse_posts">Постови на ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Постови на Bluesky</string>
     <string name="feeds_source_account">Налог</string>
     <string name="feeds_source_follow_with">Прати са</string>

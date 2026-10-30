@@ -303,7 +303,7 @@
     <string name="feeds_source_type_person">Duine nó pobal</string>
     <string name="feeds_source_type_hashtag">Haischlib</string>
     <string name="feeds_source_type_bluesky">Fotha nó liosta Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Postálacha ar an Fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Postálacha ar ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Postálacha ar Bluesky</string>
     <string name="feeds_source_account">Cuntas</string>
     <string name="feeds_source_follow_with">Lean le</string>

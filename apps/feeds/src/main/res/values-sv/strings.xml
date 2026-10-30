@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Person eller gemenskap</string>
     <string name="feeds_source_type_hashtag">Hashtagg</string>
     <string name="feeds_source_type_bluesky">Bluesky-flöde eller lista</string>
-    <string name="feeds_source_type_fediverse_posts">Inlägg på fediversum</string>
+    <string name="feeds_source_type_fediverse_posts">Inlägg på ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Inlägg på Bluesky</string>
     <string name="feeds_source_account">Konto</string>
     <string name="feeds_source_follow_with">Följ med</string>

@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">网络</string>
     <string name="networks_not_offered">此服务器不提供其他网络。</string>
-    <string name="networks_fediverse">联邦宇宙</string>
     <string name="networks_link">关联账户</string>
     <string name="networks_link_action">链接</string>
     <string name="networks_linked">账户已关联</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">无法替换服务器密钥</string>
     <string name="system_setting_description">服务器描述</string>
     <string name="system_setting_handles">每位用户可预留的用户识别符数量</string>
-    <string name="system_setting_fediverse">在联邦宇宙上托管账户</string>
+    <string name="system_setting_fediverse">在 ActivityPub 上托管账户</string>
     <string name="system_setting_bluesky">在 Bluesky 上托管账户</string>
     <string name="system_setting_labelers">Bluesky 标记者</string>
     <string name="system_setting_xmpp">在 XMPP 上托管账户</string>

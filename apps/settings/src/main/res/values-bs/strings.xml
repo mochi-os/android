@@ -434,7 +434,6 @@
     </plurals>
     <string name="networks_title">Mreže</string>
     <string name="networks_not_offered">Ovaj server ne nudi druge mreže.</string>
-    <string name="networks_fediverse">Fediverzum</string>
     <string name="networks_link">Poveži račun</string>
     <string name="networks_link_action">Veza</string>
     <string name="networks_linked">Račun povezan</string>
@@ -610,7 +609,7 @@
     <string name="system_status_key_failed">Zamjena ključa servera nije uspjela</string>
     <string name="system_setting_description">Opis servera</string>
     <string name="system_setting_handles">Korisnička imena koja svaki korisnik može rezervisati</string>
-    <string name="system_setting_fediverse">Hostuj račune na fediverzumu</string>
+    <string name="system_setting_fediverse">Hostuj račune na mreži ActivityPub</string>
     <string name="system_setting_bluesky">Hostuj račune na mreži Bluesky</string>
     <string name="system_setting_labelers">Bluesky označivači</string>
     <string name="system_setting_xmpp">Hostuj račune na mreži XMPP</string>

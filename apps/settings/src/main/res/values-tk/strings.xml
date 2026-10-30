@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Torlar</string>
     <string name="networks_not_offered">Bu serwer başga torlary hödürlemeýär.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Hasap baglamak</string>
     <string name="networks_link_action">Salgy</string>
     <string name="networks_linked">Hasap baglanyldy</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Serwer açaryny çalşyp bolmady</string>
     <string name="system_setting_description">Serweriň düşündirişi</string>
     <string name="system_setting_handles">Her ulanyjy näçe lakam bronlap biler</string>
-    <string name="system_setting_fediverse">Hasaplary fediverse-de ýerleşdirmek</string>
+    <string name="system_setting_fediverse">Hasaplary ActivityPub torunda ýerleşdirmek</string>
     <string name="system_setting_bluesky">Hasaplary Bluesky torunda ýerleşdirmek</string>
     <string name="system_setting_labelers">Bluesky bellik goýujylary</string>
     <string name="system_setting_xmpp">Hasaplary XMPP torunda ýerleşdirmek</string>

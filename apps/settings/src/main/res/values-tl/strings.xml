@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Mga network</string>
     <string name="networks_not_offered">Walang ibang network na inaalok ang server na ito.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Mag-link ng account</string>
     <string name="networks_link_action">Link</string>
     <string name="networks_linked">Naka-link na ang account</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Hindi napalitan ang susi ng server</string>
     <string name="system_setting_description">Paglalarawan ng server</string>
     <string name="system_setting_handles">Mga palayaw na maaaring ireserba ng bawat user</string>
-    <string name="system_setting_fediverse">Mag-host ng mga account sa fediverse</string>
+    <string name="system_setting_fediverse">Mag-host ng mga account sa ActivityPub</string>
     <string name="system_setting_bluesky">Mag-host ng mga account sa Bluesky</string>
     <string name="system_setting_labelers">Mga tagapag-label ng Bluesky</string>
     <string name="system_setting_xmpp">Mag-host ng mga account sa XMPP</string>

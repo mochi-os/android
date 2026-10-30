@@ -22,12 +22,12 @@ import java.text.Normalizer
 // (apps/settings/web/src/features/user/networks.tsx).
 
 /**
- * A network's name. The fediverse is a common noun the languages make their
- * own; XMPP is an initialism; the rest are brands, the same in every language.
+ * A network's name: brand and protocol names, the same in every language. A
+ * hosted account on the fediverse goes by ActivityPub, the protocol it speaks.
  */
 @Composable
 internal fun networkLabel(type: String): String = when (type) {
-    "fediverse" -> stringResource(R.string.networks_fediverse)
+    "fediverse" -> "ActivityPub"
     "xmpp" -> "XMPP"
     "bluesky" -> "Bluesky"
     "matrix" -> "Matrix"

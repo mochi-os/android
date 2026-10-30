@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">Jaringan</string>
     <string name="networks_not_offered">Server ini tidak menawarkan jaringan lain.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Tautkan akun</string>
     <string name="networks_link_action">Tautan</string>
     <string name="networks_linked">Akun tertaut</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">Gagal mengganti kunci server</string>
     <string name="system_setting_description">Deskripsi server</string>
     <string name="system_setting_handles">Jumlah nama pengguna yang boleh diklaim setiap pengguna</string>
-    <string name="system_setting_fediverse">Hosting akun di fediverse</string>
+    <string name="system_setting_fediverse">Hosting akun di ActivityPub</string>
     <string name="system_setting_bluesky">Hosting akun di Bluesky</string>
     <string name="system_setting_labelers">Pelabel Bluesky</string>
     <string name="system_setting_xmpp">Hosting akun di XMPP</string>

@@ -296,7 +296,7 @@
     <string name="feeds_source_type_person">Oseba ali skupnost</string>
     <string name="feeds_source_type_hashtag">Ključnik</string>
     <string name="feeds_source_type_bluesky">Kanal ali seznam Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Objave v fediverzumu</string>
+    <string name="feeds_source_type_fediverse_posts">Objave na ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Objave na Bluesky</string>
     <string name="feeds_source_account">Račun</string>
     <string name="feeds_source_follow_with">Sledi z</string>

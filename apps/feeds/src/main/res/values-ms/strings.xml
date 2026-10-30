@@ -279,7 +279,7 @@
     <string name="feeds_source_type_person">Orang atau komuniti</string>
     <string name="feeds_source_type_hashtag">Tanda pagar</string>
     <string name="feeds_source_type_bluesky">Suapan atau senarai Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Hantaran di fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Hantaran di ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Hantaran di Bluesky</string>
     <string name="feeds_source_account">Akaun</string>
     <string name="feeds_source_follow_with">Ikuti dengan</string>

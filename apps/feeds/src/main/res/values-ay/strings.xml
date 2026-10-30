@@ -280,7 +280,7 @@
     <string name="feeds_source_type_person">Jaqi jan ukax ayllu</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Bluesky feed jan ukax lista</string>
-    <string name="feeds_source_type_fediverse_posts">Fediverse ukan qillqatanaka</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub ukan qillqatanaka</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky ukan qillqatanaka</string>
     <string name="feeds_source_account">Cuenta</string>
     <string name="feeds_source_follow_with">Akampi arkaña</string>

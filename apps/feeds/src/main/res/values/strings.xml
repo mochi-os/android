@@ -346,7 +346,7 @@
     <string name="feeds_source_type_person">Person or community</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Bluesky feed or list</string>
-    <string name="feeds_source_type_fediverse_posts">Posts on the fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Posts on ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Posts on Bluesky</string>
     <string name="feeds_source_url_hint_person" translatable="false">@name@server.example, name.bsky.social, https://...</string>
     <string name="feeds_source_url_hint_tag" translatable="false">#tag@server.example</string>

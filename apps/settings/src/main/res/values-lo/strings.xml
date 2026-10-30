@@ -414,7 +414,6 @@
     </plurals>
     <string name="networks_title">ເຄືອຂ່າຍ</string>
     <string name="networks_not_offered">ເຊີບເວີນີ້ບໍ່ມີເຄືອຂ່າຍອື່ນໃຫ້.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ເຊື່ອມຕໍ່ບັນຊີ</string>
     <string name="networks_link_action">ລິ້ງ</string>
     <string name="networks_linked">ເຊື່ອມບັນຊີແລ້ວ</string>
@@ -588,7 +587,7 @@
     <string name="system_status_key_failed">ບໍ່ສາມາດປ່ຽນກະແຈເຊີບເວີໄດ້</string>
     <string name="system_setting_description">ລາຍລະອຽດເຊີບເວີ</string>
     <string name="system_setting_handles">ຈຳນວນຊື່ຜູ້ໃຊ້ທີ່ຜູ້ໃຊ້ແຕ່ລະຄົນຈອງໄດ້</string>
-    <string name="system_setting_fediverse">ໃຫ້ບໍລິການບັນຊີໃນ fediverse</string>
+    <string name="system_setting_fediverse">ໃຫ້ບໍລິການບັນຊີໃນ ActivityPub</string>
     <string name="system_setting_bluesky">ໃຫ້ບໍລິການບັນຊີໃນ Bluesky</string>
     <string name="system_setting_labelers">ຜູ້ຕິດປ້າຍກຳກັບ Bluesky</string>
     <string name="system_setting_xmpp">ໃຫ້ບໍລິການບັນຊີໃນ XMPP</string>

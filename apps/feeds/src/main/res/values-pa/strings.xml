@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">ਵਿਅਕਤੀ ਜਾਂ ਭਾਈਚਾਰਾ</string>
     <string name="feeds_source_type_hashtag">ਹੈਸ਼ਟੈਗ</string>
     <string name="feeds_source_type_bluesky">Bluesky ਫੀਡ ਜਾਂ ਸੂਚੀ</string>
-    <string name="feeds_source_type_fediverse_posts">ਫ਼ੈਡੀਵਰਸ \'ਤੇ ਪੋਸਟਾਂ</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub \'ਤੇ ਪੋਸਟਾਂ</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky \'ਤੇ ਪੋਸਟਾਂ</string>
     <string name="feeds_source_account">ਖਾਤਾ</string>
     <string name="feeds_source_follow_with">ਇਸ ਨਾਲ ਫਾਲੋ ਕਰੋ</string>

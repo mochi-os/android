@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Person eller fellesskap</string>
     <string name="feeds_source_type_hashtag">Emneknagg</string>
     <string name="feeds_source_type_bluesky">Bluesky-strøm eller -liste</string>
-    <string name="feeds_source_type_fediverse_posts">Innlegg på fediverset</string>
+    <string name="feeds_source_type_fediverse_posts">Innlegg på ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Innlegg på Bluesky</string>
     <string name="feeds_source_account">Konto</string>
     <string name="feeds_source_follow_with">Følg med</string>

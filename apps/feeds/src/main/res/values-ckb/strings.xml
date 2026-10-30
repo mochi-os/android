@@ -284,7 +284,7 @@
     <string name="feeds_source_type_person">کەس یان کۆمەڵگە</string>
     <string name="feeds_source_type_hashtag">هاشتاگ</string>
     <string name="feeds_source_type_bluesky">فید یان لیستی Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">پۆستەکان لەسەر Fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">پۆستەکان لە ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">پۆستەکان لە Bluesky</string>
     <string name="feeds_source_account">هەژمار</string>
     <string name="feeds_source_follow_with">شوێنکەوتن بە</string>

@@ -414,7 +414,6 @@
     </plurals>
     <string name="networks_title">បណ្តាញ</string>
     <string name="networks_not_offered">ម៉ាស៊ីនមេនេះមិនផ្តល់បណ្តាញផ្សេងទៀតទេ។</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">ភ្ជាប់គណនី</string>
     <string name="networks_link_action">តំណ</string>
     <string name="networks_linked">បានភ្ជាប់គណនី</string>
@@ -588,7 +587,7 @@
     <string name="system_status_key_failed">មិនអាចជំនួសកូនសោម៉ាស៊ីនមេបានទេ</string>
     <string name="system_setting_description">ការពិពណ៌នាម៉ាស៊ីនមេ</string>
     <string name="system_setting_handles">ចំនួនឈ្មោះអ្នកប្រើដែលអ្នកប្រើម្នាក់ៗអាចកក់បាន</string>
-    <string name="system_setting_fediverse">បង្ហោះគណនីនៅលើ fediverse</string>
+    <string name="system_setting_fediverse">បង្ហោះគណនីនៅលើ ActivityPub</string>
     <string name="system_setting_bluesky">បង្ហោះគណនីនៅលើ Bluesky</string>
     <string name="system_setting_labelers">អ្នកដាក់ស្លាក Bluesky</string>
     <string name="system_setting_xmpp">បង្ហោះគណនីនៅលើ XMPP</string>

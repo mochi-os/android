@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">เครือข่าย</string>
     <string name="networks_not_offered">เซิร์ฟเวอร์นี้ไม่มีเครือข่ายอื่นให้ใช้</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">เชื่อมโยงบัญชี</string>
     <string name="networks_link_action">ลิงก์</string>
     <string name="networks_linked">เชื่อมบัญชีแล้ว</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">แทนที่คีย์เซิร์ฟเวอร์ไม่สำเร็จ</string>
     <string name="system_setting_description">คำอธิบายเซิร์ฟเวอร์</string>
     <string name="system_setting_handles">จำนวนชื่อแฝงที่ผู้ใช้แต่ละคนจองได้</string>
-    <string name="system_setting_fediverse">โฮสต์บัญชีบน fediverse</string>
+    <string name="system_setting_fediverse">โฮสต์บัญชีบน ActivityPub</string>
     <string name="system_setting_bluesky">โฮสต์บัญชีบน Bluesky</string>
     <string name="system_setting_labelers">ผู้ติดป้ายกำกับ Bluesky</string>
     <string name="system_setting_xmpp">โฮสต์บัญชีบน XMPP</string>

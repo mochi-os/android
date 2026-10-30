@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Verkot</string>
     <string name="networks_not_offered">Tämä palvelin ei tarjoa muita verkkoja.</string>
-    <string name="networks_fediverse">Fediversumi</string>
     <string name="networks_link">Yhdistä tili</string>
     <string name="networks_link_action">Linkki</string>
     <string name="networks_linked">Tili yhdistetty</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Palvelimen avaimen korvaaminen epäonnistui</string>
     <string name="system_setting_description">Palvelimen kuvaus</string>
     <string name="system_setting_handles">Käyttäjätunnukset, jotka kukin käyttäjä voi varata</string>
-    <string name="system_setting_fediverse">Isännöi tilejä fediversumissa</string>
+    <string name="system_setting_fediverse">Isännöi tilejä ActivityPubissa</string>
     <string name="system_setting_bluesky">Isännöi tilejä Blueskyssa</string>
     <string name="system_setting_labelers">Bluesky-merkitsijät</string>
     <string name="system_setting_xmpp">Isännöi tilejä XMPP:ssä</string>

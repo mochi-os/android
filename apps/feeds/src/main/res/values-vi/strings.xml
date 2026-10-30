@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">Người hoặc cộng đồng</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Nguồn cấp hoặc danh sách Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Bài viết trên fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Bài viết trên ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Bài viết trên Bluesky</string>
     <string name="feeds_source_account">Tài khoản</string>
     <string name="feeds_source_follow_with">Theo dõi bằng</string>

@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Hálózatok</string>
     <string name="networks_not_offered">Ez a kiszolgáló nem kínál más hálózatokat.</string>
-    <string name="networks_fediverse">Fediverzum</string>
     <string name="networks_link">Fiók összekapcsolása</string>
     <string name="networks_link_action">Hivatkozás</string>
     <string name="networks_linked">Fiók összekapcsolva</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Nem sikerült lecserélni a kiszolgálókulcsot</string>
     <string name="system_setting_description">Kiszolgáló leírása</string>
     <string name="system_setting_handles">Felhasználónként lefoglalható felhasználónevek száma</string>
-    <string name="system_setting_fediverse">Fiókok üzemeltetése a fediverzumon</string>
+    <string name="system_setting_fediverse">Fiókok üzemeltetése a ActivityPub hálózaton</string>
     <string name="system_setting_bluesky">Fiókok üzemeltetése a Bluesky hálózaton</string>
     <string name="system_setting_labelers">Bluesky-címkézők</string>
     <string name="system_setting_xmpp">Fiókok üzemeltetése az XMPP hálózaton</string>

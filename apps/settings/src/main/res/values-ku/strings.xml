@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Tor</string>
     <string name="networks_not_offered">Ev server torên din pêşkêş nake.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Hesabekî girê bide</string>
     <string name="networks_link_action">Girêdan</string>
     <string name="networks_linked">Hesab hate girêdan</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Kilîta serverê nehat guhertin</string>
     <string name="system_setting_description">Danasîna serverê</string>
     <string name="system_setting_handles">Hejmara navên bikarhêner ku her bikarhêner dikare rezerve bike</string>
-    <string name="system_setting_fediverse">Hesaban li ser fediverse bihewîne</string>
+    <string name="system_setting_fediverse">Hesaban li ser ActivityPub bihewîne</string>
     <string name="system_setting_bluesky">Hesaban li ser Bluesky bihewîne</string>
     <string name="system_setting_labelers">Etîketkerên Bluesky</string>
     <string name="system_setting_xmpp">Hesaban li ser XMPP bihewîne</string>

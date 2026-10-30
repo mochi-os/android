@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">用户或社区</string>
     <string name="feeds_source_type_hashtag">话题标签</string>
     <string name="feeds_source_type_bluesky">Bluesky 信息流或列表</string>
-    <string name="feeds_source_type_fediverse_posts">联邦宇宙上的帖子</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub 上的帖子</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky 上的帖子</string>
     <string name="feeds_source_account">账户</string>
     <string name="feeds_source_follow_with">使用此账户关注</string>

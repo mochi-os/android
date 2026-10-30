@@ -284,7 +284,7 @@
     <string name="feeds_source_type_person">Pessoa ou comunidade</string>
     <string name="feeds_source_type_hashtag">Hashtag</string>
     <string name="feeds_source_type_bluesky">Feed ou lista do Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Publicações no fediverso</string>
+    <string name="feeds_source_type_fediverse_posts">Publicações no ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Publicações no Bluesky</string>
     <string name="feeds_source_account">Conta</string>
     <string name="feeds_source_follow_with">Seguir com</string>

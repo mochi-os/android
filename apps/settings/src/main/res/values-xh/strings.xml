@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Uthungelwano</string>
     <string name="networks_not_offered">Le seva ayinikezeli olunye uthungelwano.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Dibanisa i-akhawunti</string>
     <string name="networks_link_action">Ikhonkco</string>
     <string name="networks_linked">Iakhawunti idityanisiwe</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Ayikwazanga ukutshintsha isitshixo seseva</string>
     <string name="system_setting_description">Inkcazo yeseva</string>
     <string name="system_setting_handles">Iziteketiso umsebenzisi ngamnye anokuzibhukisha</string>
-    <string name="system_setting_fediverse">Singatha ii-akhawunti kwi-fediverse</string>
+    <string name="system_setting_fediverse">Singatha ii-akhawunti kwi-ActivityPub</string>
     <string name="system_setting_bluesky">Singatha ii-akhawunti kwi-Bluesky</string>
     <string name="system_setting_labelers">Abafaki-leyibhile be-Bluesky</string>
     <string name="system_setting_xmpp">Singatha ii-akhawunti kwi-XMPP</string>

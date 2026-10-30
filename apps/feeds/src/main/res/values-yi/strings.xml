@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">מענטש אָדער קהילה</string>
     <string name="feeds_source_type_hashtag">האַשטאַג</string>
     <string name="feeds_source_type_bluesky">Bluesky־פֿיד אָדער רשימה</string>
-    <string name="feeds_source_type_fediverse_posts">פּאָסטן אויפֿן fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">פּאָסטן אויף ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">פּאָסטן אויף Bluesky</string>
     <string name="feeds_source_account">קאָנטע</string>
     <string name="feeds_source_follow_with">נאָכפֿאָלגן מיט</string>

@@ -298,7 +298,7 @@
     <string name="feeds_source_type_person">Чалавек або супольнасць</string>
     <string name="feeds_source_type_hashtag">Хэштэг</string>
     <string name="feeds_source_type_bluesky">Стужка або спіс Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Пасты ў федыверсе</string>
+    <string name="feeds_source_type_fediverse_posts">Пасты ў ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Пасты ў Bluesky</string>
     <string name="feeds_source_account">Уліковы запіс</string>
     <string name="feeds_source_follow_with">Падпісацца праз</string>

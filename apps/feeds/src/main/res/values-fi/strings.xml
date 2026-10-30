@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Henkilö tai yhteisö</string>
     <string name="feeds_source_type_hashtag">Aihetunniste</string>
     <string name="feeds_source_type_bluesky">Bluesky-syöte tai -luettelo</string>
-    <string name="feeds_source_type_fediverse_posts">Julkaisut fediversumissa</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub-julkaisut</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky-julkaisut</string>
     <string name="feeds_source_account">Tili</string>
     <string name="feeds_source_follow_with">Seuraa tilillä</string>

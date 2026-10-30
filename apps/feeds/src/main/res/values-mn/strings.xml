@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Хүн эсвэл нийгэмлэг</string>
     <string name="feeds_source_type_hashtag">Хаштаг</string>
     <string name="feeds_source_type_bluesky">Bluesky фийд эсвэл жагсаалт</string>
-    <string name="feeds_source_type_fediverse_posts">Федиверс дээрх нийтлэлүүд</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub дээрх нийтлэлүүд</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky дээрх нийтлэлүүд</string>
     <string name="feeds_source_account">Бүртгэл</string>
     <string name="feeds_source_follow_with">Дагах бүртгэл</string>

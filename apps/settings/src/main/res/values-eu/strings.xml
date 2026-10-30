@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Sareak</string>
     <string name="networks_not_offered">Zerbitzari honek ez du beste sarerik eskaintzen.</string>
-    <string name="networks_fediverse">Fedibertso</string>
     <string name="networks_link">Estekatu kontu bat</string>
     <string name="networks_link_action">Esteka</string>
     <string name="networks_linked">Kontua lotuta</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Ezin izan da zerbitzariaren gakoa ordeztu</string>
     <string name="system_setting_description">Zerbitzariaren deskribapena</string>
     <string name="system_setting_handles">Erabiltzaile bakoitzak erreserba ditzakeen erabiltzaile-izenak</string>
-    <string name="system_setting_fediverse">Ostatatu kontuak fedibertsoan</string>
+    <string name="system_setting_fediverse">Ostatatu kontuak ActivityPub-en</string>
     <string name="system_setting_bluesky">Ostatatu kontuak Bluesky-n</string>
     <string name="system_setting_labelers">Bluesky etiketatzaileak</string>
     <string name="system_setting_xmpp">Ostatatu kontuak XMPP-n</string>

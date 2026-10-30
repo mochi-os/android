@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Kişi veya topluluk</string>
     <string name="feeds_source_type_hashtag">Etiket</string>
     <string name="feeds_source_type_bluesky">Bluesky akışı veya listesi</string>
-    <string name="feeds_source_type_fediverse_posts">Fediverse\'teki gönderiler</string>
+    <string name="feeds_source_type_fediverse_posts">ActivityPub\'daki gönderiler</string>
     <string name="feeds_source_type_bluesky_posts">Bluesky\'daki gönderiler</string>
     <string name="feeds_source_account">Hesap</string>
     <string name="feeds_source_follow_with">Şununla takip et</string>

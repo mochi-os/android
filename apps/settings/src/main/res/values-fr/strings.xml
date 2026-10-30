@@ -425,7 +425,6 @@
     </plurals>
     <string name="networks_title">Réseaux</string>
     <string name="networks_not_offered">Ce serveur ne propose pas d\'autres réseaux.</string>
-    <string name="networks_fediverse">Fédiverse</string>
     <string name="networks_link">Lier un compte</string>
     <string name="networks_link_action">Lien</string>
     <string name="networks_linked">Compte lié</string>
@@ -600,7 +599,7 @@
     <string name="system_status_key_failed">Impossible de remplacer la clé du serveur</string>
     <string name="system_setting_description">Description du serveur</string>
     <string name="system_setting_handles">Identifiants que chaque utilisateur peut réserver</string>
-    <string name="system_setting_fediverse">Héberger des comptes sur le fédiverse</string>
+    <string name="system_setting_fediverse">Héberger des comptes sur ActivityPub</string>
     <string name="system_setting_bluesky">Héberger des comptes sur Bluesky</string>
     <string name="system_setting_labelers">Étiqueteurs Bluesky</string>
     <string name="system_setting_xmpp">Héberger des comptes sur XMPP</string>

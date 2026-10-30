@@ -415,7 +415,6 @@
     </plurals>
     <string name="networks_title">Jaringan</string>
     <string name="networks_not_offered">Server ieu henteu nyayogikeun jaringan séjén.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Hubungkeun akun</string>
     <string name="networks_link_action">Tumbu</string>
     <string name="networks_linked">Akun geus dihubungkeun</string>
@@ -589,7 +588,7 @@
     <string name="system_status_key_failed">Teu tiasa ngaganti konci server</string>
     <string name="system_setting_description">Pedaran server</string>
     <string name="system_setting_handles">Landihan nu bisa dipesen ku unggal pamaké</string>
-    <string name="system_setting_fediverse">Nyayogikeun akun di fediverse</string>
+    <string name="system_setting_fediverse">Nyayogikeun akun di ActivityPub</string>
     <string name="system_setting_bluesky">Nyayogikeun akun di Bluesky</string>
     <string name="system_setting_labelers">Panyadia labél Bluesky</string>
     <string name="system_setting_xmpp">Nyayogikeun akun di XMPP</string>

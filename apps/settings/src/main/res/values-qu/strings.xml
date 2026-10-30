@@ -423,7 +423,6 @@
     </plurals>
     <string name="networks_title">Redkuna</string>
     <string name="networks_not_offered">Kay servidorqa mana huk redkunata qunchu.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Cuentata t\'inkiy</string>
     <string name="networks_link_action">T\'inki</string>
     <string name="networks_linked">Cuenta t\'inkichisqa</string>
@@ -598,7 +597,7 @@
     <string name="system_status_key_failed">Manam servidorpa llavinta tikrachiyta atikurqanchu</string>
     <string name="system_setting_description">Servidormanta willariy</string>
     <string name="system_setting_handles">Sapa apaykachaqpa reservanan identificadorkuna</string>
-    <string name="system_setting_fediverse">Cuentakunata fediverse-pi alojay</string>
+    <string name="system_setting_fediverse">Cuentakunata ActivityPub-pi alojay</string>
     <string name="system_setting_bluesky">Cuentakunata Bluesky-pi alojay</string>
     <string name="system_setting_labelers">Bluesky etiqueta churaqkuna</string>
     <string name="system_setting_xmpp">Cuentakunata XMPP-pi alojay</string>

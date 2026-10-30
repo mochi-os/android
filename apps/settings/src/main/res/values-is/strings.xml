@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Net</string>
     <string name="networks_not_offered">Þessi þjónn býður ekki upp á önnur net.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Tengja reikning</string>
     <string name="networks_link_action">Tengill</string>
     <string name="networks_linked">Reikningur tengdur</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Ekki tókst að skipta um þjónslykil</string>
     <string name="system_setting_description">Lýsing þjóns</string>
     <string name="system_setting_handles">Notandanöfn sem hver notandi má taka frá</string>
-    <string name="system_setting_fediverse">Hýsa reikninga á fediverse</string>
+    <string name="system_setting_fediverse">Hýsa reikninga á ActivityPub</string>
     <string name="system_setting_bluesky">Hýsa reikninga á Bluesky</string>
     <string name="system_setting_labelers">Bluesky-merkjarar</string>
     <string name="system_setting_xmpp">Hýsa reikninga á XMPP</string>

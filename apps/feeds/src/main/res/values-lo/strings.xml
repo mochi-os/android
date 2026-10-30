@@ -275,7 +275,7 @@
     <string name="feeds_source_type_person">ບຸກຄົນ ຫຼື ຊຸມຊົນ</string>
     <string name="feeds_source_type_hashtag">ແຮຊແທັກ</string>
     <string name="feeds_source_type_bluesky">ຟີດ ຫຼື ລາຍຊື່ Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">ໂພສໃນ fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">ໂພສໃນ ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">ໂພສໃນ Bluesky</string>
     <string name="feeds_source_account">ບັນຊີ</string>
     <string name="feeds_source_follow_with">ຕິດຕາມດ້ວຍ</string>

@@ -282,7 +282,7 @@
     <string name="feeds_source_type_person">Umntu okanye uluntu</string>
     <string name="feeds_source_type_hashtag">Ihashtag</string>
     <string name="feeds_source_type_bluesky">Ifidi okanye uluhlu lwe-Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Iiposti kwi-fediverse</string>
+    <string name="feeds_source_type_fediverse_posts">Iimpapasho ku-ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Iimpapasho ku-Bluesky</string>
     <string name="feeds_source_account">I-akhawunti</string>
     <string name="feeds_source_follow_with">I-akhawunti yokulandela</string>

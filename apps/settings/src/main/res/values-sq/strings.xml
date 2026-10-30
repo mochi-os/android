@@ -424,7 +424,6 @@
     </plurals>
     <string name="networks_title">Rrjetet</string>
     <string name="networks_not_offered">Ky server nuk ofron rrjete të tjera.</string>
-    <string name="networks_fediverse">Fediverse</string>
     <string name="networks_link">Lidh një llogari</string>
     <string name="networks_link_action">Lidhje</string>
     <string name="networks_linked">Llogaria u lidh</string>
@@ -599,7 +598,7 @@
     <string name="system_status_key_failed">Çelësi i serverit nuk u zëvendësua dot</string>
     <string name="system_setting_description">Përshkrimi i serverit</string>
     <string name="system_setting_handles">Pseudonimet që mund të rezervojë çdo përdorues</string>
-    <string name="system_setting_fediverse">Streho llogari në fediverse</string>
+    <string name="system_setting_fediverse">Streho llogari në ActivityPub</string>
     <string name="system_setting_bluesky">Streho llogari në Bluesky</string>
     <string name="system_setting_labelers">Etiketuesit e Bluesky</string>
     <string name="system_setting_xmpp">Streho llogari në XMPP</string>

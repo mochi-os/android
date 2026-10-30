@@ -284,7 +284,7 @@
     <string name="feeds_source_type_person">Persona o comunitat</string>
     <string name="feeds_source_type_hashtag">Etiqueta</string>
     <string name="feeds_source_type_bluesky">Canal o llista de Bluesky</string>
-    <string name="feeds_source_type_fediverse_posts">Publicacions al fedivers</string>
+    <string name="feeds_source_type_fediverse_posts">Publicacions a ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Publicacions a Bluesky</string>
     <string name="feeds_source_account">Compte</string>
     <string name="feeds_source_follow_with">Segueix amb</string>
