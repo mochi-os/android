@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Hääleta</string>
     <string name="feeds_poll_see_results">Näita tulemusi</string>
     <string name="feeds_poll_hide_results">Peida tulemused</string>
-    <string name="feeds_reply_from">Vasta ka kontolt</string>
-    <string name="feeds_reply_from_none">Kontota</string>
     <string name="feeds_mute">Vaigista</string>
     <string name="feeds_report">Raporteeri</string>
     <string name="feeds_report_reason">Põhjus</string>

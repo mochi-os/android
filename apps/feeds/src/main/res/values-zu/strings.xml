@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Vota</string>
     <string name="feeds_poll_see_results">Bonisa imiphumela</string>
     <string name="feeds_poll_hide_results">Fihla imiphumela</string>
-    <string name="feeds_reply_from">Phendula nakuyo</string>
-    <string name="feeds_reply_from_none">Ayikho i-akhawunti</string>
     <string name="feeds_mute">Thulisa</string>
     <string name="feeds_report">Bika</string>
     <string name="feeds_report_reason">Isizathu</string>

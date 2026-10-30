@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Äänestä</string>
     <string name="feeds_poll_see_results">Näytä tulokset</string>
     <string name="feeds_poll_hide_results">Piilota tulokset</string>
-    <string name="feeds_reply_from">Vastaa myös tililtä</string>
-    <string name="feeds_reply_from_none">Ei tiliä</string>
     <string name="feeds_mute">Mykistä</string>
     <string name="feeds_report">Ilmoita</string>
     <string name="feeds_report_reason">Syy</string>

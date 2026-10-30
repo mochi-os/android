@@ -235,8 +235,6 @@
     <string name="feeds_poll_vote">မဲပေးမည်</string>
     <string name="feeds_poll_see_results">ရလဒ်များကို ပြရန်</string>
     <string name="feeds_poll_hide_results">ရလဒ်များကို ဝှက်ရန်</string>
-    <string name="feeds_reply_from">ဤမှလည်း ပြန်ကြားရန်</string>
-    <string name="feeds_reply_from_none">အကောင့်မရှိပါ</string>
     <string name="feeds_mute">အသံပိတ်</string>
     <string name="feeds_report">အစီရင်ခံ</string>
     <string name="feeds_report_reason">အကြောင်းပြချက်</string>

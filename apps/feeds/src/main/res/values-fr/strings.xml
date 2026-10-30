@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Voter</string>
     <string name="feeds_poll_see_results">Afficher les résultats</string>
     <string name="feeds_poll_hide_results">Masquer les résultats</string>
-    <string name="feeds_reply_from">Répondre aussi depuis</string>
-    <string name="feeds_reply_from_none">Aucun compte</string>
     <string name="feeds_mute">Muet</string>
     <string name="feeds_report">Signaler</string>
     <string name="feeds_report_reason">Raison</string>

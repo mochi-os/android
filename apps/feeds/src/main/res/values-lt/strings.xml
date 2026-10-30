@@ -256,8 +256,6 @@
     <string name="feeds_poll_vote">Balsuoti</string>
     <string name="feeds_poll_see_results">Rodyti rezultatus</string>
     <string name="feeds_poll_hide_results">Slėpti rezultatus</string>
-    <string name="feeds_reply_from">Atsakyti ir iš</string>
-    <string name="feeds_reply_from_none">Be paskyros</string>
     <string name="feeds_mute">Nutildyti</string>
     <string name="feeds_report">Pranešti</string>
     <string name="feeds_report_reason">Priežastis</string>

@@ -128,7 +128,6 @@ import org.mochios.feeds.ui.component.PostWarning
 import org.mochios.feeds.ui.component.QuoteCard
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.hasBadges
-import org.mochios.feeds.ui.component.repliesElsewhere
 import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.commentAvatar
@@ -165,7 +164,6 @@ fun PostDetailScreen(
     val actionError by viewModel.actionError.collectAsState()
     val actionMessage by viewModel.actionMessage.collectAsState()
     val hosted by viewModel.hosted.collectAsState()
-    val replyFrom by viewModel.replyFrom.collectAsState()
 
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showDeleteCommentDialog by remember { mutableStateOf<String?>(null) }
@@ -310,17 +308,9 @@ fun PostDetailScreen(
                     // A comment needs a body; attachments alone will not do.
                     requireText = true,
                     onSearchMentions = { viewModel.searchMembers(it) },
-                    banner = feedsComposerBanner(
-                        replyFromBanner(
-                            accounts = hosted,
-                            shown = post?.let(::repliesElsewhere) == true,
-                            chosen = replyFrom,
-                            onChoose = { viewModel.setReplyFrom(it) },
-                        ),
-                        feedsReplyBanner(
-                            findComment(post?.comments.orEmpty(), replyingTo),
-                            { viewModel.setReplyingTo(null) },
-                        ),
+                    banner = feedsReplyBanner(
+                        findComment(post?.comments.orEmpty(), replyingTo),
+                        { viewModel.setReplyingTo(null) },
                     ),
                 )
             }

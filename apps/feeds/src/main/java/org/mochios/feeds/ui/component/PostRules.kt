@@ -22,12 +22,12 @@ internal const val POLL_DURATION_DEFAULT = 86400
 /** The visibilities a post may be made with, public first. */
 internal val VISIBILITIES = listOf("public", "unlisted", "followers")
 
-/** The user's hosted fediverse accounts: a comment goes out from one, and a boost is made from the first. */
+/** The user's hosted fediverse accounts: a boost is made from the first. */
 internal fun hostedFediverse(accounts: List<PublishAccount>): List<PublishAccount> =
     accounts.filter { it.hosted && it.type == "fediverse" }
 
-/** Whether a comment on the post may also go out from one of the user's hosted fediverse accounts. */
-internal fun repliesElsewhere(post: Post): Boolean =
+/** Whether the post is on the fediverse: a copy of it there, or it came from there. */
+internal fun onFediverse(post: Post): Boolean =
     post.copies.any { it.network == "fediverse" } || post.elsewhere
 
 /** Whether the post is boosted from [account]: it holds a copy there under the account's address. */

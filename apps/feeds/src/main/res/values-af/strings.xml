@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Stem</string>
     <string name="feeds_poll_see_results">Wys resultate</string>
     <string name="feeds_poll_hide_results">Versteek resultate</string>
-    <string name="feeds_reply_from">Antwoord ook van</string>
-    <string name="feeds_reply_from_none">Geen rekening</string>
     <string name="feeds_mute">Demp</string>
     <string name="feeds_report">Rapporteer</string>
     <string name="feeds_report_reason">Rede</string>

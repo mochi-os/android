@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Добуш берүү</string>
     <string name="feeds_poll_see_results">Натыйжаларды көрсөтүү</string>
     <string name="feeds_poll_hide_results">Натыйжаларды жашыруу</string>
-    <string name="feeds_reply_from">Ошондой эле мындан жооп берүү</string>
-    <string name="feeds_reply_from_none">Аккаунт жок</string>
     <string name="feeds_mute">Үнсүздөө</string>
     <string name="feeds_report">Билдирүү</string>
     <string name="feeds_report_reason">Себеп</string>

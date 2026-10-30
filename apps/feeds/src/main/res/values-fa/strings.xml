@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">رأی دادن</string>
     <string name="feeds_poll_see_results">نمایش نتایج</string>
     <string name="feeds_poll_hide_results">پنهان کردن نتایج</string>
-    <string name="feeds_reply_from">همچنین پاسخ از</string>
-    <string name="feeds_reply_from_none">بدون حساب</string>
     <string name="feeds_mute">بی‌صدا</string>
     <string name="feeds_report">گزارش</string>
     <string name="feeds_report_reason">دلیل</string>

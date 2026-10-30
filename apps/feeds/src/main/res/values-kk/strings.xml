@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Дауыс беру</string>
     <string name="feeds_poll_see_results">Нәтижелерді көрсету</string>
     <string name="feeds_poll_hide_results">Нәтижелерді жасыру</string>
-    <string name="feeds_reply_from">Сондай-ақ осыдан жауап беру</string>
-    <string name="feeds_reply_from_none">Тіркелгі жоқ</string>
     <string name="feeds_mute">Үнсіз қылу</string>
     <string name="feeds_report">Шағымдану</string>
     <string name="feeds_report_reason">Себеп</string>

@@ -235,8 +235,6 @@
     <string name="feeds_poll_vote">ลงคะแนน</string>
     <string name="feeds_poll_see_results">แสดงผลลัพธ์</string>
     <string name="feeds_poll_hide_results">ซ่อนผลลัพธ์</string>
-    <string name="feeds_reply_from">ตอบกลับจากบัญชีนี้ด้วย</string>
-    <string name="feeds_reply_from_none">ไม่มีบัญชี</string>
     <string name="feeds_mute">ปิดเสียง</string>
     <string name="feeds_report">รายงาน</string>
     <string name="feeds_report_reason">เหตุผล</string>

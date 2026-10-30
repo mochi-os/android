@@ -270,8 +270,6 @@
     <string name="feeds_poll_vote">Pleidleisio</string>
     <string name="feeds_poll_see_results">Dangos y canlyniadau</string>
     <string name="feeds_poll_hide_results">Cuddio\'r canlyniadau</string>
-    <string name="feeds_reply_from">Ateb hefyd o</string>
-    <string name="feeds_reply_from_none">Dim cyfrif</string>
     <string name="feeds_mute">Tewi</string>
     <string name="feeds_report">Riportio</string>
     <string name="feeds_report_reason">Rheswm</string>

@@ -292,8 +292,6 @@
     <string name="feeds_poll_vote">Vote</string>
     <string name="feeds_poll_see_results">See results</string>
     <string name="feeds_poll_hide_results">Hide results</string>
-    <string name="feeds_reply_from">Also reply from</string>
-    <string name="feeds_reply_from_none">No account</string>
     <string name="feeds_mute">Mute</string>
     <string name="feeds_report">Report</string>
     <string name="feeds_report_reason">Reason</string>

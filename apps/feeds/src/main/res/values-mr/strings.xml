@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">मत द्या</string>
     <string name="feeds_poll_see_results">निकाल दाखवा</string>
     <string name="feeds_poll_hide_results">निकाल लपवा</string>
-    <string name="feeds_reply_from">यावरूनही उत्तर द्या</string>
-    <string name="feeds_reply_from_none">खाते नाही</string>
     <string name="feeds_mute">म्यूट</string>
     <string name="feeds_report">रिपोर्ट करा</string>
     <string name="feeds_report_reason">कारण</string>

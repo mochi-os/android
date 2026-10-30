@@ -35,7 +35,7 @@ import javax.inject.Inject
 import org.mochios.feeds.ui.component.applied
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.hostedFediverse
-import org.mochios.feeds.ui.component.repliesElsewhere
+import org.mochios.feeds.ui.component.onFediverse
 
 @HiltViewModel
 class PostDetailViewModel @Inject constructor(
@@ -123,15 +123,10 @@ class PostDetailViewModel @Inject constructor(
 
     /**
      * The user's hosted fediverse accounts, read once a post with a copy there
-     * or from there is shown: a comment may go out from one, and a boost is
-     * made from the first.
+     * or from there is shown: a boost is made from the first.
      */
     private val _hosted = MutableStateFlow<List<PublishAccount>>(emptyList())
     val hosted: StateFlow<List<PublishAccount>> = _hosted.asStateFlow()
-
-    /** The hosted account a comment also goes out from; empty for none. */
-    private val _replyFrom = MutableStateFlow("")
-    val replyFrom: StateFlow<String> = _replyFrom.asStateFlow()
 
     private val _voting = MutableStateFlow(false)
     val voting: StateFlow<Boolean> = _voting.asStateFlow()
@@ -253,7 +248,6 @@ class PostDetailViewModel @Inject constructor(
                         context = application,
                         attachment = anchor,
                         tracker = commentTracker,
-                        account = _replyFrom.value,
                     )
                     _commentText.value = ""
                     _commentAttachments.value = emptyList()
@@ -396,17 +390,13 @@ class PostDetailViewModel @Inject constructor(
         _actionMessage.value = null
     }
 
-    fun setReplyFrom(account: String) {
-        _replyFrom.value = account
-    }
-
     private fun loadHosted(post: Post) {
-        if (!repliesElsewhere(post) || _hosted.value.isNotEmpty()) return
+        if (!onFediverse(post) || _hosted.value.isNotEmpty()) return
         viewModelScope.launch {
             try {
                 _hosted.value = hostedFediverse(repository.networkAccounts())
             } catch (_: Exception) {
-                // Without them the post simply offers no account to reply from.
+                // Without them the post simply offers no boost.
             }
         }
     }

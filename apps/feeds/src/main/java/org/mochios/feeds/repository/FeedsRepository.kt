@@ -673,9 +673,6 @@ class FeedsRepository @Inject constructor(
         context: Context,
         attachment: String? = null,
         tracker: UploadTracker? = null,
-        // The commenter's hosted account the comment also goes out from, as a
-        // reply to the post's copy on that network.
-        account: String? = null,
     ): Comment {
         val cachedFiles = fileStore.cacheFiles(files)
         return try {
@@ -688,9 +685,6 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("parent", parent)
             } else if (!attachment.isNullOrEmpty()) {
                 builder.addFormDataPart("attachment", attachment)
-            }
-            if (!account.isNullOrEmpty()) {
-                builder.addFormDataPart("account", account)
             }
             for (file in cachedFiles) {
                 builder.addPart(fileStore.filePart("files", file, tracker = tracker))

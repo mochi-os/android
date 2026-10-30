@@ -239,8 +239,6 @@
     <string name="feeds_poll_vote">Undi</string>
     <string name="feeds_poll_see_results">Tunjukkan keputusan</string>
     <string name="feeds_poll_hide_results">Sembunyikan keputusan</string>
-    <string name="feeds_reply_from">Balas juga daripada</string>
-    <string name="feeds_reply_from_none">Tiada akaun</string>
     <string name="feeds_mute">Senyapkan</string>
     <string name="feeds_report">Laporkan</string>
     <string name="feeds_report_reason">Sebab</string>

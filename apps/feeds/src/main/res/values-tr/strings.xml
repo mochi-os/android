@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Oy ver</string>
     <string name="feeds_poll_see_results">Sonuçları göster</string>
     <string name="feeds_poll_hide_results">Sonuçları gizle</string>
-    <string name="feeds_reply_from">Şuradan da yanıtla</string>
-    <string name="feeds_reply_from_none">Hesap yok</string>
     <string name="feeds_mute">Sessize al</string>
     <string name="feeds_report">Bildir</string>
     <string name="feeds_report_reason">Neden</string>

@@ -241,8 +241,6 @@
     <string name="feeds_poll_vote">Vote</string>
     <string name="feeds_poll_see_results">Montre rezilta yo</string>
     <string name="feeds_poll_hide_results">Kache rezilta yo</string>
-    <string name="feeds_reply_from">Reponn tou soti nan</string>
-    <string name="feeds_reply_from_none">Pa gen kont</string>
     <string name="feeds_mute">Bay silans</string>
     <string name="feeds_report">Rapòte</string>
     <string name="feeds_report_reason">Rezon</string>

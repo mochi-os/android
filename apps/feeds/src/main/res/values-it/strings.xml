@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Vota</string>
     <string name="feeds_poll_see_results">Mostra risultati</string>
     <string name="feeds_poll_hide_results">Nascondi risultati</string>
-    <string name="feeds_reply_from">Rispondi anche da</string>
-    <string name="feeds_reply_from_none">Nessun account</string>
     <string name="feeds_mute">Silenzia</string>
     <string name="feeds_report">Segnala</string>
     <string name="feeds_report_reason">Motivo</string>

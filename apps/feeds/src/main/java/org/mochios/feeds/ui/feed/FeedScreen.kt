@@ -186,10 +186,7 @@ import org.mochios.feeds.ui.component.toReactionCounts
 import org.mochios.feeds.ui.feedlist.FeedListViewModel
 import org.mochios.feeds.ui.post.PostTagsButton
 import org.mochios.feeds.ui.post.feedsCommentAttachments
-import org.mochios.feeds.ui.post.feedsComposerBanner
 import org.mochios.feeds.ui.post.feedsReplyBanner
-import org.mochios.feeds.ui.post.replyFromBanner
-import org.mochios.feeds.ui.component.repliesElsewhere
 import org.mochios.feeds.ui.router.FEEDS_FEATURE
 import org.mochios.android.R as MochiR
 
@@ -314,7 +311,6 @@ fun FeedScreen(
     val savedIds by viewModel.savedIds.collectAsState()
     val postImages by viewModel.postImages.collectAsState()
     val hosted by viewModel.hosted.collectAsState()
-    val replyFrom by viewModel.replyFrom.collectAsState()
     val voting by viewModel.voting.collectAsState()
     LaunchedEffect(posts) { viewModel.loadHostedIfNeeded(posts) }
     val newPostsCount by viewModel.newPostsCount.collectAsState()
@@ -1047,15 +1043,7 @@ fun FeedScreen(
                         requireText = true,
                         onSearchMentions = { query -> viewModel.searchMembers(query) },
                         windowInsets = ComposeBarDefaults.NoWindowInsets,
-                        banner = feedsComposerBanner(
-                            replyFromBanner(
-                                accounts = hosted,
-                                shown = posts.any { it.id == target.postId && repliesElsewhere(it) },
-                                chosen = replyFrom,
-                                onChoose = { viewModel.setReplyFrom(it) },
-                            ),
-                            feedsReplyBanner(null, { viewModel.closeCommentComposer() }),
-                        ),
+                        banner = feedsReplyBanner(null, { viewModel.closeCommentComposer() }),
                     )
                 }
             }

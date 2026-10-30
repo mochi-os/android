@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">ভোট দিন</string>
     <string name="feeds_poll_see_results">ফলাফল দেখান</string>
     <string name="feeds_poll_hide_results">ফলাফল লুকান</string>
-    <string name="feeds_reply_from">এখান থেকেও উত্তর দিন</string>
-    <string name="feeds_reply_from_none">কোনো অ্যাকাউন্ট নেই</string>
     <string name="feeds_mute">নিঃশব্দ</string>
     <string name="feeds_report">রিপোর্ট করুন</string>
     <string name="feeds_report_reason">কারণ</string>

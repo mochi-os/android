@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Szavazat leadása</string>
     <string name="feeds_poll_see_results">Eredmények megjelenítése</string>
     <string name="feeds_poll_hide_results">Eredmények elrejtése</string>
-    <string name="feeds_reply_from">Válasz innen is</string>
-    <string name="feeds_reply_from_none">Nincs fiók</string>
     <string name="feeds_mute">Némítás</string>
     <string name="feeds_report">Jelentés</string>
     <string name="feeds_report_reason">Indok</string>

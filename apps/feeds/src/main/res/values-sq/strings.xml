@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Voto</string>
     <string name="feeds_poll_see_results">Shfaq rezultatet</string>
     <string name="feeds_poll_hide_results">Fshih rezultatet</string>
-    <string name="feeds_reply_from">Përgjigju edhe nga</string>
-    <string name="feeds_reply_from_none">Pa llogari</string>
     <string name="feeds_mute">Hesht</string>
     <string name="feeds_report">Raporto</string>
     <string name="feeds_report_reason">Arsyeja</string>

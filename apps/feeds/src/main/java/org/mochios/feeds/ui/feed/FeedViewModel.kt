@@ -48,7 +48,7 @@ import javax.inject.Inject
 import org.mochios.feeds.ui.component.applied
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.hostedFediverse
-import org.mochios.feeds.ui.component.repliesElsewhere
+import org.mochios.feeds.ui.component.onFediverse
 
 private const val PREFS = "mochi_feeds"
 private const val KEY_UNREAD_ONLY = "unread_only"
@@ -158,14 +158,6 @@ class FeedViewModel @Inject constructor(
     private val _hosted = MutableStateFlow<List<PublishAccount>>(emptyList())
     val hosted: StateFlow<List<PublishAccount>> = _hosted.asStateFlow()
     private var hostedRead = false
-
-    /** The hosted account the comment being written also goes out from; empty for none. */
-    private val _replyFrom = MutableStateFlow("")
-    val replyFrom: StateFlow<String> = _replyFrom.asStateFlow()
-
-    fun setReplyFrom(account: String) {
-        _replyFrom.value = account
-    }
 
     /** The post whose vote is on its way. */
     private val _voting = MutableStateFlow<String?>(null)
@@ -576,7 +568,6 @@ class FeedViewModel @Inject constructor(
     ) {
         _commentDraft.value = ""
         _commentAttachments.value = emptyList()
-        _replyFrom.value = ""
         _commentTarget.value = CommentTarget(postFeedId, postId, parentId, parentName, parentBody)
     }
 
@@ -635,7 +626,6 @@ class FeedViewModel @Inject constructor(
                             files = files,
                             context = context,
                             tracker = commentTracker,
-                            account = _replyFrom.value,
                         )
                         _commentTarget.value = null
                         _commentDraft.value = ""
@@ -902,10 +892,10 @@ class FeedViewModel @Inject constructor(
 
     /**
      * Read the hosted accounts once the shown posts include one a boost could
-     * be made of, or a comment could also go out from one on.
+     * be made of.
      */
     fun loadHostedIfNeeded(posts: List<Post>) {
-        if (hostedRead || posts.none { it.elsewhere || repliesElsewhere(it) }) return
+        if (hostedRead || posts.none { onFediverse(it) }) return
         hostedRead = true
         viewModelScope.launch {
             try {

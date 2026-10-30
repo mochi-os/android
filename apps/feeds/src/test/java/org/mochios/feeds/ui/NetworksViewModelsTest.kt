@@ -230,22 +230,6 @@ class NetworksViewModelsTest {
     }
 
     @Test
-    fun `a comment also goes out from the account chosen, and from none when none is`() {
-        val model = detail()
-        model.setCommentText("Hi")
-        model.sendComment()
-        until("the first comment") { sent("/feeds/f1/-/p1/comment/create") != null }
-        assertNull(part(sent("/feeds/f1/-/p1/comment/create")!!, "account"))
-        requests.clear()
-        until("the composer") { !model.isSendingComment.value }
-        model.setReplyFrom("h1")
-        model.setCommentText("Again")
-        model.sendComment()
-        until("the second comment") { sent("/feeds/f1/-/p1/comment/create") != null }
-        assertEquals("h1", part(sent("/feeds/f1/-/p1/comment/create")!!, "account"))
-    }
-
-    @Test
     fun `every feed is marked read at once from All feeds`() {
         val model = FeedViewModel(
             SavedStateHandle(mapOf("feedId" to "__all__")),

@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">મત આપો</string>
     <string name="feeds_poll_see_results">પરિણામો બતાવો</string>
     <string name="feeds_poll_hide_results">પરિણામો છુપાવો</string>
-    <string name="feeds_reply_from">આમાંથી પણ જવાબ આપો</string>
-    <string name="feeds_reply_from_none">કોઈ ખાતું નથી</string>
     <string name="feeds_mute">મ્યૂટ</string>
     <string name="feeds_report">રિપોર્ટ કરો</string>
     <string name="feeds_report_reason">કારણ</string>

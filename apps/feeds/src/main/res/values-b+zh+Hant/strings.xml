@@ -235,8 +235,6 @@
     <string name="feeds_poll_vote">送出投票</string>
     <string name="feeds_poll_see_results">顯示結果</string>
     <string name="feeds_poll_hide_results">隱藏結果</string>
-    <string name="feeds_reply_from">同時從此回覆</string>
-    <string name="feeds_reply_from_none">無帳號</string>
     <string name="feeds_mute">靜音</string>
     <string name="feeds_report">檢舉</string>
     <string name="feeds_report_reason">原因</string>

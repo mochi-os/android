@@ -242,8 +242,6 @@
     <string name="feeds_poll_vote">Stemmen</string>
     <string name="feeds_poll_see_results">Resultaten tonen</string>
     <string name="feeds_poll_hide_results">Resultaten verbergen</string>
-    <string name="feeds_reply_from">Ook reageren vanaf</string>
-    <string name="feeds_reply_from_none">Geen account</string>
     <string name="feeds_mute">Dempen</string>
     <string name="feeds_report">Melden</string>
     <string name="feeds_report_reason">Reden</string>

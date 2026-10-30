@@ -42,11 +42,11 @@ class NetworksRulesTest {
     }
 
     @Test
-    fun `a comment may also go out from an account where the post has a fediverse copy or comes from there`() {
-        assertTrue(repliesElsewhere(Post(copies = listOf(PostCopy(network = "fediverse")))))
-        assertTrue(repliesElsewhere(Post(remote = "https://there.example/1", author = "https://there.example/u/a")))
-        assertFalse(repliesElsewhere(Post(copies = listOf(PostCopy(network = "bluesky")))))
-        assertFalse(repliesElsewhere(Post(remote = "https://there.example/1")))
+    fun `a post is on the fediverse where it has a copy there or comes from there`() {
+        assertTrue(onFediverse(Post(copies = listOf(PostCopy(network = "fediverse")))))
+        assertTrue(onFediverse(Post(remote = "https://there.example/1", author = "https://there.example/u/a")))
+        assertFalse(onFediverse(Post(copies = listOf(PostCopy(network = "bluesky")))))
+        assertFalse(onFediverse(Post(remote = "https://there.example/1")))
     }
 
     @Test
