@@ -37,6 +37,7 @@ import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentEditor
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.KeepAboveKeyboard
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
@@ -264,7 +265,7 @@ fun WikiCommentThread(
                     )
                     if (replyId == comment.id) {
                         Spacer(Modifier.height(4.dp))
-                        replyBox()
+                        KeepAboveKeyboard(content = replyBox)
                     }
                 }
             }

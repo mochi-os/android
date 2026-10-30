@@ -452,7 +452,8 @@ fun PostScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .consumeWindowInsets(padding)
-                .padding(padding),
+                .padding(padding)
+                .imePadding(),
         ) {
             when {
                 uiState.isLoading && uiState.post.id.isEmpty() -> {

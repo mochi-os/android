@@ -15,13 +15,17 @@ import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.ime
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -41,14 +45,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -291,7 +300,7 @@ fun CommentItem(
             }
             if (reply != null) {
                 Spacer(modifier = Modifier.height(4.dp))
-                reply()
+                KeepAboveKeyboard(content = reply)
             }
         }
     }
@@ -443,25 +452,65 @@ fun CommentEditor(
     onSave: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    Column(modifier = modifier.fillMaxWidth()) {
-        MochiTextField(
-            value = text,
-            onValueChange = onTextChange,
-            modifier = Modifier.fillMaxWidth(),
-            minLines = 2,
-            maxLines = 8,
-        )
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.End,
-        ) {
-            MochiTextButton(onClick = onCancel) {
-                Text(stringResource(R.string.common_cancel))
-            }
-            MochiTextButton(onClick = onSave, enabled = text.isNotBlank()) {
-                Text(stringResource(R.string.common_save))
+    var field by remember { mutableStateOf(TextFieldValue(text, TextRange(text.length))) }
+    val shown = if (field.text == text) field else TextFieldValue(text, TextRange(text.length))
+    KeepAboveKeyboard(modifier = modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            MochiTextField(
+                value = shown,
+                onValueChange = { value ->
+                    field = value
+                    onTextChange(value.text)
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(rememberAutoFocus()),
+                minLines = 2,
+                maxLines = 8,
+            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End,
+            ) {
+                MochiTextButton(onClick = onCancel) {
+                    Text(stringResource(R.string.common_cancel))
+                }
+                MochiTextButton(onClick = onSave, enabled = text.isNotBlank()) {
+                    Text(stringResource(R.string.common_save))
+                }
             }
         }
+    }
+}
+
+/**
+ * A box that scrolls itself into view above the keyboard while a field in it
+ * has focus. A reply or edit box opened low in a comment list would otherwise
+ * sit under the keyboard, since the list only scrolls the field and not the
+ * buttons beside or below it.
+ *
+ * @param modifier The box's modifier.
+ * @param content The box's content, holding the field.
+ */
+@Composable
+fun KeepAboveKeyboard(
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit,
+) {
+    val view = remember { BringIntoViewRequester() }
+    var focused by remember { mutableStateOf(false) }
+    val keyboard = WindowInsets.ime.getBottom(LocalDensity.current)
+    LaunchedEffect(focused, keyboard) {
+        if (focused) {
+            view.bringIntoView()
+        }
+    }
+    Box(
+        modifier = modifier
+            .bringIntoViewRequester(view)
+            .onFocusChanged { state -> focused = state.hasFocus },
+    ) {
+        content()
     }
 }
 
