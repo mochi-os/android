@@ -54,8 +54,6 @@ fun CommentsTab(
     comments: List<Comment>,
     /** The signed-in person, who may edit and delete their own comments. */
     currentUserId: String?,
-    /** Whether the viewer manages the place, and so may delete any comment. */
-    canManage: Boolean,
     projectId: String,
     /** Holds the unsent comment and any edit under way, past this tab's own life. */
     drafts: CommentDrafts,
@@ -151,7 +149,6 @@ fun CommentsTab(
                         avatarUrlBuilder = avatarUrlBuilder,
                         drafts = drafts,
                         currentUserId = currentUserId,
-                        canManage = canManage,
                         onReply = { id, _ -> drafts.update(target) { it.copy(reply = id) } },
                         onEdit = onUpdateComment,
                         onDelete = onDeleteComment,
@@ -192,7 +189,6 @@ private fun CommentItem(
     avatarUrlBuilder: ((Comment) -> String?)?,
     drafts: CommentDrafts,
     currentUserId: String?,
-    canManage: Boolean,
     onReply: (String, String) -> Unit,
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit,
@@ -239,7 +235,7 @@ private fun CommentItem(
         CommentActions(
             onReply = { onReply(comment.id, comment.name) },
             onEdit = { drafts.edit(comment.id, comment.text) }.takeIf { mine },
-            onDelete = { onDelete(comment.id) }.takeIf { mine || canManage },
+            onDelete = { onDelete(comment.id) }.takeIf { mine },
         )
     }
 
@@ -252,7 +248,6 @@ private fun CommentItem(
             avatarUrlBuilder = avatarUrlBuilder,
             drafts = drafts,
             currentUserId = currentUserId,
-            canManage = canManage,
             onReply = onReply,
             onEdit = onEdit,
             onDelete = onDelete,

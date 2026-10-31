@@ -231,7 +231,6 @@ fun ObjectDetailSheet(
                         1 -> CommentsTab(
                             comments = uiState.comments,
                             currentUserId = identity,
-                            canManage = uiState.access == "owner" || uiState.access == "design",
                             crmId = crmId,
                             drafts = viewModel.drafts,
                             target = obj.id,

@@ -18,8 +18,8 @@ import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 
 /**
- * Who sees Edit and Delete on a comment: Edit for its author alone, Delete for
- * its author or a manager.
+ * Who sees Edit and Delete on a comment: its author alone, as the server refuses
+ * anyone else's delete, a manager's included.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35], qualifiers = "w400dp-h800dp")
@@ -31,12 +31,11 @@ class CommentsTabPermissionTest {
     private val edit = RuntimeEnvironment.getApplication().getString(MochiR.string.common_edit)
     private val delete = RuntimeEnvironment.getApplication().getString(MochiR.string.common_delete)
 
-    private fun show(me: String?, manager: Boolean) {
+    private fun show(me: String?) {
         rule.setContent {
             CommentsTab(
                 comments = listOf(Comment(id = "first", author = "ann", body = "as posted", authorName = "Ann")),
                 currentUserId = me,
-                canManage = manager,
                 projectId = "project",
                 drafts = CommentDrafts(),
                 target = "ticket",
@@ -50,21 +49,14 @@ class CommentsTabPermissionTest {
 
     @Test
     fun `the author may edit and delete their comment`() {
-        show(me = "ann", manager = false)
+        show(me = "ann")
         rule.onNodeWithContentDescription(edit).assertExists()
         rule.onNodeWithContentDescription(delete).assertExists()
     }
 
     @Test
-    fun `a manager may delete another person's comment but not edit it`() {
-        show(me = "bob", manager = true)
-        rule.onNodeWithContentDescription(edit).assertDoesNotExist()
-        rule.onNodeWithContentDescription(delete).assertExists()
-    }
-
-    @Test
     fun `anyone else may do neither`() {
-        show(me = "bob", manager = false)
+        show(me = "bob")
         rule.onNodeWithContentDescription(edit).assertDoesNotExist()
         rule.onNodeWithContentDescription(delete).assertDoesNotExist()
     }
