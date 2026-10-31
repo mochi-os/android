@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" и имената под него ще бъдат освободени и всеки ще може да ги вземе. Техните акаунти, всичко публикувано от тях и последователите им ще бъдат премахнати.</string>
     <string name="networks_name_on">%1$s на %2$s</string>
     <string name="networks_network_for">%1$s за %2$s</string>
-    <string name="networks_accounts">Акаунти</string>
+    <string name="networks_linked_accounts">Свързани акаунти</string>
+    <string name="networks_communities">Общности</string>
     <string name="networks_account_actions">Действия с акаунта</string>
     <string name="networks_account_created">Акаунтът е създаден</string>
     <string name="networks_create_failed">Акаунтът не можа да бъде създаден</string>
     <string name="networks_account_updated">Акаунтът е обновен</string>
     <string name="networks_update_failed">Акаунтът не можа да бъде обновен</string>
-    <string name="networks_hosted">Хостван</string>
-    <string name="networks_linked_kind">Свързан</string>
     <string name="networks_moved_to">Преместен в %1$s</string>
     <string name="networks_home_deleted">Основната емисия е изтрита</string>
     <string name="networks_home_private">Основната емисия е лична</string>

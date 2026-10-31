@@ -443,14 +443,13 @@
     <string name="networks_release_message">\"%1$s\" y los nombres que dependen de él quedarán libres para que cualquiera los tome. Se eliminarán sus cuentas, todo lo que hayan publicado y sus seguidores.</string>
     <string name="networks_name_on">%1$s en %2$s</string>
     <string name="networks_network_for">%1$s para %2$s</string>
-    <string name="networks_accounts">Cuentas</string>
+    <string name="networks_linked_accounts">Cuentas vinculadas</string>
+    <string name="networks_communities">Comunidades</string>
     <string name="networks_account_actions">Acciones de la cuenta</string>
     <string name="networks_account_created">Cuenta creada</string>
     <string name="networks_create_failed">No se pudo crear la cuenta</string>
     <string name="networks_account_updated">Cuenta actualizada</string>
     <string name="networks_update_failed">No se pudo actualizar la cuenta</string>
-    <string name="networks_hosted">Alojado</string>
-    <string name="networks_linked_kind">Vinculado</string>
     <string name="networks_moved_to">Movida a %1$s</string>
     <string name="networks_home_deleted">Se eliminó el feed principal</string>
     <string name="networks_home_private">El feed principal es privado</string>

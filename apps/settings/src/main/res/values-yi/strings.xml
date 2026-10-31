@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" און די נעמען אונטער אים וועלן באַפֿרײַט ווערן, אַז יעדער זאָל זיי קענען נעמען. זייערע קאָנטעס, אַלץ וואָס זיי האָבן פֿאַרעפֿנטלעכט און זייערע נאָכפֿאָלגער ווערן אַראָפּגענומען.</string>
     <string name="networks_name_on">%1$s אויף %2$s</string>
     <string name="networks_network_for">%1$s פֿאַר %2$s</string>
-    <string name="networks_accounts">קאָנטעס</string>
+    <string name="networks_linked_accounts">פֿאַרבונדענע קאָנטעס</string>
+    <string name="networks_communities">קהילות</string>
     <string name="networks_account_actions">קאָנטע־אַקציעס</string>
     <string name="networks_account_created">קאָנטע באַשאַפֿן</string>
     <string name="networks_create_failed">האָט נישט געקאָנט שאַפֿן די קאָנטע</string>
     <string name="networks_account_updated">קאָנטע באַנײַט</string>
     <string name="networks_update_failed">האָט נישט געקאָנט באַנײַען די קאָנטע</string>
-    <string name="networks_hosted">געהאָסטעט</string>
-    <string name="networks_linked_kind">פֿאַרבונדן</string>
     <string name="networks_moved_to">אַריבערגעפֿירט צו %1$s</string>
     <string name="networks_home_deleted">דער היים־פֿיד איז אויסגעמעקט געוואָרן</string>
     <string name="networks_home_private">דער היים־פֿיד איז פּריוואַט</string>

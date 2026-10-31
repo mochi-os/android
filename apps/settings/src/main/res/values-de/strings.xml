@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" und die Namen darunter werden freigegeben, sodass jeder sie nehmen kann. Ihre Konten, alles, was diese veröffentlicht haben, und ihre Follower werden entfernt.</string>
     <string name="networks_name_on">%1$s auf %2$s</string>
     <string name="networks_network_for">%1$s für %2$s</string>
-    <string name="networks_accounts">Konten</string>
+    <string name="networks_linked_accounts">Verknüpfte Konten</string>
+    <string name="networks_communities">Gemeinschaften</string>
     <string name="networks_account_actions">Kontoaktionen</string>
     <string name="networks_account_created">Konto erstellt</string>
     <string name="networks_create_failed">Konto konnte nicht erstellt werden</string>
     <string name="networks_account_updated">Konto aktualisiert</string>
     <string name="networks_update_failed">Konto konnte nicht aktualisiert werden</string>
-    <string name="networks_hosted">Gehostet</string>
-    <string name="networks_linked_kind">Verknüpft</string>
     <string name="networks_moved_to">Umgezogen zu %1$s</string>
     <string name="networks_home_deleted">Der Start-Feed wurde gelöscht</string>
     <string name="networks_home_private">Der Start-Feed ist privat</string>

@@ -463,14 +463,13 @@
     <string name="networks_release_message">Za a saki \"%1$s\" da sunayen da ke ƙarƙashinsa domin kowa ya iya ɗauka. Za a cire asusunsu, duk abin da suka wallafa da mabiyansu.</string>
     <string name="networks_name_on">%1$s a kan %2$s</string>
     <string name="networks_network_for">%1$s na %2$s</string>
-    <string name="networks_accounts">Asusai</string>
+    <string name="networks_linked_accounts">Asusan da aka haɗa</string>
+    <string name="networks_communities">Al\'ummomi</string>
     <string name="networks_account_actions">Ayyukan asusu</string>
     <string name="networks_account_created">An ƙirƙiri asusu</string>
     <string name="networks_create_failed">Ba a iya ƙirƙirar asusun ba</string>
     <string name="networks_account_updated">An sabunta asusu</string>
     <string name="networks_update_failed">Ba a iya sabunta asusun ba</string>
-    <string name="networks_hosted">A wannan sabar</string>
-    <string name="networks_linked_kind">An haɗa</string>
     <string name="networks_moved_to">An matsar zuwa %1$s</string>
     <string name="networks_home_deleted">An share babban jerin labarai</string>
     <string name="networks_home_private">Babban jerin labarai na sirri ne</string>

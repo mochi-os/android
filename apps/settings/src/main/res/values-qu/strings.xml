@@ -462,14 +462,13 @@
     <string name="networks_release_message">\"%1$s\" chaymanta uranpi kaq sutikunapas kacharisqa kanqa, pipas hap\'inanpaq. Cuentankuna, tukuy publicasqankuna, qatiqninkunapas qichusqa kanqa.</string>
     <string name="networks_name_on">%1$s %2$s-pi</string>
     <string name="networks_network_for">%1$s %2$s-paq</string>
-    <string name="networks_accounts">Cuentakuna</string>
+    <string name="networks_linked_accounts">T\'inkisqa cuentakuna</string>
+    <string name="networks_communities">Ayllukuna</string>
     <string name="networks_account_actions">Cuentapa ruwaykunan</string>
     <string name="networks_account_created">Cuenta kamarisqa</string>
     <string name="networks_create_failed">Cuentata mana kamariyta atikurqanchu</string>
     <string name="networks_account_updated">Cuenta musuqchasqa</string>
     <string name="networks_update_failed">Cuentata mana musuqchayta atikurqanchu</string>
-    <string name="networks_hosted">Kay servidorpi</string>
-    <string name="networks_linked_kind">T\'inkisqa</string>
     <string name="networks_moved_to">%1$sman astasqa</string>
     <string name="networks_home_deleted">Qallariy feed pichasqa</string>
     <string name="networks_home_private">Qallariy feed sapallanpaqmi</string>

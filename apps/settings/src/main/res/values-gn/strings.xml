@@ -462,14 +462,13 @@
     <string name="networks_release_message">\"%1$s\" ha umi téra oĩva iguýpe oñemosãsóta oimeraẽva ojagarra hag̃ua. Oñemboguéta imba\'etekuéra, opa mba\'e omoherakuãva\'ekue ha hapykuerihakuéra.</string>
     <string name="networks_name_on">%1$s %2$s-pe</string>
     <string name="networks_network_for">%1$s %2$s-pe g̃uarã</string>
-    <string name="networks_accounts">Mba\'etekuéra</string>
+    <string name="networks_linked_accounts">Mba\'etekuéra ojejuajúva</string>
+    <string name="networks_communities">Atykuéra</string>
     <string name="networks_account_actions">Mba\'ete rembiapokuéra</string>
     <string name="networks_account_created">Mba\'ete oñemoheñóima</string>
     <string name="networks_create_failed">Ndaikatúi oñemoheñói mba\'ete</string>
     <string name="networks_account_updated">Mba\'ete oñembohekopyahúma</string>
     <string name="networks_update_failed">Ndaikatúi oñembohekopyahu mba\'ete</string>
-    <string name="networks_hosted">Ko mohendahápe</string>
-    <string name="networks_linked_kind">Ojejuaju</string>
     <string name="networks_moved_to">Oñemongu\'e %1$s-pe</string>
     <string name="networks_home_deleted">Marandu syry ñepyrũ oñembogue</string>
     <string name="networks_home_private">Marandu syry ñepyrũ ha\'e ñemiguáva</string>

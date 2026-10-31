@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" සහ එය යටතේ ඇති නම් ඕනෑම කෙනෙකුට ගත හැකි වන සේ නිදහස් කෙරේ. ඒවායේ ගිණුම්, ඒවා ප්‍රකාශ කළ සියල්ල සහ ඒවායේ අනුගාමිකයින් ඉවත් කෙරේ.</string>
     <string name="networks_name_on">%2$s හි %1$s</string>
     <string name="networks_network_for">%2$s සඳහා %1$s</string>
-    <string name="networks_accounts">ගිණුම්</string>
+    <string name="networks_linked_accounts">සම්බන්ධ කළ ගිණුම්</string>
+    <string name="networks_communities">ප්‍රජාවන්</string>
     <string name="networks_account_actions">ගිණුම් ක්‍රියා</string>
     <string name="networks_account_created">ගිණුම සාදන ලදී</string>
     <string name="networks_create_failed">ගිණුම සෑදිය නොහැකි විය</string>
     <string name="networks_account_updated">ගිණුම යාවත්කාලීන කරන ලදී</string>
     <string name="networks_update_failed">ගිණුම යාවත්කාලීන කළ නොහැකි විය</string>
-    <string name="networks_hosted">සත්කාරක</string>
-    <string name="networks_linked_kind">සම්බන්ධයි</string>
     <string name="networks_moved_to">%1$s වෙත ගෙන යන ලදී</string>
     <string name="networks_home_deleted">මුල් සංග්‍රහය මකා ඇත</string>
     <string name="networks_home_private">මුල් සංග්‍රහය පෞද්ගලිකයි</string>

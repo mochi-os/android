@@ -483,14 +483,13 @@
     <string name="networks_release_message">Vzdevek \"%1$s\" in imena pod njim bodo sproščeni, da jih lahko prevzame kdorkoli. Njihovi računi, vse, kar so objavili, in njihovi sledilci bodo odstranjeni.</string>
     <string name="networks_name_on">%1$s na %2$s</string>
     <string name="networks_network_for">%1$s za %2$s</string>
-    <string name="networks_accounts">Računi</string>
+    <string name="networks_linked_accounts">Povezani računi</string>
+    <string name="networks_communities">Skupnosti</string>
     <string name="networks_account_actions">Dejanja računa</string>
     <string name="networks_account_created">Račun ustvarjen</string>
     <string name="networks_create_failed">Računa ni bilo mogoče ustvariti</string>
     <string name="networks_account_updated">Račun posodobljen</string>
     <string name="networks_update_failed">Računa ni bilo mogoče posodobiti</string>
-    <string name="networks_hosted">Gostovano</string>
-    <string name="networks_linked_kind">Povezano</string>
     <string name="networks_moved_to">Premaknjeno na %1$s</string>
     <string name="networks_home_deleted">Domači kanal je izbrisan</string>
     <string name="networks_home_private">Domači kanal je zaseben</string>

@@ -493,14 +493,13 @@
     <string name="networks_release_message">Scaoilfear \"%1$s\" agus na hainmneacha faoi ionas gur féidir le duine ar bith iad a thógáil. Bainfear a gcuntais, gach a d\'fhoilsigh siad agus a lucht leanúna.</string>
     <string name="networks_name_on">%1$s ar %2$s</string>
     <string name="networks_network_for">%1$s do %2$s</string>
-    <string name="networks_accounts">Cuntais</string>
+    <string name="networks_linked_accounts">Cuntais nasctha</string>
+    <string name="networks_communities">Pobail</string>
     <string name="networks_account_actions">Gníomhartha cuntais</string>
     <string name="networks_account_created">Cuntas cruthaithe</string>
     <string name="networks_create_failed">Níorbh fhéidir an cuntas a chruthú</string>
     <string name="networks_account_updated">Cuntas nuashonraithe</string>
     <string name="networks_update_failed">Níorbh fhéidir an cuntas a nuashonrú</string>
-    <string name="networks_hosted">Óstáilte</string>
-    <string name="networks_linked_kind">Nasctha</string>
     <string name="networks_moved_to">Bogtha go %1$s</string>
     <string name="networks_home_deleted">Scriosadh an fotha baile</string>
     <string name="networks_home_private">Tá an fotha baile príobháideach</string>

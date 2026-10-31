@@ -462,14 +462,13 @@
     <string name="networks_release_message">\"%1$s\" ak non ki anba li yo pral libere pou nenpòt moun ka pran yo. Kont yo, tout sa kont sa yo te pibliye ak abòne yo pral retire.</string>
     <string name="networks_name_on">%1$s sou %2$s</string>
     <string name="networks_network_for">%1$s pou %2$s</string>
-    <string name="networks_accounts">Kont yo</string>
+    <string name="networks_linked_accounts">Kont ki lye yo</string>
+    <string name="networks_communities">Kominote yo</string>
     <string name="networks_account_actions">Aksyon kont</string>
     <string name="networks_account_created">Kont kreye</string>
     <string name="networks_create_failed">Pa t kapab kreye kont lan</string>
     <string name="networks_account_updated">Kont mete ajou</string>
     <string name="networks_update_failed">Pa t kapab mete kont lan ajou</string>
-    <string name="networks_hosted">Ebèje</string>
-    <string name="networks_linked_kind">Lye</string>
     <string name="networks_moved_to">Deplase nan %1$s</string>
     <string name="networks_home_deleted">Fil lakay la efase</string>
     <string name="networks_home_private">Fil lakay la prive</string>

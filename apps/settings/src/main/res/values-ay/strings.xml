@@ -462,14 +462,13 @@
     <string name="networks_release_message">\"%1$s\" ukat manqhapankir sutinakax khitis katuqañapatakix antutatäniwa. Cuentanakapa, uka cuentanakan uñstayatanakapa ukat arknaqirinakapax apaqatäniwa.</string>
     <string name="networks_name_on">%1$s %2$s ukana</string>
     <string name="networks_network_for">%1$s, %2$s ukataki</string>
-    <string name="networks_accounts">Cuentanaka</string>
+    <string name="networks_linked_accounts">Chinuta cuentanaka</string>
+    <string name="networks_communities">Ayllunaka</string>
     <string name="networks_account_actions">Cuenta lurawinaka</string>
     <string name="networks_account_created">Cuentax luratawa</string>
     <string name="networks_create_failed">Janiw cuenta luråñ atkiti</string>
     <string name="networks_account_updated">Cuenta machaqachata</string>
     <string name="networks_update_failed">Janiw cuenta machaqachañ atkiti</string>
-    <string name="networks_hosted">Aka servidoran</string>
-    <string name="networks_linked_kind">Chinuta</string>
     <string name="networks_moved_to">%1$s ukar astata</string>
     <string name="networks_home_deleted">Utan feed chhaqtayatawa</string>
     <string name="networks_home_private">Utan feed sapakiniwa</string>

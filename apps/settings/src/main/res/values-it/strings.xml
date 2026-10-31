@@ -464,14 +464,13 @@
     <string name="networks_release_message">\"%1$s\" e i nomi sotto di esso saranno liberati e chiunque potrà prenderli. I relativi account, tutto ciò che hanno pubblicato e i loro follower verranno rimossi.</string>
     <string name="networks_name_on">%1$s su %2$s</string>
     <string name="networks_network_for">%1$s per %2$s</string>
-    <string name="networks_accounts">Account</string>
+    <string name="networks_linked_accounts">Account collegati</string>
+    <string name="networks_communities">Comunità</string>
     <string name="networks_account_actions">Azioni dell\'account</string>
     <string name="networks_account_created">Account creato</string>
     <string name="networks_create_failed">Impossibile creare l\'account</string>
     <string name="networks_account_updated">Account aggiornato</string>
     <string name="networks_update_failed">Impossibile aggiornare l\'account</string>
-    <string name="networks_hosted">Ospitato</string>
-    <string name="networks_linked_kind">Collegato</string>
     <string name="networks_moved_to">Trasferito su %1$s</string>
     <string name="networks_home_deleted">Il feed principale è stato eliminato</string>
     <string name="networks_home_private">Il feed principale è privato</string>

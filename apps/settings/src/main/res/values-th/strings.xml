@@ -454,14 +454,13 @@
     <string name="networks_release_message">\"%1$s\" และชื่อที่อยู่ภายใต้จะถูกปล่อยให้ใครก็ได้นำไปใช้ บัญชีของชื่อเหล่านั้น ทุกสิ่งที่บัญชีเหล่านั้นเผยแพร่ และผู้ติดตามจะถูกลบออก</string>
     <string name="networks_name_on">%1$s บน %2$s</string>
     <string name="networks_network_for">%1$s สำหรับ %2$s</string>
-    <string name="networks_accounts">บัญชี</string>
+    <string name="networks_linked_accounts">บัญชีที่เชื่อมโยง</string>
+    <string name="networks_communities">ชุมชน</string>
     <string name="networks_account_actions">การดำเนินการของบัญชี</string>
     <string name="networks_account_created">สร้างบัญชีแล้ว</string>
     <string name="networks_create_failed">สร้างบัญชีไม่ได้</string>
     <string name="networks_account_updated">อัปเดตบัญชีแล้ว</string>
     <string name="networks_update_failed">อัปเดตบัญชีไม่ได้</string>
-    <string name="networks_hosted">โฮสต์ที่นี่</string>
-    <string name="networks_linked_kind">เชื่อมโยงแล้ว</string>
     <string name="networks_moved_to">ย้ายไปที่ %1$s แล้ว</string>
     <string name="networks_home_deleted">ฟีดหลักถูกลบแล้ว</string>
     <string name="networks_home_private">ฟีดหลักเป็นแบบส่วนตัว</string>

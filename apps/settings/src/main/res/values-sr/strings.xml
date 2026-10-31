@@ -473,14 +473,13 @@
     <string name="networks_release_message">Надимак \"%1$s\" и имена под њим биће ослобођени, па их може узети било ко. Њихови налози, све што су објавили и њихови пратиоци биће уклоњени.</string>
     <string name="networks_name_on">%1$s на %2$s</string>
     <string name="networks_network_for">%1$s за %2$s</string>
-    <string name="networks_accounts">Налози</string>
+    <string name="networks_linked_accounts">Повезани налози</string>
+    <string name="networks_communities">Заједнице</string>
     <string name="networks_account_actions">Радње налога</string>
     <string name="networks_account_created">Налог је креиран</string>
     <string name="networks_create_failed">Креирање налога није успело</string>
     <string name="networks_account_updated">Налог ажуриран</string>
     <string name="networks_update_failed">Ажурирање налога није успело</string>
-    <string name="networks_hosted">Хостован</string>
-    <string name="networks_linked_kind">Повезан</string>
     <string name="networks_moved_to">Премештено на %1$s</string>
     <string name="networks_home_deleted">Почетни фид је избрисан</string>
     <string name="networks_home_private">Почетни фид је приватан</string>

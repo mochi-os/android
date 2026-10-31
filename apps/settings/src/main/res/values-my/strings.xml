@@ -453,14 +453,13 @@
     <string name="networks_release_message">\"%1$s\" နှင့် ၎င်းအောက်ရှိ အမည်များကို မည်သူမဆို ယူနိုင်ရန် လွှတ်ပေးပါမည်။ ၎င်းတို့၏ အကောင့်များ၊ ထိုအကောင့်များ ထုတ်ဝေခဲ့သမျှနှင့် ၎င်းတို့၏ နောက်လိုက်များကို ဖယ်ရှားပါမည်။</string>
     <string name="networks_name_on">%2$s ပေါ်ရှိ %1$s</string>
     <string name="networks_network_for">%2$s အတွက် %1$s</string>
-    <string name="networks_accounts">အကောင့်များ</string>
+    <string name="networks_linked_accounts">ချိတ်ဆက်ထားသော အကောင့်များ</string>
+    <string name="networks_communities">အသိုင်းအဝိုင်းများ</string>
     <string name="networks_account_actions">အကောင့် လုပ်ဆောင်ချက်များ</string>
     <string name="networks_account_created">အကောင့် ဖန်တီးပြီး</string>
     <string name="networks_create_failed">အကောင့် ဖန်တီး၍ မရပါ</string>
     <string name="networks_account_updated">အကောင့် ပြောင်းပြီး</string>
     <string name="networks_update_failed">အကောင့်ကို အပ်ဒိတ်လုပ်၍ မရပါ</string>
-    <string name="networks_hosted">ဤဆာဗာတွင်</string>
-    <string name="networks_linked_kind">ချိတ်ဆက်ထား</string>
     <string name="networks_moved_to">%1$s သို့ ရွှေ့ပြီး</string>
     <string name="networks_home_deleted">ပင်မ ဖိဒ်ကို ဖျက်ထားပါသည်</string>
     <string name="networks_home_private">ပင်မ ဖိဒ်သည် သီးသန့်ဖြစ်သည်</string>

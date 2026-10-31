@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" və onun altındakı adlar hər kəsin götürə bilməsi üçün azad ediləcək. Onların hesabları, onların dərc etdiyi hər şey və izləyiciləri silinəcək.</string>
     <string name="networks_name_on">%2$s üzərində %1$s</string>
     <string name="networks_network_for">%2$s üçün %1$s</string>
-    <string name="networks_accounts">Hesablar</string>
+    <string name="networks_linked_accounts">Əlaqələndirilmiş hesablar</string>
+    <string name="networks_communities">İcmalar</string>
     <string name="networks_account_actions">Hesab əməliyyatları</string>
     <string name="networks_account_created">Hesab yaradıldı</string>
     <string name="networks_create_failed">Hesab yaradıla bilmədi</string>
     <string name="networks_account_updated">Hesab yeniləndi</string>
     <string name="networks_update_failed">Hesab yenilənə bilmədi</string>
-    <string name="networks_hosted">Yerləşdirilmiş</string>
-    <string name="networks_linked_kind">Əlaqələndirilib</string>
     <string name="networks_moved_to">%1$s ünvanına köçürülüb</string>
     <string name="networks_home_deleted">Əsas lent silinib</string>
     <string name="networks_home_private">Əsas lent şəxsidir</string>

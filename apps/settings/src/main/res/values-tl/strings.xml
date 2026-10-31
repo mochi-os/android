@@ -463,14 +463,13 @@
     <string name="networks_release_message">Ang \"%1$s\" at ang mga pangalan sa ilalim nito ay palalayain para makuha ng kahit sino. Aalisin ang kanilang mga account, lahat ng nai-publish ng mga ito, at ang kanilang mga follower.</string>
     <string name="networks_name_on">%1$s sa %2$s</string>
     <string name="networks_network_for">%1$s para sa %2$s</string>
-    <string name="networks_accounts">Mga account</string>
+    <string name="networks_linked_accounts">Mga naka-link na account</string>
+    <string name="networks_communities">Mga komunidad</string>
     <string name="networks_account_actions">Mga aksyon sa account</string>
     <string name="networks_account_created">Nagawa ang account</string>
     <string name="networks_create_failed">Hindi nagawa ang account</string>
     <string name="networks_account_updated">Na-update ang account</string>
     <string name="networks_update_failed">Hindi na-update ang account</string>
-    <string name="networks_hosted">Naka-host</string>
-    <string name="networks_linked_kind">Naka-link</string>
     <string name="networks_moved_to">Inilipat sa %1$s</string>
     <string name="networks_home_deleted">Natanggal na ang pangunahing feed</string>
     <string name="networks_home_private">Pribado ang pangunahing feed</string>

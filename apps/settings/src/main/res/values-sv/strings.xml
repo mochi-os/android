@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" och namnen under det frigörs så att vem som helst kan ta dem. Deras konton, allt de har publicerat och deras följare tas bort.</string>
     <string name="networks_name_on">%1$s på %2$s</string>
     <string name="networks_network_for">%1$s för %2$s</string>
-    <string name="networks_accounts">Konton</string>
+    <string name="networks_linked_accounts">Länkade konton</string>
+    <string name="networks_communities">Gemenskaper</string>
     <string name="networks_account_actions">Kontoåtgärder</string>
     <string name="networks_account_created">Kontot har skapats</string>
     <string name="networks_create_failed">Det gick inte att skapa kontot</string>
     <string name="networks_account_updated">Konto uppdaterat</string>
     <string name="networks_update_failed">Det gick inte att uppdatera kontot</string>
-    <string name="networks_hosted">Värdad</string>
-    <string name="networks_linked_kind">Länkad</string>
     <string name="networks_moved_to">Flyttat till %1$s</string>
     <string name="networks_home_deleted">Hemflödet har tagits bort</string>
     <string name="networks_home_private">Hemflödet är privat</string>

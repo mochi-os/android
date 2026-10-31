@@ -473,14 +473,13 @@
     <string name="networks_release_message">\"%1$s\" un zem tā esošie vārdi tiks atbrīvoti, lai ikviens tos varētu aizņemt. To konti, viss, ko šie konti publicējuši, un to sekotāji tiks noņemti.</string>
     <string name="networks_name_on">%1$s tīklā %2$s</string>
     <string name="networks_network_for">%1$s lietotājvārdam %2$s</string>
-    <string name="networks_accounts">Konti</string>
+    <string name="networks_linked_accounts">Saistītie konti</string>
+    <string name="networks_communities">Kopienas</string>
     <string name="networks_account_actions">Konta darbības</string>
     <string name="networks_account_created">Konts izveidots</string>
     <string name="networks_create_failed">Nevarēja izveidot kontu</string>
     <string name="networks_account_updated">Konts atjaunināts</string>
     <string name="networks_update_failed">Nevarēja atjaunināt kontu</string>
-    <string name="networks_hosted">Mitināts</string>
-    <string name="networks_linked_kind">Saistīts</string>
     <string name="networks_moved_to">Pārvietots uz %1$s</string>
     <string name="networks_home_deleted">Sākuma plūsma ir dzēsta</string>
     <string name="networks_home_private">Sākuma plūsma ir privāta</string>

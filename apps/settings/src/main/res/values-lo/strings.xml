@@ -453,14 +453,13 @@
     <string name="networks_release_message">\"%1$s\" ແລະ ຊື່ທີ່ຢູ່ພາຍໃຕ້ມັນຈະຖືກປ່ອຍໃຫ້ທຸກຄົນສາມາດເອົາໄປໄດ້. ບັນຊີຂອງພວກມັນ, ທຸກຢ່າງທີ່ບັນຊີເຫຼົ່ານັ້ນໄດ້ເຜີຍແຜ່ ແລະ ຜູ້ຕິດຕາມຂອງພວກມັນຈະຖືກລຶບອອກ.</string>
     <string name="networks_name_on">%1$s ຢູ່ %2$s</string>
     <string name="networks_network_for">%1$s ສຳລັບ %2$s</string>
-    <string name="networks_accounts">ບັນຊີ</string>
+    <string name="networks_linked_accounts">ບັນຊີທີ່ເຊື່ອມຕໍ່</string>
+    <string name="networks_communities">ຊຸມຊົນ</string>
     <string name="networks_account_actions">ການດຳເນີນການບັນຊີ</string>
     <string name="networks_account_created">ສ້າງບັນຊີແລ້ວ</string>
     <string name="networks_create_failed">ບໍ່ສາມາດສ້າງບັນຊີໄດ້</string>
     <string name="networks_account_updated">ອັບເດດບັນຊີແລ້ວ</string>
     <string name="networks_update_failed">ບໍ່ສາມາດອັບເດດບັນຊີໄດ້</string>
-    <string name="networks_hosted">ຢູ່ໃນເຊີບເວີນີ້</string>
-    <string name="networks_linked_kind">ເຊື່ອມຕໍ່ແລ້ວ</string>
     <string name="networks_moved_to">ຍ້າຍໄປ %1$s ແລ້ວ</string>
     <string name="networks_home_deleted">ຟີດຫຼັກຖືກລຶບແລ້ວ</string>
     <string name="networks_home_private">ຟີດຫຼັກເປັນສ່ວນຕົວ</string>

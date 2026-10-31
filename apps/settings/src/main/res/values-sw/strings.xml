@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" na majina yaliyo chini yake yataachiliwa ili mtu yeyote ayachukue. Akaunti zake, kila kitu zilichochapisha na wafuasi wake vitaondolewa.</string>
     <string name="networks_name_on">%1$s kwenye %2$s</string>
     <string name="networks_network_for">%1$s kwa %2$s</string>
-    <string name="networks_accounts">Akaunti</string>
+    <string name="networks_linked_accounts">Akaunti zilizounganishwa</string>
+    <string name="networks_communities">Jumuiya</string>
     <string name="networks_account_actions">Vitendo vya akaunti</string>
     <string name="networks_account_created">Akaunti imeundwa</string>
     <string name="networks_create_failed">Haikuweza kuunda akaunti</string>
     <string name="networks_account_updated">Akaunti imesasishwa</string>
     <string name="networks_update_failed">Haikuweza kusasisha akaunti</string>
-    <string name="networks_hosted">Imepangishwa</string>
-    <string name="networks_linked_kind">Imeunganishwa</string>
     <string name="networks_moved_to">Imehamia %1$s</string>
     <string name="networks_home_deleted">Mlisho mkuu umefutwa</string>
     <string name="networks_home_private">Mlisho mkuu ni wa faragha</string>

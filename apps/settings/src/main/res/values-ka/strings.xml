@@ -463,14 +463,13 @@
     <string name="networks_release_message">„%1$s“ და მის ქვეშ არსებული სახელები გათავისუფლდება და ნებისმიერს შეეძლება მათი აღება. მათი ანგარიშები, ყველაფერი, რაც ამ ანგარიშებმა გამოაქვეყნეს, და მათი გამომწერები წაიშლება.</string>
     <string name="networks_name_on">%1$s %2$s-ზე</string>
     <string name="networks_network_for">%1$s %2$s-ისთვის</string>
-    <string name="networks_accounts">ანგარიშები</string>
+    <string name="networks_linked_accounts">დაკავშირებული ანგარიშები</string>
+    <string name="networks_communities">საზოგადოებები</string>
     <string name="networks_account_actions">ანგარიშის მოქმედებები</string>
     <string name="networks_account_created">ანგარიში შეიქმნა</string>
     <string name="networks_create_failed">ანგარიშის შექმნა ვერ მოხერხდა</string>
     <string name="networks_account_updated">ანგარიში განახლდა</string>
     <string name="networks_update_failed">ანგარიშის განახლება ვერ მოხერხდა</string>
-    <string name="networks_hosted">განთავსებული</string>
-    <string name="networks_linked_kind">დაკავშირებული</string>
     <string name="networks_moved_to">გადატანილია %1$s-ზე</string>
     <string name="networks_home_deleted">მთავარი არხი წაშლილია</string>
     <string name="networks_home_private">მთავარი არხი პირადია</string>

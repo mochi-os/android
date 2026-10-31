@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" ja sen alla olevat nimet vapautetaan kenen tahansa otettaviksi. Niiden tilit, kaikki niiden julkaisema ja niiden seuraajat poistetaan.</string>
     <string name="networks_name_on">%1$s verkossa %2$s</string>
     <string name="networks_network_for">%1$s tunnukselle %2$s</string>
-    <string name="networks_accounts">Tilit</string>
+    <string name="networks_linked_accounts">Linkitetyt tilit</string>
+    <string name="networks_communities">Yhteisöt</string>
     <string name="networks_account_actions">Tilin toiminnot</string>
     <string name="networks_account_created">Tili luotu</string>
     <string name="networks_create_failed">Tiliä ei voitu luoda</string>
     <string name="networks_account_updated">Tili päivitetty</string>
     <string name="networks_update_failed">Tiliä ei voitu päivittää</string>
-    <string name="networks_hosted">Isännöity</string>
-    <string name="networks_linked_kind">Linkitetty</string>
     <string name="networks_moved_to">Siirretty tilille %1$s</string>
     <string name="networks_home_deleted">Kotisyöte on poistettu</string>
     <string name="networks_home_private">Kotisyöte on yksityinen</string>

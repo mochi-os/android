@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" و نام‌های زیرمجموعه‌اش آزاد می‌شوند تا هر کسی بتواند آن‌ها را بگیرد. حساب‌هایشان، هر آنچه منتشر کرده‌اند و دنبال‌کنندگانشان حذف می‌شوند.</string>
     <string name="networks_name_on">%1$s در %2$s</string>
     <string name="networks_network_for">%1$s برای %2$s</string>
-    <string name="networks_accounts">حساب‌ها</string>
+    <string name="networks_linked_accounts">حساب‌های پیوندشده</string>
+    <string name="networks_communities">جامعه‌ها</string>
     <string name="networks_account_actions">کنش‌های حساب</string>
     <string name="networks_account_created">حساب ایجاد شد</string>
     <string name="networks_create_failed">ایجاد حساب ممکن نشد</string>
     <string name="networks_account_updated">حساب به‌روزرسانی شد</string>
     <string name="networks_update_failed">به‌روزرسانی حساب ممکن نشد</string>
-    <string name="networks_hosted">میزبانی‌شده</string>
-    <string name="networks_linked_kind">پیوند داده شده</string>
     <string name="networks_moved_to">منتقل‌شده به %1$s</string>
     <string name="networks_home_deleted">خوراک اصلی حذف شده است</string>
     <string name="networks_home_private">خوراک اصلی خصوصی است</string>

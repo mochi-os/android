@@ -461,14 +461,13 @@
     <string name="networks_release_message">「%1$s」同埋佢下面嘅名稱會被釋出，任何人都可以攞嚟用。佢哋嘅帳戶、嗰啲帳戶發佈過嘅所有內容同埋追蹤者都會被移除。</string>
     <string name="networks_name_on">%2$s 上嘅 %1$s</string>
     <string name="networks_network_for">%2$s 嘅 %1$s</string>
-    <string name="networks_accounts">帳戶</string>
+    <string name="networks_linked_accounts">已連結嘅帳戶</string>
+    <string name="networks_communities">社群</string>
     <string name="networks_account_actions">帳戶操作</string>
     <string name="networks_account_created">帳戶已經建立</string>
     <string name="networks_create_failed">建立唔到帳戶</string>
     <string name="networks_account_updated">帳戶已經更新</string>
     <string name="networks_update_failed">更新唔到帳戶</string>
-    <string name="networks_hosted">代管</string>
-    <string name="networks_linked_kind">已連結</string>
     <string name="networks_moved_to">已經搬咗去 %1$s</string>
     <string name="networks_home_deleted">主資訊流已經被刪除</string>
     <string name="networks_home_private">主資訊流係私人嘅</string>

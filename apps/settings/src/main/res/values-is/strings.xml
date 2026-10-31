@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" og nöfnin undir því verða losuð svo að hver sem er getur tekið þau. Reikningar þeirra, allt sem þeir birtu og fylgjendur þeirra verða fjarlægðir.</string>
     <string name="networks_name_on">%1$s á %2$s</string>
     <string name="networks_network_for">%1$s fyrir %2$s</string>
-    <string name="networks_accounts">Reikningar</string>
+    <string name="networks_linked_accounts">Tengdir reikningar</string>
+    <string name="networks_communities">Samfélög</string>
     <string name="networks_account_actions">Aðgerðir reiknings</string>
     <string name="networks_account_created">Reikningur stofnaður</string>
     <string name="networks_create_failed">Ekki tókst að stofna reikninginn</string>
     <string name="networks_account_updated">Reikningur uppfærður</string>
     <string name="networks_update_failed">Ekki tókst að uppfæra reikninginn</string>
-    <string name="networks_hosted">Hýstur</string>
-    <string name="networks_linked_kind">Tengt</string>
     <string name="networks_moved_to">Fluttur á %1$s</string>
     <string name="networks_home_deleted">Heimastreyminu hefur verið eytt</string>
     <string name="networks_home_private">Heimastreymið er lokað</string>

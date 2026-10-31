@@ -483,14 +483,13 @@
     <string name="networks_release_message">Псевдоним \"%1$s\" и имена под ним будут освобождены, и их сможет занять кто угодно. Их аккаунты, всё, что в них опубликовано, и их подписчики будут удалены.</string>
     <string name="networks_name_on">%1$s на %2$s</string>
     <string name="networks_network_for">%1$s для %2$s</string>
-    <string name="networks_accounts">Аккаунты</string>
+    <string name="networks_linked_accounts">Связанные аккаунты</string>
+    <string name="networks_communities">Сообщества</string>
     <string name="networks_account_actions">Действия с аккаунтом</string>
     <string name="networks_account_created">Аккаунт создан</string>
     <string name="networks_create_failed">Не удалось создать аккаунт</string>
     <string name="networks_account_updated">Аккаунт обновлён</string>
     <string name="networks_update_failed">Не удалось обновить аккаунт</string>
-    <string name="networks_hosted">Размещён</string>
-    <string name="networks_linked_kind">Связан</string>
     <string name="networks_moved_to">Перенесён в %1$s</string>
     <string name="networks_home_deleted">Домашняя лента удалена</string>
     <string name="networks_home_private">Домашняя лента закрыта</string>

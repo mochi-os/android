@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" және оның астындағы атаулар босатылады, оларды кез келген адам ала алады. Олардың тіркелгілері, сол тіркелгілер жариялаған барлық нәрсе және олардың жазылушылары жойылады.</string>
     <string name="networks_name_on">%1$s %2$s желісінде</string>
     <string name="networks_network_for">%2$s үшін %1$s</string>
-    <string name="networks_accounts">Тіркелгілер</string>
+    <string name="networks_linked_accounts">Байланыстырылған тіркелгілер</string>
+    <string name="networks_communities">Қауымдастықтар</string>
     <string name="networks_account_actions">Тіркелгі әрекеттері</string>
     <string name="networks_account_created">Тіркелгі құрылды</string>
     <string name="networks_create_failed">Тіркелгіні құру мүмкін болмады</string>
     <string name="networks_account_updated">Тіркелгі жаңартылды</string>
     <string name="networks_update_failed">Тіркелгіні жаңарту мүмкін болмады</string>
-    <string name="networks_hosted">Осы серверде</string>
-    <string name="networks_linked_kind">Байланыстырылған</string>
     <string name="networks_moved_to">%1$s тіркелгісіне көшті</string>
     <string name="networks_home_deleted">Басты арна жойылған</string>
     <string name="networks_home_private">Басты арна жеке</string>

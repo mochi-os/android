@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" we onuň aşagyndaky atlar islendik adam alyp biler ýaly boşadylar. Olaryň hasaplary, çap eden ähli zatlary we yzarlaýjylary aýrylar.</string>
     <string name="networks_name_on">%2$s torunda %1$s</string>
     <string name="networks_network_for">%2$s üçin %1$s</string>
-    <string name="networks_accounts">Hasaplar</string>
+    <string name="networks_linked_accounts">Baglanyşdyrylan hasaplar</string>
+    <string name="networks_communities">Jemgyýetler</string>
     <string name="networks_account_actions">Hasap hereketleri</string>
     <string name="networks_account_created">Hasap döredildi</string>
     <string name="networks_create_failed">Hasaby döredip bolmady</string>
     <string name="networks_account_updated">Hasap täzelendi</string>
     <string name="networks_update_failed">Hasaby täzeläp bolmady</string>
-    <string name="networks_hosted">Ýerleşdirilen</string>
-    <string name="networks_linked_kind">Baglanyşdyryldy</string>
     <string name="networks_moved_to">%1$s hasabyna göçürildi</string>
     <string name="networks_home_deleted">Esasy akym pozuldy</string>
     <string name="networks_home_private">Esasy akym şahsy</string>

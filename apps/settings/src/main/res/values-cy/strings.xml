@@ -503,14 +503,13 @@
     <string name="networks_release_message">Bydd \"%1$s\" a\'r enwau oddi tano yn cael eu rhyddhau i unrhyw un eu cymryd. Bydd eu cyfrifon, popeth a gyhoeddwyd ganddynt a\'u dilynwyr yn cael eu tynnu.</string>
     <string name="networks_name_on">%1$s ar %2$s</string>
     <string name="networks_network_for">%1$s ar gyfer %2$s</string>
-    <string name="networks_accounts">Cyfrifon</string>
+    <string name="networks_linked_accounts">Cyfrifon cysylltiedig</string>
+    <string name="networks_communities">Cymunedau</string>
     <string name="networks_account_actions">Gweithredoedd y cyfrif</string>
     <string name="networks_account_created">Cyfrif wedi\'i greu</string>
     <string name="networks_create_failed">Methwyd creu\'r cyfrif</string>
     <string name="networks_account_updated">Cyfrif wedi\'i ddiweddaru</string>
     <string name="networks_update_failed">Methwyd diweddaru\'r cyfrif</string>
-    <string name="networks_hosted">Wedi\'i letya</string>
-    <string name="networks_linked_kind">Cysylltiedig</string>
     <string name="networks_moved_to">Wedi symud i %1$s</string>
     <string name="networks_home_deleted">Mae\'r llif cartref wedi\'i ddileu</string>
     <string name="networks_home_private">Mae\'r llif cartref yn breifat</string>

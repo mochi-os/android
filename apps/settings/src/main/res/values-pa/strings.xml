@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" ਅਤੇ ਇਸਦੇ ਅਧੀਨ ਨਾਮ ਮੁਕਤ ਕਰ ਦਿੱਤੇ ਜਾਣਗੇ ਤਾਂ ਜੋ ਕੋਈ ਵੀ ਉਹਨਾਂ ਨੂੰ ਲੈ ਸਕੇ। ਉਹਨਾਂ ਦੇ ਖਾਤੇ, ਉਹਨਾਂ ਖਾਤਿਆਂ ਵੱਲੋਂ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤਾ ਸਭ ਕੁਝ ਅਤੇ ਉਹਨਾਂ ਦੇ ਫਾਲੋਅਰ ਹਟਾ ਦਿੱਤੇ ਜਾਣਗੇ।</string>
     <string name="networks_name_on">%2$s \'ਤੇ %1$s</string>
     <string name="networks_network_for">%2$s ਲਈ %1$s</string>
-    <string name="networks_accounts">ਖਾਤੇ</string>
+    <string name="networks_linked_accounts">ਲਿੰਕ ਕੀਤੇ ਖਾਤੇ</string>
+    <string name="networks_communities">ਭਾਈਚਾਰੇ</string>
     <string name="networks_account_actions">ਖਾਤਾ ਕਾਰਵਾਈਆਂ</string>
     <string name="networks_account_created">ਖਾਤਾ ਬਣਾਇਆ ਗਿਆ</string>
     <string name="networks_create_failed">ਖਾਤਾ ਨਹੀਂ ਬਣਾਇਆ ਜਾ ਸਕਿਆ</string>
     <string name="networks_account_updated">ਖਾਤਾ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ</string>
     <string name="networks_update_failed">ਖਾਤਾ ਅੱਪਡੇਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</string>
-    <string name="networks_hosted">ਹੋਸਟ ਕੀਤਾ</string>
-    <string name="networks_linked_kind">ਲਿੰਕ ਕੀਤਾ</string>
     <string name="networks_moved_to">%1$s ਵਿੱਚ ਮੂਵ ਕੀਤਾ ਗਿਆ</string>
     <string name="networks_home_deleted">ਹੋਮ ਫੀਡ ਮਿਟਾ ਦਿੱਤੀ ਗਈ ਹੈ</string>
     <string name="networks_home_private">ਹੋਮ ਫੀਡ ਨਿੱਜੀ ਹੈ</string>

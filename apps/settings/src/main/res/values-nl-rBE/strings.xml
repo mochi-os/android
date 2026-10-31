@@ -430,14 +430,13 @@
     <string name="networks_release_message">\"%1$s\" en de namen eronder worden vrijgegeven, zodat iedereen ze kan nemen. Hun accounts, alles wat die accounts hebben gepubliceerd en hun volgers worden verwijderd.</string>
     <string name="networks_name_on">%1$s op %2$s</string>
     <string name="networks_network_for">%1$s voor %2$s</string>
-    <string name="networks_accounts">Accounts</string>
+    <string name="networks_linked_accounts">Gekoppelde accounts</string>
+    <string name="networks_communities">Gemeenschappen</string>
     <string name="networks_account_actions">Accountacties</string>
     <string name="networks_account_created">Account aangemaakt</string>
     <string name="networks_create_failed">Kon het account niet aanmaken</string>
     <string name="networks_account_updated">Account bijgewerkt</string>
     <string name="networks_update_failed">Kon het account niet bijwerken</string>
-    <string name="networks_hosted">Gehost</string>
-    <string name="networks_linked_kind">Gekoppeld</string>
     <string name="networks_moved_to">Verplaatst naar %1$s</string>
     <string name="networks_home_deleted">De thuisfeed is verwijderd</string>
     <string name="networks_home_private">De thuisfeed is privé</string>

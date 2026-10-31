@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" మరియు దాని కింద ఉన్న పేర్లు ఎవరైనా తీసుకునేలా విడుదల చేయబడతాయి. వాటి ఖాతాలు, అవి ప్రచురించిన ప్రతిదీ, వాటి అనుచరులు తీసివేయబడతాయి.</string>
     <string name="networks_name_on">%2$s లో %1$s</string>
     <string name="networks_network_for">%2$s కోసం %1$s</string>
-    <string name="networks_accounts">ఖాతాలు</string>
+    <string name="networks_linked_accounts">లింక్ చేయబడిన ఖాతాలు</string>
+    <string name="networks_communities">సంఘాలు</string>
     <string name="networks_account_actions">ఖాతా చర్యలు</string>
     <string name="networks_account_created">ఖాతా సృష్టించబడింది</string>
     <string name="networks_create_failed">ఖాతాను సృష్టించలేకపోయింది</string>
     <string name="networks_account_updated">ఖాతా నవీకరించబడింది</string>
     <string name="networks_update_failed">ఖాతాను నవీకరించలేకపోయింది</string>
-    <string name="networks_hosted">హోస్ట్ చేయబడింది</string>
-    <string name="networks_linked_kind">లింక్ చేయబడింది</string>
     <string name="networks_moved_to">%1$sకి తరలించబడింది</string>
     <string name="networks_home_deleted">హోమ్ ఫీడ్ తొలగించబడింది</string>
     <string name="networks_home_private">హోమ్ ఫీడ్ ప్రైవేట్‌గా ఉంది</string>

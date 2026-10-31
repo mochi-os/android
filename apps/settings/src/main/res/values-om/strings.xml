@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\"fi maqaawwan isa jala jiran akka namni kamiyyuu fudhachuu danda\'uuf ni gadhiifamu. Akkaawuntiiwwan isaanii, wanti akkaawuntiiwwan sun maxxansan hundi fi hordoftoonni isaanii ni haqamu.</string>
     <string name="networks_name_on">%1$s %2$s irratti</string>
     <string name="networks_network_for">%1$s kan %2$s</string>
-    <string name="networks_accounts">Akkaawuntiilee</string>
+    <string name="networks_linked_accounts">Akkaawuntiiwwan walitti hidhaman</string>
+    <string name="networks_communities">Hawaasota</string>
     <string name="networks_account_actions">Gochawwan akkaawuntii</string>
     <string name="networks_account_created">Akkaawuntiin uumame</string>
     <string name="networks_create_failed">Akkaawuntii uumuu hin dandeenye</string>
     <string name="networks_account_updated">Akkaawuntiin haaromfame</string>
     <string name="networks_update_failed">Akkaawuntii haaromsuu hin dandeenye</string>
-    <string name="networks_hosted">Sarvarii kana irratti</string>
-    <string name="networks_linked_kind">Walitti hidhame</string>
     <string name="networks_moved_to">Gara %1$stti sochoofame</string>
     <string name="networks_home_deleted">Feed jalqabaa haqameera</string>
     <string name="networks_home_private">Feed jalqabaa dhuunfaa dha</string>

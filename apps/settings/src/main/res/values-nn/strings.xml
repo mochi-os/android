@@ -465,14 +465,13 @@
     <string name="networks_release_message">\"%1$s\" og namna under det blir frigjevne, slik at kven som helst kan ta dei. Kontoane deira, alt dei kontoane har publisert og følgjarane deira blir fjerna.</string>
     <string name="networks_name_on">%1$s på %2$s</string>
     <string name="networks_network_for">%1$s for %2$s</string>
-    <string name="networks_accounts">Kontoar</string>
+    <string name="networks_linked_accounts">Kopla kontoar</string>
+    <string name="networks_communities">Fellesskap</string>
     <string name="networks_account_actions">Kontohandlingar</string>
     <string name="networks_account_created">Konto oppretta</string>
     <string name="networks_create_failed">Klarte ikkje å opprette kontoen</string>
     <string name="networks_account_updated">Konto oppdatert</string>
     <string name="networks_update_failed">Klarte ikkje å oppdatere kontoen</string>
-    <string name="networks_hosted">Hosta</string>
-    <string name="networks_linked_kind">Kopla</string>
     <string name="networks_moved_to">Flytta til %1$s</string>
     <string name="networks_home_deleted">Heimestraumen er sletta</string>
     <string name="networks_home_private">Heimestraumen er privat</string>

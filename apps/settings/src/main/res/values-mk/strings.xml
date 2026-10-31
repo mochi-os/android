@@ -463,14 +463,13 @@
     <string name="networks_release_message">„%1$s“ и имињата под него ќе бидат ослободени за секој да може да ги земе. Нивните сметки, сè што објавиле тие сметки и нивните следбеници ќе бидат отстранети.</string>
     <string name="networks_name_on">%1$s на %2$s</string>
     <string name="networks_network_for">%1$s за %2$s</string>
-    <string name="networks_accounts">Сметки</string>
+    <string name="networks_linked_accounts">Поврзани сметки</string>
+    <string name="networks_communities">Заедници</string>
     <string name="networks_account_actions">Дејства за сметката</string>
     <string name="networks_account_created">Сметката е создадена</string>
     <string name="networks_create_failed">Сметката не можеше да се создаде</string>
     <string name="networks_account_updated">Сметката е ажурирана</string>
     <string name="networks_update_failed">Сметката не можеше да се ажурира</string>
-    <string name="networks_hosted">Хостиран</string>
-    <string name="networks_linked_kind">Поврзан</string>
     <string name="networks_moved_to">Преместена во %1$s</string>
     <string name="networks_home_deleted">Почетниот канал е избришан</string>
     <string name="networks_home_private">Почетниот канал е приватен</string>

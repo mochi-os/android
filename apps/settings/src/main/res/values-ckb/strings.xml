@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" و ئەو ناوانەی لە ژێریدان ئازاد دەکرێن بۆ ئەوەی هەر کەسێک بیانبات. هەژمارەکانیان، هەموو ئەوەی بڵاویان کردووەتەوە و شوێنکەوتووانیان لادەبرێن.</string>
     <string name="networks_name_on">%1$s لەسەر %2$s</string>
     <string name="networks_network_for">%1$s بۆ %2$s</string>
-    <string name="networks_accounts">هەژمارەکان</string>
+    <string name="networks_linked_accounts">هەژمارە بەستراوەکان</string>
+    <string name="networks_communities">کۆمەڵگەکان</string>
     <string name="networks_account_actions">کردارەکانی هەژمار</string>
     <string name="networks_account_created">هەژمار دروستکرا</string>
     <string name="networks_create_failed">نەتوانرا هەژمارەکە دروست بکرێت</string>
     <string name="networks_account_updated">هەژمار نوێکرایەوە</string>
     <string name="networks_update_failed">نەتوانرا هەژمارەکە نوێ بکرێتەوە</string>
-    <string name="networks_hosted">میوانداریکراو</string>
-    <string name="networks_linked_kind">بەستراوە</string>
     <string name="networks_moved_to">گواسترایەوە بۆ %1$s</string>
     <string name="networks_home_deleted">فیدی سەرەکی سڕاوەتەوە</string>
     <string name="networks_home_private">فیدی سەرەکی تایبەتە</string>

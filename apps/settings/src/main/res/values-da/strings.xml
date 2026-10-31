@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" og navnene under det bliver frigivet, så alle kan tage dem. Deres konti, alt hvad de har udgivet, og deres følgere fjernes.</string>
     <string name="networks_name_on">%1$s på %2$s</string>
     <string name="networks_network_for">%1$s for %2$s</string>
-    <string name="networks_accounts">Konti</string>
+    <string name="networks_linked_accounts">Tilknyttede konti</string>
+    <string name="networks_communities">Fællesskaber</string>
     <string name="networks_account_actions">Kontohandlinger</string>
     <string name="networks_account_created">Konto oprettet</string>
     <string name="networks_create_failed">Kunne ikke oprette kontoen</string>
     <string name="networks_account_updated">Konto opdateret</string>
     <string name="networks_update_failed">Kunne ikke opdatere kontoen</string>
-    <string name="networks_hosted">Hostet</string>
-    <string name="networks_linked_kind">Tilknyttet</string>
     <string name="networks_moved_to">Flyttet til %1$s</string>
     <string name="networks_home_deleted">Hjemmefeedet er slettet</string>
     <string name="networks_home_private">Hjemmefeedet er privat</string>

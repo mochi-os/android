@@ -453,14 +453,13 @@
     <string name="networks_release_message">\"%1$s\" lan jeneng-jeneng ing sangisoré bakal dibébasaké supaya sapa waé bisa njupuk. Akun-akuné, kabèh sing wis diterbitaké akun-akun kuwi lan pandhèrèké bakal dibusak.</string>
     <string name="networks_name_on">%1$s ing %2$s</string>
     <string name="networks_network_for">%1$s kanggo %2$s</string>
-    <string name="networks_accounts">Akun</string>
+    <string name="networks_linked_accounts">Akun sing kasambung</string>
+    <string name="networks_communities">Komunitas</string>
     <string name="networks_account_actions">Tumindak akun</string>
     <string name="networks_account_created">Akun wis digawé</string>
     <string name="networks_create_failed">Ora bisa nggawé akun</string>
     <string name="networks_account_updated">Akun dianyari</string>
     <string name="networks_update_failed">Ora bisa nganyari akun</string>
-    <string name="networks_hosted">Dihosting</string>
-    <string name="networks_linked_kind">Kasambung</string>
     <string name="networks_moved_to">Dipindhah menyang %1$s</string>
     <string name="networks_home_deleted">Feed utama wis dibusak</string>
     <string name="networks_home_private">Feed utama iku pribadi</string>

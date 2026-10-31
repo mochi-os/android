@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" او د هغه لاندې نومونه به آزاد شي څو هر څوک یې واخلي. د هغوی حسابونه، هر هغه څه چې هغوی خپاره کړي او د هغوی پیروان به لرې شي.</string>
     <string name="networks_name_on">%1$s په %2$s کې</string>
     <string name="networks_network_for">%1$s د %2$s لپاره</string>
-    <string name="networks_accounts">حسابونه</string>
+    <string name="networks_linked_accounts">نښلول شوي حسابونه</string>
+    <string name="networks_communities">ټولنې</string>
     <string name="networks_account_actions">د حساب کړنې</string>
     <string name="networks_account_created">حساب جوړ شو</string>
     <string name="networks_create_failed">حساب جوړ نشو</string>
     <string name="networks_account_updated">حساب نوی شو</string>
     <string name="networks_update_failed">حساب نوی نشو</string>
-    <string name="networks_hosted">کوربه شوی</string>
-    <string name="networks_linked_kind">نښلول شوی</string>
     <string name="networks_moved_to">%1$s ته ولېږدول شو</string>
     <string name="networks_home_deleted">کور فیډ ړنګ شوی دی</string>
     <string name="networks_home_private">کور فیډ شخصي دی</string>

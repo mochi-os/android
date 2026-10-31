@@ -74,7 +74,6 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.webUri
 import org.mochios.settings.R
 import org.mochios.settings.api.Handle
@@ -359,21 +358,13 @@ internal fun NetworksContent(
     onUnmute: (String) -> Unit,
 ) {
     val parents = parentHandles(data.handles.handles)
-    val accounts = data.accounts.sortedWith(compareBy(NaturalCompare) { it.identifier })
+    val linked = linkedAccounts(data.accounts)
+    val communities = communityAccounts(data)
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
-        if (data.providers.isNotEmpty()) {
-            item("link") {
-                MochiOutlinedButton(onClick = onLink, modifier = Modifier.fillMaxWidth()) {
-                    Icon(Icons.Outlined.Link, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-                    Spacer(Modifier.size(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.networks_link))
-                }
-            }
-        }
         if (mayReserve(data)) {
             item("chooser") {
                 HandleChooser(
@@ -392,16 +383,35 @@ internal fun NetworksContent(
                 children = childHandles(data.handles.handles, handle),
                 networks = data.networks,
                 accounts = data.accounts,
+                feeds = data.feeds,
                 busy = busy,
                 onToggle = onToggle,
                 onAddName = onAddName,
                 onArrive = onArrive,
                 onRelease = onRelease,
+                actions = actions,
             )
         }
-        if (accounts.isNotEmpty()) {
-            item("accounts") { SectionTitle(stringResource(R.string.networks_accounts)) }
-            items(accounts, key = { "account:${it.id}" }) { account ->
+        if (data.providers.isNotEmpty() || linked.isNotEmpty()) {
+            item("linked") {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    SectionTitle(stringResource(R.string.networks_linked_accounts), modifier = Modifier.weight(1f))
+                    if (data.providers.isNotEmpty()) {
+                        MochiOutlinedButton(onClick = onLink, modifier = Modifier.padding(top = 8.dp)) {
+                            Icon(Icons.Outlined.Link, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                            Spacer(Modifier.size(ButtonDefaults.IconSpacing))
+                            Text(stringResource(R.string.networks_link))
+                        }
+                    }
+                }
+            }
+            items(linked, key = { "account:${it.id}" }) { account ->
+                AccountCard(account = account, feeds = data.feeds, busy = busy == account.id, actions = actions)
+            }
+        }
+        if (communities.isNotEmpty()) {
+            item("communities") { SectionTitle(stringResource(R.string.networks_communities)) }
+            items(communities, key = { "account:${it.id}" }) { account ->
                 AccountCard(account = account, feeds = data.feeds, busy = busy == account.id, actions = actions)
             }
         }
@@ -419,18 +429,19 @@ internal fun NetworksContent(
 }
 
 @Composable
-private fun SectionTitle(text: String) {
+private fun SectionTitle(text: String, modifier: Modifier = Modifier) {
     Text(
         text,
         style = MaterialTheme.typography.titleSmall,
         fontWeight = FontWeight.SemiBold,
-        modifier = Modifier.padding(top = 8.dp),
+        modifier = modifier.padding(top = 8.dp),
     )
 }
 
 /**
  * One handle with the names under it: a switch per network, each naming the
- * address switching it on creates.
+ * address switching it on creates. A network switched on shows its hosted
+ * account's status and menu in its row; switching it off removes the account.
  */
 @Composable
 internal fun HandleCard(
@@ -438,11 +449,13 @@ internal fun HandleCard(
     children: List<Handle>,
     networks: List<String>,
     accounts: List<NetworkAccount>,
+    feeds: List<NetworkFeed>,
     busy: String?,
     onToggle: (Handle, String, NetworkAccount?) -> Unit,
     onAddName: (Handle) -> Unit,
     onArrive: (Handle) -> Unit,
     onRelease: (Handle) -> Unit,
+    actions: AccountActions,
 ) {
     var menu by remember { mutableStateOf(false) }
     MochiCard(modifier = Modifier.fillMaxWidth()) {
@@ -481,8 +494,10 @@ internal fun HandleCard(
                     }
                 }
             }
-            for (row in listOf(handle) + children) {
-                for (type in networks) {
+            val rows = listOf(handle) + children
+            val types = handleNetworks(networks, accounts, rows)
+            for (row in rows) {
+                for (type in types) {
                     val account = hostedAccount(accounts, row, type)
                     val network = networkLabel(type)
                     val switchLabel = stringResource(R.string.networks_network_for, network, row.name)
@@ -497,6 +512,10 @@ internal fun HandleCard(
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
+                            if (account != null) AccountStatusLine(account, feeds)
+                        }
+                        if (account != null) {
+                            AccountMenuButton(account = account, busy = busy == account.id, removable = false, actions = actions)
                         }
                         Switch(
                             checked = account != null,
@@ -511,7 +530,10 @@ internal fun HandleCard(
     }
 }
 
-/** An account on another network, hosted here or linked on its own server. */
+/**
+ * An account no switch stands for: one linked on its own server, or a hosted
+ * community. Its menu removes it.
+ */
 @Composable
 internal fun AccountCard(
     account: NetworkAccount,
@@ -519,49 +541,64 @@ internal fun AccountCard(
     busy: Boolean,
     actions: AccountActions,
 ) {
-    var menu by remember { mutableStateOf(false) }
-    val (status, problem) = statusText(accountStatus(account, feeds))
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(modifier = Modifier.weight(1f)) {
-                Text(account.identifier, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Medium)
+                val network = networkLabel(account.type)
                 val name = account.label.ifEmpty { account.name }
-                if (name.isNotEmpty()) {
-                    Text(name, style = MaterialTheme.typography.bodySmall)
-                }
                 Text(
-                    networkLabel(account.type) + " · " +
-                        stringResource(if (account.hosted) R.string.networks_hosted else R.string.networks_linked_kind),
-                    style = MaterialTheme.typography.labelSmall,
+                    if (name.isNotEmpty()) stringResource(R.string.networks_name_on, name, network) else network,
+                    style = MaterialTheme.typography.bodyMedium,
+                )
+                Text(
+                    account.identifier,
+                    style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                if (status.isNotEmpty()) {
-                    Text(
-                        status,
-                        style = MaterialTheme.typography.labelSmall,
-                        color = if (problem) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
-                }
+                AccountStatusLine(account, feeds)
             }
-            Box {
-                if (busy) {
-                    CircularProgressIndicator(modifier = Modifier.padding(12.dp).size(20.dp), strokeWidth = 2.dp)
-                } else {
-                    MochiIconButton(onClick = { menu = true }) {
-                        Icon(Icons.Default.MoreHoriz, contentDescription = stringResource(R.string.networks_account_actions))
-                    }
-                }
-                MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
-                    AccountMenu(account = account, actions = actions, close = { menu = false })
-                }
-            }
+            AccountMenuButton(account = account, busy = busy, removable = true, actions = actions)
         }
     }
 }
 
-/** The account's menu, in the web's order. */
+/** What is to be said of an account, if anything, coloured as a problem where it is one. */
 @Composable
-private fun AccountMenu(account: NetworkAccount, actions: AccountActions, close: () -> Unit) {
+private fun AccountStatusLine(account: NetworkAccount, feeds: List<NetworkFeed>) {
+    val (status, problem) = statusText(accountStatus(account, feeds))
+    if (status.isNotEmpty()) {
+        Text(
+            status,
+            style = MaterialTheme.typography.labelSmall,
+            color = if (problem) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
+}
+
+/** An account's ⋯ menu, or a progress ring while a change to it runs. */
+@Composable
+private fun AccountMenuButton(account: NetworkAccount, busy: Boolean, removable: Boolean, actions: AccountActions) {
+    var menu by remember { mutableStateOf(false) }
+    Box {
+        if (busy) {
+            CircularProgressIndicator(modifier = Modifier.padding(12.dp).size(20.dp), strokeWidth = 2.dp)
+        } else {
+            MochiIconButton(onClick = { menu = true }) {
+                Icon(Icons.Default.MoreHoriz, contentDescription = stringResource(R.string.networks_account_actions))
+            }
+        }
+        MochiDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
+            AccountMenu(account = account, removable = removable, actions = actions, close = { menu = false })
+        }
+    }
+}
+
+/**
+ * The account's menu, in the web's order. An account on a handle's switch is
+ * removed by switching it off, so its menu has no Remove.
+ */
+@Composable
+private fun AccountMenu(account: NetworkAccount, removable: Boolean, actions: AccountActions, close: () -> Unit) {
     @Composable
     fun entry(text: Int, icon: androidx.compose.ui.graphics.vector.ImageVector, run: (NetworkAccount) -> Unit) {
         MochiDropdownMenuItem(
@@ -593,7 +630,7 @@ private fun AccountMenu(account: NetworkAccount, actions: AccountActions, close:
         if (account.profile) Icons.Outlined.VisibilityOff else Icons.Outlined.Visibility,
         actions.onProfile,
     )
-    entry(R.string.networks_remove, Icons.Outlined.Delete, actions.onRemove)
+    if (removable) entry(R.string.networks_remove, Icons.Outlined.Delete, actions.onRemove)
 }
 
 /**

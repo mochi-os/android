@@ -473,14 +473,13 @@
     <string name="networks_release_message">\"%1$s\" i imena ispod njega bit će oslobođeni da ih bilo ko može uzeti. Njihovi računi, sve što su objavili i njihovi pratioci bit će uklonjeni.</string>
     <string name="networks_name_on">%1$s na %2$s</string>
     <string name="networks_network_for">%1$s za %2$s</string>
-    <string name="networks_accounts">Računi</string>
+    <string name="networks_linked_accounts">Povezani računi</string>
+    <string name="networks_communities">Zajednice</string>
     <string name="networks_account_actions">Radnje računa</string>
     <string name="networks_account_created">Račun kreiran</string>
     <string name="networks_create_failed">Nije moguće kreirati račun</string>
     <string name="networks_account_updated">Račun ažuriran</string>
     <string name="networks_update_failed">Nije moguće ažurirati račun</string>
-    <string name="networks_hosted">Hostovan</string>
-    <string name="networks_linked_kind">Povezan</string>
     <string name="networks_moved_to">Premješteno na %1$s</string>
     <string name="networks_home_deleted">Početni feed je izbrisan</string>
     <string name="networks_home_private">Početni feed je privatan</string>

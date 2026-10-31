@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" ja selle all olevad nimed vabastatakse, et igaüks saaks need võtta. Nende kontod, kõik, mida need on avaldanud, ja nende jälgijad eemaldatakse.</string>
     <string name="networks_name_on">%1$s võrgus %2$s</string>
     <string name="networks_network_for">%1$s kasutajanimele %2$s</string>
-    <string name="networks_accounts">Kontod</string>
+    <string name="networks_linked_accounts">Seotud kontod</string>
+    <string name="networks_communities">Kogukonnad</string>
     <string name="networks_account_actions">Konto toimingud</string>
     <string name="networks_account_created">Konto loodud</string>
     <string name="networks_create_failed">Konto loomine ebaõnnestus</string>
     <string name="networks_account_updated">Konto uuendatud</string>
     <string name="networks_update_failed">Konto uuendamine ebaõnnestus</string>
-    <string name="networks_hosted">Majutatud</string>
-    <string name="networks_linked_kind">Seotud</string>
     <string name="networks_moved_to">Teisaldatud kontole %1$s</string>
     <string name="networks_home_deleted">Koduvoog on kustutatud</string>
     <string name="networks_home_private">Koduvoog on privaatne</string>

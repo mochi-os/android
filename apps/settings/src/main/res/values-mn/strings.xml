@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" болон түүний доорх нэрс чөлөөлөгдөж, хэн ч авах боломжтой болно. Тэдгээрийн бүртгэлүүд, тэдгээр бүртгэлийн нийтэлсэн бүх зүйл болон дагагчид устгагдана.</string>
     <string name="networks_name_on">%2$s дээрх %1$s</string>
     <string name="networks_network_for">%2$s-д зориулсан %1$s</string>
-    <string name="networks_accounts">Бүртгэлүүд</string>
+    <string name="networks_linked_accounts">Холбогдсон бүртгэлүүд</string>
+    <string name="networks_communities">Нийгэмлэгүүд</string>
     <string name="networks_account_actions">Бүртгэлийн үйлдлүүд</string>
     <string name="networks_account_created">Бүртгэл үүсгэгдлээ</string>
     <string name="networks_create_failed">Бүртгэл үүсгэж чадсангүй</string>
     <string name="networks_account_updated">Бүртгэл шинэчлэгдсэн</string>
     <string name="networks_update_failed">Бүртгэлийг шинэчилж чадсангүй</string>
-    <string name="networks_hosted">Энэ серверт</string>
-    <string name="networks_linked_kind">Холбогдсон</string>
     <string name="networks_moved_to">%1$s руу шилжсэн</string>
     <string name="networks_home_deleted">Үндсэн фийдийг устгасан</string>
     <string name="networks_home_private">Үндсэн фийд хувийн байна</string>

@@ -454,14 +454,13 @@
     <string name="networks_release_message">\"%1$s\" jeung ngaran-ngaran di handapeunana bakal dileupaskeun sangkan bisa dicokot ku saha waé. Akun-akunna, sagala anu dipedalkeunana, jeung pengikutna bakal dipiceun.</string>
     <string name="networks_name_on">%1$s dina %2$s</string>
     <string name="networks_network_for">%1$s pikeun %2$s</string>
-    <string name="networks_accounts">Akun</string>
+    <string name="networks_linked_accounts">Akun anu kahubungkeun</string>
+    <string name="networks_communities">Komunitas</string>
     <string name="networks_account_actions">Tindakan akun</string>
     <string name="networks_account_created">Akun dijieun</string>
     <string name="networks_create_failed">Teu bisa nyieun akun</string>
     <string name="networks_account_updated">Akun diropéa</string>
     <string name="networks_update_failed">Teu bisa ngaropéa akun</string>
-    <string name="networks_hosted">Dihosting</string>
-    <string name="networks_linked_kind">Kahubungkeun</string>
     <string name="networks_moved_to">Dipindahkeun ka %1$s</string>
     <string name="networks_home_deleted">Feed utama parantos dihapus</string>
     <string name="networks_home_private">Feed utama sipatna pribadi</string>

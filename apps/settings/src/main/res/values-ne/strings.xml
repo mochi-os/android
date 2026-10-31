@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" र यसमुनिका नामहरू जो कोहीले लिन सक्ने गरी मुक्त गरिनेछन्। तिनका खाताहरू, ती खाताहरूले प्रकाशित गरेका सबै कुरा र तिनका फलोअरहरू हटाइनेछन्।</string>
     <string name="networks_name_on">%2$s मा %1$s</string>
     <string name="networks_network_for">%2$s का लागि %1$s</string>
-    <string name="networks_accounts">खाताहरू</string>
+    <string name="networks_linked_accounts">लिङ्क गरिएका खाताहरू</string>
+    <string name="networks_communities">समुदायहरू</string>
     <string name="networks_account_actions">खाता कार्यहरू</string>
     <string name="networks_account_created">खाता सिर्जना गरियो</string>
     <string name="networks_create_failed">खाता सिर्जना गर्न सकिएन</string>
     <string name="networks_account_updated">खाता अद्यावधिक गरियो</string>
     <string name="networks_update_failed">खाता अद्यावधिक गर्न सकिएन</string>
-    <string name="networks_hosted">होस्ट गरिएको</string>
-    <string name="networks_linked_kind">लिङ्क गरिएको</string>
     <string name="networks_moved_to">%1$s मा सारियो</string>
     <string name="networks_home_deleted">गृह फिड मेटाइएको छ</string>
     <string name="networks_home_private">गृह फिड निजी छ</string>

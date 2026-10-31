@@ -62,6 +62,41 @@ class NetworksRulesTest {
     }
 
     @Test
+    fun `the linked accounts are those not hosted, and the communities the hosted ones no card shows`() {
+        val alice = Handle(domain = "a.example", name = "alice", kind = "handle", addresses = mapOf("fediverse" to "@alice@a.example"))
+        val news = Handle(domain = "a.example", name = "alice_news", parent = "alice", kind = "handle", addresses = mapOf("fediverse" to "@alice_news@a.example"))
+        val club = Handle(domain = "a.example", name = "club", kind = "community", addresses = mapOf("fediverse" to "@club@a.example"))
+        val own = NetworkAccount(id = "1", type = "fediverse", hosted = true, identifier = "@alice@a.example")
+        val name = NetworkAccount(id = "2", type = "fediverse", hosted = true, identifier = "@alice_news@a.example")
+        val community = NetworkAccount(id = "3", type = "fediverse", hosted = true, kind = "group", identifier = "@club@a.example")
+        val zed = NetworkAccount(id = "4", type = "mastodon", identifier = "@Zed@m.example")
+        val bob = NetworkAccount(id = "5", type = "mastodon", identifier = "@bob@m.example")
+        val data = NetworksData(
+            networks = listOf("fediverse"),
+            handles = Handles(handles = listOf(club, news, alice)),
+            accounts = listOf(zed, community, own, bob, name),
+        )
+        assertEquals(listOf("5", "4"), linkedAccounts(data.accounts).map { it.id })
+        assertEquals(listOf("3"), communityAccounts(data).map { it.id })
+    }
+
+    @Test
+    fun `a card has rows for the offered networks, then one a name under it still has an account on`() {
+        val alice = Handle(name = "alice", kind = "handle", addresses = mapOf("fediverse" to "@alice@a.example", "xmpp" to "alice@a.example"))
+        val news = Handle(name = "alice_news", parent = "alice", kind = "handle", addresses = mapOf("xmpp" to "alice_news@a.example", "matrix" to "@alice_news:a.example"))
+        val accounts = listOf(
+            NetworkAccount(id = "1", type = "xmpp", hosted = true, identifier = "alice@a.example"),
+            NetworkAccount(id = "2", type = "xmpp", hosted = true, identifier = "alice_news@a.example"),
+            NetworkAccount(id = "3", type = "matrix", hosted = true, identifier = "@alice_news:a.example"),
+            NetworkAccount(id = "4", type = "lemmy", identifier = "alice@a.example"),
+        )
+        assertEquals(listOf("fediverse", "xmpp", "matrix"), handleNetworks(listOf("fediverse"), accounts, listOf(alice, news)))
+        assertEquals(listOf("fediverse"), handleNetworks(listOf("fediverse"), accounts.drop(1), listOf(alice)))
+        val data = NetworksData(networks = listOf("fediverse"), handles = Handles(handles = listOf(alice, news)), accounts = accounts)
+        assertEquals(emptyList<String>(), communityAccounts(data).map { it.id })
+    }
+
+    @Test
     fun `another app is given the bare domain for XMPP and an address otherwise`() {
         assertEquals("a.example", serverAddress(NetworkAccount(type = "xmpp", domain = "a.example")))
         assertEquals("https://a.example", serverAddress(NetworkAccount(type = "fediverse", domain = "a.example")))

@@ -475,14 +475,13 @@
     <string name="networks_release_message">\"%1$s\" והשמות שתחתיו ישוחררו כך שכל אחד יוכל לקחת אותם. החשבונות שלהם, כל מה שפרסמו והעוקבים שלהם יוסרו.</string>
     <string name="networks_name_on">%1$s ב-%2$s</string>
     <string name="networks_network_for">%1$s עבור %2$s</string>
-    <string name="networks_accounts">חשבונות</string>
+    <string name="networks_linked_accounts">חשבונות מקושרים</string>
+    <string name="networks_communities">קהילות</string>
     <string name="networks_account_actions">פעולות חשבון</string>
     <string name="networks_account_created">החשבון נוצר</string>
     <string name="networks_create_failed">לא ניתן היה ליצור את החשבון</string>
     <string name="networks_account_updated">החשבון עודכן</string>
     <string name="networks_update_failed">לא ניתן היה לעדכן את החשבון</string>
-    <string name="networks_hosted">מתארח</string>
-    <string name="networks_linked_kind">מקושר</string>
     <string name="networks_moved_to">הועבר אל %1$s</string>
     <string name="networks_home_deleted">פיד הבית נמחק</string>
     <string name="networks_home_private">פיד הבית פרטי</string>

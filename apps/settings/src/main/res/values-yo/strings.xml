@@ -454,14 +454,13 @@
     <string name="networks_release_message">\"%1$s\" àti àwọn orúkọ tó wà lábẹ́ rẹ̀ ni a ó tú sílẹ̀ kí ẹnikẹ́ni lè gbà wọ́n. A ó yọ àwọn àkáǹtì wọn, gbogbo ohun tí wọ́n ti tẹ̀jáde àti àwọn olùtẹ̀lé wọn kúrò.</string>
     <string name="networks_name_on">%1$s lórí %2$s</string>
     <string name="networks_network_for">%1$s fún %2$s</string>
-    <string name="networks_accounts">Àwọn àkáǹtì</string>
+    <string name="networks_linked_accounts">Àwọn àkáǹtì tí a so pọ̀</string>
+    <string name="networks_communities">Àwọn àwùjọ</string>
     <string name="networks_account_actions">Àwọn ìgbésẹ̀ àkáǹtì</string>
     <string name="networks_account_created">A ti ṣẹ̀dá àkáǹtì</string>
     <string name="networks_create_failed">Kò lè ṣẹ̀dá àkáǹtì náà</string>
     <string name="networks_account_updated">A ti ṣe àtúnyẹ̀wò àkáǹtì</string>
     <string name="networks_update_failed">Kò lè ṣe àtúnṣe àkáǹtì náà</string>
-    <string name="networks_hosted">Gbàlejò níbí</string>
-    <string name="networks_linked_kind">A ti so pọ̀</string>
     <string name="networks_moved_to">A ti gbé e lọ sí %1$s</string>
     <string name="networks_home_deleted">A ti pa fíìdì ilé rẹ́</string>
     <string name="networks_home_private">Fíìdì ilé jẹ́ ìkọ̀kọ̀</string>

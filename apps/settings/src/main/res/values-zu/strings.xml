@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" namagama angaphansi kwalo azokhululwa ukuze noma ubani awathathe. Ama-akhawunti awo, konke akushicilele nabalandeli bawo kuzosuswa.</string>
     <string name="networks_name_on">%1$s ku-%2$s</string>
     <string name="networks_network_for">%1$s ka-%2$s</string>
-    <string name="networks_accounts">Ama-akhawunti</string>
+    <string name="networks_linked_accounts">Ama-akhawunti axhunyiwe</string>
+    <string name="networks_communities">Imiphakathi</string>
     <string name="networks_account_actions">Izenzo ze-akhawunti</string>
     <string name="networks_account_created">I-akhawunti idaliwe</string>
     <string name="networks_create_failed">Akukwazanga ukudala i-akhawunti</string>
     <string name="networks_account_updated">I-akhawunti ibuyekeziwe</string>
     <string name="networks_update_failed">Akukwazanga ukubuyekeza i-akhawunti</string>
-    <string name="networks_hosted">Isingathiwe</string>
-    <string name="networks_linked_kind">Kuxhunyiwe</string>
     <string name="networks_moved_to">Kudluliselwe ku-%1$s</string>
     <string name="networks_home_deleted">Ifidi yasekhaya isusiwe</string>
     <string name="networks_home_private">Ifidi yasekhaya iyimfihlo</string>

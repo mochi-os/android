@@ -463,14 +463,13 @@
     <string name="networks_release_message">Το \"%1$s\" και τα ονόματα κάτω από αυτό θα αποδεσμευτούν, ώστε να μπορεί να τα πάρει οποιοσδήποτε. Οι λογαριασμοί τους, όλα όσα δημοσίευσαν και οι ακόλουθοί τους θα αφαιρεθούν.</string>
     <string name="networks_name_on">%1$s στο %2$s</string>
     <string name="networks_network_for">%1$s για %2$s</string>
-    <string name="networks_accounts">Λογαριασμοί</string>
+    <string name="networks_linked_accounts">Συνδεδεμένοι λογαριασμοί</string>
+    <string name="networks_communities">Κοινότητες</string>
     <string name="networks_account_actions">Ενέργειες λογαριασμού</string>
     <string name="networks_account_created">Ο λογαριασμός δημιουργήθηκε</string>
     <string name="networks_create_failed">Δεν ήταν δυνατή η δημιουργία του λογαριασμού</string>
     <string name="networks_account_updated">Ο λογαριασμός ενημερώθηκε</string>
     <string name="networks_update_failed">Δεν ήταν δυνατή η ενημέρωση του λογαριασμού</string>
-    <string name="networks_hosted">Φιλοξενούμενος</string>
-    <string name="networks_linked_kind">Συνδεδεμένο</string>
     <string name="networks_moved_to">Μεταφέρθηκε στο %1$s</string>
     <string name="networks_home_deleted">Η αρχική ροή έχει διαγραφεί</string>
     <string name="networks_home_private">Η αρχική ροή είναι ιδιωτική</string>

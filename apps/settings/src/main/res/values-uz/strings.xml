@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" va uning ostidagi nomlar boʻshatiladi, ularni istalgan kishi olishi mumkin. Ularning hisoblari, ular eʼlon qilgan hamma narsa va obunachilari oʻchiriladi.</string>
     <string name="networks_name_on">%2$s tarmog\'idagi %1$s</string>
     <string name="networks_network_for">%2$s uchun %1$s</string>
-    <string name="networks_accounts">Hisoblar</string>
+    <string name="networks_linked_accounts">Bogʻlangan hisoblar</string>
+    <string name="networks_communities">Hamjamiyatlar</string>
     <string name="networks_account_actions">Hisob amallari</string>
     <string name="networks_account_created">Hisob yaratildi</string>
     <string name="networks_create_failed">Hisobni yaratib boʻlmadi</string>
     <string name="networks_account_updated">Hisob yangilandi</string>
     <string name="networks_update_failed">Hisobni yangilab boʻlmadi</string>
-    <string name="networks_hosted">Joylashtirilgan</string>
-    <string name="networks_linked_kind">Bogʻlangan</string>
     <string name="networks_moved_to">%1$s ga koʻchirildi</string>
     <string name="networks_home_deleted">Asosiy tasma o‘chirilgan</string>
     <string name="networks_home_private">Asosiy tasma shaxsiy</string>

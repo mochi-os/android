@@ -483,14 +483,13 @@
     <string name="networks_release_message">\"%1$s\" і імёны пад ім будуць вызвалены, каб іх мог заняць любы. Іх уліковыя запісы, усё, што яны апублікавалі, і іх падпісчыкі будуць выдалены.</string>
     <string name="networks_name_on">%1$s на %2$s</string>
     <string name="networks_network_for">%1$s для %2$s</string>
-    <string name="networks_accounts">Уліковыя запісы</string>
+    <string name="networks_linked_accounts">Звязаныя ўліковыя запісы</string>
+    <string name="networks_communities">Супольнасці</string>
     <string name="networks_account_actions">Дзеянні з уліковым запісам</string>
     <string name="networks_account_created">Уліковы запіс створаны</string>
     <string name="networks_create_failed">Не ўдалося стварыць уліковы запіс</string>
     <string name="networks_account_updated">Уліковы запіс абноўлены</string>
     <string name="networks_update_failed">Не ўдалося абнавіць уліковы запіс</string>
-    <string name="networks_hosted">Размешчаны тут</string>
-    <string name="networks_linked_kind">Звязана</string>
     <string name="networks_moved_to">Перанесены ў %1$s</string>
     <string name="networks_home_deleted">Хатняя стужка выдалена</string>
     <string name="networks_home_private">Хатняя стужка прыватная</string>

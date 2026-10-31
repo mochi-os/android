@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" आणि त्याखालील नावे मुक्त केली जातील, जेणेकरून कोणीही ती घेऊ शकेल. त्यांची खाती, त्या खात्यांनी प्रकाशित केलेले सर्व काही आणि त्यांचे फॉलोअर्स काढून टाकले जातील.</string>
     <string name="networks_name_on">%2$s वर %1$s</string>
     <string name="networks_network_for">%2$s साठी %1$s</string>
-    <string name="networks_accounts">खाती</string>
+    <string name="networks_linked_accounts">जोडलेली खाती</string>
+    <string name="networks_communities">समुदाय</string>
     <string name="networks_account_actions">खाते क्रिया</string>
     <string name="networks_account_created">खाते तयार केले</string>
     <string name="networks_create_failed">खाते तयार करता आले नाही</string>
     <string name="networks_account_updated">खाते अद्ययावत केले</string>
     <string name="networks_update_failed">खाते अद्ययावत करता आले नाही</string>
-    <string name="networks_hosted">होस्ट केलेले</string>
-    <string name="networks_linked_kind">जोडलेले</string>
     <string name="networks_moved_to">%1$s वर हलवले</string>
     <string name="networks_home_deleted">होम फीड हटवले गेले आहे</string>
     <string name="networks_home_private">होम फीड खाजगी आहे</string>

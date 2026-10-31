@@ -474,14 +474,13 @@
     <string name="networks_release_message">\"%1$s\" a jména pod ním budou uvolněna, aby si je mohl vzít kdokoli. Odstraní se jejich účty, vše, co zveřejnily, i jejich sledující.</string>
     <string name="networks_name_on">%1$s na %2$s</string>
     <string name="networks_network_for">%1$s pro %2$s</string>
-    <string name="networks_accounts">Účty</string>
+    <string name="networks_linked_accounts">Propojené účty</string>
+    <string name="networks_communities">Komunity</string>
     <string name="networks_account_actions">Akce účtu</string>
     <string name="networks_account_created">Účet vytvořen</string>
     <string name="networks_create_failed">Účet se nepodařilo vytvořit</string>
     <string name="networks_account_updated">Účet aktualizován</string>
     <string name="networks_update_failed">Účet se nepodařilo aktualizovat</string>
-    <string name="networks_hosted">Hostovaný</string>
-    <string name="networks_linked_kind">Propojeno</string>
     <string name="networks_moved_to">Přesunuto na %1$s</string>
     <string name="networks_home_deleted">Domovský kanál byl smazán</string>
     <string name="networks_home_private">Domovský kanál je soukromý</string>

@@ -475,14 +475,13 @@
     <string name="networks_release_message">„%1$s“ ir po juo esantys vardai bus atlaisvinti, kad bet kas galėtų juos užimti. Jų paskyros, viskas, ką tos paskyros paskelbė, ir jų sekėjai bus pašalinti.</string>
     <string name="networks_name_on">%1$s tinkle %2$s</string>
     <string name="networks_network_for">%1$s vardui %2$s</string>
-    <string name="networks_accounts">Paskyros</string>
+    <string name="networks_linked_accounts">Susietos paskyros</string>
+    <string name="networks_communities">Bendruomenės</string>
     <string name="networks_account_actions">Paskyros veiksmai</string>
     <string name="networks_account_created">Paskyra sukurta</string>
     <string name="networks_create_failed">Nepavyko sukurti paskyros</string>
     <string name="networks_account_updated">Paskyra atnaujinta</string>
     <string name="networks_update_failed">Nepavyko atnaujinti paskyros</string>
-    <string name="networks_hosted">Talpinamas čia</string>
-    <string name="networks_linked_kind">Susietas</string>
     <string name="networks_moved_to">Perkelta į %1$s</string>
     <string name="networks_home_deleted">Pagrindinis sklaidos kanalas ištrintas</string>
     <string name="networks_home_private">Pagrindinis sklaidos kanalas yra privatus</string>

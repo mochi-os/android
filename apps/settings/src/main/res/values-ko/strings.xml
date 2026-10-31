@@ -454,14 +454,13 @@
     <string name="networks_release_message">\"%1$s\" 및 그 아래의 이름이 해제되어 누구나 가져갈 수 있게 됩니다. 해당 계정과 그 계정들이 게시한 모든 내용, 팔로워가 삭제됩니다.</string>
     <string name="networks_name_on">%2$s의 %1$s</string>
     <string name="networks_network_for">%2$s의 %1$s</string>
-    <string name="networks_accounts">계정</string>
+    <string name="networks_linked_accounts">연결된 계정</string>
+    <string name="networks_communities">커뮤니티</string>
     <string name="networks_account_actions">계정 작업</string>
     <string name="networks_account_created">계정이 생성되었어요</string>
     <string name="networks_create_failed">계정을 만들 수 없었어요</string>
     <string name="networks_account_updated">계정이 업데이트되었어요</string>
     <string name="networks_update_failed">계정을 업데이트할 수 없었어요</string>
-    <string name="networks_hosted">호스팅</string>
-    <string name="networks_linked_kind">연결됨</string>
     <string name="networks_moved_to">%1$s(으)로 이전됨</string>
     <string name="networks_home_deleted">홈 피드가 삭제되었습니다</string>
     <string name="networks_home_private">홈 피드가 비공개입니다</string>

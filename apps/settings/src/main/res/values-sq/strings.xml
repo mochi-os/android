@@ -463,14 +463,13 @@
     <string name="networks_release_message">Pseudonimi \"%1$s\" dhe emrat nën të do të lirohen që t\'i marrë kushdo. Llogaritë e tyre, gjithçka që kanë publikuar dhe ndjekësit e tyre do të hiqen.</string>
     <string name="networks_name_on">%1$s në %2$s</string>
     <string name="networks_network_for">%1$s për %2$s</string>
-    <string name="networks_accounts">Llogaritë</string>
+    <string name="networks_linked_accounts">Llogaritë e lidhura</string>
+    <string name="networks_communities">Komunitetet</string>
     <string name="networks_account_actions">Veprimet e llogarisë</string>
     <string name="networks_account_created">Llogaria u krijua</string>
     <string name="networks_create_failed">Llogaria nuk mund të krijohej</string>
     <string name="networks_account_updated">Llogaria u përditësua</string>
     <string name="networks_update_failed">Llogaria nuk mund të përditësohej</string>
-    <string name="networks_hosted">I strehuar</string>
-    <string name="networks_linked_kind">I lidhur</string>
     <string name="networks_moved_to">U zhvendos te %1$s</string>
     <string name="networks_home_deleted">Feed-i kryesor është fshirë</string>
     <string name="networks_home_private">Feed-i kryesor është privat</string>

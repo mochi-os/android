@@ -473,14 +473,13 @@
     <string name="networks_release_message">Pseudonimul \"%1$s\" și numele de sub el vor fi eliberate, oricine le va putea lua. Conturile lor, tot ce au publicat acestea și urmăritorii lor vor fi eliminate.</string>
     <string name="networks_name_on">%1$s pe %2$s</string>
     <string name="networks_network_for">%1$s pentru %2$s</string>
-    <string name="networks_accounts">Conturi</string>
+    <string name="networks_linked_accounts">Conturi conectate</string>
+    <string name="networks_communities">Comunități</string>
     <string name="networks_account_actions">Acțiuni cont</string>
     <string name="networks_account_created">Cont creat</string>
     <string name="networks_create_failed">Contul nu a putut fi creat</string>
     <string name="networks_account_updated">Cont actualizat</string>
     <string name="networks_update_failed">Contul nu a putut fi actualizat</string>
-    <string name="networks_hosted">Găzduit</string>
-    <string name="networks_linked_kind">Conectat</string>
     <string name="networks_moved_to">Mutat în %1$s</string>
     <string name="networks_home_deleted">Feed-ul principal a fost șters</string>
     <string name="networks_home_private">Feed-ul principal este privat</string>

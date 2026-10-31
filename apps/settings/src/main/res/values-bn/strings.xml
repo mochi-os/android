@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" এবং এর অধীনের নামগুলো যে কেউ নেওয়ার জন্য মুক্ত করে দেওয়া হবে। সেগুলোর অ্যাকাউন্ট, সেগুলোর প্রকাশিত সবকিছু এবং অনুসারীদের সরিয়ে ফেলা হবে।</string>
     <string name="networks_name_on">%2$s-এ %1$s</string>
     <string name="networks_network_for">%2$s-এর জন্য %1$s</string>
-    <string name="networks_accounts">অ্যাকাউন্টগুলি</string>
+    <string name="networks_linked_accounts">লিঙ্ক করা অ্যাকাউন্টগুলি</string>
+    <string name="networks_communities">কমিউনিটিগুলি</string>
     <string name="networks_account_actions">অ্যাকাউন্টের কাজ</string>
     <string name="networks_account_created">অ্যাকাউন্ট তৈরি হয়েছে</string>
     <string name="networks_create_failed">অ্যাকাউন্ট তৈরি করা যায়নি</string>
     <string name="networks_account_updated">অ্যাকাউন্ট আপডেট হয়েছে</string>
     <string name="networks_update_failed">অ্যাকাউন্ট আপডেট করা যায়নি</string>
-    <string name="networks_hosted">হোস্ট করা</string>
-    <string name="networks_linked_kind">লিঙ্ক করা</string>
     <string name="networks_moved_to">%1$s-এ স্থানান্তরিত</string>
     <string name="networks_home_deleted">হোম ফিডটি মুছে ফেলা হয়েছে</string>
     <string name="networks_home_private">হোম ফিডটি ব্যক্তিগত</string>

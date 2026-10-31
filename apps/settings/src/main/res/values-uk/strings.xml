@@ -483,14 +483,13 @@
     <string name="networks_release_message">Псевдонім \"%1$s\" та імена під ним буде звільнено, і їх зможе зайняти будь-хто. Їхні облікові записи, усе, що в них опубліковано, і їхніх підписників буде видалено.</string>
     <string name="networks_name_on">%1$s на %2$s</string>
     <string name="networks_network_for">%1$s для %2$s</string>
-    <string name="networks_accounts">Облікові записи</string>
+    <string name="networks_linked_accounts">Пов\'язані облікові записи</string>
+    <string name="networks_communities">Спільноти</string>
     <string name="networks_account_actions">Дії з обліковим записом</string>
     <string name="networks_account_created">Обліковий запис створено</string>
     <string name="networks_create_failed">Не вдалося створити обліковий запис</string>
     <string name="networks_account_updated">Обліковий запис оновлено</string>
     <string name="networks_update_failed">Не вдалося оновити обліковий запис</string>
-    <string name="networks_hosted">Розміщено</string>
-    <string name="networks_linked_kind">Пов\'язано</string>
     <string name="networks_moved_to">Переміщено до %1$s</string>
     <string name="networks_home_deleted">Домашній канал видалено</string>
     <string name="networks_home_private">Домашній канал приватний</string>

@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" ಮತ್ತು ಅದರ ಅಡಿಯಲ್ಲಿರುವ ಹೆಸರುಗಳನ್ನು ಯಾರು ಬೇಕಾದರೂ ಪಡೆಯುವಂತೆ ಬಿಡುಗಡೆ ಮಾಡಲಾಗುತ್ತದೆ. ಅವುಗಳ ಖಾತೆಗಳು, ಆ ಖಾತೆಗಳು ಪ್ರಕಟಿಸಿದ ಎಲ್ಲವೂ ಮತ್ತು ಅವುಗಳ ಅನುಯಾಯಿಗಳನ್ನು ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ.</string>
     <string name="networks_name_on">%2$s ನಲ್ಲಿ %1$s</string>
     <string name="networks_network_for">%2$s ಗಾಗಿ %1$s</string>
-    <string name="networks_accounts">ಖಾತೆಗಳು</string>
+    <string name="networks_linked_accounts">ಲಿಂಕ್ ಮಾಡಿದ ಖಾತೆಗಳು</string>
+    <string name="networks_communities">ಸಮುದಾಯಗಳು</string>
     <string name="networks_account_actions">ಖಾತೆ ಕ್ರಿಯೆಗಳು</string>
     <string name="networks_account_created">ಖಾತೆ ರಚಿಸಲಾಗಿದೆ</string>
     <string name="networks_create_failed">ಖಾತೆಯನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="networks_account_updated">ಖಾತೆಯನ್ನು ನವೀಕರಿಸಲಾಗಿದೆ</string>
     <string name="networks_update_failed">ಖಾತೆಯನ್ನು ನವೀಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
-    <string name="networks_hosted">ಹೋಸ್ಟ್ ಮಾಡಲಾಗಿದೆ</string>
-    <string name="networks_linked_kind">ಲಿಂಕ್ ಆಗಿದೆ</string>
     <string name="networks_moved_to">%1$s ಗೆ ಸರಿಸಲಾಗಿದೆ</string>
     <string name="networks_home_deleted">ಮುಖ್ಯ ಫೀಡ್ ಅಳಿಸಲಾಗಿದೆ</string>
     <string name="networks_home_private">ಮುಖ್ಯ ಫೀಡ್ ಖಾಸಗಿಯಾಗಿದೆ</string>

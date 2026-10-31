@@ -493,14 +493,13 @@
     <string name="networks_release_message">\"%1$s\" u l-ismijiet taħtu se jinħelsu biex kulħadd ikun jista\' jieħuhom. Il-kontijiet tagħhom, dak kollu li ppubblikaw dawk il-kontijiet u s-segwaċi tagħhom jitneħħew.</string>
     <string name="networks_name_on">%1$s fuq %2$s</string>
     <string name="networks_network_for">%1$s għal %2$s</string>
-    <string name="networks_accounts">Kontijiet</string>
+    <string name="networks_linked_accounts">Kontijiet illinkjati</string>
+    <string name="networks_communities">Komunitajiet</string>
     <string name="networks_account_actions">Azzjonijiet tal-kont</string>
     <string name="networks_account_created">Kont maħluq</string>
     <string name="networks_create_failed">Ma setax jinħoloq il-kont</string>
     <string name="networks_account_updated">Kont aġġornat</string>
     <string name="networks_update_failed">Ma setax jiġi aġġornat il-kont</string>
-    <string name="networks_hosted">Ospitat</string>
-    <string name="networks_linked_kind">Illinkjat</string>
     <string name="networks_moved_to">Imċaqlaq għal %1$s</string>
     <string name="networks_home_deleted">Il-feed ewlieni tħassar</string>
     <string name="networks_home_private">Il-feed ewlieni huwa privat</string>

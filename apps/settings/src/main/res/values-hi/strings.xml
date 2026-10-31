@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" और उसके अंतर्गत आने वाले नाम मुक्त कर दिए जाएँगे ताकि कोई भी उन्हें ले सके। उनके खाते, उनके द्वारा प्रकाशित सब कुछ और उनके फ़ॉलोअर हटा दिए जाएँगे।</string>
     <string name="networks_name_on">%2$s पर %1$s</string>
     <string name="networks_network_for">%2$s के लिए %1$s</string>
-    <string name="networks_accounts">अकाउंट्स</string>
+    <string name="networks_linked_accounts">लिंक किए गए अकाउंट्स</string>
+    <string name="networks_communities">समुदाय</string>
     <string name="networks_account_actions">खाता क्रियाएँ</string>
     <string name="networks_account_created">खाता बनाया गया</string>
     <string name="networks_create_failed">खाता नहीं बनाया जा सका</string>
     <string name="networks_account_updated">अकाउंट अपडेट किया गया</string>
     <string name="networks_update_failed">खाता अपडेट नहीं किया जा सका</string>
-    <string name="networks_hosted">होस्ट किया गया</string>
-    <string name="networks_linked_kind">लिंक किया गया</string>
     <string name="networks_moved_to">%1$s में स्थानांतरित</string>
     <string name="networks_home_deleted">होम फ़ीड हटा दिया गया है</string>
     <string name="networks_home_private">होम फ़ीड निजी है</string>

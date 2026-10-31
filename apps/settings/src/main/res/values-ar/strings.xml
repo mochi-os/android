@@ -503,14 +503,13 @@
     <string name="networks_release_message">سيُحرَّر \"%1$s\" والأسماء التي تحته ليأخذها أي شخص. وستُزال حساباتها وكل ما نشرته ومتابعوها.</string>
     <string name="networks_name_on">%1$s على %2$s</string>
     <string name="networks_network_for">%1$s لـ %2$s</string>
-    <string name="networks_accounts">الحسابات</string>
+    <string name="networks_linked_accounts">الحسابات المرتبطة</string>
+    <string name="networks_communities">المجتمعات</string>
     <string name="networks_account_actions">إجراءات الحساب</string>
     <string name="networks_account_created">تم إنشاء الحساب</string>
     <string name="networks_create_failed">تعذّر إنشاء الحساب</string>
     <string name="networks_account_updated">تم تحديث الحساب</string>
     <string name="networks_update_failed">تعذّر تحديث الحساب</string>
-    <string name="networks_hosted">مستضاف</string>
-    <string name="networks_linked_kind">مرتبط</string>
     <string name="networks_moved_to">نُقل إلى %1$s</string>
     <string name="networks_home_deleted">تم حذف موجز التغذية الرئيسي</string>
     <string name="networks_home_private">موجز التغذية الرئيسي خاص</string>

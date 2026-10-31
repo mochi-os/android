@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" اور اس کے تحت نام آزاد کر دیے جائیں گے تاکہ کوئی بھی انہیں لے سکے۔ ان کے اکاؤنٹس، ان کا شائع کیا ہوا سب کچھ اور ان کے فالوورز ہٹا دیے جائیں گے۔</string>
     <string name="networks_name_on">%2$s پر %1$s</string>
     <string name="networks_network_for">%2$s کے لیے %1$s</string>
-    <string name="networks_accounts">اکاؤنٹس</string>
+    <string name="networks_linked_accounts">منسلک اکاؤنٹس</string>
+    <string name="networks_communities">کمیونٹیز</string>
     <string name="networks_account_actions">اکاؤنٹ کی کارروائیاں</string>
     <string name="networks_account_created">اکاؤنٹ بنا دیا گیا</string>
     <string name="networks_create_failed">اکاؤنٹ نہیں بن سکا</string>
     <string name="networks_account_updated">اکاؤنٹ اپ ڈیٹ ہو گیا</string>
     <string name="networks_update_failed">اکاؤنٹ اپ ڈیٹ نہیں ہو سکا</string>
-    <string name="networks_hosted">ہوسٹ شدہ</string>
-    <string name="networks_linked_kind">منسلک</string>
     <string name="networks_moved_to">%1$s میں منتقل ہو گیا</string>
     <string name="networks_home_deleted">ہوم فیڈ حذف کر دی گئی ہے</string>
     <string name="networks_home_private">ہوم فیڈ نجی ہے</string>

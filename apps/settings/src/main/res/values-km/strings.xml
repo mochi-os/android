@@ -453,14 +453,13 @@
     <string name="networks_release_message">\"%1$s\" និងឈ្មោះនៅក្រោមវានឹងត្រូវបានដោះលែង ដើម្បីឱ្យអ្នកណាក៏អាចយកបាន។ គណនីរបស់ពួកវា អ្វីៗទាំងអស់ដែលគណនីទាំងនោះបានបោះផ្សាយ និងអ្នកតាមដានរបស់ពួកវានឹងត្រូវបានដកចេញ។</string>
     <string name="networks_name_on">%1$s នៅលើ %2$s</string>
     <string name="networks_network_for">%1$s សម្រាប់ %2$s</string>
-    <string name="networks_accounts">គណនី</string>
+    <string name="networks_linked_accounts">គណនីដែលបានភ្ជាប់</string>
+    <string name="networks_communities">សហគមន៍</string>
     <string name="networks_account_actions">សកម្មភាពគណនី</string>
     <string name="networks_account_created">បានបង្កើតគណនី</string>
     <string name="networks_create_failed">មិនអាចបង្កើតគណនីបានទេ</string>
     <string name="networks_account_updated">បានធ្វើបច្ចុប្បន្នភាពគណនី</string>
     <string name="networks_update_failed">មិនអាចធ្វើបច្ចុប្បន្នភាពគណនីបានទេ</string>
-    <string name="networks_hosted">បានបង្ហោះ</string>
-    <string name="networks_linked_kind">បានភ្ជាប់</string>
     <string name="networks_moved_to">បានផ្លាស់ទីទៅ %1$s</string>
     <string name="networks_home_deleted">មតិព័ត៌មានដើមត្រូវបានលុប</string>
     <string name="networks_home_private">មតិព័ត៌មានដើមជាឯកជន</string>

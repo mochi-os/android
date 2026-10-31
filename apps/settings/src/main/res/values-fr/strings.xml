@@ -464,14 +464,13 @@
     <string name="networks_release_message">\"%1$s\" et les noms qui en dépendent seront libérés et pourront être pris par n\'importe qui. Leurs comptes, tout ce qu\'ils ont publié et leurs abonnés seront supprimés.</string>
     <string name="networks_name_on">%1$s sur %2$s</string>
     <string name="networks_network_for">%1$s pour %2$s</string>
-    <string name="networks_accounts">Comptes</string>
+    <string name="networks_linked_accounts">Comptes liés</string>
+    <string name="networks_communities">Communautés</string>
     <string name="networks_account_actions">Actions du compte</string>
     <string name="networks_account_created">Compte créé</string>
     <string name="networks_create_failed">Impossible de créer le compte</string>
     <string name="networks_account_updated">Compte mis à jour</string>
     <string name="networks_update_failed">Impossible de mettre à jour le compte</string>
-    <string name="networks_hosted">Hébergé</string>
-    <string name="networks_linked_kind">Lié</string>
     <string name="networks_moved_to">Déplacé vers %1$s</string>
     <string name="networks_home_deleted">Le flux d\'accueil a été supprimé</string>
     <string name="networks_home_private">Le flux d\'accueil est privé</string>

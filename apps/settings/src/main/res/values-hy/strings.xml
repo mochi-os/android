@@ -463,14 +463,13 @@
     <string name="networks_release_message">«%1$s»-ը և դրա տակ գտնվող անունները կազատվեն, և ցանկացած մեկը կկարողանա վերցնել դրանք։ Դրանց հաշիվները, այդ հաշիվների հրապարակած ամեն ինչը և դրանց հետևորդները կհեռացվեն։</string>
     <string name="networks_name_on">%1$s՝ %2$s-ում</string>
     <string name="networks_network_for">%1$s %2$s-ի համար</string>
-    <string name="networks_accounts">Հաշիվներ</string>
+    <string name="networks_linked_accounts">Կապված հաշիվներ</string>
+    <string name="networks_communities">Համայնքներ</string>
     <string name="networks_account_actions">Հաշվի գործողություններ</string>
     <string name="networks_account_created">Հաշիվը ստեղծվեց</string>
     <string name="networks_create_failed">Չհաջողվեց ստեղծել հաշիվը</string>
     <string name="networks_account_updated">Հաշիվը թարմացվեց</string>
     <string name="networks_update_failed">Չհաջողվեց թարմացնել հաշիվը</string>
-    <string name="networks_hosted">Հյուրընկալված</string>
-    <string name="networks_linked_kind">Կապված</string>
     <string name="networks_moved_to">Տեղափոխվել է %1$s</string>
     <string name="networks_home_deleted">Գլխավոր հոսքը ջնջվել է</string>
     <string name="networks_home_private">Գլխավոր հոսքը մասնավոր է</string>

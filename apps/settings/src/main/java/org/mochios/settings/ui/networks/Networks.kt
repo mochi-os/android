@@ -85,6 +85,37 @@ internal fun hostedAccount(accounts: List<NetworkAccount>, handle: Handle, netwo
     accounts.firstOrNull { it.hosted && it.type == network && it.identifier == handle.addresses[network] }
 
 /**
+ * The networks a handle card has rows for, given the card's handle and the
+ * names under it: those the server offers, then any one of them still has a
+ * hosted account on since the server stopped offering it, so that the account
+ * stays listed and can be switched off.
+ */
+internal fun handleNetworks(networks: List<String>, accounts: List<NetworkAccount>, rows: List<Handle>): List<String> {
+    val extra = accounts
+        .filter { account -> account.hosted && account.type !in networks && rows.any { it.addresses[account.type] == account.identifier } }
+        .map { it.type }
+    return (networks + extra).distinct()
+}
+
+/** The accounts linked on other servers, each a row of its own. */
+internal fun linkedAccounts(accounts: List<NetworkAccount>): List<NetworkAccount> =
+    accounts.filter { !it.hosted }.sortedWith(compareBy(NaturalCompare) { it.identifier })
+
+/**
+ * The hosted accounts no handle card shows: a forum's community, made on a
+ * community name, which has no card of its own.
+ */
+internal fun communityAccounts(data: NetworksData): List<NetworkAccount> {
+    val handles = data.handles.handles
+    val shown = parentHandles(handles).flatMap { parent ->
+        val rows = listOf(parent) + childHandles(handles, parent)
+        val networks = handleNetworks(data.networks, data.accounts, rows)
+        rows.flatMap { row -> networks.mapNotNull { hostedAccount(data.accounts, row, it) } }
+    }.toSet()
+    return data.accounts.filter { it.hosted && it !in shown }.sortedWith(compareBy(NaturalCompare) { it.identifier })
+}
+
+/**
  * The server another app is given to sign in to an account: the bare domain
  * for XMPP, an address for the rest.
  */
@@ -109,7 +140,7 @@ internal fun homed(account: NetworkAccount): Boolean =
 internal fun keyed(account: NetworkAccount): Boolean =
     account.type == "fediverse" || account.type == "bluesky"
 
-/** What an account's card says of it, most pressing first, as the web's status column does. */
+/** What an account's row says of it, most pressing first, as the web's status column does. */
 internal sealed interface AccountStatus {
     data class Failure(val failure: NetworkFailure) : AccountStatus
     data class Failed(val message: String) : AccountStatus

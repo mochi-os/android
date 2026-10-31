@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" आ ओकरा नीचे के नाम मुक्त कर दिहल जाई, ताकि केहू ले सके। ओकनी के खाता, ओकनी के प्रकाशित सब कुछ आ ओकनी के फॉलोअर हटा दिहल जइहें।</string>
     <string name="networks_name_on">%2$s पर %1$s</string>
     <string name="networks_network_for">%2$s खातिर %1$s</string>
-    <string name="networks_accounts">खाता</string>
+    <string name="networks_linked_accounts">जुड़ल खाता</string>
+    <string name="networks_communities">समुदाय</string>
     <string name="networks_account_actions">खाता के कार्रवाई</string>
     <string name="networks_account_created">खाता बन गइल</string>
     <string name="networks_create_failed">खाता ना बन सकल</string>
     <string name="networks_account_updated">खाता अद्यतन कइल गइल</string>
     <string name="networks_update_failed">खाता अपडेट ना हो सकल</string>
-    <string name="networks_hosted">होस्ट कइल</string>
-    <string name="networks_linked_kind">जुड़ल</string>
     <string name="networks_moved_to">%1$s पर खिसकावल गइल</string>
     <string name="networks_home_deleted">होम फ़ीड मिटा दिहल गइल बा</string>
     <string name="networks_home_private">होम फ़ीड निजी बा</string>

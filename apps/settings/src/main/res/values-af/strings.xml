@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" en die name daaronder word vrygestel sodat enigiemand dit kan neem. Hul rekeninge, alles wat daardeur gepubliseer is, en hul volgers word verwyder.</string>
     <string name="networks_name_on">%1$s op %2$s</string>
     <string name="networks_network_for">%1$s vir %2$s</string>
-    <string name="networks_accounts">Rekeninge</string>
+    <string name="networks_linked_accounts">Gekoppelde rekeninge</string>
+    <string name="networks_communities">Gemeenskappe</string>
     <string name="networks_account_actions">Rekeningaksies</string>
     <string name="networks_account_created">Rekening geskep</string>
     <string name="networks_create_failed">Kon nie die rekening skep nie</string>
     <string name="networks_account_updated">Rekening opgedateer</string>
     <string name="networks_update_failed">Kon nie die rekening opdateer nie</string>
-    <string name="networks_hosted">Gehuisves</string>
-    <string name="networks_linked_kind">Gekoppel</string>
     <string name="networks_moved_to">Geskuif na %1$s</string>
     <string name="networks_home_deleted">Die tuisfeed is geskrap</string>
     <string name="networks_home_private">Die tuisfeed is privaat</string>

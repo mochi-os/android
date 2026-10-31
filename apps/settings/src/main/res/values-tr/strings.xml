@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" ve altındaki adlar serbest bırakılacak, herkes bunları alabilecek. Hesapları, bu hesapların yayımladığı her şey ve takipçileri kaldırılacak.</string>
     <string name="networks_name_on">%2$s üzerinde %1$s</string>
     <string name="networks_network_for">%2$s için %1$s</string>
-    <string name="networks_accounts">Hesaplar</string>
+    <string name="networks_linked_accounts">Bağlı hesaplar</string>
+    <string name="networks_communities">Topluluklar</string>
     <string name="networks_account_actions">Hesap işlemleri</string>
     <string name="networks_account_created">Hesap oluşturuldu</string>
     <string name="networks_create_failed">Hesap oluşturulamadı</string>
     <string name="networks_account_updated">Hesap güncellendi</string>
     <string name="networks_update_failed">Hesap güncellenemedi</string>
-    <string name="networks_hosted">Barındırılan</string>
-    <string name="networks_linked_kind">Bağlı</string>
     <string name="networks_moved_to">%1$s hesabına taşındı</string>
     <string name="networks_home_deleted">Ana akış silindi</string>
     <string name="networks_home_private">Ana akış gizli</string>

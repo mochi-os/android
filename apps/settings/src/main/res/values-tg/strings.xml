@@ -462,14 +462,13 @@
     <string name="networks_release_message">\"%1$s\" ва номҳои зери он озод карда мешаванд, то ҳар кас онҳоро гирифта тавонад. Ҳисобҳои онҳо, ҳар чизе ки нашр кардаанд ва пайравони онҳо хориҷ карда мешаванд.</string>
     <string name="networks_name_on">%1$s дар %2$s</string>
     <string name="networks_network_for">%1$s барои %2$s</string>
-    <string name="networks_accounts">Ҳисобҳо</string>
+    <string name="networks_linked_accounts">Ҳисобҳои пайвастшуда</string>
+    <string name="networks_communities">Ҷомеаҳо</string>
     <string name="networks_account_actions">Амалҳои ҳисоб</string>
     <string name="networks_account_created">Ҳисоб эҷод шуд</string>
     <string name="networks_create_failed">Ҳисобро эҷод карда натавонист</string>
     <string name="networks_account_updated">Ҳисоб навсозӣ шуд</string>
     <string name="networks_update_failed">Ҳисобро навсозӣ карда натавонист</string>
-    <string name="networks_hosted">Ҷойгиршуда</string>
-    <string name="networks_linked_kind">Пайвастшуда</string>
     <string name="networks_moved_to">Ба %1$s кӯчонида шуд</string>
     <string name="networks_home_deleted">Фиди асосӣ нест карда шудааст</string>
     <string name="networks_home_private">Фиди асосӣ хусусӣ аст</string>

@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" és az alatta lévő nevek felszabadulnak, így bárki lefoglalhatja őket. A hozzájuk tartozó fiókok, minden, amit közzétettek, és a követőik törlődnek.</string>
     <string name="networks_name_on">%1$s itt: %2$s</string>
     <string name="networks_network_for">%1$s ehhez: %2$s</string>
-    <string name="networks_accounts">Fiókok</string>
+    <string name="networks_linked_accounts">Összekapcsolt fiókok</string>
+    <string name="networks_communities">Közösségek</string>
     <string name="networks_account_actions">Fiókműveletek</string>
     <string name="networks_account_created">Fiók létrehozva</string>
     <string name="networks_create_failed">Nem sikerült létrehozni a fiókot</string>
     <string name="networks_account_updated">Fiók frissítve</string>
     <string name="networks_update_failed">Nem sikerült frissíteni a fiókot</string>
-    <string name="networks_hosted">Itt tárolt</string>
-    <string name="networks_linked_kind">Összekapcsolva</string>
     <string name="networks_moved_to">Áthelyezve ide: %1$s</string>
     <string name="networks_home_deleted">A kezdő hírfolyamot törölték</string>
     <string name="networks_home_private">A kezdő hírfolyam privát</string>

@@ -454,14 +454,13 @@
     <string name="networks_release_message">\"%1$s\" và các tên bên dưới sẽ được giải phóng để bất kỳ ai cũng có thể lấy. Tài khoản của chúng, mọi thứ chúng đã đăng và người theo dõi của chúng sẽ bị xoá.</string>
     <string name="networks_name_on">%1$s trên %2$s</string>
     <string name="networks_network_for">%1$s cho %2$s</string>
-    <string name="networks_accounts">Tài khoản</string>
+    <string name="networks_linked_accounts">Tài khoản đã liên kết</string>
+    <string name="networks_communities">Cộng đồng</string>
     <string name="networks_account_actions">Thao tác tài khoản</string>
     <string name="networks_account_created">Đã tạo tài khoản</string>
     <string name="networks_create_failed">Không thể tạo tài khoản</string>
     <string name="networks_account_updated">Đã cập nhật tài khoản</string>
     <string name="networks_update_failed">Không thể cập nhật tài khoản</string>
-    <string name="networks_hosted">Được lưu trữ</string>
-    <string name="networks_linked_kind">Đã liên kết</string>
     <string name="networks_moved_to">Đã chuyển sang %1$s</string>
     <string name="networks_home_deleted">Nguồn cấp chính đã bị xóa</string>
     <string name="networks_home_private">Nguồn cấp chính ở chế độ riêng tư</string>

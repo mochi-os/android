@@ -483,14 +483,13 @@
     <string name="networks_release_message">Pseudonim \"%1$s\" i nazwy pod nim zostaną zwolnione, by każdy mógł je zająć. Ich konta zostaną usunięte wraz ze wszystkim, co opublikowały, i z obserwującymi.</string>
     <string name="networks_name_on">%1$s w sieci %2$s</string>
     <string name="networks_network_for">%1$s dla %2$s</string>
-    <string name="networks_accounts">Konta</string>
+    <string name="networks_linked_accounts">Połączone konta</string>
+    <string name="networks_communities">Społeczności</string>
     <string name="networks_account_actions">Akcje konta</string>
     <string name="networks_account_created">Konto utworzone</string>
     <string name="networks_create_failed">Nie udało się utworzyć konta</string>
     <string name="networks_account_updated">Konto zaktualizowane</string>
     <string name="networks_update_failed">Nie udało się zaktualizować konta</string>
-    <string name="networks_hosted">Hostowany</string>
-    <string name="networks_linked_kind">Połączony</string>
     <string name="networks_moved_to">Przeniesiono na %1$s</string>
     <string name="networks_home_deleted">Kanał główny został usunięty</string>
     <string name="networks_home_private">Kanał główny jest prywatny</string>

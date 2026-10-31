@@ -483,14 +483,13 @@
     <string name="networks_release_message">Thèid \"%1$s\" agus na h-ainmean fodha a shaoradh airson duine sam bith a ghabhail. Thèid na cunntasan aca, gach rud a dh\'fhoillsich iad agus an luchd-leantainn aca a thoirt air falbh.</string>
     <string name="networks_name_on">%1$s air %2$s</string>
     <string name="networks_network_for">%1$s airson %2$s</string>
-    <string name="networks_accounts">Cunntasan</string>
+    <string name="networks_linked_accounts">Cunntasan ceangailte</string>
+    <string name="networks_communities">Coimhearsnachdan</string>
     <string name="networks_account_actions">Gnìomhan a\' chunntais</string>
     <string name="networks_account_created">Cunntas air a chruthachadh</string>
     <string name="networks_create_failed">Cha b\' urrainn an cunntas a chruthachadh</string>
     <string name="networks_account_updated">Cunntas air ùrachadh</string>
     <string name="networks_update_failed">Cha b\' urrainn an cunntas ùrachadh</string>
-    <string name="networks_hosted">Air òstadh</string>
-    <string name="networks_linked_kind">Ceangailte</string>
     <string name="networks_moved_to">Air a ghluasad gu %1$s</string>
     <string name="networks_home_deleted">Chaidh an t-inbhir dachaigh a sguabadh às</string>
     <string name="networks_home_private">Tha an t-inbhir dachaigh prìobhaideach</string>

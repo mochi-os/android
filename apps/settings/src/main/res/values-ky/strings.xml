@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" жана анын астындагы аттар бошотулат, аларды каалаган адам ала алат. Алардын аккаунттары, ошол аккаунттар жарыялаган нерселердин баары жана алардын жазылуучулары өчүрүлөт.</string>
     <string name="networks_name_on">%2$s тармагындагы %1$s</string>
     <string name="networks_network_for">%2$s үчүн %1$s</string>
-    <string name="networks_accounts">Аккаунттар</string>
+    <string name="networks_linked_accounts">Байланыштырылган аккаунттар</string>
+    <string name="networks_communities">Коомчулуктар</string>
     <string name="networks_account_actions">Аккаунт аракеттери</string>
     <string name="networks_account_created">Аккаунт түзүлдү</string>
     <string name="networks_create_failed">Аккаунтту түзүү мүмкүн болбоду</string>
     <string name="networks_account_updated">Аккаунт жаңыланды</string>
     <string name="networks_update_failed">Аккаунтту жаңылоо мүмкүн болбоду</string>
-    <string name="networks_hosted">Ушул серверде</string>
-    <string name="networks_linked_kind">Байланыштырылган</string>
     <string name="networks_moved_to">%1$s дарегине көчүрүлдү</string>
     <string name="networks_home_deleted">Башкы тасма өчүрүлгөн</string>
     <string name="networks_home_private">Башкы тасма жеке</string>

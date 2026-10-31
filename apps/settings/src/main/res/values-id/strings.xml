@@ -454,14 +454,13 @@
     <string name="networks_release_message">\"%1$s\" dan nama-nama di bawahnya akan dibebaskan sehingga siapa pun dapat mengambilnya. Akun-akunnya, semua yang dipublikasikan akun tersebut, dan pengikutnya akan dihapus.</string>
     <string name="networks_name_on">%1$s di %2$s</string>
     <string name="networks_network_for">%1$s untuk %2$s</string>
-    <string name="networks_accounts">Akun</string>
+    <string name="networks_linked_accounts">Akun tertaut</string>
+    <string name="networks_communities">Komunitas</string>
     <string name="networks_account_actions">Tindakan akun</string>
     <string name="networks_account_created">Akun dibuat</string>
     <string name="networks_create_failed">Tidak dapat membuat akun</string>
     <string name="networks_account_updated">Akun diperbarui</string>
     <string name="networks_update_failed">Tidak dapat memperbarui akun</string>
-    <string name="networks_hosted">Dihosting</string>
-    <string name="networks_linked_kind">Tertaut</string>
     <string name="networks_moved_to">Dipindahkan ke %1$s</string>
     <string name="networks_home_deleted">Umpan utama telah dihapus</string>
     <string name="networks_home_private">Umpan utama bersifat pribadi</string>

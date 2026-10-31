@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" ۽ ان جي هيٺان نالا آزاد ڪيا ويندا ته جيئن ڪو به انهن کي وٺي سگهي. انهن جا اڪائونٽ، جيڪو ڪجهه انهن شايع ڪيو ۽ انهن جا پوئلڳ هٽايا ويندا.</string>
     <string name="networks_name_on">%2$s تي %1$s</string>
     <string name="networks_network_for">%2$s لاءِ %1$s</string>
-    <string name="networks_accounts">اڪائونٽس</string>
+    <string name="networks_linked_accounts">ڳنڍيل اڪائونٽس</string>
+    <string name="networks_communities">برادريون</string>
     <string name="networks_account_actions">اڪائونٽ جا عمل</string>
     <string name="networks_account_created">اڪائونٽ ٺاهيو ويو</string>
     <string name="networks_create_failed">اڪائونٽ ٺاهي نه سگهيو</string>
     <string name="networks_account_updated">اڪائونٽ اپڊيٽ ڪيو ويو</string>
     <string name="networks_update_failed">اڪائونٽ اپڊيٽ نه ٿي سگهيو</string>
-    <string name="networks_hosted">هوسٽ ٿيل</string>
-    <string name="networks_linked_kind">ڳنڍيل</string>
     <string name="networks_moved_to">%1$s ۾ منتقل ٿيو</string>
     <string name="networks_home_deleted">گهر فيڊ ختم ڪيو ويو آهي</string>
     <string name="networks_home_private">گهر فيڊ نجي آهي</string>

@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" û navên di bin wê de dê bên azadkirin da ku her kes bikaribe wan bigire. Hesabên wan, her tiştê ku wan hesaban weşandiye û şopînerên wan dê bên rakirin.</string>
     <string name="networks_name_on">%1$s li ser %2$s</string>
     <string name="networks_network_for">%1$s ji bo %2$s</string>
-    <string name="networks_accounts">Hesab</string>
+    <string name="networks_linked_accounts">Hesabên girêdayî</string>
+    <string name="networks_communities">Civak</string>
     <string name="networks_account_actions">Çalakiyên hesabê</string>
     <string name="networks_account_created">Hesab hat çêkirin</string>
     <string name="networks_create_failed">Hesab nehat çêkirin</string>
     <string name="networks_account_updated">Hesab hat nûkirin</string>
     <string name="networks_update_failed">Hesab nehat nûkirin</string>
-    <string name="networks_hosted">Li vê serverê</string>
-    <string name="networks_linked_kind">Girêdayî</string>
     <string name="networks_moved_to">Hate guhastin bo %1$s</string>
     <string name="networks_home_deleted">Feeda sereke hatiye jêbirin</string>
     <string name="networks_home_private">Feeda sereke taybet e</string>

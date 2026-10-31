@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" eta haren azpiko izenak askatu egingo dira, edonork har ditzan. Haien kontuak, argitaratu duten guztia eta jarraitzaileak kenduko dira.</string>
     <string name="networks_name_on">%1$s %2$s sarean</string>
     <string name="networks_network_for">%1$s (%2$s)</string>
-    <string name="networks_accounts">Kontuak</string>
+    <string name="networks_linked_accounts">Estekatutako kontuak</string>
+    <string name="networks_communities">Komunitateak</string>
     <string name="networks_account_actions">Kontuaren ekintzak</string>
     <string name="networks_account_created">Kontua sortu da</string>
     <string name="networks_create_failed">Ezin izan da kontua sortu</string>
     <string name="networks_account_updated">Kontua eguneratua</string>
     <string name="networks_update_failed">Ezin izan da kontua eguneratu</string>
-    <string name="networks_hosted">Ostatatua</string>
-    <string name="networks_linked_kind">Estekatuta</string>
     <string name="networks_moved_to">Lekuz aldatuta: %1$s</string>
     <string name="networks_home_deleted">Hasierako jarioa ezabatu da</string>
     <string name="networks_home_private">Hasierako jarioa pribatua da</string>

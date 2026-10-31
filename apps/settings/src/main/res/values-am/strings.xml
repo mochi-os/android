@@ -463,14 +463,13 @@
     <string name="networks_release_message">\"%1$s\" እና በሥሩ ያሉት ስሞች ማንም እንዲወስዳቸው ነፃ ይደረጋሉ። መለያዎቻቸው፣ ያተሙት ሁሉ እና ተከታዮቻቸው ይወገዳሉ።</string>
     <string name="networks_name_on">%1$s በ%2$s ላይ</string>
     <string name="networks_network_for">%1$s ለ%2$s</string>
-    <string name="networks_accounts">መለያዎች</string>
+    <string name="networks_linked_accounts">የተገናኙ መለያዎች</string>
+    <string name="networks_communities">ማህበረሰቦች</string>
     <string name="networks_account_actions">የመለያ እርምጃዎች</string>
     <string name="networks_account_created">መለያ ተፈጥሯል</string>
     <string name="networks_create_failed">መለያውን መፍጠር አልተቻለም</string>
     <string name="networks_account_updated">መለያ ተዘምኗል</string>
     <string name="networks_update_failed">መለያውን ማዘመን አልተቻለም</string>
-    <string name="networks_hosted">የተስተናገደ</string>
-    <string name="networks_linked_kind">ተገናኝቷል</string>
     <string name="networks_moved_to">ወደ %1$s ተዛውሯል</string>
     <string name="networks_home_deleted">መነሻ ፊዱ ተሰርዟል</string>
     <string name="networks_home_private">መነሻ ፊዱ የግል ነው</string>

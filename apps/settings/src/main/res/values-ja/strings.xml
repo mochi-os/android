@@ -454,14 +454,13 @@
     <string name="networks_release_message">「%1$s」とその下の名前は解放され、誰でも取得できるようになります。それらのアカウント、そこで公開されたすべての内容、およびフォロワーは削除されます。</string>
     <string name="networks_name_on">%2$s の %1$s</string>
     <string name="networks_network_for">%2$s の %1$s</string>
-    <string name="networks_accounts">アカウント</string>
+    <string name="networks_linked_accounts">リンク済みのアカウント</string>
+    <string name="networks_communities">コミュニティ</string>
     <string name="networks_account_actions">アカウントの操作</string>
     <string name="networks_account_created">アカウントを作成しました</string>
     <string name="networks_create_failed">アカウントを作成できませんでした</string>
     <string name="networks_account_updated">アカウントを更新しました</string>
     <string name="networks_update_failed">アカウントを更新できませんでした</string>
-    <string name="networks_hosted">ホスティング</string>
-    <string name="networks_linked_kind">リンク済み</string>
     <string name="networks_moved_to">%1$s に移行済み</string>
     <string name="networks_home_deleted">ホームフィードは削除されています</string>
     <string name="networks_home_private">ホームフィードは非公開です</string>

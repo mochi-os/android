@@ -504,14 +504,13 @@
     <string name="networks_release_message">\"%1$s\" and the names under it will be freed for anyone to take. Their accounts, everything those published and their followers are removed.</string>
     <string name="networks_name_on">%1$s on %2$s</string>
     <string name="networks_network_for">%1$s for %2$s</string>
-    <string name="networks_accounts">Accounts</string>
+    <string name="networks_linked_accounts">Linked accounts</string>
+    <string name="networks_communities">Communities</string>
     <string name="networks_account_actions">Account actions</string>
     <string name="networks_account_created">Account created</string>
     <string name="networks_create_failed">Could not create the account</string>
     <string name="networks_account_updated">Account updated</string>
     <string name="networks_update_failed">Could not update the account</string>
-    <string name="networks_hosted">Hosted</string>
-    <string name="networks_linked_kind">Linked</string>
     <string name="networks_moved_to">Moved to %1$s</string>
     <string name="networks_home_deleted">The home feed has been deleted</string>
     <string name="networks_home_private">The home feed is private</string>

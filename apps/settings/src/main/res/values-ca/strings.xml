@@ -464,14 +464,13 @@
     <string name="networks_release_message">\"%1$s\" i els noms que en depenen quedaran lliures perquè qualsevol els pugui agafar. Se n\'eliminaran els comptes, tot el que hi han publicat i els seguidors.</string>
     <string name="networks_name_on">%1$s a %2$s</string>
     <string name="networks_network_for">%1$s per a %2$s</string>
-    <string name="networks_accounts">Comptes</string>
+    <string name="networks_linked_accounts">Comptes vinculats</string>
+    <string name="networks_communities">Comunitats</string>
     <string name="networks_account_actions">Accions del compte</string>
     <string name="networks_account_created">Compte creat</string>
     <string name="networks_create_failed">No s\'ha pogut crear el compte</string>
     <string name="networks_account_updated">Compte actualitzat</string>
     <string name="networks_update_failed">No s\'ha pogut actualitzar el compte</string>
-    <string name="networks_hosted">Allotjat</string>
-    <string name="networks_linked_kind">Vinculat</string>
     <string name="networks_moved_to">Traslladat a %1$s</string>
     <string name="networks_home_deleted">El canal principal s\'ha suprimit</string>
     <string name="networks_home_private">El canal principal és privat</string>
