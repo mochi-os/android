@@ -1379,7 +1379,7 @@ private fun CommentCard(
                 )
             }
             MochiDropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
-                if (isAuthor) {
+                if (canEdit) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.forums_comment_edit)) },
                         onClick = { showMenu = false; onEdit() },
