@@ -7,12 +7,15 @@ package org.mochios.feeds.repository
 
 import android.content.Context
 import android.net.Uri
+import android.os.SystemClock
 import android.util.Log
 import com.google.gson.Gson
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import okhttp3.MultipartBody
 import org.mochios.android.api.ApiError
 import org.mochios.android.api.ApiException
@@ -20,6 +23,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
@@ -56,6 +60,7 @@ import org.mochios.feeds.model.Imported
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.model.User
+import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -152,14 +157,17 @@ class FeedsRepository @Inject constructor(
     private val menuApi: MenuApi,
     fileStore: FileStore,
     @param:ApplicationContext private val context: Context,
+    private val session: SessionManager,
 ) : FileRepository(fileStore) {
 
-    // In-memory cache: feedId -> (posts, hasMore, timestamp)
+    // In-memory cache: feedId -> (posts, hasMore, timestamp). Each entry is
+    // the signed-in account's: another account, or none, never reads it.
     private val postCache = mutableMapOf<String, CachedPosts>()
     private val feedInfoCache = mutableMapOf<String, CachedFeedInfo>()
     private val cacheMaxAge = 60_000L // 1 minute
 
     private data class CachedPosts(
+        val account: String,
         val result: PostListResult,
         val sort: String?,
         val tag: String?,
@@ -168,9 +176,23 @@ class FeedsRepository @Inject constructor(
     )
 
     private data class CachedFeedInfo(
+        val account: String,
         val result: FeedInfoResult,
         val timestamp: Long = System.currentTimeMillis()
     )
+
+    /** The last class `-/info` answer, the account it was read for, when it
+     *  was asked for and when it arrived. */
+    private class Roster(val account: String, val read: Long, val arrived: Long, val answer: FeedsInfoResult)
+
+    /** One class `-/info` read at a time: a caller arriving while one is under
+     *  way waits for it and takes its answer. */
+    private val lock = Mutex()
+
+    @Volatile private var roster: Roster? = null
+
+    /** Moved on by [forget], so a read already under way keeps nothing. */
+    private val generation = AtomicInteger()
 
     // Emits whenever the viewer's subscriptions change (subscribe/unsubscribe),
     // so the feed-list drawer can reload even without a navigation that would
@@ -178,15 +200,19 @@ class FeedsRepository @Inject constructor(
     private val _subscriptionChanges = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
     val subscriptionChanges: SharedFlow<Unit> = _subscriptionChanges.asSharedFlow()
 
-    fun getCachedPosts(feedId: String, sort: String?, tag: String?, unreadOnly: Boolean): PostListResult? {
+    suspend fun getCachedPosts(feedId: String, sort: String?, tag: String?, unreadOnly: Boolean): PostListResult? {
+        val account = session.getBoundIdentity()
         val cached = postCache[feedId] ?: return null
+        if (cached.account != account) return null
         if (System.currentTimeMillis() - cached.timestamp > cacheMaxAge) return null
         if (cached.sort != sort || cached.tag != tag || cached.unreadOnly != unreadOnly) return null
         return cached.result
     }
 
-    fun getCachedFeedInfo(feedId: String): FeedInfoResult? {
+    suspend fun getCachedFeedInfo(feedId: String): FeedInfoResult? {
+        val account = session.getBoundIdentity()
         val cached = feedInfoCache[feedId] ?: return null
+        if (cached.account != account) return null
         if (System.currentTimeMillis() - cached.timestamp > cacheMaxAge) return null
         return cached.result
     }
@@ -199,12 +225,38 @@ class FeedsRepository @Inject constructor(
     }
 
     /**
-     * Fetch the full class-level feeds overview (`-/info`): feed list, the
-     * user's global default sort, and the server's AI availability. The
-     * feeds pinned to the home screen are brought into line with the list.
+     * Fetch the full class-level feeds overview (`-/info`): feed list with
+     * each feed's own sort, the user's global default sort, and the server's
+     * AI availability. The feeds pinned to the home screen are brought into
+     * line with the list.
+     *
+     * The drawer, the feed screen's sort and the all-feeds websocket list all
+     * ask as a feed opens, so the answer is held for [cacheMaxAge] and shared,
+     * and only for the account it was read for: signing out, or in as
+     * somebody else, reads it afresh. [fresh] reads past the held answer, for
+     * the drawer's refreshes. [current] takes only an answer that arrives
+     * after the call, for a drawer opening: one read under way as it opens is
+     * shared, and an older one held is not, so its unread counts are those of
+     * the moment.
      */
-    suspend fun getFeedsInfo(): FeedsInfoResult {
-        return try {
+    suspend fun getFeedsInfo(fresh: Boolean = false, current: Boolean = false): FeedsInfoResult {
+        val asked = SystemClock.elapsedRealtime()
+        return lock.withLock { information(fresh, if (current) asked else null) }
+    }
+
+    /** [getFeedsInfo] under its lock; [after] is the earliest arrival taken. */
+    private suspend fun information(fresh: Boolean, after: Long?): FeedsInfoResult {
+        val account = session.getBoundIdentity()
+        val held = roster
+        val usable = when {
+            fresh || held == null || held.account != account -> false
+            after != null -> held.arrived >= after
+            else -> SystemClock.elapsedRealtime() - held.read < cacheMaxAge
+        }
+        if (usable && held != null) return held.answer
+        val started = generation.get()
+        val read = SystemClock.elapsedRealtime()
+        val answer = try {
             val response = api.getInfo().unwrap()
             Shortcuts.reconcile(context, "feeds", Shortcuts.paths(response.feeds, { it.name }) { listOf(it.id, it.fingerprint) })
             FeedsInfoResult(
@@ -215,6 +267,24 @@ class FeedsRepository @Inject constructor(
         } catch (e: Exception) {
             throw e.toMochiError()
         }
+        // Kept only for the account still signed in: one that changed while
+        // it was read may have had the request sent on its own session.
+        roster = if (account != null && generation.get() == started && session.getBoundIdentity() == account) {
+            Roster(account, read, SystemClock.elapsedRealtime(), answer)
+        } else {
+            null
+        }
+        return answer
+    }
+
+    /**
+     * Drops the held class `-/info` answer, so the next [getFeedsInfo] reads
+     * it afresh: after a write that changes the feeds, their unread counts or
+     * a sort.
+     */
+    fun forget() {
+        generation.incrementAndGet()
+        roster = null
     }
 
     suspend fun createFeed(name: String, privacy: String, memories: Boolean): Feed {
@@ -222,6 +292,7 @@ class FeedsRepository @Inject constructor(
             val response = api.createFeed(
                 CreateFeedRequest(name = name, privacy = privacy, memories = memories.toString())
             ).unwrap()
+            forget()
             Feed(id = response.id, fingerprint = response.fingerprint, name = name, privacy = privacy)
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -265,6 +336,7 @@ class FeedsRepository @Inject constructor(
                     peer = peer?.takeIf { it.isNotBlank() },
                 )
             ).unwrap()
+            forget()
             _subscriptionChanges.emit(Unit)
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -276,6 +348,7 @@ class FeedsRepository @Inject constructor(
             api.unsubscribe(
                 UnsubscribeRequest(feed = feed, server = server?.takeIf { it.isNotBlank() })
             ).unwrap()
+            forget()
             _subscriptionChanges.emit(Unit)
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -342,9 +415,12 @@ class FeedsRepository @Inject constructor(
 
     suspend fun getFeedInfo(feedId: String): FeedInfoResult {
         return try {
+            val account = session.getBoundIdentity()
             val response = api.getFeedInfo(feedId).unwrap()
             val result = FeedInfoResult(feed = response.feed, permissions = response.permissions)
-            feedInfoCache[feedId] = CachedFeedInfo(result)
+            if (account != null && session.getBoundIdentity() == account) {
+                feedInfoCache[feedId] = CachedFeedInfo(account, result)
+            }
             result
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -369,6 +445,7 @@ class FeedsRepository @Inject constructor(
             getCachedPosts(feedId, sort, tag, unreadOnly)?.let { return it }
         }
         return try {
+            val account = session.getBoundIdentity()
             val response = api.getPosts(
                 feedId = feedId,
                 before = before,
@@ -384,8 +461,8 @@ class FeedsRepository @Inject constructor(
                 nextCursor = response.nextCursor,
                 permissions = response.permissions ?: Permissions()
             )
-            if (isFirstPage) {
-                postCache[feedId] = CachedPosts(result, sort, tag, unreadOnly)
+            if (isFirstPage && account != null && session.getBoundIdentity() == account) {
+                postCache[feedId] = CachedPosts(account, result, sort, tag, unreadOnly)
             }
             result
         } catch (e: Exception) {
@@ -425,6 +502,7 @@ class FeedsRepository @Inject constructor(
     suspend fun deleteFeed(feedId: String) {
         try {
             api.deleteFeed(feedId).unwrap()
+            forget()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -433,6 +511,7 @@ class FeedsRepository @Inject constructor(
     suspend fun renameFeed(feedId: String, name: String) {
         try {
             api.renameFeed(feedId, name).unwrap()
+            forget()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -441,6 +520,7 @@ class FeedsRepository @Inject constructor(
     suspend fun markAllRead(feedId: String) {
         try {
             api.markAllRead(feedId).unwrap()
+            forget()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -463,6 +543,7 @@ class FeedsRepository @Inject constructor(
         if (postIds.isEmpty()) return
         try {
             api.markPostsRead(feedId, postIds).unwrap()
+            forget()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -975,7 +1056,7 @@ class FeedsRepository @Inject constructor(
 
     suspend fun setFeedSort(feedId: String, sort: String): String {
         return try {
-            api.setFeedSort(feedId, sort).unwrap().sort
+            api.setFeedSort(feedId, sort).unwrap().sort.also { forget() }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -983,22 +1064,14 @@ class FeedsRepository @Inject constructor(
 
     suspend fun setGlobalSort(sort: String): String {
         return try {
-            api.setGlobalSort(sort).unwrap().sort
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
-
-    suspend fun getGlobalSort(): String {
-        return try {
-            api.getGlobalSortInfo().unwrap().settings.sort
+            api.setGlobalSort(sort).unwrap().sort.also { forget() }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
 
     /** Every feed the user holds marked read, for "All feeds". */
-    suspend fun markEveryFeedRead() = mapped { api.markEveryFeedRead().unwrap() }
+    suspend fun markEveryFeedRead() = mapped { api.markEveryFeedRead().unwrap().also { forget() } }
 
     // --- Other networks ---
 

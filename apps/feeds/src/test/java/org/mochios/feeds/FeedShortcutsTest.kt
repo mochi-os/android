@@ -18,6 +18,7 @@ import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.feeds.api.FeedsApi
@@ -68,7 +69,7 @@ class FeedShortcutsTest {
             .baseUrl(server.url("/feeds/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        return FeedsRepository(retrofit.create(FeedsApi::class.java), retrofit.create(MenuApi::class.java), FileStore(context), context)
+        return FeedsRepository(retrofit.create(FeedsApi::class.java), retrofit.create(MenuApi::class.java), FileStore(context), context, SessionManager(context))
     }
 
     /** The shortcuts the launcher shows greyed out. */

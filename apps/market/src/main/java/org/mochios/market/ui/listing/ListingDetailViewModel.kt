@@ -10,7 +10,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,11 +22,13 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.RecentlyViewedStore
@@ -76,6 +81,7 @@ class ListingDetailViewModel @Inject constructor(
     private val recentStore: RecentlyViewedStore,
     private val reportedStore: ReportedStore,
     @param:ApplicationContext private val context: Context,
+    private val session: SessionManager,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(ListingDetailUiState())
@@ -139,7 +145,7 @@ class ListingDetailViewModel @Inject constructor(
                 // inline, the receiver is captured before the suspend and a slow
                 // response writes back a pre-load snapshot.
                 val categories = repository.listCategories()
-                _state.value = _state.value.copy(categories = categories)
+                _state.update { state -> state.copy(categories = categories) }
             } catch (_: Exception) {
                 // Categories non-critical; category chip just hides itself.
             }
@@ -158,50 +164,66 @@ class ListingDetailViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true, error = null)
             try {
-                val resp = repository.getListing(id)
-                // The detail payload embeds only the primary photo; the full
-                // set is best-effort from `-/photos/list`.
-                val photos = runCatching {
-                    repository.listPhotos(id).sortedBy { it.rank }
-                }.getOrDefault(emptyList())
-                // Audit fetch is best-effort: regular buyers don't have read
-                // access, and a 403 must not blow up the detail render.
-                val audit = runCatching {
-                    repository.auditObject(kind = "listing", objectId = id).audit
-                }.getOrDefault(emptyList())
-                // Best-effort. `role` is the reviewer's perspective: reviews of
-                // this seller are those written by buyers.
-                val reviews = runCatching {
-                    val sellerId = resp.seller.id
-                    if (sellerId.isBlank()) {
-                        emptyList()
-                    } else {
-                        repository.accountReviews(id = sellerId, role = "buyer").reviews
+                coroutineScope {
+                    // The detail payload embeds only the primary photo, which
+                    // shows until the full set, best-effort from
+                    // `-/photos/list`, arrives; it needs only the id.
+                    val photos = async {
+                        quietly { repository.listPhotos(id).sortedBy { it.rank } }
                     }
-                }.getOrDefault(emptyList())
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    listing = resp,
-                    photos = photos,
-                    audit = audit,
-                    sellerReviews = reviews,
-                    error = null,
-                )
-                // Record the visit for the "recently viewed" rail. Best-effort —
-                // a write failure here must not surface as a load error.
-                try {
-                    recentStore.push(id)
-                } catch (_: Exception) {
-                    // ignore
+                    val resp = repository.getListing(id)
+                    _state.update { state -> state.copy(isLoading = false, listing = resp, error = null) }
+                    // Each part lands on the state as it is then: awaited first,
+                    // so a later answer never puts back an earlier copy.
+                    launch {
+                        val list = photos.await().orEmpty()
+                        _state.update { state -> state.copy(photos = list) }
+                    }
+                    // The comptroller shows the timeline to the seller, to a buyer
+                    // with an order on the listing and to staff, and refuses
+                    // anyone else; it is asked for only by a seller or buyer,
+                    // as staff carry no sign of it here. Best-effort, as a
+                    // refusal must not blow up the detail render.
+                    launch {
+                        val viewer = session.getBoundIdentity()
+                        val party = viewer != null && (viewer == resp.listing.seller || resp.myOrder != null)
+                        val audit = if (party) quietly { repository.auditObject(kind = "listing", objectId = id).audit } else null
+                        _state.update { state -> state.copy(audit = audit.orEmpty()) }
+                    }
+                    // Best-effort. `role` is the reviewer's perspective: reviews of
+                    // this seller are those written by buyers.
+                    launch {
+                        val sellerId = resp.seller.id
+                        val reviews = if (sellerId.isBlank()) null else quietly {
+                            repository.accountReviews(id = sellerId, role = "buyer").reviews
+                        }
+                        _state.update { state -> state.copy(sellerReviews = reviews.orEmpty()) }
+                    }
+                    // Record the visit for the "recently viewed" rail. Best-effort —
+                    // a write failure here must not surface as a load error.
+                    try {
+                        recentStore.push(id)
+                    } catch (_: Exception) {
+                        // ignore
+                    }
+                    savedRepository.refresh()
                 }
-                savedRepository.refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
+                _state.update { state -> state.copy(isLoading = false, error = e.toMochiError()) }
             }
         }
+    }
+
+    /** [block]'s answer, or null when it fails: for the parts of the page that
+     *  may be missing without failing it. */
+    private suspend fun <T> quietly(block: suspend () -> T): T? = try {
+        block()
+    } catch (e: CancellationException) {
+        throw e
+    } catch (_: Exception) {
+        null
     }
 
     fun toggleSave() {

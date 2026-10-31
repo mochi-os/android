@@ -108,7 +108,7 @@ class ForumsNetworksViewModelsTest {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ForumsApi::class.java)
-        repository = ForumsRepository(api, FileStore(context), context)
+        repository = ForumsRepository(api, FileStore(context), context, SessionManager(context))
         session = SessionManager(context)
         val base = server.url("/").toString().trimEnd('/')
         runBlocking { session.setServerUrl(base) }
@@ -209,7 +209,7 @@ class ForumsNetworksViewModelsTest {
 
     @Test
     fun `a community read through a linked account is blocked by its address, and the screen leaves it`() {
-        val model = ForumViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository, SavedRepository(api, Gson()), socket, session)
+        val model = ForumViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository, SavedRepository(api, Gson(), session), socket, session)
         val events = mutableListOf<ForumEvent>()
         val job = CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { events.add(it) } }
         until("the forum") { model.uiState.value.forum.address.isNotEmpty() }

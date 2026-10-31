@@ -14,6 +14,8 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -236,8 +238,14 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val view = repository.viewChat(chatId)
-                val msgs = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE)
+                // The messages need only the id, so they are asked for beside
+                // the chat. The chat is awaited first: one gone or closed to the
+                // user reports that, whatever the messages' answer.
+                val (view, msgs) = coroutineScope {
+                    val chat = async { repository.viewChat(chatId) }
+                    val messages = async { attempt { repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE) } }
+                    chat.await() to messages.await().getOrThrow()
+                }
                 _uiState.value = _uiState.value.copy(
                     chat = view.chat,
                     identity = view.identity,
@@ -953,4 +961,13 @@ internal fun followsNewest(shown: List<ChatMessage>, current: List<ChatMessage>)
     val previous = shown.lastOrNull()?.id ?: return true
     if (newest == previous) return false
     return current.any { message -> message.id == previous }
+}
+
+/** [block]'s answer as a [Result], except a cancellation, which still cancels. */
+private suspend fun <T> attempt(block: suspend () -> T): Result<T> = try {
+    Result.success(block())
+} catch (e: CancellationException) {
+    throw e
+} catch (e: Exception) {
+    Result.failure(e)
 }

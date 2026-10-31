@@ -632,11 +632,6 @@ interface FeedsApi {
         @Field("sort") sort: String
     ): Response<ApiResponse<SortResponse>>
 
-    // No dedicated /get endpoint — global sort is returned by `-/info` in
-    // settings.sort. Reuse that route with a slim response type.
-    @GET("-/info")
-    suspend fun getGlobalSortInfo(): Response<ApiResponse<GlobalSortInfoResponse>>
-
     // Every feed the user holds marked read at once, for "All feeds".
     @POST("-/read-all")
     suspend fun markEveryFeedRead(): Response<ApiResponse<Map<String, Any>>>
@@ -808,8 +803,4 @@ data class SortResponse(
 
 data class FeedSettings(
     val sort: String = ""
-)
-
-data class GlobalSortInfoResponse(
-    val settings: FeedSettings = FeedSettings()
 )

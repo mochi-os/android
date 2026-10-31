@@ -16,6 +16,7 @@ import org.junit.Assert.assertNull
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.forums.api.ForumsApi
 import org.mochios.forums.model.ModerationSettings
@@ -65,7 +66,7 @@ class ModerationFlowTest {
             .baseUrl(server.url("/forums/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        repository = ForumsRepository(retrofit.create(ForumsApi::class.java), FileStore(context), context)
+        repository = ForumsRepository(retrofit.create(ForumsApi::class.java), FileStore(context), context, SessionManager(context))
     }
 
     @After

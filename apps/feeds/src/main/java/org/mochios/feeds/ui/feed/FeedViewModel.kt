@@ -14,6 +14,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -40,6 +42,7 @@ import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.repository.FeedsInfoResult
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.PostListResult
 import org.mochios.feeds.repository.SavedRepository
@@ -414,24 +417,54 @@ class FeedViewModel @Inject constructor(
 
             _isLoading.value = true
             try {
-                val info = repository.getFeedInfo(feedId)
-                _feedInfo.value = info.feed
-                _permissions.value = info.permissions
-                // Pick up per-feed sort override (or fall back to global
-                // default) before fetching posts so the first query honors
-                // the user's saved preference.
-                applyFeedSort(info.feed)
-
-                val result = repository.getPosts(
-                    feedId = feedId,
-                    sort = _currentSort.value,
-                    tag = _currentTag.value,
-                    unreadOnly = _unreadOnly.value
-                )
-                _posts.value = result.posts
-                _hasMore.value = result.hasMore
-                nextCursor = result.nextCursor
-
+                coroutineScope {
+                    // The feed's information is asked for beside its posts and
+                    // shows as it lands. It is awaited before the posts show, so
+                    // a feed that is gone or closed reports that, whatever the
+                    // posts said.
+                    val information = async {
+                        repository.getFeedInfo(feedId).also { info ->
+                            _feedInfo.value = info.feed
+                            _permissions.value = info.permissions
+                        }
+                    }
+                    // Pick up the per-feed sort override (or fall back to the
+                    // global default) before fetching posts so the first query
+                    // honours the user's saved preference. Both come from the
+                    // class `-/info` answer the drawer shares; a feed it does not
+                    // hold says its own sort in its information.
+                    val start = _currentSort.value
+                    val roster = roster()
+                    val held = roster?.feeds?.firstOrNull { feed -> feed.id == feedId || feed.fingerprint == feedId }
+                    val saved = preferred(held?.sort ?: information.await().feed.sort, roster)
+                    // A sort the reader picks while this is under way is theirs:
+                    // its own reload lists the feed in it, and nothing here
+                    // changes it or lists over it.
+                    val picked = _currentSort.value != start
+                    if (saved != null && !picked) _currentSort.value = saved
+                    var asked = _currentSort.value
+                    var result = try {
+                        fetchPosts()
+                    } catch (e: CancellationException) {
+                        throw e
+                    } catch (e: Exception) {
+                        information.await()
+                        throw e
+                    }
+                    // The information has the feed's own sort as it is now: one
+                    // saved elsewhere since the roster was read lists again in it.
+                    val sort = preferred(information.await().feed.sort, roster)
+                    if (!picked && sort != null && sort != asked && _currentSort.value == asked) {
+                        _currentSort.value = sort
+                        asked = sort
+                        result = fetchPosts(forceRefresh = true)
+                    }
+                    if (_currentSort.value == asked) {
+                        _posts.value = result.posts
+                        _hasMore.value = result.hasMore
+                        nextCursor = result.nextCursor
+                    }
+                }
             } catch (e: Exception) {
                 val err = e.toMochiError()
                 _error.value = err
@@ -442,15 +475,24 @@ class FeedViewModel @Inject constructor(
         }
     }
 
+    /** The class `-/info` answer the drawer shares, or null when it cannot be
+     *  read: a missing default sort is not worth failing the feed over. */
+    private suspend fun roster(): FeedsInfoResult? = try {
+        repository.getFeedsInfo()
+    } catch (e: CancellationException) {
+        throw e
+    } catch (_: Exception) {
+        null
+    }
+
+    /** The sort saved for a feed whose own is [own]: that, else the account's
+     *  default in [roster], else null to keep the one in use. */
+    private fun preferred(own: String, roster: FeedsInfoResult?): String? =
+        own.ifEmpty { roster?.sort.orEmpty() }.ifEmpty { null }
+
     private suspend fun loadGlobalSort() {
-        try {
-            val sort = repository.getGlobalSort()
-            if (sort.isNotEmpty()) {
-                _currentSort.value = sort
-            }
-        } catch (_: Exception) {
-            // Non-critical — keep the existing default.
-        }
+        // Non-critical: an unreadable default keeps the existing one.
+        preferred("", roster())?.let { sort -> _currentSort.value = sort }
     }
 
     // Apply a feed's stored sort. Per-feed overrides win; an empty value
@@ -1088,8 +1130,16 @@ class FeedViewModel @Inject constructor(
         // Server event types are slash-namespaced (feeds.star commit hook
         // + handlers); the old underscore names never matched anything.
         when (event.type) {
-            "feed/removed" -> _gone.value = R.string.feeds_removed_from_feed
-            "feed/deleted" -> _gone.value = R.string.feeds_feed_deleted
+            // The feed is no longer the user's: the held class `-/info` answer
+            // still lists it.
+            "feed/removed" -> {
+                repository.forget()
+                _gone.value = R.string.feeds_removed_from_feed
+            }
+            "feed/deleted" -> {
+                repository.forget()
+                _gone.value = R.string.feeds_feed_deleted
+            }
             "post/create" -> newPosts.record(event.post) { id ->
                 _posts.value.any { it.id == id }
             }
@@ -1188,6 +1238,9 @@ class FeedViewModel @Inject constructor(
             return
         }
         if (!isAllFeeds && feedId.isBlank()) return
+        // A sort saved on another device since the class `-/info` answer was
+        // read must show, here and in the next feed opened.
+        repository.forget()
         viewModelScope.launch {
             // A sort saved elsewhere in the meantime, this feed's own or the
             // account's default behind it, lists the posts afresh in that order.

@@ -12,6 +12,8 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -37,6 +39,7 @@ import org.mochios.projects.ui.board.boardOptions
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.lib.CollapsedColumnsStore
 import org.mochios.projects.model.FieldOption
+import org.mochios.projects.model.Person
 import org.mochios.projects.model.ProjectClass
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.ProjectField
@@ -214,10 +217,7 @@ class ProjectViewModel @Inject constructor(
 
             _uiState.value = _uiState.value.copy(isLoading = true)
             try {
-                val details = repository.getProjectInfo(projectId)
-                val objects = repository.getObjects(projectId)
-                val people = runCatching { repository.getPeople(projectId) }
-                    .getOrDefault(_uiState.value.people)
+                val (details, objects, people) = fetch()
                 val watched = repository.getWatched(projectId)
                 val activeViewId = _uiState.value.activeViewId
                     ?: rememberedViewId(details.views)
@@ -226,7 +226,7 @@ class ProjectViewModel @Inject constructor(
                     projectDetails = details,
                     objects = objects,
                     watched = watched,
-                    people = people,
+                    people = people ?: _uiState.value.people,
                     activeViewId = activeViewId,
                     isLoading = false
                 )
@@ -237,6 +237,19 @@ class ProjectViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * The project's information, its items and its people, asked for at once.
+     * The information is awaited first: a project gone or closed to the user
+     * reports that, whatever the items' answer, which is then discarded. The
+     * people are best-effort, null when they cannot be read.
+     */
+    private suspend fun fetch(): Triple<ProjectDetails, List<ProjectObject>, List<Person>?> = coroutineScope {
+        val details = async { repository.getProjectInfo(projectId) }
+        val objects = async { attempt { repository.getObjects(projectId) } }
+        val people = async { attempt { repository.getPeople(projectId) } }
+        Triple(details.await(), objects.await().getOrThrow(), people.await().getOrNull())
     }
 
     /**
@@ -254,16 +267,13 @@ class ProjectViewModel @Inject constructor(
 
     private suspend fun refreshSilently() {
         try {
-            val details = repository.getProjectInfo(projectId)
-            val objects = repository.getObjects(projectId)
-            val people = runCatching { repository.getPeople(projectId) }
-                .getOrDefault(_uiState.value.people)
+            val (details, objects, people) = fetch()
             val watched = repository.getWatched(projectId)
             _uiState.value = _uiState.value.copy(
                 projectDetails = details,
                 objects = objects,
                 watched = watched,
-                people = people
+                people = people ?: _uiState.value.people
             )
         } catch (e: CancellationException) {
             throw e
@@ -276,16 +286,13 @@ class ProjectViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val details = repository.getProjectInfo(projectId)
-                val objects = repository.getObjects(projectId)
-                val people = runCatching { repository.getPeople(projectId) }
-                    .getOrDefault(_uiState.value.people)
+                val (details, objects, people) = fetch()
                 val watched = repository.getWatched(projectId)
                 _uiState.value = _uiState.value.copy(
                     projectDetails = details,
                     objects = objects,
                     watched = watched,
-                    people = people,
+                    people = people ?: _uiState.value.people,
                     isRefreshing = false,
                     error = null
                 )
@@ -975,4 +982,13 @@ class ProjectViewModel @Inject constructor(
     private companion object {
         const val MAX_WARM_ROUNDS = 60
     }
+}
+
+/** [block]'s answer as a [Result], except a cancellation, which still cancels. */
+private suspend fun <T> attempt(block: suspend () -> T): Result<T> = try {
+    Result.success(block())
+} catch (e: CancellationException) {
+    throw e
+} catch (e: Exception) {
+    Result.failure(e)
 }

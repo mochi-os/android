@@ -142,7 +142,7 @@ class NetworksViewModelsTest {
             .baseUrl(server.url("/feeds/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        repository = FeedsRepository(retrofit.create(FeedsApi::class.java), retrofit.create(MenuApi::class.java), FileStore(context), context)
+        repository = FeedsRepository(retrofit.create(FeedsApi::class.java), retrofit.create(MenuApi::class.java), FileStore(context), context, SessionManager(context))
         session = SessionManager(context)
         val base = server.url("/").toString().trimEnd('/')
         runBlocking { session.setServerUrl(base) }
@@ -233,7 +233,7 @@ class NetworksViewModelsTest {
     fun `every feed is marked read at once from All feeds`() {
         val model = FeedViewModel(
             SavedStateHandle(mapOf("feedId" to "__all__")),
-            repository, SavedRepository(retrofitApi(), Gson()), socket, session, context,
+            repository, SavedRepository(retrofitApi(), Gson(), session), socket, session, context,
         )
         until("the posts") { model.posts.value.isNotEmpty() }
         model.markAllRead()
@@ -243,7 +243,7 @@ class NetworksViewModelsTest {
 
     @Test
     fun `a feed card pins, boosts and votes on its post`() {
-        val model = FeedViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, SavedRepository(retrofitApi(), Gson()), socket, session, context)
+        val model = FeedViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, SavedRepository(retrofitApi(), Gson(), session), socket, session, context)
         until("the posts") { model.posts.value.isNotEmpty() }
         model.loadHostedIfNeeded(model.posts.value)
         until("the hosted accounts") { model.hosted.value.isNotEmpty() }

@@ -19,6 +19,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.forums.api.ForumsApi
@@ -68,7 +69,7 @@ class ForumShortcutsTest {
             .baseUrl(server.url("/forums/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        return ForumsRepository(retrofit.create(ForumsApi::class.java), FileStore(context), context)
+        return ForumsRepository(retrofit.create(ForumsApi::class.java), FileStore(context), context, SessionManager(context))
     }
 
     /** The shortcuts the launcher shows greyed out. */

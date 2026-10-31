@@ -140,8 +140,8 @@ class ForumRefreshTest {
     /** The screen for [forum], as it opens. */
     private fun build(forum: String) = ForumViewModel(
         SavedStateHandle(mapOf("forumId" to forum)),
-        ForumsRepository(api, FileStore(context), context),
-        SavedRepository(api, Gson()),
+        ForumsRepository(api, FileStore(context), context, session),
+        SavedRepository(api, Gson(), session),
         socket,
         session,
     )

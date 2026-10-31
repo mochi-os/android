@@ -6,15 +6,19 @@
 package org.mochios.forums.repository
 
 import android.content.Context
+import android.os.SystemClock
 import android.util.Log
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapRaw
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
@@ -51,6 +55,7 @@ import org.mochios.forums.model.DirectoryEntry
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ModerationSettings
 import java.io.File
+import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -59,6 +64,7 @@ class ForumsRepository @Inject constructor(
     private val api: ForumsApi,
     fileStore: FileStore,
     @param:ApplicationContext private val context: Context,
+    private val session: SessionManager,
 ) : FileRepository(fileStore) {
     private val text = "text/plain".toMediaTypeOrNull()
 
@@ -71,14 +77,59 @@ class ForumsRepository @Inject constructor(
     private val _postCreated = MutableSharedFlow<String>(extraBufferCapacity = 1)
     val postCreated: SharedFlow<String> = _postCreated.asSharedFlow()
 
+    /** The last `-/information` answer, the account it was read for and when. */
+    private class Roster(val account: String, val read: Long, val answer: ForumListResponse)
+
+    /** One `-/information` read at a time: a caller arriving while one is under
+     *  way waits for it and takes its answer. */
+    private val lock = Mutex()
+
+    @Volatile private var roster: Roster? = null
+
+    /** Moved on by [forget], so a read already under way keeps nothing. */
+    private val generation = AtomicInteger()
+
     /** The user's forums, which those pinned to the home screen are brought into line with. */
     suspend fun listForums(sort: String? = null): ForumListResponse =
         api.listForums(sort).unwrap().also(::pinned)
 
-    /** The forum roster plus the account's default sort, without the posts
-     *  `-/list` would carry. */
-    suspend fun forumsInformation(): ForumListResponse =
-        api.getForumsInfo().unwrap().also(::pinned)
+    /**
+     * The forum roster plus the account's default sort and each forum's own,
+     * without the posts `-/list` would carry. The drawer and the forum
+     * screen's sort both ask as a forum opens, so the answer is held for
+     * [LIFETIME] and shared, and only for the account it was read for:
+     * signing out, or in as somebody else, reads it afresh.
+     */
+    suspend fun forumsInformation(): ForumListResponse = lock.withLock {
+        val account = session.getBoundIdentity()
+        val held = roster
+        if (held != null && held.account == account &&
+            SystemClock.elapsedRealtime() - held.read < LIFETIME
+        ) {
+            return@withLock held.answer
+        }
+        val started = generation.get()
+        val read = SystemClock.elapsedRealtime()
+        val answer = api.getForumsInfo().unwrap().also(::pinned)
+        // Kept only for the account still signed in: one that changed while
+        // it was read may have had the request sent on its own session.
+        roster = if (account != null && generation.get() == started && session.getBoundIdentity() == account) {
+            Roster(account, read, answer)
+        } else {
+            null
+        }
+        answer
+    }
+
+    /**
+     * Drops the held roster, so the next [forumsInformation] reads it afresh:
+     * after a write that changes it, and when the forum screen comes back,
+     * where a sort saved on another device must show.
+     */
+    fun forget() {
+        generation.incrementAndGet()
+        roster = null
+    }
 
     /** Brings the forums pinned to the home screen into line with a roster just read. */
     private fun pinned(response: ForumListResponse) {
@@ -94,6 +145,7 @@ class ForumsRepository @Inject constructor(
 
     suspend fun createForum(name: String, privacy: String? = null): String {
         val r = api.createForum(name, privacy).unwrap()
+        forget()
         return r.fingerprint.ifEmpty { r.id }
     }
 
@@ -118,19 +170,23 @@ class ForumsRepository @Inject constructor(
         val r = api.subscribe(
             forumId, SubscribeRequest(forum = forumId, server = server, peer = peer),
         ).unwrap()
+        forget()
         return r.fingerprint.ifEmpty { r.id.ifEmpty { forumId } }
     }
 
     suspend fun unsubscribe(forumId: String, server: String? = null) {
         api.unsubscribe(forumId, UnsubscribeRequest(forum = forumId, server = server)).unwrap()
+        forget()
     }
 
     suspend fun deleteForum(forumId: String) {
         api.deleteForum(forumId).unwrap()
+        forget()
     }
 
     suspend fun renameForum(forumId: String, name: String) {
         api.renameForum(forumId, forumId, name).unwrap()
+        forget()
     }
 
     suspend fun viewPost(forumId: String, postId: String): ViewPostResponse =
@@ -371,10 +427,12 @@ class ForumsRepository @Inject constructor(
 
     suspend fun setForumSort(forumId: String, sort: String) {
         api.setForumSort(forumId, sort).unwrap()
+        forget()
     }
 
     suspend fun setDefaultSort(sort: String) {
         api.setDefaultSort(sort).unwrap()
+        forget()
     }
 
     suspend fun moderationQueue(forumId: String): ModerationQueueResponse =
@@ -518,17 +576,20 @@ class ForumsRepository @Inject constructor(
 
     suspend fun joinCommunity(address: String, account: String): CommunityJoined {
         val joined = api.joinCommunity(address, account).unwrap()
+        forget()
         _postCreated.tryEmit(joined.id)
         return joined
     }
 
-    suspend fun addCommunities(account: String): CommunitiesAdded = api.addCommunities(account).unwrapRaw()
+    suspend fun addCommunities(account: String): CommunitiesAdded = api.addCommunities(account).unwrapRaw().also { forget() }
 
-    suspend fun importCommunities(account: String): CommunitiesImported = api.importCommunities(account).unwrapRaw()
+    suspend fun importCommunities(account: String): CommunitiesImported = api.importCommunities(account).unwrapRaw().also { forget() }
 
-    /** Block a person by their address, a community by its address or a server by its domain. */
+    /** Block a person by their address, a community by its address or a server by its domain.
+     *  A joined community blocked is left, so it drops out of the roster. */
     suspend fun addBlock(target: String) {
         api.addBlock(target).unwrap()
+        forget()
     }
 
     suspend fun getCommunity(forumId: String): CommunityState = api.getCommunity(forumId).unwrap()
@@ -540,6 +601,11 @@ class ForumsRepository @Inject constructor(
 
     suspend fun setSensitive(forumId: String, sensitive: Boolean): Boolean =
         api.setSensitive(forumId, forumId, if (sensitive) "1" else "0").unwrap().sensitive != 0
+
+    private companion object {
+        /** How long a roster read from `-/information` is shared before it is read again. */
+        const val LIFETIME = 60_000L
+    }
 }
 
 /**

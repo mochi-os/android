@@ -12,6 +12,8 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -40,6 +42,7 @@ import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.FieldOption
+import org.mochios.crm.model.Person
 import org.mochios.crm.repository.CrmsRepository
 import org.mochios.crm.util.csvCell
 import org.mochios.crm.util.textCompare
@@ -153,11 +156,8 @@ class CrmViewModel @Inject constructor(
 
             _uiState.value = _uiState.value.copy(isLoading = true)
             try {
-                val details = repository.getCrmInfo(crmId)
-                val objects = repository.getObjects(crmId)
+                val (details, objects, people) = fetch()
                 val watched = repository.getWatched(crmId)
-                val people = runCatching { repository.getPeople(crmId) }
-                    .getOrDefault(_uiState.value.people)
                 val activeViewId = _uiState.value.activeViewId
                     ?: rememberedViewId(details.views)
                     ?: defaultViewId(details, objects)
@@ -165,7 +165,7 @@ class CrmViewModel @Inject constructor(
                     crmDetails = details,
                     objects = objects,
                     watched = watched,
-                    people = people,
+                    people = people ?: _uiState.value.people,
                     activeViewId = activeViewId,
                     isLoading = false
                 )
@@ -176,6 +176,19 @@ class CrmViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * The CRM's information, its items and its people, asked for at once. The
+     * information is awaited first: a CRM gone or closed to the user reports
+     * that, whatever the items' answer, which is then discarded. The people
+     * are best-effort, null when they cannot be read.
+     */
+    private suspend fun fetch(): Triple<CrmDetails, List<CrmObject>, List<Person>?> = coroutineScope {
+        val details = async { repository.getCrmInfo(crmId) }
+        val objects = async { attempt { repository.getObjects(crmId) } }
+        val people = async { attempt { repository.getPeople(crmId) } }
+        Triple(details.await(), objects.await().getOrThrow(), people.await().getOrNull())
     }
 
     /**
@@ -193,16 +206,13 @@ class CrmViewModel @Inject constructor(
 
     private suspend fun refreshSilently() {
         try {
-            val details = repository.getCrmInfo(crmId)
-            val objects = repository.getObjects(crmId)
+            val (details, objects, people) = fetch()
             val watched = repository.getWatched(crmId)
-            val people = runCatching { repository.getPeople(crmId) }
-                .getOrDefault(_uiState.value.people)
             _uiState.value = _uiState.value.copy(
                 crmDetails = details,
                 objects = objects,
                 watched = watched,
-                people = people
+                people = people ?: _uiState.value.people
             )
         } catch (e: CancellationException) {
             throw e
@@ -215,16 +225,13 @@ class CrmViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val details = repository.getCrmInfo(crmId)
-                val objects = repository.getObjects(crmId)
+                val (details, objects, people) = fetch()
                 val watched = repository.getWatched(crmId)
-                val people = runCatching { repository.getPeople(crmId) }
-                    .getOrDefault(_uiState.value.people)
                 _uiState.value = _uiState.value.copy(
                     crmDetails = details,
                     objects = objects,
                     watched = watched,
-                    people = people,
+                    people = people ?: _uiState.value.people,
                     isRefreshing = false,
                     error = null
                 )
@@ -1092,4 +1099,13 @@ class CrmViewModel @Inject constructor(
         /** Cap on export warm-up rounds, so a stuck stage can't spin forever. */
         const val MAX_WARM_ROUNDS = 60
     }
+}
+
+/** [block]'s answer as a [Result], except a cancellation, which still cancels. */
+private suspend fun <T> attempt(block: suspend () -> T): Result<T> = try {
+    Result.success(block())
+} catch (e: CancellationException) {
+    throw e
+} catch (e: Exception) {
+    Result.failure(e)
 }

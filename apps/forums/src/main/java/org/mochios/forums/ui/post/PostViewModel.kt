@@ -124,6 +124,9 @@ class PostViewModel @Inject constructor(
             forumKey,
             app = "forums",
         ) { event ->
+            // The forum was left, deleted or renamed: the held roster no longer
+            // says so, and the drawer reads it next.
+            if (event.type.orEmpty().startsWith("forum/")) repository.forget()
             // The owner removed this user from the forum, or deleted it. The
             // local replica is already purged, so a reload would only fail.
             if (event.type == "forum/removed" || event.type == "forum/deleted") {

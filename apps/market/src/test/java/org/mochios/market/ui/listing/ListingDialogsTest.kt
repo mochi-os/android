@@ -28,6 +28,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
 import org.mochios.market.R
@@ -117,6 +118,7 @@ class ListingDialogsTest {
             RecentlyViewedStore(context),
             ReportedStore(context),
             context,
+            SessionManager(context),
         )
         model.load("l1")
         settle { model.state.value.listing != null && !model.state.value.isLoading }

@@ -93,13 +93,16 @@ class FeedListViewModel @Inject constructor(
         }
     }
 
+    /** The drawer's feeds, with unread counts as they are now: a class
+     *  `-/info` read already under way, the feed screen's sort lookup as it
+     *  opens, is shared, and an older answer held is not. */
     fun loadFeeds() {
         feedsJob?.cancel()
         feedsJob = viewModelScope.launch {
             _isLoading.value = true
             _error.value = null
             try {
-                val info = repository.getFeedsInfo()
+                val info = repository.getFeedsInfo(current = true)
                 val feedList = info.feeds
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
@@ -136,7 +139,7 @@ class FeedListViewModel @Inject constructor(
         feedsJob = viewModelScope.launch {
             _isRefreshing.value = true
             try {
-                val info = repository.getFeedsInfo()
+                val info = repository.getFeedsInfo(fresh = true)
                 val feedList = info.feeds
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
@@ -198,7 +201,8 @@ class FeedListViewModel @Inject constructor(
 
     private suspend fun refreshFeedSilently() {
         try {
-            val info = repository.getFeedsInfo()
+            // Past the held answer: a frame means the unread counts moved.
+            val info = repository.getFeedsInfo(fresh = true)
             val feedList = info.feeds
                 .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
             _feeds.value = feedList

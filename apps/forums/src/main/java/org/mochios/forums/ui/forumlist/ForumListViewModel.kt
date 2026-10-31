@@ -41,11 +41,14 @@ class ForumListViewModel @Inject constructor(
         load()
     }
 
+    /** The drawer's roster: `-/information` lists every forum without the
+     *  posts `-/list` carries, and the forum screen opening beside it shares
+     *  the one answer. */
     fun load() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val r = repository.listForums()
+                val r = repository.forumsInformation()
                 val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
                     forums = sorted, isLoading = false, defaultSort = r.settings.sort,
@@ -60,7 +63,8 @@ class ForumListViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val r = repository.listForums()
+                repository.forget()
+                val r = repository.forumsInformation()
                 val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
                     forums = sorted, isRefreshing = false, error = null,
