@@ -203,10 +203,10 @@ class NetworksScreenTest {
         val switch = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice")).getBoundsInRoot()
         val status = rule.onNodeWithText(text(R.string.networks_no_recovery)).getBoundsInRoot()
         val menu = rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).getBoundsInRoot()
-        // The status sits under the row's address, and the menu beside the row's switch.
+        // The status sits under the row's address, and the menu after the row's switch.
         assertTrue(status.top >= address.bottom && status.top <= switch.bottom + 24.dp)
         assertTrue(((menu.top + menu.bottom) / 2 - (switch.top + switch.bottom) / 2).value in -1f..1f)
-        assertTrue(menu.right <= switch.left)
+        assertTrue(switch.right <= menu.left)
         rule.onNodeWithText(text(R.string.networks_linked_accounts)).assertDoesNotExist()
         rule.onNodeWithText(text(R.string.networks_communities)).assertDoesNotExist()
 
@@ -217,6 +217,36 @@ class NetworksScreenTest {
         rule.onNodeWithText(text(R.string.networks_remove)).assertDoesNotExist()
         rule.onNodeWithText(text(R.string.networks_keys)).performClick()
         assertEquals(listOf("keys:b1"), acted)
+    }
+
+    @Test
+    fun `the switches line up whether or not a row has a menu, and while its account is busy`() {
+        val bluesky = NetworkAccount(id = "b1", type = "bluesky", hosted = true, identifier = "alice.a.example")
+        var busy by mutableStateOf<String?>(null)
+        rule.setContent {
+            NetworksContent(
+                data = base.copy(accounts = listOf(bluesky)),
+                busy = busy,
+                check = { name, domain -> Availability(available = true, name = name, domain = domain) },
+                onReserve = { _, _, _ -> },
+                onLink = {},
+                onToggle = { _, _, _ -> },
+                onAddName = {},
+                onArrive = {},
+                onRelease = {},
+                actions = AccountActions(),
+                onBlock = { _, _ -> },
+                onUnblock = {},
+                onUnmute = {},
+            )
+        }
+        val on = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice"))
+        val off = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "ActivityPub", "alice"))
+        assertEquals(on.getBoundsInRoot().right, off.getBoundsInRoot().right)
+        busy = "b1"
+        rule.waitForIdle()
+        rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).assertDoesNotExist()
+        assertEquals(off.getBoundsInRoot().right, on.getBoundsInRoot().right)
     }
 
     @Test

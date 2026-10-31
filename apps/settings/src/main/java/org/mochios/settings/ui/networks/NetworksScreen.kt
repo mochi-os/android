@@ -514,15 +514,18 @@ internal fun HandleCard(
                             )
                             if (account != null) AccountStatusLine(account, feeds)
                         }
-                        if (account != null) {
-                            AccountMenuButton(account = account, busy = busy == account.id, removable = false, actions = actions)
-                        }
                         Switch(
                             checked = account != null,
                             enabled = busy != "${row.name}/$type",
                             onCheckedChange = { onToggle(row, type, account) },
                             modifier = Modifier.semantics { contentDescription = switchLabel },
                         )
+                        if (account != null) {
+                            AccountMenuButton(account = account, busy = busy == account.id, removable = false, actions = actions)
+                        } else {
+                            // The menu's width, so the switches line up
+                            Spacer(Modifier.size(48.dp))
+                        }
                     }
                 }
             }
@@ -581,7 +584,7 @@ private fun AccountMenuButton(account: NetworkAccount, busy: Boolean, removable:
     var menu by remember { mutableStateOf(false) }
     Box {
         if (busy) {
-            CircularProgressIndicator(modifier = Modifier.padding(12.dp).size(20.dp), strokeWidth = 2.dp)
+            CircularProgressIndicator(modifier = Modifier.padding(14.dp).size(20.dp), strokeWidth = 2.dp)
         } else {
             MochiIconButton(onClick = { menu = true }) {
                 Icon(Icons.Default.MoreHoriz, contentDescription = stringResource(R.string.networks_account_actions))
