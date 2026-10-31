@@ -432,4 +432,5 @@
         <item quantity="many">أُعيد نشره %s مرات</item>
         <item quantity="other">أُعيد نشره %s مرات</item>
     </plurals>
+    <string name="feeds_also_post_to">انشر أيضًا على</string>
 </resources>

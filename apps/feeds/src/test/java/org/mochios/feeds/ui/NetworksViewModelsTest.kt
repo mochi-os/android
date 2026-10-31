@@ -288,9 +288,9 @@ class NetworksViewModelsTest {
         rule.waitForIdle()
         // Where each sits in the form, scrolled out of view or not.
         val top = { text: String -> rule.onNodeWithText(text).fetchSemanticsNode().positionInRoot.y }
-        val publish = top("Publish to")
+        val publish = top("Also post to")
         for (above in listOf("Post content", "Poll")) {
-            assertTrue("Publish to, at $publish, sits below $above, at ${top(above)}", publish > top(above))
+            assertTrue("Also post to, at $publish, sits below $above, at ${top(above)}", publish > top(above))
         }
     }
 

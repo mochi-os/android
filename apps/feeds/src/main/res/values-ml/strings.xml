@@ -364,4 +364,5 @@
         <item quantity="one">%s തവണ ബൂസ്റ്റ് ചെയ്തു</item>
         <item quantity="other">%s തവണ ബൂസ്റ്റ് ചെയ്തു</item>
     </plurals>
+    <string name="feeds_also_post_to">ഇവിടെയും പ്രസിദ്ധീകരിക്കുക</string>
 </resources>

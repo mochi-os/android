@@ -364,4 +364,5 @@
         <item quantity="one">Ikhuthazwe izihlandlo ezi-%s</item>
         <item quantity="other">Ikhuthazwe izihlandlo ezi-%s</item>
     </plurals>
+    <string name="feeds_also_post_to">Papasha naku</string>
 </resources>

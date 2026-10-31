@@ -364,4 +364,5 @@
         <item quantity="one">%s बेर बूस्ट भइल</item>
         <item quantity="other">%s बेर बूस्ट भइल</item>
     </plurals>
+    <string name="feeds_also_post_to">एहू पर प्रकाशित करीं</string>
 </resources>

@@ -400,4 +400,5 @@
         <item quantity="few">Air a bhrosnachadh %s tursan</item>
         <item quantity="other">Air a bhrosnachadh %s turas</item>
     </plurals>
+    <string name="feeds_also_post_to">Foillsich cuideachd gu</string>
 </resources>

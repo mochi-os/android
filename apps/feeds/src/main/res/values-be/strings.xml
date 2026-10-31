@@ -400,4 +400,5 @@
         <item quantity="many">Пашыраны %s разоў</item>
         <item quantity="other">Пашыраны %s разу</item>
     </plurals>
+    <string name="feeds_also_post_to">Таксама публікаваць у</string>
 </resources>

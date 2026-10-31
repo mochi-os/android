@@ -364,4 +364,5 @@
         <item quantity="one">%s సార్లు బూస్ట్ చేయబడింది</item>
         <item quantity="other">%s సార్లు బూస్ట్ చేయబడింది</item>
     </plurals>
+    <string name="feeds_also_post_to">ఇక్కడ కూడా ప్రచురించు</string>
 </resources>

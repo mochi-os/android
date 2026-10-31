@@ -366,4 +366,5 @@
         <item quantity="one">%s جار بڵاوکراوەتەوە</item>
         <item quantity="other">%s جار بڵاوکراوەتەوە</item>
     </plurals>
+    <string name="feeds_also_post_to">هەروەها بڵاوبکەرەوە بۆ</string>
 </resources>

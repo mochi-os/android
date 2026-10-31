@@ -364,4 +364,5 @@
         <item quantity="one">Споделено %s пати</item>
         <item quantity="other">Споделено %s пати</item>
     </plurals>
+    <string name="feeds_also_post_to">Објави и на</string>
 </resources>

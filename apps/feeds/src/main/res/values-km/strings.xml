@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">បានចែករំលែក %s ដង</item>
     </plurals>
+    <string name="feeds_also_post_to">បោះផ្សាយទៅផងដែរ</string>
 </resources>

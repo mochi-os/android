@@ -364,4 +364,5 @@
         <item quantity="one">%s рет бөлісілді</item>
         <item quantity="other">%s рет бөлісілді</item>
     </plurals>
+    <string name="feeds_also_post_to">Сондай-ақ жариялау</string>
 </resources>

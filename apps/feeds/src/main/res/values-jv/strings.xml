@@ -351,4 +351,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">Dibagi %s kaping</item>
     </plurals>
+    <string name="feeds_also_post_to">Uga terbitaké menyang</string>
 </resources>

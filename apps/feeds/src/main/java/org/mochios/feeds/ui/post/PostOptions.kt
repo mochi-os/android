@@ -6,6 +6,7 @@
 package org.mochios.feeds.ui.post
 
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -19,6 +20,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.ExpandLess
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExposedDropdownMenuAnchorType
@@ -32,12 +35,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -54,8 +59,9 @@ import org.mochios.feeds.ui.component.PollDraft
 import org.mochios.feeds.ui.component.VISIBILITIES
 
 /**
- * Where a post publishes: the feed's accounts on other networks, each a switch
- * preset from the feed's list, for this post alone.
+ * Where a post also goes: one line naming the feed's accounts on other
+ * networks it goes to, preset from the feed's list, which opens into a switch
+ * per account for this post alone.
  */
 @Composable
 internal fun PublishSwitches(
@@ -65,11 +71,33 @@ internal fun PublishSwitches(
     modifier: Modifier = Modifier,
 ) {
     if (accounts.isEmpty()) return
+    var open by rememberSaveable { mutableStateOf(false) }
+    val sorted = accounts.sortedWith(compareBy(NaturalCompare) { it.identifier })
+    val names = LocalFormat.current.formatList(sorted.filter { it.id in chosen }.map { it.identifier })
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        Text(stringResource(R.string.feeds_publish_to), style = MaterialTheme.typography.titleMedium)
-        accounts.sortedWith(compareBy(NaturalCompare) { it.identifier }).forEach { account ->
-            val on = account.id in chosen
-            SwitchRow(label = account.identifier, checked = on, onChange = { onToggle(account.id, it) })
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(role = Role.Button) { open = !open }
+                .padding(vertical = 8.dp),
+        ) {
+            Text(stringResource(R.string.feeds_also_post_to), style = MaterialTheme.typography.titleMedium)
+            Text(
+                names,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
+            )
+            Icon(if (open) Icons.Default.ExpandLess else Icons.Default.ExpandMore, contentDescription = null)
+        }
+        if (open) {
+            sorted.forEach { account ->
+                SwitchRow(label = account.identifier, checked = account.id in chosen, onChange = { onToggle(account.id, it) })
+            }
         }
     }
 }

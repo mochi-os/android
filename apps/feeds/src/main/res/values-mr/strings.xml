@@ -364,4 +364,5 @@
         <item quantity="one">%s वेळा बूस्ट केले</item>
         <item quantity="other">%s वेळा बूस्ट केले</item>
     </plurals>
+    <string name="feeds_also_post_to">येथेही प्रकाशित करा</string>
 </resources>

@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">%s회 부스트됨</item>
     </plurals>
+    <string name="feeds_also_post_to">함께 게시할 곳</string>
 </resources>

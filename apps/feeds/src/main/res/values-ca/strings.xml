@@ -366,4 +366,5 @@
         <item quantity="one">Impulsat %s vegades</item>
         <item quantity="other">Impulsat %s vegades</item>
     </plurals>
+    <string name="feeds_also_post_to">Publica també a</string>
 </resources>

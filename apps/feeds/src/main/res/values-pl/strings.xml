@@ -398,4 +398,5 @@
         <item quantity="many">Podbito %s razy</item>
         <item quantity="other">Podbito %s raza</item>
     </plurals>
+    <string name="feeds_also_post_to">Opublikuj też w</string>
 </resources>

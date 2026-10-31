@@ -364,4 +364,5 @@
         <item quantity="one">Boostad %s gånger</item>
         <item quantity="other">Boostad %s gånger</item>
     </plurals>
+    <string name="feeds_also_post_to">Publicera även till</string>
 </resources>

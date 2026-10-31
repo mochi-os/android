@@ -366,4 +366,5 @@
         <item quantity="one">Framheva %s gonger</item>
         <item quantity="other">Framheva %s gonger</item>
     </plurals>
+    <string name="feeds_also_post_to">Publiser òg til</string>
 </resources>

@@ -364,4 +364,5 @@
         <item quantity="one">Jagatud %s korda</item>
         <item quantity="other">Jagatud %s korda</item>
     </plurals>
+    <string name="feeds_also_post_to">Avalda ka</string>
 </resources>

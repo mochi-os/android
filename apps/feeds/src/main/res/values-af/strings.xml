@@ -364,4 +364,5 @@
         <item quantity="one">%s keer versterk</item>
         <item quantity="other">%s keer versterk</item>
     </plurals>
+    <string name="feeds_also_post_to">Plaas ook op</string>
 </resources>

@@ -364,4 +364,5 @@
         <item quantity="one">%s વાર બૂસ્ટ થયું</item>
         <item quantity="other">%s વાર બૂસ્ટ થયું</item>
     </plurals>
+    <string name="feeds_also_post_to">આ પર પણ પ્રકાશિત કરો</string>
 </resources>

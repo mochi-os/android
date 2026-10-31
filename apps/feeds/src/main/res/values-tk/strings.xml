@@ -364,4 +364,5 @@
         <item quantity="one">%s gezek paýlaşyldy</item>
         <item quantity="other">%s gezek paýlaşyldy</item>
     </plurals>
+    <string name="feeds_also_post_to">Şeýle hem neşir et</string>
 </resources>

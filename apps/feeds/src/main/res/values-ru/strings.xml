@@ -398,4 +398,5 @@
         <item quantity="many">Продвинуто %s раз</item>
         <item quantity="other">Продвинуто %s раза</item>
     </plurals>
+    <string name="feeds_also_post_to">Опубликовать также в</string>
 </resources>

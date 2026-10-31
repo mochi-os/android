@@ -364,4 +364,5 @@
         <item quantity="one">Imeshirikiwa mara %s</item>
         <item quantity="other">Imeshirikiwa mara %s</item>
     </plurals>
+    <string name="feeds_also_post_to">Chapisha pia kwenye</string>
 </resources>

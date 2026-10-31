@@ -398,4 +398,5 @@
         <item quantity="few">Deljeno %s-krat</item>
         <item quantity="other">Deljeno %s-krat</item>
     </plurals>
+    <string name="feeds_also_post_to">Objavi tudi v</string>
 </resources>

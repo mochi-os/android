@@ -415,4 +415,5 @@
         <item quantity="many">Treisithe %s n-uaire</item>
         <item quantity="other">Treisithe %s uair</item>
     </plurals>
+    <string name="feeds_also_post_to">Foilsigh freisin chuig</string>
 </resources>

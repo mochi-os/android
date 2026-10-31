@@ -364,4 +364,5 @@
         <item quantity="one">Boostet %s gange</item>
         <item quantity="other">Boostet %s gange</item>
     </plurals>
+    <string name="feeds_also_post_to">Udgiv også til</string>
 </resources>

@@ -364,4 +364,5 @@
         <item quantity="one">%s ڀيرا بوسٽ ٿيل</item>
         <item quantity="other">%s ڀيرا بوسٽ ٿيل</item>
     </plurals>
+    <string name="feeds_also_post_to">هتي به شايع ڪريو</string>
 </resources>

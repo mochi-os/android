@@ -366,4 +366,5 @@
         <item quantity="one">%s dəfə paylaşılıb</item>
         <item quantity="other">%s dəfə paylaşılıb</item>
     </plurals>
+    <string name="feeds_also_post_to">Həmçinin dərc et</string>
 </resources>

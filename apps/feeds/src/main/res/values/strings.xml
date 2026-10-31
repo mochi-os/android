@@ -317,6 +317,7 @@
     <string name="feeds_boost_taken_back">Boost taken back</string>
     <!-- The composer's publish switches, features and poll -->
     <string name="feeds_publish_to">Publish to</string>
+    <string name="feeds_also_post_to">Also post to</string>
     <string name="feeds_visibility">Visibility</string>
     <string name="feeds_visibility_public">Public</string>
     <string name="feeds_content_warning">Content warning</string>

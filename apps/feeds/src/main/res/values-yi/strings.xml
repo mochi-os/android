@@ -364,4 +364,5 @@
         <item quantity="one">%s מאָל פֿאַרשפּרייט</item>
         <item quantity="other">%s מאָל פֿאַרשפּרייט</item>
     </plurals>
+    <string name="feeds_also_post_to">אויך פּובליקירן אויף</string>
 </resources>

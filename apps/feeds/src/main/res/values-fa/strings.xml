@@ -364,4 +364,5 @@
         <item quantity="one">%s بار بازنشر شده</item>
         <item quantity="other">%s بار بازنشر شده</item>
     </plurals>
+    <string name="feeds_also_post_to">همچنین انتشار در</string>
 </resources>

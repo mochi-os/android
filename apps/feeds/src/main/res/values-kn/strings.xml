@@ -364,4 +364,5 @@
         <item quantity="one">%s ಬಾರಿ ಬೂಸ್ಟ್ ಮಾಡಲಾಗಿದೆ</item>
         <item quantity="other">%s ಬಾರಿ ಬೂಸ್ಟ್ ಮಾಡಲಾಗಿದೆ</item>
     </plurals>
+    <string name="feeds_also_post_to">ಇಲ್ಲಿಯೂ ಪ್ರಕಟಿಸಿ</string>
 </resources>

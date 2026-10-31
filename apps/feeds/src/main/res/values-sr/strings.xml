@@ -381,4 +381,5 @@
         <item quantity="few">Подељено %s пута</item>
         <item quantity="other">Подељено %s пута</item>
     </plurals>
+    <string name="feeds_also_post_to">Објави и на</string>
 </resources>

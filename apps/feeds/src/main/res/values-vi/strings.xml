@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">Đã được chia sẻ lại %s lần</item>
     </plurals>
+    <string name="feeds_also_post_to">Đăng cả lên</string>
 </resources>

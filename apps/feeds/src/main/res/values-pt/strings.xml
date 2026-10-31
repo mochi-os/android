@@ -366,4 +366,5 @@
         <item quantity="one">Partilhado %s vezes</item>
         <item quantity="other">Partilhado %s vezes</item>
     </plurals>
+    <string name="feeds_also_post_to">Publicar também em</string>
 </resources>

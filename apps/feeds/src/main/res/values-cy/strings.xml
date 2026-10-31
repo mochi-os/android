@@ -432,4 +432,5 @@
         <item quantity="many">Wedi\'i hybu %s gwaith</item>
         <item quantity="other">Wedi\'i hybu %s gwaith</item>
     </plurals>
+    <string name="feeds_also_post_to">Cyhoeddi hefyd i</string>
 </resources>

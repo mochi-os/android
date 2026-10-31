@@ -301,4 +301,5 @@
     <string name="feeds_following">Gevolgd</string>
     <string name="feeds_community">Gemeenschap</string>
     <string name="feeds_people_you_know">Mensen die u kent</string>
+    <string name="feeds_also_post_to">Ook publiceren naar</string>
 </resources>

@@ -364,4 +364,5 @@
         <item quantity="one">%s marta ulashildi</item>
         <item quantity="other">%s marta ulashildi</item>
     </plurals>
+    <string name="feeds_also_post_to">Shuningdek nashr qilinadigan joylar</string>
 </resources>

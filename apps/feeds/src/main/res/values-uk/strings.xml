@@ -398,4 +398,5 @@
         <item quantity="many">Поширено %s разів</item>
         <item quantity="other">Поширено %s разу</item>
     </plurals>
+    <string name="feeds_also_post_to">Також публікувати в</string>
 </resources>

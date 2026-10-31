@@ -364,4 +364,5 @@
         <item quantity="one">%s-ჯერ გაზიარებული</item>
         <item quantity="other">%s-ჯერ გაზიარებული</item>
     </plurals>
+    <string name="feeds_also_post_to">ასევე გამოქვეყნდეს</string>
 </resources>

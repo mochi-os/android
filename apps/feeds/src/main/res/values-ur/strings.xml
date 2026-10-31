@@ -364,4 +364,5 @@
         <item quantity="one">%s بار بوسٹ کیا گیا</item>
         <item quantity="other">%s بار بوسٹ کیا گیا</item>
     </plurals>
+    <string name="feeds_also_post_to">یہاں بھی شائع کریں</string>
 </resources>

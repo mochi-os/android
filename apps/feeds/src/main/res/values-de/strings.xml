@@ -364,4 +364,5 @@
         <item quantity="one">%s Mal geteilt</item>
         <item quantity="other">%s Mal geteilt</item>
     </plurals>
+    <string name="feeds_also_post_to">Auch veröffentlichen auf</string>
 </resources>

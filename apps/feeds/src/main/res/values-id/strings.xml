@@ -351,4 +351,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">Dibagikan %s kali</item>
     </plurals>
+    <string name="feeds_also_post_to">Terbitkan juga ke</string>
 </resources>

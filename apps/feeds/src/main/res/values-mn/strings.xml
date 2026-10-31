@@ -364,4 +364,5 @@
         <item quantity="one">%s удаа хуваалцсан</item>
         <item quantity="other">%s удаа хуваалцсан</item>
     </plurals>
+    <string name="feeds_also_post_to">Мөн нийтлэх</string>
 </resources>

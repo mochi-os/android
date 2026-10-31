@@ -364,4 +364,5 @@
         <item quantity="one">Condiviso %s volte</item>
         <item quantity="other">Condiviso %s volte</item>
     </plurals>
+    <string name="feeds_also_post_to">Pubblica anche su</string>
 </resources>

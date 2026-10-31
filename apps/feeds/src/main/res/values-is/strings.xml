@@ -364,4 +364,5 @@
         <item quantity="one">Endurbirt %s sinnum</item>
         <item quantity="other">Endurbirt %s sinnum</item>
     </plurals>
+    <string name="feeds_also_post_to">Birta líka á</string>
 </resources>

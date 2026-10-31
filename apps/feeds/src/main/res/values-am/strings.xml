@@ -364,4 +364,5 @@
         <item quantity="one">%s ጊዜ ተጋርቷል</item>
         <item quantity="other">%s ጊዜ ተጋርቷል</item>
     </plurals>
+    <string name="feeds_also_post_to">በተጨማሪ የሚታተምበት</string>
 </resources>

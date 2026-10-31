@@ -263,6 +263,7 @@
     <string name="feeds_boosted">已轉推</string>
     <string name="feeds_boost_taken_back">已收返轉推</string>
     <string name="feeds_publish_to">發布去</string>
+    <string name="feeds_also_post_to">同時發布去</string>
     <string name="feeds_visibility">可見範圍</string>
     <string name="feeds_visibility_public">公開</string>
     <string name="feeds_content_warning">內容警告</string>

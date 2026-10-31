@@ -364,4 +364,5 @@
         <item quantity="one">%s বার বুস্ট করা হয়েছে</item>
         <item quantity="other">%s বার বুস্ট করা হয়েছে</item>
     </plurals>
+    <string name="feeds_also_post_to">আরও যেখানে প্রকাশ করবে</string>
 </resources>

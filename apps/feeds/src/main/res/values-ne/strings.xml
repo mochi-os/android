@@ -364,4 +364,5 @@
         <item quantity="one">%s पटक बुस्ट गरिएको</item>
         <item quantity="other">%s पटक बुस्ट गरिएको</item>
     </plurals>
+    <string name="feeds_also_post_to">यहाँ पनि प्रकाशित गर्नुहोस्</string>
 </resources>

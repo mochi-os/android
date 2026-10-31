@@ -381,4 +381,5 @@
         <item quantity="one">Kopīgots %s reizi</item>
         <item quantity="other">Kopīgots %s reizes</item>
     </plurals>
+    <string name="feeds_also_post_to">Publicēt arī</string>
 </resources>

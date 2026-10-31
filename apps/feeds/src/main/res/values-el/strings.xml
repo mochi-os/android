@@ -364,4 +364,5 @@
         <item quantity="one">Ενισχύθηκε %s φορές</item>
         <item quantity="other">Ενισχύθηκε %s φορές</item>
     </plurals>
+    <string name="feeds_also_post_to">Δημοσίευση και σε</string>
 </resources>

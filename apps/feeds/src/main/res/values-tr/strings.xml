@@ -364,4 +364,5 @@
         <item quantity="one">%s kez boostlandı</item>
         <item quantity="other">%s kez boostlandı</item>
     </plurals>
+    <string name="feeds_also_post_to">Ayrıca yayımlanacak yerler</string>
 </resources>

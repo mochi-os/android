@@ -364,4 +364,5 @@
         <item quantity="one">%s caran hat parvekirin</item>
         <item quantity="other">%s caran hat parvekirin</item>
     </plurals>
+    <string name="feeds_also_post_to">Herwiha biweşîne li</string>
 </resources>

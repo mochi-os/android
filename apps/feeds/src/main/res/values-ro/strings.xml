@@ -381,4 +381,5 @@
         <item quantity="few">Distribuit de %s ori</item>
         <item quantity="other">Distribuit de %s de ori</item>
     </plurals>
+    <string name="feeds_also_post_to">Publică și pe</string>
 </resources>

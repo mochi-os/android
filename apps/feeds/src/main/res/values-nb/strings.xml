@@ -364,4 +364,5 @@
         <item quantity="one">Fremhevet %s ganger</item>
         <item quantity="other">Fremhevet %s ganger</item>
     </plurals>
+    <string name="feeds_also_post_to">Publiser også til</string>
 </resources>

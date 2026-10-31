@@ -364,4 +364,5 @@
         <item quantity="one">%s keer geboost</item>
         <item quantity="other">%s keer geboost</item>
     </plurals>
+    <string name="feeds_also_post_to">Ook publiceren naar</string>
 </resources>

@@ -388,4 +388,5 @@
         <item quantity="two">הודהד פעמיים</item>
         <item quantity="other">הודהד %s פעמים</item>
     </plurals>
+    <string name="feeds_also_post_to">פרסום גם אל</string>
 </resources>

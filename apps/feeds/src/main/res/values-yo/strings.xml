@@ -352,4 +352,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">A ti gbé e ga ní ìgbà %s</item>
     </plurals>
+    <string name="feeds_also_post_to">Tún tẹ̀jáde sí</string>
 </resources>

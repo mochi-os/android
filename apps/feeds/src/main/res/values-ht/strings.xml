@@ -357,4 +357,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">Pataje %s fwa</item>
     </plurals>
+    <string name="feeds_also_post_to">Pibliye tou sou</string>
 </resources>

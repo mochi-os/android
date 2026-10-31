@@ -364,4 +364,5 @@
         <item quantity="one">Tehostettu %s kertaa</item>
         <item quantity="other">Tehostettu %s kertaa</item>
     </plurals>
+    <string name="feeds_also_post_to">Julkaise myös kohteisiin</string>
 </resources>

@@ -381,4 +381,5 @@
         <item quantity="few">Podijeljeno %s puta</item>
         <item quantity="other">Podijeljeno %s puta</item>
     </plurals>
+    <string name="feeds_also_post_to">Objavi i na</string>
 </resources>

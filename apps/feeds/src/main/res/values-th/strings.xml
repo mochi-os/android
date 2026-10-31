@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">ถูกบูสต์ %s ครั้ง</item>
     </plurals>
+    <string name="feeds_also_post_to">เผยแพร่เพิ่มเติมไปยัง</string>
 </resources>

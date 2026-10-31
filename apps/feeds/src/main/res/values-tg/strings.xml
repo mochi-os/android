@@ -360,4 +360,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">%s маротиба мубодила шуд</item>
     </plurals>
+    <string name="feeds_also_post_to">Инчунин нашр дар</string>
 </resources>

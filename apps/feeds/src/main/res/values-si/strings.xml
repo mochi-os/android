@@ -364,4 +364,5 @@
         <item quantity="one">%s වරක් බෙදාගත්තා</item>
         <item quantity="other">%s වරක් බෙදාගත්තා</item>
     </plurals>
+    <string name="feeds_also_post_to">මෙහිද පළ කරන්න</string>
 </resources>

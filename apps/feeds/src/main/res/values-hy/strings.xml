@@ -364,4 +364,5 @@
         <item quantity="one">Տարածվել է %s անգամ</item>
         <item quantity="other">Տարածվել է %s անգամ</item>
     </plurals>
+    <string name="feeds_also_post_to">Հրապարակել նաև</string>
 </resources>

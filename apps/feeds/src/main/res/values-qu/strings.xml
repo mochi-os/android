@@ -360,4 +360,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">%s kuti mast\'arisqa</item>
     </plurals>
+    <string name="feeds_also_post_to">Kaykunapipas churana</string>
 </resources>

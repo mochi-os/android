@@ -364,4 +364,5 @@
         <item quantity="one">%s-szor megosztva</item>
         <item quantity="other">%s-szor megosztva</item>
     </plurals>
+    <string name="feeds_also_post_to">Közzététel ide is</string>
 </resources>

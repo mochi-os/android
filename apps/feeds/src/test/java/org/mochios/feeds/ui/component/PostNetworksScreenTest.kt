@@ -20,6 +20,8 @@ import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.assertIsOn
 import androidx.compose.ui.test.getBoundsInRoot
+import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
@@ -291,7 +293,7 @@ class PostNetworksScreenTest {
     }
 
     @Test
-    fun `the composer's publish switches are preset from the feed's list, by address`() {
+    fun `the composer's publish switches are one line naming the accounts chosen, opened into a switch each`() {
         var toggled: Pair<String, Boolean>? = null
         rule.setContent {
             PublishSwitches(
@@ -300,9 +302,16 @@ class PostNetworksScreenTest {
                 onToggle = { id, on -> toggled = id to on },
             )
         }
-        rule.onNodeWithText("zed@there.example").assertIsOn()
-        rule.onNodeWithText("amy@there.example").assertIsOff().performClick()
+        rule.onNodeWithText("Also post to").assertIsDisplayed()
+        rule.onNodeWithText("zed@there.example").assertIsDisplayed()
+        rule.onAllNodesWithText("amy@there.example").assertCountEquals(0)
+        rule.onAllNodes(isToggleable()).assertCountEquals(0)
+        rule.onNodeWithText("Also post to").performClick()
+        rule.onNode(hasText("zed@there.example") and isToggleable()).assertIsOn()
+        rule.onNode(hasText("amy@there.example") and isToggleable()).assertIsOff().performClick()
         assertEquals("a" to true, toggled)
+        rule.onNodeWithText("Also post to").performClick()
+        rule.onAllNodes(isToggleable()).assertCountEquals(0)
     }
 
     @Test

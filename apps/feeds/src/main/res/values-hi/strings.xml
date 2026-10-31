@@ -364,4 +364,5 @@
         <item quantity="one">%s बार बूस्ट किया गया</item>
         <item quantity="other">%s बार बूस्ट किया गया</item>
     </plurals>
+    <string name="feeds_also_post_to">यहाँ भी प्रकाशित करें</string>
 </resources>

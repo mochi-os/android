@@ -417,4 +417,5 @@
         <item quantity="many">Maqsum %s darbiet</item>
         <item quantity="other">Maqsum %s darbiet</item>
     </plurals>
+    <string name="feeds_also_post_to">Ippubblika wkoll fuq</string>
 </resources>

@@ -364,4 +364,5 @@
         <item quantity="one">%s жолу бөлүшүлдү</item>
         <item quantity="other">%s жолу бөлүшүлдү</item>
     </plurals>
+    <string name="feeds_also_post_to">Ошондой эле жарыялоо</string>
 </resources>

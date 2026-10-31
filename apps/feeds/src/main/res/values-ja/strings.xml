@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">%s 回ブーストされました</item>
     </plurals>
+    <string name="feeds_also_post_to">あわせて公開する先</string>
 </resources>

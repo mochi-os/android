@@ -388,4 +388,5 @@
         <item quantity="few">Pasidalinta %s kartus</item>
         <item quantity="other">Pasidalinta %s kartų</item>
     </plurals>
+    <string name="feeds_also_post_to">Taip pat skelbti į</string>
 </resources>

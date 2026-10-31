@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">%s ကြိမ် မျှဝေထားသည်</item>
     </plurals>
+    <string name="feeds_also_post_to">ထပ်မံ ထုတ်ဝေရန် နေရာ</string>
 </resources>

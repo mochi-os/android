@@ -388,4 +388,5 @@
         <item quantity="few">Sdíleno %skrát</item>
         <item quantity="other">Sdíleno %skrát</item>
     </plurals>
+    <string name="feeds_also_post_to">Publikovat také do</string>
 </resources>

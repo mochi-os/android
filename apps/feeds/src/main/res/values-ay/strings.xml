@@ -360,4 +360,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">%s kuti yatiyata</item>
     </plurals>
+    <string name="feeds_also_post_to">Ukhamaraki kawkir yatiyaña</string>
 </resources>

@@ -364,4 +364,5 @@
         <item quantity="one">%s முறை பூஸ்ட் செய்யப்பட்டது</item>
         <item quantity="other">%s முறை பூஸ்ட் செய்யப்பட்டது</item>
     </plurals>
+    <string name="feeds_also_post_to">இங்கும் வெளியிடு</string>
 </resources>

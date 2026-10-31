@@ -364,4 +364,5 @@
         <item quantity="one">Na-boost nang %s beses</item>
         <item quantity="other">Na-boost nang %s beses</item>
     </plurals>
+    <string name="feeds_also_post_to">Ilathala rin sa</string>
 </resources>

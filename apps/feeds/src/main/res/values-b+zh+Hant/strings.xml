@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">已被轉發 %s 次</item>
     </plurals>
+    <string name="feeds_also_post_to">同時發布到</string>
 </resources>

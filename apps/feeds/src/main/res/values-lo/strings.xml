@@ -347,4 +347,5 @@
     <plurals name="feeds_boosted_times">
         <item quantity="other">ຖືກບູສ %s ຄັ້ງ</item>
     </plurals>
+    <string name="feeds_also_post_to">ເຜີຍແຜ່ໄປທີ່ດ້ວຍ</string>
 </resources>

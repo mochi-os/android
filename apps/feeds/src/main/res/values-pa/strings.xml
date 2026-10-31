@@ -364,4 +364,5 @@
         <item quantity="one">%s ਵਾਰ ਬੂਸਟ ਕੀਤਾ</item>
         <item quantity="other">%s ਵਾਰ ਬੂਸਟ ਕੀਤਾ</item>
     </plurals>
+    <string name="feeds_also_post_to">ਇੱਥੇ ਵੀ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ</string>
 </resources>

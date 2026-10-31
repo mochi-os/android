@@ -364,4 +364,5 @@
         <item quantity="one">%s aldiz bultzatua</item>
         <item quantity="other">%s aldiz bultzatua</item>
     </plurals>
+    <string name="feeds_also_post_to">Argitaratu hemen ere</string>
 </resources>

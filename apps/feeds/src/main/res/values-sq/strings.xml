@@ -364,4 +364,5 @@
         <item quantity="one">Përforcuar %s herë</item>
         <item quantity="other">Përforcuar %s herë</item>
     </plurals>
+    <string name="feeds_also_post_to">Publiko edhe në</string>
 </resources>

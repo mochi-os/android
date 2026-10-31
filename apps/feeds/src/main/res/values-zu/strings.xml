@@ -364,4 +364,5 @@
         <item quantity="one">Kukhuthazwe izikhathi ezingu-%s</item>
         <item quantity="other">Kukhuthazwe izikhathi ezingu-%s</item>
     </plurals>
+    <string name="feeds_also_post_to">Shicilela futhi ku</string>
 </resources>

@@ -364,4 +364,5 @@
         <item quantity="one">%s ځله شریک شوی</item>
         <item quantity="other">%s ځله شریک شوی</item>
     </plurals>
+    <string name="feeds_also_post_to">همدارنګه خپرول په</string>
 </resources>
