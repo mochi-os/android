@@ -25,20 +25,20 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import org.mochios.android.R as MochiR
-import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MochiTextButton
-import org.mochios.android.ui.components.rememberAutoFocus
 import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.ui.component.CommentItem
-import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.threadRows
+import org.mochios.feeds.ui.component.stripHtml
+import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * The comment thread for one image, in the lightbox's comments panel: the
@@ -75,35 +75,6 @@ internal fun AttachmentComments(
     val shown = threadRows(if (showAll) post.comments else anchored, collapsed.ids)
 
     Column(modifier = Modifier.fillMaxWidth()) {
-        val replyTarget = findComment(anchored, replyingTo)
-        val composer: @Composable (Boolean) -> Unit = { inline ->
-            ComposeBar(
-                value = commentText,
-                onValueChange = { viewModel.setCommentText(it) },
-                onSend = { viewModel.sendComment(anchor = attachmentId) },
-                placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
-                isSending = isSendingComment,
-                upload = commentUpload,
-                sendLabel = stringResource(R.string.feeds_send),
-                attachments = feedsCommentAttachments(
-                    attachments = commentAttachments,
-                    onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
-                    onRemove = { viewModel.removeCommentAttachment(it) },
-                    resolveFileName = viewModel::fileName,
-                ),
-                // A comment needs a body; attachments alone will not do.
-                requireText = true,
-                onSearchMentions = { viewModel.searchMembers(it) },
-                windowInsets = ComposeBarDefaults.NoWindowInsets,
-                banner = feedsReplyBanner(
-                    replyTarget,
-                    { viewModel.setReplyingTo(null) },
-                ),
-                focusRequester = if (inline) rememberAutoFocus() else null,
-                showDivider = !inline,
-            )
-        }
-
         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
             if (shown.isEmpty()) {
                 item(key = "empty") {
@@ -141,11 +112,6 @@ internal fun AttachmentComments(
                     collapsed = comment.id in collapsed,
                     onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(comment.id) }) else null,
                     onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
-                    reply = if (canComment && replyTarget?.id == comment.id) {
-                        { composer(true) }
-                    } else {
-                        null
-                    },
                 )
             }
             if (others > 0) {
@@ -162,8 +128,34 @@ internal fun AttachmentComments(
                 }
             }
         }
-        if (canComment && replyTarget == null) {
-            composer(false)
+        if (canComment) {
+            // Looked for in the whole thread: a reply to a comment that is not
+            // about this image still shows its banner.
+            val replyTarget = findComment(post.comments, replyingTo)
+            ComposeBar(
+                value = commentText,
+                onValueChange = { viewModel.setCommentText(it) },
+                onSend = { viewModel.sendComment(anchor = attachmentId) },
+                placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+                isSending = isSendingComment,
+                upload = commentUpload,
+                sendLabel = stringResource(R.string.feeds_send),
+                attachments = feedsCommentAttachments(
+                    attachments = commentAttachments,
+                    onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                    onRemove = { viewModel.removeCommentAttachment(it) },
+                    resolveFileName = viewModel::fileName,
+                ),
+                // A comment needs a body; attachments alone will not do.
+                requireText = true,
+                onSearchMentions = { viewModel.searchMembers(it) },
+                windowInsets = ComposeBarDefaults.NoWindowInsets,
+                banner = feedsReplyBanner(
+                    replyTarget,
+                    { viewModel.setReplyingTo(null) },
+                ),
+                focusRequester = rememberReplyFocus(replyTarget?.id),
+            )
         }
     }
 }

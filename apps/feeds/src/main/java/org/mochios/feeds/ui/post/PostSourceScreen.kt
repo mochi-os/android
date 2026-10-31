@@ -82,10 +82,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
-import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.Upload
-import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
@@ -94,14 +92,16 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
-import org.mochios.android.ui.components.rememberAutoFocus
 import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.CommentItem
-import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.feeds.ui.component.threadRows
+import org.mochios.feeds.ui.component.stripHtml
+import org.mochios.android.R as MochiR
+import org.mochios.android.i18n.LocalFormat
 
 // Chrome-on-Android UA. Some publishers' bot/embed detection 403s the default
 // "wv" WebView user agent; impersonating regular Chrome makes most articles load.
@@ -579,42 +579,6 @@ private fun PostSourceSheet(
             }
         }
 
-        val replyTarget = findComment(post?.comments.orEmpty(), replyingTo)
-        val composer: @Composable (Boolean) -> Unit = { inline ->
-            ComposeBar(
-                value = commentText,
-                onValueChange = onCommentTextChange,
-                onSend = onSendComment,
-                isSending = isSendingComment,
-                upload = commentUpload,
-                sendLabel = stringResource(R.string.feeds_send),
-                attachments = feedsCommentAttachments(
-                    attachments = commentAttachments,
-                    onAdd = onAddAttachments,
-                    onRemove = onRemoveAttachment,
-                    resolveFileName = resolveFileName,
-                ),
-                // A comment needs a body; attachments alone will not do.
-                requireText = true,
-                onSearchMentions = onSearchMembers,
-                // BottomSheetScaffold does not lift its sheet content for the
-                // keyboard the way ModalBottomSheet does, so this bar has to
-                // consume the inset itself - without it the keyboard covers
-                // the field completely.
-                windowInsets = if (inline) {
-                    ComposeBarDefaults.NoWindowInsets
-                } else {
-                    ComposeBarDefaults.WindowInsets
-                },
-                banner = feedsReplyBanner(
-                    replyTarget,
-                    onCancelReply,
-                ),
-                focusRequester = if (inline) rememberAutoFocus() else null,
-                showDivider = !inline,
-            )
-        }
-
         // Comments only — the article is shown in the WebView above, and the
         // post header (author, time) plus reactions are intentionally omitted.
         LazyColumn(
@@ -652,17 +616,39 @@ private fun PostSourceSheet(
                     collapsed = comment.id in collapsed,
                     onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(comment.id) }) else null,
                     onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
-                    reply = if (permissions.comment && replyTarget?.id == comment.id) {
-                        { composer(true) }
-                    } else {
-                        null
-                    },
                 )
             }
         }
 
-        if (permissions.comment && replyTarget == null) {
-            composer(false)
+        if (permissions.comment) {
+            val replyTarget = findComment(post?.comments.orEmpty(), replyingTo)
+            ComposeBar(
+                value = commentText,
+                onValueChange = onCommentTextChange,
+                onSend = onSendComment,
+                isSending = isSendingComment,
+                upload = commentUpload,
+                sendLabel = stringResource(R.string.feeds_send),
+                attachments = feedsCommentAttachments(
+                    attachments = commentAttachments,
+                    onAdd = onAddAttachments,
+                    onRemove = onRemoveAttachment,
+                    resolveFileName = resolveFileName,
+                ),
+                // A comment needs a body; attachments alone will not do.
+                requireText = true,
+                onSearchMentions = onSearchMembers,
+                // BottomSheetScaffold does not lift its sheet content for the
+                // keyboard the way ModalBottomSheet does, so this bar has to
+                // consume the inset itself - without it the keyboard covers
+                // the field completely.
+                windowInsets = ComposeBarDefaults.WindowInsets,
+                banner = feedsReplyBanner(
+                    replyTarget,
+                    onCancelReply,
+                ),
+                focusRequester = rememberReplyFocus(replyTarget?.id),
+            )
         }
     }
 }

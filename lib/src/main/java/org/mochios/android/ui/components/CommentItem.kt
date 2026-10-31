@@ -50,6 +50,7 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -115,8 +116,6 @@ fun CommentItem(
     highlighted: Boolean = false,
     // A short mark after the name, such as the post author's in a forum.
     badge: String? = null,
-    // The reply box, drawn under the comment while it is the one replied to.
-    reply: (@Composable () -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
     // Replies are indented and marked with a coloured vertical bar so nested
@@ -297,10 +296,6 @@ fun CommentItem(
 
                 Spacer(modifier = Modifier.height(4.dp))
                 Row(verticalAlignment = Alignment.CenterVertically, content = actions)
-            }
-            if (reply != null) {
-                Spacer(modifier = Modifier.height(4.dp))
-                KeepAboveKeyboard(content = reply)
             }
         }
     }
@@ -485,7 +480,7 @@ fun CommentEditor(
 
 /**
  * A box that scrolls itself into view above the keyboard while a field in it
- * has focus. A reply or edit box opened low in a comment list would otherwise
+ * has focus. An edit box opened low in a comment list would otherwise
  * sit under the keyboard, since the list only scrolls the field and not the
  * buttons beside or below it.
  *
@@ -515,14 +510,35 @@ fun KeepAboveKeyboard(
 }
 
 /**
- * A focus requester that asks for focus once its field is on screen, so a
- * reply box opened under a comment is ready to type in.
+ * A focus requester that asks for focus once its field is on screen, so an
+ * edit box opened under a comment is ready to type in.
  */
 @Composable
 fun rememberAutoFocus(): FocusRequester {
     val focus = remember { FocusRequester() }
     LaunchedEffect(focus) {
         focus.requestFocus()
+    }
+    return focus
+}
+
+/**
+ * A focus requester that puts the cursor in its field and raises the keyboard
+ * each time [replyTo] is set, so Reply readies the composer at the bottom as a
+ * chat app does.
+ *
+ * @param replyTo The comment replied to, or null when there is none.
+ * @return The requester to give the composer's field.
+ */
+@Composable
+fun rememberReplyFocus(replyTo: String?): FocusRequester {
+    val focus = remember { FocusRequester() }
+    val keyboard = LocalSoftwareKeyboardController.current
+    LaunchedEffect(replyTo) {
+        if (replyTo != null) {
+            focus.requestFocus()
+            keyboard?.show()
+        }
     }
     return focus
 }

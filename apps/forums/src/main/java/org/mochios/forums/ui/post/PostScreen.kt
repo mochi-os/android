@@ -119,6 +119,7 @@ import org.mochios.android.ui.components.CommentThreadBack
 import org.mochios.android.ui.components.commentRows
 import org.mochios.android.ui.components.findInThread
 import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
@@ -264,58 +265,6 @@ fun PostScreen(
         },
         onCancelEdit = { editingId = null },
     )
-    val threadComposer: @Composable (Boolean) -> Unit = { inline ->
-        ComposeBar(
-            value = draft,
-            onValueChange = { value -> draft = value },
-            onSend = {
-                viewModel.submitComment(draft.text)
-                draft = TextFieldValue("")
-            },
-            placeholder = stringResource(R.string.forums_write_comment),
-            enabled = !uiState.post.locked,
-            isSending = uiState.isSending,
-            upload = commentUpload,
-            sendLabel = stringResource(R.string.forums_comment_send),
-            windowInsets = if (inline) {
-                ComposeBarDefaults.NoWindowInsets
-            } else {
-                ComposeBarDefaults.WindowInsets
-            },
-            banner = uiState.replyTo?.let { replied ->
-                {
-                    ReplyComposerBanner(
-                        label = stringResource(
-                            R.string.forums_comment_replying_to,
-                            replied.name,
-                        ),
-                        preview = replied.body,
-                        cancelLabel = stringResource(
-                            R.string.forums_comment_clear_reply,
-                        ),
-                        onCancel = { viewModel.setReplyTo(null) },
-                    )
-                }
-            },
-            attachments = ComposeBarAttachments(
-                pending = commentAttachments,
-                onAdd = { uris -> viewModel.addCommentAttachments(uris) },
-                onRemove = { uri -> viewModel.removeCommentAttachment(uri) },
-                resolveFileName = viewModel::fileName,
-                addLabel = stringResource(R.string.forums_post_attach),
-                fallbackLabel = stringResource(R.string.forums_attachment_file),
-                removeLabel = stringResource(R.string.forums_attachment_remove),
-            ),
-            requireText = true,
-            focusRequester = composerFocus,
-            showDivider = !inline,
-        )
-        if (inline) {
-            LaunchedEffect(Unit) {
-                composerFocus.requestFocus()
-            }
-        }
-    }
     val attachmentPanel: @Composable (Attachment) -> Unit = { att ->
         AttachmentComments(
             attachmentId = att.id,
@@ -545,18 +494,54 @@ fun PostScreen(
                                 forumId = viewModel.forumId,
                                 currentIdentity = uiState.identity,
                                 canModerate = uiState.canModerate,
-                                actions = commentActions.copy(
-                                    replyId = uiState.replyTo?.id.takeIf { uiState.canComment },
-                                    replyBox = { threadComposer(true) },
-                                ),
+                                actions = commentActions,
                                 postAuthor = uiState.post.member,
                                 collapsed = collapsed,
                                 focused = focused?.id,
                             )
                         }
                     }
-                    if (uiState.canComment && uiState.replyTo == null) {
-                        threadComposer(false)
+                    if (uiState.canComment) {
+                        ComposeBar(
+                            value = draft,
+                            onValueChange = { value -> draft = value },
+                            onSend = {
+                                viewModel.submitComment(draft.text)
+                                draft = TextFieldValue("")
+                            },
+                            placeholder = stringResource(R.string.forums_write_comment),
+                            enabled = !uiState.post.locked,
+                            isSending = uiState.isSending,
+                            upload = commentUpload,
+                            sendLabel = stringResource(R.string.forums_comment_send),
+                            windowInsets = ComposeBarDefaults.WindowInsets,
+                            banner = uiState.replyTo?.let { replied ->
+                                {
+                                    ReplyComposerBanner(
+                                        label = stringResource(
+                                            R.string.forums_comment_replying_to,
+                                            replied.name,
+                                        ),
+                                        preview = replied.body,
+                                        cancelLabel = stringResource(
+                                            R.string.forums_comment_clear_reply,
+                                        ),
+                                        onCancel = { viewModel.setReplyTo(null) },
+                                    )
+                                }
+                            },
+                            attachments = ComposeBarAttachments(
+                                pending = commentAttachments,
+                                onAdd = { uris -> viewModel.addCommentAttachments(uris) },
+                                onRemove = { uri -> viewModel.removeCommentAttachment(uri) },
+                                resolveFileName = viewModel::fileName,
+                                addLabel = stringResource(R.string.forums_post_attach),
+                                fallbackLabel = stringResource(R.string.forums_attachment_file),
+                                removeLabel = stringResource(R.string.forums_attachment_remove),
+                            ),
+                            requireText = true,
+                            focusRequester = composerFocus,
+                        )
                     }
                 }
             }
@@ -1061,9 +1046,6 @@ private data class CommentActions(
     val onEditTextChange: (String) -> Unit = {},
     val onSaveEdit: () -> Unit = {},
     val onCancelEdit: () -> Unit = {},
-    /** The comment replied to, which draws [replyBox] under itself. */
-    val replyId: String? = null,
-    val replyBox: @Composable () -> Unit = {},
 )
 
 /** A forum thread in reading order, the replies of every folded comment left out. */
@@ -1109,7 +1091,6 @@ private fun LazyListScope.commentsItems(
                 onEditTextChange = actions.onEditTextChange,
                 onSaveEdit = actions.onSaveEdit,
                 onCancelEdit = actions.onCancelEdit,
-                reply = if (actions.replyId == c.id) actions.replyBox else null,
                 op = postAuthor.isNotEmpty() && c.member == postAuthor,
                 replies = row.replies,
                 collapsed = c.id in collapsed,
@@ -1157,63 +1138,17 @@ private fun AttachmentComments(
     val anchored = comments.filter { it.anchor == attachmentId }
     val others = comments.size - anchored.size
     val shown = if (showAll) comments else anchored
-    val composerFocus = remember { FocusRequester() }
+    // Reply readies this panel's composer, not the one under the post behind it.
+    val composerFocus = rememberReplyFocus(replyTo?.id)
     // Everything else a comment can do is the same here as below the post;
     // only Quote differs, because it writes into a draft and this panel's is
     // no longer the post screen's.
-    val panelComposer: @Composable (Boolean) -> Unit = { inline ->
-    ComposeBar(
-        banner = replyTo?.let { replied ->
-            {
-                ReplyComposerBanner(
-                    label = stringResource(
-                        R.string.forums_comment_replying_to,
-                        replied.name,
-                    ),
-                    preview = replied.body,
-                    cancelLabel = stringResource(R.string.forums_comment_clear_reply),
-                    onCancel = onClearReply,
-                )
-            }
-        },
-        value = draft,
-        onValueChange = { draft = it },
-        onSend = {
-            onSend(draft.text)
-            draft = TextFieldValue("")
-        },
-        placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
-        isSending = isSending,
-        upload = upload,
-        sendLabel = stringResource(R.string.forums_comment_send),
-        attachments = ComposeBarAttachments(
-            pending = attachments,
-            onAdd = onAddAttachments,
-            onRemove = onRemoveAttachment,
-            resolveFileName = resolveFileName,
-            addLabel = stringResource(R.string.forums_post_attach),
-            fallbackLabel = stringResource(R.string.forums_attachment_file),
-            removeLabel = stringResource(R.string.forums_attachment_remove),
-        ),
-        requireText = true,
-        focusRequester = composerFocus,
-            windowInsets = ComposeBarDefaults.NoWindowInsets,
-            showDivider = !inline,
-        )
-        if (inline) {
-            LaunchedEffect(Unit) {
-                composerFocus.requestFocus()
-            }
-        }
-    }
     val panelActions = actions.copy(
         onQuote = { comment ->
             val text = quoteText(withoutQuote(comment.body), draft.text)
             draft = TextFieldValue(text = text, selection = TextRange(text.length))
             composerFocus.requestFocus()
         },
-        replyId = replyTo?.id.takeIf { canComment },
-        replyBox = { panelComposer(true) },
     )
 
     Column(modifier = Modifier.fillMaxWidth()) {
@@ -1252,8 +1187,44 @@ private fun AttachmentComments(
                 }
             }
         }
-        if (canComment && replyTo == null) {
-            panelComposer(false)
+        if (canComment) {
+            ComposeBar(
+                banner = replyTo?.let { replied ->
+                    {
+                        ReplyComposerBanner(
+                            label = stringResource(
+                                R.string.forums_comment_replying_to,
+                                replied.name,
+                            ),
+                            preview = replied.body,
+                            cancelLabel = stringResource(R.string.forums_comment_clear_reply),
+                            onCancel = onClearReply,
+                        )
+                    }
+                },
+                value = draft,
+                onValueChange = { draft = it },
+                onSend = {
+                    onSend(draft.text)
+                    draft = TextFieldValue("")
+                },
+                placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+                isSending = isSending,
+                upload = upload,
+                sendLabel = stringResource(R.string.forums_comment_send),
+                attachments = ComposeBarAttachments(
+                    pending = attachments,
+                    onAdd = onAddAttachments,
+                    onRemove = onRemoveAttachment,
+                    resolveFileName = resolveFileName,
+                    addLabel = stringResource(R.string.forums_post_attach),
+                    fallbackLabel = stringResource(R.string.forums_attachment_file),
+                    removeLabel = stringResource(R.string.forums_attachment_remove),
+                ),
+                requireText = true,
+                focusRequester = composerFocus,
+                windowInsets = ComposeBarDefaults.NoWindowInsets,
+            )
         }
     }
 }
@@ -1294,7 +1265,6 @@ private fun CommentCard(
     onEditTextChange: (String) -> Unit = {},
     onSaveEdit: () -> Unit = {},
     onCancelEdit: () -> Unit = {},
-    reply: (@Composable () -> Unit)? = null,
 ) {
     var showMenu by remember { mutableStateOf(false) }
     val anchor = comment.anchor
@@ -1327,7 +1297,6 @@ private fun CommentCard(
         onEditTextChange = onEditTextChange,
         onSaveEdit = onSaveEdit,
         onCancelEdit = onCancelEdit,
-        reply = reply,
     ) {
         PostBadges(status = comment.status)
         // Same reaction row as the post: like · dislike, filled for the viewer's

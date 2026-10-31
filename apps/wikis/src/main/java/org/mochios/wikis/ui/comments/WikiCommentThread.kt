@@ -37,7 +37,6 @@ import org.mochios.android.ui.components.CommentActions
 import org.mochios.android.ui.components.CommentEditor
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
-import org.mochios.android.ui.components.KeepAboveKeyboard
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
@@ -58,9 +57,6 @@ fun WikiCommentThread(
     onEdit: ((commentId: String, body: String) -> Unit)?,
     onDelete: ((commentId: String) -> Unit)?,
     depth: Int = 0,
-    // The comment replied to, which draws [replyBox] under itself.
-    replyId: String? = null,
-    replyBox: @Composable () -> Unit = {},
 ) {
     val format = LocalFormat.current
     val wiki = LocalWikiContext.current
@@ -263,10 +259,6 @@ fun WikiCommentThread(
                         },
                         modifier = Modifier.padding(top = 2.dp),
                     )
-                    if (replyId == comment.id) {
-                        Spacer(Modifier.height(4.dp))
-                        KeepAboveKeyboard(content = replyBox)
-                    }
                 }
             }
 
@@ -281,8 +273,6 @@ fun WikiCommentThread(
                         onEdit = onEdit,
                         onDelete = onDelete,
                         depth = depth + 1,
-                        replyId = replyId,
-                        replyBox = replyBox,
                     )
                 }
             }

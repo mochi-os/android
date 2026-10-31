@@ -44,7 +44,7 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.ReplyComposerBanner
-import org.mochios.android.ui.components.rememberAutoFocus
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.ui.components.replyCount
 import org.mochios.crm.R
 
@@ -73,8 +73,46 @@ fun CommentsTab(
     val draft = drafts.draft(target)
     val defaultName = stringResource(R.string.crm_attachment_default_name)
 
-    val replyTarget = draft.reply?.let { id -> findComment(comments, id) }
-    val composer: @Composable (Boolean) -> Unit = { inline ->
+    Column(modifier = Modifier.fillMaxSize()) {
+        // Comment list — takes the remaining height so the composer stays pinned
+        // to the bottom, matching the feeds comment composer.
+        if (comments.isEmpty()) {
+            Box(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .padding(32.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = stringResource(R.string.crm_comment_empty),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        } else {
+            LazyColumn(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth()
+            ) {
+                items(comments, key = { comment -> comment.id }) { comment ->
+                    CommentItem(
+                        comment = comment,
+                        depth = 0,
+                        crmId = crmId,
+                        avatarUrlBuilder = avatarUrlBuilder,
+                        drafts = drafts,
+                        currentUserId = currentUserId,
+                        onReply = { id, _ -> drafts.update(target) { it.copy(reply = id) } },
+                        onEdit = onUpdateComment,
+                        onDelete = onDeleteComment
+                    )
+                }
+            }
+        }
+
+        val replyTarget = draft.reply?.let { id -> findComment(comments, id) }
         ComposeBar(
             value = draft.text,
             onValueChange = { value -> drafts.update(target) { it.copy(text = value) } },
@@ -110,56 +148,9 @@ fun CommentsTab(
                     )
                 }
             },
-            focusRequester = if (inline) rememberAutoFocus() else null,
+            focusRequester = rememberReplyFocus(replyTarget?.id),
             windowInsets = ComposeBarDefaults.NoWindowInsets,
-            showDivider = !inline,
         )
-    }
-
-    Column(modifier = Modifier.fillMaxSize()) {
-        // Comment list — takes the remaining height so the composer stays pinned
-        // to the bottom, matching the feeds comment composer.
-        if (comments.isEmpty()) {
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxWidth()
-                    .padding(32.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = stringResource(R.string.crm_comment_empty),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        } else {
-            LazyColumn(
-                modifier = Modifier
-                    .weight(1f)
-                    .fillMaxWidth()
-            ) {
-                items(comments, key = { comment -> comment.id }) { comment ->
-                    CommentItem(
-                        comment = comment,
-                        depth = 0,
-                        crmId = crmId,
-                        avatarUrlBuilder = avatarUrlBuilder,
-                        drafts = drafts,
-                        currentUserId = currentUserId,
-                        onReply = { id, _ -> drafts.update(target) { it.copy(reply = id) } },
-                        onEdit = onUpdateComment,
-                        onDelete = onDeleteComment,
-                        replyId = replyTarget?.id,
-                        replyBox = { composer(true) },
-                    )
-                }
-            }
-        }
-
-        if (replyTarget == null) {
-            composer(false)
-        }
     }
 }
 
@@ -190,9 +181,6 @@ private fun CommentItem(
     onReply: (String, String) -> Unit,
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit,
-    // The comment replied to, which draws [replyBox] under itself.
-    replyId: String? = null,
-    replyBox: @Composable () -> Unit = {},
     // Folds the comment this one replies to, from the thread line beside it.
     onCollapseParent: (() -> Unit)? = null,
 ) {
@@ -228,7 +216,6 @@ private fun CommentItem(
         replies = replies,
         onToggleCollapse = if (replies > 0) ({ collapsed = !collapsed }) else null,
         onCollapseParent = onCollapseParent,
-        reply = if (replyId == comment.id) replyBox else null,
     ) {
         CommentActions(
             onReply = { onReply(comment.id, comment.name) },
@@ -249,8 +236,6 @@ private fun CommentItem(
             onReply = onReply,
             onEdit = onEdit,
             onDelete = onDelete,
-            replyId = replyId,
-            replyBox = replyBox,
             onCollapseParent = { collapsed = true },
         )
     }

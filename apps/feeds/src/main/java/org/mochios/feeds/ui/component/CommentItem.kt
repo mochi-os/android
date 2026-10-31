@@ -76,8 +76,6 @@ internal fun CommentItem(
     onCollapseParent: (() -> Unit)? = null,
     // The comment a shared link opens the post on.
     highlighted: Boolean = false,
-    // The reply box, drawn under this comment while it is the one replied to.
-    reply: (@Composable () -> Unit)? = null,
 ) {
     val anchor = comment.anchor
     val context = LocalContext.current
@@ -111,7 +109,6 @@ internal fun CommentItem(
         onToggleCollapse = onToggleCollapse,
         onCollapseParent = onCollapseParent,
         highlighted = highlighted,
-        reply = reply,
     ) {
         // Reactions and the action icons share one row: the ReactionBar
         // (pills + add) followed by reply, edit for the comment's author, and

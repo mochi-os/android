@@ -114,8 +114,8 @@ import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.findInThread
-import org.mochios.android.ui.components.rememberAutoFocus
 import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
@@ -189,45 +189,6 @@ fun PostDetailScreen(
     }
 
     val replyTarget = findComment(post?.comments.orEmpty(), replyingTo)
-    val composer: @Composable (Boolean) -> Unit = { inline ->
-        ComposeBar(
-            value = commentText,
-            onValueChange = { viewModel.setCommentText(it) },
-            onSend = { viewModel.sendComment() },
-            isSending = isSendingComment,
-            upload = commentUpload,
-            sendLabel = stringResource(R.string.feeds_send),
-            windowInsets = if (inline) {
-                ComposeBarDefaults.NoWindowInsets
-            } else {
-                ComposeBarDefaults.WindowInsets
-            },
-            attachments = feedsCommentAttachments(
-                attachments = commentAttachments,
-                onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
-                onRemove = { viewModel.removeCommentAttachment(it) },
-                resolveFileName = viewModel::fileName,
-            ),
-            // A comment needs a body; attachments alone will not do.
-            requireText = true,
-            onSearchMentions = { viewModel.searchMembers(it) },
-            banner = feedsComposerBanner(
-                replyFromBanner(
-                    accounts = hosted,
-                    shown = post?.let(::repliesElsewhere) == true,
-                    chosen = replyFrom,
-                    onChoose = { viewModel.setReplyFrom(it) },
-                ),
-                feedsReplyBanner(
-                    replyTarget,
-                    { viewModel.setReplyingTo(null) },
-                ),
-            ),
-            focusRequester = if (inline) rememberAutoFocus() else null,
-            showDivider = !inline,
-        )
-    }
-
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
@@ -332,15 +293,43 @@ fun PostDetailScreen(
             )
         },
         bottomBar = {
-            if (permissions.comment && replyTarget == null) {
-                composer(false)
+            if (permissions.comment) {
+                ComposeBar(
+                    value = commentText,
+                    onValueChange = { viewModel.setCommentText(it) },
+                    onSend = { viewModel.sendComment() },
+                    isSending = isSendingComment,
+                    upload = commentUpload,
+                    sendLabel = stringResource(R.string.feeds_send),
+                    windowInsets = ComposeBarDefaults.WindowInsets,
+                    attachments = feedsCommentAttachments(
+                        attachments = commentAttachments,
+                        onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                        onRemove = { viewModel.removeCommentAttachment(it) },
+                        resolveFileName = viewModel::fileName,
+                    ),
+                    // A comment needs a body; attachments alone will not do.
+                    requireText = true,
+                    onSearchMentions = { viewModel.searchMembers(it) },
+                    banner = feedsComposerBanner(
+                        replyFromBanner(
+                            accounts = hosted,
+                            shown = post?.let(::repliesElsewhere) == true,
+                            chosen = replyFrom,
+                            onChoose = { viewModel.setReplyFrom(it) },
+                        ),
+                        feedsReplyBanner(
+                            replyTarget,
+                            { viewModel.setReplyingTo(null) },
+                        ),
+                    ),
+                    focusRequester = rememberReplyFocus(replyTarget?.id),
+                )
             }
         }
     ) { paddingValues ->
         PostDetailContent(
             viewModel = viewModel,
-            replyId = replyTarget?.id.takeIf { permissions.comment },
-            replyBox = { composer(true) },
             onAddTag = { label -> viewModel.addTag(label, null) },
             showDeleteCommentDialog = { showDeleteCommentDialog = it },
             onBack = onNavigateBack,
@@ -399,9 +388,6 @@ internal fun PostDetailContent(
     // WebView already shows (RSS preview image, source link). Used by the
     // source-view sheet so the pull-up only adds value over the webview.
     showBody: Boolean = true,
-    // The comment replied to, which draws [replyBox] under itself.
-    replyId: String? = null,
-    replyBox: @Composable () -> Unit = {},
 ) {
     val post by viewModel.post.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
@@ -562,7 +548,6 @@ internal fun PostDetailContent(
                             onToggleCollapse = if (row.replies > 0) ({ collapsed.toggle(comment.id) }) else null,
                             onCollapseParent = row.parent?.let { parent -> { collapsed.collapse(parent) } },
                             highlighted = comment.id == focused?.id,
-                            reply = if (replyId == comment.id) replyBox else null,
                         )
                     }
                 }

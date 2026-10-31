@@ -50,7 +50,6 @@ import androidx.navigation.NavController
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.Upload
-import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
@@ -60,6 +59,7 @@ import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
 import org.mochios.wikis.ui.components.WikiContextValue
+import org.mochios.android.i18n.LocalFormat
 
 /**
  * Comments for a single wiki page. Provides [LocalWikiContext] so children can
@@ -186,52 +186,6 @@ private fun CommentsBody(
 ) {
     val isOwner = state.permissions.owner
 
-    val replyingTo = state.replyingTo
-    val target = replyingTo?.let { id -> findComment(state.comments, id) }
-    val form: @Composable (Boolean) -> Unit = { inline ->
-        key(replyingTo) {
-            CommentForm(
-                onSubmit = { body, files ->
-                    if (replyingTo != null) {
-                        onSubmitReply(replyingTo, files)
-                    } else {
-                        onCreate(body, files)
-                    }
-                },
-                resolveFileName = resolveFileName,
-                initialText = if (replyingTo != null) state.replyDraft else "",
-                onTextChange = if (replyingTo != null) onReplyDraftChange else null,
-                placeholder = stringResource(
-                    if (replyingTo != null) R.string.wikis_comment_form_placeholder_reply
-                    else R.string.wikis_comment_form_placeholder_new
-                ),
-                autoFocus = replyingTo != null,
-                upload = upload,
-                banner = target?.let { comment ->
-                    {
-                        ReplyComposerBanner(
-                            label = stringResource(
-                                R.string.wikis_comment_replying_to,
-                                comment.name.ifBlank { comment.author },
-                            ),
-                            preview = comment.body,
-                            cancelLabel = stringResource(
-                                R.string.wikis_comment_clear_reply
-                            ),
-                            onCancel = onCancelReply,
-                        )
-                    }
-                },
-                windowInsets = if (inline) {
-                    ComposeBarDefaults.NoWindowInsets
-                } else {
-                    ComposeBarDefaults.WindowInsets
-                },
-                showDivider = !inline,
-            )
-        }
-    }
-
     Column(modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier.weight(1f)) {
             if (state.comments.isEmpty() && !state.isLoading) {
@@ -254,8 +208,6 @@ private fun CommentsBody(
                             onStartReply = onStartReply,
                             onEdit = onEdit,
                             onDelete = onDelete,
-                            replyId = target?.id.takeIf { canCompose },
-                            replyBox = { form(true) },
                         )
                     }
                     // The server caps a thread page at 200. Web prints the same
@@ -279,8 +231,45 @@ private fun CommentsBody(
             }
         }
 
-        if (canCompose && target == null) {
-            form(false)
+        if (canCompose) {
+            val replyingTo = state.replyingTo
+            val target = replyingTo?.let { id -> findComment(state.comments, id) }
+            key(replyingTo) {
+                CommentForm(
+                    onSubmit = { body, files ->
+                        if (replyingTo != null) {
+                            onSubmitReply(replyingTo, files)
+                        } else {
+                            onCreate(body, files)
+                        }
+                    },
+                    resolveFileName = resolveFileName,
+                    initialText = if (replyingTo != null) state.replyDraft else "",
+                    onTextChange = if (replyingTo != null) onReplyDraftChange else null,
+                    placeholder = stringResource(
+                        if (replyingTo != null) R.string.wikis_comment_form_placeholder_reply
+                        else R.string.wikis_comment_form_placeholder_new
+                    ),
+                    autoFocus = replyingTo != null,
+                    upload = upload,
+                    banner = target?.let { comment ->
+                        {
+                            ReplyComposerBanner(
+                                label = stringResource(
+                                    R.string.wikis_comment_replying_to,
+                                    comment.name.ifBlank { comment.author },
+                                ),
+                                preview = comment.body,
+                                cancelLabel = stringResource(
+                                    R.string.wikis_comment_clear_reply
+                                ),
+                                onCancel = onCancelReply,
+                            )
+                        }
+                    },
+                    windowInsets = ComposeBarDefaults.WindowInsets,
+                )
+            }
         }
     }
 }
