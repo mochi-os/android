@@ -478,13 +478,25 @@ class NetworksScreenTest {
         val unblocked = mutableListOf<String>()
         val unmuted = mutableListOf<String>()
         content(
-            base.copy(blocks = listOf(NetworkBlock(domain = "spam.example")), mutes = listOf(NetworkMute(actor = "https://m.example/users/x"))),
+            base.copy(
+                blocks = listOf(
+                    NetworkBlock(domain = "spam.example"),
+                    NetworkBlock(actor = "did:plc:troll", name = "Troll", address = "troll.bsky.social"),
+                ),
+                mutes = listOf(NetworkMute(actor = "https://m.example/users/x", name = "X")),
+            ),
             onUnblock = { unblocked += it },
             onUnmute = { unmuted += it },
         )
+        // People by their names, with their addresses beneath, never their ids.
+        rule.onNodeWithText("Troll").assertExists()
+        rule.onNodeWithText("troll.bsky.social · " + text(R.string.networks_blocked)).assertExists()
+        rule.onNodeWithText("did:plc:troll").assertDoesNotExist()
+        rule.onNodeWithText("https://m.example/users/x").assertDoesNotExist()
         rule.onNodeWithContentDescription(text(R.string.networks_unblock, "spam.example")).performClick()
-        rule.onNodeWithContentDescription(text(R.string.networks_unmute, "https://m.example/users/x")).performClick()
-        assertEquals(listOf("spam.example"), unblocked)
+        rule.onNodeWithContentDescription(text(R.string.networks_unblock, "Troll")).performClick()
+        rule.onNodeWithContentDescription(text(R.string.networks_unmute, "X")).performClick()
+        assertEquals(listOf("spam.example", "did:plc:troll"), unblocked)
         assertEquals(listOf("https://m.example/users/x"), unmuted)
     }
 }

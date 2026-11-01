@@ -105,15 +105,19 @@ data class NetworkProvider(
     val link: NetworkLink = NetworkLink(),
 )
 
-/** A domain or a person blocked on other networks. */
+/** A domain or a person blocked on other networks: a person with the name and address their network gives. */
 data class NetworkBlock(
     val domain: String = "",
     val actor: String = "",
+    val name: String = "",
+    val address: String = "",
     val created: Long = 0,
 )
 
 data class NetworkMute(
     val actor: String = "",
+    val name: String = "",
+    val address: String = "",
     val created: Long = 0,
 )
 

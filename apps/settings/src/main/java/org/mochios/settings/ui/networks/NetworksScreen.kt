@@ -636,6 +636,21 @@ private fun AccountMenu(account: NetworkAccount, removable: Boolean, actions: Ac
     if (removable) entry(R.string.networks_remove, Icons.Outlined.Delete, actions.onRemove)
 }
 
+/** A row of the blocked and muted list: what it lifts, and what it shows. */
+internal data class ModerationRow(val target: String, val label: String, val address: String, val muted: Boolean)
+
+/**
+ * A person blocked or muted, by their name with their address beneath; their
+ * id only where their network gave neither.
+ */
+internal fun moderationRow(actor: String, name: String, address: String, muted: Boolean): ModerationRow =
+    ModerationRow(
+        target = actor,
+        label = name.ifEmpty { address.ifEmpty { actor } },
+        address = if (name.isNotEmpty()) address else "",
+        muted = muted,
+    )
+
 /**
  * What the user has blocked and muted on other networks: a domain blocked
  * here, a person blocked or muted from their comment in feeds, each lifted
@@ -676,24 +691,28 @@ internal fun ModerationSection(
                 Text(stringResource(R.string.networks_block))
             }
         }
-        val rows = blocks.map { (it.domain.ifEmpty { it.actor }) to false } + mutes.map { it.actor to true }
-        for ((target, muted) in rows) {
+        val rows = blocks.map {
+            if (it.domain.isNotEmpty()) ModerationRow(it.domain, it.domain, "", false)
+            else moderationRow(it.actor, it.name, it.address, false)
+        } + mutes.map { moderationRow(it.actor, it.name, it.address, true) }
+        for (row in rows) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(target, style = MaterialTheme.typography.bodyMedium)
+                    Text(row.label, style = MaterialTheme.typography.bodyMedium)
+                    val status = stringResource(if (row.muted) R.string.networks_muted else R.string.networks_blocked)
                     Text(
-                        stringResource(if (muted) R.string.networks_muted else R.string.networks_blocked),
+                        if (row.address.isNotEmpty()) "${row.address} · $status" else status,
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
                 MochiIconButton(
-                    onClick = { if (muted) onUnmute(target) else onUnblock(target) },
-                    enabled = busy != target,
+                    onClick = { if (row.muted) onUnmute(row.target) else onUnblock(row.target) },
+                    enabled = busy != row.target,
                 ) {
                     Icon(
                         Icons.Outlined.Delete,
-                        contentDescription = stringResource(if (muted) R.string.networks_unmute else R.string.networks_unblock, target),
+                        contentDescription = stringResource(if (row.muted) R.string.networks_unmute else R.string.networks_unblock, row.label),
                     )
                 }
             }
