@@ -302,7 +302,6 @@
     <string name="feeds_source_follow_with">Sekti su</string>
     <string name="feeds_source_read_with">Skaityti su</string>
     <string name="feeds_source_follow_pending">Sekimas laukia patvirtinimo</string>
-    <string name="feeds_source_follow_refused">Sekimas atmestas</string>
     <string name="feeds_import_follows">Importuoti sekamas paskyras iš failo</string>
     <string name="feeds_follows_importing">Importuojama sekamų paskyrų: %1$s; kol kas pridėta: %2$s</string>
     <string name="feeds_publish_to_account">Skelbti į %1$s</string>
@@ -389,4 +388,6 @@
         <item quantity="other">Pasidalinta %s kartų</item>
     </plurals>
     <string name="feeds_also_post_to">Taip pat skelbti į</string>
+    <string name="feeds_source_unfollowed">Nesekama</string>
+    <string name="feeds_source_follow_again">Sekti vėl</string>
 </resources>

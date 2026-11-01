@@ -285,7 +285,6 @@
     <string name="feeds_source_follow_with">Tutake nganggo</string>
     <string name="feeds_source_read_with">Waca nganggo</string>
     <string name="feeds_source_follow_pending">Panjaluk nutake ngenteni</string>
-    <string name="feeds_source_follow_refused">Panjaluk nutake ditolak</string>
     <string name="feeds_import_follows">Impor akun sing ditutake saka berkas</string>
     <string name="feeds_follows_importing">Ngimpor %1$s akun sing ditutake; nganti saiki %2$s ditambahaké</string>
     <string name="feeds_publish_to_account">Terbitaké menyang %1$s</string>
@@ -352,4 +351,6 @@
         <item quantity="other">Dibagi %s kaping</item>
     </plurals>
     <string name="feeds_also_post_to">Uga terbitaké menyang</string>
+    <string name="feeds_source_unfollowed">Ora ditutake</string>
+    <string name="feeds_source_follow_again">Tutake maneh</string>
 </resources>

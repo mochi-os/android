@@ -290,7 +290,6 @@
     <string name="feeds_source_follow_with">شوێنکەوتن بە</string>
     <string name="feeds_source_read_with">خوێندنەوە بە</string>
     <string name="feeds_source_follow_pending">شوێنکەوتن چاوەڕوانە</string>
-    <string name="feeds_source_follow_refused">شوێنکەوتن ڕەتکرایەوە</string>
     <string name="feeds_import_follows">هاوردەکردنی هەژمارە شوێنکەوتراوەکان لە فایلێکەوە</string>
     <string name="feeds_follows_importing">هاوردەکردنی %1$s شوێنکەوتن؛ تا ئێستا %2$s زیاد کراوە</string>
     <string name="feeds_publish_to_account">بڵاوکردنەوە بۆ %1$s</string>
@@ -367,4 +366,6 @@
         <item quantity="other">%s جار بڵاوکراوەتەوە</item>
     </plurals>
     <string name="feeds_also_post_to">هەروەها بڵاوبکەرەوە بۆ</string>
+    <string name="feeds_source_unfollowed">شوێنی ناکەویت</string>
+    <string name="feeds_source_follow_again">دووبارە شوێنکەوتن</string>
 </resources>

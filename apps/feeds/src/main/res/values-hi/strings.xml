@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">इससे फ़ॉलो करें</string>
     <string name="feeds_source_read_with">इससे पढ़ें</string>
     <string name="feeds_source_follow_pending">फ़ॉलो लंबित</string>
-    <string name="feeds_source_follow_refused">फ़ॉलो अस्वीकृत</string>
     <string name="feeds_import_follows">फ़ाइल से फ़ॉलो किए गए अकाउंट इम्पोर्ट करें</string>
     <string name="feeds_follows_importing">%1$s फ़ॉलो किए गए अकाउंट इम्पोर्ट हो रहे हैं; अब तक %2$s जोड़े गए</string>
     <string name="feeds_publish_to_account">%1$s पर प्रकाशित करें</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s बार बूस्ट किया गया</item>
     </plurals>
     <string name="feeds_also_post_to">यहाँ भी प्रकाशित करें</string>
+    <string name="feeds_source_unfollowed">फ़ॉलो नहीं कर रहे</string>
+    <string name="feeds_source_follow_again">फिर से फ़ॉलो करें</string>
 </resources>

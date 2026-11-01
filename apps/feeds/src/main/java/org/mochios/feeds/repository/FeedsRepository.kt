@@ -908,6 +908,15 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /** Follow a followed source's person again where the follow is gone. */
+    suspend fun followSource(feedId: String, source: String): String {
+        try {
+            return api.followSource(feedId, source).unwrap().state
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     // --- Tags ---
 
     suspend fun getTags(feedId: String): List<Tag> {

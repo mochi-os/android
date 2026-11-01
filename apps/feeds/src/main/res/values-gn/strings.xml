@@ -286,7 +286,6 @@
     <string name="feeds_source_follow_with">Emoirũ ko\'águi</string>
     <string name="feeds_source_read_with">Emoñe\'ẽ ko\'águi</string>
     <string name="feeds_source_follow_pending">Jemoirũ oha\'arõ</string>
-    <string name="feeds_source_follow_refused">Jemoirũ oñembotove</string>
     <string name="feeds_import_follows">Egueru mba\'ete removirũva peteĩ marandurendágui</string>
     <string name="feeds_follows_importing">Ojegueru %1$s jemoirũ; %2$s oñembojuajúma ko\'ágã peve</string>
     <string name="feeds_publish_to_account">Emoherakuã %1$s-pe</string>
@@ -361,4 +360,6 @@
         <item quantity="other">Oñemombarete %s jey</item>
     </plurals>
     <string name="feeds_also_post_to">Emoherakuã avei</string>
+    <string name="feeds_source_unfollowed">Ndaremoirũi</string>
+    <string name="feeds_source_follow_again">Emoirũ jey</string>
 </resources>

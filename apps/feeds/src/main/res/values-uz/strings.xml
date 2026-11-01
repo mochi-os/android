@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Obuna boʻlish hisobi</string>
     <string name="feeds_source_read_with">Oʻqish hisobi</string>
     <string name="feeds_source_follow_pending">Obuna kutilmoqda</string>
-    <string name="feeds_source_follow_refused">Obuna rad etildi</string>
     <string name="feeds_import_follows">Obunalarni fayldan import qilish</string>
     <string name="feeds_follows_importing">%1$s ta obuna import qilinmoqda; hozircha %2$s ta qoʻshildi</string>
     <string name="feeds_publish_to_account">Nashr qilish: %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s marta ulashildi</item>
     </plurals>
     <string name="feeds_also_post_to">Shuningdek nashr qilinadigan joylar</string>
+    <string name="feeds_source_unfollowed">Obuna boʻlinmagan</string>
+    <string name="feeds_source_follow_again">Qayta obuna boʻlish</string>
 </resources>

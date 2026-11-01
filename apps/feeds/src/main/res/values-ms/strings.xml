@@ -285,7 +285,6 @@
     <string name="feeds_source_follow_with">Ikuti dengan</string>
     <string name="feeds_source_read_with">Baca dengan</string>
     <string name="feeds_source_follow_pending">Ikutan belum selesai</string>
-    <string name="feeds_source_follow_refused">Ikutan ditolak</string>
     <string name="feeds_import_follows">Import akaun yang diikuti daripada fail</string>
     <string name="feeds_follows_importing">Mengimport %1$s akaun yang diikuti; %2$s ditambah setakat ini</string>
     <string name="feeds_publish_to_account">Terbitkan ke %1$s</string>
@@ -352,4 +351,6 @@
         <item quantity="other">Dikongsi %s kali</item>
     </plurals>
     <string name="feeds_also_post_to">Terbitkan juga ke</string>
+    <string name="feeds_source_unfollowed">Tidak mengikuti</string>
+    <string name="feeds_source_follow_again">Ikuti semula</string>
 </resources>

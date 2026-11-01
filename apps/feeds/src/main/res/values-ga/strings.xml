@@ -309,7 +309,6 @@
     <string name="feeds_source_follow_with">Lean le</string>
     <string name="feeds_source_read_with">Léigh le</string>
     <string name="feeds_source_follow_pending">Leanúint ar feitheamh</string>
-    <string name="feeds_source_follow_refused">Leanúint diúltaithe</string>
     <string name="feeds_import_follows">Iompórtáil cuntais a leantar ó chomhad</string>
     <string name="feeds_follows_importing">Ag iompórtáil %1$s cuntas a leantar; %2$s curtha leis go dtí seo</string>
     <string name="feeds_publish_to_account">Foilsigh chuig %1$s</string>
@@ -416,4 +415,6 @@
         <item quantity="other">Treisithe %s uair</item>
     </plurals>
     <string name="feeds_also_post_to">Foilsigh freisin chuig</string>
+    <string name="feeds_source_unfollowed">Gan leanúint</string>
+    <string name="feeds_source_follow_again">Lean arís</string>
 </resources>

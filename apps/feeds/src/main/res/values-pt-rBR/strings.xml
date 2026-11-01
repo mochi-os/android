@@ -266,7 +266,6 @@
     <string name="feeds_source_follow_with">Seguir com</string>
     <string name="feeds_source_read_with">Ler com</string>
     <string name="feeds_source_follow_pending">Solicitação pendente</string>
-    <string name="feeds_source_follow_refused">Solicitação recusada</string>
     <string name="feeds_import_follows">Importar contas seguidas de um arquivo</string>
     <string name="feeds_follows_importing">Importando %1$s contas seguidas; %2$s adicionadas até agora</string>
     <string name="feeds_publish_to_account">Publicar em %1$s</string>
@@ -343,4 +342,6 @@
         <item quantity="other">Compartilhado %s vezes</item>
     </plurals>
     <string name="feeds_also_post_to">Publicar também em</string>
+    <string name="feeds_source_unfollowed">Não seguindo</string>
+    <string name="feeds_source_follow_again">Seguir novamente</string>
 </resources>

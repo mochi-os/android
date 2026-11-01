@@ -287,7 +287,6 @@
     <string name="feeds_source_follow_with">Swiv avèk</string>
     <string name="feeds_source_read_with">Li avèk</string>
     <string name="feeds_source_follow_pending">Swiv an atant</string>
-    <string name="feeds_source_follow_refused">Swiv refize</string>
     <string name="feeds_import_follows">Enpòte abònman yo depi yon fichye</string>
     <string name="feeds_follows_importing">Ap enpòte %1$s abònman; %2$s ajoute jiskaprezan</string>
     <string name="feeds_publish_to_account">Pibliye sou %1$s</string>
@@ -358,4 +357,6 @@
         <item quantity="other">Pataje %s fwa</item>
     </plurals>
     <string name="feeds_also_post_to">Pibliye tou sou</string>
+    <string name="feeds_source_unfollowed">Pa swiv</string>
+    <string name="feeds_source_follow_again">Swiv ankò</string>
 </resources>

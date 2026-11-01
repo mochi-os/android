@@ -302,7 +302,6 @@
     <string name="feeds_source_follow_with">Подписаться от имени</string>
     <string name="feeds_source_read_with">Читать от имени</string>
     <string name="feeds_source_follow_pending">Подписка ожидает</string>
-    <string name="feeds_source_follow_refused">Подписка отклонена</string>
     <string name="feeds_import_follows">Импортировать подписки из файла</string>
     <string name="feeds_follows_importing">Импорт подписок: %1$s; уже добавлено: %2$s</string>
     <string name="feeds_publish_to_account">Публиковать в %1$s</string>
@@ -399,4 +398,6 @@
         <item quantity="other">Продвинуто %s раза</item>
     </plurals>
     <string name="feeds_also_post_to">Опубликовать также в</string>
+    <string name="feeds_source_unfollowed">Вы не подписаны</string>
+    <string name="feeds_source_follow_again">Подписаться снова</string>
 </resources>

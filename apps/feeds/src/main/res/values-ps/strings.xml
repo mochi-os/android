@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">په دې تعقیب کړئ</string>
     <string name="feeds_source_read_with">په دې ولولئ</string>
     <string name="feeds_source_follow_pending">تعقیب په تمه دی</string>
-    <string name="feeds_source_follow_refused">تعقیب رد شو</string>
     <string name="feeds_import_follows">تعقیب شوي حسابونه له فایل څخه وارد کړئ</string>
     <string name="feeds_follows_importing">%1$s تعقیبونه واردېږي؛ تر اوسه %2$s اضافه شوي</string>
     <string name="feeds_publish_to_account">په %1$s کې خپرول</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s ځله شریک شوی</item>
     </plurals>
     <string name="feeds_also_post_to">همدارنګه خپرول په</string>
+    <string name="feeds_source_unfollowed">تعقیب یې نه کوئ</string>
+    <string name="feeds_source_follow_again">بیا تعقیب کړئ</string>
 </resources>

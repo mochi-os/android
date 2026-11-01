@@ -266,7 +266,6 @@
     <string name="feeds_source_follow_with">Volgen met</string>
     <string name="feeds_source_read_with">Lezen met</string>
     <string name="feeds_source_follow_pending">Volgverzoek in behandeling</string>
-    <string name="feeds_source_follow_refused">Volgverzoek geweigerd</string>
     <string name="feeds_import_follows">Gevolgde accounts uit een bestand importeren</string>
     <string name="feeds_follows_importing">%1$s gevolgde accounts importeren; tot nu toe %2$s toegevoegd</string>
     <string name="feeds_publish_to_account">Publiceren naar %1$s</string>
@@ -302,4 +301,6 @@
     <string name="feeds_community">Gemeenschap</string>
     <string name="feeds_people_you_know">Mensen die u kent</string>
     <string name="feeds_also_post_to">Ook publiceren naar</string>
+    <string name="feeds_source_unfollowed">Niet gevolgd</string>
+    <string name="feeds_source_follow_again">Opnieuw volgen</string>
 </resources>

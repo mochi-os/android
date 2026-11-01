@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">இதன் மூலம் பின்தொடர்</string>
     <string name="feeds_source_read_with">இதன் மூலம் படி</string>
     <string name="feeds_source_follow_pending">பின்தொடர்தல் நிலுவையில்</string>
-    <string name="feeds_source_follow_refused">பின்தொடர்தல் மறுக்கப்பட்டது</string>
     <string name="feeds_import_follows">கோப்பிலிருந்து பின்தொடரும் கணக்குகளை இறக்குமதி செய்</string>
     <string name="feeds_follows_importing">%1$s பின்தொடரல்கள் இறக்குமதி செய்யப்படுகின்றன; இதுவரை %2$s சேர்க்கப்பட்டன</string>
     <string name="feeds_publish_to_account">%1$s இல் வெளியிடு</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s முறை பூஸ்ட் செய்யப்பட்டது</item>
     </plurals>
     <string name="feeds_also_post_to">இங்கும் வெளியிடு</string>
+    <string name="feeds_source_unfollowed">பின்தொடரவில்லை</string>
+    <string name="feeds_source_follow_again">மீண்டும் பின்தொடர்</string>
 </resources>

@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Volg met</string>
     <string name="feeds_source_read_with">Lees met</string>
     <string name="feeds_source_follow_pending">Volgversoek hangende</string>
-    <string name="feeds_source_follow_refused">Volgversoek geweier</string>
     <string name="feeds_import_follows">Voer gevolgde rekeninge uit \'n lêer in</string>
     <string name="feeds_follows_importing">Voer tans %1$s gevolgde rekeninge in; %2$s tot dusver bygevoeg</string>
     <string name="feeds_publish_to_account">Publiseer na %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s keer versterk</item>
     </plurals>
     <string name="feeds_also_post_to">Plaas ook op</string>
+    <string name="feeds_source_unfollowed">Volg nie</string>
+    <string name="feeds_source_follow_again">Volg weer</string>
 </resources>

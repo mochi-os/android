@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">దీనితో అనుసరించండి</string>
     <string name="feeds_source_read_with">దీనితో చదవండి</string>
     <string name="feeds_source_follow_pending">అనుసరణ పెండింగ్‌లో ఉంది</string>
-    <string name="feeds_source_follow_refused">అనుసరణ తిరస్కరించబడింది</string>
     <string name="feeds_import_follows">ఫైల్ నుండి అనుసరిస్తున్న ఖాతాలను దిగుమతి చేయండి</string>
     <string name="feeds_follows_importing">అనుసరిస్తున్న %1$s ఖాతాలను దిగుమతి చేస్తోంది; ఇప్పటివరకు %2$s జోడించబడ్డాయి</string>
     <string name="feeds_publish_to_account">%1$sకి ప్రచురించు</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s సార్లు బూస్ట్ చేయబడింది</item>
     </plurals>
     <string name="feeds_also_post_to">ఇక్కడ కూడా ప్రచురించు</string>
+    <string name="feeds_source_unfollowed">అనుసరించడం లేదు</string>
+    <string name="feeds_source_follow_again">మళ్లీ అనుసరించు</string>
 </resources>

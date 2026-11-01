@@ -17,8 +17,15 @@ data class Source(
     val transform: String = "",
     /**
      * The hosted account a person is followed through, and how the follow
-     * stands: following, pending the other server's acceptance, or refused.
+     * stands: following, pending the other server's acceptance, or
+     * unfollowed, the follow gone - refused or later dropped by their server,
+     * or taken by a block.
      */
     val account: String = "",
+    val state: String = "",
+)
+
+/** How a follow sent again stands. */
+data class SourceFollow(
     val state: String = "",
 )

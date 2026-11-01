@@ -281,7 +281,6 @@
     <string name="feeds_source_follow_with">Theo dõi bằng</string>
     <string name="feeds_source_read_with">Đọc bằng</string>
     <string name="feeds_source_follow_pending">Đang chờ theo dõi</string>
-    <string name="feeds_source_follow_refused">Theo dõi bị từ chối</string>
     <string name="feeds_import_follows">Nhập các tài khoản đang theo dõi từ tệp</string>
     <string name="feeds_follows_importing">Đang nhập %1$s tài khoản đang theo dõi; đã thêm %2$s</string>
     <string name="feeds_publish_to_account">Đăng lên %1$s</string>
@@ -348,4 +347,6 @@
         <item quantity="other">Đã được chia sẻ lại %s lần</item>
     </plurals>
     <string name="feeds_also_post_to">Đăng cả lên</string>
+    <string name="feeds_source_unfollowed">Không theo dõi</string>
+    <string name="feeds_source_follow_again">Theo dõi lại</string>
 </resources>

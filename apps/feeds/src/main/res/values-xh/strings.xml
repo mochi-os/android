@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">I-akhawunti yokulandela</string>
     <string name="feeds_source_read_with">I-akhawunti yokufunda</string>
     <string name="feeds_source_follow_pending">Ukulandela kulindile</string>
-    <string name="feeds_source_follow_refused">Ukulandela kwaliwe</string>
     <string name="feeds_import_follows">Ngenisa ii-akhawunti olandela zona kwifayile</string>
     <string name="feeds_follows_importing">Kungeniswa ii-akhawunti ezili-%1$s olandela zona; sele kongezwe ezi-%2$s</string>
     <string name="feeds_publish_to_account">Papasha ku-%1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Ikhuthazwe izihlandlo ezi-%s</item>
     </plurals>
     <string name="feeds_also_post_to">Papasha naku</string>
+    <string name="feeds_source_unfollowed">Awulandeli</string>
+    <string name="feeds_source_follow_again">Landela kwakhona</string>
 </resources>

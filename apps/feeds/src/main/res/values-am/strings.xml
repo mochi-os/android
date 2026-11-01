@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">የሚከተሉበት መለያ</string>
     <string name="feeds_source_read_with">የሚያነቡበት መለያ</string>
     <string name="feeds_source_follow_pending">መከተል በመጠባበቅ ላይ</string>
-    <string name="feeds_source_follow_refused">መከተል ተቀባይነት አላገኘም</string>
     <string name="feeds_import_follows">የሚከተሏቸውን መለያዎች ከፋይል አስመጣ</string>
     <string name="feeds_follows_importing">%1$s የሚከተሏቸው መለያዎች በማስመጣት ላይ፤ እስካሁን %2$s ታክለዋል</string>
     <string name="feeds_publish_to_account">ወደ %1$s አትም</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s ጊዜ ተጋርቷል</item>
     </plurals>
     <string name="feeds_also_post_to">በተጨማሪ የሚታተምበት</string>
+    <string name="feeds_source_unfollowed">አልተከተሉም</string>
+    <string name="feeds_source_follow_again">እንደገና ተከተል</string>
 </resources>

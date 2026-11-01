@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">যা দিয়ে ফলো করবেন</string>
     <string name="feeds_source_read_with">যা দিয়ে পড়বেন</string>
     <string name="feeds_source_follow_pending">ফলো অপেক্ষমাণ</string>
-    <string name="feeds_source_follow_refused">ফলো প্রত্যাখ্যাত</string>
     <string name="feeds_import_follows">একটি ফাইল থেকে ফলো করা অ্যাকাউন্ট ইমপোর্ট করুন</string>
     <string name="feeds_follows_importing">%1$sটি ফলো ইমপোর্ট করা হচ্ছে; এ পর্যন্ত %2$sটি যোগ হয়েছে</string>
     <string name="feeds_publish_to_account">%1$s-এ প্রকাশ করুন</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s বার বুস্ট করা হয়েছে</item>
     </plurals>
     <string name="feeds_also_post_to">আরও যেখানে প্রকাশ করবে</string>
+    <string name="feeds_source_unfollowed">ফলো করা হচ্ছে না</string>
+    <string name="feeds_source_follow_again">আবার ফলো করুন</string>
 </resources>

@@ -370,6 +370,45 @@ class PostNetworksScreenTest {
     }
 
     @Test
+    fun `a Bluesky person followed through an account is named as one`() {
+        rule.setContent {
+            SourceCard(
+                source = Source(id = "s", type = "person/posts", name = "Alice", url = "did:plc:alice", account = "b1", state = "following"),
+                onEdit = {}, onRemove = {}, onPoll = {},
+            )
+        }
+        rule.onNodeWithText("Posts on Bluesky").assertIsDisplayed()
+        rule.onAllNodesWithText("Posts on ActivityPub").assertCountEquals(0)
+    }
+
+    @Test
+    fun `a source whose follow is gone reads as not following, not refused, and offers to follow again`() {
+        var followed = 0
+        rule.setContent {
+            SourceCard(
+                source = Source(id = "s", type = "person/posts", name = "Alice", url = "https://there.example/u/a", account = "h1", state = "unfollowed"),
+                onEdit = {}, onRemove = {}, onPoll = {}, onFollow = { followed++ },
+            )
+        }
+        rule.onNodeWithText("Not following").assertIsDisplayed()
+        rule.onAllNodesWithText("Follow refused").assertCountEquals(0)
+        rule.onNodeWithContentDescription("Follow again").performClick()
+        assertEquals(1, followed)
+    }
+
+    @Test
+    fun `a source still followed offers no follow again`() {
+        rule.setContent {
+            SourceCard(
+                source = Source(id = "s", type = "person/posts", name = "Alice", url = "https://there.example/u/a", account = "h1", state = "following"),
+                onEdit = {}, onRemove = {}, onPoll = {}, onFollow = {},
+            )
+        }
+        rule.onAllNodesWithContentDescription("Follow again").assertCountEquals(0)
+        rule.onAllNodesWithText("Not following").assertCountEquals(0)
+    }
+
+    @Test
     fun `a person found elsewhere is followed into the feed chosen`() {
         var followed: Pair<String, String>? = null
         rule.setContent {

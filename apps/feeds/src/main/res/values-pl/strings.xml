@@ -302,7 +302,6 @@
     <string name="feeds_source_follow_with">Obserwuj z</string>
     <string name="feeds_source_read_with">Czytaj z</string>
     <string name="feeds_source_follow_pending">Obserwowanie oczekuje</string>
-    <string name="feeds_source_follow_refused">Obserwowanie odrzucone</string>
     <string name="feeds_import_follows">Importuj obserwowane konta z pliku</string>
     <string name="feeds_follows_importing">Importowanie obserwowanych kont: %1$s; dotąd dodano %2$s</string>
     <string name="feeds_publish_to_account">Publikuj w %1$s</string>
@@ -399,4 +398,6 @@
         <item quantity="other">Podbito %s raza</item>
     </plurals>
     <string name="feeds_also_post_to">Opublikuj też w</string>
+    <string name="feeds_source_unfollowed">Nie obserwujesz</string>
+    <string name="feeds_source_follow_again">Obserwuj ponownie</string>
 </resources>

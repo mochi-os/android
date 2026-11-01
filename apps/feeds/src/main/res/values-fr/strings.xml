@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Suivre avec</string>
     <string name="feeds_source_read_with">Lire avec</string>
     <string name="feeds_source_follow_pending">Abonnement en attente</string>
-    <string name="feeds_source_follow_refused">Abonnement refusé</string>
     <string name="feeds_import_follows">Importer des abonnements depuis un fichier</string>
     <string name="feeds_follows_importing">Import de %1$s abonnements ; %2$s ajoutés pour l\'instant</string>
     <string name="feeds_publish_to_account">Publier sur %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Partagé %s fois</item>
     </plurals>
     <string name="feeds_also_post_to">Publier aussi sur</string>
+    <string name="feeds_source_unfollowed">Non suivi</string>
+    <string name="feeds_source_follow_again">Suivre à nouveau</string>
 </resources>

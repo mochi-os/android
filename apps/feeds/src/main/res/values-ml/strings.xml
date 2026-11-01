@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">ഇതുപയോഗിച്ച് പിന്തുടരുക</string>
     <string name="feeds_source_read_with">ഇതുപയോഗിച്ച് വായിക്കുക</string>
     <string name="feeds_source_follow_pending">പിന്തുടരൽ തീർപ്പാക്കാനുണ്ട്</string>
-    <string name="feeds_source_follow_refused">പിന്തുടരൽ നിരസിച്ചു</string>
     <string name="feeds_import_follows">ഒരു ഫയലിൽ നിന്ന് പിന്തുടരുന്ന അക്കൗണ്ടുകൾ ഇമ്പോർട്ട് ചെയ്യുക</string>
     <string name="feeds_follows_importing">പിന്തുടരുന്ന %1$s അക്കൗണ്ടുകൾ ഇമ്പോർട്ട് ചെയ്യുന്നു; ഇതുവരെ %2$s ചേർത്തു</string>
     <string name="feeds_publish_to_account">%1$s-ലേക്ക് പ്രസിദ്ധീകരിക്കുക</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s തവണ ബൂസ്റ്റ് ചെയ്തു</item>
     </plurals>
     <string name="feeds_also_post_to">ഇവിടെയും പ്രസിദ്ധീകരിക്കുക</string>
+    <string name="feeds_source_unfollowed">പിന്തുടരുന്നില്ല</string>
+    <string name="feeds_source_follow_again">വീണ്ടും പിന്തുടരുക</string>
 </resources>

@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Følg med</string>
     <string name="feeds_source_read_with">Læs med</string>
     <string name="feeds_source_follow_pending">Følg afventer</string>
-    <string name="feeds_source_follow_refused">Følg afvist</string>
     <string name="feeds_import_follows">Importér fulgte konti fra en fil</string>
     <string name="feeds_follows_importing">Importerer %1$s fulgte konti; %2$s tilføjet indtil videre</string>
     <string name="feeds_publish_to_account">Udgiv til %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Boostet %s gange</item>
     </plurals>
     <string name="feeds_also_post_to">Udgiv også til</string>
+    <string name="feeds_source_unfollowed">Følger ikke</string>
+    <string name="feeds_source_follow_again">Følg igen</string>
 </resources>

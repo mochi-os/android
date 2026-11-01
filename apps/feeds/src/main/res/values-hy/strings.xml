@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Հետևել հաշվով</string>
     <string name="feeds_source_read_with">Կարդալ հաշվով</string>
     <string name="feeds_source_follow_pending">Հետևումը սպասման մեջ է</string>
-    <string name="feeds_source_follow_refused">Հետևումը մերժվեց</string>
     <string name="feeds_import_follows">Ներմուծել հետևումները ֆայլից</string>
     <string name="feeds_follows_importing">Ներմուծվում է %1$s հետևում, մինչ այժմ ավելացվել է %2$s</string>
     <string name="feeds_publish_to_account">Հրապարակել %1$s-ում</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Տարածվել է %s անգամ</item>
     </plurals>
     <string name="feeds_also_post_to">Հրապարակել նաև</string>
+    <string name="feeds_source_unfollowed">Չեք հետևում</string>
+    <string name="feeds_source_follow_again">Կրկին հետևել</string>
 </resources>

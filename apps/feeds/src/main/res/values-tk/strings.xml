@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Şunuň bilen yzarla</string>
     <string name="feeds_source_read_with">Şunuň bilen oka</string>
     <string name="feeds_source_follow_pending">Yzarlama garaşylýar</string>
-    <string name="feeds_source_follow_refused">Yzarlama ret edildi</string>
     <string name="feeds_import_follows">Faýldan yzarlanýan hasaplary import et</string>
     <string name="feeds_follows_importing">Yzarlanýan hasaplar import edilýär: %1$s; häzirlikçe goşuldy: %2$s</string>
     <string name="feeds_publish_to_account">%1$s hasabynda neşir etmek</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s gezek paýlaşyldy</item>
     </plurals>
     <string name="feeds_also_post_to">Şeýle hem neşir et</string>
+    <string name="feeds_source_unfollowed">Yzarlanmaýar</string>
+    <string name="feeds_source_follow_again">Täzeden yzarla</string>
 </resources>

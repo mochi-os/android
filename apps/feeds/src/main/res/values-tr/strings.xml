@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Şununla takip et</string>
     <string name="feeds_source_read_with">Şununla oku</string>
     <string name="feeds_source_follow_pending">Takip beklemede</string>
-    <string name="feeds_source_follow_refused">Takip reddedildi</string>
     <string name="feeds_import_follows">Takip edilenleri dosyadan içe aktar</string>
     <string name="feeds_follows_importing">%1$s takip içe aktarılıyor; şimdiye kadar %2$s eklendi</string>
     <string name="feeds_publish_to_account">%1$s hesabında yayımla</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s kez boostlandı</item>
     </plurals>
     <string name="feeds_also_post_to">Ayrıca yayımlanacak yerler</string>
+    <string name="feeds_source_unfollowed">Takip edilmiyor</string>
+    <string name="feeds_source_follow_again">Yeniden takip et</string>
 </resources>

@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Дагах бүртгэл</string>
     <string name="feeds_source_read_with">Унших бүртгэл</string>
     <string name="feeds_source_follow_pending">Дагалт хүлээгдэж байна</string>
-    <string name="feeds_source_follow_refused">Дагалтыг татгалзсан</string>
     <string name="feeds_import_follows">Дагалтуудыг файлаас импортлох</string>
     <string name="feeds_follows_importing">%1$s дагалтыг импортлож байна; одоогоор %2$s нэмэгдсэн</string>
     <string name="feeds_publish_to_account">Нийтлэх: %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s удаа хуваалцсан</item>
     </plurals>
     <string name="feeds_also_post_to">Мөн нийтлэх</string>
+    <string name="feeds_source_unfollowed">Дагаагүй байна</string>
+    <string name="feeds_source_follow_again">Дахин дагах</string>
 </resources>

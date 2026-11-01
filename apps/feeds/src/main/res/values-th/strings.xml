@@ -281,7 +281,6 @@
     <string name="feeds_source_follow_with">ติดตามด้วย</string>
     <string name="feeds_source_read_with">อ่านด้วย</string>
     <string name="feeds_source_follow_pending">รอการติดตาม</string>
-    <string name="feeds_source_follow_refused">การติดตามถูกปฏิเสธ</string>
     <string name="feeds_import_follows">นำเข้าบัญชีที่ติดตามจากไฟล์</string>
     <string name="feeds_follows_importing">กำลังนำเข้าบัญชีที่ติดตาม %1$s รายการ เพิ่มแล้ว %2$s รายการ</string>
     <string name="feeds_publish_to_account">เผยแพร่ไปยัง %1$s</string>
@@ -348,4 +347,6 @@
         <item quantity="other">ถูกบูสต์ %s ครั้ง</item>
     </plurals>
     <string name="feeds_also_post_to">เผยแพร่เพิ่มเติมไปยัง</string>
+    <string name="feeds_source_unfollowed">ไม่ได้ติดตาม</string>
+    <string name="feeds_source_follow_again">ติดตามอีกครั้ง</string>
 </resources>

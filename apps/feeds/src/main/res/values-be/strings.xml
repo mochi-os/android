@@ -304,7 +304,6 @@
     <string name="feeds_source_follow_with">Падпісацца праз</string>
     <string name="feeds_source_read_with">Чытаць праз</string>
     <string name="feeds_source_follow_pending">Падпіска чакае</string>
-    <string name="feeds_source_follow_refused">Падпіска адхілена</string>
     <string name="feeds_import_follows">Імпартаваць падпіскі з файла</string>
     <string name="feeds_follows_importing">Імпарт падпісак: %1$s; пакуль дададзена %2$s</string>
     <string name="feeds_publish_to_account">Публікаваць у %1$s</string>
@@ -401,4 +400,6 @@
         <item quantity="other">Пашыраны %s разу</item>
     </plurals>
     <string name="feeds_also_post_to">Таксама публікаваць у</string>
+    <string name="feeds_source_unfollowed">Не падпісаны</string>
+    <string name="feeds_source_follow_again">Падпісацца зноў</string>
 </resources>

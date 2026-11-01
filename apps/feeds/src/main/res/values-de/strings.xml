@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Folgen mit</string>
     <string name="feeds_source_read_with">Lesen mit</string>
     <string name="feeds_source_follow_pending">Folgeanfrage ausstehend</string>
-    <string name="feeds_source_follow_refused">Folgeanfrage abgelehnt</string>
     <string name="feeds_import_follows">Gefolgte Konten aus einer Datei importieren</string>
     <string name="feeds_follows_importing">%1$s gefolgte Konten werden importiert; bisher %2$s hinzugefügt</string>
     <string name="feeds_publish_to_account">Auf %1$s veröffentlichen</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s Mal geteilt</item>
     </plurals>
     <string name="feeds_also_post_to">Auch veröffentlichen auf</string>
+    <string name="feeds_source_unfollowed">Nicht gefolgt</string>
+    <string name="feeds_source_follow_again">Erneut folgen</string>
 </resources>

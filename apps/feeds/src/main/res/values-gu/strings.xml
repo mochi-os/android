@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">આનાથી ફોલો કરો</string>
     <string name="feeds_source_read_with">આનાથી વાંચો</string>
     <string name="feeds_source_follow_pending">ફોલો બાકી છે</string>
-    <string name="feeds_source_follow_refused">ફોલો નકાર્યું</string>
     <string name="feeds_import_follows">ફાઇલમાંથી ફોલો કરેલા ખાતાઓ આયાત કરો</string>
     <string name="feeds_follows_importing">%1$s ફોલો કરેલા ખાતાઓ આયાત થઈ રહ્યાં છે; અત્યાર સુધીમાં %2$s ઉમેર્યા</string>
     <string name="feeds_publish_to_account">%1$s પર પ્રકાશિત કરો</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s વાર બૂસ્ટ થયું</item>
     </plurals>
     <string name="feeds_also_post_to">આ પર પણ પ્રકાશિત કરો</string>
+    <string name="feeds_source_unfollowed">ફોલો કરી રહ્યાં નથી</string>
+    <string name="feeds_source_follow_again">ફરીથી ફોલો કરો</string>
 </resources>

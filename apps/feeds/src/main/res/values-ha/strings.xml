@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Asusun da zai bi</string>
     <string name="feeds_source_read_with">Asusun da zai karanta</string>
     <string name="feeds_source_follow_pending">Bi yana jira</string>
-    <string name="feeds_source_follow_refused">An ƙi bi</string>
     <string name="feeds_import_follows">Shigo da waɗanda kake bi daga fayil</string>
     <string name="feeds_follows_importing">Ana shigo da waɗanda kake bi %1$s; an ƙara %2$s zuwa yanzu</string>
     <string name="feeds_publish_to_account">Wallafa zuwa %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">An haɓaka sau %s</item>
     </plurals>
     <string name="feeds_also_post_to">Haka kuma wallafa zuwa</string>
+    <string name="feeds_source_unfollowed">Ba a bi ba</string>
+    <string name="feeds_source_follow_again">Sake bi</string>
 </resources>

@@ -356,7 +356,8 @@
     <string name="feeds_source_follow_with">Follow with</string>
     <string name="feeds_source_read_with">Read with</string>
     <string name="feeds_source_follow_pending">Follow pending</string>
-    <string name="feeds_source_follow_refused">Follow refused</string>
+    <string name="feeds_source_unfollowed">Not following</string>
+    <string name="feeds_source_follow_again">Follow again</string>
     <string name="feeds_import_follows">Import follows from a file</string>
     <string name="feeds_follows_importing">Importing %1$s follows; %2$s added so far</string>
     <plurals name="feeds_follows_imported">

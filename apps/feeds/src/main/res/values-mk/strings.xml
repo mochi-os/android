@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Следи со</string>
     <string name="feeds_source_read_with">Читај со</string>
     <string name="feeds_source_follow_pending">Следењето чека</string>
-    <string name="feeds_source_follow_refused">Следењето е одбиено</string>
     <string name="feeds_import_follows">Увези следени сметки од датотека</string>
     <string name="feeds_follows_importing">Се увезуваат %1$s следени сметки; досега се додадени %2$s</string>
     <string name="feeds_publish_to_account">Објавувај на %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Споделено %s пати</item>
     </plurals>
     <string name="feeds_also_post_to">Објави и на</string>
+    <string name="feeds_source_unfollowed">Не следите</string>
+    <string name="feeds_source_follow_again">Следи повторно</string>
 </resources>

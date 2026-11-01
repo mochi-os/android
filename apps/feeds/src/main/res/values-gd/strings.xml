@@ -304,7 +304,6 @@
     <string name="feeds_source_follow_with">Lean le</string>
     <string name="feeds_source_read_with">Leugh le</string>
     <string name="feeds_source_follow_pending">Leantainn a\' feitheamh</string>
-    <string name="feeds_source_follow_refused">Leantainn air a dhiùltadh</string>
     <string name="feeds_import_follows">Ion-phortaich cunntasan a leanas tu o fhaidhle</string>
     <string name="feeds_follows_importing">Ag ion-phortadh nan cunntasan a leanas tu: %1$s; air an cur ris gu ruige seo: %2$s</string>
     <string name="feeds_publish_to_account">Foillsich gu %1$s</string>
@@ -401,4 +400,6 @@
         <item quantity="other">Air a bhrosnachadh %s turas</item>
     </plurals>
     <string name="feeds_also_post_to">Foillsich cuideachd gu</string>
+    <string name="feeds_source_unfollowed">Gun leantainn</string>
+    <string name="feeds_source_follow_again">Lean a-rithist</string>
 </resources>

@@ -29,6 +29,7 @@ import androidx.compose.material.icons.automirrored.outlined.ViewList
 import androidx.compose.material.icons.outlined.AlternateEmail
 import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.PersonAdd
 import androidx.compose.material.icons.outlined.Tag
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
@@ -168,7 +169,8 @@ fun SourcesTab(
                             source = source,
                             onEdit = { showEditDialog = source },
                             onRemove = { showRemoveDialog = source },
-                            onPoll = { viewModel.pollSource(source.id) }
+                            onPoll = { viewModel.pollSource(source.id) },
+                            onFollow = { viewModel.followSource(source.id) }
                         )
                     }
                 }
@@ -319,7 +321,8 @@ internal fun SourceCard(
     source: Source,
     onEdit: () -> Unit,
     onRemove: () -> Unit,
-    onPoll: () -> Unit
+    onPoll: () -> Unit,
+    onFollow: () -> Unit = {}
 ) {
     // Leading glyph + human label per source type, mirroring the web client's
     // sources list (calendar for memories, link for a Mochi feed, RSS glyph).
@@ -415,9 +418,9 @@ internal fun SourceCard(
                         CredibilityBadge(value = credibilityValue)
                     }
                     // How a follow through a hosted account stands.
-                    if (source.state == "pending" || source.state == "refused") {
+                    if (source.state == "pending" || source.state == "unfollowed") {
                         Spacer(modifier = Modifier.width(8.dp))
-                        FollowBadge(refused = source.state == "refused")
+                        FollowBadge(gone = source.state == "unfollowed")
                     }
                 }
                 metadataLines.forEach { line ->
@@ -435,6 +438,12 @@ internal fun SourceCard(
             if (pollable(source)) {
                 MochiIconButton(onClick = onPoll, modifier = Modifier.size(36.dp)) {
                     Icon(Icons.Outlined.Refresh, contentDescription = stringResource(R.string.feeds_source_poll), modifier = Modifier.size(20.dp))
+                }
+            }
+            // A follow gone is sent again.
+            if (source.state == "unfollowed") {
+                MochiIconButton(onClick = onFollow, modifier = Modifier.size(36.dp)) {
+                    Icon(Icons.Outlined.PersonAdd, contentDescription = stringResource(R.string.feeds_source_follow_again), modifier = Modifier.size(20.dp))
                 }
             }
             MochiIconButton(onClick = onEdit, modifier = Modifier.size(36.dp)) {
@@ -464,8 +473,10 @@ internal fun sourceTypeLabel(source: Source): String = when (source.type) {
     "feed/memories" -> stringResource(R.string.feeds_source_type_feed_memories)
     "account/timeline" -> stringResource(R.string.feeds_source_type_account_timeline)
     "account/posts" -> stringResource(R.string.feeds_source_type_account_posts)
+    // A person on Bluesky is named by their did, followed through an account
+    // or read with none; anyone else is a person on the fediverse.
     "person/posts" -> stringResource(
-        if (source.account.isNotEmpty()) R.string.feeds_source_type_fediverse_posts else R.string.feeds_source_type_bluesky_posts,
+        if (source.url.startsWith("did:")) R.string.feeds_source_type_bluesky_posts else R.string.feeds_source_type_fediverse_posts,
     )
     "tag/posts" -> stringResource(R.string.feeds_source_type_hashtag)
     "generator/posts", "list/posts" -> stringResource(R.string.feeds_source_type_bluesky)
@@ -473,10 +484,10 @@ internal fun sourceTypeLabel(source: Source): String = when (source.type) {
 }
 
 @Composable
-private fun FollowBadge(refused: Boolean) {
-    val colour = if (refused) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurfaceVariant
+private fun FollowBadge(gone: Boolean) {
+    val colour = if (gone) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurfaceVariant
     Text(
-        text = stringResource(if (refused) R.string.feeds_source_follow_refused else R.string.feeds_source_follow_pending),
+        text = stringResource(if (gone) R.string.feeds_source_unfollowed else R.string.feeds_source_follow_pending),
         style = MaterialTheme.typography.labelSmall,
         fontWeight = FontWeight.Medium,
         color = colour,

@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">මෙයින් අනුගමනය කරන්න</string>
     <string name="feeds_source_read_with">මෙයින් කියවන්න</string>
     <string name="feeds_source_follow_pending">අනුගමනය පොරොත්තුවෙන්</string>
-    <string name="feeds_source_follow_refused">අනුගමනය ප්‍රතික්ෂේප විය</string>
     <string name="feeds_import_follows">ගොනුවකින් අනුගමනය කරන ගිණුම් ආයාත කරන්න</string>
     <string name="feeds_follows_importing">අනුගමනය කරන ගිණුම් %1$sක් ආයාත කරමින්; මෙතෙක් %2$sක් එක් කරන ලදී</string>
     <string name="feeds_publish_to_account">%1$s වෙත පළ කරන්න</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s වරක් බෙදාගත්තා</item>
     </plurals>
     <string name="feeds_also_post_to">මෙහිද පළ කරන්න</string>
+    <string name="feeds_source_unfollowed">අනුගමනය නොකරයි</string>
+    <string name="feeds_source_follow_again">නැවත අනුගමනය කරන්න</string>
 </resources>

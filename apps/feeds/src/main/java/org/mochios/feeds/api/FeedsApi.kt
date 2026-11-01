@@ -32,6 +32,7 @@ import org.mochios.feeds.model.Voted
 import org.mochios.feeds.model.SavedListResponse
 import org.mochios.feeds.model.SavedToggleResponse
 import org.mochios.feeds.model.Source
+import org.mochios.feeds.model.SourceFollow
 import org.mochios.feeds.model.Tag
 import org.mochios.feeds.model.User
 import retrofit2.Response
@@ -491,6 +492,13 @@ interface FeedsApi {
         @Path("feedId") feedId: String,
         @Field("source") source: String
     ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/sources/follow")
+    suspend fun followSource(
+        @Path("feedId") feedId: String,
+        @Field("source") source: String
+    ): Response<ApiResponse<SourceFollow>>
 
     // --- Tags ---
 

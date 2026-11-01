@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Követés ezzel</string>
     <string name="feeds_source_read_with">Olvasás ezzel</string>
     <string name="feeds_source_follow_pending">Követés függőben</string>
-    <string name="feeds_source_follow_refused">Követés elutasítva</string>
     <string name="feeds_import_follows">Követések importálása fájlból</string>
     <string name="feeds_follows_importing">Követések importálása: %1$s; eddig hozzáadva: %2$s</string>
     <string name="feeds_publish_to_account">Közzététel ide: %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s-szor megosztva</item>
     </plurals>
     <string name="feeds_also_post_to">Közzététel ide is</string>
+    <string name="feeds_source_unfollowed">Nincs követve</string>
+    <string name="feeds_source_follow_again">Követés újra</string>
 </resources>

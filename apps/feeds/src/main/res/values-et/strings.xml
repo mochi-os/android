@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Jälgi kontoga</string>
     <string name="feeds_source_read_with">Loe kontoga</string>
     <string name="feeds_source_follow_pending">Jälgimine ootel</string>
-    <string name="feeds_source_follow_refused">Jälgimine keelatud</string>
     <string name="feeds_import_follows">Impordi jälgitavad failist</string>
     <string name="feeds_follows_importing">Imporditakse %1$s jälgitavat; seni lisatud %2$s</string>
     <string name="feeds_publish_to_account">Avalda kontole %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Jagatud %s korda</item>
     </plurals>
     <string name="feeds_also_post_to">Avalda ka</string>
+    <string name="feeds_source_unfollowed">Ei jälgi</string>
+    <string name="feeds_source_follow_again">Jälgi uuesti</string>
 </resources>

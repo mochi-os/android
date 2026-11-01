@@ -281,7 +281,6 @@
     <string name="feeds_source_follow_with">フォローに使うアカウント</string>
     <string name="feeds_source_read_with">読み込みに使うアカウント</string>
     <string name="feeds_source_follow_pending">フォロー承認待ち</string>
-    <string name="feeds_source_follow_refused">フォローが拒否されました</string>
     <string name="feeds_import_follows">ファイルからフォローをインポート</string>
     <string name="feeds_follows_importing">%1$s 件のフォローをインポート中、これまでに %2$s 件を追加</string>
     <string name="feeds_publish_to_account">%1$s に公開</string>
@@ -348,4 +347,6 @@
         <item quantity="other">%s 回ブーストされました</item>
     </plurals>
     <string name="feeds_also_post_to">あわせて公開する先</string>
+    <string name="feeds_source_unfollowed">フォローしていません</string>
+    <string name="feeds_source_follow_again">もう一度フォロー</string>
 </resources>

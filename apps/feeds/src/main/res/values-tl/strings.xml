@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Sundan gamit ang</string>
     <string name="feeds_source_read_with">Basahin gamit ang</string>
     <string name="feeds_source_follow_pending">Nakabinbin ang pagsunod</string>
-    <string name="feeds_source_follow_refused">Tinanggihan ang pagsunod</string>
     <string name="feeds_import_follows">I-import ang mga sinusundang account mula sa file</string>
     <string name="feeds_follows_importing">Ini-import ang %1$s sinusundang account; %2$s na ang naidagdag</string>
     <string name="feeds_publish_to_account">Ilathala sa %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Na-boost nang %s beses</item>
     </plurals>
     <string name="feeds_also_post_to">Ilathala rin sa</string>
+    <string name="feeds_source_unfollowed">Hindi sinusundan</string>
+    <string name="feeds_source_follow_again">Sundan muli</string>
 </resources>

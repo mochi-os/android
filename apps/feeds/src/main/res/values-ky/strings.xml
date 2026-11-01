@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Жазылуучу аккаунт</string>
     <string name="feeds_source_read_with">Окуучу аккаунт</string>
     <string name="feeds_source_follow_pending">Жазылуу күтүүдө</string>
-    <string name="feeds_source_follow_refused">Жазылуу четке кагылды</string>
     <string name="feeds_import_follows">Жазылууларды файлдан импорттоо</string>
     <string name="feeds_follows_importing">%1$s жазылуу импорттолууда; азырынча %2$s кошулду</string>
     <string name="feeds_publish_to_account">Жарыялоо: %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s жолу бөлүшүлдү</item>
     </plurals>
     <string name="feeds_also_post_to">Ошондой эле жарыялоо</string>
+    <string name="feeds_source_unfollowed">Жазылган эмессиз</string>
+    <string name="feeds_source_follow_again">Кайра жазылуу</string>
 </resources>

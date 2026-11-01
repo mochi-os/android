@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Fuata kwa</string>
     <string name="feeds_source_read_with">Soma kwa</string>
     <string name="feeds_source_follow_pending">Ufuatiliaji unasubiri</string>
-    <string name="feeds_source_follow_refused">Ufuatiliaji umekataliwa</string>
     <string name="feeds_import_follows">Ingiza akaunti unazofuata kutoka kwenye faili</string>
     <string name="feeds_follows_importing">Inaingiza akaunti %1$s unazofuata; %2$s zimeongezwa hadi sasa</string>
     <string name="feeds_publish_to_account">Chapisha kwenye %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Imeshirikiwa mara %s</item>
     </plurals>
     <string name="feeds_also_post_to">Chapisha pia kwenye</string>
+    <string name="feeds_source_unfollowed">Hufuati</string>
+    <string name="feeds_source_follow_again">Fuata tena</string>
 </resources>

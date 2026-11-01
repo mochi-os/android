@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">यावरून फॉलो करा</string>
     <string name="feeds_source_read_with">यावरून वाचा</string>
     <string name="feeds_source_follow_pending">फॉलो प्रलंबित</string>
-    <string name="feeds_source_follow_refused">फॉलो नाकारले</string>
     <string name="feeds_import_follows">फाइलमधून फॉलो केलेली खाती आयात करा</string>
     <string name="feeds_follows_importing">%1$s फॉलो आयात करत आहे; आतापर्यंत %2$s जोडले</string>
     <string name="feeds_publish_to_account">%1$s वर प्रकाशित करा</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s वेळा बूस्ट केले</item>
     </plurals>
     <string name="feeds_also_post_to">येथेही प्रकाशित करा</string>
+    <string name="feeds_source_unfollowed">फॉलो करत नाही</string>
+    <string name="feeds_source_follow_again">पुन्हा फॉलो करा</string>
 </resources>

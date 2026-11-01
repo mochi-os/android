@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Ακολούθηση με</string>
     <string name="feeds_source_read_with">Ανάγνωση με</string>
     <string name="feeds_source_follow_pending">Ακολούθηση σε εκκρεμότητα</string>
-    <string name="feeds_source_follow_refused">Η ακολούθηση απορρίφθηκε</string>
     <string name="feeds_import_follows">Εισαγωγή ακολουθούμενων από αρχείο</string>
     <string name="feeds_follows_importing">Εισαγωγή %1$s ακολουθούμενων, %2$s προστέθηκαν μέχρι στιγμής</string>
     <string name="feeds_publish_to_account">Δημοσίευση στο %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Ενισχύθηκε %s φορές</item>
     </plurals>
     <string name="feeds_also_post_to">Δημοσίευση και σε</string>
+    <string name="feeds_source_unfollowed">Δεν ακολουθείτε</string>
+    <string name="feeds_source_follow_again">Ακολούθηση ξανά</string>
 </resources>

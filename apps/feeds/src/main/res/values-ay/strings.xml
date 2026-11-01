@@ -286,7 +286,6 @@
     <string name="feeds_source_follow_with">Akampi arkaña</string>
     <string name="feeds_source_read_with">Akampi liyiña</string>
     <string name="feeds_source_follow_pending">Arkañax suyt\'ayatawa</string>
-    <string name="feeds_source_follow_refused">Arkañax jan katuqatawa</string>
     <string name="feeds_import_follows">Mä archivot arkat cuentanak apantaña</string>
     <string name="feeds_follows_importing">%1$s arkat cuentanak apantaski; jichhakamax %2$s yapxatata</string>
     <string name="feeds_publish_to_account">%1$s ukar yatiyaña</string>
@@ -361,4 +360,6 @@
         <item quantity="other">%s kuti yatiyata</item>
     </plurals>
     <string name="feeds_also_post_to">Ukhamaraki kawkir yatiyaña</string>
+    <string name="feeds_source_unfollowed">Janiw arkatäkiti</string>
+    <string name="feeds_source_follow_again">Wasitat arkaña</string>
 </resources>

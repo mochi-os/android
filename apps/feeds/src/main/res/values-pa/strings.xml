@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">ਇਸ ਨਾਲ ਫਾਲੋ ਕਰੋ</string>
     <string name="feeds_source_read_with">ਇਸ ਨਾਲ ਪੜ੍ਹੋ</string>
     <string name="feeds_source_follow_pending">ਫਾਲੋ ਬਕਾਇਆ ਹੈ</string>
-    <string name="feeds_source_follow_refused">ਫਾਲੋ ਰੱਦ ਕੀਤਾ ਗਿਆ</string>
     <string name="feeds_import_follows">ਫ਼ਾਈਲ ਤੋਂ ਫਾਲੋ ਕੀਤੇ ਖਾਤੇ ਆਯਾਤ ਕਰੋ</string>
     <string name="feeds_follows_importing">%1$s ਫਾਲੋ ਕੀਤੇ ਖਾਤੇ ਆਯਾਤ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ; ਹੁਣ ਤੱਕ %2$s ਜੋੜੇ ਗਏ</string>
     <string name="feeds_publish_to_account">%1$s \'ਤੇ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s ਵਾਰ ਬੂਸਟ ਕੀਤਾ</item>
     </plurals>
     <string name="feeds_also_post_to">ਇੱਥੇ ਵੀ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ</string>
+    <string name="feeds_source_unfollowed">ਫਾਲੋ ਨਹੀਂ ਕਰ ਰਹੇ</string>
+    <string name="feeds_source_follow_again">ਮੁੜ ਫਾਲੋ ਕਰੋ</string>
 </resources>

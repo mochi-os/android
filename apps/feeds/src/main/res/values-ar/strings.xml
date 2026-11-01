@@ -316,7 +316,6 @@
     <string name="feeds_source_follow_with">المتابعة باستخدام</string>
     <string name="feeds_source_read_with">القراءة باستخدام</string>
     <string name="feeds_source_follow_pending">المتابعة قيد الانتظار</string>
-    <string name="feeds_source_follow_refused">رُفضت المتابعة</string>
     <string name="feeds_import_follows">استيراد الحسابات المتابَعة من ملف</string>
     <string name="feeds_follows_importing">جارٍ استيراد %1$s من الحسابات المتابَعة؛ أُضيف %2$s حتى الآن</string>
     <string name="feeds_publish_to_account">النشر إلى %1$s</string>
@@ -433,4 +432,6 @@
         <item quantity="other">أُعيد نشره %s مرات</item>
     </plurals>
     <string name="feeds_also_post_to">انشر أيضًا على</string>
+    <string name="feeds_source_unfollowed">غير متابَع</string>
+    <string name="feeds_source_follow_again">متابعة مجددًا</string>
 </resources>

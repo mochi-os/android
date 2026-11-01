@@ -295,7 +295,6 @@
     <string name="feeds_source_follow_with">Прати са</string>
     <string name="feeds_source_read_with">Читај са</string>
     <string name="feeds_source_follow_pending">Праћење на чекању</string>
-    <string name="feeds_source_follow_refused">Праћење одбијено</string>
     <string name="feeds_import_follows">Увези праћења из датотеке</string>
     <string name="feeds_follows_importing">Увози се %1$s праћења; до сада додато %2$s</string>
     <string name="feeds_publish_to_account">Објављуј на %1$s</string>
@@ -382,4 +381,6 @@
         <item quantity="other">Подељено %s пута</item>
     </plurals>
     <string name="feeds_also_post_to">Објави и на</string>
+    <string name="feeds_source_unfollowed">Не пратите</string>
+    <string name="feeds_source_follow_again">Прати поново</string>
 </resources>

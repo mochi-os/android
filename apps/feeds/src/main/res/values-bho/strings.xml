@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">फॉलो करे वाला खाता</string>
     <string name="feeds_source_read_with">पढ़े वाला खाता</string>
     <string name="feeds_source_follow_pending">फॉलो बाकी बा</string>
-    <string name="feeds_source_follow_refused">फॉलो नामंजूर भइल</string>
     <string name="feeds_import_follows">फाइल से फॉलो कइल खाता इंपोर्ट करीं</string>
     <string name="feeds_follows_importing">%1$s फॉलो कइल खाता इंपोर्ट हो रहल बा; अब तक %2$s जुड़ल</string>
     <string name="feeds_publish_to_account">%1$s पर प्रकाशित करीं</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s बेर बूस्ट भइल</item>
     </plurals>
     <string name="feeds_also_post_to">एहू पर प्रकाशित करीं</string>
+    <string name="feeds_source_unfollowed">फॉलो नइखीं करत</string>
+    <string name="feeds_source_follow_again">फेर से फॉलो करीं</string>
 </resources>

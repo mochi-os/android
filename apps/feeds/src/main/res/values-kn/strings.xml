@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">ಅನುಸರಿಸುವ ಖಾತೆ</string>
     <string name="feeds_source_read_with">ಓದುವ ಖಾತೆ</string>
     <string name="feeds_source_follow_pending">ಅನುಸರಣೆ ಬಾಕಿ ಇದೆ</string>
-    <string name="feeds_source_follow_refused">ಅನುಸರಣೆ ನಿರಾಕರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_import_follows">ಫೈಲ್‌ನಿಂದ ಅನುಸರಿಸುವ ಖಾತೆಗಳನ್ನು ಆಮದು ಮಾಡಿ</string>
     <string name="feeds_follows_importing">%1$s ಅನುಸರಿಸುವ ಖಾತೆಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗುತ್ತಿದೆ; ಇಲ್ಲಿಯವರೆಗೆ %2$s ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_publish_to_account">%1$s ಗೆ ಪ್ರಕಟಿಸಿ</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s ಬಾರಿ ಬೂಸ್ಟ್ ಮಾಡಲಾಗಿದೆ</item>
     </plurals>
     <string name="feeds_also_post_to">ಇಲ್ಲಿಯೂ ಪ್ರಕಟಿಸಿ</string>
+    <string name="feeds_source_unfollowed">ಅನುಸರಿಸುತ್ತಿಲ್ಲ</string>
+    <string name="feeds_source_follow_again">ಮತ್ತೆ ಅನುಸರಿಸಿ</string>
 </resources>

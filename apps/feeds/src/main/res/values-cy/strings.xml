@@ -316,7 +316,6 @@
     <string name="feeds_source_follow_with">Dilyn gyda</string>
     <string name="feeds_source_read_with">Darllen gyda</string>
     <string name="feeds_source_follow_pending">Dilyn yn aros</string>
-    <string name="feeds_source_follow_refused">Dilyn wedi\'i wrthod</string>
     <string name="feeds_import_follows">Mewnforio dilyniadau o ffeil</string>
     <string name="feeds_follows_importing">Yn mewnforio %1$s dilyniad; %2$s wedi\'u hychwanegu hyd yma</string>
     <string name="feeds_publish_to_account">Cyhoeddi i %1$s</string>
@@ -433,4 +432,6 @@
         <item quantity="other">Wedi\'i hybu %s gwaith</item>
     </plurals>
     <string name="feeds_also_post_to">Cyhoeddi hefyd i</string>
+    <string name="feeds_source_unfollowed">Ddim yn dilyn</string>
+    <string name="feeds_source_follow_again">Dilyn eto</string>
 </resources>

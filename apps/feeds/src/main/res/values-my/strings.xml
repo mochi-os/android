@@ -281,7 +281,6 @@
     <string name="feeds_source_follow_with">စောင့်ကြည့်မည့် အကောင့်</string>
     <string name="feeds_source_read_with">ဖတ်မည့် အကောင့်</string>
     <string name="feeds_source_follow_pending">စောင့်ကြည့်မှု ဆိုင်းငံ့ထားသည်</string>
-    <string name="feeds_source_follow_refused">စောင့်ကြည့်မှု ငြင်းပယ်ခံရသည်</string>
     <string name="feeds_import_follows">ဖိုင်မှ စောင့်ကြည့်ထားသော အကောင့်များကို တင်သွင်းမည်</string>
     <string name="feeds_follows_importing">စောင့်ကြည့်မှု %1$s ခုကို တင်သွင်းနေသည်၊ ယခုထိ %2$s ခု ထည့်ပြီး</string>
     <string name="feeds_publish_to_account">%1$s သို့ ထုတ်ဝေမည်</string>
@@ -348,4 +347,6 @@
         <item quantity="other">%s ကြိမ် မျှဝေထားသည်</item>
     </plurals>
     <string name="feeds_also_post_to">ထပ်မံ ထုတ်ဝေရန် နေရာ</string>
+    <string name="feeds_source_unfollowed">စောင့်ကြည့်မနေပါ</string>
+    <string name="feeds_source_follow_again">ထပ်မံ စောင့်ကြည့်မည်</string>
 </resources>

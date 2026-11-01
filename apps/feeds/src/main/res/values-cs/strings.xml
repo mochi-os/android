@@ -302,7 +302,6 @@
     <string name="feeds_source_follow_with">Sledovat z účtu</string>
     <string name="feeds_source_read_with">Číst z účtu</string>
     <string name="feeds_source_follow_pending">Sledování čeká na schválení</string>
-    <string name="feeds_source_follow_refused">Sledování odmítnuto</string>
     <string name="feeds_import_follows">Importovat sledované účty ze souboru</string>
     <string name="feeds_follows_importing">Import sledovaných účtů: %1$s; zatím přidáno: %2$s</string>
     <string name="feeds_publish_to_account">Publikovat do %1$s</string>
@@ -389,4 +388,6 @@
         <item quantity="other">Sdíleno %skrát</item>
     </plurals>
     <string name="feeds_also_post_to">Publikovat také do</string>
+    <string name="feeds_source_unfollowed">Nesledováno</string>
+    <string name="feeds_source_follow_again">Znovu sledovat</string>
 </resources>

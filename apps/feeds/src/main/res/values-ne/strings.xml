@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">फलो गर्ने खाता</string>
     <string name="feeds_source_read_with">पढ्ने खाता</string>
     <string name="feeds_source_follow_pending">फलो विचाराधीन</string>
-    <string name="feeds_source_follow_refused">फलो अस्वीकार गरियो</string>
     <string name="feeds_import_follows">फाइलबाट फलो गरिएका खाताहरू आयात गर्नुहोस्</string>
     <string name="feeds_follows_importing">%1$s फलो गरिएका खाताहरू आयात गर्दै; हालसम्म %2$s थपियो</string>
     <string name="feeds_publish_to_account">%1$s मा प्रकाशित गर्नुहोस्</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s पटक बुस्ट गरिएको</item>
     </plurals>
     <string name="feeds_also_post_to">यहाँ पनि प्रकाशित गर्नुहोस्</string>
+    <string name="feeds_source_unfollowed">फलो गरिएको छैन</string>
+    <string name="feeds_source_follow_again">फेरि फलो गर्नुहोस्</string>
 </resources>

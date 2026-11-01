@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Seuraa tilillä</string>
     <string name="feeds_source_read_with">Lue tilillä</string>
     <string name="feeds_source_follow_pending">Seuraaminen odottaa</string>
-    <string name="feeds_source_follow_refused">Seuraaminen hylätty</string>
     <string name="feeds_import_follows">Tuo seuratut tiedostosta</string>
     <string name="feeds_follows_importing">Tuodaan %1$s seurattua; %2$s lisätty tähän mennessä</string>
     <string name="feeds_publish_to_account">Julkaise tilille %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Tehostettu %s kertaa</item>
     </plurals>
     <string name="feeds_also_post_to">Julkaise myös kohteisiin</string>
+    <string name="feeds_source_unfollowed">Ei seurata</string>
+    <string name="feeds_source_follow_again">Seuraa uudelleen</string>
 </resources>

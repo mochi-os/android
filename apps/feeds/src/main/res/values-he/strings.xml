@@ -302,7 +302,6 @@
     <string name="feeds_source_follow_with">מעקב באמצעות</string>
     <string name="feeds_source_read_with">קריאה באמצעות</string>
     <string name="feeds_source_follow_pending">מעקב ממתין</string>
-    <string name="feeds_source_follow_refused">המעקב נדחה</string>
     <string name="feeds_import_follows">ייבוא נעקבים מקובץ</string>
     <string name="feeds_follows_importing">מייבא %1$s נעקבים; %2$s נוספו עד כה</string>
     <string name="feeds_publish_to_account">פרסום אל %1$s</string>
@@ -389,4 +388,6 @@
         <item quantity="other">הודהד %s פעמים</item>
     </plurals>
     <string name="feeds_also_post_to">פרסום גם אל</string>
+    <string name="feeds_source_unfollowed">לא במעקב</string>
+    <string name="feeds_source_follow_again">עקוב שוב</string>
 </resources>

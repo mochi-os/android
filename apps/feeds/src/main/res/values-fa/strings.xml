@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">دنبال کردن با</string>
     <string name="feeds_source_read_with">خواندن با</string>
     <string name="feeds_source_follow_pending">دنبال کردن در انتظار</string>
-    <string name="feeds_source_follow_refused">دنبال کردن رد شد</string>
     <string name="feeds_import_follows">وارد کردن دنبال‌شده‌ها از فایل</string>
     <string name="feeds_follows_importing">در حال وارد کردن %1$s دنبال‌شده؛ تاکنون %2$s مورد افزوده شد</string>
     <string name="feeds_publish_to_account">انتشار در %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s بار بازنشر شده</item>
     </plurals>
     <string name="feeds_also_post_to">همچنین انتشار در</string>
+    <string name="feeds_source_unfollowed">دنبال نمی‌کنید</string>
+    <string name="feeds_source_follow_again">دنبال کردن دوباره</string>
 </resources>

@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Bi vê bişopîne</string>
     <string name="feeds_source_read_with">Bi vê bixwîne</string>
     <string name="feeds_source_follow_pending">Şopandin li benda pejirandinê ye</string>
-    <string name="feeds_source_follow_refused">Şopandin hate redkirin</string>
     <string name="feeds_import_follows">Şopandinan ji pelekê îthal bike</string>
     <string name="feeds_follows_importing">Şopandin têne îthalkirin: %1$s; heta niha hatin zêdekirin: %2$s</string>
     <string name="feeds_publish_to_account">Li %1$s biweşîne</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s caran hat parvekirin</item>
     </plurals>
     <string name="feeds_also_post_to">Herwiha biweşîne li</string>
+    <string name="feeds_source_unfollowed">Nayê şopandin</string>
+    <string name="feeds_source_follow_again">Dîsa bişopîne</string>
 </resources>

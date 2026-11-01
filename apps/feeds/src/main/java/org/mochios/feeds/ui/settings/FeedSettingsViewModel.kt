@@ -472,6 +472,17 @@ class FeedSettingsViewModel @Inject constructor(
         }
     }
 
+    fun followSource(source: String) {
+        viewModelScope.launch {
+            try {
+                repository.followSource(feedId, source)
+                loadSources()
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            }
+        }
+    }
+
     fun pollSource(source: String) {
         viewModelScope.launch {
             try {

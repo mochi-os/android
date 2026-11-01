@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Seguir con</string>
     <string name="feeds_source_read_with">Ler con</string>
     <string name="feeds_source_follow_pending">Seguimento pendente</string>
-    <string name="feeds_source_follow_refused">Seguimento rexeitado</string>
     <string name="feeds_import_follows">Importar seguimentos dun ficheiro</string>
     <string name="feeds_follows_importing">Importando %1$s seguimentos; %2$s engadidos ata agora</string>
     <string name="feeds_publish_to_account">Publicar en %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Impulsado %s veces</item>
     </plurals>
     <string name="feeds_also_post_to">Publicar tamén en</string>
+    <string name="feeds_source_unfollowed">Non o segues</string>
+    <string name="feeds_source_follow_again">Seguir de novo</string>
 </resources>

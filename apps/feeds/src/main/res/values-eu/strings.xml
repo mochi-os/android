@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Jarraitu honekin</string>
     <string name="feeds_source_read_with">Irakurri honekin</string>
     <string name="feeds_source_follow_pending">Jarraipena zain</string>
-    <string name="feeds_source_follow_refused">Jarraipena ukatuta</string>
     <string name="feeds_import_follows">Inportatu jarraitutakoak fitxategi batetik</string>
     <string name="feeds_follows_importing">%1$s jarraitutako inportatzen; orain arte %2$s gehitu dira</string>
     <string name="feeds_publish_to_account">Argitaratu %1$s(e)n</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s aldiz bultzatua</item>
     </plurals>
     <string name="feeds_also_post_to">Argitaratu hemen ere</string>
+    <string name="feeds_source_unfollowed">Ez duzu jarraitzen</string>
+    <string name="feeds_source_follow_again">Jarraitu berriro</string>
 </resources>

@@ -311,7 +311,6 @@
     <string name="feeds_source_follow_with">Segwi bil-kont</string>
     <string name="feeds_source_read_with">Aqra bil-kont</string>
     <string name="feeds_source_follow_pending">Segwiment pendenti</string>
-    <string name="feeds_source_follow_refused">Segwiment miċħud</string>
     <string name="feeds_import_follows">Importa l-kontijiet segwiti minn fajl</string>
     <string name="feeds_follows_importing">Qed jiġu importati %1$s kontijiet segwiti; %2$s miżjuda s\'issa</string>
     <string name="feeds_publish_to_account">Ippubblika fuq %1$s</string>
@@ -418,4 +417,6 @@
         <item quantity="other">Maqsum %s darbiet</item>
     </plurals>
     <string name="feeds_also_post_to">Ippubblika wkoll fuq</string>
+    <string name="feeds_source_unfollowed">Mhux qed issegwi</string>
+    <string name="feeds_source_follow_again">Erġa\' segwi</string>
 </resources>

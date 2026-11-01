@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">Kanaan hordofi</string>
     <string name="feeds_source_read_with">Kanaan dubbisi</string>
     <string name="feeds_source_follow_pending">Hordoffiin eegamaa jira</string>
-    <string name="feeds_source_follow_refused">Hordoffiin didameera</string>
     <string name="feeds_import_follows">Akkaawuntiiwwan hordofaman faayilii irraa alaa galchi</string>
     <string name="feeds_follows_importing">Hordoffiiwwan %1$s alaa galchaa jira; hanga ammaatti %2$s dabalameera</string>
     <string name="feeds_publish_to_account">%1$s irratti maxxansi</string>
@@ -365,4 +364,6 @@
         <item quantity="other">Yeroo %s qoodameera</item>
     </plurals>
     <string name="feeds_also_post_to">Akkasumas maxxansi</string>
+    <string name="feeds_source_unfollowed">Hin hordofamne</string>
+    <string name="feeds_source_follow_again">Irra deebiin hordofi</string>
 </resources>

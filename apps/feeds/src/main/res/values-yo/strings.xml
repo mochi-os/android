@@ -286,7 +286,6 @@
     <string name="feeds_source_follow_with">Tẹ̀lé pẹ̀lú</string>
     <string name="feeds_source_read_with">Kà pẹ̀lú</string>
     <string name="feeds_source_follow_pending">Ìtẹ̀lé ń dúró</string>
-    <string name="feeds_source_follow_refused">A kọ ìtẹ̀lé</string>
     <string name="feeds_import_follows">Kó àwọn tí o ń tẹ̀lé wọlé láti fáìlì</string>
     <string name="feeds_follows_importing">A ń kó ìtẹ̀lé %1$s wọlé; a ti fi %2$s kún báyìí</string>
     <string name="feeds_publish_to_account">Tẹ̀jáde sí %1$s</string>
@@ -353,4 +352,6 @@
         <item quantity="other">A ti gbé e ga ní ìgbà %s</item>
     </plurals>
     <string name="feeds_also_post_to">Tún tẹ̀jáde sí</string>
+    <string name="feeds_source_unfollowed">Kò tẹ̀lé</string>
+    <string name="feeds_source_follow_again">Tẹ̀lé lẹ́ẹ̀kan sí i</string>
 </resources>

@@ -288,7 +288,6 @@
     <string name="feeds_source_follow_with">נאָכפֿאָלגן מיט</string>
     <string name="feeds_source_read_with">לייענען מיט</string>
     <string name="feeds_source_follow_pending">נאָכפֿאָלגן וואַרט</string>
-    <string name="feeds_source_follow_refused">נאָכפֿאָלגן אָפּגעוואָרפֿן</string>
     <string name="feeds_import_follows">אימפּאָרטירן נאָכגעפֿאָלגטע קאָנטעס פֿון אַ טעקע</string>
     <string name="feeds_follows_importing">אימפּאָרטירט %1$s נאָכגעפֿאָלגטע; ביז איצט צוגעלייגט %2$s</string>
     <string name="feeds_publish_to_account">פּובליקירן אויף %1$s</string>
@@ -365,4 +364,6 @@
         <item quantity="other">%s מאָל פֿאַרשפּרייט</item>
     </plurals>
     <string name="feeds_also_post_to">אויך פּובליקירן אויף</string>
+    <string name="feeds_source_unfollowed">פֿאָלגט ניט נאָך</string>
+    <string name="feeds_source_follow_again">נאָכפֿאָלגן ווידער</string>
 </resources>

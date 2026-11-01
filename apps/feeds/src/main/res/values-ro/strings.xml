@@ -295,7 +295,6 @@
     <string name="feeds_source_follow_with">Urmărește cu</string>
     <string name="feeds_source_read_with">Citește cu</string>
     <string name="feeds_source_follow_pending">Urmărire în așteptare</string>
-    <string name="feeds_source_follow_refused">Urmărire refuzată</string>
     <string name="feeds_import_follows">Importă conturi urmărite dintr-un fișier</string>
     <string name="feeds_follows_importing">Se importă conturi urmărite: %1$s; adăugate până acum: %2$s</string>
     <string name="feeds_publish_to_account">Publică pe %1$s</string>
@@ -382,4 +381,6 @@
         <item quantity="other">Distribuit de %s de ori</item>
     </plurals>
     <string name="feeds_also_post_to">Publică și pe</string>
+    <string name="feeds_source_unfollowed">Neurmărit</string>
+    <string name="feeds_source_follow_again">Urmărește din nou</string>
 </resources>
