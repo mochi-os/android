@@ -122,6 +122,9 @@ data class ViewPostResponse(
     val member: Member = Member(),
     val can_vote: Boolean = false,
     val can_comment: Boolean = false,
+    /** Whether the reader manages the forum, which lets them edit or delete
+     *  anyone's post or comment. */
+    val can_manage: Boolean = false,
     val can_moderate: Boolean = false,
     /** Whether the reader follows the post; null for a post in a forum they
      *  do not hold, which they cannot follow. */

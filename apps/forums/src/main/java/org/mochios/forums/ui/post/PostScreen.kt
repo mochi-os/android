@@ -272,6 +272,7 @@ fun PostScreen(
             postAuthor = uiState.post.member,
             forumId = viewModel.forumId,
             currentIdentity = uiState.identity,
+            canManage = uiState.canManage,
             canModerate = uiState.canModerate,
             actions = commentActions,
             canComment = uiState.canComment && !uiState.post.locked,
@@ -368,7 +369,7 @@ fun PostScreen(
                                 expanded = showPostMenu,
                                 onDismiss = { showPostMenu = false },
                                 post = uiState.post,
-                                canEdit = isPostAuthor || uiState.canModerate,
+                                canEdit = isPostAuthor || uiState.canManage,
                                 canModerate = uiState.canModerate,
                                 isAuthor = isPostAuthor,
                                 onEdit = { onEditPost(viewModel.forumId, viewModel.postId) },
@@ -450,7 +451,7 @@ fun PostScreen(
                             PostHeader(
                                 post = uiState.post,
                                 canVote = uiState.canVote,
-                                canEdit = isPostAuthor || uiState.canModerate,
+                                canEdit = isPostAuthor || uiState.canManage,
                                 forumId = viewModel.forumId,
                                 onVote = { viewModel.votePost(it) },
                                 onComment = if (uiState.canComment && !uiState.post.locked) {
@@ -493,6 +494,7 @@ fun PostScreen(
                                 rows = forumRows(focused?.let { listOf(it) } ?: uiState.comments, collapsed),
                                 forumId = viewModel.forumId,
                                 currentIdentity = uiState.identity,
+                                canManage = uiState.canManage,
                                 canModerate = uiState.canModerate,
                                 actions = commentActions,
                                 postAuthor = uiState.post.member,
@@ -1056,6 +1058,7 @@ private fun LazyListScope.commentsItems(
     rows: List<CommentRow<ForumComment>>,
     forumId: String,
     currentIdentity: String,
+    canManage: Boolean,
     canModerate: Boolean,
     actions: CommentActions,
     postAuthor: String,
@@ -1066,7 +1069,7 @@ private fun LazyListScope.commentsItems(
         val c = row.comment
         item(key = c.id) {
             val isAuthor = c.member == currentIdentity && currentIdentity.isNotBlank()
-            val canEditThis = isAuthor || canModerate
+            val canEditThis = isAuthor || canManage
             CommentCard(
                 comment = c,
                 depth = row.depth,
@@ -1114,6 +1117,7 @@ private fun AttachmentComments(
     postAuthor: String,
     forumId: String,
     currentIdentity: String,
+    canManage: Boolean,
     canModerate: Boolean,
     actions: CommentActions,
     canComment: Boolean,
@@ -1171,6 +1175,7 @@ private fun AttachmentComments(
                 rows = forumRows(shown, collapsed),
                 forumId = forumId,
                 currentIdentity = currentIdentity,
+                canManage = canManage,
                 canModerate = canModerate,
                 actions = panelActions,
                 postAuthor = postAuthor,

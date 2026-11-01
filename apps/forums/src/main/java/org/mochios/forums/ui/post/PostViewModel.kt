@@ -39,6 +39,9 @@ data class PostUiState(
     val comments: List<ForumComment> = emptyList(),
     val canVote: Boolean = false,
     val canComment: Boolean = false,
+    /** Whether the reader manages the forum, which the server requires to
+     *  edit or delete someone else's post or comment. */
+    val canManage: Boolean = false,
     val canModerate: Boolean = false,
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
@@ -47,7 +50,7 @@ data class PostUiState(
     val replyTo: ForumComment? = null,
     val deleted: Boolean = false,
     /** Bound identity for the current session — used to gate the Edit
-     *  menu items on (author == me) || canModerate. */
+     *  menu items on (author == me) || canManage. */
     val identity: String = "",
     /** Message resource for a rejection the forum owner has just pushed. */
     @StringRes val rejected: Int? = null,
@@ -177,6 +180,7 @@ class PostViewModel @Inject constructor(
                     comments = r.comments,
                     canVote = r.can_vote,
                     canComment = r.can_comment,
+                    canManage = r.can_manage,
                     canModerate = r.can_moderate,
                     following = r.following,
                     isLoading = false
@@ -207,6 +211,7 @@ class PostViewModel @Inject constructor(
                     comments = r.comments,
                     canVote = r.can_vote,
                     canComment = r.can_comment,
+                    canManage = r.can_manage,
                     canModerate = r.can_moderate,
                     following = r.following,
                     isRefreshing = false,
