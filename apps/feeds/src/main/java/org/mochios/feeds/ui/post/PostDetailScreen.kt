@@ -127,6 +127,7 @@ import org.mochios.feeds.ui.component.PostMediaGrid
 import org.mochios.feeds.ui.component.PostPollView
 import org.mochios.feeds.ui.component.PostWarning
 import org.mochios.feeds.ui.component.QuoteCard
+import org.mochios.feeds.ui.component.boostAccount
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.hasBadges
 import org.mochios.feeds.ui.component.openable
@@ -229,13 +230,13 @@ fun PostDetailScreen(
                         }
                     }
                     // For managers the post's source, pinning, and a boost of a
-                    // post from another network from the first hosted account;
+                    // post from another network from the hosted account on its own network;
                     // for every reader the post's copies on other networks.
                     post?.let { current ->
                         val copies = openable(current.copies)
                         if (permissions.manage || copies.isNotEmpty()) {
                             val sourceUrl = current.source?.url?.takeIf { it.isNotEmpty() }
-                            val booster = hosted.firstOrNull()?.takeIf { current.elsewhere }
+                            val booster = boostAccount(current, hosted)?.takeIf { current.elsewhere }
                             Box {
                                 MochiIconButton(onClick = { showOverflowMenu = true }) {
                                     Icon(

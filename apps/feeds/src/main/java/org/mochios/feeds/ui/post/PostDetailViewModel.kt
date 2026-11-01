@@ -34,8 +34,9 @@ import org.mochios.feeds.model.Tag
 import org.mochios.feeds.repository.FeedsRepository
 import javax.inject.Inject
 import org.mochios.feeds.ui.component.applied
+import org.mochios.feeds.ui.component.boostAccount
+import org.mochios.feeds.ui.component.boostAccounts
 import org.mochios.feeds.ui.component.boostedFrom
-import org.mochios.feeds.ui.component.hostedFediverse
 import org.mochios.feeds.ui.component.onFediverse
 
 @HiltViewModel
@@ -123,8 +124,9 @@ class PostDetailViewModel @Inject constructor(
     val actionMessage: StateFlow<Int?> = _actionMessage.asStateFlow()
 
     /**
-     * The user's hosted fediverse accounts, read once a post with a copy there
-     * or from there is shown: a boost is made from the first.
+     * The user's hosted accounts on the fediverse and Bluesky, read once a post
+     * with a copy on the fediverse or from another network is shown: a boost
+     * is made from the one on the post's own network.
      */
     private val _hosted = MutableStateFlow<List<PublishAccount>>(emptyList())
     val hosted: StateFlow<List<PublishAccount>> = _hosted.asStateFlow()
@@ -395,7 +397,7 @@ class PostDetailViewModel @Inject constructor(
         if (!onFediverse(post) || _hosted.value.isNotEmpty()) return
         viewModelScope.launch {
             try {
-                _hosted.value = hostedFediverse(repository.networkAccounts())
+                _hosted.value = boostAccounts(repository.networkAccounts())
             } catch (_: Exception) {
                 // Without them the post simply offers no boost.
             }
@@ -437,10 +439,10 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
-    /** Boost the post from another network from the first hosted account, or take the boost back. */
+    /** Boost the post from another network from the hosted account on its own network, or take the boost back. */
     fun toggleBoost() {
         val current = _post.value ?: return
-        val account = _hosted.value.firstOrNull() ?: return
+        val account = boostAccount(current, _hosted.value) ?: return
         val boosted = boostedFrom(current, account)
         viewModelScope.launch {
             try {

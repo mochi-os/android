@@ -22,17 +22,30 @@ internal const val POLL_DURATION_DEFAULT = 86400
 /** The visibilities a post may be made with, public first. */
 internal val VISIBILITIES = listOf("public", "unlisted", "followers")
 
-/** The user's hosted fediverse accounts: a boost is made from the first. */
+/** The user's hosted fediverse accounts, which a person there is followed through. */
 internal fun hostedFediverse(accounts: List<PublishAccount>): List<PublishAccount> =
     accounts.filter { it.hosted && it.type == "fediverse" }
+
+/** The user's hosted accounts a post from another network is boosted from: the fediverse's and Bluesky's. */
+internal fun boostAccounts(accounts: List<PublishAccount>): List<PublishAccount> =
+    accounts.filter { it.hosted && (it.type == "fediverse" || it.type == "bluesky") }
+
+/**
+ * The account a post from another network is boosted from: the first of [accounts] on the
+ * post's own network, Bluesky for one whose id there is an at:// URI, else the fediverse.
+ */
+internal fun boostAccount(post: Post, accounts: List<PublishAccount>): PublishAccount? {
+    val network = if (post.remote.startsWith("at://")) "bluesky" else "fediverse"
+    return accounts.firstOrNull { it.type == network }
+}
 
 /** Whether the post is on the fediverse: a copy of it there, or it came from there. */
 internal fun onFediverse(post: Post): Boolean =
     post.copies.any { it.network == "fediverse" } || post.elsewhere
 
-/** Whether the post is boosted from [account]: it holds a copy there under the account's address. */
+/** Whether the post is boosted from [account]: it holds a copy on the account's network under its address. */
 internal fun boostedFrom(post: Post, account: PublishAccount?): Boolean =
-    account != null && post.copies.any { it.network == "fediverse" && it.address == account.identifier }
+    account != null && post.copies.any { it.network == account.type && it.address == account.identifier }
 
 /**
  * Whether a comment is by a person on another network, whom the owner may

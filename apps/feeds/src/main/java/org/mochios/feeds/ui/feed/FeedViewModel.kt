@@ -54,7 +54,8 @@ import javax.inject.Inject
 import kotlin.time.Duration
 import org.mochios.feeds.ui.component.applied
 import org.mochios.feeds.ui.component.boostedFrom
-import org.mochios.feeds.ui.component.hostedFediverse
+import org.mochios.feeds.ui.component.boostAccount
+import org.mochios.feeds.ui.component.boostAccounts
 import org.mochios.feeds.ui.component.onFediverse
 
 private const val PREFS = "mochi_feeds"
@@ -159,8 +160,9 @@ class FeedViewModel @Inject constructor(
     val actionEvents: SharedFlow<FeedActionEvent> = _actionEvents.asSharedFlow()
 
     /**
-     * The user's hosted fediverse accounts, read once a post from or with a
-     * copy on the fediverse is shown: a boost is made from the first.
+     * The user's hosted accounts on the fediverse and Bluesky, read once a
+     * post from or with a copy on the fediverse is shown: a boost is made from
+     * the one on the post's own network.
      */
     private val _hosted = MutableStateFlow<List<PublishAccount>>(emptyList())
     val hosted: StateFlow<List<PublishAccount>> = _hosted.asStateFlow()
@@ -951,7 +953,7 @@ class FeedViewModel @Inject constructor(
         hostedRead = true
         viewModelScope.launch {
             try {
-                _hosted.value = hostedFediverse(repository.networkAccounts())
+                _hosted.value = boostAccounts(repository.networkAccounts())
             } catch (_: Exception) {
                 hostedRead = false
             }
@@ -996,10 +998,10 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /** Boost a post from another network from the first hosted account, or take the boost back. */
+    /** Boost a post from another network from the hosted account on its own network, or take the boost back. */
     fun toggleBoost(feed: String, postId: String) {
         val post = _posts.value.firstOrNull { it.id == postId } ?: return
-        val account = _hosted.value.firstOrNull() ?: return
+        val account = boostAccount(post, _hosted.value) ?: return
         val boosted = boostedFrom(post, account)
         viewModelScope.launch {
             try {

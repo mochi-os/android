@@ -175,6 +175,7 @@ import org.mochios.feeds.ui.component.PostMediaGrid
 import org.mochios.feeds.ui.component.PostPollView
 import org.mochios.feeds.ui.component.PostWarning
 import org.mochios.feeds.ui.component.QuoteCard
+import org.mochios.feeds.ui.component.boostAccount
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.openable
 import org.mochios.feeds.ui.component.PostTitle
@@ -928,7 +929,7 @@ fun FeedScreen(
                                                 permissions.comment || permissions.manage,
                                             voting = voting == post.id,
                                             onVote = { options -> viewModel.vote(routeFeedId, post.id, options) },
-                                            booster = hosted.firstOrNull()?.takeIf { post.elsewhere },
+                                            booster = boostAccount(post, hosted)?.takeIf { post.elsewhere },
                                             onPin = { viewModel.togglePin(routeFeedId, post.id) },
                                             onBoost = { viewModel.toggleBoost(routeFeedId, post.id) },
                                         )

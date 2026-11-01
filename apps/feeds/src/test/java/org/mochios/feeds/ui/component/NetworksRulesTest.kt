@@ -50,7 +50,33 @@ class NetworksRulesTest {
     }
 
     @Test
-    fun `only hosted fediverse accounts reply and boost`() {
+    fun `a post is boosted from the hosted account on its own network`() {
+        val fediverse = PublishAccount(id = "f", type = "fediverse", identifier = "@me@here.example", hosted = true)
+        val bluesky = PublishAccount(id = "b", type = "bluesky", identifier = "me.here.example", hosted = true)
+        val accounts = listOf(fediverse, bluesky)
+        val sky = Post(remote = "at://did:plc:alice/app.bsky.feed.post/1", author = "did:plc:alice")
+        val fedi = Post(remote = "https://there.example/1", author = "https://there.example/u/a")
+        assertEquals("b", boostAccount(sky, accounts)?.id)
+        assertEquals("f", boostAccount(fedi, accounts)?.id)
+        assertNull(boostAccount(sky, listOf(fediverse)))
+        // A repost of the post on Bluesky under the account's handle is its boost there.
+        assertTrue(boostedFrom(sky.copy(copies = listOf(PostCopy(address = "me.here.example", network = "bluesky"))), bluesky))
+        assertFalse(boostedFrom(sky.copy(copies = listOf(PostCopy(address = "me.here.example", network = "fediverse"))), bluesky))
+    }
+
+    @Test
+    fun `hosted fediverse and Bluesky accounts boost`() {
+        val accounts = listOf(
+            PublishAccount(id = "1", type = "fediverse", hosted = true),
+            PublishAccount(id = "2", type = "fediverse", hosted = false),
+            PublishAccount(id = "3", type = "bluesky", hosted = true),
+            PublishAccount(id = "4", type = "matrix", hosted = true),
+        )
+        assertEquals(listOf("1", "3"), boostAccounts(accounts).map { it.id })
+    }
+
+    @Test
+    fun `only hosted fediverse accounts follow a person there`() {
         val accounts = listOf(
             PublishAccount(id = "1", type = "fediverse", hosted = true),
             PublishAccount(id = "2", type = "fediverse", hosted = false),

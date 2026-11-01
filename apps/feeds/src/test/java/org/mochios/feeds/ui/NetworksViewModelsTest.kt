@@ -106,7 +106,8 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/p1" -> ok("""{"posts": [$post], "permissions": {"view": true, "react": true, "comment": true, "manage": true}}""")
                     "/feeds/f1/-/p1/tags" -> ok("""{"tags": []}""")
                     "/feeds/f1/-/post/new" -> ok("""{"feeds": [{"id": "f1", "fingerprint": "f1", "name": "Mine", "privacy": "public"}]}""")
-                    "/feeds/-/accounts/list" -> raw("""[{"id": "h2", "type": "fediverse", "identifier": "@me2@here.example", "hosted": true},
+                    "/feeds/-/accounts/list" -> raw("""[{"id": "b3", "type": "bluesky", "identifier": "me3.here.example", "hosted": true},
+                        {"id": "h2", "type": "fediverse", "identifier": "@me2@here.example", "hosted": true},
                         {"id": "h1", "type": "fediverse", "identifier": "@me@here.example", "hosted": true},
                         {"id": "l1", "type": "mastodon", "identifier": "@me@social.example", "hosted": false},
                         {"id": "b1", "type": "bluesky", "identifier": "me.bsky.social", "hosted": false}]""")
@@ -208,10 +209,11 @@ class NetworksViewModelsTest {
     }
 
     @Test
-    fun `a boost is made from the first hosted fediverse account, by address, and the copies follow`() {
+    fun `a boost of a post from the fediverse is made from the first hosted account there, by address, and the copies follow`() {
         val model = detail()
         until("the hosted accounts") { model.hosted.value.isNotEmpty() }
-        assertEquals(listOf("h2", "h1"), model.hosted.value.map { it.id })
+        // The hosted Bluesky account comes first, but the post is from the fediverse.
+        assertEquals(listOf("b3", "h2", "h1"), model.hosted.value.map { it.id })
         model.toggleBoost()
         until("the boost") { model.post.value?.copies?.any { it.address == "@me2@here.example" } == true }
         assertEquals("post=p1&account=h2", sent("/feeds/f1/-/p1/boost"))
