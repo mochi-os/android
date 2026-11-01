@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Editja l-isem</string>
     <string name="people_profile_identity">Identità</string>
     <string name="people_profile_accent">Aċċent</string>
-    <string name="people_profile_directory_listing">Ippermetti lil oħrajn isibuk fid-direttorju</string>
     <string name="people_profile_preview">Anteprima</string>
     <string name="people_profile_upload_avatar">Tella\' avatar</string>
     <string name="people_profile_upload">Tella\'</string>
@@ -227,4 +226,6 @@
     <string name="people_contact_xmpp">Kuntatt XMPP</string>
     <string name="people_person_forums">Fora</string>
     <string name="people_contact_network_other">Ieħor</string>
+    <string name="people_contacts_menu_unfriend">Temm il-ħbiberija</string>
+    <string name="people_profile_directory_listing">Elenkar fid-direttorju</string>
 </resources>

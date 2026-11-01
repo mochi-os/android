@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Felhasználó</string>
     <string name="forums_no_comments">Még nincsenek hozzászólások</string>
     <string name="forums_comment_edit">Hozzászólás szerkesztése</string>
-    <string name="forums_comment_edit_title">Hozzászólás szerkesztése</string>
     <string name="forums_comment_delete">Megjegyzés törlése</string>
     <string name="forums_comment_delete_title">Megjegyzés törlése</string>
     <string name="forums_comment_reply">Válasz</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Küldés</string>
     <string name="forums_post_body_field">Szöveg</string>
-    <string name="forums_comment_edit_body_field">Szöveg</string>
     <string name="forums_write_comment">Megjegyzés írása…</string>
 
     <string name="notification_channel_forums">Fórum értesítések</string>

@@ -8,7 +8,10 @@ package org.mochios.android.ui.components
 import android.content.Context
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.detectTransformGestures
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.calculatePan
+import androidx.compose.foundation.gestures.calculateZoom
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -59,6 +62,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import coil3.compose.AsyncImage
 import coil3.compose.AsyncImagePainter
+import kotlin.math.abs
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
 
@@ -267,22 +271,46 @@ private fun ZoomableImage(
         modifier = Modifier
             .fillMaxSize()
             .pointerInput(Unit) {
-                detectTransformGestures { _, pan, zoom, _ ->
-                    scale = (scale * zoom).coerceIn(0.5f, 5f)
-                    if (scale > 1f) {
-                        offset = Offset(
-                            x = offset.x + pan.x,
-                            y = offset.y + pan.y
-                        )
-                    } else {
-                        val newY = offset.y + pan.y
-                        dismissProgress = newY / 500f
-                        if (kotlin.math.abs(dismissProgress) > 0.5f) {
-                            onDismiss()
+                awaitEachGesture {
+                    awaitFirstDown(requireUnconsumed = false)
+                    var travel = Offset.Zero
+                    var verticalDrag = false
+                    do {
+                        val event = awaitPointerEvent()
+                        val pressed = event.changes.count { change -> change.pressed }
+                        val zoom = event.calculateZoom()
+                        val pan = event.calculatePan()
+                        if (pressed >= 2 || scale > 1f) {
+                            scale = (scale * zoom).coerceIn(0.5f, 5f)
+                            if (scale > 1f) {
+                                offset = Offset(
+                                    x = offset.x + pan.x,
+                                    y = offset.y + pan.y
+                                )
+                            }
+                            event.changes.forEach { change -> change.consume() }
                         } else {
-                            offset = Offset(x = offset.x, y = newY)
+                            if (!verticalDrag) {
+                                travel += pan
+                                if (travel.getDistance() > viewConfiguration.touchSlop) {
+                                    if (abs(travel.x) > abs(travel.y)) {
+                                        break
+                                    }
+                                    verticalDrag = true
+                                }
+                            }
+                            if (verticalDrag) {
+                                val newY = offset.y + pan.y
+                                dismissProgress = newY / 500f
+                                if (abs(dismissProgress) > 0.5f) {
+                                    onDismiss()
+                                } else {
+                                    offset = Offset(x = offset.x, y = newY)
+                                }
+                                event.changes.forEach { change -> change.consume() }
+                            }
                         }
-                    }
+                    } while (event.changes.any { change -> change.pressed })
                 }
             },
         contentAlignment = Alignment.Center
@@ -299,7 +327,7 @@ private fun ZoomableImage(
                     scaleY = scale
                     translationX = offset.x
                     translationY = offset.y
-                    alpha = 1f - kotlin.math.abs(dismissProgress) * 0.5f
+                    alpha = 1f - abs(dismissProgress) * 0.5f
                 }
         )
         when (state) {

@@ -37,20 +37,23 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.files.Upload
 import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.CommentActions
+import org.mochios.android.ui.components.CommentDrafts
 import org.mochios.android.ui.components.CommentItem as SharedCommentItem
-import org.mochios.android.ui.components.replyCount
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MentionSuggestion
-import org.mochios.android.ui.components.CommentDrafts
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.ReplyComposerBanner
+import org.mochios.android.ui.components.rememberReplyFocus
+import org.mochios.android.ui.components.replyCount
 import org.mochios.projects.R
 
 @Composable
 fun CommentsTab(
     comments: List<Comment>,
+    /** The signed-in person, who may edit and delete their own comments. */
+    currentUserId: String?,
     projectId: String,
     /** Holds the unsent comment and any edit under way, past this tab's own life. */
     drafts: CommentDrafts,
@@ -102,6 +105,7 @@ fun CommentsTab(
                         projectId = projectId,
                         avatarUrlBuilder = avatarUrlBuilder,
                         drafts = drafts,
+                        currentUserId = currentUserId,
                         onReply = { id, _ -> drafts.update(target) { it.copy(reply = id) } },
                         onEdit = onUpdateComment,
                         onDelete = onDeleteComment
@@ -146,6 +150,7 @@ fun CommentsTab(
                     )
                 }
             },
+            focusRequester = rememberReplyFocus(replyTarget?.id),
             windowInsets = ComposeBarDefaults.NoWindowInsets,
         )
     }
@@ -174,6 +179,7 @@ private fun CommentItem(
     projectId: String,
     avatarUrlBuilder: ((Comment) -> String?)?,
     drafts: CommentDrafts,
+    currentUserId: String?,
     onReply: (String, String) -> Unit,
     onEdit: (String, String) -> Unit,
     onDelete: (String) -> Unit,
@@ -181,6 +187,7 @@ private fun CommentItem(
     onCollapseParent: (() -> Unit)? = null,
 ) {
     val edit = drafts.edit(comment.id)
+    val mine = currentUserId != null && comment.authorId == currentUserId
     var collapsed by rememberSaveable(comment.id) { mutableStateOf(false) }
     val replies = remember(comment) { replyCount(comment) { it.children } }
 
@@ -214,8 +221,8 @@ private fun CommentItem(
     ) {
         CommentActions(
             onReply = { onReply(comment.id, comment.name) },
-            onEdit = { drafts.edit(comment.id, comment.text) },
-            onDelete = { onDelete(comment.id) },
+            onEdit = { drafts.edit(comment.id, comment.text) }.takeIf { mine },
+            onDelete = { onDelete(comment.id) }.takeIf { mine },
         )
     }
 
@@ -227,6 +234,7 @@ private fun CommentItem(
             projectId = projectId,
             avatarUrlBuilder = avatarUrlBuilder,
             drafts = drafts,
+            currentUserId = currentUserId,
             onReply = onReply,
             onEdit = onEdit,
             onDelete = onDelete,

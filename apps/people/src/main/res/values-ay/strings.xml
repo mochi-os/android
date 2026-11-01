@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Suti askichaña</string>
     <string name="people_profile_identity">Identidad</string>
     <string name="people_profile_accent">Acento</string>
-    <string name="people_profile_directory_listing">Yaqha jaqinak directoriona jikxataña iyawsaña</string>
     <string name="people_profile_preview">Nayraqat uñjawi</string>
     <string name="people_profile_upload_avatar">Avatar apkataña</string>
     <string name="people_profile_upload">Apkataña</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP uñt\'ata</string>
     <string name="people_person_forums">Foronaka</string>
     <string name="people_contact_network_other">Yaqha</string>
+    <string name="people_contacts_menu_unfriend">Masi kankaña tukuyaña</string>
+    <string name="people_profile_directory_listing">Directorion uñstayaña</string>
 </resources>

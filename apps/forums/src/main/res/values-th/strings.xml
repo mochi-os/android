@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">ผู้ใช้</string>
     <string name="forums_no_comments">ยังไม่มีความคิดเห็น</string>
     <string name="forums_comment_edit">แก้ไขความคิดเห็น</string>
-    <string name="forums_comment_edit_title">แก้ไขความคิดเห็น</string>
     <string name="forums_comment_delete">ลบความคิดเห็น</string>
     <string name="forums_comment_delete_title">ลบความคิดเห็น</string>
     <string name="forums_comment_reply">ตอบกลับ</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">ส่ง</string>
     <string name="forums_post_body_field">เนื้อหา</string>
-    <string name="forums_comment_edit_body_field">เนื้อหา</string>
     <string name="forums_write_comment">เขียนความคิดเห็น…</string>
 
     <string name="notification_channel_forums">การแจ้งเตือนฟอรัม</string>

@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">ለ%1$s መልስ በመስጠት ላይ</string>
     <string name="wikis_comment_clear_reply">ምላሽ ሰርዝ</string>
     <string name="wikis_comment_action_delete">ሰርዝ</string>
-    <string name="wikis_comment_action_save">ያስቀምጡ</string>
     <string name="wikis_comment_action_cancel">ይቅር</string>
     <string name="wikis_comment_edited">(ተሻሽሏል)</string>
     <string name="wikis_comment_delete_confirm_title">አስተያየት ሰርዝ</string>

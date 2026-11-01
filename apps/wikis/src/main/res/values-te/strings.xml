@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$sకి రిప్లై ఇస్తున్నారు</string>
     <string name="wikis_comment_clear_reply">ప్రత్యుత్తరాన్ని రద్దు చేయండి</string>
     <string name="wikis_comment_action_delete">తొలగించండి</string>
-    <string name="wikis_comment_action_save">సేవ్ చేయండి</string>
     <string name="wikis_comment_action_cancel">రద్దు చేయండి</string>
     <string name="wikis_comment_edited">(సవరించబడింది)</string>
     <string name="wikis_comment_delete_confirm_title">వ్యాఖ్యను తొలగించండి</string>

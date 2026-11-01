@@ -101,7 +101,6 @@ fun ContactsScreen(
     onOpenNotifications: () -> Unit,
     onMessage: (String) -> Unit = {},
     onAddContact: () -> Unit = {},
-    onConnectDevice: () -> Unit = {},
     initialAction: String? = null,
     viewModel: ContactsViewModel = hiltViewModel(),
 ) {
@@ -176,18 +175,18 @@ fun ContactsScreen(
                         }
                         // The book's own actions belong to the screen showing
                         // it: the drawer's rows carry no menu of their own.
-                        Box {
-                            MochiIconButton(onClick = { showMenu = true }) {
-                                Icon(
-                                    Icons.Default.MoreVert,
-                                    contentDescription = stringResource(MochiR.string.common_more_options),
-                                )
-                            }
-                            MochiDropdownMenu(
-                                expanded = showMenu,
-                                onDismissRequest = { showMenu = false },
-                            ) {
-                                if (book != null) {
+                        if (book != null) {
+                            Box {
+                                MochiIconButton(onClick = { showMenu = true }) {
+                                    Icon(
+                                        Icons.Default.MoreVert,
+                                        contentDescription = stringResource(MochiR.string.common_more_options),
+                                    )
+                                }
+                                MochiDropdownMenu(
+                                    expanded = showMenu,
+                                    onDismissRequest = { showMenu = false },
+                                ) {
                                     MochiDropdownMenuItem(
                                         text = { Text(stringResource(R.string.people_books_rename)) },
                                         onClick = {
@@ -205,13 +204,6 @@ fun ContactsScreen(
                                         )
                                     }
                                 }
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.people_device_title)) },
-                                    onClick = {
-                                        showMenu = false
-                                        onConnectDevice()
-                                    },
-                                )
                             }
                         }
                     },
@@ -475,6 +467,7 @@ private fun ContactsContent(
                     items(contacts, key = { it.id }) { contact ->
                         ContactRow(
                             contact = contact,
+                            invited = contact.person in state.sent,
                             onTap = { onOpenContact(contact) },
                             onMessage = { onMessage(contact) },
                             onInvite = { onInvite(contact) },
@@ -511,6 +504,7 @@ internal fun ContactRow(
     onInvite: () -> Unit,
     onUnfriend: () -> Unit,
     onDelete: () -> Unit,
+    invited: Boolean = false,
 ) {
     var menuOpen by remember { mutableStateOf(false) }
     val mochi = contact.person.isNotBlank()
@@ -520,6 +514,7 @@ internal fun ContactRow(
         seed = contact.person.ifBlank { contact.id },
         icon = Icons.Outlined.Person,
         avatarUrl = if (mochi) "/people/${contact.person}/-/avatar" else null,
+        initials = true,
         subtitle = contact.directory.takeIf { it.isNotBlank() && it != contact.name },
         onClick = onTap,
         trailing = {
@@ -543,7 +538,7 @@ internal fun ContactRow(
                         expanded = menuOpen,
                         onDismissRequest = { menuOpen = false },
                     ) {
-                        if (mochi && !contact.friend) {
+                        if (mochi && !contact.friend && !invited) {
                             MochiDropdownMenuItem(
                                 text = { Text(stringResource(R.string.people_contacts_invite)) },
                                 leadingIcon = {
@@ -557,7 +552,7 @@ internal fun ContactRow(
                         }
                         if (contact.friend) {
                             MochiDropdownMenuItem(
-                                text = { Text(stringResource(R.string.people_contacts_unfriend)) },
+                                text = { Text(stringResource(R.string.people_contacts_menu_unfriend)) },
                                 leadingIcon = {
                                     Icon(Icons.Default.PersonRemove, contentDescription = null)
                                 },
@@ -568,7 +563,7 @@ internal fun ContactRow(
                             )
                         }
                         MochiDropdownMenuItem(
-                            text = { Text(stringResource(R.string.people_contacts_delete)) },
+                            text = { Text(stringResource(MochiR.string.common_delete)) },
                             leadingIcon = {
                                 Icon(Icons.Default.Delete, contentDescription = null)
                             },

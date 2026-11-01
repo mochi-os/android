@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Odpoveď pre %1$s</string>
     <string name="wikis_comment_clear_reply">Zrušiť odpoveď</string>
     <string name="wikis_comment_action_delete">Odstrániť</string>
-    <string name="wikis_comment_action_save">Uložiť</string>
     <string name="wikis_comment_action_cancel">Zrušiť</string>
     <string name="wikis_comment_edited">(upravené)</string>
     <string name="wikis_comment_delete_confirm_title">Odstrániť komentár</string>

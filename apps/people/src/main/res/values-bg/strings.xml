@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Редактиране на име</string>
     <string name="people_profile_identity">Самоличност</string>
     <string name="people_profile_accent">Акцент</string>
-    <string name="people_profile_directory_listing">Позволи на другите да ви намират в директорията</string>
     <string name="people_profile_preview">Преглед</string>
     <string name="people_profile_upload_avatar">Качи аватар</string>
     <string name="people_profile_upload">Качи</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP контакт</string>
     <string name="people_person_forums">Форуми</string>
     <string name="people_contact_network_other">Друга</string>
+    <string name="people_contacts_menu_unfriend">Премахни от приятели</string>
+    <string name="people_profile_directory_listing">Включване в указателя</string>
 </resources>

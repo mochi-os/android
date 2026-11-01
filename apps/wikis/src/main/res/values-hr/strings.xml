@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Odgovarate %1$s</string>
     <string name="wikis_comment_clear_reply">Odustani od odgovora</string>
     <string name="wikis_comment_action_delete">Obriši</string>
-    <string name="wikis_comment_action_save">Spremi</string>
     <string name="wikis_comment_action_cancel">Odustani</string>
     <string name="wikis_comment_edited">(uređeno)</string>
     <string name="wikis_comment_delete_confirm_title">Obriši komentar</string>

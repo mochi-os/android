@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Golygu enw</string>
     <string name="people_profile_identity">Hunaniaeth</string>
     <string name="people_profile_accent">Acen</string>
-    <string name="people_profile_directory_listing">Caniatáu i eraill ddod o hyd i chi yn y cyfeiriadur</string>
     <string name="people_profile_preview">Rhagolwg</string>
     <string name="people_profile_upload_avatar">Llwytho afatar i fyny</string>
     <string name="people_profile_upload">Llwytho i fyny</string>
@@ -228,4 +227,6 @@
     <string name="people_contact_xmpp">Cyswllt XMPP</string>
     <string name="people_person_forums">Fforymau</string>
     <string name="people_contact_network_other">Arall</string>
+    <string name="people_contacts_menu_unfriend">Tynnu fel ffrind</string>
+    <string name="people_profile_directory_listing">Rhestru yn y cyfeiriadur</string>
 </resources>

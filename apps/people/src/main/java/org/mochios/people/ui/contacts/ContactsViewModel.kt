@@ -31,6 +31,8 @@ data class ContactsUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val contacts: List<Contact> = emptyList(),
+    /** The people a friend invitation has gone to and not yet been answered. */
+    val sent: Set<String> = emptySet(),
     val books: List<Book> = emptyList(),
     val searchQuery: String = "",
     val sortBy: ContactSortBy = ContactSortBy.NAME,
@@ -141,8 +143,14 @@ class ContactsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val contacts = repository.listContacts(book.ifBlank { null }).contacts
-                _uiState.value = _uiState.value.copy(contacts = contacts, isLoading = false)
+                val response = repository.listContacts(book.ifBlank { null })
+                val contacts = response.contacts
+                val sent = response.sent.map { invite -> invite.id }.toSet()
+                _uiState.value = _uiState.value.copy(
+                    contacts = contacts,
+                    sent = sent,
+                    isLoading = false,
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -154,9 +162,12 @@ class ContactsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val contacts = repository.listContacts(book.ifBlank { null }).contacts
+                val response = repository.listContacts(book.ifBlank { null })
+                val contacts = response.contacts
+                val sent = response.sent.map { invite -> invite.id }.toSet()
                 _uiState.value = _uiState.value.copy(
                     contacts = contacts,
+                    sent = sent,
                     isRefreshing = false,
                     error = null,
                 )
@@ -174,8 +185,10 @@ class ContactsViewModel @Inject constructor(
     private fun reload() {
         viewModelScope.launch {
             try {
-                val contacts = repository.listContacts(book.ifBlank { null }).contacts
-                _uiState.value = _uiState.value.copy(contacts = contacts)
+                val response = repository.listContacts(book.ifBlank { null })
+                val contacts = response.contacts
+                val sent = response.sent.map { invite -> invite.id }.toSet()
+                _uiState.value = _uiState.value.copy(contacts = contacts, sent = sent)
             } catch (_: Exception) {
                 // The screen already shows a list; a failed background reload
                 // leaves it as it was rather than replacing it with an error.

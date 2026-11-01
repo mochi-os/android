@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">İstifadəçi</string>
     <string name="forums_no_comments">Hələ şərh yoxdur</string>
     <string name="forums_comment_edit">Şərhi redaktə et</string>
-    <string name="forums_comment_edit_title">Şərhi redaktə et</string>
     <string name="forums_comment_delete">Şərhi sil</string>
     <string name="forums_comment_delete_title">Şərhi sil</string>
     <string name="forums_comment_reply">Cavabla</string>
@@ -133,7 +132,6 @@
     <string name="forums_moderation_restriction_permanent">Daimi</string>
     <string name="forums_report_reason_hate">Nifrət</string>
     <string name="forums_write_comment">Şərh yaz…</string>
-    <string name="forums_comment_edit_body_field">Mətn</string>
     <string name="forums_comment_delete_message">Bu şərhi silmək istədiyinizə əminsiniz?</string>
     <string name="forums_comment_replying_to">%1$s istifadəçisinə cavab</string>
     <string name="forums_comment_clear_reply">Cavabı təmizlə</string>

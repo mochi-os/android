@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Đang trả lời %1$s</string>
     <string name="wikis_comment_clear_reply">Hủy phản hồi</string>
     <string name="wikis_comment_action_delete">Xóa</string>
-    <string name="wikis_comment_action_save">Lưu</string>
     <string name="wikis_comment_action_cancel">Hủy</string>
     <string name="wikis_comment_edited">(đã chỉnh sửa)</string>
     <string name="wikis_comment_delete_confirm_title">Xóa bình luận</string>

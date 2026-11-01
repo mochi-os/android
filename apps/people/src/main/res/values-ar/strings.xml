@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">تعديل الاسم</string>
     <string name="people_profile_identity">الهوية</string>
     <string name="people_profile_accent">اللون المميز</string>
-    <string name="people_profile_directory_listing">السماح للآخرين بالعثور عليك في الدليل</string>
     <string name="people_profile_preview">معاينة</string>
     <string name="people_profile_upload_avatar">رفع الصورة الرمزية</string>
     <string name="people_profile_upload">رفع</string>
@@ -228,4 +227,6 @@
     <string name="people_contact_xmpp">جهة اتصال XMPP</string>
     <string name="people_person_forums">المنتديات</string>
     <string name="people_contact_network_other">أخرى</string>
+    <string name="people_contacts_menu_unfriend">إنهاء الصداقة</string>
+    <string name="people_profile_directory_listing">الإدراج في الدليل</string>
 </resources>

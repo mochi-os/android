@@ -6,7 +6,6 @@
 package org.mochios.feeds.ui.feed
 
 import android.content.Context
-import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -28,9 +27,6 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.files.Upload
-import org.mochios.android.files.UploadTracker
-import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
@@ -89,21 +85,6 @@ sealed interface FeedActionEvent {
     data class Done(val message: Int) : FeedActionEvent
 }
 
-/**
- * Target of the comment-composer sheet; a non-null [parentId] means a reply to
- * that comment.
- */
-data class CommentTarget(
-    val feedId: String,
-    val postId: String,
-    val parentId: String? = null,
-    val parentName: String? = null,
-    val parentBody: String? = null,
-    // When set, the composer is editing this existing comment rather than
-    // creating a new one (or a reply).
-    val editCommentId: String? = null,
-)
-
 @HiltViewModel
 class FeedViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -113,9 +94,6 @@ class FeedViewModel @Inject constructor(
     private val sessionManager: SessionManager,
     @param:ApplicationContext private val context: Context,
 ) : ViewModel() {
-
-    /** The picked file's real name, for labelling a draft attachment. */
-    suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     /** Set of post ids the user has saved, mirrored from [SavedRepository] so
      *  each post card can show its bookmark filled/empty without awaiting. */
@@ -181,25 +159,6 @@ class FeedViewModel @Inject constructor(
     // Spinner for the top-bar button, which refreshes only the post in view.
     // Kept separate from [isRefreshing] so it doesn't drive the pull-to-refresh
     // indicator.
-
-    // Comment composer bottom-sheet target: non-null while the sheet is open.
-    // A non-null [CommentTarget.parentId] means the sheet is composing a reply.
-    private val _commentTarget = MutableStateFlow<CommentTarget?>(null)
-    val commentTarget: StateFlow<CommentTarget?> = _commentTarget.asStateFlow()
-
-    private val _commentDraft = MutableStateFlow("")
-    val commentDraft: StateFlow<String> = _commentDraft.asStateFlow()
-
-    private val _commentAttachments = MutableStateFlow<List<Uri>>(emptyList())
-    val commentAttachments: StateFlow<List<Uri>> = _commentAttachments.asStateFlow()
-
-    private val _isSendingComment = MutableStateFlow(false)
-    val isSendingComment: StateFlow<Boolean> = _isSendingComment.asStateFlow()
-
-    private val commentTracker = UploadTracker()
-
-    /** The files of the comment being sent, for the composer. */
-    val commentUpload: StateFlow<Upload?> = commentTracker.state
 
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore.asStateFlow()
@@ -606,93 +565,6 @@ class FeedViewModel @Inject constructor(
                 _error.value = e.toMochiError()
             } finally {
                 _isRefreshing.value = false
-            }
-        }
-    }
-
-
-    /** Open the comment-composer sheet for [postId] (optionally replying to a
-     *  comment). [postFeedId] is the post's own feed. */
-    fun openCommentComposer(
-        postFeedId: String,
-        postId: String,
-        parentId: String? = null,
-        parentName: String? = null,
-        parentBody: String? = null,
-    ) {
-        _commentDraft.value = ""
-        _commentAttachments.value = emptyList()
-        _commentTarget.value = CommentTarget(postFeedId, postId, parentId, parentName, parentBody)
-    }
-
-
-    fun closeCommentComposer() {
-        _commentTarget.value = null
-        _commentDraft.value = ""
-        _commentAttachments.value = emptyList()
-    }
-
-    fun setCommentDraft(text: String) {
-        _commentDraft.value = text
-    }
-
-    fun addCommentAttachment(uri: Uri) {
-        _commentAttachments.value = _commentAttachments.value + uri
-    }
-
-    fun removeCommentAttachment(uri: Uri) {
-        _commentAttachments.value = _commentAttachments.value - uri
-    }
-
-    /** Search the composer target's feed for @-mention suggestions. */
-    suspend fun searchMembers(query: String): List<MentionSuggestion> {
-        val feedId = _commentTarget.value?.feedId ?: return emptyList()
-        return try {
-            repository.searchMembers(feedId, query).map { member ->
-                MentionSuggestion(id = member.id, name = member.name)
-            }
-        } catch (_: Exception) {
-            emptyList()
-        }
-    }
-
-    fun sendComment() {
-        val target = _commentTarget.value ?: return
-        val body = _commentDraft.value.trim()
-        if (body.isEmpty() || _isSendingComment.value) return
-        viewModelScope.launch {
-            _isSendingComment.value = true
-            try {
-                if (target.editCommentId != null) {
-                    repository.editComment(target.feedId, target.postId, target.editCommentId, body)
-                    _commentTarget.value = null
-                    _commentDraft.value = ""
-                    _commentAttachments.value = emptyList()
-                    refreshPostQuietly(target.feedId, target.postId)
-                } else {
-                    val files = _commentAttachments.value
-                    commentTracker.track(files) {
-                        repository.createComment(
-                            feedId = target.feedId,
-                            postId = target.postId,
-                            body = body,
-                            parent = target.parentId,
-                            files = files,
-                            context = context,
-                            tracker = commentTracker,
-                        )
-                        _commentTarget.value = null
-                        _commentDraft.value = ""
-                        _commentAttachments.value = emptyList()
-                        // Inside the upload, so the files in flight give way
-                        // to the comment with nothing blank between.
-                        runCatching { refreshPostQuietly(target.feedId, target.postId) }
-                    }
-                }
-            } catch (_: Exception) {
-                // Keep the draft so the user can retry.
-            } finally {
-                _isSendingComment.value = false
             }
         }
     }

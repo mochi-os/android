@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Rediger navn</string>
     <string name="people_profile_identity">Identitet</string>
     <string name="people_profile_accent">Aksentfarge</string>
-    <string name="people_profile_directory_listing">Tillat at andre finner deg i katalogen</string>
     <string name="people_profile_preview">Forhåndsvisning</string>
     <string name="people_profile_upload_avatar">Last opp avatar</string>
     <string name="people_profile_upload">Last opp</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP-kontakt</string>
     <string name="people_person_forums">Forumer</string>
     <string name="people_contact_network_other">Annet</string>
+    <string name="people_contacts_menu_unfriend">Avslutt vennskap</string>
+    <string name="people_profile_directory_listing">Oppføring i katalogen</string>
 </resources>

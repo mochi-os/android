@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s ਨੂੰ ਜਵਾਬ ਦੇ ਰਹੇ ਹੋ</string>
     <string name="wikis_comment_clear_reply">ਜਵਾਬ ਰੱਦ ਕਰੋ</string>
     <string name="wikis_comment_action_delete">ਮਿਟਾਓ</string>
-    <string name="wikis_comment_action_save">ਸੰਭਾਲੋ</string>
     <string name="wikis_comment_action_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="wikis_comment_edited">(ਸੰਪਾਦਿਤ)</string>
     <string name="wikis_comment_delete_confirm_title">ਟਿੱਪਣੀ ਮਿਟਾਓ</string>

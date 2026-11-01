@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">ກຳລັງຕອບກັບ %1$s</string>
     <string name="wikis_comment_clear_reply">ຍົກເລີກການຕອບກັບ</string>
     <string name="wikis_comment_action_delete">ລົບ</string>
-    <string name="wikis_comment_action_save">ບັນທຶກ</string>
     <string name="wikis_comment_action_cancel">ຍົກເລີກ</string>
     <string name="wikis_comment_edited">(ແກ້ໄຂແລ້ວ)</string>
     <string name="wikis_comment_delete_confirm_title">ລົບຄຳເຫັນ</string>

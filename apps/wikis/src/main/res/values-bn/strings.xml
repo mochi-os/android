@@ -57,7 +57,6 @@
     <string name="wikis_comment_replying_to">%1$s-কে উত্তর দিচ্ছেন</string>
     <string name="wikis_comment_clear_reply">উত্তর বাতিল করুন</string>
     <string name="wikis_comment_action_delete">মুছুন</string>
-    <string name="wikis_comment_action_save">সংরক্ষণ করুন</string>
     <string name="wikis_comment_action_cancel">বাতিল করুন</string>
     <string name="wikis_comment_edited">(সম্পাদিত)</string>
     <string name="wikis_comment_delete_confirm_title">মন্তব্য মুছুন</string>

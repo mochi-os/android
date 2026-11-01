@@ -119,7 +119,6 @@
     <string name="wikis_comment_replying_to">Replying to %1$s</string>
     <string name="wikis_comment_clear_reply">Cancel reply</string>
     <string name="wikis_comment_action_delete">Delete</string>
-    <string name="wikis_comment_action_save">Save</string>
     <string name="wikis_comment_action_cancel">Cancel</string>
     <string name="wikis_comment_edited">(edited)</string>
     <string name="wikis_comment_delete_confirm_title">Delete comment</string>

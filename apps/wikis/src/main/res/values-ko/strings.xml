@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s님에게 답장</string>
     <string name="wikis_comment_clear_reply">답글 취소</string>
     <string name="wikis_comment_action_delete">삭제</string>
-    <string name="wikis_comment_action_save">저장</string>
     <string name="wikis_comment_action_cancel">취소</string>
     <string name="wikis_comment_edited">(편집됨)</string>
     <string name="wikis_comment_delete_confirm_title">댓글 삭제</string>

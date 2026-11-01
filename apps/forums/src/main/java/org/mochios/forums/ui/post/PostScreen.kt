@@ -119,6 +119,7 @@ import org.mochios.android.ui.components.CommentThreadBack
 import org.mochios.android.ui.components.commentRows
 import org.mochios.android.ui.components.findInThread
 import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
@@ -170,7 +171,8 @@ fun PostScreen(
     var draft by remember { mutableStateOf(TextFieldValue("")) }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
-    var editingComment by remember { mutableStateOf<ForumComment?>(null) }
+    var editingId by rememberSaveable { mutableStateOf<String?>(null) }
+    var editText by rememberSaveable { mutableStateOf("") }
     var showReportPost by remember { mutableStateOf(false) }
     var reportingComment by remember { mutableStateOf<ForumComment?>(null) }
     val snackbar = remember { SnackbarHostState() }
@@ -235,7 +237,10 @@ fun PostScreen(
             viewModel.setReplyTo(comment)
             focusComposer()
         },
-        onEdit = { editingComment = it },
+        onEdit = { comment ->
+            editingId = comment.id
+            editText = comment.body
+        },
         onDelete = { commentToDelete = it },
         onApprove = { viewModel.approveComment(it.id) },
         onRemove = { viewModel.removeComment(it.id) },
@@ -251,6 +256,17 @@ fun PostScreen(
         onShare = { comment ->
             shareLink(context, viewModel.commentLink(comment.id), uiState.post.title.ifBlank { shareTitle })
         },
+        editing = editingId,
+        editText = editText,
+        onEditTextChange = { text -> editText = text },
+        onSaveEdit = {
+            val id = editingId
+            if (id != null && editText.isNotBlank()) {
+                viewModel.editComment(id, editText.trim())
+                editingId = null
+            }
+        },
+        onCancelEdit = { editingId = null },
     )
     // One avatar address per author across the post and its whole thread,
     // shared by the thread and the lightbox's comments panel.
@@ -265,6 +281,7 @@ fun PostScreen(
             postAuthor = uiState.post.member,
             forumId = viewModel.forumId,
             currentIdentity = uiState.identity,
+            canManage = uiState.canManage,
             canModerate = uiState.canModerate,
             actions = commentActions,
             canComment = uiState.canComment && !uiState.post.locked,
@@ -361,7 +378,7 @@ fun PostScreen(
                                 expanded = showPostMenu,
                                 onDismiss = { showPostMenu = false },
                                 post = uiState.post,
-                                canEdit = isPostAuthor || uiState.canModerate,
+                                canEdit = isPostAuthor || uiState.canManage,
                                 canModerate = uiState.canModerate,
                                 isAuthor = isPostAuthor,
                                 onEdit = { onEditPost(viewModel.forumId, viewModel.postId) },
@@ -394,7 +411,8 @@ fun PostScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .consumeWindowInsets(padding)
-                .padding(padding),
+                .padding(padding)
+                .imePadding(),
         ) {
             when {
                 uiState.isLoading && uiState.post.id.isEmpty() -> {
@@ -442,7 +460,7 @@ fun PostScreen(
                             PostHeader(
                                 post = uiState.post,
                                 canVote = uiState.canVote,
-                                canEdit = isPostAuthor || uiState.canModerate,
+                                canEdit = isPostAuthor || uiState.canManage,
                                 forumId = viewModel.forumId,
                                 onVote = { viewModel.votePost(it) },
                                 onComment = if (uiState.canComment && !uiState.post.locked) {
@@ -486,6 +504,7 @@ fun PostScreen(
                                 forumId = viewModel.forumId,
                                 avatars = avatars,
                                 currentIdentity = uiState.identity,
+                                canManage = uiState.canManage,
                                 canModerate = uiState.canModerate,
                                 actions = commentActions,
                                 postAuthor = uiState.post.member,
@@ -585,17 +604,6 @@ fun PostScreen(
         )
     }
 
-    editingComment?.let { c ->
-        EditCommentDialog(
-            comment = c,
-            onConfirm = { body ->
-                viewModel.editComment(c.id, body)
-                editingComment = null
-            },
-            onDismiss = { editingComment = null },
-        )
-    }
-
     if (showReportPost) {
         ReportDialog(
             title = stringResource(R.string.forums_post_report),
@@ -617,35 +625,6 @@ fun PostScreen(
             onDismiss = { reportingComment = null }
         )
     }
-}
-
-@OptIn(ExperimentalMaterial3Api::class, androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
-@Composable
-private fun EditCommentDialog(
-    comment: ForumComment,
-    onConfirm: (body: String) -> Unit,
-    onDismiss: () -> Unit,
-) {
-    var body by remember { mutableStateOf(comment.body) }
-
-    MochiAlertDialog(
-        onDismissRequest = onDismiss,
-        title = stringResource(R.string.forums_comment_edit_title),
-        content = {
-            MochiTextField(
-                value = body,
-                onValueChange = { body = it },
-                label = { Text(stringResource(R.string.forums_comment_edit_body_field)) },
-                minLines = 3,
-                maxLines = 8,
-                modifier = Modifier.fillMaxWidth()
-            )
-        },
-        confirmText = stringResource(MochiR.string.common_save),
-        onConfirm = { onConfirm(body) },
-        confirmEnabled = body.isNotBlank(),
-        dismissText = stringResource(MochiR.string.common_cancel),
-    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -1073,6 +1052,12 @@ private data class CommentActions(
     val onOpenAttachment: (String) -> Unit,
     val onBlock: (String) -> Unit = {},
     val onShare: (ForumComment) -> Unit = {},
+    /** The comment being edited in place, if any, and the text typed so far. */
+    val editing: String? = null,
+    val editText: String = "",
+    val onEditTextChange: (String) -> Unit = {},
+    val onSaveEdit: () -> Unit = {},
+    val onCancelEdit: () -> Unit = {},
 )
 
 /** A forum thread in reading order, the replies of every folded comment left out. */
@@ -1084,6 +1069,7 @@ private fun LazyListScope.commentsItems(
     forumId: String,
     avatars: Map<String, String>,
     currentIdentity: String,
+    canManage: Boolean,
     canModerate: Boolean,
     actions: CommentActions,
     postAuthor: String,
@@ -1094,7 +1080,7 @@ private fun LazyListScope.commentsItems(
         val c = row.comment
         item(key = c.id) {
             val isAuthor = c.member == currentIdentity && currentIdentity.isNotBlank()
-            val canEditThis = isAuthor || canModerate
+            val canEditThis = isAuthor || canManage
             CommentCard(
                 comment = c,
                 depth = row.depth,
@@ -1115,6 +1101,11 @@ private fun LazyListScope.commentsItems(
                 onOpenAttachment = actions.onOpenAttachment,
                 onBlock = actions.onBlock,
                 onShare = { actions.onShare(c) },
+                isEditing = actions.editing == c.id,
+                editText = actions.editText,
+                onEditTextChange = actions.onEditTextChange,
+                onSaveEdit = actions.onSaveEdit,
+                onCancelEdit = actions.onCancelEdit,
                 op = postAuthor.isNotEmpty() && c.member == postAuthor,
                 replies = row.replies,
                 collapsed = c.id in collapsed,
@@ -1139,6 +1130,7 @@ private fun AttachmentComments(
     postAuthor: String,
     forumId: String,
     currentIdentity: String,
+    canManage: Boolean,
     canModerate: Boolean,
     actions: CommentActions,
     canComment: Boolean,
@@ -1163,7 +1155,8 @@ private fun AttachmentComments(
     val anchored = comments.filter { it.anchor == attachmentId }
     val others = comments.size - anchored.size
     val shown = if (showAll) comments else anchored
-    val composerFocus = remember { FocusRequester() }
+    // Reply readies this panel's composer, not the one under the post behind it.
+    val composerFocus = rememberReplyFocus(replyTo?.id)
     // Everything else a comment can do is the same here as below the post;
     // only Quote differs, because it writes into a draft and this panel's is
     // no longer the post screen's.
@@ -1196,6 +1189,7 @@ private fun AttachmentComments(
                 forumId = forumId,
                 avatars = avatars,
                 currentIdentity = currentIdentity,
+                canManage = canManage,
                 canModerate = canModerate,
                 actions = panelActions,
                 postAuthor = postAuthor,
@@ -1287,6 +1281,11 @@ private fun CommentCard(
     onToggleCollapse: (() -> Unit)? = null,
     onCollapseParent: (() -> Unit)? = null,
     highlighted: Boolean = false,
+    isEditing: Boolean = false,
+    editText: String = "",
+    onEditTextChange: (String) -> Unit = {},
+    onSaveEdit: () -> Unit = {},
+    onCancelEdit: () -> Unit = {},
 ) {
     var showMenu by remember { mutableStateOf(false) }
     val anchor = comment.anchor
@@ -1314,6 +1313,11 @@ private fun CommentCard(
         onCollapseParent = onCollapseParent,
         highlighted = highlighted,
         badge = if (op) stringResource(R.string.forums_comment_op) else null,
+        isEditing = isEditing,
+        editText = editText,
+        onEditTextChange = onEditTextChange,
+        onSaveEdit = onSaveEdit,
+        onCancelEdit = onCancelEdit,
     ) {
         PostBadges(status = comment.status)
         // Same reaction row as the post: like · dislike, filled for the viewer's

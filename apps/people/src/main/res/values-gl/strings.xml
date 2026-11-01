@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Editar nome</string>
     <string name="people_profile_identity">Identidade</string>
     <string name="people_profile_accent">Acento</string>
-    <string name="people_profile_directory_listing">Permitir que outros te atopen no directorio</string>
     <string name="people_profile_preview">Vista previa</string>
     <string name="people_profile_upload_avatar">Cargar avatar</string>
     <string name="people_profile_upload">Cargar</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">Contacto de XMPP</string>
     <string name="people_person_forums">Foros</string>
     <string name="people_contact_network_other">Outra</string>
+    <string name="people_contacts_menu_unfriend">Deixar de ser amigos</string>
+    <string name="people_profile_directory_listing">Aparecer no directorio</string>
 </resources>

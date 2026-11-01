@@ -134,6 +134,7 @@ fun OptionForm(
         ColorPicker(
             hex = state.colour,
             onHexChange = { hex -> state.colour = hex },
+            collapsible = true,
         )
         if (showIcon) {
             Spacer(modifier = Modifier.height(16.dp))

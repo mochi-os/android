@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Vastad kasutajale %1$s</string>
     <string name="wikis_comment_clear_reply">Tühista vastus</string>
     <string name="wikis_comment_action_delete">Kustuta</string>
-    <string name="wikis_comment_action_save">Salvesta</string>
     <string name="wikis_comment_action_cancel">Tühista</string>
     <string name="wikis_comment_edited">(muudetud)</string>
     <string name="wikis_comment_delete_confirm_title">Kustuta kommentaar</string>

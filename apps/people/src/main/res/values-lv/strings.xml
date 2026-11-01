@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Rediģēt vārdu</string>
     <string name="people_profile_identity">Identitāte</string>
     <string name="people_profile_accent">Akcents</string>
-    <string name="people_profile_directory_listing">Ļaut citiem atrast tevi direktorijā</string>
     <string name="people_profile_preview">Priekšskatījums</string>
     <string name="people_profile_upload_avatar">Augšupielādēt avataru</string>
     <string name="people_profile_upload">Augšupielādēt</string>
@@ -225,4 +224,6 @@
     <string name="people_contact_xmpp">XMPP kontakts</string>
     <string name="people_person_forums">Forumi</string>
     <string name="people_contact_network_other">Cits</string>
+    <string name="people_contacts_menu_unfriend">Pārtraukt draudzību</string>
+    <string name="people_profile_directory_listing">Rādīšana katalogā</string>
 </resources>

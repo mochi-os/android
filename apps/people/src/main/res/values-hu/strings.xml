@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Név szerkesztése</string>
     <string name="people_profile_identity">Azonosító</string>
     <string name="people_profile_accent">Kiemelő szín</string>
-    <string name="people_profile_directory_listing">Mások megtalálhatnak a címtárban</string>
     <string name="people_profile_preview">Előnézet</string>
     <string name="people_profile_upload_avatar">Profilkép feltöltése</string>
     <string name="people_profile_upload">Feltöltés</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP-partner</string>
     <string name="people_person_forums">Fórumok</string>
     <string name="people_contact_network_other">Egyéb</string>
+    <string name="people_contacts_menu_unfriend">Barátság megszüntetése</string>
+    <string name="people_profile_directory_listing">Megjelenés a címtárban</string>
 </resources>

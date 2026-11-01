@@ -113,12 +113,12 @@ internal fun CommentItem(
         highlighted = highlighted,
     ) {
         // Reactions and the action icons share one row: the ReactionBar
-        // (pills + add) followed by reply, and edit/delete when the viewer
-        // manages the feed or owns the comment.
+        // (pills + add) followed by reply, edit for the comment's author, and
+        // delete for its author or a manager of the feed.
         CommentActions(
             onReply = onReply,
             onShare = onShare,
-            onEdit = onEdit.takeIf { canManage || isMine },
+            onEdit = onEdit.takeIf { isMine },
             onDelete = onDelete.takeIf { canManage || isMine },
             reactions = {
                 ReactionBar(

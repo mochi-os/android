@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Атын түзөтүү</string>
     <string name="people_profile_identity">Идентификация</string>
     <string name="people_profile_accent">Акцент</string>
-    <string name="people_profile_directory_listing">Башкаларга сизди каталогдон табууга уруксат берүү</string>
     <string name="people_profile_preview">Алдын ала көрүү</string>
     <string name="people_profile_upload_avatar">Аватарды жүктөө</string>
     <string name="people_profile_upload">Жүктөө</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP байланышы</string>
     <string name="people_person_forums">Форумдар</string>
     <string name="people_contact_network_other">Башка</string>
+    <string name="people_contacts_menu_unfriend">Достукту аяктоо</string>
+    <string name="people_profile_directory_listing">Каталогдо көрсөтүү</string>
 </resources>

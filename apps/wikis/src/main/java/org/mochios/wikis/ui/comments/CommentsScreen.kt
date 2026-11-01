@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -112,7 +113,8 @@ fun CommentsScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
-                .consumeWindowInsets(padding),
+                .consumeWindowInsets(padding)
+                .imePadding(),
         ) {
             val wikiInfo = state.wiki
             when {
@@ -152,9 +154,7 @@ fun CommentsScreen(
                             onSubmitReply = { parentId, uris ->
                                 viewModel.submitReply(parentId, uris)
                             },
-                            onEdit = if (state.permissions.edit) {
-                                { id, body -> viewModel.editComment(id, body) }
-                            } else null,
+                            onEdit = { id, body -> viewModel.editComment(id, body) },
                             onDelete = if (state.permissions.edit || state.permissions.delete) {
                                 { id -> viewModel.deleteComment(id) }
                             } else null,

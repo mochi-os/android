@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Svarer %1$s</string>
     <string name="wikis_comment_clear_reply">Annuller svar</string>
     <string name="wikis_comment_action_delete">Slet</string>
-    <string name="wikis_comment_action_save">Gem</string>
     <string name="wikis_comment_action_cancel">Annuller</string>
     <string name="wikis_comment_edited">(redigeret)</string>
     <string name="wikis_comment_delete_confirm_title">Slet kommentar</string>

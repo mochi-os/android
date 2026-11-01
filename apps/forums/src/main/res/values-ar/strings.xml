@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">المستخدم</string>
     <string name="forums_no_comments">لا توجد تعليقات بعد</string>
     <string name="forums_comment_edit">تعديل التعليق</string>
-    <string name="forums_comment_edit_title">تعديل التعليق</string>
     <string name="forums_comment_delete">حذف التعليق</string>
     <string name="forums_comment_delete_title">حذف التعليق</string>
     <string name="forums_comment_reply">رد</string>
@@ -133,7 +132,6 @@
     <string name="forums_moderation_restriction_permanent">دائم</string>
     <string name="forums_report_reason_hate">كراهية</string>
     <string name="forums_write_comment">اكتب تعليقًا…</string>
-    <string name="forums_comment_edit_body_field">المحتوى</string>
     <string name="forums_comment_delete_message">هل أنت متأكد من أنك تريد حذف هذا التعليق؟</string>
     <string name="forums_comment_replying_to">الرد على %1$s</string>
     <string name="forums_comment_clear_reply">مسح الرد</string>

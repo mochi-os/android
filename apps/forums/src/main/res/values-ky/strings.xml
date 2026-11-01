@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Колдонуучу</string>
     <string name="forums_no_comments">Комментарийлер азырынча жок</string>
     <string name="forums_comment_edit">Комментарийди түзөтүү</string>
-    <string name="forums_comment_edit_title">Комментарийди түзөтүү</string>
     <string name="forums_comment_delete">Комментарийди жок кылуу</string>
     <string name="forums_comment_delete_title">Комментарийди жок кылуу</string>
     <string name="forums_comment_reply">Жооп</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Жөнөтүү</string>
     <string name="forums_post_body_field">Текст</string>
-    <string name="forums_comment_edit_body_field">Текст</string>
     <string name="forums_write_comment">Пикир жазыңыз…</string>
 
     <string name="notification_channel_forums">Форумдардын билдирмелери</string>

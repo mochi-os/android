@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Deasaich an t-ainm</string>
     <string name="people_profile_identity">Dearbh-aithne</string>
     <string name="people_profile_accent">Stràc</string>
-    <string name="people_profile_directory_listing">Ceadaich do chàch do lorg san eòlaire</string>
     <string name="people_profile_preview">Ro-shealladh</string>
     <string name="people_profile_upload_avatar">Luchdaich suas avatar</string>
     <string name="people_profile_upload">Luchdaich suas</string>
@@ -226,4 +225,6 @@
     <string name="people_contact_xmpp">Luchd-aithne XMPP</string>
     <string name="people_person_forums">Fòraman</string>
     <string name="people_contact_network_other">Eile</string>
+    <string name="people_contacts_menu_unfriend">Cuir crìoch air a\' chàirdeas</string>
+    <string name="people_profile_directory_listing">Liostadh san eòlaire</string>
 </resources>

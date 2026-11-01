@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Utilizador</string>
     <string name="forums_no_comments">Ainda não há comentários</string>
     <string name="forums_comment_edit">Editar comentário</string>
-    <string name="forums_comment_edit_title">Editar comentário</string>
     <string name="forums_comment_delete">Eliminar comentário</string>
     <string name="forums_comment_delete_title">Eliminar comentário</string>
     <string name="forums_comment_reply">Responder</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Enviar</string>
     <string name="forums_post_body_field">Conteúdo</string>
-    <string name="forums_comment_edit_body_field">Conteúdo</string>
     <string name="forums_write_comment">Escreve um comentário…</string>
 
     <string name="notification_channel_forums">Notificações dos fóruns</string>

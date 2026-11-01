@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">កំពុងឆ្លើយតបទៅ %1$s</string>
     <string name="wikis_comment_clear_reply">បោះបង់ការឆ្លើយតប</string>
     <string name="wikis_comment_action_delete">លុប</string>
-    <string name="wikis_comment_action_save">រក្សាទុក</string>
     <string name="wikis_comment_action_cancel">បោះបង់</string>
     <string name="wikis_comment_edited">(បានកែ)</string>
     <string name="wikis_comment_delete_confirm_title">លុបមតិយោបល់</string>

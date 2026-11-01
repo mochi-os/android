@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Уреди име</string>
     <string name="people_profile_identity">Идентитет</string>
     <string name="people_profile_accent">Акцент</string>
-    <string name="people_profile_directory_listing">Дозволи другима да вас пронађу у директоријуму</string>
     <string name="people_profile_preview">Преглед</string>
     <string name="people_profile_upload_avatar">Отпреми аватар</string>
     <string name="people_profile_upload">Отпреми</string>
@@ -225,4 +224,6 @@
     <string name="people_contact_xmpp">XMPP контакт</string>
     <string name="people_person_forums">Форуми</string>
     <string name="people_contact_network_other">Друга</string>
+    <string name="people_contacts_menu_unfriend">Уклони из пријатеља</string>
+    <string name="people_profile_directory_listing">Приказ у именику</string>
 </resources>

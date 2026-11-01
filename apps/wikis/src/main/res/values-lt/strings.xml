@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Atsakoma %1$s</string>
     <string name="wikis_comment_clear_reply">Atšaukti atsakymą</string>
     <string name="wikis_comment_action_delete">Ištrinti</string>
-    <string name="wikis_comment_action_save">Išsaugoti</string>
     <string name="wikis_comment_action_cancel">Atšaukti</string>
     <string name="wikis_comment_edited">(redaguota)</string>
     <string name="wikis_comment_delete_confirm_title">Ištrinti komentarą</string>

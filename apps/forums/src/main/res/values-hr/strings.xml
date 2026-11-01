@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Korisnik</string>
     <string name="forums_no_comments">Još nema komentara</string>
     <string name="forums_comment_edit">Uredi komentar</string>
-    <string name="forums_comment_edit_title">Uredi komentar</string>
     <string name="forums_comment_delete">Obriši komentar</string>
     <string name="forums_comment_delete_title">Obriši komentar</string>
     <string name="forums_comment_reply">Odgovori</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Pošalji</string>
     <string name="forums_post_body_field">Tekst</string>
-    <string name="forums_comment_edit_body_field">Tekst</string>
     <string name="forums_write_comment">Napišite komentar…</string>
 
     <string name="notification_channel_forums">Obavijesti foruma</string>

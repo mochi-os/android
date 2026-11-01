@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Maqaa sirreessi</string>
     <string name="people_profile_identity">Eenyummaa</string>
     <string name="people_profile_accent">Halluu cimaa</string>
-    <string name="people_profile_directory_listing">Warri kaan galmee keessa si argachuu hayyami</string>
     <string name="people_profile_preview">Dursanii ilaaluu</string>
     <string name="people_profile_upload_avatar">Suuraa olfe\'i</string>
     <string name="people_profile_upload">Olfe\'i</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">Qunnamtii XMPP</string>
     <string name="people_person_forums">Foorumiiwwan</string>
     <string name="people_contact_network_other">Biraa</string>
+    <string name="people_contacts_menu_unfriend">Hiriyummaa xumuri</string>
+    <string name="people_profile_directory_listing">Galmee keessatti mul\'achuu</string>
 </resources>

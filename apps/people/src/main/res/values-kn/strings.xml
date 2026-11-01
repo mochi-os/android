@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">ಹೆಸರು ಸಂಪಾದಿಸಿ</string>
     <string name="people_profile_identity">ಗುರುತು</string>
     <string name="people_profile_accent">ಉಚ್ಚಾರಣಾ ಬಣ್ಣ</string>
-    <string name="people_profile_directory_listing">ಡೈರೆಕ್ಟರಿಯಲ್ಲಿ ಇತರರು ನಿಮ್ಮನ್ನು ಹುಡುಕಲು ಅನುಮತಿಸಿ</string>
     <string name="people_profile_preview">ಪ್ರಿವ್ಯೂ</string>
     <string name="people_profile_upload_avatar">ಅವತಾರ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="people_profile_upload">ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP ಸಂಪರ್ಕ</string>
     <string name="people_person_forums">ಫೋರಂಗಳು</string>
     <string name="people_contact_network_other">ಇತರ</string>
+    <string name="people_contacts_menu_unfriend">ಸ್ನೇಹ ಕೊನೆಗೊಳಿಸಿ</string>
+    <string name="people_profile_directory_listing">ಡೈರೆಕ್ಟರಿಯಲ್ಲಿ ತೋರಿಸಿ</string>
 </resources>

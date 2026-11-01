@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">नाम सम्पादन गर्नुहोस्</string>
     <string name="people_profile_identity">पहिचान</string>
     <string name="people_profile_accent">एक्सेन्ट</string>
-    <string name="people_profile_directory_listing">अरूलाई डाइरेक्टरीमा तपाईंलाई फेला पार्न अनुमति दिनुहोस्</string>
     <string name="people_profile_preview">पूर्वावलोकन</string>
     <string name="people_profile_upload_avatar">अवतार अपलोड गर्नुहोस्</string>
     <string name="people_profile_upload">अपलोड गर्नुहोस्</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP सम्पर्क</string>
     <string name="people_person_forums">फोरमहरू</string>
     <string name="people_contact_network_other">अन्य</string>
+    <string name="people_contacts_menu_unfriend">मित्रता अन्त्य गर्नुहोस्</string>
+    <string name="people_profile_directory_listing">निर्देशिकामा सूचीबद्ध</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">სახელის რედაქტირება</string>
     <string name="people_profile_identity">ვინაობა</string>
     <string name="people_profile_accent">აქცენტი</string>
-    <string name="people_profile_directory_listing">სხვების ნება, გიპოვონ კატალოგში</string>
     <string name="people_profile_preview">გადახედვა</string>
     <string name="people_profile_upload_avatar">ავატარის ატვირთვა</string>
     <string name="people_profile_upload">ატვირთვა</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP კონტაქტი</string>
     <string name="people_person_forums">ფორუმები</string>
     <string name="people_contact_network_other">სხვა</string>
+    <string name="people_contacts_menu_unfriend">მეგობრობის დასრულება</string>
+    <string name="people_profile_directory_listing">კატალოგში ჩვენება</string>
 </resources>

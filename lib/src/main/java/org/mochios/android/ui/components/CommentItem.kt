@@ -15,13 +15,17 @@ import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.ime
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.relocation.BringIntoViewRequester
+import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -29,23 +33,32 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.listSaver
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -259,23 +272,12 @@ fun CommentItem(
             Spacer(modifier = Modifier.height(4.dp))
 
             if (isEditing) {
-                MochiTextField(
-                    value = editText,
-                    onValueChange = onEditTextChange,
-                    modifier = Modifier.fillMaxWidth(),
-                    minLines = 2
+                CommentEditor(
+                    text = editText,
+                    onTextChange = onEditTextChange,
+                    onCancel = onCancelEdit,
+                    onSave = onSaveEdit,
                 )
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
-                ) {
-                    MochiTextButton(onClick = onCancelEdit) {
-                        Text(stringResource(R.string.common_cancel))
-                    }
-                    MochiTextButton(onClick = onSaveEdit) {
-                        Text(stringResource(R.string.common_save))
-                    }
-                }
             } else {
                 HtmlContent(
                     html = body,
@@ -456,4 +458,114 @@ fun CommentThreadBack(onClick: () -> Unit, modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.width(6.dp))
         Text(stringResource(R.string.comment_all))
     }
+}
+
+/**
+ * The editor a comment turns into while it is edited in place: the text, then
+ * Cancel and Save beneath it on the right. Every app's comments edit through
+ * this, so they all look and behave the same. Save is off while [text] is
+ * blank.
+ */
+@Composable
+fun CommentEditor(
+    text: String,
+    onTextChange: (String) -> Unit,
+    onCancel: () -> Unit,
+    onSave: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    var field by remember { mutableStateOf(TextFieldValue(text, TextRange(text.length))) }
+    val shown = if (field.text == text) field else TextFieldValue(text, TextRange(text.length))
+    KeepAboveKeyboard(modifier = modifier.fillMaxWidth()) {
+        Column(modifier = Modifier.fillMaxWidth()) {
+            MochiTextField(
+                value = shown,
+                onValueChange = { value ->
+                    field = value
+                    onTextChange(value.text)
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(rememberAutoFocus()),
+                minLines = 2,
+                maxLines = 8,
+            )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.End,
+            ) {
+                MochiTextButton(onClick = onCancel) {
+                    Text(stringResource(R.string.common_cancel))
+                }
+                MochiTextButton(onClick = onSave, enabled = text.isNotBlank()) {
+                    Text(stringResource(R.string.common_save))
+                }
+            }
+        }
+    }
+}
+
+/**
+ * A box that scrolls itself into view above the keyboard while a field in it
+ * has focus. An edit box opened low in a comment list would otherwise
+ * sit under the keyboard, since the list only scrolls the field and not the
+ * buttons beside or below it.
+ *
+ * @param modifier The box's modifier.
+ * @param content The box's content, holding the field.
+ */
+@Composable
+fun KeepAboveKeyboard(
+    modifier: Modifier = Modifier,
+    content: @Composable () -> Unit,
+) {
+    val view = remember { BringIntoViewRequester() }
+    var focused by remember { mutableStateOf(false) }
+    val keyboard = WindowInsets.ime.getBottom(LocalDensity.current)
+    LaunchedEffect(focused, keyboard) {
+        if (focused) {
+            view.bringIntoView()
+        }
+    }
+    Box(
+        modifier = modifier
+            .bringIntoViewRequester(view)
+            .onFocusChanged { state -> focused = state.hasFocus },
+    ) {
+        content()
+    }
+}
+
+/**
+ * A focus requester that asks for focus once its field is on screen, so an
+ * edit box opened under a comment is ready to type in.
+ */
+@Composable
+fun rememberAutoFocus(): FocusRequester {
+    val focus = remember { FocusRequester() }
+    LaunchedEffect(focus) {
+        focus.requestFocus()
+    }
+    return focus
+}
+
+/**
+ * A focus requester that puts the cursor in its field and raises the keyboard
+ * each time [replyTo] is set, so Reply readies the composer at the bottom as a
+ * chat app does.
+ *
+ * @param replyTo The comment replied to, or null when there is none.
+ * @return The requester to give the composer's field.
+ */
+@Composable
+fun rememberReplyFocus(replyTo: String?): FocusRequester {
+    val focus = remember { FocusRequester() }
+    val keyboard = LocalSoftwareKeyboardController.current
+    LaunchedEffect(replyTo) {
+        if (replyTo != null) {
+            focus.requestFocus()
+            keyboard?.show()
+        }
+    }
+    return focus
 }

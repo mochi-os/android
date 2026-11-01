@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Redaguoti vardą</string>
     <string name="people_profile_identity">Tapatybė</string>
     <string name="people_profile_accent">Akcentas</string>
-    <string name="people_profile_directory_listing">Leisti kitiems rasti jus kataloge</string>
     <string name="people_profile_preview">Peržiūra</string>
     <string name="people_profile_upload_avatar">Įkelti avatarą</string>
     <string name="people_profile_upload">Įkelti</string>
@@ -225,4 +224,6 @@
     <string name="people_contact_xmpp">XMPP kontaktas</string>
     <string name="people_person_forums">Forumai</string>
     <string name="people_contact_network_other">Kita</string>
+    <string name="people_contacts_menu_unfriend">Nutraukti draugystę</string>
+    <string name="people_profile_directory_listing">Rodymas kataloge</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Cuir ainm in eagar</string>
     <string name="people_profile_identity">Aitheantas</string>
     <string name="people_profile_accent">Aiceann</string>
-    <string name="people_profile_directory_listing">Ceadaigh do dhaoine eile thú a aimsiú san eolaire</string>
     <string name="people_profile_preview">Réamhamharc</string>
     <string name="people_profile_upload_avatar">Uaslódáil abhatár</string>
     <string name="people_profile_upload">Uaslódáil</string>
@@ -227,4 +226,6 @@
     <string name="people_contact_xmpp">Teagmhálaí XMPP</string>
     <string name="people_person_forums">Fóraim</string>
     <string name="people_contact_network_other">Eile</string>
+    <string name="people_contacts_menu_unfriend">Cuir deireadh leis an gcairdeas</string>
+    <string name="people_profile_directory_listing">Liostú san eolaire</string>
 </resources>

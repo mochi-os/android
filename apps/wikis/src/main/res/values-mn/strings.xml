@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s-д хариулж байна</string>
     <string name="wikis_comment_clear_reply">Хариултыг цуцлах</string>
     <string name="wikis_comment_action_delete">Устгах</string>
-    <string name="wikis_comment_action_save">Хадгалах</string>
     <string name="wikis_comment_action_cancel">Цуцлах</string>
     <string name="wikis_comment_edited">(засварласан)</string>
     <string name="wikis_comment_delete_confirm_title">Сэтгэгдэл устгах</string>

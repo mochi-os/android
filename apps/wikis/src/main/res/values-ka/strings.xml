@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">პასუხი %1$s-ს</string>
     <string name="wikis_comment_clear_reply">პასუხის გაუქმება</string>
     <string name="wikis_comment_action_delete">წაშლა</string>
-    <string name="wikis_comment_action_save">შენახვა</string>
     <string name="wikis_comment_action_cancel">გაუქმება</string>
     <string name="wikis_comment_edited">(რედაქტირებულია)</string>
     <string name="wikis_comment_delete_confirm_title">კომენტარის წაშლა</string>

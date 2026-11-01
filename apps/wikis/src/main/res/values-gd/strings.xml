@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">A\' freagairt %1$s</string>
     <string name="wikis_comment_clear_reply">Sguir den fhreagairt</string>
     <string name="wikis_comment_action_delete">Sguab às</string>
-    <string name="wikis_comment_action_save">Sàbhail</string>
     <string name="wikis_comment_action_cancel">Sguir dheth</string>
     <string name="wikis_comment_edited">(deasaichte)</string>
     <string name="wikis_comment_delete_confirm_title">Sguab às beachd</string>

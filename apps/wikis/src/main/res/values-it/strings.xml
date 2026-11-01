@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Risposta a %1$s</string>
     <string name="wikis_comment_clear_reply">Annulla risposta</string>
     <string name="wikis_comment_action_delete">Elimina</string>
-    <string name="wikis_comment_action_save">Salva</string>
     <string name="wikis_comment_action_cancel">Annulla</string>
     <string name="wikis_comment_edited">(modificato)</string>
     <string name="wikis_comment_delete_confirm_title">Elimina commento</string>

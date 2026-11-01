@@ -134,6 +134,7 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberCopier
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
@@ -810,6 +811,7 @@ private fun ChatContent(
                         )
                     }
                 },
+                focusRequester = rememberReplyFocus(uiState.replyingTo?.id),
             )
             }
 

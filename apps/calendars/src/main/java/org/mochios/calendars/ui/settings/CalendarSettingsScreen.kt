@@ -474,6 +474,7 @@ internal fun CalendarSettingsContent(
                         hex = uiState.colour,
                         onHexChange = onColour,
                         modifier = Modifier.fillMaxWidth(),
+                        collapsible = true,
                     )
                 }
             }

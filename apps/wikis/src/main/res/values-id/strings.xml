@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Membalas %1$s</string>
     <string name="wikis_comment_clear_reply">Batalkan balasan</string>
     <string name="wikis_comment_action_delete">Hapus</string>
-    <string name="wikis_comment_action_save">Simpan</string>
     <string name="wikis_comment_action_cancel">Batal</string>
     <string name="wikis_comment_edited">(disunting)</string>
     <string name="wikis_comment_delete_confirm_title">Hapus komentar</string>

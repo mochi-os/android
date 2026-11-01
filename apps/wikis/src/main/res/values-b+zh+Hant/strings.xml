@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">正在回覆 %1$s</string>
     <string name="wikis_comment_clear_reply">取消回覆</string>
     <string name="wikis_comment_action_delete">刪除</string>
-    <string name="wikis_comment_action_save">儲存</string>
     <string name="wikis_comment_action_cancel">取消</string>
     <string name="wikis_comment_edited">(已編輯)</string>
     <string name="wikis_comment_delete_confirm_title">刪除留言</string>

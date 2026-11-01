@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Редагувати ім\'я</string>
     <string name="people_profile_identity">Ідентичність</string>
     <string name="people_profile_accent">Акцент</string>
-    <string name="people_profile_directory_listing">Дозволити іншим знаходити вас у каталозі</string>
     <string name="people_profile_preview">Попередній перегляд</string>
     <string name="people_profile_upload_avatar">Завантажити аватар</string>
     <string name="people_profile_upload">Завантажити</string>
@@ -226,4 +225,6 @@
     <string name="people_contact_xmpp">Контакт XMPP</string>
     <string name="people_person_forums">Форуми</string>
     <string name="people_contact_network_other">Інша</string>
+    <string name="people_contacts_menu_unfriend">Припинити дружбу</string>
+    <string name="people_profile_directory_listing">Відображення в каталозі</string>
 </resources>

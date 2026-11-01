@@ -16,10 +16,16 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.mochios.android.util.webUri
 
+/**
+ * The sign-in flow. While [signingIn], the app is starting up behind a finished
+ * sign-in and the tapped button keeps its spinner; once it turns false without
+ * this leaving the screen, the start-up failed and the spinner stops.
+ */
 @Composable
 fun AuthNavigation(
     onAuthenticated: () -> Unit,
-    oauthScheme: String? = null
+    oauthScheme: String? = null,
+    signingIn: Boolean = false
 ) {
     val navController = rememberNavController()
     val viewModel: AuthViewModel = hiltViewModel()
@@ -31,6 +37,12 @@ fun AuthNavigation(
     // so the flow always restarts at the email step.
     LaunchedEffect(Unit) {
         viewModel.resetForLogin()
+    }
+
+    LaunchedEffect(signingIn) {
+        if (!signingIn) {
+            viewModel.stopLoading()
+        }
     }
 
     LaunchedEffect(uiState.oauthLaunchUrl) {

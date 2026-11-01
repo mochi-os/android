@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Svarer %1$s</string>
     <string name="wikis_comment_clear_reply">Avbryt svar</string>
     <string name="wikis_comment_action_delete">Slett</string>
-    <string name="wikis_comment_action_save">Lagre</string>
     <string name="wikis_comment_action_cancel">Avbryt</string>
     <string name="wikis_comment_edited">(redigert)</string>
     <string name="wikis_comment_delete_confirm_title">Slett kommentar</string>

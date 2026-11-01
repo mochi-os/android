@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Mai amfani</string>
     <string name="forums_no_comments">Babu sharhi tukuna</string>
     <string name="forums_comment_edit">Gyara comment</string>
-    <string name="forums_comment_edit_title">Gyara comment</string>
     <string name="forums_comment_delete">Goge sharhi</string>
     <string name="forums_comment_delete_title">Goge sharhi</string>
     <string name="forums_comment_reply">Amsa</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Aika</string>
     <string name="forums_post_body_field">Abun ciki</string>
-    <string name="forums_comment_edit_body_field">Abun ciki</string>
     <string name="forums_write_comment">Rubuta sharhi…</string>
 
     <string name="notification_channel_forums">Sanarwar tarukan tattaunawa</string>

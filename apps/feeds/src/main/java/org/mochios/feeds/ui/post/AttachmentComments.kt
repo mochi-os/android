@@ -30,6 +30,7 @@ import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Post
@@ -134,6 +135,9 @@ internal fun AttachmentComments(
             }
         }
         if (canComment) {
+            // Looked for in the whole thread: a reply to a comment that is not
+            // about this image still shows its banner.
+            val replyTarget = findComment(post.comments, replyingTo)
             ComposeBar(
                 value = commentText,
                 onValueChange = { viewModel.setCommentText(it) },
@@ -153,9 +157,10 @@ internal fun AttachmentComments(
                 onSearchMentions = { viewModel.searchMembers(it) },
                 windowInsets = ComposeBarDefaults.NoWindowInsets,
                 banner = feedsReplyBanner(
-                    findComment(anchored, replyingTo),
+                    replyTarget,
                     { viewModel.setReplyingTo(null) },
                 ),
+                focusRequester = rememberReplyFocus(replyTarget?.id),
             )
         }
     }

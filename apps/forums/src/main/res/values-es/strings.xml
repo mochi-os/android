@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Usuario</string>
     <string name="forums_no_comments">Aún no hay comentarios</string>
     <string name="forums_comment_edit">Editar comentario</string>
-    <string name="forums_comment_edit_title">Editar comentario</string>
     <string name="forums_comment_delete">Eliminar comentario</string>
     <string name="forums_comment_delete_title">Eliminar comentario</string>
     <string name="forums_comment_reply">Responder</string>
@@ -133,7 +132,6 @@
     <string name="forums_moderation_restriction_permanent">Permanente</string>
     <string name="forums_report_reason_hate">Odio</string>
     <string name="forums_write_comment">Escribe un comentario…</string>
-    <string name="forums_comment_edit_body_field">Cuerpo</string>
     <string name="forums_comment_delete_message">¿Seguro que quieres eliminar este comentario?</string>
     <string name="forums_comment_replying_to">Respondiendo a %1$s</string>
     <string name="forums_comment_clear_reply">Borrar respuesta</string>

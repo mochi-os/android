@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">పేరును సవరించండి</string>
     <string name="people_profile_identity">గుర్తింపు</string>
     <string name="people_profile_accent">యాస</string>
-    <string name="people_profile_directory_listing">డైరెక్టరీలో ఇతరులు మిమ్మల్ని కనుగొనడానికి అనుమతించండి</string>
     <string name="people_profile_preview">ప్రివ్యూ</string>
     <string name="people_profile_upload_avatar">అవతార్‌ను అప్‌లోడ్ చేయండి</string>
     <string name="people_profile_upload">అప్‌లోడ్ చేయండి</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP పరిచయం</string>
     <string name="people_person_forums">ఫోరమ్‌లు</string>
     <string name="people_contact_network_other">ఇతర</string>
+    <string name="people_contacts_menu_unfriend">స్నేహం ముగించండి</string>
+    <string name="people_profile_directory_listing">డైరెక్టరీలో చూపించు</string>
 </resources>

@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">નામ એડિટ કરો</string>
     <string name="people_profile_identity">ઓળખ</string>
     <string name="people_profile_accent">એક્સન્ટ</string>
-    <string name="people_profile_directory_listing">બીજાને તમને ડિરેક્ટરીમાં શોધવાની મંજૂરી આપો</string>
     <string name="people_profile_preview">પ્રિવ્યૂ</string>
     <string name="people_profile_upload_avatar">અવતાર અપલોડ કરો</string>
     <string name="people_profile_upload">અપલોડ કરો</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP સંપર્ક</string>
     <string name="people_person_forums">ફોરમ્સ</string>
     <string name="people_contact_network_other">અન્ય</string>
+    <string name="people_contacts_menu_unfriend">મિત્રતા સમાપ્ત કરો</string>
+    <string name="people_profile_directory_listing">નિર્દેશિકામાં સૂચિબદ્ધ</string>
 </resources>

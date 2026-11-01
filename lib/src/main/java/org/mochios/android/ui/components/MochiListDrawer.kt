@@ -72,9 +72,9 @@ data class DrawerItem(
 )
 
 /**
- * Slide-in left drawer for an app's item list: optional header, a pinned
- * [allItem], the scrollable [items], and a bottom [actions] slot that stays
- * put. [emptyState] replaces the list when [items] is empty. The caller owns
+ * Slide-in left drawer for an app's item list: optional header, pinned
+ * [topItems] above a pinned [allItem], the scrollable [items], and a bottom
+ * [actions] slot that stays put. [emptyState] replaces the list when [items] is empty. The caller owns
  * [drawerState] so the host's TopAppBar can open it too.
  */
 @Composable
@@ -87,6 +87,7 @@ fun MochiListDrawer(
     allItem: DrawerItem? = null,
     actions: (@Composable () -> Unit)? = null,
     emptyState: (@Composable () -> Unit)? = null,
+    topItems: List<DrawerItem> = emptyList(),
     content: @Composable () -> Unit,
 ) {
     ModalNavigationDrawer(
@@ -96,8 +97,16 @@ fun MochiListDrawer(
                 Column(modifier = Modifier.fillMaxHeight()) {
                     MochiHomeRow(drawerState)
                     HorizontalDivider()
-                    if (header != null || allItem != null) {
+                    if (header != null || allItem != null || topItems.isNotEmpty()) {
                         header?.invoke()
+                        topItems.forEach { item ->
+                            DrawerItemRow(
+                                item = item,
+                                isSelected = selectedId == item.id,
+                                onClick = { onItemClick(item) },
+                                pinned = true,
+                            )
+                        }
                         if (allItem != null) {
                             DrawerItemRow(
                                 item = allItem,

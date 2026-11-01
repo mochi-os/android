@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Χρήστης</string>
     <string name="forums_no_comments">Δεν υπάρχουν ακόμη σχόλια</string>
     <string name="forums_comment_edit">Επεξεργασία σχολίου</string>
-    <string name="forums_comment_edit_title">Επεξεργασία σχολίου</string>
     <string name="forums_comment_delete">Διαγραφή σχολίου</string>
     <string name="forums_comment_delete_title">Διαγραφή σχολίου</string>
     <string name="forums_comment_reply">Απάντηση</string>
@@ -133,7 +132,6 @@
     <string name="forums_moderation_restriction_permanent">Μόνιμο</string>
     <string name="forums_report_reason_hate">Μίσος</string>
     <string name="forums_write_comment">Γράψτε ένα σχόλιο…</string>
-    <string name="forums_comment_edit_body_field">Κείμενο</string>
     <string name="forums_comment_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το σχόλιο;</string>
     <string name="forums_comment_replying_to">Απάντηση στον/στην %1$s</string>
     <string name="forums_comment_clear_reply">Καθαρισμός απάντησης</string>

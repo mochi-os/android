@@ -14,7 +14,6 @@
     <string name="wikis_comment_replying_to">Respondiendo a %1$s</string>
     <string name="wikis_comment_clear_reply">Cancelá la respuesta</string>
     <string name="wikis_comment_action_delete">Eliminá</string>
-    <string name="wikis_comment_action_save">Guardá</string>
     <string name="wikis_comment_delete_confirm_title">Eliminá el comentario</string>
     <string name="wikis_comment_delete_confirm_message">¿Estás seguro de que querés eliminar este comentario? Esto también eliminará todas las respuestas. Esta acción no se puede deshacer.</string>
     <string name="wikis_editor_delete">Eliminá la página</string>

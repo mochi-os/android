@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">בתגובה אל %1$s</string>
     <string name="wikis_comment_clear_reply">בטל תשובה</string>
     <string name="wikis_comment_action_delete">מחק</string>
-    <string name="wikis_comment_action_save">שמור</string>
     <string name="wikis_comment_action_cancel">ביטול</string>
     <string name="wikis_comment_edited">(נערך)</string>
     <string name="wikis_comment_delete_confirm_title">מחק תגובה</string>

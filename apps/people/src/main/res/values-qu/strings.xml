@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Sutita hukchay</string>
     <string name="people_profile_identity">Identidad</string>
     <string name="people_profile_accent">Acento</string>
-    <string name="people_profile_directory_listing">Hukkuna directorio-pi tarisuchun saqiy</string>
     <string name="people_profile_preview">Ñawpaq qhaway</string>
     <string name="people_profile_upload_avatar">Avatarta wichachiy</string>
     <string name="people_profile_upload">Wichachiy</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP riqsisqa</string>
     <string name="people_person_forums">Forokuna</string>
     <string name="people_contact_network_other">Huk</string>
+    <string name="people_contacts_menu_unfriend">Masinakuyta tukuchiy</string>
+    <string name="people_profile_directory_listing">Directorio-pi rikhuriy</string>
 </resources>

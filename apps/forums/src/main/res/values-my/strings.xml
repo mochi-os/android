@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">သုံးစွဲသူ</string>
     <string name="forums_no_comments">comment များ မရှိသေးပါ</string>
     <string name="forums_comment_edit">မှတ်ချက် တည်းဖြတ်</string>
-    <string name="forums_comment_edit_title">မှတ်ချက် တည်းဖြတ်</string>
     <string name="forums_comment_delete">မှတ်ချက် ဖျက်မည်</string>
     <string name="forums_comment_delete_title">မှတ်ချက် ဖျက်မည်</string>
     <string name="forums_comment_reply">ပြန်ကြား</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">ပို့</string>
     <string name="forums_post_body_field">အကြောင်းအရာ</string>
-    <string name="forums_comment_edit_body_field">အကြောင်းအရာ</string>
     <string name="forums_write_comment">မှတ်ချက်ရေးရန်…</string>
 
     <string name="notification_channel_forums">ဖိုရမ် အကြောင်းကြားချက်များ</string>

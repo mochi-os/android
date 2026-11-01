@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Răspunzi lui %1$s</string>
     <string name="wikis_comment_clear_reply">Anulează răspunsul</string>
     <string name="wikis_comment_action_delete">Șterge</string>
-    <string name="wikis_comment_action_save">Salvează</string>
     <string name="wikis_comment_action_cancel">Anulează</string>
     <string name="wikis_comment_edited">(editat)</string>
     <string name="wikis_comment_delete_confirm_title">Șterge comentariul</string>

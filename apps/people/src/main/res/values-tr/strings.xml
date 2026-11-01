@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Adı düzenle</string>
     <string name="people_profile_identity">Kimlik</string>
     <string name="people_profile_accent">Vurgu</string>
-    <string name="people_profile_directory_listing">Başkalarının sizi dizinde bulmasına izin ver</string>
     <string name="people_profile_preview">Önizleme</string>
     <string name="people_profile_upload_avatar">Avatar yükle</string>
     <string name="people_profile_upload">Yükle</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP kişisi</string>
     <string name="people_person_forums">Forumlar</string>
     <string name="people_contact_network_other">Diğer</string>
+    <string name="people_contacts_menu_unfriend">Arkadaşlıktan çıkar</string>
+    <string name="people_profile_directory_listing">Dizinde listelenme</string>
 </resources>

@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s пайдаланушысына жауап беру</string>
     <string name="wikis_comment_clear_reply">Жауаптан бас тарту</string>
     <string name="wikis_comment_action_delete">Жою</string>
-    <string name="wikis_comment_action_save">Сақтау</string>
     <string name="wikis_comment_action_cancel">Болдырмау</string>
     <string name="wikis_comment_edited">(өңделді)</string>
     <string name="wikis_comment_delete_confirm_title">Пікірді жою</string>

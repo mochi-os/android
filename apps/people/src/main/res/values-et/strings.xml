@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Muuda nime</string>
     <string name="people_profile_identity">Identiteet</string>
     <string name="people_profile_accent">Aktsent</string>
-    <string name="people_profile_directory_listing">Luba teistel sind kataloogist leida</string>
     <string name="people_profile_preview">Eelvaade</string>
     <string name="people_profile_upload_avatar">Lae üles avatar</string>
     <string name="people_profile_upload">Lae üles</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP-kontakt</string>
     <string name="people_person_forums">Foorumid</string>
     <string name="people_contact_network_other">Muu</string>
+    <string name="people_contacts_menu_unfriend">Lõpeta sõprus</string>
+    <string name="people_profile_directory_listing">Kataloogis kuvamine</string>
 </resources>

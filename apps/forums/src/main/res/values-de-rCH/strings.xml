@@ -120,8 +120,6 @@
     <string name="forums_no_comments">Noch keine Kommentare</string>
     <string name="forums_write_comment">Kommentar schreiben…</string>
     <string name="forums_comment_edit">Kommentar bearbeiten</string>
-    <string name="forums_comment_edit_title">Kommentar bearbeiten</string>
-    <string name="forums_comment_edit_body_field">Inhalt</string>
     <string name="forums_comment_delete">Kommentar löschen</string>
     <string name="forums_comment_delete_title">Kommentar löschen</string>
     <string name="forums_comment_delete_message">Möchten Sie diesen Kommentar wirklich löschen?</string>

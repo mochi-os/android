@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">यूज़र</string>
     <string name="forums_no_comments">अभी तक कोई कमेंट नहीं</string>
     <string name="forums_comment_edit">टिप्पणी संपादित करें</string>
-    <string name="forums_comment_edit_title">टिप्पणी संपादित करें</string>
     <string name="forums_comment_delete">टिप्पणी हटाएँ</string>
     <string name="forums_comment_delete_title">टिप्पणी हटाएँ</string>
     <string name="forums_comment_reply">उत्तर</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">भेजें</string>
     <string name="forums_post_body_field">मुख्य पाठ</string>
-    <string name="forums_comment_edit_body_field">मुख्य पाठ</string>
     <string name="forums_write_comment">टिप्पणी लिखें…</string>
 
     <string name="notification_channel_forums">फ़ोरम सूचनाएँ</string>

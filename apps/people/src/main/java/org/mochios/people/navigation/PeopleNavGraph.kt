@@ -109,7 +109,10 @@ fun NavGraphBuilder.peopleNavGraph(
         onOpenBook = { id -> navController.navigateFromDrawer(PeopleApp.book(id)) },
         onOpenAllContacts = { navController.navigateFromDrawer(PeopleApp.contacts()) },
         onSwitchSection = { section -> navController.openPeopleSection(section) },
+        onOpenGroup = { id -> navController.navigate(PeopleApp.groupDetail(id)) },
         onCreateBook = { navController.navigate(PeopleApp.BOOK_CREATE) },
+        onCreateGroup = { navController.navigate(PeopleApp.GROUP_CREATE) },
+        onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
     )
 
     composable(PeopleApp.ROUTER) { entry ->
@@ -144,7 +147,6 @@ fun NavGraphBuilder.peopleNavGraph(
             onOpenNotifications = onOpenNotifications,
             onMessage = onOpenLink,
             onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
-            onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
             initialAction = action.ifBlank { null },
         )
     }
@@ -160,7 +162,6 @@ fun NavGraphBuilder.peopleNavGraph(
             onOpenNotifications = onOpenNotifications,
             onMessage = onOpenLink,
             onAddContact = { navController.navigate(PeopleApp.contactsAdd(book = book)) },
-            onConnectDevice = { navController.navigate(PeopleApp.DEVICES) },
         )
     }
 

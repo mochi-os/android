@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Usuari</string>
     <string name="forums_no_comments">Encara no hi ha comentaris</string>
     <string name="forums_comment_edit">Edita el comentari</string>
-    <string name="forums_comment_edit_title">Edita el comentari</string>
     <string name="forums_comment_delete">Suprimeix el comentari</string>
     <string name="forums_comment_delete_title">Suprimeix el comentari</string>
     <string name="forums_comment_reply">Respon</string>
@@ -133,7 +132,6 @@
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Odi</string>
     <string name="forums_write_comment">Escriviu un comentari…</string>
-    <string name="forums_comment_edit_body_field">Cos</string>
     <string name="forums_comment_delete_message">Segur que voleu suprimir aquest comentari?</string>
     <string name="forums_comment_replying_to">Responent a %1$s</string>
     <string name="forums_comment_clear_reply">Esborra la resposta</string>

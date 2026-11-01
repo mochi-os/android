@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s ga javob berilmoqda</string>
     <string name="wikis_comment_clear_reply">Javobni bekor qilish</string>
     <string name="wikis_comment_action_delete">Oʻchirish</string>
-    <string name="wikis_comment_action_save">Saqlash</string>
     <string name="wikis_comment_action_cancel">Bekor qilish</string>
     <string name="wikis_comment_edited">(tahrirlangan)</string>
     <string name="wikis_comment_delete_confirm_title">Izohni oʻchirish</string>

@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s-man kutichichkanki</string>
     <string name="wikis_comment_clear_reply">Kutichiy mana ruway</string>
     <string name="wikis_comment_action_delete">Wischuy</string>
-    <string name="wikis_comment_action_save">Waqaychay</string>
     <string name="wikis_comment_action_cancel">Mana ruway</string>
     <string name="wikis_comment_edited">(hukchasqa)</string>
     <string name="wikis_comment_delete_confirm_title">Comentario wischuy</string>

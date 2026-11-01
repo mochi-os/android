@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">ویرایش نام</string>
     <string name="people_profile_identity">هویت</string>
     <string name="people_profile_accent">رنگ تأکید</string>
-    <string name="people_profile_directory_listing">اجازه دهید دیگران شما را در دایرکتوری پیدا کنند</string>
     <string name="people_profile_preview">پیش‌نمایش</string>
     <string name="people_profile_upload_avatar">بارگذاری آواتار</string>
     <string name="people_profile_upload">بارگذاری</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">مخاطب XMPP</string>
     <string name="people_person_forums">انجمن‌ها</string>
     <string name="people_contact_network_other">سایر</string>
+    <string name="people_contacts_menu_unfriend">پایان دوستی</string>
+    <string name="people_profile_directory_listing">نمایش در فهرست</string>
 </resources>

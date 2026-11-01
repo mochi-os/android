@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Qed twieġeb lil %1$s</string>
     <string name="wikis_comment_clear_reply">Ikkanċella r-risposta</string>
     <string name="wikis_comment_action_delete">Ħassar</string>
-    <string name="wikis_comment_action_save">Issejvja</string>
     <string name="wikis_comment_action_cancel">Ikkanċella</string>
     <string name="wikis_comment_edited">(editjat)</string>
     <string name="wikis_comment_delete_confirm_title">Ħassar kumment</string>

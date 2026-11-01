@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Muokkaa nimeä</string>
     <string name="people_profile_identity">Identiteetti</string>
     <string name="people_profile_accent">Korostus</string>
-    <string name="people_profile_directory_listing">Salli muiden löytää sinut hakemistosta</string>
     <string name="people_profile_preview">Esikatselu</string>
     <string name="people_profile_upload_avatar">Lähetä profiilikuva</string>
     <string name="people_profile_upload">Lähetä</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP-yhteystieto</string>
     <string name="people_person_forums">Foorumit</string>
     <string name="people_contact_network_other">Muu</string>
+    <string name="people_contacts_menu_unfriend">Poista kavereista</string>
+    <string name="people_profile_directory_listing">Näkyvyys hakemistossa</string>
 </resources>

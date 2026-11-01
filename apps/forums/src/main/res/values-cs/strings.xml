@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Uživatel</string>
     <string name="forums_no_comments">Zatím žádné komentáře</string>
     <string name="forums_comment_edit">Upravit komentář</string>
-    <string name="forums_comment_edit_title">Upravit komentář</string>
     <string name="forums_comment_delete">Smazat komentář</string>
     <string name="forums_comment_delete_title">Smazat komentář</string>
     <string name="forums_comment_reply">Odpovědět</string>
@@ -133,7 +132,6 @@
     <string name="forums_moderation_restriction_permanent">Trvalé</string>
     <string name="forums_report_reason_hate">Nenávist</string>
     <string name="forums_write_comment">Napsat komentář…</string>
-    <string name="forums_comment_edit_body_field">Text</string>
     <string name="forums_comment_delete_message">Opravdu chcete tento komentář smazat?</string>
     <string name="forums_comment_replying_to">Odpovídáte na %1$s</string>
     <string name="forums_comment_clear_reply">Zrušit odpověď</string>

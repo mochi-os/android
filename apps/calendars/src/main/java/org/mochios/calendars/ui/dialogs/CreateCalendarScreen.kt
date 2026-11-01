@@ -116,6 +116,7 @@ fun CreateCalendarScreen(
                 hex = uiState.colour,
                 onHexChange = viewModel::setColour,
                 modifier = Modifier.fillMaxWidth(),
+                collapsible = true,
             )
         }
     }

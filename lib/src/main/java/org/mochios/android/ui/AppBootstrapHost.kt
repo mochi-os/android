@@ -28,6 +28,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -56,8 +59,16 @@ fun AppBootstrapHost(
     val viewModel: AppBootstrapViewModel = hiltViewModel()
     val stage by viewModel.stage.collectAsState()
 
+    var signingIn by remember { mutableStateOf(false) }
+
     LaunchedEffect(appName, prefetchApps) {
         viewModel.start(appName, prefetchApps)
+    }
+
+    LaunchedEffect(stage) {
+        if (stage !is AuthStage.Bootstrapping) {
+            signingIn = false
+        }
     }
 
     when (val s = stage) {
@@ -69,12 +80,20 @@ fun AppBootstrapHost(
             onDifferent = viewModel::useDifferentServer
         )
 
-        is AuthStage.NeedsLogin -> AuthNavigation(
-            onAuthenticated = viewModel::onAuthSuccess,
-            oauthScheme = oauthScheme
-        )
-
-        is AuthStage.Bootstrapping -> Loading()
+        is AuthStage.NeedsLogin, is AuthStage.Bootstrapping -> {
+            if (s is AuthStage.NeedsLogin || signingIn) {
+                AuthNavigation(
+                    onAuthenticated = {
+                        signingIn = true
+                        viewModel.onAuthSuccess()
+                    },
+                    oauthScheme = oauthScheme,
+                    signingIn = signingIn
+                )
+            } else {
+                Loading()
+            }
+        }
 
         is AuthStage.NeedsReactivation -> ReactivationScreen(
             purge = s.purge,

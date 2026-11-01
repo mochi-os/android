@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Redigera namn</string>
     <string name="people_profile_identity">Identitet</string>
     <string name="people_profile_accent">Accentfärg</string>
-    <string name="people_profile_directory_listing">Tillåt andra att hitta dig i katalogen</string>
     <string name="people_profile_preview">Förhandsgranska</string>
     <string name="people_profile_upload_avatar">Ladda upp avatar</string>
     <string name="people_profile_upload">Ladda upp</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">XMPP-kontakt</string>
     <string name="people_person_forums">Forum</string>
     <string name="people_contact_network_other">Övrigt</string>
+    <string name="people_contacts_menu_unfriend">Avsluta vänskap</string>
+    <string name="people_profile_directory_listing">Synlig i katalogen</string>
 </resources>

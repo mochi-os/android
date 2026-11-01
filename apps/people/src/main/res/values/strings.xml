@@ -25,6 +25,7 @@
     <string name="people_contacts_accept">Accept</string>
     <string name="people_contacts_message">Message</string>
     <string name="people_contacts_unfriend">Remove friend</string>
+    <string name="people_contacts_menu_unfriend">Unfriend</string>
     <string name="people_contacts_unfriend_confirm">%1$s will no longer be your friend. The contact stays in your address book.</string>
     <string name="people_contacts_delete">Delete contact</string>
     <string name="people_contacts_delete_confirm">Delete %1$s from your contacts?</string>
@@ -178,7 +179,7 @@
     <string name="people_profile_edit_name">Edit name</string>
     <string name="people_profile_identity">Identity</string>
     <string name="people_profile_accent">Accent</string>
-    <string name="people_profile_directory_listing">Allow others to find you in directory</string>
+    <string name="people_profile_directory_listing">Directory listing</string>
     <string name="people_profile_preview">Preview</string>
     <string name="people_profile_upload_avatar">Upload avatar</string>
     <string name="people_profile_upload">Upload</string>

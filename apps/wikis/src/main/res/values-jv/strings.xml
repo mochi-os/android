@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Mbales %1$s</string>
     <string name="wikis_comment_clear_reply">Batal balesan</string>
     <string name="wikis_comment_action_delete">Busak</string>
-    <string name="wikis_comment_action_save">Simpen</string>
     <string name="wikis_comment_action_cancel">Batal</string>
     <string name="wikis_comment_edited">(disunting)</string>
     <string name="wikis_comment_delete_confirm_title">Busak komentar</string>

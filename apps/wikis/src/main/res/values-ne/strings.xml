@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s लाई जवाफ दिँदै</string>
     <string name="wikis_comment_clear_reply">जवाफ रद्द गर्नुहोस्</string>
     <string name="wikis_comment_action_delete">मेटाउनुहोस्</string>
-    <string name="wikis_comment_action_save">सुरक्षित गर्नुहोस्</string>
     <string name="wikis_comment_action_cancel">रद्द गर्नुहोस्</string>
     <string name="wikis_comment_edited">(सम्पादित)</string>
     <string name="wikis_comment_delete_confirm_title">टिप्पणी मेटाउनुहोस्</string>

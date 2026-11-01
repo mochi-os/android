@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Edita el nom</string>
     <string name="people_profile_identity">Identitat</string>
     <string name="people_profile_accent">Accent</string>
-    <string name="people_profile_directory_listing">Permet que altres et trobin al directori</string>
     <string name="people_profile_preview">Vista prèvia</string>
     <string name="people_profile_upload_avatar">Puja l\'avatar</string>
     <string name="people_profile_upload">Puja</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">Contacte XMPP</string>
     <string name="people_person_forums">Fòrums</string>
     <string name="people_contact_network_other">Altres</string>
+    <string name="people_contacts_menu_unfriend">Posa fi a l\'amistat</string>
+    <string name="people_profile_directory_listing">Aparèixer al directori</string>
 </resources>

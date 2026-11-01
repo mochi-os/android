@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">Itilizatè</string>
     <string name="forums_no_comments">Poko gen kòmantè</string>
     <string name="forums_comment_edit">Modifye kòmantè</string>
-    <string name="forums_comment_edit_title">Modifye kòmantè</string>
     <string name="forums_comment_delete">Efase kòmantè</string>
     <string name="forums_comment_delete_title">Efase kòmantè</string>
     <string name="forums_comment_reply">Reponn</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">Voye</string>
     <string name="forums_post_body_field">Kontni</string>
-    <string name="forums_comment_edit_body_field">Kontni</string>
     <string name="forums_write_comment">Ekri yon kòmantè…</string>
 
     <string name="notification_channel_forums">Notifikasyon fowòm</string>

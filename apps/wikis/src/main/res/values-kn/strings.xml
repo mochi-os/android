@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">%1$s ಗೆ ರಿಪ್ಲೈ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
     <string name="wikis_comment_clear_reply">ಪ್ರತ್ಯುತ್ತರ ರದ್ದುಮಾಡಿ</string>
     <string name="wikis_comment_action_delete">ಅಳಿಸಿ</string>
-    <string name="wikis_comment_action_save">ಉಳಿಸಿ</string>
     <string name="wikis_comment_action_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="wikis_comment_edited">(ಸಂಪಾದಿಸಲಾಗಿದೆ)</string>
     <string name="wikis_comment_delete_confirm_title">ಕಾಮೆಂಟ್ ಅಳಿಸಿ</string>

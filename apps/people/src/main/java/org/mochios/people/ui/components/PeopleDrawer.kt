@@ -8,6 +8,8 @@ package org.mochios.people.ui.components
 import androidx.activity.compose.LocalActivity
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Add
+import androidx.compose.material.icons.outlined.GroupAdd
+import androidx.compose.material.icons.outlined.Smartphone
 import androidx.compose.material3.DrawerState
 import androidx.compose.material3.DrawerValue
 import androidx.compose.runtime.Composable
@@ -35,23 +37,30 @@ import org.mochios.people.ui.sync.ContactsSyncRows
  *
  * @property onOpenBook opens one address book.
  * @property onOpenAllContacts opens every contact.
- * @property onSwitchSection opens Invitations, Groups or Profile.
+ * @property onSwitchSection opens Invitations or Profile.
+ * @property onOpenGroup opens one group.
  * @property onCreateBook opens the new address book screen.
+ * @property onCreateGroup opens the new group screen.
+ * @property onConnectDevice opens the connected devices screen.
  */
 data class PeopleDrawerNavigation(
     val onOpenBook: (id: String) -> Unit,
     val onOpenAllContacts: () -> Unit,
     val onSwitchSection: (PeopleSidebarSection) -> Unit,
+    val onOpenGroup: (id: String) -> Unit,
     val onCreateBook: () -> Unit,
+    val onCreateGroup: () -> Unit,
+    val onConnectDevice: () -> Unit,
 )
 
 /**
- * The People app's drawer, the same on every screen: All contacts, the address
- * books, Invitations, Groups and Profile, then Create address book, Sync to
- * this phone. [selectedId] is the row of the screen
- * showing; tapping it only closes the drawer. The books are marked stale when
- * the app leaves the foreground and fetched again the next time the drawer
- * opens.
+ * The People app's drawer, the same on every screen: Profile with the user's
+ * avatar, All contacts, the address books and Invitations, the groups under a
+ * Groups heading, then
+ * Create address book, Create group, Connected devices and Sync to this phone.
+ * [selectedId] is the row of the screen showing; tapping it only closes the
+ * drawer. The books and groups are marked stale when the app leaves the
+ * foreground and fetched again the next time the drawer opens.
  */
 @Composable
 fun PeopleDrawer(
@@ -62,6 +71,8 @@ fun PeopleDrawer(
     content: @Composable () -> Unit,
 ) {
     val books by viewModel.books.collectAsState()
+    val groups by viewModel.groups.collectAsState()
+    val identity by viewModel.identity.collectAsState()
     val scope = rememberCoroutineScope()
 
     (LocalActivity.current as? LifecycleOwner)?.let { activity ->
@@ -79,16 +90,19 @@ fun PeopleDrawer(
     MochiListDrawer(
         drawerState = drawerState,
         header = { DrawerTitle(stringResource(R.string.people_sidebar_header)) },
+        topItems = listOf(peopleProfileItem(identity)),
         allItem = peopleAllContactsItem(),
-        items = peopleDrawerItems(books),
+        items = peopleDrawerItems(books, groups),
         selectedId = selectedId,
         onItemClick = { item ->
             scope.launch { drawerState.close() }
             if (item.id != selectedId) {
                 val book = peopleDrawerBook(item.id)
+                val group = peopleDrawerGroup(item.id)
                 val section = peopleDrawerSection(item.id)
                 when {
                     book != null -> navigation.onOpenBook(book)
+                    group != null -> navigation.onOpenGroup(group)
                     section == PeopleSidebarSection.CONTACTS -> navigation.onOpenAllContacts()
                     section != null -> navigation.onSwitchSection(section)
                 }
@@ -101,6 +115,22 @@ fun PeopleDrawer(
                 onClick = {
                     scope.launch { drawerState.close() }
                     navigation.onCreateBook()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.people_groups_create),
+                icon = Icons.Outlined.GroupAdd,
+                onClick = {
+                    scope.launch { drawerState.close() }
+                    navigation.onCreateGroup()
+                },
+            )
+            DrawerActionRow(
+                title = stringResource(R.string.people_device_title),
+                icon = Icons.Outlined.Smartphone,
+                onClick = {
+                    scope.launch { drawerState.close() }
+                    navigation.onConnectDevice()
                 },
             )
             ContactsSyncRows()

@@ -93,6 +93,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
@@ -626,6 +627,7 @@ private fun PostSourceSheet(
         }
 
         if (permissions.comment) {
+            val replyTarget = findComment(post?.comments.orEmpty(), replyingTo)
             ComposeBar(
                 value = commentText,
                 onValueChange = onCommentTextChange,
@@ -648,9 +650,10 @@ private fun PostSourceSheet(
                 // the field completely.
                 windowInsets = ComposeBarDefaults.WindowInsets,
                 banner = feedsReplyBanner(
-                    findComment(post?.comments.orEmpty(), replyingTo),
+                    replyTarget,
                     onCancelReply,
                 ),
+                focusRequester = rememberReplyFocus(replyTarget?.id),
             )
         }
     }

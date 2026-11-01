@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Editează numele</string>
     <string name="people_profile_identity">Identitate</string>
     <string name="people_profile_accent">Culoare de accent</string>
-    <string name="people_profile_directory_listing">Permite altora să te găsească în director</string>
     <string name="people_profile_preview">Previzualizare</string>
     <string name="people_profile_upload_avatar">Încarcă avatar</string>
     <string name="people_profile_upload">Încarcă</string>
@@ -225,4 +224,6 @@
     <string name="people_contact_xmpp">Contact XMPP</string>
     <string name="people_person_forums">Forumuri</string>
     <string name="people_contact_network_other">Alta</string>
+    <string name="people_contacts_menu_unfriend">Încheie prietenia</string>
+    <string name="people_profile_directory_listing">Afișare în director</string>
 </resources>

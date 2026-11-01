@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">แก้ไขชื่อ</string>
     <string name="people_profile_identity">ตัวตน</string>
     <string name="people_profile_accent">สีเน้น</string>
-    <string name="people_profile_directory_listing">อนุญาตให้ผู้อื่นค้นหาคุณในไดเรกทอรี</string>
     <string name="people_profile_preview">ดูตัวอย่าง</string>
     <string name="people_profile_upload_avatar">อัปโหลดรูปโปรไฟล์</string>
     <string name="people_profile_upload">อัปโหลด</string>
@@ -223,4 +222,6 @@
     <string name="people_contact_xmpp">ผู้ติดต่อ XMPP</string>
     <string name="people_person_forums">ฟอรัม</string>
     <string name="people_contact_network_other">อื่น ๆ</string>
+    <string name="people_contacts_menu_unfriend">เลิกเป็นเพื่อน</string>
+    <string name="people_profile_directory_listing">แสดงในไดเรกทอรี</string>
 </resources>

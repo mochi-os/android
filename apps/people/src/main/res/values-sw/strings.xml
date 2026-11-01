@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Hariri jina</string>
     <string name="people_profile_identity">Utambulisho</string>
     <string name="people_profile_accent">Lafudhi</string>
-    <string name="people_profile_directory_listing">Ruhusu wengine wakupate kwenye saraka</string>
     <string name="people_profile_preview">Hakiki</string>
     <string name="people_profile_upload_avatar">Pakia avatar</string>
     <string name="people_profile_upload">Pakia</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">Mwasiliani wa XMPP</string>
     <string name="people_person_forums">Majukwaa</string>
     <string name="people_contact_network_other">Nyingine</string>
+    <string name="people_contacts_menu_unfriend">Ondoa urafiki</string>
+    <string name="people_profile_directory_listing">Kuorodheshwa kwenye saraka</string>
 </resources>

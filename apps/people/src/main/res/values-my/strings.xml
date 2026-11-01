@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">အမည် တည်းဖြတ်</string>
     <string name="people_profile_identity">ကိုယ်ပိုင်</string>
     <string name="people_profile_accent">အသားပေးအရောင်</string>
-    <string name="people_profile_directory_listing">လမ်းညွှန် တွင် သင့်ကို အခြားသူများ ရှာဖွေတွေ့ရှိရန် ခွင့်ပြုမည်</string>
     <string name="people_profile_preview">ကြိုကြည့်ရန်</string>
     <string name="people_profile_upload_avatar">အသွင်ပုံ အပ်လုဒ် လုပ်မည်</string>
     <string name="people_profile_upload">အပ်လုဒ် လုပ်မည်</string>
@@ -223,4 +222,6 @@
     <string name="people_contact_xmpp">XMPP အဆက်အသွယ်</string>
     <string name="people_person_forums">ဖိုရမ်များ</string>
     <string name="people_contact_network_other">အခြား</string>
+    <string name="people_contacts_menu_unfriend">သူငယ်ချင်းဖြုတ်မည်</string>
+    <string name="people_profile_directory_listing">လမ်းညွှန်တွင် ဖော်ပြခြင်း</string>
 </resources>

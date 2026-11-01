@@ -58,7 +58,6 @@
     <string name="wikis_comment_replying_to">Vastaus käyttäjälle %1$s</string>
     <string name="wikis_comment_clear_reply">Peruuta vastaus</string>
     <string name="wikis_comment_action_delete">Poista</string>
-    <string name="wikis_comment_action_save">Tallenna</string>
     <string name="wikis_comment_action_cancel">Peruuta</string>
     <string name="wikis_comment_edited">(muokattu)</string>
     <string name="wikis_comment_delete_confirm_title">Poista kommentti</string>

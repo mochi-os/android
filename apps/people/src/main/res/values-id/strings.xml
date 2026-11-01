@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Edit nama</string>
     <string name="people_profile_identity">Identitas</string>
     <string name="people_profile_accent">Aksen</string>
-    <string name="people_profile_directory_listing">Izinkan orang lain menemukan Anda di direktori</string>
     <string name="people_profile_preview">Pratinjau</string>
     <string name="people_profile_upload_avatar">Unggah avatar</string>
     <string name="people_profile_upload">Unggah</string>
@@ -223,4 +222,6 @@
     <string name="people_contact_xmpp">Kontak XMPP</string>
     <string name="people_person_forums">Forum</string>
     <string name="people_contact_network_other">Lainnya</string>
+    <string name="people_contacts_menu_unfriend">Akhiri pertemanan</string>
+    <string name="people_profile_directory_listing">Tercantum di direktori</string>
 </resources>

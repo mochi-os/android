@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">Hlela igama</string>
     <string name="people_profile_identity">Isazisi</string>
     <string name="people_profile_accent">I-akhsenti</string>
-    <string name="people_profile_directory_listing">Vumela abanye bakufumane kuvimba</string>
     <string name="people_profile_preview">Phicotha</string>
     <string name="people_profile_upload_avatar">Layisha umfanekiso</string>
     <string name="people_profile_upload">Layisha</string>
@@ -224,4 +223,6 @@
     <string name="people_contact_xmpp">Umfowunelwa we-XMPP</string>
     <string name="people_person_forums">Iiforamu</string>
     <string name="people_contact_network_other">Olunye</string>
+    <string name="people_contacts_menu_unfriend">Phelisa ubuhlobo</string>
+    <string name="people_profile_directory_listing">Ukudweliswa kuvimba</string>
 </resources>

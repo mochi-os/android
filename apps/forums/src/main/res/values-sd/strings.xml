@@ -92,7 +92,6 @@
     <string name="forums_post_default_author">صارف</string>
     <string name="forums_no_comments">اڃا ڪو تبصرو نه آهي</string>
     <string name="forums_comment_edit">تبصري ۾ ترميم ڪريو</string>
-    <string name="forums_comment_edit_title">تبصري ۾ ترميم ڪريو</string>
     <string name="forums_comment_delete">تبصرو ختم ڪريو</string>
     <string name="forums_comment_delete_title">تبصرو ختم ڪريو</string>
     <string name="forums_comment_reply">جواب</string>
@@ -103,7 +102,6 @@
 
     <string name="forums_comment_send">موڪليو</string>
     <string name="forums_post_body_field">مواد</string>
-    <string name="forums_comment_edit_body_field">مواد</string>
     <string name="forums_write_comment">تبصرو لکو…</string>
 
     <string name="notification_channel_forums">فورمس جون اطلاعون</string>

@@ -54,7 +54,6 @@
     <string name="people_profile_edit_name">ערוך שם</string>
     <string name="people_profile_identity">זהות</string>
     <string name="people_profile_accent">הדגשה</string>
-    <string name="people_profile_directory_listing">אפשר לאחרים למצוא אותך בספרייה</string>
     <string name="people_profile_preview">תצוגה מקדימה</string>
     <string name="people_profile_upload_avatar">העלה תמונת פרופיל</string>
     <string name="people_profile_upload">העלה</string>
@@ -225,4 +224,6 @@
     <string name="people_contact_xmpp">איש קשר ב-XMPP</string>
     <string name="people_person_forums">פורומים</string>
     <string name="people_contact_network_other">אחרת</string>
+    <string name="people_contacts_menu_unfriend">הסרת חבר</string>
+    <string name="people_profile_directory_listing">הופעה במדריך</string>
 </resources>

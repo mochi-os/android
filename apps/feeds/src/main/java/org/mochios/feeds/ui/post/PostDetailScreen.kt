@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -27,9 +28,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -45,8 +46,6 @@ import androidx.compose.material.icons.outlined.NotificationsActive
 import androidx.compose.material.icons.outlined.NotificationsNone
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Repeat
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.ui.platform.LocalResources
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -67,6 +66,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -74,6 +74,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -81,21 +82,22 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.launch
+import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.model.Comment
 import org.mochios.android.model.Attachment
+import org.mochios.android.model.Comment
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.CommentThreadBack
-import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.findInThread
-import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.AttachmentLightbox
+import org.mochios.android.ui.components.CommentThreadBack
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MentionTextField
@@ -103,6 +105,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.PostTagsButton as SharedPostTagsButton
@@ -110,8 +113,9 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
-import org.mochios.android.files.rememberFileLabel
-import org.mochios.android.ui.components.MochiImage
+import org.mochios.android.ui.components.findInThread
+import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
@@ -129,16 +133,14 @@ import org.mochios.feeds.ui.component.PostWarning
 import org.mochios.feeds.ui.component.QuoteCard
 import org.mochios.feeds.ui.component.boostAccount
 import org.mochios.feeds.ui.component.boostedFrom
+import org.mochios.feeds.ui.component.currentReactionType
 import org.mochios.feeds.ui.component.hasBadges
 import org.mochios.feeds.ui.component.openable
-import org.mochios.feeds.ui.component.currentReactionType
-import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.commentAvatar
 import org.mochios.feeds.ui.component.commenterAvatars
 import org.mochios.feeds.ui.component.stripHtml
+import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.toReactionCounts
-import org.mochios.android.R as MochiR
-import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -189,6 +191,7 @@ fun PostDetailScreen(
         }
     }
 
+    val replyTarget = findComment(post?.comments.orEmpty(), replyingTo)
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
@@ -319,9 +322,10 @@ fun PostDetailScreen(
                     requireText = true,
                     onSearchMentions = { viewModel.searchMembers(it) },
                     banner = feedsReplyBanner(
-                        findComment(post?.comments.orEmpty(), replyingTo),
+                        replyTarget,
                         { viewModel.setReplyingTo(null) },
                     ),
+                    focusRequester = rememberReplyFocus(replyTarget?.id),
                 )
             }
         }
@@ -334,6 +338,8 @@ fun PostDetailScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
+                .consumeWindowInsets(paddingValues)
+                .imePadding()
         )
     }
 
@@ -383,7 +389,7 @@ internal fun PostDetailContent(
     // When false, suppress the post body and any other content the source
     // WebView already shows (RSS preview image, source link). Used by the
     // source-view sheet so the pull-up only adds value over the webview.
-    showBody: Boolean = true
+    showBody: Boolean = true,
 ) {
     val post by viewModel.post.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
