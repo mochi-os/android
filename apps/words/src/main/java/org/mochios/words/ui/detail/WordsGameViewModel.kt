@@ -27,6 +27,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.mergeMessage
+import org.mochios.android.websocket.REOPEN
 import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.DraftStatus
 import org.mochios.words.engine.Placement
@@ -320,8 +321,9 @@ class WordsGameViewModel @Inject constructor(
     fun onWebsocketEvent(type: String, message: GameMessage?) {
         when (type) {
             // "state" is the snapshot event_sync emits after a P2P convergence
-            // repair, so it needs the same refresh as a move.
-            "move", "system", "state" -> {
+            // repair, so it needs the same refresh as a move, and so does a
+            // socket open again after missing whatever was sent meanwhile.
+            "move", "system", "state", REOPEN -> {
                 // Refresh the game (board, rack, turn, scores) and message
                 // history — the move payload includes the post-move state.
                 refresh()

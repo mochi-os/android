@@ -34,6 +34,7 @@ import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.feeds.R
 import org.mochios.feeds.api.FeedNotificationSettings
@@ -46,8 +47,11 @@ import org.mochios.feeds.repository.FeedsInfoResult
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.PostListResult
 import org.mochios.feeds.repository.SavedRepository
+import org.mochios.feeds.repository.listed
+import org.mochios.feeds.repository.unwrap
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
+import kotlin.time.Duration
 import org.mochios.feeds.ui.component.applied
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.hostedFediverse
@@ -233,6 +237,12 @@ class FeedViewModel @Inject constructor(
     val isAllFeeds: Boolean = feedId == "__all__"
 
     private val subscriptions = mutableListOf<String>()
+
+    /** The keys [subscriptions] follow, so a return can tell whether they are open. */
+    @Volatile private var socketKeys: Set<String> = emptySet()
+
+    /** The pending catch-up; see [catchUp]. */
+    private var catchUpJob: Job? = null
     private var markReadJob: Job? = null
     private val pendingReads = PendingReads()
 
@@ -1096,22 +1106,24 @@ class FeedViewModel @Inject constructor(
     private fun subscribeToWebSocket() {
         val serverUrl = sessionManager.getServerUrlBlocking()
         if (isAllFeeds) {
-            // The aggregate has no entity of its own, so it subscribes to
-            // every subscribed feed's channel — the same fan-out web's
-            // feeds-list page does. Without this the count never appears and
-            // the timeline only moves on a manual refresh.
+            // The aggregate has no entity of its own, so it follows every
+            // feed the roster lists: on the one key the server sends all their
+            // frames to, or on each feed's own from a server that names none.
+            // Without this the count never appears and the timeline only moves
+            // on a manual refresh.
             viewModelScope.launch {
-                val feeds = try {
-                    repository.listFeeds()
+                val roster = try {
+                    repository.getFeedsInfo()
                 } catch (_: Exception) {
                     return@launch
                 }
-                for (feed in feeds) {
-                    val channel = feed.fingerprint.ifEmpty { feed.id }
-                    if (channel.isEmpty()) continue
+                socketKeys = roster.keys()
+                for (key in roster.keys()) {
                     subscriptions.add(
-                        webSocket.subscribe(serverUrl, channel, app = "feeds") { event ->
-                            onFeedEvent(event)
+                        webSocket.subscribe(serverUrl, key, app = "feeds") { wrapped ->
+                            val event = unwrap(wrapped) ?: return@subscribe
+                            // As on each feed's own key: only the feeds listed.
+                            if (listed(roster.feeds, event.feed)) onFeedEvent(event)
                         }
                     )
                 }
@@ -1119,6 +1131,7 @@ class FeedViewModel @Inject constructor(
             return
         }
         if (feedId.isEmpty()) return
+        socketKeys = setOf(feedId)
         subscriptions.add(
             webSocket.subscribe(serverUrl, feedId, app = "feeds") { event ->
                 onFeedEvent(event)
@@ -1130,15 +1143,19 @@ class FeedViewModel @Inject constructor(
         // Server event types are slash-namespaced (feeds.star commit hook
         // + handlers); the old underscore names never matched anything.
         when (event.type) {
+            // The socket was down: whatever it carried meanwhile is gone.
+            REOPEN -> catchUp()
             // The feed is no longer the user's: the held class `-/info` answer
-            // still lists it.
-            "feed/removed" -> {
+            // still lists it. Every feed's view stays, without that feed's
+            // posts - taken out here, since a reload keeps whatever the reader
+            // has already passed.
+            "feed/removed", "feed/deleted" -> {
                 repository.forget()
-                _gone.value = R.string.feeds_removed_from_feed
-            }
-            "feed/deleted" -> {
-                repository.forget()
-                _gone.value = R.string.feeds_feed_deleted
+                when {
+                    isAllFeeds -> event.feed?.let { feed -> viewModelScope.launch { dropFeed(feed) } }
+                    event.type == "feed/removed" -> _gone.value = R.string.feeds_removed_from_feed
+                    else -> _gone.value = R.string.feeds_feed_deleted
+                }
             }
             "post/create" -> newPosts.record(event.post) { id ->
                 _posts.value.any { it.id == id }
@@ -1192,6 +1209,16 @@ class FeedViewModel @Inject constructor(
     }
 
     /**
+     * Take every post of [feed] out of the list, for a feed gone from every
+     * feed's view. The reader's place moves as [drop] moves it.
+     */
+    private fun dropFeed(feed: String) {
+        _posts.value
+            .filter { post -> post.feed == feed || post.feedFingerprint == feed }
+            .forEach { post -> drop(post.id) }
+    }
+
+    /**
      * Reload the list without the reader having asked: on returning to the
      * app, or behind a cached list. What they have reached stays as it is -
      * see [mergeReload].
@@ -1238,20 +1265,39 @@ class FeedViewModel @Inject constructor(
             return
         }
         if (!isAllFeeds && feedId.isBlank()) return
-        // A sort saved on another device since the class `-/info` answer was
-        // read must show, here and in the next feed opened.
-        repository.forget()
-        viewModelScope.launch {
-            // A sort saved elsewhere in the meantime, this feed's own or the
-            // account's default behind it, lists the posts afresh in that order.
-            val before = _currentSort.value
-            if (isAllFeeds) {
-                loadGlobalSort()
-            } else {
-                refreshFeedInfo()
-                _feedInfo.value?.let { feed -> applyFeedSort(feed) }
+        // A socket of the screen's opening again says so once it is open, and
+        // the catch-up that sets off reads then: one read for the return. If
+        // none is, the return reads now; if core refuses it, the wait ends
+        // and the return reads then.
+        if (socketKeys.any { key -> webSocket.reopening(key) }) catchUp(REOPEN_GRACE) else catchUp()
+    }
+
+    /**
+     * Read again what the feed shows: on a return to the screen, or a socket
+     * of its opening again. Waits [wait] and cancels the pending one, so the
+     * several feeds' sockets of a server with no aggregate key, opening again
+     * together, read once, and a reopen arriving within a return's wait reads
+     * in its place.
+     */
+    private fun catchUp(wait: Duration = REFRESH_DEBOUNCE) {
+        synchronized(this) {
+            catchUpJob?.cancel()
+            catchUpJob = viewModelScope.launch {
+                delay(wait)
+                // A sort saved on another device since the class `-/info` answer
+                // was read must show, here and in the next feed opened.
+                repository.forget()
+                // A sort saved elsewhere in the meantime, this feed's own or the
+                // account's default behind it, lists the posts afresh in that order.
+                val before = _currentSort.value
+                if (isAllFeeds) {
+                    loadGlobalSort()
+                } else {
+                    refreshFeedInfo()
+                    _feedInfo.value?.let { feed -> applyFeedSort(feed) }
+                }
+                if (_currentSort.value != before) reloadPosts() else refreshSilently()
             }
-            if (_currentSort.value != before) reloadPosts() else refreshSilently()
         }
     }
 

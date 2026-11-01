@@ -29,7 +29,8 @@ sealed class StaffEvent {
     object NewDispute : StaffEvent()
 
     /**
-     * A topic with no explicit mapping; treat as a hint to refetch.
+     * A topic with no explicit mapping, or the socket opening again after
+     * missing events; treat as a hint to refetch.
      */
     data class Unknown(val topic: String) : StaffEvent()
 }

@@ -69,6 +69,7 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiImage
+import org.mochios.android.websocket.REOPEN
 import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.market.R
@@ -114,7 +115,7 @@ fun MessageThreadScreen(
         // The server's push is only {"event": "message"} - a poke, not the
         // message - so refetch (which also marks the thread read), as web does.
         socket?.events?.collectLatest { event ->
-            if (event.event == "message") viewModel.refresh()
+            if (refreshes(event)) viewModel.refresh()
         }
     }
 
@@ -402,3 +403,11 @@ private fun priceLabel(price: Long, currency: Currency?): String {
     val unused = currencyDecimals(c)
     return formatPrice(price, c)
 }
+
+/**
+ * Whether a frame on a thread's stream calls for reading the thread again: the
+ * server's poke for a new message, or the socket opening again after missing
+ * whatever was sent while it was down.
+ */
+internal fun refreshes(event: StreamWsEvent): Boolean =
+    event.event == "message" || event.type == REOPEN

@@ -7,6 +7,8 @@ package org.mochios.feeds.ui.feed
 
 import org.mochios.android.util.appendDistinct
 import org.mochios.feeds.model.Post
+import kotlin.time.Duration
+import kotlin.time.Duration.Companion.seconds
 
 /**
  * The list a reload nobody asked for leaves. Everything up to and including
@@ -28,3 +30,10 @@ internal fun mergeReload(current: List<Post>, fresh: List<Post>, reached: String
     val merged = appendDistinct(kept, fresh) { post -> post.id }
     return if (merged.size == kept.size) null else merged
 }
+
+/**
+ * How long a screen coming back waits for a socket of its that is opening
+ * again to say so, before reading by itself: core may refuse the socket, at
+ * the user's cap or with the server down, and then no word comes.
+ */
+internal val REOPEN_GRACE: Duration = 3.seconds

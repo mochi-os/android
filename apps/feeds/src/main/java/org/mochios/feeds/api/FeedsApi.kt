@@ -51,7 +51,9 @@ data class FeedListResponse(
     val entity: Boolean = false,
     val hasAi: Boolean = false,
     val settings: FeedSettings = FeedSettings(),
-    @SerializedName("user_id") val userId: String = ""
+    @SerializedName("user_id") val userId: String = "",
+    /** The key every feed's frames also reach; absent from an older server. */
+    val websocket: String? = null,
 )
 
 data class FeedCreateResponse(

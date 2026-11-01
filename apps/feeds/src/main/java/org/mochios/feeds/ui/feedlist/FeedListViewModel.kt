@@ -21,8 +21,14 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.feeds.model.Feed
+import org.mochios.feeds.repository.FeedsInfoResult
 import org.mochios.feeds.repository.FeedsRepository
+import org.mochios.feeds.repository.listed
+import org.mochios.feeds.repository.unwrap
+import org.mochios.feeds.ui.feed.REOPEN_GRACE
+import kotlin.time.Duration
 import javax.inject.Inject
 
 @HiltViewModel
@@ -96,7 +102,7 @@ class FeedListViewModel @Inject constructor(
     /** The drawer's feeds, with unread counts as they are now: a class
      *  `-/info` read already under way, the feed screen's sort lookup as it
      *  opens, is shared, and an older answer held is not. */
-    fun loadFeeds() {
+    fun loadFeeds() = synchronized(this) {
         feedsJob?.cancel()
         feedsJob = viewModelScope.launch {
             _isLoading.value = true
@@ -110,7 +116,7 @@ class FeedListViewModel @Inject constructor(
                 if (info.sort.isNotEmpty()) {
                     _currentSort.value = info.sort
                 }
-                subscribeToWebSockets(feedList)
+                subscribeToWebSockets(info)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -119,6 +125,7 @@ class FeedListViewModel @Inject constructor(
                 _isLoading.value = false
             }
         }
+        Unit
     }
 
     /**
@@ -131,10 +138,14 @@ class FeedListViewModel @Inject constructor(
             resumedBefore = true
             return
         }
-        refresh()
+        // A socket of the drawer's opening again says so once it is open, and
+        // the refresh that sets off reads then: one read for the return. If
+        // none is, the return reads now; if core refuses it, the wait ends
+        // and the return reads then.
+        if (subscribedKeys.any { key -> webSocket.reopening(key) }) refreshSilently(REOPEN_GRACE) else refresh()
     }
 
-    fun refresh() {
+    fun refresh() = synchronized(this) {
         feedsJob?.cancel()
         feedsJob = viewModelScope.launch {
             _isRefreshing.value = true
@@ -144,7 +155,7 @@ class FeedListViewModel @Inject constructor(
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = feedList
                 _hasAi.value = info.hasAi
-                subscribeToWebSockets(feedList)
+                subscribeToWebSockets(info)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -153,48 +164,51 @@ class FeedListViewModel @Inject constructor(
                 _isRefreshing.value = false
             }
         }
+        Unit
     }
 
-    private fun subscribeToWebSockets(feedList: List<Feed>) {
-        val keys = feedList.map { feed -> feed.fingerprint }
-            .filter { key -> key.isNotEmpty() }
-            .toSet()
+    /**
+     * Follow every listed feed: on the one key the server sends all their
+     * frames to, or on each feed's own from a server that names none. Core
+     * caps a user's sockets at 32 across their apps and devices, which one per
+     * feed soon used up.
+     */
+    private fun subscribeToWebSockets(info: FeedsInfoResult) {
+        val keys = info.keys()
         if (keys == subscribedKeys) {
             return
         }
         unsubscribeAll()
         subscribedKeys = keys
         val serverUrl = sessionManager.getServerUrlBlocking()
-        for (feed in feedList) {
-            if (feed.fingerprint.isNotEmpty()) {
-                val subId = webSocket.subscribe(
-                    serverUrl,
-                    feed.fingerprint,
-                    app = "feeds",
-                ) { event ->
-                    // Server event types are slash-namespaced (feeds.star commit
-                    // hook + handlers); the old underscore names never matched.
-                    when (event.type) {
-                        "post/create", "post/delete", "feed/update",
-                        "feed/removed", "feed/deleted" -> {
-                            refreshSilently()
-                        }
+        for (key in keys) {
+            val subId = webSocket.subscribe(serverUrl, key, app = "feeds") { wrapped ->
+                val event = unwrap(wrapped) ?: return@subscribe
+                if (!listed(_feeds.value, event.feed)) return@subscribe
+                // Server event types are slash-namespaced (feeds.star commit
+                // hook + handlers); the old underscore names never matched.
+                // A reopened socket missed whatever was sent while it was down.
+                when (event.type) {
+                    "post/create", "post/delete", "feed/update",
+                    "feed/removed", "feed/deleted", REOPEN -> {
+                        refreshSilently()
                     }
                 }
-                subscriptionIds.add(subId)
             }
+            subscriptionIds.add(subId)
         }
     }
 
     /**
      * Refetch the feeds without a spinner. Each call cancels the pending fetch
-     * and waits [REFRESH_DEBOUNCE] first, so a burst of frames across the
-     * feeds makes one request.
+     * and waits [wait] first, so a burst of frames across the feeds makes one
+     * request. Frames call from the sockets' own threads, so the swap of the
+     * pending fetch is made one call at a time.
      */
-    fun refreshSilently() {
+    fun refreshSilently(wait: Duration = REFRESH_DEBOUNCE) = synchronized(this) {
         feedsJob?.cancel()
         feedsJob = viewModelScope.launch {
-            delay(REFRESH_DEBOUNCE)
+            delay(wait)
             refreshFeedSilently()
         }
     }
@@ -207,7 +221,7 @@ class FeedListViewModel @Inject constructor(
                 .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
             _feeds.value = feedList
             _hasAi.value = info.hasAi
-            subscribeToWebSockets(feedList)
+            subscribeToWebSockets(info)
         } catch (_: Exception) {
             // Silent refresh failure
         }

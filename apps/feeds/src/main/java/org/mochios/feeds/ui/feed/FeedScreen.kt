@@ -276,12 +276,14 @@ fun FeedScreen(
     }
     // Reload when the screen returns to the foreground — most importantly after
     // creating a post here, so the new (or first) post shows without a manual
-    // pull-to-refresh.
+    // pull-to-refresh - and the drawer's unread counts with it, back from a
+    // post read meanwhile.
     val feedLifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(feedLifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {
                 viewModel.reloadOnForeground()
+                feedListViewModel.onScreenResumed()
             }
         }
         feedLifecycleOwner.lifecycle.addObserver(observer)

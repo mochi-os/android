@@ -33,6 +33,7 @@ import org.mochios.android.files.SavedExport
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.projects.ui.board.allOptions
 import org.mochios.projects.ui.board.boardClass
 import org.mochios.projects.ui.board.boardOptions
@@ -687,7 +688,9 @@ class ProjectViewModel @Inject constructor(
             ) -> refreshObjects()
             // Structure changes: board columns derive from field options, plus
             // views/classes/hierarchy — reload the whole project.
-            type == "project/update" || type == "project/resynced" ||
+            // A reopened socket missed whatever was sent while it was down.
+            type == REOPEN ||
+                type == "project/update" || type == "project/resynced" ||
                 type == "hierarchy/set" ||
                 type.substringBefore("/") in setOf("class", "field", "option", "view") ->
                 refreshProject()

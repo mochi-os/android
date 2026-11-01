@@ -32,6 +32,7 @@ import org.mochios.android.files.SavedExport
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.crm.ui.board.boardClass
 import org.mochios.crm.ui.board.boardOptions
 import org.mochios.crm.lib.ActiveViewStore
@@ -557,7 +558,9 @@ class CrmViewModel @Inject constructor(
             ) -> refreshObjects()
             // Structure changes: board columns derive from field options, plus
             // views/classes/hierarchy — reload the whole crm.
-            type == "crm/update" || type == "crm/resynced" ||
+            // A reopened socket missed whatever was sent while it was down.
+            type == REOPEN ||
+                type == "crm/update" || type == "crm/resynced" ||
                 type == "hierarchy/set" ||
                 type.substringBefore("/") in setOf("class", "field", "option", "view") ->
                 refreshCrm()

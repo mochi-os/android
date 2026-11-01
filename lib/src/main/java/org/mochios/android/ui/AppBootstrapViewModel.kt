@@ -94,6 +94,14 @@ class AppBootstrapViewModel @Inject constructor(
     private var readyEpoch: Long = 0L
     private var remint: Job? = null
 
+    // The account a tapped sign-in prompt named, until the app's start takes
+    // it up; see [reauthenticate].
+    private var hinted: String? = null
+
+    // The server of the account being signed in again, for the sign-in screen
+    // once its session is found dead.
+    private var resigning: String? = null
+
     init {
         // The ViewModel survives Activity.recreate(), so logout's clearAll
         // would leave _stage at Ready. Re-evaluate when the session goes null.
@@ -156,6 +164,35 @@ class AppBootstrapViewModel @Inject constructor(
         this.appName = appName
         this.prefetchApps = prefetchApps
         viewModelScope.launch { evaluate() }
+    }
+
+    /**
+     * A sign-in prompt for [identity]'s dead session was tapped: lead to
+     * signing that account in. Another account than the signed-in one is
+     * switched to; either way the session is tried again, found dead, and the
+     * sign-in screen opens on the account's server. Tapped before the app has
+     * started, the start takes it up.
+     */
+    fun reauthenticate(identity: String) {
+        if (_stage.value is AuthStage.Booting) {
+            hinted = identity
+            return
+        }
+        viewModelScope.launch { resign(identity) }
+    }
+
+    /**
+     * Start [identity]'s account afresh, switching to it if it is not the
+     * signed-in one.
+     *
+     * @return whether it is an account on the device.
+     */
+    private suspend fun resign(identity: String): Boolean {
+        val snap = MochiAccount.all(context).firstOrNull { account -> account.identity == identity } ?: return false
+        resigning = snap.server
+        if (sessionManager.getBoundIdentity() != identity) adopt(snap)
+        bootstrap()
+        return true
     }
 
     /** User picked an account from the picker. */
@@ -230,6 +267,10 @@ class AppBootstrapViewModel @Inject constructor(
     }
 
     private suspend fun evaluate() {
+        hinted?.let { identity ->
+            hinted = null
+            if (resign(identity)) return
+        }
         val hasSession = sessionManager.currentToken.first() != null
         if (hasSession) {
             bootstrap()
@@ -289,15 +330,22 @@ class AppBootstrapViewModel @Inject constructor(
         val going = when (outcome) {
             Startup.SignedOut -> {
                 sessionManager.clearAll()
+                // Signing an account in again: the sign-in screen opens on
+                // its server rather than the default.
+                resigning?.let { server -> sessionManager.setServerUrl(server) }
+                resigning = null
                 _stage.value = AuthStage.NeedsLogin
                 return
             }
             is Startup.Closing -> {
+                resigning = null
                 _stage.value = AuthStage.NeedsReactivation(outcome.purge)
                 return
             }
             is Startup.Continue -> outcome
         }
+        // The session lives after all; nothing to sign in again.
+        resigning = null
         val identityInfo = going.identity
         val unreachable = going.unreachable
         if (unreachable) {

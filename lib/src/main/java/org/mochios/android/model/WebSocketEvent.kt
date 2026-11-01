@@ -47,4 +47,9 @@ data class WebSocketEvent(
     @SerializedName("sub_id") val subId: String? = null,
     val payload: String? = null,
     val account: String? = null,
+    /**
+     * The frame inside a wrapper: the feeds aggregate key carries each feed's
+     * frame, as its own key carries it, inside one of type "feeds/frame".
+     */
+    val frame: WebSocketEvent? = null,
 )

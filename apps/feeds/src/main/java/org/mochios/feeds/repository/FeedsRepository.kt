@@ -29,6 +29,7 @@ import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.feeds.api.FeedNotificationSettings
@@ -72,12 +73,50 @@ data class FeedInfoResult(
 /**
  * Class-level `-/info`: subscribed feeds and whether any AI provider is
  * configured (gates the AI sort option).
+ *
+ * @property websocket the websocket key every feed's frames also reach, so a
+ *   view of all of them holds one socket; empty from an older server, where
+ *   each feed's own key is the only one.
  */
 data class FeedsInfoResult(
     val feeds: List<Feed>,
     val hasAi: Boolean,
     val sort: String = "",
-)
+    val websocket: String = "",
+) {
+    /** The websocket keys carrying every listed feed's frames: [websocket]
+     *  alone when the server names it, else each feed's own. */
+    fun keys(): Set<String> =
+        if (websocket.isNotEmpty()) {
+            setOf(websocket)
+        } else {
+            feeds.map { feed -> feed.fingerprint }.filter { key -> key.isNotEmpty() }.toSet()
+        }
+}
+
+/**
+ * Whether a frame about [feed] concerns one of [feeds]. The aggregate key also
+ * carries the frames of feeds held only as another feed's source, which no list
+ * of the user's feeds shows; a frame naming no feed is let through.
+ */
+internal fun listed(feeds: Collection<Feed>, feed: String?): Boolean =
+    feed.isNullOrEmpty() || feeds.any { item -> item.id == feed || item.fingerprint == feed }
+
+/**
+ * The frame [event] carries. On the aggregate key each feed's frame arrives
+ * wrapped, `{"type": "feeds/frame", "feed": <feed id>, "frame": <its frame>}`,
+ * so that core passes each write on once; a feed's own key, and the socket's
+ * own reopen, send the frame bare. The wrapper's feed is the one the frame is
+ * about. Null for a wrapper with nothing inside.
+ */
+internal fun unwrap(event: WebSocketEvent): WebSocketEvent? {
+    if (event.type != WRAPPED) return event
+    val frame = event.frame ?: return null
+    return frame.copy(feed = event.feed?.takeIf { feed -> feed.isNotEmpty() } ?: frame.feed)
+}
+
+/** The type of a frame wrapped on the aggregate key; see [unwrap]. */
+internal const val WRAPPED = "feeds/frame"
 
 data class PostListResult(
     val posts: List<Post>,
@@ -263,6 +302,7 @@ class FeedsRepository @Inject constructor(
                 feeds = response.feeds,
                 hasAi = response.hasAi,
                 sort = response.settings.sort,
+                websocket = response.websocket.orEmpty(),
             )
         } catch (e: Exception) {
             throw e.toMochiError()

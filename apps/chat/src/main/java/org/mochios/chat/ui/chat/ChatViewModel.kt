@@ -29,10 +29,12 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
+import org.mochios.android.push.VisibleEntity
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.android.util.mergeNewest
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.chat.R
 import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.model.Chat
@@ -309,11 +311,33 @@ class ChatViewModel @Inject constructor(
                     isRefreshing = false,
                     error = null
                 )
-                markRead()
+                // Read only by a reader: a frame or a reopened socket refreshes a
+                // chat that sits behind another screen, or in the background, too.
+                if (VisibleEntity.isShowing("chat", chatId)) markRead()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isRefreshing = false).failed(e.toMochiError())
+            }
+        }
+    }
+
+    /**
+     * Read again everything the socket keeps current, once it is open again
+     * after being down: messages, reactions and edits sent meanwhile, the
+     * open thread, and the chat's name and members.
+     */
+    private fun catchUp() {
+        refresh()
+        loadThread()
+        viewModelScope.launch {
+            try {
+                val chat = repository.viewChat(chatId).chat
+                _uiState.value = _uiState.value.copy(chat = chat)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                // The chat keeps what it showed; the messages' refresh reports.
             }
         }
     }
@@ -853,6 +877,7 @@ class ChatViewModel @Inject constructor(
             subscriptionId = webSocket.subscribe(serverUrl, key, app = "chat") { event ->
                 val ev = event.event
                 when {
+                    event.type == REOPEN -> catchUp()
                     ev == "rename" -> {
                         val newName = event.name ?: return@subscribe
                         _uiState.value = _uiState.value.copy(

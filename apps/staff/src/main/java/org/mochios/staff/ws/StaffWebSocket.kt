@@ -7,6 +7,8 @@ package org.mochios.staff.ws
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import org.mochios.android.websocket.REOPEN
+import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
 
 /**
@@ -19,11 +21,21 @@ fun rememberStaffEventsSubscription(eventsBus: StaffEventsBus) {
     val controller = rememberStreamWebSocket("staff-events", app = "staff")
     LaunchedEffect(controller) {
         controller?.events?.collect { event ->
-            val topic = event.raw["topic"] as? String ?: return@collect
-            val staffEvent = topic.toStaffEvent()
-            eventsBus.publish(staffEvent)
+            staffEvent(event)?.let { staffEvent -> eventsBus.publish(staffEvent) }
         }
     }
+}
+
+/**
+ * The [StaffEvent] a frame on the `staff-events` stream stands for, or null for
+ * one with no topic. The socket opening again after being down is a
+ * [StaffEvent.Unknown]: every list reads again, having missed whatever was
+ * sent meanwhile.
+ */
+internal fun staffEvent(event: StreamWsEvent): StaffEvent? {
+    if (event.type == REOPEN) return StaffEvent.Unknown(REOPEN)
+    val topic = event.raw["topic"] as? String ?: return null
+    return topic.toStaffEvent()
 }
 
 /**

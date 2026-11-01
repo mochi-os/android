@@ -15,6 +15,7 @@ import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -45,6 +46,7 @@ import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.NonceStore
 import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
+import org.mochios.android.push.Reauth
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.launcher.launcherComponentFor
 import org.mochios.android.launcher.launcherEnabled
@@ -52,6 +54,7 @@ import org.mochios.android.launcher.openInApp
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.ui.AppBootstrapHost
+import org.mochios.android.ui.AppBootstrapViewModel
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.theme.MochiTheme
 import org.mochios.android.R as MochiR
@@ -105,6 +108,9 @@ open class MainActivity : ComponentActivity() {
     @Inject lateinit var notificationsRepository: org.mochios.android.notifications.NotificationsRepository
     @Inject lateinit var webSocket: org.mochios.android.websocket.MochiWebSocket
 
+    // The same instance AppBootstrapHost draws from: both take the activity's.
+    private val bootstrap: AppBootstrapViewModel by viewModels()
+
     /** The app this instance hosts; null for one that only forwards. */
     private var app: String? = null
 
@@ -133,6 +139,8 @@ open class MainActivity : ComponentActivity() {
         app = hosted
         enableEdgeToEdge()
         handleMochiUri(intent)
+        // A recreated activity has taken its prompt already.
+        if (savedInstanceState == null) takeReauth(intent)
         // Restore a deep link persisted across process death - the update
         // installer kills the process between a notification tap and the
         // relaunch. One for another app stays on disk for that app's launch.
@@ -294,6 +302,17 @@ open class MainActivity : ComponentActivity() {
         // singleTop delivers only this class's own intents here, so the app
         // never changes; the URI may carry a deep link or a return.
         handleMochiUri(intent)
+        takeReauth(intent)
+    }
+
+    /**
+     * A tapped sign-in prompt names the account whose session is dead; the
+     * app leads to signing that account in. See [Reauth].
+     */
+    private fun takeReauth(intent: Intent?) {
+        val identity = intent?.getStringExtra(Reauth.EXTRA_ACCOUNT) ?: return
+        intent.removeExtra(Reauth.EXTRA_ACCOUNT)
+        bootstrap.reauthenticate(identity)
     }
 
     /**

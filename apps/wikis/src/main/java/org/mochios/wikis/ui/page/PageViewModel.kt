@@ -21,6 +21,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.wikis.model.PageFetchResponse
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPage
@@ -119,8 +120,9 @@ class PageViewModel @Inject constructor(
     }
 
     private fun handle(event: WebSocketEvent) {
+        // A reopened socket missed whatever was sent while it was down.
         when (event.type) {
-            "wiki/update", "wiki/resynced" -> {
+            "wiki/update", "wiki/resynced", REOPEN -> {
                 loadInfo()
                 loadPage()
             }

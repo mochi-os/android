@@ -10,6 +10,7 @@ import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import javax.inject.Inject
@@ -30,6 +31,12 @@ interface SocketSession {
 
     /** Forget [app]'s cached JWT so the next [token] mints a fresh one. */
     suspend fun invalidate(app: String)
+
+    /**
+     * The signed-in account's identity, or null when nobody is signed in: the
+     * user the session's own sockets count against under core's cap.
+     */
+    fun identity(): String? = null
 }
 
 /** [SocketSession] backed by the signed-in session. */
@@ -47,6 +54,8 @@ class BoundSocketSession @Inject constructor(
     override suspend fun invalidate(app: String) {
         sessionManager.clearToken(app)
     }
+
+    override fun identity(): String? = runBlocking { sessionManager.getBoundIdentity() }
 }
 
 /** Binds [BoundSocketSession] as the app's [SocketSession]. */

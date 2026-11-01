@@ -26,6 +26,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.mergeMessage
+import org.mochios.android.websocket.REOPEN
 import org.mochios.go.engine.GoGame
 import org.mochios.go.engine.IllegalMoveException
 import org.mochios.go.engine.Score
@@ -631,6 +632,11 @@ class GoGameViewModel @Inject constructor(
         // no pull-to-refresh on this screen to escape it.
         if (rawType == "move" || rawType == "system" || rawType == "state") {
             refreshGame()
+        }
+        // The socket was down: moves and messages sent meanwhile are gone.
+        if (rawType == REOPEN) {
+            refreshGame()
+            refreshMessages()
         }
     }
 

@@ -25,6 +25,7 @@ import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -492,6 +493,11 @@ class PostDetailViewModel @Inject constructor(
         if (feedId.isEmpty()) return
         val serverUrl = sessionManager.getServerUrlBlocking()
         subscriptionId = webSocket.subscribe(serverUrl, feedId, app = "feeds") { event ->
+            // The socket was down: a comment or reaction sent meanwhile is gone.
+            if (event.type == REOPEN) {
+                refreshPost()
+                return@subscribe
+            }
             if (event.post == postId) {
                 // Server event types are slash-namespaced (feeds.star commit
                 // hook + handlers); the old underscore names never matched.

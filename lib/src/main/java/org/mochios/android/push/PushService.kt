@@ -12,6 +12,8 @@ import android.app.NotificationManager
 import android.app.Service
 import android.content.Intent
 import android.content.pm.ServiceInfo
+import android.net.ConnectivityManager
+import android.net.Network
 import android.os.Build
 import android.os.IBinder
 import android.util.Log
@@ -23,9 +25,12 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeoutOrNull
 import okhttp3.Cookie
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import okhttp3.MediaType.Companion.toMediaType
@@ -41,8 +46,11 @@ import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.TokenApi
 import org.mochios.android.auth.TokenRequest
 import org.mochios.android.util.isServerOrigin
+import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.websocket.Mint
 import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
+import kotlin.math.min
 
 /**
  * Foreground service hosting the Mochi UnifiedPush distributor. Holds one
@@ -65,17 +73,34 @@ class PushService : Service() {
 
     private val store by lazy { DistributorStore(applicationContext) }
 
-    // identity -> subscriptionId. ConcurrentHashMap so reconcile() can claim a
-    // slot with putIfAbsent: onStartCommand fires reentrantly and a double
-    // claim dispatches every push twice. Keyed by identity, since two accounts
-    // can share a server.
-    private val subscriptions = java.util.concurrent.ConcurrentHashMap<String, String>()
+    // One channel per identity, claimed before it is opened: onStartCommand
+    // fires reentrantly and a double claim dispatches every push twice. Keyed
+    // by identity, since two accounts can share a server.
+    private val channels = Channels { channel ->
+        webSocket.unsubscribe(channel.subscription)
+        webSocket.unsubscribeConnected(channel.connection)
+    }
+
+    // identity -> the token its socket, drains and acks authorise with, kept
+    // current when a refused one is minted again.
+    private val credentials = java.util.concurrent.ConcurrentHashMap<String, String>()
+
+    // identity -> its drain, run one at a time.
+    private val drainers = java.util.concurrent.ConcurrentHashMap<String, Drainer>()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private var accountsJob: Job? = null
+
+    // A network coming up cuts short the wait of a channel whose first token
+    // could not be minted.
+    private val online = Online()
+    private val network = object : ConnectivityManager.NetworkCallback() {
+        override fun onAvailable(network: Network) = online.available()
+    }
 
     override fun onCreate() {
         super.onCreate()
         ensureChannel()
+        runCatching { getSystemService(ConnectivityManager::class.java)?.registerDefaultNetworkCallback(network) }
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
@@ -110,10 +135,11 @@ class PushService : Service() {
         // nothing ever unsubscribes it.
         scope.cancel()
         accountsJob?.cancel()
-        for ((_, id) in subscriptions) {
-            if (id != PENDING) webSocket.unsubscribe(id)
-        }
-        subscriptions.clear()
+        runCatching { getSystemService(ConnectivityManager::class.java)?.unregisterNetworkCallback(network) }
+        // And a connectOne already past its suspensions registers before this
+        // closes, and is torn down with the rest, or is refused after.
+        channels.close()
+        credentials.clear()
         super.onDestroy()
     }
 
@@ -121,28 +147,20 @@ class PushService : Service() {
 
     /**
      * Multiplex subscriptions across the current Mochi identities: connect new
-     * ones, drop vanished ones. Safe to call concurrently and reentrantly.
+     * ones, drop vanished ones, and open again those signed in afresh - a
+     * channel whose session died waits for exactly that. Safe to call
+     * concurrently and reentrantly.
      */
     private fun reconcile(accounts: List<MochiAccount.Snapshot>) {
+        for (identity in channels.stale(accounts)) {
+            Log.i(TAG, "Identity gone or signed in again; unsubscribing")
+            channels.release(identity)
+            credentials.remove(identity)
+        }
         if (accounts.isEmpty()) {
             Log.w(TAG, "No Mochi accounts; idle until one is added")
-            // Drop any leftover subscriptions if the last account got removed.
-            for ((identity, id) in subscriptions) {
-                if (id != PENDING) webSocket.unsubscribe(id)
-                subscriptions.remove(identity)
-            }
             return
         }
-        val current = accounts.map { it.identity }.toSet()
-        // Drop subscriptions whose identity is no longer present.
-        for ((identity, id) in subscriptions) {
-            if (identity !in current) {
-                Log.i(TAG, "Identity gone; unsubscribing")
-                if (id != PENDING) webSocket.unsubscribe(id)
-                subscriptions.remove(identity)
-            }
-        }
-        // Add subscriptions for newly-present identities.
         for (account in accounts) {
             connectOne(account)
         }
@@ -150,18 +168,24 @@ class PushService : Service() {
 
     private fun connectOne(account: MochiAccount.Snapshot) {
         // Claim the slot atomically before launching the coroutine. If a
-        // concurrent reconcile() already claimed (returns non-null), bail
-        // out so we don't end up registering two callbacks against
-        // MochiWebSocket.subscribe and dispatching every push twice.
-        if (subscriptions.putIfAbsent(account.identity, PENDING) != null) return
+        // concurrent reconcile() already claimed it, bail out so we don't end
+        // up registering two callbacks against MochiWebSocket.subscribe and
+        // dispatching every push twice.
+        val slot = channels.claim(account.identity, account.session) ?: return
 
         scope.launch {
-            var sid: String? = null
+            var registered = false
             try {
                 // The shell process has no login, so the cookie jar is empty.
                 // Mint a JWT from the cross-app MochiAccount session cookie for
-                // MochiWebSocket to authorise the upgrade with.
-                val token = mintToken(account.server, account.session)
+                // MochiWebSocket to authorise the upgrade with - again and again
+                // while it cannot be reached, so a start with the network down
+                // still brings the channel up without the app being opened.
+                val token = firstToken(
+                    mint = { mint(account.identity, account.server, account.session) },
+                    held = { channels.holds(slot) },
+                    pause = { attempt -> online.await(ladder(attempt)) },
+                )
                 if (token == null) {
                     Log.w(
                         TAG,
@@ -173,25 +197,42 @@ class PushService : Service() {
                     TAG,
                     "Subscribing to push channel on ${account.server} (identity ${account.identity})"
                 )
-                sid = webSocket.subscribe(
-                    serverUrl = account.server,
-                    fingerprint = FINGERPRINT,
-                    token = token,
-                ) { event -> handleEvent(event, account.server, token) }
-                subscriptions[account.identity] = sid
-                // Drain what the server queued while no subscriber was live
-                // (killed phone, Doze, network). Drained events take the live
-                // dispatch path.
-                drainPending(account.server, token)
+                val identity = account.identity
+                credentials[identity] = token
+                val drainer = drainers.getOrPut(identity) { Drainer() }
+                registered = channels.register(slot) {
+                    webSocket.subscribePush(
+                        server = account.server,
+                        account = identity,
+                        token = token,
+                        mint = {
+                            mint(account.identity, account.server, account.session).also { minted ->
+                                if (minted is Mint.Fresh) credentials[identity] = minted.token
+                            }
+                        },
+                        // Drained events take the live dispatch path.
+                        drain = {
+                            scope.launch {
+                                drainer.request { credentials[identity]?.let { current -> drainPending(account.server, current) } }
+                            }
+                        },
+                        onEvent = { event -> handleEvent(event, account.server, credentials[identity] ?: token) },
+                    )
+                }
             } finally {
-                // If we didn't get to a real subscription id, drop the
-                // placeholder so the next reconcile() can retry.
-                if (sid == null) subscriptions.remove(account.identity, PENDING)
+                // Without a channel the slot is given up, so the next
+                // reconcile() can retry.
+                if (!registered) channels.abandon(slot)
             }
         }
     }
 
-    private suspend fun mintToken(server: String, sessionCookie: String): String? {
+    /**
+     * A fresh notifications token for the account whose session cookie is
+     * [sessionCookie], or why there is none: [Mint.Gone] once its session is
+     * found dead, [Mint.Later] for anything that may pass.
+     */
+    private suspend fun mint(identity: String, server: String, sessionCookie: String): Mint {
         val httpUrl = (server.trimEnd('/') + "/").toHttpUrl()
         val cookie = Cookie.Builder()
             .domain(httpUrl.host)
@@ -216,14 +257,17 @@ class PushService : Service() {
             .create(TokenApi::class.java)
         return try {
             val token = tokenApi.fetchToken(TokenRequest("notifications")).unwrapRaw().token
-            Reauth.reportSuccess(applicationContext, server)
-            token.ifBlank { null }
+            Reauth.reportSuccess(applicationContext, identity)
+            if (token.isBlank()) Mint.Later else Mint.Fresh(token)
         } catch (e: Exception) {
             Log.w(TAG, "/_/token failed: ${e.message}")
-            if (e is ApiException && e.code == 401) {
-                Reauth.report401(applicationContext, server)
+            // A session found dead is told to the user once, and its channel
+            // waits for the account to sign in again rather than asking on.
+            if (e is ApiException && e.code == 401 && Reauth.report401(applicationContext, identity)) {
+                Mint.Gone
+            } else {
+                Mint.Later
             }
-            null
         }
     }
 
@@ -279,9 +323,9 @@ class PushService : Service() {
     }
 
     /**
-     * Dispatch and ack everything queued at `/notifications/-/push/drain`, once
-     * per successful subscribe. The ack is a separate POST, so a crash
-     * mid-drain leaves the rows for the next subscribe.
+     * Dispatch and ack everything queued at `/notifications/-/push/drain`,
+     * each time the account's socket opens. The ack is a separate POST, so a
+     * crash mid-drain leaves the rows for the next open.
      */
     private fun drainPending(server: String, token: String) {
         val url = server.trimEnd('/') + "/notifications/-/push/drain"
@@ -432,7 +476,6 @@ class PushService : Service() {
         const val CHANNEL_GROUP_ID = "mochi_service_status"
         const val NOTIFICATION_ID = 0x4D43_0001 // 'MC' 0001
         const val FINGERPRINT = "unifiedpush"
-        const val PENDING = "_pending_"
 
         // UnifiedPush v3 wire constants for the App-bound MESSAGE broadcast.
         const val ACTION_MESSAGE = "org.unifiedpush.android.connector.MESSAGE"
@@ -484,5 +527,202 @@ class PushService : Service() {
                 }
                 .onFailure { e -> Log.w(TAG, "accounts/remove failed: ${e.message}") }
         }
+    }
+}
+
+/** The push channel of one account: the ids to hand back when it leaves. */
+internal data class PushChannel(val subscription: String, val connection: String)
+
+/**
+ * Subscribe [account]'s push channel on [server], authorised with that
+ * account's own [token]. Each account gets a socket of its own, so two on one
+ * server each hear their own pushes. It stays open in the background, where
+ * push is delivered and every other socket closes, and stands apart from the
+ * signed-in session: the account may be another one, and it keeps its push
+ * when the signed-in one logs out. [PushService] drops it as the account
+ * leaves.
+ *
+ * @param mint a fresh token for the account, when core refuses the one held.
+ * @param drain asks for the server's queue to be drained. Called each time the
+ *   socket opens, first open and every reopen alike: what was queued while no
+ *   socket was live reaches the phone no other way, and a drain before the
+ *   socket is open would miss a push queued between the two.
+ */
+internal fun MochiWebSocket.subscribePush(
+    server: String,
+    account: String,
+    token: String,
+    mint: suspend () -> Mint,
+    drain: () -> Unit,
+    onEvent: (WebSocketEvent) -> Unit,
+): PushChannel {
+    val connection = subscribeConnected(server, PushService.FINGERPRINT, account) { drain() }
+    val subscription = subscribe(
+        serverUrl = server,
+        fingerprint = PushService.FINGERPRINT,
+        token = token,
+        background = true,
+        account = account,
+        mint = mint,
+        onEvent = onEvent,
+    )
+    // Once now as well: a socket that cannot open - refused at the cap,
+    // websockets blocked on the way - would otherwise leave the queue
+    // undrained. Overlapping drains are folded into one.
+    drain()
+    return PushChannel(subscription, connection)
+}
+
+/**
+ * The push channels the service holds, one per account, with the session each
+ * was opened under. Registering a channel and closing the lot are mutually
+ * exclusive: a channel being opened as the service is destroyed is either
+ * registered first and torn down with the rest, or never opened.
+ *
+ * @param drop tears a channel down.
+ */
+internal class Channels(private val drop: (PushChannel) -> Unit) {
+
+    /** One account's claim on a channel. */
+    internal class Slot(val identity: String, val session: String) {
+        var channel: PushChannel? = null
+    }
+
+    private val slots = HashMap<String, Slot>()
+    private var closed = false
+
+    /**
+     * Claim [identity]'s channel, to be opened under [session].
+     *
+     * @return the claim, or null when one is held or the service has gone.
+     */
+    @Synchronized
+    fun claim(identity: String, session: String): Slot? {
+        if (closed || identity in slots) return null
+        return Slot(identity, session).also { slot -> slots[identity] = slot }
+    }
+
+    /**
+     * Open [slot]'s channel with [open] and keep it, unless the claim was
+     * released meanwhile - the service gone, the account with it - in which
+     * case nothing opens.
+     */
+    @Synchronized
+    fun register(slot: Slot, open: () -> PushChannel): Boolean {
+        if (slots[slot.identity] !== slot || slot.channel != null) return false
+        slot.channel = open()
+        return true
+    }
+
+    /** Whether [slot] is still the claim on its account's channel. */
+    @Synchronized
+    fun holds(slot: Slot): Boolean = slots[slot.identity] === slot
+
+    /** Give up [slot] if it never got a channel. */
+    @Synchronized
+    fun abandon(slot: Slot) {
+        if (slots[slot.identity] === slot && slot.channel == null) slots.remove(slot.identity)
+    }
+
+    /** Give up [identity]'s claim, tearing its channel down. */
+    fun release(identity: String) {
+        val channel = synchronized(this) { slots.remove(identity)?.channel }
+        channel?.let(drop)
+    }
+
+    /** The identities held that are gone from [accounts], or signed in again under another session. */
+    @Synchronized
+    fun stale(accounts: List<MochiAccount.Snapshot>): List<String> {
+        val sessions = accounts.associate { account -> account.identity to account.session }
+        return slots.values.filter { slot -> sessions[slot.identity] != slot.session }.map { slot -> slot.identity }
+    }
+
+    /** Tear every channel down, and open no more. */
+    fun close() {
+        val held = synchronized(this) {
+            closed = true
+            slots.values.mapNotNull { slot -> slot.channel }.also { slots.clear() }
+        }
+        held.forEach(drop)
+    }
+}
+
+/**
+ * Runs an account's drains one at a time. Two at once would each read the
+ * queue before either acked it, and dispatch the same rows twice. A request
+ * while one runs asks for one more pass once it ends, since what it read may
+ * already be behind; further requests meanwhile fold into that pass.
+ */
+internal class Drainer {
+    private val state = java.util.concurrent.atomic.AtomicInteger(IDLE)
+
+    fun request(drain: () -> Unit) {
+        while (true) {
+            when (state.get()) {
+                IDLE -> if (state.compareAndSet(IDLE, RUNNING)) break
+                RUNNING -> if (state.compareAndSet(RUNNING, AGAIN)) return
+                else -> return
+            }
+        }
+        while (true) {
+            // A drain that throws must not leave the next one locked out.
+            runCatching(drain)
+            if (state.compareAndSet(RUNNING, IDLE)) return
+            state.set(RUNNING)
+        }
+    }
+
+    private companion object {
+        const val IDLE = 0
+        const val RUNNING = 1
+        const val AGAIN = 2
+    }
+}
+
+/**
+ * The first token for an account's channel. Asked for again along a backoff
+ * ladder while the answer is [Mint.Later] - the network down at boot, say - so
+ * the channel comes up without the app being opened.
+ *
+ * @param held whether the channel is still wanted; a claim released meanwhile
+ *   stops the asking.
+ * @param pause waits before the [attempt]th asking again.
+ * @return the token, or null for a session that is gone, which only signing
+ *   in again mends, or a claim given up.
+ */
+internal suspend fun firstToken(
+    mint: suspend () -> Mint,
+    held: () -> Boolean,
+    pause: suspend (attempt: Int) -> Unit,
+): String? {
+    var attempt = 0
+    while (held()) {
+        when (val minted = mint()) {
+            is Mint.Fresh -> return minted.token
+            Mint.Gone -> return null
+            Mint.Later -> pause(++attempt)
+        }
+    }
+    return null
+}
+
+/** The wait before the [attempt]th try: 1s doubling to five minutes. */
+internal fun ladder(attempt: Int): Long = min(1000L shl (attempt - 1).coerceIn(0, 8), 300_000L)
+
+/**
+ * A wait along the backoff ladder that a network coming up cuts short. A signal
+ * given while nobody waits is not kept: the ladder covers it.
+ */
+internal class Online {
+    private val signal = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+
+    /** A network has come up. */
+    fun available() {
+        signal.tryEmit(Unit)
+    }
+
+    /** Wait [millis], or until a network comes up. */
+    suspend fun await(millis: Long) {
+        withTimeoutOrNull(millis) { signal.first() }
     }
 }

@@ -21,7 +21,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.util.REFRESH_DEBOUNCE
@@ -39,7 +38,6 @@ class NotificationsUnreadStore @Inject constructor(
     private val repository: NotificationsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
-    private val authRepository: AuthRepository,
     @param:ApplicationContext private val context: Context,
 ) {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
@@ -106,15 +104,6 @@ class NotificationsUnreadStore @Inject constructor(
     private suspend fun subscribeWebSocket() {
         val server = sessionManager.getServerUrlBlocking()
         if (server.isBlank() || subscriptionId != null) return
-        // The socket must carry a notifications-app token: delivery is scoped
-        // by the SENDING app, so only a socket tagged with that app hears its
-        // events. Subscribing with no token left the handshake with nothing to
-        // authenticate as, and the badge never heard a single event. The
-        // repository answers the cached token while it is fresh; a 401 on the
-        // handshake clears it in StreamWebSocket, so the next subscribe mints.
-        val token = authRepository.fetchToken("notifications").getOrNull()
-            ?: sessionManager.getToken("notifications")
-            ?: return
         // A reconnect replays nothing: whatever was broadcast while the socket
         // was down is gone. Re-fetch the count every time the socket comes up -
         // MainActivity's onResume forces the reconnect on a foreground return,
@@ -122,7 +111,7 @@ class NotificationsUnreadStore @Inject constructor(
         connectionId = webSocket.subscribeConnected(server, "notifications") {
             refreshLatest()
         }
-        subscriptionId = webSocket.subscribe(server, "notifications", token) { event ->
+        subscriptionId = webSocket.subscribeBadge(server) { event ->
             when (event.type) {
                 "new" -> refreshLatest()
                 "read" -> {
@@ -180,3 +169,18 @@ class NotificationsUnreadStore @Inject constructor(
         const val TAG = "NotificationsUnread"
     }
 }
+
+/**
+ * Subscribe the badge to [server]'s notifications channel. The socket must
+ * carry a notifications-app token: delivery is scoped by the sending app, so
+ * only a socket tagged with that app hears its events. Naming the app lets the
+ * socket mint the token from the session, and mint it again when core refuses
+ * one that has expired; a token handed in once would be all it had after a
+ * refusal, and the badge would hear nothing again. It stays open in the
+ * background as well: a notification read elsewhere clears its tray row from
+ * here, and the tray is what the user sees while the app is not.
+ *
+ * @return the id to hand [MochiWebSocket.unsubscribe].
+ */
+internal fun MochiWebSocket.subscribeBadge(server: String, onEvent: (WebSocketEvent) -> Unit): String =
+    subscribe(server, "notifications", app = "notifications", background = true, onEvent = onEvent)

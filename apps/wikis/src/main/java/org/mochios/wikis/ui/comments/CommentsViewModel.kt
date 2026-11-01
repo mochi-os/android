@@ -23,6 +23,7 @@ import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
@@ -119,8 +120,9 @@ class CommentsViewModel @Inject constructor(
     }
 
     private fun handle(event: WebSocketEvent) {
+        // A reopened socket missed whatever was sent while it was down.
         when (event.type) {
-            "wiki/update", "wiki/resynced" -> loadComments()
+            "wiki/update", "wiki/resynced", REOPEN -> loadComments()
         }
     }
 

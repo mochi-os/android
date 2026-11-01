@@ -86,6 +86,15 @@ object VisibleEntity {
     }
 
     /**
+     * Whether a resumed screen shows exactly [path] under [app]: a view model
+     * whose screen sits behind another, or in the background, has no reader.
+     */
+    fun isShowing(app: String, path: String): Boolean {
+        val segments = path.split('/').filter { segment -> segment.isNotEmpty() }
+        return showing.values.any { shown -> shown.app == app && shown.path == segments }
+    }
+
+    /**
      * How a push about [link] is covered by what is on screen.
      *
      * Matched on [link] alone. The payload's other identifiers cannot do this

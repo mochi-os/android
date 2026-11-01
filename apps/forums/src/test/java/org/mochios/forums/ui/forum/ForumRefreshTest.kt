@@ -169,6 +169,16 @@ class ForumRefreshTest {
         }
     }
 
+    @Test
+    fun `the forum reads its posts again when its socket comes back`() {
+        until { model.uiState.value.posts.isNotEmpty() && socket.isLive("fp1") }
+        settle()
+        val before = lists.get()
+        socket.background()
+        socket.foreground()
+        until { lists.get() > before }
+    }
+
     @After
     fun end() {
         socket.disconnectAll()

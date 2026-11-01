@@ -34,6 +34,7 @@ import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.ui.components.SaveStatus
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.crm.model.Activity
 import org.mochios.crm.model.Link
 import org.mochios.crm.model.CrmObject
@@ -209,6 +210,15 @@ class ObjectDetailViewModel @Inject constructor(
         // attachment/*) while others use "id" (values/update, object/update,
         // object/delete) — handle both keys per event type.
         when (event.type) {
+            // The socket was down: every slice its frames keep current is read
+            // again.
+            REOPEN -> {
+                refreshSlice("object") { loadObjectOnly() }
+                refreshSlice("comments") { loadComments() }
+                refreshSlice("activity") { loadActivity() }
+                refreshSlice("attachments") { loadAttachments() }
+                refreshSlice("links") { loadLinks() }
+            }
             "comment/create", "comment/update", "comment/delete" -> {
                 if (event.objectId == currentObjectId) {
                     refreshSlice("comments") { loadComments() }

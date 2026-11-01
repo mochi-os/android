@@ -27,6 +27,7 @@ import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.PushServiceWatchdog
 import org.mochios.android.update.UpdateChecker
+import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.calendars.notifications.setupCalendarsNotificationChannel
 import org.mochios.chat.notifications.setupChatNotificationChannel
 import org.mochios.crm.notifications.setupCrmsNotificationChannel
@@ -53,6 +54,8 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     @Inject lateinit var sessionManager: SessionManager
 
     @Inject lateinit var preferencesManager: PreferencesManager
+
+    @Inject lateinit var webSocket: MochiWebSocket
 
     /**
      * Coil loader authenticated like the API clients: attachment and avatar
@@ -101,5 +104,8 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
         // Reads the account's preferences again each time the app comes back
         // to the foreground, so a change made on the web applies.
         preferencesManager.watch(ProcessLifecycleOwner.get().lifecycle, applicationScope)
+        // Closes the screens' websockets while the app is in the background,
+        // and opens them again as it returns.
+        webSocket.watch(ProcessLifecycleOwner.get().lifecycle)
     }
 }

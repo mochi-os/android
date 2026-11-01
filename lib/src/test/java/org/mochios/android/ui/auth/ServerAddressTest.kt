@@ -29,6 +29,7 @@ import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.Implementation
 import org.robolectric.annotation.Implements
+import org.robolectric.util.ReflectionHelpers
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -44,6 +45,17 @@ class ShadowCleartextPolicy {
 
     companion object {
         var hosts: Set<String> = emptySet()
+
+        /**
+         * A policy made now, under this shadow. The platform's own is made
+         * once per test process, by whichever test first asks for it - a
+         * plain-HTTP request through OkHttp does - and one made before this
+         * shadow was in force carries no shadow of this kind, so asking it
+         * anything fails.
+         */
+        @JvmStatic
+        @Implementation
+        fun getInstance(): NetworkSecurityPolicy = ReflectionHelpers.callConstructor(NetworkSecurityPolicy::class.java)
     }
 }
 
