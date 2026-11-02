@@ -11,6 +11,8 @@ import androidx.lifecycle.ProcessLifecycleOwner
 import coil3.ImageLoader
 import coil3.PlatformContext
 import coil3.SingletonImageLoader
+import coil3.annotation.ExperimentalCoilApi
+import coil3.network.DeDupeConcurrentRequestStrategy
 import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
@@ -61,7 +63,12 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
      * Coil loader authenticated like the API clients: attachment and avatar
      * routes are session-gated, and the default loader sends neither the cookie
      * nor the bearer token, so images 401.
+     *
+     * Concurrent requests for one URL share a single fetch: a forum thread shows
+     * the same author's avatar many times at once, and each would otherwise go
+     * to the network before the first had reached the disk cache.
      */
+    @OptIn(ExperimentalCoilApi::class)
     override fun newImageLoader(context: PlatformContext): ImageLoader =
         ImageLoader.Builder(context)
             .components {
@@ -69,7 +76,12 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                 // to absolute URLs, so call sites pass relative paths without
                 // threading the server URL through.
                 add(RelativeAssetUrlMapper(sessionManager))
-                add(OkHttpNetworkFetcherFactory(callFactory = { assetHttpClient }))
+                add(
+                    OkHttpNetworkFetcherFactory(
+                        callFactory = { assetHttpClient },
+                        concurrentRequestStrategy = { DeDupeConcurrentRequestStrategy() },
+                    )
+                )
                 add(VideoFrameFetcher.Factory(sessionManager))
             }
             .build()
