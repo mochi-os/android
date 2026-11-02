@@ -136,6 +136,7 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/publish/forget" -> raw("""{"deleted": 3}""")
                     "/feeds/f1/-/generator/set" -> raw("""{"generators": {"b2": "at://did/app.bsky.feed.generator/f1"}}""")
                     "/feeds/f1/-/import" -> raw(importAnswer)
+                    "/feeds/f1/-/backups" -> raw("""{"files": ["posts-2026-11.jsonl"], "repository": "The repository could not be saved: bsky.example answered 400: RepoNotFound"}""")
                     "/feeds/f1/-/filters" -> ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}]}""")
                     "/feeds/f1/-/filters/add" -> ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}, {"id": "z", "phrase": "mango"}]}""")
                     "/feeds/f1/-/sources" -> ok(sourcesAnswer)
@@ -384,6 +385,15 @@ class NetworksViewModelsTest {
         until("the added filter") { model.filters.value.size == 3 }
         assertEquals("phrase=mango", sent("/feeds/f1/-/filters/add"))
         assertEquals(listOf("Apple", "mango", "zebra"), model.filters.value.map { it.phrase })
+    }
+
+    @Test
+    fun `an account's Backups list its files and say why the last backup kept no repository`() {
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.openBackups(org.mochios.feeds.model.PublishAccount(id = "b1"))
+        until("the backups") { model.backups.value?.files != null }
+        assertEquals(listOf("posts-2026-11.jsonl"), model.backups.value!!.files)
+        assertEquals("The repository could not be saved: bsky.example answered 400: RepoNotFound", model.backups.value!!.repository)
     }
 
     @Test

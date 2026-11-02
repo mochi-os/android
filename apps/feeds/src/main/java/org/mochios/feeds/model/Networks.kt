@@ -127,7 +127,11 @@ data class WaitingServer(
     val count: Int = 0,
 )
 
-data class Backups(val files: List<String> = emptyList())
+/**
+ * An account's archive files, and on a linked Bluesky account why the last
+ * backup kept no repository: empty when it kept one.
+ */
+data class Backups(val files: List<String> = emptyList(), val repository: String = "")
 
 /** A keyword filter on a feed: posts naming the phrase are hidden from the reader who set it. */
 data class Filter(

@@ -21,6 +21,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
 import org.mochios.feeds.R
+import org.mochios.feeds.model.Backups
 import org.mochios.feeds.model.Filter
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.PublishState
@@ -45,8 +46,11 @@ sealed interface PublishEvent {
 /** The copies a feed keeps on an account that just left its list, offered for deletion. */
 data class KeptCopies(val account: PublishAccount, val count: Int)
 
-/** The archive files kept for an account; [files] is null while they load. */
-data class AccountBackups(val account: PublishAccount, val files: List<String>?)
+/**
+ * The archive files kept for an account; [files] is null while they load.
+ * [repository] says why the last backup kept no repository, if it kept none.
+ */
+data class AccountBackups(val account: PublishAccount, val files: List<String>?, val repository: String = "")
 
 /**
  * Where a public feed publishes - the owner's accounts on other networks, each
@@ -179,13 +183,13 @@ class PublishingViewModel @Inject constructor(
     fun openBackups(account: PublishAccount) {
         _backups.value = AccountBackups(account, null)
         viewModelScope.launch {
-            val files = try {
+            val found = try {
                 repository.backups(feedId, account.id)
             } catch (e: Exception) {
                 _events.emit(PublishEvent.Failure(e.toMochiError(), MochiR.string.error_unexpected))
-                emptyList()
+                Backups()
             }
-            if (_backups.value?.account?.id == account.id) _backups.value = AccountBackups(account, files)
+            if (_backups.value?.account?.id == account.id) _backups.value = AccountBackups(account, found.files, found.repository)
         }
     }
 

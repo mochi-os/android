@@ -43,6 +43,7 @@ import org.mochios.feeds.api.AddSourceRequest
 import org.mochios.feeds.api.CreateFeedRequest
 import org.mochios.feeds.api.SubscribeRequest
 import org.mochios.feeds.api.UnsubscribeRequest
+import org.mochios.feeds.model.Backups
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
@@ -1207,8 +1208,8 @@ class FeedsRepository @Inject constructor(
     suspend fun importAccount(feedId: String, account: String, kind: String): Imported =
         mapped { api.importAccount(feedId, account, kind).unwrapRaw() }
 
-    suspend fun backups(feedId: String, account: String): List<String> =
-        mapped { api.getBackups(feedId, account).unwrapRaw().files }
+    suspend fun backups(feedId: String, account: String): Backups =
+        mapped { api.getBackups(feedId, account).unwrapRaw() }
 
     private suspend fun <T> mapped(block: suspend () -> T): T = try {
         block()

@@ -272,32 +272,41 @@ private fun BackupsDialog(
         title = stringResource(R.string.feeds_backups_title, backups.account.identifier),
         content = {
             val files = backups.files
-            when {
-                files == null -> CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
-                files.isEmpty() -> Text(
-                    text = stringResource(R.string.feeds_backups_none),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                else -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    files.forEach { name ->
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable { onDownload(name) }
-                                .padding(vertical = 4.dp),
-                        ) {
-                            Icon(
-                                Icons.Outlined.Download,
-                                contentDescription = null,
-                                modifier = Modifier.size(18.dp),
-                                tint = MaterialTheme.colorScheme.primary,
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(name, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary)
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                when {
+                    files == null -> CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
+                    files.isEmpty() -> Text(
+                        text = stringResource(R.string.feeds_backups_none),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    else -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        files.forEach { name ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { onDownload(name) }
+                                    .padding(vertical = 4.dp),
+                            ) {
+                                Icon(
+                                    Icons.Outlined.Download,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(18.dp),
+                                    tint = MaterialTheme.colorScheme.primary,
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(name, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary)
+                            }
                         }
                     }
+                }
+                if (files != null && backups.repository.isNotEmpty()) {
+                    Text(
+                        text = backups.repository,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.error,
+                    )
                 }
             }
         },
