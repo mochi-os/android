@@ -59,6 +59,32 @@ class MessageListTest {
         assertEquals(3, grouped.count { it is MessageListEntry.MessageItem })
     }
 
+    @Test
+    fun `a message from the socket is added in time order`() {
+        val held = listOf(message("a", 100), message("c", 300))
+        assertEquals(listOf("a", "b", "c"), held.adding(message("b", 200), more = false).map { it.id })
+        assertEquals(listOf("a", "c", "d"), held.adding(message("d", 400), more = false).map { it.id })
+        // Same second: the id breaks the tie, as the server orders a page.
+        assertEquals(listOf("a", "b", "c"), listOf(message("a", 100), message("c", 100)).adding(message("b", 100), more = false).map { it.id })
+    }
+
+    @Test
+    fun `a message older than everything loaded waits for paging while older pages remain`() {
+        val held = listOf(message("b", 200), message("c", 300))
+        assertEquals(listOf("b", "c"), held.adding(message("a", 100), more = true).map { it.id })
+        assertEquals(listOf("a", "b", "c"), held.adding(message("a", 100), more = false).map { it.id })
+    }
+
+    @Test
+    fun `an edit is applied only over an older one, and never to a tombstone`() {
+        val held = message("a", 100).copy(edited = 50)
+        assertEquals("newer", held.rewritten("newer", 60).body)
+        assertEquals("a", held.rewritten("same", 50).body)
+        assertEquals("a", held.rewritten("older", 40).body)
+        val tombstone = held.tombstone()
+        assertEquals("", tombstone.rewritten("again", 70).body)
+    }
+
     /**
      * 23:30 -> 00:10 UTC spans midnight in UTC but not in Sydney, so the zone
      * decides the header count.

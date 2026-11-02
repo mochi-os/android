@@ -11,6 +11,10 @@ import android.os.SystemClock
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.google.gson.Gson
+import com.google.gson.JsonElement
+import com.google.gson.JsonObject
+import com.google.gson.JsonParseException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
@@ -29,6 +33,8 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
+import org.mochios.android.model.Attachment
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.push.VisibleEntity
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.SEARCH_DEBOUNCE
@@ -41,6 +47,7 @@ import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.model.ChatPresence
+import org.mochios.chat.model.ChatQuote
 import org.mochios.chat.model.ChatReceipt
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.Friend
@@ -140,6 +147,16 @@ class ChatViewModel @Inject constructor(
 
     /** The pending or in-flight [refresh]; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
+
+    /** The pending mark-read after a message arrived; cancelled by the next arrival. */
+    private var readJob: Job? = null
+
+    /**
+     * How many frames have been applied. A read of the server that a frame
+     * landed during answers from before that frame, and would undo it, so it
+     * reads again instead.
+     */
+    private var frames = 0
 
     /** Who is typing, and the job that clears the line as each one lapses. */
     private val typists = Typists()
@@ -291,7 +308,12 @@ class ChatViewModel @Inject constructor(
             delay(REFRESH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
+                val seen = frames
                 val msgs = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE)
+                if (frames != seen) {
+                    refresh()
+                    return@launch
+                }
                 val held = _uiState.value.messages
                 val merged = mergeNewest(
                     existing = held,
@@ -299,8 +321,9 @@ class ChatViewModel @Inject constructor(
                     id = { message -> message.id },
                     created = { message -> message.created },
                 )
-                // Runs on every inbound message, reaction and delete: keep the
-                // paged-in scrollback, and keep the older-end cursor - the
+                // Runs after the user's own sends, edits and deletes, on a
+                // reopened socket and on frames that cannot be applied: keep
+                // the paged-in scrollback, and keep the older-end cursor - the
                 // refetch's only points below its own newest page.
                 val stitched = merged !== msgs.messages && held.isNotEmpty()
                 _uiState.value = _uiState.value.copy(
@@ -758,7 +781,12 @@ class ChatViewModel @Inject constructor(
         val root = _uiState.value.thread?.root ?: return
         viewModelScope.launch {
             try {
+                val seen = frames
                 val page = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE, thread = root.id)
+                if (frames != seen) {
+                    loadThread()
+                    return@launch
+                }
                 val thread = _uiState.value.thread?.takeIf { it.root.id == root.id } ?: return@launch
                 val merged = mergeNewest(
                     existing = thread.replies,
@@ -908,20 +936,11 @@ class ChatViewModel @Inject constructor(
                             } catch (_: Exception) { }
                         }
                     }
-                    ev == "delete" -> {
-                        // A message was tombstoned — refresh to render "deleted".
-                        refresh()
-                    }
-                    ev == "edit" -> {
-                        // An author rewrote a message. Without this the body
-                        // changes under the reader on the next unrelated
-                        // refresh, with no marker to explain it.
-                        refresh()
-                    }
-                    ev == "reaction" -> {
-                        // A reaction changed on a message — refresh to update counts.
-                        refresh()
-                    }
+                    // The socket calls back on its own thread; these change the
+                    // list on the main one, as everything else that changes it does.
+                    ev == "delete" -> viewModelScope.launch { deleted(event) }
+                    ev == "edit" -> viewModelScope.launch { revised(event) }
+                    ev == "reaction" -> viewModelScope.launch { reacted(event) }
                     ev == "decrypted" -> {
                         // A message whose keys came: its text and files are read again.
                         refresh()
@@ -933,18 +952,173 @@ class ChatViewModel @Inject constructor(
                     ev == "receipt" -> {
                         received(event.member.orEmpty(), event.delivered ?: 0, event.displayed ?: 0)
                     }
-                    ev == null && event.body != null -> {
-                        // An incoming message: its sender has stopped typing. A
-                        // reply in a thread stays off the main timeline, whose
-                        // refresh counts it on its root, and joins the thread
-                        // where that thread is open.
-                        event.member?.let { member -> typed(member, "", stopped = true, held = null) }
-                        refresh()
-                        val thread = event.thread.orEmpty()
-                        if (thread.isNotEmpty() && _uiState.value.thread?.root?.id == thread) loadThread()
-                    }
+                    ev == null && event.body != null -> viewModelScope.launch { arrived(event) }
                 }
             }
+        }
+    }
+
+    // ---------------- frames ----------------
+    //
+    // Each frame is applied to what is held, as the web applies it to its
+    // cache, rather than reading the newest page again for every one.
+
+    /**
+     * A message from the socket: its sender has stopped typing, and it joins
+     * the main timeline, or as a reply in a thread the open thread and its
+     * root's count. A frame without the id or time a row needs is read from
+     * the server instead.
+     */
+    private fun arrived(event: WebSocketEvent) {
+        frames++
+        event.member?.let { member -> typed(member, "", stopped = true, held = null) }
+        val message = frameMessage(chatId, event)
+        if (message == null) {
+            refresh()
+            val thread = event.thread.orEmpty()
+            if (thread.isNotEmpty() && _uiState.value.thread?.root?.id == thread) loadThread()
+            return
+        }
+        val added = if (message.thread.isEmpty()) post(message) else answer(message)
+        // The user's own message was never unread.
+        if (added && message.member != _uiState.value.identity) markReadSoon()
+    }
+
+    /** [message] on the main timeline, unless it is there already: our own send's echo is. */
+    private fun post(message: ChatMessage): Boolean {
+        val state = _uiState.value
+        if (state.messages.any { held -> held.id == message.id }) return false
+        _uiState.value = state.copy(messages = state.messages.adding(message, state.more))
+        return true
+    }
+
+    /**
+     * [reply] counted on its root, and added to its thread where that is open.
+     * A reply the open thread already holds was counted when it was read.
+     */
+    private fun answer(reply: ChatMessage): Boolean {
+        val state = _uiState.value
+        val open = state.thread?.takeIf { thread -> thread.root.id == reply.thread }
+        if (open != null && open.replies.any { held -> held.id == reply.id }) return false
+        val counted = { root: ChatMessage ->
+            root.copy(replies = root.replies + 1, latest = maxOf(root.latest, reply.created))
+        }
+        _uiState.value = state.copy(
+            messages = state.messages.patched(reply.thread, counted),
+            thread = open?.copy(root = counted(open.root), replies = open.replies.adding(reply, open.more))
+                ?: state.thread,
+        )
+        return true
+    }
+
+    /**
+     * A message deleted for everyone becomes a tombstone wherever it is held.
+     * A reply in the open thread stops counting on its root. One held nowhere
+     * may be a reply in a thread that is not open, whose root's count only the
+     * server knows, so the newest page is read again where any count shows.
+     */
+    private fun deleted(event: WebSocketEvent) {
+        frames++
+        val id = event.message
+        if (id.isNullOrEmpty()) {
+            refresh()
+            return
+        }
+        val state = _uiState.value
+        val reply = state.thread?.replies?.find { held -> held.id == id && !held.deleted }
+        if (!patch(id) { message -> message.tombstone() }) {
+            if (state.messages.any { message -> message.replies > 0 }) refresh()
+            return
+        }
+        if (reply != null) uncount(reply)
+    }
+
+    /** [reply], just deleted, no longer counted on its root. */
+    private fun uncount(reply: ChatMessage) {
+        val state = _uiState.value
+        // The open thread holds its newest replies, so the newest left is the latest.
+        val remaining = state.thread?.replies.orEmpty().filter { held -> held.thread == reply.thread && !held.deleted }
+        val uncounted = { root: ChatMessage ->
+            val replies = (root.replies - 1).coerceAtLeast(0)
+            val latest = if (replies == 0) 0 else remaining.maxOfOrNull { held -> held.created } ?: root.latest
+            root.copy(replies = replies, latest = latest)
+        }
+        _uiState.value = state.copy(
+            messages = state.messages.patched(reply.thread, uncounted),
+            thread = state.thread?.let { thread ->
+                if (thread.root.id == reply.thread) thread.copy(root = uncounted(thread.root)) else thread
+            },
+        )
+    }
+
+    /** An edit, which replaces what is held only if it is newer: the last writer wins. */
+    private fun revised(event: WebSocketEvent) {
+        frames++
+        val id = event.message
+        val body = event.body
+        val edited = event.edited
+        if (id.isNullOrEmpty() || body == null || edited == null) {
+            refresh()
+            return
+        }
+        patch(id) { message -> message.rewritten(body, edited) }
+    }
+
+    /**
+     * A message's reaction counts, and the user's own reaction where the frame
+     * says it was theirs that changed: made on another of their devices, it
+     * did not come from this one's react. A frame from an older server names
+     * no member, and leaves the user's own reaction as it was.
+     */
+    private fun reacted(event: WebSocketEvent) {
+        frames++
+        val id = event.message
+        if (id.isNullOrEmpty()) {
+            refresh()
+            return
+        }
+        val counts = event.reactions.orEmpty().filterValues { count -> count > 0 }
+        val mine = event.member?.takeIf { member -> member.isNotEmpty() } == _uiState.value.identity
+        patch(id) { message ->
+            when {
+                message.deleted -> message
+                mine -> message.copy(reactions = counts, reaction = event.reaction?.takeIf { it.isNotEmpty() })
+                else -> message.copy(reactions = counts)
+            }
+        }
+    }
+
+    /**
+     * [transform] applied to message [id] wherever it is held: the main
+     * timeline, the open thread's root and its replies. Answers whether it was
+     * held anywhere.
+     */
+    private fun patch(id: String, transform: (ChatMessage) -> ChatMessage): Boolean {
+        val state = _uiState.value
+        val thread = state.thread
+        val held = state.messages.any { message -> message.id == id } ||
+            thread?.root?.id == id ||
+            thread?.replies?.any { message -> message.id == id } == true
+        if (!held) return false
+        _uiState.value = state.copy(
+            messages = state.messages.patched(id, transform),
+            thread = thread?.copy(
+                root = if (thread.root.id == id) transform(thread.root) else thread.root,
+                replies = thread.replies.patched(id, transform),
+            ),
+        )
+        return true
+    }
+
+    /**
+     * Mark read, as [refresh] does, once a burst of arrivals has passed, and
+     * only for a reader: the chat may sit behind another screen.
+     */
+    private fun markReadSoon() {
+        readJob?.cancel()
+        readJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            if (VisibleEntity.isShowing("chat", chatId)) markRead()
         }
     }
 
@@ -987,6 +1161,110 @@ internal fun followsNewest(shown: List<ChatMessage>, current: List<ChatMessage>)
     if (newest == previous) return false
     return current.any { message -> message.id == previous }
 }
+
+/** Reads a frame's files and quote into the chat's own types. */
+private val frames = Gson()
+
+/**
+ * The message a socket frame carries, as the messages page would give it;
+ * null where the frame lacks the id or time a row needs. A frame is never a
+ * tombstone and carries no reactions or replies yet. `encrypted` is absent
+ * from an older server's frames, which is no encryption.
+ */
+internal fun frameMessage(chat: String, event: WebSocketEvent): ChatMessage? {
+    val id = event.id?.takeIf { id -> id.isNotEmpty() } ?: return null
+    val created = event.created ?: return null
+    return ChatMessage(
+        id = id,
+        chat = chat,
+        member = event.member.orEmpty(),
+        name = event.name.orEmpty(),
+        body = event.body.orEmpty(),
+        created = created,
+        attachments = frameAttachments(event.attachments),
+        edited = event.edited ?: 0,
+        reply = event.reply?.takeIf { reply -> reply.isNotEmpty() },
+        quote = frameQuote(event.quote),
+        thread = event.thread.orEmpty(),
+        encrypted = event.encrypted ?: 0,
+    )
+}
+
+/**
+ * A frame's files, as the attachments library lists them for the messages
+ * page too. An entry without the fields a file shows by is left out, as the
+ * web leaves it out, rather than reaching the list half empty.
+ */
+private fun frameAttachments(element: JsonElement?): List<Attachment> {
+    if (element == null || !element.isJsonArray) return emptyList()
+    return element.asJsonArray.mapNotNull { item ->
+        val fields = item.takeIf { it.isJsonObject }?.asJsonObject ?: return@mapNotNull null
+        if (!fields.text("id") || !fields.text("name") || !fields.number("size") || !fields.text("type")) {
+            return@mapNotNull null
+        }
+        try {
+            frames.fromJson(fields, Attachment::class.java)
+        } catch (_: JsonParseException) {
+            null
+        }
+    }
+}
+
+/** A frame's quoted post; null, or anything without a link and a network, is none. */
+private fun frameQuote(element: JsonElement?): ChatQuote? {
+    val fields = element?.takeIf { it.isJsonObject }?.asJsonObject ?: return null
+    if (!fields.text("url") || !fields.text("network")) return null
+    return try {
+        frames.fromJson(fields, ChatQuote::class.java)
+    } catch (_: JsonParseException) {
+        null
+    }
+}
+
+private fun JsonObject.text(key: String): Boolean =
+    get(key)?.let { value -> value.isJsonPrimitive && value.asJsonPrimitive.isString } == true
+
+private fun JsonObject.number(key: String): Boolean =
+    get(key)?.let { value -> value.isJsonPrimitive && value.asJsonPrimitive.isNumber } == true
+
+/**
+ * [message] added in (created, id) order, the order the list is held in. One
+ * older than everything loaded while older pages remain belongs among them,
+ * so it is left for paging to bring rather than put at the top.
+ */
+internal fun List<ChatMessage>.adding(message: ChatMessage, more: Boolean): List<ChatMessage> {
+    if (more && isNotEmpty() && message.created < first().created) return this
+    val order = compareBy<ChatMessage>({ held -> held.created }, { held -> held.id })
+    val index = indexOfFirst { held -> order.compare(held, message) > 0 }
+    return if (index < 0) this + message else toMutableList().apply { add(index, message) }
+}
+
+/** [transform] applied to message [id]; the same list where it is not held. */
+internal fun List<ChatMessage>.patched(id: String, transform: (ChatMessage) -> ChatMessage): List<ChatMessage> {
+    val index = indexOfFirst { message -> message.id == id }
+    if (index < 0) return this
+    return toMutableList().apply { set(index, transform(get(index))) }
+}
+
+/** A message deleted for everyone, as the messages page shows one. */
+internal fun ChatMessage.tombstone(): ChatMessage = copy(
+    deleted = true,
+    body = "",
+    reply = null,
+    attachments = emptyList(),
+    quote = null,
+    reactions = emptyMap(),
+    reaction = null,
+    replies = 0,
+    latest = 0,
+)
+
+/**
+ * An edit of this message, applied only if newer than what is held: edits
+ * cross on the way, and the last writer wins. A tombstone is never rewritten.
+ */
+internal fun ChatMessage.rewritten(body: String, edited: Long): ChatMessage =
+    if (deleted || this.edited >= edited) this else copy(body = body, edited = edited)
 
 /** [block]'s answer as a [Result], except a cancellation, which still cancels. */
 private suspend fun <T> attempt(block: suspend () -> T): Result<T> = try {

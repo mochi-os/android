@@ -290,9 +290,14 @@ class NetworksViewModelsTest {
         frames!!.send("""{"id": "t2", "member": "you", "name": "You", "body": "More", "created": 6, "thread": "r"}""")
         // Their message ends their typing, held as it was for thirty seconds.
         soon("the message to end the typing") { model.uiState.value.typing.isEmpty() }
-        until("the thread read again") { requests.count { it.query.contains("thread=r") } > threads }
-        until("the timeline read again") { requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") } > pages }
-        val read = requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") }
+        // The reply joins the open thread and its root's count as the frame has
+        // it, with neither read again.
+        until("the reply in the thread") { model.uiState.value.thread?.replies?.map { it.id } == listOf("t1", "t2") }
+        settle()
+        assertEquals(2, model.uiState.value.messages.single().replies)
+        assertEquals("the thread not read again", threads, requests.count { it.query.contains("thread=r") })
+        assertEquals("the timeline not read again", pages, requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") })
+        val read = pages
         frames!!.send("""{"event": "decrypted", "message": "r"}""")
         until("the decrypted message read again") { requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") } > read }
     }

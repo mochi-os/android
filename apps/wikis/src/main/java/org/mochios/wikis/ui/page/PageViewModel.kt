@@ -119,12 +119,25 @@ class PageViewModel @Inject constructor(
         }
     }
 
+    /**
+     * A change in the wiki. The page reads itself again only when the change
+     * concerns it, and the wiki's info only when what changed is not said: a
+     * settings change, a renamed wiki or a sync dump, an older server, a
+     * resync, and a reopened socket, which missed whatever was sent meanwhile.
+     */
     private fun handle(event: WebSocketEvent) {
-        // A reopened socket missed whatever was sent while it was down.
         when (event.type) {
-            "wiki/update", "wiki/resynced", REOPEN -> {
+            "wiki/resynced", REOPEN -> {
                 loadInfo()
                 loadPage()
+            }
+            "wiki/update" -> {
+                if (!wikiUpdateNamed(event.kind)) {
+                    loadInfo()
+                    loadPage()
+                } else if (pageConcerned(event.kind, event.page, slug, _uiState.value.page?.slug)) {
+                    loadPage()
+                }
             }
         }
     }
@@ -255,3 +268,30 @@ class PageViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(page = current.copy(tags = tags))
     }
 }
+
+/**
+ * Whether a wiki/update frame says what changed, in a kind this client knows.
+ * One that does not - no kind, or one a newer server added - may be anything,
+ * so everything is read again.
+ */
+internal fun wikiUpdateNamed(kind: String?): Boolean = kind in WIKI_UPDATE_KINDS
+
+private val WIKI_UPDATE_KINDS = setOf("edit", "pages", "comment", "tag", "redirect", "attachment")
+
+/**
+ * Whether a wiki/update frame of a known [kind] concerns the page opened by
+ * [opened], whose slug as loaded is [loaded]: a page reached through a
+ * redirect is opened by one slug and has another.
+ */
+internal fun pageConcerned(kind: String?, page: String?, opened: String, loaded: String?): Boolean =
+    when (kind) {
+        // The page's content, title, comment count or tags.
+        "edit", "comment", "tag" -> !page.isNullOrEmpty() && (page == opened || page == loaded)
+        // A page created, deleted or renamed, or a redirect set or removed,
+        // changes which links are missing on any page (a redirect's slug
+        // counts as a page that exists), and the redirect may be the one the
+        // page was opened through; a deleted attachment is cut from the pages
+        // using it.
+        "pages", "redirect", "attachment" -> true
+        else -> false
+    }
