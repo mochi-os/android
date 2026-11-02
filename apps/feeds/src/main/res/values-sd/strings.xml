@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s درآمد ڪيا ويا</string>
     <string name="feeds_imported_more">اڃا تائين %1$s درآمد ڪيا ويا؛ باقي پوءِ ايندا</string>
     <string name="feeds_import_sources_more">اڃا تائين %1$s ماخذ شامل ڪيا ويا؛ باقي پوءِ ايندا</string>
+    <string name="feeds_waiting_title">اجازت جو انتظار آهي</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s ماڻهو</item>
+        <item quantity="other">%s ماڻهو</item>
+    </plurals>
     <string name="feeds_filters">فلٽر</string>
     <string name="feeds_filter_phrase">لڪائڻ جو جملو</string>
     <string name="feeds_filter_remove">%1$s هٽايو</string>

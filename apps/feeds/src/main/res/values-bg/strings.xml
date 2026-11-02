@@ -312,6 +312,11 @@
     <string name="feeds_imported">Импортирани: %1$s</string>
     <string name="feeds_imported_more">Досега са импортирани %1$s; останалите следват</string>
     <string name="feeds_import_sources_more">Досега са добавени %1$s източника; останалите следват</string>
+    <string name="feeds_waiting_title">Изчакване на разрешение</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s човек</item>
+        <item quantity="other">%s души</item>
+    </plurals>
     <string name="feeds_filters">Филтри</string>
     <string name="feeds_filter_phrase">Фраза за скриване</string>
     <string name="feeds_filter_remove">Премахни %1$s</string>

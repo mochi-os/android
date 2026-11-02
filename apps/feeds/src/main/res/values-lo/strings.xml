@@ -305,6 +305,11 @@
     <string name="feeds_imported">ນຳເຂົ້າ %1$s ແລ້ວ</string>
     <string name="feeds_imported_more">ນຳເຂົ້າແລ້ວ %1$s; ສ່ວນທີ່ເຫຼືອຈະຕາມມາ</string>
     <string name="feeds_import_sources_more">ເພີ່ມແລ້ວ %1$s ແຫຼ່ງ; ສ່ວນທີ່ເຫຼືອຈະຕາມມາ</string>
+    <string name="feeds_waiting_title">ກຳລັງລໍຖ້າສິດ</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s ຄົນ</item>
+        <item quantity="other">%s ຄົນ</item>
+    </plurals>
     <string name="feeds_filters">ຕົວກອງ</string>
     <string name="feeds_filter_phrase">ວະລີທີ່ຈະເຊື່ອງ</string>
     <string name="feeds_filter_remove">ລຶບ %1$s</string>

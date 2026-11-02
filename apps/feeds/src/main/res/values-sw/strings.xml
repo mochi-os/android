@@ -312,6 +312,11 @@
     <string name="feeds_imported">Vimeingizwa: %1$s</string>
     <string name="feeds_imported_more">Vimeingizwa %1$s hadi sasa; vingine vinafuata</string>
     <string name="feeds_import_sources_more">Vyanzo %1$s vimeongezwa hadi sasa; vingine vinafuata</string>
+    <string name="feeds_waiting_title">Inasubiri ruhusa</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">mtu %s</item>
+        <item quantity="other">watu %s</item>
+    </plurals>
     <string name="feeds_filters">Vichujio</string>
     <string name="feeds_filter_phrase">Kifungu cha kuficha</string>
     <string name="feeds_filter_remove">Ondoa %1$s</string>

@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s وارد شول</string>
     <string name="feeds_imported_more">تر اوسه %1$s وارد شول؛ نور به وروسته راشي</string>
     <string name="feeds_import_sources_more">تر اوسه %1$s سرچینې اضافه شوې؛ نورې به وروسته راشي</string>
+    <string name="feeds_waiting_title">د اجازې په تمه</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s کس</item>
+        <item quantity="other">%s کسان</item>
+    </plurals>
     <string name="feeds_filters">فلټرونه</string>
     <string name="feeds_filter_phrase">د پټولو جمله</string>
     <string name="feeds_filter_remove">%1$s لرې کړئ</string>

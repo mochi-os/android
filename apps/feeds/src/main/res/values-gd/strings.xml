@@ -328,6 +328,13 @@
     <string name="feeds_imported">Air an ion-phortadh: %1$s</string>
     <string name="feeds_imported_more">Air an ion-phortadh gu ruige seo: %1$s; thig an còrr an ceann greis</string>
     <string name="feeds_import_sources_more">Tùsan air an cur ris gu ruige seo: %1$s; thig an còrr an ceann greis</string>
+    <string name="feeds_waiting_title">A\' feitheamh ri cead</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s neach</item>
+        <item quantity="two">%s neach</item>
+        <item quantity="few">%s daoine</item>
+        <item quantity="other">%s duine</item>
+    </plurals>
     <string name="feeds_filters">Sìolachain</string>
     <string name="feeds_filter_phrase">Abairt ri falach</string>
     <string name="feeds_filter_remove">Thoir %1$s air falbh</string>

@@ -340,6 +340,15 @@
     <string name="feeds_imported">Mewnforiwyd %1$s</string>
     <string name="feeds_imported_more">Mewnforiwyd %1$s hyd yma; bydd y gweddill yn dilyn</string>
     <string name="feeds_import_sources_more">Ychwanegwyd %1$s ffynhonnell hyd yma; bydd y gweddill yn dilyn</string>
+    <string name="feeds_waiting_title">Yn aros am ganiatâd</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="zero">%s o bobl</item>
+        <item quantity="one">%s person</item>
+        <item quantity="two">%s berson</item>
+        <item quantity="few">%s pherson</item>
+        <item quantity="many">%s pherson</item>
+        <item quantity="other">%s o bobl</item>
+    </plurals>
     <string name="feeds_filters">Hidlyddion</string>
     <string name="feeds_filter_phrase">Ymadrodd i\'w guddio</string>
     <string name="feeds_filter_remove">Tynnu %1$s</string>

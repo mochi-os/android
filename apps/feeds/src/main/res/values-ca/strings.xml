@@ -314,6 +314,12 @@
     <string name="feeds_imported">S\'han importat %1$s</string>
     <string name="feeds_imported_more">De moment s\'han importat %1$s; la resta vindrà després</string>
     <string name="feeds_import_sources_more">De moment s\'han afegit %1$s fonts; la resta vindrà després</string>
+    <string name="feeds_waiting_title">S\'està esperant el permís</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s persona</item>
+        <item quantity="many">%s persones</item>
+        <item quantity="other">%s persones</item>
+    </plurals>
     <string name="feeds_filters">Filtres</string>
     <string name="feeds_filter_phrase">Frase per amagar</string>
     <string name="feeds_filter_remove">Elimina %1$s</string>

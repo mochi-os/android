@@ -326,6 +326,13 @@
     <string name="feeds_imported">Importováno: %1$s</string>
     <string name="feeds_imported_more">Zatím importováno: %1$s; zbytek bude následovat</string>
     <string name="feeds_import_sources_more">Zatím přidáno zdrojů: %1$s; zbytek bude následovat</string>
+    <string name="feeds_waiting_title">Čeká se na oprávnění</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s osoba</item>
+        <item quantity="few">%s osoby</item>
+        <item quantity="many">%s osoby</item>
+        <item quantity="other">%s osob</item>
+    </plurals>
     <string name="feeds_filters">Filtry</string>
     <string name="feeds_filter_phrase">Fráze ke skrytí</string>
     <string name="feeds_filter_remove">Odebrat %1$s</string>

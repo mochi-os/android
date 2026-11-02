@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s flutt inn</string>
     <string name="feeds_imported_more">%1$s flutt inn hingað til; restin fylgir á eftir</string>
     <string name="feeds_import_sources_more">%1$s upprunum bætt við hingað til; restin fylgir á eftir</string>
+    <string name="feeds_waiting_title">Beðið eftir leyfi</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s manneskja</item>
+        <item quantity="other">%s manneskjur</item>
+    </plurals>
     <string name="feeds_filters">Síur</string>
     <string name="feeds_filter_phrase">Orðasamband til að fela</string>
     <string name="feeds_filter_remove">Fjarlægja %1$s</string>

@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s ingevoer</string>
     <string name="feeds_imported_more">%1$s tot dusver ingevoer; die res volg</string>
     <string name="feeds_import_sources_more">%1$s bronne tot dusver bygevoeg; die res volg</string>
+    <string name="feeds_waiting_title">Wag vir toestemming</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s persoon</item>
+        <item quantity="other">%s mense</item>
+    </plurals>
     <string name="feeds_filters">Filters</string>
     <string name="feeds_filter_phrase">Frase om te versteek</string>
     <string name="feeds_filter_remove">Verwyder %1$s</string>

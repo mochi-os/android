@@ -92,6 +92,16 @@ class NetworksViewModelsTest {
     /** The posts the feed lists. */
     @Volatile private var listing = "[$post]"
 
+    /** The feed's sources answer, and whether Allow is next refused for want of the grant. */
+    @Volatile private var sourcesAnswer = """{"sources": []}"""
+    @Volatile private var allowRefused = false
+
+    /** Holds Allow's answer back until a test lets it go, so it can see the work under way. */
+    @Volatile private var allowGate: java.util.concurrent.CountDownLatch? = null
+
+    /** What an account import answers. */
+    @Volatile private var importAnswer = """{"imported": 4, "more": true}"""
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -125,12 +135,20 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/publish/set" -> raw("""{"publish": [], "kept": {"l1": 3}}""")
                     "/feeds/f1/-/publish/forget" -> raw("""{"deleted": 3}""")
                     "/feeds/f1/-/generator/set" -> raw("""{"generators": {"b2": "at://did/app.bsky.feed.generator/f1"}}""")
-                    "/feeds/f1/-/import" -> raw("""{"imported": 4, "more": true}""")
+                    "/feeds/f1/-/import" -> raw(importAnswer)
                     "/feeds/f1/-/filters" -> ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}]}""")
                     "/feeds/f1/-/filters/add" -> ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}, {"id": "z", "phrase": "mango"}]}""")
-                    "/feeds/f1/-/sources" -> ok("""{"sources": []}""")
+                    "/feeds/f1/-/sources" -> ok(sourcesAnswer)
+                    "/feeds/f1/-/sources/allow" -> if (allowRefused) {
+                        allowRefused = false
+                        MockResponse().setResponseCode(403).setBody("""{"app": "feeds", "error": "permission_required", "permission": "url:wasabi.example", "restricted": false}""")
+                    } else {
+                        allowGate?.await(5, TimeUnit.SECONDS)
+                        ok("""{"imported": 2, "more": false, "waiting": []}""")
+                    }
+                    "/feeds/-/permissions/grant" -> ok("""{"status": "granted"}""")
                     "/feeds/f1/-/sources/add" -> ok("""{"source": {"id": "s1"}, "ingested": 2}""")
-                    "/feeds/f1/-/sources/import" -> ok("""{"imported": 5, "more": false, "total": 5}""")
+                    "/feeds/f1/-/sources/import" -> ok("""{"imported": 5, "more": false, "total": 5, "waiting": [{"server": "wasabi.example", "count": 1}]}""")
                     "/feeds/-/lookup" -> raw("""{"kind": "person", "network": "fediverse", "id": "https://there.example/u/a", "name": "Alice"}""")
                     "/feeds/-/people" -> ok("""{"people": [{"contact": "c", "name": "Zoe", "handle": "@zoe@there.example", "network": "fediverse"}, {"contact": "d", "name": "Adam", "handle": "@adam@there.example", "network": "fediverse"}]}""")
                     "/feeds/-/recommendations" -> ok("""{"feeds": []}""")
@@ -388,6 +406,79 @@ class NetworksViewModelsTest {
         until("the import") { model.imported.value != null }
         assertEquals("addresses=Account+address%0Aalice%40there.example%0A", sent("/feeds/f1/-/sources/import"))
         assertEquals(5, model.imported.value!!.imported)
+    }
+
+    @Test
+    fun `a file import asks at once for the server people wait on, and the Sources list shows the servers`() {
+        sourcesAnswer = """{"sources": [], "waiting": [{"server": "wasabi.example", "count": 2}]}"""
+        allowRefused = true
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.importFollows("Account address\nbob@wasabi.example\n")
+        until("the import") { model.imported.value != null }
+        until("the server asked for") { model.waitingPermission.value != null }
+        assertEquals("url:wasabi.example", model.waitingPermission.value!!.permission)
+        until("the waiting servers") { model.waiting.value.isNotEmpty() }
+        assertEquals(2, model.waiting.value.single().count)
+        model.denyWaitingPermission()
+        assertNull(model.waitingPermission.value)
+        assertNull(model.allowed.value)
+    }
+
+    @Test
+    fun `allowing a server asks for the grant it is refused, then adds the people waiting on it`() {
+        allowRefused = true
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.allowWaiting("wasabi.example")
+        until("the permission asked") { model.waitingPermission.value != null }
+        assertEquals("url:wasabi.example", model.waitingPermission.value!!.permission)
+        assertEquals("feeds", model.waitingPermission.value!!.app)
+        assertFalse(model.addingWaiting.value)
+        val gate = java.util.concurrent.CountDownLatch(1)
+        allowGate = gate
+        model.allowWaitingPermission()
+        // The import button stays busy while the people are added.
+        until("the adding under way") { model.addingWaiting.value }
+        gate.countDown()
+        until("the people added") { model.allowed.value != null }
+        until("the adding done") { !model.addingWaiting.value }
+        assertEquals(2, model.allowed.value!!.imported)
+        assertTrue(sent("/feeds/-/permissions/grant")!!.contains("permission=url%3Awasabi.example"))
+        assertEquals(2, requests.count { it.first == "/feeds/f1/-/sources/allow" })
+    }
+
+    @Test
+    fun `an account import asks at once for the server people wait on, and allowing it adds them`() {
+        importAnswer = """{"imported": 4, "more": false, "waiting": [{"server": "wasabi.example", "count": 2}]}"""
+        allowRefused = true
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val events = mutableListOf<PublishEvent>()
+        val job = collect(model, events)
+        model.loadPublish()
+        until("the publish list") { model.publish.value != null }
+        rule.setContent { PublishingSection(model) }
+        val menus = { rule.onAllNodesWithContentDescription("More options").fetchSemanticsNodes().size }
+        assertEquals(2, menus())
+        model.importFrom(org.mochios.feeds.model.PublishAccount(id = "l1"), "follows")
+        until("the server asked for") { model.waitingPermission.value != null }
+        assertEquals("url:wasabi.example", model.waitingPermission.value!!.permission)
+        val gate = java.util.concurrent.CountDownLatch(1)
+        allowGate = gate
+        model.allowWaitingPermission()
+        // The account shows busy while its people are added, not only during the import.
+        until("the adding under way") { model.addingWaiting.value }
+        assertEquals("l1", model.asking.value)
+        // The account's menu is a spinner meanwhile.
+        rule.waitForIdle()
+        assertEquals(1, menus())
+        gate.countDown()
+        until("the people added") { events.count { it is PublishEvent.Imported } == 2 }
+        until("the adding done") { !model.addingWaiting.value }
+        rule.waitForIdle()
+        assertEquals(2, menus())
+        job.cancel()
+        assertEquals(PublishEvent.Imported("follows", 4, false), events.filterIsInstance<PublishEvent.Imported>()[0])
+        assertEquals(PublishEvent.Imported("follows", 2, false), events.filterIsInstance<PublishEvent.Imported>()[1])
+        assertTrue(sent("/feeds/-/permissions/grant")!!.contains("permission=url%3Awasabi.example"))
     }
 
     @Test

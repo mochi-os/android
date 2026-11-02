@@ -328,6 +328,13 @@
     <string name="feeds_imported">Імпартавана: %1$s</string>
     <string name="feeds_imported_more">Пакуль імпартавана: %1$s; астатняе будзе пазней</string>
     <string name="feeds_import_sources_more">Пакуль дададзена крыніц: %1$s; астатнія будуць пазней</string>
+    <string name="feeds_waiting_title">Чаканне дазволу</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s чалавек</item>
+        <item quantity="few">%s чалавекі</item>
+        <item quantity="many">%s чалавек</item>
+        <item quantity="other">%s чалавека</item>
+    </plurals>
     <string name="feeds_filters">Фільтры</string>
     <string name="feeds_filter_phrase">Фраза для схавання</string>
     <string name="feeds_filter_remove">Выдаліць %1$s</string>

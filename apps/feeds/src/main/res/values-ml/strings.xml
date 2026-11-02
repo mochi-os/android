@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s ഇമ്പോർട്ട് ചെയ്തു</string>
     <string name="feeds_imported_more">ഇതുവരെ %1$s ഇമ്പോർട്ട് ചെയ്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</string>
     <string name="feeds_import_sources_more">ഇതുവരെ %1$s സ്രോതസ്സുകൾ ചേർത്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</string>
+    <string name="feeds_waiting_title">അനുമതിക്കായി കാത്തിരിക്കുന്നു</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s വ്യക്തി</item>
+        <item quantity="other">%s ആളുകൾ</item>
+    </plurals>
     <string name="feeds_filters">ഫിൽട്ടറുകൾ</string>
     <string name="feeds_filter_phrase">മറയ്ക്കേണ്ട വാക്യം</string>
     <string name="feeds_filter_remove">%1$s നീക്കം ചെയ്യുക</string>

@@ -19,6 +19,7 @@ import org.mochios.feeds.model.Filters
 import org.mochios.feeds.model.Generators
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Imported
+import org.mochios.feeds.model.WaitingServer
 import org.mochios.feeds.model.Lookup
 import org.mochios.feeds.model.Member
 import org.mochios.feeds.model.People
@@ -172,7 +173,8 @@ data class BannerResponse(
 )
 
 data class SourceListResponse(
-    val sources: List<Source> = emptyList()
+    val sources: List<Source> = emptyList(),
+    val waiting: List<WaitingServer> = emptyList(),
 )
 
 data class SourceAddResponse(
@@ -745,6 +747,15 @@ interface FeedsApi {
     suspend fun importFollows(
         @Path("feedId") feedId: String,
         @Field("addresses") addresses: String,
+    ): Response<ApiResponse<Imported>>
+
+    // The people of the feed's imports who waited on a server, added once the
+    // app may read it; refused with the permission named until then.
+    @FormUrlEncoded
+    @POST("{feedId}/-/sources/allow")
+    suspend fun allowWaiting(
+        @Path("feedId") feedId: String,
+        @Field("server") server: String,
     ): Response<ApiResponse<Imported>>
 
     @GET("-/people")

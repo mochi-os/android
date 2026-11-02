@@ -305,6 +305,11 @@
     <string name="feeds_imported">%1$s ခု တင်သွင်းပြီး</string>
     <string name="feeds_imported_more">ယခုထိ %1$s ခု တင်သွင်းပြီး၊ ကျန်သည်များ နောက်မှ လာမည်</string>
     <string name="feeds_import_sources_more">ယခုထိ အရင်းအမြစ် %1$s ခု ထည့်ပြီး၊ ကျန်သည်များ နောက်မှ လာမည်</string>
+    <string name="feeds_waiting_title">ခွင့်ပြုချက်ကို စောင့်နေသည်</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s ဦး</item>
+        <item quantity="other">%s ဦး</item>
+    </plurals>
     <string name="feeds_filters">စစ်ထုတ်မှုများ</string>
     <string name="feeds_filter_phrase">ဖျောက်မည့် စကားစု</string>
     <string name="feeds_filter_remove">%1$s ဖယ်ရှား</string>

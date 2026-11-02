@@ -312,6 +312,11 @@
     <string name="feeds_imported">Εισήχθησαν %1$s</string>
     <string name="feeds_imported_more">Εισήχθησαν %1$s μέχρι στιγμής· τα υπόλοιπα ακολουθούν</string>
     <string name="feeds_import_sources_more">Προστέθηκαν %1$s πηγές μέχρι στιγμής· οι υπόλοιπες ακολουθούν</string>
+    <string name="feeds_waiting_title">Αναμονή για άδεια</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s άτομο</item>
+        <item quantity="other">%s άτομα</item>
+    </plurals>
     <string name="feeds_filters">Φίλτρα</string>
     <string name="feeds_filter_phrase">Φράση προς απόκρυψη</string>
     <string name="feeds_filter_remove">Αφαίρεση %1$s</string>

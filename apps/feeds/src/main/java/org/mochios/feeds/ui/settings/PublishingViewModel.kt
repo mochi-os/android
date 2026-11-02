@@ -146,8 +146,35 @@ class PublishingViewModel @Inject constructor(
         change(account.id, R.string.feeds_import_failed) {
             val answer = repository.importAccount(feedId, account.id, kind)
             _events.emit(PublishEvent.Imported(kind, answer.imported, answer.more))
+            // People on a server the app may not read yet: the user is asked
+            // for each server now, and those allowed are added, the account
+            // shown busy meanwhile.
+            if (answer.waiting.isNotEmpty()) _asking.value = account.id
+            asker.ask(answer.waiting.map { it.server })
         }
     }
+
+    private val asker = WaitingAsker(
+        viewModelScope, repository, feedId,
+        added = { answer ->
+            viewModelScope.launch { _events.emit(PublishEvent.Imported("follows", answer.imported, answer.more)) }
+        },
+        failed = { e ->
+            viewModelScope.launch { _events.emit(PublishEvent.Failure(e.toMochiError(), R.string.feeds_import_failed)) }
+        },
+    )
+
+    /** The permission a server people wait on needs, while the user is asked for it. */
+    val waitingPermission: StateFlow<PendingPermission?> = asker.pending
+
+    /** Whether people an import left waiting are being added, and from which account's import. */
+    val addingWaiting: StateFlow<Boolean> = asker.working
+    private val _asking = MutableStateFlow<String?>(null)
+    val asking: StateFlow<String?> = _asking.asStateFlow()
+
+    fun allowWaitingPermission() = asker.allow()
+
+    fun denyWaitingPermission() = asker.decline()
 
     fun openBackups(account: PublishAccount) {
         _backups.value = AccountBackups(account, null)

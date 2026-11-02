@@ -326,6 +326,12 @@
     <string name="feeds_imported">יובאו %1$s</string>
     <string name="feeds_imported_more">יובאו %1$s עד כה; השאר בדרך</string>
     <string name="feeds_import_sources_more">נוספו %1$s מקורות עד כה; השאר בדרך</string>
+    <string name="feeds_waiting_title">ממתין להרשאה</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s אדם</item>
+        <item quantity="two">%s אנשים</item>
+        <item quantity="other">%s אנשים</item>
+    </plurals>
     <string name="feeds_filters">מסננים</string>
     <string name="feeds_filter_phrase">ביטוי להסתרה</string>
     <string name="feeds_filter_remove">הסר %1$s</string>

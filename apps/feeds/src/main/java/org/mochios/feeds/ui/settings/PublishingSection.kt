@@ -105,7 +105,19 @@ internal fun PublishingEvents(viewModel: PublishingViewModel) {
 @Composable
 internal fun PublishingSection(viewModel: PublishingViewModel) {
     val state by viewModel.publish.collectAsState()
+    // A server people of an import wait on, put to the user one at a time.
+    val waitingPermission by viewModel.waitingPermission.collectAsState()
+    waitingPermission?.let { pending ->
+        PermissionRequestDialog(
+            appId = pending.app,
+            permissionName = pending.name,
+            onAllow = { viewModel.allowWaitingPermission() },
+            onDeny = { viewModel.denyWaitingPermission() },
+        )
+    }
     val busy by viewModel.busy.collectAsState()
+    val addingWaiting by viewModel.addingWaiting.collectAsState()
+    val asking by viewModel.asking.collectAsState()
     val kept by viewModel.kept.collectAsState()
     val backups by viewModel.backups.collectAsState()
     val accounts = viewModel.accounts(state)
@@ -146,6 +158,8 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
                 }
                 AccountMenu(
                     account = account,
+                    // An import, and the adding of the people it left waiting.
+                    busy = busy == account.id || (addingWaiting && asking == account.id),
                     generator = generators[account.id]?.isNotEmpty() == true,
                     onImport = { kind -> viewModel.importFrom(account, kind) },
                     onBackups = { viewModel.openBackups(account) },
@@ -189,6 +203,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
 @Composable
 private fun AccountMenu(
     account: PublishAccount,
+    busy: Boolean,
     generator: Boolean,
     onImport: (String) -> Unit,
     onBackups: () -> Unit,
@@ -196,8 +211,12 @@ private fun AccountMenu(
 ) {
     var open by remember { mutableStateOf(false) }
     Box {
-        MochiIconButton(onClick = { open = true }) {
-            Icon(Icons.Outlined.MoreHoriz, contentDescription = stringResource(MochiR.string.common_more_options))
+        MochiIconButton(onClick = { open = true }, enabled = !busy) {
+            if (busy) {
+                CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+            } else {
+                Icon(Icons.Outlined.MoreHoriz, contentDescription = stringResource(MochiR.string.common_more_options))
+            }
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             listOf(

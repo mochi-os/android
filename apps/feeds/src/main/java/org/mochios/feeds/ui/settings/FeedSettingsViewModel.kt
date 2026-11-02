@@ -31,6 +31,7 @@ import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.model.User
+import org.mochios.feeds.model.WaitingServer
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.PermissionRequiredException
 import javax.inject.Inject
@@ -64,6 +65,14 @@ class FeedSettingsViewModel @Inject constructor(
     // Sources tab
     private val _sources = MutableStateFlow<List<Source>>(emptyList())
     val sources: StateFlow<List<Source>> = _sources.asStateFlow()
+
+    // The servers people of the feed's imports wait on, until the user lets
+    // the app read them, and what allowing one added.
+    private val _waiting = MutableStateFlow<List<WaitingServer>>(emptyList())
+    val waiting: StateFlow<List<WaitingServer>> = _waiting.asStateFlow()
+
+    private val _allowed = MutableStateFlow<Imported?>(null)
+    val allowed: StateFlow<Imported?> = _allowed.asStateFlow()
 
     private val _isLoadingSources = MutableStateFlow(false)
     val isLoadingSources: StateFlow<Boolean> = _isLoadingSources.asStateFlow()
@@ -288,8 +297,10 @@ class FeedSettingsViewModel @Inject constructor(
                 // Server returns sources in insertion order. Sort
                 // case-insensitively by name for the UI, matching the web
                 // sources page which sorts with naturalCompare.
-                _sources.value = repository.getSources(feedId)
+                val list = repository.getSourceList(feedId)
+                _sources.value = list.sources
                     .sortedWith(compareBy(NaturalCompare) { it.name.ifBlank { it.url } })
+                _waiting.value = list.waiting.sortedWith(compareBy(NaturalCompare) { it.server })
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -320,8 +331,12 @@ class FeedSettingsViewModel @Inject constructor(
         _isImporting.value = true
         viewModelScope.launch {
             try {
-                _imported.value = repository.importFollows(feedId, text)
+                val answer = repository.importFollows(feedId, text)
+                _imported.value = answer
                 loadSources()
+                // People on a server the app may not read yet: the user is
+                // asked for each server now.
+                asker.ask(answer.waiting.map { it.server })
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
             } finally {
@@ -332,6 +347,32 @@ class FeedSettingsViewModel @Inject constructor(
 
     fun clearImported() {
         _imported.value = null
+    }
+
+    // The servers people of the feed's imports wait on, asked for one at a
+    // time: after an import, and from the Sources list's Allow.
+    private val asker = WaitingAsker(
+        viewModelScope, repository, feedId,
+        added = { answer ->
+            _allowed.value = answer
+            loadSources()
+        },
+        failed = { e -> _error.value = e.toMochiError() },
+    )
+    val waitingPermission: StateFlow<PendingPermission?> = asker.pending
+
+    /** Whether the people an import left waiting are being added, after the import itself. */
+    val addingWaiting: StateFlow<Boolean> = asker.working
+
+    /** Add the people who waited on a server, asking the user for it first. */
+    fun allowWaiting(server: String) = asker.ask(listOf(server))
+
+    fun allowWaitingPermission() = asker.allow()
+
+    fun denyWaitingPermission() = asker.decline()
+
+    fun clearAllowed() {
+        _allowed.value = null
     }
 
     fun addSource(url: String, type: String, account: String? = null, onSuccess: () -> Unit = {}) {
@@ -744,4 +785,6 @@ data class PendingPermission(
     val retryUrl: String,
     val retryType: String,
     val retryAccount: String? = null,
+    /** The server people waited on, when the grant is for adding them. */
+    val retryServer: String? = null,
 )

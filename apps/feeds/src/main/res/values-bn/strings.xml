@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$sটি ইমপোর্ট করা হয়েছে</string>
     <string name="feeds_imported_more">এখন পর্যন্ত %1$sটি ইমপোর্ট করা হয়েছে; বাকিগুলো আসছে</string>
     <string name="feeds_import_sources_more">এখন পর্যন্ত %1$sটি উৎস যোগ করা হয়েছে; বাকিগুলো আসছে</string>
+    <string name="feeds_waiting_title">অনুমতির জন্য অপেক্ষা করা হচ্ছে</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s জন</item>
+        <item quantity="other">%s জন</item>
+    </plurals>
     <string name="feeds_filters">ফিল্টার</string>
     <string name="feeds_filter_phrase">লুকানোর বাক্যাংশ</string>
     <string name="feeds_filter_remove">%1$s সরান</string>

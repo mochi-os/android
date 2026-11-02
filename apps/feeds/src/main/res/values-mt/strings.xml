@@ -335,6 +335,14 @@
     <string name="feeds_imported">Importati: %1$s</string>
     <string name="feeds_imported_more">S\'issa importati: %1$s; il-bqija ġejjin</string>
     <string name="feeds_import_sources_more">S\'issa żdiedu %1$s sorsi; il-bqija ġejjin</string>
+    <string name="feeds_waiting_title">Qed nistennew il-permess</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s persuna</item>
+        <item quantity="two">%s persuni</item>
+        <item quantity="few">%s persuni</item>
+        <item quantity="many">%s persuna</item>
+        <item quantity="other">%s persuna</item>
+    </plurals>
     <string name="feeds_filters">Filtri</string>
     <string name="feeds_filter_phrase">Frażi li trid taħbi</string>
     <string name="feeds_filter_remove">Neħħi %1$s</string>

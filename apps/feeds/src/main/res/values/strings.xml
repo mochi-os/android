@@ -399,6 +399,11 @@
         <item quantity="other">Added %s sources</item>
     </plurals>
     <string name="feeds_import_sources_more">Added %1$s sources so far; the rest follow</string>
+    <string name="feeds_waiting_title">Waiting for permission</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s person</item>
+        <item quantity="other">%s people</item>
+    </plurals>
     <string name="feeds_filters">Filters</string>
     <string name="feeds_filter_phrase">Phrase to hide</string>
     <string name="feeds_filter_remove">Remove %1$s</string>

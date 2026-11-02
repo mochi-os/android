@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s hatin îthalkirin</string>
     <string name="feeds_imported_more">Heta niha %1$s hatin îthalkirin; yên mayî dê paşê werin</string>
     <string name="feeds_import_sources_more">Heta niha %1$s çavkanî hatin zêdekirin; yên mayî dê paşê werin</string>
+    <string name="feeds_waiting_title">Li benda destûrê</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s kes</item>
+        <item quantity="other">%s kes</item>
+    </plurals>
     <string name="feeds_filters">Parzûn</string>
     <string name="feeds_filter_phrase">Hevoka ku were veşartin</string>
     <string name="feeds_filter_remove">%1$s rake</string>

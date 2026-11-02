@@ -312,6 +312,11 @@
     <string name="feeds_imported">Ներմուծվեց %1$s</string>
     <string name="feeds_imported_more">Առայժմ ներմուծվել է %1$s, մնացածը՝ հետո</string>
     <string name="feeds_import_sources_more">Առայժմ ավելացվել է %1$s աղբյուր, մնացածը՝ հետո</string>
+    <string name="feeds_waiting_title">Սպասում է թույլտվության</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s մարդ</item>
+        <item quantity="other">%s մարդ</item>
+    </plurals>
     <string name="feeds_filters">Զտիչներ</string>
     <string name="feeds_filter_phrase">Թաքցվող արտահայտություն</string>
     <string name="feeds_filter_remove">Հեռացնել %1$s-ը</string>

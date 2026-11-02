@@ -310,6 +310,11 @@
     <string name="feeds_imported">%1$s importasqa</string>
     <string name="feeds_imported_more">Kunankama %1$s importasqa; puchuqkunaqa qhipaman hamunqa</string>
     <string name="feeds_import_sources_more">Kunankama %1$s pukyukuna yapasqa; puchuqkunaqa qhipaman hamunqa</string>
+    <string name="feeds_waiting_title">Permisota suyachkan</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s runa</item>
+        <item quantity="other">%s runakuna</item>
+    </plurals>
     <string name="feeds_filters">Filtrokuna</string>
     <string name="feeds_filter_phrase">Pakanapaq rimay</string>
     <string name="feeds_filter_remove">%1$s-ta qichuy</string>

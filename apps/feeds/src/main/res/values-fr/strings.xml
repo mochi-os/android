@@ -312,6 +312,12 @@
     <string name="feeds_imported">Importés : %1$s</string>
     <string name="feeds_imported_more">Importés pour l\'instant : %1$s ; la suite arrive</string>
     <string name="feeds_import_sources_more">%1$s sources ajoutées pour l\'instant ; les autres suivent</string>
+    <string name="feeds_waiting_title">En attente de permission</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s personne</item>
+        <item quantity="many">%s personnes</item>
+        <item quantity="other">%s personnes</item>
+    </plurals>
     <string name="feeds_filters">Filtres</string>
     <string name="feeds_filter_phrase">Expression à masquer</string>
     <string name="feeds_filter_remove">Supprimer %1$s</string>

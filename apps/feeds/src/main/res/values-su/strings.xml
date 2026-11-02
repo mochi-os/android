@@ -310,6 +310,11 @@
     <string name="feeds_imported">%1$s diimpor</string>
     <string name="feeds_imported_more">%1$s geus diimpor; sésana engké nyusul</string>
     <string name="feeds_import_sources_more">%1$s sumber geus ditambahkeun; sésana engké nyusul</string>
+    <string name="feeds_waiting_title">Ngantosan idin</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s jalma</item>
+        <item quantity="other">%s jalma</item>
+    </plurals>
     <string name="feeds_filters">Filter</string>
     <string name="feeds_filter_phrase">Frasa nu disumputkeun</string>
     <string name="feeds_filter_remove">Cabut %1$s</string>

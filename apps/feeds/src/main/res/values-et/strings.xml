@@ -312,6 +312,11 @@
     <string name="feeds_imported">Imporditud: %1$s</string>
     <string name="feeds_imported_more">Seni imporditud: %1$s; ülejäänud tulevad hiljem</string>
     <string name="feeds_import_sources_more">Seni lisatud allikaid: %1$s; ülejäänud tulevad hiljem</string>
+    <string name="feeds_waiting_title">Ootab luba</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s inimene</item>
+        <item quantity="other">%s inimest</item>
+    </plurals>
     <string name="feeds_filters">Filtrid</string>
     <string name="feeds_filter_phrase">Peidetav fraas</string>
     <string name="feeds_filter_remove">Eemalda %1$s</string>

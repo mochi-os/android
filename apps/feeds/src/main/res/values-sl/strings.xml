@@ -326,6 +326,13 @@
     <string name="feeds_imported">Uvoženo: %1$s</string>
     <string name="feeds_imported_more">Doslej uvoženo: %1$s; ostalo bo sledilo</string>
     <string name="feeds_import_sources_more">Doslej dodani viri: %1$s; ostali bodo sledili</string>
+    <string name="feeds_waiting_title">Čakanje na dovoljenje</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s oseba</item>
+        <item quantity="two">%s osebi</item>
+        <item quantity="few">%s osebe</item>
+        <item quantity="other">%s oseb</item>
+    </plurals>
     <string name="feeds_filters">Filtri</string>
     <string name="feeds_filter_phrase">Besedna zveza za skrivanje</string>
     <string name="feeds_filter_remove">Odstrani %1$s</string>

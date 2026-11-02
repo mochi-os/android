@@ -36,6 +36,7 @@ import org.mochios.feeds.api.FeedNotificationSettings
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.PostDetailResponse
+import org.mochios.feeds.api.SourceListResponse
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
 import org.mochios.feeds.api.AddSourceRequest
@@ -884,6 +885,22 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /** The feed's sources, and the servers people of its imports wait on. */
+    suspend fun getSourceList(feedId: String): SourceListResponse = mapped { api.getSources(feedId).unwrap() }
+
+    /**
+     * Add the people of the feed's imports who waited on a server. While the
+     * app may not read it the answer is a [PermissionRequiredException], which
+     * the caller asks the user about, as for adding a source.
+     */
+    suspend fun allowWaiting(feedId: String, server: String): Imported {
+        val response = api.allowWaiting(feedId, server)
+        if (response.isSuccessful) {
+            return response.body()?.data ?: throw MochiError.Unknown()
+        }
+        throw refusal(response)
+    }
+
     suspend fun addSource(feedId: String, url: String, type: String, account: String? = null): AddSourceResult {
         val response = api.addSource(feedId, AddSourceRequest(feed = feedId, type = type, url = url, account = account))
         if (response.isSuccessful) {
@@ -891,6 +908,11 @@ class FeedsRepository @Inject constructor(
                 ?: throw MochiError.Unknown()
             return AddSourceResult(source = data.source, suggestedCredibility = data.suggestedCredibility, ingested = data.ingested)
         }
+        throw refusal(response)
+    }
+
+    /** Why a sources request failed: the permission it needs, or the server's error. */
+    private fun refusal(response: retrofit2.Response<*>): Exception {
         // A `permission_required` 403 carries the requesting app + permission
         // key in its body — surface it distinctly so the caller can offer to
         // grant it; every other failure maps to the standard error.
@@ -901,7 +923,7 @@ class FeedsRepository @Inject constructor(
             }.getOrNull()
             if (permission?.error == "permission_required" &&
                 !permission.app.isNullOrEmpty() && !permission.permission.isNullOrEmpty()) {
-                throw PermissionRequiredException(permission.app, permission.permission)
+                return PermissionRequiredException(permission.app, permission.permission)
             }
         }
         // A structured `{"error": "Feed returned status 403"}` body carries the
@@ -914,7 +936,7 @@ class FeedsRepository @Inject constructor(
         } else {
             null
         }
-        throw apiError?.let { error -> ApiException(response.code(), error).toMochiError() }
+        return apiError?.let { error -> ApiException(response.code(), error).toMochiError() }
             ?: MochiError.NetworkError()
     }
 

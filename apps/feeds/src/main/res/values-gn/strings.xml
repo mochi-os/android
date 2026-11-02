@@ -310,6 +310,11 @@
     <string name="feeds_imported">%1$s ojegueru</string>
     <string name="feeds_imported_more">Ko\'ágã peve %1$s ojegueru; hembýva ou upe rire</string>
     <string name="feeds_import_sources_more">Ko\'ágã peve %1$s heñoiha oñembojuaju; hembýva ou upe rire</string>
+    <string name="feeds_waiting_title">Oñeha\'arõ ñemoneĩ</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s tapicha</item>
+        <item quantity="other">%s tapicha</item>
+    </plurals>
     <string name="feeds_filters">Mboguakuéra</string>
     <string name="feeds_filter_phrase">Ñe\'ẽjoaju ñemiharã</string>
     <string name="feeds_filter_remove">Embogue %1$s</string>

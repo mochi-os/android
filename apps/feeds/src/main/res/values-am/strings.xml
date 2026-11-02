@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s ገብተዋል</string>
     <string name="feeds_imported_more">እስካሁን %1$s ገብተዋል፤ የቀሩት ይከተላሉ</string>
     <string name="feeds_import_sources_more">እስካሁን %1$s ምንጮች ተጨምረዋል፤ የቀሩት ይከተላሉ</string>
+    <string name="feeds_waiting_title">ፈቃድ በመጠበቅ ላይ</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s ሰው</item>
+        <item quantity="other">%s ሰዎች</item>
+    </plurals>
     <string name="feeds_filters">ማጣሪያዎች</string>
     <string name="feeds_filter_phrase">የሚደበቅ ሐረግ</string>
     <string name="feeds_filter_remove">%1$sን አስወግድ</string>
