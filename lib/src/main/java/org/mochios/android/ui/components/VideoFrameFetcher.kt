@@ -14,6 +14,7 @@ import coil3.decode.DataSource
 import coil3.fetch.FetchResult
 import coil3.fetch.Fetcher
 import coil3.fetch.ImageFetchResult
+import coil3.key.Keyer
 import coil3.request.Options
 import org.mochios.android.api.assetAuthHeaders
 import org.mochios.android.auth.SessionManager
@@ -29,7 +30,7 @@ data class VideoFrame(val url: String)
  * Decodes a video's opening frame with [MediaMetadataRetriever], which
  * range-requests only that frame rather than the whole clip as Coil's
  * `VideoFrameDecoder` would. Returning through Coil keeps the frame in the
- * memory cache.
+ * memory cache, under the key [VideoFrameKeyer] gives it.
  */
 class VideoFrameFetcher(
     private val data: VideoFrame,
@@ -70,4 +71,13 @@ class VideoFrameFetcher(
             imageLoader: ImageLoader,
         ): Fetcher = VideoFrameFetcher(data, sessionManager, options.context)
     }
+}
+
+/**
+ * Memory cache key for a [VideoFrame]: its URL. Coil caches nothing for a model
+ * type without a keyer, so a thumbnail scrolled back into view fetched its
+ * frame from the server again.
+ */
+class VideoFrameKeyer : Keyer<VideoFrame> {
+    override fun key(data: VideoFrame, options: Options): String = data.url
 }

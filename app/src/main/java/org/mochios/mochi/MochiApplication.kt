@@ -24,6 +24,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.VideoFrameFetcher
+import org.mochios.android.ui.components.VideoFrameKeyer
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
@@ -82,6 +83,7 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                         concurrentRequestStrategy = { DeDupeConcurrentRequestStrategy() },
                     )
                 )
+                add(VideoFrameKeyer())
                 add(VideoFrameFetcher.Factory(sessionManager))
             }
             .build()
