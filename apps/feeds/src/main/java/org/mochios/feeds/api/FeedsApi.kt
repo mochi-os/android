@@ -108,6 +108,10 @@ data class SuccessResponse(
     val success: Boolean = false
 )
 
+data class PrivacyResponse(
+    val privacy: String = ""
+)
+
 data class CreateFeedRequest(
     val name: String,
     val privacy: String,
@@ -351,6 +355,13 @@ interface FeedsApi {
         @Path("feedId") feedId: String,
         @Field("name") name: String
     ): Response<ApiResponse<SuccessResponse>>
+
+    @FormUrlEncoded
+    @POST("{feedId}/-/privacy")
+    suspend fun setPrivacy(
+        @Path("feedId") feedId: String,
+        @Field("privacy") privacy: String
+    ): Response<ApiResponse<PrivacyResponse>>
 
     @POST("{feedId}/-/read-all")
     suspend fun markAllRead(

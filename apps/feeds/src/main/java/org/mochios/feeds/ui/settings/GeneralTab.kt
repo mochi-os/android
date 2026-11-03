@@ -28,6 +28,7 @@ import org.mochios.android.ui.components.DataChip
 import org.mochios.android.ui.components.ConfirmActionSection
 import org.mochios.android.ui.components.IdentityRow
 import org.mochios.android.ui.components.InlineTextEditor
+import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.Truncate
 import org.mochios.feeds.R
@@ -41,6 +42,7 @@ fun GeneralTab(
 ) {
     val feedInfo by viewModel.feedInfo.collectAsState()
     val isDeletingFeed by viewModel.isDeletingFeed.collectAsState()
+    val savingPrivacy by viewModel.savingPrivacy.collectAsState()
     // The banner arrives with the feed information load; no separate fetch.
     val banner = feedInfo?.banner.orEmpty()
     var bannerDraft by remember(banner) { mutableStateOf(banner) }
@@ -60,6 +62,14 @@ fun GeneralTab(
                     viewModel.setFeedName(newName)
                     viewModel.saveFeedName()
                 },
+            )
+            // Public or private after the feed is made; only a public feed
+            // publishes to other networks.
+            LabeledSwitchRow(
+                label = stringResource(R.string.feeds_allow_search),
+                checked = info.privacy == "public",
+                onCheckedChange = { on -> viewModel.setPrivacy(on) },
+                enabled = !savingPrivacy,
             )
         }
 

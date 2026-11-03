@@ -102,6 +102,9 @@ class NetworksViewModelsTest {
     /** What an account import answers. */
     @Volatile private var importAnswer = """{"imported": 4, "more": true}"""
 
+    /** Whether the feed is private, so Publish to is refused with the reason. */
+    @Volatile private var feedPrivate = false
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -129,7 +132,10 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/p1/comment/create" -> ok("""{"comment": {"id": "c2"}}""")
                     "/feeds/-/read-all" -> ok("""{"ok": true, "read": 1, "feeds": 2}""")
                     "/feeds/f1/-/post/create" -> ok("""{"id": "p9"}""")
-                    "/feeds/f1/-/publish" -> raw("""{"accounts": [{"id": "l1", "type": "mastodon", "identifier": "@me@social.example"},
+                    "/feeds/f1/-/privacy" -> ok("""{"privacy": "private"}""")
+                    "/feeds/f1/-/publish" -> if (feedPrivate) {
+                        MockResponse().setResponseCode(403).setBody("""{"error": "Only a public feed publishes to other networks"}""")
+                    } else raw("""{"accounts": [{"id": "l1", "type": "mastodon", "identifier": "@me@social.example"},
                         {"id": "b2", "type": "bluesky", "identifier": "me.here.example", "hosted": true}],
                         "publish": ["l1"], "copies": {"l1": 3}, "generators": {}}""")
                     "/feeds/f1/-/publish/set" -> raw("""{"publish": [], "kept": {"l1": 3}}""")
@@ -548,6 +554,32 @@ class NetworksViewModelsTest {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(FeedsApi::class.java)
+    @Test
+    fun `a feed is made private from its settings, and its privacy follows`() {
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.loadFeedInfo()
+        until("the feed") { model.feedInfo.value != null }
+        assertEquals("public", model.feedInfo.value!!.privacy)
+        model.setPrivacy(false)
+        until("the privacy") { model.feedInfo.value!!.privacy == "private" }
+        assertEquals("privacy=private", sent("/feeds/f1/-/privacy"))
+        until("the save to end") { !model.savingPrivacy.value }
+    }
+
+    @Test
+    fun `Publish to says why a private feed publishes nowhere, and lists the accounts once it is public`() {
+        feedPrivate = true
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.loadPublish()
+        until("the refusal") { model.refusal.value != null }
+        assertEquals("Only a public feed publishes to other networks", model.refusal.value!!.message)
+        assertNull(model.publish.value)
+        assertTrue(org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
+        feedPrivate = false
+        model.loadPublish()
+        until("the accounts") { model.publish.value != null }
+        assertNull(model.refusal.value)
+    }
 }
 
 /** Collects the publishing events into [into] until the job is cancelled. */

@@ -559,6 +559,16 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /** Make the feed public or private after it is made. */
+    suspend fun setPrivacy(feedId: String, privacy: String) {
+        try {
+            api.setPrivacy(feedId, privacy).unwrap()
+            forget()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun markAllRead(feedId: String) {
         try {
             api.markAllRead(feedId).unwrap()

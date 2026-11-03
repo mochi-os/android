@@ -90,10 +90,19 @@ class PublishingViewModel @Inject constructor(
         state?.accounts.orEmpty().sortedWith(compareBy(NaturalCompare) { it.identifier })
 
     /** Read where the feed publishes, for a public feed the user owns. */
+    // The server's refusal to publish the feed anywhere: a private feed's,
+    // which says only a public feed publishes, for Publish to to show.
+    private val _refusal = MutableStateFlow<MochiError?>(null)
+    val refusal: StateFlow<MochiError?> = _refusal.asStateFlow()
+
     fun loadPublish() {
         viewModelScope.launch {
             try {
                 _publish.value = repository.getPublish(feedId)
+                _refusal.value = null
+            } catch (e: MochiError.ForbiddenError) {
+                _publish.value = null
+                _refusal.value = e
             } catch (_: Exception) {
                 // A server without the networks says nothing of them.
             }

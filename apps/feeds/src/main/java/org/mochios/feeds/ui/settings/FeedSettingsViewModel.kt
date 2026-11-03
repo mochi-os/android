@@ -214,6 +214,28 @@ class FeedSettingsViewModel @Inject constructor(
         _feedName.value = name
     }
 
+    private val _savingPrivacy = MutableStateFlow(false)
+    val savingPrivacy: StateFlow<Boolean> = _savingPrivacy.asStateFlow()
+
+    /**
+     * Make the feed public or private: only a public feed is listed in the
+     * directory, viewed by anyone, and published to other networks.
+     */
+    fun setPrivacy(public: Boolean) {
+        val privacy = if (public) "public" else "private"
+        viewModelScope.launch {
+            _savingPrivacy.value = true
+            try {
+                repository.setPrivacy(feedId, privacy)
+                _feedInfo.value = _feedInfo.value?.copy(privacy = privacy)
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            } finally {
+                _savingPrivacy.value = false
+            }
+        }
+    }
+
     fun saveFeedName() {
         val name = _feedName.value.trim()
         if (name.isEmpty()) return
