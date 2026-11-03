@@ -5,13 +5,21 @@
 
 package org.mochios.home
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.PixelMap
+import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -28,6 +36,7 @@ import org.mochios.home.ui.UserMenu
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
+import org.robolectric.annotation.GraphicsMode
 
 /** The user menu as the web's: who is signed in, log out, and the unread notifications. */
 @RunWith(RobolectricTestRunner::class)
@@ -138,9 +147,42 @@ class UserMenuTest {
     fun `the avatar carries the unread count and opens the menu`() {
         AppContext.set(RuntimeEnvironment.getApplication())
         var opened = 0
-        rule.setContent { UserButton(name = "Ada", identity = "", count = 3) { opened++ } }
+        rule.setContent { UserButton(name = "Ada", identity = "", accent = null, count = 3) { opened++ } }
         rule.onNodeWithText("3").assertExists()
         rule.onNodeWithContentDescription("Open menu").performClick()
         assertEquals(1, opened)
+    }
+
+    /** How many of [pixels] are the pure green the ring tests use as an accent. */
+    private fun greens(pixels: PixelMap): Int {
+        var count = 0
+        for (x in 0 until pixels.width) {
+            for (y in 0 until pixels.height) {
+                val colour = pixels[x, y]
+                if (colour.green > 0.85f && colour.red < 0.3f && colour.blue < 0.3f) count++
+            }
+        }
+        return count
+    }
+
+    @Test
+    @GraphicsMode(GraphicsMode.Mode.NATIVE)
+    fun `the avatar on the button is ringed in the user's accent, and not without one`() {
+        AppContext.set(RuntimeEnvironment.getApplication())
+        var accent by mutableStateOf<String?>("#00ff00")
+        rule.setContent { UserButton(name = "Ada", identity = "", accent = accent, count = 0) {} }
+        val ringed = greens(rule.onRoot().captureToImage().toPixelMap())
+        assertTrue("green pixels: $ringed", ringed > 20)
+        accent = null
+        rule.waitForIdle()
+        assertEquals(0, greens(rule.onRoot().captureToImage().toPixelMap()))
+    }
+
+    @Test
+    @GraphicsMode(GraphicsMode.Mode.NATIVE)
+    fun `the avatar beside the name is ringed in the user's accent`() {
+        show(HomeMenuState(name = "Ada", identity = "p1", accent = "#00ff00", loading = false))
+        val ringed = greens(rule.onRoot().captureToImage().toPixelMap())
+        assertTrue("green pixels: $ringed", ringed > 20)
     }
 }
