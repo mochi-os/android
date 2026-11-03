@@ -66,7 +66,10 @@ fun MochiError.userMessage(): String {
         is MochiError.AuthError -> message ?: ctx.getString(R.string.error_authentication_required)
         is MochiError.ForbiddenError -> message ?: ctx.getString(R.string.error_access_denied)
         is MochiError.NotFoundError -> message ?: ctx.getString(R.string.error_not_found)
-        is MochiError.ServerError -> ctx.getString(R.string.error_server, code.toString())
+        // The server's own refusal (a 502 "Feed returned status 404") or, for
+        // an unhandled failure, its translated "Server error" with what failed;
+        // only a body without either gets the generic line.
+        is MochiError.ServerError -> message ?: ctx.getString(R.string.error_server, code.toString())
         is MochiError.Unknown -> message ?: ctx.getString(R.string.error_unexpected)
         is MochiError.Local -> ctx.getString(messageRes)
     }
