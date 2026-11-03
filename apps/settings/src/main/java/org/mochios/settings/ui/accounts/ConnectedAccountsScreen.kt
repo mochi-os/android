@@ -246,26 +246,29 @@ fun ConnectedAccountsScreen(
         // Login page, and the confirmation says so.
         val provider = state.providers.firstOrNull { it.type == acc.type }
         val revoking = provider?.flow == "oauth" && acc.granted.any { it != CAPABILITY_LOGIN }
+        val removal = removal(acc, revoking)
         MochiAlertDialog(
             onDismissRequest = { deleting = null },
-            title = if (revoking) {
-                stringResource(R.string.accounts_revoke)
-            } else {
-                stringResource(R.string.accounts_remove_title)
+            title = when (removal) {
+                Removal.Revoke -> stringResource(R.string.accounts_revoke)
+                Removal.Hosted -> stringResource(R.string.networks_remove_title)
+                Removal.Linked -> stringResource(R.string.networks_unlink_title)
+                Removal.Plain -> stringResource(R.string.accounts_remove_title)
             },
-            text = if (revoking) {
-                stringResource(
+            text = when (removal) {
+                Removal.Revoke -> stringResource(
                     R.string.accounts_revoke_confirm,
                     displayName(acc),
                     providerTypeLabel(acc.type),
                 )
-            } else {
-                stringResource(R.string.accounts_remove_message, displayName(acc))
+                Removal.Hosted -> stringResource(R.string.networks_remove_message, acc.identifier)
+                Removal.Linked -> stringResource(R.string.networks_unlink_message, acc.identifier, acc.server)
+                Removal.Plain -> stringResource(R.string.accounts_remove_message, displayName(acc))
             },
-            confirmText = if (revoking) {
-                stringResource(R.string.accounts_revoke)
-            } else {
-                stringResource(R.string.accounts_remove)
+            confirmText = when (removal) {
+                Removal.Revoke -> stringResource(R.string.accounts_revoke)
+                Removal.Linked -> stringResource(R.string.networks_unlink)
+                else -> stringResource(R.string.accounts_remove)
             },
             onConfirm = {
                 viewModel.remove(acc.id)
@@ -684,4 +687,19 @@ private fun providerTypeLabel(type: String): String = when (type) {
     "web" -> stringResource(R.string.accounts_provider_web)
     "x" -> "X"
     else -> type
+}
+
+/**
+ * What removing an account does, for its confirmation to say: revoking a
+ * sign-in provider's grants, removing a hosted account on another network
+ * with everything it published, unlinking a linked one, or plainly removing
+ * any other, as the Networks screen words the two network kinds.
+ */
+internal enum class Removal { Revoke, Hosted, Linked, Plain }
+
+internal fun removal(acc: ConnectedAccount, revoking: Boolean): Removal = when {
+    revoking -> Removal.Revoke
+    acc.hosted == true -> Removal.Hosted
+    acc.hosted == false -> Removal.Linked
+    else -> Removal.Plain
 }

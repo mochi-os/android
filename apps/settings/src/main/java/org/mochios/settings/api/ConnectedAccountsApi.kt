@@ -37,6 +37,12 @@ data class ConnectedAccount(
     // `ai`, `mcp`. An account linked for sign-in alone holds `login` until
     // something else is granted.
     val granted: List<String> = emptyList(),
+    // An account on another network: true for one hosted here, false for one
+    // linked, null for every other kind. Removing a hosted one removes it from
+    // its network with everything it published.
+    val hosted: Boolean? = null,
+    // The server a network account is on.
+    val server: String = "",
 )
 
 // A phone or tablet the user runs Mochi on; its push account hangs off it.
