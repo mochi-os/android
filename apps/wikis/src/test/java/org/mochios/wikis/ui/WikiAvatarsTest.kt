@@ -128,4 +128,28 @@ class WikiAvatarsTest {
             settled(4),
         )
     }
+    @Test
+    fun `an id a peer chose cannot point the avatar at another action`() {
+        // Revision and comment ids reach the phone from other servers; a slash
+        // or a dot segment left in one would send the image request, with the
+        // session, to whatever action the path then names.
+        val hostile = "../../w1/-/delete?x="
+        inWiki {
+            PageHistoryBody(
+                slug = "home", wikiId = "w1", revisions = listOf(Revision(id = hostile, author = "ann", name = "ann", version = 1)),
+                currentVersion = 1, hasMore = false, isLoadingMore = false, onLoadMore = {}, onView = {}, onRevert = {},
+            )
+            WikiCommentThread(
+                comment = WikiComment(id = hostile, author = "bob", name = "bob", body = "Body"), currentUserId = null, isOwner = false,
+                onStartReply = { _, _ -> }, onEdit = null, onDelete = null, avatars = emptyMap(),
+            )
+        }
+        assertEquals(
+            listOf(
+                "/wikis/w1/-/comment/..%2F..%2Fw1%2F-%2Fdelete%3Fx%3D/asset/avatar",
+                "https://server/wikis/w1/-/revision/..%2F..%2Fw1%2F-%2Fdelete%3Fx%3D/asset/avatar",
+            ),
+            settled(2),
+        )
+    }
 }
