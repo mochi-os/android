@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.notifications
 
+import android.os.SystemClock
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -74,6 +75,15 @@ class NotificationsViewModel @Inject constructor(
 
     /** The pending or in-flight list fetch; cancelled when a newer one starts. */
     private var loadJob: Job? = null
+
+    /** The frame type this user's own read or clear echoes back as, already
+     *  shown in the list, so its arrival need not fetch the list again. */
+    @Volatile
+    private var echo: String? = null
+
+    /** When [echo] stops being expected, on the [SystemClock.elapsedRealtime] clock. */
+    @Volatile
+    private var echoUntil = 0L
 
     init {
         load(initial = true)
@@ -180,14 +190,23 @@ class NotificationsViewModel @Inject constructor(
     fun markRead(id: String) {
         viewModelScope.launch {
             try {
+                expectEcho("read")
                 repository.markRead(id)
-                _uiState.value = _uiState.value.copy(
-                    items = _uiState.value.items.map {
+                val state = _uiState.value
+                val marked = state.items.any { item -> item.id == id && item.read == 0L }
+                _uiState.value = state.copy(
+                    items = state.items.map {
                         if (it.id == id && it.read == 0L) it.copy(read = System.currentTimeMillis() / 1000) else it
                     },
+                    unreadCount = if (marked) {
+                        (state.unreadCount - 1).coerceAtLeast(0)
+                    } else {
+                        state.unreadCount
+                    },
                 )
-                unread.refresh()
+                unread.refreshLatest()
             } catch (e: Exception) {
+                echo = null
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
@@ -196,14 +215,16 @@ class NotificationsViewModel @Inject constructor(
     fun markAllRead() {
         viewModelScope.launch {
             try {
+                expectEcho("read_all")
                 repository.markAllRead()
                 val now = System.currentTimeMillis() / 1000
                 _uiState.value = _uiState.value.copy(
                     items = _uiState.value.items.map { if (it.read == 0L) it.copy(read = now) else it },
                     unreadCount = 0,
                 )
-                unread.refresh()
+                unread.refreshLatest()
             } catch (e: Exception) {
+                echo = null
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
@@ -212,10 +233,12 @@ class NotificationsViewModel @Inject constructor(
     fun clearAll() {
         viewModelScope.launch {
             try {
+                expectEcho("clear_all")
                 repository.clearAll()
                 _uiState.value = _uiState.value.copy(items = emptyList(), unreadCount = 0)
-                unread.refresh()
+                unread.refreshLatest()
             } catch (e: Exception) {
+                echo = null
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
@@ -227,13 +250,37 @@ class NotificationsViewModel @Inject constructor(
             serverUrl,
             "notifications",
             app = "notifications",
-        ) { _ ->
-            refreshLatest()
+        ) { event ->
+            if (!isOwnEcho(event.type)) {
+                refreshLatest()
+            }
         }
+    }
+
+    /** Expect [type] back from the server for an action whose result the list
+     *  already shows. */
+    private fun expectEcho(type: String) {
+        echoUntil = SystemClock.elapsedRealtime() + ECHO_WINDOW
+        echo = type
+    }
+
+    /** Whether a frame of [type] is the expected echo, which is then spent. */
+    private fun isOwnEcho(type: String?): Boolean {
+        val expected = echo ?: return false
+        if (type != expected || SystemClock.elapsedRealtime() > echoUntil) {
+            return false
+        }
+        echo = null
+        return true
     }
 
     override fun onCleared() {
         super.onCleared()
         subscriptionId?.let { webSocket.unsubscribe(it) }
+    }
+
+    private companion object {
+        /** How long after an action its echo is still taken as its own. */
+        const val ECHO_WINDOW = 5_000L
     }
 }

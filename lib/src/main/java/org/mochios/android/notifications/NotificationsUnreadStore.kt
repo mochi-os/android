@@ -86,12 +86,13 @@ class NotificationsUnreadStore @Inject constructor(
     }
 
     /**
-     * Refresh for a socket event. Each call cancels the previous one and waits
-     * [REFRESH_DEBOUNCE] first: one notification arrives as a burst of frames
-     * (`new`, then `clear_object` and `read` once it is marked), and only the
-     * latest fetches.
+     * Refresh after a socket event or the user's own read or clear. Each call
+     * cancels the previous one and waits [REFRESH_DEBOUNCE] first: one
+     * notification arrives as a burst of frames (`new`, then `clear_object` and
+     * `read` once it is marked), and an action's echo lands with its response,
+     * so only the latest fetches. Use [refresh] where the count must be read now.
      */
-    private fun refreshLatest() {
+    fun refreshLatest() {
         synchronized(this) {
             refreshJob?.cancel()
             refreshJob = scope.launch {
