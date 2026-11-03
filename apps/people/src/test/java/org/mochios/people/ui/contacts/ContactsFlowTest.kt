@@ -100,6 +100,7 @@ class ContactsFlowTest {
                         ok("""{"contact": $SAVED}""")
                     }
                     "-/contacts/create" -> ok("""{"contact": $MADE}""")
+                    "-/contacts/delete" -> ok("{}")
                     "-/contacts/photos" -> {
                         photosHeld?.await(10, TimeUnit.SECONDS)
                         val answer = changed
@@ -131,11 +132,18 @@ class ContactsFlowTest {
     private fun sent(action: String): List<String> =
         asked.filter { it.path.orEmpty().endsWith("/-/contacts/$action") }.map { it.body.clone().readUtf8() }
 
-    /** Runs the main thread until [done], the server answering on its own. */
-    private fun until(done: () -> Boolean) {
+    /**
+     * Runs the main thread until [done], the server answering on its own.
+     * [advance] moves its clock on each turn, so a debounced reload comes due.
+     */
+    private fun until(advance: Boolean = false, done: () -> Boolean) {
         val deadline = System.currentTimeMillis() + 5_000
         while (!done()) {
-            shadowOf(Looper.getMainLooper()).idle()
+            if (advance) {
+                shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(50))
+            } else {
+                shadowOf(Looper.getMainLooper()).idle()
+            }
             check(System.currentTimeMillis() < deadline) { "timed out" }
             Thread.sleep(10)
         }
@@ -375,7 +383,7 @@ class ContactsFlowTest {
     fun `a changed photo reloads the list, and none changed leaves it alone`() {
         changed = 1
         ContactsViewModel(SavedStateHandle(), repository)
-        until { listed().size == 2 && photos().size == 2 }
+        until(advance = true) { listed().size == 2 && photos().size == 2 }
         shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(200))
         Thread.sleep(100)
         shadowOf(Looper.getMainLooper()).idle()
@@ -396,5 +404,54 @@ class ContactsFlowTest {
         settle()
         model.refresh()
         until { listed().size == 3 && photos().size == 2 }
+    }
+
+    /** Lets the main thread's clock run past any debounced reload, the server answering. */
+    private fun pass() {
+        repeat(10) {
+            shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(50))
+            Thread.sleep(20)
+        }
+    }
+
+    private fun reads() =
+        asked.filter { request -> request.path.orEmpty().endsWith("/-/contacts/get") }
+
+    @Test
+    fun `a save of the editor's own does not read the card it was answered with again`() {
+        val model = editor()
+        pass()
+        val before = reads().size
+        val listings = listed().size
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.save()
+        until { sent("update").isNotEmpty() && !model.uiState.value.isSaving }
+        pass()
+        assertEquals(before, reads().size)
+        assertEquals(listings, listed().size)
+    }
+
+    @Test
+    fun `a deleted contact is not read again`() {
+        val model = editor()
+        pass()
+        val before = reads().size
+        model.confirmDelete()
+        until { model.uiState.value.deleted }
+        pass()
+        assertEquals(before, reads().size)
+    }
+
+    @Test
+    fun `lists asked for together share one request`() {
+        val held = CountDownLatch(1)
+        books = held
+        val first = ContactsViewModel(SavedStateHandle(), repository)
+        val second = ContactsViewModel(SavedStateHandle(), repository)
+        held.countDown()
+        until {
+            first.uiState.value.contacts.isNotEmpty() && second.uiState.value.contacts.isNotEmpty()
+        }
+        assertEquals(1, listed().size)
     }
 }

@@ -6,8 +6,11 @@
 package org.mochios.people.repository
 
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -72,7 +75,48 @@ class PeopleRepository @Inject constructor(
     /** Signals a change and marks the books stale, since their contact counts may have moved. */
     private fun notifyChanged() {
         booksStale = true
+        forgetReads()
         _contactsChanged.tryEmit(Unit)
+    }
+
+    /** Signals a change to the groups, after which no read begun before it is shared. */
+    private fun notifyGroupsChanged() {
+        forgetReads()
+        _groupsChanged.tryEmit(Unit)
+    }
+
+    private val readScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
+    /** The reads under way, by what they read; callers asking together share one. */
+    private val reads = mutableMapOf<String, Deferred<Any>>()
+
+    /**
+     * [read] once for every caller asking for [key] while it is under way, so
+     * the screens that reload on one change make one request between them.
+     */
+    @Suppress("UNCHECKED_CAST")
+    private suspend fun <T : Any> shared(key: String, read: suspend () -> T): T {
+        val deferred = synchronized(reads) {
+            reads[key]?.takeIf { pending -> pending.isActive } ?: readScope.async {
+                try {
+                    read()
+                } finally {
+                    synchronized(reads) {
+                        if (reads[key] === coroutineContext[Job]) {
+                            reads.remove(key)
+                        }
+                    }
+                }
+            }.also { started -> reads[key] = started }
+        }
+        return deferred.await() as T
+    }
+
+    /** Drops the reads under way: they began before a change and may miss it. */
+    private fun forgetReads() {
+        synchronized(reads) {
+            reads.clear()
+        }
     }
 
     // ---- Contacts + invites ----
@@ -82,11 +126,12 @@ class PeopleRepository @Inject constructor(
      * friends' photos are left to [refreshPhotos], asked for just after: each
      * is a fetch from the friend's server, five seconds when it is offline.
      */
-    suspend fun listContacts(book: String? = null): ContactsListResponse {
-        val list = api.listContacts(book, photos = 0).unwrap()
-        refreshPhotos()
-        return list
-    }
+    suspend fun listContacts(book: String? = null): ContactsListResponse =
+        shared("contacts:" + book.orEmpty()) {
+            val list = api.listContacts(book, photos = 0).unwrap()
+            refreshPhotos()
+            list
+        }
 
     private val photoScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val refreshingPhotos = AtomicBoolean(false)
@@ -102,7 +147,10 @@ class PeopleRepository @Inject constructor(
         if (!refreshingPhotos.compareAndSet(false, true)) return
         photoScope.launch {
             try {
-                if (api.refreshPhotos().unwrap().changed > 0) _contactsChanged.tryEmit(Unit)
+                if (api.refreshPhotos().unwrap().changed > 0) {
+                    forgetReads()
+                    _contactsChanged.tryEmit(Unit)
+                }
             } catch (_: Exception) {
                 // The photos travel on the cards phones sync, not on a screen; a
                 // server that predates the route fetched them inside the listing.
@@ -294,8 +342,9 @@ class PeopleRepository @Inject constructor(
 
     // ---- Groups ----
 
-    suspend fun listGroups(): List<Group> =
+    suspend fun listGroups(): List<Group> = shared("groups") {
         api.listGroups().unwrap().groups
+    }
 
     data class GroupDetail(val group: Group, val members: List<GroupMember>)
 
@@ -310,7 +359,7 @@ class PeopleRepository @Inject constructor(
         id: String? = null,
     ): String {
         val created = api.createGroup(id, name, description).unwrap().id
-        _groupsChanged.tryEmit(Unit)
+        notifyGroupsChanged()
         return created
     }
 
@@ -320,12 +369,12 @@ class PeopleRepository @Inject constructor(
         description: String? = null,
     ) {
         api.updateGroup(id, name, description).unwrap()
-        _groupsChanged.tryEmit(Unit)
+        notifyGroupsChanged()
     }
 
     suspend fun deleteGroup(id: String) {
         api.deleteGroup(id).unwrap()
-        _groupsChanged.tryEmit(Unit)
+        notifyGroupsChanged()
     }
 
     suspend fun addGroupMember(group: String, member: String, type: GroupMemberType) {

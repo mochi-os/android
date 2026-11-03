@@ -9,6 +9,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -19,6 +22,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
 import org.mochios.people.repository.PeopleRepository
@@ -181,14 +185,25 @@ class ContactsViewModel @Inject constructor(
         }
     }
 
-    /** Silent reload behind a mutation made elsewhere. */
+    /** The pending or in-flight [reload]; cancelled when a newer one starts. */
+    private var reloadJob: Job? = null
+
+    /**
+     * Silent reload behind a mutation made elsewhere. Each call replaces the
+     * last and waits [REFRESH_DEBOUNCE] first, so a burst of change signals
+     * makes one fetch.
+     */
     private fun reload() {
-        viewModelScope.launch {
+        reloadJob?.cancel()
+        reloadJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
             try {
                 val response = repository.listContacts(book.ifBlank { null })
                 val contacts = response.contacts
                 val sent = response.sent.map { invite -> invite.id }.toSet()
                 _uiState.value = _uiState.value.copy(contacts = contacts, sent = sent)
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
                 // The screen already shows a list; a failed background reload
                 // leaves it as it was rather than replacing it with an error.
