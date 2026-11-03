@@ -23,6 +23,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.crm.R
 import org.mochios.crm.api.CrmsApi
@@ -89,7 +90,7 @@ class CopyObjectTest {
             .baseUrl(server.url("/crm/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        val repository = CrmsRepository(retrofit.create(CrmsApi::class.java), FileStore(context), context)
+        val repository = CrmsRepository(retrofit.create(CrmsApi::class.java), FileStore(context), context, SessionManager(context))
         val route = buildMap<String, Any?> {
             put("crmId", "p1")
             if (copy != null) put("copy", copy)

@@ -6,12 +6,16 @@
 package org.mochios.settings.ui.moderation
 
 import android.os.Looper
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import okhttp3.mockwebserver.RecordedRequest
 import org.junit.After
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
@@ -50,6 +54,9 @@ class ModerationTest {
     private lateinit var server: MockWebServer
     private val requests = CopyOnWriteArrayList<Pair<String, String>>()
 
+    /** Holds the hosts' answer while it is set. */
+    @Volatile private var hold: java.util.concurrent.CountDownLatch? = null
+
     private val flag = Report(
         id = "r1",
         network = "fediverse",
@@ -77,10 +84,10 @@ class ModerationTest {
                     "settings/-/system/blocks/add", "settings/-/system/blocks/remove" -> json(
                         """{"domains": [{"domain": "spam.example", "created": 1}], "people": [{"actor": "xmpp:troll@chat.example", "created": 2}]}""",
                     )
-                    "settings/-/system/hosts" -> json(
+                    "settings/-/system/hosts" -> hold?.await(5, TimeUnit.SECONDS).let { json(
                         """{"fediverse": [{"host": "z.example", "limited": true}, {"host": "a.example"}], "matrix": [],
                            "xmpp": {"links": [], "sessions": {"clients": 3, "accounts": 1}}}""",
-                    )
+                    ) }
                     else -> MockResponse().setResponseCode(404)
                 }
             }
@@ -196,10 +203,39 @@ class ModerationTest {
     @Test
     fun `federation reads the servers in order`() {
         val model = SystemFederationViewModel(api)
+        // The screen runs the poll while it is started.
+        val poll = CoroutineScope(Dispatchers.Main).launch { model.poll() }
         until { model.uiState.value.hosts != null }
+        poll.cancel()
         val hosts = model.uiState.value.hosts!!
         assertEquals(listOf("a.example", "z.example"), hosts.fediverse.map { it.host })
         assertTrue(hosts.fediverse.last().limited)
         assertEquals(3L, hosts.xmpp.sessions.clients)
+    }
+
+    @Test
+    fun `a poll stopped mid-read shows no error on return`() {
+        hold = java.util.concurrent.CountDownLatch(1)
+        val model = SystemFederationViewModel(api)
+        val poll = CoroutineScope(Dispatchers.Main).launch { model.poll() }
+        until { requests.any { it.first == "settings/-/system/hosts" } }
+        // The screen goes to the background with the read under way.
+        poll.cancel()
+        repeat(20) {
+            shadowOf(Looper.getMainLooper()).idle()
+            Thread.sleep(10)
+        }
+        hold?.countDown()
+        assertNull(model.uiState.value.error)
+    }
+
+    @Test
+    fun `federation asks nothing until the screen runs its poll`() {
+        SystemFederationViewModel(api)
+        repeat(40) {
+            shadowOf(Looper.getMainLooper()).idle()
+            Thread.sleep(25)
+        }
+        assertTrue(requests.none { it.first == "settings/-/system/hosts" })
     }
 }

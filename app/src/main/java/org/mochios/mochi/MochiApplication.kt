@@ -11,6 +11,7 @@ import androidx.lifecycle.ProcessLifecycleOwner
 import coil3.ImageLoader
 import coil3.PlatformContext
 import coil3.SingletonImageLoader
+import coil3.annotation.ExperimentalCoilApi
 import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
@@ -21,6 +22,7 @@ import org.mochios.android.api.AssetHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
+import org.mochios.android.ui.components.RevalidatingCacheStrategy
 import org.mochios.android.ui.components.VideoFrameFetcher
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
@@ -62,6 +64,7 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
      * routes are session-gated, and the default loader sends neither the cookie
      * nor the bearer token, so images 401.
      */
+    @OptIn(ExperimentalCoilApi::class)
     override fun newImageLoader(context: PlatformContext): ImageLoader =
         ImageLoader.Builder(context)
             .components {
@@ -69,7 +72,14 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                 // to absolute URLs, so call sites pass relative paths without
                 // threading the server URL through.
                 add(RelativeAssetUrlMapper(sessionManager))
-                add(OkHttpNetworkFetcherFactory(callFactory = { assetHttpClient }))
+                // Avatars live at addresses that do not change with them; the
+                // strategy asks again once the server's max-age has passed.
+                add(
+                    OkHttpNetworkFetcherFactory(
+                        callFactory = { assetHttpClient },
+                        cacheStrategy = { RevalidatingCacheStrategy() },
+                    )
+                )
                 add(VideoFrameFetcher.Factory(sessionManager))
             }
             .build()

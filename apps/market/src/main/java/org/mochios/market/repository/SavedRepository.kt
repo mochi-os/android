@@ -5,6 +5,12 @@
 
 package org.mochios.market.repository
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
+import org.mochios.android.auth.SessionManager
+import java.util.concurrent.atomic.AtomicInteger
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -26,12 +32,40 @@ import javax.inject.Singleton
  */
 @Singleton
 class SavedRepository @Inject constructor(
-    private val api: MarketApi
+    private val api: MarketApi,
+    session: SessionManager,
 ) {
     private val gson = Gson()
     private val mutex = Mutex()
 
     private val _saved = MutableStateFlow<List<Listing>>(emptyList())
+
+    // The mirror holds one account's saved listings, so it is emptied whenever
+    // the signed-in identity changes; the next account on the phone was
+    // otherwise shown them until a read succeeded. A read or a revert begun
+    // before the change does not write them back after it.
+    private val generation = AtomicInteger()
+
+    /** The identity the mirror holds saved listings for. */
+    @Volatile
+    private var holder: String? = null
+
+    init {
+        CoroutineScope(SupervisorJob() + Dispatchers.Default).launch {
+            session.boundIdentity.collect { identity ->
+                // From no account to one there is nothing to clear: signing
+                // out cleared it. Clearing then would also drop the first read
+                // of a cold start.
+                if (identity != holder) {
+                    if (holder != null) {
+                        generation.incrementAndGet()
+                        _saved.value = emptyList()
+                    }
+                    holder = identity
+                }
+            }
+        }
+    }
 
     /** The current saved listings, most recently saved first. */
     val saved: StateFlow<List<Listing>> = _saved.asStateFlow()
@@ -45,9 +79,12 @@ class SavedRepository @Inject constructor(
      * login completes) leave it untouched.
      */
     suspend fun refresh() {
+        val started = generation.get()
         try {
             val response = api.listSaved().body()?.data ?: return
             _saved.value = response.saved
+            // An account change that landed meanwhile takes it back out.
+            if (generation.get() != started) _saved.value = emptyList()
         } catch (_: Exception) {
             // Leave the existing mirror untouched on failure.
         }
@@ -60,6 +97,7 @@ class SavedRepository @Inject constructor(
     suspend fun toggle(listing: Listing): Boolean = mutex.withLock {
         val id = listing.id
         val idString = id.toString()
+        val started = generation.get()
         val previous = _saved.value
         return if (previous.any { it.id == id }) {
             _saved.value = previous.filterNot { it.id == id }
@@ -68,7 +106,7 @@ class SavedRepository @Inject constructor(
                 // write reverts the mirror instead of reporting success.
                 api.removeSaved(idString).unwrap()
             } catch (e: Exception) {
-                _saved.value = previous
+                if (generation.get() == started) _saved.value = previous
                 throw e
             }
             false
@@ -77,7 +115,7 @@ class SavedRepository @Inject constructor(
             try {
                 api.addSaved(idString, gson.toJson(listing)).unwrap()
             } catch (e: Exception) {
-                _saved.value = previous
+                if (generation.get() == started) _saved.value = previous
                 throw e
             }
             true
@@ -86,12 +124,13 @@ class SavedRepository @Inject constructor(
 
     /** Remove every saved listing. Optimistic, with rollback on failure. */
     suspend fun clear() = mutex.withLock {
+        val started = generation.get()
         val previous = _saved.value
         _saved.value = emptyList()
         try {
             api.clearSaved().unwrap()
         } catch (e: Exception) {
-            _saved.value = previous
+            if (generation.get() == started) _saved.value = previous
             throw e
         }
     }

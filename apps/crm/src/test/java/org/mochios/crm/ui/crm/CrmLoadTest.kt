@@ -131,7 +131,7 @@ class CrmLoadTest {
             override suspend fun invalidate(app: String) {
             }
         })
-        repository = CrmsRepository(api, FileStore(context), context)
+        repository = CrmsRepository(api, FileStore(context), context, SessionManager(context))
     }
 
     @After

@@ -5,6 +5,12 @@
 
 package org.mochios.crm.repository
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
+import org.mochios.android.auth.SessionManager
+import java.util.concurrent.atomic.AtomicInteger
 import android.content.Context
 import android.net.Uri
 import com.google.gson.JsonObject
@@ -50,6 +56,7 @@ class CrmsRepository @Inject constructor(
     private val api: CrmsApi,
     fileStore: FileStore,
     @param:ApplicationContext private val context: Context,
+    session: SessionManager,
 ) : FileRepository(fileStore) {
     // In-memory cache
     // Concurrent: the view models fill and read these from parallel coroutines.
@@ -58,6 +65,37 @@ class CrmsRepository @Inject constructor(
     // Watched object ids for the local user, keyed by crm, from the last objects fetch.
     private val watchedCache = ConcurrentHashMap<String, List<String>>()
     private val cacheMaxAge = 60_000L // 1 minute
+
+    // The caches hold one account's CRMs, keyed by id alone, so they are
+    // emptied whenever the signed-in identity changes: the next account on the
+    // phone was otherwise shown the previous one's within the minute. A read
+    // begun before the change is not stored after it.
+    private val generation = AtomicInteger()
+
+    /** The identity the caches hold answers for. */
+    @Volatile
+    private var holder: String? = null
+
+    init {
+        CoroutineScope(SupervisorJob() + Dispatchers.Default).launch {
+            session.boundIdentity.collect { identity ->
+                // From no account to one there is nothing to clear: signing
+                // out cleared it. Clearing then would also drop the first read
+                // of a cold start.
+                if (identity != holder) {
+                    if (holder != null) forget()
+                    holder = identity
+                }
+            }
+        }
+    }
+
+    private fun forget() {
+        generation.incrementAndGet()
+        crmInfoCache.clear()
+        objectsCache.clear()
+        watchedCache.clear()
+    }
 
     fun getCachedCrmInfo(crmId: String): CrmDetails? {
         val (details, ts) = crmInfoCache[crmId] ?: return null
@@ -132,6 +170,7 @@ class CrmsRepository @Inject constructor(
     // ---- Crm Info ----
 
     suspend fun getCrmInfo(crmId: String): CrmDetails {
+        val started = generation.get()
         val r = api.getCrmInfo(crmId).unwrap()
         val details = CrmDetails(
             crm = r.crm,
@@ -142,6 +181,8 @@ class CrmsRepository @Inject constructor(
             hierarchy = r.hierarchy
         )
         crmInfoCache[crmId] = details to System.currentTimeMillis()
+        // An account change that landed meanwhile takes it back out.
+        if (generation.get() != started) crmInfoCache.remove(crmId)
         return details
     }
 
@@ -174,9 +215,14 @@ class CrmsRepository @Inject constructor(
     // ---- Objects ----
 
     suspend fun getObjects(crmId: String): List<CrmObject> {
+        val started = generation.get()
         val response = api.getObjects(crmId).unwrap()
         objectsCache[crmId] = response.objects to System.currentTimeMillis()
         watchedCache[crmId] = response.watched
+        if (generation.get() != started) {
+            objectsCache.remove(crmId)
+            watchedCache.remove(crmId)
+        }
         return response.objects
     }
 

@@ -17,6 +17,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.crm.api.CrmsApi
@@ -64,7 +65,7 @@ class CrmShortcutsTest {
             .baseUrl(server.url("/crm/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        return CrmsRepository(retrofit.create(CrmsApi::class.java), FileStore(context), context)
+        return CrmsRepository(retrofit.create(CrmsApi::class.java), FileStore(context), context, SessionManager(context))
     }
 
     /** The shortcuts the launcher shows greyed out. */

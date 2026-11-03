@@ -23,6 +23,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.projects.R
 import org.mochios.projects.api.ProjectsApi
@@ -89,7 +90,7 @@ class CopyObjectTest {
             .baseUrl(server.url("/projects/"))
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        val repository = ProjectsRepository(retrofit.create(ProjectsApi::class.java), FileStore(context), context)
+        val repository = ProjectsRepository(retrofit.create(ProjectsApi::class.java), FileStore(context), context, SessionManager(context))
         val route = buildMap<String, Any?> {
             put("projectId", "p1")
             if (copy != null) put("copy", copy)
