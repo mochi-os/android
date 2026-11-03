@@ -265,6 +265,31 @@ class ForumRefreshTest {
     }
 
     @Test
+    fun `a change to the forum while a post covers it is read once on coming back`() {
+        model.reloadOnForeground()
+        settle()
+        model.pauseLiveRefresh()
+        val before = lists.get()
+        live!!.send("""{"type": "post/delete", "post": "p1"}""")
+        settle()
+        assertEquals(before, lists.get())
+        comeBack()
+        assertEquals(before + 1, lists.get())
+    }
+
+    @Test
+    fun `a post arriving that the list already holds is neither counted nor read again`() {
+        settle()
+        val before = lists.get()
+        live!!.send("""{"type": "post/create", "post": "p1"}""")
+        settle()
+        assertEquals(0, model.newPostsCount.value)
+        assertEquals(before, lists.get())
+        arrive("p9")
+        assertEquals(1, model.newPostsCount.value)
+    }
+
+    @Test
     fun `a sort saved for the forum elsewhere lists it in that order on coming back`() {
         model.reloadOnForeground()
         stored = "top"
