@@ -155,7 +155,7 @@ class OwnerScreensTest {
             ),
         )
         rule.setContent {
-            RegistryCard(handle = handle, busy = null, onTakedown = { down += it.id }, onRestore = { restored += it.id }, onRelease = {})
+            RegistryCard(handle = handle, busy = emptySet(), onTakedown = { down += it.id }, onRestore = { restored += it.id }, onRelease = {})
         }
         rule.onNodeWithText("Alice · alice@example.com").assertExists()
         // The networks by name, not the addresses; the taken-down one says so.

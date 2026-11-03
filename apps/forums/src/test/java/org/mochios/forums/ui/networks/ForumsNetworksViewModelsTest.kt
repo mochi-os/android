@@ -48,6 +48,7 @@ import org.robolectric.annotation.Config
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.ConcurrentLinkedQueue
+import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
 /** The forums view models against a stand-in server, for posts and communities from other networks. */
@@ -66,6 +67,12 @@ class ForumsNetworksViewModelsTest {
 
     /** Whether the sensitive mark is refused. */
     @Volatile private var refuseSensitive = false
+
+    /** Holds a Lemmy account's add back until a test lets it go. */
+    @Volatile private var addGate: CountDownLatch? = null
+
+    /** When the server began and finished each change, in order. */
+    private val order = java.util.concurrent.CopyOnWriteArrayList<String>()
 
     private val post = """{"id": "p1", "forum": "f1", "title": "Linked", "body": "Text", "member": "https://lemmy.example/u/someone",
         "url": "https://there.example/a", "sensitive": 1, "language": "fr"}"""
@@ -88,8 +95,13 @@ class ForumsNetworksViewModelsTest {
                         {"id": "h1", "type": "fediverse", "identifier": "amy@here.example", "hosted": true},
                         {"id": "l1", "type": "lemmy", "identifier": "me@lemmy.example", "hosted": false},
                         {"id": "m1", "type": "mastodon", "identifier": "me@social.example", "hosted": false}]""")
-                    "/forums/-/communities/join" -> ok("""{"id": "c1", "fingerprint": "cfp", "name": "Books", "already_subscribed": false}""")
-                    "/forums/-/communities/add" -> raw("""{"added": 3, "communities": 3, "posts": 9}""")
+                    "/forums/-/communities/join" -> order.add("join").let { ok("""{"id": "c1", "fingerprint": "cfp", "name": "Books", "already_subscribed": false}""") }
+                    "/forums/-/communities/add" -> {
+                        order += "add"
+                        addGate?.await(5, TimeUnit.SECONDS)
+                        order += "added"
+                        raw("""{"added": 3, "communities": 3, "posts": 9}""")
+                    }
                     "/forums/-/communities/import" -> raw("""{"communities": 2, "blocks": 1, "saved": 4, "more": true}""")
                     "/forums/f1/-/publish" -> ok("""{"published": false, "domains": ["b.example", "a.example"], "handles": []}""")
                     "/forums/f1/-/publish/set" -> ok("""{"published": true, "address": "https://a.example/c/books", "identifier": "!books@a.example", "domains": []}""")
@@ -272,5 +284,34 @@ class ForumsNetworksViewModelsTest {
         until("the refusal") { sent("/forums/f1/-/sensitive/set") != null && !model.busy.value }
         assertTrue(model.sensitive.value)
         assertFalse(sent("/forums/f1/-/sensitive/set").isNullOrEmpty())
+    }
+
+    /** Lets a request already on its way reach the server: one sent alongside would have by now. */
+    private fun settle() = repeat(30) {
+        shadowOf(Looper.getMainLooper()).idleFor(10, TimeUnit.MILLISECONDS)
+        Thread.sleep(10)
+    }
+
+    @Test
+    fun `a join tapped while a Lemmy account's add runs waits for it, both showing busy, instead of being dropped`() {
+        val gate = CountDownLatch(1)
+        addGate = gate
+        val model = CommunitiesViewModel(repository)
+        val events = mutableListOf<CommunitiesEvent>()
+        val job = CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { events.add(it) } }
+        until("the accounts") { model.hosted.value.isNotEmpty() && model.lemmy.value.isNotEmpty() }
+        model.add(model.lemmy.value.first())
+        until("the add") { sent("/forums/-/communities/add") != null }
+        model.join("!books@lemmy.example", "")
+        model.join("!books@lemmy.example", "")
+        assertEquals(setOf("l1", "join"), model.busy.value)
+        settle()
+        assertNull(sent("/forums/-/communities/join"))
+        gate.countDown()
+        until("the join") { events.any { it is CommunitiesEvent.Joined } && model.busy.value.isEmpty() }
+        assertEquals(1, requests.count { it.first == "/forums/-/communities/join" })
+        // One at a time, in the order tapped: the join waited for the add's answer.
+        assertEquals(listOf("add", "added", "join"), order)
+        job.cancel()
     }
 }

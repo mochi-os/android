@@ -132,7 +132,7 @@ class ForumsNetworksScreenTest {
         rule.setContent {
             LemmyAccounts(
                 accounts = listOf(NetworkAccount(id = "l1", type = "lemmy", identifier = "me@lemmy.example")),
-                busy = null,
+                busy = emptySet(),
                 onAdd = { calls.add("add ${it.id}") },
                 onImport = { calls.add("import ${it.id}") },
             )

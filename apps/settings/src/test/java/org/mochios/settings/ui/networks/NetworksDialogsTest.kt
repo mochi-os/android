@@ -136,7 +136,7 @@ class NetworksDialogsTest {
             KeysDialog(
                 account = account,
                 offer = true,
-                busy = null,
+                busy = emptySet(),
                 load = { listOf(AccountKey(kind = "signing", algorithm = "p256")) },
                 onReplace = {},
                 onRecovery = { made -> made("deadbeef") },
@@ -154,7 +154,7 @@ class NetworksDialogsTest {
         val replaced = mutableListOf<Unit>()
         val account = NetworkAccount(id = "f1", type = "fediverse", hosted = true)
         rule.setContent {
-            KeysDialog(account = account, offer = false, busy = null, load = { emptyList() }, onReplace = { replaced += Unit }, onRecovery = {}, onDismiss = {})
+            KeysDialog(account = account, offer = false, busy = emptySet(), load = { emptyList() }, onReplace = { replaced += Unit }, onRecovery = {}, onDismiss = {})
         }
         rule.onNodeWithText(text(R.string.networks_recovery)).assertDoesNotExist()
         rule.onNodeWithText(text(R.string.networks_replace_keys)).performClick()

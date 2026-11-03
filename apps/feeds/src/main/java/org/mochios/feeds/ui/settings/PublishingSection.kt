@@ -159,7 +159,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
                 AccountMenu(
                     account = account,
                     // An import, and the adding of the people it left waiting.
-                    busy = busy == account.id || (addingWaiting && asking == account.id),
+                    busy = account.id in busy || (addingWaiting && asking == account.id),
                     generator = generators[account.id]?.isNotEmpty() == true,
                     onImport = { kind -> viewModel.importFrom(account, kind) },
                     onBackups = { viewModel.openBackups(account) },
@@ -168,7 +168,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
                 val label = stringResource(R.string.feeds_publish_to_account, account.identifier)
                 Switch(
                     checked = account.id in publish,
-                    enabled = busy != account.id,
+                    enabled = account.id !in busy,
                     onCheckedChange = { on -> viewModel.toggle(account, on) },
                     modifier = Modifier.semantics { contentDescription = label },
                 )
@@ -343,7 +343,7 @@ internal fun FiltersSection(viewModel: PublishingViewModel) {
     var phrase by remember { mutableStateOf("") }
     Section(title = stringResource(R.string.feeds_filters)) {
         filters.forEach { filter ->
-            FilterRow(filter = filter, busy = busy == filter.id, onRemove = { viewModel.removeFilter(filter) })
+            FilterRow(filter = filter, busy = filter.id in busy, onRemove = { viewModel.removeFilter(filter) })
         }
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
             MochiTextField(
@@ -359,9 +359,9 @@ internal fun FiltersSection(viewModel: PublishingViewModel) {
                     viewModel.addFilter(phrase)
                     phrase = ""
                 },
-                enabled = phrase.isNotBlank() && busy != "filter",
+                enabled = phrase.isNotBlank() && "filter" !in busy,
             ) {
-                if (busy == "filter") {
+                if ("filter" in busy) {
                     CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                 } else {
                     Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))

@@ -197,7 +197,7 @@ internal fun SystemHandlesList(
                         domains = state.domains,
                         suggestion = "",
                         title = stringResource(R.string.handles_take),
-                        reserving = state.busy == "reserve",
+                        reserving = "reserve" in state.busy,
                         check = check,
                         onReserve = onReserve,
                     )
@@ -245,7 +245,7 @@ internal fun SystemHandlesList(
 @Composable
 internal fun RegistryCard(
     handle: RegistryHandle,
-    busy: String?,
+    busy: Set<String>,
     onTakedown: (RegistryAccount) -> Unit,
     onRestore: (RegistryAccount) -> Unit,
     onRelease: (RegistryHandle) -> Unit,
@@ -299,7 +299,7 @@ internal fun RegistryCard(
                 )
             }
             Box {
-                if (busy == "${handle.domain}/${handle.name}" || accounts.any { busy == it.id }) {
+                if ("${handle.domain}/${handle.name}" in busy || accounts.any { it.id in busy }) {
                     CircularProgressIndicator(modifier = Modifier.padding(12.dp).size(20.dp), strokeWidth = 2.dp)
                 } else {
                     MochiIconButton(onClick = { menu = true }) {

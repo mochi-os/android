@@ -116,9 +116,9 @@ fun SystemBlocksScreen(
                             )
                             OutlinedButton(
                                 onClick = { viewModel.block(target) { target = "" } },
-                                enabled = target.isNotBlank() && state.busy == null,
+                                enabled = target.isNotBlank() && "add" !in state.busy,
                             ) {
-                                if (state.busy == "add") {
+                                if ("add" in state.busy) {
                                     CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                                 } else {
                                     Icon(Icons.Default.Add, contentDescription = null, Modifier.size(ButtonDefaults.IconSize))
@@ -149,7 +149,7 @@ fun SystemBlocksScreen(
                                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                 }
-                                if (state.busy == row.key) {
+                                if (row.key in state.busy) {
                                     CircularProgressIndicator(modifier = Modifier.padding(12.dp).size(20.dp), strokeWidth = 2.dp)
                                 } else {
                                     MochiIconButton(onClick = { viewModel.unblock(row) }) {

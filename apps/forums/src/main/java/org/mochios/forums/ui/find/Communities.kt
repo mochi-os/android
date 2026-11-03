@@ -96,7 +96,7 @@ internal fun CommunitiesSections(
     if (hosted.isEmpty() && lemmy.isEmpty()) return
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
         if (hosted.isNotEmpty()) {
-            JoinCommunity(accounts = hosted, busy = busy == "join", onJoin = { address, account -> viewModel.join(address, account) })
+            JoinCommunity(accounts = hosted, busy = "join" in busy, onJoin = { address, account -> viewModel.join(address, account) })
         }
         if (lemmy.isNotEmpty()) {
             LemmyAccounts(
@@ -184,14 +184,14 @@ internal fun JoinCommunity(
 @Composable
 internal fun LemmyAccounts(
     accounts: List<NetworkAccount>,
-    busy: String?,
+    busy: Set<String>,
     onAdd: (NetworkAccount) -> Unit,
     onImport: (NetworkAccount) -> Unit,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Heading(stringResource(R.string.forums_communities_elsewhere))
         accounts.forEach { account ->
-            val working = busy == account.id
+            val working = account.id in busy
             Column(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
                 Text(account.identifier, style = MaterialTheme.typography.bodyMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Text(
@@ -201,12 +201,12 @@ internal fun LemmyAccounts(
                 )
                 Spacer(modifier = Modifier.padding(top = 4.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    MochiOutlinedButton(onClick = { onImport(account) }, enabled = busy == null) {
+                    MochiOutlinedButton(onClick = { onImport(account) }, enabled = !working) {
                         Icon(Icons.Outlined.Download, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                         Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
                         Text(stringResource(R.string.forums_import_settings))
                     }
-                    MochiButton(onClick = { onAdd(account) }, enabled = busy == null) {
+                    MochiButton(onClick = { onAdd(account) }, enabled = !working) {
                         if (working) {
                             CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                         } else {

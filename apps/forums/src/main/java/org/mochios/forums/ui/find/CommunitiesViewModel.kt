@@ -14,7 +14,10 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.forums.R
@@ -53,8 +56,9 @@ class CommunitiesViewModel @Inject constructor(
     val lemmy: StateFlow<List<NetworkAccount>> = _lemmy.asStateFlow()
 
     /** "join", or the Lemmy account whose read is on its way. */
-    private val _busy = MutableStateFlow<String?>(null)
-    val busy: StateFlow<String?> = _busy.asStateFlow()
+    /** What changes are waiting or running for: an account, or "join". */
+    private val _busy = MutableStateFlow<Set<String>>(emptySet())
+    val busy: StateFlow<Set<String>> = _busy.asStateFlow()
 
     private val _events = MutableSharedFlow<CommunitiesEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<CommunitiesEvent> = _events.asSharedFlow()
@@ -93,16 +97,23 @@ class CommunitiesViewModel @Inject constructor(
         _events.emit(CommunitiesEvent.Imported(repository.importCommunities(account.id)))
     }
 
+    // Actions run one at a time, in the order tapped: one tapped while another
+    // runs waits here instead of being dropped, and shows as busy meanwhile.
+    private val queue = Mutex()
+
     private fun change(key: String, fallback: Int, block: suspend () -> Unit) {
-        if (_busy.value != null) return
-        _busy.value = key
+        // The same action tapped again while it waits or runs is the one tap.
+        if (key in _busy.value) return
+        _busy.update { it + key }
         viewModelScope.launch {
-            try {
-                block()
-            } catch (e: Exception) {
-                _events.emit(CommunitiesEvent.Failure(e.toMochiError(), fallback))
-            } finally {
-                _busy.value = null
+            queue.withLock {
+                try {
+                    block()
+                } catch (e: Exception) {
+                    _events.emit(CommunitiesEvent.Failure(e.toMochiError(), fallback))
+                } finally {
+                    _busy.update { it - key }
+                }
             }
         }
     }

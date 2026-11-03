@@ -15,7 +15,10 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
@@ -41,8 +44,8 @@ data class NetworksUiState(
     val isLoading: Boolean = true,
     val data: NetworksData? = null,
     val error: MochiError? = null,
-    /** What a change is running for: a handle's network, an account, or a dialog's action. */
-    val busy: String? = null,
+    /** What changes are waiting or running for: a handle's network, an account, or a dialog's action. */
+    val busy: Set<String> = emptySet(),
 )
 
 /**
@@ -301,18 +304,25 @@ class NetworksViewModel @Inject constructor(
      * Run a change under [key], with [fallback] as what a failure says when the
      * server gave no reason; whatever it changed is refetched.
      */
+    // Actions run one at a time, in the order tapped: one tapped while another
+    // runs waits here instead of being dropped, and shows as busy meanwhile.
+    private val queue = Mutex()
+
     private fun change(key: String, fallback: Int, block: suspend () -> Unit) {
-        if (_uiState.value.busy != null) return
-        _uiState.value = _uiState.value.copy(busy = key)
+        // The same action tapped again while it waits or runs is the one tap.
+        if (key in _uiState.value.busy) return
+        _uiState.update { it.copy(busy = it.busy + key) }
         viewModelScope.launch {
-            try {
-                block()
-            } catch (e: Exception) {
-                _messages.emit(failure(e, fallback))
-            } finally {
-                _uiState.value = _uiState.value.copy(busy = null)
+            queue.withLock {
+                try {
+                    block()
+                } catch (e: Exception) {
+                    _messages.emit(failure(e, fallback))
+                } finally {
+                    _uiState.update { it.copy(busy = it.busy - key) }
+                }
+                refresh(quiet = true)
             }
-            refresh(quiet = true)
         }
     }
 

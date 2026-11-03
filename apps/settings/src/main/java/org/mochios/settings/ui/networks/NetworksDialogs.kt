@@ -417,7 +417,7 @@ private fun CopyField(label: String, value: String, sensitive: Boolean = false) 
 internal fun KeysDialog(
     account: NetworkAccount,
     offer: Boolean,
-    busy: String?,
+    busy: Set<String>,
     load: suspend (NetworkAccount) -> List<AccountKey>?,
     onReplace: (() -> Unit) -> Unit,
     onRecovery: ((String) -> Unit) -> Unit,
@@ -430,9 +430,11 @@ internal fun KeysDialog(
     var recovering by remember { mutableStateOf(offer) }
     var secret by remember { mutableStateOf("") }
     LaunchedEffect(account.id, round) { keys = load(account) }
+    // The dialog's own changes; another account's leave it usable.
+    val working = "keys" in busy || "recovery" in busy
 
     MochiAlertDialog(
-        onDismissRequest = { if (busy == null) onDismiss() },
+        onDismissRequest = { if (!working) onDismiss() },
         title = stringResource(R.string.networks_keys),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -460,21 +462,21 @@ internal fun KeysDialog(
                     )
                 }
                 if (account.type == "bluesky") {
-                    MochiOutlinedButton(onClick = { recovering = true }, enabled = busy == null) {
-                        if (busy == "recovery") ButtonProgress() else Icon(Icons.Outlined.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                    MochiOutlinedButton(onClick = { recovering = true }, enabled = !working) {
+                        if ("recovery" in busy) ButtonProgress() else Icon(Icons.Outlined.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                         Spacer(Modifier.size(ButtonDefaults.IconSpacing))
                         Text(stringResource(R.string.networks_recovery))
                     }
                 }
-                MochiOutlinedButton(onClick = { replacing = true }, enabled = busy == null) {
-                    if (busy == "keys") ButtonProgress() else Icon(Icons.Outlined.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                MochiOutlinedButton(onClick = { replacing = true }, enabled = !working) {
+                    if ("keys" in busy) ButtonProgress() else Icon(Icons.Outlined.Key, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                     Spacer(Modifier.size(ButtonDefaults.IconSpacing))
                     Text(stringResource(R.string.networks_replace_keys))
                 }
             }
         },
         dismissText = stringResource(MochiR.string.common_close),
-        dismissEnabled = busy == null,
+        dismissEnabled = !working,
     )
 
     if (replacing) {

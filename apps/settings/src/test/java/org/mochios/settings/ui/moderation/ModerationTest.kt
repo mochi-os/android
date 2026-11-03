@@ -57,6 +57,16 @@ class ModerationTest {
     /** Holds the hosts' answer while it is set. */
     @Volatile private var hold: java.util.concurrent.CountDownLatch? = null
 
+    /** Holds a block's add back while it is set. */
+    @Volatile private var adding: java.util.concurrent.CountDownLatch? = null
+
+    /** When the server began and finished each change, in order. */
+    private val order = CopyOnWriteArrayList<String>()
+
+    /** Holds the next report's resolve back while it is set, and whether a second report is listed. */
+    @Volatile private var resolving: java.util.concurrent.CountDownLatch? = null
+    @Volatile private var second = false
+
     private val flag = Report(
         id = "r1",
         network = "fediverse",
@@ -77,13 +87,27 @@ class ModerationTest {
                 return when (path.substringBefore("?")) {
                     "settings/-/system/reports/list" -> json(
                         """{"reports": [{"id": "r1", "network": "fediverse", "reporter": {"id": "https://remote.example/actor", "name": "remote.example", "blockable": true, "host": "remote.example"},
-                           "person": null, "room": {"id": "!r:remote.example", "name": "Lobby"}, "objects": [], "created": 1700000000, "resolved": 0, "outcome": ""}]}""",
+                           "person": null, "room": {"id": "!r:remote.example", "name": "Lobby"}, "objects": [], "created": 1700000000, "resolved": 0, "outcome": ""}""" +
+                            (if (second) """, {"id": "r2", "network": "fediverse", "reporter": null, "person": null, "room": null, "objects": [], "created": 1700000001, "resolved": 0, "outcome": ""}""" else "") + "]}",
                     )
-                    "settings/-/system/reports/resolve" -> json("""{"resolved": true}""")
+                    "settings/-/system/reports/resolve" -> {
+                        order += "resolve"
+                        resolving?.let { gate ->
+                            resolving = null
+                            gate.await(5, TimeUnit.SECONDS)
+                        }
+                        order += "resolved"
+                        json("""{"resolved": true}""")
+                    }
                     "settings/-/system/blocks/list" -> json("""{"domains": [{"domain": "spam.example", "created": 1}], "people": []}""")
-                    "settings/-/system/blocks/add", "settings/-/system/blocks/remove" -> json(
-                        """{"domains": [{"domain": "spam.example", "created": 1}], "people": [{"actor": "xmpp:troll@chat.example", "created": 2}]}""",
-                    )
+                    "settings/-/system/blocks/add", "settings/-/system/blocks/remove" -> {
+                        order += path.substringAfterLast("/")
+                        if (path == "settings/-/system/blocks/add") adding?.await(5, TimeUnit.SECONDS)
+                        order += path.substringAfterLast("/") + "d"
+                        json(
+                            """{"domains": [{"domain": "spam.example", "created": 1}], "people": [{"actor": "xmpp:troll@chat.example", "created": 2}]}""",
+                        )
+                    }
                     "settings/-/system/hosts" -> hold?.await(5, TimeUnit.SECONDS).let { json(
                         """{"fediverse": [{"host": "z.example", "limited": true}, {"host": "a.example"}], "matrix": [],
                            "xmpp": {"links": [], "sessions": {"clients": 3, "accounts": 1}}}""",
@@ -170,18 +194,18 @@ class ModerationTest {
         until { requests.any { it.first == "settings/-/system/reports/list?state=resolved" } && !model.uiState.value.isLoading }
 
         model.dismiss(flag)
-        until { requests.any { it.first == "settings/-/system/reports/resolve" } && model.uiState.value.busy == null }
+        until { requests.any { it.first == "settings/-/system/reports/resolve" } && model.uiState.value.busy.isEmpty() }
         assertEquals(mapOf("id" to "r1", "outcome" to "dismissed"), form("settings/-/system/reports/resolve"))
 
         model.act(flag, ReportAction.Server("remote.example"))
-        until { requests.count { it.first == "settings/-/system/reports/resolve" } == 2 && model.uiState.value.busy == null }
+        until { requests.count { it.first == "settings/-/system/reports/resolve" } == 2 && model.uiState.value.busy.isEmpty() }
         assertEquals(mapOf("id" to "r1", "outcome" to "blocked", "target" to "remote.example"), form("settings/-/system/reports/resolve"))
 
         model.act(flag, ReportAction.Suspend("alice@example.com"))
         assertTrue(model.stepUp.visible.value)
         assertEquals(2, requests.count { it.first == "settings/-/system/reports/resolve" })
         model.stepUp.onVerified("proof")
-        until { requests.count { it.first == "settings/-/system/reports/resolve" } == 3 && model.uiState.value.busy == null }
+        until { requests.count { it.first == "settings/-/system/reports/resolve" } == 3 && model.uiState.value.busy.isEmpty() }
         assertEquals(mapOf("id" to "r1", "outcome" to "suspended", "token" to "proof"), form("settings/-/system/reports/resolve"))
     }
 
@@ -196,7 +220,7 @@ class ModerationTest {
         assertEquals(mapOf("target" to "troll@chat.example"), form("settings/-/system/blocks/add"))
         assertEquals(listOf("spam.example", "xmpp:troll@chat.example"), model.uiState.value.rows.map { it.key })
         model.unblock(model.uiState.value.rows.last())
-        until { requests.any { it.first == "settings/-/system/blocks/remove" } && model.uiState.value.busy == null }
+        until { requests.any { it.first == "settings/-/system/blocks/remove" } && model.uiState.value.busy.isEmpty() }
         assertEquals(mapOf("target" to "xmpp:troll@chat.example"), form("settings/-/system/blocks/remove"))
     }
 
@@ -237,5 +261,53 @@ class ModerationTest {
             Thread.sleep(25)
         }
         assertTrue(requests.none { it.first == "settings/-/system/hosts" })
+    }
+
+    /** Lets a request already on its way reach the server: one sent alongside would have by now. */
+    private fun settle() = repeat(30) {
+        shadowOf(Looper.getMainLooper()).idleFor(10, TimeUnit.MILLISECONDS)
+        Thread.sleep(10)
+    }
+
+    @Test
+    fun `a block lifted while another is being added waits for it, both showing busy, instead of being dropped`() {
+        val gate = java.util.concurrent.CountDownLatch(1)
+        adding = gate
+        val model = SystemBlocksViewModel(api)
+        until { !model.uiState.value.isLoading }
+        val spam = model.uiState.value.rows.single()
+        var cleared = false
+        model.block("troll@chat.example") { cleared = true }
+        until { requests.any { it.first == "settings/-/system/blocks/add" } }
+        model.unblock(spam)
+        assertEquals(setOf("add", spam.key), model.uiState.value.busy)
+        settle()
+        assertTrue(requests.none { it.first == "settings/-/system/blocks/remove" })
+        gate.countDown()
+        until { cleared && requests.any { it.first == "settings/-/system/blocks/remove" } && model.uiState.value.busy.isEmpty() }
+        assertEquals(mapOf("target" to "spam.example"), form("settings/-/system/blocks/remove"))
+        // One at a time, in the order tapped: the unblock waited for the add's answer.
+        assertEquals(listOf("add", "addd", "remove", "removed"), order)
+    }
+
+    @Test
+    fun `a report dismissed while another's is resolved waits for it, both showing busy, instead of being dropped`() {
+        second = true
+        val gate = java.util.concurrent.CountDownLatch(1)
+        resolving = gate
+        val model = SystemReportsViewModel(api, SettingsStepUpClient(retrofit.create(AccountApi::class.java), PasskeyManager(context)))
+        until { !model.uiState.value.isLoading }
+        val (first, other) = model.uiState.value.reports
+        model.dismiss(first)
+        until { requests.any { it.first == "settings/-/system/reports/resolve" } }
+        model.dismiss(other)
+        assertEquals(setOf("r1", "r2"), model.uiState.value.busy)
+        settle()
+        assertEquals(1, requests.count { it.first == "settings/-/system/reports/resolve" })
+        gate.countDown()
+        until { requests.count { it.first == "settings/-/system/reports/resolve" } == 2 && model.uiState.value.busy.isEmpty() }
+        assertEquals("r2", form("settings/-/system/reports/resolve")["id"])
+        // One at a time, in the order tapped: the second waited for the first's answer.
+        assertEquals(listOf("resolve", "resolved", "resolve", "resolved"), order)
     }
 }

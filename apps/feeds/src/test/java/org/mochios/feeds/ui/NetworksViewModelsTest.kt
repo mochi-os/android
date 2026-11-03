@@ -108,6 +108,9 @@ class NetworksViewModelsTest {
     /** Whether the feed is private, so Publish to is refused with the reason. */
     @Volatile private var feedPrivate = false
 
+    /** Holds the first publish list save back until a test lets it go. */
+    @Volatile private var publishGate: java.util.concurrent.CountDownLatch? = null
+
     /** Whether granting a permission is refused. */
     @Volatile private var grantRefused = false
 
@@ -127,7 +130,8 @@ class NetworksViewModelsTest {
         server.dispatcher = object : Dispatcher() {
             override fun dispatch(request: RecordedRequest): MockResponse {
                 val path = request.path.orEmpty().substringBefore("?")
-                requests.add(path to request.body.readUtf8())
+                val body = request.body.readUtf8()
+                requests.add(path to body)
                 return when (path) {
                     "/feeds/-/info" -> ok("""{"feeds": [{"id": "f1", "fingerprint": "f1", "name": "Mine", "owner": 1, "privacy": "public"}, {"id": "f2", "fingerprint": "f2", "name": "Theirs", "owner": 0}]}""")
                     "/feeds/f1/-/info" -> ok("""{"feed": {"id": "f1", "fingerprint": "f1", "name": "Mine", "privacy": "public"}, "permissions": {"view": true, "react": true, "comment": true, "manage": true}}""")
@@ -154,7 +158,12 @@ class NetworksViewModelsTest {
                     } else raw("""{"accounts": [{"id": "l1", "type": "mastodon", "identifier": "@me@social.example"},
                         {"id": "b2", "type": "bluesky", "identifier": "me.here.example", "hosted": true}],
                         "publish": ["l1"], "copies": {"l1": 3}, "generators": {}}""")
-                    "/feeds/f1/-/publish/set" -> raw("""{"publish": [], "kept": {"l1": 3}}""")
+                    "/feeds/f1/-/publish/set" -> {
+                        publishGate?.await(5, TimeUnit.SECONDS)
+                        // The list saved is the one sent.
+                        val saved = java.net.URLDecoder.decode(body.substringAfter("accounts="), "UTF-8")
+                        raw("""{"publish": $saved, "kept": {"l1": 3}}""")
+                    }
                     "/feeds/f1/-/publish/forget" -> raw("""{"deleted": 3}""")
                     "/feeds/f1/-/generator/set" -> raw("""{"generators": {"b2": "at://did/app.bsky.feed.generator/f1"}}""")
                     "/feeds/f1/-/import" -> raw(importAnswer)
@@ -669,6 +678,24 @@ class NetworksViewModelsTest {
         rule.onNodeWithContentDescription("Add source").performClick()
         rule.onNodeWithText("URL").assertIsDisplayed()
         assertEquals(0, rule.onAllNodesWithText(message).fetchSemanticsNodes().size)
+    }
+    @Test
+    fun `a publish switch flipped while another account's save runs waits for it, and both end up in the list`() {
+        val gate = java.util.concurrent.CountDownLatch(1)
+        publishGate = gate
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.loadPublish()
+        until("the publish list") { model.publish.value != null }
+        assertEquals(listOf("l1"), model.publish.value!!.publish)
+        val accounts = model.publish.value!!.accounts
+        model.toggle(accounts.first { it.id == "b2" }, true)
+        until("the first save") { sent("/feeds/f1/-/publish/set") != null }
+        model.toggle(accounts.first { it.id == "l1" }, false)
+        assertEquals(setOf("b2", "l1"), model.busy.value)
+        publishGate = null
+        gate.countDown()
+        until("both saves") { requests.count { it.first == "/feeds/f1/-/publish/set" } == 2 && model.busy.value.isEmpty() }
+        assertEquals(listOf("b2"), model.publish.value!!.publish)
     }
 }
 
