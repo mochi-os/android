@@ -19,7 +19,7 @@ data class Multiweek(val weeks: Int = 4, val previous: Int = 0)
  * -1 for none. [view] is the view the app opens on. [zones] shows each event
  * at its own wall-clock time, each end in the zone it was written in, rather
  * than in the user's zone. [allday] is where a day's all-day events go among
- * its timed ones in the month and multiweek views, "first" or "last".
+ * its timed ones in the month, multiweek and list views, "first" or "last".
  */
 data class Preferences(
     val hours: Hours = Hours(),

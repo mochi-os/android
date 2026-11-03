@@ -784,8 +784,8 @@ private fun Modifier.pick(day: LocalDate, onPick: (Offset) -> Unit): Modifier {
  * The list view, as the web's draws it: each day under a heading across the
  * whole width that stays at the top while its day is in view, its
  * occurrences beneath as rows that each open with the occurrence's dot. A
- * day's occurrences go in the order of the clock times they show, all day
- * ones first, as the day view stacks them.
+ * day's occurrences go in the order of the clock times they show, its all-day
+ * ones first or last as the preferences put them.
  * [onTop] is told the day of the topmost row in view as the list scrolls,
  * whose month the toolbar names. The day it opens on, the anchor, leads it
  * even when empty, as its heading alone, and the list scrolls back to it
@@ -826,11 +826,12 @@ fun AgendaList(
                     .any { it.contains(search, ignoreCase = true) }
         }
     }
-    val grouped = remember(matched, state.preferences.zones) {
+    val grouped = remember(matched, state.preferences.zones, state.preferences.allday) {
+        val allday = if (state.preferences.allday == "last") Float.POSITIVE_INFINITY else -1f
         matched.groupBy { viewModel.day(it) }.toSortedMap().mapValues { (day, occurrences) ->
             occurrences.sortedWith(
                 compareBy<Instance> { instance ->
-                    if (instance.allday) -1f else viewModel.cut(instance, day)?.from ?: 0f
+                    if (instance.allday) allday else viewModel.cut(instance, day)?.from ?: 0f
                 }.thenBy(NaturalCompare) { instance -> instance.summary },
             )
         }

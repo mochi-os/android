@@ -370,6 +370,21 @@ class EditorFlowTest {
             .fetchSemanticsNode().boundsInRoot
         assertTrue("$allday $tentative", tentative.center.y in allday.top..allday.bottom)
         assertTrue("$allday $tentative", tentative.left > allday.right)
+        assertEquals("$allday $tentative", allday.height, tentative.height, 0.5f)
+    }
+
+    @Test
+    @Config(sdk = [35], qualifiers = "w320dp-h800dp")
+    fun `a row too narrow for both switches puts tentative on a line of its own, unbroken`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        show("event" to "e1")
+        waitFor("Stand-up")
+        val allday = rule.onNodeWithText(string(R.string.calendars_event_allday)).performScrollTo()
+            .fetchSemanticsNode().boundsInRoot
+        val tentative = rule.onNodeWithText(string(R.string.calendars_status_tentative)).performScrollTo()
+            .fetchSemanticsNode().boundsInRoot
+        assertTrue("$allday $tentative", tentative.top >= allday.bottom)
+        assertEquals("$allday $tentative", allday.height, tentative.height, 0.5f)
     }
 
     /** Every STATUS in the tree the last [path] sent. */

@@ -92,6 +92,8 @@ class ListViewTest {
     @Volatile private var length = 3_600L
     /** The titles of the events that last all day. */
     @Volatile private var allday = setOf<String>()
+    /** The preferences the server answers with, as JSON. */
+    @Volatile private var preferences = "{}"
     @Volatile private var first = 0L
     @Volatile private var last = 0L
 
@@ -113,7 +115,7 @@ class ListViewTest {
                 val url = request.requestUrl
                 return when (path) {
                     "-/calendars" -> ok("""{"calendars": [{"id": "c1", "name": "Home", "default": true}]}""")
-                    "-/preferences/get", "-/preferences/set" -> ok("""{"preferences": {}}""")
+                    "-/preferences/get", "-/preferences/set" -> ok("""{"preferences": $preferences}""")
                     "-/events/bounds" -> ok("""{"first": $first, "last": $last, "endless": false}""")
                     "-/events" -> {
                         val start = url?.queryParameter("start")?.toLongOrNull() ?: 0
@@ -323,6 +325,38 @@ class ListViewTest {
         }
         val time = Format(UserPreferences()).formatClockRange(noon(day), noon(day) + 3_600)
         assertTrue("all day ${drop("Holiday")}, time ${drop(time)}", drop("Holiday") <= drop(time) + 1f)
+    }
+
+    /** Whether [first]'s row lies above [second]'s. */
+    private fun above(first: String, second: String): Boolean =
+        rule.onNodeWithText(first, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot.top <
+            rule.onNodeWithText(second, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot.top
+
+    @Test
+    fun `a day's all-day rows come before its timed ones`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Item 1", day to "Holiday")
+        allday = setOf("Holiday")
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Holiday")
+        waitFor("Item 1")
+        assertTrue(above("Holiday", "Item 1"))
+    }
+
+    @Test
+    fun `a day's all-day rows come after its timed ones when the preferences put them last`() {
+        val day = LocalDate.now(london).plusDays(2)
+        events = listOf(day to "Holiday", day to "Item 1")
+        allday = setOf("Holiday")
+        preferences = """{"allday": "last"}"""
+        first = noon(day)
+        last = noon(day)
+        show(open = day)
+        waitFor("Holiday")
+        waitFor("Item 1")
+        rule.waitUntil(10_000) { above("Item 1", "Holiday") }
     }
 
     @Test
