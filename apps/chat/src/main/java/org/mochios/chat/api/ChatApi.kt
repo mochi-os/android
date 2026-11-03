@@ -8,6 +8,7 @@ package org.mochios.chat.api
 import com.google.gson.annotations.SerializedName
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import org.mochios.android.api.Slow
 import org.mochios.android.api.ApiResponse
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatAccount
@@ -146,6 +147,7 @@ interface ChatApi {
 
     // With an account, members are addresses on its network.
     @FormUrlEncoded
+    @Slow
     @POST("-/create")
     suspend fun createChat(
         @Field("name") name: String,
@@ -290,6 +292,7 @@ interface ChatApi {
         @Query("member") member: String? = null,
     ): Response<ApiResponse<ChatPresence>>
 
+    @Slow
     @POST("{chatId}/-/accept")
     suspend fun accept(@Path("chatId") chatId: String): Response<ApiResponse<AcceptResponse>>
 

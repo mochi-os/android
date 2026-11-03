@@ -8,6 +8,7 @@ package org.mochios.forums.api
 import com.google.gson.annotations.SerializedName
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import org.mochios.android.api.Slow
 import org.mochios.android.api.ApiResponse
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.CommunitiesAdded
@@ -787,6 +788,7 @@ interface ForumsApi {
     // A community on another server joined as one of the user's hosted
     // fediverse accounts, by !name@host or its address.
     @FormUrlEncoded
+    @Slow
     @POST("-/communities/join")
     suspend fun joinCommunity(
         @Field("address") address: String,
@@ -796,12 +798,14 @@ interface ForumsApi {
     // A linked Lemmy account's subscribed communities read in, and its
     // settings export imported. Bare JSON.
     @FormUrlEncoded
+    @Slow
     @POST("-/communities/add")
     suspend fun addCommunities(
         @Field("account") account: String,
     ): Response<CommunitiesAdded>
 
     @FormUrlEncoded
+    @Slow
     @POST("-/communities/import")
     suspend fun importCommunities(
         @Field("account") account: String,

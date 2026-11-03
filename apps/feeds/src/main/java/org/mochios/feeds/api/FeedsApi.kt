@@ -7,6 +7,7 @@ package org.mochios.feeds.api
 
 import com.google.gson.annotations.SerializedName
 import okhttp3.RequestBody
+import org.mochios.android.api.Slow
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
@@ -466,6 +467,7 @@ interface FeedsApi {
         @Path("feedId") feedId: String
     ): Response<ApiResponse<SourceListResponse>>
 
+    @Slow
     @POST("{feedId}/-/sources/add")
     suspend fun addSource(
         @Path("feedId") feedId: String,
@@ -743,6 +745,7 @@ interface FeedsApi {
 
     // A Mastodon export of follows, its text: each address becomes a source.
     @FormUrlEncoded
+    @Slow
     @POST("{feedId}/-/sources/import")
     suspend fun importFollows(
         @Path("feedId") feedId: String,
@@ -752,6 +755,7 @@ interface FeedsApi {
     // The people of the feed's imports who waited on a server, added once the
     // app may read it; refused with the permission named until then.
     @FormUrlEncoded
+    @Slow
     @POST("{feedId}/-/sources/allow")
     suspend fun allowWaiting(
         @Path("feedId") feedId: String,
@@ -804,6 +808,7 @@ interface FeedsApi {
 
     // kind is posts, bookmarks or follows.
     @FormUrlEncoded
+    @Slow
     @POST("{feedId}/-/import")
     suspend fun importAccount(
         @Path("feedId") feedId: String,
