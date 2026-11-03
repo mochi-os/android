@@ -130,14 +130,10 @@ fun SourcesTab(
         }
     }
 
-    // A permission-required add replaces the add dialog with the permission
-    // prompt; close the add dialog so the two don't stack. The retry details
-    // are stashed on the pending permission, so allowing it re-runs the add.
-    LaunchedEffect(pendingPermission) {
-        if (pendingPermission != null) {
-            showAddDialog = false
-        }
-    }
+    // A permission-required add puts the permission prompt over the Add
+    // dialog, which stays open with what was typed, as on the web: allowing
+    // re-runs the add, which closes the dialog or shows its refusal there, and
+    // denying returns to it unchanged.
 
     Box(modifier = modifier) {
         when {
@@ -186,7 +182,11 @@ fun SourcesTab(
             }
         }
         MochiFab(
-            onClick = { showAddDialog = true },
+            onClick = {
+                // A fresh dialog starts without an earlier add's refusal.
+                viewModel.clearAddSourceError()
+                showAddDialog = true
+            },
             modifier = Modifier
                 .align(Alignment.BottomEnd)
                 .padding(16.dp)

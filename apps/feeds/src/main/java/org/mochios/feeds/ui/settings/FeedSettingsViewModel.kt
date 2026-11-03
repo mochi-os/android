@@ -418,6 +418,7 @@ class FeedSettingsViewModel @Inject constructor(
                 // Not a failure to surface — the add can succeed once the app is
                 // granted the permission. Resolve its human name and stash the
                 // retry details for the approval dialog.
+                retrySuccess = onSuccess
                 handlePermissionRequired(e, url, type, account)
             } catch (e: Exception) {
                 // Surface inline in the add dialog rather than the snackbar so
@@ -455,20 +456,30 @@ class FeedSettingsViewModel @Inject constructor(
         )
     }
 
-    /** Grant the pending permission, then retry the source add that triggered it. */
+    // What the add that needed the permission does once it succeeds: the Add
+    // dialog stays open under the prompt and is closed by it.
+    private var retrySuccess: () -> Unit = {}
+
+    /**
+     * Grant the pending permission, then retry the source add that triggered
+     * it. A refusal shows in the Add dialog, which is still open with what was
+     * typed.
+     */
     fun allowPendingPermission() {
         val pending = _pendingPermission.value ?: return
+        val success = retrySuccess
         _pendingPermission.value = null
         viewModelScope.launch {
             try {
                 repository.grantPermission(pending.app, pending.permission)
-                addSource(pending.retryUrl, pending.retryType, pending.retryAccount)
+                addSource(pending.retryUrl, pending.retryType, pending.retryAccount, success)
             } catch (e: Exception) {
-                _error.value = e.toMochiError()
+                _addSourceError.value = e.toMochiError()
             }
         }
     }
 
+    /** Leave the add as it was: the Add dialog keeps what was typed. */
     fun denyPendingPermission() {
         _pendingPermission.value = null
     }

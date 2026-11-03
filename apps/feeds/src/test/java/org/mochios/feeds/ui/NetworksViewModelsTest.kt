@@ -27,6 +27,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
+import org.mochios.android.i18n.AppContext
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.feeds.api.FeedsApi
@@ -48,6 +49,8 @@ import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.assertIsOn
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithContentDescription
+import org.mochios.android.api.userMessage
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -105,8 +108,21 @@ class NetworksViewModelsTest {
     /** Whether the feed is private, so Publish to is refused with the reason. */
     @Volatile private var feedPrivate = false
 
+    /** Whether granting a permission is refused. */
+    @Volatile private var grantRefused = false
+
+    /** Answers the next source adds take, in order, before the usual one. */
+    private val addAnswers = ConcurrentLinkedQueue<MockResponse>()
+
+    private fun permissionRequired() = MockResponse().setResponseCode(403)
+        .setBody("""{"app": "feeds", "error": "permission_required", "permission": "url:blog.example", "restricted": false}""")
+
+    private fun feedRefused() = MockResponse().setResponseCode(502).setBody("""{"error": "Feed returned status 404"}""")
+
     @Before
     fun begin() {
+        // Errors are shown through userMessage(), which reads the app's catalogue.
+        AppContext.set(context)
         server = MockWebServer()
         server.dispatcher = object : Dispatcher() {
             override fun dispatch(request: RecordedRequest): MockResponse {
@@ -153,8 +169,10 @@ class NetworksViewModelsTest {
                         allowGate?.await(5, TimeUnit.SECONDS)
                         ok("""{"imported": 2, "more": false, "waiting": []}""")
                     }
-                    "/feeds/-/permissions/grant" -> ok("""{"status": "granted"}""")
-                    "/feeds/f1/-/sources/add" -> ok("""{"source": {"id": "s1"}, "ingested": 2}""")
+                    "/feeds/-/permissions/grant" -> if (grantRefused) {
+                        MockResponse().setResponseCode(403).setBody("""{"error": "Not allowed to grant that"}""")
+                    } else ok("""{"status": "granted"}""")
+                    "/feeds/f1/-/sources/add" -> addAnswers.poll() ?: ok("""{"source": {"id": "s1"}, "ingested": 2}""")
                     "/feeds/f1/-/sources/import" -> ok("""{"imported": 5, "more": false, "total": 5, "waiting": [{"server": "wasabi.example", "count": 1}]}""")
                     "/feeds/-/lookup" -> raw("""{"kind": "person", "network": "fediverse", "id": "https://there.example/u/a", "name": "Alice"}""")
                     "/feeds/-/people" -> ok("""{"people": [{"contact": "c", "name": "Zoe", "handle": "@zoe@there.example", "network": "fediverse"}, {"contact": "d", "name": "Adam", "handle": "@adam@there.example", "network": "fediverse"}]}""")
@@ -579,6 +597,78 @@ class NetworksViewModelsTest {
         model.loadPublish()
         until("the accounts") { model.publish.value != null }
         assertNull(model.refusal.value)
+    }
+    /** Opens the Add dialog, types an RSS address and adds it. */
+    private fun addThroughDialog(model: FeedSettingsViewModel) {
+        rule.setContent { SourcesTab(viewModel = model) }
+        rule.onNodeWithContentDescription("Add source").performClick()
+        rule.onNodeWithText("URL").performTextInput("https://blog.example/feed")
+        rule.onNodeWithText("Add").performClick()
+        until("the permission prompt") { model.pendingPermission.value != null }
+    }
+
+    private fun adds() = requests.count { it.first == "/feeds/f1/-/sources/add" }
+
+    @Test
+    fun `a source add that needs a permission keeps the Add dialog under the prompt, and Deny returns to it as typed`() {
+        addAnswers.add(permissionRequired())
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        addThroughDialog(model)
+        rule.onNodeWithText("Deny").performClick()
+        until("the prompt to go") { model.pendingPermission.value == null }
+        rule.onNodeWithText("https://blog.example/feed").assertIsDisplayed()
+        assertEquals(1, adds())
+    }
+
+    @Test
+    fun `Allow re-runs the add, and its refusal shows in the Add dialog with what was typed`() {
+        addAnswers.add(permissionRequired())
+        addAnswers.add(feedRefused())
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        addThroughDialog(model)
+        rule.onNodeWithText("Allow").performClick()
+        until("the refusal") { model.addSourceError.value != null }
+        assertEquals(2, adds())
+        rule.onNodeWithText("https://blog.example/feed").assertIsDisplayed()
+        rule.onNodeWithText(model.addSourceError.value!!.userMessage()).assertIsDisplayed()
+    }
+
+    @Test
+    fun `Allow re-runs the add, and the Add dialog closes once it is added`() {
+        addAnswers.add(permissionRequired())
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        addThroughDialog(model)
+        rule.onNodeWithText("Allow").performClick()
+        until("the add") { adds() == 2 }
+        until("the dialog to close") { rule.onAllNodesWithText("https://blog.example/feed").fetchSemanticsNodes().isEmpty() }
+        assertNull(model.addSourceError.value)
+    }
+
+    @Test
+    fun `a refused grant shows in the Add dialog, which keeps what was typed`() {
+        addAnswers.add(permissionRequired())
+        grantRefused = true
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        addThroughDialog(model)
+        rule.onNodeWithText("Allow").performClick()
+        until("the refusal") { model.addSourceError.value != null }
+        assertEquals("Not allowed to grant that", model.addSourceError.value!!.message)
+        assertEquals(1, adds())
+        rule.onNodeWithText("https://blog.example/feed").assertIsDisplayed()
+        rule.onNodeWithText("Not allowed to grant that").assertIsDisplayed()
+    }
+
+    @Test
+    fun `a fresh Add dialog starts without an earlier add's refusal`() {
+        addAnswers.add(feedRefused())
+        val model = FeedSettingsViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.addSource("https://blog.example/feed", "rss")
+        until("the refusal") { model.addSourceError.value != null }
+        val message = model.addSourceError.value!!.userMessage()
+        rule.setContent { SourcesTab(viewModel = model) }
+        rule.onNodeWithContentDescription("Add source").performClick()
+        rule.onNodeWithText("URL").assertIsDisplayed()
+        assertEquals(0, rule.onAllNodesWithText(message).fetchSemanticsNodes().size)
     }
 }
 
