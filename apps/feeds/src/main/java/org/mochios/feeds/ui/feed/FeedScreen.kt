@@ -280,6 +280,8 @@ fun FeedScreen(
             if (event == Lifecycle.Event.ON_RESUME) {
                 viewModel.reloadOnForeground()
                 feedListViewModel.onScreenResumed()
+            } else if (event == Lifecycle.Event.ON_PAUSE) {
+                feedListViewModel.onScreenPaused()
             }
         }
         feedLifecycleOwner.lifecycle.addObserver(observer)

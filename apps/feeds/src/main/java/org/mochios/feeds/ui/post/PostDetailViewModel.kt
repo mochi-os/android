@@ -516,7 +516,7 @@ class PostDetailViewModel @Inject constructor(
 
     private suspend fun refreshSilently() {
         try {
-            val result = repository.getPost(feedId, postId)
+            val result = repository.getPost(feedId, postId, shared = true)
             _post.value = result.post
             _permissions.value = result.permissions
             loadHosted(result.post)

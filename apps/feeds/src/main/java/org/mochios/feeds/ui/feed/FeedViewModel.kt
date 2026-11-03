@@ -577,7 +577,7 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteComment(postFeedId, postId, commentId)
-                refreshPostQuietly(postFeedId, postId)
+                patch(postId, postFeedId)
             } catch (_: Exception) {
                 // Silent — best-effort.
             }
@@ -586,7 +586,7 @@ class FeedViewModel @Inject constructor(
 
     // Re-fetch a single post and patch it in place without the refresh spinner.
     private suspend fun refreshPostQuietly(postFeedId: String, postId: String) {
-        val fresh = repository.getPost(postFeedId, postId).post
+        val fresh = repository.getPost(postFeedId, postId, shared = true).post
         _posts.value = _posts.value.map { existing ->
             if (existing.id != postId) existing else mergeRefreshedPost(existing, fresh)
         }
@@ -596,11 +596,7 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reactToComment(postFeedId, postId, commentId, reaction)
-                val fresh = repository.getPost(postFeedId, postId).post
-                _posts.value = _posts.value.map { existing ->
-                    if (existing.id != postId) existing
-                    else mergeRefreshedPost(existing, fresh)
-                }
+                patch(postId, postFeedId)
             } catch (_: Exception) {
                 // Silent — best-effort.
             }
@@ -718,12 +714,7 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.addTag(target, postId, label, qid)
-                // Refresh just this post's tags so the card's tag list reflects
-                // the addition without reloading the whole feed.
-                val updated = repository.getPostTags(target, postId)
-                _posts.value = _posts.value.map { post ->
-                    if (post.id == postId) post.copy(tags = updated) else post
-                }
+                patch(postId, target)
             } catch (_: Exception) {
                 // Best-effort, like reactToPost — a failed add simply doesn't appear.
             }
@@ -1052,16 +1043,19 @@ class FeedViewModel @Inject constructor(
      * changed: reloading the list instead would reorder it under the reader.
      * Waits [REFRESH_DEBOUNCE] first, so a burst of frames about one post - a
      * frame per tag as it is tagged - makes one fetch. A post that is not in
-     * the list has nothing to patch.
+     * the list has nothing to patch. An action of the reader's own patches
+     * through here too, naming the post's [feed], so its frame's echo and the
+     * action make one fetch between them.
      */
-    private fun patch(postId: String) {
+    private fun patch(postId: String, feed: String? = null) {
         patches.remove(postId)?.cancel()
         patches[postId] = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
             patches.remove(postId)
-            val post = _posts.value.find { it.id == postId } ?: return@launch
+            val post = _posts.value.find { listed -> listed.id == postId } ?: return@launch
+            val source = feed ?: post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { feedId }
             try {
-                refreshPostQuietly(post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { feedId }, postId)
+                refreshPostQuietly(source, postId)
             } catch (_: Exception) {
                 // The post keeps what it showed.
             }

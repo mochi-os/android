@@ -247,6 +247,23 @@ class FeedSocketsTest {
     }
 
     @Test
+    fun `the drawer covered by a post reads a deleted post's frame once, on coming back`() {
+        val drawer = drawer()
+        until { drawer.feeds.value.size == 3 && live.containsKey("feeds") && socket.isLive("feeds") }
+        settle()
+        drawer.onScreenResumed()
+        drawer.onScreenPaused()
+        val before = count("/feeds/-/info")
+        send("feeds", wrapped("f2", """{"type": "post/delete", "feed": "f2", "post": "x2"}"""))
+        settle()
+        assertEquals("a covered drawer reads nothing", before, count("/feeds/-/info"))
+        drawer.onScreenResumed()
+        until { count("/feeds/-/info") == before + 1 }
+        pass(500)
+        assertEquals("one read for the return", before + 1, count("/feeds/-/info"))
+    }
+
+    @Test
     fun `the drawer refreshes for a feed it lists and not for one held only as a source`() {
         val drawer = drawer()
         until { drawer.feeds.value.size == 3 && live.containsKey("feeds") && socket.isLive("feeds") }
