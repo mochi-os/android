@@ -476,10 +476,13 @@ private fun ProjectContent(
     var refreshPending by rememberSaveable { mutableStateOf(false) }
 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
-        if (refreshPending) {
-            refreshPending = false
-            viewModel.refresh()
-        }
+        val changed = refreshPending
+        refreshPending = false
+        viewModel.onScreenResumed(changed)
+    }
+
+    LifecycleEventEffect(Lifecycle.Event.ON_PAUSE) {
+        viewModel.onScreenPaused()
     }
 
     val createObject: (String?, Map<String, String>) -> Unit = { parent, presetValues ->
@@ -855,14 +858,14 @@ private fun ProjectContent(
                 // Close the sheet, then open the create form with the parent
                 // pre-selected. The form reads project.hierarchy and seeds the
                 // class to one that permits this parent.
-                viewModel.selectObject(null)
+                viewModel.selectObject(null, refresh = false)
                 createObject(parentId, emptyMap())
             },
             // The sheet gives way to the new-object form, filled from this
             // object; the return refreshes, as for any new object.
             onCopy = {
                 val id = uiState.selectedObjectId!!
-                viewModel.selectObject(null)
+                viewModel.selectObject(null, refresh = false)
                 refreshPending = true
                 onCopyObject(id)
             },

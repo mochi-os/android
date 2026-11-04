@@ -184,6 +184,26 @@ class ProjectViewModel @Inject constructor(
     /** The pending or in-flight project refresh; cancelled when a newer one starts. */
     private var projectJob: Job? = null
 
+    /** Set while [objectsJob] waits out its debounce, before its fetch starts. */
+    @Volatile
+    private var objectsPending = false
+
+    /** Set while [projectJob] waits out its debounce, before its fetch starts. */
+    @Volatile
+    private var projectPending = false
+
+    /** Set while another screen covers the board: frames then only mark it stale. */
+    @Volatile
+    private var hidden = false
+
+    /** Items changed while [hidden], to be read on coming back. */
+    @Volatile
+    private var objectsStale = false
+
+    /** The project's structure changed while [hidden], to be read on coming back. */
+    @Volatile
+    private var projectStale = false
+
     init {
         loadProject()
         subscribeWebSocket()
@@ -260,9 +280,52 @@ class ProjectViewModel @Inject constructor(
      */
     private fun refreshProject() {
         projectJob?.cancel()
+        if (objectsPending) {
+            objectsJob?.cancel()
+            objectsPending = false
+        }
+        projectPending = true
         projectJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
+            projectPending = false
             refreshSilently()
+        }
+    }
+
+    /**
+     * The board's ON_PAUSE: a create, copy or design screen opened over it, or
+     * the app left. Frames from now on only mark the board stale, and a
+     * refresh still waiting out its debounce is put off until [onScreenResumed].
+     */
+    fun onScreenPaused() {
+        hidden = true
+        if (projectPending) {
+            projectJob?.cancel()
+            projectPending = false
+            projectStale = true
+        }
+        if (objectsPending) {
+            objectsJob?.cancel()
+            objectsPending = false
+            objectsStale = true
+        }
+    }
+
+    /**
+     * The board's ON_RESUME. Reads once what changed while it was covered, or
+     * the whole project when [changed] says the screen that covered it wrote
+     * to the project; the first resume, as the board opens, reads nothing.
+     */
+    fun onScreenResumed(changed: Boolean = false) {
+        hidden = false
+        val project = changed || projectStale
+        val objects = objectsStale
+        projectStale = false
+        objectsStale = false
+        if (project) {
+            refreshProject()
+        } else if (objects) {
+            refreshObjects()
         }
     }
 
@@ -586,13 +649,20 @@ class ProjectViewModel @Inject constructor(
         return result
     }
 
-    fun selectObject(objectId: String?) {
+    /**
+     * Opens the sheet of [objectId], or closes it for null. Closing reads the
+     * items again unless [refresh] is false, for a sheet that gives way to a
+     * screen whose return reads the whole project anyway.
+     */
+    fun selectObject(objectId: String?, refresh: Boolean = true) {
         val closing = objectId == null && _uiState.value.selectedObjectId != null
         _uiState.value = _uiState.value.copy(selectedObjectId = objectId)
         // The detail sheet edits values through its own ViewModel, and local
         // writes don't reach the websocket (projects has no commit hook) — so
         // refresh on sheet close to reflect any field changes (card placement).
-        if (closing) refreshObjects()
+        if (closing && refresh) {
+            refreshObjects()
+        }
     }
 
     fun deleteObject(objectId: String) {
@@ -635,9 +705,14 @@ class ProjectViewModel @Inject constructor(
      * the object/update and object/ranks frames it echoes - makes one fetch.
      */
     private fun refreshObjects() {
+        if (projectPending) {
+            return
+        }
         objectsJob?.cancel()
+        objectsPending = true
         objectsJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
+            objectsPending = false
             refreshObjectsNow()
         }
     }
@@ -681,21 +756,33 @@ class ProjectViewModel @Inject constructor(
         // previous underscore names here never matched anything, so the board
         // ignored every push and cards only moved on a manual reload.
         val type = event.type ?: return
+        if (hidden) {
+            markStale(type)
+            return
+        }
         when {
-            type in setOf(
-                "object/create", "object/update", "object/delete",
-                "object/ranks", "values/update",
-            ) -> refreshObjects()
+            type in OBJECT_FRAMES -> refreshObjects()
             // Structure changes: board columns derive from field options, plus
             // views/classes/hierarchy — reload the whole project.
             // A reopened socket missed whatever was sent while it was down.
-            type == REOPEN ||
-                type == "project/update" || type == "project/resynced" ||
-                type == "hierarchy/set" ||
-                type.substringBefore("/") in setOf("class", "field", "option", "view") ->
-                refreshProject()
+            isProjectFrame(type) -> refreshProject()
         }
     }
+
+    /** Notes what a frame of [type] changed, for [onScreenResumed] to read. */
+    private fun markStale(type: String) {
+        if (type in OBJECT_FRAMES) {
+            objectsStale = true
+        } else if (isProjectFrame(type)) {
+            projectStale = true
+        }
+    }
+
+    private fun isProjectFrame(type: String): Boolean =
+        type == REOPEN ||
+            type == "project/update" || type == "project/resynced" ||
+            type == "hierarchy/set" ||
+            type.substringBefore("/") in PROJECT_FRAME_KINDS
 
     // ---- Helpers for views ----
 
@@ -984,6 +1071,15 @@ class ProjectViewModel @Inject constructor(
 
     private companion object {
         const val MAX_WARM_ROUNDS = 60
+
+        /** Frames that change the items alone. */
+        val OBJECT_FRAMES = setOf(
+            "object/create", "object/update", "object/delete",
+            "object/ranks", "values/update",
+        )
+
+        /** Kinds of frame that change the project's structure. */
+        val PROJECT_FRAME_KINDS = setOf("class", "field", "option", "view")
     }
 }
 
