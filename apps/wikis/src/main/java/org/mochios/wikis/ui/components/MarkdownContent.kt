@@ -191,8 +191,7 @@ fun MarkdownContent(
                 override fun afterSetText(textView: android.widget.TextView) {
                     if (missingLinksKey.isEmpty()) return
                     val text = textView.text as? Spannable ?: return
-                    val builder = if (text is SpannableStringBuilder) text
-                        else SpannableStringBuilder(text)
+                    val builder = text as? SpannableStringBuilder ?: SpannableStringBuilder(text)
 
                     val linkSpans: Array<LinkSpan> =
                         builder.getSpans(0, builder.length, LinkSpan::class.java)

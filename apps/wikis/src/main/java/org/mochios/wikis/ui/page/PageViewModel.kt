@@ -9,6 +9,9 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -20,6 +23,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.wikis.model.PageFetchResponse
@@ -93,6 +97,21 @@ class PageViewModel @Inject constructor(
 
     private var subscription: String? = null
 
+    /** The pending or in-flight quiet reload; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
+
+    /** Set while another screen, such as the comments, covers this one. */
+    @Volatile
+    private var hidden = false
+
+    /** A frame arrived while [hidden]; coming back reloads once for all of them. */
+    @Volatile
+    private var missed = false
+
+    /** The page was deleted here; frames about it are no longer this screen's. */
+    @Volatile
+    private var gone = false
+
     init {
         loadInfo()
         loadPage()
@@ -123,8 +142,80 @@ class PageViewModel @Inject constructor(
         // A reopened socket missed whatever was sent while it was down.
         when (event.type) {
             "wiki/update", "wiki/resynced", REOPEN -> {
-                loadInfo()
-                loadPage()
+                if (gone) {
+                    return
+                }
+                if (hidden) {
+                    missed = true
+                } else {
+                    refreshQuietly()
+                }
+            }
+        }
+    }
+
+    /** The screen's ON_PAUSE: frames wait for [onScreenResumed] instead of reloading. */
+    fun onScreenPaused() {
+        hidden = true
+    }
+
+    /** The screen's ON_RESUME: one reload for any frame that arrived while it was covered. */
+    fun onScreenResumed() {
+        hidden = false
+        if (missed && !gone) {
+            missed = false
+            refreshQuietly()
+        }
+    }
+
+    /**
+     * Reload the wiki info and the page without the spinner. Each call cancels
+     * the last and waits [REFRESH_DEBOUNCE], so a burst of frames makes one
+     * fetch of each.
+     */
+    private fun refreshQuietly() {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            try {
+                val info = repository.getInfo(wikiId)
+                _uiState.value = _uiState.value.copy(
+                    wiki = info.wiki,
+                    permissions = info.permissions ?: WikiPermissions(),
+                )
+                val response = repository.getPage(wikiId, slug)
+                if (!gone) {
+                    show(response)
+                }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+            }
+        }
+    }
+
+    /** Put a page answer on screen: the page, or that it does not exist. */
+    private fun show(response: PageFetchResponse) {
+        when (response) {
+            is PageFetchResponse.Page -> {
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    page = response.page,
+                    missingLinks = response.missingLinks ?: emptyList(),
+                    commentCount = response.commentCount ?: 0,
+                    notFound = false,
+                    error = null,
+                )
+            }
+            is PageFetchResponse.NotFound -> {
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    page = null,
+                    missingLinks = emptyList(),
+                    commentCount = 0,
+                    notFound = true,
+                    error = null,
+                )
             }
         }
     }
@@ -151,28 +242,8 @@ class PageViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, notFound = false, error = null)
             try {
-                when (val response = repository.getPage(wikiId, slug)) {
-                    is PageFetchResponse.Page -> {
-                        _uiState.value = _uiState.value.copy(
-                            isLoading = false,
-                            page = response.page,
-                            missingLinks = response.missingLinks ?: emptyList(),
-                            commentCount = response.commentCount ?: 0,
-                            notFound = false,
-                            error = null,
-                        )
-                    }
-                    is PageFetchResponse.NotFound -> {
-                        _uiState.value = _uiState.value.copy(
-                            isLoading = false,
-                            page = null,
-                            missingLinks = emptyList(),
-                            commentCount = 0,
-                            notFound = true,
-                            error = null,
-                        )
-                    }
-                }
+                val response = repository.getPage(wikiId, slug)
+                show(response)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -192,6 +263,10 @@ class PageViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {
                 repository.deletePage(wikiId, slug)
+                gone = true
+                refreshJob?.cancel()
+                subscription?.let { id -> webSocket.unsubscribe(id) }
+                subscription = null
                 _uiState.value = _uiState.value.copy(isDeleting = false)
                 _events.emit(PageViewEvent.Deleted)
             } catch (e: Exception) {
