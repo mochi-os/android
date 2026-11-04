@@ -141,6 +141,9 @@ class ChatViewModel @Inject constructor(
     /** The pending or in-flight [refresh]; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
 
+    /** The pending or in-flight [loadThread]; cancelled when a newer one starts. */
+    private var threadJob: Job? = null
+
     /** Who is typing, and the job that clears the line as each one lapses. */
     private val typists = Typists()
     private var typingJob: Job? = null
@@ -746,17 +749,25 @@ class ChatViewModel @Inject constructor(
     /** Open [root]'s thread: the message, and its replies as the server has them. */
     fun openThread(root: ChatMessage) {
         _uiState.value = _uiState.value.copy(thread = ThreadState(root = root))
-        loadThread()
+        loadThread(debounced = false)
     }
 
     fun closeThread() {
         _uiState.value = _uiState.value.copy(thread = null)
     }
 
-    /** The newest replies of the open thread, merged with those paged in. */
-    private fun loadThread() {
+    /**
+     * The newest replies of the open thread, merged with those paged in. Each
+     * call cancels the previous one; a [debounced] call waits [REFRESH_DEBOUNCE]
+     * first, so a reply's response and its echo frame make one fetch.
+     */
+    private fun loadThread(debounced: Boolean = true) {
         val root = _uiState.value.thread?.root ?: return
-        viewModelScope.launch {
+        threadJob?.cancel()
+        threadJob = viewModelScope.launch {
+            if (debounced) {
+                delay(REFRESH_DEBOUNCE)
+            }
             try {
                 val page = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE, thread = root.id)
                 val thread = _uiState.value.thread?.takeIf { it.root.id == root.id } ?: return@launch
@@ -776,6 +787,8 @@ class ChatViewModel @Inject constructor(
                         error = null,
                     ),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 val thread = _uiState.value.thread?.takeIf { it.root.id == root.id } ?: return@launch
                 _uiState.value = _uiState.value.copy(thread = thread.copy(isLoading = false, error = e.toMochiError()))
