@@ -17,6 +17,7 @@ import org.mochios.calendars.model.tint
 import org.mochios.calendars.ui.calendar.CARRIED
 import org.mochios.calendars.ui.calendar.DIM
 import org.mochios.calendars.ui.calendar.Look
+import org.mochios.calendars.ui.calendar.arrange
 import org.mochios.calendars.ui.calendar.band
 import org.mochios.calendars.ui.calendar.Mark
 import org.mochios.calendars.ui.calendar.days
@@ -225,37 +226,80 @@ class LookTest {
 
     @Test
     fun `a cell with no bars holds none`() {
-        assertNull(band(0, 16f, 2f, 78f, 26f, below = true))
+        assertNull(band(0, 16f, 2f, 78f, listOf(26f)))
     }
 
     @Test
     fun `bars that leave room for a timed entry take their own height`() {
         // Two bars, 34, and a gap and an entry beneath, 28: 62 of 78.
-        assertNull(band(2, 16f, 2f, 78f, 26f, below = true))
+        assertNull(band(2, 16f, 2f, 78f, listOf(26f)))
         // Four bars need 70, which a cell of 78 holds when there is nothing timed.
-        assertNull(band(4, 16f, 2f, 78f, 26f, below = false))
+        assertNull(band(4, 16f, 2f, 78f, emptyList()))
     }
 
     @Test
     fun `bars that would crowd out the timed entries are held to what is left`() {
         // Four bars need 70; 78 less a gap and an entry leaves 50.
-        assertEquals(50f, band(4, 16f, 2f, 78f, 26f, below = true))
+        assertEquals(50f, band(4, 16f, 2f, 78f, listOf(26f)))
     }
 
     @Test
     fun `bars that do not fit a cell with nothing timed are held to the cell`() {
-        assertEquals(78f, band(6, 16f, 2f, 78f, 26f, below = false))
+        assertEquals(78f, band(6, 16f, 2f, 78f, emptyList()))
     }
 
     @Test
     fun `held bars always keep one bar showing`() {
-        assertEquals(16f, band(3, 16f, 2f, 30f, 26f, below = true))
+        assertEquals(16f, band(3, 16f, 2f, 30f, listOf(26f)))
     }
 
     @Test
     fun `timed entries stacked above the bars are held to leave room for one bar`() {
         // Three timed entries need 82; 78 less a gap and a bar leaves 60.
-        assertEquals(60f, band(3, 26f, 2f, 78f, 16f, below = true))
+        assertEquals(60f, band(3, 26f, 2f, 78f, listOf(16f)))
+    }
+
+    @Test
+    fun `a group above two others leaves room for one entry of each`() {
+        // Four bars need 70; 100 less a gap and a timed entry and a gap and a bar leaves 54.
+        assertEquals(54f, band(4, 16f, 2f, 100f, listOf(26f, 16f)))
+        assertNull(band(2, 16f, 2f, 100f, listOf(26f, 16f)))
+    }
+
+    // ---- arrange ----
+
+    private val wednesday = LocalDate.of(2026, 9, 23)
+
+    /** An occurrence beginning on [first] at [start], drawn as a bar or a timed entry. */
+    private fun entry(event: String, first: LocalDate, start: Long, allday: Boolean, bar: Boolean = true) =
+        Instance(event = event, summary = event, start = start, allday = allday, date = if (allday) first.toString() else null) to
+            Look(bar = bar, time = !bar)
+
+    private fun arranged(entries: List<Pair<Instance, Look>>, allday: String): List<List<String>> {
+        val firsts = entries.associate { it.first.event to (it.first.date?.let(LocalDate::parse) ?: wednesday.minusDays(1)) }
+        return arrange(entries, wednesday, allday) { firsts.getValue(it.event) }.map { group -> group.map { it.first.event } }
+    }
+
+    @Test
+    fun `bars carried over from an earlier day lead the day though an all-day start is later`() {
+        // A birthday starts at midnight in UTC, after an overnight event that
+        // began the evening before west of there, and is named to come first.
+        val birthday = entry("a-birthday", wednesday, 1_790_121_600, allday = true)
+        val overnight = entry("overnight", wednesday.minusDays(1), 1_790_132_400, allday = false)
+        assertEquals(listOf(listOf("overnight", "a-birthday")), arranged(listOf(birthday, overnight), "first"))
+    }
+
+    @Test
+    fun `bars carried over from an earlier day lead the day with all-day events last`() {
+        val retreat = entry("retreat", wednesday.minusDays(1), 1_790_035_200, allday = true)
+        val flight = entry("flight", wednesday.minusDays(1), 1_790_107_200, allday = false)
+        val holiday = entry("holiday", wednesday, 1_790_121_600, allday = true)
+        val standup = entry("standup", wednesday, 1_790_154_000, allday = false, bar = false)
+        val all = listOf(standup, holiday, flight, retreat)
+        assertEquals(listOf(listOf("retreat", "flight", "holiday"), listOf("standup")), arranged(all, "first"))
+        assertEquals(listOf(listOf("retreat", "flight"), listOf("standup"), listOf("holiday")), arranged(all, "last"))
+        // With nothing carried over, the timed entries lead.
+        assertEquals(listOf(listOf("standup"), listOf("holiday")), arranged(listOf(standup, holiday), "last"))
     }
 
     // ---- stack ----
