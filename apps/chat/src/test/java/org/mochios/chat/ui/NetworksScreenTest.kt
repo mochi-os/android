@@ -408,6 +408,23 @@ class NetworksScreenTest {
     }
 
     @Test
+    fun `once the emoji are confirmed it waits on the other side, offering no mismatch to cancel them`() {
+        val acts = mutableListOf<String>()
+        rule.setContent {
+            VerificationDialog(
+                Verification(flow = "f", person = "@carol:m.example", name = "Carol", room = "!r", phase = "confirmed"),
+                acting = false,
+                onAct = { acts += it },
+                onClose = { acts += "close" },
+            )
+        }
+        rule.onNodeWithText("Waiting for the other device...").assertIsDisplayed()
+        rule.onNodeWithText("They match").assertDoesNotExist()
+        rule.onNodeWithText("They don't match").assertDoesNotExist()
+        assertEquals(emptyList<String>(), acts)
+    }
+
+    @Test
     fun `a request from another of the user's devices is accepted or declined`() {
         val acts = mutableListOf<String>()
         rule.setContent {
