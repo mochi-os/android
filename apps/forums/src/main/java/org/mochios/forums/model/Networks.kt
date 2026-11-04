@@ -14,6 +14,8 @@ data class Crosspost(
     val title: String = "",
     val forum: String = "",
     @SerializedName("forum_name") val forumName: String = "",
+    /** The forum's handle where it is a community on another network. */
+    val handle: String = "",
     val fingerprint: String = "",
 )
 

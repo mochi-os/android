@@ -31,6 +31,7 @@ import org.mochios.forums.R
 import org.mochios.forums.api.ForumTagCount
 import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Forum
+import org.mochios.forums.model.forumServer
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.rejectMessage
 import org.mochios.forums.repository.ForumsRepository
@@ -454,11 +455,13 @@ class ForumViewModel @Inject constructor(
                 // carry only the forum id — the card's "which forum is this?"
                 // line needs the name, which the same response already lists.
                 val names = r.forums.associate { forum -> forum.id to forum.name }
+                // And a community's server beside its name, as two communities can share one.
+                val servers = r.forums.associate { forum -> forum.id to forumServer(forum) }
                 _uiState.value = _uiState.value.copy(
                     forum = Forum(),
                     posts = r.posts.map { post ->
-                        if (post.forumName.isNotBlank()) post
-                        else post.copy(forumName = names[post.forum].orEmpty())
+                        val named = if (post.forumName.isNotBlank()) post else post.copy(forumName = names[post.forum].orEmpty())
+                        named.copy(forumServer = servers[post.forum].orEmpty())
                     },
                     canManage = false,
                     canModerate = false,

@@ -107,6 +107,8 @@ data class Post(
     @SerializedName("user_vote") val userVote: String = "",
     val attachments: List<PostAttachment> = emptyList(),
     val forumName: String = "",
+    /** The server of the post's forum where it is a community on another network. */
+    val forumServer: String = "",
     val tags: List<Tag> = emptyList(),
     val status: String = "",
     val locked: Boolean = false,

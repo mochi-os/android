@@ -48,6 +48,7 @@ import org.mochios.android.util.openWeb
 import org.mochios.forums.R
 import org.mochios.forums.model.Crosspost
 import org.mochios.forums.model.Post
+import org.mochios.forums.model.communityServer
 import org.mochios.forums.model.postEmbed
 
 private val IMAGE = Regex("\\.(avif|gif|jpe?g|png|webp)$", RegexOption.IGNORE_CASE)
@@ -229,8 +230,10 @@ internal fun Crossposts(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         crossposts.forEach { crosspost ->
+            // A community's server beside its name, as two can share one.
+            val server = communityServer(crosspost.handle, crosspost.forum)
             Text(
-                text = crosspost.forumName.ifEmpty { crosspost.title },
+                text = crosspost.forumName.ifEmpty { crosspost.title } + if (server.isEmpty()) "" else " · $server",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.primary,
                 maxLines = 1,

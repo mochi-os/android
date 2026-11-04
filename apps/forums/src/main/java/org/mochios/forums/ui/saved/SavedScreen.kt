@@ -24,7 +24,9 @@ import org.mochios.android.ui.components.SavedListScaffold
 import org.mochios.android.ui.components.SavedPostCard
 import org.mochios.android.ui.components.SavedPostFooter
 import org.mochios.forums.R
+import org.mochios.forums.model.communityServer
 import org.mochios.forums.model.forumPath
+import org.mochios.forums.ui.components.ForumLabel
 import org.mochios.forums.model.SavedItem
 
 @Composable
@@ -69,11 +71,7 @@ private fun SavedPostCardContent(
 
     SavedPostCard(onClick = onClick) {
         if (post.forumName.isNotBlank()) {
-            Text(
-                text = post.forumName,
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.primary,
-            )
+            ForumLabel(post.forumName, communityServer("", post.forum))
         }
         if (post.title.isNotBlank()) {
             Text(

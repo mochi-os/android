@@ -90,11 +90,11 @@ class CommunitiesViewModel @Inject constructor(
         }
     }
 
-    fun add(account: NetworkAccount) = change(account.id, R.string.forums_communities_add_failed) {
+    fun add(account: NetworkAccount) = change(lemmyKey("add", account.id), R.string.forums_communities_add_failed) {
         _events.emit(CommunitiesEvent.Added(repository.addCommunities(account.id)))
     }
 
-    fun import(account: NetworkAccount) = change(account.id, R.string.forums_import_failed) {
+    fun import(account: NetworkAccount) = change(lemmyKey("import", account.id), R.string.forums_import_failed) {
         _events.emit(CommunitiesEvent.Imported(repository.importCommunities(account.id)))
     }
 
@@ -119,3 +119,6 @@ class CommunitiesViewModel @Inject constructor(
         }
     }
 }
+
+/** The busy key of a linked Lemmy account's action, add or import: each its own, so the button tapped is the one that spins. */
+internal fun lemmyKey(action: String, account: String) = "$action/$account"

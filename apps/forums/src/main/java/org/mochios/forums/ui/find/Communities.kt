@@ -191,7 +191,10 @@ internal fun LemmyAccounts(
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Heading(stringResource(R.string.forums_communities_elsewhere))
         accounts.forEach { account ->
-            val working = account.id in busy
+            // The button tapped spins; the account's other one waits, as both write its communities.
+            val adding = lemmyKey("add", account.id) in busy
+            val importing = lemmyKey("import", account.id) in busy
+            val working = adding || importing
             Column(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
                 Text(account.identifier, style = MaterialTheme.typography.bodyMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Text(
@@ -202,12 +205,16 @@ internal fun LemmyAccounts(
                 Spacer(modifier = Modifier.padding(top = 4.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     MochiOutlinedButton(onClick = { onImport(account) }, enabled = !working) {
-                        Icon(Icons.Outlined.Download, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                        if (importing) {
+                            CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                        } else {
+                            Icon(Icons.Outlined.Download, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                        }
                         Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
                         Text(stringResource(R.string.forums_import_settings))
                     }
                     MochiButton(onClick = { onAdd(account) }, enabled = !working) {
-                        if (working) {
+                        if (adding) {
                             CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                         } else {
                             Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))

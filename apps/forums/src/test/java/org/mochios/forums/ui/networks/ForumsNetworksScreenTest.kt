@@ -8,7 +8,14 @@ package org.mochios.forums.ui.networks
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
 import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.semantics.ProgressBarRangeInfo
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsNotEnabled
+import androidx.compose.ui.test.hasAnyAncestor
+import androidx.compose.ui.test.hasAnyDescendant
+import androidx.compose.ui.test.hasClickAction
+import androidx.compose.ui.test.hasProgressBarRangeInfo
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithTag
@@ -29,6 +36,8 @@ import org.mochios.forums.model.NetworkAccount
 import org.mochios.forums.model.Post
 import org.mochios.forums.ui.components.CommunityDestination
 import org.mochios.forums.ui.components.Crossposts
+import org.mochios.forums.ui.components.ForumLabel
+import org.mochios.forums.ui.components.ForumTitle
 import org.mochios.forums.ui.components.destinationBanner
 import org.mochios.forums.ui.components.linkImage
 import org.mochios.forums.ui.components.PostLinkCard
@@ -211,5 +220,63 @@ class ForumsNetworksScreenTest {
         assertFalse(linkImage(Post(url = "https://there.example/story")))
         assertFalse(linkImage(Post(url = "https://there.example/share?url=https%3A%2F%2Fthere.example%2Fa.png")))
         assertFalse(linkImage(Post(url = "https://there.example/a.png", embed = """{"type": "text/html"}""")))
+    }
+
+    // The button tapped spins; the account's other one waits, as both write
+    // its communities.
+    @Test
+    fun `a Lemmy account's import spinning leaves add without a spinner`() {
+        val account = NetworkAccount(id = "l1", type = "lemmy", identifier = "me@lemmy.example")
+        rule.setContent { LemmyAccounts(accounts = listOf(account), busy = setOf("import/l1"), onAdd = {}, onImport = {}) }
+        val button = { name: String -> hasClickAction() and hasAnyDescendant(hasText(name)) }
+        val spinner = hasProgressBarRangeInfo(ProgressBarRangeInfo.Indeterminate)
+        rule.onAllNodes(spinner and hasAnyAncestor(button("Import settings")), useUnmergedTree = true).assertCountEquals(1)
+        rule.onAllNodes(spinner and hasAnyAncestor(button("Add communities")), useUnmergedTree = true).assertCountEquals(0)
+        rule.onNode(button("Add communities"), useUnmergedTree = true).assertIsNotEnabled()
+    }
+
+    @Test
+    fun `a Lemmy account's add spinning leaves import without a spinner`() {
+        val account = NetworkAccount(id = "l1", type = "lemmy", identifier = "me@lemmy.example")
+        rule.setContent { LemmyAccounts(accounts = listOf(account), busy = setOf("add/l1"), onAdd = {}, onImport = {}) }
+        val button = { name: String -> hasClickAction() and hasAnyDescendant(hasText(name)) }
+        val spinner = hasProgressBarRangeInfo(ProgressBarRangeInfo.Indeterminate)
+        rule.onAllNodes(spinner and hasAnyAncestor(button("Add communities")), useUnmergedTree = true).assertCountEquals(1)
+        rule.onAllNodes(spinner and hasAnyAncestor(button("Import settings")), useUnmergedTree = true).assertCountEquals(0)
+        rule.onNode(button("Import settings"), useUnmergedTree = true).assertIsNotEnabled()
+    }
+
+    // Two communities can share a title, so a community's screen titles it by
+    // its handle too, and lists and cross-posts name its server.
+    @Test
+    fun `a community's title carries its handle, and a forum of ours its name alone`() {
+        rule.setContent {
+            Column {
+                ForumTitle(name = "test", handle = "!test@lemmy.ml")
+                ForumTitle(name = "Ours", handle = "")
+            }
+        }
+        rule.onNodeWithText("!test@lemmy.ml").assertIsDisplayed()
+        rule.onNodeWithText("Ours").assertIsDisplayed()
+        rule.onAllNodesWithText("!", substring = true).assertCountEquals(1)
+    }
+
+    @Test
+    fun `a post in a list names its community's server beside the name`() {
+        rule.setContent {
+            Column {
+                ForumLabel("test", "lemmy.ml")
+                ForumLabel("Ours", "")
+            }
+        }
+        rule.onNodeWithText("lemmy.ml", substring = true).assertIsDisplayed()
+        rule.onAllNodesWithText("lemmy", substring = true).assertCountEquals(1)
+    }
+
+    @Test
+    fun `a cross-post in a community names its server`() {
+        val cross = Crosspost(post = "p2", title = "Linked", forum = "https://lemmy.ml/c/test", forumName = "test", handle = "test@lemmy.ml", fingerprint = "mZxJ7b43h")
+        rule.setContent { Crossposts(crossposts = listOf(cross), onOpen = {}) }
+        rule.onNodeWithText("test · lemmy.ml").assertIsDisplayed()
     }
 }

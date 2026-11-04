@@ -336,7 +336,7 @@ class ForumsNetworksViewModelsTest {
         until("the add") { sent("/forums/-/communities/add") != null }
         model.join("!books@lemmy.example", "")
         model.join("!books@lemmy.example", "")
-        assertEquals(setOf("l1", "join"), model.busy.value)
+        assertEquals(setOf("add/l1", "join"), model.busy.value)
         settle()
         assertNull(sent("/forums/-/communities/join"))
         gate.countDown()
