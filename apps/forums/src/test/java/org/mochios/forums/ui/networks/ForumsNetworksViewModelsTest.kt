@@ -68,6 +68,9 @@ class ForumsNetworksViewModelsTest {
     /** Whether the sensitive mark is refused. */
     @Volatile private var refuseSensitive = false
 
+    /** Whether a community's join is refused. */
+    @Volatile private var joinRefused = false
+
     /** Holds a Lemmy account's add back until a test lets it go. */
     @Volatile private var addGate: CountDownLatch? = null
 
@@ -95,7 +98,9 @@ class ForumsNetworksViewModelsTest {
                         {"id": "h1", "type": "fediverse", "identifier": "amy@here.example", "hosted": true},
                         {"id": "l1", "type": "lemmy", "identifier": "me@lemmy.example", "hosted": false},
                         {"id": "m1", "type": "mastodon", "identifier": "me@social.example", "hosted": false}]""")
-                    "/forums/-/communities/join" -> order.add("join").let { ok("""{"id": "c1", "fingerprint": "cfp", "name": "Books", "already_subscribed": false}""") }
+                    "/forums/-/communities/join" -> if (joinRefused) {
+                        MockResponse().setResponseCode(404).setBody("""{"error": "Community not found"}""")
+                    } else order.add("join").let { ok("""{"id": "c1", "fingerprint": "cfp", "name": "Books", "already_subscribed": false}""") }
                     "/forums/-/communities/add" -> {
                         order += "add"
                         addGate?.await(5, TimeUnit.SECONDS)
@@ -312,6 +317,24 @@ class ForumsNetworksViewModelsTest {
         assertEquals(1, requests.count { it.first == "/forums/-/communities/join" })
         // One at a time, in the order tapped: the join waited for the add's answer.
         assertEquals(listOf("add", "added", "join"), order)
+        job.cancel()
+    }
+
+    @Test
+    fun `a refused join says so and leaves the address, one that is joined clears it`() {
+        val model = CommunitiesViewModel(repository)
+        val events = mutableListOf<CommunitiesEvent>()
+        val job = CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { events.add(it) } }
+        until("the accounts") { model.hosted.value.isNotEmpty() }
+        joinRefused = true
+        var cleared = false
+        model.join("!none@lemmy.example", "") { cleared = true }
+        until("the refusal") { events.any { it is CommunitiesEvent.Failure } && model.busy.value.isEmpty() }
+        assertFalse(cleared)
+        joinRefused = false
+        model.join("!books@lemmy.example", "") { cleared = true }
+        until("the join") { events.any { it is CommunitiesEvent.Joined } }
+        assertTrue(cleared)
         job.cancel()
     }
 }

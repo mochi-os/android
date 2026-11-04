@@ -44,6 +44,7 @@ import org.mochios.feeds.ui.settings.PublishEvent
 import org.mochios.feeds.ui.settings.PublishingSection
 import org.mochios.feeds.ui.settings.PublishingViewModel
 import org.mochios.feeds.ui.settings.SourcesTab
+import org.mochios.feeds.ui.settings.FiltersSection
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsOff
 import androidx.compose.ui.test.assertIsOn
@@ -114,6 +115,10 @@ class NetworksViewModelsTest {
     /** Whether granting a permission is refused. */
     @Volatile private var grantRefused = false
 
+    /** Whether a report and a filter's add are refused. */
+    @Volatile private var reportRefused = false
+    @Volatile private var filterRefused = false
+
     /** Answers the next source adds take, in order, before the usual one. */
     private val addAnswers = ConcurrentLinkedQueue<MockResponse>()
 
@@ -148,7 +153,10 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/p1/pin" -> ok("""{"post": "p1", "pinned": 1700000000}""")
                     "/feeds/f1/-/p1/unpin" -> ok("""{"post": "p1", "pinned": 0}""")
                     "/feeds/f1/-/p1/boost" -> ok("""{"copies": [{"address": "@me2@here.example", "network": "fediverse", "remote": "y", "url": ""}]}""")
-                    "/feeds/f1/-/p1/c1/block", "/feeds/f1/-/p1/c1/mute", "/feeds/f1/-/p1/c1/report" -> ok("""{"done": "x"}""")
+                    "/feeds/f1/-/p1/c1/report" -> if (reportRefused) {
+                        MockResponse().setResponseCode(502).setBody("""{"error": "The report could not be delivered"}""")
+                    } else ok("""{"done": "x"}""")
+                    "/feeds/f1/-/p1/c1/block", "/feeds/f1/-/p1/c1/mute" -> ok("""{"done": "x"}""")
                     "/feeds/f1/-/p1/comment/create" -> ok("""{"comment": {"id": "c2"}}""")
                     "/feeds/-/read-all" -> ok("""{"ok": true, "read": 1, "feeds": 2}""")
                     "/feeds/f1/-/post/create" -> ok("""{"id": "p9"}""")
@@ -169,7 +177,9 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/import" -> raw(importAnswer)
                     "/feeds/f1/-/backups" -> raw("""{"files": ["posts-2026-11.jsonl"], "repository": "The repository could not be saved: bsky.example answered 400: RepoNotFound"}""")
                     "/feeds/f1/-/filters" -> ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}]}""")
-                    "/feeds/f1/-/filters/add" -> ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}, {"id": "z", "phrase": "mango"}]}""")
+                    "/feeds/f1/-/filters/add" -> if (filterRefused) {
+                        MockResponse().setResponseCode(400).setBody("""{"error": "Invalid phrase"}""")
+                    } else ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}, {"id": "z", "phrase": "mango"}]}""")
                     "/feeds/f1/-/sources" -> ok(sourcesAnswer)
                     "/feeds/f1/-/sources/allow" -> if (allowRefused) {
                         allowRefused = false
@@ -696,6 +706,39 @@ class NetworksViewModelsTest {
         gate.countDown()
         until("both saves") { requests.count { it.first == "/feeds/f1/-/publish/set" } == 2 && model.busy.value.isEmpty() }
         assertEquals(listOf("b2"), model.publish.value!!.publish)
+    }
+    @Test
+    fun `a report says whether the server took it, so a refused one keeps its dialog`() {
+        val model = detail()
+        reportRefused = true
+        var done: Boolean? = null
+        model.moderate("c1", "report", "Spam") { done = it }
+        until("the refusal") { done != null }
+        assertEquals(false, done)
+        reportRefused = false
+        done = null
+        model.moderate("c1", "report", "Spam") { done = it }
+        until("the report") { done != null }
+        assertEquals(true, done)
+    }
+
+    @Test
+    fun `a refused filter phrase stays in the field, and one the server takes is cleared`() {
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.loadFilters()
+        until("the filters") { model.filters.value.isNotEmpty() }
+        rule.setContent { FiltersSection(model) }
+        filterRefused = true
+        rule.onNodeWithText("Phrase to hide").performTextInput("mango")
+        rule.onNodeWithText("Add").performClick()
+        until("the refusal") { sent("/feeds/f1/-/filters/add") != null && model.busy.value.isEmpty() }
+        rule.onNodeWithText("mango").assertIsDisplayed()
+        filterRefused = false
+        rule.onNodeWithText("Add").performClick()
+        until("the filter") { model.filters.value.size == 3 }
+        assertEquals(0, rule.onAllNodesWithText("mango").fetchSemanticsNodes().count { node ->
+            node.config.contains(androidx.compose.ui.semantics.SemanticsProperties.EditableText)
+        })
     }
 }
 

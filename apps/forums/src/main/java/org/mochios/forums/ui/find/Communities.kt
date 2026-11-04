@@ -96,7 +96,7 @@ internal fun CommunitiesSections(
     if (hosted.isEmpty() && lemmy.isEmpty()) return
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
         if (hosted.isNotEmpty()) {
-            JoinCommunity(accounts = hosted, busy = "join" in busy, onJoin = { address, account -> viewModel.join(address, account) })
+            JoinCommunity(accounts = hosted, busy = "join" in busy, onJoin = { address, account, joined -> viewModel.join(address, account, joined) })
         }
         if (lemmy.isNotEmpty()) {
             LemmyAccounts(
@@ -123,7 +123,7 @@ private fun Heading(text: String) {
 internal fun JoinCommunity(
     accounts: List<NetworkAccount>,
     busy: Boolean,
-    onJoin: (address: String, account: String) -> Unit,
+    onJoin: (address: String, account: String, joined: () -> Unit) -> Unit,
 ) {
     var address by remember { mutableStateOf("") }
     var chosen by remember { mutableStateOf("") }
@@ -165,8 +165,8 @@ internal fun JoinCommunity(
             }
             MochiOutlinedButton(
                 onClick = {
-                    onJoin(address, account.id)
-                    address = ""
+                    // A refused address stays in the field.
+                    onJoin(address, account.id) { address = "" }
                 },
                 enabled = address.isNotBlank() && !busy,
             ) {

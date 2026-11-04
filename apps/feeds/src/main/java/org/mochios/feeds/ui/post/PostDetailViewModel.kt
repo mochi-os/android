@@ -456,7 +456,8 @@ class PostDetailViewModel @Inject constructor(
     }
 
     /** Block, mute or report the person on another network behind a comment. */
-    fun moderate(commentId: String, action: String, reason: String = "") {
+    /** Block, mute or report a commenter; [onDone] says whether the server took it. */
+    fun moderate(commentId: String, action: String, reason: String = "", onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.moderateCommenter(feedId, postId, commentId, action, reason.trim())
@@ -465,8 +466,10 @@ class PostDetailViewModel @Inject constructor(
                     "mute" -> R.string.feeds_commenter_muted
                     else -> R.string.feeds_commenter_reported
                 }
+                onDone(true)
             } catch (e: Exception) {
                 _actionError.value = e.toMochiError()
+                onDone(false)
             }
         }
     }

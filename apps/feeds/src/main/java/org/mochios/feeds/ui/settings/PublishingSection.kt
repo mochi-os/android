@@ -355,10 +355,8 @@ internal fun FiltersSection(viewModel: PublishingViewModel) {
             )
             Spacer(modifier = Modifier.width(8.dp))
             MochiButton(
-                onClick = {
-                    viewModel.addFilter(phrase)
-                    phrase = ""
-                },
+                // A refused phrase stays in the field.
+                onClick = { viewModel.addFilter(phrase) { phrase = "" } },
                 enabled = phrase.isNotBlank() && "filter" !in busy,
             ) {
                 if ("filter" in busy) {

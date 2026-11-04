@@ -403,6 +403,7 @@ internal fun PostDetailContent(
     val voting by viewModel.voting.collectAsState()
     // The comment whose author the owner is muting, blocking or reporting, and which.
     var moderating by remember { mutableStateOf<Pair<org.mochios.android.model.Comment, String>?>(null) }
+    var moderatingBusy by remember { mutableStateOf(false) }
 
     // A comment's chip opens the lightbox on the image it is about, comments
     // showing. Hosted here rather than in the gallery, whose lazy item may
@@ -586,10 +587,15 @@ internal fun PostDetailContent(
                 CommenterDialog(
                     action = action,
                     author = comment.name.ifEmpty { comment.authorId },
-                    onDismiss = { moderating = null },
+                    busy = moderatingBusy,
+                    onDismiss = { if (!moderatingBusy) moderating = null },
                     onConfirm = { reason ->
-                        moderating = null
-                        viewModel.moderate(comment.id, action, reason)
+                        // A refusal keeps the dialog, and the reason typed into it.
+                        moderatingBusy = true
+                        viewModel.moderate(comment.id, action, reason) { done ->
+                            moderatingBusy = false
+                            if (done) moderating = null
+                        }
                     },
                 )
             }

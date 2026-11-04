@@ -78,13 +78,14 @@ class CommunitiesViewModel @Inject constructor(
         }
     }
 
-    /** Join a community by `!name@host` or its address, as [account] (the first hosted account where empty). */
-    fun join(address: String, account: String) {
+    /** Join a community by `!name@host` or its address, as [account] (the first hosted account where empty); [onJoined] runs once it is joined. */
+    fun join(address: String, account: String, onJoined: () -> Unit = {}) {
         val value = address.trim()
         val chosen = account.ifEmpty { _hosted.value.firstOrNull()?.id.orEmpty() }
         if (value.isEmpty() || chosen.isEmpty()) return
         change("join", R.string.forums_join_failed) {
             val joined = repository.joinCommunity(value, chosen)
+            onJoined()
             _events.emit(CommunitiesEvent.Joined(joined.fingerprint.ifEmpty { joined.id }, joined.alreadySubscribed))
         }
     }

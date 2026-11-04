@@ -78,6 +78,10 @@ class NetworksViewModelsTest {
     @Volatile private var network = ""
     @Volatile private var members = """[{"id": "me", "name": "Me"}, {"id": "you", "name": "You"}]"""
     @Volatile private var status = "active"
+
+    /** Whether a rename and a member's add are refused. */
+    @Volatile private var renameRefused = false
+    @Volatile private var memberRefused = false
     @Volatile private var key = ""
 
     /** The friends New chat is offered. */
@@ -118,6 +122,12 @@ class NetworksViewModelsTest {
                             "receipts": [{"member": "you", "name": "You", "delivered": 10, "displayed": 8}]}""")
                     }
                     "/chat/c1/-/read" -> ok("""{"read": 4}""")
+                    "/chat/c1/-/rename" -> if (renameRefused) {
+                        MockResponse().setResponseCode(400).setBody("""{"error": "Invalid name"}""")
+                    } else ok("""{"success": true}""")
+                    "/chat/c1/-/member/add" -> if (memberRefused) {
+                        MockResponse().setResponseCode(400).setBody("""{"error": "Already a member"}""")
+                    } else ok("""{"success": true, "member": {"id": "carol", "name": "Carol"}}""")
                     "/chat/c1/-/typing" -> ok("""{"sent": true}""")
                     "/chat/c1/-/presence" -> ok("""{"member": "you", "status": "online", "message": "", "seen": 0}""")
                     "/chat/c1/-/send" -> ok("""{"id": "n1"}""")
@@ -502,5 +512,26 @@ class NetworksViewModelsTest {
         until("the cancel") { sent("/chat/-/encryption/act") != null }
         assertEquals("account=m1&flow=f&action=cancel", sent("/chat/-/encryption/act"))
         assertTrue(model.uiState.value.shown == null)
+    }
+
+    @Test
+    fun `a refused rename or member leaves the editor and the dialog open, and one taken closes them`() {
+        val model = org.mochios.chat.ui.settings.ChatSettingsViewModel(SavedStateHandle(mapOf("chatId" to "c1")), repository)
+        until("the chat") { model.uiState.value.chat.id == "c1" }
+        renameRefused = true
+        memberRefused = true
+        var renamed = false
+        var added = false
+        model.rename("Book club") { renamed = true }
+        model.addMember("carol") { added = true }
+        until("the refusals") { sent("/chat/c1/-/rename") != null && sent("/chat/c1/-/member/add") != null && !model.uiState.value.isSaving }
+        shadowOf(Looper.getMainLooper()).idleFor(100, TimeUnit.MILLISECONDS)
+        assertFalse(renamed)
+        assertFalse(added)
+        renameRefused = false
+        memberRefused = false
+        model.rename("Book club") { renamed = true }
+        model.addMember("carol") { added = true }
+        until("the changes") { renamed && added }
     }
 }

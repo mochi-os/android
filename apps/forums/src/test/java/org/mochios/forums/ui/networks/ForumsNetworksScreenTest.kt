@@ -110,13 +110,32 @@ class ForumsNetworksScreenTest {
     }
 
     @Test
+    fun `the address stays in the field until the community is joined`() {
+        var joined: (() -> Unit)? = null
+        rule.setContent {
+            JoinCommunity(
+                accounts = listOf(NetworkAccount(id = "h1", identifier = "amy@here.example")),
+                busy = false,
+                onJoin = { _, _, done -> joined = done },
+            )
+        }
+        rule.onNodeWithText("Community address").performTextInput("!books@lemmy.example")
+        rule.onNodeWithText("Join").performClick()
+        // Not joined yet, or refused: what was typed is kept.
+        rule.onNodeWithText("!books@lemmy.example").assertExists()
+        joined!!()
+        rule.waitForIdle()
+        rule.onNodeWithText("!books@lemmy.example").assertDoesNotExist()
+    }
+
+    @Test
     fun `a community is joined as the account chosen where there are several`() {
         var joined: Pair<String, String>? = null
         rule.setContent {
             JoinCommunity(
                 accounts = listOf(NetworkAccount(id = "h1", identifier = "amy@here.example"), NetworkAccount(id = "h2", identifier = "zed@here.example")),
                 busy = false,
-                onJoin = { address, account -> joined = address to account },
+                onJoin = { address, account, _ -> joined = address to account },
             )
         }
         rule.onNodeWithText("Community address").performTextInput("!books@lemmy.example")

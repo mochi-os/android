@@ -220,11 +220,13 @@ class PublishingViewModel @Inject constructor(
         return url to sessionManager.getTokenBlocking("feeds")
     }
 
-    fun addFilter(phrase: String) {
+    /** Add a keyword filter; [onAdded] runs once the server has it. */
+    fun addFilter(phrase: String, onAdded: () -> Unit = {}) {
         val value = phrase.trim()
         if (value.isEmpty()) return
         change("filter", R.string.feeds_filter_add_failed) {
             _filters.value = sorted(repository.addFilter(feedId, value.take(100)))
+            onAdded()
         }
     }
 
