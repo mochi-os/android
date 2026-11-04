@@ -11,18 +11,26 @@ import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
+import org.junit.Assert.assertSame
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.forums.model.Crosspost
+import org.mochios.forums.model.Destination
 import org.mochios.forums.model.NetworkAccount
 import org.mochios.forums.model.Post
+import org.mochios.forums.ui.components.CommunityDestination
 import org.mochios.forums.ui.components.Crossposts
+import org.mochios.forums.ui.components.destinationBanner
+import org.mochios.forums.ui.components.linkImage
 import org.mochios.forums.ui.components.PostLinkCard
 import org.mochios.forums.ui.components.SensitiveCover
 import org.mochios.forums.ui.find.JoinCommunity
@@ -160,5 +168,48 @@ class ForumsNetworksScreenTest {
         rule.onNodeWithText("Add communities").performClick()
         rule.onNodeWithText("Import settings").performClick()
         assertEquals(listOf("add l1", "import l1"), calls)
+    }
+
+    @Test
+    fun `a community's composer says where a post goes and as whom, and a forum of ours says nothing`() {
+        rule.setContent {
+            Column {
+                CommunityDestination(Destination("!books@lemmy.example", "@me@lemmy.example"))
+                CommunityDestination(null)
+            }
+        }
+        rule.onNodeWithText("Posts to !books@lemmy.example as @me@lemmy.example").assertIsDisplayed()
+        rule.onAllNodesWithText("Posts to", substring = true).assertCountEquals(1)
+    }
+
+    @Test
+    fun `a comment bar's banner carries the community's line above the reply it is for`() {
+        val reply: @androidx.compose.runtime.Composable () -> Unit = { Text("Replying to Bob") }
+        assertSame(reply, destinationBanner(null, reply))
+        val banner = destinationBanner(Destination("!books@lemmy.example", "@me@lemmy.example"), reply)!!
+        rule.setContent { banner() }
+        rule.onNodeWithText("Posts to !books@lemmy.example as @me@lemmy.example").assertIsDisplayed()
+        rule.onNodeWithText("Replying to Bob").assertIsDisplayed()
+    }
+
+    // A Lemmy image post's link is the image itself: shown as the picture, as
+    // its network shows it, never as a card naming its address.
+    @Test
+    fun `an image link shows as the image and not its address`() {
+        val image = "https://lemmy.example/pictrs/image/abc.jpeg"
+        rule.setContent { PostLinkCard(Post(id = "i", url = image, thumbnail = "https://lemmy.example/pictrs/image/small.jpeg")) }
+        rule.onNodeWithTag("post-link-image").assertExists()
+        rule.onAllNodesWithText(image).assertCountEquals(0)
+        rule.onAllNodesWithText("lemmy.example").assertCountEquals(0)
+    }
+
+    @Test
+    fun `an image link is known by its file, by Lemmy's image proxy, or by the type its network gave`() {
+        assertTrue(linkImage(Post(url = "https://lemmy.example/pictrs/image/abc.jpeg")))
+        assertTrue(linkImage(Post(url = "https://lemmy.example/api/v3/image_proxy?url=https%3A%2F%2Fthere.example%2Fa.png")))
+        assertTrue(linkImage(Post(url = "https://there.example/picture", embed = """{"type": "image/webp"}""")))
+        assertFalse(linkImage(Post(url = "https://there.example/story")))
+        assertFalse(linkImage(Post(url = "https://there.example/share?url=https%3A%2F%2Fthere.example%2Fa.png")))
+        assertFalse(linkImage(Post(url = "https://there.example/a.png", embed = """{"type": "text/html"}""")))
     }
 }

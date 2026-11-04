@@ -342,4 +342,5 @@
         <item quantity="other">Chaidh %s coimhearsnachd a chur ris</item>
     </plurals>
     <string name="forums_comment_op">Ùghdar</string>
+    <string name="forums_community_destination">Ga phostadh gu %1$s mar %2$s</string>
 </resources>

@@ -336,4 +336,5 @@
         <item quantity="other">Đã thêm %s cộng đồng</item>
     </plurals>
     <string name="forums_comment_op">Tác giả</string>
+    <string name="forums_community_destination">Đăng lên %1$s với tư cách %2$s</string>
 </resources>

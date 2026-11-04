@@ -338,4 +338,5 @@
         <item quantity="other">%s civak hatin zêdekirin</item>
     </plurals>
     <string name="forums_comment_op">Nivîskar</string>
+    <string name="forums_community_destination">Di %1$s de wekî %2$s tê weşandin</string>
 </resources>

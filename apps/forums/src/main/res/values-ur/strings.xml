@@ -338,4 +338,5 @@
         <item quantity="other">%s کمیونٹیز شامل کی گئیں</item>
     </plurals>
     <string name="forums_comment_op">مصنف</string>
+    <string name="forums_community_destination">%1$s میں %2$s کے طور پر پوسٹ ہوتا ہے</string>
 </resources>

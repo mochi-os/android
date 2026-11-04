@@ -338,4 +338,5 @@
         <item quantity="other">%s برادريون شامل ڪيون ويون</item>
     </plurals>
     <string name="forums_comment_op">ليکڪ</string>
+    <string name="forums_community_destination">%1$s ۾ %2$s طور پوسٽ ٿيندو</string>
 </resources>

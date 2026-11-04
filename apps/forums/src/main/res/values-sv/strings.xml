@@ -338,4 +338,5 @@
         <item quantity="other">Lade till %s gemenskaper</item>
     </plurals>
     <string name="forums_comment_op">Trådstartare</string>
+    <string name="forums_community_destination">Publiceras i %1$s som %2$s</string>
 </resources>

@@ -338,4 +338,5 @@
         <item quantity="other">U shtuan %s komunitete</item>
     </plurals>
     <string name="forums_comment_op">Autori</string>
+    <string name="forums_community_destination">Publikohet në %1$s si %2$s</string>
 </resources>

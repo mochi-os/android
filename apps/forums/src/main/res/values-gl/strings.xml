@@ -338,4 +338,5 @@
         <item quantity="other">Engadíronse %s comunidades</item>
     </plurals>
     <string name="forums_comment_op">Autor</string>
+    <string name="forums_community_destination">Publícase en %1$s como %2$s</string>
 </resources>

@@ -342,4 +342,5 @@
         <item quantity="other">Додано %s спільноти</item>
     </plurals>
     <string name="forums_comment_op">Автор</string>
+    <string name="forums_community_destination">Публікується в %1$s від імені %2$s</string>
 </resources>

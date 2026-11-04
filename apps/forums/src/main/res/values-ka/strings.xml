@@ -338,4 +338,5 @@
         <item quantity="other">დაემატა %s საზოგადოება</item>
     </plurals>
     <string name="forums_comment_op">ავტორი</string>
+    <string name="forums_community_destination">ქვეყნდება %1$s-ში, როგორც %2$s</string>
 </resources>

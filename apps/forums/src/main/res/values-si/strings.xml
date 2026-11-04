@@ -338,4 +338,5 @@
         <item quantity="other">ප්‍රජාවන් %sක් එක් කරන ලදී</item>
     </plurals>
     <string name="forums_comment_op">කතුවරයා</string>
+    <string name="forums_community_destination">%1$s වෙත %2$s ලෙස පළ කෙරේ</string>
 </resources>

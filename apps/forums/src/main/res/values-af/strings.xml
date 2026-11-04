@@ -338,4 +338,5 @@
         <item quantity="other">%s gemeenskappe bygevoeg</item>
     </plurals>
     <string name="forums_comment_op">Skrywer</string>
+    <string name="forums_community_destination">Plaas in %1$s as %2$s</string>
 </resources>

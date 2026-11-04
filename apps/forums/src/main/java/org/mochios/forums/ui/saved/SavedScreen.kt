@@ -24,6 +24,7 @@ import org.mochios.android.ui.components.SavedListScaffold
 import org.mochios.android.ui.components.SavedPostCard
 import org.mochios.android.ui.components.SavedPostFooter
 import org.mochios.forums.R
+import org.mochios.forums.model.forumPath
 import org.mochios.forums.model.SavedItem
 
 @Composable
@@ -52,7 +53,7 @@ fun SavedScreen(
     ) { item ->
         SavedPostCardContent(
             item = item,
-            onClick = { onOpenPost(item.post.forum, item.post.id) },
+            onClick = { onOpenPost(forumPath(item.post.forum), item.post.id) },
             onUnsave = { viewModel.remove(item.post.id) },
         )
     }

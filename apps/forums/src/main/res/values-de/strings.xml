@@ -338,4 +338,5 @@
         <item quantity="other">%s Gemeinschaften hinzugefügt</item>
     </plurals>
     <string name="forums_comment_op">Autor</string>
+    <string name="forums_community_destination">Wird in %1$s als %2$s veröffentlicht</string>
 </resources>

@@ -338,4 +338,5 @@
         <item quantity="other">%s ਭਾਈਚਾਰੇ ਜੋੜੇ ਗਏ</item>
     </plurals>
     <string name="forums_comment_op">ਲੇਖਕ</string>
+    <string name="forums_community_destination">%1$s ਵਿੱਚ %2$s ਵਜੋਂ ਪੋਸਟ ਹੁੰਦਾ ਹੈ</string>
 </resources>

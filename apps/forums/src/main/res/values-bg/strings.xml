@@ -338,4 +338,5 @@
         <item quantity="other">Добавени са %s общности</item>
     </plurals>
     <string name="forums_comment_op">Автор</string>
+    <string name="forums_community_destination">Публикува се в %1$s като %2$s</string>
 </resources>

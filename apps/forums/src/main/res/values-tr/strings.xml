@@ -338,4 +338,5 @@
         <item quantity="other">%s topluluk eklendi</item>
     </plurals>
     <string name="forums_comment_op">Konu sahibi</string>
+    <string name="forums_community_destination">%1$s topluluğunda %2$s olarak paylaşılır</string>
 </resources>

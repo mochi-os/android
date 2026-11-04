@@ -338,4 +338,5 @@
         <item quantity="other">%s ಸಮುದಾಯಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ</item>
     </plurals>
     <string name="forums_comment_op">ಲೇಖಕ</string>
+    <string name="forums_community_destination">%1$s ಗೆ %2$s ಆಗಿ ಪೋಸ್ಟ್ ಆಗುತ್ತದೆ</string>
 </resources>

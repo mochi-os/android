@@ -344,4 +344,5 @@
         <item quantity="other">%s komunità miżjuda</item>
     </plurals>
     <string name="forums_comment_op">Awtur</string>
+    <string name="forums_community_destination">Jiġi ppubblikat fil-komunità %1$s bħala %2$s</string>
 </resources>

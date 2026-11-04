@@ -346,4 +346,5 @@
         <item quantity="other">تمت إضافة %s مجتمع</item>
     </plurals>
     <string name="forums_comment_op">صاحب المنشور</string>
+    <string name="forums_community_destination">يُنشر في %1$s باسم %2$s</string>
 </resources>

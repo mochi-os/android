@@ -23,6 +23,8 @@ data class PostEmbed(
     val description: String = "",
     val site: String = "",
     val page: String = "",
+    /** The link's media type where its network gave one (image/jpeg). */
+    val type: String = "",
 )
 
 /** A link post's card, decoded from its embed; empty for a post with none or a malformed one. */

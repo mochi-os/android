@@ -338,4 +338,5 @@
         <item quantity="other">%s ማህበረሰቦች ታክለዋል</item>
     </plurals>
     <string name="forums_comment_op">ደራሲ</string>
+    <string name="forums_community_destination">ወደ %1$s እንደ %2$s ይለጠፋል</string>
 </resources>

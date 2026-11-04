@@ -338,4 +338,5 @@
         <item quantity="other">%s samfélögum bætt við</item>
     </plurals>
     <string name="forums_comment_op">Höfundur</string>
+    <string name="forums_community_destination">Birtist í %1$s sem %2$s</string>
 </resources>

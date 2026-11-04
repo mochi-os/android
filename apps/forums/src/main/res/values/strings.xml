@@ -381,4 +381,5 @@
     <string name="forums_community_link">Link</string>
     <string name="forums_content">Content</string>
     <string name="forums_save_failed">Could not save</string>
+    <string name="forums_community_destination">Posts to %1$s as %2$s</string>
 </resources>

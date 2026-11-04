@@ -336,4 +336,5 @@
         <item quantity="other">커뮤니티 %s개를 추가했어요</item>
     </plurals>
     <string name="forums_comment_op">작성자</string>
+    <string name="forums_community_destination">%2$s(으)로 %1$s에 게시됩니다</string>
 </resources>

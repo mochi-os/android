@@ -346,4 +346,5 @@
         <item quantity="other">Ychwanegwyd %s cymuned</item>
     </plurals>
     <string name="forums_comment_op">Awdur</string>
+    <string name="forums_community_destination">Yn postio i %1$s fel %2$s</string>
 </resources>

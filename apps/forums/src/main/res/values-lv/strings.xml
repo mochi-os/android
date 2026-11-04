@@ -340,4 +340,5 @@
         <item quantity="other">Pievienotas %s kopienas</item>
     </plurals>
     <string name="forums_comment_op">Autors</string>
+    <string name="forums_community_destination">Tiek publicēts kopienā %1$s kā %2$s</string>
 </resources>

@@ -338,4 +338,5 @@
         <item quantity="other">%s ayllunaka yapxatata</item>
     </plurals>
     <string name="forums_comment_op">Qillqiri</string>
+    <string name="forums_community_destination">%1$s ukar %2$s sutimpi uñt\'ayatawa</string>
 </resources>

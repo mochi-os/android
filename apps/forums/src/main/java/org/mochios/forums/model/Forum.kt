@@ -54,6 +54,18 @@ data class Forum(
     val hosted: String = "",
     /** Whether the forum's posts are all sensitive. */
     val sensitive: Int = 0,
+    /** A community's handle, name@host, and where what is written in it goes. */
+    val handle: String = "",
+    val destination: Destination? = null,
+)
+
+/**
+ * Where a post or comment written in a community goes: the community as its
+ * network writes one (!name@host) and the account it goes out as.
+ */
+data class Destination(
+    val community: String = "",
+    val account: String = "",
 )
 
 data class Member(

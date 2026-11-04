@@ -337,4 +337,5 @@
         <item quantity="other">A fi àwọn àwùjọ %s kún</item>
     </plurals>
     <string name="forums_comment_op">Òǹkọ̀wé</string>
+    <string name="forums_community_destination">Ó ń fi ránṣẹ́ sí %1$s gẹ́gẹ́ bí %2$s</string>
 </resources>

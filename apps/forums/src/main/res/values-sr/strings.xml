@@ -340,4 +340,5 @@
         <item quantity="other">Додато %s заједница</item>
     </plurals>
     <string name="forums_comment_op">Аутор</string>
+    <string name="forums_community_destination">Објављује се у %1$s као %2$s</string>
 </resources>

@@ -129,6 +129,7 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.forums.R
+import org.mochios.forums.model.forumPath
 import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
@@ -346,7 +347,7 @@ private fun ForumContent(
     // One avatar address per author across the listed posts, each under the
     // forum its card names.
     val avatars = remember(uiState.posts, forumIdForCallbacks) {
-        authorAvatars(uiState.posts, { it.forum.ifBlank { forumIdForCallbacks } })
+        authorAvatars(uiState.posts, { forumPath(it.forum.ifBlank { forumIdForCallbacks }) })
     }
 
     val snackbar = remember { SnackbarHostState() }
@@ -730,14 +731,14 @@ private fun ForumContent(
                                 PostCard(
                                     post = post,
                                     // Aggregate rows each carry their own forum.
-                                    forumId = post.forum.ifBlank { forumIdForCallbacks },
+                                    forumId = forumPath(post.forum.ifBlank { forumIdForCallbacks }),
                                     avatars = avatars,
                                     isSaved = savedIds.contains(post.id),
                                     showForumName = isAll,
                                     onClick = {
                                         // Aggregate posts each belong to their own forum.
                                         val targetForum =
-                                            if (isAll) post.forum else forumIdForCallbacks
+                                            if (isAll) forumPath(post.forum) else forumIdForCallbacks
                                         onPostClick(targetForum, post.id)
                                     },
                                     onToggleSave = { viewModel.toggleSave(post) },

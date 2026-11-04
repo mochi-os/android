@@ -333,4 +333,5 @@
         <item quantity="other">Se agregaron %s comunidades</item>
     </plurals>
     <string name="forums_comment_op">Autor</string>
+    <string name="forums_community_destination">Se publica en %1$s como %2$s</string>
 </resources>

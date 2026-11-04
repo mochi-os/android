@@ -31,6 +31,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.forums.R
 import org.mochios.forums.api.ForumsApi
+import org.mochios.forums.model.Destination
 import org.mochios.forums.repository.ForumsRepository
 import org.mochios.forums.repository.SavedRepository
 import org.mochios.forums.ui.find.CommunitiesEvent
@@ -92,6 +93,10 @@ class ForumsNetworksViewModelsTest {
                     "/forums/f1/-/p1" -> ok("""{"forum": {"id": "f1"}, "post": $post, "comments": []}""")
                     "/forums/f1/-/p1/edit" -> ok("""{"success": true}""")
                     "/forums/-/blocks/add" -> ok("{}")
+                    "/forums/c2/-/information" -> ok("""{"forum": {"id": "https://lemmy.example/c/books", "name": "Books", "account": "l1", "handle": "books@lemmy.example",
+                        "destination": {"community": "!books@lemmy.example", "account": "@me@lemmy.example"}}, "permissions": {}}""")
+                    "/forums/c2/-/p2" -> ok("""{"forum": {"id": "https://lemmy.example/c/books", "account": "l1",
+                        "destination": {"community": "!books@lemmy.example", "account": "@me@lemmy.example"}}, "post": {"id": "p2", "forum": "c2", "title": "Linked", "body": "Text"}, "comments": []}""")
                     "/forums/f1/-/info" -> ok("""{"forum": {"id": "f1", "name": "Books", "account": "l1", "address": "!books@lemmy.example"}, "permissions": {}}""")
                     "/forums/f1/-/posts" -> ok("""{"forum": {"id": "f1", "fingerprint": "fp1", "name": "Books", "account": "l1", "address": "!books@lemmy.example"}, "posts": []}""")
                     "/forums/-/accounts/list" -> raw("""[{"id": "h2", "type": "fediverse", "identifier": "zed@here.example", "hosted": true},
@@ -185,6 +190,28 @@ class ForumsNetworksViewModelsTest {
         assertNull(part(second, "url"))
         assertNull(part(second, "sensitive"))
         assertNull(part(second, "language"))
+    }
+
+    // A post or comment written in a community goes to its server as the
+    // linked account, so the composers are told where and as whom; a forum of
+    // ours, whose information names none, gets no line.
+    @Test
+    fun `a new post in a community learns where it goes, and one in a forum of ours learns nothing`() {
+        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "c2")), context, repository)
+        until("the destination") { model.destination.value != null }
+        assertEquals(Destination("!books@lemmy.example", "@me@lemmy.example"), model.destination.value)
+
+        val ours = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), context, repository)
+        until("the information asked for") { requests.any { it.first == "/forums/f1/-/information" } }
+        repeat(5) { shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS); Thread.sleep(10) }
+        assertNull(ours.destination.value)
+    }
+
+    @Test
+    fun `a post in a community carries where its comments go`() {
+        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "c2", "postId" to "p2")), context, repository, session, socket)
+        until("the post") { model.uiState.value.post.id == "p2" }
+        assertEquals(Destination("!books@lemmy.example", "@me@lemmy.example"), model.uiState.value.forum.destination)
     }
 
     @Test
