@@ -123,6 +123,26 @@ class CrmViewModel @Inject constructor(
     /** The pending or in-flight crm refresh; cancelled when a newer one starts. */
     private var crmJob: Job? = null
 
+    /** Set while [objectsJob] waits out its debounce, before its fetch starts. */
+    @Volatile
+    private var objectsPending = false
+
+    /** Set while [crmJob] waits out its debounce, before its fetch starts. */
+    @Volatile
+    private var crmPending = false
+
+    /** Set while another screen covers the board: frames then only mark it stale. */
+    @Volatile
+    private var hidden = false
+
+    /** Items changed while [hidden], to be read on coming back. */
+    @Volatile
+    private var objectsStale = false
+
+    /** The crm's structure changed while [hidden], to be read on coming back. */
+    @Volatile
+    private var crmStale = false
+
     init {
         loadCrm()
         subscribeWebSocket()
@@ -199,9 +219,60 @@ class CrmViewModel @Inject constructor(
      */
     private fun refreshCrm() {
         crmJob?.cancel()
+        if (objectsPending) {
+            objectsJob?.cancel()
+            objectsPending = false
+        }
+        crmPending = true
         crmJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
+            crmPending = false
             refreshSilently()
+        }
+    }
+
+    /**
+     * Reads the whole crm again on the way back from a screen that wrote to
+     * it, through the same debounced job as the frames, so the two make one
+     * round of calls.
+     */
+    fun refreshOnReturn() {
+        refreshCrm()
+    }
+
+    /**
+     * The board's ON_PAUSE: a create, copy or design screen opened over it, or
+     * the app left. Frames from now on only mark the board stale, and a
+     * refresh still waiting out its debounce is put off until [onScreenResumed].
+     */
+    fun onScreenPaused() {
+        hidden = true
+        if (crmPending) {
+            crmJob?.cancel()
+            crmPending = false
+            crmStale = true
+        }
+        if (objectsPending) {
+            objectsJob?.cancel()
+            objectsPending = false
+            objectsStale = true
+        }
+    }
+
+    /**
+     * The board's ON_RESUME. Reads once what changed while it was covered; the
+     * first resume, as the board opens, reads nothing.
+     */
+    fun onScreenResumed() {
+        hidden = false
+        val crm = crmStale
+        val objects = objectsStale
+        crmStale = false
+        objectsStale = false
+        if (crm) {
+            refreshCrm()
+        } else if (objects) {
+            refreshObjects()
         }
     }
 
@@ -472,13 +543,20 @@ class CrmViewModel @Inject constructor(
         return result
     }
 
-    fun selectObject(objectId: String?) {
+    /**
+     * Opens the sheet of [objectId], or closes it for null. Closing reads the
+     * items again unless [refresh] is false, for a sheet that gives way to a
+     * screen whose return reads the whole crm anyway.
+     */
+    fun selectObject(objectId: String?, refresh: Boolean = true) {
         val closing = objectId == null && _uiState.value.selectedObjectId != null
         _uiState.value = _uiState.value.copy(selectedObjectId = objectId)
         // The detail sheet edits values through its own ViewModel, and local
         // writes don't reach the websocket (crm has no commit hook) — so
         // refresh on sheet close to reflect any field changes (card placement).
-        if (closing) refreshObjects()
+        if (closing && refresh) {
+            refreshObjects()
+        }
     }
 
     fun deleteObject(objectId: String) {
@@ -521,9 +599,14 @@ class CrmViewModel @Inject constructor(
      * the object/update and object/ranks frames it echoes - makes one fetch.
      */
     private fun refreshObjects() {
+        if (crmPending) {
+            return
+        }
         objectsJob?.cancel()
+        objectsPending = true
         objectsJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
+            objectsPending = false
             try {
                 val objects = repository.getObjects(crmId)
                 val watched = repository.getWatched(crmId)
@@ -551,21 +634,33 @@ class CrmViewModel @Inject constructor(
         // underscore names here never matched anything, so the board ignored
         // every push and cards only moved on a manual reload.
         val type = event.type ?: return
+        if (hidden) {
+            markStale(type)
+            return
+        }
         when {
-            type in setOf(
-                "object/create", "object/update", "object/delete",
-                "object/ranks", "values/update",
-            ) -> refreshObjects()
+            type in OBJECT_FRAMES -> refreshObjects()
             // Structure changes: board columns derive from field options, plus
             // views/classes/hierarchy — reload the whole crm.
             // A reopened socket missed whatever was sent while it was down.
-            type == REOPEN ||
-                type == "crm/update" || type == "crm/resynced" ||
-                type == "hierarchy/set" ||
-                type.substringBefore("/") in setOf("class", "field", "option", "view") ->
-                refreshCrm()
+            isCrmFrame(type) -> refreshCrm()
         }
     }
+
+    /** Notes what a frame of [type] changed, for [onScreenResumed] to read. */
+    private fun markStale(type: String) {
+        if (type in OBJECT_FRAMES) {
+            objectsStale = true
+        } else if (isCrmFrame(type)) {
+            crmStale = true
+        }
+    }
+
+    private fun isCrmFrame(type: String): Boolean =
+        type == REOPEN ||
+            type == "crm/update" || type == "crm/resynced" ||
+            type == "hierarchy/set" ||
+            type.substringBefore("/") in CRM_FRAME_KINDS
 
     // ---- Helpers for views ----
 
@@ -1101,6 +1196,15 @@ class CrmViewModel @Inject constructor(
     private companion object {
         /** Cap on export warm-up rounds, so a stuck stage can't spin forever. */
         const val MAX_WARM_ROUNDS = 60
+
+        /** Frames that change the items alone. */
+        val OBJECT_FRAMES = setOf(
+            "object/create", "object/update", "object/delete",
+            "object/ranks", "values/update",
+        )
+
+        /** Kinds of frame that change the crm's structure. */
+        val CRM_FRAME_KINDS = setOf("class", "field", "option", "view")
     }
 }
 

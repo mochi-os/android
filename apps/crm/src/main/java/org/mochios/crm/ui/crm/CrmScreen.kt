@@ -466,7 +466,13 @@ private fun CrmContent(
     var showFilters by remember { mutableStateOf(false) }
     // A column added or an object created on another screen is read again on
     // the way back: this screen's view model still holds what it had before.
-    val owe = rememberReturnRefresh { viewModel.refresh() }
+    val owe = rememberReturnRefresh { viewModel.refreshOnReturn() }
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        viewModel.onScreenResumed()
+    }
+    LifecycleEventEffect(Lifecycle.Event.ON_PAUSE) {
+        viewModel.onScreenPaused()
+    }
     val create: (Map<String, String>) -> Unit = { values ->
         owe()
         onCreateObject(values)
@@ -869,7 +875,7 @@ private fun CrmContent(
             // object; the return refreshes, as for any new object.
             onCopy = {
                 val id = uiState.selectedObjectId!!
-                viewModel.selectObject(null)
+                viewModel.selectObject(null, refresh = false)
                 owe()
                 onCopyObject(id)
             },

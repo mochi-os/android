@@ -63,7 +63,23 @@ class DesignViewModel @Inject constructor(
     private val reorderMutex = Mutex()
     val uiState: StateFlow<DesignUiState> = _uiState.asStateFlow()
 
+    /** Whether the screen has had its first ON_RESUME, which init's load covers. */
+    private var resumedBefore = false
+
     init {
+        loadCrm()
+    }
+
+    /**
+     * The screen's ON_RESUME. The first arrives as the screen opens, while
+     * init is already loading, so only a later one, back from a class or view
+     * editor, loads again.
+     */
+    fun onScreenResumed() {
+        if (!resumedBefore) {
+            resumedBefore = true
+            return
+        }
         loadCrm()
     }
 
