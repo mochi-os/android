@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">קאַלענדאַר־צוטריט איז אױסגעשאַלט פֿאַר דער דאָזיקער אַפּ. איר קענט אים אײַנשאַלטן אונטער דערלויבענישן אין די אײַנשטעלונגען פֿון דער אַפּ.</string>
     <string name="calendars_location_map">ווײַזן אויף דער מאַפּע</string>
     <string name="calendars_location_flight">נאָכפֿאָלגן דעם פֿלי</string>
+    <string name="calendars_preferences_week_numbers">ווײַזן וואָכן־נומערן</string>
 </resources>

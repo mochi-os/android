@@ -61,4 +61,5 @@
     <string name="calendars_subscribe_google_enable_action">Ativar contas do Google</string>
     <string name="calendars_location_map">Mostrar no mapa</string>
     <string name="calendars_location_flight">Acompanhar voo</string>
+    <string name="calendars_preferences_week_numbers">Mostrar os números das semanas</string>
 </resources>

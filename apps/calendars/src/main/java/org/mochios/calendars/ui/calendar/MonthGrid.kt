@@ -127,7 +127,8 @@ internal fun ends(anchor: LocalDate, day: LocalDate): Pair<LocalDate, LocalDate>
 
 /**
  * The month and multiweek views: [weeks] rows of seven days, each led by its
- * ISO week number and each cell holding every one of its occurrences from
+ * ISO week number when the preferences ask for them, and each cell holding
+ * every one of its occurrences from
  * its own top: one-line bars for the all-day and multi-day ones, and two
  * lines on the cell for each of the rest, the title above the time and
  * marks. The bars come first unless the user put all-day events last; each
@@ -334,7 +335,7 @@ fun MonthGrid(
                             val occurrences = byDay[day].orEmpty()
                             Cell(
                                 day = day,
-                                week = if (offset == 0) number(week) else null,
+                                week = if (offset == 0 && state.preferences.week.numbers) number(week) else null,
                                 today = today,
                                 allday = state.preferences.allday,
                                 outside = month != null && day.monthValue != month,

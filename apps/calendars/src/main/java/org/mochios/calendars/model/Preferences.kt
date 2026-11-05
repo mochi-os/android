@@ -11,6 +11,9 @@ data class Hours(val start: Int = 8, val finish: Int = 17)
 /** How much a multiweek view shows: [weeks] rows, [previous] of them before this one. */
 data class Multiweek(val weeks: Int = 4, val previous: Int = 0)
 
+/** Whether the month and multiweek views draw each week's ISO [numbers]. */
+data class Week(val numbers: Boolean = false)
+
 /**
  * The user's own calendar preferences, shared with the web through
  * `-/preferences/get` and `-/preferences/set`. [days] are the work days,
@@ -35,6 +38,7 @@ data class Preferences(
      */
     val calendar: String = "",
     val allday: String = "first",
+    val week: Week = Week(),
 )
 
 /**

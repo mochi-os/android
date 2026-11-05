@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">An kashe damar shiga kalanda don wannan manhajar. Za ka iya kunna ta a ƙarƙashin Izini a saitunan manhajar.</string>
     <string name="calendars_location_map">Nuna a taswira</string>
     <string name="calendars_location_flight">Bi diddigin jirgi</string>
+    <string name="calendars_preferences_week_numbers">Nuna lambobin mako</string>
 </resources>

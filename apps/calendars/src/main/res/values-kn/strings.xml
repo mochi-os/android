@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">ಈ ಆ್ಯಪ್‌ಗೆ ಕ್ಯಾಲೆಂಡರ್ ಪ್ರವೇಶವನ್ನು ಆಫ್ ಮಾಡಲಾಗಿದೆ. ಆ್ಯಪ್‌ನ ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅನುಮತಿಗಳು ಎಂಬಲ್ಲಿ ನೀವು ಅದನ್ನು ಆನ್ ಮಾಡಬಹುದು.</string>
     <string name="calendars_location_map">ನಕ್ಷೆಯಲ್ಲಿ ತೋರಿಸಿ</string>
     <string name="calendars_location_flight">ವಿಮಾನವನ್ನು ಟ್ರ್ಯಾಕ್ ಮಾಡಿ</string>
+    <string name="calendars_preferences_week_numbers">ವಾರದ ಸಂಖ್ಯೆಗಳನ್ನು ತೋರಿಸಿ</string>
 </resources>

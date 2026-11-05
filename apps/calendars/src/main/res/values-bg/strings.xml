@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Достъпът до календара е изключен за това приложение. Можете да го включите от „Разрешения“ в настройките на приложението.</string>
     <string name="calendars_location_map">Покажи на картата</string>
     <string name="calendars_location_flight">Проследи полета</string>
+    <string name="calendars_preferences_week_numbers">Показвай номерата на седмиците</string>
 </resources>

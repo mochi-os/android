@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">या ॲपसाठी कॅलेंडर प्रवेश बंद आहे. तुम्ही तो ॲपच्या सेटिंग्जमधील परवानग्या अंतर्गत चालू करू शकता.</string>
     <string name="calendars_location_map">नकाशावर दाखवा</string>
     <string name="calendars_location_flight">फ्लाइट ट्रॅक करा</string>
+    <string name="calendars_preferences_week_numbers">आठवडा क्रमांक दाखवा</string>
 </resources>

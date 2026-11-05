@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Kalendertoegang is vir hierdie app afgeskakel. Jy kan dit onder Toestemmings in die app se instellings aanskakel.</string>
     <string name="calendars_location_map">Wys op kaart</string>
     <string name="calendars_location_flight">Volg vlug</string>
+    <string name="calendars_preferences_week_numbers">Wys weeknommers</string>
 </resources>

@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">ఈ యాప్‌కు క్యాలెండర్ యాక్సెస్ ఆఫ్ చేయబడింది. మీరు దాన్ని యాప్ సెట్టింగ్‌లలోని అనుమతులు కింద ఆన్ చేయవచ్చు.</string>
     <string name="calendars_location_map">మ్యాప్‌లో చూపించు</string>
     <string name="calendars_location_flight">విమానాన్ని ట్రాక్ చేయి</string>
+    <string name="calendars_preferences_week_numbers">వారం సంఖ్యలను చూపించు</string>
 </resources>

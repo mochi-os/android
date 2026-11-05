@@ -289,4 +289,5 @@
     <string name="calendars_sync_permission_blocked">Pristup kalendaru isključen je za ovu aplikaciju. Možete ga uključiti u odjeljku Dopuštenja u postavkama aplikacije.</string>
     <string name="calendars_location_map">Prikaži na karti</string>
     <string name="calendars_location_flight">Prati let</string>
+    <string name="calendars_preferences_week_numbers">Prikaži brojeve tjedana</string>
 </resources>

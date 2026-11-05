@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">Akses kalendar dimatikan untuk apl ini. Anda boleh menghidupkannya di bawah Kebenaran dalam tetapan apl.</string>
     <string name="calendars_location_map">Tunjukkan pada peta</string>
     <string name="calendars_location_flight">Jejak penerbangan</string>
+    <string name="calendars_preferences_week_numbers">Tunjukkan nombor minggu</string>
 </resources>

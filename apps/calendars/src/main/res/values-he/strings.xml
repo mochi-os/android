@@ -299,4 +299,5 @@
     <string name="calendars_sync_permission_blocked">הגישה ליומן כבויה עבור האפליקציה הזו. ניתן להפעיל אותה בקטע \'הרשאות\' בהגדרות האפליקציה.</string>
     <string name="calendars_location_map">הצג במפה</string>
     <string name="calendars_location_flight">מעקב אחר טיסה</string>
+    <string name="calendars_preferences_week_numbers">הצג מספרי שבועות</string>
 </resources>

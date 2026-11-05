@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">دەستڕاگەیشتنی ڕۆژژمێر بۆ ئەم ئەپە ناچالاک کراوە. دەتوانیت لە ڕێکخستنەکانی ئەپەکەدا لە بەشی ڕێگەپێدانەکان چالاکی بکەیتەوە.</string>
     <string name="calendars_location_map">لەسەر نەخشە پیشان بدە</string>
     <string name="calendars_location_flight">بەدواداچوونی گەشتی ئاسمانی</string>
+    <string name="calendars_preferences_week_numbers">ژمارەی هەفتەکان پیشان بدە</string>
 </resources>

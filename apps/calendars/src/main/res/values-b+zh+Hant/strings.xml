@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">此應用程式的行事曆存取權已關閉。您可以在應用程式設定的「權限」中開啟。</string>
     <string name="calendars_location_map">在地圖上顯示</string>
     <string name="calendars_location_flight">追蹤航班</string>
+    <string name="calendars_preferences_week_numbers">顯示週數</string>
 </resources>

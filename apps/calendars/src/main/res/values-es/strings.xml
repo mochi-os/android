@@ -281,4 +281,5 @@
     <string name="calendars_sync_permission_blocked">El acceso al calendario está desactivado para esta aplicación. Puedes activarlo en Permisos, dentro de los ajustes de la aplicación.</string>
     <string name="calendars_location_map">Mostrar en el mapa</string>
     <string name="calendars_location_flight">Seguir el vuelo</string>
+    <string name="calendars_preferences_week_numbers">Mostrar los números de semana</string>
 </resources>

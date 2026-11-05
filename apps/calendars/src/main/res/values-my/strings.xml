@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">ဤအက်ပ်အတွက် ပြက္ခဒိန် ဝင်ရောက်ခွင့်ကို ပိတ်ထားသည်။ အက်ပ်၏ ဆက်တင်များရှိ ခွင့်ပြုချက်များ အောက်တွင် ၎င်းကို ဖွင့်နိုင်သည်။</string>
     <string name="calendars_location_map">မြေပုံပေါ်တွင် ပြရန်</string>
     <string name="calendars_location_flight">လေယာဉ်ခရီးစဉ်ကို ခြေရာခံရန်</string>
+    <string name="calendars_preferences_week_numbers">အပတ်နံပါတ်များကို ပြရန်</string>
 </resources>

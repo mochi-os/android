@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Slökkt er á aðgangi að dagatali fyrir þetta forrit. Þú getur kveikt á honum undir Heimildir í stillingum forritsins.</string>
     <string name="calendars_location_map">Sýna á korti</string>
     <string name="calendars_location_flight">Fylgjast með flugi</string>
+    <string name="calendars_preferences_week_numbers">Sýna vikunúmer</string>
 </resources>

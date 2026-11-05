@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">此应用的日历访问权限已关闭。您可以在应用设置的“权限”中开启。</string>
     <string name="calendars_location_map">在地图上显示</string>
     <string name="calendars_location_flight">追踪航班</string>
+    <string name="calendars_preferences_week_numbers">显示周数</string>
 </resources>

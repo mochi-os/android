@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Kaalandarii argachuun appii kanaaf cufameera. Qindaa\'inoota appichaa keessatti Hayyamoota jalatti banuu dandeessa.</string>
     <string name="calendars_location_map">Kaartaa irratti agarsiisi</string>
     <string name="calendars_location_flight">Balalii hordofi</string>
+    <string name="calendars_preferences_week_numbers">Lakkoofsota torbee agarsiisi</string>
 </resources>
