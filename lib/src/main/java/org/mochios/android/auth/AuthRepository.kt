@@ -5,6 +5,8 @@
 
 package org.mochios.android.auth
 
+import android.os.SystemClock
+import kotlinx.coroutines.flow.first
 import org.mochios.android.api.unwrapRaw
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -161,7 +163,32 @@ class AuthRepository @Inject constructor(
     /** Single `_/identity` round-trip yielding both the bound identity and the
      *  account status. Prefer this when you need both (e.g. bootstrap) so the
      *  request isn't issued twice. */
+    /**
+     * The signed-in identity. A read for the same server and session within
+     * [IDENTITY_LIFETIME] is answered from the last one: launch asks for it in
+     * the app's bootstrap and again for the home menu.
+     */
     suspend fun getIdentityInfo(): IdentityInfo {
+        val key = sessionManager.getServerUrlBlocking() + "|" +
+            sessionManager.currentToken.first().orEmpty()
+        val held = heldIdentity
+        if (held != null && held.key == key &&
+            SystemClock.elapsedRealtime() - held.at < IDENTITY_LIFETIME
+        ) {
+            return held.info
+        }
+        val info = readIdentityInfo()
+        heldIdentity = HeldIdentity(key, SystemClock.elapsedRealtime(), info)
+        return info
+    }
+
+    /** The last [getIdentityInfo] answer, for which server and session, and when. */
+    private class HeldIdentity(val key: String, val at: Long, val info: IdentityInfo)
+
+    @Volatile
+    private var heldIdentity: HeldIdentity? = null
+
+    private suspend fun readIdentityInfo(): IdentityInfo {
         val response = authApi.getIdentity().unwrapRaw()
         return IdentityInfo(
             identity = Identity(
@@ -274,5 +301,10 @@ class AuthRepository @Inject constructor(
                 break
             }
         }
+    }
+
+    private companion object {
+        /** How long, in ms, an identity read stands for the same session. */
+        const val IDENTITY_LIFETIME = 10_000L
     }
 }
