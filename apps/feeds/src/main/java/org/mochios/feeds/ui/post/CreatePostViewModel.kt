@@ -123,6 +123,11 @@ class CreatePostViewModel @Inject constructor(
     private val _postSuccess = MutableStateFlow(false)
     val postSuccess: StateFlow<Boolean> = _postSuccess.asStateFlow()
 
+    // What the post's copies on other networks went without, a line each in
+    // the user's language, said once it is made.
+    private val _unsent = MutableStateFlow<List<String>>(emptyList())
+    val unsent: StateFlow<List<String>> = _unsent.asStateFlow()
+
     /**
      * Where the chosen feed publishes: offered as switches on a public feed the
      * writer owns, preset from the feed's list. [accounts] is null until the
@@ -405,7 +410,7 @@ class CreatePostViewModel @Inject constructor(
                                 ?.let { put("new:$index", it) }
                         }
                     }
-                    tracker.track(newFileUris) {
+                    _unsent.value = tracker.track(newFileUris) {
                         repository.editPost(
                             feedId = feedId,
                             postId = postId,
@@ -423,7 +428,7 @@ class CreatePostViewModel @Inject constructor(
                     }
                 } else {
                     val uris = _attachments.value
-                    tracker.track(uris) {
+                    _unsent.value = tracker.track(uris) {
                         repository.createPostFromUris(
                             feedId = feedId,
                             body = bodyText,

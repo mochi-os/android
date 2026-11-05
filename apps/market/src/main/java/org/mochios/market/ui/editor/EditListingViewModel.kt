@@ -117,6 +117,9 @@ sealed class EditListingEvent {
     /** Emit when photos or files are added before the listing has a title, so
      * there is no listing row to attach them to yet. */
     data object TitleRequired : EditListingEvent()
+    /** What a copy of the listing on another network went without, worded by
+     * the server; shown so it outlasts the screen a publish leaves. */
+    data class Unsent(val text: String) : EditListingEvent()
 }
 
 @HiltViewModel
@@ -436,7 +439,8 @@ class EditListingViewModel @Inject constructor(
         try {
             val published = repository.publishListing(fields)
             _state.value = _state.value.copy(publishStatus = SaveStatus.SAVED)
-            _events.emit(EditListingEvent.Published(published.id))
+            published.unsent.orEmpty().forEach { _events.emit(EditListingEvent.Unsent(it)) }
+            _events.emit(EditListingEvent.Published(published.data.id))
         } catch (e: Exception) {
             _state.value = _state.value.copy(publishStatus = SaveStatus.ERROR)
             _events.emit(EditListingEvent.Error(e.toMochiError()))
@@ -501,7 +505,8 @@ class EditListingViewModel @Inject constructor(
                         photoTracker.expect(temps)
                         for (temp in temps) {
                             val photo = repository.uploadPhoto(listingId, temp, photoTracker)
-                            _state.value = _state.value.copy(photos = _state.value.photos + photo)
+                            _state.value = _state.value.copy(photos = _state.value.photos + photo.data)
+                            photo.unsent.orEmpty().forEach { _events.emit(EditListingEvent.Unsent(it)) }
                         }
                     } finally {
                         repository.discardStaged(temps)
@@ -514,12 +519,14 @@ class EditListingViewModel @Inject constructor(
     }
 
     fun deletePhoto(id: String) {
+        val listingId = _state.value.listingId
         viewModelScope.launch {
             try {
-                repository.deletePhoto(id)
+                val unsent = repository.deletePhoto(id, listingId)
                 _state.value = _state.value.copy(
                     photos = _state.value.photos.filterNot { it.id == id },
                 )
+                unsent.forEach { _events.emit(EditListingEvent.Unsent(it)) }
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             }
@@ -533,6 +540,7 @@ class EditListingViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.reorderPhotos(listingId, newOrder.map { it.id })
+                    .forEach { _events.emit(EditListingEvent.Unsent(it)) }
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             }

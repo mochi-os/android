@@ -101,7 +101,16 @@ data class PostImageResponse(
 data class PostCreateResponse(
     val id: String = "",
     val feed: Feed? = null,
-    val attachments: List<Attachment> = emptyList()
+    val attachments: List<Attachment> = emptyList(),
+    // What a copy on another network went without, a line each in the
+    // user's language; null where the server sends none.
+    val unsent: List<String>? = null
+)
+
+data class PostEditResponse(
+    val success: Boolean = false,
+    // What a copy on another network went without, as for a new post.
+    val unsent: List<String>? = null
 )
 
 data class SuccessResponse(
@@ -391,7 +400,7 @@ interface FeedsApi {
         @Path("feedId") feedId: String,
         @Path("postId") postId: String,
         @retrofit2.http.Body body: RequestBody
-    ): Response<ApiResponse<SuccessResponse>>
+    ): Response<ApiResponse<PostEditResponse>>
 
     @POST("{feedId}/-/{postId}/delete")
     suspend fun deletePost(

@@ -95,6 +95,9 @@ class NetworksViewModelsTest {
 
     @Volatile private var verifications = """[{"account": "m1", "flow": "f", "person": "@carol:m.example", "room": "!r", "phase": "compare", "started": true, "emoji": ["🐶"], "updated": 1}]"""
 
+    /** What the send answers. */
+    @Volatile private var sendAnswer = """{"id": "n1"}"""
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -130,7 +133,7 @@ class NetworksViewModelsTest {
                     } else ok("""{"success": true, "member": {"id": "carol", "name": "Carol"}}""")
                     "/chat/c1/-/typing" -> ok("""{"sent": true}""")
                     "/chat/c1/-/presence" -> ok("""{"member": "you", "status": "online", "message": "", "seen": 0}""")
-                    "/chat/c1/-/send" -> ok("""{"id": "n1"}""")
+                    "/chat/c1/-/send" -> ok(sendAnswer)
                     "/chat/c1/-/accept" -> {
                         status = "active"
                         ok("""{"id": "c1"}""")
@@ -343,6 +346,19 @@ class NetworksViewModelsTest {
         until("the reply") { sent("/chat/c1/-/send") != null }
         assertEquals("body=Hi&thread=r", sent("/chat/c1/-/send"))
         until("the draft") { model.uiState.value.thread?.draft == "" }
+    }
+
+    @Test
+    fun `what a message went without on another network is said`() {
+        sendAnswer = """{"id": "n1", "unsent": ["The message went without a.png"]}"""
+        val model = conversation()
+        val said = mutableListOf<String>()
+        val job = CoroutineScope(Dispatchers.Main).launch { model.events.collect { said.add(it) } }
+        model.setDraft("Hello")
+        model.sendMessage()
+        until("the line") { said.isNotEmpty() }
+        assertEquals(listOf("The message went without a.png"), said)
+        job.cancel()
     }
 
     @Test

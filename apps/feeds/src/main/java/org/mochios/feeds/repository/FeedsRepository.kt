@@ -638,7 +638,7 @@ class FeedsRepository @Inject constructor(
         accounts: List<String>? = null,
         features: PostFeatures? = null,
         poll: PollInput? = null,
-    ) {
+    ): List<String> {
         val files = fileStore.cacheFiles(uris)
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
@@ -655,7 +655,8 @@ class FeedsRepository @Inject constructor(
             if (poll != null) {
                 multipartBody.addFormDataPart("poll", Gson().toJson(poll))
             }
-            api.createPost(feedId, multipartBody.build()).unwrap()
+            // What a copy on another network went without, for the screen to say.
+            return api.createPost(feedId, multipartBody.build()).unwrap().unsent.orEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {
@@ -719,7 +720,7 @@ class FeedsRepository @Inject constructor(
         travellingDestination: PlaceData? = null,
         tracker: UploadTracker? = null,
         features: PostFeatures? = null,
-    ) {
+    ): List<String> {
         val files = fileStore.cacheFiles(newFiles)
         try {
             val builder = MultipartBody.Builder()
@@ -751,7 +752,7 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("captions", Gson().toJson(captions))
             }
             builder.features(features)
-            api.editPost(feedId, postId, builder.build()).unwrap()
+            return api.editPost(feedId, postId, builder.build()).unwrap().unsent.orEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {

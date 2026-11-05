@@ -68,6 +68,15 @@ import retrofit2.http.Query
  * `a.file(...)`. Static-asset and photo routes are fetched as plain URLs and
  * are not modelled here.
  */
+/**
+ * A change to a listing, and what its copies on other networks went without,
+ * a line each in the user's language; null where the server sends none.
+ */
+data class Changed<T>(
+    val data: T,
+    val unsent: List<String>? = null,
+)
+
 interface MarketApi {
 
     // ---- Accounts ----
@@ -229,7 +238,7 @@ interface MarketApi {
         @Field("closes") closes: String? = null,
         @Field("extend") extend: String? = null,
         @Field("extension") extension: String? = null,
-    ): Response<ApiResponse<Listing>>
+    ): Response<Changed<Listing>>
 
     /** Duplicate a listing as a new draft and return both ids. */
     @FormUrlEncoded
@@ -335,7 +344,7 @@ interface MarketApi {
     suspend fun uploadPhoto(
         @Part("listing") listing: RequestBody,
         @Part file: MultipartBody.Part,
-    ): Response<ApiResponse<Photo>>
+    ): Response<Changed<Photo>>
 
     /** List all photos for a listing (public). */
     @GET("-/photos/list")
@@ -352,12 +361,13 @@ interface MarketApi {
         @Query("listing") listing: String,
     ): Response<ApiResponse<PhotosListResponse>>
 
-    /** Delete a photo by id. */
+    /** Delete a photo by id; the listing is named so its copies on other networks follow. */
     @FormUrlEncoded
     @POST("-/photos/delete")
     suspend fun deletePhoto(
         @Field("id") id: String,
-    ): Response<ApiResponse<OkResponse>>
+        @Field("listing") listing: String,
+    ): Response<Changed<OkResponse>>
 
     /**
      * Reorder a listing's photos. `ids` is the JSON-encoded array of
@@ -368,7 +378,7 @@ interface MarketApi {
     suspend fun reorderPhotos(
         @Field("listing") listing: String,
         @Field("ids") idsJson: String,
-    ): Response<ApiResponse<OkResponse>>
+    ): Response<Changed<OkResponse>>
 
     // ---- Assets (digital downloads) ----
 

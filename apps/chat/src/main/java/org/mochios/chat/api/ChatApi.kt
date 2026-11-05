@@ -55,7 +55,12 @@ data class MessageListResponse(
     val receipts: List<ChatReceipt> = emptyList(),
 )
 
-data class SendMessageResponse(val id: String = "")
+data class SendMessageResponse(
+    val id: String = "",
+    // What a message on another network went without, a line each in the
+    // user's language; null where the server sends none.
+    val unsent: List<String>? = null,
+)
 
 data class MemberListResponse(val members: List<ChatMember> = emptyList())
 

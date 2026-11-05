@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.editor
 
+import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -51,6 +52,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -91,6 +93,7 @@ fun EditListingScreen(
     val assetUpload by viewModel.assetUpload.collectAsState()
     val snackbar = remember { SnackbarHostState() }
     val resources = LocalResources.current
+    val context = LocalContext.current
 
     // Surface ViewModel-emitted events onto the snackbar host and handle the
     // terminal events (deleted / published) by navigating back.
@@ -101,6 +104,8 @@ fun EditListingScreen(
                 is EditListingEvent.Error -> snackbar.showSnackbar(event.error.userMessage())
                 is EditListingEvent.Deleted -> navController.popBackStack()
                 is EditListingEvent.Published -> navController.popBackStack()
+                // A toast outlasts the screen a publish leaves.
+                is EditListingEvent.Unsent -> Toast.makeText(context, event.text, Toast.LENGTH_LONG).show()
                 is EditListingEvent.TitleRequired ->
                     snackbar.showSnackbar(resources.getString(R.string.market_editor_title_required))
             }

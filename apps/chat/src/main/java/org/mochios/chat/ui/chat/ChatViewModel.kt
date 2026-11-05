@@ -653,15 +653,18 @@ class ChatViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isSending = true)
             try {
                 if (attachments.isEmpty()) {
-                    repository.sendMessage(chatId, trimmed, reply = reply)
+                    val sent = repository.sendMessage(chatId, trimmed, reply = reply)
                     _uiState.value = _uiState.value.afterSend(sent = true)
+                    sent.unsent.orEmpty().forEach { _events.emit(it) }
                     refresh()
                 } else {
                     tracker.track {
-                        repository.sendMessageFromUris(
+                        val sent = repository.sendMessageFromUris(
                             chatId, trimmed, attachments, application, reply = reply, tracker = tracker,
                         )
                         _uiState.value = _uiState.value.afterSend(sent = true)
+                        // What the message went without on another network.
+                        sent.unsent.orEmpty().forEach { _events.emit(it) }
                         // Inside the upload, so the files in flight give way
                         // to the message with nothing blank between.
                         refresh()

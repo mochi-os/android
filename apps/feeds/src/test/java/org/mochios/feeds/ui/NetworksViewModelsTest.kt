@@ -62,6 +62,7 @@ import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
+import org.robolectric.shadows.ShadowToast
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.ConcurrentLinkedQueue
@@ -119,6 +120,9 @@ class NetworksViewModelsTest {
     @Volatile private var reportRefused = false
     @Volatile private var filterRefused = false
 
+    /** What a new post answers. */
+    @Volatile private var createAnswer = """{"id": "p9"}"""
+
     /** Answers the next source adds take, in order, before the usual one. */
     private val addAnswers = ConcurrentLinkedQueue<MockResponse>()
 
@@ -159,7 +163,7 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/p1/c1/block", "/feeds/f1/-/p1/c1/mute" -> ok("""{"done": "x"}""")
                     "/feeds/f1/-/p1/comment/create" -> ok("""{"comment": {"id": "c2"}}""")
                     "/feeds/-/read-all" -> ok("""{"ok": true, "read": 1, "feeds": 2}""")
-                    "/feeds/f1/-/post/create" -> ok("""{"id": "p9"}""")
+                    "/feeds/f1/-/post/create" -> ok(createAnswer)
                     "/feeds/f1/-/privacy" -> ok("""{"privacy": "private"}""")
                     "/feeds/f1/-/publish" -> if (feedPrivate) {
                         MockResponse().setResponseCode(403).setBody("""{"error": "Only a public feed publishes to other networks"}""")
@@ -356,6 +360,20 @@ class NetworksViewModelsTest {
         for (above in listOf("Post content", "Poll")) {
             assertTrue("Also post to, at $publish, sits below $above, at ${top(above)}", publish > top(above))
         }
+    }
+
+    @Test
+    fun `what a post's copies went without is said once it is made`() {
+        createAnswer = """{"id": "p9", "unsent": ["@me@social.example received the post without a.png"]}"""
+        val model = CreatePostViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, context)
+        until("the publish list") { model.publish.value != null }
+        rule.setContent { CreatePostScreen(onNavigateBack = {}, viewModel = model) }
+        model.setBody("Hello")
+        model.createPost()
+        until("the post") { model.postSuccess.value }
+        assertEquals(listOf("@me@social.example received the post without a.png"), model.unsent.value)
+        rule.waitForIdle()
+        assertEquals("@me@social.example received the post without a.png", ShadowToast.getTextOfLatestToast())
     }
 
     @Test
