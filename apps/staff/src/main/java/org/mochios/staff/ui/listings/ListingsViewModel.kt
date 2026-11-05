@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -22,6 +23,7 @@ import kotlinx.coroutines.flow.filter
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.staff.model.PendingListing
 import org.mochios.staff.repository.StaffRepository
 import org.mochios.staff.ws.StaffEvent
@@ -81,6 +83,9 @@ class ListingsViewModel @Inject constructor(
     val events: SharedFlow<ListingsEvent> = _events.asSharedFlow()
 
     private var loadJob: Job? = null
+
+    /** The pending [reloadLatest]; replaced by each newer staff event. */
+    private var eventJob: Job? = null
     private var moreJob: Job? = null
 
     /**
@@ -99,7 +104,7 @@ class ListingsViewModel @Inject constructor(
         viewModelScope.launch {
             eventsBus.events
                 .filter { it is StaffEvent.ModerationUpdated || it is StaffEvent.Unknown }
-                .collect { reload() }
+                .collect { _ -> reloadLatest() }
         }
     }
 
@@ -128,6 +133,18 @@ class ListingsViewModel @Inject constructor(
         _state.value = _state.value.copy(query = query)
         savedStateHandle[KEY_QUERY] = query
         reload()
+    }
+
+    /**
+     * [reload] after [REFRESH_DEBOUNCE] for a staff event, replacing the one
+     * pending, so a burst of events makes one request.
+     */
+    private fun reloadLatest() {
+        eventJob?.cancel()
+        eventJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            reload()
+        }
     }
 
     fun reload() {

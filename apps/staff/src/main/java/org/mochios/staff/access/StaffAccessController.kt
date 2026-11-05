@@ -39,9 +39,14 @@ class StaffAccessController @Inject constructor(
      */
     fun start(scope: CoroutineScope) {
         scope.launch {
+            var first = true
             sessionManager.boundIdentity
                 .distinctUntilChanged()
                 .collectLatest { identity ->
+                    if (!first) {
+                        staffRepository.forgetMe()
+                    }
+                    first = false
                     if (identity.isNullOrBlank()) {
                         Log.i(TAG, "boundIdentity cleared — disabling staff launcher")
                         disable()
