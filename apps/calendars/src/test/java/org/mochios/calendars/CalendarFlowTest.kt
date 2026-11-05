@@ -10,6 +10,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -315,6 +316,27 @@ class CalendarFlowTest {
         model.revisit()
         until { model.uiState.value.preferences.allday == "last" }
         assertEquals(2, reads())
+    }
+
+    @Test
+    fun `an event saved behind the editor is read once, as the screen comes back`() {
+        val model = model()
+        settle()
+        val start = listings().size
+        model.onScreenPaused()
+        model.onScreenResumed()
+        until { listings().size > start }
+        settle()
+        val back = listings().size - start
+        val before = listings().size
+        model.onScreenPaused()
+        runBlocking { repository.updateEvent("e1", "v$version", null, null) }
+        settle()
+        assertEquals(before, listings().size)
+        model.onScreenResumed()
+        until { listings().size > before }
+        settle()
+        assertEquals(before + back, listings().size)
     }
 
     @Test
