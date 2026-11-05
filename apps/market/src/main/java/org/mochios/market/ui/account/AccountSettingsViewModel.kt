@@ -225,7 +225,7 @@ class AccountSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(stripeStatusLoading = true)
             try {
-                val account = repo.getAccount()
+                val account = repo.getAccount(fresh = true)
                 val status = runCatching { repo.stripeStatus() }.getOrNull()
                 _state.value = _state.value.copy(
                     account = account,

@@ -133,9 +133,6 @@ class ListingDetailViewModel @Inject constructor(
 
     init {
         loadCategories()
-        // Hydrate the server-backed saved mirror so the bookmark toggle
-        // reflects cross-device saved state on first render.
-        viewModelScope.launch { savedRepository.refresh() }
     }
 
     private fun loadCategories() {

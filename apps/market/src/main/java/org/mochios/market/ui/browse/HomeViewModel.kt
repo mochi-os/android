@@ -49,11 +49,6 @@ class HomeViewModel @Inject constructor(
     private val _saveEvents = MutableSharedFlow<Boolean>(extraBufferCapacity = 4)
     val saveEvents: SharedFlow<Boolean> = _saveEvents.asSharedFlow()
 
-    /**
-     * Listings by id, so the recently-viewed strip renders without refetching.
-     */
-    private val listingCache = mutableMapOf<String, Listing>()
-
     private var searchJob: Job? = null
     private var currentPage: Int = 1
     private val pageLimit: Int = PAGE_LIMIT
@@ -142,7 +137,7 @@ class HomeViewModel @Inject constructor(
     }
 
     fun viewListing(listing: Listing) {
-        listingCache[listing.id.toString()] = listing
+        repo.remember(listing)
         viewModelScope.launch {
             recentStore.push(listing.id.toString())
         }
@@ -218,40 +213,8 @@ class HomeViewModel @Inject constructor(
     private fun loadRecentlyViewed() {
         viewModelScope.launch {
             recentStore.observe().collect { ids ->
-                // Split into cache hits (rendered immediately) and misses
-                // (resolved in one concurrent fan-out via the repository's
-                // batch helper). The previous loop walked the IDs serially
-                // — 20 round-trips per home load on a freshly opened app.
-                val resolved = arrayOfNulls<Listing>(ids.size)
-                val missingIndexes = mutableListOf<Int>()
-                val missingIds = mutableListOf<String>()
-                ids.forEachIndexed { index, id ->
-                    val cached = listingCache[id]
-                    if (cached != null) {
-                        resolved[index] = cached
-                    } else {
-                        missingIndexes += index
-                        missingIds += id
-                    }
-                }
-                if (missingIds.isNotEmpty()) {
-                    val fetched = repo.getListingsByIds(missingIds)
-                    // The batch helper drops failed individual fetches, so we
-                    // can't assume `fetched.size == missingIds.size`. Match by
-                    // listing id rather than positional index.
-                    val byId = fetched.associateBy { it.id }
-                    missingIndexes.forEach { slot ->
-                        val id = ids[slot]
-                        val listing = byId[id]
-                        if (listing != null) {
-                            listingCache[id] = listing
-                            resolved[slot] = listing
-                        }
-                    }
-                }
-                _state.value = _state.value.copy(
-                    recentListings = resolved.filterNotNull(),
-                )
+                val listings = repo.getListingsByIds(ids)
+                _state.value = _state.value.copy(recentListings = listings)
             }
         }
     }

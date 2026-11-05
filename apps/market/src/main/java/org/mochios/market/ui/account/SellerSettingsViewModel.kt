@@ -79,7 +79,7 @@ class SellerSettingsViewModel @Inject constructor(
         viewModelScope.launch {
             if (initial) _state.value = _state.value.copy(isLoading = true, error = null)
             try {
-                val account = repo.getAccount()
+                val account = repo.getAccount(fresh = !initial)
                 _state.value = _state.value.copy(account = account, isLoading = false)
                 if (account.onboarded == 1) {
                     refreshStripe()
@@ -183,7 +183,7 @@ class SellerSettingsViewModel @Inject constructor(
             _state.value = _state.value.copy(checking = true)
             try {
                 val status = repo.stripeStatus()
-                val account = repo.getAccount()
+                val account = repo.getAccount(fresh = true)
                 _state.value = _state.value.copy(
                     stripeStatus = status,
                     account = account,
