@@ -78,6 +78,10 @@ class NetworksViewModelsTest {
     @Volatile private var network = ""
     @Volatile private var members = """[{"id": "me", "name": "Me"}, {"id": "you", "name": "You"}]"""
     @Volatile private var status = "active"
+
+    /** Whether a rename and a member's add are refused. */
+    @Volatile private var renameRefused = false
+    @Volatile private var memberRefused = false
     @Volatile private var key = ""
 
     /** The friends New chat is offered. */
@@ -90,6 +94,9 @@ class NetworksViewModelsTest {
     @Volatile private var setups = 0
 
     @Volatile private var verifications = """[{"account": "m1", "flow": "f", "person": "@carol:m.example", "room": "!r", "phase": "compare", "started": true, "emoji": ["🐶"], "updated": 1}]"""
+
+    /** What the send answers. */
+    @Volatile private var sendAnswer = """{"id": "n1"}"""
 
     @Before
     fun begin() {
@@ -118,9 +125,15 @@ class NetworksViewModelsTest {
                             "receipts": [{"member": "you", "name": "You", "delivered": 10, "displayed": 8}]}""")
                     }
                     "/chat/c1/-/read" -> ok("""{"read": 4}""")
+                    "/chat/c1/-/rename" -> if (renameRefused) {
+                        MockResponse().setResponseCode(400).setBody("""{"error": "Invalid name"}""")
+                    } else ok("""{"success": true}""")
+                    "/chat/c1/-/member/add" -> if (memberRefused) {
+                        MockResponse().setResponseCode(400).setBody("""{"error": "Already a member"}""")
+                    } else ok("""{"success": true, "member": {"id": "carol", "name": "Carol"}}""")
                     "/chat/c1/-/typing" -> ok("""{"sent": true}""")
                     "/chat/c1/-/presence" -> ok("""{"member": "you", "status": "online", "message": "", "seen": 0}""")
-                    "/chat/c1/-/send" -> ok("""{"id": "n1"}""")
+                    "/chat/c1/-/send" -> ok(sendAnswer)
                     "/chat/c1/-/accept" -> {
                         status = "active"
                         ok("""{"id": "c1"}""")
@@ -290,9 +303,14 @@ class NetworksViewModelsTest {
         frames!!.send("""{"id": "t2", "member": "you", "name": "You", "body": "More", "created": 6, "thread": "r"}""")
         // Their message ends their typing, held as it was for thirty seconds.
         soon("the message to end the typing") { model.uiState.value.typing.isEmpty() }
-        until("the thread read again") { requests.count { it.query.contains("thread=r") } > threads }
-        until("the timeline read again") { requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") } > pages }
-        val read = requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") }
+        // The reply joins the open thread and its root's count as the frame has
+        // it, with neither read again.
+        until("the reply in the thread") { model.uiState.value.thread?.replies?.map { it.id } == listOf("t1", "t2") }
+        settle()
+        assertEquals(2, model.uiState.value.messages.single().replies)
+        assertEquals("the thread not read again", threads, requests.count { it.query.contains("thread=r") })
+        assertEquals("the timeline not read again", pages, requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") })
+        val read = pages
         frames!!.send("""{"event": "decrypted", "message": "r"}""")
         until("the decrypted message read again") { requests.count { it.path == "/chat/c1/-/messages" && !it.query.contains("thread=") } > read }
     }
@@ -328,6 +346,19 @@ class NetworksViewModelsTest {
         until("the reply") { sent("/chat/c1/-/send") != null }
         assertEquals("body=Hi&thread=r", sent("/chat/c1/-/send"))
         until("the draft") { model.uiState.value.thread?.draft == "" }
+    }
+
+    @Test
+    fun `what a message went without on another network is said`() {
+        sendAnswer = """{"id": "n1", "unsent": ["The message went without a.png"]}"""
+        val model = conversation()
+        val said = mutableListOf<String>()
+        val job = CoroutineScope(Dispatchers.Main).launch { model.events.collect { said.add(it) } }
+        model.setDraft("Hello")
+        model.sendMessage()
+        until("the line") { said.isNotEmpty() }
+        assertEquals(listOf("The message went without a.png"), said)
+        job.cancel()
     }
 
     @Test
@@ -497,5 +528,26 @@ class NetworksViewModelsTest {
         until("the cancel") { sent("/chat/-/encryption/act") != null }
         assertEquals("account=m1&flow=f&action=cancel", sent("/chat/-/encryption/act"))
         assertTrue(model.uiState.value.shown == null)
+    }
+
+    @Test
+    fun `a refused rename or member leaves the editor and the dialog open, and one taken closes them`() {
+        val model = org.mochios.chat.ui.settings.ChatSettingsViewModel(SavedStateHandle(mapOf("chatId" to "c1")), repository)
+        until("the chat") { model.uiState.value.chat.id == "c1" }
+        renameRefused = true
+        memberRefused = true
+        var renamed = false
+        var added = false
+        model.rename("Book club") { renamed = true }
+        model.addMember("carol") { added = true }
+        until("the refusals") { sent("/chat/c1/-/rename") != null && sent("/chat/c1/-/member/add") != null && !model.uiState.value.isSaving }
+        shadowOf(Looper.getMainLooper()).idleFor(100, TimeUnit.MILLISECONDS)
+        assertFalse(renamed)
+        assertFalse(added)
+        renameRefused = false
+        memberRefused = false
+        model.rename("Book club") { renamed = true }
+        model.addMember("carol") { added = true }
+        until("the changes") { renamed && added }
     }
 }

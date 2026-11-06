@@ -62,6 +62,38 @@ class SealedTest {
         assertNull(sealed().open(stored))
     }
 
+    /** A vault that counts how often the key is asked for. */
+    private class Counted(private val key: SecretKey) : Vault {
+        var asked = 0
+        override fun key(): SecretKey {
+            asked++
+            return key
+        }
+    }
+
+    @Test
+    fun `a value read again is not opened through the key again`() {
+        val vault = Counted(key())
+        val subject = Sealed(vault)
+        val stored = subject.seal("abc123")
+        assertEquals("abc123", subject.open(stored))
+        val once = vault.asked
+        repeat(5) { assertEquals("abc123", subject.open(stored)) }
+        assertEquals(once, vault.asked)
+    }
+
+    @Test
+    fun `a forgotten value is opened through the key again`() {
+        val vault = Counted(key())
+        val subject = Sealed(vault)
+        val stored = subject.seal("abc123")
+        subject.open(stored)
+        val once = vault.asked
+        subject.forget()
+        assertEquals("abc123", subject.open(stored))
+        assertEquals(once + 1, vault.asked)
+    }
+
     @Test
     fun `a truncated or corrupt sealed value reads as absent`() {
         val subject = sealed()

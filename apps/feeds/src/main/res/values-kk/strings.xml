@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s импортталды</string>
     <string name="feeds_imported_more">Әзірге %1$s импортталды; қалғаны кейін</string>
     <string name="feeds_import_sources_more">Әзірге %1$s дереккөз қосылды; қалғаны кейін қосылады</string>
+    <string name="feeds_waiting_title">Рұқсат күтілуде</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s адам</item>
+        <item quantity="other">%s адам</item>
+    </plurals>
     <string name="feeds_filters">Сүзгілер</string>
     <string name="feeds_filter_phrase">Жасырылатын фраза</string>
     <string name="feeds_filter_remove">%1$s жою</string>

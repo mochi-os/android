@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s ਆਯਾਤ ਕੀਤੇ ਗਏ</string>
     <string name="feeds_imported_more">ਹੁਣ ਤੱਕ %1$s ਆਯਾਤ ਕੀਤੇ ਗਏ; ਬਾਕੀ ਬਾਅਦ ਵਿੱਚ ਆਉਣਗੇ</string>
     <string name="feeds_import_sources_more">ਹੁਣ ਤੱਕ %1$s ਸਰੋਤ ਜੋੜੇ ਗਏ; ਬਾਕੀ ਬਾਅਦ ਵਿੱਚ ਜੋੜੇ ਜਾਣਗੇ</string>
+    <string name="feeds_waiting_title">ਇਜਾਜ਼ਤ ਦੀ ਉਡੀਕ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s ਵਿਅਕਤੀ</item>
+        <item quantity="other">%s ਲੋਕ</item>
+    </plurals>
     <string name="feeds_filters">ਫਿਲਟਰ</string>
     <string name="feeds_filter_phrase">ਲੁਕਾਉਣ ਲਈ ਵਾਕਾਂਸ਼</string>
     <string name="feeds_filter_remove">%1$s ਹਟਾਓ</string>

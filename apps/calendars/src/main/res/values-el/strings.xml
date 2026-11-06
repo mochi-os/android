@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Η πρόσβαση στο ημερολόγιο είναι απενεργοποιημένη για αυτήν την εφαρμογή. Μπορείτε να την ενεργοποιήσετε στην ενότητα Άδειες, στις ρυθμίσεις της εφαρμογής.</string>
     <string name="calendars_location_map">Εμφάνιση στον χάρτη</string>
     <string name="calendars_location_flight">Παρακολούθηση πτήσης</string>
+    <string name="calendars_preferences_week_numbers">Εμφάνιση αριθμών εβδομάδων</string>
 </resources>

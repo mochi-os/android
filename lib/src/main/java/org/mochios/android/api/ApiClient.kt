@@ -241,6 +241,8 @@ object ApiClient {
             })
             .addInterceptor(authInterceptor)
             .addInterceptor(invalidationInterceptor)
+            // A call marked @Slow waits as long as the server may run it.
+            .addInterceptor(slowInterceptor)
             .cookieJar(sessionManager.cookieJar)
 
         // At the network layer, so it logs what every interceptor above it

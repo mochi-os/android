@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s مورد وارد شد</string>
     <string name="feeds_imported_more">تاکنون %1$s مورد وارد شد؛ بقیه در پی می‌آیند</string>
     <string name="feeds_import_sources_more">تاکنون %1$s منبع افزوده شد؛ بقیه در پی می‌آیند</string>
+    <string name="feeds_waiting_title">در انتظار مجوز</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s نفر</item>
+        <item quantity="other">%s نفر</item>
+    </plurals>
     <string name="feeds_filters">فیلترها</string>
     <string name="feeds_filter_phrase">عبارت برای پنهان کردن</string>
     <string name="feeds_filter_remove">حذف %1$s</string>

@@ -131,7 +131,7 @@ class ProjectLoadTest {
             override suspend fun invalidate(app: String) {
             }
         })
-        repository = ProjectsRepository(api, FileStore(context), context)
+        repository = ProjectsRepository(api, FileStore(context), context, SessionManager(context))
     }
 
     @After

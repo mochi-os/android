@@ -76,6 +76,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberFileKind
 import org.mochios.forums.R
+import org.mochios.forums.ui.components.CommunityDestination
 
 /**
  * Compose or edit a forum post; edit mode when the back-stack carries a
@@ -100,6 +101,7 @@ fun NewPostScreen(
     val link by viewModel.link.collectAsState()
     val sensitive by viewModel.sensitive.collectAsState()
     val language by viewModel.language.collectAsState()
+    val destination by viewModel.destination.collectAsState()
     var showPreview by remember { mutableStateOf(false) }
     // The toolbar marks up a selection, so the cursor has to live here rather
     // than inside the field.
@@ -207,6 +209,11 @@ fun NewPostScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp)
         ) {
+            destination?.let {
+                CommunityDestination(it)
+                Spacer(Modifier.height(12.dp))
+            }
+
             MochiTextField(
                 value = title,
                 onValueChange = { value -> viewModel.setTitle(value) },

@@ -312,6 +312,11 @@
     <string name="feeds_imported">იმპორტირებულია %1$s</string>
     <string name="feeds_imported_more">ჯერჯერობით იმპორტირებულია %1$s; დანარჩენი მოგვიანებით</string>
     <string name="feeds_import_sources_more">ჯერჯერობით დაემატა %1$s წყარო; დანარჩენი მოგვიანებით დაემატება</string>
+    <string name="feeds_waiting_title">ნებართვის მოლოდინში</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s ადამიანი</item>
+        <item quantity="other">%s ადამიანი</item>
+    </plurals>
     <string name="feeds_filters">ფილტრები</string>
     <string name="feeds_filter_phrase">დასამალი ფრაზა</string>
     <string name="feeds_filter_remove">%1$s-ის წაშლა</string>

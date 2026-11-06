@@ -96,7 +96,7 @@ internal fun CommunitiesSections(
     if (hosted.isEmpty() && lemmy.isEmpty()) return
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
         if (hosted.isNotEmpty()) {
-            JoinCommunity(accounts = hosted, busy = busy == "join", onJoin = { address, account -> viewModel.join(address, account) })
+            JoinCommunity(accounts = hosted, busy = "join" in busy, onJoin = { address, account, joined -> viewModel.join(address, account, joined) })
         }
         if (lemmy.isNotEmpty()) {
             LemmyAccounts(
@@ -123,7 +123,7 @@ private fun Heading(text: String) {
 internal fun JoinCommunity(
     accounts: List<NetworkAccount>,
     busy: Boolean,
-    onJoin: (address: String, account: String) -> Unit,
+    onJoin: (address: String, account: String, joined: () -> Unit) -> Unit,
 ) {
     var address by remember { mutableStateOf("") }
     var chosen by remember { mutableStateOf("") }
@@ -165,8 +165,8 @@ internal fun JoinCommunity(
             }
             MochiOutlinedButton(
                 onClick = {
-                    onJoin(address, account.id)
-                    address = ""
+                    // A refused address stays in the field.
+                    onJoin(address, account.id) { address = "" }
                 },
                 enabled = address.isNotBlank() && !busy,
             ) {
@@ -184,14 +184,17 @@ internal fun JoinCommunity(
 @Composable
 internal fun LemmyAccounts(
     accounts: List<NetworkAccount>,
-    busy: String?,
+    busy: Set<String>,
     onAdd: (NetworkAccount) -> Unit,
     onImport: (NetworkAccount) -> Unit,
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Heading(stringResource(R.string.forums_communities_elsewhere))
         accounts.forEach { account ->
-            val working = busy == account.id
+            // The button tapped spins; the account's other one waits, as both write its communities.
+            val adding = lemmyKey("add", account.id) in busy
+            val importing = lemmyKey("import", account.id) in busy
+            val working = adding || importing
             Column(modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
                 Text(account.identifier, style = MaterialTheme.typography.bodyMedium, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Text(
@@ -201,13 +204,17 @@ internal fun LemmyAccounts(
                 )
                 Spacer(modifier = Modifier.padding(top = 4.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    MochiOutlinedButton(onClick = { onImport(account) }, enabled = busy == null) {
-                        Icon(Icons.Outlined.Download, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                    MochiOutlinedButton(onClick = { onImport(account) }, enabled = !working) {
+                        if (importing) {
+                            CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                        } else {
+                            Icon(Icons.Outlined.Download, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                        }
                         Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
                         Text(stringResource(R.string.forums_import_settings))
                     }
-                    MochiButton(onClick = { onAdd(account) }, enabled = busy == null) {
-                        if (working) {
+                    MochiButton(onClick = { onAdd(account) }, enabled = !working) {
+                        if (adding) {
                             CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                         } else {
                             Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))

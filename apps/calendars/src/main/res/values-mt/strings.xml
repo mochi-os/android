@@ -317,4 +317,5 @@
     <string name="calendars_sync_permission_blocked">L-aċċess għall-kalendarju huwa mitfi għal din l-app. Tista\' tixgħlu taħt Permessi fl-issettjar tal-app.</string>
     <string name="calendars_location_map">Uri fuq il-mappa</string>
     <string name="calendars_location_flight">Segwi t-titjira</string>
+    <string name="calendars_preferences_week_numbers">Uri n-numri tal-ġimgħat</string>
 </resources>

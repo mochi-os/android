@@ -5,6 +5,12 @@
 
 package org.mochios.projects.repository
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
+import org.mochios.android.auth.SessionManager
+import java.util.concurrent.atomic.AtomicInteger
 import android.content.Context
 import android.net.Uri
 import com.google.gson.JsonObject
@@ -53,6 +59,7 @@ class ProjectsRepository @Inject constructor(
     private val api: ProjectsApi,
     fileStore: FileStore,
     @param:ApplicationContext private val context: Context,
+    session: SessionManager,
 ) : FileRepository(fileStore) {
     // In-memory cache
     // Concurrent: the view models fill and read these from parallel coroutines.
@@ -61,6 +68,37 @@ class ProjectsRepository @Inject constructor(
     // Watched object ids for the local user, keyed by project, from the last objects fetch.
     private val watchedCache = ConcurrentHashMap<String, List<String>>()
     private val cacheMaxAge = 60_000L // 1 minute
+
+    // The caches hold one account's projects, keyed by id alone, so they are
+    // emptied whenever the signed-in identity changes: the next account on the
+    // phone was otherwise shown the previous one's within the minute. A read
+    // begun before the change is not stored after it.
+    private val generation = AtomicInteger()
+
+    /** The identity the caches hold answers for. */
+    @Volatile
+    private var holder: String? = null
+
+    init {
+        CoroutineScope(SupervisorJob() + Dispatchers.Default).launch {
+            session.boundIdentity.collect { identity ->
+                // From no account to one there is nothing to clear: signing
+                // out cleared it. Clearing then would also drop the first read
+                // of a cold start.
+                if (identity != holder) {
+                    if (holder != null) forget()
+                    holder = identity
+                }
+            }
+        }
+    }
+
+    private fun forget() {
+        generation.incrementAndGet()
+        projectInfoCache.clear()
+        objectsCache.clear()
+        watchedCache.clear()
+    }
 
     fun getCachedProjectInfo(projectId: String): ProjectDetails? {
         val (details, ts) = projectInfoCache[projectId] ?: return null
@@ -167,6 +205,7 @@ class ProjectsRepository @Inject constructor(
     // ---- Project Info ----
 
     suspend fun getProjectInfo(projectId: String): ProjectDetails {
+        val started = generation.get()
         val r = api.getProjectInfo(projectId).unwrap()
         val details = ProjectDetails(
             project = r.project,
@@ -177,6 +216,8 @@ class ProjectsRepository @Inject constructor(
             hierarchy = r.hierarchy
         )
         projectInfoCache[projectId] = details to System.currentTimeMillis()
+        // An account change that landed meanwhile takes it back out.
+        if (generation.get() != started) projectInfoCache.remove(projectId)
         return details
     }
 
@@ -209,9 +250,14 @@ class ProjectsRepository @Inject constructor(
     // ---- Objects ----
 
     suspend fun getObjects(projectId: String): List<ProjectObject> {
+        val started = generation.get()
         val response = api.getObjects(projectId).unwrap()
         objectsCache[projectId] = response.objects to System.currentTimeMillis()
         watchedCache[projectId] = response.watched
+        if (generation.get() != started) {
+            objectsCache.remove(projectId)
+            watchedCache.remove(projectId)
+        }
         return response.objects
     }
 

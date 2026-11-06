@@ -6,6 +6,9 @@
 package org.mochios.settings.ui.networks
 
 import android.os.Looper
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelStore
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.Dispatcher
@@ -36,6 +39,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.net.URLDecoder
 import java.util.concurrent.CopyOnWriteArrayList
+import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
 /**
@@ -54,6 +58,12 @@ class NetworksViewModelTest {
     /** Each request the server took: its path and its body, decoded. */
     private val requests = CopyOnWriteArrayList<Pair<String, String>>()
 
+    /** Holds an account test's answer back until a test lets it go. */
+    @Volatile private var testGate: CountDownLatch? = null
+
+    /** When the server began and finished each change, in order. */
+    private val order = CopyOnWriteArrayList<String>()
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -71,6 +81,16 @@ class NetworksViewModelTest {
                             json("""{"id": "l1"}""")
                         }
                     "settings/-/user/networks/account/aliases" -> json("""{"id": "f1"}""")
+                    "settings/-/user/networks/account/test" -> {
+                        order += "test"
+                        testGate?.await(5, TimeUnit.SECONDS)
+                        order += "tested"
+                        json("""{"success": true, "message": "Connected"}""")
+                    }
+                    "settings/-/user/networks/account/update" -> {
+                        order += "update"
+                        json("""{"id": "b1", "label": "Work"}""")
+                    }
                     "_/auth/oauth/exchange" -> json("""{"linked": "l2"}""")
                     else -> MockResponse().setResponseCode(404)
                 }
@@ -83,8 +103,16 @@ class NetworksViewModelTest {
         runBlocking { session.clearAll() }
     }
 
+    // Each test's view model is cleared when it ends. A model left running
+    // keeps collecting the link return, and when a later test changes it the
+    // model's edit waits on the main thread that test's setup is holding.
+    private val models = ViewModelStore()
+
     @After
-    fun end() = server.shutdown()
+    fun end() {
+        models.clear()
+        server.shutdown()
+    }
 
     private fun json(body: String) = MockResponse().setBody(body).setHeader("Content-Type", "application/json")
 
@@ -94,7 +122,11 @@ class NetworksViewModelTest {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val auth = AuthRepository(retrofit.create(AuthApi::class.java), retrofit.create(TokenApi::class.java), session)
-        return NetworksViewModel(retrofit.create(NetworksApi::class.java), session, auth)
+        val made = NetworksViewModel(retrofit.create(NetworksApi::class.java), session, auth)
+        return ViewModelProvider(models, object : ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
+            override fun <T : ViewModel> create(modelClass: Class<T>): T = made as T
+        })[NetworksViewModel::class.java]
     }
 
     /** Waits for [done], running the main looper the server's answers resume on. */
@@ -190,6 +222,35 @@ class NetworksViewModelTest {
         val body = sent("settings/-/user/networks/account/aliases").single()
         assertEquals("f1", body["id"])
         assertEquals("""["@a@b.example","@c@d.example"]""", body["aliases"])
+    }
+
+    /** Lets a request already on its way reach the server: one sent alongside would have by now. */
+    private fun settle() = repeat(30) {
+        shadowOf(Looper.getMainLooper()).idleFor(10, TimeUnit.MILLISECONDS)
+        Thread.sleep(10)
+    }
+
+    @Test
+    fun `a change made while another account's test runs waits for it, both showing busy, instead of being dropped`() {
+        val gate = CountDownLatch(1)
+        testGate = gate
+        val model = model()
+        until { model.uiState.value.data != null }
+        val account = NetworkAccount(id = "b1", type = "bluesky", hosted = true)
+        model.test(account)
+        until { requests.any { it.first == "settings/-/user/networks/account/test" } }
+        var saved = 0
+        model.rename(account, "Work") { saved++ }
+        model.rename(account, "Work") { saved++ }
+        assertEquals(setOf("b1", "profile"), model.uiState.value.busy)
+        settle()
+        assertTrue(sent("settings/-/user/networks/account/update").isEmpty())
+        gate.countDown()
+        until { saved > 0 && model.uiState.value.busy.isEmpty() }
+        assertEquals(listOf("Work"), sent("settings/-/user/networks/account/update").map { it["label"] })
+        assertEquals(1, saved)
+        // One at a time, in the order tapped: the change waited for the test's answer.
+        assertEquals(listOf("test", "tested", "update"), order)
     }
 
     private fun kotlinx.coroutines.CoroutineScope.launchCollect(model: NetworksViewModel, into: MutableList<String>) =

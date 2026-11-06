@@ -326,6 +326,13 @@
     <string name="feeds_imported">Zaimportowano: %1$s</string>
     <string name="feeds_imported_more">Dotąd zaimportowano: %1$s; reszta wkrótce</string>
     <string name="feeds_import_sources_more">Dotąd dodano źródła: %1$s; reszta wkrótce</string>
+    <string name="feeds_waiting_title">Oczekiwanie na uprawnienie</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s osoba</item>
+        <item quantity="few">%s osoby</item>
+        <item quantity="many">%s osób</item>
+        <item quantity="other">%s osoby</item>
+    </plurals>
     <string name="feeds_filters">Filtry</string>
     <string name="feeds_filter_phrase">Fraza do ukrycia</string>
     <string name="feeds_filter_remove">Usuń %1$s</string>

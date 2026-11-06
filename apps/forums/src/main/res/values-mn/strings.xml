@@ -338,4 +338,5 @@
         <item quantity="other">%s нийгэмлэг нэмэгдлээ</item>
     </plurals>
     <string name="forums_comment_op">Зохиогч</string>
+    <string name="forums_community_destination">%1$s-д %2$s нэрээр нийтлэгдэнэ</string>
 </resources>

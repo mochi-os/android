@@ -314,6 +314,11 @@
     <string name="feeds_imported">%1$s idxal edildi</string>
     <string name="feeds_imported_more">İndiyədək %1$s idxal edildi; qalanları ardınca gələcək</string>
     <string name="feeds_import_sources_more">İndiyədək %1$s mənbə əlavə edildi; qalanları ardınca gələcək</string>
+    <string name="feeds_waiting_title">İcazə gözlənilir</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s nəfər</item>
+        <item quantity="other">%s nəfər</item>
+    </plurals>
     <string name="feeds_filters">Filtrlər</string>
     <string name="feeds_filter_phrase">Gizlədiləcək ifadə</string>
     <string name="feeds_filter_remove">%1$s sil</string>

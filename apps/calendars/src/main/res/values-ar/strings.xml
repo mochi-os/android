@@ -331,4 +331,5 @@
     <string name="calendars_sync_permission_blocked">الوصول إلى التقويم متوقف لهذا التطبيق. يمكنك تشغيله ضمن الأذونات في إعدادات التطبيق.</string>
     <string name="calendars_location_map">عرض على الخريطة</string>
     <string name="calendars_location_flight">تتبّع الرحلة</string>
+    <string name="calendars_preferences_week_numbers">إظهار أرقام الأسابيع</string>
 </resources>

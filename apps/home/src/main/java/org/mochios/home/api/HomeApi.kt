@@ -6,8 +6,10 @@
 package org.mochios.home.api
 
 import com.google.gson.annotations.SerializedName
+import org.mochios.android.api.ApiResponse
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 /**
  * One app on the home screen as the server lists it. [link] is the path the
@@ -35,10 +37,20 @@ data class IconsResponse(
     @SerializedName("icon_background") val background: String? = null,
 )
 
+/** A person's style: the accent colour their avatar is ringed in, if any. */
+data class Style(val accent: String? = null)
+
 /** The home app's actions, at the server's root, where the home app is served. */
 interface HomeApi {
 
     /** The apps the user can open, after the server's role and visibility checks. */
     @GET("-/icons")
     suspend fun icons(): Response<IconsResponse>
+
+    /**
+     * A person's style, from the people app, which serves it to every app as
+     * it serves their avatar.
+     */
+    @GET("people/{person}/-/style")
+    suspend fun style(@Path("person") person: String): Response<ApiResponse<Style>>
 }

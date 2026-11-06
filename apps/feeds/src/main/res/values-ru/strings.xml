@@ -326,6 +326,13 @@
     <string name="feeds_imported">Импортировано: %1$s</string>
     <string name="feeds_imported_more">Импортировано: %1$s; остальное будет импортировано позже</string>
     <string name="feeds_import_sources_more">Добавлено источников: %1$s; остальные будут добавлены позже</string>
+    <string name="feeds_waiting_title">Ожидание разрешения</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s человек</item>
+        <item quantity="few">%s человека</item>
+        <item quantity="many">%s человек</item>
+        <item quantity="other">%s человека</item>
+    </plurals>
     <string name="feeds_filters">Фильтры</string>
     <string name="feeds_filter_phrase">Фраза для скрытия</string>
     <string name="feeds_filter_remove">Удалить %1$s</string>

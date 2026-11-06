@@ -303,4 +303,5 @@
     <string name="calendars_sync_permission_blocked">Доступ к календарю для этого приложения отключён. Его можно включить в разделе «Разрешения» в настройках приложения.</string>
     <string name="calendars_location_map">Показать на карте</string>
     <string name="calendars_location_flight">Отследить рейс</string>
+    <string name="calendars_preferences_week_numbers">Показывать номера недель</string>
 </resources>

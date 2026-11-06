@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s இறக்குமதி செய்யப்பட்டன</string>
     <string name="feeds_imported_more">இதுவரை %1$s இறக்குமதி செய்யப்பட்டன; மீதமுள்ளவை தொடரும்</string>
     <string name="feeds_import_sources_more">இதுவரை %1$s மூலங்கள் சேர்க்கப்பட்டன; மீதமுள்ளவை தொடரும்</string>
+    <string name="feeds_waiting_title">அனுமதிக்காகக் காத்திருக்கிறது</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s நபர்</item>
+        <item quantity="other">%s நபர்கள்</item>
+    </plurals>
     <string name="feeds_filters">வடிகட்டிகள்</string>
     <string name="feeds_filter_phrase">மறைக்க வேண்டிய சொற்றொடர்</string>
     <string name="feeds_filter_remove">%1$s-ஐ அகற்று</string>

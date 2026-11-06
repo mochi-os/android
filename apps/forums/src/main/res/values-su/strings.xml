@@ -337,4 +337,5 @@
         <item quantity="other">%s komunitas ditambahkeun</item>
     </plurals>
     <string name="forums_comment_op">Pangarang</string>
+    <string name="forums_community_destination">Dipasang ka %1$s salaku %2$s</string>
 </resources>

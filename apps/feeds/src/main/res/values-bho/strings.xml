@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s इंपोर्ट भइल</string>
     <string name="feeds_imported_more">अब तक %1$s इंपोर्ट भइल; बाकी आवत बा</string>
     <string name="feeds_import_sources_more">अब तक %1$s स्रोत जोड़ल गइल; बाकी आवत बा</string>
+    <string name="feeds_waiting_title">अनुमति के इंतजार हो रहल बा</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s आदमी</item>
+        <item quantity="other">%s लोग</item>
+    </plurals>
     <string name="feeds_filters">फिल्टर</string>
     <string name="feeds_filter_phrase">छिपावे वाला वाक्यांश</string>
     <string name="feeds_filter_remove">%1$s हटाईं</string>

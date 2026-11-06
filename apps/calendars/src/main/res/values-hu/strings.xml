@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">A naptárhoz való hozzáférés ki van kapcsolva ennél az alkalmazásnál. Az alkalmazás beállításaiban, az Engedélyek részben kapcsolhatja be.</string>
     <string name="calendars_location_map">Megjelenítés a térképen</string>
     <string name="calendars_location_flight">Járat követése</string>
+    <string name="calendars_preferences_week_numbers">Hetek sorszámának megjelenítése</string>
 </resources>

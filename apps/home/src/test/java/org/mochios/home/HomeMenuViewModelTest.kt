@@ -46,6 +46,9 @@ class HomeMenuViewModelTest {
         var fail = false
         var categories: CompletableDeferred<List<NotificationCategory>>? = null
         var topics = mapOf<String, NotificationTopic?>()
+        var accent: String? = null
+        var styleFails = false
+        val styled = mutableListOf<String>()
 
         override fun follow() {
             followed = true
@@ -54,6 +57,11 @@ class HomeMenuViewModelTest {
             recounts++
         }
         override suspend fun person() = Person("p1", "Ada")
+        override suspend fun accent(identity: String): String? {
+            styled += identity
+            if (styleFails) throw RuntimeException("HTTP 502")
+            return accent
+        }
         override suspend fun unread(): List<MochiNotification> {
             if (fail) throw RuntimeException("HTTP 500")
             return unread
@@ -89,6 +97,34 @@ class HomeMenuViewModelTest {
         assertTrue(source.followed)
         assertEquals("Ada", model.state.value.name)
         assertEquals("p1", model.state.value.identity)
+    }
+
+    @Test
+    fun `it reads the user's accent once it knows who they are`() {
+        val source = Source().apply { accent = "#00ff00" }
+        val model = model(source)
+        assertEquals(listOf("p1"), source.styled)
+        assertEquals("#00ff00", model.state.value.accent)
+    }
+
+    @Test
+    fun `restyle reads the accent again, and a failed read keeps the ring it had`() {
+        val source = Source().apply { accent = "#00ff00" }
+        val model = model(source)
+        source.accent = "#0000ff"
+        model.restyle()
+        settle()
+        assertEquals("#0000ff", model.state.value.accent)
+        source.styleFails = true
+        model.restyle()
+        settle()
+        assertEquals(3, source.styled.size)
+        assertEquals("#0000ff", model.state.value.accent)
+        source.styleFails = false
+        source.accent = null
+        model.restyle()
+        settle()
+        assertNull(model.state.value.accent)
     }
 
     @Test

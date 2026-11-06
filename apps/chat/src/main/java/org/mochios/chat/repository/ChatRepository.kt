@@ -25,6 +25,7 @@ import org.mochios.chat.api.NewChatResponse
 import org.mochios.chat.api.PersonResult
 import org.mochios.chat.api.ReactResponse
 import org.mochios.chat.api.SearchResponse
+import org.mochios.chat.api.SendMessageResponse
 import org.mochios.chat.api.SetupResponse
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatMember
@@ -93,16 +94,16 @@ class ChatRepository @Inject constructor(
         files: List<File> = emptyList(),
         reply: String? = null,
         thread: String? = null,
-    ): String {
+    ): SendMessageResponse {
         val under = thread?.ifEmpty { null }
         if (files.isEmpty()) {
-            return api.sendMessage(chatId, body, reply, under).unwrap().id
+            return api.sendMessage(chatId, body, reply, under).unwrap()
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
         val threadPart = under?.toRequestBody("text/plain".toMediaTypeOrNull())
         val parts = fileStore.fileParts("files", files)
-        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, threadPart, parts).unwrap().id
+        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, threadPart, parts).unwrap()
     }
 
     suspend fun sendMessageFromUris(
@@ -112,16 +113,16 @@ class ChatRepository @Inject constructor(
         context: android.content.Context,
         reply: String? = null,
         tracker: UploadTracker? = null,
-    ): String {
+    ): SendMessageResponse {
         if (uris.isEmpty()) {
-            return api.sendMessage(chatId, body, reply).unwrap().id
+            return api.sendMessage(chatId, body, reply).unwrap()
         }
         val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
         val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
         val files = fileStore.cacheFiles(uris)
         try {
             val parts = fileStore.fileParts("files", files, tracker)
-            return api.sendMessageWithFiles(chatId, bodyPart, replyPart, null, parts).unwrap().id
+            return api.sendMessageWithFiles(chatId, bodyPart, replyPart, null, parts).unwrap()
         } finally {
             fileStore.deleteAll(files)
         }

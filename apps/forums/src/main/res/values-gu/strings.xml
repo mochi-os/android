@@ -338,4 +338,5 @@
         <item quantity="other">%s સમુદાયો ઉમેર્યા</item>
     </plurals>
     <string name="forums_comment_op">લેખક</string>
+    <string name="forums_community_destination">%1$s માં %2$s તરીકે પોસ્ટ થાય છે</string>
 </resources>

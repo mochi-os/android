@@ -305,6 +305,11 @@
     <string name="feeds_imported">已导入 %1$s 项</string>
     <string name="feeds_imported_more">已导入 %1$s 项，其余稍后导入</string>
     <string name="feeds_import_sources_more">已添加 %1$s 个来源，其余稍后添加</string>
+    <string name="feeds_waiting_title">正在等待权限</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s 人</item>
+        <item quantity="other">%s 人</item>
+    </plurals>
     <string name="feeds_filters">筛选器</string>
     <string name="feeds_filter_phrase">要隐藏的短语</string>
     <string name="feeds_filter_remove">移除 %1$s</string>

@@ -338,4 +338,5 @@
         <item quantity="other">%s коомчулук кошулду</item>
     </plurals>
     <string name="forums_comment_op">Автор</string>
+    <string name="forums_community_destination">%1$s коомчулугунда %2$s катары жарыяланат</string>
 </resources>

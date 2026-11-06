@@ -11,6 +11,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsEnabled
+import androidx.compose.ui.test.assertIsOff
+import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.hasText
@@ -56,6 +58,9 @@ class PreferencesScreenTest {
     private val context = RuntimeEnvironment.getApplication()
     private val calendars = listOf(Calendar(id = "c1", name = "Home", default = true))
 
+    /** The draft as the screen last changed it. */
+    private var draft: Preferences? = null
+
     private fun show(preferences: Preferences, user: UserPreferences = UserPreferences()) {
         rule.setContent {
             CompositionLocalProvider(LocalFormat provides Format(user)) {
@@ -76,6 +81,7 @@ class PreferencesScreenTest {
                     onRetry = {},
                     onChange = { change ->
                         state = state.copy(draft = state.draft?.let(change))
+                        draft = state.draft
                     },
                 )
             }
@@ -120,6 +126,26 @@ class PreferencesScreenTest {
     fun `a length set on the web in hours reads as hours`() {
         show(Preferences(duration = 180))
         rule.onNodeWithText(context.resources.getQuantityString(R.plurals.calendars_hours, 3, "3")).assertExists()
+    }
+
+    @Test
+    fun `week numbers start off and the switch turns them on`() {
+        show(Preferences())
+        // The switch on the label's line: the row adds no node of its own, so
+        // every switch on the screen is the label's sibling.
+        val label = rule.onNodeWithText(context.getString(R.string.calendars_preferences_week_numbers))
+            .fetchSemanticsNode().boundsInRoot
+        val switches = rule.onAllNodes(isToggleable())
+        val index = switches.fetchSemanticsNodes().indexOfFirst { node ->
+            node.boundsInRoot.center.y in label.top..label.bottom
+        }
+        assertTrue(index >= 0)
+        val numbers = switches[index]
+        numbers.assertIsOff()
+        numbers.performClick()
+        rule.waitForIdle()
+        assertEquals(true, draft?.week?.numbers)
+        save().assertIsEnabled()
     }
 
     @Test

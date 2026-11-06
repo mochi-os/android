@@ -65,7 +65,8 @@ class ChatSettingsViewModel @Inject constructor(
         }
     }
 
-    fun rename(newName: String) {
+    /** Rename the chat; [onSaved] runs once the server has taken the name. */
+    fun rename(newName: String, onSaved: () -> Unit = {}) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true)
             try {
@@ -74,16 +75,19 @@ class ChatSettingsViewModel @Inject constructor(
                     chat = _uiState.value.chat.copy(name = newName),
                     isSaving = false
                 )
+                onSaved()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isSaving = false, notice = e.toMochiError())
             }
         }
     }
 
-    fun addMember(memberId: String) {
+    /** Add a member; [onAdded] runs once the server has added them. */
+    fun addMember(memberId: String, onAdded: () -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.addMember(chatId, memberId)
+                onAdded()
                 load()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(notice = e.toMochiError())

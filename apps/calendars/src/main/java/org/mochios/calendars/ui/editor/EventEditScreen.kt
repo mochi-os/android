@@ -296,29 +296,33 @@ fun EventEditScreen(
             )
             EditorDivider()
             EditorRow(icon = Icons.Outlined.Schedule) {
-                Row(modifier = Modifier.weight(1f), verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        text = stringResource(R.string.calendars_event_allday),
-                        style = MaterialTheme.typography.bodyLarge,
-                        modifier = Modifier.weight(1f).padding(end = 8.dp),
-                    )
-                    Switch(checked = uiState.allday, onCheckedChange = viewModel::allday, enabled = !uiState.isSaving)
-                }
-                Spacer(Modifier.width(16.dp))
-                Row(modifier = Modifier.weight(1f), verticalAlignment = Alignment.CenterVertically) {
-                    Icon(
-                        Dashed,
-                        contentDescription = null,
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(18.dp),
-                    )
-                    Spacer(Modifier.width(8.dp))
-                    Text(
-                        text = stringResource(R.string.calendars_status_tentative),
-                        style = MaterialTheme.typography.bodyLarge,
-                        modifier = Modifier.weight(1f).padding(end = 8.dp),
-                    )
-                    Switch(checked = uiState.tentative, onCheckedChange = viewModel::tentative, enabled = !uiState.isSaving)
+                // Each label keeps its own width, Tentative at the row's end as
+                // on the web; a pair too wide for the row puts Tentative on a
+                // line of its own rather than breaking either word.
+                FlowRow(modifier = Modifier.weight(1f), horizontalArrangement = Arrangement.SpaceBetween) {
+                    Row(modifier = Modifier.padding(end = 16.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Text(
+                            text = stringResource(R.string.calendars_event_allday),
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier.padding(end = 8.dp),
+                        )
+                        Switch(checked = uiState.allday, onCheckedChange = viewModel::allday, enabled = !uiState.isSaving)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            Dashed,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.size(18.dp),
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Text(
+                            text = stringResource(R.string.calendars_status_tentative),
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier.padding(end = 8.dp),
+                        )
+                        Switch(checked = uiState.tentative, onCheckedChange = viewModel::tentative, enabled = !uiState.isSaving)
+                    }
                 }
             }
             EventMoments(

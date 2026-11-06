@@ -73,11 +73,13 @@ import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.mochiDialogCardColors
 import org.mochios.feeds.R
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Source
+import org.mochios.feeds.model.WaitingServer
 import org.mochios.feeds.ui.component.hostedFediverse
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.i18n.LocalFormat
@@ -95,9 +97,11 @@ fun SourcesTab(
     modifier: Modifier = Modifier,
 ) {
     val sources by viewModel.sources.collectAsState()
+    val waiting by viewModel.waiting.collectAsState()
     val isLoading by viewModel.isLoadingSources.collectAsState()
     val suggestedCredibility by viewModel.suggestedCredibility.collectAsState()
     val pendingPermission by viewModel.pendingPermission.collectAsState()
+    val waitingPermission by viewModel.waitingPermission.collectAsState()
     val addSourceError by viewModel.addSourceError.collectAsState()
     val isAddingSource by viewModel.isAddingSource.collectAsState()
     val isSavingSource by viewModel.isSavingSource.collectAsState()
@@ -126,14 +130,10 @@ fun SourcesTab(
         }
     }
 
-    // A permission-required add replaces the add dialog with the permission
-    // prompt; close the add dialog so the two don't stack. The retry details
-    // are stashed on the pending permission, so allowing it re-runs the add.
-    LaunchedEffect(pendingPermission) {
-        if (pendingPermission != null) {
-            showAddDialog = false
-        }
-    }
+    // A permission-required add puts the permission prompt over the Add
+    // dialog, which stays open with what was typed, as on the web: allowing
+    // re-runs the add, which closes the dialog or shows its refusal there, and
+    // denying returns to it unchanged.
 
     Box(modifier = modifier) {
         when {
@@ -145,7 +145,7 @@ fun SourcesTab(
                     CircularProgressIndicator()
                 }
             }
-            sources.isEmpty() -> {
+            sources.isEmpty() && waiting.isEmpty() -> {
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
@@ -164,6 +164,11 @@ fun SourcesTab(
                     contentPadding = PaddingValues(16.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
+                    if (waiting.isNotEmpty()) {
+                        item(key = "waiting") {
+                            WaitingCard(waiting = waiting, onAllow = { server -> viewModel.allowWaiting(server) })
+                        }
+                    }
                     items(sources, key = { it.id }) { source ->
                         SourceCard(
                             source = source,
@@ -177,7 +182,11 @@ fun SourcesTab(
             }
         }
         MochiFab(
-            onClick = { showAddDialog = true },
+            onClick = {
+                // A fresh dialog starts without an earlier add's refusal.
+                viewModel.clearAddSourceError()
+                showAddDialog = true
+            },
             modifier = Modifier
                 .align(Alignment.BottomEnd)
                 .padding(16.dp)
@@ -250,6 +259,16 @@ fun SourcesTab(
             onDeny = { viewModel.denyPendingPermission() }
         )
     }
+
+    // A server people of an import wait on, put to the user one at a time.
+    waitingPermission?.let { pending ->
+        PermissionRequestDialog(
+            appId = pending.app,
+            permissionName = pending.name,
+            onAllow = { viewModel.allowWaitingPermission() },
+            onDeny = { viewModel.denyWaitingPermission() }
+        )
+    }
 }
 
 @Composable
@@ -314,6 +333,53 @@ private fun CredibilityBadge(value: Int) {
             .background(Color.hsl(hue, 0.6f, 0.9f), RoundedCornerShape(50))
             .padding(horizontal = 8.dp, vertical = 2.dp)
     )
+}
+
+/**
+ * The servers people of the feed's imports wait on, each with how many and
+ * Allow, which asks for the grant to read it and then adds them.
+ */
+@Composable
+internal fun WaitingCard(waiting: List<WaitingServer>, onAllow: (String) -> Unit) {
+    val format = LocalFormat.current
+    MochiCard(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(10.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+    ) {
+        Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 14.dp)) {
+            Text(
+                text = stringResource(R.string.feeds_waiting_title),
+                style = MaterialTheme.typography.titleSmall,
+            )
+            waiting.forEach { entry ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = entry.server,
+                            style = MaterialTheme.typography.bodyMedium,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        Text(
+                            text = pluralStringResource(R.plurals.feeds_waiting_people, entry.count, format.formatNumber(entry.count)),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    MochiOutlinedButton(onClick = { onAllow(entry.server) }) {
+                        Text(stringResource(R.string.feeds_permission_allow))
+                    }
+                }
+            }
+        }
+    }
 }
 
 @Composable

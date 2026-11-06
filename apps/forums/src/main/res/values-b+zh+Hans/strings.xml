@@ -336,4 +336,5 @@
         <item quantity="other">已添加 %s 个社区</item>
     </plurals>
     <string name="forums_comment_op">楼主</string>
+    <string name="forums_community_destination">以 %2$s 的身份发布到 %1$s</string>
 </resources>

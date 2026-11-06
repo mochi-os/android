@@ -6,6 +6,7 @@
 package org.mochios.android.auth
 
 import android.content.Context
+import coil3.SingletonImageLoader
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
@@ -130,7 +131,11 @@ class SessionManager @Inject constructor(
             prefs.remove(KEY_BOUND_IDENTITY)
             prefs.remove(KEY_BOUND_SERVER)
         }
-        if (changed) cookieStore.clear()
+        if (changed) {
+            cookieStore.clear()
+            sealed.forget()
+            forgetImages()
+        }
     }
 
     suspend fun saveSession(cookie: String) {
@@ -146,9 +151,29 @@ class SessionManager @Inject constructor(
     val boundServer: Flow<String?> = dataStore.data.map { it[KEY_BOUND_SERVER] }
 
     suspend fun setBoundAccount(identity: String, server: String) {
+        var previous: String? = null
         dataStore.edit { prefs ->
+            previous = prefs[KEY_BOUND_IDENTITY]
             prefs[KEY_BOUND_IDENTITY] = identity
             prefs[KEY_BOUND_SERVER] = server
+        }
+        // An account adopted from a sibling install arrives without a sign-out
+        // here, so the images held for the one before it go now.
+        if (previous != null && previous != identity) forgetImages()
+    }
+
+    /**
+     * Empty the image cache. It serves a held image by its address without
+     * asking the server, so the next account would be shown the previous one's
+     * avatars and attachments without the server deciding whether it may see
+     * them.
+     */
+    private suspend fun forgetImages() {
+        // A cache that cannot be cleared must not stop the sign-out around it.
+        runCatching {
+            val loader = SingletonImageLoader.get(context)
+            loader.memoryCache?.clear()
+            withContext(Dispatchers.IO) { loader.diskCache?.clear() }
         }
     }
 
@@ -168,6 +193,7 @@ class SessionManager @Inject constructor(
      * Used when the server rejects the token as expired.
      */
     suspend fun clearToken(app: String) {
+        sealed.forget()
         dataStore.edit { prefs ->
             prefs.remove(stringPreferencesKey("$TOKEN_PREFIX$app"))
             val names = prefs[KEY_TOKEN_NAMES]?.toMutableSet() ?: mutableSetOf()
@@ -193,6 +219,8 @@ class SessionManager @Inject constructor(
         // Drop the in-memory cookies too, or the stale `session` rides the next
         // request and the rolling Set-Cookie re-persists what was just cleared.
         cookieStore.clear()
+        sealed.forget()
+        forgetImages()
         // Logout in this app shouldn't tear down OTHER apps' bindings —
         // remove only the account this app was bound to. Its synced contacts
         // and calendars go first, while the account still names them.
@@ -412,9 +440,15 @@ class SessionManager @Inject constructor(
             val sessionCookie = cookies.find { it.name == "session" }
             // Only renew an existing session, never resurrect one that sign-out
             // or a 401 cleared: a stray authenticated call would flip us back
-            // signed-in.
-            if (sessionCookie != null && getSessionCookieBlocking() != null) {
-                runBlocking { saveSession(sessionCookie.value) }
+            // signed-in. The server sends the cookie back on every request to
+            // extend its expiry; one with the value already held is not
+            // written again, since each write is a fresh seal and a rewrite of
+            // the credential file.
+            if (sessionCookie != null) {
+                val held = getSessionCookieBlocking()
+                if (held != null && held != sessionCookie.value) {
+                    runBlocking { saveSession(sessionCookie.value) }
+                }
             }
         }
 

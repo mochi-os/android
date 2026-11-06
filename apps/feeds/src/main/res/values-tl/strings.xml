@@ -312,6 +312,11 @@
     <string name="feeds_imported">Na-import ang %1$s</string>
     <string name="feeds_imported_more">%1$s na ang na-import; susunod ang iba pa</string>
     <string name="feeds_import_sources_more">%1$s source na ang naidagdag; susunod ang iba pa</string>
+    <string name="feeds_waiting_title">Hinihintay ang permission</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s tao</item>
+        <item quantity="other">%s tao</item>
+    </plurals>
     <string name="feeds_filters">Mga filter</string>
     <string name="feeds_filter_phrase">Pariralang itatago</string>
     <string name="feeds_filter_remove">Alisin ang %1$s</string>

@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Ukufinyelela kwekhalenda kuvaliwe kule app. Ungakuvula ngaphansi kokuthi Izimvume kuzilungiselelo ze-app.</string>
     <string name="calendars_location_map">Bonisa emephini</string>
     <string name="calendars_location_flight">Landelela indiza</string>
+    <string name="calendars_preferences_week_numbers">Bonisa izinombolo zamaviki</string>
 </resources>

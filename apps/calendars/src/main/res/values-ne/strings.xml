@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">यो एपका लागि पात्रोमा पहुँच अफ गरिएको छ। तपाईं एपको सेटिङहरूमा अनुमतिहरू अन्तर्गत यसलाई अन गर्न सक्नुहुन्छ।</string>
     <string name="calendars_location_map">नक्सामा देखाउनुहोस्</string>
     <string name="calendars_location_flight">उडान ट्र्याक गर्नुहोस्</string>
+    <string name="calendars_preferences_week_numbers">हप्ता नम्बरहरू देखाउनुहोस्</string>
 </resources>

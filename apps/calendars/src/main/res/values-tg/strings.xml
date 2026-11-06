@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Дастрасӣ ба тақвим барои ин барнома хомӯш аст. Шумо метавонед онро дар бахши Иҷозатҳо дар танзимоти барнома фаъол кунед.</string>
     <string name="calendars_location_map">Дар харита нишон додан</string>
     <string name="calendars_location_flight">Пайгирии парвоз</string>
+    <string name="calendars_preferences_week_numbers">Рақамҳои ҳафтаҳоро нишон додан</string>
 </resources>

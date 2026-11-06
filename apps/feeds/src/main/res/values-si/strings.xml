@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$sක් ආයාත කරන ලදී</string>
     <string name="feeds_imported_more">මෙතෙක් %1$sක් ආයාත කරන ලදී; ඉතිරිය පසුව එයි</string>
     <string name="feeds_import_sources_more">මෙතෙක් මූලාරම්භ %1$sක් එක් කරන ලදී; ඉතිරිය පසුව එයි</string>
+    <string name="feeds_waiting_title">අවසරය එනතුරු රැඳී සිටිමින්</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s පුද්ගලයා</item>
+        <item quantity="other">%s පුද්ගලයන්</item>
+    </plurals>
     <string name="feeds_filters">පෙරහන්</string>
     <string name="feeds_filter_phrase">සැඟවිය යුතු වාක්‍ය ඛණ්ඩය</string>
     <string name="feeds_filter_remove">%1$s ඉවත් කරන්න</string>

@@ -338,4 +338,5 @@
         <item quantity="other">%s ټولنې اضافه شوې</item>
     </plurals>
     <string name="forums_comment_op">لیکوال</string>
+    <string name="forums_community_destination">%1$s ته د %2$s په توګه خپریږي</string>
 </resources>

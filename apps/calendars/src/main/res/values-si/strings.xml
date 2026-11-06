@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">මෙම යෙදුම සඳහා දින දර්ශන ප්‍රවේශය ක්‍රියාවිරහිත කර ඇත. ඔබට එය යෙදුමේ සැකසුම්හි අවසර යටතේ ක්‍රියාත්මක කළ හැකිය.</string>
     <string name="calendars_location_map">සිතියමේ පෙන්වන්න</string>
     <string name="calendars_location_flight">ගුවන් ගමන ලුහුබඳින්න</string>
+    <string name="calendars_preferences_week_numbers">සති අංක පෙන්වන්න</string>
 </resources>

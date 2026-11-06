@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">اس ایپ کے لیے کیلنڈر تک رسائی بند ہے۔ آپ اسے ایپ کی سیٹنگز میں اجازتیں کے تحت آن کر سکتے ہیں۔</string>
     <string name="calendars_location_map">نقشے پر دکھائیں</string>
     <string name="calendars_location_flight">پرواز ٹریک کریں</string>
+    <string name="calendars_preferences_week_numbers">ہفتوں کے نمبر دکھائیں</string>
 </resources>

@@ -208,7 +208,7 @@ fun NetworksScreen(
     if (linking && data != null) {
         LinkDialog(
             providers = data.providers,
-            busy = state.busy == "link",
+            busy = "link" in state.busy,
             onLink = { type, fields, oauth -> viewModel.link(type, fields, oauth) { linking = false } },
             onDismiss = { linking = false },
         )
@@ -216,7 +216,7 @@ fun NetworksScreen(
     adding?.let { parent ->
         AddNameDialog(
             parent = parent,
-            busy = state.busy == "name",
+            busy = "name" in state.busy,
             check = viewModel::available,
             onAdd = { name -> viewModel.addName(parent, name) { adding = null } },
             onDismiss = { adding = null },
@@ -225,7 +225,7 @@ fun NetworksScreen(
     renaming?.let { account ->
         ProfileDialog(
             account = account,
-            busy = state.busy == "profile",
+            busy = "profile" in state.busy,
             onSave = { label -> viewModel.rename(account, label) { renaming = null } },
             onDismiss = { renaming = null },
         )
@@ -236,7 +236,7 @@ fun NetworksScreen(
             initial = account.aliases,
             field = stringResource(R.string.networks_alias_field),
             placeholder = "@name@server.example",
-            busy = state.busy == "aliases",
+            busy = "aliases" in state.busy,
             onSave = { list, done -> viewModel.aliases(account, list, done) },
             onDismiss = { aliasesFor = null },
         )
@@ -247,7 +247,7 @@ fun NetworksScreen(
             initial = account.labelers,
             field = stringResource(R.string.networks_labeler),
             placeholder = "did:plc:...",
-            busy = state.busy == "labelers",
+            busy = "labelers" in state.busy,
             onSave = { list, done -> viewModel.labelers(account, list, done) },
             onDismiss = { labelersFor = null },
         )
@@ -256,7 +256,7 @@ fun NetworksScreen(
         HomeDialog(
             account = account,
             feeds = data?.feeds.orEmpty(),
-            busy = state.busy == "home",
+            busy = "home" in state.busy,
             onSave = { choice -> viewModel.home(account, choice) { homeFor = null } },
             onDismiss = { homeFor = null },
         )
@@ -264,7 +264,7 @@ fun NetworksScreen(
     movingFor?.let { account ->
         MoveDialog(
             account = account,
-            busy = state.busy == "move",
+            busy = "move" in state.busy,
             onMove = { address -> viewModel.move(account, address) { movingFor = null } },
             onDismiss = { movingFor = null },
         )
@@ -286,7 +286,7 @@ fun NetworksScreen(
     passwordFor?.let { account ->
         PasswordDialog(
             account = account,
-            busy = state.busy == "password",
+            busy = "password" in state.busy,
             onMake = { device, made -> viewModel.password(account, device, made) },
             onDismiss = { passwordFor = null },
         )
@@ -344,7 +344,7 @@ internal class AccountActions(
 @Composable
 internal fun NetworksContent(
     data: NetworksData,
-    busy: String?,
+    busy: Set<String>,
     check: suspend (String, String) -> org.mochios.settings.api.Availability?,
     onReserve: (String, String, () -> Unit) -> Unit,
     onLink: () -> Unit,
@@ -371,7 +371,7 @@ internal fun NetworksContent(
                     domains = data.domains,
                     suggestion = if (parents.isEmpty()) suggestHandle(data.name) else "",
                     title = stringResource(R.string.networks_choose),
-                    reserving = busy == "reserve",
+                    reserving = "reserve" in busy,
                     check = check,
                     onReserve = onReserve,
                 )
@@ -406,13 +406,13 @@ internal fun NetworksContent(
                 }
             }
             items(linked, key = { "account:${it.id}" }) { account ->
-                AccountCard(account = account, feeds = data.feeds, busy = busy == account.id, actions = actions)
+                AccountCard(account = account, feeds = data.feeds, busy = account.id in busy, actions = actions)
             }
         }
         if (communities.isNotEmpty()) {
             item("communities") { SectionTitle(stringResource(R.string.networks_communities)) }
             items(communities, key = { "account:${it.id}" }) { account ->
-                AccountCard(account = account, feeds = data.feeds, busy = busy == account.id, actions = actions)
+                AccountCard(account = account, feeds = data.feeds, busy = account.id in busy, actions = actions)
             }
         }
         item("moderation") {
@@ -450,7 +450,7 @@ internal fun HandleCard(
     networks: List<String>,
     accounts: List<NetworkAccount>,
     feeds: List<NetworkFeed>,
-    busy: String?,
+    busy: Set<String>,
     onToggle: (Handle, String, NetworkAccount?) -> Unit,
     onAddName: (Handle) -> Unit,
     onArrive: (Handle) -> Unit,
@@ -516,12 +516,12 @@ internal fun HandleCard(
                         }
                         Switch(
                             checked = account != null,
-                            enabled = busy != "${row.name}/$type",
+                            enabled = "${row.name}/$type" !in busy,
                             onCheckedChange = { onToggle(row, type, account) },
                             modifier = Modifier.semantics { contentDescription = switchLabel },
                         )
                         if (account != null) {
-                            AccountMenuButton(account = account, busy = busy == account.id, removable = false, actions = actions)
+                            AccountMenuButton(account = account, busy = account.id in busy, removable = false, actions = actions)
                         } else {
                             // The menu's width, so the switches line up
                             Spacer(Modifier.size(48.dp))
@@ -636,6 +636,21 @@ private fun AccountMenu(account: NetworkAccount, removable: Boolean, actions: Ac
     if (removable) entry(R.string.networks_remove, Icons.Outlined.Delete, actions.onRemove)
 }
 
+/** A row of the blocked and muted list: what it lifts, and what it shows. */
+internal data class ModerationRow(val target: String, val label: String, val address: String, val muted: Boolean)
+
+/**
+ * A person blocked or muted, by their name with their address beneath; their
+ * id only where their network gave neither.
+ */
+internal fun moderationRow(actor: String, name: String, address: String, muted: Boolean): ModerationRow =
+    ModerationRow(
+        target = actor,
+        label = name.ifEmpty { address.ifEmpty { actor } },
+        address = if (name.isNotEmpty()) address else "",
+        muted = muted,
+    )
+
 /**
  * What the user has blocked and muted on other networks: a domain blocked
  * here, a person blocked or muted from their comment in feeds, each lifted
@@ -645,7 +660,7 @@ private fun AccountMenu(account: NetworkAccount, removable: Boolean, actions: Ac
 internal fun ModerationSection(
     blocks: List<NetworkBlock>,
     mutes: List<NetworkMute>,
-    busy: String?,
+    busy: Set<String>,
     onBlock: (String, () -> Unit) -> Unit,
     onUnblock: (String) -> Unit,
     onUnmute: (String) -> Unit,
@@ -665,9 +680,9 @@ internal fun ModerationSection(
             )
             MochiOutlinedButton(
                 onClick = { onBlock(domain) { domain = "" } },
-                enabled = busy != "block" && domain.isNotBlank(),
+                enabled = "block" !in busy && domain.isNotBlank(),
             ) {
-                if (busy == "block") {
+                if ("block" in busy) {
                     CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                 } else {
                     Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
@@ -676,24 +691,28 @@ internal fun ModerationSection(
                 Text(stringResource(R.string.networks_block))
             }
         }
-        val rows = blocks.map { (it.domain.ifEmpty { it.actor }) to false } + mutes.map { it.actor to true }
-        for ((target, muted) in rows) {
+        val rows = blocks.map {
+            if (it.domain.isNotEmpty()) ModerationRow(it.domain, it.domain, "", false)
+            else moderationRow(it.actor, it.name, it.address, false)
+        } + mutes.map { moderationRow(it.actor, it.name, it.address, true) }
+        for (row in rows) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(target, style = MaterialTheme.typography.bodyMedium)
+                    Text(row.label, style = MaterialTheme.typography.bodyMedium)
+                    val status = stringResource(if (row.muted) R.string.networks_muted else R.string.networks_blocked)
                     Text(
-                        stringResource(if (muted) R.string.networks_muted else R.string.networks_blocked),
+                        if (row.address.isNotEmpty()) "${row.address} · $status" else status,
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
                 MochiIconButton(
-                    onClick = { if (muted) onUnmute(target) else onUnblock(target) },
-                    enabled = busy != target,
+                    onClick = { if (row.muted) onUnmute(row.target) else onUnblock(row.target) },
+                    enabled = row.target !in busy,
                 ) {
                     Icon(
                         Icons.Outlined.Delete,
-                        contentDescription = stringResource(if (muted) R.string.networks_unmute else R.string.networks_unblock, target),
+                        contentDescription = stringResource(if (row.muted) R.string.networks_unmute else R.string.networks_unblock, row.label),
                     )
                 }
             }

@@ -310,6 +310,11 @@
     <string name="feeds_imported">%1$s ворид карда шуд</string>
     <string name="feeds_imported_more">То ҳол %1$s ворид карда шуд; боқимонда баъдтар ворид мешавад</string>
     <string name="feeds_import_sources_more">То ҳол %1$s манбаъ илова шуд; боқимонда баъдтар илова мешавад</string>
+    <string name="feeds_waiting_title">Интизори иҷозат</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s нафар</item>
+        <item quantity="other">%s нафар</item>
+    </plurals>
     <string name="feeds_filters">Филтрҳо</string>
     <string name="feeds_filter_phrase">Ибора барои пинҳон кардан</string>
     <string name="feeds_filter_remove">Хориҷ кардани %1$s</string>

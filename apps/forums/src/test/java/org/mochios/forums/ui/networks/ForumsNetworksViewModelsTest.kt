@@ -31,6 +31,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.forums.R
 import org.mochios.forums.api.ForumsApi
+import org.mochios.forums.model.Destination
 import org.mochios.forums.repository.ForumsRepository
 import org.mochios.forums.repository.SavedRepository
 import org.mochios.forums.ui.find.CommunitiesEvent
@@ -48,6 +49,7 @@ import org.robolectric.annotation.Config
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.ConcurrentLinkedQueue
+import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
 /** The forums view models against a stand-in server, for posts and communities from other networks. */
@@ -67,6 +69,15 @@ class ForumsNetworksViewModelsTest {
     /** Whether the sensitive mark is refused. */
     @Volatile private var refuseSensitive = false
 
+    /** Whether a community's join is refused. */
+    @Volatile private var joinRefused = false
+
+    /** Holds a Lemmy account's add back until a test lets it go. */
+    @Volatile private var addGate: CountDownLatch? = null
+
+    /** When the server began and finished each change, in order. */
+    private val order = java.util.concurrent.CopyOnWriteArrayList<String>()
+
     private val post = """{"id": "p1", "forum": "f1", "title": "Linked", "body": "Text", "member": "https://lemmy.example/u/someone",
         "url": "https://there.example/a", "sensitive": 1, "language": "fr"}"""
 
@@ -82,14 +93,25 @@ class ForumsNetworksViewModelsTest {
                     "/forums/f1/-/p1" -> ok("""{"forum": {"id": "f1"}, "post": $post, "comments": []}""")
                     "/forums/f1/-/p1/edit" -> ok("""{"success": true}""")
                     "/forums/-/blocks/add" -> ok("{}")
+                    "/forums/c2/-/information" -> ok("""{"forum": {"id": "https://lemmy.example/c/books", "name": "Books", "account": "l1", "handle": "books@lemmy.example",
+                        "destination": {"community": "!books@lemmy.example", "account": "@me@lemmy.example"}}, "permissions": {}}""")
+                    "/forums/c2/-/p2" -> ok("""{"forum": {"id": "https://lemmy.example/c/books", "account": "l1",
+                        "destination": {"community": "!books@lemmy.example", "account": "@me@lemmy.example"}}, "post": {"id": "p2", "forum": "c2", "title": "Linked", "body": "Text"}, "comments": []}""")
                     "/forums/f1/-/info" -> ok("""{"forum": {"id": "f1", "name": "Books", "account": "l1", "address": "!books@lemmy.example"}, "permissions": {}}""")
                     "/forums/f1/-/posts" -> ok("""{"forum": {"id": "f1", "fingerprint": "fp1", "name": "Books", "account": "l1", "address": "!books@lemmy.example"}, "posts": []}""")
                     "/forums/-/accounts/list" -> raw("""[{"id": "h2", "type": "fediverse", "identifier": "zed@here.example", "hosted": true},
                         {"id": "h1", "type": "fediverse", "identifier": "amy@here.example", "hosted": true},
                         {"id": "l1", "type": "lemmy", "identifier": "me@lemmy.example", "hosted": false},
                         {"id": "m1", "type": "mastodon", "identifier": "me@social.example", "hosted": false}]""")
-                    "/forums/-/communities/join" -> ok("""{"id": "c1", "fingerprint": "cfp", "name": "Books", "already_subscribed": false}""")
-                    "/forums/-/communities/add" -> raw("""{"added": 3, "communities": 3, "posts": 9}""")
+                    "/forums/-/communities/join" -> if (joinRefused) {
+                        MockResponse().setResponseCode(404).setBody("""{"error": "Community not found"}""")
+                    } else order.add("join").let { ok("""{"id": "c1", "fingerprint": "cfp", "name": "Books", "already_subscribed": false}""") }
+                    "/forums/-/communities/add" -> {
+                        order += "add"
+                        addGate?.await(5, TimeUnit.SECONDS)
+                        order += "added"
+                        raw("""{"added": 3, "communities": 3, "posts": 9}""")
+                    }
                     "/forums/-/communities/import" -> raw("""{"communities": 2, "blocks": 1, "saved": 4, "more": true}""")
                     "/forums/f1/-/publish" -> ok("""{"published": false, "domains": ["b.example", "a.example"], "handles": []}""")
                     "/forums/f1/-/publish/set" -> ok("""{"published": true, "address": "https://a.example/c/books", "identifier": "!books@a.example", "domains": []}""")
@@ -168,6 +190,28 @@ class ForumsNetworksViewModelsTest {
         assertNull(part(second, "url"))
         assertNull(part(second, "sensitive"))
         assertNull(part(second, "language"))
+    }
+
+    // A post or comment written in a community goes to its server as the
+    // linked account, so the composers are told where and as whom; a forum of
+    // ours, whose information names none, gets no line.
+    @Test
+    fun `a new post in a community learns where it goes, and one in a forum of ours learns nothing`() {
+        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "c2")), context, repository)
+        until("the destination") { model.destination.value != null }
+        assertEquals(Destination("!books@lemmy.example", "@me@lemmy.example"), model.destination.value)
+
+        val ours = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), context, repository)
+        until("the information asked for") { requests.any { it.first == "/forums/f1/-/information" } }
+        repeat(5) { shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS); Thread.sleep(10) }
+        assertNull(ours.destination.value)
+    }
+
+    @Test
+    fun `a post in a community carries where its comments go`() {
+        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "c2", "postId" to "p2")), context, repository, session, socket)
+        until("the post") { model.uiState.value.post.id == "p2" }
+        assertEquals(Destination("!books@lemmy.example", "@me@lemmy.example"), model.uiState.value.forum.destination)
     }
 
     @Test
@@ -272,5 +316,52 @@ class ForumsNetworksViewModelsTest {
         until("the refusal") { sent("/forums/f1/-/sensitive/set") != null && !model.busy.value }
         assertTrue(model.sensitive.value)
         assertFalse(sent("/forums/f1/-/sensitive/set").isNullOrEmpty())
+    }
+
+    /** Lets a request already on its way reach the server: one sent alongside would have by now. */
+    private fun settle() = repeat(30) {
+        shadowOf(Looper.getMainLooper()).idleFor(10, TimeUnit.MILLISECONDS)
+        Thread.sleep(10)
+    }
+
+    @Test
+    fun `a join tapped while a Lemmy account's add runs waits for it, both showing busy, instead of being dropped`() {
+        val gate = CountDownLatch(1)
+        addGate = gate
+        val model = CommunitiesViewModel(repository)
+        val events = mutableListOf<CommunitiesEvent>()
+        val job = CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { events.add(it) } }
+        until("the accounts") { model.hosted.value.isNotEmpty() && model.lemmy.value.isNotEmpty() }
+        model.add(model.lemmy.value.first())
+        until("the add") { sent("/forums/-/communities/add") != null }
+        model.join("!books@lemmy.example", "")
+        model.join("!books@lemmy.example", "")
+        assertEquals(setOf("add/l1", "join"), model.busy.value)
+        settle()
+        assertNull(sent("/forums/-/communities/join"))
+        gate.countDown()
+        until("the join") { events.any { it is CommunitiesEvent.Joined } && model.busy.value.isEmpty() }
+        assertEquals(1, requests.count { it.first == "/forums/-/communities/join" })
+        // One at a time, in the order tapped: the join waited for the add's answer.
+        assertEquals(listOf("add", "added", "join"), order)
+        job.cancel()
+    }
+
+    @Test
+    fun `a refused join says so and leaves the address, one that is joined clears it`() {
+        val model = CommunitiesViewModel(repository)
+        val events = mutableListOf<CommunitiesEvent>()
+        val job = CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { events.add(it) } }
+        until("the accounts") { model.hosted.value.isNotEmpty() }
+        joinRefused = true
+        var cleared = false
+        model.join("!none@lemmy.example", "") { cleared = true }
+        until("the refusal") { events.any { it is CommunitiesEvent.Failure } && model.busy.value.isEmpty() }
+        assertFalse(cleared)
+        joinRefused = false
+        model.join("!books@lemmy.example", "") { cleared = true }
+        until("the join") { events.any { it is CommunitiesEvent.Joined } }
+        assertTrue(cleared)
+        job.cancel()
     }
 }

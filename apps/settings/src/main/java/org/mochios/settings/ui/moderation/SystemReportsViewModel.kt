@@ -14,7 +14,10 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
@@ -61,7 +64,7 @@ data class SystemReportsUiState(
     val isLoading: Boolean = true,
     val reports: List<Report> = emptyList(),
     val error: MochiError? = null,
-    val busy: String? = null,
+    val busy: Set<String> = emptySet(),
 )
 
 /**
@@ -135,22 +138,29 @@ class SystemReportsViewModel @Inject constructor(
         }
     }
 
+    // Actions run one at a time, in the order tapped: one tapped while another
+    // runs waits here instead of being dropped, and shows as busy meanwhile.
+    private val queue = Mutex()
+
     private fun change(key: String, done: Int, block: suspend () -> Unit) {
-        if (_uiState.value.busy != null) return
-        _uiState.value = _uiState.value.copy(busy = key)
+        // The same action tapped again while it waits or runs is the one tap.
+        if (key in _uiState.value.busy) return
+        _uiState.update { it.copy(busy = it.busy + key) }
         viewModelScope.launch {
-            try {
-                block()
-                _messages.emit(AppContext.get().getString(done))
-            } catch (e: Exception) {
-                val error = e.toMochiError()
-                _messages.emit(
-                    if (error is MochiError.Unknown) error.message ?: AppContext.get().getString(R.string.reports_failed) else error.userMessage(),
-                )
-            } finally {
-                _uiState.value = _uiState.value.copy(busy = null)
+            queue.withLock {
+                try {
+                    block()
+                    _messages.emit(AppContext.get().getString(done))
+                } catch (e: Exception) {
+                    val error = e.toMochiError()
+                    _messages.emit(
+                        if (error is MochiError.Unknown) error.message ?: AppContext.get().getString(R.string.reports_failed) else error.userMessage(),
+                    )
+                } finally {
+                    _uiState.update { it.copy(busy = it.busy - key) }
+                }
+                refresh(quiet = true)
             }
-            refresh(quiet = true)
         }
     }
 }

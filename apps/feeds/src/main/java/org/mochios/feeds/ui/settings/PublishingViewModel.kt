@@ -15,12 +15,16 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
 import org.mochios.feeds.R
+import org.mochios.feeds.model.Backups
 import org.mochios.feeds.model.Filter
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.PublishState
@@ -45,8 +49,11 @@ sealed interface PublishEvent {
 /** The copies a feed keeps on an account that just left its list, offered for deletion. */
 data class KeptCopies(val account: PublishAccount, val count: Int)
 
-/** The archive files kept for an account; [files] is null while they load. */
-data class AccountBackups(val account: PublishAccount, val files: List<String>?)
+/**
+ * The archive files kept for an account; [files] is null while they load.
+ * [repository] says why the last backup kept no repository, if it kept none.
+ */
+data class AccountBackups(val account: PublishAccount, val files: List<String>?, val repository: String = "")
 
 /**
  * Where a public feed publishes - the owner's accounts on other networks, each
@@ -66,8 +73,9 @@ class PublishingViewModel @Inject constructor(
     val publish: StateFlow<PublishState?> = _publish.asStateFlow()
 
     /** The account, or "filter" and filter id, whose change is on its way. */
-    private val _busy = MutableStateFlow<String?>(null)
-    val busy: StateFlow<String?> = _busy.asStateFlow()
+    /** What changes are waiting or running for: an account, a filter, or "filter" for an add. */
+    private val _busy = MutableStateFlow<Set<String>>(emptySet())
+    val busy: StateFlow<Set<String>> = _busy.asStateFlow()
 
     private val _kept = MutableStateFlow<KeptCopies?>(null)
     val kept: StateFlow<KeptCopies?> = _kept.asStateFlow()
@@ -86,10 +94,19 @@ class PublishingViewModel @Inject constructor(
         state?.accounts.orEmpty().sortedWith(compareBy(NaturalCompare) { it.identifier })
 
     /** Read where the feed publishes, for a public feed the user owns. */
+    // The server's refusal to publish the feed anywhere: a private feed's,
+    // which says only a public feed publishes, for Publish to to show.
+    private val _refusal = MutableStateFlow<MochiError?>(null)
+    val refusal: StateFlow<MochiError?> = _refusal.asStateFlow()
+
     fun loadPublish() {
         viewModelScope.launch {
             try {
                 _publish.value = repository.getPublish(feedId)
+                _refusal.value = null
+            } catch (e: MochiError.ForbiddenError) {
+                _publish.value = null
+                _refusal.value = e
             } catch (_: Exception) {
                 // A server without the networks says nothing of them.
             }
@@ -108,11 +125,14 @@ class PublishingViewModel @Inject constructor(
 
     /** Switch the feed's publishing to [account] on or off; turning it off offers to delete the copies kept there. */
     fun toggle(account: PublishAccount, on: Boolean) {
-        val state = _publish.value ?: return
-        val next = if (on) (state.publish + account.id).distinct() else state.publish - account.id
+        if (_publish.value == null) return
         change(account.id, R.string.feeds_publish_failed) {
+            // The list as it stands when this runs: a toggle queued behind
+            // another starts from what that one saved.
+            val state = _publish.value ?: return@change
+            val next = if (on) (state.publish + account.id).distinct() else state.publish - account.id
             val saved = repository.setPublish(feedId, next)
-            _publish.value = state.copy(publish = saved.publish)
+            _publish.value = (_publish.value ?: state).copy(publish = saved.publish)
             val count = saved.kept[account.id] ?: 0
             if (!on && count > 0) _kept.value = KeptCopies(account, count)
         }
@@ -146,19 +166,46 @@ class PublishingViewModel @Inject constructor(
         change(account.id, R.string.feeds_import_failed) {
             val answer = repository.importAccount(feedId, account.id, kind)
             _events.emit(PublishEvent.Imported(kind, answer.imported, answer.more))
+            // People on a server the app may not read yet: the user is asked
+            // for each server now, and those allowed are added, the account
+            // shown busy meanwhile.
+            if (answer.waiting.isNotEmpty()) _asking.value = account.id
+            asker.ask(answer.waiting.map { it.server })
         }
     }
+
+    private val asker = WaitingAsker(
+        viewModelScope, repository, feedId,
+        added = { answer ->
+            viewModelScope.launch { _events.emit(PublishEvent.Imported("follows", answer.imported, answer.more)) }
+        },
+        failed = { e ->
+            viewModelScope.launch { _events.emit(PublishEvent.Failure(e.toMochiError(), R.string.feeds_import_failed)) }
+        },
+    )
+
+    /** The permission a server people wait on needs, while the user is asked for it. */
+    val waitingPermission: StateFlow<PendingPermission?> = asker.pending
+
+    /** Whether people an import left waiting are being added, and from which account's import. */
+    val addingWaiting: StateFlow<Boolean> = asker.working
+    private val _asking = MutableStateFlow<String?>(null)
+    val asking: StateFlow<String?> = _asking.asStateFlow()
+
+    fun allowWaitingPermission() = asker.allow()
+
+    fun denyWaitingPermission() = asker.decline()
 
     fun openBackups(account: PublishAccount) {
         _backups.value = AccountBackups(account, null)
         viewModelScope.launch {
-            val files = try {
+            val found = try {
                 repository.backups(feedId, account.id)
             } catch (e: Exception) {
                 _events.emit(PublishEvent.Failure(e.toMochiError(), MochiR.string.error_unexpected))
-                emptyList()
+                Backups()
             }
-            if (_backups.value?.account?.id == account.id) _backups.value = AccountBackups(account, files)
+            if (_backups.value?.account?.id == account.id) _backups.value = AccountBackups(account, found.files, found.repository)
         }
     }
 
@@ -173,11 +220,13 @@ class PublishingViewModel @Inject constructor(
         return url to sessionManager.getTokenBlocking("feeds")
     }
 
-    fun addFilter(phrase: String) {
+    /** Add a keyword filter; [onAdded] runs once the server has it. */
+    fun addFilter(phrase: String, onAdded: () -> Unit = {}) {
         val value = phrase.trim()
         if (value.isEmpty()) return
         change("filter", R.string.feeds_filter_add_failed) {
             _filters.value = sorted(repository.addFilter(feedId, value.take(100)))
+            onAdded()
         }
     }
 
@@ -187,16 +236,23 @@ class PublishingViewModel @Inject constructor(
         }
     }
 
+    // Actions run one at a time, in the order tapped: one tapped while another
+    // runs waits here instead of being dropped, and shows as busy meanwhile.
+    private val queue = Mutex()
+
     private fun change(key: String, fallback: Int, block: suspend () -> Unit) {
-        if (_busy.value != null) return
-        _busy.value = key
+        // The same action tapped again while it waits or runs is the one tap.
+        if (key in _busy.value) return
+        _busy.update { it + key }
         viewModelScope.launch {
-            try {
-                block()
-            } catch (e: Exception) {
-                _events.emit(PublishEvent.Failure(e.toMochiError(), fallback))
-            } finally {
-                _busy.value = null
+            queue.withLock {
+                try {
+                    block()
+                } catch (e: Exception) {
+                    _events.emit(PublishEvent.Failure(e.toMochiError(), fallback))
+                } finally {
+                    _busy.update { it - key }
+                }
             }
         }
     }

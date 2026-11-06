@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.components
 
+import android.net.Uri
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
@@ -50,8 +51,10 @@ fun AuthorAvatar(
     // changes-list.tsx) — the lib EntityAvatar will read it once accent
     // fetching lands on Android; until then it's reserved for that wiring.
     @Suppress("UNUSED_VARIABLE")
-    val styleUrl = "${baseURL}revision/$revisionId/asset/style"
-    val src = "${baseURL}revision/$revisionId/asset/avatar"
+    // The id is a peer's, so it is escaped: a slash or a dot segment in one
+    // would otherwise point the request at another action.
+    val styleUrl = "${baseURL}revision/${Uri.encode(revisionId)}/asset/style"
+    val src = "${baseURL}revision/${Uri.encode(revisionId)}/asset/avatar"
 
     EntityAvatar(
         name = authorName,

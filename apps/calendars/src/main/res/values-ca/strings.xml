@@ -281,4 +281,5 @@
     <string name="calendars_sync_permission_blocked">L\'accés al calendari està desactivat per a aquesta aplicació. El podeu activar a Permisos, a la configuració de l\'aplicació.</string>
     <string name="calendars_location_map">Mostra al mapa</string>
     <string name="calendars_location_flight">Segueix el vol</string>
+    <string name="calendars_preferences_week_numbers">Mostra els números de setmana</string>
 </resources>

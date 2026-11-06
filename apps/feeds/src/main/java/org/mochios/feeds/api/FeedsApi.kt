@@ -7,6 +7,7 @@ package org.mochios.feeds.api
 
 import com.google.gson.annotations.SerializedName
 import okhttp3.RequestBody
+import org.mochios.android.api.Slow
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
@@ -19,6 +20,7 @@ import org.mochios.feeds.model.Filters
 import org.mochios.feeds.model.Generators
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Imported
+import org.mochios.feeds.model.WaitingServer
 import org.mochios.feeds.model.Lookup
 import org.mochios.feeds.model.Member
 import org.mochios.feeds.model.People
@@ -99,11 +101,24 @@ data class PostImageResponse(
 data class PostCreateResponse(
     val id: String = "",
     val feed: Feed? = null,
-    val attachments: List<Attachment> = emptyList()
+    val attachments: List<Attachment> = emptyList(),
+    // What a copy on another network went without, a line each in the
+    // user's language; null where the server sends none.
+    val unsent: List<String>? = null
+)
+
+data class PostEditResponse(
+    val success: Boolean = false,
+    // What a copy on another network went without, as for a new post.
+    val unsent: List<String>? = null
 )
 
 data class SuccessResponse(
     val success: Boolean = false
+)
+
+data class PrivacyResponse(
+    val privacy: String = ""
 )
 
 data class CreateFeedRequest(
@@ -172,7 +187,8 @@ data class BannerResponse(
 )
 
 data class SourceListResponse(
-    val sources: List<Source> = emptyList()
+    val sources: List<Source> = emptyList(),
+    val waiting: List<WaitingServer> = emptyList(),
 )
 
 data class SourceAddResponse(
@@ -349,6 +365,13 @@ interface FeedsApi {
         @Field("name") name: String
     ): Response<ApiResponse<SuccessResponse>>
 
+    @FormUrlEncoded
+    @POST("{feedId}/-/privacy")
+    suspend fun setPrivacy(
+        @Path("feedId") feedId: String,
+        @Field("privacy") privacy: String
+    ): Response<ApiResponse<PrivacyResponse>>
+
     @POST("{feedId}/-/read-all")
     suspend fun markAllRead(
         @Path("feedId") feedId: String
@@ -377,7 +400,7 @@ interface FeedsApi {
         @Path("feedId") feedId: String,
         @Path("postId") postId: String,
         @retrofit2.http.Body body: RequestBody
-    ): Response<ApiResponse<SuccessResponse>>
+    ): Response<ApiResponse<PostEditResponse>>
 
     @POST("{feedId}/-/{postId}/delete")
     suspend fun deletePost(
@@ -464,6 +487,7 @@ interface FeedsApi {
         @Path("feedId") feedId: String
     ): Response<ApiResponse<SourceListResponse>>
 
+    @Slow
     @POST("{feedId}/-/sources/add")
     suspend fun addSource(
         @Path("feedId") feedId: String,
@@ -741,10 +765,21 @@ interface FeedsApi {
 
     // A Mastodon export of follows, its text: each address becomes a source.
     @FormUrlEncoded
+    @Slow
     @POST("{feedId}/-/sources/import")
     suspend fun importFollows(
         @Path("feedId") feedId: String,
         @Field("addresses") addresses: String,
+    ): Response<ApiResponse<Imported>>
+
+    // The people of the feed's imports who waited on a server, added once the
+    // app may read it; refused with the permission named until then.
+    @FormUrlEncoded
+    @Slow
+    @POST("{feedId}/-/sources/allow")
+    suspend fun allowWaiting(
+        @Path("feedId") feedId: String,
+        @Field("server") server: String,
     ): Response<ApiResponse<Imported>>
 
     @GET("-/people")
@@ -793,6 +828,7 @@ interface FeedsApi {
 
     // kind is posts, bookmarks or follows.
     @FormUrlEncoded
+    @Slow
     @POST("{feedId}/-/import")
     suspend fun importAccount(
         @Path("feedId") feedId: String,

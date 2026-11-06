@@ -338,4 +338,5 @@
         <item quantity="other">%s ayllukuna yapasqa</item>
     </plurals>
     <string name="forums_comment_op">Qillqaq</string>
+    <string name="forums_community_destination">%1$s nisqaman %2$s hina churasqa</string>
 </resources>

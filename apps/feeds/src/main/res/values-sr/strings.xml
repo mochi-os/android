@@ -319,6 +319,12 @@
     <string name="feeds_imported">Увезено: %1$s</string>
     <string name="feeds_imported_more">Досад увезено: %1$s; остало следи</string>
     <string name="feeds_import_sources_more">Досад додато извора: %1$s; остали следе</string>
+    <string name="feeds_waiting_title">Чека се дозвола</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s особа</item>
+        <item quantity="few">%s особе</item>
+        <item quantity="other">%s особа</item>
+    </plurals>
     <string name="feeds_filters">Филтери</string>
     <string name="feeds_filter_phrase">Израз за скривање</string>
     <string name="feeds_filter_remove">Уклони %1$s</string>

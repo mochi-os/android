@@ -22,6 +22,7 @@ import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.forums.R
+import org.mochios.forums.model.Destination
 import org.mochios.forums.repository.ForumsRepository
 import org.mochios.forums.repository.PostMarks
 import javax.inject.Inject
@@ -109,9 +110,28 @@ class NewPostViewModel @Inject constructor(
     private val _language = MutableStateFlow("")
     val language: StateFlow<String> = _language.asStateFlow()
 
+    /** Where the post goes, in a community on another network; null for a forum of ours. */
+    private val _destination = MutableStateFlow<Destination?>(null)
+    val destination: StateFlow<Destination?> = _destination.asStateFlow()
+
     init {
         if (isEditing) {
             loadExistingPost()
+        } else {
+            loadDestination()
+        }
+    }
+
+    /** The forum's destination, for the line saying where a new post goes. A
+     *  failure leaves the line out: the post itself still reports its own. */
+    private fun loadDestination() {
+        if (forumId.isEmpty()) return
+        viewModelScope.launch {
+            try {
+                _destination.value = repository.getForumInfo(forumId).forum.destination
+            } catch (e: Exception) {
+                if (e is kotlinx.coroutines.CancellationException) throw e
+            }
         }
     }
 

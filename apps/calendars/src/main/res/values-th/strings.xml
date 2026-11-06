@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">สิทธิ์เข้าถึงปฏิทินของแอปนี้ปิดอยู่ คุณเปิดได้ในส่วนสิทธิ์ในการตั้งค่าของแอป</string>
     <string name="calendars_location_map">แสดงบนแผนที่</string>
     <string name="calendars_location_flight">ติดตามเที่ยวบิน</string>
+    <string name="calendars_preferences_week_numbers">แสดงหมายเลขสัปดาห์</string>
 </resources>

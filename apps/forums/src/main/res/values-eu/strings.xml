@@ -338,4 +338,5 @@
         <item quantity="other">%s komunitate gehitu dira</item>
     </plurals>
     <string name="forums_comment_op">Egilea</string>
+    <string name="forums_community_destination">%1$s komunitatean argitaratzen da %2$s gisa</string>
 </resources>

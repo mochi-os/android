@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Ufikiaji wa kalenda umezimwa kwa programu hii. Unaweza kuuwasha chini ya Ruhusa katika mipangilio ya programu.</string>
     <string name="calendars_location_map">Onyesha kwenye ramani</string>
     <string name="calendars_location_flight">Fuatilia safari ya ndege</string>
+    <string name="calendars_preferences_week_numbers">Onyesha namba za wiki</string>
 </resources>

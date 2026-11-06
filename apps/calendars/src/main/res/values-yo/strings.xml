@@ -267,4 +267,5 @@
     <string name="calendars_sync_permission_blocked">A ti pa ìwọlé sí kàlẹ́ńdà fún app yìí. O lè tàn án lábẹ́ Àwọn ìyọ̀ǹda nínú àwọn ìṣètò app náà.</string>
     <string name="calendars_location_map">Fihàn lórí máàpù</string>
     <string name="calendars_location_flight">Tọpinpin ọkọ̀ òfuurufú</string>
+    <string name="calendars_preferences_week_numbers">Fi nọ́mbà ọ̀sẹ̀ hàn</string>
 </resources>

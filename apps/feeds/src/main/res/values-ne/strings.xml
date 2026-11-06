@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s आयात गरियो</string>
     <string name="feeds_imported_more">अहिलेसम्म %1$s आयात गरियो; बाँकी पछि आउनेछन्</string>
     <string name="feeds_import_sources_more">अहिलेसम्म %1$s स्रोतहरू थपिए; बाँकी पछि थपिनेछन्</string>
+    <string name="feeds_waiting_title">अनुमतिको प्रतीक्षा गर्दै</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s व्यक्ति</item>
+        <item quantity="other">%s व्यक्ति</item>
+    </plurals>
     <string name="feeds_filters">फिल्टरहरू</string>
     <string name="feeds_filter_phrase">लुकाउनुपर्ने वाक्यांश</string>
     <string name="feeds_filter_remove">%1$s हटाउनुहोस्</string>

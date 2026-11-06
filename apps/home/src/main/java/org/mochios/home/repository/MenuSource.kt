@@ -6,12 +6,14 @@
 package org.mochios.home.repository
 
 import kotlinx.coroutines.flow.StateFlow
+import org.mochios.android.api.unwrap
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.NotificationTopic
 import org.mochios.android.notifications.NotificationsRepository
 import org.mochios.android.notifications.NotificationsUnreadStore
+import org.mochios.home.api.HomeApi
 import javax.inject.Inject
 
 /** Who is signed in, as the user menu shows them. */
@@ -30,6 +32,10 @@ interface MenuSource {
     suspend fun recount()
 
     suspend fun person(): Person
+
+    /** The accent colour [identity]'s avatar is ringed in, or null for none. */
+    suspend fun accent(identity: String): String?
+
     suspend fun unread(): List<MochiNotification>
     suspend fun read(id: String)
     suspend fun readAll()
@@ -38,11 +44,15 @@ interface MenuSource {
     suspend fun categorise(notification: MochiNotification, category: String?)
 }
 
-/** The menu's source on the server: the identity endpoint and the notifications app. */
+/**
+ * The menu's source on the server: the identity endpoint, the people app's
+ * style and the notifications app.
+ */
 class ServerMenuSource @Inject constructor(
     private val notifications: NotificationsRepository,
     private val store: NotificationsUnreadStore,
     private val auth: AuthRepository,
+    private val api: HomeApi,
 ) : MenuSource {
     override val count: StateFlow<Int> = store.count
 
@@ -52,6 +62,9 @@ class ServerMenuSource @Inject constructor(
 
     override suspend fun person(): Person =
         auth.getIdentityInfo().identity.let { Person(it.identity, it.name) }
+
+    override suspend fun accent(identity: String): String? =
+        api.style(identity).unwrap().accent?.takeIf { it.isNotBlank() }
 
     override suspend fun unread(): List<MochiNotification> =
         notifications.list().data.filter { it.isUnread }

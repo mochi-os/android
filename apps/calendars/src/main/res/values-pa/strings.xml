@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">ਇਸ ਐਪ ਲਈ ਕੈਲੰਡਰ ਪਹੁੰਚ ਬੰਦ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਐਪ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਹੇਠਾਂ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="calendars_location_map">ਨਕਸ਼ੇ \'ਤੇ ਦਿਖਾਓ</string>
     <string name="calendars_location_flight">ਉਡਾਣ ਟ੍ਰੈਕ ਕਰੋ</string>
+    <string name="calendars_preferences_week_numbers">ਹਫ਼ਤੇ ਦੇ ਨੰਬਰ ਦਿਖਾਓ</string>
 </resources>

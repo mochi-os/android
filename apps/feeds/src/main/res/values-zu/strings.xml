@@ -312,6 +312,11 @@
     <string name="feeds_imported">Kungeniswe okungu-%1$s</string>
     <string name="feeds_imported_more">Kungeniswe okungu-%1$s kuze kube manje; okunye kuzolandela</string>
     <string name="feeds_import_sources_more">Kwengezwe imithombo engu-%1$s kuze kube manje; eminye izolandela</string>
+    <string name="feeds_waiting_title">Kulindwe imvume</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">umuntu %s</item>
+        <item quantity="other">abantu %s</item>
+    </plurals>
     <string name="feeds_filters">Izihlungi</string>
     <string name="feeds_filter_phrase">Ibinzana elizofihlwa</string>
     <string name="feeds_filter_remove">Khipha %1$s</string>

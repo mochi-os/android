@@ -310,6 +310,11 @@
     <string name="feeds_imported">A ti kó %1$s wọlé</string>
     <string name="feeds_imported_more">A ti kó %1$s wọlé báyìí; àwọn yòókù ń bọ̀</string>
     <string name="feeds_import_sources_more">A ti fi orísun %1$s kún báyìí; àwọn yòókù ń bọ̀</string>
+    <string name="feeds_waiting_title">Ń dúró de ìyọ̀ǹda</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">ènìyàn %s</item>
+        <item quantity="other">ènìyàn %s</item>
+    </plurals>
     <string name="feeds_filters">Àwọn àsẹ́</string>
     <string name="feeds_filter_phrase">Gbólóhùn láti fi pamọ́</string>
     <string name="feeds_filter_remove">Yọ %1$s kúrò</string>

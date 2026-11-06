@@ -180,10 +180,12 @@ fun ChatSettingsScreen(
                                     )
                                     MochiIconButton(
                                         onClick = {
+                                            // A refused name stays in the editor.
                                             if (nameDraft.isNotBlank() && nameDraft != uiState.chat.name) {
-                                                viewModel.rename(nameDraft)
+                                                viewModel.rename(nameDraft) { editingName = false }
+                                            } else {
+                                                editingName = false
                                             }
-                                            editingName = false
                                         },
                                         enabled = nameDraft.isNotBlank() && !uiState.isSaving,
                                         modifier = Modifier.size(36.dp),
@@ -358,9 +360,9 @@ fun ChatSettingsScreen(
             hasFriends = uiState.friends.isNotEmpty(),
             isLoading = uiState.isLoadingFriends,
             members = existingMemberIds,
+            // A refused member keeps the dialog, and an address typed into it.
             onConfirm = { friendId ->
-                viewModel.addMember(friendId)
-                showAddMember = false
+                viewModel.addMember(friendId) { showAddMember = false }
             },
             onDismiss = { showAddMember = false },
         )

@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">이 앱의 캘린더 액세스가 꺼져 있어요. 앱 설정의 권한에서 켤 수 있어요.</string>
     <string name="calendars_location_map">지도에서 보기</string>
     <string name="calendars_location_flight">항공편 추적</string>
+    <string name="calendars_preferences_week_numbers">주 번호 표시</string>
 </resources>

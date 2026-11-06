@@ -114,7 +114,7 @@ class ListingDialogsTest {
         val api = retrofit.create(MarketApi::class.java)
         val model = ListingDetailViewModel(
             MarketRepository(api, FileStore(context)),
-            SavedRepository(api),
+            SavedRepository(api, SessionManager(context)),
             RecentlyViewedStore(context),
             ReportedStore(context),
             context,

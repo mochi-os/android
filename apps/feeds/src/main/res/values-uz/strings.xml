@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s ta import qilindi</string>
     <string name="feeds_imported_more">Hozircha %1$s ta import qilindi; qolganlari keyinroq qoʻshiladi</string>
     <string name="feeds_import_sources_more">Hozircha %1$s ta manba qoʻshildi; qolganlari keyinroq qoʻshiladi</string>
+    <string name="feeds_waiting_title">Ruxsat kutilmoqda</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s kishi</item>
+        <item quantity="other">%s kishi</item>
+    </plurals>
     <string name="feeds_filters">Filtrlar</string>
     <string name="feeds_filter_phrase">Yashiriladigan ibora</string>
     <string name="feeds_filter_remove">%1$s ni olib tashlash</string>

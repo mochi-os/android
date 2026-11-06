@@ -336,4 +336,5 @@
         <item quantity="other">เพิ่ม %s ชุมชนแล้ว</item>
     </plurals>
     <string name="forums_comment_op">เจ้าของกระทู้</string>
+    <string name="forums_community_destination">โพสต์ไปยัง %1$s ในนาม %2$s</string>
 </resources>

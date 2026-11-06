@@ -338,4 +338,5 @@
         <item quantity="other">Jumuiya %s zimeongezwa</item>
     </plurals>
     <string name="forums_comment_op">Mwandishi</string>
+    <string name="forums_community_destination">Inachapishwa kwenye %1$s kama %2$s</string>
 </resources>

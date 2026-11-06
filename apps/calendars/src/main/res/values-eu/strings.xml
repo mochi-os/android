@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Egutegirako sarbidea desaktibatuta dago aplikazio honetan. Aplikazioaren ezarpenetako Baimenak atalean aktiba dezakezu.</string>
     <string name="calendars_location_map">Erakutsi mapan</string>
     <string name="calendars_location_flight">Jarraitu hegaldiari</string>
+    <string name="calendars_preferences_week_numbers">Erakutsi aste-zenbakiak</string>
 </resources>

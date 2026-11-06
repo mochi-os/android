@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s importálva</string>
     <string name="feeds_imported_more">Eddig %1$s importálva; a többi később következik</string>
     <string name="feeds_import_sources_more">Eddig %1$s forrás hozzáadva; a többi később következik</string>
+    <string name="feeds_waiting_title">Engedélyre vár</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s személy</item>
+        <item quantity="other">%s személy</item>
+    </plurals>
     <string name="feeds_filters">Szűrők</string>
     <string name="feeds_filter_phrase">Elrejtendő kifejezés</string>
     <string name="feeds_filter_remove">%1$s eltávolítása</string>

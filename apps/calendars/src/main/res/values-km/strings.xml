@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">សិទ្ធិចូលប្រើប្រតិទិនត្រូវបានបិទសម្រាប់កម្មវិធីនេះ។ អ្នកអាចបើកវានៅក្រោម ការអនុញ្ញាត នៅក្នុងការកំណត់របស់កម្មវិធី។</string>
     <string name="calendars_location_map">បង្ហាញលើផែនទី</string>
     <string name="calendars_location_flight">តាមដានជើងហោះហើរ</string>
+    <string name="calendars_preferences_week_numbers">បង្ហាញលេខសប្តាហ៍</string>
 </resources>

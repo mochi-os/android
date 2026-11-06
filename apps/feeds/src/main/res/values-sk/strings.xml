@@ -326,6 +326,13 @@
     <string name="feeds_imported">Importované: %1$s</string>
     <string name="feeds_imported_more">Zatiaľ importované: %1$s; ostatné budú nasledovať</string>
     <string name="feeds_import_sources_more">Zatiaľ pridané zdroje: %1$s; ostatné budú nasledovať</string>
+    <string name="feeds_waiting_title">Čaká sa na povolenie</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s osoba</item>
+        <item quantity="few">%s osoby</item>
+        <item quantity="many">%s osoby</item>
+        <item quantity="other">%s osôb</item>
+    </plurals>
     <string name="feeds_filters">Filtre</string>
     <string name="feeds_filter_phrase">Fráza na skrytie</string>
     <string name="feeds_filter_remove">Odstrániť %1$s</string>

@@ -266,4 +266,5 @@
     <string name="calendars_sync_permission_blocked">Aksés kalénder dipareuman pikeun aplikasi ieu. Anjeun tiasa ngahurungkeunana dina Idin di setélan aplikasi.</string>
     <string name="calendars_location_map">Témbongkeun dina peta</string>
     <string name="calendars_location_flight">Lacak penerbangan</string>
+    <string name="calendars_preferences_week_numbers">Tampilkeun nomer minggu</string>
 </resources>

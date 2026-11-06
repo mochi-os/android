@@ -338,4 +338,5 @@
         <item quantity="other">%s kominote ajoute</item>
     </plurals>
     <string name="forums_comment_op">Otè</string>
+    <string name="forums_community_destination">Pibliye nan %1$s kòm %2$s</string>
 </resources>

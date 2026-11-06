@@ -310,6 +310,11 @@
     <string name="feeds_imported">%1$s apantata</string>
     <string name="feeds_imported_more">Jichhakamax %1$s apantata; mayninakax arkani</string>
     <string name="feeds_import_sources_more">Jichhakamax %1$s jalsunaka yapxatata; mayninakax arkani</string>
+    <string name="feeds_waiting_title">Permiso suyaski</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s jaqi</item>
+        <item quantity="other">%s jaqinaka</item>
+    </plurals>
     <string name="feeds_filters">Filtronaka</string>
     <string name="feeds_filter_phrase">Imantañataki arunaka</string>
     <string name="feeds_filter_remove">%1$s aparma</string>

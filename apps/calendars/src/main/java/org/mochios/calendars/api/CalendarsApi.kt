@@ -28,6 +28,7 @@ import org.mochios.calendars.model.SplitResponse
 import org.mochios.calendars.model.TokenDeleteResponse
 import org.mochios.calendars.model.TokenResponse
 import org.mochios.calendars.model.TokensResponse
+import org.mochios.calendars.model.Week
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.ResponseBody
@@ -118,6 +119,7 @@ data class PreferencesRequest(
     val zones: Boolean? = null,
     val calendar: String? = null,
     val allday: String? = null,
+    val week: Week? = null,
 )
 
 /**

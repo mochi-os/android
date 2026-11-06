@@ -338,4 +338,5 @@
         <item quantity="other">%s közösség hozzáadva</item>
     </plurals>
     <string name="forums_comment_op">Szerző</string>
+    <string name="forums_community_destination">Közzététel itt: %1$s, mint %2$s</string>
 </resources>

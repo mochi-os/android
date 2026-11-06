@@ -314,6 +314,11 @@
     <string name="feeds_imported">Importerte %1$s</string>
     <string name="feeds_imported_more">Importerte %1$s så langt; resten kjem etter</string>
     <string name="feeds_import_sources_more">La til %1$s kjelder så langt; resten kjem etter</string>
+    <string name="feeds_waiting_title">Ventar på løyve</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s person</item>
+        <item quantity="other">%s personar</item>
+    </plurals>
     <string name="feeds_filters">Filter</string>
     <string name="feeds_filter_phrase">Frase som skal skjulast</string>
     <string name="feeds_filter_remove">Fjern %1$s</string>

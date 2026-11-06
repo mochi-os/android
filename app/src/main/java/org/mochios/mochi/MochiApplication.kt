@@ -23,6 +23,7 @@ import org.mochios.android.api.AssetHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
+import org.mochios.android.ui.components.RevalidatingCacheStrategy
 import org.mochios.android.ui.components.VideoFrameFetcher
 import org.mochios.android.ui.components.VideoFrameKeyer
 import org.mochios.android.i18n.LanguageStore
@@ -77,9 +78,12 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                 // to absolute URLs, so call sites pass relative paths without
                 // threading the server URL through.
                 add(RelativeAssetUrlMapper(sessionManager))
+                // Avatars live at addresses that do not change with them; the
+                // strategy asks again once the server's max-age has passed.
                 add(
                     OkHttpNetworkFetcherFactory(
                         callFactory = { assetHttpClient },
+                        cacheStrategy = { RevalidatingCacheStrategy() },
                         concurrentRequestStrategy = { DeDupeConcurrentRequestStrategy() },
                     )
                 )

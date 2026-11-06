@@ -305,6 +305,11 @@
     <string name="feeds_imported">%1$s 件をインポートしました</string>
     <string name="feeds_imported_more">%1$s 件をインポートしました。残りも順次インポートされます</string>
     <string name="feeds_import_sources_more">%1$s 件のソースを追加しました。残りも順次追加されます</string>
+    <string name="feeds_waiting_title">権限を待っています</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s 人</item>
+        <item quantity="other">%s 人</item>
+    </plurals>
     <string name="feeds_filters">フィルター</string>
     <string name="feeds_filter_phrase">非表示にするフレーズ</string>
     <string name="feeds_filter_remove">%1$sを削除</string>

@@ -39,6 +39,7 @@ import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.WhileStarted
 import org.mochios.settings.R
 import org.mochios.settings.ui.networks.networkLabel
 import org.mochios.android.R as MochiR
@@ -51,6 +52,7 @@ fun SystemFederationScreen(
 ) {
     val state by viewModel.uiState.collectAsState()
     val format = LocalFormat.current
+    WhileStarted { viewModel.poll() }
 
     Scaffold(
         topBar = {

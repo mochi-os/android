@@ -29,7 +29,18 @@ interface Vault {
  * enough to read what it wrapped.
  */
 class Keystore(private val alias: String) : Vault {
+    // The handle, once found or made: each lookup was a keystore load and an
+    // entry read across the keystore's binder, for every value read or written.
+    // It names the key; the key itself stays in the keystore.
+    @Volatile
+    private var held: SecretKey? = null
+
     override fun key(): SecretKey {
+        held?.let { return it }
+        return synchronized(this) { held ?: find().also { held = it } }
+    }
+
+    private fun find(): SecretKey {
         val store = KeyStore.getInstance(PROVIDER).apply { load(null) }
         val existing = store.getEntry(alias, null) as? KeyStore.SecretKeyEntry
         if (existing != null) return existing.secretKey
@@ -66,6 +77,21 @@ class Keystore(private val alias: String) : Vault {
  */
 class Sealed(private val vault: Vault) {
 
+    /**
+     * Values already opened, by their stored form: the session and each app's
+     * token were read through the keystore on every request. Every seal takes a
+     * fresh nonce, so a changed value is a new stored form and an entry here
+     * never goes stale; [forget] drops the plaintexts when the credentials go.
+     */
+    private val opened = object : LinkedHashMap<String, String>(16, 0.75f, true) {
+        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<String, String>) = size > OPENED
+    }
+
+    /** Drop every value held in the clear. */
+    fun forget() {
+        synchronized(opened) { opened.clear() }
+    }
+
     /** [plain] as `<marker><base64 of nonce ‖ ciphertext>`. */
     fun seal(plain: String): String {
         val cipher = Cipher.getInstance(TRANSFORMATION)
@@ -84,6 +110,7 @@ class Sealed(private val vault: Vault) {
      */
     fun open(stored: String): String? {
         if (!stored.startsWith(MARKER)) return stored
+        synchronized(opened) { opened[stored] }?.let { return it }
         return try {
             val raw = Base64.getDecoder().decode(stored.removePrefix(MARKER))
             if (raw.size <= NONCE) return null
@@ -94,6 +121,7 @@ class Sealed(private val vault: Vault) {
                 GCMParameterSpec(TAG, raw, 0, NONCE),
             )
             String(cipher.doFinal(raw, NONCE, raw.size - NONCE), Charsets.UTF_8)
+                .also { plain -> synchronized(opened) { opened[stored] = plain } }
         } catch (_: Exception) {
             null
         }
@@ -106,5 +134,7 @@ class Sealed(private val vault: Vault) {
         const val MARKER = "sealed:"
         const val NONCE = 12
         const val TAG = 128
+        // The session, one token per app and the verifiers, with room to spare.
+        const val OPENED = 64
     }
 }

@@ -176,6 +176,7 @@ fun HomeScreen(
 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
         viewModel.refresh()
+        menu.restyle()
     }
     // The list follows the count while the menu is open, as a notification
     // arrives or is read elsewhere.
@@ -186,7 +187,9 @@ fun HomeScreen(
     HomePage(
         glow = LocalFormat.current.preferences.background,
         navigation = {
-            UserButton(name = menuState.name, identity = menuState.identity, count = count) { open = true }
+            UserButton(name = menuState.name, identity = menuState.identity, accent = menuState.accent, count = count) {
+                open = true
+            }
         },
     ) {
         HomeContent(

@@ -57,7 +57,11 @@ fun SourcesScreen(
     val error by viewModel.error.collectAsState()
     val actionMessage by viewModel.actionMessage.collectAsState()
     val imported by viewModel.imported.collectAsState()
+    val allowed by viewModel.allowed.collectAsState()
     val isImporting by viewModel.isImporting.collectAsState()
+    // The import, then the adding of the people it left waiting.
+    val addingWaiting by viewModel.addingWaiting.collectAsState()
+    val importBusy = isImporting || addingWaiting
 
     val snackbarHostState = remember { SnackbarHostState() }
     val resources = LocalResources.current
@@ -94,6 +98,19 @@ fun SourcesScreen(
                 },
             )
             viewModel.clearImported()
+        }
+    }
+
+    LaunchedEffect(allowed) {
+        allowed?.let { answer ->
+            snackbarHostState.showSnackbar(
+                if (answer.more) {
+                    resources.getString(R.string.feeds_import_sources_more, format.formatNumber(answer.imported))
+                } else {
+                    resources.getQuantityString(R.plurals.feeds_import_sources, answer.imported, format.formatNumber(answer.imported))
+                },
+            )
+            viewModel.clearAllowed()
         }
     }
 
@@ -137,9 +154,9 @@ fun SourcesScreen(
                 actions = {
                     MochiIconButton(
                         onClick = { importLauncher.launch(arrayOf("text/*", "application/csv")) },
-                        enabled = !isImporting,
+                        enabled = !importBusy,
                     ) {
-                        if (isImporting) {
+                        if (importBusy) {
                             CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
                         } else {
                             Icon(

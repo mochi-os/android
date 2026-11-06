@@ -11,6 +11,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.PublishState
+import org.mochios.android.api.MochiError
 
 /** Where a feed publishes is a tab of its own, before Access, shown only where there is somewhere to publish. */
 class SettingsTabsTest {
@@ -33,11 +34,12 @@ class SettingsTabsTest {
     }
 
     @Test
-    fun `a feed has somewhere to publish when it is public and the owner holds an account`() {
+    fun `Publish to is offered where the owner holds an account, or the server says why not`() {
         val held = PublishState(accounts = listOf(PublishAccount(id = "m1", type = "mastodon", identifier = "@a@b.example")))
-        assertTrue(publishable("public", held))
-        assertFalse(publishable("private", held))
-        assertFalse(publishable("public", PublishState()))
-        assertFalse(publishable("public", null))
+        assertTrue(publishable(held, null))
+        assertFalse(publishable(PublishState(), null))
+        assertFalse(publishable(null, null))
+        // A private feed's refusal is the tab's content.
+        assertTrue(publishable(null, MochiError.ForbiddenError("Only a public feed publishes to other networks")))
     }
 }

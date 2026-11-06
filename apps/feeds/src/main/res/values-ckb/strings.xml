@@ -314,6 +314,11 @@
     <string name="feeds_imported">%1$s هاوردەکرا</string>
     <string name="feeds_imported_more">تا ئێستا %1$s هاوردەکرا؛ ئەوانی تر بەدوایدا دێن</string>
     <string name="feeds_import_sources_more">تا ئێستا %1$s سەرچاوە زیادکران؛ ئەوانی تر بەدوایدا دێن</string>
+    <string name="feeds_waiting_title">چاوەڕێی مۆڵەت</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s کەس</item>
+        <item quantity="other">%s کەس</item>
+    </plurals>
     <string name="feeds_filters">فیلتەرەکان</string>
     <string name="feeds_filter_phrase">دەستەواژەی شاردنەوە</string>
     <string name="feeds_filter_remove">لابردنی %1$s</string>

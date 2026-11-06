@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s אימפּאָרטירט</string>
     <string name="feeds_imported_more">ביז איצט %1$s אימפּאָרטירט; די איבעריקע קומען שפּעטער</string>
     <string name="feeds_import_sources_more">ביז איצט %1$s מקורים צוגעלייגט; די איבעריקע קומען שפּעטער</string>
+    <string name="feeds_waiting_title">מע וואַרט אויף דערלויבעניש</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s מענטש</item>
+        <item quantity="other">%s מענטשן</item>
+    </plurals>
     <string name="feeds_filters">פֿילטערס</string>
     <string name="feeds_filter_phrase">פֿראַזע צו באַהאַלטן</string>
     <string name="feeds_filter_remove">אַראָפּנעמען %1$s</string>

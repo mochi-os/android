@@ -338,4 +338,5 @@
         <item quantity="other">Lisati %s kogukonda</item>
     </plurals>
     <string name="forums_comment_op">Autor</string>
+    <string name="forums_community_destination">Postitatakse kogukonda %1$s kasutajana %2$s</string>
 </resources>

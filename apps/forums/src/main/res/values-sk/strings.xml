@@ -341,4 +341,5 @@
         <item quantity="other">Pridaných %s komunít</item>
     </plurals>
     <string name="forums_comment_op">Autor</string>
+    <string name="forums_community_destination">Publikuje sa do %1$s ako %2$s</string>
 </resources>

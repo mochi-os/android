@@ -40,6 +40,8 @@ import org.mochios.android.files.FileStore
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.MenuApi
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.Week
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.storage.VisibilityStore
 import org.mochios.calendars.ui.calendar.CalendarUiState
@@ -138,9 +140,16 @@ class MonthGridTest {
         }
     }
 
-    private fun show(instances: List<Instance>) {
+    /** The grid over [instances], its weeks numbered unless the preferences say otherwise. */
+    private fun show(instances: List<Instance>, numbers: Boolean = true) {
         val model = model()
-        val state = CalendarUiState(view = CalendarsSection.MONTH, anchor = shown.value, instances = instances, isLoading = false)
+        val state = CalendarUiState(
+            view = CalendarsSection.MONTH,
+            anchor = shown.value,
+            instances = instances,
+            isLoading = false,
+            preferences = Preferences(week = Week(numbers = numbers)),
+        )
         rule.setContent {
             MonthGrid(
                 weeks = grid(shown.value),
@@ -205,6 +214,13 @@ class MonthGridTest {
     }
 
     // ---- week numbers ----
+
+    @Test
+    fun `no row is numbered while the preferences leave week numbers off, as they start`() {
+        assertEquals(false, Preferences().week.numbers)
+        show(emptyList(), numbers = false)
+        assertTrue(rule.onAllNodesWithTag("week-number", useUnmergedTree = true).fetchSemanticsNodes().isEmpty())
+    }
 
     @Test
     fun `each row is labelled with its ISO week number`() {
@@ -340,23 +356,27 @@ class MonthGridTest {
     ).fetchSemanticsNodes().first().boundsInRoot
 
     @Test
-    fun `a timed entry puts its dot and time on the first line and its title alone on the second`() {
-        show(listOf(meeting(LocalDate.of(2026, 10, 14))))
+    fun `a timed entry puts its dot and title on the first line and its time under the title`() {
+        val day = LocalDate.of(2026, 10, 14)
+        val midnight = day.atStartOfDay(london).toEpochSecond()
+        val holiday = Instance(event = "a1", calendar = "c1", summary = "Holiday", allday = true, date = day.toString(), start = midnight, finish = midnight + 86400)
+        show(listOf(holiday, meeting(day)))
         val chip = entry("Stand-up")
         val title = words("Stand-up")
         val time = clock()
-        assertTrue(time.bottom <= title.top + 1f)
-        // The title starts at the entry's padding, with no dot before it;
-        // the dot and its gap come before the time instead.
-        assertEquals(px(4.dp), title.left - chip.left, 1.5f)
-        assertEquals(px(4.dp + 8.dp + 4.dp), time.left - chip.left, 1.5f)
+        assertTrue(title.bottom <= time.top + 1f)
+        // The dot and its gap come before the title, as before an all-day
+        // entry's, so the day's titles line up; the time sits under the title.
+        assertEquals(px(4.dp + 8.dp + 4.dp), title.left - chip.left, 1.5f)
+        assertEquals(words("Holiday").left, title.left, 1.5f)
+        assertEquals(title.left, time.left, 1.5f)
     }
 
     @Test
-    fun `the dot sits on the time's line, before the time`() {
+    fun `the dot sits on the title's line, before the title`() {
         show(listOf(meeting(LocalDate.of(2026, 10, 14))))
         val chip = entry("Stand-up")
-        val row = (clock().center.y - chip.top).toInt()
+        val row = (words("Stand-up").center.y - chip.top).toInt()
         val pixels = rule.onNodeWithText("Stand-up").captureToImage().toPixelMap()
         // Where the dot is, against the empty end of the same line.
         assertNotEquals(pixels[pixels.width - 2, row], pixels[px(8.dp).toInt(), row])

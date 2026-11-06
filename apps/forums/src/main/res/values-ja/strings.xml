@@ -336,4 +336,5 @@
         <item quantity="other">%s 件のコミュニティを追加しました</item>
     </plurals>
     <string name="forums_comment_op">投稿者</string>
+    <string name="forums_community_destination">%1$s に %2$s として投稿します</string>
 </resources>

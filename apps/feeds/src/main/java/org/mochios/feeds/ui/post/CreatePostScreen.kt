@@ -6,6 +6,7 @@
 package org.mochios.feeds.ui.post
 
 import android.net.Uri
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -163,8 +164,14 @@ fun CreatePostScreen(
         viewModel.addAttachments(uris)
     }
 
+    val context = LocalContext.current
     LaunchedEffect(postSuccess) {
         if (postSuccess) {
+            // A toast outlasts the screen, so what a copy went without is
+            // still read once the screen has gone.
+            viewModel.unsent.value.forEach { line ->
+                Toast.makeText(context, line, Toast.LENGTH_LONG).show()
+            }
             onNavigateBack()
         }
     }

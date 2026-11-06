@@ -317,4 +317,5 @@
     <string name="calendars_sync_permission_blocked">Tá rochtain ar an bhféilire múchta don aip seo. Is féidir leat í a chasadh air faoi Ceadanna i socruithe na haipe.</string>
     <string name="calendars_location_map">Taispeáin ar léarscáil</string>
     <string name="calendars_location_flight">Lean an eitilt</string>
+    <string name="calendars_preferences_week_numbers">Taispeáin uimhreacha seachtaine</string>
 </resources>

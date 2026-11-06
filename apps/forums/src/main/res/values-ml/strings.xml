@@ -338,4 +338,5 @@
         <item quantity="other">%s കമ്മ്യൂണിറ്റികൾ ചേർത്തു</item>
     </plurals>
     <string name="forums_comment_op">രചയിതാവ്</string>
+    <string name="forums_community_destination">%1$s ലേക്ക് %2$s ആയി പോസ്റ്റ് ചെയ്യുന്നു</string>
 </resources>

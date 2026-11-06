@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Bu ilova uchun kalendarga kirish oʻchirilgan. Uni ilova sozlamalaridagi Ruxsatlar boʻlimida yoqishingiz mumkin.</string>
     <string name="calendars_location_map">Xaritada koʻrsatish</string>
     <string name="calendars_location_flight">Parvozni kuzatish</string>
+    <string name="calendars_preferences_week_numbers">Hafta raqamlarini koʻrsatish</string>
 </resources>

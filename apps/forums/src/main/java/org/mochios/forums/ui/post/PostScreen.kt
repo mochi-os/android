@@ -140,11 +140,13 @@ import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.TagItem
 import org.mochios.forums.R
+import org.mochios.forums.model.Destination
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.Tag
 import org.mochios.forums.model.countComments
 import org.mochios.forums.ui.components.PostBadges
+import org.mochios.forums.ui.components.destinationBanner
 import org.mochios.forums.ui.components.authorAvatars
 import org.mochios.forums.ui.components.commentAvatar
 import org.mochios.forums.ui.components.postAvatar
@@ -287,6 +289,7 @@ fun PostScreen(
             canComment = uiState.canComment && !uiState.post.locked,
             replyTo = uiState.replyTo,
             onClearReply = { viewModel.setReplyTo(null) },
+            destination = uiState.forum.destination,
             isSending = uiState.isSending,
             upload = commentUpload,
             attachments = commentAttachments,
@@ -527,7 +530,7 @@ fun PostScreen(
                             upload = commentUpload,
                             sendLabel = stringResource(R.string.forums_comment_send),
                             windowInsets = ComposeBarDefaults.WindowInsets,
-                            banner = uiState.replyTo?.let { replied ->
+                            banner = destinationBanner(uiState.forum.destination, uiState.replyTo?.let { replied ->
                                 {
                                     ReplyComposerBanner(
                                         label = stringResource(
@@ -541,7 +544,7 @@ fun PostScreen(
                                         onCancel = { viewModel.setReplyTo(null) },
                                     )
                                 }
-                            },
+                            }),
                             attachments = ComposeBarAttachments(
                                 pending = commentAttachments,
                                 onAdd = { uris -> viewModel.addCommentAttachments(uris) },
@@ -1136,6 +1139,7 @@ private fun AttachmentComments(
     canComment: Boolean,
     replyTo: ForumComment?,
     onClearReply: () -> Unit,
+    destination: Destination? = null,
     isSending: Boolean,
     upload: Upload?,
     attachments: List<Uri>,
@@ -1208,7 +1212,7 @@ private fun AttachmentComments(
         }
         if (canComment) {
             ComposeBar(
-                banner = replyTo?.let { replied ->
+                banner = destinationBanner(destination, replyTo?.let { replied ->
                     {
                         ReplyComposerBanner(
                             label = stringResource(
@@ -1220,7 +1224,7 @@ private fun AttachmentComments(
                             onCancel = onClearReply,
                         )
                     }
-                },
+                }),
                 value = draft,
                 onValueChange = { draft = it },
                 onSend = {

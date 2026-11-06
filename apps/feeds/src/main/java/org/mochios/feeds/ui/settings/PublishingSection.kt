@@ -105,7 +105,19 @@ internal fun PublishingEvents(viewModel: PublishingViewModel) {
 @Composable
 internal fun PublishingSection(viewModel: PublishingViewModel) {
     val state by viewModel.publish.collectAsState()
+    // A server people of an import wait on, put to the user one at a time.
+    val waitingPermission by viewModel.waitingPermission.collectAsState()
+    waitingPermission?.let { pending ->
+        PermissionRequestDialog(
+            appId = pending.app,
+            permissionName = pending.name,
+            onAllow = { viewModel.allowWaitingPermission() },
+            onDeny = { viewModel.denyWaitingPermission() },
+        )
+    }
     val busy by viewModel.busy.collectAsState()
+    val addingWaiting by viewModel.addingWaiting.collectAsState()
+    val asking by viewModel.asking.collectAsState()
     val kept by viewModel.kept.collectAsState()
     val backups by viewModel.backups.collectAsState()
     val accounts = viewModel.accounts(state)
@@ -146,6 +158,8 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
                 }
                 AccountMenu(
                     account = account,
+                    // An import, and the adding of the people it left waiting.
+                    busy = account.id in busy || (addingWaiting && asking == account.id),
                     generator = generators[account.id]?.isNotEmpty() == true,
                     onImport = { kind -> viewModel.importFrom(account, kind) },
                     onBackups = { viewModel.openBackups(account) },
@@ -154,7 +168,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
                 val label = stringResource(R.string.feeds_publish_to_account, account.identifier)
                 Switch(
                     checked = account.id in publish,
-                    enabled = busy != account.id,
+                    enabled = account.id !in busy,
                     onCheckedChange = { on -> viewModel.toggle(account, on) },
                     modifier = Modifier.semantics { contentDescription = label },
                 )
@@ -189,6 +203,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
 @Composable
 private fun AccountMenu(
     account: PublishAccount,
+    busy: Boolean,
     generator: Boolean,
     onImport: (String) -> Unit,
     onBackups: () -> Unit,
@@ -196,8 +211,12 @@ private fun AccountMenu(
 ) {
     var open by remember { mutableStateOf(false) }
     Box {
-        MochiIconButton(onClick = { open = true }) {
-            Icon(Icons.Outlined.MoreHoriz, contentDescription = stringResource(MochiR.string.common_more_options))
+        MochiIconButton(onClick = { open = true }, enabled = !busy) {
+            if (busy) {
+                CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
+            } else {
+                Icon(Icons.Outlined.MoreHoriz, contentDescription = stringResource(MochiR.string.common_more_options))
+            }
         }
         MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
             listOf(
@@ -253,32 +272,41 @@ private fun BackupsDialog(
         title = stringResource(R.string.feeds_backups_title, backups.account.identifier),
         content = {
             val files = backups.files
-            when {
-                files == null -> CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
-                files.isEmpty() -> Text(
-                    text = stringResource(R.string.feeds_backups_none),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                else -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    files.forEach { name ->
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable { onDownload(name) }
-                                .padding(vertical = 4.dp),
-                        ) {
-                            Icon(
-                                Icons.Outlined.Download,
-                                contentDescription = null,
-                                modifier = Modifier.size(18.dp),
-                                tint = MaterialTheme.colorScheme.primary,
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(name, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary)
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                when {
+                    files == null -> CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
+                    files.isEmpty() -> Text(
+                        text = stringResource(R.string.feeds_backups_none),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    else -> Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        files.forEach { name ->
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { onDownload(name) }
+                                    .padding(vertical = 4.dp),
+                            ) {
+                                Icon(
+                                    Icons.Outlined.Download,
+                                    contentDescription = null,
+                                    modifier = Modifier.size(18.dp),
+                                    tint = MaterialTheme.colorScheme.primary,
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(name, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.primary)
+                            }
                         }
                     }
+                }
+                if (files != null && backups.repository.isNotEmpty()) {
+                    Text(
+                        text = backups.repository,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.error,
+                    )
                 }
             }
         },
@@ -315,7 +343,7 @@ internal fun FiltersSection(viewModel: PublishingViewModel) {
     var phrase by remember { mutableStateOf("") }
     Section(title = stringResource(R.string.feeds_filters)) {
         filters.forEach { filter ->
-            FilterRow(filter = filter, busy = busy == filter.id, onRemove = { viewModel.removeFilter(filter) })
+            FilterRow(filter = filter, busy = filter.id in busy, onRemove = { viewModel.removeFilter(filter) })
         }
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
             MochiTextField(
@@ -327,13 +355,11 @@ internal fun FiltersSection(viewModel: PublishingViewModel) {
             )
             Spacer(modifier = Modifier.width(8.dp))
             MochiButton(
-                onClick = {
-                    viewModel.addFilter(phrase)
-                    phrase = ""
-                },
-                enabled = phrase.isNotBlank() && busy != "filter",
+                // A refused phrase stays in the field.
+                onClick = { viewModel.addFilter(phrase) { phrase = "" } },
+                enabled = phrase.isNotBlank() && "filter" !in busy,
             ) {
-                if (busy == "filter") {
+                if ("filter" in busy) {
                     CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
                 } else {
                     Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))

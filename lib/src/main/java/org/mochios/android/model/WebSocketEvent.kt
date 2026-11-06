@@ -5,6 +5,7 @@
 
 package org.mochios.android.model
 
+import com.google.gson.JsonElement
 import com.google.gson.annotations.SerializedName
 
 data class WebSocketEvent(
@@ -52,4 +53,36 @@ data class WebSocketEvent(
      * frame, as its own key carries it, inside one of type "feeds/frame".
      */
     val frame: WebSocketEvent? = null,
+    /** A chat edit, delete, reaction or decrypted event: the message it concerns. */
+    val message: String? = null,
+    /** A chat message: the message it quotes, null when none. */
+    val reply: String? = null,
+    /** A chat message or edit: when it was last edited, 0 when never. */
+    val edited: Long? = null,
+    /** A chat message: 1 where it came encrypted. Older servers leave it out. */
+    val encrypted: Int? = null,
+    /** A chat reaction event: the message's counts by reaction. */
+    val reactions: Map<String, Int>? = null,
+    /**
+     * A chat reaction event: the reaction [member] now has on the message,
+     * null where they took it away. Older servers send neither.
+     */
+    val reaction: String? = null,
+    /**
+     * A chat message's files and quoted post, as the server sends them. Kept
+     * unparsed here: each app turns them into its own types, and a shape typed
+     * here for one app would lose another app's frames that carry the key in
+     * another shape, since a field that fails to parse loses the whole frame.
+     */
+    val attachments: JsonElement? = null,
+    val quote: JsonElement? = null,
+    /**
+     * A wiki/update frame: what changed - "edit", "pages", "comment", "tag",
+     * "redirect" or "attachment"; absent where anything may have changed.
+     */
+    val kind: String? = null,
+    /** A wiki/update frame: the slug of the page concerned. */
+    val page: String? = null,
+    /** A wiki/update frame of kind "pages" for a rename: the page's old slug. */
+    val previous: String? = null,
 )

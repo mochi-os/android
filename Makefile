@@ -60,9 +60,16 @@ release: apk
 	# The stable name is a relative symlink to it, naming a file in this same
 	# directory - the server opens it through os.Root and refuses a link that
 	# leaves the tree.
-	rm -f $(packages)/mochi-*.apk
+	rm -f $(packages)/mochi-*.apk $(packages)/mochi-*.apk.gz
 	cp $(apk) $(packages)/mochi-$(version).apk
 	ln -sfn mochi-$(version).apk $(packages)/mochi.apk
+	# A gzipped copy beside it, which the server sends a download that asks for
+	# gzip and no range: half the bytes, since the translation table is stored
+	# uncompressed in the APK. It carries the APK's modification time, by which
+	# the server knows it is a copy of that file and not of an older one.
+	gzip -9 -n -c $(packages)/mochi-$(version).apk > $(packages)/mochi-$(version).apk.gz
+	touch -r $(packages)/mochi-$(version).apk $(packages)/mochi-$(version).apk.gz
+	ln -sfn mochi-$(version).apk.gz $(packages)/mochi.apk.gz
 	@sha=`sha256sum $(apk) | cut -d' ' -f1`; size=`wc -c < $(apk) | tr -d ' '`; \
 	  printf '{"generated": %s, "platform": "android", "tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
 	  '$(generated)' '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
@@ -72,5 +79,5 @@ release: apk
 	# Two passes: rsync creates a symlink up front but transfers its target minutes
 	# later, so a single pass leaves the download URL pointing at nothing for the
 	# whole upload; the second repoints the link.
-	rsync -av --exclude=/mochi.apk $(packages)/ root@yuzu:/srv/packages/android/
+	rsync -av --exclude=/mochi.apk --exclude=/mochi.apk.gz $(packages)/ root@yuzu:/srv/packages/android/
 	rsync -av $(packages)/ root@yuzu:/srv/packages/android/

@@ -340,6 +340,15 @@
     <string name="feeds_imported">تم استيراد %1$s</string>
     <string name="feeds_imported_more">تم استيراد %1$s حتى الآن، والبقية تتبع</string>
     <string name="feeds_import_sources_more">تمت إضافة %1$s من المصادر حتى الآن، والبقية تتبع</string>
+    <string name="feeds_waiting_title">بانتظار الإذن</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="zero">%s شخص</item>
+        <item quantity="one">%s شخص</item>
+        <item quantity="two">%s شخصان</item>
+        <item quantity="few">%s أشخاص</item>
+        <item quantity="many">%s شخصًا</item>
+        <item quantity="other">%s شخص</item>
+    </plurals>
     <string name="feeds_filters">الفلاتر</string>
     <string name="feeds_filter_phrase">العبارة المراد إخفاؤها</string>
     <string name="feeds_filter_remove">إزالة %1$s</string>

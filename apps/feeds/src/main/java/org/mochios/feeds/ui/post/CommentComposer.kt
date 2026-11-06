@@ -105,6 +105,7 @@ internal fun CommenterDialog(
     author: String,
     onDismiss: () -> Unit,
     onConfirm: (reason: String) -> Unit,
+    busy: Boolean = false,
 ) {
     var reason by remember { mutableStateOf("") }
     when (action) {
@@ -114,6 +115,7 @@ internal fun CommenterDialog(
             text = stringResource(R.string.feeds_mute_commenter_message),
             confirmText = stringResource(R.string.feeds_mute),
             onConfirm = { onConfirm("") },
+            confirmLoading = busy,
             dismissText = stringResource(MochiR.string.common_cancel),
         )
         "block" -> MochiAlertDialog(
@@ -122,6 +124,7 @@ internal fun CommenterDialog(
             text = stringResource(R.string.feeds_block_commenter_message),
             confirmText = stringResource(R.string.feeds_block),
             onConfirm = { onConfirm("") },
+            confirmLoading = busy,
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
         )
@@ -147,6 +150,7 @@ internal fun CommenterDialog(
             },
             confirmText = stringResource(R.string.feeds_report),
             onConfirm = { onConfirm(reason) },
+            confirmLoading = busy,
             dismissText = stringResource(MochiR.string.common_cancel),
         )
     }

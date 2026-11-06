@@ -29,6 +29,8 @@ import javax.inject.Inject
 data class HomeMenuState(
     val name: String = "",
     val identity: String = "",
+    /** The accent colour the user's avatar is ringed in, as on the web; null for none. */
+    val accent: String? = null,
     val unread: List<MochiNotification> = emptyList(),
     val loading: Boolean = true,
     /** The last thing that failed, shown in the menu until the next success. */
@@ -62,6 +64,22 @@ class HomeMenuViewModel @Inject constructor(
         viewModelScope.launch {
             runCatching { source.person() }.onSuccess { person ->
                 _state.update { it.copy(name = person.name, identity = person.identity) }
+                restyle()
+            }
+        }
+    }
+
+    /**
+     * Read the user's accent again; called as the home screen comes back, so
+     * one changed elsewhere rings the avatar. A failed read keeps the ring it
+     * had.
+     */
+    fun restyle() {
+        val identity = _state.value.identity
+        if (identity.isBlank()) return
+        viewModelScope.launch {
+            runCatching { source.accent(identity) }.onSuccess { accent ->
+                _state.update { it.copy(accent = accent) }
             }
         }
     }

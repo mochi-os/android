@@ -271,4 +271,5 @@
     <string name="calendars_sync_permission_blocked">Aksè kalandriye a etenn pou aplikasyon sa a. Ou ka limen l nan Pèmisyon, nan paramèt aplikasyon an.</string>
     <string name="calendars_location_map">Montre sou kat la</string>
     <string name="calendars_location_flight">Swiv vòl la</string>
+    <string name="calendars_preferences_week_numbers">Montre nimewo semèn yo</string>
 </resources>

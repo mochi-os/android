@@ -42,12 +42,14 @@ import org.mochios.feeds.api.FeedNotificationSettings
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.api.PostDetailResponse
+import org.mochios.feeds.api.SourceListResponse
 import org.mochios.feeds.api.AccessRevokeRequest
 import org.mochios.feeds.api.AccessSetRequest
 import org.mochios.feeds.api.AddSourceRequest
 import org.mochios.feeds.api.CreateFeedRequest
 import org.mochios.feeds.api.SubscribeRequest
 import org.mochios.feeds.api.UnsubscribeRequest
+import org.mochios.feeds.model.Backups
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Group
 import org.mochios.feeds.model.Member
@@ -563,6 +565,16 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /** Make the feed public or private after it is made. */
+    suspend fun setPrivacy(feedId: String, privacy: String) {
+        try {
+            api.setPrivacy(feedId, privacy).unwrap()
+            forget()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
     suspend fun markAllRead(feedId: String) {
         try {
             api.markAllRead(feedId).unwrap()
@@ -632,7 +644,7 @@ class FeedsRepository @Inject constructor(
         accounts: List<String>? = null,
         features: PostFeatures? = null,
         poll: PollInput? = null,
-    ) {
+    ): List<String> {
         val files = fileStore.cacheFiles(uris)
         try {
             val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
@@ -649,7 +661,8 @@ class FeedsRepository @Inject constructor(
             if (poll != null) {
                 multipartBody.addFormDataPart("poll", Gson().toJson(poll))
             }
-            api.createPost(feedId, multipartBody.build()).unwrap()
+            // What a copy on another network went without, for the screen to say.
+            return api.createPost(feedId, multipartBody.build()).unwrap().unsent.orEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {
@@ -713,7 +726,7 @@ class FeedsRepository @Inject constructor(
         travellingDestination: PlaceData? = null,
         tracker: UploadTracker? = null,
         features: PostFeatures? = null,
-    ) {
+    ): List<String> {
         val files = fileStore.cacheFiles(newFiles)
         try {
             val builder = MultipartBody.Builder()
@@ -745,7 +758,7 @@ class FeedsRepository @Inject constructor(
                 builder.addFormDataPart("captions", Gson().toJson(captions))
             }
             builder.features(features)
-            api.editPost(feedId, postId, builder.build()).unwrap()
+            return api.editPost(feedId, postId, builder.build()).unwrap().unsent.orEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {
@@ -931,6 +944,22 @@ class FeedsRepository @Inject constructor(
         }
     }
 
+    /** The feed's sources, and the servers people of its imports wait on. */
+    suspend fun getSourceList(feedId: String): SourceListResponse = mapped { api.getSources(feedId).unwrap() }
+
+    /**
+     * Add the people of the feed's imports who waited on a server. While the
+     * app may not read it the answer is a [PermissionRequiredException], which
+     * the caller asks the user about, as for adding a source.
+     */
+    suspend fun allowWaiting(feedId: String, server: String): Imported {
+        val response = api.allowWaiting(feedId, server)
+        if (response.isSuccessful) {
+            return response.body()?.data ?: throw MochiError.Unknown()
+        }
+        throw refusal(response)
+    }
+
     suspend fun addSource(feedId: String, url: String, type: String, account: String? = null): AddSourceResult {
         val response = api.addSource(feedId, AddSourceRequest(feed = feedId, type = type, url = url, account = account))
         if (response.isSuccessful) {
@@ -938,6 +967,11 @@ class FeedsRepository @Inject constructor(
                 ?: throw MochiError.Unknown()
             return AddSourceResult(source = data.source, suggestedCredibility = data.suggestedCredibility, ingested = data.ingested)
         }
+        throw refusal(response)
+    }
+
+    /** Why a sources request failed: the permission it needs, or the server's error. */
+    private fun refusal(response: retrofit2.Response<*>): Exception {
         // A `permission_required` 403 carries the requesting app + permission
         // key in its body — surface it distinctly so the caller can offer to
         // grant it; every other failure maps to the standard error.
@@ -948,7 +982,7 @@ class FeedsRepository @Inject constructor(
             }.getOrNull()
             if (permission?.error == "permission_required" &&
                 !permission.app.isNullOrEmpty() && !permission.permission.isNullOrEmpty()) {
-                throw PermissionRequiredException(permission.app, permission.permission)
+                return PermissionRequiredException(permission.app, permission.permission)
             }
         }
         // A structured `{"error": "Feed returned status 403"}` body carries the
@@ -961,7 +995,7 @@ class FeedsRepository @Inject constructor(
         } else {
             null
         }
-        throw apiError?.let { error -> ApiException(response.code(), error).toMochiError() }
+        return apiError?.let { error -> ApiException(response.code(), error).toMochiError() }
             ?: MochiError.NetworkError()
     }
 
@@ -1232,8 +1266,8 @@ class FeedsRepository @Inject constructor(
     suspend fun importAccount(feedId: String, account: String, kind: String): Imported =
         mapped { api.importAccount(feedId, account, kind).unwrapRaw() }
 
-    suspend fun backups(feedId: String, account: String): List<String> =
-        mapped { api.getBackups(feedId, account).unwrapRaw().files }
+    suspend fun backups(feedId: String, account: String): Backups =
+        mapped { api.getBackups(feedId, account).unwrapRaw() }
 
     private suspend fun <T> mapped(block: suspend () -> T): T = try {
         block()

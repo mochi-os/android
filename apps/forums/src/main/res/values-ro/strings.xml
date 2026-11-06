@@ -340,4 +340,5 @@
         <item quantity="other">%s de comunități adăugate</item>
     </plurals>
     <string name="forums_comment_op">Autor</string>
+    <string name="forums_community_destination">Se publică în %1$s ca %2$s</string>
 </resources>

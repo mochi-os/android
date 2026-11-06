@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s geïmporteerd</string>
     <string name="feeds_imported_more">Tot nu toe %1$s geïmporteerd; de rest volgt</string>
     <string name="feeds_import_sources_more">Tot nu toe %1$s bronnen toegevoegd; de rest volgt</string>
+    <string name="feeds_waiting_title">Wachten op toestemming</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s persoon</item>
+        <item quantity="other">%s personen</item>
+    </plurals>
     <string name="feeds_filters">Filters</string>
     <string name="feeds_filter_phrase">Te verbergen woordgroep</string>
     <string name="feeds_filter_remove">%1$s verwijderen</string>

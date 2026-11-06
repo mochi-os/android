@@ -129,6 +129,11 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.forums.R
+import org.mochios.forums.model.communityHandle
+import org.mochios.forums.model.forumPath
+import org.mochios.forums.model.forumServer
+import org.mochios.forums.ui.components.ForumLabel
+import org.mochios.forums.ui.components.ForumTitle
 import org.mochios.forums.api.NotificationSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.Post
@@ -229,6 +234,8 @@ fun ForumScreen(
             DrawerItem(
                 id = forum.fingerprint.ifEmpty { forum.id },
                 title = forum.name,
+                // A community's server, so two of the same title read apart.
+                subtitle = forumServer(forum).ifEmpty { null },
                 icon = Icons.Outlined.Forum,
             )
         }
@@ -346,7 +353,7 @@ private fun ForumContent(
     // One avatar address per author across the listed posts, each under the
     // forum its card names.
     val avatars = remember(uiState.posts, forumIdForCallbacks) {
-        authorAvatars(uiState.posts, { it.forum.ifBlank { forumIdForCallbacks } })
+        authorAvatars(uiState.posts, { forumPath(it.forum.ifBlank { forumIdForCallbacks }) })
     }
 
     val snackbar = remember { SnackbarHostState() }
@@ -396,14 +403,13 @@ private fun ForumContent(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        text = if (isAll) {
+                    ForumTitle(
+                        name = if (isAll) {
                             stringResource(R.string.forums_all_forums)
                         } else {
                             uiState.forum.name.ifBlank { stringResource(R.string.forums_loading) }
                         },
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
+                        handle = if (isAll) "" else communityHandle(uiState.forum.handle),
                     )
                 },
                 navigationIcon = {
@@ -732,14 +738,14 @@ private fun ForumContent(
                                 PostCard(
                                     post = post,
                                     // Aggregate rows each carry their own forum.
-                                    forumId = post.forum.ifBlank { forumIdForCallbacks },
+                                    forumId = forumPath(post.forum.ifBlank { forumIdForCallbacks }),
                                     avatars = avatars,
                                     isSaved = savedIds.contains(post.id),
                                     showForumName = isAll,
                                     onClick = {
                                         // Aggregate posts each belong to their own forum.
                                         val targetForum =
-                                            if (isAll) post.forum else forumIdForCallbacks
+                                            if (isAll) forumPath(post.forum) else forumIdForCallbacks
                                         onPostClick(targetForum, post.id)
                                     },
                                     onToggleSave = { viewModel.toggleSave(post) },
@@ -858,12 +864,7 @@ private fun PostCard(
             // In the aggregate "All forums" view, label which forum each post
             // came from since the top bar no longer identifies a single one.
             if (showForumName && post.forumName.isNotBlank()) {
-                Text(
-                    text = post.forumName,
-                    style = MaterialTheme.typography.labelMedium,
-                    color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.padding(bottom = 4.dp),
-                )
+                ForumLabel(post.forumName, post.forumServer, Modifier.padding(bottom = 4.dp))
             }
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (post.pinned) {

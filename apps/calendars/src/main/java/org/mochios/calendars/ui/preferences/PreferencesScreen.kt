@@ -60,6 +60,7 @@ import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Hours
 import org.mochios.calendars.model.Multiweek
 import org.mochios.calendars.model.Preferences
+import org.mochios.calendars.model.Week
 import org.mochios.calendars.model.defaultCalendar
 import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.ui.dialogs.DURATIONS
@@ -156,6 +157,7 @@ class PreferencesViewModel @Inject constructor(
                         zones = draft.zones,
                         calendar = draft.calendar.ifEmpty { null },
                         allday = draft.allday,
+                        week = draft.week,
                     ),
                 )
                 _uiState.value = _uiState.value.copy(isBusy = false, saved = true)
@@ -170,7 +172,8 @@ class PreferencesViewModel @Inject constructor(
  * The preferences the views read: the working hours they shade, the work
  * days, how many weeks a multiweek view shows, where all-day events go, the
  * default event length, the default reminder, the calendar a new event goes
- * in and whether events show in their own zones. Shared with the web, so a
+ * in, whether the month and multiweek views number their weeks and whether
+ * events show in their own zones. Shared with the web, so a
  * change here shows there. [onSaved] is called once the server has them.
  */
 @Composable
@@ -394,6 +397,15 @@ private fun PreferencesFields(
         options = calendars.map { calendar -> calendar.id to calendar.name },
         selected = preferences.calendar,
         onSelect = { chosen -> onChange { current -> current.copy(calendar = chosen) } },
+    )
+    LabeledSwitchRow(
+        label = stringResource(R.string.calendars_preferences_week_numbers),
+        checked = preferences.week.numbers,
+        onCheckedChange = { checked -> onChange { current -> current.copy(week = Week(numbers = checked)) } },
+        enabled = enabled,
+        labelStyle = MaterialTheme.typography.bodyMedium.copy(
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        ),
     )
     LabeledSwitchRow(
         label = stringResource(R.string.calendars_preferences_zones),

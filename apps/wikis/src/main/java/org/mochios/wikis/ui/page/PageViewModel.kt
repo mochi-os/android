@@ -108,6 +108,13 @@ class PageViewModel @Inject constructor(
     @Volatile
     private var missed = false
 
+    /**
+     * A frame waiting on [refreshQuietly], or [missed] while [hidden], did not
+     * say what changed, so that reload reads the wiki's info as well as the page.
+     */
+    @Volatile
+    private var infoPending = false
+
     /** The page was deleted here; frames about it are no longer this screen's. */
     @Volatile
     private var gone = false
@@ -138,19 +145,36 @@ class PageViewModel @Inject constructor(
         }
     }
 
+    /**
+     * A change in the wiki. The page reads itself again only when the change
+     * concerns it, or when what changed is not said: a settings change, a
+     * renamed wiki or a sync dump, an older server, a resync, and a reopened
+     * socket, which missed whatever was sent meanwhile.
+     */
     private fun handle(event: WebSocketEvent) {
-        // A reopened socket missed whatever was sent while it was down.
         when (event.type) {
-            "wiki/update", "wiki/resynced", REOPEN -> {
-                if (gone) {
-                    return
-                }
-                if (hidden) {
-                    missed = true
-                } else {
-                    refreshQuietly()
+            "wiki/resynced", REOPEN -> reloadForFrame(withInfo = true)
+            "wiki/update" -> {
+                if (!wikiUpdateNamed(event.kind)) {
+                    reloadForFrame(withInfo = true)
+                } else if (pageConcerned(event.kind, event.page, slug, _uiState.value.page?.slug)) {
+                    reloadForFrame(withInfo = false)
                 }
             }
+        }
+    }
+
+    private fun reloadForFrame(withInfo: Boolean) {
+        if (gone) {
+            return
+        }
+        if (withInfo) {
+            infoPending = true
+        }
+        if (hidden) {
+            missed = true
+        } else {
+            refreshQuietly()
         }
     }
 
@@ -169,20 +193,25 @@ class PageViewModel @Inject constructor(
     }
 
     /**
-     * Reload the wiki info and the page without the spinner. Each call cancels
-     * the last and waits [REFRESH_DEBOUNCE], so a burst of frames makes one
-     * fetch of each.
+     * Reload the page without the spinner, and the wiki's info first when
+     * [infoPending] asks for it. Each call cancels the last and waits
+     * [REFRESH_DEBOUNCE], so a burst of frames makes one fetch of each. The
+     * flag is cleared only once the info is read, so a reload cancelled
+     * midway hands it on to the next.
      */
     private fun refreshQuietly() {
         refreshJob?.cancel()
         refreshJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
             try {
-                val info = repository.getInfo(wikiId)
-                _uiState.value = _uiState.value.copy(
-                    wiki = info.wiki,
-                    permissions = info.permissions ?: WikiPermissions(),
-                )
+                if (infoPending) {
+                    val info = repository.getInfo(wikiId)
+                    infoPending = false
+                    _uiState.value = _uiState.value.copy(
+                        wiki = info.wiki,
+                        permissions = info.permissions ?: WikiPermissions(),
+                    )
+                }
                 val response = repository.getPage(wikiId, slug)
                 if (!gone) {
                     show(response)
@@ -330,3 +359,30 @@ class PageViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(page = current.copy(tags = tags))
     }
 }
+
+/**
+ * Whether a wiki/update frame says what changed, in a kind this client knows.
+ * One that does not - no kind, or one a newer server added - may be anything,
+ * so everything is read again.
+ */
+internal fun wikiUpdateNamed(kind: String?): Boolean = kind in WIKI_UPDATE_KINDS
+
+private val WIKI_UPDATE_KINDS = setOf("edit", "pages", "comment", "tag", "redirect", "attachment")
+
+/**
+ * Whether a wiki/update frame of a known [kind] concerns the page opened by
+ * [opened], whose slug as loaded is [loaded]: a page reached through a
+ * redirect is opened by one slug and has another.
+ */
+internal fun pageConcerned(kind: String?, page: String?, opened: String, loaded: String?): Boolean =
+    when (kind) {
+        // The page's content, title, comment count or tags.
+        "edit", "comment", "tag" -> !page.isNullOrEmpty() && (page == opened || page == loaded)
+        // A page created, deleted or renamed, or a redirect set or removed,
+        // changes which links are missing on any page (a redirect's slug
+        // counts as a page that exists), and the redirect may be the one the
+        // page was opened through; a deleted attachment is cut from the pages
+        // using it.
+        "pages", "redirect", "attachment" -> true
+        else -> false
+    }

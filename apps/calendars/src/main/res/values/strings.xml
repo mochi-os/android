@@ -208,6 +208,7 @@
     <string name="calendars_preferences_allday">All-day events</string>
     <string name="calendars_allday_first">First</string>
     <string name="calendars_allday_last">Last</string>
+    <string name="calendars_preferences_week_numbers">Show week numbers</string>
     <string name="calendars_preferences_zones">Show events in their own time zone</string>
 
     <!-- ICS link -->

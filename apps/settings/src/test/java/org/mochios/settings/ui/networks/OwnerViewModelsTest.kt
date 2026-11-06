@@ -56,6 +56,12 @@ class OwnerViewModelsTest {
     /** How many handles the registry says the search matches. */
     @Volatile private var matched = 60
 
+    /** Holds the first handle release back until a test lets it go. */
+    @Volatile private var releasing: java.util.concurrent.CountDownLatch? = null
+
+    /** When the server began and finished each change, in order. */
+    private val order = CopyOnWriteArrayList<String>()
+
     /** The query of each registry request, in order. */
     private val registry = CopyOnWriteArrayList<Map<String, String>>()
 
@@ -83,6 +89,15 @@ class OwnerViewModelsTest {
                     "settings/-/system/networks/key/replace" -> json("""{"key": "ed25519:b"}""")
                     "settings/-/domains/data" -> json("""{"domains": [], "admin": true}""")
                     "settings/-/user/networks/data" -> json("""{"offered": $offered}""")
+                    "settings/-/system/handles/release" -> {
+                        order += "release"
+                        releasing?.let { gate ->
+                            releasing = null
+                            gate.await(5, TimeUnit.SECONDS)
+                        }
+                        order += "released"
+                        json("{}")
+                    }
                     "settings/-/system/handles/list" -> {
                         val query = request.requestUrl!!.let { url -> url.queryParameterNames.associateWith { url.queryParameter(it).orEmpty() } }
                         registry += query
@@ -209,5 +224,31 @@ class OwnerViewModelsTest {
         offered = false
         model.refresh()
         until { !model.state.value.hasNetworks }
+    }
+
+    /** Lets a request already on its way reach the server: one sent alongside would have by now. */
+    private fun settle() = repeat(30) {
+        shadowOf(Looper.getMainLooper()).idleFor(10, TimeUnit.MILLISECONDS)
+        Thread.sleep(10)
+    }
+
+    @Test
+    fun `a handle released while another's release runs waits for it, both showing busy, instead of being dropped`() {
+        val gate = java.util.concurrent.CountDownLatch(1)
+        releasing = gate
+        val model = SystemHandlesViewModel(retrofit.create(NetworksApi::class.java))
+        until { !model.uiState.value.isLoading }
+        val (first, second) = model.uiState.value.handles.take(2)
+        model.release(first)
+        until { requests.any { it.first == "settings/-/system/handles/release" } }
+        model.release(second)
+        assertEquals(setOf("a.example/name0", "a.example/name1"), model.uiState.value.busy)
+        settle()
+        assertEquals(1, requests.count { it.first == "settings/-/system/handles/release" })
+        gate.countDown()
+        until { requests.count { it.first == "settings/-/system/handles/release" } == 2 && model.uiState.value.busy.isEmpty() }
+        assertEquals("name1", form("settings/-/system/handles/release")["name"])
+        // One at a time, in the order tapped: the second waited for the first's answer.
+        assertEquals(listOf("release", "released", "release", "released"), order)
     }
 }

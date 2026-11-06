@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s inportatu dira</string>
     <string name="feeds_imported_more">Orain arte %1$s inportatu dira; gainerakoak ondoren datoz</string>
     <string name="feeds_import_sources_more">Orain arte %1$s iturri gehitu dira; gainerakoak ondoren datoz</string>
+    <string name="feeds_waiting_title">Baimenaren zain</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s pertsona</item>
+        <item quantity="other">%s pertsona</item>
+    </plurals>
     <string name="feeds_filters">Iragazkiak</string>
     <string name="feeds_filter_phrase">Ezkutatu beharreko esaldia</string>
     <string name="feeds_filter_remove">Kendu %1$s</string>

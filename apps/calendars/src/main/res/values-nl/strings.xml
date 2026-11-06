@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Agendatoegang staat uit voor deze app. Je kunt deze aanzetten onder Rechten in de instellingen van de app.</string>
     <string name="calendars_location_map">Op kaart tonen</string>
     <string name="calendars_location_flight">Vlucht volgen</string>
+    <string name="calendars_preferences_week_numbers">Weeknummers tonen</string>
 </resources>

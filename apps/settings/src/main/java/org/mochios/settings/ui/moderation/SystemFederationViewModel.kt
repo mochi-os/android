@@ -8,6 +8,7 @@ package org.mochios.settings.ui.moderation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -51,12 +52,15 @@ class SystemFederationViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(SystemFederationUiState())
     val uiState: StateFlow<SystemFederationUiState> = _uiState.asStateFlow()
 
-    init {
-        viewModelScope.launch {
-            while (true) {
-                load()
-                delay(10_000)
-            }
+    /**
+     * Reads the hosts now and every ten seconds after, for as long as the
+     * caller keeps it running: the screen runs it while it is started, so it
+     * stops behind the home screen and reads afresh on return.
+     */
+    suspend fun poll() {
+        while (true) {
+            load()
+            delay(10_000)
         }
     }
 
@@ -71,6 +75,9 @@ class SystemFederationViewModel @Inject constructor(
         try {
             val answer = api.hosts().unwrapRaw()
             _uiState.value = SystemFederationUiState(isLoading = false, hosts = hostsOrdered(answer))
+        } catch (e: CancellationException) {
+            // The screen stopped its poll: not a failure to show on return.
+            throw e
         } catch (e: Exception) {
             _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
         }

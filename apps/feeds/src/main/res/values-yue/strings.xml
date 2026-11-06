@@ -311,6 +311,11 @@
     <string name="feeds_imported">已匯入 %1$s</string>
     <string name="feeds_imported_more">暫時匯入咗 %1$s；其餘嘅之後會到</string>
     <string name="feeds_import_sources_more">暫時加咗 %1$s 個來源；其餘嘅之後會到</string>
+    <string name="feeds_waiting_title">等緊權限</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s 個人</item>
+        <item quantity="other">%s 個人</item>
+    </plurals>
     <string name="feeds_filters">篩選</string>
     <string name="feeds_filter_remove">移除 %1$s</string>
     <string name="feeds_filter_add_failed">加唔到篩選</string>

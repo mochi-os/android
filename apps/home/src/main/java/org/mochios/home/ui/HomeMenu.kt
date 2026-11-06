@@ -55,16 +55,16 @@ private fun avatar(identity: String): String? =
 private val AVATAR = 32.dp
 
 /**
- * The button that opens the user menu, as on the web: the user's avatar with
- * the unread count on its corner.
+ * The button that opens the user menu, as on the web: the user's avatar,
+ * ringed in their [accent], with the unread count on its corner.
  */
 @Composable
-internal fun UserButton(name: String, identity: String, count: Int, onClick: () -> Unit) {
+internal fun UserButton(name: String, identity: String, accent: String?, count: Int, onClick: () -> Unit) {
     val label = stringResource(R.string.home_menu_open)
     val shown = name.ifBlank { stringResource(R.string.home_menu_user) }
     Box {
         MochiIconButton(onClick = onClick, modifier = Modifier.semantics { contentDescription = label }) {
-            EntityAvatar(name = shown, src = avatar(identity), seed = identity.ifBlank { null }, size = AVATAR)
+            EntityAvatar(name = shown, src = avatar(identity), seed = identity.ifBlank { null }, size = AVATAR, accent = accent)
         }
         CountBadge(
             count = count,
@@ -105,7 +105,13 @@ internal fun UserMenu(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             val name = state.name.ifBlank { stringResource(R.string.home_menu_user) }
-            EntityAvatar(name = name, src = avatar(state.identity), seed = state.identity.ifBlank { null }, size = AVATAR)
+            EntityAvatar(
+                name = name,
+                src = avatar(state.identity),
+                seed = state.identity.ifBlank { null },
+                size = AVATAR,
+                accent = state.accent,
+            )
             Text(
                 text = name,
                 style = MaterialTheme.typography.bodyMedium,

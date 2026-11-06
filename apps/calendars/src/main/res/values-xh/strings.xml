@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Ufikelelo lwekhalenda lucinyiwe kule app. Ungaluvula phantsi kweeMvume kwiisetingi ze-app.</string>
     <string name="calendars_location_map">Bonisa kwimephu</string>
     <string name="calendars_location_flight">Landela inqwelomoya</string>
+    <string name="calendars_preferences_week_numbers">Bonisa amanani eeveki</string>
 </resources>

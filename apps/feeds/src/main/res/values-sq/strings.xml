@@ -312,6 +312,11 @@
     <string name="feeds_imported">U importuan %1$s</string>
     <string name="feeds_imported_more">Deri tani u importuan %1$s; të tjerat vijnë më pas</string>
     <string name="feeds_import_sources_more">Deri tani u shtuan %1$s burime; të tjerat vijnë më pas</string>
+    <string name="feeds_waiting_title">Në pritje të lejes</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s person</item>
+        <item quantity="other">%s persona</item>
+    </plurals>
     <string name="feeds_filters">Filtrat</string>
     <string name="feeds_filter_phrase">Fraza për t\'u fshehur</string>
     <string name="feeds_filter_remove">Hiq %1$s</string>

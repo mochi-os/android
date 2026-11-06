@@ -1208,10 +1208,11 @@ fun Block(
  * the cards' own tone in an outline, dashed for a tentative occurrence, so
  * it reads over the entries it passes. On one line it reads dot,
  * title, marks and [time] when given; [stacked], as a timed occurrence within
- * a day is drawn in a month or multiweek cell, puts the dot, the time and the
- * marks on a line of their own and the title beneath them, with the line's
- * whole width. [lift] comes after the tap in the chain, so a long press that
- * lifts the chip takes its events before the tap can.
+ * a day is drawn in a month or multiweek cell, puts the dot and the title on
+ * the first line, the title where a one-line entry's is so a day's titles
+ * line up, and the time and the marks beneath the title, aligned with it.
+ * [lift] comes after the tap in the chain, so a long press that lifts the
+ * chip takes its events before the tap can.
  */
 @Composable
 fun Chip(
@@ -1242,8 +1243,14 @@ fun Chip(
         if (stacked) {
             val style = MaterialTheme.typography.labelSmall.packed()
             Column(modifier = Modifier.padding(horizontal = 4.dp)) {
-                Detail(instance, time, style)
-                Name(instance, style, Modifier.fillMaxWidth())
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(GAP),
+                ) {
+                    Dot(instance)
+                    Name(instance, style, Modifier.weight(1f))
+                }
+                Detail(instance, time, style, Modifier.padding(start = DOT + GAP), dot = false)
             }
         } else {
             Line(
@@ -1343,7 +1350,8 @@ internal fun Glyph(mark: Mark, size: Dp) {
  * [time] when there is one, then the marks, all from the start of the line,
  * the dot as far from the time as a one-line entry's is from its title.
  * [wrapped] lets the time run onto the lines it holds, as a span across days
- * does in the list, with the dot and the marks level with its first.
+ * does in the list, with the dot and the marks level with its first. Without
+ * its [dot] it is the line under a title that has one.
  */
 @Composable
 fun Detail(
@@ -1353,6 +1361,7 @@ fun Detail(
     modifier: Modifier = Modifier,
     backwards: Boolean = false,
     wrapped: Boolean = false,
+    dot: Boolean = true,
 ) {
     val line = leading(style)
     // Centred on the time's first line, when it may have more than one.
@@ -1362,8 +1371,10 @@ fun Detail(
         verticalAlignment = if (wrapped) Alignment.Top else Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(GAP),
     ) {
-        Box(modifier = level(DOT)) {
-            Dot(instance)
+        if (dot) {
+            Box(modifier = level(DOT)) {
+                Dot(instance)
+            }
         }
         if (time != null) {
             Text(

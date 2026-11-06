@@ -312,6 +312,11 @@
     <string name="feeds_imported">%1$s దిగుమతి చేయబడ్డాయి</string>
     <string name="feeds_imported_more">ఇప్పటివరకు %1$s దిగుమతి చేయబడ్డాయి; మిగిలినవి తర్వాత వస్తాయి</string>
     <string name="feeds_import_sources_more">ఇప్పటివరకు %1$s మూలాలు జోడించబడ్డాయి; మిగిలినవి తర్వాత వస్తాయి</string>
+    <string name="feeds_waiting_title">అనుమతి కోసం వేచి ఉంది</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s వ్యక్తి</item>
+        <item quantity="other">%s వ్యక్తులు</item>
+    </plurals>
     <string name="feeds_filters">ఫిల్టర్‌లు</string>
     <string name="feeds_filter_phrase">దాచాల్సిన పదబంధం</string>
     <string name="feeds_filter_remove">%1$sని తొలగించండి</string>

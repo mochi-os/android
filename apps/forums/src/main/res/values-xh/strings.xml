@@ -338,4 +338,5 @@
         <item quantity="other">Kongezwe amaqela oluntu angama-%s</item>
     </plurals>
     <string name="forums_comment_op">Umbhali</string>
+    <string name="forums_community_destination">Ithunyelwa ku-%1$s njenge-%2$s</string>
 </resources>

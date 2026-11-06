@@ -338,4 +338,5 @@
         <item quantity="other">Naidagdag ang %s komunidad</item>
     </plurals>
     <string name="forums_comment_op">May-akda</string>
+    <string name="forums_community_destination">Ipo-post sa %1$s bilang %2$s</string>
 </resources>

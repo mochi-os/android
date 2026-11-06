@@ -68,7 +68,7 @@ class NetworksScreenTest {
 
     private fun content(
         data: NetworksData,
-        busy: String? = null,
+        busy: Set<String> = emptySet(),
         onToggle: (Handle, String, NetworkAccount?) -> Unit = { _, _, _ -> },
         onArrive: (Handle) -> Unit = {},
         onLink: () -> Unit = {},
@@ -120,7 +120,7 @@ class NetworksScreenTest {
 
     @Test
     fun `a network being switched on for a name cannot be switched again until it answers`() {
-        content(base, busy = "alice/bluesky")
+        content(base, busy = setOf("alice/bluesky"))
         rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice")).assertIsNotEnabled()
     }
 
@@ -162,7 +162,7 @@ class NetworksScreenTest {
         rule.setContent {
             NetworksContent(
                 data = shown,
-                busy = null,
+                busy = emptySet(),
                 check = { name, domain -> Availability(available = true, name = name, domain = domain) },
                 onReserve = { _, _, _ -> },
                 onLink = {},
@@ -222,7 +222,7 @@ class NetworksScreenTest {
     @Test
     fun `the switches line up whether or not a row has a menu, and while its account is busy`() {
         val bluesky = NetworkAccount(id = "b1", type = "bluesky", hosted = true, identifier = "alice.a.example")
-        var busy by mutableStateOf<String?>(null)
+        var busy by mutableStateOf<Set<String>>(emptySet())
         rule.setContent {
             NetworksContent(
                 data = base.copy(accounts = listOf(bluesky)),
@@ -243,7 +243,7 @@ class NetworksScreenTest {
         val on = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice"))
         val off = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "ActivityPub", "alice"))
         assertEquals(on.getBoundsInRoot().right, off.getBoundsInRoot().right)
-        busy = "b1"
+        busy = setOf("b1")
         rule.waitForIdle()
         rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).assertDoesNotExist()
         assertEquals(off.getBoundsInRoot().right, on.getBoundsInRoot().right)
@@ -398,7 +398,7 @@ class NetworksScreenTest {
         rule.setContent {
             NetworksContent(
                 data = shown,
-                busy = null,
+                busy = emptySet(),
                 check = { name, domain -> Availability(available = true, name = name, domain = domain) },
                 onReserve = { _, _, _ -> },
                 onLink = {},
@@ -478,13 +478,25 @@ class NetworksScreenTest {
         val unblocked = mutableListOf<String>()
         val unmuted = mutableListOf<String>()
         content(
-            base.copy(blocks = listOf(NetworkBlock(domain = "spam.example")), mutes = listOf(NetworkMute(actor = "https://m.example/users/x"))),
+            base.copy(
+                blocks = listOf(
+                    NetworkBlock(domain = "spam.example"),
+                    NetworkBlock(actor = "did:plc:troll", name = "Troll", address = "troll.bsky.social"),
+                ),
+                mutes = listOf(NetworkMute(actor = "https://m.example/users/x", name = "X")),
+            ),
             onUnblock = { unblocked += it },
             onUnmute = { unmuted += it },
         )
+        // People by their names, with their addresses beneath, never their ids.
+        rule.onNodeWithText("Troll").assertExists()
+        rule.onNodeWithText("troll.bsky.social · " + text(R.string.networks_blocked)).assertExists()
+        rule.onNodeWithText("did:plc:troll").assertDoesNotExist()
+        rule.onNodeWithText("https://m.example/users/x").assertDoesNotExist()
         rule.onNodeWithContentDescription(text(R.string.networks_unblock, "spam.example")).performClick()
-        rule.onNodeWithContentDescription(text(R.string.networks_unmute, "https://m.example/users/x")).performClick()
-        assertEquals(listOf("spam.example"), unblocked)
+        rule.onNodeWithContentDescription(text(R.string.networks_unblock, "Troll")).performClick()
+        rule.onNodeWithContentDescription(text(R.string.networks_unmute, "X")).performClick()
+        assertEquals(listOf("spam.example", "did:plc:troll"), unblocked)
         assertEquals(listOf("https://m.example/users/x"), unmuted)
     }
 }

@@ -305,6 +305,11 @@
     <string name="feeds_imported">Đã nhập %1$s</string>
     <string name="feeds_imported_more">Đã nhập %1$s; phần còn lại sẽ được nhập sau</string>
     <string name="feeds_import_sources_more">Đã thêm %1$s nguồn; phần còn lại sẽ được thêm sau</string>
+    <string name="feeds_waiting_title">Đang chờ quyền</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s người</item>
+        <item quantity="other">%s người</item>
+    </plurals>
     <string name="feeds_filters">Bộ lọc</string>
     <string name="feeds_filter_phrase">Cụm từ cần ẩn</string>
     <string name="feeds_filter_remove">Xoá %1$s</string>

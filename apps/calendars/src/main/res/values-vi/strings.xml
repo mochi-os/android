@@ -267,4 +267,5 @@
     <string name="calendars_sync_permission_blocked">Quyền truy cập lịch đã bị tắt đối với ứng dụng này. Bạn có thể bật trong mục Quyền ở phần cài đặt của ứng dụng.</string>
     <string name="calendars_location_map">Hiển thị trên bản đồ</string>
     <string name="calendars_location_flight">Theo dõi chuyến bay</string>
+    <string name="calendars_preferences_week_numbers">Hiển thị số tuần</string>
 </resources>

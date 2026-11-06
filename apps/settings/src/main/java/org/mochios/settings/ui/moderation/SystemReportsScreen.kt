@@ -134,7 +134,7 @@ fun SystemReportsScreen(
                         items(state.reports, key = { it.id }) { report ->
                             ReportCard(
                                 report = report,
-                                busy = state.busy == report.id,
+                                busy = report.id in state.busy,
                                 onDismiss = { viewModel.dismiss(report) },
                                 onAction = { pending = report to it },
                             )

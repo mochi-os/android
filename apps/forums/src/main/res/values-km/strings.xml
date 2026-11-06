@@ -336,4 +336,5 @@
         <item quantity="other">បានបន្ថែមសហគមន៍ %s</item>
     </plurals>
     <string name="forums_comment_op">អ្នកនិពន្ធ</string>
+    <string name="forums_community_destination">បង្ហោះទៅ %1$s ជា %2$s</string>
 </resources>

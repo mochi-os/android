@@ -312,6 +312,11 @@
     <string name="feeds_imported">An shigo da %1$s</string>
     <string name="feeds_imported_more">An shigo da %1$s zuwa yanzu; sauran na biye</string>
     <string name="feeds_import_sources_more">An ƙara tushe %1$s zuwa yanzu; sauran na biye</string>
+    <string name="feeds_waiting_title">Ana jiran izini</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">mutum %s</item>
+        <item quantity="other">mutane %s</item>
+    </plurals>
     <string name="feeds_filters">Matatu</string>
     <string name="feeds_filter_phrase">Jimlar da za a ɓoye</string>
     <string name="feeds_filter_remove">Cire %1$s</string>

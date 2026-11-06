@@ -127,7 +127,8 @@ internal fun ends(anchor: LocalDate, day: LocalDate): Pair<LocalDate, LocalDate>
 
 /**
  * The month and multiweek views: [weeks] rows of seven days, each led by its
- * ISO week number and each cell holding every one of its occurrences from
+ * ISO week number when the preferences ask for them, and each cell holding
+ * every one of its occurrences from
  * its own top: one-line bars for the all-day and multi-day ones, and two
  * lines on the cell for each of the rest, the title above the time and
  * marks. The bars come first unless the user put all-day events last; each
@@ -334,7 +335,7 @@ fun MonthGrid(
                             val occurrences = byDay[day].orEmpty()
                             Cell(
                                 day = day,
-                                week = if (offset == 0) number(week) else null,
+                                week = if (offset == 0 && state.preferences.week.numbers) number(week) else null,
                                 today = today,
                                 allday = state.preferences.allday,
                                 outside = month != null && day.monthValue != month,
@@ -550,19 +551,16 @@ private fun Cell(
                 if (week != null) Week(week, Modifier.align(Alignment.CenterEnd))
             }
         }
-        // The bars and the timed entries stack from the top of the cell in the
-        // order the user chose, each group scrolling on its own. The upper one
-        // is held so that one entry of the lower stays in view.
+        // The bars and the timed entries stack from the top of the cell as
+        // arrange orders them, each group scrolling on its own. Each group but
+        // the last is held so that one entry of every later group stays in view.
         val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
         // A bar is one line; a timed entry is two, its dot, time and marks
         // above its title.
         val line = leading(MaterialTheme.typography.labelSmall)
         val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
-        val groups = stack(
-            Group(entries.filter { it.second.bar }, line),
-            Group(entries.filterNot { it.second.bar }, pair),
-            allday,
-        ).filter { it.entries.isNotEmpty() }
+        val groups = arrange(entries, day, allday) { viewModel.day(it) }
+            .map { group -> Group(group, if (group.first().second.bar) line else pair) }
 
         @Composable
         fun Entry(instance: Instance, look: Look) {
@@ -593,21 +591,27 @@ private fun Cell(
                 .fillMaxWidth()
                 .padding(start = 2.dp, end = 2.dp, top = 5.dp, bottom = 2.dp),
         ) {
-            val upper = groups.getOrNull(0)
-            val lower = groups.getOrNull(1)
-            val held = upper?.let {
-                band(it.entries.size, it.height.value, STEP.value, maxHeight.value, lower?.height?.value ?: 0f, below = lower != null)
+            // What the groups above have taken comes off the room for the next.
+            var room = maxHeight.value
+            val held = groups.mapIndexed { index, group ->
+                if (index == groups.size - 1) return@mapIndexed null
+                val count = group.entries.size
+                val step = group.height.value
+                val height = band(count, step, STEP.value, room, groups.drop(index + 1).map { it.height.value })
+                room -= (height ?: (count * step + (count - 1) * STEP.value)) + STEP.value
+                height
             }
             Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.spacedBy(STEP)) {
                 for ((index, group) in groups.withIndex()) {
                     val last = index == groups.size - 1
+                    val height = held[index]
                     Column(
                         modifier = Modifier
                             .fillMaxWidth()
                             .then(
                                 when {
                                     last -> Modifier.weight(1f)
-                                    held != null -> Modifier.height(held.dp)
+                                    height != null -> Modifier.height(height.dp)
                                     else -> Modifier
                                 },
                             )
@@ -660,7 +664,7 @@ fun heading(room: Int, long: String, short: String, number: Int, week: Int?, wid
 private fun clock(instance: Instance, viewModel: CalendarViewModel): String =
     LocalFormat.current.formatTime(instance.start, clockZone(instance.zone?.start, viewModel.zones()))
 
-/** One of a cell's two groups: its entries, and how tall each one is. */
+/** One of a cell's groups: its entries, and how tall each one is. */
 private data class Group(val entries: List<Pair<Instance, Look>>, val height: Dp)
 
 /**
@@ -669,6 +673,35 @@ private data class Group(val entries: List<Pair<Instance, Look>>, val height: Dp
  */
 fun <T> stack(bars: T, lines: T, allday: String): List<T> =
     if (allday == "last") listOf(lines, bars) else listOf(bars, lines)
+
+/**
+ * The [entries] of the cell for [day] in the groups they stack in from its
+ * top, none empty. Bars carried over from an earlier day lead the day
+ * whichever way the user placed all-day events, so with those "last" they
+ * are a group of their own above the timed entries; the rest go as [stack]
+ * orders them. Bars run by the day they begin, [first], all-day before
+ * timed, then by start and title, rather than by start alone: an all-day
+ * occurrence starts at midnight in the zone it was expanded in, UTC for a
+ * birthday, which west of there is the evening before, after an overnight
+ * event that began then. Timed entries keep the order they came in.
+ */
+fun arrange(
+    entries: List<Pair<Instance, Look>>,
+    day: LocalDate,
+    allday: String,
+    first: (Instance) -> LocalDate,
+): List<List<Pair<Instance, Look>>> {
+    val bars = entries.filter { it.second.bar }.sortedWith(
+        compareBy<Pair<Instance, Look>> { first(it.first) }
+            .thenByDescending { it.first.allday }
+            .thenBy { it.first.start }
+            .thenBy(NaturalCompare) { it.first.summary },
+    )
+    val lines = entries.filterNot { it.second.bar }
+    val (carried, rest) =
+        if (allday == "last") bars.partition { first(it.first).isBefore(day) } else emptyList<Pair<Instance, Look>>() to bars
+    return (listOf(carried) + stack(rest, lines, allday)).filter { it.isNotEmpty() }
+}
 
 /**
  * Keeps a cell's scrolling to the cell: whatever its list cannot take, at
@@ -701,17 +734,18 @@ fun look(instance: Instance, first: LocalDate, last: LocalDate, day: LocalDate):
 }
 
 /**
- * The height a cell's upper group is held to, in the same unit as [room], or
- * null when it needs no holding: [count] entries, each [line] tall and [gap]
- * apart, take their own height while that leaves room beneath for one
- * [entry] of the group [below] when there is one, or fits the cell when there
- * is none. Past that they are held to what is left, and never to less than
- * one entry, and scroll within it.
+ * The height a cell's group is held to, in the same unit as [room], the
+ * height left below the groups above it, or null when it needs no holding:
+ * [count] entries, each [line] tall and [gap] apart, take their own height
+ * while that leaves room beneath for one entry of each group [below], each
+ * as tall as given, or fits the room when there is none. Past that they are
+ * held to what is left, and never to less than one entry, and scroll within
+ * it.
  */
-fun band(count: Int, line: Float, gap: Float, room: Float, entry: Float, below: Boolean): Float? {
+fun band(count: Int, line: Float, gap: Float, room: Float, below: List<Float>): Float? {
     if (count == 0) return null
     val natural = count * line + (count - 1) * gap
-    val limit = if (below) room - gap - entry else room
+    val limit = room - below.sumOf { (gap + it).toDouble() }.toFloat()
     if (natural <= limit) return null
     return maxOf(limit, line)
 }
@@ -784,8 +818,8 @@ private fun Modifier.pick(day: LocalDate, onPick: (Offset) -> Unit): Modifier {
  * The list view, as the web's draws it: each day under a heading across the
  * whole width that stays at the top while its day is in view, its
  * occurrences beneath as rows that each open with the occurrence's dot. A
- * day's occurrences go in the order of the clock times they show, all day
- * ones first, as the day view stacks them.
+ * day's occurrences go in the order of the clock times they show, its all-day
+ * ones first or last as the preferences put them.
  * [onTop] is told the day of the topmost row in view as the list scrolls,
  * whose month the toolbar names. The day it opens on, the anchor, leads it
  * even when empty, as its heading alone, and the list scrolls back to it
@@ -826,11 +860,12 @@ fun AgendaList(
                     .any { it.contains(search, ignoreCase = true) }
         }
     }
-    val grouped = remember(matched, state.preferences.zones) {
+    val grouped = remember(matched, state.preferences.zones, state.preferences.allday) {
+        val allday = if (state.preferences.allday == "last") Float.POSITIVE_INFINITY else -1f
         matched.groupBy { viewModel.day(it) }.toSortedMap().mapValues { (day, occurrences) ->
             occurrences.sortedWith(
                 compareBy<Instance> { instance ->
-                    if (instance.allday) -1f else viewModel.cut(instance, day)?.from ?: 0f
+                    if (instance.allday) allday else viewModel.cut(instance, day)?.from ?: 0f
                 }.thenBy(NaturalCompare) { instance -> instance.summary },
             )
         }

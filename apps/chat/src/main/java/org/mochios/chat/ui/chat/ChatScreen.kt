@@ -114,6 +114,7 @@ import org.mochios.android.ui.components.DrawerActionRow
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.android.ui.components.DrawerPlaceholderScreen
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.WhileStarted
 import org.mochios.android.ui.components.EntityIconCircle
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LastViewedStore
@@ -293,9 +294,10 @@ private fun ChatContent(
     val uiState by viewModel.uiState.collectAsState()
     val upload by viewModel.upload.collectAsState()
 
-    // A one-to-one conversation asks whether the other person is online while it shows.
+    // A one-to-one conversation asks whether the other person is online while
+    // it shows, and not behind the home screen: each ask reaches their server.
     val asksPresence = uiState.chat.presence()
-    LaunchedEffect(uiState.chat.id, asksPresence) {
+    WhileStarted(uiState.chat.id, asksPresence) {
         if (asksPresence) viewModel.watchPresence()
     }
 

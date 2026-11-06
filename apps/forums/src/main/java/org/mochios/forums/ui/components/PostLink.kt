@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -33,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -45,7 +48,27 @@ import org.mochios.android.util.openWeb
 import org.mochios.forums.R
 import org.mochios.forums.model.Crosspost
 import org.mochios.forums.model.Post
+import org.mochios.forums.model.communityServer
 import org.mochios.forums.model.postEmbed
+
+private val IMAGE = Regex("\\.(avif|gif|jpe?g|png|webp)$", RegexOption.IGNORE_CASE)
+
+/**
+ * Whether a post's link is an image, as every Lemmy image post's is: by the
+ * media type its network gave, else by its address - the file's own, or the
+ * one Lemmy's image proxy carries in its url parameter.
+ */
+internal fun linkImage(post: Post): Boolean {
+    if (!isWebUrl(post.url)) return false
+    val type = postEmbed(post.embed).type
+    if (type.isNotEmpty()) return type.startsWith("image/")
+    val uri = runCatching { Uri.parse(post.url) }.getOrNull() ?: return false
+    val path = uri.path.orEmpty()
+    if (IMAGE.containsMatchIn(path)) return true
+    if (!path.endsWith("/image_proxy")) return false
+    val proxied = runCatching { uri.getQueryParameter("url") }.getOrNull() ?: return false
+    return IMAGE.containsMatchIn(Uri.parse(proxied).path.orEmpty())
+}
 
 /** A link's host as a card names it, without its www. */
 internal fun linkHost(url: String): String =
@@ -62,6 +85,23 @@ internal fun PostLinkCard(post: Post, compact: Boolean = false, modifier: Modifi
     if (!isWebUrl(post.url)) return
     val context = LocalContext.current
     val embed = postEmbed(post.embed)
+    // An image link is the post's picture: shown as itself, as its network
+    // shows it, rather than as a card naming its address. A list shows the
+    // network's smaller copy where it gave one.
+    if (linkImage(post)) {
+        AsyncImage(
+            model = if (compact && isWebUrl(post.thumbnail)) post.thumbnail else post.url,
+            contentDescription = embed.title.ifEmpty { null },
+            contentScale = if (compact) ContentScale.Crop else ContentScale.FillWidth,
+            modifier = modifier
+                .fillMaxWidth()
+                .then(if (compact) Modifier.height(192.dp) else Modifier.heightIn(max = 560.dp))
+                .clip(RoundedCornerShape(10.dp))
+                .clickable { openWeb(context, post.url) }
+                .testTag("post-link-image"),
+        )
+        return
+    }
     Row(
         verticalAlignment = if (compact) Alignment.CenterVertically else Alignment.Top,
         modifier = modifier
@@ -190,8 +230,10 @@ internal fun Crossposts(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         crossposts.forEach { crosspost ->
+            // A community's server beside its name, as two can share one.
+            val server = communityServer(crosspost.handle, crosspost.forum)
             Text(
-                text = crosspost.forumName.ifEmpty { crosspost.title },
+                text = crosspost.forumName.ifEmpty { crosspost.title } + if (server.isEmpty()) "" else " · $server",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.primary,
                 maxLines = 1,

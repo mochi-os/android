@@ -43,6 +43,7 @@ import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
@@ -73,16 +74,18 @@ fun FeedSettingsScreen(
     // read-only identity card plus an unsubscribe action.
     val canManage = permissions.manage
 
-    // Where a public feed publishes is a tab of its own, shown only where
-    // there is an account to publish to.
+    // Where a feed publishes is a tab of its own, shown only where there is
+    // an account to publish to, or the server says why there is none: a
+    // private feed's answer. Asked again when the feed's privacy changes.
     val publishing: PublishingViewModel = hiltViewModel()
     val publishState by publishing.publish.collectAsState()
+    val refusal by publishing.refusal.collectAsState()
     val privacy = feedInfo?.privacy
     LaunchedEffect(privacy, canManage) {
-        if (canManage && privacy == "public") publishing.loadPublish()
+        if (canManage && privacy != null) publishing.loadPublish()
     }
     val tabIds = settingsTabs(
-        publishable = publishable(privacy, publishState),
+        publishable = publishable(publishState, refusal),
         ai = aiAccounts.isNotEmpty(),
     )
 
@@ -232,14 +235,18 @@ internal fun settingsTabs(publishable: Boolean, ai: Boolean): List<SettingsTab> 
         (tab != SettingsTab.Publish || publishable) && (tab != SettingsTab.Ai || ai)
     }
 
-/** Whether a feed has somewhere to publish: it is public and the owner holds an account to publish to. */
-internal fun publishable(privacy: String?, state: PublishState?): Boolean =
-    privacy == "public" && state?.accounts.orEmpty().isNotEmpty()
+/**
+ * Whether Publish to is offered: the owner holds an account the feed may
+ * publish to, or the server refused and the tab says why.
+ */
+internal fun publishable(state: PublishState?, refusal: MochiError?): Boolean =
+    refusal != null || state?.accounts.orEmpty().isNotEmpty()
 
 /** Where a public feed publishes, on a tab of its own. */
 @Composable
 private fun PublishTab(publishing: PublishingViewModel) {
     PublishingEvents(publishing)
+    val refusal by publishing.refusal.collectAsState()
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -247,6 +254,16 @@ private fun PublishTab(publishing: PublishingViewModel) {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        PublishingSection(publishing)
+        val reason = refusal
+        if (reason != null) {
+            // Not a failure to retry: a private feed publishes nowhere.
+            Text(
+                reason.userMessage(),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+        } else {
+            PublishingSection(publishing)
+        }
     }
 }

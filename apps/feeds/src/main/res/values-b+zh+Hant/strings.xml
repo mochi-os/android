@@ -305,6 +305,11 @@
     <string name="feeds_imported">已匯入 %1$s 項</string>
     <string name="feeds_imported_more">已匯入 %1$s 項，其餘將陸續匯入</string>
     <string name="feeds_import_sources_more">已新增 %1$s 個來源，其餘將陸續新增</string>
+    <string name="feeds_waiting_title">正在等待權限</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s 人</item>
+        <item quantity="other">%s 人</item>
+    </plurals>
     <string name="feeds_filters">篩選器</string>
     <string name="feeds_filter_phrase">要隱藏的詞語</string>
     <string name="feeds_filter_remove">移除 %1$s</string>

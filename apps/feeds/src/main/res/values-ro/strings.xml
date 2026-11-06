@@ -319,6 +319,12 @@
     <string name="feeds_imported">Importate: %1$s</string>
     <string name="feeds_imported_more">Importate până acum: %1$s; restul urmează</string>
     <string name="feeds_import_sources_more">Surse adăugate până acum: %1$s; restul urmează</string>
+    <string name="feeds_waiting_title">Se așteaptă permisiunea</string>
+    <plurals name="feeds_waiting_people">
+        <item quantity="one">%s persoană</item>
+        <item quantity="few">%s persoane</item>
+        <item quantity="other">%s de persoane</item>
+    </plurals>
     <string name="feeds_filters">Filtre</string>
     <string name="feeds_filter_phrase">Expresie de ascuns</string>
     <string name="feeds_filter_remove">Elimină %1$s</string>

@@ -336,4 +336,5 @@
         <item quantity="other">已新增 %s 個社群</item>
     </plurals>
     <string name="forums_comment_op">樓主</string>
+    <string name="forums_community_destination">以 %2$s 的身分發佈到 %1$s</string>
 </resources>

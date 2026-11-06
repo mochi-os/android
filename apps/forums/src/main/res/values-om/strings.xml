@@ -338,4 +338,5 @@
         <item quantity="other">Hawaasota %s dabalaman</item>
     </plurals>
     <string name="forums_comment_op">Barreessaa</string>
+    <string name="forums_community_destination">%1$s irratti akka %2$s tti maxxanfama</string>
 </resources>

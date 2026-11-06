@@ -118,9 +118,20 @@ data class Imported(
     val imported: Int = 0,
     val more: Boolean = false,
     val total: Int = 0,
+    val waiting: List<WaitingServer> = emptyList(),
 )
 
-data class Backups(val files: List<String> = emptyList())
+/** A server the people of a feed's imports wait on, with how many, until the user lets the app read it. */
+data class WaitingServer(
+    val server: String = "",
+    val count: Int = 0,
+)
+
+/**
+ * An account's archive files, and on a linked Bluesky account why the last
+ * backup kept no repository: empty when it kept one.
+ */
+data class Backups(val files: List<String> = emptyList(), val repository: String = "")
 
 /** A keyword filter on a feed: posts naming the phrase are hidden from the reader who set it. */
 data class Filter(

@@ -32,6 +32,7 @@ import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
 import org.mochios.wikis.repository.WikisRepository
+import org.mochios.wikis.ui.page.wikiUpdateNamed
 import java.io.File
 import javax.inject.Inject
 
@@ -126,10 +127,20 @@ class CommentsViewModel @Inject constructor(
         }
     }
 
+    /**
+     * A change in the wiki. The comments are read again when one of this
+     * page's changed, when the page itself was renamed or deleted, and when
+     * what changed is not said - including a reopened socket, which missed
+     * whatever was sent while it was down.
+     */
     private fun handle(event: WebSocketEvent) {
-        // A reopened socket missed whatever was sent while it was down.
         when (event.type) {
-            "wiki/update", "wiki/resynced", REOPEN -> refreshComments()
+            "wiki/resynced", REOPEN -> refreshComments()
+            "wiki/update" -> {
+                if (commentsConcerned(event.kind, event.page, event.previous, slug)) {
+                    refreshComments()
+                }
+            }
         }
     }
 
@@ -310,3 +321,18 @@ class CommentsViewModel @Inject constructor(
         createComment(body = draft, parent = parentId, uris = uris)
     }
 }
+
+/**
+ * Whether a wiki/update frame concerns the comments of the page opened by
+ * [opened]: one of its comments changed, the page was renamed from or to it
+ * or deleted, an attachment changed (the comments list each one's files), or
+ * the frame does not say what changed.
+ */
+internal fun commentsConcerned(kind: String?, page: String?, previous: String?, opened: String): Boolean =
+    when {
+        !wikiUpdateNamed(kind) -> true
+        kind == "comment" -> page == opened
+        kind == "pages" -> page == opened || previous == opened
+        kind == "attachment" -> true
+        else -> false
+    }

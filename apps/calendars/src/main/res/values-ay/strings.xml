@@ -275,4 +275,5 @@
     <string name="calendars_sync_permission_blocked">Calendarionakar mantañax aka app ukatakix jiwt\'ayatawa. App ukan wakichawinakapan Permisos ukan activarakismawa.</string>
     <string name="calendars_location_map">Mapan uñacht\'ayaña</string>
     <string name="calendars_location_flight">Jalaña arknaqaña</string>
+    <string name="calendars_preferences_week_numbers">Semana jakhünak uñacht\'ayaña</string>
 </resources>
