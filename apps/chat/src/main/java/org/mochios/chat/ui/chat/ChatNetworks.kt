@@ -110,7 +110,6 @@ internal fun ReceiptTick(state: ReceiptState) {
 internal fun MessageQuote(quote: ChatQuote) {
     val author = quote.author
     QuoteCard(
-        network = quote.network,
         url = quote.url,
         text = quote.text,
         image = quote.image,

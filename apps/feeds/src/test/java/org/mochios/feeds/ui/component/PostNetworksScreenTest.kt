@@ -190,14 +190,15 @@ class PostNetworksScreenTest {
     }
 
     @Test
-    fun `a quoted post shows its author, its text and its network`() {
+    fun `a quoted post shows its author and its text, and does not name its network`() {
         rule.setContent {
             QuoteCard(PostQuote(network = "bluesky", text = "Quoted words", author = PostPerson(name = "Carol", address = "carol.bsky.social")))
         }
         rule.onNodeWithText("Carol").assertIsDisplayed()
         rule.onNodeWithText("carol.bsky.social").assertIsDisplayed()
         rule.onNodeWithText("Quoted words").assertIsDisplayed()
-        rule.onNodeWithText("Bluesky").assertIsDisplayed()
+        // THE POINT: the network is not named on the card.
+        rule.onNodeWithText("Bluesky").assertDoesNotExist()
     }
 
     @Test

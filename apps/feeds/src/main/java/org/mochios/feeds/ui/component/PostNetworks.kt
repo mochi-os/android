@@ -286,7 +286,6 @@ internal fun PostBoosts(boosts: Int, modifier: Modifier = Modifier) {
 internal fun QuoteCard(quote: PostQuote, modifier: Modifier = Modifier) {
     val author = quote.author
     LibQuoteCard(
-        network = quote.network,
         url = quote.url,
         text = quote.text,
         image = quote.image,

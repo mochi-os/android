@@ -31,18 +31,17 @@ import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import org.mochios.android.util.isWebUrl
 import org.mochios.android.util.openWeb
-import org.mochios.android.util.providerName
 
 /**
  * A post on another network quoted in a Mochi post or message: who wrote it,
  * its text and its first picture, the whole card a link to the post. The
  * server reads the quote when the post is written and keeps it with the post,
  * so every reader sees what the writer saw. Only web links are followed, since
- * a quote arrives from another server.
+ * a quote arrives from another server. The card does not name the network:
+ * the author's address and the link already say where the post is.
  */
 @Composable
 fun QuoteCard(
-    network: String,
     url: String,
     text: String,
     image: String,
@@ -63,42 +62,32 @@ fun QuoteCard(
             .then(if (isWebUrl(url)) Modifier.clickable { openWeb(context, url) } else Modifier)
             .padding(12.dp),
     ) {
-        if (label.isNotEmpty() || network.isNotEmpty()) {
+        if (label.isNotEmpty()) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                if (label.isNotEmpty()) {
-                    EntityAvatar(
-                        name = label,
-                        src = avatar.takeIf { isWebUrl(it) },
-                        seed = seed.ifEmpty { address },
-                        size = 20.dp,
-                    )
+                EntityAvatar(
+                    name = label,
+                    src = avatar.takeIf { isWebUrl(it) },
+                    seed = seed.ifEmpty { address },
+                    size = 20.dp,
+                )
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(
+                    text = label,
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f, fill = false),
+                )
+                if (address.isNotEmpty() && name.isNotEmpty()) {
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
-                        text = label,
-                        style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.SemiBold,
+                        text = address,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.weight(1f, fill = false),
-                    )
-                    if (address.isNotEmpty() && name.isNotEmpty()) {
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            text = address,
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.weight(1f, fill = false),
-                        )
-                    }
-                }
-                Spacer(modifier = Modifier.weight(1f))
-                if (network.isNotEmpty()) {
-                    Text(
-                        text = providerName(network),
-                        style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }
