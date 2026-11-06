@@ -5,7 +5,6 @@
 
 package org.mochios.wikis.ui.comments
 
-import android.net.Uri
 import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -42,6 +41,7 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.segment
 import org.mochios.android.ui.components.addressByAuthor
 
 /**
@@ -82,8 +82,7 @@ fun WikiCommentThread(
     val displayName = comment.name.ifBlank { comment.author.orEmpty() }
 
     val avatarSrc = wiki?.let { ctx ->
-        // Escaped: the id is a peer's.
-        "/wikis/${ctx.wikiId}/-/comment/${Uri.encode(avatars[comment.author] ?: comment.id)}/asset/avatar"
+        segment(avatars[comment.author] ?: comment.id)?.let { "/wikis/${ctx.wikiId}/-/comment/$it/asset/avatar" }
     }
 
     val totalDescendants = remember(comment) { countDescendants(comment) }

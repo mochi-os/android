@@ -5,8 +5,10 @@
 
 package org.mochios.chat.ui
 
+import android.os.Looper
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -20,6 +22,10 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.longClick
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LifecycleRegistry
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
@@ -53,6 +59,8 @@ import org.mochios.chat.ui.encryption.PersonDevices
 import org.mochios.chat.ui.encryption.SetupDialog
 import org.mochios.chat.ui.encryption.SetupState
 import org.mochios.chat.ui.encryption.VerificationDialog
+import org.mochios.chat.ui.encryption.VerificationViewModel
+import org.mochios.chat.ui.encryption.VerificationWatcher
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -66,10 +74,13 @@ import org.mochios.chat.ui.privacy.PrivacyUiState
 import org.mochios.chat.ui.privacy.PrivacyViewModel
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicInteger
 import java.util.concurrent.atomic.AtomicReference
 import org.mochios.chat.ui.settings.roleLabel
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
+import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 
 /**
@@ -158,7 +169,7 @@ class NetworksScreenTest {
     }
 
     @Test
-    fun `a message quoting a post elsewhere shows the post`() {
+    fun `a message quoting a post elsewhere shows the post, without naming its network`() {
         bubble(
             ChatMessage(
                 id = "m1", body = "Look", member = "you",
@@ -168,7 +179,8 @@ class NetworksScreenTest {
         )
         rule.onNodeWithText("Quoted words").assertIsDisplayed()
         rule.onNodeWithText("Carol").assertIsDisplayed()
-        rule.onNodeWithText("Bluesky").assertIsDisplayed()
+        // THE POINT: the network is not named on the card.
+        rule.onNodeWithText("Bluesky").assertDoesNotExist()
     }
 
     @Test
@@ -336,6 +348,60 @@ class NetworksScreenTest {
             idleUntil { model.uiState.value.loaded?.policy == "anyone" }
             assertEquals(model.uiState.value.loaded, model.uiState.value.value)
             assertEquals(ChatPreferences(policy = "anyone"), model.uiState.value.value)
+        } finally {
+            server.shutdown()
+        }
+    }
+
+    private class Owner : LifecycleOwner {
+        val registry = LifecycleRegistry.createUnsafe(this)
+        override val lifecycle: Lifecycle get() = registry
+    }
+
+    // The push service keeps the process alive, so a watch left running behind
+    // the home screen asked every six seconds for as long as the process lived.
+    @Test
+    fun `the verifications are not read behind the home screen, and are read again on return`() {
+        val reads = AtomicInteger()
+        val server = MockWebServer()
+        server.dispatcher = object : Dispatcher() {
+            override fun dispatch(request: RecordedRequest): MockResponse =
+                if (request.path.orEmpty().substringBefore("?") == "/chat/-/encryption/verifications") {
+                    reads.incrementAndGet()
+                    MockResponse().setBody("""{"data": {"verifications": []}}""")
+                } else {
+                    MockResponse().setResponseCode(404)
+                }
+        }
+        server.start()
+        try {
+            val context = RuntimeEnvironment.getApplication()
+            val api = Retrofit.Builder()
+                .baseUrl(server.url("/chat/"))
+                .addConverterFactory(GsonConverterFactory.create())
+                .build()
+                .create(ChatApi::class.java)
+            val model = VerificationViewModel(ChatRepository(api, FileStore(context), context), context)
+            val owner = Owner().apply { registry.currentState = Lifecycle.State.RESUMED }
+            rule.setContent {
+                CompositionLocalProvider(LocalLifecycleOwner provides owner) {
+                    VerificationWatcher(enabled = true, viewModel = model)
+                }
+            }
+            idleUntil { reads.get() == 1 }
+
+            rule.runOnIdle { owner.registry.currentState = Lifecycle.State.CREATED }
+            // Several idle intervals, on each clock a delay could be counted on.
+            repeat(4) {
+                rule.mainClock.advanceTimeBy(7_000)
+                shadowOf(Looper.getMainLooper()).idleFor(7, TimeUnit.SECONDS)
+                Thread.sleep(50)
+                rule.waitForIdle()
+            }
+            assertEquals("not read behind the home screen", 1, reads.get())
+
+            rule.runOnIdle { owner.registry.currentState = Lifecycle.State.RESUMED }
+            idleUntil { reads.get() == 2 }
         } finally {
             server.shutdown()
         }

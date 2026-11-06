@@ -39,6 +39,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.ui.components.WhileStarted
 import org.mochios.chat.R
 import org.mochios.chat.model.Verification
 import org.mochios.chat.model.verificationShown
@@ -153,7 +154,8 @@ class VerificationViewModel @Inject constructor(
 fun VerificationWatcher(enabled: Boolean, viewModel: VerificationViewModel = hiltViewModel()) {
     val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
-    LaunchedEffect(enabled) {
+    // Not behind the home screen: the push service keeps the process alive.
+    WhileStarted(enabled) {
         if (enabled) viewModel.watch()
     }
     LaunchedEffect(Unit) {

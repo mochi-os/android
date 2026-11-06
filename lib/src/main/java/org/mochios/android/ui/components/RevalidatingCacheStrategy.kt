@@ -11,6 +11,11 @@ import coil3.network.NetworkHeaders
 import coil3.network.NetworkRequest
 import coil3.network.NetworkResponse
 import coil3.request.Options
+import okhttp3.Interceptor
+import okhttp3.Protocol
+import okhttp3.Request
+import okhttp3.Response
+import java.io.IOException
 
 /**
  * How the image loader treats what it holds on disk. Coil's default serves a
@@ -107,5 +112,47 @@ class RevalidatingCacheStrategy(
 
     private companion object {
         const val NOT_MODIFIED = 304
+    }
+}
+
+/**
+ * Stale-if-error for the image loader's revalidations. Asked after a held copy,
+ * a server that fails (a 5xx, or no answer at all) is answered as if it had
+ * said the copy stands, so the held image is shown rather than a placeholder:
+ * the loader fails a load on any answer but a 2xx or 304, though the held copy
+ * survives on disk. A friend's server that is offline answers its avatar 502
+ * through ours. The copy then keeps its lifetime from now, and is asked after
+ * again when that passes. A 4xx passes through: the image is gone or no longer
+ * the user's to see.
+ */
+class StaleIfError(private val now: () -> Long = System::currentTimeMillis) : Interceptor {
+    override fun intercept(chain: Interceptor.Chain): Response {
+        val request = chain.request()
+        if (request.header("If-None-Match") == null && request.header("If-Modified-Since") == null) {
+            return chain.proceed(request)
+        }
+        val response = try {
+            chain.proceed(request)
+        } catch (e: IOException) {
+            // A load the caller gave up on is not a failure to cover.
+            if (chain.call().isCanceled()) throw e
+            return held(request)
+        }
+        if (response.code < 500) return response
+        response.close()
+        return held(request)
+    }
+
+    /** The answer a server gives when the copy asked after stands. */
+    private fun held(request: Request): Response {
+        val time = now()
+        return Response.Builder()
+            .request(request)
+            .protocol(Protocol.HTTP_1_1)
+            .code(304)
+            .message("Not Modified")
+            .sentRequestAtMillis(time)
+            .receivedResponseAtMillis(time)
+            .build()
     }
 }

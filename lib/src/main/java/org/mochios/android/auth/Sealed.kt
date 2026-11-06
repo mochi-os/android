@@ -9,6 +9,7 @@ import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyProperties
 import java.security.KeyStore
 import java.util.Base64
+import java.util.concurrent.ConcurrentHashMap
 import javax.crypto.Cipher
 import javax.crypto.KeyGenerator
 import javax.crypto.SecretKey
@@ -29,15 +30,9 @@ interface Vault {
  * enough to read what it wrapped.
  */
 class Keystore(private val alias: String) : Vault {
-    // The handle, once found or made: each lookup was a keystore load and an
-    // entry read across the keystore's binder, for every value read or written.
-    // It names the key; the key itself stays in the keystore.
-    @Volatile
-    private var held: SecretKey? = null
-
     override fun key(): SecretKey {
-        held?.let { return it }
-        return synchronized(this) { held ?: find().also { held = it } }
+        held[alias]?.let { return it }
+        return synchronized(held) { held[alias] ?: find().also { held[alias] = it } }
     }
 
     private fun find(): SecretKey {
@@ -62,6 +57,15 @@ class Keystore(private val alias: String) : Vault {
 
     private companion object {
         const val PROVIDER = "AndroidKeyStore"
+
+        // Each key's handle, once found or made: each lookup was a keystore load
+        // and an entry read across the keystore's binder, for every value read
+        // or written. It names the key; the key itself stays in the keystore.
+        // Held for the process, not the instance: the session and every push
+        // store build their own over one alias, and two that both found no key
+        // would each make one, the second replacing the first under the alias
+        // while the first went on using the key it replaced.
+        val held = ConcurrentHashMap<String, SecretKey>()
     }
 }
 

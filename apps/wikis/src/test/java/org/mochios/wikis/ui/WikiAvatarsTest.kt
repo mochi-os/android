@@ -152,4 +152,30 @@ class WikiAvatarsTest {
             settled(2),
         )
     }
+
+    @Test
+    fun `an id that is a dot segment has the placeholder, not a request`() {
+        // Escaping leaves a dot alone, and the URL resolves "." and ".." away:
+        // revision/../asset/avatar would ask for the wiki's own asset/avatar.
+        inWiki {
+            PageHistoryBody(
+                slug = "home", wikiId = "w1",
+                revisions = listOf(Revision(id = "..", author = "ann", name = "ann", version = 2), Revision(id = "r1", author = "bob", name = "bob", version = 1)),
+                currentVersion = 2, hasMore = false, isLoadingMore = false, onLoadMore = {}, onView = {}, onRevert = {},
+            )
+            WikiCommentThread(
+                comment = WikiComment(id = "c1", author = "bob", name = "bob", body = "Body", children = listOf(WikiComment(id = ".", author = "ann", name = "ann", body = "Reply"))),
+                currentUserId = null, isOwner = false, onStartReply = { _, _ -> }, onEdit = null, onDelete = null, avatars = emptyMap(),
+            )
+        }
+        settled(2)
+        // Long enough for any other row's request to have been made.
+        rule.mainClock.advanceTimeBy(1_000)
+        Thread.sleep(300)
+        rule.waitForIdle()
+        assertEquals(
+            listOf("/wikis/w1/-/comment/c1/asset/avatar", "https://server/wikis/w1/-/revision/r1/asset/avatar"),
+            loaded.toSet().sorted(),
+        )
+    }
 }

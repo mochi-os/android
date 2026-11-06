@@ -32,6 +32,15 @@ enum class AvatarSize(val px: Dp) {
 }
 
 /**
+ * [id], a peer's, escaped as one segment of an asset address, or null when no
+ * segment can carry it. Escaping keeps a slash from pointing the request at
+ * another action, but leaves a dot alone, and the URL resolves "." and ".."
+ * away whether escaped or not; an empty id would name the parent.
+ */
+internal fun segment(id: String): String? =
+    if (id.isEmpty() || id == "." || id == "..") null else Uri.encode(id)
+
+/**
  * Avatar for a revision's author. The wiki proxies the author's avatar and
  * style at `revision/<id>/asset/{avatar,style}`, so remote authors render
  * without fetching foreign peers.
@@ -51,10 +60,9 @@ fun AuthorAvatar(
     // changes-list.tsx) — the lib EntityAvatar will read it once accent
     // fetching lands on Android; until then it's reserved for that wiring.
     @Suppress("UNUSED_VARIABLE")
-    // The id is a peer's, so it is escaped: a slash or a dot segment in one
-    // would otherwise point the request at another action.
-    val styleUrl = "${baseURL}revision/${Uri.encode(revisionId)}/asset/style"
-    val src = "${baseURL}revision/${Uri.encode(revisionId)}/asset/avatar"
+    // An id no segment can carry has the placeholder.
+    val styleUrl = segment(revisionId)?.let { "${baseURL}revision/$it/asset/style" }
+    val src = segment(revisionId)?.let { "${baseURL}revision/$it/asset/avatar" }
 
     EntityAvatar(
         name = authorName,

@@ -12,6 +12,7 @@ import coil3.ImageLoader
 import coil3.PlatformContext
 import coil3.SingletonImageLoader
 import coil3.annotation.ExperimentalCoilApi
+import coil3.network.DeDupeConcurrentRequestStrategy
 import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
@@ -23,6 +24,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.RevalidatingCacheStrategy
+import org.mochios.android.ui.components.StaleIfError
 import org.mochios.android.ui.components.VideoFrameFetcher
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
@@ -73,11 +75,15 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                 // threading the server URL through.
                 add(RelativeAssetUrlMapper(sessionManager))
                 // Avatars live at addresses that do not change with them; the
-                // strategy asks again once the server's max-age has passed.
+                // strategy asks again once the server's max-age has passed, and
+                // a server that fails the asking leaves the held image shown.
+                // One load of an address at a time: loads asking together each
+                // held the cached copy open, so none could store the answer.
                 add(
                     OkHttpNetworkFetcherFactory(
-                        callFactory = { assetHttpClient },
+                        callFactory = { assetHttpClient.newBuilder().addInterceptor(StaleIfError()).build() },
                         cacheStrategy = { RevalidatingCacheStrategy() },
+                        concurrentRequestStrategy = { DeDupeConcurrentRequestStrategy() },
                     )
                 )
                 add(VideoFrameFetcher.Factory(sessionManager))

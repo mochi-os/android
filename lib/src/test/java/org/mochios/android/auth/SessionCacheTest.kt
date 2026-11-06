@@ -124,6 +124,15 @@ class SessionCacheTest {
         assertSame(first, vault.key())
     }
 
+    // The session and each push store build their own over one alias. Two that
+    // each made a key would leave one of them sealing with a replaced key.
+    @Test
+    fun `a second keystore over the same alias uses the key the first holds`() {
+        val first = Keystore("mochi.test.shared").key()
+        KeyStore.getInstance("AndroidKeyStore").apply { load(null) }.deleteEntry("mochi.test.shared")
+        assertSame(first, Keystore("mochi.test.shared").key())
+    }
+
     private fun hold() {
         val bitmap = Bitmap.createBitmap(4, 4, Bitmap.Config.ARGB_8888)
         images.memoryCache!![MemoryCache.Key("avatar")] = MemoryCache.Value(bitmap.asImage())
