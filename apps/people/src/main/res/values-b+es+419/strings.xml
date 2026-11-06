@@ -164,10 +164,11 @@
     <string name="people_contact_birthday_year">Año</string>
     <string name="people_contact_birthday_clear">Borrar</string>
     <string name="people_contact_create">Crear</string>
-    <string name="people_contact_add_handle">Agregar identificador</string>
-    <string name="people_contact_add_messaging">Agregar dirección de mensajería</string>
     <string name="people_contact_network">Red</string>
     <string name="people_contact_xmpp">Contacto de XMPP</string>
     <string name="people_person_forums">Foros</string>
     <string name="people_contact_network_other">Otra</string>
+    <string name="people_contact_address">Dirección</string>
+    <string name="people_contact_handle">Identificador</string>
+    <string name="people_contact_messaging">Dirección de mensajería</string>
 </resources>

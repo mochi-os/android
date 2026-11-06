@@ -158,9 +158,6 @@
     <string name="people_contact_given">نوم</string>
     <string name="people_contact_family">کورنی نوم</string>
     <string name="people_contact_nickname">لقب</string>
-    <string name="people_contact_add_email">بریښنالیک اضافه کړئ</string>
-    <string name="people_contact_add_phone">ټیلیفون اضافه کړئ</string>
-    <string name="people_contact_add_address">پته اضافه کړئ</string>
     <string name="people_contact_street">کوڅه</string>
     <string name="people_contact_birthday">د زیږون ورځ</string>
     <string name="people_contact_organisation">سازمان</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">جوړ کړئ</string>
     <string name="people_sync_permission_reason">همغږي ستاسو ملګري د دې موبایل د اړیکو اپلیکیشن ته کاپي کوي، نو دې ته ستاسو اړیکو ته لاسرسی اړین دی.</string>
     <string name="people_sync_permission_blocked">د دې اپلیکیشن لپاره اړیکو ته لاسرسی بند دی. تاسو کولی شئ دا د اپلیکیشن په تنظیماتو کې د اجازو لاندې چالان کړئ.</string>
-    <string name="people_contact_add_handle">مستعار نوم اضافه کړئ</string>
-    <string name="people_contact_add_messaging">د پیغام رسولو پته اضافه کړئ</string>
     <string name="people_contact_network">شبکه</string>
     <string name="people_contact_xmpp">د XMPP اړیکه</string>
     <string name="people_person_forums">فورمونه</string>
     <string name="people_contact_network_other">نور</string>
     <string name="people_contacts_menu_unfriend">ملګرتیا پای ته ورسوئ</string>
     <string name="people_profile_directory_listing">په لارښود کې ښودل</string>
+    <string name="people_contact_address">پته</string>
+    <string name="people_contact_handle">مستعار نوم</string>
+    <string name="people_contact_messaging">د پیغام رسولو پته</string>
 </resources>

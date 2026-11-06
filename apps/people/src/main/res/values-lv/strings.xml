@@ -158,9 +158,6 @@
     <string name="people_contact_given">Vārds</string>
     <string name="people_contact_family">Uzvārds</string>
     <string name="people_contact_nickname">Segvārds</string>
-    <string name="people_contact_add_email">Pievienot e-pastu</string>
-    <string name="people_contact_add_phone">Pievienot tālruni</string>
-    <string name="people_contact_add_address">Pievienot adresi</string>
     <string name="people_contact_street">Iela</string>
     <string name="people_contact_birthday">Dzimšanas diena</string>
     <string name="people_contact_organisation">Organizācija</string>
@@ -218,12 +215,13 @@
     <string name="people_contact_create">Izveidot</string>
     <string name="people_sync_permission_reason">Sinhronizācija kopē jūsu draugus šī tālruņa lietotnē Kontakti, tāpēc tai nepieciešama piekļuve jūsu kontaktiem.</string>
     <string name="people_sync_permission_blocked">Piekļuve kontaktiem šai lietotnei ir izslēgta. Varat to ieslēgt lietotnes iestatījumu sadaļā Atļaujas.</string>
-    <string name="people_contact_add_handle">Pievienot lietotājvārdu</string>
-    <string name="people_contact_add_messaging">Pievienot ziņapmaiņas adresi</string>
     <string name="people_contact_network">Tīkls</string>
     <string name="people_contact_xmpp">XMPP kontakts</string>
     <string name="people_person_forums">Forumi</string>
     <string name="people_contact_network_other">Cits</string>
     <string name="people_contacts_menu_unfriend">Pārtraukt draudzību</string>
     <string name="people_profile_directory_listing">Rādīšana katalogā</string>
+    <string name="people_contact_address">Adrese</string>
+    <string name="people_contact_handle">Lietotājvārds</string>
+    <string name="people_contact_messaging">Ziņapmaiņas adrese</string>
 </resources>

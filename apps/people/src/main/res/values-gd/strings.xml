@@ -158,9 +158,6 @@
     <string name="people_contact_given">Ainm</string>
     <string name="people_contact_family">Sloinneadh</string>
     <string name="people_contact_nickname">Far-ainm</string>
-    <string name="people_contact_add_email">Cuir post-d ris</string>
-    <string name="people_contact_add_phone">Cuir fòn ris</string>
-    <string name="people_contact_add_address">Cuir seòladh ris</string>
     <string name="people_contact_street">Sràid</string>
     <string name="people_contact_birthday">Co-là-breith</string>
     <string name="people_contact_organisation">Buidheann</string>
@@ -219,12 +216,13 @@
     <string name="people_contact_create">Cruthaich</string>
     <string name="people_sync_permission_reason">Nì an sioncronachadh lethbhreac dhe na caraidean agad ann an aplacaid Luchd-aithne an fhòn seo, mar sin feumaidh e inntrigeadh dhan luchd-aithne agad.</string>
     <string name="people_sync_permission_blocked">Tha inntrigeadh dhan luchd-aithne dheth airson na h-aplacaid seo. \'S urrainn dhut a chur air fo Ceadan ann an roghainnean na h-aplacaid.</string>
-    <string name="people_contact_add_handle">Cuir ainm-cleachdaiche ris</string>
-    <string name="people_contact_add_messaging">Cuir seòladh teachdaireachdan ris</string>
     <string name="people_contact_network">Lìonra</string>
     <string name="people_contact_xmpp">Luchd-aithne XMPP</string>
     <string name="people_person_forums">Fòraman</string>
     <string name="people_contact_network_other">Eile</string>
     <string name="people_contacts_menu_unfriend">Cuir crìoch air a\' chàirdeas</string>
     <string name="people_profile_directory_listing">Liostadh san eòlaire</string>
+    <string name="people_contact_address">Seòladh</string>
+    <string name="people_contact_handle">Ainm-cleachdaiche</string>
+    <string name="people_contact_messaging">Seòladh teachdaireachdan</string>
 </resources>

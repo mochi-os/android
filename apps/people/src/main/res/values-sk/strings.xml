@@ -158,9 +158,6 @@
     <string name="people_contact_given">Meno</string>
     <string name="people_contact_family">Priezvisko</string>
     <string name="people_contact_nickname">Prezývka</string>
-    <string name="people_contact_add_email">Pridať e-mail</string>
-    <string name="people_contact_add_phone">Pridať telefón</string>
-    <string name="people_contact_add_address">Pridať adresu</string>
     <string name="people_contact_street">Ulica</string>
     <string name="people_contact_birthday">Dátum narodenia</string>
     <string name="people_contact_organisation">Organizácia</string>
@@ -218,12 +215,13 @@
     <string name="people_contact_create">Vytvoriť</string>
     <string name="people_sync_permission_reason">Synchronizácia kopíruje vašich priateľov do aplikácie Kontakty v tomto telefóne, preto potrebuje prístup k vašim kontaktom.</string>
     <string name="people_sync_permission_blocked">Prístup ku kontaktom je pre túto aplikáciu vypnutý. Môžete ho zapnúť v sekcii Povolenia v nastaveniach aplikácie.</string>
-    <string name="people_contact_add_handle">Pridať prezývku</string>
-    <string name="people_contact_add_messaging">Pridať adresu komunikátora</string>
     <string name="people_contact_network">Sieť</string>
     <string name="people_contact_xmpp">Kontakt XMPP</string>
     <string name="people_person_forums">Fóra</string>
     <string name="people_contact_network_other">Iná</string>
     <string name="people_contacts_menu_unfriend">Ukončiť priateľstvo</string>
     <string name="people_profile_directory_listing">Zobrazenie v adresári</string>
+    <string name="people_contact_address">Adresa</string>
+    <string name="people_contact_handle">Prezývka</string>
+    <string name="people_contact_messaging">Adresa komunikátora</string>
 </resources>

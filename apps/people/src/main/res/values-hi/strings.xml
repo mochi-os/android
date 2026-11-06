@@ -158,9 +158,6 @@
     <string name="people_contact_given">पहला नाम</string>
     <string name="people_contact_family">उपनाम</string>
     <string name="people_contact_nickname">निकनेम</string>
-    <string name="people_contact_add_email">ईमेल जोड़ें</string>
-    <string name="people_contact_add_phone">फ़ोन जोड़ें</string>
-    <string name="people_contact_add_address">पता जोड़ें</string>
     <string name="people_contact_street">सड़क</string>
     <string name="people_contact_birthday">जन्मदिन</string>
     <string name="people_contact_organisation">संगठन</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">बनाएँ</string>
     <string name="people_sync_permission_reason">सिंक करने से आपके मित्र इस फ़ोन के संपर्क ऐप में कॉपी हो जाते हैं, इसलिए इसे आपके संपर्कों का एक्सेस चाहिए।</string>
     <string name="people_sync_permission_blocked">इस ऐप के लिए संपर्क एक्सेस बंद है। आप इसे ऐप की सेटिंग्स में अनुमतियाँ के अंतर्गत चालू कर सकते हैं।</string>
-    <string name="people_contact_add_handle">हैंडल जोड़ें</string>
-    <string name="people_contact_add_messaging">मैसेजिंग पता जोड़ें</string>
     <string name="people_contact_network">नेटवर्क</string>
     <string name="people_contact_xmpp">XMPP संपर्क</string>
     <string name="people_person_forums">फ़ोरम्स</string>
     <string name="people_contact_network_other">अन्य</string>
     <string name="people_contacts_menu_unfriend">मित्रता समाप्त करें</string>
     <string name="people_profile_directory_listing">निर्देशिका में सूचीबद्ध</string>
+    <string name="people_contact_address">पता</string>
+    <string name="people_contact_handle">हैंडल</string>
+    <string name="people_contact_messaging">मैसेजिंग पता</string>
 </resources>

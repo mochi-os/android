@@ -158,9 +158,6 @@
     <string name="people_contact_given">Eesnimi</string>
     <string name="people_contact_family">Perekonnanimi</string>
     <string name="people_contact_nickname">Hüüdnimi</string>
-    <string name="people_contact_add_email">Lisa e-post</string>
-    <string name="people_contact_add_phone">Lisa telefon</string>
-    <string name="people_contact_add_address">Lisa aadress</string>
     <string name="people_contact_street">Tänav</string>
     <string name="people_contact_birthday">Sünnipäev</string>
     <string name="people_contact_organisation">Organisatsioon</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Loo</string>
     <string name="people_sync_permission_reason">Sünkroonimine kopeerib teie sõbrad selle telefoni rakendusse Kontaktid, seega vajab see juurdepääsu teie kontaktidele.</string>
     <string name="people_sync_permission_blocked">Juurdepääs kontaktidele on selle rakenduse jaoks välja lülitatud. Saate selle sisse lülitada rakenduse seadete jaotises Load.</string>
-    <string name="people_contact_add_handle">Lisa kasutajanimi</string>
-    <string name="people_contact_add_messaging">Lisa kiirsuhtlusaadress</string>
     <string name="people_contact_network">Võrk</string>
     <string name="people_contact_xmpp">XMPP-kontakt</string>
     <string name="people_person_forums">Foorumid</string>
     <string name="people_contact_network_other">Muu</string>
     <string name="people_contacts_menu_unfriend">Lõpeta sõprus</string>
     <string name="people_profile_directory_listing">Kataloogis kuvamine</string>
+    <string name="people_contact_address">Aadress</string>
+    <string name="people_contact_handle">Kasutajanimi</string>
+    <string name="people_contact_messaging">Kiirsuhtlusaadress</string>
 </resources>

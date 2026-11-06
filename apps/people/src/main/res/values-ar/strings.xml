@@ -158,9 +158,6 @@
     <string name="people_contact_given">الاسم الأول</string>
     <string name="people_contact_family">اسم العائلة</string>
     <string name="people_contact_nickname">الاسم المستعار</string>
-    <string name="people_contact_add_email">إضافة بريد إلكتروني</string>
-    <string name="people_contact_add_phone">إضافة هاتف</string>
-    <string name="people_contact_add_address">إضافة عنوان</string>
     <string name="people_contact_street">الشارع</string>
     <string name="people_contact_birthday">تاريخ الميلاد</string>
     <string name="people_contact_organisation">المؤسسة</string>
@@ -221,12 +218,13 @@
     <string name="people_contact_create">إنشاء</string>
     <string name="people_sync_permission_reason">تنسخ المزامنة أصدقاءك إلى تطبيق جهات الاتصال على هذا الهاتف، لذا تحتاج إلى الوصول إلى جهات الاتصال الخاصة بك.</string>
     <string name="people_sync_permission_blocked">الوصول إلى جهات الاتصال متوقف لهذا التطبيق. يمكنك تشغيله ضمن الأذونات في إعدادات التطبيق.</string>
-    <string name="people_contact_add_handle">إضافة معرّف</string>
-    <string name="people_contact_add_messaging">إضافة عنوان مراسلة</string>
     <string name="people_contact_network">الشبكة</string>
     <string name="people_contact_xmpp">جهة اتصال XMPP</string>
     <string name="people_person_forums">المنتديات</string>
     <string name="people_contact_network_other">أخرى</string>
     <string name="people_contacts_menu_unfriend">إنهاء الصداقة</string>
     <string name="people_profile_directory_listing">الإدراج في الدليل</string>
+    <string name="people_contact_address">العنوان</string>
+    <string name="people_contact_handle">المعرّف</string>
+    <string name="people_contact_messaging">عنوان المراسلة</string>
 </resources>

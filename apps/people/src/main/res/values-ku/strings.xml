@@ -158,9 +158,6 @@
     <string name="people_contact_given">Nav</string>
     <string name="people_contact_family">Paşnav</string>
     <string name="people_contact_nickname">Leqeb</string>
-    <string name="people_contact_add_email">E-name zêde bike</string>
-    <string name="people_contact_add_phone">Telefon zêde bike</string>
-    <string name="people_contact_add_address">Navnîşan zêde bike</string>
     <string name="people_contact_street">Kolan</string>
     <string name="people_contact_birthday">Rojbûn</string>
     <string name="people_contact_organisation">Rêxistin</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Çêbike</string>
     <string name="people_sync_permission_reason">Hevdemkirin hevalên te li sepana Kontakt a vê telefonê kopî dike, ji ber vê yekê pêdivî bi gihîştina kontaktên te heye.</string>
     <string name="people_sync_permission_blocked">Gihîştina kontaktan ji bo vê sepanê neçalak e. Tu dikarî wê di mîhengên sepanê de di bin Destûr de çalak bikî.</string>
-    <string name="people_contact_add_handle">Navê bikarhêner zêde bike</string>
-    <string name="people_contact_add_messaging">Navnîşana peyamşandinê zêde bike</string>
     <string name="people_contact_network">Tor</string>
     <string name="people_contact_xmpp">Têkiliya XMPP</string>
     <string name="people_person_forums">Forum</string>
     <string name="people_contact_network_other">Yên din</string>
     <string name="people_contacts_menu_unfriend">Hevaltiyê biqedîne</string>
     <string name="people_profile_directory_listing">Xuyabûn di rêberê de</string>
+    <string name="people_contact_address">Navnîşan</string>
+    <string name="people_contact_handle">Navê bikarhêner</string>
+    <string name="people_contact_messaging">Navnîşana peyamşandinê</string>
 </resources>

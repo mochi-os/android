@@ -16,10 +16,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -29,6 +28,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Place
@@ -510,7 +510,52 @@ internal fun Modifier.leaving(): Modifier = composed {
     }
 }
 
-@OptIn(ExperimentalLayoutApi::class)
+/** A kind of value the Add menu gives a contact: its glyph, its name and the form with one more. */
+private class Addition(val icon: ImageVector, val label: Int, val add: (ContactForm) -> ContactForm)
+
+private val ADDITIONS = listOf(
+    Addition(Icons.Outlined.Email, R.string.people_contact_email) { form ->
+        form.copy(emails = form.emails + TypedEntry(type = TYPE_HOME))
+    },
+    Addition(Icons.Outlined.Phone, R.string.people_contact_phone) { form ->
+        form.copy(phones = form.phones + TypedEntry(type = TYPE_MOBILE))
+    },
+    Addition(Icons.Outlined.Place, R.string.people_contact_address) { form ->
+        form.copy(addresses = form.addresses + AddressEntry(type = TYPE_HOME))
+    },
+    Addition(Icons.Outlined.AlternateEmail, R.string.people_contact_handle) { form ->
+        form.copy(handles = form.handles + HandleEntry())
+    },
+    Addition(Icons.AutoMirrored.Outlined.Chat, R.string.people_contact_messaging) { form ->
+        form.copy(messaging = form.messaging + MessagingEntry())
+    },
+)
+
+/** One Add button whose menu offers every kind of value a contact can gain. */
+@Composable
+private fun AddMenu(form: ContactForm, onChange: (ContactForm) -> Unit) {
+    var open by remember { mutableStateOf(false) }
+    Box {
+        MochiTextButton(onClick = { open = true }) {
+            Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+            Text(stringResource(MochiR.string.common_add))
+        }
+        MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+            ADDITIONS.forEach { addition ->
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(addition.label)) },
+                    leadingIcon = { Icon(addition.icon, contentDescription = null) },
+                    onClick = {
+                        open = false
+                        onChange(addition.add(form))
+                    },
+                )
+            }
+        }
+    }
+}
+
 @Composable
 internal fun ContactFields(
     form: ContactForm,
@@ -561,43 +606,13 @@ internal fun ContactFields(
         }
     }
 
-    // Emails, telephones and addresses share one block: a line of add
-    // buttons, then only the rows that exist, each marked by its kind's glyph.
+    // Emails, telephones, addresses, handles and messaging addresses share one
+    // block: an Add menu offering each kind, then only the rows that exist,
+    // each marked by its kind's glyph. One button never wraps, as five did.
     Spacer(modifier = Modifier.height(12.dp))
     HorizontalDivider()
     Spacer(modifier = Modifier.height(4.dp))
-    FlowRow(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.End,
-    ) {
-        MochiTextButton(
-            onClick = { onChange(form.copy(emails = form.emails + TypedEntry(type = TYPE_HOME))) },
-        ) {
-            Text(stringResource(R.string.people_contact_add_email))
-        }
-        MochiTextButton(
-            onClick = { onChange(form.copy(phones = form.phones + TypedEntry(type = TYPE_MOBILE))) },
-        ) {
-            Text(stringResource(R.string.people_contact_add_phone))
-        }
-        MochiTextButton(
-            onClick = {
-                onChange(form.copy(addresses = form.addresses + AddressEntry(type = TYPE_HOME)))
-            },
-        ) {
-            Text(stringResource(R.string.people_contact_add_address))
-        }
-        MochiTextButton(
-            onClick = { onChange(form.copy(handles = form.handles + HandleEntry())) },
-        ) {
-            Text(stringResource(R.string.people_contact_add_handle))
-        }
-        MochiTextButton(
-            onClick = { onChange(form.copy(messaging = form.messaging + MessagingEntry())) },
-        ) {
-            Text(stringResource(R.string.people_contact_add_messaging))
-        }
-    }
+    AddMenu(form = form, onChange = onChange)
     Column {
         form.emails.forEachIndexed { index, entry ->
             TypedEntryRow(

@@ -158,9 +158,6 @@
     <string name="people_contact_given">Voornaam</string>
     <string name="people_contact_family">Van</string>
     <string name="people_contact_nickname">Bynaam</string>
-    <string name="people_contact_add_email">Voeg e-pos by</string>
-    <string name="people_contact_add_phone">Voeg telefoon by</string>
-    <string name="people_contact_add_address">Voeg adres by</string>
     <string name="people_contact_street">Straat</string>
     <string name="people_contact_birthday">Verjaardag</string>
     <string name="people_contact_organisation">Organisasie</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Skep</string>
     <string name="people_sync_permission_reason">Sinkronisering kopieer jou vriende na hierdie foon se Kontakte-app, dus het dit toegang tot jou kontakte nodig.</string>
     <string name="people_sync_permission_blocked">Kontaktetoegang is vir hierdie app afgeskakel. Jy kan dit onder Toestemmings in die app se instellings aanskakel.</string>
-    <string name="people_contact_add_handle">Voeg gebruikersnaam by</string>
-    <string name="people_contact_add_messaging">Voeg boodskapadres by</string>
     <string name="people_contact_network">Netwerk</string>
     <string name="people_contact_xmpp">XMPP-kontak</string>
     <string name="people_person_forums">Forums</string>
     <string name="people_contact_network_other">Ander</string>
     <string name="people_contacts_menu_unfriend">Verwyder as vriend</string>
     <string name="people_profile_directory_listing">Gelys in die gids</string>
+    <string name="people_contact_address">Adres</string>
+    <string name="people_contact_handle">Gebruikersnaam</string>
+    <string name="people_contact_messaging">Boodskapadres</string>
 </resources>

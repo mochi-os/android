@@ -158,9 +158,6 @@
     <string name="people_contact_given">Nombre</string>
     <string name="people_contact_family">Apellidos</string>
     <string name="people_contact_nickname">Apodo</string>
-    <string name="people_contact_add_email">Añadir correo electrónico</string>
-    <string name="people_contact_add_phone">Añadir teléfono</string>
-    <string name="people_contact_add_address">Añadir dirección</string>
     <string name="people_contact_street">Calle</string>
     <string name="people_contact_birthday">Cumpleaños</string>
     <string name="people_contact_organisation">Organización</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Crear</string>
     <string name="people_sync_permission_reason">La sincronización copia a tus amigos en la aplicación Contactos de este teléfono, por lo que necesita acceso a tus contactos.</string>
     <string name="people_sync_permission_blocked">El acceso a los contactos está desactivado para esta aplicación. Puedes activarlo en Permisos, dentro de los ajustes de la aplicación.</string>
-    <string name="people_contact_add_handle">Añadir identificador</string>
-    <string name="people_contact_add_messaging">Añadir dirección de mensajería</string>
     <string name="people_contact_network">Red</string>
     <string name="people_contact_xmpp">Contacto de XMPP</string>
     <string name="people_person_forums">Foros</string>
     <string name="people_contact_network_other">Otra</string>
     <string name="people_contacts_menu_unfriend">Dejar de ser amigos</string>
     <string name="people_profile_directory_listing">Aparecer en el directorio</string>
+    <string name="people_contact_address">Dirección</string>
+    <string name="people_contact_handle">Identificador</string>
+    <string name="people_contact_messaging">Dirección de mensajería</string>
 </resources>

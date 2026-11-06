@@ -158,9 +158,6 @@
     <string name="people_contact_given">Eiginnafn</string>
     <string name="people_contact_family">Eftirnafn</string>
     <string name="people_contact_nickname">Gælunafn</string>
-    <string name="people_contact_add_email">Bæta við netfangi</string>
-    <string name="people_contact_add_phone">Bæta við símanúmeri</string>
-    <string name="people_contact_add_address">Bæta við heimilisfangi</string>
     <string name="people_contact_street">Gata</string>
     <string name="people_contact_birthday">Afmælisdagur</string>
     <string name="people_contact_organisation">Fyrirtæki</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Búa til</string>
     <string name="people_sync_permission_reason">Samstilling afritar vini þína í forritið Tengiliðir í þessum síma og þarf því aðgang að tengiliðunum þínum.</string>
     <string name="people_sync_permission_blocked">Slökkt er á aðgangi að tengiliðum fyrir þetta forrit. Þú getur kveikt á honum undir Heimildir í stillingum forritsins.</string>
-    <string name="people_contact_add_handle">Bæta við notandanafni</string>
-    <string name="people_contact_add_messaging">Bæta við skilaboðafangi</string>
     <string name="people_contact_network">Net</string>
     <string name="people_contact_xmpp">XMPP-tengiliður</string>
     <string name="people_person_forums">Spjallborð</string>
     <string name="people_contact_network_other">Annað</string>
     <string name="people_contacts_menu_unfriend">Fjarlægja vin</string>
     <string name="people_profile_directory_listing">Skráning í notendaskrá</string>
+    <string name="people_contact_address">Heimilisfang</string>
+    <string name="people_contact_handle">Notandanafn</string>
+    <string name="people_contact_messaging">Skilaboðafang</string>
 </resources>

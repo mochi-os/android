@@ -158,9 +158,6 @@
     <string name="people_contact_given">ناوی یەکەم</string>
     <string name="people_contact_family">ناوی خێزان</string>
     <string name="people_contact_nickname">نازناو</string>
-    <string name="people_contact_add_email">زیادکردنی ئیمەیڵ</string>
-    <string name="people_contact_add_phone">زیادکردنی تەلەفۆن</string>
-    <string name="people_contact_add_address">زیادکردنی ناونیشان</string>
     <string name="people_contact_street">شەقام</string>
     <string name="people_contact_birthday">ڕۆژی لەدایکبوون</string>
     <string name="people_contact_organisation">ڕێکخراو</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">دروستکردن</string>
     <string name="people_sync_permission_reason">هاوکاتکردن هاوڕێکانت بۆ ئەپی پەیوەندییەکانی ئەم مۆبایلە کۆپی دەکات، بۆیە پێویستی بە دەستڕاگەیشتن بە پەیوەندییەکانت هەیە.</string>
     <string name="people_sync_permission_blocked">دەستڕاگەیشتنی پەیوەندییەکان بۆ ئەم ئەپە ناچالاک کراوە. دەتوانیت لە ڕێکخستنەکانی ئەپەکەدا لە بەشی ڕێگەپێدانەکان چالاکی بکەیتەوە.</string>
-    <string name="people_contact_add_handle">زیادکردنی ناوی بەکارهێنەر</string>
-    <string name="people_contact_add_messaging">زیادکردنی ناونیشانی نامەناردن</string>
     <string name="people_contact_network">تۆڕ</string>
     <string name="people_contact_xmpp">پەیوەندیی XMPP</string>
     <string name="people_person_forums">فۆڕەمەکان</string>
     <string name="people_contact_network_other">هیتر</string>
     <string name="people_contacts_menu_unfriend">کۆتاییهێنان بە هاوڕێیەتی</string>
     <string name="people_profile_directory_listing">دەرکەوتن لە پێڕستدا</string>
+    <string name="people_contact_address">ناونیشان</string>
+    <string name="people_contact_handle">ناوی بەکارهێنەر</string>
+    <string name="people_contact_messaging">ناونیشانی نامەناردن</string>
 </resources>

@@ -158,9 +158,6 @@
     <string name="people_contact_given">Tên</string>
     <string name="people_contact_family">Họ</string>
     <string name="people_contact_nickname">Biệt danh</string>
-    <string name="people_contact_add_email">Thêm email</string>
-    <string name="people_contact_add_phone">Thêm số điện thoại</string>
-    <string name="people_contact_add_address">Thêm địa chỉ</string>
     <string name="people_contact_street">Đường</string>
     <string name="people_contact_birthday">Ngày sinh</string>
     <string name="people_contact_organisation">Tổ chức</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">Tạo</string>
     <string name="people_sync_permission_reason">Tính năng đồng bộ sao chép bạn bè của bạn vào ứng dụng Danh bạ của điện thoại này, vì vậy cần có quyền truy cập vào danh bạ của bạn.</string>
     <string name="people_sync_permission_blocked">Quyền truy cập danh bạ đã bị tắt đối với ứng dụng này. Bạn có thể bật trong mục Quyền ở phần cài đặt của ứng dụng.</string>
-    <string name="people_contact_add_handle">Thêm biệt danh</string>
-    <string name="people_contact_add_messaging">Thêm địa chỉ nhắn tin</string>
     <string name="people_contact_network">Mạng</string>
     <string name="people_contact_xmpp">Liên hệ XMPP</string>
     <string name="people_person_forums">Diễn đàn</string>
     <string name="people_contact_network_other">Khác</string>
     <string name="people_contacts_menu_unfriend">Bỏ kết bạn</string>
     <string name="people_profile_directory_listing">Hiển thị trong danh bạ</string>
+    <string name="people_contact_address">Địa chỉ</string>
+    <string name="people_contact_handle">Biệt danh</string>
+    <string name="people_contact_messaging">Địa chỉ nhắn tin</string>
 </resources>

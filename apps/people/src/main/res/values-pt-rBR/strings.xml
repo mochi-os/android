@@ -163,11 +163,12 @@
     <string name="people_contact_birthday_month">Mês</string>
     <string name="people_contact_birthday_year">Ano</string>
     <string name="people_contact_birthday_clear">Limpar</string>
-    <string name="people_contact_add_handle">Adicionar identificador</string>
-    <string name="people_contact_add_messaging">Adicionar endereço de mensagens</string>
     <string name="people_contact_network">Rede</string>
     <string name="people_contact_xmpp">Contato XMPP</string>
     <string name="people_person_forums">Fóruns</string>
     <string name="people_contact_network_other">Outra</string>
     <string name="people_contacts_menu_unfriend">Desfazer amizade</string>
+    <string name="people_contact_address">Endereço</string>
+    <string name="people_contact_handle">Identificador</string>
+    <string name="people_contact_messaging">Endereço de mensagens</string>
 </resources>

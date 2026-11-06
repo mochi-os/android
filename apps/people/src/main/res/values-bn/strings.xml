@@ -158,9 +158,6 @@
     <string name="people_contact_given">নামের প্রথম অংশ</string>
     <string name="people_contact_family">পদবি</string>
     <string name="people_contact_nickname">ডাকনাম</string>
-    <string name="people_contact_add_email">ইমেইল যোগ করুন</string>
-    <string name="people_contact_add_phone">ফোন যোগ করুন</string>
-    <string name="people_contact_add_address">ঠিকানা যোগ করুন</string>
     <string name="people_contact_street">রাস্তা</string>
     <string name="people_contact_birthday">জন্মদিন</string>
     <string name="people_contact_organisation">প্রতিষ্ঠান</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">তৈরি করুন</string>
     <string name="people_sync_permission_reason">সিঙ্ক করলে আপনার বন্ধুরা এই ফোনের পরিচিতি অ্যাপে কপি হয়, তাই এর জন্য আপনার পরিচিতিতে অ্যাক্সেস প্রয়োজন।</string>
     <string name="people_sync_permission_blocked">এই অ্যাপের জন্য পরিচিতি অ্যাক্সেস বন্ধ করা আছে। আপনি অ্যাপের সেটিংসে অনুমতি বিভাগে এটি চালু করতে পারেন।</string>
-    <string name="people_contact_add_handle">হ্যান্ডেল যোগ করুন</string>
-    <string name="people_contact_add_messaging">মেসেজিং ঠিকানা যোগ করুন</string>
     <string name="people_contact_network">নেটওয়ার্ক</string>
     <string name="people_contact_xmpp">XMPP পরিচিতি</string>
     <string name="people_person_forums">ফোরামসমূহ</string>
     <string name="people_contact_network_other">অন্যান্য</string>
     <string name="people_contacts_menu_unfriend">বন্ধুত্ব শেষ করুন</string>
     <string name="people_profile_directory_listing">ডিরেক্টরিতে তালিকাভুক্তি</string>
+    <string name="people_contact_address">ঠিকানা</string>
+    <string name="people_contact_handle">হ্যান্ডেল</string>
+    <string name="people_contact_messaging">মেসেজিং ঠিকানা</string>
 </resources>

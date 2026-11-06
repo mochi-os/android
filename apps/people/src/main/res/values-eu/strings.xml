@@ -158,9 +158,6 @@
     <string name="people_contact_given">Izena</string>
     <string name="people_contact_family">Abizena</string>
     <string name="people_contact_nickname">Goitizena</string>
-    <string name="people_contact_add_email">Gehitu helbide elektronikoa</string>
-    <string name="people_contact_add_phone">Gehitu telefonoa</string>
-    <string name="people_contact_add_address">Gehitu helbidea</string>
     <string name="people_contact_street">Kalea</string>
     <string name="people_contact_birthday">Urtebetetzea</string>
     <string name="people_contact_organisation">Erakundea</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Sortu</string>
     <string name="people_sync_permission_reason">Sinkronizazioak zure lagunak telefono honetako Kontaktuak aplikaziora kopiatzen ditu; beraz, zure kontaktuetarako sarbidea behar du.</string>
     <string name="people_sync_permission_blocked">Kontaktuetarako sarbidea desaktibatuta dago aplikazio honetan. Aplikazioaren ezarpenetako Baimenak atalean aktiba dezakezu.</string>
-    <string name="people_contact_add_handle">Gehitu erabiltzaile-izena</string>
-    <string name="people_contact_add_messaging">Gehitu mezularitza-helbidea</string>
     <string name="people_contact_network">Sarea</string>
     <string name="people_contact_xmpp">XMPP kontaktua</string>
     <string name="people_person_forums">Foroak</string>
     <string name="people_contact_network_other">Bestelakoa</string>
     <string name="people_contacts_menu_unfriend">Kendu lagunetatik</string>
     <string name="people_profile_directory_listing">Direktorioan agertzea</string>
+    <string name="people_contact_address">Helbidea</string>
+    <string name="people_contact_handle">Erabiltzaile-izena</string>
+    <string name="people_contact_messaging">Mezularitza-helbidea</string>
 </resources>

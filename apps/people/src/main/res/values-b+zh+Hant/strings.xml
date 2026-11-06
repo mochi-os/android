@@ -158,9 +158,6 @@
     <string name="people_contact_given">名字</string>
     <string name="people_contact_family">姓氏</string>
     <string name="people_contact_nickname">暱稱</string>
-    <string name="people_contact_add_email">新增電子郵件</string>
-    <string name="people_contact_add_phone">新增電話</string>
-    <string name="people_contact_add_address">新增地址</string>
     <string name="people_contact_street">街道</string>
     <string name="people_contact_birthday">生日</string>
     <string name="people_contact_organisation">組織</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">建立</string>
     <string name="people_sync_permission_reason">同步功能會將您的好友複製到此手機的「聯絡人」應用程式，因此需要存取您的聯絡人。</string>
     <string name="people_sync_permission_blocked">此應用程式的聯絡人存取權已關閉。您可以在應用程式設定的「權限」中開啟。</string>
-    <string name="people_contact_add_handle">新增帳號代碼</string>
-    <string name="people_contact_add_messaging">新增即時通訊地址</string>
     <string name="people_contact_network">網路</string>
     <string name="people_contact_xmpp">XMPP 聯絡人</string>
     <string name="people_person_forums">論壇</string>
     <string name="people_contact_network_other">其他</string>
     <string name="people_contacts_menu_unfriend">解除好友關係</string>
     <string name="people_profile_directory_listing">在目錄中列出</string>
+    <string name="people_contact_address">地址</string>
+    <string name="people_contact_handle">帳號代碼</string>
+    <string name="people_contact_messaging">即時通訊地址</string>
 </resources>

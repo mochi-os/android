@@ -158,9 +158,6 @@
     <string name="people_contact_given">Maqaa jalqabaa</string>
     <string name="people_contact_family">Maqaa maatii</string>
     <string name="people_contact_nickname">Maqaa moggaasaa</string>
-    <string name="people_contact_add_email">Imeelii dabali</string>
-    <string name="people_contact_add_phone">Bilbila dabali</string>
-    <string name="people_contact_add_address">Teessoo dabali</string>
     <string name="people_contact_street">Daandii</string>
     <string name="people_contact_birthday">Guyyaa dhalootaa</string>
     <string name="people_contact_organisation">Dhaabbata</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Uumi</string>
     <string name="people_sync_permission_reason">Walsimsiisuun hiriyoota kee appii Quunnamtiiwwan bilbila kanaatti garagalcha, kanaafuu quunnamtiiwwan kee argachuuf hayyama barbaada.</string>
     <string name="people_sync_permission_blocked">Quunnamtiiwwan argachuun appii kanaaf cufameera. Qindaa\'inoota appichaa keessatti Hayyamoota jalatti banuu dandeessa.</string>
-    <string name="people_contact_add_handle">Maqaa fayyadamaa dabali</string>
-    <string name="people_contact_add_messaging">Teessoo ergaa dabali</string>
     <string name="people_contact_network">Networkii</string>
     <string name="people_contact_xmpp">Qunnamtii XMPP</string>
     <string name="people_person_forums">Foorumiiwwan</string>
     <string name="people_contact_network_other">Biraa</string>
     <string name="people_contacts_menu_unfriend">Hiriyummaa xumuri</string>
     <string name="people_profile_directory_listing">Galmee keessatti mul\'achuu</string>
+    <string name="people_contact_address">Teessoo</string>
+    <string name="people_contact_handle">Maqaa fayyadamaa</string>
+    <string name="people_contact_messaging">Teessoo ergaa</string>
 </resources>

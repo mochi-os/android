@@ -158,9 +158,6 @@
     <string name="people_contact_given">Suti</string>
     <string name="people_contact_family">Apellido</string>
     <string name="people_contact_nickname">Apodo</string>
-    <string name="people_contact_add_email">Email yapxataña</string>
-    <string name="people_contact_add_phone">Teléfono yapxataña</string>
-    <string name="people_contact_add_address">Dirección yapxataña</string>
     <string name="people_contact_street">Thakhi</string>
     <string name="people_contact_birthday">Yuriwi uru</string>
     <string name="people_contact_organisation">Organización</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Luraña</string>
     <string name="people_sync_permission_reason">Sincronizañax masinakam aka telefonon Contactonaka app ukar copiaraki, ukatwa contactonakamar mantañ munaraki.</string>
     <string name="people_sync_permission_blocked">Contactonakar mantañax aka app ukatakix jiwt\'ayatawa. App ukan wakichawinakapan Permisos ukan activarakismawa.</string>
-    <string name="people_contact_add_handle">Apnaqiri suti yapxataña</string>
-    <string name="people_contact_add_messaging">Mensaje dirección yapxataña</string>
     <string name="people_contact_network">Red</string>
     <string name="people_contact_xmpp">XMPP uñt\'ata</string>
     <string name="people_person_forums">Foronaka</string>
     <string name="people_contact_network_other">Yaqha</string>
     <string name="people_contacts_menu_unfriend">Masi kankaña tukuyaña</string>
     <string name="people_profile_directory_listing">Directorion uñstayaña</string>
+    <string name="people_contact_address">Dirección</string>
+    <string name="people_contact_handle">Apnaqiri suti</string>
+    <string name="people_contact_messaging">Mensaje dirección</string>
 </resources>

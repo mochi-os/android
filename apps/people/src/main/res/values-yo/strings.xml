@@ -158,9 +158,6 @@
     <string name="people_contact_given">Orúkọ àkọ́kọ́</string>
     <string name="people_contact_family">Orúkọ ìdílé</string>
     <string name="people_contact_nickname">Ìnagijẹ</string>
-    <string name="people_contact_add_email">Fi ímẹ́ẹ̀lì kún</string>
-    <string name="people_contact_add_phone">Fi fóònù kún</string>
-    <string name="people_contact_add_address">Fi àdírẹ́sì kún</string>
     <string name="people_contact_street">Òpópónà</string>
     <string name="people_contact_birthday">Ọjọ́ ìbí</string>
     <string name="people_contact_organisation">Àjọ</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">Dá</string>
     <string name="people_sync_permission_reason">Àmúṣiṣẹ́pọ̀ máa ń da àwọn ọ̀rẹ́ rẹ kọ sínú app Àwọn olùbásọ̀rọ̀ fóònù yìí, nítorí náà ó nílò ìwọlé sí àwọn olùbásọ̀rọ̀ rẹ.</string>
     <string name="people_sync_permission_blocked">A ti pa ìwọlé sí àwọn olùbásọ̀rọ̀ fún app yìí. O lè tàn án lábẹ́ Àwọn ìyọ̀ǹda nínú àwọn ìṣètò app náà.</string>
-    <string name="people_contact_add_handle">Fi ìnagijẹ kún</string>
-    <string name="people_contact_add_messaging">Fi àdírẹ́sì ìfiránṣẹ́ kún</string>
     <string name="people_contact_network">Nẹ́tíwọ́kì</string>
     <string name="people_contact_xmpp">Olùbásọ̀rọ̀ XMPP</string>
     <string name="people_person_forums">Àwọn forum</string>
     <string name="people_contact_network_other">Mìíràn</string>
     <string name="people_contacts_menu_unfriend">Fòpin sí ọ̀rẹ́</string>
     <string name="people_profile_directory_listing">Fífihàn nínú àtòjọ</string>
+    <string name="people_contact_address">Àdírẹ́sì</string>
+    <string name="people_contact_handle">Ìnagijẹ</string>
+    <string name="people_contact_messaging">Àdírẹ́sì ìfiránṣẹ́</string>
 </resources>

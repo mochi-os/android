@@ -158,9 +158,6 @@
     <string name="people_contact_given">Enw cyntaf</string>
     <string name="people_contact_family">Cyfenw</string>
     <string name="people_contact_nickname">Llysenw</string>
-    <string name="people_contact_add_email">Ychwanegu e-bost</string>
-    <string name="people_contact_add_phone">Ychwanegu ffôn</string>
-    <string name="people_contact_add_address">Ychwanegu cyfeiriad</string>
     <string name="people_contact_street">Stryd</string>
     <string name="people_contact_birthday">Pen-blwydd</string>
     <string name="people_contact_organisation">Sefydliad</string>
@@ -221,12 +218,13 @@
     <string name="people_contact_create">Creu</string>
     <string name="people_sync_permission_reason">Mae cysoni\'n copïo eich ffrindiau i ap Cysylltiadau\'r ffôn hwn, felly mae angen mynediad at eich cysylltiadau arno.</string>
     <string name="people_sync_permission_blocked">Mae mynediad at gysylltiadau wedi\'i ddiffodd ar gyfer yr ap hwn. Gallwch ei droi ymlaen o dan Caniatâd yng ngosodiadau\'r ap.</string>
-    <string name="people_contact_add_handle">Ychwanegu enw defnyddiwr</string>
-    <string name="people_contact_add_messaging">Ychwanegu cyfeiriad negeseua</string>
     <string name="people_contact_network">Rhwydwaith</string>
     <string name="people_contact_xmpp">Cyswllt XMPP</string>
     <string name="people_person_forums">Fforymau</string>
     <string name="people_contact_network_other">Arall</string>
     <string name="people_contacts_menu_unfriend">Tynnu fel ffrind</string>
     <string name="people_profile_directory_listing">Rhestru yn y cyfeiriadur</string>
+    <string name="people_contact_address">Cyfeiriad</string>
+    <string name="people_contact_handle">Enw defnyddiwr</string>
+    <string name="people_contact_messaging">Cyfeiriad negeseua</string>
 </resources>

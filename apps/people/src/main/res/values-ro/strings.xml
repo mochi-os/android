@@ -158,9 +158,6 @@
     <string name="people_contact_given">Prenume</string>
     <string name="people_contact_family">Nume de familie</string>
     <string name="people_contact_nickname">Poreclă</string>
-    <string name="people_contact_add_email">Adaugă email</string>
-    <string name="people_contact_add_phone">Adaugă telefon</string>
-    <string name="people_contact_add_address">Adaugă adresă</string>
     <string name="people_contact_street">Stradă</string>
     <string name="people_contact_birthday">Data nașterii</string>
     <string name="people_contact_organisation">Organizație</string>
@@ -218,12 +215,13 @@
     <string name="people_contact_create">Creează</string>
     <string name="people_sync_permission_reason">Sincronizarea copiază prietenii tăi în aplicația Contacte a acestui telefon, așa că are nevoie de acces la contactele tale.</string>
     <string name="people_sync_permission_blocked">Accesul la contacte este dezactivat pentru această aplicație. Îl poți activa din Permisiuni, în setările aplicației.</string>
-    <string name="people_contact_add_handle">Adaugă pseudonim</string>
-    <string name="people_contact_add_messaging">Adaugă adresă de mesagerie</string>
     <string name="people_contact_network">Rețea</string>
     <string name="people_contact_xmpp">Contact XMPP</string>
     <string name="people_person_forums">Forumuri</string>
     <string name="people_contact_network_other">Alta</string>
     <string name="people_contacts_menu_unfriend">Încheie prietenia</string>
     <string name="people_profile_directory_listing">Afișare în director</string>
+    <string name="people_contact_address">Adresă</string>
+    <string name="people_contact_handle">Pseudonim</string>
+    <string name="people_contact_messaging">Adresă de mesagerie</string>
 </resources>

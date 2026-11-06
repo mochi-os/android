@@ -158,9 +158,6 @@
     <string name="people_contact_given">Ad</string>
     <string name="people_contact_family">Soyadı</string>
     <string name="people_contact_nickname">Takma ad</string>
-    <string name="people_contact_add_email">E-posta ekle</string>
-    <string name="people_contact_add_phone">Telefon ekle</string>
-    <string name="people_contact_add_address">Adres ekle</string>
     <string name="people_contact_street">Sokak</string>
     <string name="people_contact_birthday">Doğum günü</string>
     <string name="people_contact_organisation">Kurum</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Oluştur</string>
     <string name="people_sync_permission_reason">Senkronizasyon, arkadaşlarınızı bu telefonun Kişiler uygulamasına kopyalar; bu nedenle kişilerinize erişmesi gerekir.</string>
     <string name="people_sync_permission_blocked">Bu uygulama için kişilere erişim kapalı. Uygulama ayarlarındaki İzinler bölümünden açabilirsiniz.</string>
-    <string name="people_contact_add_handle">Rumuz ekle</string>
-    <string name="people_contact_add_messaging">Mesajlaşma adresi ekle</string>
     <string name="people_contact_network">Ağ</string>
     <string name="people_contact_xmpp">XMPP kişisi</string>
     <string name="people_person_forums">Forumlar</string>
     <string name="people_contact_network_other">Diğer</string>
     <string name="people_contacts_menu_unfriend">Arkadaşlıktan çıkar</string>
     <string name="people_profile_directory_listing">Dizinde listelenme</string>
+    <string name="people_contact_address">Adres</string>
+    <string name="people_contact_handle">Rumuz</string>
+    <string name="people_contact_messaging">Mesajlaşma adresi</string>
 </resources>

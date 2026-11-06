@@ -158,9 +158,6 @@
     <string name="people_contact_given">Förnamn</string>
     <string name="people_contact_family">Efternamn</string>
     <string name="people_contact_nickname">Smeknamn</string>
-    <string name="people_contact_add_email">Lägg till e-post</string>
-    <string name="people_contact_add_phone">Lägg till telefon</string>
-    <string name="people_contact_add_address">Lägg till adress</string>
     <string name="people_contact_street">Gata</string>
     <string name="people_contact_birthday">Födelsedag</string>
     <string name="people_contact_organisation">Organisation</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Skapa</string>
     <string name="people_sync_permission_reason">Synkroniseringen kopierar dina vänner till appen Kontakter på den här telefonen, så den behöver åtkomst till dina kontakter.</string>
     <string name="people_sync_permission_blocked">Kontaktåtkomst är avstängd för den här appen. Du kan aktivera den under Behörigheter i appens inställningar.</string>
-    <string name="people_contact_add_handle">Lägg till alias</string>
-    <string name="people_contact_add_messaging">Lägg till chattadress</string>
     <string name="people_contact_network">Nätverk</string>
     <string name="people_contact_xmpp">XMPP-kontakt</string>
     <string name="people_person_forums">Forum</string>
     <string name="people_contact_network_other">Övrigt</string>
     <string name="people_contacts_menu_unfriend">Avsluta vänskap</string>
     <string name="people_profile_directory_listing">Synlig i katalogen</string>
+    <string name="people_contact_address">Adress</string>
+    <string name="people_contact_handle">Alias</string>
+    <string name="people_contact_messaging">Chattadress</string>
 </resources>

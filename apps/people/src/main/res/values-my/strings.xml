@@ -158,9 +158,6 @@
     <string name="people_contact_given">ကိုယ်ပိုင်အမည်</string>
     <string name="people_contact_family">မျိုးရိုးအမည်</string>
     <string name="people_contact_nickname">အမည်ပြောင်</string>
-    <string name="people_contact_add_email">အီးမေးလ် ထည့်မည်</string>
-    <string name="people_contact_add_phone">ဖုန်းနံပါတ် ထည့်မည်</string>
-    <string name="people_contact_add_address">လိပ်စာ ထည့်မည်</string>
     <string name="people_contact_street">လမ်း</string>
     <string name="people_contact_birthday">မွေးနေ့</string>
     <string name="people_contact_organisation">အဖွဲ့အစည်း</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">ဖန်တီးမည်</string>
     <string name="people_sync_permission_reason">ထပ်တူပြုခြင်းသည် သင့်သူငယ်ချင်းများကို ဤဖုန်း၏ အဆက်အသွယ်များ အက်ပ်ထဲသို့ ကူးယူသောကြောင့် သင့်အဆက်အသွယ်များကို ဝင်ရောက်ခွင့် လိုအပ်ပါသည်။</string>
     <string name="people_sync_permission_blocked">ဤအက်ပ်အတွက် အဆက်အသွယ်များ ဝင်ရောက်ခွင့်ကို ပိတ်ထားသည်။ အက်ပ်၏ ဆက်တင်များရှိ ခွင့်ပြုချက်များ အောက်တွင် ၎င်းကို ဖွင့်နိုင်သည်။</string>
-    <string name="people_contact_add_handle">သုံးစွဲသူအမည် ထည့်မည်</string>
-    <string name="people_contact_add_messaging">မက်ဆေ့ဂျ်ပို့ရန် လိပ်စာ ထည့်မည်</string>
     <string name="people_contact_network">ကွန်ရက်</string>
     <string name="people_contact_xmpp">XMPP အဆက်အသွယ်</string>
     <string name="people_person_forums">ဖိုရမ်များ</string>
     <string name="people_contact_network_other">အခြား</string>
     <string name="people_contacts_menu_unfriend">သူငယ်ချင်းဖြုတ်မည်</string>
     <string name="people_profile_directory_listing">လမ်းညွှန်တွင် ဖော်ပြခြင်း</string>
+    <string name="people_contact_address">လိပ်စာ</string>
+    <string name="people_contact_handle">သုံးစွဲသူအမည်</string>
+    <string name="people_contact_messaging">မက်ဆေ့ဂျ်ပို့ရန် လိပ်စာ</string>
 </resources>

@@ -158,9 +158,6 @@
     <string name="people_contact_given">ชื่อ</string>
     <string name="people_contact_family">นามสกุล</string>
     <string name="people_contact_nickname">ชื่อเล่น</string>
-    <string name="people_contact_add_email">เพิ่มอีเมล</string>
-    <string name="people_contact_add_phone">เพิ่มโทรศัพท์</string>
-    <string name="people_contact_add_address">เพิ่มที่อยู่</string>
     <string name="people_contact_street">ถนน</string>
     <string name="people_contact_birthday">วันเกิด</string>
     <string name="people_contact_organisation">องค์กร</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">สร้าง</string>
     <string name="people_sync_permission_reason">การซิงค์จะคัดลอกเพื่อนของคุณไปยังแอปรายชื่อติดต่อของโทรศัพท์เครื่องนี้ จึงต้องได้รับสิทธิ์เข้าถึงรายชื่อติดต่อของคุณ</string>
     <string name="people_sync_permission_blocked">สิทธิ์เข้าถึงรายชื่อติดต่อของแอปนี้ปิดอยู่ คุณเปิดได้ในส่วนสิทธิ์ในการตั้งค่าของแอป</string>
-    <string name="people_contact_add_handle">เพิ่มชื่อแฝง</string>
-    <string name="people_contact_add_messaging">เพิ่มที่อยู่สำหรับส่งข้อความ</string>
     <string name="people_contact_network">เครือข่าย</string>
     <string name="people_contact_xmpp">ผู้ติดต่อ XMPP</string>
     <string name="people_person_forums">ฟอรัม</string>
     <string name="people_contact_network_other">อื่น ๆ</string>
     <string name="people_contacts_menu_unfriend">เลิกเป็นเพื่อน</string>
     <string name="people_profile_directory_listing">แสดงในไดเรกทอรี</string>
+    <string name="people_contact_address">ที่อยู่</string>
+    <string name="people_contact_handle">ชื่อแฝง</string>
+    <string name="people_contact_messaging">ที่อยู่สำหรับส่งข้อความ</string>
 </resources>

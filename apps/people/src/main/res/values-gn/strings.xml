@@ -158,9 +158,6 @@
     <string name="people_contact_given">Téra</string>
     <string name="people_contact_family">Terajoapy</string>
     <string name="people_contact_nickname">Téra mbyky</string>
-    <string name="people_contact_add_email">Embojuaju email</string>
-    <string name="people_contact_add_phone">Embojuaju pumbyry</string>
-    <string name="people_contact_add_address">Embojuaju dirección</string>
     <string name="people_contact_street">Tape</string>
     <string name="people_contact_birthday">Aramboty</string>
     <string name="people_contact_organisation">Atyguasu</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Emoheñói</string>
     <string name="people_sync_permission_reason">Ñembojoja okopia nde angirũnguéra ko pumbyry Contactokuéra app-pe, upévare oikotevẽ jeike nde contactokuérape.</string>
     <string name="people_sync_permission_blocked">Jeike contactokuérape oñembogue ko app-pe g̃uarã. Ikatu remyendy Ñemoneĩkuéra-pe, app ñembohekópe.</string>
-    <string name="people_contact_add_handle">Embojuaju puruhára réra</string>
-    <string name="people_contact_add_messaging">Embojuaju dirección ñe\'ẽmondo peguarã</string>
     <string name="people_contact_network">Ñanduti</string>
     <string name="people_contact_xmpp">Jokupyty XMPP</string>
     <string name="people_person_forums">Forokuéra</string>
     <string name="people_contact_network_other">Ambue</string>
     <string name="people_contacts_menu_unfriend">Embogue angirũ</string>
     <string name="people_profile_directory_listing">Jehechauka directorio-pe</string>
+    <string name="people_contact_address">Dirección</string>
+    <string name="people_contact_handle">Puruhára réra</string>
+    <string name="people_contact_messaging">Dirección ñe\'ẽmondo peguarã</string>
 </resources>

@@ -158,9 +158,6 @@
     <string name="people_contact_given">Emri</string>
     <string name="people_contact_family">Mbiemri</string>
     <string name="people_contact_nickname">Nofka</string>
-    <string name="people_contact_add_email">Shto email</string>
-    <string name="people_contact_add_phone">Shto telefon</string>
-    <string name="people_contact_add_address">Shto adresë</string>
     <string name="people_contact_street">Rruga</string>
     <string name="people_contact_birthday">Ditëlindja</string>
     <string name="people_contact_organisation">Organizata</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Krijo</string>
     <string name="people_sync_permission_reason">Sinkronizimi kopjon miqtë tuaj në aplikacionin Kontaktet të këtij telefoni, prandaj ka nevojë për qasje në kontaktet tuaja.</string>
     <string name="people_sync_permission_blocked">Qasja në kontakte është çaktivizuar për këtë aplikacion. Mund ta aktivizoni te Lejet në cilësimet e aplikacionit.</string>
-    <string name="people_contact_add_handle">Shto pseudonim</string>
-    <string name="people_contact_add_messaging">Shto adresë mesazhesh</string>
     <string name="people_contact_network">Rrjeti</string>
     <string name="people_contact_xmpp">Kontakt XMPP</string>
     <string name="people_person_forums">Forume</string>
     <string name="people_contact_network_other">Tjetër</string>
     <string name="people_contacts_menu_unfriend">Hiq nga miqtë</string>
     <string name="people_profile_directory_listing">Shfaqja në drejtori</string>
+    <string name="people_contact_address">Adresë</string>
+    <string name="people_contact_handle">Pseudonimi</string>
+    <string name="people_contact_messaging">Adresë mesazhesh</string>
 </resources>

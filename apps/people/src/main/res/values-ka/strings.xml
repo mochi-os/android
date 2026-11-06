@@ -158,9 +158,6 @@
     <string name="people_contact_given">სახელი</string>
     <string name="people_contact_family">გვარი</string>
     <string name="people_contact_nickname">მეტსახელი</string>
-    <string name="people_contact_add_email">ელფოსტის დამატება</string>
-    <string name="people_contact_add_phone">ტელეფონის დამატება</string>
-    <string name="people_contact_add_address">მისამართის დამატება</string>
     <string name="people_contact_street">ქუჩა</string>
     <string name="people_contact_birthday">დაბადების დღე</string>
     <string name="people_contact_organisation">ორგანიზაცია</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">შექმნა</string>
     <string name="people_sync_permission_reason">სინქრონიზაცია თქვენს მეგობრებს ამ ტელეფონის კონტაქტების აპში აკოპირებს, ამიტომ მას თქვენს კონტაქტებზე წვდომა სჭირდება.</string>
     <string name="people_sync_permission_blocked">ამ აპისთვის კონტაქტებზე წვდომა გამორთულია. მისი ჩართვა შეგიძლიათ აპის პარამეტრებში, ნებართვების განყოფილებაში.</string>
-    <string name="people_contact_add_handle">მომხმარებლის სახელის დამატება</string>
-    <string name="people_contact_add_messaging">მესენჯერის მისამართის დამატება</string>
     <string name="people_contact_network">ქსელი</string>
     <string name="people_contact_xmpp">XMPP კონტაქტი</string>
     <string name="people_person_forums">ფორუმები</string>
     <string name="people_contact_network_other">სხვა</string>
     <string name="people_contacts_menu_unfriend">მეგობრობის დასრულება</string>
     <string name="people_profile_directory_listing">კატალოგში ჩვენება</string>
+    <string name="people_contact_address">მისამართი</string>
+    <string name="people_contact_handle">მომხმარებლის სახელი</string>
+    <string name="people_contact_messaging">მესენჯერის მისამართი</string>
 </resources>

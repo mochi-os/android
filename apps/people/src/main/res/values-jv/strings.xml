@@ -158,9 +158,6 @@
     <string name="people_contact_given">Jeneng ngarep</string>
     <string name="people_contact_family">Jeneng kulawarga</string>
     <string name="people_contact_nickname">Jeneng paraban</string>
-    <string name="people_contact_add_email">Tambah email</string>
-    <string name="people_contact_add_phone">Tambah telpon</string>
-    <string name="people_contact_add_address">Tambah alamat</string>
     <string name="people_contact_street">Dalan</string>
     <string name="people_contact_birthday">Dina lair</string>
     <string name="people_contact_organisation">Organisasi</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">Gawé</string>
     <string name="people_sync_permission_reason">Sinkronisasi nyalin kanca-kanca panjenengan menyang aplikasi Kontak ing telpon iki, mula butuh akses menyang kontak panjenengan.</string>
     <string name="people_sync_permission_blocked">Akses kontak dipateni kanggo aplikasi iki. Panjenengan bisa nguripake ing Idin ing setelan aplikasi.</string>
-    <string name="people_contact_add_handle">Tambah jeneng panganggo</string>
-    <string name="people_contact_add_messaging">Tambah alamat pesen</string>
     <string name="people_contact_network">Jaringan</string>
     <string name="people_contact_xmpp">Kontak XMPP</string>
     <string name="people_person_forums">Forum</string>
     <string name="people_contact_network_other">Liyané</string>
     <string name="people_contacts_menu_unfriend">Ilangi kanca</string>
     <string name="people_profile_directory_listing">Kadhaftar ing direktori</string>
+    <string name="people_contact_address">Alamat</string>
+    <string name="people_contact_handle">Jeneng panganggo</string>
+    <string name="people_contact_messaging">Alamat pesen</string>
 </resources>

@@ -158,9 +158,6 @@
     <string name="people_contact_given">Имя</string>
     <string name="people_contact_family">Фамилия</string>
     <string name="people_contact_nickname">Псевдоним</string>
-    <string name="people_contact_add_email">Добавить эл. почту</string>
-    <string name="people_contact_add_phone">Добавить телефон</string>
-    <string name="people_contact_add_address">Добавить адрес</string>
     <string name="people_contact_street">Улица</string>
     <string name="people_contact_birthday">День рождения</string>
     <string name="people_contact_organisation">Организация</string>
@@ -219,12 +216,13 @@
     <string name="people_contact_create">Создать</string>
     <string name="people_sync_permission_reason">Синхронизация копирует ваших друзей в приложение «Контакты» на этом телефоне, поэтому ей нужен доступ к вашим контактам.</string>
     <string name="people_sync_permission_blocked">Доступ к контактам для этого приложения отключён. Его можно включить в разделе «Разрешения» в настройках приложения.</string>
-    <string name="people_contact_add_handle">Добавить псевдоним</string>
-    <string name="people_contact_add_messaging">Добавить адрес мессенджера</string>
     <string name="people_contact_network">Сеть</string>
     <string name="people_contact_xmpp">Контакт XMPP</string>
     <string name="people_person_forums">Форумы</string>
     <string name="people_contact_network_other">Другая</string>
     <string name="people_contacts_menu_unfriend">Удалить из друзей</string>
     <string name="people_profile_directory_listing">Отображение в каталоге</string>
+    <string name="people_contact_address">Адрес</string>
+    <string name="people_contact_handle">Псевдоним</string>
+    <string name="people_contact_messaging">Адрес мессенджера</string>
 </resources>

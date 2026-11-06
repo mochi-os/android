@@ -158,9 +158,6 @@
     <string name="people_contact_given">Nom</string>
     <string name="people_contact_family">Cognoms</string>
     <string name="people_contact_nickname">Sobrenom</string>
-    <string name="people_contact_add_email">Afegeix un correu</string>
-    <string name="people_contact_add_phone">Afegeix un telèfon</string>
-    <string name="people_contact_add_address">Afegeix una adreça</string>
     <string name="people_contact_street">Carrer</string>
     <string name="people_contact_birthday">Aniversari</string>
     <string name="people_contact_organisation">Organització</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Crea</string>
     <string name="people_sync_permission_reason">La sincronització copia els vostres amics a l\'aplicació Contactes d\'aquest telèfon, de manera que necessita accés als vostres contactes.</string>
     <string name="people_sync_permission_blocked">L\'accés als contactes està desactivat per a aquesta aplicació. El podeu activar a Permisos, a la configuració de l\'aplicació.</string>
-    <string name="people_contact_add_handle">Afegeix un identificador</string>
-    <string name="people_contact_add_messaging">Afegeix una adreça de missatgeria</string>
     <string name="people_contact_network">Xarxa</string>
     <string name="people_contact_xmpp">Contacte XMPP</string>
     <string name="people_person_forums">Fòrums</string>
     <string name="people_contact_network_other">Altres</string>
     <string name="people_contacts_menu_unfriend">Posa fi a l\'amistat</string>
     <string name="people_profile_directory_listing">Aparèixer al directori</string>
+    <string name="people_contact_address">Adreça</string>
+    <string name="people_contact_handle">Identificador</string>
+    <string name="people_contact_messaging">Adreça de missatgeria</string>
 </resources>

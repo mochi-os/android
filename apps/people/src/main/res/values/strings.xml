@@ -47,11 +47,9 @@
     <string name="people_contact_nickname">Nickname</string>
     <string name="people_contact_email">Email</string>
     <string name="people_contact_phone">Telephone</string>
-    <string name="people_contact_add_email">Add email</string>
-    <string name="people_contact_add_phone">Add telephone</string>
-    <string name="people_contact_add_address">Add address</string>
-    <string name="people_contact_add_handle">Add handle</string>
-    <string name="people_contact_add_messaging">Add messaging address</string>
+    <string name="people_contact_address">Address</string>
+    <string name="people_contact_handle">Handle</string>
+    <string name="people_contact_messaging">Messaging address</string>
     <string name="people_contact_network">Network</string>
     <string name="people_contact_network_other">Other</string>
     <string name="people_contact_xmpp">XMPP contact</string>

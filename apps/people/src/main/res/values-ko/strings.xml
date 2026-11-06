@@ -158,9 +158,6 @@
     <string name="people_contact_given">이름</string>
     <string name="people_contact_family">성</string>
     <string name="people_contact_nickname">별명</string>
-    <string name="people_contact_add_email">이메일 추가</string>
-    <string name="people_contact_add_phone">전화번호 추가</string>
-    <string name="people_contact_add_address">주소 추가</string>
     <string name="people_contact_street">도로명 주소</string>
     <string name="people_contact_birthday">생일</string>
     <string name="people_contact_organisation">회사</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">생성</string>
     <string name="people_sync_permission_reason">동기화하면 친구가 이 휴대전화의 연락처 앱에 복사되므로 연락처에 대한 액세스 권한이 필요합니다.</string>
     <string name="people_sync_permission_blocked">이 앱의 연락처 액세스가 꺼져 있습니다. 앱 설정의 권한에서 켤 수 있습니다.</string>
-    <string name="people_contact_add_handle">핸들 추가</string>
-    <string name="people_contact_add_messaging">메시징 주소 추가</string>
     <string name="people_contact_network">네트워크</string>
     <string name="people_contact_xmpp">XMPP 연락처</string>
     <string name="people_person_forums">포럼</string>
     <string name="people_contact_network_other">기타</string>
     <string name="people_contacts_menu_unfriend">친구 끊기</string>
     <string name="people_profile_directory_listing">디렉터리에 표시</string>
+    <string name="people_contact_address">주소</string>
+    <string name="people_contact_handle">핸들</string>
+    <string name="people_contact_messaging">메시징 주소</string>
 </resources>

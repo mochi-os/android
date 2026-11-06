@@ -158,9 +158,6 @@
     <string name="people_contact_given">Prenon</string>
     <string name="people_contact_family">Non fanmi</string>
     <string name="people_contact_nickname">Ti non</string>
-    <string name="people_contact_add_email">Ajoute imèl</string>
-    <string name="people_contact_add_phone">Ajoute telefòn</string>
-    <string name="people_contact_add_address">Ajoute adrès</string>
     <string name="people_contact_street">Ri</string>
     <string name="people_contact_birthday">Dat nesans</string>
     <string name="people_contact_organisation">Òganizasyon</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Kreye</string>
     <string name="people_sync_permission_reason">Senkronizasyon an kopye zanmi ou yo nan aplikasyon Kontak telefòn sa a, kidonk li bezwen aksè nan kontak ou yo.</string>
     <string name="people_sync_permission_blocked">Aksè kontak yo etenn pou aplikasyon sa a. Ou ka limen l nan Pèmisyon, nan paramèt aplikasyon an.</string>
-    <string name="people_contact_add_handle">Ajoute non itilizatè</string>
-    <string name="people_contact_add_messaging">Ajoute adrès mesaj</string>
     <string name="people_contact_network">Rezo</string>
     <string name="people_contact_xmpp">Kontak XMPP</string>
     <string name="people_person_forums">Fowòm</string>
     <string name="people_contact_network_other">Lòt</string>
     <string name="people_contacts_menu_unfriend">Retire zanmi</string>
     <string name="people_profile_directory_listing">Parèt nan anyè a</string>
+    <string name="people_contact_address">Adrès</string>
+    <string name="people_contact_handle">Non itilizatè</string>
+    <string name="people_contact_messaging">Adrès mesaj</string>
 </resources>

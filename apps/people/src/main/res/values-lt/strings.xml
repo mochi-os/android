@@ -158,9 +158,6 @@
     <string name="people_contact_given">Vardas</string>
     <string name="people_contact_family">Pavardė</string>
     <string name="people_contact_nickname">Slapyvardis</string>
-    <string name="people_contact_add_email">Pridėti el. paštą</string>
-    <string name="people_contact_add_phone">Pridėti telefoną</string>
-    <string name="people_contact_add_address">Pridėti adresą</string>
     <string name="people_contact_street">Gatvė</string>
     <string name="people_contact_birthday">Gimtadienis</string>
     <string name="people_contact_organisation">Organizacija</string>
@@ -218,12 +215,13 @@
     <string name="people_contact_create">Sukurti</string>
     <string name="people_sync_permission_reason">Sinchronizuojant jūsų draugai nukopijuojami į šio telefono programą „Kontaktai“, todėl reikia prieigos prie jūsų kontaktų.</string>
     <string name="people_sync_permission_blocked">Šios programos prieiga prie kontaktų išjungta. Ją galite įjungti programos nustatymų skiltyje „Leidimai“.</string>
-    <string name="people_contact_add_handle">Pridėti vartotojo vardą</string>
-    <string name="people_contact_add_messaging">Pridėti susirašinėjimo adresą</string>
     <string name="people_contact_network">Tinklas</string>
     <string name="people_contact_xmpp">XMPP kontaktas</string>
     <string name="people_person_forums">Forumai</string>
     <string name="people_contact_network_other">Kita</string>
     <string name="people_contacts_menu_unfriend">Nutraukti draugystę</string>
     <string name="people_profile_directory_listing">Rodymas kataloge</string>
+    <string name="people_contact_address">Adresas</string>
+    <string name="people_contact_handle">Vartotojo vardas</string>
+    <string name="people_contact_messaging">Susirašinėjimo adresas</string>
 </resources>

@@ -158,9 +158,6 @@
     <string name="people_contact_given">Isem</string>
     <string name="people_contact_family">Kunjom</string>
     <string name="people_contact_nickname">Laqam</string>
-    <string name="people_contact_add_email">Żid email</string>
-    <string name="people_contact_add_phone">Żid telefon</string>
-    <string name="people_contact_add_address">Żid indirizz</string>
     <string name="people_contact_street">Triq</string>
     <string name="people_contact_birthday">Għeluq is-sena</string>
     <string name="people_contact_organisation">Organizzazzjoni</string>
@@ -220,12 +217,13 @@
     <string name="people_contact_create">Oħloq</string>
     <string name="people_sync_permission_reason">Is-sinkronizzazzjoni tikkopja l-ħbieb tiegħek fl-app tal-Kuntatti ta\' dan it-telefon, għalhekk teħtieġ aċċess għall-kuntatti tiegħek.</string>
     <string name="people_sync_permission_blocked">L-aċċess għall-kuntatti huwa mitfi għal din l-app. Tista\' tixgħlu taħt Permessi fl-issettjar tal-app.</string>
-    <string name="people_contact_add_handle">Żid isem tal-utent</string>
-    <string name="people_contact_add_messaging">Żid indirizz tal-messaġġi</string>
     <string name="people_contact_network">Netwerk</string>
     <string name="people_contact_xmpp">Kuntatt XMPP</string>
     <string name="people_person_forums">Fora</string>
     <string name="people_contact_network_other">Ieħor</string>
     <string name="people_contacts_menu_unfriend">Temm il-ħbiberija</string>
     <string name="people_profile_directory_listing">Elenkar fid-direttorju</string>
+    <string name="people_contact_address">Indirizz</string>
+    <string name="people_contact_handle">Isem tal-utent</string>
+    <string name="people_contact_messaging">Indirizz tal-messaġġi</string>
 </resources>

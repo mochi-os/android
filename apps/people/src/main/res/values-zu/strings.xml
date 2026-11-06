@@ -158,9 +158,6 @@
     <string name="people_contact_given">Igama</string>
     <string name="people_contact_family">Isibongo</string>
     <string name="people_contact_nickname">Isidlaliso</string>
-    <string name="people_contact_add_email">Engeza i-imeyili</string>
-    <string name="people_contact_add_phone">Engeza ucingo</string>
-    <string name="people_contact_add_address">Engeza ikheli</string>
     <string name="people_contact_street">Isitaladi</string>
     <string name="people_contact_birthday">Usuku lokuzalwa</string>
     <string name="people_contact_organisation">Inhlangano</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Dala</string>
     <string name="people_sync_permission_reason">Ukuvumelanisa kukopisha abangane bakho ku-app ye-Abathintwayo yale foni, ngakho kudinga ukufinyelela kubathintwayo bakho.</string>
     <string name="people_sync_permission_blocked">Ukufinyelela kwabathintwayo kuvaliwe kule app. Ungakuvula ngaphansi kokuthi Izimvume kuzilungiselelo ze-app.</string>
-    <string name="people_contact_add_handle">Engeza isidlaliso</string>
-    <string name="people_contact_add_messaging">Engeza ikheli lemiyalezo</string>
     <string name="people_contact_network">Inethiwekhi</string>
     <string name="people_contact_xmpp">Oxhumana naye we-XMPP</string>
     <string name="people_person_forums">Amaforamu</string>
     <string name="people_contact_network_other">Enye</string>
     <string name="people_contacts_menu_unfriend">Qeda ubungane</string>
     <string name="people_profile_directory_listing">Ukuvela ohlwini</string>
+    <string name="people_contact_address">Ikheli</string>
+    <string name="people_contact_handle">Isidlaliso</string>
+    <string name="people_contact_messaging">Ikheli lemiyalezo</string>
 </resources>

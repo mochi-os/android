@@ -158,9 +158,6 @@
     <string name="people_contact_given">Аты</string>
     <string name="people_contact_family">Тегі</string>
     <string name="people_contact_nickname">Лақап аты</string>
-    <string name="people_contact_add_email">Электрондық пошта қосу</string>
-    <string name="people_contact_add_phone">Телефон қосу</string>
-    <string name="people_contact_add_address">Мекенжай қосу</string>
     <string name="people_contact_street">Көше</string>
     <string name="people_contact_birthday">Туған күні</string>
     <string name="people_contact_organisation">Ұйым</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Құру</string>
     <string name="people_sync_permission_reason">Синхрондау достарыңызды осы телефонның Контактілер қолданбасына көшіреді, сондықтан оған контактілеріңізге қол жеткізу қажет.</string>
     <string name="people_sync_permission_blocked">Бұл қолданба үшін контактілерге қол жеткізу өшірулі. Оны қолданба параметрлеріндегі «Рұқсаттар» бөлімінде қосуға болады.</string>
-    <string name="people_contact_add_handle">Пайдаланушы атын қосу</string>
-    <string name="people_contact_add_messaging">Хабар алмасу мекенжайын қосу</string>
     <string name="people_contact_network">Желі</string>
     <string name="people_contact_xmpp">XMPP контактісі</string>
     <string name="people_person_forums">Форумдар</string>
     <string name="people_contact_network_other">Басқа</string>
     <string name="people_contacts_menu_unfriend">Достықты тоқтату</string>
     <string name="people_profile_directory_listing">Каталогта көрсету</string>
+    <string name="people_contact_address">Мекенжай</string>
+    <string name="people_contact_handle">Пайдаланушы аты</string>
+    <string name="people_contact_messaging">Хабар алмасу мекенжайы</string>
 </resources>

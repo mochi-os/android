@@ -158,9 +158,6 @@
     <string name="people_contact_given">Име</string>
     <string name="people_contact_family">Презиме</string>
     <string name="people_contact_nickname">Прекар</string>
-    <string name="people_contact_add_email">Додај е-пошта</string>
-    <string name="people_contact_add_phone">Додај телефон</string>
-    <string name="people_contact_add_address">Додај адреса</string>
     <string name="people_contact_street">Улица</string>
     <string name="people_contact_birthday">Роденден</string>
     <string name="people_contact_organisation">Организација</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Создај</string>
     <string name="people_sync_permission_reason">Синхронизацијата ги копира вашите пријатели во апликацијата Контакти на овој телефон, па затоа ѝ е потребен пристап до вашите контакти.</string>
     <string name="people_sync_permission_blocked">Пристапот до контактите е исклучен за оваа апликација. Можете да го вклучите во Дозволи, во поставките на апликацијата.</string>
-    <string name="people_contact_add_handle">Додај корисничко име</string>
-    <string name="people_contact_add_messaging">Додај адреса за пораки</string>
     <string name="people_contact_network">Мрежа</string>
     <string name="people_contact_xmpp">XMPP контакт</string>
     <string name="people_person_forums">Форуми</string>
     <string name="people_contact_network_other">Друга</string>
     <string name="people_contacts_menu_unfriend">Прекини пријателство</string>
     <string name="people_profile_directory_listing">Прикажување во именикот</string>
+    <string name="people_contact_address">Адреса</string>
+    <string name="people_contact_handle">Корисничко име</string>
+    <string name="people_contact_messaging">Адреса за пораки</string>
 </resources>

@@ -158,9 +158,6 @@
     <string name="people_contact_given">የመጠሪያ ስም</string>
     <string name="people_contact_family">የአባት ስም</string>
     <string name="people_contact_nickname">ቅጽል ስም</string>
-    <string name="people_contact_add_email">ኢሜይል ጨምር</string>
-    <string name="people_contact_add_phone">ስልክ ጨምር</string>
-    <string name="people_contact_add_address">አድራሻ ጨምር</string>
     <string name="people_contact_street">መንገድ</string>
     <string name="people_contact_birthday">የልደት ቀን</string>
     <string name="people_contact_organisation">ድርጅት</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">ፍጠር</string>
     <string name="people_sync_permission_reason">ማመሳሰል ጓደኞችዎን ወደዚህ ስልክ የእውቂያዎች መተግበሪያ ይገለብጣል፣ ስለዚህ የእውቂያዎችዎ መዳረሻ ያስፈልገዋል።</string>
     <string name="people_sync_permission_blocked">ለዚህ መተግበሪያ የእውቂያዎች መዳረሻ ጠፍቷል። በመተግበሪያው ቅንብሮች ውስጥ በፈቃዶች ስር ሊያበሩት ይችላሉ።</string>
-    <string name="people_contact_add_handle">የተጠቃሚ ስም አክል</string>
-    <string name="people_contact_add_messaging">የመልዕክት አድራሻ ጨምር</string>
     <string name="people_contact_network">አውታረ መረብ</string>
     <string name="people_contact_xmpp">የXMPP እውቂያ</string>
     <string name="people_person_forums">መድረኮች</string>
     <string name="people_contact_network_other">ሌላ</string>
     <string name="people_contacts_menu_unfriend">ጓደኝነት አቁም</string>
     <string name="people_profile_directory_listing">በማውጫ ውስጥ መዘርዘር</string>
+    <string name="people_contact_address">አድራሻ</string>
+    <string name="people_contact_handle">የተጠቃሚ ስም</string>
+    <string name="people_contact_messaging">የመልዕክት አድራሻ</string>
 </resources>

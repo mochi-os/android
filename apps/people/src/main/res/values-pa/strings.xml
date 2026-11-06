@@ -158,9 +158,6 @@
     <string name="people_contact_given">ਪਹਿਲਾ ਨਾਮ</string>
     <string name="people_contact_family">ਆਖ਼ਰੀ ਨਾਮ</string>
     <string name="people_contact_nickname">ਉਪਨਾਮ</string>
-    <string name="people_contact_add_email">ਈਮੇਲ ਜੋੜੋ</string>
-    <string name="people_contact_add_phone">ਫ਼ੋਨ ਜੋੜੋ</string>
-    <string name="people_contact_add_address">ਪਤਾ ਜੋੜੋ</string>
     <string name="people_contact_street">ਗਲੀ</string>
     <string name="people_contact_birthday">ਜਨਮਦਿਨ</string>
     <string name="people_contact_organisation">ਸੰਸਥਾ</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">ਬਣਾਓ</string>
     <string name="people_sync_permission_reason">ਸਿੰਕ ਕਰਨ ਨਾਲ ਤੁਹਾਡੇ ਦੋਸਤ ਇਸ ਫ਼ੋਨ ਦੀ ਸੰਪਰਕ ਐਪ ਵਿੱਚ ਕਾਪੀ ਹੋ ਜਾਂਦੇ ਹਨ, ਇਸ ਲਈ ਇਸ ਨੂੰ ਤੁਹਾਡੇ ਸੰਪਰਕਾਂ ਤੱਕ ਪਹੁੰਚ ਦੀ ਲੋੜ ਹੈ।</string>
     <string name="people_sync_permission_blocked">ਇਸ ਐਪ ਲਈ ਸੰਪਰਕਾਂ ਤੱਕ ਪਹੁੰਚ ਬੰਦ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਐਪ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤਾਂ ਹੇਠਾਂ ਚਾਲੂ ਕਰ ਸਕਦੇ ਹੋ।</string>
-    <string name="people_contact_add_handle">ਉਪਭੋਗਤਾ ਨਾਮ ਜੋੜੋ</string>
-    <string name="people_contact_add_messaging">ਮੈਸੇਜਿੰਗ ਪਤਾ ਜੋੜੋ</string>
     <string name="people_contact_network">ਨੈੱਟਵਰਕ</string>
     <string name="people_contact_xmpp">XMPP ਸੰਪਰਕ</string>
     <string name="people_person_forums">ਫੋਰਮ</string>
     <string name="people_contact_network_other">ਹੋਰ</string>
     <string name="people_contacts_menu_unfriend">ਦੋਸਤੀ ਖ਼ਤਮ ਕਰੋ</string>
     <string name="people_profile_directory_listing">ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਸੂਚੀਬੱਧ</string>
+    <string name="people_contact_address">ਪਤਾ</string>
+    <string name="people_contact_handle">ਉਪਭੋਗਤਾ ਨਾਮ</string>
+    <string name="people_contact_messaging">ਮੈਸੇਜਿੰਗ ਪਤਾ</string>
 </resources>

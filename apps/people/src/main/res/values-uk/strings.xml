@@ -158,9 +158,6 @@
     <string name="people_contact_given">Ім\'я</string>
     <string name="people_contact_family">Прізвище</string>
     <string name="people_contact_nickname">Псевдонім</string>
-    <string name="people_contact_add_email">Додати електронну пошту</string>
-    <string name="people_contact_add_phone">Додати телефон</string>
-    <string name="people_contact_add_address">Додати адресу</string>
     <string name="people_contact_street">Вулиця</string>
     <string name="people_contact_birthday">День народження</string>
     <string name="people_contact_organisation">Організація</string>
@@ -219,12 +216,13 @@
     <string name="people_contact_create">Створити</string>
     <string name="people_sync_permission_reason">Синхронізація копіює ваших друзів у застосунок «Контакти» на цьому телефоні, тому їй потрібен доступ до ваших контактів.</string>
     <string name="people_sync_permission_blocked">Доступ до контактів для цього застосунку вимкнено. Ви можете ввімкнути його в розділі «Дозволи» в налаштуваннях застосунку.</string>
-    <string name="people_contact_add_handle">Додати псевдонім</string>
-    <string name="people_contact_add_messaging">Додати адресу месенджера</string>
     <string name="people_contact_network">Мережа</string>
     <string name="people_contact_xmpp">Контакт XMPP</string>
     <string name="people_person_forums">Форуми</string>
     <string name="people_contact_network_other">Інша</string>
     <string name="people_contacts_menu_unfriend">Припинити дружбу</string>
     <string name="people_profile_directory_listing">Відображення в каталозі</string>
+    <string name="people_contact_address">Адреса</string>
+    <string name="people_contact_handle">Псевдонім</string>
+    <string name="people_contact_messaging">Адреса месенджера</string>
 </resources>

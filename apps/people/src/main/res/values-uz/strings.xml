@@ -158,9 +158,6 @@
     <string name="people_contact_given">Ism</string>
     <string name="people_contact_family">Familiya</string>
     <string name="people_contact_nickname">Taxallus</string>
-    <string name="people_contact_add_email">Email qoʻshish</string>
-    <string name="people_contact_add_phone">Telefon qoʻshish</string>
-    <string name="people_contact_add_address">Manzil qoʻshish</string>
     <string name="people_contact_street">Koʻcha</string>
     <string name="people_contact_birthday">Tugʻilgan kun</string>
     <string name="people_contact_organisation">Tashkilot</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Yaratish</string>
     <string name="people_sync_permission_reason">Sinxronlash doʻstlaringizni bu telefondagi Kontaktlar ilovasiga nusxalaydi, shuning uchun unga kontaktlaringizga kirish ruxsati kerak.</string>
     <string name="people_sync_permission_blocked">Bu ilova uchun kontaktlarga kirish oʻchirilgan. Uni ilova sozlamalaridagi Ruxsatlar boʻlimida yoqishingiz mumkin.</string>
-    <string name="people_contact_add_handle">Taxallus qoʻshish</string>
-    <string name="people_contact_add_messaging">Xabar almashish manzilini qoʻshish</string>
     <string name="people_contact_network">Tarmoq</string>
     <string name="people_contact_xmpp">XMPP kontakti</string>
     <string name="people_person_forums">Forumlar</string>
     <string name="people_contact_network_other">Boshqa</string>
     <string name="people_contacts_menu_unfriend">Doʻstlikni tugatish</string>
     <string name="people_profile_directory_listing">Katalogda ko\'rsatilish</string>
+    <string name="people_contact_address">Manzil</string>
+    <string name="people_contact_handle">Taxallus</string>
+    <string name="people_contact_messaging">Xabar almashish manzili</string>
 </resources>

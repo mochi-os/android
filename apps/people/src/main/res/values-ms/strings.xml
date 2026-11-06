@@ -158,9 +158,6 @@
     <string name="people_contact_given">Nama pertama</string>
     <string name="people_contact_family">Nama keluarga</string>
     <string name="people_contact_nickname">Nama panggilan</string>
-    <string name="people_contact_add_email">Tambah e-mel</string>
-    <string name="people_contact_add_phone">Tambah telefon</string>
-    <string name="people_contact_add_address">Tambah alamat</string>
     <string name="people_contact_street">Jalan</string>
     <string name="people_contact_birthday">Hari lahir</string>
     <string name="people_contact_organisation">Organisasi</string>
@@ -216,12 +213,13 @@
     <string name="people_contact_create">Cipta</string>
     <string name="people_sync_permission_reason">Penyegerakan menyalin rakan anda ke dalam apl Kenalan telefon ini, jadi ia memerlukan akses kepada kenalan anda.</string>
     <string name="people_sync_permission_blocked">Akses kenalan dimatikan untuk apl ini. Anda boleh menghidupkannya di bawah Kebenaran dalam tetapan apl.</string>
-    <string name="people_contact_add_handle">Tambah nama pengguna</string>
-    <string name="people_contact_add_messaging">Tambah alamat pemesejan</string>
     <string name="people_contact_network">Rangkaian</string>
     <string name="people_contact_xmpp">Kenalan XMPP</string>
     <string name="people_person_forums">Forum</string>
     <string name="people_contact_network_other">Lain-lain</string>
     <string name="people_contacts_menu_unfriend">Tamatkan persahabatan</string>
     <string name="people_profile_directory_listing">Disenaraikan dalam direktori</string>
+    <string name="people_contact_address">Alamat</string>
+    <string name="people_contact_handle">Nama pengguna</string>
+    <string name="people_contact_messaging">Alamat pemesejan</string>
 </resources>

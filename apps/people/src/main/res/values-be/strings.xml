@@ -158,9 +158,6 @@
     <string name="people_contact_given">Імя</string>
     <string name="people_contact_family">Прозвішча</string>
     <string name="people_contact_nickname">Мянушка</string>
-    <string name="people_contact_add_email">Дадаць эл. пошту</string>
-    <string name="people_contact_add_phone">Дадаць тэлефон</string>
-    <string name="people_contact_add_address">Дадаць адрас</string>
     <string name="people_contact_street">Вуліца</string>
     <string name="people_contact_birthday">Дзень нараджэння</string>
     <string name="people_contact_organisation">Арганізацыя</string>
@@ -219,12 +216,13 @@
     <string name="people_contact_create">Стварыць</string>
     <string name="people_sync_permission_reason">Сінхранізацыя капіруе вашых сяброў у праграму «Кантакты» на гэтым тэлефоне, таму ёй патрэбны доступ да вашых кантактаў.</string>
     <string name="people_sync_permission_blocked">Доступ да кантактаў для гэтай праграмы выключаны. Вы можаце ўключыць яго ў раздзеле «Дазволы» ў наладах праграмы.</string>
-    <string name="people_contact_add_handle">Дадаць імя карыстальніка</string>
-    <string name="people_contact_add_messaging">Дадаць адрас мэсенджара</string>
     <string name="people_contact_network">Сетка</string>
     <string name="people_contact_xmpp">Кантакт XMPP</string>
     <string name="people_person_forums">Форумы</string>
     <string name="people_contact_network_other">Іншая</string>
     <string name="people_contacts_menu_unfriend">Выдаліць з сяброў</string>
     <string name="people_profile_directory_listing">Паказ у каталогу</string>
+    <string name="people_contact_address">Адрас</string>
+    <string name="people_contact_handle">Імя карыстальніка</string>
+    <string name="people_contact_messaging">Адрас мэсенджара</string>
 </resources>

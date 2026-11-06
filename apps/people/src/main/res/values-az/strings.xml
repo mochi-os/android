@@ -158,9 +158,6 @@
     <string name="people_contact_given">Ad</string>
     <string name="people_contact_family">Soyad</string>
     <string name="people_contact_nickname">Ləqəb</string>
-    <string name="people_contact_add_email">E-poçt əlavə et</string>
-    <string name="people_contact_add_phone">Telefon əlavə et</string>
-    <string name="people_contact_add_address">Ünvan əlavə et</string>
     <string name="people_contact_street">Küçə</string>
     <string name="people_contact_birthday">Doğum günü</string>
     <string name="people_contact_organisation">Təşkilat</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Yarat</string>
     <string name="people_sync_permission_reason">Sinxronlaşdırma dostlarınızı bu telefonun Kontaktlar tətbiqinə kopyalayır, buna görə də ona kontaktlarınıza giriş lazımdır.</string>
     <string name="people_sync_permission_blocked">Bu tətbiq üçün kontaktlara giriş deaktivdir. Onu tətbiqin parametrlərində İcazələr bölməsində aktiv edə bilərsiniz.</string>
-    <string name="people_contact_add_handle">İstifadəçi adı əlavə et</string>
-    <string name="people_contact_add_messaging">Mesajlaşma ünvanı əlavə et</string>
     <string name="people_contact_network">Şəbəkə</string>
     <string name="people_contact_xmpp">XMPP kontaktı</string>
     <string name="people_person_forums">Forumlar</string>
     <string name="people_contact_network_other">Digər</string>
     <string name="people_contacts_menu_unfriend">Dostluğu bitir</string>
     <string name="people_profile_directory_listing">Kataloqda göstərilmə</string>
+    <string name="people_contact_address">Ünvan</string>
+    <string name="people_contact_handle">İstifadəçi adı</string>
+    <string name="people_contact_messaging">Mesajlaşma ünvanı</string>
 </resources>

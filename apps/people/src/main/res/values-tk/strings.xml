@@ -158,9 +158,6 @@
     <string name="people_contact_given">Ady</string>
     <string name="people_contact_family">Familiýasy</string>
     <string name="people_contact_nickname">Lakam</string>
-    <string name="people_contact_add_email">E-poçta goş</string>
-    <string name="people_contact_add_phone">Telefon goş</string>
-    <string name="people_contact_add_address">Salgy goş</string>
     <string name="people_contact_street">Köçe</string>
     <string name="people_contact_birthday">Doglan güni</string>
     <string name="people_contact_organisation">Gurama</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Döretmek</string>
     <string name="people_sync_permission_reason">Sinhronlaşdyrma dostlaryňyzy bu telefonyň Kontaktlar programmasyna göçürýär, şonuň üçin oňa kontaktlaryňyza girmäge rugsat gerek.</string>
     <string name="people_sync_permission_blocked">Bu programma üçin kontaktlara giriş öçürilen. Ony programmanyň sazlamalaryndaky Rugsatlar bölüminde açyp bilersiňiz.</string>
-    <string name="people_contact_add_handle">Lakam goş</string>
-    <string name="people_contact_add_messaging">Habarlaşma salgysyny goş</string>
     <string name="people_contact_network">Tor</string>
     <string name="people_contact_xmpp">XMPP kontakty</string>
     <string name="people_person_forums">Forumlar</string>
     <string name="people_contact_network_other">Beýleki</string>
     <string name="people_contacts_menu_unfriend">Dostlukdan aýyr</string>
     <string name="people_profile_directory_listing">Katalogda görkezilmek</string>
+    <string name="people_contact_address">Salgy</string>
+    <string name="people_contact_handle">Lakam</string>
+    <string name="people_contact_messaging">Habarlaşma salgysy</string>
 </resources>

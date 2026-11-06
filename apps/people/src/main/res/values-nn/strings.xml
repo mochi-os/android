@@ -158,9 +158,6 @@
     <string name="people_contact_given">Fornamn</string>
     <string name="people_contact_family">Etternamn</string>
     <string name="people_contact_nickname">Kallenamn</string>
-    <string name="people_contact_add_email">Legg til e-post</string>
-    <string name="people_contact_add_phone">Legg til telefon</string>
-    <string name="people_contact_add_address">Legg til adresse</string>
     <string name="people_contact_street">Gate</string>
     <string name="people_contact_birthday">Fødselsdag</string>
     <string name="people_contact_organisation">Organisasjon</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">Opprett</string>
     <string name="people_sync_permission_reason">Synkroniseringa kopierer venene dine til Kontaktar-appen på denne telefonen, og treng difor tilgang til kontaktane dine.</string>
     <string name="people_sync_permission_blocked">Tilgang til kontaktar er slått av for denne appen. Du kan slå han på under Løyve i innstillingane til appen.</string>
-    <string name="people_contact_add_handle">Legg til brukarnamn</string>
-    <string name="people_contact_add_messaging">Legg til meldingsadresse</string>
     <string name="people_contact_network">Nettverk</string>
     <string name="people_contact_xmpp">XMPP-kontakt</string>
     <string name="people_person_forums">Forum</string>
     <string name="people_contact_network_other">Anna</string>
     <string name="people_contacts_menu_unfriend">Avslutt vennskap</string>
     <string name="people_profile_directory_listing">Oppføring i katalogen</string>
+    <string name="people_contact_address">Adresse</string>
+    <string name="people_contact_handle">Brukarnamn</string>
+    <string name="people_contact_messaging">Meldingsadresse</string>
 </resources>

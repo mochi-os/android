@@ -158,9 +158,6 @@
     <string name="people_contact_given">මුල් නම</string>
     <string name="people_contact_family">වාසගම</string>
     <string name="people_contact_nickname">අන්වර්ථ නාමය</string>
-    <string name="people_contact_add_email">ඊමේල් එක් කරන්න</string>
-    <string name="people_contact_add_phone">දුරකථනයක් එක් කරන්න</string>
-    <string name="people_contact_add_address">ලිපිනයක් එක් කරන්න</string>
     <string name="people_contact_street">වීදිය</string>
     <string name="people_contact_birthday">උපන්දිනය</string>
     <string name="people_contact_organisation">ආයතනය</string>
@@ -217,12 +214,13 @@
     <string name="people_contact_create">නිර්මාණය කරන්න</string>
     <string name="people_sync_permission_reason">සමමුහුර්ත කිරීම ඔබගේ මිතුරන් මෙම දුරකථනයේ සම්බන්ධතා යෙදුමට පිටපත් කරයි, එබැවින් එයට ඔබගේ සම්බන්ධතා වෙත ප්‍රවේශය අවශ්‍යයි.</string>
     <string name="people_sync_permission_blocked">මෙම යෙදුම සඳහා සම්බන්ධතා ප්‍රවේශය ක්‍රියාවිරහිත කර ඇත. ඔබට එය යෙදුමේ සැකසුම්හි අවසර යටතේ ක්‍රියාත්මක කළ හැකිය.</string>
-    <string name="people_contact_add_handle">අන්වර්ථ නාමයක් එක් කරන්න</string>
-    <string name="people_contact_add_messaging">පණිවිඩ ලිපිනයක් එක් කරන්න</string>
     <string name="people_contact_network">ජාලය</string>
     <string name="people_contact_xmpp">XMPP සම්බන්ධතාවය</string>
     <string name="people_person_forums">සංසද</string>
     <string name="people_contact_network_other">වෙනත්</string>
     <string name="people_contacts_menu_unfriend">මිත්‍රත්වය අවසන් කරන්න</string>
     <string name="people_profile_directory_listing">නාමාවලියේ ලැයිස්තුගත කිරීම</string>
+    <string name="people_contact_address">ලිපිනය</string>
+    <string name="people_contact_handle">අන්වර්ථ නාමය</string>
+    <string name="people_contact_messaging">පණිවිඩ ලිපිනය</string>
 </resources>
