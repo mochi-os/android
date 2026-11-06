@@ -223,4 +223,6 @@
     <string name="people_contact_address">მისამართი</string>
     <string name="people_contact_handle">მომხმარებლის სახელი</string>
     <string name="people_contact_messaging">მესენჯერის მისამართი</string>
+    <string name="people_profile_networks">ქსელები</string>
+    <string name="people_profile_settings">პარამეტრები</string>
 </resources>

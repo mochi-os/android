@@ -223,4 +223,6 @@
     <string name="people_contact_address">Adresë</string>
     <string name="people_contact_handle">Pseudonimi</string>
     <string name="people_contact_messaging">Adresë mesazhesh</string>
+    <string name="people_profile_networks">Rrjetet</string>
+    <string name="people_profile_settings">Cilësimet</string>
 </resources>

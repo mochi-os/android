@@ -223,4 +223,6 @@
     <string name="people_contact_address">Osoite</string>
     <string name="people_contact_handle">Käyttäjätunnus</string>
     <string name="people_contact_messaging">Pikaviestiosoite</string>
+    <string name="people_profile_networks">Verkot</string>
+    <string name="people_profile_settings">Asetukset</string>
 </resources>

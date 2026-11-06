@@ -222,4 +222,6 @@
     <string name="people_contact_address">地址</string>
     <string name="people_contact_handle">用户识别符</string>
     <string name="people_contact_messaging">即时通讯地址</string>
+    <string name="people_profile_networks">网络</string>
+    <string name="people_profile_settings">设置</string>
 </resources>

@@ -223,4 +223,6 @@
     <string name="people_contact_address">Cím</string>
     <string name="people_contact_handle">Felhasználónév</string>
     <string name="people_contact_messaging">Üzenetküldési cím</string>
+    <string name="people_profile_networks">Hálózatok</string>
+    <string name="people_profile_settings">Beállítások</string>
 </resources>

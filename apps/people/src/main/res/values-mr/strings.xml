@@ -223,4 +223,6 @@
     <string name="people_contact_address">पत्ता</string>
     <string name="people_contact_handle">वापरकर्तानाव</string>
     <string name="people_contact_messaging">संदेश पत्ता</string>
+    <string name="people_profile_networks">नेटवर्क्स</string>
+    <string name="people_profile_settings">सेटिंग्ज</string>
 </resources>

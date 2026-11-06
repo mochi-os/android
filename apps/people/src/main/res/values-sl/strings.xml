@@ -225,4 +225,6 @@
     <string name="people_contact_address">Naslov</string>
     <string name="people_contact_handle">Vzdevek</string>
     <string name="people_contact_messaging">Naslov za sporočanje</string>
+    <string name="people_profile_networks">Omrežja</string>
+    <string name="people_profile_settings">Nastavitve</string>
 </resources>

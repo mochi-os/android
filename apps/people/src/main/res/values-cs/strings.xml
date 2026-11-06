@@ -224,4 +224,6 @@
     <string name="people_contact_address">Adresa</string>
     <string name="people_contact_handle">Uživatelské jméno</string>
     <string name="people_contact_messaging">Adresa pro zprávy</string>
+    <string name="people_profile_networks">Sítě</string>
+    <string name="people_profile_settings">Nastavení</string>
 </resources>

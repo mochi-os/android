@@ -223,4 +223,6 @@
     <string name="people_contact_address">Heimilisfang</string>
     <string name="people_contact_handle">Notandanafn</string>
     <string name="people_contact_messaging">Skilaboðafang</string>
+    <string name="people_profile_networks">Net</string>
+    <string name="people_profile_settings">Stillingar</string>
 </resources>

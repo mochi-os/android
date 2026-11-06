@@ -222,4 +222,6 @@
     <string name="people_contact_address">អាសយដ្ឋាន</string>
     <string name="people_contact_handle">ឈ្មោះអ្នកប្រើ</string>
     <string name="people_contact_messaging">អាសយដ្ឋានផ្ញើសារ</string>
+    <string name="people_profile_networks">បណ្តាញ</string>
+    <string name="people_profile_settings">ការកំណត់</string>
 </resources>

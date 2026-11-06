@@ -222,4 +222,6 @@
     <string name="people_contact_address">Alamat</string>
     <string name="people_contact_handle">Nama pengguna</string>
     <string name="people_contact_messaging">Alamat pemesejan</string>
+    <string name="people_profile_networks">Rangkaian</string>
+    <string name="people_profile_settings">Tetapan</string>
 </resources>

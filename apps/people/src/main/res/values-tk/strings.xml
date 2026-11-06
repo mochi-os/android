@@ -223,4 +223,6 @@
     <string name="people_contact_address">Salgy</string>
     <string name="people_contact_handle">Lakam</string>
     <string name="people_contact_messaging">Habarlaşma salgysy</string>
+    <string name="people_profile_networks">Torlar</string>
+    <string name="people_profile_settings">Sazlamalar</string>
 </resources>

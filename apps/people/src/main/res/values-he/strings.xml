@@ -224,4 +224,6 @@
     <string name="people_contact_address">כתובת</string>
     <string name="people_contact_handle">שם משתמש</string>
     <string name="people_contact_messaging">כתובת הודעות</string>
+    <string name="people_profile_networks">רשתות</string>
+    <string name="people_profile_settings">הגדרות</string>
 </resources>

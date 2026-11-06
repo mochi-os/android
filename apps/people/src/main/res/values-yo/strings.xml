@@ -222,4 +222,6 @@
     <string name="people_contact_address">Àdírẹ́sì</string>
     <string name="people_contact_handle">Ìnagijẹ</string>
     <string name="people_contact_messaging">Àdírẹ́sì ìfiránṣẹ́</string>
+    <string name="people_profile_networks">Àwọn nẹ́tíwọ́kì</string>
+    <string name="people_profile_settings">Àwọn ìṣètò</string>
 </resources>

@@ -223,4 +223,6 @@
     <string name="people_contact_address">Суроға</string>
     <string name="people_contact_handle">Тахаллус</string>
     <string name="people_contact_messaging">Суроғаи паёмрасон</string>
+    <string name="people_profile_networks">Шабакаҳо</string>
+    <string name="people_profile_settings">Танзимот</string>
 </resources>

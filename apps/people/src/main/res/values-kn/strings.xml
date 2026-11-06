@@ -223,4 +223,6 @@
     <string name="people_contact_address">ವಿಳಾಸ</string>
     <string name="people_contact_handle">ಬಳಕೆದಾರಹೆಸರು</string>
     <string name="people_contact_messaging">ಮೆಸೇಜಿಂಗ್ ವಿಳಾಸ</string>
+    <string name="people_profile_networks">ನೆಟ್‌ವರ್ಕ್‌ಗಳು</string>
+    <string name="people_profile_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
 </resources>

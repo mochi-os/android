@@ -224,4 +224,6 @@
     <string name="people_contact_address">Adresas</string>
     <string name="people_contact_handle">Vartotojo vardas</string>
     <string name="people_contact_messaging">Susirašinėjimo adresas</string>
+    <string name="people_profile_networks">Tinklai</string>
+    <string name="people_profile_settings">Nustatymai</string>
 </resources>

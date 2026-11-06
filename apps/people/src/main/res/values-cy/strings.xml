@@ -227,4 +227,6 @@
     <string name="people_contact_address">Cyfeiriad</string>
     <string name="people_contact_handle">Enw defnyddiwr</string>
     <string name="people_contact_messaging">Cyfeiriad negeseua</string>
+    <string name="people_profile_networks">Rhwydweithiau</string>
+    <string name="people_profile_settings">Gosodiadau</string>
 </resources>

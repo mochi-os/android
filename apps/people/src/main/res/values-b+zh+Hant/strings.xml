@@ -222,4 +222,6 @@
     <string name="people_contact_address">地址</string>
     <string name="people_contact_handle">帳號代碼</string>
     <string name="people_contact_messaging">即時通訊地址</string>
+    <string name="people_profile_networks">網路</string>
+    <string name="people_profile_settings">設定</string>
 </resources>

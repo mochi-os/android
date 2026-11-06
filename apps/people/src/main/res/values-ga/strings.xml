@@ -226,4 +226,6 @@
     <string name="people_contact_address">Seoladh</string>
     <string name="people_contact_handle">Ainm úsáideora</string>
     <string name="people_contact_messaging">Seoladh teachtaireachtaí</string>
+    <string name="people_profile_networks">Líonraí</string>
+    <string name="people_profile_settings">Socruithe</string>
 </resources>

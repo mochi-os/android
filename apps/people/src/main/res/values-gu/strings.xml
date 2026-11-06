@@ -223,4 +223,6 @@
     <string name="people_contact_address">સરનામું</string>
     <string name="people_contact_handle">હેન્ડલ</string>
     <string name="people_contact_messaging">મેસેજિંગ સરનામું</string>
+    <string name="people_profile_networks">નેટવર્ક્સ</string>
+    <string name="people_profile_settings">સેટિંગ્સ</string>
 </resources>

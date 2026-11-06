@@ -223,4 +223,6 @@
     <string name="people_contact_address">ठेगाना</string>
     <string name="people_contact_handle">प्रयोगकर्ता नाम</string>
     <string name="people_contact_messaging">म्यासेजिङ ठेगाना</string>
+    <string name="people_profile_networks">नेटवर्कहरू</string>
+    <string name="people_profile_settings">सेटिङहरू</string>
 </resources>

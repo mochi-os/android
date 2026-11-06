@@ -223,4 +223,6 @@
     <string name="people_contact_address">చిరునామా</string>
     <string name="people_contact_handle">హ్యాండిల్</string>
     <string name="people_contact_messaging">మెసేజింగ్ చిరునామా</string>
+    <string name="people_profile_networks">నెట్‌వర్క్‌లు</string>
+    <string name="people_profile_settings">సెట్టింగ్‌లు</string>
 </resources>

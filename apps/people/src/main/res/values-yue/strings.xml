@@ -35,6 +35,8 @@
     <string name="notification_channel_people">聯絡人通知</string>
     <string name="people_invitations_title">邀請</string>
     <string name="people_profile_title">個人檔案</string>
+    <string name="people_profile_networks">網絡</string>
+    <string name="people_profile_settings">設定</string>
     <string name="people_group_title">群組</string>
     <string name="people_person_title">個人</string>
     <string name="people_friends_search_placeholder">搜尋…</string>

@@ -222,4 +222,6 @@
     <string name="people_contact_address">주소</string>
     <string name="people_contact_handle">핸들</string>
     <string name="people_contact_messaging">메시징 주소</string>
+    <string name="people_profile_networks">네트워크</string>
+    <string name="people_profile_settings">설정</string>
 </resources>

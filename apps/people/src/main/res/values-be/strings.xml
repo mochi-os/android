@@ -225,4 +225,6 @@
     <string name="people_contact_address">Адрас</string>
     <string name="people_contact_handle">Імя карыстальніка</string>
     <string name="people_contact_messaging">Адрас мэсенджара</string>
+    <string name="people_profile_networks">Сеткі</string>
+    <string name="people_profile_settings">Налады</string>
 </resources>

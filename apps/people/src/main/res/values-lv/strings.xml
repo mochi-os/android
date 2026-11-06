@@ -224,4 +224,6 @@
     <string name="people_contact_address">Adrese</string>
     <string name="people_contact_handle">Lietotājvārds</string>
     <string name="people_contact_messaging">Ziņapmaiņas adrese</string>
+    <string name="people_profile_networks">Tīkli</string>
+    <string name="people_profile_settings">Iestatījumi</string>
 </resources>

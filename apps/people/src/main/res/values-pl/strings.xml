@@ -225,4 +225,6 @@
     <string name="people_contact_address">Adres</string>
     <string name="people_contact_handle">Pseudonim</string>
     <string name="people_contact_messaging">Adres komunikatora</string>
+    <string name="people_profile_networks">Sieci</string>
+    <string name="people_profile_settings">Ustawienia</string>
 </resources>

@@ -223,4 +223,6 @@
     <string name="people_contact_address">Teessoo</string>
     <string name="people_contact_handle">Maqaa fayyadamaa</string>
     <string name="people_contact_messaging">Teessoo ergaa</string>
+    <string name="people_profile_networks">Networkiiwwan</string>
+    <string name="people_profile_settings">Qindaa\'inoota</string>
 </resources>

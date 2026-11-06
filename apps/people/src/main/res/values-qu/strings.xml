@@ -223,4 +223,6 @@
     <string name="people_contact_address">Dirección</string>
     <string name="people_contact_handle">Identificador</string>
     <string name="people_contact_messaging">Willakuy direccion</string>
+    <string name="people_profile_networks">Redkuna</string>
+    <string name="people_profile_settings">Wakichiykuna</string>
 </resources>

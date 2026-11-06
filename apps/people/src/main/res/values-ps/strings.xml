@@ -223,4 +223,6 @@
     <string name="people_contact_address">پته</string>
     <string name="people_contact_handle">مستعار نوم</string>
     <string name="people_contact_messaging">د پیغام رسولو پته</string>
+    <string name="people_profile_networks">شبکې</string>
+    <string name="people_profile_settings">تنظیمات</string>
 </resources>

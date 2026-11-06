@@ -223,4 +223,6 @@
     <string name="people_contact_address">Дарек</string>
     <string name="people_contact_handle">Колдонуучу аты</string>
     <string name="people_contact_messaging">Мессенжер дареги</string>
+    <string name="people_profile_networks">Тармактар</string>
+    <string name="people_profile_settings">Жөндөөлөр</string>
 </resources>

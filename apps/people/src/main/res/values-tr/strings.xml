@@ -223,4 +223,6 @@
     <string name="people_contact_address">Adres</string>
     <string name="people_contact_handle">Rumuz</string>
     <string name="people_contact_messaging">Mesajlaşma adresi</string>
+    <string name="people_profile_networks">Ağlar</string>
+    <string name="people_profile_settings">Ayarlar</string>
 </resources>

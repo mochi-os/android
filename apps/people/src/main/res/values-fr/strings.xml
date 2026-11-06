@@ -223,4 +223,6 @@
     <string name="people_contact_address">Adresse</string>
     <string name="people_contact_handle">Identifiant</string>
     <string name="people_contact_messaging">Adresse de messagerie</string>
+    <string name="people_profile_networks">Réseaux</string>
+    <string name="people_profile_settings">Paramètres</string>
 </resources>

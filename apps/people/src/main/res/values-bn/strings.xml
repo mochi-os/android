@@ -223,4 +223,6 @@
     <string name="people_contact_address">ঠিকানা</string>
     <string name="people_contact_handle">হ্যান্ডেল</string>
     <string name="people_contact_messaging">মেসেজিং ঠিকানা</string>
+    <string name="people_profile_networks">নেটওয়ার্ক</string>
+    <string name="people_profile_settings">সেটিংস</string>
 </resources>

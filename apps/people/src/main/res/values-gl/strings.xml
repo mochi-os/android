@@ -223,4 +223,6 @@
     <string name="people_contact_address">Enderezo</string>
     <string name="people_contact_handle">Identificador</string>
     <string name="people_contact_messaging">Enderezo de mensaxería</string>
+    <string name="people_profile_networks">Redes</string>
+    <string name="people_profile_settings">Configuración</string>
 </resources>

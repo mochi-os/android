@@ -223,4 +223,6 @@
     <string name="people_contact_address">ناونیشان</string>
     <string name="people_contact_handle">ناوی بەکارهێنەر</string>
     <string name="people_contact_messaging">ناونیشانی نامەناردن</string>
+    <string name="people_profile_networks">تۆڕەکان</string>
+    <string name="people_profile_settings">ڕێکخستنەکان</string>
 </resources>

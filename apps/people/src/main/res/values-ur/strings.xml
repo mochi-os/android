@@ -223,4 +223,6 @@
     <string name="people_contact_address">پتہ</string>
     <string name="people_contact_handle">ہینڈل</string>
     <string name="people_contact_messaging">پیغام رسانی کا پتہ</string>
+    <string name="people_profile_networks">نیٹ ورکس</string>
+    <string name="people_profile_settings">سیٹنگز</string>
 </resources>

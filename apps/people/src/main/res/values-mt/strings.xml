@@ -226,4 +226,6 @@
     <string name="people_contact_address">Indirizz</string>
     <string name="people_contact_handle">Isem tal-utent</string>
     <string name="people_contact_messaging">Indirizz tal-messaġġi</string>
+    <string name="people_profile_networks">Netwerks</string>
+    <string name="people_profile_settings">Issettjar</string>
 </resources>

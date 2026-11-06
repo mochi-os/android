@@ -223,4 +223,6 @@
     <string name="people_contact_address">Tirahan</string>
     <string name="people_contact_handle">Palayaw</string>
     <string name="people_contact_messaging">Address sa pagmemensahe</string>
+    <string name="people_profile_networks">Mga network</string>
+    <string name="people_profile_settings">Mga setting</string>
 </resources>

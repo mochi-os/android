@@ -224,4 +224,6 @@
     <string name="people_contact_address">Adresă</string>
     <string name="people_contact_handle">Pseudonim</string>
     <string name="people_contact_messaging">Adresă de mesagerie</string>
+    <string name="people_profile_networks">Rețele</string>
+    <string name="people_profile_settings">Setări</string>
 </resources>

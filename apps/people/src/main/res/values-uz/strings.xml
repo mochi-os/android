@@ -223,4 +223,6 @@
     <string name="people_contact_address">Manzil</string>
     <string name="people_contact_handle">Taxallus</string>
     <string name="people_contact_messaging">Xabar almashish manzili</string>
+    <string name="people_profile_networks">Tarmoqlar</string>
+    <string name="people_profile_settings">Sozlamalar</string>
 </resources>

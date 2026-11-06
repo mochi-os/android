@@ -223,4 +223,6 @@
     <string name="people_contact_address">Հասցե</string>
     <string name="people_contact_handle">Օգտանուն</string>
     <string name="people_contact_messaging">Մեսենջերի հասցե</string>
+    <string name="people_profile_networks">Ցանցեր</string>
+    <string name="people_profile_settings">Կարգավորումներ</string>
 </resources>

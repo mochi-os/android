@@ -224,4 +224,6 @@
     <string name="people_contact_address">Adresa</string>
     <string name="people_contact_handle">Korisničko ime</string>
     <string name="people_contact_messaging">Adresa za razmjenu poruka</string>
+    <string name="people_profile_networks">Mreže</string>
+    <string name="people_profile_settings">Postavke</string>
 </resources>

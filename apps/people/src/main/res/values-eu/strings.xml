@@ -223,4 +223,6 @@
     <string name="people_contact_address">Helbidea</string>
     <string name="people_contact_handle">Erabiltzaile-izena</string>
     <string name="people_contact_messaging">Mezularitza-helbidea</string>
+    <string name="people_profile_networks">Sareak</string>
+    <string name="people_profile_settings">Ezarpenak</string>
 </resources>

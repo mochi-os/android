@@ -223,4 +223,6 @@
     <string name="people_contact_address">Aadress</string>
     <string name="people_contact_handle">Kasutajanimi</string>
     <string name="people_contact_messaging">Kiirsuhtlusaadress</string>
+    <string name="people_profile_networks">Võrgud</string>
+    <string name="people_profile_settings">Seaded</string>
 </resources>

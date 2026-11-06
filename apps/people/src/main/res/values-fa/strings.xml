@@ -223,4 +223,6 @@
     <string name="people_contact_address">نشانی</string>
     <string name="people_contact_handle">نام کاربری</string>
     <string name="people_contact_messaging">نشانی پیام‌رسان</string>
+    <string name="people_profile_networks">شبکه‌ها</string>
+    <string name="people_profile_settings">تنظیمات</string>
 </resources>

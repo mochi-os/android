@@ -225,4 +225,6 @@
     <string name="people_contact_address">Адрес</string>
     <string name="people_contact_handle">Псевдоним</string>
     <string name="people_contact_messaging">Адрес мессенджера</string>
+    <string name="people_profile_networks">Сети</string>
+    <string name="people_profile_settings">Настройки</string>
 </resources>

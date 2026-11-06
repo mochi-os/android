@@ -223,4 +223,6 @@
     <string name="people_contact_address">ਪਤਾ</string>
     <string name="people_contact_handle">ਉਪਭੋਗਤਾ ਨਾਮ</string>
     <string name="people_contact_messaging">ਮੈਸੇਜਿੰਗ ਪਤਾ</string>
+    <string name="people_profile_networks">ਨੈੱਟਵਰਕ</string>
+    <string name="people_profile_settings">ਸੈਟਿੰਗਾਂ</string>
 </resources>

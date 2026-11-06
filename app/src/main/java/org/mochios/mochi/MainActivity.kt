@@ -925,6 +925,10 @@ open class MainActivity : ComponentActivity() {
                 // the screen that sent them, so Back returns there.
                 if (path == SettingsApp.SYSTEM_SETTINGS) {
                     if (!navController.isAt(path)) navController.navigate(path) { launchSingleTop = true }
+                } else if (path == "settings/user/networks") {
+                    // The web's Settings › Networks, which People's profile
+                    // editor opens to change which accounts the profile shows.
+                    if (!navController.isAt(SettingsApp.NETWORKS)) navController.navigate(SettingsApp.NETWORKS) { launchSingleTop = true }
                 } else {
                     navController.openAppHome(SettingsApp.HOME)
                 }

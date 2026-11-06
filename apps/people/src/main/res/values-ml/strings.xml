@@ -223,4 +223,6 @@
     <string name="people_contact_address">വിലാസം</string>
     <string name="people_contact_handle">ഉപയോക്തൃനാമം</string>
     <string name="people_contact_messaging">മെസേജിംഗ് വിലാസം</string>
+    <string name="people_profile_networks">നെറ്റ്‌വർക്കുകൾ</string>
+    <string name="people_profile_settings">ക്രമീകരണങ്ങൾ</string>
 </resources>

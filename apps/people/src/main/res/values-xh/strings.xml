@@ -223,4 +223,6 @@
     <string name="people_contact_address">Idilesi</string>
     <string name="people_contact_handle">Isiteketiso</string>
     <string name="people_contact_messaging">Idilesi yemiyalezo</string>
+    <string name="people_profile_networks">Uthungelwano</string>
+    <string name="people_profile_settings">Iisetingi</string>
 </resources>

@@ -223,4 +223,6 @@
     <string name="people_contact_address">Ikheli</string>
     <string name="people_contact_handle">Isidlaliso</string>
     <string name="people_contact_messaging">Ikheli lemiyalezo</string>
+    <string name="people_profile_networks">Amanethiwekhi</string>
+    <string name="people_profile_settings">Izilungiselelo</string>
 </resources>

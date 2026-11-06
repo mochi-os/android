@@ -223,4 +223,6 @@
     <string name="people_contact_address">پتو</string>
     <string name="people_contact_handle">هينڊل</string>
     <string name="people_contact_messaging">پيغام رسانيءَ جو پتو</string>
+    <string name="people_profile_networks">نيٽ ورڪس</string>
+    <string name="people_profile_settings">سيٽنگون</string>
 </resources>

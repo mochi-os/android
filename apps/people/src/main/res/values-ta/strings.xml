@@ -223,4 +223,6 @@
     <string name="people_contact_address">முகவரி</string>
     <string name="people_contact_handle">புனைப்பெயர்</string>
     <string name="people_contact_messaging">செய்தியிடல் முகவரி</string>
+    <string name="people_profile_networks">பிணையங்கள்</string>
+    <string name="people_profile_settings">அமைப்புகள்</string>
 </resources>

@@ -223,4 +223,6 @@
     <string name="people_contact_address">Διεύθυνση</string>
     <string name="people_contact_handle">Όνομα χρήστη</string>
     <string name="people_contact_messaging">Διεύθυνση ανταλλαγής μηνυμάτων</string>
+    <string name="people_profile_networks">Δίκτυα</string>
+    <string name="people_profile_settings">Ρυθμίσεις</string>
 </resources>

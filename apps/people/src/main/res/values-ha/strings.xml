@@ -223,4 +223,6 @@
     <string name="people_contact_address">Adireshi</string>
     <string name="people_contact_handle">Sunan mai amfani</string>
     <string name="people_contact_messaging">Adireshin aika saƙo</string>
+    <string name="people_profile_networks">Hanyoyin sadarwa</string>
+    <string name="people_profile_settings">Saitunan</string>
 </resources>

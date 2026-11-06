@@ -223,4 +223,6 @@
     <string name="people_contact_address">Adresse</string>
     <string name="people_contact_handle">Handle</string>
     <string name="people_contact_messaging">Chatadresse</string>
+    <string name="people_profile_networks">Netzwerke</string>
+    <string name="people_profile_settings">Einstellungen</string>
 </resources>

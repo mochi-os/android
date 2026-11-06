@@ -222,4 +222,6 @@
     <string name="people_contact_address">Alamat</string>
     <string name="people_contact_handle">Landihan</string>
     <string name="people_contact_messaging">Alamat olahpesen</string>
+    <string name="people_profile_networks">Jaringan</string>
+    <string name="people_profile_settings">Setélan</string>
 </resources>

@@ -177,6 +177,8 @@
     <string name="people_profile_edit_name">Edit name</string>
     <string name="people_profile_identity">Identity</string>
     <string name="people_profile_accent">Accent</string>
+    <string name="people_profile_networks">Networks</string>
+    <string name="people_profile_settings">Settings</string>
     <string name="people_profile_directory_listing">Directory listing</string>
     <string name="people_profile_preview">Preview</string>
     <string name="people_profile_upload_avatar">Upload avatar</string>

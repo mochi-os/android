@@ -227,4 +227,6 @@
     <string name="people_contact_address">العنوان</string>
     <string name="people_contact_handle">المعرّف</string>
     <string name="people_contact_messaging">عنوان المراسلة</string>
+    <string name="people_profile_networks">الشبكات</string>
+    <string name="people_profile_settings">الإعدادات</string>
 </resources>

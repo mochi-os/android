@@ -171,4 +171,6 @@
     <string name="people_contact_address">Endereço</string>
     <string name="people_contact_handle">Identificador</string>
     <string name="people_contact_messaging">Endereço de mensagens</string>
+    <string name="people_profile_networks">Redes</string>
+    <string name="people_profile_settings">Configurações</string>
 </resources>

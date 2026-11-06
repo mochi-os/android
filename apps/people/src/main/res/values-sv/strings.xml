@@ -223,4 +223,6 @@
     <string name="people_contact_address">Adress</string>
     <string name="people_contact_handle">Alias</string>
     <string name="people_contact_messaging">Chattadress</string>
+    <string name="people_profile_networks">Nätverk</string>
+    <string name="people_profile_settings">Inställningar</string>
 </resources>

@@ -223,4 +223,6 @@
     <string name="people_contact_address">Navnîşan</string>
     <string name="people_contact_handle">Navê bikarhêner</string>
     <string name="people_contact_messaging">Navnîşana peyamşandinê</string>
+    <string name="people_profile_networks">Tor</string>
+    <string name="people_profile_settings">Mîheng</string>
 </resources>

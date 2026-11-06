@@ -223,4 +223,6 @@
     <string name="people_contact_address">Адреса</string>
     <string name="people_contact_handle">Корисничко име</string>
     <string name="people_contact_messaging">Адреса за пораки</string>
+    <string name="people_profile_networks">Мрежи</string>
+    <string name="people_profile_settings">Поставки</string>
 </resources>

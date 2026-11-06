@@ -225,4 +225,6 @@
     <string name="people_contact_address">Seòladh</string>
     <string name="people_contact_handle">Ainm-cleachdaiche</string>
     <string name="people_contact_messaging">Seòladh teachdaireachdan</string>
+    <string name="people_profile_networks">Lìonraidhean</string>
+    <string name="people_profile_settings">Roghainnean</string>
 </resources>

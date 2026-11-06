@@ -46,6 +46,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.material3.RadioButton
@@ -102,7 +103,10 @@ import org.mochios.android.ui.components.UploadRing
 import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.people.ui.person.ProfileNetworks
+import org.mochios.android.util.openWeb
+import org.mochios.android.util.providerName
 import org.mochios.people.model.PersonInformation
+import org.mochios.people.model.ProfileAccount
 import org.mochios.people.ui.components.PeopleDrawer
 import org.mochios.people.ui.components.PeopleDrawerNavigation
 import org.mochios.people.ui.components.PeopleSidebarSection
@@ -174,7 +178,7 @@ fun ProfileScreen(
             when {
                 state.isLoading -> LoadingBlock(padding)
                 state.info == null && state.error != null -> ErrorBlock(padding) { viewModel.refresh() }
-                state.info != null -> Editor(padding, state, viewModel, snackbar, scope, context)
+                state.info != null -> Editor(padding, state, viewModel, snackbar, scope, context, onOpenLink)
             }
         }
     }
@@ -222,6 +226,7 @@ private fun Editor(
     snackbar: SnackbarHostState,
     scope: kotlinx.coroutines.CoroutineScope,
     context: android.content.Context,
+    onOpenLink: (String) -> Unit,
 ) {
     val upload by viewModel.upload.collectAsState()
     val info = state.info ?: return
@@ -282,6 +287,7 @@ private fun Editor(
             Section(title = stringResource(R.string.people_profile_title)) {
                 BioSection(state, info, viewModel)
             }
+            ProfileAccounts(info.accounts, onOpenLink)
             Section(title = stringResource(MochiR.string.settings_appearance)) {
                 Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
                     AccentSection(state, viewModel)
@@ -735,6 +741,40 @@ private fun FaviconSection(
             }
         }
         UploadProgress(upload)
+    }
+}
+
+/** Settings › Networks, where which accounts the profile shows is chosen, as the web addresses it. */
+internal const val NETWORKS_LINK = "settings/user/networks"
+
+/**
+ * The accounts elsewhere the profile shows, each opening on its network as
+ * the profile links them, and the way to Settings › Networks. Nothing when the
+ * profile shows none.
+ */
+@Composable
+internal fun ProfileAccounts(accounts: List<ProfileAccount>, onOpenLink: (String) -> Unit) {
+    val context = LocalContext.current
+    val shown = accounts.filter { it.url.startsWith("https://") }
+    if (shown.isEmpty()) return
+    Section(title = stringResource(R.string.people_profile_networks)) {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            for (account in shown) {
+                Text(
+                    text = "${providerName(account.type)} · ${account.identifier}",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier
+                        .clickable { openWeb(context, account.url) }
+                        .padding(vertical = 4.dp),
+                )
+            }
+            MochiOutlinedButton(onClick = { onOpenLink(NETWORKS_LINK) }) {
+                Icon(Icons.Outlined.Settings, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                Text(stringResource(R.string.people_profile_settings))
+            }
+        }
     }
 }
 
