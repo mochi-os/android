@@ -69,6 +69,7 @@ import org.mochios.market.lib.ratingStars
 import org.mochios.market.lib.toPlaceData
 import org.mochios.market.model.Account
 import org.mochios.market.model.Review
+import org.mochios.market.model.userAvatarUrl
 import org.mochios.market.ui.components.RatingStarGold
 import org.mochios.market.ui.components.RatingStars
 import org.mochios.market.ui.components.VerifiedGreen
@@ -146,9 +147,7 @@ private fun ProfileBody(
     modifier: Modifier = Modifier,
 ) {
     val format = LocalFormat.current
-    val avatarUrl = accountId.takeIf { it.isNotBlank() }?.let {
-        "/market/-/user/$it/asset/avatar"
-    }
+    val avatarUrl = accountId.takeIf { it.isNotBlank() }?.let { userAvatarUrl(it) }
     val parsedLocation = parseLocation(account.location)
     val locationLabel = locationName(parsedLocation)
 
@@ -408,9 +407,7 @@ private fun ProfileHeaderCard(
 @Composable
 private fun ReviewCard(review: Review, dateTimeText: String) {
     val name = review.reviewerName.orEmpty().ifBlank { review.reviewer }
-    val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let {
-        "/market/-/user/$it/asset/avatar"
-    }
+    val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let { userAvatarUrl(it) }
     ProfileCard {
         Row(
             modifier = Modifier.fillMaxWidth(),

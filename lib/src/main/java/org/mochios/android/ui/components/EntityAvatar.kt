@@ -36,13 +36,15 @@ import coil3.request.crossfade
 import dagger.hilt.android.EntryPointAccessors
 import org.mochios.android.R
 import org.mochios.android.auth.SessionEntryPoint
+import org.mochios.android.util.segment
 
 /**
  * The people app's avatar path for a person entity id, as an [EntityAvatar]
- * `src`. Null when the id is blank, leaving the initials placeholder in charge.
+ * `src`. Null when the id is blank, or, a peer's, cannot be one segment of the
+ * address ([segment]), leaving the initials placeholder in charge.
  */
 fun personAvatarPath(entityId: String?): String? =
-    entityId?.takeIf { id -> id.isNotBlank() }?.let { id -> "/people/$id/-/avatar" }
+    entityId?.takeIf { id -> id.isNotBlank() }?.let(::segment)?.let { id -> "/people/$id/-/avatar" }
 
 /**
  * The session server URL (no trailing slash), from `SessionManager` via Hilt.

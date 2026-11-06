@@ -35,6 +35,7 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.UploadFiles
+import org.mochios.android.util.attachmentAddress
 import org.mochios.crm.R
 
 /**
@@ -60,11 +61,12 @@ fun AttachmentsSection(
         }
     }
 
+    // An id no segment can carry has no address, and the gallery leaves it out.
     val urlBuilder: (Attachment) -> String = { attachment ->
-        "/crm/$crmId/-/attachments/${attachment.id}"
+        attachmentAddress("crm", crmId, attachment.id).orEmpty()
     }
     val thumbnailUrlBuilder: (Attachment) -> String = { attachment ->
-        "/crm/$crmId/-/attachments/${attachment.id}/thumbnail"
+        attachmentAddress("crm", crmId, attachment.id, "thumbnail").orEmpty()
     }
 
     // Newest first.

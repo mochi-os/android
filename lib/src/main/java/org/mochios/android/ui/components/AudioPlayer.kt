@@ -40,18 +40,16 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
-import androidx.media3.datasource.okhttp.OkHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
-import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
-import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.delay
 import org.mochios.android.R
-import org.mochios.android.api.AssetHttpEntryPoint
+import org.mochios.android.api.resolved
 
 /**
  * Compact inline player for audio attachments. Drives [ExoPlayer] directly
  * rather than Media3's `PlayerView` so the row is plain Compose and themes
- * inside a chat bubble. [url] must be absolute.
+ * inside a chat bubble. [url] is one of the app's own server-relative
+ * addresses, streamed with the session, or any other URL, streamed without.
  */
 @OptIn(UnstableApi::class)
 @Composable
@@ -60,14 +58,8 @@ fun AudioPlayer(
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
-    val exoPlayer = remember {
-        val client = EntryPointAccessors
-            .fromApplication(context.applicationContext, AssetHttpEntryPoint::class.java)
-            .assetHttpClient()
-        ExoPlayer.Builder(context)
-            .setMediaSourceFactory(DefaultMediaSourceFactory(OkHttpDataSource.Factory(client)))
-            .build()
-    }
+    val serverUrl = rememberServerUrl()
+    val exoPlayer = remember(url) { assetPlayer(context, url, serverUrl) }
 
     var isPlaying by remember { mutableStateOf(false) }
     var durationMs by remember { mutableLongStateOf(0L) }
@@ -90,7 +82,7 @@ fun AudioPlayer(
             }
         }
         exoPlayer.addListener(listener)
-        exoPlayer.setMediaItem(MediaItem.fromUri(url))
+        exoPlayer.setMediaItem(MediaItem.fromUri(resolved(serverUrl, url)))
         exoPlayer.prepare()
 
         onDispose {

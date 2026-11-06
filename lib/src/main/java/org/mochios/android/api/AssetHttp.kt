@@ -10,7 +10,9 @@ import dagger.Provides
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
+import okhttp3.Cookie
+import okhttp3.CookieJar
+import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.mochios.android.auth.SessionManager
@@ -23,10 +25,35 @@ import javax.inject.Singleton
 annotation class AssetHttpClient
 
 /**
- * Media-asset client. Own-server requests carry the session cookie and per-app
- * token but no invalidation interceptor - an image 401 must not sign the user
- * out. Foreign hosts get browser UA/Accept/Referer, which bot-mitigated CDNs
- * require.
+ * The header marking an asset request as one of this app's own addresses (see
+ * [owned]). The asset client sends the session and an app token to the user's
+ * server only with it, and takes it off before the request leaves.
+ */
+const val OWNED = "Mochi-Owned"
+
+/**
+ * Whether [address] is one of this app's own: server-relative ("/feeds/..."),
+ * as every address the app builds from its own routes is, and as the user's
+ * server gives the ones it serves. An absolute URL is never one, even on the
+ * user's server: it may be a peer's choice - a link, a page's image, a feed's
+ * enclosure - and with the session and the token of the app its path named, a
+ * request for it would run any of that app's actions as the user. A backslash
+ * or a control character, which no address the app builds holds, makes it none.
+ */
+fun owned(address: String): Boolean =
+    address.startsWith("/") && !address.startsWith("//") && address.none { it == '\\' || it.isISOControl() }
+
+/** [address] resolved against [server]: an [owned] one onto it, any other as given. */
+fun resolved(server: String, address: String): String =
+    if (owned(address)) server.trimEnd('/') + address else address
+
+/**
+ * Media-asset client, with no invalidation interceptor - an image 401 must not
+ * sign the user out. A request marked [OWNED] for the user's server carries the
+ * session cookie and the token of the app its path names; any other request for
+ * the user's server carries neither, so an address someone else chose reaches
+ * the server as an anonymous one. Foreign hosts get browser UA/Accept/Referer,
+ * which bot-mitigated CDNs require.
  */
 @Module
 @InstallIn(SingletonComponent::class)
@@ -43,25 +70,68 @@ object AssetHttpModule {
     @Singleton
     @AssetHttpClient
     fun provideAssetHttpClient(sessionManager: SessionManager): OkHttpClient =
+        assetClient(
+            server = sessionManager::getServerUrlBlocking,
+            token = sessionManager::getTokenBlocking,
+            jar = sessionManager.cookieJar,
+        )
+
+    /**
+     * The asset client over [server], the user's server's origin, [token],
+     * an app's token by name, and [jar], the session's cookie jar.
+     */
+    internal fun assetClient(server: () -> String, token: (String) -> String?, jar: CookieJar): OkHttpClient =
         OkHttpClient.Builder()
-            .cookieJar(sessionManager.cookieJar)
+            .cookieJar(foreign(jar) { url -> isServerOrigin(url, server()) })
             .addInterceptor { chain ->
-                val request = chain.request()
+                val request = chain.request().newBuilder().removeHeader(OWNED).build()
                 // Whole origin, not the host: a host-only match handed the app
                 // token to `http://host` and to `host:8443`.
-                if (!isServerOrigin(request.url, sessionManager.getServerUrlBlocking())) {
-                    return@addInterceptor chain.proceed(
-                        request.newBuilder()
-                            .header("User-Agent", BROWSER_USER_AGENT)
-                            .header("Accept", BROWSER_IMAGE_ACCEPT)
-                            .header("Referer", "${request.url.scheme}://${request.url.host}/")
-                            .build()
-                    )
+                if (isServerOrigin(request.url, server())) {
+                    return@addInterceptor chain.proceed(request)
+                }
+                chain.proceed(
+                    request.newBuilder()
+                        .header("User-Agent", BROWSER_USER_AGENT)
+                        .header("Accept", BROWSER_IMAGE_ACCEPT)
+                        .header("Referer", "${request.url.scheme}://${request.url.host}/")
+                        .build()
+                )
+            }
+            // The credentials go on hop by hop, and only on the hop for the
+            // call's own marked address. A redirect is a request for an address
+            // the answer chose - a commenter's avatar route redirects to the icon
+            // URL they set - and a header put on above would follow it there,
+            // the Cookie to any host and the token anywhere on the server.
+            .addNetworkInterceptor { chain ->
+                val request = chain.request()
+                val call = chain.call().request()
+                if (call.header(OWNED) == null || request.url != call.url || !isServerOrigin(request.url, server())) {
+                    return@addNetworkInterceptor chain.proceed(request)
                 }
                 val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
-                chain.proceed(authorised(request, app?.let { sessionManager.getTokenBlocking(it) }))
+                chain.proceed(session(authorised(request, app?.let(token)), jar.loadForRequest(request.url)))
             }
             .build()
+}
+
+/** The header [AssetHttpClient] reads: [OWNED] for one of the app's own addresses ([owned]), nothing for any other. */
+fun assetHeaders(address: String): Map<String, String> = if (owned(address)) mapOf(OWNED to "1") else emptyMap()
+
+/**
+ * The asset client's cookie jar: [jar] for foreign hosts, whose cookies a
+ * bot-mitigated CDN may want back, and nothing for the user's server, whose
+ * session goes only with a request marked [OWNED], added by the client itself.
+ * A cookie the user's server sets on an image answer is not kept: the API
+ * client's answers renew the session.
+ */
+internal fun foreign(jar: CookieJar, server: (HttpUrl) -> Boolean): CookieJar = object : CookieJar {
+    override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {
+        if (!server(url)) jar.saveFromResponse(url, cookies)
+    }
+
+    override fun loadForRequest(url: HttpUrl): List<Cookie> =
+        if (server(url)) emptyList() else jar.loadForRequest(url)
 }
 
 /**
@@ -86,6 +156,16 @@ internal fun authorised(request: Request, token: String?): Request =
             .build()
     }
 
+/** [request] with [cookies], the session's, in its `Cookie` header, or unchanged when there are none. */
+internal fun session(request: Request, cookies: List<Cookie>): Request =
+    if (cookies.isEmpty()) {
+        request
+    } else {
+        request.newBuilder()
+            .header("Cookie", cookies.joinToString("; ") { cookie -> "${cookie.name}=${cookie.value}" })
+            .build()
+    }
+
 /**
  * Lets non-Hilt call sites (composables in the shared UI layer) reach the
  * [AssetHttpClient] via `EntryPointAccessors.fromApplication(...)`.
@@ -96,23 +176,4 @@ interface AssetHttpEntryPoint {
 
     @AssetHttpClient
     fun assetHttpClient(): OkHttpClient
-}
-
-/**
- * Auth headers for a session-gated asset fetched outside OkHttp. Empty unless
- * [url] is on the user's server - feeds passes absolute RSS URLs here, and
- * `attacker.example/feeds/...` would otherwise collect the Feeds token.
- */
-fun assetAuthHeaders(sessionManager: SessionManager, url: String): Map<String, String> {
-    val httpUrl = url.toHttpUrlOrNull() ?: return emptyMap()
-    if (!isServerOrigin(httpUrl, sessionManager.getServerUrlBlocking())) return emptyMap()
-    val headers = HashMap<String, String>()
-    httpUrl.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
-        ?.let { app -> sessionManager.getTokenBlocking(app) }
-        ?.let { token -> headers["Authorization"] = "Bearer $token" }
-    val cookies = sessionManager.cookieJar.loadForRequest(httpUrl)
-    if (cookies.isNotEmpty()) {
-        headers["Cookie"] = cookies.joinToString("; ") { cookie -> "${cookie.name}=${cookie.value}" }
-    }
-    return headers
 }

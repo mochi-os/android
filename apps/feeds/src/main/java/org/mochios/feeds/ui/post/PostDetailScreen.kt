@@ -116,12 +116,15 @@ import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.findInThread
 import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.rememberReplyFocus
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
 import org.mochios.android.util.shareLink
 import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.model.articleImage
 import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.feeds.ui.component.CopyItems
@@ -560,13 +563,13 @@ internal fun PostDetailContent(
                 }
             }
 
-            val images = currentPost.attachments.filter { it.isImage }
+            val attachmentFeed = currentPost.feed.ifEmpty { viewModel.feedId }
+            val images = addressed(currentPost.attachments, "feeds", attachmentFeed).filter { it.isImage }
             val openIndex = images.indexOfFirst { it.id == openAttachment }
             if (openIndex >= 0) {
-                val attachmentFeed = currentPost.feed.ifEmpty { viewModel.feedId }
                 AttachmentLightbox(
                     images = images,
-                    urlBuilder = { att -> att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}" },
+                    urlBuilder = { att -> att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty() },
                     initialIndex = openIndex,
                     onDismiss = { openAttachment = null },
                     commentCount = { att -> anchoredCommentCount(currentPost.comments, att.id) },
@@ -605,7 +608,7 @@ internal fun PostDetailContent(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun PostContent(
+internal fun PostContent(
     post: Post,
     tags: List<Tag>,
     permissions: Permissions,
@@ -796,23 +799,24 @@ private fun PostContent(
         }
 
         // Attachments
-        if (!hidden && post.attachments.isNotEmpty()) {
+        val attachmentFeed = post.feed.ifEmpty { feedId }
+        val attachments = addressed(post.attachments, "feeds", attachmentFeed)
+        if (!hidden && attachments.isNotEmpty()) {
             Spacer(modifier = Modifier.height(12.dp))
-            val attachmentFeed = post.feed.ifEmpty { feedId }
             AttachmentGallery(
-                attachments = post.attachments,
+                attachments = attachments,
                 urlBuilder = { att ->
-                    att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}"
+                    att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty()
                 },
                 thumbnailUrlBuilder = { att ->
-                    att.thumbnailUrl ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
+                    att.thumbnailUrl ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
                 },
                 // previewUrl is absent on servers that predate the preview
                 // variant; falling back to the thumbnail chain keeps working.
                 previewUrlBuilder = { att ->
                     att.previewUrl
                         ?: att.thumbnailUrl
-                        ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
+                        ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
                 },
                 commentCount = commentCount,
                 comments = comments,
@@ -824,7 +828,7 @@ private fun PostContent(
             // Use ContentScale.Fit so the full image shows at natural aspect
             // ratio — Crop with a fixed max-height was clipping landscape and
             // tall portraits alike.
-            post.data?.rss?.image?.takeIf { it.isNotEmpty() }?.let { imageUrl ->
+            articleImage(post.data?.rss?.image)?.let { imageUrl ->
                 Spacer(modifier = Modifier.height(12.dp))
                 MochiImage(
                     model = imageUrl,

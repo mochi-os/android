@@ -10,6 +10,7 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
 import org.mochios.android.model.Reaction
+import org.mochios.android.util.isWebUrl
 
 data class Post(
     val id: String = "",
@@ -72,6 +73,13 @@ data class PostData(
     val media: List<PostMedia>? = null,
     val emoji: List<PostEmoji>? = null,
 )
+
+/**
+ * [image], an article's picture, when it is a web address, and null otherwise.
+ * The feed's source chose it, and a path would be taken for one of the app's
+ * own addresses and fetched with the session and the feeds token.
+ */
+fun articleImage(image: String?): String? = image?.takeIf { isWebUrl(it) }
 
 data class RssData(
     val html: String = "",

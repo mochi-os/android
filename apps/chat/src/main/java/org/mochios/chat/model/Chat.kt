@@ -8,6 +8,7 @@ package org.mochios.chat.model
 import com.google.gson.annotations.SerializedName
 import org.mochios.android.model.Attachment
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.segment
 
 // Chat status values mirrored from the server (chats.status). 'active' = current
 // member; 'left'/'removed' = departed but kept read-only; 'deleted' = hidden
@@ -43,9 +44,10 @@ data class Chat(
 /**
  * A member's avatar through the chat app's own person-asset proxy, which can
  * serve a member whose person entity lives on another server; the direct
- * people route cannot.
+ * people route cannot. Null when the id, a peer's, cannot be one segment of
+ * the address ([segment]).
  */
-fun personAvatarUrl(person: String): String = "/chat/-/person/$person/asset/avatar"
+fun personAvatarUrl(person: String): String? = segment(person)?.let { id -> "/chat/-/person/$id/asset/avatar" }
 
 data class ChatMember(
     val id: String = "",

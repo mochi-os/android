@@ -25,8 +25,11 @@ import org.mochios.android.ui.components.SavedListLabels
 import org.mochios.android.ui.components.SavedListScaffold
 import org.mochios.android.ui.components.SavedPostCard
 import org.mochios.android.ui.components.SavedPostFooter
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
 import org.mochios.feeds.R
 import org.mochios.feeds.model.SavedItem
+import org.mochios.feeds.model.articleImage
 import org.mochios.feeds.ui.component.PostTitle
 import org.mochios.feeds.ui.feed.GalleryMosaic
 
@@ -63,7 +66,7 @@ fun SavedScreen(
 }
 
 @Composable
-private fun SavedPostCardContent(
+internal fun SavedPostCardContent(
     item: SavedItem,
     onClick: () -> Unit,
     onUnsave: () -> Unit,
@@ -76,13 +79,13 @@ private fun SavedPostCardContent(
     // images shows them all, as the feed's mosaic in the card's image space.
     val rawTitle = post.data?.rss?.title.orEmpty()
     val displayTitle = rawTitle.trim().takeIf { it.isNotEmpty() && post.body.startsWith(rawTitle) }
-    val images = post.attachments.filter { attachment -> attachment.isImage }
+    val images = addressed(post.attachments, "feeds", post.feedId).filter { attachment -> attachment.isImage }
     val attachmentImageUrls = images
         .map { attachment ->
-            attachment.url ?: "/feeds/${post.feedId}/-/attachments/${attachment.id}"
+            attachment.url ?: attachmentAddress("feeds", post.feedId, attachment.id).orEmpty()
         }
     val heroUrl = attachmentImageUrls.firstOrNull()
-        ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
+        ?: articleImage(post.data?.rss?.image)
     val previewBody = post.bodyHtml.ifBlank { post.body }
 
     SavedPostCard(onClick = onClick) {
@@ -99,7 +102,7 @@ private fun SavedPostCardContent(
                 tileModel = { attachment ->
                     attachment.previewUrl
                         ?: attachment.thumbnailUrl
-                        ?: "/feeds/${post.feedId}/-/attachments/${attachment.id}/thumbnail"
+                        ?: attachmentAddress("feeds", post.feedId, attachment.id, "thumbnail").orEmpty()
                 },
                 onTap = { onClick() },
                 modifier = Modifier

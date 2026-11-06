@@ -54,6 +54,7 @@ import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.Activity
 import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.android.model.Comment
+import org.mochios.android.util.segment
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -293,13 +294,27 @@ fun ObjectDetailSheet(
     }
 }
 
-/** Where a commenter's avatar is served: under one of their comments on the item. */
-internal fun commentAvatar(crmId: String, commentId: String) =
-    "/crm/$crmId/-/comment/$commentId/asset/avatar"
+/**
+ * Where a commenter's avatar is served: under one of their comments on the
+ * item. Null when an id, a peer's, cannot be one segment of the address
+ * ([segment]).
+ */
+internal fun commentAvatar(crmId: String, commentId: String): String? {
+    val crm = segment(crmId) ?: return null
+    val comment = segment(commentId) ?: return null
+    return "/crm/$crm/-/comment/$comment/asset/avatar"
+}
 
-/** Where a person's avatar is served from the activity tab: under one of their rows. */
-internal fun activityAvatar(crmId: String, activityId: String) =
-    "/crm/$crmId/-/activity/$activityId/asset/avatar"
+/**
+ * Where a person's avatar is served from the activity tab: under one of their
+ * rows. Null when an id, a peer's, cannot be one segment of the address
+ * ([segment]).
+ */
+internal fun activityAvatar(crmId: String, activityId: String): String? {
+    val crm = segment(crmId) ?: return null
+    val activity = segment(activityId) ?: return null
+    return "/crm/$crm/-/activity/$activity/asset/avatar"
+}
 
 /**
  * One avatar address per commenter, from each one's first comment in reading

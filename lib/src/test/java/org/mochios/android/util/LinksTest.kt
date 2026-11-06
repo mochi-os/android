@@ -10,6 +10,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.android.model.Attachment
 
 class LinksTest {
 
@@ -80,5 +81,45 @@ class LinksTest {
         assertNull(segment(""))
         assertNull(segment("."))
         assertNull(segment(".."))
+    }
+
+    @Test
+    fun `an attachment's address is its entity's route, with the variant after it`() {
+        val id = "019a2b3c4d5e6f708192a3b4c5d6e7f8"
+        assertEquals("/feeds/f1/-/attachments/$id", attachmentAddress("feeds", "f1", id))
+        assertEquals("/forums/f1/-/attachments/$id/thumbnail", attachmentAddress("forums", "f1", id, "thumbnail"))
+        assertEquals("/chat/c1/-/attachments/$id/preview", attachmentAddress("chat", "c1", id, "preview"))
+    }
+
+    // Attachment ids and entity ids reach the phone from other servers, in a
+    // remote view; the image request carries the session and the token of
+    // whatever app the path names.
+    @Test
+    fun `an attachment id cannot point the address at another action`() {
+        assertNull(attachmentAddress("feeds", "f1", "../../../../people/-/x?y=1"))
+        assertNull(attachmentAddress("feeds", "f1", "a/b"))
+        assertNull(attachmentAddress("feeds", "f1", ".."))
+        assertNull(attachmentAddress("feeds", "f1", "."))
+        assertNull(attachmentAddress("feeds", "f1", ""))
+        assertEquals("/feeds/f1/-/attachments/a1%3Fx%3D1/thumbnail", attachmentAddress("feeds", "f1", "a1?x=1", "thumbnail"))
+        assertEquals("/feeds/f1/-/attachments/a1%23y", attachmentAddress("feeds", "f1", "a1#y"))
+    }
+
+    @Test
+    fun `an entity id cannot point the address at another action`() {
+        assertNull(attachmentAddress("feeds", "../people", "a1"))
+        assertNull(attachmentAddress("feeds", "..", "a1"))
+        assertNull(attachmentAddress("feeds", "", "a1"))
+        assertEquals("/feeds/f%3Fx/-/attachments/a1", attachmentAddress("feeds", "f?x", "a1"))
+    }
+
+    @Test
+    fun `an attachment with no address is left out, and one the server addressed stays`() {
+        val plain = Attachment(id = "a1")
+        val pathed = Attachment(id = "../../people/-/x")
+        val dotted = Attachment(id = "..")
+        val given = Attachment(id = "../x", url = "/feeds/f1/-/attachments/a9")
+        assertEquals(listOf(plain, given), addressed(listOf(plain, pathed, dotted, given), "feeds", "f1"))
+        assertEquals(listOf(given), addressed(listOf(plain, pathed, given), "feeds", "../f1"))
     }
 }

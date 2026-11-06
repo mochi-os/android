@@ -46,14 +46,14 @@ fun AuthorAvatar(
 ) {
     val wiki = LocalWikiContext.current
         ?: error("AuthorAvatar requires LocalWikiContext")
-    val baseURL = wiki.baseURL
+    val base = wiki.path
     // styleUrl is computed for parity with web (page-history.tsx /
     // changes-list.tsx) — the lib EntityAvatar will read it once accent
     // fetching lands on Android; until then it's reserved for that wiring.
     @Suppress("UNUSED_VARIABLE")
     // An id no segment can carry has the placeholder.
-    val styleUrl = segment(revisionId)?.let { "${baseURL}revision/$it/asset/style" }
-    val src = segment(revisionId)?.let { "${baseURL}revision/$it/asset/avatar" }
+    val styleUrl = segment(revisionId)?.let { "${base}revision/$it/asset/style" }
+    val src = segment(revisionId)?.let { "${base}revision/$it/asset/avatar" }
 
     EntityAvatar(
         name = authorName,

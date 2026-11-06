@@ -55,6 +55,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.people.R
 import org.mochios.people.model.GroupMemberType
 import org.mochios.android.R as MochiR
@@ -264,7 +265,7 @@ private fun ConfirmRow(result: AddMemberViewModel.SearchResult) {
         when (result.type) {
             GroupMemberType.USER -> EntityAvatar(
                 name = result.name,
-                src = "/people/${result.id}/-/avatar",
+                src = personAvatarPath(result.id),
                 seed = result.id,
                 size = 40.dp,
             )
@@ -328,7 +329,7 @@ private fun SearchRow(
         when (result.type) {
             GroupMemberType.USER -> EntityAvatar(
                 name = result.name,
-                src = "/people/${result.id}/-/avatar",
+                src = personAvatarPath(result.id),
                 seed = result.id,
                 size = 32.dp,
             )

@@ -28,6 +28,8 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
 import org.mochios.android.util.isWebUrl
 import org.mochios.android.util.openWeb
 import org.mochios.android.util.segment
@@ -91,10 +93,10 @@ internal fun CommentItem(
         depth = depth,
         seed = comment.authorId,
         avatarUrl = avatarUrl,
-        attachments = comment.attachments,
-        attachmentUrl = { att -> att.url ?: "/feeds/$feedId/-/attachments/${att.id}" },
+        attachments = addressed(comment.attachments, "feeds", feedId),
+        attachmentUrl = { att -> att.url ?: attachmentAddress("feeds", feedId, att.id).orEmpty() },
         attachmentThumbnailUrl = { att ->
-            att.thumbnailUrl ?: "/feeds/$feedId/-/attachments/${att.id}/thumbnail"
+            att.thumbnailUrl ?: attachmentAddress("feeds", feedId, att.id, "thumbnail").orEmpty()
         },
         isEditing = isEditing,
         editText = editText,
@@ -103,7 +105,7 @@ internal fun CommentItem(
         onCancelEdit = onCancelEdit,
         horizontalPadding = horizontalPadding,
         anchorThumbnailUrl = anchor.takeIf { it.isNotEmpty() }
-            ?.let { "/feeds/$feedId/-/attachments/$it/thumbnail" },
+            ?.let { attachmentAddress("feeds", feedId, it, "thumbnail") },
         anchorCaption = comment.attachmentCaption.orEmpty(),
         onOpenAnchor = onOpenAttachment?.let { open -> { open(anchor) } },
         onName = if (isWebUrl(page)) ({ openWeb(context, page) }) else null,

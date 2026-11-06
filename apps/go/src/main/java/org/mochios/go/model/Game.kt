@@ -6,6 +6,7 @@
 package org.mochios.go.model
 
 import com.google.gson.annotations.SerializedName
+import org.mochios.android.util.segment
 
 /**
  * A Go game record, mirroring `Game` in `apps/go/web/src/api/types/games.ts`.
@@ -63,4 +64,15 @@ data class Game(
      */
     val canOfferDraw: Boolean
         get() = status == "active" && drawOffer.isNullOrEmpty()
+}
+
+/**
+ * An opponent's avatar through the game's own user-asset proxy: a cross-app
+ * request to the people app carries this app's token and is refused. Null
+ * when an id, a peer's, cannot be one segment of the address ([segment]).
+ */
+fun opponentAvatarUrl(game: String, opponent: String): String? {
+    val entity = segment(game) ?: return null
+    val user = segment(opponent) ?: return null
+    return "/go/$entity/-/user/$user/asset/avatar"
 }

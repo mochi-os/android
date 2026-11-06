@@ -110,6 +110,7 @@ import org.mochios.words.engine.parseBoard
 import org.mochios.words.model.Game
 import org.mochios.words.model.canExchange
 import org.mochios.words.model.isResigner
+import org.mochios.words.model.opponentAvatarUrl
 import org.mochios.words.model.resignerSlot
 import org.mochios.words.model.GameMessage
 import org.mochios.words.ui.detail.board.MoveActions
@@ -1190,7 +1191,7 @@ internal fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel 
         avatarUrl = opponentSlot
             ?.let { num -> playerIdentity(num) }
             ?.takeIf { it.isNotEmpty() }
-            ?.let { identity -> "/words/${game.id}/-/user/$identity/asset/avatar" },
+            ?.let { identity -> opponentAvatarUrl(game.id, identity) },
     )
 }
 

@@ -22,6 +22,7 @@ import okhttp3.OkHttpClient
 import org.mochios.android.api.AssetHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.ui.components.OwnedInterceptor
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.RevalidatingCacheStrategy
 import org.mochios.android.ui.components.StaleIfError
@@ -70,6 +71,10 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     override fun newImageLoader(context: PlatformContext): ImageLoader =
         ImageLoader.Builder(context)
             .components {
+                // Mark a request for one of the app's own, server-relative
+                // addresses, the only kind the asset client sends the session
+                // and a token with: an absolute URL may be a peer's choice.
+                add(OwnedInterceptor())
                 // Expand server-relative asset paths ("/people/<id>/-/avatar")
                 // to absolute URLs, so call sites pass relative paths without
                 // threading the server URL through.
@@ -86,7 +91,7 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                         concurrentRequestStrategy = { DeDupeConcurrentRequestStrategy() },
                     )
                 )
-                add(VideoFrameFetcher.Factory(sessionManager))
+                add(VideoFrameFetcher.Factory(sessionManager) { assetHttpClient })
             }
             .build()
 

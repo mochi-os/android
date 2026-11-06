@@ -59,6 +59,8 @@ import org.mochios.market.model.Condition
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingType
 import org.mochios.market.model.PricingModel
+import org.mochios.market.model.photoAddress
+import org.mochios.market.model.userAvatarUrl
 
 /**
  * Grid-cell listing card. Seller fields fall back to the [Listing]'s own values
@@ -94,7 +96,7 @@ fun ListingCard(
             // expanded by RelativeAssetUrlMapper inside the Coil pipeline.
             val photoUrl = listing.photo?.id
                 ?.takeIf { id -> id.isNotBlank() }
-                ?.let { id -> "/market/-/photo/$id/thumbnail" }
+                ?.let { id -> photoAddress(id, "thumbnail") }
             if (photoUrl.isNullOrBlank()) {
                 NoPhotoPlaceholder(modifier = Modifier.fillMaxSize())
             } else {
@@ -179,7 +181,7 @@ fun ListingCard(
             // relative path is expanded + token-gated inside EntityAvatar.
             val derivedAvatarUrl = listing.seller
                 .takeIf { id -> id.isNotBlank() }
-                ?.let { id -> "/market/-/user/$id/asset/avatar" }
+                ?.let { id -> userAvatarUrl(id) }
             val avatarUrl = sellerAvatarUrl ?: derivedAvatarUrl
             val rating = sellerRating.takeIf { it > 0f }
                 ?: listing.sellerRating?.let { ratingStars(it) } ?: 0f

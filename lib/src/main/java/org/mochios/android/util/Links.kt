@@ -10,6 +10,7 @@ import android.content.Intent
 import android.net.Uri
 import org.mochios.android.i18n.Flights
 import org.mochios.android.i18n.Maps
+import org.mochios.android.model.Attachment
 import java.net.URLEncoder
 
 /**
@@ -58,6 +59,27 @@ fun segment(id: String): String? {
 }
 
 private const val HEX = "0123456789ABCDEF"
+
+/**
+ * The address of attachment [id] of [entity] in [app] on the user's server,
+ * `/<app>/<entity>/-/attachments/<id>`, with [variant] ("thumbnail",
+ * "preview") after it, or null when [entity] or [id] cannot be one segment
+ * ([segment]). Both can reach the phone from another server, in a remote
+ * view.
+ */
+fun attachmentAddress(app: String, entity: String, id: String, variant: String? = null): String? {
+    val owner = segment(entity) ?: return null
+    val attachment = segment(id) ?: return null
+    return "/$app/$owner/-/attachments/$attachment" + if (variant == null) "" else "/$variant"
+}
+
+/**
+ * [attachments] of [entity] in [app] that have an address: the one the
+ * user's server gave, or one [attachmentAddress] builds. The rest have no
+ * image, and are left out rather than shown broken.
+ */
+fun addressed(attachments: List<Attachment>, app: String, entity: String): List<Attachment> =
+    attachments.filter { it.url != null || attachmentAddress(app, entity, it.id) != null }
 
 /**
  * What a `mochi:/<entity>` path segment may contain: letters and digits in any

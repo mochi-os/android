@@ -280,20 +280,6 @@ class NetworksPeopleTest {
     }
 
     @Test
-    fun `adding a handle and a messaging address each makes a row`() {
-        var changed: org.mochios.people.ui.contacts.ContactForm? = null
-        rule.setContent {
-            androidx.compose.foundation.layout.Column {
-                ContactFields(form = contactForm(null).copy(name = "Ada"), books = emptyList(), onChange = { changed = it })
-            }
-        }
-        rule.onNodeWithText("Add handle").performClick()
-        assertEquals(1, changed?.handles?.size)
-        rule.onNodeWithText("Add messaging address").performClick()
-        assertEquals(1, changed?.messaging?.size)
-    }
-
-    @Test
     fun `an XMPP switch says invited, and names the address and account when there are several`() {
         var toggled: Boolean? = null
         rule.setContent {

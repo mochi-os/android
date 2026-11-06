@@ -75,6 +75,7 @@ import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.people.R
 import org.mochios.people.model.Contact
 import org.mochios.people.ui.components.PeopleDrawer
@@ -513,7 +514,7 @@ internal fun ContactRow(
         name = contact.name,
         seed = contact.person.ifBlank { contact.id },
         icon = Icons.Outlined.Person,
-        avatarUrl = if (mochi) "/people/${contact.person}/-/avatar" else null,
+        avatarUrl = if (mochi) personAvatarPath(contact.person) else null,
         initials = true,
         subtitle = contact.directory.takeIf { it.isNotBlank() && it != contact.name },
         onClick = onTap,

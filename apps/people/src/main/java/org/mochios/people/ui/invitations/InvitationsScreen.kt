@@ -72,6 +72,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.segment
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.ui.components.PeopleDrawer
@@ -552,7 +553,9 @@ private data class PolicyOption(
     val description: String,
 )
 
+/** A person's avatar; null when the id, a peer's, cannot be one segment of the address ([segment]). */
 private fun avatarUrl(id: String): String? {
     if (id.isBlank()) return null
-    return "/people/$id/-/avatar"
+    val person = segment(id) ?: return null
+    return "/people/$person/-/avatar"
 }

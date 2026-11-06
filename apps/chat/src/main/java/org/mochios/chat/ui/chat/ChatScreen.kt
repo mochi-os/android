@@ -103,6 +103,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.launcher.AddToHomeItem
+import org.mochios.android.model.Attachment
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.push.VisibleEntityEffect
@@ -138,6 +139,7 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.ui.components.rememberReplyFocus
+import org.mochios.android.util.attachmentAddress
 import org.mochios.android.util.segment
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatDetail
@@ -479,7 +481,7 @@ private fun ChatContent(
                 TopAppBar(
                     title = {
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            if (peerAvatarUrl != null) {
+                            if (peer != null) {
                                 EntityAvatar(
                                     name = peer.name.ifBlank { uiState.chat.name },
                                     src = peerAvatarUrl,
@@ -1144,29 +1146,26 @@ internal fun MessageBubble(
                                 }
                             )
                         }
-                        if (message.attachments.isNotEmpty()) {
+                        val attachments = messageAttachments(chatId, message.attachments)
+                        if (attachments.isNotEmpty()) {
                             if (message.body.isNotEmpty()) Spacer(modifier = Modifier.height(6.dp))
                             AttachmentGallery(
-                                attachments = message.attachments,
+                                attachments = attachments,
                                 // The server's `url`/`thumbnail_url` point at the
                                 // flat `/chat/attachments/<id>` route, which does
                                 // not serve the asset here. Always build the chat
                                 // asset route instead: `/chat/<chatId>/-/attachments/<id>`.
                                 urlBuilder = { att ->
-                                    "/chat/$chatId/-/attachments/${att.id}"
+                                    attachmentAddress("chat", chatId, att.id).orEmpty()
                                 },
                                 thumbnailUrlBuilder = { att ->
-                                    "/chat/$chatId/-/attachments/${att.id}/thumbnail"
+                                    attachmentAddress("chat", chatId, att.id, "thumbnail").orEmpty()
                                 },
                                 previewUrlBuilder = { att ->
                                     // previewUrl's presence signals the server
                                     // generates previews; the path itself is
                                     // rebuilt on the chat asset route (see above).
-                                    if (att.previewUrl != null) {
-                                        "/chat/$chatId/-/attachments/${att.id}/preview"
-                                    } else {
-                                        "/chat/$chatId/-/attachments/${att.id}/thumbnail"
-                                    }
+                                    attachmentAddress("chat", chatId, att.id, if (att.previewUrl != null) "preview" else "thumbnail").orEmpty()
                                 }
                             )
                         }
@@ -1637,5 +1636,14 @@ internal fun messageAvatar(chatId: String, messageId: String): String? {
  * its sender's picture, so a list that built each message's own address had
  * the image cache fetch and store the same picture once per message.
  */
+/**
+ * The attachments of a message in [chatId] that have an address on the chat
+ * asset route. Chat builds every address from the id and never takes the
+ * server's, so an id no segment can carry ([attachmentAddress]) has no image
+ * and is left out.
+ */
+internal fun messageAttachments(chatId: String, attachments: List<Attachment>): List<Attachment> =
+    attachments.filter { attachmentAddress("chat", chatId, it.id) != null }
+
 internal fun messageAvatars(messages: List<ChatMessage>, chatId: String): Map<String, String> =
     addressByAuthor(messages, { it.member }, { messageAvatar(chatId, it.id) })

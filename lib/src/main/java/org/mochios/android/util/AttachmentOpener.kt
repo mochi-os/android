@@ -21,6 +21,9 @@ import kotlinx.coroutines.withContext
 import okhttp3.Request
 import okhttp3.ResponseBody
 import org.mochios.android.api.AssetHttpEntryPoint
+import org.mochios.android.api.assetHeaders
+import org.mochios.android.api.resolved
+import org.mochios.android.auth.SessionEntryPoint
 import org.mochios.android.model.Attachment
 
 /**
@@ -55,8 +58,9 @@ object AttachmentOpener {
     private class StatusException(val status: Int) : IOException("HTTP " + status)
 
     /**
-     * Fetch [url] through the authenticated asset client, cache it, and launch
-     * an `ACTION_VIEW`. Safe to call from the main thread; the network and disk
+     * Fetch [url] through the asset client, cache it, and launch an
+     * `ACTION_VIEW`. One of the app's own server-relative addresses goes with
+     * the session; any other URL without (see `owned`). Safe to call from the main thread; the network and disk
      * work runs on [Dispatchers.IO].
      */
     suspend fun open(context: Context, url: String, attachment: Attachment): OpenResult {
@@ -267,7 +271,13 @@ object AttachmentOpener {
         val client = EntryPointAccessors
             .fromApplication(context.applicationContext, AssetHttpEntryPoint::class.java)
             .assetHttpClient()
-        client.newCall(Request.Builder().url(url).build()).execute().use { response ->
+        val server = EntryPointAccessors
+            .fromApplication(context.applicationContext, SessionEntryPoint::class.java)
+            .sessionManager()
+            .getServerUrlBlocking()
+        val request = Request.Builder().url(resolved(server, url))
+        for ((name, value) in assetHeaders(url)) request.header(name, value)
+        client.newCall(request.build()).execute().use { response ->
             if (!response.isSuccessful) {
                 throw StatusException(response.code)
             }

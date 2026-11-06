@@ -5,6 +5,8 @@
 
 package org.mochios.words.model
 
+import org.mochios.android.util.segment
+
 data class GameListItem(
     val id: String = "",
     val language: String = "en_US",
@@ -139,6 +141,17 @@ fun getOpponentId(game: GameListItem, myIdentity: String): String {
         if (!isMe) return id
     }
     return ""
+}
+
+/**
+ * An opponent's avatar through the game-bound proxy, as web uses: a cross-app
+ * request to the people app carries this app's token and is refused. Null
+ * when an id, a peer's, cannot be one segment of the address ([segment]).
+ */
+fun opponentAvatarUrl(game: String, opponent: String): String? {
+    val entity = segment(game) ?: return null
+    val user = segment(opponent) ?: return null
+    return "/words/$entity/-/user/$user/asset/avatar"
 }
 
 private fun playerId(game: GameListItem, slot: Int): String? = when (slot) {

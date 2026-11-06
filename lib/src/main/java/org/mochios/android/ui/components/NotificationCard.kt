@@ -66,7 +66,7 @@ fun NotificationCard(
                 val hasSender = notification.sender.isNotBlank()
                 EntityAvatar(
                     name = if (hasSender) notification.sender else notification.topic,
-                    src = if (hasSender) "/people/${notification.sender}/-/avatar" else null,
+                    src = if (hasSender) personAvatarPath(notification.sender) else null,
                     seed = if (hasSender) notification.sender else notification.topic,
                     size = 36.dp,
                 )

@@ -109,7 +109,7 @@ fun MarkdownContent(
         val doc = parser.parse(content)
 
         val headings = extractHeadings(doc)
-        val imageUrls = extractImageUrls(doc).map { wiki.resolveAttachmentUrl(stripThumbnail(it)) }
+        val imageUrls = lightboxImages(wiki, extractImageUrls(doc))
 
         ParsedDocument(headings = headings, imageUrls = imageUrls)
     }
@@ -135,7 +135,9 @@ fun MarkdownContent(
             when (seg) {
                 is MarkdownSegment.Prose ->
                     MarkdownSegment.Prose(
-                        rewriteAttachmentUrls(seg.markdown) { url -> wiki.resolveAttachmentUrl(url) },
+                        // An attachment URL with no address stays as written:
+                        // the page's own render asks without the session.
+                        rewriteAttachmentUrls(seg.markdown) { url -> wiki.resolveAttachmentUrl(url) ?: url },
                     )
                 is MarkdownSegment.Code -> seg
             }
@@ -291,7 +293,9 @@ fun MarkdownContent(
     val lightboxState = lightbox
     if (lightboxState != null) {
         LightboxScreen(
-            images = lightboxState.first,
+            // This wiki's own attachments go server-relative, the only kind the
+            // loader asks with the session; another host's image goes as given.
+            images = lightboxState.first.map(wiki::local),
             initialIndex = lightboxState.second,
             onDismiss = { lightbox = null },
         )
@@ -486,7 +490,7 @@ private fun installImageTapInterceptor(
         if (drawSpans.isEmpty()) return@setOnTouchListener false
 
         val dest = drawSpans[0].drawable.destination ?: return@setOnTouchListener false
-        val resolved = wiki.resolveAttachmentUrl(stripThumbnail(dest))
+        val resolved = wiki.resolveAttachmentUrl(stripThumbnail(dest)) ?: return@setOnTouchListener false
         val idx = imageUrls.indexOf(resolved)
         if (idx >= 0) {
             onImageTap(resolved)
@@ -686,6 +690,14 @@ internal fun extractImageUrls(root: Node): List<String> {
     return urls
 }
 
+/**
+ * The lightbox's images: each of [urls], a page's image sources, resolved
+ * full-size, keeping only those [WikiContextValue.viewable] allows. The
+ * lightbox loads them with the session, and a page is peer-authored.
+ */
+internal fun lightboxImages(wiki: WikiContextValue, urls: List<String>): List<String> =
+    urls.mapNotNull { wiki.resolveAttachmentUrl(stripThumbnail(it)) }.filter { wiki.viewable(it) }
+
 /** Drop a trailing `/thumbnail` segment so the lightbox shows full-size. */
 private fun stripThumbnail(url: String): String =
     if (url.endsWith("/thumbnail")) url.removeSuffix("/thumbnail") else url
@@ -771,7 +783,7 @@ private class WikiLinkResolver(
             }
         }
 
-        val resolved = wiki.resolveAttachmentUrl(link)
+        val resolved = wiki.resolveAttachmentUrl(link) ?: return
 
         // For `[![](img)](resolved)` the LinkSpan targets the outer URL; if it
         // is an attachment, hand it to onImageLink so the host can open the

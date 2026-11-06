@@ -6,6 +6,7 @@
 package org.mochios.android.ui.components
 
 import android.content.Context
+import android.media.MediaDataSource
 import android.media.MediaMetadataRetriever
 import androidx.core.net.toUri
 import coil3.ImageLoader
@@ -15,8 +16,14 @@ import coil3.fetch.FetchResult
 import coil3.fetch.Fetcher
 import coil3.fetch.ImageFetchResult
 import coil3.request.Options
-import org.mochios.android.api.assetAuthHeaders
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okio.Buffer
+import org.mochios.android.api.assetHeaders
+import org.mochios.android.api.resolved
 import org.mochios.android.auth.SessionManager
+import java.io.EOFException
+import java.io.IOException
 
 /**
  * Coil model routing a request to [VideoFrameFetcher]. Attachment URLs carry no
@@ -26,14 +33,15 @@ import org.mochios.android.auth.SessionManager
 data class VideoFrame(val url: String)
 
 /**
- * Decodes a video's opening frame with [MediaMetadataRetriever], which
- * range-requests only that frame rather than the whole clip as Coil's
+ * Decodes a video's opening frame with [MediaMetadataRetriever], which reads
+ * only the ranges that frame needs rather than the whole clip as Coil's
  * `VideoFrameDecoder` would. Returning through Coil keeps the frame in the
  * memory cache.
  */
 class VideoFrameFetcher(
     private val data: VideoFrame,
     private val sessionManager: SessionManager,
+    private val client: () -> OkHttpClient,
     private val context: Context,
 ) : Fetcher {
 
@@ -41,13 +49,16 @@ class VideoFrameFetcher(
         val retriever = MediaMetadataRetriever()
         return try {
             // A clip picked on the device is read through the resolver that
-            // handed it over; one on the server is a URL, and needs the asset
-            // headers to get past auth.
-            val local = data.url.startsWith("content://") || data.url.startsWith("file://")
+            // handed it over. Anything else goes through the asset client,
+            // which sends the session only with one of the app's own addresses
+            // and only to that address: the retriever's own HTTP stack would
+            // carry the headers across any redirect the answer named.
+            val local = picked(data.url)
             if (local) {
                 retriever.setDataSource(context, data.url.toUri())
             } else {
-                retriever.setDataSource(data.url, assetAuthHeaders(sessionManager, data.url))
+                val url = resolved(sessionManager.getServerUrlBlocking(), data.url)
+                retriever.setDataSource(AssetMediaSource(client(), url, assetHeaders(data.url)))
             }
             val bitmap = retriever.getFrameAtTime(0L, MediaMetadataRetriever.OPTION_CLOSEST_SYNC)
                 ?: return null
@@ -63,11 +74,103 @@ class VideoFrameFetcher(
         }
     }
 
-    class Factory(private val sessionManager: SessionManager) : Fetcher.Factory<VideoFrame> {
+    class Factory(
+        private val sessionManager: SessionManager,
+        private val client: () -> OkHttpClient,
+    ) : Fetcher.Factory<VideoFrame> {
         override fun create(
             data: VideoFrame,
             options: Options,
             imageLoader: ImageLoader,
-        ): Fetcher = VideoFrameFetcher(data, sessionManager, options.context)
+        ): Fetcher = VideoFrameFetcher(data, sessionManager, client, options.context)
+    }
+}
+
+/**
+ * Whether [address] is a clip picked on the device: a `content://` one, which
+ * the picker handed over. A `file://` address is never one the app builds.
+ */
+internal fun picked(address: String): Boolean = address.startsWith("content://")
+
+/**
+ * The clip at [url] read through [client] in ranged blocks, with [headers] on
+ * every request, for [MediaMetadataRetriever]. A server that ignores the range
+ * answers with the whole clip, which is read up to the block wanted. A few
+ * blocks are held, since the retriever reads a container's index in many small
+ * pieces.
+ */
+internal class AssetMediaSource(
+    private val client: OkHttpClient,
+    private val url: String,
+    private val headers: Map<String, String>,
+) : MediaDataSource() {
+
+    private val blocks = object : LinkedHashMap<Long, ByteArray>(HELD, 0.75f, true) {
+        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Long, ByteArray>): Boolean = size > HELD
+    }
+
+    // The clip's length: UNASKED before the first answer, -1 when the answer
+    // did not say.
+    private var length = UNASKED
+
+    @Synchronized
+    override fun getSize(): Long {
+        if (length == UNASKED) block(0)
+        return length
+    }
+
+    @Synchronized
+    override fun readAt(position: Long, buffer: ByteArray, offset: Int, size: Int): Int {
+        if (size <= 0) return 0
+        val start = position - position % BLOCK
+        val block = block(start) ?: return -1
+        val within = (position - start).toInt()
+        if (within >= block.size) return -1
+        val count = minOf(size, block.size - within)
+        System.arraycopy(block, within, buffer, offset, count)
+        return count
+    }
+
+    override fun close() {
+        synchronized(this) { blocks.clear() }
+    }
+
+    /** The block starting at [start], or null past the end. */
+    private fun block(start: Long): ByteArray? {
+        blocks[start]?.let { return it }
+        if (length >= 0 && start >= length) return null
+        val request = Request.Builder().url(url).header("Range", "bytes=$start-${start + BLOCK - 1}")
+        for ((name, value) in headers) request.header(name, value)
+        client.newCall(request.build()).execute().use { response ->
+            if (response.code == 416) {
+                if (length == UNASKED) length = start
+                return null
+            }
+            if (response.code != 200 && response.code != 206) throw IOException("HTTP ${response.code}")
+            val body = response.body ?: throw IOException("Empty response body")
+            val source = body.source()
+            if (response.code == 206) {
+                length = response.header("Content-Range")?.substringAfterLast('/')?.toLongOrNull() ?: -1
+            } else {
+                length = body.contentLength().takeIf { it >= 0 } ?: -1
+                try {
+                    source.skip(start)
+                } catch (_: EOFException) {
+                    return null
+                }
+            }
+            val read = Buffer()
+            while (read.size < BLOCK) {
+                if (source.read(read, BLOCK - read.size) == -1L) break
+            }
+            if (read.size == 0L) return null
+            return read.readByteArray().also { bytes -> blocks[start] = bytes }
+        }
+    }
+
+    private companion object {
+        const val BLOCK = 256L * 1024
+        const val HELD = 8
+        const val UNASKED = -2L
     }
 }

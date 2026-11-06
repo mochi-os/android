@@ -55,6 +55,7 @@ import org.mochios.projects.R
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.Activity
 import org.mochios.android.ui.components.addressByAuthor
+import org.mochios.android.util.segment
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -340,13 +341,27 @@ internal fun sheetTabs(merge: Boolean): List<Int> = buildList {
 internal fun commentCount(comments: List<Comment>): Int =
     comments.sumOf { comment -> 1 + commentCount(comment.children) }
 
-/** Where a commenter's avatar is served: under one of their comments on the item. */
-internal fun commentAvatar(projectId: String, commentId: String) =
-    "/projects/$projectId/-/comment/$commentId/asset/avatar"
+/**
+ * Where a commenter's avatar is served: under one of their comments on the
+ * item. Null when an id, a peer's, cannot be one segment of the address
+ * ([segment]).
+ */
+internal fun commentAvatar(projectId: String, commentId: String): String? {
+    val project = segment(projectId) ?: return null
+    val comment = segment(commentId) ?: return null
+    return "/projects/$project/-/comment/$comment/asset/avatar"
+}
 
-/** Where a person's avatar is served from the activity tab: under one of their rows. */
-internal fun activityAvatar(projectId: String, activityId: String) =
-    "/projects/$projectId/-/activity/$activityId/asset/avatar"
+/**
+ * Where a person's avatar is served from the activity tab: under one of their
+ * rows. Null when an id, a peer's, cannot be one segment of the address
+ * ([segment]).
+ */
+internal fun activityAvatar(projectId: String, activityId: String): String? {
+    val project = segment(projectId) ?: return null
+    val activity = segment(activityId) ?: return null
+    return "/projects/$project/-/activity/$activity/asset/avatar"
+}
 
 /**
  * One avatar address per commenter, from each one's first comment in reading

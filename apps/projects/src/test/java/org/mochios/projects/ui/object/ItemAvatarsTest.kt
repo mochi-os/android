@@ -6,6 +6,7 @@
 package org.mochios.projects.ui.`object`
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Test
 import org.mochios.android.model.Comment
 import org.mochios.projects.model.Activity
@@ -40,5 +41,25 @@ class ItemAvatarsTest {
             mapOf("ann" to "/projects/x1/-/activity/a1/asset/avatar", "bob" to "/projects/x1/-/activity/a2/asset/avatar"),
             activityAvatars(activity, "x1"),
         )
+    }
+
+    // Ids can reach the phone from another server, and the image request
+    // carries the session and the token of whatever app its path names.
+    @Test
+    fun `an id cannot point an avatar at another action`() {
+        for (hostile in listOf("x/-/delete?", "..", "")) {
+            assertNull(commentAvatar("x1", hostile))
+            assertNull(activityAvatar("x1", hostile))
+            assertNull(commentAvatar(hostile, "c1"))
+            assertNull(activityAvatar(hostile, "a1"))
+        }
+        assertEquals("/projects/x1/-/comment/a%3Fb/asset/avatar", commentAvatar("x1", "a?b"))
+        assertEquals("/projects/a%3Fb/-/activity/a1/asset/avatar", activityAvatar("a?b", "a1"))
+    }
+
+    @Test
+    fun `a commenter whose first comment has no address gets their next one's`() {
+        val comments = listOf(by("x/-/delete?", "bob"), by("c2", "bob"))
+        assertEquals(mapOf("bob" to "/projects/x1/-/comment/c2/asset/avatar"), commentAvatars(comments, "x1"))
     }
 }

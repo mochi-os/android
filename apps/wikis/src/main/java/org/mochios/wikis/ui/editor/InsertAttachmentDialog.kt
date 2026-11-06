@@ -46,9 +46,11 @@ import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.UploadFiles
+import org.mochios.android.util.segment
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.attachmentPath
 
 /**
  * Attachment picker for the editor. Inserts
@@ -154,7 +156,7 @@ fun InsertAttachmentDialog(
                                 AttachmentTile(
                                     attachment = attachment,
                                     thumbnailUrl = wiki?.let { ctx ->
-                                        "${ctx.baseURL}attachments/${attachment.id}/thumbnail"
+                                        attachmentPath(ctx.baseURL, attachment.id, "thumbnail")
                                     },
                                     onClick = {
                                         val snippet = buildSnippet(attachment)
@@ -226,7 +228,7 @@ private val Attachment.isImage: Boolean get() = type.startsWith("image/")
 
 /** Build the markdown snippet to splice into the body for the picked attachment. */
 private fun buildSnippet(attachment: Attachment): String {
-    val url = "attachments/${attachment.id}"
+    val url = "attachments/" + segment(attachment.id).orEmpty()
     return if (attachment.isImage) {
         "![${attachment.name}]($url/thumbnail)"
     } else {

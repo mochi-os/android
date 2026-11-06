@@ -12,6 +12,7 @@ import org.mochios.words.R
 import org.mochios.words.model.GameListItem
 import org.mochios.words.model.getOpponentId
 import org.mochios.words.model.getPlayerNames
+import org.mochios.words.model.opponentAvatarUrl
 import org.mochios.words.model.playerScore
 import org.mochios.android.i18n.LocalFormat
 
@@ -62,7 +63,7 @@ private fun GameListItem.toDrawerItem(
         // The game-bound proxy, as web uses: a cross-app request to the people
         // app carries this app's token and is refused.
         avatarUrl = if (opponentId.isNotEmpty()) {
-            "/words/$id/-/user/$opponentId/asset/avatar"
+            opponentAvatarUrl(id, opponentId)
         } else {
             null
         },

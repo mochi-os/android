@@ -120,6 +120,8 @@ import org.mochios.android.ui.components.commentRows
 import org.mochios.android.ui.components.findInThread
 import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.rememberReplyFocus
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
 import org.mochios.android.util.shareLink
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
@@ -563,12 +565,12 @@ fun PostScreen(
         }
     }
 
-    val images = uiState.post.attachments.filter { it.isImage }
+    val images = addressed(uiState.post.attachments, "forums", viewModel.forumId).filter { it.isImage }
     val openIndex = images.indexOfFirst { it.id == openAttachment }
     if (openIndex >= 0) {
         AttachmentLightbox(
             images = images,
-            urlBuilder = { att -> att.url ?: "/forums/${viewModel.forumId}/-/attachments/${att.id}" },
+            urlBuilder = { att -> att.url ?: attachmentAddress("forums", viewModel.forumId, att.id).orEmpty() },
             initialIndex = openIndex,
             onDismiss = { openAttachment = null },
             commentCount = attachmentCommentCount,
@@ -874,7 +876,7 @@ internal fun memberServer(member: String): String? =
     if (remoteMember(member)) runCatching { android.net.Uri.parse(member).host }.getOrNull()?.takeIf { it.isNotEmpty() } else null
 
 @Composable
-private fun PostHeader(
+internal fun PostHeader(
     post: Post,
     canVote: Boolean,
     canEdit: Boolean,
@@ -908,22 +910,23 @@ private fun PostHeader(
         if (postMarkdown.isNotBlank()) {
             HtmlContent(html = postMarkdown, modifier = Modifier.fillMaxWidth())
         }
-        if (post.attachments.isNotEmpty()) {
+        val attachments = addressed(post.attachments, "forums", forumId)
+        if (attachments.isNotEmpty()) {
             Spacer(Modifier.height(8.dp))
             AttachmentGallery(
-                attachments = post.attachments,
+                attachments = attachments,
                 urlBuilder = { att ->
-                    att.url ?: "/forums/$forumId/-/attachments/${att.id}"
+                    att.url ?: attachmentAddress("forums", forumId, att.id).orEmpty()
                 },
                 thumbnailUrlBuilder = { att ->
-                    att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
+                    att.thumbnailUrl ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
                 },
                 // previewUrl is absent on servers that predate the preview
                 // variant; falling back to the thumbnail chain keeps working.
                 previewUrlBuilder = { att ->
                     att.previewUrl
                         ?: att.thumbnailUrl
-                        ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
+                        ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
                 },
                 commentCount = commentCount,
                 comments = comments,
@@ -1257,7 +1260,7 @@ private fun AttachmentComments(
  * reply, moderation overflow) differs from feeds.
  */
 @Composable
-private fun CommentCard(
+internal fun CommentCard(
     comment: ForumComment,
     depth: Int,
     forumId: String,
@@ -1301,14 +1304,14 @@ private fun CommentCard(
         depth = depth,
         seed = comment.member,
         avatarUrl = avatars[comment.member] ?: commentAvatar(forumId, comment.post, comment.id),
-        attachments = comment.attachments,
-        attachmentUrl = { att -> att.url ?: "/forums/$forumId/-/attachments/${att.id}" },
+        attachments = addressed(comment.attachments, "forums", forumId),
+        attachmentUrl = { att -> att.url ?: attachmentAddress("forums", forumId, att.id).orEmpty() },
         attachmentThumbnailUrl = { att ->
-            att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
+            att.thumbnailUrl ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
         },
         horizontalPadding = 12.dp,
         anchorThumbnailUrl = anchor.takeIf { it.isNotEmpty() }
-            ?.let { "/forums/$forumId/-/attachments/$it/thumbnail" },
+            ?.let { attachmentAddress("forums", forumId, it, "thumbnail") },
         anchorCaption = comment.attachmentCaption.orEmpty(),
         onOpenAnchor = anchor.takeIf { it.isNotEmpty() }?.let { { onOpenAttachment(it) } },
         collapsed = collapsed,

@@ -77,6 +77,7 @@ import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Message
+import org.mochios.market.model.photoAddress
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.dialog.CONVERSATION_REPORT_REASONS
 import org.mochios.market.ui.dialog.ReportListingDialog
@@ -321,10 +322,11 @@ private fun ListingChip(
                     .clip(RoundedCornerShape(6.dp))
                     .background(MaterialTheme.colorScheme.surfaceVariant),
             ) {
-                if (photo.isNotBlank()) {
+                val thumbnail = photo.takeIf { it.isNotBlank() }?.let { photoAddress(it, "thumbnail") }
+                if (thumbnail != null) {
                     MochiImage(
                         model = ImageRequest.Builder(LocalContext.current)
-                            .data("/market/-/photo/$photo/thumbnail")
+                            .data(thumbnail)
                             .crossfade(true)
                             .build(),
                         contentDescription = null,

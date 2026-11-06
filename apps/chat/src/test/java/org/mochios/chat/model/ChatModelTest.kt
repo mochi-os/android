@@ -8,6 +8,7 @@ package org.mochios.chat.model
 import com.google.gson.Gson
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Test
 
 class ChatModelTest {
@@ -46,7 +47,17 @@ class ChatModelTest {
         assertEquals("/chat/-/person/p1/asset/avatar", url)
         // The direct people route cannot serve a member whose person entity
         // lives on another server.
-        assertFalse(url.startsWith("/people/"))
+        assertFalse(url!!.startsWith("/people/"))
+    }
+
+    // A member's id reaches the phone from their server, and the image request
+    // carries the session and the token of whatever app its path names.
+    @Test
+    fun `a member's id cannot point the avatar at another action`() {
+        assertNull(personAvatarUrl("x/-/delete?"))
+        assertNull(personAvatarUrl(".."))
+        assertNull(personAvatarUrl(""))
+        assertEquals("/chat/-/person/a%3Fb/asset/avatar", personAvatarUrl("a?b"))
     }
 
     /** The settings list and the chat's heading order members as the web does. */

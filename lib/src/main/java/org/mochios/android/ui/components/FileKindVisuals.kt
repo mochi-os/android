@@ -160,15 +160,11 @@ fun FileKindPreview(
     contentDescription: String? = null,
     shape: Shape = RoundedCornerShape(3.dp),
 ) {
-    val serverUrl = rememberServerUrl()
-    // A video frame comes from a fetcher of our own, and that one needs an
-    // absolute URL: it reads the clip itself rather than going through the
-    // loader's relative-URL mapping.
+    // A video frame comes from a fetcher of our own, which resolves a
+    // server-relative address itself (see `VideoFrameFetcher`).
     val source = when (kind) {
         FileKind.IMAGE -> model
-        FileKind.VIDEO -> videoModel?.let { clip ->
-            VideoFrame(resolveAttachmentUrl(serverUrl, clip.toString()))
-        }
+        FileKind.VIDEO -> videoModel?.let { clip -> VideoFrame(clip.toString()) }
         else -> null
     }
 

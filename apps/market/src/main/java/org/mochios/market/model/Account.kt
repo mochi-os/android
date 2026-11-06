@@ -6,6 +6,7 @@
 package org.mochios.market.model
 
 import com.google.gson.annotations.SerializedName
+import org.mochios.android.util.segment
 
 /**
  * Market account; mirrors `Account` in `apps/market/web/src/types/accounts.ts`.
@@ -39,6 +40,13 @@ data class Account(
     val created: Long = 0,
     val updated: Long = 0,
 )
+
+/**
+ * Where a market user's avatar is served, through the market's own proxy.
+ * Null when the id, a peer's, cannot be one segment of the address
+ * ([segment]).
+ */
+fun userAvatarUrl(user: String): String? = segment(user)?.let { id -> "/market/-/user/$id/asset/avatar" }
 
 /**
  * Public seller-card projection; mirrors `AccountSummary` in web

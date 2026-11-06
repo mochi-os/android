@@ -80,6 +80,9 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.android.ui.components.defaultIcon
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
+import org.mochios.android.util.segment
 import org.mochios.forums.R
 import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationReport
@@ -515,7 +518,7 @@ private fun ReportStatusChips(
 }
 
 @Composable
-private fun ReportCard(
+internal fun ReportCard(
     report: ModerationReport,
     forumId: String,
     showStatus: Boolean,
@@ -571,15 +574,16 @@ private fun ReportCard(
             }
             // The reported content's own images, shown the way a comment shows
             // them — a report about a picture is unreadable without it.
-            if (report.attachments.isNotEmpty()) {
+            val attachments = addressed(report.attachments, "forums", forumId)
+            if (attachments.isNotEmpty()) {
                 Spacer(Modifier.height(6.dp))
                 AttachmentGallery(
-                    attachments = report.attachments,
+                    attachments = attachments,
                     urlBuilder = { att ->
-                        att.url ?: "/forums/$forumId/-/attachments/${att.id}"
+                        att.url ?: attachmentAddress("forums", forumId, att.id).orEmpty()
                     },
                     thumbnailUrlBuilder = { att ->
-                        att.thumbnailUrl ?: "/forums/$forumId/-/attachments/${att.id}/thumbnail"
+                        att.thumbnailUrl ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
                     },
                     compact = true,
                 )
@@ -783,6 +787,17 @@ private fun RestrictionsTab(
 }
 
 /**
+ * Where a restricted user's avatar is served: through the forum's moderation
+ * proxy. Null when an id, a peer's, cannot be one segment of the address
+ * ([segment]).
+ */
+internal fun restrictionAvatar(forumId: String, user: String): String? {
+    val forum = segment(forumId) ?: return null
+    val person = segment(user) ?: return null
+    return "/forums/$forum/-/moderation/$person/asset/avatar"
+}
+
+/**
  * One restricted user; Remove confirms first, matching the queue's Mute and
  * Ban.
  */
@@ -805,7 +820,7 @@ private fun RestrictionCard(
                     // Through the forum's own moderation proxy rather than
                     // the people app: a cross-app request loses the session and
                     // comes back anonymous. Seeded initials when they have none.
-                    src = "/forums/$forumId/-/moderation/${restriction.user}/asset/avatar",
+                    src = restrictionAvatar(forumId, restriction.user),
                     seed = restriction.user,
                     size = 36.dp,
                 )

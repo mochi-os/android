@@ -47,6 +47,8 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.ui.components.replyCount
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
 import org.mochios.projects.R
 
 @Composable
@@ -199,12 +201,12 @@ private fun CommentItem(
         depth = depth,
         seed = comment.authorId,
         avatarUrl = avatarUrlBuilder?.invoke(comment),
-        attachments = comment.attachments,
+        attachments = addressed(comment.attachments, "projects", projectId),
         attachmentUrl = { att ->
-            att.url ?: "/projects/$projectId/-/attachments/${att.id}"
+            att.url ?: attachmentAddress("projects", projectId, att.id).orEmpty()
         },
         attachmentThumbnailUrl = { att ->
-            att.thumbnailUrl ?: "/projects/$projectId/-/attachments/${att.id}/thumbnail"
+            att.thumbnailUrl ?: attachmentAddress("projects", projectId, att.id, "thumbnail").orEmpty()
         },
         isEditing = edit != null,
         editText = edit ?: comment.text,

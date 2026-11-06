@@ -10,6 +10,7 @@ import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.go.R
 import org.mochios.go.model.Game
+import org.mochios.go.model.opponentAvatarUrl
 
 /**
  * Drawer rows for the Go app: one per game, active games first, each headed
@@ -36,7 +37,7 @@ private fun Game.toDrawerItem(myIdentity: String, section: String): DrawerItem {
         // Blank opponent id means no avatar asset path; the row still gets a
         // seeded initials circle from the drawer's seed-without-icon branch.
         avatarUrl = if (opponentId.isNotBlank()) {
-            "/go/$id/-/user/$opponentId/asset/avatar"
+            opponentAvatarUrl(id, opponentId)
         } else {
             null
         },

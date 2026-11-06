@@ -48,6 +48,7 @@ import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.util.segment
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
@@ -336,14 +337,24 @@ private fun ActionRow(
     }
 }
 
-private fun avatarUrlFor(info: org.mochios.people.model.PersonInformation): String? {
+/**
+ * A person's avatar at its version. Null when the id, a peer's, cannot be one
+ * segment of the address ([segment]); a version that cannot is left off.
+ */
+internal fun avatarUrlFor(info: org.mochios.people.model.PersonInformation): String? {
     if (info.avatar.isBlank()) return null
-    val id = info.id.ifBlank { return null }
-    return "/people/$id/-/avatar?v=${info.avatar}"
+    val id = segment(info.id.ifBlank { return null }) ?: return null
+    val version = segment(info.avatar) ?: return "/people/$id/-/avatar"
+    return "/people/$id/-/avatar?v=$version"
 }
 
-private fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): String? {
+/**
+ * A person's banner at its version. Null when the id, a peer's, cannot be one
+ * segment of the address ([segment]); a version that cannot is left off.
+ */
+internal fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): String? {
     if (info.banner.isBlank()) return null
-    val id = info.id.ifBlank { return null }
-    return "/people/$id/-/banner?v=${info.banner}"
+    val id = segment(info.id.ifBlank { return null }) ?: return null
+    val version = segment(info.banner) ?: return "/people/$id/-/banner"
+    return "/people/$id/-/banner?v=$version"
 }

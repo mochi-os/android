@@ -104,6 +104,7 @@ import org.mochios.android.ui.components.PlacePicker
 import org.mochios.android.ui.components.TravellingPicker
 import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberFileKind
+import org.mochios.android.util.attachmentAddress
 import org.mochios.feeds.R
 import org.mochios.feeds.ui.component.pollValid
 import org.mochios.android.R as MochiR
@@ -533,16 +534,12 @@ fun CreatePostScreen(
                                 leadingIcon = {
                                     FileKindPreview(
                                         kind = attachment.fileKind,
-                                        model = attachment.thumbnailUrl ?: thumbnailUrl(
-                                            selectedFeed,
-                                            attachment.id
-                                        ),
+                                        model = attachment.thumbnailUrl
+                                            ?: attachmentAddress("feeds", selectedFeed, attachment.id, "thumbnail"),
                                         // No thumbnail route for a video: the
                                         // frame is decoded from the clip.
-                                        videoModel = attachment.url ?: attachmentUrl(
-                                            selectedFeed,
-                                            attachment.id
-                                        ),
+                                        videoModel = attachment.url
+                                            ?: attachmentAddress("feeds", selectedFeed, attachment.id),
                                         modifier = Modifier.size(16.dp)
                                     )
                                 },
@@ -891,11 +888,3 @@ private fun SheetActions(
         }
     }
 }
-
-/** The server's route for an attachment already on a post. */
-private fun attachmentUrl(feedId: String, attachmentId: String): String =
-    "/feeds/$feedId/-/attachments/$attachmentId"
-
-/** The thumbnail variant of [attachmentUrl]. */
-private fun thumbnailUrl(feedId: String, attachmentId: String): String =
-    "${attachmentUrl(feedId, attachmentId)}/thumbnail"

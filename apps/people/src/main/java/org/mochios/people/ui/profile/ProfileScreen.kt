@@ -105,6 +105,7 @@ import org.mochios.people.R
 import org.mochios.people.ui.person.ProfileNetworks
 import org.mochios.android.util.openWeb
 import org.mochios.android.util.providerName
+import org.mochios.android.util.segment
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.ProfileAccount
 import org.mochios.people.ui.components.PeopleDrawer
@@ -937,16 +938,26 @@ internal fun ProfilePreviewDialog(
 
 // ---- Helpers ----
 
-private fun imageUrl(id: String, slot: String, version: String?): String? {
+/**
+ * The image in [slot] at its version. Null when the id cannot be one segment
+ * of the address ([segment]); a version that cannot is left off.
+ */
+internal fun imageUrl(id: String, slot: String, version: String?): String? {
     if (id.isBlank() || version.isNullOrBlank()) return null
-    return "/people/$id/-/$slot?v=$version"
+    val person = segment(id) ?: return null
+    val escaped = segment(version) ?: return "/people/$person/-/$slot"
+    return "/people/$person/-/$slot?v=$escaped"
 }
 
 /**
  * Server-relative path for [EntityAvatar], which resolves the host; banner and
- * favicon need [imageUrl]'s absolute URL for `AsyncImage`.
+ * favicon need [imageUrl]'s absolute URL for `AsyncImage`. Null when the id
+ * cannot be one segment of the address ([segment]); a version that cannot is
+ * left off.
  */
-private fun avatarPath(id: String, version: String?): String? {
+internal fun avatarPath(id: String, version: String?): String? {
     if (id.isBlank() || version.isNullOrBlank()) return null
-    return "/people/$id/-/avatar?v=$version"
+    val person = segment(id) ?: return null
+    val escaped = segment(version) ?: return "/people/$person/-/avatar"
+    return "/people/$person/-/avatar?v=$escaped"
 }

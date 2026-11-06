@@ -29,6 +29,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.theme.LocalEntityRadius
+import org.mochios.market.model.userAvatarUrl
 
 /** Padding around a list of [MarketListRow]s, as People lays out its `EntityListRow`s. */
 val MarketListPadding = PaddingValues(12.dp)
@@ -164,7 +165,7 @@ fun PersonThumbnail(name: String, account: String?) {
     EntityAvatar(
         name = name,
         src = account?.takeIf { id -> id.isNotBlank() }
-            ?.let { id -> "/market/-/user/$id/asset/avatar" },
+            ?.let { id -> userAvatarUrl(id) },
         seed = account,
         size = 40.dp,
     )

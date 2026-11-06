@@ -6,6 +6,7 @@
 package org.mochios.market.model
 
 import com.google.gson.annotations.SerializedName
+import org.mochios.android.util.segment
 
 /**
  * Mirrors `Listing` in `apps/market/web/src/types/listings.ts`. Money in minor
@@ -60,6 +61,17 @@ data class Photo(
     val created: Long = 0,
     val image: Boolean = false,
 )
+
+/**
+ * Where photo [id] is served, with [variant] ("thumbnail") after it; [owned]
+ * takes the seller's own route, which also serves a draft's photos. Null when
+ * the id, a peer's, cannot be one segment of the address ([segment]).
+ */
+fun photoAddress(id: String, variant: String? = null, owned: Boolean = false): String? {
+    val photo = segment(id) ?: return null
+    val route = if (owned) "/market/-/photo/owned/$photo" else "/market/-/photo/$photo"
+    return route + if (variant == null) "" else "/$variant"
+}
 
 /**
  * Mirrors `Asset` in web `types/listings.ts`; `hosting` is `"mochi"` (streamed

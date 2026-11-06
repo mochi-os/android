@@ -129,6 +129,8 @@ import org.mochios.market.model.Photo
 import org.mochios.market.model.PricingModel
 import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
+import org.mochios.market.model.photoAddress
+import org.mochios.market.model.userAvatarUrl
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuctionBidHistory
 import org.mochios.market.ui.components.AuditHistoryCard
@@ -941,7 +943,7 @@ private fun ListingDetailContent(
                     EntityAvatar(
                         name = sellerName,
                         src = listing.seller.takeIf { id -> id.isNotBlank() }
-                            ?.let { id -> "/market/-/user/$id/asset/avatar" },
+                            ?.let { id -> userAvatarUrl(id) },
                         seed = seller.id,
                         size = 40.dp,
                     )
@@ -1284,11 +1286,11 @@ private fun parseTags(json: String): List<String> {
 // against the session server inside the Coil pipeline, as ListingCard does.
 private fun buildPhotoUrls(photos: List<Photo>, listing: Listing?): List<String> {
     val urls = photos.mapNotNull { photo ->
-        photo.id.takeIf { it.isNotBlank() }?.let { "/market/-/photo/$it" }
+        photo.id.takeIf { it.isNotBlank() }?.let { photoAddress(it) }
     }
     if (urls.isNotEmpty()) return urls
     val photoId = listing?.photo?.id?.takeIf { it.isNotBlank() } ?: return emptyList()
-    return listOf("/market/-/photo/$photoId")
+    return listOfNotNull(photoAddress(photoId))
 }
 
 @EntryPoint

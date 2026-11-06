@@ -120,10 +120,13 @@ import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.destination
+import org.mochios.android.util.segment
 import org.mochios.android.util.webUri
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.attachmentAt
+import org.mochios.wikis.ui.components.attachmentPath
 import org.mochios.wikis.ui.components.WikiContextValue
 
 /**
@@ -431,7 +434,7 @@ internal fun AttachmentsTopBar(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun AttachmentsBody(
+internal fun AttachmentsBody(
     state: AttachmentsUiState,
     baseURL: String,
     token: String?,
@@ -445,8 +448,10 @@ private fun AttachmentsBody(
     onRequestCaption: (Attachment) -> Unit,
     onRetry: () -> Unit,
 ) {
+    // An attachment whose id no segment can carry has no address, and is
+    // left out rather than shown broken.
     val filtered = remember(state.attachments, state.searchQuery, state.filter, state.sort) {
-        filterAndSort(state.attachments, state.searchQuery, state.filter, state.sort)
+        filterAndSort(state.attachments.filter { segment(it.id) != null }, state.searchQuery, state.filter, state.sort)
     }
 
     // Lightbox state — flipped open from a grid or list image tap. The
@@ -539,7 +544,7 @@ private fun AttachmentsBody(
     // Lightbox overlay
     val openIdx = lightboxIndex
     if (openIdx != null && imageAttachments.isNotEmpty()) {
-        val urls = imageAttachments.map { "${baseURL}attachments/${it.id}" }
+        val urls = imageAttachments.map { attachmentPath(baseURL, it.id).orEmpty() }
         LightboxScreen(
             images = urls,
             initialIndex = openIdx.coerceIn(0, urls.size - 1),
@@ -767,7 +772,7 @@ private fun AttachmentsGrid(
                 onDownload = {
                     startAttachmentDownload(
                         context = context,
-                        url = "${baseURL}attachments/${attachment.id}",
+                        url = attachmentAt(baseURL, attachment.id).orEmpty(),
                         name = attachment.name,
                         mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
                         token = token,
@@ -810,7 +815,7 @@ private fun AttachmentsList(
             val download: () -> Unit = {
                 startAttachmentDownload(
                     context = context,
-                    url = "${baseURL}attachments/${attachment.id}",
+                    url = attachmentAt(baseURL, attachment.id).orEmpty(),
                     name = attachment.name,
                     mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
                     token = token,
@@ -1139,7 +1144,7 @@ private fun AttachmentPreview(
     val label = attachment.caption.ifEmpty { attachment.name }
     when (kind) {
         FileKind.IMAGE -> MochiImage(
-            model = "${baseURL}attachments/${attachment.id}/thumbnail",
+            model = attachmentPath(baseURL, attachment.id, "thumbnail"),
             contentDescription = label,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize(),
@@ -1148,7 +1153,7 @@ private fun AttachmentPreview(
             // VideoFrame routes to VideoFrameFetcher, which range-extracts the
             // opening frame rather than pulling the whole clip down for it.
             AsyncImage(
-                model = VideoFrame("${baseURL}attachments/${attachment.id}"),
+                model = attachmentPath(baseURL, attachment.id)?.let { VideoFrame(it) },
                 contentDescription = label,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize(),
@@ -1176,7 +1181,7 @@ private fun AttachmentPreview(
 private fun isImage(mime: String): Boolean = mime.startsWith("image/")
 
 private fun buildMarkdown(attachment: Attachment): String {
-    val url = "attachments/${attachment.id}"
+    val url = "attachments/" + segment(attachment.id).orEmpty()
     return if (isImage(attachment.type)) {
         "![${attachment.name}]($url)"
     } else {
@@ -1273,7 +1278,7 @@ private fun previewInViewer(
         )
         val result = AttachmentOpener.open(
             context,
-            "${baseURL}attachments/${attachment.id}",
+            attachmentPath(baseURL, attachment.id).orEmpty(),
             mochiAttachment,
         )
         if (result == AttachmentOpener.OpenResult.NO_APP) {

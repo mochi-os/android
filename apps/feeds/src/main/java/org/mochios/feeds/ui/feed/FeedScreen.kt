@@ -158,12 +158,14 @@ import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.VideoPlayer
 import org.mochios.android.ui.components.rememberCopier
-import org.mochios.android.ui.components.rememberServerUrl
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.model.articleImage
 import org.mochios.feeds.ui.component.PostBody
 import org.mochios.feeds.ui.component.CopyItems
 import org.mochios.feeds.ui.component.PostBoosts
@@ -1159,19 +1161,11 @@ private fun GalleryContent(
     modifier: Modifier = Modifier,
 ) {
     val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
-    // Image requests go through Coil, whose mapper resolves relative URLs, but
-    // the video frame decoder and ExoPlayer don't — resolve video URLs against
-    // the server here. Absolute URLs pass through unchanged.
-    val serverUrl = rememberServerUrl().trimEnd('/')
-    val resolve: (String) -> String = { path ->
-        when {
-            path.startsWith("http://") || path.startsWith("https://") -> path
-            path.startsWith("/") -> "$serverUrl$path"
-            else -> "$serverUrl/$path"
-        }
-    }
+    // Every consumer - Coil, the video frame decoder, ExoPlayer - resolves a
+    // server-relative address itself and sends it as the app's own, with the
+    // session; an absolute one, such as a source's enclosure, goes without.
     val fullUrl: (Attachment) -> String = { attachment ->
-        attachment.url ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}"
+        attachment.url ?: attachmentAddress("feeds", attachmentFeed, attachment.id).orEmpty()
     }
 
     // Zero-range verticalScroll (inner column pinned to viewport height) exists
@@ -1227,7 +1221,7 @@ private fun GalleryContent(
                         if (attachment.isVideo) {
                             // No server video-thumbnail route: decode the opening
                             // frame from the video itself (VideoFrameFetcher).
-                            VideoFrame(resolve(fullUrl(attachment)))
+                            VideoFrame(fullUrl(attachment))
                         } else {
                             // Mosaic tiles render at up to full screen width, so
                             // prefer the preview variant; previewUrl is absent on
@@ -1235,13 +1229,13 @@ private fun GalleryContent(
                             // keeps working.
                             attachment.previewUrl
                                 ?: attachment.thumbnailUrl
-                                ?: "/feeds/$attachmentFeed/-/attachments/${attachment.id}/thumbnail"
+                                ?: attachmentAddress("feeds", attachmentFeed, attachment.id, "thumbnail").orEmpty()
                         }
                     },
                     onTap = { index ->
                         val attachment = media[index]
                         if (attachment.isVideo) {
-                            onPlayVideo(resolve(fullUrl(attachment)))
+                            onPlayVideo(fullUrl(attachment))
                         } else {
                             // The lightbox spans images only, so map the mosaic
                             // index to the attachment's position among the images.
@@ -1478,16 +1472,16 @@ internal fun PostCard(
     // scrollable area so it stays pinned at the bottom. Hero image: first
     // attachment image, else the RSS preview, shown full-bleed across the top
     // half with the text below.
-    val attachmentImages = post.attachments.filter { it.isImage }
-    val otherAttachments = post.attachments.filter { !it.isImage }
     val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
+    val attachments = addressed(post.attachments, "feeds", attachmentFeed)
+    val attachmentImages = attachments.filter { it.isImage }
+    val otherAttachments = attachments.filter { !it.isImage }
     val attachmentImageUrls = attachmentImages.map { att ->
-        att.url ?: "/feeds/$attachmentFeed/-/attachments/${att.id}"
+        att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty()
     }
     val attachmentImageCaptions = attachmentImages.map { it.caption }
     val attachmentImageIds = attachmentImages.map { it.id }
-    val rssImageUrl = upgradedRssImage?.takeIf { it.isNotEmpty() }
-        ?: post.data?.rss?.image?.takeIf { it.isNotEmpty() }
+    val rssImageUrl = articleImage(upgradedRssImage) ?: articleImage(post.data?.rss?.image)
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
     // Attachment heroes load the preview variant — the half-screen hero doesn't
     // need multi-megabyte originals (the lightbox still gets them). previewUrl
@@ -1500,7 +1494,7 @@ internal fun PostCard(
     // Gallery posts — the media is the content (no RSS article, at most a
     // caption of text) — take the full-page mosaic layout instead of the
     // hero + article column below.
-    val mediaAttachments = post.attachments.filter { it.isImage || it.isVideo }
+    val mediaAttachments = attachments.filter { it.isImage || it.isVideo }
     val captionText = remember(post.body) { stripHtml(post.body).trim() }
     val isGallery = post.data?.rss == null && mediaAttachments.isNotEmpty() &&
         captionText.length <= GALLERY_CAPTION_LIMIT && post.warning.isEmpty()
@@ -1681,7 +1675,7 @@ internal fun PostCard(
                             thumbnailUrls = gridImages.map { att ->
                                 att.previewUrl
                                     ?: att.thumbnailUrl
-                                    ?: "/feeds/$attachmentFeed/-/attachments/${att.id}/thumbnail"
+                                    ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
                             },
                             contentDescriptions = gridImages.map { it.caption.ifEmpty { it.name } },
                             captions = gridImages.map { it.caption },
@@ -2135,11 +2129,13 @@ private fun CommentPreviewRow(
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
         )
-        if (comment.anchor.isNotEmpty()) {
+        // An anchor no segment can carry has no thumbnail.
+        val anchor = if (comment.anchor.isNotEmpty()) attachmentAddress("feeds", commentFeedId, comment.anchor, "thumbnail") else null
+        if (anchor != null) {
             // The image this comment is about, small, so the preview says so.
             Spacer(modifier = Modifier.width(6.dp))
             MochiImage(
-                model = "/feeds/$commentFeedId/-/attachments/${comment.anchor}/thumbnail",
+                model = anchor,
                 contentDescription = stringResource(MochiR.string.comment_anchor_default),
                 contentScale = ContentScale.Crop,
                 modifier = Modifier

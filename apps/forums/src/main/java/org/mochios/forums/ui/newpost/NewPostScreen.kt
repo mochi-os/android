@@ -75,6 +75,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.UploadProgress
 import org.mochios.android.ui.components.rememberFileKind
+import org.mochios.android.util.attachmentAddress
 import org.mochios.forums.R
 import org.mochios.forums.ui.components.CommunityDestination
 
@@ -473,7 +474,7 @@ private fun AttachmentChips(
  */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ExistingAttachmentChips(
+internal fun ExistingAttachmentChips(
     attachments: List<Attachment>,
     forumId: String,
     removedIds: Set<String>,
@@ -529,11 +530,11 @@ private fun ExistingAttachmentChips(
                         FileKindPreview(
                             kind = attachment.fileKind,
                             model = attachment.thumbnailUrl
-                                ?: "/forums/$forumId/-/attachments/${attachment.id}/thumbnail",
+                                ?: attachmentAddress("forums", forumId, attachment.id, "thumbnail"),
                             // No thumbnail route for a video: the frame is
                             // decoded from the clip itself.
                             videoModel = attachment.url
-                                ?: "/forums/$forumId/-/attachments/${attachment.id}",
+                                ?: attachmentAddress("forums", forumId, attachment.id),
                             modifier = Modifier.size(16.dp)
                         )
                     },

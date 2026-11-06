@@ -75,12 +75,15 @@ fun AttachmentGallery(
     commentCount: ((Attachment) -> Int)? = null,
     comments: (@Composable (Attachment) -> Unit)? = null,
 ) {
-    if (attachments.isEmpty()) return
+    // An attachment with no address is not shown: resolved, an empty one
+    // named the server's root.
+    val addressed = attachments.filter { urlBuilder(it).isNotEmpty() }
+    if (addressed.isEmpty()) return
 
-    val images = attachments.filter { it.isImage }
-    val videos = attachments.filter { it.isVideo }
-    val audios = attachments.filter { it.isAudio }
-    val files = attachments.filter { !it.isImage && !it.isVideo && !it.isAudio }
+    val images = addressed.filter { it.isImage }
+    val videos = addressed.filter { it.isVideo }
+    val audios = addressed.filter { it.isAudio }
+    val files = addressed.filter { !it.isImage && !it.isVideo && !it.isAudio }
 
     var showViewer by rememberSaveable { mutableStateOf(false) }
     var viewerIndex by rememberSaveable { mutableIntStateOf(0) }
@@ -92,21 +95,12 @@ fun AttachmentGallery(
     val resources = LocalResources.current
     val scope = rememberCoroutineScope()
 
-    // Resolve the caller's (possibly relative) paths to absolute URLs once, for
-    // every consumer. Coil could map relative image URLs itself, but the video
-    // frame decoder, ExoPlayer and the file downloader aren't Coil, so resolve
-    // here. Absolute URLs pass through unchanged.
-    val serverUrl = rememberServerUrl()
-    val resolvedUrl: (Attachment) -> String = { att ->
-        resolveAttachmentUrl(serverUrl, urlBuilder(att))
-    }
-    val resolvedThumb: ((Attachment) -> String)? = thumbnailUrlBuilder?.let { tb ->
-        { att -> resolveAttachmentUrl(serverUrl, tb(att)) }
-    }
-    val resolvedPreview: ((Attachment) -> String)? =
-        (previewUrlBuilder ?: thumbnailUrlBuilder)?.let { pb ->
-            { att -> resolveAttachmentUrl(serverUrl, pb(att)) }
-        }
+    // The caller's addresses go to every consumer as given: each resolves a
+    // server-relative one against the server and sends it as the app's own,
+    // with the session, and an absolute one without (see `owned`).
+    val resolvedUrl: (Attachment) -> String = urlBuilder
+    val resolvedThumb: ((Attachment) -> String)? = thumbnailUrlBuilder
+    val resolvedPreview: ((Attachment) -> String)? = previewUrlBuilder ?: thumbnailUrlBuilder
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (images.isNotEmpty()) {
@@ -402,18 +396,6 @@ private fun DeleteIcon(onClick: () -> Unit) {
 }
 
 /**
- * Resolve a possibly-relative attachment path against [serverUrl]. Coil maps
- * relative image URLs itself, but the video decoder, ExoPlayer and downloader
- * do not. Anything that already names a scheme - an absolute URL, or a
- * `content://` file picked on the device - is left as it is.
- */
-internal fun resolveAttachmentUrl(serverUrl: String, path: String): String {
-    if (path.contains("://")) return path
-    val base = serverUrl.trimEnd('/')
-    return if (path.startsWith("/")) "$base$path" else "$base/$path"
-}
-
-/**
  * Lightbox over a post's image attachments. A screen can show it directly to
  * open on one attachment, since the gallery may sit in a lazy item that has
  * scrolled out of composition.
@@ -428,9 +410,8 @@ fun AttachmentLightbox(
     comments: (@Composable (Attachment) -> Unit)? = null,
     commentsInitiallyOpen: Boolean = false,
 ) {
-    val serverUrl = rememberServerUrl()
     LightboxScreen(
-        images = images.map { resolveAttachmentUrl(serverUrl, urlBuilder(it)) },
+        images = images.map { urlBuilder(it) },
         initialIndex = initialIndex.coerceIn(0, (images.size - 1).coerceAtLeast(0)),
         onDismiss = onDismiss,
         captions = images.map { it.caption },

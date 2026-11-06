@@ -43,10 +43,13 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.FileKindIcon
 import org.mochios.android.ui.components.ImagePlaceholder
 import org.mochios.android.ui.components.LightboxScreen
+import org.mochios.android.util.segment
 import org.mochios.android.util.webUri
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
+import org.mochios.wikis.ui.components.attachmentAt
+import org.mochios.wikis.ui.components.attachmentPath
 
 /**
  * Attachments under a comment body: image thumbnails open the lightbox, other
@@ -65,8 +68,11 @@ fun CommentAttachments(
     val context = LocalContext.current
     val format = LocalFormat.current
 
-    val images = remember(attachments) { attachments.filter { it.type.startsWith("image/") } }
-    val files = remember(attachments) { attachments.filter { !it.type.startsWith("image/") } }
+    // An attachment whose id no segment can carry has no address, and is
+    // left out rather than shown broken.
+    val addressed = remember(attachments) { attachments.filter { segment(it.id) != null } }
+    val images = remember(addressed) { addressed.filter { it.type.startsWith("image/") } }
+    val files = remember(addressed) { addressed.filter { !it.type.startsWith("image/") } }
 
     var showLightbox by rememberSaveable { mutableStateOf(false) }
     var lightboxIndex by rememberSaveable { mutableIntStateOf(0) }
@@ -101,7 +107,7 @@ fun CommentAttachments(
                             )
                         }
                         AsyncImage(
-                            model = "${baseURL}attachments/${img.id}/thumbnail",
+                            model = attachmentPath(baseURL, img.id, "thumbnail"),
                             contentDescription = img.name,
                             contentScale = ContentScale.Crop,
                             onSuccess = { loaded = true },
@@ -119,8 +125,7 @@ fun CommentAttachments(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
                             .clickable {
-                                val url = "${baseURL}attachments/${file.id}"
-                                webUri(url)?.let { uri ->
+                                attachmentAt(baseURL, file.id)?.let { webUri(it) }?.let { uri ->
                                     runCatching {
                                         context.startActivity(
                                             Intent(Intent.ACTION_VIEW, uri)
@@ -159,7 +164,7 @@ fun CommentAttachments(
 
     if (showLightbox && images.isNotEmpty()) {
         LightboxScreen(
-            images = images.map { "${baseURL}attachments/${it.id}" },
+            images = images.map { attachmentPath(baseURL, it.id).orEmpty() },
             initialIndex = lightboxIndex,
             onDismiss = { showLightbox = false },
         )

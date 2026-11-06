@@ -36,6 +36,7 @@ import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.UploadFiles
+import org.mochios.android.util.attachmentAddress
 import org.mochios.projects.R
 import java.io.File
 
@@ -64,15 +65,16 @@ fun AttachmentsSection(
         }
     }
 
+    // An id no segment can carry has no address, and the gallery leaves it out.
     val urlBuilder: (Attachment) -> String = { attachment ->
-        "/projects/$projectId/-/attachments/${attachment.id}"
+        attachmentAddress("projects", projectId, attachment.id).orEmpty()
     }
     val thumbnailUrlBuilder: (Attachment) -> String = { attachment ->
-        "/projects/$projectId/-/attachments/${attachment.id}/thumbnail"
+        attachmentAddress("projects", projectId, attachment.id, "thumbnail").orEmpty()
     }
     // The lightbox shows the server's 1280px variant, not the original.
     val previewUrlBuilder: (Attachment) -> String = { attachment ->
-        "/projects/$projectId/-/attachments/${attachment.id}/preview"
+        attachmentAddress("projects", projectId, attachment.id, "preview").orEmpty()
     }
 
     // Newest first.

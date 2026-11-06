@@ -13,7 +13,7 @@ import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
  * effective port, never the host alone: a host match conflates http with https
  * and accepts a lookalike suffix. Fails closed if [serverUrl] will not parse.
  */
-internal fun isServerOrigin(url: HttpUrl, serverUrl: String): Boolean {
+fun isServerOrigin(url: HttpUrl, serverUrl: String): Boolean {
     val server = serverUrl.toHttpUrlOrNull() ?: return false
     return url.scheme == server.scheme &&
         url.host == server.host &&

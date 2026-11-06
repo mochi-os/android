@@ -60,6 +60,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.UploadFiles
 import org.mochios.market.R
 import org.mochios.market.model.Photo
+import org.mochios.market.model.photoAddress
 
 /**
  * Photo grid with delete and up/down reorder arrows - drag reorder is too
@@ -221,16 +222,18 @@ private fun PhotoCell(
             .aspectRatio(1f),
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
-            MochiImage(
-                // Authenticated "owned" route: the editor shows photos for the
-                // seller's own draft / moderation-held listings, which the
-                // public route hides. Coil sends the market bearer token via
-                // AssetHttpClient, so `from` is the real seller server-side.
-                model = "/market/-/photo/owned/${photo.id}/thumbnail",
-                contentDescription = photo.name,
-                contentScale = androidx.compose.ui.layout.ContentScale.Crop,
-                modifier = Modifier.fillMaxSize(),
-            )
+            // Authenticated "owned" route: the editor shows photos for the
+            // seller's own draft / moderation-held listings, which the
+            // public route hides. Coil sends the market bearer token via
+            // AssetHttpClient, so `from` is the real seller server-side.
+            photoAddress(photo.id, "thumbnail", owned = true)?.let { address ->
+                MochiImage(
+                    model = address,
+                    contentDescription = photo.name,
+                    contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize(),
+                )
+            }
 
             // Delete overlay (top-right)
             MochiIconButton(

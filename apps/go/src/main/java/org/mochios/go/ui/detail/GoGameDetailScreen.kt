@@ -95,6 +95,7 @@ import org.mochios.go.engine.Score
 import org.mochios.go.engine.Stone
 import org.mochios.go.model.Game
 import org.mochios.go.model.GameMessage
+import org.mochios.go.model.opponentAvatarUrl
 import org.mochios.go.navigation.GoApp
 import org.mochios.go.ui.detail.board.GoBoard
 import org.mochios.go.ui.router.GO_FEATURE
@@ -250,7 +251,7 @@ fun GoGameDetailScreen(
                             // refused, so it never resolved a picture.
                             avatarUrl = game.opponentId(state.myIdentity)
                                 .takeIf { it.isNotBlank() }
-                                ?.let { id -> "/go/${game.id}/-/user/$id/asset/avatar" },
+                                ?.let { id -> opponentAvatarUrl(game.id, id) },
                         )
                     } else {
                         Text(stringResource(R.string.go_app_title))

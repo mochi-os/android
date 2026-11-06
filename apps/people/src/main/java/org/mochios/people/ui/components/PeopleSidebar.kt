@@ -13,6 +13,7 @@ import androidx.compose.material.icons.outlined.MailOutline
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.android.util.NaturalCompare
 import org.mochios.people.R
 import org.mochios.people.model.Book
@@ -68,7 +69,7 @@ fun peopleProfileItem(identity: String?): DrawerItem = DrawerItem(
     id = PeopleSidebarSection.PROFILE.name,
     title = stringResource(R.string.people_profile_title),
     icon = Icons.Outlined.AccountCircle,
-    avatarUrl = identity?.let { person -> "/people/$person/-/avatar" },
+    avatarUrl = personAvatarPath(identity),
     seed = identity,
 )
 

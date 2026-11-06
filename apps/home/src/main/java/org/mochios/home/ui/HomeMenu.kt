@@ -44,12 +44,16 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.NotificationCard
 import org.mochios.android.ui.components.NotificationCategoryItems
+import org.mochios.android.util.segment
 import org.mochios.home.R
 import org.mochios.android.R as MochiR
 
-/** The user's avatar as the people app serves it, or none before the identity is known. */
-private fun avatar(identity: String): String? =
-    if (identity.isBlank()) null else "/people/$identity/-/avatar"
+/**
+ * The user's avatar as the people app serves it, or none before the identity
+ * is known or when it cannot be one segment of the address ([segment]).
+ */
+internal fun avatar(identity: String): String? =
+    if (identity.isBlank()) null else segment(identity)?.let { id -> "/people/$id/-/avatar" }
 
 /** The size of the avatar in the top bar, and beside the name in the menu. */
 private val AVATAR = 32.dp

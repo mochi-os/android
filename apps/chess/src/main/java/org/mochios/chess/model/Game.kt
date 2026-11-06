@@ -6,6 +6,7 @@
 package org.mochios.chess.model
 
 import com.google.gson.annotations.SerializedName
+import org.mochios.android.util.segment
 
 /**
  * A game row, mirroring `Game` in `apps/chess/web/src/api/types/games.ts`.
@@ -65,10 +66,14 @@ internal fun messageKey(message: GameMessage): String = message.id
 /**
  * An opponent's avatar through the game's own user-asset proxy, which can
  * serve a player whose person entity lives on another server; the direct
- * people route cannot.
+ * people route cannot. Null when an id, a peer's, cannot be one segment of
+ * the address ([segment]).
  */
-fun opponentAvatarUrl(game: String, opponent: String): String =
-    "/chess/$game/-/user/$opponent/asset/avatar"
+fun opponentAvatarUrl(game: String, opponent: String): String? {
+    val entity = segment(game) ?: return null
+    val user = segment(opponent) ?: return null
+    return "/chess/$entity/-/user/$user/asset/avatar"
+}
 
 data class GameMessage(
     val id: String = "",

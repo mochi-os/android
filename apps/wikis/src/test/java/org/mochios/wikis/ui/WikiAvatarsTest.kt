@@ -94,7 +94,7 @@ class WikiAvatarsTest {
             )
         }
         assertEquals(
-            listOf("https://server/wikis/w1/-/revision/r0/asset/avatar", "https://server/wikis/w1/-/revision/r1/asset/avatar"),
+            listOf("/wikis/w1/-/revision/r0/asset/avatar", "/wikis/w1/-/revision/r1/asset/avatar"),
             settled(revisions.size),
         )
     }
@@ -106,7 +106,7 @@ class WikiAvatarsTest {
             ChangesBody(changes = changes, hasMore = false, isLoadingMore = false, onLoadMore = {}, onOpenPage = {})
         }
         assertEquals(
-            listOf("https://server/wikis/w1/-/revision/r0/asset/avatar", "https://server/wikis/w1/-/revision/r1/asset/avatar"),
+            listOf("/wikis/w1/-/revision/r0/asset/avatar", "/wikis/w1/-/revision/r1/asset/avatar"),
             settled(changes.size),
         )
     }
@@ -153,7 +153,7 @@ class WikiAvatarsTest {
         Thread.sleep(300)
         rule.waitForIdle()
         assertEquals(
-            listOf("/wikis/w1/-/comment/c1%23y/asset/avatar", "https://server/wikis/w1/-/revision/r1%3Fx%3D/asset/avatar"),
+            listOf("/wikis/w1/-/comment/c1%23y/asset/avatar", "/wikis/w1/-/revision/r1%3Fx%3D/asset/avatar"),
             loaded.toSet().sorted(),
         )
     }
@@ -179,7 +179,7 @@ class WikiAvatarsTest {
         Thread.sleep(300)
         rule.waitForIdle()
         assertEquals(
-            listOf("/wikis/w1/-/comment/c1/asset/avatar", "https://server/wikis/w1/-/revision/r1/asset/avatar"),
+            listOf("/wikis/w1/-/comment/c1/asset/avatar", "/wikis/w1/-/revision/r1/asset/avatar"),
             loaded.toSet().sorted(),
         )
     }

@@ -39,6 +39,7 @@ import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.Tag
+import org.mochios.feeds.model.articleImage
 import org.mochios.feeds.repository.FeedsInfoResult
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.PostListResult
@@ -915,7 +916,7 @@ class FeedViewModel @Inject constructor(
             // view a post that arrived without one never acquired one.
             val feed = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { feedId }
             val image = repository.getPostImage(feed, postId)
-            if (image.isBlank()) return@launch
+            if (articleImage(image) == null) return@launch
             _posts.value = _posts.value.map { p ->
                 if (p.id != postId) p
                 else p.copy(data = p.data?.copy(rss = p.data.rss?.copy(image = image)))

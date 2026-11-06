@@ -50,6 +50,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.QuoteCard
+import org.mochios.android.util.attachmentAddress
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
@@ -246,7 +247,7 @@ internal fun ColumnScope.ThreadContent(
 }
 
 @Composable
-private fun ThreadMessage(message: ChatMessage, chatId: String) {
+internal fun ThreadMessage(message: ChatMessage, chatId: String) {
     Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(text = message.name, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.SemiBold)
@@ -271,17 +272,14 @@ private fun ThreadMessage(message: ChatMessage, chatId: String) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             else -> {
-                if (message.attachments.isNotEmpty()) {
+                val attachments = messageAttachments(chatId, message.attachments)
+                if (attachments.isNotEmpty()) {
                     AttachmentGallery(
-                        attachments = message.attachments,
-                        urlBuilder = { att -> "/chat/$chatId/-/attachments/${att.id}" },
-                        thumbnailUrlBuilder = { att -> "/chat/$chatId/-/attachments/${att.id}/thumbnail" },
+                        attachments = attachments,
+                        urlBuilder = { att -> attachmentAddress("chat", chatId, att.id).orEmpty() },
+                        thumbnailUrlBuilder = { att -> attachmentAddress("chat", chatId, att.id, "thumbnail").orEmpty() },
                         previewUrlBuilder = { att ->
-                            if (att.previewUrl != null) {
-                                "/chat/$chatId/-/attachments/${att.id}/preview"
-                            } else {
-                                "/chat/$chatId/-/attachments/${att.id}/thumbnail"
-                            }
+                            attachmentAddress("chat", chatId, att.id, if (att.previewUrl != null) "preview" else "thumbnail").orEmpty()
                         },
                     )
                 }
