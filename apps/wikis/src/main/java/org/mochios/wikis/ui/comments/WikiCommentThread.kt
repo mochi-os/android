@@ -38,10 +38,10 @@ import org.mochios.android.ui.components.CommentEditor
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiAlertDialog
+import org.mochios.android.util.segment
 import org.mochios.wikis.R
 import org.mochios.wikis.model.WikiComment
 import org.mochios.wikis.ui.components.LocalWikiContext
-import org.mochios.wikis.ui.components.segment
 import org.mochios.android.ui.components.addressByAuthor
 
 /**

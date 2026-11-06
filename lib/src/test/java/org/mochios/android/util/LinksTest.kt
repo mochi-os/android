@@ -5,7 +5,9 @@
 
 package org.mochios.android.util
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -45,5 +47,38 @@ class LinksTest {
         // No scheme at all — a relative path must not launch.
         assertFalse(isWebUrl("attachments/abc"))
         assertFalse(isWebUrl(""))
+    }
+
+    // A peer's id in an asset address on the user's server, which the image
+    // request reaches with the session and the token of the app its path names.
+    @Test
+    fun `a segment escapes whatever would leave it`() {
+        assertEquals("p1%3Fx%3D1%26y", segment("p1?x=1&y"))
+        assertEquals("a%23b%25c%20d", segment("a#b%c d"))
+        assertEquals("%C3%A9t%C3%A9", segment("été"))
+    }
+
+    @Test
+    fun `a segment keeps an ordinary id as it is`() {
+        assertEquals("1ab2c3d4e5f6a7b8c9d0e1f2a3b4c5d6", segment("1ab2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"))
+        assertEquals("Az09-._~", segment("Az09-._~"))
+    }
+
+    // The server decodes the path before it routes, so an escaped slash would
+    // divide it again: ../../people/-/remove reaches people's action.
+    @Test
+    fun `no segment carries a slash`() {
+        assertNull(segment("../../people/-/remove?x=1"))
+        assertNull(segment("members/someone"))
+        assertNull(segment("/"))
+    }
+
+    // Escaping leaves a dot alone and the URL resolves dot segments away, so
+    // revision/../asset/avatar would ask for the parent's asset/avatar.
+    @Test
+    fun `no segment carries a dot segment or nothing`() {
+        assertNull(segment(""))
+        assertNull(segment("."))
+        assertNull(segment(".."))
     }
 }

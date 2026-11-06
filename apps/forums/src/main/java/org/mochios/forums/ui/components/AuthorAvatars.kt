@@ -6,16 +6,30 @@
 package org.mochios.forums.ui.components
 
 import org.mochios.android.ui.components.addressByAuthor
+import org.mochios.android.util.segment
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
 
-/** Where a post author's avatar is served: under the post. */
-internal fun postAvatar(forumId: String, postId: String) =
-    "/forums/$forumId/-/$postId/asset/avatar"
+/**
+ * Where a post author's avatar is served: under the post. Null when an id, a
+ * peer's, cannot be one segment of the address ([segment]).
+ */
+internal fun postAvatar(forumId: String, postId: String): String? {
+    val forum = segment(forumId) ?: return null
+    val post = segment(postId) ?: return null
+    return "/forums/$forum/-/$post/asset/avatar"
+}
 
-/** Where a commenter's avatar is served: under one of their comments. */
-internal fun commentAvatar(forumId: String, postId: String, commentId: String) =
-    "/forums/$forumId/-/$postId/$commentId/asset/avatar"
+/**
+ * Where a commenter's avatar is served: under one of their comments. Null when
+ * an id, a peer's, cannot be one segment of the address ([segment]).
+ */
+internal fun commentAvatar(forumId: String, postId: String, commentId: String): String? {
+    val forum = segment(forumId) ?: return null
+    val post = segment(postId) ?: return null
+    val comment = segment(commentId) ?: return null
+    return "/forums/$forum/-/$post/$comment/asset/avatar"
+}
 
 /**
  * Whether a row may stand in for its author. The route answers for a pending

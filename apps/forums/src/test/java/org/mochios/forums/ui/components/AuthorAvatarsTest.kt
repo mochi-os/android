@@ -6,6 +6,7 @@
 package org.mochios.forums.ui.components
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Test
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
@@ -59,5 +60,43 @@ class AuthorAvatarsTest {
             mapOf("ann" to "/forums/x/-/p1/asset/avatar", "bob" to "/forums/y/-/p2/asset/avatar"),
             authorAvatars(posts, { it.forum }),
         )
+    }
+
+    // Post and comment ids reach the phone from the forum's owner; a slash or a
+    // question mark left in one would send the image request, with the
+    // session, to whatever action the path then names.
+    @Test
+    fun `a post id a peer chose cannot point the avatar at another action`() {
+        assertEquals("/forums/f1/-/p1%3Fx%3D1/asset/avatar", postAvatar("f1", "p1?x=1"))
+        // The server decodes the path before it routes, so no escaping keeps a
+        // slash from dividing it: members/<user> would reach the members route.
+        assertNull(postAvatar("f1", "../../people/-/x"))
+        assertNull(postAvatar("f1", "members/someone"))
+    }
+
+    @Test
+    fun `a comment id a peer chose cannot point the avatar at another action`() {
+        assertEquals("/forums/f1/-/p%3F/y%3Fz/asset/avatar", commentAvatar("f1", "p?", "y?z"))
+        assertNull(commentAvatar("f1", "../p", "c1"))
+        assertNull(commentAvatar("f1", "p1", "moderation/someone"))
+    }
+
+    // The URL resolves "." and ".." away, escaped or not: f1/-/../asset/avatar
+    // would ask for another route's asset/avatar.
+    @Test
+    fun `a post whose id is a dot segment does not stand in, and its author's comment does`() {
+        val found = authorAvatars(
+            listOf(Post(id = "..", member = "ann", status = "approved")),
+            { "f1" },
+            listOf(comment("c1", "ann")),
+            "f1",
+        )
+        assertEquals(mapOf("ann" to "/forums/f1/-/p1/c1/asset/avatar"), found)
+    }
+
+    @Test
+    fun `a comment whose id is a dot segment does not stand in, and the commenter's next one does`() {
+        val found = authorAvatars(emptyList(), { "f1" }, listOf(comment(".", "bob"), comment("c2", "bob")), "f1")
+        assertEquals(mapOf("bob" to "/forums/f1/-/p1/c2/asset/avatar"), found)
     }
 }

@@ -69,6 +69,25 @@ class ChatAvatarsTest {
         )
     }
 
+    // The server refuses a message id that is not 32 lowercase letters and
+    // digits, so none reaches the phone today; the address still escapes one,
+    // since a slash or a question mark would send the request, with the
+    // session, to whatever action the path then names.
+    @Test
+    fun `a message id cannot point the avatar at another action`() {
+        val hostile = listOf("../../people/-/x", "m1?x=1").map { ChatMessage(id = it, member = "ann", name = "ann", body = "Hi") }
+        // The server decodes the path before it routes, so a slash gets no
+        // address at all, and the sender's next message stands in.
+        assertEquals(mapOf("ann" to "/chat/c1/-/m1%3Fx%3D1/asset/avatar"), messageAvatars(hostile, "c1"))
+    }
+
+    // The URL resolves "." and ".." away, escaped or not.
+    @Test
+    fun `a message whose id is a dot segment does not stand in, and the sender's next one does`() {
+        val dotted = listOf("..", ".", "m2").map { ChatMessage(id = it, member = "ann", name = "ann", body = "Hi") }
+        assertEquals(mapOf("ann" to "/chat/c1/-/m2/asset/avatar"), messageAvatars(dotted, "c1"))
+    }
+
     @Test
     fun `a group's messages ask for each sender's avatar once`() {
         val avatars = messageAvatars(messages, "c1")

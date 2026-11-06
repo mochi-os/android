@@ -30,6 +30,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.util.isWebUrl
 import org.mochios.android.util.openWeb
+import org.mochios.android.util.segment
 import org.mochios.feeds.R
 import org.mochios.android.R as MochiR
 import org.mochios.android.model.Comment
@@ -47,7 +48,7 @@ import org.mochios.android.ui.components.ReactionBar
 internal fun CommentItem(
     comment: Comment,
     depth: Int,
-    avatarUrl: String,
+    avatarUrl: String?,
     feedId: String,
     isEditing: Boolean,
     editText: String,
@@ -183,9 +184,16 @@ private fun CommenterMenu(author: String, onModerate: (String) -> Unit) {
 internal fun threadRows(comments: List<Comment>, collapsed: Set<String> = emptySet()) =
     org.mochios.android.ui.components.commentRows(comments, { it.id }, { it.children }, collapsed)
 
-/** Where a commenter's avatar is served: under one of their comments. */
-internal fun commentAvatar(feedId: String, postId: String, commentId: String) =
-    "/feeds/$feedId/-/$postId/$commentId/asset/avatar"
+/**
+ * Where a commenter's avatar is served: under one of their comments. Null when
+ * an id, a peer's, cannot be one segment of the address ([segment]).
+ */
+internal fun commentAvatar(feedId: String, postId: String, commentId: String): String? {
+    val feed = segment(feedId) ?: return null
+    val post = segment(postId) ?: return null
+    val comment = segment(commentId) ?: return null
+    return "/feeds/$feed/-/$post/$comment/asset/avatar"
+}
 
 /**
  * One avatar address per commenter, from each one's first comment in

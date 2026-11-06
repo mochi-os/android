@@ -33,6 +33,33 @@ fun isWebUrl(url: String): Boolean {
 fun webUri(url: String): Uri? = if (isWebUrl(url)) Uri.parse(url) else null
 
 /**
+ * [id], a peer's, escaped as one segment of an address on the user's server,
+ * or null when no segment can carry it. An image request carries the session
+ * and the token of the app its path names, so a slash or a question mark left
+ * in an id would point it at another action, of any app. A slash cannot be
+ * escaped away: the server decodes the path before it routes, so an escaped
+ * one divides it again. Escaping leaves a dot alone, and the URL resolves "."
+ * and ".." away whether escaped or not; an empty id would name the parent.
+ * Everything else but RFC 3986's unreserved characters is escaped, as UTF-8.
+ */
+fun segment(id: String): String? {
+    if (id.isEmpty() || id == "." || id == ".." || '/' in id) return null
+    return buildString {
+        for (byte in id.toByteArray(Charsets.UTF_8)) {
+            val code = byte.toInt() and 0xff
+            val character = code.toChar()
+            if (character in 'a'..'z' || character in 'A'..'Z' || character in '0'..'9' || character in "-._~") {
+                append(character)
+            } else {
+                append('%').append(HEX[code shr 4]).append(HEX[code and 15])
+            }
+        }
+    }
+}
+
+private const val HEX = "0123456789ABCDEF"
+
+/**
  * What a `mochi:/<entity>` path segment may contain: letters and digits in any
  * script, since a wiki page's name may be written in its own language, and
  * `.`, `_` and `-`. Nothing that separates a path or a query, escapes one, or

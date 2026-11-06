@@ -334,7 +334,7 @@ private fun QueueByline(
     name: String,
     member: String,
     created: Long,
-    avatarUrl: String,
+    avatarUrl: String?,
 ) {
     val format = LocalFormat.current
     val authorName = name.ifBlank { stringResource(R.string.forums_post_default_author) }

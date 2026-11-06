@@ -133,23 +133,28 @@ class WikiAvatarsTest {
         // Revision and comment ids reach the phone from other servers; a slash
         // or a dot segment left in one would send the image request, with the
         // session, to whatever action the path then names.
-        val hostile = "../../w1/-/delete?x="
+        // The server decodes the path before it routes, so an id holding a
+        // slash has the placeholder and no request at all.
+        val pathed = "../../w1/-/delete"
         inWiki {
             PageHistoryBody(
-                slug = "home", wikiId = "w1", revisions = listOf(Revision(id = hostile, author = "ann", name = "ann", version = 1)),
-                currentVersion = 1, hasMore = false, isLoadingMore = false, onLoadMore = {}, onView = {}, onRevert = {},
+                slug = "home", wikiId = "w1",
+                revisions = listOf(Revision(id = pathed, author = "ann", name = "ann", version = 2), Revision(id = "r1?x=", author = "bob", name = "bob", version = 1)),
+                currentVersion = 2, hasMore = false, isLoadingMore = false, onLoadMore = {}, onView = {}, onRevert = {},
             )
             WikiCommentThread(
-                comment = WikiComment(id = hostile, author = "bob", name = "bob", body = "Body"), currentUserId = null, isOwner = false,
-                onStartReply = { _, _ -> }, onEdit = null, onDelete = null, avatars = emptyMap(),
+                comment = WikiComment(id = "c1#y", author = "bob", name = "bob", body = "Body", children = listOf(WikiComment(id = pathed, author = "ann", name = "ann", body = "Reply"))),
+                currentUserId = null, isOwner = false, onStartReply = { _, _ -> }, onEdit = null, onDelete = null, avatars = emptyMap(),
             )
         }
+        settled(2)
+        // Long enough for any other row's request to have been made.
+        rule.mainClock.advanceTimeBy(1_000)
+        Thread.sleep(300)
+        rule.waitForIdle()
         assertEquals(
-            listOf(
-                "/wikis/w1/-/comment/..%2F..%2Fw1%2F-%2Fdelete%3Fx%3D/asset/avatar",
-                "https://server/wikis/w1/-/revision/..%2F..%2Fw1%2F-%2Fdelete%3Fx%3D/asset/avatar",
-            ),
-            settled(2),
+            listOf("/wikis/w1/-/comment/c1%23y/asset/avatar", "https://server/wikis/w1/-/revision/r1%3Fx%3D/asset/avatar"),
+            loaded.toSet().sorted(),
         )
     }
 

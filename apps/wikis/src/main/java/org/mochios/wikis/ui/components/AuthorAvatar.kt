@@ -5,12 +5,12 @@
 
 package org.mochios.wikis.ui.components
 
-import android.net.Uri
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.util.segment
 
 /**
  * Standard avatar tier set. Pick by intent rather than pixels — these mirror
@@ -30,15 +30,6 @@ enum class AvatarSize(val px: Dp) {
     XL(48.dp),
     XXL(80.dp),
 }
-
-/**
- * [id], a peer's, escaped as one segment of an asset address, or null when no
- * segment can carry it. Escaping keeps a slash from pointing the request at
- * another action, but leaves a dot alone, and the URL resolves "." and ".."
- * away whether escaped or not; an empty id would name the parent.
- */
-internal fun segment(id: String): String? =
-    if (id.isEmpty() || id == "." || id == "..") null else Uri.encode(id)
 
 /**
  * Avatar for a revision's author. The wiki proxies the author's avatar and

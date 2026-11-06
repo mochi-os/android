@@ -138,6 +138,7 @@ import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.ui.components.rememberReplyFocus
+import org.mochios.android.util.segment
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
@@ -1620,8 +1621,15 @@ private fun DateSeparator(epochSeconds: Long) {
  */
 internal fun pinnable(chat: ChatDetail): Boolean = chat.status == ChatStatus.ACTIVE && chat.name.isNotEmpty()
 
-/** Where a sender's avatar is served: under one of their messages in the chat. */
-internal fun messageAvatar(chatId: String, messageId: String) = "/chat/$chatId/-/$messageId/asset/avatar"
+/**
+ * Where a sender's avatar is served: under one of their messages in the chat.
+ * Null when an id cannot be one segment of the address ([segment]).
+ */
+internal fun messageAvatar(chatId: String, messageId: String): String? {
+    val chat = segment(chatId) ?: return null
+    val message = segment(messageId) ?: return null
+    return "/chat/$chat/-/$message/asset/avatar"
+}
 
 /**
  * One avatar address per sender across the loaded messages, from each one's

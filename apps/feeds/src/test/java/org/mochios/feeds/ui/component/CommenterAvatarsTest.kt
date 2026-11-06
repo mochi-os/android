@@ -6,6 +6,7 @@
 package org.mochios.feeds.ui.component
 
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertNull
 import org.junit.Test
 import org.mochios.android.model.Comment
 import org.mochios.feeds.model.Post
@@ -46,5 +47,30 @@ class CommenterAvatarsTest {
             ),
             timelineAvatars(posts, "fallback"),
         )
+    }
+
+    // Post and comment ids reach the phone from the feed's owner; a slash or a
+    // question mark left in one would send the image request, with the
+    // session, to whatever action the path then names.
+    @Test
+    fun `an id a peer chose cannot point the avatar at another action`() {
+        assertEquals("/feeds/f1/-/p1%3Fx%3D1/c1%23y/asset/avatar", commentAvatar("f1", "p1?x=1", "c1#y"))
+        // The server decodes the path before it routes, so no escaping keeps a
+        // slash from dividing it.
+        assertNull(commentAvatar("f1", "../../people/-/x", "c1"))
+        assertNull(commentAvatar("f1", "p1", "members/someone"))
+    }
+
+    // The URL resolves "." and ".." away, escaped or not: p1/../asset/avatar
+    // would ask for the post's own asset/avatar.
+    @Test
+    fun `a comment whose id is a dot segment does not stand in, and the commenter's next one does`() {
+        val comments = listOf(by("..", "ann"), by(".", "bob"), by("c3", "ann"))
+        assertEquals(mapOf("ann" to "/feeds/f1/-/p1/c3/asset/avatar"), commenterAvatars(comments, "f1", "p1"))
+    }
+
+    @Test
+    fun `a post whose id is a dot segment addresses no comment`() {
+        assertEquals(emptyMap<String, String>(), commenterAvatars(listOf(by("c1", "ann")), "f1", ".."))
     }
 }
