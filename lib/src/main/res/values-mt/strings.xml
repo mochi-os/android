@@ -349,4 +349,5 @@
         <item quantity="many">+%1$s tweġiba aktar</item>
         <item quantity="other">+%1$s tweġiba aktar</item>
     </plurals>
+    <string name="drawer_unread">Mhux moqri</string>
 </resources>

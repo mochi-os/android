@@ -166,4 +166,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">Kọ́kọ́rọ́ ìfiránṣẹ́ %1$s ni a ti mú padà</item>
     </plurals>
+    <string name="chat_mark_unread">Sàmì sí pé a kò tíì kà</string>
+    <string name="chat_list_marked_read">A ti sàmì sí ìfọ̀rọ̀wérọ̀ pé a ti kà á</string>
+    <string name="chat_list_marked_unread">A ti sàmì sí ìfọ̀rọ̀wérọ̀ pé a kò tíì kà á</string>
 </resources>

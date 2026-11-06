@@ -661,4 +661,20 @@
         <item quantity="other">%1$s comptes</item>
     </plurals>
     <string name="blocks_server">Serveur</string>
+    <string name="notifications_rss">Flux RSS</string>
+    <string name="notifications_rss_empty">Aucun flux RSS pour le moment</string>
+    <string name="notifications_rss_create">Créer un flux</string>
+    <string name="notifications_rss_create_title">Créer un flux RSS</string>
+    <string name="notifications_rss_created">Flux créé</string>
+    <string name="notifications_rss_done">Terminé</string>
+    <string name="notifications_rss_name">Nom du flux</string>
+    <string name="notifications_rss_existing">Ajouter aux abonnements existants</string>
+    <string name="notifications_rss_default">Notifier par défaut</string>
+    <string name="notifications_rss_edit">Modifier le flux</string>
+    <string name="notifications_rss_delete">Supprimer le flux</string>
+    <string name="notifications_rss_delete_title">Supprimer ce flux ?</string>
+    <string name="notifications_rss_delete_message">Cette action supprimera définitivement ce flux. Les lecteurs RSS qui l’utilisent ne pourront plus accéder à vos notifications.</string>
+    <string name="notifications_rss_renamed">Flux renommé</string>
+    <string name="notifications_rss_deleted">Flux supprimé</string>
+    <string name="notifications_rss_default_name">Flux RSS</string>
 </resources>

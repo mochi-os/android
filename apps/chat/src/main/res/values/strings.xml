@@ -98,6 +98,9 @@
     <string name="chat_unpin">Unpin</string>
     <string name="chat_mark_read">Mark as read</string>
     <string name="chat_marked_read">Marked as read</string>
+    <string name="chat_mark_unread">Mark as unread</string>
+    <string name="chat_list_marked_read">Chat marked as read</string>
+    <string name="chat_list_marked_unread">Chat marked as unread</string>
     <!-- Privacy: who may start a chat, and what the user shares -->
     <string name="chat_privacy_title">Privacy</string>
     <string name="chat_privacy_presence">Show when I\'m online</string>

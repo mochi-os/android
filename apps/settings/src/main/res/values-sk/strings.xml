@@ -676,4 +676,20 @@
         <item quantity="other">%1$s účtov</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS kanály</string>
+    <string name="notifications_rss_empty">Zatiaľ žiadne RSS kanály</string>
+    <string name="notifications_rss_create">Vytvoriť kanál</string>
+    <string name="notifications_rss_create_title">Vytvoriť RSS kanál</string>
+    <string name="notifications_rss_created">Kanál vytvorený</string>
+    <string name="notifications_rss_done">Hotovo</string>
+    <string name="notifications_rss_name">Názov kanála</string>
+    <string name="notifications_rss_existing">Pridať k existujúcim odberom</string>
+    <string name="notifications_rss_default">Predvolene notifikovať</string>
+    <string name="notifications_rss_edit">Upraviť kanál</string>
+    <string name="notifications_rss_delete">Odstrániť kanál</string>
+    <string name="notifications_rss_delete_title">Odstrániť kanál?</string>
+    <string name="notifications_rss_delete_message">Týmto sa natrvalo odstráni tento kanál. Žiadne RSS čítačky, ktoré ho používajú, už nebudú môcť pristupovať k vašim oznámeniam.</string>
+    <string name="notifications_rss_renamed">Kanál premenovaný</string>
+    <string name="notifications_rss_deleted">Kanál zmazaný</string>
+    <string name="notifications_rss_default_name">RSS kanál</string>
 </resources>

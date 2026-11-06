@@ -658,4 +658,20 @@
         <item quantity="other">%1$s бүртгэл</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS фидүүд</string>
+    <string name="notifications_rss_empty">RSS-ийн фидүүд алга байна</string>
+    <string name="notifications_rss_create">Фийд үүсгэх</string>
+    <string name="notifications_rss_create_title">RSS фийд үүсгэх</string>
+    <string name="notifications_rss_created">Фийд үүсгэгдсэн</string>
+    <string name="notifications_rss_done">Дууссан</string>
+    <string name="notifications_rss_name">Фийдийн нэр</string>
+    <string name="notifications_rss_existing">Одоогийн захиалгад нэмэх</string>
+    <string name="notifications_rss_default">Анхдагчаар мэдэгдэх</string>
+    <string name="notifications_rss_edit">Фидийг засах</string>
+    <string name="notifications_rss_delete">Фийд устгах</string>
+    <string name="notifications_rss_delete_title">Фийд устгах уу?</string>
+    <string name="notifications_rss_delete_message">Энэ нь энэ фийдийг бүрмөсөн устгана. Үүнийг ашиглаж байгаа аливаа RSS уншигчид таны мэдэгдлүүдэд хандах боломжгүй болно.</string>
+    <string name="notifications_rss_renamed">Фийдийн нэр өөрчлөгдсөн</string>
+    <string name="notifications_rss_deleted">Фийд устгагдсан</string>
+    <string name="notifications_rss_default_name">RSS фид</string>
 </resources>

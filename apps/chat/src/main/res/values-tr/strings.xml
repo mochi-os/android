@@ -168,4 +168,7 @@
         <item quantity="one">%1$s mesaj anahtarı geri yüklendi</item>
         <item quantity="other">%1$s mesaj anahtarı geri yüklendi</item>
     </plurals>
+    <string name="chat_mark_unread">Okunmadı olarak işaretle</string>
+    <string name="chat_list_marked_read">Sohbet okundu olarak işaretlendi</string>
+    <string name="chat_list_marked_unread">Sohbet okunmadı olarak işaretlendi</string>
 </resources>

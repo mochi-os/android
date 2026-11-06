@@ -166,4 +166,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">မက်ဆေ့ဂျ်သော့ %1$s ခု ပြန်လည်ရယူပြီး</item>
     </plurals>
+    <string name="chat_mark_unread">မဖတ်ရသေးအဖြစ် မှတ်သားရန်</string>
+    <string name="chat_list_marked_read">ချတ်ကို ဖတ်ပြီးအဖြစ် မှတ်သားပြီးပါပြီ</string>
+    <string name="chat_list_marked_unread">ချတ်ကို မဖတ်ရသေးအဖြစ် မှတ်သားပြီးပါပြီ</string>
 </resources>

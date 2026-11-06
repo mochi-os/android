@@ -341,4 +341,5 @@
     </plurals>
     <string name="comment_share">分享</string>
     <string name="comment_all">所有留言</string>
+    <string name="drawer_unread">未讀</string>
 </resources>

@@ -168,4 +168,7 @@
         <item quantity="one">%1$s boodskapsleutel herstel</item>
         <item quantity="other">%1$s boodskapsleutels herstel</item>
     </plurals>
+    <string name="chat_mark_unread">Merk as ongelees</string>
+    <string name="chat_list_marked_read">Gesprek as gelees gemerk</string>
+    <string name="chat_list_marked_unread">Gesprek as ongelees gemerk</string>
 </resources>

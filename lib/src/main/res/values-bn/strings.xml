@@ -342,4 +342,5 @@
         <item quantity="one">%1$s উত্তর</item>
         <item quantity="other">+%1$s আরো উত্তর</item>
     </plurals>
+    <string name="drawer_unread">অপঠিত</string>
 </resources>

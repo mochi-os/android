@@ -345,4 +345,5 @@
         <item quantity="few">+%1$s další odpovědi</item>
         <item quantity="other">+%1$s dalších odpovědí</item>
     </plurals>
+    <string name="drawer_unread">Nepřečtené</string>
 </resources>

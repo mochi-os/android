@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.DoneAll
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.outlined.DeleteSweep
+import androidx.compose.material.icons.outlined.RssFeed
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -51,6 +52,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
+import org.mochios.settings.R as SettingsR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
@@ -73,6 +75,7 @@ import org.mochios.settings.api.NotifTopic
 fun NotificationsScreen(
     onBack: () -> Unit,
     onOpenLink: (String) -> Unit,
+    onRssFeeds: () -> Unit,
     viewModel: NotificationsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -130,6 +133,14 @@ fun NotificationsScreen(
                                     showClearConfirm = true
                                 },
                                 leadingIcon = { Icon(Icons.Outlined.DeleteSweep, contentDescription = null) },
+                            )
+                            MochiDropdownMenuItem(
+                                text = { Text(stringResource(SettingsR.string.notifications_rss)) },
+                                onClick = {
+                                    showOverflow = false
+                                    onRssFeeds()
+                                },
+                                leadingIcon = { Icon(Icons.Outlined.RssFeed, contentDescription = null) },
                             )
                         }
                     }

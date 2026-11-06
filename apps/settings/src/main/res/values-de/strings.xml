@@ -658,4 +658,20 @@
         <item quantity="other">%1$s Konten</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS-Feeds</string>
+    <string name="notifications_rss_empty">Noch keine RSS-Feeds</string>
+    <string name="notifications_rss_create">Feed erstellen</string>
+    <string name="notifications_rss_create_title">RSS-Feed erstellen</string>
+    <string name="notifications_rss_created">Feed erstellt</string>
+    <string name="notifications_rss_done">Fertig</string>
+    <string name="notifications_rss_name">Feed-Name</string>
+    <string name="notifications_rss_existing">Zu bestehenden Abonnements hinzufügen</string>
+    <string name="notifications_rss_default">Standardmäßig benachrichtigen</string>
+    <string name="notifications_rss_edit">Feed bearbeiten</string>
+    <string name="notifications_rss_delete">Feed löschen</string>
+    <string name="notifications_rss_delete_title">Feed löschen?</string>
+    <string name="notifications_rss_delete_message">Dadurch wird dieser Feed dauerhaft gelöscht. RSS-Reader, die ihn verwenden, können dann nicht mehr auf deine Benachrichtigungen zugreifen.</string>
+    <string name="notifications_rss_renamed">Feed umbenannt</string>
+    <string name="notifications_rss_deleted">Feed gelöscht</string>
+    <string name="notifications_rss_default_name">RSS-Feed</string>
 </resources>

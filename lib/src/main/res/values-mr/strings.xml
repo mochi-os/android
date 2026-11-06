@@ -342,4 +342,5 @@
         <item quantity="one">%1$s प्रतिसाद</item>
         <item quantity="other">+%1$s अधिक प्रतिसाद</item>
     </plurals>
+    <string name="drawer_unread">न वाचलेले</string>
 </resources>

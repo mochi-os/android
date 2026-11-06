@@ -167,4 +167,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">Đã khôi phục %1$s khoá tin nhắn</item>
     </plurals>
+    <string name="chat_mark_unread">Đánh dấu là chưa đọc</string>
+    <string name="chat_list_marked_read">Đã đánh dấu cuộc trò chuyện là đã đọc</string>
+    <string name="chat_list_marked_unread">Đã đánh dấu cuộc trò chuyện là chưa đọc</string>
 </resources>

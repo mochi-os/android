@@ -658,4 +658,20 @@
         <item quantity="other">%1$s ಖಾತೆಗಳು</item>
     </plurals>
     <string name="blocks_server">ಸರ್ವರ್</string>
+    <string name="notifications_rss">RSS ಫೀಡ್‌ಗಳು</string>
+    <string name="notifications_rss_empty">ಇನ್ನೂ ಯಾವುದೇ RSS ಫೀಡ್‌ಗಳಿಲ್ಲ</string>
+    <string name="notifications_rss_create">ಫೀಡ್ ರಚಿಸಿ</string>
+    <string name="notifications_rss_create_title">RSS ಫೀಡ್ ರಚಿಸಿ</string>
+    <string name="notifications_rss_created">ಫೀಡ್ ರಚಿಸಲಾಗಿದೆ</string>
+    <string name="notifications_rss_done">ಮುಗಿಯಿತು</string>
+    <string name="notifications_rss_name">ಫೀಡ್ ಹೆಸರು</string>
+    <string name="notifications_rss_existing">ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಸಬ್‌ಸ್ಕ್ರಿಪ್ಷನ್‌ಗಳಿಗೆ ಸೇರಿಸಿ</string>
+    <string name="notifications_rss_default">ಡೀಫಾಲ್ಟ್ ಆಗಿ ನೋಟಿಫೈ ಮಾಡಿ</string>
+    <string name="notifications_rss_edit">ಫೀಡ್ ಸಂಪಾದಿಸಿ</string>
+    <string name="notifications_rss_delete">ಫೀಡ್ ಅಳಿಸಿ</string>
+    <string name="notifications_rss_delete_title">ಫೀಡ್ ಅಳಿಸಬೇಕೆ?</string>
+    <string name="notifications_rss_delete_message">ಇದು ಈ ಫೀಡ್ ಅನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ. ಅದನ್ನು ಬಳಸುವ ಯಾವುದೇ RSS ರೀಡರ್‌ಗಳು ಇನ್ನು ಮುಂದೆ ನಿಮ್ಮ ಅಧಿಸೂಚನೆಗಳನ್ನು ಪ್ರವೇಶಿಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.</string>
+    <string name="notifications_rss_renamed">ಫೀಡ್ ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
+    <string name="notifications_rss_deleted">ಫೀಡ್ ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="notifications_rss_default_name">RSS ಫೀಡ್</string>
 </resources>

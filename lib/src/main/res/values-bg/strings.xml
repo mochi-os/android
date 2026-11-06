@@ -342,4 +342,5 @@
         <item quantity="one">%1$s отговор</item>
         <item quantity="other">+%1$s още отговора</item>
     </plurals>
+    <string name="drawer_unread">Непрочетени</string>
 </resources>

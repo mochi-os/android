@@ -658,4 +658,20 @@
         <item quantity="other">%1$s konton</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS-flöden</string>
+    <string name="notifications_rss_empty">Inga RSS-flöden ännu</string>
+    <string name="notifications_rss_create">Skapa flöde</string>
+    <string name="notifications_rss_create_title">Skapa RSS-flöde</string>
+    <string name="notifications_rss_created">Flöde skapat</string>
+    <string name="notifications_rss_done">Klar</string>
+    <string name="notifications_rss_name">Flödesnamn</string>
+    <string name="notifications_rss_existing">Lägg till i befintliga prenumerationer</string>
+    <string name="notifications_rss_default">Avisera som standard</string>
+    <string name="notifications_rss_edit">Redigera flöde</string>
+    <string name="notifications_rss_delete">Ta bort flöde</string>
+    <string name="notifications_rss_delete_title">Ta bort flöde?</string>
+    <string name="notifications_rss_delete_message">Detta tar bort flödet permanent. RSS-läsare som använder det kommer inte längre att kunna få åtkomst till dina aviseringar.</string>
+    <string name="notifications_rss_renamed">Flöde omdöpt</string>
+    <string name="notifications_rss_deleted">Flöde raderat</string>
+    <string name="notifications_rss_default_name">RSS-flöde</string>
 </resources>

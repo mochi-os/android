@@ -166,4 +166,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">%1$s konci pesen dipulihkeun</item>
     </plurals>
+    <string name="chat_mark_unread">Tandaan can dibaca</string>
+    <string name="chat_list_marked_read">Obrolan ditandaan geus dibaca</string>
+    <string name="chat_list_marked_unread">Obrolan ditandaan can dibaca</string>
 </resources>

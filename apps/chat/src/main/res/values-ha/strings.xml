@@ -168,4 +168,7 @@
         <item quantity="one">An maido da maɓallin saƙo %1$s</item>
         <item quantity="other">An maido da maɓallan saƙo %1$s</item>
     </plurals>
+    <string name="chat_mark_unread">Yi alama a matsayin ba a karanta ba</string>
+    <string name="chat_list_marked_read">An yi wa hirar alama a matsayin an karanta</string>
+    <string name="chat_list_marked_unread">An yi wa hirar alama a matsayin ba a karanta ba</string>
 </resources>

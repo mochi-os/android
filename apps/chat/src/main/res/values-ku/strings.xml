@@ -168,4 +168,7 @@
         <item quantity="one">%1$s mifteya peyamê hate vegerandin</item>
         <item quantity="other">%1$s mifteyên peyaman hatin vegerandin</item>
     </plurals>
+    <string name="chat_mark_unread">Wek nexwendî nîşan bike</string>
+    <string name="chat_list_marked_read">Sohbet wek xwendî hat nîşankirin</string>
+    <string name="chat_list_marked_unread">Sohbet wek nexwendî hat nîşankirin</string>
 </resources>

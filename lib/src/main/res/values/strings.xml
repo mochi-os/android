@@ -409,4 +409,5 @@
     <string name="upload_processing">Processing…</string>
     <string name="upload_sent">%1$s of %2$s</string>
     <string name="drawer_mochi_home" translatable="false">Mochi</string>
+    <string name="drawer_unread">Unread</string>
 </resources>

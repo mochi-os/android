@@ -658,4 +658,20 @@
         <item quantity="other">akaunti %1$s</item>
     </plurals>
     <string name="blocks_server">Seva</string>
+    <string name="notifications_rss">Milisho ya RSS</string>
+    <string name="notifications_rss_empty">Hakuna mlisho wa RSS bado</string>
+    <string name="notifications_rss_create">Unda mlisho</string>
+    <string name="notifications_rss_create_title">Tengeneza mlisho wa RSS</string>
+    <string name="notifications_rss_created">Mlisho umeundwa</string>
+    <string name="notifications_rss_done">Imekamilika</string>
+    <string name="notifications_rss_name">Jina la mlisho</string>
+    <string name="notifications_rss_existing">Ongeza kwenye usajili uliopo</string>
+    <string name="notifications_rss_default">Arifu kwa chaguo-msingi</string>
+    <string name="notifications_rss_edit">Hariri mlisho</string>
+    <string name="notifications_rss_delete">Futa mlisho</string>
+    <string name="notifications_rss_delete_title">Futa mlisho?</string>
+    <string name="notifications_rss_delete_message">Hii itafuta mlisho huu kabisa. Visomaji vya RSS vinavyoutumia havitaweza tena kufikia arifa zako.</string>
+    <string name="notifications_rss_renamed">Mlisho umebadilishwa jina</string>
+    <string name="notifications_rss_deleted">Mlisho umefutwa</string>
+    <string name="notifications_rss_default_name">Mlisho wa RSS</string>
 </resources>

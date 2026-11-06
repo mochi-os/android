@@ -658,4 +658,20 @@
         <item quantity="other">%1$s konti</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS-feeds</string>
+    <string name="notifications_rss_empty">Ingen RSS-feeds endnu</string>
+    <string name="notifications_rss_create">Opret feed</string>
+    <string name="notifications_rss_create_title">Opret RSS-feed</string>
+    <string name="notifications_rss_created">Feed oprettet</string>
+    <string name="notifications_rss_done">Færdig</string>
+    <string name="notifications_rss_name">Feednavn</string>
+    <string name="notifications_rss_existing">Tilføj til eksisterende abonnementer</string>
+    <string name="notifications_rss_default">Notificér som standard</string>
+    <string name="notifications_rss_edit">Rediger feed</string>
+    <string name="notifications_rss_delete">Slet feed</string>
+    <string name="notifications_rss_delete_title">Slet feed?</string>
+    <string name="notifications_rss_delete_message">Dette sletter dette feed permanent. RSS-læsere, der bruger det, vil ikke længere have adgang til dine notifikationer.</string>
+    <string name="notifications_rss_renamed">Feed omdøbt</string>
+    <string name="notifications_rss_deleted">Feed slettet</string>
+    <string name="notifications_rss_default_name">RSS-feed</string>
 </resources>

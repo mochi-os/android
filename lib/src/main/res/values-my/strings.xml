@@ -341,4 +341,5 @@
     <plurals name="comment_collapsed_replies">
         <item quantity="other">+ ပြန်ဖြေချက် %1$s ခု ပိုနေသေးသည်</item>
     </plurals>
+    <string name="drawer_unread">မဖတ်ရသေး</string>
 </resources>

@@ -697,4 +697,20 @@
         <item quantity="other">%1$s kont</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">Feeds RSS</string>
+    <string name="notifications_rss_empty">L-ebda RSS feeds s\'issa</string>
+    <string name="notifications_rss_create">Oħloq feed</string>
+    <string name="notifications_rss_create_title">Oħloq feed RSS</string>
+    <string name="notifications_rss_created">Inħolqot il-feed</string>
+    <string name="notifications_rss_done">Lest</string>
+    <string name="notifications_rss_name">Isem il-feed</string>
+    <string name="notifications_rss_existing">Żid mas-sottoskrizzjonijiet eżistenti</string>
+    <string name="notifications_rss_default">Innotifika b\'mod awtomatiku</string>
+    <string name="notifications_rss_edit">Editja l-feed</string>
+    <string name="notifications_rss_delete">Ħassar feed</string>
+    <string name="notifications_rss_delete_title">Tħassar feed?</string>
+    <string name="notifications_rss_delete_message">Dan iħassar permanentement dan il-feed. Kwalunkwe RSS reader li jużah ma jibqax jista\' jaċċessa n-notifiki tiegħek.</string>
+    <string name="notifications_rss_renamed">Il-feed ġiet imsemmija mill-ġdid</string>
+    <string name="notifications_rss_deleted">Tħassret il-feed</string>
+    <string name="notifications_rss_default_name">Feed RSS</string>
 </resources>

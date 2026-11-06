@@ -344,4 +344,5 @@
         <item quantity="one">%1$s antwoord</item>
         <item quantity="other">+%1$s meer antwoorde</item>
     </plurals>
+    <string name="drawer_unread">Ongelees</string>
 </resources>

@@ -671,4 +671,20 @@
         <item quantity="other">%1$s računa</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS feedovi</string>
+    <string name="notifications_rss_empty">Još nema RSS feedova</string>
+    <string name="notifications_rss_create">Kreiraj feed</string>
+    <string name="notifications_rss_create_title">Kreiraj RSS feed</string>
+    <string name="notifications_rss_created">Feed kreiran</string>
+    <string name="notifications_rss_done">Gotovo</string>
+    <string name="notifications_rss_name">Naziv feeda</string>
+    <string name="notifications_rss_existing">Dodaj postojećim pretplatama</string>
+    <string name="notifications_rss_default">Obavještavaj prema zadanom</string>
+    <string name="notifications_rss_edit">Uredi kanal</string>
+    <string name="notifications_rss_delete">Obriši feed</string>
+    <string name="notifications_rss_delete_title">Obrisati feed?</string>
+    <string name="notifications_rss_delete_message">Ovo će trajno obrisati ovaj feed. Svi RSS čitači koji ga koriste više neće moći pristupati vašim obavijestima.</string>
+    <string name="notifications_rss_renamed">Feed preimenovan</string>
+    <string name="notifications_rss_deleted">Feed obrisan</string>
+    <string name="notifications_rss_default_name">RSS kanal</string>
 </resources>

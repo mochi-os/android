@@ -342,4 +342,5 @@
         <item quantity="one">%1$s απάντηση</item>
         <item quantity="other">+%1$s ακόμα απαντήσεις</item>
     </plurals>
+    <string name="drawer_unread">Μη αναγνωσμένες</string>
 </resources>

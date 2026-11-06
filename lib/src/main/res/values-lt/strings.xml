@@ -346,4 +346,5 @@
         <item quantity="many">dar +%1$s atsakymo</item>
         <item quantity="other">dar +%1$s atsakymų</item>
     </plurals>
+    <string name="drawer_unread">Neperskaityta</string>
 </resources>

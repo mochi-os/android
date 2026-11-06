@@ -342,4 +342,5 @@
         <item quantity="one">deebii %1$s</item>
         <item quantity="other">deebii %1$s dabalataa</item>
     </plurals>
+    <string name="drawer_unread">Hin dubbifamne</string>
 </resources>

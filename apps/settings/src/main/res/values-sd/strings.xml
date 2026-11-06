@@ -658,4 +658,20 @@
         <item quantity="other">%1$s اڪائونٽس</item>
     </plurals>
     <string name="blocks_server">سرور</string>
+    <string name="notifications_rss">RSS feeds</string>
+    <string name="notifications_rss_empty">اڃا تائين ڪا RSS feed نه آهي</string>
+    <string name="notifications_rss_create">فيڊ ٺاهيو</string>
+    <string name="notifications_rss_create_title">RSS فيڊ ٺاهيو</string>
+    <string name="notifications_rss_created">فيڊ ٺهي وئي</string>
+    <string name="notifications_rss_done">مڪمل</string>
+    <string name="notifications_rss_name">فيڊ نالو</string>
+    <string name="notifications_rss_existing">موجود سبسڪرپشنن ۾ شامل ڪريو</string>
+    <string name="notifications_rss_default">ڊفالٽ طور اطلاع ڏيو</string>
+    <string name="notifications_rss_edit">فيڊ ايڊٽ ڪريو</string>
+    <string name="notifications_rss_delete">فيڊ ختم ڪريو</string>
+    <string name="notifications_rss_delete_title">فيڊ ختم ڪجي؟</string>
+    <string name="notifications_rss_delete_message">ھي ھي فيڊ مستقل طور تي حذف ڪندو. ڪو به RSS پڙھندڙ ھن کي استعمال ڪندي توھان جي اطلاعن تائين رسائي حاصل نه ڪري سگھندو.</string>
+    <string name="notifications_rss_renamed">فيڊ جو نالو تبديل ٿيو</string>
+    <string name="notifications_rss_deleted">فيڊ ختم ٿي وئي</string>
+    <string name="notifications_rss_default_name">RSS فيڊ</string>
 </resources>

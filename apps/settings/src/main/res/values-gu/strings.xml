@@ -658,4 +658,20 @@
         <item quantity="other">%1$s ખાતાં</item>
     </plurals>
     <string name="blocks_server">સર્વર</string>
+    <string name="notifications_rss">RSS ફીડ્સ</string>
+    <string name="notifications_rss_empty">હજુ સુધી કોઈ RSS ફીડ્સ નથી</string>
+    <string name="notifications_rss_create">ફીડ બનાવો</string>
+    <string name="notifications_rss_create_title">RSS ફીડ બનાવો</string>
+    <string name="notifications_rss_created">ફીડ બનાવ્યું</string>
+    <string name="notifications_rss_done">થઈ ગયું</string>
+    <string name="notifications_rss_name">ફીડનું નામ</string>
+    <string name="notifications_rss_existing">વર્તમાન સબ્સ્ક્રિપ્શનોમાં ઉમેરો</string>
+    <string name="notifications_rss_default">ડિફૉલ્ટ રૂપે સૂચિત કરો</string>
+    <string name="notifications_rss_edit">ફીડ સંપાદિત કરો</string>
+    <string name="notifications_rss_delete">ફીડ કાઢી નાખો</string>
+    <string name="notifications_rss_delete_title">ફીડ કાઢી નાખવો છે?</string>
+    <string name="notifications_rss_delete_message">આ આ ફીડને કાયમ માટે કાઢી નાખશે. તેનો ઉપયોગ કરતા કોઈપણ RSS રીડર્સ હવેથી તમારી સૂચનાઓ સુધી પહોંચી શકશે નહીં.</string>
+    <string name="notifications_rss_renamed">ફીડનું નામ બદલ્યું</string>
+    <string name="notifications_rss_deleted">ફીડ કાઢી નાખ્યું</string>
+    <string name="notifications_rss_default_name">RSS ફીડ</string>
 </resources>

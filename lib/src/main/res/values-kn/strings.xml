@@ -342,4 +342,5 @@
         <item quantity="one">%1$s ಪ್ರತ್ಯುತ್ತರ</item>
         <item quantity="other">+%1$s ಹೆಚ್ಚಿನ ಪ್ರತ್ಯುತ್ತರಗಳು</item>
     </plurals>
+    <string name="drawer_unread">ಓದದ</string>
 </resources>

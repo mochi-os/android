@@ -341,4 +341,5 @@
     <plurals name="comment_collapsed_replies">
         <item quantity="other">+%1$s plis repons</item>
     </plurals>
+    <string name="drawer_unread">Pa li</string>
 </resources>

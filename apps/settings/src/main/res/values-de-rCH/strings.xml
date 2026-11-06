@@ -330,4 +330,5 @@
     <string name="account_data_generate">Passphrase generieren</string>
     <string name="networks_connected">Verbunden</string>
     <string name="networks_address">Adresse</string>
+    <string name="notifications_rss_default">Standardmässig benachrichtigen</string>
 </resources>

@@ -168,4 +168,7 @@
         <item quantity="one">%1$s üzenetkulcs visszaállítva</item>
         <item quantity="other">%1$s üzenetkulcs visszaállítva</item>
     </plurals>
+    <string name="chat_mark_unread">Megjelölés olvasatlanként</string>
+    <string name="chat_list_marked_read">Chat olvasottnak jelölve</string>
+    <string name="chat_list_marked_unread">Chat olvasatlannak jelölve</string>
 </resources>

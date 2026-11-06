@@ -172,4 +172,7 @@
         <item quantity="many">Восстановлено %1$s ключей сообщений</item>
         <item quantity="other">Восстановлено %1$s ключа сообщений</item>
     </plurals>
+    <string name="chat_mark_unread">Отметить как непрочитанный</string>
+    <string name="chat_list_marked_read">Чат отмечен как прочитанный</string>
+    <string name="chat_list_marked_unread">Чат отмечен как непрочитанный</string>
 </resources>

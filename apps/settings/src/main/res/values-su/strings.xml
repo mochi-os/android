@@ -646,4 +646,20 @@
         <item quantity="other">%1$s akun</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">Feed RSS</string>
+    <string name="notifications_rss_empty">Tacan aya feed RSS</string>
+    <string name="notifications_rss_create">Jieun feed</string>
+    <string name="notifications_rss_create_title">Jieun feed RSS</string>
+    <string name="notifications_rss_created">Feed dijieun</string>
+    <string name="notifications_rss_done">Beres</string>
+    <string name="notifications_rss_name">Ngaran feed</string>
+    <string name="notifications_rss_existing">Tambah ka langganan nu aya</string>
+    <string name="notifications_rss_default">Bewara sacara baku</string>
+    <string name="notifications_rss_edit">Édit feed</string>
+    <string name="notifications_rss_delete">Hapus feed</string>
+    <string name="notifications_rss_delete_title">Hapus feed?</string>
+    <string name="notifications_rss_delete_message">Ieu bakal ngahapus permanén feed ieu. Sagala pamaca RSS nu makéna moal tiasa ngakses bewara anjeun deui.</string>
+    <string name="notifications_rss_renamed">Ngaran feed diganti</string>
+    <string name="notifications_rss_deleted">Feed dihapus</string>
+    <string name="notifications_rss_default_name">Feed RSS</string>
 </resources>

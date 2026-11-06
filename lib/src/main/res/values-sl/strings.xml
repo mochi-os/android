@@ -346,4 +346,5 @@
         <item quantity="few">še +%1$s odgovori</item>
         <item quantity="other">še +%1$s odgovorov</item>
     </plurals>
+    <string name="drawer_unread">Neprebrano</string>
 </resources>

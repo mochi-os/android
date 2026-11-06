@@ -6,6 +6,12 @@
 package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -69,6 +75,17 @@ data class DrawerItem(
     val avatarUrl: String? = null,
     val seed: String? = null,
     val section: String? = null,
+    /** A dot where the count would be: marked unread, with nothing counted. */
+    val dot: Boolean = false,
+    /** The row's menu, opened by a long press; none when empty. */
+    val menu: List<DrawerMenuEntry> = emptyList(),
+)
+
+/** One entry of a drawer row's [DrawerItem.menu]. */
+data class DrawerMenuEntry(
+    val title: String,
+    val icon: ImageVector,
+    val onClick: () -> Unit,
 )
 
 /**
@@ -336,6 +353,10 @@ private fun DrawerItemRow(
         Color.Transparent
     }
     val accentColor = MaterialTheme.colorScheme.primary
+    var menuOpen by remember { mutableStateOf(false) }
+    val moreOptions = stringResource(R.string.common_more_options)
+    val unreadLabel = stringResource(R.string.drawer_unread)
+    Box {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -353,7 +374,17 @@ private fun DrawerItemRow(
                     Modifier
                 }
             )
-            .clickable(onClick = onClick)
+            .then(
+                if (item.menu.isEmpty()) {
+                    Modifier.clickable(onClick = onClick)
+                } else {
+                    Modifier.combinedClickable(
+                        onClick = onClick,
+                        onLongClick = { menuOpen = true },
+                        onLongClickLabel = moreOptions,
+                    )
+                }
+            )
             .padding(horizontal = 24.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -448,6 +479,25 @@ private fun DrawerItemRow(
             ) {
                 Text(text = item.unread.toString())
             }
+        } else if (item.dot) {
+            Spacer(modifier = Modifier.size(8.dp))
+            Badge(
+                containerColor = MaterialTheme.colorScheme.error,
+                modifier = Modifier.semantics { contentDescription = unreadLabel },
+            )
         }
+    }
+    MochiDropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
+        item.menu.forEach { entry ->
+            MochiDropdownMenuItem(
+                text = { Text(entry.title) },
+                leadingIcon = { Icon(entry.icon, contentDescription = null) },
+                onClick = {
+                    menuOpen = false
+                    entry.onClick()
+                },
+            )
+        }
+    }
     }
 }

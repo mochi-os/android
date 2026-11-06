@@ -168,4 +168,7 @@
         <item quantity="one">%1$s habar açary dikeldildi</item>
         <item quantity="other">%1$s habar açary dikeldildi</item>
     </plurals>
+    <string name="chat_mark_unread">Okalmadyk diýip belle</string>
+    <string name="chat_list_marked_read">Çat okalan diýlip bellendi</string>
+    <string name="chat_list_marked_unread">Çat okalmadyk diýlip bellendi</string>
 </resources>

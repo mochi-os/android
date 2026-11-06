@@ -168,4 +168,7 @@
         <item quantity="one">%1$s mensaje llave kutt\'ayata</item>
         <item quantity="other">%1$s mensaje llavenaka kutt\'ayata</item>
     </plurals>
+    <string name="chat_mark_unread">Jan ullt\'atjam chimpuntaña</string>
+    <string name="chat_list_marked_read">Chatax ullt\'atjam chimpuntatawa</string>
+    <string name="chat_list_marked_unread">Chatax jan ullt\'atjam chimpuntatawa</string>
 </resources>

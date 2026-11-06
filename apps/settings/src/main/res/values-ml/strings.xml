@@ -658,4 +658,20 @@
         <item quantity="other">%1$s അക്കൗണ്ടുകൾ</item>
     </plurals>
     <string name="blocks_server">സെർവർ</string>
+    <string name="notifications_rss">RSS ഫീഡുകൾ</string>
+    <string name="notifications_rss_empty">RSS ഫീഡുകളൊന്നും ഇതുവരെ ഇല്ല</string>
+    <string name="notifications_rss_create">ഫീഡ് സൃഷ്ടിക്കുക</string>
+    <string name="notifications_rss_create_title">RSS ഫീഡ് സൃഷ്ടിക്കുക</string>
+    <string name="notifications_rss_created">ഫീഡ് സൃഷ്ടിച്ചു</string>
+    <string name="notifications_rss_done">പൂർത്തിയായി</string>
+    <string name="notifications_rss_name">ഫീഡ് നാമം</string>
+    <string name="notifications_rss_existing">നിലവിലുള്ള സബ്സ്ക്രിപ്ഷനുകളിലേക്ക് ചേർക്കുക</string>
+    <string name="notifications_rss_default">ഡിഫോൾട്ടായി അറിയിക്കുക</string>
+    <string name="notifications_rss_edit">ഫീഡ് എഡിറ്റ് ചെയ്യുക</string>
+    <string name="notifications_rss_delete">ഫീഡ് ഇല്ലാതാക്കുക</string>
+    <string name="notifications_rss_delete_title">ഫീഡ് ഇല്ലാതാക്കണോ?</string>
+    <string name="notifications_rss_delete_message">ഇത് ഈ ഫീഡ് ശാശ്വതമായി ഇല്ലാതാക്കും. ഇത് ഉപയോഗിക്കുന്ന RSS റീഡറുകൾക്ക് ഇനി നിങ്ങളുടെ അറിയിപ്പുകൾ ലഭിക്കില്ല.</string>
+    <string name="notifications_rss_renamed">ഫീഡിന്റെ പേര് മാറ്റി</string>
+    <string name="notifications_rss_deleted">ഫീഡ് ഇല്ലാതാക്കി</string>
+    <string name="notifications_rss_default_name">RSS ഫീഡ്</string>
 </resources>

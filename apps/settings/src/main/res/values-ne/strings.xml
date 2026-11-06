@@ -658,4 +658,20 @@
         <item quantity="other">%1$s खाता</item>
     </plurals>
     <string name="blocks_server">सर्भर</string>
+    <string name="notifications_rss">RSS फिडहरू</string>
+    <string name="notifications_rss_empty">अहिलेसम्म कुनै RSS फिड छैन</string>
+    <string name="notifications_rss_create">फिड सिर्जना गर्नुहोस्</string>
+    <string name="notifications_rss_create_title">RSS फिड बनाउनुहोस्</string>
+    <string name="notifications_rss_created">फिड सिर्जना भयो</string>
+    <string name="notifications_rss_done">सम्पन्न</string>
+    <string name="notifications_rss_name">फिड नाम</string>
+    <string name="notifications_rss_existing">अवस्थित सदस्यतामा थप्नुहोस्</string>
+    <string name="notifications_rss_default">पूर्वनिर्धारित रूपमा सूचित गर्नुहोस्</string>
+    <string name="notifications_rss_edit">फिड सम्पादन गर्नुहोस्</string>
+    <string name="notifications_rss_delete">फिड मेटाउनुहोस्</string>
+    <string name="notifications_rss_delete_title">फिड मेटाउने?</string>
+    <string name="notifications_rss_delete_message">यसले यस फिडलाई स्थायी रूपमा मेटाउनेछ। यसलाई प्रयोग गर्ने कुनै पनि RSS रिडरहरूले अब तपाईंको सूचनाहरूमा पहुँच पाउन सक्ने छैनन्।</string>
+    <string name="notifications_rss_renamed">फिडको नाम परिवर्तन भयो</string>
+    <string name="notifications_rss_deleted">फिड मेटाइयो</string>
+    <string name="notifications_rss_default_name">RSS फिड</string>
 </resources>

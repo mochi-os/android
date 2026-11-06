@@ -344,4 +344,5 @@
         <item quantity="one">%1$s atbilde</item>
         <item quantity="other">+%1$s vēl atbildes</item>
     </plurals>
+    <string name="drawer_unread">Nelasīti</string>
 </resources>

@@ -170,4 +170,7 @@
         <item quantity="few">Obnovené %1$s kľúče správ</item>
         <item quantity="other">Obnovených %1$s kľúčov správ</item>
     </plurals>
+    <string name="chat_mark_unread">Označiť ako neprečítané</string>
+    <string name="chat_list_marked_read">Chat označený ako prečítaný</string>
+    <string name="chat_list_marked_unread">Chat označený ako neprečítaný</string>
 </resources>

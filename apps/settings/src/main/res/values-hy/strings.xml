@@ -658,4 +658,20 @@
         <item quantity="other">%1$s հաշիվ</item>
     </plurals>
     <string name="blocks_server">Սերվեր</string>
+    <string name="notifications_rss">RSS հոսքեր</string>
+    <string name="notifications_rss_empty">Դեռ չկան RSS հոսքեր</string>
+    <string name="notifications_rss_create">Ստեղծել հոսք</string>
+    <string name="notifications_rss_create_title">Ստեղծել RSS հոսք</string>
+    <string name="notifications_rss_created">Հոսքը ստեղծվեց</string>
+    <string name="notifications_rss_done">Կատարված է</string>
+    <string name="notifications_rss_name">Հոսքի անուն</string>
+    <string name="notifications_rss_existing">Ավելացնել գոյություն ունեցող բաժանորդագրություններին</string>
+    <string name="notifications_rss_default">Ծանուցել ըստ լռելյայնի</string>
+    <string name="notifications_rss_edit">Խմբագրել հոսքը</string>
+    <string name="notifications_rss_delete">Ջնջել հոսքը</string>
+    <string name="notifications_rss_delete_title">Ջնջե՞լ հոսքը։</string>
+    <string name="notifications_rss_delete_message">Սա մշտապես կջնջի այս ֆիդը: Այն օգտագործող ցանկացած RSS ընթերցող այլևս չի կարող մուտք գործել ձեր ծանուցումները:</string>
+    <string name="notifications_rss_renamed">Հոսքը վերանվանվեց</string>
+    <string name="notifications_rss_deleted">Հոսքը ջնջվեց</string>
+    <string name="notifications_rss_default_name">RSS հոսք</string>
 </resources>

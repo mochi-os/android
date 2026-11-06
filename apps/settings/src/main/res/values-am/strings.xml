@@ -658,4 +658,20 @@
         <item quantity="other">%1$s መለያዎች</item>
     </plurals>
     <string name="blocks_server">ሰርቨር</string>
+    <string name="notifications_rss">RSS ፊዶች</string>
+    <string name="notifications_rss_empty">እስካሁን RSS ፊዶች የሉም</string>
+    <string name="notifications_rss_create">ፊድ ፍጠር</string>
+    <string name="notifications_rss_create_title">RSS ፊድ ፍጠር</string>
+    <string name="notifications_rss_created">ፊድ ተፈጥሯል</string>
+    <string name="notifications_rss_done">ተጠናቅቋል</string>
+    <string name="notifications_rss_name">የፊድ ስም</string>
+    <string name="notifications_rss_existing">ወደ ነባር ምዝገባዎች ጨምር</string>
+    <string name="notifications_rss_default">በነባሪነት አሳውቅ</string>
+    <string name="notifications_rss_edit">ፊድ አስተካክል</string>
+    <string name="notifications_rss_delete">ፊድ ሰርዝ</string>
+    <string name="notifications_rss_delete_title">ፊድ ይሰረዝ?</string>
+    <string name="notifications_rss_delete_message">ይህ ፊድ ለዘላለም ይሰረዛል። እርሱን የሚጠቀሙ ማናቸውም RSS አንባቢዎች ከእንግዲህ ማሳወቂያዎችዎን ማግኘት አይችሉም።</string>
+    <string name="notifications_rss_renamed">ፊድ እንደገና ተሰይሟል</string>
+    <string name="notifications_rss_deleted">ፊድ ተሰርዟል</string>
+    <string name="notifications_rss_default_name">RSS ፊድ</string>
 </resources>

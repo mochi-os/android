@@ -168,4 +168,7 @@
         <item quantity="one">%1$s llave ñe\'ẽmondo oñemoĩ jey</item>
         <item quantity="other">%1$s llave ñe\'ẽmondo oñemoĩ jey</item>
     </plurals>
+    <string name="chat_mark_unread">Emarka noñemoñe\'ẽiháicha</string>
+    <string name="chat_list_marked_read">Ñemongeta oñemoĩ moñe\'ẽmbyréramo</string>
+    <string name="chat_list_marked_unread">Ñemongeta oñemoĩ moñe\'ẽmbyre\'ỹramo</string>
 </resources>

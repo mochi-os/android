@@ -676,4 +676,20 @@
         <item quantity="other">%1$s paskyrų</item>
     </plurals>
     <string name="blocks_server">Serveris</string>
+    <string name="notifications_rss">RSS srautai</string>
+    <string name="notifications_rss_empty">Dar nėra RSS srautų</string>
+    <string name="notifications_rss_create">Sukurti srautą</string>
+    <string name="notifications_rss_create_title">Sukurti RSS srautą</string>
+    <string name="notifications_rss_created">Srautas sukurtas</string>
+    <string name="notifications_rss_done">Atlikta</string>
+    <string name="notifications_rss_name">Srauto pavadinimas</string>
+    <string name="notifications_rss_existing">Pridėti prie esamų prenumeratų</string>
+    <string name="notifications_rss_default">Pranešti pagal nutylėjimą</string>
+    <string name="notifications_rss_edit">Redaguoti srautą</string>
+    <string name="notifications_rss_delete">Ištrinti srautą</string>
+    <string name="notifications_rss_delete_title">Ištrinti srautą?</string>
+    <string name="notifications_rss_delete_message">Tai visam laikui ištrins šį kanalą. Bet kokie RSS skaitytuvai, jį naudojantys, nebegalės pasiekti jūsų pranešimų.</string>
+    <string name="notifications_rss_renamed">Srautas pervadintas</string>
+    <string name="notifications_rss_deleted">Srautas ištrintas</string>
+    <string name="notifications_rss_default_name">RSS srautas</string>
 </resources>

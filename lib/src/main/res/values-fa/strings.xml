@@ -342,4 +342,5 @@
         <item quantity="one">%1$s پاسخ</item>
         <item quantity="other">+%1$s پاسخ دیگر</item>
     </plurals>
+    <string name="drawer_unread">خوانده‌نشده</string>
 </resources>

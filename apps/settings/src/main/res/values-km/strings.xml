@@ -645,4 +645,20 @@
         <item quantity="other">%1$s គណនី</item>
     </plurals>
     <string name="blocks_server">ម៉ាស៊ីនមេ</string>
+    <string name="notifications_rss">RSS feeds</string>
+    <string name="notifications_rss_empty">មិនទាន់មាន RSS feed</string>
+    <string name="notifications_rss_create">បង្កើតមតិព័ត៌មាន</string>
+    <string name="notifications_rss_create_title">បង្កើតមតិព័ត៌មាន RSS</string>
+    <string name="notifications_rss_created">បានបង្កើតព័ត៌មានបង្ហាញ</string>
+    <string name="notifications_rss_done">រួចរាល់</string>
+    <string name="notifications_rss_name">ឈ្មោះព័ត៌មានបង្ហាញ</string>
+    <string name="notifications_rss_existing">បន្ថែមទៅការជាវដែលមានស្រាប់</string>
+    <string name="notifications_rss_default">ជូនដំណឹងតាមលំនាំដើម</string>
+    <string name="notifications_rss_edit">កែមតិព័ត៌មាន</string>
+    <string name="notifications_rss_delete">លុបមតិព័ត៌មាន</string>
+    <string name="notifications_rss_delete_title">លុបមតិព័ត៌មាន?</string>
+    <string name="notifications_rss_delete_message">នេះនឹងលុបព័ត៌មាននេះជាអចិន្ត្រៃយ៍។ កម្មវិធីអាន RSS ណាមួយដែលប្រើវានឹងលែងអាចចូលប្រើការជូនដំណឹងរបស់អ្នកបានទៀតទេ។</string>
+    <string name="notifications_rss_renamed">បានប្ដូរឈ្មោះព័ត៌មានបង្ហាញ</string>
+    <string name="notifications_rss_deleted">បានលុបព័ត៌មានបង្ហាញ</string>
+    <string name="notifications_rss_default_name">មតិព័ត៌មាន RSS</string>
 </resources>

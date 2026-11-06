@@ -342,4 +342,5 @@
         <item quantity="one">%1$s जवाफ</item>
         <item quantity="other">+%1$s थप जवाफहरू</item>
     </plurals>
+    <string name="drawer_unread">नपढिएका</string>
 </resources>

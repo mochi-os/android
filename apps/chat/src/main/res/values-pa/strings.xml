@@ -168,4 +168,7 @@
         <item quantity="one">%1$s ਸੁਨੇਹਾ ਕੁੰਜੀ ਬਹਾਲ ਕੀਤੀ ਗਈ</item>
         <item quantity="other">%1$s ਸੁਨੇਹਾ ਕੁੰਜੀਆਂ ਬਹਾਲ ਕੀਤੀਆਂ ਗਈਆਂ</item>
     </plurals>
+    <string name="chat_mark_unread">ਅਣਪੜ੍ਹਿਆ ਮਾਰਕ ਕਰੋ</string>
+    <string name="chat_list_marked_read">ਚੈਟ ਪੜ੍ਹੀ ਹੋਈ ਮਾਰਕ ਕੀਤੀ ਗਈ</string>
+    <string name="chat_list_marked_unread">ਚੈਟ ਅਣਪੜ੍ਹੀ ਮਾਰਕ ਕੀਤੀ ਗਈ</string>
 </resources>

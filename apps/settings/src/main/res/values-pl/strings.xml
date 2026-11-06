@@ -684,4 +684,20 @@
         <item quantity="other">%1$s konta</item>
     </plurals>
     <string name="blocks_server">Serwer</string>
+    <string name="notifications_rss">Kanały RSS</string>
+    <string name="notifications_rss_empty">Brak kanałów RSS</string>
+    <string name="notifications_rss_create">Utwórz kanał</string>
+    <string name="notifications_rss_create_title">Utwórz kanał RSS</string>
+    <string name="notifications_rss_created">Kanał utworzony</string>
+    <string name="notifications_rss_done">Gotowe</string>
+    <string name="notifications_rss_name">Nazwa kanału</string>
+    <string name="notifications_rss_existing">Dodaj do istniejących subskrypcji</string>
+    <string name="notifications_rss_default">Powiadamiaj domyślnie</string>
+    <string name="notifications_rss_edit">Edytuj kanał</string>
+    <string name="notifications_rss_delete">Usuń kanał</string>
+    <string name="notifications_rss_delete_title">Usunąć kanał?</string>
+    <string name="notifications_rss_delete_message">Ta operacja trwale usunie ten kanał. Czytniki RSS, które z niego korzystają, nie będą już mogły uzyskać dostępu do Twoich powiadomień.</string>
+    <string name="notifications_rss_renamed">Zmieniono nazwę kanału</string>
+    <string name="notifications_rss_deleted">Kanał usunięty</string>
+    <string name="notifications_rss_default_name">Kanał RSS</string>
 </resources>

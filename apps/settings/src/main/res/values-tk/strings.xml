@@ -658,4 +658,20 @@
         <item quantity="other">%1$s hasap</item>
     </plurals>
     <string name="blocks_server">Serwer</string>
+    <string name="notifications_rss">RSS akymlary</string>
+    <string name="notifications_rss_empty">Heniz RSS akymlary ýok</string>
+    <string name="notifications_rss_create">Akym döretmek</string>
+    <string name="notifications_rss_create_title">RSS akymy döretmek</string>
+    <string name="notifications_rss_created">Akym döredildi</string>
+    <string name="notifications_rss_done">Taýýar</string>
+    <string name="notifications_rss_name">Akymyň ady</string>
+    <string name="notifications_rss_existing">Bar bolan abunalara goşmak</string>
+    <string name="notifications_rss_default">Adatça habar ber</string>
+    <string name="notifications_rss_edit">Akymy üýtget</string>
+    <string name="notifications_rss_delete">Akymy pozmak</string>
+    <string name="notifications_rss_delete_title">Akymy pozmaly?</string>
+    <string name="notifications_rss_delete_message">Bu lentany hemişelik pozar. Ony ulanýan islendik RSS okaýjylar bildirişleriňe girip bilmez.</string>
+    <string name="notifications_rss_renamed">Akymyň ady üýtgedildi</string>
+    <string name="notifications_rss_deleted">Akym pozuldy</string>
+    <string name="notifications_rss_default_name">RSS akymy</string>
 </resources>

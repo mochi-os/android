@@ -710,4 +710,20 @@
         <item quantity="other">%1$s حساب</item>
     </plurals>
     <string name="blocks_server">الخادم</string>
+    <string name="notifications_rss">موجزات RSS</string>
+    <string name="notifications_rss_empty">لا توجد RSS feeds بعد</string>
+    <string name="notifications_rss_create">إنشاء تغذية</string>
+    <string name="notifications_rss_create_title">إنشاء موجز RSS</string>
+    <string name="notifications_rss_created">تم إنشاء التغذية</string>
+    <string name="notifications_rss_done">منتهٍ</string>
+    <string name="notifications_rss_name">اسم التغذية</string>
+    <string name="notifications_rss_existing">إضافة إلى الاشتراكات الحالية</string>
+    <string name="notifications_rss_default">إشعار افتراضياً</string>
+    <string name="notifications_rss_edit">تعديل الخلاصة</string>
+    <string name="notifications_rss_delete">حذف التغذية</string>
+    <string name="notifications_rss_delete_title">حذف التغذية؟</string>
+    <string name="notifications_rss_delete_message">سيؤدي هذا إلى حذف هذا الموجز نهائيًا. لن تتمكن أي قارئات RSS تستخدمه من الوصول إلى إشعاراتك بعد الآن.</string>
+    <string name="notifications_rss_renamed">تمت إعادة تسمية التغذية</string>
+    <string name="notifications_rss_deleted">تم حذف التغذية</string>
+    <string name="notifications_rss_default_name">موجز RSS</string>
 </resources>

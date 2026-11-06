@@ -170,4 +170,7 @@
         <item quantity="two">%1$s מפתחות הודעות שוחזרו</item>
         <item quantity="other">%1$s מפתחות הודעות שוחזרו</item>
     </plurals>
+    <string name="chat_mark_unread">סימון כלא נקרא</string>
+    <string name="chat_list_marked_read">הצ\'אט סומן כנקרא</string>
+    <string name="chat_list_marked_unread">הצ\'אט סומן כלא נקרא</string>
 </resources>

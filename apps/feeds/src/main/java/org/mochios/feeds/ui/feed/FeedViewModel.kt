@@ -322,13 +322,22 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /** Turn this feed's new-post notifications on or off. */
+    /**
+     * Turn this feed's new-post notifications on or off. The tick moves on the
+     * tap and goes back if the server refuses; the server's answer replaces it.
+     */
     fun setPostNotifications(enabled: Boolean) {
         if (isAllFeeds || feedId.isBlank()) return
+        val before = _notifications.value
+        if (before != null) _notifications.value = before.copy(post = enabled)
         viewModelScope.launch {
             try {
                 _notifications.value = repository.setNotification(feedId, "post", enabled)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                // A later tap has moved it since, and its own answer settles it.
+                if (_notifications.value?.post == enabled) _notifications.value = before
                 _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
         }
@@ -914,7 +923,19 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    fun markAllRead(onComplete: () -> Unit = {}) {
+    /**
+     * Every post read and the badges cleared on the tap, as the web has it.
+     * [clear] clears the drawer's badges and hands back how to settle them. A
+     * refusal puts back only the posts this marked, gives the counts back and
+     * says why.
+     */
+    fun markAllRead(clear: () -> (accepted: Boolean) -> Unit = { {} }) {
+        val now = System.currentTimeMillis() / 1000
+        val marked = _posts.value.filter { it.read == 0L }.map { it.id }.toSet()
+        _posts.value = _posts.value.map { if (it.id in marked) it.copy(read = now) else it }
+        val taken = _feedInfo.value?.unread ?: 0
+        _feedInfo.value = _feedInfo.value?.copy(unread = 0)
+        val settle = clear()
         viewModelScope.launch {
             try {
                 if (isAllFeeds) {
@@ -924,22 +945,23 @@ class FeedViewModel @Inject constructor(
                 } else {
                     repository.markAllRead(feedId)
                 }
-                val now = System.currentTimeMillis() / 1000
-                // Unread-only mode: every visible post just became read, so
-                // drop them now; otherwise stamp them read so unread badges
-                // clear without a re-fetch.
-                _posts.value = if (_unreadOnly.value) {
-                    emptyList()
-                } else {
-                    _posts.value.map { it.copy(read = now) }
+                // Unread-only mode: every post shown is read now, so they go.
+                if (_unreadOnly.value) _posts.value = emptyList()
+                settle(true)
+            } catch (e: CancellationException) {
+                // Left before the answer: the drawer reads what the server has.
+                settle(true)
+                throw e
+            } catch (e: Exception) {
+                _posts.value = _posts.value.map {
+                    if (it.id in marked && it.read == now) it.copy(read = 0L) else it
                 }
-                _feedInfo.value = _feedInfo.value?.copy(unread = 0)
-                // Server has committed the read state — let the caller refresh
-                // any dependent UI (e.g. the drawer's unread badges) silently.
-                onComplete()
-            } catch (_: Exception) {
-                // Refresh on failure
-                refresh()
+                // A count fetched since is the server's own, and stays.
+                _feedInfo.value = _feedInfo.value?.let { feed ->
+                    if (feed.unread == 0) feed.copy(unread = taken) else feed
+                }
+                settle(false)
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
         }
     }

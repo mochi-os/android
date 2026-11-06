@@ -342,4 +342,5 @@
         <item quantity="one">%1$s պատասխան</item>
         <item quantity="other">+%1$s ևս պատասխան</item>
     </plurals>
+    <string name="drawer_unread">Չկարդացված</string>
 </resources>

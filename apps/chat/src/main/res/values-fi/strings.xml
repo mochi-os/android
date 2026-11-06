@@ -168,4 +168,7 @@
         <item quantity="one">%1$s viestiavain palautettu</item>
         <item quantity="other">%1$s viestiavainta palautettu</item>
     </plurals>
+    <string name="chat_mark_unread">Merkitse lukemattomaksi</string>
+    <string name="chat_list_marked_read">Keskustelu merkitty luetuksi</string>
+    <string name="chat_list_marked_unread">Keskustelu merkitty lukemattomaksi</string>
 </resources>

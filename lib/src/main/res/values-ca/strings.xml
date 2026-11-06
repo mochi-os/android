@@ -344,4 +344,5 @@
         <item quantity="one">%1$s resposta</item>
         <item quantity="other">+%1$s respostes més</item>
     </plurals>
+    <string name="drawer_unread">No llegides</string>
 </resources>

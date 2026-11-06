@@ -168,4 +168,7 @@
         <item quantity="one">%1$s meldingsnøkkel gjenoppretta</item>
         <item quantity="other">%1$s meldingsnøklar gjenoppretta</item>
     </plurals>
+    <string name="chat_mark_unread">Merk som ulesen</string>
+    <string name="chat_list_marked_read">Praten er merkt som lesen</string>
+    <string name="chat_list_marked_unread">Praten er merkt som ulesen</string>
 </resources>

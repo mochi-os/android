@@ -657,4 +657,20 @@
         <item quantity="other">%1$s cuentanaka</item>
     </plurals>
     <string name="blocks_server">Servidor</string>
+    <string name="notifications_rss">RSS feednaka</string>
+    <string name="notifications_rss_empty">Janïr RSS feednakax utjkiti</string>
+    <string name="notifications_rss_create">Feed luraña</string>
+    <string name="notifications_rss_create_title">RSS feed luraña</string>
+    <string name="notifications_rss_created">Feed luratawa</string>
+    <string name="notifications_rss_done">Tukuyata</string>
+    <string name="notifications_rss_name">Feed suti</string>
+    <string name="notifications_rss_existing">Suscripción utjkirinakar yapxataña</string>
+    <string name="notifications_rss_default">Nayrïrjam yatiyaña</string>
+    <string name="notifications_rss_edit">Feed askichaña</string>
+    <string name="notifications_rss_delete">Feed chhaqtayaña</string>
+    <string name="notifications_rss_delete_title">Feed chhaqtayaña?</string>
+    <string name="notifications_rss_delete_message">Akax aka feed wiñayatak chhaqtayani. Uk apnaqir RSS ullirinakax janiw yatiyawinakamar mantañ atipxaniti.</string>
+    <string name="notifications_rss_renamed">Feed suti turkatawa</string>
+    <string name="notifications_rss_deleted">Feed chhaqtayatawa</string>
+    <string name="notifications_rss_default_name">RSS feed</string>
 </resources>

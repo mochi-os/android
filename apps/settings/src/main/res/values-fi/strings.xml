@@ -658,4 +658,20 @@
         <item quantity="other">%1$s tiliä</item>
     </plurals>
     <string name="blocks_server">Palvelin</string>
+    <string name="notifications_rss">RSS-syötteet</string>
+    <string name="notifications_rss_empty">Ei vielä RSS-syötteitä</string>
+    <string name="notifications_rss_create">Luo syöte</string>
+    <string name="notifications_rss_create_title">Luo RSS-syöte</string>
+    <string name="notifications_rss_created">Syöte luotu</string>
+    <string name="notifications_rss_done">Valmis</string>
+    <string name="notifications_rss_name">Syötteen nimi</string>
+    <string name="notifications_rss_existing">Lisää olemassa oleviin tilauksiin</string>
+    <string name="notifications_rss_default">Ilmoita oletuksena</string>
+    <string name="notifications_rss_edit">Muokkaa syötettä</string>
+    <string name="notifications_rss_delete">Poista syöte</string>
+    <string name="notifications_rss_delete_title">Poistetaanko syöte?</string>
+    <string name="notifications_rss_delete_message">Tämä poistaa syötteen pysyvästi. Sitä käyttävät RSS-lukijat eivät enää pääse käsiksi ilmoituksiisi.</string>
+    <string name="notifications_rss_renamed">Syöte nimetty uudelleen</string>
+    <string name="notifications_rss_deleted">Syöte poistettu</string>
+    <string name="notifications_rss_default_name">RSS-syöte</string>
 </resources>

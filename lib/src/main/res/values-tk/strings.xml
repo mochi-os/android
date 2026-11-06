@@ -342,4 +342,5 @@
         <item quantity="one">%1$s jogap</item>
         <item quantity="other">+%1$s köp jogap</item>
     </plurals>
+    <string name="drawer_unread">Okalmadyk</string>
 </resources>

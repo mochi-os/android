@@ -168,4 +168,7 @@
         <item quantity="one">Ανακτήθηκε %1$s κλειδί μηνυμάτων</item>
         <item quantity="other">Ανακτήθηκαν %1$s κλειδιά μηνυμάτων</item>
     </plurals>
+    <string name="chat_mark_unread">Σήμανση ως μη αναγνωσμένο</string>
+    <string name="chat_list_marked_read">Η συνομιλία επισημάνθηκε ως αναγνωσμένη</string>
+    <string name="chat_list_marked_unread">Η συνομιλία επισημάνθηκε ως μη αναγνωσμένη</string>
 </resources>

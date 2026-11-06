@@ -273,4 +273,5 @@
     <string name="common_refresh">Neu laden</string>
     <string name="launcher_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="common_continue">Weiter</string>
+    <string name="drawer_unread">Ungelesen</string>
 </resources>

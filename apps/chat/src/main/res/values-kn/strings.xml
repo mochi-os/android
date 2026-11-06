@@ -168,4 +168,7 @@
         <item quantity="one">%1$s ಸಂದೇಶ ಕೀ ಮರುಸ್ಥಾಪಿಸಲಾಗಿದೆ</item>
         <item quantity="other">%1$s ಸಂದೇಶ ಕೀಗಳನ್ನು ಮರುಸ್ಥಾಪಿಸಲಾಗಿದೆ</item>
     </plurals>
+    <string name="chat_mark_unread">ಓದಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ</string>
+    <string name="chat_list_marked_read">ಚಾಟ್ ಓದಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</string>
+    <string name="chat_list_marked_unread">ಚಾಟ್ ಓದಿಲ್ಲ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</string>
 </resources>

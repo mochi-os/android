@@ -55,9 +55,22 @@ class PreferencesManager @Inject internal constructor(
     private val _preferences = MutableStateFlow(resolveAuto(emptyMap()))
     val preferences: StateFlow<UserPreferences> = _preferences.asStateFlow()
 
-    /** Most recent raw server map (pre-auto-resolve). Settings UI needs the
-     *  original "" / "auto" / explicit value to render the right select. */
+    /** Most recent raw server map (pre-auto-resolve), with any pick still
+     *  waiting for its answer over it. Settings UI needs the original "" /
+     *  "auto" / explicit value to render the right select. */
     private var rawPrefs: Map<String, String> = emptyMap()
+
+    /** What the server last said, without the picks still waiting. */
+    private var server: Map<String, String> = emptyMap()
+
+    /**
+     * Picks waiting for the server's answer, by key, as the web has them: each
+     * shows from the tap, theme and appearance included, and goes if the
+     * server refuses. A key shows its newest pick.
+     */
+    private val pending = mutableMapOf<String, Pick>()
+
+    private class Pick(val value: String)
 
     /** Available themes, captured from the most recent `/data` response. The
      *  Display screen renders these in the theme picker. */
@@ -81,14 +94,73 @@ class PreferencesManager @Inject internal constructor(
         )
 
     /**
-     * Persist one preference and refresh [preferences]. The server skips an
-     * empty [value]; [resetKeys] clears a preference. Throws on failure.
+     * Persist one preference and refresh [preferences]. The pick shows at
+     * once and goes back if the server refuses. The server skips an empty
+     * [value]; [resetKeys] clears a preference. Throws on failure.
      */
     suspend fun setPreference(key: String, value: String) {
-        val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
-        val resp = api.setPreferences("Bearer $token", mapOf(key to value))
-        if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
-        refresh()
+        val pick = Pick(value)
+        synchronized(pending) { pending[key] = pick }
+        publish()
+        try {
+            val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
+            val resp = api.setPreferences("Bearer $token", mapOf(key to value))
+            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        } catch (e: Throwable) {
+            settle(key, pick)
+            publish()
+            throw e
+        }
+        // The server has it, so a read that fails after still shows it.
+        if (value.isNotEmpty()) synchronized(pending) { server = server + (key to value) }
+        try {
+            refresh()
+        } finally {
+            settle(key, pick)
+            publish(language = key == "language")
+        }
+    }
+
+    /** [pick] has its answer: it no longer shows over the server's, unless a newer pick of [key] has replaced it. */
+    private fun settle(key: String, pick: Pick) {
+        synchronized(pending) { if (pending[key] === pick) pending.remove(key) }
+    }
+
+    /**
+     * Shows what the server last said with the picks still waiting over it,
+     * and with [language] the server's language too.
+     */
+    private suspend fun publish(language: Boolean = false) {
+        show(language)
+        cacheTheme()
+    }
+
+    /**
+     * [rawPrefs] and [preferences] as the server last said, with the waiting
+     * picks over them. With [language], the server's language applies to the
+     * running app, unless a pick of it is waiting: quick picks then recreate
+     * the screen once, for the one the server keeps, and a refused pick never
+     * does.
+     */
+    private fun show(language: Boolean) {
+        val raw: Map<String, String>
+        val apply: Boolean
+        val tag: String?
+        synchronized(pending) {
+            rawPrefs = server + pending.mapValues { (_, pick) -> pick.value }
+            raw = rawPrefs
+            apply = language && "language" !in pending
+            tag = server["language"]
+        }
+        _preferences.value = resolveAuto(raw)
+        if (!apply) return
+        // Mirror the server's language onto the boot-time store and, when it
+        // changed, apply it to the running app. On Android 13+ that sets the
+        // per-app locale (an actual change triggers an Activity recreate);
+        // older versions pick it up next launch via LanguageStore.
+        val update = languageUpdate(LanguageStore.get(context), tag)
+        LanguageStore.set(context, update.tag)
+        if (update.apply) LocaleHelper.apply(context, update.tag)
     }
 
     /** Reset every preference to its server default — empties the user's
@@ -172,17 +244,8 @@ class PreferencesManager @Inject internal constructor(
         }
         defaultThemeId = body.default_theme
         val raw = body.preferences ?: return
-        rawPrefs = raw
-        _preferences.value = resolveAuto(raw)
-        cacheTheme()
-
-        // Mirror the server's language onto the boot-time store and, when it
-        // changed, apply it to the running app. On Android 13+ that sets the
-        // per-app locale (an actual change triggers an Activity recreate);
-        // older versions pick it up next launch via LanguageStore.
-        val update = languageUpdate(LanguageStore.get(context), raw["language"])
-        LanguageStore.set(context, update.tag)
-        if (update.apply) LocaleHelper.apply(context, update.tag)
+        synchronized(pending) { server = raw }
+        publish(language = true)
     }
 
     /**

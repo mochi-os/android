@@ -168,4 +168,7 @@
         <item quantity="one">%1$s chave de mensaxe restaurada</item>
         <item quantity="other">%1$s chaves de mensaxe restauradas</item>
     </plurals>
+    <string name="chat_mark_unread">Marcar como non lido</string>
+    <string name="chat_list_marked_read">Chat marcado como lido</string>
+    <string name="chat_list_marked_unread">Chat marcado como non lido</string>
 </resources>

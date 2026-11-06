@@ -342,4 +342,5 @@
         <item quantity="one">%1$s жооп</item>
         <item quantity="other">+%1$s дагы жооп</item>
     </plurals>
+    <string name="drawer_unread">Окулбаган</string>
 </resources>

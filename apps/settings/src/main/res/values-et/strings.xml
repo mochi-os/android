@@ -658,4 +658,20 @@
         <item quantity="other">%1$s kontot</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS-vood</string>
+    <string name="notifications_rss_empty">RSS-vooge veel pole</string>
+    <string name="notifications_rss_create">Loo voog</string>
+    <string name="notifications_rss_create_title">Loo RSS-voog</string>
+    <string name="notifications_rss_created">Voog loodud</string>
+    <string name="notifications_rss_done">Tehtud</string>
+    <string name="notifications_rss_name">Voo nimi</string>
+    <string name="notifications_rss_existing">Lisa olemasolevatele tellimustele</string>
+    <string name="notifications_rss_default">Vaikimisi teavita</string>
+    <string name="notifications_rss_edit">Muuda voogu</string>
+    <string name="notifications_rss_delete">Kustuta voog</string>
+    <string name="notifications_rss_delete_title">Kustutada voog?</string>
+    <string name="notifications_rss_delete_message">See kustutab jäädavalt selle voo. Seda kasutavad RSS-lugejad ei pääse enam sinu teadetele ligi.</string>
+    <string name="notifications_rss_renamed">Voog ümber nimetatud</string>
+    <string name="notifications_rss_deleted">Voog kustutatud</string>
+    <string name="notifications_rss_default_name">RSS-voog</string>
 </resources>

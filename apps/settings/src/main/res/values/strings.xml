@@ -698,4 +698,21 @@
         <item quantity="one">%1$s account</item>
         <item quantity="other">%1$s accounts</item>
     </plurals>
+    <!-- RSS feeds of the notifications, as the web's RSS feeds dialog. -->
+    <string name="notifications_rss">RSS feeds</string>
+    <string name="notifications_rss_empty">No RSS feeds yet</string>
+    <string name="notifications_rss_create">Create feed</string>
+    <string name="notifications_rss_create_title">Create RSS feed</string>
+    <string name="notifications_rss_created">Feed created</string>
+    <string name="notifications_rss_done">Done</string>
+    <string name="notifications_rss_name">Feed name</string>
+    <string name="notifications_rss_existing">Add to existing subscriptions</string>
+    <string name="notifications_rss_default">Notify by default</string>
+    <string name="notifications_rss_edit">Edit feed</string>
+    <string name="notifications_rss_delete">Delete feed</string>
+    <string name="notifications_rss_delete_title">Delete feed?</string>
+    <string name="notifications_rss_delete_message">This will permanently delete this feed. Any RSS readers using it will no longer be able to access your notifications.</string>
+    <string name="notifications_rss_renamed">Feed renamed</string>
+    <string name="notifications_rss_deleted">Feed deleted</string>
+    <string name="notifications_rss_default_name">RSS feed</string>
 </resources>

@@ -168,4 +168,7 @@
         <item quantity="one">Обновен е %1$s клуч за пораки</item>
         <item quantity="other">Обновени се %1$s клучеви за пораки</item>
     </plurals>
+    <string name="chat_mark_unread">Означи како непрочитано</string>
+    <string name="chat_list_marked_read">Разговорот е означен како прочитан</string>
+    <string name="chat_list_marked_unread">Разговорот е означен како непрочитан</string>
 </resources>

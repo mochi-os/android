@@ -342,4 +342,5 @@
         <item quantity="one">%1$s பதில்</item>
         <item quantity="other">+%1$s கூடுதல் பதில்கள்</item>
     </plurals>
+    <string name="drawer_unread">படிக்கப்படாதது</string>
 </resources>

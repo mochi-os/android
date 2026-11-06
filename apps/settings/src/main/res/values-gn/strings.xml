@@ -657,4 +657,20 @@
         <item quantity="other">%1$s mba\'ete</item>
     </plurals>
     <string name="blocks_server">Mohendaha</string>
+    <string name="notifications_rss">RSS feedkuéra</string>
+    <string name="notifications_rss_empty">Ndaipóri gueteri RSS feed</string>
+    <string name="notifications_rss_create">Emoheñói feed</string>
+    <string name="notifications_rss_create_title">Emoheñói RSS feed</string>
+    <string name="notifications_rss_created">Oñemoheñói feed</string>
+    <string name="notifications_rss_done">Oĩma</string>
+    <string name="notifications_rss_name">Feed téra</string>
+    <string name="notifications_rss_existing">Embojuaju suscripción oĩvape</string>
+    <string name="notifications_rss_default">Emomarandu ypygua ramo</string>
+    <string name="notifications_rss_edit">Embosako\'i feed</string>
+    <string name="notifications_rss_delete">Hundi feed</string>
+    <string name="notifications_rss_delete_title">Hundi feed?</string>
+    <string name="notifications_rss_delete_message">Kóva ombogue tapiaite ko feed. Oimeraẽ RSS lector oipurúva ndaikatuvéima ohecha nde momarandu.</string>
+    <string name="notifications_rss_renamed">Feed oñembohera jeýma</string>
+    <string name="notifications_rss_deleted">Oñembogue feed</string>
+    <string name="notifications_rss_default_name">RSS feed</string>
 </resources>

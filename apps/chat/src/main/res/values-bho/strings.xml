@@ -168,4 +168,7 @@
         <item quantity="one">%1$s संदेस कुंजी बहाल भइल</item>
         <item quantity="other">%1$s संदेस कुंजी बहाल भइली</item>
     </plurals>
+    <string name="chat_mark_unread">बिना पढ़ल मार्क करीं</string>
+    <string name="chat_list_marked_read">चैट पढ़ल भइल मार्क कइल गइल</string>
+    <string name="chat_list_marked_unread">चैट बिना पढ़ल मार्क कइल गइल</string>
 </resources>

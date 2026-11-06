@@ -342,4 +342,5 @@
         <item quantity="one">%1$s resposta</item>
         <item quantity="other">+%1$s respostas máis</item>
     </plurals>
+    <string name="drawer_unread">Sen ler</string>
 </resources>

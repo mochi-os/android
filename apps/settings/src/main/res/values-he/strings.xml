@@ -676,4 +676,20 @@
         <item quantity="other">%1$s חשבונות</item>
     </plurals>
     <string name="blocks_server">שרת</string>
+    <string name="notifications_rss">הזנות RSS</string>
+    <string name="notifications_rss_empty">עדיין אין פידי RSS</string>
+    <string name="notifications_rss_create">צור פיד</string>
+    <string name="notifications_rss_create_title">יצירת הזנת RSS</string>
+    <string name="notifications_rss_created">הפיד נוצר</string>
+    <string name="notifications_rss_done">בוצע</string>
+    <string name="notifications_rss_name">שם הפיד</string>
+    <string name="notifications_rss_existing">הוסף למינויים קיימים</string>
+    <string name="notifications_rss_default">התרע כברירת מחדל</string>
+    <string name="notifications_rss_edit">ערוך פיד</string>
+    <string name="notifications_rss_delete">מחק פיד</string>
+    <string name="notifications_rss_delete_title">למחוק פיד?</string>
+    <string name="notifications_rss_delete_message">פעולה זו תמחק את ההזנה לצמיתות. קוראי RSS שמשתמשים בה לא יוכלו עוד לגשת להתראות שלך.</string>
+    <string name="notifications_rss_renamed">שם הפיד שונה</string>
+    <string name="notifications_rss_deleted">הפיד נמחק</string>
+    <string name="notifications_rss_default_name">פיד RSS</string>
 </resources>

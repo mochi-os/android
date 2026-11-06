@@ -658,4 +658,20 @@
         <item quantity="other">%1$s حساب</item>
     </plurals>
     <string name="blocks_server">سرور</string>
+    <string name="notifications_rss">فیدهای RSS</string>
+    <string name="notifications_rss_empty">هنوز هیچ فید RSS وجود ندارد</string>
+    <string name="notifications_rss_create">ساخت فید</string>
+    <string name="notifications_rss_create_title">ساخت فید RSS</string>
+    <string name="notifications_rss_created">فید ایجاد شد</string>
+    <string name="notifications_rss_done">انجام شد</string>
+    <string name="notifications_rss_name">نام فید</string>
+    <string name="notifications_rss_existing">افزودن به اشتراک‌های موجود</string>
+    <string name="notifications_rss_default">اعلان به صورت پیش‌فرض</string>
+    <string name="notifications_rss_edit">ویرایش فید</string>
+    <string name="notifications_rss_delete">حذف فید</string>
+    <string name="notifications_rss_delete_title">حذف فید؟</string>
+    <string name="notifications_rss_delete_message">این کار این فید را به‌طور دائمی حذف می‌کند. خوانندگان RSS که از آن استفاده می‌کنند دیگر قادر به دسترسی به اعلان‌های شما نخواهند بود.</string>
+    <string name="notifications_rss_renamed">نام فید تغییر کرد</string>
+    <string name="notifications_rss_deleted">فید حذف شد</string>
+    <string name="notifications_rss_default_name">فید RSS</string>
 </resources>

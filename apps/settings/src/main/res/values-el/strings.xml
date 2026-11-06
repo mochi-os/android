@@ -658,4 +658,20 @@
         <item quantity="other">%1$s λογαριασμοί</item>
     </plurals>
     <string name="blocks_server">Διακομιστής</string>
+    <string name="notifications_rss">Ροές RSS</string>
+    <string name="notifications_rss_empty">Δεν υπάρχουν ακόμη ροές RSS</string>
+    <string name="notifications_rss_create">Δημιουργία ροής</string>
+    <string name="notifications_rss_create_title">Δημιουργία ροής RSS</string>
+    <string name="notifications_rss_created">Η ροή δημιουργήθηκε</string>
+    <string name="notifications_rss_done">Ολοκληρώθηκε</string>
+    <string name="notifications_rss_name">Όνομα ροής</string>
+    <string name="notifications_rss_existing">Προσθήκη σε υπάρχουσες συνδρομές</string>
+    <string name="notifications_rss_default">Ειδοποίηση από προεπιλογή</string>
+    <string name="notifications_rss_edit">Επεξεργασία ροής</string>
+    <string name="notifications_rss_delete">Διαγραφή ροής</string>
+    <string name="notifications_rss_delete_title">Διαγραφή ροής;</string>
+    <string name="notifications_rss_delete_message">Αυτό θα διαγράψει οριστικά αυτή τη ροή. Τα προγράμματα ανάγνωσης RSS που τη χρησιμοποιούν δεν θα μπορούν πλέον να έχουν πρόσβαση στις ειδοποιήσεις σας.</string>
+    <string name="notifications_rss_renamed">Η ροή μετονομάστηκε</string>
+    <string name="notifications_rss_deleted">Η ροή διαγράφηκε</string>
+    <string name="notifications_rss_default_name">Ροή RSS</string>
 </resources>

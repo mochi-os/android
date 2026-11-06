@@ -658,4 +658,20 @@
         <item quantity="other">%1$s hesab</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS feed-lər</string>
+    <string name="notifications_rss_empty">Hələ RSS feed yoxdur</string>
+    <string name="notifications_rss_create">Feed yarat</string>
+    <string name="notifications_rss_create_title">RSS feed yarat</string>
+    <string name="notifications_rss_created">Lent yaradıldı</string>
+    <string name="notifications_rss_done">Hazırdır</string>
+    <string name="notifications_rss_name">Lent adı</string>
+    <string name="notifications_rss_existing">Mövcud abunəliklərə əlavə et</string>
+    <string name="notifications_rss_default">Standart olaraq xəbərdar et</string>
+    <string name="notifications_rss_edit">Lenti redaktə et</string>
+    <string name="notifications_rss_delete">Feed-i sil</string>
+    <string name="notifications_rss_delete_title">Feed silinsin?</string>
+    <string name="notifications_rss_delete_message">Bu, həmin lenti həmişəlik siləcək. Ondan istifadə edən RSS oxucuları artıq bildirişlərinizə çıxış edə bilməyəcək.</string>
+    <string name="notifications_rss_renamed">Lentin adı dəyişdirildi</string>
+    <string name="notifications_rss_deleted">Lent silindi</string>
+    <string name="notifications_rss_default_name">RSS lenti</string>
 </resources>

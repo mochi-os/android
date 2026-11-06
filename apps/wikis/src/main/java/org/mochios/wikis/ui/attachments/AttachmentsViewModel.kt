@@ -11,6 +11,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -281,22 +282,38 @@ class AttachmentsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(captioning = null)
     }
 
+    /**
+     * The caption shows as soon as the editor closes, and goes back, with the
+     * error, if the server refuses.
+     */
     fun saveCaption(caption: String, saveFailed: String) {
         val attachment = _uiState.value.captioning ?: return
         _uiState.value = _uiState.value.copy(captioning = null)
         if (caption == attachment.caption) return
+        val before = _uiState.value.attachments.firstOrNull { it.id == attachment.id }?.caption ?: attachment.caption
+        setCaption(attachment.id, caption)
         viewModelScope.launch {
             try {
                 val updated = repository.updateAttachment(wikiId, attachment.id, caption)
-                _uiState.value = _uiState.value.copy(
-                    attachments = _uiState.value.attachments.map {
-                        if (it.id == attachment.id) it.copy(caption = updated.caption) else it
-                    },
-                )
+                setCaption(attachment.id, updated.caption)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                // A later edit has replaced it since, and its own answer settles it.
+                if (_uiState.value.attachments.any { it.id == attachment.id && it.caption == caption }) {
+                    setCaption(attachment.id, before)
+                }
                 _events.send(AttachmentsEvent.Toast(e.toMochiError().messageOrFallback(saveFailed)))
             }
         }
+    }
+
+    private fun setCaption(id: String, caption: String) {
+        _uiState.value = _uiState.value.copy(
+            attachments = _uiState.value.attachments.map {
+                if (it.id == id) it.copy(caption = caption) else it
+            },
+        )
     }
 
     // ---------------- Helpers ----------------

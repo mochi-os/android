@@ -166,4 +166,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">%1$s kunci pesen dipulihaké</item>
     </plurals>
+    <string name="chat_mark_unread">Tandhani durung diwaca</string>
+    <string name="chat_list_marked_read">Chat ditandhani wis diwaca</string>
+    <string name="chat_list_marked_unread">Chat ditandhani durung diwaca</string>
 </resources>

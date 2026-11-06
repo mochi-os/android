@@ -168,4 +168,7 @@
         <item quantity="one">%1$s калиди паём барқарор шуд</item>
         <item quantity="other">%1$s калиди паём барқарор шуд</item>
     </plurals>
+    <string name="chat_mark_unread">Ҳамчун хонданашуда қайд кардан</string>
+    <string name="chat_list_marked_read">Чат ҳамчун хондашуда қайд шуд</string>
+    <string name="chat_list_marked_unread">Чат ҳамчун хонданашуда қайд шуд</string>
 </resources>

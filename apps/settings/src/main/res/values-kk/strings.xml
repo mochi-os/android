@@ -658,4 +658,20 @@
         <item quantity="other">%1$s тіркелгі</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS арналары</string>
+    <string name="notifications_rss_empty">RSS арналары әлі жоқ</string>
+    <string name="notifications_rss_create">Арна құру</string>
+    <string name="notifications_rss_create_title">RSS арнасын құру</string>
+    <string name="notifications_rss_created">Таспа жасалды</string>
+    <string name="notifications_rss_done">Дайын</string>
+    <string name="notifications_rss_name">Таспа атауы</string>
+    <string name="notifications_rss_existing">Бар жазылымдарға қосу</string>
+    <string name="notifications_rss_default">Әдепкі бойынша хабарлау</string>
+    <string name="notifications_rss_edit">Таспаны өңдеу</string>
+    <string name="notifications_rss_delete">Арнаны жою</string>
+    <string name="notifications_rss_delete_title">Арнаны жою керек пе?</string>
+    <string name="notifications_rss_delete_message">Бұл арнаны біржола жояды. Оны пайдаланатын кез келген RSS оқырмандары енді хабарландыруларыңызға қол жеткізе алмайды.</string>
+    <string name="notifications_rss_renamed">Таспаның атауы өзгертілді</string>
+    <string name="notifications_rss_deleted">Таспа жойылды</string>
+    <string name="notifications_rss_default_name">RSS арнасы</string>
 </resources>

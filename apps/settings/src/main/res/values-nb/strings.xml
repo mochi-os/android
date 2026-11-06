@@ -658,4 +658,20 @@
         <item quantity="other">%1$s kontoer</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS-strømmer</string>
+    <string name="notifications_rss_empty">Ingen RSS-strømmer ennå</string>
+    <string name="notifications_rss_create">Opprett strøm</string>
+    <string name="notifications_rss_create_title">Opprett RSS-strøm</string>
+    <string name="notifications_rss_created">Feed opprettet</string>
+    <string name="notifications_rss_done">Ferdig</string>
+    <string name="notifications_rss_name">Feed-navn</string>
+    <string name="notifications_rss_existing">Legg til i eksisterende abonnementer</string>
+    <string name="notifications_rss_default">Varsle som standard</string>
+    <string name="notifications_rss_edit">Rediger feed</string>
+    <string name="notifications_rss_delete">Slett strøm</string>
+    <string name="notifications_rss_delete_title">Slette strøm?</string>
+    <string name="notifications_rss_delete_message">Dette sletter strømmen permanent. RSS-lesere som bruker den, vil ikke lenger ha tilgang til varslene dine.</string>
+    <string name="notifications_rss_renamed">Feed har fått nytt navn</string>
+    <string name="notifications_rss_deleted">Feed slettet</string>
+    <string name="notifications_rss_default_name">RSS-strøm</string>
 </resources>

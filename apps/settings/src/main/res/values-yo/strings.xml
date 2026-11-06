@@ -646,4 +646,20 @@
         <item quantity="other">àkáǹtì %1$s</item>
     </plurals>
     <string name="blocks_server">Sáfà</string>
+    <string name="notifications_rss">Àwọn ìfàn RSS</string>
+    <string name="notifications_rss_empty">Kò sí feed RSS síbẹ̀</string>
+    <string name="notifications_rss_create">Dá feed</string>
+    <string name="notifications_rss_create_title">Ṣẹda ìfàn RSS</string>
+    <string name="notifications_rss_created">A ti dá feed</string>
+    <string name="notifications_rss_done">Ti parí</string>
+    <string name="notifications_rss_name">Orúkọ feed</string>
+    <string name="notifications_rss_existing">Fi sí àwọn ìforúkọsílẹ̀ tó wà</string>
+    <string name="notifications_rss_default">Fìtọ́nisí gẹ́gẹ́ bí àìyípadà</string>
+    <string name="notifications_rss_edit">Tunṣe feed</string>
+    <string name="notifications_rss_delete">Pa feed rẹ́</string>
+    <string name="notifications_rss_delete_title">Pa feed rẹ́?</string>
+    <string name="notifications_rss_delete_message">Èyí yóò pa ìfàn yìí rẹ́ pátápátá. Èyíkéyìí òǹkàwé RSS tó ń lò ó kò ní lè rí àwọn ìfitónilétí rẹ mọ́.</string>
+    <string name="notifications_rss_renamed">A ti tún feed sọ lórúkọ</string>
+    <string name="notifications_rss_deleted">A ti pa feed rẹ́</string>
+    <string name="notifications_rss_default_name">Feed RSS</string>
 </resources>

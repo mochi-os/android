@@ -342,4 +342,5 @@
         <item quantity="one">%1$s ñembohovái</item>
         <item quantity="other">+%1$s ñembohovái ambue</item>
     </plurals>
+    <string name="drawer_unread">Noñemoñe\'ẽiva</string>
 </resources>

@@ -341,4 +341,5 @@
     <plurals name="comment_collapsed_replies">
         <item quantity="other">+%1$s ការឆ្លើយតបបន្ថែម</item>
     </plurals>
+    <string name="drawer_unread">មិនទាន់អាន</string>
 </resources>

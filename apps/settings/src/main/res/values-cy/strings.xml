@@ -710,4 +710,20 @@
         <item quantity="other">%1$s cyfrif</item>
     </plurals>
     <string name="blocks_server">Gweinydd</string>
+    <string name="notifications_rss">Porthwyr RSS</string>
+    <string name="notifications_rss_empty">Dim porthwyr RSS eto</string>
+    <string name="notifications_rss_create">Creu porthiant</string>
+    <string name="notifications_rss_create_title">Creu porthiant RSS</string>
+    <string name="notifications_rss_created">Ffrwd wedi\'i greu</string>
+    <string name="notifications_rss_done">Wedi gorffen</string>
+    <string name="notifications_rss_name">Enw\'r ffrwd</string>
+    <string name="notifications_rss_existing">Ychwanegu at danysgrifiadau presennol</string>
+    <string name="notifications_rss_default">Hysbysu yn ddiofyn</string>
+    <string name="notifications_rss_edit">Golygu’r ffrwd</string>
+    <string name="notifications_rss_delete">Dileu porthiant</string>
+    <string name="notifications_rss_delete_title">Dileu porthiant?</string>
+    <string name="notifications_rss_delete_message">Bydd hyn yn dileu\'r porthiant hwn yn barhaol. Ni fydd unrhyw ddarllenyddion RSS sy\'n ei ddefnyddio yn gallu cael mynediad i\'ch hysbysiadau mwyach.</string>
+    <string name="notifications_rss_renamed">Ffrwd wedi\'i hailenwi</string>
+    <string name="notifications_rss_deleted">Ffrwd wedi\'i ddileu</string>
+    <string name="notifications_rss_default_name">Porthwr RSS</string>
 </resources>

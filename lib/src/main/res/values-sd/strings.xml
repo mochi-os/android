@@ -342,4 +342,5 @@
         <item quantity="one">%1$s جواب</item>
         <item quantity="other">+%1$s وڌيڪ جواب</item>
     </plurals>
+    <string name="drawer_unread">اڻ پڙهيل</string>
 </resources>

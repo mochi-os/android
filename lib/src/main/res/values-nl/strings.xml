@@ -342,4 +342,5 @@
         <item quantity="one">%1$s reactie</item>
         <item quantity="other">+%1$s meer reacties</item>
     </plurals>
+    <string name="drawer_unread">Ongelezen</string>
 </resources>

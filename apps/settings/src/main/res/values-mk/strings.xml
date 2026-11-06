@@ -658,4 +658,20 @@
         <item quantity="other">%1$s сметки</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS feed-ови</string>
+    <string name="notifications_rss_empty">Сè уште нема RSS feed-ови</string>
+    <string name="notifications_rss_create">Создај канал</string>
+    <string name="notifications_rss_create_title">Создај RSS канал</string>
+    <string name="notifications_rss_created">Каналот е креиран</string>
+    <string name="notifications_rss_done">Готово</string>
+    <string name="notifications_rss_name">Име на канал</string>
+    <string name="notifications_rss_existing">Додај во постоечки претплати</string>
+    <string name="notifications_rss_default">Известувај стандардно</string>
+    <string name="notifications_rss_edit">Уреди канал</string>
+    <string name="notifications_rss_delete">Избриши канал</string>
+    <string name="notifications_rss_delete_title">Да се избрише каналот?</string>
+    <string name="notifications_rss_delete_message">Ова трајно ќе го избрише овој канал. Сите RSS читачи што го користат повеќе нема да можат да пристапат до вашите известувања.</string>
+    <string name="notifications_rss_renamed">Каналот е преименуван</string>
+    <string name="notifications_rss_deleted">Каналот е избришан</string>
+    <string name="notifications_rss_default_name">RSS канал</string>
 </resources>

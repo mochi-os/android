@@ -168,4 +168,7 @@
         <item quantity="one">%1$s key ng mensahe ang naibalik</item>
         <item quantity="other">%1$s key ng mensahe ang naibalik</item>
     </plurals>
+    <string name="chat_mark_unread">Markahan bilang hindi pa nabasa</string>
+    <string name="chat_list_marked_read">Minarkahan ang chat bilang nabasa na</string>
+    <string name="chat_list_marked_unread">Minarkahan ang chat bilang hindi pa nabasa</string>
 </resources>

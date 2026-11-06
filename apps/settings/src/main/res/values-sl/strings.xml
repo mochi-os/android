@@ -684,4 +684,20 @@
         <item quantity="other">%1$s računov</item>
     </plurals>
     <string name="blocks_server">Strežnik</string>
+    <string name="notifications_rss">RSS kanali</string>
+    <string name="notifications_rss_empty">Še ni RSS kanalov</string>
+    <string name="notifications_rss_create">Ustvari kanal</string>
+    <string name="notifications_rss_create_title">Ustvari RSS kanal</string>
+    <string name="notifications_rss_created">Kanal ustvarjen</string>
+    <string name="notifications_rss_done">Končano</string>
+    <string name="notifications_rss_name">Ime kanala</string>
+    <string name="notifications_rss_existing">Dodaj k obstoječim naročninam</string>
+    <string name="notifications_rss_default">Privzeto obvešča</string>
+    <string name="notifications_rss_edit">Uredi kanal</string>
+    <string name="notifications_rss_delete">Izbriši kanal</string>
+    <string name="notifications_rss_delete_title">Izbriši kanal?</string>
+    <string name="notifications_rss_delete_message">S tem boste trajno izbrisali ta kanal. Vsi bralniki RSS, ki ga uporabljajo, ne bodo več mogli dostopati do vaših obvestil.</string>
+    <string name="notifications_rss_renamed">Kanal preimenovan</string>
+    <string name="notifications_rss_deleted">Kanal izbrisan</string>
+    <string name="notifications_rss_default_name">RSS kanal</string>
 </resources>

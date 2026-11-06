@@ -671,4 +671,20 @@
         <item quantity="other">%1$s konti</item>
     </plurals>
     <string name="blocks_server">Serveris</string>
+    <string name="notifications_rss">RSS plūsmas</string>
+    <string name="notifications_rss_empty">Vēl nav RSS plūsmu</string>
+    <string name="notifications_rss_create">Izveidot plūsmu</string>
+    <string name="notifications_rss_create_title">Izveidot RSS plūsmu</string>
+    <string name="notifications_rss_created">Plūsma izveidota</string>
+    <string name="notifications_rss_done">Pabeigts</string>
+    <string name="notifications_rss_name">Plūsmas nosaukums</string>
+    <string name="notifications_rss_existing">Pievienot esošajām abonēšanām</string>
+    <string name="notifications_rss_default">Pēc noklusējuma paziņot</string>
+    <string name="notifications_rss_edit">Rediģēt plūsmu</string>
+    <string name="notifications_rss_delete">Dzēst plūsmu</string>
+    <string name="notifications_rss_delete_title">Dzēst plūsmu?</string>
+    <string name="notifications_rss_delete_message">Tas neatgriezeniski izdzēsīs šo plūsmu. RSS lasītāji, kas to izmanto, vairs nevarēs piekļūt jūsu paziņojumiem.</string>
+    <string name="notifications_rss_renamed">Plūsma pārdēvēta</string>
+    <string name="notifications_rss_deleted">Plūsma dzēsta</string>
+    <string name="notifications_rss_default_name">RSS plūsma</string>
 </resources>

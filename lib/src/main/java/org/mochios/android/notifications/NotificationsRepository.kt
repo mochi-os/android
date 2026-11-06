@@ -6,6 +6,7 @@
 package org.mochios.android.notifications
 
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.unwrap
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -104,5 +105,24 @@ class NotificationsRepository @Inject constructor(
         } catch (e: Exception) {
             throw e.toMochiError()
         }
+    }
+
+    // RSS feeds of the notifications. Each throws the server's own refusal.
+
+    suspend fun rssFeeds(): List<RssFeed> = api.rssFeeds().unwrap()
+
+    suspend fun createRssFeed(name: String, existing: Boolean): RssFeed =
+        api.createRssFeed(name, if (existing) "1" else "0").unwrap()
+
+    suspend fun renameRssFeed(id: String, name: String) {
+        api.renameRssFeed(id, name).unwrap()
+    }
+
+    suspend fun enableRssFeed(id: String, enabled: Boolean) {
+        api.enableRssFeed(id, if (enabled) "1" else "0").unwrap()
+    }
+
+    suspend fun deleteRssFeed(id: String) {
+        api.deleteRssFeed(id).unwrap()
     }
 }

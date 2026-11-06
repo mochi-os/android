@@ -342,4 +342,5 @@
         <item quantity="one">Impendulo %1$s</item>
         <item quantity="other">+%1$s ezinye iimpendulo</item>
     </plurals>
+    <string name="drawer_unread">Ezingafundwanga</string>
 </resources>

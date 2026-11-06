@@ -342,4 +342,5 @@
         <item quantity="one">%1$s хариу</item>
         <item quantity="other">+%1$s илүү хариу</item>
     </plurals>
+    <string name="drawer_unread">Уншаагүй</string>
 </resources>

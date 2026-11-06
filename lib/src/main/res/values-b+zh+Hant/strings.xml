@@ -342,4 +342,5 @@
         <item quantity="one">%1$s 則回覆</item>
         <item quantity="other">+%1$s 則更多回覆</item>
     </plurals>
+    <string name="drawer_unread">未讀</string>
 </resources>

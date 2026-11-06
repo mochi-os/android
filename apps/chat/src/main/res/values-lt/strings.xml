@@ -170,4 +170,7 @@
         <item quantity="few">Atkurti %1$s žinučių raktai</item>
         <item quantity="other">Atkurta %1$s žinučių raktų</item>
     </plurals>
+    <string name="chat_mark_unread">Žymėti kaip neskaitytą</string>
+    <string name="chat_list_marked_read">Pokalbis pažymėtas kaip skaitytas</string>
+    <string name="chat_list_marked_unread">Pokalbis pažymėtas kaip neskaitytas</string>
 </resources>

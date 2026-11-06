@@ -658,4 +658,20 @@
         <item quantity="other">%1$s kontu</item>
     </plurals>
     <string name="blocks_server">Zerbitzaria</string>
+    <string name="notifications_rss">RSS jarioak</string>
+    <string name="notifications_rss_empty">Oraindik ez dago RSS jariorik</string>
+    <string name="notifications_rss_create">Sortu jarioa</string>
+    <string name="notifications_rss_create_title">Sortu RSS jarioa</string>
+    <string name="notifications_rss_created">Jarioa sortuta</string>
+    <string name="notifications_rss_done">Eginda</string>
+    <string name="notifications_rss_name">Jarioaren izena</string>
+    <string name="notifications_rss_existing">Gehitu lehendik dauden harpidetzei</string>
+    <string name="notifications_rss_default">Lehenetsiz jakinarazi</string>
+    <string name="notifications_rss_edit">Editatu jarioa</string>
+    <string name="notifications_rss_delete">Ezabatu jarioa</string>
+    <string name="notifications_rss_delete_title">Ezabatu jarioa?</string>
+    <string name="notifications_rss_delete_message">Honek jario hau betiko ezabatuko du. Hau erabiltzen duten RSS irakurleek ezingo dute zure jakinarazpenetara sartu.</string>
+    <string name="notifications_rss_renamed">Jarioa berrizendatuta</string>
+    <string name="notifications_rss_deleted">Jarioa ezabatuta</string>
+    <string name="notifications_rss_default_name">RSS jarioa</string>
 </resources>

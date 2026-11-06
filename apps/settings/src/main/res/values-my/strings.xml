@@ -645,4 +645,20 @@
         <item quantity="other">အကောင့် %1$s ခု</item>
     </plurals>
     <string name="blocks_server">ဆာဗာ</string>
+    <string name="notifications_rss">RSS feed များ</string>
+    <string name="notifications_rss_empty">RSS feeds မရှိသေးပါ</string>
+    <string name="notifications_rss_create">ဖိဒ် ဖန်တီးမည်</string>
+    <string name="notifications_rss_create_title">RSS ဖိဒ် ဖန်တီးမည်</string>
+    <string name="notifications_rss_created">ဖိဒ် ဖန်တီးပြီးပါပြီ</string>
+    <string name="notifications_rss_done">ပြီးပါပြီ</string>
+    <string name="notifications_rss_name">ဖိဒ် အမည်</string>
+    <string name="notifications_rss_existing">ရှိပြီးသား subscription များတွင် ထည့်မည်</string>
+    <string name="notifications_rss_default">ပုံမှန်အားဖြင့် အသိပေး</string>
+    <string name="notifications_rss_edit">ဖိဒ်ကို တည်းဖြတ်ပါ</string>
+    <string name="notifications_rss_delete">ဖိဒ် ဖျက်မည်</string>
+    <string name="notifications_rss_delete_title">ဖိဒ် ဖျက်မလား?</string>
+    <string name="notifications_rss_delete_message">၎င်းသည် ဤ ဖိဒ် ကို အပြီးတိုင် ဖျက်ပါမည်။ ၎င်းကို သုံးနေသော RSS reader များသည် သင့်အသိပေးချက်များကို ဝင်ရောက်နိုင်တော့မည် မဟုတ်ပါ။</string>
+    <string name="notifications_rss_renamed">ဖိဒ် အမည်ပြောင်းပြီးပါပြီ</string>
+    <string name="notifications_rss_deleted">ဖိဒ် ဖျက်ပြီးပါပြီ</string>
+    <string name="notifications_rss_default_name">RSS ဖိဒ်</string>
 </resources>

@@ -170,4 +170,7 @@
         <item quantity="few">Vraćena su %1$s ključa poruka</item>
         <item quantity="other">Vraćeno je %1$s ključeva poruka</item>
     </plurals>
+    <string name="chat_mark_unread">Označi kao nepročitano</string>
+    <string name="chat_list_marked_read">Razgovor označen kao pročitan</string>
+    <string name="chat_list_marked_unread">Razgovor označen kao nepročitan</string>
 </resources>

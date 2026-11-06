@@ -342,4 +342,5 @@
         <item quantity="one">%1$s ענטפֿער</item>
         <item quantity="other">+%1$s מער ענטפֿערס</item>
     </plurals>
+    <string name="drawer_unread">אומגעלייענט</string>
 </resources>

@@ -658,4 +658,20 @@
         <item quantity="other">%1$s hisob</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS lentalar</string>
+    <string name="notifications_rss_empty">Hozircha RSS lentalar yoʻq</string>
+    <string name="notifications_rss_create">Feed yaratish</string>
+    <string name="notifications_rss_create_title">RSS feed yaratish</string>
+    <string name="notifications_rss_created">Tasma yaratildi</string>
+    <string name="notifications_rss_done">Bajarildi</string>
+    <string name="notifications_rss_name">Tasma nomi</string>
+    <string name="notifications_rss_existing">Mavjud obunalarga qoʻshish</string>
+    <string name="notifications_rss_default">Sukut boʻyicha xabar berish</string>
+    <string name="notifications_rss_edit">Lentani tahrirlash</string>
+    <string name="notifications_rss_delete">Feedni oʻchirish</string>
+    <string name="notifications_rss_delete_title">Feed oʻchirilsinmi?</string>
+    <string name="notifications_rss_delete_message">Bu lentani doimiy ravishda oʻchiradi. Undan foydalanadigan har qanday RSS oʻquvchilari endi bildirishnomalaringizga kira olmaydi.</string>
+    <string name="notifications_rss_renamed">Tasma nomi oʻzgartirildi</string>
+    <string name="notifications_rss_deleted">Tasma oʻchirildi</string>
+    <string name="notifications_rss_default_name">RSS lentasi</string>
 </resources>

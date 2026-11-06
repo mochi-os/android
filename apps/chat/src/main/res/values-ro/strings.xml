@@ -170,4 +170,7 @@
         <item quantity="few">%1$s chei de mesaj restaurate</item>
         <item quantity="other">%1$s de chei de mesaj restaurate</item>
     </plurals>
+    <string name="chat_mark_unread">Marchează ca necitit</string>
+    <string name="chat_list_marked_read">Chat marcat ca citit</string>
+    <string name="chat_list_marked_unread">Chat marcat ca necitit</string>
 </resources>

@@ -660,4 +660,20 @@
         <item quantity="other">%1$s kontoar</item>
     </plurals>
     <string name="blocks_server">Tenar</string>
+    <string name="notifications_rss">RSS-straumar</string>
+    <string name="notifications_rss_empty">Ingen RSS-straumar enno</string>
+    <string name="notifications_rss_create">Opprett straum</string>
+    <string name="notifications_rss_create_title">Opprett RSS-straum</string>
+    <string name="notifications_rss_created">Straum oppretta</string>
+    <string name="notifications_rss_done">Ferdig</string>
+    <string name="notifications_rss_name">Straumnamn</string>
+    <string name="notifications_rss_existing">Legg til i eksisterande abonnement</string>
+    <string name="notifications_rss_default">Varsla som standard</string>
+    <string name="notifications_rss_edit">Rediger straumen</string>
+    <string name="notifications_rss_delete">Slett straum</string>
+    <string name="notifications_rss_delete_title">Slette straum?</string>
+    <string name="notifications_rss_delete_message">Dette vil sletta denne strauminga for godt. RSS-lesarar som brukar ho, kan ikkje lenger få tilgang til varsla dine.</string>
+    <string name="notifications_rss_renamed">Straumen fekk nytt namn</string>
+    <string name="notifications_rss_deleted">Straum sletta</string>
+    <string name="notifications_rss_default_name">RSS-straum</string>
 </resources>

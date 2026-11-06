@@ -658,4 +658,20 @@
         <item quantity="other">%1$s fiók</item>
     </plurals>
     <string name="blocks_server">Kiszolgáló</string>
+    <string name="notifications_rss">RSS-csatornák</string>
+    <string name="notifications_rss_empty">Még nincsenek RSS hírfolyamok</string>
+    <string name="notifications_rss_create">Feed létrehozása</string>
+    <string name="notifications_rss_create_title">RSS-csatorna létrehozása</string>
+    <string name="notifications_rss_created">Hírcsatorna létrehozva</string>
+    <string name="notifications_rss_done">Kész</string>
+    <string name="notifications_rss_name">Hírcsatorna neve</string>
+    <string name="notifications_rss_existing">Hozzáadás a meglévő feliratkozásokhoz</string>
+    <string name="notifications_rss_default">Értesítés alapértelmezés szerint</string>
+    <string name="notifications_rss_edit">Hírcsatorna szerkesztése</string>
+    <string name="notifications_rss_delete">Feed törlése</string>
+    <string name="notifications_rss_delete_title">Törli a feedet?</string>
+    <string name="notifications_rss_delete_message">Ez véglegesen törli ezt a csatornát. Az ezt használó RSS-olvasók többé nem férnek hozzá az értesítéseidhez.</string>
+    <string name="notifications_rss_renamed">Hírcsatorna átnevezve</string>
+    <string name="notifications_rss_deleted">Hírcsatorna törölve</string>
+    <string name="notifications_rss_default_name">RSS hírfolyam</string>
 </resources>

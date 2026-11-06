@@ -174,4 +174,7 @@
         <item quantity="many">%1$s n-eochair teachtaireachta athchóirithe</item>
         <item quantity="other">%1$s eochair teachtaireachta athchóirithe</item>
     </plurals>
+    <string name="chat_mark_unread">Marcáil mar neamhléite</string>
+    <string name="chat_list_marked_read">Comhrá marcáilte mar léite</string>
+    <string name="chat_list_marked_unread">Comhrá marcáilte mar neamhléite</string>
 </resources>

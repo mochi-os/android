@@ -5,17 +5,24 @@
 
 package org.mochios.chat.ui.chatlist
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
+import org.mochios.chat.R
 import org.mochios.chat.data.PinnedChatsStore
+import org.mochios.chat.data.UnreadChatsStore
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.repository.ChatRepository
@@ -33,10 +40,18 @@ data class ChatListUiState(
     val error: MochiError? = null,
 )
 
+/** What a list menu action came to, for the screen to say. */
+sealed interface ChatListEvent {
+    data class Done(@StringRes val message: Int) : ChatListEvent
+
+    data class Failure(val error: MochiError) : ChatListEvent
+}
+
 @HiltViewModel
 class ChatListViewModel @Inject constructor(
     private val repository: ChatRepository,
     private val pinnedStore: PinnedChatsStore,
+    private val unreadStore: UnreadChatsStore,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ChatListUiState())
@@ -44,6 +59,12 @@ class ChatListViewModel @Inject constructor(
 
     /** Locally pinned chat keys, for pinning to the top of the drawer list. */
     val pinned: StateFlow<Set<String>> = pinnedStore.pinned
+
+    /** Chats marked unread on this device, which show a dot and count as unread. */
+    val marked: StateFlow<Set<String>> = unreadStore.marked
+
+    private val _events = MutableSharedFlow<ChatListEvent>(extraBufferCapacity = 4)
+    val events: SharedFlow<ChatListEvent> = _events.asSharedFlow()
 
     init {
         load()
@@ -73,6 +94,57 @@ class ChatListViewModel @Inject constructor(
         }
     }
 
+    /** The list's chats read again with no spinner, as after a menu action. */
+    private suspend fun reload() {
+        try {
+            _uiState.value = _uiState.value.copy(chats = repository.listChats())
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            // The list keeps what it shows.
+        }
+    }
+
+    /** Pin [chat] to the top of the list, or unpin it; pins stay on this device. */
+    fun togglePin(chat: String) = pinnedStore.toggle(chat)
+
+    /**
+     * Mark as read from the list, as the web has it: the badge clears on the
+     * tap, the list reads again once the server has the read, and a refusal
+     * shows the chat unread again with the error.
+     */
+    fun markRead(chat: String) {
+        unreadStore.clear(chat)
+        val before = _uiState.value.chats.firstOrNull { it.id == chat }?.unread ?: 0
+        setUnread(chat, 0)
+        viewModelScope.launch {
+            try {
+                repository.markRead(chat)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // A list read since shows the server's own count, which stays.
+                if (_uiState.value.chats.any { it.id == chat && it.unread == 0 }) setUnread(chat, before)
+                _events.emit(ChatListEvent.Failure(e.toMochiError()))
+                return@launch
+            }
+            _events.emit(ChatListEvent.Done(R.string.chat_list_marked_read))
+            reload()
+        }
+    }
+
+    /** Mark as unread from the list: a mark on this device until the chat is read. */
+    fun markUnread(chat: String) {
+        unreadStore.mark(chat)
+        _events.tryEmit(ChatListEvent.Done(R.string.chat_list_marked_unread))
+    }
+
+    private fun setUnread(chat: String, unread: Int) {
+        _uiState.value = _uiState.value.copy(
+            chats = _uiState.value.chats.map { if (it.id == chat) it.copy(unread = unread) else it },
+        )
+    }
+
     fun setQuery(query: String) {
         _uiState.value = _uiState.value.copy(query = query)
     }
@@ -84,8 +156,9 @@ class ChatListViewModel @Inject constructor(
     /** The chats the search and chip leave, keeping [open], the conversation on screen. */
     fun filteredChats(open: String = ""): List<Chat> {
         val state = _uiState.value
+        val marks = unreadStore.marked.value
         val filtered = state.chats.filter { chat ->
-            matchesChatFilter(chat, state.query, state.filter, open)
+            matchesChatFilter(chat, state.query, state.filter, open, marks)
         }
         val pinnedKeys = pinnedStore.pinned.value
         // Pinned chats first, then most recent activity; chats with no activity
@@ -119,16 +192,24 @@ class ChatListViewModel @Inject constructor(
 internal fun unreadBadge(chat: Chat, open: String): Int = if (chat.id == open) 0 else chat.unread
 
 /**
+ * Whether a drawer row shows a dot for a chat [marked] unread: an active chat
+ * other than the [open] one, with no count to show instead.
+ */
+internal fun unreadDot(chat: Chat, open: String, marked: Set<String>): Boolean =
+    chat.id != open && chat.status == ChatStatus.ACTIVE && chat.id in marked && unreadBadge(chat, open) == 0
+
+/**
  * Whether [chat] belongs in the list for the typed [query], matched against
  * its name, and the chosen [filter], as the web has them: an active chat with
- * unread messages or the [open] one, or any chat that isn't a 1:1, a group
- * everyone else has left included.
+ * unread messages or [marked] unread, or the [open] one, or any chat that
+ * isn't a 1:1, a group everyone else has left included.
  */
 internal fun matchesChatFilter(
     chat: Chat,
     query: String,
     filter: ChatFilter,
     open: String = "",
+    marked: Set<String> = emptySet(),
 ): Boolean {
     val term = query.trim()
     if (term.isNotEmpty() && !chat.name.contains(term, ignoreCase = true)) {
@@ -137,7 +218,7 @@ internal fun matchesChatFilter(
     return when (filter) {
         ChatFilter.ALL -> true
         ChatFilter.UNREAD ->
-            chat.id == open || (chat.status == ChatStatus.ACTIVE && chat.unread > 0)
+            chat.id == open || (chat.status == ChatStatus.ACTIVE && (chat.unread > 0 || chat.id in marked))
         ChatFilter.GROUPS -> chat.members != 2
     }
 }

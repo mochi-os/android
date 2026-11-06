@@ -168,4 +168,7 @@
         <item quantity="one">Ukhiye womlayezo %1$s ubuyiselwe</item>
         <item quantity="other">Okhiye bemilayezo %1$s babuyiselwe</item>
     </plurals>
+    <string name="chat_mark_unread">Maka njengengafundiwe</string>
+    <string name="chat_list_marked_read">Ingxoxo imakwe njengefundiwe</string>
+    <string name="chat_list_marked_unread">Ingxoxo imakwe njengengafundiwe</string>
 </resources>

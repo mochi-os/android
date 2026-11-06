@@ -658,4 +658,20 @@
         <item quantity="other">%1$s аккаунт</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS тасмалары</string>
+    <string name="notifications_rss_empty">RSS тасмалары азырынча жок</string>
+    <string name="notifications_rss_create">Түрмөк түзүү</string>
+    <string name="notifications_rss_create_title">RSS түрмөгүн түзүү</string>
+    <string name="notifications_rss_created">Лента түзүлдү</string>
+    <string name="notifications_rss_done">Бүттү</string>
+    <string name="notifications_rss_name">Лента аты</string>
+    <string name="notifications_rss_existing">Учурдагы жазылууларга кошуу</string>
+    <string name="notifications_rss_default">Демейки боюнча билдирүү</string>
+    <string name="notifications_rss_edit">Тасманы өзгөртүү</string>
+    <string name="notifications_rss_delete">Түрмөктү жок кылуу</string>
+    <string name="notifications_rss_delete_title">Түрмөктү жок кылабызбы?</string>
+    <string name="notifications_rss_delete_message">Бул лентаны биротоло өчүрөт. Аны колдонгон RSS окугучтары эми сиздин эскертүүлөрүңүзгө кире албайт.</string>
+    <string name="notifications_rss_renamed">Лента аты өзгөртүлдү</string>
+    <string name="notifications_rss_deleted">Лента өчүрүлдү</string>
+    <string name="notifications_rss_default_name">RSS тасмасы</string>
 </resources>

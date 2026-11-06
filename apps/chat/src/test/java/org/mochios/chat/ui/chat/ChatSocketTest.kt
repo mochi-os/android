@@ -32,6 +32,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.data.PinnedChatsStore
+import org.mochios.chat.data.UnreadChatsStore
 import org.mochios.chat.model.ChatMessage
 import org.mochios.chat.repository.ChatRepository
 import org.robolectric.RobolectricTestRunner
@@ -189,6 +190,7 @@ class ChatSocketTest {
             session,
             PinnedChatsStore(context),
             context,
+            UnreadChatsStore(context),
         )
         until { model.uiState.value.messages.isNotEmpty() && socket.isLive("k1") && peer != null }
         settle()

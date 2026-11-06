@@ -168,4 +168,7 @@
         <item quantity="one">furtuun ergaa %1$s deebi\'eera</item>
         <item quantity="other">furtuuwwan ergaa %1$s deebi\'aniiru</item>
     </plurals>
+    <string name="chat_mark_unread">Akka hin dubbifamnetti mallatteessi</string>
+    <string name="chat_list_marked_read">Chaattiin akka dubbifametti mallatteeffame</string>
+    <string name="chat_list_marked_unread">Chaattiin akka hin dubbifamnetti mallatteeffame</string>
 </resources>

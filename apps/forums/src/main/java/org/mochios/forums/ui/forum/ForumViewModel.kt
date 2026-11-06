@@ -190,14 +190,25 @@ class ForumViewModel @Inject constructor(
     }
 
     /** Turn one of this forum's activity notifications on or off: [kind] is
-     *  "post", "reply" or "comment". */
+     *  "post", "reply" or "comment". The tick moves on the tap and goes back
+     *  if the server refuses; the server's answer then replaces it, along with
+     *  any kind the change covers. */
     fun setNotification(kind: String, enabled: Boolean) {
         if (forumId.isBlank() || isAll) return
+        val before = _uiState.value.notifications
+        if (before != null) _uiState.value = _uiState.value.copy(notifications = before.with(kind, enabled))
         viewModelScope.launch {
             try {
                 val settings = repository.setNotification(forumId, kind, enabled)
                 _uiState.value = _uiState.value.copy(notifications = settings)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                // A later tap has moved it since, and its own answer settles it.
+                val now = _uiState.value.notifications
+                if (before != null && now != null && now.of(kind) == enabled) {
+                    _uiState.value = _uiState.value.copy(notifications = now.with(kind, before.of(kind)))
+                }
                 _events.emit(ForumEvent.ShowError(e.toMochiError()))
             }
         }

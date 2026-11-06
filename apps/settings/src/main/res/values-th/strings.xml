@@ -646,4 +646,20 @@
         <item quantity="other">%1$s บัญชี</item>
     </plurals>
     <string name="blocks_server">เซิร์ฟเวอร์</string>
+    <string name="notifications_rss">ฟีด RSS</string>
+    <string name="notifications_rss_empty">ยังไม่มีฟีด RSS</string>
+    <string name="notifications_rss_create">สร้างฟีด</string>
+    <string name="notifications_rss_create_title">สร้างฟีด RSS</string>
+    <string name="notifications_rss_created">สร้างฟีดแล้ว</string>
+    <string name="notifications_rss_done">เสร็จสิ้น</string>
+    <string name="notifications_rss_name">ชื่อฟีด</string>
+    <string name="notifications_rss_existing">เพิ่มไปยังการสมัครสมาชิกที่มีอยู่</string>
+    <string name="notifications_rss_default">แจ้งเตือนเป็นค่าเริ่มต้น</string>
+    <string name="notifications_rss_edit">แก้ไขฟีด</string>
+    <string name="notifications_rss_delete">ลบฟีด</string>
+    <string name="notifications_rss_delete_title">ลบฟีดหรือไม่?</string>
+    <string name="notifications_rss_delete_message">การดำเนินการนี้จะลบฟีดนี้อย่างถาวร โปรแกรมอ่าน RSS ที่ใช้ฟีดนี้จะไม่สามารถเข้าถึงการแจ้งเตือนของคุณได้อีกต่อไป</string>
+    <string name="notifications_rss_renamed">เปลี่ยนชื่อฟีดแล้ว</string>
+    <string name="notifications_rss_deleted">ลบฟีดแล้ว</string>
+    <string name="notifications_rss_default_name">ฟีด RSS</string>
 </resources>

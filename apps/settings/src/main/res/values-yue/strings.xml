@@ -648,4 +648,20 @@
     <plurals name="federation_accounts">
         <item quantity="other">%1$s 個帳戶</item>
     </plurals>
+    <string name="notifications_rss">RSS 訂閱源</string>
+    <string name="notifications_rss_empty">仲未有 RSS 訂閱源</string>
+    <string name="notifications_rss_create">建立訂閱源</string>
+    <string name="notifications_rss_create_title">建立 RSS 訂閱源</string>
+    <string name="notifications_rss_created">訂閱源已經建立咗</string>
+    <string name="notifications_rss_done">完成</string>
+    <string name="notifications_rss_name">訂閱源名稱</string>
+    <string name="notifications_rss_existing">加入現有嘅訂閱</string>
+    <string name="notifications_rss_default">預設通知</string>
+    <string name="notifications_rss_edit">編輯訂閱源</string>
+    <string name="notifications_rss_delete">刪除訂閱源</string>
+    <string name="notifications_rss_delete_title">刪除訂閱源？</string>
+    <string name="notifications_rss_delete_message">呢個操作會永久刪除呢個訂閱源。用緊佢嘅 RSS 閱讀器以後都唔可以再存取你嘅通知。</string>
+    <string name="notifications_rss_renamed">訂閱源已經改咗名</string>
+    <string name="notifications_rss_deleted">訂閱源已經刪除咗</string>
+    <string name="notifications_rss_default_name">RSS 訂閱源</string>
 </resources>

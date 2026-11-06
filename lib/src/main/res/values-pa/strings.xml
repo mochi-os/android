@@ -342,4 +342,5 @@
         <item quantity="one">%1$s ਜਵਾਬ</item>
         <item quantity="other">+%1$s ਹੋਰ ਜਵਾਬ</item>
     </plurals>
+    <string name="drawer_unread">ਅਣ-ਪੜ੍ਹਿਆ</string>
 </resources>

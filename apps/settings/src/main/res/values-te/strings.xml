@@ -658,4 +658,20 @@
         <item quantity="other">%1$s ఖాతాలు</item>
     </plurals>
     <string name="blocks_server">సర్వర్</string>
+    <string name="notifications_rss">RSS ఫీడ్‌లు</string>
+    <string name="notifications_rss_empty">ఇంకా RSS ఫీడ్‌లు లేవు</string>
+    <string name="notifications_rss_create">ఫీడ్‌ను సృష్టించండి</string>
+    <string name="notifications_rss_create_title">RSS ఫీడ్‌ను సృష్టించండి</string>
+    <string name="notifications_rss_created">ఫీడ్ సృష్టించబడింది</string>
+    <string name="notifications_rss_done">పూర్తయింది</string>
+    <string name="notifications_rss_name">ఫీడ్ పేరు</string>
+    <string name="notifications_rss_existing">ప్రస్తుత చందాలకు జోడించండి</string>
+    <string name="notifications_rss_default">డిఫాల్ట్‌గా నోటిఫై చేయండి</string>
+    <string name="notifications_rss_edit">ఫీడ్‌ను సవరించండి</string>
+    <string name="notifications_rss_delete">ఫీడ్‌ను తొలగించండి</string>
+    <string name="notifications_rss_delete_title">ఫీడ్‌ను తొలగించాలా?</string>
+    <string name="notifications_rss_delete_message">ఇది ఈ ఫీడ్‌ను శాశ్వతంగా తొలగిస్తుంది. దీన్ని ఉపయోగిస్తున్న ఏ RSS రీడర్లు ఇకపై మీ నోటిఫికేషన్లను యాక్సెస్ చేయలేరు.</string>
+    <string name="notifications_rss_renamed">ఫీడ్ పేరు మార్చబడింది</string>
+    <string name="notifications_rss_deleted">ఫీడ్ తొలగించబడింది</string>
+    <string name="notifications_rss_default_name">RSS ఫీడ్</string>
 </resources>

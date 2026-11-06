@@ -168,4 +168,7 @@
         <item quantity="one">Възстановен е %1$s ключ за съобщения</item>
         <item quantity="other">Възстановени са %1$s ключа за съобщения</item>
     </plurals>
+    <string name="chat_mark_unread">Отбележи като непрочетен</string>
+    <string name="chat_list_marked_read">Чатът е отбелязан като прочетен</string>
+    <string name="chat_list_marked_unread">Чатът е отбелязан като непрочетен</string>
 </resources>

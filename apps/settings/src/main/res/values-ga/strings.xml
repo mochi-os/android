@@ -697,4 +697,20 @@
         <item quantity="other">%1$s cuntas</item>
     </plurals>
     <string name="blocks_server">Freastalaí</string>
+    <string name="notifications_rss">Fothaí RSS</string>
+    <string name="notifications_rss_empty">Níl aon fhotha RSS fós</string>
+    <string name="notifications_rss_create">Cruthaigh fotha</string>
+    <string name="notifications_rss_create_title">Cruthaigh fotha RSS</string>
+    <string name="notifications_rss_created">Fotha cruthaithe</string>
+    <string name="notifications_rss_done">Críochnaithe</string>
+    <string name="notifications_rss_name">Ainm an fhotha</string>
+    <string name="notifications_rss_existing">Cuir le síntiúis atá ann cheana</string>
+    <string name="notifications_rss_default">Cuir fógra mar réamhshocrú</string>
+    <string name="notifications_rss_edit">Cuir an fothú in eagar</string>
+    <string name="notifications_rss_delete">Scrios fotha</string>
+    <string name="notifications_rss_delete_title">Scrios fotha?</string>
+    <string name="notifications_rss_delete_message">Scriosfaidh sé seo an fotha seo go buan. Ní bheidh aon léitheoirí RSS a úsáideann é in ann rochtain a fháil ar do chuid fógraí a thuilleadh.</string>
+    <string name="notifications_rss_renamed">Fotha athainmnithe</string>
+    <string name="notifications_rss_deleted">Fotha scriosta</string>
+    <string name="notifications_rss_default_name">Fotha RSS</string>
 </resources>

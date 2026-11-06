@@ -175,4 +175,7 @@
         <item quantity="many">Ġew irkuprati %1$s ċwievet tal-messaġġi</item>
         <item quantity="other">Ġew irkuprati %1$s ċwievet tal-messaġġi</item>
     </plurals>
+    <string name="chat_mark_unread">Immarka bħala mhux moqri</string>
+    <string name="chat_list_marked_read">Chat immarkata bħala moqrija</string>
+    <string name="chat_list_marked_unread">Chat immarkata bħala mhux moqrija</string>
 </resources>

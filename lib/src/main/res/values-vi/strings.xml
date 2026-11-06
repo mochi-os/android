@@ -343,4 +343,5 @@
         <item quantity="one">%1$s phản hồi</item>
         <item quantity="other">+%1$s phản hồi nữa</item>
     </plurals>
+    <string name="drawer_unread">Chưa đọc</string>
 </resources>

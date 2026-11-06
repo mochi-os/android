@@ -52,6 +52,7 @@ import androidx.compose.material.icons.outlined.DoneAll
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Forum
 import androidx.compose.material.icons.outlined.LockOpen
+import androidx.compose.material.icons.outlined.MarkEmailUnread
 import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material.icons.outlined.Shield
@@ -105,6 +106,7 @@ import org.mochios.android.launcher.AddToHomeItem
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
 import org.mochios.android.push.VisibleEntityEffect
+import org.mochios.android.ui.components.DrawerMenuEntry
 import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.android.ui.components.AttachmentGallery
 import org.mochios.android.ui.components.ComposeBar
@@ -150,10 +152,12 @@ import org.mochios.chat.model.receipts
 import org.mochios.chat.model.relayed
 import org.mochios.chat.model.seenBy
 import org.mochios.chat.model.threads
+import org.mochios.chat.ui.chatlist.ChatListEvent
 import org.mochios.chat.ui.chatlist.ChatListHeader
 import org.mochios.chat.ui.chatlist.ChatListNoMatches
 import org.mochios.chat.ui.chatlist.ChatListViewModel
 import org.mochios.chat.ui.chatlist.unreadBadge
+import org.mochios.chat.ui.chatlist.unreadDot
 import org.mochios.chat.ui.encryption.VerificationWatcher
 import org.mochios.chat.ui.privacy.PrivacyDialog
 import org.mochios.chat.ui.router.CHAT_FEATURE
@@ -191,8 +195,23 @@ fun ChatScreen(
         }
     }
     val pinnedChats by listViewModel.pinned.collectAsState()
+    val markedChats by listViewModel.marked.collectAsState()
     val invitation = stringResource(R.string.chat_invitation)
-    val drawerItems = remember(listUiState, pinnedChats, invitation, chatId) {
+    val pin = stringResource(R.string.chat_pin)
+    val unpin = stringResource(R.string.chat_unpin)
+    val markRead = stringResource(R.string.chat_mark_read)
+    val markUnread = stringResource(R.string.chat_mark_unread)
+    val unpinIcon = ImageVector.vectorResource(R.drawable.ic_push_pin_off)
+    LaunchedEffect(Unit) {
+        listViewModel.events.collect { event ->
+            val message = when (event) {
+                is ChatListEvent.Done -> context.getString(event.message)
+                is ChatListEvent.Failure -> event.error.userMessage()
+            }
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+        }
+    }
+    val drawerItems = remember(listUiState, pinnedChats, markedChats, invitation, chatId) {
         listViewModel.filteredChats(open = chatId).map { chat ->
             // A conversation on another network: its people have no Mochi
             // avatar, so it shows the network's globe.
@@ -210,6 +229,22 @@ fun ChatScreen(
                 trailingIcon = if (chat.id in pinnedChats) Icons.Outlined.PushPin else null,
                 avatarUrl = if (isDirect) personAvatarUrl(chat.other) else null,
                 seed = chat.id,
+                dot = unreadDot(chat, chatId, markedChats),
+                // The web list's menu: pin, and read or unread for an active chat.
+                menu = buildList {
+                    if (chat.id in pinnedChats) {
+                        add(DrawerMenuEntry(unpin, unpinIcon) { listViewModel.togglePin(chat.id) })
+                    } else {
+                        add(DrawerMenuEntry(pin, Icons.Outlined.PushPin) { listViewModel.togglePin(chat.id) })
+                    }
+                    if (chat.status == ChatStatus.ACTIVE) {
+                        if (chat.unread > 0 || chat.id in markedChats) {
+                            add(DrawerMenuEntry(markRead, Icons.Outlined.DoneAll) { listViewModel.markRead(chat.id) })
+                        } else {
+                            add(DrawerMenuEntry(markUnread, Icons.Outlined.MarkEmailUnread) { listViewModel.markUnread(chat.id) })
+                        }
+                    }
+                },
             )
         }
     }

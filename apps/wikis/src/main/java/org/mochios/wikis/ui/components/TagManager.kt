@@ -45,6 +45,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -303,19 +304,31 @@ class TagManagerViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The chip goes on the tap and comes back, with the error, if the server
+     * refuses, in its old place among the tags shown by then.
+     */
     fun remove(wikiId: String, slug: String, currentTags: List<String>, tag: String) {
+        _uiState.value = TagManagerUiState(lastUpdated = currentTags.filterNot { it.equals(tag, ignoreCase = true) })
         viewModelScope.launch {
             try {
                 repository.removeTag(wikiId, slug, tag)
-                val newList = currentTags.filterNot { it.equals(tag, ignoreCase = true) }
-                _uiState.value = TagManagerUiState(lastUpdated = newList)
                 _snackbar.emit(
                     TagManagerSnackbar(
                         R.string.wikis_tag_manager_removed,
                         listOf(tag),
                     )
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
+                val latest = _uiState.value.lastUpdated.orEmpty()
+                if (latest.none { it.equals(tag, ignoreCase = true) }) {
+                    val order = currentTags.withIndex().associate { (index, other) -> other.lowercase() to index }
+                    _uiState.value = TagManagerUiState(
+                        lastUpdated = (latest + tag).sortedBy { order[it.lowercase()] ?: Int.MAX_VALUE },
+                    )
+                }
                 _snackbar.emit(TagManagerSnackbar(R.string.wikis_tag_manager_remove_failed))
             }
         }

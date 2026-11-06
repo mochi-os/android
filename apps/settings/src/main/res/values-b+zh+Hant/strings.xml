@@ -646,4 +646,20 @@
         <item quantity="other">%1$s 個帳戶</item>
     </plurals>
     <string name="blocks_server">伺服器</string>
+    <string name="notifications_rss">RSS 訂閱源</string>
+    <string name="notifications_rss_empty">尚無 RSS 訂閱</string>
+    <string name="notifications_rss_create">建立訂閱源</string>
+    <string name="notifications_rss_create_title">建立 RSS 訂閱源</string>
+    <string name="notifications_rss_created">訂閱源已建立</string>
+    <string name="notifications_rss_done">完成</string>
+    <string name="notifications_rss_name">訂閱源名稱</string>
+    <string name="notifications_rss_existing">新增至現有訂閱</string>
+    <string name="notifications_rss_default">預設通知</string>
+    <string name="notifications_rss_edit">編輯訂閱</string>
+    <string name="notifications_rss_delete">刪除訂閱源</string>
+    <string name="notifications_rss_delete_title">刪除訂閱源?</string>
+    <string name="notifications_rss_delete_message">此操作將永久刪除這個訂閱源。使用該訂閱源的任何 RSS 閱讀器都將無法再存取你的通知。</string>
+    <string name="notifications_rss_renamed">訂閱源已重新命名</string>
+    <string name="notifications_rss_deleted">訂閱源已刪除</string>
+    <string name="notifications_rss_default_name">RSS 訂閱源</string>
 </resources>

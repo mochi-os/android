@@ -168,4 +168,7 @@
         <item quantity="one">%1$s beskednøgle gendannet</item>
         <item quantity="other">%1$s beskednøgler gendannet</item>
     </plurals>
+    <string name="chat_mark_unread">Markér som ulæst</string>
+    <string name="chat_list_marked_read">Chat markeret som læst</string>
+    <string name="chat_list_marked_unread">Chat markeret som ulæst</string>
 </resources>

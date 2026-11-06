@@ -57,4 +57,34 @@ interface NotificationsApi {
         @Field("object") target: String,
         @Field("category") category: String,
     ): Response<ApiResponse<Map<String, Any>>>
+
+    @GET("-/rss/list")
+    suspend fun rssFeeds(): Response<ApiResponse<List<RssFeed>>>
+
+    /** [existing] "1" adds the feed to every category the user has now. */
+    @FormUrlEncoded
+    @POST("-/rss/create")
+    suspend fun createRssFeed(
+        @Field("name") name: String,
+        @Field("existing") existing: String,
+    ): Response<ApiResponse<RssFeed>>
+
+    @FormUrlEncoded
+    @POST("-/rss/rename")
+    suspend fun renameRssFeed(
+        @Field("id") id: String,
+        @Field("name") name: String,
+    ): Response<ApiResponse<Map<String, Any>>>
+
+    /** [enabled] "1" or "0": whether the feed joins each new category. */
+    @FormUrlEncoded
+    @POST("-/rss/update")
+    suspend fun enableRssFeed(
+        @Field("id") id: String,
+        @Field("enabled") enabled: String,
+    ): Response<ApiResponse<Map<String, Any>>>
+
+    @FormUrlEncoded
+    @POST("-/rss/delete")
+    suspend fun deleteRssFeed(@Field("id") id: String): Response<ApiResponse<Map<String, Any>>>
 }

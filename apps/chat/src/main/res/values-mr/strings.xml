@@ -168,4 +168,7 @@
         <item quantity="one">%1$s संदेश की पुनर्संचयित केली</item>
         <item quantity="other">%1$s संदेश की पुनर्संचयित केल्या</item>
     </plurals>
+    <string name="chat_mark_unread">न वाचलेले म्हणून चिन्हांकित करा</string>
+    <string name="chat_list_marked_read">चॅट वाचले म्हणून चिन्हांकित केले</string>
+    <string name="chat_list_marked_unread">चॅट न वाचलेले म्हणून चिन्हांकित केले</string>
 </resources>

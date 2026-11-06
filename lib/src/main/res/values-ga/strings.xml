@@ -348,4 +348,5 @@
         <item quantity="many">+%1$s bhfreagra eile</item>
         <item quantity="other">+%1$s freagraí eile</item>
     </plurals>
+    <string name="drawer_unread">Gan léamh</string>
 </resources>

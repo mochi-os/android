@@ -657,4 +657,20 @@
         <item quantity="other">%1$s kont</item>
     </plurals>
     <string name="blocks_server">Sèvè</string>
+    <string name="notifications_rss">Flux RSS yo</string>
+    <string name="notifications_rss_empty">Poko gen flux RSS</string>
+    <string name="notifications_rss_create">Kreye fil</string>
+    <string name="notifications_rss_create_title">Kreye fil RSS</string>
+    <string name="notifications_rss_created">Feed kreye</string>
+    <string name="notifications_rss_done">Fini</string>
+    <string name="notifications_rss_name">Non feed</string>
+    <string name="notifications_rss_existing">Ajoute nan abònman ki egziste</string>
+    <string name="notifications_rss_default">Notifye pa default</string>
+    <string name="notifications_rss_edit">Modifye feed</string>
+    <string name="notifications_rss_delete">Efase fil</string>
+    <string name="notifications_rss_delete_title">Efase fil?</string>
+    <string name="notifications_rss_delete_message">Sa pral efase feed sa pèmanan. Nenpòt lektè RSS k ap itilize l pap kapab aksè notifikasyon w yo ankò.</string>
+    <string name="notifications_rss_renamed">Feed rebatize</string>
+    <string name="notifications_rss_deleted">Feed efase</string>
+    <string name="notifications_rss_default_name">Flux RSS</string>
 </resources>

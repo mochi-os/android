@@ -657,4 +657,20 @@
         <item quantity="other">%1$s cuentakuna</item>
     </plurals>
     <string name="blocks_server">Servidor</string>
+    <string name="notifications_rss">RSS feedkuna</string>
+    <string name="notifications_rss_empty">Manaraq RSS feedkuna</string>
+    <string name="notifications_rss_create">Feed kamariy</string>
+    <string name="notifications_rss_create_title">RSS feed kamariy</string>
+    <string name="notifications_rss_created">Feed kamarisqa</string>
+    <string name="notifications_rss_done">Tukusqa</string>
+    <string name="notifications_rss_name">Feed suti</string>
+    <string name="notifications_rss_existing">Kachkaq suscripcionkunaman yapay</string>
+    <string name="notifications_rss_default">Predeterminado hina willay</string>
+    <string name="notifications_rss_edit">Feedta hukchay</string>
+    <string name="notifications_rss_delete">Feed wischuy</string>
+    <string name="notifications_rss_delete_title">¿Feedta wischunki?</string>
+    <string name="notifications_rss_delete_message">Kayqa kay feedta wiñaypaq wischunqa. Kayta llamk\'achiq RSS lectorkunaqa manaña willaykunaykiman yaykuyta atinqakuchu.</string>
+    <string name="notifications_rss_renamed">Feedpa sutin hukchasqa</string>
+    <string name="notifications_rss_deleted">Feed wischusqa</string>
+    <string name="notifications_rss_default_name">RSS feed</string>
 </resources>

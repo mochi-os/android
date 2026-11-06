@@ -43,6 +43,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.chat.R
 import org.mochios.chat.data.PinnedChatsStore
+import org.mochios.chat.data.UnreadChatsStore
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatDetail
 import org.mochios.chat.model.ChatMessage
@@ -126,6 +127,7 @@ class ChatViewModel @Inject constructor(
     private val sessionManager: SessionManager,
     private val pinnedStore: PinnedChatsStore,
     private val application: Application,
+    private val unreadStore: UnreadChatsStore,
 ) : ViewModel() {
 
     /** The picked file's real name, for labelling a draft attachment. */
@@ -287,6 +289,8 @@ class ChatViewModel @Inject constructor(
      * only moves forward, so a failure is harmless.
      */
     private fun markRead() {
+        // Read now, so a mark of unread from the list no longer holds.
+        unreadStore.clear(chatId)
         viewModelScope.launch {
             try {
                 repository.markRead(chatId)

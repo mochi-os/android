@@ -658,4 +658,20 @@
         <item quantity="other">%1$s ਖਾਤੇ</item>
     </plurals>
     <string name="blocks_server">ਸਰਵਰ</string>
+    <string name="notifications_rss">RSS ਫੀਡਾਂ</string>
+    <string name="notifications_rss_empty">ਅਜੇ ਕੋਈ RSS ਫੀਡ ਨਹੀਂ</string>
+    <string name="notifications_rss_create">ਫੀਡ ਬਣਾਓ</string>
+    <string name="notifications_rss_create_title">RSS ਫੀਡ ਬਣਾਓ</string>
+    <string name="notifications_rss_created">ਫੀਡ ਬਣਾਈ ਗਈ</string>
+    <string name="notifications_rss_done">ਹੋ ਗਿਆ</string>
+    <string name="notifications_rss_name">ਫੀਡ ਦਾ ਨਾਮ</string>
+    <string name="notifications_rss_existing">ਮੌਜੂਦਾ ਸਬਸਕ੍ਰਿਪਸ਼ਨਾਂ ਵਿੱਚ ਜੋੜੋ</string>
+    <string name="notifications_rss_default">ਡਿਫਾਲਟ ਤੌਰ \'ਤੇ ਨੋਟੀਫਾਈ ਕਰੋ</string>
+    <string name="notifications_rss_edit">ਫੀਡ ਸੰਪਾਦਿਤ ਕਰੋ</string>
+    <string name="notifications_rss_delete">ਫੀਡ ਮਿਟਾਓ</string>
+    <string name="notifications_rss_delete_title">ਫੀਡ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="notifications_rss_delete_message">ਇਹ ਇਸ ਫੀਡ ਨੂੰ ਪੱਕੇ ਤੌਰ ’ਤੇ ਮਿਟਾ ਦੇਵੇਗਾ। ਇਸ ਨੂੰ ਵਰਤਣ ਵਾਲੇ ਕੋਈ ਵੀ RSS ਰੀਡਰ ਹੁਣ ਤੁਹਾਡੀਆਂ ਸੂਚਨਾਵਾਂ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਕਰ ਸਕਣਗੇ।</string>
+    <string name="notifications_rss_renamed">ਫੀਡ ਦਾ ਨਾਮ ਬਦਲਿਆ ਗਿਆ</string>
+    <string name="notifications_rss_deleted">ਫੀਡ ਮਿਟਾਈ ਗਈ</string>
+    <string name="notifications_rss_default_name">RSS ਫੀਡ</string>
 </resources>

@@ -342,4 +342,5 @@
         <item quantity="one">%1$s การตอบกลับ</item>
         <item quantity="other">+%1$s การตอบกลับเพิ่มเติม</item>
     </plurals>
+    <string name="drawer_unread">ยังไม่ได้อ่าน</string>
 </resources>

@@ -168,4 +168,7 @@
         <item quantity="one">%1$s የመልዕክት ቁልፍ ተመልሷል</item>
         <item quantity="other">%1$s የመልዕክት ቁልፎች ተመልሰዋል</item>
     </plurals>
+    <string name="chat_mark_unread">እንዳልተነበበ ምልክት አድርግ</string>
+    <string name="chat_list_marked_read">ውይይቱ እንደተነበበ ምልክት ተደርጓል</string>
+    <string name="chat_list_marked_unread">ውይይቱ እንዳልተነበበ ምልክት ተደርጓል</string>
 </resources>

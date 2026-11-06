@@ -658,4 +658,20 @@
         <item quantity="other">ii-akhawunti %1$s</item>
     </plurals>
     <string name="blocks_server">Iseva</string>
+    <string name="notifications_rss">Ii-feed ze-RSS</string>
+    <string name="notifications_rss_empty">Akukho zifidi ze-RSS okwangoku</string>
+    <string name="notifications_rss_create">Yenza ifidi</string>
+    <string name="notifications_rss_create_title">Yenza i-feed ye-RSS</string>
+    <string name="notifications_rss_created">Ifidi idaliwe</string>
+    <string name="notifications_rss_done">Kwenziwe</string>
+    <string name="notifications_rss_name">Igama lefidi</string>
+    <string name="notifications_rss_existing">Yongeza kwiinkululeko ezikhoyo</string>
+    <string name="notifications_rss_default">Yazisa ngokumiselweyo</string>
+    <string name="notifications_rss_edit">Hlela i-feed</string>
+    <string name="notifications_rss_delete">Cima ifidi</string>
+    <string name="notifications_rss_delete_title">Cima ifidi?</string>
+    <string name="notifications_rss_delete_message">Oku kuza kuyicima ngokusisigxina le feed. Naziphi na izifundi ze-RSS ezisebenzisa yona azisayi kukwazi ukufikelela kwizaziso zakho.</string>
+    <string name="notifications_rss_renamed">Ifidi inikwe igama elitsha</string>
+    <string name="notifications_rss_deleted">Ifidi icinyiwe</string>
+    <string name="notifications_rss_default_name">Ifidi ye-RSS</string>
 </resources>

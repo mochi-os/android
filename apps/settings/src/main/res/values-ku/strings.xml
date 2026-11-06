@@ -658,4 +658,20 @@
         <item quantity="other">%1$s hesab</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">Feedên RSS</string>
+    <string name="notifications_rss_empty">Hêj tu feedên RSS tune</string>
+    <string name="notifications_rss_create">Feed çêbike</string>
+    <string name="notifications_rss_create_title">RSS feed çêbike</string>
+    <string name="notifications_rss_created">Feed hat çêkirin</string>
+    <string name="notifications_rss_done">Qediya</string>
+    <string name="notifications_rss_name">Navê feedê</string>
+    <string name="notifications_rss_existing">Li abonetiyên heyî zêde bike</string>
+    <string name="notifications_rss_default">Bi standard agahdar bike</string>
+    <string name="notifications_rss_edit">Feedê sererast bike</string>
+    <string name="notifications_rss_delete">Feedê jê bibe</string>
+    <string name="notifications_rss_delete_title">Feedê jê bibe?</string>
+    <string name="notifications_rss_delete_message">Ev dê vê feed-ê herheyî jê bibe. Xwendekarên RSS yên ku wê bi kar tînin êdî nikarin xwe bigihînin agahdariyên te.</string>
+    <string name="notifications_rss_renamed">Feed ji nû ve hat navlêkirin</string>
+    <string name="notifications_rss_deleted">Feed hat jêbirin</string>
+    <string name="notifications_rss_default_name">Feeda RSS</string>
 </resources>

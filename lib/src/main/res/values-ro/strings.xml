@@ -344,4 +344,5 @@
         <item quantity="few">+%1$s răspunsuri în plus</item>
         <item quantity="other">+%1$s de răspunsuri în plus</item>
     </plurals>
+    <string name="drawer_unread">Necitit</string>
 </resources>

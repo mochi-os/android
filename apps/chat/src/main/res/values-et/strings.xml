@@ -168,4 +168,7 @@
         <item quantity="one">%1$s sõnumivõti taastatud</item>
         <item quantity="other">%1$s sõnumivõtit taastatud</item>
     </plurals>
+    <string name="chat_mark_unread">Märgi lugemata</string>
+    <string name="chat_list_marked_read">Vestlus märgitud loetuks</string>
+    <string name="chat_list_marked_unread">Vestlus märgitud lugemata</string>
 </resources>

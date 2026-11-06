@@ -290,16 +290,45 @@ class ObjectDetailViewModel @Inject constructor(
     // (The title is just the class's title field — edited via setValue below,
     // the same as web. There is no separate title-update path.)
 
-    fun setValue(fieldId: String, value: String) {
+    /**
+     * Values as the server last had them, by save key, while edits to them are
+     * unsaved: a refused save puts this back, however many quick edits it
+     * stood for.
+     */
+    private val held = mutableMapOf<String, Any?>()
+
+    /**
+     * Shows [value] at once and saves it. A refusal puts back what the server
+     * had for a value picked from an option, a date, a person or a tick, by
+     * [fieldtype], as the web does; typed text stays as typed, so a refusal
+     * never throws it away.
+     */
+    fun setValue(fieldId: String, value: String, fieldtype: String = "") {
         val obj = _uiState.value.obj ?: return
+        val crmId = currentCrmId
+        val objectId = currentObjectId
+        // Keyed by object too: the sheet can switch object while a save waits.
+        val key = "$objectId/value_$fieldId"
+        val picked = fieldtype in PICKED_FIELD_TYPES
+        if (picked && key !in held) held[key] = obj.values[fieldId]
         val newValues = obj.values.toMutableMap()
         newValues[fieldId] = value
         _uiState.value = _uiState.value.copy(
             obj = obj.copy(values = newValues)
         )
-        val crmId = currentCrmId
-        val objectId = currentObjectId
-        scheduleSave("value_$fieldId") {
+        val undo = if (!picked) null else {
+            {
+                val before = held[key]
+                val now = _uiState.value.obj
+                // A refetch since has shown the server's own value, which stays.
+                if (now != null && now.id == objectId && now.values[fieldId] == value) {
+                    val values = now.values.toMutableMap()
+                    if (before == null) values.remove(fieldId) else values[fieldId] = before
+                    _uiState.value = _uiState.value.copy(obj = now.copy(values = values))
+                }
+            }
+        }
+        scheduleSave(key, undo = undo) {
             repository.setValue(crmId, objectId, fieldId, value)
         }
     }
@@ -559,12 +588,22 @@ class ObjectDetailViewModel @Inject constructor(
 
     // ---- Parent ----
 
+    /** Shows the new parent at once; a refusal puts back the one the server had. */
     fun updateParent(newParent: String) {
         val obj = _uiState.value.obj ?: return
-        _uiState.value = _uiState.value.copy(obj = obj.copy(parent = newParent))
         val crmId = currentCrmId
         val objectId = currentObjectId
-        scheduleSave("parent", delayMs = 0) {
+        val key = "$objectId/parent"
+        if (key !in held) held[key] = obj.parent
+        _uiState.value = _uiState.value.copy(obj = obj.copy(parent = newParent))
+        val undo = {
+            val before = held[key] as? String
+            val now = _uiState.value.obj
+            if (before != null && now != null && now.id == objectId && now.parent == newParent) {
+                _uiState.value = _uiState.value.copy(obj = now.copy(parent = before))
+            }
+        }
+        scheduleSave(key, delayMs = 0, undo = undo) {
             repository.updateObject(crmId, objectId, parent = newParent)
         }
     }
@@ -585,17 +624,28 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
+    /** Watching flips on the tap and back, with the error, if the server refuses. */
     fun toggleWatch() {
+        val watching = _uiState.value.isWatching
+        val crmId = currentCrmId
+        val objectId = currentObjectId
+        _uiState.value = _uiState.value.copy(isWatching = !watching)
         viewModelScope.launch {
             try {
-                if (_uiState.value.isWatching) {
-                    repository.removeWatcher(currentCrmId, currentObjectId)
+                if (watching) {
+                    repository.removeWatcher(crmId, objectId)
                 } else {
-                    repository.addWatcher(currentCrmId, currentObjectId)
+                    repository.addWatcher(crmId, objectId)
                 }
                 loadWatchers()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                // A later tap has flipped it since, and its own answer settles it.
+                if (objectId == currentObjectId && _uiState.value.isWatching != watching) {
+                    _uiState.value = _uiState.value.copy(isWatching = watching)
+                }
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -606,7 +656,12 @@ class ObjectDetailViewModel @Inject constructor(
     // saveStatus for the indicator, and signals saveFailed (→ toast) when
     // the write throws. Runs on saveScope so a pending write survives the
     // user navigating away before the debounce elapses.
-    private fun scheduleSave(key: String, delayMs: Long = 500, save: suspend () -> Unit) {
+    private fun scheduleSave(
+        key: String,
+        delayMs: Long = 500,
+        undo: (() -> Unit)? = null,
+        save: suspend () -> Unit,
+    ) {
         debounceJobs[key]?.cancel()
         val job = saveScope.launch {
             delay(delayMs)
@@ -625,6 +680,8 @@ class ObjectDetailViewModel @Inject constructor(
                 e.toMochiError()
             }
             activeSaves--
+            if (failure != null) undo?.invoke()
+            held.remove(key)
             if (failure != null) {
                 _saveFailed.tryEmit(failure)
                 _uiState.value = _uiState.value.copy(saveStatus = SaveStatus.Error)
@@ -644,3 +701,10 @@ class ObjectDetailViewModel @Inject constructor(
         job.invokeOnCompletion { if (debounceJobs[key] === job) debounceJobs.remove(key) }
     }
 }
+
+/**
+ * Field types whose value is picked from an option, a date, a person or a
+ * tick: a refused save of one puts the old value back. A typed value is left
+ * as typed, as on the web.
+ */
+private val PICKED_FIELD_TYPES = setOf("enumerated", "date", "user", "checkbox")

@@ -658,4 +658,20 @@
         <item quantity="other">Asusai %1$s</item>
     </plurals>
     <string name="blocks_server">Sabar</string>
+    <string name="notifications_rss">RSS feeds</string>
+    <string name="notifications_rss_empty">Babu RSS feeds tukuna</string>
+    <string name="notifications_rss_create">Ƙirƙira feed</string>
+    <string name="notifications_rss_create_title">Ƙirƙiri RSS feed</string>
+    <string name="notifications_rss_created">An ƙirƙiri feed</string>
+    <string name="notifications_rss_done">An gama</string>
+    <string name="notifications_rss_name">Sunan feed</string>
+    <string name="notifications_rss_existing">Ƙara cikin biyan kuɗin da ake da shi</string>
+    <string name="notifications_rss_default">Sanar da kai tsaye</string>
+    <string name="notifications_rss_edit">Gyara feed</string>
+    <string name="notifications_rss_delete">Goge feed</string>
+    <string name="notifications_rss_delete_title">Goge feed?</string>
+    <string name="notifications_rss_delete_message">Wannan zai goge wannan feed har abada. Duk wani mai karatun RSS da ke amfani da shi ba zai ƙara samun damar shiga sanarwarka ba.</string>
+    <string name="notifications_rss_renamed">An sake suna feed</string>
+    <string name="notifications_rss_deleted">An share feed</string>
+    <string name="notifications_rss_default_name">Ciyarwar RSS</string>
 </resources>

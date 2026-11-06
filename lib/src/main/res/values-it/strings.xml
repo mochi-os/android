@@ -343,4 +343,5 @@
         <item quantity="one">%1$s risposta</item>
         <item quantity="other">+%1$s altre risposte</item>
     </plurals>
+    <string name="drawer_unread">Da leggere</string>
 </resources>

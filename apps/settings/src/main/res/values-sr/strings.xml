@@ -671,4 +671,20 @@
         <item quantity="other">%1$s налога</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS фидови</string>
+    <string name="notifications_rss_empty">Још нема RSS фидова</string>
+    <string name="notifications_rss_create">Креирај фид</string>
+    <string name="notifications_rss_create_title">Креирај RSS фид</string>
+    <string name="notifications_rss_created">Фид креиран</string>
+    <string name="notifications_rss_done">Готово</string>
+    <string name="notifications_rss_name">Назив фида</string>
+    <string name="notifications_rss_existing">Додај постојећим претплатама</string>
+    <string name="notifications_rss_default">Подразумевано обавести</string>
+    <string name="notifications_rss_edit">Измени канал</string>
+    <string name="notifications_rss_delete">Обриши фид</string>
+    <string name="notifications_rss_delete_title">Обрисати фид?</string>
+    <string name="notifications_rss_delete_message">Ово ће трајно избрисати овај фид. Било који RSS читачи који га користе више неће моћи да приступе твојим обавештењима.</string>
+    <string name="notifications_rss_renamed">Фид преименован</string>
+    <string name="notifications_rss_deleted">Фид обрисан</string>
+    <string name="notifications_rss_default_name">RSS фид</string>
 </resources>

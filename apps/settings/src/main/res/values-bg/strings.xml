@@ -658,4 +658,20 @@
         <item quantity="other">%1$s акаунта</item>
     </plurals>
     <string name="blocks_server">Сървър</string>
+    <string name="notifications_rss">RSS емисии</string>
+    <string name="notifications_rss_empty">Все още няма RSS емисии</string>
+    <string name="notifications_rss_create">Създай емисия</string>
+    <string name="notifications_rss_create_title">Създай RSS емисия</string>
+    <string name="notifications_rss_created">Емисията е създадена</string>
+    <string name="notifications_rss_done">Готово</string>
+    <string name="notifications_rss_name">Име на емисия</string>
+    <string name="notifications_rss_existing">Добави към съществуващите абонаменти</string>
+    <string name="notifications_rss_default">Известявай по подразбиране</string>
+    <string name="notifications_rss_edit">Редактирай канал</string>
+    <string name="notifications_rss_delete">Изтрий емисията</string>
+    <string name="notifications_rss_delete_title">Изтриване на емисията?</string>
+    <string name="notifications_rss_delete_message">Това ще изтрие окончателно този канал. Всички RSS четци, използващи го, повече няма да имат достъп до вашите известия.</string>
+    <string name="notifications_rss_renamed">Емисията е преименувана</string>
+    <string name="notifications_rss_deleted">Емисията е изтрита</string>
+    <string name="notifications_rss_default_name">RSS емисия</string>
 </resources>

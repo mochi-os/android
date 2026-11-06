@@ -684,4 +684,20 @@
         <item quantity="other">%1$s cunntas</item>
     </plurals>
     <string name="blocks_server">Frithealaiche</string>
+    <string name="notifications_rss">Sruthan RSS</string>
+    <string name="notifications_rss_empty">Chan eil sruth RSS ann fhathast</string>
+    <string name="notifications_rss_create">Cruthaich inbhir</string>
+    <string name="notifications_rss_create_title">Cruthaich inbhir RSS</string>
+    <string name="notifications_rss_created">Chaidh an inbhir a chruthachadh</string>
+    <string name="notifications_rss_done">Deiseil</string>
+    <string name="notifications_rss_name">Ainm an inbhir</string>
+    <string name="notifications_rss_existing">Cuir ri fo-sgrìobhaidhean a tha ann</string>
+    <string name="notifications_rss_default">Cuir brath gu bunaiteach</string>
+    <string name="notifications_rss_edit">Deasaich an inbhir</string>
+    <string name="notifications_rss_delete">Sguab às inbhir</string>
+    <string name="notifications_rss_delete_title">Sguab às inbhir?</string>
+    <string name="notifications_rss_delete_message">Sguabaidh seo às an inbhir seo gu buan. Cha bhi e comasach do leughadair RSS sam bith a tha ga chleachdadh inntrigeadh dha na brathan agad tuilleadh.</string>
+    <string name="notifications_rss_renamed">Chaidh an inbhir ath-ainmeachadh</string>
+    <string name="notifications_rss_deleted">Chaidh an inbhir a sguabadh às</string>
+    <string name="notifications_rss_default_name">Sruth RSS</string>
 </resources>

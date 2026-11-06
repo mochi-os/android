@@ -346,4 +346,5 @@
         <item quantity="many">ще +%1$s відповідей</item>
         <item quantity="other">ще +%1$s відповіді</item>
     </plurals>
+    <string name="drawer_unread">Непрочитані</string>
 </resources>

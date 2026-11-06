@@ -72,6 +72,9 @@
     <string name="chat_settings_screen_title">%1$s 設定</string>
     <string name="chat_mark_read">標記為已讀</string>
     <string name="chat_marked_read">已標記為已讀</string>
+    <string name="chat_mark_unread">標記為未讀</string>
+    <string name="chat_list_marked_read">傾偈已標記為已讀</string>
+    <string name="chat_list_marked_unread">傾偈已標記為未讀</string>
     <string name="chat_search_next">下一個相符項</string>
     <string name="chat_search_prev">上一個相符項</string>
     <string name="chat_settings_id">傾偈 ID</string>

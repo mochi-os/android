@@ -168,4 +168,7 @@
         <item quantity="one">Isitshixo somyalezo %1$s sibuyiselwe</item>
         <item quantity="other">Izitshixo zemiyalezo %1$s zibuyiselwe</item>
     </plurals>
+    <string name="chat_mark_unread">Phawula njengengafundwanga</string>
+    <string name="chat_list_marked_read">Incoko iphawulwe njengefundiwe</string>
+    <string name="chat_list_marked_unread">Incoko iphawulwe njengengafundwanga</string>
 </resources>

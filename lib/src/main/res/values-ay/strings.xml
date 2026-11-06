@@ -342,4 +342,5 @@
         <item quantity="one">%1$s jaysawi</item>
         <item quantity="other">+%1$s juk\'ampi jaysawinaka</item>
     </plurals>
+    <string name="drawer_unread">Jan ullt\'ata</string>
 </resources>

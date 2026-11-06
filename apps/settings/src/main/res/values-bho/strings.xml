@@ -658,4 +658,20 @@
         <item quantity="other">%1$s खाता</item>
     </plurals>
     <string name="blocks_server">सर्वर</string>
+    <string name="notifications_rss">RSS फीड सब</string>
+    <string name="notifications_rss_empty">अबहीं तक कौनो RSS feed नइखे</string>
+    <string name="notifications_rss_create">फीड बनाईं</string>
+    <string name="notifications_rss_create_title">RSS फीड बनाईं</string>
+    <string name="notifications_rss_created">फीड बन गइल</string>
+    <string name="notifications_rss_done">हो गइल</string>
+    <string name="notifications_rss_name">फीड के नाम</string>
+    <string name="notifications_rss_existing">मौजूदा सदस्यता में जोड़ीं</string>
+    <string name="notifications_rss_default">डिफ़ॉल्ट रूप से सूचित करीं</string>
+    <string name="notifications_rss_edit">फीड संपादित करीं</string>
+    <string name="notifications_rss_delete">फीड मेटाईं</string>
+    <string name="notifications_rss_delete_title">फीड मेटाईं?</string>
+    <string name="notifications_rss_delete_message">ई फ़ीड के स्थायी रूप से हटा दी। एकर उपयोग करे वाला कवनो RSS रीडर अब आपके सूचना तक पहुँच ना सकेला।</string>
+    <string name="notifications_rss_renamed">फीड के नाम बदल गइल</string>
+    <string name="notifications_rss_deleted">फीड मेटा गइल</string>
+    <string name="notifications_rss_default_name">RSS फीड</string>
 </resources>

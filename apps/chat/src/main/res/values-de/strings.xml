@@ -168,4 +168,7 @@
         <item quantity="one">%1$s Nachrichtenschlüssel wiederhergestellt</item>
         <item quantity="other">%1$s Nachrichtenschlüssel wiederhergestellt</item>
     </plurals>
+    <string name="chat_mark_unread">Als ungelesen markieren</string>
+    <string name="chat_list_marked_read">Chat als gelesen markiert</string>
+    <string name="chat_list_marked_unread">Chat als ungelesen markiert</string>
 </resources>

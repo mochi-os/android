@@ -350,4 +350,5 @@
         <item quantity="many">+%1$s ردًا إضافيًا</item>
         <item quantity="other">+%1$s رد إضافي</item>
     </plurals>
+    <string name="drawer_unread">غير المقروءة</string>
 </resources>

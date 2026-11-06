@@ -658,4 +658,20 @@
         <item quantity="other">%1$s akkaawuntii</item>
     </plurals>
     <string name="blocks_server">Sarvarii</string>
+    <string name="notifications_rss">Feed-iiwwan RSS</string>
+    <string name="notifications_rss_empty">Hanga ammaatti RSS feed hin jiru</string>
+    <string name="notifications_rss_create">Feed uumi</string>
+    <string name="notifications_rss_create_title">Feed RSS Uumi</string>
+    <string name="notifications_rss_created">Feed uumame</string>
+    <string name="notifications_rss_done">Xumurame</string>
+    <string name="notifications_rss_name">Maqaa feed</string>
+    <string name="notifications_rss_existing">Soramii jiranitti dabali</string>
+    <string name="notifications_rss_default">Durtiidhaan beeksisi</string>
+    <string name="notifications_rss_edit">Feed sirreessuu</string>
+    <string name="notifications_rss_delete">Feed haqi</string>
+    <string name="notifications_rss_delete_title">Feed haqu?</string>
+    <string name="notifications_rss_delete_message">Kun feed kana bara baraan haqa. Dubbiftota RSS isa fayyadaman boodaa beeksisa kee argachuu hin danda\'an.</string>
+    <string name="notifications_rss_renamed">Feed moggaafame</string>
+    <string name="notifications_rss_deleted">Feed haqame</string>
+    <string name="notifications_rss_default_name">Feed RSS</string>
 </resources>

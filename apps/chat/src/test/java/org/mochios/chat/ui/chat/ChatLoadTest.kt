@@ -31,6 +31,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.data.PinnedChatsStore
+import org.mochios.chat.data.UnreadChatsStore
 import org.mochios.chat.repository.ChatRepository
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
@@ -138,6 +139,7 @@ class ChatLoadTest {
         session,
         PinnedChatsStore(context),
         context,
+        UnreadChatsStore(context),
     )
 
     /** Runs the main looper the network's answers resume on until [done]. */

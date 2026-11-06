@@ -625,4 +625,20 @@
         <item quantity="other">%1$s accounts</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">RSS-feeds</string>
+    <string name="notifications_rss_empty">Nog geen RSS-feeds</string>
+    <string name="notifications_rss_create">Feed aanmaken</string>
+    <string name="notifications_rss_create_title">RSS-feed maken</string>
+    <string name="notifications_rss_created">Feed aangemaakt</string>
+    <string name="notifications_rss_done">Klaar</string>
+    <string name="notifications_rss_name">Feednaam</string>
+    <string name="notifications_rss_existing">Toevoegen aan bestaande abonnementen</string>
+    <string name="notifications_rss_default">Standaard meldingen versturen</string>
+    <string name="notifications_rss_edit">Feed bewerken</string>
+    <string name="notifications_rss_delete">Feed verwijderen</string>
+    <string name="notifications_rss_delete_title">Feed verwijderen?</string>
+    <string name="notifications_rss_delete_message">Hiermee wordt deze feed definitief verwijderd. RSS-lezers die hem gebruiken, hebben geen toegang meer tot je meldingen.</string>
+    <string name="notifications_rss_renamed">Feed hernoemd</string>
+    <string name="notifications_rss_deleted">Feed verwijderd</string>
+    <string name="notifications_rss_default_name">RSS-feed</string>
 </resources>

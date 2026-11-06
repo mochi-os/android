@@ -658,4 +658,20 @@
         <item quantity="other">%1$s hesap</item>
     </plurals>
     <string name="blocks_server">Sunucu</string>
+    <string name="notifications_rss">RSS akışları</string>
+    <string name="notifications_rss_empty">Henüz RSS akışı yok</string>
+    <string name="notifications_rss_create">Feed oluştur</string>
+    <string name="notifications_rss_create_title">RSS feed\'i oluştur</string>
+    <string name="notifications_rss_created">Akış oluşturuldu</string>
+    <string name="notifications_rss_done">Tamamlandı</string>
+    <string name="notifications_rss_name">Akış adı</string>
+    <string name="notifications_rss_existing">Mevcut aboneliklere ekle</string>
+    <string name="notifications_rss_default">Varsayılan olarak bildir</string>
+    <string name="notifications_rss_edit">Akışı düzenle</string>
+    <string name="notifications_rss_delete">Feed\'i sil</string>
+    <string name="notifications_rss_delete_title">Feed silinsin mi?</string>
+    <string name="notifications_rss_delete_message">Bu işlem bu akışı kalıcı olarak silecek. Bunu kullanan RSS okuyucuları artık bildirimlerine erişemeyecek.</string>
+    <string name="notifications_rss_renamed">Akış yeniden adlandırıldı</string>
+    <string name="notifications_rss_deleted">Akış silindi</string>
+    <string name="notifications_rss_default_name">RSS akışı</string>
 </resources>

@@ -657,4 +657,20 @@
         <item quantity="other">%1$s ҳисоб</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">Фидҳои RSS</string>
+    <string name="notifications_rss_empty">То ҳол ягон фиди RSS нест</string>
+    <string name="notifications_rss_create">Эҷоди навор</string>
+    <string name="notifications_rss_create_title">Эҷоди навори RSS</string>
+    <string name="notifications_rss_created">Фид сохта шуд</string>
+    <string name="notifications_rss_done">Иҷро шуд</string>
+    <string name="notifications_rss_name">Номи фид</string>
+    <string name="notifications_rss_existing">Илова ба обуначиҳои мавҷуда</string>
+    <string name="notifications_rss_default">Бо нобаёнӣ огоҳ кунед</string>
+    <string name="notifications_rss_edit">Лентаро таҳрир кардан</string>
+    <string name="notifications_rss_delete">Нест кардани навор</string>
+    <string name="notifications_rss_delete_title">Наворро нест кунем?</string>
+    <string name="notifications_rss_delete_message">Ин навори навро ба таври доимӣ нест мекунад. Ҳар хонандаи RSS, ки онро истифода мебарад, дигар наметавонад ба огоҳиҳои шумо дастрасӣ дошта бошад.</string>
+    <string name="notifications_rss_renamed">Номи фид иваз шуд</string>
+    <string name="notifications_rss_deleted">Фид ҳазф шуд</string>
+    <string name="notifications_rss_default_name">Фиди RSS</string>
 </resources>

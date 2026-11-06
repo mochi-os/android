@@ -658,4 +658,20 @@
         <item quantity="other">%1$s קאָנטעס</item>
     </plurals>
     <string name="blocks_server">סערווער</string>
+    <string name="notifications_rss">RSS פֿידס</string>
+    <string name="notifications_rss_empty">נאָך קיין RSS פֿידס</string>
+    <string name="notifications_rss_create">באַשאַפֿן פֿיד</string>
+    <string name="notifications_rss_create_title">באַשאַפֿן RSS פֿיד</string>
+    <string name="notifications_rss_created">פֿיד געשאַפֿן</string>
+    <string name="notifications_rss_done">געטאָן</string>
+    <string name="notifications_rss_name">פֿיד־נאָמען</string>
+    <string name="notifications_rss_existing">צולייגן צו עקזיסטירנדיקע אַבאָנעמענטן</string>
+    <string name="notifications_rss_default">מעלד דורך פֿאַרשטעלונג</string>
+    <string name="notifications_rss_edit">רעדאַקטירן פֿיד</string>
+    <string name="notifications_rss_delete">אויסמעקן פֿיד</string>
+    <string name="notifications_rss_delete_title">אויסמעקן פֿיד?</string>
+    <string name="notifications_rss_delete_message">דאָס וועט אויף שטענדיק אויסמעקן דעם פֿיד. אַלע RSS־לייענערס וואָס ניצן עס וועלן מער נישט קאָנען צוקומען צו אײַערע נאָטיפֿיקאַציעס.</string>
+    <string name="notifications_rss_renamed">פֿיד איבערגעטויפֿט</string>
+    <string name="notifications_rss_deleted">פֿיד אויסגעמעקט</string>
+    <string name="notifications_rss_default_name">RSS פֿיד</string>
 </resources>

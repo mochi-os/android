@@ -168,4 +168,7 @@
         <item quantity="one">%1$s meddelandenyckel återställd</item>
         <item quantity="other">%1$s meddelandenycklar återställda</item>
     </plurals>
+    <string name="chat_mark_unread">Markera som oläst</string>
+    <string name="chat_list_marked_read">Chatten har markerats som läst</string>
+    <string name="chat_list_marked_unread">Chatten har markerats som oläst</string>
 </resources>

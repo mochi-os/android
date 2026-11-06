@@ -166,4 +166,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">已還原 %1$s 個訊息金鑰</item>
     </plurals>
+    <string name="chat_mark_unread">標示為未讀</string>
+    <string name="chat_list_marked_read">聊天已標示為已讀</string>
+    <string name="chat_list_marked_unread">聊天已標示為未讀</string>
 </resources>

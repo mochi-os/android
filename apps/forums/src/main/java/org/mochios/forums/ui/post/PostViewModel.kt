@@ -342,7 +342,28 @@ class PostViewModel @Inject constructor(
         }
     }
 
-    fun setFollowing(following: Boolean) = moderate { repository.followPost(forumId, postId, following) }
+    /** Follow flips on the tap and back, with the error, if the server
+     *  refuses; the post reloads once the server has it. */
+    fun setFollowing(following: Boolean) {
+        val before = _uiState.value.following
+        _uiState.value = _uiState.value.copy(following = following)
+        viewModelScope.launch {
+            try {
+                repository.followPost(forumId, postId, following)
+                refresh()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // A later tap has flipped it since, and its own answer settles it.
+                val state = _uiState.value
+                _uiState.value = state.copy(
+                    following = if (state.following == following) before else state.following,
+                    error = e.toMochiError(),
+                )
+            }
+        }
+    }
+
     fun pinPost() = moderate { repository.pinPost(forumId, postId) }
     fun unpinPost() = moderate { repository.unpinPost(forumId, postId) }
     fun lockPost() = moderate { repository.lockPost(forumId, postId) }

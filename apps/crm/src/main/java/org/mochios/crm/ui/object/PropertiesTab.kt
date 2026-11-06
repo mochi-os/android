@@ -154,7 +154,7 @@ fun PropertiesTab(
                 canWrite = canWrite,
                 people = uiState.people,
                 showLabel = false,
-                onValueChange = { viewModel.setValue(field.id, it) },
+                onValueChange = { viewModel.setValue(field.id, it, field.fieldtype) },
                 onSearchUsers = { query -> viewModel.searchPeople(query) }
             )
         }

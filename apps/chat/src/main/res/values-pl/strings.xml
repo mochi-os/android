@@ -172,4 +172,7 @@
         <item quantity="many">Przywrócono %1$s kluczy wiadomości</item>
         <item quantity="other">Przywrócono %1$s klucza wiadomości</item>
     </plurals>
+    <string name="chat_mark_unread">Oznacz jako nieprzeczytany</string>
+    <string name="chat_list_marked_read">Czat oznaczono jako przeczytany</string>
+    <string name="chat_list_marked_unread">Czat oznaczono jako nieprzeczytany</string>
 </resources>

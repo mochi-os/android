@@ -646,4 +646,20 @@
         <item quantity="other">%1$s akun</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">Umpan RSS</string>
+    <string name="notifications_rss_empty">Belum ada feed RSS</string>
+    <string name="notifications_rss_create">Buat feed</string>
+    <string name="notifications_rss_create_title">Buat umpan RSS</string>
+    <string name="notifications_rss_created">Feed dibuat</string>
+    <string name="notifications_rss_done">Selesai</string>
+    <string name="notifications_rss_name">Nama feed</string>
+    <string name="notifications_rss_existing">Tambah ke langganan yang ada</string>
+    <string name="notifications_rss_default">Beri tahu secara default</string>
+    <string name="notifications_rss_edit">Sunting umpan</string>
+    <string name="notifications_rss_delete">Hapus feed</string>
+    <string name="notifications_rss_delete_title">Hapus feed?</string>
+    <string name="notifications_rss_delete_message">Tindakan ini akan menghapus umpan ini secara permanen. Pembaca RSS yang menggunakannya tidak akan dapat lagi mengakses notifikasi Anda.</string>
+    <string name="notifications_rss_renamed">Nama feed diubah</string>
+    <string name="notifications_rss_deleted">Feed dihapus</string>
+    <string name="notifications_rss_default_name">Feed RSS</string>
 </resources>

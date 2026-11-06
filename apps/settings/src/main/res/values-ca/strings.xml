@@ -661,4 +661,20 @@
         <item quantity="other">%1$s comptes</item>
     </plurals>
     <string name="blocks_server">Servidor</string>
+    <string name="notifications_rss">Canals RSS</string>
+    <string name="notifications_rss_empty">Encara no hi ha canals RSS</string>
+    <string name="notifications_rss_create">Crea un canal</string>
+    <string name="notifications_rss_create_title">Crea un canal RSS</string>
+    <string name="notifications_rss_created">Canal creat</string>
+    <string name="notifications_rss_done">Fet</string>
+    <string name="notifications_rss_name">Nom del canal</string>
+    <string name="notifications_rss_existing">Afegeix a les subscripcions existents</string>
+    <string name="notifications_rss_default">Notifica per defecte</string>
+    <string name="notifications_rss_edit">Edita el canal</string>
+    <string name="notifications_rss_delete">Suprimeix el canal</string>
+    <string name="notifications_rss_delete_title">Vols suprimir el canal?</string>
+    <string name="notifications_rss_delete_message">Això eliminarà permanentment aquest canal. Els lectors RSS que l\'utilitzin ja no podran accedir a les teves notificacions.</string>
+    <string name="notifications_rss_renamed">Canal reanomenat</string>
+    <string name="notifications_rss_deleted">Canal suprimit</string>
+    <string name="notifications_rss_default_name">Canal RSS</string>
 </resources>

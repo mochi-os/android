@@ -168,4 +168,7 @@
         <item quantity="one">%1$s پيغام ڪنجي بحال ٿي</item>
         <item quantity="other">%1$s پيغام ڪنجيون بحال ٿيون</item>
     </plurals>
+    <string name="chat_mark_unread">اڻپڙهيل طور نشان لڳايو</string>
+    <string name="chat_list_marked_read">چيٽ پڙهيل طور نشان لڳايو ويو</string>
+    <string name="chat_list_marked_unread">چيٽ اڻپڙهيل طور نشان لڳايو ويو</string>
 </resources>

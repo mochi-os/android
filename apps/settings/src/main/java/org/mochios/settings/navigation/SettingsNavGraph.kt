@@ -29,6 +29,7 @@ import org.mochios.settings.ui.networks.NetworksScreen
 import org.mochios.settings.ui.notificationprefs.CategoryEditScreen
 import org.mochios.settings.ui.notificationprefs.NotificationPrefsScreen
 import org.mochios.settings.ui.notifications.NotificationsScreen
+import org.mochios.settings.ui.notifications.RssFeedsScreen
 import org.mochios.settings.ui.preferences.UserSettingsScreen
 import org.mochios.settings.ui.sessions.SessionsScreen
 import org.mochios.settings.ui.systemdocuments.SystemDocumentsScreen
@@ -49,6 +50,7 @@ object SettingsApp {
     const val PREFERENCES = "settings/preferences"
     const val DISPLAY = "settings/display"
     const val NOTIFICATIONS = "settings/notifications"
+    const val NOTIFICATIONS_RSS = "settings/notifications/rss"
     const val NOTIFICATION_PREFS = "settings/notification-prefs"
     const val CATEGORY_NEW = "settings/notification-prefs/category/new"
     const val CATEGORY_EDIT = "settings/notification-prefs/category/edit/{id}"
@@ -133,7 +135,11 @@ fun NavGraphBuilder.settingsNavGraph(
         NotificationsScreen(
             onBack = { navController.popBackStack() },
             onOpenLink = onOpenLink,
+            onRssFeeds = { navController.navigate(SettingsApp.NOTIFICATIONS_RSS) },
         )
+    }
+    composable(SettingsApp.NOTIFICATIONS_RSS) {
+        RssFeedsScreen(onBack = { navController.popBackStack() })
     }
     composable(SettingsApp.NOTIFICATION_PREFS) { entry ->
         val savedSignal by entry.savedStateHandle

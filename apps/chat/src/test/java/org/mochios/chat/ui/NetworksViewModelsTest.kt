@@ -34,6 +34,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.data.PinnedChatsStore
+import org.mochios.chat.data.UnreadChatsStore
 import org.mochios.chat.model.ChatReceipt
 import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.Friend
@@ -222,7 +223,7 @@ class NetworksViewModelsTest {
     private fun conversation(): ChatViewModel {
         val model = ChatViewModel(
             SavedStateHandle(mapOf("chatId" to "c1")),
-            repository, socket, session, PinnedChatsStore(context), context,
+            repository, socket, session, PinnedChatsStore(context), context, UnreadChatsStore(context),
         )
         until("the conversation") { model.uiState.value.chat.id == "c1" }
         return model

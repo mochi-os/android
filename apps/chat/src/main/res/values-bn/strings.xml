@@ -168,4 +168,7 @@
         <item quantity="one">%1$s বার্তা কী পুনরুদ্ধার করা হয়েছে</item>
         <item quantity="other">%1$s বার্তা কী পুনরুদ্ধার করা হয়েছে</item>
     </plurals>
+    <string name="chat_mark_unread">অপঠিত হিসেবে চিহ্নিত করুন</string>
+    <string name="chat_list_marked_read">চ্যাট পঠিত হিসেবে চিহ্নিত হয়েছে</string>
+    <string name="chat_list_marked_unread">চ্যাট অপঠিত হিসেবে চিহ্নিত হয়েছে</string>
 </resources>

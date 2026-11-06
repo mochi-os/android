@@ -168,4 +168,7 @@
         <item quantity="one">%1$s clau de missatge restaurada</item>
         <item quantity="other">%1$s claus de missatge restaurades</item>
     </plurals>
+    <string name="chat_mark_unread">Marca com a no llegit</string>
+    <string name="chat_list_marked_read">Xat marcat com a llegit</string>
+    <string name="chat_list_marked_unread">Xat marcat com a no llegit</string>
 </resources>

@@ -658,4 +658,20 @@
         <item quantity="other">%1$s ගිණුම්</item>
     </plurals>
     <string name="blocks_server">සේවාදායකය</string>
+    <string name="notifications_rss">RSS සංග්‍රහ</string>
+    <string name="notifications_rss_empty">තවම RSS සංග්‍රහ නොමැත</string>
+    <string name="notifications_rss_create">සංග්‍රහයක් නිර්මාණය කරන්න</string>
+    <string name="notifications_rss_create_title">RSS සංග්‍රහයක් සාදන්න</string>
+    <string name="notifications_rss_created">සංග්‍රහය සාදන ලදී</string>
+    <string name="notifications_rss_done">නිමයි</string>
+    <string name="notifications_rss_name">සංග්‍රහ නාමය</string>
+    <string name="notifications_rss_existing">පවතින දායකත්වයන් වෙත එක් කරන්න</string>
+    <string name="notifications_rss_default">පෙරනිමියෙන් දැනුම් දෙන්න</string>
+    <string name="notifications_rss_edit">සංග්‍රහය සංස්කරණය කරන්න</string>
+    <string name="notifications_rss_delete">සංග්‍රහය මකන්න</string>
+    <string name="notifications_rss_delete_title">සංග්‍රහය මකන්නද?</string>
+    <string name="notifications_rss_delete_message">මෙය මෙම සංග්‍රහය ස්ථිරවම මකා දමයි. එය භාවිතා කරන කිසිදු RSS කියවනයකට ඔබේ දැනුම්දීම් වෙත තවදුරටත් ප්‍රවේශ විය නොහැක.</string>
+    <string name="notifications_rss_renamed">සංග්‍රහය නැවත නම් කරන ලදී</string>
+    <string name="notifications_rss_deleted">සංග්‍රහය මකන ලදී</string>
+    <string name="notifications_rss_default_name">RSS සංග්‍රහය</string>
 </resources>

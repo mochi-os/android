@@ -580,7 +580,9 @@ fun FeedScreen(
                                 MochiDropdownMenuItem(
                                     text = { Text(stringResource(R.string.feeds_mark_all_read)) },
                                     onClick = {
-                                        viewModel.markAllRead { feedListViewModel.refreshSilently() }
+                                        viewModel.markAllRead {
+                                            feedListViewModel.clearUnread(if (viewModel.isAllFeeds) null else viewModel.feedId)
+                                        }
                                         showOverflowMenu = false
                                     },
                                     leadingIcon = { Icon(Icons.Outlined.DoneAll, contentDescription = null) },

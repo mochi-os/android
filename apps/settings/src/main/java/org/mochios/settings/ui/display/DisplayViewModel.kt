@@ -8,6 +8,7 @@ package org.mochios.settings.ui.display
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -62,9 +63,18 @@ class DisplayViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The pick shows at once and goes back, with the error, if the server
+     * refuses: what shows after either answer is the server's, with any pick
+     * still waiting over it.
+     */
     fun set(key: String, value: String) {
+        _uiState.value = _uiState.value.copy(
+            values = _uiState.value.values + (key to value),
+            isSaving = true,
+            error = null,
+        )
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSaving = true, error = null)
             try {
                 preferences.setPreference(key, value)
                 _uiState.value = _uiState.value.copy(
@@ -74,8 +84,15 @@ class DisplayViewModel @Inject constructor(
                     defaultThemeId = preferences.defaultTheme(),
                 )
                 cacheActiveThemeAnchors()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(
+                    isSaving = false,
+                    values = preferences.rawPreferences(),
+                    error = e.toMochiError(),
+                )
+                cacheActiveThemeAnchors()
             }
         }
     }

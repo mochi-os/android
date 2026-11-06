@@ -342,4 +342,5 @@
         <item quantity="one">%1$s පිළිතුර</item>
         <item quantity="other">+%1$s තවත් පිළිතුරු</item>
     </plurals>
+    <string name="drawer_unread">නොකියවූ</string>
 </resources>

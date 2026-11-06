@@ -658,4 +658,20 @@
         <item quantity="other">%1$s na account</item>
     </plurals>
     <string name="blocks_server">Server</string>
+    <string name="notifications_rss">Mga RSS feed</string>
+    <string name="notifications_rss_empty">Wala pang RSS feed</string>
+    <string name="notifications_rss_create">Gumawa ng feed</string>
+    <string name="notifications_rss_create_title">Gumawa ng RSS feed</string>
+    <string name="notifications_rss_created">Nagawa ang feed</string>
+    <string name="notifications_rss_done">Tapos na</string>
+    <string name="notifications_rss_name">Pangalan ng feed</string>
+    <string name="notifications_rss_existing">Idagdag sa mga umiiral na subscription</string>
+    <string name="notifications_rss_default">Mag-notify bilang default</string>
+    <string name="notifications_rss_edit">I-edit ang feed</string>
+    <string name="notifications_rss_delete">I-delete ang feed</string>
+    <string name="notifications_rss_delete_title">I-delete ang feed?</string>
+    <string name="notifications_rss_delete_message">Permanenteng buburahin nito ang feed na ito. Ang anumang RSS reader na gumagamit nito ay hindi na makaka-access sa iyong mga notification.</string>
+    <string name="notifications_rss_renamed">Na-rename ang feed</string>
+    <string name="notifications_rss_deleted">Nadelete ang feed</string>
+    <string name="notifications_rss_default_name">Feed ng RSS</string>
 </resources>

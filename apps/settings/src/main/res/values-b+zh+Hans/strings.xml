@@ -646,4 +646,20 @@
         <item quantity="other">%1$s 个账户</item>
     </plurals>
     <string name="blocks_server">服务器</string>
+    <string name="notifications_rss">RSS 源</string>
+    <string name="notifications_rss_empty">暂无 RSS 订阅源</string>
+    <string name="notifications_rss_create">创建订阅源</string>
+    <string name="notifications_rss_create_title">创建 RSS 源</string>
+    <string name="notifications_rss_created">已创建信息流</string>
+    <string name="notifications_rss_done">完成</string>
+    <string name="notifications_rss_name">信息流名称</string>
+    <string name="notifications_rss_existing">添加到现有订阅</string>
+    <string name="notifications_rss_default">默认通知</string>
+    <string name="notifications_rss_edit">编辑订阅</string>
+    <string name="notifications_rss_delete">删除订阅源</string>
+    <string name="notifications_rss_delete_title">删除订阅源吗?</string>
+    <string name="notifications_rss_delete_message">此操作将永久删除该源。使用该源的任何 RSS 阅读器都将无法再访问你的通知。</string>
+    <string name="notifications_rss_renamed">已重命名信息流</string>
+    <string name="notifications_rss_deleted">已删除信息流</string>
+    <string name="notifications_rss_default_name">RSS 订阅源</string>
 </resources>

@@ -658,4 +658,20 @@
         <item quantity="other">%1$s rekeninge</item>
     </plurals>
     <string name="blocks_server">Bediener</string>
+    <string name="notifications_rss">RSS-strome</string>
+    <string name="notifications_rss_empty">Nog geen RSS-feeds nie</string>
+    <string name="notifications_rss_create">Skep feed</string>
+    <string name="notifications_rss_create_title">Skep RSS-stroom</string>
+    <string name="notifications_rss_created">Feed geskep</string>
+    <string name="notifications_rss_done">Klaar</string>
+    <string name="notifications_rss_name">Feed-naam</string>
+    <string name="notifications_rss_existing">Voeg by bestaande inskrywings</string>
+    <string name="notifications_rss_default">Stel by verstek in kennis</string>
+    <string name="notifications_rss_edit">Redigeer voer</string>
+    <string name="notifications_rss_delete">Verwyder feed</string>
+    <string name="notifications_rss_delete_title">Verwyder feed?</string>
+    <string name="notifications_rss_delete_message">Dit sal hierdie stroom permanent uitvee. Enige RSS-lesers wat dit gebruik, sal nie meer toegang tot jou kennisgewings hê nie.</string>
+    <string name="notifications_rss_renamed">Feed hernoem</string>
+    <string name="notifications_rss_deleted">Feed verwyder</string>
+    <string name="notifications_rss_default_name">RSS-feed</string>
 </resources>

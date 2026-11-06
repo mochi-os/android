@@ -661,4 +661,20 @@
         <item quantity="other">%1$s contas</item>
     </plurals>
     <string name="blocks_server">Servidor</string>
+    <string name="notifications_rss">Feeds RSS</string>
+    <string name="notifications_rss_empty">Ainda não há feeds RSS</string>
+    <string name="notifications_rss_create">Criar feed</string>
+    <string name="notifications_rss_create_title">Criar feed RSS</string>
+    <string name="notifications_rss_created">Feed criado</string>
+    <string name="notifications_rss_done">Concluído</string>
+    <string name="notifications_rss_name">Nome do feed</string>
+    <string name="notifications_rss_existing">Adicionar às subscrições existentes</string>
+    <string name="notifications_rss_default">Notificar por predefinição</string>
+    <string name="notifications_rss_edit">Editar feed</string>
+    <string name="notifications_rss_delete">Eliminar feed</string>
+    <string name="notifications_rss_delete_title">Eliminar feed?</string>
+    <string name="notifications_rss_delete_message">Esta ação eliminará permanentemente este feed. Os leitores de RSS que o utilizem deixarão de conseguir aceder às suas notificações.</string>
+    <string name="notifications_rss_renamed">Nome do feed alterado</string>
+    <string name="notifications_rss_deleted">Feed eliminado</string>
+    <string name="notifications_rss_default_name">Feed RSS</string>
 </resources>

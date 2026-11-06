@@ -658,4 +658,20 @@
         <item quantity="other">%1$s llogari</item>
     </plurals>
     <string name="blocks_server">Serveri</string>
+    <string name="notifications_rss">RSS feeds</string>
+    <string name="notifications_rss_empty">Ende pa RSS feeds</string>
+    <string name="notifications_rss_create">Krijo feed</string>
+    <string name="notifications_rss_create_title">Krijo RSS feed</string>
+    <string name="notifications_rss_created">Feed u krijua</string>
+    <string name="notifications_rss_done">Përfunduar</string>
+    <string name="notifications_rss_name">Emri i feed</string>
+    <string name="notifications_rss_existing">Shto te abonimet ekzistuese</string>
+    <string name="notifications_rss_default">Njofto si parazgjedhje</string>
+    <string name="notifications_rss_edit">Redakto feed-in</string>
+    <string name="notifications_rss_delete">Fshi feed-in</string>
+    <string name="notifications_rss_delete_title">Të fshihet feed-i?</string>
+    <string name="notifications_rss_delete_message">Kjo do të fshijë përgjithmonë këtë feed. Çdo lexues RSS që e përdor nuk do të mund të aksesojë më njoftimet e tua.</string>
+    <string name="notifications_rss_renamed">Feed u riemërua</string>
+    <string name="notifications_rss_deleted">Feed u fshi</string>
+    <string name="notifications_rss_default_name">Prurje RSS</string>
 </resources>

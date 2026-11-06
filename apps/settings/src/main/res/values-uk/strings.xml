@@ -684,4 +684,20 @@
         <item quantity="other">%1$s облікового запису</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS-канали</string>
+    <string name="notifications_rss_empty">Ще немає RSS-стрічок</string>
+    <string name="notifications_rss_create">Створити стрічку</string>
+    <string name="notifications_rss_create_title">Створити RSS-канал</string>
+    <string name="notifications_rss_created">Стрічку створено</string>
+    <string name="notifications_rss_done">Готово</string>
+    <string name="notifications_rss_name">Назва стрічки</string>
+    <string name="notifications_rss_existing">Додати до наявних підписок</string>
+    <string name="notifications_rss_default">Сповіщати за замовчуванням</string>
+    <string name="notifications_rss_edit">Редагувати стрічку</string>
+    <string name="notifications_rss_delete">Видалити стрічку</string>
+    <string name="notifications_rss_delete_title">Видалити стрічку?</string>
+    <string name="notifications_rss_delete_message">Цей канал буде остаточно видалено. RSS-читачі, які ним користуються, більше не зможуть отримувати ваші сповіщення.</string>
+    <string name="notifications_rss_renamed">Стрічку перейменовано</string>
+    <string name="notifications_rss_deleted">Стрічку видалено</string>
+    <string name="notifications_rss_default_name">RSS-стрічка</string>
 </resources>

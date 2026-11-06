@@ -646,4 +646,20 @@
         <item quantity="other">%1$s アカウント</item>
     </plurals>
     <string name="blocks_server">サーバー</string>
+    <string name="notifications_rss">RSSフィード</string>
+    <string name="notifications_rss_empty">まだ RSS フィードがありません</string>
+    <string name="notifications_rss_create">フィードを作成</string>
+    <string name="notifications_rss_create_title">RSSフィードを作成</string>
+    <string name="notifications_rss_created">フィードを作成しました</string>
+    <string name="notifications_rss_done">完了</string>
+    <string name="notifications_rss_name">フィード名</string>
+    <string name="notifications_rss_existing">既存のサブスクリプションに追加</string>
+    <string name="notifications_rss_default">デフォルトで通知</string>
+    <string name="notifications_rss_edit">フィードを編集</string>
+    <string name="notifications_rss_delete">フィードを削除</string>
+    <string name="notifications_rss_delete_title">フィードを削除しますか?</string>
+    <string name="notifications_rss_delete_message">このフィードを完全に削除します。このフィードを使用しているRSSリーダーからは、今後あなたの通知にアクセスできなくなります。</string>
+    <string name="notifications_rss_renamed">フィードの名前を変更しました</string>
+    <string name="notifications_rss_deleted">フィードを削除しました</string>
+    <string name="notifications_rss_default_name">RSS フィード</string>
 </resources>

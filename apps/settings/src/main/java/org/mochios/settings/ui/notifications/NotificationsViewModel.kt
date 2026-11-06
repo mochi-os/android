@@ -114,9 +114,10 @@ class NotificationsViewModel @Inject constructor(
         )
         try {
             val resp = repository.list()
+            val (items, count) = overlay(resp.data, resp.count)
             _uiState.value = _uiState.value.copy(
-                items = resp.data,
-                unreadCount = resp.count,
+                items = items,
+                unreadCount = count,
                 isLoading = false,
                 isRefreshing = false,
             )
@@ -177,34 +178,80 @@ class NotificationsViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(error = null)
     }
 
-    fun markRead(id: String) {
-        viewModelScope.launch {
-            try {
-                repository.markRead(id)
-                _uiState.value = _uiState.value.copy(
-                    items = _uiState.value.items.map {
-                        if (it.id == id && it.read == 0L) it.copy(read = System.currentTimeMillis() / 1000) else it
-                    },
-                )
-                unread.refresh()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+    /**
+     * A click's rows, shown read before the server answers. [stamp] is the
+     * read time they were given; [taken] is what the click has taken off the
+     * unread count, which a refusal adds back.
+     */
+    private class Marked(val ids: Set<String>, val stamp: Long, var taken: Int)
+
+    /** Clicks the server has not answered yet, oldest first. */
+    private val marked = mutableListOf<Marked>()
+
+    /**
+     * A fetched list with every row a pending click covers still read, so a
+     * list fetched before the server had the read does not undo the click.
+     */
+    private fun overlay(rows: List<MochiNotification>, count: Int): Pair<List<MochiNotification>, Int> {
+        marked.forEach { click -> click.taken = 0 }
+        val shown = rows.map { row ->
+            val click = marked.firstOrNull { row.id in it.ids }
+            if (click == null || row.read != 0L) {
+                row
+            } else {
+                click.taken++
+                row.copy(read = click.stamp)
             }
         }
+        return shown to (count - marked.sumOf { it.taken }).coerceAtLeast(0)
     }
 
+    /** One row read on the click; it goes back to unread if the server refuses. */
+    fun markRead(id: String) {
+        val state = _uiState.value
+        val taken = if (state.items.any { it.id == id && it.read == 0L } && state.unreadCount > 0) 1 else 0
+        mark(setOf(id), taken) { repository.markRead(id) }
+    }
+
+    /** Every row read on the click; those it marked go back to unread if the server refuses. */
     fun markAllRead() {
+        val state = _uiState.value
+        val ids = state.items.filter { it.read == 0L }.map { it.id }.toSet()
+        mark(ids, taken = state.unreadCount) { repository.markAllRead() }
+    }
+
+    private fun mark(ids: Set<String>, taken: Int, save: suspend () -> Unit) {
+        val state = _uiState.value
+        val click = Marked(ids, System.currentTimeMillis() / 1000, taken)
+        marked += click
+        _uiState.value = state.copy(
+            items = state.items.map { if (it.id in ids && it.read == 0L) it.copy(read = click.stamp) else it },
+            unreadCount = (state.unreadCount - taken).coerceAtLeast(0),
+        )
         viewModelScope.launch {
             try {
-                repository.markAllRead()
-                val now = System.currentTimeMillis() / 1000
-                _uiState.value = _uiState.value.copy(
-                    items = _uiState.value.items.map { if (it.read == 0L) it.copy(read = now) else it },
-                    unreadCount = 0,
-                )
+                save()
+                marked -= click
                 unread.refresh()
+            } catch (e: CancellationException) {
+                marked -= click
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                marked -= click
+                // Only the rows still showing this click's stamp go back; one a
+                // later click also covers stays read until that one answers.
+                val now = _uiState.value
+                _uiState.value = now.copy(
+                    items = now.items.map { row ->
+                        if (row.id in ids && row.read == click.stamp && marked.none { row.id in it.ids }) {
+                            row.copy(read = 0L)
+                        } else {
+                            row
+                        }
+                    },
+                    unreadCount = now.unreadCount + click.taken,
+                    error = e.toMochiError(),
+                )
             }
         }
     }

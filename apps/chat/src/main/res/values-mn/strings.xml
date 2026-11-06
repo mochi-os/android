@@ -168,4 +168,7 @@
         <item quantity="one">%1$s мессежийн түлхүүр сэргээгдлээ</item>
         <item quantity="other">%1$s мессежийн түлхүүр сэргээгдлээ</item>
     </plurals>
+    <string name="chat_mark_unread">Уншаагүй гэж тэмдэглэх</string>
+    <string name="chat_list_marked_read">Чатыг уншсан гэж тэмдэглэлээ</string>
+    <string name="chat_list_marked_unread">Чатыг уншаагүй гэж тэмдэглэлээ</string>
 </resources>

@@ -32,3 +32,16 @@ data class NotificationsCount(
     val count: Int = 0,
     val total: Int = 0,
 )
+
+/**
+ * One of the user's RSS feeds of their notifications, read at its address by
+ * [token]. [enabled] is 1 when the feed joins each new category, the web's
+ * "Notify by default".
+ */
+data class RssFeed(
+    val id: String = "",
+    val name: String = "",
+    val token: String = "",
+    val created: Long = 0,
+    val enabled: Int = 0,
+)

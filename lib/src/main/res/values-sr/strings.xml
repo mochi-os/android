@@ -344,4 +344,5 @@
         <item quantity="few">+%1$s додатна одговора</item>
         <item quantity="other">+%1$s додатних одговора</item>
     </plurals>
+    <string name="drawer_unread">Непрочитано</string>
 </resources>

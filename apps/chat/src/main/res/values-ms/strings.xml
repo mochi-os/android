@@ -166,4 +166,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">%1$s kunci mesej dipulihkan</item>
     </plurals>
+    <string name="chat_mark_unread">Tandakan sebagai belum dibaca</string>
+    <string name="chat_list_marked_read">Sembang ditandakan sebagai dibaca</string>
+    <string name="chat_list_marked_unread">Sembang ditandakan sebagai belum dibaca</string>
 </resources>

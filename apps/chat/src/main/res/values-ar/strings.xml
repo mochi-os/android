@@ -176,4 +176,7 @@
         <item quantity="many">تمت استعادة %1$s مفتاح رسائل</item>
         <item quantity="other">تمت استعادة %1$s مفتاح رسائل</item>
     </plurals>
+    <string name="chat_mark_unread">تعليم كغير مقروءة</string>
+    <string name="chat_list_marked_read">تم تعليم الدردشة كمقروءة</string>
+    <string name="chat_list_marked_unread">تم تعليم الدردشة كغير مقروءة</string>
 </resources>

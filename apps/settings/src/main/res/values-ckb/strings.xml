@@ -658,4 +658,20 @@
         <item quantity="other">%1$s هەژمار</item>
     </plurals>
     <string name="blocks_server">ڕاژەکار</string>
+    <string name="notifications_rss">فیدەکانی RSS</string>
+    <string name="notifications_rss_empty">هێشتا هیچ فیدێکی RSS نییە</string>
+    <string name="notifications_rss_create">دروستکردنی فید</string>
+    <string name="notifications_rss_create_title">دروستکردنی فیدی RSS</string>
+    <string name="notifications_rss_created">فید دروست کرا</string>
+    <string name="notifications_rss_done">تەواوبوو</string>
+    <string name="notifications_rss_name">ناوی فید</string>
+    <string name="notifications_rss_existing">زیادکردن بۆ بەشداری هەبووەکان</string>
+    <string name="notifications_rss_default">ئاگادارکردنەوە بەشێوەی بنەڕەت</string>
+    <string name="notifications_rss_edit">دەستکاری فید</string>
+    <string name="notifications_rss_delete">سڕینەوەی فید</string>
+    <string name="notifications_rss_delete_title">فید بسڕەوە؟</string>
+    <string name="notifications_rss_delete_message">ئەمە ئەم فیدە بە هەمیشەیی دەسڕێتەوە. هەر خوێنەرێکی RSS کە بەکاری دەهێنێت، چیتر ناتوانێت دەستڕابگاتە ئاگادارکردنەوەکانت.</string>
+    <string name="notifications_rss_renamed">ناوی فید گۆڕدرا</string>
+    <string name="notifications_rss_deleted">فید سڕایەوە</string>
+    <string name="notifications_rss_default_name">فیدی RSS</string>
 </resources>

@@ -646,4 +646,20 @@
         <item quantity="other">%1$s akaun</item>
     </plurals>
     <string name="blocks_server">Pelayan</string>
+    <string name="notifications_rss">Suapan RSS</string>
+    <string name="notifications_rss_empty">Tiada suapan RSS lagi</string>
+    <string name="notifications_rss_create">Cipta suapan</string>
+    <string name="notifications_rss_create_title">Cipta suapan RSS</string>
+    <string name="notifications_rss_created">Suapan dicipta</string>
+    <string name="notifications_rss_done">Selesai</string>
+    <string name="notifications_rss_name">Nama suapan</string>
+    <string name="notifications_rss_existing">Tambah ke langganan sedia ada</string>
+    <string name="notifications_rss_default">Beritahu secara lalai</string>
+    <string name="notifications_rss_edit">Sunting suapan</string>
+    <string name="notifications_rss_delete">Padam suapan</string>
+    <string name="notifications_rss_delete_title">Padam suapan?</string>
+    <string name="notifications_rss_delete_message">Tindakan ini akan memadamkan suapan ini secara kekal. Mana-mana pembaca RSS yang menggunakannya tidak lagi boleh mengakses pemberitahuan anda.</string>
+    <string name="notifications_rss_renamed">Suapan dinamakan semula</string>
+    <string name="notifications_rss_deleted">Suapan dipadam</string>
+    <string name="notifications_rss_default_name">Suapan RSS</string>
 </resources>

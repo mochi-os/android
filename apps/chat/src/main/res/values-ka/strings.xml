@@ -168,4 +168,7 @@
         <item quantity="one">აღდგა %1$s შეტყობინების გასაღები</item>
         <item quantity="other">აღდგა %1$s შეტყობინების გასაღები</item>
     </plurals>
+    <string name="chat_mark_unread">წაუკითხავად მონიშვნა</string>
+    <string name="chat_list_marked_read">ჩატი მონიშნულია წაკითხულად</string>
+    <string name="chat_list_marked_unread">ჩატი მონიშნულია წაუკითხავად</string>
 </resources>

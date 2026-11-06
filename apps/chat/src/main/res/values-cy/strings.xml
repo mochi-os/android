@@ -177,4 +177,7 @@
         <item quantity="many">%1$s allwedd neges wedi\'u hadfer</item>
         <item quantity="other">%1$s allwedd neges wedi\'u hadfer</item>
     </plurals>
+    <string name="chat_mark_unread">Nodi fel heb ei darllen</string>
+    <string name="chat_list_marked_read">Sgwrs wedi\'i nodi fel wedi\'i darllen</string>
+    <string name="chat_list_marked_unread">Sgwrs wedi\'i nodi fel heb ei darllen</string>
 </resources>

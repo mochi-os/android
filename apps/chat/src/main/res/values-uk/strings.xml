@@ -172,4 +172,7 @@
         <item quantity="many">Відновлено %1$s ключів повідомлень</item>
         <item quantity="other">Відновлено %1$s ключа повідомлень</item>
     </plurals>
+    <string name="chat_mark_unread">Позначити як непрочитане</string>
+    <string name="chat_list_marked_read">Чат позначено як прочитаний</string>
+    <string name="chat_list_marked_unread">Чат позначено як непрочитаний</string>
 </resources>

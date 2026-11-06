@@ -168,4 +168,7 @@
         <item quantity="one">%1$s సందేశ కీ పునరుద్ధరించబడింది</item>
         <item quantity="other">%1$s సందేశ కీలు పునరుద్ధరించబడ్డాయి</item>
     </plurals>
+    <string name="chat_mark_unread">చదవనట్లుగా గుర్తు పెట్టండి</string>
+    <string name="chat_list_marked_read">చాట్ చదివినట్లుగా గుర్తు పెట్టబడింది</string>
+    <string name="chat_list_marked_unread">చాట్ చదవనట్లుగా గుర్తు పెట్టబడింది</string>
 </resources>

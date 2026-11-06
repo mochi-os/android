@@ -342,4 +342,5 @@
         <item quantity="one">%1$s erantzun</item>
         <item quantity="other">+%1$s erantzun gehiago</item>
     </plurals>
+    <string name="drawer_unread">Irakurri gabea</string>
 </resources>

@@ -341,4 +341,5 @@
     <plurals name="comment_collapsed_replies">
         <item quantity="other">+%1$s balesan liyané</item>
     </plurals>
+    <string name="drawer_unread">Durung diwaca</string>
 </resources>

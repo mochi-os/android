@@ -342,4 +342,5 @@
         <item quantity="one">%1$s vastaus</item>
         <item quantity="other">+%1$s lisävastausta</item>
     </plurals>
+    <string name="drawer_unread">Lukemattomat</string>
 </resources>

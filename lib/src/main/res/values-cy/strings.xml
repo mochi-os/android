@@ -351,4 +351,5 @@
         <item quantity="many">+%1$s ateb arall</item>
         <item quantity="other">+%1$s ateb arall</item>
     </plurals>
+    <string name="drawer_unread">Heb ddarllen</string>
 </resources>

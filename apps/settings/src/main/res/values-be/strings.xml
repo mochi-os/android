@@ -684,4 +684,20 @@
         <item quantity="other">%1$s уліковага запісу</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS-стужкі</string>
+    <string name="notifications_rss_empty">Пакуль няма RSS-стужак</string>
+    <string name="notifications_rss_create">Стварыць стужку</string>
+    <string name="notifications_rss_create_title">Стварыць RSS-стужку</string>
+    <string name="notifications_rss_created">Стужка створана</string>
+    <string name="notifications_rss_done">Гатова</string>
+    <string name="notifications_rss_name">Назва стужкі</string>
+    <string name="notifications_rss_existing">Дадаць да існуючых падпісак</string>
+    <string name="notifications_rss_default">Апавяшчаць па змаўчанні</string>
+    <string name="notifications_rss_edit">Рэдагаваць стужку</string>
+    <string name="notifications_rss_delete">Выдаліць стужку</string>
+    <string name="notifications_rss_delete_title">Выдаліць стужку?</string>
+    <string name="notifications_rss_delete_message">Гэта незваротна выдаліць гэтую стужку. Любыя RSS-чытачы, якія яе выкарыстоўваюць, больш не змогуць атрымліваць доступ да вашых апавяшчэнняў.</string>
+    <string name="notifications_rss_renamed">Стужка перайменавана</string>
+    <string name="notifications_rss_deleted">Стужка выдалена</string>
+    <string name="notifications_rss_default_name">RSS-стужка</string>
 </resources>

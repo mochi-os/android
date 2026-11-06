@@ -168,4 +168,7 @@
         <item quantity="one">%1$s کلید پیام بازیابی شد</item>
         <item quantity="other">%1$s کلید پیام بازیابی شد</item>
     </plurals>
+    <string name="chat_mark_unread">علامت‌گذاری به‌عنوان خوانده‌نشده</string>
+    <string name="chat_list_marked_read">چت به‌عنوان خوانده‌شده علامت‌گذاری شد</string>
+    <string name="chat_list_marked_unread">چت به‌عنوان خوانده‌نشده علامت‌گذاری شد</string>
 </resources>

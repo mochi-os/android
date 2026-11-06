@@ -256,7 +256,23 @@ data class NotificationSettings(
     val post: Boolean = false,
     val reply: Boolean = false,
     val comment: Boolean = false,
-)
+) {
+    /** Whether [kind], "post", "reply" or "comment", is on. */
+    fun of(kind: String): Boolean = when (kind) {
+        "post" -> post
+        "reply" -> reply
+        "comment" -> comment
+        else -> false
+    }
+
+    /** These settings with [kind] turned to [enabled]; an unknown kind changes nothing. */
+    fun with(kind: String, enabled: Boolean): NotificationSettings = when (kind) {
+        "post" -> copy(post = enabled)
+        "reply" -> copy(reply = enabled)
+        "comment" -> copy(comment = enabled)
+        else -> this
+    }
+}
 
 interface ForumsApi {
 

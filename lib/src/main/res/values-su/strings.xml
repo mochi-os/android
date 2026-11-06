@@ -342,4 +342,5 @@
         <item quantity="one">%1$s balesan</item>
         <item quantity="other">+%1$s balesan deui</item>
     </plurals>
+    <string name="drawer_unread">Tacan dibaca</string>
 </resources>

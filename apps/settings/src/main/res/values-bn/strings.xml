@@ -658,4 +658,20 @@
         <item quantity="other">%1$sটি অ্যাকাউন্ট</item>
     </plurals>
     <string name="blocks_server">সার্ভার</string>
+    <string name="notifications_rss">RSS ফিড</string>
+    <string name="notifications_rss_empty">এখনও কোনো RSS ফিড নেই</string>
+    <string name="notifications_rss_create">ফিড তৈরি করুন</string>
+    <string name="notifications_rss_create_title">RSS ফিড তৈরি করুন</string>
+    <string name="notifications_rss_created">ফিড তৈরি করা হয়েছে</string>
+    <string name="notifications_rss_done">সম্পন্ন</string>
+    <string name="notifications_rss_name">ফিডের নাম</string>
+    <string name="notifications_rss_existing">বিদ্যমান সাবস্ক্রিপশনে যোগ করুন</string>
+    <string name="notifications_rss_default">ডিফল্টভাবে অবহিত করুন</string>
+    <string name="notifications_rss_edit">ফিড সম্পাদনা করুন</string>
+    <string name="notifications_rss_delete">ফিড মুছুন</string>
+    <string name="notifications_rss_delete_title">ফিড মুছবেন?</string>
+    <string name="notifications_rss_delete_message">এটি এই ফিডটি স্থায়ীভাবে মুছে ফেলবে। এটি ব্যবহারকারী যেকোনো RSS রিডার আর আপনার বিজ্ঞপ্তিগুলিতে অ্যাক্সেস করতে পারবে না।</string>
+    <string name="notifications_rss_renamed">ফিডের নাম পরিবর্তন করা হয়েছে</string>
+    <string name="notifications_rss_deleted">ফিড মুছে ফেলা হয়েছে</string>
+    <string name="notifications_rss_default_name">RSS ফিড</string>
 </resources>

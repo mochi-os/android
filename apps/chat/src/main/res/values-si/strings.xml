@@ -168,4 +168,7 @@
         <item quantity="one">%1$s පණිවිඩ යතුර ප්‍රතිසාධනය කෙරිණි</item>
         <item quantity="other">%1$s පණිවිඩ යතුරු ප්‍රතිසාධනය කෙරිණි</item>
     </plurals>
+    <string name="chat_mark_unread">නොකියවූ ලෙස ලකුණු කරන්න</string>
+    <string name="chat_list_marked_read">කතාබස් කියවූ ලෙස ලකුණු කරන ලදී</string>
+    <string name="chat_list_marked_unread">කතාබස් නොකියවූ ලෙස ලකුණු කරන ලදී</string>
 </resources>

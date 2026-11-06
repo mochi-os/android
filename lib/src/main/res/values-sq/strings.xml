@@ -342,4 +342,5 @@
         <item quantity="one">%1$s përgjigje</item>
         <item quantity="other">+%1$s përgjigje të tjera</item>
     </plurals>
+    <string name="drawer_unread">Pa lexuar</string>
 </resources>

@@ -342,4 +342,5 @@
         <item quantity="one">%1$s vastus</item>
         <item quantity="other">+%1$s veel vastust</item>
     </plurals>
+    <string name="drawer_unread">Lugemata</string>
 </resources>

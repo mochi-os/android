@@ -168,4 +168,7 @@
         <item quantity="one">%1$s സന്ദേശ കീ പുനഃസ്ഥാപിച്ചു</item>
         <item quantity="other">%1$s സന്ദേശ കീകൾ പുനഃസ്ഥാപിച്ചു</item>
     </plurals>
+    <string name="chat_mark_unread">വായിക്കാത്തതായി അടയാളപ്പെടുത്തുക</string>
+    <string name="chat_list_marked_read">ചാറ്റ് വായിച്ചതായി അടയാളപ്പെടുത്തി</string>
+    <string name="chat_list_marked_unread">ചാറ്റ് വായിക്കാത്തതായി അടയാളപ്പെടുത്തി</string>
 </resources>

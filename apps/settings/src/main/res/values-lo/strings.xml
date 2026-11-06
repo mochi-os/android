@@ -645,4 +645,20 @@
         <item quantity="other">%1$s ບັນຊີ</item>
     </plurals>
     <string name="blocks_server">ເຊີບເວີ</string>
+    <string name="notifications_rss">RSS feeds</string>
+    <string name="notifications_rss_empty">ຍັງບໍ່ມີ RSS feed</string>
+    <string name="notifications_rss_create">ສ້າງຟີດ</string>
+    <string name="notifications_rss_create_title">ສ້າງຟີດ RSS</string>
+    <string name="notifications_rss_created">ສ້າງຟີດແລ້ວ</string>
+    <string name="notifications_rss_done">ສຳເລັດແລ້ວ</string>
+    <string name="notifications_rss_name">ຊື່ຟີດ</string>
+    <string name="notifications_rss_existing">ເພີ່ມໃສ່ການສະໝັກສະມາຊິກທີ່ມີຢູ່</string>
+    <string name="notifications_rss_default">ແຈ້ງເຕືອນເປັນຄ່າເລີ່ມຕົ້ນ</string>
+    <string name="notifications_rss_edit">ແກ້ໄຂຟີດ</string>
+    <string name="notifications_rss_delete">ລົບຟີດ</string>
+    <string name="notifications_rss_delete_title">ລົບຟີດບໍ?</string>
+    <string name="notifications_rss_delete_message">ນີ້ຈະລົບຟີດນີ້ແບບຖາວອນ. ໂປຣແກຣມອ່ານ RSS ໃດໆທີ່ໃຊ້ມັນຈະບໍ່ສາມາດເຂົ້າເຖິງການແຈ້ງເຕືອນຂອງທ່ານໄດ້ອີກຕໍ່ໄປ.</string>
+    <string name="notifications_rss_renamed">ປ່ຽນຊື່ຟີດແລ້ວ</string>
+    <string name="notifications_rss_deleted">ລຶບຟີດແລ້ວ</string>
+    <string name="notifications_rss_default_name">ຟີດ RSS</string>
 </resources>

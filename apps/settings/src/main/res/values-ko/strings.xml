@@ -646,4 +646,20 @@
         <item quantity="other">계정 %1$s개</item>
     </plurals>
     <string name="blocks_server">서버</string>
+    <string name="notifications_rss">RSS 피드</string>
+    <string name="notifications_rss_empty">아직 RSS 피드가 없어요</string>
+    <string name="notifications_rss_create">피드 생성</string>
+    <string name="notifications_rss_create_title">RSS 피드 만들기</string>
+    <string name="notifications_rss_created">피드가 생성되었어요</string>
+    <string name="notifications_rss_done">완료</string>
+    <string name="notifications_rss_name">피드 이름</string>
+    <string name="notifications_rss_existing">기존 구독에 추가</string>
+    <string name="notifications_rss_default">기본으로 알림 보내기</string>
+    <string name="notifications_rss_edit">피드 편집</string>
+    <string name="notifications_rss_delete">피드 삭제</string>
+    <string name="notifications_rss_delete_title">피드를 삭제할까요?</string>
+    <string name="notifications_rss_delete_message">이 피드가 영구적으로 삭제됩니다. 이 피드를 사용하는 RSS 리더는 더 이상 알림에 접근할 수 없습니다.</string>
+    <string name="notifications_rss_renamed">피드 이름이 변경되었어요</string>
+    <string name="notifications_rss_deleted">피드가 삭제되었어요</string>
+    <string name="notifications_rss_default_name">RSS 피드</string>
 </resources>

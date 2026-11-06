@@ -111,7 +111,7 @@ class FeedListViewModel @Inject constructor(
                 val info = repository.getFeedsInfo(current = true)
                 val feedList = info.feeds
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
-                _feeds.value = feedList
+                _feeds.value = overlay(feedList)
                 _hasAi.value = info.hasAi
                 if (info.sort.isNotEmpty()) {
                     _currentSort.value = info.sort
@@ -153,7 +153,7 @@ class FeedListViewModel @Inject constructor(
                 val info = repository.getFeedsInfo(fresh = true)
                 val feedList = info.feeds
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
-                _feeds.value = feedList
+                _feeds.value = overlay(feedList)
                 _hasAi.value = info.hasAi
                 subscribeToWebSockets(info)
             } catch (e: CancellationException) {
@@ -219,11 +219,84 @@ class FeedListViewModel @Inject constructor(
             val info = repository.getFeedsInfo(fresh = true)
             val feedList = info.feeds
                 .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
-            _feeds.value = feedList
+            _feeds.value = overlay(feedList)
             _hasAi.value = info.hasAi
             subscribeToWebSockets(info)
         } catch (_: Exception) {
             // Silent refresh failure
+        }
+    }
+
+    /**
+     * Badges a Mark all read has cleared before the server answers: one feed's,
+     * by its id or fingerprint, or every feed's when [feed] is null. [taken]
+     * is what each badge held, by feed id, which a refusal adds back.
+     */
+    private class Cleared(val feed: String?) {
+        val taken = mutableMapOf<String, Int>()
+
+        fun covers(other: Feed) = feed == null || feed == other.id || feed == other.fingerprint
+    }
+
+    /** Clears the server has not answered yet, oldest first. */
+    private val cleared = mutableListOf<Cleared>()
+
+    /**
+     * A fetched list with every badge a pending clear covers still cleared, so
+     * a list fetched before the server had the read does not bring them back.
+     */
+    private fun overlay(feeds: List<Feed>): List<Feed> {
+        cleared.forEach { clear -> clear.taken.clear() }
+        return feeds.map { feed ->
+            val clear = cleared.firstOrNull { it.covers(feed) }
+            if (clear == null || feed.unread == 0) {
+                feed
+            } else {
+                clear.taken[feed.id] = feed.unread
+                feed.copy(unread = 0)
+            }
+        }
+    }
+
+    /**
+     * Mark all read's badges, cleared on the tap: [feed]'s, or every feed's
+     * when null. The call returned settles it once the server answers:
+     * accepted, the drawer refetches; refused, each badge gets back what it
+     * lost, added to what it shows by then, so a post counted meanwhile still
+     * counts. A badge a later clear also covers stays clear until that one
+     * answers, and is then that one's to give back.
+     */
+    fun clearUnread(feed: String?): (accepted: Boolean) -> Unit {
+        val clear = Cleared(feed)
+        cleared += clear
+        _feeds.value = _feeds.value.map { other ->
+            if (!clear.covers(other) || other.unread == 0) {
+                other
+            } else {
+                clear.taken[other.id] = other.unread
+                other.copy(unread = 0)
+            }
+        }
+        return { accepted ->
+            val index = cleared.indexOf(clear)
+            if (index >= 0) {
+                cleared.removeAt(index)
+                if (accepted) {
+                    refreshSilently()
+                } else {
+                    val later = cleared.drop(index)
+                    _feeds.value = _feeds.value.map { other ->
+                        val count = clear.taken[other.id] ?: return@map other
+                        val next = later.firstOrNull { it.covers(other) }
+                        if (next != null) {
+                            next.taken[other.id] = (next.taken[other.id] ?: 0) + count
+                            other
+                        } else {
+                            other.copy(unread = other.unread + count)
+                        }
+                    }
+                }
+            }
         }
     }
 

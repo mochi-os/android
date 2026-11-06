@@ -168,4 +168,7 @@
         <item quantity="one">%1$s સંદેશ કી પુનઃસ્થાપિત થઈ</item>
         <item quantity="other">%1$s સંદેશ કી પુનઃસ્થાપિત થઈ</item>
     </plurals>
+    <string name="chat_mark_unread">ન વાંચેલા તરીકે ચિહ્નિત કરો</string>
+    <string name="chat_list_marked_read">ચેટ વાંચેલી તરીકે ચિહ્નિત કરી</string>
+    <string name="chat_list_marked_unread">ચેટ ન વાંચેલી તરીકે ચિહ્નિત કરી</string>
 </resources>

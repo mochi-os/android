@@ -168,4 +168,7 @@
         <item quantity="one">%1$s செய்தி விசை மீட்டெடுக்கப்பட்டது</item>
         <item quantity="other">%1$s செய்தி விசைகள் மீட்டெடுக்கப்பட்டன</item>
     </plurals>
+    <string name="chat_mark_unread">படிக்காததாகக் குறி</string>
+    <string name="chat_list_marked_read">அரட்டை படித்ததாகக் குறிக்கப்பட்டது</string>
+    <string name="chat_list_marked_unread">அரட்டை படிக்காததாகக் குறிக்கப்பட்டது</string>
 </resources>

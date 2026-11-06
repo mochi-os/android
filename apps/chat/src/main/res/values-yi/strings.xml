@@ -168,4 +168,7 @@
         <item quantity="one">%1$s מעסעדזש־שליסל צוריקגעשטעלט</item>
         <item quantity="other">%1$s מעסעדזש־שליסלען צוריקגעשטעלט</item>
     </plurals>
+    <string name="chat_mark_unread">באַצייכענען ווי ניט־געלייענט</string>
+    <string name="chat_list_marked_read">שמועס באַצייכנט ווי געלייענט</string>
+    <string name="chat_list_marked_unread">שמועס באַצייכנט ווי ניט־געלייענט</string>
 </resources>

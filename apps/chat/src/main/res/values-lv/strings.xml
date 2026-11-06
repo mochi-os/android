@@ -170,4 +170,7 @@
         <item quantity="one">Atjaunota %1$s ziņu atslēga</item>
         <item quantity="other">Atjaunotas %1$s ziņu atslēgas</item>
     </plurals>
+    <string name="chat_mark_unread">Atzīmēt kā neizlasītu</string>
+    <string name="chat_list_marked_read">Saruna atzīmēta kā izlasīta</string>
+    <string name="chat_list_marked_unread">Saruna atzīmēta kā neizlasīta</string>
 </resources>

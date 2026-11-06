@@ -169,4 +169,7 @@
         <item quantity="one">%1$s ta xabar kaliti tiklandi</item>
         <item quantity="other">%1$s ta xabar kaliti tiklandi</item>
     </plurals>
+    <string name="chat_mark_unread">Oʻqilmagan deb belgilash</string>
+    <string name="chat_list_marked_read">Chat oʻqilgan deb belgilandi</string>
+    <string name="chat_list_marked_unread">Chat oʻqilmagan deb belgilandi</string>
 </resources>

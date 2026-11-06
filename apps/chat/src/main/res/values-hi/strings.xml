@@ -168,4 +168,7 @@
         <item quantity="one">%1$s संदेश कुंजी पुनर्स्थापित की गई</item>
         <item quantity="other">%1$s संदेश कुंजियाँ पुनर्स्थापित की गईं</item>
     </plurals>
+    <string name="chat_mark_unread">बिना पढ़ा हुआ मार्क करें</string>
+    <string name="chat_list_marked_read">चैट को पढ़ा हुआ मार्क किया गया</string>
+    <string name="chat_list_marked_unread">चैट को बिना पढ़ा हुआ मार्क किया गया</string>
 </resources>

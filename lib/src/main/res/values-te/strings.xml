@@ -342,4 +342,5 @@
         <item quantity="one">%1$s జవాబు</item>
         <item quantity="other">+%1$s అదనపు జవాబులు</item>
     </plurals>
+    <string name="drawer_unread">చదవనివి</string>
 </resources>

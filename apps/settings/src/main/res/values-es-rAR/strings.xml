@@ -336,4 +336,7 @@
     <string name="networks_move_action">Mudate</string>
     <string name="networks_address">Dirección</string>
     <string name="networks_remove">Quitá</string>
+    <string name="notifications_rss_create">Creá un feed</string>
+    <string name="notifications_rss_create_title">Creá un feed RSS</string>
+    <string name="notifications_rss_existing">Agregá a las suscripciones existentes</string>
 </resources>

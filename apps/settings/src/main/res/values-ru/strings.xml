@@ -684,4 +684,20 @@
         <item quantity="other">%1$s аккаунта</item>
     </plurals>
     <string name="blocks_server">Сервер</string>
+    <string name="notifications_rss">RSS-каналы</string>
+    <string name="notifications_rss_empty">Пока нет RSS-лент</string>
+    <string name="notifications_rss_create">Создать ленту</string>
+    <string name="notifications_rss_create_title">Создать RSS-канал</string>
+    <string name="notifications_rss_created">Лента создана</string>
+    <string name="notifications_rss_done">Готово</string>
+    <string name="notifications_rss_name">Название ленты</string>
+    <string name="notifications_rss_existing">Добавить к существующим подпискам</string>
+    <string name="notifications_rss_default">Уведомлять по умолчанию</string>
+    <string name="notifications_rss_edit">Редактировать ленту</string>
+    <string name="notifications_rss_delete">Удалить ленту</string>
+    <string name="notifications_rss_delete_title">Удалить ленту?</string>
+    <string name="notifications_rss_delete_message">Этот канал будет удалён навсегда. RSS-ридеры, использующие его, больше не смогут получать ваши уведомления.</string>
+    <string name="notifications_rss_renamed">Лента переименована</string>
+    <string name="notifications_rss_deleted">Лента удалена</string>
+    <string name="notifications_rss_default_name">RSS-лента</string>
 </resources>

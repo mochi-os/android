@@ -658,4 +658,20 @@
         <item quantity="other">%1$s ანგარიში</item>
     </plurals>
     <string name="blocks_server">სერვერი</string>
+    <string name="notifications_rss">RSS ფიდები</string>
+    <string name="notifications_rss_empty">RSS ფიდები ჯერ არ არის</string>
+    <string name="notifications_rss_create">არხის შექმნა</string>
+    <string name="notifications_rss_create_title">RSS არხის შექმნა</string>
+    <string name="notifications_rss_created">არხი შეიქმნა</string>
+    <string name="notifications_rss_done">მზადაა</string>
+    <string name="notifications_rss_name">არხის სახელი</string>
+    <string name="notifications_rss_existing">არსებულ ხელმოწერებში დამატება</string>
+    <string name="notifications_rss_default">ნაგულისხმევად შეტყობინება</string>
+    <string name="notifications_rss_edit">არხის რედაქტირება</string>
+    <string name="notifications_rss_delete">არხის წაშლა</string>
+    <string name="notifications_rss_delete_title">არხის წაშლა?</string>
+    <string name="notifications_rss_delete_message">ეს სამუდამოდ წაშლის ამ ფიდს. ნებისმიერი RSS წამკითხავი, რომელიც მას იყენებდა, ვეღარ შეძლებს თქვენი შეტყობინებების წვდომას.</string>
+    <string name="notifications_rss_renamed">არხს გადაერქვა სახელი</string>
+    <string name="notifications_rss_deleted">არხი წაიშალა</string>
+    <string name="notifications_rss_default_name">RSS ფიდი</string>
 </resources>

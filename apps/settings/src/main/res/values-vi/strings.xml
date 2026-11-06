@@ -646,4 +646,20 @@
         <item quantity="other">%1$s tài khoản</item>
     </plurals>
     <string name="blocks_server">Máy chủ</string>
+    <string name="notifications_rss">Nguồn cấp RSS</string>
+    <string name="notifications_rss_empty">Chưa có feed RSS</string>
+    <string name="notifications_rss_create">Tạo feed</string>
+    <string name="notifications_rss_create_title">Tạo nguồn cấp RSS</string>
+    <string name="notifications_rss_created">Đã tạo nguồn cấp</string>
+    <string name="notifications_rss_done">Xong</string>
+    <string name="notifications_rss_name">Tên nguồn cấp</string>
+    <string name="notifications_rss_existing">Thêm vào đăng ký hiện có</string>
+    <string name="notifications_rss_default">Thông báo theo mặc định</string>
+    <string name="notifications_rss_edit">Chỉnh sửa nguồn cấp</string>
+    <string name="notifications_rss_delete">Xóa feed</string>
+    <string name="notifications_rss_delete_title">Xóa feed?</string>
+    <string name="notifications_rss_delete_message">Thao tác này sẽ xóa vĩnh viễn nguồn cấp này. Mọi trình đọc RSS đang sử dụng nó sẽ không còn truy cập được các thông báo của bạn.</string>
+    <string name="notifications_rss_renamed">Đã đổi tên nguồn cấp</string>
+    <string name="notifications_rss_deleted">Đã xoá nguồn cấp</string>
+    <string name="notifications_rss_default_name">Feed RSS</string>
 </resources>

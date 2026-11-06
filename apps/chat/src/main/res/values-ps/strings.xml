@@ -168,4 +168,7 @@
         <item quantity="one">%1$s د پیغام کیلي بیرته راګرځول شوه</item>
         <item quantity="other">%1$s د پیغام کیلي ګانې بیرته راګرځول شوې</item>
     </plurals>
+    <string name="chat_mark_unread">د نالوستي په توګه نښه کړئ</string>
+    <string name="chat_list_marked_read">چټ د لوستل شوي په توګه نښه شو</string>
+    <string name="chat_list_marked_unread">چټ د نالوستي په توګه نښه شو</string>
 </resources>

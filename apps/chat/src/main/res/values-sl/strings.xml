@@ -172,4 +172,7 @@
         <item quantity="few">Obnovljeni %1$s ključi sporočil</item>
         <item quantity="other">Obnovljenih %1$s ključev sporočil</item>
     </plurals>
+    <string name="chat_mark_unread">Označi kot neprebrano</string>
+    <string name="chat_list_marked_read">Klepet označen kot prebran</string>
+    <string name="chat_list_marked_unread">Klepet označen kot neprebran</string>
 </resources>

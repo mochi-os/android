@@ -166,4 +166,7 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">ກູ້ຄືນກະແຈຂໍ້ຄວາມແລ້ວ %1$s ລາຍການ</item>
     </plurals>
+    <string name="chat_mark_unread">ໝາຍວ່າຍັງບໍ່ອ່ານ</string>
+    <string name="chat_list_marked_read">ໝາຍແຊັດເປັນອ່ານແລ້ວ</string>
+    <string name="chat_list_marked_unread">ໝາຍແຊັດເປັນຍັງບໍ່ອ່ານ</string>
 </resources>

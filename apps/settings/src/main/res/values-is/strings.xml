@@ -658,4 +658,20 @@
         <item quantity="other">%1$s reikningar</item>
     </plurals>
     <string name="blocks_server">Þjónn</string>
+    <string name="notifications_rss">RSS-streymi</string>
+    <string name="notifications_rss_empty">Engir RSS-straumar ennþá</string>
+    <string name="notifications_rss_create">Búa til streymi</string>
+    <string name="notifications_rss_create_title">Búa til RSS-streymi</string>
+    <string name="notifications_rss_created">Streymi búið til</string>
+    <string name="notifications_rss_done">Lokið</string>
+    <string name="notifications_rss_name">Nafn streymis</string>
+    <string name="notifications_rss_existing">Bæta við núverandi áskriftir</string>
+    <string name="notifications_rss_default">Tilkynna sjálfgefið</string>
+    <string name="notifications_rss_edit">Breyta straumi</string>
+    <string name="notifications_rss_delete">Eyða streymi</string>
+    <string name="notifications_rss_delete_title">Eyða streymi?</string>
+    <string name="notifications_rss_delete_message">Þetta eyðir streyminu varanlega. RSS-lesarar sem nota það munu ekki lengur hafa aðgang að tilkynningunum þínum.</string>
+    <string name="notifications_rss_renamed">Streymi endurnefnt</string>
+    <string name="notifications_rss_deleted">Streymi eytt</string>
+    <string name="notifications_rss_default_name">RSS-straumur</string>
 </resources>

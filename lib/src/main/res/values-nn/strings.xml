@@ -342,4 +342,5 @@
         <item quantity="one">%1$s svar</item>
         <item quantity="other">+%1$s fleire svar</item>
     </plurals>
+    <string name="drawer_unread">Ulesen</string>
 </resources>

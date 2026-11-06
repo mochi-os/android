@@ -172,4 +172,7 @@
         <item quantity="few">Chaidh %1$s iuchraichean teachdaireachd aiseag</item>
         <item quantity="other">Chaidh %1$s iuchair teachdaireachd aiseag</item>
     </plurals>
+    <string name="chat_mark_unread">Comharraich mar gun leughadh</string>
+    <string name="chat_list_marked_read">Chaidh a’ chabadaich a chomharrachadh mar leughte</string>
+    <string name="chat_list_marked_unread">Chaidh a’ chabadaich a chomharrachadh mar gun leughadh</string>
 </resources>
