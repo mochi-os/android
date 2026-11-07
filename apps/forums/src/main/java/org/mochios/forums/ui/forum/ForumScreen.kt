@@ -131,7 +131,6 @@ import org.mochios.android.ui.components.rememberCopier
 import org.mochios.forums.R
 import org.mochios.forums.model.communityHandle
 import org.mochios.forums.model.forumPath
-import org.mochios.forums.model.forumServer
 import org.mochios.forums.ui.components.ForumLabel
 import org.mochios.forums.ui.components.ForumTitle
 import org.mochios.forums.api.NotificationSettings
@@ -234,8 +233,6 @@ fun ForumScreen(
             DrawerItem(
                 id = forum.fingerprint.ifEmpty { forum.id },
                 title = forum.name,
-                // A community's server, so two of the same title read apart.
-                subtitle = forumServer(forum).ifEmpty { null },
                 icon = Icons.Outlined.Forum,
             )
         }
