@@ -301,8 +301,6 @@
     <string name="forums_block_server">Toshe sabar</string>
     <string name="forums_block_community">Toshe al\'umma</string>
     <string name="forums_blocked">An toshe</string>
-    <string name="forums_join_community">Shiga wata al\'umma a wani wuri</string>
-    <string name="forums_community_address">Adireshin al\'umma</string>
     <string name="forums_join">Shiga</string>
     <string name="forums_joined">An shiga</string>
     <string name="forums_already_subscribed">Kun riga kun yi subscribe ga wannan forum</string>

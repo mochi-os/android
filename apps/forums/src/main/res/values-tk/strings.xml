@@ -301,8 +301,6 @@
     <string name="forums_block_server">Serweri petikle</string>
     <string name="forums_block_community">Jemgyýeti petikle</string>
     <string name="forums_blocked">Petiklendi</string>
-    <string name="forums_join_community">Başga ýerdäki jemgyýete goşul</string>
-    <string name="forums_community_address">Jemgyýetiň salgysy</string>
     <string name="forums_join">Goşul</string>
     <string name="forums_joined">Goşuldyňyz</string>
     <string name="forums_already_subscribed">Bu foruma eýýäm abuna ýazylan</string>

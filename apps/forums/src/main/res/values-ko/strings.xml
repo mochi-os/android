@@ -300,8 +300,6 @@
     <string name="forums_block_server">서버 차단</string>
     <string name="forums_block_community">커뮤니티 차단</string>
     <string name="forums_blocked">차단했어요</string>
-    <string name="forums_join_community">다른 곳의 커뮤니티 가입</string>
-    <string name="forums_community_address">커뮤니티 주소</string>
     <string name="forums_join">가입</string>
     <string name="forums_joined">가입했어요</string>
     <string name="forums_already_subscribed">이미 이 포럼을 구독했어요</string>

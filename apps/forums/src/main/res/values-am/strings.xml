@@ -301,8 +301,6 @@
     <string name="forums_block_server">ሰርቨሩን አግድ</string>
     <string name="forums_block_community">ማህበረሰቡን አግድ</string>
     <string name="forums_blocked">ታግዷል</string>
-    <string name="forums_join_community">በሌላ ቦታ ያለ ማህበረሰብ ይቀላቀሉ</string>
-    <string name="forums_community_address">የማህበረሰብ አድራሻ</string>
     <string name="forums_join">ተቀላቀል</string>
     <string name="forums_joined">ተቀላቅሏል</string>
     <string name="forums_already_subscribed">አስቀድሞ ለዚህ መድረክ ተመዝግበዋል</string>

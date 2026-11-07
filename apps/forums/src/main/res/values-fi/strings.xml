@@ -301,8 +301,6 @@
     <string name="forums_block_server">Estä palvelin</string>
     <string name="forums_block_community">Estä yhteisö</string>
     <string name="forums_blocked">Estetty</string>
-    <string name="forums_join_community">Liity yhteisöön muualla</string>
-    <string name="forums_community_address">Yhteisön osoite</string>
     <string name="forums_join">Liity</string>
     <string name="forums_joined">Liitytty</string>
     <string name="forums_already_subscribed">Olet jo tilannut tämän foorumin</string>

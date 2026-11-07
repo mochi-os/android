@@ -301,8 +301,6 @@
     <string name="forums_block_server">सर्भर ब्लक गर्नुहोस्</string>
     <string name="forums_block_community">समुदाय ब्लक गर्नुहोस्</string>
     <string name="forums_blocked">ब्लक गरियो</string>
-    <string name="forums_join_community">अन्यत्रको समुदायमा सामेल हुनुहोस्</string>
-    <string name="forums_community_address">समुदायको ठेगाना</string>
     <string name="forums_join">सामेल हुनुहोस्</string>
     <string name="forums_joined">सामेल भइयो</string>
     <string name="forums_already_subscribed">तपाईंले यो फोरममा पहिले नै सदस्यता लिनुभएको छ</string>

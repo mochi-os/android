@@ -301,8 +301,6 @@
     <string name="forums_block_server">Blokir server</string>
     <string name="forums_block_community">Blokir komunitas</string>
     <string name="forums_blocked">Diblokir</string>
-    <string name="forums_join_community">Gabung ke komunitas di tempat lain</string>
-    <string name="forums_community_address">Alamat komunitas</string>
     <string name="forums_join">Gabung</string>
     <string name="forums_joined">Berhasil bergabung</string>
     <string name="forums_already_subscribed">Anda sudah berlangganan forum ini</string>

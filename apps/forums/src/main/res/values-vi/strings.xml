@@ -300,8 +300,6 @@
     <string name="forums_block_server">Chặn máy chủ</string>
     <string name="forums_block_community">Chặn cộng đồng</string>
     <string name="forums_blocked">Đã chặn</string>
-    <string name="forums_join_community">Tham gia cộng đồng ở nơi khác</string>
-    <string name="forums_community_address">Địa chỉ cộng đồng</string>
     <string name="forums_join">Tham gia</string>
     <string name="forums_joined">Đã tham gia</string>
     <string name="forums_already_subscribed">Bạn đã đăng ký diễn đàn này</string>

@@ -301,8 +301,6 @@
     <string name="forums_block_server">Sekat pelayan</string>
     <string name="forums_block_community">Sekat komuniti</string>
     <string name="forums_blocked">Disekat</string>
-    <string name="forums_join_community">Sertai komuniti di tempat lain</string>
-    <string name="forums_community_address">Alamat komuniti</string>
     <string name="forums_join">Sertai</string>
     <string name="forums_joined">Telah menyertai</string>
     <string name="forums_already_subscribed">Anda sudah melanggan forum ini</string>

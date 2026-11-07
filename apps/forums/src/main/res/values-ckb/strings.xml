@@ -301,8 +301,6 @@
     <string name="forums_block_server">بلۆککردنی ڕاژەکار</string>
     <string name="forums_block_community">بلۆککردنی کۆمەڵگە</string>
     <string name="forums_blocked">بلۆک کرا</string>
-    <string name="forums_join_community">بەشداربوون لە کۆمەڵگەیەک لە شوێنێکی تر</string>
-    <string name="forums_community_address">ناونیشانی کۆمەڵگە</string>
     <string name="forums_join">بەشداربە</string>
     <string name="forums_joined">بەشدار بوو</string>
     <string name="forums_already_subscribed">تۆ پێشتر بەشدارت لەم فۆڕۆمەدا</string>

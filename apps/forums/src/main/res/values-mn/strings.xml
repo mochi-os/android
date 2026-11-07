@@ -301,8 +301,6 @@
     <string name="forums_block_server">Серверийг блоклох</string>
     <string name="forums_block_community">Нийгэмлэгийг блоклох</string>
     <string name="forums_blocked">Блоклолоо</string>
-    <string name="forums_join_community">Өөр газрын нийгэмлэгт нэгдэх</string>
-    <string name="forums_community_address">Нийгэмлэгийн хаяг</string>
     <string name="forums_join">Нэгдэх</string>
     <string name="forums_joined">Нэгдлээ</string>
     <string name="forums_already_subscribed">Та энэ форумыг аль хэдийн захиалсан байна</string>

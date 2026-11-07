@@ -22,7 +22,6 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import androidx.compose.ui.test.performTextInput
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
@@ -30,6 +29,7 @@ import org.junit.Assert.assertSame
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.forums.model.CommunityFound
 import org.mochios.forums.model.Crosspost
 import org.mochios.forums.model.Destination
 import org.mochios.forums.model.NetworkAccount
@@ -42,7 +42,7 @@ import org.mochios.forums.ui.components.destinationBanner
 import org.mochios.forums.ui.components.linkImage
 import org.mochios.forums.ui.components.PostLinkCard
 import org.mochios.forums.ui.components.SensitiveCover
-import org.mochios.forums.ui.find.JoinCommunity
+import org.mochios.forums.ui.find.CommunityResult
 import org.mochios.forums.ui.find.LemmyAccounts
 import org.mochios.forums.ui.newpost.PostLinkField
 import org.mochios.forums.ui.newpost.PostMarksFields
@@ -126,58 +126,45 @@ class ForumsNetworksScreenTest {
         assertEquals(true, sensitive)
     }
 
-    @Test
-    fun `the address stays in the field until the community is joined`() {
-        var joined: (() -> Unit)? = null
-        rule.setContent {
-            JoinCommunity(
-                accounts = listOf(NetworkAccount(id = "h1", identifier = "amy@here.example")),
-                busy = false,
-                onJoin = { _, _, done -> joined = done },
-            )
-        }
-        rule.onNodeWithText("Community address").performTextInput("!books@lemmy.example")
-        rule.onNodeWithText("Join").performClick()
-        // Not joined yet, or refused: what was typed is kept.
-        rule.onNodeWithText("!books@lemmy.example").assertExists()
-        joined!!()
-        rule.waitForIdle()
-        rule.onNodeWithText("!books@lemmy.example").assertDoesNotExist()
-    }
+    private val technology = CommunityFound(id = "https://lemmy.world/c/technology", name = "Technology", handle = "technology@lemmy.world")
 
     @Test
-    fun `a community is joined as the account chosen where there are several`() {
-        var joined: Pair<String, String>? = null
+    fun `the community a search names shows as a result, joined as the one hosted account`() {
+        var joined: String? = null
         rule.setContent {
-            JoinCommunity(
-                accounts = listOf(NetworkAccount(id = "h1", identifier = "amy@here.example"), NetworkAccount(id = "h2", identifier = "zed@here.example")),
-                busy = false,
-                onJoin = { address, account, _ -> joined = address to account },
-            )
-        }
-        rule.onNodeWithText("Community address").performTextInput("!books@lemmy.example")
-        rule.onNodeWithText("amy@here.example").performClick()
-        rule.onNodeWithText("zed@here.example").performClick()
-        rule.onNodeWithText("Join").performClick()
-        assertEquals("!books@lemmy.example" to "h2", joined)
-    }
-
-    @Test
-    fun `the community a search typed is joined as it stands, the search hiding the empty form`() {
-        var joined: Pair<String, String>? = null
-        rule.setContent {
-            JoinCommunity(
+            CommunityResult(
+                community = technology,
                 accounts = listOf(NetworkAccount(id = "h1", identifier = "amy@here.example")),
                 busy = false,
-                onJoin = { address, account, _ -> joined = address to account },
-                typed = "!technology@lemmy.world",
+                onJoin = { joined = it },
             )
         }
-        // THE POINT: the typed address is offered to join, with no field to fill again.
-        rule.onNodeWithText("Community address").assertDoesNotExist()
+        // THE POINT: a result like the forums found here, with no form to fill.
+        rule.onNodeWithText("Technology").assertIsDisplayed()
         rule.onNodeWithText("!technology@lemmy.world").assertIsDisplayed()
         rule.onNodeWithText("Join").performClick()
-        assertEquals("!technology@lemmy.world" to "h1", joined)
+        assertEquals("h1", joined)
+    }
+
+    @Test
+    fun `where there are several hosted accounts, Join asks which, naming each in full`() {
+        var joined: String? = null
+        rule.setContent {
+            CommunityResult(
+                community = technology,
+                accounts = listOf(
+                    NetworkAccount(id = "h1", identifier = "@a@wasabi.mochi-os.org"),
+                    NetworkAccount(id = "h2", identifier = "@acunningham@wasabi.mochi-os.org"),
+                ),
+                busy = false,
+                onJoin = { joined = it },
+            )
+        }
+        rule.onNodeWithText("Join").performClick()
+        assertEquals(null, joined)
+        rule.onNodeWithText("@a@wasabi.mochi-os.org").assertIsDisplayed()
+        rule.onNodeWithText("@acunningham@wasabi.mochi-os.org").performClick()
+        assertEquals("h2", joined)
     }
 
     @Test

@@ -301,8 +301,6 @@
     <string name="forums_block_server">સર્વરને બ્લૉક કરો</string>
     <string name="forums_block_community">સમુદાયને બ્લૉક કરો</string>
     <string name="forums_blocked">બ્લૉક કર્યું</string>
-    <string name="forums_join_community">અન્યત્ર કોઈ સમુદાયમાં જોડાઓ</string>
-    <string name="forums_community_address">સમુદાયનું સરનામું</string>
     <string name="forums_join">જોડાઓ</string>
     <string name="forums_joined">જોડાયા</string>
     <string name="forums_already_subscribed">તમે પહેલેથી જ આ ફોરમ પર સબ્સ્ક્રાઇબ કરેલ છો</string>

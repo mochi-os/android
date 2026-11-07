@@ -303,8 +303,6 @@
     <string name="forums_block_server">Zablokovať server</string>
     <string name="forums_block_community">Zablokovať komunitu</string>
     <string name="forums_blocked">Zablokované</string>
-    <string name="forums_join_community">Pripojiť sa ku komunite inde</string>
-    <string name="forums_community_address">Adresa komunity</string>
     <string name="forums_join">Pripojiť sa</string>
     <string name="forums_joined">Pripojili ste sa</string>
     <string name="forums_already_subscribed">Už ste prihlásený na odber tohto fóra</string>

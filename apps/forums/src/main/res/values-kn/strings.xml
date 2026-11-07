@@ -301,8 +301,6 @@
     <string name="forums_block_server">ಸರ್ವರ್ ಅನ್ನು ನಿರ್ಬಂಧಿಸಿ</string>
     <string name="forums_block_community">ಸಮುದಾಯವನ್ನು ನಿರ್ಬಂಧಿಸಿ</string>
     <string name="forums_blocked">ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ</string>
-    <string name="forums_join_community">ಬೇರೆಡೆಯ ಸಮುದಾಯಕ್ಕೆ ಸೇರಿ</string>
-    <string name="forums_community_address">ಸಮುದಾಯದ ವಿಳಾಸ</string>
     <string name="forums_join">ಸೇರಿ</string>
     <string name="forums_joined">ಸೇರಿದ್ದೀರಿ</string>
     <string name="forums_already_subscribed">ನೀವು ಈಗಾಗಲೇ ಈ ಫೋರಂಗೆ ಚಂದಾದಾರರಾಗಿದ್ದೀರಿ</string>

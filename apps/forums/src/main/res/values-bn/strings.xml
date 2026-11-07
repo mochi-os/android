@@ -301,8 +301,6 @@
     <string name="forums_block_server">সার্ভার ব্লক করুন</string>
     <string name="forums_block_community">কমিউনিটি ব্লক করুন</string>
     <string name="forums_blocked">ব্লক করা হয়েছে</string>
-    <string name="forums_join_community">অন্য কোথাও একটি কমিউনিটিতে যোগ দিন</string>
-    <string name="forums_community_address">কমিউনিটির ঠিকানা</string>
     <string name="forums_join">যোগ দিন</string>
     <string name="forums_joined">যোগ দিয়েছেন</string>
     <string name="forums_already_subscribed">আপনি ইতিমধ্যে এই ফোরামে সাবস্ক্রাইব করেছেন</string>

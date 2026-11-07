@@ -301,8 +301,6 @@
     <string name="forums_block_server">Serveri blokla</string>
     <string name="forums_block_community">İcmanı blokla</string>
     <string name="forums_blocked">Bloklandı</string>
-    <string name="forums_join_community">Başqa yerdəki icmaya qoşul</string>
-    <string name="forums_community_address">İcma ünvanı</string>
     <string name="forums_join">Qoşul</string>
     <string name="forums_joined">Qoşuldu</string>
     <string name="forums_already_subscribed">Siz artıq bu foruma abunəsiniz</string>

@@ -301,8 +301,6 @@
     <string name="forums_block_server">Αποκλεισμός διακομιστή</string>
     <string name="forums_block_community">Αποκλεισμός κοινότητας</string>
     <string name="forums_blocked">Αποκλείστηκε</string>
-    <string name="forums_join_community">Συμμετοχή σε κοινότητα αλλού</string>
-    <string name="forums_community_address">Διεύθυνση κοινότητας</string>
     <string name="forums_join">Συμμετοχή</string>
     <string name="forums_joined">Συμμετείχατε</string>
     <string name="forums_already_subscribed">Είστε ήδη εγγεγραμμένος σε αυτό το φόρουμ</string>

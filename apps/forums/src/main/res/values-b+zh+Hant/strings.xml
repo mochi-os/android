@@ -300,8 +300,6 @@
     <string name="forums_block_server">封鎖伺服器</string>
     <string name="forums_block_community">封鎖社群</string>
     <string name="forums_blocked">已封鎖</string>
-    <string name="forums_join_community">加入其他伺服器上的社群</string>
-    <string name="forums_community_address">社群位址</string>
     <string name="forums_join">加入</string>
     <string name="forums_joined">已加入</string>
     <string name="forums_already_subscribed">您已訂閱此論壇</string>

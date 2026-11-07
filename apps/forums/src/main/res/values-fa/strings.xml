@@ -301,8 +301,6 @@
     <string name="forums_block_server">مسدود کردن سرور</string>
     <string name="forums_block_community">مسدود کردن جامعه</string>
     <string name="forums_blocked">مسدود شد</string>
-    <string name="forums_join_community">پیوستن به جامعه‌ای در جای دیگر</string>
-    <string name="forums_community_address">آدرس جامعه</string>
     <string name="forums_join">پیوستن</string>
     <string name="forums_joined">پیوستید</string>
     <string name="forums_already_subscribed">شما از پیش در این انجمن مشترک شده‌اید</string>

@@ -301,8 +301,6 @@
     <string name="forums_block_server">सर्व्हर ब्लॉक करा</string>
     <string name="forums_block_community">समुदाय ब्लॉक करा</string>
     <string name="forums_blocked">ब्लॉक केले</string>
-    <string name="forums_join_community">इतरत्र असलेल्या समुदायात सामील व्हा</string>
-    <string name="forums_community_address">समुदायाचा पत्ता</string>
     <string name="forums_join">सामील व्हा</string>
     <string name="forums_joined">सामील झालात</string>
     <string name="forums_already_subscribed">तुम्ही आधीच या फोरमला सबस्क्राइब केले आहे</string>

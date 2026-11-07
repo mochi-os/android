@@ -301,8 +301,6 @@
     <string name="forums_block_server">I-block ang server</string>
     <string name="forums_block_community">I-block ang komunidad</string>
     <string name="forums_blocked">Na-block</string>
-    <string name="forums_join_community">Sumali sa isang komunidad sa ibang lugar</string>
-    <string name="forums_community_address">Address ng komunidad</string>
     <string name="forums_join">Sumali</string>
     <string name="forums_joined">Nakasali na</string>
     <string name="forums_already_subscribed">Naka-subscribe ka na sa forum na ito</string>

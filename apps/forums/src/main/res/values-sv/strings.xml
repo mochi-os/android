@@ -301,8 +301,6 @@
     <string name="forums_block_server">Blockera servern</string>
     <string name="forums_block_community">Blockera gemenskapen</string>
     <string name="forums_blocked">Blockerad</string>
-    <string name="forums_join_community">Gå med i en gemenskap på annat håll</string>
-    <string name="forums_community_address">Gemenskapens adress</string>
     <string name="forums_join">Gå med</string>
     <string name="forums_joined">Du har gått med</string>
     <string name="forums_already_subscribed">Du prenumererar redan på det här forumet</string>

@@ -300,8 +300,6 @@
     <string name="forums_block_server">រារាំងម៉ាស៊ីនមេ</string>
     <string name="forums_block_community">រារាំងសហគមន៍</string>
     <string name="forums_blocked">បានរារាំង</string>
-    <string name="forums_join_community">ចូលរួមសហគមន៍នៅកន្លែងផ្សេង</string>
-    <string name="forums_community_address">អាសយដ្ឋានសហគមន៍</string>
     <string name="forums_join">ចូលរួម</string>
     <string name="forums_joined">បានចូលរួម</string>
     <string name="forums_already_subscribed">អ្នកបានជាវវេទិកានេះរួចហើយ</string>

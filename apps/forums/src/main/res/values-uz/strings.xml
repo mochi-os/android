@@ -301,8 +301,6 @@
     <string name="forums_block_server">Serverni bloklash</string>
     <string name="forums_block_community">Hamjamiyatni bloklash</string>
     <string name="forums_blocked">Bloklandi</string>
-    <string name="forums_join_community">Boshqa joydagi hamjamiyatga qoʻshilish</string>
-    <string name="forums_community_address">Hamjamiyat manzili</string>
     <string name="forums_join">Qoʻshilish</string>
     <string name="forums_joined">Qoʻshildingiz</string>
     <string name="forums_already_subscribed">Siz allaqachon ushbu forumga obuna boʻlgansiz</string>

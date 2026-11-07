@@ -301,8 +301,6 @@
     <string name="forums_block_server">සේවාදායකය අවහිර කරන්න</string>
     <string name="forums_block_community">ප්‍රජාව අවහිර කරන්න</string>
     <string name="forums_blocked">අවහිර කළා</string>
-    <string name="forums_join_community">වෙනත් තැනක ප්‍රජාවකට එක්වන්න</string>
-    <string name="forums_community_address">ප්‍රජා ලිපිනය</string>
     <string name="forums_join">එක්වන්න</string>
     <string name="forums_joined">එක් වුණා</string>
     <string name="forums_already_subscribed">ඔබ දැනටමත් මෙම සංසදයට දායක වී ඇත</string>

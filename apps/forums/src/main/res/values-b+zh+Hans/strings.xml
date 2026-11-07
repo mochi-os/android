@@ -300,8 +300,6 @@
     <string name="forums_block_server">屏蔽服务器</string>
     <string name="forums_block_community">屏蔽社区</string>
     <string name="forums_blocked">已屏蔽</string>
-    <string name="forums_join_community">加入其他服务器上的社区</string>
-    <string name="forums_community_address">社区地址</string>
     <string name="forums_join">加入</string>
     <string name="forums_joined">已加入</string>
     <string name="forums_already_subscribed">您已订阅此论坛</string>

@@ -300,8 +300,6 @@
     <string name="forums_block_server">ဆာဗာကို ပိတ်ဆို့မည်</string>
     <string name="forums_block_community">အသိုင်းအဝိုင်းကို ပိတ်ဆို့မည်</string>
     <string name="forums_blocked">ပိတ်ဆို့ပြီးပါပြီ</string>
-    <string name="forums_join_community">အခြားနေရာရှိ အသိုင်းအဝိုင်းတွင် ပါဝင်မည်</string>
-    <string name="forums_community_address">အသိုင်းအဝိုင်း လိပ်စာ</string>
     <string name="forums_join">ပါဝင်မည်</string>
     <string name="forums_joined">ပါဝင်ပြီးပါပြီ</string>
     <string name="forums_already_subscribed">ဤ ဖိုရမ် ကို စာရင်းသွင်းထားပြီးဖြစ်သည်</string>

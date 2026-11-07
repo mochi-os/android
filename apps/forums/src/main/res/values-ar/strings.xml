@@ -305,8 +305,6 @@
     <string name="forums_block_server">حظر الخادم</string>
     <string name="forums_block_community">حظر المجتمع</string>
     <string name="forums_blocked">تم الحظر</string>
-    <string name="forums_join_community">انضم إلى مجتمع في مكان آخر</string>
-    <string name="forums_community_address">عنوان المجتمع</string>
     <string name="forums_join">انضمام</string>
     <string name="forums_joined">تم الانضمام</string>
     <string name="forums_already_subscribed">أنت مشترك بالفعل في هذا المنتدى</string>

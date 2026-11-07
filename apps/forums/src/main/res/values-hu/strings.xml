@@ -301,8 +301,6 @@
     <string name="forums_block_server">Szerver blokkolása</string>
     <string name="forums_block_community">Közösség blokkolása</string>
     <string name="forums_blocked">Blokkolva</string>
-    <string name="forums_join_community">Csatlakozás egy máshol lévő közösséghez</string>
-    <string name="forums_community_address">Közösség címe</string>
     <string name="forums_join">Csatlakozás</string>
     <string name="forums_joined">Csatlakozva</string>
     <string name="forums_already_subscribed">Már feliratkozott erre a fórumra</string>

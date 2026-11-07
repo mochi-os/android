@@ -301,8 +301,6 @@
     <string name="forums_block_server">سرور بلاک کړئ</string>
     <string name="forums_block_community">ټولنه بلاک کړئ</string>
     <string name="forums_blocked">بلاک شو</string>
-    <string name="forums_join_community">په بل ځای کې له یوې ټولنې سره یوځای شئ</string>
-    <string name="forums_community_address">د ټولنې پته</string>
     <string name="forums_join">یوځای شئ</string>
     <string name="forums_joined">یوځای شوئ</string>
     <string name="forums_already_subscribed">تاسو دمخه په دې فورم کې ګډون لرئ</string>

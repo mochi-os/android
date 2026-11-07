@@ -303,8 +303,6 @@
     <string name="forums_block_server">חסימת השרת</string>
     <string name="forums_block_community">חסימת הקהילה</string>
     <string name="forums_blocked">נחסם</string>
-    <string name="forums_join_community">הצטרפות לקהילה במקום אחר</string>
-    <string name="forums_community_address">כתובת הקהילה</string>
     <string name="forums_join">הצטרפות</string>
     <string name="forums_joined">הצטרפת</string>
     <string name="forums_already_subscribed">אתה כבר רשום לפורום זה</string>

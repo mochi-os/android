@@ -303,8 +303,6 @@
     <string name="forums_block_server">Заблокувати сервер</string>
     <string name="forums_block_community">Заблокувати спільноту</string>
     <string name="forums_blocked">Заблоковано</string>
-    <string name="forums_join_community">Приєднатися до спільноти деінде</string>
-    <string name="forums_community_address">Адреса спільноти</string>
     <string name="forums_join">Приєднатися</string>
     <string name="forums_joined">Ви приєдналися</string>
     <string name="forums_already_subscribed">Ви вже підписані на цей форум</string>

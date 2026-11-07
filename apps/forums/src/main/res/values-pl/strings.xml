@@ -303,8 +303,6 @@
     <string name="forums_block_server">Zablokuj serwer</string>
     <string name="forums_block_community">Zablokuj społeczność</string>
     <string name="forums_blocked">Zablokowano</string>
-    <string name="forums_join_community">Dołącz do społeczności gdzie indziej</string>
-    <string name="forums_community_address">Adres społeczności</string>
     <string name="forums_join">Dołącz</string>
     <string name="forums_joined">Dołączono</string>
     <string name="forums_already_subscribed">Już subskrybujesz to forum</string>

@@ -301,8 +301,6 @@
     <string name="forums_block_server">Blokkeer bediener</string>
     <string name="forums_block_community">Blokkeer gemeenskap</string>
     <string name="forums_blocked">Geblokkeer</string>
-    <string name="forums_join_community">Sluit elders by \'n gemeenskap aan</string>
-    <string name="forums_community_address">Gemeenskapadres</string>
     <string name="forums_join">Sluit aan</string>
     <string name="forums_joined">Aangesluit</string>
     <string name="forums_already_subscribed">Jy is reeds op hierdie forum ingeteken</string>

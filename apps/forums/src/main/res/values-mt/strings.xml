@@ -304,8 +304,6 @@
     <string name="forums_block_server">Imblokka s-server</string>
     <string name="forums_block_community">Imblokka l-komunità</string>
     <string name="forums_blocked">Imblukkat</string>
-    <string name="forums_join_community">Ingħaqad ma\' komunità x\'imkien ieħor</string>
-    <string name="forums_community_address">Indirizz tal-komunità</string>
     <string name="forums_join">Ingħaqad</string>
     <string name="forums_joined">Ingħaqadt</string>
     <string name="forums_already_subscribed">Int diġà abbonat ma\' dan il-forum</string>

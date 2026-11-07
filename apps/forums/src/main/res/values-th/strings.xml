@@ -300,8 +300,6 @@
     <string name="forums_block_server">บล็อกเซิร์ฟเวอร์</string>
     <string name="forums_block_community">บล็อกชุมชน</string>
     <string name="forums_blocked">บล็อกแล้ว</string>
-    <string name="forums_join_community">เข้าร่วมชุมชนที่อื่น</string>
-    <string name="forums_community_address">ที่อยู่ชุมชน</string>
     <string name="forums_join">เข้าร่วม</string>
     <string name="forums_joined">เข้าร่วมแล้ว</string>
     <string name="forums_already_subscribed">คุณติดตามฟอรัมนี้อยู่แล้ว</string>

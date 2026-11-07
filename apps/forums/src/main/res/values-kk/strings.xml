@@ -301,8 +301,6 @@
     <string name="forums_block_server">Серверді бұғаттау</string>
     <string name="forums_block_community">Қауымдастықты бұғаттау</string>
     <string name="forums_blocked">Бұғатталды</string>
-    <string name="forums_join_community">Басқа жердегі қауымдастыққа қосылу</string>
-    <string name="forums_community_address">Қауымдастық мекенжайы</string>
     <string name="forums_join">Қосылу</string>
     <string name="forums_joined">Қосылдыңыз</string>
     <string name="forums_already_subscribed">Бұл форумға бұрыннан жазылғансыз</string>

@@ -301,8 +301,6 @@
     <string name="forums_block_server">Sunucuyu engelle</string>
     <string name="forums_block_community">Topluluğu engelle</string>
     <string name="forums_blocked">Engellendi</string>
-    <string name="forums_join_community">Başka bir yerdeki topluluğa katıl</string>
-    <string name="forums_community_address">Topluluk adresi</string>
     <string name="forums_join">Katıl</string>
     <string name="forums_joined">Katıldınız</string>
     <string name="forums_already_subscribed">Bu foruma zaten abonesin</string>

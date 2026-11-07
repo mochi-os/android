@@ -301,8 +301,6 @@
     <string name="forums_block_server">Блокирай сървъра</string>
     <string name="forums_block_community">Блокирай общността</string>
     <string name="forums_blocked">Блокирано</string>
-    <string name="forums_join_community">Присъединете се към общност другаде</string>
-    <string name="forums_community_address">Адрес на общността</string>
     <string name="forums_join">Присъедини се</string>
     <string name="forums_joined">Присъединихте се</string>
     <string name="forums_already_subscribed">Вече сте абонирани за този форум</string>

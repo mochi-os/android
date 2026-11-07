@@ -8,6 +8,9 @@ package org.mochios.forums.ui.find
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -20,9 +23,11 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.forums.R
 import org.mochios.forums.model.CommunitiesAdded
 import org.mochios.forums.model.CommunitiesImported
+import org.mochios.forums.model.CommunityFound
 import org.mochios.forums.model.NetworkAccount
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
@@ -39,9 +44,16 @@ sealed interface CommunitiesEvent {
     data class Imported(val answer: CommunitiesImported) : CommunitiesEvent
 }
 
+/** The community a search names: the search it answers, and the community, or null while it is looked up or where none answers. */
+data class CommunityLookup(
+    val query: String = "",
+    val community: CommunityFound? = null,
+    val loading: Boolean = false,
+)
+
 /**
- * Communities on other networks from the Find screen: one joined as one of
- * the user's hosted fediverse accounts by its address, and a linked Lemmy
+ * Communities on other networks from the Find screen: the one a search names,
+ * joined as one of the user's hosted fediverse accounts, and a linked Lemmy
  * account's communities and settings read in.
  */
 @HiltViewModel
@@ -60,6 +72,13 @@ class CommunitiesViewModel @Inject constructor(
     private val _busy = MutableStateFlow<Set<String>>(emptySet())
     val busy: StateFlow<Set<String>> = _busy.asStateFlow()
 
+    private val _found = MutableStateFlow(CommunityLookup())
+    val found: StateFlow<CommunityLookup> = _found.asStateFlow()
+    private var looking: Job? = null
+
+    /** The search last asked about, looked up again once the hosted accounts arrive. */
+    private var wanted = ""
+
     private val _events = MutableSharedFlow<CommunitiesEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<CommunitiesEvent> = _events.asSharedFlow()
 
@@ -67,6 +86,7 @@ class CommunitiesViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _hosted.value = repository.hostedAccounts()
+                look(wanted)
             } catch (_: Exception) {
                 // Nobody to join as.
             }
@@ -78,14 +98,42 @@ class CommunitiesViewModel @Inject constructor(
         }
     }
 
-    /** Join a community by `!name@host` or its address, as [account] (the first hosted account where empty); [onJoined] runs once it is joined. */
-    fun join(address: String, account: String, onJoined: () -> Unit = {}) {
+    /**
+     * Look up the community a search names, once typing pauses. A search that
+     * names none, or a user with no hosted account to join as, clears it.
+     */
+    fun look(query: String) {
+        val value = query.trim()
+        wanted = value
+        if (_hosted.value.isEmpty() || !looksLikeCommunity(value)) {
+            looking?.cancel()
+            _found.value = CommunityLookup()
+            return
+        }
+        if (value == _found.value.query) return
+        looking?.cancel()
+        _found.value = CommunityLookup(query = value, loading = true)
+        looking = viewModelScope.launch {
+            delay(SEARCH_DEBOUNCE)
+            val community = try {
+                repository.lookupCommunity(value)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                // Nothing answers to it: the forum search says what was found.
+                null
+            }
+            _found.value = CommunityLookup(query = value, community = community)
+        }
+    }
+
+    /** Join a community by `!name@host` or its address, as [account] (the first hosted account where empty). */
+    fun join(address: String, account: String) {
         val value = address.trim()
         val chosen = account.ifEmpty { _hosted.value.firstOrNull()?.id.orEmpty() }
         if (value.isEmpty() || chosen.isEmpty()) return
         change("join", R.string.forums_join_failed) {
             val joined = repository.joinCommunity(value, chosen)
-            onJoined()
             _events.emit(CommunitiesEvent.Joined(joined.fingerprint.ifEmpty { joined.id }, joined.alreadySubscribed))
         }
     }

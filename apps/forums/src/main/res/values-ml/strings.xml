@@ -301,8 +301,6 @@
     <string name="forums_block_server">സെർവർ ബ്ലോക്ക് ചെയ്യുക</string>
     <string name="forums_block_community">കമ്മ്യൂണിറ്റി ബ്ലോക്ക് ചെയ്യുക</string>
     <string name="forums_blocked">ബ്ലോക്ക് ചെയ്തു</string>
-    <string name="forums_join_community">മറ്റൊരിടത്തെ കമ്മ്യൂണിറ്റിയിൽ ചേരുക</string>
-    <string name="forums_community_address">കമ്മ്യൂണിറ്റി വിലാസം</string>
     <string name="forums_join">ചേരുക</string>
     <string name="forums_joined">ചേർന്നു</string>
     <string name="forums_already_subscribed">നിങ്ങൾ ഇതിനകം ഈ ഫോറത്തിലേക്ക് സബ്സ്ക്രൈബ് ചെയ്തിരിക്കുന്നു</string>

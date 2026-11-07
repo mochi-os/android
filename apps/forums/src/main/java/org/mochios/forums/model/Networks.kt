@@ -57,6 +57,14 @@ data class CommunityJoined(
     @SerializedName("already_subscribed") val alreadySubscribed: Boolean = false,
 )
 
+/** A community on another server found by its address, before it is joined: the name and handle its forum would have, and its avatar. */
+data class CommunityFound(
+    val id: String = "",
+    val name: String = "",
+    val handle: String = "",
+    val avatar: String = "",
+)
+
 /** What reading a Lemmy account's communities brought in. */
 data class CommunitiesAdded(
     val added: Int = 0,

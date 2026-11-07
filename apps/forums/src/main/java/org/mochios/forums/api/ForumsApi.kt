@@ -13,6 +13,7 @@ import org.mochios.android.api.ApiResponse
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.CommunitiesAdded
 import org.mochios.forums.model.CommunitiesImported
+import org.mochios.forums.model.CommunityFound
 import org.mochios.forums.model.CommunityJoined
 import org.mochios.forums.model.CommunityState
 import org.mochios.forums.model.NetworkAccount
@@ -800,6 +801,13 @@ interface ForumsApi {
     suspend fun listNetworkAccounts(
         @Query("capability") capability: String,
     ): Response<List<NetworkAccount>>
+
+    // A community on another server, by !name@host or its address, as Find
+    // shows it before it is joined.
+    @GET("-/communities/lookup")
+    suspend fun lookupCommunity(
+        @Query("address") address: String,
+    ): Response<ApiResponse<CommunityFound>>
 
     // A community on another server joined as one of the user's hosted
     // fediverse accounts, by !name@host or its address.

@@ -303,8 +303,6 @@
     <string name="forums_block_server">Заблокировать сервер</string>
     <string name="forums_block_community">Заблокировать сообщество</string>
     <string name="forums_blocked">Заблокировано</string>
-    <string name="forums_join_community">Вступить в сообщество на другом сервере</string>
-    <string name="forums_community_address">Адрес сообщества</string>
     <string name="forums_join">Вступить</string>
     <string name="forums_joined">Вы вступили в сообщество</string>
     <string name="forums_already_subscribed">Вы уже подписаны на этот форум</string>

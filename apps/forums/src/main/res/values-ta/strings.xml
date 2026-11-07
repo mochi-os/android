@@ -301,8 +301,6 @@
     <string name="forums_block_server">சர்வரைத் தடு</string>
     <string name="forums_block_community">சமூகத்தைத் தடு</string>
     <string name="forums_blocked">தடுக்கப்பட்டது</string>
-    <string name="forums_join_community">வேறு இடத்தில் உள்ள சமூகத்தில் சேர்</string>
-    <string name="forums_community_address">சமூக முகவரி</string>
     <string name="forums_join">சேர்</string>
     <string name="forums_joined">சேர்ந்துவிட்டீர்கள்</string>
     <string name="forums_already_subscribed">நீங்கள் ஏற்கனவே இந்த மன்றத்திற்கு சந்தாதாராக உள்ளீர்கள்</string>

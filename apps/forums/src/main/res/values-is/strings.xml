@@ -301,8 +301,6 @@
     <string name="forums_block_server">Loka á þjón</string>
     <string name="forums_block_community">Loka á samfélag</string>
     <string name="forums_blocked">Lokað á</string>
-    <string name="forums_join_community">Ganga í samfélag annars staðar</string>
-    <string name="forums_community_address">Vistfang samfélags</string>
     <string name="forums_join">Ganga í</string>
     <string name="forums_joined">Gengið í</string>
     <string name="forums_already_subscribed">Þú ert nú þegar áskrifandi að þessu spjallborði</string>

@@ -304,8 +304,6 @@
     <string name="forums_block_server">Bac an freastalaí</string>
     <string name="forums_block_community">Bac an pobal</string>
     <string name="forums_blocked">Bactha</string>
-    <string name="forums_join_community">Glac páirt i bpobal in áit eile</string>
-    <string name="forums_community_address">Seoladh an phobail</string>
     <string name="forums_join">Glac páirt</string>
     <string name="forums_joined">Páirteach</string>
     <string name="forums_already_subscribed">Tá tú liostáilte leis an bhfóram seo cheana</string>

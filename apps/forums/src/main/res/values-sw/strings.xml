@@ -301,8 +301,6 @@
     <string name="forums_block_server">Zuia seva</string>
     <string name="forums_block_community">Zuia jumuiya</string>
     <string name="forums_blocked">Imezuiwa</string>
-    <string name="forums_join_community">Jiunge na jumuiya mahali pengine</string>
-    <string name="forums_community_address">Anwani ya jumuiya</string>
     <string name="forums_join">Jiunge</string>
     <string name="forums_joined">Umejiunga</string>
     <string name="forums_already_subscribed">Tayari umejiunga na jukwaa hili</string>

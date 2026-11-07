@@ -301,8 +301,6 @@
     <string name="forums_block_server">Server blockieren</string>
     <string name="forums_block_community">Gemeinschaft blockieren</string>
     <string name="forums_blocked">Blockiert</string>
-    <string name="forums_join_community">Einer Gemeinschaft anderswo beitreten</string>
-    <string name="forums_community_address">Adresse der Gemeinschaft</string>
     <string name="forums_join">Beitreten</string>
     <string name="forums_joined">Beigetreten</string>
     <string name="forums_already_subscribed">Sie haben dieses Forum bereits abonniert</string>

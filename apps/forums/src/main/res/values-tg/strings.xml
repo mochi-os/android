@@ -301,8 +301,6 @@
     <string name="forums_block_server">Серверро манъ кардан</string>
     <string name="forums_block_community">Ҷомеаро манъ кардан</string>
     <string name="forums_blocked">Манъ карда шуд</string>
-    <string name="forums_join_community">Ба ҷомеае дар ҷои дигар ҳамроҳ шудан</string>
-    <string name="forums_community_address">Суроғаи ҷомеа</string>
     <string name="forums_join">Ҳамроҳ шудан</string>
     <string name="forums_joined">Шумо ҳамроҳ шудед</string>
     <string name="forums_already_subscribed">Шумо аллакай ба ин форум обуна шудаед</string>

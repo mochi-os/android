@@ -302,8 +302,6 @@
     <string name="forums_block_server">Blochează serverul</string>
     <string name="forums_block_community">Blochează comunitatea</string>
     <string name="forums_blocked">Blocat</string>
-    <string name="forums_join_community">Alătură-te unei comunități din altă parte</string>
-    <string name="forums_community_address">Adresa comunității</string>
     <string name="forums_join">Alătură-te</string>
     <string name="forums_joined">Te-ai alăturat</string>
     <string name="forums_already_subscribed">Ești deja abonat la acest forum</string>

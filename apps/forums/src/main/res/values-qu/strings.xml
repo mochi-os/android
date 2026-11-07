@@ -301,8 +301,6 @@
     <string name="forums_block_server">Servidorta hark\'ay</string>
     <string name="forums_block_community">Aylluta hark\'ay</string>
     <string name="forums_blocked">Hark\'asqa</string>
-    <string name="forums_join_community">Huk servidorpi aylluman yaykuy</string>
-    <string name="forums_community_address">Ayllup direccionnin</string>
     <string name="forums_join">Yaykuy</string>
     <string name="forums_joined">Aylluman yaykurqanki</string>
     <string name="forums_already_subscribed">Kay foroman suscribisqaña kanki</string>

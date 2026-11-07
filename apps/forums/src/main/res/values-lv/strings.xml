@@ -302,8 +302,6 @@
     <string name="forums_block_server">Bloķēt serveri</string>
     <string name="forums_block_community">Bloķēt kopienu</string>
     <string name="forums_blocked">Bloķēts</string>
-    <string name="forums_join_community">Pievienoties kopienai citur</string>
-    <string name="forums_community_address">Kopienas adrese</string>
     <string name="forums_join">Pievienoties</string>
     <string name="forums_joined">Pievienojāties</string>
     <string name="forums_already_subscribed">Jūs jau abonējat šo forumu</string>

@@ -36,6 +36,8 @@ import org.mochios.forums.repository.ForumsRepository
 import org.mochios.forums.repository.SavedRepository
 import org.mochios.forums.ui.find.CommunitiesEvent
 import org.mochios.forums.ui.find.CommunitiesViewModel
+import org.mochios.forums.ui.find.CommunityLookup
+import org.mochios.forums.ui.find.answers
 import org.mochios.forums.ui.forum.ForumEvent
 import org.mochios.forums.ui.forum.ForumViewModel
 import org.mochios.forums.ui.newpost.NewPostViewModel
@@ -75,6 +77,9 @@ class ForumsNetworksViewModelsTest {
     /** Holds a Lemmy account's add back until a test lets it go. */
     @Volatile private var addGate: CountDownLatch? = null
 
+    /** The addresses communities were looked up by, in order. */
+    private val lookups = ConcurrentLinkedQueue<String>()
+
     /** When the server began and finished each change, in order. */
     private val order = java.util.concurrent.CopyOnWriteArrayList<String>()
 
@@ -106,6 +111,12 @@ class ForumsNetworksViewModelsTest {
                     "/forums/-/communities/join" -> if (joinRefused) {
                         MockResponse().setResponseCode(404).setBody("""{"error": "Community not found"}""")
                     } else order.add("join").let { ok("""{"id": "c1", "fingerprint": "cfp", "name": "Books", "already_subscribed": false}""") }
+                    "/forums/-/communities/lookup" -> {
+                        val address = request.requestUrl?.queryParameter("address").orEmpty()
+                        lookups += address
+                        if (address.startsWith("!none@")) MockResponse().setResponseCode(404).setBody("""{"error": "Community not found"}""")
+                        else ok("""{"id": "https://lemmy.world/c/technology", "name": "Technology", "handle": "technology@lemmy.world", "avatar": ""}""")
+                    }
                     "/forums/-/communities/add" -> {
                         order += "add"
                         addGate?.await(5, TimeUnit.SECONDS)
@@ -348,20 +359,64 @@ class ForumsNetworksViewModelsTest {
     }
 
     @Test
-    fun `a refused join says so and leaves the address, one that is joined clears it`() {
+    fun `a refused join says so, and joins nothing`() {
         val model = CommunitiesViewModel(repository)
         val events = mutableListOf<CommunitiesEvent>()
         val job = CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { events.add(it) } }
         until("the accounts") { model.hosted.value.isNotEmpty() }
         joinRefused = true
-        var cleared = false
-        model.join("!none@lemmy.example", "") { cleared = true }
+        model.join("!none@lemmy.example", "")
         until("the refusal") { events.any { it is CommunitiesEvent.Failure } && model.busy.value.isEmpty() }
-        assertFalse(cleared)
-        joinRefused = false
-        model.join("!books@lemmy.example", "") { cleared = true }
-        until("the join") { events.any { it is CommunitiesEvent.Joined } }
-        assertTrue(cleared)
+        assertFalse(events.any { it is CommunitiesEvent.Joined })
         job.cancel()
+    }
+
+    @Test
+    fun `the community a search names is looked up once typing pauses`() {
+        val model = CommunitiesViewModel(repository)
+        until("the accounts") { model.hosted.value.isNotEmpty() }
+        model.look("!b@lemmy.world")
+        // A pause between keys, shorter than typing's pause, with time for an answer.
+        repeat(3) {
+            shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS)
+            Thread.sleep(100)
+        }
+        model.look(" !technology@lemmy.world ")
+        until("the community") { model.found.value.community != null }
+        val found = model.found.value
+        assertEquals("!technology@lemmy.world", found.query)
+        assertEquals("Technology", found.community?.name)
+        assertEquals("technology@lemmy.world", found.community?.handle)
+        assertTrue(found.answers("!technology@lemmy.world"))
+        // THE POINT: what was typed while typing went on is not looked up.
+        assertEquals(listOf("!technology@lemmy.world"), lookups.toList())
+        // The same search again asks nothing more.
+        model.look("!technology@lemmy.world")
+        settle()
+        assertEquals(1, lookups.size)
+    }
+
+    @Test
+    fun `a community typed before the hosted accounts are known is looked up once they are`() {
+        val model = CommunitiesViewModel(repository)
+        model.look("!technology@lemmy.world")
+        until("the community") { model.found.value.community != null }
+        assertEquals(listOf("!technology@lemmy.world"), lookups.toList())
+    }
+
+    @Test
+    fun `a search that names no community, or one nothing answers to, shows nothing from elsewhere`() {
+        val model = CommunitiesViewModel(repository)
+        until("the accounts") { model.hosted.value.isNotEmpty() }
+        model.look("technology")
+        assertEquals(CommunityLookup(), model.found.value)
+        assertFalse(model.found.value.answers("technology"))
+        model.look("!none@lemmy.example")
+        assertTrue("the lookup on its way stands in for no forums found", model.found.value.answers("!none@lemmy.example"))
+        until("the answer") { !model.found.value.loading }
+        assertNull(model.found.value.community)
+        assertFalse(model.found.value.answers("!none@lemmy.example"))
+        settle()
+        assertEquals(listOf("!none@lemmy.example"), lookups.toList())
     }
 }

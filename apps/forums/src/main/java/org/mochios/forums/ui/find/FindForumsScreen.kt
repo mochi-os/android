@@ -142,9 +142,12 @@ fun FindForumsScreen(
             Spacer(Modifier.height(8.dp))
 
             // Communities on other networks, beside the forums found here: the
-            // ways in while nothing is searched, and the way to join the
-            // community a search names.
+            // ways in while nothing is searched, and the community a search
+            // names, which then stands in for "no forums found".
             val query = uiState.searchQuery.trim()
+            val found by communities.found.collectAsState()
+            LaunchedEffect(query) { communities.look(query) }
+            val elsewhere = found.answers(query)
             if (query.isEmpty() || looksLikeCommunity(query)) {
                 CommunitiesSections(
                     viewModel = communities,
@@ -191,7 +194,7 @@ fun FindForumsScreen(
                     }
                 }
                 displayForums.isEmpty() && uiState.searchQuery.isNotBlank() &&
-                    !uiState.isSearching && !uiState.isProbing -> {
+                    !uiState.isSearching && !uiState.isProbing && !elsewhere -> {
                     EmptyState(
                         icon = Icons.Default.Search,
                         title = stringResource(R.string.forums_find_no_results),

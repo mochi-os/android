@@ -349,9 +349,6 @@
     <string name="forums_block_server">Block server</string>
     <string name="forums_block_community">Block community</string>
     <string name="forums_blocked">Blocked</string>
-    <string name="forums_join_community">Join a community elsewhere</string>
-    <string name="forums_community_address">Community address</string>
-    <string name="forums_community_address_hint" translatable="false">!name@example.org</string>
     <string name="forums_join">Join</string>
     <string name="forums_joined">Joined</string>
     <string name="forums_already_subscribed">You are already subscribed to this forum</string>

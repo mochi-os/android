@@ -300,8 +300,6 @@
     <string name="forums_block_server">ບລັອກເຊີບເວີ</string>
     <string name="forums_block_community">ບລັອກຊຸມຊົນ</string>
     <string name="forums_blocked">ບລັອກແລ້ວ</string>
-    <string name="forums_join_community">ເຂົ້າຮ່ວມຊຸມຊົນຢູ່ບ່ອນອື່ນ</string>
-    <string name="forums_community_address">ທີ່ຢູ່ຊຸມຊົນ</string>
     <string name="forums_join">ເຂົ້າຮ່ວມ</string>
     <string name="forums_joined">ເຂົ້າຮ່ວມແລ້ວ</string>
     <string name="forums_already_subscribed">ທ່ານໄດ້ສະໝັກສະມາຊິກກະດານສົນທະນານີ້ແລ້ວ</string>

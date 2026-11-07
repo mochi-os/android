@@ -301,8 +301,6 @@
     <string name="forums_block_server">سرور کو بلاک کریں</string>
     <string name="forums_block_community">کمیونٹی کو بلاک کریں</string>
     <string name="forums_blocked">بلاک کر دیا گیا</string>
-    <string name="forums_join_community">کسی اور جگہ کی کمیونٹی میں شامل ہوں</string>
-    <string name="forums_community_address">کمیونٹی کا پتہ</string>
     <string name="forums_join">شامل ہوں</string>
     <string name="forums_joined">آپ شامل ہو گئے</string>
     <string name="forums_already_subscribed">آپ پہلے سے اس فورم پر سبسکرائب ہیں</string>

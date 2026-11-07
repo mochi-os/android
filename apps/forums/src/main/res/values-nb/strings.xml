@@ -301,8 +301,6 @@
     <string name="forums_block_server">Blokker server</string>
     <string name="forums_block_community">Blokker fellesskap</string>
     <string name="forums_blocked">Blokkert</string>
-    <string name="forums_join_community">Bli med i et fellesskap et annet sted</string>
-    <string name="forums_community_address">Fellesskapsadresse</string>
     <string name="forums_join">Bli med</string>
     <string name="forums_joined">Du ble med</string>
     <string name="forums_already_subscribed">Du abonnerer allerede på dette forumet</string>

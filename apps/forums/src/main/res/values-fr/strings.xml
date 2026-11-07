@@ -301,8 +301,6 @@
     <string name="forums_block_server">Bloquer le serveur</string>
     <string name="forums_block_community">Bloquer la communauté</string>
     <string name="forums_blocked">Bloqué</string>
-    <string name="forums_join_community">Rejoindre une communauté ailleurs</string>
-    <string name="forums_community_address">Adresse de la communauté</string>
     <string name="forums_join">Rejoindre</string>
     <string name="forums_joined">Rejoint</string>
     <string name="forums_already_subscribed">Vous êtes déjà abonné à ce forum</string>

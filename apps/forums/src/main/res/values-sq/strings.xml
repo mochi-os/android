@@ -301,8 +301,6 @@
     <string name="forums_block_server">Blloko serverin</string>
     <string name="forums_block_community">Blloko komunitetin</string>
     <string name="forums_blocked">U bllokua</string>
-    <string name="forums_join_community">Bashkohu me një komunitet diku tjetër</string>
-    <string name="forums_community_address">Adresa e komunitetit</string>
     <string name="forums_join">Bashkohu</string>
     <string name="forums_joined">U bashkuat</string>
     <string name="forums_already_subscribed">Je tashmë i abonuar te ky forum</string>

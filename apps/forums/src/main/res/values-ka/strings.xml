@@ -301,8 +301,6 @@
     <string name="forums_block_server">სერვერის დაბლოკვა</string>
     <string name="forums_block_community">საზოგადოების დაბლოკვა</string>
     <string name="forums_blocked">დაიბლოკა</string>
-    <string name="forums_join_community">სხვაგან არსებულ საზოგადოებაში გაწევრიანება</string>
-    <string name="forums_community_address">საზოგადოების მისამართი</string>
     <string name="forums_join">გაწევრიანება</string>
     <string name="forums_joined">გაწევრიანდით</string>
     <string name="forums_already_subscribed">თქვენ უკვე გამოწერილი გაქვთ ეს ფორუმი</string>

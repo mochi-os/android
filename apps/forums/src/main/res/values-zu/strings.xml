@@ -301,8 +301,6 @@
     <string name="forums_block_server">Vimbela iseva</string>
     <string name="forums_block_community">Vimbela umphakathi</string>
     <string name="forums_blocked">Kuvinjiwe</string>
-    <string name="forums_join_community">Joyina umphakathi kwenye indawo</string>
-    <string name="forums_community_address">Ikheli lomphakathi</string>
     <string name="forums_join">Joyina</string>
     <string name="forums_joined">Usujoyinile</string>
     <string name="forums_already_subscribed">Usuvele ubhalisile kuleli foramu</string>

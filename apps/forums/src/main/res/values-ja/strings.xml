@@ -300,8 +300,6 @@
     <string name="forums_block_server">サーバーをブロック</string>
     <string name="forums_block_community">コミュニティをブロック</string>
     <string name="forums_blocked">ブロックしました</string>
-    <string name="forums_join_community">他のサーバーのコミュニティに参加</string>
-    <string name="forums_community_address">コミュニティのアドレス</string>
     <string name="forums_join">参加</string>
     <string name="forums_joined">参加しました</string>
     <string name="forums_already_subscribed">このフォーラムにはすでに購読しています</string>

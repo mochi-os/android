@@ -301,8 +301,6 @@
     <string name="forums_block_server">Server blokkeren</string>
     <string name="forums_block_community">Gemeenschap blokkeren</string>
     <string name="forums_blocked">Geblokkeerd</string>
-    <string name="forums_join_community">Lid worden van een gemeenschap elders</string>
-    <string name="forums_community_address">Adres van de gemeenschap</string>
     <string name="forums_join">Lid worden</string>
     <string name="forums_joined">Lid geworden</string>
     <string name="forums_already_subscribed">Je bent al geabonneerd op dit forum</string>

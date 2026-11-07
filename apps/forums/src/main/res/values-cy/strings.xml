@@ -305,8 +305,6 @@
     <string name="forums_block_server">Blocio\'r gweinydd</string>
     <string name="forums_block_community">Blocio\'r gymuned</string>
     <string name="forums_blocked">Wedi\'i flocio</string>
-    <string name="forums_join_community">Ymuno â chymuned mewn man arall</string>
-    <string name="forums_community_address">Cyfeiriad y gymuned</string>
     <string name="forums_join">Ymuno</string>
     <string name="forums_joined">Wedi ymuno</string>
     <string name="forums_already_subscribed">Rydych eisoes wedi tanysgrifio i\'r fforwm hwn</string>

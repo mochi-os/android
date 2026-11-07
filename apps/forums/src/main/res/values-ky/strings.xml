@@ -301,8 +301,6 @@
     <string name="forums_block_server">Серверди бөгөттөө</string>
     <string name="forums_block_community">Коомчулукту бөгөттөө</string>
     <string name="forums_blocked">Бөгөттөлдү</string>
-    <string name="forums_join_community">Башка жердеги коомчулукка кошулуу</string>
-    <string name="forums_community_address">Коомчулуктун дареги</string>
     <string name="forums_join">Кошулуу</string>
     <string name="forums_joined">Кошулдуңуз</string>
     <string name="forums_already_subscribed">Сиз бул форумга буга чейин эле жазылгансыз</string>

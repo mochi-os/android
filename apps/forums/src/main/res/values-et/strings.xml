@@ -301,8 +301,6 @@
     <string name="forums_block_server">Blokeeri server</string>
     <string name="forums_block_community">Blokeeri kogukond</string>
     <string name="forums_blocked">Blokeeritud</string>
-    <string name="forums_join_community">Liitu kogukonnaga mujal</string>
-    <string name="forums_community_address">Kogukonna aadress</string>
     <string name="forums_join">Liitu</string>
     <string name="forums_joined">Liitunud</string>
     <string name="forums_already_subscribed">Oled juba selle foorumi tellinud</string>

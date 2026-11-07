@@ -303,8 +303,6 @@
     <string name="forums_block_server">Bac am frithealaiche</string>
     <string name="forums_block_community">Bac a\' choimhearsnachd</string>
     <string name="forums_blocked">Air a bhacadh</string>
-    <string name="forums_join_community">Gabh pàirt ann an coimhearsnachd an àiteigin eile</string>
-    <string name="forums_community_address">Seòladh na coimhearsnachd</string>
     <string name="forums_join">Gabh pàirt</string>
     <string name="forums_joined">Air pàirt a ghabhail</string>
     <string name="forums_already_subscribed">Tha thu fo-sgrìobhte ris an fhòram seo mu thràth</string>

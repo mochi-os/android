@@ -301,8 +301,6 @@
     <string name="forums_block_server">Blokeatu zerbitzaria</string>
     <string name="forums_block_community">Blokeatu komunitatea</string>
     <string name="forums_blocked">Blokeatuta</string>
-    <string name="forums_join_community">Batu beste nonbaiteko komunitate batera</string>
-    <string name="forums_community_address">Komunitatearen helbidea</string>
     <string name="forums_join">Batu</string>
     <string name="forums_joined">Batuta</string>
     <string name="forums_already_subscribed">Foro honetara harpidetuta zaude jada</string>

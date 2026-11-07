@@ -47,6 +47,7 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.CommunitiesAdded
 import org.mochios.forums.model.CommunitiesImported
+import org.mochios.forums.model.CommunityFound
 import org.mochios.forums.model.CommunityJoined
 import org.mochios.forums.model.CommunityState
 import org.mochios.forums.model.NetworkAccount
@@ -573,6 +574,8 @@ class ForumsRepository @Inject constructor(
         api.listNetworkAccounts("social").unwrapRaw()
             .filter { it.type == "lemmy" && !it.hosted }
             .sortedWith(compareBy(NaturalCompare) { it.identifier })
+
+    suspend fun lookupCommunity(address: String): CommunityFound = api.lookupCommunity(address).unwrap()
 
     suspend fun joinCommunity(address: String, account: String): CommunityJoined {
         val joined = api.joinCommunity(address, account).unwrap()

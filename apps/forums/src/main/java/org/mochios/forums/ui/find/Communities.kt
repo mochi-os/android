@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -27,7 +26,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -41,15 +39,16 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.ui.components.MochiTextButton
-import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.providerName
 import org.mochios.forums.R
+import org.mochios.forums.model.CommunityFound
 import org.mochios.forums.model.NetworkAccount
+import org.mochios.forums.model.communityHandle
 
 /**
  * What may name a community elsewhere: !name@host or @name@host, name@host,
@@ -62,11 +61,10 @@ internal fun looksLikeCommunity(query: String): Boolean {
 }
 
 /**
- * The Find screen's ways in from other networks: join a community elsewhere
- * as one of the user's hosted fediverse accounts, and read in the communities
- * and settings of a linked Lemmy account. Each shows only where the user has
- * such an account. Given the address a search typed, only the way to join
- * that community, since the search hides the empty form.
+ * The Find screen's ways in from other networks: the community a search
+ * names, joined as one of the user's hosted fediverse accounts, and, while
+ * nothing is searched, the communities and settings of a linked Lemmy account
+ * read in. Each shows only where the user has such an account.
  */
 @Composable
 internal fun CommunitiesSections(
@@ -79,6 +77,7 @@ internal fun CommunitiesSections(
     val hosted by viewModel.hosted.collectAsState()
     val lemmy by viewModel.lemmy.collectAsState()
     val busy by viewModel.busy.collectAsState()
+    val found by viewModel.found.collectAsState()
     val resources = LocalResources.current
     val format = LocalFormat.current
     LaunchedEffect(viewModel) {
@@ -106,23 +105,37 @@ internal fun CommunitiesSections(
             }
         }
     }
-    if (hosted.isEmpty() && (lemmy.isEmpty() || typed != null)) return
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        if (hosted.isNotEmpty()) {
-            key(typed) {
-                JoinCommunity(accounts = hosted, busy = "join" in busy, onJoin = { address, account, joined -> viewModel.join(address, account, joined) }, typed = typed)
+    if (typed != null) {
+        if (hosted.isEmpty() || found.query != typed) return
+        val community = found.community
+        if (community != null) {
+            CommunityResult(
+                community = community,
+                accounts = hosted,
+                busy = "join" in busy,
+                onJoin = { account -> viewModel.join(community.id, account) },
+                modifier = modifier,
+            )
+        } else if (found.loading) {
+            Box(modifier = modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
             }
         }
-        if (lemmy.isNotEmpty() && typed == null) {
-            LemmyAccounts(
-                accounts = lemmy,
-                busy = busy,
-                onAdd = { viewModel.add(it) },
-                onImport = { viewModel.import(it) },
-            )
-        }
+        return
+    }
+    if (lemmy.isEmpty()) return
+    Column(modifier = modifier) {
+        LemmyAccounts(
+            accounts = lemmy,
+            busy = busy,
+            onAdd = { viewModel.add(it) },
+            onImport = { viewModel.import(it) },
+        )
     }
 }
+
+/** Whether the Find screen shows something from elsewhere for a search: the community it names, or its lookup on its way. */
+internal fun CommunityLookup.answers(query: String): Boolean = query.isNotEmpty() && this.query == query && (loading || community != null)
 
 @Composable
 private fun Heading(text: String) {
@@ -133,70 +146,70 @@ private fun Heading(text: String) {
     )
 }
 
-/** A community on another server joined by its address, as one of the user's hosted accounts. */
+/**
+ * The community a search names, as a result like the forums found here, with
+ * Join; where the user has more than one hosted account, Join asks which.
+ */
 @Composable
-internal fun JoinCommunity(
+internal fun CommunityResult(
+    community: CommunityFound,
     accounts: List<NetworkAccount>,
     busy: Boolean,
-    onJoin: (address: String, account: String, joined: () -> Unit) -> Unit,
-    typed: String? = null,
+    onJoin: (account: String) -> Unit,
+    modifier: Modifier = Modifier,
 ) {
-    var entered by remember { mutableStateOf("") }
-    val address = typed ?: entered
-    var chosen by remember { mutableStateOf("") }
     var open by remember { mutableStateOf(false) }
-    val account = accounts.firstOrNull { it.id == chosen } ?: accounts.first()
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Heading(stringResource(R.string.forums_join_community))
-        if (typed == null) {
-            MochiTextField(
-                value = entered,
-                onValueChange = { entered = it },
-                label = { Text(stringResource(R.string.forums_community_address)) },
-                placeholder = { Text(stringResource(R.string.forums_community_address_hint)) },
-                singleLine = true,
-                enabled = !busy,
-                modifier = Modifier.fillMaxWidth(),
+    Row(
+        modifier = modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        EntityAvatar(
+            name = community.name,
+            src = community.avatar.ifBlank { null },
+            seed = community.id,
+            size = 44.dp,
+        )
+        Spacer(Modifier.width(16.dp))
+        Column(Modifier.weight(1f)) {
+            Text(
+                text = community.name,
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Medium,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
             )
-        } else {
-            // The address the search typed, joined as it stands.
-            Text(typed, style = MaterialTheme.typography.bodyLarge, maxLines = 1, overflow = TextOverflow.Ellipsis)
-        }
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            // Which hosted account joins, where there is more than one.
-            if (accounts.size > 1) {
-                Box(modifier = Modifier.weight(1f)) {
-                    MochiTextButton(onClick = { open = true }, enabled = !busy) {
-                        Text(account.identifier, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                        Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-                    }
-                    MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
-                        accounts.forEach { item ->
-                            MochiDropdownMenuItem(
-                                text = { Text(item.identifier) },
-                                onClick = {
-                                    open = false
-                                    chosen = item.id
-                                },
-                            )
-                        }
-                    }
-                }
-            } else {
-                Spacer(modifier = Modifier.weight(1f))
+            if (community.handle.isNotBlank()) {
+                Text(
+                    text = communityHandle(community.handle),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
             }
-            MochiOutlinedButton(
-                onClick = {
-                    // A refused address stays in the field.
-                    onJoin(address, account.id) { entered = "" }
-                },
-                enabled = address.isNotBlank() && !busy,
+        }
+        Spacer(Modifier.width(12.dp))
+        Box {
+            MochiButton(
+                onClick = { if (accounts.size == 1) onJoin(accounts.first().id) else open = true },
+                enabled = !busy,
             ) {
                 if (busy) {
-                    CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
-                    Spacer(modifier = Modifier.width(ButtonDefaults.IconSpacing))
+                    CircularProgressIndicator(modifier = Modifier.size(18.dp), strokeWidth = 2.dp)
+                } else {
+                    Text(stringResource(R.string.forums_join))
                 }
-                Text(stringResource(R.string.forums_join))
+            }
+            MochiDropdownMenu(expanded = open, onDismissRequest = { open = false }) {
+                accounts.forEach { item ->
+                    MochiDropdownMenuItem(
+                        text = { Text(item.identifier) },
+                        onClick = {
+                            open = false
+                            onJoin(item.id)
+                        },
+                    )
+                }
             }
         }
     }

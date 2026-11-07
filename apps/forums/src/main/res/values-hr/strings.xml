@@ -302,8 +302,6 @@
     <string name="forums_block_server">Blokiraj poslužitelj</string>
     <string name="forums_block_community">Blokiraj zajednicu</string>
     <string name="forums_blocked">Blokirano</string>
-    <string name="forums_join_community">Pridruži se zajednici negdje drugdje</string>
-    <string name="forums_community_address">Adresa zajednice</string>
     <string name="forums_join">Pridruži se</string>
     <string name="forums_joined">Pridruženo</string>
     <string name="forums_already_subscribed">Već ste pretplaćeni na ovaj forum</string>

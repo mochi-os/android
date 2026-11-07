@@ -301,8 +301,6 @@
     <string name="forums_block_server">Արգելափակել սերվերը</string>
     <string name="forums_block_community">Արգելափակել համայնքը</string>
     <string name="forums_blocked">Արգելափակված է</string>
-    <string name="forums_join_community">Միանալ այլ տեղում գտնվող համայնքի</string>
-    <string name="forums_community_address">Համայնքի հասցե</string>
     <string name="forums_join">Միանալ</string>
     <string name="forums_joined">Միացել եք</string>
     <string name="forums_already_subscribed">Դուք արդեն բաժանորդագրված եք այս ֆորումին</string>

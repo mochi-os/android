@@ -295,8 +295,6 @@
     <string name="forums_block_server">Bloquear servidor</string>
     <string name="forums_block_community">Bloquear comunidade</string>
     <string name="forums_blocked">Bloqueado</string>
-    <string name="forums_join_community">Participar de uma comunidade em outro servidor</string>
-    <string name="forums_community_address">Endereço da comunidade</string>
     <string name="forums_join">Participar</string>
     <string name="forums_joined">Você entrou</string>
     <string name="forums_already_subscribed">Você já está inscrito neste fórum</string>

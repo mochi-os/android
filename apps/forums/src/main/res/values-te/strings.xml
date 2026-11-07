@@ -301,8 +301,6 @@
     <string name="forums_block_server">సర్వర్‌ను బ్లాక్ చేయండి</string>
     <string name="forums_block_community">సంఘాన్ని బ్లాక్ చేయండి</string>
     <string name="forums_blocked">బ్లాక్ చేయబడింది</string>
-    <string name="forums_join_community">వేరే చోట ఉన్న సంఘంలో చేరండి</string>
-    <string name="forums_community_address">సంఘం చిరునామా</string>
     <string name="forums_join">చేరండి</string>
     <string name="forums_joined">చేరారు</string>
     <string name="forums_already_subscribed">మీరు ఇప్పటికే ఈ ఫోరమ్‌కు చందా చేరారు</string>

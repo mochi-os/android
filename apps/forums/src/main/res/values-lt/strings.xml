@@ -303,8 +303,6 @@
     <string name="forums_block_server">Blokuoti serverį</string>
     <string name="forums_block_community">Blokuoti bendruomenę</string>
     <string name="forums_blocked">Užblokuota</string>
-    <string name="forums_join_community">Prisijungti prie bendruomenės kitur</string>
-    <string name="forums_community_address">Bendruomenės adresas</string>
     <string name="forums_join">Prisijungti</string>
     <string name="forums_joined">Prisijungta</string>
     <string name="forums_already_subscribed">Jūs jau prenumeruojate šį forumą</string>
