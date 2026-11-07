@@ -168,13 +168,12 @@ class AuthRepository @Inject constructor(
         }
     }
 
-    /** Single `_/identity` round-trip yielding both the bound identity and the
-     *  account status. Prefer this when you need both (e.g. bootstrap) so the
-     *  request isn't issued twice. */
     /**
-     * The signed-in identity. A read for the same server and session within
+     * The signed-in identity and the account status, from one `_/identity`
+     * round-trip. A read for the same server and session within
      * [IDENTITY_LIFETIME] is answered from the last one: launch asks for it in
-     * the app's bootstrap and again for the home menu.
+     * the app's bootstrap and again for the home menu. Calls that change
+     * either half drop the held answer.
      */
     suspend fun getIdentityInfo(): IdentityInfo {
         val key = sessionManager.getServerUrlBlocking() + "|" +
