@@ -156,8 +156,16 @@ class AuthRepository @Inject constructor(
         }
     }
 
+    /**
+     * Creates the signed-in user's identity and drops the held
+     * [getIdentityInfo] answer, which still says there is none.
+     */
     suspend fun createIdentity(name: String, privacy: String = "public") {
-        authApi.createIdentity(IdentityRequest(name, privacy)).unwrapRaw()
+        try {
+            authApi.createIdentity(IdentityRequest(name, privacy)).unwrapRaw()
+        } finally {
+            heldIdentity = null
+        }
     }
 
     /** Single `_/identity` round-trip yielding both the bound identity and the
@@ -202,9 +210,18 @@ class AuthRepository @Inject constructor(
         )
     }
 
-    /** Cancel a pending closure, reactivating the account. */
+    /**
+     * Cancels a pending closure, reactivating the account. Drops the held
+     * [getIdentityInfo] answer, whose status still says "closing": the
+     * bootstrap that follows must read the account fresh, or the first
+     * Reactivate tap leaves the user on the reactivation screen.
+     */
     suspend fun cancelClose() {
-        authApi.cancelClose().unwrapRaw()
+        try {
+            authApi.cancelClose().unwrapRaw()
+        } finally {
+            heldIdentity = null
+        }
     }
 
     suspend fun getAvailableMethods(): MethodsResponse {
