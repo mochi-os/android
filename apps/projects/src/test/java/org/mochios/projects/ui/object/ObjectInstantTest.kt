@@ -60,6 +60,9 @@ class ObjectInstantTest {
     /** Holds every write until released, so a test sees the sheet before the answer. */
     private val gate = CountDownLatch(1)
 
+    /** Holds a repository merge until released, so a test can close the sheet while it runs. */
+    private val merging = CountDownLatch(1)
+
     /** Whether the server refuses the writes it is sent. */
     @Volatile private var refuse = false
 
@@ -84,6 +87,15 @@ class ObjectInstantTest {
                         writes.add(path to request.body.readUtf8())
                         gate.await(5, TimeUnit.SECONDS)
                         if (refuse) MockResponse().setResponseCode(500).setBody("""{"error": "Refused"}""") else ok("{}")
+                    }
+                    path.endsWith("/merge") -> {
+                        writes.add(path to request.body.readUtf8())
+                        merging.await(5, TimeUnit.SECONDS)
+                        ok("{}")
+                    }
+                    path.contains("/requests/") && path.endsWith("/update") -> {
+                        writes.add(path to request.body.readUtf8())
+                        ok("{}")
                     }
                     path == "/_/websocket" -> MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
                         override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
@@ -122,6 +134,7 @@ class ObjectInstantTest {
     @After
     fun end() {
         gate.countDown()
+        merging.countDown()
         jobs.forEach { it.cancel() }
         socket.disconnectAll()
         server.shutdown()
@@ -209,5 +222,19 @@ class ObjectInstantTest {
         until { writes.any { it.first.endsWith("/watchers/add") } }
         refused()
         assertEquals(false, model.uiState.value.isWatching)
+    }
+
+    @Test
+    fun `a merge still marks its request merged when the sheet closes while it runs`() {
+        model.performMerge("r1", "feature", "main", "Merge", "merge", "q1")
+        until { writes.any { it.first.endsWith("/merge") } }
+        model.close()
+        merging.countDown()
+        until { writes.any { it.first.endsWith("/requests/q1/update") } || failures.isNotEmpty() }
+        assertEquals(
+            "THE POINT: the request of the object the merge began on",
+            "/projects/p1/-/objects/o1/requests/q1/update",
+            writes.firstOrNull { it.first.endsWith("/requests/q1/update") }?.first,
+        )
     }
 }

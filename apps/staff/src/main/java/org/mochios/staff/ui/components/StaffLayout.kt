@@ -83,14 +83,20 @@ class StaffLayoutViewModel @Inject constructor(
     val state: StateFlow<StaffLayoutUiState> = _state.asStateFlow()
 
     init {
-        load()
+        fetch(fresh = false)
     }
 
+    /** Reads the staff record again, for the error state's retry. */
     fun load() {
+        fetch(fresh = true)
+    }
+
+    /** Reads the staff record; unless [fresh], the one the access check just read is reused. */
+    private fun fetch(fresh: Boolean) {
         viewModelScope.launch {
             _state.value = StaffLayoutUiState.Loading
             try {
-                val me = repository.getMe()
+                val me = repository.getMe(fresh)
                 _state.value = StaffLayoutUiState.Ready(me)
             } catch (e: Exception) {
                 _state.value = StaffLayoutUiState.Error(e.toMochiError())

@@ -22,6 +22,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.sync.ContactProperty
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.people.api.HandleLookup
 import org.mochios.people.api.MergeSource
 import org.mochios.people.model.Book
@@ -132,6 +133,10 @@ class ContactEditViewModel @Inject constructor(
     private var writes = 0
     /** The handles already asked of their networks. */
     private val asked = mutableSetOf<String>()
+    /** The pending or in-flight [refreshLatest]; cancelled when a newer one starts. */
+    private var refreshJob: Job? = null
+    /** Set by a save of this screen's own, whose change signal has nothing to read. */
+    private var saved = false
 
     init {
         if (creating && source.isNotBlank()) {
@@ -143,7 +148,7 @@ class ContactEditViewModel @Inject constructor(
             // The friend switch's handshake lands through other screens too - the
             // search that links the card, an accept arriving - so follow the
             // repository's change signal rather than the user's own actions only.
-            viewModelScope.launch { repository.contactsChanged.collect { refresh() } }
+            viewModelScope.launch { repository.contactsChanged.collect { refreshLatest() } }
         }
     }
 
@@ -208,6 +213,43 @@ class ContactEditViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(sent = sent)
         } catch (_: Exception) {
             // A failed refresh leaves the last state showing; the next action reloads.
+        }
+    }
+
+    /**
+     * [refresh] after [REFRESH_DEBOUNCE], replacing the one pending, so a
+     * change signal and the action that sent it make one read. A save of this
+     * screen's own already holds the card, and a deleted contact has none.
+     */
+    private fun refreshLatest(): Job {
+        refreshJob?.cancel()
+        val job = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            val state = _uiState.value
+            if (state.isDeleting || state.deleted) {
+                return@launch
+            }
+            if (saved) {
+                saved = false
+                return@launch
+            }
+            refresh()
+        }
+        refreshJob = job
+        return job
+    }
+
+    /** Refreshes, and waits for the refresh that replaced it, if one did. */
+    private suspend fun awaitRefresh() {
+        saved = false
+        var job = refreshLatest()
+        while (true) {
+            job.join()
+            val latest = refreshJob
+            if (latest == null || latest === job) {
+                return
+            }
+            job = latest
         }
     }
 
@@ -290,7 +332,7 @@ class ContactEditViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isToggling = true, error = null)
             val failure = try {
                 block()
-                refresh()
+                awaitRefresh()
                 null
             } catch (e: Exception) {
                 e.toMochiError()
@@ -355,6 +397,7 @@ class ContactEditViewModel @Inject constructor(
                 managed = MANAGED,
             )
             writes++
+            saved = true
             etag = contact.etag
             baseline = Baseline(properties, form.book)
             _uiState.value = _uiState.value.copy(isSaving = false, contact = contact)
@@ -472,6 +515,7 @@ class ContactEditViewModel @Inject constructor(
                         source = MergeSource(merge.source.id, merge.source.etag),
                     )
                     writes++
+                    saved = true
                     _uiState.value = _uiState.value.copy(mergeOpen = false, mergePending = null)
                     if (survivor.id == contactId) {
                         apply(survivor)
@@ -500,6 +544,7 @@ class ContactEditViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isDeleting = true)
             try {
                 repository.deleteContact(contactId)
+                refreshJob?.cancel()
                 // Nothing is left to save.
                 baseline = null
                 _uiState.value = _uiState.value.copy(

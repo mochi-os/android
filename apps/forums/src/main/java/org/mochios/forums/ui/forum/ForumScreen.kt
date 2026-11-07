@@ -369,6 +369,8 @@ private fun ForumContent(
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {
                 viewModel.reloadOnForeground()
+            } else if (event == Lifecycle.Event.ON_PAUSE) {
+                viewModel.pauseLiveRefresh()
             }
         }
         forumLifecycleOwner.lifecycle.addObserver(observer)

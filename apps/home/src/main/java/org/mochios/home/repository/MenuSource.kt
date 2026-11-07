@@ -27,7 +27,8 @@ interface MenuSource {
     /** Start following the count, if nothing has yet. */
     fun follow()
 
-    /** Fetch the count again, after the menu has changed it. */
+    /** Fetch the count again, after the menu has changed it. The server's echo
+     *  of the change asks for it too, so the two may make one fetch. */
     suspend fun recount()
 
     suspend fun person(): Person
@@ -57,7 +58,7 @@ class ServerMenuSource @Inject constructor(
 
     override fun follow() = store.ensureStarted()
 
-    override suspend fun recount() = store.refresh()
+    override suspend fun recount() = store.refreshLatest()
 
     override suspend fun person(): Person =
         auth.getIdentityInfo().identity.let { Person(it.identity, it.name) }

@@ -141,6 +141,16 @@ class ObjectDetailViewModel @Inject constructor(
     private var wsSubscriptionId: String? = null
     private var wsSubscribedProjectId: String = ""
 
+    /**
+     * Forget the open object as the sheet closes, after a delete included, so
+     * the project's frames stop refetching slices of an object off screen.
+     */
+    fun close() {
+        currentObjectId = ""
+        refreshJobs.values.forEach { job -> job.cancel() }
+        refreshJobs.clear()
+    }
+
     override fun onCleared() {
         super.onCleared()
         wsSubscriptionId?.let { webSocket.unsubscribe(it) }
@@ -222,6 +232,9 @@ class ObjectDetailViewModel @Inject constructor(
     }
 
     private fun handleWebSocketEvent(event: WebSocketEvent) {
+        if (currentObjectId.isBlank()) {
+            return
+        }
         // Filter to events scoped to the object we're currently displaying.
         // Some server events use "object" for the affected object id (comment/*,
         // attachment/*) while others use "id" (values/update, object/update,
@@ -543,11 +556,14 @@ class ObjectDetailViewModel @Inject constructor(
     }
 
     fun performMerge(repo: String, source: String, target: String, message: String, method: String, requestId: String) {
+        // Taken now: the sheet may close while the merge runs, and close()
+        // forgets the open object.
+        val projectId = currentProjectId
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                repository.merge(currentProjectId, repo, source, target, message, method)
-                // Mark request as merged
-                repository.updateRequest(currentProjectId, currentObjectId, requestId, null, null, "merged", null)
+                repository.merge(projectId, repo, source, target, message, method)
+                repository.updateRequest(projectId, objectId, requestId, null, null, "merged", null)
                 _mergeSuccess.value = true
                 refreshSlice("requests") { loadRequests() }
             } catch (e: Exception) {

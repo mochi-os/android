@@ -56,7 +56,6 @@ import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.SoftBreakAddsNewLinePlugin
 import io.noties.markwon.html.HtmlPlugin
 import io.noties.markwon.image.AsyncDrawableSpan
-import io.noties.markwon.image.ImagesPlugin
 import io.noties.markwon.linkify.LinkifyPlugin
 import org.commonmark.node.AbstractVisitor
 import org.commonmark.node.FencedCodeBlock
@@ -66,6 +65,7 @@ import org.commonmark.node.Node
 import org.commonmark.node.Text
 import org.commonmark.parser.Parser
 import org.mochios.android.ui.components.ClickableLinkTextView
+import org.mochios.android.ui.components.CoilImagesPlugin
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.util.webUri
@@ -164,7 +164,7 @@ fun MarkdownContent(
             // one. Matches HtmlContent, which every other body is drawn with.
             .usePlugin(SoftBreakAddsNewLinePlugin.create())
             .usePlugin(HtmlPlugin.create())
-            .usePlugin(ImagesPlugin.create())
+            .usePlugin(CoilImagesPlugin.create(context))
             .usePlugin(TablePlugin.create(context))
             .usePlugin(StrikethroughPlugin.create())
             .usePlugin(TaskListPlugin.create(context))
@@ -193,8 +193,7 @@ fun MarkdownContent(
                 override fun afterSetText(textView: android.widget.TextView) {
                     if (missingLinksKey.isEmpty()) return
                     val text = textView.text as? Spannable ?: return
-                    val builder = if (text is SpannableStringBuilder) text
-                        else SpannableStringBuilder(text)
+                    val builder = text as? SpannableStringBuilder ?: SpannableStringBuilder(text)
 
                     val linkSpans: Array<LinkSpan> =
                         builder.getSpans(0, builder.length, LinkSpan::class.java)

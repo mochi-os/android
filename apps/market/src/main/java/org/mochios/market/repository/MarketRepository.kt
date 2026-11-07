@@ -6,7 +6,12 @@
 package org.mochios.market.repository
 
 import android.net.Uri
+import android.os.SystemClock
 import com.google.gson.Gson
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
@@ -59,6 +64,7 @@ import org.mochios.market.model.SubscriptionsListResponse
 import org.mochios.market.model.ThreadDetailResponse
 import org.mochios.market.model.ThreadsListResponse
 import java.io.File
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
 import retrofit2.HttpException
@@ -77,9 +83,27 @@ class MarketRepository @Inject constructor(
     private val text = "text/plain".toMediaTypeOrNull()
     private val gson = Gson()
 
+    /** Where shared reads run, apart from the screens that ask for them. */
+    private val readScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
     // ---- Accounts ----
 
-    suspend fun getAccount(id: String? = null): Account {
+    /** The user's own account, shared by the screens that open together. */
+    private val ownAccount = SharedRead(ACCOUNT_LIFETIME, readScope) { readAccount(null) }
+
+    /**
+     * The account [id], or the user's own when null. The user's own is shared
+     * with other screens asking at the same time and held briefly; [fresh]
+     * reads it again, for a check the user asked for.
+     */
+    suspend fun getAccount(id: String? = null, fresh: Boolean = false): Account {
+        if (id != null) {
+            return readAccount(id)
+        }
+        return ownAccount.get(fresh)
+    }
+
+    private suspend fun readAccount(id: String?): Account {
         return try {
             api.getAccount(id).unwrap()
         } catch (e: Exception) {
@@ -102,7 +126,7 @@ class MarketRepository @Inject constructor(
                 addressRegion = fields["address_region"],
                 addressPostcode = fields["address_postcode"],
                 addressCountry = fields["address_country"],
-            ).unwrap()
+            ).unwrap().also { account -> ownAccount.put(account) }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -110,7 +134,7 @@ class MarketRepository @Inject constructor(
 
     suspend fun activateAccount(returnUrl: String? = null): Account {
         return try {
-            api.activateAccount(returnUrl).unwrap()
+            api.activateAccount(returnUrl).unwrap().also { account -> ownAccount.put(account) }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -132,6 +156,7 @@ class MarketRepository @Inject constructor(
     suspend fun stripeOnboarding(returnUrl: String): StripeOnboardingResponse {
         return try {
             api.startStripeOnboarding(returnUrl, clientPlatform = ANDROID_PLATFORM).unwrap()
+                .also { ownAccount.forget() }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -145,6 +170,7 @@ class MarketRepository @Inject constructor(
     ): StripeOauthCompletion {
         return try {
             api.completeStripeOauth(code, state, error, errorDescription).unwrap()
+                .also { ownAccount.forget() }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -160,13 +186,16 @@ class MarketRepository @Inject constructor(
 
     // ---- Categories ----
 
-    suspend fun listCategories(): List<Category> {
-        return try {
+    /** The marketplace's categories, which change rarely, read once an hour at most. */
+    private val categories = SharedRead(CATEGORIES_LIFETIME, readScope) {
+        try {
             api.listCategories().unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
+
+    suspend fun listCategories(): List<Category> = categories.get()
 
     // ---- Listings ----
 
@@ -215,7 +244,7 @@ class MarketRepository @Inject constructor(
                 information = fields["information"],
                 quantity = fields["quantity"],
                 tagsJson = fields["tags"],
-            ).unwrap()
+            ).unwrap().also { knownListings.remove(id) }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -233,6 +262,7 @@ class MarketRepository @Inject constructor(
     suspend fun deleteListing(id: String) {
         try {
             api.deleteListing(id.toString()).unwrap()
+            knownListings.remove(id)
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -258,7 +288,7 @@ class MarketRepository @Inject constructor(
                 closes = fields["closes"],
                 extend = fields["extend"],
                 extension = fields["extension"],
-            ).unwrapRaw()
+            ).unwrapRaw().also { knownListings.remove(id) }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -266,7 +296,7 @@ class MarketRepository @Inject constructor(
 
     suspend fun relistListing(id: String): RelistResponse {
         return try {
-            api.relistListing(id.toString()).unwrap()
+            api.relistListing(id.toString()).unwrap().also { knownListings.remove(id) }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -294,24 +324,61 @@ class MarketRepository @Inject constructor(
         }
     }
 
+    /** A listing read or shown lately, and when, for [getListingsByIds]. */
+    private class KnownListing(val listing: Listing, val read: Long)
+
+    /** Listings by id, as last read or shown, for strips that list them again. */
+    private val knownListings = ConcurrentHashMap<String, KnownListing>()
+
+    /** The listing pages' reads under way, which [getListingsByIds] may join. */
+    private val listingReads = ConcurrentHashMap<String, Deferred<ListingDetailResponse>>()
+
+    /**
+     * Read listing [id] for its page, always from the server. Its answer is
+     * kept for [getListingsByIds], and a strip asking for it meanwhile waits on
+     * this read rather than making its own.
+     */
     suspend fun getListing(id: String): ListingDetailResponse {
-        return try {
-            api.getListing(id.toString()).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
+        val read = readScope.async {
+            try {
+                api.getListing(id).unwrap()
+            } catch (e: Exception) {
+                throw e.toMochiError()
+            }
+        }
+        listingReads[id] = read
+        try {
+            val response = read.await()
+            remember(response.listing)
+            return response
+        } finally {
+            listingReads.remove(id, read)
         }
     }
 
+    /** Keep [listing], as a card just showed it, for [getListingsByIds]. */
+    fun remember(listing: Listing) {
+        knownListings[listing.id] = KnownListing(listing, SystemClock.elapsedRealtime())
+    }
+
     /**
-     * Resolve listings by id with parallel `listings/get` calls -
-     * `listings/search` has no `ids=` parameter. Ids that fail to resolve are
-     * dropped.
+     * Resolve listings by id, in the order asked: from those read or shown in
+     * the last [KNOWN_LISTING_LIFETIME] milliseconds, then a listing page's read
+     * under way, else parallel `listings/get` calls, since `listings/search`
+     * has no `ids=` parameter. Ids that fail to resolve are dropped.
      */
     suspend fun getListingsByIds(ids: List<String>): List<Listing> = coroutineScope {
+        val now = SystemClock.elapsedRealtime()
         ids.map { id ->
             async {
-                try {
-                    api.getListing(id.toString()).unwrap().listing
+                val known = knownListings[id]?.takeIf { held ->
+                    now - held.read < KNOWN_LISTING_LIFETIME
+                }
+                known?.listing ?: try {
+                    val reading = listingReads[id]
+                    val listing = reading?.await()?.listing ?: api.getListing(id).unwrap().listing
+                    remember(listing)
+                    listing
                 } catch (_: Exception) {
                     null
                 }
@@ -860,5 +927,14 @@ class MarketRepository @Inject constructor(
 
     companion object {
         private const val ANDROID_PLATFORM = "android"
+
+        /** How long the user's own account is handed out before it is read again. */
+        private const val ACCOUNT_LIFETIME = 30_000L
+
+        /** How long the categories are handed out before they are read again. */
+        private const val CATEGORIES_LIFETIME = 3_600_000L
+
+        /** How long a listing read or shown stands in for another read of it. */
+        private const val KNOWN_LISTING_LIFETIME = 300_000L
     }
 }

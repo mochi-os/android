@@ -201,8 +201,8 @@ fun CalendarScreen(
     // The picker only says where the export goes; the ViewModel writes it.
     val saver = rememberFileSaveLauncher(Icalendar.TYPE) { uri -> viewModel.save(uri) }
 
-    DisposableRefresh(lifecycle) {
-        viewModel.revisit()
+    DisposableRefresh(lifecycle, onPause = { viewModel.onScreenPaused() }) {
+        viewModel.onScreenResumed()
         viewModel.refresh()
     }
 
@@ -1056,12 +1056,23 @@ private fun monthTitle(date: LocalDate): String {
     return java.time.format.DateTimeFormatter.ofPattern(pattern, locale).format(date)
 }
 
-/** Reloads the range whenever the screen comes back to the foreground. */
+/**
+ * Reloads the range whenever the screen comes back to the foreground, and
+ * tells the screen through [onPause] when something covers it.
+ */
 @Composable
-private fun DisposableRefresh(owner: androidx.lifecycle.LifecycleOwner, onResume: () -> Unit) {
+private fun DisposableRefresh(
+    owner: androidx.lifecycle.LifecycleOwner,
+    onPause: () -> Unit,
+    onResume: () -> Unit,
+) {
     androidx.compose.runtime.DisposableEffect(owner) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME) onResume()
+            if (event == Lifecycle.Event.ON_RESUME) {
+                onResume()
+            } else if (event == Lifecycle.Event.ON_PAUSE) {
+                onPause()
+            }
         }
         owner.lifecycle.addObserver(observer)
         onDispose { owner.lifecycle.removeObserver(observer) }

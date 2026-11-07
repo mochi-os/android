@@ -72,6 +72,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.net.URLDecoder
 import java.util.concurrent.ConcurrentLinkedQueue
+import java.util.concurrent.TimeUnit
 
 // Ada as her card is stored: a handle, an XMPP address, and her standing on
 // XMPP through the user's account.
@@ -145,7 +146,7 @@ class NetworksPeopleTest {
     private fun until(done: () -> Boolean) {
         val deadline = System.currentTimeMillis() + 5_000
         while (!done()) {
-            shadowOf(Looper.getMainLooper()).idle()
+            shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS)
             check(System.currentTimeMillis() < deadline) { "timed out" }
             Thread.sleep(10)
         }

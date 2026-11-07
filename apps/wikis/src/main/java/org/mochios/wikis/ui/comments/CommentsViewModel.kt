@@ -10,7 +10,10 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -22,6 +25,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.wikis.model.WikiComment
@@ -93,6 +97,9 @@ class CommentsViewModel @Inject constructor(
 
     private var subscription: String? = null
 
+    /** The pending or in-flight comments load; cancelled when a newer one starts. */
+    private var commentsJob: Job? = null
+
     init {
         loadIdentity()
         loadInfo()
@@ -128,8 +135,12 @@ class CommentsViewModel @Inject constructor(
      */
     private fun handle(event: WebSocketEvent) {
         when (event.type) {
-            "wiki/resynced", REOPEN -> loadComments()
-            "wiki/update" -> if (commentsConcerned(event.kind, event.page, event.previous, slug)) loadComments()
+            "wiki/resynced", REOPEN -> refreshComments()
+            "wiki/update" -> {
+                if (commentsConcerned(event.kind, event.page, event.previous, slug)) {
+                    refreshComments()
+                }
+            }
         }
     }
 
@@ -177,8 +188,10 @@ class CommentsViewModel @Inject constructor(
         }
     }
 
+    /** Load the thread with the full-screen spinner: on open, and from Retry. */
     fun loadComments() {
-        viewModelScope.launch {
+        commentsJob?.cancel()
+        commentsJob = viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val response = repository.getComments(wikiId, slug)
@@ -188,11 +201,43 @@ class CommentsViewModel @Inject constructor(
                     truncated = response.truncated,
                     error = null,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
                 )
+            }
+        }
+    }
+
+    /**
+     * Reload the thread after a change, without the spinner while it has
+     * comments to show. Each call cancels the last and waits
+     * [REFRESH_DEBOUNCE], so this user's own edit and the `wiki/update` echo
+     * it causes make one fetch.
+     */
+    private fun refreshComments() {
+        if (_uiState.value.comments.isEmpty() && _uiState.value.error != null) {
+            loadComments()
+            return
+        }
+        commentsJob?.cancel()
+        commentsJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            try {
+                val response = repository.getComments(wikiId, slug)
+                _uiState.value = _uiState.value.copy(
+                    isLoading = false,
+                    comments = response.comments,
+                    truncated = response.truncated,
+                    error = null,
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(isLoading = false)
             }
         }
     }
@@ -209,7 +254,7 @@ class CommentsViewModel @Inject constructor(
                     try {
                         repository.createComment(wikiId, slug, trimmed, parent, files.ifEmpty { null }, tracker)
                         if (parent != null) cancelReply()
-                        loadComments()
+                        refreshComments()
                     } finally {
                         repository.discardStaged(files)
                     }
@@ -229,7 +274,7 @@ class CommentsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.editComment(wikiId, slug, id, trimmed)
-                loadComments()
+                refreshComments()
             } catch (e: Exception) {
                 _events.send(CommentsEvent.Error(e.toMochiError()))
             }
@@ -240,7 +285,7 @@ class CommentsViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteComment(wikiId, slug, id)
-                loadComments()
+                refreshComments()
             } catch (e: Exception) {
                 _events.send(CommentsEvent.Error(e.toMochiError()))
             }

@@ -68,6 +68,9 @@ class NotificationsReadTest {
     /** How many times the list has been asked for. */
     private val lists = AtomicInteger()
 
+    /** The server's ends of the open sockets, to send frames down. */
+    private val sockets = ConcurrentLinkedQueue<WebSocket>()
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -97,6 +100,7 @@ class NotificationsReadTest {
                         }
 
                         override fun onOpen(webSocket: WebSocket, response: Response) {
+                            sockets.add(webSocket)
                         }
                     })
                     else -> MockResponse().setResponseCode(404)
@@ -176,6 +180,19 @@ class NotificationsReadTest {
 
     private fun read(id: String) = model.uiState.value.items.single { it.id == id }.read
 
+    /** [text] sent down every open socket, as the server sends a frame. */
+    private fun frame(text: String) = sockets.forEach { it.send(text) }
+
+    /** Row [id] marked read and the read answered, with the screen settled. */
+    private fun answered(id: String) {
+        open()
+        until { sockets.isNotEmpty() }
+        model.markRead(id)
+        gate.countDown()
+        until { reads.contains(id) }
+        settle()
+    }
+
     @Test
     fun `a row shows read on the tap, and unread again with the error when refused`() {
         open()
@@ -240,5 +257,25 @@ class NotificationsReadTest {
         assertNotNull(model.uiState.value.error)
         assertEquals(0L, read("a"))
         assertEquals(2, model.uiState.value.unreadCount)
+    }
+
+    @Test
+    fun `the echo of an own read fetches no list`() {
+        answered("a")
+        val before = lists.get()
+        frame("""{"type": "read", "id": "a", "app": "feeds"}""")
+        settle()
+        assertEquals("THE POINT: the list already shows the read", before, lists.get())
+        // The frames reach the screen: the next one, someone else's, fetches it.
+        frame("""{"type": "read", "id": "b", "app": "feeds"}""")
+        until { lists.get() > before }
+    }
+
+    @Test
+    fun `another device's read in the same window fetches the list`() {
+        answered("a")
+        val before = lists.get()
+        frame("""{"type": "read", "id": "b", "app": "feeds"}""")
+        until { lists.get() > before }
     }
 }

@@ -5,6 +5,8 @@
 
 package org.mochios.android.auth
 
+import android.os.SystemClock
+import kotlinx.coroutines.flow.first
 import org.mochios.android.api.unwrapRaw
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -154,14 +156,46 @@ class AuthRepository @Inject constructor(
         }
     }
 
+    /**
+     * Creates the signed-in user's identity and drops the held
+     * [getIdentityInfo] answer, which still says there is none.
+     */
     suspend fun createIdentity(name: String, privacy: String = "public") {
-        authApi.createIdentity(IdentityRequest(name, privacy)).unwrapRaw()
+        try {
+            authApi.createIdentity(IdentityRequest(name, privacy)).unwrapRaw()
+        } finally {
+            heldIdentity = null
+        }
     }
 
-    /** Single `_/identity` round-trip yielding both the bound identity and the
-     *  account status. Prefer this when you need both (e.g. bootstrap) so the
-     *  request isn't issued twice. */
+    /**
+     * The signed-in identity and the account status, from one `_/identity`
+     * round-trip. A read for the same server and session within
+     * [IDENTITY_LIFETIME] is answered from the last one: launch asks for it in
+     * the app's bootstrap and again for the home menu. Calls that change
+     * either half drop the held answer.
+     */
     suspend fun getIdentityInfo(): IdentityInfo {
+        val key = sessionManager.getServerUrlBlocking() + "|" +
+            sessionManager.currentToken.first().orEmpty()
+        val held = heldIdentity
+        if (held != null && held.key == key &&
+            SystemClock.elapsedRealtime() - held.at < IDENTITY_LIFETIME
+        ) {
+            return held.info
+        }
+        val info = readIdentityInfo()
+        heldIdentity = HeldIdentity(key, SystemClock.elapsedRealtime(), info)
+        return info
+    }
+
+    /** The last [getIdentityInfo] answer, for which server and session, and when. */
+    private class HeldIdentity(val key: String, val at: Long, val info: IdentityInfo)
+
+    @Volatile
+    private var heldIdentity: HeldIdentity? = null
+
+    private suspend fun readIdentityInfo(): IdentityInfo {
         val response = authApi.getIdentity().unwrapRaw()
         return IdentityInfo(
             identity = Identity(
@@ -175,9 +209,18 @@ class AuthRepository @Inject constructor(
         )
     }
 
-    /** Cancel a pending closure, reactivating the account. */
+    /**
+     * Cancels a pending closure, reactivating the account. Drops the held
+     * [getIdentityInfo] answer, whose status still says "closing": the
+     * bootstrap that follows must read the account fresh, or the first
+     * Reactivate tap leaves the user on the reactivation screen.
+     */
     suspend fun cancelClose() {
-        authApi.cancelClose().unwrapRaw()
+        try {
+            authApi.cancelClose().unwrapRaw()
+        } finally {
+            heldIdentity = null
+        }
     }
 
     suspend fun getAvailableMethods(): MethodsResponse {
@@ -274,5 +317,10 @@ class AuthRepository @Inject constructor(
                 break
             }
         }
+    }
+
+    private companion object {
+        /** How long, in ms, an identity read stands for the same session. */
+        const val IDENTITY_LIFETIME = 10_000L
     }
 }

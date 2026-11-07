@@ -25,6 +25,15 @@ import javax.inject.Singleton
 annotation class AssetHttpClient
 
 /**
+ * Qualifies the media client that never sends credentials, for images whose
+ * address someone else wrote: markdown and HTML in posts, comments and wiki
+ * pages.
+ */
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class AnonymousAssetHttpClient
+
+/**
  * The header marking an asset request as one of this app's own addresses (see
  * [owned]). The asset client sends the session and an app token to the user's
  * server only with it, and takes it off before the request leaves.
@@ -90,13 +99,7 @@ object AssetHttpModule {
                 if (isServerOrigin(request.url, server())) {
                     return@addInterceptor chain.proceed(request)
                 }
-                chain.proceed(
-                    request.newBuilder()
-                        .header("User-Agent", BROWSER_USER_AGENT)
-                        .header("Accept", BROWSER_IMAGE_ACCEPT)
-                        .header("Referer", "${request.url.scheme}://${request.url.host}/")
-                        .build()
-                )
+                chain.proceed(browser(request))
             }
             // The credentials go on hop by hop, and only on the hop for the
             // call's own marked address. A redirect is a request for an address
@@ -112,6 +115,50 @@ object AssetHttpModule {
                 val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
                 chain.proceed(session(authorised(request, app?.let(token)), jar.loadForRequest(request.url)))
             }
+            .build()
+
+    /**
+     * Media client for addresses a peer wrote into a body. A post, comment or
+     * wiki page can hold `![](/someapp/-/some-action)`; fetched with the session
+     * cookie and app token, every reader's phone would call that action as the
+     * reader. So no cookie jar and no token for any host, the user's own server
+     * included.
+     */
+    @Provides
+    @Singleton
+    @AnonymousAssetHttpClient
+    fun provideAnonymousAssetHttpClient(
+        @AssetHttpClient assetHttpClient: OkHttpClient,
+        sessionManager: SessionManager,
+    ): OkHttpClient = anonymousClient(sessionManager::getServerUrlBlocking, assetHttpClient)
+
+    /**
+     * The anonymous client over [server], the user's server's origin, sharing
+     * [shared]'s connections and dispatcher. It is built new, not from
+     * [shared]'s builder, which would keep the network interceptor that adds
+     * the session: a client for addresses a peer chose holds no code that can
+     * send it, and drops an [OWNED] mark before the request leaves.
+     */
+    internal fun anonymousClient(server: () -> String, shared: OkHttpClient): OkHttpClient =
+        OkHttpClient.Builder()
+            .connectionPool(shared.connectionPool)
+            .dispatcher(shared.dispatcher)
+            .cookieJar(CookieJar.NO_COOKIES)
+            .addInterceptor { chain ->
+                val request = chain.request().newBuilder().removeHeader(OWNED).build()
+                if (isServerOrigin(request.url, server())) {
+                    return@addInterceptor chain.proceed(request)
+                }
+                chain.proceed(browser(request))
+            }
+            .build()
+
+    /** [request] as a browser sends it, for a foreign host. */
+    private fun browser(request: Request): Request =
+        request.newBuilder()
+            .header("User-Agent", BROWSER_USER_AGENT)
+            .header("Accept", BROWSER_IMAGE_ACCEPT)
+            .header("Referer", "${request.url.scheme}://${request.url.host}/")
             .build()
 }
 

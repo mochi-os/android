@@ -149,15 +149,33 @@ class PostViewModel @Inject constructor(
                     rejected = rejectMessage(event.reason, event.type == "comment/reject"),
                 )
             }
-            viewModelScope.launch {
-                try {
-                    val r = repository.viewPost(forumId, postId)
-                    _uiState.value = _uiState.value.copy(
-                        forum = r.forum,
-                        post = r.post,
-                        comments = r.comments,
-                    )
-                } catch (_: Exception) {}
+            if (!_uiState.value.deleted) {
+                reloadQuietly()
+            }
+        }
+    }
+
+    /**
+     * Refetch the post for a forum frame, with no spinner. It shares [refresh]'s
+     * job and debounce, so a burst of frames, or a frame landing with an
+     * action's own refresh, makes one fetch.
+     */
+    private fun reloadQuietly() {
+        refreshJob?.cancel()
+        refreshJob = viewModelScope.launch {
+            delay(REFRESH_DEBOUNCE)
+            try {
+                val r = repository.viewPost(forumId, postId)
+                _uiState.value = _uiState.value.copy(
+                    forum = r.forum,
+                    post = r.post,
+                    comments = r.comments,
+                    isRefreshing = false,
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(isRefreshing = false)
             }
         }
     }
@@ -307,6 +325,9 @@ class PostViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deletePost(forumId, postId)
+                refreshJob?.cancel()
+                subscriptionId?.let { id -> webSocket.unsubscribe(id) }
+                subscriptionId = null
                 _uiState.value = _uiState.value.copy(deleted = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

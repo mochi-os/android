@@ -146,4 +146,28 @@ class AssetOwnedTest {
         assertNull("THE POINT: and no session", hop.getHeader("Cookie"))
     }
 
+    /** The client for addresses written into a post, comment or wiki page. */
+    private fun anonymous() = AssetHttpModule.anonymousClient(::origin, client())
+
+    @Test
+    fun `the anonymous client sends neither to the user's server, even for a marked request`() {
+        server.enqueue(MockResponse().setBody("x"))
+        val request = Request.Builder().url(origin() + "/settings/-/account/delete?confirm=1").header(OWNED, "1")
+        anonymous().newCall(request.build()).execute().close()
+        val recorded = server.takeRequest(5, TimeUnit.SECONDS)!!
+        assertNull("THE POINT: no token for the action a body named", recorded.getHeader("Authorization"))
+        assertNull("THE POINT: and no session", recorded.getHeader("Cookie"))
+        assertNull("the mark never leaves the phone", recorded.getHeader(OWNED))
+    }
+
+    @Test
+    fun `the anonymous client gives a foreign host a browser's headers and no credentials`() {
+        elsewhere.enqueue(MockResponse().setBody("x"))
+        anonymous().newCall(Request.Builder().url(elsewhere.url("/a.png")).build()).execute().close()
+        val recorded = elsewhere.takeRequest(5, TimeUnit.SECONDS)!!
+        assertNull(recorded.getHeader("Authorization"))
+        assertNull(recorded.getHeader("Cookie"))
+        assertTrue(recorded.getHeader("User-Agent")!!.contains("Mozilla"))
+    }
+
 }

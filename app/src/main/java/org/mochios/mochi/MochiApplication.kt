@@ -19,14 +19,18 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import okhttp3.OkHttpClient
+import org.mochios.android.api.AnonymousAssetHttpClient
 import org.mochios.android.api.AssetHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.ui.components.AnonymousImageFetcherFactory
+import org.mochios.android.ui.components.AnonymousImageKeyer
 import org.mochios.android.ui.components.OwnedInterceptor
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.RevalidatingCacheStrategy
 import org.mochios.android.ui.components.StaleIfError
 import org.mochios.android.ui.components.VideoFrameFetcher
+import org.mochios.android.ui.components.VideoFrameKeyer
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.android.i18n.LocaleHelper
 import org.mochios.android.i18n.PreferencesManager
@@ -56,6 +60,8 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
 
     @Inject @AssetHttpClient lateinit var assetHttpClient: OkHttpClient
 
+    @Inject @AnonymousAssetHttpClient lateinit var anonymousAssetHttpClient: OkHttpClient
+
     @Inject lateinit var sessionManager: SessionManager
 
     @Inject lateinit var preferencesManager: PreferencesManager
@@ -66,6 +72,10 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
      * Coil loader authenticated like the API clients: attachment and avatar
      * routes are session-gated, and the default loader sends neither the cookie
      * nor the bearer token, so images 401.
+     *
+     * Concurrent requests for one URL share a single fetch: a forum thread shows
+     * the same author's avatar many times at once, and each would otherwise go
+     * to the network before the first had reached the disk cache.
      */
     @OptIn(ExperimentalCoilApi::class)
     override fun newImageLoader(context: PlatformContext): ImageLoader =
@@ -91,6 +101,15 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                         concurrentRequestStrategy = { DeDupeConcurrentRequestStrategy() },
                     )
                 )
+                // Images in peer-written bodies: same caches, no credentials.
+                add(AnonymousImageKeyer(sessionManager))
+                add(
+                    AnonymousImageFetcherFactory(
+                        sessionManager = sessionManager,
+                        anonymousClient = { anonymousAssetHttpClient.newBuilder().addInterceptor(StaleIfError()).build() },
+                    )
+                )
+                add(VideoFrameKeyer())
                 add(VideoFrameFetcher.Factory(sessionManager) { assetHttpClient })
             }
             .build()

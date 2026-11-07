@@ -25,6 +25,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -80,6 +81,12 @@ fun ObjectDetailSheet(
     val context = LocalContext.current
     var showOverflow by remember { mutableStateOf(false) }
     var showDeleteConfirm by remember { mutableStateOf(false) }
+
+    DisposableEffect(viewModel) {
+        onDispose {
+            viewModel.close()
+        }
+    }
 
     LaunchedEffect(crmId, objectId) {
         viewModel.loadWithInitialObject(crmId, objectId, initialObject, crmDetails.crm.access)

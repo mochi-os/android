@@ -160,11 +160,15 @@ class WikiUpdateTest {
      * How many times [frame] made [paths] be asked for. A [marker] frame that
      * asks for [marked] once follows it, so the count is read only once the
      * frame has certainly been handled: the socket hands frames over in order.
+     * The marker is sent once the frame's reload debounce has passed, or the
+     * two would be read together as one burst.
      */
     private fun heard(frame: String, marker: String, marked: String, vararg paths: String): List<Int> {
         val before = paths.map { path -> count(path) }
+        check(peer!!.send(frame))
+        settle()
         val mark = count(marked)
-        check(peer!!.send(frame) && peer!!.send(marker))
+        check(peer!!.send(marker))
         until { count(marked) > mark }
         settle()
         return paths.mapIndexed { index, path -> count(path) - before[index] - if (path == marked) 1 else 0 }

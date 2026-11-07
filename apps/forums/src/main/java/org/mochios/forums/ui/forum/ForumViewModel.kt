@@ -133,6 +133,11 @@ class ForumViewModel @Inject constructor(
 
     private var resumedBefore = false
 
+    /** Set while another screen covers this one. Frames then leave the list
+     *  alone: the refresh on coming back reads every change at once. */
+    @Volatile
+    private var hidden = false
+
     /** Set when the screen comes back, until a refresh has read the saved sort
      *  again; a refresh that replaces that one before it lands inherits it. */
     private var resolving = false
@@ -156,7 +161,9 @@ class ForumViewModel @Inject constructor(
             repository.postCreated.collect { postedForum ->
                 if (isAll || postedForum == forumId || postedForum == uiState.value.forum.id) {
                     awaitingOwnPost = true
-                    refreshLatest()
+                    if (!hidden) {
+                        refreshLatest()
+                    }
                 }
             }
         }
@@ -239,8 +246,12 @@ class ForumViewModel @Inject constructor(
                 // The user's own post shouldn't hide behind a count they'd have to
                 // tap. It arrives here when the create response beat the list
                 // query — pull it in rather than counting it.
-                if (awaitingOwnPost) {
-                    refreshLatest()
+                if (isListed(event.post)) {
+                    awaitingOwnPost = false
+                } else if (awaitingOwnPost) {
+                    if (!hidden) {
+                        refreshLatest()
+                    }
                 } else {
                     _newPostsCount.value += 1
                 }
@@ -252,9 +263,19 @@ class ForumViewModel @Inject constructor(
                     val message = rejectMessage(event.reason, event.type == "comment/reject")
                     viewModelScope.launch { _events.emit(ForumEvent.ShowMessage(message)) }
                 }
-                refreshLatest()
+                if (!hidden) {
+                    refreshLatest()
+                }
             }
         }
+    }
+
+    /** Whether the post [id] names is already in the list, so a frame for it adds nothing. */
+    private fun isListed(id: String?): Boolean {
+        if (id.isNullOrEmpty()) {
+            return false
+        }
+        return uiState.value.posts.any { post -> post.id == id }
     }
 
     /**
@@ -352,6 +373,7 @@ class ForumViewModel @Inject constructor(
      * refreshes, reading the saved sort again on the way.
      */
     fun reloadOnForeground() {
+        hidden = false
         if (forumId.isBlank()) return
         if (!resumedBefore) {
             resumedBefore = true
@@ -360,6 +382,12 @@ class ForumViewModel @Inject constructor(
         // A sort saved on another device since the roster was read must show.
         repository.forget()
         if (isAll) loadAll(null, refreshing = false, quiet = true) else refreshLatest(resolve = true)
+    }
+
+    /** The screen's ON_PAUSE: a post or settings screen opened over it, or the
+     *  app left. The [reloadOnForeground] that follows refreshes the list. */
+    fun pauseLiveRefresh() {
+        hidden = true
     }
 
     override fun onCleared() {

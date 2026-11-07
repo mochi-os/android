@@ -88,7 +88,7 @@ fun DesignScreen(
     val uiState by viewModel.uiState.collectAsState()
 
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
-        viewModel.loadProject()
+        viewModel.onScreenResumed()
     }
     var selectedTab by rememberSaveable { mutableIntStateOf(0) }
     var showOverflowMenu by remember { mutableStateOf(false) }

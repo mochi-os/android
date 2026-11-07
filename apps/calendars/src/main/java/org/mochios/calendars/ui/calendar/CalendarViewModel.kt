@@ -205,6 +205,12 @@ class CalendarViewModel @Inject constructor(
 
     private var detailing: Job? = null
 
+    /** Set while another screen, the editor most often, covers this one. */
+    private var covered = false
+
+    /** Set when the calendars or events changed while [covered], for [revisit] to read. */
+    private var missed = false
+
     /** The zone every range is measured in: the user's, not the device's. */
     private val zone: ZoneId
         get() = runCatching { ZoneId.of(viewer.zone()) }.getOrDefault(ZoneId.systemDefault())
@@ -233,11 +239,23 @@ class CalendarViewModel @Inject constructor(
         val view = calendarsView(LastViewedStore.get(context, CALENDARS_FEATURE).orEmpty())
         _uiState.value = _uiState.value.copy(view = view, anchor = current, focus = current)
         viewModelScope.launch {
-            repository.calendarsChanged.collect { reload() }
+            repository.calendarsChanged.collect {
+                if (covered) {
+                    missed = true
+                } else {
+                    reload()
+                }
+            }
         }
         viewModelScope.launch {
             // An edit must not throw the reader back to the anchor day.
-            repository.eventsChanged.collect { load(reset = false) }
+            repository.eventsChanged.collect {
+                if (covered) {
+                    missed = true
+                } else {
+                    load(reset = false)
+                }
+            }
         }
         viewModelScope.launch {
             // An event saved into another calendar would vanish from a
@@ -677,12 +695,29 @@ class CalendarViewModel @Inject constructor(
     fun revisit(today: LocalDate = LocalDate.now(zone)) {
         val past = current
         current = today
+        val changed = missed
+        missed = false
         if (today != past && _uiState.value.anchor == past) {
             _uiState.value = _uiState.value.copy(anchor = today, focus = today, listed = null)
             reload()
-        } else if (reading?.isActive != true) {
+        } else if (changed || reading?.isActive != true) {
             reload(reset = false)
         }
+    }
+
+    /**
+     * The screen's ON_PAUSE: the editor or another screen opens over it.
+     * Changes saved meanwhile wait for [onScreenResumed], whose read takes them in, so
+     * the range is not read once behind the editor and again on the way back.
+     */
+    fun onScreenPaused() {
+        covered = true
+    }
+
+    /** The screen's ON_RESUME: back in view, it reads everything again, as [revisit] does. */
+    fun onScreenResumed() {
+        covered = false
+        revisit()
     }
 
     /** Moves the view back one period: a day, week, multiweek or month. */

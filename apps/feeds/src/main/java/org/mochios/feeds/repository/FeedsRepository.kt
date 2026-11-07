@@ -11,6 +11,11 @@ import android.os.SystemClock
 import android.util.Log
 import com.google.gson.Gson
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -30,6 +35,7 @@ import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.feeds.api.FeedNotificationSettings
@@ -776,13 +782,54 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun getPost(feedId: String, postId: String): PostDetailResult {
+    /**
+     * Read one post. A [shared] read is for a caller that waited
+     * [REFRESH_DEBOUNCE] after the change it reloads for: it joins a read of
+     * the same post begun within that wait, which started after the change and
+     * so already holds it. The post screen and the feed under it reload for
+     * the same frame, and make one request between them.
+     */
+    suspend fun getPost(
+        feedId: String,
+        postId: String,
+        shared: Boolean = false,
+    ): PostDetailResult {
+        if (!shared) {
+            return readPost(feedId, postId)
+        }
+        val now = SystemClock.elapsedRealtime()
+        val read = synchronized(postReads) {
+            postReads[postId]?.takeIf { held ->
+                held.answer.isActive && now - held.started <= REFRESH_DEBOUNCE.inWholeMilliseconds
+            } ?: PostRead(now, readScope.async { readPost(feedId, postId) }).also { started ->
+                postReads[postId] = started
+                started.answer.invokeOnCompletion { _ ->
+                    synchronized(postReads) {
+                        if (postReads[postId] === started) {
+                            postReads.remove(postId)
+                        }
+                    }
+                }
+            }
+        }
+        return read.answer.await()
+    }
+
+    private suspend fun readPost(feedId: String, postId: String): PostDetailResult {
         return try {
             postDetail(api.getPost(feedId, postId).unwrap())
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
+
+    /** A shared [getPost] under way, and when it began. */
+    private class PostRead(val started: Long, val answer: Deferred<PostDetailResult>)
+
+    /** The shared [getPost] reads under way, by post. */
+    private val postReads = mutableMapOf<String, PostRead>()
+
+    private val readScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
     suspend fun getNewPostFeeds(feedId: String): List<Feed> {
         return try {

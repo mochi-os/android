@@ -6,6 +6,7 @@
 package org.mochios.android.ui.components
 
 import android.content.Context
+import android.graphics.Bitmap
 import android.media.MediaDataSource
 import android.media.MediaMetadataRetriever
 import androidx.core.net.toUri
@@ -15,7 +16,13 @@ import coil3.decode.DataSource
 import coil3.fetch.FetchResult
 import coil3.fetch.Fetcher
 import coil3.fetch.ImageFetchResult
+import coil3.key.Keyer
 import coil3.request.Options
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.async
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okio.Buffer
@@ -36,16 +43,29 @@ data class VideoFrame(val url: String)
  * Decodes a video's opening frame with [MediaMetadataRetriever], which reads
  * only the ranges that frame needs rather than the whole clip as Coil's
  * `VideoFrameDecoder` would. Returning through Coil keeps the frame in the
- * memory cache.
+ * memory cache, under the key [VideoFrameKeyer] gives it.
+ *
+ * @param share Runs the decode for a URL, or joins one already running for it.
  */
 class VideoFrameFetcher(
     private val data: VideoFrame,
     private val sessionManager: SessionManager,
     private val client: () -> OkHttpClient,
     private val context: Context,
+    private val share: suspend (url: String, decode: () -> Bitmap?) -> Bitmap?,
 ) : Fetcher {
 
     override suspend fun fetch(): FetchResult? {
+        val local = picked(data.url)
+        val bitmap = share(data.url) { decode(local) } ?: return null
+        return ImageFetchResult(
+            image = bitmap.asImage(),
+            isSampled = false,
+            dataSource = if (local) DataSource.DISK else DataSource.NETWORK,
+        )
+    }
+
+    private fun decode(local: Boolean): Bitmap? {
         val retriever = MediaMetadataRetriever()
         return try {
             // A clip picked on the device is read through the resolver that
@@ -53,20 +73,13 @@ class VideoFrameFetcher(
             // which sends the session only with one of the app's own addresses
             // and only to that address: the retriever's own HTTP stack would
             // carry the headers across any redirect the answer named.
-            val local = picked(data.url)
             if (local) {
                 retriever.setDataSource(context, data.url.toUri())
             } else {
                 val url = resolved(sessionManager.getServerUrlBlocking(), data.url)
                 retriever.setDataSource(AssetMediaSource(client(), url, assetHeaders(data.url)))
             }
-            val bitmap = retriever.getFrameAtTime(0L, MediaMetadataRetriever.OPTION_CLOSEST_SYNC)
-                ?: return null
-            ImageFetchResult(
-                image = bitmap.asImage(),
-                isSampled = false,
-                dataSource = if (local) DataSource.DISK else DataSource.NETWORK,
-            )
+            retriever.getFrameAtTime(0L, MediaMetadataRetriever.OPTION_CLOSEST_SYNC)
         } catch (_: Exception) {
             null
         } finally {
@@ -74,15 +87,46 @@ class VideoFrameFetcher(
         }
     }
 
+    /**
+     * Creates a [VideoFrameFetcher] for each [VideoFrame] request. Requests for
+     * one URL that arrive while its frame is still decoding wait for that decode
+     * instead of starting their own, so a video shown twice at once is read from
+     * the server once. The decode runs in the factory's scope, so a waiting
+     * request still gets the frame when the one that started it is cancelled.
+     */
     class Factory(
         private val sessionManager: SessionManager,
         private val client: () -> OkHttpClient,
     ) : Fetcher.Factory<VideoFrame> {
+
+        private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
+        private val inFlight = mutableMapOf<String, Deferred<Bitmap?>>()
+
+        private val lock = Any()
+
         override fun create(
             data: VideoFrame,
             options: Options,
             imageLoader: ImageLoader,
-        ): Fetcher = VideoFrameFetcher(data, sessionManager, client, options.context)
+        ): Fetcher = VideoFrameFetcher(data, sessionManager, client, options.context, ::share)
+
+        private suspend fun share(url: String, decode: () -> Bitmap?): Bitmap? {
+            val job = synchronized(lock) {
+                inFlight.getOrPut(url) {
+                    scope.async {
+                        try {
+                            decode()
+                        } finally {
+                            synchronized(lock) {
+                                inFlight.remove(url)
+                            }
+                        }
+                    }
+                }
+            }
+            return job.await()
+        }
     }
 }
 
@@ -173,4 +217,13 @@ internal class AssetMediaSource(
         const val HELD = 8
         const val UNASKED = -2L
     }
+}
+
+/**
+ * Memory cache key for a [VideoFrame]: its URL. Coil caches nothing for a model
+ * type without a keyer, so a thumbnail scrolled back into view fetched its
+ * frame from the server again.
+ */
+class VideoFrameKeyer : Keyer<VideoFrame> {
+    override fun key(data: VideoFrame, options: Options): String = data.url
 }

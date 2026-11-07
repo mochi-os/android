@@ -5,6 +5,9 @@
 
 package org.mochios.staff.repository
 
+import android.os.SystemClock
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.staff.api.StaffApi
@@ -45,12 +48,38 @@ class StaffRepository @Inject constructor(
 
     // ---- Me ----
 
-    suspend fun getMe(): Me {
-        return try {
+    /** The last [getMe] answer and when it was read, on the [SystemClock.elapsedRealtime] clock. */
+    private class HeldMe(val me: Me, val read: Long)
+
+    @Volatile
+    private var held: HeldMe? = null
+
+    /** One [getMe] read at a time: a caller arriving while one is under way takes its answer. */
+    private val meLock = Mutex()
+
+    /**
+     * The signed-in identity's staff record. An answer read within [ME_LIFETIME]
+     * is reused, so the access check at start and the staff screens that open
+     * after it make one request between them. [fresh] reads it again regardless.
+     */
+    suspend fun getMe(fresh: Boolean = false): Me = meLock.withLock {
+        val last = held
+        if (!fresh && last != null && SystemClock.elapsedRealtime() - last.read < ME_LIFETIME) {
+            return@withLock last.me
+        }
+        val me = try {
             api.getMe().unwrap()
         } catch (e: Exception) {
+            held = null
             throw e.toMochiError()
         }
+        held = HeldMe(me, SystemClock.elapsedRealtime())
+        me
+    }
+
+    /** Drops the held [getMe] answer, for an identity that changed. */
+    fun forgetMe() {
+        held = null
     }
 
     // ---- Team ----
@@ -451,5 +480,10 @@ class StaffRepository @Inject constructor(
         } catch (e: Exception) {
             throw e.toMochiError()
         }
+    }
+
+    private companion object {
+        /** How long a [getMe] answer is reused, in milliseconds. */
+        const val ME_LIFETIME = 60_000L
     }
 }

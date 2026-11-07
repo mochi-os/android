@@ -6,6 +6,7 @@
 package org.mochios.android.push
 
 import android.content.Context
+import android.os.SystemClock
 import android.util.Log
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.Dispatchers
@@ -50,8 +51,31 @@ object PushTransport {
         sessionManager: SessionManager,
         client: OkHttpClient,
     ) = withContext(Dispatchers.IO) {
-        configureMutex.withLock { configureLocked(context, sessionManager, client) }
+        configureMutex.withLock {
+            val key = sessionManager.getServerUrlBlocking() + "|" +
+                sessionManager.getBoundIdentity().orEmpty()
+            val last = configured
+            if (last != null && last.key == key &&
+                SystemClock.elapsedRealtime() - last.at < RECONFIGURE_GAP
+            ) {
+                return@withLock
+            }
+            configureLocked(context, sessionManager, client)
+            configured = Configured(key, SystemClock.elapsedRealtime())
+        }
     }
+
+    /** A finished [configure]: for which server and account, and when. */
+    private class Configured(val key: String, val at: Long)
+
+    /** The last finished [configure], which a call for the same server and
+     *  account within [RECONFIGURE_GAP] skips: launch asks twice, once on
+     *  signing in and once on resume. */
+    @Volatile
+    private var configured: Configured? = null
+
+    /** How long, in ms, a finished [configure] stands for the same account. */
+    private const val RECONFIGURE_GAP = 10_000L
 
     private suspend fun configureLocked(
         context: Context,

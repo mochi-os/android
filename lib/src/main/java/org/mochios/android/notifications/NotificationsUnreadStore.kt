@@ -6,6 +6,7 @@
 package org.mochios.android.notifications
 
 import android.content.Context
+import android.os.SystemClock
 import android.util.Log
 import androidx.core.app.NotificationManagerCompat
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -49,6 +50,14 @@ class NotificationsUnreadStore @Inject constructor(
     private var connectionId: String? = null
     private var started = false
 
+    /** When the count was last read, on the [SystemClock.elapsedRealtime] clock; 0 before. */
+    @Volatile
+    private var countedAt = 0L
+
+    /** Set from [ensureStarted] until the socket first comes up. */
+    @Volatile
+    private var opening = false
+
     /** The pending or in-flight socket refresh; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
 
@@ -62,6 +71,7 @@ class NotificationsUnreadStore @Inject constructor(
                 started = false
                 return@launch
             }
+            opening = true
             refresh()
             subscribeWebSocket()
         }
@@ -73,12 +83,15 @@ class NotificationsUnreadStore @Inject constructor(
         connectionId?.let { id -> webSocket.unsubscribeConnected(id) }
         connectionId = null
         started = false
+        opening = false
+        countedAt = 0L
         _count.value = 0
     }
 
     suspend fun refresh() {
         try {
             _count.value = repository.count().count
+            countedAt = SystemClock.elapsedRealtime()
         } catch (e: Exception) {
             currentCoroutineContext().ensureActive()
             Log.w(TAG, "refresh failed: ${e.message}")
@@ -86,12 +99,13 @@ class NotificationsUnreadStore @Inject constructor(
     }
 
     /**
-     * Refresh for a socket event. Each call cancels the previous one and waits
-     * [REFRESH_DEBOUNCE] first: one notification arrives as a burst of frames
-     * (`new`, then `clear_object` and `read` once it is marked), and only the
-     * latest fetches.
+     * Refresh after a socket event or the user's own read or clear. Each call
+     * cancels the previous one and waits [REFRESH_DEBOUNCE] first: one
+     * notification arrives as a burst of frames (`new`, then `clear_object` and
+     * `read` once it is marked), and an action's echo lands with its response,
+     * so only the latest fetches. Use [refresh] where the count must be read now.
      */
-    private fun refreshLatest() {
+    fun refreshLatest() {
         synchronized(this) {
             refreshJob?.cancel()
             refreshJob = scope.launch {
@@ -109,7 +123,7 @@ class NotificationsUnreadStore @Inject constructor(
         // MainActivity's onResume forces the reconnect on a foreground return,
         // which makes this the foreground refresh as well.
         connectionId = webSocket.subscribeConnected(server, "notifications") {
-            refreshLatest()
+            onConnected()
         }
         subscriptionId = webSocket.subscribeBadge(server) { event ->
             when (event.type) {
@@ -165,8 +179,25 @@ class NotificationsUnreadStore @Inject constructor(
         NotificationManagerCompat.from(context).cancelAll()
     }
 
+    /**
+     * Re-read the count when the socket comes up, except on the first open
+     * right after [ensureStarted] has just read it: that read already holds
+     * the count, and launch would otherwise fetch it twice.
+     */
+    private fun onConnected() {
+        val first = opening
+        opening = false
+        if (first && SystemClock.elapsedRealtime() - countedAt <= FRESH_WINDOW) {
+            return
+        }
+        refreshLatest()
+    }
+
     private companion object {
         const val TAG = "NotificationsUnread"
+
+        /** How recent a count the first socket open takes as current, in ms. */
+        const val FRESH_WINDOW = 5_000L
     }
 }
 

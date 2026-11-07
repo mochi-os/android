@@ -72,6 +72,10 @@ class FeedListViewModel @Inject constructor(
 
     private var resumedBefore = false
 
+    /** Set while another screen covers the feed screen; see [onScreenPaused]. */
+    @Volatile
+    private var hidden = false
+
     init {
         loadFeeds()
         observeSubscriptionChanges()
@@ -134,6 +138,7 @@ class FeedListViewModel @Inject constructor(
      * unread counts to update - refreshes.
      */
     fun onScreenResumed() {
+        hidden = false
         if (!resumedBefore) {
             resumedBefore = true
             return
@@ -143,6 +148,15 @@ class FeedListViewModel @Inject constructor(
         // none is, the return reads now; if core refuses it, the wait ends
         // and the return reads then.
         if (subscribedKeys.any { key -> webSocket.reopening(key) }) refreshSilently(REOPEN_GRACE) else refresh()
+    }
+
+    /**
+     * The screen's ON_PAUSE: a post or settings screen opened over it, or the
+     * app left. Frames then leave the feeds alone, since the
+     * [onScreenResumed] that follows reads them again.
+     */
+    fun onScreenPaused() {
+        hidden = true
     }
 
     fun refresh() = synchronized(this) {
@@ -191,7 +205,9 @@ class FeedListViewModel @Inject constructor(
                 when (event.type) {
                     "post/create", "post/delete", "feed/update",
                     "feed/removed", "feed/deleted", REOPEN -> {
-                        refreshSilently()
+                        if (!hidden) {
+                            refreshSilently()
+                        }
                     }
                 }
             }
