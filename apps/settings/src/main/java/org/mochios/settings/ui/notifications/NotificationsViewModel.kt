@@ -23,6 +23,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.NotificationsRepository
@@ -76,10 +77,10 @@ class NotificationsViewModel @Inject constructor(
     /** The pending or in-flight list fetch; cancelled when a newer one starts. */
     private var loadJob: Job? = null
 
-    /** The frame type this user's own read or clear echoes back as, already
-     *  shown in the list, so its arrival need not fetch the list again. */
+    /** The frame this user's own read or clear echoes back as, already shown
+     *  in the list, so its arrival need not fetch the list again. */
     @Volatile
-    private var echo: String? = null
+    private var echo: Echo? = null
 
     /** When [echo] stops being expected, on the [SystemClock.elapsedRealtime] clock. */
     @Volatile
@@ -190,7 +191,13 @@ class NotificationsViewModel @Inject constructor(
     fun markRead(id: String) {
         viewModelScope.launch {
             try {
-                expectEcho("read")
+                val target = _uiState.value.items.firstOrNull { item -> item.id == id }
+                // A "read" frame names its notification by app, topic and
+                // object; without the item those are unknown, so any "read"
+                // frame then reloads the list.
+                if (target != null) {
+                    expectEcho(Echo("read", readKey(target.app, target.topic, target.`object`)))
+                }
                 repository.markRead(id)
                 val state = _uiState.value
                 val marked = state.items.any { item -> item.id == id && item.read == 0L }
@@ -215,7 +222,7 @@ class NotificationsViewModel @Inject constructor(
     fun markAllRead() {
         viewModelScope.launch {
             try {
-                expectEcho("read_all")
+                expectEcho(Echo("read_all"))
                 repository.markAllRead()
                 val now = System.currentTimeMillis() / 1000
                 _uiState.value = _uiState.value.copy(
@@ -233,7 +240,7 @@ class NotificationsViewModel @Inject constructor(
     fun clearAll() {
         viewModelScope.launch {
             try {
-                expectEcho("clear_all")
+                expectEcho(Echo("clear_all"))
                 repository.clearAll()
                 _uiState.value = _uiState.value.copy(items = emptyList(), unreadCount = 0)
                 unread.refreshLatest()
@@ -251,28 +258,41 @@ class NotificationsViewModel @Inject constructor(
             "notifications",
             app = "notifications",
         ) { event ->
-            if (!isOwnEcho(event.type)) {
+            if (!isOwnEcho(event)) {
                 refreshLatest()
             }
         }
     }
 
-    /** Expect [type] back from the server for an action whose result the list
-     *  already shows. */
-    private fun expectEcho(type: String) {
+    /** Expect [expected] back from the server for an action whose result the
+     *  list already shows. */
+    private fun expectEcho(expected: Echo) {
         echoUntil = SystemClock.elapsedRealtime() + ECHO_WINDOW
-        echo = type
+        echo = expected
     }
 
-    /** Whether a frame of [type] is the expected echo, which is then spent. */
-    private fun isOwnEcho(type: String?): Boolean {
+    /** Whether [event] is the expected echo, which is then spent. A "read"
+     *  must also name the notification this user marked: one from another
+     *  device in the same window is someone else's change. */
+    private fun isOwnEcho(event: WebSocketEvent): Boolean {
         val expected = echo ?: return false
-        if (type != expected || SystemClock.elapsedRealtime() > echoUntil) {
+        if (event.type != expected.type || SystemClock.elapsedRealtime() > echoUntil) {
+            return false
+        }
+        if (expected.key != null &&
+            expected.key != readKey(event.app, event.topic, event.objectId)
+        ) {
             return false
         }
         echo = null
         return true
     }
+
+    /** A frame [type] expected back, and for a "read" which notification. */
+    private data class Echo(val type: String, val key: String? = null)
+
+    private fun readKey(app: String?, topic: String?, objectId: String?): String =
+        "$app|$topic|$objectId"
 
     override fun onCleared() {
         super.onCleared()
