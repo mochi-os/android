@@ -19,9 +19,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import okhttp3.OkHttpClient
+import org.mochios.android.api.AnonymousAssetHttpClient
 import org.mochios.android.api.AssetHttpClient
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
+import org.mochios.android.ui.components.AnonymousImageFetcherFactory
+import org.mochios.android.ui.components.AnonymousImageKeyer
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.RevalidatingCacheStrategy
 import org.mochios.android.ui.components.VideoFrameFetcher
@@ -55,6 +58,8 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
 
     @Inject @AssetHttpClient lateinit var assetHttpClient: OkHttpClient
 
+    @Inject @AnonymousAssetHttpClient lateinit var anonymousAssetHttpClient: OkHttpClient
+
     @Inject lateinit var sessionManager: SessionManager
 
     @Inject lateinit var preferencesManager: PreferencesManager
@@ -85,6 +90,14 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
                         callFactory = { assetHttpClient },
                         cacheStrategy = { RevalidatingCacheStrategy() },
                         concurrentRequestStrategy = { DeDupeConcurrentRequestStrategy() },
+                    )
+                )
+                // Images in peer-written bodies: same caches, no credentials.
+                add(AnonymousImageKeyer(sessionManager))
+                add(
+                    AnonymousImageFetcherFactory(
+                        sessionManager = sessionManager,
+                        anonymousClient = { anonymousAssetHttpClient },
                     )
                 )
                 add(VideoFrameKeyer())

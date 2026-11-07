@@ -10,7 +10,9 @@ import dagger.Provides
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.CookieJar
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
+import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.mochios.android.auth.SessionManager
@@ -21,6 +23,15 @@ import javax.inject.Singleton
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class AssetHttpClient
+
+/**
+ * Qualifies the media client that never sends credentials, for images whose
+ * address someone else wrote: markdown and HTML in posts, comments and wiki
+ * pages.
+ */
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class AnonymousAssetHttpClient
 
 /**
  * Media-asset client. Own-server requests carry the session cookie and per-app
@@ -50,17 +61,47 @@ object AssetHttpModule {
                 // Whole origin, not the host: a host-only match handed the app
                 // token to `http://host` and to `host:8443`.
                 if (!isServerOrigin(request.url, sessionManager.getServerUrlBlocking())) {
-                    return@addInterceptor chain.proceed(
-                        request.newBuilder()
-                            .header("User-Agent", BROWSER_USER_AGENT)
-                            .header("Accept", BROWSER_IMAGE_ACCEPT)
-                            .header("Referer", "${request.url.scheme}://${request.url.host}/")
-                            .build()
-                    )
+                    return@addInterceptor chain.proceed(asBrowser(request))
                 }
                 val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
                 chain.proceed(authorised(request, app?.let { sessionManager.getTokenBlocking(it) }))
             }
+            .build()
+
+    /**
+     * Media client for addresses a peer wrote into a body. A post, comment or
+     * wiki page can hold `![](/someapp/-/some-action)`; fetched with the session
+     * cookie and app token, every reader's phone would call that action as the
+     * reader. So no cookie jar and no token for any host, the user's own server
+     * included. Shares the asset client's connection pool and dispatcher.
+     */
+    @Provides
+    @Singleton
+    @AnonymousAssetHttpClient
+    fun provideAnonymousAssetHttpClient(
+        @AssetHttpClient assetHttpClient: OkHttpClient,
+        sessionManager: SessionManager,
+    ): OkHttpClient =
+        assetHttpClient.newBuilder()
+            .apply { interceptors().clear() }
+            .cookieJar(CookieJar.NO_COOKIES)
+            .addInterceptor(anonymousInterceptor(sessionManager))
+            .build()
+
+    private fun anonymousInterceptor(sessionManager: SessionManager) = Interceptor { chain ->
+        val request = chain.request()
+        if (isServerOrigin(request.url, sessionManager.getServerUrlBlocking())) {
+            chain.proceed(request)
+        } else {
+            chain.proceed(asBrowser(request))
+        }
+    }
+
+    private fun asBrowser(request: Request): Request =
+        request.newBuilder()
+            .header("User-Agent", BROWSER_USER_AGENT)
+            .header("Accept", BROWSER_IMAGE_ACCEPT)
+            .header("Referer", "${request.url.scheme}://${request.url.host}/")
             .build()
 }
 

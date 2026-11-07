@@ -32,9 +32,11 @@ import org.commonmark.node.Image
  * loader, in place of Markwon's `ImagesPlugin`. That plugin fetched every image
  * with a bare `HttpURLConnection` each time the text was drawn: no cache, no
  * session, so a session-gated image failed and a repeated one downloaded again.
- * Through Coil an image shares the memory and disk caches, the concurrent
- * request dedupe and the authenticated asset client, and a server-relative path
- * resolves against the session server.
+ * Through Coil an image shares the memory and disk caches and the concurrent
+ * request dedupe, and a server-relative path resolves against the session
+ * server. The body is someone else's writing, so its images go as
+ * [AnonymousImage]: never with the session cookie or app token, or
+ * `![](/someapp/-/some-action)` would run that action as each reader.
  */
 class CoilImagesPlugin private constructor(
     private val loader: CoilDrawableLoader,
@@ -85,7 +87,7 @@ internal class CoilDrawableLoader(private val context: Context) : AsyncDrawableL
         }
         val maxWidth = Dimension(context.resources.displayMetrics.widthPixels)
         val request = ImageRequest.Builder(context)
-            .data(drawable.destination)
+            .data(imageData(drawable.destination))
             .size(Size(maxWidth, Dimension.Undefined))
             .allowHardware(false)
             .target(
@@ -109,6 +111,15 @@ internal class CoilDrawableLoader(private val context: Context) : AsyncDrawableL
     }
 
     override fun placeholder(drawable: AsyncDrawable): Drawable? = null
+
+    // An inline `data:` image needs no request; everything else is an address
+    // that must load without credentials.
+    private fun imageData(destination: String): Any =
+        if (destination.startsWith("data:", ignoreCase = true)) {
+            destination
+        } else {
+            AnonymousImage(destination)
+        }
 
     private fun deliver(drawable: AsyncDrawable, result: Drawable) {
         if (!drawable.isAttached) {
