@@ -163,6 +163,34 @@ class ForumsNetworksScreenTest {
     }
 
     @Test
+    fun `the community a search typed is joined as it stands, the search hiding the empty form`() {
+        var joined: Pair<String, String>? = null
+        rule.setContent {
+            JoinCommunity(
+                accounts = listOf(NetworkAccount(id = "h1", identifier = "amy@here.example")),
+                busy = false,
+                onJoin = { address, account, _ -> joined = address to account },
+                typed = "!technology@lemmy.world",
+            )
+        }
+        // THE POINT: the typed address is offered to join, with no field to fill again.
+        rule.onNodeWithText("Community address").assertDoesNotExist()
+        rule.onNodeWithText("!technology@lemmy.world").assertIsDisplayed()
+        rule.onNodeWithText("Join").performClick()
+        assertEquals("!technology@lemmy.world" to "h1", joined)
+    }
+
+    @Test
+    fun `what may name a community elsewhere is told from a search for a forum here`() {
+        for (query in listOf("!technology@lemmy.world", "@books@lemmy.example", "books@lemmy.example", "https://lemmy.world/c/technology")) {
+            assertTrue(query, org.mochios.forums.ui.find.looksLikeCommunity(query))
+        }
+        for (query in listOf("technology", "my forum", "mochi://forum/x", "https://example.com/forums/abcdefghi", "")) {
+            assertFalse(query, org.mochios.forums.ui.find.looksLikeCommunity(query))
+        }
+    }
+
+    @Test
     fun `a linked Lemmy account's communities are added and its settings imported`() {
         val calls = mutableListOf<String>()
         rule.setContent {

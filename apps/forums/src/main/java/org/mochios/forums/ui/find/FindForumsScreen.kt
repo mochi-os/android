@@ -141,13 +141,17 @@ fun FindForumsScreen(
 
             Spacer(Modifier.height(8.dp))
 
-            // Communities on other networks, beside the forums found here.
-            if (uiState.searchQuery.isBlank()) {
+            // Communities on other networks, beside the forums found here: the
+            // ways in while nothing is searched, and the way to join the
+            // community a search names.
+            val query = uiState.searchQuery.trim()
+            if (query.isEmpty() || looksLikeCommunity(query)) {
                 CommunitiesSections(
                     viewModel = communities,
                     onMessage = { message -> snackbarHostState.showSnackbar(message) },
                     onOpenForum = onForumSubscribed,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                    typed = query.ifEmpty { null },
                 )
             }
 

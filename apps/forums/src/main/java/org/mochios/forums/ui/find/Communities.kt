@@ -27,6 +27,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -51,10 +52,21 @@ import org.mochios.forums.R
 import org.mochios.forums.model.NetworkAccount
 
 /**
+ * What may name a community elsewhere: !name@host or @name@host, name@host,
+ * or a link that is not a Mochi forum's.
+ */
+internal fun looksLikeCommunity(query: String): Boolean {
+    val q = query.trim()
+    if (q.isEmpty() || q.any { it.isWhitespace() } || q.startsWith("mochi:", ignoreCase = true) || "/forums/" in q) return false
+    return Regex("^https?://", RegexOption.IGNORE_CASE).containsMatchIn(q) || Regex("^[@!]?[^@/!]+@[^@/]+\\.[^@/]+$").matches(q)
+}
+
+/**
  * The Find screen's ways in from other networks: join a community elsewhere
  * as one of the user's hosted fediverse accounts, and read in the communities
  * and settings of a linked Lemmy account. Each shows only where the user has
- * such an account.
+ * such an account. Given the address a search typed, only the way to join
+ * that community, since the search hides the empty form.
  */
 @Composable
 internal fun CommunitiesSections(
@@ -62,6 +74,7 @@ internal fun CommunitiesSections(
     onMessage: suspend (String) -> Unit,
     onOpenForum: (String) -> Unit,
     modifier: Modifier = Modifier,
+    typed: String? = null,
 ) {
     val hosted by viewModel.hosted.collectAsState()
     val lemmy by viewModel.lemmy.collectAsState()
@@ -93,12 +106,14 @@ internal fun CommunitiesSections(
             }
         }
     }
-    if (hosted.isEmpty() && lemmy.isEmpty()) return
+    if (hosted.isEmpty() && (lemmy.isEmpty() || typed != null)) return
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
         if (hosted.isNotEmpty()) {
-            JoinCommunity(accounts = hosted, busy = "join" in busy, onJoin = { address, account, joined -> viewModel.join(address, account, joined) })
+            key(typed) {
+                JoinCommunity(accounts = hosted, busy = "join" in busy, onJoin = { address, account, joined -> viewModel.join(address, account, joined) }, typed = typed)
+            }
         }
-        if (lemmy.isNotEmpty()) {
+        if (lemmy.isNotEmpty() && typed == null) {
             LemmyAccounts(
                 accounts = lemmy,
                 busy = busy,
@@ -124,22 +139,29 @@ internal fun JoinCommunity(
     accounts: List<NetworkAccount>,
     busy: Boolean,
     onJoin: (address: String, account: String, joined: () -> Unit) -> Unit,
+    typed: String? = null,
 ) {
-    var address by remember { mutableStateOf("") }
+    var entered by remember { mutableStateOf("") }
+    val address = typed ?: entered
     var chosen by remember { mutableStateOf("") }
     var open by remember { mutableStateOf(false) }
     val account = accounts.firstOrNull { it.id == chosen } ?: accounts.first()
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Heading(stringResource(R.string.forums_join_community))
-        MochiTextField(
-            value = address,
-            onValueChange = { address = it },
-            label = { Text(stringResource(R.string.forums_community_address)) },
-            placeholder = { Text(stringResource(R.string.forums_community_address_hint)) },
-            singleLine = true,
-            enabled = !busy,
-            modifier = Modifier.fillMaxWidth(),
-        )
+        if (typed == null) {
+            MochiTextField(
+                value = entered,
+                onValueChange = { entered = it },
+                label = { Text(stringResource(R.string.forums_community_address)) },
+                placeholder = { Text(stringResource(R.string.forums_community_address_hint)) },
+                singleLine = true,
+                enabled = !busy,
+                modifier = Modifier.fillMaxWidth(),
+            )
+        } else {
+            // The address the search typed, joined as it stands.
+            Text(typed, style = MaterialTheme.typography.bodyLarge, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        }
         Row(verticalAlignment = Alignment.CenterVertically) {
             // Which hosted account joins, where there is more than one.
             if (accounts.size > 1) {
@@ -166,7 +188,7 @@ internal fun JoinCommunity(
             MochiOutlinedButton(
                 onClick = {
                     // A refused address stays in the field.
-                    onJoin(address, account.id) { address = "" }
+                    onJoin(address, account.id) { entered = "" }
                 },
                 enabled = address.isNotBlank() && !busy,
             ) {
