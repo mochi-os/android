@@ -220,7 +220,7 @@
     <string name="people_contacts_menu_unfriend">Bỏ kết bạn</string>
     <string name="people_profile_directory_listing">Hiển thị trong danh bạ</string>
     <string name="people_contact_address">Địa chỉ</string>
-    <string name="people_contact_handle">Biệt danh</string>
+    <string name="people_contact_handle">Tên người dùng</string>
     <string name="people_contact_messaging">Địa chỉ nhắn tin</string>
     <string name="people_profile_networks">Mạng</string>
     <string name="people_profile_settings">Cài đặt</string>

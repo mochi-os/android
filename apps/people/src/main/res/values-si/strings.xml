@@ -221,7 +221,7 @@
     <string name="people_contacts_menu_unfriend">මිත්‍රත්වය අවසන් කරන්න</string>
     <string name="people_profile_directory_listing">නාමාවලියේ ලැයිස්තුගත කිරීම</string>
     <string name="people_contact_address">ලිපිනය</string>
-    <string name="people_contact_handle">අන්වර්ථ නාමය</string>
+    <string name="people_contact_handle">පරිශීලක නාමය</string>
     <string name="people_contact_messaging">පණිවිඩ ලිපිනය</string>
     <string name="people_profile_networks">ජාල</string>
     <string name="people_profile_settings">සැකසුම්</string>

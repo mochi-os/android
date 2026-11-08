@@ -222,7 +222,7 @@
     <string name="people_contacts_menu_unfriend">Уклони из пријатеља</string>
     <string name="people_profile_directory_listing">Приказ у именику</string>
     <string name="people_contact_address">Адреса</string>
-    <string name="people_contact_handle">Надимак</string>
+    <string name="people_contact_handle">Корисничко име</string>
     <string name="people_contact_messaging">Адреса за размену порука</string>
     <string name="people_profile_networks">Мреже</string>
     <string name="people_profile_settings">Подешавања</string>

@@ -221,7 +221,7 @@
     <string name="people_contacts_menu_unfriend">Doʻstlikni tugatish</string>
     <string name="people_profile_directory_listing">Katalogda ko\'rsatilish</string>
     <string name="people_contact_address">Manzil</string>
-    <string name="people_contact_handle">Taxallus</string>
+    <string name="people_contact_handle">Foydalanuvchi nomi</string>
     <string name="people_contact_messaging">Xabar almashish manzili</string>
     <string name="people_profile_networks">Tarmoqlar</string>
     <string name="people_profile_settings">Sozlamalar</string>

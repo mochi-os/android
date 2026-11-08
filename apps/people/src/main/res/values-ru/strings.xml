@@ -223,7 +223,7 @@
     <string name="people_contacts_menu_unfriend">Удалить из друзей</string>
     <string name="people_profile_directory_listing">Отображение в каталоге</string>
     <string name="people_contact_address">Адрес</string>
-    <string name="people_contact_handle">Псевдоним</string>
+    <string name="people_contact_handle">Имя пользователя</string>
     <string name="people_contact_messaging">Адрес мессенджера</string>
     <string name="people_profile_networks">Сети</string>
     <string name="people_profile_settings">Настройки</string>

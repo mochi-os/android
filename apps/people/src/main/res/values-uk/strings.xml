@@ -223,7 +223,7 @@
     <string name="people_contacts_menu_unfriend">Припинити дружбу</string>
     <string name="people_profile_directory_listing">Відображення в каталозі</string>
     <string name="people_contact_address">Адреса</string>
-    <string name="people_contact_handle">Псевдонім</string>
+    <string name="people_contact_handle">Імʼя користувача</string>
     <string name="people_contact_messaging">Адреса месенджера</string>
     <string name="people_profile_networks">Мережі</string>
     <string name="people_profile_settings">Налаштування</string>

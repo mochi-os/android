@@ -223,7 +223,7 @@
     <string name="people_contacts_menu_unfriend">Zakończ znajomość</string>
     <string name="people_profile_directory_listing">Widoczność w katalogu</string>
     <string name="people_contact_address">Adres</string>
-    <string name="people_contact_handle">Pseudonim</string>
+    <string name="people_contact_handle">Nazwa użytkownika</string>
     <string name="people_contact_messaging">Adres komunikatora</string>
     <string name="people_profile_networks">Sieci</string>
     <string name="people_profile_settings">Ustawienia</string>

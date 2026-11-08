@@ -122,7 +122,7 @@
     <string name="system_settings_section_login">Ngena</string>
     <string name="system_settings_section_oauth">Ukungena kwenkampani yangaphandle</string>
     <string name="system_settings_section_user_defaults">Okuzenzakalelayo komsebenzisi</string>
-    <string name="system_settings_section_operator">Umsebenzisi</string>
+    <string name="system_settings_section_operator">Umqhubi</string>
     <string name="system_settings_section_push">Izaziso zokuphusha</string>
     <string name="system_settings_section_other">Ezinye izilungiselelo</string>
     <string name="system_settings_state_disabled">Kuvinjelwe</string>
@@ -158,9 +158,9 @@
     <string name="system_setting_oauth_x_client_secret">Imfihlo yeklayenti le-X</string>
     <string name="system_setting_fcm_firebase_config">Ifayela ye-Firebase google-services.json</string>
     <string name="system_setting_fcm_service_account">Ifayela yesikhiya esiyimfihlo se-Firebase</string>
-    <string name="system_setting_operator_name">Igama lomsebenzisi</string>
-    <string name="system_setting_operator_email">I-imeyili yomsebenzisi</string>
-    <string name="system_setting_operator_jurisdiction">Indawo yomthetho yomsebenzisi</string>
+    <string name="system_setting_operator_name">Igama lomqhubi</string>
+    <string name="system_setting_operator_email">I-imeyili yomqhubi</string>
+    <string name="system_setting_operator_jurisdiction">Indawo yomthetho yomqhubi</string>
     <string name="system_setting_signup_enabled">Vumela ukubhalisa okusha</string>
     <string name="system_users_title">Abasebenzisi</string>
     <string name="system_users_col_user">Umsebenzisi</string>

@@ -223,7 +223,7 @@
     <string name="people_contacts_menu_unfriend">Končaj prijateljstvo</string>
     <string name="people_profile_directory_listing">Prikaz v imeniku</string>
     <string name="people_contact_address">Naslov</string>
-    <string name="people_contact_handle">Vzdevek</string>
+    <string name="people_contact_handle">Uporabniško ime</string>
     <string name="people_contact_messaging">Naslov za sporočanje</string>
     <string name="people_profile_networks">Omrežja</string>
     <string name="people_profile_settings">Nastavitve</string>

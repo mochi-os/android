@@ -221,7 +221,7 @@
     <string name="people_contacts_menu_unfriend">Tanggalin sa mga kaibigan</string>
     <string name="people_profile_directory_listing">Nakalista sa direktoryo</string>
     <string name="people_contact_address">Tirahan</string>
-    <string name="people_contact_handle">Palayaw</string>
+    <string name="people_contact_handle">Pangalan ng user</string>
     <string name="people_contact_messaging">Address sa pagmemensahe</string>
     <string name="people_profile_networks">Mga network</string>
     <string name="people_profile_settings">Mga setting</string>
