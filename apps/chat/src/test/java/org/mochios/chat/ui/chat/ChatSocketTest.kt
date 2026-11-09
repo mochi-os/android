@@ -112,7 +112,7 @@ class ChatSocketTest {
                                  "reactions": {"like": 1}, "reaction": "like"},
                                 {"id": "m2", "chat": "c1", "member": "a1", "name": "Al", "body": "Mine", "created": 200,
                                  "edited": 50, "replies": 1, "latest": 150, "reply": "m1",
-                                 "newest": {"id": "r1", "chat": "c1", "member": "b1", "name": "Bea", "body": "First reply", "created": 150, "thread": "m2"},
+                                 "answers": [{"id": "r1", "chat": "c1", "member": "b1", "name": "Bea", "body": "First reply", "created": 150, "thread": "m2"}],
                                  "attachments": [{"id": "f1", "name": "a.png", "size": 3, "type": "image/png"}],
                                  "reactions": {"love": 2}, "reaction": "love"}
                             ], "more": false}""",
@@ -398,40 +398,41 @@ class ChatSocketTest {
         settle()
         assertEquals(0, model.message("m2")?.replies)
         assertEquals(0L, model.message("m2")?.latest)
-        assertNull("no reply left to show under it", model.message("m2")?.newest)
+        assertTrue("no reply left in its bubble", model.message("m2")?.answers?.isEmpty() == true)
         assertEquals("no fetch", fetched, timeline.get())
     }
 
     @Test
-    fun `a reply that arrives is shown under its root as the newest, and an edit of it shows there`() {
-        // THE POINT: the reply beneath the root follows the thread with the thread closed.
+    fun `a reply that arrives joins its root's bubble in order, and an edit of it shows there`() {
+        // THE POINT: the thread in the bubble follows it with the thread closed.
         val model = open()
-        assertEquals("First reply", model.message("m2")?.newest?.body)
+        assertEquals(listOf("r1"), model.message("m2")?.answers?.map { it.id })
         val fetched = timeline.get()
         send("""{"id": "r3", "created": 260, "member": "b1", "name": "Bea", "body": "Third reply", "thread": "m2"}""")
-        until { model.message("m2")?.newest?.id == "r3" }
-        // One sent earlier that lands late is counted, and not shown.
+        until { model.message("m2")?.answers?.size == 2 }
+        // One sent earlier that lands late takes its place by time.
         send("""{"id": "r0", "created": 120, "member": "b1", "name": "Bea", "body": "Sent early", "thread": "m2"}""")
         until { model.message("m2")?.replies == 3 }
-        assertEquals("r3", model.message("m2")?.newest?.id)
+        assertEquals(listOf("r0", "r1", "r3"), model.message("m2")?.answers?.map { it.id })
+        // Delivered again, it is not counted again.
+        send("""{"id": "r3", "created": 260, "member": "b1", "name": "Bea", "body": "Third reply", "thread": "m2"}""")
+        settle()
+        assertEquals(3, model.message("m2")?.replies)
         send("""{"event": "edit", "message": "r3", "body": "Third reply, edited", "edited": 270}""")
-        until { model.message("m2")?.newest?.body == "Third reply, edited" }
+        until { model.message("m2")?.answers?.last()?.body == "Third reply, edited" }
         assertEquals("Mine", model.message("m2")?.body)
         assertEquals("no fetch", fetched, timeline.get())
     }
 
     @Test
-    fun `the newest reply deleted in the open thread gives way to the one before it`() {
+    fun `a reply deleted with its thread closed leaves its root's bubble without a read`() {
         val model = open()
-        model.openThread(model.message("m2")!!)
-        until { model.uiState.value.thread?.replies?.isNotEmpty() == true }
-        settle()
-        send("""{"id": "r2", "created": 250, "member": "b1", "name": "Bea", "body": "Second reply", "thread": "m2"}""")
-        until { model.message("m2")?.newest?.id == "r2" }
         val fetched = timeline.get()
-        send("""{"event": "delete", "message": "r2"}""")
-        until { model.message("m2")?.replies == 1 }
-        assertEquals("r1", model.message("m2")?.newest?.id)
+        send("""{"event": "delete", "message": "r1"}""")
+        until { model.message("m2")?.replies == 0 }
+        assertTrue(model.message("m2")?.answers?.isEmpty() == true)
+        assertEquals(0L, model.message("m2")?.latest)
+        settle()
         assertEquals("no fetch", fetched, timeline.get())
     }
 

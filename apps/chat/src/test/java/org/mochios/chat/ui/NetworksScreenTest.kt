@@ -107,11 +107,9 @@ class NetworksScreenTest {
         receipt: ReceiptState? = null,
         seen: List<String>? = null,
         onThread: (() -> Unit)? = null,
-        identity: String = "",
     ) {
         rule.setContent {
             MessageBubble(
-                identity = identity,
                 message = message,
                 isOwn = own,
                 receipt = receipt,
@@ -148,42 +146,30 @@ class NetworksScreenTest {
     }
 
     @Test
-    fun `a message's thread is counted on it and opens from the count and the menu`() {
+    fun `a message's thread is shown in its bubble, each reply named, and opens from a reply and the menu`() {
+        // THE POINT: the recipient sees the thread in the message itself.
         var opened = 0
-        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 2), own = false, onThread = { opened++ })
-        rule.onNodeWithText("2 replies").performClick()
+        val answers = listOf(
+            ChatMessage(id = "r1", body = "The first answer", name = "Ann", member = "a1", created = 11, thread = "m1"),
+            ChatMessage(id = "r2", body = "The second answer", name = "Bea", member = "b1", created = 12, thread = "m1"),
+        )
+        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 2, answers = answers), own = false, onThread = { opened++ })
+        rule.onNodeWithText("Ann").assertIsDisplayed()
+        rule.onNodeWithText("The first answer").assertIsDisplayed()
+        rule.onNodeWithText("Bea").assertIsDisplayed()
+        rule.onNodeWithText("The second answer").assertIsDisplayed().performClick()
         assertEquals(1, opened)
-        rule.onNodeWithText("Root").performTouchInput { longClick() }
+        // A long press on the thread opens the message's menu, as on the rest of the bubble.
+        rule.onNodeWithText("The second answer").performTouchInput { longClick() }
         rule.onNodeWithText("Reply in thread").performClick()
         assertEquals(2, opened)
     }
 
     @Test
-    fun `a message's thread shows its newest reply under it, opening the thread`() {
-        // THE POINT: the recipient sees a thread was started without looking for it.
-        var opened = 0
-        val newest = ChatMessage(id = "r2", body = "The newest reply", name = "Bea", member = "b1", thread = "m1")
-        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 2, newest = newest), own = false, onThread = { opened++ })
-        rule.onNodeWithText("Bea").assertIsDisplayed()
-        rule.onNodeWithText("The newest reply").assertIsDisplayed().performClick()
-        assertEquals(1, opened)
-        rule.onNodeWithText("2 replies").assertIsDisplayed()
-    }
-
-    @Test
-    fun `the viewer's own newest reply is drawn as theirs, unnamed as their messages are`() {
-        val newest = ChatMessage(id = "r2", body = "My reply", name = "Me", member = "me", thread = "m1")
-        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 1, newest = newest), own = false, onThread = {}, identity = "me")
-        rule.onNodeWithText("My reply").assertIsDisplayed()
-        rule.onNodeWithText("Me").assertDoesNotExist()
-    }
-
-    @Test
-    fun `a conversation without threads counts none on its messages`() {
-        val newest = ChatMessage(id = "r2", body = "The newest reply", name = "Bea", member = "b1", thread = "m1")
-        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 2, newest = newest), own = false, onThread = null)
-        rule.onNodeWithText("2 replies").assertDoesNotExist()
-        rule.onNodeWithText("The newest reply").assertDoesNotExist()
+    fun `a conversation without threads shows none in its messages`() {
+        val answers = listOf(ChatMessage(id = "r1", body = "The first answer", name = "Ann", member = "a1", thread = "m1"))
+        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 1, answers = answers), own = false, onThread = null)
+        rule.onNodeWithText("The first answer").assertDoesNotExist()
     }
 
     @Test

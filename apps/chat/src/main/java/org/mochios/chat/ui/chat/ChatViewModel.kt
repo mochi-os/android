@@ -1013,18 +1013,21 @@ class ChatViewModel @Inject constructor(
     }
 
     /**
-     * [reply] counted on its root, and added to its thread where that is open.
-     * A reply the open thread already holds was counted when it was read.
+     * [reply] counted on its root and shown in its bubble, and added to its
+     * thread where that is open. A reply the open thread or the bubble already
+     * holds was counted when it was read.
      */
     private fun answer(reply: ChatMessage): Boolean {
         val state = _uiState.value
         val open = state.thread?.takeIf { thread -> thread.root.id == reply.thread }
         if (open != null && open.replies.any { held -> held.id == reply.id }) return false
+        val shown = state.messages.find { message -> message.id == reply.thread }
+        if (shown != null && shown.answers.any { held -> held.id == reply.id }) return false
         val counted = { root: ChatMessage ->
             root.copy(
                 replies = root.replies + 1,
                 latest = maxOf(root.latest, reply.created),
-                newest = if (reply.listedAfter(root.newest)) reply else root.newest,
+                answers = (root.answers + reply).sortedWith(compareBy({ it.created }, { it.id })),
             )
         }
         _uiState.value = state.copy(
@@ -1037,9 +1040,10 @@ class ChatViewModel @Inject constructor(
 
     /**
      * A message deleted for everyone becomes a tombstone wherever it is held.
-     * A reply in the open thread stops counting on its root. One held nowhere
-     * may be a reply in a thread that is not open, whose root's count only the
-     * server knows, so the newest page is read again where any count shows.
+     * A reply in the open thread or in its root's bubble stops counting on its
+     * root and leaves the bubble. One held nowhere may be a reply in a thread
+     * the list does not hold, whose root's count only the server knows, so the
+     * newest page is read again where any count shows.
      */
     private fun deleted(event: WebSocketEvent) {
         frames++
@@ -1050,27 +1054,23 @@ class ChatViewModel @Inject constructor(
         }
         val state = _uiState.value
         val reply = state.thread?.replies?.find { held -> held.id == id && !held.deleted }
-        if (!patch(id) { message -> message.tombstone() }) {
-            if (state.messages.any { message -> message.replies > 0 }) refresh()
-            return
+            ?: state.messages.firstNotNullOfOrNull { root -> root.answers.find { held -> held.id == id } }
+        val held = patch(id) { message -> message.tombstone() }
+        if (reply != null) {
+            uncount(reply)
+        } else if (!held && state.messages.any { message -> message.replies > 0 }) {
+            refresh()
         }
-        if (reply != null) uncount(reply)
     }
 
-    /** [reply], just deleted, no longer counted on its root. */
+    /** [reply], just deleted, no longer counted on its root nor shown in its bubble. */
     private fun uncount(reply: ChatMessage) {
         val state = _uiState.value
-        // The open thread holds its newest replies, so the newest left is the latest.
-        val remaining = state.thread?.replies.orEmpty().filter { held -> held.thread == reply.thread && !held.deleted }
         val uncounted = { root: ChatMessage ->
             val replies = (root.replies - 1).coerceAtLeast(0)
-            val latest = if (replies == 0) 0 else remaining.maxOfOrNull { held -> held.created } ?: root.latest
-            val newest = if (root.newest?.id == reply.id) {
-                remaining.fold(null as ChatMessage?) { found, held -> if (held.listedAfter(found)) held else found }
-            } else {
-                root.newest
-            }
-            root.copy(replies = replies, latest = latest, newest = newest)
+            val answers = root.answers.filter { held -> held.id != reply.id }
+            val latest = if (replies == 0) 0 else answers.maxOfOrNull { held -> held.created } ?: root.latest
+            root.copy(replies = replies, latest = latest, answers = answers)
         }
         _uiState.value = state.copy(
             messages = state.messages.patched(reply.thread, uncounted),
@@ -1091,13 +1091,16 @@ class ChatViewModel @Inject constructor(
             return
         }
         patch(id) { message -> message.rewritten(body, edited) }
-        // The newest reply shown under its root, held there with the thread closed.
+        // A reply in its root's bubble, held there with the thread closed.
         val state = _uiState.value
-        if (state.messages.any { root -> root.newest?.id == id }) {
+        if (state.messages.any { root -> root.answers.any { held -> held.id == id } }) {
             _uiState.value = state.copy(
                 messages = state.messages.map { root ->
-                    val newest = root.newest
-                    if (newest?.id == id) root.copy(newest = newest.rewritten(body, edited)) else root
+                    if (root.answers.any { held -> held.id == id }) {
+                        root.copy(answers = root.answers.patched(id) { held -> held.rewritten(body, edited) })
+                    } else {
+                        root
+                    }
                 },
             )
         }
@@ -1297,10 +1300,6 @@ internal fun ChatMessage.tombstone(): ChatMessage = copy(
     replies = 0,
     latest = 0,
 )
-
-/** Whether this reply comes after [other] in its thread, as the server orders them: by time, then by id. */
-internal fun ChatMessage.listedAfter(other: ChatMessage?): Boolean =
-    other == null || created > other.created || (created == other.created && id > other.id)
 
 /**
  * An edit of this message, applied only if newer than what is held: edits

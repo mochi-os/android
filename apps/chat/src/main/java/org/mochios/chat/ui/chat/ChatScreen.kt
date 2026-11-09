@@ -751,7 +751,6 @@ private fun ChatContent(
                                             isGroup = uiState.chat.members.size > 2,
                                             chatId = uiState.chat.id,
                                             avatar = avatars[entry.message.member],
-                                            identity = uiState.identity,
                                             selectionMode = uiState.selectionMode,
                                             isSelected = entry.message.id in uiState.selectedIds,
                                             isSearchMatch = entry.message.id == activeMatchId,
@@ -1034,8 +1033,6 @@ internal fun MessageBubble(
     // The sender's avatar as the list addresses it (messageAvatars); null for
     // the message's own.
     avatar: String? = null,
-    // The viewer, whose own reply under a thread takes their bubble's colour.
-    identity: String = "",
 ) {
     val format = LocalFormat.current
     var menuExpanded by remember { mutableStateOf(false) }
@@ -1194,6 +1191,10 @@ internal fun MessageBubble(
                             ReceiptTick(receipt)
                         }
                     }
+                    // The thread, in the message's own bubble below a rule.
+                    if (onThread != null && message.answers.isNotEmpty() && !message.deleted && !selectionMode) {
+                        ThreadReplies(message.answers, onThread, onMenu = { if (hasMenu) menuExpanded = true })
+                    }
                 }
             }
             if (hasMenu && !selectionMode) {
@@ -1289,11 +1290,6 @@ internal fun MessageBubble(
                 }
             }
         }
-        // The thread sits under the bubble, clear of the reaction button that
-        // floats over the bubble's lower corner.
-        if (onThread != null && message.replies > 0 && !selectionMode) {
-            ThreadSummary(message, isOwn, identity, onThread)
-        }
         if (!seen.isNullOrEmpty()) {
             Text(
                 text = stringResource(R.string.chat_seen_by, LocalFormat.current.formatList(seen)),
@@ -1306,73 +1302,35 @@ internal fun MessageBubble(
 }
 
 /**
- * Under a message with a thread: its newest reply in its sender's bubble, as
- * the messages around it are drawn, and how many replies there are, either
- * opening the thread. It sits on [isOwn]'s side, the root's, set in a little.
+ * A message's thread inside its own bubble: each reply below a rule, with who
+ * wrote it, opening the thread. A long press opens the message's menu, as it
+ * does anywhere else on the bubble.
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun ThreadSummary(root: ChatMessage, isOwn: Boolean, identity: String, onOpen: () -> Unit) {
-    val newest = root.newest
-    Column(
-        horizontalAlignment = if (isOwn) Alignment.End else Alignment.Start,
-        modifier = Modifier.padding(start = if (isOwn) 0.dp else 24.dp, end = if (isOwn) 24.dp else 0.dp),
-    ) {
-        if (newest != null) {
-            val mine = newest.member == identity
-            MochiCard(
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = if (mine) {
-                        MaterialTheme.colorScheme.primaryContainer
-                    } else {
-                        MaterialTheme.colorScheme.surfaceVariant
-                    }
-                ),
-                modifier = Modifier
-                    .widthIn(max = 280.dp)
-                    .clickable(onClick = onOpen),
-            ) {
-                Column(modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)) {
-                    if (!mine) {
-                        Text(
-                            text = newest.name,
-                            style = MaterialTheme.typography.labelMedium,
-                            color = MaterialTheme.colorScheme.primary,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                        )
-                        Spacer(modifier = Modifier.height(2.dp))
-                    }
-                    if (awaitingKeys(newest)) {
-                        Text(
-                            text = stringResource(R.string.chat_message_encrypted),
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontStyle = FontStyle.Italic,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        )
-                    } else {
-                        Text(
-                            text = newest.body.ifBlank { stringResource(R.string.chat_reply_attachment) },
-                            style = MaterialTheme.typography.bodyMedium,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis,
-                        )
-                    }
-                }
+private fun ThreadReplies(answers: List<ChatMessage>, onOpen: () -> Unit, onMenu: () -> Unit) {
+    Column(modifier = Modifier.combinedClickable(onClick = onOpen, onLongClick = onMenu)) {
+        answers.forEach { answer ->
+            HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+            Text(
+                text = answer.name,
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
+            )
+            if (awaitingKeys(answer)) {
+                Text(
+                    text = stringResource(R.string.chat_message_encrypted),
+                    style = MaterialTheme.typography.bodyMedium,
+                    fontStyle = FontStyle.Italic,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+            } else {
+                Text(
+                    text = answer.body.ifBlank { stringResource(R.string.chat_reply_attachment) },
+                    style = MaterialTheme.typography.bodyMedium,
+                )
             }
         }
-        Text(
-            text = pluralStringResource(
-                R.plurals.chat_thread_replies,
-                root.replies,
-                LocalFormat.current.formatNumber(root.replies),
-            ),
-            style = MaterialTheme.typography.labelMedium,
-            color = MaterialTheme.colorScheme.primary,
-            modifier = Modifier
-                .clickable(onClick = onOpen)
-                .padding(horizontal = 4.dp, vertical = 2.dp),
-        )
     }
 }
 
