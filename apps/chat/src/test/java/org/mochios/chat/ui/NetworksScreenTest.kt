@@ -107,9 +107,11 @@ class NetworksScreenTest {
         receipt: ReceiptState? = null,
         seen: List<String>? = null,
         onThread: (() -> Unit)? = null,
+        identity: String = "",
     ) {
         rule.setContent {
             MessageBubble(
+                identity = identity,
                 message = message,
                 isOwn = own,
                 receipt = receipt,
@@ -166,6 +168,14 @@ class NetworksScreenTest {
         rule.onNodeWithText("The newest reply").assertIsDisplayed().performClick()
         assertEquals(1, opened)
         rule.onNodeWithText("2 replies").assertIsDisplayed()
+    }
+
+    @Test
+    fun `the viewer's own newest reply is drawn as theirs, unnamed as their messages are`() {
+        val newest = ChatMessage(id = "r2", body = "My reply", name = "Me", member = "me", thread = "m1")
+        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 1, newest = newest), own = false, onThread = {}, identity = "me")
+        rule.onNodeWithText("My reply").assertIsDisplayed()
+        rule.onNodeWithText("Me").assertDoesNotExist()
     }
 
     @Test
