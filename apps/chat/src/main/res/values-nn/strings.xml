@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Praten er merkt som lesen</string>
     <string name="chat_list_marked_unread">Praten er merkt som ulesen</string>
     <string name="chat_send_friend_request">Send venneførespurnad</string>
+    <string name="chat_refused">Prat avvist</string>
+    <string name="chat_refused_friends_only">%1$s tek berre imot prat frå venner.</string>
 </resources>

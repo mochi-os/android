@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">Obrolan ditandaan geus dibaca</string>
     <string name="chat_list_marked_unread">Obrolan ditandaan can dibaca</string>
     <string name="chat_send_friend_request">Kirim pamundut babaturan</string>
+    <string name="chat_refused">Obrolan ditolak</string>
+    <string name="chat_refused_friends_only">%1$s ngan nampi obrolan ti babaturan.</string>
 </resources>

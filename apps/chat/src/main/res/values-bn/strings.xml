@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">চ্যাট পঠিত হিসেবে চিহ্নিত হয়েছে</string>
     <string name="chat_list_marked_unread">চ্যাট অপঠিত হিসেবে চিহ্নিত হয়েছে</string>
     <string name="chat_send_friend_request">বন্ধুত্বের অনুরোধ পাঠান</string>
+    <string name="chat_refused">চ্যাট প্রত্যাখ্যাত হয়েছে</string>
+    <string name="chat_refused_friends_only">%1$s শুধুমাত্র বন্ধুদের কাছ থেকে চ্যাট গ্রহণ করেন।</string>
 </resources>

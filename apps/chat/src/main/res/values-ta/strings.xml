@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">அரட்டை படித்ததாகக் குறிக்கப்பட்டது</string>
     <string name="chat_list_marked_unread">அரட்டை படிக்காததாகக் குறிக்கப்பட்டது</string>
     <string name="chat_send_friend_request">நட்பு கோரிக்கையை அனுப்பு</string>
+    <string name="chat_refused">அரட்டை நிராகரிக்கப்பட்டது</string>
+    <string name="chat_refused_friends_only">%1$s நண்பர்களிடமிருந்து மட்டுமே அரட்டைகளை ஏற்கிறார்.</string>
 </resources>

@@ -178,4 +178,6 @@
     <string name="chat_list_marked_read">Comhrá marcáilte mar léite</string>
     <string name="chat_list_marked_unread">Comhrá marcáilte mar neamhléite</string>
     <string name="chat_send_friend_request">Seol iarratas cara</string>
+    <string name="chat_refused">Comhrá diúltaithe</string>
+    <string name="chat_refused_friends_only">Ní ghlacann %1$s le comhráite ach ó chairde.</string>
 </resources>

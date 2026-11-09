@@ -176,4 +176,6 @@
     <string name="chat_list_marked_read">Чат позначено як прочитаний</string>
     <string name="chat_list_marked_unread">Чат позначено як непрочитаний</string>
     <string name="chat_send_friend_request">Надіслати запит у друзі</string>
+    <string name="chat_refused">Чат відхилено</string>
+    <string name="chat_refused_friends_only">%1$s приймає чати лише від друзів.</string>
 </resources>

@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">చాట్ చదివినట్లుగా గుర్తు పెట్టబడింది</string>
     <string name="chat_list_marked_unread">చాట్ చదవనట్లుగా గుర్తు పెట్టబడింది</string>
     <string name="chat_send_friend_request">స్నేహ అభ్యర్థనను పంపండి</string>
+    <string name="chat_refused">చాట్ తిరస్కరించబడింది</string>
+    <string name="chat_refused_friends_only">%1$s స్నేహితుల నుండి మాత్రమే చాట్‌లను అంగీకరిస్తారు.</string>
 </resources>

@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Ñemongeta oñemoĩ moñe\'ẽmbyréramo</string>
     <string name="chat_list_marked_unread">Ñemongeta oñemoĩ moñe\'ẽmbyre\'ỹramo</string>
     <string name="chat_send_friend_request">Emondo angirũ jerure</string>
+    <string name="chat_refused">Chat ndojeguerohorýi</string>
+    <string name="chat_refused_friends_only">%1$s omoneĩ chat iñangirũ kuéra guive añoite.</string>
 </resources>

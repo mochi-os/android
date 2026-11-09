@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Sohbet okundu olarak işaretlendi</string>
     <string name="chat_list_marked_unread">Sohbet okunmadı olarak işaretlendi</string>
     <string name="chat_send_friend_request">Arkadaşlık isteği gönder</string>
+    <string name="chat_refused">Sohbet reddedildi</string>
+    <string name="chat_refused_friends_only">%1$s yalnızca arkadaşlarından sohbet kabul ediyor.</string>
 </resources>

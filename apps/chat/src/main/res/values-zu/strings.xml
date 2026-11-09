@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Ingxoxo imakwe njengefundiwe</string>
     <string name="chat_list_marked_unread">Ingxoxo imakwe njengengafundiwe</string>
     <string name="chat_send_friend_request">Thumela isicelo sobungane</string>
+    <string name="chat_refused">Ingxoxo yenqatshiwe</string>
+    <string name="chat_refused_friends_only">%1$s wamukela izingxoxo ezivela kubangane kuphela.</string>
 </resources>

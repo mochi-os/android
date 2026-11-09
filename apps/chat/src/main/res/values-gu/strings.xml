@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">ચેટ વાંચેલી તરીકે ચિહ્નિત કરી</string>
     <string name="chat_list_marked_unread">ચેટ ન વાંચેલી તરીકે ચિહ્નિત કરી</string>
     <string name="chat_send_friend_request">મિત્રતાની વિનંતી મોકલો</string>
+    <string name="chat_refused">ચેટ નકારવામાં આવી</string>
+    <string name="chat_refused_friends_only">%1$s ફક્ત મિત્રો પાસેથી જ ચેટ સ્વીકારે છે.</string>
 </resources>

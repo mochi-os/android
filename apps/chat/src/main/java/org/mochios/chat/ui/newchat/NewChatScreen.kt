@@ -55,6 +55,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -95,6 +96,27 @@ fun NewChatScreen(
     }
     val fallbackName = stringResource(R.string.chat_new_fallback_name)
     val defaultName = viewModel.selectedFallbackName(fallbackName)
+
+    // A chat the member's policy refused: only their friends may start one, so
+    // the one stranger picked is offered their page in People to ask.
+    uiState.refusal?.let { refusal ->
+        val person = refusal.person
+        MochiAlertDialog(
+            onDismissRequest = viewModel::dismissRefusal,
+            title = stringResource(R.string.chat_refused),
+            text = person?.name?.takeIf { it.isNotBlank() }
+                ?.let { stringResource(R.string.chat_refused_friends_only, it) }
+                ?: refusal.error.userMessage(),
+            confirmText = person?.let { stringResource(R.string.chat_send_friend_request) },
+            onConfirm = {
+                if (person != null) {
+                    viewModel.dismissRefusal()
+                    onOpenLink(friendRequest(person.id))
+                }
+            },
+            dismissText = stringResource(MochiR.string.common_back),
+        )
+    }
 
     Scaffold(
         topBar = {
@@ -140,18 +162,11 @@ fun NewChatScreen(
                                 )
                                 .padding(horizontal = 16.dp, vertical = 12.dp)
                         ) {
-                            Column {
-                                Text(
-                                    text = error.userMessage(),
-                                    color = MaterialTheme.colorScheme.onErrorContainer,
-                                    style = MaterialTheme.typography.bodyMedium
-                                )
-                                uiState.befriend?.let { person ->
-                                    MochiTextButton(onClick = { onOpenLink(friendRequest(person)) }) {
-                                        Text(stringResource(R.string.chat_send_friend_request))
-                                    }
-                                }
-                            }
+                            Text(
+                                text = error.userMessage(),
+                                color = MaterialTheme.colorScheme.onErrorContainer,
+                                style = MaterialTheme.typography.bodyMedium
+                            )
                         }
                     }
 

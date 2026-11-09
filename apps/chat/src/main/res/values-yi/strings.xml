@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">שמועס באַצייכנט ווי געלייענט</string>
     <string name="chat_list_marked_unread">שמועס באַצייכנט ווי ניט־געלייענט</string>
     <string name="chat_send_friend_request">שיקן אַ פֿרײַנד בקשה</string>
+    <string name="chat_refused">שמועס אָפּגעוואָרפֿן</string>
+    <string name="chat_refused_friends_only">%1$s נעמט אָן שמועסן נאָר פֿון פֿרײַנד.</string>
 </resources>

@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">បានសម្គាល់ការជជែកថាបានអាន</string>
     <string name="chat_list_marked_unread">បានសម្គាល់ការជជែកថាមិនទាន់អាន</string>
     <string name="chat_send_friend_request">ផ្ញើសំណើមិត្តភក្តិ</string>
+    <string name="chat_refused">ការសន្ទនាត្រូវបានបដិសេធ</string>
+    <string name="chat_refused_friends_only">%1$s ទទួលការសន្ទនាតែពីមិត្តភ័ក្តិប៉ុណ្ណោះ។</string>
 </resources>

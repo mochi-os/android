@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Chat marcado como lido</string>
     <string name="chat_list_marked_unread">Chat marcado como non lido</string>
     <string name="chat_send_friend_request">Enviar solicitude de amizade</string>
+    <string name="chat_refused">Chat rexeitado</string>
+    <string name="chat_refused_friends_only">%1$s só acepta chats de amigos.</string>
 </resources>

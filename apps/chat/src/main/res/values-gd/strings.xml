@@ -176,4 +176,6 @@
     <string name="chat_list_marked_read">Chaidh a’ chabadaich a chomharrachadh mar leughte</string>
     <string name="chat_list_marked_unread">Chaidh a’ chabadaich a chomharrachadh mar gun leughadh</string>
     <string name="chat_send_friend_request">Cuir iarrtas caraid</string>
+    <string name="chat_refused">Chaidh a\' chabadaich a dhiùltadh</string>
+    <string name="chat_refused_friends_only">Cha ghabh %1$s ri cabadaich ach o charaidean.</string>
 </resources>

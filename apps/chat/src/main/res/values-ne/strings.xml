@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">च्याट पढिएको रूपमा चिन्ह लगाइयो</string>
     <string name="chat_list_marked_unread">च्याट नपढिएको रूपमा चिन्ह लगाइयो</string>
     <string name="chat_send_friend_request">मित्रता अनुरोध पठाउनुहोस्</string>
+    <string name="chat_refused">च्याट अस्वीकार गरियो</string>
+    <string name="chat_refused_friends_only">%1$s साथीहरूबाट मात्र च्याट स्वीकार गर्नुहुन्छ।</string>
 </resources>

@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Rimanakuy ñawinchasqa hina marcasqa</string>
     <string name="chat_list_marked_unread">Rimanakuy mana ñawinchasqa hina marcasqa</string>
     <string name="chat_send_friend_request">Masi mañakuyta apachiy</string>
+    <string name="chat_refused">Rimanakuyqa mana chaskisqachu</string>
+    <string name="chat_refused_friends_only">%1$s masinkunamantalla rimanakuykunata chaskin.</string>
 </resources>

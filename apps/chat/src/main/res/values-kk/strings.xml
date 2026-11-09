@@ -173,4 +173,6 @@
     <string name="chat_list_marked_read">Чат оқылды деп белгіленді</string>
     <string name="chat_list_marked_unread">Чат оқылмаған деп белгіленді</string>
     <string name="chat_send_friend_request">Дос болу сұрауын жіберу</string>
+    <string name="chat_refused">Чат қабылданбады</string>
+    <string name="chat_refused_friends_only">%1$s чаттарды тек достардан қабылдайды.</string>
 </resources>

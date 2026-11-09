@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Η συνομιλία επισημάνθηκε ως αναγνωσμένη</string>
     <string name="chat_list_marked_unread">Η συνομιλία επισημάνθηκε ως μη αναγνωσμένη</string>
     <string name="chat_send_friend_request">Αποστολή αιτήματος φιλίας</string>
+    <string name="chat_refused">Η συνομιλία απορρίφθηκε</string>
+    <string name="chat_refused_friends_only">%1$s δέχεται συνομιλίες μόνο από φίλους.</string>
 </resources>

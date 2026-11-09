@@ -171,4 +171,6 @@
     <string name="chat_list_marked_read">Đã đánh dấu cuộc trò chuyện là đã đọc</string>
     <string name="chat_list_marked_unread">Đã đánh dấu cuộc trò chuyện là chưa đọc</string>
     <string name="chat_send_friend_request">Gửi lời mời kết bạn</string>
+    <string name="chat_refused">Trò chuyện bị từ chối</string>
+    <string name="chat_refused_friends_only">%1$s chỉ nhận trò chuyện từ bạn bè.</string>
 </resources>

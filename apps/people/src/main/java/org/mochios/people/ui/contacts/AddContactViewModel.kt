@@ -104,12 +104,9 @@ class AddContactViewModel @Inject constructor(
     val uiState: StateFlow<AddContactUiState> = _uiState.asStateFlow()
 
     init {
-        // The search opens on the card's name, so the likely match is a tap
-        // away, or on the person another app sent the user here to add.
+        // The search opens on the card's name, so the likely match is a tap away.
         val name = savedStateHandle.get<String>("name").orEmpty()
-        val search = savedStateHandle.get<String>("search").orEmpty()
         if (linking.isNotBlank() && name.isNotBlank()) updateSearchQuery(name)
-        else if (search.isNotBlank()) updateSearchQuery(search)
     }
 
     private var searchJob: Job? = null

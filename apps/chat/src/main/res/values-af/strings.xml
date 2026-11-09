@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Gesprek as gelees gemerk</string>
     <string name="chat_list_marked_unread">Gesprek as ongelees gemerk</string>
     <string name="chat_send_friend_request">Stuur vriendversoek</string>
+    <string name="chat_refused">Geselsie geweier</string>
+    <string name="chat_refused_friends_only">%1$s aanvaar slegs geselsies van vriende.</string>
 </resources>

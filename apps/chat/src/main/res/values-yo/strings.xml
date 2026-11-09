@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">A ti sàmì sí ìfọ̀rọ̀wérọ̀ pé a ti kà á</string>
     <string name="chat_list_marked_unread">A ti sàmì sí ìfọ̀rọ̀wérọ̀ pé a kò tíì kà á</string>
     <string name="chat_send_friend_request">Fi ìbéèrè ọrẹ ránṣẹ́</string>
+    <string name="chat_refused">A kọ ìfọ̀rọ̀wérọ̀ náà</string>
+    <string name="chat_refused_friends_only">%1$s gba ìfọ̀rọ̀wérọ̀ láti ọ̀dọ̀ àwọn ọ̀rẹ́ nìkan.</string>
 </resources>

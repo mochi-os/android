@@ -180,4 +180,6 @@
     <string name="chat_list_marked_read">تم تعليم الدردشة كمقروءة</string>
     <string name="chat_list_marked_unread">تم تعليم الدردشة كغير مقروءة</string>
     <string name="chat_send_friend_request">إرسال طلب صداقة</string>
+    <string name="chat_refused">رُفضت المحادثة</string>
+    <string name="chat_refused_friends_only">يقبل %1$s المحادثات من الأصدقاء فقط.</string>
 </resources>

@@ -878,9 +878,7 @@ open class MainActivity : ComponentActivity() {
                     return
                 }
                 if (id == null && !action.isNullOrBlank()) {
-                    // Chat sends ?action=add&search=<person> for someone who
-                    // refused a chat, so the add screen opens on them.
-                    navController.openInPlace(PeopleApp.ROUTER, PeopleApp.CONTACTS, PeopleApp.contacts(action, parseQueryParam(query, "search")))
+                    navController.openInPlace(PeopleApp.ROUTER, PeopleApp.CONTACTS, PeopleApp.contacts(action))
                     return
                 }
                 val screen = when {

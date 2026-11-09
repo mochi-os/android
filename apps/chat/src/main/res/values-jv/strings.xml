@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">Chat ditandhani wis diwaca</string>
     <string name="chat_list_marked_unread">Chat ditandhani durung diwaca</string>
     <string name="chat_send_friend_request">Kirim panyuwun kanca</string>
+    <string name="chat_refused">Obrolan ditolak</string>
+    <string name="chat_refused_friends_only">%1$s mung nampa obrolan saka kanca.</string>
 </resources>

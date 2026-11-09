@@ -181,4 +181,6 @@
     <string name="chat_list_marked_read">Sgwrs wedi\'i nodi fel wedi\'i darllen</string>
     <string name="chat_list_marked_unread">Sgwrs wedi\'i nodi fel heb ei darllen</string>
     <string name="chat_send_friend_request">Anfon cais ffrind</string>
+    <string name="chat_refused">Sgwrs wedi\'i gwrthod</string>
+    <string name="chat_refused_friends_only">Dim ond sgyrsiau gan ffrindiau y mae %1$s yn eu derbyn.</string>
 </resources>

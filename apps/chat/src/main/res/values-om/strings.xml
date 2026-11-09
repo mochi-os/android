@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Chaattiin akka dubbifametti mallatteeffame</string>
     <string name="chat_list_marked_unread">Chaattiin akka hin dubbifamnetti mallatteeffame</string>
     <string name="chat_send_friend_request">Gaaffii hiriyummaa ergi</string>
+    <string name="chat_refused">Haasawni didame</string>
+    <string name="chat_refused_friends_only">%1$s haasawa hiriyoota qofa irraa fudhata.</string>
 </resources>

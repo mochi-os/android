@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Sohbet wek xwendî hat nîşankirin</string>
     <string name="chat_list_marked_unread">Sohbet wek nexwendî hat nîşankirin</string>
     <string name="chat_send_friend_request">Daxwaza hevaltiyê bişîne</string>
+    <string name="chat_refused">Chat hat redkirin</string>
+    <string name="chat_refused_friends_only">%1$s tenê chatên ji hevalan qebûl dike.</string>
 </resources>

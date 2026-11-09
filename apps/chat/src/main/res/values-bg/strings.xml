@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Чатът е отбелязан като прочетен</string>
     <string name="chat_list_marked_unread">Чатът е отбелязан като непрочетен</string>
     <string name="chat_send_friend_request">Изпрати заявка за приятелство</string>
+    <string name="chat_refused">Чатът е отказан</string>
+    <string name="chat_refused_friends_only">%1$s приема чатове само от приятели.</string>
 </resources>

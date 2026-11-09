@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Minarkahan ang chat bilang nabasa na</string>
     <string name="chat_list_marked_unread">Minarkahan ang chat bilang hindi pa nabasa</string>
     <string name="chat_send_friend_request">Magpadala ng kahilingan sa pagkakaibigan</string>
+    <string name="chat_refused">Tinanggihan ang chat</string>
+    <string name="chat_refused_friends_only">Tumatanggap lang si %1$s ng chat mula sa mga kaibigan.</string>
 </resources>

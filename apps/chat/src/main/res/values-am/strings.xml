@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">ውይይቱ እንደተነበበ ምልክት ተደርጓል</string>
     <string name="chat_list_marked_unread">ውይይቱ እንዳልተነበበ ምልክት ተደርጓል</string>
     <string name="chat_send_friend_request">የጓደኝነት ጥያቄ ላክ</string>
+    <string name="chat_refused">ውይይቱ ተቀባይነት አላገኘም</string>
+    <string name="chat_refused_friends_only">%1$s ውይይቶችን የሚቀበለው ከጓደኞች ብቻ ነው።</string>
 </resources>

@@ -173,4 +173,6 @@
     <string name="chat_list_marked_read">Chat oʻqilgan deb belgilandi</string>
     <string name="chat_list_marked_unread">Chat oʻqilmagan deb belgilandi</string>
     <string name="chat_send_friend_request">Do‘stlik so‘rovini yuborish</string>
+    <string name="chat_refused">Suhbat rad etildi</string>
+    <string name="chat_refused_friends_only">%1$s faqat do\'stlardan suhbat qabul qiladi.</string>
 </resources>

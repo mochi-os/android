@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">කතාබස් කියවූ ලෙස ලකුණු කරන ලදී</string>
     <string name="chat_list_marked_unread">කතාබස් නොකියවූ ලෙස ලකුණු කරන ලදී</string>
     <string name="chat_send_friend_request">මිතුරු ඉල්ලීමක් යවන්න</string>
+    <string name="chat_refused">චැට් ප්‍රතික්ෂේප විය</string>
+    <string name="chat_refused_friends_only">%1$s මිතුරන්ගෙන් පමණක් චැට් පිළිගනී.</string>
 </resources>

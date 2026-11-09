@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Discussion marquée comme lue</string>
     <string name="chat_list_marked_unread">Discussion marquée comme non lue</string>
     <string name="chat_send_friend_request">Envoyer une invitation d\'ami</string>
+    <string name="chat_refused">Chat refusé</string>
+    <string name="chat_refused_friends_only">%1$s n\'accepte que les chats de ses amis.</string>
 </resources>

@@ -197,4 +197,6 @@
     <string name="chat_verification_cancelled">The verification was cancelled</string>
     <string name="chat_verification_failed">The verification could not go on</string>
     <string name="chat_send_friend_request">Send friend request</string>
+    <string name="chat_refused">Chat refused</string>
+    <string name="chat_refused_friends_only">%1$s only accepts chats from friends.</string>
 </resources>

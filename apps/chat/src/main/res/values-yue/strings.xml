@@ -170,4 +170,6 @@
         <item quantity="other">還原咗 %1$s 條訊息金鑰</item>
     </plurals>
     <string name="chat_send_friend_request">傳送朋友請求</string>
+    <string name="chat_refused">對話被拒絕</string>
+    <string name="chat_refused_friends_only">%1$s 只接受朋友嘅對話。</string>
 </resources>

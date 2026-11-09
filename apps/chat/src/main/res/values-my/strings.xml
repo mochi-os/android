@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">ချတ်ကို ဖတ်ပြီးအဖြစ် မှတ်သားပြီးပါပြီ</string>
     <string name="chat_list_marked_unread">ချတ်ကို မဖတ်ရသေးအဖြစ် မှတ်သားပြီးပါပြီ</string>
     <string name="chat_send_friend_request">မိတ်ဆွေတောင်းဆိုမှု ပို့ရန်</string>
+    <string name="chat_refused">ချတ်ကို ငြင်းပယ်ခဲ့သည်</string>
+    <string name="chat_refused_friends_only">%1$s သည် သူငယ်ချင်းများထံမှ ချတ်များကိုသာ လက်ခံသည်။</string>
 </resources>

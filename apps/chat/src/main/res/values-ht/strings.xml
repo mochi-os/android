@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">Chat la make kòm li</string>
     <string name="chat_list_marked_unread">Chat la make kòm poko li</string>
     <string name="chat_send_friend_request">Voye demand zanmi</string>
+    <string name="chat_refused">Chat refize</string>
+    <string name="chat_refused_friends_only">%1$s aksepte chat sèlman nan men zanmi l.</string>
 </resources>

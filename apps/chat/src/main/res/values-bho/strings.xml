@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">चैट पढ़ल भइल मार्क कइल गइल</string>
     <string name="chat_list_marked_unread">चैट बिना पढ़ल मार्क कइल गइल</string>
     <string name="chat_send_friend_request">दोस्ती अनुरोध भेजीं</string>
+    <string name="chat_refused">चैट नामंजूर हो गइल</string>
+    <string name="chat_refused_friends_only">%1$s खाली दोस्तन से चैट स्वीकार करेलन।</string>
 </resources>

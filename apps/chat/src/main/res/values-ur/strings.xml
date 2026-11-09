@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">چیٹ پڑھی ہوئی نشان زد کر دی گئی</string>
     <string name="chat_list_marked_unread">چیٹ بغیر پڑھی نشان زد کر دی گئی</string>
     <string name="chat_send_friend_request">دوستی کی درخواست بھیجیں</string>
+    <string name="chat_refused">چیٹ مسترد کر دی گئی</string>
+    <string name="chat_refused_friends_only">%1$s صرف دوستوں سے چیٹ قبول کرتے ہیں۔</string>
 </resources>

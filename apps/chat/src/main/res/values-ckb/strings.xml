@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">چات وەک خوێندراوە نیشانە کرا</string>
     <string name="chat_list_marked_unread">چات وەک نەخوێندراوە نیشانە کرا</string>
     <string name="chat_send_friend_request">ناردنی داواکاری هاوڕێیەتی</string>
+    <string name="chat_refused">گفتوگۆ ڕەتکرایەوە</string>
+    <string name="chat_refused_friends_only">%1$s تەنها گفتوگۆ لە هاوڕێیانەوە وەردەگرێت.</string>
 </resources>

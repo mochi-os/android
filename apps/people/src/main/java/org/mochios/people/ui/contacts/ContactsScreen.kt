@@ -92,8 +92,7 @@ import org.mochios.people.model.Book
  * Contacts list, the People app's entry point. Shows one address book when the
  * route names one, every contact otherwise. [initialAction] "add" (from
  * `mochi://people?action=add`) opens the add-contact screen on first
- * composition, through [onLinkedAdd], which may carry the search the link
- * names.
+ * composition.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -104,7 +103,6 @@ fun ContactsScreen(
     onMessage: (String) -> Unit = {},
     onAddContact: () -> Unit = {},
     initialAction: String? = null,
-    onLinkedAdd: () -> Unit = onAddContact,
     viewModel: ContactsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -125,7 +123,7 @@ fun ContactsScreen(
     LaunchedEffect(initialAction) {
         if (initialAction == "add" && !addOpened) {
             addOpened = true
-            onLinkedAdd()
+            onAddContact()
         }
     }
 

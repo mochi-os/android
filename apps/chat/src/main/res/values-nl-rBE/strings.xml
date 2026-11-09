@@ -153,4 +153,6 @@
     <string name="chat_list_marked_read">Chat gemarkeerd als gelezen</string>
     <string name="chat_list_marked_unread">Chat gemarkeerd als ongelezen</string>
     <string name="chat_send_friend_request">Vriendschapsverzoek verzenden</string>
+    <string name="chat_refused">Chat geweigerd</string>
+    <string name="chat_refused_friends_only">%1$s accepteert alleen chats van vrienden.</string>
 </resources>

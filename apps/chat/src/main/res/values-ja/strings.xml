@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">チャットを既読にしました</string>
     <string name="chat_list_marked_unread">チャットを未読にしました</string>
     <string name="chat_send_friend_request">友達リクエストを送信</string>
+    <string name="chat_refused">チャットが拒否されました</string>
+    <string name="chat_refused_friends_only">%1$sさんは友達からのチャットのみ受け付けています。</string>
 </resources>

@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Txata irakurritako gisa markatu da</string>
     <string name="chat_list_marked_unread">Txata irakurri gabeko gisa markatu da</string>
     <string name="chat_send_friend_request">Bidali lagun-eskaera</string>
+    <string name="chat_refused">Txata baztertu da</string>
+    <string name="chat_refused_friends_only">%1$s erabiltzaileak lagunen txatak soilik onartzen ditu.</string>
 </resources>

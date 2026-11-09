@@ -61,12 +61,8 @@ data class NewChatUiState(
     val isSearchingDirectory: Boolean = false,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
-    /**
-     * The one person picked who is not a friend, when their chat policy
-     * refused the chat: a friend may always be chatted with, so the screen
-     * offers to send them a friend request.
-     */
-    val befriend: String? = null,
+    /** A create a member's chat policy refused, shown as a dialog of its own. */
+    val refusal: Refusal? = null,
     val createdChatId: String? = null,
     /** The user's accounts on other networks a conversation can be had through. */
     val accounts: List<ChatAccount> = emptyList(),
@@ -320,7 +316,7 @@ class NewChatViewModel @Inject constructor(
             if (state.picked.isEmpty() || state.duplicate) {
                 return@launch
             }
-            _uiState.value = state.copy(isCreating = true, error = null, befriend = null)
+            _uiState.value = state.copy(isCreating = true, error = null, refusal = null)
             try {
                 val chosenName = state.groupName
                     .takeIf { state.groupNameEdited }
@@ -333,13 +329,18 @@ class NewChatViewModel @Inject constructor(
                 )
             } catch (e: Exception) {
                 val error = e.toMochiError()
+                val refusal = refused(error, state)
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
-                    error = error,
-                    befriend = refused(error, state),
+                    error = if (refusal == null) error else null,
+                    refusal = refusal,
                 )
             }
         }
+    }
+
+    fun dismissRefusal() {
+        _uiState.value = _uiState.value.copy(refusal = null)
     }
 
     fun consumeCreatedChat() {
@@ -363,19 +364,23 @@ internal fun fallbackChatName(people: List<Friend>, selected: Set<String>, fallb
 }
 
 /**
- * Who a refused create should offer a friend request to: the one stranger
- * picked, where the server refused (403) on their chat policy. With several
- * strangers the refusal does not say which.
+ * A create a member's chat policy refused (403), which admits only their
+ * friends. [person] is the one person picked who is not a friend, to offer a
+ * friend request - a friend may always be chatted with - and null where
+ * several were, as the refusal does not say which. [error] holds the server's
+ * words for that case.
  */
-internal fun refused(error: MochiError, state: NewChatUiState): String? {
+data class Refusal(val person: Friend?, val error: MochiError)
+
+internal fun refused(error: MochiError, state: NewChatUiState): Refusal? {
     if (error !is MochiError.ForbiddenError) return null
     val friends = state.friends.map { it.id }.toSet()
-    return state.picked.filterNot { it.id in friends }.singleOrNull()?.id
+    return Refusal(state.picked.filterNot { it.id in friends }.singleOrNull(), error)
 }
 
-/** People's add screen, opened on [person] to send them a friend request. */
+/** The person's page in People, where a friend request is one tap. */
 internal fun friendRequest(person: String): String =
-    "/people?action=add&search=${URLEncoder.encode(person, Charsets.UTF_8.name())}"
+    "/people/${URLEncoder.encode(person, Charsets.UTF_8.name())}"
 
 /** The longest chat name the server accepts, as the web's CHAT_NAME_MAX_LENGTH. */
 internal const val NAME_MAXIMUM = 1000

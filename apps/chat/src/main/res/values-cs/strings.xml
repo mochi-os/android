@@ -174,4 +174,6 @@
     <string name="chat_list_marked_read">Chat označen jako přečtený</string>
     <string name="chat_list_marked_unread">Chat označen jako nepřečtený</string>
     <string name="chat_send_friend_request">Odeslat žádost o přátelství</string>
+    <string name="chat_refused">Chat odmítnut</string>
+    <string name="chat_refused_friends_only">%1$s přijímá chaty pouze od přátel.</string>
 </resources>

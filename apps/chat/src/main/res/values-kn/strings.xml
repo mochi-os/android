@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">ಚಾಟ್ ಓದಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</string>
     <string name="chat_list_marked_unread">ಚಾಟ್ ಓದಿಲ್ಲ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</string>
     <string name="chat_send_friend_request">ಸ್ನೇಹ ವಿನಂತಿಯನ್ನು ಕಳುಹಿಸಿ</string>
+    <string name="chat_refused">ಚಾಟ್ ನಿರಾಕರಿಸಲಾಗಿದೆ</string>
+    <string name="chat_refused_friends_only">%1$s ಸ್ನೇಹಿತರಿಂದ ಮಾತ್ರ ಚಾಟ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸುತ್ತಾರೆ.</string>
 </resources>

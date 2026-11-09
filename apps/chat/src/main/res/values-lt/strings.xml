@@ -174,4 +174,6 @@
     <string name="chat_list_marked_read">Pokalbis pažymėtas kaip skaitytas</string>
     <string name="chat_list_marked_unread">Pokalbis pažymėtas kaip neskaitytas</string>
     <string name="chat_send_friend_request">Siųsti kvietimą draugauti</string>
+    <string name="chat_refused">Pokalbis atmestas</string>
+    <string name="chat_refused_friends_only">%1$s priima pokalbius tik iš draugų.</string>
 </resources>

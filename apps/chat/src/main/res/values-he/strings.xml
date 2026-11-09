@@ -174,4 +174,6 @@
     <string name="chat_list_marked_read">הצ\'אט סומן כנקרא</string>
     <string name="chat_list_marked_unread">הצ\'אט סומן כלא נקרא</string>
     <string name="chat_send_friend_request">שלח בקשת חברות</string>
+    <string name="chat_refused">הצ\'אט נדחה</string>
+    <string name="chat_refused_friends_only">רק חברים יכולים לפתוח צ\'אט עם %1$s.</string>
 </resources>

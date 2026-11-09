@@ -88,6 +88,9 @@ class NetworksViewModelsTest {
     /** The friends New chat is offered. */
     @Volatile private var friends = "[]"
 
+    /** The status a create answers with, and its message where it refuses. */
+    @Volatile private var createStatus = 200
+
     /** The server's side of the conversation's websocket, once the client is connected. */
     @Volatile private var frames: WebSocket? = null
 
@@ -143,7 +146,11 @@ class NetworksViewModelsTest {
                     "/chat/-/preferences/get" -> ok("""{"policy": "friends", "presence": true, "receipts": true, "typing": true}""")
                     "/chat/-/preferences/set" -> ok("""{}""")
                     "/chat/-/new" -> ok("""{"name": "Me", "friends": $friends, "accounts": [{"id": "x1", "identifier": "me@xmpp.example", "network": "xmpp"}]}""")
-                    "/chat/-/create" -> ok("""{"id": "n9", "name": "", "members": []}""")
+                    "/chat/-/create" -> if (createStatus == 200) {
+                        ok("""{"id": "n9", "name": "", "members": []}""")
+                    } else {
+                        MockResponse().setResponseCode(createStatus).setBody("""{"error": "refused", "message": "This member does not accept chats from you"}""")
+                    }
                     "/chat/c1/-/encryption" -> ok("""{"account": "m1", "status": {"network": "matrix", "address": "@me:m.example", "device": "D", "fingerprint": "abc", "signing": false}, "people": [{"id": "@carol:m.example", "name": "Carol"}]}""")
                     "/chat/c1/-/encryption/devices" -> ok("""{"devices": [{"id": "7", "fingerprint": "f", "verified": false, "own": false}, {"id": "D", "fingerprint": "g", "own": true}]}""")
                     "/chat/c1/-/encryption/trust" -> ok("""{}""")
@@ -441,6 +448,34 @@ class NetworksViewModelsTest {
         model.createChat("Friend")
         until("the chat") { model.uiState.value.createdChatId == "n9" }
         assertFalse(sent("/chat/-/create")!!.contains("account"))
+    }
+
+    @Test
+    fun `a chat the stranger's policy refuses is a dialog of its own, not the error banner`() {
+        // THE POINT: the refusal names the person, so the screen can offer
+        // them a friend request, and the banner under the bar stays empty.
+        createStatus = 403
+        val model = NewChatViewModel(SavedStateHandle(), repository)
+        until("the accounts") { model.uiState.value.accounts.isNotEmpty() }
+        val stranger = Friend(id = "s", name = "Tien Hoang")
+        model.toggleSelect(stranger)
+        model.createChat("Tien Hoang")
+        until("the refusal") { model.uiState.value.refusal != null }
+        assertEquals(stranger, model.uiState.value.refusal!!.person)
+        assertNull(model.uiState.value.error)
+        model.dismissRefusal()
+        assertNull(model.uiState.value.refusal)
+    }
+
+    @Test
+    fun `a member whose server could not be reached stays the error banner`() {
+        createStatus = 400
+        val model = NewChatViewModel(SavedStateHandle(), repository)
+        until("the accounts") { model.uiState.value.accounts.isNotEmpty() }
+        model.toggleSelect(Friend(id = "s", name = "Tien Hoang"))
+        model.createChat("Tien Hoang")
+        until("the error") { model.uiState.value.error != null }
+        assertNull(model.uiState.value.refusal)
     }
 
     @Test

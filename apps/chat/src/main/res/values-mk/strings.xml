@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Разговорот е означен како прочитан</string>
     <string name="chat_list_marked_unread">Разговорот е означен како непрочитан</string>
     <string name="chat_send_friend_request">Испрати барање за пријателство</string>
+    <string name="chat_refused">Разговорот е одбиен</string>
+    <string name="chat_refused_friends_only">%1$s прифаќа разговори само од пријатели.</string>
 </resources>

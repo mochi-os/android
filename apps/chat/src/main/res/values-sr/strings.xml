@@ -174,4 +174,6 @@
     <string name="chat_list_marked_read">Ћаскање је означено као прочитано</string>
     <string name="chat_list_marked_unread">Ћаскање је означено као непрочитано</string>
     <string name="chat_send_friend_request">Пошаљи захтев за пријатељство</string>
+    <string name="chat_refused">Чет одбијен</string>
+    <string name="chat_refused_friends_only">%1$s прихвата четове само од пријатеља.</string>
 </resources>

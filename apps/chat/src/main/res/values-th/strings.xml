@@ -170,4 +170,6 @@
     <string name="chat_list_marked_read">ทำเครื่องหมายแชทว่าอ่านแล้ว</string>
     <string name="chat_list_marked_unread">ทำเครื่องหมายแชทว่ายังไม่อ่าน</string>
     <string name="chat_send_friend_request">ส่งคำขอเป็นเพื่อน</string>
+    <string name="chat_refused">แชตถูกปฏิเสธ</string>
+    <string name="chat_refused_friends_only">%1$s รับแชตจากเพื่อนเท่านั้น</string>
 </resources>

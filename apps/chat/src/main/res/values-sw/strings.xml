@@ -172,4 +172,6 @@
     <string name="chat_list_marked_read">Gumzo limewekwa alama kuwa limesomwa</string>
     <string name="chat_list_marked_unread">Gumzo limewekwa alama kuwa halijasomwa</string>
     <string name="chat_send_friend_request">Tuma ombi la urafiki</string>
+    <string name="chat_refused">Gumzo limekataliwa</string>
+    <string name="chat_refused_friends_only">%1$s hupokea gumzo kutoka kwa marafiki pekee.</string>
 </resources>

@@ -18,29 +18,29 @@ class FriendRequestTest {
     private val refusal = MochiError.ForbiddenError("This member does not accept chats from you")
 
     @Test
-    fun `a chat the one stranger's policy refused offers them a friend request`() {
+    fun `a chat the one stranger's policy refused names them, to offer a friend request`() {
         // THE POINT: a friend may always be chatted with, so the refused
         // person is the one to ask - and the friend picked beside them is not.
         val state = NewChatUiState(friends = listOf(friend), picked = listOf(friend, stranger))
-        assertEquals("s", refused(refusal, state))
+        assertEquals(Refusal(stranger, refusal), refused(refusal, state))
     }
 
     @Test
-    fun `a server that could not be reached offers nothing`() {
+    fun `a server that could not be reached is no refusal`() {
         val state = NewChatUiState(friends = listOf(friend), picked = listOf(stranger))
         assertNull(refused(MochiError.Unknown("The member could not be reached"), state))
     }
 
     @Test
-    fun `several strangers offer nothing, as the refusal does not say which`() {
+    fun `several strangers make a refusal naming no one, as the server does not say which`() {
         val other = Friend(id = "o", name = "Lan")
         val state = NewChatUiState(picked = listOf(stranger, other))
-        assertNull(refused(refusal, state))
+        assertEquals(Refusal(null, refusal), refused(refusal, state))
     }
 
     @Test
-    fun `the request opens People's add screen on the person`() {
-        assertEquals("/people?action=add&search=s", friendRequest("s"))
-        assertEquals("/people?action=add&search=a+b%26c", friendRequest("a b&c"))
+    fun `the request opens the person's page in People`() {
+        assertEquals("/people/s", friendRequest("s"))
+        assertEquals("/people/a%2Fb", friendRequest("a/b"))
     }
 }
