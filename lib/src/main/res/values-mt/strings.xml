@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Mit-tema</string>
     <string name="settings_background_off">Xejn</string>
     <string name="game_chat_empty">L-ebda messaġġi s\'issa</string>
-    <string name="game_chat_input_placeholder">Ittajpja messaġġ…</string>
+    <string name="game_chat_input_placeholder">Ittajpja messaġġ</string>
     <string name="game_chat_send">Ibgħat messaġġ</string>
     <string name="game_chat_subject_you">Int</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Ikkonferma li int</string>
     <string name="stepup_description">Din hija bidla fis-sigurtà tal-kont tiegħek. Ivverifika li int biex tkompli.</string>
     <string name="stepup_email_label">Kodiċi tal-email</string>
-    <string name="stepup_email_placeholder">Daħħal il-kodiċi mill-email tiegħek</string>
     <string name="stepup_totp_label">Kodiċi tal-awtentikazzjoni</string>
-    <string name="stepup_totp_placeholder">Daħħal il-kodiċi tal-awtentikatur tiegħek</string>
     <string name="stepup_use_passkey">Uża ċ-ċavetta tal-aċċess tiegħek</string>
     <string name="stepup_send_email">Ibgħat email</string>
     <string name="stepup_resend_email">Erġa\' ibgħat l-email</string>
@@ -272,7 +270,7 @@
     <string name="tags_delete">Neħħi t-tikketta</string>
     <string name="person_picker_none">Xejn</string>
     <string name="person_picker_clear">Naddaf l-għażla</string>
-    <string name="person_picker_select">Agħżel …</string>
+    <string name="person_picker_select">Agħżel</string>
     <string name="person_picker_directory">Direttorju</string>
     <string name="person_picker_no_people">L-ebda persuna</string>
     <string name="person_picker_project_members">Membri tal-proġett</string>
@@ -288,7 +286,7 @@
     <string name="notifications_change_category">Ibdel il-kategorija tan-notifiki</string>
     <string name="lightbox_comments_none">Għad m\'hemmx kummenti fuq din l-immaġni.</string>
     <string name="lightbox_comments_only">Uri biss il-kummenti fuq din l-immaġni</string>
-    <string name="lightbox_comment_placeholder">Ikkummenta fuq din l-immaġni…</string>
+    <string name="lightbox_comment_placeholder">Ikkummenta fuq din l-immaġni</string>
     <string name="comment_anchor_open">Ara l-immaġni li dwarha hu dan il-kumment</string>
     <string name="comment_anchor_default">Fuq din l-immaġni</string>
     <plurals name="lightbox_comments_others">

@@ -242,7 +242,7 @@
     <string name="route_delete_message">Bydd hyn yn tynnu\'r llwybr ar gyfer y llwybr \"%1$s\".</string>
     <string name="route_empty">Dim llwybrau wedi\'u ffurfweddu.</string>
     <string name="route_meta">Blaenoriaeth %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Chwilio am bynciau i\'w hychwanegu…</string>
+    <string name="interests_search_placeholder">Chwilio am bynciau i\'w hychwanegu</string>
     <string name="interests_empty">Dim diddordebau eto.</string>
     <string name="interests_summary_regenerate">Ail-greu crynodeb</string>
     <string name="interests_summary_regenerating">Yn ail-greu…</string>
@@ -266,7 +266,7 @@
     <string name="system_settings_reset_message_empty">Bydd hyn yn ailosod \"%1$s\" i\'r rhagosodedig (gwag).</string>
     <string name="settings_home_system_users">Defnyddwyr (gweinydd)</string>
     <string name="system_users_add_user">Ychwanegu defnyddiwr</string>
-    <string name="system_users_search_placeholder">Chwilio defnyddwyr…</string>
+    <string name="system_users_search_placeholder">Chwilio defnyddwyr</string>
     <string name="system_users_sort_by">Trefnu yn ôl</string>
     <string name="system_users_last_login">Mewngofnodiad diwethaf: %1$s</string>
     <string name="system_users_delete_message">Bydd hyn yn dileu\'r defnyddiwr \"%1$s\" yn barhaol. Ni ellir dadwneud y gweithred hwn.</string>
@@ -595,7 +595,7 @@
     <string name="handles_take">Cymerwch enw</string>
     <string name="handles_empty">Nid oes unrhyw enwau defnyddiwr wedi\'u neilltuo.</string>
     <string name="handles_empty_search">Nid oes unrhyw enwau defnyddiwr yn cyfateb i\'ch chwiliad</string>
-    <string name="handles_search_placeholder">Chwilio enwau defnyddiwr…</string>
+    <string name="handles_search_placeholder">Chwilio enwau defnyddiwr</string>
     <plurals name="handles_pagination_status">
         <item quantity="zero">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>
         <item quantity="one">Yn dangos %1$s–%2$s o %3$s enw defnyddiwr</item>

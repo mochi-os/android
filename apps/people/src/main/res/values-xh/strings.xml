@@ -6,7 +6,7 @@
     <string name="people_groups_title">Amaqela</string>
     <string name="people_group_title">Iqela</string>
     <string name="people_person_title">Umntu</string>
-    <string name="people_friends_search_placeholder">Khangela…</string>
+    <string name="people_friends_search_placeholder">Khangela</string>
     <string name="people_friends_no_people_found">Akukho bantu bafumanekileyo</string>
     <string name="people_friends_try_adjusting">Zama ukulungisa ukhangelo lwakho</string>
     <string name="people_friends_pending">Ilindile</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Cima iqela \"%1$s\"? Oku akunakuguqulwa.</string>
     <string name="people_member_remove_confirm">Uqinisekile ufuna ukususa %1$s kweli qela?</string>
     <string name="people_member_remove_with_name">Susa %1$s</string>
-    <string name="people_member_search_placeholder">Faka igama ukukhangela…</string>
+    <string name="people_member_search_placeholder">Faka igama ukukhangela</string>
     <string name="people_groups_add_member_confirm_title">Yongeza kwiqela</string>
     <string name="people_groups_add_member_confirm_action">Yongeza kwiqela</string>
     <string name="people_profile_image_process_failed">Akukwazekanga ukucubungula umfanekiso ka-%1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Ayiphumelelanga ukulayisha umgaqo-nkqubo wakho wokumema</string>
     <string name="people_profile_avatar">I-avatar</string>
     <string name="people_profile_banner">Ibhena</string>
-    <string name="people_contacts_search_placeholder">Khangela…</string>
+    <string name="people_contacts_search_placeholder">Khangela</string>
     <string name="people_contacts_invited">Umenyiwe</string>
     <string name="people_contacts_accept">Yamkela</string>
     <string name="people_contacts_message">Thumela umyalezo</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Kongezwe kutshanje</string>
     <string name="people_contacts_try_different_search">Zama elinye igama lokukhangela</string>
     <string name="people_contacts_unfriend">Susa umhlobo</string>
-    <string name="people_add_contact_search_placeholder">Chwetheza ukukhangela…</string>
+    <string name="people_add_contact_search_placeholder">Chwetheza ukukhangela</string>
     <string name="people_add_contact_search_start">Qala ukuchwetheza ukukhangela abasebenzisi</string>
     <string name="people_contact_phone">Ifowuni</string>
     <string name="people_contact_title">Isihloko somsebenzi</string>

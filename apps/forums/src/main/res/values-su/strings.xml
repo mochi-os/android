@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Kirim</string>
     <string name="forums_post_body_field">Eusi</string>
-    <string name="forums_write_comment">Tulis koméntar…</string>
+    <string name="forums_write_comment">Tulis koméntar</string>
 
     <string name="notification_channel_forums">Béwara forum</string>
     <string name="forums_list_empty">Acan aya forum</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Acan aya aturan — baku diterapkeun</string>
     <string name="forums_members_search">Saring anggota</string>
     <string name="forums_banner_description">Markdown anu ditembongkeun di luhureun forum.</string>
-    <string name="forums_banner_placeholder">Lebetkeun téks spanduk (ngarojong markdown)…</string>
     <string name="forums_ai_mode_off">Dipareuman</string>
     <string name="forums_moderation_queue_empty">Teu aya anu ngantosan</string>
     <string name="forums_moderation_report_details">Rincian: %1$s</string>

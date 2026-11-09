@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">بڕیاردان</string>
     <string name="staff_appeals_decision_denied">ناونووسکراو ڕەتکرایەوە بمێنێتەوە</string>
     <string name="staff_appeals_decision_label">بڕیار</string>
-    <string name="staff_appeals_decision_placeholder">بڕیارێک هەڵبژێرە</string>
     <string name="staff_appeals_decision_upheld">پەسەندکردنی لیستە</string>
     <string name="staff_appeals_denied_toast">تانە ڕەتکرایەوە</string>
     <string name="staff_appeals_dialog_title">بڕیاردان لەسەر تانە</string>
@@ -224,7 +223,6 @@
     <string name="staff_disputes_refund_must_be_positive">بڕی گەڕاندنەوەی پارە دەبێت لە سفر زیاتر بێت</string>
     <string name="staff_disputes_resolution_buyer">چارەسەر بۆ کڕیار</string>
     <string name="staff_disputes_resolution_label">چارەسەر</string>
-    <string name="staff_disputes_resolution_placeholder">یەکلاکردنەوە هەڵبژێرە</string>
     <string name="staff_disputes_resolution_seller">چارەسەر بۆ فرۆشیار</string>
     <string name="staff_disputes_resolve">چارەسەرکردن</string>
     <string name="staff_disputes_resolved_toast">ناکۆکی چارەسەر کرا</string>
@@ -284,7 +282,6 @@
     <string name="staff_reports_action_ban">بلۆککردنی بەکارهێنەر</string>
     <string name="staff_reports_action_dismiss">ڕەتکردنەوە</string>
     <string name="staff_reports_action_label">کردار</string>
-    <string name="staff_reports_action_placeholder">کردار هەڵبژێرە</string>
     <string name="staff_reports_action_remove">لابردن</string>
     <string name="staff_reports_action_suspend">وەک فرۆشیار ڕابگرە</string>
     <string name="staff_reports_action_taken_toast">کرداری ڕاپۆرت کرا</string>
@@ -435,7 +432,7 @@
     <string name="staff_reviews_order_label">داواکاری #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s لە %3$s. بە تەواوەتی ئەم پێداچوونەوەیە بسڕێتەوە؟ ئەمە ناتوانرێت پاشگەزی لێ بکرێتەوە.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. بە تەواوەتی ئەم پێداچوونەوەیە بسڕێتەوە؟ ئەمە ناتوانرێت پاشگەزی لێ بکرێتەوە.</string>
-    <string name="staff_team_dialog_search_placeholder">گەڕان بە ناو، پەنجەمۆر، یان ناسنامە…</string>
+    <string name="staff_team_dialog_search_placeholder">گەڕان بە ناو، پەنجەمۆر، یان ناسنامە</string>
 
     <string name="staff_config_field_stripe_webhook">نهێنیی واژووکردنی Webhook</string>
     <string name="staff_disputes_meta_already_refunded">پێشتر گەڕێنرایەوە</string>

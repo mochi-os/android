@@ -6,7 +6,7 @@
     <string name="people_groups_title">समूह</string>
     <string name="people_group_title">समूह</string>
     <string name="people_person_title">व्यक्ति</string>
-    <string name="people_friends_search_placeholder">खोजीं…</string>
+    <string name="people_friends_search_placeholder">खोजीं</string>
     <string name="people_friends_no_people_found">कौनो लोग ना मिलल</string>
     <string name="people_friends_try_adjusting">अपना खोज समायोजित करे के कोशिश करीं</string>
     <string name="people_friends_pending">लंबित</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">समूह \"%1$s\" के मेटावल जाव? ई वापस नइखे हो सकत.</string>
     <string name="people_member_remove_confirm">का रउआ निश्चित बानी कि %1$s के एह समूह से हटावल चाहत बानी?</string>
     <string name="people_member_remove_with_name">%1$s के हटाईं</string>
-    <string name="people_member_search_placeholder">खोजे खातिर नाम डालीं…</string>
+    <string name="people_member_search_placeholder">खोजे खातिर नाम डालीं</string>
     <string name="people_groups_add_member_confirm_title">समूह में जोड़ीं</string>
     <string name="people_groups_add_member_confirm_action">समूह में जोड़ीं</string>
     <string name="people_profile_image_process_failed">%1$s इमेज के प्रोसेस ना कइल जा सकल</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">रउआ निमंत्रण नीति लोड करे में विफल</string>
     <string name="people_profile_avatar">अवतार</string>
     <string name="people_profile_banner">बैनर</string>
-    <string name="people_contacts_search_placeholder">खोजीं…</string>
+    <string name="people_contacts_search_placeholder">खोजीं</string>
     <string name="people_contacts_invited">निमंत्रित</string>
     <string name="people_contacts_accept">स्वीकार करीं</string>
     <string name="people_contacts_message">संदेश भेजीं</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">हाले में जोड़ल</string>
     <string name="people_contacts_try_different_search">अलग खोज शब्द आजमाईं</string>
     <string name="people_contacts_unfriend">दोस्त हटाईं</string>
-    <string name="people_add_contact_search_placeholder">खोजे खातिर टाइप करीं…</string>
+    <string name="people_add_contact_search_placeholder">खोजे खातिर टाइप करीं</string>
     <string name="people_add_contact_search_start">उपयोगकर्ता खोजे खातिर टाइप करे शुरू करीं</string>
     <string name="people_contact_phone">फोन</string>
     <string name="people_contact_title">नौकरी शीर्षक</string>

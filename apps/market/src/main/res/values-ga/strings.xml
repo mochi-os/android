@@ -3,7 +3,6 @@
     <string name="app_name">Margadh</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Beathaisnéis</string>
-    <string name="market_account_biography_placeholder">Inis do cheannaitheoirí fút féin…</string>
     <string name="market_account_load_failed">Níorbh fhéidir an cuntas a luchtú</string>
     <string name="market_account_location_label">Suíomh</string>
     <string name="market_account_save">Sábháil</string>
@@ -234,7 +233,7 @@
     <string name="market_listings_new">Liosta nua</string>
     <string name="market_listings_relist_failed">Theip ar athliostú</string>
     <string name="market_listings_title">Mo liostálacha</string>
-    <string name="market_messages_compose_placeholder">Scríobh teachtaireacht…</string>
+    <string name="market_messages_compose_placeholder">Scríobh teachtaireacht</string>
     <string name="market_messages_inbox_title">Teachtaireachtaí</string>
     <string name="market_messages_send">Seol</string>
     <string name="market_messages_thread_title">Comhrá</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Is féidir le ceannaitheoirí agus díoltóirí léirmheas a dhéanamh ar a chéile tar éis ordú críochnaithe.</string>
     <string name="market_reviews_empty_sent_subtitle">Oscail ordú críochnaithe chun léirmheas a fhágáil.</string>
     <string name="market_reviews_empty_sent_title">Níor scríobh tú aon léirmheas</string>
-    <string name="market_reviews_response_placeholder">Scríobh freagra…</string>
+    <string name="market_reviews_response_placeholder">Scríobh freagra</string>
     <string name="market_sale_carrier_custom_label">Ainm an iompróra</string>
     <string name="market_sale_dispute_evidence_due">Fianaise dlite %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Cúis aisíocaíochta cárta Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Léirmheasanna díoltóra</string>
     <string name="market_account_stripe_open_failed">Níorbh fhéidir Stripe a oscailt</string>
     <string name="market_editor_stock">Stoc</string>
-    <string name="market_editor_stock_units">Líon na n-aonad</string>
     <string name="market_editor_stock_unlimited">Gan teorainn</string>
     <string name="market_editor_start_time">Am tosaigh</string>
     <string name="market_editor_start_time_help">Fág folamh chun tosú ar fhoilsiú.</string>

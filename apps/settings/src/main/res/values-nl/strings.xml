@@ -238,7 +238,7 @@
     <string name="route_delete_message">Hiermee wordt de route voor pad «%1$s» verwijderd.</string>
     <string name="route_empty">Geen routes geconfigureerd.</string>
     <string name="route_meta">Prioriteit %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Onderwerpen om toe te voegen zoeken…</string>
+    <string name="interests_search_placeholder">Onderwerpen om toe te voegen zoeken</string>
     <string name="interests_empty">Nog geen interesses.</string>
     <string name="interests_summary_regenerate">Samenvatting opnieuw genereren</string>
     <string name="interests_summary_regenerating">Opnieuw genereren…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Hiermee wordt «%1$s» teruggezet naar de standaard (leeg).</string>
     <string name="settings_home_system_users">Gebruikers (server)</string>
     <string name="system_users_add_user">Gebruiker toevoegen</string>
-    <string name="system_users_search_placeholder">Gebruikers zoeken…</string>
+    <string name="system_users_search_placeholder">Gebruikers zoeken</string>
     <string name="system_users_sort_by">Sorteren op</string>
     <string name="system_users_last_login">Laatste aanmelding: %1$s</string>
     <string name="system_users_delete_message">Hiermee wordt de gebruiker «%1$s» permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Neem een naam</string>
     <string name="handles_empty">Er zijn geen gebruikersnamen gereserveerd.</string>
     <string name="handles_empty_search">Geen gebruikersnamen komen overeen met je zoekopdracht</string>
-    <string name="handles_search_placeholder">Zoek gebruikersnamen…</string>
+    <string name="handles_search_placeholder">Zoek gebruikersnamen</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Toont %1$s–%2$s van %3$s gebruikersnaam</item>
         <item quantity="other">Toont %1$s–%2$s van %3$s gebruikersnamen</item>

@@ -77,7 +77,7 @@
     <string name="feeds_move_down">Omlaag verplaatsen</string>
 
     <string name="notification_channel_feeds">Feeds-meldingen</string>
-    <string name="feeds_search_placeholder">Zoek feeds of plak URL…</string>
+    <string name="feeds_search_placeholder">Zoek feeds of plak URL</string>
     <string name="feeds_url_result">URL-resultaat</string>
     <string name="feeds_search_results">Zoekresultaten</string>
     <string name="feeds_unread_only">Enkel ongelezen</string>
@@ -196,7 +196,6 @@
     <string name="feeds_unsubscribe_confirm_message">Je ontvangt geen updates meer van deze feed. Je kan je op elk moment opnieuw abonneren.</string>
     <string name="feeds_access_select_rule">Selecteer toegangsregel</string>
     <string name="feeds_access_authenticated_desc">Iedereen die aangemeld is</string>
-    <string name="feeds_banner_hint">Welkom op dit forum…</string>
     <string name="feeds_banner_dismiss">Banner sluiten</string>
     <string name="feeds_members_search">Leden filteren</string>
     <string name="feeds_ai_prompt_default">Standaard</string>

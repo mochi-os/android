@@ -37,7 +37,6 @@
     <string name="staff_appeals_decide">Murteessi</string>
     <string name="staff_appeals_decision_denied">Tarreeffamicha didamuu olkaa\'i</string>
     <string name="staff_appeals_decision_label">Murtii</string>
-    <string name="staff_appeals_decision_placeholder">Murtii filadhu</string>
     <string name="staff_appeals_decision_upheld">Tarreessaa mirkaneessi</string>
     <string name="staff_appeals_denied_toast">Iyyannoon dhorkame</string>
     <string name="staff_appeals_dialog_title">Iyyannoo murteessi</string>
@@ -218,7 +217,6 @@
     <string name="staff_disputes_refund_must_be_positive">Hangi deebii kaffaltii zeeroo caaluu qaba</string>
     <string name="staff_disputes_resolution_buyer">Bituuf furi</string>
     <string name="staff_disputes_resolution_label">Furmaata</string>
-    <string name="staff_disputes_resolution_placeholder">Furmaata filadhu</string>
     <string name="staff_disputes_resolution_seller">Gurguraaf furi</string>
     <string name="staff_disputes_resolve">Furi</string>
     <string name="staff_disputes_resolved_toast">Mormiin furame</string>
@@ -276,7 +274,6 @@
     <string name="staff_reports_action_ban">Fayyadamaa dhorki</string>
     <string name="staff_reports_action_dismiss">Dhiisi</string>
     <string name="staff_reports_action_label">Tarkaanfii</string>
-    <string name="staff_reports_action_placeholder">Sochii fili</string>
     <string name="staff_reports_action_remove">Haqi</string>
     <string name="staff_reports_action_suspend">Akka gurguraatti hidhi</string>
     <string name="staff_reports_action_taken_toast">Sochii gabaasaa fudhatame</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s irratti. Gamaaggama kana yeroo hundaaf haqi? Kun deebifamuu hin danda\'u.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Gamaaggama kana yeroo hundaaf haqi? Kun deebifamuu hin danda\'u.</string>
     <string name="staff_team_dialog_adding">Itti dabalamaa jira…</string>
-    <string name="staff_team_dialog_search_placeholder">Maqaa, faanaa quba, ykn ID\'n barbaadi…</string>
+    <string name="staff_team_dialog_search_placeholder">Maqaa, faanaa quba, ykn ID\'n barbaadi</string>
 
     <string name="staff_config_field_stripe_webhook">Iccitiroo mallattoo Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Duraan deebi\'eera</string>

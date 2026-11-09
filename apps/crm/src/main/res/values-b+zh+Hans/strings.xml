@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">指纹</string>
     <string name="crm_settings_server">服务器</string>
     <string name="crm_untitled">未命名</string>
-    <string name="crm_property_select">选择 …</string>
     <string name="crm_filter">筛选</string>
     <string name="crm_sort_filter_title">排序和筛选</string>
     <string name="crm_filter_clear_all">全部清除</string>

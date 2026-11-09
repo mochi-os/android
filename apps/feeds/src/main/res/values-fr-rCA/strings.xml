@@ -55,7 +55,7 @@
     <string name="feeds_find_feeds">Trouver des fils</string>
     <string name="feeds_create_feed">Créer un fil</string>
     <string name="feeds_all_feeds">Tous les fils</string>
-    <string name="feeds_search_placeholder">Rechercher des fils ou coller une URL…</string>
+    <string name="feeds_search_placeholder">Rechercher des fils ou coller une URL</string>
     <string name="feeds_url_result">Résultat d\'URL</string>
     <string name="feeds_search_results">Résultats de recherche</string>
     <string name="feeds_no_feeds_found">Aucun fil trouvé</string>
@@ -181,7 +181,6 @@
         <item quantity="one">%1$s heure</item>
         <item quantity="other">%1$s heures</item>
     </plurals>
-    <string name="feeds_banner_hint">Bienvenue dans ce forum…</string>
     <string name="feeds_banner_dismiss">Masquer la bannière</string>
     <string name="feeds_members_search">Filtrer les membres</string>
     <string name="feeds_ai_prompt_default">Par défaut</string>

@@ -90,7 +90,7 @@
     <string name="feeds_ai_account">حساب هوش مصنوعی</string>
 
     <string name="notification_channel_feeds">اعلان‌های خوراک‌ها</string>
-    <string name="feeds_search_placeholder">جستجوی خوراک‌ها یا چسباندن نشانی…</string>
+    <string name="feeds_search_placeholder">جستجوی خوراک‌ها یا چسباندن نشانی</string>
     <string name="feeds_url_result">نتیجه نشانی</string>
     <string name="feeds_search_results">نتایج جستجو</string>
     <string name="feeds_unread_only">فقط خوانده‌نشده‌ها</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">دیگر به‌روزرسانی‌های این فید را دریافت نخواهید کرد. هر زمان می‌توانید دوباره مشترک شوید.</string>
     <string name="feeds_access_select_rule">انتخاب قاعده دسترسی</string>
     <string name="feeds_access_authenticated_desc">هر کسی که وارد شده باشد</string>
-    <string name="feeds_banner_hint">به این انجمن خوش آمدید…</string>
     <string name="feeds_banner_dismiss">بستن بنر</string>
     <string name="feeds_members_search">فیلتر اعضا</string>
     <string name="feeds_ai_prompt_default">پیش‌فرض</string>

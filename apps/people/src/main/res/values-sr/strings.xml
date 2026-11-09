@@ -6,7 +6,7 @@
     <string name="people_groups_title">Групе</string>
     <string name="people_group_title">Група</string>
     <string name="people_person_title">Особа</string>
-    <string name="people_friends_search_placeholder">Претражи…</string>
+    <string name="people_friends_search_placeholder">Претражи</string>
     <string name="people_friends_no_people_found">Нема пронађених особа</string>
     <string name="people_friends_try_adjusting">Покушај прилагодити претрагу</string>
     <string name="people_friends_pending">На чекању</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Обрисати групу \"%1$s\"? Ово се не може поништити.</string>
     <string name="people_member_remove_confirm">Да ли сте сигурни да желите да уклоните %1$s из ове групе?</string>
     <string name="people_member_remove_with_name">Уклони %1$s</string>
-    <string name="people_member_search_placeholder">Унесите име за претрагу…</string>
+    <string name="people_member_search_placeholder">Унесите име за претрагу</string>
     <string name="people_groups_add_member_confirm_title">Додај у групу</string>
     <string name="people_groups_add_member_confirm_action">Додај у групу</string>
     <string name="people_profile_image_process_failed">Није могуће обрадити слику %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Учитавање ваше политике позивања није успело</string>
     <string name="people_profile_avatar">Аватар</string>
     <string name="people_profile_banner">Банер</string>
-    <string name="people_contacts_search_placeholder">Претражи…</string>
+    <string name="people_contacts_search_placeholder">Претражи</string>
     <string name="people_contacts_invited">Позван</string>
     <string name="people_contacts_accept">Прихвати</string>
     <string name="people_contacts_message">Пошаљи поруку</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Недавно додато</string>
     <string name="people_contacts_try_different_search">Покушај другу реч за претрагу</string>
     <string name="people_contacts_unfriend">Уклони пријатеља</string>
-    <string name="people_add_contact_search_placeholder">Унесите текст за претрагу…</string>
+    <string name="people_add_contact_search_placeholder">Унесите текст за претрагу</string>
     <string name="people_add_contact_search_start">Почни да куцаш да би тражио кориснике</string>
     <string name="people_contact_phone">Телефон</string>
     <string name="people_contact_title">Радно место</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Päätä</string>
     <string name="staff_appeals_decision_denied">Pidä ilmoitus hylättynä</string>
     <string name="staff_appeals_decision_label">Päätös</string>
-    <string name="staff_appeals_decision_placeholder">Valitse päätös</string>
     <string name="staff_appeals_decision_upheld">Hyväksy ilmoitus</string>
     <string name="staff_appeals_denied_toast">Valitus evätty</string>
     <string name="staff_appeals_dialog_title">Päätä valitus</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Hyvityssumman on oltava nollaa suurempi</string>
     <string name="staff_disputes_resolution_buyer">Ratkaise ostajan hyväksi</string>
     <string name="staff_disputes_resolution_label">Ratkaisu</string>
-    <string name="staff_disputes_resolution_placeholder">Valitse ratkaisu</string>
     <string name="staff_disputes_resolution_seller">Ratkaise myyjän hyväksi</string>
     <string name="staff_disputes_resolve">Ratkaise</string>
     <string name="staff_disputes_resolved_toast">Riitautus ratkaistu</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Estä käyttäjä</string>
     <string name="staff_reports_action_dismiss">Hylkää</string>
     <string name="staff_reports_action_label">Toiminto</string>
-    <string name="staff_reports_action_placeholder">Valitse toiminto</string>
     <string name="staff_reports_action_remove">Poista</string>
     <string name="staff_reports_action_suspend">Keskeytä myyjänä</string>
     <string name="staff_reports_action_taken_toast">Ilmoitustoimenpide tehty</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Henkilö</string>
     <string name="staff_team_dialog_role">Rooli</string>
     <string name="staff_team_dialog_role_placeholder">Valitse rooli</string>
-    <string name="staff_team_dialog_search_placeholder">Hae nimellä, sormenjäljellä tai ID:llä…</string>
+    <string name="staff_team_dialog_search_placeholder">Hae nimellä, sormenjäljellä tai ID:llä</string>
     <string name="staff_team_empty">Ei tiimin jäseniä</string>
     <string name="staff_team_remove_confirm">Poista</string>
     <string name="staff_team_remove_desc">Poistetaanko tämä jäsen henkilökuntatiimistä?</string>

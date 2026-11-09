@@ -4,7 +4,6 @@
     <string name="app_name">Нарық</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Өмірбаян</string>
-    <string name="market_account_biography_placeholder">Сатып алушыларға өзіңіз туралы айтыңыз…</string>
     <string name="market_account_load_failed">Аккаунтты жүктеу мүмкін болмады</string>
     <string name="market_account_location_label">Орналасуы</string>
     <string name="market_account_save">Сақтау</string>
@@ -312,7 +311,7 @@
     <string name="market_listings_search_placeholder">Хабарландыруларыңызды іздеу</string>
     <string name="market_listings_share_chooser">Хабарландырумен бөлісу</string>
     <string name="market_listings_title">Менің хабарландыруларым</string>
-    <string name="market_messages_compose_placeholder">Хабар жазыңыз…</string>
+    <string name="market_messages_compose_placeholder">Хабар жазыңыз</string>
     <string name="market_messages_inbox_empty_subtitle">Сатушыға хабар жазғанда (немесе сатып алушы сізге жазғанда) тізбек осында пайда болады.</string>
     <string name="market_messages_inbox_empty_title">Әлі сөйлесулер жоқ</string>
     <string name="market_messages_inbox_title">Хабарламалар</string>
@@ -427,7 +426,7 @@
     <string name="market_reviews_empty_sent_subtitle">Пікір қалдыру үшін аяқталған тапсырысты ашыңыз.</string>
     <string name="market_reviews_empty_sent_title">Сіз әлі пікір жазған жоқсыз</string>
     <string name="market_reviews_response_label">Жауап</string>
-    <string name="market_reviews_response_placeholder">Жауап жазу…</string>
+    <string name="market_reviews_response_placeholder">Жауап жазу</string>
     <string name="market_reviews_response_submit">Жауапты жіберу</string>
     <string name="market_reviews_tab_received">Алынды</string>
     <string name="market_reviews_tab_sent">Жіберілді</string>
@@ -589,7 +588,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Сатушы туралы пікірлер</string>
     <string name="market_account_stripe_open_failed">Stripe ашу мүмкін болмады</string>
     <string name="market_editor_stock">Қор</string>
-    <string name="market_editor_stock_units">Бірлік саны</string>
     <string name="market_editor_stock_unlimited">Шектеусіз</string>
     <string name="market_editor_start_time">Бастау уақыты</string>
     <string name="market_editor_start_time_help">Жариялау кезінде басталу үшін бос қалдырыңыз.</string>

@@ -37,7 +37,6 @@
     <string name="staff_appeals_decide">Pinnu</string>
     <string name="staff_appeals_decision_denied">Mú àkójọpọ̀ tí a kọ̀sí</string>
     <string name="staff_appeals_decision_label">Ìpinnu</string>
-    <string name="staff_appeals_decision_placeholder">Yan ìpinnu</string>
     <string name="staff_appeals_decision_upheld">Fọwọ́sí àkójọpọ̀</string>
     <string name="staff_appeals_denied_toast">A ti kọ ẹjọ́ àfilọ̀</string>
     <string name="staff_appeals_dialog_title">Pinnu ẹjọ́ àfilọ̀</string>
@@ -218,7 +217,6 @@
     <string name="staff_disputes_refund_must_be_positive">Iye padà gbọ́dọ̀ ju òdo lọ</string>
     <string name="staff_disputes_resolution_buyer">Yanjú fún olùrà</string>
     <string name="staff_disputes_resolution_label">Ìpinnu</string>
-    <string name="staff_disputes_resolution_placeholder">Yan ìyanjú</string>
     <string name="staff_disputes_resolution_seller">Yanjú fún olùtà</string>
     <string name="staff_disputes_resolve">Yanjú</string>
     <string name="staff_disputes_resolved_toast">A ti yanjú àríyànjiyàn</string>
@@ -275,7 +273,6 @@
     <string name="staff_reports_action_ban">Fòfin de olùmúlò</string>
     <string name="staff_reports_action_dismiss">Kọ̀</string>
     <string name="staff_reports_action_label">Ìṣe</string>
-    <string name="staff_reports_action_placeholder">Yan ìṣe</string>
     <string name="staff_reports_action_remove">Yọ kúrò</string>
     <string name="staff_reports_action_suspend">Dádúró gẹ́gẹ́ bí olùtà</string>
     <string name="staff_reports_action_taken_toast">A ti gbé iṣẹ́ ìròyìn</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ní %3$s. Pa àtúnyẹ̀wò yìí rẹ́ pátápátá? A kò lè yí èyí padà.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Pa àtúnyẹ̀wò yìí rẹ́ pátápátá? A kò lè yí èyí padà.</string>
     <string name="staff_team_dialog_adding">Ń fi kún…</string>
-    <string name="staff_team_dialog_search_placeholder">Wá nípa orúkọ, ìka ọwọ́, tàbí ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Wá nípa orúkọ, ìka ọwọ́, tàbí ID</string>
 
     <string name="staff_config_field_stripe_webhook">Àṣírí ìbúwọ́lù Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Ti dapada tẹ́lẹ̀</string>

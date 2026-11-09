@@ -240,7 +240,7 @@
     <string name="route_delete_message">Гэта выдаліць маршрут для шляху \"%1$s\".</string>
     <string name="route_empty">Маршруты не настроены.</string>
     <string name="route_meta">Прыярытэт %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Шукаць тэмы для дабаўлення…</string>
+    <string name="interests_search_placeholder">Шукаць тэмы для дабаўлення</string>
     <string name="interests_empty">Пакуль няма цікавасцяў.</string>
     <string name="interests_summary_regenerate">Перагенераваць зводку</string>
     <string name="interests_summary_regenerating">Стварэнне…</string>
@@ -264,7 +264,7 @@
     <string name="system_settings_reset_message_empty">Гэта скіне \"%1$s\" да значэння па змаўчанні (пуста).</string>
     <string name="settings_home_system_users">Карыстальнікі (сервер)</string>
     <string name="system_users_add_user">Дадаць карыстальніка</string>
-    <string name="system_users_search_placeholder">Пошук карыстальнікаў…</string>
+    <string name="system_users_search_placeholder">Пошук карыстальнікаў</string>
     <string name="system_users_sort_by">Сартаваць па</string>
     <string name="system_users_last_login">Апошні ўваход: %1$s</string>
     <string name="system_users_delete_message">Гэта назаўжды выдаліць карыстальніка \"%1$s\". Гэта дзеянне нельга адмяніць.</string>
@@ -575,7 +575,7 @@
     <string name="handles_take">Займіце імя</string>
     <string name="handles_empty">Ніводнага імя карыстальніка не зарэзервавана.</string>
     <string name="handles_empty_search">Імёны карыстальніка, што адпавядаюць пошуку, не знойдзены</string>
-    <string name="handles_search_placeholder">Пошук імёнаў карыстальніка…</string>
+    <string name="handles_search_placeholder">Пошук імёнаў карыстальніка</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Паказана %1$s–%2$s з %3$s імя карыстальніка</item>
         <item quantity="few">Паказана %1$s–%2$s з %3$s імёнаў карыстальніка</item>

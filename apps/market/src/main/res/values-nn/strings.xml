@@ -343,7 +343,6 @@
     <string name="market_purchases_order_label">Tinging #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Fortel kjøparar om deg sjølv…</string>
     <string name="market_account_load_failed">Kunne ikkje lasta kontoen</string>
     <string name="market_account_saved">Endringane er lagra</string>
     <string name="market_account_status_restrictions">Nokre handlingar, mellom anna å oppretta nye annonsar og fullføra bestillingar, er avgrensa medan kontoen er i denne tilstanden.</string>
@@ -465,7 +464,7 @@
     <string name="market_listings_new">Ny annonse</string>
     <string name="market_listings_search_placeholder">Søk i annonsane dine</string>
     <string name="market_listings_share_chooser">Del annonse</string>
-    <string name="market_messages_compose_placeholder">Skriv ei melding…</string>
+    <string name="market_messages_compose_placeholder">Skriv ei melding</string>
     <string name="market_messages_inbox_empty_subtitle">Når du sender melding til ein seljar (eller ein kjøpar sender melding til deg) dukkar samtalen opp her.</string>
     <string name="market_messages_inbox_empty_title">Ingen samtalar enno</string>
     <string name="market_messages_thread_title">Samtale</string>
@@ -506,7 +505,7 @@
     <string name="market_reviews_empty_sent_subtitle">Opna ei fullført tinging for å leggja att ei vurdering.</string>
     <string name="market_reviews_empty_sent_title">Du har ikkje skrive nokon vurderingar</string>
     <string name="market_reviews_response_label">Svar</string>
-    <string name="market_reviews_response_placeholder">Skriv eit svar…</string>
+    <string name="market_reviews_response_placeholder">Skriv eit svar</string>
     <string name="market_sale_carrier_custom_label">Namn på transportør</string>
     <string name="market_sale_dispute_evidence_due">Bevis må sendast innan %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe-tilbakeføringsgrunn: %1$s</string>
@@ -591,7 +590,6 @@
     <string name="market_listing_detail_seller_response">Seljarsvar</string>
     <string name="market_account_stripe_open_failed">Kunne ikkje opna Stripe</string>
     <string name="market_editor_stock">Lager</string>
-    <string name="market_editor_stock_units">Tal på einingar</string>
     <string name="market_editor_stock_unlimited">Uavgrensa</string>
     <string name="market_editor_start_time">Starttid</string>
     <string name="market_editor_start_time_help">Lat stå tomt for å starta ved publisering.</string>

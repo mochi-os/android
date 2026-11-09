@@ -238,7 +238,7 @@
     <string name="route_delete_message">Това ще премахне маршрута за пътя „%1$s\".</string>
     <string name="route_empty">Няма конфигурирани маршрути.</string>
     <string name="route_meta">Приоритет %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Търсене на теми за добавяне…</string>
+    <string name="interests_search_placeholder">Търсене на теми за добавяне</string>
     <string name="interests_empty">Все още няма интереси.</string>
     <string name="interests_summary_regenerate">Регенерирай резюмето</string>
     <string name="interests_summary_regenerating">Регенериране…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Това ще нулира „%1$s\" до стойността по подразбиране (празно).</string>
     <string name="settings_home_system_users">Потребители (сървър)</string>
     <string name="system_users_add_user">Добави потребител</string>
-    <string name="system_users_search_placeholder">Търсене на потребители…</string>
+    <string name="system_users_search_placeholder">Търсене на потребители</string>
     <string name="system_users_sort_by">Сортиране по</string>
     <string name="system_users_last_login">Последен вход: %1$s</string>
     <string name="system_users_delete_message">Това ще изтрие завинаги потребителя „%1$s\". Това действие не може да бъде отменено.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Вземете име</string>
     <string name="handles_empty">Няма запазени потребителски имена.</string>
     <string name="handles_empty_search">Няма потребителски имена, отговарящи на търсенето</string>
-    <string name="handles_search_placeholder">Търси потребителски имена…</string>
+    <string name="handles_search_placeholder">Търси потребителски имена</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Показани са %1$s–%2$s от %3$s потребителско име</item>
         <item quantity="other">Показани са %1$s–%2$s от %3$s потребителски имена</item>

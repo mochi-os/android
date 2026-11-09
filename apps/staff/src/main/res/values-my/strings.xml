@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">ဆုံးဖြတ်မည်</string>
     <string name="staff_appeals_decision_denied">စာရင်းကို ငြင်းပယ်ထားမည်</string>
     <string name="staff_appeals_decision_label">ဆုံးဖြတ်ချက်</string>
-    <string name="staff_appeals_decision_placeholder">ဆုံးဖြတ်ချက်ကို ရွေးပါ</string>
     <string name="staff_appeals_decision_upheld">စာရင်း အတည်ပြုမည်</string>
     <string name="staff_appeals_denied_toast">အယူခံ ငြင်းပယ်ပြီး</string>
     <string name="staff_appeals_dialog_title">အယူခံ ဆုံးဖြတ်မည်</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">ပြန်အမ်းပမာဏသည် သုညထက် ကြီးရမည်</string>
     <string name="staff_disputes_resolution_buyer">ဝယ်သူဘက်က ဖြေရှင်း</string>
     <string name="staff_disputes_resolution_label">ဖြေရှင်းချက်</string>
-    <string name="staff_disputes_resolution_placeholder">ဆုံးဖြတ်ချက်ကို ရွေးပါ</string>
     <string name="staff_disputes_resolution_seller">ရောင်းသူဘက်က ဖြေရှင်း</string>
     <string name="staff_disputes_resolve">ဖြေရှင်း</string>
     <string name="staff_disputes_resolved_toast">အငြင်းပွားမှု ဖြေရှင်းပြီး</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">သုံးစွဲသူကို ပိတ်ပင်မည်</string>
     <string name="staff_reports_action_dismiss">ပယ်မည်</string>
     <string name="staff_reports_action_label">လုပ်ဆောင်ချက်</string>
-    <string name="staff_reports_action_placeholder">လုပ်ဆောင်ချက် ရွေးချယ်</string>
     <string name="staff_reports_action_remove">ဖယ်ရှား</string>
     <string name="staff_reports_action_suspend">ရောင်းသူအဖြစ် ဆိုင်းငံ့မည်</string>
     <string name="staff_reports_action_taken_toast">အစီရင်ခံစာ လုပ်ဆောင်ချက် လုပ်ပြီး</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">အမှာစာ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%3$s တွင် %1$s → %2$s။ ဤသုံးသပ်ချက်ကို အပြီးတိုင် ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s။ ဤသုံးသပ်ချက်ကို အပြီးတိုင် ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။</string>
-    <string name="staff_team_dialog_search_placeholder">နာမည်၊ လက်ဗွေ၊ သို့မဟုတ် ID ဖြင့် ရှာရန်…</string>
+    <string name="staff_team_dialog_search_placeholder">နာမည်၊ လက်ဗွေ၊ သို့မဟုတ် ID ဖြင့် ရှာရန်</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook လက်မှတ်ထိုးခြင်း လျှို့ဝှက်ချက်</string>
     <string name="staff_disputes_meta_already_refunded">ပြန်အမ်းပြီး</string>

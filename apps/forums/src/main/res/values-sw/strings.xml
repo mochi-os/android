@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Tuma</string>
     <string name="forums_post_body_field">Mwili</string>
-    <string name="forums_write_comment">Andika maoni…</string>
+    <string name="forums_write_comment">Andika maoni</string>
 
     <string name="notification_channel_forums">Arifa za majukwaa</string>
     <string name="forums_list_empty">Hakuna majukwaa bado</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Hakuna sheria bado — chaguomsingi zinatumika</string>
     <string name="forums_members_search">Chuja wanachama</string>
     <string name="forums_banner_description">Markdown inayoonyeshwa juu ya jukwaa.</string>
-    <string name="forums_banner_placeholder">Weka maandishi ya bango (markdown inatumika)…</string>
     <string name="forums_ai_mode_off">Imezimwa</string>
     <string name="forums_moderation_queue_empty">Hakuna kinachosubiri</string>
     <string name="forums_moderation_report_details">Maelezo: %1$s</string>

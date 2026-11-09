@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Թեմայից</string>
     <string name="settings_background_off">Ոչ մեկը</string>
     <string name="game_chat_empty">Դեռ հաղորդագրություններ չկան</string>
-    <string name="game_chat_input_placeholder">Մուտքագրեք հաղորդագրություն…</string>
+    <string name="game_chat_input_placeholder">Մուտքագրեք հաղորդագրություն</string>
     <string name="game_chat_send">Ուղարկել հաղորդագրությունը</string>
     <string name="game_chat_subject_you">Դուք</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Հաստատեք, որ դա դուք եք</string>
     <string name="stepup_description">Սա ձեր հաշվի անվտանգության փոփոխություն է։ Շարունակելու համար հաստատեք, որ դա դուք եք։</string>
     <string name="stepup_email_label">Էլ․ փոստի կոդ</string>
-    <string name="stepup_email_placeholder">Մուտքագրեք ձեր էլ. փոստից ստացած կոդը</string>
     <string name="stepup_totp_label">Նույնականացուցիչի կոդ</string>
-    <string name="stepup_totp_placeholder">Մուտքագրեք ձեր նույնականացուցիչի կոդը</string>
     <string name="stepup_use_passkey">Օգտագործեք ձեր անցաբանալին</string>
     <string name="stepup_send_email">Ուղարկել էլ. փոստ</string>
     <string name="stepup_resend_email">Կրկին ուղարկել նամակը</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Հեռացնել պիտակը</string>
     <string name="person_picker_none">Ոչ մեկը</string>
     <string name="person_picker_clear">Մաքրել ընտրությունը</string>
-    <string name="person_picker_select">Ընտրեք …</string>
+    <string name="person_picker_select">Ընտրեք</string>
     <string name="person_picker_directory">Տեղեկագիրք</string>
     <string name="person_picker_no_people">Մարդիկ չկան</string>
     <string name="person_picker_project_members">Նախագծի անդամներ</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Փոխել ծանուցման կատեգորիան</string>
     <string name="lightbox_comments_none">Այս պատկերի վերաբերյալ դեռ մեկնաբանություններ չկան։</string>
     <string name="lightbox_comments_only">Ցուցադրել միայն այս պատկերի մեկնաբանությունները</string>
-    <string name="lightbox_comment_placeholder">Մեկնաբանել այս պատկերը…</string>
+    <string name="lightbox_comment_placeholder">Մեկնաբանել այս պատկերը</string>
     <string name="comment_anchor_open">Դիտել այն պատկերը, որին վերաբերում է այս մեկնաբանությունը</string>
     <string name="comment_anchor_default">Այս պատկերի վերաբերյալ</string>
     <plurals name="lightbox_comments_others">

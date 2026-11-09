@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Sormenjälki</string>
     <string name="crm_settings_server">Palvelin</string>
     <string name="crm_untitled">Nimetön</string>
-    <string name="crm_property_select">Valitse …</string>
     <string name="crm_filter">Suodata</string>
     <string name="crm_sort_filter_title">Lajittele ja suodata</string>
     <string name="crm_filter_clear_all">Tyhjennä kaikki</string>

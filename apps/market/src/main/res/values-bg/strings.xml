@@ -337,7 +337,6 @@
     <string name="market_messages_send">Изпрати</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Разкажете на купувачите за себе си…</string>
     <string name="market_account_load_failed">Акаунтът не може да бъде зареден</string>
     <string name="market_account_saved">Промените са запазени</string>
     <string name="market_account_status_restrictions">Някои действия, включително създаване на нови обяви и завършване на поръчки, са ограничени, докато акаунтът ви е в това състояние.</string>
@@ -438,7 +437,7 @@
     <string name="market_reviews_empty_sent_subtitle">Отворете завършена поръчка, за да оставите отзив.</string>
     <string name="market_reviews_empty_sent_title">Не сте написали отзиви</string>
     <string name="market_reviews_response_label">Отговор</string>
-    <string name="market_reviews_response_placeholder">Напишете отговор…</string>
+    <string name="market_reviews_response_placeholder">Напишете отговор</string>
     <string name="market_sale_carrier_custom_label">Име на превозвача</string>
     <string name="market_sale_dispute_evidence_due">Доказателства до %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Причина за обратно плащане от Stripe: %1$s</string>
@@ -521,7 +520,7 @@
     <string name="market_listings_load_failed">Зареждането на обявите ви е неуспешно</string>
     <string name="market_listings_search_placeholder">Търсене в обявите ви</string>
     <string name="market_listings_share_chooser">Споделяне на обявата</string>
-    <string name="market_messages_compose_placeholder">Напишете съобщение…</string>
+    <string name="market_messages_compose_placeholder">Напишете съобщение</string>
     <string name="market_messages_inbox_empty_subtitle">Когато изпратите съобщение на продавач (или купувач ви изпрати такова) разговорът ще се появи тук.</string>
     <string name="market_messages_inbox_empty_title">Все още няма разговори</string>
     <string name="market_messages_thread_title">Разговор</string>
@@ -592,7 +591,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Отзиви за продавача</string>
     <string name="market_account_stripe_open_failed">Stripe не може да бъде отворен</string>
     <string name="market_editor_stock">Наличност</string>
-    <string name="market_editor_stock_units">Брой единици</string>
     <string name="market_editor_stock_unlimited">Неограничено</string>
     <string name="market_editor_start_time">Начален час</string>
     <string name="market_editor_start_time_help">Оставете празно, за да започне при публикуване.</string>

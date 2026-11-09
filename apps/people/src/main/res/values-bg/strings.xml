@@ -6,7 +6,7 @@
     <string name="people_groups_title">Групи</string>
     <string name="people_group_title">Група</string>
     <string name="people_person_title">Лице</string>
-    <string name="people_friends_search_placeholder">Търси…</string>
+    <string name="people_friends_search_placeholder">Търси</string>
     <string name="people_friends_no_people_found">Не са намерени хора</string>
     <string name="people_friends_try_adjusting">Опитайте да коригирате търсенето си</string>
     <string name="people_friends_pending">В очакване</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Изтриване на групата \"%1$s\"? Това не може да бъде отменено.</string>
     <string name="people_member_remove_confirm">Сигурни ли сте, че искате да премахнете %1$s от тази група?</string>
     <string name="people_member_remove_with_name">Премахване на %1$s</string>
-    <string name="people_member_search_placeholder">Въведете име за търсене…</string>
+    <string name="people_member_search_placeholder">Въведете име за търсене</string>
     <string name="people_groups_add_member_confirm_title">Добавяне в група</string>
     <string name="people_groups_add_member_confirm_action">Добавяне в група</string>
     <string name="people_profile_image_process_failed">Изображението %1$s не може да бъде обработено</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Неуспешно зареждане на политиката ви за покани</string>
     <string name="people_profile_avatar">Аватар</string>
     <string name="people_profile_banner">Банер</string>
-    <string name="people_contacts_search_placeholder">Търси…</string>
+    <string name="people_contacts_search_placeholder">Търси</string>
     <string name="people_contacts_invited">Поканен(а)</string>
     <string name="people_contacts_accept">Приеми</string>
     <string name="people_contacts_message">Изпрати съобщение</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Наскоро добавени</string>
     <string name="people_contacts_try_different_search">Опитайте друг термин за търсене</string>
     <string name="people_contacts_unfriend">Премахни приятел</string>
-    <string name="people_add_contact_search_placeholder">Пишете, за да търсите…</string>
+    <string name="people_add_contact_search_placeholder">Пишете, за да търсите</string>
     <string name="people_add_contact_search_start">Започнете да пишете, за да търсите потребители</string>
     <string name="people_contact_phone">Телефон</string>
     <string name="people_contact_title">Длъжност</string>

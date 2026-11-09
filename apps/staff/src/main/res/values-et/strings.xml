@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Otsusta</string>
     <string name="staff_appeals_decision_denied">Säilita kuulutus tagasi lükatud</string>
     <string name="staff_appeals_decision_label">Otsus</string>
-    <string name="staff_appeals_decision_placeholder">Vali otsus</string>
     <string name="staff_appeals_decision_upheld">Kinnita kuulutus</string>
     <string name="staff_appeals_denied_toast">Apellatsioon tagasi lükatud</string>
     <string name="staff_appeals_dialog_title">Otsusta apellatsioon</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Tagasimakse summa peab olema suurem kui null</string>
     <string name="staff_disputes_resolution_buyer">Lahenda ostja kasuks</string>
     <string name="staff_disputes_resolution_label">Resolutsioon</string>
-    <string name="staff_disputes_resolution_placeholder">Vali eraldusvõime</string>
     <string name="staff_disputes_resolution_seller">Lahenda müüja kasuks</string>
     <string name="staff_disputes_resolve">Lahenda</string>
     <string name="staff_disputes_resolved_toast">Vaidlus lahendatud</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Blokeeri kasutaja</string>
     <string name="staff_reports_action_dismiss">Lükka tagasi</string>
     <string name="staff_reports_action_label">Tegevus</string>
-    <string name="staff_reports_action_placeholder">Vali tegevus</string>
     <string name="staff_reports_action_remove">Eemalda</string>
     <string name="staff_reports_action_suspend">Peata müüjana</string>
     <string name="staff_reports_action_taken_toast">Raporti tegevus tehtud</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Isik</string>
     <string name="staff_team_dialog_role">Roll</string>
     <string name="staff_team_dialog_role_placeholder">Vali roll</string>
-    <string name="staff_team_dialog_search_placeholder">Otsi nime, sõrmejälje või ID järgi…</string>
+    <string name="staff_team_dialog_search_placeholder">Otsi nime, sõrmejälje või ID järgi</string>
     <string name="staff_team_empty">Meeskonnaliikmeid pole</string>
     <string name="staff_team_remove_confirm">Eemalda</string>
     <string name="staff_team_remove_desc">Kas eemaldada see liige personalimeeskonnast?</string>

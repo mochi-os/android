@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">औंलाछाप</string>
     <string name="crm_settings_server">सर्भर</string>
     <string name="crm_untitled">शीर्षकविहीन</string>
-    <string name="crm_property_select">चयन गर्नुहोस् …</string>
     <string name="crm_filter">फिल्टर</string>
     <string name="crm_sort_filter_title">क्रमबद्ध र फिल्टर</string>
     <string name="crm_filter_clear_all">सबै खाली गर्नुहोस्</string>

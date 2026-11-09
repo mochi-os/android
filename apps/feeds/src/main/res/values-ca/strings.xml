@@ -84,7 +84,7 @@
     <string name="feeds_send">Envia</string>
 
     <string name="notification_channel_feeds">Notificacions de canals</string>
-    <string name="feeds_search_placeholder">Cerqueu canals o enganxeu un URL…</string>
+    <string name="feeds_search_placeholder">Cerqueu canals o enganxeu un URL</string>
     <string name="feeds_url_result">Resultat de l\'URL</string>
     <string name="feeds_search_results">Resultats de la cerca</string>
     <string name="feeds_unread_only">Només no llegits</string>
@@ -204,7 +204,6 @@
     <string name="feeds_unsubscribe_confirm_message">Deixaràs de rebre actualitzacions d\'aquest canal. Pots tornar-te a subscriure en qualsevol moment.</string>
     <string name="feeds_access_select_rule">Selecciona la regla d\'accés</string>
     <string name="feeds_access_authenticated_desc">Qualsevol persona que hagi iniciat sessió</string>
-    <string name="feeds_banner_hint">Us donem la benvinguda a aquest fòrum…</string>
     <string name="feeds_banner_dismiss">Descarta el bàner</string>
     <string name="feeds_members_search">Filtra els membres</string>
     <string name="feeds_ai_prompt_default">Per defecte</string>

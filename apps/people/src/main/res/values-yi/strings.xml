@@ -6,7 +6,7 @@
     <string name="people_groups_title">גרופּעס</string>
     <string name="people_group_title">גרופּע</string>
     <string name="people_person_title">מענטש</string>
-    <string name="people_friends_search_placeholder">זוך…</string>
+    <string name="people_friends_search_placeholder">זוך</string>
     <string name="people_friends_no_people_found">קיין מענטשן ניט געפֿונען</string>
     <string name="people_friends_try_adjusting">פּרוּווט באַאַרבעטן אײַער זוך</string>
     <string name="people_friends_pending">וואַרטנדיק</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">אויסמעקן גרופּע \"%1$s\"? דאָס קען נישט פֿאַרקערט ווערן.</string>
     <string name="people_member_remove_confirm">זענט איר זיכער אַז איר ווילט אַראָפּנעמען %1$s פֿון דער גרופּע?</string>
     <string name="people_member_remove_with_name">אַראָפּנעמען %1$s</string>
-    <string name="people_member_search_placeholder">גיט אַרײַן נאָמען צו זוכן…</string>
+    <string name="people_member_search_placeholder">גיט אַרײַן נאָמען צו זוכן</string>
     <string name="people_groups_add_member_confirm_title">צוגעבן צו גרופּע</string>
     <string name="people_groups_add_member_confirm_action">צוגעבן צו גרופּע</string>
     <string name="people_profile_image_process_failed">האָט נישט געקענט פּראָצעסירן דעם בילד %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">ניט געלונגען צו לאָדן דײַן אײַנלאַדונג־פּאָליטיק</string>
     <string name="people_profile_avatar">אַװאַטאַר</string>
     <string name="people_profile_banner">באַנער</string>
-    <string name="people_contacts_search_placeholder">זוך…</string>
+    <string name="people_contacts_search_placeholder">זוך</string>
     <string name="people_contacts_invited">אײַנגעלאַדן</string>
     <string name="people_contacts_accept">אָננעמען</string>
     <string name="people_contacts_message">שיקן אַ בריוו</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">לעצטנס צוגעלייגט</string>
     <string name="people_contacts_try_different_search">פּרוּווט אַן אַנדער זוך־אויסדרוק</string>
     <string name="people_contacts_unfriend">אַראָפּנעמען פֿרײַנד</string>
-    <string name="people_add_contact_search_placeholder">טיפּט צו זוכן…</string>
+    <string name="people_add_contact_search_placeholder">טיפּט צו זוכן</string>
     <string name="people_add_contact_search_start">הייב אָן צו טיפּן צו זוכן באַניצערס</string>
     <string name="people_contact_phone">טעלעפֿאָן</string>
     <string name="people_contact_title">אַרבעט קעפּל</string>

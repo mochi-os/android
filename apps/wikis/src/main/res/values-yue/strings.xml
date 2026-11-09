@@ -64,7 +64,7 @@
     <string name="wikis_empty_title">開始你嘅第一個 wiki</string>
     <string name="wikis_empty_subtitle">搜尋 wiki 嚟訂閱,或者建立一個發佈你自己嘅文檔。</string>
     <string name="wikis_create_button">建立 wiki</string>
-    <string name="wikis_search_placeholder">搜尋 wiki…</string>
+    <string name="wikis_search_placeholder">搜尋 wiki</string>
     <string name="wikis_recommended_section">推薦 wiki</string>
     <string name="wikis_unsubscribing">緊退訂…</string>
     <string name="wikis_unsubscribe_confirm_message">你確定要退訂 %1$s 嗎?</string>
@@ -80,14 +80,14 @@
     <string name="wikis_rss_revoked">已撤銷 RSS 存取權</string>
     <string name="wikis_clipboard_label_rss">Wiki RSS 網址</string>
     <string name="wikis_find_title">搵 wiki</string>
-    <string name="wikis_find_search_placeholder">按名稱、ID、指紋或網址搜尋…</string>
+    <string name="wikis_find_search_placeholder">按名稱、ID、指紋或網址搜尋</string>
     <string name="wikis_find_no_results">搵唔到 wiki</string>
     <string name="wikis_find_recommended_section">推薦 wiki</string>
     <string name="wikis_join_title">複製 wiki</string>
     <string name="wikis_join_search_button">搜尋 wiki…</string>
     <string name="wikis_join_or_id">或者直接輸入 ID</string>
     <string name="wikis_join_id_label">Wiki 實體 ID</string>
-    <string name="wikis_join_id_hint">abc123…</string>
+    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_join_submit">複製 wiki</string>
     <string name="wikis_create_title">建立 wiki</string>
     <string name="wikis_create_privacy_label">畀任何人搜尋呢個 wiki</string>
@@ -100,8 +100,8 @@
     <string name="wikis_comment_edited">(已編輯)</string>
     <string name="wikis_comment_delete_confirm_title">刪除留言</string>
     <string name="wikis_comment_delete_confirm_message">你確定要刪除呢條留言?咁樣會連埋所有回覆一齊刪除。呢個動作無法復原。</string>
-    <string name="wikis_comment_form_placeholder_new">寫低留言…</string>
-    <string name="wikis_comment_form_placeholder_reply">寫低回覆…</string>
+    <string name="wikis_comment_form_placeholder_new">寫低留言</string>
+    <string name="wikis_comment_form_placeholder_reply">寫低回覆</string>
     <string name="wikis_comment_form_attach">附加檔案</string>
     <string name="wikis_comment_form_remove_attachment">移除附件</string>
     <string name="wikis_comment_expand">(展開)</string>
@@ -119,7 +119,7 @@
     <string name="wikis_editor_slug_hint">my-page-name</string>
     <string name="wikis_editor_slug_help">這將是頁面的路徑。請使用小寫字母、數字和連字號。</string>
     <string name="wikis_editor_content_label">內容</string>
-    <string name="wikis_editor_content_placeholder">喺呢度用 Markdown 寫低內容…</string>
+    <string name="wikis_editor_content_placeholder">喺呢度用 Markdown 寫低內容</string>
     <string name="wikis_editor_summary_label">編輯摘要(可選)</string>
     <string name="wikis_editor_summary_hint">簡單講下你改咗啲乜</string>
     <string name="wikis_editor_title_required">必須輸入標題</string>
@@ -163,7 +163,7 @@
     <string name="wikis_changes_title">最近變更</string>
     <string name="wikis_changes_subtitle">呢個 wiki 入面所有頁面嘅最近編輯。</string>
     <string name="wikis_changes_empty">未有任何變更</string>
-    <string name="wikis_search_pages_placeholder">用標題或者內容搜尋頁面…</string>
+    <string name="wikis_search_pages_placeholder">用標題或者內容搜尋頁面</string>
     <string name="wikis_search_empty_query">輸入搜尋關鍵字</string>
     <string name="wikis_search_no_results">搵唔到 \"%1$s\" 嘅相關頁面。試下用其他關鍵字。</string>
     <string name="wikis_search_updated">%1$s 更新</string>
@@ -203,7 +203,7 @@
     <string name="wikis_attachments_upload">上載檔案</string>
     <string name="wikis_attachments_uploading">上載緊…</string>
     <string name="wikis_attachments_upload_failed">上載檔案失敗</string>
-    <string name="wikis_attachments_search_placeholder">搜尋附件…</string>
+    <string name="wikis_attachments_search_placeholder">搜尋附件</string>
     <string name="wikis_attachments_search_clear">清除搜尋</string>
     <string name="wikis_attachments_filter_all">所有檔案</string>
     <string name="wikis_attachments_filter_images">圖片</string>

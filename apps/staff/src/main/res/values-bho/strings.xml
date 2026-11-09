@@ -37,7 +37,6 @@
     <string name="staff_appeals_decide">तय करीं</string>
     <string name="staff_appeals_decision_denied">लिस्टिंग के अस्वीकार रहे दीं</string>
     <string name="staff_appeals_decision_label">निर्णय</string>
-    <string name="staff_appeals_decision_placeholder">निर्णय चुनीं</string>
     <string name="staff_appeals_decision_upheld">लिस्टिंग स्वीकृत करीं</string>
     <string name="staff_appeals_denied_toast">अपील अस्वीकृत</string>
     <string name="staff_appeals_dialog_title">अपील के तय करीं</string>
@@ -218,7 +217,6 @@
     <string name="staff_disputes_refund_must_be_positive">रिफंड राशि शून्य से अधिक होखे के चाहीं</string>
     <string name="staff_disputes_resolution_buyer">खरीदार खातिर सुलझाईं</string>
     <string name="staff_disputes_resolution_label">समाधान</string>
-    <string name="staff_disputes_resolution_placeholder">रिज़ॉल्यूशन चुनीं</string>
     <string name="staff_disputes_resolution_seller">बिक्रेता खातिर सुलझाईं</string>
     <string name="staff_disputes_resolve">सुलझाईं</string>
     <string name="staff_disputes_resolved_toast">विवाद हल भइल</string>
@@ -275,7 +273,6 @@
     <string name="staff_reports_action_ban">उपयोगकर्ता प्रतिबंधित करीं</string>
     <string name="staff_reports_action_dismiss">खारिज करीं</string>
     <string name="staff_reports_action_label">क्रिया</string>
-    <string name="staff_reports_action_placeholder">क्रिया चुनीं</string>
     <string name="staff_reports_action_remove">हटाईं</string>
     <string name="staff_reports_action_suspend">विक्रेता के रूप में निलंबित करीं</string>
     <string name="staff_reports_action_taken_toast">रिपोर्ट कार्रवाई भइल</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s के। ई समीक्षा हमेशा खातिर मिटाईं? इ वापस ना हो सकेला।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s। ई समीक्षा हमेशा खातिर मिटाईं? इ वापस ना हो सकेला।</string>
     <string name="staff_team_dialog_adding">जोड़ल जा रहल बा…</string>
-    <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिंट, भा ID से खोजीं…</string>
+    <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिंट, भा ID से खोजीं</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गुप्त कुंजी</string>
     <string name="staff_disputes_meta_already_refunded">पहिलहीं वापसी कइल गइल</string>

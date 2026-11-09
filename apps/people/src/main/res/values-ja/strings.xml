@@ -6,7 +6,7 @@
     <string name="people_groups_title">グループ</string>
     <string name="people_group_title">グループ</string>
     <string name="people_person_title">人物</string>
-    <string name="people_friends_search_placeholder">検索…</string>
+    <string name="people_friends_search_placeholder">検索</string>
     <string name="people_friends_no_people_found">人が見つかりません</string>
     <string name="people_friends_try_adjusting">検索条件を変えてみてください</string>
     <string name="people_friends_pending">保留中</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">グループ \"%1$s\" を削除しますか？この操作は取り消せません。</string>
     <string name="people_member_remove_confirm">%1$s をこのグループから削除してもよろしいですか？</string>
     <string name="people_member_remove_with_name">%1$s を削除</string>
-    <string name="people_member_search_placeholder">名前を入力して検索…</string>
+    <string name="people_member_search_placeholder">名前を入力して検索</string>
     <string name="people_groups_add_member_confirm_title">グループに追加</string>
     <string name="people_groups_add_member_confirm_action">グループに追加</string>
     <string name="people_profile_image_process_failed">%1$s の画像を処理できませんでした</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">招待ポリシーの読み込みに失敗しました</string>
     <string name="people_profile_avatar">アバター</string>
     <string name="people_profile_banner">バナー</string>
-    <string name="people_contacts_search_placeholder">検索…</string>
+    <string name="people_contacts_search_placeholder">検索</string>
     <string name="people_contacts_invited">招待済み</string>
     <string name="people_contacts_accept">承認</string>
     <string name="people_contacts_message">メッセージを送信</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">最近追加</string>
     <string name="people_contacts_try_different_search">別の検索語を試してください</string>
     <string name="people_contacts_unfriend">友達を削除</string>
-    <string name="people_add_contact_search_placeholder">入力して検索…</string>
+    <string name="people_add_contact_search_placeholder">入力して検索</string>
     <string name="people_add_contact_search_start">ユーザーを検索するには入力を始めてください</string>
     <string name="people_contact_phone">電話</string>
     <string name="people_contact_title">役職</string>

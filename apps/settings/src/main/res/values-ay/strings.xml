@@ -238,7 +238,7 @@
     <string name="route_delete_message">Akax \"%1$s\" thakhitak thakhi apsuni.</string>
     <string name="route_empty">Janiw thakhinakax wakichatäkiti.</string>
     <string name="route_meta">Prioridad %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Yapxatañatakix temanak thaqhama…</string>
+    <string name="interests_search_placeholder">Yapxatañatakix temanak thaqhama</string>
     <string name="interests_empty">Janiraki munañanaksa.</string>
     <string name="interests_summary_regenerate">Resumen wasitat luraña</string>
     <string name="interests_summary_regenerating">Wasitat luraskiwa…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Akax \"%1$s\" nayrïr valorapar (ch\'usa) kutt\'ayaniwa.</string>
     <string name="settings_home_system_users">Apnaqirinaka (servidor)</string>
     <string name="system_users_add_user">Apnaqiri yapxataña</string>
-    <string name="system_users_search_placeholder">Apnaqirinak thaqhama…</string>
+    <string name="system_users_search_placeholder">Apnaqirinak thaqhama</string>
     <string name="system_users_sort_by">Akhamat siqichaña</string>
     <string name="system_users_last_login">Qhipa mantantaña: %1$s</string>
     <string name="system_users_delete_message">Akax \"%1$s\" apnaqiri wiñayatak chhaqtayaniwa. Aka lurawix janiw kutt\'ayañjamäkiti.</string>
@@ -554,7 +554,7 @@
     <string name="handles_take">Mä suti katuña</string>
     <string name="handles_empty">Janiw kuna apnaqiri sutis reservatäkiti.</string>
     <string name="handles_empty_search">Thaqhawimampi kikip apnaqiri sutinakax janiw utjkiti</string>
-    <string name="handles_search_placeholder">Apnaqiri sutinak thaqhama…</string>
+    <string name="handles_search_placeholder">Apnaqiri sutinak thaqhama</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%1$s–%2$s uñstayasa, %3$s apnaqiri sutita</item>
         <item quantity="other">%1$s–%2$s uñstayasa, %3$s apnaqiri sutinakata</item>

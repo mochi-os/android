@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Z motivu</string>
     <string name="settings_background_off">Žádné</string>
     <string name="game_chat_empty">Zatím žádné zprávy</string>
-    <string name="game_chat_input_placeholder">Napište zprávu…</string>
+    <string name="game_chat_input_placeholder">Napište zprávu</string>
     <string name="game_chat_send">Odeslat zprávu</string>
     <string name="game_chat_subject_you">Vy</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Potvrďte, že jste to vy</string>
     <string name="stepup_description">Toto je bezpečnostní změna vašeho účtu. Pokračujte ověřením, že jste to vy.</string>
     <string name="stepup_email_label">E-mailový kód</string>
-    <string name="stepup_email_placeholder">Zadejte kód z vašeho e-mailu</string>
     <string name="stepup_totp_label">Autentizační kód</string>
-    <string name="stepup_totp_placeholder">Zadejte kód z autentizační aplikace</string>
     <string name="stepup_use_passkey">Použijte svůj přístupový klíč</string>
     <string name="stepup_send_email">Odeslat e-mail</string>
     <string name="stepup_resend_email">Odeslat e-mail znovu</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Odebrat štítek</string>
     <string name="person_picker_none">Žádné</string>
     <string name="person_picker_clear">Zrušit výběr</string>
-    <string name="person_picker_select">Vyberte …</string>
+    <string name="person_picker_select">Vyberte</string>
     <string name="person_picker_directory">Adresář</string>
     <string name="person_picker_no_people">Žádné osoby</string>
     <string name="person_picker_project_members">Členové projektu</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Změnit kategorii oznámení</string>
     <string name="lightbox_comments_none">K tomuto obrázku zatím nejsou žádné komentáře.</string>
     <string name="lightbox_comments_only">Zobrazit jen komentáře k tomuto obrázku</string>
-    <string name="lightbox_comment_placeholder">Okomentovat tento obrázek…</string>
+    <string name="lightbox_comment_placeholder">Okomentovat tento obrázek</string>
     <string name="comment_anchor_open">Zobrazit obrázek, kterého se tento komentář týká</string>
     <string name="comment_anchor_default">K tomuto obrázku</string>
     <plurals name="lightbox_comments_others">

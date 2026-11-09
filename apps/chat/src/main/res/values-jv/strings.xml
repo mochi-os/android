@@ -54,10 +54,10 @@
     <string name="chat_settings_delete_message">Iki mbusak obrolan lan pesen-pesene mung saka piranti iki.</string>
 
     <string name="chat_message_deleted">Pesen iki wis dibusak</string>
-    <string name="chat_search_hint">Golek ing chat...</string>
+    <string name="chat_search_hint">Golek ing chat</string>
     <string name="chat_message_forward">Terusake</string>
     <string name="chat_forward_title">Terusake menyang…</string>
-    <string name="chat_forward_search">Golek chat…</string>
+    <string name="chat_forward_search">Golek chat</string>
     <string name="chat_forward_empty">Ora ana chat kanggo nerusake</string>
     <string name="chat_forward_success">Wis diterusake</string>
     <string name="chat_message_reply">Bales</string>

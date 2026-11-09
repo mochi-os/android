@@ -4,7 +4,6 @@
     <string name="app_name">Mark</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografie</string>
-    <string name="market_account_biography_placeholder">Vertel kopers van jouself…</string>
     <string name="market_account_load_failed">Kon nie rekening laai nie</string>
     <string name="market_account_location_label">Ligging</string>
     <string name="market_account_save">Stoor</string>
@@ -312,7 +311,7 @@
     <string name="market_listings_search_placeholder">Soek jou lyste</string>
     <string name="market_listings_share_chooser">Deel lys</string>
     <string name="market_listings_title">My lyste</string>
-    <string name="market_messages_compose_placeholder">Skryf \'n boodskap…</string>
+    <string name="market_messages_compose_placeholder">Skryf \'n boodskap</string>
     <string name="market_messages_inbox_empty_subtitle">Wanneer jy \'n verkoper boodskap (of \'n koper boodskap jou) sal die draad hier verskyn.</string>
     <string name="market_messages_inbox_empty_title">Nog geen gesprekke nie</string>
     <string name="market_messages_inbox_title">Boodskappe</string>
@@ -427,7 +426,7 @@
     <string name="market_reviews_empty_sent_subtitle">Maak \'n voltooide bestelling oop om \'n resensie te laat.</string>
     <string name="market_reviews_empty_sent_title">Jy het nog geen resensies geskryf nie</string>
     <string name="market_reviews_response_label">Antwoord</string>
-    <string name="market_reviews_response_placeholder">Skryf \'n antwoord…</string>
+    <string name="market_reviews_response_placeholder">Skryf \'n antwoord</string>
     <string name="market_reviews_response_submit">Dien antwoord in</string>
     <string name="market_reviews_tab_received">Ontvang</string>
     <string name="market_reviews_tab_sent">Gestuur</string>
@@ -589,7 +588,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Verkoperresensies</string>
     <string name="market_account_stripe_open_failed">Kon nie Stripe oopmaak nie</string>
     <string name="market_editor_stock">Voorraad</string>
-    <string name="market_editor_stock_units">Aantal eenhede</string>
     <string name="market_editor_stock_unlimited">Onbeperk</string>
     <string name="market_editor_start_time">Begintyd</string>
     <string name="market_editor_start_time_help">Laat leeg om met publikasie te begin.</string>

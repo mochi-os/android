@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json फाइल अपलोड करा</string>
     <string name="projects_settings_not_set">सेट केलेले नाही</string>
     <string name="projects_settings_updated">प्रोजेक्ट अद्यतनित केला</string>
-    <string name="projects_property_select">निवडा …</string>
     <string name="projects_activity_attached">संलग्न केले</string>
     <string name="projects_activity_commented">टिप्पणी केली</string>
     <string name="projects_attachment_delete_confirm_message">हे संलग्नक कायमचे हटवले जाईल.</string>

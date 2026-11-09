@@ -6,7 +6,7 @@
     <string name="people_groups_title">ಗುಂಪುಗಳು</string>
     <string name="people_group_title">ಗುಂಪು</string>
     <string name="people_person_title">ವ್ಯಕ್ತಿ</string>
-    <string name="people_friends_search_placeholder">ಹುಡುಕಿ…</string>
+    <string name="people_friends_search_placeholder">ಹುಡುಕಿ</string>
     <string name="people_friends_no_people_found">ಯಾವುದೇ ಜನರು ಸಿಗಲಿಲ್ಲ</string>
     <string name="people_friends_try_adjusting">ನಿಮ್ಮ ಹುಡುಕಾಟವನ್ನು ಸರಿಹೊಂದಿಸಲು ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="people_friends_pending">ಬಾಕಿ ಇದೆ</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" ಗುಂಪನ್ನು ಅಳಿಸಬೇಕೆ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
     <string name="people_member_remove_confirm">ಈ ಗುಂಪಿನಿಂದ %1$s ಅವರನ್ನು ತೆಗೆದುಹಾಕಲು ನೀವು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
     <string name="people_member_remove_with_name">%1$s ಅವರನ್ನು ತೆಗೆದುಹಾಕಿ</string>
-    <string name="people_member_search_placeholder">ಹುಡುಕಲು ಹೆಸರನ್ನು ನಮೂದಿಸಿ…</string>
+    <string name="people_member_search_placeholder">ಹುಡುಕಲು ಹೆಸರನ್ನು ನಮೂದಿಸಿ</string>
     <string name="people_groups_add_member_confirm_title">ಗುಂಪಿಗೆ ಸೇರಿಸಿ</string>
     <string name="people_groups_add_member_confirm_action">ಗುಂಪಿಗೆ ಸೇರಿಸಿ</string>
     <string name="people_profile_image_process_failed">%1$s ಚಿತ್ರವನ್ನು ಸಂಸ್ಕರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">ನಿಮ್ಮ ಆಮಂತ್ರಣ ನೀತಿಯನ್ನು ಲೋಡ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="people_profile_avatar">ಅವತಾರ್</string>
     <string name="people_profile_banner">ಬ್ಯಾನರ್</string>
-    <string name="people_contacts_search_placeholder">ಹುಡುಕಿ…</string>
+    <string name="people_contacts_search_placeholder">ಹುಡುಕಿ</string>
     <string name="people_contacts_invited">ಆಹ್ವಾನಿಸಲಾಗಿದೆ</string>
     <string name="people_contacts_accept">ಸ್ವೀಕರಿಸಿ</string>
     <string name="people_contacts_message">ಸಂದೇಶ ಕಳುಹಿಸಿ</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">ಇತ್ತೀಚೆಗೆ ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="people_contacts_try_different_search">ಬೇರೆ ಹುಡುಕಾಟ ಪದವನ್ನು ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="people_contacts_unfriend">ಸ್ನೇಹಿತರನ್ನು ತೆಗೆದುಹಾಕಿ</string>
-    <string name="people_add_contact_search_placeholder">ಹುಡುಕಲು ಟೈಪ್ ಮಾಡಿ…</string>
+    <string name="people_add_contact_search_placeholder">ಹುಡುಕಲು ಟೈಪ್ ಮಾಡಿ</string>
     <string name="people_add_contact_search_start">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಲು ಟೈಪ್ ಮಾಡಲು ಪ್ರಾರಂಭಿಸಿ</string>
     <string name="people_contact_phone">ಫೋನ್</string>
     <string name="people_contact_title">ಹುದ್ದೆಯ ಶೀರ್ಷಿಕೆ</string>

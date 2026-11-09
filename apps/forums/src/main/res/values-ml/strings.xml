@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">അയയ്ക്കുക</string>
     <string name="forums_post_body_field">ഉള്ളടക്കം</string>
-    <string name="forums_write_comment">ഒരു അഭിപ്രായം എഴുതുക…</string>
+    <string name="forums_write_comment">ഒരു അഭിപ്രായം എഴുതുക</string>
 
     <string name="notification_channel_forums">ഫോറം അറിയിപ്പുകൾ</string>
     <string name="forums_list_empty">ഇതുവരെ ഫോറങ്ങളൊന്നുമില്ല</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">ഇതുവരെ നിയമങ്ങളൊന്നുമില്ല — സ്ഥിരസ്ഥിതികൾ ബാധകമാണ്</string>
     <string name="forums_members_search">അംഗങ്ങളെ ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="forums_banner_description">ഫോറത്തിന്റെ മുകളിൽ കാണിക്കുന്ന മാർക്ക്ഡൗൺ.</string>
-    <string name="forums_banner_placeholder">ബാനർ ടെക്സ്റ്റ് നൽകുക (മാർക്ക്ഡൗൺ പിന്തുണയ്ക്കുന്നു)…</string>
     <string name="forums_ai_mode_off">പ്രവർത്തനരഹിതം</string>
     <string name="forums_moderation_queue_empty">ഒന്നും തീർച്ചപ്പെടുത്താനില്ല</string>
     <string name="forums_moderation_report_details">വിശദാംശങ്ങൾ: %1$s</string>

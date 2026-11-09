@@ -3,7 +3,6 @@
     <string name="app_name">Markaður</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Æviágrip</string>
-    <string name="market_account_biography_placeholder">Segðu kaupendum frá þér…</string>
     <string name="market_account_load_failed">Tókst ekki að hlaða reikning</string>
     <string name="market_account_location_label">Staðsetning</string>
     <string name="market_account_save">Vista</string>
@@ -236,7 +235,7 @@
     <string name="market_listings_new">Ný auglýsing</string>
     <string name="market_listings_relist_failed">Tókst ekki að endurauglýsa</string>
     <string name="market_listings_title">Skráningarnar mínar</string>
-    <string name="market_messages_compose_placeholder">Skrifa skilaboð…</string>
+    <string name="market_messages_compose_placeholder">Skrifa skilaboð</string>
     <string name="market_messages_inbox_title">Skilaboð</string>
     <string name="market_messages_send">Senda</string>
     <string name="market_messages_thread_title">Samtal</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Kaupendur og seljendur geta gefið hver öðrum umsögn eftir kláraða pöntun.</string>
     <string name="market_reviews_empty_sent_subtitle">Opnaðu kláraða pöntun til að skilja eftir umsögn.</string>
     <string name="market_reviews_empty_sent_title">Þú hefur ekki skrifað neinar umsagnir</string>
-    <string name="market_reviews_response_placeholder">Skrifaðu svar…</string>
+    <string name="market_reviews_response_placeholder">Skrifaðu svar</string>
     <string name="market_sale_carrier_custom_label">Nafn flutningsaðila</string>
     <string name="market_sale_dispute_evidence_due">Gögn skulu berast fyrir %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Ástæða Stripe endurkröfu: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Umsagnir um seljanda</string>
     <string name="market_account_stripe_open_failed">Tókst ekki að opna Stripe</string>
     <string name="market_editor_stock">Birgðir</string>
-    <string name="market_editor_stock_units">Fjöldi eininga</string>
     <string name="market_editor_stock_unlimited">Ótakmarkað</string>
     <string name="market_editor_start_time">Upphafstími</string>
     <string name="market_editor_start_time_help">Skildu eftir autt til að hefja við útgáfu.</string>

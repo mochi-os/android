@@ -3,7 +3,6 @@
     <string name="app_name">ຕະຫຼາດ</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ຊີວະປະຫວັດ</string>
-    <string name="market_account_biography_placeholder">ບອກຜູ້ຊື້ກ່ຽວກັບຕົວທ່ານ…</string>
     <string name="market_account_load_failed">ບໍ່ສາມາດໂຫຼດບັນຊີໄດ້</string>
     <string name="market_account_location_label">ສະຖານທີ່</string>
     <string name="market_account_save">ບັນທຶກ</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">ລາຍການໃໝ່</string>
     <string name="market_listings_relist_failed">ລົງປະກາດຂາຍຄືນລົ້ມເຫຼວ</string>
     <string name="market_listings_title">ລາຍການຂາຍຂອງຂ້ອຍ</string>
-    <string name="market_messages_compose_placeholder">ຂຽນຂໍ້ຄວາມ…</string>
+    <string name="market_messages_compose_placeholder">ຂຽນຂໍ້ຄວາມ</string>
     <string name="market_messages_inbox_title">ຂໍ້ຄວາມ</string>
     <string name="market_messages_send">ສົ່ງ</string>
     <string name="market_messages_thread_title">ການສົນທະນາ</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">ຜູ້ຊື້ແລະຜູ້ຂາຍສາມາດວິຈານກັນແລະກັນຫຼັງຈາກການສັ່ງຊື້ສຳເລັດ.</string>
     <string name="market_reviews_empty_sent_subtitle">ເປີດການສັ່ງຊື້ທີ່ສຳເລັດເພື່ອຂຽນການວິຈານ.</string>
     <string name="market_reviews_empty_sent_title">ທ່ານຍັງບໍ່ໄດ້ຂຽນການວິຈານໃດໆ</string>
-    <string name="market_reviews_response_placeholder">ຂຽນການຕອບກັບ…</string>
+    <string name="market_reviews_response_placeholder">ຂຽນການຕອບກັບ</string>
     <string name="market_sale_carrier_custom_label">ຊື່ຜູ້ຂົນສົ່ງ</string>
     <string name="market_sale_dispute_evidence_due">ຫຼັກຖານຄົບກຳນົດ %1$s</string>
     <string name="market_sale_dispute_stripe_reason">ເຫດຜົນການຮຽກເງິນຄືນຂອງ Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">ການທົບທວນຜູ້ຂາຍ</string>
     <string name="market_account_stripe_open_failed">ບໍ່ສາມາດເປີດ Stripe ໄດ້</string>
     <string name="market_editor_stock">ສິນຄ້າຄົງເຫຼືອ</string>
-    <string name="market_editor_stock_units">ຈຳນວນຫົວໜ່ວຍ</string>
     <string name="market_editor_stock_unlimited">ບໍ່ຈຳກັດ</string>
     <string name="market_editor_start_time">ເວລາເລີ່ມ</string>
     <string name="market_editor_start_time_help">ປະໄວ້ຫວ່າງເພື່ອເລີ່ມເມື່ອເຜີຍແຜ່.</string>

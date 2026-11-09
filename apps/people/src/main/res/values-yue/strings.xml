@@ -39,7 +39,7 @@
     <string name="people_profile_settings">設定</string>
     <string name="people_group_title">群組</string>
     <string name="people_person_title">個人</string>
-    <string name="people_friends_search_placeholder">搜尋…</string>
+    <string name="people_friends_search_placeholder">搜尋</string>
     <string name="people_friends_searching">搜尋緊…</string>
     <string name="people_friends_no_people_found">搵唔到任何人</string>
     <string name="people_friends_try_adjusting">試吓調整搜尋條件</string>
@@ -76,7 +76,7 @@
     <string name="people_member_remove_title">移除成員</string>
     <string name="people_member_remove_confirm">確定要將 %1$s 從呢個群組移除？</string>
     <string name="people_member_remove_with_name">移除 %1$s</string>
-    <string name="people_member_search_placeholder">輸入名稱搜尋…</string>
+    <string name="people_member_search_placeholder">輸入名稱搜尋</string>
     <string name="people_member_type_group">群組</string>
     <string name="people_member_unknown_person">唔知名嘅人</string>
     <string name="people_member_deleted_group">已刪除嘅群組</string>
@@ -116,7 +116,7 @@
     <string name="people_invitations_some_cancel_failed">有部分邀請取消唔到</string>
     <string name="people_invitations_some_decline_failed">有部分邀請拒絕唔到</string>
     <string name="people_profile_too_long">個人檔案太長</string>
-    <string name="people_contacts_search_placeholder">搜尋…</string>
+    <string name="people_contacts_search_placeholder">搜尋</string>
     <string name="people_contacts_invited">已邀請</string>
     <string name="people_contacts_accept">接受</string>
     <string name="people_contacts_message">訊息</string>
@@ -136,7 +136,7 @@
     <string name="people_books_name">名稱</string>
     <string name="people_books_rename">重新命名</string>
     <string name="people_contacts_unfriend">移除朋友</string>
-    <string name="people_add_contact_search_placeholder">輸入以搜尋…</string>
+    <string name="people_add_contact_search_placeholder">輸入以搜尋</string>
     <string name="people_add_contact_search_start">開始輸入以搜尋用戶</string>
     <string name="people_contacts_title">聯絡人</string>
     <string name="people_contacts_all">所有聯絡人</string>

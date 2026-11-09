@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Luchdaich suas faidhle .json</string>
     <string name="projects_settings_not_set">Cha deach a shuidheachadh</string>
     <string name="projects_settings_updated">Chaidh am pròiseact ùrachadh</string>
-    <string name="projects_property_select">Tagh …</string>
     <string name="projects_activity_attached">cheangail</string>
     <string name="projects_activity_commented">thug seachad beachd</string>
     <string name="projects_attachment_delete_confirm_message">Thèid an ceanglachan seo a sguabadh às gu buan.</string>

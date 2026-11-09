@@ -3,7 +3,6 @@
     <string name="app_name">Bazar</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Jiyaname</string>
-    <string name="market_account_biography_placeholder">Behsa xwe ji kirryaran re bike…</string>
     <string name="market_account_load_failed">Hesab nehat barkirin</string>
     <string name="market_account_location_label">Cih</string>
     <string name="market_account_save">Tomar bike</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Lîsteya nû</string>
     <string name="market_listings_relist_failed">Ji nû ve lîstekirin neserkeftî bû</string>
     <string name="market_listings_title">Lîsteyên min</string>
-    <string name="market_messages_compose_placeholder">Peyamê binivîse…</string>
+    <string name="market_messages_compose_placeholder">Peyamê binivîse</string>
     <string name="market_messages_inbox_title">Peyam</string>
     <string name="market_messages_send">Bişîne</string>
     <string name="market_messages_thread_title">Sohbet</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Kirrar û firoşkar dikarin piştî fermanek qediyayî nirxandinê li hev bikin.</string>
     <string name="market_reviews_empty_sent_subtitle">Fermanek qediyayî veke da ku nirxandinekê bihêlî.</string>
     <string name="market_reviews_empty_sent_title">Te tu nirxandin nenivîsiye</string>
-    <string name="market_reviews_response_placeholder">Bersivekê binivîse…</string>
+    <string name="market_reviews_response_placeholder">Bersivekê binivîse</string>
     <string name="market_sale_carrier_custom_label">Navê veguhêzer</string>
     <string name="market_sale_dispute_evidence_due">Belge heta %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Sedema vegerandina Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Nirxandinên firoşkar</string>
     <string name="market_account_stripe_open_failed">Stripe nehat vekirin</string>
     <string name="market_editor_stock">Stok</string>
-    <string name="market_editor_stock_units">Hejmara yekîneyan</string>
     <string name="market_editor_stock_unlimited">Bê sînor</string>
     <string name="market_editor_start_time">Dema destpêkê</string>
     <string name="market_editor_start_time_help">Vala bihêle ji bo destpêkirinê bi weşandinê.</string>

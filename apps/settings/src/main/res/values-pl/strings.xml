@@ -240,7 +240,7 @@
     <string name="route_delete_message">To usunie trasę dla ścieżki „%1$s\".</string>
     <string name="route_empty">Brak skonfigurowanych tras.</string>
     <string name="route_meta">Priorytet %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Szukaj tematów do dodania…</string>
+    <string name="interests_search_placeholder">Szukaj tematów do dodania</string>
     <string name="interests_empty">Brak zainteresowań.</string>
     <string name="interests_summary_regenerate">Wygeneruj podsumowanie ponownie</string>
     <string name="interests_summary_regenerating">Generowanie…</string>
@@ -264,7 +264,7 @@
     <string name="system_settings_reset_message_empty">To zresetuje „%1$s\" do domyślnego (pusto).</string>
     <string name="settings_home_system_users">Użytkownicy (serwer)</string>
     <string name="system_users_add_user">Dodaj użytkownika</string>
-    <string name="system_users_search_placeholder">Szukaj użytkowników…</string>
+    <string name="system_users_search_placeholder">Szukaj użytkowników</string>
     <string name="system_users_sort_by">Sortuj według</string>
     <string name="system_users_last_login">Ostatnie logowanie: %1$s</string>
     <string name="system_users_delete_message">To trwale usunie użytkownika „%1$s\". Tej akcji nie można cofnąć.</string>
@@ -575,7 +575,7 @@
     <string name="handles_take">Zajmij nazwę</string>
     <string name="handles_empty">Nie zarezerwowano żadnych pseudonimów.</string>
     <string name="handles_empty_search">Żaden pseudonim nie pasuje do Twojego wyszukiwania</string>
-    <string name="handles_search_placeholder">Szukaj pseudonimów…</string>
+    <string name="handles_search_placeholder">Szukaj pseudonimów</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Wyświetlanie %1$s–%2$s z %3$s pseudonimu</item>
         <item quantity="few">Wyświetlanie %1$s–%2$s z %3$s pseudonimów</item>

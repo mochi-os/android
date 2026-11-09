@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Từ giao diện</string>
     <string name="settings_background_off">Không có</string>
     <string name="game_chat_empty">Chưa có tin nhắn</string>
-    <string name="game_chat_input_placeholder">Nhập tin nhắn…</string>
+    <string name="game_chat_input_placeholder">Nhập tin nhắn</string>
     <string name="game_chat_send">Gửi tin nhắn</string>
     <string name="game_chat_subject_you">Bạn</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Xác nhận đó là bạn</string>
     <string name="stepup_description">Đây là một thay đổi bảo mật đối với tài khoản của bạn. Hãy xác minh đó là bạn để tiếp tục.</string>
     <string name="stepup_email_label">Mã email</string>
-    <string name="stepup_email_placeholder">Nhập mã từ email của bạn</string>
     <string name="stepup_totp_label">Mã xác thực</string>
-    <string name="stepup_totp_placeholder">Nhập mã từ ứng dụng xác thực của bạn</string>
     <string name="stepup_use_passkey">Dùng mã khóa của bạn</string>
     <string name="stepup_send_email">Gửi email</string>
     <string name="stepup_resend_email">Gửi lại email</string>
@@ -272,7 +270,7 @@
     <string name="tags_delete">Xóa thẻ</string>
     <string name="person_picker_none">Không có</string>
     <string name="person_picker_clear">Bỏ chọn</string>
-    <string name="person_picker_select">Chọn …</string>
+    <string name="person_picker_select">Chọn</string>
     <string name="person_picker_directory">Danh bạ</string>
     <string name="person_picker_no_people">Không có người nào</string>
     <string name="person_picker_project_members">Thành viên dự án</string>
@@ -288,7 +286,7 @@
     <string name="notifications_change_category">Đổi danh mục thông báo</string>
     <string name="lightbox_comments_none">Chưa có bình luận nào về hình ảnh này.</string>
     <string name="lightbox_comments_only">Chỉ hiển thị bình luận về hình ảnh này</string>
-    <string name="lightbox_comment_placeholder">Bình luận về hình ảnh này…</string>
+    <string name="lightbox_comment_placeholder">Bình luận về hình ảnh này</string>
     <string name="comment_anchor_open">Xem hình ảnh mà bình luận này nói đến</string>
     <string name="comment_anchor_default">Về hình ảnh này</string>
     <plurals name="lightbox_comments_others">

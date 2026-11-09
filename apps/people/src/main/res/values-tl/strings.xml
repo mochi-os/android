@@ -6,7 +6,7 @@
     <string name="people_groups_title">Mga group</string>
     <string name="people_group_title">Grupo</string>
     <string name="people_person_title">Tao</string>
-    <string name="people_friends_search_placeholder">Maghanap…</string>
+    <string name="people_friends_search_placeholder">Maghanap</string>
     <string name="people_friends_no_people_found">Walang nakitang tao</string>
     <string name="people_friends_try_adjusting">Subukang ayusin ang iyong paghahanap</string>
     <string name="people_friends_pending">Nakabinbin</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Tanggalin ang grupong \"%1$s\"? Hindi na ito maibabalik.</string>
     <string name="people_member_remove_confirm">Sigurado ka bang gusto mong alisin si %1$s sa grupong ito?</string>
     <string name="people_member_remove_with_name">Alisin si %1$s</string>
-    <string name="people_member_search_placeholder">Ilagay ang pangalan para maghanap…</string>
+    <string name="people_member_search_placeholder">Ilagay ang pangalan para maghanap</string>
     <string name="people_groups_add_member_confirm_title">Idagdag sa grupo</string>
     <string name="people_groups_add_member_confirm_action">Idagdag sa grupo</string>
     <string name="people_profile_image_process_failed">Hindi maproseso ang larawan ng %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Nabigong i-load ang iyong invite policy</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Maghanap…</string>
+    <string name="people_contacts_search_placeholder">Maghanap</string>
     <string name="people_contacts_invited">Inimbitahan</string>
     <string name="people_contacts_accept">Tanggapin</string>
     <string name="people_contacts_message">Magmensahe</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Kamakailang idinagdag</string>
     <string name="people_contacts_try_different_search">Subukan ang ibang termino sa paghahanap</string>
     <string name="people_contacts_unfriend">Alisin ang kaibigan</string>
-    <string name="people_add_contact_search_placeholder">Mag-type para maghanap…</string>
+    <string name="people_add_contact_search_placeholder">Mag-type para maghanap</string>
     <string name="people_add_contact_search_start">Simulang mag-type upang maghanap ng mga gumagamit</string>
     <string name="people_contact_phone">Telepono</string>
     <string name="people_contact_title">Posisyon</string>

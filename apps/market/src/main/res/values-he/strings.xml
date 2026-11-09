@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">הזמנה #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">ספרו לקונים על עצמכם…</string>
     <string name="market_account_load_failed">טעינת החשבון נכשלה</string>
     <string name="market_account_saved">השינויים נשמרו</string>
     <string name="market_account_status_restrictions">פעולות מסוימות, כולל יצירת מודעות חדשות והשלמת הזמנות, מוגבלות כל עוד החשבון במצב זה.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">מודעה חדשה</string>
     <string name="market_listings_search_placeholder">חיפוש בפריטים שלכם</string>
     <string name="market_listings_share_chooser">שיתוף פריט</string>
-    <string name="market_messages_compose_placeholder">כתבו הודעה…</string>
+    <string name="market_messages_compose_placeholder">כתבו הודעה</string>
     <string name="market_messages_inbox_empty_subtitle">כאשר תשלחו הודעה למוכר (או שקונה ישלח לכם הודעה) השרשור יופיע כאן.</string>
     <string name="market_messages_inbox_empty_title">אין שיחות עדיין</string>
     <string name="market_messages_thread_title">שיחה</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">פתח הזמנה שהושלמה כדי לכתוב ביקורת.</string>
     <string name="market_reviews_empty_sent_title">לא כתבת ביקורות</string>
     <string name="market_reviews_response_label">תגובה</string>
-    <string name="market_reviews_response_placeholder">כתוב תגובה…</string>
+    <string name="market_reviews_response_placeholder">כתוב תגובה</string>
     <string name="market_sale_carrier_custom_label">שם המוביל</string>
     <string name="market_sale_dispute_evidence_due">ראיות נדרשות עד %1$s</string>
     <string name="market_sale_dispute_stripe_reason">סיבת ביטול החיוב של Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">ביקורות על המוכר</string>
     <string name="market_account_stripe_open_failed">לא ניתן לפתוח את Stripe</string>
     <string name="market_editor_stock">מלאי</string>
-    <string name="market_editor_stock_units">מספר יחידות</string>
     <string name="market_editor_stock_unlimited">ללא הגבלה</string>
     <string name="market_editor_start_time">שעת התחלה</string>
     <string name="market_editor_start_time_help">השאר ריק כדי להתחיל בפרסום.</string>

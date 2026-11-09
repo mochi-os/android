@@ -238,7 +238,7 @@
     <string name="route_delete_message">Þetta mun fjarlægja slóðina fyrir leiðina \"%1$s\".</string>
     <string name="route_empty">Engar slóðir stilltar.</string>
     <string name="route_meta">Forgangur %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Leita að efni til að bæta við…</string>
+    <string name="interests_search_placeholder">Leita að efni til að bæta við</string>
     <string name="interests_empty">Engin áhugamál enn.</string>
     <string name="interests_summary_regenerate">Endurgera yfirlit</string>
     <string name="interests_summary_regenerating">Endurnýja…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Þetta mun endurstilla \"%1$s\" á sjálfgefið (tómt).</string>
     <string name="settings_home_system_users">Notendur (þjónn)</string>
     <string name="system_users_add_user">Bæta við notanda</string>
-    <string name="system_users_search_placeholder">Leita að notendum…</string>
+    <string name="system_users_search_placeholder">Leita að notendum</string>
     <string name="system_users_sort_by">Raða eftir</string>
     <string name="system_users_last_login">Síðasta innskráning: %1$s</string>
     <string name="system_users_delete_message">Þetta mun eyða notandanum \"%1$s\" varanlega. Þessi aðgerð er ekki afturkræf.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Taktu nafn</string>
     <string name="handles_empty">Engin notandanöfn hafa verið tekin frá.</string>
     <string name="handles_empty_search">Engin notandanöfn passa við leitina þína</string>
-    <string name="handles_search_placeholder">Leita að notandanöfnum…</string>
+    <string name="handles_search_placeholder">Leita að notandanöfnum</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Sýni %1$s–%2$s af %3$s notandanafni</item>
         <item quantity="other">Sýni %1$s–%2$s af %3$s notandanöfnum</item>

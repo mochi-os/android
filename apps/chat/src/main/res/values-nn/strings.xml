@@ -77,13 +77,13 @@
     <string name="chat_search_prev">Førre treff</string>
     <string name="chat_settings_id">Prat-ID</string>
     <string name="chat_forward_empty">Ingen prat å vidaresende til</string>
-    <string name="chat_forward_search">Søk i prat…</string>
+    <string name="chat_forward_search">Søk i prat</string>
     <string name="chat_forward_subtitle">Vel ein prat eller ein venn å vidaresende dei valde meldingane til</string>
     <string name="chat_forward_success">Vidaresendt</string>
     <string name="chat_forward_title">Vidaresend til…</string>
     <string name="chat_message_deleted">Denne meldinga vart sletta</string>
     <string name="chat_message_forward">Vidaresend</string>
-    <string name="chat_search_hint">Søk i praten...</string>
+    <string name="chat_search_hint">Søk i praten</string>
     <string name="chat_message_edited">(redigert)</string>
     <string name="chat_new_fallback_name">Prat</string>
     <string name="chat_privacy_title">Personvern</string>

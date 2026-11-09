@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json ఫైల్‌ను అప్‌లోడ్ చేయండి</string>
     <string name="projects_settings_not_set">సెట్ చేయబడలేదు</string>
     <string name="projects_settings_updated">ప్రాజెక్ట్ అప్‌డేట్ చేయబడింది</string>
-    <string name="projects_property_select">ఎంచుకోండి …</string>
     <string name="projects_activity_attached">జోడించారు</string>
     <string name="projects_activity_commented">వ్యాఖ్యానించారు</string>
     <string name="projects_attachment_delete_confirm_message">ఈ జోడింపు శాశ్వతంగా తొలగించబడుతుంది.</string>

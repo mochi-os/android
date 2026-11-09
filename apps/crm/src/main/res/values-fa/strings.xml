@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">اثر انگشت</string>
     <string name="crm_settings_server">سرور</string>
     <string name="crm_untitled">بدون عنوان</string>
-    <string name="crm_property_select">انتخاب کنید …</string>
     <string name="crm_filter">فیلتر</string>
     <string name="crm_sort_filter_title">مرتب‌سازی و پالایش</string>
     <string name="crm_filter_clear_all">پاک کردن همه</string>

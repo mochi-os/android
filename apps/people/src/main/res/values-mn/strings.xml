@@ -6,7 +6,7 @@
     <string name="people_groups_title">Бүлгүүд</string>
     <string name="people_group_title">Бүлэг</string>
     <string name="people_person_title">Хүн</string>
-    <string name="people_friends_search_placeholder">Хайх…</string>
+    <string name="people_friends_search_placeholder">Хайх</string>
     <string name="people_friends_no_people_found">Хүн олдсонгүй</string>
     <string name="people_friends_try_adjusting">Хайлтаа засахыг туршаад үз</string>
     <string name="people_friends_pending">Хүлээгдэж буй</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" бүлгийг устгах уу? Үүнийг буцаах боломжгүй.</string>
     <string name="people_member_remove_confirm">%1$s-г энэ бүлгээс хасахдаа итгэлтэй байна уу?</string>
     <string name="people_member_remove_with_name">%1$s-г хасах</string>
-    <string name="people_member_search_placeholder">Хайхын тулд нэр оруулна уу…</string>
+    <string name="people_member_search_placeholder">Хайхын тулд нэр оруулна уу</string>
     <string name="people_groups_add_member_confirm_title">Бүлэгт нэмэх</string>
     <string name="people_groups_add_member_confirm_action">Бүлэгт нэмэх</string>
     <string name="people_profile_image_process_failed">%1$s зургийг боловсруулж чадсангүй</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Таны урих бодлогыг ачаалж чадсангүй</string>
     <string name="people_profile_avatar">Аватар</string>
     <string name="people_profile_banner">Баннер</string>
-    <string name="people_contacts_search_placeholder">Хайх…</string>
+    <string name="people_contacts_search_placeholder">Хайх</string>
     <string name="people_contacts_invited">Уригдсан</string>
     <string name="people_contacts_accept">Зөвшөөрөх</string>
     <string name="people_contacts_message">Зурвас илгээх</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Саяхан нэмсэн</string>
     <string name="people_contacts_try_different_search">Өөр хайлтын үг туршаад үз</string>
     <string name="people_contacts_unfriend">Найз хасах</string>
-    <string name="people_add_contact_search_placeholder">Хайхын тулд бичнэ үү…</string>
+    <string name="people_add_contact_search_placeholder">Хайхын тулд бичнэ үү</string>
     <string name="people_add_contact_search_start">Хэрэглэгч хайхын тулд бичиж эхэл</string>
     <string name="people_contact_phone">Утас</string>
     <string name="people_contact_title">Албан тушаал</string>

@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Pirštų atspaudas</string>
     <string name="crm_settings_server">Serveris</string>
     <string name="crm_untitled">Be pavadinimo</string>
-    <string name="crm_property_select">Pasirinkite …</string>
     <string name="crm_filter">Filtras</string>
     <string name="crm_sort_filter_title">Rikiuoti ir filtruoti</string>
     <string name="crm_filter_clear_all">Išvalyti viską</string>

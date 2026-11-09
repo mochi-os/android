@@ -3,7 +3,6 @@
     <string name="app_name">Qhatu</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Kawsay willariy</string>
-    <string name="market_account_biography_placeholder">Rantiqkunaman qammanta willay…</string>
     <string name="market_account_load_failed">Cuentata mana cargayta atikurqanchu</string>
     <string name="market_account_location_label">Lugar</string>
     <string name="market_account_save">Waqaychay</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Musuq listado</string>
     <string name="market_listings_relist_failed">Yapamanta listapi churayta mana atikurqanchu</string>
     <string name="market_listings_title">Listadoykuna</string>
-    <string name="market_messages_compose_placeholder">Willakuyta qillqay…</string>
+    <string name="market_messages_compose_placeholder">Willakuyta qillqay</string>
     <string name="market_messages_inbox_title">Willakuykuna</string>
     <string name="market_messages_send">Apachiy</string>
     <string name="market_messages_thread_title">Rimanakuy</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Rantiqkunapas qhatuqkunapas pedido tukusqa qhipata reseñanakuyta atinku.</string>
     <string name="market_reviews_empty_sent_subtitle">Tukusqa pedidota kichay reseñata saqinaykipaq.</string>
     <string name="market_reviews_empty_sent_title">Manam ima reseñatapas qillqarqankichu</string>
-    <string name="market_reviews_response_placeholder">Kutichiyta qillqay…</string>
+    <string name="market_reviews_response_placeholder">Kutichiyta qillqay</string>
     <string name="market_sale_carrier_custom_label">Apaqpa sutin</string>
     <string name="market_sale_dispute_evidence_due">Pruebakuna %1$s-kama</string>
     <string name="market_sale_dispute_stripe_reason">Stripe contracargo raykun: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Qhatuq reseñakuna</string>
     <string name="market_account_stripe_open_failed">Stripe-ta mana kichayta atikurqanchu</string>
     <string name="market_editor_stock">Stock</string>
-    <string name="market_editor_stock_units">Unidad yupay</string>
     <string name="market_editor_stock_unlimited">Mana límiteyuq</string>
     <string name="market_editor_start_time">Qallariy hora</string>
     <string name="market_editor_start_time_help">Publicasqapi qallarinanpaq ch\'usaqta saqiy.</string>

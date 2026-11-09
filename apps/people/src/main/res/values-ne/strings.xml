@@ -6,7 +6,7 @@
     <string name="people_groups_title">समूहहरू</string>
     <string name="people_group_title">समूह</string>
     <string name="people_person_title">व्यक्ति</string>
-    <string name="people_friends_search_placeholder">खोज्नुहोस्…</string>
+    <string name="people_friends_search_placeholder">खोज्नुहोस्</string>
     <string name="people_friends_no_people_found">कुनै व्यक्ति भेटिएन</string>
     <string name="people_friends_try_adjusting">आफ्नो खोज समायोजन गर्ने प्रयास गर्नुहोस्</string>
     <string name="people_friends_pending">बाँकी</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">समूह \"%1$s\" मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
     <string name="people_member_remove_confirm">के तपाईं %1$s लाई यस समूहबाट हटाउन चाहनुहुन्छ?</string>
     <string name="people_member_remove_with_name">%1$s लाई हटाउनुहोस्</string>
-    <string name="people_member_search_placeholder">खोज्न नाम लेख्नुहोस्…</string>
+    <string name="people_member_search_placeholder">खोज्न नाम लेख्नुहोस्</string>
     <string name="people_groups_add_member_confirm_title">समूहमा थप्नुहोस्</string>
     <string name="people_groups_add_member_confirm_action">समूहमा थप्नुहोस्</string>
     <string name="people_profile_image_process_failed">%1$s छवि प्रशोधन गर्न सकिएन</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">तपाईंको निमन्त्रणा नीति लोड गर्न असफल</string>
     <string name="people_profile_avatar">अवतार</string>
     <string name="people_profile_banner">ब्यानर</string>
-    <string name="people_contacts_search_placeholder">खोज्नुहोस्…</string>
+    <string name="people_contacts_search_placeholder">खोज्नुहोस्</string>
     <string name="people_contacts_invited">निमन्त्रित</string>
     <string name="people_contacts_accept">स्वीकार गर्नुहोस्</string>
     <string name="people_contacts_message">सन्देश पठाउनुहोस्</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">भर्खरै थपिएको</string>
     <string name="people_contacts_try_different_search">फरक खोजी शब्द प्रयास गर्नुहोस्</string>
     <string name="people_contacts_unfriend">साथी हटाउनुहोस्</string>
-    <string name="people_add_contact_search_placeholder">खोज्न टाइप गर्नुहोस्…</string>
+    <string name="people_add_contact_search_placeholder">खोज्न टाइप गर्नुहोस्</string>
     <string name="people_add_contact_search_start">प्रयोगकर्ताहरू खोज्न टाइप गर्न सुरु गर्नुहोस्</string>
     <string name="people_contact_phone">फोन</string>
     <string name="people_contact_title">पदको नाम</string>

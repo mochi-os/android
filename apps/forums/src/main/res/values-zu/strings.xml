@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Thumela</string>
     <string name="forums_post_body_field">Okuqukethwe</string>
-    <string name="forums_write_comment">Bhala amazwana…</string>
+    <string name="forums_write_comment">Bhala amazwana</string>
 
     <string name="notification_channel_forums">Izaziso zezinkundla</string>
     <string name="forums_list_empty">Azikho izinkundla okwamanje</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Ayikho imithetho okwamanje — kusebenza okuzenzakalelayo</string>
     <string name="forums_members_search">Hlunga amalungu</string>
     <string name="forums_banner_description">I-Markdown eboniswa phezulu kwenkundla.</string>
-    <string name="forums_banner_placeholder">Faka umbhalo webhena (i-markdown iyasekelwa)…</string>
     <string name="forums_ai_mode_off">Kuvinjelwe</string>
     <string name="forums_moderation_queue_empty">Akukho okulindile</string>
     <string name="forums_moderation_report_details">Imininingwane: %1$s</string>

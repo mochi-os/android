@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupės</string>
     <string name="people_group_title">Grupė</string>
     <string name="people_person_title">Asmuo</string>
-    <string name="people_friends_search_placeholder">Ieškoti…</string>
+    <string name="people_friends_search_placeholder">Ieškoti</string>
     <string name="people_friends_no_people_found">Žmonių nerasta</string>
     <string name="people_friends_try_adjusting">Pabandykite koreguoti paiešką</string>
     <string name="people_friends_pending">Laukiama</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Ištrinti grupę „%1$s\"? Šio veiksmo atšaukti nebus galima.</string>
     <string name="people_member_remove_confirm">Ar tikrai norite pašalinti %1$s iš šios grupės?</string>
     <string name="people_member_remove_with_name">Pašalinti %1$s</string>
-    <string name="people_member_search_placeholder">Įveskite vardą paieškai…</string>
+    <string name="people_member_search_placeholder">Įveskite vardą paieškai</string>
     <string name="people_groups_add_member_confirm_title">Pridėti į grupę</string>
     <string name="people_groups_add_member_confirm_action">Pridėti į grupę</string>
     <string name="people_profile_image_process_failed">Nepavyko apdoroti %1$s vaizdo</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Nepavyko įkelti jūsų kvietimų politikos</string>
     <string name="people_profile_avatar">Avataras</string>
     <string name="people_profile_banner">Reklamjuostė</string>
-    <string name="people_contacts_search_placeholder">Ieškoti…</string>
+    <string name="people_contacts_search_placeholder">Ieškoti</string>
     <string name="people_contacts_invited">Pakviesta</string>
     <string name="people_contacts_accept">Priimti</string>
     <string name="people_contacts_message">Rašyti žinutę</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Neseniai pridėta</string>
     <string name="people_contacts_try_different_search">Pabandykite kitą paieškos terminą</string>
     <string name="people_contacts_unfriend">Šalinti draugą</string>
-    <string name="people_add_contact_search_placeholder">Įveskite, kad ieškotumėte…</string>
+    <string name="people_add_contact_search_placeholder">Įveskite, kad ieškotumėte</string>
     <string name="people_add_contact_search_start">Pradėkite rašyti, kad surastumėte vartotojus</string>
     <string name="people_contact_phone">Telefonas</string>
     <string name="people_contact_title">Pareigos</string>

@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Pastga ko‘chirish</string>
 
     <string name="notification_channel_feeds">Tasmalar bildirishnomalari</string>
-    <string name="feeds_search_placeholder">Tasmalarni qidiring yoki URL joylashtiring…</string>
+    <string name="feeds_search_placeholder">Tasmalarni qidiring yoki URL joylashtiring</string>
     <string name="feeds_url_result">URL natijasi</string>
     <string name="feeds_search_results">Qidiruv natijalari</string>
     <string name="feeds_unread_only">Faqat o\'qilmaganlar</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Bu lentadan yangilanishlar kelmaydi. Istalgan vaqtda qayta obuna boʻlishingiz mumkin.</string>
     <string name="feeds_access_select_rule">Kirish qoidasini tanlash</string>
     <string name="feeds_access_authenticated_desc">Tizimga kirgan har qanday foydalanuvchi</string>
-    <string name="feeds_banner_hint">Ushbu forumga xush kelibsiz…</string>
     <string name="feeds_banner_dismiss">Bannerni bekor qilish</string>
     <string name="feeds_members_search">Aʼzolarni filtrlash</string>
     <string name="feeds_ai_prompt_default">Standart</string>

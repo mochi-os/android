@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grúpaí</string>
     <string name="people_group_title">Grúpa</string>
     <string name="people_person_title">Duine</string>
-    <string name="people_friends_search_placeholder">Cuardaigh…</string>
+    <string name="people_friends_search_placeholder">Cuardaigh</string>
     <string name="people_friends_no_people_found">Níor aimsíodh aon duine</string>
     <string name="people_friends_try_adjusting">Bain triail as do chuardach a choigeartú</string>
     <string name="people_friends_pending">Ar feitheamh</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Scrios an grúpa \"%1$s\"? Ní féidir é seo a chealú.</string>
     <string name="people_member_remove_confirm">An bhfuil tú cinnte gur mhaith leat %1$s a bhaint den ghrúpa seo?</string>
     <string name="people_member_remove_with_name">Bain %1$s</string>
-    <string name="people_member_search_placeholder">Iontráil ainm chun cuardach a dhéanamh…</string>
+    <string name="people_member_search_placeholder">Iontráil ainm chun cuardach a dhéanamh</string>
     <string name="people_groups_add_member_confirm_title">Cuir leis an ngrúpa</string>
     <string name="people_groups_add_member_confirm_action">Cuir leis an ngrúpa</string>
     <string name="people_profile_image_process_failed">Níorbh fhéidir an íomhá %1$s a phróiseáil</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Theip ar luchtú do pholasaí cuiridh</string>
     <string name="people_profile_avatar">Abhatár</string>
     <string name="people_profile_banner">Meirge</string>
-    <string name="people_contacts_search_placeholder">Cuardaigh…</string>
+    <string name="people_contacts_search_placeholder">Cuardaigh</string>
     <string name="people_contacts_invited">Tugadh cuireadh</string>
     <string name="people_contacts_accept">Glac leis</string>
     <string name="people_contacts_message">Seol teachtaireacht</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Curtha leis le déanaí</string>
     <string name="people_contacts_try_different_search">Bain triail as téarma cuardaigh difriúil</string>
     <string name="people_contacts_unfriend">Bain cara</string>
-    <string name="people_add_contact_search_placeholder">Clóscríobh chun cuardach a dhéanamh…</string>
+    <string name="people_add_contact_search_placeholder">Clóscríobh chun cuardach a dhéanamh</string>
     <string name="people_add_contact_search_start">Tosaigh ag clóscríobh chun cuardach a dhéanamh ar úsáideoirí</string>
     <string name="people_contact_phone">Fón</string>
     <string name="people_contact_title">Teideal poist</string>

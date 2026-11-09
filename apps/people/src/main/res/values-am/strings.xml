@@ -6,7 +6,7 @@
     <string name="people_groups_title">ቡድኖች</string>
     <string name="people_group_title">ቡድን</string>
     <string name="people_person_title">ሰው</string>
-    <string name="people_friends_search_placeholder">ይፈልጉ…</string>
+    <string name="people_friends_search_placeholder">ይፈልጉ</string>
     <string name="people_friends_no_people_found">ምንም ሰዎች አልተገኙም</string>
     <string name="people_friends_try_adjusting">ፍለጋዎን ማስተካከል ይሞክሩ</string>
     <string name="people_friends_pending">በመጠባበቅ ላይ</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">ቡድን \"%1$s\" ይሰረዝ? ይህ መልሶ መመለስ አይቻልም።</string>
     <string name="people_member_remove_confirm">%1$sን ከዚህ ቡድን ማስወገድ ይፈልጋሉ?</string>
     <string name="people_member_remove_with_name">%1$sን አስወግድ</string>
-    <string name="people_member_search_placeholder">ለመፈለግ ስም ያስገቡ…</string>
+    <string name="people_member_search_placeholder">ለመፈለግ ስም ያስገቡ</string>
     <string name="people_groups_add_member_confirm_title">ወደ ቡድን ጨምር</string>
     <string name="people_groups_add_member_confirm_action">ወደ ቡድን ጨምር</string>
     <string name="people_profile_image_process_failed">የ%1$s ምስልን ማስኬድ አልተቻለም</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">የግብዣ ፖሊሲዎን መጫን አልተሳካም</string>
     <string name="people_profile_avatar">አምሳያ</string>
     <string name="people_profile_banner">ሰንደቅ</string>
-    <string name="people_contacts_search_placeholder">ይፈልጉ…</string>
+    <string name="people_contacts_search_placeholder">ይፈልጉ</string>
     <string name="people_contacts_invited">ተጋብዟል</string>
     <string name="people_contacts_accept">ተቀበል</string>
     <string name="people_contacts_message">መልዕክት ይላኩ</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">በቅርቡ የተጨመረ</string>
     <string name="people_contacts_try_different_search">የተለየ የፍለጋ ቃል ይሞክሩ</string>
     <string name="people_contacts_unfriend">ጓደኛ አስወግድ</string>
-    <string name="people_add_contact_search_placeholder">ለመፈለግ ይተይቡ…</string>
+    <string name="people_add_contact_search_placeholder">ለመፈለግ ይተይቡ</string>
     <string name="people_add_contact_search_start">ተጠቃሚዎችን ለመፈለግ መተየብ ይጀምሩ</string>
     <string name="people_contact_phone">ስልክ</string>
     <string name="people_contact_title">የስራ ርዕስ</string>

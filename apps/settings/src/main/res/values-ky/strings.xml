@@ -238,7 +238,7 @@
     <string name="route_delete_message">Бул \"%1$s\" жолу үчүн маршрутту алып салат.</string>
     <string name="route_empty">Конфигурацияланган жолдор жок.</string>
     <string name="route_meta">Артыкчылык %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Кошуу үчүн темаларды издөө…</string>
+    <string name="interests_search_placeholder">Кошуу үчүн темаларды издөө</string>
     <string name="interests_empty">Азырынча кызыгуулар жок.</string>
     <string name="interests_summary_regenerate">Жыйынтыкты кайра түзүү</string>
     <string name="interests_summary_regenerating">Кайра түзүлүүдө…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Бул \"%1$s\" демейкисине (бош) кайтарат.</string>
     <string name="settings_home_system_users">Колдонуучулар (сервер)</string>
     <string name="system_users_add_user">Колдонуучу кошуу</string>
-    <string name="system_users_search_placeholder">Колдонуучуларды издөө…</string>
+    <string name="system_users_search_placeholder">Колдонуучуларды издөө</string>
     <string name="system_users_sort_by">Иреттөө</string>
     <string name="system_users_last_login">Акыркы кирүү: %1$s</string>
     <string name="system_users_delete_message">Бул \"%1$s\" колдонуучусун биротоло жок кылат. Бул аракетти жокко чыгаруу мүмкүн эмес.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Ат алыңыз</string>
     <string name="handles_empty">Эч бир колдонуучу аты ээлеп коюлган эмес.</string>
     <string name="handles_empty_search">Колдонуучу аттары издөөңүзгө дал келген жок</string>
-    <string name="handles_search_placeholder">Колдонуучу аттарын издөө…</string>
+    <string name="handles_search_placeholder">Колдонуучу аттарын издөө</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s колдонуучу атынын %1$s–%2$s көрсөтүлүүдө</item>
         <item quantity="other">%3$s колдонуучу атынын %1$s–%2$s көрсөтүлүүдө</item>

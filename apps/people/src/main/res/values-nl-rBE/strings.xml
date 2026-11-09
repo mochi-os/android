@@ -6,7 +6,7 @@
     <string name="people_groups_title">Groepen</string>
     <string name="people_group_title">Groep</string>
     <string name="people_person_title">Persoon</string>
-    <string name="people_friends_search_placeholder">Zoeken…</string>
+    <string name="people_friends_search_placeholder">Zoeken</string>
     <string name="people_friends_no_people_found">Geen personen gevonden</string>
     <string name="people_friends_try_adjusting">Probeer uw zoekopdracht aan te passen</string>
     <string name="people_friends_pending">In behandeling</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Groep \"%1$s\" verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
     <string name="people_member_remove_confirm">Weet u zeker dat u %1$s uit deze groep wilt verwijderen?</string>
     <string name="people_member_remove_with_name">%1$s verwijderen</string>
-    <string name="people_member_search_placeholder">Voer een naam in om te zoeken…</string>
+    <string name="people_member_search_placeholder">Voer een naam in om te zoeken</string>
     <string name="people_groups_add_member_confirm_title">Toevoegen aan groep</string>
     <string name="people_groups_add_member_confirm_action">Toevoegen aan groep</string>
     <string name="people_profile_image_process_failed">Kon afbeelding %1$s niet verwerken</string>
@@ -113,7 +113,7 @@
     <string name="people_invite_settings_load_failed">Je uitnodigingsbeleid laden mislukt</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Zoeken…</string>
+    <string name="people_contacts_search_placeholder">Zoeken</string>
     <string name="people_contacts_invited">Uitgenodigd</string>
     <string name="people_contacts_accept">Accepteren</string>
     <string name="people_contacts_message">Bericht sturen</string>
@@ -135,7 +135,7 @@
     <string name="people_contacts_sort_recent">Onlangs toegevoegd</string>
     <string name="people_contacts_try_different_search">Probeer een andere zoekterm</string>
     <string name="people_contacts_unfriend">Vriend verwijderen</string>
-    <string name="people_add_contact_search_placeholder">Typ om te zoeken…</string>
+    <string name="people_add_contact_search_placeholder">Typ om te zoeken</string>
     <string name="people_add_contact_search_start">Begin te typen om naar gebruikers te zoeken</string>
     <string name="people_contact_phone">Telefoon</string>
     <string name="people_contact_title">Functie</string>

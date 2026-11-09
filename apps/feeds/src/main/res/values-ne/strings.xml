@@ -86,7 +86,7 @@
     <string name="feeds_move_down">तल सार्नुहोस्</string>
 
     <string name="notification_channel_feeds">फिड सूचनाहरू</string>
-    <string name="feeds_search_placeholder">फिड खोज्नुहोस् वा URL टाँस्नुहोस्…</string>
+    <string name="feeds_search_placeholder">फिड खोज्नुहोस् वा URL टाँस्नुहोस्</string>
     <string name="feeds_url_result">URL नतिजा</string>
     <string name="feeds_search_results">खोज नतिजा</string>
     <string name="feeds_unread_only">नपढिएका मात्र</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">तपाईंले यो फिडबाट अपडेटहरू प्राप्त गर्न छोड्नुहुनेछ। तपाईं जुनसुकै बेला पुनः सदस्यता लिन सक्नुहुन्छ।</string>
     <string name="feeds_access_select_rule">पहुँच नियम छान्नुहोस्</string>
     <string name="feeds_access_authenticated_desc">लगइन गरेको जो कोही</string>
-    <string name="feeds_banner_hint">यस फोरममा स्वागत छ…</string>
     <string name="feeds_banner_dismiss">ब्यानर हटाउनुहोस्</string>
     <string name="feeds_members_search">सदस्यहरू फिल्टर गर्नुहोस्</string>
     <string name="feeds_ai_prompt_default">पूर्वनिर्धारित</string>

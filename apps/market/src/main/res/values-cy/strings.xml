@@ -4,7 +4,6 @@
     <string name="app_name">Marchnad</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Bywgraffiad</string>
-    <string name="market_account_biography_placeholder">Dywedwch wrth brynwyr amdanoch chi…</string>
     <string name="market_account_load_failed">Methwyd llwytho\'r cyfrif</string>
     <string name="market_account_location_label">Lleoliad</string>
     <string name="market_account_save">Cadw</string>
@@ -312,7 +311,7 @@
     <string name="market_listings_search_placeholder">Chwilio eich rhestrau</string>
     <string name="market_listings_share_chooser">Rhannu rhestriad</string>
     <string name="market_listings_title">Fy rhestriadau</string>
-    <string name="market_messages_compose_placeholder">Ysgrifennwch neges…</string>
+    <string name="market_messages_compose_placeholder">Ysgrifennwch neges</string>
     <string name="market_messages_inbox_empty_subtitle">Pan fyddwch yn anfon neges at werthwr (neu prynwr yn anfon neges atoch chi) bydd y trywydd yn ymddangos yma.</string>
     <string name="market_messages_inbox_empty_title">Dim sgyrsiau eto</string>
     <string name="market_messages_inbox_title">Negeseuon</string>
@@ -427,7 +426,7 @@
     <string name="market_reviews_empty_sent_subtitle">Agorwch archeb gyflawn i adael adolygiad.</string>
     <string name="market_reviews_empty_sent_title">Nid ydych wedi ysgrifennu unrhyw adolygiadau eto</string>
     <string name="market_reviews_response_label">Ymateb</string>
-    <string name="market_reviews_response_placeholder">Ysgrifennwch ymateb…</string>
+    <string name="market_reviews_response_placeholder">Ysgrifennwch ymateb</string>
     <string name="market_reviews_response_submit">Cyflwyno ymateb</string>
     <string name="market_reviews_tab_received">Wedi derbyn</string>
     <string name="market_reviews_tab_sent">Wedi anfon</string>
@@ -589,7 +588,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Adolygiadau gwerthwr</string>
     <string name="market_account_stripe_open_failed">Methwyd agor Stripe</string>
     <string name="market_editor_stock">Stoc</string>
-    <string name="market_editor_stock_units">Nifer yr unedau</string>
     <string name="market_editor_stock_unlimited">Diderfyn</string>
     <string name="market_editor_start_time">Amser cychwyn</string>
     <string name="market_editor_start_time_help">Gadewch yn wag i ddechrau wrth gyhoeddi.</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">החלט</string>
     <string name="staff_appeals_decision_denied">השאר רישום דחוי</string>
     <string name="staff_appeals_decision_label">החלטה</string>
-    <string name="staff_appeals_decision_placeholder">בחר החלטה</string>
     <string name="staff_appeals_decision_upheld">אשר רישום</string>
     <string name="staff_appeals_denied_toast">הערעור נדחה</string>
     <string name="staff_appeals_dialog_title">החלט על ערעור</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">סכום ההחזר חייב להיות גדול מאפס</string>
     <string name="staff_disputes_resolution_buyer">פתור לטובת הקונה</string>
     <string name="staff_disputes_resolution_label">פתרון</string>
-    <string name="staff_disputes_resolution_placeholder">בחר רזולוציה</string>
     <string name="staff_disputes_resolution_seller">פתור לטובת המוכר</string>
     <string name="staff_disputes_resolve">פתור</string>
     <string name="staff_disputes_resolved_toast">המחלוקת נפתרה</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">חסום משתמש</string>
     <string name="staff_reports_action_dismiss">סגור</string>
     <string name="staff_reports_action_label">פעולה</string>
-    <string name="staff_reports_action_placeholder">בחר פעולה</string>
     <string name="staff_reports_action_remove">הסר</string>
     <string name="staff_reports_action_suspend">השעה כמוכר</string>
     <string name="staff_reports_action_taken_toast">ננקטה פעולה על הדיווח</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">אדם</string>
     <string name="staff_team_dialog_role">תפקיד</string>
     <string name="staff_team_dialog_role_placeholder">בחר תפקיד</string>
-    <string name="staff_team_dialog_search_placeholder">חיפוש לפי שם, טביעה או ID…</string>
+    <string name="staff_team_dialog_search_placeholder">חיפוש לפי שם, טביעה או ID</string>
     <string name="staff_team_empty">אין חברי צוות</string>
     <string name="staff_team_remove_confirm">הסר</string>
     <string name="staff_team_remove_desc">להסיר את החבר הזה מצוות הסגל?</string>

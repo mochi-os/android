@@ -302,7 +302,7 @@
     <string name="market_listings_search_placeholder">Ihre Inserate durchsuchen</string>
     <string name="market_listings_share_chooser">Inserat teilen</string>
     <string name="market_listings_title">Meine Inserate</string>
-    <string name="market_messages_compose_placeholder">Nachricht schreiben…</string>
+    <string name="market_messages_compose_placeholder">Nachricht schreiben</string>
     <string name="market_messages_inbox_empty_subtitle">Wenn Sie einer Verkäuferin oder einem Verkäufer schreiben (oder eine Käuferin oder ein Käufer Ihnen), erscheint die Unterhaltung hier.</string>
     <string name="market_messages_inbox_empty_title">Noch keine Unterhaltungen</string>
     <string name="market_messages_thread_title">Unterhaltung</string>
@@ -375,7 +375,7 @@
     <string name="market_reviews_empty_sent_subtitle">Öffnen Sie eine abgeschlossene Bestellung, um eine Bewertung abzugeben.</string>
     <string name="market_reviews_empty_sent_title">Sie haben noch keine Bewertungen verfasst</string>
     <string name="market_reviews_response_label">Antwort</string>
-    <string name="market_reviews_response_placeholder">Antwort schreiben…</string>
+    <string name="market_reviews_response_placeholder">Antwort schreiben</string>
     <string name="market_reviews_response_submit">Antwort übermitteln</string>
     <string name="market_sale_carrier_custom_label">Name des Transportunternehmens</string>
     <string name="market_sale_carrier_label">Transportunternehmen</string>
@@ -455,7 +455,6 @@
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografie</string>
-    <string name="market_account_biography_placeholder">Erzähle Käufern von dir…</string>
     <string name="market_account_load_failed">Konto konnte nicht geladen werden</string>
     <string name="market_account_saved">Änderungen gespeichert</string>
     <string name="market_account_status_restrictions">Einige Aktionen, einschliesslich des Erstellens neuer Inserate und des Abschliessens von Bestellungen, sind eingeschränkt, solange sich Ihr Konto in diesem Zustand befindet.</string>

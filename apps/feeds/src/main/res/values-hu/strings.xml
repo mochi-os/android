@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Mozgatás lefelé</string>
 
     <string name="notification_channel_feeds">Hírfolyam-értesítések</string>
-    <string name="feeds_search_placeholder">Hírfolyam keresése vagy URL beillesztése…</string>
+    <string name="feeds_search_placeholder">Hírfolyam keresése vagy URL beillesztése</string>
     <string name="feeds_url_result">URL-találat</string>
     <string name="feeds_search_results">Keresési eredmények</string>
     <string name="feeds_unread_only">Csak olvasatlanok</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Többé nem kapsz frissítéseket ebből a hírcsatornából. Bármikor újra feliratkozhatsz.</string>
     <string name="feeds_access_select_rule">Hozzáférési szabály kiválasztása</string>
     <string name="feeds_access_authenticated_desc">Bárki, aki be van jelentkezve</string>
-    <string name="feeds_banner_hint">Üdvözöljük ezen a fórumon…</string>
     <string name="feeds_banner_dismiss">Banner elvetése</string>
     <string name="feeds_members_search">Tagok szűrése</string>
     <string name="feeds_ai_prompt_default">Alapértelmezett</string>

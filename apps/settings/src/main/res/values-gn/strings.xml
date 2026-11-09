@@ -238,7 +238,7 @@
     <string name="route_delete_message">Kóva ombogue tape \"%1$s\" rehegua.</string>
     <string name="route_empty">Ndaipóri tape oñembosako\'íva.</string>
     <string name="route_meta">Tenondegua %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Eheka tema rembojuaju hag̃ua…</string>
+    <string name="interests_search_placeholder">Eheka tema rembojuaju hag̃ua</string>
     <string name="interests_empty">Ndaipóri gueteri interés.</string>
     <string name="interests_summary_regenerate">Emoheñói jey mombyky</string>
     <string name="interests_summary_regenerating">Oñemoheñói jeyhína…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Kóva omoĩ jey \"%1$s\" ypyguápe (nandi).</string>
     <string name="settings_home_system_users">Puruhára (mohendaha)</string>
     <string name="system_users_add_user">Embojuaju puruhára</string>
-    <string name="system_users_search_placeholder">Eheka puruhára…</string>
+    <string name="system_users_search_placeholder">Eheka puruhára</string>
     <string name="system_users_sort_by">Emoĩporã rupi</string>
     <string name="system_users_last_login">Jeike paha: %1$s</string>
     <string name="system_users_delete_message">Kóva ombogue tapiaite puruhára \"%1$s\". Ko tembiapo ndaikatúi oñembojevy.</string>
@@ -554,7 +554,7 @@
     <string name="handles_take">Ejagarra peteĩ téra</string>
     <string name="handles_empty">Ndaipóri puruhára réra oñereservava\'ekue.</string>
     <string name="handles_empty_search">Ndaipóri puruhára réra ojuajúva ne ñehekáre</string>
-    <string name="handles_search_placeholder">Eheka puruhára rérakuéra…</string>
+    <string name="handles_search_placeholder">Eheka puruhára rérakuéra</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Ojehechauka %1$s–%2$s %3$s puruhára réra apytégui</item>
         <item quantity="other">Ojehechauka %1$s–%2$s %3$s puruhára réra apytégui</item>

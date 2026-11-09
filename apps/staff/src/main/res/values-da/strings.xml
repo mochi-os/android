@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Afgør</string>
     <string name="staff_appeals_decision_denied">Hold annonce afvist</string>
     <string name="staff_appeals_decision_label">Afgørelse</string>
-    <string name="staff_appeals_decision_placeholder">Vælg beslutning</string>
     <string name="staff_appeals_decision_upheld">Godkend annonce</string>
     <string name="staff_appeals_denied_toast">Anke afvist</string>
     <string name="staff_appeals_dialog_title">Afgør anke</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Refunderingsbeløb skal være større end nul</string>
     <string name="staff_disputes_resolution_buyer">Løs til fordel for køber</string>
     <string name="staff_disputes_resolution_label">Løsning</string>
-    <string name="staff_disputes_resolution_placeholder">Vælg løsning</string>
     <string name="staff_disputes_resolution_seller">Løs til fordel for sælger</string>
     <string name="staff_disputes_resolve">Løs</string>
     <string name="staff_disputes_resolved_toast">Tvist løst</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Bortvis bruger</string>
     <string name="staff_reports_action_dismiss">Afvis</string>
     <string name="staff_reports_action_label">Handling</string>
-    <string name="staff_reports_action_placeholder">Vælg handling</string>
     <string name="staff_reports_action_remove">Fjern</string>
     <string name="staff_reports_action_suspend">Suspendér som sælger</string>
     <string name="staff_reports_action_taken_toast">Rapportering behandlet</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Person</string>
     <string name="staff_team_dialog_role">Rolle</string>
     <string name="staff_team_dialog_role_placeholder">Vælg rolle</string>
-    <string name="staff_team_dialog_search_placeholder">Søg efter navn, fingeraftryk eller ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Søg efter navn, fingeraftryk eller ID</string>
     <string name="staff_team_empty">Ingen teammedlemmer</string>
     <string name="staff_team_remove_confirm">Fjern</string>
     <string name="staff_team_remove_desc">Fjern dette medlem fra medarbejderteamet?</string>

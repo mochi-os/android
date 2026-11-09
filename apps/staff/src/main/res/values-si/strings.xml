@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">තීරණය කරන්න</string>
     <string name="staff_appeals_decision_denied">ලැයිස්තුව ප්‍රතික්ෂේප කළ ලෙස තබන්න</string>
     <string name="staff_appeals_decision_label">තීරණය</string>
-    <string name="staff_appeals_decision_placeholder">තීරණය තෝරන්න</string>
     <string name="staff_appeals_decision_upheld">ලැයිස්තුව අනුමත කරන්න</string>
     <string name="staff_appeals_denied_toast">අභියාචනය ප්‍රතික්ෂේප කරන ලදී</string>
     <string name="staff_appeals_dialog_title">අභියාචනය තීරණය කරන්න</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">ආපසු ගෙවීමේ මුදල ශුන්‍යයට වඩා වැඩි විය යුතුය</string>
     <string name="staff_disputes_resolution_buyer">ගැනුම්කරු සඳහා විසඳන්න</string>
     <string name="staff_disputes_resolution_label">විසඳුම</string>
-    <string name="staff_disputes_resolution_placeholder">විසඳුම තෝරන්න</string>
     <string name="staff_disputes_resolution_seller">විකුණුම්කරු සඳහා විසඳන්න</string>
     <string name="staff_disputes_resolve">විසඳන්න</string>
     <string name="staff_disputes_resolved_toast">ආරවුල විසඳන ලදී</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">පරිශීලකයා තහනම් කරන්න</string>
     <string name="staff_reports_action_dismiss">ඉවත ලන්න</string>
     <string name="staff_reports_action_label">ක්‍රියාව</string>
-    <string name="staff_reports_action_placeholder">ක්‍රියාව තෝරන්න</string>
     <string name="staff_reports_action_remove">ඉවත් කරන්න</string>
     <string name="staff_reports_action_suspend">විකුණුම්කරු ලෙස අත්හිටුවන්න</string>
     <string name="staff_reports_action_taken_toast">වාර්තා ක්‍රියාව ගන්නා ලදී</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ඇණවුම #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%3$s දින %1$s → %2$s. මෙම සමාලෝචනය ස්ථිරව මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. මෙම සමාලෝචනය ස්ථිරව මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
-    <string name="staff_team_dialog_search_placeholder">නම, ඇඟිලි සලකුණ හෝ ID අනුව සොයන්න…</string>
+    <string name="staff_team_dialog_search_placeholder">නම, ඇඟිලි සලකුණ හෝ ID අනුව සොයන්න</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook අත්සන් කිරීමේ රහස</string>
     <string name="staff_disputes_meta_already_refunded">දැනටමත් ආපසු ගෙවා ඇත</string>

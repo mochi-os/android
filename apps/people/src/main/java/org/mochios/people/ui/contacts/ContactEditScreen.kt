@@ -688,7 +688,6 @@ internal fun ContactFields(
         if (books.isNotEmpty()) {
             LabeledSelectField(
                 label = stringResource(R.string.people_contact_book),
-                placeholder = stringResource(R.string.people_contact_book),
                 options = books.map { book -> book.id to book.name },
                 selected = form.book,
                 onSelect = { onChange(form.copy(book = it)) },
@@ -820,7 +819,6 @@ private fun TypedEntryRow(
             Box(modifier = Modifier.weight(1f)) {
                 LabeledSelectField(
                     label = stringResource(R.string.people_contact_type),
-                    placeholder = stringResource(R.string.people_contact_type),
                     options = types,
                     selected = entry.type,
                     onSelect = { onChange(entry.copy(type = it)) },
@@ -893,7 +891,6 @@ private fun HandleRow(
             Box(modifier = Modifier.weight(1f)) {
                 LabeledSelectField(
                     label = stringResource(R.string.people_contact_network),
-                    placeholder = stringResource(R.string.people_contact_network),
                     options = HANDLE_NETWORKS.map { network -> network to providerName(network) },
                     selected = handle.network,
                     onSelect = { onChange(handle.copy(network = it)) },
@@ -944,7 +941,6 @@ private fun MessagingRow(
             Box(modifier = Modifier.weight(1f)) {
                 LabeledSelectField(
                     label = stringResource(R.string.people_contact_network),
-                    placeholder = stringResource(R.string.people_contact_network),
                     options = MESSAGING_NETWORKS.map { network ->
                         network to if (network == NETWORK_OTHER) other else providerName(network)
                     },
@@ -991,7 +987,6 @@ private fun AddressRows(
             Box(modifier = Modifier.weight(1f)) {
                 LabeledSelectField(
                     label = stringResource(R.string.people_contact_type),
-                    placeholder = stringResource(R.string.people_contact_type),
                     options = types,
                     selected = address.type,
                     onSelect = { onChange(address.copy(type = it)) },

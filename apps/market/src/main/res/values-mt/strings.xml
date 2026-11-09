@@ -3,7 +3,6 @@
     <string name="app_name">Suq</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Bijografija</string>
-    <string name="market_account_biography_placeholder">Għid lix-xerrejja dwarek…</string>
     <string name="market_account_load_failed">Ma setax jiġi mgħobbi l-kont</string>
     <string name="market_account_location_label">Post</string>
     <string name="market_account_save">Issejvja</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Elenku ġdid</string>
     <string name="market_listings_relist_failed">Ma rnexxiex jerġa\' jiġi listjat</string>
     <string name="market_listings_title">Il-listings tiegħi</string>
-    <string name="market_messages_compose_placeholder">Ikteb messaġġ…</string>
+    <string name="market_messages_compose_placeholder">Ikteb messaġġ</string>
     <string name="market_messages_inbox_title">Messaġġi</string>
     <string name="market_messages_send">Ibgħat</string>
     <string name="market_messages_thread_title">Konversazzjoni</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Ix-xerrejja u l-bejjiegħa jistgħu jirrevedu lil xulxin wara ordni mlestija.</string>
     <string name="market_reviews_empty_sent_subtitle">Iftaħ ordni mlestija biex tħalli reviżjoni.</string>
     <string name="market_reviews_empty_sent_title">Ma ktibtx l-ebda reviżjoni</string>
-    <string name="market_reviews_response_placeholder">Ikteb risposta…</string>
+    <string name="market_reviews_response_placeholder">Ikteb risposta</string>
     <string name="market_sale_carrier_custom_label">Isem it-trasportatur</string>
     <string name="market_sale_dispute_evidence_due">Evidenza dovuta %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Raġuni tat-tnaqqis ta\' Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Reviews tal-bejjiegħ</string>
     <string name="market_account_stripe_open_failed">Ma setax jinfetaħ Stripe</string>
     <string name="market_editor_stock">Stokk</string>
-    <string name="market_editor_stock_units">Numru ta\' unitajiet</string>
     <string name="market_editor_stock_unlimited">Mingħajr limitu</string>
     <string name="market_editor_start_time">Ħin tal-bidu</string>
     <string name="market_editor_start_time_help">Ħalli vojt biex tibda fil-publish.</string>

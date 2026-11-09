@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Reegleid pole veel — kehtivad vaikeväärtused</string>
     <string name="forums_members_search">Filtreeri liikmeid</string>
     <string name="forums_banner_description">Foorumi ülaosas kuvatav Markdown.</string>
-    <string name="forums_banner_placeholder">Sisesta bänneri tekst (Markdown on toetatud)…</string>
     <string name="forums_ai_mode_off">Keelatud</string>
     <string name="forums_moderation_queue_empty">Midagi ootel pole</string>
     <string name="forums_moderation_report_details">Üksikasjad: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Aegub %1$s</string>
     <string name="forums_moderation_restriction_permanent">Püsiv</string>
     <string name="forums_report_reason_hate">Vihkamine</string>
-    <string name="forums_write_comment">Kirjuta kommentaar…</string>
+    <string name="forums_write_comment">Kirjuta kommentaar</string>
     <string name="forums_comment_delete_message">Kas oled kindel, et soovid selle kommentaari kustutada?</string>
     <string name="forums_comment_replying_to">Vastad kasutajale %1$s</string>
     <string name="forums_comment_clear_reply">Tühjenda vastus</string>

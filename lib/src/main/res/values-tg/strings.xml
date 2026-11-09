@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Аз мавзӯъ</string>
     <string name="settings_background_off">Ҳеҷ кадом</string>
     <string name="game_chat_empty">То ҳол ягон паём нест</string>
-    <string name="game_chat_input_placeholder">Паёмеро чоп кунед…</string>
+    <string name="game_chat_input_placeholder">Паёмеро чоп кунед</string>
     <string name="game_chat_send">Паём фиристодан</string>
     <string name="game_chat_subject_you">Шумо</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Тасдиқ кунед, ки ин шумо ҳастед</string>
     <string name="stepup_description">Ин тағйироти амниятӣ ба ҳисоби шумост. Барои идома тасдиқ кунед, ки ин шумо ҳастед.</string>
     <string name="stepup_email_label">Рамзи email</string>
-    <string name="stepup_email_placeholder">Рамзро аз почтаи электронии худ ворид кунед</string>
     <string name="stepup_totp_label">Коди аутентификатор</string>
-    <string name="stepup_totp_placeholder">Рамзи аутентификатори худро ворид кунед</string>
     <string name="stepup_use_passkey">Калиди дастрасии худро истифода баред</string>
     <string name="stepup_send_email">Имейл фиристодан</string>
     <string name="stepup_resend_email">Мактубро дубора фиристед</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Тегро нест кунед</string>
     <string name="person_picker_none">Ҳеҷ кадом</string>
     <string name="person_picker_clear">Тоза кардани интихоб</string>
-    <string name="person_picker_select">Интихоб кунед …</string>
+    <string name="person_picker_select">Интихоб кунед</string>
     <string name="person_picker_directory">Феҳрист</string>
     <string name="person_picker_no_people">Одамон нестанд</string>
     <string name="person_picker_project_members">Аъзоёни лоиҳа</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Тағйири категорияи огоҳинома</string>
     <string name="lightbox_comments_none">Ба ин тасвир ҳоло шарҳе нест.</string>
     <string name="lightbox_comments_only">Танҳо шарҳҳои ин тасвирро нишон додан</string>
-    <string name="lightbox_comment_placeholder">Ба ин тасвир шарҳ нависед…</string>
+    <string name="lightbox_comment_placeholder">Ба ин тасвир шарҳ нависед</string>
     <string name="comment_anchor_open">Тасвиреро, ки ин шарҳ дар бораи он аст, бинед</string>
     <string name="comment_anchor_default">Ба ин тасвир</string>
     <plurals name="lightbox_comments_others">

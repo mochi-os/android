@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Firánṣẹ́</string>
     <string name="forums_post_body_field">Àkóónú</string>
-    <string name="forums_write_comment">Kọ àsọyé…</string>
+    <string name="forums_write_comment">Kọ àsọyé</string>
 
     <string name="notification_channel_forums">Awọn ìfitónilétí àpérò</string>
     <string name="forums_list_empty">Kò sí àpérò síbẹ̀</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Kò sí òfin síbẹ̀ — àwọn àìyípadà wúlò</string>
     <string name="forums_members_search">Yẹ àwọn ọmọ ẹgbẹ́ wò</string>
     <string name="forums_banner_description">Markdown tí ó hàn ní orí àpérò.</string>
-    <string name="forums_banner_placeholder">Tẹ ọ̀rọ̀ àsíá sí (a ṣe àtìlẹ́yìn fún markdown)…</string>
     <string name="forums_ai_mode_off">Tí a ti pa</string>
     <string name="forums_moderation_queue_empty">Kò sí ohun tí ó dúró</string>
     <string name="forums_moderation_report_details">Àlàyé: %1$s</string>

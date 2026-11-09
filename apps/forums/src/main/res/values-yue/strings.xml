@@ -53,7 +53,7 @@
     <string name="forums_tab_access">存取權</string>
     <string name="forums_ai_mode_tag">標籤</string>
     <string name="forums_no_comments">重未有留言</string>
-    <string name="forums_write_comment">寫低留言…</string>
+    <string name="forums_write_comment">寫低留言</string>
     <string name="forums_comment_delete">刪除留言</string>
     <string name="forums_comment_delete_title">刪除留言</string>
     <string name="forums_find_recommended">推薦</string>
@@ -100,7 +100,6 @@
     <string name="forums_access_empty">暫時未有規則 — 採用預設</string>
     <string name="forums_members_search">篩選成員</string>
     <string name="forums_banner_description">顯示喺論壇頂部嘅 Markdown 內容。</string>
-    <string name="forums_banner_placeholder">輸入橫額文字（支援 Markdown）…</string>
     <string name="forums_banner_dismiss">關閉橫額</string>
     <string name="forums_ai_mode_off">已停用</string>
     <string name="forums_ai_account_default">預設帳戶</string>

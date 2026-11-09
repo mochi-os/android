@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">د .json فایل اپلوډ کړئ</string>
     <string name="projects_settings_not_set">نه دی ټاکل شوی</string>
     <string name="projects_settings_updated">پروژه تازه شوه</string>
-    <string name="projects_property_select">غوره کړئ …</string>
     <string name="projects_activity_attached">ضمیمه یې کړه</string>
     <string name="projects_activity_commented">تبصره یې وکړه</string>
     <string name="projects_attachment_delete_confirm_message">دا ضمیمه به د تل لپاره ړنګه شي.</string>

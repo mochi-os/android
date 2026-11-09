@@ -117,7 +117,6 @@
     <string name="forums_access_empty">هنوز قاعده‌ای وجود ندارد — پیش‌فرض‌ها اعمال می‌شوند</string>
     <string name="forums_members_search">فیلتر اعضا</string>
     <string name="forums_banner_description">متن مارک‌داون که در بالای انجمن نمایش داده می‌شود.</string>
-    <string name="forums_banner_placeholder">متن بنر را وارد کنید (از مارک‌داون پشتیبانی می‌شود)…</string>
     <string name="forums_ai_mode_off">غیرفعال</string>
     <string name="forums_moderation_queue_empty">موردی در انتظار نیست</string>
     <string name="forums_moderation_report_details">جزئیات: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">انقضا %1$s</string>
     <string name="forums_moderation_restriction_permanent">دائمی</string>
     <string name="forums_report_reason_hate">نفرت‌پراکنی</string>
-    <string name="forums_write_comment">دیدگاهی بنویسید…</string>
+    <string name="forums_write_comment">دیدگاهی بنویسید</string>
     <string name="forums_comment_delete_message">آیا مطمئن هستید که می‌خواهید این دیدگاه را حذف کنید؟</string>
     <string name="forums_comment_replying_to">در پاسخ به %1$s</string>
     <string name="forums_comment_clear_reply">پاک کردن پاسخ</string>

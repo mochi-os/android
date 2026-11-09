@@ -445,7 +445,6 @@ internal fun FieldEditor(
                             onValueChange = {},
                             readOnly = true,
                             label = fieldLabel,
-                            placeholder = { Text(stringResource(R.string.crm_property_select)) },
                             prefix = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
                                 { ChoicePrefix(parseOptionColour(selectedOption.colour)) }
                             } else {

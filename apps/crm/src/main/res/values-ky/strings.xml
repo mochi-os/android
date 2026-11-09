@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Манжа изи</string>
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Аталышсыз</string>
-    <string name="crm_property_select">Тандаңыз …</string>
     <string name="crm_filter">Чыпка</string>
     <string name="crm_sort_filter_title">Иргөө жана чыпкалоо</string>
     <string name="crm_filter_clear_all">Баарын тазалоо</string>

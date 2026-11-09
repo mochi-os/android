@@ -238,7 +238,7 @@
     <string name="route_delete_message">Kjo do të heqë rrugën për shtegun \"%1$s\".</string>
     <string name="route_empty">Asnjë rrugë e konfiguruar.</string>
     <string name="route_meta">Prioriteti %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Kërkoni tema për të shtuar…</string>
+    <string name="interests_search_placeholder">Kërkoni tema për të shtuar</string>
     <string name="interests_empty">Asnjë interes ende.</string>
     <string name="interests_summary_regenerate">Rigjenero përmbledhjen</string>
     <string name="interests_summary_regenerating">Rigjenerim…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Kjo do të rivendosë \"%1$s\" në të paracaktuar (bosh).</string>
     <string name="settings_home_system_users">Përdoruesit (server)</string>
     <string name="system_users_add_user">Shto përdorues</string>
-    <string name="system_users_search_placeholder">Kërko përdoruesit…</string>
+    <string name="system_users_search_placeholder">Kërko përdoruesit</string>
     <string name="system_users_sort_by">Rendit sipas</string>
     <string name="system_users_last_login">Hyrja e fundit: %1$s</string>
     <string name="system_users_delete_message">Kjo do të fshijë përgjithmonë përdoruesin \"%1$s\". Ky veprim nuk mund të zhbëhet.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Merr një emër</string>
     <string name="handles_empty">Nuk është rezervuar asnjë pseudonim.</string>
     <string name="handles_empty_search">Asnjë pseudonim nuk përputhet me kërkimin tuaj</string>
-    <string name="handles_search_placeholder">Kërko pseudonime…</string>
+    <string name="handles_search_placeholder">Kërko pseudonime</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Duke shfaqur %1$s–%2$s nga %3$s pseudonim</item>
         <item quantity="other">Duke shfaqur %1$s–%2$s nga %3$s pseudonime</item>

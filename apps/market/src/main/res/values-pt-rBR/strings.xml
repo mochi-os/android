@@ -339,7 +339,6 @@
     <string name="market_purchases_order_label">Pedido nº %1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Conte aos compradores sobre você…</string>
     <string name="market_account_load_failed">Não foi possível carregar a conta</string>
     <string name="market_account_saved">Alterações salvas</string>
     <string name="market_account_status_restrictions">Algumas ações, incluindo criar novos anúncios e concluir pedidos, ficam restritas enquanto sua conta estiver nesse estado.</string>
@@ -456,7 +455,7 @@
     <string name="market_listings_new">Novo anúncio</string>
     <string name="market_listings_search_placeholder">Buscar nos seus anúncios</string>
     <string name="market_listings_share_chooser">Compartilhar anúncio</string>
-    <string name="market_messages_compose_placeholder">Escreva uma mensagem…</string>
+    <string name="market_messages_compose_placeholder">Escreva uma mensagem</string>
     <string name="market_messages_inbox_empty_subtitle">Quando você enviar uma mensagem a um vendedor (ou um comprador enviar mensagem a você), a conversa aparecerá aqui.</string>
     <string name="market_messages_inbox_empty_title">Nenhuma conversa ainda</string>
     <string name="market_messages_thread_title">Conversa</string>
@@ -496,7 +495,7 @@
     <string name="market_reviews_empty_sent_subtitle">Abra um pedido concluído para deixar uma avaliação.</string>
     <string name="market_reviews_empty_sent_title">Você ainda não escreveu nenhuma avaliação</string>
     <string name="market_reviews_response_label">Resposta</string>
-    <string name="market_reviews_response_placeholder">Escreva uma resposta…</string>
+    <string name="market_reviews_response_placeholder">Escreva uma resposta</string>
     <string name="market_sale_carrier_custom_label">Nome da transportadora</string>
     <string name="market_sale_dispute_evidence_due">Provas até %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Motivo do chargeback da Stripe: %1$s</string>
@@ -582,7 +581,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Avaliações do vendedor</string>
     <string name="market_account_stripe_open_failed">Não foi possível abrir a Stripe</string>
     <string name="market_editor_stock">Estoque</string>
-    <string name="market_editor_stock_units">Número de unidades</string>
     <string name="market_editor_stock_unlimited">Ilimitado</string>
     <string name="market_editor_start_time">Hora de início</string>
     <string name="market_editor_start_time_help">Deixe em branco para iniciar na publicação.</string>

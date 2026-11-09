@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">اتخاذ قرار</string>
     <string name="staff_appeals_decision_denied">الإبقاء على رفض الإدراج</string>
     <string name="staff_appeals_decision_label">القرار</string>
-    <string name="staff_appeals_decision_placeholder">اختر قرارًا</string>
     <string name="staff_appeals_decision_upheld">اعتماد الإدراج</string>
     <string name="staff_appeals_denied_toast">تم رفض الطعن</string>
     <string name="staff_appeals_dialog_title">البت في الطعن</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">يجب أن يكون مبلغ الاسترداد أكبر من صفر</string>
     <string name="staff_disputes_resolution_buyer">الحل لصالح المشتري</string>
     <string name="staff_disputes_resolution_label">القرار</string>
-    <string name="staff_disputes_resolution_placeholder">اختر القرار</string>
     <string name="staff_disputes_resolution_seller">الحل لصالح البائع</string>
     <string name="staff_disputes_resolve">حل</string>
     <string name="staff_disputes_resolved_toast">تم حل النزاع</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">حظر المستخدم</string>
     <string name="staff_reports_action_dismiss">رفض</string>
     <string name="staff_reports_action_label">الإجراء</string>
-    <string name="staff_reports_action_placeholder">اختر إجراءً</string>
     <string name="staff_reports_action_remove">إزالة</string>
     <string name="staff_reports_action_suspend">تعليق كبائع</string>
     <string name="staff_reports_action_taken_toast">تم اتخاذ إجراء التقرير</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">شخص</string>
     <string name="staff_team_dialog_role">الدور</string>
     <string name="staff_team_dialog_role_placeholder">اختر الدور</string>
-    <string name="staff_team_dialog_search_placeholder">ابحث بالاسم أو البصمة أو ID…</string>
+    <string name="staff_team_dialog_search_placeholder">ابحث بالاسم أو البصمة أو ID</string>
     <string name="staff_team_empty">لا يوجد أعضاء فريق</string>
     <string name="staff_team_remove_confirm">إزالة</string>
     <string name="staff_team_remove_desc">إزالة هذا العضو من فريق العمل؟</string>

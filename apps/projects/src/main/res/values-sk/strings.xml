@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Nahrať súbor .json</string>
     <string name="projects_settings_not_set">Nenastavené</string>
     <string name="projects_settings_updated">Projekt aktualizovaný</string>
-    <string name="projects_property_select">Vyberte …</string>
     <string name="projects_activity_attached">priložil(a)</string>
     <string name="projects_activity_commented">komentoval(a)</string>
     <string name="projects_attachment_delete_confirm_message">Táto príloha bude natrvalo odstránená.</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">সিদ্ধান্ত নিন</string>
     <string name="staff_appeals_decision_denied">তালিকা প্রত্যাখ্যাত রাখুন</string>
     <string name="staff_appeals_decision_label">সিদ্ধান্ত</string>
-    <string name="staff_appeals_decision_placeholder">সিদ্ধান্ত নির্বাচন করুন</string>
     <string name="staff_appeals_decision_upheld">তালিকা অনুমোদন করুন</string>
     <string name="staff_appeals_denied_toast">আপিল প্রত্যাখ্যান করা হয়েছে</string>
     <string name="staff_appeals_dialog_title">আপিলের সিদ্ধান্ত নিন</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">রিফান্ডের পরিমাণ অবশ্যই শূন্যের চেয়ে বেশি হতে হবে</string>
     <string name="staff_disputes_resolution_buyer">ক্রেতার পক্ষে সমাধান করুন</string>
     <string name="staff_disputes_resolution_label">সমাধান</string>
-    <string name="staff_disputes_resolution_placeholder">সমাধান নির্বাচন করুন</string>
     <string name="staff_disputes_resolution_seller">বিক্রেতার পক্ষে সমাধান করুন</string>
     <string name="staff_disputes_resolve">সমাধান করুন</string>
     <string name="staff_disputes_resolved_toast">বিরোধ সমাধান হয়েছে</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">ব্যবহারকারীকে নিষিদ্ধ করুন</string>
     <string name="staff_reports_action_dismiss">খারিজ করুন</string>
     <string name="staff_reports_action_label">অ্যাকশন</string>
-    <string name="staff_reports_action_placeholder">অ্যাকশন নির্বাচন করুন</string>
     <string name="staff_reports_action_remove">সরান</string>
     <string name="staff_reports_action_suspend">বিক্রেতা হিসাবে স্থগিত করুন</string>
     <string name="staff_reports_action_taken_toast">রিপোর্ট অ্যাকশন গৃহীত হয়েছে</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">ব্যক্তি</string>
     <string name="staff_team_dialog_role">ভূমিকা</string>
     <string name="staff_team_dialog_role_placeholder">ভূমিকা নির্বাচন করুন</string>
-    <string name="staff_team_dialog_search_placeholder">নাম, আঙুলের ছাপ বা ID দ্বারা অনুসন্ধান…</string>
+    <string name="staff_team_dialog_search_placeholder">নাম, আঙুলের ছাপ বা ID দ্বারা অনুসন্ধান</string>
     <string name="staff_team_empty">কোনো টিম সদস্য নেই</string>
     <string name="staff_team_remove_confirm">সরান</string>
     <string name="staff_team_remove_desc">স্টাফ টিম থেকে এই সদস্যকে সরাবেন?</string>

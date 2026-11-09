@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json فائل اپ لوڈ کریں</string>
     <string name="projects_settings_not_set">سیٹ نہیں ہے</string>
     <string name="projects_settings_updated">پروجیکٹ اپ ڈیٹ ہو گیا</string>
-    <string name="projects_property_select">منتخب کریں …</string>
     <string name="projects_activity_attached">منسلک کیا</string>
     <string name="projects_activity_commented">تبصرہ کیا</string>
     <string name="projects_attachment_delete_confirm_message">یہ منسلکہ مستقل طور پر حذف کر دیا جائے گا۔</string>

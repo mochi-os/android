@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Одлучи</string>
     <string name="staff_appeals_decision_denied">Задржи го одбиен оглас</string>
     <string name="staff_appeals_decision_label">Одлука</string>
-    <string name="staff_appeals_decision_placeholder">Изберете одлука</string>
     <string name="staff_appeals_decision_upheld">Одобри оглас</string>
     <string name="staff_appeals_denied_toast">Жалбата е одбиена</string>
     <string name="staff_appeals_dialog_title">Одлучи за жалба</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Износот на поврат мора да биде поголем од нула</string>
     <string name="staff_disputes_resolution_buyer">Реши во корист на купувачот</string>
     <string name="staff_disputes_resolution_label">Решение</string>
-    <string name="staff_disputes_resolution_placeholder">Изберете резолуција</string>
     <string name="staff_disputes_resolution_seller">Реши во корист на продавачот</string>
     <string name="staff_disputes_resolve">Реши</string>
     <string name="staff_disputes_resolved_toast">Спорот е решен</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Блокирај корисник</string>
     <string name="staff_reports_action_dismiss">Отфрли</string>
     <string name="staff_reports_action_label">Акција</string>
-    <string name="staff_reports_action_placeholder">Изберете акција</string>
     <string name="staff_reports_action_remove">Отстрани</string>
     <string name="staff_reports_action_suspend">Суспендирај како продавач</string>
     <string name="staff_reports_action_taken_toast">Преземена е акција за извештајот</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Лице</string>
     <string name="staff_team_dialog_role">Улога</string>
     <string name="staff_team_dialog_role_placeholder">Изберете улога</string>
-    <string name="staff_team_dialog_search_placeholder">Пребарување по име, отпечаток или ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Пребарување по име, отпечаток или ID</string>
     <string name="staff_team_empty">Нема членови на тимот</string>
     <string name="staff_team_remove_confirm">Отстрани</string>
     <string name="staff_team_remove_desc">Да го отстраниме овој член од тимот на персоналот?</string>

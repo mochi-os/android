@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Još nema pravila — primjenjuju se zadane vrijednosti</string>
     <string name="forums_members_search">Filtriraj članove</string>
     <string name="forums_banner_description">Markdown prikazan na vrhu foruma.</string>
-    <string name="forums_banner_placeholder">Unesite tekst banera (podržan je Markdown)…</string>
     <string name="forums_ai_mode_off">Onemogućeno</string>
     <string name="forums_moderation_queue_empty">Ništa na čekanju</string>
     <string name="forums_moderation_report_details">Detalji: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Ističe %1$s</string>
     <string name="forums_moderation_restriction_permanent">Trajno</string>
     <string name="forums_report_reason_hate">Mržnja</string>
-    <string name="forums_write_comment">Napišite komentar…</string>
+    <string name="forums_write_comment">Napišite komentar</string>
     <string name="forums_comment_delete_message">Jeste li sigurni da želite obrisati ovaj komentar?</string>
     <string name="forums_comment_replying_to">Odgovara se na %1$s</string>
     <string name="forums_comment_clear_reply">Otkaži odgovor</string>

@@ -6,7 +6,7 @@
     <string name="people_groups_title">المجموعات</string>
     <string name="people_group_title">مجموعة</string>
     <string name="people_person_title">شخص</string>
-    <string name="people_friends_search_placeholder">بحث…</string>
+    <string name="people_friends_search_placeholder">بحث</string>
     <string name="people_friends_no_people_found">لم يتم العثور على أشخاص</string>
     <string name="people_friends_try_adjusting">حاول تعديل البحث</string>
     <string name="people_friends_pending">قيد الانتظار</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">حذف المجموعة \"%1$s\"؟ لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="people_member_remove_confirm">هل أنت متأكد من أنك تريد إزالة %1$s من هذه المجموعة؟</string>
     <string name="people_member_remove_with_name">إزالة %1$s</string>
-    <string name="people_member_search_placeholder">أدخل الاسم للبحث…</string>
+    <string name="people_member_search_placeholder">أدخل الاسم للبحث</string>
     <string name="people_groups_add_member_confirm_title">إضافة إلى المجموعة</string>
     <string name="people_groups_add_member_confirm_action">إضافة إلى المجموعة</string>
     <string name="people_profile_image_process_failed">تعذرت معالجة صورة %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">فشل تحميل سياسة الدعوة الخاصة بك</string>
     <string name="people_profile_avatar">الصورة الرمزية</string>
     <string name="people_profile_banner">اللافتة</string>
-    <string name="people_contacts_search_placeholder">بحث…</string>
+    <string name="people_contacts_search_placeholder">بحث</string>
     <string name="people_contacts_invited">تمت الدعوة</string>
     <string name="people_contacts_accept">قبول</string>
     <string name="people_contacts_message">مراسلة</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">أُضيف مؤخرًا</string>
     <string name="people_contacts_try_different_search">جرب مصطلح بحث مختلف</string>
     <string name="people_contacts_unfriend">إزالة صديق</string>
-    <string name="people_add_contact_search_placeholder">اكتب للبحث…</string>
+    <string name="people_add_contact_search_placeholder">اكتب للبحث</string>
     <string name="people_add_contact_search_start">ابدأ الكتابة للبحث عن المستخدمين</string>
     <string name="people_contact_phone">الهاتف</string>
     <string name="people_contact_title">المسمى الوظيفي</string>

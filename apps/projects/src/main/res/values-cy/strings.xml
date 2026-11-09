@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Llwytho ffeil .json i fyny</string>
     <string name="projects_settings_not_set">Heb ei osod</string>
     <string name="projects_settings_updated">Prosiect wedi\'i ddiweddaru</string>
-    <string name="projects_property_select">Dewiswch …</string>
     <string name="projects_activity_attached">atododd</string>
     <string name="projects_activity_commented">gwnaeth sylw</string>
     <string name="projects_attachment_delete_confirm_message">Bydd yr atodiad hwn yn cael ei ddileu am byth.</string>

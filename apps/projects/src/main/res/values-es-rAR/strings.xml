@@ -285,7 +285,6 @@
     <string name="projects_access_selected">Seleccionado: %1$s</string>
     <string name="projects_create_allow_search">Permití que cualquiera busque el proyecto</string>
     <string name="projects_create_upload_json">Subí un archivo .json</string>
-    <string name="projects_property_select">Seleccionar …</string>
     <string name="projects_activity_attached">adjuntó</string>
     <string name="projects_activity_commented">comentó</string>
     <string name="projects_attachment_delete_confirm_message">Este adjunto se eliminará permanentemente.</string>

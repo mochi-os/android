@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Решить</string>
     <string name="staff_appeals_decision_denied">Оставить объявление отклонённым</string>
     <string name="staff_appeals_decision_label">Решение</string>
-    <string name="staff_appeals_decision_placeholder">Выберите решение</string>
     <string name="staff_appeals_decision_upheld">Одобрить объявление</string>
     <string name="staff_appeals_denied_toast">Апелляция отклонена</string>
     <string name="staff_appeals_dialog_title">Рассмотреть апелляцию</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Сумма возврата должна быть больше нуля</string>
     <string name="staff_disputes_resolution_buyer">Разрешить в пользу покупателя</string>
     <string name="staff_disputes_resolution_label">Решение</string>
-    <string name="staff_disputes_resolution_placeholder">Выберите разрешение</string>
     <string name="staff_disputes_resolution_seller">Разрешить в пользу продавца</string>
     <string name="staff_disputes_resolve">Разрешить</string>
     <string name="staff_disputes_resolved_toast">Спор разрешён</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Заблокировать пользователя</string>
     <string name="staff_reports_action_dismiss">Отклонить</string>
     <string name="staff_reports_action_label">Действие</string>
-    <string name="staff_reports_action_placeholder">Выберите действие</string>
     <string name="staff_reports_action_remove">Удалить</string>
     <string name="staff_reports_action_suspend">Заблокировать как продавца</string>
     <string name="staff_reports_action_taken_toast">Принято действие по жалобе</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Человек</string>
     <string name="staff_team_dialog_role">Роль</string>
     <string name="staff_team_dialog_role_placeholder">Выберите роль</string>
-    <string name="staff_team_dialog_search_placeholder">Поиск по имени, отпечатку или ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Поиск по имени, отпечатку или ID</string>
     <string name="staff_team_empty">Нет участников команды</string>
     <string name="staff_team_remove_confirm">Удалить</string>
     <string name="staff_team_remove_desc">Удалить этого участника из команды персонала?</string>

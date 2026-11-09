@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Қарор</string>
     <string name="staff_appeals_decision_denied">Эълони радшуда нигоҳ доред</string>
     <string name="staff_appeals_decision_label">Қарор</string>
-    <string name="staff_appeals_decision_placeholder">Қарорро интихоб кунед</string>
     <string name="staff_appeals_decision_upheld">Тасдиқи эълон</string>
     <string name="staff_appeals_denied_toast">Шикоят рад шуд</string>
     <string name="staff_appeals_dialog_title">Қарор оид ба шикоят</string>
@@ -225,7 +224,6 @@
     <string name="staff_disputes_refund_must_be_positive">Маблағи бозгардонӣ бояд аз сифр зиёдтар бошад</string>
     <string name="staff_disputes_resolution_buyer">Ҳал кардан барои харидор</string>
     <string name="staff_disputes_resolution_label">Қарор</string>
-    <string name="staff_disputes_resolution_placeholder">Резолютсияро интихоб кунед</string>
     <string name="staff_disputes_resolution_seller">Ҳал кардан барои фурӯшанда</string>
     <string name="staff_disputes_resolve">Ҳал кардан</string>
     <string name="staff_disputes_resolved_toast">Баҳс ҳал шуд</string>
@@ -284,7 +282,6 @@
     <string name="staff_reports_action_ban">Манъи корбар</string>
     <string name="staff_reports_action_dismiss">Рад кардан</string>
     <string name="staff_reports_action_label">Амал</string>
-    <string name="staff_reports_action_placeholder">Интихоби амал</string>
     <string name="staff_reports_action_remove">Хориҷ кардан</string>
     <string name="staff_reports_action_suspend">Ҳамчун фурӯшанда боздоштан</string>
     <string name="staff_reports_action_taken_toast">Амали гузориш гирифта шуд</string>
@@ -435,7 +432,7 @@
     <string name="staff_reviews_order_label">фармоиш №%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s дар %3$s. Ин баррасиро ба таври доимӣ нест кунем? Ин амалро бекор кардан мумкин нест.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ин баррасиро ба таври доимӣ нест кунем? Ин амалро бекор кардан мумкин нест.</string>
-    <string name="staff_team_dialog_search_placeholder">Ҷустуҷӯ аз рӯи ном, изи ангушт ё ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Ҷустуҷӯ аз рӯи ном, изи ангушт ё ID</string>
 
     <string name="staff_config_field_stripe_webhook">Калиди махфии имзои Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Аллакай баргардонда шудааст</string>

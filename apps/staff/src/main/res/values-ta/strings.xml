@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">முடிவெடு</string>
     <string name="staff_appeals_decision_denied">பட்டியல் நிராகரிக்கப்பட்டதாக வைத்திரு</string>
     <string name="staff_appeals_decision_label">முடிவு</string>
-    <string name="staff_appeals_decision_placeholder">முடிவை தேர்ந்தெடு</string>
     <string name="staff_appeals_decision_upheld">பட்டியலை அங்கீகரி</string>
     <string name="staff_appeals_denied_toast">மேல்முறையீடு மறுக்கப்பட்டது</string>
     <string name="staff_appeals_dialog_title">மேல்முறையீட்டில் முடிவெடு</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">பணத்தைத் திரும்பப் பெறுதல் தொகை பூஜ்ஜியத்தை விட அதிகமாக இருக்க வேண்டும்</string>
     <string name="staff_disputes_resolution_buyer">வாங்குபவருக்காக தீர்க்கவும்</string>
     <string name="staff_disputes_resolution_label">தீர்வு</string>
-    <string name="staff_disputes_resolution_placeholder">தீர்வை தேர்ந்தெடு</string>
     <string name="staff_disputes_resolution_seller">விற்பனையாளருக்காக தீர்க்கவும்</string>
     <string name="staff_disputes_resolve">தீர்க்கவும்</string>
     <string name="staff_disputes_resolved_toast">தகராறு தீர்க்கப்பட்டது</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">பயனரைத் தடைசெய்</string>
     <string name="staff_reports_action_dismiss">நிராகரி</string>
     <string name="staff_reports_action_label">செயல்</string>
-    <string name="staff_reports_action_placeholder">செயலை தேர்ந்தெடு</string>
     <string name="staff_reports_action_remove">அகற்று</string>
     <string name="staff_reports_action_suspend">விற்பனையாளராக இடைநிறுத்து</string>
     <string name="staff_reports_action_taken_toast">புகார் நடவடிக்கை எடுக்கப்பட்டது</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ஆர்டர் #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s அன்று. இந்த மதிப்பாய்வை நிரந்தரமாக நீக்கவா? இதை மீட்க முடியாது.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. இந்த மதிப்பாய்வை நிரந்தரமாக நீக்கவா? இதை மீட்க முடியாது.</string>
-    <string name="staff_team_dialog_search_placeholder">பெயர், கைரேகை, அல்லது ID மூலம் தேடவும்…</string>
+    <string name="staff_team_dialog_search_placeholder">பெயர், கைரேகை, அல்லது ID மூலம் தேடவும்</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook கையொப்பமிடும் ரகசியம்</string>
     <string name="staff_disputes_meta_already_refunded">ஏற்கனவே திருப்பித் தரப்பட்டது</string>

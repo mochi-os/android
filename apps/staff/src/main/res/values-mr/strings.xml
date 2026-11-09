@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">निर्णय घ्या</string>
     <string name="staff_appeals_decision_denied">सूची नाकारलेली ठेवा</string>
     <string name="staff_appeals_decision_label">निर्णय</string>
-    <string name="staff_appeals_decision_placeholder">निर्णय निवडा</string>
     <string name="staff_appeals_decision_upheld">सूची मंजूर करा</string>
     <string name="staff_appeals_denied_toast">अपील नाकारले</string>
     <string name="staff_appeals_dialog_title">अपीलवर निर्णय घ्या</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">रिफंडची रक्कम शून्यापेक्षा जास्त असावी</string>
     <string name="staff_disputes_resolution_buyer">खरेदीदारासाठी निराकरण करा</string>
     <string name="staff_disputes_resolution_label">निराकरण</string>
-    <string name="staff_disputes_resolution_placeholder">ठराव निवडा</string>
     <string name="staff_disputes_resolution_seller">विक्रेत्यासाठी निराकरण करा</string>
     <string name="staff_disputes_resolve">निराकरण करा</string>
     <string name="staff_disputes_resolved_toast">विवाद सोडवला</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">वापरकर्ता प्रतिबंधित करा</string>
     <string name="staff_reports_action_dismiss">फेटाळा</string>
     <string name="staff_reports_action_label">क्रिया</string>
-    <string name="staff_reports_action_placeholder">क्रिया निवडा</string>
     <string name="staff_reports_action_remove">काढा</string>
     <string name="staff_reports_action_suspend">विक्रेता म्हणून निलंबित करा</string>
     <string name="staff_reports_action_taken_toast">रिपोर्ट कारवाई केली</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ऑर्डर #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%3$s रोजी %1$s → %2$s. हे पुनरावलोकन कायमचे हटवायचे? हे पूर्ववत करता येणार नाही.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. हे पुनरावलोकन कायमचे हटवायचे? हे पूर्ववत करता येणार नाही.</string>
-    <string name="staff_team_dialog_search_placeholder">नाव, फिंगरप्रिंट, किंवा ID ने शोधा…</string>
+    <string name="staff_team_dialog_search_placeholder">नाव, फिंगरप्रिंट, किंवा ID ने शोधा</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook स्वाक्षरी गुपित</string>
     <string name="staff_disputes_meta_already_refunded">आधीच परत केले</string>

@@ -90,7 +90,6 @@ fun ReportActionDialog(
                 if (!readOnly) {
                     LabeledSelectField(
                         label = stringResource(R.string.staff_reports_action_label),
-                        placeholder = stringResource(R.string.staff_reports_action_placeholder),
                         options = reportActionOptions(),
                         selected = action,
                         onSelect = { value -> action = value },

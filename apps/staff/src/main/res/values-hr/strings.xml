@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Odluči</string>
     <string name="staff_appeals_decision_denied">Zadrži oglas odbijen</string>
     <string name="staff_appeals_decision_label">Odluka</string>
-    <string name="staff_appeals_decision_placeholder">Odaberi odluku</string>
     <string name="staff_appeals_decision_upheld">Odobri oglas</string>
     <string name="staff_appeals_denied_toast">Žalba odbijena</string>
     <string name="staff_appeals_dialog_title">Odluči o žalbi</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Iznos povrata mora biti veći od nule</string>
     <string name="staff_disputes_resolution_buyer">Riješi za kupca</string>
     <string name="staff_disputes_resolution_label">Rješenje</string>
-    <string name="staff_disputes_resolution_placeholder">Odaberi rezoluciju</string>
     <string name="staff_disputes_resolution_seller">Riješi za prodavatelja</string>
     <string name="staff_disputes_resolve">Riješi</string>
     <string name="staff_disputes_resolved_toast">Spor riješen</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Blokiraj korisnika</string>
     <string name="staff_reports_action_dismiss">Odbaci</string>
     <string name="staff_reports_action_label">Radnja</string>
-    <string name="staff_reports_action_placeholder">Odaberite akciju</string>
     <string name="staff_reports_action_remove">Ukloni</string>
     <string name="staff_reports_action_suspend">Suspendiraj kao prodavača</string>
     <string name="staff_reports_action_taken_toast">Akcija prijave poduzeta</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Osoba</string>
     <string name="staff_team_dialog_role">Uloga</string>
     <string name="staff_team_dialog_role_placeholder">Odaberi ulogu</string>
-    <string name="staff_team_dialog_search_placeholder">Pretraga po imenu, otisku ili ID-u…</string>
+    <string name="staff_team_dialog_search_placeholder">Pretraga po imenu, otisku ili ID-u</string>
     <string name="staff_team_empty">Nema članova tima</string>
     <string name="staff_team_remove_confirm">Ukloni</string>
     <string name="staff_team_remove_desc">Ukloniti ovog člana iz tima osoblja?</string>

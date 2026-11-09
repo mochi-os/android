@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Загрузіць .json-файл</string>
     <string name="projects_settings_not_set">Не ўсталявана</string>
     <string name="projects_settings_updated">Праект абноўлены</string>
-    <string name="projects_property_select">Выберыце …</string>
     <string name="projects_activity_attached">далучыў(-ла)</string>
     <string name="projects_activity_commented">пракаментаваў(-ла)</string>
     <string name="projects_attachment_delete_confirm_message">Гэта далучэнне будзе выдалена назаўсёды.</string>

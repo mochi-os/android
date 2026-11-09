@@ -238,7 +238,7 @@
     <string name="route_delete_message">Ова ќе ја отстрани патеката за патот „%1$s\".</string>
     <string name="route_empty">Нема конфигурирани патеки.</string>
     <string name="route_meta">Приоритет %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Барај теми за додавање…</string>
+    <string name="interests_search_placeholder">Барај теми за додавање</string>
     <string name="interests_empty">Сè уште нема интереси.</string>
     <string name="interests_summary_regenerate">Регенерирај резиме</string>
     <string name="interests_summary_regenerating">Регенерира…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Ова ќе ја ресетира „%1$s\" на стандардна (празно).</string>
     <string name="settings_home_system_users">Корисници (сервер)</string>
     <string name="system_users_add_user">Додај корисник</string>
-    <string name="system_users_search_placeholder">Барај корисници…</string>
+    <string name="system_users_search_placeholder">Барај корисници</string>
     <string name="system_users_sort_by">Сортирај по</string>
     <string name="system_users_last_login">Последна најава: %1$s</string>
     <string name="system_users_delete_message">Ова трајно ќе го избрише корисникот „%1$s\". Оваа акција не може да се откаже.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Земете име</string>
     <string name="handles_empty">Не се резервирани кориснички имиња.</string>
     <string name="handles_empty_search">Ниту едно корисничко име не одговара на пребарувањето</string>
-    <string name="handles_search_placeholder">Пребарај кориснички имиња…</string>
+    <string name="handles_search_placeholder">Пребарај кориснички имиња</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Се прикажуваат %1$s–%2$s од %3$s корисничко име</item>
         <item quantity="other">Се прикажуваат %1$s–%2$s од %3$s кориснички имиња</item>

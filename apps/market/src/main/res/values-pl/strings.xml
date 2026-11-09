@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Zamówienie #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Opowiedz kupującym o sobie…</string>
     <string name="market_account_load_failed">Nie udało się załadować konta</string>
     <string name="market_account_saved">Zmiany zapisane</string>
     <string name="market_account_status_restrictions">Niektóre działania, w tym tworzenie nowych ofert i finalizowanie zamówień, są ograniczone, gdy konto jest w tym stanie.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Nowa oferta</string>
     <string name="market_listings_search_placeholder">Szukaj w swoich ofertach</string>
     <string name="market_listings_share_chooser">Udostępnij ofertę</string>
-    <string name="market_messages_compose_placeholder">Napisz wiadomość…</string>
+    <string name="market_messages_compose_placeholder">Napisz wiadomość</string>
     <string name="market_messages_inbox_empty_subtitle">Gdy napiszesz do sprzedawcy (lub kupujący napisze do Ciebie), rozmowa pojawi się tutaj.</string>
     <string name="market_messages_inbox_empty_title">Brak rozmów</string>
     <string name="market_messages_thread_title">Rozmowa</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Otwórz zakończone zamówienie, aby wystawić recenzję.</string>
     <string name="market_reviews_empty_sent_title">Nie napisałeś jeszcze żadnych recenzji</string>
     <string name="market_reviews_response_label">Odpowiedź</string>
-    <string name="market_reviews_response_placeholder">Napisz odpowiedź…</string>
+    <string name="market_reviews_response_placeholder">Napisz odpowiedź</string>
     <string name="market_sale_carrier_custom_label">Nazwa przewoźnika</string>
     <string name="market_sale_dispute_evidence_due">Termin dostarczenia dowodów: %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Powód obciążenia zwrotnego Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Opinie o sprzedawcy</string>
     <string name="market_account_stripe_open_failed">Nie udało się otworzyć Stripe</string>
     <string name="market_editor_stock">Stan magazynowy</string>
-    <string name="market_editor_stock_units">Liczba jednostek</string>
     <string name="market_editor_stock_unlimited">Bez limitu</string>
     <string name="market_editor_start_time">Czas rozpoczęcia</string>
     <string name="market_editor_start_time_help">Pozostaw puste, aby rozpocząć przy publikacji.</string>

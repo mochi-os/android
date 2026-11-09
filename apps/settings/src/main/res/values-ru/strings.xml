@@ -240,7 +240,7 @@
     <string name="route_delete_message">Это удалит маршрут для пути «%1$s».</string>
     <string name="route_empty">Маршруты не настроены.</string>
     <string name="route_meta">Приоритет %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Поиск тем для добавления…</string>
+    <string name="interests_search_placeholder">Поиск тем для добавления</string>
     <string name="interests_empty">Пока нет интересов.</string>
     <string name="interests_summary_regenerate">Перегенерировать сводку</string>
     <string name="interests_summary_regenerating">Пересоздание…</string>
@@ -264,7 +264,7 @@
     <string name="system_settings_reset_message_empty">Это сбросит «%1$s» к значению по умолчанию (пусто).</string>
     <string name="settings_home_system_users">Пользователи (сервер)</string>
     <string name="system_users_add_user">Добавить пользователя</string>
-    <string name="system_users_search_placeholder">Поиск пользователей…</string>
+    <string name="system_users_search_placeholder">Поиск пользователей</string>
     <string name="system_users_sort_by">Сортировать по</string>
     <string name="system_users_last_login">Последний вход: %1$s</string>
     <string name="system_users_delete_message">Это окончательно удалит пользователя «%1$s». Это действие нельзя отменить.</string>
@@ -575,7 +575,7 @@
     <string name="handles_take">Занять имя</string>
     <string name="handles_empty">Нет зарезервированных псевдонимов.</string>
     <string name="handles_empty_search">Под ваш поиск не подходит ни один псевдоним</string>
-    <string name="handles_search_placeholder">Поиск псевдонимов…</string>
+    <string name="handles_search_placeholder">Поиск псевдонимов</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Показано %1$s–%2$s из %3$s псевдонима</item>
         <item quantity="few">Показано %1$s–%2$s из %3$s псевдонимов</item>

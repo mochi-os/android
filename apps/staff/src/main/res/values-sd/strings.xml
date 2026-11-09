@@ -38,7 +38,6 @@
     <string name="staff_appeals_decide">فيصلو ڪريو</string>
     <string name="staff_appeals_decision_denied">لسٽنگ کي رد رکيو</string>
     <string name="staff_appeals_decision_label">فيصلو</string>
-    <string name="staff_appeals_decision_placeholder">فيصلو چونڊيو</string>
     <string name="staff_appeals_decision_upheld">لسٽنگ منظور ڪريو</string>
     <string name="staff_appeals_denied_toast">اپيل رد</string>
     <string name="staff_appeals_dialog_title">اپيل تي فيصلو ڪريو</string>
@@ -219,7 +218,6 @@
     <string name="staff_disputes_refund_must_be_positive">واپسي رقم صفر کان وڌيڪ هجڻ گهرجي</string>
     <string name="staff_disputes_resolution_buyer">خريد ڪندڙ لاءِ حل ڪريو</string>
     <string name="staff_disputes_resolution_label">حل</string>
-    <string name="staff_disputes_resolution_placeholder">حل چونڊيو</string>
     <string name="staff_disputes_resolution_seller">وڪرو ڪندڙ لاءِ حل ڪريو</string>
     <string name="staff_disputes_resolve">حل ڪريو</string>
     <string name="staff_disputes_resolved_toast">تڪرار حل ٿيو</string>
@@ -277,7 +275,6 @@
     <string name="staff_reports_action_ban">صارف تي پابندي</string>
     <string name="staff_reports_action_dismiss">رد ڪريو</string>
     <string name="staff_reports_action_label">عمل</string>
-    <string name="staff_reports_action_placeholder">عمل چونڊيو</string>
     <string name="staff_reports_action_remove">هٽايو</string>
     <string name="staff_reports_action_suspend">وڪرو ڪندڙ طور معطل ڪريو</string>
     <string name="staff_reports_action_taken_toast">رپورٽ تي ڪارروائي ڪئي وئي</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">آرڊر #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s تي. هي جائزو مستقل طور ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. هي جائزو مستقل طور ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
-    <string name="staff_team_dialog_search_placeholder">نالي، فنگر پرنٽ، يا ID سان ڳوليو…</string>
+    <string name="staff_team_dialog_search_placeholder">نالي، فنگر پرنٽ، يا ID سان ڳوليو</string>
 
     <string name="staff_config_field_stripe_webhook">ويب هوڪ دستخط ڳجهو ڪنجي</string>
     <string name="staff_disputes_meta_already_refunded">اڳ ۾ ئي واپس ٿيل</string>

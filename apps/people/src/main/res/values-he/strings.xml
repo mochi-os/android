@@ -6,7 +6,7 @@
     <string name="people_groups_title">קבוצות</string>
     <string name="people_group_title">קבוצה</string>
     <string name="people_person_title">אדם</string>
-    <string name="people_friends_search_placeholder">חיפוש…</string>
+    <string name="people_friends_search_placeholder">חיפוש</string>
     <string name="people_friends_no_people_found">לא נמצאו אנשים</string>
     <string name="people_friends_try_adjusting">נסה להתאים את החיפוש שלך</string>
     <string name="people_friends_pending">ממתין</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">למחוק את הקבוצה \"%1$s\"? לא ניתן לבטל זאת.</string>
     <string name="people_member_remove_confirm">האם אתה בטוח שברצונך להסיר את %1$s מקבוצה זו?</string>
     <string name="people_member_remove_with_name">הסר את %1$s</string>
-    <string name="people_member_search_placeholder">הזן שם לחיפוש…</string>
+    <string name="people_member_search_placeholder">הזן שם לחיפוש</string>
     <string name="people_groups_add_member_confirm_title">הוספה לקבוצה</string>
     <string name="people_groups_add_member_confirm_action">הוסף לקבוצה</string>
     <string name="people_profile_image_process_failed">לא ניתן היה לעבד את תמונת %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">טעינת מדיניות ההזמנות שלך נכשלה</string>
     <string name="people_profile_avatar">אווטר</string>
     <string name="people_profile_banner">באנר</string>
-    <string name="people_contacts_search_placeholder">חיפוש…</string>
+    <string name="people_contacts_search_placeholder">חיפוש</string>
     <string name="people_contacts_invited">הוזמן</string>
     <string name="people_contacts_accept">אישור</string>
     <string name="people_contacts_message">שלח הודעה</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">נוסף לאחרונה</string>
     <string name="people_contacts_try_different_search">נסה מונח חיפוש אחר</string>
     <string name="people_contacts_unfriend">הסר חבר</string>
-    <string name="people_add_contact_search_placeholder">הקלד לחיפוש…</string>
+    <string name="people_add_contact_search_placeholder">הקלד לחיפוש</string>
     <string name="people_add_contact_search_start">התחל להקליד כדי לחפש משתמשים</string>
     <string name="people_contact_phone">טלפון</string>
     <string name="people_contact_title">תפקיד</string>

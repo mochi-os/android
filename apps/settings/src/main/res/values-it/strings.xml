@@ -238,7 +238,7 @@
     <string name="route_delete_message">Questo rimuoverà il percorso per il path «%1$s».</string>
     <string name="route_empty">Nessun percorso configurato.</string>
     <string name="route_meta">Priorità %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Cerca argomenti da aggiungere…</string>
+    <string name="interests_search_placeholder">Cerca argomenti da aggiungere</string>
     <string name="interests_empty">Ancora nessun interesse.</string>
     <string name="interests_summary_regenerate">Rigenera riepilogo</string>
     <string name="interests_summary_regenerating">Rigenerazione in corso…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Questo ripristinerà «%1$s» al suo predefinito (vuoto).</string>
     <string name="settings_home_system_users">Utenti (server)</string>
     <string name="system_users_add_user">Aggiungi utente</string>
-    <string name="system_users_search_placeholder">Cerca utenti…</string>
+    <string name="system_users_search_placeholder">Cerca utenti</string>
     <string name="system_users_sort_by">Ordina per</string>
     <string name="system_users_last_login">Ultimo accesso: %1$s</string>
     <string name="system_users_delete_message">Questo eliminerà definitivamente l\'utente «%1$s». Quest\'azione non può essere annullata.</string>
@@ -556,7 +556,7 @@
     <string name="handles_take">Prendi un nome</string>
     <string name="handles_empty">Nessun nome utente è stato riservato.</string>
     <string name="handles_empty_search">Nessun nome utente corrisponde alla tua ricerca</string>
-    <string name="handles_search_placeholder">Cerca nomi utente…</string>
+    <string name="handles_search_placeholder">Cerca nomi utente</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Visualizzazione di %1$s–%2$s su %3$s nome utente</item>
         <item quantity="other">Visualizzazione di %1$s–%2$s su %3$s nomi utente</item>

@@ -84,7 +84,7 @@
     <string name="feeds_send">भेजीं</string>
 
     <string name="notification_channel_feeds">फीड सूचना</string>
-    <string name="feeds_search_placeholder">फीड खोजीं भा URL पेस्ट करीं…</string>
+    <string name="feeds_search_placeholder">फीड खोजीं भा URL पेस्ट करीं</string>
     <string name="feeds_url_result">URL परिणाम</string>
     <string name="feeds_search_results">खोज परिणाम</string>
     <string name="feeds_unread_only">खाली बिन पढ़ल</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">रउआ के ई फीड से अपडेट मिलल बंद हो जाई। रउआ कबो फेर से सब्सक्राइब कर सकेनी।</string>
     <string name="feeds_access_select_rule">पहुँच नियम चुनीं</string>
     <string name="feeds_access_authenticated_desc">जे केहू लॉग इन बा</string>
-    <string name="feeds_banner_hint">ए फोरम में रउआ के स्वागत बा…</string>
     <string name="feeds_banner_dismiss">बैनर खारिज करीं</string>
     <string name="feeds_members_search">सदस्य छाँटीं</string>
     <string name="feeds_ai_prompt_default">डिफ़ॉल्ट</string>

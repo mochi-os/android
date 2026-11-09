@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Отправить</string>
     <string name="forums_post_body_field">Текст</string>
-    <string name="forums_write_comment">Напишите комментарий…</string>
+    <string name="forums_write_comment">Напишите комментарий</string>
 
     <string name="notification_channel_forums">Уведомления форумов</string>
     <string name="forums_list_empty">Форумов пока нет</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Правил пока нет — применяются настройки по умолчанию</string>
     <string name="forums_members_search">Фильтр участников</string>
     <string name="forums_banner_description">Markdown, отображаемый вверху форума.</string>
-    <string name="forums_banner_placeholder">Введите текст баннера (поддерживается Markdown)…</string>
     <string name="forums_ai_mode_off">Отключено</string>
     <string name="forums_moderation_queue_empty">Нет ожидающих</string>
     <string name="forums_moderation_report_details">Подробности: %1$s</string>

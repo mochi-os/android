@@ -6,7 +6,7 @@
     <string name="people_groups_title">그룹</string>
     <string name="people_group_title">그룹</string>
     <string name="people_person_title">사람</string>
-    <string name="people_friends_search_placeholder">검색…</string>
+    <string name="people_friends_search_placeholder">검색</string>
     <string name="people_friends_no_people_found">사람을 찾을 수 없어요</string>
     <string name="people_friends_try_adjusting">검색을 조정해 보세요</string>
     <string name="people_friends_pending">대기 중</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" 그룹을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>
     <string name="people_member_remove_confirm">%1$s 님을 이 그룹에서 삭제하시겠습니까?</string>
     <string name="people_member_remove_with_name">%1$s 삭제</string>
-    <string name="people_member_search_placeholder">검색할 이름을 입력하세요…</string>
+    <string name="people_member_search_placeholder">검색할 이름을 입력하세요</string>
     <string name="people_groups_add_member_confirm_title">그룹에 추가</string>
     <string name="people_groups_add_member_confirm_action">그룹에 추가</string>
     <string name="people_profile_image_process_failed">%1$s 이미지를 처리할 수 없습니다</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">초대 정책 불러오기에 실패했어요</string>
     <string name="people_profile_avatar">아바타</string>
     <string name="people_profile_banner">배너</string>
-    <string name="people_contacts_search_placeholder">검색…</string>
+    <string name="people_contacts_search_placeholder">검색</string>
     <string name="people_contacts_invited">초대됨</string>
     <string name="people_contacts_accept">수락</string>
     <string name="people_contacts_message">메시지 보내기</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">최근 추가됨</string>
     <string name="people_contacts_try_different_search">다른 검색어를 시도하세요</string>
     <string name="people_contacts_unfriend">친구 제거</string>
-    <string name="people_add_contact_search_placeholder">검색하려면 입력하세요…</string>
+    <string name="people_add_contact_search_placeholder">검색하려면 입력하세요</string>
     <string name="people_add_contact_search_start">사용자를 검색하려면 입력을 시작하세요</string>
     <string name="people_contact_phone">전화번호</string>
     <string name="people_contact_title">직책</string>

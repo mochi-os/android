@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Жөнөтүү</string>
     <string name="forums_post_body_field">Текст</string>
-    <string name="forums_write_comment">Пикир жазыңыз…</string>
+    <string name="forums_write_comment">Пикир жазыңыз</string>
 
     <string name="notification_channel_forums">Форумдардын билдирмелери</string>
     <string name="forums_list_empty">Азырынча форумдар жок</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Азырынча эрежелер жок — демейкилер колдонулат</string>
     <string name="forums_members_search">Мүчөлөрдү чыпкалоо</string>
     <string name="forums_banner_description">Форумдун жогору жагында көрсөтүлүүчү Markdown.</string>
-    <string name="forums_banner_placeholder">Баннердин текстин киргизиңиз (Markdown колдоого алынат)…</string>
     <string name="forums_ai_mode_off">Өчүрүлгөн</string>
     <string name="forums_moderation_queue_empty">Күтүүдө эч нерсе жок</string>
     <string name="forums_moderation_report_details">Чоо-жайы: %1$s</string>

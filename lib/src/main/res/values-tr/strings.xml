@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Temadan</string>
     <string name="settings_background_off">Yok</string>
     <string name="game_chat_empty">Henüz mesaj yok</string>
-    <string name="game_chat_input_placeholder">Bir mesaj yaz…</string>
+    <string name="game_chat_input_placeholder">Bir mesaj yaz</string>
     <string name="game_chat_send">Mesaj gönder</string>
     <string name="game_chat_subject_you">Sen</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Siz olduğunuzu doğrulayın</string>
     <string name="stepup_description">Bu, hesabınızda yapılan bir güvenlik değişikliğidir. Devam etmek için siz olduğunuzu doğrulayın.</string>
     <string name="stepup_email_label">E-posta kodu</string>
-    <string name="stepup_email_placeholder">E-postanızdaki kodu girin</string>
     <string name="stepup_totp_label">Authenticator kodu</string>
-    <string name="stepup_totp_placeholder">Kimlik doğrulayıcı kodunuzu girin</string>
     <string name="stepup_use_passkey">Geçiş anahtarınızı kullanın</string>
     <string name="stepup_send_email">E-posta gönder</string>
     <string name="stepup_resend_email">E-postayı yeniden gönder</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Etiketi kaldır</string>
     <string name="person_picker_none">Yok</string>
     <string name="person_picker_clear">Seçimi temizle</string>
-    <string name="person_picker_select">Seçin …</string>
+    <string name="person_picker_select">Seçin</string>
     <string name="person_picker_directory">Dizin</string>
     <string name="person_picker_no_people">Kişi yok</string>
     <string name="person_picker_project_members">Proje üyeleri</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Bildirim kategorisini değiştir</string>
     <string name="lightbox_comments_none">Bu görselde henüz yorum yok.</string>
     <string name="lightbox_comments_only">Yalnızca bu görselin yorumlarını göster</string>
-    <string name="lightbox_comment_placeholder">Bu görsele yorum yapın…</string>
+    <string name="lightbox_comment_placeholder">Bu görsele yorum yapın</string>
     <string name="comment_anchor_open">Bu yorumun ilgili olduğu görseli görüntüle</string>
     <string name="comment_anchor_default">Bu görselde</string>
     <plurals name="lightbox_comments_others">

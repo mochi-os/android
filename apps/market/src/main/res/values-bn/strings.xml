@@ -386,7 +386,7 @@
     <string name="market_listings_new">নতুন লিস্টিং</string>
     <string name="market_listings_search_placeholder">আপনার লিস্টিং অনুসন্ধান করুন</string>
     <string name="market_listings_share_chooser">লিস্টিং শেয়ার করুন</string>
-    <string name="market_messages_compose_placeholder">একটি বার্তা লিখুন…</string>
+    <string name="market_messages_compose_placeholder">একটি বার্তা লিখুন</string>
     <string name="market_messages_inbox_empty_subtitle">আপনি যখন কোনো বিক্রেতাকে বার্তা পাঠান (বা কোনো ক্রেতা আপনাকে বার্তা পাঠায়) তখন থ্রেডটি এখানে দেখা যাবে।</string>
     <string name="market_messages_inbox_empty_title">এখনও কোনো কথোপকথন নেই</string>
     <string name="market_messages_thread_title">কথোপকথন</string>
@@ -430,7 +430,7 @@
     <string name="market_reviews_empty_sent_subtitle">পর্যালোচনা দিতে একটি সম্পূর্ণ হওয়া অর্ডার খুলুন।</string>
     <string name="market_reviews_empty_sent_title">আপনি এখনও কোনো পর্যালোচনা লেখেননি</string>
     <string name="market_reviews_response_label">প্রতিক্রিয়া</string>
-    <string name="market_reviews_response_placeholder">একটি প্রতিক্রিয়া লিখুন…</string>
+    <string name="market_reviews_response_placeholder">একটি প্রতিক্রিয়া লিখুন</string>
     <string name="market_sale_carrier_custom_label">ক্যারিয়ারের নাম</string>
     <string name="market_sale_dispute_evidence_due">প্রমাণ জমা দেওয়ার শেষ তারিখ %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe চার্জব্যাকের কারণ: %1$s</string>
@@ -469,7 +469,6 @@
     <string name="market_editor_title_new">নতুন লিস্টিং</string>
     <string name="market_editor_title_required">ছবি বা ফাইল যোগ করার আগে একটি শিরোনাম লিখুন</string>
 
-    <string name="market_account_biography_placeholder">ক্রেতাদের নিজের সম্পর্কে বলুন…</string>
     <string name="market_account_load_failed">অ্যাকাউন্ট লোড করা যায়নি</string>
     <string name="market_account_saved">পরিবর্তনগুলি সংরক্ষিত হয়েছে</string>
     <string name="market_account_status_restrictions">আপনার অ্যাকাউন্ট এই অবস্থায় থাকাকালীন নতুন তালিকা তৈরি এবং অর্ডার সম্পূর্ণ করা সহ কিছু কার্যক্রম সীমাবদ্ধ থাকে।</string>
@@ -592,7 +591,6 @@
     <string name="market_listing_detail_seller_reviews_heading">বিক্রেতার পর্যালোচনা</string>
     <string name="market_account_stripe_open_failed">Stripe খোলা যায়নি</string>
     <string name="market_editor_stock">স্টক</string>
-    <string name="market_editor_stock_units">ইউনিটের সংখ্যা</string>
     <string name="market_editor_stock_unlimited">সীমাহীন</string>
     <string name="market_editor_start_time">শুরুর সময়</string>
     <string name="market_editor_start_time_help">প্রকাশের সময় শুরু করতে খালি রাখুন।</string>

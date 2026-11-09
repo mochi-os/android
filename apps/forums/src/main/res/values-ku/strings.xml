@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Bişîne</string>
     <string name="forums_post_body_field">Naverok</string>
-    <string name="forums_write_comment">Şîroveyekê binivîse…</string>
+    <string name="forums_write_comment">Şîroveyekê binivîse</string>
 
     <string name="notification_channel_forums">Agahdariyên foruman</string>
     <string name="forums_list_empty">Hêj forum tune</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Hêj rêbaz tune — yên berdest têne sepandin</string>
     <string name="forums_members_search">Endaman parz bike</string>
     <string name="forums_banner_description">Markdown ku li jora forumê tê nîşandan.</string>
-    <string name="forums_banner_placeholder">Nivîsa banerê binivîse (markdown tê piştgirîkirin)…</string>
     <string name="forums_ai_mode_off">Neçalak</string>
     <string name="forums_moderation_queue_empty">Tiştek li benda nîne</string>
     <string name="forums_moderation_report_details">Hûragahî: %1$s</string>

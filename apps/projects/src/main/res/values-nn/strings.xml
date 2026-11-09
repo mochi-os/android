@@ -301,7 +301,6 @@
     <string name="projects_create_upload_json">Last opp .json-fil</string>
     <string name="projects_settings_not_set">Ikkje sett</string>
     <string name="projects_settings_updated">Prosjekt oppdatert</string>
-    <string name="projects_property_select">Vel …</string>
     <string name="projects_activity_attached">la ved</string>
     <string name="projects_activity_commented">kommenterte</string>
     <string name="projects_attachment_delete_confirm_message">Dette vedlegget vert sletta for alltid.</string>

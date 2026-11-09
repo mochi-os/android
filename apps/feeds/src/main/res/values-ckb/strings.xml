@@ -96,7 +96,7 @@
     <string name="feeds_move_down">گواستنەوە بۆ خوارەوە</string>
 
     <string name="notification_channel_feeds">ئاگادارکردنەوەکانی هەواڵدەرەکان</string>
-    <string name="feeds_search_placeholder">گەڕان لە هەواڵدەرەکان یان لکاندنی URL…</string>
+    <string name="feeds_search_placeholder">گەڕان لە هەواڵدەرەکان یان لکاندنی URL</string>
     <string name="feeds_url_result">ئەنجامی URL</string>
     <string name="feeds_search_results">ئەنجامەکانی گەڕان</string>
     <string name="feeds_unread_only">تەنها نەخوێندراوەکان</string>
@@ -204,7 +204,6 @@
     <string name="feeds_unsubscribe_confirm_message">ئیتر نوێکارییەکانی ئەم فیدە وەرناگریت. دەتوانیت هەر کاتێک دووبارە بەشدار ببیتەوە.</string>
     <string name="feeds_access_select_rule">ڕێسای دەستڕاگەیشتن هەڵبژێرە</string>
     <string name="feeds_access_authenticated_desc">هەر کەسێک کە چووەتە ژوورەوە</string>
-    <string name="feeds_banner_hint">بەخێربێیت بۆ ئەم فۆڕەمە…</string>
     <string name="feeds_banner_dismiss">لابردنی بانەر</string>
     <string name="feeds_members_search">فلتەرکردنی ئەندامان</string>
     <string name="feeds_ai_prompt_default">بنەڕەت</string>

@@ -157,7 +157,6 @@
     <string name="market_purchase_review_body">評論</string>
 
     <string name="market_account_biography_label">簡介</string>
-    <string name="market_account_biography_placeholder">向買家介紹一下你自己…</string>
     <string name="market_account_load_failed">無法載入帳戶</string>
     <string name="market_account_saved">變更已儲存</string>
     <string name="market_account_status_banned_title">帳戶已封禁</string>
@@ -372,7 +371,7 @@
     <string name="market_listings_search_placeholder">搜尋你嘅上架</string>
     <string name="market_listings_share_chooser">分享上架</string>
     <string name="market_listings_title">我嘅上架</string>
-    <string name="market_messages_compose_placeholder">寫訊息…</string>
+    <string name="market_messages_compose_placeholder">寫訊息</string>
     <string name="market_messages_inbox_empty_subtitle">當你傳訊息畀賣家（或者買家傳訊息畀你），對話就會喺度顯示。</string>
     <string name="market_messages_inbox_empty_title">未有對話</string>
     <string name="market_messages_inbox_title">訊息</string>
@@ -457,7 +456,7 @@
     <string name="market_reviews_empty_sent_subtitle">打開已完成嘅訂單就可以撰寫評價。</string>
     <string name="market_reviews_empty_sent_title">你仲未寫過評價</string>
     <string name="market_reviews_response_label">回覆</string>
-    <string name="market_reviews_response_placeholder">寫低回覆…</string>
+    <string name="market_reviews_response_placeholder">寫低回覆</string>
     <string name="market_reviews_response_submit">提交回覆</string>
     <string name="market_reviews_tab_received">已收到</string>
     <string name="market_reviews_tab_sent">已發送</string>
@@ -607,7 +606,6 @@
     <string name="market_editor_start_time">開始時間</string>
     <string name="market_editor_start_time_help">留空就一發佈即刻開始。</string>
     <string name="market_editor_stock">存貨</string>
-    <string name="market_editor_stock_units">數量</string>
     <string name="market_editor_stock_unlimited">無限</string>
     <string name="market_listing_detail_seller_response">賣家回覆</string>
     <string name="market_listing_detail_seller_reviews_heading">賣家評價</string>

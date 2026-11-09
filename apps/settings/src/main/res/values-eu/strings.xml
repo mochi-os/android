@@ -238,7 +238,7 @@
     <string name="route_delete_message">Honek \"%1$s\" bidearen ibilbidea kenduko du.</string>
     <string name="route_empty">Ez dago konfiguratutako ibilbiderik.</string>
     <string name="route_meta">Lehentasuna %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Bilatu gehitzeko gaiak…</string>
+    <string name="interests_search_placeholder">Bilatu gehitzeko gaiak</string>
     <string name="interests_empty">Oraindik ez dago interesik.</string>
     <string name="interests_summary_regenerate">Birsortu laburpena</string>
     <string name="interests_summary_regenerating">Berriro sortzen…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Honek \"%1$s\" lehenetsira berrezarriko du (hutsik).</string>
     <string name="settings_home_system_users">Erabiltzaileak (zerbitzaria)</string>
     <string name="system_users_add_user">Gehitu erabiltzailea</string>
-    <string name="system_users_search_placeholder">Bilatu erabiltzaileak…</string>
+    <string name="system_users_search_placeholder">Bilatu erabiltzaileak</string>
     <string name="system_users_sort_by">Ordenatu honen arabera</string>
     <string name="system_users_last_login">Azken saio-hasiera: %1$s</string>
     <string name="system_users_delete_message">Honek behin betiko ezabatuko du \"%1$s\" erabiltzailea. Ekintza hau ezin da desegin.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Hartu izen bat</string>
     <string name="handles_empty">Ez da erabiltzaile-izenik erreserbatu.</string>
     <string name="handles_empty_search">Ez dago zure bilaketarekin bat datorren erabiltzaile-izenik</string>
-    <string name="handles_search_placeholder">Bilatu erabiltzaile-izenak…</string>
+    <string name="handles_search_placeholder">Bilatu erabiltzaile-izenak</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s erabiltzaile-izenetik %1$s–%2$s erakusten</item>
         <item quantity="other">%3$s erabiltzaile-izenetik %1$s–%2$s erakusten</item>

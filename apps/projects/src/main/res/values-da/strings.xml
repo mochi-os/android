@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Upload .json-fil</string>
     <string name="projects_settings_not_set">Ikke angivet</string>
     <string name="projects_settings_updated">Projekt opdateret</string>
-    <string name="projects_property_select">Vælg …</string>
     <string name="projects_activity_attached">vedhæftede</string>
     <string name="projects_activity_commented">kommenterede</string>
     <string name="projects_attachment_delete_confirm_message">Denne vedhæftning slettes permanent.</string>

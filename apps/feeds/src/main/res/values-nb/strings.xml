@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Flytt ned</string>
 
     <string name="notification_channel_feeds">Strømvarsler</string>
-    <string name="feeds_search_placeholder">Søk i strømmer eller lim inn URL …</string>
+    <string name="feeds_search_placeholder">Søk i strømmer eller lim inn URL</string>
     <string name="feeds_url_result">URL-resultat</string>
     <string name="feeds_search_results">Søkeresultater</string>
     <string name="feeds_unread_only">Kun uleste</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Du vil ikke lenger motta oppdateringer fra denne feeden. Du kan abonnere på nytt når som helst.</string>
     <string name="feeds_access_select_rule">Velg tilgangsregel</string>
     <string name="feeds_access_authenticated_desc">Alle som er logget inn</string>
-    <string name="feeds_banner_hint">Velkommen til dette forumet…</string>
     <string name="feeds_banner_dismiss">Lukk banner</string>
     <string name="feeds_members_search">Filtrer medlemmer</string>
     <string name="feeds_ai_prompt_default">Standard</string>

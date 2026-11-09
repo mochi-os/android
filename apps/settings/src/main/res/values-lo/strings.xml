@@ -237,7 +237,7 @@
     <string name="route_delete_message">ນີ້ຈະລົບເສັ້ນທາງສຳລັບເສັ້ນທາງ \"%1$s\".</string>
     <string name="route_empty">ບໍ່ມີເສັ້ນທາງຖືກກໍານົດ.</string>
     <string name="route_meta">ບູລິມະສິດ %1$s · %2$s</string>
-    <string name="interests_search_placeholder">ຄົ້ນຫາຫົວຂໍ້ເພື່ອເພີ່ມ…</string>
+    <string name="interests_search_placeholder">ຄົ້ນຫາຫົວຂໍ້ເພື່ອເພີ່ມ</string>
     <string name="interests_empty">ຍັງບໍ່ມີຄວາມສົນໃຈ.</string>
     <string name="interests_summary_regenerate">ສ້າງສະຫຼຸບໃໝ່</string>
     <string name="interests_summary_regenerating">ກໍາລັງສ້າງໃໝ່…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">ນີ້ຈະຣີເຊັດ \"%1$s\" ໄປຫາເບື້ອງຕົ້ນ (ຫວ່າງ).</string>
     <string name="settings_home_system_users">ຜູ້ໃຊ້ (ເຊີບເວີ)</string>
     <string name="system_users_add_user">ເພີ່ມຜູ້ໃຊ້</string>
-    <string name="system_users_search_placeholder">ຄົ້ນຫາຜູ້ໃຊ້…</string>
+    <string name="system_users_search_placeholder">ຄົ້ນຫາຜູ້ໃຊ້</string>
     <string name="system_users_sort_by">ຈັດລຽງຕາມ</string>
     <string name="system_users_last_login">ການເຂົ້າສູ່ລະບົບຄັ້ງສຸດທ້າຍ: %1$s</string>
     <string name="system_users_delete_message">ນີ້ຈະລົບຜູ້ໃຊ້ \"%1$s\" ຖາວອນ. ການກະທໍານີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
@@ -545,7 +545,7 @@
     <string name="handles_take">ເອົາຊື່</string>
     <string name="handles_empty">ບໍ່ມີຊື່ຜູ້ໃຊ້ທີ່ຖືກຈອງ.</string>
     <string name="handles_empty_search">ບໍ່ມີຊື່ຜູ້ໃຊ້ທີ່ກົງກັບການຄົ້ນຫາຂອງທ່ານ</string>
-    <string name="handles_search_placeholder">ຄົ້ນຫາຊື່ຜູ້ໃຊ້…</string>
+    <string name="handles_search_placeholder">ຄົ້ນຫາຊື່ຜູ້ໃຊ້</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">ກຳລັງສະແດງ %1$s–%2$s ຈາກ %3$s ຊື່ຜູ້ໃຊ້</item>
     </plurals>

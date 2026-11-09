@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Tải lên tệp .json</string>
     <string name="projects_settings_not_set">Chưa đặt</string>
     <string name="projects_settings_updated">Đã cập nhật dự án</string>
-    <string name="projects_property_select">Chọn …</string>
     <string name="projects_activity_attached">đã đính kèm</string>
     <string name="projects_activity_commented">đã bình luận</string>
     <string name="projects_attachment_delete_confirm_message">Tệp đính kèm này sẽ bị xóa vĩnh viễn.</string>

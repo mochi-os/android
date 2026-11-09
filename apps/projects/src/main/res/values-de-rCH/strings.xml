@@ -283,7 +283,6 @@
     <string name="projects_access_authenticated_desc">Alle angemeldeten Benutzer</string>
     <string name="projects_access_anyone_desc">Einschliesslich anonymer Benutzer</string>
     <string name="projects_access_selected">Ausgewählt: %1$s</string>
-    <string name="projects_property_select">Auswählen …</string>
     <string name="projects_activity_attached">hat angehängt</string>
     <string name="projects_activity_commented">hat kommentiert</string>
     <string name="projects_attachment_delete_confirm_message">Dieser Anhang wird dauerhaft gelöscht.</string>

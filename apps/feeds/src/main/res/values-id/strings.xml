@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Pindahkan ke bawah</string>
 
     <string name="notification_channel_feeds">Notifikasi umpan</string>
-    <string name="feeds_search_placeholder">Cari umpan atau tempel URL…</string>
+    <string name="feeds_search_placeholder">Cari umpan atau tempel URL</string>
     <string name="feeds_url_result">Hasil URL</string>
     <string name="feeds_search_results">Hasil pencarian</string>
     <string name="feeds_unread_only">Hanya yang belum dibaca</string>
@@ -200,7 +200,6 @@
     <string name="feeds_unsubscribe_confirm_message">Anda tidak akan lagi menerima pembaruan dari feed ini. Anda dapat berlangganan kembali kapan saja.</string>
     <string name="feeds_access_select_rule">Pilih aturan akses</string>
     <string name="feeds_access_authenticated_desc">Siapa pun yang sudah masuk</string>
-    <string name="feeds_banner_hint">Selamat datang di forum ini…</string>
     <string name="feeds_banner_dismiss">Tutup banner</string>
     <string name="feeds_members_search">Saring anggota</string>
     <string name="feeds_ai_prompt_default">Bawaan</string>

@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">ပို့</string>
     <string name="forums_post_body_field">အကြောင်းအရာ</string>
-    <string name="forums_write_comment">မှတ်ချက်ရေးရန်…</string>
+    <string name="forums_write_comment">မှတ်ချက်ရေးရန်</string>
 
     <string name="notification_channel_forums">ဖိုရမ် အကြောင်းကြားချက်များ</string>
     <string name="forums_list_empty">ဖိုရမ် မရှိသေးပါ</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">စည်းမျဉ်း မရှိသေးပါ — မူရင်းသတ်မှတ်ချက်များ အသုံးပြုပါမည်</string>
     <string name="forums_members_search">အဖွဲ့ဝင်များကို စစ်ထုတ်ပါ</string>
     <string name="forums_banner_description">ဖိုရမ်၏ ထိပ်တွင် ပြသမည့် Markdown။</string>
-    <string name="forums_banner_placeholder">နဖူးစည်း စာသား ထည့်ပါ (Markdown ပံ့ပိုးသည်)…</string>
     <string name="forums_ai_mode_off">ပိတ်ထားသည်</string>
     <string name="forums_moderation_queue_empty">ဆိုင်းငံ့ထားသည် မရှိပါ</string>
     <string name="forums_moderation_report_details">အသေးစိတ်: %1$s</string>

@@ -238,7 +238,7 @@
     <string name="route_delete_message">דאָס וועט אַרױסנעמען די רוט פֿאַר וועג \"%1$s\".</string>
     <string name="route_empty">קײנע רעטעס פֿאַרקאָנפֿיגירט.</string>
     <string name="route_meta">פּריאָריטעט %1$s · %2$s</string>
-    <string name="interests_search_placeholder">זוך טעמעס צוצולײגן…</string>
+    <string name="interests_search_placeholder">זוך טעמעס צוצולײגן</string>
     <string name="interests_empty">קײנע אינטערעסן ביז איצט.</string>
     <string name="interests_summary_regenerate">סך־הכּל אויסשאַפֿן ווידער</string>
     <string name="interests_summary_regenerating">רעגענערירט…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">דאָס וועט ריסעטן \"%1$s\" צו דעם סטאַנדאַרט (ליידיק).</string>
     <string name="settings_home_system_users">באַניצערס (סערווער)</string>
     <string name="system_users_add_user">לײג צו באַניצער</string>
-    <string name="system_users_search_placeholder">זוך באַניצערס…</string>
+    <string name="system_users_search_placeholder">זוך באַניצערס</string>
     <string name="system_users_sort_by">סאָרטן לויט</string>
     <string name="system_users_last_login">לעצטע לאָגין: %1$s</string>
     <string name="system_users_delete_message">דאָס וועט אױסמעקן באַניצער \"%1$s\" פֿאַר אייביק. די אַקציע קען ניט אַנטו\'ט ווערן.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">נעמען אַ נאָמען</string>
     <string name="handles_empty">קיין צונעמען זענען נישט רעזערווירט געוואָרן.</string>
     <string name="handles_empty_search">קיין צונעמען שטימען מיט אײַער זוך</string>
-    <string name="handles_search_placeholder">זוך צונעמען…</string>
+    <string name="handles_search_placeholder">זוך צונעמען</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">ווײַזט %1$s–%2$s פֿון %3$s צונאָמען</item>
         <item quantity="other">ווײַזט %1$s–%2$s פֿון %3$s צונעמען</item>

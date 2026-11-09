@@ -6,7 +6,7 @@
     <string name="people_groups_title">အုပ်စုများ</string>
     <string name="people_group_title">အုပ်စု</string>
     <string name="people_person_title">လူ</string>
-    <string name="people_friends_search_placeholder">ရှာဖွေ…</string>
+    <string name="people_friends_search_placeholder">ရှာဖွေ</string>
     <string name="people_friends_no_people_found">လူများ မတွေ့ပါ</string>
     <string name="people_friends_try_adjusting">သင်၏ ရှာဖွေမှုကို ပြင်ဆင်ကြည့်ပါ</string>
     <string name="people_friends_pending">ဆိုင်းငံ့ထား</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">အုပ်စု \"%1$s\" ကို ဖျက်မည်လား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍ မရပါ။</string>
     <string name="people_member_remove_confirm">%1$s ကို ဤအုပ်စုမှ ဖယ်ရှားလိုသည်မှာ သေချာပါသလား။</string>
     <string name="people_member_remove_with_name">%1$s ကို ဖယ်ရှားရန်</string>
-    <string name="people_member_search_placeholder">ရှာဖွေရန် အမည် ရိုက်ထည့်ပါ…</string>
+    <string name="people_member_search_placeholder">ရှာဖွေရန် အမည် ရိုက်ထည့်ပါ</string>
     <string name="people_groups_add_member_confirm_title">အုပ်စုသို့ ထည့်ရန်</string>
     <string name="people_groups_add_member_confirm_action">အုပ်စုသို့ ထည့်ရန်</string>
     <string name="people_profile_image_process_failed">%1$s ပုံကို လုပ်ဆောင်၍ မရပါ</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">သင့်ဖိတ်ကြားမှု မူဝါဒ တင်၍ မရပါ</string>
     <string name="people_profile_avatar">အသွင်ပုံ</string>
     <string name="people_profile_banner">ပိုစတာ</string>
-    <string name="people_contacts_search_placeholder">ရှာဖွေ…</string>
+    <string name="people_contacts_search_placeholder">ရှာဖွေ</string>
     <string name="people_contacts_invited">ဖိတ်ကြားထား</string>
     <string name="people_contacts_accept">လက်ခံမည်</string>
     <string name="people_contacts_message">မက်ဆေ့ပို့မည်</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">မကြာသေးမီက ထည့်ထားသည်</string>
     <string name="people_contacts_try_different_search">ရှာဖွေစကားလုံး အခြားတစ်ခု စမ်းကြည့်ပါ</string>
     <string name="people_contacts_unfriend">သူငယ်ချင်း ဖယ်ရှား</string>
-    <string name="people_add_contact_search_placeholder">ရှာဖွေရန် ရိုက်ထည့်ပါ…</string>
+    <string name="people_add_contact_search_placeholder">ရှာဖွေရန် ရိုက်ထည့်ပါ</string>
     <string name="people_add_contact_search_start">သုံးစွဲသူရှာဖို့ စတင်ရိုက်ပါ</string>
     <string name="people_contact_phone">ဖုန်း</string>
     <string name="people_contact_title">ရာထူး</string>

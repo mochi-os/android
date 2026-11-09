@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Чечүү</string>
     <string name="staff_appeals_decision_denied">Жарнама четке кагылды</string>
     <string name="staff_appeals_decision_label">Чечим</string>
-    <string name="staff_appeals_decision_placeholder">Чечимди тандоо</string>
     <string name="staff_appeals_decision_upheld">Жарыялоону жактыруу</string>
     <string name="staff_appeals_denied_toast">Апелляция четке кагылды</string>
     <string name="staff_appeals_dialog_title">Апелляция боюнча чечим</string>
@@ -226,7 +225,6 @@
     <string name="staff_disputes_refund_must_be_positive">Кайтаруу суммасы нөлдөн чоң болушу керек</string>
     <string name="staff_disputes_resolution_buyer">Сатып алуучу үчүн чечүү</string>
     <string name="staff_disputes_resolution_label">Чечим</string>
-    <string name="staff_disputes_resolution_placeholder">Резолюцияны тандоо</string>
     <string name="staff_disputes_resolution_seller">Сатуучу үчүн чечүү</string>
     <string name="staff_disputes_resolve">Чечүү</string>
     <string name="staff_disputes_resolved_toast">Талаш чечилди</string>
@@ -286,7 +284,6 @@
     <string name="staff_reports_action_ban">Колдонуучуга тыюу салуу</string>
     <string name="staff_reports_action_dismiss">Четке кагуу</string>
     <string name="staff_reports_action_label">Аракет</string>
-    <string name="staff_reports_action_placeholder">Аракетти тандоо</string>
     <string name="staff_reports_action_remove">Алуу</string>
     <string name="staff_reports_action_suspend">Сатуучу катары токтотуп туруу</string>
     <string name="staff_reports_action_taken_toast">Билдирүү боюнча аракет көрүлдү</string>
@@ -435,7 +432,7 @@
     <string name="staff_reviews_order_label">буйрутма #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Бул пикирди биротоло өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Бул пикирди биротоло өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
-    <string name="staff_team_dialog_search_placeholder">Аты, манжа изи же ID боюнча издөө…</string>
+    <string name="staff_team_dialog_search_placeholder">Аты, манжа изи же ID боюнча издөө</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook кол коюу сыры</string>
     <string name="staff_disputes_meta_already_refunded">Кайтарылган</string>

@@ -390,7 +390,7 @@
     <string name="market_listings_new">Új hirdetés</string>
     <string name="market_listings_search_placeholder">Keresés a hirdetései között</string>
     <string name="market_listings_share_chooser">Hirdetés megosztása</string>
-    <string name="market_messages_compose_placeholder">Írjon üzenetet…</string>
+    <string name="market_messages_compose_placeholder">Írjon üzenetet</string>
     <string name="market_messages_inbox_empty_subtitle">Amikor üzenetet ír egy eladónak (vagy egy vevő üzen Önnek), a beszélgetés itt fog megjelenni.</string>
     <string name="market_messages_inbox_empty_title">Még nincsenek beszélgetések</string>
     <string name="market_messages_thread_title">Beszélgetés</string>
@@ -431,7 +431,7 @@
     <string name="market_reviews_empty_sent_subtitle">Nyisson meg egy teljesített rendelést értékelés írásához.</string>
     <string name="market_reviews_empty_sent_title">Még nem írt értékelést</string>
     <string name="market_reviews_response_label">Válasz</string>
-    <string name="market_reviews_response_placeholder">Írjon választ…</string>
+    <string name="market_reviews_response_placeholder">Írjon választ</string>
     <string name="market_sale_carrier_custom_label">Szállító neve</string>
     <string name="market_sale_dispute_evidence_due">Bizonyíték határideje: %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe visszaterhelés oka: %1$s</string>
@@ -462,7 +462,6 @@
 
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Meséljen magáról a vásárlóknak…</string>
     <string name="market_account_load_failed">A fiók betöltése sikertelen</string>
     <string name="market_account_saved">Módosítások mentve</string>
     <string name="market_account_status_restrictions">Bizonyos műveletek, többek között új hirdetések létrehozása és rendelések teljesítése, korlátozottak, amíg a fiókja ebben az állapotban van.</string>
@@ -592,7 +591,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Eladói értékelések</string>
     <string name="market_account_stripe_open_failed">A Stripe megnyitása nem sikerült</string>
     <string name="market_editor_stock">Készlet</string>
-    <string name="market_editor_stock_units">Egységek száma</string>
     <string name="market_editor_stock_unlimited">Korlátlan</string>
     <string name="market_editor_start_time">Kezdés ideje</string>
     <string name="market_editor_start_time_help">Hagyja üresen, hogy közzétételkor induljon.</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Odloči</string>
     <string name="staff_appeals_decision_denied">Ohrani oglas zavrnjen</string>
     <string name="staff_appeals_decision_label">Odločitev</string>
-    <string name="staff_appeals_decision_placeholder">Izberi odločitev</string>
     <string name="staff_appeals_decision_upheld">Odobri oglas</string>
     <string name="staff_appeals_denied_toast">Pritožba zavrnjena</string>
     <string name="staff_appeals_dialog_title">Odloči o pritožbi</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Znesek vračila mora biti večji od nič</string>
     <string name="staff_disputes_resolution_buyer">Razreši v korist kupca</string>
     <string name="staff_disputes_resolution_label">Rešitev</string>
-    <string name="staff_disputes_resolution_placeholder">Izberi razrešitev</string>
     <string name="staff_disputes_resolution_seller">Razreši v korist prodajalca</string>
     <string name="staff_disputes_resolve">Razreši</string>
     <string name="staff_disputes_resolved_toast">Spor razrešen</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Prepovej uporabnika</string>
     <string name="staff_reports_action_dismiss">Opusti</string>
     <string name="staff_reports_action_label">Dejanje</string>
-    <string name="staff_reports_action_placeholder">Izberite dejanje</string>
     <string name="staff_reports_action_remove">Odstrani</string>
     <string name="staff_reports_action_suspend">Začasno ustavi kot prodajalca</string>
     <string name="staff_reports_action_taken_toast">Ukrep prijave izveden</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Oseba</string>
     <string name="staff_team_dialog_role">Vloga</string>
     <string name="staff_team_dialog_role_placeholder">Izberi vlogo</string>
-    <string name="staff_team_dialog_search_placeholder">Iskanje po imenu, prstnem odtisu ali ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Iskanje po imenu, prstnem odtisu ali ID</string>
     <string name="staff_team_empty">Brez članov ekipe</string>
     <string name="staff_team_remove_confirm">Odstrani</string>
     <string name="staff_team_remove_desc">Odstrani tega člana iz ekipe osebja?</string>

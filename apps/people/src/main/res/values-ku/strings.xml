@@ -6,7 +6,7 @@
     <string name="people_groups_title">Kom</string>
     <string name="people_group_title">Kom</string>
     <string name="people_person_title">Kes</string>
-    <string name="people_friends_search_placeholder">Bigere…</string>
+    <string name="people_friends_search_placeholder">Bigere</string>
     <string name="people_friends_no_people_found">Tu kes nehatin dîtin</string>
     <string name="people_friends_try_adjusting">Lêgerîna xwe eyar bike</string>
     <string name="people_friends_pending">Li bendê</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Koma \"%1$s\" jê bibe? Ev nayê vegerandin.</string>
     <string name="people_member_remove_confirm">Tu dixwazî %1$s ji vê komê rakî?</string>
     <string name="people_member_remove_with_name">%1$s rake</string>
-    <string name="people_member_search_placeholder">Nav binivîse da bigerî…</string>
+    <string name="people_member_search_placeholder">Nav binivîse da bigerî</string>
     <string name="people_groups_add_member_confirm_title">Li komê zêde bike</string>
     <string name="people_groups_add_member_confirm_action">Li komê zêde bike</string>
     <string name="people_profile_image_process_failed">Wêneya %1$s nehate hilberandin</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Barkirina polîtîkaya vexwendina te neserkeftî bû</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Pankart</string>
-    <string name="people_contacts_search_placeholder">Bigere…</string>
+    <string name="people_contacts_search_placeholder">Bigere</string>
     <string name="people_contacts_invited">Vexwendî</string>
     <string name="people_contacts_accept">Qebûl bike</string>
     <string name="people_contacts_message">Peyamê bişîne</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Vê dawiyê hatî zêdekirin</string>
     <string name="people_contacts_try_different_search">Peyveke lêgerînê ya cuda biceribîne</string>
     <string name="people_contacts_unfriend">Hevalê rake</string>
-    <string name="people_add_contact_search_placeholder">Ji bo lêgerînê binivîse…</string>
+    <string name="people_add_contact_search_placeholder">Ji bo lêgerînê binivîse</string>
     <string name="people_add_contact_search_start">Ji bo lêgerîna bikarhêneran dest bi nivîsandinê bike</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Sernavê karî</string>

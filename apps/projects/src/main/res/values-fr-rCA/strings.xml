@@ -292,7 +292,6 @@
     <string name="projects_access_authenticated_desc">Toute personne connectée</string>
     <string name="projects_access_anyone_desc">Y compris les utilisateurs anonymes</string>
     <string name="projects_access_selected">Sélectionné : %1$s</string>
-    <string name="projects_property_select">Sélectionner …</string>
     <string name="projects_activity_attached">a joint</string>
     <string name="projects_activity_commented">a commenté</string>
     <string name="projects_attachment_delete_confirm_message">Cette pièce jointe sera définitivement supprimée.</string>

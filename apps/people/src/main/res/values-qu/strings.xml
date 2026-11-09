@@ -6,7 +6,7 @@
     <string name="people_groups_title">Huñukuna</string>
     <string name="people_group_title">Huñu</string>
     <string name="people_person_title">Runa</string>
-    <string name="people_friends_search_placeholder">Maskay…</string>
+    <string name="people_friends_search_placeholder">Maskay</string>
     <string name="people_friends_no_people_found">Mana runakuna tarisqachu</string>
     <string name="people_friends_try_adjusting">Maskayniykita allichay</string>
     <string name="people_friends_pending">Suyakuchkan</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">¿\"%1$s\" huñuta wischunki? Kayqa mana kutichiy atikunchu.</string>
     <string name="people_member_remove_confirm">¿Cheqaqchu %1$s-ta kay huñumanta qichuyta munanki?</string>
     <string name="people_member_remove_with_name">%1$s-ta qichuy</string>
-    <string name="people_member_search_placeholder">Maskanaykipaq sutita qillqay…</string>
+    <string name="people_member_search_placeholder">Maskanaykipaq sutita qillqay</string>
     <string name="people_groups_add_member_confirm_title">Huñuman yapay</string>
     <string name="people_groups_add_member_confirm_action">Huñuman yapay</string>
     <string name="people_profile_image_process_failed">%1$s imagenta mana allichayta atikurqanchu</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Mana waqyay políticaykita cargayta atinchu</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Maskay…</string>
+    <string name="people_contacts_search_placeholder">Maskay</string>
     <string name="people_contacts_invited">Waqyasqa</string>
     <string name="people_contacts_accept">Chaskiy</string>
     <string name="people_contacts_message">Willakuyta apachiy</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Ñaqha yapasqa</string>
     <string name="people_contacts_try_different_search">Huk maskana simiwan kutimanta ruway</string>
     <string name="people_contacts_unfriend">Masita qichuy</string>
-    <string name="people_add_contact_search_placeholder">Maskanaykipaq qillqay…</string>
+    <string name="people_add_contact_search_placeholder">Maskanaykipaq qillqay</string>
     <string name="people_add_contact_search_start">Apaykachaqkunata maskanapaq qillqayta qallariy</string>
     <string name="people_contact_phone">Teléfono</string>
     <string name="people_contact_title">Cargo</string>

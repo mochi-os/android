@@ -6,7 +6,7 @@
     <string name="people_groups_title">گروه‌ها</string>
     <string name="people_group_title">گروه</string>
     <string name="people_person_title">شخص</string>
-    <string name="people_friends_search_placeholder">جست‌وجو…</string>
+    <string name="people_friends_search_placeholder">جست‌وجو</string>
     <string name="people_friends_no_people_found">شخصی یافت نشد</string>
     <string name="people_friends_try_adjusting">جست‌وجوی خود را تنظیم کنید</string>
     <string name="people_friends_pending">در انتظار</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">گروه «%1$s» حذف شود؟ این کار قابل بازگشت نیست.</string>
     <string name="people_member_remove_confirm">آیا مطمئن هستید که می‌خواهید %1$s را از این گروه حذف کنید؟</string>
     <string name="people_member_remove_with_name">حذف %1$s</string>
-    <string name="people_member_search_placeholder">برای جستجو نام را وارد کنید…</string>
+    <string name="people_member_search_placeholder">برای جستجو نام را وارد کنید</string>
     <string name="people_groups_add_member_confirm_title">افزودن به گروه</string>
     <string name="people_groups_add_member_confirm_action">افزودن به گروه</string>
     <string name="people_profile_image_process_failed">پردازش تصویر %1$s ممکن نشد</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">بارگذاری سیاست دعوت شما ناموفق بود</string>
     <string name="people_profile_avatar">آواتار</string>
     <string name="people_profile_banner">بنر</string>
-    <string name="people_contacts_search_placeholder">جست‌وجو…</string>
+    <string name="people_contacts_search_placeholder">جست‌وجو</string>
     <string name="people_contacts_invited">دعوت‌شده</string>
     <string name="people_contacts_accept">پذیرش</string>
     <string name="people_contacts_message">ارسال پیام</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">به‌تازگی افزوده‌شده</string>
     <string name="people_contacts_try_different_search">عبارت جست‌وجوی دیگری را امتحان کنید</string>
     <string name="people_contacts_unfriend">حذف دوست</string>
-    <string name="people_add_contact_search_placeholder">برای جستجو تایپ کنید…</string>
+    <string name="people_add_contact_search_placeholder">برای جستجو تایپ کنید</string>
     <string name="people_add_contact_search_start">برای جست‌وجوی کاربران، تایپ را آغاز کنید</string>
     <string name="people_contact_phone">تلفن</string>
     <string name="people_contact_title">عنوان شغلی</string>

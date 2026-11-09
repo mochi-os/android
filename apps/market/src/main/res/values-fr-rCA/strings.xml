@@ -152,7 +152,6 @@
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biographie</string>
-    <string name="market_account_biography_placeholder">Parlez de vous aux acheteurs…</string>
     <string name="market_account_load_failed">Impossible de charger le compte</string>
     <string name="market_account_saved">Modifications enregistrées</string>
     <string name="market_account_status_restrictions">Certaines actions, y compris la création de nouvelles annonces et la finalisation des commandes, sont restreintes pendant que votre compte est dans cet état.</string>
@@ -372,7 +371,7 @@
     <string name="market_listings_search_placeholder">Rechercher dans vos annonces</string>
     <string name="market_listings_share_chooser">Partager l\'annonce</string>
     <string name="market_listings_title">Mes annonces</string>
-    <string name="market_messages_compose_placeholder">Écrire un message…</string>
+    <string name="market_messages_compose_placeholder">Écrire un message</string>
     <string name="market_messages_inbox_empty_subtitle">Lorsque vous écrivez à un vendeur (ou qu\'un acheteur vous écrit), la conversation apparaîtra ici.</string>
     <string name="market_messages_inbox_empty_title">Aucune conversation pour le moment</string>
     <string name="market_messages_thread_title">Conversation</string>
@@ -446,7 +445,7 @@
     <string name="market_reviews_empty_sent_subtitle">Ouvrez une commande terminée pour laisser une évaluation.</string>
     <string name="market_reviews_empty_sent_title">Vous n\'avez rédigé aucune évaluation</string>
     <string name="market_reviews_response_label">Réponse</string>
-    <string name="market_reviews_response_placeholder">Rédiger une réponse…</string>
+    <string name="market_reviews_response_placeholder">Rédiger une réponse</string>
     <string name="market_reviews_response_submit">Envoyer la réponse</string>
     <string name="market_sale_carrier_custom_label">Nom du transporteur</string>
     <string name="market_sale_carrier_label">Transporteur</string>

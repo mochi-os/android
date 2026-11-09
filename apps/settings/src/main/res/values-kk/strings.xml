@@ -238,7 +238,7 @@
     <string name="route_delete_message">Бұл \"%1$s\" жолы үшін бағытты жояды.</string>
     <string name="route_empty">Конфигурацияланған бағыттар жоқ.</string>
     <string name="route_meta">Басымдылық %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Қосу үшін тақырыптарды іздеу…</string>
+    <string name="interests_search_placeholder">Қосу үшін тақырыптарды іздеу</string>
     <string name="interests_empty">Әзірше қызығушылықтар жоқ.</string>
     <string name="interests_summary_regenerate">Қысқаша мазмұнды қайта жасау</string>
     <string name="interests_summary_regenerating">Қайта жасалуда…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Бұл \"%1$s\" әдепкіге (бос) қайтарады.</string>
     <string name="settings_home_system_users">Пайдаланушылар (сервер)</string>
     <string name="system_users_add_user">Пайдаланушы қосу</string>
-    <string name="system_users_search_placeholder">Пайдаланушыларды іздеу…</string>
+    <string name="system_users_search_placeholder">Пайдаланушыларды іздеу</string>
     <string name="system_users_sort_by">Сұрыптау</string>
     <string name="system_users_last_login">Соңғы кіру: %1$s</string>
     <string name="system_users_delete_message">Бұл біржола \"%1$s\" пайдаланушысын жояды. Бұл әрекетті болдырмауға болмайды.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Атау алыңыз</string>
     <string name="handles_empty">Ешбір пайдаланушы аты брондалмаған.</string>
     <string name="handles_empty_search">Іздеуіңізге сәйкес пайдаланушы аттары жоқ</string>
-    <string name="handles_search_placeholder">Пайдаланушы аттарын іздеу…</string>
+    <string name="handles_search_placeholder">Пайдаланушы аттарын іздеу</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s пайдаланушы атының %1$s–%2$s көрсетілуде</item>
         <item quantity="other">%3$s пайдаланушы атының %1$s–%2$s көрсетілуде</item>

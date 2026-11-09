@@ -238,7 +238,7 @@
     <string name="route_delete_message">یہ راستے \"%1$s\" کا روٹ ہٹا دے گا۔</string>
     <string name="route_empty">کوئی روٹس کنفیگر نہیں ہیں۔</string>
     <string name="route_meta">ترجیح %1$s · %2$s</string>
-    <string name="interests_search_placeholder">شامل کرنے کے لیے موضوعات تلاش کریں…</string>
+    <string name="interests_search_placeholder">شامل کرنے کے لیے موضوعات تلاش کریں</string>
     <string name="interests_empty">ابھی تک کوئی دلچسپیاں نہیں۔</string>
     <string name="interests_summary_regenerate">خلاصہ دوبارہ بنائیں</string>
     <string name="interests_summary_regenerating">دوبارہ پیدا ہو رہا ہے…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">یہ \"%1$s\" کو ڈیفالٹ (خالی) پر ری سیٹ کر دے گا۔</string>
     <string name="settings_home_system_users">صارفین (سرور)</string>
     <string name="system_users_add_user">صارف شامل کریں</string>
-    <string name="system_users_search_placeholder">صارفین تلاش کریں…</string>
+    <string name="system_users_search_placeholder">صارفین تلاش کریں</string>
     <string name="system_users_sort_by">ترتیب</string>
     <string name="system_users_last_login">آخری لاگ ان: %1$s</string>
     <string name="system_users_delete_message">یہ صارف \"%1$s\" کو مستقل طور پر حذف کر دے گا۔ یہ عمل واپس نہیں کیا جا سکتا۔</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">نام لیں</string>
     <string name="handles_empty">کوئی ہینڈل ریزرو نہیں کیا گیا۔</string>
     <string name="handles_empty_search">کوئی ہینڈل آپ کی تلاش سے میل نہیں کھاتا</string>
-    <string name="handles_search_placeholder">ہینڈلز تلاش کریں…</string>
+    <string name="handles_search_placeholder">ہینڈلز تلاش کریں</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s ہینڈل میں سے %1$s–%2$s دکھائے جا رہے ہیں</item>
         <item quantity="other">%3$s ہینڈلز میں سے %1$s–%2$s دکھائے جا رہے ہیں</item>

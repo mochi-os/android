@@ -3,7 +3,6 @@
     <string name="app_name">માર્કેટ</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">જીવનચરિત્ર</string>
-    <string name="market_account_biography_placeholder">ખરીદદારોને તમારા વિશે જણાવો…</string>
     <string name="market_account_load_failed">ખાતું લોડ કરી શકાયું નહીં</string>
     <string name="market_account_location_label">સ્થાન</string>
     <string name="market_account_save">સાચવો</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">નવી જાહેરાત</string>
     <string name="market_listings_relist_failed">ફરી લિસ્ટ કરવામાં નિષ્ફળ</string>
     <string name="market_listings_title">મારી લિસ્ટિંગ્સ</string>
-    <string name="market_messages_compose_placeholder">સંદેશ લખો…</string>
+    <string name="market_messages_compose_placeholder">સંદેશ લખો</string>
     <string name="market_messages_inbox_title">સંદેશાઓ</string>
     <string name="market_messages_send">મોકલો</string>
     <string name="market_messages_thread_title">વાતચીત</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">ઓર્ડર પૂર્ણ થયા પછી ખરીદનાર અને વિક્રેતા એકબીજાની સમીક્ષા કરી શકે છે.</string>
     <string name="market_reviews_empty_sent_subtitle">સમીક્ષા લખવા માટે પૂર્ણ થયેલો ઓર્ડર ખોલો.</string>
     <string name="market_reviews_empty_sent_title">તમે કોઈ સમીક્ષા લખી નથી</string>
-    <string name="market_reviews_response_placeholder">જવાબ લખો…</string>
+    <string name="market_reviews_response_placeholder">જવાબ લખો</string>
     <string name="market_sale_carrier_custom_label">કેરિયર નામ</string>
     <string name="market_sale_dispute_evidence_due">પુરાવા %1$s સુધી આપવાના છે</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ચાર્જબેક કારણ: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">વિક્રેતાની સમીક્ષાઓ</string>
     <string name="market_account_stripe_open_failed">Stripe ખોલી શકાયું નથી</string>
     <string name="market_editor_stock">સ્ટોક</string>
-    <string name="market_editor_stock_units">યુનિટ્સની સંખ્યા</string>
     <string name="market_editor_stock_unlimited">અમર્યાદિત</string>
     <string name="market_editor_start_time">શરૂઆતનો સમય</string>
     <string name="market_editor_start_time_help">પબ્લિશ વખતે શરૂ કરવા માટે ખાલી રાખો.</string>

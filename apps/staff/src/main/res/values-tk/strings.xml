@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">Karar</string>
     <string name="staff_appeals_decision_denied">Sanawy ret edilen ýagdaýynda sakla</string>
     <string name="staff_appeals_decision_label">Karar</string>
-    <string name="staff_appeals_decision_placeholder">Çözgüdi saýla</string>
     <string name="staff_appeals_decision_upheld">Sanawy tassyklamak</string>
     <string name="staff_appeals_denied_toast">Apellýasiýa ret edildi</string>
     <string name="staff_appeals_dialog_title">Apellýasiýa karary</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">Yzyna gaýtaryş mukdary nuldan köp bolmaly</string>
     <string name="staff_disputes_resolution_buyer">Alyjy üçin çöz</string>
     <string name="staff_disputes_resolution_label">Çözgüt</string>
-    <string name="staff_disputes_resolution_placeholder">Çözülişi saýla</string>
     <string name="staff_disputes_resolution_seller">Satyjy üçin çöz</string>
     <string name="staff_disputes_resolve">Çöz</string>
     <string name="staff_disputes_resolved_toast">Jedel çözüldi</string>
@@ -278,7 +276,6 @@
     <string name="staff_reports_action_ban">Ulanyjyny gadagan etmek</string>
     <string name="staff_reports_action_dismiss">Goýbermek</string>
     <string name="staff_reports_action_label">Hereket</string>
-    <string name="staff_reports_action_placeholder">Hereket saýla</string>
     <string name="staff_reports_action_remove">Aýyr</string>
     <string name="staff_reports_action_suspend">Satyjy hökmünde togtat</string>
     <string name="staff_reports_action_taken_toast">Hasabat hereketi alyndy</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">sargyt #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s. Bu syny hemişelik pozmalymy? Bu yzyna gaýtaryp bolmaýar.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Bu syny hemişelik pozmalymy? Bu yzyna gaýtaryp bolmaýar.</string>
-    <string name="staff_team_dialog_search_placeholder">Ady, barmak yzy ýa-da ID boýunça gözläň…</string>
+    <string name="staff_team_dialog_search_placeholder">Ady, barmak yzy ýa-da ID boýunça gözläň</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook gol çekiş gizlin açary</string>
     <string name="staff_disputes_meta_already_refunded">Eýýäm yzyna gaýtarylan</string>

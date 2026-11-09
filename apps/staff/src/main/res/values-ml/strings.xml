@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">തീരുമാനിക്കുക</string>
     <string name="staff_appeals_decision_denied">ലിസ്റ്റിംഗ് നിരസിച്ചതായി സൂക്ഷിക്കുക</string>
     <string name="staff_appeals_decision_label">തീരുമാനം</string>
-    <string name="staff_appeals_decision_placeholder">തീരുമാനം തിരഞ്ഞെടുക്കുക</string>
     <string name="staff_appeals_decision_upheld">ലിസ്റ്റിംഗ് അംഗീകരിക്കുക</string>
     <string name="staff_appeals_denied_toast">അപ്പീൽ നിരസിച്ചു</string>
     <string name="staff_appeals_dialog_title">അപ്പീൽ തീരുമാനിക്കുക</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">റീഫണ്ട് തുക പൂജ്യത്തേക്കാൾ കൂടുതലായിരിക്കണം</string>
     <string name="staff_disputes_resolution_buyer">വാങ്ങുന്നയാൾക്കായി പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolution_label">പരിഹാരം</string>
-    <string name="staff_disputes_resolution_placeholder">പരിഹാരം തിരഞ്ഞെടുക്കുക</string>
     <string name="staff_disputes_resolution_seller">വിൽപ്പനക്കാരനായി പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolve">പരിഹരിക്കുക</string>
     <string name="staff_disputes_resolved_toast">തർക്കം പരിഹരിച്ചു</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">ഉപയോക്താവിനെ വിലക്കുക</string>
     <string name="staff_reports_action_dismiss">തള്ളിക്കളയുക</string>
     <string name="staff_reports_action_label">പ്രവർത്തനം</string>
-    <string name="staff_reports_action_placeholder">നടപടി തിരഞ്ഞെടുക്കുക</string>
     <string name="staff_reports_action_remove">നീക്കം ചെയ്യുക</string>
     <string name="staff_reports_action_suspend">വിൽപ്പനക്കാരനായി സസ്പെൻഡ് ചെയ്യുക</string>
     <string name="staff_reports_action_taken_toast">റിപ്പോർട്ടിൽ നടപടി സ്വീകരിച്ചു</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ഓർഡർ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s-ന്. ഈ അവലോകനം ശാശ്വതമായി ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ഈ അവലോകനം ശാശ്വതമായി ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
-    <string name="staff_team_dialog_search_placeholder">പേര്, ഫിംഗർപ്രിന്റ്, അല്ലെങ്കിൽ ID പ്രകാരം തിരയുക…</string>
+    <string name="staff_team_dialog_search_placeholder">പേര്, ഫിംഗർപ്രിന്റ്, അല്ലെങ്കിൽ ID പ്രകാരം തിരയുക</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook ഒപ്പിടൽ രഹസ്യം</string>
     <string name="staff_disputes_meta_already_refunded">ഇതിനകം മടക്കിനൽകി</string>

@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Otisk</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Bez názvu</string>
-    <string name="crm_property_select">Vyberte …</string>
     <string name="crm_filter">Filtr</string>
     <string name="crm_sort_filter_title">Řazení a filtr</string>
     <string name="crm_filter_clear_all">Vymazat vše</string>

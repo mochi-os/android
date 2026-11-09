@@ -297,7 +297,6 @@
     <string name="projects_create_upload_json">.json-bestand uploaden</string>
     <string name="projects_settings_not_set">Niet ingesteld</string>
     <string name="projects_settings_updated">Project bijgewerkt</string>
-    <string name="projects_property_select">Selecteren …</string>
     <string name="projects_activity_attached">heeft bijgevoegd</string>
     <string name="projects_activity_commented">heeft gereageerd</string>
     <string name="projects_attachment_delete_confirm_message">Deze bijlage wordt permanent verwijderd.</string>

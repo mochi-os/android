@@ -175,7 +175,6 @@
     <string name="projects_property_remove">Remove</string>
     <string name="projects_property_add_item">Add item</string>
     <string name="projects_property_required">%1$s is required</string>
-    <string name="projects_property_select">Select …</string>
 
     <!-- Activity -->
     <string name="projects_activity_empty">No activity</string>

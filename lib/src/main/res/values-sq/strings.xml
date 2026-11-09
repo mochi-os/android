@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Nga tema</string>
     <string name="settings_background_off">Asnjë</string>
     <string name="game_chat_empty">Ende pa mesazhe</string>
-    <string name="game_chat_input_placeholder">Shkruaj një mesazh…</string>
+    <string name="game_chat_input_placeholder">Shkruaj një mesazh</string>
     <string name="game_chat_send">Dërgo mesazhin</string>
     <string name="game_chat_subject_you">Ti</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Konfirmoni se jeni ju</string>
     <string name="stepup_description">Ky është një ndryshim sigurie në llogarinë tuaj. Verifikoni se jeni ju për të vazhduar.</string>
     <string name="stepup_email_label">Kodi me email</string>
-    <string name="stepup_email_placeholder">Vendosni kodin nga email-i juaj</string>
     <string name="stepup_totp_label">Kodi i autentikuesit</string>
-    <string name="stepup_totp_placeholder">Vendosni kodin e aplikacionit të vërtetimit</string>
     <string name="stepup_use_passkey">Përdorni kyçin tuaj</string>
     <string name="stepup_send_email">Dërgo email</string>
     <string name="stepup_resend_email">Ridërgo email-in</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Hiq etiketën</string>
     <string name="person_picker_none">Asnjë</string>
     <string name="person_picker_clear">Pastro përzgjedhjen</string>
-    <string name="person_picker_select">Zgjidhni …</string>
+    <string name="person_picker_select">Zgjidhni</string>
     <string name="person_picker_directory">Drejtoria</string>
     <string name="person_picker_no_people">Nuk ka persona</string>
     <string name="person_picker_project_members">Anëtarët e projektit</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Ndrysho kategorinë e njoftimit</string>
     <string name="lightbox_comments_none">Ende nuk ka komente për këtë imazh.</string>
     <string name="lightbox_comments_only">Shfaq vetëm komentet për këtë imazh</string>
-    <string name="lightbox_comment_placeholder">Komento këtë imazh…</string>
+    <string name="lightbox_comment_placeholder">Komento këtë imazh</string>
     <string name="comment_anchor_open">Shiko imazhin për të cilin bëhet fjalë në këtë koment</string>
     <string name="comment_anchor_default">Për këtë imazh</string>
     <plurals name="lightbox_comments_others">

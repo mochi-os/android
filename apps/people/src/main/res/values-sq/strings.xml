@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupet</string>
     <string name="people_group_title">Grupi</string>
     <string name="people_person_title">Person</string>
-    <string name="people_friends_search_placeholder">Kërko…</string>
+    <string name="people_friends_search_placeholder">Kërko</string>
     <string name="people_friends_no_people_found">S\'u gjet asnjë person</string>
     <string name="people_friends_try_adjusting">Provo të rregullosh kërkimin</string>
     <string name="people_friends_pending">Në pritje</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Të fshihet grupi \"%1$s\"? Ky veprim nuk mund të zhbëhet.</string>
     <string name="people_member_remove_confirm">Jeni i sigurt që doni ta hiqni %1$s nga ky grup?</string>
     <string name="people_member_remove_with_name">Hiq %1$s</string>
-    <string name="people_member_search_placeholder">Shkruani emrin për të kërkuar…</string>
+    <string name="people_member_search_placeholder">Shkruani emrin për të kërkuar</string>
     <string name="people_groups_add_member_confirm_title">Shto në grup</string>
     <string name="people_groups_add_member_confirm_action">Shto në grup</string>
     <string name="people_profile_image_process_failed">Nuk u përpunua dot imazhi i %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Ngarkimi i politikës suaj të ftesave dështoi</string>
     <string name="people_profile_avatar">Avatari</string>
     <string name="people_profile_banner">Banner-i</string>
-    <string name="people_contacts_search_placeholder">Kërko…</string>
+    <string name="people_contacts_search_placeholder">Kërko</string>
     <string name="people_contacts_invited">I ftuar</string>
     <string name="people_contacts_accept">Prano</string>
     <string name="people_contacts_message">Dërgo mesazh</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Shtuar së fundmi</string>
     <string name="people_contacts_try_different_search">Provo një term tjetër kërkimi</string>
     <string name="people_contacts_unfriend">Hiq mikun</string>
-    <string name="people_add_contact_search_placeholder">Shkruani për të kërkuar…</string>
+    <string name="people_add_contact_search_placeholder">Shkruani për të kërkuar</string>
     <string name="people_add_contact_search_start">Fillo të shkruash për të kërkuar përdorues</string>
     <string name="people_contact_phone">Telefoni</string>
     <string name="people_contact_title">Titulli i punës</string>

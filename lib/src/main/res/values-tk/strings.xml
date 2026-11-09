@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Temadan</string>
     <string name="settings_background_off">Hiç biri</string>
     <string name="game_chat_empty">Heniz habarlar ýok</string>
-    <string name="game_chat_input_placeholder">Habar ýaz…</string>
+    <string name="game_chat_input_placeholder">Habar ýaz</string>
     <string name="game_chat_send">Habar iber</string>
     <string name="game_chat_subject_you">Sen</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Bu siziň özüňizdigiňizi tassyklaň</string>
     <string name="stepup_description">Bu hasabyňyzdaky howpsuzlyk üýtgemesidir. Dowam etmek üçin bu siziň özüňizdigiňizi barlaň.</string>
     <string name="stepup_email_label">E-poçta kody</string>
-    <string name="stepup_email_placeholder">E-poçtaňyzdaky kody giriziň</string>
     <string name="stepup_totp_label">Autentifikator kody</string>
-    <string name="stepup_totp_placeholder">Autentifikator koduňyzy giriziň</string>
     <string name="stepup_use_passkey">Geçiş açaryňyzy ulanyň</string>
     <string name="stepup_send_email">E-poçt iber</string>
     <string name="stepup_resend_email">E-poçtany gaýtadan iber</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Belligi aýyrmak</string>
     <string name="person_picker_none">Hiç biri</string>
     <string name="person_picker_clear">Saýlamany arassalamak</string>
-    <string name="person_picker_select">Saýlaň …</string>
+    <string name="person_picker_select">Saýlaň</string>
     <string name="person_picker_directory">Katalog</string>
     <string name="person_picker_no_people">Adam ýok</string>
     <string name="person_picker_project_members">Taslamanyň agzalary</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Bildiriş kategoriýasyny üýtget</string>
     <string name="lightbox_comments_none">Bu surata entek teswir ýok.</string>
     <string name="lightbox_comments_only">Diňe bu suratyň teswirlerini görkez</string>
-    <string name="lightbox_comment_placeholder">Bu surata teswir ýazyň…</string>
+    <string name="lightbox_comment_placeholder">Bu surata teswir ýazyň</string>
     <string name="comment_anchor_open">Bu teswiriň degişli suratyny görüň</string>
     <string name="comment_anchor_default">Bu suratda</string>
     <plurals name="lightbox_comments_others">

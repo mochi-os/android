@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Emondo</string>
     <string name="forums_post_body_field">Jehaipyre</string>
-    <string name="forums_write_comment">Ehai comentario…</string>
+    <string name="forums_write_comment">Ehai comentario</string>
 
     <string name="notification_channel_forums">Forokuéra momarandu</string>
     <string name="forums_list_empty">Gueteri ndaipóri foro</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Gueteri ndaipóri léi — ojeporu ypygua</string>
     <string name="forums_members_search">Mbogua irũnguéra</string>
     <string name="forums_banner_description">Markdown ojehechaukáva foro ru\'ãme.</string>
-    <string name="forums_banner_placeholder">Ehai banner moñe\'ẽrã (oñemoneĩ markdown)…</string>
     <string name="forums_ai_mode_off">Oñemboty</string>
     <string name="forums_moderation_queue_empty">Moderación fila nandi</string>
     <string name="forums_moderation_report_details">Detalle: %1$s</string>

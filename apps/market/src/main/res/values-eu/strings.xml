@@ -4,7 +4,6 @@
     <string name="app_name">Merkatua</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografia</string>
-    <string name="market_account_biography_placeholder">Kontatu erosleei zure berri…</string>
     <string name="market_account_load_failed">Ezin izan da kontua kargatu</string>
     <string name="market_account_location_label">Kokapena</string>
     <string name="market_account_save">Gorde</string>
@@ -312,7 +311,7 @@
     <string name="market_listings_search_placeholder">Bilatu zure zerrendetan</string>
     <string name="market_listings_share_chooser">Partekatu zerrenda</string>
     <string name="market_listings_title">Nire zerrendak</string>
-    <string name="market_messages_compose_placeholder">Idatzi mezua…</string>
+    <string name="market_messages_compose_placeholder">Idatzi mezua</string>
     <string name="market_messages_inbox_empty_subtitle">Saltzaile bati mezua bidaltzen diozunean (edo eroslea zuri) elkarrizketa hemen agertuko da.</string>
     <string name="market_messages_inbox_empty_title">Oraindik elkarrizketarik ez</string>
     <string name="market_messages_inbox_title">Mezuak</string>
@@ -427,7 +426,7 @@
     <string name="market_reviews_empty_sent_subtitle">Ireki burututako eskaera bat iritzia uzteko.</string>
     <string name="market_reviews_empty_sent_title">Oraindik ez duzu iritzirik idatzi</string>
     <string name="market_reviews_response_label">Erantzuna</string>
-    <string name="market_reviews_response_placeholder">Idatzi erantzuna…</string>
+    <string name="market_reviews_response_placeholder">Idatzi erantzuna</string>
     <string name="market_reviews_response_submit">Bidali erantzuna</string>
     <string name="market_reviews_tab_received">Jasota</string>
     <string name="market_reviews_tab_sent">Bidalita</string>
@@ -589,7 +588,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Saltzailearen iritziak</string>
     <string name="market_account_stripe_open_failed">Ezin izan da Stripe ireki</string>
     <string name="market_editor_stock">Stocka</string>
-    <string name="market_editor_stock_units">Unitate kopurua</string>
     <string name="market_editor_stock_unlimited">Mugagabea</string>
     <string name="market_editor_start_time">Hasiera-ordua</string>
     <string name="market_editor_start_time_help">Utzi hutsik argitaratzean hasteko.</string>

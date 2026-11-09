@@ -239,7 +239,7 @@
     <string name="route_delete_message">Tai pašalins maršrutą kelio \"%1$s\".</string>
     <string name="route_empty">Nesukonfigūruota maršrutų.</string>
     <string name="route_meta">Prioritetas %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Ieškoti temų pridėti…</string>
+    <string name="interests_search_placeholder">Ieškoti temų pridėti</string>
     <string name="interests_empty">Pomėgių dar nėra.</string>
     <string name="interests_summary_regenerate">Atnaujinti santrauką</string>
     <string name="interests_summary_regenerating">Regeneruojama…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">Tai atstatys \"%1$s\" į numatytąją (tuščia).</string>
     <string name="settings_home_system_users">Naudotojai (serveris)</string>
     <string name="system_users_add_user">Pridėti vartotoją</string>
-    <string name="system_users_search_placeholder">Ieškoti naudotojų…</string>
+    <string name="system_users_search_placeholder">Ieškoti naudotojų</string>
     <string name="system_users_sort_by">Rūšiuoti pagal</string>
     <string name="system_users_last_login">Paskutinis prisijungimas: %1$s</string>
     <string name="system_users_delete_message">Tai visam laikui ištrins naudotoją \"%1$s\". Šio veiksmo negalima atšaukti.</string>
@@ -567,7 +567,7 @@
     <string name="handles_take">Užimkite vardą</string>
     <string name="handles_empty">Nerezervuotas nė vienas vartotojo vardas.</string>
     <string name="handles_empty_search">Pagal jūsų paiešką vartotojo vardų nerasta</string>
-    <string name="handles_search_placeholder">Ieškoti vartotojo vardų…</string>
+    <string name="handles_search_placeholder">Ieškoti vartotojo vardų</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Rodoma %1$s–%2$s iš %3$s vartotojo vardo</item>
         <item quantity="few">Rodoma %1$s–%2$s iš %3$s vartotojo vardų</item>

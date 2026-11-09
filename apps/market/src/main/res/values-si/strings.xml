@@ -3,7 +3,6 @@
     <string name="app_name">වෙළඳපොළ</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">චරිතාපදානය</string>
-    <string name="market_account_biography_placeholder">ගැනුම්කරුවන්ට ඔබ ගැන කියන්න…</string>
     <string name="market_account_load_failed">ගිණුම පූරණය කළ නොහැකි විය</string>
     <string name="market_account_location_label">ස්ථානය</string>
     <string name="market_account_save">සුරකින්න</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">නව ලැයිස්තුව</string>
     <string name="market_listings_relist_failed">නැවත ලැයිස්තුගත කිරීමට අසමත් විය</string>
     <string name="market_listings_title">මගේ ලැයිස්තුගත කිරීම්</string>
-    <string name="market_messages_compose_placeholder">පණිවිඩයක් ලියන්න…</string>
+    <string name="market_messages_compose_placeholder">පණිවිඩයක් ලියන්න</string>
     <string name="market_messages_inbox_title">පණිවිඩ</string>
     <string name="market_messages_send">යවන්න</string>
     <string name="market_messages_thread_title">සංවාදය</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">සම්පූර්ණ කළ ඇණවුමකින් පසු ගැනුම්කරුවන්ට සහ විකුණුම්කරුවන්ට එකිනෙකා සමාලෝචනය කළ හැකිය.</string>
     <string name="market_reviews_empty_sent_subtitle">සමාලෝචනයක් තැබීමට සම්පූර්ණ කළ ඇණවුමක් විවෘත කරන්න.</string>
     <string name="market_reviews_empty_sent_title">ඔබ කිසිදු සමාලෝචනයක් ලියා නැත</string>
-    <string name="market_reviews_response_placeholder">ප්‍රතිචාරයක් ලියන්න…</string>
+    <string name="market_reviews_response_placeholder">ප්‍රතිචාරයක් ලියන්න</string>
     <string name="market_sale_carrier_custom_label">ප්‍රවාහන සමාගමේ නම</string>
     <string name="market_sale_dispute_evidence_due">සාක්ෂි ඉදිරිපත් කළ යුතු දිනය %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ආපසු අයකිරීමේ හේතුව: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">විකුණුම්කරුගේ සමාලෝචන</string>
     <string name="market_account_stripe_open_failed">Stripe විවෘත කළ නොහැකි විය</string>
     <string name="market_editor_stock">තොගය</string>
-    <string name="market_editor_stock_units">ඒකක ගණන</string>
     <string name="market_editor_stock_unlimited">අසීමිත</string>
     <string name="market_editor_start_time">ආරම්භක වේලාව</string>
     <string name="market_editor_start_time_help">ප්‍රකාශයේදී ආරම්භ වීමට හිස්ව තබන්න.</string>

@@ -3,7 +3,6 @@
     <string name="app_name">Margadh</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Beatha-eachdraidh</string>
-    <string name="market_account_biography_placeholder">Innis do luchd-ceannach mu do dheidhinn…</string>
     <string name="market_account_load_failed">Cha b’ urrainn an cunntas a luchdadh</string>
     <string name="market_account_location_label">Àite</string>
     <string name="market_account_save">Sàbhail</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Liosta ùr</string>
     <string name="market_listings_relist_failed">Cha b\' urrainn ath-liostadh</string>
     <string name="market_listings_title">Mo liostadh</string>
-    <string name="market_messages_compose_placeholder">Sgrìobh teachdaireachd…</string>
+    <string name="market_messages_compose_placeholder">Sgrìobh teachdaireachd</string>
     <string name="market_messages_inbox_title">Teachdaireachdan</string>
     <string name="market_messages_send">Cuir</string>
     <string name="market_messages_thread_title">Còmhradh</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">\'S urrainn do cheannaichean is reiceadairean lèirmheas a sgrìobhadh air a chèile às dèidh òrduigh choileanta.</string>
     <string name="market_reviews_empty_sent_subtitle">Fosgail òrdugh coileanta gus lèirmheas fhàgail.</string>
     <string name="market_reviews_empty_sent_title">Cha do sgrìobh thu lèirmheas sam bith</string>
-    <string name="market_reviews_response_placeholder">Sgrìobh freagairt…</string>
+    <string name="market_reviews_response_placeholder">Sgrìobh freagairt</string>
     <string name="market_sale_carrier_custom_label">Ainm a\' ghiùlanair</string>
     <string name="market_sale_dispute_evidence_due">Fianais ri thoirt seachad ro %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Adhbhar cùl-thagraidh Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Beachdan air an reiceadair</string>
     <string name="market_account_stripe_open_failed">Cha b\' urrainnear Stripe fhosgladh</string>
     <string name="market_editor_stock">Stoc</string>
-    <string name="market_editor_stock_units">Àireamh aonadan</string>
     <string name="market_editor_stock_unlimited">Gun chrìoch</string>
     <string name="market_editor_start_time">Àm tòiseachaidh</string>
     <string name="market_editor_start_time_help">Fàg bàn gus tòiseachadh nuair a thèid fhoillseachadh.</string>

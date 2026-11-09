@@ -120,7 +120,7 @@
     <string name="forums_report_reason_misinformation">Désinformation</string>
     <string name="forums_report_reason_offtopic">Hors sujet</string>
     <string name="forums_no_comments">Aucun commentaire pour le moment</string>
-    <string name="forums_write_comment">Écrire un commentaire…</string>
+    <string name="forums_write_comment">Écrire un commentaire</string>
     <string name="forums_comment_edit">Modifier le commentaire</string>
     <string name="forums_comment_delete">Supprimer le commentaire</string>
     <string name="forums_comment_delete_title">Supprimer le commentaire</string>

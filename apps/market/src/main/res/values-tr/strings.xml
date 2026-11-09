@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Sipariş #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Alıcılara kendinizden bahsedin…</string>
     <string name="market_account_load_failed">Hesap yüklenemedi</string>
     <string name="market_account_saved">Değişiklikler kaydedildi</string>
     <string name="market_account_status_restrictions">Hesabınız bu durumdayken yeni ilan oluşturma ve siparişleri tamamlama dahil bazı işlemler kısıtlanmıştır.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Yeni ilan</string>
     <string name="market_listings_search_placeholder">İlanlarınızda ara</string>
     <string name="market_listings_share_chooser">İlanı paylaş</string>
-    <string name="market_messages_compose_placeholder">Bir mesaj yazın…</string>
+    <string name="market_messages_compose_placeholder">Bir mesaj yazın</string>
     <string name="market_messages_inbox_empty_subtitle">Bir satıcıya mesaj gönderdiğinizde (veya bir alıcı size mesaj gönderdiğinde) yazışma burada görünecek.</string>
     <string name="market_messages_inbox_empty_title">Henüz yazışma yok</string>
     <string name="market_messages_thread_title">Yazışma</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Değerlendirme bırakmak için tamamlanmış bir siparişi açın.</string>
     <string name="market_reviews_empty_sent_title">Henüz hiç değerlendirme yazmadınız</string>
     <string name="market_reviews_response_label">Yanıt</string>
-    <string name="market_reviews_response_placeholder">Bir yanıt yazın…</string>
+    <string name="market_reviews_response_placeholder">Bir yanıt yazın</string>
     <string name="market_sale_carrier_custom_label">Taşıyıcı adı</string>
     <string name="market_sale_dispute_evidence_due">Kanıt son tarihi %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ters ibraz nedeni: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Satıcı yorumları</string>
     <string name="market_account_stripe_open_failed">Stripe açılamadı</string>
     <string name="market_editor_stock">Stok</string>
-    <string name="market_editor_stock_units">Birim sayısı</string>
     <string name="market_editor_stock_unlimited">Sınırsız</string>
     <string name="market_editor_start_time">Başlangıç zamanı</string>
     <string name="market_editor_start_time_help">Yayımlandığında başlatmak için boş bırakın.</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">결정</string>
     <string name="staff_appeals_decision_denied">상품 거절 상태 유지</string>
     <string name="staff_appeals_decision_label">결정</string>
-    <string name="staff_appeals_decision_placeholder">결정 선택</string>
     <string name="staff_appeals_decision_upheld">상품 승인</string>
     <string name="staff_appeals_denied_toast">이의 제기가 거부되었어요</string>
     <string name="staff_appeals_dialog_title">이의 제기 결정</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">환불 금액은 0보다 커야 해요</string>
     <string name="staff_disputes_resolution_buyer">구매자에게 유리하게 해결</string>
     <string name="staff_disputes_resolution_label">해결</string>
-    <string name="staff_disputes_resolution_placeholder">해결 방안 선택</string>
     <string name="staff_disputes_resolution_seller">판매자에게 유리하게 해결</string>
     <string name="staff_disputes_resolve">해결</string>
     <string name="staff_disputes_resolved_toast">분쟁이 해결되었어요</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">사용자 차단</string>
     <string name="staff_reports_action_dismiss">기각</string>
     <string name="staff_reports_action_label">작업</string>
-    <string name="staff_reports_action_placeholder">동작 선택</string>
     <string name="staff_reports_action_remove">제거</string>
     <string name="staff_reports_action_suspend">판매자로서 정지</string>
     <string name="staff_reports_action_taken_toast">신고에 대한 조치가 취해졌어요</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">사람</string>
     <string name="staff_team_dialog_role">역할</string>
     <string name="staff_team_dialog_role_placeholder">역할 선택</string>
-    <string name="staff_team_dialog_search_placeholder">이름, 지문 또는 ID로 검색…</string>
+    <string name="staff_team_dialog_search_placeholder">이름, 지문 또는 ID로 검색</string>
     <string name="staff_team_empty">팀 멤버가 없어요</string>
     <string name="staff_team_remove_confirm">제거</string>
     <string name="staff_team_remove_desc">이 멤버를 스태프 팀에서 제거할까요?</string>

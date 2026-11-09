@@ -84,7 +84,7 @@
     <string name="feeds_send">Odeslat</string>
 
     <string name="notification_channel_feeds">Oznámení kanálů</string>
-    <string name="feeds_search_placeholder">Hledat kanály nebo vložit URL…</string>
+    <string name="feeds_search_placeholder">Hledat kanály nebo vložit URL</string>
     <string name="feeds_url_result">Výsledek URL</string>
     <string name="feeds_search_results">Výsledky hledání</string>
     <string name="feeds_unread_only">Pouze nepřečtené</string>
@@ -208,7 +208,6 @@
     <string name="feeds_unsubscribe_confirm_message">Přestanou vám chodit novinky z tohoto kanálu. Odběr můžete kdykoli obnovit.</string>
     <string name="feeds_access_select_rule">Vyberte pravidlo přístupu</string>
     <string name="feeds_access_authenticated_desc">Kdokoli, kdo je přihlášen</string>
-    <string name="feeds_banner_hint">Vítejte na tomto fóru…</string>
     <string name="feeds_banner_dismiss">Zavřít banner</string>
     <string name="feeds_members_search">Filtrovat členy</string>
     <string name="feeds_ai_prompt_default">Výchozí</string>

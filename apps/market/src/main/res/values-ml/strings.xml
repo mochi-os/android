@@ -3,7 +3,6 @@
     <string name="app_name">വിപണി</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ജീവചരിത്രം</string>
-    <string name="market_account_biography_placeholder">വാങ്ങുന്നവരോട് നിങ്ങളെക്കുറിച്ച് പറയൂ…</string>
     <string name="market_account_load_failed">അക്കൗണ്ട് ലോഡ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_account_location_label">ലൊക്കേഷൻ</string>
     <string name="market_account_save">സേവ് ചെയ്യുക</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">പുതിയ ലിസ്റ്റിംഗ്</string>
     <string name="market_listings_relist_failed">വീണ്ടും ലിസ്റ്റ് ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു</string>
     <string name="market_listings_title">എന്റെ ലിസ്റ്റിങ്ങുകൾ</string>
-    <string name="market_messages_compose_placeholder">സന്ദേശം എഴുതുക…</string>
+    <string name="market_messages_compose_placeholder">സന്ദേശം എഴുതുക</string>
     <string name="market_messages_inbox_title">സന്ദേശങ്ങൾ</string>
     <string name="market_messages_send">അയയ്ക്കുക</string>
     <string name="market_messages_thread_title">സംഭാഷണം</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">പൂർത്തിയായ ഓർഡറിന് ശേഷം വാങ്ങുന്നവർക്കും വിൽപ്പനക്കാർക്കും പരസ്പരം അവലോകനം ചെയ്യാം.</string>
     <string name="market_reviews_empty_sent_subtitle">ഒരു അവലോകനം നൽകാൻ പൂർത്തിയായ ഓർഡർ തുറക്കുക.</string>
     <string name="market_reviews_empty_sent_title">നിങ്ങൾ അവലോകനങ്ങളൊന്നും എഴുതിയിട്ടില്ല</string>
-    <string name="market_reviews_response_placeholder">ഒരു പ്രതികരണം എഴുതുക…</string>
+    <string name="market_reviews_response_placeholder">ഒരു പ്രതികരണം എഴുതുക</string>
     <string name="market_sale_carrier_custom_label">കാരിയറുടെ പേര്</string>
     <string name="market_sale_dispute_evidence_due">തെളിവ് %1$s നകം</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ചാർജ്ബാക്ക് കാരണം: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">വിൽപ്പനക്കാരന്റെ അഭിപ്രായങ്ങൾ</string>
     <string name="market_account_stripe_open_failed">Stripe തുറക്കാൻ കഴിഞ്ഞില്ല</string>
     <string name="market_editor_stock">സ്റ്റോക്ക്</string>
-    <string name="market_editor_stock_units">യൂണിറ്റുകളുടെ എണ്ണം</string>
     <string name="market_editor_stock_unlimited">പരിധിയില്ല</string>
     <string name="market_editor_start_time">ആരംഭ സമയം</string>
     <string name="market_editor_start_time_help">പ്രസിദ്ധീകരണത്തിൽ ആരംഭിക്കാൻ ശൂന്യമായി വിടുക.</string>

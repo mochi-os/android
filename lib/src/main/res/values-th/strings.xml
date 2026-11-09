@@ -115,7 +115,7 @@
     <string name="settings_background_theme">จากธีม</string>
     <string name="settings_background_off">ไม่มี</string>
     <string name="game_chat_empty">ยังไม่มีข้อความ</string>
-    <string name="game_chat_input_placeholder">พิมพ์ข้อความ…</string>
+    <string name="game_chat_input_placeholder">พิมพ์ข้อความ</string>
     <string name="game_chat_send">ส่งข้อความ</string>
     <string name="game_chat_subject_you">คุณ</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">ยืนยันว่าเป็นคุณ</string>
     <string name="stepup_description">นี่คือการเปลี่ยนแปลงด้านความปลอดภัยของบัญชีคุณ ยืนยันว่าเป็นคุณเพื่อดำเนินการต่อ</string>
     <string name="stepup_email_label">รหัสอีเมล</string>
-    <string name="stepup_email_placeholder">ป้อนรหัสจากอีเมลของคุณ</string>
     <string name="stepup_totp_label">รหัสยืนยันตัวตน</string>
-    <string name="stepup_totp_placeholder">ป้อนรหัสจากแอปยืนยันตัวตนของคุณ</string>
     <string name="stepup_use_passkey">ใช้พาสคีย์ของคุณ</string>
     <string name="stepup_send_email">ส่งอีเมล</string>
     <string name="stepup_resend_email">ส่งอีเมลอีกครั้ง</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">ลบแท็ก</string>
     <string name="person_picker_none">ไม่มี</string>
     <string name="person_picker_clear">ล้างการเลือก</string>
-    <string name="person_picker_select">เลือก …</string>
+    <string name="person_picker_select">เลือก</string>
     <string name="person_picker_directory">ไดเรกทอรี</string>
     <string name="person_picker_no_people">ไม่มีบุคคล</string>
     <string name="person_picker_project_members">สมาชิกโครงการ</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">เปลี่ยนหมวดหมู่การแจ้งเตือน</string>
     <string name="lightbox_comments_none">ยังไม่มีความคิดเห็นต่อรูปนี้</string>
     <string name="lightbox_comments_only">แสดงเฉพาะความคิดเห็นต่อรูปนี้</string>
-    <string name="lightbox_comment_placeholder">แสดงความคิดเห็นต่อรูปนี้…</string>
+    <string name="lightbox_comment_placeholder">แสดงความคิดเห็นต่อรูปนี้</string>
     <string name="comment_anchor_open">ดูรูปที่ความคิดเห็นนี้กล่าวถึง</string>
     <string name="comment_anchor_default">ต่อรูปนี้</string>
     <plurals name="lightbox_comments_others">

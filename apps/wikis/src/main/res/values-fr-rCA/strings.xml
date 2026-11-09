@@ -64,7 +64,7 @@
     <string name="wikis_empty_title">Commencez votre premier wiki</string>
     <string name="wikis_empty_subtitle">Recherchez un wiki pour vous y abonner, ou créez-en un pour publier votre propre documentation.</string>
     <string name="wikis_create_button">Créer un wiki</string>
-    <string name="wikis_search_placeholder">Rechercher un wiki…</string>
+    <string name="wikis_search_placeholder">Rechercher un wiki</string>
     <string name="wikis_recommended_section">Wikis recommandés</string>
     <string name="wikis_unsubscribing">Désabonnement en cours…</string>
     <string name="wikis_unsubscribe_confirm_message">Voulez-vous vraiment vous désabonner de %1$s ?</string>
@@ -78,14 +78,14 @@
     <string name="wikis_rss_failed">Échec de l\'obtention du jeton RSS</string>
     <string name="wikis_clipboard_label_rss">URL du fil RSS du wiki</string>
     <string name="wikis_find_title">Rechercher des wikis</string>
-    <string name="wikis_find_search_placeholder">Rechercher par nom, ID, empreinte ou URL…</string>
+    <string name="wikis_find_search_placeholder">Rechercher par nom, ID, empreinte ou URL</string>
     <string name="wikis_find_no_results">Aucun wiki trouvé</string>
     <string name="wikis_find_recommended_section">Wikis recommandés</string>
     <string name="wikis_join_title">Répliquer le wiki</string>
     <string name="wikis_join_search_button">Rechercher des wikis…</string>
     <string name="wikis_join_or_id">Ou entrer l\'ID directement</string>
     <string name="wikis_join_id_label">ID de l\'entité du wiki</string>
-    <string name="wikis_join_id_hint">abc123…</string>
+    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_join_submit">Répliquer le wiki</string>
     <string name="wikis_create_title">Créer un wiki</string>
     <string name="wikis_create_privacy_label">Permettre à quiconque de rechercher le wiki</string>
@@ -98,8 +98,8 @@
     <string name="wikis_comment_edited">(modifié)</string>
     <string name="wikis_comment_delete_confirm_title">Supprimer le commentaire</string>
     <string name="wikis_comment_delete_confirm_message">Voulez-vous vraiment supprimer ce commentaire? Toutes les réponses seront également supprimées. Cette action ne peut pas être annulée.</string>
-    <string name="wikis_comment_form_placeholder_new">Écrire un commentaire…</string>
-    <string name="wikis_comment_form_placeholder_reply">Écrire une réponse…</string>
+    <string name="wikis_comment_form_placeholder_new">Écrire un commentaire</string>
+    <string name="wikis_comment_form_placeholder_reply">Écrire une réponse</string>
     <string name="wikis_comment_form_attach">Joindre des fichiers</string>
     <string name="wikis_comment_form_remove_attachment">Retirer la pièce jointe</string>
     <string name="wikis_comment_expand">(développer)</string>
@@ -115,7 +115,7 @@
     <string name="wikis_editor_slug_label">URL de la page</string>
     <string name="wikis_editor_slug_hint">nom-de-ma-page</string>
     <string name="wikis_editor_content_label">Contenu</string>
-    <string name="wikis_editor_content_placeholder">Rédigez votre contenu ici en Markdown…</string>
+    <string name="wikis_editor_content_placeholder">Rédigez votre contenu ici en Markdown</string>
     <string name="wikis_editor_summary_label">Résumé de la modification (facultatif)</string>
     <string name="wikis_editor_summary_hint">Décrivez brièvement vos modifications</string>
     <string name="wikis_editor_title_required">Le titre est obligatoire</string>
@@ -159,7 +159,7 @@
     <string name="wikis_changes_title">Modifications récentes</string>
     <string name="wikis_changes_subtitle">Modifications récentes dans toutes les pages de ce wiki.</string>
     <string name="wikis_changes_empty">Aucune modification pour l\'instant</string>
-    <string name="wikis_search_pages_placeholder">Rechercher des pages par titre ou contenu…</string>
+    <string name="wikis_search_pages_placeholder">Rechercher des pages par titre ou contenu</string>
     <string name="wikis_search_empty_query">Saisissez un terme de recherche</string>
     <string name="wikis_search_no_results">Aucune page trouvée pour \"%1$s\". Essayez d\'autres termes de recherche.</string>
     <string name="wikis_search_updated">Mise à jour %1$s</string>
@@ -199,7 +199,7 @@
     <string name="wikis_attachments_upload">Téléverser des fichiers</string>
     <string name="wikis_attachments_uploading">Téléversement…</string>
     <string name="wikis_attachments_upload_failed">Échec du téléversement des fichiers</string>
-    <string name="wikis_attachments_search_placeholder">Rechercher des pièces jointes…</string>
+    <string name="wikis_attachments_search_placeholder">Rechercher des pièces jointes</string>
     <string name="wikis_attachments_search_clear">Effacer la recherche</string>
     <string name="wikis_attachments_filter_all">Tous les fichiers</string>
     <string name="wikis_attachments_filter_images">Images</string>

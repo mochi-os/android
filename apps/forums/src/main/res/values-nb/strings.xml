@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Send</string>
     <string name="forums_post_body_field">Innhold</string>
-    <string name="forums_write_comment">Skriv en kommentar…</string>
+    <string name="forums_write_comment">Skriv en kommentar</string>
 
     <string name="notification_channel_forums">Forum-varsler</string>
     <string name="forums_list_empty">Ingen forum ennå</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Ingen regler ennå – standardverdier gjelder</string>
     <string name="forums_members_search">Filtrer medlemmer</string>
     <string name="forums_banner_description">Markdown vises øverst i forumet.</string>
-    <string name="forums_banner_placeholder">Skriv inn bannertekst (markdown støttes)…</string>
     <string name="forums_ai_mode_off">Deaktivert</string>
     <string name="forums_moderation_queue_empty">Ingenting venter</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>

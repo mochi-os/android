@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Gadi dabarsi</string>
 
     <string name="notification_channel_feeds">Beeksisawwan feed-iiwwanii</string>
-    <string name="feeds_search_placeholder">Feed-iiwwan barbaadi yookaan URL maxxansi…</string>
+    <string name="feeds_search_placeholder">Feed-iiwwan barbaadi yookaan URL maxxansi</string>
     <string name="feeds_url_result">Bu\'aa URL</string>
     <string name="feeds_search_results">Bu\'aawwan barbaachaa</string>
     <string name="feeds_unread_only">Kan hin dubbifamne qofa</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Feed kana irraa haaromsa argachuu ni dhaabda. Yeroo barbaaddetti irra deebitee hordofuu dandeessa.</string>
     <string name="feeds_access_select_rule">Seera itti seenumsaa fili</string>
     <string name="feeds_access_authenticated_desc">Nama seenee jiru kamiyyuu</string>
-    <string name="feeds_banner_hint">Marii kanatti baga nagaan dhuftan…</string>
     <string name="feeds_banner_dismiss">Bannerii dhiisi</string>
     <string name="feeds_members_search">Miseensota gulaali</string>
     <string name="feeds_ai_prompt_default">Idilee</string>

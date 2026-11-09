@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Laai .json-lêer op</string>
     <string name="projects_settings_not_set">Nie ingestel nie</string>
     <string name="projects_settings_updated">Projek opgedateer</string>
-    <string name="projects_property_select">Kies …</string>
     <string name="projects_activity_attached">aangeheg</string>
     <string name="projects_activity_commented">kommentaar gelewer</string>
     <string name="projects_attachment_delete_confirm_message">Hierdie aanhangsel word permanent uitgevee.</string>

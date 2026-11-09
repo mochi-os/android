@@ -6,7 +6,7 @@
     <string name="people_groups_title">群组</string>
     <string name="people_group_title">群组</string>
     <string name="people_person_title">人员</string>
-    <string name="people_friends_search_placeholder">搜索…</string>
+    <string name="people_friends_search_placeholder">搜索</string>
     <string name="people_friends_no_people_found">未找到任何人</string>
     <string name="people_friends_try_adjusting">尝试调整您的搜索</string>
     <string name="people_friends_pending">待处理</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">删除群组 \"%1$s\"？此操作无法撤销。</string>
     <string name="people_member_remove_confirm">确定要将 %1$s 从此群组中移除吗？</string>
     <string name="people_member_remove_with_name">移除 %1$s</string>
-    <string name="people_member_search_placeholder">输入姓名以搜索…</string>
+    <string name="people_member_search_placeholder">输入姓名以搜索</string>
     <string name="people_groups_add_member_confirm_title">添加到群组</string>
     <string name="people_groups_add_member_confirm_action">添加到群组</string>
     <string name="people_profile_image_process_failed">无法处理 %1$s 图片</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">加载邀请策略失败</string>
     <string name="people_profile_avatar">头像</string>
     <string name="people_profile_banner">横幅</string>
-    <string name="people_contacts_search_placeholder">搜索…</string>
+    <string name="people_contacts_search_placeholder">搜索</string>
     <string name="people_contacts_invited">已邀请</string>
     <string name="people_contacts_accept">接受</string>
     <string name="people_contacts_message">发消息</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">最近添加</string>
     <string name="people_contacts_try_different_search">尝试其他搜索词</string>
     <string name="people_contacts_unfriend">移除好友</string>
-    <string name="people_add_contact_search_placeholder">输入以搜索…</string>
+    <string name="people_add_contact_search_placeholder">输入以搜索</string>
     <string name="people_add_contact_search_start">开始输入以搜索用户</string>
     <string name="people_contact_phone">电话</string>
     <string name="people_contact_title">职位</string>

@@ -238,7 +238,7 @@
     <string name="route_delete_message">Kunis karoora karoora \"%1$s\" haqa.</string>
     <string name="route_empty">Karoorawwan qaroomfaman hin jiran.</string>
     <string name="route_meta">Dursinsii %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Mataduree dabaluuf barbaadi…</string>
+    <string name="interests_search_placeholder">Mataduree dabaluuf barbaadi</string>
     <string name="interests_empty">Hammataan ammayyuu hin jiru.</string>
     <string name="interests_summary_regenerate">Cuunfaa deebisanii uumuu</string>
     <string name="interests_summary_regenerating">Irra deebi\'a jira…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Kunis \"%1$s\" gara durtii (duwwaa) jijjiira.</string>
     <string name="settings_home_system_users">Fayyadamtoota (seerverii)</string>
     <string name="system_users_add_user">Fayyadamaa dabaluu</string>
-    <string name="system_users_search_placeholder">Fayyadamtoota barbaadi…</string>
+    <string name="system_users_search_placeholder">Fayyadamtoota barbaadi</string>
     <string name="system_users_sort_by">Tartiibessuu</string>
     <string name="system_users_last_login">Seenuu dhumaa: %1$s</string>
     <string name="system_users_delete_message">Kunis dhaabbii fayyadamtuu \"%1$s\" haqa. Hojii kana deebisuun hin danda\'amu.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Maqaa fudhadhu</string>
     <string name="handles_empty">Maqaan fayyadamaa tokkollee dursee hin qabamne.</string>
     <string name="handles_empty_search">Maqaaleen fayyadamaa barbaacha keetiin walsiman hin jiran</string>
-    <string name="handles_search_placeholder">Maqaalee fayyadamaa barbaadi…</string>
+    <string name="handles_search_placeholder">Maqaalee fayyadamaa barbaadi</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%1$s–%2$s maqaa fayyadamaa %3$s keessaa agarsiisaa jira</item>
         <item quantity="other">%1$s–%2$s maqaalee fayyadamaa %3$s keessaa agarsiisaa jira</item>

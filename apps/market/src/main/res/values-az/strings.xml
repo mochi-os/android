@@ -4,7 +4,6 @@
     <string name="app_name">Bazar</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Bioqrafiya</string>
-    <string name="market_account_biography_placeholder">Alıcılara özünüz haqqında danışın…</string>
     <string name="market_account_load_failed">Hesab yüklənə bilmədi</string>
     <string name="market_account_location_label">Yer</string>
     <string name="market_account_save">Saxla</string>
@@ -312,7 +311,7 @@
     <string name="market_listings_search_placeholder">Elanlarınızı axtarın</string>
     <string name="market_listings_share_chooser">Elanı paylaş</string>
     <string name="market_listings_title">Mənim elanlarım</string>
-    <string name="market_messages_compose_placeholder">Mesaj yazın…</string>
+    <string name="market_messages_compose_placeholder">Mesaj yazın</string>
     <string name="market_messages_inbox_empty_subtitle">Satıcıya yazdığınızda (və ya alıcı sizə yazdıqda) söhbət burada görünəcək.</string>
     <string name="market_messages_inbox_empty_title">Hələ söhbət yoxdur</string>
     <string name="market_messages_inbox_title">Mesajlar</string>
@@ -427,7 +426,7 @@
     <string name="market_reviews_empty_sent_subtitle">Rəy yazmaq üçün tamamlanmış sifarişi açın.</string>
     <string name="market_reviews_empty_sent_title">Hələ rəy yazmamısınız</string>
     <string name="market_reviews_response_label">Cavab</string>
-    <string name="market_reviews_response_placeholder">Cavab yazın…</string>
+    <string name="market_reviews_response_placeholder">Cavab yazın</string>
     <string name="market_reviews_response_submit">Cavabı təqdim et</string>
     <string name="market_reviews_tab_received">Alındı</string>
     <string name="market_reviews_tab_sent">Göndərildi</string>
@@ -589,7 +588,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Satıcı rəyləri</string>
     <string name="market_account_stripe_open_failed">Stripe açılmadı</string>
     <string name="market_editor_stock">Stok</string>
-    <string name="market_editor_stock_units">Vahidlərin sayı</string>
     <string name="market_editor_stock_unlimited">Limitsiz</string>
     <string name="market_editor_start_time">Başlama vaxtı</string>
     <string name="market_editor_start_time_help">Dərc edildikdə başlamaq üçün boş buraxın.</string>

@@ -86,7 +86,7 @@
     <string name="feeds_move_down">ښکته یوسئ</string>
 
     <string name="notification_channel_feeds">د فیډونو خبرتیاوې</string>
-    <string name="feeds_search_placeholder">فیډونه ولټوئ یا URL پیسټ کړئ…</string>
+    <string name="feeds_search_placeholder">فیډونه ولټوئ یا URL پیسټ کړئ</string>
     <string name="feeds_url_result">د URL پایله</string>
     <string name="feeds_search_results">د لټون پایلې</string>
     <string name="feeds_unread_only">یوازې نه لوستل شوي</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">تاسو به نور د دې فیډ تازه معلومات نه ترلاسه کوئ. هر وخت بیا ګډون کولای شئ.</string>
     <string name="feeds_access_select_rule">د لاسرسي قاعده وټاکئ</string>
     <string name="feeds_access_authenticated_desc">هر څوک چې ننوتلی وي</string>
-    <string name="feeds_banner_hint">دې فورم ته ښه راغلاست…</string>
     <string name="feeds_banner_dismiss">بانر وردکړه</string>
     <string name="feeds_members_search">د غړو فلټر</string>
     <string name="feeds_ai_prompt_default">ډیفالټ</string>

@@ -140,7 +140,6 @@
     <!-- Banner tab -->
     <string name="forums_clear">Clear</string>
     <string name="forums_banner_description">Markdown shown at the top of the forum.</string>
-    <string name="forums_banner_placeholder">Enter banner text (markdown supported)…</string>
     <string name="forums_banner_dismiss">Dismiss banner</string>
 
     <!-- AI tab -->
@@ -256,7 +255,7 @@
     <!-- Post detail -->
     <string name="forums_post_default_author">User</string>
     <string name="forums_no_comments">No comments yet</string>
-    <string name="forums_write_comment">Write a comment…</string>
+    <string name="forums_write_comment">Write a comment</string>
     <string name="forums_comment_send">Send</string>
     <string name="forums_comment_edit">Edit comment</string>
     <string name="forums_comment_delete">Delete comment</string>

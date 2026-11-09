@@ -3,7 +3,6 @@
     <string name="app_name">Mercado</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografía</string>
-    <string name="market_account_biography_placeholder">Cóntalles aos compradores sobre ti…</string>
     <string name="market_account_load_failed">Non se puido cargar a conta</string>
     <string name="market_account_location_label">Localización</string>
     <string name="market_account_save">Gardar</string>
@@ -236,7 +235,7 @@
     <string name="market_listings_new">Novo anuncio</string>
     <string name="market_listings_relist_failed">Non se puido volver listar</string>
     <string name="market_listings_title">As miñas listaxes</string>
-    <string name="market_messages_compose_placeholder">Escribe unha mensaxe…</string>
+    <string name="market_messages_compose_placeholder">Escribe unha mensaxe</string>
     <string name="market_messages_inbox_title">Mensaxes</string>
     <string name="market_messages_send">Enviar</string>
     <string name="market_messages_thread_title">Conversa</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Os compradores e vendedores poden reseñarse mutuamente despois dun pedido completado.</string>
     <string name="market_reviews_empty_sent_subtitle">Abre un pedido completado para deixar unha reseña.</string>
     <string name="market_reviews_empty_sent_title">Aínda non escribiches ningunha reseña</string>
-    <string name="market_reviews_response_placeholder">Escribe unha resposta…</string>
+    <string name="market_reviews_response_placeholder">Escribe unha resposta</string>
     <string name="market_sale_carrier_custom_label">Nome da empresa de envío</string>
     <string name="market_sale_dispute_evidence_due">Probas para o %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Motivo da devolución de cargo de Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Valoracións do vendedor</string>
     <string name="market_account_stripe_open_failed">Non se puido abrir Stripe</string>
     <string name="market_editor_stock">Existencias</string>
-    <string name="market_editor_stock_units">Número de unidades</string>
     <string name="market_editor_stock_unlimited">Ilimitado</string>
     <string name="market_editor_start_time">Hora de inicio</string>
     <string name="market_editor_start_time_help">Deixa en branco para comezar ao publicar.</string>

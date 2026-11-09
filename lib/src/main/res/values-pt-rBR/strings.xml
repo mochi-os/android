@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Do tema</string>
     <string name="settings_background_off">Nenhum</string>
     <string name="game_chat_empty">Ainda não há mensagens</string>
-    <string name="game_chat_input_placeholder">Digite uma mensagem…</string>
+    <string name="game_chat_input_placeholder">Digite uma mensagem</string>
     <string name="game_chat_send">Enviar mensagem</string>
     <string name="game_chat_subject_you">Você</string>
 
@@ -226,9 +226,7 @@
     <string name="stepup_title">Confirme que é você</string>
     <string name="stepup_description">Esta é uma alteração de segurança na sua conta. Confirme que é você para continuar.</string>
     <string name="stepup_email_label">Código por e-mail</string>
-    <string name="stepup_email_placeholder">Digite o código do seu e-mail</string>
     <string name="stepup_totp_label">Código do autenticador</string>
-    <string name="stepup_totp_placeholder">Digite o código do autenticador</string>
     <string name="stepup_use_passkey">Usar sua chave de acesso</string>
     <string name="stepup_send_email">Enviar e-mail</string>
     <string name="stepup_resend_email">Reenviar e-mail</string>
@@ -266,7 +264,7 @@
     <string name="tags_delete">Remover tag</string>
     <string name="person_picker_none">Nenhum</string>
     <string name="person_picker_clear">Limpar seleção</string>
-    <string name="person_picker_select">Selecionar …</string>
+    <string name="person_picker_select">Selecionar</string>
     <string name="person_picker_directory">Diretório</string>
     <string name="person_picker_no_people">Sem pessoas</string>
     <string name="person_picker_project_members">Membros do projeto</string>
@@ -276,7 +274,7 @@
     <string name="notifications_category_unassigned">Não atribuído</string>
     <string name="lightbox_comments_none">Ainda não há comentários nesta imagem.</string>
     <string name="lightbox_comments_only">Mostrar apenas os comentários desta imagem</string>
-    <string name="lightbox_comment_placeholder">Comentar esta imagem…</string>
+    <string name="lightbox_comment_placeholder">Comentar esta imagem</string>
     <string name="comment_anchor_open">Ver a imagem à qual este comentário se refere</string>
     <string name="comment_anchor_default">Nesta imagem</string>
     <plurals name="lightbox_comments_others">

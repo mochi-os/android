@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Flytta ner</string>
 
     <string name="notification_channel_feeds">Flödesaviseringar</string>
-    <string name="feeds_search_placeholder">Sök flöden eller klistra in URL…</string>
+    <string name="feeds_search_placeholder">Sök flöden eller klistra in URL</string>
     <string name="feeds_url_result">URL-resultat</string>
     <string name="feeds_search_results">Sökresultat</string>
     <string name="feeds_unread_only">Endast olästa</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Du slutar få uppdateringar från det här flödet. Du kan prenumerera igen när som helst.</string>
     <string name="feeds_access_select_rule">Välj åtkomstregel</string>
     <string name="feeds_access_authenticated_desc">Alla som är inloggade</string>
-    <string name="feeds_banner_hint">Välkommen till det här forumet…</string>
     <string name="feeds_banner_dismiss">Avfärda banner</string>
     <string name="feeds_members_search">Filtrera medlemmar</string>
     <string name="feeds_ai_prompt_default">Standard</string>

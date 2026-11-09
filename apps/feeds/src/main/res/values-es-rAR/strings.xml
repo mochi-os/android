@@ -58,7 +58,7 @@
     <string name="notification_channel_feeds">Notificaciones de feeds</string>
     <string name="feeds_find_feeds">Buscar feeds</string>
     <string name="feeds_all_feeds">Todos los feeds</string>
-    <string name="feeds_search_placeholder">Buscar feeds o pegar URL…</string>
+    <string name="feeds_search_placeholder">Buscar feeds o pegar URL</string>
     <string name="feeds_url_result">Resultado de URL</string>
     <string name="feeds_search_results">Resultados de búsqueda</string>
     <string name="feeds_no_feeds_found">No se encontraron feeds</string>
@@ -170,7 +170,6 @@
     <string name="feeds_unsubscribe_confirm_message">Dejarás de recibir actualizaciones de este feed. Podés volver a suscribirte en cualquier momento.</string>
     <string name="feeds_access_select_rule">Seleccioná una regla de acceso</string>
     <string name="feeds_access_authenticated_desc">Cualquier persona que haya iniciado sesión</string>
-    <string name="feeds_banner_hint">Bienvenido a este foro…</string>
     <string name="feeds_banner_dismiss">Descartar banner</string>
     <string name="feeds_members_search">Filtrar miembros</string>
     <string name="feeds_ai_prompt_default">Predeterminado</string>

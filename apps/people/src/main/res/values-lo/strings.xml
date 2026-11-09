@@ -6,7 +6,7 @@
     <string name="people_groups_title">ກຸ່ມ</string>
     <string name="people_group_title">ກຸ່ມ</string>
     <string name="people_person_title">ຄົນ</string>
-    <string name="people_friends_search_placeholder">ຄົ້ນຫາ…</string>
+    <string name="people_friends_search_placeholder">ຄົ້ນຫາ</string>
     <string name="people_friends_no_people_found">ບໍ່ພົບຄົນ</string>
     <string name="people_friends_try_adjusting">ລອງປັບປ່ຽນການຄົ້ນຫາຂອງທ່ານ</string>
     <string name="people_friends_pending">ກຳລັງລໍຖ້າ</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">ລຶບກຸ່ມ \"%1$s\"? ການກະທຳນີ້ບໍ່ສາມາດຍ້ອນກັບໄດ້.</string>
     <string name="people_member_remove_confirm">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບ %1$s ອອກຈາກກຸ່ມນີ້?</string>
     <string name="people_member_remove_with_name">ລຶບ %1$s</string>
-    <string name="people_member_search_placeholder">ໃສ່ຊື່ເພື່ອຄົ້ນຫາ…</string>
+    <string name="people_member_search_placeholder">ໃສ່ຊື່ເພື່ອຄົ້ນຫາ</string>
     <string name="people_groups_add_member_confirm_title">ເພີ່ມເຂົ້າກຸ່ມ</string>
     <string name="people_groups_add_member_confirm_action">ເພີ່ມເຂົ້າກຸ່ມ</string>
     <string name="people_profile_image_process_failed">ບໍ່ສາມາດປະມວນຜົນຮູບ %1$s ໄດ້</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">ໂຫຼດນະໂຍບາຍຄຳເຊີນຂອງທ່ານລົ້ມເຫຼວ</string>
     <string name="people_profile_avatar">ອະວາຕາ</string>
     <string name="people_profile_banner">ປ້າຍ</string>
-    <string name="people_contacts_search_placeholder">ຄົ້ນຫາ…</string>
+    <string name="people_contacts_search_placeholder">ຄົ້ນຫາ</string>
     <string name="people_contacts_invited">ເຊີນແລ້ວ</string>
     <string name="people_contacts_accept">ຍອມຮັບ</string>
     <string name="people_contacts_message">ສົ່ງຂໍ້ຄວາມ</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">ເພີ່ມເມື່ອບໍ່ດົນມານີ້</string>
     <string name="people_contacts_try_different_search">ລອງຄຳຄົ້ນຫາທີ່ແຕກຕ່າງກັນ</string>
     <string name="people_contacts_unfriend">ລຶບໝູ່</string>
-    <string name="people_add_contact_search_placeholder">ພິມເພື່ອຄົ້ນຫາ…</string>
+    <string name="people_add_contact_search_placeholder">ພິມເພື່ອຄົ້ນຫາ</string>
     <string name="people_add_contact_search_start">ເລີ່ມພິມເພື່ອຄົ້ນຫາຜູ້ໃຊ້</string>
     <string name="people_contact_phone">ໂທລະສັບ</string>
     <string name="people_contact_title">ຕຳແໜ່ງງານ</string>

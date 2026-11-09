@@ -238,7 +238,7 @@
     <string name="route_delete_message">ई \"%1$s\" रास्ता खातिर रूट मिटा दी।</string>
     <string name="route_empty">कौनो रास्ता कॉन्फिगर नइखे।</string>
     <string name="route_meta">प्राथमिकता %1$s · %2$s</string>
-    <string name="interests_search_placeholder">जोड़े खातिर विषय खोजीं…</string>
+    <string name="interests_search_placeholder">जोड़े खातिर विषय खोजीं</string>
     <string name="interests_empty">अबहीं तकले कौनो रुचि ना बा।</string>
     <string name="interests_summary_regenerate">सारांश फेर से बनाईं</string>
     <string name="interests_summary_regenerating">फेर से बनात बा…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ई \"%1$s\" के डिफ़ॉल्ट (खाली) पर रीसेट कर दी।</string>
     <string name="settings_home_system_users">उपयोगकर्ता (सर्वर)</string>
     <string name="system_users_add_user">उपयोगकर्ता जोड़ीं</string>
-    <string name="system_users_search_placeholder">उपयोगकर्ता खोजीं…</string>
+    <string name="system_users_search_placeholder">उपयोगकर्ता खोजीं</string>
     <string name="system_users_sort_by">एकरे अनुसार क्रमबद्ध करीं</string>
     <string name="system_users_last_login">आखिरी लॉगिन: %1$s</string>
     <string name="system_users_delete_message">ई हमेशा खातिर उपयोगकर्ता \"%1$s\" के मिटा दी। ई काम पीछे ना ले जा सकेला।</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">नाम लीं</string>
     <string name="handles_empty">कौनो हैंडल आरक्षित नइखे भइल।</string>
     <string name="handles_empty_search">कौनो हैंडल रउआ खोज से मेल ना खाइल</string>
-    <string name="handles_search_placeholder">हैंडल खोजीं…</string>
+    <string name="handles_search_placeholder">हैंडल खोजीं</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s हैंडल में से %1$s–%2$s देखावल जा रहल बा</item>
         <item quantity="other">%3$s हैंडल में से %1$s–%2$s देखावल जा रहल बा</item>

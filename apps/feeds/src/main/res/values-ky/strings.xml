@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Төмөн жылдыруу</string>
 
     <string name="notification_channel_feeds">Лента билдирмелери</string>
-    <string name="feeds_search_placeholder">Ленталарды издөө же URL чаптоо…</string>
+    <string name="feeds_search_placeholder">Ленталарды издөө же URL чаптоо</string>
     <string name="feeds_url_result">URL жыйынтыгы</string>
     <string name="feeds_search_results">Издөө жыйынтыктары</string>
     <string name="feeds_unread_only">Окулбагандар гана</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Бул лентадан жаңыртууларды албай каласыз. Каалаган убакта кайра жазылсаңыз болот.</string>
     <string name="feeds_access_select_rule">Кирүү эрежесин тандоо</string>
     <string name="feeds_access_authenticated_desc">Системага кирген ар бир адам</string>
-    <string name="feeds_banner_hint">Бул форумга кош келиңиз…</string>
     <string name="feeds_banner_dismiss">Баннерди четке кагуу</string>
     <string name="feeds_members_search">Мүчөлөрдү чыпкалоо</string>
     <string name="feeds_ai_prompt_default">Демейки</string>

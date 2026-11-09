@@ -90,7 +90,7 @@
     <string name="feeds_ai_account">AI konto</string>
 
     <string name="notification_channel_feeds">Voogude teavitused</string>
-    <string name="feeds_search_placeholder">Otsi voogusid või kleebi URL…</string>
+    <string name="feeds_search_placeholder">Otsi voogusid või kleebi URL</string>
     <string name="feeds_url_result">URLi tulemus</string>
     <string name="feeds_search_results">Otsingutulemused</string>
     <string name="feeds_unread_only">Ainult lugemata</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Sa ei saa enam selle voo värskendusi. Saad igal ajal uuesti tellida.</string>
     <string name="feeds_access_select_rule">Vali juurdepääsureegel</string>
     <string name="feeds_access_authenticated_desc">Kõik sisselogitud kasutajad</string>
-    <string name="feeds_banner_hint">Tere tulemast sellesse foorumisse…</string>
     <string name="feeds_banner_dismiss">Sulge bänner</string>
     <string name="feeds_members_search">Filtreeri liikmeid</string>
     <string name="feeds_ai_prompt_default">Vaikimisi</string>

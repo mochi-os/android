@@ -246,7 +246,7 @@ fun NetworksScreen(
             title = stringResource(R.string.networks_labelers),
             initial = account.labelers,
             field = stringResource(R.string.networks_labeler),
-            placeholder = "did:plc:...",
+            placeholder = "did:plc:",
             busy = "labelers" in state.busy,
             onSave = { list, done -> viewModel.labelers(account, list, done) },
             onDismiss = { labelersFor = null },

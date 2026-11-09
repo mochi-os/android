@@ -237,7 +237,7 @@
     <string name="route_delete_message">Việc này sẽ xóa tuyến cho đường dẫn \"%1$s\".</string>
     <string name="route_empty">Không có tuyến nào được cấu hình.</string>
     <string name="route_meta">Mức ưu tiên %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Tìm kiếm chủ đề để thêm…</string>
+    <string name="interests_search_placeholder">Tìm kiếm chủ đề để thêm</string>
     <string name="interests_empty">Chưa có sở thích nào.</string>
     <string name="interests_summary_regenerate">Tạo lại tóm tắt</string>
     <string name="interests_summary_regenerating">Đang tạo lại…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">Việc này sẽ đặt lại \"%1$s\" về mặc định (trống).</string>
     <string name="settings_home_system_users">Người dùng (máy chủ)</string>
     <string name="system_users_add_user">Thêm người dùng</string>
-    <string name="system_users_search_placeholder">Tìm kiếm người dùng…</string>
+    <string name="system_users_search_placeholder">Tìm kiếm người dùng</string>
     <string name="system_users_sort_by">Sắp xếp theo</string>
     <string name="system_users_last_login">Đăng nhập lần cuối: %1$s</string>
     <string name="system_users_delete_message">Việc này sẽ xóa vĩnh viễn người dùng \"%1$s\". Hành động này không thể hoàn tác.</string>
@@ -546,7 +546,7 @@
     <string name="handles_take">Lấy một tên</string>
     <string name="handles_empty">Chưa có biệt danh nào được đặt trước.</string>
     <string name="handles_empty_search">Không có biệt danh nào khớp với tìm kiếm của bạn</string>
-    <string name="handles_search_placeholder">Tìm kiếm biệt danh…</string>
+    <string name="handles_search_placeholder">Tìm kiếm biệt danh</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">Đang hiển thị %1$s–%2$s trên %3$s biệt danh</item>
     </plurals>

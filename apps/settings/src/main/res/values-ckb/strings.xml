@@ -238,7 +238,7 @@
     <string name="route_delete_message">ئەمە ڕێگای \"%1$s\" لادەبات.</string>
     <string name="route_empty">ڕێگایەک ڕێکخراو نییە.</string>
     <string name="route_meta">پێشینەیی %1$s · %2$s</string>
-    <string name="interests_search_placeholder">بابەت بگەڕێ بۆ زیادکردن…</string>
+    <string name="interests_search_placeholder">بابەت بگەڕێ بۆ زیادکردن</string>
     <string name="interests_empty">ھێشتا ھیچ ئارەزوویەک نییە.</string>
     <string name="interests_summary_regenerate">دروستکردنەوەی پوختە</string>
     <string name="interests_summary_regenerating">دوبارە دروست دەکرێت…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ئەمە \"%1$s\" بۆ بنەڕەتی (بەتاڵ) ڕێکدەخاتەوە.</string>
     <string name="settings_home_system_users">بەکارھێنەران (سێرڤەر)</string>
     <string name="system_users_add_user">زیادکردنی بەکارهێنەر</string>
-    <string name="system_users_search_placeholder">بەکارھێنەران بگەڕێ…</string>
+    <string name="system_users_search_placeholder">بەکارھێنەران بگەڕێ</string>
     <string name="system_users_sort_by">ڕیزکردن بەپێی</string>
     <string name="system_users_last_login">کۆتا چوونەژوورەوە: %1$s</string>
     <string name="system_users_delete_message">ئەمە بۆ ھەمیشە بەکارھێنەری \"%1$s\" دەسڕێتەوە. ئەم کردارە ناتوانرێ بگەڕێندرێتەوە.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">ناوێک وەربگرە</string>
     <string name="handles_empty">هیچ ناوێکی بەکارهێنەر تەرخان نەکراوە.</string>
     <string name="handles_empty_search">هیچ ناوێکی بەکارهێنەر لەگەڵ گەڕانەکەت یەکناگرێتەوە</string>
-    <string name="handles_search_placeholder">گەڕانی ناوەکانی بەکارهێنەر…</string>
+    <string name="handles_search_placeholder">گەڕانی ناوەکانی بەکارهێنەر</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">پیشاندانی %1$s–%2$s لە %3$s ناوی بەکارهێنەر</item>
         <item quantity="other">پیشاندانی %1$s–%2$s لە %3$s ناوی بەکارهێنەر</item>

@@ -115,7 +115,7 @@
     <string name="settings_background_theme">テーマから</string>
     <string name="settings_background_off">なし</string>
     <string name="game_chat_empty">まだメッセージがありません</string>
-    <string name="game_chat_input_placeholder">メッセージを入力…</string>
+    <string name="game_chat_input_placeholder">メッセージを入力</string>
     <string name="game_chat_send">メッセージを送信</string>
     <string name="game_chat_subject_you">あなた</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">本人確認</string>
     <string name="stepup_description">これはアカウントのセキュリティに関する変更です。続行するには本人確認を行ってください。</string>
     <string name="stepup_email_label">メールコード</string>
-    <string name="stepup_email_placeholder">メールに記載されたコードを入力してください</string>
     <string name="stepup_totp_label">認証コード</string>
-    <string name="stepup_totp_placeholder">認証アプリのコードを入力</string>
     <string name="stepup_use_passkey">パスキーを使用</string>
     <string name="stepup_send_email">メールを送信</string>
     <string name="stepup_resend_email">メールを再送信</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">タグを削除</string>
     <string name="person_picker_none">なし</string>
     <string name="person_picker_clear">選択をクリア</string>
-    <string name="person_picker_select">選択 …</string>
+    <string name="person_picker_select">選択</string>
     <string name="person_picker_directory">ディレクトリ</string>
     <string name="person_picker_no_people">人がいません</string>
     <string name="person_picker_project_members">プロジェクトメンバー</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">通知カテゴリを変更</string>
     <string name="lightbox_comments_none">この画像へのコメントはまだありません。</string>
     <string name="lightbox_comments_only">この画像へのコメントのみ表示</string>
-    <string name="lightbox_comment_placeholder">この画像にコメント…</string>
+    <string name="lightbox_comment_placeholder">この画像にコメント</string>
     <string name="comment_anchor_open">このコメントの対象の画像を表示</string>
     <string name="comment_anchor_default">この画像について</string>
     <plurals name="lightbox_comments_others">

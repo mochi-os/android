@@ -301,7 +301,6 @@
     <string name="projects_create_upload_json">Enviar arquivo .json</string>
     <string name="projects_settings_not_set">Não definido</string>
     <string name="projects_settings_updated">Projeto atualizado</string>
-    <string name="projects_property_select">Selecionar …</string>
     <string name="projects_activity_attached">anexou</string>
     <string name="projects_activity_commented">comentou</string>
     <string name="projects_attachment_delete_confirm_message">Este anexo será excluído permanentemente.</string>

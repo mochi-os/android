@@ -238,7 +238,7 @@
     <string name="route_delete_message">هي رستي \"%1$s\" لاء روٽ هٽائيندو.</string>
     <string name="route_empty">ڪي به رستا ترتيب ڏنل نه آهن.</string>
     <string name="route_meta">اوليت %1$s · %2$s</string>
-    <string name="interests_search_placeholder">شامل ڪرڻ لاء موضوع ڳوليو…</string>
+    <string name="interests_search_placeholder">شامل ڪرڻ لاء موضوع ڳوليو</string>
     <string name="interests_empty">اڃا تائين ڪا دلچسپي نه آهي.</string>
     <string name="interests_summary_regenerate">خلاصو ٻيهر ٺاهيو</string>
     <string name="interests_summary_regenerating">ٻيهر ٺاهي رهيو آهي…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">هي \"%1$s\" کي ڊفالٽ (خالي) تي ريسيٽ ڪندو.</string>
     <string name="settings_home_system_users">يوزرز (سرور)</string>
     <string name="system_users_add_user">صارف شامل ڪريو</string>
-    <string name="system_users_search_placeholder">يوزرز ڳوليو…</string>
+    <string name="system_users_search_placeholder">يوزرز ڳوليو</string>
     <string name="system_users_sort_by">ترتيب ڏيو</string>
     <string name="system_users_last_login">آخري لاگ ان: %1$s</string>
     <string name="system_users_delete_message">هي مستقل طور تي يوزر \"%1$s\" کي حذف ڪندو. هي عمل واپس نه ٿو ٿي سگهي.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">نالو وٺو</string>
     <string name="handles_empty">ڪو به هينڊل مخصوص ناهي ڪيو ويو.</string>
     <string name="handles_empty_search">ڪو هينڊل توهان جي ڳولا سان نه ملندو</string>
-    <string name="handles_search_placeholder">هينڊل ڳوليو…</string>
+    <string name="handles_search_placeholder">هينڊل ڳوليو</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s هينڊل مان %1$s–%2$s ڏيکاريا پيا وڃن</item>
         <item quantity="other">%3$s هينڊلن مان %1$s–%2$s ڏيکاريا پيا وڃن</item>

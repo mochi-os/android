@@ -3,7 +3,6 @@
     <string name="app_name">Bozor</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Tarjimai hol</string>
-    <string name="market_account_biography_placeholder">Xaridorlarga oʻzingiz haqida gapiring…</string>
     <string name="market_account_load_failed">Hisobni yuklab boʻlmadi</string>
     <string name="market_account_location_label">Joylashuv</string>
     <string name="market_account_save">Saqlash</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Yangi eʼlon</string>
     <string name="market_listings_relist_failed">Qayta sotuvga qoʻyib boʻlmadi</string>
     <string name="market_listings_title">Mening eʼlonlarim</string>
-    <string name="market_messages_compose_placeholder">Xabar yozing…</string>
+    <string name="market_messages_compose_placeholder">Xabar yozing</string>
     <string name="market_messages_inbox_title">Xabarlar</string>
     <string name="market_messages_send">Yuborish</string>
     <string name="market_messages_thread_title">Suhbat</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Xaridorlar va sotuvchilar yakunlangan buyurtmadan keyin bir-birini baholashi mumkin.</string>
     <string name="market_reviews_empty_sent_subtitle">Sharh qoldirish uchun yakunlangan buyurtmani oching.</string>
     <string name="market_reviews_empty_sent_title">Siz hali sharh yozmagansiz</string>
-    <string name="market_reviews_response_placeholder">Javob yozing…</string>
+    <string name="market_reviews_response_placeholder">Javob yozing</string>
     <string name="market_sale_carrier_custom_label">Tashuvchi nomi</string>
     <string name="market_sale_dispute_evidence_due">Dalil muddati %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe to\'lov qaytarish sababi: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Sotuvchi haqida sharhlar</string>
     <string name="market_account_stripe_open_failed">Stripe ochilmadi</string>
     <string name="market_editor_stock">Mavjud</string>
-    <string name="market_editor_stock_units">Birliklar soni</string>
     <string name="market_editor_stock_unlimited">Cheksiz</string>
     <string name="market_editor_start_time">Boshlanish vaqti</string>
     <string name="market_editor_start_time_help">Eʼlon qilishda boshlash uchun boʻsh qoldiring.</string>

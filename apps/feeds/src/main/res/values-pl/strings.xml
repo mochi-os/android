@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Przenieś w dół</string>
 
     <string name="notification_channel_feeds">Powiadomienia kanałów</string>
-    <string name="feeds_search_placeholder">Szukaj kanałów lub wklej adres URL…</string>
+    <string name="feeds_search_placeholder">Szukaj kanałów lub wklej adres URL</string>
     <string name="feeds_url_result">Wynik adresu URL</string>
     <string name="feeds_search_results">Wyniki wyszukiwania</string>
     <string name="feeds_unread_only">Tylko nieprzeczytane</string>
@@ -208,7 +208,6 @@
     <string name="feeds_unsubscribe_confirm_message">Nie będziesz już otrzymywać aktualizacji z tego kanału. Możesz zasubskrybować ponownie w dowolnym momencie.</string>
     <string name="feeds_access_select_rule">Wybierz regułę dostępu</string>
     <string name="feeds_access_authenticated_desc">Każdy, kto jest zalogowany</string>
-    <string name="feeds_banner_hint">Witamy na tym forum…</string>
     <string name="feeds_banner_dismiss">Odrzuć baner</string>
     <string name="feeds_members_search">Filtruj członków</string>
     <string name="feeds_ai_prompt_default">Domyślny</string>

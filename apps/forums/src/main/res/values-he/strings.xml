@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">שלח</string>
     <string name="forums_post_body_field">גוף</string>
-    <string name="forums_write_comment">כתוב תגובה…</string>
+    <string name="forums_write_comment">כתוב תגובה</string>
 
     <string name="notification_channel_forums">התראות פורומים</string>
     <string name="forums_list_empty">אין עדיין פורומים</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">אין עדיין כללים — חלים ברירות המחדל</string>
     <string name="forums_members_search">סינון חברים</string>
     <string name="forums_banner_description">Markdown המוצג בראש הפורום.</string>
-    <string name="forums_banner_placeholder">הזן טקסט לבאנר (יש תמיכה ב-Markdown)…</string>
     <string name="forums_ai_mode_off">מושבת</string>
     <string name="forums_moderation_queue_empty">אין פריטים ממתינים</string>
     <string name="forums_moderation_report_details">פרטים: %1$s</string>

@@ -237,7 +237,7 @@
     <string name="route_delete_message">パス「%1$s」のルートが削除されます。</string>
     <string name="route_empty">ルートが設定されていません。</string>
     <string name="route_meta">優先度 %1$s · %2$s</string>
-    <string name="interests_search_placeholder">追加するトピックを検索…</string>
+    <string name="interests_search_placeholder">追加するトピックを検索</string>
     <string name="interests_empty">まだ興味がありません。</string>
     <string name="interests_summary_regenerate">要約を再生成</string>
     <string name="interests_summary_regenerating">再生成中…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">「%1$s」を既定値（空）にリセットします。</string>
     <string name="settings_home_system_users">ユーザー（サーバー）</string>
     <string name="system_users_add_user">ユーザーを追加</string>
-    <string name="system_users_search_placeholder">ユーザーを検索…</string>
+    <string name="system_users_search_placeholder">ユーザーを検索</string>
     <string name="system_users_sort_by">並べ替え</string>
     <string name="system_users_last_login">最終ログイン: %1$s</string>
     <string name="system_users_delete_message">ユーザー「%1$s」を完全に削除します。この操作は元に戻せません。</string>
@@ -546,7 +546,7 @@
     <string name="handles_take">名前を取得</string>
     <string name="handles_empty">予約されたハンドルはありません。</string>
     <string name="handles_empty_search">検索に一致するハンドルはありません</string>
-    <string name="handles_search_placeholder">ハンドルを検索…</string>
+    <string name="handles_search_placeholder">ハンドルを検索</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">%3$s件のハンドルのうち%1$s–%2$s件を表示中</item>
     </plurals>

@@ -31,7 +31,7 @@
     <string name="people_invitations_title">邀請</string>
     <string name="people_group_title">群組</string>
     <string name="people_person_title">聯絡人</string>
-    <string name="people_friends_search_placeholder">搜尋…</string>
+    <string name="people_friends_search_placeholder">搜尋</string>
     <string name="people_friends_searching">搜尋中…</string>
     <string name="people_friends_no_people_found">找不到任何人</string>
     <string name="people_friends_try_adjusting">請嘗試調整你的搜尋</string>
@@ -66,7 +66,7 @@
     <string name="people_member_remove_title">移除成員</string>
     <string name="people_member_remove_confirm">確定要將 %1$s 從此群組移除嗎？</string>
     <string name="people_member_remove_with_name">移除 %1$s</string>
-    <string name="people_member_search_placeholder">輸入名稱以搜尋…</string>
+    <string name="people_member_search_placeholder">輸入名稱以搜尋</string>
     <string name="people_member_type_group">群組</string>
     <string name="people_member_unknown_person">未知使用者</string>
     <string name="people_member_deleted_group">已刪除的群組</string>
@@ -94,7 +94,7 @@
     <string name="people_person_state_friend">朋友</string>
     <string name="people_person_state_invited">已邀請</string>
 
-    <string name="people_contacts_search_placeholder">搜尋…</string>
+    <string name="people_contacts_search_placeholder">搜尋</string>
     <string name="people_contacts_invited">已邀請</string>
     <string name="people_contacts_accept">接受</string>
     <string name="people_contacts_message">訊息</string>
@@ -113,7 +113,7 @@
     <string name="people_books_name">名稱</string>
     <string name="people_books_rename">重新命名</string>
     <string name="people_contacts_unfriend">移除好友</string>
-    <string name="people_add_contact_search_placeholder">輸入以搜尋…</string>
+    <string name="people_add_contact_search_placeholder">輸入以搜尋</string>
     <string name="people_add_contact_search_start">開始輸入以搜尋用戶</string>
     <string name="people_device_create">建立</string>
     <string name="people_device_username">使用者名稱</string>

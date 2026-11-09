@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Sūtīt</string>
     <string name="forums_post_body_field">Teksts</string>
-    <string name="forums_write_comment">Rakstiet komentāru…</string>
+    <string name="forums_write_comment">Rakstiet komentāru</string>
 
     <string name="notification_channel_forums">Forumu paziņojumi</string>
     <string name="forums_list_empty">Vēl nav nevienu forumu</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Vēl nav noteikumu — tiek piemēroti noklusējumi</string>
     <string name="forums_members_search">Filtrēt dalībniekus</string>
     <string name="forums_banner_description">Markdown, kas tiek rādīts foruma augšpusē.</string>
-    <string name="forums_banner_placeholder">Ievadiet reklāmkaroga tekstu (tiek atbalstīts Markdown)…</string>
     <string name="forums_ai_mode_off">Atspējots</string>
     <string name="forums_moderation_queue_empty">Nekas nav gaidīšanā</string>
     <string name="forums_moderation_report_details">Detaļas: %1$s</string>

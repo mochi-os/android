@@ -6,7 +6,7 @@
     <string name="people_groups_title">කණ්ඩායම්</string>
     <string name="people_group_title">කණ්ඩායම</string>
     <string name="people_person_title">පුද්ගලයා</string>
-    <string name="people_friends_search_placeholder">සොයන්න…</string>
+    <string name="people_friends_search_placeholder">සොයන්න</string>
     <string name="people_friends_no_people_found">පුද්ගලයන් හමු නොවීය</string>
     <string name="people_friends_try_adjusting">ඔබේ සෙවීම සකස් කිරීම උත්සාහ කරන්න</string>
     <string name="people_friends_pending">පොරොත්තුවෙන්</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" කණ්ඩායම මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
     <string name="people_member_remove_confirm">ඔබට %1$s ව මෙම කණ්ඩායමෙන් ඉවත් කිරීමට අවශ්‍ය බව ස්ථිරද?</string>
     <string name="people_member_remove_with_name">%1$s ඉවත් කරන්න</string>
-    <string name="people_member_search_placeholder">සෙවීමට නම ඇතුළත් කරන්න…</string>
+    <string name="people_member_search_placeholder">සෙවීමට නම ඇතුළත් කරන්න</string>
     <string name="people_groups_add_member_confirm_title">කණ්ඩායමට එකතු කරන්න</string>
     <string name="people_groups_add_member_confirm_action">කණ්ඩායමට එකතු කරන්න</string>
     <string name="people_profile_image_process_failed">%1$s රූපය සැකසිය නොහැකි විය</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">ඔබේ ආරාධන ප්‍රතිපත්තිය පූරණය කිරීමට අසමත් විය</string>
     <string name="people_profile_avatar">අවතාරය</string>
     <string name="people_profile_banner">බැනරය</string>
-    <string name="people_contacts_search_placeholder">සොයන්න…</string>
+    <string name="people_contacts_search_placeholder">සොයන්න</string>
     <string name="people_contacts_invited">ආරාධිතයි</string>
     <string name="people_contacts_accept">පිළිගන්න</string>
     <string name="people_contacts_message">පණිවිඩයක් යවන්න</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">මෑතකදී එක් කළ</string>
     <string name="people_contacts_try_different_search">වෙනත් සෙවුම් වචනයක් උත්සාහ කරන්න</string>
     <string name="people_contacts_unfriend">මිතුරා ඉවත් කරන්න</string>
-    <string name="people_add_contact_search_placeholder">සෙවීමට ටයිප් කරන්න…</string>
+    <string name="people_add_contact_search_placeholder">සෙවීමට ටයිප් කරන්න</string>
     <string name="people_add_contact_search_start">පරිශීලකයන් සෙවීමට ටයිප් කිරීම ආරම්භ කරන්න</string>
     <string name="people_contact_phone">දුරකථන</string>
     <string name="people_contact_title">රැකියා තනතුර</string>

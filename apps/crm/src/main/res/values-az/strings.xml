@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Barmaq izi</string>
     <string name="crm_settings_server">Server</string>
     <string name="crm_untitled">Başlıqsız</string>
-    <string name="crm_property_select">Seçin …</string>
     <string name="crm_filter">Filtr</string>
     <string name="crm_sort_filter_title">Sırala və filtrlə</string>
     <string name="crm_filter_clear_all">Hamısını təmizlə</string>

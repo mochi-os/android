@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Prześlij plik .json</string>
     <string name="projects_settings_not_set">Nie ustawiono</string>
     <string name="projects_settings_updated">Zaktualizowano projekt</string>
-    <string name="projects_property_select">Wybierz …</string>
     <string name="projects_activity_attached">załączył(a)</string>
     <string name="projects_activity_commented">skomentował(a)</string>
     <string name="projects_attachment_delete_confirm_message">Ten załącznik zostanie trwale usunięty.</string>

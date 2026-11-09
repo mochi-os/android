@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">મોકલો</string>
     <string name="forums_post_body_field">સામગ્રી</string>
-    <string name="forums_write_comment">ટિપ્પણી લખો…</string>
+    <string name="forums_write_comment">ટિપ્પણી લખો</string>
 
     <string name="notification_channel_forums">ફોરમ સૂચનાઓ</string>
     <string name="forums_list_empty">હજુ સુધી કોઈ ફોરમ નથી</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">હજુ સુધી કોઈ નિયમ નથી — ડિફૉલ્ટ લાગુ થાય છે</string>
     <string name="forums_members_search">સભ્યો ફિલ્ટર કરો</string>
     <string name="forums_banner_description">ફોરમની ટોચ પર બતાવેલ Markdown.</string>
-    <string name="forums_banner_placeholder">બેનરનો ટેક્સ્ટ દાખલ કરો (Markdown સમર્થિત)…</string>
     <string name="forums_ai_mode_off">નિષ્ક્રિય</string>
     <string name="forums_moderation_queue_empty">કંઈપણ બાકી નથી</string>
     <string name="forums_moderation_report_details">વિગતો: %1$s</string>

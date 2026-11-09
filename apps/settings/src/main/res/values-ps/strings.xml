@@ -238,7 +238,7 @@
     <string name="route_delete_message">دا به د \"%1$s\" لارې لپاره روټ لرې کړي.</string>
     <string name="route_empty">هیڅ لارې نه دي تنظیم شوي.</string>
     <string name="route_meta">لومړیتوب %1$s · %2$s</string>
-    <string name="interests_search_placeholder">د اضافه کولو لپاره موضوعات لټوئ…</string>
+    <string name="interests_search_placeholder">د اضافه کولو لپاره موضوعات لټوئ</string>
     <string name="interests_empty">تر اوسه هیڅ علاقې نشته.</string>
     <string name="interests_summary_regenerate">لنډیز بیا جوړول</string>
     <string name="interests_summary_regenerating">بیا جوړیږي…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">دا به \"%1$s\" د ډیفالټ (خالي) ته بیرته راولي.</string>
     <string name="settings_home_system_users">کاروونکي (سرور)</string>
     <string name="system_users_add_user">کاروونکی اضافه کړئ</string>
-    <string name="system_users_search_placeholder">کاروونکي ولټوئ…</string>
+    <string name="system_users_search_placeholder">کاروونکي ولټوئ</string>
     <string name="system_users_sort_by">ترتیب</string>
     <string name="system_users_last_login">وروستی ننوتل: %1$s</string>
     <string name="system_users_delete_message">دا به دایمي توګه کارن \"%1$s\" حذف کړي. دا عمل بیرته نشي راګرځېدلی.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">یو نوم واخلئ</string>
     <string name="handles_empty">هېڅ مستعار نوم نه دی ریزرو شوی.</string>
     <string name="handles_empty_search">هیڅ مستعار نوم ستاسو د لټون سره سمون نه خوري</string>
-    <string name="handles_search_placeholder">مستعار نومونه وپلټئ…</string>
+    <string name="handles_search_placeholder">مستعار نومونه وپلټئ</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">د %3$s مستعار نوم څخه %1$s–%2$s ښودل کیږي</item>
         <item quantity="other">د %3$s مستعار نومونو څخه %1$s–%2$s ښودل کیږي</item>

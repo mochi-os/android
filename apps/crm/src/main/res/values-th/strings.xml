@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">ลายนิ้วมือ</string>
     <string name="crm_settings_server">เซิร์ฟเวอร์</string>
     <string name="crm_untitled">ไม่มีชื่อ</string>
-    <string name="crm_property_select">เลือก …</string>
     <string name="crm_filter">กรอง</string>
     <string name="crm_sort_filter_title">จัดเรียงและกรอง</string>
     <string name="crm_filter_clear_all">ล้างทั้งหมด</string>

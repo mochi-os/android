@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Шийдэх</string>
     <string name="staff_appeals_decision_denied">Зар татгалзсан хэвээр</string>
     <string name="staff_appeals_decision_label">Шийдвэр</string>
-    <string name="staff_appeals_decision_placeholder">Шийдвэр сонгох</string>
     <string name="staff_appeals_decision_upheld">Зар зөвшөөрөх</string>
     <string name="staff_appeals_denied_toast">Гомдол татгалзсан</string>
     <string name="staff_appeals_dialog_title">Гомдлыг шийдэх</string>
@@ -230,7 +229,6 @@
     <string name="staff_disputes_refund_must_be_positive">Буцаах дүн нь тэгээс их байх ёстой</string>
     <string name="staff_disputes_resolution_buyer">Худалдан авагчийн талд шийдвэрлэх</string>
     <string name="staff_disputes_resolution_label">Тогтоол</string>
-    <string name="staff_disputes_resolution_placeholder">Шийдэл сонгох</string>
     <string name="staff_disputes_resolution_seller">Худалдагчийн талд шийдвэрлэх</string>
     <string name="staff_disputes_resolve">Шийдвэрлэх</string>
     <string name="staff_disputes_resolved_toast">Маргаан шийдэгдсэн</string>
@@ -290,7 +288,6 @@
     <string name="staff_reports_action_ban">Хэрэглэгчид хориг тавих</string>
     <string name="staff_reports_action_dismiss">Хэрэгсэхгүй болгох</string>
     <string name="staff_reports_action_label">Үйлдэл</string>
-    <string name="staff_reports_action_placeholder">Үйлдэл сонгох</string>
     <string name="staff_reports_action_remove">Хасах</string>
     <string name="staff_reports_action_suspend">Худалдагчийг түр зогсоох</string>
     <string name="staff_reports_action_taken_toast">Гомдлын арга хэмжээ авсан</string>
@@ -435,7 +432,7 @@
     <string name="staff_reviews_order_label">захиалга #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s-нд. Энэ үнэлгээг бүрмөсөн устгах уу? Үүнийг буцаах боломжгүй.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Энэ үнэлгээг бүрмөсөн устгах уу? Үүнийг буцаах боломжгүй.</string>
-    <string name="staff_team_dialog_search_placeholder">Нэр, хурууны хээ эсвэл ID-аар хайх…</string>
+    <string name="staff_team_dialog_search_placeholder">Нэр, хурууны хээ эсвэл ID-аар хайх</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook гарын үсгийн нууц</string>
     <string name="staff_disputes_meta_already_refunded">Аль хэдийн буцаасан</string>

@@ -497,8 +497,9 @@ private fun EditorDivider() {
 /**
  * A field drawn on the page, with no box: what is typed, or [placeholder]
  * where nothing is, in the row's own column. The field's name is its
- * placeholder and its row's glyph, and is read out from [placeholder]
- * whatever it holds.
+ * placeholder and its row's glyph, and is read out from [description]
+ * whatever it holds; a field named by a caption above it passes an empty
+ * placeholder and the caption as its description.
  */
 @Composable
 private fun PlainField(
@@ -513,12 +514,13 @@ private fun PlainField(
     error: Boolean = false,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
     keyboardActions: KeyboardActions = KeyboardActions.Default,
+    description: String = placeholder,
 ) {
     val colours = MaterialTheme.colorScheme
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
-        modifier = modifier.semantics { contentDescription = placeholder },
+        modifier = modifier.semantics { contentDescription = description },
         enabled = enabled,
         singleLine = singleLine,
         minLines = minLines,
@@ -531,7 +533,7 @@ private fun PlainField(
         // text go, not across the middle of a field of several lines.
         decorationBox = { field ->
             Box(modifier = Modifier.padding(vertical = 12.dp), contentAlignment = Alignment.TopStart) {
-                if (value.text.isEmpty()) {
+                if (value.text.isEmpty() && placeholder.isNotEmpty()) {
                     Text(
                         text = placeholder,
                         style = style,
@@ -557,6 +559,7 @@ private fun PlainField(
     singleLine: Boolean = false,
     minLines: Int = 1,
     keyboardOptions: KeyboardOptions = KeyboardOptions.Default,
+    description: String = placeholder,
 ) {
     var field by remember { mutableStateOf(TextFieldValue(value, TextRange(value.length))) }
     // A value set from outside the field replaces it.
@@ -573,6 +576,7 @@ private fun PlainField(
         singleLine = singleLine,
         minLines = minLines,
         keyboardOptions = keyboardOptions,
+        description = description,
     )
 }
 
@@ -1275,7 +1279,8 @@ private fun CountField(label: String, value: Int, maximum: Int, onChange: (Int) 
                 val number = typed.trim().toIntOrNull()
                 if (number != null && number >= 1) onChange(minOf(maximum, number))
             },
-            placeholder = label,
+            placeholder = "",
+            description = label,
             singleLine = true,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier

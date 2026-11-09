@@ -238,7 +238,7 @@
     <string name="route_delete_message">Sa pral retire wout pou chemen \"%1$s\".</string>
     <string name="route_empty">Pa gen wout konfigire.</string>
     <string name="route_meta">Priyorite %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Chèche sijè pou ajoute…</string>
+    <string name="interests_search_placeholder">Chèche sijè pou ajoute</string>
     <string name="interests_empty">Poko gen enterè.</string>
     <string name="interests_summary_regenerate">Rejenere rezime a</string>
     <string name="interests_summary_regenerating">Ap rejenere…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Sa pral remete \"%1$s\" nan default (vid).</string>
     <string name="settings_home_system_users">Itilizatè (sèvè)</string>
     <string name="system_users_add_user">Ajoute itilizatè</string>
-    <string name="system_users_search_placeholder">Chèche itilizatè…</string>
+    <string name="system_users_search_placeholder">Chèche itilizatè</string>
     <string name="system_users_sort_by">Triye pa</string>
     <string name="system_users_last_login">Dènye koneksyon: %1$s</string>
     <string name="system_users_delete_message">Sa pral efase itilizatè \"%1$s\" pou tout tan. Aksyon sa a pa ka anile.</string>
@@ -554,7 +554,7 @@
     <string name="handles_take">Pran yon non</string>
     <string name="handles_empty">Pa gen okenn non itilizatè ki rezève.</string>
     <string name="handles_empty_search">Pa gen non itilizatè ki koresponn ak rechèch ou</string>
-    <string name="handles_search_placeholder">Chèche non itilizatè…</string>
+    <string name="handles_search_placeholder">Chèche non itilizatè</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Ap montre %1$s–%2$s nan %3$s non itilizatè</item>
         <item quantity="other">Ap montre %1$s–%2$s nan %3$s non itilizatè</item>

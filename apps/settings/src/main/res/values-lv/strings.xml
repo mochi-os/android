@@ -239,7 +239,7 @@
     <string name="route_delete_message">Tas noņems maršrutu ceļam \"%1$s\".</string>
     <string name="route_empty">Nav konfigurētu maršrutu.</string>
     <string name="route_meta">Prioritāte %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Meklēt tēmas, ko pievienot…</string>
+    <string name="interests_search_placeholder">Meklēt tēmas, ko pievienot</string>
     <string name="interests_empty">Vēl nav interešu.</string>
     <string name="interests_summary_regenerate">Pārģenerēt kopsavilkumu</string>
     <string name="interests_summary_regenerating">Pārģenerē…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">Tas atiestatīs \"%1$s\" uz noklusējuma (tukšs).</string>
     <string name="settings_home_system_users">Lietotāji (serveris)</string>
     <string name="system_users_add_user">Pievienot lietotāju</string>
-    <string name="system_users_search_placeholder">Meklēt lietotājus…</string>
+    <string name="system_users_search_placeholder">Meklēt lietotājus</string>
     <string name="system_users_sort_by">Kārtot pēc</string>
     <string name="system_users_last_login">Pēdējā pieteikšanās: %1$s</string>
     <string name="system_users_delete_message">Tas neatgriezeniski dzēsīs lietotāju \"%1$s\". Šo darbību nevar atsaukt.</string>
@@ -565,7 +565,7 @@
     <string name="handles_take">Aizņemiet vārdu</string>
     <string name="handles_empty">Neviens lietotājvārds nav rezervēts.</string>
     <string name="handles_empty_search">Meklējumam neatbilst neviens lietotājvārds</string>
-    <string name="handles_search_placeholder">Meklēt lietotājvārdus…</string>
+    <string name="handles_search_placeholder">Meklēt lietotājvārdus</string>
     <plurals name="handles_pagination_status">
         <item quantity="zero">Tiek rādīti %1$s–%2$s no %3$s lietotājvārdiem</item>
         <item quantity="one">Tiek rādīti %1$s–%2$s no %3$s lietotājvārda</item>

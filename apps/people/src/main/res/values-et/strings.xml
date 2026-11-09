@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupid</string>
     <string name="people_group_title">Grupp</string>
     <string name="people_person_title">Isik</string>
-    <string name="people_friends_search_placeholder">Otsi…</string>
+    <string name="people_friends_search_placeholder">Otsi</string>
     <string name="people_friends_no_people_found">Inimesi ei leitud</string>
     <string name="people_friends_try_adjusting">Proovi otsingut kohandada</string>
     <string name="people_friends_pending">Ootel</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Kas kustutada rühm \"%1$s\"? Seda ei saa tagasi võtta.</string>
     <string name="people_member_remove_confirm">Kas oled kindel, et soovid eemaldada kasutaja %1$s sellest rühmast?</string>
     <string name="people_member_remove_with_name">Eemalda %1$s</string>
-    <string name="people_member_search_placeholder">Otsimiseks sisesta nimi…</string>
+    <string name="people_member_search_placeholder">Otsimiseks sisesta nimi</string>
     <string name="people_groups_add_member_confirm_title">Lisa rühma</string>
     <string name="people_groups_add_member_confirm_action">Lisa rühma</string>
     <string name="people_profile_image_process_failed">Pildi %1$s töötlemine ebaõnnestus</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Teie kutsereeglite laadimine ebaõnnestus</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Bänner</string>
-    <string name="people_contacts_search_placeholder">Otsi…</string>
+    <string name="people_contacts_search_placeholder">Otsi</string>
     <string name="people_contacts_invited">Kutsutud</string>
     <string name="people_contacts_accept">Nõustu</string>
     <string name="people_contacts_message">Saada sõnum</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Hiljuti lisatud</string>
     <string name="people_contacts_try_different_search">Proovi teist otsingusõna</string>
     <string name="people_contacts_unfriend">Eemalda sõber</string>
-    <string name="people_add_contact_search_placeholder">Otsimiseks kirjuta…</string>
+    <string name="people_add_contact_search_placeholder">Otsimiseks kirjuta</string>
     <string name="people_add_contact_search_start">Hakka kirjutama, et kasutajaid otsida</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Ametinimetus</string>

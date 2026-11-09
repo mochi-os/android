@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Fra tema</string>
     <string name="settings_background_off">Ingen</string>
     <string name="game_chat_empty">Ingen beskeder endnu</string>
-    <string name="game_chat_input_placeholder">Skriv en besked…</string>
+    <string name="game_chat_input_placeholder">Skriv en besked</string>
     <string name="game_chat_send">Send besked</string>
     <string name="game_chat_subject_you">Dig</string>
 
@@ -231,9 +231,7 @@
     <string name="stepup_title">Bekræft, at det er dig</string>
     <string name="stepup_description">Dette er en sikkerhedsændring af din konto. Bekræft, at det er dig, for at fortsætte.</string>
     <string name="stepup_email_label">E-mailkode</string>
-    <string name="stepup_email_placeholder">Indtast koden fra din e-mail</string>
     <string name="stepup_totp_label">Authenticator-kode</string>
-    <string name="stepup_totp_placeholder">Indtast din autentificeringskode</string>
     <string name="stepup_use_passkey">Brug din adgangsnøgle</string>
     <string name="stepup_send_email">Send e-mail</string>
     <string name="stepup_resend_email">Send e-mail igen</string>
@@ -273,7 +271,7 @@
     <string name="tags_delete">Fjern tag</string>
     <string name="person_picker_none">Ingen</string>
     <string name="person_picker_clear">Ryd valg</string>
-    <string name="person_picker_select">Vælg …</string>
+    <string name="person_picker_select">Vælg</string>
     <string name="person_picker_directory">Kartotek</string>
     <string name="person_picker_no_people">Ingen personer</string>
     <string name="person_picker_project_members">Projektmedlemmer</string>
@@ -289,7 +287,7 @@
     <string name="notifications_change_category">Skift notifikationskategori</string>
     <string name="lightbox_comments_none">Ingen kommentarer til dette billede endnu.</string>
     <string name="lightbox_comments_only">Vis kun kommentarer til dette billede</string>
-    <string name="lightbox_comment_placeholder">Kommentér dette billede…</string>
+    <string name="lightbox_comment_placeholder">Kommentér dette billede</string>
     <string name="comment_anchor_open">Se det billede, som denne kommentar handler om</string>
     <string name="comment_anchor_default">Til dette billede</string>
     <plurals name="lightbox_comments_others">

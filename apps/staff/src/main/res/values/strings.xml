@@ -41,7 +41,6 @@
     <string name="staff_appeals_decide">Decide</string>
     <string name="staff_appeals_decision_denied">Keep listing rejected</string>
     <string name="staff_appeals_decision_label">Decision</string>
-    <string name="staff_appeals_decision_placeholder">Select decision</string>
     <string name="staff_appeals_decision_upheld">Approve listing</string>
     <string name="staff_appeals_denied_toast">Appeal denied</string>
     <string name="staff_appeals_dialog_title">Decide appeal</string>
@@ -240,7 +239,6 @@
     <string name="staff_disputes_refund_must_be_positive">Refund amount must be greater than zero</string>
     <string name="staff_disputes_resolution_buyer">Resolve for buyer</string>
     <string name="staff_disputes_resolution_label">Resolution</string>
-    <string name="staff_disputes_resolution_placeholder">Select resolution</string>
     <string name="staff_disputes_resolution_seller">Resolve for seller</string>
     <string name="staff_disputes_resolve">Resolve</string>
     <string name="staff_disputes_resolved_toast">Dispute resolved</string>
@@ -314,7 +312,6 @@
     <string name="staff_reports_action_ban">Ban user</string>
     <string name="staff_reports_action_dismiss">Dismiss</string>
     <string name="staff_reports_action_label">Action</string>
-    <string name="staff_reports_action_placeholder">Select action</string>
     <string name="staff_reports_action_remove">Remove</string>
     <string name="staff_reports_action_suspend">Suspend as seller</string>
     <string name="staff_reports_action_taken_toast">Report action taken</string>
@@ -428,7 +425,7 @@
     <string name="staff_team_dialog_person">Person</string>
     <string name="staff_team_dialog_role">Role</string>
     <string name="staff_team_dialog_role_placeholder">Select role</string>
-    <string name="staff_team_dialog_search_placeholder">Search by name, fingerprint, or ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Search by name, fingerprint, or ID</string>
     <string name="staff_team_empty">No team members</string>
     <string name="staff_team_remove_confirm">Remove</string>
     <string name="staff_team_remove_desc">Remove this member from the staff team?</string>

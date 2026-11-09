@@ -238,7 +238,7 @@
     <string name="route_delete_message">ეს წაშლის მარშრუტს გზისთვის \"%1$s\".</string>
     <string name="route_empty">კონფიგურირებული მარშრუტი არ არის.</string>
     <string name="route_meta">პრიორიტეტი %1$s · %2$s</string>
-    <string name="interests_search_placeholder">მოძებნეთ თემები დასამატებლად…</string>
+    <string name="interests_search_placeholder">მოძებნეთ თემები დასამატებლად</string>
     <string name="interests_empty">ჯერ ინტერესები არ არის.</string>
     <string name="interests_summary_regenerate">შემაჯამებლის ხელახალი გენერაცია</string>
     <string name="interests_summary_regenerating">ხელახლა შექმნა…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ეს გადაატანს \"%1$s\"-ს ნაგულისხმევზე (ცარიელი).</string>
     <string name="settings_home_system_users">მომხმარებლები (სერვერი)</string>
     <string name="system_users_add_user">მომხმარებლის დამატება</string>
-    <string name="system_users_search_placeholder">მომხმარებლების ძიება…</string>
+    <string name="system_users_search_placeholder">მომხმარებლების ძიება</string>
     <string name="system_users_sort_by">დაალაგე</string>
     <string name="system_users_last_login">ბოლო შესვლა: %1$s</string>
     <string name="system_users_delete_message">ეს სამუდამოდ წაშლის მომხმარებელს \"%1$s\". ეს მოქმედება ვერ გაუქმდება.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">აიღეთ სახელი</string>
     <string name="handles_empty">მომხმარებლის სახელები არ არის დაჯავშნილი.</string>
     <string name="handles_empty_search">თქვენი ძიების შესაბამისი მომხმარებლის სახელები არ არის</string>
-    <string name="handles_search_placeholder">მომხმარებლის სახელების ძიება…</string>
+    <string name="handles_search_placeholder">მომხმარებლის სახელების ძიება</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">ნაჩვენებია %1$s–%2$s %3$s მომხმარებლის სახელიდან</item>
         <item quantity="other">ნაჩვენებია %1$s–%2$s %3$s მომხმარებლის სახელიდან</item>

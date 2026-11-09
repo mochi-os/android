@@ -101,7 +101,7 @@
     <string name="route_disabled">已停用</string>
     <string name="route_meta">優先次序 %1$s · %2$s</string>
     <string name="interests_title">興趣</string>
-    <string name="interests_search_placeholder">搜尋想新增嘅主題…</string>
+    <string name="interests_search_placeholder">搜尋想新增嘅主題</string>
     <string name="interests_empty">重未有任何興趣。</string>
     <string name="interests_summary_title">摘要</string>
     <string name="interests_summary_regenerate">重新產生摘要</string>
@@ -228,7 +228,7 @@
     <string name="settings_home_system_users">用戶（伺服器）</string>
     <string name="system_users_title">用戶</string>
     <string name="system_users_add_user">新增用戶</string>
-    <string name="system_users_search_placeholder">搜尋用戶…</string>
+    <string name="system_users_search_placeholder">搜尋用戶</string>
     <string name="system_users_sort_by">排序方式</string>
     <string name="system_users_col_last">上次登入</string>
     <string name="system_users_open_actions">開啟用戶操作</string>
@@ -552,7 +552,7 @@
     <string name="handles_take">攞一個名稱</string>
     <string name="handles_empty">仲未保留任何帳號代碼。</string>
     <string name="handles_empty_search">冇帳號代碼符合你嘅搜尋</string>
-    <string name="handles_search_placeholder">搜尋帳號代碼…</string>
+    <string name="handles_search_placeholder">搜尋帳號代碼</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">顯示 %3$s 個帳號代碼中嘅第 %1$s–%2$s 個</item>
     </plurals>

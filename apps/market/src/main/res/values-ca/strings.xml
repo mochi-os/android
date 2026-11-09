@@ -337,7 +337,6 @@
     <string name="market_messages_send">Envia</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Explica als compradors coses sobre tu…</string>
     <string name="market_account_load_failed">No s\'ha pogut carregar el compte</string>
     <string name="market_account_saved">Canvis desats</string>
     <string name="market_account_status_restrictions">Algunes accions, com ara crear noves publicacions i completar comandes, estan restringides mentre el compte es trobi en aquest estat.</string>
@@ -459,7 +458,7 @@
     <string name="market_listings_new">Anunci nou</string>
     <string name="market_listings_search_placeholder">Cerca els vostres anuncis</string>
     <string name="market_listings_share_chooser">Comparteix l\'anunci</string>
-    <string name="market_messages_compose_placeholder">Escriviu un missatge…</string>
+    <string name="market_messages_compose_placeholder">Escriviu un missatge</string>
     <string name="market_messages_inbox_empty_subtitle">Quan envieu un missatge a un venedor (o un comprador us n\'enviï a vós) la conversa apareixerà aquí.</string>
     <string name="market_messages_inbox_empty_title">Encara no hi ha converses</string>
     <string name="market_messages_thread_title">Conversa</string>
@@ -503,7 +502,7 @@
     <string name="market_reviews_empty_sent_subtitle">Obriu una comanda completada per deixar una ressenya.</string>
     <string name="market_reviews_empty_sent_title">No heu escrit cap ressenya</string>
     <string name="market_reviews_response_label">Resposta</string>
-    <string name="market_reviews_response_placeholder">Escriviu una resposta…</string>
+    <string name="market_reviews_response_placeholder">Escriviu una resposta</string>
     <string name="market_sale_carrier_custom_label">Nom del transportista</string>
     <string name="market_sale_dispute_evidence_due">Proves requerides %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Motiu de la devolució de càrrec de Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Ressenyes del venedor</string>
     <string name="market_account_stripe_open_failed">No s\'ha pogut obrir Stripe</string>
     <string name="market_editor_stock">Estoc</string>
-    <string name="market_editor_stock_units">Nombre d\'unitats</string>
     <string name="market_editor_stock_unlimited">Il·limitat</string>
     <string name="market_editor_start_time">Hora d\'inici</string>
     <string name="market_editor_start_time_help">Deixa-ho en blanc per començar en publicar.</string>

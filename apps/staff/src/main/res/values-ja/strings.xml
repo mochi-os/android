@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">決定</string>
     <string name="staff_appeals_decision_denied">出品を却下のままにする</string>
     <string name="staff_appeals_decision_label">決定</string>
-    <string name="staff_appeals_decision_placeholder">決定を選択</string>
     <string name="staff_appeals_decision_upheld">出品を承認</string>
     <string name="staff_appeals_denied_toast">異議申立を却下しました</string>
     <string name="staff_appeals_dialog_title">異議申立を裁定</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">返金額は 0 より大きくなければなりません</string>
     <string name="staff_disputes_resolution_buyer">買い手のために解決</string>
     <string name="staff_disputes_resolution_label">解決</string>
-    <string name="staff_disputes_resolution_placeholder">解決を選択</string>
     <string name="staff_disputes_resolution_seller">売り手のために解決</string>
     <string name="staff_disputes_resolve">解決</string>
     <string name="staff_disputes_resolved_toast">異議申立を解決しました</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">ユーザーをBAN</string>
     <string name="staff_reports_action_dismiss">却下</string>
     <string name="staff_reports_action_label">操作</string>
-    <string name="staff_reports_action_placeholder">アクションを選択</string>
     <string name="staff_reports_action_remove">削除</string>
     <string name="staff_reports_action_suspend">売り手として停止</string>
     <string name="staff_reports_action_taken_toast">報告に対する処理を実施しました</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">人物</string>
     <string name="staff_team_dialog_role">役割</string>
     <string name="staff_team_dialog_role_placeholder">役割を選択</string>
-    <string name="staff_team_dialog_search_placeholder">名前、フィンガープリント、IDで検索…</string>
+    <string name="staff_team_dialog_search_placeholder">名前、フィンガープリント、IDで検索</string>
     <string name="staff_team_empty">チームメンバーがいません</string>
     <string name="staff_team_remove_confirm">削除</string>
     <string name="staff_team_remove_desc">このメンバーをスタッフチームから削除しますか?</string>

@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Frá þema</string>
     <string name="settings_background_off">Ekkert</string>
     <string name="game_chat_empty">Engin skilaboð ennþá</string>
-    <string name="game_chat_input_placeholder">Skrifaðu skilaboð…</string>
+    <string name="game_chat_input_placeholder">Skrifaðu skilaboð</string>
     <string name="game_chat_send">Senda skilaboð</string>
     <string name="game_chat_subject_you">Þú</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Staðfestu að þetta sért þú</string>
     <string name="stepup_description">Þetta er öryggisbreyting á reikningnum þínum. Staðfestu auðkenni þitt til að halda áfram.</string>
     <string name="stepup_email_label">Tölvupóstkóði</string>
-    <string name="stepup_email_placeholder">Sláðu inn kóðann úr tölvupóstinum þínum</string>
     <string name="stepup_totp_label">Auðkennisnúmer</string>
-    <string name="stepup_totp_placeholder">Sláðu inn auðkenniskóðann þinn</string>
     <string name="stepup_use_passkey">Notaðu aðgangslykilinn þinn</string>
     <string name="stepup_send_email">Senda tölvupóst</string>
     <string name="stepup_resend_email">Senda tölvupóst aftur</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Fjarlægja merki</string>
     <string name="person_picker_none">Ekkert</string>
     <string name="person_picker_clear">Hreinsa val</string>
-    <string name="person_picker_select">Veldu …</string>
+    <string name="person_picker_select">Veldu</string>
     <string name="person_picker_directory">Skrá</string>
     <string name="person_picker_no_people">Engar manneskjur</string>
     <string name="person_picker_project_members">Meðlimir verkefnis</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Breyta tilkynningaflokki</string>
     <string name="lightbox_comments_none">Engar athugasemdir við þessa mynd enn.</string>
     <string name="lightbox_comments_only">Sýna aðeins athugasemdir við þessa mynd</string>
-    <string name="lightbox_comment_placeholder">Skrifaðu athugasemd við þessa mynd…</string>
+    <string name="lightbox_comment_placeholder">Skrifaðu athugasemd við þessa mynd</string>
     <string name="comment_anchor_open">Skoða myndina sem þessi athugasemd fjallar um</string>
     <string name="comment_anchor_default">Við þessa mynd</string>
     <plurals name="lightbox_comments_others">

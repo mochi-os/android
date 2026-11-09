@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Доош зөөх</string>
 
     <string name="notification_channel_feeds">Мэдээллийн сувгийн мэдэгдэл</string>
-    <string name="feeds_search_placeholder">Суваг хайх эсвэл URL буулгана уу…</string>
+    <string name="feeds_search_placeholder">Суваг хайх эсвэл URL буулгана уу</string>
     <string name="feeds_url_result">URL-ийн үр дүн</string>
     <string name="feeds_search_results">Хайлтын үр дүн</string>
     <string name="feeds_unread_only">Зөвхөн уншаагүй</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Та энэ фидийн шинэчлэлтүүдийг авахаа болино. Хэзээ ч дахин захиалах боломжтой.</string>
     <string name="feeds_access_select_rule">Хандалтын дүрэм сонгох</string>
     <string name="feeds_access_authenticated_desc">Нэвтэрсэн хэн ч</string>
-    <string name="feeds_banner_hint">Энэ форумд тавтай морилно уу…</string>
     <string name="feeds_banner_dismiss">Баннер хаах</string>
     <string name="feeds_members_search">Гишүүдийг шүүх</string>
     <string name="feeds_ai_prompt_default">Үндсэн</string>

@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Đơn hàng #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Hãy giới thiệu về bạn cho người mua…</string>
     <string name="market_account_load_failed">Không thể tải tài khoản</string>
     <string name="market_account_saved">Đã lưu thay đổi</string>
     <string name="market_account_status_restrictions">Một số hành động, bao gồm tạo danh sách mới và hoàn tất đơn hàng, bị hạn chế khi tài khoản của bạn ở trạng thái này.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Tin đăng mới</string>
     <string name="market_listings_search_placeholder">Tìm trong tin đăng của bạn</string>
     <string name="market_listings_share_chooser">Chia sẻ tin đăng</string>
-    <string name="market_messages_compose_placeholder">Viết tin nhắn…</string>
+    <string name="market_messages_compose_placeholder">Viết tin nhắn</string>
     <string name="market_messages_inbox_empty_subtitle">Khi bạn nhắn tin cho người bán (hoặc người mua nhắn cho bạn), cuộc trò chuyện sẽ xuất hiện ở đây.</string>
     <string name="market_messages_inbox_empty_title">Chưa có cuộc trò chuyện nào</string>
     <string name="market_messages_thread_title">Cuộc trò chuyện</string>
@@ -506,7 +505,7 @@
     <string name="market_reviews_empty_sent_subtitle">Mở một đơn hàng đã hoàn tất để viết đánh giá.</string>
     <string name="market_reviews_empty_sent_title">Bạn chưa viết đánh giá nào</string>
     <string name="market_reviews_response_label">Phản hồi</string>
-    <string name="market_reviews_response_placeholder">Viết phản hồi…</string>
+    <string name="market_reviews_response_placeholder">Viết phản hồi</string>
     <string name="market_sale_carrier_custom_label">Tên đơn vị vận chuyển</string>
     <string name="market_sale_dispute_evidence_due">Hạn nộp bằng chứng %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Lý do bồi hoàn của Stripe: %1$s</string>
@@ -592,7 +591,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Đánh giá người bán</string>
     <string name="market_account_stripe_open_failed">Không thể mở Stripe</string>
     <string name="market_editor_stock">Tồn kho</string>
-    <string name="market_editor_stock_units">Số đơn vị</string>
     <string name="market_editor_stock_unlimited">Không giới hạn</string>
     <string name="market_editor_start_time">Thời gian bắt đầu</string>
     <string name="market_editor_start_time_help">Để trống để bắt đầu khi xuất bản.</string>

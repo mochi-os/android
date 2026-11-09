@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">پەنجەمۆر</string>
     <string name="crm_settings_server">ڕاژەکار</string>
     <string name="crm_untitled">بێ ناونیشان</string>
-    <string name="crm_property_select">هەڵبژێرە …</string>
     <string name="crm_filter">فلتەر</string>
     <string name="crm_sort_filter_title">ڕیزکردن و پاڵاوتن</string>
     <string name="crm_filter_clear_all">پاککردنەوەی هەموو</string>

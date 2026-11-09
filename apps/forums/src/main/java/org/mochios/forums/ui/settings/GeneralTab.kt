@@ -60,7 +60,6 @@ fun GeneralTab(
         BannerSection(
             title = stringResource(R.string.forums_tab_banner),
             description = stringResource(R.string.forums_banner_description),
-            hint = stringResource(R.string.forums_banner_placeholder),
             clearLabel = stringResource(R.string.forums_clear),
             draft = bannerDraft,
             stored = uiState.forum.banner,

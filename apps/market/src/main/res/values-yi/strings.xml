@@ -3,7 +3,6 @@
     <string name="app_name">מאַרק</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ביאָגראַפֿיע</string>
-    <string name="market_account_biography_placeholder">דערציילט קויפֿערס וועגן זיך…</string>
     <string name="market_account_load_failed">קען ניט לאדן דעם חשבון</string>
     <string name="market_account_location_label">אָרט</string>
     <string name="market_account_save">היט אויף</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">נייע רעקלאמע</string>
     <string name="market_listings_relist_failed">ניט געלונגען צו רעליסטן</string>
     <string name="market_listings_title">מײַנע ליסטיגקײַטן</string>
-    <string name="market_messages_compose_placeholder">שרייב א מעלדונג…</string>
+    <string name="market_messages_compose_placeholder">שרייב א מעלדונג</string>
     <string name="market_messages_inbox_title">בריוו</string>
     <string name="market_messages_send">שיקן</string>
     <string name="market_messages_thread_title">שמועס</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">קויפֿערס און פֿאַרקויפֿערס קענען איינער דעם אַנדערן רעצענזירן נאָך אַ פֿאַרענדיקטער באַשטעלונג.</string>
     <string name="market_reviews_empty_sent_subtitle">עפֿנט אַ פֿאַרענדיקטע באַשטעלונג צו איבערלאָזן אַ רעצענזיע.</string>
     <string name="market_reviews_empty_sent_title">איר האָט נישט געשריבן קיין רעצענזיעס</string>
-    <string name="market_reviews_response_placeholder">שרײַבט אַן ענטפֿער…</string>
+    <string name="market_reviews_response_placeholder">שרײַבט אַן ענטפֿער</string>
     <string name="market_sale_carrier_custom_label">טראָגערס נאָמען</string>
     <string name="market_sale_dispute_evidence_due">באַווײַזן דאַרפֿן ביז %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe צוריקצאָלונג־סיבה: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">פאַרקויפערס באַמערקונגען</string>
     <string name="market_account_stripe_open_failed">ניט געלונגען צו עפֿענען Stripe</string>
     <string name="market_editor_stock">אינווענטאַר</string>
-    <string name="market_editor_stock_units">צאָל איינסן</string>
     <string name="market_editor_stock_unlimited">אומבאַגרענעצט</string>
     <string name="market_editor_start_time">אָנהייב־צײַט</string>
     <string name="market_editor_start_time_help">לאָזט ליידיק אָנצוהייבן בײַם פֿאַרעפֿנטלעכן.</string>

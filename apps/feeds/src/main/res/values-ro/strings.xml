@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Mutați jos</string>
 
     <string name="notification_channel_feeds">Notificări fluxuri</string>
-    <string name="feeds_search_placeholder">Căutați fluxuri sau lipiți URL…</string>
+    <string name="feeds_search_placeholder">Căutați fluxuri sau lipiți URL</string>
     <string name="feeds_url_result">Rezultat URL</string>
     <string name="feeds_search_results">Rezultatele căutării</string>
     <string name="feeds_unread_only">Doar necitite</string>
@@ -205,7 +205,6 @@
     <string name="feeds_unsubscribe_confirm_message">Nu vei mai primi actualizări din acest flux. Te poți reabona oricând.</string>
     <string name="feeds_access_select_rule">Selectează regula de acces</string>
     <string name="feeds_access_authenticated_desc">Oricine este autentificat</string>
-    <string name="feeds_banner_hint">Bine ați venit pe acest forum…</string>
     <string name="feeds_banner_dismiss">Renunță la banner</string>
     <string name="feeds_members_search">Filtrați membrii</string>
     <string name="feeds_ai_prompt_default">Implicit</string>

@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Перемістити вниз</string>
 
     <string name="notification_channel_feeds">Сповіщення стрічок</string>
-    <string name="feeds_search_placeholder">Шукайте стрічки або вставте URL…</string>
+    <string name="feeds_search_placeholder">Шукайте стрічки або вставте URL</string>
     <string name="feeds_url_result">Результат за URL</string>
     <string name="feeds_search_results">Результати пошуку</string>
     <string name="feeds_unread_only">Лише непрочитані</string>
@@ -208,7 +208,6 @@
     <string name="feeds_unsubscribe_confirm_message">Ви більше не отримуватимете оновлення з цієї стрічки. Ви можете підписатися знову в будь-який момент.</string>
     <string name="feeds_access_select_rule">Виберіть правило доступу</string>
     <string name="feeds_access_authenticated_desc">Усі, хто увійшли в систему</string>
-    <string name="feeds_banner_hint">Ласкаво просимо до цього форуму…</string>
     <string name="feeds_banner_dismiss">Закрити банер</string>
     <string name="feeds_members_search">Фільтрувати учасників</string>
     <string name="feeds_ai_prompt_default">За замовчуванням</string>

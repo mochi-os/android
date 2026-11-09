@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json கோப்பை பதிவேற்று</string>
     <string name="projects_settings_not_set">அமைக்கப்படவில்லை</string>
     <string name="projects_settings_updated">திட்டம் புதுப்பிக்கப்பட்டது</string>
-    <string name="projects_property_select">தேர்ந்தெடுக்கவும் …</string>
     <string name="projects_activity_attached">இணைத்தார்</string>
     <string name="projects_activity_commented">கருத்திட்டார்</string>
     <string name="projects_attachment_delete_confirm_message">இந்த இணைப்பு நிரந்தரமாக நீக்கப்படும்.</string>

@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Поён баровардан</string>
 
     <string name="notification_channel_feeds">Огоҳномаҳои навор</string>
-    <string name="feeds_search_placeholder">Наворҳоро ҷустуҷӯ кунед ё URL гузоред…</string>
+    <string name="feeds_search_placeholder">Наворҳоро ҷустуҷӯ кунед ё URL гузоред</string>
     <string name="feeds_url_result">Натиҷаи URL</string>
     <string name="feeds_search_results">Натиҷаҳои ҷустуҷӯ</string>
     <string name="feeds_unread_only">Танҳо хонданашуда</string>
@@ -200,7 +200,6 @@
     <string name="feeds_unsubscribe_confirm_message">Шумо дигар аз ин фид навсозиҳо намегиред. Шумо метавонед дар вақти дилхоҳ дубора обуна шавед.</string>
     <string name="feeds_access_select_rule">Интихоби қоидаи дастрасӣ</string>
     <string name="feeds_access_authenticated_desc">Ҳар касе, ки ворид шудааст</string>
-    <string name="feeds_banner_hint">Хуш омадед ба ин форум…</string>
     <string name="feeds_banner_dismiss">Рад кардани баннер</string>
     <string name="feeds_members_search">Филтр кардани аъзоён</string>
     <string name="feeds_ai_prompt_default">Пешфарз</string>

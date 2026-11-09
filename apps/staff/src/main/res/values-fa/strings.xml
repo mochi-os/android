@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">تصمیم‌گیری</string>
     <string name="staff_appeals_decision_denied">آگهی همچنان رد بماند</string>
     <string name="staff_appeals_decision_label">تصمیم</string>
-    <string name="staff_appeals_decision_placeholder">انتخاب تصمیم</string>
     <string name="staff_appeals_decision_upheld">تأیید آگهی</string>
     <string name="staff_appeals_denied_toast">درخواست تجدیدنظر رد شد</string>
     <string name="staff_appeals_dialog_title">تصمیم در مورد تجدیدنظر</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">مبلغ بازپرداخت باید بیشتر از صفر باشد</string>
     <string name="staff_disputes_resolution_buyer">رفع به نفع خریدار</string>
     <string name="staff_disputes_resolution_label">رفع</string>
-    <string name="staff_disputes_resolution_placeholder">انتخاب نتیجه</string>
     <string name="staff_disputes_resolution_seller">رفع به نفع فروشنده</string>
     <string name="staff_disputes_resolve">رفع</string>
     <string name="staff_disputes_resolved_toast">اختلاف حل شد</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">مسدود کردن کاربر</string>
     <string name="staff_reports_action_dismiss">رد کردن</string>
     <string name="staff_reports_action_label">عملیات</string>
-    <string name="staff_reports_action_placeholder">انتخاب اقدام</string>
     <string name="staff_reports_action_remove">حذف</string>
     <string name="staff_reports_action_suspend">تعلیق به‌عنوان فروشنده</string>
     <string name="staff_reports_action_taken_toast">اقدام بر روی گزارش انجام شد</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">شخص</string>
     <string name="staff_team_dialog_role">نقش</string>
     <string name="staff_team_dialog_role_placeholder">انتخاب نقش</string>
-    <string name="staff_team_dialog_search_placeholder">جستجو بر اساس نام، اثر انگشت یا ID…</string>
+    <string name="staff_team_dialog_search_placeholder">جستجو بر اساس نام، اثر انگشت یا ID</string>
     <string name="staff_team_empty">هیچ عضو تیمی وجود ندارد</string>
     <string name="staff_team_remove_confirm">حذف</string>
     <string name="staff_team_remove_desc">این عضو را از تیم کارکنان حذف می‌کنید؟</string>

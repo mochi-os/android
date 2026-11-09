@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Aşağı taşı</string>
 
     <string name="notification_channel_feeds">Akış bildirimleri</string>
-    <string name="feeds_search_placeholder">Akışları arayın veya URL yapıştırın…</string>
+    <string name="feeds_search_placeholder">Akışları arayın veya URL yapıştırın</string>
     <string name="feeds_url_result">URL sonucu</string>
     <string name="feeds_search_results">Arama sonuçları</string>
     <string name="feeds_unread_only">Yalnızca okunmamışlar</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Bu akıştan güncelleme almayı bırakacaksınız. İstediğiniz zaman yeniden abone olabilirsiniz.</string>
     <string name="feeds_access_select_rule">Erişim kuralı seç</string>
     <string name="feeds_access_authenticated_desc">Oturum açmış olan herkes</string>
-    <string name="feeds_banner_hint">Bu foruma hoş geldiniz…</string>
     <string name="feeds_banner_dismiss">Banner\'ı kapat</string>
     <string name="feeds_members_search">Üyeleri filtrele</string>
     <string name="feeds_ai_prompt_default">Varsayılan</string>

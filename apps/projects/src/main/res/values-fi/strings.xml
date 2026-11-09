@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Lähetä .json-tiedosto</string>
     <string name="projects_settings_not_set">Ei asetettu</string>
     <string name="projects_settings_updated">Projekti päivitetty</string>
-    <string name="projects_property_select">Valitse …</string>
     <string name="projects_activity_attached">liitti</string>
     <string name="projects_activity_commented">kommentoi</string>
     <string name="projects_attachment_delete_confirm_message">Tämä liite poistetaan pysyvästi.</string>

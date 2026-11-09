@@ -220,7 +220,7 @@
     <string name="route_delete_message">Hiermee wordt de route voor pad \"%1$s\" verwijderd.</string>
     <string name="route_empty">Geen routes geconfigureerd.</string>
     <string name="route_meta">Prioriteit %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Zoek onderwerpen om toe te voegen…</string>
+    <string name="interests_search_placeholder">Zoek onderwerpen om toe te voegen</string>
     <string name="interests_empty">Nog geen interesses.</string>
     <string name="interests_summary_regenerate">Samenvatting opnieuw genereren</string>
     <string name="interests_summary_regenerating">Bezig met opnieuw genereren…</string>
@@ -246,7 +246,7 @@
     <string name="system_settings_reset_message">Hiermee wordt \"%1$s\" teruggezet naar de standaardwaarde (%2$s).</string>
     <string name="system_settings_reset_message_empty">Hiermee wordt \"%1$s\" teruggezet naar de standaardwaarde (leeg).</string>
     <string name="settings_home_system_users">Gebruikers (server)</string>
-    <string name="system_users_search_placeholder">Gebruikers zoeken…</string>
+    <string name="system_users_search_placeholder">Gebruikers zoeken</string>
     <string name="system_users_last_login">Laatste aanmelding: %1$s</string>
     <string name="system_users_delete_message">Hiermee wordt de gebruiker \"%1$s\" permanent verwijderd. Deze actie kan niet ongedaan worden gemaakt.</string>
     <string name="system_users_sessions_title">Sessies voor %1$s</string>
@@ -522,7 +522,7 @@
     <string name="handles_take">Neem een naam</string>
     <string name="handles_empty">Er zijn geen gebruikersnamen gereserveerd.</string>
     <string name="handles_empty_search">Geen gebruikersnamen komen overeen met je zoekopdracht</string>
-    <string name="handles_search_placeholder">Gebruikersnamen zoeken…</string>
+    <string name="handles_search_placeholder">Gebruikersnamen zoeken</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%1$s–%2$s van %3$s gebruikersnaam weergegeven</item>
         <item quantity="other">%1$s–%2$s van %3$s gebruikersnamen weergegeven</item>

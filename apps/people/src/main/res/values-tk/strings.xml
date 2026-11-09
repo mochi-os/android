@@ -6,7 +6,7 @@
     <string name="people_groups_title">Toparlar</string>
     <string name="people_group_title">Topar</string>
     <string name="people_person_title">Adam</string>
-    <string name="people_friends_search_placeholder">Gözle…</string>
+    <string name="people_friends_search_placeholder">Gözle</string>
     <string name="people_friends_no_people_found">Adamlar tapylmady</string>
     <string name="people_friends_try_adjusting">Gözlegiňi düzelt</string>
     <string name="people_friends_pending">Garaşylýar</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" topary pozulsynmy? Muny yzyna gaýtaryp bolmaýar.</string>
     <string name="people_member_remove_confirm">%1$s bu topardan aýyrmak isleýändigiňize ynanýarsyňyzmy?</string>
     <string name="people_member_remove_with_name">%1$s aýyrmak</string>
-    <string name="people_member_search_placeholder">Gözlemek üçin ady giriziň…</string>
+    <string name="people_member_search_placeholder">Gözlemek üçin ady giriziň</string>
     <string name="people_groups_add_member_confirm_title">Topara goşmak</string>
     <string name="people_groups_add_member_confirm_action">Topara goşmak</string>
     <string name="people_profile_image_process_failed">%1$s suraty işläp bilinmedi</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Çakylyk syýasatyňyz ýüklenmedi</string>
     <string name="people_profile_avatar">Awatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Gözle…</string>
+    <string name="people_contacts_search_placeholder">Gözle</string>
     <string name="people_contacts_invited">Çakylyk iberildi</string>
     <string name="people_contacts_accept">Kabul etmek</string>
     <string name="people_contacts_message">Habar iber</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Ýaňy-ýakynda goşuldy</string>
     <string name="people_contacts_try_different_search">Başga gözleg sözüni synanyş</string>
     <string name="people_contacts_unfriend">Dosty aýyr</string>
-    <string name="people_add_contact_search_placeholder">Gözlemek üçin ýazyň…</string>
+    <string name="people_add_contact_search_placeholder">Gözlemek üçin ýazyň</string>
     <string name="people_add_contact_search_start">Ulanyjylary gözlemek üçin ýazyp başla</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Iş ady</string>

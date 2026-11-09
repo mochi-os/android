@@ -238,7 +238,7 @@
     <string name="route_delete_message">Ev dê riya rêya \"%1$s\" jêbibe.</string>
     <string name="route_empty">Tu rî mîhengkirî nin.</string>
     <string name="route_meta">Pêşîn %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Mijar ji bo zêdekirinê bigere…</string>
+    <string name="interests_search_placeholder">Mijar ji bo zêdekirinê bigere</string>
     <string name="interests_empty">Hîn tu eleqe nin.</string>
     <string name="interests_summary_regenerate">Kurteyê ji nû ve biafirîne</string>
     <string name="interests_summary_regenerating">Ji nû ve diafirîne…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Ev dê \"%1$s\" vegerîne pêşwext (vala).</string>
     <string name="settings_home_system_users">Bikarhêner (pêşkêşker)</string>
     <string name="system_users_add_user">Bikarhêner zêde bike</string>
-    <string name="system_users_search_placeholder">Bikarhêneran bigere…</string>
+    <string name="system_users_search_placeholder">Bikarhêneran bigere</string>
     <string name="system_users_sort_by">Rêz bike li gor</string>
     <string name="system_users_last_login">Têketina dawî: %1$s</string>
     <string name="system_users_delete_message">Ev dê bikarhêner \"%1$s\" her û her jêbibe. Ev kar nayê vegerandin.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Navekî bigire</string>
     <string name="handles_empty">Tu navê bikarhêner nehatiye rezervekirin.</string>
     <string name="handles_empty_search">Tu navê bikarhêner bi lêgerîna te re li hev nayê</string>
-    <string name="handles_search_placeholder">Li navên bikarhêner bigere…</string>
+    <string name="handles_search_placeholder">Li navên bikarhêner bigere</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Nîşandana %1$s–%2$s ji %3$s navê bikarhêner</item>
         <item quantity="other">Nîşandana %1$s–%2$s ji %3$s navên bikarhêner</item>

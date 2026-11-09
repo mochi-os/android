@@ -6,7 +6,7 @@
     <string name="people_groups_title">Ƙungiyoyi</string>
     <string name="people_group_title">Ƙungiya</string>
     <string name="people_person_title">Mutum</string>
-    <string name="people_friends_search_placeholder">Bincika…</string>
+    <string name="people_friends_search_placeholder">Bincika</string>
     <string name="people_friends_no_people_found">Babu mutane da aka samu</string>
     <string name="people_friends_try_adjusting">Gwada gyara binciken ku</string>
     <string name="people_friends_pending">Jiran</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Goge ƙungiyar \"%1$s\"? Ba za a iya soke wannan ba.</string>
     <string name="people_member_remove_confirm">Ka tabbata kana son cire %1$s daga wannan ƙungiyar?</string>
     <string name="people_member_remove_with_name">Cire %1$s</string>
-    <string name="people_member_search_placeholder">Shigar da suna don bincike…</string>
+    <string name="people_member_search_placeholder">Shigar da suna don bincike</string>
     <string name="people_groups_add_member_confirm_title">Ƙara a ƙungiya</string>
     <string name="people_groups_add_member_confirm_action">Ƙara a ƙungiya</string>
     <string name="people_profile_image_process_failed">An kasa sarrafa hoton %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">An gaza loading manufar gayyatarka</string>
     <string name="people_profile_avatar">Hoton bayanin martaba</string>
     <string name="people_profile_banner">Tuta</string>
-    <string name="people_contacts_search_placeholder">Bincika…</string>
+    <string name="people_contacts_search_placeholder">Bincika</string>
     <string name="people_contacts_invited">An gayyata</string>
     <string name="people_contacts_accept">Yarda</string>
     <string name="people_contacts_message">Aika saƙo</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">An ƙara kwanan nan</string>
     <string name="people_contacts_try_different_search">Gwada wani kalmar bincike</string>
     <string name="people_contacts_unfriend">Cire aboki</string>
-    <string name="people_add_contact_search_placeholder">Rubuta don bincike…</string>
+    <string name="people_add_contact_search_placeholder">Rubuta don bincike</string>
     <string name="people_add_contact_search_start">Fara rubutu don neman masu amfani</string>
     <string name="people_contact_phone">Waya</string>
     <string name="people_contact_title">Take aiki</string>

@@ -237,7 +237,7 @@
     <string name="route_delete_message">这将删除路径\"%1$s\"的路由。</string>
     <string name="route_empty">未配置任何路由。</string>
     <string name="route_meta">优先级 %1$s · %2$s</string>
-    <string name="interests_search_placeholder">搜索要添加的话题…</string>
+    <string name="interests_search_placeholder">搜索要添加的话题</string>
     <string name="interests_empty">还没有兴趣。</string>
     <string name="interests_summary_regenerate">重新生成摘要</string>
     <string name="interests_summary_regenerating">正在重新生成…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">这会将\"%1$s\"重置为默认值（空）。</string>
     <string name="settings_home_system_users">用户（服务器）</string>
     <string name="system_users_add_user">添加用户</string>
-    <string name="system_users_search_placeholder">搜索用户…</string>
+    <string name="system_users_search_placeholder">搜索用户</string>
     <string name="system_users_sort_by">排序方式</string>
     <string name="system_users_last_login">上次登录：%1$s</string>
     <string name="system_users_delete_message">这将永久删除用户\"%1$s\"。此操作无法撤消。</string>
@@ -546,7 +546,7 @@
     <string name="handles_take">领取名称</string>
     <string name="handles_empty">尚未预留任何用户识别符。</string>
     <string name="handles_empty_search">没有用户识别符与你的搜索匹配</string>
-    <string name="handles_search_placeholder">搜索用户识别符…</string>
+    <string name="handles_search_placeholder">搜索用户识别符</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">显示 %3$s 个用户识别符中的 %1$s–%2$s</item>
     </plurals>

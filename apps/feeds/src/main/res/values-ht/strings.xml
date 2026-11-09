@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Desann</string>
 
     <string name="notification_channel_feeds">Notifikasyon fil</string>
-    <string name="feeds_search_placeholder">Chèche fil oswa kole URL…</string>
+    <string name="feeds_search_placeholder">Chèche fil oswa kole URL</string>
     <string name="feeds_url_result">Rezilta URL</string>
     <string name="feeds_search_results">Rezilta rechèch</string>
     <string name="feeds_unread_only">Sèlman sa ki pa li</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Ou p ap resevwa mizajou nan fil sa a ankò. Ou ka abòne ankò nenpòt kilè.</string>
     <string name="feeds_access_select_rule">Chwazi règ aksè</string>
     <string name="feeds_access_authenticated_desc">Nenpòt moun ki konekte</string>
-    <string name="feeds_banner_hint">Byenveni nan fowòm sa a…</string>
     <string name="feeds_banner_dismiss">Rejte banyè</string>
     <string name="feeds_members_search">Filtre manm</string>
     <string name="feeds_ai_prompt_default">Defo</string>

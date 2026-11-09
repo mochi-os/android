@@ -54,10 +54,10 @@
     <string name="chat_settings_delete_message">यसले च्याट र यसका सन्देशहरू यो यन्त्रबाट मात्र हटाउँछ।</string>
 
     <string name="chat_message_deleted">यो सन्देश मेटाइयो</string>
-    <string name="chat_search_hint">च्याटमा खोज्नुहोस्...</string>
+    <string name="chat_search_hint">च्याटमा खोज्नुहोस्</string>
     <string name="chat_message_forward">फर्वार्ड गर्नुहोस्</string>
     <string name="chat_forward_title">कसलाई फर्वार्ड गर्ने…</string>
-    <string name="chat_forward_search">च्याटहरू खोज्नुहोस्…</string>
+    <string name="chat_forward_search">च्याटहरू खोज्नुहोस्</string>
     <string name="chat_forward_empty">फर्वार्ड गर्न कुनै च्याट छैन</string>
     <string name="chat_forward_success">फर्वार्ड गरियो</string>
     <string name="chat_message_reply">जवाफ दिनुहोस्</string>

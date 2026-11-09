@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">注文 #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">購入者に自己紹介をしましょう…</string>
     <string name="market_account_load_failed">アカウントを読み込めませんでした</string>
     <string name="market_account_saved">変更を保存しました</string>
     <string name="market_account_status_restrictions">アカウントがこの状態の間は、新しい出品の作成や注文の完了など、一部の操作が制限されます。</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">新規出品</string>
     <string name="market_listings_search_placeholder">自分の出品を検索</string>
     <string name="market_listings_share_chooser">出品を共有</string>
-    <string name="market_messages_compose_placeholder">メッセージを入力…</string>
+    <string name="market_messages_compose_placeholder">メッセージを入力</string>
     <string name="market_messages_inbox_empty_subtitle">出品者にメッセージを送信する (または購入者からメッセージを受信する) と、スレッドがここに表示されます。</string>
     <string name="market_messages_inbox_empty_title">会話がまだありません</string>
     <string name="market_messages_thread_title">会話</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">完了した注文を開いてレビューを書いてください。</string>
     <string name="market_reviews_empty_sent_title">まだレビューを書いていません</string>
     <string name="market_reviews_response_label">返信</string>
-    <string name="market_reviews_response_placeholder">返信を書く…</string>
+    <string name="market_reviews_response_placeholder">返信を書く</string>
     <string name="market_sale_carrier_custom_label">配送業者名</string>
     <string name="market_sale_dispute_evidence_due">証拠提出期限 %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe チャージバック理由: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">出品者へのレビュー</string>
     <string name="market_account_stripe_open_failed">Stripe を開けませんでした</string>
     <string name="market_editor_stock">在庫</string>
-    <string name="market_editor_stock_units">単位数</string>
     <string name="market_editor_stock_unlimited">無制限</string>
     <string name="market_editor_start_time">開始時刻</string>
     <string name="market_editor_start_time_help">公開時に開始する場合は空のままにします。</string>

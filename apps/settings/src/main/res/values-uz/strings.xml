@@ -238,7 +238,7 @@
     <string name="route_delete_message">Bu yoʻl \"%1$s\" uchun marshrutni olib tashlaydi.</string>
     <string name="route_empty">Sozlangan marshrutlar yoʻq.</string>
     <string name="route_meta">Ustuvorlik %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Qoʻshish uchun mavzularni qidiring…</string>
+    <string name="interests_search_placeholder">Qoʻshish uchun mavzularni qidiring</string>
     <string name="interests_empty">Hali qiziqishlar yoʻq.</string>
     <string name="interests_summary_regenerate">Qisqacha mazmunni qayta yaratish</string>
     <string name="interests_summary_regenerating">Qayta yaratilmoqda…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Bu \"%1$s\"-ni standartga (boʻsh) qaytaradi.</string>
     <string name="settings_home_system_users">Foydalanuvchilar (server)</string>
     <string name="system_users_add_user">Foydalanuvchi qoʻshish</string>
-    <string name="system_users_search_placeholder">Foydalanuvchilarni qidirish…</string>
+    <string name="system_users_search_placeholder">Foydalanuvchilarni qidirish</string>
     <string name="system_users_sort_by">Saralash</string>
     <string name="system_users_last_login">Oxirgi kirish: %1$s</string>
     <string name="system_users_delete_message">Bu doimiy ravishda \"%1$s\" foydalanuvchisini oʻchiradi. Bu amalni qaytarib boʻlmaydi.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Nom olish</string>
     <string name="handles_empty">Hech qanday taxallus band qilinmagan.</string>
     <string name="handles_empty_search">Qidiruvingizga mos taxalluslar yoʻq</string>
-    <string name="handles_search_placeholder">Taxalluslarni qidirish…</string>
+    <string name="handles_search_placeholder">Taxalluslarni qidirish</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s taxallusdan %1$s–%2$s koʻrsatilmoqda</item>
         <item quantity="other">%3$s taxallusdan %1$s–%2$s koʻrsatilmoqda</item>

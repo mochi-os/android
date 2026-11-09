@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Vanaf tema</string>
     <string name="settings_background_off">Geen</string>
     <string name="game_chat_empty">Nog geen boodskappe nie</string>
-    <string name="game_chat_input_placeholder">Tik \'n boodskap…</string>
+    <string name="game_chat_input_placeholder">Tik \'n boodskap</string>
     <string name="game_chat_send">Stuur boodskap</string>
     <string name="game_chat_subject_you">Jy</string>
 
@@ -231,9 +231,7 @@
     <string name="stepup_title">Bevestig dit is jy</string>
     <string name="stepup_description">Dit is \'n sekuriteitsverandering aan jou rekening. Bevestig dit is jy om voort te gaan.</string>
     <string name="stepup_email_label">E-poskode</string>
-    <string name="stepup_email_placeholder">Voer die kode uit jou e-pos in</string>
     <string name="stepup_totp_label">Verifikasiekode</string>
-    <string name="stepup_totp_placeholder">Voer jou verifikator-kode in</string>
     <string name="stepup_use_passkey">Gebruik jou toegangsleutel</string>
     <string name="stepup_send_email">Stuur e-pos</string>
     <string name="stepup_resend_email">Stuur e-pos weer</string>
@@ -273,7 +271,7 @@
     <string name="tags_delete">Verwyder etiket</string>
     <string name="person_picker_none">Geen</string>
     <string name="person_picker_clear">Maak keuse skoon</string>
-    <string name="person_picker_select">Kies …</string>
+    <string name="person_picker_select">Kies</string>
     <string name="person_picker_directory">Gids</string>
     <string name="person_picker_no_people">Geen mense</string>
     <string name="person_picker_project_members">Projeklede</string>
@@ -289,7 +287,7 @@
     <string name="notifications_change_category">Verander kennisgewingkategorie</string>
     <string name="lightbox_comments_none">Nog geen kommentaar op hierdie beeld nie.</string>
     <string name="lightbox_comments_only">Wys slegs kommentaar op hierdie beeld</string>
-    <string name="lightbox_comment_placeholder">Lewer kommentaar op hierdie beeld…</string>
+    <string name="lightbox_comment_placeholder">Lewer kommentaar op hierdie beeld</string>
     <string name="comment_anchor_open">Bekyk die beeld waaroor hierdie kommentaar gaan</string>
     <string name="comment_anchor_default">Op hierdie beeld</string>
     <plurals name="lightbox_comments_others">

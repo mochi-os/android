@@ -238,7 +238,7 @@
     <string name="route_delete_message">Սա կհեռացնի երթուղին \"%1$s\" ուղու համար:</string>
     <string name="route_empty">Կարգավորված ուղիներ չկան։</string>
     <string name="route_meta">Առաջնահերթություն %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Փնտրել թեմաներ ավելացնելու համար…</string>
+    <string name="interests_search_placeholder">Փնտրել թեմաներ ավելացնելու համար</string>
     <string name="interests_empty">Դեռևս հետաքրքրություններ չկան։</string>
     <string name="interests_summary_regenerate">Վերագեներացնել ամփոփումը</string>
     <string name="interests_summary_regenerating">Վերարտադրում է…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Սա կվերականգնի \"%1$s\"-ը իր կանխադրվածին (դատարկ):</string>
     <string name="settings_home_system_users">Օգտատերեր (սերվեր)</string>
     <string name="system_users_add_user">Ավելացնել օգտատեր</string>
-    <string name="system_users_search_placeholder">Որոնել օգտատերեր…</string>
+    <string name="system_users_search_placeholder">Որոնել օգտատերեր</string>
     <string name="system_users_sort_by">Տեսակավորել ըստ</string>
     <string name="system_users_last_login">Վերջին մուտքը՝ %1$s</string>
     <string name="system_users_delete_message">Սա մշտապես կջնջի \"%1$s\" օգտատիրոջը: Այս գործողությունը հնարավոր չէ չեղարկել:</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Վերցրեք անուն</string>
     <string name="handles_empty">Ոչ մի օգտանուն ամրագրված չէ։</string>
     <string name="handles_empty_search">Ձեր որոնմանը համապատասխանող օգտանուններ չկան</string>
-    <string name="handles_search_placeholder">Որոնել օգտանուններ…</string>
+    <string name="handles_search_placeholder">Որոնել օգտանուններ</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Ցուցադրվում է %1$s–%2$s՝ %3$s օգտանունից</item>
         <item quantity="other">Ցուցադրվում է %1$s–%2$s՝ %3$s օգտանունից</item>

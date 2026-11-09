@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Decideix</string>
     <string name="staff_appeals_decision_denied">Mantén l\'anunci rebutjat</string>
     <string name="staff_appeals_decision_label">Decisió</string>
-    <string name="staff_appeals_decision_placeholder">Selecciona decisió</string>
     <string name="staff_appeals_decision_upheld">Aprova l\'anunci</string>
     <string name="staff_appeals_denied_toast">Recurs denegat</string>
     <string name="staff_appeals_dialog_title">Decideix el recurs</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">L\'import del reemborsament ha de ser superior a zero</string>
     <string name="staff_disputes_resolution_buyer">Resol a favor del comprador</string>
     <string name="staff_disputes_resolution_label">Resolució</string>
-    <string name="staff_disputes_resolution_placeholder">Selecciona resolució</string>
     <string name="staff_disputes_resolution_seller">Resol a favor del venedor</string>
     <string name="staff_disputes_resolve">Resol</string>
     <string name="staff_disputes_resolved_toast">Disputa resolta</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Veta l\'usuari</string>
     <string name="staff_reports_action_dismiss">Descarta</string>
     <string name="staff_reports_action_label">Acció</string>
-    <string name="staff_reports_action_placeholder">Selecciona l\'acció</string>
     <string name="staff_reports_action_remove">Elimina</string>
     <string name="staff_reports_action_suspend">Suspèn com a venedor</string>
     <string name="staff_reports_action_taken_toast">Acció presa a l\'informe</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Persona</string>
     <string name="staff_team_dialog_role">Rol</string>
     <string name="staff_team_dialog_role_placeholder">Selecciona rol</string>
-    <string name="staff_team_dialog_search_placeholder">Cerca per nom, empremta o ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Cerca per nom, empremta o ID</string>
     <string name="staff_team_empty">Sense membres de l\'equip</string>
     <string name="staff_team_remove_confirm">Elimina</string>
     <string name="staff_team_remove_desc">Vols treure aquest membre de l\'equip de personal?</string>

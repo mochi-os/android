@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Lëviz poshtë</string>
 
     <string name="notification_channel_feeds">Njoftime për feed-et</string>
-    <string name="feeds_search_placeholder">Kërkoni feed-e ose ngjisni URL-në…</string>
+    <string name="feeds_search_placeholder">Kërkoni feed-e ose ngjisni URL-në</string>
     <string name="feeds_url_result">Rezultat URL-je</string>
     <string name="feeds_search_results">Rezultatet e kërkimit</string>
     <string name="feeds_unread_only">Vetëm të palexuara</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Nuk do të marrësh më përditësime nga ky fluks. Mund të abonohesh sërish në çdo kohë.</string>
     <string name="feeds_access_select_rule">Zgjidh rregullin e qasjes</string>
     <string name="feeds_access_authenticated_desc">Kushdo që është i identifikuar</string>
-    <string name="feeds_banner_hint">Mirë se vini në këtë forum…</string>
     <string name="feeds_banner_dismiss">Hidhe banner-in</string>
     <string name="feeds_members_search">Filtroni anëtarët</string>
     <string name="feeds_ai_prompt_default">I parazgjedhur</string>

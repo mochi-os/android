@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Yuborish</string>
     <string name="forums_post_body_field">Matn</string>
-    <string name="forums_write_comment">Izoh yozing…</string>
+    <string name="forums_write_comment">Izoh yozing</string>
 
     <string name="notification_channel_forums">Forum bildirishnomalari</string>
     <string name="forums_list_empty">Hali forumlar yoʻq</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Hali qoidalar yoʻq — standart sozlamalar qoʻllaniladi</string>
     <string name="forums_members_search">Aʼzolarni filtrlash</string>
     <string name="forums_banner_description">Forum yuqorisida koʻrsatiladigan Markdown.</string>
-    <string name="forums_banner_placeholder">Banner matnini kiriting (Markdown qoʻllab-quvvatlanadi)…</string>
     <string name="forums_ai_mode_off">Oʻchirilgan</string>
     <string name="forums_moderation_queue_empty">Kutilayotgan hech narsa yoʻq</string>
     <string name="forums_moderation_report_details">Tafsilotlar: %1$s</string>

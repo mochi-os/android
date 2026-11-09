@@ -25,6 +25,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 
@@ -87,11 +90,10 @@ fun FilterDropdown(
 
 /**
  * A labelled single-choice field: a caption above a button that drops down the
- * choices. Unlike [FilterDropdown] the selection cannot be cleared, so an unset
- * field reads as [placeholder].
+ * choices. Unlike [FilterDropdown] the selection cannot be cleared; an unset
+ * field shows no value.
  *
  * @param label Caption above the field.
- * @param placeholder Shown while [selected] matches none of the [options].
  * @param options Choices as value-to-label pairs.
  * @param selected Selected value.
  * @param onSelect Called with the chosen value.
@@ -99,21 +101,25 @@ fun FilterDropdown(
 @Composable
 fun LabeledSelectField(
     label: String,
-    placeholder: String,
     options: List<Pair<String, String>>,
     selected: String,
     onSelect: (String) -> Unit,
     icon: ImageVector? = null,
 ) {
     var expanded by rememberSaveable { mutableStateOf(false) }
-    val current = options.firstOrNull { option -> option.first == selected }?.second ?: placeholder
+    val current = options.firstOrNull { option -> option.first == selected }?.second.orEmpty()
 
     Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         FieldLabel(text = label, icon = icon)
         Box {
             MochiOutlinedButton(
                 onClick = { expanded = true },
-                modifier = Modifier.fillMaxWidth(),
+                // Named by its caption, with the choice as its state: unset,
+                // the button shows nothing of its own to be read.
+                modifier = Modifier.fillMaxWidth().semantics {
+                    contentDescription = label
+                    stateDescription = current
+                },
             ) {
                 Text(text = current, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Icon(Icons.Default.ArrowDropDown, contentDescription = null)

@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Ilipat pababa</string>
 
     <string name="notification_channel_feeds">Mga abiso ng feeds</string>
-    <string name="feeds_search_placeholder">Maghanap ng feeds o i-paste ang URL…</string>
+    <string name="feeds_search_placeholder">Maghanap ng feeds o i-paste ang URL</string>
     <string name="feeds_url_result">Resulta ng URL</string>
     <string name="feeds_search_results">Mga resulta ng paghahanap</string>
     <string name="feeds_unread_only">Hindi pa nababasa lang</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Hindi ka na makakatanggap ng mga update mula sa feed na ito. Puwede kang mag-subscribe ulit anumang oras.</string>
     <string name="feeds_access_select_rule">Pumili ng access rule</string>
     <string name="feeds_access_authenticated_desc">Sinumang naka-log in</string>
-    <string name="feeds_banner_hint">Maligayang pagdating sa forum na ito…</string>
     <string name="feeds_banner_dismiss">I-dismiss ang banner</string>
     <string name="feeds_members_search">I-filter ang mga miyembro</string>
     <string name="feeds_ai_prompt_default">Default</string>

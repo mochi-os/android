@@ -115,7 +115,7 @@
     <string name="settings_background_theme">No motīva</string>
     <string name="settings_background_off">Nav</string>
     <string name="game_chat_empty">Vēl nav ziņojumu</string>
-    <string name="game_chat_input_placeholder">Ierakstiet ziņu…</string>
+    <string name="game_chat_input_placeholder">Ierakstiet ziņu</string>
     <string name="game_chat_send">Sūtīt ziņu</string>
     <string name="game_chat_subject_you">Jūs</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Apstipriniet, ka tas esat jūs</string>
     <string name="stepup_description">Šīs ir jūsu konta drošības izmaiņas. Lai turpinātu, apstipriniet, ka tas esat jūs.</string>
     <string name="stepup_email_label">E-pasta kods</string>
-    <string name="stepup_email_placeholder">Ievadiet kodu no sava e-pasta</string>
     <string name="stepup_totp_label">Authenticator kods</string>
-    <string name="stepup_totp_placeholder">Ievadiet autentifikatora kodu</string>
     <string name="stepup_use_passkey">Izmantojiet savu piekļuves atslēgu</string>
     <string name="stepup_send_email">Sūtīt e-pastu</string>
     <string name="stepup_resend_email">Sūtīt e-pastu vēlreiz</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Noņemt tagu</string>
     <string name="person_picker_none">Nav</string>
     <string name="person_picker_clear">Notīrīt atlasi</string>
-    <string name="person_picker_select">Izvēlieties …</string>
+    <string name="person_picker_select">Izvēlieties</string>
     <string name="person_picker_directory">Katalogs</string>
     <string name="person_picker_no_people">Nav cilvēku</string>
     <string name="person_picker_project_members">Projekta dalībnieki</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Mainīt paziņojuma kategoriju</string>
     <string name="lightbox_comments_none">Šim attēlam vēl nav komentāru.</string>
     <string name="lightbox_comments_only">Rādīt tikai šī attēla komentārus</string>
-    <string name="lightbox_comment_placeholder">Komentēt šo attēlu…</string>
+    <string name="lightbox_comment_placeholder">Komentēt šo attēlu</string>
     <string name="comment_anchor_open">Skatīt attēlu, uz kuru attiecas šis komentārs</string>
     <string name="comment_anchor_default">Pie šī attēla</string>
     <plurals name="lightbox_comments_others">

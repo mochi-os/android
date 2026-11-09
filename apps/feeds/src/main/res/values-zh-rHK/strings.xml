@@ -141,7 +141,6 @@
     <string name="feeds_permission_allow">允許</string>
     <string name="feeds_access_select_rule">選擇存取規則</string>
     <string name="feeds_access_authenticated_desc">任何已登入的用戶</string>
-    <string name="feeds_banner_hint">歡迎來到此論壇…</string>
     <string name="feeds_banner_dismiss">關閉橫額</string>
     <string name="feeds_members_search">篩選成員</string>
     <string name="feeds_ai_prompt_default">預設</string>

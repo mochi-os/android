@@ -6,7 +6,7 @@
     <string name="people_groups_title">Hópar</string>
     <string name="people_group_title">Hópur</string>
     <string name="people_person_title">Manneskja</string>
-    <string name="people_friends_search_placeholder">Leita…</string>
+    <string name="people_friends_search_placeholder">Leita</string>
     <string name="people_friends_no_people_found">Engir notendur fundust</string>
     <string name="people_friends_try_adjusting">Reyndu að breyta leitinni þinni</string>
     <string name="people_friends_pending">Í bið</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Eyða hópnum \"%1$s\"? Ekki er hægt að afturkalla þetta.</string>
     <string name="people_member_remove_confirm">Ertu viss um að þú viljir fjarlægja %1$s úr þessum hópi?</string>
     <string name="people_member_remove_with_name">Fjarlægja %1$s</string>
-    <string name="people_member_search_placeholder">Sláðu inn nafn til að leita…</string>
+    <string name="people_member_search_placeholder">Sláðu inn nafn til að leita</string>
     <string name="people_groups_add_member_confirm_title">Bæta við hóp</string>
     <string name="people_groups_add_member_confirm_action">Bæta við hóp</string>
     <string name="people_profile_image_process_failed">Ekki tókst að vinna úr mynd %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Tókst ekki að hlaða boðsstefnu þína</string>
     <string name="people_profile_avatar">Auðkennismynd</string>
     <string name="people_profile_banner">Borði</string>
-    <string name="people_contacts_search_placeholder">Leita…</string>
+    <string name="people_contacts_search_placeholder">Leita</string>
     <string name="people_contacts_invited">Boðið</string>
     <string name="people_contacts_accept">Samþykkja</string>
     <string name="people_contacts_message">Senda skilaboð</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Nýlega bætt við</string>
     <string name="people_contacts_try_different_search">Prófaðu annað leitarorð</string>
     <string name="people_contacts_unfriend">Fjarlægja vin</string>
-    <string name="people_add_contact_search_placeholder">Sláðu inn til að leita…</string>
+    <string name="people_add_contact_search_placeholder">Sláðu inn til að leita</string>
     <string name="people_add_contact_search_start">Byrjaðu að slá inn til að leita að notendum</string>
     <string name="people_contact_phone">Sími</string>
     <string name="people_contact_title">Starfsheiti</string>

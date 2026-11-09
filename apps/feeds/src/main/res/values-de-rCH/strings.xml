@@ -52,7 +52,7 @@
     <string name="feeds_find_feeds">Feeds finden</string>
     <string name="feeds_create_feed">Feed erstellen</string>
     <string name="feeds_all_feeds">Alle Feeds</string>
-    <string name="feeds_search_placeholder">Feeds suchen oder URL einfügen…</string>
+    <string name="feeds_search_placeholder">Feeds suchen oder URL einfügen</string>
     <string name="feeds_url_result">URL-Ergebnis</string>
     <string name="feeds_search_results">Suchergebnisse</string>
     <string name="feeds_no_feeds_found">Keine Feeds gefunden</string>
@@ -172,7 +172,6 @@
     <string name="feeds_unsubscribe_confirm_message">Du erhältst keine Updates mehr von diesem Feed. Du kannst ihn jederzeit wieder abonnieren.</string>
     <string name="feeds_access_select_rule">Zugriffsregel auswählen</string>
     <string name="feeds_access_authenticated_desc">Alle angemeldeten Benutzer</string>
-    <string name="feeds_banner_hint">Willkommen in diesem Forum…</string>
     <string name="feeds_banner_dismiss">Banner schliessen</string>
     <string name="feeds_members_search">Mitglieder filtern</string>
     <string name="feeds_ai_prompt_default">Standard</string>

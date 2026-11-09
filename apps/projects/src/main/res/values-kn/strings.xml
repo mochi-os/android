@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="projects_settings_not_set">ಸೆಟ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
     <string name="projects_settings_updated">ಪ್ರಾಜೆಕ್ಟ್ ಅಪ್‌ಡೇಟ್ ಮಾಡಲಾಗಿದೆ</string>
-    <string name="projects_property_select">ಆಯ್ಕೆಮಾಡಿ …</string>
     <string name="projects_activity_attached">ಲಗತ್ತಿಸಿದರು</string>
     <string name="projects_activity_commented">ಕಾಮೆಂಟ್ ಮಾಡಿದರು</string>
     <string name="projects_attachment_delete_confirm_message">ಈ ಲಗತ್ತನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>

@@ -76,7 +76,6 @@ fun GeneralTab(
         BannerSection(
             title = stringResource(R.string.feeds_banner),
             description = stringResource(R.string.feeds_banner_description),
-            hint = stringResource(R.string.feeds_banner_hint),
             clearLabel = stringResource(R.string.feeds_clear),
             draft = bannerDraft,
             stored = banner,

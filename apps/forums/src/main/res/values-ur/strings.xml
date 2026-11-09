@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">بھیجیں</string>
     <string name="forums_post_body_field">متن</string>
-    <string name="forums_write_comment">تبصرہ لکھیں…</string>
+    <string name="forums_write_comment">تبصرہ لکھیں</string>
 
     <string name="notification_channel_forums">فورمز کی اطلاعات</string>
     <string name="forums_list_empty">ابھی تک کوئی فورم نہیں</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">ابھی تک کوئی قاعدہ نہیں — طے شدہ قواعد لاگو ہیں</string>
     <string name="forums_members_search">ممبران فلٹر کریں</string>
     <string name="forums_banner_description">مارک ڈاؤن جو فورم کے اوپر دکھایا جائے گا۔</string>
-    <string name="forums_banner_placeholder">بینر کا متن درج کریں (مارک ڈاؤن معاون ہے)…</string>
     <string name="forums_ai_mode_off">غیر فعال</string>
     <string name="forums_moderation_queue_empty">کچھ بھی زیر التواء نہیں</string>
     <string name="forums_moderation_report_details">تفصیلات: %1$s</string>

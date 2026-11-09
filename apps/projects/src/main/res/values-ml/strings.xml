@@ -306,7 +306,6 @@
     <string name="projects_create_upload_json">.json ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="projects_settings_not_set">സജ്ജമാക്കിയിട്ടില്ല</string>
     <string name="projects_settings_updated">പ്രോജക്റ്റുകൾ</string>
-    <string name="projects_property_select">തിരഞ്ഞെടുക്കുക …</string>
     <string name="projects_activity_attached">അറ്റാച്ച് ചെയ്തു</string>
     <string name="projects_activity_commented">അഭിപ്രായമിട്ടു</string>
     <string name="projects_attachment_delete_confirm_message">ഈ അറ്റാച്ച്മെന്റ് ശാശ്വതമായി ഇല്ലാതാക്കും.</string>

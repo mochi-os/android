@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grwpiau</string>
     <string name="people_group_title">Grŵp</string>
     <string name="people_person_title">Person</string>
-    <string name="people_friends_search_placeholder">Chwilio…</string>
+    <string name="people_friends_search_placeholder">Chwilio</string>
     <string name="people_friends_no_people_found">Heb ddod o hyd i bobl</string>
     <string name="people_friends_try_adjusting">Ceisiwch addasu eich chwiliad</string>
     <string name="people_friends_pending">Ar y gweill</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Dileu grŵp \"%1$s\"? Ni ellir dadwneud hyn.</string>
     <string name="people_member_remove_confirm">Ydych chi\'n siŵr eich bod am dynnu %1$s o\'r grŵp hwn?</string>
     <string name="people_member_remove_with_name">Tynnu %1$s</string>
-    <string name="people_member_search_placeholder">Rhowch enw i chwilio…</string>
+    <string name="people_member_search_placeholder">Rhowch enw i chwilio</string>
     <string name="people_groups_add_member_confirm_title">Ychwanegu at y grŵp</string>
     <string name="people_groups_add_member_confirm_action">Ychwanegu at y grŵp</string>
     <string name="people_profile_image_process_failed">Methwyd prosesu delwedd %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Methwyd llwytho eich polisi gwahodd</string>
     <string name="people_profile_avatar">Afatar</string>
     <string name="people_profile_banner">Baner</string>
-    <string name="people_contacts_search_placeholder">Chwilio…</string>
+    <string name="people_contacts_search_placeholder">Chwilio</string>
     <string name="people_contacts_invited">Wedi\'i wahodd</string>
     <string name="people_contacts_accept">Derbyn</string>
     <string name="people_contacts_message">Anfon neges</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Ychwanegwyd yn ddiweddar</string>
     <string name="people_contacts_try_different_search">Rhowch gynnig ar derm chwilio gwahanol</string>
     <string name="people_contacts_unfriend">Tynnu ffrind</string>
-    <string name="people_add_contact_search_placeholder">Teipiwch i chwilio…</string>
+    <string name="people_add_contact_search_placeholder">Teipiwch i chwilio</string>
     <string name="people_add_contact_search_start">Dechreuwch deipio i chwilio am ddefnyddwyr</string>
     <string name="people_contact_phone">Ffôn</string>
     <string name="people_contact_title">Teitl swydd</string>

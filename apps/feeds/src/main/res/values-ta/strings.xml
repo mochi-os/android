@@ -86,7 +86,7 @@
     <string name="feeds_move_down">கீழே நகர்த்து</string>
 
     <string name="notification_channel_feeds">ஊட்ட அறிவிப்புகள்</string>
-    <string name="feeds_search_placeholder">ஊட்டங்களைத் தேடவும் அல்லது URL ஐ ஒட்டவும்…</string>
+    <string name="feeds_search_placeholder">ஊட்டங்களைத் தேடவும் அல்லது URL ஐ ஒட்டவும்</string>
     <string name="feeds_url_result">URL முடிவு</string>
     <string name="feeds_search_results">தேடல் முடிவுகள்</string>
     <string name="feeds_unread_only">படிக்காதவை மட்டும்</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">இந்த ஃபீடிலிருந்து இனி புதுப்பிப்புகள் பெறமாட்டீர்கள். எப்போது வேண்டுமானாலும் மீண்டும் சந்தா சேரலாம்.</string>
     <string name="feeds_access_select_rule">அணுகல் விதியை தேர்ந்தெடு</string>
     <string name="feeds_access_authenticated_desc">உள்நுழைந்த எவரும்</string>
-    <string name="feeds_banner_hint">இந்த மன்றத்திற்கு வரவேற்கிறோம்…</string>
     <string name="feeds_banner_dismiss">பேனரை நிராகரி</string>
     <string name="feeds_members_search">உறுப்பினர்களை வடிகட்டவும்</string>
     <string name="feeds_ai_prompt_default">இயல்புநிலை</string>

@@ -211,13 +211,10 @@ fun EditListingScreen(
                         value = if (state.unlimitedStock) "" else state.quantityText,
                         onValueChange = viewModel::setQuantity,
                         label = { Text(stringResource(R.string.market_editor_stock)) },
-                        placeholder = {
-                            Text(
-                                stringResource(
-                                    if (state.unlimitedStock) R.string.market_editor_stock_unlimited
-                                    else R.string.market_editor_stock_units
-                                )
-                            )
+                        placeholder = if (state.unlimitedStock) {
+                            { Text(stringResource(R.string.market_editor_stock_unlimited)) }
+                        } else {
+                            null
                         },
                         enabled = !state.unlimitedStock,
                         singleLine = true,

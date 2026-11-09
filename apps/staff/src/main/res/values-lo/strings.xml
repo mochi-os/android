@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">ຕັດສິນ</string>
     <string name="staff_appeals_decision_denied">ປະຕິເສດການລົງປະກາດຂາຍ</string>
     <string name="staff_appeals_decision_label">ການຕັດສິນ</string>
-    <string name="staff_appeals_decision_placeholder">ເລືອກການຕັດສິນ</string>
     <string name="staff_appeals_decision_upheld">ອະນຸມັດລາຍການ</string>
     <string name="staff_appeals_denied_toast">ປະຕິເສດອຸທອນ</string>
     <string name="staff_appeals_dialog_title">ຕັດສິນອຸທອນ</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">ຈຳນວນຄືນເງິນຕ້ອງຫຼາຍກວ່າສູນ</string>
     <string name="staff_disputes_resolution_buyer">ແກ້ໄຂສຳລັບຜູ້ຊື້</string>
     <string name="staff_disputes_resolution_label">ການແກ້ໄຂ</string>
-    <string name="staff_disputes_resolution_placeholder">ເລືອກການແກ້ໄຂ</string>
     <string name="staff_disputes_resolution_seller">ແກ້ໄຂສຳລັບຜູ້ຂາຍ</string>
     <string name="staff_disputes_resolve">ແກ້ໄຂ</string>
     <string name="staff_disputes_resolved_toast">ແກ້ໄຂການຂັດແຍ່ງແລ້ວ</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">ແບນຜູ້ໃຊ້</string>
     <string name="staff_reports_action_dismiss">ປິດ</string>
     <string name="staff_reports_action_label">ການກະທຳ</string>
-    <string name="staff_reports_action_placeholder">ເລືອກການກະທຳ</string>
     <string name="staff_reports_action_remove">ລຶບອອກ</string>
     <string name="staff_reports_action_suspend">ໂຈະເປັນຜູ້ຂາຍ</string>
     <string name="staff_reports_action_taken_toast">ດຳເນີນການລາຍງານແລ້ວ</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ຄຳສັ່ງຊື້ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ໃນ %3$s. ລຶບການວິຈານນີ້ຖາວອນ? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ລຶບການວິຈານນີ້ຖາວອນ? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
-    <string name="staff_team_dialog_search_placeholder">ຄົ້ນຫາດ້ວຍຊື່, ລາຍນິ້ວມື, ຫຼື ID…</string>
+    <string name="staff_team_dialog_search_placeholder">ຄົ້ນຫາດ້ວຍຊື່, ລາຍນິ້ວມື, ຫຼື ID</string>
 
     <string name="staff_config_field_stripe_webhook">ຄວາມລັບການເຊັນ Webhook</string>
     <string name="staff_disputes_meta_already_refunded">ຄືນເງິນແລ້ວ</string>

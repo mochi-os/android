@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Uaslódáil comhad .json</string>
     <string name="projects_settings_not_set">Gan socrú</string>
     <string name="projects_settings_updated">Tionscadal nuashonraithe</string>
-    <string name="projects_property_select">Roghnaigh …</string>
     <string name="projects_activity_attached">cheangail</string>
     <string name="projects_activity_commented">rinne trácht</string>
     <string name="projects_attachment_delete_confirm_message">Scriosfar an ceangaltán seo go buan.</string>

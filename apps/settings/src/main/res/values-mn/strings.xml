@@ -238,7 +238,7 @@
     <string name="route_delete_message">Энэ нь \"%1$s\" замын маршрутыг арилгана.</string>
     <string name="route_empty">Тохируулсан маршрут алга.</string>
     <string name="route_meta">Тэргүүлэх %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Нэмэх сэдвээ хайна уу…</string>
+    <string name="interests_search_placeholder">Нэмэх сэдвээ хайна уу</string>
     <string name="interests_empty">Одоохондоо сонирхол байхгүй.</string>
     <string name="interests_summary_regenerate">Хураангуйг дахин үүсгэх</string>
     <string name="interests_summary_regenerating">Дахин үүсгэж байна…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Энэ нь \"%1$s\"-г үндсэн (хоосон) руу буцаана.</string>
     <string name="settings_home_system_users">Хэрэглэгчид (сервер)</string>
     <string name="system_users_add_user">Хэрэглэгч нэмэх</string>
-    <string name="system_users_search_placeholder">Хэрэглэгчдийг хайх…</string>
+    <string name="system_users_search_placeholder">Хэрэглэгчдийг хайх</string>
     <string name="system_users_sort_by">Эрэмбэлэх</string>
     <string name="system_users_last_login">Сүүлд нэвтэрсэн: %1$s</string>
     <string name="system_users_delete_message">Энэ нь \"%1$s\" хэрэглэгчийг бүрмөсөн устгана. Энэ үйлдлийг буцаах боломжгүй.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Нэр авах</string>
     <string name="handles_empty">Нөөцөлсөн хэрэглэгчийн нэр алга.</string>
     <string name="handles_empty_search">Хайлтанд тохирох хэрэглэгчийн нэр алга</string>
-    <string name="handles_search_placeholder">Хэрэглэгчийн нэрс хайх…</string>
+    <string name="handles_search_placeholder">Хэрэглэгчийн нэрс хайх</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s хэрэглэгчийн нэрээс %1$s–%2$s харуулж байна</item>
         <item quantity="other">%3$s хэрэглэгчийн нэрээс %1$s–%2$s харуулж байна</item>

@@ -239,7 +239,7 @@
     <string name="route_delete_message">Ово ће уклонити руту за путању „%1$s\".</string>
     <string name="route_empty">Нема конфигурисаних рута.</string>
     <string name="route_meta">Приоритет %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Тражи теме за додавање…</string>
+    <string name="interests_search_placeholder">Тражи теме за додавање</string>
     <string name="interests_empty">Још нема интересовања.</string>
     <string name="interests_summary_regenerate">Регенериши сажетак</string>
     <string name="interests_summary_regenerating">Регенерисање…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">Ово ће вратити „%1$s\" на подразумевану (празно).</string>
     <string name="settings_home_system_users">Корисници (сервер)</string>
     <string name="system_users_add_user">Додај корисника</string>
-    <string name="system_users_search_placeholder">Тражи кориснике…</string>
+    <string name="system_users_search_placeholder">Тражи кориснике</string>
     <string name="system_users_sort_by">Сортирај по</string>
     <string name="system_users_last_login">Последња пријава: %1$s</string>
     <string name="system_users_delete_message">Ово ће трајно избрисати корисника „%1$s\". Ова радња се не може поништити.</string>
@@ -565,7 +565,7 @@
     <string name="handles_take">Узми име</string>
     <string name="handles_empty">Ниједан надимак није резервисан.</string>
     <string name="handles_empty_search">Ниједан надимак не одговара вашој претрази</string>
-    <string name="handles_search_placeholder">Претражи надимке…</string>
+    <string name="handles_search_placeholder">Претражи надимке</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Приказ %1$s–%2$s од %3$s надимка</item>
         <item quantity="few">Приказ %1$s–%2$s од %3$s надимка</item>

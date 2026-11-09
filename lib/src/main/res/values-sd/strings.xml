@@ -115,7 +115,7 @@
     <string name="settings_background_theme">ٿيم کان</string>
     <string name="settings_background_off">ڪا به نه</string>
     <string name="game_chat_empty">اڃا ڪو پيغام نه آهي</string>
-    <string name="game_chat_input_placeholder">پيغام ٽائپ ڪريو…</string>
+    <string name="game_chat_input_placeholder">پيغام ٽائپ ڪريو</string>
     <string name="game_chat_send">پيغام موڪليو</string>
     <string name="game_chat_subject_you">توھان</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">تصديق ڪريو ته اهو توهان آهيو</string>
     <string name="stepup_description">هي توهان جي اڪائونٽ ۾ هڪ سيڪيورٽي تبديلي آهي. جاري رکڻ لاءِ تصديق ڪريو ته اهو توهان آهيو.</string>
     <string name="stepup_email_label">اي ميل ڪوڊ</string>
-    <string name="stepup_email_placeholder">پنھنجي اِيميل مان ڪوڊ داخل ڪريو</string>
     <string name="stepup_totp_label">تصديق ڪندڙ ڪوڊ</string>
-    <string name="stepup_totp_placeholder">پنهنجو تصديق ڪندڙ ڪوڊ داخل ڪريو</string>
     <string name="stepup_use_passkey">پنهنجي پاس ڪي استعمال ڪريو</string>
     <string name="stepup_send_email">اي ميل موڪليو</string>
     <string name="stepup_resend_email">اي ميل ٻيهر موڪليو</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">ٽيگ هٽايو</string>
     <string name="person_picker_none">ڪا به نه</string>
     <string name="person_picker_clear">انتخاب صاف ڪريو</string>
-    <string name="person_picker_select">چونڊيو …</string>
+    <string name="person_picker_select">چونڊيو</string>
     <string name="person_picker_directory">ڊائريڪٽري</string>
     <string name="person_picker_no_people">ڪو به ماڻهو ناهي</string>
     <string name="person_picker_project_members">منصوبي جا ميمبر</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">اطلاع جو زمرو تبديل ڪريو</string>
     <string name="lightbox_comments_none">هن تصوير تي اڃا ڪو تبصرو ناهي.</string>
     <string name="lightbox_comments_only">صرف هن تصوير جا تبصرا ڏيکاريو</string>
-    <string name="lightbox_comment_placeholder">هن تصوير تي تبصرو ڪريو…</string>
+    <string name="lightbox_comment_placeholder">هن تصوير تي تبصرو ڪريو</string>
     <string name="comment_anchor_open">اها تصوير ڏسو جنهن بابت هي تبصرو آهي</string>
     <string name="comment_anchor_default">هن تصوير تي</string>
     <plurals name="lightbox_comments_others">

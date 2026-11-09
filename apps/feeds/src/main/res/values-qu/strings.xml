@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Urayman astay</string>
 
     <string name="notification_channel_feeds">Feed willaykuna</string>
-    <string name="feeds_search_placeholder">Feedkunata maskay utaq URL-ta pegay…</string>
+    <string name="feeds_search_placeholder">Feedkunata maskay utaq URL-ta pegay</string>
     <string name="feeds_url_result">URL resultado</string>
     <string name="feeds_search_results">Maskay resultadokuna</string>
     <string name="feeds_unread_only">Mana ñawinchasqakunallam</string>
@@ -200,7 +200,6 @@
     <string name="feeds_unsubscribe_confirm_message">Kay feedmanta musuqchaykunata manaña chaskinkichu. Mayqin pachapipas kutimanta suscribiyta atinki.</string>
     <string name="feeds_access_select_rule">Yaykuy kamachiyta akllay</string>
     <string name="feeds_access_authenticated_desc">Pipas yaykusqa</string>
-    <string name="feeds_banner_hint">Banner qillqata qillqay (markdown atikun)…</string>
     <string name="feeds_banner_dismiss">Bannerta wichq\'ay</string>
     <string name="feeds_members_search">Miembrokunata filtray</string>
     <string name="feeds_ai_prompt_default">Predeterminado</string>

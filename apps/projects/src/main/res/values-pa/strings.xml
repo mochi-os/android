@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
     <string name="projects_settings_not_set">ਸੈੱਟ ਨਹੀਂ</string>
     <string name="projects_settings_updated">ਪ੍ਰੋਜੈਕਟ ਅੱਪਡੇਟ ਹੋਇਆ</string>
-    <string name="projects_property_select">ਚੁਣੋ …</string>
     <string name="projects_activity_attached">ਨੱਥੀ ਕੀਤਾ</string>
     <string name="projects_activity_commented">ਟਿੱਪਣੀ ਕੀਤੀ</string>
     <string name="projects_attachment_delete_confirm_message">ਇਹ ਨੱਥੀ ਹਮੇਸ਼ਾ ਲਈ ਮਿਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</string>

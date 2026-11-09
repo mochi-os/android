@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">निर्णय गर्नुहोस्</string>
     <string name="staff_appeals_decision_denied">सूची अस्वीकृत राख्नुहोस्</string>
     <string name="staff_appeals_decision_label">निर्णय</string>
-    <string name="staff_appeals_decision_placeholder">निर्णय छान्नुहोस्</string>
     <string name="staff_appeals_decision_upheld">सूची स्वीकृत गर्नुहोस्</string>
     <string name="staff_appeals_denied_toast">अपील अस्वीकृत</string>
     <string name="staff_appeals_dialog_title">अपीलमा निर्णय गर्नुहोस्</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">फिर्ता रकम शून्य भन्दा बढी हुनुपर्छ</string>
     <string name="staff_disputes_resolution_buyer">क्रेताको पक्षमा समाधान गर्नुहोस्</string>
     <string name="staff_disputes_resolution_label">समाधान</string>
-    <string name="staff_disputes_resolution_placeholder">समाधान छान्नुहोस्</string>
     <string name="staff_disputes_resolution_seller">विक्रेताको पक्षमा समाधान गर्नुहोस्</string>
     <string name="staff_disputes_resolve">समाधान गर्नुहोस्</string>
     <string name="staff_disputes_resolved_toast">विवाद समाधान भयो</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">प्रयोगकर्तालाई प्रतिबन्ध गर्नुहोस्</string>
     <string name="staff_reports_action_dismiss">खारेज गर्नुहोस्</string>
     <string name="staff_reports_action_label">कार्य</string>
-    <string name="staff_reports_action_placeholder">कार्य छान्नुहोस्</string>
     <string name="staff_reports_action_remove">हटाउनुहोस्</string>
     <string name="staff_reports_action_suspend">बिक्रेताको रूपमा निलम्बन गर्नुहोस्</string>
     <string name="staff_reports_action_taken_toast">रिपोर्ट कार्य गरियो</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">अर्डर #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s मा। यो समीक्षा स्थायी रूपमा मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s। यो समीक्षा स्थायी रूपमा मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
-    <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिन्ट, वा ID द्वारा खोज्नुहोस्…</string>
+    <string name="staff_team_dialog_search_placeholder">नाम, फिंगरप्रिन्ट, वा ID द्वारा खोज्नुहोस्</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook हस्ताक्षर गोप्य</string>
     <string name="staff_disputes_meta_already_refunded">पहिले नै फिर्ता गरिएको</string>

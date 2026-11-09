@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Bestellung Nr. %1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Erzähle Käufern von dir…</string>
     <string name="market_account_load_failed">Konto konnte nicht geladen werden</string>
     <string name="market_account_saved">Änderungen gespeichert</string>
     <string name="market_account_status_restrictions">Einige Aktionen, einschließlich des Erstellens neuer Angebote und des Abschließens von Bestellungen, sind eingeschränkt, solange sich Ihr Konto in diesem Zustand befindet.</string>
@@ -439,7 +438,7 @@
     <string name="market_reviews_empty_sent_subtitle">Öffnen Sie eine abgeschlossene Bestellung, um eine Bewertung abzugeben.</string>
     <string name="market_reviews_empty_sent_title">Sie haben noch keine Bewertungen geschrieben</string>
     <string name="market_reviews_response_label">Antwort</string>
-    <string name="market_reviews_response_placeholder">Antwort schreiben…</string>
+    <string name="market_reviews_response_placeholder">Antwort schreiben</string>
     <string name="market_sale_carrier_custom_label">Name des Versanddienstleisters</string>
     <string name="market_sale_dispute_evidence_due">Nachweise fällig %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Grund der Stripe-Rückbuchung: %1$s</string>
@@ -514,7 +513,7 @@
     <string name="market_listings_new">Neues Angebot</string>
     <string name="market_listings_search_placeholder">Ihre Angebote durchsuchen</string>
     <string name="market_listings_share_chooser">Angebot teilen</string>
-    <string name="market_messages_compose_placeholder">Nachricht schreiben…</string>
+    <string name="market_messages_compose_placeholder">Nachricht schreiben</string>
     <string name="market_messages_inbox_empty_subtitle">Wenn Sie einem Verkäufer schreiben (oder ein Käufer Ihnen), erscheint der Chat hier.</string>
     <string name="market_messages_inbox_empty_title">Noch keine Gespräche</string>
     <string name="market_messages_thread_title">Gespräch</string>
@@ -592,7 +591,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Verkäuferbewertungen</string>
     <string name="market_account_stripe_open_failed">Stripe konnte nicht geöffnet werden</string>
     <string name="market_editor_stock">Bestand</string>
-    <string name="market_editor_stock_units">Anzahl der Einheiten</string>
     <string name="market_editor_stock_unlimited">Unbegrenzt</string>
     <string name="market_editor_start_time">Startzeit</string>
     <string name="market_editor_start_time_help">Leer lassen, um beim Veröffentlichen zu starten.</string>

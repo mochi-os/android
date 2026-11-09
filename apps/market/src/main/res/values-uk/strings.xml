@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Замовлення № %1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Розкажіть покупцям про себе…</string>
     <string name="market_account_load_failed">Не вдалося завантажити обліковий запис</string>
     <string name="market_account_saved">Зміни збережено</string>
     <string name="market_account_status_restrictions">Деякі дії, зокрема створення нових оголошень і виконання замовлень, обмежено, поки ваш обліковий запис перебуває в цьому стані.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Нове оголошення</string>
     <string name="market_listings_search_placeholder">Шукати у ваших оголошеннях</string>
     <string name="market_listings_share_chooser">Поділитися оголошенням</string>
-    <string name="market_messages_compose_placeholder">Напишіть повідомлення…</string>
+    <string name="market_messages_compose_placeholder">Напишіть повідомлення</string>
     <string name="market_messages_inbox_empty_subtitle">Коли ви напишете продавцю (або покупець напише вам), розмова з\'явиться тут.</string>
     <string name="market_messages_inbox_empty_title">Розмов ще немає</string>
     <string name="market_messages_thread_title">Розмова</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Відкрийте завершене замовлення, щоб залишити відгук.</string>
     <string name="market_reviews_empty_sent_title">Ви ще не написали жодного відгуку</string>
     <string name="market_reviews_response_label">Відповідь</string>
-    <string name="market_reviews_response_placeholder">Напишіть відповідь…</string>
+    <string name="market_reviews_response_placeholder">Напишіть відповідь</string>
     <string name="market_sale_carrier_custom_label">Назва перевізника</string>
     <string name="market_sale_dispute_evidence_due">Докази до %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Причина повернення платежу Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Відгуки про продавця</string>
     <string name="market_account_stripe_open_failed">Не вдалося відкрити Stripe</string>
     <string name="market_editor_stock">Запас</string>
-    <string name="market_editor_stock_units">Кількість одиниць</string>
     <string name="market_editor_stock_unlimited">Без обмежень</string>
     <string name="market_editor_start_time">Час початку</string>
     <string name="market_editor_start_time_help">Залиште порожнім, щоб розпочати при публікації.</string>

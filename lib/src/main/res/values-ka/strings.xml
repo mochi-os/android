@@ -115,7 +115,7 @@
     <string name="settings_background_theme">თემიდან</string>
     <string name="settings_background_off">არცერთი</string>
     <string name="game_chat_empty">შეტყობინებები ჯერ არ არის</string>
-    <string name="game_chat_input_placeholder">ჩაწერეთ შეტყობინება...</string>
+    <string name="game_chat_input_placeholder">ჩაწერეთ შეტყობინება</string>
     <string name="game_chat_send">შეტყობინების გაგზავნა</string>
     <string name="game_chat_subject_you">თქვენ</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">დაადასტურეთ, რომ ეs თქვენ ხართ</string>
     <string name="stepup_description">ეს არის თქვენი ანგარიშის უსაფრთხოების ცვლილება. გასაგრძელებლად დაადასტურეთ, რომ ეს თქვენ ხართ.</string>
     <string name="stepup_email_label">ელფოსტის კოდი</string>
-    <string name="stepup_email_placeholder">შეიყვანეთ კოდი თქვენი ელფოსტიდან</string>
     <string name="stepup_totp_label">ავთენტიფიკატორის კოდი</string>
-    <string name="stepup_totp_placeholder">შეიყვანეთ თქვენი ავთენტიფიკატორის კოდი</string>
     <string name="stepup_use_passkey">გამოიყენეთ თქვენი წვდომის გასაღები</string>
     <string name="stepup_send_email">ელფოსტის გაგზავნა</string>
     <string name="stepup_resend_email">ელფოსტის ხელახლა გაგზავნა</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">ტეგის წაშლა</string>
     <string name="person_picker_none">არცერთი</string>
     <string name="person_picker_clear">არჩევის გასუფთავება</string>
-    <string name="person_picker_select">აირჩიეთ …</string>
+    <string name="person_picker_select">აირჩიეთ</string>
     <string name="person_picker_directory">კატალოგი</string>
     <string name="person_picker_no_people">ადამიანები არ არის</string>
     <string name="person_picker_project_members">პროექტის წევრები</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">შეტყობინების კატეგორიის შეცვლა</string>
     <string name="lightbox_comments_none">ამ სურათზე კომენტარები ჯერ არ არის.</string>
     <string name="lightbox_comments_only">მხოლოდ ამ სურათის კომენტარების ჩვენება</string>
-    <string name="lightbox_comment_placeholder">დაწერეთ კომენტარი ამ სურათზე…</string>
+    <string name="lightbox_comment_placeholder">დაწერეთ კომენტარი ამ სურათზე</string>
     <string name="comment_anchor_open">იხილეთ სურათი, რომელსაც ეს კომენტარი ეხება</string>
     <string name="comment_anchor_default">ამ სურათზე</string>
     <plurals name="lightbox_comments_others">

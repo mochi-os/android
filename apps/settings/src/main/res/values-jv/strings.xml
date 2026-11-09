@@ -237,7 +237,7 @@
     <string name="route_delete_message">Iki bakal mbusak rute kanggo path \"%1$s\".</string>
     <string name="route_empty">Ora ana rute sing dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Goleki topik kanggo ditambahake…</string>
+    <string name="interests_search_placeholder">Goleki topik kanggo ditambahake</string>
     <string name="interests_empty">Durung ana minat.</string>
     <string name="interests_summary_regenerate">Gawé manèh ringkesan</string>
     <string name="interests_summary_regenerating">Nggawe ulang…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">Iki bakal ngreset \"%1$s\" menyang gawan (kosong).</string>
     <string name="settings_home_system_users">Pangguna (server)</string>
     <string name="system_users_add_user">Tambah pangguna</string>
-    <string name="system_users_search_placeholder">Goleki pangguna…</string>
+    <string name="system_users_search_placeholder">Goleki pangguna</string>
     <string name="system_users_sort_by">Urutake miturut</string>
     <string name="system_users_last_login">Mlebu pungkasan: %1$s</string>
     <string name="system_users_delete_message">Iki bakal mbusak pangguna \"%1$s\" kanthi permanen. Tumindak iki ora bisa dibatalake.</string>
@@ -545,7 +545,7 @@
     <string name="handles_take">Jupuk jeneng</string>
     <string name="handles_empty">Durung ana jeneng panganggo sing dicadhangaké.</string>
     <string name="handles_empty_search">Ora ana jeneng panganggo sing cocog karo panggolèkanmu</string>
-    <string name="handles_search_placeholder">Goleki jeneng panganggo…</string>
+    <string name="handles_search_placeholder">Goleki jeneng panganggo</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">Nampilaké %1$s–%2$s saka %3$s jeneng panganggo</item>
     </plurals>

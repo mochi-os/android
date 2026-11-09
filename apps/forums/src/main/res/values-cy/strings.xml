@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Dim rheolau eto — mae\'r rhagosodiadau\'n berthnasol</string>
     <string name="forums_members_search">Hidlo aelodau</string>
     <string name="forums_banner_description">Markdown a ddangosir ar frig y fforwm.</string>
-    <string name="forums_banner_placeholder">Rhowch destun y faner (cefnogir markdown)…</string>
     <string name="forums_ai_mode_off">Wedi\'i analluogi</string>
     <string name="forums_moderation_queue_empty">Dim byd yn aros</string>
     <string name="forums_moderation_report_details">Manylion: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Yn dod i ben %1$s</string>
     <string name="forums_moderation_restriction_permanent">Parhaol</string>
     <string name="forums_report_reason_hate">Casineb</string>
-    <string name="forums_write_comment">Ysgrifennu sylw…</string>
+    <string name="forums_write_comment">Ysgrifennu sylw</string>
     <string name="forums_comment_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r sylw hwn?</string>
     <string name="forums_comment_replying_to">Ymateb i %1$s</string>
     <string name="forums_comment_clear_reply">Clirio\'r ymateb</string>

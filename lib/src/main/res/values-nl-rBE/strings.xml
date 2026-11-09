@@ -114,7 +114,7 @@
     <string name="settings_background_theme">Van thema</string>
     <string name="settings_background_off">Geen</string>
     <string name="game_chat_empty">Nog geen berichten</string>
-    <string name="game_chat_input_placeholder">Typ een bericht…</string>
+    <string name="game_chat_input_placeholder">Typ een bericht</string>
     <string name="game_chat_send">Bericht versturen</string>
     <string name="game_chat_subject_you">U</string>
 
@@ -226,9 +226,7 @@
     <string name="stepup_title">Bevestig dat jij het bent</string>
     <string name="stepup_description">Dit is een beveiligingswijziging voor je account. Bevestig dat jij het bent om verder te gaan.</string>
     <string name="stepup_email_label">E-mailcode</string>
-    <string name="stepup_email_placeholder">Voer de code uit je e-mail in</string>
     <string name="stepup_totp_label">Authenticator-code</string>
-    <string name="stepup_totp_placeholder">Voer je authenticatorcode in</string>
     <string name="stepup_send_email">E-mail verzenden</string>
     <string name="stepup_resend_email">E-mail opnieuw verzenden</string>
     <string name="stepup_verify">Verifiëren</string>
@@ -266,7 +264,7 @@
     <string name="tags_delete">Tag verwijderen</string>
     <string name="person_picker_none">Geen</string>
     <string name="person_picker_clear">Selectie wissen</string>
-    <string name="person_picker_select">Selecteren …</string>
+    <string name="person_picker_select">Selecteren</string>
     <string name="person_picker_directory">Gids</string>
     <string name="person_picker_no_people">Geen personen</string>
     <string name="person_picker_project_members">Projectleden</string>
@@ -276,7 +274,7 @@
     <string name="notifications_category_unassigned">Niet toegewezen</string>
     <string name="lightbox_comments_none">Nog geen reacties op deze afbeelding.</string>
     <string name="lightbox_comments_only">Alleen reacties op deze afbeelding tonen</string>
-    <string name="lightbox_comment_placeholder">Reageer op deze afbeelding…</string>
+    <string name="lightbox_comment_placeholder">Reageer op deze afbeelding</string>
     <string name="comment_anchor_open">Bekijk de afbeelding waar deze reactie over gaat</string>
     <string name="comment_anchor_default">Bij deze afbeelding</string>
     <plurals name="lightbox_comments_others">

@@ -90,7 +90,7 @@
     <string name="feeds_ai_account">Λογαριασμός AI</string>
 
     <string name="notification_channel_feeds">Ειδοποιήσεις ροών</string>
-    <string name="feeds_search_placeholder">Αναζήτηση ροών ή επικόλληση URL…</string>
+    <string name="feeds_search_placeholder">Αναζήτηση ροών ή επικόλληση URL</string>
     <string name="feeds_url_result">Αποτέλεσμα URL</string>
     <string name="feeds_search_results">Αποτελέσματα αναζήτησης</string>
     <string name="feeds_unread_only">Μόνο μη αναγνωσμένα</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Θα σταματήσετε να λαμβάνετε ενημερώσεις από αυτήν τη ροή. Μπορείτε να εγγραφείτε ξανά οποιαδήποτε στιγμή.</string>
     <string name="feeds_access_select_rule">Επιλέξτε κανόνα πρόσβασης</string>
     <string name="feeds_access_authenticated_desc">Οποιοσδήποτε είναι συνδεδεμένος</string>
-    <string name="feeds_banner_hint">Καλώς ορίσατε σε αυτό το φόρουμ…</string>
     <string name="feeds_banner_dismiss">Απόρριψη μπάνερ</string>
     <string name="feeds_members_search">Φιλτράρισμα μελών</string>
     <string name="feeds_ai_prompt_default">Προεπιλογή</string>

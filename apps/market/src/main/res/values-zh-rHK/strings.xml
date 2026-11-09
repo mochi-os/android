@@ -4,7 +4,6 @@
     <string name="app_name">市場</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">個人簡介</string>
-    <string name="market_account_biography_placeholder">向買家介紹一下你自己…</string>
     <string name="market_account_load_failed">無法載入帳戶</string>
     <string name="market_account_location_label">位置</string>
     <string name="market_account_save">儲存</string>
@@ -112,7 +111,6 @@
     <string name="market_editor_start_time">開始時間</string>
     <string name="market_editor_start_time_help">留空表示在發佈時開始。</string>
     <string name="market_editor_stock">庫存</string>
-    <string name="market_editor_stock_units">單位數量</string>
     <string name="market_editor_stock_unlimited">無限制</string>
     <string name="market_editor_stripe_banner_description">連接 Stripe 帳戶以接收此商品的款項。</string>
     <string name="market_editor_stripe_banner_title">完成 Stripe 設定</string>
@@ -182,7 +180,7 @@
     <string name="market_listings_remove_title">移除此刊登？</string>
     <string name="market_listings_search_placeholder">搜尋你的商品</string>
     <string name="market_listings_share_chooser">分享商品</string>
-    <string name="market_messages_compose_placeholder">撰寫訊息…</string>
+    <string name="market_messages_compose_placeholder">撰寫訊息</string>
     <string name="market_messages_inbox_empty_subtitle">當你向賣家發送訊息 (或買家向你發送訊息) 時,對話將出現在這裡。</string>
     <string name="market_messages_inbox_empty_title">尚無對話</string>
     <string name="market_messages_send">發送</string>
@@ -230,7 +228,7 @@
     <string name="market_reviews_empty_sent_subtitle">開啟已完成的訂單留下評論。</string>
     <string name="market_reviews_empty_sent_title">你尚未撰寫任何評論</string>
     <string name="market_reviews_response_label">回應</string>
-    <string name="market_reviews_response_placeholder">撰寫回應…</string>
+    <string name="market_reviews_response_placeholder">撰寫回應</string>
     <string name="market_sale_carrier_custom_label">承運商名稱</string>
     <string name="market_sale_dispute_evidence_due">證據截止日期 %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe 退款原因: %1$s</string>

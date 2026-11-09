@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Muat naik fail .json</string>
     <string name="projects_settings_not_set">Tidak ditetapkan</string>
     <string name="projects_settings_updated">Projek dikemas kini</string>
-    <string name="projects_property_select">Pilih …</string>
     <string name="projects_activity_attached">melampirkan</string>
     <string name="projects_activity_commented">mengulas</string>
     <string name="projects_attachment_delete_confirm_message">Lampiran ini akan dipadamkan secara kekal.</string>

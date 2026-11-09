@@ -96,7 +96,7 @@
     <string name="route_disabled">Désactivée</string>
     <string name="route_meta">Priorité %1$s · %2$s</string>
     <string name="interests_title">Centres d\'intérêt</string>
-    <string name="interests_search_placeholder">Rechercher des sujets à ajouter…</string>
+    <string name="interests_search_placeholder">Rechercher des sujets à ajouter</string>
     <string name="interests_empty">Aucun centre d\'intérêt pour l\'instant.</string>
     <string name="interests_summary_title">Résumé</string>
     <string name="interests_summary_regenerate">Régénérer le résumé</string>
@@ -210,7 +210,7 @@
     <string name="settings_home_system_users">Utilisateurs (serveur)</string>
     <string name="system_users_title">Utilisateurs</string>
     <string name="system_users_add_user">Ajouter un utilisateur</string>
-    <string name="system_users_search_placeholder">Rechercher des utilisateurs…</string>
+    <string name="system_users_search_placeholder">Rechercher des utilisateurs</string>
     <string name="system_users_sort_by">Trier par</string>
     <string name="system_users_col_last">Dernière connexion</string>
     <string name="system_users_open_actions">Ouvrir les actions de l\'utilisateur</string>

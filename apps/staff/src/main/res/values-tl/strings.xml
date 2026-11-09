@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Magdesisyon</string>
     <string name="staff_appeals_decision_denied">Panatilihing tinanggihan ang listahan</string>
     <string name="staff_appeals_decision_label">Desisyon</string>
-    <string name="staff_appeals_decision_placeholder">Pumili ng desisyon</string>
     <string name="staff_appeals_decision_upheld">Aprubahan ang listahan</string>
     <string name="staff_appeals_denied_toast">Tinanggihan ang apela</string>
     <string name="staff_appeals_dialog_title">Magdesisyon sa apela</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Ang halaga ng refund ay dapat mas malaki sa zero</string>
     <string name="staff_disputes_resolution_buyer">Resolbahin para sa buyer</string>
     <string name="staff_disputes_resolution_label">Resolusyon</string>
-    <string name="staff_disputes_resolution_placeholder">Pumili ng resolusyon</string>
     <string name="staff_disputes_resolution_seller">Resolbahin para sa seller</string>
     <string name="staff_disputes_resolve">Resolbahin</string>
     <string name="staff_disputes_resolved_toast">Naresolba ang dispute</string>
@@ -298,7 +296,6 @@
     <string name="staff_reports_action_ban">I-ban ang user</string>
     <string name="staff_reports_action_dismiss">I-dismiss</string>
     <string name="staff_reports_action_label">Aksyon</string>
-    <string name="staff_reports_action_placeholder">Pumili ng action</string>
     <string name="staff_reports_action_remove">Alisin</string>
     <string name="staff_reports_action_suspend">I-suspend bilang nagbebenta</string>
     <string name="staff_reports_action_taken_toast">Nakuha ang aksyon sa report</string>
@@ -408,7 +405,7 @@
     <string name="staff_team_dialog_person">Tao</string>
     <string name="staff_team_dialog_role">Tungkulin</string>
     <string name="staff_team_dialog_role_placeholder">Pumili ng tungkulin</string>
-    <string name="staff_team_dialog_search_placeholder">Maghanap ayon sa pangalan, fingerprint o ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Maghanap ayon sa pangalan, fingerprint o ID</string>
     <string name="staff_team_empty">Walang miyembro ng team</string>
     <string name="staff_team_remove_confirm">Alisin</string>
     <string name="staff_team_remove_desc">Alisin ang miyembrong ito sa staff team?</string>

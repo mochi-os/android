@@ -6,7 +6,7 @@
     <string name="people_groups_title">Gwoup</string>
     <string name="people_group_title">Gwoup</string>
     <string name="people_person_title">Moun</string>
-    <string name="people_friends_search_placeholder">Chèche…</string>
+    <string name="people_friends_search_placeholder">Chèche</string>
     <string name="people_friends_no_people_found">Pa gen moun ki jwenn</string>
     <string name="people_friends_try_adjusting">Eseye ajiste rechèch ou</string>
     <string name="people_friends_pending">Annatant</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Efase gwoup \"%1$s\"? Sa pa ka defèt.</string>
     <string name="people_member_remove_confirm">Èske ou sèten ou vle retire %1$s nan gwoup sa a?</string>
     <string name="people_member_remove_with_name">Retire %1$s</string>
-    <string name="people_member_search_placeholder">Antre yon non pou chèche…</string>
+    <string name="people_member_search_placeholder">Antre yon non pou chèche</string>
     <string name="people_groups_add_member_confirm_title">Ajoute nan gwoup</string>
     <string name="people_groups_add_member_confirm_action">Ajoute nan gwoup</string>
     <string name="people_profile_image_process_failed">Pa t kapab trete imaj %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Echwe pou chaje politik envitasyon ou an</string>
     <string name="people_profile_avatar">Avata</string>
     <string name="people_profile_banner">Banyè</string>
-    <string name="people_contacts_search_placeholder">Chèche…</string>
+    <string name="people_contacts_search_placeholder">Chèche</string>
     <string name="people_contacts_invited">Envite</string>
     <string name="people_contacts_accept">Aksepte</string>
     <string name="people_contacts_message">Voye mesaj</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Ajoute dènyèman</string>
     <string name="people_contacts_try_different_search">Eseye yon lòt tèm rechèch</string>
     <string name="people_contacts_unfriend">Retire zanmi</string>
-    <string name="people_add_contact_search_placeholder">Tape pou chèche…</string>
+    <string name="people_add_contact_search_placeholder">Tape pou chèche</string>
     <string name="people_add_contact_search_start">Kòmanse tape pou chèche itilizatè</string>
     <string name="people_contact_phone">Telefòn</string>
     <string name="people_contact_title">Tit travay</string>

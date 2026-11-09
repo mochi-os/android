@@ -464,7 +464,6 @@ internal fun FieldEditor(
                             onValueChange = {},
                             readOnly = true,
                             label = fieldLabel,
-                            placeholder = { Text(stringResource(R.string.projects_property_select)) },
                             prefix = if (selectedOption != null && selectedOption.colour.isNotBlank()) {
                                 { ChoicePrefix(parseOptionColour(selectedOption.colour)) }
                             } else {

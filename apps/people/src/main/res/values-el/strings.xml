@@ -6,7 +6,7 @@
     <string name="people_groups_title">Ομάδες</string>
     <string name="people_group_title">Ομάδα</string>
     <string name="people_person_title">Άτομο</string>
-    <string name="people_friends_search_placeholder">Αναζήτηση…</string>
+    <string name="people_friends_search_placeholder">Αναζήτηση</string>
     <string name="people_friends_no_people_found">Δεν βρέθηκαν άτομα</string>
     <string name="people_friends_try_adjusting">Δοκιμάστε να προσαρμόσετε την αναζήτησή σας</string>
     <string name="people_friends_pending">Σε εκκρεμότητα</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Διαγραφή ομάδας \"%1$s\"; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="people_member_remove_confirm">Είστε βέβαιοι ότι θέλετε να αφαιρέσετε τον/την %1$s από αυτή την ομάδα;</string>
     <string name="people_member_remove_with_name">Αφαίρεση %1$s</string>
-    <string name="people_member_search_placeholder">Εισάγετε όνομα για αναζήτηση…</string>
+    <string name="people_member_search_placeholder">Εισάγετε όνομα για αναζήτηση</string>
     <string name="people_groups_add_member_confirm_title">Προσθήκη στην ομάδα</string>
     <string name="people_groups_add_member_confirm_action">Προσθήκη στην ομάδα</string>
     <string name="people_profile_image_process_failed">Δεν ήταν δυνατή η επεξεργασία της εικόνας %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Αποτυχία φόρτωσης της πολιτικής προσκλήσεών σας</string>
     <string name="people_profile_avatar">Άβαταρ</string>
     <string name="people_profile_banner">Μπάνερ</string>
-    <string name="people_contacts_search_placeholder">Αναζήτηση…</string>
+    <string name="people_contacts_search_placeholder">Αναζήτηση</string>
     <string name="people_contacts_invited">Προσκλήθηκε</string>
     <string name="people_contacts_accept">Αποδοχή</string>
     <string name="people_contacts_message">Αποστολή μηνύματος</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Προστέθηκαν πρόσφατα</string>
     <string name="people_contacts_try_different_search">Δοκιμάστε διαφορετικό όρο αναζήτησης</string>
     <string name="people_contacts_unfriend">Αφαίρεση φίλου</string>
-    <string name="people_add_contact_search_placeholder">Πληκτρολογήστε για αναζήτηση…</string>
+    <string name="people_add_contact_search_placeholder">Πληκτρολογήστε για αναζήτηση</string>
     <string name="people_add_contact_search_start">Ξεκινήστε να πληκτρολογείτε για αναζήτηση χρηστών</string>
     <string name="people_contact_phone">Τηλέφωνο</string>
     <string name="people_contact_title">Τίτλος θέσης</string>

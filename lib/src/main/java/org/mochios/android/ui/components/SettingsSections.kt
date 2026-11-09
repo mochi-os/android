@@ -224,7 +224,6 @@ fun EditableIdentityRow(
  *
  * @param title Section heading.
  * @param description Explanation under the heading.
- * @param hint Placeholder inside the empty box.
  * @param clearLabel Label of the clear button.
  * @param draft Current text.
  * @param stored Text the server holds, which Save is compared against.
@@ -235,7 +234,6 @@ fun EditableIdentityRow(
 fun BannerSection(
     title: String,
     description: String,
-    hint: String,
     clearLabel: String,
     draft: String,
     stored: String,
@@ -253,7 +251,6 @@ fun BannerSection(
             MochiTextField(
                 value = draft,
                 onValueChange = onDraftChange,
-                placeholder = { Text(hint) },
                 minLines = 3,
                 maxLines = 8,
                 modifier = Modifier.fillMaxWidth()

@@ -238,7 +238,7 @@
     <string name="route_delete_message">ಇದು ಮಾರ್ಗ \"%1$s\" ಗಾಗಿನ ಮಾರ್ಗವನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ.</string>
     <string name="route_empty">ಯಾವುದೇ ಮಾರ್ಗಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಲಾಗಿಲ್ಲ.</string>
     <string name="route_meta">ಆದ್ಯತೆ %1$s · %2$s</string>
-    <string name="interests_search_placeholder">ಸೇರಿಸಲು ವಿಷಯಗಳನ್ನು ಹುಡುಕಿ…</string>
+    <string name="interests_search_placeholder">ಸೇರಿಸಲು ವಿಷಯಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="interests_empty">ಇನ್ನೂ ಯಾವುದೇ ಆಸಕ್ತಿಗಳಿಲ್ಲ.</string>
     <string name="interests_summary_regenerate">ಸಾರಾಂಶವನ್ನು ಮರುಸೃಷ್ಟಿಸಿ</string>
     <string name="interests_summary_regenerating">ಮರುಸೃಷ್ಟಿಸುತ್ತಿದೆ…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ಇದು \"%1$s\" ಅನ್ನು ಡೀಫಾಲ್ಟ್‌ಗೆ (ಖಾಲಿ) ಮರುಹೊಂದಿಸುತ್ತದೆ.</string>
     <string name="settings_home_system_users">ಬಳಕೆದಾರರು (ಸರ್ವರ್)</string>
     <string name="system_users_add_user">ಬಳಕೆದಾರನನ್ನು ಸೇರಿಸಿ</string>
-    <string name="system_users_search_placeholder">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ…</string>
+    <string name="system_users_search_placeholder">ಬಳಕೆದಾರರನ್ನು ಹುಡುಕಿ</string>
     <string name="system_users_sort_by">ವಿಂಗಡಿಸು</string>
     <string name="system_users_last_login">ಕೊನೆಯ ಲಾಗಿನ್: %1$s</string>
     <string name="system_users_delete_message">ಇದು ಬಳಕೆದಾರ \"%1$s\" ಅನ್ನು ಶಾಶ್ವತವಾಗಿ ಅಳಿಸುತ್ತದೆ. ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">ಹೆಸರನ್ನು ಪಡೆಯಿರಿ</string>
     <string name="handles_empty">ಯಾವುದೇ ಬಳಕೆದಾರಹೆಸರುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿಲ್ಲ.</string>
     <string name="handles_empty_search">ಯಾವುದೇ ಬಳಕೆದಾರಹೆಸರುಗಳು ನಿಮ್ಮ ಹುಡುಕಾಟಕ್ಕೆ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ</string>
-    <string name="handles_search_placeholder">ಬಳಕೆದಾರಹೆಸರುಗಳನ್ನು ಹುಡುಕಿ…</string>
+    <string name="handles_search_placeholder">ಬಳಕೆದಾರಹೆಸರುಗಳನ್ನು ಹುಡುಕಿ</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s ಬಳಕೆದಾರಹೆಸರಿನಲ್ಲಿ %1$s–%2$s ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>
         <item quantity="other">%3$s ಬಳಕೆದಾರಹೆಸರುಗಳಲ್ಲಿ %1$s–%2$s ತೋರಿಸಲಾಗುತ್ತಿದೆ</item>

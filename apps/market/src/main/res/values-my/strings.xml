@@ -3,7 +3,6 @@
     <string name="app_name">ဈေး</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ကိုယ်ရေးအချက်အလက်</string>
-    <string name="market_account_biography_placeholder">ဝယ်သူများကို သင့်အကြောင်း ပြောပြပါ…</string>
     <string name="market_account_load_failed">အကောင့်ကို ဖွင့်၍မရပါ</string>
     <string name="market_account_location_label">တည်နေရာ</string>
     <string name="market_account_save">သိမ်းမည်</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">ကြော်ငြာ အသစ်</string>
     <string name="market_listings_relist_failed">ပြန်စာရင်းတင်၍ မရပါ</string>
     <string name="market_listings_title">ကျွန်ုပ်၏ စာရင်းများ</string>
-    <string name="market_messages_compose_placeholder">စာ ရေးပါ…</string>
+    <string name="market_messages_compose_placeholder">စာ ရေးပါ</string>
     <string name="market_messages_inbox_title">မက်ဆေ့ဂျ်များ</string>
     <string name="market_messages_send">ပို့</string>
     <string name="market_messages_thread_title">စကားဝိုင်း</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">မှာယူမှု ပြီးစီးပြီးနောက် ဝယ်သူနှင့် ရောင်းသူသည် တစ်ဦးကိုတစ်ဦး သုံးသပ်နိုင်သည်။</string>
     <string name="market_reviews_empty_sent_subtitle">သုံးသပ်ချက်ရေးရန် ပြီးစီးပြီးသော မှာယူမှုကို ဖွင့်ပါ။</string>
     <string name="market_reviews_empty_sent_title">သင်သည် သုံးသပ်ချက် တစ်ခုမှ မရေးရသေးပါ</string>
-    <string name="market_reviews_response_placeholder">တုံ့ပြန်ချက်ရေးပါ…</string>
+    <string name="market_reviews_response_placeholder">တုံ့ပြန်ချက်ရေးပါ</string>
     <string name="market_sale_carrier_custom_label">ပို့ဆောင်ရေး အမည်</string>
     <string name="market_sale_dispute_evidence_due">သက်သေအထောက်အထား တင်ရမည့်ရက် %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ပြန်အမ်းငွေတောင်းခံမှု အကြောင်းရင်း: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">ရောင်းသူ၏ သုံးသပ်ချက်များ</string>
     <string name="market_account_stripe_open_failed">Stripe ကို ဖွင့်၍ မရပါ</string>
     <string name="market_editor_stock">လက်ကျန်ပစ္စည်း</string>
-    <string name="market_editor_stock_units">ယူနစ် အရေအတွက်</string>
     <string name="market_editor_stock_unlimited">အကန့်အသတ်မဲ့</string>
     <string name="market_editor_start_time">စတင်ချိန်</string>
     <string name="market_editor_start_time_help">ထုတ်ဝေချိန်တွင် စတင်ရန် ဗလာထားပါ။</string>

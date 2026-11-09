@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">อัปโหลดไฟล์ .json</string>
     <string name="projects_settings_not_set">ยังไม่ได้ตั้งค่า</string>
     <string name="projects_settings_updated">อัปเดตโปรเจกต์แล้ว</string>
-    <string name="projects_property_select">เลือก …</string>
     <string name="projects_activity_attached">แนบแล้ว</string>
     <string name="projects_activity_commented">แสดงความคิดเห็นแล้ว</string>
     <string name="projects_attachment_delete_confirm_message">ไฟล์แนบนี้จะถูกลบอย่างถาวร</string>

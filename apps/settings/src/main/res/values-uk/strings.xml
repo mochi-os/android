@@ -240,7 +240,7 @@
     <string name="route_delete_message">Це видалить маршрут для шляху «%1$s».</string>
     <string name="route_empty">Маршрути не налаштовано.</string>
     <string name="route_meta">Пріоритет %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Шукати теми для додавання…</string>
+    <string name="interests_search_placeholder">Шукати теми для додавання</string>
     <string name="interests_empty">Поки немає інтересів.</string>
     <string name="interests_summary_regenerate">Згенерувати стислий виклад знову</string>
     <string name="interests_summary_regenerating">Перегенерація…</string>
@@ -264,7 +264,7 @@
     <string name="system_settings_reset_message_empty">Це скине «%1$s» до значення за замовчуванням (порожньо).</string>
     <string name="settings_home_system_users">Користувачі (сервер)</string>
     <string name="system_users_add_user">Додати користувача</string>
-    <string name="system_users_search_placeholder">Шукати користувачів…</string>
+    <string name="system_users_search_placeholder">Шукати користувачів</string>
     <string name="system_users_sort_by">Сортувати за</string>
     <string name="system_users_last_login">Останній вхід: %1$s</string>
     <string name="system_users_delete_message">Це назавжди видалить користувача «%1$s». Цю дію не можна скасувати.</string>
@@ -575,7 +575,7 @@
     <string name="handles_take">Зайняти ім\'я</string>
     <string name="handles_empty">Немає зарезервованих псевдонімів.</string>
     <string name="handles_empty_search">Жоден псевдонім не відповідає вашому пошуку</string>
-    <string name="handles_search_placeholder">Пошук псевдонімів…</string>
+    <string name="handles_search_placeholder">Пошук псевдонімів</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Показано %1$s–%2$s з %3$s псевдоніма</item>
         <item quantity="few">Показано %1$s–%2$s з %3$s псевдонімів</item>

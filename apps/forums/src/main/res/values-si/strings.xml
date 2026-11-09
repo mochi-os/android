@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">යවන්න</string>
     <string name="forums_post_body_field">අන්තර්ගතය</string>
-    <string name="forums_write_comment">අදහසක් ලියන්න…</string>
+    <string name="forums_write_comment">අදහසක් ලියන්න</string>
 
     <string name="notification_channel_forums">සංසද දැනුම්දීම්</string>
     <string name="forums_list_empty">තවම සංසද නොමැත</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">තවම රීති නැත — පෙරනිමි අදාළ වේ</string>
     <string name="forums_members_search">සාමාජිකයන් පෙරහන් කරන්න</string>
     <string name="forums_banner_description">සංසදයේ ඉහළින් පෙන්වන Markdown.</string>
-    <string name="forums_banner_placeholder">බැනර් පෙළ ඇතුළත් කරන්න (Markdown සහාය දක්වයි)…</string>
     <string name="forums_ai_mode_off">අක්‍රියයි</string>
     <string name="forums_moderation_queue_empty">කිසිවක් අපේක්ෂාවෙන් නැත</string>
     <string name="forums_moderation_report_details">විස්තර: %1$s</string>

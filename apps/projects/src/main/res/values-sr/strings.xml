@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Отпреми .json фајл</string>
     <string name="projects_settings_not_set">Није постављено</string>
     <string name="projects_settings_updated">Пројекат ажуриран</string>
-    <string name="projects_property_select">Изаберите …</string>
     <string name="projects_activity_attached">приложио/ла</string>
     <string name="projects_activity_commented">коментарисао/ла</string>
     <string name="projects_attachment_delete_confirm_message">Овај прилог ће бити трајно избрисан.</string>

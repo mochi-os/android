@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">ਫੈਸਲਾ ਕਰੋ</string>
     <string name="staff_appeals_decision_denied">ਸੂਚੀ ਰੱਦ ਰੱਖੋ</string>
     <string name="staff_appeals_decision_label">ਫੈਸਲਾ</string>
-    <string name="staff_appeals_decision_placeholder">ਫੈਸਲਾ ਚੁਣੋ</string>
     <string name="staff_appeals_decision_upheld">ਸੂਚੀ ਮਨਜ਼ੂਰ ਕਰੋ</string>
     <string name="staff_appeals_denied_toast">ਅਪੀਲ ਰੱਦ</string>
     <string name="staff_appeals_dialog_title">ਅਪੀਲ ਉੱਤੇ ਫੈਸਲਾ ਕਰੋ</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">ਰਿਫੰਡ ਰਕਮ ਜ਼ੀਰੋ ਤੋਂ ਵੱਧ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ</string>
     <string name="staff_disputes_resolution_buyer">ਖਰੀਦਦਾਰ ਦੇ ਹੱਕ ਵਿੱਚ ਹੱਲ ਕਰੋ</string>
     <string name="staff_disputes_resolution_label">ਹੱਲ</string>
-    <string name="staff_disputes_resolution_placeholder">ਹੱਲ ਚੁਣੋ</string>
     <string name="staff_disputes_resolution_seller">ਵਿਕਰੇਤਾ ਦੇ ਹੱਕ ਵਿੱਚ ਹੱਲ ਕਰੋ</string>
     <string name="staff_disputes_resolve">ਹੱਲ ਕਰੋ</string>
     <string name="staff_disputes_resolved_toast">ਵਿਵਾਦ ਹੱਲ ਹੋਇਆ</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">ਯੂਜ਼ਰ ਉੱਤੇ ਪਾਬੰਦੀ ਲਾਓ</string>
     <string name="staff_reports_action_dismiss">ਖਾਰਜ ਕਰੋ</string>
     <string name="staff_reports_action_label">ਕਾਰਵਾਈ</string>
-    <string name="staff_reports_action_placeholder">ਕਾਰਵਾਈ ਚੁਣੋ</string>
     <string name="staff_reports_action_remove">ਹਟਾਓ</string>
     <string name="staff_reports_action_suspend">ਵੇਚਣ ਵਾਲੇ ਵਜੋਂ ਮੁਅੱਤਲ ਕਰੋ</string>
     <string name="staff_reports_action_taken_toast">ਰਿਪੋਰਟ ਐਕਸ਼ਨ ਲਿਆ ਗਿਆ</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ਆਰਡਰ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%3$s ਨੂੰ %1$s → %2$s। ਇਸ ਸਮੀਖਿਆ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s। ਇਸ ਸਮੀਖਿਆ ਨੂੰ ਸਥਾਈ ਤੌਰ \'ਤੇ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
-    <string name="staff_team_dialog_search_placeholder">ਨਾਮ, ਫਿੰਗਰਪ੍ਰਿੰਟ, ਜਾਂ ID ਦੁਆਰਾ ਖੋਜੋ…</string>
+    <string name="staff_team_dialog_search_placeholder">ਨਾਮ, ਫਿੰਗਰਪ੍ਰਿੰਟ, ਜਾਂ ID ਦੁਆਰਾ ਖੋਜੋ</string>
 
     <string name="staff_config_field_stripe_webhook">ਵੈੱਬਹੁੱਕ ਸਾਈਨਿੰਗ ਸੀਕ੍ਰੇਟ</string>
     <string name="staff_disputes_meta_already_refunded">ਪਹਿਲਾਂ ਹੀ ਵਾਪਸ ਕੀਤਾ</string>

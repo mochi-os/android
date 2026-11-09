@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">傳送</string>
     <string name="forums_post_body_field">內文</string>
-    <string name="forums_write_comment">撰寫評論…</string>
+    <string name="forums_write_comment">撰寫評論</string>
 
     <string name="notification_channel_forums">論壇通知</string>
     <string name="forums_list_empty">尚無論壇</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">尚無規則 — 套用預設值</string>
     <string name="forums_members_search">篩選成員</string>
     <string name="forums_banner_description">顯示於論壇頂部的 Markdown 內容。</string>
-    <string name="forums_banner_placeholder">輸入橫幅文字（支援 Markdown）…</string>
     <string name="forums_ai_mode_off">已停用</string>
     <string name="forums_moderation_queue_empty">沒有待處理項目</string>
     <string name="forums_moderation_report_details">詳情：%1$s</string>

@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Matsa ƙasa</string>
 
     <string name="notification_channel_feeds">Sanarwar feeds</string>
-    <string name="feeds_search_placeholder">Bincika feeds ko liƙa URL…</string>
+    <string name="feeds_search_placeholder">Bincika feeds ko liƙa URL</string>
     <string name="feeds_url_result">Sakamakon URL</string>
     <string name="feeds_search_results">Sakamakon bincike</string>
     <string name="feeds_unread_only">Wadanda ba a karanta ba kawai</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Za ka daina samun sabbin abubuwa daga wannan feed ɗin. Za ka iya sake bi a kowane lokaci.</string>
     <string name="feeds_access_select_rule">Zaɓi tsarin damar shiga</string>
     <string name="feeds_access_authenticated_desc">Duk wanda ya shiga</string>
-    <string name="feeds_banner_hint">Barka da zuwa wannan taron tattaunawa…</string>
     <string name="feeds_banner_dismiss">Kau da banner</string>
     <string name="feeds_members_search">Tace mambobi</string>
     <string name="feeds_ai_prompt_default">Tsoho</string>

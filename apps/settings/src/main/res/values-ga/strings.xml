@@ -241,7 +241,7 @@
     <string name="route_delete_message">Bainfidh sé seo an cosán don chonair \"%1$s\".</string>
     <string name="route_empty">Níl aon chonair cumraithe.</string>
     <string name="route_meta">Tosaíocht %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Cuardaigh topaicí le cur leis…</string>
+    <string name="interests_search_placeholder">Cuardaigh topaicí le cur leis</string>
     <string name="interests_empty">Níl aon spéiseanna fós.</string>
     <string name="interests_summary_regenerate">Athghin an achoimre</string>
     <string name="interests_summary_regenerating">Ag athghiniúint…</string>
@@ -265,7 +265,7 @@
     <string name="system_settings_reset_message_empty">Athshocróidh sé seo \"%1$s\" go réamhshocraithe (folamh).</string>
     <string name="settings_home_system_users">Úsáideoirí (freastalaí)</string>
     <string name="system_users_add_user">Cuir úsáideoir leis</string>
-    <string name="system_users_search_placeholder">Cuardaigh úsáideoirí…</string>
+    <string name="system_users_search_placeholder">Cuardaigh úsáideoirí</string>
     <string name="system_users_sort_by">Sórtáil de réir</string>
     <string name="system_users_last_login">Logáil isteach deireanach: %1$s</string>
     <string name="system_users_delete_message">Scriosfaidh sé seo an t-úsáideoir \"%1$s\" go buan. Ní féidir an gníomh seo a chealú.</string>
@@ -585,7 +585,7 @@
     <string name="handles_take">Tóg ainm</string>
     <string name="handles_empty">Níor cuireadh aon ainm úsáideora in áirithe.</string>
     <string name="handles_empty_search">Níl aon ainm úsáideora ag teacht le do chuardach</string>
-    <string name="handles_search_placeholder">Cuardaigh ainmneacha úsáideora…</string>
+    <string name="handles_search_placeholder">Cuardaigh ainmneacha úsáideora</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Ag taispeáint %1$s–%2$s as %3$s ainm úsáideora</item>
         <item quantity="two">Ag taispeáint %1$s–%2$s as %3$s ainm úsáideora</item>

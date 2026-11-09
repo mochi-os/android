@@ -115,7 +115,7 @@
     <string name="settings_background_theme">מערכת נושא</string>
     <string name="settings_background_off">ללא</string>
     <string name="game_chat_empty">עדיין אין הודעות</string>
-    <string name="game_chat_input_placeholder">הקלד הודעה…</string>
+    <string name="game_chat_input_placeholder">הקלד הודעה</string>
     <string name="game_chat_send">שלח הודעה</string>
     <string name="game_chat_subject_you">אתה</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">אימות הזהות שלך</string>
     <string name="stepup_description">זהו שינוי אבטחה בחשבון שלך. כדי להמשיך, אמת שזה אתה.</string>
     <string name="stepup_email_label">קוד אימייל</string>
-    <string name="stepup_email_placeholder">הזן את הקוד מהאימייל שלך</string>
     <string name="stepup_totp_label">קוד אימות</string>
-    <string name="stepup_totp_placeholder">הזן את הקוד מאפליקציית האימות</string>
     <string name="stepup_use_passkey">השתמש במפתח הגישה שלך</string>
     <string name="stepup_send_email">שלח אימייל</string>
     <string name="stepup_resend_email">שלח את האימייל שוב</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">הסרת תגית</string>
     <string name="person_picker_none">ללא</string>
     <string name="person_picker_clear">נקה בחירה</string>
-    <string name="person_picker_select">בחרו …</string>
+    <string name="person_picker_select">בחרו</string>
     <string name="person_picker_directory">מדריך</string>
     <string name="person_picker_no_people">אין אנשים</string>
     <string name="person_picker_project_members">חברי הפרויקט</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">שינוי קטגוריית ההתראה</string>
     <string name="lightbox_comments_none">אין עדיין תגובות לתמונה זו.</string>
     <string name="lightbox_comments_only">הצגת תגובות לתמונה זו בלבד</string>
-    <string name="lightbox_comment_placeholder">הוסיפו תגובה לתמונה זו…</string>
+    <string name="lightbox_comment_placeholder">הוסיפו תגובה לתמונה זו</string>
     <string name="comment_anchor_open">הצגת התמונה שאליה מתייחסת תגובה זו</string>
     <string name="comment_anchor_default">על תמונה זו</string>
     <plurals name="lightbox_comments_others">

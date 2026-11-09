@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Alihkan ke bawah</string>
 
     <string name="notification_channel_feeds">Pemberitahuan suapan</string>
-    <string name="feeds_search_placeholder">Cari suapan atau tampal URL…</string>
+    <string name="feeds_search_placeholder">Cari suapan atau tampal URL</string>
     <string name="feeds_url_result">Hasil URL</string>
     <string name="feeds_search_results">Hasil carian</string>
     <string name="feeds_unread_only">Belum dibaca sahaja</string>
@@ -200,7 +200,6 @@
     <string name="feeds_unsubscribe_confirm_message">Anda tidak akan menerima kemas kini daripada suapan ini lagi. Anda boleh melanggan semula pada bila-bila masa.</string>
     <string name="feeds_access_select_rule">Pilih peraturan akses</string>
     <string name="feeds_access_authenticated_desc">Sesiapa sahaja yang telah log masuk</string>
-    <string name="feeds_banner_hint">Selamat datang ke forum ini…</string>
     <string name="feeds_banner_dismiss">Tutup sepanduk</string>
     <string name="feeds_members_search">Tapis ahli</string>
     <string name="feeds_ai_prompt_default">Lalai</string>

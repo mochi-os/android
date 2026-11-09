@@ -37,7 +37,6 @@
     <string name="staff_appeals_decide">Decidi</string>
     <string name="staff_appeals_decision_denied">Listado opyta oñemboykéva</string>
     <string name="staff_appeals_decision_label">Decisión</string>
-    <string name="staff_appeals_decision_placeholder">Eiporavo decisión</string>
     <string name="staff_appeals_decision_upheld">Emoneĩ listado</string>
     <string name="staff_appeals_denied_toast">Apelación nojemoneĩri</string>
     <string name="staff_appeals_dialog_title">Decidi apelación</string>
@@ -217,7 +216,6 @@
     <string name="staff_disputes_refund_must_be_positive">Viru ñembojevy repykue tuichave va\'erã cero-gui</string>
     <string name="staff_disputes_resolution_buyer">Emyesakã ojoguáva peg̃uarã</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
-    <string name="staff_disputes_resolution_placeholder">Eiporavo resolución</string>
     <string name="staff_disputes_resolution_seller">Emyesakã ñemuhára peg̃uarã</string>
     <string name="staff_disputes_resolve">Emyesakã</string>
     <string name="staff_disputes_resolved_toast">Joavy oñemoĩporãma</string>
@@ -274,7 +272,6 @@
     <string name="staff_reports_action_ban">Emboyke puruhára</string>
     <string name="staff_reports_action_dismiss">Emboyke</string>
     <string name="staff_reports_action_label">Tembiapo</string>
-    <string name="staff_reports_action_placeholder">Eiporavo tembiapo</string>
     <string name="staff_reports_action_remove">Embogue</string>
     <string name="staff_reports_action_suspend">Embopytu\'u ñemuhára ramo</string>
     <string name="staff_reports_action_taken_toast">Ojejapóma tembiapo reporte rehe</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ára %3$s. Embogue tapiaite ko reseña? Ndaikatumo\'ãi oñembojevy.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Embogue tapiaite ko reseña? Ndaikatumo\'ãi oñembojevy.</string>
     <string name="staff_team_dialog_adding">Oñembojoaju hína…</string>
-    <string name="staff_team_dialog_search_placeholder">Eheka téra, fingerprint térã ID rupive…</string>
+    <string name="staff_team_dialog_search_placeholder">Eheka téra, fingerprint térã ID rupive</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook firma ñemigua</string>
     <string name="staff_disputes_meta_already_refunded">Viru oñembojevýma</string>

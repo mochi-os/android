@@ -113,7 +113,6 @@
     <string name="forums_access_empty">Aún no hay reglas — se aplican las predeterminadas</string>
     <string name="forums_members_search">Filtrar miembros</string>
     <string name="forums_banner_description">Markdown que se muestra en la parte superior del foro.</string>
-    <string name="forums_banner_placeholder">Ingresa el texto del banner (admite Markdown)…</string>
     <string name="forums_ai_mode_off">Desactivado</string>
     <string name="forums_moderation_queue_empty">Nada pendiente</string>
     <string name="forums_moderation_report_details">Detalles: %1$s</string>
@@ -127,7 +126,7 @@
     <string name="forums_moderation_restriction_expires">Vence %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanente</string>
     <string name="forums_report_reason_hate">Odio</string>
-    <string name="forums_write_comment">Escribe un comentario…</string>
+    <string name="forums_write_comment">Escribe un comentario</string>
     <string name="forums_comment_delete_message">¿Seguro que quieres eliminar este comentario?</string>
     <string name="forums_comment_replying_to">Respondiendo a %1$s</string>
     <string name="forums_comment_clear_reply">Borrar respuesta</string>

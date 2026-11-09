@@ -54,10 +54,10 @@
     <string name="chat_settings_delete_message">Isto remove o chat e as suas mensagens apenas deste dispositivo.</string>
 
     <string name="chat_message_deleted">Esta mensagem foi eliminada</string>
-    <string name="chat_search_hint">Pesquisar na conversa...</string>
+    <string name="chat_search_hint">Pesquisar na conversa</string>
     <string name="chat_message_forward">Reencaminhar</string>
     <string name="chat_forward_title">Reencaminhar para…</string>
-    <string name="chat_forward_search">Pesquisar conversas…</string>
+    <string name="chat_forward_search">Pesquisar conversas</string>
     <string name="chat_forward_empty">Sem conversas para reencaminhar</string>
     <string name="chat_forward_success">Reencaminhada</string>
     <string name="chat_message_reply">Responder</string>

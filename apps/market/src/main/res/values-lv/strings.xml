@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Pasūtījums Nr. %1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Pastāstiet pircējiem par sevi…</string>
     <string name="market_account_load_failed">Neizdevās ielādēt kontu</string>
     <string name="market_account_saved">Izmaiņas saglabātas</string>
     <string name="market_account_status_restrictions">Dažas darbības, tostarp jaunu sludinājumu izveide un pasūtījumu pabeigšana, ir ierobežotas, kamēr jūsu konts ir šādā stāvoklī.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Jauns sludinājums</string>
     <string name="market_listings_search_placeholder">Meklēt jūsu sludinājumos</string>
     <string name="market_listings_share_chooser">Kopīgot sludinājumu</string>
-    <string name="market_messages_compose_placeholder">Rakstīt ziņojumu…</string>
+    <string name="market_messages_compose_placeholder">Rakstīt ziņojumu</string>
     <string name="market_messages_inbox_empty_subtitle">Kad rakstīsiet pārdevējam (vai pircējs rakstīs jums), saruna parādīsies šeit.</string>
     <string name="market_messages_inbox_empty_title">Vēl nav sarunu</string>
     <string name="market_messages_thread_title">Saruna</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Atveriet pabeigtu pasūtījumu, lai atstātu atsauksmi.</string>
     <string name="market_reviews_empty_sent_title">Jūs neesat rakstījis nevienu atsauksmi</string>
     <string name="market_reviews_response_label">Atbilde</string>
-    <string name="market_reviews_response_placeholder">Rakstiet atbildi…</string>
+    <string name="market_reviews_response_placeholder">Rakstiet atbildi</string>
     <string name="market_sale_carrier_custom_label">Pārvadātāja nosaukums</string>
     <string name="market_sale_dispute_evidence_due">Pierādījumi iesniedzami līdz %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe atgriezenisko maksājumu iemesls: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Pārdevēja atsauksmes</string>
     <string name="market_account_stripe_open_failed">Neizdevās atvērt Stripe</string>
     <string name="market_editor_stock">Krājumi</string>
-    <string name="market_editor_stock_units">Vienību skaits</string>
     <string name="market_editor_stock_unlimited">Neierobežots</string>
     <string name="market_editor_start_time">Sākuma laiks</string>
     <string name="market_editor_start_time_help">Atstājiet tukšu, lai sāktu publicēšanas brīdī.</string>

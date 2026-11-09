@@ -6,7 +6,7 @@
     <string name="people_groups_title">Buidhnean</string>
     <string name="people_group_title">Buidheann</string>
     <string name="people_person_title">Neach</string>
-    <string name="people_friends_search_placeholder">Lorg…</string>
+    <string name="people_friends_search_placeholder">Lorg</string>
     <string name="people_friends_no_people_found">Cha deach daoine a lorg</string>
     <string name="people_friends_try_adjusting">Feuch ri an lorg agad atharrachadh</string>
     <string name="people_friends_pending">Ri làimhseachadh</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">A bheil thu airson am buidheann \"%1$s\" a sguabadh às? Cha ghabh seo a neo-dhèanamh.</string>
     <string name="people_member_remove_confirm">A bheil thu cinnteach gu bheil thu airson %1$s a thoirt air falbh on bhuidheann seo?</string>
     <string name="people_member_remove_with_name">Thoir %1$s air falbh</string>
-    <string name="people_member_search_placeholder">Cuir a-steach ainm airson lorg…</string>
+    <string name="people_member_search_placeholder">Cuir a-steach ainm airson lorg</string>
     <string name="people_groups_add_member_confirm_title">Cuir ris a\' bhuidheann</string>
     <string name="people_groups_add_member_confirm_action">Cuir ris a\' bhuidheann</string>
     <string name="people_profile_image_process_failed">Cha b\' urrainn dhuinn dealbh %1$s a phròiseasadh</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Cha b\' urrainn poileasaidh nan cuiridhean agad a luchdadh</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Bratach</string>
-    <string name="people_contacts_search_placeholder">Lorg…</string>
+    <string name="people_contacts_search_placeholder">Lorg</string>
     <string name="people_contacts_invited">Chaidh cuireadh a thoirt</string>
     <string name="people_contacts_accept">Gabh ris</string>
     <string name="people_contacts_message">Cuir teachdaireachd</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Air a chur ris o chionn ghoirid</string>
     <string name="people_contacts_try_different_search">Feuch teirm-luirg eadar-dhealaichte</string>
     <string name="people_contacts_unfriend">Thoir an caraid air falbh</string>
-    <string name="people_add_contact_search_placeholder">Sgrìobh airson lorg…</string>
+    <string name="people_add_contact_search_placeholder">Sgrìobh airson lorg</string>
     <string name="people_add_contact_search_start">Tòisich a\' sgrìobhadh airson cleachdaichean a lorg</string>
     <string name="people_contact_phone">Fòn</string>
     <string name="people_contact_title">Tiotal obrach</string>

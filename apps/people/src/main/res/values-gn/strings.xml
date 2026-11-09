@@ -6,7 +6,7 @@
     <string name="people_groups_title">Atypykuéra</string>
     <string name="people_group_title">Atypy</string>
     <string name="people_person_title">Tapicha</string>
-    <string name="people_friends_search_placeholder">Eheka…</string>
+    <string name="people_friends_search_placeholder">Eheka</string>
     <string name="people_friends_no_people_found">Ndojejuhúi tapichakuéra</string>
     <string name="people_friends_try_adjusting">Eha\'ã embohekopyahu ne jeheka</string>
     <string name="people_friends_pending">Oha\'arõva</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">¿Embogue atypy \"%1$s\"? Kóva ndaikatumo\'ãi oñembojevy.</string>
     <string name="people_member_remove_confirm">¿Añetehápe reipota emboguete %1$s ko atypýgui?</string>
     <string name="people_member_remove_with_name">Embogue %1$s</string>
-    <string name="people_member_search_placeholder">Emoinge téra eheka haguã…</string>
+    <string name="people_member_search_placeholder">Emoinge téra eheka haguã</string>
     <string name="people_groups_add_member_confirm_title">Embojoaju atýpe</string>
     <string name="people_groups_add_member_confirm_action">Embojoaju atýpe</string>
     <string name="people_profile_image_process_failed">Ndaikatúi oñemboguata %1$s ta\'anga</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Ndaikatúi oñemyanyhẽ nde ñehenói política</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Eheka…</string>
+    <string name="people_contacts_search_placeholder">Eheka</string>
     <string name="people_contacts_invited">Oñehenóima</string>
     <string name="people_contacts_accept">Emoneĩ</string>
     <string name="people_contacts_message">Emondo ñe\'ẽmondo</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Oñembojuaju ramoite</string>
     <string name="people_contacts_try_different_search">Eha\'ã ambue jeheka</string>
     <string name="people_contacts_unfriend">Embogue angirũ</string>
-    <string name="people_add_contact_search_placeholder">Ehai reheka hag̃ua…</string>
+    <string name="people_add_contact_search_placeholder">Ehai reheka hag̃ua</string>
     <string name="people_add_contact_search_start">Eñepyrũ ehai reheka hag̃ua puruhárakuéra</string>
     <string name="people_contact_phone">Pumbyry</string>
     <string name="people_contact_title">Tembiapo réra</string>

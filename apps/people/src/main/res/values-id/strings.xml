@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grup</string>
     <string name="people_group_title">Grup</string>
     <string name="people_person_title">Orang</string>
-    <string name="people_friends_search_placeholder">Cari…</string>
+    <string name="people_friends_search_placeholder">Cari</string>
     <string name="people_friends_no_people_found">Tidak ada orang yang ditemukan</string>
     <string name="people_friends_try_adjusting">Coba sesuaikan pencarian Anda</string>
     <string name="people_friends_pending">Tertunda</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Hapus grup \"%1$s\"? Ini tidak dapat dibatalkan.</string>
     <string name="people_member_remove_confirm">Apakah Anda yakin ingin menghapus %1$s dari grup ini?</string>
     <string name="people_member_remove_with_name">Hapus %1$s</string>
-    <string name="people_member_search_placeholder">Masukkan nama untuk mencari…</string>
+    <string name="people_member_search_placeholder">Masukkan nama untuk mencari</string>
     <string name="people_groups_add_member_confirm_title">Tambahkan ke grup</string>
     <string name="people_groups_add_member_confirm_action">Tambahkan ke grup</string>
     <string name="people_profile_image_process_failed">Tidak dapat memproses gambar %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Gagal memuat kebijakan undangan Anda</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Spanduk</string>
-    <string name="people_contacts_search_placeholder">Cari…</string>
+    <string name="people_contacts_search_placeholder">Cari</string>
     <string name="people_contacts_invited">Diundang</string>
     <string name="people_contacts_accept">Terima</string>
     <string name="people_contacts_message">Kirim pesan</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Baru ditambahkan</string>
     <string name="people_contacts_try_different_search">Coba istilah pencarian lain</string>
     <string name="people_contacts_unfriend">Hapus teman</string>
-    <string name="people_add_contact_search_placeholder">Ketik untuk mencari…</string>
+    <string name="people_add_contact_search_placeholder">Ketik untuk mencari</string>
     <string name="people_add_contact_search_start">Mulai mengetik untuk mencari pengguna</string>
     <string name="people_contact_phone">Telepon</string>
     <string name="people_contact_title">Jabatan</string>

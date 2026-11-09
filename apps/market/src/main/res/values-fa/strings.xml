@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">سفارش #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">درباره خودتان به خریداران بگویید…</string>
     <string name="market_account_load_failed">بارگذاری حساب ممکن نشد</string>
     <string name="market_account_saved">تغییرات ذخیره شد</string>
     <string name="market_account_status_restrictions">برخی اقدامات، از جمله ایجاد آگهی‌های جدید و تکمیل سفارش‌ها، در حالی که حساب شما در این وضعیت است محدود می‌شوند.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">آگهی جدید</string>
     <string name="market_listings_search_placeholder">جست‌وجو در آگهی‌های شما</string>
     <string name="market_listings_share_chooser">اشتراک‌گذاری آگهی</string>
-    <string name="market_messages_compose_placeholder">نوشتن پیام…</string>
+    <string name="market_messages_compose_placeholder">نوشتن پیام</string>
     <string name="market_messages_inbox_empty_subtitle">وقتی به فروشنده‌ای پیام بدهید (یا خریداری به شما پیام بدهد) گفت‌وگو اینجا نمایش داده می‌شود.</string>
     <string name="market_messages_inbox_empty_title">هنوز گفت‌وگویی نیست</string>
     <string name="market_messages_thread_title">گفت‌وگو</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">برای ثبت نظر، یک سفارش تکمیل‌شده را باز کنید.</string>
     <string name="market_reviews_empty_sent_title">هنوز نظری ننوشته‌اید</string>
     <string name="market_reviews_response_label">پاسخ</string>
-    <string name="market_reviews_response_placeholder">یک پاسخ بنویسید…</string>
+    <string name="market_reviews_response_placeholder">یک پاسخ بنویسید</string>
     <string name="market_sale_carrier_custom_label">نام شرکت حمل‌ونقل</string>
     <string name="market_sale_dispute_evidence_due">مهلت ارائه مدارک %1$s</string>
     <string name="market_sale_dispute_stripe_reason">دلیل بازپرداخت Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">نظرات فروشنده</string>
     <string name="market_account_stripe_open_failed">باز کردن Stripe انجام نشد</string>
     <string name="market_editor_stock">موجودی</string>
-    <string name="market_editor_stock_units">تعداد واحدها</string>
     <string name="market_editor_stock_unlimited">نامحدود</string>
     <string name="market_editor_start_time">زمان شروع</string>
     <string name="market_editor_start_time_help">برای شروع هنگام انتشار، خالی بگذارید.</string>

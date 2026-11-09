@@ -228,7 +228,7 @@
     <string name="route_delete_message">Isto removerá a rota para o caminho \"%1$s\".</string>
     <string name="route_empty">Nenhuma rota configurada.</string>
     <string name="route_meta">Prioridade %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Pesquisar tópicos para adicionar…</string>
+    <string name="interests_search_placeholder">Pesquisar tópicos para adicionar</string>
     <string name="interests_empty">Nenhum interesse ainda.</string>
     <string name="interests_summary_regenerate">Gerar resumo novamente</string>
     <string name="interests_summary_regenerating">Gerando novamente…</string>
@@ -251,7 +251,7 @@
     <string name="system_settings_reset_message">Isto redefinirá \"%1$s\" para seu valor padrão (%2$s).</string>
     <string name="system_settings_reset_message_empty">Isto redefinirá \"%1$s\" para o padrão (vazio).</string>
     <string name="settings_home_system_users">Usuários (servidor)</string>
-    <string name="system_users_search_placeholder">Buscar usuários…</string>
+    <string name="system_users_search_placeholder">Buscar usuários</string>
     <string name="system_users_sort_by">Ordenar por</string>
     <string name="system_users_last_login">Último login: %1$s</string>
     <string name="system_users_delete_message">Isto excluirá permanentemente o usuário \"%1$s\". Esta ação não pode ser desfeita.</string>
@@ -532,7 +532,7 @@
     <string name="handles_take">Reservar um nome</string>
     <string name="handles_empty">Nenhum identificador foi reservado.</string>
     <string name="handles_empty_search">Nenhum identificador corresponde à sua pesquisa</string>
-    <string name="handles_search_placeholder">Pesquisar identificadores…</string>
+    <string name="handles_search_placeholder">Pesquisar identificadores</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Mostrando %1$s–%2$s de %3$s identificador</item>
         <item quantity="other">Mostrando %1$s–%2$s de %3$s identificadores</item>

@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">发送</string>
     <string name="forums_post_body_field">正文</string>
-    <string name="forums_write_comment">写评论…</string>
+    <string name="forums_write_comment">写评论</string>
 
     <string name="notification_channel_forums">论坛通知</string>
     <string name="forums_list_empty">暂无论坛</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">暂无规则 — 应用默认设置</string>
     <string name="forums_members_search">筛选成员</string>
     <string name="forums_banner_description">显示在论坛顶部的 Markdown 内容。</string>
-    <string name="forums_banner_placeholder">输入横幅文本（支持 Markdown）…</string>
     <string name="forums_ai_mode_off">已禁用</string>
     <string name="forums_moderation_queue_empty">暂无待处理项</string>
     <string name="forums_moderation_report_details">详情:%1$s</string>

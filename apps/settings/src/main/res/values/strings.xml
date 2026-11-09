@@ -143,7 +143,7 @@
 
     <!-- Interests -->
     <string name="interests_title">Interests</string>
-    <string name="interests_search_placeholder">Search topics to add…</string>
+    <string name="interests_search_placeholder">Search topics to add</string>
     <string name="interests_empty">No interests yet.</string>
     <string name="interests_summary_title">Summary</string>
     <string name="interests_summary_regenerate">Regenerate summary</string>
@@ -334,7 +334,7 @@
     <string name="settings_home_system_users">Users (server)</string>
     <string name="system_users_title">Users</string>
     <string name="system_users_add_user">Add user</string>
-    <string name="system_users_search_placeholder">Search users…</string>
+    <string name="system_users_search_placeholder">Search users</string>
     <string name="system_users_sort_by">Sort by</string>
     <string name="system_users_col_user">User</string>
     <string name="system_users_col_status">Status</string>
@@ -599,7 +599,7 @@
     <string name="handles_take">Take a name</string>
     <string name="handles_empty">No handles have been reserved.</string>
     <string name="handles_empty_search">No handles match your search</string>
-    <string name="handles_search_placeholder">Search handles…</string>
+    <string name="handles_search_placeholder">Search handles</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Showing %1$s–%2$s of %3$s handle</item>
         <item quantity="other">Showing %1$s–%2$s of %3$s handles</item>

@@ -3,7 +3,6 @@
     <string name="app_name">बाजार</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">जीवनी</string>
-    <string name="market_account_biography_placeholder">खरीददारन के अपना बारे में बताईं…</string>
     <string name="market_account_load_failed">खाता लोड ना भइल</string>
     <string name="market_account_location_label">स्थान</string>
     <string name="market_account_save">सहेजीं</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">नया विज्ञापन</string>
     <string name="market_listings_relist_failed">दोबारा सूचीबद्ध करे में विफल</string>
     <string name="market_listings_title">हमार लिस्टिंग</string>
-    <string name="market_messages_compose_placeholder">संदेश लिखीं…</string>
+    <string name="market_messages_compose_placeholder">संदेश लिखीं</string>
     <string name="market_messages_inbox_title">संदेश</string>
     <string name="market_messages_send">भेजीं</string>
     <string name="market_messages_thread_title">बातचीत</string>
@@ -440,7 +439,7 @@
     <string name="market_reviews_empty_received_subtitle">ऑर्डर पूरा होखला के बाद खरीददार आ बिक्रेता एक दूसरा के समीक्षा कर सकेलें।</string>
     <string name="market_reviews_empty_sent_subtitle">समीक्षा छोड़े खातिर कवनो पूरा भइल ऑर्डर खोलीं।</string>
     <string name="market_reviews_empty_sent_title">रउरा कवनो समीक्षा नइखीं लिखले</string>
-    <string name="market_reviews_response_placeholder">जवाब लिखीं…</string>
+    <string name="market_reviews_response_placeholder">जवाब लिखीं</string>
     <string name="market_sale_carrier_custom_label">कैरियर के नाँव</string>
     <string name="market_sale_dispute_evidence_due">सबूत के अंतिम तारीख %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe चार्जबैक के कारण: %1$s</string>
@@ -592,7 +591,6 @@
     <string name="market_listing_detail_seller_reviews_heading">बेचेवाला के समीक्षा</string>
     <string name="market_account_stripe_open_failed">Stripe ना खुल सकल</string>
     <string name="market_editor_stock">स्टॉक</string>
-    <string name="market_editor_stock_units">इकाई के संख्या</string>
     <string name="market_editor_stock_unlimited">असीमित</string>
     <string name="market_editor_start_time">शुरू समय</string>
     <string name="market_editor_start_time_help">प्रकाशन पर शुरू करे खातिर खाली छोड़ीं।</string>

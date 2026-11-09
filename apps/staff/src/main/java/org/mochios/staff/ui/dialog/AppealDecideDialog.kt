@@ -89,7 +89,6 @@ fun AppealDecideDialog(
 
                 LabeledSelectField(
                     label = stringResource(R.string.staff_appeals_decision_label),
-                    placeholder = stringResource(R.string.staff_appeals_decision_placeholder),
                     options = decisionOptions(),
                     selected = decision,
                     onSelect = { value -> decision = value },

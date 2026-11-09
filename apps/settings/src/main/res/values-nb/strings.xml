@@ -238,7 +238,7 @@
     <string name="route_delete_message">Dette fjerner ruten for stien «%1$s».</string>
     <string name="route_empty">Ingen ruter konfigurert.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Søk etter emner å legge til…</string>
+    <string name="interests_search_placeholder">Søk etter emner å legge til</string>
     <string name="interests_empty">Ingen interesser ennå.</string>
     <string name="interests_summary_regenerate">Generer sammendrag på nytt</string>
     <string name="interests_summary_regenerating">Regenererer…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Dette tilbakestiller «%1$s» til standard (tom).</string>
     <string name="settings_home_system_users">Brukere (server)</string>
     <string name="system_users_add_user">Legg til bruker</string>
-    <string name="system_users_search_placeholder">Søk brukere…</string>
+    <string name="system_users_search_placeholder">Søk brukere</string>
     <string name="system_users_sort_by">Sorter etter</string>
     <string name="system_users_last_login">Siste innlogging: %1$s</string>
     <string name="system_users_delete_message">Dette vil permanent slette brukeren «%1$s». Denne handlingen kan ikke angres.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Ta et navn</string>
     <string name="handles_empty">Ingen brukernavn er reservert.</string>
     <string name="handles_empty_search">Ingen brukernavn matcher søket ditt</string>
-    <string name="handles_search_placeholder">Søk i brukernavn …</string>
+    <string name="handles_search_placeholder">Søk i brukernavn</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Viser %1$s–%2$s av %3$s brukernavn</item>
         <item quantity="other">Viser %1$s–%2$s av %3$s brukernavn</item>

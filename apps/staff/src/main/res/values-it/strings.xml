@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Decidi</string>
     <string name="staff_appeals_decision_denied">Mantieni annuncio rifiutato</string>
     <string name="staff_appeals_decision_label">Decisione</string>
-    <string name="staff_appeals_decision_placeholder">Seleziona decisione</string>
     <string name="staff_appeals_decision_upheld">Approva annuncio</string>
     <string name="staff_appeals_denied_toast">Ricorso negato</string>
     <string name="staff_appeals_dialog_title">Decidi sul ricorso</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">L\'importo del rimborso deve essere maggiore di zero</string>
     <string name="staff_disputes_resolution_buyer">Risolvi a favore dell\'acquirente</string>
     <string name="staff_disputes_resolution_label">Risoluzione</string>
-    <string name="staff_disputes_resolution_placeholder">Seleziona risoluzione</string>
     <string name="staff_disputes_resolution_seller">Risolvi a favore del venditore</string>
     <string name="staff_disputes_resolve">Risolvi</string>
     <string name="staff_disputes_resolved_toast">Contestazione risolta</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Bandisci utente</string>
     <string name="staff_reports_action_dismiss">Archivia</string>
     <string name="staff_reports_action_label">Azione</string>
-    <string name="staff_reports_action_placeholder">Seleziona azione</string>
     <string name="staff_reports_action_remove">Rimuovi</string>
     <string name="staff_reports_action_suspend">Sospendi come venditore</string>
     <string name="staff_reports_action_taken_toast">Azione di segnalazione intrapresa</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Persona</string>
     <string name="staff_team_dialog_role">Ruolo</string>
     <string name="staff_team_dialog_role_placeholder">Seleziona ruolo</string>
-    <string name="staff_team_dialog_search_placeholder">Cerca per nome, impronta o ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Cerca per nome, impronta o ID</string>
     <string name="staff_team_empty">Nessun membro del team</string>
     <string name="staff_team_remove_confirm">Rimuovi</string>
     <string name="staff_team_remove_desc">Rimuovere questo membro dal team dello staff?</string>

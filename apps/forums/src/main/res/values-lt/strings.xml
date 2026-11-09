@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Siųsti</string>
     <string name="forums_post_body_field">Tekstas</string>
-    <string name="forums_write_comment">Parašykite komentarą…</string>
+    <string name="forums_write_comment">Parašykite komentarą</string>
 
     <string name="notification_channel_forums">Forumų pranešimai</string>
     <string name="forums_list_empty">Forumų dar nėra</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Taisyklių dar nėra — taikomos numatytosios</string>
     <string name="forums_members_search">Filtruoti narius</string>
     <string name="forums_banner_description">Markdown rodomas forumo viršuje.</string>
-    <string name="forums_banner_placeholder">Įveskite reklamjuostės tekstą (palaikomas Markdown)…</string>
     <string name="forums_ai_mode_off">Išjungta</string>
     <string name="forums_moderation_queue_empty">Nieko nelaukia</string>
     <string name="forums_moderation_report_details">Išsami informacija: %1$s</string>

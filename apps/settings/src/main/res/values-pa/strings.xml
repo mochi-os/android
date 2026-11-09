@@ -238,7 +238,7 @@
     <string name="route_delete_message">ਇਹ ਮਾਰਗ \"%1$s\" ਲਈ ਰੂਟ ਹਟਾ ਦੇਵੇਗਾ।</string>
     <string name="route_empty">ਕੋਈ ਰੂਟ ਕੌਨਫਿਗਰ ਨਹੀਂ ਹਨ।</string>
     <string name="route_meta">ਤਰਜੀਹ %1$s · %2$s</string>
-    <string name="interests_search_placeholder">ਜੋੜਨ ਲਈ ਵਿਸ਼ੇ ਖੋਜੋ…</string>
+    <string name="interests_search_placeholder">ਜੋੜਨ ਲਈ ਵਿਸ਼ੇ ਖੋਜੋ</string>
     <string name="interests_empty">ਅਜੇ ਕੋਈ ਦਿਲਚਸਪੀ ਨਹੀਂ।</string>
     <string name="interests_summary_regenerate">ਸਾਰ ਮੁੜ ਤਿਆਰ ਕਰੋ</string>
     <string name="interests_summary_regenerating">ਮੁੜ ਤਿਆਰ ਹੋ ਰਿਹਾ ਹੈ…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ਇਹ \"%1$s\" ਨੂੰ ਡਿਫੌਲਟ (ਖਾਲੀ) \'ਤੇ ਮੁੜ-ਸੈਟ ਕਰੇਗਾ।</string>
     <string name="settings_home_system_users">ਉਪਭੋਗਤਾ (ਸਰਵਰ)</string>
     <string name="system_users_add_user">ਵਰਤੋਂਕਾਰ ਜੋੜੋ</string>
-    <string name="system_users_search_placeholder">ਉਪਭੋਗਤਾ ਖੋਜੋ…</string>
+    <string name="system_users_search_placeholder">ਉਪਭੋਗਤਾ ਖੋਜੋ</string>
     <string name="system_users_sort_by">ਅਨੁਸਾਰ ਛਾਂਟੋ</string>
     <string name="system_users_last_login">ਆਖਰੀ ਲੌਗਇਨ: %1$s</string>
     <string name="system_users_delete_message">ਇਹ ਪੱਕੇ ਤੌਰ \'ਤੇ ਉਪਭੋਗਤਾ \"%1$s\" ਨੂੰ ਮਿਟਾ ਦੇਵੇਗਾ। ਇਹ ਕਾਰਵਾਈ ਪਿੱਛੇ ਨਹੀਂ ਲਈ ਜਾ ਸਕਦੀ।</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">ਨਾਮ ਲਓ</string>
     <string name="handles_empty">ਕੋਈ ਉਪਭੋਗਤਾ ਨਾਮ ਰਾਖਵਾਂ ਨਹੀਂ ਕੀਤਾ ਗਿਆ।</string>
     <string name="handles_empty_search">ਕੋਈ ਉਪਭੋਗਤਾ ਨਾਮ ਤੁਹਾਡੀ ਖੋਜ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ</string>
-    <string name="handles_search_placeholder">ਉਪਭੋਗਤਾ ਨਾਮ ਖੋਜੋ…</string>
+    <string name="handles_search_placeholder">ਉਪਭੋਗਤਾ ਨਾਮ ਖੋਜੋ</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s ਉਪਭੋਗਤਾ ਨਾਮ ਵਿੱਚੋਂ %1$s–%2$s ਦਿਖਾ ਰਿਹਾ ਹੈ</item>
         <item quantity="other">%3$s ਉਪਭੋਗਤਾ ਨਾਮਾਂ ਵਿੱਚੋਂ %1$s–%2$s ਦਿਖਾ ਰਿਹਾ ਹੈ</item>

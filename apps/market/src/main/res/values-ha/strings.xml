@@ -3,7 +3,6 @@
     <string name="app_name">Kasuwa</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Tarihin rayuwa</string>
-    <string name="market_account_biography_placeholder">Faɗa wa masu saye game da kanka…</string>
     <string name="market_account_load_failed">Ba a iya loda asusu ba</string>
     <string name="market_account_location_label">Wuri</string>
     <string name="market_account_save">Adana</string>
@@ -242,7 +241,7 @@
     <string name="market_listings_new">Sabuwar talla</string>
     <string name="market_listings_relist_failed">An gaza sake jeranta</string>
     <string name="market_listings_title">Listings dina</string>
-    <string name="market_messages_compose_placeholder">Rubuta saƙo…</string>
+    <string name="market_messages_compose_placeholder">Rubuta saƙo</string>
     <string name="market_messages_inbox_title">Saƙonni</string>
     <string name="market_messages_send">Aika</string>
     <string name="market_messages_thread_title">Tattaunawa</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Masu siye da masu sayarwa za su iya bita juna bayan an kammala oda.</string>
     <string name="market_reviews_empty_sent_subtitle">Buɗe odar da aka kammala don barin bita.</string>
     <string name="market_reviews_empty_sent_title">Ba ku rubuta wani bita ba tukuna</string>
-    <string name="market_reviews_response_placeholder">Rubuta amsa…</string>
+    <string name="market_reviews_response_placeholder">Rubuta amsa</string>
     <string name="market_sale_carrier_custom_label">Sunan kamfanin jigilarwa</string>
     <string name="market_sale_dispute_evidence_due">Shaida ta kammala %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Dalilin mayar da kuɗi na Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Sake-saken mai siyarwa</string>
     <string name="market_account_stripe_open_failed">Ba a iya buɗe Stripe ba</string>
     <string name="market_editor_stock">Adadin kaya</string>
-    <string name="market_editor_stock_units">Adadin units</string>
     <string name="market_editor_stock_unlimited">Ba shi da iyaka</string>
     <string name="market_editor_start_time">Lokacin farawa</string>
     <string name="market_editor_start_time_help">Bar fanko don farawa a buga.</string>

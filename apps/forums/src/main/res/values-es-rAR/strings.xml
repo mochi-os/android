@@ -80,7 +80,6 @@
     <string name="forums_members_search">Filtrar miembros</string>
     <string name="forums_members_empty">Sin miembros</string>
     <string name="forums_banner_description">Markdown que se muestra en la parte superior del foro.</string>
-    <string name="forums_banner_placeholder">Ingresá el texto del banner (admite Markdown)…</string>
     <string name="forums_banner_dismiss">Descartar banner</string>
     <string name="forums_ai_mode_off">Apagado</string>
     <string name="forums_ai_mode_tag">Etiqueta</string>
@@ -124,7 +123,7 @@
     <string name="forums_report_reason_misinformation">Desinformación</string>
     <string name="forums_report_reason_offtopic">Fuera de tema</string>
     <string name="forums_no_comments">Aún no hay comentarios</string>
-    <string name="forums_write_comment">Escribí un comentario…</string>
+    <string name="forums_write_comment">Escribí un comentario</string>
     <string name="forums_comment_delete_message">¿Seguro que querés eliminar este comentario?</string>
     <string name="forums_comment_replying_to">Respondiendo a %1$s</string>
     <string name="forums_comment_clear_reply">Borrar respuesta</string>

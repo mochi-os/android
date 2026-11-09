@@ -238,7 +238,7 @@
     <string name="route_delete_message">Tämä poistaa reitin polulle \"%1$s\".</string>
     <string name="route_empty">Reittejä ei ole määritetty.</string>
     <string name="route_meta">Prioriteetti %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Hae lisättäviä aiheita…</string>
+    <string name="interests_search_placeholder">Hae lisättäviä aiheita</string>
     <string name="interests_empty">Ei vielä kiinnostuksen kohteita.</string>
     <string name="interests_summary_regenerate">Luo yhteenveto uudelleen</string>
     <string name="interests_summary_regenerating">Luodaan uudelleen…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Tämä palauttaa \"%1$s\" oletukseen (tyhjä).</string>
     <string name="settings_home_system_users">Käyttäjät (palvelin)</string>
     <string name="system_users_add_user">Lisää käyttäjä</string>
-    <string name="system_users_search_placeholder">Hae käyttäjiä…</string>
+    <string name="system_users_search_placeholder">Hae käyttäjiä</string>
     <string name="system_users_sort_by">Lajitteluperuste</string>
     <string name="system_users_last_login">Viimeisin kirjautuminen: %1$s</string>
     <string name="system_users_delete_message">Tämä poistaa pysyvästi käyttäjän \"%1$s\". Tätä toimintoa ei voi peruuttaa.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Ota nimi</string>
     <string name="handles_empty">Käyttäjätunnuksia ei ole varattu.</string>
     <string name="handles_empty_search">Yksikään käyttäjätunnus ei vastaa hakuasi</string>
-    <string name="handles_search_placeholder">Hae käyttäjätunnuksia…</string>
+    <string name="handles_search_placeholder">Hae käyttäjätunnuksia</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Näytetään %1$s–%2$s / %3$s käyttäjätunnus</item>
         <item quantity="other">Näytetään %1$s–%2$s / %3$s käyttäjätunnusta</item>

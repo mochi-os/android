@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">פּסקנען</string>
     <string name="staff_appeals_decision_denied">לאָזן רשימה אָפּגעזאָגט</string>
     <string name="staff_appeals_decision_label">באַשלוס</string>
-    <string name="staff_appeals_decision_placeholder">קלײַב באַשלוס</string>
     <string name="staff_appeals_decision_upheld">באַשטעטיקן ליסטינג</string>
     <string name="staff_appeals_denied_toast">אַפּעלאַציע אָפּגעוויזן</string>
     <string name="staff_appeals_dialog_title">פּסקנען אַפּעלאַציע</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">אומקער סומע מוז זײַן גרעסער פֿון נול</string>
     <string name="staff_disputes_resolution_buyer">אויפֿלייזן פֿאַר קויפֿער</string>
     <string name="staff_disputes_resolution_label">אויפֿלייזונג</string>
-    <string name="staff_disputes_resolution_placeholder">קלײַב אויפֿלייזונג</string>
     <string name="staff_disputes_resolution_seller">אויפֿלייזן פֿאַר פֿאַרקויפֿער</string>
     <string name="staff_disputes_resolve">אויפֿלייזן</string>
     <string name="staff_disputes_resolved_toast">סיכסוך אויסגעלייזט</string>
@@ -277,7 +275,6 @@
     <string name="staff_reports_action_ban">פֿאַרבאָטן באַניצער</string>
     <string name="staff_reports_action_dismiss">אָפּוואַרפֿן</string>
     <string name="staff_reports_action_label">אַקציע</string>
-    <string name="staff_reports_action_placeholder">קלײַב אַקציע</string>
     <string name="staff_reports_action_remove">אַראָפּנעמען</string>
     <string name="staff_reports_action_suspend">סוספּענדיר ווי פֿאַרקויפֿער</string>
     <string name="staff_reports_action_taken_toast">באַריכט אַקציע גענומען</string>
@@ -432,7 +429,7 @@
     <string name="staff_reviews_order_label">באַשטעלונג #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s אויף %3$s. אויסמעקן די רעצענזיע פֿאַר תּמיד? דאָס קען נישט אומגעטאָן ווערן.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. אויסמעקן די רעצענזיע פֿאַר תּמיד? דאָס קען נישט אומגעטאָן ווערן.</string>
-    <string name="staff_team_dialog_search_placeholder">זוך לויט נאָמען, פֿינגערצייכן אָדער ID…</string>
+    <string name="staff_team_dialog_search_placeholder">זוך לויט נאָמען, פֿינגערצייכן אָדער ID</string>
     <string name="staff_config_field_stripe_webhook">Webhook סיגנירן סוד</string>
     <string name="staff_disputes_meta_already_refunded">שוין צוריקגעצאלט</string>
     <string name="staff_disputes_refund_exceeds_remaining">די צוריקצאלונג סומע גייט אריבער די פארבליבענע צוריקצאלבארע סומע</string>

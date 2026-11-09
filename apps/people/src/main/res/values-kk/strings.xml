@@ -6,7 +6,7 @@
     <string name="people_groups_title">Топтар</string>
     <string name="people_group_title">Топ</string>
     <string name="people_person_title">Адам</string>
-    <string name="people_friends_search_placeholder">Іздеу…</string>
+    <string name="people_friends_search_placeholder">Іздеу</string>
     <string name="people_friends_no_people_found">Адамдар табылмады</string>
     <string name="people_friends_try_adjusting">Іздеуді реттеуді көріңіз</string>
     <string name="people_friends_pending">Күтуде</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" тобын жою керек пе? Бұл әрекетті қайтару мүмкін емес.</string>
     <string name="people_member_remove_confirm">%1$s пайдаланушысын осы топтан шынымен жойғыңыз келе ме?</string>
     <string name="people_member_remove_with_name">%1$s жою</string>
-    <string name="people_member_search_placeholder">Іздеу үшін атын енгізіңіз…</string>
+    <string name="people_member_search_placeholder">Іздеу үшін атын енгізіңіз</string>
     <string name="people_groups_add_member_confirm_title">Топқа қосу</string>
     <string name="people_groups_add_member_confirm_action">Топқа қосу</string>
     <string name="people_profile_image_process_failed">%1$s суретін өңдеу мүмкін болмады</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Шақыру саясатыңызды жүктеу сәтсіз аяқталды</string>
     <string name="people_profile_avatar">Аватар</string>
     <string name="people_profile_banner">Баннер</string>
-    <string name="people_contacts_search_placeholder">Іздеу…</string>
+    <string name="people_contacts_search_placeholder">Іздеу</string>
     <string name="people_contacts_invited">Шақырылды</string>
     <string name="people_contacts_accept">Қабылдау</string>
     <string name="people_contacts_message">Хабар жіберу</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Жақында қосылды</string>
     <string name="people_contacts_try_different_search">Басқа іздеу терминін қолданып көріңіз</string>
     <string name="people_contacts_unfriend">Досты жою</string>
-    <string name="people_add_contact_search_placeholder">Іздеу үшін теріңіз…</string>
+    <string name="people_add_contact_search_placeholder">Іздеу үшін теріңіз</string>
     <string name="people_add_contact_search_start">Пайдаланушыларды іздеу үшін теруді бастаңыз</string>
     <string name="people_contact_phone">Телефон</string>
     <string name="people_contact_title">Қызмет атауы</string>

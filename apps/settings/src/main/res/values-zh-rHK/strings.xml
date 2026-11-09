@@ -121,7 +121,7 @@
     <string name="route_disabled">已停用</string>
     <string name="route_meta">優先順序 %1$s · %2$s</string>
     <string name="interests_title">興趣</string>
-    <string name="interests_search_placeholder">搜尋要新增的主題…</string>
+    <string name="interests_search_placeholder">搜尋要新增的主題</string>
     <string name="interests_empty">尚未有任何興趣。</string>
     <string name="interests_summary_title">摘要</string>
     <string name="interests_summary_regenerate">重新產生摘要</string>
@@ -235,7 +235,7 @@
     <string name="system_setting_signup_enabled">允許新用戶註冊</string>
     <string name="settings_home_system_users">用戶(伺服器)</string>
     <string name="system_users_add_user">新增用戶</string>
-    <string name="system_users_search_placeholder">搜尋用戶…</string>
+    <string name="system_users_search_placeholder">搜尋用戶</string>
     <string name="system_users_col_last">上次登入</string>
     <string name="system_users_role_label">角色</string>
     <string name="system_users_role_administrator">管理員</string>

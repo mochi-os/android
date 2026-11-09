@@ -84,7 +84,7 @@
     <string name="feeds_send">ላክ</string>
 
     <string name="notification_channel_feeds">የፊዶች ማሳወቂያዎች</string>
-    <string name="feeds_search_placeholder">ፊዶችን ይፈልጉ ወይም URL ይለጥፉ…</string>
+    <string name="feeds_search_placeholder">ፊዶችን ይፈልጉ ወይም URL ይለጥፉ</string>
     <string name="feeds_url_result">የURL ውጤት</string>
     <string name="feeds_search_results">የፍለጋ ውጤቶች</string>
     <string name="feeds_unread_only">ያልተነበቡ ብቻ</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">ከዚህ ፊድ ዝማኔዎችን መቀበል ያቆማሉ። በማንኛውም ጊዜ እንደገና ደንበኛ መሆን ይችላሉ።</string>
     <string name="feeds_access_select_rule">የመዳረሻ ደንብ ይምረጡ</string>
     <string name="feeds_access_authenticated_desc">የገባ ማንኛውም ሰው</string>
-    <string name="feeds_banner_hint">ወደዚህ መድረክ እንኳን ደህና መጡ…</string>
     <string name="feeds_banner_dismiss">ባነሩን አጥፋ</string>
     <string name="feeds_members_search">አባላትን አጣራ</string>
     <string name="feeds_ai_prompt_default">ነባሪ</string>

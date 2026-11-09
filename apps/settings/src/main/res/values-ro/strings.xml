@@ -239,7 +239,7 @@
     <string name="route_delete_message">Aceasta va elimina ruta pentru calea „%1$s\".</string>
     <string name="route_empty">Nicio rută configurată.</string>
     <string name="route_meta">Prioritate %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Căutați subiecte de adăugat…</string>
+    <string name="interests_search_placeholder">Căutați subiecte de adăugat</string>
     <string name="interests_empty">Niciun interes încă.</string>
     <string name="interests_summary_regenerate">Regenerează sumarul</string>
     <string name="interests_summary_regenerating">Se regenerează…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">Aceasta va reseta „%1$s\" la valoarea implicită (gol).</string>
     <string name="settings_home_system_users">Utilizatori (server)</string>
     <string name="system_users_add_user">Adaugă utilizator</string>
-    <string name="system_users_search_placeholder">Caută utilizatori…</string>
+    <string name="system_users_search_placeholder">Caută utilizatori</string>
     <string name="system_users_sort_by">Sortează după</string>
     <string name="system_users_last_login">Ultima conectare: %1$s</string>
     <string name="system_users_delete_message">Aceasta va șterge definitiv utilizatorul „%1$s\". Această acțiune nu poate fi anulată.</string>
@@ -565,7 +565,7 @@
     <string name="handles_take">Ia un nume</string>
     <string name="handles_empty">Nu a fost rezervat niciun pseudonim.</string>
     <string name="handles_empty_search">Niciun pseudonim nu corespunde căutării</string>
-    <string name="handles_search_placeholder">Caută pseudonime…</string>
+    <string name="handles_search_placeholder">Caută pseudonime</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Se afișează %1$s–%2$s din %3$s pseudonim</item>
         <item quantity="few">Se afișează %1$s–%2$s din %3$s pseudonime</item>

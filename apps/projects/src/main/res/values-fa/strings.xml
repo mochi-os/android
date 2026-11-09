@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">بارگذاری فایل .json</string>
     <string name="projects_settings_not_set">تنظیم نشده</string>
     <string name="projects_settings_updated">پروژه به‌روزرسانی شد</string>
-    <string name="projects_property_select">انتخاب کنید …</string>
     <string name="projects_activity_attached">پیوست کرد</string>
     <string name="projects_activity_commented">نظر داد</string>
     <string name="projects_attachment_delete_confirm_message">این پیوست برای همیشه حذف خواهد شد.</string>

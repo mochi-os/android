@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json файлын жүктеп салу</string>
     <string name="projects_settings_not_set">Орнатылмаған</string>
     <string name="projects_settings_updated">Жоба жаңартылды</string>
-    <string name="projects_property_select">Таңдаңыз …</string>
     <string name="projects_activity_attached">тіркеді</string>
     <string name="projects_activity_commented">пікір қалдырды</string>
     <string name="projects_attachment_delete_confirm_message">Бұл тіркеме біржола жойылады.</string>

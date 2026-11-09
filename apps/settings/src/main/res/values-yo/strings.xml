@@ -237,7 +237,7 @@
     <string name="route_delete_message">Èyí yóò mú ọ̀nà fún ọ̀nà \"%1$s\" kúrò.</string>
     <string name="route_empty">Kò sí àwọn ọ̀nà tí a tò.</string>
     <string name="route_meta">Ìpataki %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Wá àwọn ohun láti fikún…</string>
+    <string name="interests_search_placeholder">Wá àwọn ohun láti fikún</string>
     <string name="interests_empty">Kò sí àwọn ìfẹ́ síbẹ̀.</string>
     <string name="interests_summary_regenerate">Tún ìṣàkójọ dá</string>
     <string name="interests_summary_regenerating">Ń ṣe lẹ́ẹ̀kan sí…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">Èyí yóò tún \"%1$s\" sí àìyípadà rẹ̀ (òfo).</string>
     <string name="settings_home_system_users">Àwọn olùmúlò (olùṣẹ́)</string>
     <string name="system_users_add_user">Fi olùmúlò kún</string>
-    <string name="system_users_search_placeholder">Wá àwọn olùmúlò…</string>
+    <string name="system_users_search_placeholder">Wá àwọn olùmúlò</string>
     <string name="system_users_sort_by">To nípasẹ̀</string>
     <string name="system_users_last_login">Wíwọlé gbẹyìn: %1$s</string>
     <string name="system_users_delete_message">Èyí yóò pa olùmúlò \"%1$s\" rẹ́ pátápátá. Kò sí lè yí ìṣe yìí padà.</string>
@@ -546,7 +546,7 @@
     <string name="handles_take">Gba orúkọ kan</string>
     <string name="handles_empty">Kò sí ìnagijẹ tí a ti gbà sílẹ̀.</string>
     <string name="handles_empty_search">Kò sí ìnagijẹ tó bámu ìwákiri rẹ</string>
-    <string name="handles_search_placeholder">Wá àwọn ìnagijẹ…</string>
+    <string name="handles_search_placeholder">Wá àwọn ìnagijẹ</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">Ń fi %1$s–%2$s hàn nínú ìnagijẹ %3$s</item>
     </plurals>

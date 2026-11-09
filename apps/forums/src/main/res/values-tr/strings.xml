@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Gönder</string>
     <string name="forums_post_body_field">İçerik</string>
-    <string name="forums_write_comment">Yorum yaz…</string>
+    <string name="forums_write_comment">Yorum yaz</string>
 
     <string name="notification_channel_forums">Forum bildirimleri</string>
     <string name="forums_list_empty">Henüz forum yok</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Henüz kural yok — varsayılanlar geçerli</string>
     <string name="forums_members_search">Üyeleri filtrele</string>
     <string name="forums_banner_description">Forumun üstünde gösterilen Markdown.</string>
-    <string name="forums_banner_placeholder">Banner metnini girin (Markdown desteklenir)…</string>
     <string name="forums_ai_mode_off">Devre dışı</string>
     <string name="forums_moderation_queue_empty">Bekleyen bir şey yok</string>
     <string name="forums_moderation_report_details">Ayrıntılar: %1$s</string>

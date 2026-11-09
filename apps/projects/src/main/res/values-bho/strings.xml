@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json फ़ाइल अपलोड करीं</string>
     <string name="projects_settings_not_set">सेट नइखे</string>
     <string name="projects_settings_updated">प्रोजेक्ट अपडेट भइल</string>
-    <string name="projects_property_select">चुनीं …</string>
     <string name="projects_activity_attached">जोड़लस</string>
     <string name="projects_activity_commented">टिप्पणी कइलस</string>
     <string name="projects_attachment_delete_confirm_message">ई संलग्नक हमेशा खातिर मिटा दिहल जाई।</string>

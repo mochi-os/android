@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json faylı yüklə</string>
     <string name="projects_settings_not_set">Təyin edilməyib</string>
     <string name="projects_settings_updated">Layihə yeniləndi</string>
-    <string name="projects_property_select">Seçin …</string>
     <string name="projects_activity_attached">əlavə etdi</string>
     <string name="projects_activity_commented">şərh yazdı</string>
     <string name="projects_attachment_delete_confirm_message">Bu qoşma həmişəlik silinəcək.</string>

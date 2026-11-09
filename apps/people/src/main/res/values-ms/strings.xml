@@ -6,7 +6,7 @@
     <string name="people_groups_title">Kumpulan</string>
     <string name="people_group_title">Kumpulan</string>
     <string name="people_person_title">Orang</string>
-    <string name="people_friends_search_placeholder">Cari…</string>
+    <string name="people_friends_search_placeholder">Cari</string>
     <string name="people_friends_no_people_found">Tiada orang dijumpai</string>
     <string name="people_friends_try_adjusting">Cuba laraskan carian anda</string>
     <string name="people_friends_pending">Tertunggak</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Padam kumpulan \"%1$s\"? Ini tidak boleh dibatalkan.</string>
     <string name="people_member_remove_confirm">Adakah anda pasti mahu mengeluarkan %1$s daripada kumpulan ini?</string>
     <string name="people_member_remove_with_name">Keluarkan %1$s</string>
-    <string name="people_member_search_placeholder">Masukkan nama untuk mencari…</string>
+    <string name="people_member_search_placeholder">Masukkan nama untuk mencari</string>
     <string name="people_groups_add_member_confirm_title">Tambah ke kumpulan</string>
     <string name="people_groups_add_member_confirm_action">Tambah ke kumpulan</string>
     <string name="people_profile_image_process_failed">Tidak dapat memproses imej %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Gagal memuatkan polisi jemputan anda</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Sepanduk</string>
-    <string name="people_contacts_search_placeholder">Cari…</string>
+    <string name="people_contacts_search_placeholder">Cari</string>
     <string name="people_contacts_invited">Dijemput</string>
     <string name="people_contacts_accept">Terima</string>
     <string name="people_contacts_message">Hantar mesej</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Baru ditambah</string>
     <string name="people_contacts_try_different_search">Cuba istilah carian lain</string>
     <string name="people_contacts_unfriend">Keluarkan rakan</string>
-    <string name="people_add_contact_search_placeholder">Taip untuk mencari…</string>
+    <string name="people_add_contact_search_placeholder">Taip untuk mencari</string>
     <string name="people_add_contact_search_start">Mula menaip untuk mencari pengguna</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Jawatan</string>

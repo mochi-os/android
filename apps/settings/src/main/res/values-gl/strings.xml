@@ -238,7 +238,7 @@
     <string name="route_delete_message">Isto eliminará a ruta para o camiño «%1$s».</string>
     <string name="route_empty">Non hai rutas configuradas.</string>
     <string name="route_meta">Prioridade %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Buscar temas para engadir…</string>
+    <string name="interests_search_placeholder">Buscar temas para engadir</string>
     <string name="interests_empty">Aínda non hai intereses.</string>
     <string name="interests_summary_regenerate">Rexenerar o resumo</string>
     <string name="interests_summary_regenerating">Rexenerando…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Isto restablecerá «%1$s» ao predeterminado (baleiro).</string>
     <string name="settings_home_system_users">Usuarios (servidor)</string>
     <string name="system_users_add_user">Engadir usuario</string>
-    <string name="system_users_search_placeholder">Buscar usuarios…</string>
+    <string name="system_users_search_placeholder">Buscar usuarios</string>
     <string name="system_users_sort_by">Ordenar por</string>
     <string name="system_users_last_login">Último inicio de sesión: %1$s</string>
     <string name="system_users_delete_message">Isto eliminará permanentemente o usuario «%1$s». Esta acción non se pode desfacer.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Colle un nome</string>
     <string name="handles_empty">Non se reservou ningún identificador.</string>
     <string name="handles_empty_search">Ningún identificador coincide coa túa busca</string>
-    <string name="handles_search_placeholder">Buscar identificadores…</string>
+    <string name="handles_search_placeholder">Buscar identificadores</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Mostrando %1$s–%2$s de %3$s identificador</item>
         <item quantity="other">Mostrando %1$s–%2$s de %3$s identificadores</item>

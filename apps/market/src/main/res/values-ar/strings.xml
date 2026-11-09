@@ -337,7 +337,6 @@
     <string name="market_messages_send">إرسال</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">عرّف المشترين بنفسك…</string>
     <string name="market_account_load_failed">تعذر تحميل الحساب</string>
     <string name="market_account_saved">تم حفظ التغييرات</string>
     <string name="market_account_status_restrictions">بعض الإجراءات، بما في ذلك إنشاء قوائم جديدة وإتمام الطلبات، مقيدة أثناء وجود حسابك في هذه الحالة.</string>
@@ -459,7 +458,7 @@
     <string name="market_listings_new">إعلان جديد</string>
     <string name="market_listings_search_placeholder">ابحث في إعلاناتك</string>
     <string name="market_listings_share_chooser">مشاركة الإعلان</string>
-    <string name="market_messages_compose_placeholder">اكتب رسالة…</string>
+    <string name="market_messages_compose_placeholder">اكتب رسالة</string>
     <string name="market_messages_inbox_empty_subtitle">عندما تراسل بائعاً (أو يراسلك مشترٍ) ستظهر المحادثة هنا.</string>
     <string name="market_messages_inbox_empty_title">لا توجد محادثات بعد</string>
     <string name="market_messages_thread_title">محادثة</string>
@@ -503,7 +502,7 @@
     <string name="market_reviews_empty_sent_subtitle">افتح طلبًا مكتملًا لكتابة تقييم.</string>
     <string name="market_reviews_empty_sent_title">لم تكتب أي تقييمات بعد</string>
     <string name="market_reviews_response_label">الرد</string>
-    <string name="market_reviews_response_placeholder">اكتب ردًا…</string>
+    <string name="market_reviews_response_placeholder">اكتب ردًا</string>
     <string name="market_sale_carrier_custom_label">اسم شركة الشحن</string>
     <string name="market_sale_dispute_evidence_due">الموعد النهائي لتقديم الأدلة %1$s</string>
     <string name="market_sale_dispute_stripe_reason">سبب ردّ المبلغ في Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">تقييمات البائع</string>
     <string name="market_account_stripe_open_failed">تعذّر فتح Stripe</string>
     <string name="market_editor_stock">المخزون</string>
-    <string name="market_editor_stock_units">عدد الوحدات</string>
     <string name="market_editor_stock_unlimited">غير محدود</string>
     <string name="market_editor_start_time">وقت البدء</string>
     <string name="market_editor_start_time_help">اتركه فارغًا للبدء عند النشر.</string>

@@ -238,7 +238,7 @@
     <string name="route_delete_message">Bu, \"%1$s\" yolu için rotayı kaldıracak.</string>
     <string name="route_empty">Yapılandırılmış rota yok.</string>
     <string name="route_meta">Öncelik %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Eklenecek konuları ara…</string>
+    <string name="interests_search_placeholder">Eklenecek konuları ara</string>
     <string name="interests_empty">Henüz ilgi alanı yok.</string>
     <string name="interests_summary_regenerate">Özeti yeniden oluştur</string>
     <string name="interests_summary_regenerating">Yeniden oluşturuluyor…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Bu, \"%1$s\"i varsayılana (boş) sıfırlayacak.</string>
     <string name="settings_home_system_users">Kullanıcılar (sunucu)</string>
     <string name="system_users_add_user">Kullanıcı ekle</string>
-    <string name="system_users_search_placeholder">Kullanıcı ara…</string>
+    <string name="system_users_search_placeholder">Kullanıcı ara</string>
     <string name="system_users_sort_by">Sıralama</string>
     <string name="system_users_last_login">Son giriş: %1$s</string>
     <string name="system_users_delete_message">Bu, \"%1$s\" kullanıcısını kalıcı olarak silecek. Bu işlem geri alınamaz.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Bir ad al</string>
     <string name="handles_empty">Hiç rumuz ayrılmamış.</string>
     <string name="handles_empty_search">Aramanızla eşleşen rumuz yok</string>
-    <string name="handles_search_placeholder">Rumuzlarda ara…</string>
+    <string name="handles_search_placeholder">Rumuzlarda ara</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s rumuzdan %1$s–%2$s arası gösteriliyor</item>
         <item quantity="other">%3$s rumuzdan %1$s–%2$s arası gösteriliyor</item>

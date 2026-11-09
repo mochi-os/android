@@ -90,7 +90,7 @@
     <string name="feeds_ai_account">KI-Konto</string>
 
     <string name="notification_channel_feeds">Feed-Benachrichtigungen</string>
-    <string name="feeds_search_placeholder">Feeds suchen oder URL einfügen…</string>
+    <string name="feeds_search_placeholder">Feeds suchen oder URL einfügen</string>
     <string name="feeds_url_result">URL-Ergebnis</string>
     <string name="feeds_search_results">Suchergebnisse</string>
     <string name="feeds_unread_only">Nur ungelesene</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Du erhältst keine Updates mehr von diesem Feed. Du kannst ihn jederzeit wieder abonnieren.</string>
     <string name="feeds_access_select_rule">Zugriffsregel auswählen</string>
     <string name="feeds_access_authenticated_desc">Alle angemeldeten Benutzer</string>
-    <string name="feeds_banner_hint">Willkommen in diesem Forum…</string>
     <string name="feeds_banner_dismiss">Banner schließen</string>
     <string name="feeds_members_search">Mitglieder filtern</string>
     <string name="feeds_ai_prompt_default">Standard</string>

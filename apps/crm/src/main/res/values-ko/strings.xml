@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">지문</string>
     <string name="crm_settings_server">서버</string>
     <string name="crm_untitled">제목 없음</string>
-    <string name="crm_property_select">선택 …</string>
     <string name="crm_filter">필터</string>
     <string name="crm_sort_filter_title">정렬 및 필터</string>
     <string name="crm_filter_clear_all">모두 지우기</string>

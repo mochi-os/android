@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Жіберу</string>
     <string name="forums_post_body_field">Мәтін</string>
-    <string name="forums_write_comment">Пікір жазыңыз…</string>
+    <string name="forums_write_comment">Пікір жазыңыз</string>
 
     <string name="notification_channel_forums">Форум хабарландырулары</string>
     <string name="forums_list_empty">Әзірге форумдар жоқ</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Әзірге ережелер жоқ — әдепкі мәндер қолданылады</string>
     <string name="forums_members_search">Мүшелерді сүзу</string>
     <string name="forums_banner_description">Форумның жоғарғы жағында көрсетілетін Markdown.</string>
-    <string name="forums_banner_placeholder">Баннер мәтінін енгізіңіз (Markdown қолдау көрсетіледі)…</string>
     <string name="forums_ai_mode_off">Өшірілген</string>
     <string name="forums_moderation_queue_empty">Күтудегі ештеңе жоқ</string>
     <string name="forums_moderation_report_details">Мәліметтер: %1$s</string>

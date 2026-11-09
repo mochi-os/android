@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Ipadala</string>
     <string name="forums_post_body_field">Nilalaman</string>
-    <string name="forums_write_comment">Magsulat ng komento…</string>
+    <string name="forums_write_comment">Magsulat ng komento</string>
 
     <string name="notification_channel_forums">Mga abiso sa mga forum</string>
     <string name="forums_list_empty">Wala pang forum</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Wala pang panuntunan — mananatili ang mga default</string>
     <string name="forums_members_search">I-filter ang mga miyembro</string>
     <string name="forums_banner_description">Markdown na ipinapakita sa itaas ng forum.</string>
-    <string name="forums_banner_placeholder">Ilagay ang text ng banner (sinusuportahan ang markdown)…</string>
     <string name="forums_ai_mode_off">Naka-disable</string>
     <string name="forums_moderation_queue_empty">Walang nakabinbin</string>
     <string name="forums_moderation_report_details">Mga detalye: %1$s</string>

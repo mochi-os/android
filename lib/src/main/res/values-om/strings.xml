@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Bifa irraa</string>
     <string name="settings_background_off">Tokko illee</string>
     <string name="game_chat_empty">Hanga ammaatti ergaawwan hin jiran</string>
-    <string name="game_chat_input_placeholder">Ergaa barreessi…</string>
+    <string name="game_chat_input_placeholder">Ergaa barreessi</string>
     <string name="game_chat_send">Ergaa ergi</string>
     <string name="game_chat_subject_you">Ati</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Si akka taate mirkaneessi</string>
     <string name="stepup_description">Kun jijjiirama nageenya akkaawuntii kee irratti taʼeedha. Itti fufuuf si akka taate mirkaneessi.</string>
     <string name="stepup_email_label">Koodii imeelii</string>
-    <string name="stepup_email_placeholder">Koodii imeelii kee irraa galchi</string>
     <string name="stepup_totp_label">Koodii mirkaneessaa</string>
-    <string name="stepup_totp_placeholder">Koodii mirkaneessaa kee galchi</string>
     <string name="stepup_use_passkey">Passkey kee fayyadami</string>
     <string name="stepup_send_email">Imeelii ergi</string>
     <string name="stepup_resend_email">Imeelii irra deebi\'ii ergi</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Mallattoo haqi</string>
     <string name="person_picker_none">Tokko illee</string>
     <string name="person_picker_clear">Filannoo cilliisi</string>
-    <string name="person_picker_select">Filadhu …</string>
+    <string name="person_picker_select">Filadhu</string>
     <string name="person_picker_directory">Galmee</string>
     <string name="person_picker_no_people">Namni hin jiru</string>
     <string name="person_picker_project_members">Miseensota pirojektii</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Ramaddii beeksisaa jijjiiri</string>
     <string name="lightbox_comments_none">Suuraa kana irratti yaadni ammatti hin jiru.</string>
     <string name="lightbox_comments_only">Yaada suuraa kanaa qofa agarsiisi</string>
-    <string name="lightbox_comment_placeholder">Suuraa kana irratti yaada kenni…</string>
+    <string name="lightbox_comment_placeholder">Suuraa kana irratti yaada kenni</string>
     <string name="comment_anchor_open">Suuraa yaadni kun ilaallatu ilaali</string>
     <string name="comment_anchor_default">Suuraa kana irratti</string>
     <plurals name="lightbox_comments_others">

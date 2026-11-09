@@ -3,7 +3,6 @@
     <string name="app_name">Pasar</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografi</string>
-    <string name="market_account_biography_placeholder">Caritakeun ka nu meuli ngeunaan diri anjeun…</string>
     <string name="market_account_load_failed">Akun teu bisa dimuat</string>
     <string name="market_account_location_label">Lokasi</string>
     <string name="market_account_save">Simpen</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Iklan énggal</string>
     <string name="market_listings_relist_failed">Gagal nempatkeun deui</string>
     <string name="market_listings_title">Daptaran kuring</string>
-    <string name="market_messages_compose_placeholder">Tulis pesen…</string>
+    <string name="market_messages_compose_placeholder">Tulis pesen</string>
     <string name="market_messages_inbox_title">Pesen</string>
     <string name="market_messages_send">Kirim</string>
     <string name="market_messages_thread_title">Obrolan</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Pameuli sareng padagang tiasa silih tinjau saatos pesenan réngsé.</string>
     <string name="market_reviews_empty_sent_subtitle">Buka pesenan nu parantos réngsé pikeun ninggalkeun tinjauan.</string>
     <string name="market_reviews_empty_sent_title">Anjeun tacan nyerat tinjauan naon-naon</string>
-    <string name="market_reviews_response_placeholder">Tulis tanggapan…</string>
+    <string name="market_reviews_response_placeholder">Tulis tanggapan</string>
     <string name="market_sale_carrier_custom_label">Nami pangirim</string>
     <string name="market_sale_dispute_evidence_due">Bukti diperyogikeun %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Alesan chargeback Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Ulasan penjual</string>
     <string name="market_account_stripe_open_failed">Henteu tiasa muka Stripe</string>
     <string name="market_editor_stock">Stok</string>
-    <string name="market_editor_stock_units">Jumlah unit</string>
     <string name="market_editor_stock_unlimited">Teu watesan</string>
     <string name="market_editor_start_time">Waktos mimiti</string>
     <string name="market_editor_start_time_help">Kosongkeun pikeun mimiti dina nerbitkeun.</string>

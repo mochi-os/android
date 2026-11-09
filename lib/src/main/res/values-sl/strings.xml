@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Iz teme</string>
     <string name="settings_background_off">Brez</string>
     <string name="game_chat_empty">Še ni sporočil</string>
-    <string name="game_chat_input_placeholder">Vnesi sporočilo…</string>
+    <string name="game_chat_input_placeholder">Vnesi sporočilo</string>
     <string name="game_chat_send">Pošlji sporočilo</string>
     <string name="game_chat_subject_you">Ti</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Potrdite, da ste to vi</string>
     <string name="stepup_description">To je varnostna sprememba vašega računa. Za nadaljevanje potrdite, da ste to vi.</string>
     <string name="stepup_email_label">E-poštna koda</string>
-    <string name="stepup_email_placeholder">Vnesite kodo iz e-pošte</string>
     <string name="stepup_totp_label">Koda avtentikacije</string>
-    <string name="stepup_totp_placeholder">Vnesite kodo iz aplikacije za preverjanje</string>
     <string name="stepup_use_passkey">Uporabite svoj geslo-ključ</string>
     <string name="stepup_send_email">Pošlji e-pošto</string>
     <string name="stepup_resend_email">Znova pošlji e-pošto</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Odstrani oznako</string>
     <string name="person_picker_none">Brez</string>
     <string name="person_picker_clear">Počisti izbor</string>
-    <string name="person_picker_select">Izberite …</string>
+    <string name="person_picker_select">Izberite</string>
     <string name="person_picker_directory">Imenik</string>
     <string name="person_picker_no_people">Ni oseb</string>
     <string name="person_picker_project_members">Člani projekta</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Spremeni kategorijo obvestila</string>
     <string name="lightbox_comments_none">Ta slika še nima komentarjev.</string>
     <string name="lightbox_comments_only">Pokaži samo komentarje k tej sliki</string>
-    <string name="lightbox_comment_placeholder">Komentiraj to sliko…</string>
+    <string name="lightbox_comment_placeholder">Komentiraj to sliko</string>
     <string name="comment_anchor_open">Poglej sliko, na katero se nanaša ta komentar</string>
     <string name="comment_anchor_default">Pri tej sliki</string>
     <plurals name="lightbox_comments_others">

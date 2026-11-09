@@ -238,7 +238,7 @@
     <string name="route_delete_message">यह पथ \"%1$s\" के लिए मार्ग हटा देगा।</string>
     <string name="route_empty">कोई मार्ग कॉन्फ़िगर नहीं किया गया।</string>
     <string name="route_meta">प्राथमिकता %1$s · %2$s</string>
-    <string name="interests_search_placeholder">जोड़ने के लिए विषय खोजें…</string>
+    <string name="interests_search_placeholder">जोड़ने के लिए विषय खोजें</string>
     <string name="interests_empty">अभी तक कोई रुचि नहीं।</string>
     <string name="interests_summary_regenerate">सारांश पुनर्जनित करें</string>
     <string name="interests_summary_regenerating">पुनर्निर्माण…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">यह \"%1$s\" को इसके डिफ़ॉल्ट (खाली) पर रीसेट करेगा।</string>
     <string name="settings_home_system_users">उपयोगकर्ता (सर्वर)</string>
     <string name="system_users_add_user">उपयोगकर्ता जोड़ें</string>
-    <string name="system_users_search_placeholder">उपयोगकर्ता खोजें…</string>
+    <string name="system_users_search_placeholder">उपयोगकर्ता खोजें</string>
     <string name="system_users_sort_by">क्रमित करें</string>
     <string name="system_users_last_login">अंतिम लॉगिन: %1$s</string>
     <string name="system_users_delete_message">यह स्थायी रूप से उपयोगकर्ता \"%1$s\" को हटा देगा। यह क्रिया पूर्ववत नहीं की जा सकती।</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">नाम लें</string>
     <string name="handles_empty">कोई हैंडल आरक्षित नहीं किया गया है।</string>
     <string name="handles_empty_search">आपकी खोज से कोई हैंडल मेल नहीं खाता</string>
-    <string name="handles_search_placeholder">हैंडल खोजें…</string>
+    <string name="handles_search_placeholder">हैंडल खोजें</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s हैंडल में से %1$s–%2$s दिखाए जा रहे हैं</item>
         <item quantity="other">%3$s हैंडलों में से %1$s–%2$s दिखाए जा रहे हैं</item>

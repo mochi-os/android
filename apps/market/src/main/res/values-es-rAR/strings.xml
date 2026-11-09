@@ -171,7 +171,6 @@
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografía</string>
-    <string name="market_account_biography_placeholder">Cuéntales a los compradores sobre ti…</string>
     <string name="market_account_load_failed">No se pudo cargar la cuenta</string>
     <string name="market_account_saved">Cambios guardados</string>
     <string name="market_account_status_restrictions">Algunas acciones, como crear nuevos anuncios y completar pedidos, están restringidas mientras la cuenta esté en este estado.</string>
@@ -377,7 +376,7 @@
     <string name="market_listings_search_placeholder">Buscar en tus anuncios</string>
     <string name="market_listings_share_chooser">Compartir anuncio</string>
     <string name="market_listings_title">Mis anuncios</string>
-    <string name="market_messages_compose_placeholder">Escribí un mensaje…</string>
+    <string name="market_messages_compose_placeholder">Escribí un mensaje</string>
     <string name="market_messages_inbox_empty_subtitle">Cuando le envíes un mensaje a un vendedor (o un comprador te envíe uno) la conversación aparecerá acá.</string>
     <string name="market_messages_inbox_empty_title">Todavía no hay conversaciones</string>
     <string name="market_messages_thread_title">Conversación</string>
@@ -446,7 +445,7 @@
     <string name="market_reviews_empty_sent_subtitle">Abrí un pedido completado para dejar una reseña.</string>
     <string name="market_reviews_empty_sent_title">No escribiste ninguna reseña</string>
     <string name="market_reviews_response_label">Respuesta</string>
-    <string name="market_reviews_response_placeholder">Escribí una respuesta…</string>
+    <string name="market_reviews_response_placeholder">Escribí una respuesta</string>
     <string name="market_sale_carrier_custom_label">Nombre del transportista</string>
     <string name="market_sale_carrier_label">Transportista</string>
     <string name="market_sale_dispute_evidence_due">Evidencia para el %1$s</string>

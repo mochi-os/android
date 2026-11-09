@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Teemast</string>
     <string name="settings_background_off">Puudub</string>
     <string name="game_chat_empty">Sõnumeid veel pole</string>
-    <string name="game_chat_input_placeholder">Sisesta sõnum…</string>
+    <string name="game_chat_input_placeholder">Sisesta sõnum</string>
     <string name="game_chat_send">Saada sõnum</string>
     <string name="game_chat_subject_you">Sina</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Kinnitage, et see olete teie</string>
     <string name="stepup_description">See on teie konto turvamuudatus. Jätkamiseks kinnitage oma isik.</string>
     <string name="stepup_email_label">E-posti kood</string>
-    <string name="stepup_email_placeholder">Sisesta e-kirjas saadud kood</string>
     <string name="stepup_totp_label">Autentija kood</string>
-    <string name="stepup_totp_placeholder">Sisestage oma autentimisrakenduse kood</string>
     <string name="stepup_use_passkey">Kasutage oma pääsuvõtit</string>
     <string name="stepup_send_email">Saada e-kiri</string>
     <string name="stepup_resend_email">Saada e-kiri uuesti</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Eemalda silt</string>
     <string name="person_picker_none">Puudub</string>
     <string name="person_picker_clear">Tühjenda valik</string>
-    <string name="person_picker_select">Valige …</string>
+    <string name="person_picker_select">Valige</string>
     <string name="person_picker_directory">Kataloog</string>
     <string name="person_picker_no_people">Inimesi pole</string>
     <string name="person_picker_project_members">Projekti liikmed</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Muuda teavituse kategooriat</string>
     <string name="lightbox_comments_none">Sellel pildil pole veel kommentaare.</string>
     <string name="lightbox_comments_only">Näita ainult selle pildi kommentaare</string>
-    <string name="lightbox_comment_placeholder">Kommenteeri seda pilti…</string>
+    <string name="lightbox_comment_placeholder">Kommenteeri seda pilti</string>
     <string name="comment_anchor_open">Vaata pilti, mille kohta see kommentaar käib</string>
     <string name="comment_anchor_default">Sellel pildil</string>
     <plurals name="lightbox_comments_others">

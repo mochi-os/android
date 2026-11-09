@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Zdecyduj</string>
     <string name="staff_appeals_decision_denied">Pozostaw ogłoszenie odrzucone</string>
     <string name="staff_appeals_decision_label">Decyzja</string>
-    <string name="staff_appeals_decision_placeholder">Wybierz decyzję</string>
     <string name="staff_appeals_decision_upheld">Zatwierdź ogłoszenie</string>
     <string name="staff_appeals_denied_toast">Odwołanie odrzucone</string>
     <string name="staff_appeals_dialog_title">Rozstrzygnij odwołanie</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Kwota zwrotu musi być większa od zera</string>
     <string name="staff_disputes_resolution_buyer">Rozstrzygnij na korzyść kupującego</string>
     <string name="staff_disputes_resolution_label">Rozstrzygnięcie</string>
-    <string name="staff_disputes_resolution_placeholder">Wybierz rozwiązanie</string>
     <string name="staff_disputes_resolution_seller">Rozstrzygnij na korzyść sprzedającego</string>
     <string name="staff_disputes_resolve">Rozwiąż</string>
     <string name="staff_disputes_resolved_toast">Spór rozwiązany</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Zbanuj użytkownika</string>
     <string name="staff_reports_action_dismiss">Odrzuć</string>
     <string name="staff_reports_action_label">Akcja</string>
-    <string name="staff_reports_action_placeholder">Wybierz akcję</string>
     <string name="staff_reports_action_remove">Usuń</string>
     <string name="staff_reports_action_suspend">Zawieś jako sprzedającego</string>
     <string name="staff_reports_action_taken_toast">Podjęto działanie zgłoszenia</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Osoba</string>
     <string name="staff_team_dialog_role">Rola</string>
     <string name="staff_team_dialog_role_placeholder">Wybierz rolę</string>
-    <string name="staff_team_dialog_search_placeholder">Szukaj według imienia, odcisku lub ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Szukaj według imienia, odcisku lub ID</string>
     <string name="staff_team_empty">Brak członków zespołu</string>
     <string name="staff_team_remove_confirm">Usuń</string>
     <string name="staff_team_remove_desc">Usunąć tego członka z zespołu personelu?</string>

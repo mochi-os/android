@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Emongu\'e yvy gotyo</string>
 
     <string name="notification_channel_feeds">Marandu syrykuéra momarandu</string>
-    <string name="feeds_search_placeholder">Eheka feed térã emboja URL…</string>
+    <string name="feeds_search_placeholder">Eheka feed térã emboja URL</string>
     <string name="feeds_url_result">URL resultado</string>
     <string name="feeds_search_results">Jeheka resultado</string>
     <string name="feeds_unread_only">Noñemoñe\'ẽiva añoite</string>
@@ -200,7 +200,6 @@
     <string name="feeds_unsubscribe_confirm_message">Nderehupytymo\'ãvéima ñembohekopyahu ko feed-gui. Ikatu resuscribi jey oimeraẽ árape.</string>
     <string name="feeds_access_select_rule">Eiporavo jeike léi</string>
     <string name="feeds_access_authenticated_desc">Oimeraẽva oikéva</string>
-    <string name="feeds_banner_hint">Emoinge banner moñe\'ẽrã (markdown ojeporu)…</string>
     <string name="feeds_banner_dismiss">Emboyke banner</string>
     <string name="feeds_members_search">Mbogua irũnguéra</string>
     <string name="feeds_ai_prompt_default">Ypygua</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Одлучи</string>
     <string name="staff_appeals_decision_denied">Задржи оглас одбијеним</string>
     <string name="staff_appeals_decision_label">Одлука</string>
-    <string name="staff_appeals_decision_placeholder">Изабери одлуку</string>
     <string name="staff_appeals_decision_upheld">Одобри оглас</string>
     <string name="staff_appeals_denied_toast">Жалба одбијена</string>
     <string name="staff_appeals_dialog_title">Одлучи о жалби</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Износ повраћаја мора бити већи од нуле</string>
     <string name="staff_disputes_resolution_buyer">Реши у корист купца</string>
     <string name="staff_disputes_resolution_label">Решење</string>
-    <string name="staff_disputes_resolution_placeholder">Изабери резолуцију</string>
     <string name="staff_disputes_resolution_seller">Реши у корист продавца</string>
     <string name="staff_disputes_resolve">Реши</string>
     <string name="staff_disputes_resolved_toast">Спор решен</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Забрани корисника</string>
     <string name="staff_reports_action_dismiss">Одбаци</string>
     <string name="staff_reports_action_label">Радња</string>
-    <string name="staff_reports_action_placeholder">Изабери радњу</string>
     <string name="staff_reports_action_remove">Уклони</string>
     <string name="staff_reports_action_suspend">Суспендуј као продавца</string>
     <string name="staff_reports_action_taken_toast">Радња пријаве предузета</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Особа</string>
     <string name="staff_team_dialog_role">Улога</string>
     <string name="staff_team_dialog_role_placeholder">Изабери улогу</string>
-    <string name="staff_team_dialog_search_placeholder">Претрага по имену, отиску или ID-у…</string>
+    <string name="staff_team_dialog_search_placeholder">Претрага по имену, отиску или ID-у</string>
     <string name="staff_team_empty">Нема чланова тима</string>
     <string name="staff_team_remove_confirm">Уклони</string>
     <string name="staff_team_remove_desc">Уклонити овог члана из тима особља?</string>

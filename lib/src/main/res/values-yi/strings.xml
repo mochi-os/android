@@ -115,7 +115,7 @@
     <string name="settings_background_theme">פֿון טעמע</string>
     <string name="settings_background_off">קיינס</string>
     <string name="game_chat_empty">נאָך קיין מעלדונגען</string>
-    <string name="game_chat_input_placeholder">טיפּט אַ מעלדונג…</string>
+    <string name="game_chat_input_placeholder">טיפּט אַ מעלדונג</string>
     <string name="game_chat_send">שיק אַ מעלדונג</string>
     <string name="game_chat_subject_you">איר</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">באַשטעטיק אַז דאָס זײַט איר</string>
     <string name="stepup_description">דאָס איז אַ זיכערקייט־ענדערונג צו אײַער קאָנטע. פֿאַריפֿיצירט אַז דאָס זײַט איר צו ממשיך זײַן.</string>
     <string name="stepup_email_label">בליצפּאָסט־קאָד</string>
-    <string name="stepup_email_placeholder">גיט אַרײַן דעם קאָד פֿון אײַער בליצפּאָסט</string>
     <string name="stepup_totp_label">אויטענטיפֿיקאַטאָר־קאָד</string>
-    <string name="stepup_totp_placeholder">גיט אַרײַן אײַער אויטענטיפֿיקאַטאָר־קאָד</string>
     <string name="stepup_use_passkey">ניצט אײַער פּאַסקיי</string>
     <string name="stepup_send_email">שיק בליצפּאָסט</string>
     <string name="stepup_resend_email">שיק די בליצפּאָסט נאָך אַ מאָל</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">אַראָפּנעמען טאַג</string>
     <string name="person_picker_none">קיינס</string>
     <string name="person_picker_clear">רייניקן אויסקלײַב</string>
-    <string name="person_picker_select">קלײַבט אויס …</string>
+    <string name="person_picker_select">קלײַבט אויס</string>
     <string name="person_picker_directory">פֿאַרצײכעניש</string>
     <string name="person_picker_no_people">קיין מענטשן נישטאָ</string>
     <string name="person_picker_project_members">פּראָיעקט מיטגלידער</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">טוישט די מעלדונג־קאַטעגאָריע</string>
     <string name="lightbox_comments_none">נאָך קיין קאָמענטאַרן אויף דעם בילד.</string>
     <string name="lightbox_comments_only">ווײַזן נאָר קאָמענטאַרן אויף דעם בילד</string>
-    <string name="lightbox_comment_placeholder">קאָמענטירן אויף דעם בילד…</string>
+    <string name="lightbox_comment_placeholder">קאָמענטירן אויף דעם בילד</string>
     <string name="comment_anchor_open">זען דאָס בילד וועגן וועלכן דער קאָמענטאַר איז</string>
     <string name="comment_anchor_default">אויף דעם בילד</string>
     <plurals name="lightbox_comments_others">

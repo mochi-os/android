@@ -237,7 +237,7 @@
     <string name="route_delete_message">Ieu bakal nyabut rute pikeun jalan \"%1$s\".</string>
     <string name="route_empty">Henteu aya rute nu dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Téangan topik pikeun ditambihkeun…</string>
+    <string name="interests_search_placeholder">Téangan topik pikeun ditambihkeun</string>
     <string name="interests_empty">Tacan aya kapentingan.</string>
     <string name="interests_summary_regenerate">Jieun deui ringkesan</string>
     <string name="interests_summary_regenerating">Nuju ngajieun deui…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">Ieu bakal ngareset \"%1$s\" ka gawan (kosong).</string>
     <string name="settings_home_system_users">Pamaké (server)</string>
     <string name="system_users_add_user">Tambah pamaké</string>
-    <string name="system_users_search_placeholder">Téangan pamaké…</string>
+    <string name="system_users_search_placeholder">Téangan pamaké</string>
     <string name="system_users_sort_by">Sortir dumasar</string>
     <string name="system_users_last_login">Asup pamungkas: %1$s</string>
     <string name="system_users_delete_message">Ieu bakal mupus pamaké \"%1$s\" kanggo salamina. Tindakan ieu teu tiasa diandelkeun.</string>
@@ -546,7 +546,7 @@
     <string name="handles_take">Cokot ngaran</string>
     <string name="handles_empty">Teu aya landihan anu dipesen.</string>
     <string name="handles_empty_search">Euweuh landihan cocog jeung paluruh anjeun</string>
-    <string name="handles_search_placeholder">Paluruh landihan…</string>
+    <string name="handles_search_placeholder">Paluruh landihan</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">Némbongkeun %1$s–%2$s ti %3$s landihan</item>
     </plurals>

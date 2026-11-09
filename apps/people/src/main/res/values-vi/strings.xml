@@ -6,7 +6,7 @@
     <string name="people_groups_title">Nhóm</string>
     <string name="people_group_title">Nhóm</string>
     <string name="people_person_title">Người</string>
-    <string name="people_friends_search_placeholder">Tìm kiếm…</string>
+    <string name="people_friends_search_placeholder">Tìm kiếm</string>
     <string name="people_friends_no_people_found">Không tìm thấy người nào</string>
     <string name="people_friends_try_adjusting">Hãy thử điều chỉnh tìm kiếm</string>
     <string name="people_friends_pending">Đang chờ</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Xóa nhóm \"%1$s\"? Hành động này không thể hoàn tác.</string>
     <string name="people_member_remove_confirm">Bạn có chắc chắn muốn xóa %1$s khỏi nhóm này không?</string>
     <string name="people_member_remove_with_name">Xóa %1$s</string>
-    <string name="people_member_search_placeholder">Nhập tên để tìm kiếm…</string>
+    <string name="people_member_search_placeholder">Nhập tên để tìm kiếm</string>
     <string name="people_groups_add_member_confirm_title">Thêm vào nhóm</string>
     <string name="people_groups_add_member_confirm_action">Thêm vào nhóm</string>
     <string name="people_profile_image_process_failed">Không thể xử lý ảnh %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Không tải chính sách mời của bạn được</string>
     <string name="people_profile_avatar">Ảnh đại diện</string>
     <string name="people_profile_banner">Biểu ngữ</string>
-    <string name="people_contacts_search_placeholder">Tìm kiếm…</string>
+    <string name="people_contacts_search_placeholder">Tìm kiếm</string>
     <string name="people_contacts_invited">Đã mời</string>
     <string name="people_contacts_accept">Chấp nhận</string>
     <string name="people_contacts_message">Nhắn tin</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Mới thêm gần đây</string>
     <string name="people_contacts_try_different_search">Thử cụm từ tìm kiếm khác</string>
     <string name="people_contacts_unfriend">Xóa bạn bè</string>
-    <string name="people_add_contact_search_placeholder">Nhập để tìm kiếm…</string>
+    <string name="people_add_contact_search_placeholder">Nhập để tìm kiếm</string>
     <string name="people_add_contact_search_start">Bắt đầu gõ để tìm kiếm người dùng</string>
     <string name="people_contact_phone">Điện thoại</string>
     <string name="people_contact_title">Chức danh</string>

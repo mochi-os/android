@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Ujjlenyomat</string>
     <string name="crm_settings_server">Kiszolgáló</string>
     <string name="crm_untitled">Cím nélküli</string>
-    <string name="crm_property_select">Válasszon …</string>
     <string name="crm_filter">Szűrő</string>
     <string name="crm_sort_filter_title">Rendezés és szűrés</string>
     <string name="crm_filter_clear_all">Összes törlése</string>

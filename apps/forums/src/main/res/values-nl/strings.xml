@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Verzenden</string>
     <string name="forums_post_body_field">Inhoud</string>
-    <string name="forums_write_comment">Schrijf een opmerking…</string>
+    <string name="forums_write_comment">Schrijf een opmerking</string>
 
     <string name="notification_channel_forums">Forummeldingen</string>
     <string name="forums_list_empty">Nog geen forums</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Nog geen regels — standaardinstellingen zijn van toepassing</string>
     <string name="forums_members_search">Leden filteren</string>
     <string name="forums_banner_description">Markdown weergegeven bovenaan het forum.</string>
-    <string name="forums_banner_placeholder">Voer bannertekst in (markdown wordt ondersteund)…</string>
     <string name="forums_ai_mode_off">Uitgeschakeld</string>
     <string name="forums_moderation_queue_empty">Niets in behandeling</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>

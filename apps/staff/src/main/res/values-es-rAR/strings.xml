@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="staff_accounts_search_placeholder">Buscá</string>
-    <string name="staff_appeals_decision_placeholder">Seleccioná una decisión</string>
     <string name="staff_appeals_decision_upheld">Aprobá el aviso</string>
     <string name="staff_appeals_submit">Enviá</string>
     <string name="staff_categories_action_delete">Eliminá</string>
@@ -13,7 +12,6 @@
     <string name="staff_categories_dialog_save">Guardá</string>
     <string name="staff_config_save">Guardá</string>
     <string name="staff_dashboard_kpi_open_disputes">Abrí las disputas</string>
-    <string name="staff_disputes_resolution_placeholder">Seleccioná una resolución</string>
     <string name="staff_listings_action_approve_title">Aprobá el aviso</string>
     <string name="staff_listings_action_reject_title">Rechazá el aviso</string>
     <string name="staff_listings_action_remove_title">Quitá el aviso</string>
@@ -21,7 +19,6 @@
     <string name="staff_listings_reject">Rechazá</string>
     <string name="staff_listings_remove">Quitá</string>
     <string name="staff_listings_search_placeholder">Buscá título o descripción</string>
-    <string name="staff_reports_action_placeholder">Seleccioná una acción</string>
     <string name="staff_reports_action_remove">Quitá</string>
     <string name="staff_reports_submit">Enviá</string>
     <string name="staff_reviews_action_remove">Quitá</string>
@@ -417,7 +414,7 @@
     <string name="staff_team_dialog_no_results">No se encontraron personas</string>
     <string name="staff_team_dialog_person">Persona</string>
     <string name="staff_team_dialog_role">Rol</string>
-    <string name="staff_team_dialog_search_placeholder">Buscar por nombre, huella digital o ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Buscar por nombre, huella digital o ID</string>
     <string name="staff_team_empty">No hay miembros del equipo</string>
     <string name="staff_team_role_admin">Administrador</string>
     <string name="staff_team_role_moderator">Moderador</string>

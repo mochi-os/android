@@ -86,7 +86,7 @@
     <string name="feeds_move_down">下移</string>
 
     <string name="notification_channel_feeds">資訊流通知</string>
-    <string name="feeds_search_placeholder">搜尋資訊流或貼上網址…</string>
+    <string name="feeds_search_placeholder">搜尋資訊流或貼上網址</string>
     <string name="feeds_url_result">網址結果</string>
     <string name="feeds_search_results">搜尋結果</string>
     <string name="feeds_unread_only">僅顯示未讀</string>
@@ -199,7 +199,6 @@
     <string name="feeds_unsubscribe_confirm_message">你將不再收到此資訊流的更新。你可以隨時重新訂閱。</string>
     <string name="feeds_access_select_rule">選擇存取規則</string>
     <string name="feeds_access_authenticated_desc">任何已登入的使用者</string>
-    <string name="feeds_banner_hint">歡迎來到此論壇…</string>
     <string name="feeds_banner_dismiss">關閉橫幅</string>
     <string name="feeds_members_search">篩選成員</string>
     <string name="feeds_ai_prompt_default">預設</string>

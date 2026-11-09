@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Odoslať</string>
     <string name="forums_post_body_field">Text</string>
-    <string name="forums_write_comment">Napíšte komentár…</string>
+    <string name="forums_write_comment">Napíšte komentár</string>
 
     <string name="notification_channel_forums">Upozornenia fór</string>
     <string name="forums_list_empty">Zatiaľ žiadne fóra</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Zatiaľ žiadne pravidlá — použijú sa predvolené</string>
     <string name="forums_members_search">Filtrovať členov</string>
     <string name="forums_banner_description">Markdown zobrazený v hornej časti fóra.</string>
-    <string name="forums_banner_placeholder">Zadajte text bannera (podporuje Markdown)…</string>
     <string name="forums_ai_mode_off">Vypnuté</string>
     <string name="forums_moderation_queue_empty">Nič nečaká</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>

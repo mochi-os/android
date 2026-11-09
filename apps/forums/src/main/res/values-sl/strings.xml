@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Pošlji</string>
     <string name="forums_post_body_field">Vsebina</string>
-    <string name="forums_write_comment">Napišite komentar…</string>
+    <string name="forums_write_comment">Napišite komentar</string>
 
     <string name="notification_channel_forums">Obvestila forumov</string>
     <string name="forums_list_empty">Še ni forumov</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Še ni pravil — veljajo privzete nastavitve</string>
     <string name="forums_members_search">Filtriraj člane</string>
     <string name="forums_banner_description">Markdown, prikazan na vrhu foruma.</string>
-    <string name="forums_banner_placeholder">Vnesite besedilo pasice (podprt je Markdown)…</string>
     <string name="forums_ai_mode_off">Onemogočeno</string>
     <string name="forums_moderation_queue_empty">Nič v čakanju</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>

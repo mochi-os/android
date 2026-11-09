@@ -238,7 +238,7 @@
     <string name="route_delete_message">Això eliminarà la ruta per al camí «%1$s».</string>
     <string name="route_empty">No hi ha rutes configurades.</string>
     <string name="route_meta">Prioritat %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Cercar temes per afegir…</string>
+    <string name="interests_search_placeholder">Cercar temes per afegir</string>
     <string name="interests_empty">Encara no hi ha interessos.</string>
     <string name="interests_summary_regenerate">Regenera el resum</string>
     <string name="interests_summary_regenerating">Regenerant…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Això restablirà «%1$s» al valor predeterminat (buit).</string>
     <string name="settings_home_system_users">Usuaris (servidor)</string>
     <string name="system_users_add_user">Afegeix un usuari</string>
-    <string name="system_users_search_placeholder">Cercar usuaris…</string>
+    <string name="system_users_search_placeholder">Cercar usuaris</string>
     <string name="system_users_sort_by">Ordena per</string>
     <string name="system_users_last_login">Darrer inici de sessió: %1$s</string>
     <string name="system_users_delete_message">Això suprimirà permanentment l\'usuari «%1$s». No es pot desfer aquesta acció.</string>
@@ -556,7 +556,7 @@
     <string name="handles_take">Agafa un nom</string>
     <string name="handles_empty">No s\'ha reservat cap identificador.</string>
     <string name="handles_empty_search">Cap identificador coincideix amb la cerca</string>
-    <string name="handles_search_placeholder">Cerca identificadors…</string>
+    <string name="handles_search_placeholder">Cerca identificadors</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Mostrant %1$s–%2$s de %3$s identificador</item>
         <item quantity="other">Mostrant %1$s–%2$s de %3$s identificadors</item>

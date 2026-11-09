@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Penderfynu</string>
     <string name="staff_appeals_decision_denied">Cadw\'r rhestriad wedi\'i wrthod</string>
     <string name="staff_appeals_decision_label">Penderfyniad</string>
-    <string name="staff_appeals_decision_placeholder">Dewis penderfyniad</string>
     <string name="staff_appeals_decision_upheld">Cymeradwyo rhestriad</string>
     <string name="staff_appeals_denied_toast">Apêl wedi\'i gwrthod</string>
     <string name="staff_appeals_dialog_title">Penderfynu apêl</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Rhaid i swm yr ad-daliad fod yn fwy na sero</string>
     <string name="staff_disputes_resolution_buyer">Datrys i\'r prynwr</string>
     <string name="staff_disputes_resolution_label">Datrysiad</string>
-    <string name="staff_disputes_resolution_placeholder">Dewis cydraniad</string>
     <string name="staff_disputes_resolution_seller">Datrys i\'r gwerthwr</string>
     <string name="staff_disputes_resolve">Datrys</string>
     <string name="staff_disputes_resolved_toast">Anghydfod wedi\'i ddatrys</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Gwahardd defnyddiwr</string>
     <string name="staff_reports_action_dismiss">Diystyru</string>
     <string name="staff_reports_action_label">Gweithred</string>
-    <string name="staff_reports_action_placeholder">Dewiswch gam gweithredu</string>
     <string name="staff_reports_action_remove">Tynnu</string>
     <string name="staff_reports_action_suspend">Atal fel gwerthwr</string>
     <string name="staff_reports_action_taken_toast">Camau gweithredu adroddiad wedi\'u cymryd</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Person</string>
     <string name="staff_team_dialog_role">Rôl</string>
     <string name="staff_team_dialog_role_placeholder">Dewis rôl</string>
-    <string name="staff_team_dialog_search_placeholder">Chwilio yn ôl enw, olion bys neu ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Chwilio yn ôl enw, olion bys neu ID</string>
     <string name="staff_team_empty">Dim aelodau tîm</string>
     <string name="staff_team_remove_confirm">Tynnu</string>
     <string name="staff_team_remove_desc">Tynnu\'r aelod hwn o\'r tîm staff?</string>

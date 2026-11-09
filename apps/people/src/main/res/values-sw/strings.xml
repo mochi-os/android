@@ -6,7 +6,7 @@
     <string name="people_groups_title">Vikundi</string>
     <string name="people_group_title">Kikundi</string>
     <string name="people_person_title">Mtu</string>
-    <string name="people_friends_search_placeholder">Tafuta…</string>
+    <string name="people_friends_search_placeholder">Tafuta</string>
     <string name="people_friends_no_people_found">Hakuna watu waliopatikana</string>
     <string name="people_friends_try_adjusting">Jaribu kurekebisha utafutaji wako</string>
     <string name="people_friends_pending">Inasubiri</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Futa kikundi \"%1$s\"? Hili haliwezi kutenduliwa.</string>
     <string name="people_member_remove_confirm">Una uhakika unataka kumwondoa %1$s kwenye kikundi hiki?</string>
     <string name="people_member_remove_with_name">Mwondoe %1$s</string>
-    <string name="people_member_search_placeholder">Ingiza jina ili kutafuta…</string>
+    <string name="people_member_search_placeholder">Ingiza jina ili kutafuta</string>
     <string name="people_groups_add_member_confirm_title">Ongeza kwenye kikundi</string>
     <string name="people_groups_add_member_confirm_action">Ongeza kwenye kikundi</string>
     <string name="people_profile_image_process_failed">Haikuweza kuchakata picha ya %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Imeshindwa kupakia sera yako ya mwaliko</string>
     <string name="people_profile_avatar">Picha ya wasifu</string>
     <string name="people_profile_banner">Bango</string>
-    <string name="people_contacts_search_placeholder">Tafuta…</string>
+    <string name="people_contacts_search_placeholder">Tafuta</string>
     <string name="people_contacts_invited">Amealikwa</string>
     <string name="people_contacts_accept">Kubali</string>
     <string name="people_contacts_message">Tuma ujumbe</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Imeongezwa hivi karibuni</string>
     <string name="people_contacts_try_different_search">Jaribu neno la utafutaji tofauti</string>
     <string name="people_contacts_unfriend">Ondoa rafiki</string>
-    <string name="people_add_contact_search_placeholder">Andika ili kutafuta…</string>
+    <string name="people_add_contact_search_placeholder">Andika ili kutafuta</string>
     <string name="people_add_contact_search_start">Anza kuandika kutafuta watumiaji</string>
     <string name="people_contact_phone">Simu</string>
     <string name="people_contact_title">Cheo cha kazi</string>

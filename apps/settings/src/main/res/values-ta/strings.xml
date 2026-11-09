@@ -238,7 +238,7 @@
     <string name="route_delete_message">இது பாதை \"%1$s\" க்கான வழியை அகற்றும்.</string>
     <string name="route_empty">கட்டமைக்கப்பட்ட வழிகள் இல்லை.</string>
     <string name="route_meta">முன்னுரிமை %1$s · %2$s</string>
-    <string name="interests_search_placeholder">சேர்க்க தலைப்புகளைத் தேடு…</string>
+    <string name="interests_search_placeholder">சேர்க்க தலைப்புகளைத் தேடு</string>
     <string name="interests_empty">இதுவரை ஆர்வங்கள் இல்லை.</string>
     <string name="interests_summary_regenerate">சுருக்கத்தை மீண்டும் உருவாக்கு</string>
     <string name="interests_summary_regenerating">மீண்டும் உருவாக்கப்படுகிறது…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">இது \"%1$s\" ஐ இயல்புநிலைக்கு (வெற்று) மீட்டமைக்கும்.</string>
     <string name="settings_home_system_users">பயனர்கள் (சேவையகம்)</string>
     <string name="system_users_add_user">பயனரைச் சேர்</string>
-    <string name="system_users_search_placeholder">பயனர்களைத் தேடு…</string>
+    <string name="system_users_search_placeholder">பயனர்களைத் தேடு</string>
     <string name="system_users_sort_by">வரிசைப்படுத்து</string>
     <string name="system_users_last_login">கடைசி உள்நுழைவு: %1$s</string>
     <string name="system_users_delete_message">இது நிரந்தரமாக பயனர் \"%1$s\" ஐ நீக்கும். இந்த செயலை செயல்நீக்க முடியாது.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">ஒரு பெயரை எடு</string>
     <string name="handles_empty">புனைப்பெயர்கள் எதுவும் முன்பதிவு செய்யப்படவில்லை.</string>
     <string name="handles_empty_search">உங்கள் தேடலுக்கு எந்த புனைப்பெயரும் பொருந்தவில்லை</string>
-    <string name="handles_search_placeholder">புனைப்பெயர்களைத் தேடு…</string>
+    <string name="handles_search_placeholder">புனைப்பெயர்களைத் தேடு</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s புனைப்பெயரில் %1$s–%2$s காட்டப்படுகிறது</item>
         <item quantity="other">%3$s புனைப்பெயர்களில் %1$s–%2$s காட்டப்படுகிறது</item>

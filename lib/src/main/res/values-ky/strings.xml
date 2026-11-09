@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Темадан</string>
     <string name="settings_background_off">Эч кимиси</string>
     <string name="game_chat_empty">Билдирүүлөр азырынча жок</string>
-    <string name="game_chat_input_placeholder">Билдирүү жазыңыз…</string>
+    <string name="game_chat_input_placeholder">Билдирүү жазыңыз</string>
     <string name="game_chat_send">Билдирүү жөнөтүү</string>
     <string name="game_chat_subject_you">Сиз</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Бул сиз экениңизди ырастаңыз</string>
     <string name="stepup_description">Бул — каттоо эсебиңиздин коопсуздук өзгөртүүсү. Улантуу үчүн бул сиз экениңизди ырастаңыз.</string>
     <string name="stepup_email_label">Электрондук почта коду</string>
-    <string name="stepup_email_placeholder">Электрондук почтаңыздагы кодду киргизиңиз</string>
     <string name="stepup_totp_label">Аутентификатор коду</string>
-    <string name="stepup_totp_placeholder">Аутентификатор кодун киргизиңиз</string>
     <string name="stepup_use_passkey">Кирүү ачкычыңызды колдонуңуз</string>
     <string name="stepup_send_email">Электрондук почта жөнөтүү</string>
     <string name="stepup_resend_email">Катты кайра жөнөтүү</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Тегди алып салуу</string>
     <string name="person_picker_none">Эч кимиси</string>
     <string name="person_picker_clear">Тандоону тазалоо</string>
-    <string name="person_picker_select">Тандаңыз …</string>
+    <string name="person_picker_select">Тандаңыз</string>
     <string name="person_picker_directory">Каталог</string>
     <string name="person_picker_no_people">Адамдар жок</string>
     <string name="person_picker_project_members">Долбоордун мүчөлөрү</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Билдирме категориясын өзгөртүү</string>
     <string name="lightbox_comments_none">Бул сүрөттө азырынча пикирлер жок.</string>
     <string name="lightbox_comments_only">Ушул сүрөттүн пикирлерин гана көрсөтүү</string>
-    <string name="lightbox_comment_placeholder">Бул сүрөткө пикир жазыңыз…</string>
+    <string name="lightbox_comment_placeholder">Бул сүрөткө пикир жазыңыз</string>
     <string name="comment_anchor_open">Бул пикир кайсы сүрөт тууралуу экенин көрүү</string>
     <string name="comment_anchor_default">Бул сүрөттө</string>
     <plurals name="lightbox_comments_others">

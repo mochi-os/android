@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">ਭੇਜੋ</string>
     <string name="forums_post_body_field">ਮੁੱਖ ਭਾਗ</string>
-    <string name="forums_write_comment">ਟਿੱਪਣੀ ਲਿਖੋ…</string>
+    <string name="forums_write_comment">ਟਿੱਪਣੀ ਲਿਖੋ</string>
 
     <string name="notification_channel_forums">ਫੋਰਮ ਸੂਚਨਾਵਾਂ</string>
     <string name="forums_list_empty">ਅਜੇ ਕੋਈ ਫੋਰਮ ਨਹੀਂ</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">ਅਜੇ ਕੋਈ ਨਿਯਮ ਨਹੀਂ — ਮੂਲ ਲਾਗੂ ਹੁੰਦੇ ਹਨ</string>
     <string name="forums_members_search">ਮੈਂਬਰ ਫਿਲਟਰ ਕਰੋ</string>
     <string name="forums_banner_description">ਫੋਰਮ ਦੇ ਸਿਖਰ \'ਤੇ ਦਿਖਾਇਆ ਜਾਣ ਵਾਲਾ Markdown।</string>
-    <string name="forums_banner_placeholder">ਬੈਨਰ ਦਾ ਟੈਕਸਟ ਦਰਜ ਕਰੋ (Markdown ਸਮਰਥਿਤ)…</string>
     <string name="forums_ai_mode_off">ਬੰਦ ਕੀਤਾ</string>
     <string name="forums_moderation_queue_empty">ਕੁਝ ਵੀ ਬਕਾਇਆ ਨਹੀਂ</string>
     <string name="forums_moderation_report_details">ਵੇਰਵਾ: %1$s</string>

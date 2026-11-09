@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Որոշել</string>
     <string name="staff_appeals_decision_denied">Պահել հայտարարությունը՝ մերժված</string>
     <string name="staff_appeals_decision_label">Որոշում</string>
-    <string name="staff_appeals_decision_placeholder">Ընտրել որոշումը</string>
     <string name="staff_appeals_decision_upheld">Հաստատել հայտարարությունը</string>
     <string name="staff_appeals_denied_toast">Բողոքարկումը մերժված է</string>
     <string name="staff_appeals_dialog_title">Որոշել բողոքարկումը</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Վերադարձի գումարը պետք է զրոյից մեծ լինի</string>
     <string name="staff_disputes_resolution_buyer">Լուծել գնորդի օգտին</string>
     <string name="staff_disputes_resolution_label">Լուծում</string>
-    <string name="staff_disputes_resolution_placeholder">Ընտրել լուծումը</string>
     <string name="staff_disputes_resolution_seller">Լուծել վաճառողի օգտին</string>
     <string name="staff_disputes_resolve">Լուծել</string>
     <string name="staff_disputes_resolved_toast">Վեճը լուծված է</string>
@@ -298,7 +296,6 @@
     <string name="staff_reports_action_ban">Արգելել օգտատիրոջը</string>
     <string name="staff_reports_action_dismiss">Մերժել</string>
     <string name="staff_reports_action_label">Գործողություն</string>
-    <string name="staff_reports_action_placeholder">Ընտրել գործողություն</string>
     <string name="staff_reports_action_remove">Հեռացնել</string>
     <string name="staff_reports_action_suspend">Կասեցնել որպես վաճառող</string>
     <string name="staff_reports_action_taken_toast">Հաղորդման գործողությունը կատարվեց</string>
@@ -406,7 +403,7 @@
     <string name="staff_team_dialog_person">Անձ</string>
     <string name="staff_team_dialog_role">Դեր</string>
     <string name="staff_team_dialog_role_placeholder">Ընտրել դերը</string>
-    <string name="staff_team_dialog_search_placeholder">Որոնել անունով, մատնահետքով կամ ID-ով…</string>
+    <string name="staff_team_dialog_search_placeholder">Որոնել անունով, մատնահետքով կամ ID-ով</string>
     <string name="staff_team_empty">Թիմի անդամներ չկան</string>
     <string name="staff_team_remove_confirm">Հեռացնել</string>
     <string name="staff_team_remove_desc">Հեռացնե՞լ այս անդամին անձնակազմի թիմից։</string>

@@ -115,7 +115,7 @@
     <string name="route_disabled">Deshabilitada</string>
     <string name="route_meta">Prioridad %1$s · %2$s</string>
     <string name="interests_title">Intereses</string>
-    <string name="interests_search_placeholder">Buscá temas para agregar…</string>
+    <string name="interests_search_placeholder">Buscá temas para agregar</string>
     <string name="interests_empty">Aún no hay intereses.</string>
     <string name="interests_summary_title">Resumen</string>
     <string name="interests_summary_regenerate">Regenerar resumen</string>
@@ -215,7 +215,7 @@
     <string name="settings_home_system_users">Usuarios (servidor)</string>
     <string name="system_users_title">Usuarios</string>
     <string name="system_users_add_user">Agregar usuario</string>
-    <string name="system_users_search_placeholder">Buscar usuarios…</string>
+    <string name="system_users_search_placeholder">Buscar usuarios</string>
     <string name="system_users_sort_by">Ordenar por</string>
     <string name="system_users_col_last">Último inicio de sesión</string>
     <string name="system_users_role_label">Rol</string>

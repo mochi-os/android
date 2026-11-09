@@ -238,7 +238,7 @@
     <string name="route_delete_message">ഇത് പാത \"%1$s\" നായുള്ള റൂട്ട് നീക്കം ചെയ്യും.</string>
     <string name="route_empty">റൂട്ടുകൾ കോൺഫിഗർ ചെയ്തിട്ടില്ല.</string>
     <string name="route_meta">മുൻഗണന %1$s · %2$s</string>
-    <string name="interests_search_placeholder">ചേർക്കാൻ വിഷയങ്ങൾ തിരയുക…</string>
+    <string name="interests_search_placeholder">ചേർക്കാൻ വിഷയങ്ങൾ തിരയുക</string>
     <string name="interests_empty">ഇതുവരെ താൽപ്പര്യങ്ങളില്ല.</string>
     <string name="interests_summary_regenerate">സംഗ്രഹം വീണ്ടും ജനറേറ്റ് ചെയ്യുക</string>
     <string name="interests_summary_regenerating">വീണ്ടും ജനറേറ്റ് ചെയ്യുന്നു…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ഇത് \"%1$s\" നെ സ്ഥിരത്തിലേക്ക് (ശൂന്യം) റീസെറ്റ് ചെയ്യും.</string>
     <string name="settings_home_system_users">ഉപയോക്താക്കൾ (സെർവർ)</string>
     <string name="system_users_add_user">ഉപയോക്താവിനെ ചേർക്കുക</string>
-    <string name="system_users_search_placeholder">ഉപയോക്താക്കളെ തിരയുക…</string>
+    <string name="system_users_search_placeholder">ഉപയോക്താക്കളെ തിരയുക</string>
     <string name="system_users_sort_by">ഇതനുസരിച്ച് ക്രമീകരിക്കുക</string>
     <string name="system_users_last_login">അവസാന ലോഗിൻ: %1$s</string>
     <string name="system_users_delete_message">ഇത് ശാശ്വതമായി ഉപയോക്താവ് \"%1$s\" നെ ഇല്ലാതാക്കും. ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">ഒരു പേര് എടുക്കുക</string>
     <string name="handles_empty">ഉപയോക്തൃനാമങ്ങളൊന്നും റിസർവ് ചെയ്തിട്ടില്ല.</string>
     <string name="handles_empty_search">നിങ്ങളുടെ തിരയലുമായി പൊരുത്തപ്പെടുന്ന ഉപയോക്തൃനാമങ്ങളൊന്നുമില്ല</string>
-    <string name="handles_search_placeholder">ഉപയോക്തൃനാമങ്ങൾ തിരയുക…</string>
+    <string name="handles_search_placeholder">ഉപയോക്തൃനാമങ്ങൾ തിരയുക</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s ഉപയോക്തൃനാമത്തിൽ %1$s–%2$s കാണിക്കുന്നു</item>
         <item quantity="other">%3$s ഉപയോക്തൃനാമങ്ങളിൽ %1$s–%2$s കാണിക്കുന്നു</item>

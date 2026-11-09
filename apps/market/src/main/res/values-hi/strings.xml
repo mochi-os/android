@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">ऑर्डर #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">खरीदारों को अपने बारे में बताएं…</string>
     <string name="market_account_load_failed">खाता लोड नहीं किया जा सका</string>
     <string name="market_account_saved">बदलाव सहेजे गए</string>
     <string name="market_account_status_restrictions">जब आपका खाता इस स्थिति में है, तब नई लिस्टिंग बनाने और ऑर्डर पूरा करने सहित कुछ कार्य प्रतिबंधित हैं।</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">नई लिस्टिंग</string>
     <string name="market_listings_search_placeholder">अपनी लिस्टिंग खोजें</string>
     <string name="market_listings_share_chooser">लिस्टिंग साझा करें</string>
-    <string name="market_messages_compose_placeholder">एक संदेश लिखें…</string>
+    <string name="market_messages_compose_placeholder">एक संदेश लिखें</string>
     <string name="market_messages_inbox_empty_subtitle">जब आप किसी विक्रेता को संदेश भेजते हैं (या कोई खरीदार आपको संदेश भेजता है) तो थ्रेड यहाँ दिखाई देगा।</string>
     <string name="market_messages_inbox_empty_title">अभी तक कोई बातचीत नहीं</string>
     <string name="market_messages_thread_title">बातचीत</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">समीक्षा छोड़ने के लिए कोई पूरा हुआ ऑर्डर खोलें।</string>
     <string name="market_reviews_empty_sent_title">आपने कोई समीक्षा नहीं लिखी है</string>
     <string name="market_reviews_response_label">उत्तर</string>
-    <string name="market_reviews_response_placeholder">उत्तर लिखें…</string>
+    <string name="market_reviews_response_placeholder">उत्तर लिखें</string>
     <string name="market_sale_carrier_custom_label">वाहक का नाम</string>
     <string name="market_sale_dispute_evidence_due">साक्ष्य %1$s तक देय</string>
     <string name="market_sale_dispute_stripe_reason">Stripe चार्जबैक कारण: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">विक्रेता की समीक्षाएं</string>
     <string name="market_account_stripe_open_failed">Stripe नहीं खुल सका</string>
     <string name="market_editor_stock">स्टॉक</string>
-    <string name="market_editor_stock_units">इकाइयों की संख्या</string>
     <string name="market_editor_stock_unlimited">असीमित</string>
     <string name="market_editor_start_time">शुरू होने का समय</string>
     <string name="market_editor_start_time_help">प्रकाशन पर शुरू करने के लिए खाली छोड़ें।</string>

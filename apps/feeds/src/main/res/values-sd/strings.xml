@@ -86,7 +86,7 @@
     <string name="feeds_move_down">هيٺ منتقل ڪريو</string>
 
     <string name="notification_channel_feeds">فيڊز جا اطلاع</string>
-    <string name="feeds_search_placeholder">فيڊز ڳوليو يا URL پيسٽ ڪريو…</string>
+    <string name="feeds_search_placeholder">فيڊز ڳوليو يا URL پيسٽ ڪريو</string>
     <string name="feeds_url_result">URL نتيجو</string>
     <string name="feeds_search_results">ڳولا جا نتيجا</string>
     <string name="feeds_unread_only">صرف اڻ پڙهيل</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">توهان کي هن فيڊ مان اپڊيٽ ملڻ بند ٿي وينديون. توهان ڪنهن به وقت ٻيهر سبسڪرائيب ڪري سگهو ٿا.</string>
     <string name="feeds_access_select_rule">رسائي قاعدو چونڊيو</string>
     <string name="feeds_access_authenticated_desc">ڪو به جيڪو لاگ ان ٿيل آهي</string>
-    <string name="feeds_banner_hint">هن فورم ۾ ڀلي ڪري آيا…</string>
     <string name="feeds_banner_dismiss">بينر رد ڪريو</string>
     <string name="feeds_members_search">ميمبر فلٽر ڪريو</string>
     <string name="feeds_ai_prompt_default">ڊفالٽ</string>

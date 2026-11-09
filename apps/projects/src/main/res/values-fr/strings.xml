@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Téléverser un fichier .json</string>
     <string name="projects_settings_not_set">Non défini</string>
     <string name="projects_settings_updated">Projet mis à jour</string>
-    <string name="projects_property_select">Sélectionner …</string>
     <string name="projects_activity_attached">a joint</string>
     <string name="projects_activity_commented">a commenté</string>
     <string name="projects_attachment_delete_confirm_message">Cette pièce jointe sera définitivement supprimée.</string>

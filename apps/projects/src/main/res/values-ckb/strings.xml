@@ -306,7 +306,6 @@
     <string name="projects_create_upload_json">فایلی .json باربکە</string>
     <string name="projects_settings_not_set">دانەنراوە</string>
     <string name="projects_settings_updated">پڕۆژە نوێ کرایەوە</string>
-    <string name="projects_property_select">هەڵبژێرە …</string>
     <string name="projects_activity_attached">هاوپێچی کرد</string>
     <string name="projects_activity_commented">لێدوانی دا</string>
     <string name="projects_attachment_delete_confirm_message">ئەم هاوپێچە بە هەمیشەیی دەسڕدرێتەوە.</string>

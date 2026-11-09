@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Tina téma</string>
     <string name="settings_background_off">Euweuh</string>
     <string name="game_chat_empty">Tacan aya pesen</string>
-    <string name="game_chat_input_placeholder">Ketik pesen…</string>
+    <string name="game_chat_input_placeholder">Ketik pesen</string>
     <string name="game_chat_send">Kirim pesen</string>
     <string name="game_chat_subject_you">Anjeun</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Pastikeun ieu anjeun</string>
     <string name="stepup_description">Ieu mangrupa parobahan kaamanan dina akun anjeun. Pariksa ieu anjeun pikeun neruskeun.</string>
     <string name="stepup_email_label">Kode surélék</string>
-    <string name="stepup_email_placeholder">Lebetkeun kode tina email anjeun</string>
     <string name="stepup_totp_label">Kode authenticator</string>
-    <string name="stepup_totp_placeholder">Lebetkeun kode aplikasi pamariksa</string>
     <string name="stepup_use_passkey">Anggo konci akses anjeun</string>
     <string name="stepup_send_email">Kirim email</string>
     <string name="stepup_resend_email">Kirim deui email</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Hapus tag</string>
     <string name="person_picker_none">Euweuh</string>
     <string name="person_picker_clear">Bersihkeun pilihan</string>
-    <string name="person_picker_select">Pilih …</string>
+    <string name="person_picker_select">Pilih</string>
     <string name="person_picker_directory">Diréktori</string>
     <string name="person_picker_no_people">Teu aya jalma</string>
     <string name="person_picker_project_members">Anggota proyék</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Ganti katégori bewara</string>
     <string name="lightbox_comments_none">Can aya koméntar dina gambar ieu.</string>
     <string name="lightbox_comments_only">Tampilkeun ukur koméntar dina gambar ieu</string>
-    <string name="lightbox_comment_placeholder">Koméntar gambar ieu…</string>
+    <string name="lightbox_comment_placeholder">Koméntar gambar ieu</string>
     <string name="comment_anchor_open">Tingali gambar nu dibahas ku koméntar ieu</string>
     <string name="comment_anchor_default">Dina gambar ieu</string>
     <plurals name="lightbox_comments_others">

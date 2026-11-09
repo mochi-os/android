@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Пакуль няма правілаў — прымяняюцца прадвызначаныя</string>
     <string name="forums_members_search">Фільтр удзельнікаў</string>
     <string name="forums_banner_description">Markdown, які паказваецца ў верхняй частцы форуму.</string>
-    <string name="forums_banner_placeholder">Увядзіце тэкст банера (падтрымліваецца Markdown)…</string>
     <string name="forums_ai_mode_off">Адключана</string>
     <string name="forums_moderation_queue_empty">Нічога не чакае разгляду</string>
     <string name="forums_moderation_report_details">Падрабязнасці: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Заканчваецца %1$s</string>
     <string name="forums_moderation_restriction_permanent">Пастаянная</string>
     <string name="forums_report_reason_hate">Нянавісць</string>
-    <string name="forums_write_comment">Напішыце каментар…</string>
+    <string name="forums_write_comment">Напішыце каментар</string>
     <string name="forums_comment_delete_message">Вы ўпэўнены, што хочаце выдаліць гэты каментар?</string>
     <string name="forums_comment_replying_to">Адказ для %1$s</string>
     <string name="forums_comment_clear_reply">Ачысціць адказ</string>

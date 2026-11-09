@@ -117,7 +117,6 @@
     <string name="forums_access_empty">هێشتا هیچ یاسایەک نییە — بنەڕەتییەکان جێبەجێ دەکرێن</string>
     <string name="forums_members_search">فلتەرکردنی ئەندامان</string>
     <string name="forums_banner_description">Markdown کە لە سەرەوەی فۆڕەمەکەدا پیشان دەدرێت.</string>
-    <string name="forums_banner_placeholder">دەقی بانەر بنووسە (Markdown پشتگیری دەکرێت)…</string>
     <string name="forums_ai_mode_off">ناچالاک</string>
     <string name="forums_moderation_queue_empty">هیچ شتێک چاوەڕوان نییە</string>
     <string name="forums_moderation_report_details">وردەکارییەکان: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">بەسەردەچێت %1$s</string>
     <string name="forums_moderation_restriction_permanent">هەمیشەیی</string>
     <string name="forums_report_reason_hate">ڕق</string>
-    <string name="forums_write_comment">لێدوانێک بنووسە…</string>
+    <string name="forums_write_comment">لێدوانێک بنووسە</string>
     <string name="forums_comment_delete_message">دڵنیایت کە دەتەوێت ئەم لێدوانە بسڕیتەوە؟</string>
     <string name="forums_comment_replying_to">وەڵامدانەوە بۆ %1$s</string>
     <string name="forums_comment_clear_reply">پاککردنەوەی وەڵام</string>

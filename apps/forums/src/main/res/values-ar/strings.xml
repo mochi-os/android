@@ -117,7 +117,6 @@
     <string name="forums_access_empty">لا توجد قواعد بعد — تنطبق الإعدادات الافتراضية</string>
     <string name="forums_members_search">تصفية الأعضاء</string>
     <string name="forums_banner_description">نص Markdown يُعرض في أعلى المنتدى.</string>
-    <string name="forums_banner_placeholder">أدخل نص اللافتة (يدعم Markdown)…</string>
     <string name="forums_ai_mode_off">معطّل</string>
     <string name="forums_moderation_queue_empty">لا يوجد شيء معلّق</string>
     <string name="forums_moderation_report_details">التفاصيل: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">تنتهي %1$s</string>
     <string name="forums_moderation_restriction_permanent">دائم</string>
     <string name="forums_report_reason_hate">كراهية</string>
-    <string name="forums_write_comment">اكتب تعليقًا…</string>
+    <string name="forums_write_comment">اكتب تعليقًا</string>
     <string name="forums_comment_delete_message">هل أنت متأكد من أنك تريد حذف هذا التعليق؟</string>
     <string name="forums_comment_replying_to">الرد على %1$s</string>
     <string name="forums_comment_clear_reply">مسح الرد</string>

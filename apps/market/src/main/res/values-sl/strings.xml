@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Naročilo #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Povejte kupcem o sebi…</string>
     <string name="market_account_load_failed">Računa ni mogoče naložiti</string>
     <string name="market_account_saved">Spremembe shranjene</string>
     <string name="market_account_status_restrictions">Nekatera dejanja, vključno z ustvarjanjem novih ponudb in dokončanjem naročil, so omejena, dokler je vaš račun v tem stanju.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Nova ponudba</string>
     <string name="market_listings_search_placeholder">Iščite po svojih ponudbah</string>
     <string name="market_listings_share_chooser">Deli ponudbo</string>
-    <string name="market_messages_compose_placeholder">Napišite sporočilo…</string>
+    <string name="market_messages_compose_placeholder">Napišite sporočilo</string>
     <string name="market_messages_inbox_empty_subtitle">Ko boste pisali prodajalcu (ali bo kupec pisal vam), se bo pogovor pojavil tukaj.</string>
     <string name="market_messages_inbox_empty_title">Še ni pogovorov</string>
     <string name="market_messages_thread_title">Pogovor</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Odprite zaključeno naročilo, da pustite mnenje.</string>
     <string name="market_reviews_empty_sent_title">Niste še napisali nobenega mnenja</string>
     <string name="market_reviews_response_label">Odgovor</string>
-    <string name="market_reviews_response_placeholder">Napišite odgovor…</string>
+    <string name="market_reviews_response_placeholder">Napišite odgovor</string>
     <string name="market_sale_carrier_custom_label">Ime prevoznika</string>
     <string name="market_sale_dispute_evidence_due">Dokazi do %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Razlog za vračilo Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Ocene prodajalca</string>
     <string name="market_account_stripe_open_failed">Stripe ni bilo mogoče odpreti</string>
     <string name="market_editor_stock">Zaloga</string>
-    <string name="market_editor_stock_units">Število enot</string>
     <string name="market_editor_stock_unlimited">Neomejeno</string>
     <string name="market_editor_start_time">Čas začetka</string>
     <string name="market_editor_start_time_help">Pustite prazno za začetek ob objavi.</string>

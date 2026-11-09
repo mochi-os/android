@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupuri</string>
     <string name="people_group_title">Grup</string>
     <string name="people_person_title">Persoană</string>
-    <string name="people_friends_search_placeholder">Caută…</string>
+    <string name="people_friends_search_placeholder">Caută</string>
     <string name="people_friends_no_people_found">Nu s-au găsit persoane</string>
     <string name="people_friends_try_adjusting">Încearcă să ajustezi căutarea</string>
     <string name="people_friends_pending">În așteptare</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Ștergeți grupul \"%1$s\"? Această acțiune nu poate fi anulată.</string>
     <string name="people_member_remove_confirm">Sigur doriți să eliminați pe %1$s din acest grup?</string>
     <string name="people_member_remove_with_name">Elimină pe %1$s</string>
-    <string name="people_member_search_placeholder">Introduceți numele pentru a căuta…</string>
+    <string name="people_member_search_placeholder">Introduceți numele pentru a căuta</string>
     <string name="people_groups_add_member_confirm_title">Adăugare în grup</string>
     <string name="people_groups_add_member_confirm_action">Adaugă în grup</string>
     <string name="people_profile_image_process_failed">Imaginea %1$s nu a putut fi procesată</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Încărcarea politicii tale de invitații a eșuat</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Caută…</string>
+    <string name="people_contacts_search_placeholder">Caută</string>
     <string name="people_contacts_invited">Invitat</string>
     <string name="people_contacts_accept">Acceptă</string>
     <string name="people_contacts_message">Trimite mesaj</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Adăugat recent</string>
     <string name="people_contacts_try_different_search">Încearcă un alt termen de căutare</string>
     <string name="people_contacts_unfriend">Elimină prietenul</string>
-    <string name="people_add_contact_search_placeholder">Tastați pentru a căuta…</string>
+    <string name="people_add_contact_search_placeholder">Tastați pentru a căuta</string>
     <string name="people_add_contact_search_start">Începe să tastezi pentru a căuta utilizatori</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Funcție</string>

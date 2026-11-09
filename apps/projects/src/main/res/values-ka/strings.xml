@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json ფაილის ატვირთვა</string>
     <string name="projects_settings_not_set">არ არის დაყენებული</string>
     <string name="projects_settings_updated">პროექტი განახლდა</string>
-    <string name="projects_property_select">აირჩიეთ …</string>
     <string name="projects_activity_attached">დაურთო</string>
     <string name="projects_activity_commented">დააკომენტარა</string>
     <string name="projects_attachment_delete_confirm_message">ეს დანართი სამუდამოდ წაიშლება.</string>

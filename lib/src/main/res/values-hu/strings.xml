@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Témából</string>
     <string name="settings_background_off">Nincs</string>
     <string name="game_chat_empty">Még nincsenek üzenetek</string>
-    <string name="game_chat_input_placeholder">Írjon egy üzenetet…</string>
+    <string name="game_chat_input_placeholder">Írjon egy üzenetet</string>
     <string name="game_chat_send">Üzenet küldése</string>
     <string name="game_chat_subject_you">Ön</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Igazolja, hogy ön az</string>
     <string name="stepup_description">Ez egy biztonsági módosítás a fiókján. A folytatáshoz igazolja, hogy ön az.</string>
     <string name="stepup_email_label">E-mail kód</string>
-    <string name="stepup_email_placeholder">Adja meg az e-mailben kapott kódot</string>
     <string name="stepup_totp_label">Hitelesítő kód</string>
-    <string name="stepup_totp_placeholder">Adja meg a hitelesítő kódját</string>
     <string name="stepup_use_passkey">Használja a hozzáférési kulcsát</string>
     <string name="stepup_send_email">E-mail küldése</string>
     <string name="stepup_resend_email">E-mail újraküldése</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Címke eltávolítása</string>
     <string name="person_picker_none">Nincs</string>
     <string name="person_picker_clear">Kijelölés törlése</string>
-    <string name="person_picker_select">Válasszon …</string>
+    <string name="person_picker_select">Válasszon</string>
     <string name="person_picker_directory">Címtár</string>
     <string name="person_picker_no_people">Nincsenek személyek</string>
     <string name="person_picker_project_members">Projekttagok</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Értesítési kategória módosítása</string>
     <string name="lightbox_comments_none">Ehhez a képhez még nincs hozzászólás.</string>
     <string name="lightbox_comments_only">Csak ennek a képnek a hozzászólásai</string>
-    <string name="lightbox_comment_placeholder">Hozzászólás ehhez a képhez…</string>
+    <string name="lightbox_comment_placeholder">Hozzászólás ehhez a képhez</string>
     <string name="comment_anchor_open">Annak a képnek a megtekintése, amelyről ez a hozzászólás szól</string>
     <string name="comment_anchor_default">Ehhez a képhez</string>
     <plurals name="lightbox_comments_others">

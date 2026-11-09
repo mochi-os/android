@@ -337,7 +337,6 @@
     <string name="market_messages_send">Odeslat</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Řekněte kupujícím něco o sobě…</string>
     <string name="market_account_load_failed">Účet se nepodařilo načíst</string>
     <string name="market_account_saved">Změny uloženy</string>
     <string name="market_account_status_restrictions">Některé akce, včetně vytváření nových nabídek a dokončování objednávek, jsou v tomto stavu účtu omezeny.</string>
@@ -459,7 +458,7 @@
     <string name="market_listings_new">Nová nabídka</string>
     <string name="market_listings_search_placeholder">Hledat ve vašich nabídkách</string>
     <string name="market_listings_share_chooser">Sdílet nabídku</string>
-    <string name="market_messages_compose_placeholder">Napsat zprávu…</string>
+    <string name="market_messages_compose_placeholder">Napsat zprávu</string>
     <string name="market_messages_inbox_empty_subtitle">Když napíšete prodejci (nebo kupující napíše vám), zobrazí se zde konverzace.</string>
     <string name="market_messages_inbox_empty_title">Zatím žádné konverzace</string>
     <string name="market_messages_thread_title">Konverzace</string>
@@ -503,7 +502,7 @@
     <string name="market_reviews_empty_sent_subtitle">Otevřete dokončenou objednávku a napište recenzi.</string>
     <string name="market_reviews_empty_sent_title">Zatím jste nenapsali žádnou recenzi</string>
     <string name="market_reviews_response_label">Odpověď</string>
-    <string name="market_reviews_response_placeholder">Napište odpověď…</string>
+    <string name="market_reviews_response_placeholder">Napište odpověď</string>
     <string name="market_sale_carrier_custom_label">Název dopravce</string>
     <string name="market_sale_dispute_evidence_due">Důkazy do %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Důvod vrácení platby ve Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Hodnocení prodejce</string>
     <string name="market_account_stripe_open_failed">Nelze otevřít Stripe</string>
     <string name="market_editor_stock">Sklad</string>
-    <string name="market_editor_stock_units">Počet jednotek</string>
     <string name="market_editor_stock_unlimited">Neomezeno</string>
     <string name="market_editor_start_time">Čas začátku</string>
     <string name="market_editor_start_time_help">Ponechte prázdné pro spuštění při publikování.</string>

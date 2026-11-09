@@ -298,7 +298,6 @@
     <string name="projects_access_authenticated_desc">任何已登入嘅人</string>
     <string name="projects_access_anyone_desc">包括匿名用戶</string>
     <string name="projects_access_selected">已選擇：%1$s</string>
-    <string name="projects_property_select">選擇 …</string>
     <string name="projects_activity_attached">加入了附件</string>
     <string name="projects_activity_commented">發表了留言</string>
     <string name="projects_attachment_delete_confirm_message">此附件將被永久刪除。</string>

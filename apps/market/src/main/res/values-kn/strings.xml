@@ -3,7 +3,6 @@
     <string name="app_name">ಮಾರುಕಟ್ಟೆ</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ಜೀವನಚರಿತ್ರೆ</string>
-    <string name="market_account_biography_placeholder">ಖರೀದಿದಾರರಿಗೆ ನಿಮ್ಮ ಬಗ್ಗೆ ತಿಳಿಸಿ…</string>
     <string name="market_account_load_failed">ಖಾತೆಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಲಿಲ್ಲ</string>
     <string name="market_account_location_label">ಸ್ಥಳ</string>
     <string name="market_account_save">ಉಳಿಸಿ</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">ಹೊಸ ಪಟ್ಟಿ</string>
     <string name="market_listings_relist_failed">ಮರು-ಲಿಸ್ಟ್ ಮಾಡಲು ವಿಫಲವಾಗಿದೆ</string>
     <string name="market_listings_title">ನನ್ನ ಲಿಸ್ಟಿಂಗ್‌ಗಳು</string>
-    <string name="market_messages_compose_placeholder">ಸಂದೇಶ ಬರೆಯಿರಿ…</string>
+    <string name="market_messages_compose_placeholder">ಸಂದೇಶ ಬರೆಯಿರಿ</string>
     <string name="market_messages_inbox_title">ಸಂದೇಶಗಳು</string>
     <string name="market_messages_send">ಕಳುಹಿಸಿ</string>
     <string name="market_messages_thread_title">ಸಂಭಾಷಣೆ</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">ಪೂರ್ಣಗೊಂಡ ಆದೇಶದ ನಂತರ ಖರೀದಿದಾರರು ಮತ್ತು ಮಾರಾಟಗಾರರು ಪರಸ್ಪರ ವಿಮರ್ಶಿಸಬಹುದು.</string>
     <string name="market_reviews_empty_sent_subtitle">ವಿಮರ್ಶೆ ಬರೆಯಲು ಪೂರ್ಣಗೊಂಡ ಆದೇಶವನ್ನು ತೆರೆಯಿರಿ.</string>
     <string name="market_reviews_empty_sent_title">ನೀವು ಯಾವುದೇ ವಿಮರ್ಶೆಗಳನ್ನು ಬರೆದಿಲ್ಲ</string>
-    <string name="market_reviews_response_placeholder">ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಬರೆಯಿರಿ…</string>
+    <string name="market_reviews_response_placeholder">ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ಬರೆಯಿರಿ</string>
     <string name="market_sale_carrier_custom_label">ಸಾಗಣೆದಾರರ ಹೆಸರು</string>
     <string name="market_sale_dispute_evidence_due">ಸಾಕ್ಷ್ಯವು %1$s ಗೆ ಬಾಕಿಯಿದೆ</string>
     <string name="market_sale_dispute_stripe_reason">Stripe ಚಾರ್ಜ್‌ಬ್ಯಾಕ್ ಕಾರಣ: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">ಮಾರಾಟಗಾರರ ವಿಮರ್ಶೆಗಳು</string>
     <string name="market_account_stripe_open_failed">Stripe ಅನ್ನು ತೆರೆಯಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="market_editor_stock">ಸ್ಟಾಕ್</string>
-    <string name="market_editor_stock_units">ಯೂನಿಟ್‌ಗಳ ಸಂಖ್ಯೆ</string>
     <string name="market_editor_stock_unlimited">ಅಪರಿಮಿತ</string>
     <string name="market_editor_start_time">ಪ್ರಾರಂಭ ಸಮಯ</string>
     <string name="market_editor_start_time_help">ಪ್ರಕಟಣೆಯಲ್ಲಿ ಆರಂಭಿಸಲು ಖಾಲಿ ಬಿಡಿ.</string>

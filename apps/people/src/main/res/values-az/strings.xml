@@ -6,7 +6,7 @@
     <string name="people_groups_title">Qruplar</string>
     <string name="people_group_title">Qrup</string>
     <string name="people_person_title">Şəxs</string>
-    <string name="people_friends_search_placeholder">Axtar…</string>
+    <string name="people_friends_search_placeholder">Axtar</string>
     <string name="people_friends_no_people_found">İnsan tapılmadı</string>
     <string name="people_friends_try_adjusting">Axtarış terminlərinizi tənzimləməyə cəhd edin</string>
     <string name="people_friends_pending">Gözləmədə</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" qrupu silinsin? Bu geri qaytarıla bilməz.</string>
     <string name="people_member_remove_confirm">%1$s adlı şəxsi bu qrupdan silmək istədiyinizə əminsiniz?</string>
     <string name="people_member_remove_with_name">%1$s adlı şəxsi sil</string>
-    <string name="people_member_search_placeholder">Axtarmaq üçün ad daxil edin…</string>
+    <string name="people_member_search_placeholder">Axtarmaq üçün ad daxil edin</string>
     <string name="people_groups_add_member_confirm_title">Qrupa əlavə et</string>
     <string name="people_groups_add_member_confirm_action">Qrupa əlavə et</string>
     <string name="people_profile_image_process_failed">%1$s şəkli emal edilə bilmədi</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Dəvət siyasətiniz yüklənmədi</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Axtar…</string>
+    <string name="people_contacts_search_placeholder">Axtar</string>
     <string name="people_contacts_invited">Dəvət edilib</string>
     <string name="people_contacts_accept">Qəbul et</string>
     <string name="people_contacts_message">Mesaj göndər</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Yeni əlavə edilmiş</string>
     <string name="people_contacts_try_different_search">Başqa axtarış sözü sınayın</string>
     <string name="people_contacts_unfriend">Dostu sil</string>
-    <string name="people_add_contact_search_placeholder">Axtarmaq üçün yazın…</string>
+    <string name="people_add_contact_search_placeholder">Axtarmaq üçün yazın</string>
     <string name="people_add_contact_search_start">İstifadəçiləri axtarmaq üçün yazmağa başlayın</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Vəzifə</string>

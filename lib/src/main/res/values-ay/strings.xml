@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Temata</string>
     <string name="settings_background_off">Janiw kunas</string>
     <string name="game_chat_empty">Janira mensajenak</string>
-    <string name="game_chat_input_placeholder">Mä mensaje qillqam…</string>
+    <string name="game_chat_input_placeholder">Mä mensaje qillqam</string>
     <string name="game_chat_send">Mensaje apayaña</string>
     <string name="game_chat_subject_you">Juma</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Jumätaw chiqancham</string>
     <string name="stepup_description">Akax cuentaman mä seguridad mayjt\'awiwa. Sarantañatakix jumätam chiqancham.</string>
     <string name="stepup_email_label">Email código</string>
-    <string name="stepup_email_placeholder">Emailaman código qillqam</string>
     <string name="stepup_totp_label">Autenticador código</string>
-    <string name="stepup_totp_placeholder">Autenticador códigom qillqam</string>
     <string name="stepup_use_passkey">Mantañ llawima apnaqam</string>
     <string name="stepup_send_email">Email apayaña</string>
     <string name="stepup_resend_email">Email wasitat apayaña</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Chimpu apsuña</string>
     <string name="person_picker_none">Janiw kunas</string>
     <string name="person_picker_clear">Ajllxawi q\'umachaña</string>
-    <string name="person_picker_select">Ajlliña …</string>
+    <string name="person_picker_select">Ajlliña</string>
     <string name="person_picker_directory">Directorio</string>
     <string name="person_picker_no_people">Janiw jaqinakax utjkiti</string>
     <string name="person_picker_project_members">Proyecto integrantenaka</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Yatiyäw kasta mayjt\'ayaña</string>
     <string name="lightbox_comments_none">Aka jamuqar janïraw comentarionakax utjkiti.</string>
     <string name="lightbox_comments_only">Aka jamuqan comentarionakapak uñacht\'ayaña</string>
-    <string name="lightbox_comment_placeholder">Aka jamuqat tuqit arst\'aña…</string>
+    <string name="lightbox_comment_placeholder">Aka jamuqat tuqit arst\'aña</string>
     <string name="comment_anchor_open">Aka comentariox kawkïr jamuqat parlki uk uñjaña</string>
     <string name="comment_anchor_default">Aka jamuqan</string>
     <plurals name="lightbox_comments_others">

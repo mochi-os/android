@@ -115,7 +115,7 @@
     <string name="settings_background_theme">ຈາກຮູບແບບ</string>
     <string name="settings_background_off">ບໍ່ມີ</string>
     <string name="game_chat_empty">ຍັງບໍ່ມີຂໍ້ຄວາມ</string>
-    <string name="game_chat_input_placeholder">ພິມຂໍ້ຄວາມ…</string>
+    <string name="game_chat_input_placeholder">ພິມຂໍ້ຄວາມ</string>
     <string name="game_chat_send">ສົ່ງຂໍ້ຄວາມ</string>
     <string name="game_chat_subject_you">ທ່ານ</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">ຢືນຢັນວ່າແມ່ນທ່ານ</string>
     <string name="stepup_description">ນີ້ແມ່ນການປ່ຽນແປງດ້ານຄວາມປອດໄພຕໍ່ບັນຊີຂອງທ່ານ. ກະລຸນາຢືນຢັນວ່າແມ່ນທ່ານເພື່ອດໍາເນີນການຕໍ່.</string>
     <string name="stepup_email_label">ລະຫັດອີເມວ</string>
-    <string name="stepup_email_placeholder">ປ້ອນລະຫັດຈາກອີເມວຂອງທ່ານ</string>
     <string name="stepup_totp_label">ລະຫັດຢືນຢັນຕົວຕົນ</string>
-    <string name="stepup_totp_placeholder">ໃສ່ລະຫັດຢືນຢັນຕົວຕົນຂອງທ່ານ</string>
     <string name="stepup_use_passkey">ໃຊ້ກະແຈຜ່ານຂອງທ່ານ</string>
     <string name="stepup_send_email">ສົ່ງອີເມວ</string>
     <string name="stepup_resend_email">ສົ່ງອີເມວອີກຄັ້ງ</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">ລຶບແທັກ</string>
     <string name="person_picker_none">ບໍ່ມີ</string>
     <string name="person_picker_clear">ລ້າງການເລືອກ</string>
-    <string name="person_picker_select">ເລືອກ …</string>
+    <string name="person_picker_select">ເລືອກ</string>
     <string name="person_picker_directory">ໄດເລກທໍຣີ</string>
     <string name="person_picker_no_people">ບໍ່ມີຄົນ</string>
     <string name="person_picker_project_members">ສະມາຊິກໂຄງການ</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">ປ່ຽນໝວດໝູ່ການແຈ້ງເຕືອນ</string>
     <string name="lightbox_comments_none">ຍັງບໍ່ມີຄວາມເຫັນຕໍ່ຮູບນີ້.</string>
     <string name="lightbox_comments_only">ສະແດງສະເພາະຄວາມເຫັນຕໍ່ຮູບນີ້</string>
-    <string name="lightbox_comment_placeholder">ສະແດງຄວາມເຫັນຕໍ່ຮູບນີ້…</string>
+    <string name="lightbox_comment_placeholder">ສະແດງຄວາມເຫັນຕໍ່ຮູບນີ້</string>
     <string name="comment_anchor_open">ເບິ່ງຮູບທີ່ຄວາມເຫັນນີ້ກ່າວເຖິງ</string>
     <string name="comment_anchor_default">ຕໍ່ຮູບນີ້</string>
     <plurals name="lightbox_comments_others">

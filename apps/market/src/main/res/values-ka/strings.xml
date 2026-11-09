@@ -3,7 +3,6 @@
     <string name="app_name">ბაზარი</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ბიოგრაფია</string>
-    <string name="market_account_biography_placeholder">უამბეთ მყიდველებს თქვენ შესახებ…</string>
     <string name="market_account_load_failed">ანგარიშის ჩატვირთვა ვერ მოხერხდა</string>
     <string name="market_account_location_label">მდებარეობა</string>
     <string name="market_account_save">შენახვა</string>
@@ -232,7 +231,7 @@
     <string name="market_listings_new">ახალი განცხადება</string>
     <string name="market_listings_relist_failed">ხელახლა ჩამოთვლა ვერ მოხერხდა</string>
     <string name="market_listings_title">ჩემი განცხადებები</string>
-    <string name="market_messages_compose_placeholder">შეტყობინების დაწერა…</string>
+    <string name="market_messages_compose_placeholder">შეტყობინების დაწერა</string>
     <string name="market_messages_inbox_title">შეტყობინებები</string>
     <string name="market_messages_send">გაგზავნა</string>
     <string name="market_messages_thread_title">საუბარი</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">მყიდველებსა და გამყიდველებს შეუძლიათ ერთმანეთის შეფასება დასრულებული შეკვეთის შემდეგ.</string>
     <string name="market_reviews_empty_sent_subtitle">გახსენით დასრულებული შეკვეთა მიმოხილვის დასატოვებლად.</string>
     <string name="market_reviews_empty_sent_title">თქვენ ჯერ არ დაგიწერიათ მიმოხილვა</string>
-    <string name="market_reviews_response_placeholder">დაწერეთ პასუხი…</string>
+    <string name="market_reviews_response_placeholder">დაწერეთ პასუხი</string>
     <string name="market_sale_carrier_custom_label">გადამზიდის სახელი</string>
     <string name="market_sale_dispute_evidence_due">მტკიცებულების ვადა %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe-ის გადახდის გასაჩივრების მიზეზი: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">გამყიდველის შეფასებები</string>
     <string name="market_account_stripe_open_failed">Stripe-ის გახსნა ვერ მოხერხდა</string>
     <string name="market_editor_stock">მარაგი</string>
-    <string name="market_editor_stock_units">ერთეულების რაოდენობა</string>
     <string name="market_editor_stock_unlimited">შეუზღუდავი</string>
     <string name="market_editor_start_time">დაწყების დრო</string>
     <string name="market_editor_start_time_help">დატოვეთ ცარიელი გამოქვეყნებისას დასაწყებად.</string>

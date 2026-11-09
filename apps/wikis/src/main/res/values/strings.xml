@@ -61,7 +61,7 @@
 
     <!-- Buttons -->
     <string name="wikis_create_button">Create wiki</string>
-    <string name="wikis_search_placeholder">Search for a wiki…</string>
+    <string name="wikis_search_placeholder">Search for a wiki</string>
 
     <!-- Recommended rail -->
     <string name="wikis_recommended_section">Recommended wikis</string>
@@ -91,7 +91,7 @@
 
     <!-- Find wikis screen -->
     <string name="wikis_find_title">Find wikis</string>
-    <string name="wikis_find_search_placeholder">Search by name, ID, fingerprint, or URL…</string>
+    <string name="wikis_find_search_placeholder">Search by name, ID, fingerprint, or URL</string>
     <string name="wikis_find_no_results">No wikis found</string>
     <string name="wikis_find_recommended_section">Recommended wikis</string>
 
@@ -100,7 +100,7 @@
     <string name="wikis_join_search_button">Search for wikis…</string>
     <string name="wikis_join_or_id">Or enter ID directly</string>
     <string name="wikis_join_id_label">Wiki entity ID</string>
-    <string name="wikis_join_id_hint">abc123…</string>
+    <string name="wikis_join_id_hint">abc123</string>
     <string name="wikis_join_submit">Replicate wiki</string>
 
     <!-- Create wiki dialog -->
@@ -123,8 +123,8 @@
     <string name="wikis_comment_edited">(edited)</string>
     <string name="wikis_comment_delete_confirm_title">Delete comment</string>
     <string name="wikis_comment_delete_confirm_message">Are you sure you want to delete this comment? This will also delete all replies. This action cannot be undone.</string>
-    <string name="wikis_comment_form_placeholder_new">Write a comment…</string>
-    <string name="wikis_comment_form_placeholder_reply">Write a reply…</string>
+    <string name="wikis_comment_form_placeholder_new">Write a comment</string>
+    <string name="wikis_comment_form_placeholder_reply">Write a reply</string>
     <string name="wikis_comment_form_attach">Attach files</string>
     <string name="wikis_comment_form_send">Send</string>
     <string name="wikis_comment_form_remove_attachment">Remove attachment</string>
@@ -154,7 +154,7 @@
     <string name="wikis_editor_slug_hint">my-page-name</string>
     <string name="wikis_editor_slug_help">This will be the path for the page. Use lower case letters, numbers, and hyphens.</string>
     <string name="wikis_editor_content_label">Content</string>
-    <string name="wikis_editor_content_placeholder">Write your content here using Markdown…</string>
+    <string name="wikis_editor_content_placeholder">Write your content here using Markdown</string>
     <string name="wikis_editor_summary_label">Edit summary (optional)</string>
     <string name="wikis_editor_summary_hint">Briefly describe your changes</string>
     <string name="wikis_editor_title_required">Title is required</string>
@@ -227,7 +227,7 @@
     <string name="wikis_load_more">Load more</string>
 
     <!-- Wiki content search screen -->
-    <string name="wikis_search_pages_placeholder">Search pages by title or content…</string>
+    <string name="wikis_search_pages_placeholder">Search pages by title or content</string>
     <string name="wikis_search_empty_query">Enter a search term</string>
     <string name="wikis_search_no_results">No pages found for \"%1$s\". Try different search terms.</string>
     <string name="wikis_search_updated">Updated %1$s</string>
@@ -301,7 +301,7 @@
     <string name="wikis_attachments_upload_types">Supported files: images, PDF, DOC, DOCX, TXT, and MD.</string>
     <string name="wikis_attachments_upload_limits">Large uploads may be limited by your server or proxy configuration.</string>
 
-    <string name="wikis_attachments_search_placeholder">Search attachments…</string>
+    <string name="wikis_attachments_search_placeholder">Search attachments</string>
     <string name="wikis_attachments_search_clear">Clear search</string>
     <string name="wikis_attachments_filter_all">All files</string>
     <string name="wikis_attachments_filter_images">Images</string>

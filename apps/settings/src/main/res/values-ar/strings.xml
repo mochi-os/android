@@ -242,7 +242,7 @@
     <string name="route_delete_message">سيؤدي هذا إلى إزالة المسار للمسار \"%1$s\".</string>
     <string name="route_empty">لا توجد مسارات مُهيأة.</string>
     <string name="route_meta">الأولوية %1$s · %2$s</string>
-    <string name="interests_search_placeholder">ابحث عن مواضيع لإضافتها…</string>
+    <string name="interests_search_placeholder">ابحث عن مواضيع لإضافتها</string>
     <string name="interests_empty">لا توجد اهتمامات بعد.</string>
     <string name="interests_summary_regenerate">إعادة إنشاء الملخص</string>
     <string name="interests_summary_regenerating">جاري إعادة الإنشاء…</string>
@@ -266,7 +266,7 @@
     <string name="system_settings_reset_message_empty">سيؤدي هذا إلى إعادة تعيين \"%1$s\" إلى قيمته الافتراضية (فارغ).</string>
     <string name="settings_home_system_users">المستخدمون (الخادم)</string>
     <string name="system_users_add_user">إضافة مستخدم</string>
-    <string name="system_users_search_placeholder">البحث عن مستخدمين…</string>
+    <string name="system_users_search_placeholder">البحث عن مستخدمين</string>
     <string name="system_users_sort_by">ترتيب حسب</string>
     <string name="system_users_last_login">آخر تسجيل دخول: %1$s</string>
     <string name="system_users_delete_message">سيؤدي هذا إلى حذف المستخدم \"%1$s\" نهائيًا. لا يمكن التراجع عن هذا الإجراء.</string>
@@ -595,7 +595,7 @@
     <string name="handles_take">احجز اسمًا</string>
     <string name="handles_empty">لم يتم حجز أي معرّف.</string>
     <string name="handles_empty_search">لا توجد معرّفات تطابق بحثك</string>
-    <string name="handles_search_placeholder">البحث عن معرّفات…</string>
+    <string name="handles_search_placeholder">البحث عن معرّفات</string>
     <plurals name="handles_pagination_status">
         <item quantity="zero">عرض %1$s–%2$s من أصل %3$s معرّف</item>
         <item quantity="one">عرض %1$s–%2$s من أصل %3$s معرّف</item>

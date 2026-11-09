@@ -4,7 +4,6 @@
     <string name="app_name">ገበያ</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">የሕይወት ታሪክ</string>
-    <string name="market_account_biography_placeholder">ስለራስዎ ለገዢዎች ይንገሩ…</string>
     <string name="market_account_load_failed">መለያውን መጫን አልተቻለም</string>
     <string name="market_account_location_label">አካባቢ</string>
     <string name="market_account_save">ያስቀምጡ</string>
@@ -312,7 +311,7 @@
     <string name="market_listings_search_placeholder">ዝርዝሮችዎን ይፈልጉ</string>
     <string name="market_listings_share_chooser">ዝርዝር አጋራ</string>
     <string name="market_listings_title">የእኔ ዝርዝሮች</string>
-    <string name="market_messages_compose_placeholder">መልዕክት ይጻፉ…</string>
+    <string name="market_messages_compose_placeholder">መልዕክት ይጻፉ</string>
     <string name="market_messages_inbox_empty_subtitle">ሻጭን ሲልኩ (ወይም ገዢ ለእርስዎ ሲልክ) ውይይቱ እዚህ ይታያል።</string>
     <string name="market_messages_inbox_empty_title">ገና ምንም ውይይቶች የሉም</string>
     <string name="market_messages_inbox_title">መልዕክቶች</string>
@@ -427,7 +426,7 @@
     <string name="market_reviews_empty_sent_subtitle">ግምገማ ለማስቀመጥ የተጠናቀቀ ትዕዛዝ ይክፈቱ።</string>
     <string name="market_reviews_empty_sent_title">ገና ምንም ግምገማ አልጻፉም</string>
     <string name="market_reviews_response_label">ምላሽ</string>
-    <string name="market_reviews_response_placeholder">ምላሽ ይጻፉ…</string>
+    <string name="market_reviews_response_placeholder">ምላሽ ይጻፉ</string>
     <string name="market_reviews_response_submit">ምላሽ ያስገቡ</string>
     <string name="market_reviews_tab_received">ተቀብሏል</string>
     <string name="market_reviews_tab_sent">ተልኳል</string>
@@ -589,7 +588,6 @@
     <string name="market_listing_detail_seller_reviews_heading">የሻጭ ግምገማዎች</string>
     <string name="market_account_stripe_open_failed">Stripeን መክፈት አልተቻለም</string>
     <string name="market_editor_stock">ክምችት</string>
-    <string name="market_editor_stock_units">የክፍሎች ብዛት</string>
     <string name="market_editor_stock_unlimited">ያልተገደበ</string>
     <string name="market_editor_start_time">የመጀመሪያ ሰዓት</string>
     <string name="market_editor_start_time_help">በማተም ላይ ለመጀመር ባዶ ይተዉት።</string>

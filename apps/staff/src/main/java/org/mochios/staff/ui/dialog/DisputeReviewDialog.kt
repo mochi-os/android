@@ -88,9 +88,6 @@ fun DisputeReviewDialog(
                 if (!readOnly) {
                     LabeledSelectField(
                         label = stringResource(R.string.staff_disputes_resolution_label),
-                        placeholder = stringResource(
-                            R.string.staff_disputes_resolution_placeholder
-                        ),
                         options = resolutionOptions(),
                         selected = resolution,
                         onSelect = { value -> resolution = value },

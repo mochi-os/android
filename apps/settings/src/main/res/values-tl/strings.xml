@@ -238,7 +238,7 @@
     <string name="route_delete_message">Aalisin nito ang ruta para sa path na \"%1$s\".</string>
     <string name="route_empty">Walang mga naka-configure na ruta.</string>
     <string name="route_meta">Prayoridad %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Maghanap ng mga paksa na idadagdag…</string>
+    <string name="interests_search_placeholder">Maghanap ng mga paksa na idadagdag</string>
     <string name="interests_empty">Wala pang mga interes.</string>
     <string name="interests_summary_regenerate">Muling buoin ang buod</string>
     <string name="interests_summary_regenerating">Bumubuo muli…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Iri-reset nito ang \"%1$s\" sa default (walang laman).</string>
     <string name="settings_home_system_users">Mga user (server)</string>
     <string name="system_users_add_user">Magdagdag ng user</string>
-    <string name="system_users_search_placeholder">Maghanap ng mga user…</string>
+    <string name="system_users_search_placeholder">Maghanap ng mga user</string>
     <string name="system_users_sort_by">Pagbukud-bukurin ayon sa</string>
     <string name="system_users_last_login">Huling pag-log in: %1$s</string>
     <string name="system_users_delete_message">Permanenteng tatanggalin nito ang user na \"%1$s\". Hindi maaaring bawiin ang aksyong ito.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Kumuha ng pangalan</string>
     <string name="handles_empty">Walang nakareserbang palayaw.</string>
     <string name="handles_empty_search">Walang palayaw na tumutugma sa iyong paghahanap</string>
-    <string name="handles_search_placeholder">Maghanap ng palayaw…</string>
+    <string name="handles_search_placeholder">Maghanap ng palayaw</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Ipinapakita ang %1$s–%2$s sa %3$s na palayaw</item>
         <item quantity="other">Ipinapakita ang %1$s–%2$s sa %3$s na palayaw</item>

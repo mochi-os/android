@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Posunúť nadol</string>
 
     <string name="notification_channel_feeds">Upozornenia kanálov</string>
-    <string name="feeds_search_placeholder">Hľadať kanály alebo vložiť URL…</string>
+    <string name="feeds_search_placeholder">Hľadať kanály alebo vložiť URL</string>
     <string name="feeds_url_result">Výsledok URL</string>
     <string name="feeds_search_results">Výsledky vyhľadávania</string>
     <string name="feeds_unread_only">Iba neprečítané</string>
@@ -208,7 +208,6 @@
     <string name="feeds_unsubscribe_confirm_message">Prestanete dostávať aktualizácie z tohto feedu. Kedykoľvek sa môžete znova prihlásiť na odber.</string>
     <string name="feeds_access_select_rule">Vybrať pravidlo prístupu</string>
     <string name="feeds_access_authenticated_desc">Ktokoľvek, kto je prihlásený</string>
-    <string name="feeds_banner_hint">Vitajte na tomto fóre…</string>
     <string name="feeds_banner_dismiss">Zatvoriť banner</string>
     <string name="feeds_members_search">Filtrovať členov</string>
     <string name="feeds_ai_prompt_default">Predvolené</string>

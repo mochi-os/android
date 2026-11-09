@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Senda</string>
     <string name="forums_post_body_field">Meginmál</string>
-    <string name="forums_write_comment">Skrifaðu athugasemd…</string>
+    <string name="forums_write_comment">Skrifaðu athugasemd</string>
 
     <string name="notification_channel_forums">Tilkynningar fyrir spjallborð</string>
     <string name="forums_list_empty">Engin spjallborð ennþá</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Engar reglur ennþá — sjálfgildi gilda</string>
     <string name="forums_members_search">Sía meðlimi</string>
     <string name="forums_banner_description">Markdown sem birtist efst á spjallborðinu.</string>
-    <string name="forums_banner_placeholder">Sláðu inn texta borðans (markdown er stutt)…</string>
     <string name="forums_ai_mode_off">Slökkt</string>
     <string name="forums_moderation_queue_empty">Ekkert í bið</string>
     <string name="forums_moderation_report_details">Nánar: %1$s</string>

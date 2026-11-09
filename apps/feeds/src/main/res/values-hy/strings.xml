@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Տեղափոխել ներքև</string>
 
     <string name="notification_channel_feeds">Հոսքերի ծանուցումներ</string>
-    <string name="feeds_search_placeholder">Փնտրեք հոսքեր կամ տեղադրեք URL…</string>
+    <string name="feeds_search_placeholder">Փնտրեք հոսքեր կամ տեղադրեք URL</string>
     <string name="feeds_url_result">URL արդյունք</string>
     <string name="feeds_search_results">Որոնման արդյունքներ</string>
     <string name="feeds_unread_only">Միայն չկարդացածները</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Այլևս չեք ստանա այս հոսքի թարմացումները։ Կարող եք կրկին բաժանորդագրվել ցանկացած պահի։</string>
     <string name="feeds_access_select_rule">Ընտրել մուտքի կանոնը</string>
     <string name="feeds_access_authenticated_desc">Ցանկացած մուտք գործած անձ</string>
-    <string name="feeds_banner_hint">Բարի գալուստ այս ֆորում…</string>
     <string name="feeds_banner_dismiss">Հեռացնել բաններն</string>
     <string name="feeds_members_search">Զտել անդամներին</string>
     <string name="feeds_ai_prompt_default">Լռելյայն</string>

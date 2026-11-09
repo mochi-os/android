@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">보내기</string>
     <string name="forums_post_body_field">본문</string>
-    <string name="forums_write_comment">댓글 작성…</string>
+    <string name="forums_write_comment">댓글 작성</string>
 
     <string name="notification_channel_forums">포럼 알림</string>
     <string name="forums_list_empty">아직 포럼이 없습니다</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">아직 규칙이 없습니다 — 기본값이 적용됩니다</string>
     <string name="forums_members_search">구성원 필터</string>
     <string name="forums_banner_description">포럼 상단에 표시되는 Markdown입니다.</string>
-    <string name="forums_banner_placeholder">배너 텍스트 입력(Markdown 지원)…</string>
     <string name="forums_ai_mode_off">비활성화됨</string>
     <string name="forums_moderation_queue_empty">대기 중인 항목이 없습니다</string>
     <string name="forums_moderation_report_details">세부 정보: %1$s</string>

@@ -238,7 +238,7 @@
     <string name="route_delete_message">Bu \"%1$s\" ýolu üçin marşruty aýyrar.</string>
     <string name="route_empty">Sazlanan ýollar ýok.</string>
     <string name="route_meta">Ileri tutulma %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Goşmak üçin temalary gözläň…</string>
+    <string name="interests_search_placeholder">Goşmak üçin temalary gözläň</string>
     <string name="interests_empty">Heniz gyzyklanmalar ýok.</string>
     <string name="interests_summary_regenerate">Gysgaça beýany gaýtadan döret</string>
     <string name="interests_summary_regenerating">Täzeden döredilýär…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Bu \"%1$s\" adaty (boş) gaýtarar.</string>
     <string name="settings_home_system_users">Ulanyjylar (server)</string>
     <string name="system_users_add_user">Ulanyjy goş</string>
-    <string name="system_users_search_placeholder">Ulanyjylary gözle…</string>
+    <string name="system_users_search_placeholder">Ulanyjylary gözle</string>
     <string name="system_users_sort_by">Tertiplemek</string>
     <string name="system_users_last_login">Iň soňky giriş: %1$s</string>
     <string name="system_users_delete_message">Bu ulanyjyny \"%1$s\" hemişelik pozar. Bu hereketi yzyna gaýtaryp bolmaýar.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">At almak</string>
     <string name="handles_empty">Hiç hili lakam bronlanmadyk.</string>
     <string name="handles_empty_search">Gözlegiňize laýyk gelýän lakamlar ýok</string>
-    <string name="handles_search_placeholder">Lakamlary gözle…</string>
+    <string name="handles_search_placeholder">Lakamlary gözle</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s lakamdan %1$s–%2$s aralygy görkezilýär</item>
         <item quantity="other">%3$s lakamdan %1$s–%2$s aralygy görkezilýär</item>

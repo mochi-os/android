@@ -49,6 +49,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -363,16 +365,15 @@ internal fun BiographyField(
             fontWeight = FontWeight.SemiBold,
         )
         Spacer(modifier = Modifier.size(8.dp))
+        val label = stringResource(R.string.market_account_biography_label)
         MochiTextField(
             value = value,
             onValueChange = onChange,
-            placeholder = {
-                Text(stringResource(R.string.market_account_biography_placeholder))
-            },
             minLines = 4,
             maxLines = 8,
             shape = RoundedCornerShape(10.dp),
-            modifier = Modifier.fillMaxWidth(),
+            // Named by the caption above it, as an empty field shows nothing.
+            modifier = Modifier.fillMaxWidth().semantics { contentDescription = label },
         )
         Text(
             text = stringResource(

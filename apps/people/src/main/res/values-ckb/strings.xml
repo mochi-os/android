@@ -6,7 +6,7 @@
     <string name="people_groups_title">گرووپەکان</string>
     <string name="people_group_title">گرووپ</string>
     <string name="people_person_title">کەس</string>
-    <string name="people_friends_search_placeholder">گەڕان…</string>
+    <string name="people_friends_search_placeholder">گەڕان</string>
     <string name="people_friends_no_people_found">هیچ کەسێک نەدۆزرایەوە</string>
     <string name="people_friends_try_adjusting">هەوڵبدە گەڕانەکەت ڕێکبخەیت</string>
     <string name="people_friends_pending">چاوەڕوان</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">گروپی \"%1$s\" بسڕیتەوە؟ ئەمە ناتوانرێت بگەڕێنرێتەوە.</string>
     <string name="people_member_remove_confirm">دڵنیایت لە لابردنی %1$s لەم گروپە؟</string>
     <string name="people_member_remove_with_name">لابردنی %1$s</string>
-    <string name="people_member_search_placeholder">ناو بنووسە بۆ گەڕان…</string>
+    <string name="people_member_search_placeholder">ناو بنووسە بۆ گەڕان</string>
     <string name="people_groups_add_member_confirm_title">زیادکردن بۆ گروپ</string>
     <string name="people_groups_add_member_confirm_action">زیادکردن بۆ گروپ</string>
     <string name="people_profile_image_process_failed">نەتوانرا وێنەی %1$s پرۆسێس بکرێت</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">بارکردنی تایبەتمەندی بانگهێشتەکەت سەرکەوتوو نەبوو</string>
     <string name="people_profile_avatar">ئەڤاتار</string>
     <string name="people_profile_banner">بانەر</string>
-    <string name="people_contacts_search_placeholder">گەڕان…</string>
+    <string name="people_contacts_search_placeholder">گەڕان</string>
     <string name="people_contacts_invited">بانگهێشتکراو</string>
     <string name="people_contacts_accept">وەرگرتن</string>
     <string name="people_contacts_message">پەیام بنێرە</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">بەم دواییە زیادکراو</string>
     <string name="people_contacts_try_different_search">وشەیەکی گەڕانی جیاواز هەوڵبدە</string>
     <string name="people_contacts_unfriend">لابردنی هاوڕێ</string>
-    <string name="people_add_contact_search_placeholder">بنووسە بۆ گەڕان…</string>
+    <string name="people_add_contact_search_placeholder">بنووسە بۆ گەڕان</string>
     <string name="people_add_contact_search_start">دەستپێبکە بە نووسین بۆ گەڕان لە بەکارهێنەران</string>
     <string name="people_contact_phone">تەلەفۆن</string>
     <string name="people_contact_title">ناونیشانی شوێنی کار</string>

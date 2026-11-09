@@ -115,7 +115,7 @@
     <string name="settings_background_theme">ਥੀਮ ਤੋਂ</string>
     <string name="settings_background_off">ਕੋਈ ਨਹੀਂ</string>
     <string name="game_chat_empty">ਅਜੇ ਕੋਈ ਸੁਨੇਹੇ ਨਹੀਂ</string>
-    <string name="game_chat_input_placeholder">ਸੁਨੇਹਾ ਟਾਈਪ ਕਰੋ…</string>
+    <string name="game_chat_input_placeholder">ਸੁਨੇਹਾ ਟਾਈਪ ਕਰੋ</string>
     <string name="game_chat_send">ਸੁਨੇਹਾ ਭੇਜੋ</string>
     <string name="game_chat_subject_you">ਤੁਸੀਂ</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਇਹ ਤੁਸੀਂ ਹੋ</string>
     <string name="stepup_description">ਇਹ ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚ ਸੁਰੱਖਿਆ ਤਬਦੀਲੀ ਹੈ। ਜਾਰੀ ਰੱਖਣ ਲਈ ਪੁਸ਼ਟੀ ਕਰੋ ਕਿ ਇਹ ਤੁਸੀਂ ਹੋ।</string>
     <string name="stepup_email_label">ਈਮੇਲ ਕੋਡ</string>
-    <string name="stepup_email_placeholder">ਆਪਣੀ ਈਮੇਲ ਵਿੱਚੋਂ ਕੋਡ ਦਾਖਲ ਕਰੋ</string>
     <string name="stepup_totp_label">ਪ੍ਰਮਾਣਕ ਕੋਡ</string>
-    <string name="stepup_totp_placeholder">ਆਪਣਾ ਪ੍ਰਮਾਣੀਕਰਤਾ ਕੋਡ ਦਾਖਲ ਕਰੋ</string>
     <string name="stepup_use_passkey">ਆਪਣੀ ਪਾਸਕੀ ਵਰਤੋ</string>
     <string name="stepup_send_email">ਈਮੇਲ ਭੇਜੋ</string>
     <string name="stepup_resend_email">ਈਮੇਲ ਦੁਬਾਰਾ ਭੇਜੋ</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">ਟੈਗ ਹਟਾਓ</string>
     <string name="person_picker_none">ਕੋਈ ਨਹੀਂ</string>
     <string name="person_picker_clear">ਚੋਣ ਸਾਫ਼ ਕਰੋ</string>
-    <string name="person_picker_select">ਚੁਣੋ …</string>
+    <string name="person_picker_select">ਚੁਣੋ</string>
     <string name="person_picker_directory">ਡਾਇਰੈਕਟਰੀ</string>
     <string name="person_picker_no_people">ਕੋਈ ਲੋਕ ਨਹੀਂ</string>
     <string name="person_picker_project_members">ਪ੍ਰੋਜੈਕਟ ਮੈਂਬਰ</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">ਨੋਟੀਫਿਕੇਸ਼ਨ ਸ਼੍ਰੇਣੀ ਬਦਲੋ</string>
     <string name="lightbox_comments_none">ਇਸ ਤਸਵੀਰ \'ਤੇ ਹਾਲੇ ਕੋਈ ਟਿੱਪਣੀ ਨਹੀਂ।</string>
     <string name="lightbox_comments_only">ਸਿਰਫ਼ ਇਸ ਤਸਵੀਰ ਦੀਆਂ ਟਿੱਪਣੀਆਂ ਦਿਖਾਓ</string>
-    <string name="lightbox_comment_placeholder">ਇਸ ਤਸਵੀਰ \'ਤੇ ਟਿੱਪਣੀ ਕਰੋ…</string>
+    <string name="lightbox_comment_placeholder">ਇਸ ਤਸਵੀਰ \'ਤੇ ਟਿੱਪਣੀ ਕਰੋ</string>
     <string name="comment_anchor_open">ਉਹ ਤਸਵੀਰ ਦੇਖੋ ਜਿਸ ਬਾਰੇ ਇਹ ਟਿੱਪਣੀ ਹੈ</string>
     <string name="comment_anchor_default">ਇਸ ਤਸਵੀਰ \'ਤੇ</string>
     <plurals name="lightbox_comments_others">

@@ -3,7 +3,6 @@
     <string name="app_name">Базар</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Биография</string>
-    <string name="market_account_biography_placeholder">Сатып алуучуларга өзүңүз жөнүндө айтыңыз…</string>
     <string name="market_account_load_failed">Эсепти жүктөө мүмкүн болгон жок</string>
     <string name="market_account_location_label">Жайгашкан жери</string>
     <string name="market_account_save">Сактоо</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Жаңы жарнама</string>
     <string name="market_listings_relist_failed">Кайра жарнамалоо ишке ашкан жок</string>
     <string name="market_listings_title">Менин жарнамаларым</string>
-    <string name="market_messages_compose_placeholder">Билдирүү жазуу…</string>
+    <string name="market_messages_compose_placeholder">Билдирүү жазуу</string>
     <string name="market_messages_inbox_title">Билдирүүлөр</string>
     <string name="market_messages_send">Жөнөтүү</string>
     <string name="market_messages_thread_title">Сүйлөшүү</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Сатып алуучулар жана сатуучулар буйрутма аякталгандан кийин бири-бирин баалай алышат.</string>
     <string name="market_reviews_empty_sent_subtitle">Баалоо калтыруу үчүн аякталган буйрутманы ачыңыз.</string>
     <string name="market_reviews_empty_sent_title">Сиз эч кандай баалоо жазган жоксуз</string>
-    <string name="market_reviews_response_placeholder">Жоопту жазыңыз…</string>
+    <string name="market_reviews_response_placeholder">Жоопту жазыңыз</string>
     <string name="market_sale_carrier_custom_label">Жеткирүүчүнүн аты</string>
     <string name="market_sale_dispute_evidence_due">Далилдер %1$s чейин</string>
     <string name="market_sale_dispute_stripe_reason">Stripe чарджбэк себеби: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Сатуучу жөнүндө пикирлер</string>
     <string name="market_account_stripe_open_failed">Stripe ачылган жок</string>
     <string name="market_editor_stock">Запас</string>
-    <string name="market_editor_stock_units">Бирдиктердин саны</string>
     <string name="market_editor_stock_unlimited">Чексиз</string>
     <string name="market_editor_start_time">Башталуу убактысы</string>
     <string name="market_editor_start_time_help">Жарыялоодо баштоо үчүн бош калтырыңыз.</string>

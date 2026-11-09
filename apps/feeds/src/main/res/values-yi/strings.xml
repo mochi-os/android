@@ -86,7 +86,7 @@
     <string name="feeds_move_down">באַוועגן אַראָפּ</string>
 
     <string name="notification_channel_feeds">פֿידס באַנאַכריכטיקונגען</string>
-    <string name="feeds_search_placeholder">זוכן פֿידס אָדער אַרײַנקלעפּן URL…</string>
+    <string name="feeds_search_placeholder">זוכן פֿידס אָדער אַרײַנקלעפּן URL</string>
     <string name="feeds_url_result">URL רעזולטאַט</string>
     <string name="feeds_search_results">זוך רעזולטאַטן</string>
     <string name="feeds_unread_only">נאָר אומגעלײענטע</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">איר וועט מער ניט באַקומען נײַעס פֿון דעם פֿיד. איר קענט זיך ווידער אײַנשרײַבן ווען נאָר איר ווילט.</string>
     <string name="feeds_access_select_rule">קלײַב צוטריט כּלל</string>
     <string name="feeds_access_authenticated_desc">יעדער וואָס איז אײַנגעלאָגט</string>
-    <string name="feeds_banner_hint">ברוכים הבאים צו דעם פֿאָרום…</string>
     <string name="feeds_banner_dismiss">אַראָפּזאָגן באַנער</string>
     <string name="feeds_members_search">פֿילטרירן מיטגלידער</string>
     <string name="feeds_ai_prompt_default">סטאַנדאַרד</string>

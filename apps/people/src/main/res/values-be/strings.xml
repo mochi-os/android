@@ -6,7 +6,7 @@
     <string name="people_groups_title">Групы</string>
     <string name="people_group_title">Група</string>
     <string name="people_person_title">Чалавек</string>
-    <string name="people_friends_search_placeholder">Пошук…</string>
+    <string name="people_friends_search_placeholder">Пошук</string>
     <string name="people_friends_no_people_found">Людзі не знойдзены</string>
     <string name="people_friends_try_adjusting">Паспрабуйце наладзіць пошук</string>
     <string name="people_friends_pending">У чаканні</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Выдаліць групу \"%1$s\"? Гэта нельга адмяніць.</string>
     <string name="people_member_remove_confirm">Вы сапраўды хочаце выдаліць %1$s з гэтай групы?</string>
     <string name="people_member_remove_with_name">Выдаліць %1$s</string>
-    <string name="people_member_search_placeholder">Увядзіце імя для пошуку…</string>
+    <string name="people_member_search_placeholder">Увядзіце імя для пошуку</string>
     <string name="people_groups_add_member_confirm_title">Дадаць у групу</string>
     <string name="people_groups_add_member_confirm_action">Дадаць у групу</string>
     <string name="people_profile_image_process_failed">Не ўдалося апрацаваць выяву %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Не ўдалося загрузіць вашу палітыку запрашэнняў</string>
     <string name="people_profile_avatar">Аватар</string>
     <string name="people_profile_banner">Банер</string>
-    <string name="people_contacts_search_placeholder">Пошук…</string>
+    <string name="people_contacts_search_placeholder">Пошук</string>
     <string name="people_contacts_invited">Запрошаны</string>
     <string name="people_contacts_accept">Прыняць</string>
     <string name="people_contacts_message">Напісаць</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Нядаўна дададзена</string>
     <string name="people_contacts_try_different_search">Паспрабуйце іншы пошукавы запыт</string>
     <string name="people_contacts_unfriend">Выдаліць сябра</string>
-    <string name="people_add_contact_search_placeholder">Пачніце ўводзіць для пошуку…</string>
+    <string name="people_add_contact_search_placeholder">Пачніце ўводзіць для пошуку</string>
     <string name="people_add_contact_search_start">Пачніце ўводзіць, каб шукаць карыстальнікаў</string>
     <string name="people_contact_phone">Тэлефон</string>
     <string name="people_contact_title">Пасада</string>

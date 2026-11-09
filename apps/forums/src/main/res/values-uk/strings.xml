@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Надіслати</string>
     <string name="forums_post_body_field">Текст</string>
-    <string name="forums_write_comment">Напишіть коментар…</string>
+    <string name="forums_write_comment">Напишіть коментар</string>
 
     <string name="notification_channel_forums">Сповіщення форумів</string>
     <string name="forums_list_empty">Поки немає форумів</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Правил поки немає — застосовуються типові</string>
     <string name="forums_members_search">Фільтрувати учасників</string>
     <string name="forums_banner_description">Markdown, що відображається у верхній частині форуму.</string>
-    <string name="forums_banner_placeholder">Введіть текст банера (підтримується Markdown)…</string>
     <string name="forums_ai_mode_off">Вимкнено</string>
     <string name="forums_moderation_queue_empty">Нічого не очікує</string>
     <string name="forums_moderation_report_details">Подробиці: %1$s</string>

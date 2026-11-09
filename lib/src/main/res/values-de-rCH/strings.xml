@@ -213,7 +213,7 @@
     <string name="settings_display_reset_confirm_message">Dadurch werden die Anzeigeeinstellungen auf die Standardwerte zurückgesetzt.</string>
     <string name="settings_background">Hintergrund</string>
     <string name="game_chat_empty">Noch keine Nachrichten</string>
-    <string name="game_chat_input_placeholder">Nachricht eingeben…</string>
+    <string name="game_chat_input_placeholder">Nachricht eingeben</string>
     <string name="game_chat_send">Nachricht senden</string>
 
     <string name="reactivation_title">Ihr Konto ist zur Löschung vorgemerkt</string>
@@ -236,9 +236,7 @@
     <string name="stepup_title">Bestätigen Sie, dass Sie es sind</string>
     <string name="stepup_description">Dies ist eine sicherheitsrelevante Änderung an Ihrem Konto. Bestätigen Sie Ihre Identität, um fortzufahren.</string>
     <string name="stepup_email_label">E-Mail-Code</string>
-    <string name="stepup_email_placeholder">Code aus deiner E-Mail eingeben</string>
     <string name="stepup_totp_label">Authenticator-Code</string>
-    <string name="stepup_totp_placeholder">Code Ihrer Authenticator-App eingeben</string>
     <string name="stepup_use_passkey">Passkey verwenden</string>
     <string name="stepup_send_email">E-Mail senden</string>
     <string name="stepup_resend_email">E-Mail erneut senden</string>
@@ -259,7 +257,7 @@
     <string name="tags_none">Keine Tags</string>
     <string name="tags_delete">Tag entfernen</string>
     <string name="person_picker_none">Keine</string>
-    <string name="person_picker_select">Auswählen …</string>
+    <string name="person_picker_select">Auswählen</string>
     <string name="person_picker_directory">Verzeichnis</string>
     <string name="person_picker_no_people">Keine Personen</string>
     <string name="person_picker_project_members">Projektmitglieder</string>

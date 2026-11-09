@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">فیصلہ کریں</string>
     <string name="staff_appeals_decision_denied">فہرست کو مسترد رکھیں</string>
     <string name="staff_appeals_decision_label">فیصلہ</string>
-    <string name="staff_appeals_decision_placeholder">فیصلہ منتخب کریں</string>
     <string name="staff_appeals_decision_upheld">فہرست کی منظوری</string>
     <string name="staff_appeals_denied_toast">اپیل مسترد</string>
     <string name="staff_appeals_dialog_title">اپیل کا فیصلہ کریں</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">ریفنڈ کی رقم صفر سے زیادہ ہونی چاہیے</string>
     <string name="staff_disputes_resolution_buyer">خریدار کے حق میں حل کریں</string>
     <string name="staff_disputes_resolution_label">حل</string>
-    <string name="staff_disputes_resolution_placeholder">حل منتخب کریں</string>
     <string name="staff_disputes_resolution_seller">بیچنے والے کے حق میں حل کریں</string>
     <string name="staff_disputes_resolve">حل کریں</string>
     <string name="staff_disputes_resolved_toast">تنازعہ حل ہو گیا</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">صارف پر پابندی لگائیں</string>
     <string name="staff_reports_action_dismiss">برخاست کریں</string>
     <string name="staff_reports_action_label">ایکشن</string>
-    <string name="staff_reports_action_placeholder">ایکشن منتخب کریں</string>
     <string name="staff_reports_action_remove">ہٹائیں</string>
     <string name="staff_reports_action_suspend">بیچنے والے کے طور پر معطل کریں</string>
     <string name="staff_reports_action_taken_toast">رپورٹ پر کارروائی کی گئی</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">شخص</string>
     <string name="staff_team_dialog_role">کردار</string>
     <string name="staff_team_dialog_role_placeholder">کردار منتخب کریں</string>
-    <string name="staff_team_dialog_search_placeholder">نام، فنگرپرنٹ یا ID سے تلاش کریں…</string>
+    <string name="staff_team_dialog_search_placeholder">نام، فنگرپرنٹ یا ID سے تلاش کریں</string>
     <string name="staff_team_empty">کوئی ٹیم ممبران نہیں</string>
     <string name="staff_team_remove_confirm">ہٹائیں</string>
     <string name="staff_team_remove_desc">اس ممبر کو عملے کی ٹیم سے ہٹائیں؟</string>

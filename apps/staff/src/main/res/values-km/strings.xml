@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">សម្រេច</string>
     <string name="staff_appeals_decision_denied">រក្សាការដាក់លក់ដែលបានបដិសេធ</string>
     <string name="staff_appeals_decision_label">ការសម្រេច</string>
-    <string name="staff_appeals_decision_placeholder">ជ្រើសរើសការសម្រេចចិត្ត</string>
     <string name="staff_appeals_decision_upheld">យល់ព្រមបញ្ជី</string>
     <string name="staff_appeals_denied_toast">បណ្ដឹងឧទ្ធរណ៍ត្រូវបានបដិសេធ</string>
     <string name="staff_appeals_dialog_title">សម្រេចបណ្ដឹងឧទ្ធរណ៍</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">ចំនួនទឹកប្រាក់សងវិញត្រូវតែធំជាងសូន្យ</string>
     <string name="staff_disputes_resolution_buyer">ដោះស្រាយសម្រាប់អ្នកទិញ</string>
     <string name="staff_disputes_resolution_label">ដំណោះស្រាយ</string>
-    <string name="staff_disputes_resolution_placeholder">ជ្រើសរើសគុណភាពបង្ហាញ</string>
     <string name="staff_disputes_resolution_seller">ដោះស្រាយសម្រាប់អ្នកលក់</string>
     <string name="staff_disputes_resolve">ដោះស្រាយ</string>
     <string name="staff_disputes_resolved_toast">បានដោះស្រាយវិវាទ</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">ហាមឃាត់អ្នកប្រើប្រាស់</string>
     <string name="staff_reports_action_dismiss">ច្រានចោល</string>
     <string name="staff_reports_action_label">សកម្មភាព</string>
-    <string name="staff_reports_action_placeholder">ជ្រើសរើសសកម្មភាព</string>
     <string name="staff_reports_action_remove">យកចេញ</string>
     <string name="staff_reports_action_suspend">ផ្អាកជាអ្នកលក់</string>
     <string name="staff_reports_action_taken_toast">បានចាត់វិធានការរបាយការណ៍</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ការបញ្ជាទិញ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s នៅលើ %3$s។ លុបការវាយតម្លៃនេះជាអចិន្ត្រៃយ៍? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s។ លុបការវាយតម្លៃនេះជាអចិន្ត្រៃយ៍? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
-    <string name="staff_team_dialog_search_placeholder">ស្វែងរកតាមឈ្មោះ ស្នាមម្រាមដៃ ឬលេខសម្គាល់…</string>
+    <string name="staff_team_dialog_search_placeholder">ស្វែងរកតាមឈ្មោះ ស្នាមម្រាមដៃ ឬលេខសម្គាល់</string>
 
     <string name="staff_config_field_stripe_webhook">សម្ងាត់ចុះហត្ថលេខា Webhook</string>
     <string name="staff_disputes_meta_already_refunded">បានសងវិញរួចហើយ</string>

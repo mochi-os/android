@@ -115,7 +115,7 @@
     <string name="settings_background_theme">थीम से</string>
     <string name="settings_background_off">कुछुओ ना</string>
     <string name="game_chat_empty">अबहीं तक कौनो संदेश नइखे</string>
-    <string name="game_chat_input_placeholder">एगो संदेश टाइप करीं…</string>
+    <string name="game_chat_input_placeholder">एगो संदेश टाइप करीं</string>
     <string name="game_chat_send">संदेश भेजीं</string>
     <string name="game_chat_subject_you">आप</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">पुष्टि करीं कि ई रउआ बानी</string>
     <string name="stepup_description">ई रउआ खाता में सुरक्षा बदलाव बा। आगे बढ़े खातिर पुष्टि करीं कि ई रउआ बानी।</string>
     <string name="stepup_email_label">ईमेल कोड</string>
-    <string name="stepup_email_placeholder">आपन ईमेल से आइल कोड डालीं</string>
     <string name="stepup_totp_label">ऑथेंटिकेटर कोड</string>
-    <string name="stepup_totp_placeholder">आपन प्रमाणक कोड डालीं</string>
     <string name="stepup_use_passkey">आपन पासकी इस्तेमाल करीं</string>
     <string name="stepup_send_email">ईमेल भेजीं</string>
     <string name="stepup_resend_email">ईमेल फिर से भेजीं</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">टैग हटाईं</string>
     <string name="person_picker_none">कुछुओ ना</string>
     <string name="person_picker_clear">चयन साफ करीं</string>
-    <string name="person_picker_select">चुनीं …</string>
+    <string name="person_picker_select">चुनीं</string>
     <string name="person_picker_directory">निर्देशिका</string>
     <string name="person_picker_no_people">कोई लोग नइखे</string>
     <string name="person_picker_project_members">परियोजना के सदस्य</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">सूचना के श्रेणी बदलीं</string>
     <string name="lightbox_comments_none">ई तस्वीर पर अभी कवनो टिप्पणी नइखे।</string>
     <string name="lightbox_comments_only">खाली ई तस्वीर के टिप्पणी देखाईं</string>
-    <string name="lightbox_comment_placeholder">ई तस्वीर पर टिप्पणी करीं…</string>
+    <string name="lightbox_comment_placeholder">ई तस्वीर पर टिप्पणी करीं</string>
     <string name="comment_anchor_open">ई टिप्पणी जवना तस्वीर के बारे में बा ऊ देखीं</string>
     <string name="comment_anchor_default">ई तस्वीर पर</string>
     <plurals name="lightbox_comments_others">

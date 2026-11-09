@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Erabaki</string>
     <string name="staff_appeals_decision_denied">Mantendu zerrendapena errefusatuta</string>
     <string name="staff_appeals_decision_label">Erabakia</string>
-    <string name="staff_appeals_decision_placeholder">Hautatu erabakia</string>
     <string name="staff_appeals_decision_upheld">Onartu zerrenda</string>
     <string name="staff_appeals_denied_toast">Helegitea ukatua</string>
     <string name="staff_appeals_dialog_title">Erabaki helegitea</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Itzulketaren zenbatekoa zerotik handiagoa izan behar da</string>
     <string name="staff_disputes_resolution_buyer">Ebatzi eroslearen alde</string>
     <string name="staff_disputes_resolution_label">Ebazpena</string>
-    <string name="staff_disputes_resolution_placeholder">Hautatu ebazpena</string>
     <string name="staff_disputes_resolution_seller">Ebatzi saltzailearen alde</string>
     <string name="staff_disputes_resolve">Ebatzi</string>
     <string name="staff_disputes_resolved_toast">Eztabaida ebatzia</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Debekatu erabiltzailea</string>
     <string name="staff_reports_action_dismiss">Baztertu</string>
     <string name="staff_reports_action_label">Ekintza</string>
-    <string name="staff_reports_action_placeholder">Hautatu ekintza</string>
     <string name="staff_reports_action_remove">Kendu</string>
     <string name="staff_reports_action_suspend">Eten saltzaile gisa</string>
     <string name="staff_reports_action_taken_toast">Salaketa-ekintza hartu da</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Pertsona</string>
     <string name="staff_team_dialog_role">Rola</string>
     <string name="staff_team_dialog_role_placeholder">Hautatu rola</string>
-    <string name="staff_team_dialog_search_placeholder">Bilatu izenez, hatz-marka edo ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Bilatu izenez, hatz-marka edo ID</string>
     <string name="staff_team_empty">Talde-kiderik ez</string>
     <string name="staff_team_remove_confirm">Kendu</string>
     <string name="staff_team_remove_desc">Kide hau langile-taldetik kendu?</string>

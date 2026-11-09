@@ -6,7 +6,7 @@
     <string name="people_groups_title">Skupine</string>
     <string name="people_group_title">Skupina</string>
     <string name="people_person_title">Oseba</string>
-    <string name="people_friends_search_placeholder">Iskanje…</string>
+    <string name="people_friends_search_placeholder">Iskanje</string>
     <string name="people_friends_no_people_found">Oseb ni mogoče najti</string>
     <string name="people_friends_try_adjusting">Poskusi prilagoditi iskanje</string>
     <string name="people_friends_pending">V obdelavi</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Izbrišem skupino \"%1$s\"? Tega ni mogoče razveljaviti.</string>
     <string name="people_member_remove_confirm">Ali ste prepričani, da želite odstraniti %1$s iz te skupine?</string>
     <string name="people_member_remove_with_name">Odstrani %1$s</string>
-    <string name="people_member_search_placeholder">Vnesite ime za iskanje…</string>
+    <string name="people_member_search_placeholder">Vnesite ime za iskanje</string>
     <string name="people_groups_add_member_confirm_title">Dodaj v skupino</string>
     <string name="people_groups_add_member_confirm_action">Dodaj v skupino</string>
     <string name="people_profile_image_process_failed">Slike %1$s ni bilo mogoče obdelati</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Nalaganje vašega pravilnika o povabilih ni uspelo</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Pasica</string>
-    <string name="people_contacts_search_placeholder">Iskanje…</string>
+    <string name="people_contacts_search_placeholder">Iskanje</string>
     <string name="people_contacts_invited">Povabljen</string>
     <string name="people_contacts_accept">Sprejmi</string>
     <string name="people_contacts_message">Pošlji sporočilo</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Nedavno dodano</string>
     <string name="people_contacts_try_different_search">Poskusi z drugačnim iskalnim izrazom</string>
     <string name="people_contacts_unfriend">Odstrani prijatelja</string>
-    <string name="people_add_contact_search_placeholder">Vnesite za iskanje…</string>
+    <string name="people_add_contact_search_placeholder">Vnesite za iskanje</string>
     <string name="people_add_contact_search_start">Začni tipkati za iskanje uporabnikov</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Naziv delovnega mesta</string>

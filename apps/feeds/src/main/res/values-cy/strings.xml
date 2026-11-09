@@ -89,7 +89,7 @@
     <string name="feeds_ai_account">Cyfrif AI</string>
 
     <string name="notification_channel_feeds">Hysbysiadau ffrydiau</string>
-    <string name="feeds_search_placeholder">Chwilio ffrydiau neu gludo URL…</string>
+    <string name="feeds_search_placeholder">Chwilio ffrydiau neu gludo URL</string>
     <string name="feeds_url_result">Canlyniad URL</string>
     <string name="feeds_search_results">Canlyniadau chwilio</string>
     <string name="feeds_unread_only">Heb eu darllen yn unig</string>
@@ -214,7 +214,6 @@
     <string name="feeds_unsubscribe_confirm_message">Byddwch yn stopio derbyn diweddariadau o\'r ffrwd hon. Gallwch ail-danysgrifio unrhyw bryd.</string>
     <string name="feeds_access_select_rule">Dewiswch reol mynediad</string>
     <string name="feeds_access_authenticated_desc">Unrhyw un sydd wedi mewngofnodi</string>
-    <string name="feeds_banner_hint">Croeso i\'r fforwm hwn…</string>
     <string name="feeds_banner_dismiss">Diystyru baner</string>
     <string name="feeds_members_search">Hidlo aelodau</string>
     <string name="feeds_ai_prompt_default">Diofyn</string>

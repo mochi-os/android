@@ -224,7 +224,7 @@
     <string name="market_listings_new">Listado pyahu</string>
     <string name="market_listings_relist_failed">Ndaikatúi oñemoherakuã jey</string>
     <string name="market_listings_title">Che listadokuéra</string>
-    <string name="market_messages_compose_placeholder">Ehai ñe\'ẽmondo…</string>
+    <string name="market_messages_compose_placeholder">Ehai ñe\'ẽmondo</string>
     <string name="market_messages_inbox_title">Ñe\'ẽmondokuéra</string>
     <string name="market_messages_send">Emondo</string>
     <string name="market_messages_thread_title">Ñomongeta</string>
@@ -396,7 +396,6 @@
     <string name="market_purchase_dispute_response">Ñemuhára mbohovái</string>
     <string name="market_refund_dialog_amount_label">Atýra</string>
 
-    <string name="market_account_biography_placeholder">Emombe\'u ojoguávakuérape nde rehegua…</string>
     <string name="market_account_load_failed">Ndaikatúi oñemyanyhẽ pe mba\'ete</string>
     <string name="market_account_saved">Oñeñongatu umi moambue</string>
     <string name="market_account_status_restrictions">Heta tembiapo, oikehápe listado pyahu ñemoheñói ha pedido ñemohu\'ã, ojejoko ne mba\'ete oĩ aja ko estado-pe.</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Ojoguávakuéra ha ñemuhárakuéra ikatu ohai reseña ojupe peteĩ pedido opa rire.</string>
     <string name="market_reviews_empty_sent_subtitle">Eipe\'a peteĩ pedido opámava rehai hag̃ua reseña.</string>
     <string name="market_reviews_empty_sent_title">Nderehaíri gueteri mba\'eveichagua reseña</string>
-    <string name="market_reviews_response_placeholder">Ehai peteĩ mbohovái…</string>
+    <string name="market_reviews_response_placeholder">Ehai peteĩ mbohovái</string>
     <string name="market_sale_carrier_custom_label">Ogueraháva réra</string>
     <string name="market_sale_dispute_evidence_due">Techaukaha oikotevẽva %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe contracargo mba\'érepa: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Ñemuhára reseñakuéra</string>
     <string name="market_account_stripe_open_failed">Ndaikatúi ojeipe\'a Stripe</string>
     <string name="market_editor_stock">Stock</string>
-    <string name="market_editor_stock_units">Unidad papapy</string>
     <string name="market_editor_stock_unlimited">Límite\'ỹre</string>
     <string name="market_editor_start_time">Ñepyrũ aravo</string>
     <string name="market_editor_start_time_help">Eheja nandi oñepyrũ hag̃ua remoherakuãvo.</string>

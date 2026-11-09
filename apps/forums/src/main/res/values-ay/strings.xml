@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Janirakiw kamachinakax utjkiti — kunjamäkis uka apnaqasiniwa</string>
     <string name="forums_members_search">Integrantenak filtraña</string>
     <string name="forums_banner_description">Markdown ukax foron patxana uñstayatawa.</string>
-    <string name="forums_banner_placeholder">Banner texto qillqam (markdown apnaqasispa)…</string>
     <string name="forums_ai_mode_off">Desactivata</string>
     <string name="forums_moderation_queue_empty">Moderación filax ch\'usawa</string>
     <string name="forums_moderation_report_details">Detallenaka: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">%1$s tukusi</string>
     <string name="forums_moderation_restriction_permanent">Wiñayataki</string>
     <string name="forums_report_reason_hate">Uñiña</string>
-    <string name="forums_write_comment">Mä comentario qillqam…</string>
+    <string name="forums_write_comment">Mä comentario qillqam</string>
     <string name="forums_comment_delete_message">¿Chiqpach aka comentario chhaqtayañ muntati?</string>
     <string name="forums_comment_replying_to">%1$s ukar jaysaski</string>
     <string name="forums_comment_clear_reply">Jaysawi chhaqtayaña</string>

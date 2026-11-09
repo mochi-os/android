@@ -237,7 +237,7 @@
     <string name="route_delete_message">ဤသည် လမ်းကြောင်း \"%1$s\" အတွက် လမ်းကြောင်းကို ဖယ်ရှားပါမည်။</string>
     <string name="route_empty">စီစဉ်ထားသော လမ်းကြောင်းများ မရှိပါ။</string>
     <string name="route_meta">ဦးစားပေး %1$s · %2$s</string>
-    <string name="interests_search_placeholder">ထည့်ရန် ခေါင်းစဉ်များ ရှာဖွေပါ…</string>
+    <string name="interests_search_placeholder">ထည့်ရန် ခေါင်းစဉ်များ ရှာဖွေပါ</string>
     <string name="interests_empty">စိတ်ဝင်စားမှုများ မရှိသေးပါ။</string>
     <string name="interests_summary_regenerate">အကျဉ်းချုပ် ပြန်ထုတ်</string>
     <string name="interests_summary_regenerating">ပြန်ထုတ်နေသည်…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">ဤသည် \"%1$s\" ကို ပုံမှန် (ဗလာ) သို့ ပြန်လည် သတ်မှတ်ပါမည်။</string>
     <string name="settings_home_system_users">အသုံးပြုသူများ (ဆာဗာ)</string>
     <string name="system_users_add_user">အသုံးပြုသူ ထည့်ပါ</string>
-    <string name="system_users_search_placeholder">အသုံးပြုသူများ ရှာဖွေပါ…</string>
+    <string name="system_users_search_placeholder">အသုံးပြုသူများ ရှာဖွေပါ</string>
     <string name="system_users_sort_by">အလိုက် စီရန်</string>
     <string name="system_users_last_login">နောက်ဆုံး ဝင်ရောက်ခြင်း- %1$s</string>
     <string name="system_users_delete_message">ဤသည် အသုံးပြုသူ \"%1$s\" ကို အပြီးအပိုင် ဖျက်ပါမည်။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည် ပြုပြင်၍ မရပါ။</string>
@@ -545,7 +545,7 @@
     <string name="handles_take">အမည်တစ်ခု ယူပါ</string>
     <string name="handles_empty">ကြိုတင်ယူထားသော သုံးစွဲသူအမည် မရှိပါ။</string>
     <string name="handles_empty_search">သင့်ရှာဖွေချက်နှင့် ကိုက်ညီသော သုံးစွဲသူအမည်များ မရှိပါ</string>
-    <string name="handles_search_placeholder">သုံးစွဲသူအမည်များ ရှာဖွေ…</string>
+    <string name="handles_search_placeholder">သုံးစွဲသူအမည်များ ရှာဖွေ</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">သုံးစွဲသူအမည် %3$s ထဲမှ %1$s–%2$s ကို ပြသနေသည်</item>
     </plurals>

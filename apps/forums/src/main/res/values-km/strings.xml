@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">ផ្ញើ</string>
     <string name="forums_post_body_field">តួអត្ថបទ</string>
-    <string name="forums_write_comment">សរសេរមតិយោបល់…</string>
+    <string name="forums_write_comment">សរសេរមតិយោបល់</string>
 
     <string name="notification_channel_forums">ការជូនដំណឹងវេទិកា</string>
     <string name="forums_list_empty">មិនទាន់មានវេទិកាទេ</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">មិនទាន់មានច្បាប់ទេ — លំនាំដើមត្រូវបានអនុវត្ត</string>
     <string name="forums_members_search">ច្រោះសមាជិក</string>
     <string name="forums_banner_description">Markdown ដែលបង្ហាញនៅផ្នែកខាងលើនៃវេទិកា។</string>
-    <string name="forums_banner_placeholder">បញ្ចូលអត្ថបទបដា (គាំទ្រ Markdown)…</string>
     <string name="forums_ai_mode_off">បិទ</string>
     <string name="forums_moderation_queue_empty">គ្មានអ្វីកំពុងរង់ចាំទេ</string>
     <string name="forums_moderation_report_details">ព័ត៌មានលម្អិត: %1$s</string>

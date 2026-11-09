@@ -104,7 +104,7 @@
     <string name="forums_post_body_field">मूल पाठ</string>
     <string name="forums_post_delete_message">का रउआ निश्चित बानी कि ई पोस्ट के मिटावे के बा? ई वापस ना आ सकी।</string>
     <string name="forums_access_add">पहुँच नियम जोड़ीं</string>
-    <string name="forums_write_comment">एगो टिप्पणी लिखीं…</string>
+    <string name="forums_write_comment">एगो टिप्पणी लिखीं</string>
     <string name="forums_comment_delete_message">का रउआ निश्चित बानी कि ई टिप्पणी के मिटावे के बा?</string>
     <string name="forums_comment_replying_to">%1$s के जवाब देत बानीं</string>
     <string name="forums_comment_clear_reply">जवाब साफ करीं</string>
@@ -121,7 +121,6 @@
     <string name="forums_access_empty">अबहीं कवनो नियम नइखे — डिफॉल्ट लागू बा</string>
     <string name="forums_members_search">सदस्य छाँटीं</string>
     <string name="forums_banner_description">फोरम के सबसे ऊपर देखावल जाए वाला मार्कडाउन।</string>
-    <string name="forums_banner_placeholder">बैनर के टेक्स्ट डालीं (मार्कडाउन समर्थित बा)…</string>
     <string name="forums_ai_mode_off">अक्षम</string>
     <string name="forums_moderation_queue_empty">कुछुओ लंबित नइखे</string>
     <string name="forums_moderation_report_details">विवरण: %1$s</string>

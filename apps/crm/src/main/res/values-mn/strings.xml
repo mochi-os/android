@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Хурууны хээ</string>
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Гарчиггүй</string>
-    <string name="crm_property_select">Сонгоно уу …</string>
     <string name="crm_filter">Шүүлтүүр</string>
     <string name="crm_sort_filter_title">Эрэмбэлэх ба шүүх</string>
     <string name="crm_filter_clear_all">Бүгдийг цэвэрлэх</string>

@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Voye</string>
     <string name="forums_post_body_field">Kontni</string>
-    <string name="forums_write_comment">Ekri yon kòmantè…</string>
+    <string name="forums_write_comment">Ekri yon kòmantè</string>
 
     <string name="notification_channel_forums">Notifikasyon fowòm</string>
     <string name="forums_list_empty">Poko gen fowòm</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Poko gen règ — parametraj defo aplike</string>
     <string name="forums_members_search">Filtre manm</string>
     <string name="forums_banner_description">Markdown ki parèt anwo fowòm nan.</string>
-    <string name="forums_banner_placeholder">Antre tèks banyè a (markdown sipòte)…</string>
     <string name="forums_ai_mode_off">Dezaktive</string>
     <string name="forums_moderation_queue_empty">Pa gen anyen annatant</string>
     <string name="forums_moderation_report_details">Detay: %1$s</string>

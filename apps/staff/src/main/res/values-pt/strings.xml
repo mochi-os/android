@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Decidir</string>
     <string name="staff_appeals_decision_denied">Manter anúncio rejeitado</string>
     <string name="staff_appeals_decision_label">Decisão</string>
-    <string name="staff_appeals_decision_placeholder">Selecione a decisão</string>
     <string name="staff_appeals_decision_upheld">Aprovar anúncio</string>
     <string name="staff_appeals_denied_toast">Recurso negado</string>
     <string name="staff_appeals_dialog_title">Decidir recurso</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">O valor do reembolso tem de ser superior a zero</string>
     <string name="staff_disputes_resolution_buyer">Resolver a favor do comprador</string>
     <string name="staff_disputes_resolution_label">Resolução</string>
-    <string name="staff_disputes_resolution_placeholder">Selecione a resolução</string>
     <string name="staff_disputes_resolution_seller">Resolver a favor do vendedor</string>
     <string name="staff_disputes_resolve">Resolver</string>
     <string name="staff_disputes_resolved_toast">Disputa resolvida</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Banir utilizador</string>
     <string name="staff_reports_action_dismiss">Dispensar</string>
     <string name="staff_reports_action_label">Ação</string>
-    <string name="staff_reports_action_placeholder">Selecione a ação</string>
     <string name="staff_reports_action_remove">Remover</string>
     <string name="staff_reports_action_suspend">Suspender como vendedor</string>
     <string name="staff_reports_action_taken_toast">Ação de denúncia tomada</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Pessoa</string>
     <string name="staff_team_dialog_role">Função</string>
     <string name="staff_team_dialog_role_placeholder">Selecione a função</string>
-    <string name="staff_team_dialog_search_placeholder">Pesquisar por nome, impressão digital ou ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Pesquisar por nome, impressão digital ou ID</string>
     <string name="staff_team_empty">Sem membros da equipa</string>
     <string name="staff_team_remove_confirm">Remover</string>
     <string name="staff_team_remove_desc">Remover este membro da equipa de pessoal?</string>

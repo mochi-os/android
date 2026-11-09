@@ -4,7 +4,6 @@
     <string name="app_name">Маркет</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Биографија</string>
-    <string name="market_account_biography_placeholder">Кажете им на купувачите за себе…</string>
     <string name="market_account_load_failed">Не може да се вчита сметката</string>
     <string name="market_account_location_label">Локација</string>
     <string name="market_account_save">Зачувај</string>
@@ -312,7 +311,7 @@
     <string name="market_listings_search_placeholder">Пребарајте ги вашите огласи</string>
     <string name="market_listings_share_chooser">Сподели оглас</string>
     <string name="market_listings_title">Мои огласи</string>
-    <string name="market_messages_compose_placeholder">Напишете порака…</string>
+    <string name="market_messages_compose_placeholder">Напишете порака</string>
     <string name="market_messages_inbox_empty_subtitle">Кога ќе му пишете на продавач (или купувач ви испрати порака), темата ќе се појави овде.</string>
     <string name="market_messages_inbox_empty_title">Сè уште нема разговори</string>
     <string name="market_messages_inbox_title">Пораки</string>
@@ -427,7 +426,7 @@
     <string name="market_reviews_empty_sent_subtitle">Отворете завршена нарачка за да оставите критика.</string>
     <string name="market_reviews_empty_sent_title">Сè уште не сте напишале критики</string>
     <string name="market_reviews_response_label">Одговор</string>
-    <string name="market_reviews_response_placeholder">Напишете одговор…</string>
+    <string name="market_reviews_response_placeholder">Напишете одговор</string>
     <string name="market_reviews_response_submit">Поднеси одговор</string>
     <string name="market_reviews_tab_received">Примено</string>
     <string name="market_reviews_tab_sent">Испратено</string>
@@ -589,7 +588,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Рецензии за продавачот</string>
     <string name="market_account_stripe_open_failed">Не може да се отвори Stripe</string>
     <string name="market_editor_stock">Залиха</string>
-    <string name="market_editor_stock_units">Број на единици</string>
     <string name="market_editor_stock_unlimited">Неограничено</string>
     <string name="market_editor_start_time">Време на почеток</string>
     <string name="market_editor_start_time_help">Оставете празно за почеток при објавување.</string>

@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Gluais sìos</string>
 
     <string name="notification_channel_feeds">Brathan-fios inbhirean</string>
-    <string name="feeds_search_placeholder">Lorg inbhirean no cuir URL ann…</string>
+    <string name="feeds_search_placeholder">Lorg inbhirean no cuir URL ann</string>
     <string name="feeds_url_result">Toradh URL</string>
     <string name="feeds_search_results">Toraidhean luirg</string>
     <string name="feeds_unread_only">Gun leughadh a-mhàin</string>
@@ -210,7 +210,6 @@
     <string name="feeds_unsubscribe_confirm_message">Chan fhaigh thu naidheachdan on inbhir seo tuilleadh. ’S urrainn dhut fo-sgrìobhadh às ùr uair sam bith.</string>
     <string name="feeds_access_select_rule">Tagh riaghailt cothraim</string>
     <string name="feeds_access_authenticated_desc">Duine sam bith a tha air clàradh a-steach</string>
-    <string name="feeds_banner_hint">Fàilte gun fhòram seo…</string>
     <string name="feeds_banner_dismiss">Leig seachad a\' bhratach</string>
     <string name="feeds_members_search">Criathraich na buill</string>
     <string name="feeds_ai_prompt_default">Bunaiteach</string>

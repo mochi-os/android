@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">موڪليو</string>
     <string name="forums_post_body_field">مواد</string>
-    <string name="forums_write_comment">تبصرو لکو…</string>
+    <string name="forums_write_comment">تبصرو لکو</string>
 
     <string name="notification_channel_forums">فورمس جون اطلاعون</string>
     <string name="forums_list_empty">اڃا تائين ڪوبه فورم ناهي</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">اڃا تائين ڪوبه قاعدو ناهي — ڊفالٽ لاڳو ٿيندو</string>
     <string name="forums_members_search">ميمبر فلٽر ڪريو</string>
     <string name="forums_banner_description">فورم جي مٿان ڏيکاريل مارڪ ڊائون.</string>
-    <string name="forums_banner_placeholder">بينر جو متن داخل ڪريو (مارڪ ڊائون جي سهولت آهي)…</string>
     <string name="forums_ai_mode_off">غيرفعال</string>
     <string name="forums_moderation_queue_empty">ڪجهه به زير التوا ناهي</string>
     <string name="forums_moderation_report_details">تفصيل: %1$s</string>

@@ -6,7 +6,7 @@
     <string name="people_groups_title">Groepe</string>
     <string name="people_group_title">Groep</string>
     <string name="people_person_title">Persoon</string>
-    <string name="people_friends_search_placeholder">Soek…</string>
+    <string name="people_friends_search_placeholder">Soek</string>
     <string name="people_friends_no_people_found">Geen mense gevind nie</string>
     <string name="people_friends_try_adjusting">Probeer jou soektog aanpas</string>
     <string name="people_friends_pending">Hangend</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Skrap groep \"%1$s\"? Dit kan nie ongedaan gemaak word nie.</string>
     <string name="people_member_remove_confirm">Is jy seker jy wil %1$s uit hierdie groep verwyder?</string>
     <string name="people_member_remove_with_name">Verwyder %1$s</string>
-    <string name="people_member_search_placeholder">Tik naam om te soek…</string>
+    <string name="people_member_search_placeholder">Tik naam om te soek</string>
     <string name="people_groups_add_member_confirm_title">Voeg by groep</string>
     <string name="people_groups_add_member_confirm_action">Voeg by groep</string>
     <string name="people_profile_image_process_failed">Kon nie %1$s-beeld verwerk nie</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Kon nie jou uitnodigingsbeleid laai nie</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banier</string>
-    <string name="people_contacts_search_placeholder">Soek…</string>
+    <string name="people_contacts_search_placeholder">Soek</string>
     <string name="people_contacts_invited">Uitgenooi</string>
     <string name="people_contacts_accept">Aanvaar</string>
     <string name="people_contacts_message">Stuur boodskap</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Onlangs bygevoeg</string>
     <string name="people_contacts_try_different_search">Probeer \'n ander soekterm</string>
     <string name="people_contacts_unfriend">Verwyder vriend</string>
-    <string name="people_add_contact_search_placeholder">Tik om te soek…</string>
+    <string name="people_add_contact_search_placeholder">Tik om te soek</string>
     <string name="people_add_contact_search_start">Begin tik om gebruikers te soek</string>
     <string name="people_contact_phone">Foon</string>
     <string name="people_contact_title">Postitel</string>

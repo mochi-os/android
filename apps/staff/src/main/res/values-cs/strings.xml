@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Rozhodnout</string>
     <string name="staff_appeals_decision_denied">Ponechat nabídku zamítnutou</string>
     <string name="staff_appeals_decision_label">Rozhodnutí</string>
-    <string name="staff_appeals_decision_placeholder">Vyberte rozhodnutí</string>
     <string name="staff_appeals_decision_upheld">Schválit nabídku</string>
     <string name="staff_appeals_denied_toast">Odvolání zamítnuto</string>
     <string name="staff_appeals_dialog_title">Rozhodnout o odvolání</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Částka refundace musí být větší než nula</string>
     <string name="staff_disputes_resolution_buyer">Vyřešit ve prospěch kupujícího</string>
     <string name="staff_disputes_resolution_label">Vyřešení</string>
-    <string name="staff_disputes_resolution_placeholder">Vyberte řešení</string>
     <string name="staff_disputes_resolution_seller">Vyřešit ve prospěch prodejce</string>
     <string name="staff_disputes_resolve">Vyřešit</string>
     <string name="staff_disputes_resolved_toast">Spor vyřešen</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Zablokovat uživatele</string>
     <string name="staff_reports_action_dismiss">Zamítnout</string>
     <string name="staff_reports_action_label">Akce</string>
-    <string name="staff_reports_action_placeholder">Vyberte akci</string>
     <string name="staff_reports_action_remove">Odebrat</string>
     <string name="staff_reports_action_suspend">Pozastavit jako prodávajícího</string>
     <string name="staff_reports_action_taken_toast">Akce na základě hlášení provedena</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Osoba</string>
     <string name="staff_team_dialog_role">Role</string>
     <string name="staff_team_dialog_role_placeholder">Vyberte roli</string>
-    <string name="staff_team_dialog_search_placeholder">Hledat podle jména, otisku nebo ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Hledat podle jména, otisku nebo ID</string>
     <string name="staff_team_empty">Žádní členové týmu</string>
     <string name="staff_team_remove_confirm">Odebrat</string>
     <string name="staff_team_remove_desc">Odebrat tohoto člena z týmu personálu?</string>

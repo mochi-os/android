@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupos</string>
     <string name="people_group_title">Grupo</string>
     <string name="people_person_title">Persona</string>
-    <string name="people_friends_search_placeholder">Buscar…</string>
+    <string name="people_friends_search_placeholder">Buscar</string>
     <string name="people_friends_no_people_found">No se encontraron personas</string>
     <string name="people_friends_try_adjusting">Prueba a ajustar la búsqueda</string>
     <string name="people_friends_pending">Pendiente</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">¿Eliminar el grupo \"%1$s\"? Esta acción no se puede deshacer.</string>
     <string name="people_member_remove_confirm">¿Seguro que quieres eliminar a %1$s de este grupo?</string>
     <string name="people_member_remove_with_name">Eliminar a %1$s</string>
-    <string name="people_member_search_placeholder">Escribe un nombre para buscar…</string>
+    <string name="people_member_search_placeholder">Escribe un nombre para buscar</string>
     <string name="people_groups_add_member_confirm_title">Añadir al grupo</string>
     <string name="people_groups_add_member_confirm_action">Añadir al grupo</string>
     <string name="people_profile_image_process_failed">No se ha podido procesar la imagen %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Error al cargar tu política de invitaciones</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Buscar…</string>
+    <string name="people_contacts_search_placeholder">Buscar</string>
     <string name="people_contacts_invited">Invitado</string>
     <string name="people_contacts_accept">Aceptar</string>
     <string name="people_contacts_message">Enviar mensaje</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Añadido recientemente</string>
     <string name="people_contacts_try_different_search">Prueba con otro término de búsqueda</string>
     <string name="people_contacts_unfriend">Eliminar amigo</string>
-    <string name="people_add_contact_search_placeholder">Escribe para buscar…</string>
+    <string name="people_add_contact_search_placeholder">Escribe para buscar</string>
     <string name="people_add_contact_search_start">Empieza a escribir para buscar usuarios</string>
     <string name="people_contact_phone">Teléfono</string>
     <string name="people_contact_title">Cargo</string>

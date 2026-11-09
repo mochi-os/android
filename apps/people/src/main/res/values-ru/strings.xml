@@ -6,7 +6,7 @@
     <string name="people_groups_title">Группы</string>
     <string name="people_group_title">Группа</string>
     <string name="people_person_title">Человек</string>
-    <string name="people_friends_search_placeholder">Поиск…</string>
+    <string name="people_friends_search_placeholder">Поиск</string>
     <string name="people_friends_no_people_found">Люди не найдены</string>
     <string name="people_friends_try_adjusting">Попробуйте изменить параметры поиска</string>
     <string name="people_friends_pending">Ожидание</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Удалить группу «%1$s»? Это действие нельзя отменить.</string>
     <string name="people_member_remove_confirm">Удалить %1$s из этой группы?</string>
     <string name="people_member_remove_with_name">Удалить %1$s</string>
-    <string name="people_member_search_placeholder">Введите имя для поиска…</string>
+    <string name="people_member_search_placeholder">Введите имя для поиска</string>
     <string name="people_groups_add_member_confirm_title">Добавить в группу</string>
     <string name="people_groups_add_member_confirm_action">Добавить в группу</string>
     <string name="people_profile_image_process_failed">Не удалось обработать изображение «%1$s»</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Не удалось загрузить вашу политику приглашений</string>
     <string name="people_profile_avatar">Аватар</string>
     <string name="people_profile_banner">Баннер</string>
-    <string name="people_contacts_search_placeholder">Поиск…</string>
+    <string name="people_contacts_search_placeholder">Поиск</string>
     <string name="people_contacts_invited">Приглашение отправлено</string>
     <string name="people_contacts_accept">Принять</string>
     <string name="people_contacts_message">Написать</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Недавно добавленные</string>
     <string name="people_contacts_try_different_search">Попробуйте другой поисковый запрос</string>
     <string name="people_contacts_unfriend">Удалить друга</string>
-    <string name="people_add_contact_search_placeholder">Введите запрос для поиска…</string>
+    <string name="people_add_contact_search_placeholder">Введите запрос для поиска</string>
     <string name="people_add_contact_search_start">Начните вводить для поиска пользователей</string>
     <string name="people_contact_phone">Телефон</string>
     <string name="people_contact_title">Должность</string>

@@ -238,7 +238,7 @@
     <string name="route_delete_message">এটি \"%1$s\" পথের রুট মুছে ফেলবে।</string>
     <string name="route_empty">কোনো রুট কনফিগার করা নেই।</string>
     <string name="route_meta">অগ্রাধিকার %1$s · %2$s</string>
-    <string name="interests_search_placeholder">যোগ করার জন্য বিষয় অনুসন্ধান করুন…</string>
+    <string name="interests_search_placeholder">যোগ করার জন্য বিষয় অনুসন্ধান করুন</string>
     <string name="interests_empty">এখনো কোনো আগ্রহ নেই।</string>
     <string name="interests_summary_regenerate">সারসংক্ষেপ পুনরায় তৈরি করুন</string>
     <string name="interests_summary_regenerating">পুনরায় তৈরি হচ্ছে…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">এটি \"%1$s\" কে ডিফল্ট (খালি) এ রিসেট করবে।</string>
     <string name="settings_home_system_users">ব্যবহারকারী (সার্ভার)</string>
     <string name="system_users_add_user">ব্যবহারকারী যোগ করুন</string>
-    <string name="system_users_search_placeholder">ব্যবহারকারী অনুসন্ধান…</string>
+    <string name="system_users_search_placeholder">ব্যবহারকারী অনুসন্ধান</string>
     <string name="system_users_sort_by">অনুসারে সাজান</string>
     <string name="system_users_last_login">শেষ লগইন: %1$s</string>
     <string name="system_users_delete_message">এটি স্থায়ীভাবে \"%1$s\" ব্যবহারকারীকে মুছে ফেলবে। এই ক্রিয়াটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">একটি নাম নিন</string>
     <string name="handles_empty">কোনো হ্যান্ডেল রিজার্ভ করা হয়নি।</string>
     <string name="handles_empty_search">আপনার অনুসন্ধানের সাথে কোনো হ্যান্ডেল মিলছে না</string>
-    <string name="handles_search_placeholder">হ্যান্ডেল অনুসন্ধান করুন…</string>
+    <string name="handles_search_placeholder">হ্যান্ডেল অনুসন্ধান করুন</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$sটি হ্যান্ডেলের মধ্যে %1$s–%2$s দেখানো হচ্ছে</item>
         <item quantity="other">%3$sটি হ্যান্ডেলের মধ্যে %1$s–%2$s দেখানো হচ্ছে</item>

@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Noch keine Regeln — Standardeinstellungen gelten</string>
     <string name="forums_members_search">Mitglieder filtern</string>
     <string name="forums_banner_description">Markdown, das oben im Forum angezeigt wird.</string>
-    <string name="forums_banner_placeholder">Bannertext eingeben (Markdown wird unterstützt)…</string>
     <string name="forums_ai_mode_off">Deaktiviert</string>
     <string name="forums_moderation_queue_empty">Nichts ausstehend</string>
     <string name="forums_moderation_report_details">Details: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Läuft ab %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Hass</string>
-    <string name="forums_write_comment">Kommentar schreiben…</string>
+    <string name="forums_write_comment">Kommentar schreiben</string>
     <string name="forums_comment_delete_message">Möchten Sie diesen Kommentar wirklich löschen?</string>
     <string name="forums_comment_replying_to">Antwort an %1$s</string>
     <string name="forums_comment_clear_reply">Antwort verwerfen</string>

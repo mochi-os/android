@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grups</string>
     <string name="people_group_title">Grup</string>
     <string name="people_person_title">Persona</string>
-    <string name="people_friends_search_placeholder">Cerca…</string>
+    <string name="people_friends_search_placeholder">Cerca</string>
     <string name="people_friends_no_people_found">No s\'ha trobat ningú</string>
     <string name="people_friends_try_adjusting">Prova d\'ajustar la cerca</string>
     <string name="people_friends_pending">Pendent</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Voleu suprimir el grup \"%1$s\"? Aquesta acció no es pot desfer.</string>
     <string name="people_member_remove_confirm">Esteu segur que voleu eliminar %1$s d\'aquest grup?</string>
     <string name="people_member_remove_with_name">Elimina %1$s</string>
-    <string name="people_member_search_placeholder">Introduïu un nom per cercar…</string>
+    <string name="people_member_search_placeholder">Introduïu un nom per cercar</string>
     <string name="people_groups_add_member_confirm_title">Afegeix al grup</string>
     <string name="people_groups_add_member_confirm_action">Afegeix al grup</string>
     <string name="people_profile_image_process_failed">No s\'ha pogut processar la imatge de %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">No s\'ha pogut carregar la teva política d\'invitacions</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Bàner</string>
-    <string name="people_contacts_search_placeholder">Cerca…</string>
+    <string name="people_contacts_search_placeholder">Cerca</string>
     <string name="people_contacts_invited">Convidat</string>
     <string name="people_contacts_accept">Accepta</string>
     <string name="people_contacts_message">Envia un missatge</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Afegit recentment</string>
     <string name="people_contacts_try_different_search">Prova un terme de cerca diferent</string>
     <string name="people_contacts_unfriend">Elimina l\'amic</string>
-    <string name="people_add_contact_search_placeholder">Escriviu per cercar…</string>
+    <string name="people_add_contact_search_placeholder">Escriviu per cercar</string>
     <string name="people_add_contact_search_start">Comença a escriure per cercar usuaris</string>
     <string name="people_contact_phone">Telèfon</string>
     <string name="people_contact_title">Càrrec</string>

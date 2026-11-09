@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Отпечаток</string>
     <string name="crm_settings_server">Сервер</string>
     <string name="crm_untitled">Без названия</string>
-    <string name="crm_property_select">Выберите …</string>
     <string name="crm_filter">Фильтр</string>
     <string name="crm_sort_filter_title">Сортировка и фильтр</string>
     <string name="crm_filter_clear_all">Очистить всё</string>

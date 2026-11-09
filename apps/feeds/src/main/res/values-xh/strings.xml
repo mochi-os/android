@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Hambisa ezantsi</string>
 
     <string name="notification_channel_feeds">Izaziso zezisinekeli</string>
-    <string name="feeds_search_placeholder">Khangela izisinekeli okanye ncamathisela i-URL…</string>
+    <string name="feeds_search_placeholder">Khangela izisinekeli okanye ncamathisela i-URL</string>
     <string name="feeds_url_result">Isiphumo se-URL</string>
     <string name="feeds_search_results">Iziphumo zokukhangela</string>
     <string name="feeds_unread_only">Ezingafundwanga kuphela</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Uza kuyeka ukufumana uhlaziyo kule fidi. Ungaphinda ubhalise nanini na.</string>
     <string name="feeds_access_select_rule">Khetha umgaqo wofikelelo</string>
     <string name="feeds_access_authenticated_desc">Nabani na ongene ngemvume</string>
-    <string name="feeds_banner_hint">Wamkelekile kule nkundla…</string>
     <string name="feeds_banner_dismiss">Yikhabe ibhena</string>
     <string name="feeds_members_search">Hluza amalungu</string>
     <string name="feeds_ai_prompt_default">Eyoqobo</string>

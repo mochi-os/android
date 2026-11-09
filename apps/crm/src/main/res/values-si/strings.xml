@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">ඇඟිලි සලකුණ</string>
     <string name="crm_settings_server">සේවාදායකය</string>
     <string name="crm_untitled">මාතෘකා රහිත</string>
-    <string name="crm_property_select">තෝරන්න …</string>
     <string name="crm_filter">පෙරහන</string>
     <string name="crm_sort_filter_title">තෝරා පෙරන්න</string>
     <string name="crm_filter_clear_all">සියල්ල හිස් කරන්න</string>

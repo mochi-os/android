@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">ອັບໂຫຼດໄຟລ໌ .json</string>
     <string name="projects_settings_not_set">ບໍ່ໄດ້ຕັ້ງຄ່າ</string>
     <string name="projects_settings_updated">ອັບເດດໂຄງການແລ້ວ</string>
-    <string name="projects_property_select">ເລືອກ …</string>
     <string name="projects_activity_attached">ໄດ້ແນບ</string>
     <string name="projects_activity_commented">ໄດ້ສະແດງຄຳເຫັນ</string>
     <string name="projects_attachment_delete_confirm_message">ໄຟລ໌ແນບນີ້ຈະຖືກລຶບຖາວອນ.</string>

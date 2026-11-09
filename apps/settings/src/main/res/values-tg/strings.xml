@@ -238,7 +238,7 @@
     <string name="route_delete_message">Ин роҳро барои масири \"%1$s\" нест мекунад.</string>
     <string name="route_empty">Роҳҳои танзимшуда нестанд.</string>
     <string name="route_meta">Афзалият %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Мавзӯъҳоро барои илова ҷустуҷӯ кунед…</string>
+    <string name="interests_search_placeholder">Мавзӯъҳоро барои илова ҷустуҷӯ кунед</string>
     <string name="interests_empty">Ҳанӯз шавқҳо нестанд.</string>
     <string name="interests_summary_regenerate">Хулосаро аз нав сохтан</string>
     <string name="interests_summary_regenerating">Аз нав эҷод мешавад…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Ин \"%1$s\" ро ба пешфарз (холӣ) бармегардонад.</string>
     <string name="settings_home_system_users">Корбарон (сервер)</string>
     <string name="system_users_add_user">Корбар илова кунед</string>
-    <string name="system_users_search_placeholder">Корбаронро ҷустуҷӯ кунед…</string>
+    <string name="system_users_search_placeholder">Корбаронро ҷустуҷӯ кунед</string>
     <string name="system_users_sort_by">Мураттаб кардан</string>
     <string name="system_users_last_login">Воридшавии охирин: %1$s</string>
     <string name="system_users_delete_message">Ин корбари \"%1$s\" ро ҳамеша нест мекунад. Ин амалро бекор кардан мумкин нест.</string>
@@ -554,7 +554,7 @@
     <string name="handles_take">Гирифтани ном</string>
     <string name="handles_empty">Ягон тахаллус захира нашудааст.</string>
     <string name="handles_empty_search">Ягон тахаллус ба ҷустуҷӯи шумо мувофиқ нест</string>
-    <string name="handles_search_placeholder">Ҷустуҷӯи тахаллусҳо…</string>
+    <string name="handles_search_placeholder">Ҷустуҷӯи тахаллусҳо</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%1$s–%2$s аз %3$s тахаллус нишон дода мешавад</item>
         <item quantity="other">%1$s–%2$s аз %3$s тахаллус нишон дода мешавад</item>

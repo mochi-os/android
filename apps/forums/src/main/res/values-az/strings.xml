@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Hələ qayda yoxdur — defolt tətbiq edilir</string>
     <string name="forums_members_search">Üzvləri filtrlə</string>
     <string name="forums_banner_description">Forumun yuxarısında göstərilən Markdown.</string>
-    <string name="forums_banner_placeholder">Banner mətnini daxil edin (markdown dəstəklənir)…</string>
     <string name="forums_ai_mode_off">Söndürülmüşdür</string>
     <string name="forums_moderation_queue_empty">Gözləyən yoxdur</string>
     <string name="forums_moderation_report_details">Təfərrüatlar: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Bitir %1$s</string>
     <string name="forums_moderation_restriction_permanent">Daimi</string>
     <string name="forums_report_reason_hate">Nifrət</string>
-    <string name="forums_write_comment">Şərh yaz…</string>
+    <string name="forums_write_comment">Şərh yaz</string>
     <string name="forums_comment_delete_message">Bu şərhi silmək istədiyinizə əminsiniz?</string>
     <string name="forums_comment_replying_to">%1$s istifadəçisinə cavab</string>
     <string name="forums_comment_clear_reply">Cavabı təmizlə</string>

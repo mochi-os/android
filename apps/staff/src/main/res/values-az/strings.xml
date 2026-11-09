@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Qərar ver</string>
     <string name="staff_appeals_decision_denied">Elanı rədd edilmiş saxla</string>
     <string name="staff_appeals_decision_label">Qərar</string>
-    <string name="staff_appeals_decision_placeholder">Qərarı seçin</string>
     <string name="staff_appeals_decision_upheld">Elanı təsdiqlə</string>
     <string name="staff_appeals_denied_toast">Apellyasiya rədd edildi</string>
     <string name="staff_appeals_dialog_title">Apellyasiya barədə qərar ver</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Geri qaytarma məbləği sıfırdan böyük olmalıdır</string>
     <string name="staff_disputes_resolution_buyer">Alıcı üçün həll et</string>
     <string name="staff_disputes_resolution_label">Həll</string>
-    <string name="staff_disputes_resolution_placeholder">Həlli seçin</string>
     <string name="staff_disputes_resolution_seller">Satıcı üçün həll et</string>
     <string name="staff_disputes_resolve">Həll et</string>
     <string name="staff_disputes_resolved_toast">Mübahisə həll edildi</string>
@@ -298,7 +296,6 @@
     <string name="staff_reports_action_ban">İstifadəçini blokla</string>
     <string name="staff_reports_action_dismiss">Rədd et</string>
     <string name="staff_reports_action_label">Əməliyyat</string>
-    <string name="staff_reports_action_placeholder">Əməliyyat seç</string>
     <string name="staff_reports_action_remove">Sil</string>
     <string name="staff_reports_action_suspend">Satıcı kimi dayandır</string>
     <string name="staff_reports_action_taken_toast">Hesabat üzrə tədbir görüldü</string>
@@ -406,7 +403,7 @@
     <string name="staff_team_dialog_person">Şəxs</string>
     <string name="staff_team_dialog_role">Rol</string>
     <string name="staff_team_dialog_role_placeholder">Rolu seçin</string>
-    <string name="staff_team_dialog_search_placeholder">Ad, barmaq izi və ya ID ilə axtar…</string>
+    <string name="staff_team_dialog_search_placeholder">Ad, barmaq izi və ya ID ilə axtar</string>
     <string name="staff_team_empty">Komanda üzvü yoxdur</string>
     <string name="staff_team_remove_confirm">Sil</string>
     <string name="staff_team_remove_desc">Bu üzvü işçi komandasından silək?</string>

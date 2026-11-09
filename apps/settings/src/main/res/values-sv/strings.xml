@@ -238,7 +238,7 @@
     <string name="route_delete_message">Detta tar bort rutten för sökvägen \"%1$s\".</string>
     <string name="route_empty">Inga rutter konfigurerade.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Sök ämnen att lägga till…</string>
+    <string name="interests_search_placeholder">Sök ämnen att lägga till</string>
     <string name="interests_empty">Inga intressen ännu.</string>
     <string name="interests_summary_regenerate">Generera om sammanfattningen</string>
     <string name="interests_summary_regenerating">Återskapar…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Detta återställer \"%1$s\" till standard (tomt).</string>
     <string name="settings_home_system_users">Användare (server)</string>
     <string name="system_users_add_user">Lägg till användare</string>
-    <string name="system_users_search_placeholder">Sök användare…</string>
+    <string name="system_users_search_placeholder">Sök användare</string>
     <string name="system_users_sort_by">Sortera efter</string>
     <string name="system_users_last_login">Senaste inloggning: %1$s</string>
     <string name="system_users_delete_message">Detta tar permanent bort användaren \"%1$s\". Åtgärden kan inte ångras.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Ta ett namn</string>
     <string name="handles_empty">Inga alias har reserverats.</string>
     <string name="handles_empty_search">Inga alias matchar din sökning</string>
-    <string name="handles_search_placeholder">Sök alias…</string>
+    <string name="handles_search_placeholder">Sök alias</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Visar %1$s–%2$s av %3$s alias</item>
         <item quantity="other">Visar %1$s–%2$s av %3$s alias</item>

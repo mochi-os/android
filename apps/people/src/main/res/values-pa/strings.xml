@@ -6,7 +6,7 @@
     <string name="people_groups_title">ਗਰੁੱਪ</string>
     <string name="people_group_title">ਗਰੁੱਪ</string>
     <string name="people_person_title">ਵਿਅਕਤੀ</string>
-    <string name="people_friends_search_placeholder">ਖੋਜੋ…</string>
+    <string name="people_friends_search_placeholder">ਖੋਜੋ</string>
     <string name="people_friends_no_people_found">ਕੋਈ ਲੋਕ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="people_friends_try_adjusting">ਆਪਣੀ ਖੋਜ ਠੀਕ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
     <string name="people_friends_pending">ਬਕਾਇਆ</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">ਸਮੂਹ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ।</string>
     <string name="people_member_remove_confirm">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ %1$s ਨੂੰ ਇਸ ਸਮੂਹ ਵਿੱਚੋਂ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="people_member_remove_with_name">%1$s ਨੂੰ ਹਟਾਓ</string>
-    <string name="people_member_search_placeholder">ਖੋਜਣ ਲਈ ਨਾਮ ਦਾਖਲ ਕਰੋ…</string>
+    <string name="people_member_search_placeholder">ਖੋਜਣ ਲਈ ਨਾਮ ਦਾਖਲ ਕਰੋ</string>
     <string name="people_groups_add_member_confirm_title">ਸਮੂਹ ਵਿੱਚ ਜੋੜੋ</string>
     <string name="people_groups_add_member_confirm_action">ਸਮੂਹ ਵਿੱਚ ਜੋੜੋ</string>
     <string name="people_profile_image_process_failed">%1$s ਚਿੱਤਰ \'ਤੇ ਕਾਰਵਾਈ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">ਤੁਹਾਡੀ ਸੱਦਾ ਨੀਤੀ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="people_profile_avatar">ਅਵਤਾਰ</string>
     <string name="people_profile_banner">ਬੈਨਰ</string>
-    <string name="people_contacts_search_placeholder">ਖੋਜੋ…</string>
+    <string name="people_contacts_search_placeholder">ਖੋਜੋ</string>
     <string name="people_contacts_invited">ਸੱਦਾ ਭੇਜਿਆ</string>
     <string name="people_contacts_accept">ਸਵੀਕਾਰ ਕਰੋ</string>
     <string name="people_contacts_message">ਸੁਨੇਹਾ ਭੇਜੋ</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">ਹਾਲ ਹੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ</string>
     <string name="people_contacts_try_different_search">ਵੱਖਰੀ ਖੋਜ ਸ਼ਬਦ ਅਜ਼ਮਾਓ</string>
     <string name="people_contacts_unfriend">ਦੋਸਤ ਹਟਾਓ</string>
-    <string name="people_add_contact_search_placeholder">ਖੋਜਣ ਲਈ ਟਾਈਪ ਕਰੋ…</string>
+    <string name="people_add_contact_search_placeholder">ਖੋਜਣ ਲਈ ਟਾਈਪ ਕਰੋ</string>
     <string name="people_add_contact_search_start">ਉਪਭੋਗਤਾਵਾਂ ਨੂੰ ਖੋਜਣ ਲਈ ਟਾਈਪ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="people_contact_phone">ਫੋਨ</string>
     <string name="people_contact_title">ਨੌਕਰੀ ਦਾ ਸਿਰਲੇਖ</string>

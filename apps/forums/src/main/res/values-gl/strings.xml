@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Enviar</string>
     <string name="forums_post_body_field">Corpo</string>
-    <string name="forums_write_comment">Escribe un comentario…</string>
+    <string name="forums_write_comment">Escribe un comentario</string>
 
     <string name="notification_channel_forums">Notificacións de foros</string>
     <string name="forums_list_empty">Aínda non hai foros</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Aínda non hai regras — aplícanse os valores predeterminados</string>
     <string name="forums_members_search">Filtrar membros</string>
     <string name="forums_banner_description">Markdown que aparece na parte superior do foro.</string>
-    <string name="forums_banner_placeholder">Introduce o texto do báner (admite Markdown)…</string>
     <string name="forums_ai_mode_off">Desactivado</string>
     <string name="forums_moderation_queue_empty">Nada pendente</string>
     <string name="forums_moderation_report_details">Detalles: %1$s</string>

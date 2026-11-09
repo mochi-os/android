@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">पाठवा</string>
     <string name="forums_post_body_field">मजकूर</string>
-    <string name="forums_write_comment">टिप्पणी लिहा…</string>
+    <string name="forums_write_comment">टिप्पणी लिहा</string>
 
     <string name="notification_channel_forums">फोरम सूचना</string>
     <string name="forums_list_empty">अद्याप फोरम्स नाहीत</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">अद्याप कोणतेही नियम नाहीत — डिफॉल्ट लागू होतील</string>
     <string name="forums_members_search">सदस्य फिल्टर करा</string>
     <string name="forums_banner_description">फोरमच्या शीर्षस्थानी दर्शविलेले Markdown.</string>
-    <string name="forums_banner_placeholder">बॅनरचा मजकूर प्रविष्ट करा (Markdown समर्थित)…</string>
     <string name="forums_ai_mode_off">बंद</string>
     <string name="forums_moderation_queue_empty">काहीही प्रलंबित नाही</string>
     <string name="forums_moderation_report_details">तपशील: %1$s</string>

@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Iber</string>
     <string name="forums_post_body_field">Tekst</string>
-    <string name="forums_write_comment">Teswir ýaz…</string>
+    <string name="forums_write_comment">Teswir ýaz</string>
 
     <string name="notification_channel_forums">Forum bildirişleri</string>
     <string name="forums_list_empty">Heniz forum ýok</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Heniz düzgün ýok — deslapky bahalar ulanylýar</string>
     <string name="forums_members_search">Agzalary süzmek</string>
     <string name="forums_banner_description">Forumyň ýokarsynda görkezilýän Markdown.</string>
-    <string name="forums_banner_placeholder">Baner tekstini giriziň (markdown goldanylýar)…</string>
     <string name="forums_ai_mode_off">Öçürildi</string>
     <string name="forums_moderation_queue_empty">Garaşylýan zat ýok</string>
     <string name="forums_moderation_report_details">Jikme-jiklikler: %1$s</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Putuskan</string>
     <string name="staff_appeals_decision_denied">Tetap tolak daftar</string>
     <string name="staff_appeals_decision_label">Keputusan</string>
-    <string name="staff_appeals_decision_placeholder">Pilih keputusan</string>
     <string name="staff_appeals_decision_upheld">Setujui daftar</string>
     <string name="staff_appeals_denied_toast">Banding ditolak</string>
     <string name="staff_appeals_dialog_title">Putuskan banding</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Jumlah pengembalian dana harus lebih besar dari nol</string>
     <string name="staff_disputes_resolution_buyer">Selesaikan untuk pembeli</string>
     <string name="staff_disputes_resolution_label">Resolusi</string>
-    <string name="staff_disputes_resolution_placeholder">Pilih resolusi</string>
     <string name="staff_disputes_resolution_seller">Selesaikan untuk penjual</string>
     <string name="staff_disputes_resolve">Selesaikan</string>
     <string name="staff_disputes_resolved_toast">Sengketa diselesaikan</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Blokir pengguna</string>
     <string name="staff_reports_action_dismiss">Tutup</string>
     <string name="staff_reports_action_label">Tindakan</string>
-    <string name="staff_reports_action_placeholder">Pilih tindakan</string>
     <string name="staff_reports_action_remove">Hapus</string>
     <string name="staff_reports_action_suspend">Tangguhkan sebagai penjual</string>
     <string name="staff_reports_action_taken_toast">Tindakan laporan diambil</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Orang</string>
     <string name="staff_team_dialog_role">Peran</string>
     <string name="staff_team_dialog_role_placeholder">Pilih peran</string>
-    <string name="staff_team_dialog_search_placeholder">Cari berdasarkan nama, sidik jari atau ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Cari berdasarkan nama, sidik jari atau ID</string>
     <string name="staff_team_empty">Tidak ada anggota tim</string>
     <string name="staff_team_remove_confirm">Hapus</string>
     <string name="staff_team_remove_desc">Hapus anggota ini dari tim staf?</string>

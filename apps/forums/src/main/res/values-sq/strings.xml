@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Dërgo</string>
     <string name="forums_post_body_field">Përmbajtja</string>
-    <string name="forums_write_comment">Shkruaj një koment…</string>
+    <string name="forums_write_comment">Shkruaj një koment</string>
 
     <string name="notification_channel_forums">Njoftime për forumet</string>
     <string name="forums_list_empty">Ende nuk ka forume</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Ende s\'ka rregulla — zbatohen të parazgjedhurat</string>
     <string name="forums_members_search">Filtroni anëtarët</string>
     <string name="forums_banner_description">Markdown që shfaqet në krye të forumit.</string>
-    <string name="forums_banner_placeholder">Futni tekstin e banerit (mbështetet Markdown)…</string>
     <string name="forums_ai_mode_off">I çaktivizuar</string>
     <string name="forums_moderation_queue_empty">Asgjë në pritje</string>
     <string name="forums_moderation_report_details">Detaje: %1$s</string>

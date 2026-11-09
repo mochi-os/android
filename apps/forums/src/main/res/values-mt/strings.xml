@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Ibgħat</string>
     <string name="forums_post_body_field">Kontenut</string>
-    <string name="forums_write_comment">Ikteb kumment…</string>
+    <string name="forums_write_comment">Ikteb kumment</string>
 
     <string name="notification_channel_forums">Notifiki tal-forums</string>
     <string name="forums_list_empty">L-ebda forum s\'issa</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">L-ebda regola s\'issa — japplikaw id-default</string>
     <string name="forums_members_search">Iffiltra l-membri</string>
     <string name="forums_banner_description">Markdown muri fuq nett tal-forum.</string>
-    <string name="forums_banner_placeholder">Daħħal it-test tal-banner (markdown huwa appoġġjat)…</string>
     <string name="forums_ai_mode_off">Diżabbiltat</string>
     <string name="forums_moderation_queue_empty">Xejn pendenti</string>
     <string name="forums_moderation_report_details">Dettalji: %1$s</string>

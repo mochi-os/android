@@ -239,7 +239,7 @@
     <string name="route_delete_message">Týmto sa odstráni trasa pre cestu \"%1$s\".</string>
     <string name="route_empty">Nie sú nakonfigurované žiadne trasy.</string>
     <string name="route_meta">Priorita %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Hľadať témy na pridanie…</string>
+    <string name="interests_search_placeholder">Hľadať témy na pridanie</string>
     <string name="interests_empty">Zatiaľ žiadne záujmy.</string>
     <string name="interests_summary_regenerate">Vygenerovať súhrn znova</string>
     <string name="interests_summary_regenerating">Znova generujem…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">Týmto sa \"%1$s\" obnoví na predvolenú (prázdne).</string>
     <string name="settings_home_system_users">Používatelia (server)</string>
     <string name="system_users_add_user">Pridať používateľa</string>
-    <string name="system_users_search_placeholder">Hľadať používateľov…</string>
+    <string name="system_users_search_placeholder">Hľadať používateľov</string>
     <string name="system_users_sort_by">Zoradiť podľa</string>
     <string name="system_users_last_login">Posledné prihlásenie: %1$s</string>
     <string name="system_users_delete_message">Týmto sa natrvalo zmaže používateľ \"%1$s\". Túto akciu nemožno vrátiť späť.</string>
@@ -567,7 +567,7 @@
     <string name="handles_take">Vziať si meno</string>
     <string name="handles_empty">Nie sú rezervované žiadne prezývky.</string>
     <string name="handles_empty_search">Žiadne prezývky nezodpovedajú hľadaniu</string>
-    <string name="handles_search_placeholder">Hľadať prezývky…</string>
+    <string name="handles_search_placeholder">Hľadať prezývky</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Zobrazené %1$s–%2$s z %3$s prezývky</item>
         <item quantity="few">Zobrazené %1$s–%2$s z %3$s prezývok</item>

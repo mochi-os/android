@@ -6,7 +6,7 @@
     <string name="people_groups_title">Tamanaka</string>
     <string name="people_group_title">Tama</string>
     <string name="people_person_title">Jaqi</string>
-    <string name="people_friends_search_placeholder">Thaqhama…</string>
+    <string name="people_friends_search_placeholder">Thaqhama</string>
     <string name="people_friends_no_people_found">Jaqinak jan jikxatasiti</string>
     <string name="people_friends_try_adjusting">Thaqhäwim mayjt\'ayañ yant\'am</string>
     <string name="people_friends_pending">Suyaski</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">¿\"%1$s\" tama chhaqtayañati? Janiw kutt\'ayañjamäkiti.</string>
     <string name="people_member_remove_confirm">¿Chiqpach %1$s aka tamat apsuñ muntati?</string>
     <string name="people_member_remove_with_name">%1$s apsuña</string>
-    <string name="people_member_search_placeholder">Thaqhañatakix suti qillqam…</string>
+    <string name="people_member_search_placeholder">Thaqhañatakix suti qillqam</string>
     <string name="people_groups_add_member_confirm_title">Tamar yapxataña</string>
     <string name="people_groups_add_member_confirm_action">Tamar yapxataña</string>
     <string name="people_profile_image_process_failed">%1$s jamuqax janiw luräñjamäkiti</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Janiw jawsäwi kamachim apaqañ atkiti</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Thaqhama…</string>
+    <string name="people_contacts_search_placeholder">Thaqhama</string>
     <string name="people_contacts_invited">Jawsata</string>
     <string name="people_contacts_accept">Iyawsaña</string>
     <string name="people_contacts_message">Mensaje apayaña</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Machaq yapxatata</string>
     <string name="people_contacts_try_different_search">Yaqha thaqhañ aru yant\'am</string>
     <string name="people_contacts_unfriend">Masi aparma</string>
-    <string name="people_add_contact_search_placeholder">Thaqhañatak qillqam…</string>
+    <string name="people_add_contact_search_placeholder">Thaqhañatak qillqam</string>
     <string name="people_add_contact_search_start">Apnaqirinak thaqhañatakix qillqañ qalltam</string>
     <string name="people_contact_phone">Teléfono</string>
     <string name="people_contact_title">Irnaqäwi suti</string>

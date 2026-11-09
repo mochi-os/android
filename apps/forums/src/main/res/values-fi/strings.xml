@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Ei vielä sääntöjä — oletukset käytössä</string>
     <string name="forums_members_search">Suodata jäseniä</string>
     <string name="forums_banner_description">Foorumin yläosassa näytettävä Markdown-teksti.</string>
-    <string name="forums_banner_placeholder">Kirjoita bannerin teksti (Markdown on tuettu)…</string>
     <string name="forums_ai_mode_off">Pois käytöstä</string>
     <string name="forums_moderation_queue_empty">Ei käsiteltäviä</string>
     <string name="forums_moderation_report_details">Tiedot: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Päättyy %1$s</string>
     <string name="forums_moderation_restriction_permanent">Pysyvä</string>
     <string name="forums_report_reason_hate">Viha</string>
-    <string name="forums_write_comment">Kirjoita kommentti…</string>
+    <string name="forums_write_comment">Kirjoita kommentti</string>
     <string name="forums_comment_delete_message">Haluatko varmasti poistaa tämän kommentin?</string>
     <string name="forums_comment_replying_to">Vastataan käyttäjälle %1$s</string>
     <string name="forums_comment_clear_reply">Tyhjennä vastaus</string>

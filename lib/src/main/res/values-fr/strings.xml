@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Du thème</string>
     <string name="settings_background_off">Aucun</string>
     <string name="game_chat_empty">Aucun message pour le moment</string>
-    <string name="game_chat_input_placeholder">Tapez un message…</string>
+    <string name="game_chat_input_placeholder">Tapez un message</string>
     <string name="game_chat_send">Envoyer un message</string>
     <string name="game_chat_subject_you">Vous</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Confirmez votre identité</string>
     <string name="stepup_description">Il s\'agit d\'une modification de sécurité de votre compte. Vérifiez votre identité pour continuer.</string>
     <string name="stepup_email_label">Code par e-mail</string>
-    <string name="stepup_email_placeholder">Saisissez le code reçu par e-mail</string>
     <string name="stepup_totp_label">Code d\'authentification</string>
-    <string name="stepup_totp_placeholder">Saisissez le code de votre application d\'authentification</string>
     <string name="stepup_use_passkey">Utiliser votre clé d\'accès</string>
     <string name="stepup_send_email">Envoyer l\'e-mail</string>
     <string name="stepup_resend_email">Renvoyer l\'e-mail</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Supprimer l\'étiquette</string>
     <string name="person_picker_none">Aucun</string>
     <string name="person_picker_clear">Effacer la sélection</string>
-    <string name="person_picker_select">Sélectionner …</string>
+    <string name="person_picker_select">Sélectionner</string>
     <string name="person_picker_directory">Annuaire</string>
     <string name="person_picker_no_people">Aucune personne</string>
     <string name="person_picker_project_members">Membres du projet</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Modifier la catégorie de notification</string>
     <string name="lightbox_comments_none">Aucun commentaire sur cette image pour l\'instant.</string>
     <string name="lightbox_comments_only">Afficher uniquement les commentaires sur cette image</string>
-    <string name="lightbox_comment_placeholder">Commenter cette image…</string>
+    <string name="lightbox_comment_placeholder">Commenter cette image</string>
     <string name="comment_anchor_open">Voir l\'image dont parle ce commentaire</string>
     <string name="comment_anchor_default">Sur cette image</string>
     <plurals name="lightbox_comments_others">

@@ -237,7 +237,7 @@
     <string name="route_delete_message">경로 \"%1$s\"에 대한 라우트가 제거됩니다.</string>
     <string name="route_empty">구성된 경로가 없습니다.</string>
     <string name="route_meta">우선순위 %1$s · %2$s</string>
-    <string name="interests_search_placeholder">추가할 주제 검색…</string>
+    <string name="interests_search_placeholder">추가할 주제 검색</string>
     <string name="interests_empty">아직 관심사가 없습니다.</string>
     <string name="interests_summary_regenerate">요약 재생성</string>
     <string name="interests_summary_regenerating">다시 생성 중…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">\"%1$s\"이(가) 기본값(비어 있음)으로 재설정됩니다.</string>
     <string name="settings_home_system_users">사용자(서버)</string>
     <string name="system_users_add_user">사용자 추가</string>
-    <string name="system_users_search_placeholder">사용자 검색…</string>
+    <string name="system_users_search_placeholder">사용자 검색</string>
     <string name="system_users_sort_by">정렬 기준</string>
     <string name="system_users_last_login">마지막 로그인: %1$s</string>
     <string name="system_users_delete_message">사용자 \"%1$s\"이(가) 영구적으로 삭제됩니다. 이 작업은 취소할 수 없습니다.</string>
@@ -546,7 +546,7 @@
     <string name="handles_take">이름 확보</string>
     <string name="handles_empty">예약된 핸들이 없습니다.</string>
     <string name="handles_empty_search">검색과 일치하는 핸들이 없어요</string>
-    <string name="handles_search_placeholder">핸들 검색…</string>
+    <string name="handles_search_placeholder">핸들 검색</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">핸들 %3$s개 중 %1$s–%2$s개 표시 중</item>
     </plurals>

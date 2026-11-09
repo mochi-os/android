@@ -3,7 +3,6 @@
     <string name="app_name">Mache</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Byografi</string>
-    <string name="market_account_biography_placeholder">Pale achtè yo sou tèt ou…</string>
     <string name="market_account_load_failed">Pa t kapab chaje kont la</string>
     <string name="market_account_location_label">Lokasyon</string>
     <string name="market_account_save">Sove</string>
@@ -242,7 +241,7 @@
     <string name="market_listings_new">Nouvo lis</string>
     <string name="market_listings_relist_failed">Echwe pou re-liste</string>
     <string name="market_listings_title">Lis mwen yo</string>
-    <string name="market_messages_compose_placeholder">Ekri yon mesaj…</string>
+    <string name="market_messages_compose_placeholder">Ekri yon mesaj</string>
     <string name="market_messages_inbox_title">Mesaj</string>
     <string name="market_messages_send">Voye</string>
     <string name="market_messages_thread_title">Konvèsasyon</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Achtè ak vandè kapab evalye youn lòt apre yon kòmand fini.</string>
     <string name="market_reviews_empty_sent_subtitle">Ouvri yon kòmand ki fini pou kite yon revizyon.</string>
     <string name="market_reviews_empty_sent_title">Ou poko ekri okenn revizyon</string>
-    <string name="market_reviews_response_placeholder">Ekri yon repons…</string>
+    <string name="market_reviews_response_placeholder">Ekri yon repons</string>
     <string name="market_sale_carrier_custom_label">Non transpòtè</string>
     <string name="market_sale_dispute_evidence_due">Prèv dwe rive %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Rezon ranbousman bankè Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Evalyasyon vandè a</string>
     <string name="market_account_stripe_open_failed">Pa t kapab ouvri Stripe</string>
     <string name="market_editor_stock">Stòk</string>
-    <string name="market_editor_stock_units">Kantite inite</string>
     <string name="market_editor_stock_unlimited">Ilimite</string>
     <string name="market_editor_start_time">Lè kòmansman</string>
     <string name="market_editor_start_time_help">Kite vid pou kòmanse sou piblikasyon.</string>

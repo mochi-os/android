@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Láti ọ̀dọ̀ àkòrí</string>
     <string name="settings_background_off">Kòsí</string>
     <string name="game_chat_empty">Kò sí ìránṣẹ́ síbẹ̀</string>
-    <string name="game_chat_input_placeholder">Tẹ ìránṣẹ́…</string>
+    <string name="game_chat_input_placeholder">Tẹ ìránṣẹ́</string>
     <string name="game_chat_send">Fi ìránṣẹ́ ránṣẹ́</string>
     <string name="game_chat_subject_you">Ìwọ</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Jẹ́rìí sí pé ìwọ ni</string>
     <string name="stepup_description">Èyí jẹ́ ìyípadà ààbò sí àkáǹtì rẹ. Jẹ́rìí sí pé ìwọ ni láti tẹ̀síwájú.</string>
     <string name="stepup_email_label">Kóòdù ímẹ́ẹ̀lì</string>
-    <string name="stepup_email_placeholder">Tẹ koodu láti inú ímeèlì rẹ</string>
     <string name="stepup_totp_label">Kóòdù olùfọwọ́sí</string>
-    <string name="stepup_totp_placeholder">Tẹ kóòdù authenticator rẹ</string>
     <string name="stepup_use_passkey">Lo kọ́kọ́rọ́-ìwọlé rẹ</string>
     <string name="stepup_send_email">Fi ímeèlì ránṣẹ́</string>
     <string name="stepup_resend_email">Tún ìmélì náà ránṣẹ́</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Yọ àmì kúrò</string>
     <string name="person_picker_none">Kòsí</string>
     <string name="person_picker_clear">Pa ìyàn rẹ́</string>
-    <string name="person_picker_select">Yan …</string>
+    <string name="person_picker_select">Yan</string>
     <string name="person_picker_directory">Àtòjọ</string>
     <string name="person_picker_no_people">Kò sí ènìyàn</string>
     <string name="person_picker_project_members">Àwọn ọmọ ẹgbẹ́ iṣẹ́ àkanṣe</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Yí ẹ̀ka ìfìtọ́nisí padà</string>
     <string name="lightbox_comments_none">Kò tíì sí ọ̀rọ̀ kankan lórí àwòrán yìí.</string>
     <string name="lightbox_comments_only">Fi àwọn ọ̀rọ̀ lórí àwòrán yìí nìkan hàn</string>
-    <string name="lightbox_comment_placeholder">Sọ̀rọ̀ lórí àwòrán yìí…</string>
+    <string name="lightbox_comment_placeholder">Sọ̀rọ̀ lórí àwòrán yìí</string>
     <string name="comment_anchor_open">Wo àwòrán tí ọ̀rọ̀ yìí dá lé</string>
     <string name="comment_anchor_default">Lórí àwòrán yìí</string>
     <plurals name="lightbox_comments_others">

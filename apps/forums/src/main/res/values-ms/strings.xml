@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Hantar</string>
     <string name="forums_post_body_field">Kandungan</string>
-    <string name="forums_write_comment">Tulis komen…</string>
+    <string name="forums_write_comment">Tulis komen</string>
 
     <string name="notification_channel_forums">Pemberitahuan forum</string>
     <string name="forums_list_empty">Belum ada forum</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Belum ada peraturan — lalai digunakan</string>
     <string name="forums_members_search">Tapis ahli</string>
     <string name="forums_banner_description">Markdown yang dipaparkan di bahagian atas forum.</string>
-    <string name="forums_banner_placeholder">Masukkan teks sepanduk (markdown disokong)…</string>
     <string name="forums_ai_mode_off">Dilumpuhkan</string>
     <string name="forums_moderation_queue_empty">Tiada yang menunggu</string>
     <string name="forums_moderation_report_details">Butiran: %1$s</string>

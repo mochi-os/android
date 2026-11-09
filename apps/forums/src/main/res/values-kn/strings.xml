@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">ಕಳುಹಿಸಿ</string>
     <string name="forums_post_body_field">ವಿಷಯ</string>
-    <string name="forums_write_comment">ಕಾಮೆಂಟ್ ಬರೆಯಿರಿ…</string>
+    <string name="forums_write_comment">ಕಾಮೆಂಟ್ ಬರೆಯಿರಿ</string>
 
     <string name="notification_channel_forums">ಫೋರಂಗಳ ಅಧಿಸೂಚನೆಗಳು</string>
     <string name="forums_list_empty">ಇನ್ನೂ ಫೋರಂಗಳಿಲ್ಲ</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">ಇನ್ನೂ ನಿಯಮಗಳಿಲ್ಲ — ಪೂರ್ವನಿಯೋಜಿತಗಳು ಅನ್ವಯಿಸುತ್ತವೆ</string>
     <string name="forums_members_search">ಸದಸ್ಯರನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="forums_banner_description">ಫೋರಂನ ಮೇಲ್ಭಾಗದಲ್ಲಿ ತೋರಿಸಲಾಗುವ ಮಾರ್ಕ್‌ಡೌನ್.</string>
-    <string name="forums_banner_placeholder">ಬ್ಯಾನರ್ ಪಠ್ಯವನ್ನು ನಮೂದಿಸಿ (ಮಾರ್ಕ್‌ಡೌನ್ ಬೆಂಬಲಿತ)…</string>
     <string name="forums_ai_mode_off">ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="forums_moderation_queue_empty">ಬಾಕಿ ಇರುವುದು ಏನೂ ಇಲ್ಲ</string>
     <string name="forums_moderation_report_details">ವಿವರಗಳು: %1$s</string>

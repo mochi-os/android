@@ -6,7 +6,7 @@
     <string name="people_groups_title">గ్రూపులు</string>
     <string name="people_group_title">గ్రూప్</string>
     <string name="people_person_title">వ్యక్తి</string>
-    <string name="people_friends_search_placeholder">శోధించండి…</string>
+    <string name="people_friends_search_placeholder">శోధించండి</string>
     <string name="people_friends_no_people_found">ఎవరూ కనుగొనబడలేదు</string>
     <string name="people_friends_try_adjusting">మీ శోధనను సర్దుబాటు చేయడం ప్రయత్నించండి</string>
     <string name="people_friends_pending">పెండింగ్</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" సమూహాన్ని తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
     <string name="people_member_remove_confirm">మీరు ఈ సమూహం నుండి %1$s ను తీసివేయాలనుకుంటున్నారా?</string>
     <string name="people_member_remove_with_name">%1$s ను తీసివేయండి</string>
-    <string name="people_member_search_placeholder">వెతకడానికి పేరు నమోదు చేయండి…</string>
+    <string name="people_member_search_placeholder">వెతకడానికి పేరు నమోదు చేయండి</string>
     <string name="people_groups_add_member_confirm_title">సమూహానికి జోడించు</string>
     <string name="people_groups_add_member_confirm_action">సమూహానికి జోడించు</string>
     <string name="people_profile_image_process_failed">%1$s చిత్రాన్ని ప్రాసెస్ చేయలేకపోయింది</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">మీ ఆహ్వాన విధానాన్ని లోడ్ చేయడంలో విఫలమైంది</string>
     <string name="people_profile_avatar">అవతార్</string>
     <string name="people_profile_banner">బ్యానర్</string>
-    <string name="people_contacts_search_placeholder">శోధించండి…</string>
+    <string name="people_contacts_search_placeholder">శోధించండి</string>
     <string name="people_contacts_invited">ఆహ్వానించబడింది</string>
     <string name="people_contacts_accept">అంగీకరించండి</string>
     <string name="people_contacts_message">సందేశం పంపండి</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">ఇటీవల జోడించబడింది</string>
     <string name="people_contacts_try_different_search">వేరే శోధన పదాన్ని ప్రయత్నించండి</string>
     <string name="people_contacts_unfriend">స్నేహితుడిని తీసివేయండి</string>
-    <string name="people_add_contact_search_placeholder">వెతకడానికి టైప్ చేయండి…</string>
+    <string name="people_add_contact_search_placeholder">వెతకడానికి టైప్ చేయండి</string>
     <string name="people_add_contact_search_start">వినియోగదారులను శోధించడానికి టైప్ చేయడం ప్రారంభించండి</string>
     <string name="people_contact_phone">ఫోన్</string>
     <string name="people_contact_title">జాబ్ టైటిల్</string>

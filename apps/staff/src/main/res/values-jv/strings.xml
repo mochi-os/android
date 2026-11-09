@@ -41,7 +41,6 @@
     <string name="staff_appeals_decide">Putusaké</string>
     <string name="staff_appeals_decision_denied">Tetep listing ditolak</string>
     <string name="staff_appeals_decision_label">Keputusan</string>
-    <string name="staff_appeals_decision_placeholder">Pilih keputusan</string>
     <string name="staff_appeals_decision_upheld">Setujoni listing</string>
     <string name="staff_appeals_denied_toast">Banding ditolak</string>
     <string name="staff_appeals_dialog_title">Putusaké banding</string>
@@ -222,7 +221,6 @@
     <string name="staff_disputes_refund_must_be_positive">Jumlah refund kudu luwih saka nol</string>
     <string name="staff_disputes_resolution_buyer">Rampungaké kanggo pembeli</string>
     <string name="staff_disputes_resolution_label">Resolusi</string>
-    <string name="staff_disputes_resolution_placeholder">Pilih resolusi</string>
     <string name="staff_disputes_resolution_seller">Rampungaké kanggo penjual</string>
     <string name="staff_disputes_resolve">Rampungaké</string>
     <string name="staff_disputes_resolved_toast">Sengketa rampung</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">Blokir pangguna</string>
     <string name="staff_reports_action_dismiss">Tolak</string>
     <string name="staff_reports_action_label">Tindakan</string>
-    <string name="staff_reports_action_placeholder">Pilih aksi</string>
     <string name="staff_reports_action_remove">Cabut</string>
     <string name="staff_reports_action_suspend">Setop dadi sing dodol</string>
     <string name="staff_reports_action_taken_toast">Aksi laporan ditindakaké</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">pesenan #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s ing %3$s. Busak ulasan iki kanthi permanen? Iki ora bisa dibatalake.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Busak ulasan iki kanthi permanen? Iki ora bisa dibatalake.</string>
-    <string name="staff_team_dialog_search_placeholder">Goleki miturut jeneng, sidik jari, utawa ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Goleki miturut jeneng, sidik jari, utawa ID</string>
 
     <string name="staff_config_field_stripe_webhook">Rahasia tapak tangan Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Wis dibalèkaké</string>

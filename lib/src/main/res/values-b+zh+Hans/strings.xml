@@ -115,7 +115,7 @@
     <string name="settings_background_theme">来自主题</string>
     <string name="settings_background_off">无</string>
     <string name="game_chat_empty">暂无消息</string>
-    <string name="game_chat_input_placeholder">输入消息…</string>
+    <string name="game_chat_input_placeholder">输入消息</string>
     <string name="game_chat_send">发送消息</string>
     <string name="game_chat_subject_you">您</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">确认是您本人</string>
     <string name="stepup_description">这是对您账户的安全更改。请验证您的身份以继续。</string>
     <string name="stepup_email_label">邮箱验证码</string>
-    <string name="stepup_email_placeholder">输入电子邮件中的验证码</string>
     <string name="stepup_totp_label">身份验证码</string>
-    <string name="stepup_totp_placeholder">请输入您的身份验证器代码</string>
     <string name="stepup_use_passkey">使用您的通行密钥</string>
     <string name="stepup_send_email">发送邮件</string>
     <string name="stepup_resend_email">重新发送邮件</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">移除标签</string>
     <string name="person_picker_none">无</string>
     <string name="person_picker_clear">清除选择</string>
-    <string name="person_picker_select">选择 …</string>
+    <string name="person_picker_select">选择</string>
     <string name="person_picker_directory">目录</string>
     <string name="person_picker_no_people">没有人员</string>
     <string name="person_picker_project_members">项目成员</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">更改通知分类</string>
     <string name="lightbox_comments_none">这张图片还没有评论。</string>
     <string name="lightbox_comments_only">仅显示这张图片的评论</string>
-    <string name="lightbox_comment_placeholder">评论这张图片…</string>
+    <string name="lightbox_comment_placeholder">评论这张图片</string>
     <string name="comment_anchor_open">查看此评论所指的图片</string>
     <string name="comment_anchor_default">关于这张图片</string>
     <plurals name="lightbox_comments_others">

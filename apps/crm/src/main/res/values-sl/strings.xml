@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Prstni odtis</string>
     <string name="crm_settings_server">Strežnik</string>
     <string name="crm_untitled">Brez naslova</string>
-    <string name="crm_property_select">Izberite …</string>
     <string name="crm_filter">Filter</string>
     <string name="crm_sort_filter_title">Razvrsti in filtriraj</string>
     <string name="crm_filter_clear_all">Počisti vse</string>

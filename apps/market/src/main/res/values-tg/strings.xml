@@ -344,7 +344,6 @@
     <string name="market_profile_sales_count">%1$s фурӯш</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Ба харидорон дар бораи худ нақл кунед…</string>
     <string name="market_account_load_failed">Ҳисобро бор кардан натавонист</string>
     <string name="market_account_saved">Тағйирот захира шуд</string>
     <string name="market_account_status_restrictions">Баъзе амалҳо, аз ҷумла эҷоди рӯйхатҳои нав ва анҷоми фармоишҳо, вақте ки ҳисоби шумо дар ин ҳолат аст, маҳдуд карда мешаванд.</string>
@@ -461,7 +460,7 @@
     <string name="market_listings_new">Эълони нав</string>
     <string name="market_listings_search_placeholder">Эълонҳои худро ҷустуҷӯ кунед</string>
     <string name="market_listings_share_chooser">Мубодилаи эълон</string>
-    <string name="market_messages_compose_placeholder">Паём нависед…</string>
+    <string name="market_messages_compose_placeholder">Паём нависед</string>
     <string name="market_messages_inbox_empty_subtitle">Вақте ки шумо ба фурӯшанда паём мефиристед (ё харидор ба шумо паём мефиристад), сӯҳбат дар ин ҷо пайдо мешавад.</string>
     <string name="market_messages_inbox_empty_title">Ҳанӯз сӯҳбатҳо нестанд</string>
     <string name="market_messages_thread_title">Сӯҳбат</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Барои гузоштани баррасӣ фармоиши анҷомёфтаро кушоед.</string>
     <string name="market_reviews_empty_sent_title">Шумо ягон баррасӣ нанавиштаед</string>
     <string name="market_reviews_response_label">Ҷавоб</string>
-    <string name="market_reviews_response_placeholder">Ҷавоб нависед…</string>
+    <string name="market_reviews_response_placeholder">Ҷавоб нависед</string>
     <string name="market_sale_carrier_custom_label">Номи интиқолдиҳанда</string>
     <string name="market_sale_dispute_evidence_due">Далелҳо то %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Сабаби бозгашти пардохти Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Шарҳҳои фурӯшанда</string>
     <string name="market_account_stripe_open_failed">Stripe-ро кушодан нашуд</string>
     <string name="market_editor_stock">Захира</string>
-    <string name="market_editor_stock_units">Шумораи воҳидҳо</string>
     <string name="market_editor_stock_unlimited">Беҳудуд</string>
     <string name="market_editor_start_time">Вақти оғоз</string>
     <string name="market_editor_start_time_help">Барои оғоз дар нашр холӣ гузоред.</string>

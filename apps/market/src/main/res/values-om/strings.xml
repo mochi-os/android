@@ -3,7 +3,6 @@
     <string name="app_name">Gabaa</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Seenaa jireenyaa</string>
-    <string name="market_account_biography_placeholder">Bittootaaf waa\'ee kee himi…</string>
     <string name="market_account_load_failed">Akkaawuntiin fe\'amuu hin dandeenye</string>
     <string name="market_account_location_label">Iddoo</string>
     <string name="market_account_save">Olkaa\'i</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Tarree haaraa</string>
     <string name="market_listings_relist_failed">Deebi\'ee tarreessuu hin dandeenye</string>
     <string name="market_listings_title">Tarreeffamoota koo</string>
-    <string name="market_messages_compose_placeholder">Ergaa barreessaa…</string>
+    <string name="market_messages_compose_placeholder">Ergaa barreessaa</string>
     <string name="market_messages_inbox_title">Ergaalee</string>
     <string name="market_messages_send">Ergi</string>
     <string name="market_messages_thread_title">Marii</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Bitaa fi gurgurtaan booda ajajni xumuramee booda walii isaanii madaaluu danda\'u.</string>
     <string name="market_reviews_empty_sent_subtitle">Madaallii kennuuf ajaja xumurame bani.</string>
     <string name="market_reviews_empty_sent_title">Madaallii tokko illee hin barreessine</string>
-    <string name="market_reviews_response_placeholder">Deebii barreessi…</string>
+    <string name="market_reviews_response_placeholder">Deebii barreessi</string>
     <string name="market_sale_carrier_custom_label">Maqaa geejjibsiisaa</string>
     <string name="market_sale_dispute_evidence_due">Ragaan kan dhihaatu %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Sababii chaargii deebi\'e Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Tilmaama gurgurtaa</string>
     <string name="market_account_stripe_open_failed">Stripe banuun hin danda\'amne</string>
     <string name="market_editor_stock">Kuusaa</string>
-    <string name="market_editor_stock_units">Baay\'ina yuunitii</string>
     <string name="market_editor_stock_unlimited">Daangaa hin qabu</string>
     <string name="market_editor_start_time">Yeroo jalqabaa</string>
     <string name="market_editor_start_time_help">Maxxansa irratti jalqabuuf duwwaa kaa\'i.</string>

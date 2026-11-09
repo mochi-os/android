@@ -3,7 +3,6 @@
     <string name="app_name">Tregu</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografia</string>
-    <string name="market_account_biography_placeholder">Tregojuni blerësve për veten…</string>
     <string name="market_account_load_failed">Llogaria nuk u ngarkua</string>
     <string name="market_account_location_label">Vendndodhja</string>
     <string name="market_account_save">Ruaj</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Listim i ri</string>
     <string name="market_listings_relist_failed">Rishpallja dështoi</string>
     <string name="market_listings_title">Listimet e mia</string>
-    <string name="market_messages_compose_placeholder">Shkruaj një mesazh…</string>
+    <string name="market_messages_compose_placeholder">Shkruaj një mesazh</string>
     <string name="market_messages_inbox_title">Mesazhet</string>
     <string name="market_messages_send">Dërgo</string>
     <string name="market_messages_thread_title">Bisedë</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Blerësit dhe shitësit mund të vlerësojnë njëri-tjetrin pasi të përfundojë një porosi.</string>
     <string name="market_reviews_empty_sent_subtitle">Hapni një porosi të përfunduar për të lënë një vlerësim.</string>
     <string name="market_reviews_empty_sent_title">Nuk keni shkruar asnjë vlerësim</string>
-    <string name="market_reviews_response_placeholder">Shkruani një përgjigje…</string>
+    <string name="market_reviews_response_placeholder">Shkruani një përgjigje</string>
     <string name="market_sale_carrier_custom_label">Emri i transportuesit</string>
     <string name="market_sale_dispute_evidence_due">Provat duhen dorëzuar deri më %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Arsyeja e kthimit të pagesës nga Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Vlerësimet e shitësit</string>
     <string name="market_account_stripe_open_failed">Stripe nuk u hap dot</string>
     <string name="market_editor_stock">Stoku</string>
-    <string name="market_editor_stock_units">Numri i njësive</string>
     <string name="market_editor_stock_unlimited">Pa kufi</string>
     <string name="market_editor_start_time">Koha e fillimit</string>
     <string name="market_editor_start_time_help">Lini bosh për të filluar në publikim.</string>

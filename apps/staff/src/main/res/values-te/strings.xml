@@ -39,7 +39,6 @@
     <string name="staff_appeals_decide">నిర్ణయించండి</string>
     <string name="staff_appeals_decision_denied">జాబితాను తిరస్కరించినట్లు ఉంచండి</string>
     <string name="staff_appeals_decision_label">నిర్ణయం</string>
-    <string name="staff_appeals_decision_placeholder">నిర్ణయాన్ని ఎంచుకోండి</string>
     <string name="staff_appeals_decision_upheld">జాబితాను ఆమోదించండి</string>
     <string name="staff_appeals_denied_toast">అప్పీల్ తిరస్కరించబడింది</string>
     <string name="staff_appeals_dialog_title">అప్పీల్‌ను నిర్ణయించండి</string>
@@ -220,7 +219,6 @@
     <string name="staff_disputes_refund_must_be_positive">రీఫండ్ మొత్తం సున్నా కంటే ఎక్కువగా ఉండాలి</string>
     <string name="staff_disputes_resolution_buyer">కొనుగోలుదారు కోసం పరిష్కరించండి</string>
     <string name="staff_disputes_resolution_label">పరిష్కారం</string>
-    <string name="staff_disputes_resolution_placeholder">పరిష్కారాన్ని ఎంచుకోండి</string>
     <string name="staff_disputes_resolution_seller">విక్రేత కోసం పరిష్కరించండి</string>
     <string name="staff_disputes_resolve">పరిష్కరించండి</string>
     <string name="staff_disputes_resolved_toast">వివాదం పరిష్కరించబడింది</string>
@@ -279,7 +277,6 @@
     <string name="staff_reports_action_ban">వినియోగదారుని నిషేధించండి</string>
     <string name="staff_reports_action_dismiss">విస్మరించండి</string>
     <string name="staff_reports_action_label">చర్య</string>
-    <string name="staff_reports_action_placeholder">చర్యను ఎంచుకోండి</string>
     <string name="staff_reports_action_remove">తొలగించండి</string>
     <string name="staff_reports_action_suspend">విక్రేతగా సస్పెండ్ చేయండి</string>
     <string name="staff_reports_action_taken_toast">రిపోర్ట్‌పై చర్య తీసుకోబడింది</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ఆర్డర్ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$sన. ఈ సమీక్షను శాశ్వతంగా తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. ఈ సమీక్షను శాశ్వతంగా తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
-    <string name="staff_team_dialog_search_placeholder">పేరు, వేలిముద్ర లేదా ID ద్వారా శోధించండి…</string>
+    <string name="staff_team_dialog_search_placeholder">పేరు, వేలిముద్ర లేదా ID ద్వారా శోధించండి</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook సంతకం రహస్యం</string>
     <string name="staff_disputes_meta_already_refunded">ఇప్పటికే తిరిగి చెల్లించబడింది</string>

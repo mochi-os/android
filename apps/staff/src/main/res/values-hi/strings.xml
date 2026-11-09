@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">निर्णय करें</string>
     <string name="staff_appeals_decision_denied">लिस्टिंग अस्वीकृत रखें</string>
     <string name="staff_appeals_decision_label">निर्णय</string>
-    <string name="staff_appeals_decision_placeholder">निर्णय चुनें</string>
     <string name="staff_appeals_decision_upheld">लिस्टिंग स्वीकृत करें</string>
     <string name="staff_appeals_denied_toast">अपील अस्वीकृत</string>
     <string name="staff_appeals_dialog_title">अपील पर निर्णय करें</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">रिफ़ंड राशि शून्य से अधिक होनी चाहिए</string>
     <string name="staff_disputes_resolution_buyer">खरीदार के लिए हल करें</string>
     <string name="staff_disputes_resolution_label">समाधान</string>
-    <string name="staff_disputes_resolution_placeholder">रिज़ॉल्यूशन चुनें</string>
     <string name="staff_disputes_resolution_seller">विक्रेता के लिए हल करें</string>
     <string name="staff_disputes_resolve">हल करें</string>
     <string name="staff_disputes_resolved_toast">विवाद हल किया गया</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">उपयोगकर्ता को बैन करें</string>
     <string name="staff_reports_action_dismiss">खारिज करें</string>
     <string name="staff_reports_action_label">एक्शन</string>
-    <string name="staff_reports_action_placeholder">ऐक्शन चुनें</string>
     <string name="staff_reports_action_remove">हटाएँ</string>
     <string name="staff_reports_action_suspend">विक्रेता के रूप में सस्पेंड करें</string>
     <string name="staff_reports_action_taken_toast">रिपोर्ट कार्रवाई की गई</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">व्यक्ति</string>
     <string name="staff_team_dialog_role">भूमिका</string>
     <string name="staff_team_dialog_role_placeholder">भूमिका चुनें</string>
-    <string name="staff_team_dialog_search_placeholder">नाम, फ़िंगरप्रिंट या ID से खोजें…</string>
+    <string name="staff_team_dialog_search_placeholder">नाम, फ़िंगरप्रिंट या ID से खोजें</string>
     <string name="staff_team_empty">कोई टीम सदस्य नहीं</string>
     <string name="staff_team_remove_confirm">हटाएँ</string>
     <string name="staff_team_remove_desc">इस सदस्य को स्टाफ़ टीम से हटाएँ?</string>

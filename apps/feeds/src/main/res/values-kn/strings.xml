@@ -86,7 +86,7 @@
     <string name="feeds_move_down">ಕೆಳಗೆ ಸರಿಸಿ</string>
 
     <string name="notification_channel_feeds">ಫೀಡ್‌ಗಳ ಅಧಿಸೂಚನೆಗಳು</string>
-    <string name="feeds_search_placeholder">ಫೀಡ್‌ಗಳನ್ನು ಹುಡುಕಿ ಅಥವಾ URL ಅಂಟಿಸಿ…</string>
+    <string name="feeds_search_placeholder">ಫೀಡ್‌ಗಳನ್ನು ಹುಡುಕಿ ಅಥವಾ URL ಅಂಟಿಸಿ</string>
     <string name="feeds_url_result">URL ಫಲಿತಾಂಶ</string>
     <string name="feeds_search_results">ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳು</string>
     <string name="feeds_unread_only">ಓದದಿರುವವು ಮಾತ್ರ</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">ಈ ಫೀಡ್‌ನಿಂದ ನಿಮಗೆ ಅಪ್‌ಡೇಟ್‌ಗಳು ಬರುವುದು ನಿಲ್ಲುತ್ತದೆ. ನೀವು ಯಾವಾಗ ಬೇಕಾದರೂ ಮತ್ತೆ ಚಂದಾದಾರರಾಗಬಹುದು.</string>
     <string name="feeds_access_select_rule">ಪ್ರವೇಶ ನಿಯಮವನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
     <string name="feeds_access_authenticated_desc">ಲಾಗಿನ್ ಆಗಿರುವ ಯಾರಾದರೂ</string>
-    <string name="feeds_banner_hint">ಈ ಫೋರಂಗೆ ಸ್ವಾಗತ…</string>
     <string name="feeds_banner_dismiss">ಬ್ಯಾನರ್ ತಿರಸ್ಕರಿಸಿ</string>
     <string name="feeds_members_search">ಸದಸ್ಯರನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಿ</string>
     <string name="feeds_ai_prompt_default">ಡೀಫಾಲ್ಟ್</string>

@@ -238,7 +238,7 @@
     <string name="route_delete_message">See eemaldab marsruudi tee \"%1$s\".</string>
     <string name="route_empty">Marsruute pole konfigureeritud.</string>
     <string name="route_meta">Prioriteet %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Otsi lisamiseks teemasid…</string>
+    <string name="interests_search_placeholder">Otsi lisamiseks teemasid</string>
     <string name="interests_empty">Veel pole huvisid.</string>
     <string name="interests_summary_regenerate">Genereeri kokkuvõte uuesti</string>
     <string name="interests_summary_regenerating">Genereerin uuesti…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">See lähtestab \"%1$s\" vaikimisi (tühi).</string>
     <string name="settings_home_system_users">Kasutajad (server)</string>
     <string name="system_users_add_user">Lisa kasutaja</string>
-    <string name="system_users_search_placeholder">Otsi kasutajaid…</string>
+    <string name="system_users_search_placeholder">Otsi kasutajaid</string>
     <string name="system_users_sort_by">Sorteeri</string>
     <string name="system_users_last_login">Viimane sisselogimine: %1$s</string>
     <string name="system_users_delete_message">See kustutab jäädavalt kasutaja \"%1$s\". Seda toimingut ei saa tagasi võtta.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Võtke nimi</string>
     <string name="handles_empty">Ühtegi kasutajanime pole broneeritud.</string>
     <string name="handles_empty_search">Otsingule vastavaid kasutajanimesid pole</string>
-    <string name="handles_search_placeholder">Otsi kasutajanimesid…</string>
+    <string name="handles_search_placeholder">Otsi kasutajanimesid</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Näidatakse %1$s–%2$s, kokku %3$s kasutajanimi</item>
         <item quantity="other">Näidatakse %1$s–%2$s, kokku %3$s kasutajanime</item>

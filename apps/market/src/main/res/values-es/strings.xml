@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Pedido n.º %1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Cuéntales a los compradores sobre ti…</string>
     <string name="market_account_load_failed">No se pudo cargar la cuenta</string>
     <string name="market_account_saved">Cambios guardados</string>
     <string name="market_account_status_restrictions">Algunas acciones, incluida la creación de nuevos anuncios y la finalización de pedidos, están restringidas mientras tu cuenta se encuentre en este estado.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Nuevo anuncio</string>
     <string name="market_listings_search_placeholder">Buscar en tus anuncios</string>
     <string name="market_listings_share_chooser">Compartir anuncio</string>
-    <string name="market_messages_compose_placeholder">Escribe un mensaje…</string>
+    <string name="market_messages_compose_placeholder">Escribe un mensaje</string>
     <string name="market_messages_inbox_empty_subtitle">Cuando envíes un mensaje a un vendedor (o un comprador te envíe uno), la conversación aparecerá aquí.</string>
     <string name="market_messages_inbox_empty_title">Aún no hay conversaciones</string>
     <string name="market_messages_thread_title">Conversación</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Abra un pedido completado para dejar una reseña.</string>
     <string name="market_reviews_empty_sent_title">No ha escrito ninguna reseña</string>
     <string name="market_reviews_response_label">Respuesta</string>
-    <string name="market_reviews_response_placeholder">Escriba una respuesta…</string>
+    <string name="market_reviews_response_placeholder">Escriba una respuesta</string>
     <string name="market_sale_carrier_custom_label">Nombre del transportista</string>
     <string name="market_sale_dispute_evidence_due">Pruebas requeridas para el %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Motivo del contracargo de Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Reseñas del vendedor</string>
     <string name="market_account_stripe_open_failed">No se pudo abrir Stripe</string>
     <string name="market_editor_stock">Existencias</string>
-    <string name="market_editor_stock_units">Número de unidades</string>
     <string name="market_editor_stock_unlimited">Ilimitado</string>
     <string name="market_editor_start_time">Hora de inicio</string>
     <string name="market_editor_start_time_help">Déjalo en blanco para empezar al publicar.</string>

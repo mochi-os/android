@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json-Datei hochladen</string>
     <string name="projects_settings_not_set">Nicht festgelegt</string>
     <string name="projects_settings_updated">Projekt aktualisiert</string>
-    <string name="projects_property_select">Auswählen …</string>
     <string name="projects_activity_attached">hat angehängt</string>
     <string name="projects_activity_commented">hat kommentiert</string>
     <string name="projects_attachment_delete_confirm_message">Dieser Anhang wird dauerhaft gelöscht.</string>

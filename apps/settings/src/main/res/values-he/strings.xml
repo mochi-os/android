@@ -239,7 +239,7 @@
     <string name="route_delete_message">פעולה זו תסיר את המסלול עבור הנתיב \"%1$s\".</string>
     <string name="route_empty">לא הוגדרו מסלולים.</string>
     <string name="route_meta">עדיפות %1$s · %2$s</string>
-    <string name="interests_search_placeholder">חפש נושאים להוספה…</string>
+    <string name="interests_search_placeholder">חפש נושאים להוספה</string>
     <string name="interests_empty">עדיין אין תחומי עניין.</string>
     <string name="interests_summary_regenerate">צור סיכום מחדש</string>
     <string name="interests_summary_regenerating">יוצר מחדש…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">פעולה זו תאפס את \"%1$s\" לברירת המחדל (ריק).</string>
     <string name="settings_home_system_users">משתמשים (שרת)</string>
     <string name="system_users_add_user">הוסף משתמש</string>
-    <string name="system_users_search_placeholder">חפש משתמשים…</string>
+    <string name="system_users_search_placeholder">חפש משתמשים</string>
     <string name="system_users_sort_by">מיין לפי</string>
     <string name="system_users_last_login">כניסה אחרונה: %1$s</string>
     <string name="system_users_delete_message">פעולה זו תמחק לצמיתות את המשתמש \"%1$s\". לא ניתן לבטל פעולה זו.</string>
@@ -567,7 +567,7 @@
     <string name="handles_take">קח שם</string>
     <string name="handles_empty">לא שוריינו שמות משתמש.</string>
     <string name="handles_empty_search">לא נמצאו שמות משתמש תואמים לחיפוש שלך</string>
-    <string name="handles_search_placeholder">חפש שמות משתמש…</string>
+    <string name="handles_search_placeholder">חפש שמות משתמש</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">מציג %1$s–%2$s מתוך %3$s שם משתמש</item>
         <item quantity="two">מציג %1$s–%2$s מתוך %3$s שמות משתמש</item>

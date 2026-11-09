@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Παραγγελία #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Πείτε στους αγοραστές για εσάς…</string>
     <string name="market_account_load_failed">Δεν ήταν δυνατή η φόρτωση του λογαριασμού</string>
     <string name="market_account_saved">Οι αλλαγές αποθηκεύτηκαν</string>
     <string name="market_account_status_restrictions">Ορισμένες ενέργειες, συμπεριλαμβανομένης της δημιουργίας νέων καταχωρίσεων και της ολοκλήρωσης παραγγελιών, είναι περιορισμένες όσο ο λογαριασμός σας βρίσκεται σε αυτή την κατάσταση.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Νέα καταχώριση</string>
     <string name="market_listings_search_placeholder">Αναζήτηση στις καταχωρίσεις σας</string>
     <string name="market_listings_share_chooser">Κοινοποίηση καταχώρισης</string>
-    <string name="market_messages_compose_placeholder">Γράψτε ένα μήνυμα…</string>
+    <string name="market_messages_compose_placeholder">Γράψτε ένα μήνυμα</string>
     <string name="market_messages_inbox_empty_subtitle">Όταν στείλετε μήνυμα σε έναν πωλητή (ή ένας αγοραστής σας στείλει μήνυμα) η συνομιλία θα εμφανιστεί εδώ.</string>
     <string name="market_messages_inbox_empty_title">Καμία συνομιλία ακόμη</string>
     <string name="market_messages_thread_title">Συνομιλία</string>
@@ -506,7 +505,7 @@
     <string name="market_reviews_empty_sent_subtitle">Ανοίξτε μια ολοκληρωμένη παραγγελία για να γράψετε κριτική.</string>
     <string name="market_reviews_empty_sent_title">Δεν έχετε γράψει καμία κριτική</string>
     <string name="market_reviews_response_label">Απάντηση</string>
-    <string name="market_reviews_response_placeholder">Γράψτε μια απάντηση…</string>
+    <string name="market_reviews_response_placeholder">Γράψτε μια απάντηση</string>
     <string name="market_sale_carrier_custom_label">Όνομα μεταφορέα</string>
     <string name="market_sale_dispute_evidence_due">Προθεσμία στοιχείων %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Λόγος αντιλογισμού Stripe: %1$s</string>
@@ -592,7 +591,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Αξιολογήσεις πωλητή</string>
     <string name="market_account_stripe_open_failed">Δεν ήταν δυνατό το άνοιγμα του Stripe</string>
     <string name="market_editor_stock">Απόθεμα</string>
-    <string name="market_editor_stock_units">Αριθμός μονάδων</string>
     <string name="market_editor_stock_unlimited">Απεριόριστο</string>
     <string name="market_editor_start_time">Ώρα έναρξης</string>
     <string name="market_editor_start_time_help">Αφήστε κενό για έναρξη κατά τη δημοσίευση.</string>

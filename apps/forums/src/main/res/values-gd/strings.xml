@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Cuir</string>
     <string name="forums_post_body_field">Bodhaig</string>
-    <string name="forums_write_comment">Sgrìobh beachd…</string>
+    <string name="forums_write_comment">Sgrìobh beachd</string>
 
     <string name="notification_channel_forums">Brathan nam fòraman</string>
     <string name="forums_list_empty">Chan eil fòram ann fhathast</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Chan eil riaghailt ann fhathast — thèid na bun-roghainnean a chleachdadh</string>
     <string name="forums_members_search">Criathraich na buill</string>
     <string name="forums_banner_description">Markdown a thèid a shealltainn aig mullach an fhòraim.</string>
-    <string name="forums_banner_placeholder">Cuir a-steach teacsa a\' bhratach (tha taic ri markdown)…</string>
     <string name="forums_ai_mode_off">À comas</string>
     <string name="forums_moderation_queue_empty">Chan eil dad ri dhèanamh</string>
     <string name="forums_moderation_report_details">Mion-fhiosrachadh: %1$s</string>

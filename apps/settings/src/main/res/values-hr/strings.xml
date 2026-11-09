@@ -239,7 +239,7 @@
     <string name="route_delete_message">Ovo će ukloniti rutu za putanju \"%1$s\".</string>
     <string name="route_empty">Nema konfiguriranih ruta.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Pretraži teme za dodavanje…</string>
+    <string name="interests_search_placeholder">Pretraži teme za dodavanje</string>
     <string name="interests_empty">Još nema interesa.</string>
     <string name="interests_summary_regenerate">Regeneriraj sažetak</string>
     <string name="interests_summary_regenerating">Regeneriranje…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">Ovo će vratiti \"%1$s\" na zadano (prazno).</string>
     <string name="settings_home_system_users">Korisnici (poslužitelj)</string>
     <string name="system_users_add_user">Dodaj korisnika</string>
-    <string name="system_users_search_placeholder">Pretraži korisnike…</string>
+    <string name="system_users_search_placeholder">Pretraži korisnike</string>
     <string name="system_users_sort_by">Sortiraj po</string>
     <string name="system_users_last_login">Zadnja prijava: %1$s</string>
     <string name="system_users_delete_message">Ovo će trajno izbrisati korisnika \"%1$s\". Ova radnja ne može se poništiti.</string>
@@ -565,7 +565,7 @@
     <string name="handles_take">Uzmite ime</string>
     <string name="handles_empty">Nijedno korisničko ime nije rezervirano.</string>
     <string name="handles_empty_search">Nijedno korisničko ime ne odgovara vašoj pretrazi</string>
-    <string name="handles_search_placeholder">Pretraži korisnička imena…</string>
+    <string name="handles_search_placeholder">Pretraži korisnička imena</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Prikaz %1$s–%2$s od %3$s korisničkog imena</item>
         <item quantity="few">Prikaz %1$s–%2$s od %3$s korisnička imena</item>

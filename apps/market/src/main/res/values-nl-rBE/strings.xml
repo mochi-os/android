@@ -335,7 +335,6 @@
     <string name="market_purchases_order_label">Bestelling nr. %1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Vertel kopers iets over jezelf…</string>
     <string name="market_account_load_failed">Kan account niet laden</string>
     <string name="market_account_saved">Wijzigingen opgeslagen</string>
     <string name="market_account_status_restrictions">Sommige acties, zoals het aanmaken van nieuwe advertenties en het afronden van bestellingen, zijn beperkt zolang uw account in deze status staat.</string>
@@ -452,7 +451,7 @@
     <string name="market_listings_new">Nieuwe advertentie</string>
     <string name="market_listings_search_placeholder">Zoek in uw advertenties</string>
     <string name="market_listings_share_chooser">Advertentie delen</string>
-    <string name="market_messages_compose_placeholder">Schrijf een bericht…</string>
+    <string name="market_messages_compose_placeholder">Schrijf een bericht</string>
     <string name="market_messages_inbox_empty_subtitle">Wanneer u een verkoper een bericht stuurt (of een koper u een bericht stuurt), verschijnt het gesprek hier.</string>
     <string name="market_messages_inbox_empty_title">Nog geen gesprekken</string>
     <string name="market_messages_thread_title">Gesprek</string>
@@ -492,7 +491,7 @@
     <string name="market_reviews_empty_sent_subtitle">Open een voltooide bestelling om een beoordeling achter te laten.</string>
     <string name="market_reviews_empty_sent_title">U hebt nog geen beoordelingen geschreven</string>
     <string name="market_reviews_response_label">Antwoord</string>
-    <string name="market_reviews_response_placeholder">Schrijf een antwoord…</string>
+    <string name="market_reviews_response_placeholder">Schrijf een antwoord</string>
     <string name="market_sale_carrier_custom_label">Naam vervoerder</string>
     <string name="market_sale_dispute_evidence_due">Bewijs vereist op %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Reden Stripe-chargeback: %1$s</string>
@@ -578,7 +577,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Beoordelingen van de verkoper</string>
     <string name="market_account_stripe_open_failed">Kon Stripe niet openen</string>
     <string name="market_editor_stock">Voorraad</string>
-    <string name="market_editor_stock_units">Aantal eenheden</string>
     <string name="market_editor_stock_unlimited">Onbeperkt</string>
     <string name="market_editor_start_time">Starttijd</string>
     <string name="market_editor_start_time_help">Laat leeg om te starten bij publiceren.</string>

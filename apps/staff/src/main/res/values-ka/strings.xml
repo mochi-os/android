@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">გადაწყვეტა</string>
     <string name="staff_appeals_decision_denied">ჩამონათვალის უარყოფის შენარჩუნება</string>
     <string name="staff_appeals_decision_label">გადაწყვეტილება</string>
-    <string name="staff_appeals_decision_placeholder">აირჩიეთ გადაწყვეტილება</string>
     <string name="staff_appeals_decision_upheld">ცხადების დამტკიცება</string>
     <string name="staff_appeals_denied_toast">გასაჩივრება უარყოფილია</string>
     <string name="staff_appeals_dialog_title">გასაჩივრების გადაწყვეტა</string>
@@ -230,7 +229,6 @@
     <string name="staff_disputes_refund_must_be_positive">დაბრუნების ოდენობა ნულზე მეტი უნდა იყოს</string>
     <string name="staff_disputes_resolution_buyer">მყიდველის სასარგებლოდ გადაწყვეტა</string>
     <string name="staff_disputes_resolution_label">გადაწყვეტა</string>
-    <string name="staff_disputes_resolution_placeholder">აირჩიეთ გადაწყვეტა</string>
     <string name="staff_disputes_resolution_seller">გამყიდველის სასარგებლოდ გადაწყვეტა</string>
     <string name="staff_disputes_resolve">გადაწყვეტა</string>
     <string name="staff_disputes_resolved_toast">დავა გადაწყდა</string>
@@ -290,7 +288,6 @@
     <string name="staff_reports_action_ban">მომხმარებლის აკრძალვა</string>
     <string name="staff_reports_action_dismiss">უარყოფა</string>
     <string name="staff_reports_action_label">მოქმედება</string>
-    <string name="staff_reports_action_placeholder">მოქმედების არჩევა</string>
     <string name="staff_reports_action_remove">წაშლა</string>
     <string name="staff_reports_action_suspend">გამყიდველის შეჩერება</string>
     <string name="staff_reports_action_taken_toast">მოქმედება მიღებულია</string>
@@ -435,7 +432,7 @@
     <string name="staff_reviews_order_label">შეკვეთა #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s — %3$s. სამუდამოდ წავშალოთ ეს მიმოხილვა? ამის გაუქმება შეუძლებელია.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. სამუდამოდ წავშალოთ ეს მიმოხილვა? ამის გაუქმება შეუძლებელია.</string>
-    <string name="staff_team_dialog_search_placeholder">ძიება სახელით, თითის ანაბეჭდით ან ID-ით…</string>
+    <string name="staff_team_dialog_search_placeholder">ძიება სახელით, თითის ანაბეჭდით ან ID-ით</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook-ის ხელმოწერის საიდუმლო</string>
     <string name="staff_disputes_meta_already_refunded">უკვე დაბრუნებულია</string>

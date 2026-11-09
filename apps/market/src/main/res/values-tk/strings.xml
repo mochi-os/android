@@ -3,7 +3,6 @@
     <string name="app_name">Bazar</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biografiýa</string>
-    <string name="market_account_biography_placeholder">Alyjylara özüň hakda gürrüň ber…</string>
     <string name="market_account_load_failed">Hasaby ýüklemek başartmady</string>
     <string name="market_account_location_label">Ýerleşýän ýeri</string>
     <string name="market_account_save">Saklamak</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Täze bildiriş</string>
     <string name="market_listings_relist_failed">Täzeden sanaw edilmedi</string>
     <string name="market_listings_title">Meniň sanawlarym</string>
-    <string name="market_messages_compose_placeholder">Habar ýaz…</string>
+    <string name="market_messages_compose_placeholder">Habar ýaz</string>
     <string name="market_messages_inbox_title">Habarlar</string>
     <string name="market_messages_send">Iber</string>
     <string name="market_messages_thread_title">Söhbet</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Alyjylar we satyjylar tamamlanan sargytdan soň biri-birine baha berip bilerler.</string>
     <string name="market_reviews_empty_sent_subtitle">Synag galdyrmak üçin tamamlanan sargyt açyň.</string>
     <string name="market_reviews_empty_sent_title">Hiç hili synag ýazmadyňyz</string>
-    <string name="market_reviews_response_placeholder">Jogap ýazyň…</string>
+    <string name="market_reviews_response_placeholder">Jogap ýazyň</string>
     <string name="market_sale_carrier_custom_label">Daşaýjynyň ady</string>
     <string name="market_sale_dispute_evidence_due">Subutnama möhleti %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe tölegiň yzyna alynmagynyň sebäbi: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Satyjynyň synlary</string>
     <string name="market_account_stripe_open_failed">Stripe açyp bolmady</string>
     <string name="market_editor_stock">Bar</string>
-    <string name="market_editor_stock_units">Birlikleriň sany</string>
     <string name="market_editor_stock_unlimited">Çäksiz</string>
     <string name="market_editor_start_time">Başlanýan wagty</string>
     <string name="market_editor_start_time_help">Çap etmek bilen başlamak üçin boş galdyryň.</string>

@@ -240,7 +240,7 @@
     <string name="route_delete_message">Bheir seo air falbh an t-slighe airson na slighe \"%1$s\".</string>
     <string name="route_empty">Chan eil slighean air an rèiteachadh.</string>
     <string name="route_meta">Prìomhachas %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Lorg cuspairean ri chur ris…</string>
+    <string name="interests_search_placeholder">Lorg cuspairean ri chur ris</string>
     <string name="interests_empty">Chan eil ùidhean fhathast.</string>
     <string name="interests_summary_regenerate">Ath-ghin an geàrr-iomradh</string>
     <string name="interests_summary_regenerating">A\' ath-chruthachadh…</string>
@@ -264,7 +264,7 @@
     <string name="system_settings_reset_message_empty">Ath-shuidhicheidh seo \"%1$s\" gu bunaiteach (falamh).</string>
     <string name="settings_home_system_users">Cleachdaichean (frithealaiche)</string>
     <string name="system_users_add_user">Cuir cleachdaiche ris</string>
-    <string name="system_users_search_placeholder">Lorg cleachdaichean…</string>
+    <string name="system_users_search_placeholder">Lorg cleachdaichean</string>
     <string name="system_users_sort_by">Seòrsaich a-rèir</string>
     <string name="system_users_last_login">Log a-steach mu dheireadh: %1$s</string>
     <string name="system_users_delete_message">Sguabaidh seo às an cleachdaiche \"%1$s\" gu buan. Chan urrainnear an gnìomh seo a thilleadh.</string>
@@ -575,7 +575,7 @@
     <string name="handles_take">Gabh ainm</string>
     <string name="handles_empty">Cha deach ainm-cleachdaiche sam bith a ghlèidheadh.</string>
     <string name="handles_empty_search">Chan eil ainmean-cleachdaiche a\' freagairt air do lorg</string>
-    <string name="handles_search_placeholder">Lorg ainmean-cleachdaiche…</string>
+    <string name="handles_search_placeholder">Lorg ainmean-cleachdaiche</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">A\' sealltainn %1$s–%2$s à %3$s ainm-cleachdaiche</item>
         <item quantity="two">A\' sealltainn %1$s–%2$s à %3$s ainm-cleachdaiche</item>

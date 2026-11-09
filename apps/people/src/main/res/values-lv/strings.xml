@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupas</string>
     <string name="people_group_title">Grupa</string>
     <string name="people_person_title">Persona</string>
-    <string name="people_friends_search_placeholder">Meklē…</string>
+    <string name="people_friends_search_placeholder">Meklē</string>
     <string name="people_friends_no_people_found">Cilvēki nav atrasti</string>
     <string name="people_friends_try_adjusting">Mēģiniet pielāgot meklēšanu</string>
     <string name="people_friends_pending">Gaida</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Dzēst grupu \"%1$s\"? Šo darbību nevar atsaukt.</string>
     <string name="people_member_remove_confirm">Vai tiešām vēlaties noņemt %1$s no šīs grupas?</string>
     <string name="people_member_remove_with_name">Noņemt %1$s</string>
-    <string name="people_member_search_placeholder">Ievadiet vārdu, lai meklētu…</string>
+    <string name="people_member_search_placeholder">Ievadiet vārdu, lai meklētu</string>
     <string name="people_groups_add_member_confirm_title">Pievienot grupai</string>
     <string name="people_groups_add_member_confirm_action">Pievienot grupai</string>
     <string name="people_profile_image_process_failed">Nevarēja apstrādāt %1$s attēlu</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Neizdevās ielādēt jūsu ielūgumu politiku</string>
     <string name="people_profile_avatar">Avatars</string>
     <string name="people_profile_banner">Baneris</string>
-    <string name="people_contacts_search_placeholder">Meklē…</string>
+    <string name="people_contacts_search_placeholder">Meklē</string>
     <string name="people_contacts_invited">Uzaicināts</string>
     <string name="people_contacts_accept">Pieņemt</string>
     <string name="people_contacts_message">Sūtīt ziņu</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Nesen pievienots</string>
     <string name="people_contacts_try_different_search">Mēģiniet citu meklēšanas vārdu</string>
     <string name="people_contacts_unfriend">Noņemt draugu</string>
-    <string name="people_add_contact_search_placeholder">Rakstiet, lai meklētu…</string>
+    <string name="people_add_contact_search_placeholder">Rakstiet, lai meklētu</string>
     <string name="people_add_contact_search_start">Sāciet rakstīt, lai meklētu lietotājus</string>
     <string name="people_contact_phone">Tālrunis</string>
     <string name="people_contact_title">Amats</string>

@@ -115,7 +115,7 @@
     <string name="settings_background_theme">થીમમાંથી</string>
     <string name="settings_background_off">કોઈ નહીં</string>
     <string name="game_chat_empty">હજુ સુધી કોઈ સંદેશા નથી</string>
-    <string name="game_chat_input_placeholder">સંદેશ ટાઇપ કરો…</string>
+    <string name="game_chat_input_placeholder">સંદેશ ટાઇપ કરો</string>
     <string name="game_chat_send">સંદેશ મોકલો</string>
     <string name="game_chat_subject_you">તમે</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">ખાતરી કરો કે આ તમે જ છો</string>
     <string name="stepup_description">આ તમારા ખાતામાં સુરક્ષા સંબંધિત ફેરફાર છે. ચાલુ રાખવા માટે ખાતરી કરો કે આ તમે જ છો.</string>
     <string name="stepup_email_label">ઇમેઇલ કોડ</string>
-    <string name="stepup_email_placeholder">તમારા ઈમેલમાંથી કોડ દાખલ કરો</string>
     <string name="stepup_totp_label">ઑથેન્ટિકેટર કોડ</string>
-    <string name="stepup_totp_placeholder">તમારો ઑથેન્ટિકેટર કોડ દાખલ કરો</string>
     <string name="stepup_use_passkey">તમારી પાસકીનો ઉપયોગ કરો</string>
     <string name="stepup_send_email">ઇમેઇલ મોકલો</string>
     <string name="stepup_resend_email">ઇમેઇલ ફરી મોકલો</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">ટૅગ દૂર કરો</string>
     <string name="person_picker_none">કોઈ નહીં</string>
     <string name="person_picker_clear">પસંદગી સાફ કરો</string>
-    <string name="person_picker_select">પસંદ કરો …</string>
+    <string name="person_picker_select">પસંદ કરો</string>
     <string name="person_picker_directory">નિર્દેશિકા</string>
     <string name="person_picker_no_people">કોઈ લોકો નથી</string>
     <string name="person_picker_project_members">પ્રોજેક્ટ સભ્યો</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">સૂચના કેટેગરી બદલો</string>
     <string name="lightbox_comments_none">આ છબી પર હજી કોઈ ટિપ્પણી નથી.</string>
     <string name="lightbox_comments_only">માત્ર આ છબીની ટિપ્પણીઓ બતાવો</string>
-    <string name="lightbox_comment_placeholder">આ છબી પર ટિપ્પણી કરો…</string>
+    <string name="lightbox_comment_placeholder">આ છબી પર ટિપ્પણી કરો</string>
     <string name="comment_anchor_open">આ ટિપ્પણી જે છબી વિશે છે તે જુઓ</string>
     <string name="comment_anchor_default">આ છબી પર</string>
     <plurals name="lightbox_comments_others">

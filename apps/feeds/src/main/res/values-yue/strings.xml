@@ -38,7 +38,7 @@
     <string name="feeds_create_feed">建立資訊串</string>
     <string name="feeds_new_post">新貼文</string>
     <string name="feeds_all_feeds">全部資訊串</string>
-    <string name="feeds_search_placeholder">搜尋資訊串或者貼上網址…</string>
+    <string name="feeds_search_placeholder">搜尋資訊串或者貼上網址</string>
     <string name="feeds_url_result">網址結果</string>
     <string name="feeds_search_results">搜尋結果</string>
     <string name="feeds_no_feeds_found">搵唔到資訊串</string>
@@ -186,7 +186,6 @@
     <string name="feeds_unsubscribe_confirm_message">你將唔會再收到呢個資訊串嘅更新。你可以隨時重新訂閱。</string>
     <string name="feeds_access_select_rule">揀選存取規則</string>
     <string name="feeds_access_authenticated_desc">任何已登入嘅人</string>
-    <string name="feeds_banner_hint">歡迎嚟到呢個論壇…</string>
     <string name="feeds_banner_dismiss">關閉橫額</string>
     <string name="feeds_members_search">篩選成員</string>
     <string name="feeds_ai_prompt_default">預設</string>

@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">పంపండి</string>
     <string name="forums_post_body_field">కంటెంట్</string>
-    <string name="forums_write_comment">వ్యాఖ్య రాయండి…</string>
+    <string name="forums_write_comment">వ్యాఖ్య రాయండి</string>
 
     <string name="notification_channel_forums">ఫోరమ్‌ల నోటిఫికేషన్‌లు</string>
     <string name="forums_list_empty">ఇంకా ఫోరమ్‌లు లేవు</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">ఇంకా నియమాలు లేవు — డిఫాల్ట్‌లు వర్తిస్తాయి</string>
     <string name="forums_members_search">సభ్యులను ఫిల్టర్ చేయండి</string>
     <string name="forums_banner_description">ఫోరమ్ ఎగువన చూపబడే మార్క్‌డౌన్.</string>
-    <string name="forums_banner_placeholder">బ్యానర్ వచనాన్ని నమోదు చేయండి (మార్క్‌డౌన్‌కు మద్దతు ఉంది)…</string>
     <string name="forums_ai_mode_off">నిలిపివేయబడింది</string>
     <string name="forums_moderation_queue_empty">పెండింగ్‌లో ఏదీ లేదు</string>
     <string name="forums_moderation_report_details">వివరాలు: %1$s</string>

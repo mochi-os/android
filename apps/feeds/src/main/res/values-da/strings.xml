@@ -90,7 +90,7 @@
     <string name="feeds_ai_account">AI-konto</string>
 
     <string name="notification_channel_feeds">Feed-notifikationer</string>
-    <string name="feeds_search_placeholder">Søg feeds eller indsæt URL…</string>
+    <string name="feeds_search_placeholder">Søg feeds eller indsæt URL</string>
     <string name="feeds_url_result">URL-resultat</string>
     <string name="feeds_search_results">Søgeresultater</string>
     <string name="feeds_unread_only">Kun ulæste</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Du modtager ikke længere opdateringer fra dette feed. Du kan abonnere igen når som helst.</string>
     <string name="feeds_access_select_rule">Vælg adgangsregel</string>
     <string name="feeds_access_authenticated_desc">Alle, der er logget ind</string>
-    <string name="feeds_banner_hint">Velkommen til dette forum…</string>
     <string name="feeds_banner_dismiss">Afvis banner</string>
     <string name="feeds_members_search">Filtrer medlemmer</string>
     <string name="feeds_ai_prompt_default">Standard</string>

@@ -3,7 +3,6 @@
     <string name="app_name">మార్కెట్</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">జీవిత చరిత్ర</string>
-    <string name="market_account_biography_placeholder">కొనుగోలుదారులకు మీ గురించి చెప్పండి…</string>
     <string name="market_account_load_failed">ఖాతాను లోడ్ చేయలేకపోయింది</string>
     <string name="market_account_location_label">స్థానం</string>
     <string name="market_account_save">సేవ్ చేయండి</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">కొత్త జాబితా</string>
     <string name="market_listings_relist_failed">తిరిగి జాబితా చేయడంలో విఫలమైంది</string>
     <string name="market_listings_title">నా లిస్టింగ్‌లు</string>
-    <string name="market_messages_compose_placeholder">సందేశం రాయండి…</string>
+    <string name="market_messages_compose_placeholder">సందేశం రాయండి</string>
     <string name="market_messages_inbox_title">సందేశాలు</string>
     <string name="market_messages_send">పంపండి</string>
     <string name="market_messages_thread_title">సంభాషణ</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">పూర్తయిన ఆర్డర్ తర్వాత కొనుగోలుదారులు మరియు విక్రేతలు ఒకరినొకరు సమీక్షించుకోవచ్చు.</string>
     <string name="market_reviews_empty_sent_subtitle">సమీక్షను పంపడానికి పూర్తయిన ఆర్డర్‌ను తెరవండి.</string>
     <string name="market_reviews_empty_sent_title">మీరు ఏ సమీక్షలు వ్రాయలేదు</string>
-    <string name="market_reviews_response_placeholder">ప్రతిస్పందనను వ్రాయండి…</string>
+    <string name="market_reviews_response_placeholder">ప్రతిస్పందనను వ్రాయండి</string>
     <string name="market_sale_carrier_custom_label">క్యారియర్ పేరు</string>
     <string name="market_sale_dispute_evidence_due">%1$s నాటికి సాక్ష్యం అవసరం</string>
     <string name="market_sale_dispute_stripe_reason">Stripe చార్జ్‌బ్యాక్ కారణం: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">విక్రేత సమీక్షలు</string>
     <string name="market_account_stripe_open_failed">Stripeను తెరవడం సాధ్యం కాలేదు</string>
     <string name="market_editor_stock">స్టాక్</string>
-    <string name="market_editor_stock_units">యూనిట్ల సంఖ్య</string>
     <string name="market_editor_stock_unlimited">అపరిమితం</string>
     <string name="market_editor_start_time">ప్రారంభ సమయం</string>
     <string name="market_editor_start_time_help">ప్రచురణలో ప్రారంభించడానికి ఖాళీగా ఉంచండి.</string>

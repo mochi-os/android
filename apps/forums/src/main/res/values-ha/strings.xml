@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Aika</string>
     <string name="forums_post_body_field">Abun ciki</string>
-    <string name="forums_write_comment">Rubuta sharhi…</string>
+    <string name="forums_write_comment">Rubuta sharhi</string>
 
     <string name="notification_channel_forums">Sanarwar tarukan tattaunawa</string>
     <string name="forums_list_empty">Babu tarukan tattaunawa har yanzu</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Babu dokoki har yanzu — tsoffin sun shafi</string>
     <string name="forums_members_search">Tace mambobi</string>
     <string name="forums_banner_description">Markdown da ake nunawa a saman taron tattaunawa.</string>
-    <string name="forums_banner_placeholder">Shigar da rubutun tuta (ana tallafawa markdown)…</string>
     <string name="forums_ai_mode_off">An kashe</string>
     <string name="forums_moderation_queue_empty">Babu abin da ke jiran sarrafawa</string>
     <string name="forums_moderation_report_details">Cikakkun bayanai: %1$s</string>

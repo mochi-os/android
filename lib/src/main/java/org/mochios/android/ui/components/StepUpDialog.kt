@@ -219,7 +219,6 @@ fun StepUpDialog(
                                 value = emailCode,
                                 onValueChange = { emailCode = it },
                                 label = { Text(stringResource(R.string.stepup_email_label)) },
-                                placeholder = { Text(stringResource(R.string.stepup_email_placeholder)) },
                                 singleLine = true,
                                 enabled = !locked,
                                 keyboardOptions = KeyboardOptions(
@@ -255,7 +254,6 @@ fun StepUpDialog(
                             value = totpCode,
                             onValueChange = { totpCode = it.filter { c -> c.isDigit() }.take(6) },
                             label = { Text(stringResource(R.string.stepup_totp_label)) },
-                            placeholder = { Text(stringResource(R.string.stepup_totp_placeholder)) },
                             singleLine = true,
                             enabled = !locked,
                             keyboardOptions = KeyboardOptions(

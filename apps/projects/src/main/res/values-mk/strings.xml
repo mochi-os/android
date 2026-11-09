@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Прикачи .json датотека</string>
     <string name="projects_settings_not_set">Не е поставено</string>
     <string name="projects_settings_updated">Проектот е ажуриран</string>
-    <string name="projects_property_select">Изберете …</string>
     <string name="projects_activity_attached">прикачи</string>
     <string name="projects_activity_commented">коментираше</string>
     <string name="projects_attachment_delete_confirm_message">Овој прилог ќе биде трајно избришан.</string>

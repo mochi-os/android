@@ -238,7 +238,7 @@
     <string name="route_delete_message">این مسیر برای مسیر «%1$s» را حذف می‌کند.</string>
     <string name="route_empty">هیچ مسیری پیکربندی نشده است.</string>
     <string name="route_meta">اولویت %1$s · %2$s</string>
-    <string name="interests_search_placeholder">جستجوی موضوعات برای افزودن…</string>
+    <string name="interests_search_placeholder">جستجوی موضوعات برای افزودن</string>
     <string name="interests_empty">هنوز هیچ علاقه‌مندی وجود ندارد.</string>
     <string name="interests_summary_regenerate">تولید مجدد خلاصه</string>
     <string name="interests_summary_regenerating">در حال تولید مجدد…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">این «%1$s» را به پیش‌فرض (خالی) بازنشانی می‌کند.</string>
     <string name="settings_home_system_users">کاربران (سرور)</string>
     <string name="system_users_add_user">افزودن کاربر</string>
-    <string name="system_users_search_placeholder">جستجوی کاربران…</string>
+    <string name="system_users_search_placeholder">جستجوی کاربران</string>
     <string name="system_users_sort_by">مرتب‌سازی بر اساس</string>
     <string name="system_users_last_login">آخرین ورود: %1$s</string>
     <string name="system_users_delete_message">این به طور دائم کاربر «%1$s» را حذف می‌کند. این عمل قابل بازگشت نیست.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">یک نام بگیرید</string>
     <string name="handles_empty">هیچ نام کاربری رزرو نشده است.</string>
     <string name="handles_empty_search">هیچ نام کاربری با جست‌وجوی شما مطابقت ندارد</string>
-    <string name="handles_search_placeholder">جست‌وجوی نام‌های کاربری…</string>
+    <string name="handles_search_placeholder">جست‌وجوی نام‌های کاربری</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">نمایش %1$s–%2$s از %3$s نام کاربری</item>
         <item quantity="other">نمایش %1$s–%2$s از %3$s نام کاربری</item>

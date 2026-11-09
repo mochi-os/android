@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupper</string>
     <string name="people_group_title">Grupp</string>
     <string name="people_person_title">Person</string>
-    <string name="people_friends_search_placeholder">Sök…</string>
+    <string name="people_friends_search_placeholder">Sök</string>
     <string name="people_friends_no_people_found">Inga personer hittades</string>
     <string name="people_friends_try_adjusting">Försök justera din sökning</string>
     <string name="people_friends_pending">Väntar</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Ta bort gruppen \"%1$s\"? Detta kan inte ångras.</string>
     <string name="people_member_remove_confirm">Är du säker på att du vill ta bort %1$s från den här gruppen?</string>
     <string name="people_member_remove_with_name">Ta bort %1$s</string>
-    <string name="people_member_search_placeholder">Skriv namn för att söka…</string>
+    <string name="people_member_search_placeholder">Skriv namn för att söka</string>
     <string name="people_groups_add_member_confirm_title">Lägg till i grupp</string>
     <string name="people_groups_add_member_confirm_action">Lägg till i grupp</string>
     <string name="people_profile_image_process_failed">Det gick inte att behandla %1$s-bilden</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Kunde inte läsa in din inbjudningspolicy</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Sök…</string>
+    <string name="people_contacts_search_placeholder">Sök</string>
     <string name="people_contacts_invited">Inbjuden</string>
     <string name="people_contacts_accept">Acceptera</string>
     <string name="people_contacts_message">Skicka meddelande</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Nyligen tillagd</string>
     <string name="people_contacts_try_different_search">Prova en annan sökterm</string>
     <string name="people_contacts_unfriend">Ta bort vän</string>
-    <string name="people_add_contact_search_placeholder">Skriv för att söka…</string>
+    <string name="people_add_contact_search_placeholder">Skriv för att söka</string>
     <string name="people_add_contact_search_start">Börja skriva för att söka efter användare</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Befattning</string>

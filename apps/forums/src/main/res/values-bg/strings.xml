@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Все още няма правила — прилагат се настройките по подразбиране</string>
     <string name="forums_members_search">Филтриране на членове</string>
     <string name="forums_banner_description">Markdown, показан в горната част на форума.</string>
-    <string name="forums_banner_placeholder">Въведете текст на банера (поддържа се Markdown)…</string>
     <string name="forums_ai_mode_off">Изключено</string>
     <string name="forums_moderation_queue_empty">Няма чакащи елементи</string>
     <string name="forums_moderation_report_details">Подробности: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Изтича на %1$s</string>
     <string name="forums_moderation_restriction_permanent">Постоянно</string>
     <string name="forums_report_reason_hate">Омраза</string>
-    <string name="forums_write_comment">Напишете коментар…</string>
+    <string name="forums_write_comment">Напишете коментар</string>
     <string name="forums_comment_delete_message">Сигурни ли сте, че искате да изтриете този коментар?</string>
     <string name="forums_comment_replying_to">Отговор на %1$s</string>
     <string name="forums_comment_clear_reply">Изчистване на отговора</string>

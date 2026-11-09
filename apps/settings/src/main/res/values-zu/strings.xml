@@ -238,7 +238,7 @@
     <string name="route_delete_message">Lokhu kuzosusa irawudi yendlela \"%1$s\".</string>
     <string name="route_empty">Azikho izindlela ezilungisiwe.</string>
     <string name="route_meta">Okubaluleke kakhulu %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Sesha izihloko ozozengeza…</string>
+    <string name="interests_search_placeholder">Sesha izihloko ozozengeza</string>
     <string name="interests_empty">Azikho izithakazelo okwamanje.</string>
     <string name="interests_summary_regenerate">Phinda ukhiqize isifinyezo</string>
     <string name="interests_summary_regenerating">Iyakhiqiza kabusha…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Lokhu kuzosetha kabusha \"%1$s\" kuye kunqubo ezenzakalelayo (okungenalutho).</string>
     <string name="settings_home_system_users">Abasebenzisi (iseva)</string>
     <string name="system_users_add_user">Engeza umsebenzisi</string>
-    <string name="system_users_search_placeholder">Sesha abasebenzisi…</string>
+    <string name="system_users_search_placeholder">Sesha abasebenzisi</string>
     <string name="system_users_sort_by">Hlunga ngo</string>
     <string name="system_users_last_login">Ukungena kokugcina: %1$s</string>
     <string name="system_users_delete_message">Lokhu kuzosusa umsebenzisi \"%1$s\" unomphela. Lesi senzo asikwazi ukubuyiselwa emuva.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Thatha igama</string>
     <string name="handles_empty">Asikho isidlaliso esibhukhiwe.</string>
     <string name="handles_empty_search">Azikho izidlaliso ezifanele usesho lwakho</string>
-    <string name="handles_search_placeholder">Sesha izidlaliso…</string>
+    <string name="handles_search_placeholder">Sesha izidlaliso</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Kukhonjiswa %1$s–%2$s kusidlaliso esingu-%3$s</item>
         <item quantity="other">Kukhonjiswa %1$s–%2$s kuzidlaliso ezingu-%3$s</item>

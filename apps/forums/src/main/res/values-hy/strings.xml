@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Ուղարկել</string>
     <string name="forums_post_body_field">Բովանդակություն</string>
-    <string name="forums_write_comment">Գրեք մեկնաբանություն…</string>
+    <string name="forums_write_comment">Գրեք մեկնաբանություն</string>
 
     <string name="notification_channel_forums">Ֆորումների ծանուցումներ</string>
     <string name="forums_list_empty">Դեռ ֆորումներ չկան</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Դեռ կանոններ չկան — կիրառվում են լռելյայն կարգավորումները</string>
     <string name="forums_members_search">Զտել անդամներին</string>
     <string name="forums_banner_description">Markdown, որը ցուցադրվում է ֆորումի վերևում:</string>
-    <string name="forums_banner_placeholder">Մուտքագրեք բաների տեքստը (Markdown-ն աջակցվում է)…</string>
     <string name="forums_ai_mode_off">Անջատված է</string>
     <string name="forums_moderation_queue_empty">Մոդերացիայի հերթը դատարկ է</string>
     <string name="forums_moderation_report_details">Մանրամասներ՝ %1$s</string>

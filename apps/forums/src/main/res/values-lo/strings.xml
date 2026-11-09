@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">ສົ່ງ</string>
     <string name="forums_post_body_field">ເນື້ອຫາ</string>
-    <string name="forums_write_comment">ຂຽນຄຳເຫັນ…</string>
+    <string name="forums_write_comment">ຂຽນຄຳເຫັນ</string>
 
     <string name="notification_channel_forums">ການແຈ້ງເຕືອນຂອງກະດານສົນທະນາ</string>
     <string name="forums_list_empty">ຍັງບໍ່ມີກະດານສົນທະນາ</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">ຍັງບໍ່ມີກົດ — ໃຊ້ຄ່າເລີ່ມຕົ້ນ</string>
     <string name="forums_members_search">ກັ່ນຕອງສະມາຊິກ</string>
     <string name="forums_banner_description">Markdown ທີ່ສະແດງຢູ່ດ້ານເທິງຂອງກະດານສົນທະນາ.</string>
-    <string name="forums_banner_placeholder">ປ້ອນຂໍ້ຄວາມປ້າຍ (ຮອງຮັບ Markdown)…</string>
     <string name="forums_ai_mode_off">ປິດໃຊ້ງານແລ້ວ</string>
     <string name="forums_moderation_queue_empty">ບໍ່ມີລາຍການລໍຖ້າ</string>
     <string name="forums_moderation_report_details">ລາຍລະອຽດ: %1$s</string>

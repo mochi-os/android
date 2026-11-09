@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Απόφαση</string>
     <string name="staff_appeals_decision_denied">Διατήρηση απόρριψης</string>
     <string name="staff_appeals_decision_label">Απόφαση</string>
-    <string name="staff_appeals_decision_placeholder">Επιλέξτε απόφαση</string>
     <string name="staff_appeals_decision_upheld">Έγκριση καταχώρισης</string>
     <string name="staff_appeals_denied_toast">Η προσφυγή απορρίφθηκε</string>
     <string name="staff_appeals_dialog_title">Απόφαση για προσφυγή</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Το ποσό επιστροφής πρέπει να είναι μεγαλύτερο από μηδέν</string>
     <string name="staff_disputes_resolution_buyer">Επίλυση υπέρ του αγοραστή</string>
     <string name="staff_disputes_resolution_label">Επίλυση</string>
-    <string name="staff_disputes_resolution_placeholder">Επιλέξτε επίλυση</string>
     <string name="staff_disputes_resolution_seller">Επίλυση υπέρ του πωλητή</string>
     <string name="staff_disputes_resolve">Επίλυση</string>
     <string name="staff_disputes_resolved_toast">Η αμφισβήτηση επιλύθηκε</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Αποκλεισμός χρήστη</string>
     <string name="staff_reports_action_dismiss">Απόρριψη</string>
     <string name="staff_reports_action_label">Ενέργεια</string>
-    <string name="staff_reports_action_placeholder">Επιλέξτε ενέργεια</string>
     <string name="staff_reports_action_remove">Αφαίρεση</string>
     <string name="staff_reports_action_suspend">Αναστολή ως πωλητής</string>
     <string name="staff_reports_action_taken_toast">Ελήφθη ενέργεια αναφοράς</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Άτομο</string>
     <string name="staff_team_dialog_role">Ρόλος</string>
     <string name="staff_team_dialog_role_placeholder">Επιλέξτε ρόλο</string>
-    <string name="staff_team_dialog_search_placeholder">Αναζήτηση με όνομα, αποτύπωμα ή ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Αναζήτηση με όνομα, αποτύπωμα ή ID</string>
     <string name="staff_team_empty">Χωρίς μέλη ομάδας</string>
     <string name="staff_team_remove_confirm">Αφαίρεση</string>
     <string name="staff_team_remove_desc">Αφαίρεση αυτού του μέλους από την ομάδα προσωπικού;</string>

@@ -96,7 +96,7 @@
     <string name="feeds_move_down">Перамясціць уніз</string>
 
     <string name="notification_channel_feeds">Апавяшчэнні стужак</string>
-    <string name="feeds_search_placeholder">Шукайце стужкі або ўстаўце URL…</string>
+    <string name="feeds_search_placeholder">Шукайце стужкі або ўстаўце URL</string>
     <string name="feeds_url_result">Вынік па URL</string>
     <string name="feeds_search_results">Вынікі пошуку</string>
     <string name="feeds_unread_only">Толькі непрачытанае</string>
@@ -210,7 +210,6 @@
     <string name="feeds_unsubscribe_confirm_message">Вы перастанеце атрымліваць абнаўленні з гэтай стужкі. Вы можаце падпісацца зноў у любы час.</string>
     <string name="feeds_access_select_rule">Абярыце правіла доступу</string>
     <string name="feeds_access_authenticated_desc">Усе, хто ўвайшоў у сістэму</string>
-    <string name="feeds_banner_hint">Сардэчна запрашаем на гэты форум…</string>
     <string name="feeds_banner_dismiss">Закрыць банер</string>
     <string name="feeds_members_search">Фільтр удзельнікаў</string>
     <string name="feeds_ai_prompt_default">Па змаўчанні</string>

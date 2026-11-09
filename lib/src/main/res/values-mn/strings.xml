@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Загвараас</string>
     <string name="settings_background_off">Алга</string>
     <string name="game_chat_empty">Зурвас алга</string>
-    <string name="game_chat_input_placeholder">Зурвас бичих…</string>
+    <string name="game_chat_input_placeholder">Зурвас бичих</string>
     <string name="game_chat_send">Зурвас илгээх</string>
     <string name="game_chat_subject_you">Та</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Энэ та мөн эсэхийг баталгаажуулна уу</string>
     <string name="stepup_description">Энэ нь таны бүртгэлийн аюулгүй байдлын өөрчлөлт юм. Үргэлжлүүлэхийн тулд энэ та мөн эсэхийг баталгаажуулна уу.</string>
     <string name="stepup_email_label">Имэйл код</string>
-    <string name="stepup_email_placeholder">Имэйлд ирсэн кодоо оруулна уу</string>
     <string name="stepup_totp_label">Баталгаажуулагчийн код</string>
-    <string name="stepup_totp_placeholder">Баталгаажуулагчийн кодоо оруулна уу</string>
     <string name="stepup_use_passkey">Нэвтрэх түлхүүрээ ашиглах</string>
     <string name="stepup_send_email">Имэйл илгээх</string>
     <string name="stepup_resend_email">Имэйлийг дахин илгээх</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Шошго хасах</string>
     <string name="person_picker_none">Алга</string>
     <string name="person_picker_clear">Сонголтыг цэвэрлэх</string>
-    <string name="person_picker_select">Сонгоно уу …</string>
+    <string name="person_picker_select">Сонгоно уу</string>
     <string name="person_picker_directory">Лавлах</string>
     <string name="person_picker_no_people">Хүн алга</string>
     <string name="person_picker_project_members">Төслийн гишүүд</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Мэдэгдлийн ангилал өөрчлөх</string>
     <string name="lightbox_comments_none">Энэ зурагт одоогоор сэтгэгдэл алга.</string>
     <string name="lightbox_comments_only">Зөвхөн энэ зургийн сэтгэгдлүүдийг харуулах</string>
-    <string name="lightbox_comment_placeholder">Энэ зурагт сэтгэгдэл бичих…</string>
+    <string name="lightbox_comment_placeholder">Энэ зурагт сэтгэгдэл бичих</string>
     <string name="comment_anchor_open">Энэ сэтгэгдлийн холбогдох зургийг үзэх</string>
     <string name="comment_anchor_default">Энэ зураг дээр</string>
     <plurals name="lightbox_comments_others">

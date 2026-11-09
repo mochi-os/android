@@ -115,7 +115,7 @@
     <string name="settings_background_theme">थीम से</string>
     <string name="settings_background_off">कोई नहीं</string>
     <string name="game_chat_empty">अभी तक कोई संदेश नहीं</string>
-    <string name="game_chat_input_placeholder">मैसेज टाइप करें…</string>
+    <string name="game_chat_input_placeholder">मैसेज टाइप करें</string>
     <string name="game_chat_send">मैसेज भेजें</string>
     <string name="game_chat_subject_you">आप</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">पुष्टि करें कि यह आप ही हैं</string>
     <string name="stepup_description">यह आपके खाते में एक सुरक्षा परिवर्तन है। जारी रखने के लिए पुष्टि करें कि यह आप ही हैं।</string>
     <string name="stepup_email_label">ईमेल कोड</string>
-    <string name="stepup_email_placeholder">अपने ईमेल से कोड दर्ज करें</string>
     <string name="stepup_totp_label">ऑथेंटिकेटर कोड</string>
-    <string name="stepup_totp_placeholder">अपना प्रमाणक कोड दर्ज करें</string>
     <string name="stepup_use_passkey">अपनी पासकी का उपयोग करें</string>
     <string name="stepup_send_email">ईमेल भेजें</string>
     <string name="stepup_resend_email">ईमेल फिर से भेजें</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">टैग हटाएँ</string>
     <string name="person_picker_none">कोई नहीं</string>
     <string name="person_picker_clear">चयन साफ़ करें</string>
-    <string name="person_picker_select">चुनें …</string>
+    <string name="person_picker_select">चुनें</string>
     <string name="person_picker_directory">निर्देशिका</string>
     <string name="person_picker_no_people">कोई लोग नहीं</string>
     <string name="person_picker_project_members">परियोजना सदस्य</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">नोटिफ़िकेशन श्रेणी बदलें</string>
     <string name="lightbox_comments_none">इस छवि पर अभी कोई टिप्पणी नहीं है।</string>
     <string name="lightbox_comments_only">केवल इस छवि की टिप्पणियाँ दिखाएँ</string>
-    <string name="lightbox_comment_placeholder">इस छवि पर टिप्पणी करें…</string>
+    <string name="lightbox_comment_placeholder">इस छवि पर टिप्पणी करें</string>
     <string name="comment_anchor_open">वह छवि देखें जिसके बारे में यह टिप्पणी है</string>
     <string name="comment_anchor_default">इस छवि पर</string>
     <plurals name="lightbox_comments_others">

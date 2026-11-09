@@ -115,7 +115,7 @@
     <string name="settings_background_theme">테마에서</string>
     <string name="settings_background_off">없음</string>
     <string name="game_chat_empty">아직 메시지가 없어요</string>
-    <string name="game_chat_input_placeholder">메시지 입력…</string>
+    <string name="game_chat_input_placeholder">메시지 입력</string>
     <string name="game_chat_send">메시지 보내기</string>
     <string name="game_chat_subject_you">본인</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">본인 확인</string>
     <string name="stepup_description">계정의 보안 변경 사항입니다. 계속하려면 본인임을 확인하세요.</string>
     <string name="stepup_email_label">이메일 코드</string>
-    <string name="stepup_email_placeholder">이메일로 받은 코드를 입력하세요</string>
     <string name="stepup_totp_label">인증 코드</string>
-    <string name="stepup_totp_placeholder">인증 앱 코드를 입력하세요</string>
     <string name="stepup_use_passkey">패스키 사용</string>
     <string name="stepup_send_email">이메일 보내기</string>
     <string name="stepup_resend_email">이메일 다시 보내기</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">태그 제거</string>
     <string name="person_picker_none">없음</string>
     <string name="person_picker_clear">선택 해제</string>
-    <string name="person_picker_select">선택 …</string>
+    <string name="person_picker_select">선택</string>
     <string name="person_picker_directory">디렉터리</string>
     <string name="person_picker_no_people">사람이 없습니다</string>
     <string name="person_picker_project_members">프로젝트 구성원</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">알림 카테고리 변경</string>
     <string name="lightbox_comments_none">이 이미지에는 아직 댓글이 없습니다.</string>
     <string name="lightbox_comments_only">이 이미지의 댓글만 표시</string>
-    <string name="lightbox_comment_placeholder">이 이미지에 댓글 달기…</string>
+    <string name="lightbox_comment_placeholder">이 이미지에 댓글 달기</string>
     <string name="comment_anchor_open">이 댓글이 가리키는 이미지 보기</string>
     <string name="comment_anchor_default">이 이미지에 대해</string>
     <plurals name="lightbox_comments_others">

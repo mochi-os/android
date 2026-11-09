@@ -6,7 +6,7 @@
     <string name="people_groups_title">Skupiny</string>
     <string name="people_group_title">Skupina</string>
     <string name="people_person_title">Osoba</string>
-    <string name="people_friends_search_placeholder">Hľadať…</string>
+    <string name="people_friends_search_placeholder">Hľadať</string>
     <string name="people_friends_no_people_found">Nenašli sa žiadni ľudia</string>
     <string name="people_friends_try_adjusting">Skúste upraviť vyhľadávanie</string>
     <string name="people_friends_pending">Čaká sa</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Odstrániť skupinu \"%1$s\"? Túto akciu nemožno vrátiť späť.</string>
     <string name="people_member_remove_confirm">Naozaj chcete odstrániť používateľa %1$s z tejto skupiny?</string>
     <string name="people_member_remove_with_name">Odstrániť %1$s</string>
-    <string name="people_member_search_placeholder">Zadajte meno na vyhľadávanie…</string>
+    <string name="people_member_search_placeholder">Zadajte meno na vyhľadávanie</string>
     <string name="people_groups_add_member_confirm_title">Pridať do skupiny</string>
     <string name="people_groups_add_member_confirm_action">Pridať do skupiny</string>
     <string name="people_profile_image_process_failed">Nepodarilo sa spracovať obrázok %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Nepodarilo sa načítať vaše pravidlá pozvánok</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Hľadať…</string>
+    <string name="people_contacts_search_placeholder">Hľadať</string>
     <string name="people_contacts_invited">Pozvaný</string>
     <string name="people_contacts_accept">Prijať</string>
     <string name="people_contacts_message">Napísať správu</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Nedávno pridané</string>
     <string name="people_contacts_try_different_search">Skúste iný hľadaný výraz</string>
     <string name="people_contacts_unfriend">Odstrániť priateľa</string>
-    <string name="people_add_contact_search_placeholder">Píšte na vyhľadávanie…</string>
+    <string name="people_add_contact_search_placeholder">Píšte na vyhľadávanie</string>
     <string name="people_add_contact_search_start">Začnite písať pre vyhľadanie používateľov</string>
     <string name="people_contact_phone">Telefón</string>
     <string name="people_contact_title">Pracovná pozícia</string>

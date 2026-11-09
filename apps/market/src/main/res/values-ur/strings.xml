@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">آرڈر #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">خریداروں کو اپنے بارے میں بتائیں…</string>
     <string name="market_account_load_failed">اکاؤنٹ لوڈ نہیں ہو سکا</string>
     <string name="market_account_saved">تبدیلیاں محفوظ ہو گئیں</string>
     <string name="market_account_status_restrictions">جب آپ کا اکاؤنٹ اس حالت میں ہو تو کچھ کارروائیاں، بشمول نئی فہرستیں بنانا اور آرڈرز مکمل کرنا، محدود ہوتی ہیں۔</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">نئی لسٹنگ</string>
     <string name="market_listings_search_placeholder">اپنی لسٹنگز تلاش کریں</string>
     <string name="market_listings_share_chooser">لسٹنگ شیئر کریں</string>
-    <string name="market_messages_compose_placeholder">پیغام لکھیں…</string>
+    <string name="market_messages_compose_placeholder">پیغام لکھیں</string>
     <string name="market_messages_inbox_empty_subtitle">جب آپ کسی بیچنے والے کو پیغام بھیجیں گے (یا کوئی خریدار آپ کو پیغام بھیجے گا) تو گفتگو یہاں نظر آئے گی۔</string>
     <string name="market_messages_inbox_empty_title">ابھی کوئی گفتگو نہیں</string>
     <string name="market_messages_thread_title">گفتگو</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">جائزہ چھوڑنے کے لیے مکمل آرڈر کھولیں۔</string>
     <string name="market_reviews_empty_sent_title">آپ نے کوئی جائزہ نہیں لکھا</string>
     <string name="market_reviews_response_label">جواب</string>
-    <string name="market_reviews_response_placeholder">جواب لکھیں…</string>
+    <string name="market_reviews_response_placeholder">جواب لکھیں</string>
     <string name="market_sale_carrier_custom_label">کیریئر کا نام</string>
     <string name="market_sale_dispute_evidence_due">ثبوت کی مہلت %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe چارج بیک کی وجہ: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">بیچنے والے کے جائزے</string>
     <string name="market_account_stripe_open_failed">Stripe نہیں کھل سکا</string>
     <string name="market_editor_stock">اسٹاک</string>
-    <string name="market_editor_stock_units">یونٹس کی تعداد</string>
     <string name="market_editor_stock_unlimited">لامحدود</string>
     <string name="market_editor_start_time">شروع ہونے کا وقت</string>
     <string name="market_editor_start_time_help">شائع ہونے پر شروع کرنے کے لیے خالی چھوڑ دیں۔</string>

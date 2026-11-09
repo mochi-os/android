@@ -84,7 +84,7 @@
     <string name="feeds_send">Apayaña</string>
 
     <string name="notification_channel_feeds">Feed yatiyäwinaka</string>
-    <string name="feeds_search_placeholder">Feednak thaqham jan ukax URL pegam…</string>
+    <string name="feeds_search_placeholder">Feednak thaqham jan ukax URL pegam</string>
     <string name="feeds_url_result">URL resultado</string>
     <string name="feeds_search_results">Thaqhawi resultadonaka</string>
     <string name="feeds_unread_only">Jan ullt\'atanakaki</string>
@@ -200,7 +200,6 @@
     <string name="feeds_unsubscribe_confirm_message">Aka feedat janiw juk\'amp yatiyawinak katuqxätati. Kuna pachas wasitat suscribisismawa.</string>
     <string name="feeds_access_select_rule">Mantañ kamachi ajllima</string>
     <string name="feeds_access_authenticated_desc">Taqi khitinakatix mantatäpki ukanaka</string>
-    <string name="feeds_banner_hint">Banner texto qillqam (markdown apnaqasispa)…</string>
     <string name="feeds_banner_dismiss">Banner apaqaña</string>
     <string name="feeds_members_search">Integrantenak filtraña</string>
     <string name="feeds_ai_prompt_default">Nayrïri</string>

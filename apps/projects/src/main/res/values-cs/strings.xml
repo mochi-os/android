@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Nahrát soubor .json</string>
     <string name="projects_settings_not_set">Nenastaveno</string>
     <string name="projects_settings_updated">Projekt aktualizován</string>
-    <string name="projects_property_select">Vyberte …</string>
     <string name="projects_activity_attached">přiložil(a)</string>
     <string name="projects_activity_commented">okomentoval(a)</string>
     <string name="projects_attachment_delete_confirm_message">Tato příloha bude trvale smazána.</string>

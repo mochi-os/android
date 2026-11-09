@@ -115,7 +115,7 @@
     <string name="settings_background_theme">தீமிலிருந்து</string>
     <string name="settings_background_off">ஒன்றுமில்லை</string>
     <string name="game_chat_empty">செய்திகள் இன்னும் இல்லை</string>
-    <string name="game_chat_input_placeholder">ஒரு செய்தியை தட்டச்சு செய்…</string>
+    <string name="game_chat_input_placeholder">ஒரு செய்தியை தட்டச்சு செய்</string>
     <string name="game_chat_send">செய்தியை அனுப்பு</string>
     <string name="game_chat_subject_you">நீங்கள்</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">இது நீங்கள்தான் என உறுதிப்படுத்தவும்</string>
     <string name="stepup_description">இது உங்கள் கணக்கின் பாதுகாப்பு மாற்றம். தொடர இது நீங்கள்தான் என சரிபார்க்கவும்.</string>
     <string name="stepup_email_label">மின்னஞ்சல் குறியீடு</string>
-    <string name="stepup_email_placeholder">உங்கள் மின்னஞ்சலில் உள்ள குறியீட்டை உள்ளிடவும்</string>
     <string name="stepup_totp_label">அங்கீகரிப்பு குறியீடு</string>
-    <string name="stepup_totp_placeholder">உங்கள் அங்கீகரிப்பான் குறியீட்டை உள்ளிடவும்</string>
     <string name="stepup_use_passkey">உங்கள் கடவுக்குறியைப் பயன்படுத்தவும்</string>
     <string name="stepup_send_email">மின்னஞ்சல் அனுப்பு</string>
     <string name="stepup_resend_email">மின்னஞ்சலை மீண்டும் அனுப்பு</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">குறிச்சொல்லை அகற்றவும்</string>
     <string name="person_picker_none">ஒன்றுமில்லை</string>
     <string name="person_picker_clear">தேர்வை அழி</string>
-    <string name="person_picker_select">தேர்ந்தெடுக்கவும் …</string>
+    <string name="person_picker_select">தேர்ந்தெடுக்கவும்</string>
     <string name="person_picker_directory">அடைவு</string>
     <string name="person_picker_no_people">நபர்கள் இல்லை</string>
     <string name="person_picker_project_members">திட்ட உறுப்பினர்கள்</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">அறிவிப்பு வகையை மாற்று</string>
     <string name="lightbox_comments_none">இந்தப் படத்தில் இன்னும் கருத்துகள் இல்லை.</string>
     <string name="lightbox_comments_only">இந்தப் படத்தின் கருத்துகளை மட்டும் காட்டு</string>
-    <string name="lightbox_comment_placeholder">இந்தப் படத்தில் கருத்திடவும்…</string>
+    <string name="lightbox_comment_placeholder">இந்தப் படத்தில் கருத்திடவும்</string>
     <string name="comment_anchor_open">இந்தக் கருத்து எந்தப் படத்தைப் பற்றியதோ அதைப் பார்க்கவும்</string>
     <string name="comment_anchor_default">இந்தப் படத்தில்</string>
     <plurals name="lightbox_comments_others">

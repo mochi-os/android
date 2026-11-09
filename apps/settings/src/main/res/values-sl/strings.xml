@@ -240,7 +240,7 @@
     <string name="route_delete_message">To bo odstranilo pot za pot „%1$s\".</string>
     <string name="route_empty">Ni konfiguriranih poti.</string>
     <string name="route_meta">Prioriteta %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Iskanje tem za dodajanje…</string>
+    <string name="interests_search_placeholder">Iskanje tem za dodajanje</string>
     <string name="interests_empty">Še ni interesov.</string>
     <string name="interests_summary_regenerate">Znova ustvari povzetek</string>
     <string name="interests_summary_regenerating">Znova ustvarjanje…</string>
@@ -264,7 +264,7 @@
     <string name="system_settings_reset_message_empty">To bo „%1$s\" ponastavilo na privzeto (prazno).</string>
     <string name="settings_home_system_users">Uporabniki (strežnik)</string>
     <string name="system_users_add_user">Dodaj uporabnika</string>
-    <string name="system_users_search_placeholder">Iskanje uporabnikov…</string>
+    <string name="system_users_search_placeholder">Iskanje uporabnikov</string>
     <string name="system_users_sort_by">Razvrsti po</string>
     <string name="system_users_last_login">Zadnja prijava: %1$s</string>
     <string name="system_users_delete_message">To bo trajno izbrisalo uporabnika „%1$s\". Tega dejanja ni mogoče razveljaviti.</string>
@@ -575,7 +575,7 @@
     <string name="handles_take">Prevzemi ime</string>
     <string name="handles_empty">Noben vzdevek ni rezerviran.</string>
     <string name="handles_empty_search">Noben vzdevek ne ustreza vašemu iskanju</string>
-    <string name="handles_search_placeholder">Iskanje vzdevkov…</string>
+    <string name="handles_search_placeholder">Iskanje vzdevkov</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Prikaz %1$s–%2$s od %3$s vzdevka</item>
         <item quantity="two">Prikaz %1$s–%2$s od %3$s vzdevkov</item>

@@ -241,7 +241,7 @@
     <string name="route_delete_message">Dan se jneħħi r-rotta għall-passaġġ \"%1$s\".</string>
     <string name="route_empty">L-ebda rotot konfigurati.</string>
     <string name="route_meta">Prijorità %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Fittex suġġetti biex iżżid…</string>
+    <string name="interests_search_placeholder">Fittex suġġetti biex iżżid</string>
     <string name="interests_empty">Għadek l-ebda interessi.</string>
     <string name="interests_summary_regenerate">Iġġenera s-sommarju mill-ġdid</string>
     <string name="interests_summary_regenerating">Tirriġenera…</string>
@@ -265,7 +265,7 @@
     <string name="system_settings_reset_message_empty">Dan se jirrisettja \"%1$s\" għad-default (vojt).</string>
     <string name="settings_home_system_users">Utenti (server)</string>
     <string name="system_users_add_user">Żid utent</string>
-    <string name="system_users_search_placeholder">Fittex utenti…</string>
+    <string name="system_users_search_placeholder">Fittex utenti</string>
     <string name="system_users_sort_by">Issortja skont</string>
     <string name="system_users_last_login">L-aħħar login: %1$s</string>
     <string name="system_users_delete_message">Dan se jħassar permanentement l-utent \"%1$s\". Din l-azzjoni ma tistax titreġġa\' lura.</string>
@@ -585,7 +585,7 @@
     <string name="handles_take">Ħu isem</string>
     <string name="handles_empty">Ma ġie riżervat l-ebda isem tal-utent.</string>
     <string name="handles_empty_search">L-ebda ismijiet tal-utent ma jaqblu mat-tiftixa tiegħek</string>
-    <string name="handles_search_placeholder">Fittex ismijiet tal-utent…</string>
+    <string name="handles_search_placeholder">Fittex ismijiet tal-utent</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Qed juri %1$s–%2$s minn %3$s isem tal-utent</item>
         <item quantity="two">Qed juri %1$s–%2$s minn %3$s ismijiet tal-utent</item>

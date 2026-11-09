@@ -84,7 +84,7 @@
     <string name="feeds_send">Изпрати</string>
 
     <string name="notification_channel_feeds">Известия за емисии</string>
-    <string name="feeds_search_placeholder">Търсене на емисии или поставете URL…</string>
+    <string name="feeds_search_placeholder">Търсене на емисии или поставете URL</string>
     <string name="feeds_url_result">Резултат от URL</string>
     <string name="feeds_search_results">Резултати от търсенето</string>
     <string name="feeds_unread_only">Само непрочетени</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Ще спрете да получавате актуализации от тази емисия. Можете да се абонирате отново по всяко време.</string>
     <string name="feeds_access_select_rule">Изберете правило за достъп</string>
     <string name="feeds_access_authenticated_desc">Всеки, който е влязъл в системата</string>
-    <string name="feeds_banner_hint">Добре дошли в този форум…</string>
     <string name="feeds_banner_dismiss">Отхвърли банера</string>
     <string name="feeds_members_search">Филтриране на членове</string>
     <string name="feeds_ai_prompt_default">По подразбиране</string>

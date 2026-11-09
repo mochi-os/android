@@ -6,7 +6,7 @@
     <string name="people_groups_title">Àwọn àwùjọ</string>
     <string name="people_group_title">Àwùjọ</string>
     <string name="people_person_title">Ènìyàn</string>
-    <string name="people_friends_search_placeholder">Wá…</string>
+    <string name="people_friends_search_placeholder">Wá</string>
     <string name="people_friends_no_people_found">A kò rí ènìyàn kankan</string>
     <string name="people_friends_try_adjusting">Gbìyànjú láti ṣàtúnṣe ìwákiri rẹ</string>
     <string name="people_friends_pending">Ń dúró</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Pa ẹgbẹ́ \"%1$s\" rẹ́? Èyí kò ní ṣeé yí padà.</string>
     <string name="people_member_remove_confirm">Ṣé o dájú pé o fẹ́ yọ %1$s kúrò nínú ẹgbẹ́ yìí?</string>
     <string name="people_member_remove_with_name">Yọ %1$s kúrò</string>
-    <string name="people_member_search_placeholder">Tẹ orúkọ láti wá…</string>
+    <string name="people_member_search_placeholder">Tẹ orúkọ láti wá</string>
     <string name="people_groups_add_member_confirm_title">Fi kún ẹgbẹ́</string>
     <string name="people_groups_add_member_confirm_action">Fi kún ẹgbẹ́</string>
     <string name="people_profile_image_process_failed">A kò lè ṣe ìtọ́jú àwòrán %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Kò lè ṣí ìlànà ìpè rẹ lọ̀</string>
     <string name="people_profile_avatar">Àwòrán ìdánimọ̀</string>
     <string name="people_profile_banner">Àsíá</string>
-    <string name="people_contacts_search_placeholder">Wá…</string>
+    <string name="people_contacts_search_placeholder">Wá</string>
     <string name="people_contacts_invited">A ti pè</string>
     <string name="people_contacts_accept">Gbà</string>
     <string name="people_contacts_message">Fi ìránṣẹ́ ránṣẹ́</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Tí a ṣẹ̀ṣẹ̀ fi kún</string>
     <string name="people_contacts_try_different_search">Gbìyànjú ọ̀rọ̀ ìwáàrí míràn</string>
     <string name="people_contacts_unfriend">Yọ ọ̀rẹ́ kúrò</string>
-    <string name="people_add_contact_search_placeholder">Tẹ̀ láti wá…</string>
+    <string name="people_add_contact_search_placeholder">Tẹ̀ láti wá</string>
     <string name="people_add_contact_search_start">Bẹ̀rẹ̀ síwá láti wá àwọn olùmúlò</string>
     <string name="people_contact_phone">Fóònù</string>
     <string name="people_contact_title">Àkọlé iṣẹ́</string>

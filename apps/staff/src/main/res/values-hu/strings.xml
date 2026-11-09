@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Döntés</string>
     <string name="staff_appeals_decision_denied">Hirdetés elutasítva tartása</string>
     <string name="staff_appeals_decision_label">Döntés</string>
-    <string name="staff_appeals_decision_placeholder">Döntés kiválasztása</string>
     <string name="staff_appeals_decision_upheld">Hirdetés jóváhagyása</string>
     <string name="staff_appeals_denied_toast">Fellebbezés elutasítva</string>
     <string name="staff_appeals_dialog_title">Fellebbezés elbírálása</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">A visszatérítés összegének nagyobbnak kell lennie nullánál</string>
     <string name="staff_disputes_resolution_buyer">Megoldás a vevő javára</string>
     <string name="staff_disputes_resolution_label">Megoldás</string>
-    <string name="staff_disputes_resolution_placeholder">Megoldás kiválasztása</string>
     <string name="staff_disputes_resolution_seller">Megoldás az eladó javára</string>
     <string name="staff_disputes_resolve">Megoldás</string>
     <string name="staff_disputes_resolved_toast">Vita megoldva</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Felhasználó kitiltása</string>
     <string name="staff_reports_action_dismiss">Elvetés</string>
     <string name="staff_reports_action_label">Művelet</string>
-    <string name="staff_reports_action_placeholder">Művelet kiválasztása</string>
     <string name="staff_reports_action_remove">Eltávolítás</string>
     <string name="staff_reports_action_suspend">Felfüggesztés eladóként</string>
     <string name="staff_reports_action_taken_toast">Jelentési intézkedés megtéve</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Személy</string>
     <string name="staff_team_dialog_role">Szerep</string>
     <string name="staff_team_dialog_role_placeholder">Szerep kiválasztása</string>
-    <string name="staff_team_dialog_search_placeholder">Keresés név, ujjlenyomat vagy ID alapján…</string>
+    <string name="staff_team_dialog_search_placeholder">Keresés név, ujjlenyomat vagy ID alapján</string>
     <string name="staff_team_empty">Nincsenek csapattagok</string>
     <string name="staff_team_remove_confirm">Eltávolítás</string>
     <string name="staff_team_remove_desc">Eltávolítja ezt a tagot a személyzeti csapatból?</string>

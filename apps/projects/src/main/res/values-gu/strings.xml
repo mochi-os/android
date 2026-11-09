@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">.json ફાઇલ અપલોડ કરો</string>
     <string name="projects_settings_not_set">સેટ કર્યું નથી</string>
     <string name="projects_settings_updated">પ્રોજેક્ટ અપડેટ થયો</string>
-    <string name="projects_property_select">પસંદ કરો …</string>
     <string name="projects_activity_attached">જોડ્યું</string>
     <string name="projects_activity_commented">ટિપ્પણી કરી</string>
     <string name="projects_attachment_delete_confirm_message">આ જોડાણ કાયમ માટે કાઢી નાખવામાં આવશે.</string>

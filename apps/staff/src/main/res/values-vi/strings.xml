@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Quyết định</string>
     <string name="staff_appeals_decision_denied">Giữ mục đăng bị từ chối</string>
     <string name="staff_appeals_decision_label">Quyết định</string>
-    <string name="staff_appeals_decision_placeholder">Chọn quyết định</string>
     <string name="staff_appeals_decision_upheld">Phê duyệt mục đăng</string>
     <string name="staff_appeals_denied_toast">Đã từ chối khiếu nại</string>
     <string name="staff_appeals_dialog_title">Quyết định khiếu nại</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Số tiền hoàn phải lớn hơn không</string>
     <string name="staff_disputes_resolution_buyer">Giải quyết cho người mua</string>
     <string name="staff_disputes_resolution_label">Cách giải quyết</string>
-    <string name="staff_disputes_resolution_placeholder">Chọn cách giải quyết</string>
     <string name="staff_disputes_resolution_seller">Giải quyết cho người bán</string>
     <string name="staff_disputes_resolve">Giải quyết</string>
     <string name="staff_disputes_resolved_toast">Đã giải quyết tranh chấp</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Cấm người dùng</string>
     <string name="staff_reports_action_dismiss">Bỏ qua</string>
     <string name="staff_reports_action_label">Hành động</string>
-    <string name="staff_reports_action_placeholder">Chọn hành động</string>
     <string name="staff_reports_action_remove">Xoá</string>
     <string name="staff_reports_action_suspend">Đình chỉ với tư cách người bán</string>
     <string name="staff_reports_action_taken_toast">Đã thực hiện hành động báo cáo</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Người</string>
     <string name="staff_team_dialog_role">Vai trò</string>
     <string name="staff_team_dialog_role_placeholder">Chọn vai trò</string>
-    <string name="staff_team_dialog_search_placeholder">Tìm theo tên, vân tay hoặc ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Tìm theo tên, vân tay hoặc ID</string>
     <string name="staff_team_empty">Không có thành viên nhóm</string>
     <string name="staff_team_remove_confirm">Xoá</string>
     <string name="staff_team_remove_desc">Xoá thành viên này khỏi nhóm nhân viên?</string>

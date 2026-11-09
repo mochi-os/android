@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Nog geen reëls nie — standaardwaardes geld</string>
     <string name="forums_members_search">Filter lede</string>
     <string name="forums_banner_description">Markdown wat boaan die forum vertoon word.</string>
-    <string name="forums_banner_placeholder">Voer baniertekst in (markdown word ondersteun)…</string>
     <string name="forums_ai_mode_off">Gedeaktiveer</string>
     <string name="forums_moderation_queue_empty">Niks hangende nie</string>
     <string name="forums_moderation_report_details">Besonderhede: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Verval %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Haat</string>
-    <string name="forums_write_comment">Skryf \'n kommentaar…</string>
+    <string name="forums_write_comment">Skryf \'n kommentaar</string>
     <string name="forums_comment_delete_message">Is jy seker jy wil hierdie kommentaar uitvee?</string>
     <string name="forums_comment_replying_to">Antwoord aan %1$s</string>
     <string name="forums_comment_clear_reply">Maak antwoord skoon</string>

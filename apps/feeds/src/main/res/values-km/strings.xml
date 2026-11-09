@@ -86,7 +86,7 @@
     <string name="feeds_move_down">ផ្លាស់ទីចុះក្រោម</string>
 
     <string name="notification_channel_feeds">ការជូនដំណឹងពីព័ត៌មាន</string>
-    <string name="feeds_search_placeholder">ស្វែងរកព័ត៌មាន ឬបិទភ្ជាប់ URL…</string>
+    <string name="feeds_search_placeholder">ស្វែងរកព័ត៌មាន ឬបិទភ្ជាប់ URL</string>
     <string name="feeds_url_result">លទ្ធផល URL</string>
     <string name="feeds_search_results">លទ្ធផលស្វែងរក</string>
     <string name="feeds_unread_only">មិនទាន់អានតែប៉ុណ្ណោះ</string>
@@ -199,7 +199,6 @@
     <string name="feeds_unsubscribe_confirm_message">អ្នកនឹងឈប់ទទួលបានបច្ចុប្បន្នភាពពីហ្វីដនេះ។ អ្នកអាចជាវឡើងវិញបានគ្រប់ពេល។</string>
     <string name="feeds_access_select_rule">ជ្រើសរើសច្បាប់ចូលប្រើ</string>
     <string name="feeds_access_authenticated_desc">នរណាក៏ដោយដែលបានចូលគណនី</string>
-    <string name="feeds_banner_hint">សូមស្វាគមន៍មកកាន់វេទិកានេះ…</string>
     <string name="feeds_banner_dismiss">បិទបដា</string>
     <string name="feeds_members_search">ច្រោះសមាជិក</string>
     <string name="feeds_ai_prompt_default">លំនាំដើម</string>

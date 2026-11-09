@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">വിരലടയാളം</string>
     <string name="crm_settings_server">സെർവർ</string>
     <string name="crm_untitled">ശീർഷകമില്ലാത്തത്</string>
-    <string name="crm_property_select">തിരഞ്ഞെടുക്കുക …</string>
     <string name="crm_filter">ഫിൽട്ടർ</string>
     <string name="crm_sort_filter_title">ക്രമീകരിച്ച് ഫിൽട്ടർ ചെയ്യുക</string>
     <string name="crm_filter_clear_all">എല്ലാം മായ്ക്കുക</string>

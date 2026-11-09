@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grup</string>
     <string name="people_group_title">Grup</string>
     <string name="people_person_title">Jalma</string>
-    <string name="people_friends_search_placeholder">Paluruh…</string>
+    <string name="people_friends_search_placeholder">Paluruh</string>
     <string name="people_friends_no_people_found">Teu manggih jalma</string>
     <string name="people_friends_try_adjusting">Cobian luyukeun pamilarian anjeun</string>
     <string name="people_friends_pending">Antri</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Hapus grup \"%1$s\"? Ieu teu tiasa dibatalkeun.</string>
     <string name="people_member_remove_confirm">Anjeun yakin hoyong ngahapus %1$s tina grup ieu?</string>
     <string name="people_member_remove_with_name">Hapus %1$s</string>
-    <string name="people_member_search_placeholder">Asupkeun ngaran pikeun néangan…</string>
+    <string name="people_member_search_placeholder">Asupkeun ngaran pikeun néangan</string>
     <string name="people_groups_add_member_confirm_title">Tambahkeun kana grup</string>
     <string name="people_groups_add_member_confirm_action">Tambahkeun kana grup</string>
     <string name="people_profile_image_process_failed">Teu tiasa ngolah gambar %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Gagal mungkahan kawijakan ondangan anjeun</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Spanduk</string>
-    <string name="people_contacts_search_placeholder">Paluruh…</string>
+    <string name="people_contacts_search_placeholder">Paluruh</string>
     <string name="people_contacts_invited">Diondang</string>
     <string name="people_contacts_accept">Tarima</string>
     <string name="people_contacts_message">Kirim pesen</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Nembé ditambahkeun</string>
     <string name="people_contacts_try_different_search">Cobian istilah pamilarian sanésna</string>
     <string name="people_contacts_unfriend">Cabut babaturan</string>
-    <string name="people_add_contact_search_placeholder">Ketik pikeun néangan…</string>
+    <string name="people_add_contact_search_placeholder">Ketik pikeun néangan</string>
     <string name="people_add_contact_search_start">Mimiti ngetik pikeun néangan pamaké</string>
     <string name="people_contact_phone">Telepon</string>
     <string name="people_contact_title">Judul pagawéan</string>

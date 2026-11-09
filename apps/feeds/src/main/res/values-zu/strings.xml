@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Hambisa phansi</string>
 
     <string name="notification_channel_feeds">Izaziso zamafidi</string>
-    <string name="feeds_search_placeholder">Sesha amafidi noma namathisela i-URL…</string>
+    <string name="feeds_search_placeholder">Sesha amafidi noma namathisela i-URL</string>
     <string name="feeds_url_result">Umphumela we-URL</string>
     <string name="feeds_search_results">Imiphumela yokusesha</string>
     <string name="feeds_unread_only">Okungafundiwe kuphela</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Uzoyeka ukuthola izibuyekezo kule fidi. Ungaphinda ubhalisele noma nini.</string>
     <string name="feeds_access_select_rule">Khetha umthetho wokufinyelela</string>
     <string name="feeds_access_authenticated_desc">Noma ubani ongene ngemvume</string>
-    <string name="feeds_banner_hint">Siyakwamukela kule nkundla…</string>
     <string name="feeds_banner_dismiss">Cashisa ibhana</string>
     <string name="feeds_members_search">Hlunga amalungu</string>
     <string name="feeds_ai_prompt_default">Okuzenzakalelayo</string>

@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Поруџбина #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Реците купцима о себи…</string>
     <string name="market_account_load_failed">Учитавање налога није успело</string>
     <string name="market_account_saved">Измене су сачуване</string>
     <string name="market_account_status_restrictions">Неке радње, укључујући креирање нових огласа и завршавање поруџбина, ограничене су док је ваш налог у овом стању.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Нови оглас</string>
     <string name="market_listings_search_placeholder">Претражите своје огласе</string>
     <string name="market_listings_share_chooser">Подели оглас</string>
-    <string name="market_messages_compose_placeholder">Напишите поруку…</string>
+    <string name="market_messages_compose_placeholder">Напишите поруку</string>
     <string name="market_messages_inbox_empty_subtitle">Када пошаљете поруку продавцу (или вам купац пошаље поруку), преписка ће се појавити овде.</string>
     <string name="market_messages_inbox_empty_title">Још нема разговора</string>
     <string name="market_messages_thread_title">Разговор</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Отворите завршену наруџбину да бисте оставили рецензију.</string>
     <string name="market_reviews_empty_sent_title">Нисте написали ниједну рецензију</string>
     <string name="market_reviews_response_label">Одговор</string>
-    <string name="market_reviews_response_placeholder">Напишите одговор…</string>
+    <string name="market_reviews_response_placeholder">Напишите одговор</string>
     <string name="market_sale_carrier_custom_label">Назив превозника</string>
     <string name="market_sale_dispute_evidence_due">Докази се очекују до %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe разлог повраћаја: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Рецензије продавца</string>
     <string name="market_account_stripe_open_failed">Није могуће отворити Stripe</string>
     <string name="market_editor_stock">Залихе</string>
-    <string name="market_editor_stock_units">Број јединица</string>
     <string name="market_editor_stock_unlimited">Неограничено</string>
     <string name="market_editor_start_time">Време почетка</string>
     <string name="market_editor_start_time_help">Оставите празно да започне при објављивању.</string>

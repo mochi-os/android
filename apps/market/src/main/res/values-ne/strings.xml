@@ -3,7 +3,6 @@
     <string name="app_name">बजार</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">जीवनी</string>
-    <string name="market_account_biography_placeholder">खरिदकर्ताहरूलाई आफ्नो बारेमा बताउनुहोस्…</string>
     <string name="market_account_load_failed">खाता लोड गर्न सकिएन</string>
     <string name="market_account_location_label">स्थान</string>
     <string name="market_account_save">सुरक्षित गर्नुहोस्</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">नयाँ विज्ञापन</string>
     <string name="market_listings_relist_failed">पुनः सूचीबद्ध गर्न असफल</string>
     <string name="market_listings_title">मेरा लिस्टिङहरू</string>
-    <string name="market_messages_compose_placeholder">सन्देश लेख्नुहोस्…</string>
+    <string name="market_messages_compose_placeholder">सन्देश लेख्नुहोस्</string>
     <string name="market_messages_inbox_title">सन्देशहरू</string>
     <string name="market_messages_send">पठाउनुहोस्</string>
     <string name="market_messages_thread_title">वार्तालाप</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">अर्डर पूरा भएपछि खरिदकर्ता र बिक्रेताले एकअर्कालाई समीक्षा गर्न सक्छन्।</string>
     <string name="market_reviews_empty_sent_subtitle">समीक्षा छोड्न पूरा भएको अर्डर खोल्नुहोस्।</string>
     <string name="market_reviews_empty_sent_title">तपाईंले कुनै समीक्षा लेख्नुभएको छैन</string>
-    <string name="market_reviews_response_placeholder">प्रतिक्रिया लेख्नुहोस्…</string>
+    <string name="market_reviews_response_placeholder">प्रतिक्रिया लेख्नुहोस्</string>
     <string name="market_sale_carrier_custom_label">वाहकको नाम</string>
     <string name="market_sale_dispute_evidence_due">प्रमाण %1$s सम्ममा बुझाउनुपर्ने</string>
     <string name="market_sale_dispute_stripe_reason">Stripe चार्जब्याकको कारण: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">विक्रेताको समीक्षाहरू</string>
     <string name="market_account_stripe_open_failed">Stripe खोल्न सकिएन</string>
     <string name="market_editor_stock">स्टक</string>
-    <string name="market_editor_stock_units">एकाइहरूको संख्या</string>
     <string name="market_editor_stock_unlimited">असीमित</string>
     <string name="market_editor_start_time">सुरु समय</string>
     <string name="market_editor_start_time_help">प्रकाशनमा सुरु गर्न खाली छोड्नुहोस्।</string>

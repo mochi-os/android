@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Beslissen</string>
     <string name="staff_appeals_decision_denied">Advertentie afgewezen houden</string>
     <string name="staff_appeals_decision_label">Beslissing</string>
-    <string name="staff_appeals_decision_placeholder">Selecteer beslissing</string>
     <string name="staff_appeals_decision_upheld">Advertentie goedkeuren</string>
     <string name="staff_appeals_denied_toast">Beroep afgewezen</string>
     <string name="staff_appeals_dialog_title">Beslissen over beroep</string>
@@ -235,7 +234,6 @@
     <string name="staff_disputes_refund_must_be_positive">Terugbetalingsbedrag moet groter zijn dan nul</string>
     <string name="staff_disputes_resolution_buyer">Oplossen ten gunste van koper</string>
     <string name="staff_disputes_resolution_label">Oplossing</string>
-    <string name="staff_disputes_resolution_placeholder">Selecteer oplossing</string>
     <string name="staff_disputes_resolution_seller">Oplossen ten gunste van verkoper</string>
     <string name="staff_disputes_resolve">Oplossen</string>
     <string name="staff_disputes_resolved_toast">Geschil opgelost</string>
@@ -306,7 +304,6 @@
     <string name="staff_reports_action_ban">Gebruiker verbannen</string>
     <string name="staff_reports_action_dismiss">Afwijzen</string>
     <string name="staff_reports_action_label">Actie</string>
-    <string name="staff_reports_action_placeholder">Selecteer actie</string>
     <string name="staff_reports_action_remove">Verwijderen</string>
     <string name="staff_reports_action_suspend">Schorsen als verkoper</string>
     <string name="staff_reports_action_taken_toast">Rapportactie ondernomen</string>
@@ -412,7 +409,7 @@
     <string name="staff_team_dialog_person">Persoon</string>
     <string name="staff_team_dialog_role">Rol</string>
     <string name="staff_team_dialog_role_placeholder">Selecteer rol</string>
-    <string name="staff_team_dialog_search_placeholder">Zoeken op naam, vingerafdruk of ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Zoeken op naam, vingerafdruk of ID</string>
     <string name="staff_team_empty">Geen teamleden</string>
     <string name="staff_team_remove_confirm">Verwijderen</string>
     <string name="staff_team_remove_desc">Dit lid verwijderen uit het staff team?</string>

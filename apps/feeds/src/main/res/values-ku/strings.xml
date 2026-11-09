@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Bibe jêr</string>
 
     <string name="notification_channel_feeds">Agahdariyên feedan</string>
-    <string name="feeds_search_placeholder">Li feedan bigere an URL têxe…</string>
+    <string name="feeds_search_placeholder">Li feedan bigere an URL têxe</string>
     <string name="feeds_url_result">Encama URL</string>
     <string name="feeds_search_results">Encamên lêgerînê</string>
     <string name="feeds_unread_only">Tenê nexwendî</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Êdî tu nûvekirinan ji vê feedê wernagirî. Tu dikarî her dem dîsa abone bibî.</string>
     <string name="feeds_access_select_rule">Rêzika destpêkirinê hilbijêre</string>
     <string name="feeds_access_authenticated_desc">Her kesê ku têketî ye</string>
-    <string name="feeds_banner_hint">Bi xêr hatî vê forumê…</string>
     <string name="feeds_banner_dismiss">Bannerê red bike</string>
     <string name="feeds_members_search">Endaman parz bike</string>
     <string name="feeds_ai_prompt_default">Standard</string>

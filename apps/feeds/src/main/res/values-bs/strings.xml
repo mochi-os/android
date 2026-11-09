@@ -84,7 +84,7 @@
     <string name="feeds_send">Pošalji</string>
 
     <string name="notification_channel_feeds">Obavještenja feedova</string>
-    <string name="feeds_search_placeholder">Pretražite feedove ili nalijepite URL…</string>
+    <string name="feeds_search_placeholder">Pretražite feedove ili nalijepite URL</string>
     <string name="feeds_url_result">Rezultat URL-a</string>
     <string name="feeds_search_results">Rezultati pretrage</string>
     <string name="feeds_unread_only">Samo nepročitano</string>
@@ -205,7 +205,6 @@
     <string name="feeds_unsubscribe_confirm_message">Više nećete primati novosti s ovog feeda. Možete se ponovo pretplatiti u bilo kojem trenutku.</string>
     <string name="feeds_access_select_rule">Odaberi pravilo pristupa</string>
     <string name="feeds_access_authenticated_desc">Svako ko je prijavljen</string>
-    <string name="feeds_banner_hint">Dobro došli na ovaj forum…</string>
     <string name="feeds_banner_dismiss">Odbaci banner</string>
     <string name="feeds_members_search">Filtriraj članove</string>
     <string name="feeds_ai_prompt_default">Podrazumijevano</string>

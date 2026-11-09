@@ -90,7 +90,7 @@
     <string name="feeds_ai_account">Tekoälytili</string>
 
     <string name="notification_channel_feeds">Syötteiden ilmoitukset</string>
-    <string name="feeds_search_placeholder">Etsi syötteitä tai liitä URL-osoite…</string>
+    <string name="feeds_search_placeholder">Etsi syötteitä tai liitä URL-osoite</string>
     <string name="feeds_url_result">URL-tulos</string>
     <string name="feeds_search_results">Hakutulokset</string>
     <string name="feeds_unread_only">Vain lukemattomat</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Et saa enää päivityksiä tästä syötteestä. Voit tilata sen uudelleen milloin tahansa.</string>
     <string name="feeds_access_select_rule">Valitse käyttöoikeussääntö</string>
     <string name="feeds_access_authenticated_desc">Kaikki kirjautuneet käyttäjät</string>
-    <string name="feeds_banner_hint">Tervetuloa tälle foorumille…</string>
     <string name="feeds_banner_dismiss">Hylkää banneri</string>
     <string name="feeds_members_search">Suodata jäseniä</string>
     <string name="feeds_ai_prompt_default">Oletus</string>

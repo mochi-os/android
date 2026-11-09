@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Tilaus #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Kerro ostajille itsestäsi…</string>
     <string name="market_account_load_failed">Tilin lataaminen epäonnistui</string>
     <string name="market_account_saved">Muutokset tallennettu</string>
     <string name="market_account_status_restrictions">Jotkin toiminnot, kuten uusien ilmoitusten luominen ja tilausten viimeistely, ovat rajoitettuja, kun tilisi on tässä tilassa.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Uusi ilmoitus</string>
     <string name="market_listings_search_placeholder">Hae ilmoituksistasi</string>
     <string name="market_listings_share_chooser">Jaa ilmoitus</string>
-    <string name="market_messages_compose_placeholder">Kirjoita viesti…</string>
+    <string name="market_messages_compose_placeholder">Kirjoita viesti</string>
     <string name="market_messages_inbox_empty_subtitle">Kun lähetät viestin myyjälle (tai ostaja viestii sinulle), keskustelu näkyy täällä.</string>
     <string name="market_messages_inbox_empty_title">Ei vielä keskusteluja</string>
     <string name="market_messages_thread_title">Keskustelu</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Avaa valmis tilaus jättääksesi arvostelun.</string>
     <string name="market_reviews_empty_sent_title">Et ole kirjoittanut arvosteluja</string>
     <string name="market_reviews_response_label">Vastaus</string>
-    <string name="market_reviews_response_placeholder">Kirjoita vastaus…</string>
+    <string name="market_reviews_response_placeholder">Kirjoita vastaus</string>
     <string name="market_sale_carrier_custom_label">Kuljetusyhtiön nimi</string>
     <string name="market_sale_dispute_evidence_due">Todisteet määräaikaan %1$s mennessä</string>
     <string name="market_sale_dispute_stripe_reason">Stripe-takaisinveloituksen syy: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Myyjän arvostelut</string>
     <string name="market_account_stripe_open_failed">Stripen avaaminen epäonnistui</string>
     <string name="market_editor_stock">Varasto</string>
-    <string name="market_editor_stock_units">Yksiköiden määrä</string>
     <string name="market_editor_stock_unlimited">Rajoittamaton</string>
     <string name="market_editor_start_time">Aloitusaika</string>
     <string name="market_editor_start_time_help">Jätä tyhjäksi aloittaaksesi julkaisussa.</string>

@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Decidir</string>
     <string name="staff_appeals_decision_denied">Mantener anuncio rechazado</string>
     <string name="staff_appeals_decision_label">Decisión</string>
-    <string name="staff_appeals_decision_placeholder">Seleccionar decisión</string>
     <string name="staff_appeals_decision_upheld">Aprobar anuncio</string>
     <string name="staff_appeals_denied_toast">Apelación denegada</string>
     <string name="staff_appeals_dialog_title">Decidir apelación</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">El monto del reembolso debe ser mayor que cero</string>
     <string name="staff_disputes_resolution_buyer">Resolver a favor del comprador</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
-    <string name="staff_disputes_resolution_placeholder">Seleccionar resolución</string>
     <string name="staff_disputes_resolution_seller">Resolver a favor del vendedor</string>
     <string name="staff_disputes_resolve">Resolver</string>
     <string name="staff_disputes_resolved_toast">Disputa resuelta</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Bloquear usuario</string>
     <string name="staff_reports_action_dismiss">Descartar</string>
     <string name="staff_reports_action_label">Acción</string>
-    <string name="staff_reports_action_placeholder">Seleccionar acción</string>
     <string name="staff_reports_action_remove">Eliminar</string>
     <string name="staff_reports_action_suspend">Suspender como vendedor</string>
     <string name="staff_reports_action_taken_toast">Acción de reporte tomada</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Persona</string>
     <string name="staff_team_dialog_role">Rol</string>
     <string name="staff_team_dialog_role_placeholder">Seleccionar rol</string>
-    <string name="staff_team_dialog_search_placeholder">Buscar por nombre, huella o ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Buscar por nombre, huella o ID</string>
     <string name="staff_team_empty">No hay miembros del equipo</string>
     <string name="staff_team_remove_confirm">Eliminar</string>
     <string name="staff_team_remove_desc">¿Eliminar a este miembro del equipo de personal?</string>

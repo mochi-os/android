@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Помери доле</string>
 
     <string name="notification_channel_feeds">Обавештења фидова</string>
-    <string name="feeds_search_placeholder">Претражите фидове или налепите URL…</string>
+    <string name="feeds_search_placeholder">Претражите фидове или налепите URL</string>
     <string name="feeds_url_result">Резултат URL-а</string>
     <string name="feeds_search_results">Резултати претраге</string>
     <string name="feeds_unread_only">Само непрочитано</string>
@@ -205,7 +205,6 @@
     <string name="feeds_unsubscribe_confirm_message">Више нећете добијати новости са овог фида. Поново можете да се пријавите у било ком тренутку.</string>
     <string name="feeds_access_select_rule">Изабери правило приступа</string>
     <string name="feeds_access_authenticated_desc">Свако ко је пријављен</string>
-    <string name="feeds_banner_hint">Добро дошли на овај форум…</string>
     <string name="feeds_banner_dismiss">Одбаци банер</string>
     <string name="feeds_members_search">Филтрирај чланове</string>
     <string name="feeds_ai_prompt_default">Подразумевано</string>

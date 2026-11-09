@@ -18,7 +18,7 @@
     <string name="settings_reset_confirm_title">¿Reiniciás las preferencias?</string>
     <string name="settings_reset">Reiniciá</string>
     <string name="settings_display_reset">Reiniciá a los valores predeterminados</string>
-    <string name="game_chat_input_placeholder">Escribí un mensaje…</string>
+    <string name="game_chat_input_placeholder">Escribí un mensaje</string>
     <string name="game_chat_send">Enviá el mensaje</string>
 
     <string name="common_saving">Guardando…</string>
@@ -239,9 +239,7 @@
     <string name="stepup_title">Confirma que eres tú</string>
     <string name="stepup_description">Es un cambio de seguridad en tu cuenta. Verifica tu identidad para continuar.</string>
     <string name="stepup_email_label">Código por correo</string>
-    <string name="stepup_email_placeholder">Introduce el código de tu correo electrónico</string>
     <string name="stepup_totp_label">Código del autenticador</string>
-    <string name="stepup_totp_placeholder">Introduce el código de tu aplicación de autenticación</string>
     <string name="stepup_use_passkey">Usa tu clave de acceso</string>
     <string name="stepup_send_email">Enviar correo</string>
     <string name="stepup_resend_email">Reenviar correo</string>
@@ -261,7 +259,7 @@
     <string name="tags_none">Sin etiquetas</string>
     <string name="tags_delete">Quitar etiqueta</string>
     <string name="person_picker_none">Ninguno</string>
-    <string name="person_picker_select">Seleccionar …</string>
+    <string name="person_picker_select">Seleccionar</string>
     <string name="person_picker_directory">Directorio</string>
     <string name="person_picker_no_people">No hay personas</string>
     <string name="person_picker_project_members">Miembros del proyecto</string>

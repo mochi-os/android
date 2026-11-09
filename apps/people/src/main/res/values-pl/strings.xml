@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupy</string>
     <string name="people_group_title">Grupa</string>
     <string name="people_person_title">Osoba</string>
-    <string name="people_friends_search_placeholder">Szukaj…</string>
+    <string name="people_friends_search_placeholder">Szukaj</string>
     <string name="people_friends_no_people_found">Nie znaleziono osób</string>
     <string name="people_friends_try_adjusting">Spróbuj dostosować wyszukiwanie</string>
     <string name="people_friends_pending">Oczekujące</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Usunąć grupę \"%1$s\"? Tej operacji nie można cofnąć.</string>
     <string name="people_member_remove_confirm">Czy na pewno chcesz usunąć %1$s z tej grupy?</string>
     <string name="people_member_remove_with_name">Usuń %1$s</string>
-    <string name="people_member_search_placeholder">Wpisz imię, aby wyszukać…</string>
+    <string name="people_member_search_placeholder">Wpisz imię, aby wyszukać</string>
     <string name="people_groups_add_member_confirm_title">Dodaj do grupy</string>
     <string name="people_groups_add_member_confirm_action">Dodaj do grupy</string>
     <string name="people_profile_image_process_failed">Nie można przetworzyć obrazu %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Nie udało się załadować twojej polityki zaproszeń</string>
     <string name="people_profile_avatar">Awatar</string>
     <string name="people_profile_banner">Baner</string>
-    <string name="people_contacts_search_placeholder">Szukaj…</string>
+    <string name="people_contacts_search_placeholder">Szukaj</string>
     <string name="people_contacts_invited">Zaproszono</string>
     <string name="people_contacts_accept">Akceptuj</string>
     <string name="people_contacts_message">Wyślij wiadomość</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Niedawno dodane</string>
     <string name="people_contacts_try_different_search">Spróbuj innego wyrażenia wyszukiwania</string>
     <string name="people_contacts_unfriend">Usuń znajomego</string>
-    <string name="people_add_contact_search_placeholder">Wpisz, aby wyszukać…</string>
+    <string name="people_add_contact_search_placeholder">Wpisz, aby wyszukać</string>
     <string name="people_add_contact_search_start">Zacznij pisać, aby wyszukać użytkowników</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Stanowisko</string>

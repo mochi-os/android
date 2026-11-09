@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Del tema</string>
     <string name="settings_background_off">Cap</string>
     <string name="game_chat_empty">Encara no hi ha missatges</string>
-    <string name="game_chat_input_placeholder">Escriu un missatge…</string>
+    <string name="game_chat_input_placeholder">Escriu un missatge</string>
     <string name="game_chat_send">Envia missatge</string>
     <string name="game_chat_subject_you">Tu</string>
 
@@ -231,9 +231,7 @@
     <string name="stepup_title">Confirmeu que sou vós</string>
     <string name="stepup_description">Aquest és un canvi de seguretat al vostre compte. Verifiqueu que sou vós per continuar.</string>
     <string name="stepup_email_label">Codi per correu</string>
-    <string name="stepup_email_placeholder">Introduïu el codi del vostre correu electrònic</string>
     <string name="stepup_totp_label">Codi de l\'autenticador</string>
-    <string name="stepup_totp_placeholder">Introduïu el codi de l\'autenticador</string>
     <string name="stepup_use_passkey">Utilitzeu la vostra clau d\'accés</string>
     <string name="stepup_send_email">Envia el correu</string>
     <string name="stepup_resend_email">Torna a enviar el correu</string>
@@ -273,7 +271,7 @@
     <string name="tags_delete">Elimina l\'etiqueta</string>
     <string name="person_picker_none">Cap</string>
     <string name="person_picker_clear">Esborra la selecció</string>
-    <string name="person_picker_select">Selecciona …</string>
+    <string name="person_picker_select">Selecciona</string>
     <string name="person_picker_directory">Directori</string>
     <string name="person_picker_no_people">No hi ha persones</string>
     <string name="person_picker_project_members">Membres del projecte</string>
@@ -289,7 +287,7 @@
     <string name="notifications_change_category">Canvia la categoria de notificació</string>
     <string name="lightbox_comments_none">Encara no hi ha comentaris a aquesta imatge.</string>
     <string name="lightbox_comments_only">Mostra només els comentaris d\'aquesta imatge</string>
-    <string name="lightbox_comment_placeholder">Comenta aquesta imatge…</string>
+    <string name="lightbox_comment_placeholder">Comenta aquesta imatge</string>
     <string name="comment_anchor_open">Mostra la imatge a què es refereix aquest comentari</string>
     <string name="comment_anchor_default">En aquesta imatge</string>
     <plurals name="lightbox_comments_others">

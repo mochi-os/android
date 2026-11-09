@@ -3,7 +3,6 @@
     <string name="app_name">Imakethe</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Umlandowempilo</string>
-    <string name="market_account_biography_placeholder">Tshela abathengi ngawe…</string>
     <string name="market_account_load_failed">Akukwazanga ukulayisha i-akhawunti</string>
     <string name="market_account_location_label">Indawo</string>
     <string name="market_account_save">Londoloza</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">Uhlu olusha</string>
     <string name="market_listings_relist_failed">Kuhlulekile ukushicilela kabusha</string>
     <string name="market_listings_title">Okufakiwe kwami</string>
-    <string name="market_messages_compose_placeholder">Bhala umlayezo…</string>
+    <string name="market_messages_compose_placeholder">Bhala umlayezo</string>
     <string name="market_messages_inbox_title">Imiyalezo</string>
     <string name="market_messages_send">Thumela</string>
     <string name="market_messages_thread_title">Ingxoxo</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Abathengi nabathengisi bangabuyekezana emva kwe-oda eliqediwe.</string>
     <string name="market_reviews_empty_sent_subtitle">Vula i-oda eliqediwe ukuze ushiye ukubuyekezwa.</string>
     <string name="market_reviews_empty_sent_title">Awukabhali noma yikuphi ukubuyekezwa</string>
-    <string name="market_reviews_response_placeholder">Bhala impendulo…</string>
+    <string name="market_reviews_response_placeholder">Bhala impendulo</string>
     <string name="market_sale_carrier_custom_label">Igama lomthwali</string>
     <string name="market_sale_dispute_evidence_due">Ubufakazi obufunekayo ngo-%1$s</string>
     <string name="market_sale_dispute_stripe_reason">Isizathu sokubuyiselwa kwemali kwe-Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Izibuyekezo zomthengisi</string>
     <string name="market_account_stripe_open_failed">Ayikwazanga ukuvula i-Stripe</string>
     <string name="market_editor_stock">Isitokwe</string>
-    <string name="market_editor_stock_units">Inani lamayunithi</string>
     <string name="market_editor_stock_unlimited">Akunamkhawulo</string>
     <string name="market_editor_start_time">Isikhathi sokuqala</string>
     <string name="market_editor_start_time_help">Shiya kungenalutho ukuze kuqale ekushicilelweni.</string>

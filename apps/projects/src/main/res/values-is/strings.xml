@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Hlaða upp .json-skrá</string>
     <string name="projects_settings_not_set">Ekki stillt</string>
     <string name="projects_settings_updated">Verkefni uppfært</string>
-    <string name="projects_property_select">Veldu …</string>
     <string name="projects_activity_attached">hengdi við</string>
     <string name="projects_activity_commented">skrifaði athugasemd</string>
     <string name="projects_attachment_delete_confirm_message">Þetta viðhengi verður eytt varanlega.</string>

@@ -41,7 +41,6 @@
     <string name="staff_appeals_decide">Dèan co-dhùnadh</string>
     <string name="staff_appeals_decision_denied">Cùm an liosta diùltaichte</string>
     <string name="staff_appeals_decision_label">Co-dhùnadh</string>
-    <string name="staff_appeals_decision_placeholder">Tagh co-dhùnadh</string>
     <string name="staff_appeals_decision_upheld">Aontaich an liosta</string>
     <string name="staff_appeals_denied_toast">Ath-thagradh air a dhiùltadh</string>
     <string name="staff_appeals_dialog_title">Dèan co-dhùnadh air an ath-thagradh</string>
@@ -228,7 +227,6 @@
     <string name="staff_disputes_refund_must_be_positive">Feumaidh suim an ath-dhìolaidh a bhith nas motha na neoini</string>
     <string name="staff_disputes_resolution_buyer">Fuasgail airson a\' cheannaiche</string>
     <string name="staff_disputes_resolution_label">Fuasgladh</string>
-    <string name="staff_disputes_resolution_placeholder">Tagh fuasgladh</string>
     <string name="staff_disputes_resolution_seller">Fuasgail airson an reiceadair</string>
     <string name="staff_disputes_resolve">Fuasgail</string>
     <string name="staff_disputes_resolved_toast">Connspaid air a fuasgladh</string>
@@ -287,7 +285,6 @@
     <string name="staff_reports_action_ban">Toirmisg cleachdaiche</string>
     <string name="staff_reports_action_dismiss">Leig seachad</string>
     <string name="staff_reports_action_label">Gnìomh</string>
-    <string name="staff_reports_action_placeholder">Tagh gnìomh</string>
     <string name="staff_reports_action_remove">Thoir air falbh</string>
     <string name="staff_reports_action_suspend">Cuir an cois mar reiceadair</string>
     <string name="staff_reports_action_taken_toast">Chaidh gnìomh aithisge a ghabhail</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">òrdugh #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s air %3$s. Sguab às an lèirmheas seo gu buan? Cha ghabh seo a thilleadh.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Sguab às an lèirmheas seo gu buan? Cha ghabh seo a thilleadh.</string>
-    <string name="staff_team_dialog_search_placeholder">Lorg a rèir ainm, lorg-meòir, no ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Lorg a rèir ainm, lorg-meòir, no ID</string>
 
     <string name="staff_config_field_stripe_webhook">Rùn soidhnidh webhook</string>
     <string name="staff_disputes_meta_already_refunded">Air ath-phàigheadh mar-thà</string>

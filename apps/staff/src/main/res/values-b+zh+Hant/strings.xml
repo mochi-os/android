@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">裁決</string>
     <string name="staff_appeals_decision_denied">保持列表拒絕狀態</string>
     <string name="staff_appeals_decision_label">裁決</string>
-    <string name="staff_appeals_decision_placeholder">選擇決定</string>
     <string name="staff_appeals_decision_upheld">批准列表</string>
     <string name="staff_appeals_denied_toast">申訴已駁回</string>
     <string name="staff_appeals_dialog_title">裁決申訴</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">退款金額必須大於零</string>
     <string name="staff_disputes_resolution_buyer">為買家解決</string>
     <string name="staff_disputes_resolution_label">解決方式</string>
-    <string name="staff_disputes_resolution_placeholder">選擇解決方案</string>
     <string name="staff_disputes_resolution_seller">為賣家解決</string>
     <string name="staff_disputes_resolve">解決</string>
     <string name="staff_disputes_resolved_toast">爭議已解決</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">封鎖使用者</string>
     <string name="staff_reports_action_dismiss">駁回</string>
     <string name="staff_reports_action_label">操作</string>
-    <string name="staff_reports_action_placeholder">選擇動作</string>
     <string name="staff_reports_action_remove">移除</string>
     <string name="staff_reports_action_suspend">停權賣家身分</string>
     <string name="staff_reports_action_taken_toast">已採取檢舉動作</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">人員</string>
     <string name="staff_team_dialog_role">角色</string>
     <string name="staff_team_dialog_role_placeholder">選擇角色</string>
-    <string name="staff_team_dialog_search_placeholder">依名稱、指紋或 ID 搜尋…</string>
+    <string name="staff_team_dialog_search_placeholder">依名稱、指紋或 ID 搜尋</string>
     <string name="staff_team_empty">無團隊成員</string>
     <string name="staff_team_remove_confirm">移除</string>
     <string name="staff_team_remove_desc">將此成員從工作人員團隊中移除?</string>

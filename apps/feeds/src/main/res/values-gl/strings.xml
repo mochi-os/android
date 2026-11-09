@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Mover abaixo</string>
 
     <string name="notification_channel_feeds">Notificacións de fíos</string>
-    <string name="feeds_search_placeholder">Busca fíos ou pega un URL…</string>
+    <string name="feeds_search_placeholder">Busca fíos ou pega un URL</string>
     <string name="feeds_url_result">Resultado do URL</string>
     <string name="feeds_search_results">Resultados da busca</string>
     <string name="feeds_unread_only">Só sen ler</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Deixarás de recibir actualizacións deste fío. Podes volver subscribirte en calquera momento.</string>
     <string name="feeds_access_select_rule">Seleccionar regra de acceso</string>
     <string name="feeds_access_authenticated_desc">Calquera persoa con sesión iniciada</string>
-    <string name="feeds_banner_hint">Benvido a este foro…</string>
     <string name="feeds_banner_dismiss">Descartar banner</string>
     <string name="feeds_members_search">Filtrar membros</string>
     <string name="feeds_ai_prompt_default">Predeterminado</string>

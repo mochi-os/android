@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Igo .json fitxategia</string>
     <string name="projects_settings_not_set">Ezarri gabe</string>
     <string name="projects_settings_updated">Proiektua eguneratu da</string>
-    <string name="projects_property_select">Hautatu …</string>
     <string name="projects_activity_attached">erantsi du</string>
     <string name="projects_activity_commented">iruzkindu du</string>
     <string name="projects_attachment_delete_confirm_message">Eranskin hau betiko ezabatuko da.</string>

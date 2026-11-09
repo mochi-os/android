@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">पठाउनुहोस्</string>
     <string name="forums_post_body_field">मुख्य भाग</string>
-    <string name="forums_write_comment">टिप्पणी लेख्नुहोस्…</string>
+    <string name="forums_write_comment">टिप्पणी लेख्नुहोस्</string>
 
     <string name="notification_channel_forums">फोरम सूचनाहरू</string>
     <string name="forums_list_empty">अहिलेसम्म कुनै फोरम छैन</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">अहिलेसम्म कुनै नियम छैन — पूर्वनिर्धारित लागू हुन्छन्</string>
     <string name="forums_members_search">सदस्यहरू फिल्टर गर्नुहोस्</string>
     <string name="forums_banner_description">फोरमको शीर्षमा देखाइने Markdown।</string>
-    <string name="forums_banner_placeholder">ब्यानरको पाठ प्रविष्ट गर्नुहोस् (Markdown समर्थित)…</string>
     <string name="forums_ai_mode_off">निष्क्रिय</string>
     <string name="forums_moderation_queue_empty">कुनै बाँकी छैन</string>
     <string name="forums_moderation_report_details">विवरण: %1$s</string>

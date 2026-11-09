@@ -6,7 +6,7 @@
     <string name="people_groups_title">Garee</string>
     <string name="people_group_title">Garee</string>
     <string name="people_person_title">Nama</string>
-    <string name="people_friends_search_placeholder">Barbaadi…</string>
+    <string name="people_friends_search_placeholder">Barbaadi</string>
     <string name="people_friends_no_people_found">Namoonni hin argamne</string>
     <string name="people_friends_try_adjusting">Barbaacha kee sirreessuu yaali</string>
     <string name="people_friends_pending">Eegaa jira</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Garee \"%1$s\" haquu? Kun deebi\'uu hin danda\'u.</string>
     <string name="people_member_remove_confirm">Dhugumatti %1$s garee kana keessaa haquu barbaaddaa?</string>
     <string name="people_member_remove_with_name">%1$s haqi</string>
-    <string name="people_member_search_placeholder">Maqaa barbaaduuf galchi…</string>
+    <string name="people_member_search_placeholder">Maqaa barbaaduuf galchi</string>
     <string name="people_groups_add_member_confirm_title">Gareetti dabali</string>
     <string name="people_groups_add_member_confirm_action">Gareetti dabali</string>
     <string name="people_profile_image_process_failed">Suuraa %1$s adeemsisuun hin dandeenye</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Imaammata affeerraa kee fe\'achuu hin dandeenye</string>
     <string name="people_profile_avatar">Fakkii</string>
     <string name="people_profile_banner">Bannerii</string>
-    <string name="people_contacts_search_placeholder">Barbaadi…</string>
+    <string name="people_contacts_search_placeholder">Barbaadi</string>
     <string name="people_contacts_invited">Affeerameera</string>
     <string name="people_contacts_accept">Fudhadhu</string>
     <string name="people_contacts_message">Ergaa ergi</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Dhiheenya dabalame</string>
     <string name="people_contacts_try_different_search">Jecha barbaaccha biraa yaali</string>
     <string name="people_contacts_unfriend">Hiriyaa haqi</string>
-    <string name="people_add_contact_search_placeholder">Barbaaduuf barreessi…</string>
+    <string name="people_add_contact_search_placeholder">Barbaaduuf barreessi</string>
     <string name="people_add_contact_search_start">Fayyadamtoota barbaaduuf barreessuu jalqabi</string>
     <string name="people_contact_phone">Bilbila</string>
     <string name="people_contact_title">Mata duree hojii</string>

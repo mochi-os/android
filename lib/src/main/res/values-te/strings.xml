@@ -115,7 +115,7 @@
     <string name="settings_background_theme">థీమ్ నుండి</string>
     <string name="settings_background_off">ఏదీ లేదు</string>
     <string name="game_chat_empty">ఇంకా సందేశాలు లేవు</string>
-    <string name="game_chat_input_placeholder">ఒక సందేశాన్ని టైప్ చేయండి…</string>
+    <string name="game_chat_input_placeholder">ఒక సందేశాన్ని టైప్ చేయండి</string>
     <string name="game_chat_send">సందేశాన్ని పంపండి</string>
     <string name="game_chat_subject_you">మీరు</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">ఇది మీరేనని నిర్ధారించండి</string>
     <string name="stepup_description">ఇది మీ ఖాతాకు భద్రతా మార్పు. కొనసాగించడానికి ఇది మీరేనని ధృవీకరించండి.</string>
     <string name="stepup_email_label">ఇమెయిల్ కోడ్</string>
-    <string name="stepup_email_placeholder">మీ ఇమెయిల్‌లోని కోడ్‌ను నమోదు చేయండి</string>
     <string name="stepup_totp_label">ఆథెంటికేటర్ కోడ్</string>
-    <string name="stepup_totp_placeholder">మీ ప్రమాణీకరణ కోడ్‌ను నమోదు చేయండి</string>
     <string name="stepup_use_passkey">మీ పాస్‌కీని ఉపయోగించండి</string>
     <string name="stepup_send_email">ఇమెయిల్ పంపండి</string>
     <string name="stepup_resend_email">ఇమెయిల్‌ను మళ్లీ పంపండి</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">ట్యాగ్‌ను తీసివేయండి</string>
     <string name="person_picker_none">ఏదీ లేదు</string>
     <string name="person_picker_clear">ఎంపికను క్లియర్ చేయండి</string>
-    <string name="person_picker_select">ఎంచుకోండి …</string>
+    <string name="person_picker_select">ఎంచుకోండి</string>
     <string name="person_picker_directory">డైరెక్టరీ</string>
     <string name="person_picker_no_people">వ్యక్తులు లేరు</string>
     <string name="person_picker_project_members">ప్రాజెక్ట్ సభ్యులు</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">నోటిఫికేషన్ విభాగాన్ని మార్చండి</string>
     <string name="lightbox_comments_none">ఈ చిత్రంపై ఇంకా వ్యాఖ్యలు లేవు.</string>
     <string name="lightbox_comments_only">ఈ చిత్రంపై వ్యాఖ్యలను మాత్రమే చూపించు</string>
-    <string name="lightbox_comment_placeholder">ఈ చిత్రంపై వ్యాఖ్యానించండి…</string>
+    <string name="lightbox_comment_placeholder">ఈ చిత్రంపై వ్యాఖ్యానించండి</string>
     <string name="comment_anchor_open">ఈ వ్యాఖ్య ఏ చిత్రం గురించో దాన్ని చూడండి</string>
     <string name="comment_anchor_default">ఈ చిత్రంపై</string>
     <plurals name="lightbox_comments_others">

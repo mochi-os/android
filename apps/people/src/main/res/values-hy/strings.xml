@@ -6,7 +6,7 @@
     <string name="people_groups_title">Խմբեր</string>
     <string name="people_group_title">Խումբ</string>
     <string name="people_person_title">Անձ</string>
-    <string name="people_friends_search_placeholder">Որոնել…</string>
+    <string name="people_friends_search_placeholder">Որոնել</string>
     <string name="people_friends_no_people_found">Մարդիկ չեն գտնվել</string>
     <string name="people_friends_try_adjusting">Փորձեք ճշգրտել ձեր որոնումը</string>
     <string name="people_friends_pending">Սպասվող</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Ջնջե՞լ «%1$s» խումբը։ Սա անդառնալի է։</string>
     <string name="people_member_remove_confirm">Վստա՞հ եք, որ ցանկանում եք հեռացնել %1$s-ին այս խմբից։</string>
     <string name="people_member_remove_with_name">Հեռացնել %1$s-ը</string>
-    <string name="people_member_search_placeholder">Մուտքագրեք անունը որոնման համար…</string>
+    <string name="people_member_search_placeholder">Մուտքագրեք անունը որոնման համար</string>
     <string name="people_groups_add_member_confirm_title">Ավելացնել խմբին</string>
     <string name="people_groups_add_member_confirm_action">Ավելացնել խմբին</string>
     <string name="people_profile_image_process_failed">%1$s պատկերը մշակել չհաջողվեց</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Չհաջողվեց բեռնել ձեր հրավերների քաղաքականությունը</string>
     <string name="people_profile_avatar">Ավատար</string>
     <string name="people_profile_banner">Բաններ</string>
-    <string name="people_contacts_search_placeholder">Որոնել…</string>
+    <string name="people_contacts_search_placeholder">Որոնել</string>
     <string name="people_contacts_invited">Հրավիրված</string>
     <string name="people_contacts_accept">Ընդունել</string>
     <string name="people_contacts_message">Ուղարկել հաղորդագրություն</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Վերջերս ավելացված</string>
     <string name="people_contacts_try_different_search">Փորձեք այլ որոնման տերմին</string>
     <string name="people_contacts_unfriend">Հեռացնել ընկերոջը</string>
-    <string name="people_add_contact_search_placeholder">Մուտքագրեք որոնման համար…</string>
+    <string name="people_add_contact_search_placeholder">Մուտքագրեք որոնման համար</string>
     <string name="people_add_contact_search_start">Սկսեք մուտքագրել՝ օգտատերեր փնտրելու համար</string>
     <string name="people_contact_phone">Հեռախոս</string>
     <string name="people_contact_title">Աշխատատեղ</string>

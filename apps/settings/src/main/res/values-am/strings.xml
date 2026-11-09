@@ -238,7 +238,7 @@
     <string name="route_delete_message">ይህ ለ \"%1$s\" መንገድ ሩትን ያስወግዳል።</string>
     <string name="route_empty">የተዋቀሩ መንገዶች የሉም።</string>
     <string name="route_meta">ቅድሚያ %1$s · %2$s</string>
-    <string name="interests_search_placeholder">ለመጨመር ርዕሶችን ይፈልጉ…</string>
+    <string name="interests_search_placeholder">ለመጨመር ርዕሶችን ይፈልጉ</string>
     <string name="interests_empty">እስካሁን ምንም ፍላጎቶች የሉም።</string>
     <string name="interests_summary_regenerate">ማጠቃለያውን እንደገና ፍጠር</string>
     <string name="interests_summary_regenerating">እንደገና በመፍጠር ላይ…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ይህ \"%1$s\"ን ወደ ነባሪ (ባዶ) ይመልሳል።</string>
     <string name="settings_home_system_users">ተጠቃሚዎች (አገልጋይ)</string>
     <string name="system_users_add_user">ተጠቃሚ ጨምር</string>
-    <string name="system_users_search_placeholder">ተጠቃሚዎችን ይፈልጉ…</string>
+    <string name="system_users_search_placeholder">ተጠቃሚዎችን ይፈልጉ</string>
     <string name="system_users_sort_by">ደርድር በ</string>
     <string name="system_users_last_login">መጨረሻ መግቢያ: %1$s</string>
     <string name="system_users_delete_message">ይህ ተጠቃሚውን \"%1$s\" በቋሚነት ይሰርዛል። ይህ ድርጊት ሊቀለበስ አይችልም።</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">ስም ይውሰዱ</string>
     <string name="handles_empty">ምንም የተጠቃሚ ስሞች አልተያዙም።</string>
     <string name="handles_empty_search">ከፍለጋዎ ጋር የሚዛመዱ የተጠቃሚ ስሞች የሉም</string>
-    <string name="handles_search_placeholder">የተጠቃሚ ስሞችን ይፈልጉ…</string>
+    <string name="handles_search_placeholder">የተጠቃሚ ስሞችን ይፈልጉ</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">ከ%3$s የተጠቃሚ ስም %1$s–%2$s እየታየ ነው</item>
         <item quantity="other">ከ%3$s የተጠቃሚ ስሞች %1$s–%2$s እየታዩ ነው</item>

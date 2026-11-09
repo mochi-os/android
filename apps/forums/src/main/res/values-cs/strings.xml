@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Zatím žádná pravidla — platí výchozí</string>
     <string name="forums_members_search">Filtrovat členy</string>
     <string name="forums_banner_description">Markdown zobrazený v horní části fóra.</string>
-    <string name="forums_banner_placeholder">Zadejte text banneru (podporuje Markdown)…</string>
     <string name="forums_ai_mode_off">Zakázáno</string>
     <string name="forums_moderation_queue_empty">Nic nečeká</string>
     <string name="forums_moderation_report_details">Podrobnosti: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Vyprší %1$s</string>
     <string name="forums_moderation_restriction_permanent">Trvalé</string>
     <string name="forums_report_reason_hate">Nenávist</string>
-    <string name="forums_write_comment">Napsat komentář…</string>
+    <string name="forums_write_comment">Napsat komentář</string>
     <string name="forums_comment_delete_message">Opravdu chcete tento komentář smazat?</string>
     <string name="forums_comment_replying_to">Odpovídáte na %1$s</string>
     <string name="forums_comment_clear_reply">Zrušit odpověď</string>

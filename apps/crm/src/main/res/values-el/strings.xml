@@ -243,7 +243,6 @@
     <string name="crm_settings_fingerprint">Αποτύπωμα</string>
     <string name="crm_settings_server">Διακομιστής</string>
     <string name="crm_untitled">Χωρίς τίτλο</string>
-    <string name="crm_property_select">Επιλέξτε …</string>
     <string name="crm_filter">Φίλτρο</string>
     <string name="crm_sort_filter_title">Ταξινόμηση και φίλτρο</string>
     <string name="crm_filter_clear_all">Εκκαθάριση όλων</string>

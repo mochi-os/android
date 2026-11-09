@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Amua</string>
     <string name="staff_appeals_decision_denied">Hifadhi orodha imekataliwa</string>
     <string name="staff_appeals_decision_label">Uamuzi</string>
-    <string name="staff_appeals_decision_placeholder">Chagua uamuzi</string>
     <string name="staff_appeals_decision_upheld">Idhinisha orodha</string>
     <string name="staff_appeals_denied_toast">Rufaa imekataliwa</string>
     <string name="staff_appeals_dialog_title">Amua rufaa</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Kiasi cha marejesho lazima kiwe kubwa kuliko sifuri</string>
     <string name="staff_disputes_resolution_buyer">Tatua kwa ajili ya mnunuzi</string>
     <string name="staff_disputes_resolution_label">Utatuzi</string>
-    <string name="staff_disputes_resolution_placeholder">Chagua suluhisho</string>
     <string name="staff_disputes_resolution_seller">Tatua kwa ajili ya muuzaji</string>
     <string name="staff_disputes_resolve">Tatua</string>
     <string name="staff_disputes_resolved_toast">Mgogoro umetatuliwa</string>
@@ -298,7 +296,6 @@
     <string name="staff_reports_action_ban">Piga mtumiaji marufuku</string>
     <string name="staff_reports_action_dismiss">Tupilia mbali</string>
     <string name="staff_reports_action_label">Kitendo</string>
-    <string name="staff_reports_action_placeholder">Chagua kitendo</string>
     <string name="staff_reports_action_remove">Ondoa</string>
     <string name="staff_reports_action_suspend">Simamisha kama muuzaji</string>
     <string name="staff_reports_action_taken_toast">Hatua ya ripoti imechukuliwa</string>
@@ -408,7 +405,7 @@
     <string name="staff_team_dialog_person">Mtu</string>
     <string name="staff_team_dialog_role">Wajibu</string>
     <string name="staff_team_dialog_role_placeholder">Chagua wajibu</string>
-    <string name="staff_team_dialog_search_placeholder">Tafuta kwa jina, alama ya kidole au ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Tafuta kwa jina, alama ya kidole au ID</string>
     <string name="staff_team_empty">Hakuna wanachama wa timu</string>
     <string name="staff_team_remove_confirm">Ondoa</string>
     <string name="staff_team_remove_desc">Ondoa mwanachama huyu kutoka kwenye timu ya wafanyakazi?</string>

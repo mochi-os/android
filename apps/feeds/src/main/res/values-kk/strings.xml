@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Төмен жылжыту</string>
 
     <string name="notification_channel_feeds">Арна хабарландырулары</string>
-    <string name="feeds_search_placeholder">Арналарды іздеу немесе URL мекенжайын қою…</string>
+    <string name="feeds_search_placeholder">Арналарды іздеу немесе URL мекенжайын қою</string>
     <string name="feeds_url_result">URL нәтижесі</string>
     <string name="feeds_search_results">Іздеу нәтижелері</string>
     <string name="feeds_unread_only">Тек оқылмағандар</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Бұл таспадан жаңартулар алуды тоқтатасыз. Кез келген уақытта қайта жазыла аласыз.</string>
     <string name="feeds_access_select_rule">Қатынау ережесін таңдау</string>
     <string name="feeds_access_authenticated_desc">Жүйеге кірген кез келген адам</string>
-    <string name="feeds_banner_hint">Бұл форумға қош келдіңіз…</string>
     <string name="feeds_banner_dismiss">Баннерді жабу</string>
     <string name="feeds_members_search">Мүшелерді сүзу</string>
     <string name="feeds_ai_prompt_default">Әдепкі</string>

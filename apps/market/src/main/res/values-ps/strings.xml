@@ -3,7 +3,6 @@
     <string name="app_name">بازار</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">ژوندلیک</string>
-    <string name="market_account_biography_placeholder">پیرودونکو ته د ځان په اړه ووایاست…</string>
     <string name="market_account_load_failed">حساب نه شو پورته کیدلی</string>
     <string name="market_account_location_label">موقعیت</string>
     <string name="market_account_save">خوندي کول</string>
@@ -231,7 +230,7 @@
     <string name="market_listings_new">نوی اعلان</string>
     <string name="market_listings_relist_failed">د بیا لیسټ کولو پاتې راغلل</string>
     <string name="market_listings_title">زما لیستونه</string>
-    <string name="market_messages_compose_placeholder">پیغام ولیکئ…</string>
+    <string name="market_messages_compose_placeholder">پیغام ولیکئ</string>
     <string name="market_messages_inbox_title">پیغامونه</string>
     <string name="market_messages_send">لیږل</string>
     <string name="market_messages_thread_title">خبرې اترې</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">پېرودونکي او پلورونکي کولی شي د بشپړ شوي امر وروسته یو بل وارزوي.</string>
     <string name="market_reviews_empty_sent_subtitle">د بیاکتنې د پرېښودلو لپاره یو بشپړ شوی امر خلاص کړئ.</string>
     <string name="market_reviews_empty_sent_title">تاسو کومه بیاکتنه نه ده لیکلې</string>
-    <string name="market_reviews_response_placeholder">یو ځواب ولیکئ…</string>
+    <string name="market_reviews_response_placeholder">یو ځواب ولیکئ</string>
     <string name="market_sale_carrier_custom_label">د لیږدوونکي نوم</string>
     <string name="market_sale_dispute_evidence_due">شواهد تر %1$s پورې</string>
     <string name="market_sale_dispute_stripe_reason">د Stripe د پیسو د بیرته اخیستنې دلیل: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">د پلورونکي بیاکتنې</string>
     <string name="market_account_stripe_open_failed">Stripe نشي خلاصېدای</string>
     <string name="market_editor_stock">ذخیره</string>
-    <string name="market_editor_stock_units">د واحدونو شمیر</string>
     <string name="market_editor_stock_unlimited">بې حده</string>
     <string name="market_editor_start_time">د پیل وخت</string>
     <string name="market_editor_start_time_help">د خپریدو په وخت پیل لپاره خالي پریږدئ.</string>

@@ -84,7 +84,7 @@
     <string name="feeds_send">Göndər</string>
 
     <string name="notification_channel_feeds">Lent bildirişləri</string>
-    <string name="feeds_search_placeholder">Lentləri axtarın və ya URL yapışdırın…</string>
+    <string name="feeds_search_placeholder">Lentləri axtarın və ya URL yapışdırın</string>
     <string name="feeds_url_result">URL nəticəsi</string>
     <string name="feeds_search_results">Axtarış nəticələri</string>
     <string name="feeds_unread_only">Yalnız oxunmamış</string>
@@ -204,7 +204,6 @@
     <string name="feeds_unsubscribe_confirm_message">Bu lentdən yenilikləri almayacaqsınız. İstənilən vaxt yenidən abunə ola bilərsiniz.</string>
     <string name="feeds_access_select_rule">Giriş qaydası seç</string>
     <string name="feeds_access_authenticated_desc">Daxil olmuş hər kəs</string>
-    <string name="feeds_banner_hint">Banner mətnini daxil edin (markdown dəstəklənir)…</string>
     <string name="feeds_banner_dismiss">Banneri rədd et</string>
     <string name="feeds_members_search">Üzvləri filtrlə</string>
     <string name="feeds_ai_prompt_default">Standart</string>

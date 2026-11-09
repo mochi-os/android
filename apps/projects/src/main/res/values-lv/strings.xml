@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Augšupielādēt .json failu</string>
     <string name="projects_settings_not_set">Nav iestatīts</string>
     <string name="projects_settings_updated">Projekts atjaunināts</string>
-    <string name="projects_property_select">Izvēlieties …</string>
     <string name="projects_activity_attached">pievienoja</string>
     <string name="projects_activity_commented">komentēja</string>
     <string name="projects_attachment_delete_confirm_message">Šis pielikums tiks neatgriezeniski izdzēsts.</string>

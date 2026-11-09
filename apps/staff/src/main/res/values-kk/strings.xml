@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Шешу</string>
     <string name="staff_appeals_decision_denied">Хабарландыру қабылданбауы сақталды</string>
     <string name="staff_appeals_decision_label">Шешім</string>
-    <string name="staff_appeals_decision_placeholder">Шешімді таңдау</string>
     <string name="staff_appeals_decision_upheld">Хабарландыруды мақұлдау</string>
     <string name="staff_appeals_denied_toast">Шағым қабылданбады</string>
     <string name="staff_appeals_dialog_title">Шағымды шешу</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Қайтару сомасы нөлден үлкен болуы керек</string>
     <string name="staff_disputes_resolution_buyer">Сатып алушының пайдасына шешу</string>
     <string name="staff_disputes_resolution_label">Шешімі</string>
-    <string name="staff_disputes_resolution_placeholder">Шешімді таңдау</string>
     <string name="staff_disputes_resolution_seller">Сатушының пайдасына шешу</string>
     <string name="staff_disputes_resolve">Шешу</string>
     <string name="staff_disputes_resolved_toast">Дау шешілді</string>
@@ -298,7 +296,6 @@
     <string name="staff_reports_action_ban">Пайдаланушыға тыйым салу</string>
     <string name="staff_reports_action_dismiss">Жабу</string>
     <string name="staff_reports_action_label">Әрекет</string>
-    <string name="staff_reports_action_placeholder">Әрекетті таңдау</string>
     <string name="staff_reports_action_remove">Жою</string>
     <string name="staff_reports_action_suspend">Сатушы ретінде тоқтату</string>
     <string name="staff_reports_action_taken_toast">Шағым әрекеті жасалды</string>
@@ -406,7 +403,7 @@
     <string name="staff_team_dialog_person">Адам</string>
     <string name="staff_team_dialog_role">Рөл</string>
     <string name="staff_team_dialog_role_placeholder">Рөлді таңдау</string>
-    <string name="staff_team_dialog_search_placeholder">Атау, қысқа идентификатор немесе ID бойынша іздеу…</string>
+    <string name="staff_team_dialog_search_placeholder">Атау, қысқа идентификатор немесе ID бойынша іздеу</string>
     <string name="staff_team_empty">Команда мүшелері жоқ</string>
     <string name="staff_team_remove_confirm">Жою</string>
     <string name="staff_team_remove_desc">Бұл мүшені қызметкерлер тобынан жою керек пе?</string>

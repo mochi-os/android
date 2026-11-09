@@ -239,7 +239,7 @@
     <string name="route_delete_message">Tímto se odstraní trasa pro cestu \"%1$s\".</string>
     <string name="route_empty">Nejsou nakonfigurovány žádné trasy.</string>
     <string name="route_meta">Priorita %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Hledat témata k přidání…</string>
+    <string name="interests_search_placeholder">Hledat témata k přidání</string>
     <string name="interests_empty">Zatím žádné zájmy.</string>
     <string name="interests_summary_regenerate">Znovu vygenerovat souhrn</string>
     <string name="interests_summary_regenerating">Znovu generuji…</string>
@@ -263,7 +263,7 @@
     <string name="system_settings_reset_message_empty">Tímto se \"%1$s\" obnoví na výchozí (prázdné).</string>
     <string name="settings_home_system_users">Uživatelé (server)</string>
     <string name="system_users_add_user">Přidat uživatele</string>
-    <string name="system_users_search_placeholder">Hledat uživatele…</string>
+    <string name="system_users_search_placeholder">Hledat uživatele</string>
     <string name="system_users_sort_by">Řadit podle</string>
     <string name="system_users_last_login">Poslední přihlášení: %1$s</string>
     <string name="system_users_delete_message">Tímto se trvale smaže uživatel \"%1$s\". Tuto akci nelze vrátit zpět.</string>
@@ -566,7 +566,7 @@
     <string name="handles_take">Vezměte si jméno</string>
     <string name="handles_empty">Nebyla rezervována žádná uživatelská jména.</string>
     <string name="handles_empty_search">Žádná uživatelská jména neodpovídají vašemu vyhledávání</string>
-    <string name="handles_search_placeholder">Hledat uživatelská jména…</string>
+    <string name="handles_search_placeholder">Hledat uživatelská jména</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">Zobrazeno %1$s–%2$s z %3$s uživatelského jména</item>
         <item quantity="few">Zobrazeno %1$s–%2$s z %3$s uživatelských jmen</item>

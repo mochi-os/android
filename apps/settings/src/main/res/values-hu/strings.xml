@@ -238,7 +238,7 @@
     <string name="route_delete_message">Ez eltávolítja az útvonalat a(z) „%1$s\" útvonalhoz.</string>
     <string name="route_empty">Nincsenek beállított útvonalak.</string>
     <string name="route_meta">Prioritás %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Hozzáadandó témák keresése…</string>
+    <string name="interests_search_placeholder">Hozzáadandó témák keresése</string>
     <string name="interests_empty">Még nincsenek érdeklődési körök.</string>
     <string name="interests_summary_regenerate">Összegzés újragenerálása</string>
     <string name="interests_summary_regenerating">Újragenerálás…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Ez visszaállítja a(z) „%1$s\" beállítást alapértelmezett (üres) értékre.</string>
     <string name="settings_home_system_users">Felhasználók (szerver)</string>
     <string name="system_users_add_user">Felhasználó hozzáadása</string>
-    <string name="system_users_search_placeholder">Felhasználók keresése…</string>
+    <string name="system_users_search_placeholder">Felhasználók keresése</string>
     <string name="system_users_sort_by">Rendezés</string>
     <string name="system_users_last_login">Utolsó bejelentkezés: %1$s</string>
     <string name="system_users_delete_message">Ez véglegesen törli a(z) „%1$s\" felhasználót. Ez a művelet nem visszafordítható.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Foglaljon le egy nevet</string>
     <string name="handles_empty">Nincs lefoglalt felhasználónév.</string>
     <string name="handles_empty_search">A keresésnek nincs egyező felhasználóneve</string>
-    <string name="handles_search_placeholder">Felhasználónevek keresése…</string>
+    <string name="handles_search_placeholder">Felhasználónevek keresése</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s felhasználónévből %1$s–%2$s megjelenítése</item>
         <item quantity="other">%3$s felhasználónévből %1$s–%2$s megjelenítése</item>

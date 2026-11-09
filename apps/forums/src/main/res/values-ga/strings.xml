@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Seol</string>
     <string name="forums_post_body_field">Téacs</string>
-    <string name="forums_write_comment">Scríobh tuairim…</string>
+    <string name="forums_write_comment">Scríobh tuairim</string>
 
     <string name="notification_channel_forums">Fógraí fóram</string>
     <string name="forums_list_empty">Níl aon fhóram ann fós</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Níl aon riail ann fós — baineann na réamhshocruithe</string>
     <string name="forums_members_search">Scag baill</string>
     <string name="forums_banner_description">Markdown a thaispeántar ag barr an fhóraim.</string>
-    <string name="forums_banner_placeholder">Cuir isteach téacs na meirge (tacaítear le markdown)…</string>
     <string name="forums_ai_mode_off">Díchumasaithe</string>
     <string name="forums_moderation_queue_empty">Níl aon rud ar feitheamh</string>
     <string name="forums_moderation_report_details">Sonraí: %1$s</string>

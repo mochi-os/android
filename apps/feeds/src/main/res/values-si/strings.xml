@@ -86,7 +86,7 @@
     <string name="feeds_move_down">පහළට ගෙනයන්න</string>
 
     <string name="notification_channel_feeds">සංග්‍රහ දැනුම්දීම්</string>
-    <string name="feeds_search_placeholder">සංග්‍රහ සොයන්න හෝ URL අලවන්න…</string>
+    <string name="feeds_search_placeholder">සංග්‍රහ සොයන්න හෝ URL අලවන්න</string>
     <string name="feeds_url_result">URL ප්‍රතිඵලය</string>
     <string name="feeds_search_results">සෙවුම් ප්‍රතිඵල</string>
     <string name="feeds_unread_only">නොකියවූ පමණි</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">ඔබට මෙම සංග්‍රහයෙන් තවදුරටත් යාවත්කාලීන නොලැබේ. ඔබට ඕනෑම වේලාවක නැවත දායක විය හැක.</string>
     <string name="feeds_access_select_rule">ප්‍රවේශ රීතිය තෝරන්න</string>
     <string name="feeds_access_authenticated_desc">පුරනය වී සිටින ඕනෑම අයෙක්</string>
-    <string name="feeds_banner_hint">මෙම සංසදයට සාදරයෙන් පිළිගනිමු…</string>
     <string name="feeds_banner_dismiss">බැනරය ඉවත ලන්න</string>
     <string name="feeds_members_search">සාමාජිකයන් පෙරහන් කරන්න</string>
     <string name="feeds_ai_prompt_default">පෙරනිමි</string>

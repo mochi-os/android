@@ -115,7 +115,7 @@
     <string name="settings_background_theme">از تم</string>
     <string name="settings_background_off">هیچ‌کدام</string>
     <string name="game_chat_empty">هنوز پیامی وجود ندارد</string>
-    <string name="game_chat_input_placeholder">یک پیام تایپ کنید…</string>
+    <string name="game_chat_input_placeholder">یک پیام تایپ کنید</string>
     <string name="game_chat_send">ارسال پیام</string>
     <string name="game_chat_subject_you">شما</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">تأیید کنید که خودتان هستید</string>
     <string name="stepup_description">این یک تغییر امنیتی در حساب شماست. برای ادامه هویت خود را تأیید کنید.</string>
     <string name="stepup_email_label">کد ایمیل</string>
-    <string name="stepup_email_placeholder">کد دریافتی از ایمیل خود را وارد کنید</string>
     <string name="stepup_totp_label">کد احراز هویت</string>
-    <string name="stepup_totp_placeholder">کد برنامه احرازکننده هویت خود را وارد کنید</string>
     <string name="stepup_use_passkey">از پسکی خود استفاده کنید</string>
     <string name="stepup_send_email">ارسال ایمیل</string>
     <string name="stepup_resend_email">ارسال مجدد ایمیل</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">حذف برچسب</string>
     <string name="person_picker_none">هیچ‌کدام</string>
     <string name="person_picker_clear">پاک کردن انتخاب</string>
-    <string name="person_picker_select">انتخاب کنید …</string>
+    <string name="person_picker_select">انتخاب کنید</string>
     <string name="person_picker_directory">فهرست</string>
     <string name="person_picker_no_people">کسی نیست</string>
     <string name="person_picker_project_members">اعضای پروژه</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">تغییر دسته اعلان</string>
     <string name="lightbox_comments_none">هنوز نظری دربارهٔ این تصویر نیست.</string>
     <string name="lightbox_comments_only">فقط نظرهای این تصویر را نشان بده</string>
-    <string name="lightbox_comment_placeholder">دربارهٔ این تصویر نظر بدهید…</string>
+    <string name="lightbox_comment_placeholder">دربارهٔ این تصویر نظر بدهید</string>
     <string name="comment_anchor_open">تصویری را که این نظر دربارهٔ آن است ببینید</string>
     <string name="comment_anchor_default">دربارهٔ این تصویر</string>
     <plurals name="lightbox_comments_others">

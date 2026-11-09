@@ -38,7 +38,6 @@
     <string name="staff_appeals_decide">Biryar bide</string>
     <string name="staff_appeals_decision_denied">Lîsteya redkirî bihêle</string>
     <string name="staff_appeals_decision_label">Biryar</string>
-    <string name="staff_appeals_decision_placeholder">Biryarê hilbijêre</string>
     <string name="staff_appeals_decision_upheld">Lîsteyê erê bike</string>
     <string name="staff_appeals_denied_toast">Îtîraz hat redkirin</string>
     <string name="staff_appeals_dialog_title">Biryarê li ser îtîrazê bide</string>
@@ -219,7 +218,6 @@
     <string name="staff_disputes_refund_must_be_positive">Mîqdara vegerandinê divê ji sifirê mezintir be</string>
     <string name="staff_disputes_resolution_buyer">Ji bo kirîer çareser bike</string>
     <string name="staff_disputes_resolution_label">Çareserî</string>
-    <string name="staff_disputes_resolution_placeholder">Çareseriyê hilbijêre</string>
     <string name="staff_disputes_resolution_seller">Ji bo firoşkar çareser bike</string>
     <string name="staff_disputes_resolve">Çareser bike</string>
     <string name="staff_disputes_resolved_toast">Nakokî hat çareserkirin</string>
@@ -277,7 +275,6 @@
     <string name="staff_reports_action_ban">Bikarhêner asteng bike</string>
     <string name="staff_reports_action_dismiss">Red bike</string>
     <string name="staff_reports_action_label">Çalakî</string>
-    <string name="staff_reports_action_placeholder">Çalakî hilbijêre</string>
     <string name="staff_reports_action_remove">Rake</string>
     <string name="staff_reports_action_suspend">Wek firoşker biseknîne</string>
     <string name="staff_reports_action_taken_toast">Çalakiya raporê hate stendin</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">fermana #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s li ser %3$s. Ev nirxandin bi awayekî daîmî jê bibe? Ev nayê vegerandin.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ev nirxandin bi awayekî daîmî jê bibe? Ev nayê vegerandin.</string>
-    <string name="staff_team_dialog_search_placeholder">Bi nav, şopa tilî, an nasnameyê bigere…</string>
+    <string name="staff_team_dialog_search_placeholder">Bi nav, şopa tilî, an nasnameyê bigere</string>
 
     <string name="staff_config_field_stripe_webhook">Veşariya îmzekirinê ya Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Berê hate vegerandin</string>

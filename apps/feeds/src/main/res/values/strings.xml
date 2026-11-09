@@ -20,7 +20,7 @@
     <string name="feeds_create">Create</string>
 
     <!-- Find feeds -->
-    <string name="feeds_search_placeholder">Search feeds or paste URL…</string>
+    <string name="feeds_search_placeholder">Search feeds or paste URL</string>
     <string name="feeds_url_result">URL result</string>
     <string name="feeds_search_results">Search results</string>
     <string name="feeds_no_feeds_found">No feeds found</string>
@@ -118,7 +118,6 @@
     <string name="feeds_save_name">Save name</string>
     <string name="feeds_banner">Banner</string>
     <string name="feeds_banner_description">Optional markdown banner shown at the top of your feed.</string>
-    <string name="feeds_banner_hint">Enter banner text (markdown supported)…</string>
     <string name="feeds_banner_dismiss">Dismiss banner</string>
     <string name="feeds_clear">Clear</string>
     <string name="feeds_delete_feed">Delete feed</string>
@@ -349,9 +348,9 @@
     <string name="feeds_source_type_bluesky">Bluesky feed or list</string>
     <string name="feeds_source_type_fediverse_posts">Posts on ActivityPub</string>
     <string name="feeds_source_type_bluesky_posts">Posts on Bluesky</string>
-    <string name="feeds_source_url_hint_person" translatable="false">@name@server.example, name.bsky.social, https://...</string>
+    <string name="feeds_source_url_hint_person" translatable="false">@name@server.example, name.bsky.social, https://</string>
     <string name="feeds_source_url_hint_tag" translatable="false">#tag@server.example</string>
-    <string name="feeds_source_url_hint_bluesky" translatable="false">https://bsky.app/profile/name.bsky.social/feed/...</string>
+    <string name="feeds_source_url_hint_bluesky" translatable="false">https://bsky.app/profile/name.bsky.social/feed/</string>
     <string name="feeds_source_account">Account</string>
     <string name="feeds_source_follow_with">Follow with</string>
     <string name="feeds_source_read_with">Read with</string>

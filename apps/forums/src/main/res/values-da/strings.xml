@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Ingen regler endnu — standardindstillinger gælder</string>
     <string name="forums_members_search">Filtrer medlemmer</string>
     <string name="forums_banner_description">Markdown vist øverst i forummet.</string>
-    <string name="forums_banner_placeholder">Indtast bannertekst (markdown understøttes)…</string>
     <string name="forums_ai_mode_off">Deaktiveret</string>
     <string name="forums_moderation_queue_empty">Intet afventende</string>
     <string name="forums_moderation_report_details">Detaljer: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Udløber %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Had</string>
-    <string name="forums_write_comment">Skriv en kommentar…</string>
+    <string name="forums_write_comment">Skriv en kommentar</string>
     <string name="forums_comment_delete_message">Er du sikker på, at du vil slette denne kommentar?</string>
     <string name="forums_comment_replying_to">Svarer til %1$s</string>
     <string name="forums_comment_clear_reply">Ryd svar</string>

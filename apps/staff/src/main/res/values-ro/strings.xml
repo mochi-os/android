@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Decide</string>
     <string name="staff_appeals_decision_denied">Menține anunțul respins</string>
     <string name="staff_appeals_decision_label">Decizie</string>
-    <string name="staff_appeals_decision_placeholder">Selectează decizia</string>
     <string name="staff_appeals_decision_upheld">Aprobă anunțul</string>
     <string name="staff_appeals_denied_toast">Contestație respinsă</string>
     <string name="staff_appeals_dialog_title">Decide contestația</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Suma rambursării trebuie să fie mai mare decât zero</string>
     <string name="staff_disputes_resolution_buyer">Rezolvă în favoarea cumpărătorului</string>
     <string name="staff_disputes_resolution_label">Soluționare</string>
-    <string name="staff_disputes_resolution_placeholder">Selectează rezoluția</string>
     <string name="staff_disputes_resolution_seller">Rezolvă în favoarea vânzătorului</string>
     <string name="staff_disputes_resolve">Rezolvă</string>
     <string name="staff_disputes_resolved_toast">Dispută rezolvată</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Blochează utilizatorul</string>
     <string name="staff_reports_action_dismiss">Respinge</string>
     <string name="staff_reports_action_label">Acțiune</string>
-    <string name="staff_reports_action_placeholder">Selectează acțiunea</string>
     <string name="staff_reports_action_remove">Elimină</string>
     <string name="staff_reports_action_suspend">Suspendă ca vânzător</string>
     <string name="staff_reports_action_taken_toast">Acțiune de raport întreprinsă</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Persoană</string>
     <string name="staff_team_dialog_role">Rol</string>
     <string name="staff_team_dialog_role_placeholder">Selectează rolul</string>
-    <string name="staff_team_dialog_search_placeholder">Caută după nume, amprentă sau ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Caută după nume, amprentă sau ID</string>
     <string name="staff_team_empty">Niciun membru al echipei</string>
     <string name="staff_team_remove_confirm">Elimină</string>
     <string name="staff_team_remove_desc">Elimini acest membru din echipa de personal?</string>

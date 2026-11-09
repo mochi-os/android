@@ -91,7 +91,7 @@
     <string name="route_disabled">Deaktiviert</string>
     <string name="route_meta">Priorität %1$s · %2$s</string>
     <string name="interests_title">Interèssä</string>
-    <string name="interests_search_placeholder">Thèmä zum hinzuefüegä suechä…</string>
+    <string name="interests_search_placeholder">Thèmä zum hinzuefüegä suechä</string>
     <string name="interests_empty">No kei Interèssä.</string>
     <string name="interests_summary_title">Zämmäfassig</string>
     <string name="interests_summary_regenerate">Zämmäfassig nöi generierä</string>
@@ -205,7 +205,7 @@
     <string name="settings_home_system_users">Benutzer (Server)</string>
     <string name="system_users_title">Benutzer</string>
     <string name="system_users_add_user">Benutzer hinzufügen</string>
-    <string name="system_users_search_placeholder">Benutzer suchen…</string>
+    <string name="system_users_search_placeholder">Benutzer suchen</string>
     <string name="system_users_sort_by">Sortieren nach</string>
     <string name="system_users_col_last">Letzte Anmeldung</string>
     <string name="system_users_open_actions">Benutzeraktionen öffnen</string>

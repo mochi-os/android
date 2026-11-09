@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Temamanta</string>
     <string name="settings_background_off">Mana imapas</string>
     <string name="game_chat_empty">Manaraq willakuykuna kanchu</string>
-    <string name="game_chat_input_placeholder">Willakuyta qillqay…</string>
+    <string name="game_chat_input_placeholder">Willakuyta qillqay</string>
     <string name="game_chat_send">Willakuyta apachiy</string>
     <string name="game_chat_subject_you">Qam</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Qan kasqaykita takyachiy</string>
     <string name="stepup_description">Kayqa cuentaykipi amachay tikraymi. Qan kasqaykita takyachiy qatinaykipaq.</string>
     <string name="stepup_email_label">Email código</string>
-    <string name="stepup_email_placeholder">Emailniykiman chayamusqan códigota qillqay</string>
     <string name="stepup_totp_label">Autenticador código</string>
-    <string name="stepup_totp_placeholder">Autenticador códigoykita qillqay</string>
     <string name="stepup_use_passkey">Yaykuna llaveykita llamk\'achiy</string>
     <string name="stepup_send_email">Email apachiy</string>
     <string name="stepup_resend_email">Emailta yapamanta apachiy</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Unanchata qichuy</string>
     <string name="person_picker_none">Mana imapas</string>
     <string name="person_picker_clear">Akllasqa pichay</string>
-    <string name="person_picker_select">Akllay …</string>
+    <string name="person_picker_select">Akllay</string>
     <string name="person_picker_directory">Directorio</string>
     <string name="person_picker_no_people">Mana runakuna kanchu</string>
     <string name="person_picker_project_members">Proyecto miembrokuna</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Willay categoríata tikray</string>
     <string name="lightbox_comments_none">Kay imagenpi manaraq comentariokuna kanchu.</string>
     <string name="lightbox_comments_only">Kay imagenpa comentariokunallata rikuchiy</string>
-    <string name="lightbox_comment_placeholder">Kay imagenpi comentay…</string>
+    <string name="lightbox_comment_placeholder">Kay imagenpi comentay</string>
     <string name="comment_anchor_open">Kay comentario mayqin imagenmantachus chayta qhaway</string>
     <string name="comment_anchor_default">Kay imagenpi</string>
     <plurals name="lightbox_comments_others">

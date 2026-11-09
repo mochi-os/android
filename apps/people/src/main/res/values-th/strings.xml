@@ -6,7 +6,7 @@
     <string name="people_groups_title">กลุ่ม</string>
     <string name="people_group_title">กลุ่ม</string>
     <string name="people_person_title">บุคคล</string>
-    <string name="people_friends_search_placeholder">ค้นหา…</string>
+    <string name="people_friends_search_placeholder">ค้นหา</string>
     <string name="people_friends_no_people_found">ไม่พบผู้คน</string>
     <string name="people_friends_try_adjusting">ลองปรับการค้นหาของคุณ</string>
     <string name="people_friends_pending">รอดำเนินการ</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">ลบกลุ่ม \"%1$s\"? การกระทำนี้ไม่สามารถยกเลิกได้</string>
     <string name="people_member_remove_confirm">คุณแน่ใจหรือไม่ว่าต้องการลบ %1$s ออกจากกลุ่มนี้?</string>
     <string name="people_member_remove_with_name">ลบ %1$s</string>
-    <string name="people_member_search_placeholder">ป้อนชื่อเพื่อค้นหา…</string>
+    <string name="people_member_search_placeholder">ป้อนชื่อเพื่อค้นหา</string>
     <string name="people_groups_add_member_confirm_title">เพิ่มเข้ากลุ่ม</string>
     <string name="people_groups_add_member_confirm_action">เพิ่มเข้ากลุ่ม</string>
     <string name="people_profile_image_process_failed">ไม่สามารถประมวลผลรูปภาพ %1$s ได้</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">ไม่สามารถโหลดนโยบายการเชิญของคุณได้</string>
     <string name="people_profile_avatar">อวาตาร์</string>
     <string name="people_profile_banner">แบนเนอร์</string>
-    <string name="people_contacts_search_placeholder">ค้นหา…</string>
+    <string name="people_contacts_search_placeholder">ค้นหา</string>
     <string name="people_contacts_invited">เชิญแล้ว</string>
     <string name="people_contacts_accept">ยอมรับ</string>
     <string name="people_contacts_message">ส่งข้อความ</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">เพิ่มเมื่อเร็ว ๆ นี้</string>
     <string name="people_contacts_try_different_search">ลองคำค้นหาอื่น</string>
     <string name="people_contacts_unfriend">ลบเพื่อน</string>
-    <string name="people_add_contact_search_placeholder">พิมพ์เพื่อค้นหา…</string>
+    <string name="people_add_contact_search_placeholder">พิมพ์เพื่อค้นหา</string>
     <string name="people_add_contact_search_start">เริ่มพิมพ์เพื่อค้นหาผู้ใช้</string>
     <string name="people_contact_phone">โทรศัพท์</string>
     <string name="people_contact_title">ตำแหน่งงาน</string>

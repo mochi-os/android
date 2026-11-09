@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Rozhodnúť</string>
     <string name="staff_appeals_decision_denied">Ponechať inzerát zamietnutý</string>
     <string name="staff_appeals_decision_label">Rozhodnutie</string>
-    <string name="staff_appeals_decision_placeholder">Vybrať rozhodnutie</string>
     <string name="staff_appeals_decision_upheld">Schváliť inzerát</string>
     <string name="staff_appeals_denied_toast">Odvolanie zamietnuté</string>
     <string name="staff_appeals_dialog_title">Rozhodnúť o odvolaní</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Suma refundácie musí byť väčšia ako nula</string>
     <string name="staff_disputes_resolution_buyer">Vyriešiť v prospech kupujúceho</string>
     <string name="staff_disputes_resolution_label">Riešenie</string>
-    <string name="staff_disputes_resolution_placeholder">Vybrať rozlíšenie</string>
     <string name="staff_disputes_resolution_seller">Vyriešiť v prospech predajcu</string>
     <string name="staff_disputes_resolve">Vyriešiť</string>
     <string name="staff_disputes_resolved_toast">Spor vyriešený</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Zablokovať používateľa</string>
     <string name="staff_reports_action_dismiss">Zatvoriť</string>
     <string name="staff_reports_action_label">Akcia</string>
-    <string name="staff_reports_action_placeholder">Vybrať akciu</string>
     <string name="staff_reports_action_remove">Odstrániť</string>
     <string name="staff_reports_action_suspend">Pozastaviť ako predajcu</string>
     <string name="staff_reports_action_taken_toast">Vykonaná akcia nahlásenia</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Osoba</string>
     <string name="staff_team_dialog_role">Rola</string>
     <string name="staff_team_dialog_role_placeholder">Vybrať rolu</string>
-    <string name="staff_team_dialog_search_placeholder">Hľadať podľa mena, odtlačku alebo ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Hľadať podľa mena, odtlačku alebo ID</string>
     <string name="staff_team_empty">Žiadni členovia tímu</string>
     <string name="staff_team_remove_confirm">Odstrániť</string>
     <string name="staff_team_remove_desc">Odstrániť tohto člena z personálneho tímu?</string>

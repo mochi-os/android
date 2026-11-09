@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">上传 .json 文件</string>
     <string name="projects_settings_not_set">未设置</string>
     <string name="projects_settings_updated">项目已更新</string>
-    <string name="projects_property_select">选择 …</string>
     <string name="projects_activity_attached">添加了附件</string>
     <string name="projects_activity_commented">发表了评论</string>
     <string name="projects_attachment_delete_confirm_message">此附件将被永久删除。</string>

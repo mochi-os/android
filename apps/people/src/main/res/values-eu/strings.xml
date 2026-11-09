@@ -6,7 +6,7 @@
     <string name="people_groups_title">Taldeak</string>
     <string name="people_group_title">Taldea</string>
     <string name="people_person_title">Pertsona</string>
-    <string name="people_friends_search_placeholder">Bilatu…</string>
+    <string name="people_friends_search_placeholder">Bilatu</string>
     <string name="people_friends_no_people_found">Ez da pertsonarik aurkitu</string>
     <string name="people_friends_try_adjusting">Saiatu zure bilaketa doitzen</string>
     <string name="people_friends_pending">Zain</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">\"%1$s\" taldea ezabatu? Hau ezin da desegin.</string>
     <string name="people_member_remove_confirm">Ziur zaude %1$s talde honetatik kendu nahi duzula?</string>
     <string name="people_member_remove_with_name">Kendu %1$s</string>
-    <string name="people_member_search_placeholder">Idatzi izena bilatzeko…</string>
+    <string name="people_member_search_placeholder">Idatzi izena bilatzeko</string>
     <string name="people_groups_add_member_confirm_title">Gehitu taldera</string>
     <string name="people_groups_add_member_confirm_action">Gehitu taldera</string>
     <string name="people_profile_image_process_failed">Ezin izan da %1$s irudia prozesatu</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Ezin izan da zure gonbidapen-politika kargatu</string>
     <string name="people_profile_avatar">Avatarra</string>
     <string name="people_profile_banner">Iragarki-banda</string>
-    <string name="people_contacts_search_placeholder">Bilatu…</string>
+    <string name="people_contacts_search_placeholder">Bilatu</string>
     <string name="people_contacts_invited">Gonbidatuta</string>
     <string name="people_contacts_accept">Onartu</string>
     <string name="people_contacts_message">Bidali mezua</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Duela gutxi gehituta</string>
     <string name="people_contacts_try_different_search">Saiatu beste bilaketa-termino batekin</string>
     <string name="people_contacts_unfriend">Kendu laguna</string>
-    <string name="people_add_contact_search_placeholder">Idatzi bilatzeko…</string>
+    <string name="people_add_contact_search_placeholder">Idatzi bilatzeko</string>
     <string name="people_add_contact_search_start">Hasi idazten erabiltzaileak bilatzeko</string>
     <string name="people_contact_phone">Telefonoa</string>
     <string name="people_contact_title">Lanpostua</string>

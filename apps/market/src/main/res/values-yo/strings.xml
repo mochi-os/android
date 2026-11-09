@@ -3,7 +3,6 @@
     <string name="app_name">Ọjà</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Ìtàn ìgbésí ayé</string>
-    <string name="market_account_biography_placeholder">Sọ fún àwọn olùrà nípa ara rẹ…</string>
     <string name="market_account_load_failed">Kò lè gbé àkàǹtì wọlé</string>
     <string name="market_account_location_label">Ibi</string>
     <string name="market_account_save">Fi pamọ́</string>
@@ -238,7 +237,7 @@
     <string name="market_listings_new">Ìkéde tuntun</string>
     <string name="market_listings_relist_failed">Kò lè tún listing ṣe</string>
     <string name="market_listings_title">Àwọn ìtòlẹ́ mi</string>
-    <string name="market_messages_compose_placeholder">Kọ ìsọfúnni…</string>
+    <string name="market_messages_compose_placeholder">Kọ ìsọfúnni</string>
     <string name="market_messages_inbox_title">Àwọn ìfiránṣẹ́</string>
     <string name="market_messages_send">Firánṣẹ́</string>
     <string name="market_messages_thread_title">Ìjíròrò</string>
@@ -508,7 +507,7 @@
     <string name="market_reviews_empty_received_subtitle">Àwọn olùrà àti olùtà lè ṣàyẹ̀wò ara wọn lẹ́yìn àṣẹ tí ó parí.</string>
     <string name="market_reviews_empty_sent_subtitle">Ṣí àṣẹ tí ó parí láti fi àyẹ̀wò sílẹ̀.</string>
     <string name="market_reviews_empty_sent_title">O kò tíì kọ àyẹ̀wò kankan</string>
-    <string name="market_reviews_response_placeholder">Kọ ìdáhùn…</string>
+    <string name="market_reviews_response_placeholder">Kọ ìdáhùn</string>
     <string name="market_sale_carrier_custom_label">Orúkọ olùgbé</string>
     <string name="market_sale_dispute_evidence_due">Ẹ̀rí gbọ́dọ̀ dé %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Ìdí ìfagílé owó Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Awọn atunyẹwo olutaja</string>
     <string name="market_account_stripe_open_failed">Kò lè ṣí Stripe</string>
     <string name="market_editor_stock">Ọjà</string>
-    <string name="market_editor_stock_units">Iye àwọn ọ̀kọ̀ọ̀kan</string>
     <string name="market_editor_stock_unlimited">Aláìlópin</string>
     <string name="market_editor_start_time">Àkókò ìbẹ̀rẹ̀</string>
     <string name="market_editor_start_time_help">Fi ṣófo láti bẹ̀rẹ̀ ní ìgbà tí a tẹ̀ jáde.</string>

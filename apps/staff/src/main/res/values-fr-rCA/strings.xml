@@ -88,7 +88,6 @@
     <string name="staff_appeals_decide">Décider</string>
     <string name="staff_appeals_decision_denied">Maintenir le rejet de l\'annonce</string>
     <string name="staff_appeals_decision_label">Décision</string>
-    <string name="staff_appeals_decision_placeholder">Sélectionner une décision</string>
     <string name="staff_appeals_decision_upheld">Approuver l\'annonce</string>
     <string name="staff_appeals_denied_toast">Appel refusé</string>
     <string name="staff_appeals_dialog_title">Décider de l\'appel</string>
@@ -190,7 +189,6 @@
     <string name="staff_disputes_refund_must_be_positive">Le montant du remboursement doit être supérieur à zéro</string>
     <string name="staff_disputes_resolution_buyer">Trancher en faveur de l\'acheteur</string>
     <string name="staff_disputes_resolution_label">Résolution</string>
-    <string name="staff_disputes_resolution_placeholder">Sélectionner une résolution</string>
     <string name="staff_disputes_resolution_seller">Trancher en faveur du vendeur</string>
     <string name="staff_disputes_resolve">Résoudre</string>
     <string name="staff_disputes_resolved_toast">Litige résolu</string>
@@ -254,7 +252,6 @@
     <string name="staff_reports_action_ban">Bannir l\'utilisateur</string>
     <string name="staff_reports_action_dismiss">Rejeter</string>
     <string name="staff_reports_action_label">Action</string>
-    <string name="staff_reports_action_placeholder">Sélectionner une action</string>
     <string name="staff_reports_action_suspend">Suspendre comme vendeur</string>
     <string name="staff_reports_action_taken_toast">Action effectuée sur le signalement</string>
     <string name="staff_reports_action_warn">Avertir</string>
@@ -346,7 +343,7 @@
     <string name="staff_team_dialog_person">Personne</string>
     <string name="staff_team_dialog_role">Rôle</string>
     <string name="staff_team_dialog_role_placeholder">Sélectionner un rôle</string>
-    <string name="staff_team_dialog_search_placeholder">Rechercher par nom, empreinte ou identifiant…</string>
+    <string name="staff_team_dialog_search_placeholder">Rechercher par nom, empreinte ou identifiant</string>
     <string name="staff_team_empty">Aucun membre dans l\'équipe</string>
     <string name="staff_team_remove_desc">Retirer ce membre de l\'équipe du personnel?</string>
     <string name="staff_team_remove_title">Retirer un membre de l\'équipe</string>

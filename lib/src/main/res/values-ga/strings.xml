@@ -115,7 +115,7 @@
     <string name="settings_background_theme">Ón téama</string>
     <string name="settings_background_off">Faic</string>
     <string name="game_chat_empty">Níl aon teachtaireacht fós</string>
-    <string name="game_chat_input_placeholder">Clóscríobh teachtaireacht…</string>
+    <string name="game_chat_input_placeholder">Clóscríobh teachtaireacht</string>
     <string name="game_chat_send">Seol teachtaireacht</string>
     <string name="game_chat_subject_you">Tusa</string>
 
@@ -229,9 +229,7 @@
     <string name="stepup_title">Deimhnigh gur tusa atá ann</string>
     <string name="stepup_description">Athrú slándála ar do chuntas é seo. Fíoraigh gur tusa atá ann chun leanúint ar aghaidh.</string>
     <string name="stepup_email_label">Cód ríomhphoist</string>
-    <string name="stepup_email_placeholder">Cuir isteach an cód ó do ríomhphost</string>
     <string name="stepup_totp_label">Cód fíordheimhnitheora</string>
-    <string name="stepup_totp_placeholder">Cuir isteach cód d\'aip fhíordheimhnithe</string>
     <string name="stepup_use_passkey">Úsáid do phasluiche</string>
     <string name="stepup_send_email">Seol ríomhphost</string>
     <string name="stepup_resend_email">Seol an ríomhphost arís</string>
@@ -271,7 +269,7 @@
     <string name="tags_delete">Bain clib</string>
     <string name="person_picker_none">Faic</string>
     <string name="person_picker_clear">Glan rogha</string>
-    <string name="person_picker_select">Roghnaigh …</string>
+    <string name="person_picker_select">Roghnaigh</string>
     <string name="person_picker_directory">Eolaire</string>
     <string name="person_picker_no_people">Gan daoine</string>
     <string name="person_picker_project_members">Baill an tionscadail</string>
@@ -287,7 +285,7 @@
     <string name="notifications_change_category">Athraigh catagóir na bhfógraí</string>
     <string name="lightbox_comments_none">Níl aon tuairimí ar an íomhá seo fós.</string>
     <string name="lightbox_comments_only">Ná taispeáin ach tuairimí ar an íomhá seo</string>
-    <string name="lightbox_comment_placeholder">Déan trácht ar an íomhá seo…</string>
+    <string name="lightbox_comment_placeholder">Déan trácht ar an íomhá seo</string>
     <string name="comment_anchor_open">Féach ar an íomhá a bhfuil an trácht seo fúithi</string>
     <string name="comment_anchor_default">Ar an íomhá seo</string>
     <plurals name="lightbox_comments_others">

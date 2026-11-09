@@ -90,7 +90,7 @@
     <string name="feeds_ai_account">IA kontua</string>
 
     <string name="notification_channel_feeds">Jarioen jakinarazpenak</string>
-    <string name="feeds_search_placeholder">Bilatu jarioak edo itsatsi URLa…</string>
+    <string name="feeds_search_placeholder">Bilatu jarioak edo itsatsi URLa</string>
     <string name="feeds_url_result">URL emaitza</string>
     <string name="feeds_search_results">Bilaketaren emaitzak</string>
     <string name="feeds_unread_only">Irakurri gabeak soilik</string>
@@ -202,7 +202,6 @@
     <string name="feeds_unsubscribe_confirm_message">Jario honen eguneraketak jasotzeari utziko diozu. Edonoiz harpidetu zaitezke berriro.</string>
     <string name="feeds_access_select_rule">Hautatu sarbide-araua</string>
     <string name="feeds_access_authenticated_desc">Saioa hasi duen edonor</string>
-    <string name="feeds_banner_hint">Ongi etorri foro honetara…</string>
     <string name="feeds_banner_dismiss">Baztertu iragarki-banda</string>
     <string name="feeds_members_search">Iragazi kideak</string>
     <string name="feeds_ai_prompt_default">Lehenetsia</string>

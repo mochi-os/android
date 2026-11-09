@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">لیږل</string>
     <string name="forums_post_body_field">متن</string>
-    <string name="forums_write_comment">څرګندونه ولیکئ…</string>
+    <string name="forums_write_comment">څرګندونه ولیکئ</string>
 
     <string name="notification_channel_forums">د فورمونو خبرتیاوې</string>
     <string name="forums_list_empty">تر اوسه هیڅ فورمونه نشته</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">تر اوسه هیڅ قواعد نشته — اصلي تنظیمات پلي کیږي</string>
     <string name="forums_members_search">د غړو فلټر</string>
     <string name="forums_banner_description">مارک‌ډاون چې د فورم په سر کې ښودل کیږي.</string>
-    <string name="forums_banner_placeholder">د بینر متن ولیکئ (مارک‌ډاون ملاتړ کیږي)…</string>
     <string name="forums_ai_mode_off">غیرفعال شوی</string>
     <string name="forums_moderation_queue_empty">هیڅ شی په تمه نشته</string>
     <string name="forums_moderation_report_details">تفصیلات: %1$s</string>

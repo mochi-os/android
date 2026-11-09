@@ -6,7 +6,7 @@
     <string name="people_groups_title">ગ્રુપ્સ</string>
     <string name="people_group_title">ગ્રુપ</string>
     <string name="people_person_title">વ્યક્તિ</string>
-    <string name="people_friends_search_placeholder">શોધો…</string>
+    <string name="people_friends_search_placeholder">શોધો</string>
     <string name="people_friends_no_people_found">કોઈ લોકો મળ્યા નથી</string>
     <string name="people_friends_try_adjusting">તમારી શોધને સમાયોજિત કરવાનો પ્રયાસ કરો</string>
     <string name="people_friends_pending">બાકી</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">જૂથ \"%1$s\" કાઢી નાખવું? આ પાછું લઈ શકાશે નહીં.</string>
     <string name="people_member_remove_confirm">શું તમે ખરેખર %1$s ને આ જૂથમાંથી દૂર કરવા માંગો છો?</string>
     <string name="people_member_remove_with_name">%1$s ને દૂર કરો</string>
-    <string name="people_member_search_placeholder">શોધવા માટે નામ દાખલ કરો…</string>
+    <string name="people_member_search_placeholder">શોધવા માટે નામ દાખલ કરો</string>
     <string name="people_groups_add_member_confirm_title">જૂથમાં ઉમેરો</string>
     <string name="people_groups_add_member_confirm_action">જૂથમાં ઉમેરો</string>
     <string name="people_profile_image_process_failed">%1$s છબી પર પ્રક્રિયા કરી શકાઈ નહીં</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">તમારી આમંત્રણ નીતિ લોડ કરવામાં નિષ્ફળ</string>
     <string name="people_profile_avatar">અવતાર</string>
     <string name="people_profile_banner">બૅનર</string>
-    <string name="people_contacts_search_placeholder">શોધો…</string>
+    <string name="people_contacts_search_placeholder">શોધો</string>
     <string name="people_contacts_invited">આમંત્રિત</string>
     <string name="people_contacts_accept">સ્વીકારો</string>
     <string name="people_contacts_message">સંદેશ મોકલો</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">તાજેતરમાં ઉમેરાયેલ</string>
     <string name="people_contacts_try_different_search">અલગ શોધ શબ્દ અજમાવો</string>
     <string name="people_contacts_unfriend">મિત્ર દૂર કરો</string>
-    <string name="people_add_contact_search_placeholder">શોધવા માટે લખો…</string>
+    <string name="people_add_contact_search_placeholder">શોધવા માટે લખો</string>
     <string name="people_add_contact_search_start">વપરાશકર્તાઓને શોધવા માટે ટાઇપ કરવાનું શરૂ કરો</string>
     <string name="people_contact_phone">ફોન</string>
     <string name="people_contact_title">જોબ ટાઇટલ</string>

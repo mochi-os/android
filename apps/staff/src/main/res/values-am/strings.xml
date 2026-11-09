@@ -41,7 +41,6 @@
     <string name="staff_appeals_decide">ወስን</string>
     <string name="staff_appeals_decision_denied">ዝርዝሩ ተቀባይነት እንዳላገኘ ይቆይ</string>
     <string name="staff_appeals_decision_label">ውሳኔ</string>
-    <string name="staff_appeals_decision_placeholder">ውሳኔ ይምረጡ</string>
     <string name="staff_appeals_decision_upheld">ዝርዝሩን ያጽድቁ</string>
     <string name="staff_appeals_denied_toast">ይግባኝ ተከልክሏል</string>
     <string name="staff_appeals_dialog_title">ይግባኝ ወስን</string>
@@ -223,7 +222,6 @@
     <string name="staff_disputes_refund_must_be_positive">የተመላሽ ገንዘብ መጠን ከዜሮ መብለጥ አለበት</string>
     <string name="staff_disputes_resolution_buyer">ለገዢ ፍታ</string>
     <string name="staff_disputes_resolution_label">መፍትሄ</string>
-    <string name="staff_disputes_resolution_placeholder">መፍትሄ ይምረጡ</string>
     <string name="staff_disputes_resolution_seller">ለሻጭ ፍታ</string>
     <string name="staff_disputes_resolve">ፍታ</string>
     <string name="staff_disputes_resolved_toast">ክርክር ተፈቷል</string>
@@ -283,7 +281,6 @@
     <string name="staff_reports_action_ban">ተጠቃሚን አግድ</string>
     <string name="staff_reports_action_dismiss">ውድቅ ያድርጉ</string>
     <string name="staff_reports_action_label">እርምጃ</string>
-    <string name="staff_reports_action_placeholder">ድርጊት ይምረጡ</string>
     <string name="staff_reports_action_remove">አስወግድ</string>
     <string name="staff_reports_action_suspend">እንደ ሻጭ ያቁሙ</string>
     <string name="staff_reports_action_taken_toast">የሪፖርት እርምጃ ተወስዷል</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">ትዕዛዝ #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s በ %3$s። ይህን ግምገማ በቋሚነት ይሰረዝ? ይህ መቀልበስ አይቻልም።</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s። ይህን ግምገማ በቋሚነት ይሰረዝ? ይህ መቀልበስ አይቻልም።</string>
-    <string name="staff_team_dialog_search_placeholder">በስም፣ በጣት አሻራ ወይም በመለያ ይፈልጉ…</string>
+    <string name="staff_team_dialog_search_placeholder">በስም፣ በጣት አሻራ ወይም በመለያ ይፈልጉ</string>
 
     <string name="staff_config_field_stripe_webhook">የWebhook መፈረሚያ ሚስጥር</string>
     <string name="staff_disputes_meta_already_refunded">ቀደም ብሎ ተመላሽ ተደርጓል</string>

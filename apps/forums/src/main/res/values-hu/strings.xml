@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Küldés</string>
     <string name="forums_post_body_field">Szöveg</string>
-    <string name="forums_write_comment">Megjegyzés írása…</string>
+    <string name="forums_write_comment">Megjegyzés írása</string>
 
     <string name="notification_channel_forums">Fórum értesítések</string>
     <string name="forums_list_empty">Még nincsenek fórumok</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Még nincsenek szabályok — az alapértelmezések érvényesek</string>
     <string name="forums_members_search">Tagok szűrése</string>
     <string name="forums_banner_description">A fórum tetején megjelenő Markdown.</string>
-    <string name="forums_banner_placeholder">Adja meg a szalaghirdetés szövegét (Markdown támogatott)…</string>
     <string name="forums_ai_mode_off">Letiltva</string>
     <string name="forums_moderation_queue_empty">Nincs függőben lévő elem</string>
     <string name="forums_moderation_report_details">Részletek: %1$s</string>

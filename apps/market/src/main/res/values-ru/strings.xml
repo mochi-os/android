@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">Заказ № %1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">Расскажите покупателям о себе…</string>
     <string name="market_account_load_failed">Не удалось загрузить аккаунт</string>
     <string name="market_account_saved">Изменения сохранены</string>
     <string name="market_account_status_restrictions">Некоторые действия, в том числе создание новых объявлений и завершение заказов, ограничены, пока ваш аккаунт находится в этом состоянии.</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">Новое объявление</string>
     <string name="market_listings_search_placeholder">Поиск по вашим объявлениям</string>
     <string name="market_listings_share_chooser">Поделиться объявлением</string>
-    <string name="market_messages_compose_placeholder">Напишите сообщение…</string>
+    <string name="market_messages_compose_placeholder">Напишите сообщение</string>
     <string name="market_messages_inbox_empty_subtitle">Когда вы напишете продавцу (или покупатель напишет вам), переписка появится здесь.</string>
     <string name="market_messages_inbox_empty_title">Пока нет переписок</string>
     <string name="market_messages_thread_title">Переписка</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">Откройте завершённый заказ, чтобы оставить отзыв.</string>
     <string name="market_reviews_empty_sent_title">Вы ещё не написали ни одного отзыва</string>
     <string name="market_reviews_response_label">Ответ</string>
-    <string name="market_reviews_response_placeholder">Напишите ответ…</string>
+    <string name="market_reviews_response_placeholder">Напишите ответ</string>
     <string name="market_sale_carrier_custom_label">Название перевозчика</string>
     <string name="market_sale_dispute_evidence_due">Доказательства до %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Причина возврата платежа Stripe: %1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">Отзывы о продавце</string>
     <string name="market_account_stripe_open_failed">Не удалось открыть Stripe</string>
     <string name="market_editor_stock">Запас</string>
-    <string name="market_editor_stock_units">Количество единиц</string>
     <string name="market_editor_stock_unlimited">Без ограничений</string>
     <string name="market_editor_start_time">Время начала</string>
     <string name="market_editor_start_time_help">Оставьте пустым, чтобы начать при публикации.</string>

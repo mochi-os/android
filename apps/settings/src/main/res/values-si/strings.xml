@@ -238,7 +238,7 @@
     <string name="route_delete_message">මෙය \"%1$s\" මාර්ගය සඳහා රාවුට් එක ඉවත් කරයි.</string>
     <string name="route_empty">වින්‍යාසගත මාර්ග නැත.</string>
     <string name="route_meta">ප්‍රමුඛතාව %1$s · %2$s</string>
-    <string name="interests_search_placeholder">එකතු කිරීමට මාතෘකා සොයන්න…</string>
+    <string name="interests_search_placeholder">එකතු කිරීමට මාතෘකා සොයන්න</string>
     <string name="interests_empty">තවම රුචිකම් නැත.</string>
     <string name="interests_summary_regenerate">සාරාංශය නැවත ජනනය කරන්න</string>
     <string name="interests_summary_regenerating">නැවත නිර්මාණය වෙමින්…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">මෙය \"%1$s\" පෙරනිමියට (හිස්) යළි පිහිටුවයි.</string>
     <string name="settings_home_system_users">පරිශීලකයින් (සේවාදායකය)</string>
     <string name="system_users_add_user">පරිශීලකයෙකු එක් කරන්න</string>
-    <string name="system_users_search_placeholder">පරිශීලකයින් සොයන්න…</string>
+    <string name="system_users_search_placeholder">පරිශීලකයින් සොයන්න</string>
     <string name="system_users_sort_by">අනුව වර්ග කරන්න</string>
     <string name="system_users_last_login">අවසන් ඇතුළු වීම: %1$s</string>
     <string name="system_users_delete_message">මෙය පරිශීලකයා \"%1$s\" ස්ථිරව මකා දමයි. මෙම ක්‍රියාව ආපසු හැරවිය නොහැක.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">නමක් ගන්න</string>
     <string name="handles_empty">කිසිදු අන්වර්ථ නාමයක් වෙන් කර නැත.</string>
     <string name="handles_empty_search">ඔබේ සෙවීමට අන්වර්ථ නාම කිසිවක් නොගැලපේ</string>
-    <string name="handles_search_placeholder">අන්වර්ථ නාම සොයන්න…</string>
+    <string name="handles_search_placeholder">අන්වර්ථ නාම සොයන්න</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">අන්වර්ථ නාම %3$s කින් %1$s–%2$s පෙන්වමින්</item>
         <item quantity="other">අන්වර්ථ නාම %3$s කින් %1$s–%2$s පෙන්වමින්</item>

@@ -37,7 +37,6 @@
     <string name="staff_appeals_decide">Amtaña</string>
     <string name="staff_appeals_decision_denied">Listado jan iyawsatäkakpan</string>
     <string name="staff_appeals_decision_label">Amtawi</string>
-    <string name="staff_appeals_decision_placeholder">Amtawi ajlliña</string>
     <string name="staff_appeals_decision_upheld">Listado iyawsaña</string>
     <string name="staff_appeals_denied_toast">Apelación jark\'ata</string>
     <string name="staff_appeals_dialog_title">Apelación amtaña</string>
@@ -217,7 +216,6 @@
     <string name="staff_disputes_refund_must_be_positive">Kutt\'ayañ qullqix cerot jilïñapawa</string>
     <string name="staff_disputes_resolution_buyer">Alasiritak askichaña</string>
     <string name="staff_disputes_resolution_label">Resolución</string>
-    <string name="staff_disputes_resolution_placeholder">Resolución ajlliña</string>
     <string name="staff_disputes_resolution_seller">Aljiritak askichaña</string>
     <string name="staff_disputes_resolve">Askichaña</string>
     <string name="staff_disputes_resolved_toast">Ch\'axwa askichata</string>
@@ -274,7 +272,6 @@
     <string name="staff_reports_action_ban">Apnaqiri jark\'aña</string>
     <string name="staff_reports_action_dismiss">Jaytaña</string>
     <string name="staff_reports_action_label">Lurawi</string>
-    <string name="staff_reports_action_placeholder">Lurawi ajllima</string>
     <string name="staff_reports_action_remove">Aparma</string>
     <string name="staff_reports_action_suspend">Aljirjam sayt\'ayaña</string>
     <string name="staff_reports_action_taken_toast">Reporte tuqit lurawi luratawa</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s %3$s urunxa. Aka reseña wiñayatak chhaqtayañati? Janiw kutt\'ayañjamäkiti.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Aka reseña wiñayatak chhaqtayañati? Janiw kutt\'ayañjamäkiti.</string>
     <string name="staff_team_dialog_adding">Yapxatasiski…</string>
-    <string name="staff_team_dialog_search_placeholder">Suti, fingerprint jan ukax ID ukamp thaqhama…</string>
+    <string name="staff_team_dialog_search_placeholder">Suti, fingerprint jan ukax ID ukamp thaqhama</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook firmañ imantat aru</string>
     <string name="staff_disputes_meta_already_refunded">Qullqix kutt\'ayatäxiwa</string>

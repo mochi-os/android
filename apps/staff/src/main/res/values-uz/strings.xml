@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Hal qilish</string>
     <string name="staff_appeals_decision_denied">Eʼlonni qoldirib, rad etish</string>
     <string name="staff_appeals_decision_label">Qaror</string>
-    <string name="staff_appeals_decision_placeholder">Qarorni tanlang</string>
     <string name="staff_appeals_decision_upheld">Eʼlonni tasdiqlash</string>
     <string name="staff_appeals_denied_toast">Apellyatsiya rad etildi</string>
     <string name="staff_appeals_dialog_title">Apellyatsiyani hal qilish</string>
@@ -230,7 +229,6 @@
     <string name="staff_disputes_refund_must_be_positive">Qaytarish summasi noldan katta boʻlishi kerak</string>
     <string name="staff_disputes_resolution_buyer">Xaridor foydasiga hal qilish</string>
     <string name="staff_disputes_resolution_label">Yechim</string>
-    <string name="staff_disputes_resolution_placeholder">Yechimni tanlang</string>
     <string name="staff_disputes_resolution_seller">Sotuvchi foydasiga hal qilish</string>
     <string name="staff_disputes_resolve">Hal qilish</string>
     <string name="staff_disputes_resolved_toast">Bahs hal qilindi</string>
@@ -290,7 +288,6 @@
     <string name="staff_reports_action_ban">Foydalanuvchini bloklash</string>
     <string name="staff_reports_action_dismiss">Rad etish</string>
     <string name="staff_reports_action_label">Amal</string>
-    <string name="staff_reports_action_placeholder">Amalni tanlash</string>
     <string name="staff_reports_action_remove">Olib tashlash</string>
     <string name="staff_reports_action_suspend">Sotuvchi sifatida toʻxtatib qoʻyish</string>
     <string name="staff_reports_action_taken_toast">Hisobot bo‘yicha chora ko‘rildi</string>
@@ -435,7 +432,7 @@
     <string name="staff_reviews_order_label">buyurtma #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s, %3$s sanasida. Ushbu sharhni butunlay oʻchirib tashlaysizmi? Buni bekor qilib boʻlmaydi.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Ushbu sharhni butunlay oʻchirib tashlaysizmi? Buni bekor qilib boʻlmaydi.</string>
-    <string name="staff_team_dialog_search_placeholder">Ism, barmoq izi yoki ID boʻyicha qidirish…</string>
+    <string name="staff_team_dialog_search_placeholder">Ism, barmoq izi yoki ID boʻyicha qidirish</string>
 
     <string name="staff_config_field_stripe_webhook">Webhook imzolash maxfiy kaliti</string>
     <string name="staff_disputes_meta_already_refunded">Allaqachon qaytarilgan</string>

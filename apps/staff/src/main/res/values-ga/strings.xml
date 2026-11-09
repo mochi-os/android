@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Cinn</string>
     <string name="staff_appeals_decision_denied">Coinnigh liostú diúltaithe</string>
     <string name="staff_appeals_decision_label">Cinneadh</string>
-    <string name="staff_appeals_decision_placeholder">Roghnaigh cinneadh</string>
     <string name="staff_appeals_decision_upheld">Faomh liostáil</string>
     <string name="staff_appeals_denied_toast">Achomharc diúltaithe</string>
     <string name="staff_appeals_dialog_title">Cinn ar an achomharc</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Caithfidh méid na haisíocaíochta a bheith níos mó ná nialas</string>
     <string name="staff_disputes_resolution_buyer">Réitigh ar son an cheannaitheora</string>
     <string name="staff_disputes_resolution_label">Réiteach</string>
-    <string name="staff_disputes_resolution_placeholder">Roghnaigh réiteach</string>
     <string name="staff_disputes_resolution_seller">Réitigh ar son an díoltóra</string>
     <string name="staff_disputes_resolve">Réitigh</string>
     <string name="staff_disputes_resolved_toast">Aighneas réitithe</string>
@@ -298,7 +296,6 @@
     <string name="staff_reports_action_ban">Coisc úsáideoir</string>
     <string name="staff_reports_action_dismiss">Diúltaigh</string>
     <string name="staff_reports_action_label">Gníomh</string>
-    <string name="staff_reports_action_placeholder">Roghnaigh gníomh</string>
     <string name="staff_reports_action_remove">Bain</string>
     <string name="staff_reports_action_suspend">Cuir ar fionraí mar dhíoltóir</string>
     <string name="staff_reports_action_taken_toast">Glacadh gníomh tuairisce</string>
@@ -406,7 +403,7 @@
     <string name="staff_team_dialog_person">Duine</string>
     <string name="staff_team_dialog_role">Ról</string>
     <string name="staff_team_dialog_role_placeholder">Roghnaigh ról</string>
-    <string name="staff_team_dialog_search_placeholder">Cuardaigh de réir ainm, méarlorg nó ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Cuardaigh de réir ainm, méarlorg nó ID</string>
     <string name="staff_team_empty">Níl aon bhall foirne</string>
     <string name="staff_team_remove_confirm">Bain</string>
     <string name="staff_team_remove_desc">Bain an ball seo ón bhfoireann?</string>

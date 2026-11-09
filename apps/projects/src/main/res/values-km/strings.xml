@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">បង្ហោះឯកសារ .json</string>
     <string name="projects_settings_not_set">មិនបានកំណត់</string>
     <string name="projects_settings_updated">បានធ្វើបច្ចុប្បន្នភាពគម្រោង</string>
-    <string name="projects_property_select">ជ្រើសរើស …</string>
     <string name="projects_activity_attached">បានភ្ជាប់</string>
     <string name="projects_activity_commented">បានបញ្ចេញមតិ</string>
     <string name="projects_attachment_delete_confirm_message">ឯកសារភ្ជាប់នេះនឹងត្រូវលុបជាអចិន្ត្រៃយ៍។</string>

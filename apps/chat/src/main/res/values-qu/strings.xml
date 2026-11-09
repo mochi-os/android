@@ -54,10 +54,10 @@
     <string name="chat_settings_delete_message">Kayqa rimanakuyta willakuyninkunatawan kay dispositivollamanta wischun.</string>
 
     <string name="chat_message_deleted">Kay willakuy wischusqam</string>
-    <string name="chat_search_hint">Rimanakuypi maskay...</string>
+    <string name="chat_search_hint">Rimanakuypi maskay</string>
     <string name="chat_message_forward">Reenviay</string>
     <string name="chat_forward_title">Mayman reenviay…</string>
-    <string name="chat_forward_search">Rimanakuykunata maskay…</string>
+    <string name="chat_forward_search">Rimanakuykunata maskay</string>
     <string name="chat_forward_empty">Reenvianapaq mana rimanakuy kanchu</string>
     <string name="chat_forward_success">Reenviasqa</string>
     <string name="chat_message_reply">Kutichiy</string>

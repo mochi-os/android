@@ -238,7 +238,7 @@
     <string name="route_delete_message">ఇది మార్గం \"%1$s\" కోసం రూట్‌ను తొలగిస్తుంది.</string>
     <string name="route_empty">కాన్ఫిగర్ చేయబడిన మార్గాలు లేవు.</string>
     <string name="route_meta">ప్రాధాన్యత %1$s · %2$s</string>
-    <string name="interests_search_placeholder">జోడించడానికి అంశాలను శోధించండి…</string>
+    <string name="interests_search_placeholder">జోడించడానికి అంశాలను శోధించండి</string>
     <string name="interests_empty">ఇంకా ఆసక్తులు లేవు.</string>
     <string name="interests_summary_regenerate">సారాంశాన్ని రీజెనరేట్ చేయండి</string>
     <string name="interests_summary_regenerating">తిరిగి సృష్టిస్తోంది…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">ఇది \"%1$s\"ని డిఫాల్ట్‌కి (ఖాళీ) రీసెట్ చేస్తుంది.</string>
     <string name="settings_home_system_users">వినియోగదారులు (సర్వర్)</string>
     <string name="system_users_add_user">వాడుకరిని జోడించండి</string>
-    <string name="system_users_search_placeholder">వినియోగదారులను శోధించు…</string>
+    <string name="system_users_search_placeholder">వినియోగదారులను శోధించు</string>
     <string name="system_users_sort_by">దీని ద్వారా క్రమబద్ధీకరించు</string>
     <string name="system_users_last_login">చివరి లాగిన్: %1$s</string>
     <string name="system_users_delete_message">ఇది శాశ్వతంగా వినియోగదారు \"%1$s\"ని తొలగిస్తుంది. ఈ చర్యను రద్దు చేయడం సాధ్యం కాదు.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">ఒక పేరు తీసుకోండి</string>
     <string name="handles_empty">హ్యాండిల్‌లు ఏవీ రిజర్వ్ చేయబడలేదు.</string>
     <string name="handles_empty_search">మీ సెర్చ్‌కు సరిపోయే హ్యాండిల్‌లు ఏవీ లేవు</string>
-    <string name="handles_search_placeholder">హ్యాండిల్‌లను శోధించండి…</string>
+    <string name="handles_search_placeholder">హ్యాండిల్‌లను శోధించండి</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s హ్యాండిల్‌లో %1$s–%2$s చూపుతోంది</item>
         <item quantity="other">%3$s హ్యాండిల్‌లలో %1$s–%2$s చూపుతోంది</item>

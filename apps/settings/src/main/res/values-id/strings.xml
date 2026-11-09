@@ -237,7 +237,7 @@
     <string name="route_delete_message">Ini akan menghapus rute untuk jalur \"%1$s\".</string>
     <string name="route_empty">Tidak ada rute yang dikonfigurasi.</string>
     <string name="route_meta">Prioritas %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Cari topik untuk ditambahkan…</string>
+    <string name="interests_search_placeholder">Cari topik untuk ditambahkan</string>
     <string name="interests_empty">Belum ada minat.</string>
     <string name="interests_summary_regenerate">Buat ulang ringkasan</string>
     <string name="interests_summary_regenerating">Membuat ulang…</string>
@@ -261,7 +261,7 @@
     <string name="system_settings_reset_message_empty">Ini akan mereset \"%1$s\" ke default (kosong).</string>
     <string name="settings_home_system_users">Pengguna (server)</string>
     <string name="system_users_add_user">Tambah pengguna</string>
-    <string name="system_users_search_placeholder">Cari pengguna…</string>
+    <string name="system_users_search_placeholder">Cari pengguna</string>
     <string name="system_users_sort_by">Urutkan berdasarkan</string>
     <string name="system_users_last_login">Login terakhir: %1$s</string>
     <string name="system_users_delete_message">Ini akan menghapus secara permanen pengguna \"%1$s\". Tindakan ini tidak dapat dibatalkan.</string>
@@ -546,7 +546,7 @@
     <string name="handles_take">Ambil nama</string>
     <string name="handles_empty">Belum ada nama pengguna yang diklaim.</string>
     <string name="handles_empty_search">Tidak ada nama pengguna yang cocok dengan pencarian Anda</string>
-    <string name="handles_search_placeholder">Cari nama pengguna…</string>
+    <string name="handles_search_placeholder">Cari nama pengguna</string>
     <plurals name="handles_pagination_status">
         <item quantity="other">Menampilkan %1$s–%2$s dari %3$s nama pengguna</item>
     </plurals>

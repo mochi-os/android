@@ -76,7 +76,6 @@
     <string name="forums_access_empty">暫無規則 — 套用預設</string>
     <string name="forums_members_search">篩選成員</string>
     <string name="forums_banner_description">顯示於論壇頂部的 Markdown 內容。</string>
-    <string name="forums_banner_placeholder">輸入橫額文字（支援 Markdown）…</string>
     <string name="forums_banner_dismiss">關閉橫額</string>
     <string name="forums_ai_mode_off">關閉</string>
     <string name="forums_moderation_tab_queue">佇列</string>

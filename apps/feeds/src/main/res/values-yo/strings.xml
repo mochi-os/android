@@ -86,7 +86,7 @@
     <string name="feeds_move_down">Gbe sokale</string>
 
     <string name="notification_channel_feeds">Ìfitónilétí àwọn ìṣàn</string>
-    <string name="feeds_search_placeholder">Wá ìṣàn tàbí lẹ̀ URL pọ̀…</string>
+    <string name="feeds_search_placeholder">Wá ìṣàn tàbí lẹ̀ URL pọ̀</string>
     <string name="feeds_url_result">Èsì URL</string>
     <string name="feeds_search_results">Àwọn èsì ìwákiri</string>
     <string name="feeds_unread_only">Tí a kò kà nìkan</string>
@@ -200,7 +200,6 @@
     <string name="feeds_unsubscribe_confirm_message">Ìwọ kò ní gba àwọn ìmúdójúìwọ̀n láti inú fiidi yìí mọ́. O lè forúkọsílẹ̀ padà nígbàkigbà.</string>
     <string name="feeds_access_select_rule">Yan òfin ààyè</string>
     <string name="feeds_access_authenticated_desc">Ẹnikẹ́ni tí ó ti wọlé</string>
-    <string name="feeds_banner_hint">Káàbọ̀ sí àpérò yìí…</string>
     <string name="feeds_banner_dismiss">Mú banner kúrò</string>
     <string name="feeds_members_search">Yẹ àwọn ọmọ ẹgbẹ́ wò</string>
     <string name="feeds_ai_prompt_default">Àìyípadà</string>

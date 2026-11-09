@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">Ergi</string>
     <string name="forums_post_body_field">Qabiyyee</string>
-    <string name="forums_write_comment">Yaada barreessi…</string>
+    <string name="forums_write_comment">Yaada barreessi</string>
 
     <string name="notification_channel_forums">Beeksisawwan marii</string>
     <string name="forums_list_empty">Ammaaf mariin hin jiru</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">Ammaaf seerri hin jiru — kan duraa hojiirra oola</string>
     <string name="forums_members_search">Miseensota gulaali</string>
     <string name="forums_banner_description">Markdown gubbaa marichaa irratti mul\'atu.</string>
-    <string name="forums_banner_placeholder">Barreeffama baanaraa galchi (markdown ni deeggarama)…</string>
     <string name="forums_ai_mode_off">Cufame</string>
     <string name="forums_moderation_queue_empty">Wanti hafe hin jiru</string>
     <string name="forums_moderation_report_details">Bal\'ina: %1$s</string>

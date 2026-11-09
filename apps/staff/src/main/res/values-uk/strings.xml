@@ -42,7 +42,6 @@
     <string name="staff_appeals_decide">Вирішити</string>
     <string name="staff_appeals_decision_denied">Залишити оголошення відхиленим</string>
     <string name="staff_appeals_decision_label">Рішення</string>
-    <string name="staff_appeals_decision_placeholder">Виберіть рішення</string>
     <string name="staff_appeals_decision_upheld">Схвалити оголошення</string>
     <string name="staff_appeals_denied_toast">Апеляцію відхилено</string>
     <string name="staff_appeals_dialog_title">Розглянути апеляцію</string>
@@ -238,7 +237,6 @@
     <string name="staff_disputes_refund_must_be_positive">Сума повернення має бути більшою за нуль</string>
     <string name="staff_disputes_resolution_buyer">Вирішити на користь покупця</string>
     <string name="staff_disputes_resolution_label">Вирішення</string>
-    <string name="staff_disputes_resolution_placeholder">Виберіть рішення</string>
     <string name="staff_disputes_resolution_seller">Вирішити на користь продавця</string>
     <string name="staff_disputes_resolve">Вирішити</string>
     <string name="staff_disputes_resolved_toast">Спір вирішено</string>
@@ -312,7 +310,6 @@
     <string name="staff_reports_action_ban">Заблокувати користувача</string>
     <string name="staff_reports_action_dismiss">Відхилити</string>
     <string name="staff_reports_action_label">Дія</string>
-    <string name="staff_reports_action_placeholder">Виберіть дію</string>
     <string name="staff_reports_action_remove">Видалити</string>
     <string name="staff_reports_action_suspend">Призупинити як продавця</string>
     <string name="staff_reports_action_taken_toast">Дію за скаргою виконано</string>
@@ -422,7 +419,7 @@
     <string name="staff_team_dialog_person">Людина</string>
     <string name="staff_team_dialog_role">Роль</string>
     <string name="staff_team_dialog_role_placeholder">Виберіть роль</string>
-    <string name="staff_team_dialog_search_placeholder">Пошук за іменем, відбитком або ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Пошук за іменем, відбитком або ID</string>
     <string name="staff_team_empty">Немає учасників команди</string>
     <string name="staff_team_remove_confirm">Видалити</string>
     <string name="staff_team_remove_desc">Видалити цього учасника з команди персоналу?</string>

@@ -102,7 +102,7 @@
 
     <string name="forums_comment_send">שיקן</string>
     <string name="forums_post_body_field">גוף</string>
-    <string name="forums_write_comment">שרײַבט אַ קאָמענטאַר…</string>
+    <string name="forums_write_comment">שרײַבט אַ קאָמענטאַר</string>
 
     <string name="notification_channel_forums">פֿאָרומס־מעלדונגען</string>
     <string name="forums_list_empty">נאָך קײן פֿאָרומס</string>
@@ -118,7 +118,6 @@
     <string name="forums_access_empty">נאָך קײן כּללים — די פֿאַרשטאַנדן זײַנען אין קראַפֿט</string>
     <string name="forums_members_search">פֿילטרירן מיטגלידער</string>
     <string name="forums_banner_description">Markdown וואָס ווערט געוויזן אויבן אין פֿאָרום.</string>
-    <string name="forums_banner_placeholder">אַרײַנשרײַבן באַנער־טעקסט (markdown ווערט געשטיצט)…</string>
     <string name="forums_ai_mode_off">אומדערלויבט</string>
     <string name="forums_moderation_queue_empty">גאָרנישט וואַרט</string>
     <string name="forums_moderation_report_details">פּרטים: %1$s</string>

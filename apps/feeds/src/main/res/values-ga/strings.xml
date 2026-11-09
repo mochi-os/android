@@ -87,7 +87,7 @@
     <string name="feeds_move_down">Bog síos</string>
 
     <string name="notification_channel_feeds">Fógraí fothaí</string>
-    <string name="feeds_search_placeholder">Cuardaigh fothaí nó greamaigh URL…</string>
+    <string name="feeds_search_placeholder">Cuardaigh fothaí nó greamaigh URL</string>
     <string name="feeds_url_result">Toradh URL</string>
     <string name="feeds_search_results">Torthaí cuardaigh</string>
     <string name="feeds_unread_only">Gan léamh amháin</string>
@@ -211,7 +211,6 @@
     <string name="feeds_unsubscribe_confirm_message">Ní bhfaighidh tú nuashonruithe ón bhfotha seo a thuilleadh. Is féidir leat liostáil arís am ar bith.</string>
     <string name="feeds_access_select_rule">Roghnaigh riail rochtana</string>
     <string name="feeds_access_authenticated_desc">Duine ar bith atá logáilte isteach</string>
-    <string name="feeds_banner_hint">Fáilte chuig an bhfóram seo…</string>
     <string name="feeds_banner_dismiss">Dífhostaigh meirge</string>
     <string name="feeds_members_search">Scag baill</string>
     <string name="feeds_ai_prompt_default">Réamhshocrú</string>

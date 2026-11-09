@@ -6,7 +6,7 @@
     <string name="people_groups_title">Grupper</string>
     <string name="people_group_title">Gruppe</string>
     <string name="people_person_title">Person</string>
-    <string name="people_friends_search_placeholder">Søg…</string>
+    <string name="people_friends_search_placeholder">Søg</string>
     <string name="people_friends_no_people_found">Ingen personer fundet</string>
     <string name="people_friends_try_adjusting">Prøv at justere din søgning</string>
     <string name="people_friends_pending">Afventer</string>
@@ -88,7 +88,7 @@
     <string name="people_group_delete_confirm">Slet gruppen \"%1$s\"? Dette kan ikke fortrydes.</string>
     <string name="people_member_remove_confirm">Er du sikker på, at du vil fjerne %1$s fra denne gruppe?</string>
     <string name="people_member_remove_with_name">Fjern %1$s</string>
-    <string name="people_member_search_placeholder">Indtast navn for at søge…</string>
+    <string name="people_member_search_placeholder">Indtast navn for at søge</string>
     <string name="people_groups_add_member_confirm_title">Tilføj til gruppe</string>
     <string name="people_groups_add_member_confirm_action">Tilføj til gruppe</string>
     <string name="people_profile_image_process_failed">Kunne ikke behandle billedet %1$s</string>
@@ -114,7 +114,7 @@
     <string name="people_invite_settings_load_failed">Kunne ikke indlæse din invitationspolitik</string>
     <string name="people_profile_avatar">Avatar</string>
     <string name="people_profile_banner">Banner</string>
-    <string name="people_contacts_search_placeholder">Søg…</string>
+    <string name="people_contacts_search_placeholder">Søg</string>
     <string name="people_contacts_invited">Inviteret</string>
     <string name="people_contacts_accept">Accepter</string>
     <string name="people_contacts_message">Send besked</string>
@@ -137,7 +137,7 @@
     <string name="people_contacts_sort_recent">Tilføjet for nylig</string>
     <string name="people_contacts_try_different_search">Prøv et andet søgeord</string>
     <string name="people_contacts_unfriend">Fjern ven</string>
-    <string name="people_add_contact_search_placeholder">Skriv for at søge…</string>
+    <string name="people_add_contact_search_placeholder">Skriv for at søge</string>
     <string name="people_add_contact_search_start">Begynd at skrive for at søge efter brugere</string>
     <string name="people_contact_phone">Telefon</string>
     <string name="people_contact_title">Stillingsbetegnelse</string>

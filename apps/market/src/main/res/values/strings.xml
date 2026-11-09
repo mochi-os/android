@@ -5,7 +5,6 @@
     <string name="market_account_address_title">Default shipping address</string>
     <string name="market_account_biography_counter">%1$s / %2$s</string>
     <string name="market_account_biography_label">Biography</string>
-    <string name="market_account_biography_placeholder">Tell buyers about yourself…</string>
     <string name="market_account_business_desc">Used for invoices and tax compliance. Not shown on your public profile.</string>
     <string name="market_account_business_switch">I sell as a business</string>
     <string name="market_account_business_title">Business details</string>
@@ -220,7 +219,6 @@
     <string name="market_editor_condition">Condition</string>
     <string name="market_editor_condition_new">New</string>
     <string name="market_editor_stock">Stock</string>
-    <string name="market_editor_stock_units">Number of units</string>
     <string name="market_editor_stock_unlimited">Unlimited</string>
     <string name="market_editor_condition_refurbished">Refurbished</string>
     <string name="market_editor_condition_used">Used</string>
@@ -407,7 +405,7 @@
     <string name="market_listings_search_placeholder">Search your listings</string>
     <string name="market_listings_share_chooser">Share listing</string>
     <string name="market_listings_title">My listings</string>
-    <string name="market_messages_compose_placeholder">Write a message…</string>
+    <string name="market_messages_compose_placeholder">Write a message</string>
     <string name="market_messages_inbox_empty_subtitle">When you message a seller (or a buyer messages you) the thread will appear here.</string>
     <string name="market_messages_inbox_empty_title">No conversations yet</string>
     <string name="market_messages_inbox_title">Messages</string>
@@ -524,7 +522,7 @@
     <string name="market_reviews_empty_sent_subtitle">Open a completed order to leave a review.</string>
     <string name="market_reviews_empty_sent_title">You haven\'t written any reviews</string>
     <string name="market_reviews_response_label">Response</string>
-    <string name="market_reviews_response_placeholder">Write a response…</string>
+    <string name="market_reviews_response_placeholder">Write a response</string>
     <string name="market_reviews_response_submit">Submit response</string>
     <string name="market_reviews_tab_received">Received</string>
     <string name="market_reviews_tab_sent">Sent</string>

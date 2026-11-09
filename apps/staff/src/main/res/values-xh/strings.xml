@@ -38,7 +38,6 @@
     <string name="staff_appeals_decide">Gqiba</string>
     <string name="staff_appeals_decision_denied">Gcina uluhlu lwaliwe</string>
     <string name="staff_appeals_decision_label">Isigqibo</string>
-    <string name="staff_appeals_decision_placeholder">Khetha isigqibo</string>
     <string name="staff_appeals_decision_upheld">Vumela uluhlu</string>
     <string name="staff_appeals_denied_toast">Isibheno saliwe</string>
     <string name="staff_appeals_dialog_title">Gqiba isibheno</string>
@@ -219,7 +218,6 @@
     <string name="staff_disputes_refund_must_be_positive">Imali yembuyekezo kufuneka ibe ngaphezulu kwesiqingatha</string>
     <string name="staff_disputes_resolution_buyer">Sombululela umthengi</string>
     <string name="staff_disputes_resolution_label">Isisombululo</string>
-    <string name="staff_disputes_resolution_placeholder">Khetha isisombululo</string>
     <string name="staff_disputes_resolution_seller">Sombululela umthengisi</string>
     <string name="staff_disputes_resolve">Sombulula</string>
     <string name="staff_disputes_resolved_toast">Impikiswano isonjululwe</string>
@@ -277,7 +275,6 @@
     <string name="staff_reports_action_ban">Vala umsebenzisi</string>
     <string name="staff_reports_action_dismiss">Yikhabe</string>
     <string name="staff_reports_action_label">Isenzo</string>
-    <string name="staff_reports_action_placeholder">Khetha isenzo</string>
     <string name="staff_reports_action_remove">Susa</string>
     <string name="staff_reports_action_suspend">Misa okwexeshana njengomthengisi</string>
     <string name="staff_reports_action_taken_toast">Inyathelo lengxelo lithathiwe</string>
@@ -433,7 +430,7 @@
     <string name="staff_reviews_order_label">i-oda #%1$s</string>
     <string name="staff_reviews_remove_desc_full">%1$s → %2$s nge-%3$s. Cima oluphononongo ngokusisigxina? Oku akunakubuyiselwa.</string>
     <string name="staff_reviews_remove_desc_short">%1$s → %2$s. Cima oluphononongo ngokusisigxina? Oku akunakubuyiselwa.</string>
-    <string name="staff_team_dialog_search_placeholder">Khangela ngegama, umnwe, okanye i-ID…</string>
+    <string name="staff_team_dialog_search_placeholder">Khangela ngegama, umnwe, okanye i-ID</string>
 
     <string name="staff_config_field_stripe_webhook">Imfihlo yokusayina i-Webhook</string>
     <string name="staff_disputes_meta_already_refunded">Sele kubuyiselwe</string>

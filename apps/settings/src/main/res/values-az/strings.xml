@@ -238,7 +238,7 @@
     <string name="route_delete_message">Bu \"%1$s\" yolu üçün marşrutu çıxaracaq.</string>
     <string name="route_empty">Konfiqurasiya edilmiş marşrut yoxdur.</string>
     <string name="route_meta">Prioritet %1$s · %2$s</string>
-    <string name="interests_search_placeholder">Əlavə etmək üçün mövzu axtarın…</string>
+    <string name="interests_search_placeholder">Əlavə etmək üçün mövzu axtarın</string>
     <string name="interests_empty">Hələ maraq yoxdur.</string>
     <string name="interests_summary_regenerate">Xülasəni yenidən yarat</string>
     <string name="interests_summary_regenerating">Yenidən yaradılır…</string>
@@ -262,7 +262,7 @@
     <string name="system_settings_reset_message_empty">Bu \"%1$s\"-i varsayılana (boş) sıfırlayacaq.</string>
     <string name="settings_home_system_users">İstifadəçilər (server)</string>
     <string name="system_users_add_user">İstifadəçi əlavə et</string>
-    <string name="system_users_search_placeholder">İstifadəçilər axtarın…</string>
+    <string name="system_users_search_placeholder">İstifadəçilər axtarın</string>
     <string name="system_users_sort_by">Sırala</string>
     <string name="system_users_last_login">Son giriş: %1$s</string>
     <string name="system_users_delete_message">Bu qalıcı olaraq istifadəçi \"%1$s\"-i siləcək. Bu əməliyyat geri qaytarıla bilməz.</string>
@@ -555,7 +555,7 @@
     <string name="handles_take">Ad götürün</string>
     <string name="handles_empty">Heç bir istifadəçi adı rezerv edilməyib.</string>
     <string name="handles_empty_search">Axtarışınıza uyğun istifadəçi adı yoxdur</string>
-    <string name="handles_search_placeholder">İstifadəçi adı axtar…</string>
+    <string name="handles_search_placeholder">İstifadəçi adı axtar</string>
     <plurals name="handles_pagination_status">
         <item quantity="one">%3$s istifadəçi adından %1$s–%2$s göstərilir</item>
         <item quantity="other">%3$s istifadəçi adından %1$s–%2$s göstərilir</item>

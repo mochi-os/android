@@ -117,7 +117,6 @@
     <string name="forums_access_empty">Encara no hi ha cap regla — s\'apliquen els valors predeterminats</string>
     <string name="forums_members_search">Filtra els membres</string>
     <string name="forums_banner_description">Markdown que es mostra a la part superior del fòrum.</string>
-    <string name="forums_banner_placeholder">Introdueix el text del bàner (s\'admet Markdown)…</string>
     <string name="forums_ai_mode_off">Desactivat</string>
     <string name="forums_moderation_queue_empty">Res pendent</string>
     <string name="forums_moderation_report_details">Detalls: %1$s</string>
@@ -131,7 +130,7 @@
     <string name="forums_moderation_restriction_expires">Caduca %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Odi</string>
-    <string name="forums_write_comment">Escriviu un comentari…</string>
+    <string name="forums_write_comment">Escriviu un comentari</string>
     <string name="forums_comment_delete_message">Segur que voleu suprimir aquest comentari?</string>
     <string name="forums_comment_replying_to">Responent a %1$s</string>
     <string name="forums_comment_clear_reply">Esborra la resposta</string>

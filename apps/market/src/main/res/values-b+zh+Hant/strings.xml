@@ -346,7 +346,6 @@
     <string name="market_purchases_order_label">訂單 #%1$s</string>
 
     <string name="market_account_biography_counter">%1$s / %2$s</string>
-    <string name="market_account_biography_placeholder">向買家介紹一下你自己…</string>
     <string name="market_account_load_failed">無法載入帳戶</string>
     <string name="market_account_saved">變更已儲存</string>
     <string name="market_account_status_restrictions">您的帳戶處於此狀態時,部分操作將受到限制,包括建立新刊登項目和完成訂單。</string>
@@ -463,7 +462,7 @@
     <string name="market_listings_new">新刊登項目</string>
     <string name="market_listings_search_placeholder">搜尋您的商品</string>
     <string name="market_listings_share_chooser">分享商品</string>
-    <string name="market_messages_compose_placeholder">撰寫訊息…</string>
+    <string name="market_messages_compose_placeholder">撰寫訊息</string>
     <string name="market_messages_inbox_empty_subtitle">當您傳訊息給賣家（或買家傳訊息給您）時，對話將會顯示於此。</string>
     <string name="market_messages_inbox_empty_title">尚無對話</string>
     <string name="market_messages_thread_title">對話</string>
@@ -504,7 +503,7 @@
     <string name="market_reviews_empty_sent_subtitle">開啟已完成的訂單以留下評價。</string>
     <string name="market_reviews_empty_sent_title">您尚未撰寫任何評價</string>
     <string name="market_reviews_response_label">回覆</string>
-    <string name="market_reviews_response_placeholder">撰寫回覆…</string>
+    <string name="market_reviews_response_placeholder">撰寫回覆</string>
     <string name="market_sale_carrier_custom_label">貨運業者名稱</string>
     <string name="market_sale_dispute_evidence_due">證據截止日期 %1$s</string>
     <string name="market_sale_dispute_stripe_reason">Stripe 拒付原因：%1$s</string>
@@ -590,7 +589,6 @@
     <string name="market_listing_detail_seller_reviews_heading">賣家評價</string>
     <string name="market_account_stripe_open_failed">無法開啟 Stripe</string>
     <string name="market_editor_stock">庫存</string>
-    <string name="market_editor_stock_units">單位數量</string>
     <string name="market_editor_stock_unlimited">無限制</string>
     <string name="market_editor_start_time">開始時間</string>
     <string name="market_editor_start_time_help">留空表示在發佈時開始。</string>

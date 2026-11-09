@@ -304,7 +304,6 @@
     <string name="projects_create_upload_json">Бор кардани файли .json</string>
     <string name="projects_settings_not_set">Танзим нашудааст</string>
     <string name="projects_settings_updated">Лоиҳа навсозӣ шуд</string>
-    <string name="projects_property_select">Интихоб кунед …</string>
     <string name="projects_activity_attached">замима кард</string>
     <string name="projects_activity_commented">шарҳ дод</string>
     <string name="projects_attachment_delete_confirm_message">Ин замима абадан нест карда мешавад.</string>
