@@ -157,9 +157,23 @@ class NetworksScreenTest {
     }
 
     @Test
+    fun `a message's thread shows its newest reply under it, opening the thread`() {
+        // THE POINT: the recipient sees a thread was started without looking for it.
+        var opened = 0
+        val newest = ChatMessage(id = "r2", body = "The newest reply", name = "Bea", member = "b1", thread = "m1")
+        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 2, newest = newest), own = false, onThread = { opened++ })
+        rule.onNodeWithText("Bea").assertIsDisplayed()
+        rule.onNodeWithText("The newest reply").assertIsDisplayed().performClick()
+        assertEquals(1, opened)
+        rule.onNodeWithText("2 replies").assertIsDisplayed()
+    }
+
+    @Test
     fun `a conversation without threads counts none on its messages`() {
-        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 2), own = false, onThread = null)
+        val newest = ChatMessage(id = "r2", body = "The newest reply", name = "Bea", member = "b1", thread = "m1")
+        bubble(ChatMessage(id = "m1", body = "Root", member = "you", replies = 2, newest = newest), own = false, onThread = null)
         rule.onNodeWithText("2 replies").assertDoesNotExist()
+        rule.onNodeWithText("The newest reply").assertDoesNotExist()
     }
 
     @Test

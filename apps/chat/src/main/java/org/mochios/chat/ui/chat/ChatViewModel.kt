@@ -1021,7 +1021,11 @@ class ChatViewModel @Inject constructor(
         val open = state.thread?.takeIf { thread -> thread.root.id == reply.thread }
         if (open != null && open.replies.any { held -> held.id == reply.id }) return false
         val counted = { root: ChatMessage ->
-            root.copy(replies = root.replies + 1, latest = maxOf(root.latest, reply.created))
+            root.copy(
+                replies = root.replies + 1,
+                latest = maxOf(root.latest, reply.created),
+                newest = if (reply.listedAfter(root.newest)) reply else root.newest,
+            )
         }
         _uiState.value = state.copy(
             messages = state.messages.patched(reply.thread, counted),
@@ -1061,7 +1065,12 @@ class ChatViewModel @Inject constructor(
         val uncounted = { root: ChatMessage ->
             val replies = (root.replies - 1).coerceAtLeast(0)
             val latest = if (replies == 0) 0 else remaining.maxOfOrNull { held -> held.created } ?: root.latest
-            root.copy(replies = replies, latest = latest)
+            val newest = if (root.newest?.id == reply.id) {
+                remaining.fold(null as ChatMessage?) { found, held -> if (held.listedAfter(found)) held else found }
+            } else {
+                root.newest
+            }
+            root.copy(replies = replies, latest = latest, newest = newest)
         }
         _uiState.value = state.copy(
             messages = state.messages.patched(reply.thread, uncounted),
@@ -1082,6 +1091,16 @@ class ChatViewModel @Inject constructor(
             return
         }
         patch(id) { message -> message.rewritten(body, edited) }
+        // The newest reply shown under its root, held there with the thread closed.
+        val state = _uiState.value
+        if (state.messages.any { root -> root.newest?.id == id }) {
+            _uiState.value = state.copy(
+                messages = state.messages.map { root ->
+                    val newest = root.newest
+                    if (newest?.id == id) root.copy(newest = newest.rewritten(body, edited)) else root
+                },
+            )
+        }
     }
 
     /**
@@ -1278,6 +1297,10 @@ internal fun ChatMessage.tombstone(): ChatMessage = copy(
     replies = 0,
     latest = 0,
 )
+
+/** Whether this reply comes after [other] in its thread, as the server orders them: by time, then by id. */
+internal fun ChatMessage.listedAfter(other: ChatMessage?): Boolean =
+    other == null || created > other.created || (created == other.created && id > other.id)
 
 /**
  * An edit of this message, applied only if newer than what is held: edits

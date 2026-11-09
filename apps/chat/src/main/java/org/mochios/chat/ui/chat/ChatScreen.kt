@@ -13,6 +13,7 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -1286,21 +1287,10 @@ internal fun MessageBubble(
                 }
             }
         }
-        // The thread's count sits under the bubble, clear of the reaction
-        // button that floats over the bubble's lower corner.
+        // The thread sits under the bubble, clear of the reaction button that
+        // floats over the bubble's lower corner.
         if (onThread != null && message.replies > 0 && !selectionMode) {
-            Text(
-                text = pluralStringResource(
-                    R.plurals.chat_thread_replies,
-                    message.replies,
-                    format.formatNumber(message.replies),
-                ),
-                style = MaterialTheme.typography.labelMedium,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier
-                    .clickable(onClick = onThread)
-                    .padding(horizontal = 4.dp, vertical = 2.dp),
-            )
+            ThreadSummary(message, onThread)
         }
         if (!seen.isNullOrEmpty()) {
             Text(
@@ -1308,6 +1298,68 @@ internal fun MessageBubble(
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(horizontal = 4.dp),
+            )
+        }
+    }
+}
+
+/**
+ * Under a message with a thread: its newest reply and how many there are,
+ * either opening the thread.
+ */
+@Composable
+private fun ThreadSummary(root: ChatMessage, onOpen: () -> Unit) {
+    val newest = root.newest
+    Row(
+        modifier = Modifier
+            .padding(top = 2.dp)
+            .widthIn(max = 280.dp)
+            .height(IntrinsicSize.Min)
+            .clip(RoundedCornerShape(8.dp))
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .clickable(onClick = onOpen)
+            .padding(horizontal = 8.dp, vertical = 4.dp),
+    ) {
+        Box(
+            modifier = Modifier
+                .width(3.dp)
+                .fillMaxHeight()
+                .clip(RoundedCornerShape(2.dp))
+                .background(MaterialTheme.colorScheme.primary)
+        )
+        Spacer(Modifier.width(6.dp))
+        Column {
+            if (newest != null) {
+                Text(
+                    text = newest.name,
+                    style = MaterialTheme.typography.labelMedium,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                )
+                val preview = when {
+                    newest.body.isNotBlank() -> newest.body
+                    newest.attachments.isNotEmpty() -> stringResource(R.string.chat_reply_attachment)
+                    newest.encrypted != 0 -> stringResource(R.string.chat_message_encrypted)
+                    else -> ""
+                }
+                if (preview.isNotEmpty()) {
+                    Text(
+                        text = preview,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+            }
+            Text(
+                text = pluralStringResource(
+                    R.plurals.chat_thread_replies,
+                    root.replies,
+                    LocalFormat.current.formatNumber(root.replies),
+                ),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary,
             )
         }
     }

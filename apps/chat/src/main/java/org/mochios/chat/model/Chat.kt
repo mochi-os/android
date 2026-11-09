@@ -120,6 +120,8 @@ data class ChatMessage(
     /** On the main timeline: how many replies the message's thread has, and when the latest came. */
     val replies: Int = 0,
     val latest: Long = 0,
+    /** On the main timeline: the newest reply in the message's thread, shown beneath it. */
+    val newest: ChatMessage? = null,
     /** Whether it came encrypted: with no text or files while its keys have not come. */
     val encrypted: Int = 0,
 )

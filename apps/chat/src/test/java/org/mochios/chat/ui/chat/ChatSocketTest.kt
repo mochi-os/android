@@ -112,6 +112,7 @@ class ChatSocketTest {
                                  "reactions": {"like": 1}, "reaction": "like"},
                                 {"id": "m2", "chat": "c1", "member": "a1", "name": "Al", "body": "Mine", "created": 200,
                                  "edited": 50, "replies": 1, "latest": 150, "reply": "m1",
+                                 "newest": {"id": "r1", "chat": "c1", "member": "b1", "name": "Bea", "body": "First reply", "created": 150, "thread": "m2"},
                                  "attachments": [{"id": "f1", "name": "a.png", "size": 3, "type": "image/png"}],
                                  "reactions": {"love": 2}, "reaction": "love"}
                             ], "more": false}""",
@@ -397,6 +398,40 @@ class ChatSocketTest {
         settle()
         assertEquals(0, model.message("m2")?.replies)
         assertEquals(0L, model.message("m2")?.latest)
+        assertNull("no reply left to show under it", model.message("m2")?.newest)
+        assertEquals("no fetch", fetched, timeline.get())
+    }
+
+    @Test
+    fun `a reply that arrives is shown under its root as the newest, and an edit of it shows there`() {
+        // THE POINT: the reply beneath the root follows the thread with the thread closed.
+        val model = open()
+        assertEquals("First reply", model.message("m2")?.newest?.body)
+        val fetched = timeline.get()
+        send("""{"id": "r3", "created": 260, "member": "b1", "name": "Bea", "body": "Third reply", "thread": "m2"}""")
+        until { model.message("m2")?.newest?.id == "r3" }
+        // One sent earlier that lands late is counted, and not shown.
+        send("""{"id": "r0", "created": 120, "member": "b1", "name": "Bea", "body": "Sent early", "thread": "m2"}""")
+        until { model.message("m2")?.replies == 3 }
+        assertEquals("r3", model.message("m2")?.newest?.id)
+        send("""{"event": "edit", "message": "r3", "body": "Third reply, edited", "edited": 270}""")
+        until { model.message("m2")?.newest?.body == "Third reply, edited" }
+        assertEquals("Mine", model.message("m2")?.body)
+        assertEquals("no fetch", fetched, timeline.get())
+    }
+
+    @Test
+    fun `the newest reply deleted in the open thread gives way to the one before it`() {
+        val model = open()
+        model.openThread(model.message("m2")!!)
+        until { model.uiState.value.thread?.replies?.isNotEmpty() == true }
+        settle()
+        send("""{"id": "r2", "created": 250, "member": "b1", "name": "Bea", "body": "Second reply", "thread": "m2"}""")
+        until { model.message("m2")?.newest?.id == "r2" }
+        val fetched = timeline.get()
+        send("""{"event": "delete", "message": "r2"}""")
+        until { model.message("m2")?.replies == 1 }
+        assertEquals("r1", model.message("m2")?.newest?.id)
         assertEquals("no fetch", fetched, timeline.get())
     }
 
