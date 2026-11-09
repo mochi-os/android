@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Նշել որպես չկարդացած</string>
     <string name="chat_list_marked_read">Զրույցը նշվեց որպես կարդացած</string>
     <string name="chat_list_marked_unread">Զրույցը նշվեց որպես չկարդացած</string>
+    <string name="chat_send_friend_request">Ուղարկել ընկերության հարցում</string>
 </resources>

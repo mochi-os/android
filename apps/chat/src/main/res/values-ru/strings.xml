@@ -175,4 +175,5 @@
     <string name="chat_mark_unread">Отметить как непрочитанный</string>
     <string name="chat_list_marked_read">Чат отмечен как прочитанный</string>
     <string name="chat_list_marked_unread">Чат отмечен как непрочитанный</string>
+    <string name="chat_send_friend_request">Отправить запрос в друзья</string>
 </resources>

@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">ਅਣਪੜ੍ਹਿਆ ਮਾਰਕ ਕਰੋ</string>
     <string name="chat_list_marked_read">ਚੈਟ ਪੜ੍ਹੀ ਹੋਈ ਮਾਰਕ ਕੀਤੀ ਗਈ</string>
     <string name="chat_list_marked_unread">ਚੈਟ ਅਣਪੜ੍ਹੀ ਮਾਰਕ ਕੀਤੀ ਗਈ</string>
+    <string name="chat_send_friend_request">ਦੋਸਤੀ ਬੇਨਤੀ ਭੇਜੋ</string>
 </resources>

@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">නොකියවූ ලෙස ලකුණු කරන්න</string>
     <string name="chat_list_marked_read">කතාබස් කියවූ ලෙස ලකුණු කරන ලදී</string>
     <string name="chat_list_marked_unread">කතාබස් නොකියවූ ලෙස ලකුණු කරන ලදී</string>
+    <string name="chat_send_friend_request">මිතුරු ඉල්ලීමක් යවන්න</string>
 </resources>

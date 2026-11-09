@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Als ungelesen markieren</string>
     <string name="chat_list_marked_read">Chat als gelesen markiert</string>
     <string name="chat_list_marked_unread">Chat als ungelesen markiert</string>
+    <string name="chat_send_friend_request">Freundschaftsanfrage senden</string>
 </resources>

@@ -196,4 +196,5 @@
     <string name="chat_verification_mismatched">The emoji did not match, so the verification was cancelled</string>
     <string name="chat_verification_cancelled">The verification was cancelled</string>
     <string name="chat_verification_failed">The verification could not go on</string>
+    <string name="chat_send_friend_request">Send friend request</string>
 </resources>

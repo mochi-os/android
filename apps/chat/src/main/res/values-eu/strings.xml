@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Markatu irakurri gabeko gisa</string>
     <string name="chat_list_marked_read">Txata irakurritako gisa markatu da</string>
     <string name="chat_list_marked_unread">Txata irakurri gabeko gisa markatu da</string>
+    <string name="chat_send_friend_request">Bidali lagun-eskaera</string>
 </resources>

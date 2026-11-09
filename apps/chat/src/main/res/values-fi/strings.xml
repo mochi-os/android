@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Merkitse lukemattomaksi</string>
     <string name="chat_list_marked_read">Keskustelu merkitty luetuksi</string>
     <string name="chat_list_marked_unread">Keskustelu merkitty lukemattomaksi</string>
+    <string name="chat_send_friend_request">Lähetä kaveripyyntö</string>
 </resources>

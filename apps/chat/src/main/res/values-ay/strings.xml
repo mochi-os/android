@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Jan ullt\'atjam chimpuntaña</string>
     <string name="chat_list_marked_read">Chatax ullt\'atjam chimpuntatawa</string>
     <string name="chat_list_marked_unread">Chatax jan ullt\'atjam chimpuntatawa</string>
+    <string name="chat_send_friend_request">Masi jawsawi apayaña</string>
 </resources>

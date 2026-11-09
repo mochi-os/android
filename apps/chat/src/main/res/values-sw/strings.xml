@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Weka alama kuwa haijasomwa</string>
     <string name="chat_list_marked_read">Gumzo limewekwa alama kuwa limesomwa</string>
     <string name="chat_list_marked_unread">Gumzo limewekwa alama kuwa halijasomwa</string>
+    <string name="chat_send_friend_request">Tuma ombi la urafiki</string>
 </resources>

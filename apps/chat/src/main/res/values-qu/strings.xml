@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Mana ñawinchasqa hina marcay</string>
     <string name="chat_list_marked_read">Rimanakuy ñawinchasqa hina marcasqa</string>
     <string name="chat_list_marked_unread">Rimanakuy mana ñawinchasqa hina marcasqa</string>
+    <string name="chat_send_friend_request">Masi mañakuyta apachiy</string>
 </resources>

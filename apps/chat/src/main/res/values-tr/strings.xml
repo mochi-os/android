@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Okunmadı olarak işaretle</string>
     <string name="chat_list_marked_read">Sohbet okundu olarak işaretlendi</string>
     <string name="chat_list_marked_unread">Sohbet okunmadı olarak işaretlendi</string>
+    <string name="chat_send_friend_request">Arkadaşlık isteği gönder</string>
 </resources>

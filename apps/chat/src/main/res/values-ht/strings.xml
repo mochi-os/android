@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">Make kòm poko li</string>
     <string name="chat_list_marked_read">Chat la make kòm li</string>
     <string name="chat_list_marked_unread">Chat la make kòm poko li</string>
+    <string name="chat_send_friend_request">Voye demand zanmi</string>
 </resources>

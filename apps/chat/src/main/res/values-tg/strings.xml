@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Ҳамчун хонданашуда қайд кардан</string>
     <string name="chat_list_marked_read">Чат ҳамчун хондашуда қайд шуд</string>
     <string name="chat_list_marked_unread">Чат ҳамчун хонданашуда қайд шуд</string>
+    <string name="chat_send_friend_request">Фиристодани дархости дӯстӣ</string>
 </resources>

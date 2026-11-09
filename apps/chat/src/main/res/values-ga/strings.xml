@@ -177,4 +177,5 @@
     <string name="chat_mark_unread">Marcáil mar neamhléite</string>
     <string name="chat_list_marked_read">Comhrá marcáilte mar léite</string>
     <string name="chat_list_marked_unread">Comhrá marcáilte mar neamhléite</string>
+    <string name="chat_send_friend_request">Seol iarratas cara</string>
 </resources>

@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">ทำเครื่องหมายว่ายังไม่อ่าน</string>
     <string name="chat_list_marked_read">ทำเครื่องหมายแชทว่าอ่านแล้ว</string>
     <string name="chat_list_marked_unread">ทำเครื่องหมายแชทว่ายังไม่อ่าน</string>
+    <string name="chat_send_friend_request">ส่งคำขอเป็นเพื่อน</string>
 </resources>

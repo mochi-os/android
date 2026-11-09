@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">വായിക്കാത്തതായി അടയാളപ്പെടുത്തുക</string>
     <string name="chat_list_marked_read">ചാറ്റ് വായിച്ചതായി അടയാളപ്പെടുത്തി</string>
     <string name="chat_list_marked_unread">ചാറ്റ് വായിക്കാത്തതായി അടയാളപ്പെടുത്തി</string>
+    <string name="chat_send_friend_request">സൗഹൃദ അഭ്യർത്ഥന അയയ്ക്കുക</string>
 </resources>

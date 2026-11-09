@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Markér som ulæst</string>
     <string name="chat_list_marked_read">Chat markeret som læst</string>
     <string name="chat_list_marked_unread">Chat markeret som ulæst</string>
+    <string name="chat_send_friend_request">Send venneanmodning</string>
 </resources>

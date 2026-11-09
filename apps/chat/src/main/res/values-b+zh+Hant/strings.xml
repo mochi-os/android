@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">標示為未讀</string>
     <string name="chat_list_marked_read">聊天已標示為已讀</string>
     <string name="chat_list_marked_unread">聊天已標示為未讀</string>
+    <string name="chat_send_friend_request">傳送好友請求</string>
 </resources>

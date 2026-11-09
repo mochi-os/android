@@ -25,6 +25,7 @@ import org.mochios.chat.model.ChatStatus
 import org.mochios.chat.model.Friend
 import org.mochios.chat.model.addressList
 import org.mochios.chat.repository.ChatRepository
+import java.net.URLEncoder
 import javax.inject.Inject
 
 /**
@@ -60,6 +61,12 @@ data class NewChatUiState(
     val isSearchingDirectory: Boolean = false,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
+    /**
+     * The one person picked who is not a friend, when their chat policy
+     * refused the chat: a friend may always be chatted with, so the screen
+     * offers to send them a friend request.
+     */
+    val befriend: String? = null,
     val createdChatId: String? = null,
     /** The user's accounts on other networks a conversation can be had through. */
     val accounts: List<ChatAccount> = emptyList(),
@@ -313,7 +320,7 @@ class NewChatViewModel @Inject constructor(
             if (state.picked.isEmpty() || state.duplicate) {
                 return@launch
             }
-            _uiState.value = state.copy(isCreating = true, error = null)
+            _uiState.value = state.copy(isCreating = true, error = null, befriend = null)
             try {
                 val chosenName = state.groupName
                     .takeIf { state.groupNameEdited }
@@ -325,7 +332,12 @@ class NewChatViewModel @Inject constructor(
                     createdChatId = response.id
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isCreating = false, error = e.toMochiError())
+                val error = e.toMochiError()
+                _uiState.value = _uiState.value.copy(
+                    isCreating = false,
+                    error = error,
+                    befriend = refused(error, state),
+                )
             }
         }
     }
@@ -349,6 +361,21 @@ internal fun fallbackChatName(people: List<Friend>, selected: Set<String>, fallb
     val names = people.filter { it.id in selected }.joinToString(", ") { it.name }
     return names.ifBlank { fallback }
 }
+
+/**
+ * Who a refused create should offer a friend request to: the one stranger
+ * picked, where the server refused (403) on their chat policy. With several
+ * strangers the refusal does not say which.
+ */
+internal fun refused(error: MochiError, state: NewChatUiState): String? {
+    if (error !is MochiError.ForbiddenError) return null
+    val friends = state.friends.map { it.id }.toSet()
+    return state.picked.filterNot { it.id in friends }.singleOrNull()?.id
+}
+
+/** People's add screen, opened on [person] to send them a friend request. */
+internal fun friendRequest(person: String): String =
+    "/people?action=add&search=${URLEncoder.encode(person, Charsets.UTF_8.name())}"
 
 /** The longest chat name the server accepts, as the web's CHAT_NAME_MAX_LENGTH. */
 internal const val NAME_MAXIMUM = 1000

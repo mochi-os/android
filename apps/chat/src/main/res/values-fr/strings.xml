@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Marquer comme non lu</string>
     <string name="chat_list_marked_read">Discussion marquée comme lue</string>
     <string name="chat_list_marked_unread">Discussion marquée comme non lue</string>
+    <string name="chat_send_friend_request">Envoyer une invitation d\'ami</string>
 </resources>

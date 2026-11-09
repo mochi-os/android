@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Marca com a no llegit</string>
     <string name="chat_list_marked_read">Xat marcat com a llegit</string>
     <string name="chat_list_marked_unread">Xat marcat com a no llegit</string>
+    <string name="chat_send_friend_request">Envia una sol·licitud d\'amistat</string>
 </resources>

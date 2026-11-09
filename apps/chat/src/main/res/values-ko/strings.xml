@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">읽지 않음으로 표시</string>
     <string name="chat_list_marked_read">채팅을 읽음으로 표시했습니다</string>
     <string name="chat_list_marked_unread">채팅을 읽지 않음으로 표시했습니다</string>
+    <string name="chat_send_friend_request">친구 요청 보내기</string>
 </resources>

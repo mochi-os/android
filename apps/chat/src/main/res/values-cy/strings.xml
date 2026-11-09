@@ -180,4 +180,5 @@
     <string name="chat_mark_unread">Nodi fel heb ei darllen</string>
     <string name="chat_list_marked_read">Sgwrs wedi\'i nodi fel wedi\'i darllen</string>
     <string name="chat_list_marked_unread">Sgwrs wedi\'i nodi fel heb ei darllen</string>
+    <string name="chat_send_friend_request">Anfon cais ffrind</string>
 </resources>

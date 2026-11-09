@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">न वाचलेले म्हणून चिन्हांकित करा</string>
     <string name="chat_list_marked_read">चॅट वाचले म्हणून चिन्हांकित केले</string>
     <string name="chat_list_marked_unread">चॅट न वाचलेले म्हणून चिन्हांकित केले</string>
+    <string name="chat_send_friend_request">मैत्री विनंती पाठवा</string>
 </resources>

@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">Tandakan sebagai belum dibaca</string>
     <string name="chat_list_marked_read">Sembang ditandakan sebagai dibaca</string>
     <string name="chat_list_marked_unread">Sembang ditandakan sebagai belum dibaca</string>
+    <string name="chat_send_friend_request">Hantar permintaan rakan</string>
 </resources>

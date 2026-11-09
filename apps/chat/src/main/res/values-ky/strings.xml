@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Окула элек деп белгилөө</string>
     <string name="chat_list_marked_read">Чат окулду деп белгиленди</string>
     <string name="chat_list_marked_unread">Чат окула элек деп белгиленди</string>
+    <string name="chat_send_friend_request">Достук сунушун жөнөтүү</string>
 </resources>

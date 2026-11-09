@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Σήμανση ως μη αναγνωσμένο</string>
     <string name="chat_list_marked_read">Η συνομιλία επισημάνθηκε ως αναγνωσμένη</string>
     <string name="chat_list_marked_unread">Η συνομιλία επισημάνθηκε ως μη αναγνωσμένη</string>
+    <string name="chat_send_friend_request">Αποστολή αιτήματος φιλίας</string>
 </resources>

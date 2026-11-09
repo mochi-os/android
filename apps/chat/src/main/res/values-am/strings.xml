@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">እንዳልተነበበ ምልክት አድርግ</string>
     <string name="chat_list_marked_read">ውይይቱ እንደተነበበ ምልክት ተደርጓል</string>
     <string name="chat_list_marked_unread">ውይይቱ እንዳልተነበበ ምልክት ተደርጓል</string>
+    <string name="chat_send_friend_request">የጓደኝነት ጥያቄ ላክ</string>
 </resources>

@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Akka hin dubbifamnetti mallatteessi</string>
     <string name="chat_list_marked_read">Chaattiin akka dubbifametti mallatteeffame</string>
     <string name="chat_list_marked_unread">Chaattiin akka hin dubbifamnetti mallatteeffame</string>
+    <string name="chat_send_friend_request">Gaaffii hiriyummaa ergi</string>
 </resources>

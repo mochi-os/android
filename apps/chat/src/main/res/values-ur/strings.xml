@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">بغیر پڑھی نشان زد کریں</string>
     <string name="chat_list_marked_read">چیٹ پڑھی ہوئی نشان زد کر دی گئی</string>
     <string name="chat_list_marked_unread">چیٹ بغیر پڑھی نشان زد کر دی گئی</string>
+    <string name="chat_send_friend_request">دوستی کی درخواست بھیجیں</string>
 </resources>

@@ -224,6 +224,7 @@ open class MainActivity : ComponentActivity() {
                             chatNavGraph(
                                 navController,
                                 onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             forumsNavGraph(
                                 navController,
@@ -877,7 +878,9 @@ open class MainActivity : ComponentActivity() {
                     return
                 }
                 if (id == null && !action.isNullOrBlank()) {
-                    navController.openInPlace(PeopleApp.ROUTER, PeopleApp.CONTACTS, PeopleApp.contacts(action))
+                    // Chat sends ?action=add&search=<person> for someone who
+                    // refused a chat, so the add screen opens on them.
+                    navController.openInPlace(PeopleApp.ROUTER, PeopleApp.CONTACTS, PeopleApp.contacts(action, parseQueryParam(query, "search")))
                     return
                 }
                 val screen = when {

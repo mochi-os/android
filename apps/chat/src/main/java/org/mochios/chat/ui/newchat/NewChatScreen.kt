@@ -73,6 +73,7 @@ import org.mochios.android.R as MochiR
 fun NewChatScreen(
     onBack: () -> Unit,
     onChatCreated: (String) -> Unit,
+    onOpenLink: (String) -> Unit = {},
     viewModel: NewChatViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -139,11 +140,18 @@ fun NewChatScreen(
                                 )
                                 .padding(horizontal = 16.dp, vertical = 12.dp)
                         ) {
-                            Text(
-                                text = error.userMessage(),
-                                color = MaterialTheme.colorScheme.onErrorContainer,
-                                style = MaterialTheme.typography.bodyMedium
-                            )
+                            Column {
+                                Text(
+                                    text = error.userMessage(),
+                                    color = MaterialTheme.colorScheme.onErrorContainer,
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                                uiState.befriend?.let { person ->
+                                    MochiTextButton(onClick = { onOpenLink(friendRequest(person)) }) {
+                                        Text(stringResource(R.string.chat_send_friend_request))
+                                    }
+                                }
+                            }
                         }
                     }
 

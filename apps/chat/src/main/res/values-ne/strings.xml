@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">नपढिएको चिन्ह लगाउनुहोस्</string>
     <string name="chat_list_marked_read">च्याट पढिएको रूपमा चिन्ह लगाइयो</string>
     <string name="chat_list_marked_unread">च्याट नपढिएको रूपमा चिन्ह लगाइयो</string>
+    <string name="chat_send_friend_request">मित्रता अनुरोध पठाउनुहोस्</string>
 </resources>

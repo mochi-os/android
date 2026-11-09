@@ -178,4 +178,5 @@
     <string name="chat_mark_unread">Immarka bħala mhux moqri</string>
     <string name="chat_list_marked_read">Chat immarkata bħala moqrija</string>
     <string name="chat_list_marked_unread">Chat immarkata bħala mhux moqrija</string>
+    <string name="chat_send_friend_request">Ibgħat talba ta\' ħbiberija</string>
 </resources>

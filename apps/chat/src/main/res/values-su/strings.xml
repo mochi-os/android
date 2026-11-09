@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">Tandaan can dibaca</string>
     <string name="chat_list_marked_read">Obrolan ditandaan geus dibaca</string>
     <string name="chat_list_marked_unread">Obrolan ditandaan can dibaca</string>
+    <string name="chat_send_friend_request">Kirim pamundut babaturan</string>
 </resources>

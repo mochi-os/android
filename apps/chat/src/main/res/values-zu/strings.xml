@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Maka njengengafundiwe</string>
     <string name="chat_list_marked_read">Ingxoxo imakwe njengefundiwe</string>
     <string name="chat_list_marked_unread">Ingxoxo imakwe njengengafundiwe</string>
+    <string name="chat_send_friend_request">Thumela isicelo sobungane</string>
 </resources>

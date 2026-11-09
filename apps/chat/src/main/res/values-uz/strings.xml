@@ -172,4 +172,5 @@
     <string name="chat_mark_unread">Oʻqilmagan deb belgilash</string>
     <string name="chat_list_marked_read">Chat oʻqilgan deb belgilandi</string>
     <string name="chat_list_marked_unread">Chat oʻqilmagan deb belgilandi</string>
+    <string name="chat_send_friend_request">Do‘stlik so‘rovini yuborish</string>
 </resources>

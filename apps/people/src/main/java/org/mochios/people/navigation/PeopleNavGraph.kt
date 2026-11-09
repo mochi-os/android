@@ -36,8 +36,8 @@ object PeopleApp {
     const val HOME = "people/router"
     const val ROUTER = "people/router"
 
-    const val CONTACTS = "people/contacts?action={action}"
-    const val CONTACTS_ADD = "people/contacts/add?contact={contact}&name={name}&book={book}"
+    const val CONTACTS = "people/contacts?action={action}&search={search}"
+    const val CONTACTS_ADD = "people/contacts/add?contact={contact}&name={name}&book={book}&search={search}"
     const val CONTACT_NEW = "people/contacts/new?book={book}&copy={copy}"
     const val CONTACT_EDIT = "people/contacts/{id}"
     const val BOOK_CREATE = "people/books/create"
@@ -54,10 +54,11 @@ object PeopleApp {
     /**
      * The add screen, on an ordinary search or opened to link one card to the
      * person it finds. [book] is the address book being viewed, where a
-     * contact made there goes.
+     * contact made there goes. [search] is what the search opens on: a person
+     * another app names, as chat does for someone who refused a chat.
      */
-    fun contactsAdd(contact: String = "", name: String = "", book: String = ""): String =
-        "people/contacts/add?contact=${Uri.encode(contact)}&name=${Uri.encode(name)}&book=${Uri.encode(book)}"
+    fun contactsAdd(contact: String = "", name: String = "", book: String = "", search: String = ""): String =
+        "people/contacts/add?contact=${Uri.encode(contact)}&name=${Uri.encode(name)}&book=${Uri.encode(book)}&search=${Uri.encode(search)}"
 
     /** A new contact, in [book] when it was started from one. */
     fun contactNew(book: String = ""): String = "people/contacts/new?book=${Uri.encode(book)}"
@@ -70,10 +71,10 @@ object PeopleApp {
     fun personView(id: String) = "people/person/$id"
     fun contactEdit(id: String) = "people/contacts/$id"
     fun book(id: String) = "people/books/$id"
-    fun contacts(action: String? = null): String = if (action.isNullOrBlank()) {
-        "people/contacts"
-    } else {
-        "people/contacts?action=$action"
+    fun contacts(action: String? = null, search: String? = null): String = when {
+        action.isNullOrBlank() -> "people/contacts"
+        search.isNullOrBlank() -> "people/contacts?action=$action"
+        else -> "people/contacts?action=$action&search=${Uri.encode(search)}"
     }
 }
 
@@ -135,12 +136,14 @@ fun NavGraphBuilder.peopleNavGraph(
                 defaultValue = ""
                 nullable = false
             },
+            navArgument("search") { type = NavType.StringType; defaultValue = "" },
         ),
         deepLinks = listOf(
             navDeepLink { uriPattern = "mochi://people?action={action}" },
         ),
     ) { backStackEntry ->
         val action = backStackEntry.arguments?.getString("action").orEmpty()
+        val search = backStackEntry.arguments?.getString("search").orEmpty()
         ContactsScreen(
             onOpenContact = { id -> navController.navigate(PeopleApp.contactEdit(id)) },
             drawer = drawer,
@@ -148,6 +151,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onMessage = onOpenLink,
             onAddContact = { navController.navigate(PeopleApp.contactsAdd()) },
             initialAction = action.ifBlank { null },
+            onLinkedAdd = { navController.navigate(PeopleApp.contactsAdd(search = search)) },
         )
     }
 
@@ -175,6 +179,7 @@ fun NavGraphBuilder.peopleNavGraph(
             navArgument("contact") { type = NavType.StringType; defaultValue = "" },
             navArgument("name") { type = NavType.StringType; defaultValue = "" },
             navArgument("book") { type = NavType.StringType; defaultValue = "" },
+            navArgument("search") { type = NavType.StringType; defaultValue = "" },
         ),
     ) { backStackEntry ->
         val book = backStackEntry.arguments?.getString("book").orEmpty()

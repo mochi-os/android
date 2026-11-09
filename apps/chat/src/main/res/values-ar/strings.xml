@@ -179,4 +179,5 @@
     <string name="chat_mark_unread">تعليم كغير مقروءة</string>
     <string name="chat_list_marked_read">تم تعليم الدردشة كمقروءة</string>
     <string name="chat_list_marked_unread">تم تعليم الدردشة كغير مقروءة</string>
+    <string name="chat_send_friend_request">إرسال طلب صداقة</string>
 </resources>

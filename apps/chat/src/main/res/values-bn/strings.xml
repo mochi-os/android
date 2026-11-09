@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">অপঠিত হিসেবে চিহ্নিত করুন</string>
     <string name="chat_list_marked_read">চ্যাট পঠিত হিসেবে চিহ্নিত হয়েছে</string>
     <string name="chat_list_marked_unread">চ্যাট অপঠিত হিসেবে চিহ্নিত হয়েছে</string>
+    <string name="chat_send_friend_request">বন্ধুত্বের অনুরোধ পাঠান</string>
 </resources>

@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Emarka noñemoñe\'ẽiháicha</string>
     <string name="chat_list_marked_read">Ñemongeta oñemoĩ moñe\'ẽmbyréramo</string>
     <string name="chat_list_marked_unread">Ñemongeta oñemoĩ moñe\'ẽmbyre\'ỹramo</string>
+    <string name="chat_send_friend_request">Emondo angirũ jerure</string>
 </resources>

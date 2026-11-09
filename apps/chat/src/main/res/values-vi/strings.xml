@@ -170,4 +170,5 @@
     <string name="chat_mark_unread">Đánh dấu là chưa đọc</string>
     <string name="chat_list_marked_read">Đã đánh dấu cuộc trò chuyện là đã đọc</string>
     <string name="chat_list_marked_unread">Đã đánh dấu cuộc trò chuyện là chưa đọc</string>
+    <string name="chat_send_friend_request">Gửi lời mời kết bạn</string>
 </resources>

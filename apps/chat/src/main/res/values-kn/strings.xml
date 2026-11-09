@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">ಓದಿಲ್ಲ ಎಂದು ಗುರುತಿಸಿ</string>
     <string name="chat_list_marked_read">ಚಾಟ್ ಓದಲಾಗಿದೆ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</string>
     <string name="chat_list_marked_unread">ಚಾಟ್ ಓದಿಲ್ಲ ಎಂದು ಗುರುತಿಸಲಾಗಿದೆ</string>
+    <string name="chat_send_friend_request">ಸ್ನೇಹ ವಿನಂತಿಯನ್ನು ಕಳುಹಿಸಿ</string>
 </resources>

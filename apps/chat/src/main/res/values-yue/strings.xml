@@ -169,4 +169,5 @@
     <plurals name="chat_encryption_restored">
         <item quantity="other">還原咗 %1$s 條訊息金鑰</item>
     </plurals>
+    <string name="chat_send_friend_request">傳送朋友請求</string>
 </resources>

@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Okalmadyk diýip belle</string>
     <string name="chat_list_marked_read">Çat okalan diýlip bellendi</string>
     <string name="chat_list_marked_unread">Çat okalmadyk diýlip bellendi</string>
+    <string name="chat_send_friend_request">Dost soragyny iber</string>
 </resources>

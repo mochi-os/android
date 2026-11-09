@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">សម្គាល់ថាមិនទាន់អាន</string>
     <string name="chat_list_marked_read">បានសម្គាល់ការជជែកថាបានអាន</string>
     <string name="chat_list_marked_unread">បានសម្គាល់ការជជែកថាមិនទាន់អាន</string>
+    <string name="chat_send_friend_request">ផ្ញើសំណើមិត្តភក្តិ</string>
 </resources>

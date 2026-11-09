@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">Tandai belum dibaca</string>
     <string name="chat_list_marked_read">Chat ditandai sudah dibaca</string>
     <string name="chat_list_marked_unread">Chat ditandai belum dibaca</string>
+    <string name="chat_send_friend_request">Kirim permintaan pertemanan</string>
 </resources>

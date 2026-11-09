@@ -434,6 +434,16 @@ class NetworksPeopleTest {
     }
 
     @Test
+    fun `the add screen opens on the person another app names`() {
+        // THE POINT: chat sends someone who refused a chat here by id, and the
+        // search starts on them, so Invite is a tap away.
+        val model = AddContactViewModel(SavedStateHandle(mapOf("search" to "p1")), repository)
+        assertEquals("p1", model.uiState.value.searchQuery)
+        // A plain add screen starts empty.
+        assertEquals("", AddContactViewModel(SavedStateHandle(), repository).uiState.value.searchQuery)
+    }
+
+    @Test
     fun `the add screen lists people on other networks, but not while linking a card to a Mochi person`() {
         val plain = AddContactViewModel(SavedStateHandle(), repository)
         val linking = AddContactViewModel(SavedStateHandle(mapOf("contact" to "c1")), repository)

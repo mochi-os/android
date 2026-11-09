@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">წაუკითხავად მონიშვნა</string>
     <string name="chat_list_marked_read">ჩატი მონიშნულია წაკითხულად</string>
     <string name="chat_list_marked_unread">ჩატი მონიშნულია წაუკითხავად</string>
+    <string name="chat_send_friend_request">მეგობრობის მოთხოვნის გაგზავნა</string>
 </resources>

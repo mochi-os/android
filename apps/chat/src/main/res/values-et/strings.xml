@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Märgi lugemata</string>
     <string name="chat_list_marked_read">Vestlus märgitud loetuks</string>
     <string name="chat_list_marked_unread">Vestlus märgitud lugemata</string>
+    <string name="chat_send_friend_request">Saada sõbrakutse</string>
 </resources>

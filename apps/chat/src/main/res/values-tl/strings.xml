@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Markahan bilang hindi pa nabasa</string>
     <string name="chat_list_marked_read">Minarkahan ang chat bilang nabasa na</string>
     <string name="chat_list_marked_unread">Minarkahan ang chat bilang hindi pa nabasa</string>
+    <string name="chat_send_friend_request">Magpadala ng kahilingan sa pagkakaibigan</string>
 </resources>

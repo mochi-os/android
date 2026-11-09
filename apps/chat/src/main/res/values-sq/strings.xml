@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Shëno si të palexuar</string>
     <string name="chat_list_marked_read">Biseda u shënua si e lexuar</string>
     <string name="chat_list_marked_unread">Biseda u shënua si e palexuar</string>
+    <string name="chat_send_friend_request">Dërgo kërkesë për miqësi</string>
 </resources>

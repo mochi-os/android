@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">ન વાંચેલા તરીકે ચિહ્નિત કરો</string>
     <string name="chat_list_marked_read">ચેટ વાંચેલી તરીકે ચિહ્નિત કરી</string>
     <string name="chat_list_marked_unread">ચેટ ન વાંચેલી તરીકે ચિહ્નિત કરી</string>
+    <string name="chat_send_friend_request">મિત્રતાની વિનંતી મોકલો</string>
 </resources>

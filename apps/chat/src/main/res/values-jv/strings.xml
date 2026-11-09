@@ -169,4 +169,5 @@
     <string name="chat_mark_unread">Tandhani durung diwaca</string>
     <string name="chat_list_marked_read">Chat ditandhani wis diwaca</string>
     <string name="chat_list_marked_unread">Chat ditandhani durung diwaca</string>
+    <string name="chat_send_friend_request">Kirim panyuwun kanca</string>
 </resources>

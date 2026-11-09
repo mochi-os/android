@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">बिना पढ़ल मार्क करीं</string>
     <string name="chat_list_marked_read">चैट पढ़ल भइल मार्क कइल गइल</string>
     <string name="chat_list_marked_unread">चैट बिना पढ़ल मार्क कइल गइल</string>
+    <string name="chat_send_friend_request">दोस्ती अनुरोध भेजीं</string>
 </resources>

@@ -171,4 +171,5 @@
     <string name="chat_mark_unread">Merkja sem ólesið</string>
     <string name="chat_list_marked_read">Spjall merkt sem lesið</string>
     <string name="chat_list_marked_unread">Spjall merkt sem ólesið</string>
+    <string name="chat_send_friend_request">Senda vinabeiðni</string>
 </resources>
