@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui.component
 
+import org.mochios.android.model.Comment
 import org.mochios.android.model.Reaction
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
@@ -45,3 +46,27 @@ fun currentReactionType(myReaction: String): ReactionType? =
  * optimistic update honest.
  */
 fun applied(reaction: String): String = if (reaction == "none") "" else reaction
+
+/**
+ * The reader's own reaction on the comment [id] anywhere in [comments], or
+ * null when the comment is not there.
+ */
+fun reactionOf(comments: List<Comment>, id: String): String? {
+    for (comment in comments) {
+        if (comment.id == id) return comment.myReaction
+        reactionOf(comment.children, id)?.let { return it }
+    }
+    return null
+}
+
+/**
+ * [comments] with the reader's own reaction on the comment [id] set to
+ * [reaction], wherever it sits. Other readers' reactions are held apart from
+ * the reader's own, so they stay as they are.
+ */
+fun withReaction(comments: List<Comment>, id: String, reaction: String): List<Comment> =
+    comments.map { comment ->
+        val updated = if (comment.id == id) comment.copy(myReaction = reaction) else comment
+        if (updated.children.isEmpty()) updated
+        else updated.copy(children = withReaction(updated.children, id, reaction))
+    }

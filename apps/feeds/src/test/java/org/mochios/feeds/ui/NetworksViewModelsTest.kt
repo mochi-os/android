@@ -30,6 +30,7 @@ import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
+import org.mochios.feeds.R
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.api.MenuApi
 import org.mochios.feeds.repository.FeedsRepository
@@ -267,11 +268,16 @@ class NetworksViewModelsTest {
     @Test
     fun `pinning a post marks it, and unpinning clears the mark`() {
         val model = detail()
+        // The mark shows on the tap, so wait for the server to hear of each.
         model.togglePin()
-        until("the pin") { (model.post.value?.pinned ?: 0) > 0 }
+        assertTrue((model.post.value?.pinned ?: 0) > 0)
+        until("the pin") { sent("/feeds/f1/-/p1/pin") != null && model.actionMessage.value != null }
+        assertTrue((model.post.value?.pinned ?: 0) > 0)
         model.togglePin()
-        until("the unpin") { model.post.value?.pinned == 0L }
-        assertTrue(requests.any { it.first == "/feeds/f1/-/p1/unpin" })
+        assertEquals(0L, model.post.value?.pinned)
+        until("the unpin") { sent("/feeds/f1/-/p1/unpin") != null }
+        until("its answer") { model.actionMessage.value == R.string.feeds_post_unpinned }
+        assertEquals(0L, model.post.value?.pinned)
     }
 
     @Test

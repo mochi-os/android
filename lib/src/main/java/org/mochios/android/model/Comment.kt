@@ -7,12 +7,15 @@ package org.mochios.android.model
 
 import com.google.gson.annotations.SerializedName
 
+// Every field has a default, so Kotlin gives the class a constructor with no
+// arguments and Gson builds it through that, keeping the defaults for fields a
+// server leaves out. Without one, Gson bypasses the defaults and an absent
+// field arrives as null whatever its type: feeds sends no `created_string`, so
+// `copy()` on one of its comments would throw.
 data class Comment(
-    val id: String,
+    val id: String = "",
     val parent: String = "",
-    // Gson instantiates via Unsafe, bypassing Kotlin defaults, so an absent
-    // non-null field arrives as null and crashes on access. Feeds sends `user`,
-    // not `author`; read identity via [authorId].
+    // Feeds sends `user`, not `author`; read identity via [authorId].
     val author: String? = null,
     val user: String? = null,
     @SerializedName("name") val authorName: String? = null,
@@ -29,12 +32,12 @@ data class Comment(
     val reactions: List<Reaction> = emptyList(),
     // The post attachment this comment is about: id, display name (caption,
     // else file name), and caption alone. Empty when unanchored; replies are
-    // never anchored. Nullable for the Gson reason above.
+    // never anchored.
     val attachment: String? = null,
     @SerializedName("attachment_name") val attachmentName: String? = null,
     @SerializedName("attachment_caption") val attachmentCaption: String? = null,
     // A comment from another network: the author's page there and the
-    // comment's id there. Nullable for the Gson reason above.
+    // comment's id there.
     val page: String? = null,
     val remote: String? = null,
 ) {

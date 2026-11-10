@@ -28,6 +28,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.UndoChain
 import org.mochios.android.util.appendDistinct
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
@@ -217,6 +218,45 @@ class FeedViewModel @Inject constructor(
 
     /** The pending re-fetch of each post a frame has touched; see [patch]. */
     private val patches = mutableMapOf<String, Job>()
+
+    // A pin shows on the tap and goes back if the server refuses, as on the
+    // web: only the pin, and only while it still shows the tap's guess.
+    private val pins = UndoChain<Long>()
+
+    /** Taps still waiting on the server, per post. */
+    private val holding = mutableMapOf<String, Int>()
+
+    /** Posts whose re-fetch a tap stopped, fetched once no tap on them waits. */
+    private val stopped = mutableSetOf<String>()
+
+    /**
+     * A tap on [postId] waits on the server. A re-fetch of the post on its
+     * way would land after the guess and put the old value back, so it is
+     * stopped until no tap on the post waits.
+     */
+    private fun hold(postId: String) {
+        holding[postId] = (holding[postId] ?: 0) + 1
+        val job = patches.remove(postId) ?: return
+        if (job.isActive) {
+            job.cancel()
+            stopped += postId
+        }
+    }
+
+    /** A tap on [postId] has its answer; a re-fetch it stopped goes out once none waits. */
+    private fun release(postId: String, feed: String) {
+        val left = (holding[postId] ?: 1) - 1
+        if (left > 0) {
+            holding[postId] = left
+            return
+        }
+        holding.remove(postId)
+        if (stopped.remove(postId)) patch(postId, feed)
+    }
+
+    private fun setPinned(postId: String, pinned: Long) {
+        _posts.value = _posts.value.map { if (it.id == postId) it.copy(pinned = pinned) else it }
+    }
 
     // Upgraded hero image URLs per post id, resolved lazily as pages come
     // into view. "" = resolved, nothing better than the stored thumbnail.
@@ -868,19 +908,37 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /** Pin a post of the owner's feed, or unpin it. */
+    /** Pin a post of the owner's feed, or unpin it. The pin shows on the tap
+     *  and goes back, with the error, if the server refuses. */
     fun togglePin(feed: String, postId: String) {
         val post = _posts.value.firstOrNull { it.id == postId } ?: return
+        val pinning = post.pinned <= 0
+        // `pinned` is when it was pinned, in seconds; 0 for not pinned.
+        val guess = if (pinning) System.currentTimeMillis() / 1000 else 0L
+        val step = pins.start(postId)
+        step.remember(post.pinned)
+        setPinned(postId, guess)
+        hold(postId)
         viewModelScope.launch {
-            try {
-                val pinned = repository.pinPost(feed, postId, post.pinned <= 0)
-                _posts.value = _posts.value.map { if (it.id == postId) it.copy(pinned = pinned) else it }
-                _actionEvents.tryEmit(
-                    FeedActionEvent.Done(if (pinned > 0) R.string.feeds_post_pinned else R.string.feeds_post_unpinned),
-                )
+            val pinned = try {
+                repository.pinPost(feed, postId, pinning)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                val before = step.refused()
+                val shown = _posts.value.firstOrNull { it.id == postId }?.pinned
+                if (before != null && shown == guess) setPinned(postId, before.value)
+                release(postId, feed)
                 _actionEvents.tryEmit(FeedActionEvent.Failure(e.toMochiError()))
+                return@launch
             }
+            step.accepted()
+            // The time the server set, unless a later tap has changed it since.
+            if (_posts.value.firstOrNull { it.id == postId }?.pinned == guess) setPinned(postId, pinned)
+            release(postId, feed)
+            _actionEvents.tryEmit(
+                FeedActionEvent.Done(if (pinned > 0) R.string.feeds_post_pinned else R.string.feeds_post_unpinned),
+            )
         }
     }
 

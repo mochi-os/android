@@ -83,14 +83,29 @@ class InterestsViewModel @Inject constructor(
         }
     }
 
+    /** The row goes on the tap and comes back, with the error, if the server
+     *  refuses; the list reloads once the server has it. */
     fun remove(qid: String) {
+        val list = _uiState.value.interests
+        val index = list.indexOfFirst { it.qid == qid }
+        val removed = list.getOrNull(index)
+        if (removed != null) {
+            _uiState.value = _uiState.value.copy(interests = list.filter { it.qid != qid })
+        }
         viewModelScope.launch {
             try {
                 api.removeInterest(qid).unwrapEmpty()
-                refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                // Back where it stood, unless a reload since has brought it back.
+                val now = _uiState.value.interests
+                val restored = if (removed == null || now.any { it.qid == qid }) now
+                else now.toMutableList().apply { add(index.coerceAtMost(size), removed) }
+                _uiState.value = _uiState.value.copy(interests = restored, error = e.toMochiError())
+                return@launch
             }
+            refresh()
         }
     }
 

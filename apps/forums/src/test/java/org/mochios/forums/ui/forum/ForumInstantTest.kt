@@ -42,6 +42,7 @@ import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
@@ -74,6 +75,18 @@ class ForumInstantTest {
     /** Whether the server has the reader following the post. */
     @Volatile private var following = false
 
+    /** Writes held by a gate of their own, by path. */
+    private val gates = ConcurrentHashMap<String, CountDownLatch>()
+
+    /** Writes the server refuses, by path. */
+    private val refused = ConcurrentHashMap.newKeySet<String>()
+
+    /** The reader's votes the server holds, by post or comment. */
+    private val votes = ConcurrentHashMap<String, String>()
+
+    /** The lock and pin the server holds on the post. */
+    private val flags = ConcurrentHashMap.newKeySet<String>()
+
     private val events = mutableListOf<ForumEvent>()
     private var collector: Job? = null
 
@@ -94,8 +107,21 @@ class ForumInstantTest {
                         val enabled = body.contains("enabled=true")
                         answer("""{"post": ${if (body.contains("kind=post")) enabled else true}, "reply": false, "comment": false}""")
                     }
-                    "/forums/f1/-/p1" ->
-                        ok("""{"forum": {"id": "f1"}, "post": {"id": "p1", "forum": "f1"}, "comments": [], "following": $following}""")
+                    "/forums/f1/-/p1" -> ok(view())
+                    "/forums/f1/-/p1/vote/up", "/forums/f1/-/p1/c1/vote/up", "/forums/f1/-/p1/c2/vote/up" -> {
+                        writes.add(path)
+                        val answered = answer(path, "{}")
+                        if (answered.status.contains("200")) {
+                            votes[path.removePrefix("/forums/f1/-/p1").removeSuffix("/vote/up").trim('/').ifEmpty { "p1" }] = "up"
+                        }
+                        answered
+                    }
+                    "/forums/f1/-/p1/lock", "/forums/f1/-/p1/pin" -> {
+                        writes.add(path)
+                        val answered = answer(path, "{}")
+                        if (answered.status.contains("200")) flags += path.substringAfterLast('/')
+                        answered
+                    }
                     "/forums/f1/-/p1/follow", "/forums/f1/-/p1/unfollow" -> {
                         writes.add(path)
                         val answered = answer("""{"following": ${path.endsWith("/follow")}}""")
@@ -141,9 +167,30 @@ class ForumInstantTest {
 
     private fun ok(data: String) = MockResponse().setBody("""{"data": $data}""")
 
-    private fun answer(data: String): MockResponse {
-        gate.await(5, TimeUnit.SECONDS)
-        return if (refuse) MockResponse().setResponseCode(500).setBody("""{"error": "Refused"}""") else ok(data)
+    private fun answer(data: String): MockResponse = answer("", data)
+
+    /** The answer to a write on [path], held by its own gate where a test set one. */
+    private fun answer(path: String, data: String): MockResponse {
+        (gates[path] ?: gate).await(5, TimeUnit.SECONDS)
+        return if (refuse || path in refused) {
+            MockResponse().setResponseCode(500).setBody("""{"error": "Refused"}""")
+        } else {
+            ok(data)
+        }
+    }
+
+    /** Hold the write on [path] until the returned gate is released. */
+    private fun hold(path: String) = CountDownLatch(1).also { gates[path] = it }
+
+    /** The post as the server holds it: c2 is a reply to c1. */
+    private fun view(): String {
+        fun up(id: String, base: Int) = base + if (votes[id] == "up") 1 else 0
+        fun vote(id: String) = votes[id].orEmpty()
+        val comment2 = """{"id": "c2", "up": ${up("c2", 0)}, "user_vote": "${vote("c2")}"}"""
+        val comment1 = """{"id": "c1", "up": ${up("c1", 1)}, "user_vote": "${vote("c1")}", "children": [$comment2]}"""
+        val post = """{"id": "p1", "forum": "f1", "up": ${up("p1", 2)}, "user_vote": "${vote("p1")}", """ +
+            """"locked": ${"lock" in flags}, "pinned": ${"pin" in flags}}"""
+        return """{"forum": {"id": "f1"}, "post": $post, "comments": [$comment1], "following": $following}"""
     }
 
     private fun until(done: () -> Boolean) {
@@ -238,6 +285,88 @@ class ForumInstantTest {
         until { writes.contains("/forums/f1/-/p1/follow") }
         settle()
         assertEquals(true, model.uiState.value.following)
+        assertNull(model.uiState.value.error)
+    }
+
+    @Test
+    fun `a post vote counts on the tap, and goes back with the error when refused`() {
+        val model = post()
+        model.votePost("up")
+        until { writes.contains("/forums/f1/-/p1/vote/up") }
+        assertEquals(3, model.uiState.value.post.up)
+        assertEquals("up", model.uiState.value.post.userVote)
+
+        refuse = true
+        gate.countDown()
+        until { model.uiState.value.error != null }
+        assertEquals(2, model.uiState.value.post.up)
+        assertEquals("", model.uiState.value.post.userVote)
+    }
+
+    @Test
+    fun `an accepted post vote stays, read back from the server`() {
+        val model = post()
+        model.votePost("up")
+        gate.countDown()
+        until { writes.contains("/forums/f1/-/p1/vote/up") }
+        settle()
+        assertEquals(3, model.uiState.value.post.up)
+        assertEquals("up", model.uiState.value.post.userVote)
+        assertNull(model.uiState.value.error)
+    }
+
+    @Test
+    fun `a refused comment vote goes back on that comment alone`() {
+        val model = post()
+        val first = hold("/forums/f1/-/p1/c1/vote/up")
+        val second = hold("/forums/f1/-/p1/c2/vote/up")
+        model.voteComment("c1", "up")
+        model.voteComment("c2", "up")
+        until { writes.contains("/forums/f1/-/p1/c2/vote/up") }
+        fun comment(id: String) = model.uiState.value.comments.single().let { if (id == "c1") it else it.children.single() }
+        assertEquals(2, comment("c1").up)
+        assertEquals(1, comment("c2").up)
+
+        refused += "/forums/f1/-/p1/c1/vote/up"
+        first.countDown()
+        until { model.uiState.value.error != null }
+        assertEquals(1, comment("c1").up)
+        assertEquals("", comment("c1").userVote)
+        // The reply's vote still waits on the server, and still shows.
+        assertEquals(1, comment("c2").up)
+        assertEquals("up", comment("c2").userVote)
+
+        second.countDown()
+        settle()
+        assertEquals(1, comment("c2").up)
+        assertEquals("up", comment("c2").userVote)
+    }
+
+    @Test
+    fun `lock and pin show on the tap, and go back with the error when refused`() {
+        val model = post()
+        model.lockPost()
+        model.pinPost()
+        until { writes.contains("/forums/f1/-/p1/lock") && writes.contains("/forums/f1/-/p1/pin") }
+        assertTrue(model.uiState.value.post.locked)
+        assertTrue(model.uiState.value.post.pinned)
+
+        refuse = true
+        gate.countDown()
+        until { model.uiState.value.error != null }
+        settle()
+        assertEquals(false, model.uiState.value.post.locked)
+        assertEquals(false, model.uiState.value.post.pinned)
+    }
+
+    @Test
+    fun `an accepted lock stays, read back from the server`() {
+        val model = post()
+        model.lockPost()
+        gate.countDown()
+        until { writes.contains("/forums/f1/-/p1/lock") }
+        settle()
+        assertTrue(model.uiState.value.post.locked)
         assertNull(model.uiState.value.error)
     }
 }

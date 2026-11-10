@@ -24,6 +24,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.UndoChain
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.feeds.R
@@ -38,6 +39,8 @@ import org.mochios.feeds.ui.component.boostAccount
 import org.mochios.feeds.ui.component.boostAccounts
 import org.mochios.feeds.ui.component.boostedFrom
 import org.mochios.feeds.ui.component.onFediverse
+import org.mochios.feeds.ui.component.reactionOf
+import org.mochios.feeds.ui.component.withReaction
 
 @HiltViewModel
 class PostDetailViewModel @Inject constructor(
@@ -143,6 +146,40 @@ class PostDetailViewModel @Inject constructor(
 
     /** The pending or in-flight post fetch; cancelled when a newer one starts. */
     private var postJob: Job? = null
+
+    // A pin and a comment reaction show on the tap and go back if the server
+    // refuses, as on the web: only the pin, or only the reader's own
+    // reaction, and only while it still shows the tap's guess.
+    private val pins = UndoChain<Long>()
+    private val reactions = UndoChain<String>()
+
+    /** Taps still waiting on the server. */
+    private var waiting = 0
+
+    /** Whether a tap stopped a fetch of the post, which goes out once no tap waits. */
+    private var stopped = false
+
+    /**
+     * A tap waits on the server. A fetch of the post on its way would land
+     * after the guess and put the old value back, so it is stopped until no
+     * tap waits.
+     */
+    private fun hold() {
+        waiting += 1
+        if (_post.value != null && postJob?.isActive == true) {
+            postJob?.cancel()
+            stopped = true
+        }
+    }
+
+    /** A tap has its answer; a fetch it stopped goes out once none waits. */
+    private fun release() {
+        waiting -= 1
+        if (waiting == 0 && stopped) {
+            stopped = false
+            refreshPost()
+        }
+    }
 
     init {
         loadPost()
@@ -311,14 +348,40 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
+    /** The reaction shows on the tap and goes back, with the error, if the
+     *  server refuses; the post is fetched again once the server has it. */
     fun reactToComment(commentId: String, reaction: String) {
+        val mine = applied(reaction)
+        val now = _post.value?.let { reactionOf(it.comments, commentId) }
+        val step = if (now != null && now != mine) reactions.start(commentId) else null
+        if (step != null && now != null) {
+            step.remember(now)
+            setReaction(commentId, mine)
+        }
+        hold()
         viewModelScope.launch {
             try {
                 repository.reactToComment(feedId, postId, commentId, reaction)
-                refreshPost()
-            } catch (_: Exception) {
-                // Silent failure for reactions
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                val before = step?.refused()
+                val shown = _post.value?.let { reactionOf(it.comments, commentId) }
+                if (before != null && shown == mine) setReaction(commentId, before.value)
+                _actionError.value = e.toMochiError()
+                release()
+                return@launch
             }
+            step?.accepted()
+            stopped = false
+            release()
+            refreshPost()
+        }
+    }
+
+    private fun setReaction(commentId: String, reaction: String) {
+        _post.value = _post.value?.let { post ->
+            post.copy(comments = withReaction(post.comments, commentId, reaction))
         }
     }
 
@@ -425,17 +488,36 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
-    /** Pin the post of the owner's feed, or unpin it. */
+    /** Pin the post of the owner's feed, or unpin it. The pin shows on the
+     *  tap and goes back, with the error, if the server refuses. */
     fun togglePin() {
         val current = _post.value ?: return
+        val pinning = current.pinned <= 0
+        // `pinned` is when it was pinned, in seconds; 0 for not pinned.
+        val guess = if (pinning) System.currentTimeMillis() / 1000 else 0L
+        val step = pins.start(postId)
+        step.remember(current.pinned)
+        _post.value = current.copy(pinned = guess)
+        hold()
         viewModelScope.launch {
-            try {
-                val pinned = repository.pinPost(feedId, postId, current.pinned <= 0)
-                _post.value = _post.value?.copy(pinned = pinned)
-                _actionMessage.value = if (pinned > 0) R.string.feeds_post_pinned else R.string.feeds_post_unpinned
+            val pinned = try {
+                repository.pinPost(feedId, postId, pinning)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                val before = step.refused()
+                if (before != null && _post.value?.pinned == guess) {
+                    _post.value = _post.value?.copy(pinned = before.value)
+                }
                 _actionError.value = e.toMochiError()
+                release()
+                return@launch
             }
+            step.accepted()
+            // The time the server set, unless a later tap has changed it since.
+            if (_post.value?.pinned == guess) _post.value = _post.value?.copy(pinned = pinned)
+            release()
+            _actionMessage.value = if (pinned > 0) R.string.feeds_post_pinned else R.string.feeds_post_unpinned
         }
     }
 

@@ -10,12 +10,21 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 /**
- * An unanchored comment carries "" or omits the field. Gson instantiates via
- * Unsafe, so an absent field lands as null rather than the Kotlin default - the
- * accessors must treat both alike.
+ * An unanchored comment carries "" or omits the field, and the accessors
+ * treat both alike.
  */
 class CommentAnchorTest {
     private val gson = Gson()
+
+    @Test
+    fun `a field the server leaves out keeps its default, so the comment can be copied`() {
+        // As feeds sends a comment: no created_string.
+        val json = """{"id":"c1","parent":"","body":"hello","format":"text","created":1,"my_reaction":"",
+            "reactions":[],"children":[],"attachments":[]}"""
+        val comment = gson.fromJson(json, Comment::class.java)
+        assertEquals("", comment.createdString)
+        assertEquals("love", comment.copy(myReaction = "love").myReaction)
+    }
 
     @Test
     fun `an anchored comment names its image and caption`() {

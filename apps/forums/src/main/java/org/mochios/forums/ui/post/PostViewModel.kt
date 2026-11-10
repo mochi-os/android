@@ -24,6 +24,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.UndoChain
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
@@ -246,27 +247,89 @@ class PostViewModel @Inject constructor(
         }
     }
 
-    fun votePost(vote: String) {
+    // Votes, lock and pin show on the tap and go back if the server refuses,
+    // as on the web. Each goes back on its own item, and only while it still
+    // shows the tap's guess, so another vote, a lock or a reload that changed
+    // the post meanwhile stays.
+    private val votes = UndoChain<Tally>()
+    private val locks = UndoChain<Boolean>()
+    private val pins = UndoChain<Boolean>()
+
+    /** Taps still waiting on the server. */
+    private var waiting = 0
+
+    /** Whether a tap stopped a reload, which goes out once no tap waits. */
+    private var stopped = false
+
+    /**
+     * Show [guess] on what [read] reads at once, send [request], and if the
+     * server refuses put back what showed before with the error. [read] gives
+     * null when the item is not on screen. The post reloads once the server
+     * has the change.
+     */
+    private fun <F> instant(
+        chain: UndoChain<F>,
+        id: String,
+        read: (PostUiState) -> F?,
+        write: (PostUiState, F) -> PostUiState,
+        guess: (F) -> F,
+        request: suspend () -> Unit,
+    ) {
+        val now = read(_uiState.value)
+        val shown = now?.let(guess)
+        val step = if (now != null && shown != now) chain.start(id) else null
+        if (step != null && now != null && shown != null) {
+            step.remember(now)
+            _uiState.value = write(_uiState.value, shown)
+        }
+        // A reload on its way would land after the guess and put the old
+        // value back, so it is stopped until no tap waits.
+        waiting += 1
+        if (refreshJob?.isActive == true) {
+            refreshJob?.cancel()
+            stopped = true
+        }
         viewModelScope.launch {
             try {
-                repository.votePost(forumId, postId, vote)
-                refresh()
+                request()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                waiting -= 1
+                var state = _uiState.value
+                val before = step?.refused()
+                if (before != null && read(state) == shown) state = write(state, before.value)
+                _uiState.value = state.copy(error = e.toMochiError())
+                if (waiting == 0 && stopped) {
+                    stopped = false
+                    reloadQuietly()
+                }
+                return@launch
             }
+            waiting -= 1
+            step?.accepted()
+            stopped = false
+            refresh()
         }
     }
 
-    fun voteComment(commentId: String, vote: String) {
-        viewModelScope.launch {
-            try {
-                repository.voteComment(forumId, postId, commentId, vote)
-                refresh()
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
+    fun votePost(vote: String) = instant(
+        votes,
+        postId,
+        read = { it.post.tally() },
+        write = { state, tally -> state.copy(post = state.post.with(tally)) },
+        guess = { it.after(vote) },
+    ) { repository.votePost(forumId, postId, vote) }
+
+    fun voteComment(commentId: String, vote: String) = instant(
+        votes,
+        commentId,
+        read = { findComment(it.comments, commentId)?.tally() },
+        write = { state, tally ->
+            state.copy(comments = changeComment(state.comments, commentId) { it.with(tally) })
+        },
+        guess = { it.after(vote) },
+    ) { repository.voteComment(forumId, postId, commentId, vote) }
 
     fun setReplyTo(comment: ForumComment?) {
         _uiState.value = _uiState.value.copy(replyTo = comment)
@@ -385,10 +448,28 @@ class PostViewModel @Inject constructor(
         }
     }
 
-    fun pinPost() = moderate { repository.pinPost(forumId, postId) }
-    fun unpinPost() = moderate { repository.unpinPost(forumId, postId) }
-    fun lockPost() = moderate { repository.lockPost(forumId, postId) }
-    fun unlockPost() = moderate { repository.unlockPost(forumId, postId) }
+    fun pinPost() = pin(true) { repository.pinPost(forumId, postId) }
+    fun unpinPost() = pin(false) { repository.unpinPost(forumId, postId) }
+    fun lockPost() = lock(true) { repository.lockPost(forumId, postId) }
+    fun unlockPost() = lock(false) { repository.unlockPost(forumId, postId) }
+
+    private fun pin(pinned: Boolean, request: suspend () -> Unit) = instant(
+        pins,
+        postId,
+        read = { it.post.pinned },
+        write = { state, value -> state.copy(post = state.post.copy(pinned = value)) },
+        guess = { pinned },
+        request = request,
+    )
+
+    private fun lock(locked: Boolean, request: suspend () -> Unit) = instant(
+        locks,
+        postId,
+        read = { it.post.locked },
+        write = { state, value -> state.copy(post = state.post.copy(locked = value)) },
+        guess = { locked },
+        request = request,
+    )
     fun approvePost() = moderate { repository.approvePost(forumId, postId) }
     fun removePost() = moderate { repository.removePost(forumId, postId) }
     fun restorePost() = moderate { repository.restorePost(forumId, postId) }
@@ -457,3 +538,47 @@ class PostViewModel @Inject constructor(
 
 /** The post route's argument naming the comment it is opened on. */
 private const val COMMENT = "comment"
+
+/** The counts a vote changes, and the reader's own vote: "up", "down" or "". */
+private data class Tally(val up: Int, val down: Int, val vote: String) {
+    /** After the reader's vote changes to [vote], as the web client sums it on the tap. */
+    fun after(vote: String): Tally {
+        if (vote == this.vote) return this
+        var up = up
+        var down = down
+        if (this.vote == "up") up -= 1
+        if (this.vote == "down") down -= 1
+        if (vote == "up") up += 1
+        if (vote == "down") down += 1
+        return Tally(up, down, vote)
+    }
+}
+
+private fun Post.tally() = Tally(up, down, userVote)
+
+private fun Post.with(tally: Tally) = copy(up = tally.up, down = tally.down, userVote = tally.vote)
+
+private fun ForumComment.tally() = Tally(up, down, userVote)
+
+private fun ForumComment.with(tally: Tally) =
+    copy(up = tally.up, down = tally.down, userVote = tally.vote)
+
+/** The comment with [id] anywhere in the thread. */
+private fun findComment(comments: List<ForumComment>, id: String): ForumComment? {
+    for (comment in comments) {
+        if (comment.id == id) return comment
+        findComment(comment.children, id)?.let { return it }
+    }
+    return null
+}
+
+/** The thread with [change] made to the comment with [id], wherever it sits. */
+private fun changeComment(
+    comments: List<ForumComment>,
+    id: String,
+    change: (ForumComment) -> ForumComment,
+): List<ForumComment> = comments.map { comment ->
+    val updated = if (comment.id == id) change(comment) else comment
+    if (updated.children.isEmpty()) updated
+    else updated.copy(children = changeComment(updated.children, id, change))
+}
