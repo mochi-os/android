@@ -43,9 +43,16 @@ import org.mochios.market.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiImage
 
+/**
+ * A pager of the listing's photos with a strip of tiles under it. The strip
+ * draws [thumbnailUrls], the same photos in the same order at thumbnail size:
+ * every tile in view loads at once, and a 56 dp tile has no use for the
+ * pager's full-size image.
+ */
 @Composable
 fun PhotoCarousel(
     photoUrls: List<String>,
+    thumbnailUrls: List<String>,
     modifier: Modifier = Modifier,
     onPhotoTap: (Int) -> Unit = {},
 ) {
@@ -114,7 +121,7 @@ fun PhotoCarousel(
                     ) {
                         MochiImage(
                             model = ImageRequest.Builder(context)
-                                .data(url)
+                                .data(thumbnailUrls.getOrNull(index) ?: url)
                                 .crossfade(true)
                                 .build(),
                             contentDescription = stringResource(

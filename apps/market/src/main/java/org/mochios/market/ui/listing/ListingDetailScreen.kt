@@ -604,6 +604,9 @@ private fun ListingDetailContent(
         // listing's embedded primary photo when that list is empty.
         buildPhotoUrls(photos, detail.listing)
     }
+    val thumbnailUrls = remember(detail.listing.id, photos) {
+        buildPhotoUrls(photos, detail.listing, "thumbnail")
+    }
     val sellerStatus = seller.status.orEmpty().lowercase()
     val sellerSuspended = sellerStatus == "suspended" || sellerStatus == "banned"
     val showAppealPending = detail.appealPending &&
@@ -632,6 +635,7 @@ private fun ListingDetailContent(
 
         PhotoCarousel(
             photoUrls = photoUrls,
+            thumbnailUrls = thumbnailUrls,
             onPhotoTap = onPhotoTap,
             modifier = Modifier.fillMaxWidth(),
         )
@@ -1284,13 +1288,15 @@ private fun parseTags(json: String): List<String> {
 
 // Server-relative paths: the shared RelativeAssetUrlMapper resolves them
 // against the session server inside the Coil pipeline, as ListingCard does.
-private fun buildPhotoUrls(photos: List<Photo>, listing: Listing?): List<String> {
+// With no variant each is the original upload; a variant ("thumbnail") names
+// the same photos at that size, in the same order.
+internal fun buildPhotoUrls(photos: List<Photo>, listing: Listing?, variant: String? = null): List<String> {
     val urls = photos.mapNotNull { photo ->
-        photo.id.takeIf { it.isNotBlank() }?.let { photoAddress(it) }
+        photo.id.takeIf { it.isNotBlank() }?.let { photoAddress(it, variant) }
     }
     if (urls.isNotEmpty()) return urls
     val photoId = listing?.photo?.id?.takeIf { it.isNotBlank() } ?: return emptyList()
-    return listOfNotNull(photoAddress(photoId))
+    return listOfNotNull(photoAddress(photoId, variant))
 }
 
 @EntryPoint

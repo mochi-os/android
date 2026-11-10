@@ -57,7 +57,8 @@ class CountFormatTest {
     /** The position among the photos is counted; a thumbnail's number is a label. */
     @Test
     fun `a carousel's photo position and thumbnail`() {
-        show { PhotoCarousel(photoUrls = List(1234) { index -> "https://example.org/$index.png" }) }
+        val urls = List(1234) { index -> "https://example.org/$index.png" }
+        show { PhotoCarousel(photoUrls = urls, thumbnailUrls = urls) }
         rule.onNodeWithContentDescription("الصورة 1 من 1.234").assertExists()
         rule.onNodeWithContentDescription("صورة مصغرة 1").assertExists()
     }
