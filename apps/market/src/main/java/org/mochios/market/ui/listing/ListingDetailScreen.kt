@@ -599,13 +599,10 @@ private fun ListingDetailContent(
     val parsedLocation = remember(listing.location) { parseLocation(listing.location) }
     val locationDisplay = locationName(parsedLocation)
     val format = LocalFormat.current
-    val photoUrls = remember(detail.listing.id, photos) {
+    val carousel = remember(detail.listing.id, photos) {
         // /-/photo/{id} paths from the photos endpoint, falling back to the
         // listing's embedded primary photo when that list is empty.
-        buildPhotoUrls(photos, detail.listing)
-    }
-    val thumbnailUrls = remember(detail.listing.id, photos) {
-        buildPhotoUrls(photos, detail.listing, "thumbnail")
+        carouselUrls(photos, detail.listing)
     }
     val sellerStatus = seller.status.orEmpty().lowercase()
     val sellerSuspended = sellerStatus == "suspended" || sellerStatus == "banned"
@@ -634,8 +631,8 @@ private fun ListingDetailContent(
         }
 
         PhotoCarousel(
-            photoUrls = photoUrls,
-            thumbnailUrls = thumbnailUrls,
+            photoUrls = carousel.pages,
+            thumbnailUrls = carousel.tiles,
             onPhotoTap = onPhotoTap,
             modifier = Modifier.fillMaxWidth(),
         )
@@ -1298,6 +1295,17 @@ internal fun buildPhotoUrls(photos: List<Photo>, listing: Listing?, variant: Str
     val photoId = listing?.photo?.id?.takeIf { it.isNotBlank() } ?: return emptyList()
     return listOfNotNull(photoAddress(photoId, variant))
 }
+
+/** The carousel's addresses: its pages and the tiles of its strip. */
+internal data class CarouselUrls(val pages: List<String>, val tiles: List<String>)
+
+// The pager is a square no wider than the screen, so it draws the 1280 px
+// preview (a camera photo's original is twenty times its size) and the strip
+// draws thumbnails; only the full-screen lightbox shows the originals.
+internal fun carouselUrls(photos: List<Photo>, listing: Listing?) = CarouselUrls(
+    pages = buildPhotoUrls(photos, listing, "preview"),
+    tiles = buildPhotoUrls(photos, listing, "thumbnail"),
+)
 
 @EntryPoint
 @InstallIn(SingletonComponent::class)

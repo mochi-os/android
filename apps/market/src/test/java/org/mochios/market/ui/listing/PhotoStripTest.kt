@@ -28,10 +28,11 @@ import org.robolectric.annotation.Config
 import java.util.concurrent.ConcurrentLinkedQueue
 
 /**
- * Every tile of the listing's photo strip in view loads at once, so the strip
- * asks for thumbnails: drawn from the originals, opening a six-photo listing
- * fetched six full uploads (1.1-1.45 MB each) for 56 dp tiles. The pager
- * above it still asks for its own photo.
+ * The listing's photo carousel asks for no original: its pager, a square no
+ * wider than the screen, draws the 1280 px preview, and every tile of its
+ * strip in view loads at once, so the strip draws thumbnails. Drawn from the
+ * originals, opening a six-photo listing fetched six full uploads (1.1-1.45 MB
+ * each). The full-screen lightbox alone shows originals.
  */
 @OptIn(DelicateCoilApi::class)
 @RunWith(RobolectricTestRunner::class)
@@ -60,17 +61,15 @@ class PhotoStripTest {
     fun end() = SingletonImageLoader.reset()
 
     @Test
-    fun `the strip asks for thumbnails and the pager for its own photo`() {
+    fun `the pager asks for previews and the strip for thumbnails`() {
         val photos = List(6) { index -> Photo(id = "p$index") }
+        val carousel = carouselUrls(photos, null)
         rule.setContent {
-            PhotoCarousel(
-                photoUrls = buildPhotoUrls(photos, null),
-                thumbnailUrls = buildPhotoUrls(photos, null, "thumbnail"),
-            )
+            PhotoCarousel(photoUrls = carousel.pages, thumbnailUrls = carousel.tiles)
         }
-        // Six tiles and the pager's page: seven addresses when the strip asks
-        // for thumbnails, six when it shares the pager's (tile 0 is page 0).
-        rule.waitUntil(5_000) { loaded.toSet().size >= 6 && "/market/-/photo/p0" in loaded }
+        // Six tiles and the pager's page: seven addresses, or six when the
+        // strip shares the pager's (tile 0 is page 0).
+        rule.waitUntil(5_000) { loaded.toSet().size >= 6 }
         runCatching { rule.waitUntil(2_000) { loaded.toSet().size >= 7 } }
         rule.waitForIdle()
         val requested = loaded.toSet()
@@ -80,8 +79,8 @@ class PhotoStripTest {
             requested.filter { it.endsWith("/thumbnail") }.toSet(),
         )
         assertEquals(
-            "the pager asks for its own page, and no other full-size photo is fetched",
-            setOf("/market/-/photo/p0"),
+            "THE POINT: the pager asks for its page's preview, and no original is fetched",
+            setOf("/market/-/photo/p0/preview"),
             requested.filterNot { it.endsWith("/thumbnail") }.toSet(),
         )
     }
