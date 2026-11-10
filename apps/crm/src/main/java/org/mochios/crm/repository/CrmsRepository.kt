@@ -109,6 +109,19 @@ class CrmsRepository @Inject constructor(
         return objects
     }
 
+    /**
+     * The board's list whatever its age, for an item's parent and link
+     * pickers: the board keeps it current while it follows the frames, and
+     * drops it ([forgetObjects]) when it cannot. An item opened a minute after
+     * the board loaded used to download the whole list again for them.
+     */
+    fun getHeldObjects(crmId: String): List<CrmObject>? = objectsCache[crmId]?.first
+
+    /** Drops the held list: the board missed a change to it, or has gone. */
+    fun forgetObjects(crmId: String) {
+        objectsCache.remove(crmId)
+    }
+
     fun invalidateCache(crmId: String) {
         crmInfoCache.remove(crmId)
         objectsCache.remove(crmId)

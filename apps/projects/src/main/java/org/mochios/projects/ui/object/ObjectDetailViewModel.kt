@@ -737,7 +737,7 @@ class ObjectDetailViewModel @Inject constructor(
     private fun loadSiblingObjects() {
         viewModelScope.launch {
             try {
-                val cached = repository.getCachedObjects(currentProjectId)
+                val cached = repository.getHeldObjects(currentProjectId)
                 if (cached != null) {
                     _uiState.value = _uiState.value.copy(siblingObjects = cached)
                     return@launch

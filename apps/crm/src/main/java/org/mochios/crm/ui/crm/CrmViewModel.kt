@@ -151,6 +151,8 @@ class CrmViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         wsSubscriptionId?.let { webSocket.unsubscribe(it) }
+        // Nothing follows the frames for the held list now.
+        repository.forgetObjects(crmId)
     }
 
     fun loadCrm() {
@@ -251,11 +253,13 @@ class CrmViewModel @Inject constructor(
             crmJob?.cancel()
             crmPending = false
             crmStale = true
+            repository.forgetObjects(crmId)
         }
         if (objectsPending) {
             objectsJob?.cancel()
             objectsPending = false
             objectsStale = true
+            repository.forgetObjects(crmId)
         }
     }
 
@@ -651,8 +655,11 @@ class CrmViewModel @Inject constructor(
     private fun markStale(type: String) {
         if (type in OBJECT_FRAMES) {
             objectsStale = true
+            // The held list an item's pickers read is now behind.
+            repository.forgetObjects(crmId)
         } else if (isCrmFrame(type)) {
             crmStale = true
+            repository.forgetObjects(crmId)
         }
     }
 

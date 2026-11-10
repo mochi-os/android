@@ -212,6 +212,8 @@ class ProjectViewModel @Inject constructor(
     override fun onCleared() {
         super.onCleared()
         wsSubscriptionId?.let { webSocket.unsubscribe(it) }
+        // Nothing follows the frames for the held list now.
+        repository.forgetObjects(projectId)
     }
 
     fun loadProject() {
@@ -303,11 +305,13 @@ class ProjectViewModel @Inject constructor(
             projectJob?.cancel()
             projectPending = false
             projectStale = true
+            repository.forgetObjects(projectId)
         }
         if (objectsPending) {
             objectsJob?.cancel()
             objectsPending = false
             objectsStale = true
+            repository.forgetObjects(projectId)
         }
     }
 
@@ -773,8 +777,11 @@ class ProjectViewModel @Inject constructor(
     private fun markStale(type: String) {
         if (type in OBJECT_FRAMES) {
             objectsStale = true
+            // The held list an item's pickers read is now behind.
+            repository.forgetObjects(projectId)
         } else if (isProjectFrame(type)) {
             projectStale = true
+            repository.forgetObjects(projectId)
         }
     }
 
