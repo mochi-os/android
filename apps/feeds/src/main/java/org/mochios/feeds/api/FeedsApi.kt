@@ -72,6 +72,9 @@ data class PostListResponse(
     val posts: List<Post> = emptyList(),
     val hasMore: Boolean = false,
     val nextCursor: Long = 0,
+    // Where the next page resumes; a server that predates it sends none, and
+    // the next page is asked for by nextCursor.
+    val cursor: String? = null,
     // Nullable: the "All feeds" aggregate endpoint (-/posts) has no single feed
     // to scope permissions to and returns null. A non-null type would let Gson
     // set the field to null and then NPE when constructing PostListResult.
@@ -332,6 +335,7 @@ interface FeedsApi {
     suspend fun getPosts(
         @Path("feedId") feedId: String,
         @Query("before") before: String? = null,
+        @Query("cursor") cursor: String? = null,
         @Query("offset") offset: Long? = null,
         @Query("limit") limit: Int = 20,
         @Query("sort") sort: String? = null,
@@ -345,6 +349,7 @@ interface FeedsApi {
     @GET("-/posts")
     suspend fun getAllPosts(
         @Query("before") before: String? = null,
+        @Query("cursor") cursor: String? = null,
         @Query("offset") offset: Long? = null,
         @Query("limit") limit: Int = 20,
         @Query("sort") sort: String? = null,

@@ -130,6 +130,7 @@ data class PostListResult(
     val posts: List<Post>,
     val hasMore: Boolean,
     val nextCursor: Long = 0,
+    val cursor: String? = null,
     val permissions: Permissions = Permissions()
 )
 
@@ -483,9 +484,10 @@ class FeedsRepository @Inject constructor(
         sort: String? = null,
         tag: String? = null,
         unreadOnly: Boolean = false,
-        forceRefresh: Boolean = false
+        forceRefresh: Boolean = false,
+        cursor: String? = null
     ): PostListResult {
-        val isFirstPage = before == null && offset == null
+        val isFirstPage = before == null && offset == null && cursor == null
         // Only cache first-page requests. An explicit refresh skips the cached
         // copy and re-fetches so it can't show stale data (e.g. comments that
         // changed since the cache was written).
@@ -497,6 +499,7 @@ class FeedsRepository @Inject constructor(
             val response = api.getPosts(
                 feedId = feedId,
                 before = before,
+                cursor = cursor,
                 offset = offset,
                 limit = limit,
                 sort = sort,
@@ -507,6 +510,7 @@ class FeedsRepository @Inject constructor(
                 posts = response.posts,
                 hasMore = response.hasMore,
                 nextCursor = response.nextCursor,
+                cursor = response.cursor,
                 permissions = response.permissions ?: Permissions()
             )
             if (isFirstPage && account != null && session.getBoundIdentity() == account) {
@@ -526,11 +530,13 @@ class FeedsRepository @Inject constructor(
         offset: Long? = null,
         limit: Int = 20,
         sort: String? = null,
-        unreadOnly: Boolean = false
+        unreadOnly: Boolean = false,
+        cursor: String? = null
     ): PostListResult {
         return try {
             val response = api.getAllPosts(
                 before = before,
+                cursor = cursor,
                 offset = offset,
                 limit = limit,
                 sort = sort,
@@ -540,6 +546,7 @@ class FeedsRepository @Inject constructor(
                 posts = response.posts,
                 hasMore = response.hasMore,
                 nextCursor = response.nextCursor,
+                cursor = response.cursor,
                 permissions = response.permissions ?: Permissions()
             )
         } catch (e: Exception) {

@@ -137,8 +137,8 @@ class ForumsRepository @Inject constructor(
         Shortcuts.reconcile(context, "forums", Shortcuts.paths(response.forums, { it.name }) { listOf(it.id, it.fingerprint) })
     }
 
-    suspend fun viewForum(forumId: String, before: Long? = null, sort: String? = null, tag: String? = null): ViewForumResponse =
-        api.viewForum(forumId, before = before, sort = sort, tag = tag).unwrap()
+    suspend fun viewForum(forumId: String, before: Long? = null, sort: String? = null, tag: String? = null, cursor: String? = null): ViewForumResponse =
+        api.viewForum(forumId, before = before, cursor = cursor, sort = sort, tag = tag).unwrap()
 
     /** Fetch the forum row plus viewer permissions (no posts) — used by settings. */
     suspend fun getForumInfo(forumId: String): ForumInfoResponse =

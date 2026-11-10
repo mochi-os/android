@@ -46,6 +46,8 @@ data class ForumUiState(
     val sort: String = "",
     val hasMore: Boolean = false,
     val nextCursor: Long? = null,
+    /** Where the next page resumes, from a server that sends it. */
+    val cursor: String? = null,
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,
@@ -352,6 +354,7 @@ class ForumViewModel @Inject constructor(
                 canModerate = r.can_moderate,
                 hasMore = r.hasMore,
                 nextCursor = r.nextCursor,
+                cursor = r.cursor,
                 isRefreshing = false,
             )
             // The awaited post has landed once the list grows; anything arriving
@@ -423,6 +426,7 @@ class ForumViewModel @Inject constructor(
                     sort = resolved,
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
+                    cursor = r.cursor,
                     isLoading = false
                 )
                 subscribeWebSocket(r.forum.fingerprint)
@@ -449,6 +453,7 @@ class ForumViewModel @Inject constructor(
                     canModerate = r.can_moderate,
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
+                    cursor = r.cursor,
                     isRefreshing = false,
                     error = null
                 )
@@ -508,6 +513,7 @@ class ForumViewModel @Inject constructor(
                     hasAi = r.hasAi,
                     hasMore = false,
                     nextCursor = null,
+                    cursor = null,
                     tags = emptyList(),
                     currentTag = null,
                     isLoading = false,
@@ -524,20 +530,25 @@ class ForumViewModel @Inject constructor(
     }
 
     fun loadMore() {
-        val cursor = _uiState.value.nextCursor ?: return
+        // The server's cursor names the next page exactly; a server that
+        // predates it is asked by before, from nextCursor.
+        val cursor = _uiState.value.cursor
+        val before = _uiState.value.nextCursor
+        if (cursor == null && before == null) return
         if (_uiState.value.isLoadingMore) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoadingMore = true)
             try {
-                val r = repository.viewForum(forumId, before = cursor, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
+                val r = repository.viewForum(forumId, before = if (cursor == null) before else null, cursor = cursor, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
                 _uiState.value = _uiState.value.copy(
-                    // Pinned posts repeat on every page and score ordering on a
-                    // `created` cursor repeats earlier posts; duplicate ids
-                    // would be duplicate LazyColumn keys, which Compose throws
-                    // on.
+                    // A server before the cursor repeats pinned posts on every
+                    // page, and a scored list paged by position can repeat a
+                    // post that moved up; duplicate ids would be duplicate
+                    // LazyColumn keys, which Compose throws on.
                     posts = appendDistinct(_uiState.value.posts, r.posts) { it.id },
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
+                    cursor = r.cursor,
                     isLoadingMore = false
                 )
             } catch (e: Exception) {

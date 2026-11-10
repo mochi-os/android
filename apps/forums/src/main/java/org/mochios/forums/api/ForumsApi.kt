@@ -64,7 +64,9 @@ data class ViewForumResponse(
     /** The server has an AI account, so the "AI" sort is worth offering. */
     val hasAi: Boolean = false,
     val hasMore: Boolean = false,
-    val nextCursor: Long? = null
+    val nextCursor: Long? = null,
+    /** Where the next page resumes; a server that predates it sends none. */
+    val cursor: String? = null
 )
 
 /** Viewer permissions block returned alongside the forum row. */
@@ -343,6 +345,7 @@ interface ForumsApi {
         @Path("forumId") forumId: String,
         @Query("limit") limit: Int? = null,
         @Query("before") before: Long? = null,
+        @Query("cursor") cursor: String? = null,
         @Query("server") server: String? = null,
         @Query("sort") sort: String? = null,
         @Query("tag") tag: String? = null

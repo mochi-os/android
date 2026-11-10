@@ -168,6 +168,9 @@ class FeedViewModel @Inject constructor(
     val hasMore: StateFlow<Boolean> = _hasMore.asStateFlow()
 
     private var nextCursor: Long = 0
+    // Where the next page resumes, from a server that sends it: posts sharing
+    // a second, and lists sorted by score, page exactly only by it.
+    private var cursor: String? = null
 
     private val _error = MutableStateFlow<MochiError?>(null)
     val error: StateFlow<MochiError?> = _error.asStateFlow()
@@ -390,6 +393,7 @@ class FeedViewModel @Inject constructor(
                 _posts.value = cachedPosts.posts
                 _hasMore.value = cachedPosts.hasMore
                 nextCursor = cachedPosts.nextCursor
+                cursor = cachedPosts.cursor
                 _isLoading.value = false
                 // Refresh in background
                 refreshSilently()
@@ -444,6 +448,7 @@ class FeedViewModel @Inject constructor(
                         _posts.value = result.posts
                         _hasMore.value = result.hasMore
                         nextCursor = result.nextCursor
+                        cursor = result.cursor
                     }
                 }
             } catch (e: Exception) {
@@ -513,19 +518,22 @@ class FeedViewModel @Inject constructor(
         _posts.value = result.posts
         _hasMore.value = result.hasMore
         nextCursor = result.nextCursor
+        cursor = result.cursor
     }
 
-    // One page for the current view. Pages by a `before` cursor (last post's
-    // created; server filters `created < before`) or by `offset` for relevance
-    // sorts.
+    // One page for the current view. Pages by the server's `cursor`, or from a
+    // server that predates it by a `before` cursor (last post's created;
+    // server filters `created < before`) or by `offset` for relevance sorts.
     private suspend fun fetchPosts(
         before: String? = null,
         offset: Long? = null,
         forceRefresh: Boolean = false,
+        cursor: String? = null,
     ): PostListResult {
         return if (isAllFeeds) {
             repository.getAllPosts(
                 before = before,
+                cursor = cursor,
                 offset = offset,
                 sort = _currentSort.value,
                 unreadOnly = _unreadOnly.value,
@@ -539,6 +547,7 @@ class FeedViewModel @Inject constructor(
                 tag = _currentTag.value,
                 unreadOnly = _unreadOnly.value,
                 forceRefresh = forceRefresh,
+                cursor = cursor,
             )
         }
     }
@@ -564,6 +573,7 @@ class FeedViewModel @Inject constructor(
                     _posts.value = result.posts
                     _hasMore.value = result.hasMore
                     nextCursor = result.nextCursor
+                    cursor = result.cursor
 
                 }
                 // The reader asked for the list as it now is, from the top.
@@ -633,14 +643,16 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             _isLoadingMore.value = true
             try {
-                // Relevance sorts page by opaque offset; chronological sorts by
-                // the `before` cursor (nextCursor is the last post's created
-                // timestamp — sending the post id instead once dead-ended the
-                // feed after one page). Both apply to the aggregate too.
-                val result = if (isRelevanceSort) {
-                    fetchPosts(offset = nextCursor)
-                } else {
-                    fetchPosts(before = nextCursor.toString())
+                // The server's cursor names the next page exactly. From a
+                // server that predates it: relevance sorts page by opaque
+                // offset, the rest by the `before` cursor (nextCursor is the
+                // last post's created timestamp — sending the post id instead
+                // once dead-ended the feed after one page). All apply to the
+                // aggregate too.
+                val result = when {
+                    cursor != null -> fetchPosts(cursor = cursor)
+                    isRelevanceSort -> fetchPosts(offset = nextCursor)
+                    else -> fetchPosts(before = nextCursor.toString())
                 }
                 // Relevance paging is over a score column the server rescores
                 // as page 1 is fetched, so a later page legitimately repeats
@@ -649,6 +661,7 @@ class FeedViewModel @Inject constructor(
                 _posts.value = appendDistinct(_posts.value, result.posts) { it.id }
                 _hasMore.value = result.hasMore
                 nextCursor = result.nextCursor
+                cursor = result.cursor
             } catch (_: Exception) {
                 // Silent failure for pagination
             } finally {
@@ -979,6 +992,7 @@ class FeedViewModel @Inject constructor(
                     _posts.value = result.posts
                     _hasMore.value = result.hasMore
                     nextCursor = result.nextCursor
+                    cursor = result.cursor
                 }
                 reached = null
             } catch (_: Exception) {
@@ -1121,6 +1135,7 @@ class FeedViewModel @Inject constructor(
             _posts.value = merged
             _hasMore.value = result.hasMore
             nextCursor = result.nextCursor
+            cursor = result.cursor
             // The fresh list incorporates any queued posts — clear the count.
             newPosts.clear()
         } catch (_: Exception) {
