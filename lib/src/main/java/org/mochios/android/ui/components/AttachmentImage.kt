@@ -53,7 +53,10 @@ fun AttachmentImage(
     modifier: Modifier = Modifier,
     contentScale: ContentScale = ContentScale.Crop,
     shape: Shape = RectangleShape,
+    // Loaded in place of [model] if [model] fails, before any failure shows.
+    fallback: Any? = null,
 ) {
+    var source by remember(model, fallback) { mutableStateOf(model) }
     var failure by remember(model) { mutableStateOf<AttachmentFailure?>(null) }
     var loaded by remember(model) { mutableStateOf(false) }
     var attempt by remember(model) { mutableIntStateOf(0) }
@@ -111,12 +114,16 @@ fun AttachmentImage(
     // the image, which a wrapping box would collapse.
     key(attempt) {
         AsyncImage(
-            model = model,
+            model = source,
             contentDescription = contentDescription,
             contentScale = contentScale,
             onSuccess = { loaded = true },
             onError = { state ->
-                failure = attachmentFailure(attachmentStatus(state.result.throwable))
+                if (fallback != null && source != fallback) {
+                    source = fallback
+                } else {
+                    failure = attachmentFailure(attachmentStatus(state.result.throwable))
+                }
             },
             modifier = modifier.then(if (loaded) Modifier else Modifier.imagePlaceholder(shape)),
         )

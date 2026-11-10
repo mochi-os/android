@@ -49,6 +49,10 @@ fun MediaGrid(
     // the caption is still in the lightbox, the count is nowhere else.
     captions: List<String>? = null,
     maxDisplay: Int = 4,
+    // The 640px medium of each image (same order as `urls`), or null where
+    // there is none. A cell drawn small enough takes it instead of its
+    // thumbnailUrls entry, which it falls back to if the medium fails.
+    mediumUrls: List<String?>? = null,
 ) {
     if (urls.isEmpty()) return
 
@@ -58,6 +62,17 @@ fun MediaGrid(
     fun thumbOrUrl(i: Int): String = thumbnailUrls?.getOrNull(i) ?: urls[i]
     fun describe(i: Int): String? = contentDescriptions?.getOrNull(i)
     fun captionFor(i: Int): String? = captions?.getOrNull(i)?.takeIf { it.isNotEmpty() }
+    val image: @Composable (Int) -> Unit = { i ->
+        TileVariant(medium = mediumUrls?.getOrNull(i), preview = thumbOrUrl(i), modifier = Modifier.fillMaxSize()) { model, fallback ->
+            AttachmentImage(
+                model = model,
+                fallback = fallback,
+                contentDescription = describe(i),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+    }
 
     when (displayCount) {
         1 -> {
@@ -68,12 +83,7 @@ fun MediaGrid(
                     .clip(shape)
                     .clickable { onClick(0) }
             ) {
-                AttachmentImage(
-                    model = thumbOrUrl(0),
-                    contentDescription = describe(0),
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxSize()
-                )
+                image(0)
                 captionFor(0)?.let { AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter)) }
             }
         }
@@ -90,12 +100,7 @@ fun MediaGrid(
                             .clip(shape)
                             .clickable { onClick(i) }
                     ) {
-                        AttachmentImage(
-                            model = thumbOrUrl(i),
-                            contentDescription = describe(i),
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier.fillMaxSize()
-                        )
+                        image(i)
                         captionFor(i)?.let { AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter)) }
                     }
                 }
@@ -113,12 +118,7 @@ fun MediaGrid(
                         .clip(shape)
                         .clickable { onClick(0) }
                 ) {
-                    AttachmentImage(
-                        model = thumbOrUrl(0),
-                        contentDescription = describe(0),
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize()
-                    )
+                    image(0)
                     captionFor(0)?.let { AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter)) }
                 }
                 Row(
@@ -133,12 +133,7 @@ fun MediaGrid(
                                 .clip(shape)
                                 .clickable { onClick(i) }
                         ) {
-                            AttachmentImage(
-                                model = thumbOrUrl(i),
-                                contentDescription = describe(i),
-                                contentScale = ContentScale.Crop,
-                                modifier = Modifier.fillMaxSize()
-                            )
+                            image(i)
                             val overflow = i == displayCount - 1 && urls.size > maxDisplay
                             if (overflow) {
                                 Box(

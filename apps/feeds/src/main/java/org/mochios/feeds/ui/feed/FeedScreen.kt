@@ -155,8 +155,10 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.RefreshButton
+import org.mochios.android.ui.components.TileVariant
 import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.VideoPlayer
+import org.mochios.android.ui.components.mediumAddress
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.addressed
 import org.mochios.android.util.attachmentAddress
@@ -1234,6 +1236,8 @@ private fun GalleryContent(
                                 ?: attachmentAddress("feeds", attachmentFeed, attachment.id, "thumbnail").orEmpty()
                         }
                     },
+                    // A tile drawn small enough takes the 640px medium.
+                    mediumModel = { attachment -> mediumAddress(attachment.previewUrl) },
                     onTap = { index ->
                         val attachment = media[index]
                         if (attachment.isVideo) {
@@ -1288,6 +1292,7 @@ internal fun GalleryMosaic(
     media: List<Attachment>,
     tileModel: (Attachment) -> Any,
     onTap: (index: Int) -> Unit,
+    mediumModel: ((Attachment) -> String?)? = null,
     modifier: Modifier = Modifier,
 ) {
     val shown = media.take(GALLERY_TILE_LIMIT)
@@ -1298,6 +1303,7 @@ internal fun GalleryMosaic(
             GalleryTile(
                 attachment = shown[index],
                 model = tileModel(shown[index]),
+                medium = mediumModel?.invoke(shown[index]),
                 contentScale = scale,
                 more = if (index == shown.lastIndex && overflow > 0) overflow else 0,
                 onClick = { onTap(index) },
@@ -1378,6 +1384,8 @@ internal fun GalleryTile(
     model: Any,
     contentScale: ContentScale,
     more: Int,
+    // The image's 640px medium, taken when the tile is drawn small enough.
+    medium: String? = null,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -1402,12 +1410,15 @@ internal fun GalleryTile(
                 )
             }
         } else {
-            MochiImage(
-                model = model as String,
-                contentDescription = attachment.caption.ifEmpty { attachment.name },
-                contentScale = contentScale,
-                modifier = Modifier.fillMaxSize(),
-            )
+            TileVariant(medium = medium, preview = model as String, modifier = Modifier.fillMaxSize()) { source, fallback ->
+                MochiImage(
+                    model = source,
+                    fallback = fallback,
+                    contentDescription = attachment.caption.ifEmpty { attachment.name },
+                    contentScale = contentScale,
+                    modifier = Modifier.fillMaxSize(),
+                )
+            }
         }
         // The "+N" overlay owns the last tile's face; the caption is still in
         // the lightbox, the count is nowhere else.
@@ -1679,6 +1690,7 @@ internal fun PostCard(
                                     ?: att.thumbnailUrl
                                     ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
                             },
+                            mediumUrls = gridImages.map { att -> mediumAddress(att.previewUrl) },
                             contentDescriptions = gridImages.map { it.caption.ifEmpty { it.name } },
                             captions = gridImages.map { it.caption },
                             onClick = { index ->

@@ -114,6 +114,7 @@ import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
 import org.mochios.android.ui.components.findInThread
+import org.mochios.android.ui.components.mediumAddress
 import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.addressed
@@ -818,6 +819,7 @@ internal fun PostContent(
                         ?: att.thumbnailUrl
                         ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
                 },
+                mediumUrlBuilder = { att -> mediumAddress(att.previewUrl) },
                 commentCount = commentCount,
                 comments = comments,
             )

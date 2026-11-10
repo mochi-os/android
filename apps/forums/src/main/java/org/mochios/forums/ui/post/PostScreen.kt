@@ -116,13 +116,6 @@ import org.mochios.android.ui.components.CommentAction
 import org.mochios.android.ui.components.CommentItem
 import org.mochios.android.ui.components.CommentRow
 import org.mochios.android.ui.components.CommentThreadBack
-import org.mochios.android.ui.components.commentRows
-import org.mochios.android.ui.components.findInThread
-import org.mochios.android.ui.components.rememberCollapsedComments
-import org.mochios.android.ui.components.rememberReplyFocus
-import org.mochios.android.util.addressed
-import org.mochios.android.util.attachmentAddress
-import org.mochios.android.util.shareLink
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
@@ -141,6 +134,14 @@ import org.mochios.android.ui.components.PostTagsButton
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.TagItem
+import org.mochios.android.ui.components.commentRows
+import org.mochios.android.ui.components.findInThread
+import org.mochios.android.ui.components.mediumAddress
+import org.mochios.android.ui.components.rememberCollapsedComments
+import org.mochios.android.ui.components.rememberReplyFocus
+import org.mochios.android.util.addressed
+import org.mochios.android.util.attachmentAddress
+import org.mochios.android.util.shareLink
 import org.mochios.forums.R
 import org.mochios.forums.model.Destination
 import org.mochios.forums.model.ForumComment
@@ -928,6 +929,7 @@ internal fun PostHeader(
                         ?: att.thumbnailUrl
                         ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
                 },
+                mediumUrlBuilder = { att -> mediumAddress(att.previewUrl) },
                 commentCount = commentCount,
                 comments = comments,
             )

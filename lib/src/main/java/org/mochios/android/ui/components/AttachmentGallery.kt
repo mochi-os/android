@@ -67,6 +67,9 @@ fun AttachmentGallery(
     // Larger image variant for the full-width grid; the compact (comment)
     // layout always stays on thumbnails. Falls back to thumbnailUrlBuilder.
     previewUrlBuilder: ((Attachment) -> String)? = null,
+    // The 640px medium, for grid cells drawn small enough for it; null where
+    // there is none. A cell falls back to the preview if the medium fails.
+    mediumUrlBuilder: ((Attachment) -> String?)? = null,
     compact: Boolean = false,
     onDelete: ((Attachment) -> Unit)? = null,
     modifier: Modifier = Modifier,
@@ -140,6 +143,7 @@ fun AttachmentGallery(
                 MediaGrid(
                     urls = images.map { resolvedUrl(it) },
                     thumbnailUrls = resolvedPreview?.let { pb -> images.map { pb(it) } },
+                    mediumUrls = mediumUrlBuilder?.let { mb -> images.map { mb(it) } },
                     contentDescriptions = images.map { it.caption.ifEmpty { it.name } },
                     captions = images.map { it.caption },
                     onClick = { index ->

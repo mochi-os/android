@@ -59,7 +59,10 @@ fun MochiImage(
     contentScale: ContentScale = ContentScale.Crop,
     shape: Shape = RectangleShape,
     onClick: (() -> Unit)? = null,
+    // Loaded in place of [model] if [model] fails, before the broken glyph shows.
+    fallback: Any? = null,
 ) {
+    var source by remember(model, fallback) { mutableStateOf(model) }
     var state by remember(model) {
         mutableStateOf<AsyncImagePainter.State>(AsyncImagePainter.State.Empty)
     }
@@ -94,11 +97,17 @@ fun MochiImage(
         } else {
             key(retry) {
                 AsyncImage(
-                    model = model,
+                    model = source,
                     contentDescription = contentDescription,
                     contentScale = contentScale,
                     alignment = alignment,
-                    onState = { next -> state = next },
+                    onState = { next ->
+                        if (next is AsyncImagePainter.State.Error && fallback != null && source != fallback) {
+                            source = fallback
+                        } else {
+                            state = next
+                        }
+                    },
                     modifier = Modifier.fillMaxSize(),
                 )
             }
