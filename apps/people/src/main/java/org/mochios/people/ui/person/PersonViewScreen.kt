@@ -219,7 +219,7 @@ private fun FriendState.status() = when (this) {
     FriendState.Self -> PersonStatus.SELF
     FriendState.InvitedThem -> PersonStatus.INVITED
     FriendState.Contact -> PersonStatus.CONTACT
-    is FriendState.InvitedByThem, FriendState.NotFriend -> null
+    is FriendState.InvitedByThem, FriendState.NotFriend, FriendState.Unknown -> null
 }
 
 @Composable
@@ -239,7 +239,8 @@ private fun ActionRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
     ) {
         when (friendState) {
-            FriendState.Self -> Unit
+            // Not known: no action is offered that the relationship might not allow.
+            FriendState.Self, FriendState.Unknown -> Unit
             FriendState.Friend -> {
                 MochiOutlinedButton(
                     onClick = onMessage,

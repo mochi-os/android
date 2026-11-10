@@ -9,6 +9,8 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.async
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -34,6 +36,9 @@ sealed class FriendState {
     data class InvitedByThem(val person: String) : FriendState()
     object InvitedThem : FriendState()
     object NotFriend : FriendState()
+
+    /** The viewer's contacts could not be read, so where they stand is not known. */
+    object Unknown : FriendState()
 }
 
 /** One-shot side-effect events emitted by [PersonViewModel] to the screen. */
@@ -96,21 +101,44 @@ class PersonViewModel @Inject constructor(
     fun refresh() {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            // The contacts are asked for beside the person, not after them: the
+            // person's information is a relay to their server when they live
+            // elsewhere, about half a second, and the contacts waited behind it
+            // on every person page. Best-effort, so a failed read of them still
+            // shows the person.
+            val contacts = async {
+                try {
+                    repository.listContacts()
+                } catch (e: CancellationException) {
+                    throw e
+                } catch (_: Exception) {
+                    null
+                }
+            }
             try {
                 val info = repository.getPersonInformation(personId)
-                val state = resolveFriendState(info.id)
+                val state = friendStateOf(info.id, contacts.await())
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     info = info,
                     friendState = state,
                 )
             } catch (e: Exception) {
+                contacts.cancel()
+                if (e is CancellationException) throw e
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     error = e.toMochiError(),
                 )
             }
         }
+    }
+
+    /** Where the viewer stands with [personEntityId], from contacts already read, or null for a read that failed. */
+    private suspend fun friendStateOf(personEntityId: String, contacts: ContactsListResponse?): FriendState {
+        val me = sessionManager.getBoundIdentity()
+        if (me != null && me == personEntityId) return FriendState.Self
+        return if (contacts == null) FriendState.Unknown else friendState(contacts, personEntityId, me)
     }
 
     private suspend fun resolveFriendState(personEntityId: String): FriendState {
