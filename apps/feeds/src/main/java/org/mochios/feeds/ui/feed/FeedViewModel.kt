@@ -173,6 +173,9 @@ class FeedViewModel @Inject constructor(
     // a second, and lists sorted by score, page exactly only by it.
     private var cursor: String? = null
 
+    /** The next page in flight, cancelled when the list reloads in another order. */
+    private var loadMoreJob: Job? = null
+
     private val _error = MutableStateFlow<MochiError?>(null)
     val error: StateFlow<MochiError?> = _error.asStateFlow()
 
@@ -678,9 +681,9 @@ class FeedViewModel @Inject constructor(
         get() = _currentSort.value in listOf("interests", "ai", "relevant")
 
     fun loadMore() {
-        if (_isLoadingMore.value || !_hasMore.value) return
+        if (_isLoadingMore.value || !_hasMore.value || _isLoading.value) return
 
-        viewModelScope.launch {
+        loadMoreJob = viewModelScope.launch {
             _isLoadingMore.value = true
             try {
                 // The server's cursor names the next page exactly. From a
@@ -1030,6 +1033,8 @@ class FeedViewModel @Inject constructor(
     }
 
     private fun reloadPosts() {
+        loadMoreJob?.cancel()
+        _isLoadingMore.value = false
         viewModelScope.launch {
             _isLoading.value = true
             try {
