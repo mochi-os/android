@@ -47,3 +47,22 @@ subprojects {
         }
     }
 }
+
+// The Compose compiler takes the classes in compose-stability.conf as stable,
+// in every module that composes.
+subprojects {
+    plugins.withId("org.jetbrains.kotlin.plugin.compose") {
+        extensions.configure<
+            org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
+        > {
+            stabilityConfigurationFiles.add(
+                rootProject.layout.projectDirectory.file("compose-stability.conf"),
+            )
+        }
+        tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+            inputs.file(rootProject.file("compose-stability.conf"))
+                .withPropertyName("composeStability")
+                .withPathSensitivity(PathSensitivity.RELATIVE)
+        }
+    }
+}

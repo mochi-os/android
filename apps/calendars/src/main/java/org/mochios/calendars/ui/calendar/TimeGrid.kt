@@ -62,6 +62,7 @@ import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.PathEffect
@@ -109,6 +110,7 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.theme.LocalEntityRadius
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Instance
+import org.mochios.calendars.model.Preferences
 
 /** The height of one hour row; the whole day is twenty-four of these. */
 private val HOUR = 56.dp
@@ -581,22 +583,31 @@ fun TimeGrid(
                     .onGloballyPositioned { strip = it.rectInRoot() },
             ) {
                 for (day in days) {
-                    DayColumn(
-                        day = day,
-                        today = today,
-                        now = now,
-                        width = width,
-                        stacked = days.size > 1,
-                        layout = layouts[day].orEmpty(),
-                        state = state,
-                        viewModel = viewModel,
-                        lifted = lifted?.instance,
-                        selected = selected,
-                        drop = (target as? Landing.Timed)?.takeIf { it.day == day },
-                        creating = (drag as? Drag.Create)?.takeIf { it.day == day }?.let { span(it) },
-                        onOpen = onOpen,
-                        onTap = { hours -> onCreate(at(day, hours, user), null) },
-                    )
+                    Box {
+                        DayColumn(
+                            day = day,
+                            today = today,
+                            now = now,
+                            width = width,
+                            stacked = days.size > 1,
+                            layout = layouts[day].orEmpty(),
+                            preferences = state.preferences,
+                            viewModel = viewModel,
+                            lifted = lifted?.instance,
+                            selected = selected,
+                            onOpen = onOpen,
+                            onTap = { hours -> onCreate(at(day, hours, user), null) },
+                        )
+                        DropLayer(
+                            drop = (target as? Landing.Timed)?.takeIf { landed -> landed.day == day },
+                            creating = (drag as? Drag.Create)?.takeIf { create -> create.day == day }
+                                ?.let { create -> span(create) },
+                            lifted = lifted?.instance,
+                            stacked = days.size > 1,
+                            zones = viewModel.zones(),
+                            modifier = Modifier.matchParentSize(),
+                        )
+                    }
                 }
             }
         }
@@ -879,18 +890,18 @@ private fun DayColumn(
     width: Dp,
     stacked: Boolean,
     layout: List<Placed>,
-    state: CalendarUiState,
+    preferences: Preferences,
     viewModel: CalendarViewModel,
     lifted: Instance?,
     selected: Instance?,
-    drop: Landing.Timed?,
-    creating: Cut?,
     onOpen: (Instance) -> Unit,
     onTap: (Float) -> Unit,
 ) {
     val format = LocalFormat.current
     val shading = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
-    val working = state.preferences.days.contains(day.dayOfWeek.value % 7)
+    val rule = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f)
+    val working = preferences.days.contains(day.dayOfWeek.value % 7)
+    val hours = preferences.hours
     val zones = viewModel.zones()
     val hourPx = with(LocalDensity.current) { HOUR.toPx() }
     val tap by rememberUpdatedState(onTap)
@@ -903,21 +914,18 @@ private fun DayColumn(
                 // A tap on empty grid starts an event at that quarter hour;
                 // a tap on a block is the block's own.
                 detectTapGestures(onTap = { at -> tap(snap(at.y / hourPx).coerceIn(0f, 24f - SNAP)) })
+            }
+            .drawBehind {
+                val line = DividerDefaults.Thickness.toPx()
+                for (hour in 0 until 24) {
+                    val top = hour * hourPx
+                    if (!working || hour < hours.start || hour >= hours.finish) {
+                        drawRect(shading, Offset(0f, top), Size(size.width, hourPx))
+                    }
+                    drawLine(rule, Offset(0f, top + line / 2), Offset(size.width, top + line / 2), line)
+                }
             },
     ) {
-        Column(modifier = Modifier.fillMaxSize()) {
-            for (hour in 0 until 24) {
-                val shaded = !working || hour < state.preferences.hours.start || hour >= state.preferences.hours.finish
-                Box(
-                    modifier = Modifier
-                        .height(HOUR)
-                        .fillMaxWidth()
-                        .background(if (shaded) shading else Color.Transparent),
-                ) {
-                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
-                }
-            }
-        }
         for (placed in layout) {
             val columnWidth = width / placed.columns
             val own = same(placed.instance, lifted)
@@ -946,6 +954,27 @@ private fun DayColumn(
                 )
             }
         }
+    }
+}
+
+/**
+ * What a drag draws over a day column: the block [lifted] where it would
+ * land, at [drop], and the span of a new event being marked out,
+ * [creating]. Kept apart from the column so a drag that moves them leaves
+ * the column and its blocks as they are.
+ */
+@Composable
+private fun DropLayer(
+    drop: Landing.Timed?,
+    creating: Cut?,
+    lifted: Instance?,
+    stacked: Boolean,
+    zones: Boolean,
+    modifier: Modifier = Modifier,
+) {
+    if ((drop == null || lifted == null) && creating == null) return
+    val format = LocalFormat.current
+    Box(modifier = modifier) {
         if (drop != null && lifted != null) {
             Box(
                 modifier = Modifier

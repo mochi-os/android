@@ -40,6 +40,7 @@ import android.content.Intent
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -692,7 +693,7 @@ private fun GoogleAccounts(
     viewModel: SubscribeCalendarViewModel,
     onEnableGoogle: () -> Unit,
 ) {
-    val accounts = matching(uiState.accounts, SubscribeKind.GOOGLE)
+    val accounts = remember(uiState.accounts) { matching(uiState.accounts, SubscribeKind.GOOGLE) }
     val error = uiState.error
     val context = LocalContext.current
     LaunchedEffect(uiState.launch) {
@@ -796,7 +797,7 @@ private fun AccountForm(
 ) {
     val kind = uiState.kind ?: return
     val server = kind == SubscribeKind.SERVER
-    val accounts = matching(uiState.accounts, kind)
+    val accounts = remember(uiState.accounts, kind) { matching(uiState.accounts, kind) }
     CreateEntityForm(padding) {
         accounts.forEach { account ->
             AccountRow(account = account, onOpen = { viewModel.open(account) })

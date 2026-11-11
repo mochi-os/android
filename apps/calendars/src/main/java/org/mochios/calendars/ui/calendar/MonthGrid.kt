@@ -244,7 +244,9 @@ fun MonthGrid(
         hands.follow = ::follow
         hands.step = onStep
     }
-    val target = if (lift != null) under() else null
+    val target by remember(weeks, rtl) {
+        derivedStateOf { if (lift != null) under() else null }
+    }
     val run = pick?.let { ends(it.anchor, it.day) }
     val hearing by rememberUpdatedState(onLifted)
     val holding = lift != null || pick != null
@@ -554,12 +556,19 @@ private fun Cell(
         // The bars and the timed entries stack from the top of the cell as
         // arrange orders them, each group scrolling on its own. Each group but
         // the last is held so that one entry of every later group stays in view.
-        val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
+        val entries = remember(instances, day, viewModel.timezone(), zones) {
+            instances.map { instance ->
+                instance to look(instance, viewModel.day(instance), viewModel.finish(instance), day)
+            }
+        }
         // A bar is one line; a timed entry is two, its dot, time and marks
         // above its title.
         val line = leading(MaterialTheme.typography.labelSmall)
         val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
-        val groups = arrange(entries, day, allday) { viewModel.day(it) }
+        val arranged = remember(entries, day, allday, viewModel.timezone(), zones) {
+            arrange(entries, day, allday) { instance -> viewModel.day(instance) }
+        }
+        val groups = arranged
             .map { group -> Group(group, if (group.first().second.bar) line else pair) }
 
         @Composable
