@@ -276,7 +276,11 @@ internal fun SearchBody(
                 !hasQuery -> {
                     EmptyHint(title = stringResource(R.string.people_add_contact_search_start))
                 }
-                state.searchLoading && state.searchResults.isEmpty() && networks.isEmpty() -> {
+                // A directory error shows at once, not after other networks answer.
+                state.searchError != null -> {
+                    InlineErrorState(error = state.searchError, onRetry = onRetry)
+                }
+                (state.searchLoading || state.networksLoading) && state.searchResults.isEmpty() && networks.isEmpty() -> {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -285,9 +289,6 @@ internal fun SearchBody(
                     ) {
                         CircularProgressIndicator()
                     }
-                }
-                state.searchError != null -> {
-                    InlineErrorState(error = state.searchError, onRetry = onRetry)
                 }
                 state.searchResults.isEmpty() && networks.isEmpty() -> {
                     EmptyState(

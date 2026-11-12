@@ -96,6 +96,13 @@ class NetworksPeopleTest {
     private lateinit var server: MockWebServer
     private lateinit var repository: PeopleRepository
     private val asked = ConcurrentLinkedQueue<RecordedRequest>()
+    // The directory's people a search answers, and how long other networks'
+    // people take to come.
+    @Volatile private var directory = "[]"
+    @Volatile private var networksDelay = 0L
+    // A server whose People app predates the separate action: it has none, and
+    // answers other networks' people in the search answer.
+    @Volatile private var legacy = false
 
     @Before
     fun begin() {
@@ -108,11 +115,16 @@ class NetworksPeopleTest {
                     "-/contacts/get" -> ok("""{"contact": $ADA}""")
                     "-/contacts/update" -> ok("""{"contact": $ADA}""")
                     "-/contacts/create" -> ok("""{"contact": $MADE}""")
-                    "-/contacts/search" -> ok(
-                        """{"results": [], "networks": [
+                    "-/contacts/search" -> if (legacy) {
+                        ok("""{"results": $directory, "networks": [{"id": "@dan:example.org", "name": "Dan", "address": "matrix:u/dan:example.org", "network": "matrix"}]}""")
+                    } else {
+                        ok("""{"results": $directory, "networks": []}""")
+                    }
+                    "-/contacts/search/networks" -> if (legacy) MockResponse().setResponseCode(404) else ok(
+                        """{"networks": [
                             {"id": "@bea:example.org", "name": "Bea", "address": "matrix:u/bea:example.org", "network": "matrix"},
                             {"id": "@cy:example.org", "name": "Cy", "address": "matrix:u/cy:example.org", "network": "matrix", "contact": "c5"}]}""",
-                    )
+                    ).setHeadersDelay(networksDelay, TimeUnit.MILLISECONDS)
                     "-/contacts/handle/lookup" -> ok("""{"name": "Ada Lovelace", "address": "@ada@example.social", "avatar": ""}""")
                     "-/friends/invite", "-/friends/remove" -> ok("{}")
                     "-/books" -> ok("""{"books": [{"id": "b1", "name": "Home", "default": true}]}""")
@@ -446,10 +458,97 @@ class NetworksPeopleTest {
         until { plain.uiState.value.networkResults.isNotEmpty() }
         rule.onNodeWithText("@bea:example.org").assertExists()
 
+        val before = requests("contacts/search/networks").size
         linking.updateSearchQuery("bea")
         linking.search()
-        until { linking.uiState.value.networkResults.isNotEmpty() }
+        until { linking.uiState.value.let { !it.searchLoading && !it.networksLoading } }
         showing = linking
         rule.onNodeWithText("@bea:example.org").assertDoesNotExist()
+        assertEquals(before, requests("contacts/search/networks").size)
+    }
+
+    @Test
+    fun `the directory's people show while other networks are still searched, and then those come`() {
+        directory = """[{"id": "p1", "name": "Ada Lovelace", "fingerprint": "abcdefghi"}]"""
+        networksDelay = 1_500
+        val model = AddContactViewModel(SavedStateHandle(), repository)
+        model.updateSearchQuery("ada")
+        model.search()
+        until { model.uiState.value.searchResults.isNotEmpty() }
+        assertTrue(model.uiState.value.networksLoading)
+        assertTrue(model.uiState.value.networkResults.isEmpty())
+        until { model.uiState.value.networkResults.isNotEmpty() }
+        assertFalse(model.uiState.value.networksLoading)
+        assertTrue(bodies("contacts/search").single().contains("networks=separate"))
+        assertTrue(bodies("contacts/search/networks").single().contains("search=ada"))
+    }
+
+    @Test
+    fun `a server without the separate action still lists other networks' people from the search answer`() {
+        legacy = true
+        val model = AddContactViewModel(SavedStateHandle(), repository)
+        model.updateSearchQuery("dan")
+        model.search()
+        until { !model.uiState.value.networksLoading && !model.uiState.value.searchLoading }
+        assertEquals(listOf("@dan:example.org"), model.uiState.value.networkResults.map { it.id })
+    }
+
+    @Test
+    fun `a new search drops the previous one's people on other networks`() {
+        val model = AddContactViewModel(SavedStateHandle(), repository)
+        model.updateSearchQuery("bea")
+        model.search()
+        until { model.uiState.value.networkResults.isNotEmpty() }
+        networksDelay = 1_500
+        model.updateSearchQuery("zed")
+        model.search()
+        until { !model.uiState.value.searchLoading }
+        assertTrue(model.uiState.value.networksLoading)
+        assertTrue(model.uiState.value.networkResults.isEmpty())
+    }
+
+    @Test
+    fun `a directory error shows while other networks are still searched`() {
+        org.mochios.android.i18n.AppContext.set(context)
+        rule.setContent {
+            SearchBody(
+                state = AddContactUiState(
+                    searchQuery = "bea",
+                    networksLoading = true,
+                    searchError = org.mochios.android.api.MochiError.ServerError(500, "The directory failed"),
+                ),
+                stateOf = { org.mochios.people.ui.contacts.AddContactState.NONE },
+                networks = emptyList(),
+                inContacts = { false },
+                onAddNetwork = {},
+                onQueryChange = {},
+                onSearch = {},
+                onRetry = {},
+                onTapResult = {},
+                onAct = {},
+                onNewContact = {},
+            )
+        }
+        rule.onNodeWithText("The directory failed", substring = true).assertExists()
+    }
+
+    @Test
+    fun `no one found is not said while other networks are still searched`() {
+        rule.setContent {
+            SearchBody(
+                state = AddContactUiState(searchQuery = "bea", networksLoading = true),
+                stateOf = { org.mochios.people.ui.contacts.AddContactState.NONE },
+                networks = emptyList(),
+                inContacts = { false },
+                onAddNetwork = {},
+                onQueryChange = {},
+                onSearch = {},
+                onRetry = {},
+                onTapResult = {},
+                onAct = {},
+                onNewContact = {},
+            )
+        }
+        rule.onNodeWithText("No people found").assertDoesNotExist()
     }
 }

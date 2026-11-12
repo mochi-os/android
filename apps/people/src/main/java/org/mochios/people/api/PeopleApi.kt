@@ -119,7 +119,15 @@ data class TokensResponse(val tokens: List<DeviceToken> = emptyList(), val usern
 
 data class SearchUsersResponse(
     val results: List<User> = emptyList(),
-    /** People on other networks the search found through the user's accounts. */
+    /**
+     * People on other networks, from a server whose People app predates
+     * `-/contacts/search/networks` and answers them here, ignoring `separate`.
+     */
+    val networks: List<NetworkPerson> = emptyList(),
+)
+
+/** People on other networks a search found through the user's accounts. */
+data class SearchNetworksResponse(
     val networks: List<NetworkPerson> = emptyList(),
 )
 
@@ -207,9 +215,20 @@ interface PeopleApi {
         @Field("etag") etag: String? = null,
     ): Response<ApiResponse<EmptyResponse>>
 
+    /**
+     * The directory's people. [networks] "separate" leaves other networks'
+     * people to [searchNetworks], so this answer does not wait on their servers.
+     */
     @FormUrlEncoded
     @POST("-/contacts/search")
-    suspend fun searchDirectory(@Field("search") search: String): Response<ApiResponse<SearchUsersResponse>>
+    suspend fun searchDirectory(
+        @Field("search") search: String,
+        @Field("networks") networks: String = "separate",
+    ): Response<ApiResponse<SearchUsersResponse>>
+
+    @FormUrlEncoded
+    @POST("-/contacts/search/networks")
+    suspend fun searchNetworks(@Field("search") search: String): Response<ApiResponse<SearchNetworksResponse>>
 
     @GET("-/contacts/handle/lookup")
     suspend fun lookupHandle(@Query("handle") handle: String): Response<ApiResponse<HandleLookup>>
