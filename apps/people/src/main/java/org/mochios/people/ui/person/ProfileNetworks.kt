@@ -32,7 +32,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
-import org.mochios.android.util.openWeb
+import org.mochios.android.util.isProfileUrl
+import org.mochios.android.util.openProfileLink
 import org.mochios.android.util.providerName
 import org.mochios.people.R
 import org.mochios.people.model.ProfileAccount
@@ -55,7 +56,7 @@ internal fun ProfileNetworks(
     onOpenLink: (String) -> Unit,
 ) {
     val context = LocalContext.current
-    val shown = accounts.filter { it.url.startsWith("https://") }
+    val shown = accounts.filter { isProfileUrl(it.url) }
     if (shown.isNotEmpty()) {
         FlowRow(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
@@ -67,7 +68,7 @@ internal fun ProfileNetworks(
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier
-                        .clickable { openWeb(context, account.url) }
+                        .clickable { openProfileLink(context, account.url) }
                         .padding(vertical = 4.dp),
                 )
             }

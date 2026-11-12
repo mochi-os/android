@@ -103,7 +103,8 @@ import org.mochios.android.ui.components.UploadRing
 import org.mochios.android.ui.components.parseHexColour
 import org.mochios.people.R
 import org.mochios.people.ui.person.ProfileNetworks
-import org.mochios.android.util.openWeb
+import org.mochios.android.util.isProfileUrl
+import org.mochios.android.util.openProfileLink
 import org.mochios.android.util.providerName
 import org.mochios.android.util.segment
 import org.mochios.people.model.PersonInformation
@@ -756,7 +757,7 @@ internal const val NETWORKS_LINK = "settings/user/networks"
 @Composable
 internal fun ProfileAccounts(accounts: List<ProfileAccount>, onOpenLink: (String) -> Unit) {
     val context = LocalContext.current
-    val shown = accounts.filter { it.url.startsWith("https://") }
+    val shown = accounts.filter { isProfileUrl(it.url) }
     if (shown.isEmpty()) return
     Section(title = stringResource(R.string.people_profile_networks)) {
         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -766,7 +767,7 @@ internal fun ProfileAccounts(accounts: List<ProfileAccount>, onOpenLink: (String
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier
-                        .clickable { openWeb(context, account.url) }
+                        .clickable { openProfileLink(context, account.url) }
                         .padding(vertical = 4.dp),
                 )
             }
