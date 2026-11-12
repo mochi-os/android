@@ -83,6 +83,7 @@ fun MyBidsScreen(
                     )
                     else -> InfiniteList(
                         items = state.bids,
+                        key = { bid -> bid.id },
                         isLoading = state.isLoadingMore,
                         hasMore = state.bids.size < state.total,
                         onLoadMore = { viewModel.loadMore() },

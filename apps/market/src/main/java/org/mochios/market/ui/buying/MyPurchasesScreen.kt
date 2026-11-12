@@ -106,6 +106,12 @@ private fun PurchasesList(
     }
     InfiniteList(
         items = rows,
+        key = { row ->
+            when (row) {
+                is PurchasesRow.WonBid -> "bid:${row.bid.id}"
+                is PurchasesRow.OrderRow -> "order:${row.order.id}"
+            }
+        },
         isLoading = state.isLoadingMore,
         hasMore = state.orders.size < state.total,
         onLoadMore = onLoadMore,

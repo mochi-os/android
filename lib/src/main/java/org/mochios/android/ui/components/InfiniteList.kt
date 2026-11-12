@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.CircularProgressIndicator
@@ -25,6 +26,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
+/**
+ * A list that asks for more through [onLoadMore] as its end comes into view.
+ * With [key], each item is tracked by it, so a row that moves keeps its state
+ * and rows that did not change are not redrawn; a page that repeats an item
+ * already listed leaves the list unkeyed rather than crashing on the
+ * duplicate key.
+ */
 @Composable
 fun <T> InfiniteList(
     items: List<T>,
@@ -36,6 +44,7 @@ fun <T> InfiniteList(
     contentPadding: PaddingValues = PaddingValues(0.dp),
     verticalArrangement: Arrangement.Vertical = Arrangement.Top,
     emptyContent: @Composable () -> Unit = {},
+    key: ((T) -> Any)? = null,
     itemContent: @Composable (T) -> Unit
 ) {
     if (items.isEmpty() && !isLoading) {
@@ -61,14 +70,24 @@ fun <T> InfiniteList(
         }
     }
 
+    val unique = remember(items, key != null) {
+        key != null && items.mapTo(HashSet(items.size)) { item -> key(item) }.size == items.size
+    }
+
     LazyColumn(
         state = listState,
         contentPadding = contentPadding,
         verticalArrangement = verticalArrangement,
         modifier = modifier.fillMaxSize()
     ) {
-        itemsIndexed(items) { _, item ->
-            itemContent(item)
+        if (unique) {
+            items(items, key = key) { item ->
+                itemContent(item)
+            }
+        } else {
+            itemsIndexed(items) { _, item ->
+                itemContent(item)
+            }
         }
 
         if (isLoading) {

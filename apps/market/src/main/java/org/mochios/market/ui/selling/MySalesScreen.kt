@@ -72,6 +72,7 @@ fun MySalesScreen(
                 else -> {
                     InfiniteList(
                         items = state.orders,
+                        key = { order -> order.id },
                         isLoading = state.isLoading,
                         hasMore = state.hasMore,
                         onLoadMore = viewModel::loadMore,

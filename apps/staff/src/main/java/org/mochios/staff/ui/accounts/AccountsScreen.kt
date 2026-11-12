@@ -240,6 +240,7 @@ private fun AccountsBody(
 
             else -> InfiniteList(
                 items = state.accounts,
+                key = { account -> account.id },
                 isLoading = state.isLoadingMore,
                 hasMore = state.accounts.size < state.total,
                 onLoadMore = onLoadMore,
