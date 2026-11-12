@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -34,6 +35,8 @@ import javax.inject.Inject
 data class AddContactUiState(
     val searchQuery: String = "",
     val searchLoading: Boolean = false,
+    /** Other networks' people are still being searched for, beside the directory. */
+    val networksLoading: Boolean = false,
     val searchError: MochiError? = null,
     val searchResults: List<User> = emptyList(),
     /** People on other networks the search found through the user's accounts. */
@@ -146,6 +149,7 @@ class AddContactViewModel @Inject constructor(
                 searchResults = emptyList(),
                 networkResults = emptyList(),
                 searchLoading = false,
+                networksLoading = false,
                 searchError = null,
             )
             return
@@ -154,12 +158,37 @@ class AddContactViewModel @Inject constructor(
             if (debounce) {
                 delay(SEARCH_DEBOUNCE)
             }
-            _uiState.value = _uiState.value.copy(searchLoading = true, searchError = null)
+            // Other networks' people are asked beside the directory, so its
+            // people show without waiting on those networks' servers; not
+            // while linking a card, which offers no one there.
+            val other = linking.isBlank()
+            // The previous query's people on other networks go now: the new
+            // query's come after its directory answer.
+            _uiState.value = _uiState.value.copy(
+                searchLoading = true,
+                networksLoading = other,
+                searchError = null,
+                networkResults = emptyList(),
+            )
+            val networks = if (other) {
+                async {
+                    try {
+                        repository.searchNetworks(query)
+                    } catch (e: CancellationException) {
+                        throw e
+                    } catch (e: Exception) {
+                        null
+                    }
+                }
+            } else {
+                null
+            }
+            var combined: List<NetworkPerson> = emptyList()
             try {
                 val results = repository.searchPeople(query)
+                combined = results.networks
                 _uiState.value = _uiState.value.copy(
                     searchResults = results.results,
-                    networkResults = results.networks,
                     searchLoading = false,
                 )
             } catch (e: CancellationException) {
@@ -170,6 +199,12 @@ class AddContactViewModel @Inject constructor(
                     searchError = e.toMochiError(),
                 )
             }
+            // A server whose People app predates the separate action has no
+            // answer for it and sends its people in the search answer instead.
+            _uiState.value = _uiState.value.copy(
+                networkResults = if (other) networks?.await() ?: combined else emptyList(),
+                networksLoading = false,
+            )
         }
     }
 

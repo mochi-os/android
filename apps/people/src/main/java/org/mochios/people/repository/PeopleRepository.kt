@@ -31,6 +31,7 @@ import org.mochios.people.api.ContactUpdateRequest
 import org.mochios.people.api.MergeSource
 import org.mochios.people.api.ContactsListResponse
 import org.mochios.people.api.HandleLookup
+import org.mochios.people.api.NetworkPerson
 import org.mochios.people.api.SearchUsersResponse
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.api.PreferenceResponse
@@ -215,9 +216,13 @@ class PeopleRepository @Inject constructor(
     suspend fun searchDirectory(query: String): List<User> =
         api.searchDirectory(query).unwrap().results
 
-    /** The directory's people for [query], and those on other networks the user's accounts find. */
+    /** The directory's people for [query]; other networks' come from [searchNetworks]. */
     suspend fun searchPeople(query: String): SearchUsersResponse =
         api.searchDirectory(query).unwrap()
+
+    /** People on other networks the user's accounts find for [query]; throws where the server has no such action. */
+    suspend fun searchNetworks(query: String): List<NetworkPerson> =
+        api.searchNetworks(query).unwrap().networks
 
     /** What a network shows of [handle]: the person's name, avatar, page and address. */
     suspend fun lookupHandle(handle: String): HandleLookup =
