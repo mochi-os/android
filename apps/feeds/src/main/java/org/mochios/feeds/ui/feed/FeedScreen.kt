@@ -80,6 +80,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableLongStateOf
@@ -333,9 +334,8 @@ fun FeedScreen(
     // more to load and flips up (drags toward a next post that doesn't exist),
     // the over-scroll is unconsumed and surfaces here. Rate-limited so a sustained
     // drag shows the toast once.
-    val atFeedEnd by rememberUpdatedState(
-        posts.isNotEmpty() && pagerState.currentPage == posts.lastIndex && !hasMore
-    )
+    val latestPosts by rememberUpdatedState(posts)
+    val latestHasMore by rememberUpdatedState(hasMore)
     var lastCaughtUpToastAt by remember { mutableLongStateOf(0L) }
     val endOverscrollConnection = remember {
         object : NestedScrollConnection {
@@ -345,6 +345,8 @@ fun FeedScreen(
                 source: NestedScrollSource
             ): Offset {
                 // available.y < 0 is an unconsumed forward (toward-next) drag.
+                val atFeedEnd = latestPosts.isNotEmpty() &&
+                    pagerState.currentPage == latestPosts.lastIndex && !latestHasMore
                 if (available.y < -1f && atFeedEnd) {
                     val now = System.currentTimeMillis()
                     if (now - lastCaughtUpToastAt > 1500L) {
@@ -397,8 +399,11 @@ fun FeedScreen(
     // updates as the user flips, so the fetch fires while there's still
     // headroom — by the time they reach the end of the current batch the
     // next page has already loaded.
-    LaunchedEffect(pagerState.currentPage, posts.size, hasMore, isLoadingMore) {
-        if (hasMore && !isLoadingMore && pagerState.currentPage >= posts.size - 3) {
+    val nearEnd by remember(pagerState) {
+        derivedStateOf { pagerState.currentPage >= latestPosts.size - 3 }
+    }
+    LaunchedEffect(nearEnd, posts.size, hasMore, isLoadingMore) {
+        if (hasMore && !isLoadingMore && nearEnd) {
             viewModel.loadMore()
         }
     }
@@ -1486,14 +1491,26 @@ internal fun PostCard(
     // attachment image, else the RSS preview, shown full-bleed across the top
     // half with the text below.
     val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
-    val attachments = addressed(post.attachments, "feeds", attachmentFeed)
-    val attachmentImages = attachments.filter { it.isImage }
-    val otherAttachments = attachments.filter { !it.isImage }
-    val attachmentImageUrls = attachmentImages.map { att ->
-        att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty()
+    val attachments = remember(post.attachments, attachmentFeed) {
+        addressed(post.attachments, "feeds", attachmentFeed)
     }
-    val attachmentImageCaptions = attachmentImages.map { it.caption }
-    val attachmentImageIds = attachmentImages.map { it.id }
+    val attachmentImages = remember(attachments) {
+        attachments.filter { attachment -> attachment.isImage }
+    }
+    val otherAttachments = remember(attachments) {
+        attachments.filter { attachment -> !attachment.isImage }
+    }
+    val attachmentImageUrls = remember(attachmentImages, attachmentFeed) {
+        attachmentImages.map { att ->
+            att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty()
+        }
+    }
+    val attachmentImageCaptions = remember(attachmentImages) {
+        attachmentImages.map { attachment -> attachment.caption }
+    }
+    val attachmentImageIds = remember(attachmentImages) {
+        attachmentImages.map { attachment -> attachment.id }
+    }
     val rssImageUrl = articleImage(upgradedRssImage) ?: articleImage(post.data?.rss?.image)
     val heroFromAttachment = attachmentImageUrls.isNotEmpty()
     // Attachment heroes load the preview variant — the half-screen hero doesn't
@@ -1507,7 +1524,9 @@ internal fun PostCard(
     // Gallery posts — the media is the content (no RSS article, at most a
     // caption of text) — take the full-page mosaic layout instead of the
     // hero + article column below.
-    val mediaAttachments = attachments.filter { it.isImage || it.isVideo }
+    val mediaAttachments = remember(attachments) {
+        attachments.filter { attachment -> attachment.isImage || attachment.isVideo }
+    }
     val captionText = remember(post.body) { stripHtml(post.body).trim() }
     val isGallery = post.data?.rss == null && mediaAttachments.isNotEmpty() &&
         captionText.length <= GALLERY_CAPTION_LIMIT && post.warning.isEmpty()
