@@ -37,6 +37,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -375,16 +376,52 @@ private fun BoardColumn(
         )
     } else Modifier
 
-    val isColumnDragging = columnDragState.isDragging(option.id)
-    val isColumnTarget = columnReorderEnabled &&
-        columnDragState.targetItemId == "header:${option.id}" &&
-        columnDragState.draggingItemId != null &&
-        columnDragState.draggingItemId != option.id
-    val columnTargetEdge = columnDragState.targetEdge
+    val isColumnDragging by remember(columnDragState, option.id) {
+        derivedStateOf { columnDragState.isDragging(option.id) }
+    }
+    val columnTargetEdge by remember(columnDragState, option.id, columnReorderEnabled) {
+        derivedStateOf {
+            val dragged = columnDragState.draggingItemId
+            if (columnReorderEnabled && columnDragState.targetItemId == "header:${option.id}" &&
+                dragged != null && dragged != option.id
+            ) {
+                columnDragState.targetEdge
+            } else {
+                null
+            }
+        }
+    }
+    val isColumnTarget = columnTargetEdge != null
     // A card over the column's empty space lands at its end; outline the column
     // so that drop shows where it goes, as a card target does.
-    val isCardTarget = cardDragState.draggingItemId != null &&
-        cardDragState.targetItemId == "column:${option.id}"
+    val isCardTarget by remember(cardDragState, option.id) {
+        derivedStateOf {
+            cardDragState.draggingItemId != null &&
+                cardDragState.targetItemId == "column:${option.id}"
+        }
+    }
+    val sortField = viewModel.getActiveSortField()
+    val sortDirection = viewModel.getActiveSortDirection()
+    val details = viewModel.uiState.value.crmDetails
+    val sortedObjects = remember(objects, sortField, sortDirection, details) {
+        viewModel.sortObjects(objects)
+    }
+    val lanes = remember(objects, rowFieldId, rowOptions, sortField, sortDirection, details) {
+        if (rowFieldId == null) {
+            emptyList()
+        } else {
+            rowOptions.map { rowOption ->
+                rowOption to viewModel.sortObjects(objects.filter { obj ->
+                    obj.stringValue(rowFieldId) == rowOption.id ||
+                        obj.listValue(rowFieldId).contains(rowOption.id)
+                })
+            }
+        }
+    }
+    val unassignedRow = remember(lanes, objects, sortField, sortDirection, details) {
+        val laneIds = lanes.flatMap { lane -> lane.second }.map { obj -> obj.id }.toSet()
+        viewModel.sortObjects(objects.filter { obj -> obj.id !in laneIds })
+    }
 
     Column(
         modifier = Modifier
@@ -569,17 +606,12 @@ private fun BoardColumn(
         if (rowFieldId != null && rowOptions.isNotEmpty()) {
             // Swimlane mode. Drop ranks are column-scoped, not lane-scoped: the
             // server's rank_move_key has no row dimension.
-            val columnOrder = viewModel.sortObjects(objects)
+            val columnOrder = sortedObjects
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                rowOptions.forEach { rowOption ->
-                    val rowObjects = viewModel.sortObjects(objects.filter { obj ->
-                        obj.stringValue(rowFieldId) == rowOption.id ||
-                            obj.listValue(rowFieldId).contains(rowOption.id)
-                    })
-
+                lanes.forEach { (rowOption, rowObjects) ->
                     val shownRowObjects = rowObjects.visible(visibleIds)
                     // A lane that a filter emptied is dropped entirely — a
                     // screen of bare lane headings under one hit is noise.
@@ -651,13 +683,6 @@ private fun BoardColumn(
                 }
 
                 // Unassigned row items
-                val rowAssignedIds = rowOptions.flatMap { rowOpt ->
-                    objects.filter { obj ->
-                        obj.stringValue(rowFieldId) == rowOpt.id ||
-                            obj.listValue(rowFieldId).contains(rowOpt.id)
-                    }.map { it.id }
-                }.toSet()
-                val unassignedRow = viewModel.sortObjects(objects.filter { it.id !in rowAssignedIds })
                 val shownUnassignedRow = unassignedRow.visible(visibleIds)
                 if (shownUnassignedRow.isNotEmpty()) {
                     item(key = "header_unassigned_row") {
@@ -693,7 +718,6 @@ private fun BoardColumn(
         } else {
             // List mode. Double-tapping empty space below the cards creates
             // one; the tap zone sits behind the list so cards take precedence.
-            val sortedObjects = viewModel.sortObjects(objects)
             val shownObjects = sortedObjects.visible(visibleIds)
             Box(
                 modifier = Modifier
