@@ -34,6 +34,19 @@ fun isWebUrl(url: String): Boolean {
 fun webUri(url: String): Uri? = if (isWebUrl(url)) Uri.parse(url) else null
 
 /**
+ * Whether an account's address on a profile is one the profile links: a web
+ * page, or the `xmpp:` address a chat client opens.
+ */
+fun isProfileUrl(url: String): Boolean =
+    url.startsWith("https://", ignoreCase = true) || url.startsWith("xmpp:", ignoreCase = true)
+
+/**
+ * Resolve an account's address on a profile to a [Uri] when [isProfileUrl],
+ * null otherwise.
+ */
+fun profileUri(url: String): Uri? = if (isProfileUrl(url)) Uri.parse(url) else null
+
+/**
  * [id], a peer's, escaped as one segment of an address on the user's server,
  * or null when no segment can carry it. An image request carries the session
  * and the token of the app its path names, so a slash or a question mark left

@@ -50,6 +50,17 @@ class LinksTest {
         assertFalse(isWebUrl(""))
     }
 
+    @Test
+    fun `a profile links web pages and XMPP addresses, nothing else`() {
+        assertTrue(isProfileUrl("https://mastodon.social/@ada"))
+        assertTrue(isProfileUrl("xmpp:ada@example.org"))
+        assertTrue(isProfileUrl("XMPP:ada@example.org"))
+        assertFalse(isProfileUrl("http://example.org"))
+        assertFalse(isProfileUrl("javascript:alert(1)"))
+        assertFalse(isProfileUrl("intent://x#Intent;package=evil;end"))
+        assertFalse(isProfileUrl(""))
+    }
+
     // A peer's id in an asset address on the user's server, which the image
     // request reaches with the session and the token of the app its path names.
     @Test

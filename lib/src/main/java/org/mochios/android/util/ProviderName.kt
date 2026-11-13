@@ -42,6 +42,20 @@ fun openWeb(context: Context, url: String) {
 }
 
 /**
+ * Open an account a profile shows: its web page in the browser, or its XMPP
+ * address in the chat app that handles one. Anything else is dropped, as is
+ * a link no app can open.
+ */
+fun openProfileLink(context: Context, url: String) {
+    val uri = profileUri(url) ?: return
+    try {
+        context.startActivity(Intent(Intent.ACTION_VIEW, uri)) // launch-ok: profileUri admits only https and xmpp
+    } catch (_: Exception) {
+        // No app for it.
+    }
+}
+
+/**
  * Follow a link a notification or another screen hands over: a path on this
  * server goes to [route], which opens it in the app; a web link off it - a
  * post or a person on another network, where a notification from a linked or
