@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">ផ្ញើសំណើមិត្តភក្តិ</string>
     <string name="chat_refused">ការសន្ទនាត្រូវបានបដិសេធ</string>
     <string name="chat_refused_friends_only">%1$s ទទួលការសន្ទនាតែពីមិត្តភ័ក្តិប៉ុណ្ណោះ។</string>
+    <string name="chat_message_earlier">សារពីមុនពេលគណនីនេះត្រូវបានបញ្ចូលទៅក្នុង Mochi ត្រូវបានអ៊ិនគ្រីប ហើយមិនអាចអាននៅទីនេះបានទេ</string>
+    <string name="chat_message_excluded">បានអ៊ិនគ្រីបសម្រាប់ឧបករណ៍ផ្សេងទៀតតែប៉ុណ្ណោះ</string>
 </resources>

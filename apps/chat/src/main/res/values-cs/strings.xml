@@ -176,4 +176,6 @@
     <string name="chat_send_friend_request">Odeslat žádost o přátelství</string>
     <string name="chat_refused">Chat odmítnut</string>
     <string name="chat_refused_friends_only">%1$s přijímá chaty pouze od přátel.</string>
+    <string name="chat_message_earlier">Zprávy z doby před přidáním tohoto účtu do Mochi jsou šifrované a nelze je zde přečíst</string>
+    <string name="chat_message_excluded">Šifrováno pouze pro jiná zařízení</string>
 </resources>

@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">ارسال درخواست دوستی</string>
     <string name="chat_refused">گفت‌وگو رد شد</string>
     <string name="chat_refused_friends_only">%1$s فقط گفت‌وگو با دوستان را می‌پذیرد.</string>
+    <string name="chat_message_earlier">پیام‌های مربوط به پیش از افزودن این حساب به Mochi رمزگذاری شده‌اند و اینجا قابل خواندن نیستند</string>
+    <string name="chat_message_excluded">فقط برای دستگاه‌های دیگر رمزگذاری شده</string>
 </resources>

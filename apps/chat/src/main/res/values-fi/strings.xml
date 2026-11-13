@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Lähetä kaveripyyntö</string>
     <string name="chat_refused">Keskustelu hylätty</string>
     <string name="chat_refused_friends_only">%1$s hyväksyy keskusteluja vain kavereilta.</string>
+    <string name="chat_message_earlier">Viestit ajalta ennen tämän tilin lisäämistä Mochiin ovat salattuja, eikä niitä voi lukea täällä</string>
+    <string name="chat_message_excluded">Salattu vain muille laitteille</string>
 </resources>

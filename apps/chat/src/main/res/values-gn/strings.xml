@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Emondo angirũ jerure</string>
     <string name="chat_refused">Chat ndojeguerohorýi</string>
     <string name="chat_refused_friends_only">%1$s omoneĩ chat iñangirũ kuéra guive añoite.</string>
+    <string name="chat_message_earlier">Ñe\'ẽmondo ko cuenta oñembojoapy mboyve Mochi-pe ñemiguáva ha ndaikatúi oñemoñe\'ẽ ko\'ápe</string>
+    <string name="chat_message_excluded">Ñemiguáva ambue dispositivo-pe ĝuarãnte</string>
 </resources>

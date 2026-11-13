@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">שיקן אַ פֿרײַנד בקשה</string>
     <string name="chat_refused">שמועס אָפּגעוואָרפֿן</string>
     <string name="chat_refused_friends_only">%1$s נעמט אָן שמועסן נאָר פֿון פֿרײַנד.</string>
+    <string name="chat_message_earlier">בריוו פֿון איידער דער חשבון איז צוגעגעבן געוואָרן צו Mochi זענען פֿאַרשיפֿרירט און מע קען זיי דאָ נישט לייענען</string>
+    <string name="chat_message_excluded">פֿאַרשיפֿרירט נאָר פֿאַר אַנדערע מכשירים</string>
 </resources>

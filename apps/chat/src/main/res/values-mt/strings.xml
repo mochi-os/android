@@ -181,4 +181,6 @@
     <string name="chat_send_friend_request">Ibgħat talba ta\' ħbiberija</string>
     <string name="chat_refused">Chat irrifjutat</string>
     <string name="chat_refused_friends_only">%1$s jaċċetta chats biss mill-ħbieb.</string>
+    <string name="chat_message_earlier">Il-messaġġi minn qabel ma dan il-kont ġie miżjud ma\' Mochi huma kriptati u ma jistgħux jinqraw hawn</string>
+    <string name="chat_message_excluded">Kriptat għal apparati oħra biss</string>
 </resources>

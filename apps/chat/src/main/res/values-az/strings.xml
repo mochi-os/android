@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Dostluq sorğusu göndər</string>
     <string name="chat_refused">Söhbət rədd edildi</string>
     <string name="chat_refused_friends_only">%1$s yalnız dostlardan söhbət qəbul edir.</string>
+    <string name="chat_message_earlier">Bu hesab Mochi-yə əlavə edilməzdən əvvəlki mesajlar şifrələnib və burada oxuna bilməz</string>
+    <string name="chat_message_excluded">Yalnız digər cihazlar üçün şifrələnib</string>
 </resources>

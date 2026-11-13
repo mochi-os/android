@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Invia richiesta di amicizia</string>
     <string name="chat_refused">Chat rifiutata</string>
     <string name="chat_refused_friends_only">%1$s accetta chat solo dagli amici.</string>
+    <string name="chat_message_earlier">I messaggi precedenti all\'aggiunta di questo account a Mochi sono crittografati e non possono essere letti qui</string>
+    <string name="chat_message_excluded">Crittografato solo per altri dispositivi</string>
 </resources>

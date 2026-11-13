@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Send venneanmodning</string>
     <string name="chat_refused">Chat afvist</string>
     <string name="chat_refused_friends_only">%1$s accepterer kun chats fra venner.</string>
+    <string name="chat_message_earlier">Beskeder fra før denne konto blev føjet til Mochi er krypterede og kan ikke læses her</string>
+    <string name="chat_message_excluded">Kun krypteret til andre enheder</string>
 </resources>

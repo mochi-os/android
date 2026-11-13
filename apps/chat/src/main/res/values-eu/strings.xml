@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Bidali lagun-eskaera</string>
     <string name="chat_refused">Txata baztertu da</string>
     <string name="chat_refused_friends_only">%1$s erabiltzaileak lagunen txatak soilik onartzen ditu.</string>
+    <string name="chat_message_earlier">Kontu hau Mochira gehitu aurreko mezuak enkriptatuta daude eta ezin dira hemen irakurri</string>
+    <string name="chat_message_excluded">Beste gailuetarako soilik enkriptatua</string>
 </resources>

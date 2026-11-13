@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">ناردنی داواکاری هاوڕێیەتی</string>
     <string name="chat_refused">گفتوگۆ ڕەتکرایەوە</string>
     <string name="chat_refused_friends_only">%1$s تەنها گفتوگۆ لە هاوڕێیانەوە وەردەگرێت.</string>
+    <string name="chat_message_earlier">پەیامەکانی پێش زیادکردنی ئەم هەژمارە بۆ Mochi شفرەکراون و لێرە ناخوێنرێنەوە</string>
+    <string name="chat_message_excluded">تەنها بۆ ئامێرەکانی تر شفرەکراوە</string>
 </resources>

@@ -176,4 +176,6 @@
     <string name="chat_send_friend_request">Пошаљи захтев за пријатељство</string>
     <string name="chat_refused">Чет одбијен</string>
     <string name="chat_refused_friends_only">%1$s прихвата четове само од пријатеља.</string>
+    <string name="chat_message_earlier">Поруке из времена пре додавања овог налога у Mochi су шифроване и не могу се овде прочитати</string>
+    <string name="chat_message_excluded">Шифровано само за друге уређаје</string>
 </resources>

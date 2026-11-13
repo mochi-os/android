@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Tuma ombi la urafiki</string>
     <string name="chat_refused">Gumzo limekataliwa</string>
     <string name="chat_refused_friends_only">%1$s hupokea gumzo kutoka kwa marafiki pekee.</string>
+    <string name="chat_message_earlier">Ujumbe wa kabla akaunti hii kuongezwa kwenye Mochi umesimbwa kwa njia fiche na hauwezi kusomwa hapa</string>
+    <string name="chat_message_excluded">Imesimbwa kwa njia fiche kwa vifaa vingine pekee</string>
 </resources>

@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Envia una sol·licitud d\'amistat</string>
     <string name="chat_refused">Xat rebutjat</string>
     <string name="chat_refused_friends_only">%1$s només accepta xats d\'amics.</string>
+    <string name="chat_message_earlier">Els missatges d\'abans que aquest compte s\'afegís a Mochi estan xifrats i no es poden llegir aquí</string>
+    <string name="chat_message_excluded">Xifrat només per a altres dispositius</string>
 </resources>

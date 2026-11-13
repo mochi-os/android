@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">发送好友请求</string>
     <string name="chat_refused">聊天被拒绝</string>
     <string name="chat_refused_friends_only">%1$s 只接受好友发起的聊天。</string>
+    <string name="chat_message_earlier">此账户添加到 Mochi 之前的消息已加密，无法在此阅读</string>
+    <string name="chat_message_excluded">仅为其他设备加密</string>
 </resources>

@@ -175,4 +175,6 @@
     <string name="chat_send_friend_request">Дос болу сұрауын жіберу</string>
     <string name="chat_refused">Чат қабылданбады</string>
     <string name="chat_refused_friends_only">%1$s чаттарды тек достардан қабылдайды.</string>
+    <string name="chat_message_earlier">Бұл аккаунт Mochi-ге қосылғанға дейінгі хабарламалар шифрланған және оларды мұнда оқу мүмкін емес</string>
+    <string name="chat_message_excluded">Тек басқа құрылғылар үшін шифрланған</string>
 </resources>

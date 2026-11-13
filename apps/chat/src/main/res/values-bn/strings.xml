@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">বন্ধুত্বের অনুরোধ পাঠান</string>
     <string name="chat_refused">চ্যাট প্রত্যাখ্যাত হয়েছে</string>
     <string name="chat_refused_friends_only">%1$s শুধুমাত্র বন্ধুদের কাছ থেকে চ্যাট গ্রহণ করেন।</string>
+    <string name="chat_message_earlier">এই অ্যাকাউন্ট Mochi-তে যোগ করার আগের বার্তাগুলো এনক্রিপ্ট করা এবং এখানে পড়া যাবে না</string>
+    <string name="chat_message_excluded">শুধু অন্যান্য ডিভাইসের জন্য এনক্রিপ্ট করা</string>
 </resources>

@@ -175,4 +175,6 @@
     <string name="chat_send_friend_request">Do‘stlik so‘rovini yuborish</string>
     <string name="chat_refused">Suhbat rad etildi</string>
     <string name="chat_refused_friends_only">%1$s faqat do\'stlardan suhbat qabul qiladi.</string>
+    <string name="chat_message_earlier">Bu hisob Mochi\'ga qo\'shilishidan oldingi xabarlar shifrlangan va ularni bu yerda o\'qib bo\'lmaydi</string>
+    <string name="chat_message_excluded">Faqat boshqa qurilmalar uchun shifrlangan</string>
 </resources>

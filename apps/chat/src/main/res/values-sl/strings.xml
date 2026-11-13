@@ -178,4 +178,6 @@
     <string name="chat_send_friend_request">Pošlji prošnjo za prijateljstvo</string>
     <string name="chat_refused">Pogovor zavrnjen</string>
     <string name="chat_refused_friends_only">%1$s sprejema pogovore samo od prijateljev.</string>
+    <string name="chat_message_earlier">Sporočila izpred dodajanja tega računa v Mochi so šifrirana in jih tukaj ni mogoče prebrati</string>
+    <string name="chat_message_excluded">Šifrirano samo za druge naprave</string>
 </resources>

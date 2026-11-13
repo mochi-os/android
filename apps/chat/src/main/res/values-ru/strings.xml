@@ -178,4 +178,6 @@
     <string name="chat_send_friend_request">Отправить запрос в друзья</string>
     <string name="chat_refused">Чат отклонён</string>
     <string name="chat_refused_friends_only">%1$s принимает чаты только от друзей.</string>
+    <string name="chat_message_earlier">Сообщения, отправленные до добавления этого аккаунта в Mochi, зашифрованы и не могут быть прочитаны здесь</string>
+    <string name="chat_message_excluded">Зашифровано только для других устройств</string>
 </resources>

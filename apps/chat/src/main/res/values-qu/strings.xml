@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Masi mañakuyta apachiy</string>
     <string name="chat_refused">Rimanakuyqa mana chaskisqachu</string>
     <string name="chat_refused_friends_only">%1$s masinkunamantalla rimanakuykunata chaskin.</string>
+    <string name="chat_message_earlier">Kay cuenta Mochi-man yapakunanmanta ñawpaq willakuykuna pakasqam kanku, kaypi mana ñawinchakuyta atikunchu</string>
+    <string name="chat_message_excluded">Huk kaqkunallapaq pakasqa</string>
 </resources>

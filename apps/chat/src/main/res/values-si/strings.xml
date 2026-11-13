@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">මිතුරු ඉල්ලීමක් යවන්න</string>
     <string name="chat_refused">චැට් ප්‍රතික්ෂේප විය</string>
     <string name="chat_refused_friends_only">%1$s මිතුරන්ගෙන් පමණක් චැට් පිළිගනී.</string>
+    <string name="chat_message_earlier">මෙම ගිණුම Mochi වෙත එක් කිරීමට පෙර පණිවිඩ සංකේතනය කර ඇති අතර ඒවා මෙහි කියවිය නොහැක</string>
+    <string name="chat_message_excluded">වෙනත් උපාංග සඳහා පමණක් සංකේතනය කර ඇත</string>
 </resources>

@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">ส่งคำขอเป็นเพื่อน</string>
     <string name="chat_refused">แชตถูกปฏิเสธ</string>
     <string name="chat_refused_friends_only">%1$s รับแชตจากเพื่อนเท่านั้น</string>
+    <string name="chat_message_earlier">ข้อความจากก่อนที่จะเพิ่มบัญชีนี้ใน Mochi ถูกเข้ารหัสไว้และไม่สามารถอ่านได้ที่นี่</string>
+    <string name="chat_message_excluded">เข้ารหัสสำหรับอุปกรณ์อื่นเท่านั้น</string>
 </resources>

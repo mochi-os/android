@@ -140,6 +140,8 @@
     <string name="chat_receipt_read">Read</string>
     <string name="chat_seen_by">Seen by %1$s</string>
     <string name="chat_message_encrypted">Encrypted message</string>
+    <string name="chat_message_earlier">Messages from before this account was added to Mochi are encrypted and can\'t be read here</string>
+    <string name="chat_message_excluded">Encrypted for other devices only</string>
 
     <!-- Threads -->
     <string name="chat_thread_title">Thread</string>

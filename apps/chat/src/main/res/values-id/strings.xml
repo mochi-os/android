@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">Kirim permintaan pertemanan</string>
     <string name="chat_refused">Obrolan ditolak</string>
     <string name="chat_refused_friends_only">%1$s hanya menerima obrolan dari teman.</string>
+    <string name="chat_message_earlier">Pesan dari sebelum akun ini ditambahkan ke Mochi terenkripsi dan tidak dapat dibaca di sini</string>
+    <string name="chat_message_excluded">Hanya terenkripsi untuk perangkat lain</string>
 </resources>

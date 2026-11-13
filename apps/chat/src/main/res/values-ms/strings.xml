@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">Hantar permintaan rakan</string>
     <string name="chat_refused">Sembang ditolak</string>
     <string name="chat_refused_friends_only">%1$s hanya menerima sembang daripada rakan.</string>
+    <string name="chat_message_earlier">Mesej dari sebelum akaun ini ditambahkan ke Mochi disulitkan dan tidak boleh dibaca di sini</string>
+    <string name="chat_message_excluded">Disulitkan untuk peranti lain sahaja</string>
 </resources>

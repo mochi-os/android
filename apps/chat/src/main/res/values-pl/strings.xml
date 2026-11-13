@@ -178,4 +178,6 @@
     <string name="chat_send_friend_request">Wyślij zaproszenie do znajomych</string>
     <string name="chat_refused">Czat odrzucony</string>
     <string name="chat_refused_friends_only">%1$s przyjmuje czaty tylko od znajomych.</string>
+    <string name="chat_message_earlier">Wiadomości sprzed dodania tego konta do Mochi są zaszyfrowane i nie można ich tu odczytać</string>
+    <string name="chat_message_excluded">Zaszyfrowana tylko dla innych urządzeń</string>
 </resources>

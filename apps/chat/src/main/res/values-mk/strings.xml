@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Испрати барање за пријателство</string>
     <string name="chat_refused">Разговорот е одбиен</string>
     <string name="chat_refused_friends_only">%1$s прифаќа разговори само од пријатели.</string>
+    <string name="chat_message_earlier">Пораките од пред оваа сметка да биде додадена во Mochi се шифрирани и не можат да се прочитаат тука</string>
+    <string name="chat_message_excluded">Шифрирано само за други уреди</string>
 </resources>

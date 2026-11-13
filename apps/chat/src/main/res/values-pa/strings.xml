@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">ਦੋਸਤੀ ਬੇਨਤੀ ਭੇਜੋ</string>
     <string name="chat_refused">ਚੈਟ ਅਸਵੀਕਾਰ ਕੀਤੀ ਗਈ</string>
     <string name="chat_refused_friends_only">%1$s ਸਿਰਫ਼ ਦੋਸਤਾਂ ਤੋਂ ਹੀ ਚੈਟਾਂ ਸਵੀਕਾਰ ਕਰਦੇ ਹਨ।</string>
+    <string name="chat_message_earlier">ਇਸ ਖਾਤੇ ਨੂੰ Mochi ਵਿੱਚ ਜੋੜਨ ਤੋਂ ਪਹਿਲਾਂ ਦੇ ਸੁਨੇਹੇ ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਹੋਏ ਹਨ ਅਤੇ ਇੱਥੇ ਪੜ੍ਹੇ ਨਹੀਂ ਜਾ ਸਕਦੇ</string>
+    <string name="chat_message_excluded">ਸਿਰਫ਼ ਹੋਰ ਡਿਵਾਈਸਾਂ ਲਈ ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ</string>
 </resources>

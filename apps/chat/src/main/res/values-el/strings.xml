@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Αποστολή αιτήματος φιλίας</string>
     <string name="chat_refused">Η συνομιλία απορρίφθηκε</string>
     <string name="chat_refused_friends_only">%1$s δέχεται συνομιλίες μόνο από φίλους.</string>
+    <string name="chat_message_earlier">Τα μηνύματα από πριν προστεθεί αυτός ο λογαριασμός στο Mochi είναι κρυπτογραφημένα και δεν μπορούν να διαβαστούν εδώ</string>
+    <string name="chat_message_excluded">Κρυπτογραφημένο μόνο για άλλες συσκευές</string>
 </resources>

@@ -176,4 +176,6 @@
     <string name="chat_send_friend_request">שלח בקשת חברות</string>
     <string name="chat_refused">הצ\'אט נדחה</string>
     <string name="chat_refused_friends_only">רק חברים יכולים לפתוח צ\'אט עם %1$s.</string>
+    <string name="chat_message_earlier">הודעות מלפני שהחשבון הזה נוסף ל-Mochi מוצפנות ואי אפשר לקרוא אותן כאן</string>
+    <string name="chat_message_excluded">מוצפנת למכשירים אחרים בלבד</string>
 </resources>

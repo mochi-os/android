@@ -176,4 +176,6 @@
     <string name="chat_send_friend_request">Siųsti kvietimą draugauti</string>
     <string name="chat_refused">Pokalbis atmestas</string>
     <string name="chat_refused_friends_only">%1$s priima pokalbius tik iš draugų.</string>
+    <string name="chat_message_earlier">Žinutės iš laiko prieš pridedant šią paskyrą prie Mochi yra užšifruotos ir jų čia perskaityti negalima</string>
+    <string name="chat_message_excluded">Užšifruota tik kitiems įrenginiams</string>
 </resources>

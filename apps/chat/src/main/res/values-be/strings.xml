@@ -178,4 +178,6 @@
     <string name="chat_send_friend_request">Адправіць запыт у сябры</string>
     <string name="chat_refused">Чат адхілены</string>
     <string name="chat_refused_friends_only">%1$s прымае чаты толькі ад сяброў.</string>
+    <string name="chat_message_earlier">Паведамленні з часу да дадання гэтага ўліковага запісу ў Mochi зашыфраваныя і не могуць быць прачытаныя тут</string>
+    <string name="chat_message_excluded">Зашыфравана толькі для іншых прылад</string>
 </resources>

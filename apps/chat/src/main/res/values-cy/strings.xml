@@ -183,4 +183,6 @@
     <string name="chat_send_friend_request">Anfon cais ffrind</string>
     <string name="chat_refused">Sgwrs wedi\'i gwrthod</string>
     <string name="chat_refused_friends_only">Dim ond sgyrsiau gan ffrindiau y mae %1$s yn eu derbyn.</string>
+    <string name="chat_message_earlier">Mae negeseuon o cyn i\'r cyfrif hwn gael ei ychwanegu at Mochi wedi\'u hamgryptio ac ni ellir eu darllen yma</string>
+    <string name="chat_message_excluded">Wedi\'i amgryptio ar gyfer dyfeisiau eraill yn unig</string>
 </resources>

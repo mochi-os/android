@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">Voye demand zanmi</string>
     <string name="chat_refused">Chat refize</string>
     <string name="chat_refused_friends_only">%1$s aksepte chat sèlman nan men zanmi l.</string>
+    <string name="chat_message_earlier">Mesaj ki te la anvan yo te ajoute kont sa a nan Mochi chifre epi yo pa ka li isit la</string>
+    <string name="chat_message_excluded">Chifre pou lòt aparèy sèlman</string>
 </resources>

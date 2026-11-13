@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">دوستی کی درخواست بھیجیں</string>
     <string name="chat_refused">چیٹ مسترد کر دی گئی</string>
     <string name="chat_refused_friends_only">%1$s صرف دوستوں سے چیٹ قبول کرتے ہیں۔</string>
+    <string name="chat_message_earlier">اس اکاؤنٹ کو Mochi میں شامل کرنے سے پہلے کے پیغامات خفیہ کردہ ہیں اور یہاں پڑھے نہیں جا سکتے</string>
+    <string name="chat_message_excluded">صرف دوسرے آلات کے لیے خفیہ کردہ</string>
 </resources>

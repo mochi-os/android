@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">Kirim pamundut babaturan</string>
     <string name="chat_refused">Obrolan ditolak</string>
     <string name="chat_refused_friends_only">%1$s ngan nampi obrolan ti babaturan.</string>
+    <string name="chat_message_earlier">Pesen ti saméméh akun ieu ditambahkeun ka Mochi dienkripsi sareng teu tiasa dibaca di dieu</string>
+    <string name="chat_message_excluded">Ngan dienkripsi pikeun alat séjén</string>
 </resources>

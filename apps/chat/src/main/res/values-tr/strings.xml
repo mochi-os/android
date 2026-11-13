@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Arkadaşlık isteği gönder</string>
     <string name="chat_refused">Sohbet reddedildi</string>
     <string name="chat_refused_friends_only">%1$s yalnızca arkadaşlarından sohbet kabul ediyor.</string>
+    <string name="chat_message_earlier">Bu hesap Mochi\'ye eklenmeden önceki mesajlar şifrelidir ve burada okunamaz</string>
+    <string name="chat_message_excluded">Yalnızca diğer cihazlar için şifreli</string>
 </resources>

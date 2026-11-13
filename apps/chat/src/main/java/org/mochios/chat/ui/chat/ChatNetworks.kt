@@ -66,6 +66,15 @@ internal fun isGroupChat(chat: ChatDetail): Boolean = chat.members.size > 2
 internal fun awaitingKeys(message: ChatMessage): Boolean =
     message.encrypted != 0 && message.body.isEmpty() && message.attachments.isEmpty()
 
+/** A message encrypted before the account was added to Mochi, which no device of Mochi's can ever read. */
+internal fun isEarlierHistory(message: ChatMessage): Boolean =
+    message.encrypted == 2 && !message.deleted && message.body.isEmpty() && message.attachments.isEmpty()
+
+/** What an encrypted message with nothing to show says in its place. */
+@Composable
+internal fun encryptedText(message: ChatMessage): String =
+    stringResource(if (message.encrypted == 3) R.string.chat_message_excluded else R.string.chat_message_encrypted)
+
 /**
  * The line under a one-to-one conversation's name: whether the other person
  * is online as they share it, else when they were last seen; on another
@@ -266,7 +275,7 @@ internal fun ThreadMessage(message: ChatMessage, chatId: String) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             awaitingKeys(message) -> Text(
-                text = stringResource(R.string.chat_message_encrypted),
+                text = encryptedText(message),
                 style = MaterialTheme.typography.bodyMedium,
                 fontStyle = FontStyle.Italic,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,

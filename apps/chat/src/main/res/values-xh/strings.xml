@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Thumela isicelo sobuhlobo</string>
     <string name="chat_refused">Incoko yaliwe</string>
     <string name="chat_refused_friends_only">%1$s wamkela iincoko kubahlobo kuphela.</string>
+    <string name="chat_message_earlier">Imiyalezo yangaphambi kokuba le akhawunti yongezwe ku-Mochi ifihliwe kwaye ayinakufundwa apha</string>
+    <string name="chat_message_excluded">Kufihliwe kwezinye izixhobo kuphela</string>
 </resources>

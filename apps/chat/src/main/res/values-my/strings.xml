@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">မိတ်ဆွေတောင်းဆိုမှု ပို့ရန်</string>
     <string name="chat_refused">ချတ်ကို ငြင်းပယ်ခဲ့သည်</string>
     <string name="chat_refused_friends_only">%1$s သည် သူငယ်ချင်းများထံမှ ချတ်များကိုသာ လက်ခံသည်။</string>
+    <string name="chat_message_earlier">ဤအကောင့်ကို Mochi သို့ မထည့်မီက မက်ဆေ့ဂျ်များကို ကုဒ်ဝှက်ထားသဖြင့် ဤနေရာတွင် ဖတ်၍မရပါ</string>
+    <string name="chat_message_excluded">အခြားစက်များအတွက်သာ ကုဒ်ဝှက်ထားသည်</string>
 </resources>

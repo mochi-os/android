@@ -176,4 +176,6 @@
     <string name="chat_send_friend_request">Trimite cerere de prietenie</string>
     <string name="chat_refused">Chat refuzat</string>
     <string name="chat_refused_friends_only">%1$s acceptă chaturi doar de la prieteni.</string>
+    <string name="chat_message_earlier">Mesajele de dinainte ca acest cont să fie adăugat în Mochi sunt criptate și nu pot fi citite aici</string>
+    <string name="chat_message_excluded">Criptat doar pentru alte dispozitive</string>
 </resources>

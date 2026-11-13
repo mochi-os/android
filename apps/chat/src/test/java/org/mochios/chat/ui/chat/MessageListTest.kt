@@ -97,4 +97,42 @@ class MessageListTest {
         assertEquals(2, inUtc.count { it is MessageListEntry.DateHeader })
         assertEquals(1, inSydney.count { it is MessageListEntry.DateHeader })
     }
+
+    @Test
+    fun `a run of history from before the account was added shows as one line where it starts`() {
+        val day = 24 * 60 * 60L
+        fun sealed(id: String, created: Long, encrypted: Int) =
+            ChatMessage(id = id, created = created, encrypted = encrypted)
+        val grouped = groupMessagesByDate(
+            listOf(
+                sealed("a", lateEvening, 2),
+                // The next day, but within the run: no header of its own.
+                sealed("b", lateEvening + day, 2),
+                message("c", lateEvening + day + 60),
+                sealed("d", lateEvening + day + 120, 2),
+                sealed("e", lateEvening + day + 180, 2),
+                sealed("f", lateEvening + day + 240, 3),
+                sealed("g", lateEvening + day + 300, 1),
+            ),
+            utc,
+        )
+        assertEquals(
+            listOf("date", "earlier a", "date", "message c", "earlier d", "message f", "message g"),
+            grouped.map {
+                when (it) {
+                    is MessageListEntry.DateHeader -> "date"
+                    is MessageListEntry.EarlierHistory -> "earlier " + it.message.id
+                    is MessageListEntry.MessageItem -> "message " + it.message.id
+                }
+            },
+        )
+    }
+
+    @Test
+    fun `a deleted message or one with text is never history`() {
+        assertEquals(true, isEarlierHistory(ChatMessage(id = "a", encrypted = 2)))
+        assertEquals(false, isEarlierHistory(ChatMessage(id = "a", encrypted = 2, deleted = true)))
+        assertEquals(false, isEarlierHistory(ChatMessage(id = "a", encrypted = 2, body = "text")))
+        assertEquals(false, isEarlierHistory(ChatMessage(id = "a", encrypted = 3)))
+    }
 }

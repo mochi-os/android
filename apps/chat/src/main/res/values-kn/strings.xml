@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">ಸ್ನೇಹ ವಿನಂತಿಯನ್ನು ಕಳುಹಿಸಿ</string>
     <string name="chat_refused">ಚಾಟ್ ನಿರಾಕರಿಸಲಾಗಿದೆ</string>
     <string name="chat_refused_friends_only">%1$s ಸ್ನೇಹಿತರಿಂದ ಮಾತ್ರ ಚಾಟ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸುತ್ತಾರೆ.</string>
+    <string name="chat_message_earlier">ಈ ಖಾತೆಯನ್ನು Mochi ಗೆ ಸೇರಿಸುವ ಮೊದಲಿನ ಸಂದೇಶಗಳು ಎನ್‌ಕ್ರಿಪ್ಟ್ ಆಗಿವೆ ಮತ್ತು ಇಲ್ಲಿ ಓದಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
+    <string name="chat_message_excluded">ಇತರ ಸಾಧನಗಳಿಗೆ ಮಾತ್ರ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ</string>
 </resources>

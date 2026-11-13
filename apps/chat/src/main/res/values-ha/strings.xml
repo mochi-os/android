@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Aika buƙatar abota</string>
     <string name="chat_refused">An ƙi chat</string>
     <string name="chat_refused_friends_only">%1$s yana karɓar chat daga abokai kawai.</string>
+    <string name="chat_message_earlier">Saƙonnin kafin a ƙara wannan asusun zuwa Mochi an ɓoye su kuma ba za a iya karanta su a nan ba</string>
+    <string name="chat_message_excluded">An ɓoye shi don wasu na\'urori kawai</string>
 </resources>

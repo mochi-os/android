@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">친구 요청 보내기</string>
     <string name="chat_refused">채팅이 거부됨</string>
     <string name="chat_refused_friends_only">%1$s 님은 친구의 채팅만 받습니다.</string>
+    <string name="chat_message_earlier">이 계정을 Mochi에 추가하기 전의 메시지는 암호화되어 있어 여기서 읽을 수 없습니다</string>
+    <string name="chat_message_excluded">다른 기기용으로만 암호화됨</string>
 </resources>

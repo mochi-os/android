@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Найзын хүсэлт илгээх</string>
     <string name="chat_refused">Чатаас татгалзсан</string>
     <string name="chat_refused_friends_only">%1$s зөвхөн найзуудаасаа чат хүлээн авдаг.</string>
+    <string name="chat_message_earlier">Энэ бүртгэлийг Mochi-д нэмэхээс өмнөх мессежүүд шифрлэгдсэн тул энд уншиж болохгүй</string>
+    <string name="chat_message_excluded">Зөвхөн бусад төхөөрөмжид шифрлэгдсэн</string>
 </resources>

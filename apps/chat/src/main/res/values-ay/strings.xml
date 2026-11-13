@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Masi jawsawi apayaña</string>
     <string name="chat_refused">Chat janiw katuqatäkiti</string>
     <string name="chat_refused_friends_only">%1$s jupax masinakaparukiw chat katuqi.</string>
+    <string name="chat_message_earlier">Aka cuenta Mochi ukar yapxatañkama mensajenakax imantatawa, akanx janiw ullañjamäkiti</string>
+    <string name="chat_message_excluded">Yaqha dispositivonakatakikiw imantata</string>
 </resources>

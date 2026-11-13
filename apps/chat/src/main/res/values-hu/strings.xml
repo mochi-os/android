@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Ismerősjelölés küldése</string>
     <string name="chat_refused">Csevegés elutasítva</string>
     <string name="chat_refused_friends_only">%1$s csak barátoktól fogad csevegést.</string>
+    <string name="chat_message_earlier">A fiók Mochihoz adása előtti üzenetek titkosítottak, és itt nem olvashatók</string>
+    <string name="chat_message_excluded">Csak más eszközökre titkosítva</string>
 </resources>

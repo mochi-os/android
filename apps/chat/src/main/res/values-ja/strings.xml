@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">友達リクエストを送信</string>
     <string name="chat_refused">チャットが拒否されました</string>
     <string name="chat_refused_friends_only">%1$sさんは友達からのチャットのみ受け付けています。</string>
+    <string name="chat_message_earlier">このアカウントを Mochi に追加する前のメッセージは暗号化されているため、ここでは読めません</string>
+    <string name="chat_message_excluded">他のデバイス専用に暗号化されています</string>
 </resources>

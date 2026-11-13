@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Dërgo kërkesë për miqësi</string>
     <string name="chat_refused">Biseda u refuzua</string>
     <string name="chat_refused_friends_only">%1$s pranon biseda vetëm nga miqtë.</string>
+    <string name="chat_message_earlier">Mesazhet nga para se kjo llogari të shtohej në Mochi janë të enkriptuara dhe nuk mund të lexohen këtu</string>
+    <string name="chat_message_excluded">I enkriptuar vetëm për pajisje të tjera</string>
 </resources>

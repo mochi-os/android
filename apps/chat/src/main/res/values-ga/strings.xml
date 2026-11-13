@@ -180,4 +180,6 @@
     <string name="chat_send_friend_request">Seol iarratas cara</string>
     <string name="chat_refused">Comhrá diúltaithe</string>
     <string name="chat_refused_friends_only">Ní ghlacann %1$s le comhráite ach ó chairde.</string>
+    <string name="chat_message_earlier">Tá teachtaireachtaí ó roimh an gcuntas seo a chur le Mochi criptithe agus ní féidir iad a léamh anseo</string>
+    <string name="chat_message_excluded">Criptithe do ghléasanna eile amháin</string>
 </resources>

@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Ուղարկել ընկերության հարցում</string>
     <string name="chat_refused">Զրույցը մերժվեց</string>
     <string name="chat_refused_friends_only">%1$s-ը զրույցներ է ընդունում միայն ընկերներից։</string>
+    <string name="chat_message_earlier">Այս հաշիվը Mochi-ին ավելացնելուց առաջվա հաղորդագրությունները գաղտնագրված են և այստեղ չեն կարող կարդացվել</string>
+    <string name="chat_message_excluded">Գաղտնագրված է միայն այլ սարքերի համար</string>
 </resources>

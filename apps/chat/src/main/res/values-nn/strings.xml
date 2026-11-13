@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Send venneførespurnad</string>
     <string name="chat_refused">Prat avvist</string>
     <string name="chat_refused_friends_only">%1$s tek berre imot prat frå venner.</string>
+    <string name="chat_message_earlier">Meldingar frå før denne kontoen vart lagd til i Mochi er krypterte og kan ikkje lesast her</string>
+    <string name="chat_message_excluded">Berre kryptert for andre einingar</string>
 </resources>

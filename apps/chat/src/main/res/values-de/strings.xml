@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Freundschaftsanfrage senden</string>
     <string name="chat_refused">Chat abgelehnt</string>
     <string name="chat_refused_friends_only">%1$s nimmt nur Chats von Freunden an.</string>
+    <string name="chat_message_earlier">Nachrichten aus der Zeit, bevor dieses Konto zu Mochi hinzugefügt wurde, sind verschlüsselt und können hier nicht gelesen werden</string>
+    <string name="chat_message_excluded">Nur für andere Geräte verschlüsselt</string>
 </resources>

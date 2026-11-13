@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">दोस्ती अनुरोध भेजीं</string>
     <string name="chat_refused">चैट नामंजूर हो गइल</string>
     <string name="chat_refused_friends_only">%1$s खाली दोस्तन से चैट स्वीकार करेलन।</string>
+    <string name="chat_message_earlier">ई खाता के Mochi में जोड़ल जाए से पहिले के संदेश एन्क्रिप्टेड बाड़न आ इहाँ पढ़ल ना जा सकेला</string>
+    <string name="chat_message_excluded">सिरिफ दोसर डिवाइस खातिर एन्क्रिप्टेड</string>
 </resources>

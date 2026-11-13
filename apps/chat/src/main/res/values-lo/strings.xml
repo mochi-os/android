@@ -172,4 +172,6 @@
     <string name="chat_send_friend_request">ສົ່ງຄຳຂໍເປັນໝູ່</string>
     <string name="chat_refused">ການສົນທະນາຖືກປະຕິເສດ</string>
     <string name="chat_refused_friends_only">%1$s ຮັບການສົນທະນາຈາກໝູ່ເທົ່ານັ້ນ.</string>
+    <string name="chat_message_earlier">ຂໍ້ຄວາມກ່ອນທີ່ບັນຊີນີ້ຖືກເພີ່ມໃສ່ Mochi ຖືກເຂົ້າລະຫັດ ແລະ ບໍ່ສາມາດອ່ານໄດ້ຢູ່ບ່ອນນີ້</string>
+    <string name="chat_message_excluded">ເຂົ້າລະຫັດສຳລັບອຸປະກອນອື່ນເທົ່ານັ້ນ</string>
 </resources>

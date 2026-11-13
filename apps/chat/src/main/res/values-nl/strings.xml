@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">Vriendschapsverzoek verzenden</string>
     <string name="chat_refused">Chat geweigerd</string>
     <string name="chat_refused_friends_only">%1$s accepteert alleen chats van vrienden.</string>
+    <string name="chat_message_earlier">Berichten van voordat dit account aan Mochi werd toegevoegd zijn versleuteld en kunnen hier niet worden gelezen</string>
+    <string name="chat_message_excluded">Alleen versleuteld voor andere apparaten</string>
 </resources>

@@ -173,4 +173,6 @@
     <string name="chat_send_friend_request">Gửi lời mời kết bạn</string>
     <string name="chat_refused">Trò chuyện bị từ chối</string>
     <string name="chat_refused_friends_only">%1$s chỉ nhận trò chuyện từ bạn bè.</string>
+    <string name="chat_message_earlier">Các tin nhắn từ trước khi tài khoản này được thêm vào Mochi đã được mã hóa và không thể đọc tại đây</string>
+    <string name="chat_message_excluded">Chỉ được mã hóa cho các thiết bị khác</string>
 </resources>

@@ -92,6 +92,7 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
@@ -731,6 +732,11 @@ private fun ChatContent(
                                         DateSeparator(entry.epochSeconds)
                                     }
                                 }
+                                is MessageListEntry.EarlierHistory -> {
+                                    item(key = entry.message.id) {
+                                        EarlierHistoryLine()
+                                    }
+                                }
                                 is MessageListEntry.MessageItem -> {
                                     item(key = entry.message.id) {
                                         val own = entry.message.member == uiState.identity
@@ -1129,7 +1135,7 @@ internal fun MessageBubble(
                         // An encrypted message whose keys have not come shows
                         // no content until they do.
                         Text(
-                            text = stringResource(R.string.chat_message_encrypted),
+                            text = encryptedText(message),
                             style = MaterialTheme.typography.bodyMedium,
                             fontStyle = FontStyle.Italic,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -1319,7 +1325,7 @@ private fun ThreadReplies(answers: List<ChatMessage>, onOpen: () -> Unit, onMenu
             )
             if (awaitingKeys(answer)) {
                 Text(
-                    text = stringResource(R.string.chat_message_encrypted),
+                    text = encryptedText(answer),
                     style = MaterialTheme.typography.bodyMedium,
                     fontStyle = FontStyle.Italic,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -1475,6 +1481,9 @@ private fun chatReactionCounts(counts: Map<String, Int>, mine: String?): List<Re
 internal sealed class MessageListEntry {
     data class DateHeader(val dayKey: String, val epochSeconds: Long) : MessageListEntry()
     data class MessageItem(val message: ChatMessage) : MessageListEntry()
+
+    /** A run of history from before the account was added to Mochi, shown as one line where it starts. */
+    data class EarlierHistory(val message: ChatMessage) : MessageListEntry()
 }
 
 /**
@@ -1604,7 +1613,14 @@ internal fun groupMessagesByDate(
     val tz = zone
     val out = mutableListOf<MessageListEntry>()
     var lastKey: String? = null
+    var previous: ChatMessage? = null
     for (msg in messages) {
+        // A run of history from before the account was added stands as its
+        // first message alone.
+        val earlier = isEarlierHistory(msg)
+        val continued = earlier && previous?.let(::isEarlierHistory) == true
+        previous = msg
+        if (continued) continue
         val cal = java.util.Calendar.getInstance(tz).apply { timeInMillis = msg.created * 1000L }
         val key = "${cal.get(java.util.Calendar.YEAR)}-" +
             "${cal.get(java.util.Calendar.MONTH) + 1}-" +
@@ -1613,9 +1629,22 @@ internal fun groupMessagesByDate(
             out += MessageListEntry.DateHeader(key, msg.created)
             lastKey = key
         }
-        out += MessageListEntry.MessageItem(msg)
+        out += if (earlier) MessageListEntry.EarlierHistory(msg) else MessageListEntry.MessageItem(msg)
     }
     return out
+}
+
+/** Where a run of history from before the account was added to Mochi would start. */
+@Composable
+private fun EarlierHistoryLine() {
+    Text(
+        text = stringResource(R.string.chat_message_earlier),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp),
+        style = MaterialTheme.typography.labelSmall,
+        fontStyle = FontStyle.Italic,
+        textAlign = TextAlign.Center,
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
+    )
 }
 
 @Composable

@@ -174,4 +174,6 @@
     <string name="chat_send_friend_request">స్నేహ అభ్యర్థనను పంపండి</string>
     <string name="chat_refused">చాట్ తిరస్కరించబడింది</string>
     <string name="chat_refused_friends_only">%1$s స్నేహితుల నుండి మాత్రమే చాట్‌లను అంగీకరిస్తారు.</string>
+    <string name="chat_message_earlier">ఈ ఖాతాను Mochiలో జోడించడానికి ముందు వచ్చిన సందేశాలు ఎన్‌క్రిప్ట్ చేయబడ్డాయి, వాటిని ఇక్కడ చదవలేరు</string>
+    <string name="chat_message_excluded">ఇతర పరికరాల కోసం మాత్రమే ఎన్‌క్రిప్ట్ చేయబడింది</string>
 </resources>
