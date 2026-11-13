@@ -51,6 +51,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -443,6 +444,7 @@ private fun GameDetailContent(
     var rackBounds by remember { mutableStateOf<Rect?>(null) }
     var rackSlotBounds by remember { mutableStateOf<List<Rect>>(emptyList()) }
     var dragPointer by remember { mutableStateOf<Offset?>(null) }
+    val pointer = remember { { dragPointer } }
     var dragLetter by remember { mutableStateOf<Char?>(null) }
     var dragRackChar by remember { mutableStateOf<Char?>(null) }
 
@@ -568,7 +570,7 @@ private fun GameDetailContent(
                             boardBounds = rect
                             boardCellSize = cellSize
                         },
-                        dragPointer = dragPointer,
+                        dragPointer = pointer,
                     )
                 }
 
@@ -614,7 +616,7 @@ private fun GameDetailContent(
                                     rackBounds = rect
                                     rackSlotBounds = slots
                                 },
-                                dragPointer = dragPointer,
+                                dragPointer = pointer,
                             )
 
                             MoveActions(
@@ -665,26 +667,28 @@ private fun GameDetailContent(
         // weight as the slot it left.
         val ghostLetter = dragLetter
         val ghostRack = dragRackChar
-        val ghostPos = dragPointer
-        if (ghostLetter != null && ghostRack != null && ghostPos != null) {
+        val carrying by remember { derivedStateOf { dragPointer != null } }
+        if (ghostLetter != null && ghostRack != null && carrying) {
             val density = LocalDensity.current
-            // Pick a sensible tile size: match board cell if pointer is over
-            // the board, else 40dp (rack tile width).
-            val px = with(density) {
-                val overBoard = boardBounds?.contains(ghostPos) == true && boardCellSize > 0f
-                if (overBoard) boardCellSize else 40.dp.toPx()
+            val rackPx = with(density) { 40.dp.toPx() }
+            val overBoard by remember {
+                derivedStateOf {
+                    val at = dragPointer
+                    at != null && boardBounds?.contains(at) == true && boardCellSize > 0f
+                }
             }
+            val px = if (overBoard) boardCellSize else rackPx
             val sizeDp = with(density) { px.toDp() }
-            // Convert root → overlay-local by subtracting the
-            // BoxWithConstraints's origin; centre the ghost on the pointer.
-            val localX = ghostPos.x - overlayOrigin.x
-            val localY = ghostPos.y - overlayOrigin.y
-            val offsetX = (localX - px / 2f).roundToInt()
-            val offsetY = (localY - px / 2f).roundToInt()
             Box(
                 modifier = Modifier
                     .zIndex(10f)
-                    .offset { IntOffset(offsetX, offsetY) }
+                    .offset {
+                        val at = dragPointer ?: Offset.Zero
+                        IntOffset(
+                            (at.x - overlayOrigin.x - px / 2f).roundToInt(),
+                            (at.y - overlayOrigin.y - px / 2f).roundToInt(),
+                        )
+                    }
                     .size(sizeDp)
                     .shadow(elevation = 8.dp, shape = RoundedCornerShape(6.dp))
                     .clip(RoundedCornerShape(6.dp))
