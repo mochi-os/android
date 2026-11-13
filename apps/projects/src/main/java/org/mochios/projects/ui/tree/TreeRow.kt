@@ -35,6 +35,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -96,12 +97,21 @@ fun TreeRow(
     val cardFields = viewModel.getCardFields(obj.objectClass)
     val people = uiState.people
 
-    val isBeingDragged = dragState != null && dragState.isDragging(obj.id)
-    val isDropTarget = dragState != null &&
-        dragState.targetItemId == obj.id &&
-        dragState.draggingItemId != null &&
-        dragState.draggingItemId != obj.id
-    val targetEdge = dragState?.targetEdge
+    val isBeingDragged by remember(dragState, obj.id) {
+        derivedStateOf { dragState != null && dragState.isDragging(obj.id) }
+    }
+    val dropEdge by remember(dragState, obj.id) {
+        derivedStateOf {
+            val dragged = dragState?.draggingItemId
+            if (dragState != null && dragState.targetItemId == obj.id &&
+                dragged != null && dragged != obj.id
+            ) {
+                dragState.targetEdge
+            } else {
+                null
+            }
+        }
+    }
 
     // Validate the drop target up-front so the modifier can reject self/descendant
     // drops without showing a misleading hover affordance.
@@ -124,8 +134,8 @@ fun TreeRow(
             )
     } else Modifier
 
-    val edgeBorderModifier = if (isDropTarget) {
-        when (targetEdge) {
+    val edgeBorderModifier = if (dropEdge != null) {
+        when (dropEdge) {
             DragEdge.Top, DragEdge.Bottom -> Modifier.border(
                 width = 2.dp,
                 color = MaterialTheme.colorScheme.primary,
