@@ -139,6 +139,7 @@ private fun ReceivedTab(
     EmptyOrError(state, R.string.market_reviews_empty_received_title, R.string.market_reviews_empty_received_subtitle, onRetry) {
         InfiniteList(
             items = state.reviews,
+            key = { review -> review.id },
             isLoading = state.isLoading,
             hasMore = state.hasMore,
             onLoadMore = onLoadMore,
@@ -166,6 +167,7 @@ private fun SentTab(
     EmptyOrError(state, R.string.market_reviews_empty_sent_title, R.string.market_reviews_empty_sent_subtitle, onRetry) {
         InfiniteList(
             items = state.reviews,
+            key = { review -> review.id },
             isLoading = state.isLoading,
             hasMore = state.hasMore,
             onLoadMore = onLoadMore,

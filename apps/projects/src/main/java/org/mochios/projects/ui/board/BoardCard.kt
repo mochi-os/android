@@ -35,6 +35,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -123,10 +124,21 @@ fun BoardCard(
     // visual-only to avoid confusing dual-target situations (the parent and
     // the child both being valid drop targets at the same point).
     val isDragSource = cardDragState != null && !isNested && cardIndexInColumn >= 0
-    val isBeingDragged = isDragSource && cardDragState!!.isDragging(obj.id)
-    val isDropTarget = isDragSource && cardDragState!!.targetItemId == obj.id &&
-        cardDragState.draggingItemId != null && cardDragState.draggingItemId != obj.id
-    val targetEdge = cardDragState?.targetEdge
+    val isBeingDragged by remember(cardDragState, obj.id, isDragSource) {
+        derivedStateOf { isDragSource && cardDragState!!.isDragging(obj.id) }
+    }
+    val dropEdge by remember(cardDragState, obj.id, isDragSource) {
+        derivedStateOf {
+            val dragged = cardDragState?.draggingItemId
+            if (isDragSource && cardDragState!!.targetItemId == obj.id &&
+                dragged != null && dragged != obj.id
+            ) {
+                cardDragState.targetEdge
+            } else {
+                null
+            }
+        }
+    }
 
     val dragHintLabel = if (isDragSource) stringResource(R.string.projects_drag_card) else ""
     val dragModifier = if (isDragSource) {
@@ -161,8 +173,8 @@ fun BoardCard(
             )
     } else Modifier
 
-    val edgeBorderModifier = if (isDropTarget) {
-        when (targetEdge) {
+    val edgeBorderModifier = if (dropEdge != null) {
+        when (dropEdge) {
             DragEdge.Top -> Modifier.border(
                 width = 2.dp,
                 color = MaterialTheme.colorScheme.primary,

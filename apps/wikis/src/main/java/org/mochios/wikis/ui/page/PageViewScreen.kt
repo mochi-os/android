@@ -47,6 +47,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -586,12 +587,16 @@ private fun PageBody(
     // web's algorithm: pick the heading whose top is just above
     // (scrollValue + activationOffset); fall back to the first heading
     // when the user is above all of them.
-    val activeId = computeActiveHeading(
-        headings = headings.value,
-        positions = headingPositions.mapValues { it.value + markdownOffsetY },
-        scrollY = scrollState.value,
-        activationOffsetPx = activationOffsetPx,
-    )
+    val activeId by remember(activationOffsetPx) {
+        derivedStateOf {
+            computeActiveHeading(
+                headings = headings.value,
+                positions = headingPositions.mapValues { entry -> entry.value + markdownOffsetY },
+                scrollY = scrollState.value,
+                activationOffsetPx = activationOffsetPx,
+            )
+        }
+    }
 
     Column(
         modifier = Modifier

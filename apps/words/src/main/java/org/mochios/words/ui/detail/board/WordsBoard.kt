@@ -22,6 +22,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -65,7 +66,7 @@ fun WordsBoard(
     onDragEndAt: (rootPos: Offset) -> Unit,
     onDragCancel: () -> Unit,
     onBoundsChanged: (Rect, cellSize: Float) -> Unit,
-    dragPointer: Offset?,
+    dragPointer: () -> Offset?,
     modifier: Modifier = Modifier,
 ) {
     val isActive = gameStatus == "active"
@@ -89,6 +90,9 @@ fun WordsBoard(
         val side = available
 
         var coords by remember { mutableStateOf<LayoutCoordinates?>(null) }
+        val hoverCell by remember(dragPointer) {
+            derivedStateOf { cellUnder(dragPointer(), coords) }
+        }
 
         val shape = RoundedCornerShape(BOARD_CORNER)
         Box(
@@ -111,8 +115,7 @@ fun WordsBoard(
                 canPlace = canPlace,
                 isDragging = isDragging,
                 dragSource = dragSource,
-                dragPointer = dragPointer,
-                boardCoords = coords,
+                hoverCell = hoverCell,
                 onCellClick = onCellClick,
                 onRemovePlacement = onRemovePlacement,
                 onBoardDragStart = onBoardDragStart,
@@ -124,6 +127,30 @@ fun WordsBoard(
     }
 }
 
+/** No cell, for a pointer off the board. */
+private const val NO_CELL = -1
+
+/**
+ * The board cell under a pointer, as `row * BOARD_SIZE + col`.
+ *
+ * @param pointer the pointer in root coordinates, or null when nothing is carried.
+ * @param board where the board lies, or null before it is placed.
+ * @return the cell index, or [NO_CELL] when the pointer is off the board.
+ */
+private fun cellUnder(pointer: Offset?, board: LayoutCoordinates?): Int {
+    if (pointer == null || board == null || !board.isAttached) {
+        return NO_CELL
+    }
+    val bounds = board.boundsInRoot()
+    val size = bounds.width / BOARD_SIZE
+    if (!bounds.contains(pointer) || size <= 0f) {
+        return NO_CELL
+    }
+    val col = ((pointer.x - bounds.left) / size).toInt().coerceIn(0, BOARD_SIZE - 1)
+    val row = ((pointer.y - bounds.top) / size).toInt().coerceIn(0, BOARD_SIZE - 1)
+    return row * BOARD_SIZE + col
+}
+
 @Composable
 private fun BoardGrid(
     board: Board,
@@ -133,8 +160,7 @@ private fun BoardGrid(
     canPlace: Boolean,
     isDragging: Boolean,
     dragSource: DragSource?,
-    dragPointer: Offset?,
-    boardCoords: LayoutCoordinates?,
+    hoverCell: Int,
     onCellClick: (row: Int, col: Int) -> Unit,
     onRemovePlacement: (row: Int, col: Int) -> Unit,
     onBoardDragStart: (row: Int, col: Int, rootPos: Offset) -> Unit,
@@ -147,17 +173,6 @@ private fun BoardGrid(
         pendingPlacements.associateBy { it.row * BOARD_SIZE + it.col }
     }
 
-    val hoverCell: Pair<Int, Int>? = remember(dragPointer, boardCoords) {
-        val ptr = dragPointer ?: return@remember null
-        val bounds = boardCoords?.boundsInRoot() ?: return@remember null
-        if (!bounds.contains(ptr)) return@remember null
-        val cellSize = bounds.width / BOARD_SIZE
-        if (cellSize <= 0f) return@remember null
-        val col = ((ptr.x - bounds.left) / cellSize).toInt().coerceIn(0, BOARD_SIZE - 1)
-        val row = ((ptr.y - bounds.top) / cellSize).toInt().coerceIn(0, BOARD_SIZE - 1)
-        row to col
-    }
-
     // Layout the 15x15 grid by dividing the box into equal-sized cells. The
     // parent always passes us a square Box (BoxWithConstraints picks the
     // smaller of maxWidth/maxHeight), so each cell gets exactly side/15.
@@ -167,7 +182,7 @@ private fun BoardGrid(
             for (row in 0 until BOARD_SIZE) {
                 for (col in 0 until BOARD_SIZE) {
                     val pending = pendingByCell[row * BOARD_SIZE + col]
-                    val isHover = hoverCell?.let { it.first == row && it.second == col } == true
+                    val isHover = hoverCell == row * BOARD_SIZE + col
                     BoardCell(
                         row = row,
                         col = col,
@@ -179,7 +194,6 @@ private fun BoardGrid(
                         isDragging = isDragging,
                         isHover = isHover,
                         dragSource = dragSource,
-                        boardCoords = boardCoords,
                         onCellClick = onCellClick,
                         onRemovePlacement = onRemovePlacement,
                         onBoardDragStart = onBoardDragStart,
@@ -218,7 +232,6 @@ private fun BoardCell(
     isDragging: Boolean,
     isHover: Boolean,
     dragSource: DragSource?,
-    boardCoords: LayoutCoordinates?,
     onCellClick: (row: Int, col: Int) -> Unit,
     onRemovePlacement: (row: Int, col: Int) -> Unit,
     onBoardDragStart: (row: Int, col: Int, rootPos: Offset) -> Unit,
@@ -277,9 +290,7 @@ private fun BoardCell(
                     Modifier.pointerInput(row, col, canDragThis) {
                         detectDragGesturesAfterLongPress(
                             onDragStart = { localPos ->
-                                val rootPos = cellCoords?.localToRoot(localPos)
-                                    ?: boardCoords?.localToRoot(localPos)
-                                    ?: localPos
+                                val rootPos = cellCoords?.localToRoot(localPos) ?: localPos
                                 onBoardDragStart(row, col, rootPos)
                             },
                             onDrag = { change, _ ->

@@ -9,6 +9,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.pager.PagerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
@@ -52,17 +55,30 @@ fun FlipBook(
     // Continuous scroll position: an integer means settled. Rendering off the
     // offset rather than isScrollInProgress keeps the fold smooth through drag
     // and settle; the call site snaps a fractional rest position back to a
-    // page.
-    val position = pagerState.currentPage + pagerState.currentPageOffsetFraction
-    if (position <= 0f) return // first page / over-scroll below: no leaf
-    val front = floor(position).toInt()
+    // page. Only which page is folding is read here, so the fold recomposes
+    // when a flip starts or ends; the angle is read where it is drawn.
+    val folding by remember(pagerState) {
+        derivedStateOf {
+            val position = pagerState.currentPage + pagerState.currentPageOffsetFraction
+            val front = floor(position).toInt()
+            val f = position - front
+            when {
+                position <= 0f -> NONE
+                f <= 0.002f || f >= 0.998f -> NONE
+                else -> front
+            }
+        }
+    }
+    val front = folding
+    if (front == NONE) return // first page, over-scroll, or settled: let live show
     val next = front + 1
     if (next >= pageCount) return // last page: nothing to fold to
-    val f = position - front
-    if (f <= 0.002f || f >= 0.998f) return // settled on a page: let live show
 
-    val theta = f * 180f
-    val frontFacing = theta <= 90f
+    /** The fold's angle now, 0° flat on [front] to 180° over onto [next]. */
+    fun theta(): Float {
+        val position = pagerState.currentPage + pagerState.currentPageOffsetFraction
+        return ((position - front) * 180f).coerceIn(0f, 180f)
+    }
 
     Box(modifier.fillMaxSize()) {
         // Static back layers. A's top half holds its place; B's bottom half is
@@ -87,13 +103,12 @@ fun FlipBook(
         // The rigid leaf, hinged at the mid-screen crease (center). Rotates
         // about X toward the viewer; the shadow scrim deepens as it goes
         // edge-on (sin(theta)).
-        val shade = LEAF_SHADE_MAX * sin(Math.toRadians(theta.toDouble())).toFloat()
         Box(
             modifier = Modifier
                 .fillMaxSize()
                 .graphicsLayer {
                     transformOrigin = TransformOrigin(0.5f, 0.5f)
-                    rotationX = LEAF_FOLD_SIGN * theta
+                    rotationX = LEAF_FOLD_SIGN * theta()
                     cameraDistance = LEAF_CAMERA_DISTANCE * density
                 }
         ) {
@@ -104,10 +119,11 @@ fun FlipBook(
                     .graphicsLayer {
                         clip = true
                         shape = BottomHalfShape
-                        alpha = if (frontFacing) 1f else 0f
+                        alpha = if (theta() <= 90f) 1f else 0f
                     }
                     .drawWithContent {
                         drawContent()
+                        val shade = shade(theta())
                         if (shade > 0f) {
                             drawRect(color = Color.Black.copy(alpha = shade))
                         }
@@ -124,10 +140,11 @@ fun FlipBook(
                         shape = TopHalfShape
                         transformOrigin = TransformOrigin(0.5f, 0.5f)
                         rotationX = 180f
-                        alpha = if (frontFacing) 0f else 1f
+                        alpha = if (theta() <= 90f) 0f else 1f
                     }
                     .drawWithContent {
                         drawContent()
+                        val shade = shade(theta())
                         if (shade > 0f) {
                             drawRect(color = Color.Black.copy(alpha = shade))
                         }
@@ -136,6 +153,12 @@ fun FlipBook(
         }
     }
 }
+
+/** No page is folding. */
+private const val NONE = -1
+
+/** The scrim over the leaf at [theta]: none flat, deepest edge-on. */
+private fun shade(theta: Float): Float = LEAF_SHADE_MAX * sin(Math.toRadians(theta.toDouble())).toFloat()
 
 private object TopHalfShape : Shape {
     override fun createOutline(

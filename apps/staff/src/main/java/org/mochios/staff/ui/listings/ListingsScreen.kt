@@ -230,6 +230,7 @@ private fun ListingsBody(
 
             else -> InfiniteList(
                 items = state.listings,
+                key = { listing -> listing.id },
                 isLoading = state.isLoadingMore,
                 hasMore = state.listings.size < state.total,
                 onLoadMore = onLoadMore,

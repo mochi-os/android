@@ -71,6 +71,7 @@ fun MessagesInboxScreen(
                 else -> {
                     InfiniteList(
                         items = state.threads,
+                        key = { thread -> thread.id },
                         isLoading = state.isLoading,
                         hasMore = state.hasMore,
                         onLoadMore = viewModel::loadMore,

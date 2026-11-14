@@ -51,6 +51,7 @@ import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
@@ -92,6 +93,8 @@ import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import java.time.Instant
+import kotlinx.coroutines.delay
 import org.mochios.android.i18n.DateFormat
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
@@ -167,8 +170,10 @@ fun MonthGrid(
     onStep: (Int) -> Unit = {},
     onLifted: (Boolean) -> Unit = {},
     selected: Instance? = null,
+    clock: () -> Long = { Instant.now().epochSecond },
 ) {
-    val today = LocalDate.now(viewModel.timezone())
+    val now = ticking(clock)
+    val today = Instant.ofEpochSecond(now).atZone(viewModel.timezone()).toLocalDate()
     val format = LocalFormat.current
     val rtl = LocalLayoutDirection.current == LayoutDirection.Rtl
     val byDay = remember(state.instances, state.hidden, weeks, state.preferences.zones) {
@@ -244,7 +249,9 @@ fun MonthGrid(
         hands.follow = ::follow
         hands.step = onStep
     }
-    val target = if (lift != null) under() else null
+    val target by remember(weeks, rtl) {
+        derivedStateOf { if (lift != null) under() else null }
+    }
     val run = pick?.let { ends(it.anchor, it.day) }
     val hearing by rememberUpdatedState(onLifted)
     val holding = lift != null || pick != null
@@ -337,6 +344,7 @@ fun MonthGrid(
                                 day = day,
                                 week = if (offset == 0 && state.preferences.week.numbers) number(week) else null,
                                 today = today,
+                                now = now,
                                 allday = state.preferences.allday,
                                 outside = month != null && day.monthValue != month,
                                 instances = occurrences,
@@ -398,6 +406,26 @@ fun MonthGrid(
     }
 }
 
+/**
+ * The time now from [clock], in epoch seconds, read again every
+ * [TICK] milliseconds, so what is drawn as over fades without waiting on
+ * anything else to change. Which occurrences are over only has to be right
+ * to the minute.
+ */
+@Composable
+private fun ticking(clock: () -> Long): Long {
+    val now by produceState(clock()) {
+        while (true) {
+            delay(TICK)
+            value = clock()
+        }
+    }
+    return now
+}
+
+/** How often [ticking] reads the clock again. */
+private const val TICK = 30_000L
+
 /** What the month grid's gesture calls on, from the latest composition. */
 private class Grip {
     var drop: () -> Unit = {}
@@ -427,6 +455,7 @@ private fun Cell(
     day: LocalDate,
     week: Int?,
     today: LocalDate,
+    now: Long,
     allday: String,
     outside: Boolean,
     instances: List<Instance>,
@@ -554,12 +583,19 @@ private fun Cell(
         // The bars and the timed entries stack from the top of the cell as
         // arrange orders them, each group scrolling on its own. Each group but
         // the last is held so that one entry of every later group stays in view.
-        val entries = instances.map { it to look(it, viewModel.day(it), viewModel.finish(it), day) }
+        val entries = remember(instances, day, viewModel.timezone(), zones) {
+            instances.map { instance ->
+                instance to look(instance, viewModel.day(instance), viewModel.finish(instance), day)
+            }
+        }
         // A bar is one line; a timed entry is two, its dot, time and marks
         // above its title.
         val line = leading(MaterialTheme.typography.labelSmall)
         val pair = leading(MaterialTheme.typography.labelSmall.packed()) * 2
-        val groups = arrange(entries, day, allday) { viewModel.day(it) }
+        val arranged = remember(entries, day, allday, viewModel.timezone(), zones) {
+            arrange(entries, day, allday) { instance -> viewModel.day(instance) }
+        }
+        val groups = arranged
             .map { group -> Group(group, if (group.first().second.bar) line else pair) }
 
         @Composable
@@ -577,7 +613,7 @@ private fun Cell(
                 Modifier
                     .fillMaxWidth()
                     .bringIntoViewRequester(requester)
-                    .alpha(opacity(carried = same(instance, lifted), over = viewModel.past(instance), cancelled = instance.cancelled)),
+                    .alpha(opacity(carried = same(instance, lifted), over = past(instance, viewModel.finish(instance), now, today), cancelled = instance.cancelled)),
                 stacked = !look.bar,
                 time = if (look.time) clock(instance, viewModel) else null,
                 chosen = same(instance, selected),
@@ -847,8 +883,10 @@ fun AgendaList(
     onOpen: (Instance) -> Unit,
     selected: Instance? = null,
     onTop: (LocalDate) -> Unit = {},
+    clock: () -> Long = { Instant.now().epochSecond },
 ) {
-    val today = LocalDate.now(viewModel.timezone())
+    val now = ticking(clock)
+    val today = Instant.ofEpochSecond(now).atZone(viewModel.timezone()).toLocalDate()
     val listState = rememberLazyListState()
     val search = state.search.trim()
     val wide = LocalConfiguration.current.screenWidthDp >= WIDE
@@ -996,6 +1034,8 @@ fun AgendaList(
                         chosen = same(row.instance, selected),
                         calendar = if (wide) names[row.instance.calendar].orEmpty() else null,
                         divided = !row.last,
+                        now = now,
+                        today = today,
                     ) { onOpen(row.instance) }
                 }
             }
@@ -1099,6 +1139,8 @@ fun AgendaRow(
     chosen: Boolean = false,
     calendar: String? = null,
     divided: Boolean = false,
+    now: Long = Instant.now().epochSecond,
+    today: LocalDate = Instant.ofEpochSecond(now).atZone(viewModel.timezone()).toLocalDate(),
     onClick: () -> Unit,
 ) {
     val format = LocalFormat.current
@@ -1132,7 +1174,7 @@ fun AgendaRow(
                 .alpha(
                     opacity(
                         carried = false,
-                        over = viewModel.past(instance),
+                        over = past(instance, viewModel.finish(instance), now, today),
                         cancelled = instance.cancelled,
                     ),
                 )

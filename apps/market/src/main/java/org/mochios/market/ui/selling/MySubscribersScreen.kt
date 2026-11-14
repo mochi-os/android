@@ -77,6 +77,7 @@ fun MySubscribersScreen(
                 else -> {
                     InfiniteList(
                         items = state.subscriptions,
+                        key = { subscription -> subscription.id },
                         isLoading = state.isLoading,
                         hasMore = state.hasMore,
                         onLoadMore = viewModel::loadMore,

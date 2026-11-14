@@ -133,6 +133,9 @@ class ForumViewModel @Inject constructor(
     /** The pending or in-flight list refresh; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
 
+    /** The next page in flight, cancelled when the list loads in another order or tag. */
+    private var loadMoreJob: Job? = null
+
     private var resumedBefore = false
 
     /** Set while another screen covers this one. Frames then leave the list
@@ -403,8 +406,13 @@ class ForumViewModel @Inject constructor(
             loadAll(sort, refreshing = false)
             return
         }
+        loadMoreJob?.cancel()
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.value = _uiState.value.copy(
+                isLoading = true,
+                isLoadingMore = false,
+                error = null,
+            )
             try {
                 // The server orders by its own "new" default unless asked, so
                 // the saved sort is resolved first and the list matches the
@@ -535,11 +543,19 @@ class ForumViewModel @Inject constructor(
         val cursor = _uiState.value.cursor
         val before = _uiState.value.nextCursor
         if (cursor == null && before == null) return
-        if (_uiState.value.isLoadingMore) return
-        viewModelScope.launch {
+        if (_uiState.value.isLoadingMore || _uiState.value.isLoading) return
+        val sort = _uiState.value.sort.ifEmpty { null }
+        val tag = _uiState.value.currentTag
+        loadMoreJob = viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoadingMore = true)
             try {
-                val r = repository.viewForum(forumId, before = if (cursor == null) before else null, cursor = cursor, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
+                val r = repository.viewForum(
+                    forumId,
+                    before = if (cursor == null) before else null,
+                    cursor = cursor,
+                    sort = sort,
+                    tag = tag,
+                )
                 _uiState.value = _uiState.value.copy(
                     // A server before the cursor repeats pinned posts on every
                     // page, and a scored list paged by position can repeat a
@@ -551,6 +567,8 @@ class ForumViewModel @Inject constructor(
                     cursor = r.cursor,
                     isLoadingMore = false
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoadingMore = false, error = e.toMochiError())
             }

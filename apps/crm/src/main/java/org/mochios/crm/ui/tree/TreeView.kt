@@ -14,6 +14,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -65,30 +67,12 @@ fun TreeView(
     }
 
     // Build tree structure from flat list
-    val childMap = objects.groupBy { it.parent }
-    val roots = objects.filter { it.parent.isBlank() || objects.none { other -> other.id == it.parent } }
-
-    fun flattenTree(items: List<CrmObject>, depth: Int): List<TreeNode> {
-        val result = mutableListOf<TreeNode>()
-        for (item in items) {
-            val children = childMap[item.id] ?: emptyList()
-            val isExpanded = expandedState[item.id] ?: true
-            result.add(
-                TreeNode(
-                    obj = item,
-                    depth = depth,
-                    hasChildren = children.isNotEmpty(),
-                    isExpanded = isExpanded
-                )
-            )
-            if (isExpanded && children.isNotEmpty()) {
-                result.addAll(flattenTree(children, depth + 1))
-            }
-        }
-        return result
+    val flatNodes by remember(objects) {
+        val childMap = objects.groupBy { obj -> obj.parent }
+        val ids = objects.mapTo(HashSet()) { obj -> obj.id }
+        val roots = objects.filter { obj -> obj.parent.isBlank() || obj.parent !in ids }
+        derivedStateOf { flattenTree(roots, 0, childMap, expandedState) }
     }
-
-    val flatNodes = flattenTree(roots, 0)
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -185,4 +169,38 @@ private fun handleTreeDrop(
         }
         else -> { /* Start/End not used in vertical tree */ }
     }
+}
+
+/**
+ * The tree's rows in display order, each expanded node followed by its children.
+ *
+ * @param items the nodes at this level.
+ * @param depth how deep [items] sit.
+ * @param childMap each object's children, by parent id.
+ * @param expanded which nodes are expanded; a node missing from it is.
+ * @return the rows to show.
+ */
+private fun flattenTree(
+    items: List<CrmObject>,
+    depth: Int,
+    childMap: Map<String, List<CrmObject>>,
+    expanded: Map<String, Boolean>,
+): List<TreeNode> {
+    val result = mutableListOf<TreeNode>()
+    for (item in items) {
+        val children = childMap[item.id] ?: emptyList()
+        val isExpanded = expanded[item.id] ?: true
+        result.add(
+            TreeNode(
+                obj = item,
+                depth = depth,
+                hasChildren = children.isNotEmpty(),
+                isExpanded = isExpanded
+            )
+        )
+        if (isExpanded && children.isNotEmpty()) {
+            result.addAll(flattenTree(children, depth + 1, childMap, expanded))
+        }
+    }
+    return result
 }
