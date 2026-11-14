@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Xabar almashish manzili</string>
     <string name="people_profile_networks">Tarmoqlar</string>
     <string name="people_profile_settings">Sozlamalar</string>
+    <string name="people_contacts_invitation_sent">Taklif yuborildi</string>
 </resources>

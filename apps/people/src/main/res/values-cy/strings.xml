@@ -229,4 +229,5 @@
     <string name="people_contact_messaging">Cyfeiriad negeseua</string>
     <string name="people_profile_networks">Rhwydweithiau</string>
     <string name="people_profile_settings">Gosodiadau</string>
+    <string name="people_contacts_invitation_sent">Gwahoddiad wedi\'i anfon</string>
 </resources>

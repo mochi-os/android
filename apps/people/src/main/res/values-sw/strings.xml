@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Anwani ya ujumbe</string>
     <string name="people_profile_networks">Mitandao</string>
     <string name="people_profile_settings">Mipangilio</string>
+    <string name="people_contacts_invitation_sent">Mwaliko umetumwa</string>
 </resources>

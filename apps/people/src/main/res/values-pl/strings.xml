@@ -227,4 +227,5 @@
     <string name="people_contact_messaging">Adres komunikatora</string>
     <string name="people_profile_networks">Sieci</string>
     <string name="people_profile_settings">Ustawienia</string>
+    <string name="people_contacts_invitation_sent">Zaproszenie wysłane</string>
 </resources>

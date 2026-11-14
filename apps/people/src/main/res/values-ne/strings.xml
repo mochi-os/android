@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">म्यासेजिङ ठेगाना</string>
     <string name="people_profile_networks">नेटवर्कहरू</string>
     <string name="people_profile_settings">सेटिङहरू</string>
+    <string name="people_contacts_invitation_sent">निमन्त्रणा पठाइयो</string>
 </resources>

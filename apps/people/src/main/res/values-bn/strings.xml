@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">মেসেজিং ঠিকানা</string>
     <string name="people_profile_networks">নেটওয়ার্ক</string>
     <string name="people_profile_settings">সেটিংস</string>
+    <string name="people_contacts_invitation_sent">আমন্ত্রণ পাঠানো হয়েছে</string>
 </resources>

@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">મેસેજિંગ સરનામું</string>
     <string name="people_profile_networks">નેટવર્ક્સ</string>
     <string name="people_profile_settings">સેટિંગ્સ</string>
+    <string name="people_contacts_invitation_sent">આમંત્રણ મોકલવામાં આવ્યું</string>
 </resources>

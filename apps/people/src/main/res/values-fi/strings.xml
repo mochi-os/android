@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Pikaviestiosoite</string>
     <string name="people_profile_networks">Verkot</string>
     <string name="people_profile_settings">Asetukset</string>
+    <string name="people_contacts_invitation_sent">Kutsu lähetetty</string>
 </resources>

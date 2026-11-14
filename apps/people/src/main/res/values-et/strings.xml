@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Kiirsuhtlusaadress</string>
     <string name="people_profile_networks">Võrgud</string>
     <string name="people_profile_settings">Seaded</string>
+    <string name="people_contacts_invitation_sent">Kutse saadetud</string>
 </resources>

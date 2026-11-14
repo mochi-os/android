@@ -227,4 +227,5 @@
     <string name="people_contact_messaging">Адрас мэсенджара</string>
     <string name="people_profile_networks">Сеткі</string>
     <string name="people_profile_settings">Налады</string>
+    <string name="people_contacts_invitation_sent">Запрашэнне адпраўлена</string>
 </resources>

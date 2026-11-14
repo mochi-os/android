@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Adresë mesazhesh</string>
     <string name="people_profile_networks">Rrjetet</string>
     <string name="people_profile_settings">Cilësimet</string>
+    <string name="people_contacts_invitation_sent">Ftesa u dërgua</string>
 </resources>

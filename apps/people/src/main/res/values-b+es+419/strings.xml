@@ -173,4 +173,5 @@
     <string name="people_contact_messaging">Dirección de mensajería</string>
     <string name="people_profile_networks">Redes</string>
     <string name="people_profile_settings">Configuración</string>
+    <string name="people_contacts_invitation_sent">Invitación enviada</string>
 </resources>

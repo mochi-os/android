@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">即时通讯地址</string>
     <string name="people_profile_networks">网络</string>
     <string name="people_profile_settings">设置</string>
+    <string name="people_contacts_invitation_sent">邀请已发送</string>
 </resources>

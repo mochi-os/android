@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Mesajlaşma ünvanı</string>
     <string name="people_profile_networks">Şəbəkələr</string>
     <string name="people_profile_settings">Parametrlər</string>
+    <string name="people_contacts_invitation_sent">Dəvət göndərildi</string>
 </resources>

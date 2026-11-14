@@ -226,4 +226,5 @@
     <string name="people_contact_messaging">Ziņapmaiņas adrese</string>
     <string name="people_profile_networks">Tīkli</string>
     <string name="people_profile_settings">Iestatījumi</string>
+    <string name="people_contacts_invitation_sent">Ielūgums nosūtīts</string>
 </resources>

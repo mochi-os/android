@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">ທີ່ຢູ່ສົ່ງຂໍ້ຄວາມ</string>
     <string name="people_profile_networks">ເຄືອຂ່າຍ</string>
     <string name="people_profile_settings">ການຕັ້ງຄ່າ</string>
+    <string name="people_contacts_invitation_sent">ສົ່ງຄຳເຊີນແລ້ວ</string>
 </resources>

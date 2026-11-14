@@ -227,4 +227,5 @@
     <string name="people_contact_messaging">Seòladh teachdaireachdan</string>
     <string name="people_profile_networks">Lìonraidhean</string>
     <string name="people_profile_settings">Roghainnean</string>
+    <string name="people_contacts_invitation_sent">Chaidh an cuireadh a chur</string>
 </resources>

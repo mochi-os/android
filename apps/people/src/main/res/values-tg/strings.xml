@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Суроғаи паёмрасон</string>
     <string name="people_profile_networks">Шабакаҳо</string>
     <string name="people_profile_settings">Танзимот</string>
+    <string name="people_contacts_invitation_sent">Даъватнома ирсол шуд</string>
 </resources>

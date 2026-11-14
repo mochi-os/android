@@ -226,4 +226,5 @@
     <string name="people_contact_messaging">Adresa pro zprávy</string>
     <string name="people_profile_networks">Sítě</string>
     <string name="people_profile_settings">Nastavení</string>
+    <string name="people_contacts_invitation_sent">Pozvánka odeslána</string>
 </resources>

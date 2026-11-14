@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">메시징 주소</string>
     <string name="people_profile_networks">네트워크</string>
     <string name="people_profile_settings">설정</string>
+    <string name="people_contacts_invitation_sent">초대를 보냈습니다</string>
 </resources>

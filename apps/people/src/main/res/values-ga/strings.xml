@@ -228,4 +228,5 @@
     <string name="people_contact_messaging">Seoladh teachtaireachtaí</string>
     <string name="people_profile_networks">Líonraí</string>
     <string name="people_profile_settings">Socruithe</string>
+    <string name="people_contacts_invitation_sent">Cuireadh seolta</string>
 </resources>

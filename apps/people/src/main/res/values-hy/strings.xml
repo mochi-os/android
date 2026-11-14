@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Մեսենջերի հասցե</string>
     <string name="people_profile_networks">Ցանցեր</string>
     <string name="people_profile_settings">Կարգավորումներ</string>
+    <string name="people_contacts_invitation_sent">Հրավերն ուղարկվեց</string>
 </resources>

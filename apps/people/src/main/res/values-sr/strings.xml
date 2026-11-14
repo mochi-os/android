@@ -226,4 +226,5 @@
     <string name="people_contact_messaging">Адреса за размену порука</string>
     <string name="people_profile_networks">Мреже</string>
     <string name="people_profile_settings">Подешавања</string>
+    <string name="people_contacts_invitation_sent">Позивница послата</string>
 </resources>

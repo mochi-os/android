@@ -6,13 +6,23 @@
 package org.mochios.people.ui.contacts
 
 import android.os.Looper
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.runtime.remember
+import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextReplacement
-import androidx.compose.ui.test.hasSetTextAction
 import androidx.lifecycle.SavedStateHandle
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.launch
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -25,7 +35,10 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.userMessage
 import org.mochios.android.files.FileStore
+import org.mochios.android.i18n.AppContext
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.model.Contact
 import org.mochios.people.repository.PeopleRepository
@@ -36,6 +49,7 @@ import org.robolectric.annotation.Config
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.time.Duration
+import java.util.Collections
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
@@ -74,6 +88,18 @@ class ContactsFlowTest {
     /** Holds the photos refresh's reply until released. */
     @Volatile private var photosHeld: CountDownLatch? = null
 
+    /** The server's refusal of every action on the list, while set. */
+    @Volatile private var refusal: String? = null
+
+    /** The list fails to load, while set. */
+    @Volatile private var down = false
+
+    /** The list comes back with no contacts in it. */
+    @Volatile private var empty = false
+
+    /** Collectors of a view model's events, stopped at the end. */
+    private val listening = mutableListOf<Job>()
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -81,10 +107,21 @@ class ContactsFlowTest {
             override fun dispatch(request: RecordedRequest): MockResponse {
                 asked.add(request)
                 val body = request.body.clone().readUtf8()
-                return when (request.path.orEmpty().substringAfter("/people/").substringBefore("?")) {
-                    "-/contacts" -> ok(
-                        """{"contacts": [{"id": "c3", "name": "Grace", "person": "p2"}, {"id": "c1", "name": "Ada"}, {"id": "c2", "name": "Ada Byron", "person": "p1"}]}""",
-                    )
+                val path = request.path.orEmpty().substringAfter("/people/").substringBefore("?")
+                val reason = refusal
+                if (reason != null && path in REFUSABLE) {
+                    return MockResponse().setResponseCode(409).setBody("""{"error": "$reason"}""")
+                }
+                return when (path) {
+                    "-/contacts" -> when {
+                        down -> MockResponse().setResponseCode(500)
+                            .setBody("""{"error": "The address book could not be read"}""")
+                        empty -> ok("""{"contacts": []}""")
+                        else -> ok(
+                            """{"contacts": [{"id": "c3", "name": "Grace", "person": "p2"}, {"id": "c1", "name": "Ada"}, {"id": "c2", "name": "Ada Byron", "person": "p1"}]}""",
+                        )
+                    }
+                    "-/friends/invite", "-/friends/remove", "-/books/rename", "-/books/delete" -> ok("{}")
                     "-/contacts/get" -> when {
                         body.contains("source=c2") -> ok("""{"contact": $MERGED, "source": $ADA}""")
                         body.contains("source=c3") -> MockResponse().setResponseCode(409)
@@ -125,7 +162,26 @@ class ContactsFlowTest {
     }
 
     @After
-    fun end() = server.shutdown()
+    fun end() {
+        listening.forEach { it.cancel() }
+        server.shutdown()
+    }
+
+    /** What [model] tells its screen from now on, as it is told. */
+    private fun told(model: ContactsViewModel): List<ContactsEvent> {
+        val events = Collections.synchronizedList(mutableListOf<ContactsEvent>())
+        listening += CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { events.add(it) } }
+        return events
+    }
+
+    /** The list, loaded with its address books. */
+    private fun loaded(): ContactsViewModel {
+        val model = ContactsViewModel(SavedStateHandle(), repository)
+        until { model.uiState.value.contacts.isNotEmpty() && model.uiState.value.books.isNotEmpty() }
+        return model
+    }
+
+    private val grace = Contact(id = "c3", person = "p2", name = "Grace")
 
     private fun ok(data: String) = MockResponse().setBody("""{"data": $data}""")
 
@@ -454,4 +510,119 @@ class ContactsFlowTest {
         }
         assertEquals(1, listed().size)
     }
+
+    // The list shows no sign of an invitation, and an action that fails
+    // leaves the list as it was, so the screen says each.
+    @Test
+    fun `an invitation sent from the list says so`() {
+        val model = loaded()
+        val events = told(model)
+        model.invite(grace)
+        until { events.isNotEmpty() }
+        assertEquals(listOf<ContactsEvent>(ContactsEvent.Invited), events.toList())
+        assertEquals(1, asked.count { it.path.orEmpty().endsWith("/-/friends/invite") })
+    }
+
+    @Test
+    fun `an invitation the server refuses says why, and the list stays`() {
+        AppContext.set(context)
+        val model = loaded()
+        val events = told(model)
+        refusal = "You have already invited this person"
+        model.invite(grace)
+        until { events.isNotEmpty() }
+        val failed = events.single() as ContactsEvent.Failed
+        assertEquals("You have already invited this person", failed.error.userMessage())
+        assertEquals(null, model.uiState.value.error)
+        assertEquals(3, model.uiState.value.contacts.size)
+        assertFalse(model.uiState.value.isMutating)
+    }
+
+    @Test
+    fun `every action on the list that fails says why`() {
+        AppContext.set(context)
+        val model = loaded()
+        val events = told(model)
+        val book = model.uiState.value.books.first()
+        refusal = "Refused"
+        model.requestUnfriend(grace)
+        model.confirmUnfriend()
+        until { events.size == 1 }
+        model.requestDelete(grace)
+        model.confirmDelete()
+        until { events.size == 2 }
+        model.requestRenameBook(book)
+        model.confirmRenameBook("Work")
+        until { events.size == 3 }
+        model.requestDeleteBook(book)
+        model.confirmDeleteBook()
+        until { events.size == 4 }
+        assertEquals(List(4) { "Refused" }, events.map { (it as ContactsEvent.Failed).error.userMessage() })
+        assertEquals(null, model.uiState.value.error)
+        assertEquals(3, model.uiState.value.contacts.size)
+        assertFalse(model.uiState.value.isMutating)
+    }
+
+    @Test
+    fun `a refresh that fails over a list already showing says why, and the list stays`() {
+        AppContext.set(context)
+        val model = loaded()
+        val events = told(model)
+        down = true
+        model.refresh()
+        until { events.isNotEmpty() }
+        val failed = events.single() as ContactsEvent.Failed
+        assertEquals("The address book could not be read", failed.error.userMessage())
+        assertEquals(null, model.uiState.value.error)
+        assertEquals(3, model.uiState.value.contacts.size)
+        assertFalse(model.uiState.value.isRefreshing)
+    }
+
+    @Test
+    fun `a refresh that fails over an empty list shows the error in its place`() {
+        empty = true
+        val model = ContactsViewModel(SavedStateHandle(), repository)
+        until { listed().isNotEmpty() && !model.uiState.value.isLoading }
+        val events = told(model)
+        down = true
+        model.refresh()
+        until { model.uiState.value.error != null }
+        assertTrue(events.isEmpty())
+    }
+
+    @Test
+    fun `the screen says an invitation went`() {
+        val events = MutableSharedFlow<ContactsEvent>(extraBufferCapacity = 8)
+        rule.setContent {
+            val host = remember { SnackbarHostState() }
+            Box {
+                SnackbarHost(host)
+                ContactsSnackbars(events, host)
+            }
+        }
+        rule.waitForIdle()
+        events.tryEmit(ContactsEvent.Invited)
+        rule.waitUntil(5_000) { rule.onAllNodesWithText("Invitation sent").fetchSemanticsNodes().isNotEmpty() }
+    }
+
+    @Test
+    fun `the screen says why an action failed, in the server's own words`() {
+        AppContext.set(context)
+        val events = MutableSharedFlow<ContactsEvent>(extraBufferCapacity = 8)
+        rule.setContent {
+            val host = remember { SnackbarHostState() }
+            Box {
+                SnackbarHost(host)
+                ContactsSnackbars(events, host)
+            }
+        }
+        rule.waitForIdle()
+        events.tryEmit(ContactsEvent.Failed(MochiError.Unknown("You have already invited this person")))
+        rule.waitUntil(5_000) {
+            rule.onAllNodesWithText("You have already invited this person").fetchSemanticsNodes().isNotEmpty()
+        }
+    }
 }
+
+/** The actions on the list a refusal answers. */
+private val REFUSABLE = setOf("-/friends/invite", "-/friends/remove", "-/contacts/delete", "-/books/rename", "-/books/delete")

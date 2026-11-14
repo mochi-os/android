@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">メッセージングアドレス</string>
     <string name="people_profile_networks">ネットワーク</string>
     <string name="people_profile_settings">設定</string>
+    <string name="people_contacts_invitation_sent">招待を送信しました</string>
 </resources>

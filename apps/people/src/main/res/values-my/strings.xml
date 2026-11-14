@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">မက်ဆေ့ဂျ်ပို့ရန် လိပ်စာ</string>
     <string name="people_profile_networks">ကွန်ရက်များ</string>
     <string name="people_profile_settings">ဆက်တင်များ</string>
+    <string name="people_contacts_invitation_sent">ဖိတ်ကြားမှု ပို့ပြီးပါပြီ</string>
 </resources>

@@ -228,4 +228,5 @@
     <string name="people_contact_messaging">Indirizz tal-messaġġi</string>
     <string name="people_profile_networks">Netwerks</string>
     <string name="people_profile_settings">Issettjar</string>
+    <string name="people_contacts_invitation_sent">L-istedina ntbagħtet</string>
 </resources>

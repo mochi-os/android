@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">የመልዕክት አድራሻ</string>
     <string name="people_profile_networks">አውታረ መረቦች</string>
     <string name="people_profile_settings">ቅንብሮች</string>
+    <string name="people_contacts_invitation_sent">ግብዣ ተልኳል</string>
 </resources>

@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Мессенжерийн хаяг</string>
     <string name="people_profile_networks">Сүлжээнүүд</string>
     <string name="people_profile_settings">Тохиргоо</string>
+    <string name="people_contacts_invitation_sent">Урилга илгээгдсэн</string>
 </resources>

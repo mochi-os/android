@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">អាសយដ្ឋានផ្ញើសារ</string>
     <string name="people_profile_networks">បណ្តាញ</string>
     <string name="people_profile_settings">ការកំណត់</string>
+    <string name="people_contacts_invitation_sent">បានផ្ញើការអញ្ជើញ</string>
 </resources>

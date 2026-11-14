@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">د پیغام رسولو پته</string>
     <string name="people_profile_networks">شبکې</string>
     <string name="people_profile_settings">تنظیمات</string>
+    <string name="people_contacts_invitation_sent">بلنه ولیږل شوه</string>
 </resources>

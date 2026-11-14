@@ -64,6 +64,15 @@ sealed class ContactsEvent {
 
     /** The book this screen was showing has gone; go back to all contacts. */
     object BookDeleted : ContactsEvent()
+
+    /** A friend invitation went; the list shows no sign of it, so the screen says so. */
+    object Invited : ContactsEvent()
+
+    /**
+     * An action on the list failed, or a refresh of a list already showing:
+     * the list stays as it was, so the screen says what went wrong.
+     */
+    data class Failed(val error: MochiError) : ContactsEvent()
 }
 
 /**
@@ -176,10 +185,15 @@ class ContactsViewModel @Inject constructor(
                     error = null,
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isRefreshing = false,
-                    error = e.toMochiError(),
-                )
+                // The error state stands in for an empty list only; over a
+                // list already showing, the failure is said instead.
+                val failure = e.toMochiError()
+                if (_uiState.value.contacts.isEmpty()) {
+                    _uiState.value = _uiState.value.copy(isRefreshing = false, error = failure)
+                } else {
+                    _uiState.value = _uiState.value.copy(isRefreshing = false)
+                    _events.emit(ContactsEvent.Failed(failure))
+                }
             }
             loadBooks(fresh = true)
         }
@@ -251,15 +265,14 @@ class ContactsViewModel @Inject constructor(
     fun invite(contact: Contact) {
         if (contact.person.isBlank() || contact.friend) return
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isMutating = true, error = null)
+            _uiState.value = _uiState.value.copy(isMutating = true)
             try {
                 repository.inviteFriend(contact.person, contact.name)
                 _uiState.value = _uiState.value.copy(isMutating = false)
+                _events.emit(ContactsEvent.Invited)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isMutating = false,
-                    error = e.toMochiError(),
-                )
+                _uiState.value = _uiState.value.copy(isMutating = false)
+                _events.emit(ContactsEvent.Failed(e.toMochiError()))
             }
         }
     }
@@ -280,11 +293,8 @@ class ContactsViewModel @Inject constructor(
                 repository.removeFriend(contact.person)
                 _uiState.value = _uiState.value.copy(isMutating = false, unfriending = null)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isMutating = false,
-                    unfriending = null,
-                    error = e.toMochiError(),
-                )
+                _uiState.value = _uiState.value.copy(isMutating = false, unfriending = null)
+                _events.emit(ContactsEvent.Failed(e.toMochiError()))
             }
         }
     }
@@ -309,11 +319,8 @@ class ContactsViewModel @Inject constructor(
                     contacts = _uiState.value.contacts.filterNot { it.id == contact.id },
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isMutating = false,
-                    deleting = null,
-                    error = e.toMochiError(),
-                )
+                _uiState.value = _uiState.value.copy(isMutating = false, deleting = null)
+                _events.emit(ContactsEvent.Failed(e.toMochiError()))
             }
         }
     }
@@ -337,11 +344,8 @@ class ContactsViewModel @Inject constructor(
                 repository.renameBook(target.id, name.trim())
                 _uiState.value = _uiState.value.copy(isMutating = false, renamingBook = null)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isMutating = false,
-                    renamingBook = null,
-                    error = e.toMochiError(),
-                )
+                _uiState.value = _uiState.value.copy(isMutating = false, renamingBook = null)
+                _events.emit(ContactsEvent.Failed(e.toMochiError()))
             }
         }
     }
@@ -363,11 +367,8 @@ class ContactsViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(isMutating = false, deletingBook = null)
                 if (target.id == book) _events.emit(ContactsEvent.BookDeleted)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isMutating = false,
-                    deletingBook = null,
-                    error = e.toMochiError(),
-                )
+                _uiState.value = _uiState.value.copy(isMutating = false, deletingBook = null)
+                _events.emit(ContactsEvent.Failed(e.toMochiError()))
             }
         }
     }

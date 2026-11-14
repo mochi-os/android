@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">ಮೆಸೇಜಿಂಗ್ ವಿಳಾಸ</string>
     <string name="people_profile_networks">ನೆಟ್‌ವರ್ಕ್‌ಗಳು</string>
     <string name="people_profile_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="people_contacts_invitation_sent">ಆಹ್ವಾನ ಕಳುಹಿಸಲಾಗಿದೆ</string>
 </resources>

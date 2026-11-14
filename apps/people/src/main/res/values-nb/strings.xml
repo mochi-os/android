@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Meldingsadresse</string>
     <string name="people_profile_networks">Nettverk</string>
     <string name="people_profile_settings">Innstillinger</string>
+    <string name="people_contacts_invitation_sent">Invitasjon sendt</string>
 </resources>

@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Adresse de messagerie</string>
     <string name="people_profile_networks">Réseaux</string>
     <string name="people_profile_settings">Paramètres</string>
+    <string name="people_contacts_invitation_sent">Invitation envoyée</string>
 </resources>

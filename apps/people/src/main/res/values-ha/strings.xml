@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Adireshin aika saƙo</string>
     <string name="people_profile_networks">Hanyoyin sadarwa</string>
     <string name="people_profile_settings">Saitunan</string>
+    <string name="people_contacts_invitation_sent">An aika gayyata</string>
 </resources>

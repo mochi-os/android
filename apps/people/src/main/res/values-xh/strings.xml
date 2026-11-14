@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Idilesi yemiyalezo</string>
     <string name="people_profile_networks">Uthungelwano</string>
     <string name="people_profile_settings">Iisetingi</string>
+    <string name="people_contacts_invitation_sent">Isimemo sithunyelwe</string>
 </resources>

@@ -227,4 +227,5 @@
     <string name="people_contact_messaging">Адрес мессенджера</string>
     <string name="people_profile_networks">Сети</string>
     <string name="people_profile_settings">Настройки</string>
+    <string name="people_contacts_invitation_sent">Приглашение отправлено</string>
 </resources>

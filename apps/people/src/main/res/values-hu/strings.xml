@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Üzenetküldési cím</string>
     <string name="people_profile_networks">Hálózatok</string>
     <string name="people_profile_settings">Beállítások</string>
+    <string name="people_contacts_invitation_sent">Meghívó elküldve</string>
 </resources>

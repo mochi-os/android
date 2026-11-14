@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">Alamat olahpesen</string>
     <string name="people_profile_networks">Jaringan</string>
     <string name="people_profile_settings">Setélan</string>
+    <string name="people_contacts_invitation_sent">Ondangan dikirim</string>
 </resources>

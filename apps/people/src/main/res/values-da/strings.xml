@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Chatadresse</string>
     <string name="people_profile_networks">Netværk</string>
     <string name="people_profile_settings">Indstillinger</string>
+    <string name="people_contacts_invitation_sent">Invitation sendt</string>
 </resources>

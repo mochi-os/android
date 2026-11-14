@@ -22,6 +22,7 @@
     <string name="people_contact_friend">Mochi friend</string>
     <string name="people_contacts_invite">Invite</string>
     <string name="people_contacts_invited">Invited</string>
+    <string name="people_contacts_invitation_sent">Invitation sent</string>
     <string name="people_contacts_accept">Accept</string>
     <string name="people_contacts_message">Message</string>
     <string name="people_contacts_unfriend">Remove friend</string>

@@ -226,4 +226,5 @@
     <string name="people_contact_messaging">כתובת הודעות</string>
     <string name="people_profile_networks">רשתות</string>
     <string name="people_profile_settings">הגדרות</string>
+    <string name="people_contacts_invitation_sent">ההזמנה נשלחה</string>
 </resources>

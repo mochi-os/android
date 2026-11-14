@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">نشانی پیام‌رسان</string>
     <string name="people_profile_networks">شبکه‌ها</string>
     <string name="people_profile_settings">تنظیمات</string>
+    <string name="people_contacts_invitation_sent">دعوت ارسال شد</string>
 </resources>

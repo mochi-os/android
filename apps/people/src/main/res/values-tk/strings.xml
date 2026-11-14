@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Habarlaşma salgysy</string>
     <string name="people_profile_networks">Torlar</string>
     <string name="people_profile_settings">Sazlamalar</string>
+    <string name="people_contacts_invitation_sent">Çakylyk iberildi</string>
 </resources>

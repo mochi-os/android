@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Mesajlaşma adresi</string>
     <string name="people_profile_networks">Ağlar</string>
     <string name="people_profile_settings">Ayarlar</string>
+    <string name="people_contacts_invitation_sent">Davet gönderildi</string>
 </resources>

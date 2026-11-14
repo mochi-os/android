@@ -224,4 +224,5 @@
     <string name="people_contact_messaging">Địa chỉ nhắn tin</string>
     <string name="people_profile_networks">Mạng</string>
     <string name="people_profile_settings">Cài đặt</string>
+    <string name="people_contacts_invitation_sent">Đã gửi lời mời</string>
 </resources>

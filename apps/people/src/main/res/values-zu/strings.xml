@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Ikheli lemiyalezo</string>
     <string name="people_profile_networks">Amanethiwekhi</string>
     <string name="people_profile_settings">Izilungiselelo</string>
+    <string name="people_contacts_invitation_sent">Isimemo sithunyelwe</string>
 </resources>

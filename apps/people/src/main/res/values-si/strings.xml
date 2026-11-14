@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">පණිවිඩ ලිපිනය</string>
     <string name="people_profile_networks">ජාල</string>
     <string name="people_profile_settings">සැකසුම්</string>
+    <string name="people_contacts_invitation_sent">ආරාධනය යවා ඇත</string>
 </resources>

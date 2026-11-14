@@ -55,6 +55,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -63,7 +64,9 @@ import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityListRow
 import org.mochios.android.ui.components.ErrorState
@@ -136,9 +139,11 @@ fun ContactsScreen(
             when (event) {
                 is ContactsEvent.Message -> onMessage(event.link)
                 ContactsEvent.BookDeleted -> drawer.onOpenAllContacts()
+                ContactsEvent.Invited, is ContactsEvent.Failed -> Unit
             }
         }
     }
+    ContactsSnackbars(viewModel.events, snackbarHostState)
 
     PeopleDrawer(
         drawerState = drawerState,
@@ -578,4 +583,24 @@ internal fun ContactRow(
             }
         },
     )
+}
+
+/**
+ * Says on [host] what [events] report and the list cannot show: an invitation
+ * sent, or a failed action's own message from the server. Each snackbar is
+ * shown apart from the collection, so a message waiting does not hold up the
+ * next event.
+ */
+@Composable
+internal fun ContactsSnackbars(events: Flow<ContactsEvent>, host: SnackbarHostState) {
+    val sent by rememberUpdatedState(stringResource(R.string.people_contacts_invitation_sent))
+    LaunchedEffect(events) {
+        events.collect { event ->
+            when (event) {
+                ContactsEvent.Invited -> launch { host.showSnackbar(sent) }
+                is ContactsEvent.Failed -> launch { host.showSnackbar(event.error.userMessage()) }
+                is ContactsEvent.Message, ContactsEvent.BookDeleted -> Unit
+            }
+        }
+    }
 }

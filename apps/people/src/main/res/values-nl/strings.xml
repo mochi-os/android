@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Chatadres</string>
     <string name="people_profile_networks">Netwerken</string>
     <string name="people_profile_settings">Instellingen</string>
+    <string name="people_contacts_invitation_sent">Uitnodiging verzonden</string>
 </resources>

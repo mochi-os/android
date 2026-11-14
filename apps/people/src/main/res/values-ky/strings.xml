@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Мессенжер дареги</string>
     <string name="people_profile_networks">Тармактар</string>
     <string name="people_profile_settings">Жөндөөлөр</string>
+    <string name="people_contacts_invitation_sent">Чакыруу жөнөтүлдү</string>
 </resources>

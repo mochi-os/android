@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Skilaboðafang</string>
     <string name="people_profile_networks">Net</string>
     <string name="people_profile_settings">Stillingar</string>
+    <string name="people_contacts_invitation_sent">Boð sent</string>
 </resources>

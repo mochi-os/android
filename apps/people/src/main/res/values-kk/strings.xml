@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Хабар алмасу мекенжайы</string>
     <string name="people_profile_networks">Желілер</string>
     <string name="people_profile_settings">Параметрлер</string>
+    <string name="people_contacts_invitation_sent">Шақыру жіберілді</string>
 </resources>

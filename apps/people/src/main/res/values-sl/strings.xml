@@ -227,4 +227,5 @@
     <string name="people_contact_messaging">Naslov za sporočanje</string>
     <string name="people_profile_networks">Omrežja</string>
     <string name="people_profile_settings">Nastavitve</string>
+    <string name="people_contacts_invitation_sent">Povabilo poslano</string>
 </resources>

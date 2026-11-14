@@ -225,4 +225,5 @@
     <string name="people_contact_messaging">Адрес за съобщения</string>
     <string name="people_profile_networks">Мрежи</string>
     <string name="people_profile_settings">Настройки</string>
+    <string name="people_contacts_invitation_sent">Поканата е изпратена</string>
 </resources>
