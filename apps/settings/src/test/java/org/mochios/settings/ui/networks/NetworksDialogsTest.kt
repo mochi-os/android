@@ -5,6 +5,9 @@
 
 package org.mochios.settings.ui.networks
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.assertIsNotEnabled
@@ -12,6 +15,7 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import org.junit.Assert.assertEquals
 import org.junit.Rule
@@ -115,9 +119,33 @@ class NetworksDialogsTest {
     }
 
     @Test
+    fun `a hosted Bluesky account with no home feed chooses one with its password, among the public feeds or a new one`() {
+        val made = mutableListOf<Pair<String, String?>>()
+        val feeds = listOf(
+            NetworkFeed(id = "t", name = "Travel", privacy = "public"),
+            NetworkFeed(id = "n", name = "notes", privacy = "public"),
+            NetworkFeed(id = "d", name = "Diary", privacy = "private"),
+        )
+        var account by mutableStateOf(NetworkAccount(id = "b1", type = "bluesky", hosted = true, identifier = "alice.a.example", domain = "a.example"))
+        rule.setContent { PasswordDialog(account = account, feeds = feeds, busy = false, onMake = { device, home, _ -> made += device to home }, onDismiss = {}) }
+        // THE POINT: the home feed is asked for; the first public feed by name is offered first.
+        rule.onNodeWithText("notes").performScrollTo().performClick()
+        rule.onNodeWithText("Diary").assertDoesNotExist()
+        rule.onNodeWithText("Travel").performClick()
+        rule.onNode(hasText(text(R.string.networks_device)) and hasSetTextAction()).performScrollTo().performTextInput("Phone")
+        rule.onNodeWithText(text(R.string.networks_password_make)).performClick()
+        assertEquals(listOf("Phone" to "t"), made)
+
+        // An account that has a home feed is not asked.
+        account = account.copy(home = "n")
+        rule.waitForIdle()
+        rule.onNodeWithText(text(R.string.networks_home)).assertDoesNotExist()
+    }
+
+    @Test
     fun `a password is made for a named device and shown once, with the server and address to give the app`() {
         val account = NetworkAccount(id = "x1", type = "xmpp", hosted = true, identifier = "alice@a.example", domain = "a.example")
-        rule.setContent { PasswordDialog(account = account, busy = false, onMake = { _, made -> made("s3cret") }, onDismiss = {}) }
+        rule.setContent { PasswordDialog(account = account, feeds = emptyList(), busy = false, onMake = { _, _, made -> made("s3cret") }, onDismiss = {}) }
         // Read-only fields: the server and the address to give the app.
         rule.onNode(hasText("a.example")).assertExists()
         rule.onNode(hasText("alice@a.example")).assertExists()

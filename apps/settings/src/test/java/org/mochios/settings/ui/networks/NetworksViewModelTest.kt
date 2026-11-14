@@ -64,6 +64,9 @@ class NetworksViewModelTest {
     /** When the server began and finished each change, in order. */
     private val order = CopyOnWriteArrayList<String>()
 
+    /** Whether the server refuses a home feed. */
+    @Volatile private var homeRefused = false
+
     @Before
     fun begin() {
         server = MockWebServer()
@@ -90,6 +93,18 @@ class NetworksViewModelTest {
                     "settings/-/user/networks/account/update" -> {
                         order += "update"
                         json("""{"id": "b1", "label": "Work"}""")
+                    }
+                    "settings/-/user/networks/account/home" -> {
+                        order += "home"
+                        if (homeRefused) {
+                            MockResponse().setResponseCode(400).setBody("""{"error": "The feed is not public"}""").setHeader("Content-Type", "application/json")
+                        } else {
+                            json("""{"id": "b1", "home": "n"}""")
+                        }
+                    }
+                    "settings/-/user/networks/account/password" -> {
+                        order += "password"
+                        json("""{"password": "s3cret"}""")
                     }
                     "_/auth/oauth/exchange" -> json("""{"linked": "l2"}""")
                     else -> MockResponse().setResponseCode(404)
@@ -222,6 +237,30 @@ class NetworksViewModelTest {
         val body = sent("settings/-/user/networks/account/aliases").single()
         assertEquals("f1", body["id"])
         assertEquals("""["@a@b.example","@c@d.example"]""", body["aliases"])
+    }
+
+    @Test
+    fun `a password asked with a home feed saves the home feed first, and a refused one makes no password`() {
+        val model = model()
+        until { model.uiState.value.data != null }
+        val account = NetworkAccount(id = "b1", type = "bluesky", hosted = true)
+        var password = ""
+        model.password(account, " Phone ", "n") { password = it }
+        until { password.isNotEmpty() }
+        // THE POINT: the home feed is saved, then the password made.
+        assertEquals(listOf("home", "password"), order.toList())
+        assertEquals(mapOf("id" to "b1", "feed" to "n"), sent("settings/-/user/networks/account/home").single())
+        assertEquals(mapOf("id" to "b1", "name" to "Phone"), sent("settings/-/user/networks/account/password").single())
+
+        order.clear()
+        homeRefused = true
+        var made = false
+        model.password(account, "Phone", NetworksViewModel.HOME_NEW) { made = true }
+        until { "password" !in model.uiState.value.busy && order.isNotEmpty() }
+        settle()
+        // THE POINT: a refused home feed stops there; no password is made.
+        assertEquals(listOf("home"), order.toList())
+        assertEquals(false, made)
     }
 
     /** Lets a request already on its way reach the server: one sent alongside would have by now. */

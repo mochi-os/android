@@ -513,17 +513,28 @@ internal fun KeysDialog(
 
 /**
  * Signing in from another app: the server to give it, the account's address,
- * and a password minted for the device, shown once.
+ * and a password minted for the device, shown once. A Bluesky app posts as
+ * the account, and its posts land in the account's home feed, which an app
+ * given a password is never asked for: a hosted Bluesky account with none
+ * chooses one here, a public feed or a new one, as the consent page has an
+ * app signing in there choose. [onMake] is given the device, the home feed
+ * chosen (null when none is asked for) and where the password goes.
  */
 @Composable
 internal fun PasswordDialog(
     account: NetworkAccount,
+    feeds: List<NetworkFeed>,
     busy: Boolean,
-    onMake: (String, (String) -> Unit) -> Unit,
+    onMake: (String, String?, (String) -> Unit) -> Unit,
     onDismiss: () -> Unit,
 ) {
     var device by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
+    val homeless = account.type == "bluesky" && account.hosted && account.home.isEmpty()
+    val choices = feeds.filter { it.privacy == "public" }.sortedWith(compareBy(NaturalCompare) { it.name })
+    var home by remember { mutableStateOf(choices.firstOrNull()?.id ?: NetworksViewModel.HOME_NEW) }
+    var picking by remember { mutableStateOf(false) }
+    val fresh = stringResource(R.string.networks_home_new)
     MochiAlertDialog(
         onDismissRequest = { if (!busy) onDismiss() },
         title = stringResource(R.string.networks_password_title),
@@ -549,11 +560,33 @@ internal fun PasswordDialog(
                         singleLine = true,
                         modifier = Modifier.fillMaxWidth(),
                     )
+                    if (homeless) {
+                        MochiDropdownField(
+                            value = if (home == NetworksViewModel.HOME_NEW) fresh else choices.firstOrNull { it.id == home }?.name.orEmpty(),
+                            expanded = picking,
+                            onExpandedChange = { picking = it },
+                            label = stringResource(R.string.networks_home),
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            for (feed in choices) {
+                                MochiDropdownMenuItem(
+                                    text = { Text(feed.name) },
+                                    onClick = { picking = false; home = feed.id },
+                                    selected = home == feed.id,
+                                )
+                            }
+                            MochiDropdownMenuItem(
+                                text = { Text(fresh) },
+                                onClick = { picking = false; home = NetworksViewModel.HOME_NEW },
+                                selected = home == NetworksViewModel.HOME_NEW,
+                            )
+                        }
+                    }
                 }
             }
         },
         confirmText = if (password.isEmpty()) stringResource(R.string.networks_password_make) else null,
-        onConfirm = { onMake(device) { password = it } },
+        onConfirm = { onMake(device, if (homeless) home else null) { password = it } },
         confirmEnabled = device.isNotBlank() && !busy,
         confirmLoading = busy,
         dismissText = stringResource(MochiR.string.common_close),

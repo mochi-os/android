@@ -279,8 +279,25 @@ class NetworksViewModel @Inject constructor(
         }
 
     /** A password for signing in from another app, shown once. */
-    fun password(account: NetworkAccount, device: String, onMade: (String) -> Unit) =
+    /**
+     * A password for signing in from another app on the device. [home], a
+     * feed's id or [HOME_NEW], is first made the account's home feed, where a
+     * Bluesky app's posts land; null leaves it as it is.
+     */
+    fun password(account: NetworkAccount, device: String, home: String?, onMade: (String) -> Unit) =
         change("password", R.string.networks_password_failed) {
+            if (home != null) {
+                try {
+                    if (home == HOME_NEW) {
+                        api.home(account.id, "", create = "true").unwrapRaw()
+                    } else {
+                        api.home(account.id, home).unwrapRaw()
+                    }
+                } catch (e: Exception) {
+                    _messages.emit(failure(e, R.string.networks_home_failed))
+                    return@change
+                }
+            }
             onMade(api.password(account.id, device.trim()).unwrapRaw().password)
         }
 

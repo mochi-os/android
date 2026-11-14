@@ -286,8 +286,9 @@ fun NetworksScreen(
     passwordFor?.let { account ->
         PasswordDialog(
             account = account,
+            feeds = data?.feeds.orEmpty(),
             busy = "password" in state.busy,
-            onMake = { device, made -> viewModel.password(account, device, made) },
+            onMake = { device, home, made -> viewModel.password(account, device, home, made) },
             onDismiss = { passwordFor = null },
         )
     }
