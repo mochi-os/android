@@ -402,8 +402,8 @@ fun FeedScreen(
     val nearEnd by remember(pagerState) {
         derivedStateOf { pagerState.currentPage >= latestPosts.size - 3 }
     }
-    LaunchedEffect(nearEnd, posts.size, hasMore, isLoadingMore) {
-        if (hasMore && !isLoadingMore && nearEnd) {
+    LaunchedEffect(nearEnd, posts.size, hasMore, isLoadingMore, isLoading) {
+        if (hasMore && !isLoadingMore && !isLoading && nearEnd) {
             viewModel.loadMore()
         }
     }
