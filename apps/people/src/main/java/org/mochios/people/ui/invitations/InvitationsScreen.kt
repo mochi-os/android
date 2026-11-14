@@ -7,6 +7,8 @@ package org.mochios.people.ui.invitations
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -18,6 +20,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
@@ -31,6 +35,7 @@ import androidx.compose.material.icons.filled.PersonOff
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -52,8 +57,10 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
@@ -345,8 +352,14 @@ internal fun sentDetail(invite: FriendInvite, pending: String): String =
 internal fun inviteAvatar(invite: FriendInvite): String? =
     if (invite.address.isEmpty()) avatarUrl(invite.id) else null
 
+/**
+ * A received invite: the name and detail take the row's full width beside the
+ * avatar, with Accept and Decline on a line of their own beneath them, the
+ * second wrapping under the first where a translation runs long.
+ */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ReceivedRow(
+internal fun ReceivedRow(
     invite: FriendInvite,
     onAccept: () -> Unit,
     onDecline: () -> Unit,
@@ -356,7 +369,7 @@ private fun ReceivedRow(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically,
+        verticalAlignment = Alignment.Top,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         EntityAvatar(
@@ -366,39 +379,39 @@ private fun ReceivedRow(
             size = 40.dp,
         )
         val listed = stringResource(R.string.people_invitations_listed_as)
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = invite.name,
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.Medium,
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            InviteName(
+                name = invite.name,
+                detail = receivedDetail(invite) { listed.format(it) },
             )
-            Text(
-                text = receivedDetail(invite) { listed.format(it) },
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-        MochiButton(onClick = onAccept) {
-            Icon(
-                Icons.Default.Check,
-                contentDescription = null,
-                modifier = Modifier.padding(end = 4.dp),
-            )
-            Text(stringResource(R.string.people_invitations_accept))
-        }
-        MochiOutlinedButton(onClick = onDecline) {
-            Icon(
-                Icons.Default.PersonOff,
-                contentDescription = null,
-                modifier = Modifier.padding(end = 4.dp),
-            )
-            Text(stringResource(R.string.people_invitations_decline))
+            FlowRow(
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                MochiButton(
+                    onClick = onAccept,
+                    contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
+                ) {
+                    ButtonIcon(Icons.Default.Check)
+                    Text(stringResource(R.string.people_invitations_accept))
+                }
+                MochiOutlinedButton(
+                    onClick = onDecline,
+                    contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
+                ) {
+                    ButtonIcon(Icons.Default.PersonOff)
+                    Text(stringResource(R.string.people_invitations_decline))
+                }
+            }
         }
     }
 }
 
 @Composable
-private fun SentRow(
+internal fun SentRow(
     invite: FriendInvite,
     onCancel: () -> Unit,
 ) {
@@ -417,26 +430,47 @@ private fun SentRow(
             size = 40.dp,
         )
         Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = invite.name,
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.Medium,
-            )
-            Text(
-                text = sentDetail(invite, stringResource(R.string.people_friends_pending)),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            InviteName(
+                name = invite.name,
+                detail = sentDetail(invite, stringResource(R.string.people_friends_pending)),
             )
         }
-        MochiOutlinedButton(onClick = onCancel) {
-            Icon(
-                Icons.Default.Close,
-                contentDescription = null,
-                modifier = Modifier.padding(end = 4.dp),
-            )
+        MochiOutlinedButton(
+            onClick = onCancel,
+            contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
+        ) {
+            ButtonIcon(Icons.Default.Close)
             Text(stringResource(R.string.people_invitations_cancel))
         }
     }
+}
+
+/** An invite's name over its detail line, each one line, ending in an ellipsis where it does not fit. */
+@Composable
+private fun InviteName(name: String, detail: String) {
+    Column {
+        Text(
+            text = name,
+            style = MaterialTheme.typography.bodyLarge,
+            fontWeight = FontWeight.Medium,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+        Text(
+            text = detail,
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+        )
+    }
+}
+
+/** A button's leading icon at Material's button icon size, with its spacing before the label. */
+@Composable
+private fun ButtonIcon(icon: ImageVector) {
+    Icon(icon, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
 }
 
 // Full-screen empty state shown when both received and sent sections are empty.
