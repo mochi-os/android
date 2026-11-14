@@ -306,7 +306,6 @@ fun ChatScreen(
                 onSettings = onSettings,
                 onChatDeleted = onChatDeleted,
                 onOpenNotifications = onOpenNotifications,
-                onPrivacy = { showPolicy = true },
             )
         }
     }
@@ -327,7 +326,6 @@ private fun ChatContent(
     onSettings: (String) -> Unit,
     onChatDeleted: () -> Unit,
     onOpenNotifications: () -> Unit,
-    onPrivacy: () -> Unit,
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -615,14 +613,6 @@ private fun ChatContent(
                                         leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                                     )
                                 }
-                                MochiDropdownMenuItem(
-                                    text = { Text(stringResource(R.string.chat_privacy_title)) },
-                                    onClick = {
-                                        menuExpanded = false
-                                        onPrivacy()
-                                    },
-                                    leadingIcon = { Icon(Icons.Outlined.Shield, contentDescription = null) },
-                                )
                             }
                         }
                     }
