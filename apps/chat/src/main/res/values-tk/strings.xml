@@ -164,6 +164,10 @@
         <item quantity="one">%1$s jogap</item>
         <item quantity="other">%1$s jogap</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s öňki jogap</item>
+        <item quantity="other">%1$s öňki jogap</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s habar açary dikeldildi</item>
         <item quantity="other">%1$s habar açary dikeldildi</item>

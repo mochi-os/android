@@ -164,6 +164,10 @@
         <item quantity="one">%1$s përgjigje</item>
         <item quantity="other">%1$s përgjigje</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s përgjigje e mëparshme</item>
+        <item quantity="other">%1$s përgjigje të mëparshme</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">U rikthye %1$s çelës mesazhesh</item>
         <item quantity="other">U rikthyen %1$s çelësa mesazhesh</item>

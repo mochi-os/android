@@ -168,6 +168,14 @@
         <item quantity="many">%1$s ردًا</item>
         <item quantity="other">%1$s رد</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="zero">%1$s رد سابق</item>
+        <item quantity="one">%1$s رد سابق</item>
+        <item quantity="two">%1$s ردان سابقان</item>
+        <item quantity="few">%1$s ردود سابقة</item>
+        <item quantity="many">%1$s ردًا سابقًا</item>
+        <item quantity="other">%1$s رد سابق</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="zero">لم تتم استعادة أي مفتاح رسائل</item>
         <item quantity="one">تمت استعادة مفتاح رسائل واحد</item>

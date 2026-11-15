@@ -165,6 +165,10 @@
         <item quantity="one">%1$s javob</item>
         <item quantity="other">%1$s javob</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s avvalgi javob</item>
+        <item quantity="other">%1$s avvalgi javob</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s ta xabar kaliti tiklandi</item>
         <item quantity="other">%1$s ta xabar kaliti tiklandi</item>

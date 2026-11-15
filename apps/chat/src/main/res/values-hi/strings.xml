@@ -164,6 +164,10 @@
         <item quantity="one">%1$s उत्तर</item>
         <item quantity="other">%1$s उत्तर</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s पिछला उत्तर</item>
+        <item quantity="other">%1$s पिछले उत्तर</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s संदेश कुंजी पुनर्स्थापित की गई</item>
         <item quantity="other">%1$s संदेश कुंजियाँ पुनर्स्थापित की गईं</item>

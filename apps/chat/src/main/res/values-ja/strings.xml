@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">%1$s件の返信</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">以前の返信%1$s件</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">%1$s件のメッセージキーを復元しました</item>
     </plurals>

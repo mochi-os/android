@@ -166,6 +166,12 @@
         <item quantity="many">%1$s відповідей</item>
         <item quantity="other">%1$s відповіді</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s попередня відповідь</item>
+        <item quantity="few">%1$s попередні відповіді</item>
+        <item quantity="many">%1$s попередніх відповідей</item>
+        <item quantity="other">%1$s попередньої відповіді</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Відновлено %1$s ключ повідомлень</item>
         <item quantity="few">Відновлено %1$s ключі повідомлень</item>

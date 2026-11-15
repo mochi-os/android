@@ -164,6 +164,10 @@
         <item quantity="one">Amsa %1$s</item>
         <item quantity="other">Amsoshi %1$s</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">Amsa %1$s ta baya</item>
+        <item quantity="other">Amsoshi %1$s na baya</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">An maido da maɓallin saƙo %1$s</item>
         <item quantity="other">An maido da maɓallan saƙo %1$s</item>

@@ -168,6 +168,13 @@
         <item quantity="many">%1$s tweġiba</item>
         <item quantity="other">%1$s tweġiba</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s tweġiba preċedenti</item>
+        <item quantity="two">%1$s tweġibiet preċedenti</item>
+        <item quantity="few">%1$s tweġibiet preċedenti</item>
+        <item quantity="many">%1$s tweġiba preċedenti</item>
+        <item quantity="other">%1$s tweġiba preċedenti</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Ġiet irkuprata %1$s ċavetta tal-messaġġi</item>
         <item quantity="two">Ġew irkuprati %1$s ċwievet tal-messaġġi</item>

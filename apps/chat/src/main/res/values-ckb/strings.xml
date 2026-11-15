@@ -164,6 +164,10 @@
         <item quantity="one">%1$s وەڵام</item>
         <item quantity="other">%1$s وەڵام</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s وەڵامی پێشوو</item>
+        <item quantity="other">%1$s وەڵامی پێشوو</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s کلیلی پەیام گەڕێندرایەوە</item>
         <item quantity="other">%1$s کلیلی پەیام گەڕێندرانەوە</item>

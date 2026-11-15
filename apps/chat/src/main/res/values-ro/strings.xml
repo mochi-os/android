@@ -165,6 +165,11 @@
         <item quantity="few">%1$s răspunsuri</item>
         <item quantity="other">%1$s de răspunsuri</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s răspuns anterior</item>
+        <item quantity="few">%1$s răspunsuri anterioare</item>
+        <item quantity="other">%1$s de răspunsuri anterioare</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s cheie de mesaj restaurată</item>
         <item quantity="few">%1$s chei de mesaj restaurate</item>

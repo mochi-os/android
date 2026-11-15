@@ -151,6 +151,10 @@
         <item quantity="one">%1$s reply</item>
         <item quantity="other">%1$s replies</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s earlier reply</item>
+        <item quantity="other">%1$s earlier replies</item>
+    </plurals>
 
     <!-- Encryption of Matrix and XMPP conversations, whose device the server holds -->
     <string name="chat_encryption_title">Encryption</string>

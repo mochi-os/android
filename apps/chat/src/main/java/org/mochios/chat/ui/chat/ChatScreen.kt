@@ -75,6 +75,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -88,6 +89,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -1187,9 +1189,17 @@ internal fun MessageBubble(
                             ReceiptTick(receipt)
                         }
                     }
-                    // The thread, in the message's own bubble below a rule.
-                    if (onThread != null && message.answers.isNotEmpty() && !message.deleted && !selectionMode) {
-                        ThreadReplies(message.answers, onThread, onMenu = { if (hasMenu) menuExpanded = true })
+                    // The thread, in the message's own bubble below a rule: its
+                    // newest replies, and how many came before them. An older
+                    // server sends every reply, of which the newest are kept.
+                    val answers = remember(message.answers) { message.answers.takeLast(THREAD_ANSWERS) }
+                    if (onThread != null && answers.isNotEmpty() && !message.deleted && !selectionMode) {
+                        ThreadReplies(
+                            answers = answers,
+                            earlier = (message.replies - answers.size).coerceAtLeast(0),
+                            onOpen = onThread,
+                            onMenu = { if (hasMenu) menuExpanded = true },
+                        )
                     }
                 }
             }
@@ -1297,34 +1307,54 @@ internal fun MessageBubble(
     }
 }
 
+/** How many of a thread's newest replies its root's bubble shows. */
+internal const val THREAD_ANSWERS = 3
+
 /**
- * A message's thread inside its own bubble: each reply below a rule, with who
- * wrote it, opening the thread. A long press opens the message's menu, as it
- * does anywhere else on the bubble.
+ * A message's thread inside its own bubble: how many [earlier] replies came
+ * before those shown, then each of [answers] below a rule, with who wrote it,
+ * opening the thread. A long press opens the message's menu, as it does
+ * anywhere else on the bubble. Each reply is keyed by its id, so a reply
+ * arriving recomposes the bubble's new row rather than every row.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun ThreadReplies(answers: List<ChatMessage>, onOpen: () -> Unit, onMenu: () -> Unit) {
+private fun ThreadReplies(answers: List<ChatMessage>, earlier: Int, onOpen: () -> Unit, onMenu: () -> Unit) {
     Column(modifier = Modifier.combinedClickable(onClick = onOpen, onLongClick = onMenu)) {
-        answers.forEach { answer ->
+        if (earlier > 0) {
             HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
             Text(
-                text = answer.name,
+                text = pluralStringResource(
+                    R.plurals.chat_thread_earlier_count,
+                    earlier,
+                    LocalFormat.current.formatNumber(earlier),
+                ),
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.clickable(role = Role.Button, onClick = onOpen),
             )
-            if (awaitingKeys(answer)) {
+        }
+        answers.forEach { answer ->
+            key(answer.id) {
+                HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
                 Text(
-                    text = encryptedText(answer),
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontStyle = FontStyle.Italic,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    text = answer.name,
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.primary,
                 )
-            } else {
-                Text(
-                    text = answer.body.ifBlank { stringResource(R.string.chat_reply_attachment) },
-                    style = MaterialTheme.typography.bodyMedium,
-                )
+                if (awaitingKeys(answer)) {
+                    Text(
+                        text = encryptedText(answer),
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontStyle = FontStyle.Italic,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                } else {
+                    Text(
+                        text = answer.body.ifBlank { stringResource(R.string.chat_reply_attachment) },
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                }
             }
         }
     }

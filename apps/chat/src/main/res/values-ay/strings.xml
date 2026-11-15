@@ -164,6 +164,10 @@
         <item quantity="one">%1$s jaysawi</item>
         <item quantity="other">%1$s jaysawinaka</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s nayra jaysawi</item>
+        <item quantity="other">%1$s nayra jaysawinaka</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s mensaje llave kutt\'ayata</item>
         <item quantity="other">%1$s mensaje llavenaka kutt\'ayata</item>

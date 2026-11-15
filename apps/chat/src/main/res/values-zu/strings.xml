@@ -164,6 +164,10 @@
         <item quantity="one">Impendulo %1$s</item>
         <item quantity="other">Izimpendulo %1$s</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">Impendulo %1$s yangaphambili</item>
+        <item quantity="other">Izimpendulo %1$s zangaphambili</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Ukhiye womlayezo %1$s ubuyiselwe</item>
         <item quantity="other">Okhiye bemilayezo %1$s babuyiselwe</item>

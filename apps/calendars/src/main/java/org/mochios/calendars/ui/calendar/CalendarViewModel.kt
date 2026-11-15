@@ -280,8 +280,14 @@ class CalendarViewModel @Inject constructor(
      * other reload is silent, and shows the full loader only the first time,
      * before any calendar is known. [reset] as [load] takes it. A reload
      * replaces one still under way.
+     *
+     * The calendars and the preferences are read together. With [held], a
+     * return to the screen once they are known, the range is read at once for
+     * the calendars and preferences already held, beside their own reads, and
+     * read again only if either has changed; otherwise it waits for them, as
+     * it is measured by them.
      */
-    fun reload(refreshing: Boolean = false, reset: Boolean = true) {
+    fun reload(refreshing: Boolean = false, reset: Boolean = true, held: Boolean = false) {
         reading?.cancel()
         reading = viewModelScope.launch {
             val state = _uiState.value
@@ -290,22 +296,34 @@ class CalendarViewModel @Inject constructor(
                 isRefreshing = refreshing,
                 error = null,
             )
+            val early = held && ready
+            if (early) load(refreshing = refreshing, reset = reset)
             try {
-                val calendars = repository.listCalendars()
-                    .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
-                val preferences = repository.getPreferences()
+                val (calendars, preferences) = coroutineScope {
+                    val calendars = async {
+                        repository.listCalendars()
+                            .sortedWith(compareByDescending<Calendar> { it.default }.thenBy(NaturalCompare) { it.name })
+                    }
+                    val preferences = async { repository.getPreferences() }
+                    calendars.await() to preferences.await()
+                }
+                val before = _uiState.value
                 // A calendar viewed on its own that has gone ends that view.
-                val sole = _uiState.value.sole?.takeIf { id -> calendars.any { it.id == id } }
-                _uiState.value = _uiState.value.copy(
+                val sole = before.sole?.takeIf { id -> calendars.any { it.id == id } }
+                // On a device that has not been used yet, open on the view
+                // the user chose in the web, which is the same preference.
+                val view = if (untouched) calendarsView(preferences.view) else before.view
+                val same = calendars == before.calendars && preferences == before.preferences &&
+                    sole == before.sole && view == before.view
+                _uiState.value = before.copy(
                     calendars = calendars,
                     preferences = preferences,
                     sole = sole,
                     hidden = concealed(calendars, sole),
-                    // On a device that has not been used yet, open on the view
-                    // the user chose in the web, which is the same preference.
-                    view = if (untouched) calendarsView(preferences.view) else _uiState.value.view,
+                    view = view,
                 )
                 ready = true
+                if (early && same) return@launch
             } catch (e: kotlinx.coroutines.CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -687,8 +705,9 @@ class CalendarViewModel @Inject constructor(
     /**
      * Back on screen: reads the calendars, the preferences and the range
      * again, as the web's reads them when its tab regains focus, so a
-     * preference changed on the web or another device applies here; a read
-     * already under way is left to finish. A view left on today first moves
+     * preference changed on the web or another device applies here; the
+     * range goes out with the other two, for what is held, and is read again
+     * only for a change. A read already under way is left to finish. A view left on today first moves
      * to the new today when the date has changed since, as the web's follows
      * today until another day is chosen.
      */
@@ -699,9 +718,9 @@ class CalendarViewModel @Inject constructor(
         missed = false
         if (today != past && _uiState.value.anchor == past) {
             _uiState.value = _uiState.value.copy(anchor = today, focus = today, listed = null)
-            reload()
+            reload(held = true)
         } else if (changed || reading?.isActive != true) {
-            reload(reset = false)
+            reload(reset = false, held = true)
         }
     }
 

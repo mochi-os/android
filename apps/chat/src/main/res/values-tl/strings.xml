@@ -164,6 +164,10 @@
         <item quantity="one">%1$s tugon</item>
         <item quantity="other">%1$s tugon</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s naunang tugon</item>
+        <item quantity="other">%1$s naunang tugon</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s key ng mensahe ang naibalik</item>
         <item quantity="other">%1$s key ng mensahe ang naibalik</item>

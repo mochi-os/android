@@ -165,6 +165,11 @@
         <item quantity="few">%1$s odgovora</item>
         <item quantity="other">%1$s odgovora</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s raniji odgovor</item>
+        <item quantity="few">%1$s ranija odgovora</item>
+        <item quantity="other">%1$s ranijih odgovora</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Vraćen je %1$s ključ poruka</item>
         <item quantity="few">Vraćena su %1$s ključa poruka</item>

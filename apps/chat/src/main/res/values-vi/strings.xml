@@ -164,6 +164,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">%1$s phản hồi</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">%1$s phản hồi trước đó</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">Đã khôi phục %1$s khoá tin nhắn</item>
     </plurals>

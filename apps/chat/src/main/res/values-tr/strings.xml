@@ -164,6 +164,10 @@
         <item quantity="one">%1$s yanıt</item>
         <item quantity="other">%1$s yanıt</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s önceki yanıt</item>
+        <item quantity="other">%1$s önceki yanıt</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s mesaj anahtarı geri yüklendi</item>
         <item quantity="other">%1$s mesaj anahtarı geri yüklendi</item>

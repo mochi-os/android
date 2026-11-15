@@ -164,6 +164,10 @@
         <item quantity="one">deebii %1$s</item>
         <item quantity="other">deebiiwwan %1$s</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">deebii duraanii %1$s</item>
+        <item quantity="other">deebiiwwan duraanii %1$s</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">furtuun ergaa %1$s deebi\'eera</item>
         <item quantity="other">furtuuwwan ergaa %1$s deebi\'aniiru</item>

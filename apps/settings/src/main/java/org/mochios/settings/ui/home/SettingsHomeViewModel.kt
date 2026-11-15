@@ -20,7 +20,7 @@ import javax.inject.Inject
  * Home menu gating: System is administrator-only, Domains needs administrator
  * or a delegation (web's `useFilteredSidebarData`); both come from the domains
  * endpoint. Networks, and the owner's Handles, need a server that offers other
- * networks, which the Networks data says.
+ * networks, which networks/offered says.
  */
 data class SettingsHomeUiState(
     val isAdmin: Boolean = false,
@@ -54,9 +54,12 @@ class SettingsHomeViewModel @Inject constructor(
         refresh()
     }
 
+    /** Set once the server has answered that it predates networks/offered. */
+    private var older = false
+
     /** Re-fetched on every return to the home screen: a fetch that failed at
      *  start-up used to hide the System and Domains groups for the whole
-     *  session, with nothing to retry it. */
+     *  session, with nothing to retry it. The two reads go out together. */
     fun refresh() {
         viewModelScope.launch {
             runCatching {
@@ -69,13 +72,27 @@ class SettingsHomeViewModel @Inject constructor(
                     )
                 }
             }
+        }
+        viewModelScope.launch {
             runCatching {
-                val resp = networksApi.data()
-                val data = resp.body()
-                if (resp.isSuccessful && data != null) {
-                    _state.value = _state.value.copy(hasNetworks = data.offered)
-                }
+                offered()?.let { offered -> _state.value = _state.value.copy(hasNetworks = offered) }
             }
         }
+    }
+
+    /**
+     * Whether the server offers other networks, or null when it did not say.
+     * Read from the one flag's own action; a server from before it answers
+     * 404, and is asked for the whole Networks page instead, which carries the
+     * same flag.
+     */
+    private suspend fun offered(): Boolean? {
+        if (!older) {
+            val resp = networksApi.offered()
+            if (resp.code() != 404) return resp.body()?.takeIf { resp.isSuccessful }?.offered
+            older = true
+        }
+        val resp = networksApi.data()
+        return resp.body()?.takeIf { resp.isSuccessful }?.offered
     }
 }

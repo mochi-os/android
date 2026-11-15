@@ -87,4 +87,23 @@ data class WebSocketEvent(
     val previous: String? = null,
     /** A notifications clear_object frame: how many rows it changed. */
     val changed: Long? = null,
+    /** A notifications new frame: the row as the list shows it. Older servers send no title. */
+    val title: String? = null,
+    val content: String? = null,
+    val link: String? = null,
+    val count: Int? = null,
+    val read: Long? = null,
+    /**
+     * A notifications new frame: whether every one of the user's devices lists
+     * the row, as one of a topic with no category; else [devices] names those
+     * that do. Older servers leave both out.
+     */
+    val everywhere: Boolean? = null,
+    val devices: List<String>? = null,
+    /**
+     * A chat reply's frame or its delete's: the root's thread as it now
+     * stands - replies, latest, answers - which the client sets rather than
+     * counts. Older chat apps leave it out.
+     */
+    val root: JsonElement? = null,
 )

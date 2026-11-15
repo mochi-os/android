@@ -166,6 +166,12 @@
         <item quantity="few">%1$s freagairtean</item>
         <item quantity="other">%1$s freagairt</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s fhreagairt nas tràithe</item>
+        <item quantity="two">%1$s fhreagairt nas tràithe</item>
+        <item quantity="few">%1$s freagairtean nas tràithe</item>
+        <item quantity="other">%1$s freagairt nas tràithe</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Chaidh %1$s iuchair teachdaireachd aiseag</item>
         <item quantity="two">Chaidh %1$s iuchair teachdaireachd aiseag</item>

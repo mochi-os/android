@@ -164,6 +164,10 @@
         <item quantity="one">%1$s хариу</item>
         <item quantity="other">%1$s хариу</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s өмнөх хариу</item>
+        <item quantity="other">%1$s өмнөх хариу</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s мессежийн түлхүүр сэргээгдлээ</item>
         <item quantity="other">%1$s мессежийн түлхүүр сэргээгдлээ</item>

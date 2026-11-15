@@ -164,6 +164,10 @@
         <item quantity="one">%1$s පිළිතුර</item>
         <item quantity="other">%1$s පිළිතුරු</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s පෙර පිළිතුර</item>
+        <item quantity="other">%1$s පෙර පිළිතුරු</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s පණිවිඩ යතුර ප්‍රතිසාධනය කෙරිණි</item>
         <item quantity="other">%1$s පණිවිඩ යතුරු ප්‍රතිසාධනය කෙරිණි</item>

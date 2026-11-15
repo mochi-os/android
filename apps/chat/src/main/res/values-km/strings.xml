@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">%1$s ការឆ្លើយតប</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">%1$s ការឆ្លើយតបមុនៗ</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">បានស្តារកូនសោសារចំនួន %1$s</item>
     </plurals>

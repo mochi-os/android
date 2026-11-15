@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">Àwọn ìdáhùn %1$s</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">Àwọn ìdáhùn %1$s ti tẹ́lẹ̀</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">Kọ́kọ́rọ́ ìfiránṣẹ́ %1$s ni a ti mú padà</item>
     </plurals>

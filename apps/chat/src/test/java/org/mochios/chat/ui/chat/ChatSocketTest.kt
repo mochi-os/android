@@ -74,6 +74,9 @@ class ChatSocketTest {
     @Volatile private var edited = 0
     @Volatile private var withdrawn = false
 
+    /** How many earlier replies m2 has than its bubble shows. */
+    @Volatile private var earlier = 0
+
     /** Held, the next answer to a messages read is written and then waits for it. */
     @Volatile private var hold: CountDownLatch? = null
 
@@ -111,7 +114,7 @@ class ChatSocketTest {
                                 {"id": "m1", "chat": "c1", "member": "b1", "name": "Bea", "body": "$hello", "created": 100, "edited": $edited,
                                  "reactions": {"like": 1}, "reaction": "like"},
                                 {"id": "m2", "chat": "c1", "member": "a1", "name": "Al", "body": "Mine", "created": 200,
-                                 "edited": 50, "replies": 1, "latest": 150, "reply": "m1",
+                                 "edited": 50, "replies": ${1 + earlier}, "latest": 150, "reply": "m1",
                                  "answers": [{"id": "r1", "chat": "c1", "member": "b1", "name": "Bea", "body": "First reply", "created": 150, "thread": "m2"}],
                                  "attachments": [{"id": "f1", "name": "a.png", "size": 3, "type": "image/png"}],
                                  "reactions": {"love": 2}, "reaction": "love"}
@@ -285,6 +288,22 @@ class ChatSocketTest {
     }
 
     @Test
+    fun `a root's bubble keeps its newest three replies as more come, and counts every one`() {
+        val model = open()
+        for ((index, id) in listOf("r2", "r3", "r4", "r5").withIndex()) {
+            send("""{"id": "$id", "created": ${160 + index}, "member": "b1", "name": "Bea", "body": "Reply $id", "thread": "m2"}""")
+        }
+        until { model.message("m2")?.replies == 5 }
+        settle()
+        assertEquals(
+            "THE POINT: the bubble holds the newest three, oldest first",
+            listOf("r3", "r4", "r5"),
+            model.message("m2")?.answers?.map { reply -> reply.id },
+        )
+        assertEquals(163L, model.message("m2")?.latest)
+    }
+
+    @Test
     fun `reaction counts from the socket replace the held ones and keep the user's own`() {
         val model = open()
         val fetched = timeline.get()
@@ -434,6 +453,64 @@ class ChatSocketTest {
         assertEquals(0L, model.message("m2")?.latest)
         settle()
         assertEquals("no fetch", fetched, timeline.get())
+    }
+
+    @Test
+    fun `a reply older than every one a capped bubble shows reads the newest page, not counted twice`() {
+        earlier = 4
+        val model = open()
+        val fetched = timeline.get()
+        send("""{"id": "r0", "created": 140, "member": "b1", "name": "Bea", "body": "Earlier", "thread": "m2"}""")
+        until { timeline.get() > fetched }
+        settle()
+        assertEquals("THE POINT: the count is the server's, not one more", 5, model.message("m2")?.replies)
+        assertEquals(listOf("r1"), model.message("m2")?.answers?.map { reply -> reply.id })
+    }
+
+    @Test
+    fun `a shown reply deleted from a capped bubble reads the newest page for the next earlier one`() {
+        earlier = 4
+        val model = open()
+        val fetched = timeline.get()
+        send("""{"event": "delete", "message": "r1", "thread": "m2"}""")
+        until { timeline.get() > fetched }
+    }
+
+    /** m2's thread as a chat app that sends it with each frame says it now stands. */
+    private fun thread(replies: Int, latest: Long, vararg answers: Pair<String, Long>) =
+        """{"replies": $replies, "latest": $latest, "answers": [""" +
+            answers.joinToString(", ") { (id, created) ->
+                """{"id": "$id", "chat": "c1", "member": "b1", "name": "Bea", "body": "Reply $id", "created": $created, "thread": "m2", "attachments": []}"""
+            } + "]}"
+
+    @Test
+    fun `a reply frame carrying its thread sets the root, and the same frame again changes nothing`() {
+        earlier = 4
+        val model = open()
+        val fetched = timeline.get()
+        // Older than every reply shown, which without the thread reads the page.
+        val frame = """{"id": "r0", "created": 140, "member": "b1", "name": "Bea", "body": "Earlier", "thread": "m2",
+            "root": ${thread(6, 160, "r1" to 150, "r9" to 160)}}"""
+        send(frame)
+        until { model.message("m2")?.replies == 6 }
+        assertEquals(listOf("r1", "r9"), model.message("m2")?.answers?.map { reply -> reply.id })
+        assertEquals(160L, model.message("m2")?.latest)
+        send(frame)
+        settle()
+        assertEquals("THE POINT: the same frame again leaves the server's count", 6, model.message("m2")?.replies)
+        assertEquals("no read", fetched, timeline.get())
+    }
+
+    @Test
+    fun `a delete frame carrying its thread sets the root without reading, though it held no such reply`() {
+        earlier = 4
+        val model = open()
+        val fetched = timeline.get()
+        send("""{"event": "delete", "message": "unheld", "thread": "m2", "root": ${thread(4, 150, "r1" to 150)}}""")
+        until { model.message("m2")?.replies == 4 }
+        settle()
+        assertEquals(listOf("r1"), model.message("m2")?.answers?.map { reply -> reply.id })
+        assertEquals("THE POINT: no read, wherever the root sits in what is loaded", fetched, timeline.get())
     }
 
     @Test

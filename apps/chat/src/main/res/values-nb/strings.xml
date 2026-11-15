@@ -164,6 +164,10 @@
         <item quantity="one">%1$s svar</item>
         <item quantity="other">%1$s svar</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s tidligere svar</item>
+        <item quantity="other">%1$s tidligere svar</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s meldingsnøkkel gjenopprettet</item>
         <item quantity="other">%1$s meldingsnøkler gjenopprettet</item>

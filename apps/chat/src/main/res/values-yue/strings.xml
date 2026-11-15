@@ -168,6 +168,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">%1$s 個回覆</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">%1$s 個之前嘅回覆</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">還原咗 %1$s 條訊息金鑰</item>
     </plurals>

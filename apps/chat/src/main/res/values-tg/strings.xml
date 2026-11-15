@@ -164,6 +164,10 @@
         <item quantity="one">%1$s ҷавоб</item>
         <item quantity="other">%1$s ҷавоб</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s ҷавоби пештара</item>
+        <item quantity="other">%1$s ҷавоби пештара</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s калиди паём барқарор шуд</item>
         <item quantity="other">%1$s калиди паём барқарор шуд</item>

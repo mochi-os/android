@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">ပြန်ဖြေချက် %1$s ခု</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">အရင်က ပြန်ဖြေချက် %1$s ခု</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">မက်ဆေ့ဂျ်သော့ %1$s ခု ပြန်လည်ရယူပြီး</item>
     </plurals>

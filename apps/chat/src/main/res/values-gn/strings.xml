@@ -164,6 +164,10 @@
         <item quantity="one">%1$s mbohovái</item>
         <item quantity="other">%1$s mbohovái</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s mbohovái ymaguare</item>
+        <item quantity="other">%1$s mbohovái ymaguare</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s llave ñe\'ẽmondo oñemoĩ jey</item>
         <item quantity="other">%1$s llave ñe\'ẽmondo oñemoĩ jey</item>
