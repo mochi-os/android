@@ -45,7 +45,8 @@ import java.util.concurrent.atomic.AtomicInteger
 /**
  * Reading notifications on the Notifications screen, as the web has it: a row
  * shows read on the tap, before the server answers, and goes back to unread
- * if the server refuses, with the error shown.
+ * if the server refuses, with the error shown. The server's frames are applied
+ * to the list where they can be, and fetch it where they cannot.
  */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [35])
@@ -68,6 +69,12 @@ class NotificationsReadTest {
     /** How many times the list has been asked for. */
     private val lists = AtomicInteger()
 
+    /** The rows the list answers, as the server holds them when it is asked. */
+    @Volatile private var listed = listOf(row("a", 0), row("b", 0), row("c", 100))
+
+    /** When set, holds each list answer, already read from [listed], until released. */
+    @Volatile private var held: CountDownLatch? = null
+
     /** The server's ends of the open sockets, to send frames down. */
     private val sockets = ConcurrentLinkedQueue<WebSocket>()
 
@@ -79,9 +86,11 @@ class NotificationsReadTest {
                 return when (request.path.orEmpty().substringBefore("?")) {
                     "/notifications/-/list" -> {
                         lists.incrementAndGet()
-                        MockResponse().setBody(
-                            """{"data": [${row("a", 0)}, ${row("b", 0)}, ${row("c", 100)}], "count": 2}""",
-                        )
+                        val rows = listed
+                        val unread = rows.count { it.endsWith("\"read\": 0}") }
+                        val body = """{"data": [${rows.joinToString()}], "count": $unread}"""
+                        held?.await(5, TimeUnit.SECONDS)
+                        MockResponse().setBody(body)
                     }
                     "/notifications/-/read" -> {
                         reads.add(Regex("id=([^&]+)").find(request.body.readUtf8())?.groupValues?.get(1).orEmpty())
@@ -266,16 +275,110 @@ class NotificationsReadTest {
         frame("""{"type": "read", "id": "a", "app": "feeds"}""")
         settle()
         assertEquals("THE POINT: the list already shows the read", before, lists.get())
-        // The frames reach the screen: the next one, someone else's, fetches it.
-        frame("""{"type": "read", "id": "b", "app": "feeds"}""")
-        until { lists.get() > before }
+        assertTrue(read("a") != 0L)
+        assertEquals(1, model.uiState.value.unreadCount)
     }
 
     @Test
-    fun `another device's read in the same window fetches the list`() {
+    fun `another device's read is applied to the list, which is not fetched`() {
         answered("a")
         val before = lists.get()
         frame("""{"type": "read", "id": "b", "app": "feeds"}""")
+        until { read("b") != 0L }
+        settle()
+        assertEquals("THE POINT: the frame said which row was read", before, lists.get())
+        assertEquals(0, model.uiState.value.unreadCount)
+        assertEquals(100L, read("c"))
+    }
+
+    @Test
+    fun `a read of every row is applied to the list, which is not fetched`() {
+        listening()
+        val before = lists.get()
+        frame("""{"type": "read_all"}""")
+        until { model.uiState.value.unreadCount == 0 }
+        settle()
+        assertEquals(before, lists.get())
+        assertTrue(read("a") != 0L && read("b") != 0L)
+        // Read before, so it keeps the time it was read.
+        assertEquals(100L, read("c"))
+    }
+
+    @Test
+    fun `a clear of every row empties the list, which is not fetched`() {
+        listening()
+        val before = lists.get()
+        frame("""{"type": "clear_all"}""")
+        until { model.uiState.value.items.isEmpty() }
+        settle()
+        assertEquals(before, lists.get())
+        assertEquals(0, model.uiState.value.unreadCount)
+    }
+
+    @Test
+    fun `an object's clear that changed nothing leaves the list as it is`() {
+        listening()
+        val before = lists.get()
+        frame("""{"type": "clear_object", "app": "feeds", "object": "x", "changed": 0}""")
+        settle()
+        assertEquals("THE POINT: sent on every open of a feed, it fetched the list each time", before, lists.get())
+        assertEquals(3, model.uiState.value.items.size)
+        assertEquals(2, model.uiState.value.unreadCount)
+    }
+
+    @Test
+    fun `frames the list cannot be patched from fetch it`() {
+        listening()
+        for (text in listOf(
+            // Read or deleted: the frame does not say which.
+            """{"type": "clear_object", "app": "feeds", "object": "x", "changed": 2}""",
+            // A server that predates changed.
+            """{"type": "clear_object", "app": "feeds", "object": "x"}""",
+            // No title, and nothing to say whether this device lists it.
+            """{"type": "new", "id": "d", "app": "feeds", "content": "d", "created": 200, "read": 0, "web": true}""",
+            """{"type": "categories"}""",
+            """{"type": "read", "app": "feeds"}""",
+        )) {
+            val before = lists.get()
+            frame(text)
+            until { lists.get() > before && !model.uiState.value.isRefreshing }
+            settle()
+        }
+    }
+
+    @Test
+    fun `a reopened socket fetches the list, as frames may have been missed`() {
+        listening()
+        val before = lists.get()
+        socket.background()
+        socket.foreground()
+        until { lists.get() > before && !model.uiState.value.isRefreshing }
+    }
+
+    @Test
+    fun `a list fetched while a frame landed is fetched again rather than undo it`() {
+        listening()
+        val gate = CountDownLatch(1)
+        held = gate
+        val before = lists.get()
+        model.refresh()
         until { lists.get() > before }
+        // The server reads b before the list answers, after the list was read.
+        held = null
+        listed = listOf(row("a", 0), row("b", 300), row("c", 100))
+        frame("""{"type": "read", "id": "b", "app": "feeds"}""")
+        until { read("b") != 0L }
+        gate.countDown()
+        until { lists.get() > before + 1 && !model.uiState.value.isRefreshing }
+        settle()
+        assertEquals("THE POINT: the answer from before the frame did not undo it", 300L, read("b"))
+        assertEquals(1, model.uiState.value.unreadCount)
+    }
+
+    /** The screen open with its socket connected, and the screen settled. */
+    private fun listening() {
+        open()
+        until { sockets.isNotEmpty() }
+        settle()
     }
 }

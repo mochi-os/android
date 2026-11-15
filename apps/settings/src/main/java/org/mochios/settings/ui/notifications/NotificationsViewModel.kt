@@ -5,7 +5,6 @@
 
 package org.mochios.settings.ui.notifications
 
-import android.os.SystemClock
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -77,14 +76,12 @@ class NotificationsViewModel @Inject constructor(
     /** The pending or in-flight list fetch; cancelled when a newer one starts. */
     private var loadJob: Job? = null
 
-    /** The frame this user's own read or clear echoes back as, already shown
-     *  in the list, so its arrival need not fetch the list again. */
-    @Volatile
-    private var echo: Echo? = null
-
-    /** When [echo] stops being expected, on the [SystemClock.elapsedRealtime] clock. */
-    @Volatile
-    private var echoUntil = 0L
+    /**
+     * How many frames have been applied. A list fetched while a frame landed
+     * answers from before that frame and would undo it, so it is fetched again
+     * instead.
+     */
+    private var frames = 0
 
     init {
         load(initial = true)
@@ -105,9 +102,9 @@ class NotificationsViewModel @Inject constructor(
     }
 
     /**
-     * Refetch for a socket frame. Cancels the pending fetch and waits
-     * [REFRESH_DEBOUNCE] first, so a burst of frames - our own mark-read or
-     * clear echoes back as one - makes one round of calls.
+     * Refetch for a socket frame that cannot be applied. Cancels the pending
+     * fetch and waits [REFRESH_DEBOUNCE] first, so a burst of frames makes one
+     * round of calls.
      */
     private fun refreshLatest() {
         loadJob?.cancel()
@@ -124,7 +121,12 @@ class NotificationsViewModel @Inject constructor(
             error = null,
         )
         try {
+            val seen = frames
             val resp = repository.list()
+            if (frames != seen) {
+                refreshLatest()
+                return
+            }
             val (items, count) = overlay(resp.data, resp.count)
             _uiState.value = _uiState.value.copy(
                 items = items,
@@ -221,22 +223,24 @@ class NotificationsViewModel @Inject constructor(
     fun markRead(id: String) {
         val state = _uiState.value
         val taken = if (state.items.any { it.id == id && it.read == 0L } && state.unreadCount > 0) 1 else 0
-        mark(setOf(id), taken, Echo("read", id)) { repository.markRead(id) }
+        mark(setOf(id), taken) { repository.markRead(id) }
     }
 
     /** Every row read on the click; those it marked go back to unread if the server refuses. */
     fun markAllRead() {
         val state = _uiState.value
         val ids = state.items.filter { it.read == 0L }.map { it.id }.toSet()
-        mark(ids, taken = state.unreadCount, Echo("read_all")) { repository.markAllRead() }
+        mark(ids, taken = state.unreadCount) { repository.markAllRead() }
     }
 
-    /** Marks [ids] read for the click, expecting [expected] back from the server. */
-    private fun mark(ids: Set<String>, taken: Int, expected: Echo, save: suspend () -> Unit) {
+    /**
+     * Marks [ids] read for the click. Its frame, when the server sends it
+     * back, finds the rows read already.
+     */
+    private fun mark(ids: Set<String>, taken: Int, save: suspend () -> Unit) {
         val state = _uiState.value
         val click = Marked(ids, System.currentTimeMillis() / 1000, taken)
         marked += click
-        expectEcho(expected)
         _uiState.value = state.copy(
             items = state.items.map { if (it.id in ids && it.read == 0L) it.copy(read = click.stamp) else it },
             unreadCount = (state.unreadCount - taken).coerceAtLeast(0),
@@ -251,7 +255,6 @@ class NotificationsViewModel @Inject constructor(
                 throw e
             } catch (e: Exception) {
                 marked -= click
-                echo = null
                 // Only the rows still showing this click's stamp go back; one a
                 // later click also covers stays read until that one answers.
                 val now = _uiState.value
@@ -273,12 +276,10 @@ class NotificationsViewModel @Inject constructor(
     fun clearAll() {
         viewModelScope.launch {
             try {
-                expectEcho(Echo("clear_all"))
                 repository.clearAll()
                 _uiState.value = _uiState.value.copy(items = emptyList(), unreadCount = 0)
                 unread.refreshLatest()
             } catch (e: Exception) {
-                echo = null
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
@@ -291,44 +292,65 @@ class NotificationsViewModel @Inject constructor(
             "notifications",
             app = "notifications",
         ) { event ->
-            if (!isOwnEcho(event)) {
-                refreshLatest()
+            // The socket calls back on its own thread; the list changes on the
+            // main one, as everything else that changes it does.
+            viewModelScope.launch { framed(event) }
+        }
+    }
+
+    /**
+     * A frame applied to the list held, as the web applies it to its cache, so
+     * the list ends as the server's would without being read again. The list
+     * is oldest first and a frame here changes rows in place or removes them,
+     * so the order holds. The user's own read or clear comes back as a frame
+     * too, and finds the rows as it left them.
+     *
+     * The list is fetched for a frame that cannot be applied exactly: a new or
+     * changed row, whose frame carries no title and does not say whether this
+     * device lists it; an object's clear that changed rows, which reads them
+     * or deletes them and does not say which; a change to the categories,
+     * which decide what this device lists; a reopened socket, which may have
+     * missed frames; and any frame this client does not know.
+     */
+    private fun framed(event: WebSocketEvent) {
+        when (event.type) {
+            "read" -> {
+                val id = event.id
+                if (id == null) {
+                    refreshLatest()
+                    return
+                }
+                frames++
+                val state = _uiState.value
+                if (state.items.none { it.id == id && it.read == 0L }) return
+                val now = System.currentTimeMillis() / 1000
+                _uiState.value = state.copy(
+                    items = state.items.map { if (it.id == id) it.copy(read = now) else it },
+                    unreadCount = (state.unreadCount - 1).coerceAtLeast(0),
+                )
             }
+            "read_all" -> {
+                frames++
+                val state = _uiState.value
+                val now = System.currentTimeMillis() / 1000
+                _uiState.value = state.copy(
+                    items = state.items.map { if (it.read == 0L) it.copy(read = now) else it },
+                    unreadCount = 0,
+                )
+            }
+            "clear_all" -> {
+                frames++
+                _uiState.value = _uiState.value.copy(items = emptyList(), unreadCount = 0)
+            }
+            // Sent on every open of a feed, forum, chat or game: one that
+            // changed nothing leaves the list as it is.
+            "clear_object" -> if (event.changed != 0L) refreshLatest()
+            else -> refreshLatest()
         }
     }
-
-    /** Expect [expected] back from the server for an action whose result the
-     *  list already shows. */
-    private fun expectEcho(expected: Echo) {
-        echoUntil = SystemClock.elapsedRealtime() + ECHO_WINDOW
-        echo = expected
-    }
-
-    /** Whether [event] is the expected echo, which is then spent. A "read"
-     *  must also name the notification this user marked: one from another
-     *  device in the same window is someone else's change. */
-    private fun isOwnEcho(event: WebSocketEvent): Boolean {
-        val expected = echo ?: return false
-        if (event.type != expected.type || SystemClock.elapsedRealtime() > echoUntil) {
-            return false
-        }
-        if (expected.id != null && expected.id != event.id) {
-            return false
-        }
-        echo = null
-        return true
-    }
-
-    /** A frame [type] expected back, and for a "read" the notification's [id]. */
-    private data class Echo(val type: String, val id: String? = null)
 
     override fun onCleared() {
         super.onCleared()
         subscriptionId?.let { webSocket.unsubscribe(it) }
-    }
-
-    private companion object {
-        /** How long after an action its echo is still taken as its own. */
-        const val ECHO_WINDOW = 5_000L
     }
 }

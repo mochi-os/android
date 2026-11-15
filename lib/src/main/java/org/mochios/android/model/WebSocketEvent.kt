@@ -85,4 +85,6 @@ data class WebSocketEvent(
     val page: String? = null,
     /** A wiki/update frame of kind "pages" for a rename: the page's old slug. */
     val previous: String? = null,
+    /** A notifications clear_object frame: how many rows it changed. */
+    val changed: Long? = null,
 )
