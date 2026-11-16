@@ -690,6 +690,22 @@ private fun ChatContent(
                     val avatars = remember(uiState.messages, uiState.chat.id) {
                         messageAvatars(uiState.messages, uiState.chat.id)
                     }
+                    val byId = remember(uiState.messages) {
+                        uiState.messages.associateBy { message -> message.id }
+                    }
+                    val me = uiState.identity
+                    val receipts = remember(uiState.messages, uiState.receipts, me, showsReceipts) {
+                        if (!showsReceipts) {
+                            emptyMap()
+                        } else {
+                            uiState.messages
+                                .filter { message -> message.member == me && !message.deleted }
+                                .associate { message ->
+                                    val state = receiptState(message.created, uiState.receipts, me)
+                                    message.id to state
+                                }
+                        }
+                    }
                     val seen = remember(uiState.messages, uiState.receipts, uiState.identity, isGroupChat(uiState.chat)) {
                         if (isGroupChat(uiState.chat)) seenBy(uiState.messages, uiState.receipts, uiState.identity) else null
                     }
@@ -733,11 +749,7 @@ private fun ChatContent(
                                         MessageBubble(
                                             message = entry.message,
                                             isOwn = own,
-                                            receipt = if (own && showsReceipts && !entry.message.deleted) {
-                                                receiptState(entry.message.created, uiState.receipts, uiState.identity)
-                                            } else {
-                                                null
-                                            },
+                                            receipt = receipts[entry.message.id],
                                             seen = seen?.takeIf { it.id == entry.message.id }?.names,
                                             onThread = if (opensThreads && !entry.message.deleted) {
                                                 { viewModel.openThread(entry.message) }
@@ -751,9 +763,8 @@ private fun ChatContent(
                                             isSelected = entry.message.id in uiState.selectedIds,
                                             isSearchMatch = entry.message.id == activeMatchId,
                                             searchQuery = if (uiState.searchOpen) uiState.searchQuery else "",
-                                            replyToMessage = entry.message.reply?.let { rid ->
-                                                uiState.messages.firstOrNull { it.id == rid }
-                                            },
+                                            replyToMessage = entry.message.reply
+                                                ?.let { rid -> byId[rid] },
                                             onStartSelect = { viewModel.enterSelection(entry.message.id) },
                                             onToggleSelect = { viewModel.toggleSelection(entry.message.id) },
                                             onReply = { viewModel.startReply(entry.message) },
@@ -1133,7 +1144,9 @@ internal fun MessageBubble(
                     } else {
                         if (message.body.isNotEmpty()) {
                             Text(
-                                text = highlightQuery(message.body, searchQuery),
+                                text = remember(message.body, searchQuery) {
+                                    highlightQuery(message.body, searchQuery)
+                                },
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = if (isOwn) {
                                     MaterialTheme.colorScheme.onPrimaryContainer
