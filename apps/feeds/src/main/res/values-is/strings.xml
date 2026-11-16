@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Birta líka á</string>
     <string name="feeds_source_unfollowed">Ekki fylgt</string>
     <string name="feeds_source_follow_again">Fylgja aftur</string>
+    <string name="feeds_filtered_by_tag">Síað eftir merki:</string>
 </resources>

@@ -371,4 +371,5 @@
     <string name="feeds_also_post_to">Pubblica anche su</string>
     <string name="feeds_source_unfollowed">Non segui</string>
     <string name="feeds_source_follow_again">Segui di nuovo</string>
+    <string name="feeds_filtered_by_tag">Filtrato per tag:</string>
 </resources>

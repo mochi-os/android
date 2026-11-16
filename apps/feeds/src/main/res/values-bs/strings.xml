@@ -388,4 +388,5 @@
     <string name="feeds_also_post_to">Objavi i na</string>
     <string name="feeds_source_unfollowed">Ne prati se</string>
     <string name="feeds_source_follow_again">Prati ponovo</string>
+    <string name="feeds_filtered_by_tag">Filtrirano po oznaci:</string>
 </resources>

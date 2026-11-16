@@ -366,4 +366,5 @@
     <string name="feeds_also_post_to">Kaykunapipas churana</string>
     <string name="feeds_source_unfollowed">Manam qatipachkankichu</string>
     <string name="feeds_source_follow_again">Kaqmanta qatipay</string>
+    <string name="feeds_filtered_by_tag">Unanchawan filtrasqa:</string>
 </resources>

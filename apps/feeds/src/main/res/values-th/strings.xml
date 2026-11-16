@@ -353,4 +353,5 @@
     <string name="feeds_also_post_to">เผยแพร่เพิ่มเติมไปยัง</string>
     <string name="feeds_source_unfollowed">ไม่ได้ติดตาม</string>
     <string name="feeds_source_follow_again">ติดตามอีกครั้ง</string>
+    <string name="feeds_filtered_by_tag">กรองตามแท็ก:</string>
 </resources>

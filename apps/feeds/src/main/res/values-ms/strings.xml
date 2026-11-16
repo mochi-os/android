@@ -357,4 +357,5 @@
     <string name="feeds_also_post_to">Terbitkan juga ke</string>
     <string name="feeds_source_unfollowed">Tidak mengikuti</string>
     <string name="feeds_source_follow_again">Ikuti semula</string>
+    <string name="feeds_filtered_by_tag">Ditapis mengikut tag:</string>
 </resources>

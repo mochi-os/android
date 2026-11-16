@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">هتي به شايع ڪريو</string>
     <string name="feeds_source_unfollowed">فالو نه ڪري رهيا آهيو</string>
     <string name="feeds_source_follow_again">ٻيهر فالو ڪريو</string>
+    <string name="feeds_filtered_by_tag">ٽيگ سان فلٽر ٿيل:</string>
 </resources>

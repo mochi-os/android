@@ -353,4 +353,5 @@
     <string name="feeds_also_post_to">ເຜີຍແຜ່ໄປທີ່ດ້ວຍ</string>
     <string name="feeds_source_unfollowed">ບໍ່ໄດ້ຕິດຕາມ</string>
     <string name="feeds_source_follow_again">ຕິດຕາມອີກຄັ້ງ</string>
+    <string name="feeds_filtered_by_tag">ກອງຕາມແທັກ:</string>
 </resources>

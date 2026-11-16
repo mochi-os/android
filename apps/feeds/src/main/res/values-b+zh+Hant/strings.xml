@@ -353,4 +353,5 @@
     <string name="feeds_also_post_to">同時發布到</string>
     <string name="feeds_source_unfollowed">未追蹤</string>
     <string name="feeds_source_follow_again">重新追蹤</string>
+    <string name="feeds_filtered_by_tag">依標籤篩選:</string>
 </resources>

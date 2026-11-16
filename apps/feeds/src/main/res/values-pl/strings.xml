@@ -406,4 +406,5 @@
     <string name="feeds_also_post_to">Opublikuj też w</string>
     <string name="feeds_source_unfollowed">Nie obserwujesz</string>
     <string name="feeds_source_follow_again">Obserwuj ponownie</string>
+    <string name="feeds_filtered_by_tag">Filtrowane według tagu:</string>
 </resources>

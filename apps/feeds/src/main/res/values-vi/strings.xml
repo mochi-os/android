@@ -353,4 +353,5 @@
     <string name="feeds_also_post_to">Đăng cả lên</string>
     <string name="feeds_source_unfollowed">Không theo dõi</string>
     <string name="feeds_source_follow_again">Theo dõi lại</string>
+    <string name="feeds_filtered_by_tag">Đã lọc theo thẻ:</string>
 </resources>

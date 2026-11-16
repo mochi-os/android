@@ -372,4 +372,5 @@
     <string name="feeds_also_post_to">هەروەها بڵاوبکەرەوە بۆ</string>
     <string name="feeds_source_unfollowed">شوێنی ناکەویت</string>
     <string name="feeds_source_follow_again">دووبارە شوێنکەوتن</string>
+    <string name="feeds_filtered_by_tag">فلتەر بەپێی تاگ:</string>
 </resources>

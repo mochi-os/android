@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">මෙහිද පළ කරන්න</string>
     <string name="feeds_source_unfollowed">අනුගමනය නොකරයි</string>
     <string name="feeds_source_follow_again">නැවත අනුගමනය කරන්න</string>
+    <string name="feeds_filtered_by_tag">ටැගයෙන් පෙරන ලද:</string>
 </resources>

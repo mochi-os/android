@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Ayrıca yayımlanacak yerler</string>
     <string name="feeds_source_unfollowed">Takip edilmiyor</string>
     <string name="feeds_source_follow_again">Yeniden takip et</string>
+    <string name="feeds_filtered_by_tag">Etikete göre filtrelendi:</string>
 </resources>

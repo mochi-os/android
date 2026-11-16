@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Հրապարակել նաև</string>
     <string name="feeds_source_unfollowed">Չեք հետևում</string>
     <string name="feeds_source_follow_again">Կրկին հետևել</string>
+    <string name="feeds_filtered_by_tag">Զտված ըստ պիտակի՝</string>
 </resources>

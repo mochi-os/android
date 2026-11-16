@@ -353,4 +353,5 @@
     <string name="feeds_also_post_to">함께 게시할 곳</string>
     <string name="feeds_source_unfollowed">팔로우하지 않음</string>
     <string name="feeds_source_follow_again">다시 팔로우</string>
+    <string name="feeds_filtered_by_tag">태그로 필터링됨:</string>
 </resources>

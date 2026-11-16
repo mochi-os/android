@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">همچنین انتشار در</string>
     <string name="feeds_source_unfollowed">دنبال نمی‌کنید</string>
     <string name="feeds_source_follow_again">دنبال کردن دوباره</string>
+    <string name="feeds_filtered_by_tag">فیلتر شده با برچسب:</string>
 </resources>

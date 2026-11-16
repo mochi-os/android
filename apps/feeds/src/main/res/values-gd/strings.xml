@@ -408,4 +408,5 @@
     <string name="feeds_also_post_to">Foillsich cuideachd gu</string>
     <string name="feeds_source_unfollowed">Gun leantainn</string>
     <string name="feeds_source_follow_again">Lean a-rithist</string>
+    <string name="feeds_filtered_by_tag">Air a shìoladh le taga:</string>
 </resources>

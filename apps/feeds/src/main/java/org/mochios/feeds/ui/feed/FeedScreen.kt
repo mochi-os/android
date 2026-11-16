@@ -67,6 +67,8 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.InputChip
+import androidx.compose.material3.InputChipDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -314,6 +316,7 @@ fun FeedScreen(
     val isNotFound by viewModel.isNotFound.collectAsState()
     val gone by viewModel.gone.collectAsState()
     val currentSort by viewModel.currentSort.collectAsState()
+    val currentTag by viewModel.currentTag.collectAsState()
     val unreadOnly by viewModel.unreadOnly.collectAsState()
     val savedIds by viewModel.savedIds.collectAsState()
     val postImages by viewModel.postImages.collectAsState()
@@ -783,6 +786,9 @@ fun FeedScreen(
 
                         else -> {
                             Column(modifier = Modifier.fillMaxSize()) {
+                                currentTag?.let { tag ->
+                                    TagFilter(tag = tag, onClear = { viewModel.setTag(null) })
+                                }
                                 if (posts.isEmpty() && !isLoading) {
                                     Column(
                                         modifier = Modifier
@@ -928,6 +934,7 @@ fun FeedScreen(
                                                 onNavigateToEditPost(routeFeedId, post.id)
                                             },
                                             onDelete = { pendingDelete = post },
+                                            onFilterTag = { label -> viewModel.setTag(label) },
                                             // The aggregate carries no permissions of its
                                             // own; the server refuses a vote it may not take.
                                             canVote = viewModel.isAllFeeds || permissions.react ||
@@ -1470,6 +1477,7 @@ internal fun PostCard(
     canManage: Boolean,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
+    onFilterTag: ((String) -> Unit)? = null,
     canVote: Boolean = false,
     voting: Boolean = false,
     onVote: (List<Int>) -> Unit = {},
@@ -1780,6 +1788,7 @@ internal fun PostCard(
             onAdjustInterest = onAdjustInterest,
             onEdit = onEdit,
             onDelete = onDelete,
+            onFilterTag = onFilterTag,
             pinned = post.pinned > 0,
             boost = booster?.let { account -> if (boostedFrom(post, account)) null else account.identifier },
             boosted = booster != null && boostedFrom(post, booster),
@@ -1903,6 +1912,37 @@ internal fun PostCommentsPreview(
     }
 }
 
+// The tag the posts are filtered by, and the way back to every post: the web's
+// "Filtered by tag:" pill.
+@Composable
+internal fun TagFilter(tag: String, onClear: () -> Unit) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 4.dp)
+    ) {
+        Text(
+            text = stringResource(R.string.feeds_filtered_by_tag),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.width(8.dp))
+        InputChip(
+            selected = true,
+            onClick = onClear,
+            label = { Text(tag) },
+            trailingIcon = {
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.feeds_clear),
+                    modifier = Modifier.size(InputChipDefaults.IconSize)
+                )
+            }
+        )
+    }
+}
+
 // Bottom action bar: reaction bar, then tag / comment / save buttons. Lives
 // outside the flipping page content so it stays pinned at the screen bottom and
 // simply reflects whichever post is current (updating on swipe-commit), rather
@@ -1919,6 +1959,7 @@ internal fun PostActionBar(
     onAdjustInterest: (Tag, String) -> Unit,
     onEdit: () -> Unit,
     onDelete: () -> Unit,
+    onFilterTag: ((String) -> Unit)? = null,
     pinned: Boolean = false,
     // The hosted account a boost would be made from, while the post is not
     // boosted; [boosted] once it is. Neither for a post of this feed's own.
@@ -1953,6 +1994,7 @@ internal fun PostActionBar(
             onAdjustInterest = onAdjustInterest,
             horizontalPadding = 8.dp,
             iconSize = 24.dp,
+            onFilter = onFilterTag,
         )
         Row(
             verticalAlignment = Alignment.CenterVertically,

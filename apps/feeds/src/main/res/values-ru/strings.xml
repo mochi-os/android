@@ -406,4 +406,5 @@
     <string name="feeds_also_post_to">Опубликовать также в</string>
     <string name="feeds_source_unfollowed">Вы не подписаны</string>
     <string name="feeds_source_follow_again">Подписаться снова</string>
+    <string name="feeds_filtered_by_tag">Фильтр по тегу:</string>
 </resources>

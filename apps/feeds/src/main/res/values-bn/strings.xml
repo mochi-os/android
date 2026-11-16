@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">আরও যেখানে প্রকাশ করবে</string>
     <string name="feeds_source_unfollowed">ফলো করা হচ্ছে না</string>
     <string name="feeds_source_follow_again">আবার ফলো করুন</string>
+    <string name="feeds_filtered_by_tag">ট্যাগ অনুসারে ফিল্টার করা হয়েছে:</string>
 </resources>

@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Ilathala rin sa</string>
     <string name="feeds_source_unfollowed">Hindi sinusundan</string>
     <string name="feeds_source_follow_again">Sundan muli</string>
+    <string name="feeds_filtered_by_tag">Naka-filter sa tag:</string>
 </resources>

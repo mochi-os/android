@@ -357,4 +357,5 @@
     <string name="feeds_also_post_to">Uga terbitaké menyang</string>
     <string name="feeds_source_unfollowed">Ora ditutake</string>
     <string name="feeds_source_follow_again">Tutake maneh</string>
+    <string name="feeds_filtered_by_tag">Disaring miturut tag:</string>
 </resources>

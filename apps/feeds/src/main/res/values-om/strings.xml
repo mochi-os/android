@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Akkasumas maxxansi</string>
     <string name="feeds_source_unfollowed">Hin hordofamne</string>
     <string name="feeds_source_follow_again">Irra deebiin hordofi</string>
+    <string name="feeds_filtered_by_tag">Mallattoodhaan filatame:</string>
 </resources>

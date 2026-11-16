@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Avalda ka</string>
     <string name="feeds_source_unfollowed">Ei jälgi</string>
     <string name="feeds_source_follow_again">Jälgi uuesti</string>
+    <string name="feeds_filtered_by_tag">Filtreeritud sildi järgi:</string>
 </resources>

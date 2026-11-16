@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Julkaise myös kohteisiin</string>
     <string name="feeds_source_unfollowed">Ei seurata</string>
     <string name="feeds_source_follow_again">Seuraa uudelleen</string>
+    <string name="feeds_filtered_by_tag">Suodatettu tunnisteen mukaan:</string>
 </resources>

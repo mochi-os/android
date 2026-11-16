@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Argitaratu hemen ere</string>
     <string name="feeds_source_unfollowed">Ez duzu jarraitzen</string>
     <string name="feeds_source_follow_again">Jarraitu berriro</string>
+    <string name="feeds_filtered_by_tag">Etiketaren arabera iragazia:</string>
 </resources>

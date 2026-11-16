@@ -23,6 +23,7 @@
     <string name="feeds_tab_access">存取權</string>
     <string name="feeds_save_name">儲存名稱</string>
     <string name="feeds_clear">清除</string>
+    <string name="feeds_filtered_by_tag">按標籤篩選:</string>
     <string name="feeds_rss_url_copied">RSS 網址已複製到剪貼簿</string>
     <string name="feeds_ai_mode_off">已停用</string>
     <string name="feeds_ai_mode_tag">標籤</string>

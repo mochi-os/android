@@ -363,4 +363,5 @@
     <string name="feeds_also_post_to">Pibliye tou sou</string>
     <string name="feeds_source_unfollowed">Pa swiv</string>
     <string name="feeds_source_follow_again">Swiv ankò</string>
+    <string name="feeds_filtered_by_tag">Filtre pa tag:</string>
 </resources>

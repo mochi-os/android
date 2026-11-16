@@ -67,6 +67,8 @@ fun PostTagsButton(
     onAddTag: ((String) -> Unit)? = null,
     onRemoveTag: ((String) -> Unit)? = null,
     onAdjustInterest: ((qid: String, direction: String) -> Unit)? = null,
+    // Tapping a tag's label shows only the posts carrying it, as on the web.
+    onFilter: ((label: String) -> Unit)? = null,
     horizontalPadding: Dp = 6.dp,
     iconSize: Dp = 18.dp,
     countStyle: TextStyle = MaterialTheme.typography.labelMedium,
@@ -116,6 +118,9 @@ fun PostTagsButton(
                 onRemove = onRemoveTag?.let { remove ->
                     { id -> remove(id); open = false }
                 },
+                onFilter = onFilter?.let { filter ->
+                    { label -> filter(label); open = false }
+                },
             )
         }
         if (onAddTag != null) {
@@ -158,6 +163,7 @@ private fun TagMenuRow(
     tag: TagItem,
     onAdjustInterest: ((qid: String, direction: String) -> Unit)?,
     onRemove: ((id: String) -> Unit)?,
+    onFilter: ((label: String) -> Unit)? = null,
 ) {
     // Interest tuning only applies to entity-backed (qid) tags — these feed the
     // user-global interest model. Free-text tags render as plain labels.
@@ -176,7 +182,18 @@ private fun TagMenuRow(
             color = labelColor,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.weight(1f)
+            modifier = Modifier
+                .weight(1f)
+                .then(
+                    if (onFilter != null) {
+                        Modifier
+                            .clip(RoundedCornerShape(4.dp))
+                            .clickable { onFilter(tag.label) }
+                            .padding(vertical = 6.dp)
+                    } else {
+                        Modifier
+                    }
+                )
         )
         if (tunable && qid != null && onAdjustInterest != null) {
             MochiIconButton(onClick = { onAdjustInterest(qid, "up") }, modifier = Modifier.size(36.dp)) {

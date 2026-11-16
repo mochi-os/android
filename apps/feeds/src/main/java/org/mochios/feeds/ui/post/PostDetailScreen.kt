@@ -917,6 +917,7 @@ internal fun PostTagsButton(
     onAdjustInterest: (Tag, String) -> Unit,
     horizontalPadding: Dp = 6.dp,
     iconSize: Dp = 18.dp,
+    onFilter: ((String) -> Unit)? = null,
 ) {
     val items = tags.map { tag ->
         TagItem(
@@ -934,6 +935,7 @@ internal fun PostTagsButton(
                 onAdjustInterest(tag, direction)
             }
         },
+        onFilter = onFilter,
         horizontalPadding = horizontalPadding,
         iconSize = iconSize,
     )
