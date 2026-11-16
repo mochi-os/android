@@ -53,6 +53,9 @@ class ClickableLinkTextView @JvmOverloads constructor(
      */
     var fullText: CharSequence? = null
 
+    /** The rendered markdown last set on this view, so an unchanged body is not set again. */
+    var shownMarkdown: Spanned? = null
+
     private var downX = 0f
     private var downY = 0f
     private var pendingLink: ClickableSpan? = null
@@ -92,6 +95,19 @@ class ClickableLinkTextView @JvmOverloads constructor(
             }
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
+
+    /**
+     * Clears any scroll left from an earlier, narrower layout. The view is
+     * always as tall as its text, so it never scrolls; a selectable TextView
+     * scrolls itself to keep the cursor in view, and text set while it was
+     * laid out narrower would otherwise draw shifted or blank.
+     */
+    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
+        super.onLayout(changed, left, top, right, bottom)
+        if (scrollX != 0 || scrollY != 0) {
+            scrollTo(0, 0)
+        }
     }
 
     private fun staticLayout(text: CharSequence, width: Int): StaticLayout =
