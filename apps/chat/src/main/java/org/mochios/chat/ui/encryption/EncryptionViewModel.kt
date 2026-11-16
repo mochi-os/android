@@ -90,7 +90,8 @@ class EncryptionViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = _uiState.value.overview == null, error = null)
             try {
-                _uiState.value = _uiState.value.copy(overview = repository.encryption(chatId), isLoading = false)
+                val overview = repository.encryption(chatId)
+                _uiState.value = _uiState.value.copy(overview = overview, isLoading = false)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }

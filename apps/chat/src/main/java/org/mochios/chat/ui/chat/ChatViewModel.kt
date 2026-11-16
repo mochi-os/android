@@ -721,7 +721,8 @@ class ChatViewModel @Inject constructor(
         while (true) {
             if (_uiState.value.chat.presence()) {
                 try {
-                    _uiState.value = _uiState.value.copy(presence = repository.presence(chatId))
+                    val presence = repository.presence(chatId)
+                    _uiState.value = _uiState.value.copy(presence = presence)
                 } catch (_: Exception) {
                     // A presence the server could not ask is shown as none.
                 }

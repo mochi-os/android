@@ -97,7 +97,8 @@ class ChatListViewModel @Inject constructor(
     /** The list's chats read again with no spinner, as after a menu action. */
     private suspend fun reload() {
         try {
-            _uiState.value = _uiState.value.copy(chats = repository.listChats())
+            val chats = repository.listChats()
+            _uiState.value = _uiState.value.copy(chats = chats)
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {

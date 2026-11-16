@@ -73,7 +73,8 @@ class RssFeedsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                _uiState.value = _uiState.value.copy(isLoading = false, feeds = repository.rssFeeds())
+                val feeds = repository.rssFeeds()
+                _uiState.value = _uiState.value.copy(isLoading = false, feeds = feeds)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -85,7 +86,8 @@ class RssFeedsViewModel @Inject constructor(
     /** The list as the server has it now, with no spinner. */
     private suspend fun reload() {
         try {
-            _uiState.value = _uiState.value.copy(feeds = repository.rssFeeds())
+            val feeds = repository.rssFeeds()
+            _uiState.value = _uiState.value.copy(feeds = feeds)
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {
