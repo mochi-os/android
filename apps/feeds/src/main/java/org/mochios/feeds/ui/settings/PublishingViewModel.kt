@@ -108,7 +108,9 @@ class PublishingViewModel @Inject constructor(
                 _publish.value = null
                 _refusal.value = e
             } catch (_: Exception) {
-                // A server without the networks says nothing of them.
+                // A server without the networks says nothing of them: there
+                // is nowhere to publish, and the settings stop waiting.
+                if (_publish.value == null && _refusal.value == null) _publish.value = PublishState()
             }
         }
     }

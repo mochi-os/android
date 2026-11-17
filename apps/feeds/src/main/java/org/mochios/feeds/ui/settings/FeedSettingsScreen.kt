@@ -84,8 +84,9 @@ fun FeedSettingsScreen(
     LaunchedEffect(privacy, canManage) {
         if (canManage && privacy != null) publishing.loadPublish()
     }
+    val offered = publishable(publishState, refusal)
     val tabIds = settingsTabs(
-        publishable = publishable(publishState, refusal),
+        publishable = offered == true,
         ai = aiAccounts.isNotEmpty(),
     )
 
@@ -154,7 +155,8 @@ fun FeedSettingsScreen(
         ) {
             val info = feedInfo
             when {
-                isLoading && info == null -> {
+                // The owner's tabs wait for whether Publish to is one of them.
+                (isLoading && info == null) || (canManage && offered == null) -> {
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
@@ -237,10 +239,14 @@ internal fun settingsTabs(publishable: Boolean, ai: Boolean): List<SettingsTab> 
 
 /**
  * Whether Publish to is offered: the owner holds an account the feed may
- * publish to, or the server refused and the tab says why.
+ * publish to, or the server refused and the tab says why. Null until the
+ * server has answered, so the tabs are drawn once, with it or without.
  */
-internal fun publishable(state: PublishState?, refusal: MochiError?): Boolean =
-    refusal != null || state?.accounts.orEmpty().isNotEmpty()
+internal fun publishable(state: PublishState?, refusal: MochiError?): Boolean? = when {
+    refusal != null -> true
+    state == null -> null
+    else -> state.accounts.isNotEmpty()
+}
 
 /** Where a public feed publishes, on a tab of its own. */
 @Composable
