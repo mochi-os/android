@@ -26,6 +26,7 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -45,6 +46,7 @@ import androidx.compose.ui.layout.layout
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
@@ -175,12 +177,16 @@ fun PagedZoomableBoard(
         // reflow as the board zooms. The first visible page sits at the start
         // padding, so padding that centres a scaled page centres that page.
         val pageWidth = maxWidth - pagedPeekPadding * 2
-        val side = centredPadding(maxWidth, pageWidth, zoom)
+        val viewportWidth = maxWidth
+        val side = remember(viewportWidth, pageWidth) {
+            ZoomPadding { centredPadding(viewportWidth, pageWidth, zoom) }
+        }
+        val settled by remember { derivedStateOf { zoom > 0.999f } }
 
         LazyRow(
             state = state,
-            flingBehavior = if (zoom > 0.999f) snapFling else freeFling,
-            contentPadding = PaddingValues(horizontal = side),
+            flingBehavior = if (settled) snapFling else freeFling,
+            contentPadding = side,
             horizontalArrangement = Arrangement.spacedBy(pageSpacing),
             modifier = Modifier.fillMaxSize(),
         ) {
@@ -231,6 +237,20 @@ fun PagedZoomableBoard(
                 }
         )
     }
+}
+
+/**
+ * Side padding read from [side] as the list measures, so a zooming board
+ * re-measures each frame instead of recomposing.
+ */
+private class ZoomPadding(private val side: () -> Dp) : PaddingValues {
+    override fun calculateLeftPadding(layoutDirection: LayoutDirection): Dp = side()
+
+    override fun calculateTopPadding(): Dp = 0.dp
+
+    override fun calculateRightPadding(layoutDirection: LayoutDirection): Dp = side()
+
+    override fun calculateBottomPadding(): Dp = 0.dp
 }
 
 /** Whichever of the board's drag states is dragging, or null. */
