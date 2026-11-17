@@ -44,9 +44,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -166,7 +166,9 @@ fun ClassDetailScreen(
 
             // Pick the first view that includes this class (or any view if none filter
             // by class) so the preview shows how this class's objects would lay out.
-            val sortedViews = projectDetails.views.sortedBy { view -> view.rank }
+            val sortedViews = remember(projectDetails.views) {
+                projectDetails.views.sortedBy { view -> view.rank }
+            }
             val previewView = sortedViews.firstOrNull { view ->
                 view.classes.isEmpty() || cls.id in view.classes
             } ?: sortedViews.firstOrNull()
@@ -335,20 +337,19 @@ fun ClassDetailScreen(
                     }
                 }
 
-                val sortedFields = fields.sortedBy { entry -> entry.rank }
-                val fieldIds = sortedFields.map { entry -> entry.id }
+                val sortedFields = remember(fields) { fields.sortedBy { entry -> entry.rank } }
+                val fieldIds = remember(sortedFields) { sortedFields.map { entry -> entry.id } }
                 val moveUpLabel = stringResource(R.string.projects_class_move_up)
                 val moveDownLabel = stringResource(R.string.projects_class_move_down)
                 val dragHint = stringResource(R.string.projects_drag_row)
                 val insertionColour = MaterialTheme.colorScheme.primary
                 sortedFields.forEach { field ->
-                    val isDropTarget = dragState.isTarget(field.id) &&
-                        dragState.draggingItemId != field.id
-                    val insertEdge = dragState.targetEdge
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .alpha(if (dragState.isDragging(field.id)) 0.4f else 1f)
+                            .graphicsLayer {
+                                alpha = if (dragState.isDragging(field.id)) 0.4f else 1f
+                            }
                             .dropTarget(
                                 state = dragState,
                                 itemId = field.id,
@@ -371,8 +372,11 @@ fun ClassDetailScreen(
                                 }
                             )
                             .drawBehind {
-                                if (!isDropTarget) return@drawBehind
-                                val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                                val dropping = dragState.isTarget(field.id) &&
+                                    dragState.draggingItemId != field.id
+                                if (!dropping) return@drawBehind
+                                val bottom = dragState.targetEdge == DragEdge.Bottom
+                                val y = if (bottom) size.height else 0f
                                 drawLine(
                                     color = insertionColour,
                                     start = Offset(0f, y),
