@@ -550,7 +550,9 @@ private fun PostSourceSheet(
     val editCommentText by viewModel.editCommentText.collectAsState()
     val currentUserId by viewModel.currentUserId.collectAsState()
     val collapsed = rememberCollapsedComments()
-    val rows = threadRows(post?.comments.orEmpty(), collapsed.ids)
+    val rows = remember(post?.comments, collapsed.ids) {
+        threadRows(post?.comments.orEmpty(), collapsed.ids)
+    }
     val avatars = remember(post?.comments) {
         commenterAvatars(post?.comments.orEmpty(), viewModel.feedId, viewModel.postId)
     }

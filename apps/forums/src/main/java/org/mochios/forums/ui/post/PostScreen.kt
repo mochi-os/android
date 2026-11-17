@@ -302,9 +302,12 @@ fun PostScreen(
             onSend = { text -> viewModel.submitComment(text, anchor = att.id) },
         )
     }
-    val attachmentCommentCount: (Attachment) -> Int = { att ->
-        countComments(uiState.comments.filter { it.anchor == att.id })
+    val anchorCounts = remember(uiState.comments) {
+        uiState.comments
+            .groupBy { comment -> comment.anchor }
+            .mapValues { (_, anchored) -> countComments(anchored) }
     }
+    val attachmentCommentCount: (Attachment) -> Int = { att -> anchorCounts[att.id] ?: 0 }
 
     Scaffold(
         snackbarHost = { SnackbarHost(snackbar) },
@@ -448,8 +451,13 @@ fun PostScreen(
                     // A post opened on one comment shows it alone with its
                     // replies, under a way back to them all; one deleted since
                     // shows them all.
-                    val focused = focusedId?.let { id ->
-                        findInThread(uiState.comments, id, { it.id }, { it.children })
+                    val focused = remember(focusedId, uiState.comments) {
+                        focusedId?.let { id ->
+                            findInThread(uiState.comments, id, { it.id }, { it.children })
+                        }
+                    }
+                    val rows = remember(focused, uiState.comments, collapsed.ids) {
+                        forumRows(focused?.let { listOf(it) } ?: uiState.comments, collapsed)
                     }
                     // Land on the comment rather than the top of the post: the
                     // post, then the divider, then the way back.
@@ -506,7 +514,7 @@ fun PostScreen(
                                 }
                             }
                             commentsItems(
-                                rows = forumRows(focused?.let { listOf(it) } ?: uiState.comments, collapsed),
+                                rows = rows,
                                 forumId = viewModel.forumId,
                                 avatars = avatars,
                                 currentIdentity = uiState.identity,
@@ -1161,9 +1169,12 @@ private fun AttachmentComments(
     // image starts a new comment, which is what the anchor means.
     var draft by remember(attachmentId) { mutableStateOf(TextFieldValue("")) }
     // Anchors live on top-level comments; a reply inherits its parent's context.
-    val anchored = comments.filter { it.anchor == attachmentId }
+    val anchored = remember(comments, attachmentId) {
+        comments.filter { comment -> comment.anchor == attachmentId }
+    }
     val others = comments.size - anchored.size
     val shown = if (showAll) comments else anchored
+    val shownRows = remember(shown, collapsed.ids) { forumRows(shown, collapsed) }
     // Reply readies this panel's composer, not the one under the post behind it.
     val composerFocus = rememberReplyFocus(replyTo?.id)
     // Everything else a comment can do is the same here as below the post;
@@ -1194,7 +1205,7 @@ private fun AttachmentComments(
                 }
             }
             commentsItems(
-                rows = forumRows(shown, collapsed),
+                rows = shownRows,
                 forumId = forumId,
                 avatars = avatars,
                 currentIdentity = currentIdentity,

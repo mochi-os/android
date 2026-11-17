@@ -72,9 +72,13 @@ internal fun AttachmentComments(
     val shareTitle = stringResource(MochiR.string.comment_share)
 
     // Anchors live on top-level comments; a reply inherits its parent's context.
-    val anchored = post.comments.filter { it.anchor == attachmentId }
+    val anchored = remember(post.comments, attachmentId) {
+        post.comments.filter { comment -> comment.anchor == attachmentId }
+    }
     val others = post.comments.size - anchored.size
-    val shown = threadRows(if (showAll) post.comments else anchored, collapsed.ids)
+    val shown = remember(showAll, post.comments, anchored, collapsed.ids) {
+        threadRows(if (showAll) post.comments else anchored, collapsed.ids)
+    }
     val avatars = remember(post.comments) {
         commenterAvatars(post.comments, viewModel.feedId, viewModel.postId)
     }
