@@ -62,6 +62,17 @@ class CommentThreadTest {
     }
 
     @Test
+    fun `a repeated id is listed once, without the repeat's replies`() {
+        val repeated = listOf(
+            node("a", node("a1")),
+            node("b", node("a", node("x"))),
+            node("a1"),
+        )
+        val rows = commentRows(repeated, { it.id }, { it.children })
+        assertEquals(listOf("a", "a1", "b"), rows.map { it.comment.id })
+    }
+
+    @Test
     fun `a comment is found at any depth, and a missing one is not`() {
         assertEquals("a2a", findInThread(thread, "a2a", { it.id }, { it.children })?.id)
         assertEquals(listOf("a2a"), findInThread(thread, "a2", { it.id }, { it.children })?.children?.map { it.id })

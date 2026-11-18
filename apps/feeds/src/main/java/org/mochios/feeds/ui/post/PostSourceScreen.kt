@@ -592,7 +592,7 @@ private fun PostSourceSheet(
                 .fillMaxWidth(),
             contentPadding = PaddingValues(bottom = 8.dp)
         ) {
-            items(rows, key = { row -> row.comment.id }) { row ->
+            items(rows, key = { row -> "comment/" + row.comment.id }) { row ->
                 val comment = row.comment
                 CommentItem(
                     comment = comment,
