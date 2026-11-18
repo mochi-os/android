@@ -530,6 +530,7 @@ class FeedsRepository @Inject constructor(
         offset: Long? = null,
         limit: Int = 20,
         sort: String? = null,
+        tag: String? = null,
         unreadOnly: Boolean = false,
         cursor: String? = null
     ): PostListResult {
@@ -540,6 +541,7 @@ class FeedsRepository @Inject constructor(
                 offset = offset,
                 limit = limit,
                 sort = sort,
+                tag = tag,
                 unread = if (unreadOnly) "1" else null
             ).unwrap()
             PostListResult(
@@ -1122,6 +1124,14 @@ class FeedsRepository @Inject constructor(
     suspend fun clearNotifications(feedId: String) {
         try {
             api.clearNotifications(feedId).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun clearAllNotifications() {
+        try {
+            api.clearAllNotifications().unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

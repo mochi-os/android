@@ -83,8 +83,12 @@ class CommunityViewModel @Inject constructor(
         _events.emit(CommunityEvent.Done(R.string.forums_community_withdrawn))
     }
 
-    /** Mark every post of the forum sensitive, or not; a failure puts the switch back. */
+    /**
+     * Mark every post of the forum sensitive, or not; a failure puts the
+     * switch back, and a tap while a change goes is not taken.
+     */
     fun setSensitive(on: Boolean) {
+        if (_busy.value) return
         val before = _sensitive.value
         _sensitive.value = on
         change(R.string.forums_save_failed, onFailure = { _sensitive.value = before }) {

@@ -164,6 +164,10 @@
         <item quantity="one">%1$s reactie</item>
         <item quantity="other">%1$s reacties</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s eerdere reactie</item>
+        <item quantity="other">%1$s eerdere reacties</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s berichtsleutel hersteld</item>
         <item quantity="other">%1$s berichtsleutels hersteld</item>

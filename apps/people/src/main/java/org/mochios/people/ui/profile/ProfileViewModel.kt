@@ -170,12 +170,21 @@ class ProfileViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The directory switch: it moves on the tap and goes back if the server
+     * refuses. A tap while its change goes asks for what the server still
+     * holds, which is not taken.
+     */
     fun savePrivacy(value: String, onError: (MochiError) -> Unit = {}) {
         if (value != "public" && value != "private") return
         val info = _uiState.value.info ?: return
         if (value == info.privacy) return
         setPrivacyDraft(value)
-        launchSave(ProfileField.PRIVACY, onSuccess = {}, onError) { person ->
+        val refused = { error: MochiError ->
+            setPrivacyDraft(info.privacy)
+            onError(error)
+        }
+        launchSave(ProfileField.PRIVACY, onSuccess = {}, refused) { person ->
             repository.setPrivacy(person, value)
             val updated = info.copy(privacy = value)
             _uiState.value = _uiState.value.copy(info = updated, privacyDraft = value)

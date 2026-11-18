@@ -307,4 +307,5 @@
     <string name="feeds_also_post_to">Ook publiceren naar</string>
     <string name="feeds_source_unfollowed">Niet gevolgd</string>
     <string name="feeds_source_follow_again">Opnieuw volgen</string>
+    <string name="feeds_filtered_by_tag">Gefilterd op tag:</string>
 </resources>

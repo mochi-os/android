@@ -396,4 +396,5 @@
     <string name="feeds_also_post_to">Taip pat skelbti į</string>
     <string name="feeds_source_unfollowed">Nesekama</string>
     <string name="feeds_source_follow_again">Sekti vėl</string>
+    <string name="feeds_filtered_by_tag">Filtruota pagal žymą:</string>
 </resources>

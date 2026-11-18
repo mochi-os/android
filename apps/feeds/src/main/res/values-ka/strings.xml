@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">ასევე გამოქვეყნდეს</string>
     <string name="feeds_source_unfollowed">არ არის გამოწერილი</string>
     <string name="feeds_source_follow_again">ხელახლა გამოწერა</string>
+    <string name="feeds_filtered_by_tag">ფილტრი ტეგით:</string>
 </resources>

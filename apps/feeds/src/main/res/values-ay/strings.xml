@@ -366,4 +366,5 @@
     <string name="feeds_also_post_to">Ukhamaraki kawkir yatiyaña</string>
     <string name="feeds_source_unfollowed">Janiw arkatäkiti</string>
     <string name="feeds_source_follow_again">Wasitat arkaña</string>
+    <string name="feeds_filtered_by_tag">Chimpu filtro:</string>
 </resources>

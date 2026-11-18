@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Δημοσίευση και σε</string>
     <string name="feeds_source_unfollowed">Δεν ακολουθείτε</string>
     <string name="feeds_source_follow_again">Ακολούθηση ξανά</string>
+    <string name="feeds_filtered_by_tag">Φιλτραρισμένα κατά ετικέτα:</string>
 </resources>

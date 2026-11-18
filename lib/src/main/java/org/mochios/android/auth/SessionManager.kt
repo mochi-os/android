@@ -28,6 +28,7 @@ import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.isServerOrigin
 import org.mochios.android.util.originOf
 import java.util.concurrent.ConcurrentHashMap
@@ -134,7 +135,7 @@ class SessionManager @Inject constructor(
         if (changed) {
             cookieStore.clear()
             sealed.forget()
-            forgetImages()
+            forgetAccount()
         }
     }
 
@@ -158,17 +159,20 @@ class SessionManager @Inject constructor(
             prefs[KEY_BOUND_SERVER] = server
         }
         // An account adopted from a sibling install arrives without a sign-out
-        // here, so the images held for the one before it go now.
-        if (previous != null && previous != identity) forgetImages()
+        // here, so what was held for the one before it goes now.
+        if (previous != null && previous != identity) forgetAccount()
     }
 
     /**
-     * Empty the image cache. It serves a held image by its address without
-     * asking the server, so the next account would be shown the previous one's
-     * avatars and attachments without the server deciding whether it may see
-     * them.
+     * Forget what the device holds for the account before: the item each app
+     * last had open, which the next account would be sent to and not find,
+     * and the image cache, which serves a held image by its address without
+     * asking the server, so the next account would be shown the previous
+     * one's avatars and attachments without the server deciding whether it
+     * may see them.
      */
-    private suspend fun forgetImages() {
+    private suspend fun forgetAccount() {
+        LastViewedStore.forget(context)
         // A cache that cannot be cleared must not stop the sign-out around it.
         runCatching {
             val loader = SingletonImageLoader.get(context)
@@ -220,7 +224,7 @@ class SessionManager @Inject constructor(
         // request and the rolling Set-Cookie re-persists what was just cleared.
         cookieStore.clear()
         sealed.forget()
-        forgetImages()
+        forgetAccount()
         // Logout in this app shouldn't tear down OTHER apps' bindings —
         // remove only the account this app was bound to. Its synced contacts
         // and calendars go first, while the account still names them.

@@ -395,4 +395,5 @@
     <string name="feeds_also_post_to">פרסום גם אל</string>
     <string name="feeds_source_unfollowed">לא במעקב</string>
     <string name="feeds_source_follow_again">עקוב שוב</string>
+    <string name="feeds_filtered_by_tag">מסונן לפי תגית:</string>
 </resources>

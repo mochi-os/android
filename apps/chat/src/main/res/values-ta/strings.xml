@@ -164,6 +164,10 @@
         <item quantity="one">%1$s பதில்</item>
         <item quantity="other">%1$s பதில்கள்</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s முந்தைய பதில்</item>
+        <item quantity="other">%1$s முந்தைய பதில்கள்</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s செய்தி விசை மீட்டெடுக்கப்பட்டது</item>
         <item quantity="other">%1$s செய்தி விசைகள் மீட்டெடுக்கப்பட்டன</item>

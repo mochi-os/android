@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Ошондой эле жарыялоо</string>
     <string name="feeds_source_unfollowed">Жазылган эмессиз</string>
     <string name="feeds_source_follow_again">Кайра жазылуу</string>
+    <string name="feeds_filtered_by_tag">Тег боюнча чыпкаланды:</string>
 </resources>

@@ -120,6 +120,7 @@
     <string name="feeds_banner_description">Optional markdown banner shown at the top of your feed.</string>
     <string name="feeds_banner_dismiss">Dismiss banner</string>
     <string name="feeds_clear">Clear</string>
+    <string name="feeds_filtered_by_tag">Filtered by tag:</string>
     <string name="feeds_delete_feed">Delete feed</string>
     <string name="feeds_delete_feed_confirm">This will permanently delete the feed and all its posts. This cannot be undone.</string>
     <string name="feeds_clipboard_label_rss">RSS URL</string>

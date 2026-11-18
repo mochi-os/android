@@ -164,6 +164,10 @@
         <item quantity="one">%1$s risposta</item>
         <item quantity="other">%1$s risposte</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s risposta precedente</item>
+        <item quantity="other">%1$s risposte precedenti</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s chiave dei messaggi ripristinata</item>
         <item quantity="other">%1$s chiavi dei messaggi ripristinate</item>

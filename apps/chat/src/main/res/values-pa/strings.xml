@@ -164,6 +164,10 @@
         <item quantity="one">%1$s ਜਵਾਬ</item>
         <item quantity="other">%1$s ਜਵਾਬ</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s ਪਹਿਲਾਂ ਵਾਲਾ ਜਵਾਬ</item>
+        <item quantity="other">%1$s ਪਹਿਲਾਂ ਵਾਲੇ ਜਵਾਬ</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s ਸੁਨੇਹਾ ਕੁੰਜੀ ਬਹਾਲ ਕੀਤੀ ਗਈ</item>
         <item quantity="other">%1$s ਸੁਨੇਹਾ ਕੁੰਜੀਆਂ ਬਹਾਲ ਕੀਤੀਆਂ ਗਈਆਂ</item>

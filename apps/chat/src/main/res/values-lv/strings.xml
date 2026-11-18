@@ -165,6 +165,11 @@
         <item quantity="one">%1$s atbilde</item>
         <item quantity="other">%1$s atbildes</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="zero">%1$s agrāku atbilžu</item>
+        <item quantity="one">%1$s agrāka atbilde</item>
+        <item quantity="other">%1$s agrākas atbildes</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="zero">Atjaunotas %1$s ziņu atslēgas</item>
         <item quantity="one">Atjaunota %1$s ziņu atslēga</item>

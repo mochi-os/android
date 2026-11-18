@@ -164,6 +164,10 @@
         <item quantity="one">%1$s జవాబు</item>
         <item quantity="other">%1$s జవాబులు</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s మునుపటి జవాబు</item>
+        <item quantity="other">%1$s మునుపటి జవాబులు</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s సందేశ కీ పునరుద్ధరించబడింది</item>
         <item quantity="other">%1$s సందేశ కీలు పునరుద్ధరించబడ్డాయి</item>

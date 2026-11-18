@@ -353,6 +353,7 @@ interface FeedsApi {
         @Query("offset") offset: Long? = null,
         @Query("limit") limit: Int = 20,
         @Query("sort") sort: String? = null,
+        @Query("tag") tag: String? = null,
         @Query("unread") unread: String? = null
     ): Response<ApiResponse<PostListResponse>>
 
@@ -598,6 +599,10 @@ interface FeedsApi {
     suspend fun clearNotifications(
         @Path("feedId") feedId: String
     ): Response<ApiResponse<SuccessResponse>>
+
+    // Every feed "All feeds" lists, as it is opened. Class-level.
+    @POST("-/notifications/clear")
+    suspend fun clearAllNotifications(): Response<ApiResponse<SuccessResponse>>
 
     @GET("{feedId}/-/notifications")
     suspend fun getNotifications(

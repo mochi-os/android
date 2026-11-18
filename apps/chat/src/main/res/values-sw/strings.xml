@@ -164,6 +164,10 @@
         <item quantity="one">Jibu %1$s</item>
         <item quantity="other">Majibu %1$s</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">Jibu %1$s la awali</item>
+        <item quantity="other">Majibu %1$s ya awali</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Ufunguo %1$s wa ujumbe umerejeshwa</item>
         <item quantity="other">Funguo %1$s za ujumbe zimerejeshwa</item>

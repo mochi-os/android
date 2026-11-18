@@ -169,6 +169,14 @@
         <item quantity="many">%1$s ateb</item>
         <item quantity="other">%1$s ateb</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="zero">%1$s ateb cynharach</item>
+        <item quantity="one">%1$s ateb cynharach</item>
+        <item quantity="two">%1$s ateb cynharach</item>
+        <item quantity="few">%1$s ateb cynharach</item>
+        <item quantity="many">%1$s ateb cynharach</item>
+        <item quantity="other">%1$s ateb cynharach</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="zero">%1$s allwedd neges wedi\'u hadfer</item>
         <item quantity="one">%1$s allwedd neges wedi\'i hadfer</item>

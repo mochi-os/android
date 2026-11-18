@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Udgiv også til</string>
     <string name="feeds_source_unfollowed">Følger ikke</string>
     <string name="feeds_source_follow_again">Følg igen</string>
+    <string name="feeds_filtered_by_tag">Filtreret efter tag:</string>
 </resources>

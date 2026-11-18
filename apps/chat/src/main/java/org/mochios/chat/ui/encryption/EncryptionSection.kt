@@ -209,16 +209,25 @@ private fun DeviceRows(status: EncryptionStatus) {
     }
     Field(label = stringResource(R.string.chat_encryption_device)) {
         DataChip(value = fingerprintGroups(status.fingerprint), wrap = true)
-        Spacer(Modifier.width(8.dp))
         TrustBadge(if (status.verified) "verified" else "undecided")
     }
 }
 
+/**
+ * A label over its values, which go side by side where they fit and wrap
+ * where they do not: in a plain row a key took the width it wanted and
+ * squeezed the badge beside it into a tall sliver.
+ */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun Field(label: String, content: @Composable () -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Text(label, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        Row(verticalAlignment = Alignment.CenterVertically) { content() }
+        FlowRow(
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
+            itemVerticalAlignment = Alignment.CenterVertically,
+        ) { content() }
     }
 }
 
@@ -231,7 +240,11 @@ private fun TrustBadge(trust: String) {
     }
 }
 
-/** A person's devices, read when opened, and on Matrix comparing emoji with them. */
+/**
+ * A person's devices, read when opened, and on Matrix comparing emoji with
+ * them. The name has the line to itself and the compare button sits under
+ * it: beside it on a phone, the button cut the name short.
+ */
 @Composable
 private fun PersonRow(
     person: String,
@@ -245,31 +258,39 @@ private fun PersonRow(
 ) {
     val open = person in state.open
     Column {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Row(
-                modifier = Modifier
-                    .weight(1f)
-                    .clickable { onToggle(person) }
-                    .padding(vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable { onToggle(person) }
+                .padding(vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Icon(
+                if (open) Icons.Default.KeyboardArrowDown else Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                contentDescription = null,
+            )
+            Spacer(Modifier.width(4.dp))
+            Text(
+                name,
+                style = MaterialTheme.typography.bodyLarge,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f),
+            )
+        }
+        if (matrix) {
+            MochiOutlinedButton(
+                onClick = { onVerify(person) },
+                enabled = state.verifying == null,
+                modifier = Modifier.padding(start = 28.dp),
             ) {
-                Icon(
-                    if (open) Icons.Default.KeyboardArrowDown else Icons.AutoMirrored.Filled.KeyboardArrowRight,
-                    contentDescription = null,
-                )
-                Spacer(Modifier.width(4.dp))
-                Text(name, style = MaterialTheme.typography.bodyLarge, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            }
-            if (matrix) {
-                MochiOutlinedButton(onClick = { onVerify(person) }, enabled = state.verifying == null) {
-                    if (state.verifying == person) {
-                        CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
-                    } else {
-                        Icon(Icons.Outlined.EmojiEmotions, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-                    }
-                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                    Text(stringResource(R.string.chat_encryption_compare))
+                if (state.verifying == person) {
+                    CircularProgressIndicator(modifier = Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                } else {
+                    Icon(Icons.Outlined.EmojiEmotions, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
                 }
+                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                Text(stringResource(R.string.chat_encryption_compare))
             }
         }
         if (open) {

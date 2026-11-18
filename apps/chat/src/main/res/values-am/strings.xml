@@ -164,6 +164,10 @@
         <item quantity="one">%1$s ምላሽ</item>
         <item quantity="other">%1$s ምላሾች</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s ቀደም ያለ ምላሽ</item>
+        <item quantity="other">%1$s ቀደም ያሉ ምላሾች</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s የመልዕክት ቁልፍ ተመልሷል</item>
         <item quantity="other">%1$s የመልዕክት ቁልፎች ተመልሰዋል</item>

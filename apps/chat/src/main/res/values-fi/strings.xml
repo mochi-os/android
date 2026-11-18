@@ -164,6 +164,10 @@
         <item quantity="one">%1$s vastaus</item>
         <item quantity="other">%1$s vastausta</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s aiempi vastaus</item>
+        <item quantity="other">%1$s aiempaa vastausta</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s viestiavain palautettu</item>
         <item quantity="other">%1$s viestiavainta palautettu</item>

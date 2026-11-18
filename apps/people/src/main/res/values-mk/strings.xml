@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Мрежи</string>
     <string name="people_profile_settings">Поставки</string>
     <string name="people_contacts_invitation_sent">Поканата е испратена</string>
+    <string name="people_contact_keep">Задржи</string>
 </resources>

@@ -353,4 +353,5 @@
     <string name="feeds_also_post_to">ထပ်မံ ထုတ်ဝေရန် နေရာ</string>
     <string name="feeds_source_unfollowed">စောင့်ကြည့်မနေပါ</string>
     <string name="feeds_source_follow_again">ထပ်မံ စောင့်ကြည့်မည်</string>
+    <string name="feeds_filtered_by_tag">တဂ်အလိုက် စိစစ်ထား -</string>
 </resources>

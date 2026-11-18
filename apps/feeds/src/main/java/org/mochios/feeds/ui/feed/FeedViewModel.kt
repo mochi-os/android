@@ -191,9 +191,10 @@ class FeedViewModel @Inject constructor(
     private val _currentSort = MutableStateFlow("interests")
     val currentSort: StateFlow<String> = _currentSort.asStateFlow()
 
-    // Always null: no tag-filter control is offered, and the repository
-    // reads below pass it through as "no filter".
+    // The tag the posts are filtered by, picked from a post's tags and cleared
+    // from the filter above the posts; null shows every post.
     private val _currentTag = MutableStateFlow<String?>(null)
+    val currentTag: StateFlow<String?> = _currentTag.asStateFlow()
 
     private val _unreadOnly = MutableStateFlow(prefs.getBoolean(KEY_UNREAD_ONLY, false))
     val unreadOnly: StateFlow<Boolean> = _unreadOnly.asStateFlow()
@@ -391,10 +392,11 @@ class FeedViewModel @Inject constructor(
     }
 
     fun clearNotifications() {
-        if (isAllFeeds || feedId.isBlank()) return
+        if (feedId.isBlank()) return
         viewModelScope.launch {
             try {
-                repository.clearNotifications(feedId)
+                // All feeds clears every feed it lists, as one feed clears its own.
+                if (isAllFeeds) repository.clearAllNotifications() else repository.clearNotifications(feedId)
             } catch (_: Exception) {
                 // Best-effort — a failed clear shouldn't disrupt the feed view.
             }
@@ -579,6 +581,7 @@ class FeedViewModel @Inject constructor(
                 cursor = cursor,
                 offset = offset,
                 sort = _currentSort.value,
+                tag = _currentTag.value,
                 unreadOnly = _unreadOnly.value,
             )
         } else {
@@ -736,6 +739,15 @@ class FeedViewModel @Inject constructor(
     }
 
 
+
+    /** Filter the posts by [tag], or show every post again when [tag] is the
+     *  one already filtered by, or null. */
+    fun setTag(tag: String?) {
+        val next = if (tag == _currentTag.value) null else tag
+        if (next == _currentTag.value) return
+        _currentTag.value = next
+        reloadPosts()
+    }
 
     fun setUnreadOnly(unreadOnly: Boolean) {
         if (_unreadOnly.value == unreadOnly) return

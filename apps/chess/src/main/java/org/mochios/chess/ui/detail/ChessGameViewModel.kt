@@ -16,6 +16,8 @@ import com.github.bhlangonijr.chesslib.move.MoveList
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -32,6 +34,8 @@ import org.mochios.android.util.mergeMessages
 import org.mochios.chess.engine.isDrawnPosition
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
+import org.mochios.chess.model.GameViewResponse
+import org.mochios.chess.model.GetMessagesResponse
 import org.mochios.chess.model.messageKey
 import org.mochios.chess.model.MoveRequest
 import org.mochios.chess.repository.ChessRepository
@@ -109,8 +113,7 @@ class ChessGameViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val view = repo.getGame(gameId)
-                val msgs = repo.getMessages(gameId)
+                val (view, msgs) = fetch()
                 _uiState.value = _uiState.value.copy(
                     game = view.game,
                     identity = view.identity,
@@ -154,8 +157,7 @@ class ChessGameViewModel @Inject constructor(
             delay(REFRESH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val view = repo.getGame(gameId)
-                val msgs = repo.getMessages(gameId)
+                val (view, msgs) = fetch()
                 _uiState.value = _uiState.value.copy(
                     game = view.game,
                     identity = view.identity,
@@ -182,6 +184,25 @@ class ChessGameViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * The game and its newest messages, read at once rather than one after
+     * the other. The game's failure is the one shown, whichever answers first:
+     * the messages' is said only once the game has come.
+     */
+    private suspend fun fetch(): Pair<GameViewResponse, GetMessagesResponse> = coroutineScope {
+        val messages = async {
+            try {
+                Result.success(repo.getMessages(gameId))
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                Result.failure(e)
+            }
+        }
+        val view = repo.getGame(gameId)
+        view to messages.await().getOrThrow()
     }
 
     fun loadMoreOlder() {

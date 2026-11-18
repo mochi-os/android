@@ -164,6 +164,10 @@
         <item quantity="one">%1$s отговор</item>
         <item quantity="other">%1$s отговора</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s по-ранен отговор</item>
+        <item quantity="other">%1$s по-ранни отговора</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Възстановен е %1$s ключ за съобщения</item>
         <item quantity="other">Възстановени са %1$s ключа за съобщения</item>

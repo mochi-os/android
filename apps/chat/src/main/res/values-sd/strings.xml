@@ -164,6 +164,10 @@
         <item quantity="one">%1$s جواب</item>
         <item quantity="other">%1$s جواب</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s اڳوڻو جواب</item>
+        <item quantity="other">%1$s اڳوڻا جواب</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s پيغام ڪنجي بحال ٿي</item>
         <item quantity="other">%1$s پيغام ڪنجيون بحال ٿيون</item>

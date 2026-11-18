@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Сондай-ақ жариялау</string>
     <string name="feeds_source_unfollowed">Жазылмағансыз</string>
     <string name="feeds_source_follow_again">Қайта жазылу</string>
+    <string name="feeds_filtered_by_tag">Тег бойынша сүзілді:</string>
 </resources>

@@ -426,4 +426,5 @@
     <string name="feeds_also_post_to">Ippubblika wkoll fuq</string>
     <string name="feeds_source_unfollowed">Mhux qed issegwi</string>
     <string name="feeds_source_follow_again">Erġa\' segwi</string>
+    <string name="feeds_filtered_by_tag">Iffiltrat skont it-tag:</string>
 </resources>

@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Мөн нийтлэх</string>
     <string name="feeds_source_unfollowed">Дагаагүй байна</string>
     <string name="feeds_source_follow_again">Дахин дагах</string>
+    <string name="feeds_filtered_by_tag">Шошгоор шүүсэн:</string>
 </resources>

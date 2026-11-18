@@ -164,6 +164,10 @@
         <item quantity="one">%1$s պատասխան</item>
         <item quantity="other">%1$s պատասխան</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s ավելի վաղ պատասխան</item>
+        <item quantity="other">%1$s ավելի վաղ պատասխան</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Վերականգնվեց %1$s հաղորդագրության բանալի</item>
         <item quantity="other">Վերականգնվեց %1$s հաղորդագրության բանալի</item>

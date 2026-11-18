@@ -18,6 +18,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
+import okhttp3.Dispatcher
 import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.Interceptor
@@ -51,6 +52,9 @@ annotation class ServerInterceptor
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class WebSocketClient
+
+/** How many requests the shared client sends the server at once; OkHttp's own default is 5. */
+internal const val REQUESTS_PER_HOST = 16
 
 /**
  * Rewrite [url]'s origin to [serverUrl], leaving path, query and fragment
@@ -224,6 +228,11 @@ object ApiClient {
             .connectTimeout(30, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .writeTimeout(30, TimeUnit.SECONDS)
+            // Every request goes to the one server, so OkHttp's default of 5
+            // at a time per host held back the rest of a screen's reads: an
+            // opened project item's object and eight tabs went out five, then
+            // four. Shared by every module's client, which derive from this one.
+            .dispatcher(Dispatcher().apply { maxRequestsPerHost = REQUESTS_PER_HOST })
             // Outermost, so the auth and logging interceptors and the cookie
             // jar all see the corrected origin. Clients that fetch foreign
             // hosts (AssetHttp, NominatimService, UpdateChecker) must keep

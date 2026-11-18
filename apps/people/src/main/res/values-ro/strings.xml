@@ -227,4 +227,5 @@
     <string name="people_profile_networks">Rețele</string>
     <string name="people_profile_settings">Setări</string>
     <string name="people_contacts_invitation_sent">Invitație trimisă</string>
+    <string name="people_contact_keep">Păstrează</string>
 </resources>

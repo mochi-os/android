@@ -164,6 +164,10 @@
         <item quantity="one">%1$s ځواب</item>
         <item quantity="other">%1$s ځوابونه</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s پخوانی ځواب</item>
+        <item quantity="other">%1$s پخواني ځوابونه</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s د پیغام کیلي بیرته راګرځول شوه</item>
         <item quantity="other">%1$s د پیغام کیلي ګانې بیرته راګرځول شوې</item>

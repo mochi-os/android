@@ -276,6 +276,34 @@ private fun birthday(property: ContactProperty): String {
     return property.value
 }
 
+/**
+ * The fields a contact has one of. Each shows once it holds a value or is
+ * added from the Add menu, and stays until it is removed, so emptying one to
+ * retype it does not take it away.
+ */
+internal enum class Single { NICKNAME, BIRTHDAY, ORGANISATION, TITLE, URL, NOTE }
+
+/** The single fields the form holds a value in. */
+internal fun ContactForm.filled(): Set<Single> = buildSet {
+    if (nickname.isNotBlank()) add(Single.NICKNAME)
+    if (birthday.isNotBlank()) add(Single.BIRTHDAY)
+    if (organisation.isNotBlank()) add(Single.ORGANISATION)
+    if (title.isNotBlank()) add(Single.TITLE)
+    if (url.value.isNotBlank()) add(Single.URL)
+    if (note.isNotBlank()) add(Single.NOTE)
+}
+
+/** The form with a single field emptied, so the next save drops it from the card. */
+internal fun ContactForm.emptied(single: Single): ContactForm = when (single) {
+    Single.NICKNAME -> copy(nickname = "")
+    // A birthday half typed goes with it, and no longer holds the save back.
+    Single.BIRTHDAY -> copy(birthday = "", birthdayInvalid = false)
+    Single.ORGANISATION -> copy(organisation = "")
+    Single.TITLE -> copy(title = "")
+    Single.URL -> copy(url = url.copy(value = ""))
+    Single.NOTE -> copy(note = "")
+}
+
 /** The value each single-valued field writes, by property name. */
 private fun ContactForm.singles(): Map<String, String> {
     val structured = listOf(family, given, additional, prefix, suffix)

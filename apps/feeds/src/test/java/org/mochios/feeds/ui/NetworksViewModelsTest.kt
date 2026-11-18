@@ -111,6 +111,11 @@ class NetworksViewModelsTest {
     /** Whether the feed is private, so Publish to is refused with the reason. */
     @Volatile private var feedPrivate = false
 
+    /** Whether Publish to fails, as on a server without the networks. */
+    @Volatile private var publishFailed = false
+    // A publish list the server refuses to save.
+    @Volatile private var publishRefused = false
+
     /** Holds the first publish list save back until a test lets it go. */
     @Volatile private var publishGate: java.util.concurrent.CountDownLatch? = null
 
@@ -166,13 +171,16 @@ class NetworksViewModelsTest {
                     "/feeds/-/read-all" -> ok("""{"ok": true, "read": 1, "feeds": 2}""")
                     "/feeds/f1/-/post/create" -> ok(createAnswer)
                     "/feeds/f1/-/privacy" -> ok("""{"privacy": "private"}""")
-                    "/feeds/f1/-/publish" -> if (feedPrivate) {
+                    "/feeds/f1/-/publish" -> if (publishFailed) {
+                        MockResponse().setResponseCode(502).setBody("""{"error": "No networks here"}""")
+                    } else if (feedPrivate) {
                         MockResponse().setResponseCode(403).setBody("""{"error": "Only a public feed publishes to other networks"}""")
                     } else raw("""{"accounts": [{"id": "l1", "type": "mastodon", "identifier": "@me@social.example"},
                         {"id": "b2", "type": "bluesky", "identifier": "me.here.example", "hosted": true}],
                         "publish": ["l1"], "copies": {"l1": 3}, "generators": {}}""")
                     "/feeds/f1/-/publish/set" -> {
                         publishGate?.await(5, TimeUnit.SECONDS)
+                        if (publishRefused) return MockResponse().setResponseCode(500).setBody("""{"error": "Not now"}""")
                         // The list saved is the one sent.
                         val saved = java.net.URLDecoder.decode(body.substringAfter("accounts="), "UTF-8")
                         raw("""{"publish": $saved, "kept": {"l1": 3}}""")
@@ -628,6 +636,16 @@ class NetworksViewModelsTest {
     }
 
     @Test
+    fun `A Publish to that fails is decided as nowhere to publish, so the settings stop waiting`() {
+        publishFailed = true
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        assertNull(org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
+        model.loadPublish()
+        until("the answer") { model.publish.value != null }
+        assertEquals(false, org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
+    }
+
+    @Test
     fun `Publish to says why a private feed publishes nowhere, and lists the accounts once it is public`() {
         feedPrivate = true
         val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
@@ -635,7 +653,7 @@ class NetworksViewModelsTest {
         until("the refusal") { model.refusal.value != null }
         assertEquals("Only a public feed publishes to other networks", model.refusal.value!!.message)
         assertNull(model.publish.value)
-        assertTrue(org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
+        assertEquals(true, org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
         feedPrivate = false
         model.loadPublish()
         until("the accounts") { model.publish.value != null }
@@ -731,6 +749,30 @@ class NetworksViewModelsTest {
         until("both saves") { requests.count { it.first == "/feeds/f1/-/publish/set" } == 2 && model.busy.value.isEmpty() }
         assertEquals(listOf("b2"), model.publish.value!!.publish)
     }
+    // A publish switch moves when tapped, not once the server has answered,
+    // and goes back when the change is refused.
+    @Test
+    fun `a publish switch moves at once, and back when its change is refused`() {
+        val gate = java.util.concurrent.CountDownLatch(1)
+        publishGate = gate
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.loadPublish()
+        until("the publish list") { model.publish.value != null }
+        val bluesky = model.publish.value!!.accounts.first { it.id == "b2" }
+        model.toggle(bluesky, true)
+        assertEquals(mapOf("b2" to true), model.moving.value)
+        // A second tap while it goes is not taken.
+        model.toggle(bluesky, false)
+        assertEquals(mapOf("b2" to true), model.moving.value)
+        publishRefused = true
+        publishGate = null
+        gate.countDown()
+        until("the refusal") { model.busy.value.isEmpty() }
+        assertEquals(emptyMap<String, Boolean>(), model.moving.value)
+        assertEquals(listOf("l1"), model.publish.value!!.publish)
+        assertEquals(1, requests.count { it.first == "/feeds/f1/-/publish/set" })
+    }
+
     @Test
     fun `a report says whether the server took it, so a refused one keeps its dialog`() {
         val model = detail()

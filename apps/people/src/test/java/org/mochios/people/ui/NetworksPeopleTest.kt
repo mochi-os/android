@@ -53,6 +53,9 @@ import org.mochios.people.ui.contacts.MessagingEntry
 import org.mochios.people.ui.contacts.NETWORK_MATRIX
 import org.mochios.people.ui.contacts.NetworkRow
 import org.mochios.people.ui.contacts.XmppSwitch
+import org.mochios.people.ui.contacts.key
+import org.mochios.people.ui.contacts.FRIEND_SWITCH
+import androidx.compose.ui.test.assertIsOn
 import org.mochios.people.ui.contacts.contactForm
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.ui.contacts.AddContactUiState
@@ -64,6 +67,7 @@ import org.mochios.people.ui.person.PersonBody
 import org.mochios.people.ui.person.ProfileNetworks
 import org.mochios.people.ui.profile.ProfilePreviewDialog
 import org.mochios.people.ui.profile.ProfileUiState
+import org.mochios.android.ui.components.SaveStatus
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
@@ -103,6 +107,13 @@ class NetworksPeopleTest {
     // A server whose People app predates the separate action: it has none, and
     // answers other networks' people in the search answer.
     @Volatile private var legacy = false
+    // A save the server refuses.
+    @Volatile private var refuse = false
+    // How long an invitation or removal takes, and whether it is refused.
+    @Volatile private var friendsDelay = 0L
+    @Volatile private var friendsRefuse = false
+    // Ada linked to a Mochi person, so her friend switch invites.
+    @Volatile private var linked = false
 
     @Before
     fun begin() {
@@ -112,8 +123,8 @@ class NetworksPeopleTest {
                 asked.add(request)
                 return when (request.path.orEmpty().substringAfter("/people/").substringBefore("?")) {
                     "-/contacts" -> ok("""{"contacts": [], "received": [], "sent": []}""")
-                    "-/contacts/get" -> ok("""{"contact": $ADA}""")
-                    "-/contacts/update" -> ok("""{"contact": $ADA}""")
+                    "-/contacts/get" -> ok("""{"contact": ${if (linked) ADA.replace("\"id\": \"c1\", ", "\"id\": \"c1\", \"person\": \"p1\", ") else ADA}}""")
+                    "-/contacts/update" -> if (refuse) MockResponse().setResponseCode(500).setBody("""{"error": "Not now"}""") else ok("""{"contact": $ADA}""")
                     "-/contacts/create" -> ok("""{"contact": $MADE}""")
                     "-/contacts/search" -> if (legacy) {
                         ok("""{"results": $directory, "networks": [{"id": "@dan:example.org", "name": "Dan", "address": "matrix:u/dan:example.org", "network": "matrix"}]}""")
@@ -126,7 +137,11 @@ class NetworksPeopleTest {
                             {"id": "@cy:example.org", "name": "Cy", "address": "matrix:u/cy:example.org", "network": "matrix", "contact": "c5"}]}""",
                     ).setHeadersDelay(networksDelay, TimeUnit.MILLISECONDS)
                     "-/contacts/handle/lookup" -> ok("""{"name": "Ada Lovelace", "address": "@ada@example.social", "avatar": ""}""")
-                    "-/friends/invite", "-/friends/remove" -> ok("{}")
+                    "-/friends/invite", "-/friends/remove" -> if (friendsRefuse) {
+                        MockResponse().setResponseCode(500).setBody("""{"error": "Not now"}""")
+                    } else {
+                        ok("{}").setHeadersDelay(friendsDelay, TimeUnit.MILLISECONDS)
+                    }
                     "-/books" -> ok("""{"books": [{"id": "b1", "name": "Home", "default": true}]}""")
                     else -> MockResponse().setResponseCode(404)
                 }
@@ -187,6 +202,24 @@ class NetworksPeopleTest {
         assertTrue("SOCIALPROFILE" in names)
     }
 
+    // THE POINT: an edit saves as it goes, so the screen says how that
+    // stands - nothing while a change waits, then saved once it lands, and
+    // not saved when the server refuses it.
+    @Test
+    fun `an edit says when its change is saved, and when it is not`() {
+        val model = editor()
+        assertEquals(SaveStatus.Idle, model.uiState.value.save)
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Byron"))
+        assertEquals(SaveStatus.Idle, model.uiState.value.save)
+        model.save()
+        until { model.uiState.value.save == SaveStatus.Saved }
+        model.updateForm(model.uiState.value.form.copy(name = "Ada King"))
+        assertEquals("a further change is not yet saved", SaveStatus.Idle, model.uiState.value.save)
+        refuse = true
+        model.save()
+        until { model.uiState.value.save == SaveStatus.Error }
+    }
+
     @Test
     fun `a new contact names what it manages`() {
         val model = ContactEditViewModel(SavedStateHandle(), repository)
@@ -213,6 +246,60 @@ class NetworksPeopleTest {
         val remove = fields(bodies("friends/remove").single())
         assertEquals("xmpp:ada@example.org", remove["person"])
         assertEquals("a1", remove["account"])
+    }
+
+    // THE POINT: a switch moves when tapped, not when the server has answered
+    // and the contact has been read again; a tap meanwhile is not taken, and a
+    // refusal puts it back where the server holds it.
+    @Test
+    fun `an XMPP switch moves at once, takes no second tap while it goes, and settles to the server`() {
+        friendsDelay = 1500
+        val model = editor()
+        val entry = model.uiState.value.contact!!.xmpp.single()
+        model.toggleXmpp(entry, true)
+        assertEquals(mapOf(entry.key to true), model.uiState.value.switching)
+        model.toggleXmpp(entry, false)
+        assertEquals(mapOf(entry.key to true), model.uiState.value.switching)
+        until { !model.uiState.value.isToggling }
+        assertEquals(emptyMap<String, Boolean>(), model.uiState.value.switching)
+        assertEquals(1, bodies("friends/invite").size)
+        assertTrue(bodies("friends/remove").isEmpty())
+    }
+
+    @Test
+    fun `an XMPP switch the server refuses goes back, saying why`() {
+        friendsRefuse = true
+        val model = editor()
+        val entry = model.uiState.value.contact!!.xmpp.single()
+        model.toggleXmpp(entry, true)
+        until { !model.uiState.value.isToggling }
+        assertEquals(emptyMap<String, Boolean>(), model.uiState.value.switching)
+        assertTrue(model.uiState.value.error != null)
+    }
+
+    @Test
+    fun `the friend switch moves at once when inviting`() {
+        friendsDelay = 1500
+        linked = true
+        val model = editor()
+        assertEquals("p1", model.uiState.value.contact!!.person)
+        model.invite()
+        assertEquals(mapOf(FRIEND_SWITCH to true), model.uiState.value.switching)
+        until { !model.uiState.value.isToggling }
+        assertEquals(emptyMap<String, Boolean>(), model.uiState.value.switching)
+    }
+
+    @Test
+    fun `an XMPP switch shows where it was moved to while that goes`() {
+        rule.setContent {
+            XmppSwitch(
+                entry = XmppContact(account = "a1", identifier = "me@example.org", address = "ada@example.org"),
+                several = false,
+                moving = true,
+                onToggle = {},
+            )
+        }
+        rule.onAllNodes(isToggleable())[0].assertIsOn()
     }
 
     @Test
@@ -299,7 +386,7 @@ class NetworksPeopleTest {
             XmppSwitch(
                 entry = XmppContact(account = "a1", identifier = "me@example.org", address = "ada@example.org", ask = true),
                 several = true,
-                enabled = true,
+                moving = null,
                 onToggle = { toggled = it },
             )
         }

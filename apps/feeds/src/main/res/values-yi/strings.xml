@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">אויך פּובליקירן אויף</string>
     <string name="feeds_source_unfollowed">פֿאָלגט ניט נאָך</string>
     <string name="feeds_source_follow_again">נאָכפֿאָלגן ווידער</string>
+    <string name="feeds_filtered_by_tag">געפֿילטערט לויט טאַג:</string>
 </resources>

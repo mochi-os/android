@@ -165,6 +165,11 @@
         <item quantity="few">%1$s atsakymai</item>
         <item quantity="other">%1$s atsakymų</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s ankstesnis atsakymas</item>
+        <item quantity="few">%1$s ankstesni atsakymai</item>
+        <item quantity="other">%1$s ankstesnių atsakymų</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Atkurtas %1$s žinučių raktas</item>
         <item quantity="few">Atkurti %1$s žinučių raktai</item>

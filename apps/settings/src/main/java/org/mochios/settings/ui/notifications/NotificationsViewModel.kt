@@ -10,6 +10,8 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.ensureActive
@@ -27,8 +29,10 @@ import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.NotificationsRepository
 import org.mochios.android.notifications.NotificationsUnreadStore
+import org.mochios.android.push.DeviceStore
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.settings.api.NotifTopic
 import org.mochios.settings.api.NotificationPrefsApi
 import javax.inject.Inject
@@ -64,6 +68,7 @@ class NotificationsViewModel @Inject constructor(
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
     private val prefs: NotificationPrefsApi,
+    private val deviceStore: DeviceStore,
 ) : ViewModel() {
 
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
@@ -76,6 +81,9 @@ class NotificationsViewModel @Inject constructor(
     /** The pending or in-flight list fetch; cancelled when a newer one starts. */
     private var loadJob: Job? = null
 
+    /** The pending or in-flight read of the categories and topics; cancelled when a newer one starts. */
+    private var pickerJob: Job? = null
+
     /**
      * How many frames have been applied. A list fetched while a frame landed
      * answers from before that frame and would undo it, so it is fetched again
@@ -83,12 +91,19 @@ class NotificationsViewModel @Inject constructor(
      */
     private var frames = 0
 
+    /** The id this phone sends as its Device header, which a new frame's devices name. */
+    private val device: String by lazy { deviceStore.id() }
+
     init {
         load(initial = true)
+        loadPicker(debounce = false)
         subscribeWebSocket()
     }
 
-    fun refresh() = load(initial = false)
+    fun refresh() {
+        load(initial = false)
+        loadPicker(debounce = false)
+    }
 
     fun setTab(tab: NotificationsTab) {
         _uiState.value = _uiState.value.copy(tab = tab)
@@ -144,7 +159,22 @@ class NotificationsViewModel @Inject constructor(
                 error = e.toMochiError(),
             )
         }
-        loadCategories()
+    }
+
+    /**
+     * Reads the category picker's categories and topics, both at once, beside
+     * the list rather than after it. Only the opening, a pull, a change of
+     * category, a frame saying the categories changed, a reopened socket and
+     * a row of a topic not read yet read them: any other frame about a row
+     * changes neither. [debounce] waits [REFRESH_DEBOUNCE] first, so a change
+     * of category and the frame it sends back make one read.
+     */
+    private fun loadPicker(debounce: Boolean) {
+        pickerJob?.cancel()
+        pickerJob = viewModelScope.launch {
+            if (debounce) delay(REFRESH_DEBOUNCE)
+            loadCategories()
+        }
     }
 
     /**
@@ -153,9 +183,14 @@ class NotificationsViewModel @Inject constructor(
      */
     private suspend fun loadCategories() {
         try {
-            val categories = prefs.getCategories().unwrapRaw()
-            val topics = prefs.getTopics().unwrapRaw()
+            val (categories, topics) = coroutineScope {
+                val categories = async { prefs.getCategories().unwrapRaw() }
+                val topics = async { prefs.getTopics().unwrapRaw() }
+                categories.await() to topics.await()
+            }
             _uiState.value = _uiState.value.copy(categories = categories, topics = topics)
+        } catch (e: CancellationException) {
+            throw e
         } catch (_: Exception) {
             currentCoroutineContext().ensureActive()
             _uiState.value = _uiState.value.copy(categories = emptyList(), topics = emptyList())
@@ -181,6 +216,12 @@ class NotificationsViewModel @Inject constructor(
                     obj = topic.`object`,
                     category = categoryId ?: "",
                 ).unwrapEmpty()
+                // The category decides which rows this device lists, so the
+                // list is read again with the categories and topics; the
+                // categories frame the change sends makes the same reads, and
+                // the two go out once.
+                refreshLatest()
+                loadPicker(debounce = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(topics = before, error = e.toMochiError())
             }
@@ -301,19 +342,24 @@ class NotificationsViewModel @Inject constructor(
     /**
      * A frame applied to the list held, as the web applies it to its cache, so
      * the list ends as the server's would without being read again. The list
-     * is oldest first and a frame here changes rows in place or removes them,
-     * so the order holds. The user's own read or clear comes back as a frame
-     * too, and finds the rows as it left them.
+     * is oldest first, and a new or changed row goes in where its time puts
+     * it, so the order holds. The user's own read or clear comes back as a
+     * frame too, and finds the rows as it left them.
      *
      * The list is fetched for a frame that cannot be applied exactly: a new or
-     * changed row, whose frame carries no title and does not say whether this
-     * device lists it; an object's clear that changed rows, which reads them
-     * or deletes them and does not say which; a change to the categories,
-     * which decide what this device lists; a reopened socket, which may have
-     * missed frames; and any frame this client does not know.
+     * changed row whose frame does not name this device ([arrived]); an
+     * object's clear that changed rows, which reads them or deletes them and
+     * does not say which; a change to the categories, which decide what this
+     * device lists and which the picker offers; a reopened socket, which may
+     * have missed frames; and any frame this client does not know.
      */
     private fun framed(event: WebSocketEvent) {
         when (event.type) {
+            "new" -> arrived(event)
+            "categories", REOPEN -> {
+                refreshLatest()
+                loadPicker(debounce = true)
+            }
             "read" -> {
                 val id = event.id
                 if (id == null) {
@@ -347,6 +393,59 @@ class NotificationsViewModel @Inject constructor(
             "clear_object" -> if (event.changed != 0L) refreshLatest()
             else -> refreshLatest()
         }
+    }
+
+    /**
+     * A new or changed row. Applied where the frame says every device lists
+     * the row, or names this one among those that do: it goes in where its
+     * time, then its id, puts it, as the server orders the list, replacing the
+     * row held. Fetched otherwise: a server that predates the devices sends
+     * none, and a frame that leaves this device out cannot say whether the row
+     * is filtered from its list or the server does not know the device - one
+     * never registered there, or forgotten in settings - whose list is not
+     * filtered at all. A row of a topic the picker has not read yet reads the
+     * topics too, for its picker.
+     */
+    private fun arrived(event: WebSocketEvent) {
+        val app = event.app.orEmpty()
+        val topic = event.topic.orEmpty()
+        val subject = event.objectId.orEmpty()
+        // The category test's own topic, which the topics list leaves out.
+        val test = app == "notifications" && topic == "test"
+        val held = _uiState.value.topics.any { it.app.id == app && it.topic == topic && it.`object` == subject }
+        if (!test && !held) loadPicker(debounce = true)
+
+        val id = event.id
+        val created = event.created
+        val listed = event.everywhere == true || event.devices?.contains(device) == true
+        if (id == null || created == null || !listed) {
+            refreshLatest()
+            return
+        }
+        frames++
+        val row = MochiNotification(
+            id = id,
+            app = app,
+            topic = topic,
+            `object` = subject,
+            title = event.title.orEmpty(),
+            content = event.content.orEmpty(),
+            link = event.link.orEmpty(),
+            sender = event.sender.orEmpty(),
+            count = event.count ?: 1,
+            created = created,
+            read = event.read ?: 0L,
+        )
+        val state = _uiState.value
+        val before = state.items.firstOrNull { it.id == id }
+        val rest = state.items.filter { it.id != id }
+        val after = rest.indexOfFirst { it.created > created || (it.created == created && it.id > id) }
+        val items = if (after < 0) rest + row else rest.take(after) + row + rest.drop(after)
+        val change = (if (row.isUnread) 1 else 0) - (if (before?.isUnread == true) 1 else 0)
+        _uiState.value = state.copy(
+            items = items,
+            unreadCount = (state.unreadCount + change).coerceAtLeast(0),
+        )
     }
 
     override fun onCleared() {

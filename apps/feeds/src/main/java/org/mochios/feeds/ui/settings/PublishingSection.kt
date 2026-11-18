@@ -116,6 +116,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
         )
     }
     val busy by viewModel.busy.collectAsState()
+    val moving by viewModel.moving.collectAsState()
     val addingWaiting by viewModel.addingWaiting.collectAsState()
     val asking by viewModel.asking.collectAsState()
     val kept by viewModel.kept.collectAsState()
@@ -166,9 +167,10 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
                     onGenerator = { on -> viewModel.generator(account, on) },
                 )
                 val label = stringResource(R.string.feeds_publish_to_account, account.identifier)
+                // The switch moves when tapped and keeps its look while its
+                // change goes; a tap meanwhile is not taken.
                 Switch(
-                    checked = account.id in publish,
-                    enabled = account.id !in busy,
+                    checked = moving[account.id] ?: (account.id in publish),
                     onCheckedChange = { on -> viewModel.toggle(account, on) },
                     modifier = Modifier.semantics { contentDescription = label },
                 )

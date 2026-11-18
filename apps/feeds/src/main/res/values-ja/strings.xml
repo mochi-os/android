@@ -353,4 +353,5 @@
     <string name="feeds_also_post_to">あわせて公開する先</string>
     <string name="feeds_source_unfollowed">フォローしていません</string>
     <string name="feeds_source_follow_again">もう一度フォロー</string>
+    <string name="feeds_filtered_by_tag">タグでフィルタリング中:</string>
 </resources>

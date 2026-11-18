@@ -46,6 +46,12 @@ data class NetworksUiState(
     val error: MochiError? = null,
     /** What changes are waiting or running for: a handle's network, an account, or a dialog's action. */
     val busy: Set<String> = emptySet(),
+    /**
+     * Where a network switch was moved to while its change goes, by handle's
+     * network or account: it moves when tapped, or for a removal once that is
+     * confirmed, and shows what the server holds once the list is read again.
+     */
+    val moving: Map<String, Boolean> = emptyMap(),
 )
 
 /**
@@ -137,7 +143,7 @@ class NetworksViewModel @Inject constructor(
 
     /** Switch a network on for a handle: the hosted account it makes. */
     fun create(handle: Handle, network: String, onMade: (NetworkAccount) -> Unit) =
-        change("${handle.name}/$network", R.string.networks_create_failed) {
+        change("${handle.name}/$network", R.string.networks_create_failed, moved = true) {
             val made = api.create(network, handle.name, handle.domain).unwrapRaw()
             say(R.string.networks_account_created)
             onMade(made)
@@ -154,7 +160,7 @@ class NetworksViewModel @Inject constructor(
             onMade(made)
         }
 
-    fun remove(account: NetworkAccount) = change(account.id, R.string.networks_remove_failed) {
+    fun remove(account: NetworkAccount) = change(account.id, R.string.networks_remove_failed, moved = false) {
         api.remove(account.id).unwrapEmpty()
         say(R.string.networks_removed)
     }
@@ -325,10 +331,16 @@ class NetworksViewModel @Inject constructor(
     // runs waits here instead of being dropped, and shows as busy meanwhile.
     private val queue = Mutex()
 
-    private fun change(key: String, fallback: Int, block: suspend () -> Unit) {
+    /**
+     * One change, queued behind any under way. A switch's change names where
+     * the switch was [moved] to, which it shows until the list is read again.
+     */
+    private fun change(key: String, fallback: Int, moved: Boolean? = null, block: suspend () -> Unit) {
         // The same action tapped again while it waits or runs is the one tap.
         if (key in _uiState.value.busy) return
-        _uiState.update { it.copy(busy = it.busy + key) }
+        _uiState.update { state ->
+            state.copy(busy = state.busy + key, moving = if (moved == null) state.moving else state.moving + (key to moved))
+        }
         viewModelScope.launch {
             queue.withLock {
                 try {
@@ -339,6 +351,7 @@ class NetworksViewModel @Inject constructor(
                     _uiState.update { it.copy(busy = it.busy - key) }
                 }
                 refresh(quiet = true)
+                if (moved != null) _uiState.update { it.copy(moving = it.moving - key) }
             }
         }
     }

@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Xarxes</string>
     <string name="people_profile_settings">Configuració</string>
     <string name="people_contacts_invitation_sent">Invitació enviada</string>
+    <string name="people_contact_keep">Conserva</string>
 </resources>

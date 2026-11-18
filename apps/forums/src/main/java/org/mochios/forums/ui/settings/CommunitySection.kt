@@ -166,16 +166,16 @@ internal fun CommunitySection(viewModel: CommunityViewModel) {
 @Composable
 internal fun SensitiveSection(viewModel: CommunityViewModel) {
     val sensitive by viewModel.sensitive.collectAsState()
-    val busy by viewModel.busy.collectAsState()
     Section(title = stringResource(R.string.forums_content)) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
-                .toggleable(value = sensitive, enabled = !busy, role = Role.Switch, onValueChange = { viewModel.setSensitive(it) }),
+                // It keeps its look while the change goes; a tap meanwhile is not taken.
+                .toggleable(value = sensitive, role = Role.Switch, onValueChange = { viewModel.setSensitive(it) }),
         ) {
             Text(stringResource(R.string.forums_sensitive), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
-            Switch(checked = sensitive, onCheckedChange = null, enabled = !busy)
+            Switch(checked = sensitive, onCheckedChange = null)
         }
     }
 }

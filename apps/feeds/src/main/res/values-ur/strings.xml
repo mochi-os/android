@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">یہاں بھی شائع کریں</string>
     <string name="feeds_source_unfollowed">فالو نہیں کر رہے</string>
     <string name="feeds_source_follow_again">دوبارہ فالو کریں</string>
+    <string name="feeds_filtered_by_tag">ٹیگ کے ذریعے فلٹر شدہ:</string>
 </resources>

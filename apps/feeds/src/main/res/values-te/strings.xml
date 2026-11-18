@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">ఇక్కడ కూడా ప్రచురించు</string>
     <string name="feeds_source_unfollowed">అనుసరించడం లేదు</string>
     <string name="feeds_source_follow_again">మళ్లీ అనుసరించు</string>
+    <string name="feeds_filtered_by_tag">ట్యాగ్ ద్వారా ఫిల్టర్ చేయబడింది:</string>
 </resources>

@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Chapisha pia kwenye</string>
     <string name="feeds_source_unfollowed">Hufuati</string>
     <string name="feeds_source_follow_again">Fuata tena</string>
+    <string name="feeds_filtered_by_tag">Imechujwa kwa tagi:</string>
 </resources>

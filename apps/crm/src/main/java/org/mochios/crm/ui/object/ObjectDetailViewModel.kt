@@ -166,6 +166,15 @@ class ObjectDetailViewModel @Inject constructor(
         // response for A lands after the sheet switched to B and puts one
         // object's header above another's tabs.
         loadJob?.cancel()
+        // The tabs name the object by the route's id, so they are read beside
+        // the object rather than after it.
+        loadComments()
+        loadActivity()
+        loadAttachments()
+        loadWatchers()
+        loadLinks()
+        loadSiblingObjects()
+        loadPeople()
         loadJob = viewModelScope.launch {
             try {
                 val fetched = repository.getObject(crmId, objectId)
@@ -181,13 +190,6 @@ class ObjectDetailViewModel @Inject constructor(
                     fetched
                 }
                 _uiState.value = _uiState.value.copy(obj = merged, isLoading = false)
-                loadComments()
-                loadActivity()
-                loadAttachments()
-                loadWatchers()
-                loadLinks()
-                loadSiblingObjects()
-                loadPeople()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {

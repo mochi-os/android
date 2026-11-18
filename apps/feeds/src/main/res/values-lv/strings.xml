@@ -388,4 +388,5 @@
     <string name="feeds_also_post_to">Publicēt arī</string>
     <string name="feeds_source_unfollowed">Nesekojat</string>
     <string name="feeds_source_follow_again">Sekot vēlreiz</string>
+    <string name="feeds_filtered_by_tag">Filtrēts pēc birkas:</string>
 </resources>

@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">%1$s repons</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">%1$s repons ki pi ansyen</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">%1$s kle mesaj retabli</item>
     </plurals>

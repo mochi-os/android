@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Nettverk</string>
     <string name="people_profile_settings">Innstillingar</string>
     <string name="people_contacts_invitation_sent">Invitasjon sendt</string>
+    <string name="people_contact_keep">Behald</string>
 </resources>

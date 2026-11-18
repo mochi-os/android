@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Net</string>
     <string name="people_profile_settings">Stillingar</string>
     <string name="people_contacts_invitation_sent">Boð sent</string>
+    <string name="people_contact_keep">Halda</string>
 </resources>

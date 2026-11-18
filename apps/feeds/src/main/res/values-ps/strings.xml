@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">همدارنګه خپرول په</string>
     <string name="feeds_source_unfollowed">تعقیب یې نه کوئ</string>
     <string name="feeds_source_follow_again">بیا تعقیب کړئ</string>
+    <string name="feeds_filtered_by_tag">د ټګ په واسطه فلټر شوی:</string>
 </resources>

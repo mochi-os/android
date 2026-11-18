@@ -167,6 +167,13 @@
         <item quantity="many">%1$s bhfreagra</item>
         <item quantity="other">%1$s freagra</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s fhreagra níos luaithe</item>
+        <item quantity="two">%1$s fhreagra níos luaithe</item>
+        <item quantity="few">%1$s fhreagra níos luaithe</item>
+        <item quantity="many">%1$s bhfreagra níos luaithe</item>
+        <item quantity="other">%1$s freagra níos luaithe</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s eochair teachtaireachta athchóirithe</item>
         <item quantity="two">%1$s eochair teachtaireachta athchóirithe</item>

@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Papasha naku</string>
     <string name="feeds_source_unfollowed">Awulandeli</string>
     <string name="feeds_source_follow_again">Landela kwakhona</string>
+    <string name="feeds_filtered_by_tag">Kuhluzwe ngethegi:</string>
 </resources>

@@ -164,6 +164,10 @@
         <item quantity="one">%1$s vastus</item>
         <item quantity="other">%1$s vastust</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s varasem vastus</item>
+        <item quantity="other">%1$s varasemat vastust</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s sõnumivõti taastatud</item>
         <item quantity="other">%1$s sõnumivõtit taastatud</item>

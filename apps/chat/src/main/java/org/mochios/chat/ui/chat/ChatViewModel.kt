@@ -1000,7 +1000,7 @@ class ChatViewModel @Inject constructor(
             if (thread.isNotEmpty() && _uiState.value.thread?.root?.id == thread) loadThread()
             return
         }
-        val added = if (message.thread.isEmpty()) post(message) else answer(message)
+        val added = if (message.thread.isEmpty()) post(message) else answer(message, frameThread(event.root))
         // The user's own message was never unread.
         if (added && message.member != _uiState.value.identity) markReadSoon()
     }
@@ -1016,19 +1016,45 @@ class ChatViewModel @Inject constructor(
     /**
      * [reply] counted on its root and shown in its bubble, and added to its
      * thread where that is open. A reply the open thread or the bubble already
-     * holds was counted when it was read.
+     * holds was counted when it was read. The bubble keeps the newest
+     * [THREAD_ANSWERS] replies, as the server sends them; the count says how
+     * many came before.
      */
-    private fun answer(reply: ChatMessage): Boolean {
+    private fun answer(reply: ChatMessage, summary: ThreadSummary? = null): Boolean {
         val state = _uiState.value
         val open = state.thread?.takeIf { thread -> thread.root.id == reply.thread }
-        if (open != null && open.replies.any { held -> held.id == reply.id }) return false
         val shown = state.messages.find { message -> message.id == reply.thread }
-        if (shown != null && shown.answers.any { held -> held.id == reply.id }) return false
+        val held = open?.replies?.any { message -> message.id == reply.id } == true ||
+            shown?.answers?.any { message -> message.id == reply.id } == true
+        // The thread as the server now has it, this reply included: set, not
+        // counted, so a frame sent twice or a reply never held leaves it right.
+        if (summary != null) {
+            _uiState.value = state.copy(
+                messages = state.messages.patched(reply.thread, summary::on),
+                thread = open?.copy(
+                    root = summary.on(open.root),
+                    replies = if (held) open.replies else open.replies.adding(reply, open.more),
+                ) ?: state.thread,
+            )
+            return !held
+        }
+        if (held) return false
+        // One older than every reply the bubble shows, on a root with earlier
+        // replies than it shows, may be one of those, already counted: the
+        // page is read again rather than guessed at, as the web does.
+        val first = shown?.answers?.firstOrNull()
+        if (shown != null && first != null && shown.replies > shown.answers.size &&
+            compareValuesBy(reply, first, { it.created }, { it.id }) < 0
+        ) {
+            refresh()
+            if (open != null) loadThread()
+            return true
+        }
         val counted = { root: ChatMessage ->
             root.copy(
                 replies = root.replies + 1,
                 latest = maxOf(root.latest, reply.created),
-                answers = (root.answers + reply).sortedWith(compareBy({ it.created }, { it.id })),
+                answers = (root.answers + reply).sortedWith(compareBy({ it.created }, { it.id })).takeLast(THREAD_ANSWERS),
             )
         }
         _uiState.value = state.copy(
@@ -1053,12 +1079,25 @@ class ChatViewModel @Inject constructor(
             refresh()
             return
         }
+        val summary = event.thread?.takeIf { thread -> thread.isNotEmpty() }?.let { thread ->
+            frameThread(event.root)?.let { root -> thread to root }
+        }
+        if (summary != null) {
+            // The thread the reply was in, as the server now has it.
+            patch(id) { message -> message.tombstone() }
+            patch(summary.first, summary.second::on)
+            return
+        }
         val state = _uiState.value
         val reply = state.thread?.replies?.find { held -> held.id == id && !held.deleted }
             ?: state.messages.firstNotNullOfOrNull { root -> root.answers.find { held -> held.id == id } }
         val held = patch(id) { message -> message.tombstone() }
         if (reply != null) {
+            // A root with earlier replies than its bubble shows has the next
+            // one to show in a shown one's place, which only the server holds.
+            val root = state.messages.find { message -> message.id == reply.thread }
             uncount(reply)
+            if (root != null && root.replies > root.answers.size && root.answers.any { held -> held.id == id }) refresh()
         } else if (!held && state.messages.any { message -> message.replies > 0 }) {
             refresh()
         }
@@ -1262,6 +1301,33 @@ private fun frameQuote(element: JsonElement?): ChatQuote? {
     } catch (_: JsonParseException) {
         null
     }
+}
+
+/** A root's thread as a frame carries it: how many replies, the latest's time, and the newest. */
+internal data class ThreadSummary(val replies: Int, val latest: Long, val answers: List<ChatMessage>) {
+    /** [root] with its thread set to this. */
+    fun on(root: ChatMessage): ChatMessage = root.copy(replies = replies, latest = latest, answers = answers)
+}
+
+/** The root's thread a chat app's reply or delete frame carries; null from an older one, or one of another shape. */
+internal fun frameThread(element: JsonElement?): ThreadSummary? {
+    val fields = element?.takeIf { it.isJsonObject }?.asJsonObject ?: return null
+    if (!fields.number("replies") || !fields.number("latest")) return null
+    val answers = fields.get("answers")?.takeIf { it.isJsonArray }?.asJsonArray ?: return null
+    return ThreadSummary(
+        replies = fields.get("replies").asInt,
+        latest = fields.get("latest").asLong,
+        answers = answers.mapNotNull { item ->
+            val answer = item.takeIf { it.isJsonObject }?.asJsonObject ?: return@mapNotNull null
+            if (!answer.text("id") || !answer.number("created")) return@mapNotNull null
+            try {
+                frames.fromJson(answer, ChatMessage::class.java)
+                    ?.copy(attachments = frameAttachments(answer.get("attachments")), quote = frameQuote(answer.get("quote")))
+            } catch (_: JsonParseException) {
+                null
+            }
+        },
+    )
 }
 
 private fun JsonObject.text(key: String): Boolean =

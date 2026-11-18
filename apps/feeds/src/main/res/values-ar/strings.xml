@@ -442,4 +442,5 @@
     <string name="feeds_also_post_to">انشر أيضًا على</string>
     <string name="feeds_source_unfollowed">غير متابَع</string>
     <string name="feeds_source_follow_again">متابعة مجددًا</string>
+    <string name="feeds_filtered_by_tag">مصفّى حسب الوسم:</string>
 </resources>

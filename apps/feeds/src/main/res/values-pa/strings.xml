@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">ਇੱਥੇ ਵੀ ਪ੍ਰਕਾਸ਼ਿਤ ਕਰੋ</string>
     <string name="feeds_source_unfollowed">ਫਾਲੋ ਨਹੀਂ ਕਰ ਰਹੇ</string>
     <string name="feeds_source_follow_again">ਮੁੜ ਫਾਲੋ ਕਰੋ</string>
+    <string name="feeds_filtered_by_tag">ਟੈਗ ਨਾਲ ਫਿਲਟਰ ਕੀਤਾ:</string>
 </resources>

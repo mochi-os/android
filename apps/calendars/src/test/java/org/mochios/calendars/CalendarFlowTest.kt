@@ -96,6 +96,9 @@ class CalendarFlowTest {
     @Volatile private var paging: CountDownLatch? = null
     @Volatile private var held = Long.MAX_VALUE
 
+    /** Holds the calendars list's answer until released. */
+    @Volatile private var hold: CountDownLatch? = null
+
     /** Whether every events listing answers slowly, so a newer load overtakes it. */
     @Volatile private var slow = false
     @Volatile private var last = 0L
@@ -110,9 +113,10 @@ class CalendarFlowTest {
                 val path = request.path.orEmpty().substringAfter("/calendars/").substringBefore("?")
                 val query = request.requestUrl?.queryParameter("calendars").orEmpty()
                 return when (path) {
-                    "-/calendars" -> ok(
-                        """{"calendars": [{"id": "c1", "name": "Home", "default": true}, {"id": "c2", "name": "Work"}]}""",
-                    )
+                    "-/calendars" -> {
+                        hold?.await(10, TimeUnit.SECONDS)
+                        ok("""{"calendars": [{"id": "c1", "name": "Home", "default": true}, {"id": "c2", "name": "Work"}]}""")
+                    }
                     "-/preferences/get" -> ok("""{"preferences": $preferences}""")
                     "-/preferences/set" -> {
                         saving?.await(10, TimeUnit.SECONDS)
@@ -337,6 +341,65 @@ class CalendarFlowTest {
         until { listings().size > before }
         settle()
         assertEquals(before + back, listings().size)
+    }
+
+    /** The model loaded, and how many listings one read of its range makes: the period shown and its neighbours. */
+    private fun loaded(): Pair<CalendarViewModel, Int> {
+        val model = model()
+        settle()
+        return model to listings().size
+    }
+
+    private fun preferenceReads() = asked.count { it.path.orEmpty().contains("/-/preferences/get") }
+
+    @Test
+    fun `a return asks for the preferences while the calendars are still coming`() {
+        val (model, _) = loaded()
+        val gate = CountDownLatch(1)
+        hold = gate
+        model.onScreenPaused()
+        model.onScreenResumed()
+        try {
+            until { preferenceReads() == 2 }
+        } finally {
+            gate.countDown()
+        }
+    }
+
+    @Test
+    fun `a return reads the range beside the calendars and preferences, and once when nothing changed`() {
+        val (model, round) = loaded()
+        val gate = CountDownLatch(1)
+        hold = gate
+        model.onScreenPaused()
+        model.onScreenResumed()
+        try {
+            // The calendars' answer is held: the range is read for those already held.
+            until { listings().size == 2 * round }
+        } finally {
+            gate.countDown()
+        }
+        until { preferenceReads() == 2 }
+        settle()
+        assertEquals("THE POINT: nothing changed, so the range was not read again", 2 * round, listings().size)
+    }
+
+    @Test
+    fun `a preference changed elsewhere reads the range again once it is in`() {
+        val (model, round) = loaded()
+        preferences = """{"zones": true}"""
+        val gate = CountDownLatch(1)
+        hold = gate
+        model.onScreenPaused()
+        model.onScreenResumed()
+        try {
+            until { listings().size == 2 * round }
+        } finally {
+            gate.countDown()
+        }
+        until { model.uiState.value.preferences.zones }
+        settle()
+        assertEquals("THE POINT: read for what was held, then again for the change", 3 * round, listings().size)
     }
 
     @Test

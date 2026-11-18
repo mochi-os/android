@@ -363,10 +363,10 @@ private fun IdentitySection(
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.weight(1f),
             )
+            // It moves when tapped and keeps its look while the change goes.
             Switch(
                 checked = id.privacy == "public",
                 onCheckedChange = { on -> onPrivacy(if (on) "public" else "private") },
-                enabled = !state.isSaving,
             )
         }
     }

@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">답글 %1$s개</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">이전 답글 %1$s개</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">메시지 키 %1$s개를 복원했어요</item>
     </plurals>

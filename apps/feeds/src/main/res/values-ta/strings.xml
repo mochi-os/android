@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">இங்கும் வெளியிடு</string>
     <string name="feeds_source_unfollowed">பின்தொடரவில்லை</string>
     <string name="feeds_source_follow_again">மீண்டும் பின்தொடர்</string>
+    <string name="feeds_filtered_by_tag">டேக் மூலம் வடிகட்டப்பட்டது:</string>
 </resources>

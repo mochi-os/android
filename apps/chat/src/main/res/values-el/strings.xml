@@ -164,6 +164,10 @@
         <item quantity="one">%1$s απάντηση</item>
         <item quantity="other">%1$s απαντήσεις</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s προηγούμενη απάντηση</item>
+        <item quantity="other">%1$s προηγούμενες απαντήσεις</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">Ανακτήθηκε %1$s κλειδί μηνυμάτων</item>
         <item quantity="other">Ανακτήθηκαν %1$s κλειδιά μηνυμάτων</item>

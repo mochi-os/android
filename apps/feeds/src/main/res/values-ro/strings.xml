@@ -388,4 +388,5 @@
     <string name="feeds_also_post_to">Publică și pe</string>
     <string name="feeds_source_unfollowed">Neurmărit</string>
     <string name="feeds_source_follow_again">Urmărește din nou</string>
+    <string name="feeds_filtered_by_tag">Filtrat după etichetă:</string>
 </resources>

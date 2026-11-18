@@ -134,6 +134,11 @@ data class NetworksData(
     val feeds: List<NetworkFeed> = emptyList(),
 )
 
+/** Whether the server offers other networks, which is all the home screen needs of [NetworksData]. */
+data class NetworksOffered(
+    val offered: Boolean = false,
+)
+
 data class Availability(
     val available: Boolean = false,
     val reason: String = "",
@@ -229,6 +234,10 @@ data class SystemHandles(
 interface NetworksApi {
     @GET("settings/-/user/networks/data")
     suspend fun data(): Response<NetworksData>
+
+    /** Answers 404 on a server from before it; [data] says the same there. */
+    @GET("settings/-/user/networks/offered")
+    suspend fun offered(): Response<NetworksOffered>
 
     @FormUrlEncoded
     @POST("settings/-/user/networks/handle/available")

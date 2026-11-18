@@ -164,6 +164,10 @@
         <item quantity="one">%1$s პასუხი</item>
         <item quantity="other">%1$s პასუხი</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s ადრინდელი პასუხი</item>
+        <item quantity="other">%1$s ადრინდელი პასუხი</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">აღდგა %1$s შეტყობინების გასაღები</item>
         <item quantity="other">აღდგა %1$s შეტყობინების გასაღები</item>

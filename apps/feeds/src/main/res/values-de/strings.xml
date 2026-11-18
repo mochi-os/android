@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Auch veröffentlichen auf</string>
     <string name="feeds_source_unfollowed">Nicht gefolgt</string>
     <string name="feeds_source_follow_again">Erneut folgen</string>
+    <string name="feeds_filtered_by_tag">Gefiltert nach Tag:</string>
 </resources>

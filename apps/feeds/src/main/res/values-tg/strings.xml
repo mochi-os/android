@@ -366,4 +366,5 @@
     <string name="feeds_also_post_to">Инчунин нашр дар</string>
     <string name="feeds_source_unfollowed">Обуна нашудаед</string>
     <string name="feeds_source_follow_again">Аз нав обуна шудан</string>
+    <string name="feeds_filtered_by_tag">Бо нишона филтр карда шуд:</string>
 </resources>

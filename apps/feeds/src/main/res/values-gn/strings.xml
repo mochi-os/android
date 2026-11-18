@@ -366,4 +366,5 @@
     <string name="feeds_also_post_to">Emoherakuã avei</string>
     <string name="feeds_source_unfollowed">Ndaremoirũi</string>
     <string name="feeds_source_follow_again">Emoirũ jey</string>
+    <string name="feeds_filtered_by_tag">Oñembogua teramoĩ rupive:</string>
 </resources>

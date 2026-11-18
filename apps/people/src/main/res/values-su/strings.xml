@@ -225,4 +225,5 @@
     <string name="people_profile_networks">Jaringan</string>
     <string name="people_profile_settings">Setélan</string>
     <string name="people_contacts_invitation_sent">Ondangan dikirim</string>
+    <string name="people_contact_keep">Antepkeun</string>
 </resources>

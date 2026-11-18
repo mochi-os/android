@@ -442,4 +442,5 @@
     <string name="feeds_also_post_to">Cyhoeddi hefyd i</string>
     <string name="feeds_source_unfollowed">Ddim yn dilyn</string>
     <string name="feeds_source_follow_again">Dilyn eto</string>
+    <string name="feeds_filtered_by_tag">Wedi\'i hidlo yn ôl tag:</string>
 </resources>

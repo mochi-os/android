@@ -29,6 +29,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.TokenApi
 import org.mochios.android.i18n.AppContext
 import org.mochios.settings.R
+import org.mochios.settings.api.Handle
 import org.mochios.settings.api.NetworkAccount
 import org.mochios.settings.api.NetworksApi
 import org.robolectric.RobolectricTestRunner
@@ -66,6 +67,10 @@ class NetworksViewModelTest {
 
     /** Whether the server refuses a home feed. */
     @Volatile private var homeRefused = false
+
+    /** Holds an account's making or removal back while it is set, and whether the making is refused. */
+    @Volatile private var accountGate: CountDownLatch? = null
+    @Volatile private var createRefused = false
 
     @Before
     fun begin() {
@@ -105,6 +110,18 @@ class NetworksViewModelTest {
                     "settings/-/user/networks/account/password" -> {
                         order += "password"
                         json("""{"password": "s3cret"}""")
+                    }
+                    "settings/-/user/networks/account/create" -> {
+                        accountGate?.await(5, TimeUnit.SECONDS)
+                        if (createRefused) {
+                            MockResponse().setResponseCode(500).setBody("""{"error": "Not now"}""").setHeader("Content-Type", "application/json")
+                        } else {
+                            json("""{"id": "b1", "type": "bluesky", "identifier": "alice.a.example"}""")
+                        }
+                    }
+                    "settings/-/user/networks/account/remove" -> {
+                        accountGate?.await(5, TimeUnit.SECONDS)
+                        json("""{}""")
                     }
                     "_/auth/oauth/exchange" -> json("""{"linked": "l2"}""")
                     else -> MockResponse().setResponseCode(404)
@@ -159,6 +176,34 @@ class NetworksViewModelTest {
             val (k, v) = it.split("=", limit = 2)
             URLDecoder.decode(k, "UTF-8") to URLDecoder.decode(v, "UTF-8")
         }
+    }
+
+    // A network switch moves when tapped, or for a removal once that is
+    // confirmed, not once the server has answered and the list been read
+    // again; it goes back when the server refuses.
+    @Test
+    fun `a network switch moves at once and back when the account cannot be made`() {
+        accountGate = CountDownLatch(1)
+        createRefused = true
+        val model = model()
+        until { model.uiState.value.data != null }
+        val handle = Handle(name = "alice", domain = "a.example")
+        model.create(handle, "bluesky") {}
+        assertEquals(mapOf("alice/bluesky" to true), model.uiState.value.moving)
+        accountGate!!.countDown()
+        until { model.uiState.value.moving.isEmpty() }
+        assertTrue(model.uiState.value.busy.isEmpty())
+    }
+
+    @Test
+    fun `a network switch moves off at once when its removal is confirmed`() {
+        accountGate = CountDownLatch(1)
+        val model = model()
+        until { model.uiState.value.data != null }
+        model.remove(NetworkAccount(id = "f1", type = "fediverse", hosted = true, identifier = "@alice@a.example"))
+        assertEquals(mapOf("f1" to false), model.uiState.value.moving)
+        accountGate!!.countDown()
+        until { model.uiState.value.moving.isEmpty() }
     }
 
     @Test

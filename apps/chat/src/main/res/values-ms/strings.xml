@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">%1$s balasan</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">%1$s balasan terdahulu</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">%1$s kunci mesej dipulihkan</item>
     </plurals>

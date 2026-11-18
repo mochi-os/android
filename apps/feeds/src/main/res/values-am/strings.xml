@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">በተጨማሪ የሚታተምበት</string>
     <string name="feeds_source_unfollowed">አልተከተሉም</string>
     <string name="feeds_source_follow_again">እንደገና ተከተል</string>
+    <string name="feeds_filtered_by_tag">በመለያ ተጣርቷል:</string>
 </resources>

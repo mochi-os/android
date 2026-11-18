@@ -163,6 +163,9 @@
     <plurals name="chat_thread_replies">
         <item quantity="other">%1$s 条回复</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="other">%1$s 条更早的回复</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="other">已恢复 %1$s 个消息密钥</item>
     </plurals>

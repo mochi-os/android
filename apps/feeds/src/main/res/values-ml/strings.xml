@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">ഇവിടെയും പ്രസിദ്ധീകരിക്കുക</string>
     <string name="feeds_source_unfollowed">പിന്തുടരുന്നില്ല</string>
     <string name="feeds_source_follow_again">വീണ്ടും പിന്തുടരുക</string>
+    <string name="feeds_filtered_by_tag">ടാഗ് പ്രകാരം ഫിൽട്ടർ ചെയ്തത്:</string>
 </resources>

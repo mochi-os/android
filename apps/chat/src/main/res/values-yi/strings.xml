@@ -164,6 +164,10 @@
         <item quantity="one">%1$s ענטפֿער</item>
         <item quantity="other">%1$s ענטפֿערס</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s פֿריִערדיקער ענטפֿער</item>
+        <item quantity="other">%1$s פֿריִערדיקע ענטפֿערס</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s מעסעדזש־שליסל צוריקגעשטעלט</item>
         <item quantity="other">%1$s מעסעדזש־שליסלען צוריקגעשטעלט</item>

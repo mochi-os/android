@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Şeýle hem neşir et</string>
     <string name="feeds_source_unfollowed">Yzarlanmaýar</string>
     <string name="feeds_source_follow_again">Täzeden yzarla</string>
+    <string name="feeds_filtered_by_tag">Bellik boýunça süzüldi:</string>
 </resources>

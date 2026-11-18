@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Közzététel ide is</string>
     <string name="feeds_source_unfollowed">Nincs követve</string>
     <string name="feeds_source_follow_again">Követés újra</string>
+    <string name="feeds_filtered_by_tag">Szűrve címke szerint:</string>
 </resources>

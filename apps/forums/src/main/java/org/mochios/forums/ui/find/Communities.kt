@@ -87,9 +87,8 @@ internal fun CommunitiesSections(
                     (event.error as? MochiError.Unknown)?.let { it.message ?: resources.getString(event.fallback) }
                         ?: event.error.userMessage(),
                 )
-                is CommunitiesEvent.Joined -> {
-                    onMessage(resources.getString(if (event.already) R.string.forums_already_subscribed else R.string.forums_joined))
-                    if (event.forum.isNotEmpty()) onOpenForum(event.forum)
+                is CommunitiesEvent.Joined -> communityJoined(event, onOpenForum, onMessage) { already ->
+                    resources.getString(if (already) R.string.forums_already_subscribed else R.string.forums_joined)
                 }
                 is CommunitiesEvent.Added -> onMessage(
                     resources.getQuantityString(R.plurals.forums_communities_added, event.answer.added, format.formatNumber(event.answer.added)),
@@ -132,6 +131,21 @@ internal fun CommunitiesSections(
             onImport = { viewModel.import(it) },
         )
     }
+}
+
+/**
+ * A community joined: its forum opens at once, which says it was joined. A
+ * message first would hold the opening back for as long as it shows, as a
+ * snackbar keeps its caller waiting; only a join with no forum to open says
+ * so in words.
+ */
+internal suspend fun communityJoined(
+    event: CommunitiesEvent.Joined,
+    onOpenForum: (String) -> Unit,
+    onMessage: suspend (String) -> Unit,
+    message: (already: Boolean) -> String,
+) {
+    if (event.forum.isNotEmpty()) onOpenForum(event.forum) else onMessage(message(event.already))
 }
 
 /** Whether the Find screen shows something from elsewhere for a search: the community it names, or its lookup on its way. */

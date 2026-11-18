@@ -164,6 +164,10 @@
         <item quantity="one">%1$s bersiv</item>
         <item quantity="other">%1$s bersiv</item>
     </plurals>
+    <plurals name="chat_thread_earlier_count">
+        <item quantity="one">%1$s bersiva berê</item>
+        <item quantity="other">%1$s bersivên berê</item>
+    </plurals>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s mifteya peyamê hate vegerandin</item>
         <item quantity="other">%1$s mifteyên peyaman hatin vegerandin</item>

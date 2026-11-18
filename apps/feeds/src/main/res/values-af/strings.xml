@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Plaas ook op</string>
     <string name="feeds_source_unfollowed">Volg nie</string>
     <string name="feeds_source_follow_again">Volg weer</string>
+    <string name="feeds_filtered_by_tag">Gefiltreer volgens etiket:</string>
 </resources>

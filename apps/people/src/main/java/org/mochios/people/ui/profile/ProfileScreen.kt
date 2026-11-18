@@ -796,12 +796,12 @@ private fun PrivacySection(
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.weight(1f),
             )
+            // It moves when tapped and keeps its look while the change goes.
             Switch(
                 checked = state.privacyDraft == "public",
                 onCheckedChange = { checked ->
                     viewModel.savePrivacy(if (checked) "public" else "private")
                 },
-                enabled = state.savingField != ProfileField.PRIVACY,
             )
         }
         if (state.privacyDraft == "private") {

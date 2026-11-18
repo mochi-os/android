@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">Publiko edhe në</string>
     <string name="feeds_source_unfollowed">Nuk ndiqet</string>
     <string name="feeds_source_follow_again">Ndiq përsëri</string>
+    <string name="feeds_filtered_by_tag">Filtruar sipas etiketës:</string>
 </resources>

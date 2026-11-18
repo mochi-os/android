@@ -79,6 +79,7 @@
     <string name="people_contact_type_mobile">Mobile</string>
     <string name="people_contact_type_other">Other</string>
     <string name="people_contact_remove">Remove</string>
+    <string name="people_contact_keep">Keep</string>
     <string name="people_contact_conflict">Contact changed</string>
 
     <!-- Add contact -->

@@ -408,4 +408,5 @@
     <string name="feeds_also_post_to">Таксама публікаваць у</string>
     <string name="feeds_source_unfollowed">Не падпісаны</string>
     <string name="feeds_source_follow_again">Падпісацца зноў</string>
+    <string name="feeds_filtered_by_tag">Адфільтравана па тэгу:</string>
 </resources>

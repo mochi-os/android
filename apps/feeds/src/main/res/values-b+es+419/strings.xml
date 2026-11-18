@@ -365,4 +365,5 @@
     <string name="feeds_also_post_to">Publicar también en</string>
     <string name="feeds_source_unfollowed">No lo sigues</string>
     <string name="feeds_source_follow_again">Seguir de nuevo</string>
+    <string name="feeds_filtered_by_tag">Filtrado por etiqueta:</string>
 </resources>

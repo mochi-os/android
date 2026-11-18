@@ -424,4 +424,5 @@
     <string name="feeds_also_post_to">Foilsigh freisin chuig</string>
     <string name="feeds_source_unfollowed">Gan leanúint</string>
     <string name="feeds_source_follow_again">Lean arís</string>
+    <string name="feeds_filtered_by_tag">Scagtha de réir clibe:</string>
 </resources>

@@ -171,6 +171,16 @@ class ObjectDetailViewModel @Inject constructor(
         // Cancel the previous object's fetch, or its late response overwrites
         // the header of the object now shown.
         loadJob?.cancel()
+        // The tabs name the object by the route's id, so they are read beside
+        // the object rather than after it.
+        loadComments()
+        loadActivity()
+        loadRequests()
+        loadAttachments()
+        loadWatchers()
+        loadLinks()
+        loadSiblingObjects()
+        loadPeople()
         loadJob = viewModelScope.launch {
             try {
                 val fetched = repository.getObject(projectId, objectId)
@@ -185,14 +195,6 @@ class ObjectDetailViewModel @Inject constructor(
                     fetched
                 }
                 _uiState.value = _uiState.value.copy(obj = merged, isLoading = false)
-                loadComments()
-                loadActivity()
-                loadRequests()
-                loadAttachments()
-                loadWatchers()
-                loadLinks()
-                loadSiblingObjects()
-                loadPeople()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {

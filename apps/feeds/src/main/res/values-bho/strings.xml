@@ -370,4 +370,5 @@
     <string name="feeds_also_post_to">एहू पर प्रकाशित करीं</string>
     <string name="feeds_source_unfollowed">फॉलो नइखीं करत</string>
     <string name="feeds_source_follow_again">फेर से फॉलो करीं</string>
+    <string name="feeds_filtered_by_tag">टैग से फिल्टर कइल गइल:</string>
 </resources>
