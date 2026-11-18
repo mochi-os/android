@@ -8,6 +8,7 @@ package org.mochios.settings.ui.accounts
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -86,8 +87,31 @@ class ConnectedAccountsViewModel @Inject constructor(
         api.update(payload).unwrapEmpty()
     }
 
-    fun toggleNotifyDefault(id: String, enabled: Boolean) = mutate {
-        api.update(mapOf("id" to id, "enabled" to if (enabled) "1" else "0")).unwrapEmpty()
+    /**
+     * The notify switch: it moves on the tap, and goes back if the server
+     * refuses, unless a later tap has moved it since, as the RSS feeds' do.
+     */
+    fun toggleNotifyDefault(id: String, enabled: Boolean) {
+        val value = if (enabled) 1 else 0
+        val before = _uiState.value.accounts.firstOrNull { it.id == id }?.enabled ?: return
+        setNotifyShown(id, value)
+        viewModelScope.launch {
+            try {
+                api.update(mapOf("id" to id, "enabled" to if (enabled) "1" else "0")).unwrapEmpty()
+                refresh()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                if (_uiState.value.accounts.any { it.id == id && it.enabled == value }) setNotifyShown(id, before)
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    private fun setNotifyShown(id: String, enabled: Int) {
+        _uiState.value = _uiState.value.copy(
+            accounts = _uiState.value.accounts.map { if (it.id == id) it.copy(enabled = enabled) else it },
+        )
     }
 
     fun setAiDefault(id: String) = mutate {

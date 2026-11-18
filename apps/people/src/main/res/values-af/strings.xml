@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Netwerke</string>
     <string name="people_profile_settings">Instellings</string>
     <string name="people_contacts_invitation_sent">Uitnodiging gestuur</string>
+    <string name="people_contact_keep">Behou</string>
 </resources>

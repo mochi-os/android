@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Réseaux</string>
     <string name="people_profile_settings">Paramètres</string>
     <string name="people_contacts_invitation_sent">Invitation envoyée</string>
+    <string name="people_contact_keep">Conserver</string>
 </resources>

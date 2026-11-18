@@ -16,6 +16,10 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.layout.union
+import androidx.compose.material3.ScaffoldDefaults
 import org.mochios.android.R
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -45,6 +49,9 @@ fun MochiScaffold(
             )
         },
         floatingActionButton = floatingActionButton,
+        // The keyboard is room the content gives up, so a field typed in
+        // stays in view above it instead of behind it.
+        contentWindowInsets = ScaffoldDefaults.contentWindowInsets.union(WindowInsets.ime),
         content = content
     )
 }

@@ -11,6 +11,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertIsOff
+import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsOn
 import androidx.compose.ui.test.getBoundsInRoot
 import androidx.compose.ui.test.hasSetTextAction
@@ -69,6 +70,7 @@ class NetworksScreenTest {
     private fun content(
         data: NetworksData,
         busy: Set<String> = emptySet(),
+        moving: Map<String, Boolean> = emptyMap(),
         onToggle: (Handle, String, NetworkAccount?) -> Unit = { _, _, _ -> },
         onArrive: (Handle) -> Unit = {},
         onLink: () -> Unit = {},
@@ -80,6 +82,7 @@ class NetworksScreenTest {
             NetworksContent(
                 data = data,
                 busy = busy,
+                moving = moving,
                 check = { name, domain -> Availability(available = true, name = name, domain = domain) },
                 onReserve = { _, _, _ -> },
                 onLink = onLink,
@@ -104,6 +107,25 @@ class NetworksScreenTest {
     )
 
     @Test
+    fun `a network switch shows where it was moved to while that goes, and takes no tap meanwhile`() {
+        val toggled = mutableListOf<String>()
+        content(
+            base,
+            busy = setOf("alice/bluesky", "f1"),
+            moving = mapOf("alice/bluesky" to true, "f1" to false),
+            onToggle = { _, network, _ -> toggled += network },
+        )
+        val fediverse = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "ActivityPub", "alice"))
+        val bluesky = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice"))
+        fediverse.assertIsOff()
+        bluesky.assertIsOn()
+        fediverse.assertIsEnabled()
+        bluesky.performClick()
+        fediverse.performClick()
+        assertEquals(emptyList<String>(), toggled)
+    }
+
+    @Test
     fun `a handle's card has a switch per network, on where the hosted account exists`() {
         val toggled = mutableListOf<Pair<String, String?>>()
         content(base, onToggle = { _, network, account -> toggled += network to account?.id })
@@ -118,10 +140,15 @@ class NetworksScreenTest {
         assertEquals(listOf("fediverse" to "f1", "bluesky" to null), toggled)
     }
 
+    // It keeps its look, as the web's switch does while it saves.
     @Test
     fun `a network being switched on for a name cannot be switched again until it answers`() {
-        content(base, busy = setOf("alice/bluesky"))
-        rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice")).assertIsNotEnabled()
+        val toggled = mutableListOf<String>()
+        content(base, busy = setOf("alice/bluesky"), onToggle = { _, network, _ -> toggled += network })
+        val bluesky = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice"))
+        bluesky.assertIsEnabled()
+        bluesky.performClick()
+        assertEquals(emptyList<String>(), toggled)
     }
 
     @Test

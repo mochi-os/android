@@ -113,6 +113,8 @@ class NetworksViewModelsTest {
 
     /** Whether Publish to fails, as on a server without the networks. */
     @Volatile private var publishFailed = false
+    // A publish list the server refuses to save.
+    @Volatile private var publishRefused = false
 
     /** Holds the first publish list save back until a test lets it go. */
     @Volatile private var publishGate: java.util.concurrent.CountDownLatch? = null
@@ -178,6 +180,7 @@ class NetworksViewModelsTest {
                         "publish": ["l1"], "copies": {"l1": 3}, "generators": {}}""")
                     "/feeds/f1/-/publish/set" -> {
                         publishGate?.await(5, TimeUnit.SECONDS)
+                        if (publishRefused) return MockResponse().setResponseCode(500).setBody("""{"error": "Not now"}""")
                         // The list saved is the one sent.
                         val saved = java.net.URLDecoder.decode(body.substringAfter("accounts="), "UTF-8")
                         raw("""{"publish": $saved, "kept": {"l1": 3}}""")
@@ -746,6 +749,30 @@ class NetworksViewModelsTest {
         until("both saves") { requests.count { it.first == "/feeds/f1/-/publish/set" } == 2 && model.busy.value.isEmpty() }
         assertEquals(listOf("b2"), model.publish.value!!.publish)
     }
+    // A publish switch moves when tapped, not once the server has answered,
+    // and goes back when the change is refused.
+    @Test
+    fun `a publish switch moves at once, and back when its change is refused`() {
+        val gate = java.util.concurrent.CountDownLatch(1)
+        publishGate = gate
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        model.loadPublish()
+        until("the publish list") { model.publish.value != null }
+        val bluesky = model.publish.value!!.accounts.first { it.id == "b2" }
+        model.toggle(bluesky, true)
+        assertEquals(mapOf("b2" to true), model.moving.value)
+        // A second tap while it goes is not taken.
+        model.toggle(bluesky, false)
+        assertEquals(mapOf("b2" to true), model.moving.value)
+        publishRefused = true
+        publishGate = null
+        gate.countDown()
+        until("the refusal") { model.busy.value.isEmpty() }
+        assertEquals(emptyMap<String, Boolean>(), model.moving.value)
+        assertEquals(listOf("l1"), model.publish.value!!.publish)
+        assertEquals(1, requests.count { it.first == "/feeds/f1/-/publish/set" })
+    }
+
     @Test
     fun `a report says whether the server took it, so a refused one keeps its dialog`() {
         val model = detail()

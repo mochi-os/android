@@ -161,6 +161,7 @@ fun NetworksScreen(
                 else -> NetworksContent(
                     data = data,
                     busy = state.busy,
+                    moving = state.moving,
                     check = viewModel::available,
                     onReserve = viewModel::reserve,
                     onLink = { linking = true },
@@ -346,6 +347,7 @@ internal class AccountActions(
 internal fun NetworksContent(
     data: NetworksData,
     busy: Set<String>,
+    moving: Map<String, Boolean> = emptyMap(),
     check: suspend (String, String) -> org.mochios.settings.api.Availability?,
     onReserve: (String, String, () -> Unit) -> Unit,
     onLink: () -> Unit,
@@ -386,6 +388,7 @@ internal fun NetworksContent(
                 accounts = data.accounts,
                 feeds = data.feeds,
                 busy = busy,
+                moving = moving,
                 onToggle = onToggle,
                 onAddName = onAddName,
                 onArrive = onArrive,
@@ -452,6 +455,7 @@ internal fun HandleCard(
     accounts: List<NetworkAccount>,
     feeds: List<NetworkFeed>,
     busy: Set<String>,
+    moving: Map<String, Boolean> = emptyMap(),
     onToggle: (Handle, String, NetworkAccount?) -> Unit,
     onAddName: (Handle) -> Unit,
     onArrive: (Handle) -> Unit,
@@ -515,10 +519,14 @@ internal fun HandleCard(
                             )
                             if (account != null) AccountStatusLine(account, feeds)
                         }
+                        // A switch moves when tapped and keeps its look while its
+                        // change goes; a tap meanwhile is not taken.
+                        val key = "${row.name}/$type"
                         Switch(
-                            checked = account != null,
-                            enabled = "${row.name}/$type" !in busy,
-                            onCheckedChange = { onToggle(row, type, account) },
+                            checked = moving[key] ?: account?.let { moving[it.id] } ?: (account != null),
+                            onCheckedChange = {
+                                if (key !in busy && (account == null || account.id !in busy)) onToggle(row, type, account)
+                            },
                             modifier = Modifier.semantics { contentDescription = switchLabel },
                         )
                         if (account != null) {

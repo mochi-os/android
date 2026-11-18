@@ -163,19 +163,29 @@ class AccountViewModel @Inject constructor(
         }
     }
 
+    /**
+     * The directory switch: it moves on the tap and goes back if the server
+     * refuses; a tap while a save is under way is not taken.
+     */
     fun setPrivacy(privacy: String) {
         if (privacy != "public" && privacy != "private") return
-        if (privacy == _uiState.value.identity.privacy) return
+        val before = _uiState.value.identity.privacy
+        if (privacy == before || _uiState.value.isSaving) return
+        _uiState.value = _uiState.value.copy(
+            isSaving = true,
+            error = null,
+            identity = _uiState.value.identity.copy(privacy = privacy),
+        )
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSaving = true, error = null)
             try {
                 api.updateIdentity(privacy = privacy).unwrapRaw()
+                _uiState.value = _uiState.value.copy(isSaving = false)
+            } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isSaving = false,
-                    identity = _uiState.value.identity.copy(privacy = privacy),
+                    error = e.toMochiError(),
+                    identity = _uiState.value.identity.copy(privacy = before),
                 )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
             }
         }
     }

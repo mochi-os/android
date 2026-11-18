@@ -30,6 +30,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.i18n.FakeKeystore
+import org.mochios.android.ui.components.LastViewedStore
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
@@ -172,5 +173,33 @@ class SessionCacheTest {
         runBlocking { session.setServerUrl("https://elsewhere.example") }
         assertEquals(false, held())
         assertNull(runBlocking { session.currentToken.first() })
+    }
+
+    // Each app reopens the item it last had open, which another account, or
+    // the same name on another server, cannot find.
+    @Test
+    fun `signing out forgets the items the apps last had open`() {
+        LastViewedStore.set(context, "feeds", "feed1")
+        runBlocking { session.clearAll() }
+        assertNull(LastViewedStore.get(context, "feeds"))
+    }
+
+    @Test
+    fun `another account taking the binding forgets the items the apps last had open`() {
+        runBlocking { session.setBoundAccount("first-identity", server.url("/").toString()) }
+        LastViewedStore.set(context, "forums", "forum1")
+        runBlocking { session.setBoundAccount("first-identity", server.url("/").toString()) }
+        assertEquals("the same account keeps them", "forum1", LastViewedStore.get(context, "forums"))
+        runBlocking { session.setBoundAccount("second-identity", server.url("/").toString()) }
+        assertNull(LastViewedStore.get(context, "forums"))
+    }
+
+    @Test
+    fun `another server forgets the items the apps last had open`() {
+        LastViewedStore.set(context, "wikis", "wiki1")
+        runBlocking { session.setServerUrl(server.url("/").toString()) }
+        assertEquals("the same server keeps them", "wiki1", LastViewedStore.get(context, "wikis"))
+        runBlocking { session.setServerUrl("https://elsewhere.example") }
+        assertNull(LastViewedStore.get(context, "wikis"))
     }
 }

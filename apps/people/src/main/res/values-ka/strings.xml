@@ -226,4 +226,5 @@
     <string name="people_profile_networks">ქსელები</string>
     <string name="people_profile_settings">პარამეტრები</string>
     <string name="people_contacts_invitation_sent">მოწვევა გაიგზავნა</string>
+    <string name="people_contact_keep">შენარჩუნება</string>
 </resources>

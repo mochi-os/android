@@ -77,6 +77,14 @@ class PublishingViewModel @Inject constructor(
     private val _busy = MutableStateFlow<Set<String>>(emptySet())
     val busy: StateFlow<Set<String>> = _busy.asStateFlow()
 
+    /**
+     * Where an account's switch was moved to while its change goes, by
+     * account: it moves when tapped, and shows the list the server answers
+     * with once the change is done, or goes back if it is refused.
+     */
+    private val _moving = MutableStateFlow<Map<String, Boolean>>(emptyMap())
+    val moving: StateFlow<Map<String, Boolean>> = _moving.asStateFlow()
+
     private val _kept = MutableStateFlow<KeptCopies?>(null)
     val kept: StateFlow<KeptCopies?> = _kept.asStateFlow()
 
@@ -127,16 +135,21 @@ class PublishingViewModel @Inject constructor(
 
     /** Switch the feed's publishing to [account] on or off; turning it off offers to delete the copies kept there. */
     fun toggle(account: PublishAccount, on: Boolean) {
-        if (_publish.value == null) return
+        if (_publish.value == null || account.id in _busy.value) return
+        _moving.update { it + (account.id to on) }
         change(account.id, R.string.feeds_publish_failed) {
-            // The list as it stands when this runs: a toggle queued behind
-            // another starts from what that one saved.
-            val state = _publish.value ?: return@change
-            val next = if (on) (state.publish + account.id).distinct() else state.publish - account.id
-            val saved = repository.setPublish(feedId, next)
-            _publish.value = (_publish.value ?: state).copy(publish = saved.publish)
-            val count = saved.kept[account.id] ?: 0
-            if (!on && count > 0) _kept.value = KeptCopies(account, count)
+            try {
+                // The list as it stands when this runs: a toggle queued behind
+                // another starts from what that one saved.
+                val state = _publish.value ?: return@change
+                val next = if (on) (state.publish + account.id).distinct() else state.publish - account.id
+                val saved = repository.setPublish(feedId, next)
+                _publish.value = (_publish.value ?: state).copy(publish = saved.publish)
+                val count = saved.kept[account.id] ?: 0
+                if (!on && count > 0) _kept.value = KeptCopies(account, count)
+            } finally {
+                _moving.update { it - account.id }
+            }
         }
     }
 

@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Δίκτυα</string>
     <string name="people_profile_settings">Ρυθμίσεις</string>
     <string name="people_contacts_invitation_sent">Η πρόσκληση στάλθηκε</string>
+    <string name="people_contact_keep">Διατήρηση</string>
 </resources>

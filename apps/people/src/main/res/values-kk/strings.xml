@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Желілер</string>
     <string name="people_profile_settings">Параметрлер</string>
     <string name="people_contacts_invitation_sent">Шақыру жіберілді</string>
+    <string name="people_contact_keep">Сақтап қалу</string>
 </resources>

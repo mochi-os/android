@@ -227,4 +227,5 @@
     <string name="people_profile_networks">Tinklai</string>
     <string name="people_profile_settings">Nustatymai</string>
     <string name="people_contacts_invitation_sent">Kvietimas išsiųstas</string>
+    <string name="people_contact_keep">Palikti</string>
 </resources>

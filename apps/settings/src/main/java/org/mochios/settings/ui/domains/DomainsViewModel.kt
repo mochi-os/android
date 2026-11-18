@@ -105,8 +105,35 @@ class DomainsViewModel @Inject constructor(
 
     fun verifyDomain(name: String) = mutate { api.verifyDomain(name).unwrapRaw() }
 
-    fun setTls(name: String, enabled: Boolean) =
-        mutate { api.updateDomain(name, tls = enabled.toString()).unwrapEmpty() }
+    /**
+     * The TLS switch: it moves on the tap, and goes back if the server
+     * refuses, unless a later tap has moved it since, as the RSS feeds' do.
+     */
+    fun setTls(name: String, enabled: Boolean) {
+        val value = if (enabled) 1 else 0
+        val before = _uiState.value.domains.firstOrNull { it.domain == name }?.tls ?: return
+        setTlsShown(name, value)
+        viewModelScope.launch {
+            try {
+                api.updateDomain(name, tls = enabled.toString()).unwrapEmpty()
+                refresh()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                if (_uiState.value.domains.any { it.domain == name && it.tls == value }) setTlsShown(name, before)
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            }
+        }
+    }
+
+    private fun setTlsShown(name: String, tls: Int) {
+        _uiState.value = _uiState.value.copy(
+            domains = _uiState.value.domains.map { if (it.domain == name) it.copy(tls = tls) else it },
+            details = _uiState.value.details.mapValues { (key, value) ->
+                if (key == name) value.copy(domain = value.domain.copy(tls = tls)) else value
+            },
+        )
+    }
 
     fun createRoute(
         domain: String,

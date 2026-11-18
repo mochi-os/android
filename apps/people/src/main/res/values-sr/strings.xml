@@ -227,4 +227,5 @@
     <string name="people_profile_networks">Мреже</string>
     <string name="people_profile_settings">Подешавања</string>
     <string name="people_contacts_invitation_sent">Позивница послата</string>
+    <string name="people_contact_keep">Задржи</string>
 </resources>

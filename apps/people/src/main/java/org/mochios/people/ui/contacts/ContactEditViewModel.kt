@@ -23,6 +23,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.sync.ContactProperty
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.ui.components.SaveStatus
 import org.mochios.people.api.HandleLookup
 import org.mochios.people.api.MergeSource
 import org.mochios.people.model.Book
@@ -35,6 +36,8 @@ data class ContactEditUiState(
     val isLoading: Boolean = false,
     /** A save, a create, a copy or a merge is under way. */
     val isSaving: Boolean = false,
+    /** How an edit's saving stands, shown beside the title: nothing while a change waits for typing to rest. */
+    val save: SaveStatus = SaveStatus.Idle,
     val isDeleting: Boolean = false,
     val form: ContactForm = ContactForm(),
     val contact: Contact? = null,
@@ -62,6 +65,12 @@ data class ContactEditUiState(
     val unfriendRequested: Boolean = false,
     /** The friend switch is mid-handshake: inviting, cancelling or unfriending. */
     val isToggling: Boolean = false,
+    /**
+     * Where a switch was moved to while its change is on its way, by
+     * [FRIEND_SWITCH] or an XMPP contact's [key]: it moves when tapped, and
+     * goes back to what the server holds once it answers.
+     */
+    val switching: Map<String, Boolean> = emptyMap(),
 
     /** The list of contacts to merge with is open. */
     val mergeOpen: Boolean = false,
@@ -263,7 +272,7 @@ class ContactEditViewModel @Inject constructor(
     fun invite() {
         val contact = _uiState.value.contact ?: return
         if (contact.person.isBlank() || contact.friend) return
-        toggle { repository.inviteFriend(contact.person, contact.directory.ifBlank { contact.name }) }
+        toggle(FRIEND_SWITCH, true) { repository.inviteFriend(contact.person, contact.directory.ifBlank { contact.name }) }
     }
 
     /**
@@ -273,7 +282,7 @@ class ContactEditViewModel @Inject constructor(
     fun toggleXmpp(entry: XmppContact, on: Boolean) {
         val contact = _uiState.value.contact ?: return
         val person = "xmpp:" + entry.address
-        toggle {
+        toggle(entry.key, on) {
             if (on) {
                 repository.inviteFriend(person, contact.name, account = entry.account)
             } else {
@@ -307,7 +316,7 @@ class ContactEditViewModel @Inject constructor(
     fun cancelInvite() {
         val contact = _uiState.value.contact ?: return
         if (contact.person.isBlank() || contact.friend) return
-        toggle { repository.removeFriend(contact.person) }
+        toggle(FRIEND_SWITCH, false) { repository.removeFriend(contact.person) }
     }
 
     fun requestUnfriend() {
@@ -320,16 +329,22 @@ class ContactEditViewModel @Inject constructor(
 
     fun confirmUnfriend() {
         val contact = _uiState.value.contact ?: return
-        if (_uiState.value.isToggling) return
-        toggle(settle = ContactEditUiState::unfriended) { repository.removeFriend(contact.person) }
+        toggle(FRIEND_SWITCH, false, ContactEditUiState::unfriended) { repository.removeFriend(contact.person) }
     }
 
+    /**
+     * One switch's change: the switch named [switch] shows [to] at once, and
+     * a tap on any switch while it is on its way is not taken.
+     */
     private fun toggle(
+        switch: String,
+        to: Boolean,
         settle: ContactEditUiState.(MochiError?) -> ContactEditUiState = ContactEditUiState::toggled,
         block: suspend () -> Unit,
     ) {
+        if (_uiState.value.isToggling) return
+        _uiState.value = _uiState.value.copy(isToggling = true, error = null, switching = mapOf(switch to to))
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isToggling = true, error = null)
             val failure = try {
                 block()
                 awaitRefresh()
@@ -337,7 +352,7 @@ class ContactEditViewModel @Inject constructor(
             } catch (e: Exception) {
                 e.toMochiError()
             }
-            _uiState.value = _uiState.value.settle(failure)
+            _uiState.value = _uiState.value.settle(failure).copy(switching = emptyMap())
         }
     }
 
@@ -365,8 +380,11 @@ class ContactEditViewModel @Inject constructor(
 
     /** A change to the form, saved once typing rests. */
     fun updateForm(form: ContactForm) {
+        val changed = form != _uiState.value.form
         _uiState.value = _uiState.value.copy(form = form)
         if (creating) return
+        // A change not yet saved: "Saved" no longer holds.
+        if (changed) _uiState.value = _uiState.value.copy(save = SaveStatus.Idle)
         pause?.cancel()
         pause = viewModelScope.launch {
             delay(PAUSE)
@@ -387,7 +405,7 @@ class ContactEditViewModel @Inject constructor(
         // A contact keeps its name; a change without one waits for it.
         if (!form.valid) return
         val properties = form.properties()
-        _uiState.value = _uiState.value.copy(isSaving = true, error = null, conflict = null)
+        _uiState.value = _uiState.value.copy(isSaving = true, save = SaveStatus.Saving, error = null, conflict = null)
         try {
             val contact = repository.updateContact(
                 contact = contactId,
@@ -400,17 +418,19 @@ class ContactEditViewModel @Inject constructor(
             saved = true
             etag = contact.etag
             baseline = Baseline(properties, form.book)
-            _uiState.value = _uiState.value.copy(isSaving = false, contact = contact)
+            // Saved, unless the form changed while this was on its way.
+            val current = if (_uiState.value.form == form) SaveStatus.Saved else SaveStatus.Idle
+            _uiState.value = _uiState.value.copy(isSaving = false, save = current, contact = contact)
         } catch (e: Exception) {
             // 412 is the compare-and-swap losing to another device. The
             // server's message says so; the card it now holds replaces the
             // form, since saving over it is exactly what was refused.
             if (e is ApiException && e.code == 412) {
-                _uiState.value = _uiState.value.copy(isSaving = false, conflict = e.message)
+                _uiState.value = _uiState.value.copy(isSaving = false, save = SaveStatus.Error, conflict = e.message)
                 baseline = null
                 load()
             } else {
-                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isSaving = false, save = SaveStatus.Error, error = e.toMochiError())
             }
         }
     }
@@ -564,6 +584,12 @@ class ContactEditViewModel @Inject constructor(
 }
 
 /** The state a friend-switch request leaves: its failure, if it had one. */
+/** The friend switch's name among [ContactEditUiState.switching]. */
+internal const val FRIEND_SWITCH = "friend"
+
+/** An XMPP contact's switch's name among [ContactEditUiState.switching]. */
+internal val XmppContact.key: String get() = "xmpp $account $address"
+
 internal fun ContactEditUiState.toggled(failure: MochiError?): ContactEditUiState =
     copy(isToggling = false, error = failure)
 

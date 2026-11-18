@@ -10,8 +10,10 @@ import androidx.lifecycle.SavedStateHandle
 import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withTimeout
 import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
@@ -38,6 +40,7 @@ import org.mochios.forums.ui.find.CommunitiesEvent
 import org.mochios.forums.ui.find.CommunitiesViewModel
 import org.mochios.forums.ui.find.CommunityLookup
 import org.mochios.forums.ui.find.answers
+import org.mochios.forums.ui.find.communityJoined
 import org.mochios.forums.ui.forum.ForumEvent
 import org.mochios.forums.ui.forum.ForumViewModel
 import org.mochios.forums.ui.newpost.NewPostViewModel
@@ -70,6 +73,9 @@ class ForumsNetworksViewModelsTest {
 
     /** Whether the sensitive mark is refused. */
     @Volatile private var refuseSensitive = false
+
+    /** Holds the sensitive mark's answer back while it is set. */
+    @Volatile private var sensitiveGate: CountDownLatch? = null
 
     /** Whether a community's join is refused. */
     @Volatile private var joinRefused = false
@@ -127,9 +133,11 @@ class ForumsNetworksViewModelsTest {
                     "/forums/f1/-/publish" -> ok("""{"published": false, "domains": ["b.example", "a.example"], "handles": []}""")
                     "/forums/f1/-/publish/set" -> ok("""{"published": true, "address": "https://a.example/c/books", "identifier": "!books@a.example", "domains": []}""")
                     "/forums/f1/-/publish/clear" -> ok("""{"published": false, "domains": ["a.example"]}""")
-                    "/forums/f1/-/sensitive/set" ->
+                    "/forums/f1/-/sensitive/set" -> {
+                        sensitiveGate?.await(5, TimeUnit.SECONDS)
                         if (refuseSensitive) MockResponse().setResponseCode(403).setBody("""{"error": "forbidden", "message": "No"}""")
                         else ok("""{"sensitive": 1}""")
+                    }
                     "/_/websocket" -> MockResponse().setResponseCode(404)
                     else -> MockResponse().setResponseCode(404)
                 }
@@ -295,6 +303,25 @@ class ForumsNetworksViewModelsTest {
         job.cancel()
     }
 
+    // A snackbar keeps its caller waiting while it shows: the forum must not
+    // wait behind one.
+    @Test
+    fun `a joined community's forum opens at once, and only a join with no forum says so in words`() {
+        var opened = ""
+        runBlocking {
+            withTimeout(2_000) {
+                communityJoined(CommunitiesEvent.Joined("cfp", false), { opened = it }, { awaitCancellation() }) { "Joined" }
+            }
+        }
+        assertEquals("cfp", opened)
+        val said = mutableListOf<String>()
+        runBlocking {
+            communityJoined(CommunitiesEvent.Joined("", true), { opened = "none" }, { said.add(it) }) { already -> if (already) "Already" else "Joined" }
+        }
+        assertEquals(listOf("Already"), said)
+        assertEquals("cfp", opened)
+    }
+
     @Test
     fun `a forum is published as a community on the domain chosen, and withdrawn`() {
         val model = CommunityViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository)
@@ -310,6 +337,25 @@ class ForumsNetworksViewModelsTest {
         model.withdraw()
         until("the withdrawal") { model.state.value?.published == false }
         job.cancel()
+    }
+
+    // The switch keeps its look while its change goes, so a tap meanwhile
+    // must not move it or send a second change.
+    @Test
+    fun `the sensitive mark takes no second tap while its change goes`() {
+        val gate = CountDownLatch(1)
+        sensitiveGate = gate
+        val model = CommunityViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository)
+        model.load(sensitive = false)
+        model.setSensitive(true)
+        until("the change sent") { requests.any { it.first == "/forums/f1/-/sensitive/set" } }
+        model.setSensitive(false)
+        assertTrue(model.sensitive.value)
+        sensitiveGate = null
+        gate.countDown()
+        until("the mark") { !model.busy.value }
+        assertTrue(model.sensitive.value)
+        assertEquals(1, requests.count { it.first == "/forums/f1/-/sensitive/set" })
     }
 
     @Test

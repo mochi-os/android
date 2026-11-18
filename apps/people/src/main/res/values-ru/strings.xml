@@ -228,4 +228,5 @@
     <string name="people_profile_networks">Сети</string>
     <string name="people_profile_settings">Настройки</string>
     <string name="people_contacts_invitation_sent">Приглашение отправлено</string>
+    <string name="people_contact_keep">Оставить</string>
 </resources>

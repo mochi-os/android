@@ -226,4 +226,5 @@
     <string name="people_profile_networks">नेटवर्क्स</string>
     <string name="people_profile_settings">सेटिंग्ज</string>
     <string name="people_contacts_invitation_sent">आमंत्रण पाठवले</string>
+    <string name="people_contact_keep">ठेवा</string>
 </resources>

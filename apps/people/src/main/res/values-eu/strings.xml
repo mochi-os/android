@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Sareak</string>
     <string name="people_profile_settings">Ezarpenak</string>
     <string name="people_contacts_invitation_sent">Gonbidapena bidalita</string>
+    <string name="people_contact_keep">Mantendu</string>
 </resources>

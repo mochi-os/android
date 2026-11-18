@@ -35,6 +35,12 @@ import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Phone
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material.icons.outlined.AlternateEmail
+import androidx.compose.material.icons.outlined.Person
+import androidx.compose.material.icons.outlined.Cake
+import androidx.compose.material.icons.outlined.Business
+import androidx.compose.material.icons.outlined.Work
+import androidx.compose.material.icons.outlined.Link
+import androidx.compose.material.icons.outlined.StickyNote2
 import androidx.compose.material.icons.automirrored.outlined.Chat
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -59,6 +65,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CompactTextField
@@ -74,6 +82,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.android.util.providerName
 import org.mochios.people.R
 import org.mochios.people.api.HandleLookup
@@ -314,7 +323,8 @@ internal fun MergeDialog(
 @Composable
 private fun FriendSwitch(
     state: FriendState,
-    enabled: Boolean,
+    /** Where the switch was moved to, while that change is on its way. */
+    moving: Boolean?,
     onToggle: (Boolean) -> Unit,
 ) {
     Row(
@@ -335,8 +345,7 @@ private fun FriendSwitch(
             }
         }
         Switch(
-            checked = state != FriendState.NONE,
-            enabled = enabled,
+            checked = moving ?: (state != FriendState.NONE),
             onCheckedChange = onToggle,
         )
     }
@@ -352,7 +361,8 @@ private fun FriendSwitch(
 internal fun XmppSwitch(
     entry: XmppContact,
     several: Boolean,
-    enabled: Boolean,
+    /** Where the switch was moved to, while that change is on its way. */
+    moving: Boolean?,
     onToggle: (Boolean) -> Unit,
 ) {
     Row(
@@ -380,8 +390,7 @@ internal fun XmppSwitch(
             }
         }
         Switch(
-            checked = entry.on,
-            enabled = enabled,
+            checked = moving ?: entry.on,
             onCheckedChange = onToggle,
         )
     }
@@ -408,6 +417,8 @@ private fun EditScaffold(
             ?: stringResource(R.string.people_contact_edit_title),
         onBack = onBack,
         actions = {
+            // An edit saves as it goes: say so, as typing rests and the save lands.
+            SaveStatusIndicator(state.save, modifier = Modifier.padding(horizontal = 4.dp))
             Box {
                 MochiIconButton(onClick = { menuOpen = true }) {
                     Icon(
@@ -471,20 +482,24 @@ private fun EditScaffold(
                         onChange = onChange,
                         lookups = state.handles,
                         onLookup = onLookup,
+                        xmpp = state.contact?.xmpp.orEmpty(),
+                        onEndXmpp = { listed -> onXmppToggle(listed, false) },
                         action = state.contact?.let { contact ->
                             @Composable {
                                 Column {
+                                    // A switch moves when tapped and keeps its look while
+                                    // its change goes; one tapped meanwhile is not taken.
                                     FriendSwitch(
                                         state = contact.friendState(state.sent),
-                                        enabled = !state.isToggling,
-                                        onToggle = onFriendToggle,
+                                        moving = state.switching[FRIEND_SWITCH],
+                                        onToggle = { on -> if (!state.isToggling) onFriendToggle(on) },
                                     )
                                     for (entry in contact.xmpp) {
                                         XmppSwitch(
                                             entry = entry,
                                             several = contact.xmpp.size > 1,
-                                            enabled = !state.isToggling,
-                                            onToggle = { on -> onXmppToggle(entry, on) },
+                                            moving = state.switching[entry.key],
+                                            onToggle = { on -> if (!state.isToggling) onXmppToggle(entry, on) },
                                         )
                                     }
                                 }
@@ -531,9 +546,43 @@ private val ADDITIONS = listOf(
     },
 )
 
-/** One Add button whose menu offers every kind of value a contact can gain. */
+/** The XMPP contact a messaging row names, while it is on the contact list there. */
+internal fun xmppListed(xmpp: List<XmppContact>, entry: MessagingEntry): XmppContact? {
+    if (entry.network != NETWORK_XMPP) return null
+    val address = entry.value.trim().removePrefix("xmpp:")
+    return xmpp.firstOrNull { listed -> listed.on && listed.address.equals(address, ignoreCase = true) }
+}
+
+/** A single field's name and glyph, as the Add menu and the field show them. */
+private fun Single.label(): Int = when (this) {
+    Single.NICKNAME -> R.string.people_contact_nickname
+    Single.BIRTHDAY -> R.string.people_contact_birthday
+    Single.ORGANISATION -> R.string.people_contact_organisation
+    Single.TITLE -> R.string.people_contact_title
+    Single.URL -> R.string.people_contact_url
+    Single.NOTE -> R.string.people_contact_note
+}
+
+private fun Single.icon(): ImageVector = when (this) {
+    Single.NICKNAME -> Icons.Outlined.Person
+    Single.BIRTHDAY -> Icons.Outlined.Cake
+    Single.ORGANISATION -> Icons.Outlined.Business
+    Single.TITLE -> Icons.Outlined.Work
+    Single.URL -> Icons.Outlined.Link
+    Single.NOTE -> Icons.Outlined.StickyNote2
+}
+
+/**
+ * One Add button whose menu offers every kind of value a contact can gain,
+ * and each single field the contact does not show yet.
+ */
 @Composable
-private fun AddMenu(form: ContactForm, onChange: (ContactForm) -> Unit) {
+private fun AddMenu(
+    form: ContactForm,
+    onChange: (ContactForm) -> Unit,
+    hidden: List<Single>,
+    onReveal: (Single) -> Unit,
+) {
     var open by remember { mutableStateOf(false) }
     Box {
         MochiTextButton(onClick = { open = true }) {
@@ -552,6 +601,16 @@ private fun AddMenu(form: ContactForm, onChange: (ContactForm) -> Unit) {
                     },
                 )
             }
+            hidden.forEach { single ->
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(single.label())) },
+                    leadingIcon = { Icon(single.icon(), contentDescription = null) },
+                    onClick = {
+                        open = false
+                        onReveal(single)
+                    },
+                )
+            }
         }
     }
 }
@@ -566,10 +625,28 @@ internal fun ContactFields(
     lookups: Map<String, HandleLookup> = emptyMap(),
     /** Asks the network what it shows of a handle. */
     onLookup: (String) -> Unit = {},
+    /** The contact on XMPP through the user's accounts, by address. */
+    xmpp: List<XmppContact> = emptyList(),
+    /** Takes the contact off an XMPP account's contact list. */
+    onEndXmpp: (XmppContact) -> Unit = {},
 ) {
     val emailTypes = EMAIL_TYPES.map { type -> type to stringResource(typeLabel(type)) }
     val phoneTypes = PHONE_TYPES.map { type -> type to stringResource(typeLabel(type)) }
     val addressTypes = ADDRESS_TYPES.map { type -> type to stringResource(typeLabel(type)) }
+
+    // The single fields shown: those the card fills, as it is read, and those
+    // added from the Add menu, each until it is removed.
+    val filled = form.filled()
+    var added by remember { mutableStateOf(emptySet<Single>()) }
+    LaunchedEffect(filled) {
+        if (!added.containsAll(filled)) added = added + filled
+    }
+    val shown = added + filled
+    var ending by remember { mutableStateOf<Pair<Int, XmppContact>?>(null) }
+    val remove = { single: Single ->
+        added = added - single
+        onChange(form.emptied(single))
+    }
 
     if (action != null) {
         action()
@@ -597,12 +674,14 @@ internal fun ContactFields(
                 modifier = Modifier.fillMaxWidth().leaving(),
             )
         }
-        LabelledField(stringResource(R.string.people_contact_nickname)) {
-            CompactTextField(
-                value = form.nickname,
-                onValueChange = { onChange(form.copy(nickname = it)) },
-                modifier = Modifier.fillMaxWidth().leaving(),
-            )
+        if (Single.NICKNAME in shown) {
+            RemovableField(Single.NICKNAME, onRemove = remove) {
+                CompactTextField(
+                    value = form.nickname,
+                    onValueChange = { onChange(form.copy(nickname = it)) },
+                    modifier = Modifier.fillMaxWidth().leaving(),
+                )
+            }
         }
     }
 
@@ -612,7 +691,12 @@ internal fun ContactFields(
     Spacer(modifier = Modifier.height(12.dp))
     HorizontalDivider()
     Spacer(modifier = Modifier.height(4.dp))
-    AddMenu(form = form, onChange = onChange)
+    AddMenu(
+        form = form,
+        onChange = onChange,
+        hidden = Single.entries.filter { single -> single !in shown },
+        onReveal = { single -> added = added + single },
+    )
     Column {
         form.emails.forEachIndexed { index, entry ->
             TypedEntryRow(
@@ -677,12 +761,36 @@ internal fun ContactFields(
                     onChange(form.copy(messaging = form.messaging.replaced(index, updated)))
                 },
                 onRemove = {
-                    onChange(form.copy(messaging = form.messaging.without(index)))
+                    val listed = xmppListed(xmpp, entry)
+                    if (listed != null) ending = index to listed
+                    else onChange(form.copy(messaging = form.messaging.without(index)))
                 },
             )
         }
     }
+    // An XMPP address on one of the user's contact lists: removing it from
+    // the card asks whether to take them off the list there too, keeping them
+    // unless told.
+    ending?.let { (index, listed) ->
+        val drop = { end: Boolean ->
+            ending = null
+            onChange(form.copy(messaging = form.messaging.without(index)))
+            if (end) onEndXmpp(listed)
+        }
+        MochiAlertDialog(
+            onDismissRequest = { drop(false) },
+            title = stringResource(R.string.people_contact_xmpp),
+            text = listed.address,
+            confirmText = stringResource(R.string.people_contact_remove),
+            onConfirm = { drop(true) },
+            destructive = true,
+            dismissText = stringResource(R.string.people_contact_keep),
+        )
+    }
 
+    // Details: the book, and the single fields shown under them.
+    val details = listOf(Single.BIRTHDAY, Single.ORGANISATION, Single.TITLE, Single.URL, Single.NOTE).filter { it in shown }
+    if (books.isEmpty() && details.isEmpty()) return
     SectionHeading(title = stringResource(R.string.people_contact_section_detail))
     Column {
         if (books.isNotEmpty()) {
@@ -694,43 +802,53 @@ internal fun ContactFields(
             )
             Spacer(modifier = Modifier.height(8.dp))
         }
-        LabelledField(stringResource(R.string.people_contact_birthday)) {
-            BirthdayField(
-                value = form.birthday,
-                onValueChange = { value, invalid ->
-                    onChange(form.copy(birthday = value ?: form.birthday, birthdayInvalid = invalid))
-                },
-            )
+        for (single in details) {
+            RemovableField(single, onRemove = remove) {
+                when (single) {
+                    Single.BIRTHDAY -> BirthdayField(
+                        value = form.birthday,
+                        onValueChange = { value, invalid ->
+                            onChange(form.copy(birthday = value ?: form.birthday, birthdayInvalid = invalid))
+                        },
+                    )
+                    Single.ORGANISATION -> CompactTextField(
+                        value = form.organisation,
+                        onValueChange = { onChange(form.copy(organisation = it)) },
+                        modifier = Modifier.fillMaxWidth().leaving(),
+                    )
+                    Single.TITLE -> CompactTextField(
+                        value = form.title,
+                        onValueChange = { onChange(form.copy(title = it)) },
+                        modifier = Modifier.fillMaxWidth().leaving(),
+                    )
+                    Single.URL -> CompactTextField(
+                        value = form.url.value,
+                        onValueChange = { onChange(form.copy(url = form.url.copy(value = it))) },
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
+                        modifier = Modifier.fillMaxWidth().leaving(),
+                    )
+                    Single.NOTE -> MochiTextField(
+                        value = form.note,
+                        onValueChange = { onChange(form.copy(note = it)) },
+                        minLines = 3,
+                        modifier = Modifier.fillMaxWidth().leaving(),
+                    )
+                    Single.NICKNAME -> Unit
+                }
+            }
         }
-        LabelledField(stringResource(R.string.people_contact_organisation)) {
-            CompactTextField(
-                value = form.organisation,
-                onValueChange = { onChange(form.copy(organisation = it)) },
-                modifier = Modifier.fillMaxWidth().leaving(),
-            )
-        }
-        LabelledField(stringResource(R.string.people_contact_title)) {
-            CompactTextField(
-                value = form.title,
-                onValueChange = { onChange(form.copy(title = it)) },
-                modifier = Modifier.fillMaxWidth().leaving(),
-            )
-        }
-        LabelledField(stringResource(R.string.people_contact_url)) {
-            CompactTextField(
-                value = form.url.value,
-                onValueChange = { onChange(form.copy(url = form.url.copy(value = it))) },
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Uri),
-                modifier = Modifier.fillMaxWidth().leaving(),
-            )
-        }
-        LabelledField(stringResource(R.string.people_contact_note)) {
-            MochiTextField(
-                value = form.note,
-                onValueChange = { onChange(form.copy(note = it)) },
-                minLines = 3,
-                modifier = Modifier.fillMaxWidth().leaving(),
-            )
+    }
+}
+
+/** A single field under its name, with the button that removes it. */
+@Composable
+private fun RemovableField(single: Single, onRemove: (Single) -> Unit, field: @Composable () -> Unit) {
+    LabelledField(stringResource(single.label())) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Box(modifier = Modifier.weight(1f)) { field() }
+            MochiIconButton(onClick = { onRemove(single) }) {
+                Icon(Icons.Default.Close, contentDescription = stringResource(R.string.people_contact_remove))
+            }
         }
     }
 }
@@ -857,7 +975,22 @@ private fun HandleRow(
         delay(LOOKUP_PAUSE)
         onLookup(handle.value)
     }
+    val typing = remember { FocusRequester() }
+    var chosen by remember { mutableStateOf(0) }
+    LaunchedEffect(chosen) { if (chosen > 0) typing.requestFocus() }
     Column(modifier = Modifier.padding(vertical = 6.dp)) {
+        // The network first, then the handle written as it writes them, as on
+        // the web: chosen below the field, the network seemed to do nothing.
+        NetworkLine(
+            options = HANDLE_NETWORKS.map { network -> network to providerName(network) },
+            selected = handle.network,
+            onSelect = { network ->
+                onChange(handle.copy(network = network))
+                if (handle.value.isBlank()) chosen++
+            },
+            onRemove = onRemove,
+        )
+        Spacer(modifier = Modifier.height(4.dp))
         Row(verticalAlignment = Alignment.CenterVertically) {
             KindIcon(Icons.Outlined.AlternateEmail)
             CompactTextField(
@@ -865,7 +998,7 @@ private fun HandleRow(
                 onValueChange = { onChange(handle.copy(value = it)) },
                 placeholder = handleExample(handle.network),
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-                modifier = Modifier.weight(1f).leaving(),
+                modifier = Modifier.weight(1f).focusRequester(typing).leaving(),
             )
         }
         if (found != null) {
@@ -883,25 +1016,34 @@ private fun HandleRow(
                 )
             }
         }
-        Spacer(modifier = Modifier.height(4.dp))
-        Row(
-            verticalAlignment = Alignment.Bottom,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Box(modifier = Modifier.weight(1f)) {
-                LabeledSelectField(
-                    label = stringResource(R.string.people_contact_network),
-                    options = HANDLE_NETWORKS.map { network -> network to providerName(network) },
-                    selected = handle.network,
-                    onSelect = { onChange(handle.copy(network = it)) },
-                )
-            }
-            MochiIconButton(onClick = onRemove) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(R.string.people_contact_remove),
-                )
-            }
+    }
+}
+
+/** A row's network, chosen first, and the button that removes the row. */
+@Composable
+private fun NetworkLine(
+    options: List<Pair<String, String>>,
+    selected: String,
+    onSelect: (String) -> Unit,
+    onRemove: () -> Unit,
+) {
+    Row(
+        verticalAlignment = Alignment.Bottom,
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+    ) {
+        Box(modifier = Modifier.weight(1f)) {
+            LabeledSelectField(
+                label = stringResource(R.string.people_contact_network),
+                options = options,
+                selected = selected,
+                onSelect = onSelect,
+            )
+        }
+        MochiIconButton(onClick = onRemove) {
+            Icon(
+                Icons.Default.Close,
+                contentDescription = stringResource(R.string.people_contact_remove),
+            )
         }
     }
 }
@@ -917,7 +1059,24 @@ private fun MessagingRow(
     onRemove: () -> Unit,
 ) {
     val other = stringResource(R.string.people_contact_network_other)
+    val typing = remember { FocusRequester() }
+    var chosen by remember { mutableStateOf(0) }
+    LaunchedEffect(chosen) { if (chosen > 0) typing.requestFocus() }
     Column(modifier = Modifier.padding(vertical = 6.dp)) {
+        // The network first, then the address written as it writes them, as
+        // on the web: chosen below the field, the network seemed to do nothing.
+        NetworkLine(
+            options = MESSAGING_NETWORKS.map { network ->
+                network to if (network == NETWORK_OTHER) other else providerName(network)
+            },
+            selected = entry.network,
+            onSelect = { network ->
+                onChange(entry.copy(network = network))
+                if (entry.value.isBlank()) chosen++
+            },
+            onRemove = onRemove,
+        )
+        Spacer(modifier = Modifier.height(4.dp))
         Row(verticalAlignment = Alignment.CenterVertically) {
             KindIcon(Icons.AutoMirrored.Outlined.Chat)
             CompactTextField(
@@ -930,30 +1089,8 @@ private fun MessagingRow(
                     else -> ""
                 },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-                modifier = Modifier.weight(1f).leaving(),
+                modifier = Modifier.weight(1f).focusRequester(typing).leaving(),
             )
-        }
-        Spacer(modifier = Modifier.height(4.dp))
-        Row(
-            verticalAlignment = Alignment.Bottom,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Box(modifier = Modifier.weight(1f)) {
-                LabeledSelectField(
-                    label = stringResource(R.string.people_contact_network),
-                    options = MESSAGING_NETWORKS.map { network ->
-                        network to if (network == NETWORK_OTHER) other else providerName(network)
-                    },
-                    selected = entry.network,
-                    onSelect = { onChange(entry.copy(network = it)) },
-                )
-            }
-            MochiIconButton(onClick = onRemove) {
-                Icon(
-                    Icons.Default.Close,
-                    contentDescription = stringResource(R.string.people_contact_remove),
-                )
-            }
         }
     }
 }

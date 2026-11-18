@@ -226,4 +226,5 @@
     <string name="people_profile_networks">Шабакаҳо</string>
     <string name="people_profile_settings">Танзимот</string>
     <string name="people_contacts_invitation_sent">Даъватнома ирсол шуд</string>
+    <string name="people_contact_keep">Нигоҳ доштан</string>
 </resources>

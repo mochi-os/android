@@ -225,4 +225,5 @@
     <string name="people_profile_networks">網路</string>
     <string name="people_profile_settings">設定</string>
     <string name="people_contacts_invitation_sent">邀請已發送</string>
+    <string name="people_contact_keep">保留</string>
 </resources>

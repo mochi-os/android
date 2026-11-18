@@ -31,6 +31,14 @@ object LastViewedStore {
         prefs(context).edit().remove(feature).apply()
     }
 
+    /**
+     * Forget every feature's item. They are the signed-in account's, on its
+     * server: another one would be sent to a feed or forum it cannot find.
+     */
+    fun forget(context: Context) {
+        prefs(context).edit().clear().apply()
+    }
+
     private fun prefs(context: Context) =
         context.applicationContext.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
 }
