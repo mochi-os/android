@@ -33,6 +33,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -50,6 +52,7 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.QuoteCard
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.util.attachmentAddress
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatDetail
@@ -183,7 +186,12 @@ internal fun InvitationBar(answering: Boolean, onAccept: () -> Unit, onDecline: 
     }
 }
 
-/** A message's thread over the conversation: the message, its replies, and a reply box. */
+/**
+ * A message's thread over the conversation: the message, its replies, and a reply box.
+ *
+ * @param draft The reply box's text, read only by the box so typing leaves the
+ * thread alone; null reads it from [thread].
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 internal fun ThreadSheet(
@@ -194,13 +202,14 @@ internal fun ThreadSheet(
     onSend: () -> Unit,
     onEarlier: () -> Unit,
     onDismiss: () -> Unit,
+    draft: State<String>? = null,
 ) {
     MochiBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
     ) {
         Column(modifier = Modifier.fillMaxWidth().fillMaxHeight(0.85f)) {
-            ThreadContent(thread, chatId, canWrite, onDraft, onSend, onEarlier)
+            ThreadContent(thread, chatId, canWrite, onDraft, onSend, onEarlier, draft)
         }
     }
 }
@@ -213,6 +222,7 @@ internal fun ColumnScope.ThreadContent(
     onDraft: (String) -> Unit,
     onSend: () -> Unit,
     onEarlier: () -> Unit,
+    draft: State<String>? = null,
 ) {
     MochiSheetHeader(title = stringResource(R.string.chat_thread_title))
     LazyColumn(
@@ -244,14 +254,16 @@ internal fun ColumnScope.ThreadContent(
         }
     }
     if (canWrite) {
-        ComposeBar(
-            value = thread.draft,
-            onValueChange = onDraft,
-            onSend = onSend,
-            placeholder = stringResource(R.string.chat_thread_reply),
-            isSending = thread.isSending,
-            sendLabel = stringResource(R.string.chat_message_send),
-        )
+        Reading(draft ?: rememberUpdatedState(thread.draft)) { text ->
+            ComposeBar(
+                value = text,
+                onValueChange = onDraft,
+                onSend = onSend,
+                placeholder = stringResource(R.string.chat_thread_reply),
+                isSending = thread.isSending,
+                sendLabel = stringResource(R.string.chat_message_send),
+            )
+        }
     }
 }
 
