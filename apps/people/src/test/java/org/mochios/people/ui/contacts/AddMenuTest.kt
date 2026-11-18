@@ -30,6 +30,7 @@ import androidx.compose.ui.test.onAllNodesWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performTextReplacement
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
@@ -53,6 +54,8 @@ class AddMenuTest {
     private var form = ContactForm(name = "Ada")
     private var xmpp = emptyList<XmppContact>()
     private val ended = mutableListOf<XmppContact>()
+    // The contact's XMPP standing as the screen holds it, which a save changes.
+    private val answer = mutableStateOf(emptyList<XmppContact>())
 
     private fun show() {
         rule.setContent {
@@ -65,7 +68,7 @@ class AddMenuTest {
                         state = it
                         form = it
                     },
-                    xmpp = xmpp,
+                    xmpp = answer.value,
                     onEndXmpp = { ended += it },
                 )
             }
@@ -76,6 +79,16 @@ class AddMenuTest {
     private fun listed(subscription: String) {
         form = ContactForm(name = "Ada", messaging = listOf(MessagingEntry(value = "dave@example.org", network = NETWORK_XMPP)))
         xmpp = listOf(XmppContact(account = "x1", identifier = "me@example.com", address = "dave@example.org", subscription = subscription))
+        answer.value = xmpp
+    }
+
+    /** Types [value] into the messaging address, then leaves it for the name. */
+    private fun edit(value: String) {
+        val address = rule.onNode(hasSetTextAction() and hasText("dave@example.org"))
+        address.performScrollTo().performClick()
+        address.performTextReplacement(value)
+        rule.onNode(hasSetTextAction() and hasText("Ada")).performScrollTo().performClick()
+        rule.waitForIdle()
     }
 
     /** Taps the messaging address's remove button. */
@@ -183,6 +196,45 @@ class AddMenuTest {
         rule.waitForIdle()
         assertTrue(ended.isEmpty())
         assertTrue(form.messaging.isEmpty())
+    }
+
+    @Test
+    fun `changing an XMPP address on the contact list asks, once the field is left`() {
+        listed("both")
+        show()
+        rule.waitForIdle()
+        // The saved card no longer names the address, so neither does the contact.
+        val address = rule.onNode(hasSetTextAction() and hasText("dave@example.org"))
+        address.performScrollTo().performClick()
+        address.performTextReplacement("dave@example.com")
+        answer.value = emptyList()
+        rule.waitForIdle()
+        rule.onNode(hasSetTextAction() and hasText("Ada")).performScrollTo().performClick()
+        rule.waitForIdle()
+        rule.onNode(hasText("dave@example.org") and hasAnyAncestor(isDialog())).assertExists()
+        rule.onNode(hasText("Remove") and hasClickAction() and hasAnyAncestor(isDialog())).performClick()
+        rule.waitForIdle()
+        assertEquals(listOf("dave@example.org"), ended.map { it.address })
+        assertEquals(listOf("dave@example.com"), form.messaging.map { it.value })
+    }
+
+    @Test
+    fun `a changed XMPP address is asked about once, and an unchanged one not at all`() {
+        listed("both")
+        show()
+        rule.waitForIdle()
+        rule.onNode(hasSetTextAction() and hasText("dave@example.org")).performScrollTo().performClick()
+        rule.onNode(hasSetTextAction() and hasText("Ada")).performScrollTo().performClick()
+        rule.waitForIdle()
+        rule.onNode(isDialog()).assertDoesNotExist()
+        edit("dave@example.com")
+        rule.onNodeWithText("Keep").performClick()
+        rule.waitForIdle()
+        rule.onNode(hasSetTextAction() and hasText("dave@example.com")).performScrollTo().performClick()
+        rule.onNode(hasSetTextAction() and hasText("Ada")).performScrollTo().performClick()
+        rule.waitForIdle()
+        rule.onNode(isDialog()).assertDoesNotExist()
+        assertTrue(ended.isEmpty())
     }
 
     @Test

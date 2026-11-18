@@ -55,6 +55,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.composed
@@ -547,10 +548,22 @@ private val ADDITIONS = listOf(
 )
 
 /** The XMPP contact a messaging row names, while it is on the contact list there. */
-internal fun xmppListed(xmpp: List<XmppContact>, entry: MessagingEntry): XmppContact? {
+internal fun xmppListed(xmpp: Collection<XmppContact>, entry: MessagingEntry): XmppContact? {
     if (entry.network != NETWORK_XMPP) return null
-    val address = entry.value.trim().removePrefix("xmpp:")
-    return xmpp.firstOrNull { listed -> listed.on && listed.address.equals(address, ignoreCase = true) }
+    val address = xmppAddress(entry.value)
+    return xmpp.firstOrNull { listed -> listed.on && listed.address.lowercase() == address }
+}
+
+/** A messaging address as an XMPP address, for comparing with a list's. */
+internal fun xmppAddress(value: String): String = value.trim().removePrefix("xmpp:").lowercase()
+
+/**
+ * The XMPP contact a card's messaging addresses no longer name, though it is
+ * on a contact list there, and not already asked about.
+ */
+internal fun xmppLeft(seen: Collection<XmppContact>, answered: Set<String>, form: ContactForm): XmppContact? {
+    val kept = form.messaging.filter { it.network == NETWORK_XMPP }.map { xmppAddress(it.value) }.toSet()
+    return seen.firstOrNull { listed -> listed.key !in answered && listed.address.lowercase() !in kept }
 }
 
 /** A single field's name and glyph, as the Add menu and the field show them. */
@@ -642,7 +655,24 @@ internal fun ContactFields(
         if (!added.containsAll(filled)) added = added + filled
     }
     val shown = added + filled
-    var ending by remember { mutableStateOf<Pair<Int, XmppContact>?>(null) }
+    // An XMPP address on one of the user's contact lists that leaves the card
+    // asks whether to take them off the list there too, keeping them unless
+    // told: removed with its button, at once; changed in its field, once the
+    // field is left. The contact names only the addresses the card has, so
+    // the ones seen on a list are remembered, and one answered for is not
+    // asked about again.
+    var ending by remember { mutableStateOf<Pair<Int?, XmppContact>?>(null) }
+    val seen = remember { mutableMapOf<String, XmppContact>() }
+    val answered = remember { mutableSetOf<String>() }
+    LaunchedEffect(xmpp) {
+        for (listed in xmpp) if (listed.on) seen[listed.key] = listed else seen.remove(listed.key)
+    }
+    val current by rememberUpdatedState(form)
+    val outer = LocalFieldLeft.current
+    val leaving = {
+        outer()
+        if (ending == null) xmppLeft(seen.values, answered, current)?.let { listed -> ending = null to listed }
+    }
     val remove = { single: Single ->
         added = added - single
         onChange(form.emptied(single))
@@ -755,26 +785,26 @@ internal fun ContactFields(
             )
         }
         form.messaging.forEachIndexed { index, entry ->
-            MessagingRow(
-                entry = entry,
-                onChange = { updated ->
-                    onChange(form.copy(messaging = form.messaging.replaced(index, updated)))
-                },
-                onRemove = {
-                    val listed = xmppListed(xmpp, entry)
-                    if (listed != null) ending = index to listed
-                    else onChange(form.copy(messaging = form.messaging.without(index)))
-                },
-            )
+            CompositionLocalProvider(LocalFieldLeft provides leaving) {
+                MessagingRow(
+                    entry = entry,
+                    onChange = { updated ->
+                        onChange(form.copy(messaging = form.messaging.replaced(index, updated)))
+                    },
+                    onRemove = {
+                        val listed = xmppListed(seen.values.filter { it.key !in answered }, entry)
+                        if (listed != null) ending = index to listed
+                        else onChange(form.copy(messaging = form.messaging.without(index)))
+                    },
+                )
+            }
         }
     }
-    // An XMPP address on one of the user's contact lists: removing it from
-    // the card asks whether to take them off the list there too, keeping them
-    // unless told.
     ending?.let { (index, listed) ->
         val drop = { end: Boolean ->
             ending = null
-            onChange(form.copy(messaging = form.messaging.without(index)))
+            answered += listed.key
+            if (index != null) onChange(form.copy(messaging = form.messaging.without(index)))
             if (end) onEndXmpp(listed)
         }
         MochiAlertDialog(
