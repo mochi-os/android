@@ -25,6 +25,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -33,6 +34,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
 import org.mochios.android.i18n.LocalFormat
@@ -175,15 +178,38 @@ internal fun BidRow(
     )
 }
 
+/** Seconds until a countdown with [left] seconds to go shows a different label. */
+private fun untilLabelChanges(left: Long): Long {
+    val unit = when {
+        left >= 86_400L -> 3_600L
+        left >= 3_600L -> 60L
+        else -> 1L
+    }
+    return left % unit + 1
+}
+
+/**
+ * The time left until [closes], in epoch seconds, as the row shows it. It
+ * wakes only when the label next changes: on the hour while it shows days, on
+ * the minute while it shows hours, else each second. `delay` stops while the
+ * phone sleeps, so each resume restarts the countdown from the clock.
+ */
 @Composable
 private fun remainingLabel(closes: Long): String {
-    // closes is epoch seconds. Tick once per second via a state var so
-    // the row re-renders without rebuilding the screen.
     var now by remember { mutableLongStateOf(System.currentTimeMillis() / 1000L) }
-    LaunchedEffect(closes) {
-        while (now < closes) {
-            delay(1_000L)
-            now = System.currentTimeMillis() / 1000L
+    var resumes by remember { mutableIntStateOf(0) }
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) {
+        resumes++
+    }
+    LaunchedEffect(closes, resumes) {
+        while (true) {
+            val current = System.currentTimeMillis() / 1000L
+            now = current
+            val left = closes - current
+            if (left <= 0L) {
+                break
+            }
+            delay(untilLabelChanges(left) * 1_000L)
         }
     }
     val remaining = closes - now
