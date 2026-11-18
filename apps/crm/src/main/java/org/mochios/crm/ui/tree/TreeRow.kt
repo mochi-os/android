@@ -370,7 +370,7 @@ fun TreeRow(
                             HorizontalDivider()
                         }
                     }
-                    items(possibleParents) { parent ->
+                    items(possibleParents, key = { parent -> parent.id }) { parent ->
                         val parentTitleField = crmDetails?.classes
                             ?.find { klass -> klass.id == parent.objectClass }
                             ?.title?.takeIf { fieldId -> fieldId.isNotBlank() }

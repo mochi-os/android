@@ -335,7 +335,7 @@ private fun ImportDesignDialog(
                         modifier = Modifier.height(160.dp),
                         verticalArrangement = Arrangement.spacedBy(4.dp)
                     ) {
-                        items(templates) { template ->
+                        items(templates, key = { template -> template.id }) { template ->
                             MochiCard(
                                 modifier = Modifier.fillMaxWidth(),
                                 shape = RoundedCornerShape(8.dp),

@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -114,7 +115,7 @@ fun SessionsScreen(
                     }
                     // The server marks the caller's own session; the list
                     // order says nothing about which one that is.
-                    itemsIndexed(state.sessions) { _, session ->
+                    items(state.sessions, key = { session -> session.id }) { session ->
                         SessionRow(
                             session = session,
                             isCurrent = session.current,

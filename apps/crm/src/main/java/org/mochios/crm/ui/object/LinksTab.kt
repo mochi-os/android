@@ -284,11 +284,13 @@ private fun AddLinkSheet(
     }
 
     val q = search.trim().lowercase()
-    val filtered = uiState.siblingObjects
-        .filter { it.id !in linkedIds }
-        .map { it to objectDisplayLabel(it, crmDetails, untitled) }
-        .filter { (_, title) -> q.isEmpty() || title.lowercase().contains(q) }
-        .take(20)
+    val filtered = remember(uiState.siblingObjects, linkedIds, q, crmDetails, untitled) {
+        uiState.siblingObjects
+            .filter { sibling -> sibling.id !in linkedIds }
+            .map { sibling -> sibling to objectDisplayLabel(sibling, crmDetails, untitled) }
+            .filter { (_, title) -> q.isEmpty() || title.lowercase().contains(q) }
+            .take(20)
+    }
 
     MochiBottomSheet(
         onDismissRequest = onDismiss,
@@ -356,7 +358,7 @@ private fun AddLinkSheet(
                         .fillMaxWidth()
                         .heightIn(max = 280.dp)
                 ) {
-                    items(filtered) { (target, title) ->
+                    items(filtered, key = { (target, _) -> target.id }) { (target, title) ->
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier
