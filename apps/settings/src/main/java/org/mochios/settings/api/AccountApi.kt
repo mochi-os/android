@@ -112,6 +112,8 @@ data class OAuthIdentity(
     val name: String = "",
     val created: Long = 0,
     val used: Long = 0,
+    /** Whether the server can confirm the user's identity through it; null from a core that does not say. */
+    val verify: Boolean? = null,
 )
 
 data class OAuthIdentitiesResponse(val identities: List<OAuthIdentity> = emptyList())
