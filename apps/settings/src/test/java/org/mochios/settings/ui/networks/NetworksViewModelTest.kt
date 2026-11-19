@@ -25,13 +25,16 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.auth.AuthApi
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.auth.PasskeyManager
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.TokenApi
 import org.mochios.android.i18n.AppContext
 import org.mochios.settings.R
+import org.mochios.settings.api.AccountApi
 import org.mochios.settings.api.Handle
 import org.mochios.settings.api.NetworkAccount
 import org.mochios.settings.api.NetworksApi
+import org.mochios.settings.ui.login.SettingsStepUpClient
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
@@ -154,7 +157,8 @@ class NetworksViewModelTest {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
         val auth = AuthRepository(retrofit.create(AuthApi::class.java), retrofit.create(TokenApi::class.java), session)
-        val made = NetworksViewModel(retrofit.create(NetworksApi::class.java), session, auth)
+        val stepUp = SettingsStepUpClient(retrofit.create(AccountApi::class.java), PasskeyManager(context))
+        val made = NetworksViewModel(retrofit.create(NetworksApi::class.java), session, auth, stepUp)
         return ViewModelProvider(models, object : ViewModelProvider.Factory {
             @Suppress("UNCHECKED_CAST")
             override fun <T : ViewModel> create(modelClass: Class<T>): T = made as T
@@ -212,8 +216,14 @@ class NetworksViewModelTest {
         until { model.uiState.value.data != null }
         var linked = false
         model.link("mastodon", mapOf("server" to "mastodon.social"), oauth = true) { linked = true }
+        // A Mastodon account becomes a way to sign in, so nothing is sent
+        // before the step-up, and the link carries its proof.
+        assertTrue(model.stepUp.visible.value)
+        assertTrue(sent("settings/-/user/networks/account/link").isEmpty())
+        model.stepUp.onVerified("proof")
         until { model.launch.value != null }
         val begun = sent("settings/-/user/networks/account/link").single()
+        assertEquals("proof", begun["token"])
         assertEquals("mastodon", begun["type"])
         assertEquals("mastodon.social", begun["server"])
         assertEquals("mochi", begun["scheme"])
@@ -232,9 +242,12 @@ class NetworksViewModelTest {
         val said = CopyOnWriteArrayList<String>()
         val collecting = kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.Dispatchers.Main).launchCollect(model, said)
         model.link("lemmy", mapOf("server" to "lemmy.world", "username" to "bob", "password" to "pw"), oauth = false) {}
+        // A Lemmy account is no way to sign in, so it links with no step-up.
+        assertFalse(model.stepUp.visible.value)
         until { said.isNotEmpty() }
         collecting.cancel()
         val begun = sent("settings/-/user/networks/account/link").single()
+        assertNull(begun["token"])
         assertNull(begun["scheme"])
         assertNull(begun["challenge"])
         assertEquals(context.getString(R.string.networks_linked), said.single())

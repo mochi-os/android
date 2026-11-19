@@ -82,6 +82,7 @@ import org.mochios.settings.api.NetworkBlock
 import org.mochios.settings.api.NetworkFeed
 import org.mochios.settings.api.NetworkMute
 import org.mochios.settings.api.NetworksData
+import org.mochios.settings.ui.login.StepUpHost
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -118,6 +119,7 @@ fun NetworksScreen(
         viewModel.consumeLaunch()
     }
 
+    StepUpHost(viewModel.stepUp)
     var linking by remember { mutableStateOf(false) }
     var adding by remember { mutableStateOf<Handle?>(null) }
     var releasing by remember { mutableStateOf<Handle?>(null) }
