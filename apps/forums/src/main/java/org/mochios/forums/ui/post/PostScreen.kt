@@ -131,6 +131,7 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.PostTagsButton
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.StatusBadgeSize
 import org.mochios.android.ui.components.TagItem
@@ -173,7 +174,8 @@ fun PostScreen(
     val commentUpload by viewModel.commentUpload.collectAsState()
     // A TextFieldValue rather than a String: quoting has to place the caret, and
     // only the value carries a selection.
-    var draft by remember { mutableStateOf(TextFieldValue("")) }
+    val draftState = remember { mutableStateOf(TextFieldValue("")) }
+    var draft by draftState
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
     var editingId by rememberSaveable { mutableStateOf<String?>(null) }
@@ -528,46 +530,48 @@ fun PostScreen(
                         }
                     }
                     if (uiState.canComment) {
-                        ComposeBar(
-                            value = draft,
-                            onValueChange = { value -> draft = value },
-                            onSend = {
-                                viewModel.submitComment(draft.text)
-                                draft = TextFieldValue("")
-                            },
-                            placeholder = stringResource(R.string.forums_write_comment),
-                            enabled = !uiState.post.locked,
-                            isSending = uiState.isSending,
-                            upload = commentUpload,
-                            sendLabel = stringResource(R.string.forums_comment_send),
-                            windowInsets = ComposeBarDefaults.WindowInsets,
-                            banner = destinationBanner(uiState.forum.destination, uiState.replyTo?.let { replied ->
-                                {
-                                    ReplyComposerBanner(
-                                        label = stringResource(
-                                            R.string.forums_comment_replying_to,
-                                            replied.name,
-                                        ),
-                                        preview = replied.body,
-                                        cancelLabel = stringResource(
-                                            R.string.forums_comment_clear_reply,
-                                        ),
-                                        onCancel = { viewModel.setReplyTo(null) },
-                                    )
-                                }
-                            }),
-                            attachments = ComposeBarAttachments(
-                                pending = commentAttachments,
-                                onAdd = { uris -> viewModel.addCommentAttachments(uris) },
-                                onRemove = { uri -> viewModel.removeCommentAttachment(uri) },
-                                resolveFileName = viewModel::fileName,
-                                addLabel = stringResource(R.string.forums_post_attach),
-                                fallbackLabel = stringResource(R.string.forums_attachment_file),
-                                removeLabel = stringResource(R.string.forums_attachment_remove),
-                            ),
-                            requireText = true,
-                            focusRequester = composerFocus,
-                        )
+                        Reading(draftState) { text ->
+                            ComposeBar(
+                                value = text,
+                                onValueChange = { value -> draft = value },
+                                onSend = {
+                                    viewModel.submitComment(draft.text)
+                                    draft = TextFieldValue("")
+                                },
+                                placeholder = stringResource(R.string.forums_write_comment),
+                                enabled = !uiState.post.locked,
+                                isSending = uiState.isSending,
+                                upload = commentUpload,
+                                sendLabel = stringResource(R.string.forums_comment_send),
+                                windowInsets = ComposeBarDefaults.WindowInsets,
+                                banner = destinationBanner(uiState.forum.destination, uiState.replyTo?.let { replied ->
+                                    {
+                                        ReplyComposerBanner(
+                                            label = stringResource(
+                                                R.string.forums_comment_replying_to,
+                                                replied.name,
+                                            ),
+                                            preview = replied.body,
+                                            cancelLabel = stringResource(
+                                                R.string.forums_comment_clear_reply,
+                                            ),
+                                            onCancel = { viewModel.setReplyTo(null) },
+                                        )
+                                    }
+                                }),
+                                attachments = ComposeBarAttachments(
+                                    pending = commentAttachments,
+                                    onAdd = { uris -> viewModel.addCommentAttachments(uris) },
+                                    onRemove = { uri -> viewModel.removeCommentAttachment(uri) },
+                                    resolveFileName = viewModel::fileName,
+                                    addLabel = stringResource(R.string.forums_post_attach),
+                                    fallbackLabel = stringResource(R.string.forums_attachment_file),
+                                    removeLabel = stringResource(R.string.forums_attachment_remove),
+                                ),
+                                requireText = true,
+                                focusRequester = composerFocus,
+                            )
+                        }
                     }
                 }
             }
@@ -1167,7 +1171,8 @@ private fun AttachmentComments(
     // half-typed comment below the post reappeared in the lightbox and the two
     // fields fought over one string. Keyed on the attachment: moving to another
     // image starts a new comment, which is what the anchor means.
-    var draft by remember(attachmentId) { mutableStateOf(TextFieldValue("")) }
+    val draftState = remember(attachmentId) { mutableStateOf(TextFieldValue("")) }
+    var draft by draftState
     // Anchors live on top-level comments; a reply inherits its parent's context.
     val anchored = remember(comments, attachmentId) {
         comments.filter { comment -> comment.anchor == attachmentId }
@@ -1227,43 +1232,45 @@ private fun AttachmentComments(
             }
         }
         if (canComment) {
-            ComposeBar(
-                banner = destinationBanner(destination, replyTo?.let { replied ->
-                    {
-                        ReplyComposerBanner(
-                            label = stringResource(
-                                R.string.forums_comment_replying_to,
-                                replied.name,
-                            ),
-                            preview = replied.body,
-                            cancelLabel = stringResource(R.string.forums_comment_clear_reply),
-                            onCancel = onClearReply,
-                        )
-                    }
-                }),
-                value = draft,
-                onValueChange = { draft = it },
-                onSend = {
-                    onSend(draft.text)
-                    draft = TextFieldValue("")
-                },
-                placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
-                isSending = isSending,
-                upload = upload,
-                sendLabel = stringResource(R.string.forums_comment_send),
-                attachments = ComposeBarAttachments(
-                    pending = attachments,
-                    onAdd = onAddAttachments,
-                    onRemove = onRemoveAttachment,
-                    resolveFileName = resolveFileName,
-                    addLabel = stringResource(R.string.forums_post_attach),
-                    fallbackLabel = stringResource(R.string.forums_attachment_file),
-                    removeLabel = stringResource(R.string.forums_attachment_remove),
-                ),
-                requireText = true,
-                focusRequester = composerFocus,
-                windowInsets = ComposeBarDefaults.NoWindowInsets,
-            )
+            Reading(draftState) { text ->
+                ComposeBar(
+                    banner = destinationBanner(destination, replyTo?.let { replied ->
+                        {
+                            ReplyComposerBanner(
+                                label = stringResource(
+                                    R.string.forums_comment_replying_to,
+                                    replied.name,
+                                ),
+                                preview = replied.body,
+                                cancelLabel = stringResource(R.string.forums_comment_clear_reply),
+                                onCancel = onClearReply,
+                            )
+                        }
+                    }),
+                    value = text,
+                    onValueChange = { draft = it },
+                    onSend = {
+                        onSend(draft.text)
+                        draft = TextFieldValue("")
+                    },
+                    placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+                    isSending = isSending,
+                    upload = upload,
+                    sendLabel = stringResource(R.string.forums_comment_send),
+                    attachments = ComposeBarAttachments(
+                        pending = attachments,
+                        onAdd = onAddAttachments,
+                        onRemove = onRemoveAttachment,
+                        resolveFileName = resolveFileName,
+                        addLabel = stringResource(R.string.forums_post_attach),
+                        fallbackLabel = stringResource(R.string.forums_attachment_file),
+                        removeLabel = stringResource(R.string.forums_attachment_remove),
+                    ),
+                    requireText = true,
+                    focusRequester = composerFocus,
+                    windowInsets = ComposeBarDefaults.NoWindowInsets,
+                )
+            }
         }
     }
 }
