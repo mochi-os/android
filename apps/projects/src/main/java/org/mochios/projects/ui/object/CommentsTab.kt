@@ -22,6 +22,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -44,6 +45,7 @@ import org.mochios.android.ui.components.ComposeBarAttachments
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.android.ui.components.MochiIconButton
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.ui.components.replyCount
@@ -74,7 +76,7 @@ fun CommentsTab(
     avatarUrlBuilder: ((Comment) -> String?)? = null
 ) {
     val context = LocalContext.current
-    val draft = drafts.draft(target)
+    val draftState = remember(drafts, target) { derivedStateOf { drafts.draft(target) } }
     val defaultName = stringResource(R.string.projects_attachment_default_name)
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -116,45 +118,47 @@ fun CommentsTab(
             }
         }
 
-        val replyTarget = draft.reply?.let { id -> findComment(comments, id) }
-        ComposeBar(
-            value = draft.text,
-            onValueChange = { value -> drafts.update(target) { it.copy(text = value) } },
-            onSend = {
-                val sending = drafts.draft(target)
-                onCreateComment(sending.text, sending.reply, sending.files)
-                drafts.clear(target)
-            },
-            placeholder = stringResource(R.string.projects_comment_placeholder),
-            sendLabel = stringResource(R.string.projects_comment_send),
-            requireText = true,
-            attachments = ComposeBarAttachments(
-                pending = draft.files,
-                onAdd = { uris -> drafts.update(target) { it.copy(files = it.files + uris) } },
-                onRemove = { uri -> drafts.update(target) { it.copy(files = it.files - uri) } },
-                resolveFileName = resolveFileName,
-                addLabel = stringResource(R.string.projects_comment_attach),
-                fallbackLabel = defaultName,
-                removeLabel = stringResource(R.string.projects_comment_remove_attachment),
-            ),
-            onSearchMentions = onSearchUsers,
-            upload = upload,
-            banner = replyTarget?.let { comment ->
-                {
-                    ReplyComposerBanner(
-                        label = stringResource(
-                            R.string.projects_comment_replying_to,
-                            comment.name.ifBlank { comment.authorId },
-                        ),
-                        preview = comment.markdownSource.ifBlank { comment.text },
-                        cancelLabel = stringResource(R.string.projects_comment_clear_reply),
-                        onCancel = { drafts.update(target) { it.copy(reply = null) } },
-                    )
-                }
-            },
-            focusRequester = rememberReplyFocus(replyTarget?.id),
-            windowInsets = ComposeBarDefaults.NoWindowInsets,
-        )
+        Reading(draftState) { draft ->
+            val replyTarget = draft.reply?.let { id -> findComment(comments, id) }
+            ComposeBar(
+                value = draft.text,
+                onValueChange = { value -> drafts.update(target) { it.copy(text = value) } },
+                onSend = {
+                    val sending = drafts.draft(target)
+                    onCreateComment(sending.text, sending.reply, sending.files)
+                    drafts.clear(target)
+                },
+                placeholder = stringResource(R.string.projects_comment_placeholder),
+                sendLabel = stringResource(R.string.projects_comment_send),
+                requireText = true,
+                attachments = ComposeBarAttachments(
+                    pending = draft.files,
+                    onAdd = { uris -> drafts.update(target) { it.copy(files = it.files + uris) } },
+                    onRemove = { uri -> drafts.update(target) { it.copy(files = it.files - uri) } },
+                    resolveFileName = resolveFileName,
+                    addLabel = stringResource(R.string.projects_comment_attach),
+                    fallbackLabel = defaultName,
+                    removeLabel = stringResource(R.string.projects_comment_remove_attachment),
+                ),
+                onSearchMentions = onSearchUsers,
+                upload = upload,
+                banner = replyTarget?.let { comment ->
+                    {
+                        ReplyComposerBanner(
+                            label = stringResource(
+                                R.string.projects_comment_replying_to,
+                                comment.name.ifBlank { comment.authorId },
+                            ),
+                            preview = comment.markdownSource.ifBlank { comment.text },
+                            cancelLabel = stringResource(R.string.projects_comment_clear_reply),
+                            onCancel = { drafts.update(target) { it.copy(reply = null) } },
+                        )
+                    }
+                },
+                focusRequester = rememberReplyFocus(replyTarget?.id),
+                windowInsets = ComposeBarDefaults.NoWindowInsets,
+            )
+        }
     }
 }
 

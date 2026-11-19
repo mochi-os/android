@@ -58,6 +58,8 @@ import androidx.navigation.NavController
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
@@ -69,6 +71,7 @@ import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiImage
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.websocket.REOPEN
 import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
@@ -88,7 +91,16 @@ fun MessageThreadScreen(
     navController: NavController,
     viewModel: MessageThreadViewModel = hiltViewModel(),
 ) {
-    val state by viewModel.state.collectAsState()
+    val state by remember(viewModel) {
+        viewModel.state
+            .map { thread -> thread.copy(draft = "") }
+            .distinctUntilChanged()
+    }.collectAsState(initial = viewModel.state.value.copy(draft = ""))
+    val draft = remember(viewModel) {
+        viewModel.state
+            .map { thread -> thread.draft }
+            .distinctUntilChanged()
+    }.collectAsState(initial = viewModel.state.value.draft)
     val listState = rememberLazyListState()
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -234,16 +246,18 @@ fun MessageThreadScreen(
                 }
             }
 
-            ComposeBar(
-                value = state.draft,
-                onValueChange = viewModel::updateDraft,
-                onSend = viewModel::sendMessage,
-                placeholder = stringResource(R.string.market_messages_compose_placeholder),
-                isSending = state.isSending,
-                sendLabel = stringResource(R.string.market_messages_send),
-                windowInsets = ComposeBarDefaults.WindowInsets,
-                maxLines = 5,
-            )
+            Reading(draft) { text ->
+                ComposeBar(
+                    value = text,
+                    onValueChange = viewModel::updateDraft,
+                    onSend = viewModel::sendMessage,
+                    placeholder = stringResource(R.string.market_messages_compose_placeholder),
+                    isSending = state.isSending,
+                    sendLabel = stringResource(R.string.market_messages_send),
+                    windowInsets = ComposeBarDefaults.WindowInsets,
+                    maxLines = 5,
+                )
+            }
         }
     }
 

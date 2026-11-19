@@ -87,6 +87,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.go.R
@@ -441,28 +442,32 @@ fun GoGameDetailScreen(
                                     onRetry = { viewModel.loadMessages() },
                                     modifier = Modifier.weight(1f),
                                 )
-                                ComposeBar(
-                                    // The wide-layout side panel sits in the
-                                    // screen body, not the sheet, so this one
-                                    // consumes the keyboard inset itself.
-                                    windowInsets = ComposeBarDefaults.WindowInsets,
-                                    value = composer.value,
-                                    onValueChange = { composer.value = it },
-                                    onSend = {
-                                        val body = composer.value
-                                        if (body.isNotBlank()) {
-                                            viewModel.sendChat(body, errSend)
-                                            composer.value = ""
-                                        }
-                                    },
-                                    isSending = state.isSendingMessage,
-                                    placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
-                                    sendLabel = stringResource(MochiR.string.game_chat_send),
-                                    // One line, and the keyboard's action key sends: a game chat
-                                    // message is a sentence, not a comment body.
-                                    maxLines = 1,
-                                    sendOnImeAction = true,
-                                )
+                                Reading(composer) { text ->
+                                    ComposeBar(
+                                        // The wide-layout side panel sits in the
+                                        // screen body, not the sheet, so this one
+                                        // consumes the keyboard inset itself.
+                                        windowInsets = ComposeBarDefaults.WindowInsets,
+                                        value = text,
+                                        onValueChange = { composer.value = it },
+                                        onSend = {
+                                            val body = composer.value
+                                            if (body.isNotBlank()) {
+                                                viewModel.sendChat(body, errSend)
+                                                composer.value = ""
+                                            }
+                                        },
+                                        isSending = state.isSendingMessage,
+                                        placeholder = stringResource(
+                                            MochiR.string.game_chat_input_placeholder,
+                                        ),
+                                        sendLabel = stringResource(MochiR.string.game_chat_send),
+                                        // One line, and the keyboard's action key sends: a game
+                                        // chat message is a sentence, not a comment body.
+                                        maxLines = 1,
+                                        sendOnImeAction = true,
+                                    )
+                                }
                             }
                         }
                     }
