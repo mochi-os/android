@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Емисията е преименувана</string>
     <string name="notifications_rss_deleted">Емисията е изтрита</string>
     <string name="notifications_rss_default_name">RSS емисия</string>
+    <string name="networks_off">Изключено от администратора на сървъра</string>
 </resources>

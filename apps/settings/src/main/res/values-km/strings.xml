@@ -661,4 +661,5 @@
     <string name="notifications_rss_renamed">បានប្ដូរឈ្មោះព័ត៌មានបង្ហាញ</string>
     <string name="notifications_rss_deleted">បានលុបព័ត៌មានបង្ហាញ</string>
     <string name="notifications_rss_default_name">មតិព័ត៌មាន RSS</string>
+    <string name="networks_off">ត្រូវបានបិទដោយអ្នកគ្រប់គ្រងម៉ាស៊ីនមេ</string>
 </resources>

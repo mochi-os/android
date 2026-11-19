@@ -662,4 +662,5 @@
     <string name="notifications_rss_renamed">訂閱源已重新命名</string>
     <string name="notifications_rss_deleted">訂閱源已刪除</string>
     <string name="notifications_rss_default_name">RSS 訂閱源</string>
+    <string name="networks_off">已被伺服器管理員關閉</string>
 </resources>

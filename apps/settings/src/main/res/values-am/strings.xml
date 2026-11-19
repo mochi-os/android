@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">ፊድ እንደገና ተሰይሟል</string>
     <string name="notifications_rss_deleted">ፊድ ተሰርዟል</string>
     <string name="notifications_rss_default_name">RSS ፊድ</string>
+    <string name="networks_off">በአገልጋይ አስተዳዳሪው ተሰናክሏል</string>
 </resources>

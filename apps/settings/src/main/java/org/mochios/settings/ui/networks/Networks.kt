@@ -145,6 +145,7 @@ internal sealed interface AccountStatus {
     data class Failure(val failure: NetworkFailure) : AccountStatus
     data class Failed(val message: String) : AccountStatus
     data class Moved(val to: String) : AccountStatus
+    data object Off : AccountStatus
     data object HomeDeleted : AccountStatus
     data object HomePrivate : AccountStatus
     data object NoRecovery : AccountStatus
@@ -153,10 +154,13 @@ internal sealed interface AccountStatus {
     data class Server(val server: String) : AccountStatus
 }
 
-internal fun accountStatus(account: NetworkAccount, feeds: List<NetworkFeed>): AccountStatus {
+internal fun accountStatus(account: NetworkAccount, feeds: List<NetworkFeed>, networks: List<String>): AccountStatus {
     val chat = account.type == "xmpp" || account.type == "matrix"
     val home = if (account.home.isNotEmpty()) feeds.firstOrNull { it.id == account.home } else null
     return when {
+        // A hosted account stays listed, so it can be removed, after the server
+        // stops offering its network; nothing reaches it until it is offered again.
+        account.hosted && account.type !in networks -> AccountStatus.Off
         account.failure != null -> AccountStatus.Failure(account.failure)
         account.error.isNotEmpty() -> AccountStatus.Failed(account.error)
         account.moved.isNotEmpty() -> AccountStatus.Moved(account.moved)
@@ -189,6 +193,7 @@ internal fun statusText(status: AccountStatus): Pair<String, Boolean> = when (st
     is AccountStatus.Failure -> failureText(status.failure) to true
     is AccountStatus.Failed -> status.message to true
     is AccountStatus.Moved -> stringResource(R.string.networks_moved_to, status.to) to false
+    AccountStatus.Off -> stringResource(R.string.networks_off) to true
     AccountStatus.HomeDeleted -> stringResource(R.string.networks_home_deleted) to true
     AccountStatus.HomePrivate -> stringResource(R.string.networks_home_private) to true
     AccountStatus.NoRecovery -> stringResource(R.string.networks_no_recovery) to true

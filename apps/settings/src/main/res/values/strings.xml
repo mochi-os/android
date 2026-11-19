@@ -512,6 +512,7 @@
     <string name="networks_account_updated">Account updated</string>
     <string name="networks_update_failed">Could not update the account</string>
     <string name="networks_moved_to">Moved to %1$s</string>
+    <string name="networks_off">Turned off by the server administrator</string>
     <string name="networks_home_deleted">The home feed has been deleted</string>
     <string name="networks_home_private">The home feed is private</string>
     <string name="networks_no_recovery">No recovery key</string>

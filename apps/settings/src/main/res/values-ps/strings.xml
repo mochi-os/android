@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">د فیډ نوم بدل شو</string>
     <string name="notifications_rss_deleted">فیډ وشلید</string>
     <string name="notifications_rss_default_name">RSS فیډ</string>
+    <string name="networks_off">د سرور مدیر لخوا غیرفعال شوی</string>
 </resources>

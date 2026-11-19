@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">සංග්‍රහය නැවත නම් කරන ලදී</string>
     <string name="notifications_rss_deleted">සංග්‍රහය මකන ලදී</string>
     <string name="notifications_rss_default_name">RSS සංග්‍රහය</string>
+    <string name="networks_off">සේවාදායක පරිපාලක විසින් ක්‍රියාවිරහිත කර ඇත</string>
 </resources>

@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">فيڊ جو نالو تبديل ٿيو</string>
     <string name="notifications_rss_deleted">فيڊ ختم ٿي وئي</string>
     <string name="notifications_rss_default_name">RSS فيڊ</string>
+    <string name="networks_off">سرور منتظم پاران بند ڪيو ويو</string>
 </resources>

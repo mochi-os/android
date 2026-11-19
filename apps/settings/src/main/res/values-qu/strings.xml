@@ -673,4 +673,5 @@
     <string name="notifications_rss_renamed">Feedpa sutin hukchasqa</string>
     <string name="notifications_rss_deleted">Feed wischusqa</string>
     <string name="notifications_rss_default_name">RSS feed</string>
+    <string name="networks_off">Servidorpa kamachiqninmi desactivarqan</string>
 </resources>

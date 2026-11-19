@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Η ροή μετονομάστηκε</string>
     <string name="notifications_rss_deleted">Η ροή διαγράφηκε</string>
     <string name="notifications_rss_default_name">Ροή RSS</string>
+    <string name="networks_off">Απενεργοποιήθηκε από τον διαχειριστή του διακομιστή</string>
 </resources>

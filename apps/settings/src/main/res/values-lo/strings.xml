@@ -661,4 +661,5 @@
     <string name="notifications_rss_renamed">ປ່ຽນຊື່ຟີດແລ້ວ</string>
     <string name="notifications_rss_deleted">ລຶບຟີດແລ້ວ</string>
     <string name="notifications_rss_default_name">ຟີດ RSS</string>
+    <string name="networks_off">ຖືກປິດໂດຍຜູ້ດູແລລະບົບເຊີບເວີ</string>
 </resources>

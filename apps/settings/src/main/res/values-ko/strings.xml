@@ -662,4 +662,5 @@
     <string name="notifications_rss_renamed">피드 이름이 변경되었어요</string>
     <string name="notifications_rss_deleted">피드가 삭제되었어요</string>
     <string name="notifications_rss_default_name">RSS 피드</string>
+    <string name="networks_off">서버 관리자가 비활성화함</string>
 </resources>

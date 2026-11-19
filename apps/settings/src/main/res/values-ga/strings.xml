@@ -713,4 +713,5 @@
     <string name="notifications_rss_renamed">Fotha athainmnithe</string>
     <string name="notifications_rss_deleted">Fotha scriosta</string>
     <string name="notifications_rss_default_name">Fotha RSS</string>
+    <string name="networks_off">Múchta ag riarthóir an fhreastalaí</string>
 </resources>

@@ -661,4 +661,5 @@
     <string name="notifications_rss_renamed">Jeneng feed wis diganti</string>
     <string name="notifications_rss_deleted">Feed dibusak</string>
     <string name="notifications_rss_default_name">Feed RSS</string>
+    <string name="networks_off">Dipateni dening administrator server</string>
 </resources>

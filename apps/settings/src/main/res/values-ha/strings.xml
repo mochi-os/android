@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">An sake suna feed</string>
     <string name="notifications_rss_deleted">An share feed</string>
     <string name="notifications_rss_default_name">Ciyarwar RSS</string>
+    <string name="networks_off">Manajan uwar garken ya kashe shi</string>
 </resources>

@@ -662,4 +662,5 @@
     <string name="notifications_rss_renamed">Suapan dinamakan semula</string>
     <string name="notifications_rss_deleted">Suapan dipadam</string>
     <string name="notifications_rss_default_name">Suapan RSS</string>
+    <string name="networks_off">Dimatikan oleh pentadbir pelayan</string>
 </resources>

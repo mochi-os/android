@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Hírcsatorna átnevezve</string>
     <string name="notifications_rss_deleted">Hírcsatorna törölve</string>
     <string name="notifications_rss_default_name">RSS hírfolyam</string>
+    <string name="networks_off">A kiszolgáló rendszergazdája kikapcsolta</string>
 </resources>

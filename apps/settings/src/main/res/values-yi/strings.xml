@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">פֿיד איבערגעטויפֿט</string>
     <string name="notifications_rss_deleted">פֿיד אויסגעמעקט</string>
     <string name="notifications_rss_default_name">RSS פֿיד</string>
+    <string name="networks_off">אויסגעשאַלטן דורך דעם סערווער־אַדמיניסטראַטאָר</string>
 </resources>

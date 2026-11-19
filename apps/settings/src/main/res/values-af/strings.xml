@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Feed hernoem</string>
     <string name="notifications_rss_deleted">Feed verwyder</string>
     <string name="notifications_rss_default_name">RSS-feed</string>
+    <string name="networks_off">Deur die bedieneradministrateur afgeskakel</string>
 </resources>

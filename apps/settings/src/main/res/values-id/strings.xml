@@ -662,4 +662,5 @@
     <string name="notifications_rss_renamed">Nama feed diubah</string>
     <string name="notifications_rss_deleted">Feed dihapus</string>
     <string name="notifications_rss_default_name">Feed RSS</string>
+    <string name="networks_off">Dinonaktifkan oleh administrator server</string>
 </resources>

@@ -691,4 +691,5 @@
     <string name="notifications_rss_renamed">Kanál přejmenován</string>
     <string name="notifications_rss_deleted">Kanál smazán</string>
     <string name="notifications_rss_default_name">RSS kanál</string>
+    <string name="networks_off">Vypnuto správcem serveru</string>
 </resources>

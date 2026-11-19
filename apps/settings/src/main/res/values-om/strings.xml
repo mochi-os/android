@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Feed moggaafame</string>
     <string name="notifications_rss_deleted">Feed haqame</string>
     <string name="notifications_rss_default_name">Feed RSS</string>
+    <string name="networks_off">Bulchaa kaadimaatiin dhaamsifameera</string>
 </resources>

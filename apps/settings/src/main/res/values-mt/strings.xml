@@ -713,4 +713,5 @@
     <string name="notifications_rss_renamed">Il-feed ġiet imsemmija mill-ġdid</string>
     <string name="notifications_rss_deleted">Tħassret il-feed</string>
     <string name="notifications_rss_default_name">Feed RSS</string>
+    <string name="networks_off">Mitfi mill-amministratur tas-server</string>
 </resources>

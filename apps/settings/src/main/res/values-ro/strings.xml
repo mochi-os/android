@@ -687,4 +687,5 @@
     <string name="notifications_rss_renamed">Flux redenumit</string>
     <string name="notifications_rss_deleted">Flux șters</string>
     <string name="notifications_rss_default_name">Flux RSS</string>
+    <string name="networks_off">Dezactivat de administratorul serverului</string>
 </resources>

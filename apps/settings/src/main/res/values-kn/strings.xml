@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">ಫೀಡ್ ಮರುಹೆಸರಿಸಲಾಗಿದೆ</string>
     <string name="notifications_rss_deleted">ಫೀಡ್ ಅಳಿಸಲಾಗಿದೆ</string>
     <string name="notifications_rss_default_name">RSS ಫೀಡ್</string>
+    <string name="networks_off">ಸರ್ವರ್ ನಿರ್ವಾಹಕರು ಆಫ್ ಮಾಡಿದ್ದಾರೆ</string>
 </resources>

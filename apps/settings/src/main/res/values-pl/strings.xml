@@ -700,4 +700,5 @@
     <string name="notifications_rss_renamed">Zmieniono nazwę kanału</string>
     <string name="notifications_rss_deleted">Kanał usunięty</string>
     <string name="notifications_rss_default_name">Kanał RSS</string>
+    <string name="networks_off">Wyłączone przez administratora serwera</string>
 </resources>

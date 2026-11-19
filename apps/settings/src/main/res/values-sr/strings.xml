@@ -687,4 +687,5 @@
     <string name="notifications_rss_renamed">Фид преименован</string>
     <string name="notifications_rss_deleted">Фид обрисан</string>
     <string name="notifications_rss_default_name">RSS фид</string>
+    <string name="networks_off">Искључио администратор сервера</string>
 </resources>

@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Mlisho umebadilishwa jina</string>
     <string name="notifications_rss_deleted">Mlisho umefutwa</string>
     <string name="notifications_rss_default_name">Mlisho wa RSS</string>
+    <string name="networks_off">Imezimwa na msimamizi wa seva</string>
 </resources>

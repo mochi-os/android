@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Streymi endurnefnt</string>
     <string name="notifications_rss_deleted">Streymi eytt</string>
     <string name="notifications_rss_default_name">RSS-straumur</string>
+    <string name="networks_off">Slökkt af kerfisstjóra netþjónsins</string>
 </resources>

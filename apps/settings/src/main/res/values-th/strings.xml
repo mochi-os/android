@@ -662,4 +662,5 @@
     <string name="notifications_rss_renamed">เปลี่ยนชื่อฟีดแล้ว</string>
     <string name="notifications_rss_deleted">ลบฟีดแล้ว</string>
     <string name="notifications_rss_default_name">ฟีด RSS</string>
+    <string name="networks_off">ถูกปิดใช้งานโดยผู้ดูแลระบบเซิร์ฟเวอร์</string>
 </resources>

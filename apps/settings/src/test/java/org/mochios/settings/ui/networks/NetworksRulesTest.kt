@@ -117,16 +117,21 @@ class NetworksRulesTest {
     fun `an account's card says the most pressing thing about it`() {
         val feeds = listOf(NetworkFeed(id = "f", privacy = "private"))
         val base = NetworkAccount(type = "fediverse", hosted = true, server = "a.example")
-        assertEquals(AccountStatus.Failure(NetworkFailure("closed")), accountStatus(base.copy(failure = NetworkFailure("closed"), error = "refused"), feeds))
-        assertEquals(AccountStatus.Failed("refused"), accountStatus(base.copy(error = "refused", moved = "x"), feeds))
-        assertEquals(AccountStatus.Moved("@a@b"), accountStatus(base.copy(moved = "@a@b", home = "gone"), feeds))
-        assertEquals(AccountStatus.HomeDeleted, accountStatus(base.copy(home = "gone"), feeds))
-        assertEquals(AccountStatus.HomePrivate, accountStatus(base.copy(home = "f"), feeds))
-        assertEquals(AccountStatus.NoRecovery, accountStatus(base.copy(type = "bluesky"), feeds))
-        assertEquals(AccountStatus.Server("a.example"), accountStatus(base.copy(type = "bluesky", recovery = true), feeds))
-        assertEquals(AccountStatus.Connected, accountStatus(NetworkAccount(type = "matrix", connected = true), feeds))
-        assertEquals(AccountStatus.Disconnected, accountStatus(NetworkAccount(type = "xmpp"), feeds))
-        assertEquals(AccountStatus.Server("a.example"), accountStatus(base, feeds))
+        val offered = listOf("fediverse", "bluesky", "matrix", "xmpp")
+        assertEquals(AccountStatus.Failure(NetworkFailure("closed")), accountStatus(base.copy(failure = NetworkFailure("closed"), error = "refused"), feeds, offered))
+        assertEquals(AccountStatus.Failed("refused"), accountStatus(base.copy(error = "refused", moved = "x"), feeds, offered))
+        assertEquals(AccountStatus.Moved("@a@b"), accountStatus(base.copy(moved = "@a@b", home = "gone"), feeds, offered))
+        assertEquals(AccountStatus.HomeDeleted, accountStatus(base.copy(home = "gone"), feeds, offered))
+        assertEquals(AccountStatus.HomePrivate, accountStatus(base.copy(home = "f"), feeds, offered))
+        assertEquals(AccountStatus.NoRecovery, accountStatus(base.copy(type = "bluesky"), feeds, offered))
+        assertEquals(AccountStatus.Server("a.example"), accountStatus(base.copy(type = "bluesky", recovery = true), feeds, offered))
+        assertEquals(AccountStatus.Connected, accountStatus(NetworkAccount(type = "matrix", connected = true), feeds, offered))
+        assertEquals(AccountStatus.Disconnected, accountStatus(NetworkAccount(type = "xmpp"), feeds, offered))
+        assertEquals(AccountStatus.Server("a.example"), accountStatus(base, feeds, offered))
+        // A hosted account on a network the server no longer offers says so first;
+        // a linked one is not the server's to switch off.
+        assertEquals(AccountStatus.Off, accountStatus(base.copy(error = "refused"), feeds, listOf("bluesky")))
+        assertEquals(AccountStatus.Failed("refused"), accountStatus(base.copy(hosted = false, error = "refused"), feeds, emptyList()))
     }
 
     @Test

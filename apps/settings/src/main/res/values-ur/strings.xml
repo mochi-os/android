@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">فیڈ کا نام تبدیل ہو گیا</string>
     <string name="notifications_rss_deleted">فیڈ حذف کر دی گئی</string>
     <string name="notifications_rss_default_name">RSS فیڈ</string>
+    <string name="networks_off">سرور منتظم کی جانب سے بند کر دیا گیا</string>
 </resources>

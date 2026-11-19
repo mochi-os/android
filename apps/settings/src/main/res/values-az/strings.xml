@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Lentin adı dəyişdirildi</string>
     <string name="notifications_rss_deleted">Lent silindi</string>
     <string name="notifications_rss_default_name">RSS lenti</string>
+    <string name="networks_off">Server administratoru tərəfindən söndürülüb</string>
 </resources>
