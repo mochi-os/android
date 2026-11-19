@@ -29,6 +29,7 @@ import org.mochios.android.model.Comment
 import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
@@ -60,7 +61,7 @@ internal fun AttachmentComments(
     val editCommentText by viewModel.editCommentText.collectAsState()
     val currentUserId by viewModel.currentUserId.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
-    val commentText by viewModel.commentText.collectAsState()
+    val commentText = viewModel.commentText.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
     val commentUpload by viewModel.commentUpload.collectAsState()
@@ -143,30 +144,32 @@ internal fun AttachmentComments(
             // Looked for in the whole thread: a reply to a comment that is not
             // about this image still shows its banner.
             val replyTarget = findComment(post.comments, replyingTo)
-            ComposeBar(
-                value = commentText,
-                onValueChange = { viewModel.setCommentText(it) },
-                onSend = { viewModel.sendComment(anchor = attachmentId) },
-                placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
-                isSending = isSendingComment,
-                upload = commentUpload,
-                sendLabel = stringResource(R.string.feeds_send),
-                attachments = feedsCommentAttachments(
-                    attachments = commentAttachments,
-                    onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
-                    onRemove = { viewModel.removeCommentAttachment(it) },
-                    resolveFileName = viewModel::fileName,
-                ),
-                // A comment needs a body; attachments alone will not do.
-                requireText = true,
-                onSearchMentions = { viewModel.searchMembers(it) },
-                windowInsets = ComposeBarDefaults.NoWindowInsets,
-                banner = feedsReplyBanner(
-                    replyTarget,
-                    { viewModel.setReplyingTo(null) },
-                ),
-                focusRequester = rememberReplyFocus(replyTarget?.id),
-            )
+            Reading(commentText) { text ->
+                ComposeBar(
+                    value = text,
+                    onValueChange = { viewModel.setCommentText(it) },
+                    onSend = { viewModel.sendComment(anchor = attachmentId) },
+                    placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
+                    isSending = isSendingComment,
+                    upload = commentUpload,
+                    sendLabel = stringResource(R.string.feeds_send),
+                    attachments = feedsCommentAttachments(
+                        attachments = commentAttachments,
+                        onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                        onRemove = { viewModel.removeCommentAttachment(it) },
+                        resolveFileName = viewModel::fileName,
+                    ),
+                    // A comment needs a body; attachments alone will not do.
+                    requireText = true,
+                    onSearchMentions = { viewModel.searchMembers(it) },
+                    windowInsets = ComposeBarDefaults.NoWindowInsets,
+                    banner = feedsReplyBanner(
+                        replyTarget,
+                        { viewModel.setReplyingTo(null) },
+                    ),
+                    focusRequester = rememberReplyFocus(replyTarget?.id),
+                )
+            }
         }
     }
 }

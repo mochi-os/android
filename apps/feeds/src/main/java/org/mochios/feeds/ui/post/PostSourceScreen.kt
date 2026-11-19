@@ -61,6 +61,7 @@ import androidx.compose.material3.rememberBottomSheetScaffoldState
 import androidx.compose.material3.rememberStandardBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.State
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -92,6 +93,7 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.rememberCollapsedComments
 import org.mochios.android.ui.components.rememberReplyFocus
 import org.mochios.android.util.shareLink
@@ -124,7 +126,7 @@ fun PostSourceScreen(
     val context = LocalContext.current
     val post by viewModel.post.collectAsState()
     val permissions by viewModel.permissions.collectAsState()
-    val commentText by viewModel.commentText.collectAsState()
+    val commentText = viewModel.commentText.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
     val commentUpload by viewModel.commentUpload.collectAsState()
@@ -525,7 +527,7 @@ private fun LoadErrorOverlay(
 private fun PostSourceSheet(
     viewModel: PostDetailViewModel,
     permissions: org.mochios.feeds.model.Permissions,
-    commentText: String,
+    commentText: State<String>,
     onCommentTextChange: (String) -> Unit,
     commentAttachments: List<android.net.Uri>,
     onAddAttachments: (List<Uri>) -> Unit,
@@ -630,33 +632,35 @@ private fun PostSourceSheet(
 
         if (permissions.comment) {
             val replyTarget = findComment(post?.comments.orEmpty(), replyingTo)
-            ComposeBar(
-                value = commentText,
-                onValueChange = onCommentTextChange,
-                onSend = onSendComment,
-                isSending = isSendingComment,
-                upload = commentUpload,
-                sendLabel = stringResource(R.string.feeds_send),
-                attachments = feedsCommentAttachments(
-                    attachments = commentAttachments,
-                    onAdd = onAddAttachments,
-                    onRemove = onRemoveAttachment,
-                    resolveFileName = resolveFileName,
-                ),
-                // A comment needs a body; attachments alone will not do.
-                requireText = true,
-                onSearchMentions = onSearchMembers,
-                // BottomSheetScaffold does not lift its sheet content for the
-                // keyboard the way ModalBottomSheet does, so this bar has to
-                // consume the inset itself - without it the keyboard covers
-                // the field completely.
-                windowInsets = ComposeBarDefaults.WindowInsets,
-                banner = feedsReplyBanner(
-                    replyTarget,
-                    onCancelReply,
-                ),
-                focusRequester = rememberReplyFocus(replyTarget?.id),
-            )
+            Reading(commentText) { text ->
+                ComposeBar(
+                    value = text,
+                    onValueChange = onCommentTextChange,
+                    onSend = onSendComment,
+                    isSending = isSendingComment,
+                    upload = commentUpload,
+                    sendLabel = stringResource(R.string.feeds_send),
+                    attachments = feedsCommentAttachments(
+                        attachments = commentAttachments,
+                        onAdd = onAddAttachments,
+                        onRemove = onRemoveAttachment,
+                        resolveFileName = resolveFileName,
+                    ),
+                    // A comment needs a body; attachments alone will not do.
+                    requireText = true,
+                    onSearchMentions = onSearchMembers,
+                    // BottomSheetScaffold does not lift its sheet content for the
+                    // keyboard the way ModalBottomSheet does, so this bar has to
+                    // consume the inset itself - without it the keyboard covers
+                    // the field completely.
+                    windowInsets = ComposeBarDefaults.WindowInsets,
+                    banner = feedsReplyBanner(
+                        replyTarget,
+                        onCancelReply,
+                    ),
+                    focusRequester = rememberReplyFocus(replyTarget?.id),
+                )
+            }
         }
     }
 }

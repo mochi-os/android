@@ -110,6 +110,7 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.PostTagsButton as SharedPostTagsButton
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.TagItem
 import org.mochios.android.ui.components.VideoEmbed
 import org.mochios.android.ui.components.extractVideos
@@ -162,7 +163,7 @@ fun PostDetailScreen(
     val permissions by viewModel.permissions.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
-    val commentText by viewModel.commentText.collectAsState()
+    val commentText = viewModel.commentText.collectAsState()
     val commentAttachments by viewModel.commentAttachments.collectAsState()
     val isSendingComment by viewModel.isSendingComment.collectAsState()
     val commentUpload by viewModel.commentUpload.collectAsState()
@@ -308,29 +309,31 @@ fun PostDetailScreen(
         },
         bottomBar = {
             if (permissions.comment) {
-                ComposeBar(
-                    value = commentText,
-                    onValueChange = { viewModel.setCommentText(it) },
-                    onSend = { viewModel.sendComment() },
-                    isSending = isSendingComment,
-                    upload = commentUpload,
-                    sendLabel = stringResource(R.string.feeds_send),
-                    windowInsets = ComposeBarDefaults.WindowInsets,
-                    attachments = feedsCommentAttachments(
-                        attachments = commentAttachments,
-                        onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
-                        onRemove = { viewModel.removeCommentAttachment(it) },
-                        resolveFileName = viewModel::fileName,
-                    ),
-                    // A comment needs a body; attachments alone will not do.
-                    requireText = true,
-                    onSearchMentions = { viewModel.searchMembers(it) },
-                    banner = feedsReplyBanner(
-                        replyTarget,
-                        { viewModel.setReplyingTo(null) },
-                    ),
-                    focusRequester = rememberReplyFocus(replyTarget?.id),
-                )
+                Reading(commentText) { text ->
+                    ComposeBar(
+                        value = text,
+                        onValueChange = { viewModel.setCommentText(it) },
+                        onSend = { viewModel.sendComment() },
+                        isSending = isSendingComment,
+                        upload = commentUpload,
+                        sendLabel = stringResource(R.string.feeds_send),
+                        windowInsets = ComposeBarDefaults.WindowInsets,
+                        attachments = feedsCommentAttachments(
+                            attachments = commentAttachments,
+                            onAdd = { uris -> uris.forEach { viewModel.addCommentAttachment(it) } },
+                            onRemove = { viewModel.removeCommentAttachment(it) },
+                            resolveFileName = viewModel::fileName,
+                        ),
+                        // A comment needs a body; attachments alone will not do.
+                        requireText = true,
+                        onSearchMentions = { viewModel.searchMembers(it) },
+                        banner = feedsReplyBanner(
+                            replyTarget,
+                            { viewModel.setReplyingTo(null) },
+                        ),
+                        focusRequester = rememberReplyFocus(replyTarget?.id),
+                    )
+                }
             }
         }
     ) { paddingValues ->
