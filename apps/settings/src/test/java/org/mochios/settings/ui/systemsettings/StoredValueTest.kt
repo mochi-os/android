@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.systemsettings
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -56,5 +57,16 @@ class StoredValueTest {
     fun `an ordinary setting ignores set when it contradicts the value`() {
         val plain = SystemSetting(name = "hostname", value = "mochi.test", set = false)
         assertTrue(hasStoredValue(plain))
+    }
+
+    /** The network switches read alphabetically by the networks' names, Bluesky's labellers after its own. */
+    @Test
+    fun `the network settings are listed alphabetically by network`() {
+        val sent = listOf("xmpp", "labelers", "matrix", "handles", "bluesky", "fediverse", "description")
+            .map { SystemSetting(name = it) }
+        assertEquals(
+            listOf("handles", "fediverse", "bluesky", "labelers", "matrix", "xmpp"),
+            networkSettings(sent).map { it.name },
+        )
     }
 }

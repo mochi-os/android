@@ -37,7 +37,7 @@ import org.mochios.settings.ui.networks.networkLabel
 import org.mochios.android.R as MochiR
 
 /** The networks in their standard order. */
-private val NETWORK_ORDER = listOf("fediverse", "bluesky", "xmpp", "matrix")
+private val NETWORK_ORDER = listOf("fediverse", "bluesky", "matrix", "xmpp")
 
 /**
  * The other networks on the Status screen (the federation plan, phase 10):

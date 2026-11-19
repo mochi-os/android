@@ -11,6 +11,7 @@ import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.getBoundsInRoot
 import androidx.compose.ui.test.onAllNodesWithText
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
@@ -118,6 +119,13 @@ class OwnerScreensTest {
             ).joinToString(" · "),
         ).assertExists()
         rule.onNodeWithText(text(R.string.system_status_rooms_unreachable)).assertExists()
+    }
+
+    @Test
+    fun `the networks read alphabetically by their names, whatever order the server sends`() {
+        rule.setContent { OtherNetworksSections(networks = networks, replacing = null, onReplace = {}) }
+        val tops = listOf("ActivityPub", "Bluesky", "Matrix", "XMPP").map { rule.onAllNodesWithText(it)[0].getBoundsInRoot().top }
+        assertEquals(tops.sortedBy { it.value }, tops)
     }
 
     @Test
