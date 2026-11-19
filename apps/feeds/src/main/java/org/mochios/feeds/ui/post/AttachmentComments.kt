@@ -95,7 +95,8 @@ internal fun AttachmentComments(
                     )
                 }
             }
-            items(shown.size, key = { shown[it].comment.id }) { index ->
+            // A commenter chooses the id; prefixed, it cannot take the key of a fixed row.
+            items(shown.size, key = { "comment/" + shown[it].comment.id }) { index ->
                 val row = shown[index]
                 val comment = row.comment
                 CommentItem(

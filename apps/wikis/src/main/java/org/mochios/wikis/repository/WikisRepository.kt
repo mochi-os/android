@@ -14,12 +14,14 @@ import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
+import org.mochios.android.util.segment
 import org.mochios.wikis.api.WikisApi
 import org.mochios.wikis.model.RssTokenResponse
 import org.mochios.wikis.model.DirectoryEntry
@@ -92,6 +94,15 @@ class WikisRepository @Inject constructor(
 ) : FileRepository(fileStore) {
 
     private val text = "text/plain".toMediaTypeOrNull()
+
+    /**
+     * A wiki, page or tag escaped as one segment of a request path. [WikisApi]
+     * takes these already encoded, and the server decodes a path before it
+     * routes, so a slug a link in a page made of "home/delete" would name
+     * another action and run it with the reader's token. One that cannot be a
+     * segment is answered as a page that is not there, and nothing is sent.
+     */
+    private fun escaped(value: String): String = segment(value) ?: throw MochiError.NotFoundError()
 
     // ---- Wiki class-level ----
 
@@ -226,7 +237,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getInfo(wiki: String): WikiInfoResponse {
         return try {
-            api.getInfo(wiki).unwrap()
+            api.getInfo(escaped(wiki)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -234,7 +245,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun unsubscribeWiki(wiki: String) {
         try {
-            api.unsubscribe(wiki).unwrap()
+            api.unsubscribe(escaped(wiki)).unwrap()
             // Drop it from the cached list too, so a sidebar that isn't
             // reloading doesn't keep offering a wiki the user just left.
             _wikiList.value = _wikiList.value.filterNot { it.id == wiki || it.fingerprint == wiki }
@@ -246,7 +257,7 @@ class WikisRepository @Inject constructor(
     /** The wiki's shareable link, built by the server. */
     suspend fun shareWiki(wiki: String): String {
         return try {
-            api.share(wiki).unwrap().link
+            api.share(escaped(wiki)).unwrap().link
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -254,7 +265,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun syncWiki(wiki: String) {
         try {
-            api.sync(wiki).unwrap()
+            api.sync(escaped(wiki)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -262,7 +273,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun deleteWiki(wiki: String) {
         try {
-            api.deleteWiki(wiki).unwrap()
+            api.deleteWiki(escaped(wiki)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -270,7 +281,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun renameWiki(wiki: String, name: String) {
         try {
-            api.renameWiki(wiki, name).unwrap()
+            api.renameWiki(escaped(wiki), name).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -278,7 +289,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getSettings(wiki: String): SettingsResponse {
         return try {
-            api.getSettings(wiki).unwrap()
+            api.getSettings(escaped(wiki)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -286,7 +297,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun setSetting(wiki: String, name: String, value: String) {
         try {
-            api.setSetting(wiki, name, value).unwrap()
+            api.setSetting(escaped(wiki), name, value).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -294,7 +305,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getReplicas(wiki: String): List<Replica> {
         return try {
-            api.listReplicas(wiki).unwrap().replicas
+            api.listReplicas(escaped(wiki)).unwrap().replicas
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -302,7 +313,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun removeReplica(wiki: String, replica: String) {
         try {
-            api.removeReplica(wiki, replica).unwrap()
+            api.removeReplica(escaped(wiki), replica).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -310,7 +321,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getAccess(wiki: String): List<AccessRule> {
         return try {
-            api.listAccess(wiki).unwrap().rules
+            api.listAccess(escaped(wiki)).unwrap().rules
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -318,7 +329,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun setAccess(wiki: String, subject: String, level: String) {
         try {
-            api.setAccess(wiki, subject, level).unwrap()
+            api.setAccess(escaped(wiki), subject, level).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -326,7 +337,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun revokeAccess(wiki: String, subject: String) {
         try {
-            api.revokeAccess(wiki, subject).unwrap()
+            api.revokeAccess(escaped(wiki), subject).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -350,7 +361,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getRedirects(wiki: String): List<Redirect> {
         return try {
-            api.listRedirects(wiki).unwrap().redirects
+            api.listRedirects(escaped(wiki)).unwrap().redirects
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -358,7 +369,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun setRedirect(wiki: String, source: String, target: String) {
         try {
-            api.setRedirect(wiki, source, target).unwrap()
+            api.setRedirect(escaped(wiki), source, target).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -366,7 +377,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun deleteRedirect(wiki: String, source: String) {
         try {
-            api.deleteRedirect(wiki, source).unwrap()
+            api.deleteRedirect(escaped(wiki), source).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -388,7 +399,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getPage(wiki: String, slug: String): PageFetchResponse {
         return try {
-            api.getPage(wiki, slug).unwrap()
+            api.getPage(escaped(wiki), escaped(slug)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -402,7 +413,7 @@ class WikisRepository @Inject constructor(
         comment: String,
     ): PageEditResponse {
         return try {
-            api.editPage(wiki, slug, title, content, comment).unwrap()
+            api.editPage(escaped(wiki), escaped(slug), title, content, comment).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -415,7 +426,7 @@ class WikisRepository @Inject constructor(
         content: String,
     ): NewPageResponse {
         return try {
-            api.createPage(wiki, slug, title, content).unwrap()
+            api.createPage(escaped(wiki), slug, title, content).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -423,7 +434,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun deletePage(wiki: String, slug: String): PageDeleteResponse {
         return try {
-            api.deletePage(wiki, slug).unwrap()
+            api.deletePage(escaped(wiki), escaped(slug)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -437,11 +448,10 @@ class WikisRepository @Inject constructor(
     ): RenamePageResult {
         return try {
             val r = api.renamePage(
-                wiki = wiki,
-                page = slug,
+                wiki = escaped(wiki),
+                page = escaped(slug),
                 slug = newSlug,
-                redirects = if (createRedirect) "true" else "false",
-            ).unwrap()
+                redirects = if (createRedirect) "true" else "false").unwrap()
             RenamePageResult(
                 renamed = r.renamed.map { it.new },
                 updatedLinks = r.links.updated,
@@ -458,7 +468,7 @@ class WikisRepository @Inject constructor(
         comment: String,
     ): PageRevertResponse {
         return try {
-            api.revertPage(wiki, slug, version, comment).unwrap()
+            api.revertPage(escaped(wiki), escaped(slug), version, comment).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -466,7 +476,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getHistory(wiki: String, slug: String, limit: Int, offset: Int): PageHistoryResponse {
         return try {
-            api.getPageHistory(wiki, slug, limit, offset).unwrap()
+            api.getPageHistory(escaped(wiki), escaped(slug), limit, offset).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -478,7 +488,7 @@ class WikisRepository @Inject constructor(
         version: Int,
     ): PageRevisionResponse {
         return try {
-            api.getPageRevision(wiki, slug, version).unwrap()
+            api.getPageRevision(escaped(wiki), escaped(slug), version).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -488,7 +498,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getTags(wiki: String): List<Tag> {
         return try {
-            api.listTags(wiki).unwrap().tags
+            api.listTags(escaped(wiki)).unwrap().tags
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -496,7 +506,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getPagesForTag(wiki: String, tag: String): TagPagesResponse {
         return try {
-            api.listTagPages(wiki, tag).unwrap()
+            api.listTagPages(escaped(wiki), escaped(tag)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -504,7 +514,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun addTag(wiki: String, slug: String, tag: String) {
         try {
-            api.addTag(wiki, slug, tag).unwrap()
+            api.addTag(escaped(wiki), escaped(slug), tag).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -512,7 +522,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun removeTag(wiki: String, slug: String, tag: String) {
         try {
-            api.removeTag(wiki, slug, tag).unwrap()
+            api.removeTag(escaped(wiki), escaped(slug), tag).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -522,7 +532,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun search(wiki: String, query: String): SearchResponse {
         return try {
-            api.search(wiki, query).unwrap()
+            api.search(escaped(wiki), query).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -530,7 +540,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getChanges(wiki: String, limit: Int, offset: Int): ChangesResponse {
         return try {
-            api.getChanges(wiki, limit, offset).unwrap()
+            api.getChanges(escaped(wiki), limit, offset).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -540,7 +550,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getComments(wiki: String, slug: String): CommentsResponse {
         return try {
-            api.getPageComments(wiki, slug).unwrap()
+            api.getPageComments(escaped(wiki), escaped(slug)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -559,12 +569,11 @@ class WikisRepository @Inject constructor(
             val parentPart = parent?.toRequestBody(text)
             val fileParts = files.orEmpty().map { multipart("files", it, tracker) }
             api.createComment(
-                wiki = wiki,
-                page = slug,
+                wiki = escaped(wiki),
+                page = escaped(slug),
                 body = bodyPart,
                 parent = parentPart,
-                files = fileParts,
-            ).unwrap()
+                files = fileParts).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -577,7 +586,7 @@ class WikisRepository @Inject constructor(
         body: String,
     ): CommentEditResponse {
         return try {
-            api.editComment(wiki, slug, id, body).unwrap()
+            api.editComment(escaped(wiki), escaped(slug), id, body).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -585,7 +594,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun deleteComment(wiki: String, slug: String, id: String) {
         try {
-            api.deleteComment(wiki, slug, id).unwrap()
+            api.deleteComment(escaped(wiki), escaped(slug), id).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -595,7 +604,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun getAttachments(wiki: String, slug: String): List<Attachment> {
         return try {
-            api.listAttachments(wiki, slug).unwrap().attachments
+            api.listAttachments(escaped(wiki), slug).unwrap().attachments
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -608,7 +617,7 @@ class WikisRepository @Inject constructor(
     ): List<Attachment> {
         return try {
             val fileParts = files.map { multipart("files", it, tracker) }
-            api.uploadAttachments(wiki, fileParts).unwrap().attachments
+            api.uploadAttachments(escaped(wiki), fileParts).unwrap().attachments
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -616,7 +625,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun updateAttachment(wiki: String, id: String, caption: String): Attachment {
         return try {
-            api.updateAttachment(wiki, id, caption).unwrap().attachment
+            api.updateAttachment(escaped(wiki), id, caption).unwrap().attachment
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -624,7 +633,7 @@ class WikisRepository @Inject constructor(
 
     suspend fun deleteAttachment(wiki: String, id: String) {
         try {
-            api.deleteAttachment(wiki, id).unwrap()
+            api.deleteAttachment(escaped(wiki), id).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

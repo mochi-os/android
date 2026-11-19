@@ -775,10 +775,11 @@ interface ForumsApi {
 
     // entity scopes the token (a forum id); mode is "posts" or "all" — both
     // required by the server (action_rss_token).
-    @GET("-/rss/token")
+    @FormUrlEncoded
+    @POST("-/rss/token")
     suspend fun getRssToken(
-        @Query("entity") entity: String,
-        @Query("mode") mode: String,
+        @Field("entity") entity: String,
+        @Field("mode") mode: String,
     ): Response<ApiResponse<RssTokenResponse>>
 
     @FormUrlEncoded

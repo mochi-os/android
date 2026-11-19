@@ -19,8 +19,8 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import javax.inject.Singleton
 
-// install=true on `-/system/update` triggers a Windows self-install and is a
-// no-op elsewhere.
+// `-/system/update/install` triggers a Windows self-install and is a no-op
+// elsewhere. It is its own action, so only a POST reaches it.
 
 data class SystemUpdateInfo(
     val available: Boolean = false,
@@ -97,10 +97,9 @@ interface SystemStatusApi {
     suspend fun getPeers(): Response<SystemPeersData>
 
     @FormUrlEncoded
-    @POST("settings/-/system/update")
+    @POST("settings/-/system/update/install")
     suspend fun installUpdate(
         @Field("token") token: String,
-        @Field("install") install: String = "true",
     ): Response<Unit>
 }
 

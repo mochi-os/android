@@ -515,7 +515,8 @@ internal fun PostDetailContent(
                             )
                         }
                     }
-                    items(rows.size, key = { rows[it].comment.id }) { index ->
+                    // A commenter chooses the id; prefixed, it cannot take the key of a fixed row.
+                    items(rows.size, key = { "comment/" + rows[it].comment.id }) { index ->
                         val row = rows[index]
                         val comment = row.comment
                         CommentItem(

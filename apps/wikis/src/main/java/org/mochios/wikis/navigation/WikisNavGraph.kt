@@ -38,11 +38,10 @@ object WikisApp {
 
     // ---- Builders for entity-context routes ----
     //
-    // Slugs and tags are percent-encoded. Nothing on the P2P event path holds a
-    // slug to the URL-safe set - `page/create` and the sync dump both accept a
-    // slug with `/`, `?` or `#` in it - and an unencoded one of those silently
-    // becomes extra path segments or a query string, so the route matches a
-    // different screen or none at all.
+    // Slugs and tags are percent-encoded. The server holds both to letters,
+    // digits, `-` and `_`, but a link in a page's body becomes a slug, and an
+    // unencoded `/`, `?` or `#` in it would become extra path segments or a
+    // query string, so the route would match a different screen or none at all.
     fun wikiHome(wikiId: String) = "wikis/${segment(wikiId)}"
     fun pageView(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}"
     fun pageEdit(wikiId: String, page: String) = "wikis/${segment(wikiId)}/${segment(page)}/edit"

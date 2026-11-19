@@ -381,7 +381,9 @@ data class CommentRow<T>(val comment: T, val depth: Int, val parent: String?, va
 
 /**
  * A thread in reading order, each comment followed by its replies, leaving out
- * the replies of every comment in [collapsed].
+ * the replies of every comment in [collapsed]. A comment whose id has already
+ * been listed is left out with its replies: ids come from peers, and a list
+ * keyed by them cannot hold one twice.
  */
 fun <T> commentRows(
     roots: List<T>,
@@ -390,9 +392,11 @@ fun <T> commentRows(
     collapsed: Set<String> = emptySet(),
 ): List<CommentRow<T>> {
     val rows = mutableListOf<CommentRow<T>>()
+    val seen = mutableSetOf<String>()
     fun walk(comments: List<T>, depth: Int, parent: String?) {
         for (comment in comments) {
             val key = id(comment)
+            if (!seen.add(key)) continue
             rows.add(CommentRow(comment, depth, parent, replyCount(comment, children)))
             if (key !in collapsed) walk(children(comment), depth + 1, key)
         }
