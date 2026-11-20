@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Otvoreno</string>
     <string name="projects_request_status_merged">Spojeno</string>
     <string name="projects_request_merge">Spoji</string>
-    <string name="projects_request_close">Zatvori</string>
     <string name="projects_request_merge_dialog_title">Spoji</string>
     <string name="projects_request_method">Metoda</string>
     <string name="projects_request_method_merge">Spoji</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Jeste li sigurni da želite izbrisati ovaj projekt? Svi objekti, komentari i postavke bit će trajno uklonjeni.</string>
     <string name="projects_object_unwatch">Prestani pratiti</string>
     <string name="projects_object_delete_title">Izbriši objekt</string>
-    <string name="projects_object_delete_message">Jeste li sigurni da želite izbrisati ovaj objekt? Ovu radnju nije moguće poništiti.</string>
     <string name="projects_parent_none">Nema nadređenog</string>
     <string name="projects_links_empty">Nema poveznica</string>
     <string name="projects_links_section_relates">Povezano s</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Nema privitaka</string>
     <string name="projects_attachment_default_name">privitak</string>
     <string name="projects_request_new">Novi zahtjev za spajanje</string>
-    <string name="projects_request_status_closed">Zatvoreno</string>
     <string name="projects_request_back_to_list">Natrag na popis</string>
     <string name="projects_request_repository">Repozitorij: %1$s</string>
     <string name="projects_request_source">Izvor: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Oblikuj, izradi, uredi, komentiraj i pregledaj</string>
     <string name="projects_access_role_write">Izradi, uredi, komentiraj i pregledaj</string>
     <string name="projects_all_projects">Svi projekti</string>
-    <string name="projects_create_allow_search">Dopusti svima pretraživanje projekta</string>
     <string name="projects_create_import_backup">Uvoz iz sigurnosne kopije (neobavezno)</string>
     <string name="projects_create_upload_json">Učitaj .json datoteku</string>
     <string name="projects_settings_not_set">Nije postavljeno</string>
@@ -333,4 +329,16 @@
     <string name="projects_create_object_no_types">Još se ne mogu kreirati nikakvi tipovi stavki. Prvo kreirajte potrebne nadređene stavke.</string>
     <string name="projects_create_blocked_no_options">Nije moguće stvoriti: %1$s je obavezno, ali nema opcija za odabir. Dodajte opcije u Dizajnu.</string>
     <string name="projects_attachment_remove">Ukloni privitak</string>
+    <string name="projects_create_allow_public">Dopusti svima da pregledavaju i komentiraju projekt</string>
+    <string name="projects_request_delete_title">Obriši zahtjev za spajanje</string>
+    <string name="projects_request_delete_message">Jeste li sigurni da želite obrisati ovaj zahtjev za spajanje?</string>
+    <string name="projects_board_delete_column_title">Obriši stupac</string>
+    <string name="projects_board_delete_column_message">Jeste li sigurni da želite obrisati stupac \"%1$s\"? Ovo se ne može poništiti.</string>
+    <string name="projects_object_delete_named">Jeste li sigurni da želite obrisati \"%1$s\"? Ova radnja se ne može poništiti.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Jeste li sigurni da želite obrisati \"%1$s\" i %2$s stavku ispod nje? Ova radnja se ne može poništiti.</item>
+        <item quantity="few">Jeste li sigurni da želite obrisati \"%1$s\" i %2$s stavke ispod nje? Ova radnja se ne može poništiti.</item>
+        <item quantity="other">Jeste li sigurni da želite obrisati \"%1$s\" i %2$s stavki ispod nje? Ova radnja se ne može poništiti.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nije moguće priložiti: %1$s</string>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Отворен</string>
     <string name="projects_request_status_merged">Слят</string>
     <string name="projects_request_merge">Слей</string>
-    <string name="projects_request_close">Затвори</string>
     <string name="projects_request_merge_dialog_title">Слей</string>
     <string name="projects_request_method">Метод</string>
     <string name="projects_request_method_merge">Слей</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">Сигурни ли сте, че искате да изтриете този проект? Всички обекти, коментари и настройки ще бъдат премахнати завинаги.</string>
     <string name="projects_object_unwatch">Спри наблюдението</string>
     <string name="projects_object_delete_title">Изтриване на обект</string>
-    <string name="projects_object_delete_message">Сигурни ли сте, че искате да изтриете този обект? Това действие не може да бъде отменено.</string>
     <string name="projects_parent_none">Без родител</string>
     <string name="projects_links_empty">Няма връзки</string>
     <string name="projects_links_section_relates">Свързано с</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Няма прикачени файлове</string>
     <string name="projects_attachment_default_name">прикачен файл</string>
     <string name="projects_request_new">Нова заявка за сливане</string>
-    <string name="projects_request_status_closed">Затворена</string>
     <string name="projects_request_back_to_list">Назад към списъка</string>
     <string name="projects_request_repository">Хранилище: %1$s</string>
     <string name="projects_request_source">Източник: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Проектиране, създаване, редактиране, коментиране и преглед</string>
     <string name="projects_access_role_write">Създаване, редактиране, коментиране и преглед</string>
     <string name="projects_all_projects">Всички проекти</string>
-    <string name="projects_create_allow_search">Позволи на всеки да търси проекта</string>
     <string name="projects_create_import_backup">Импортиране от резервно копие (по избор)</string>
     <string name="projects_create_upload_json">Качи .json файл</string>
     <string name="projects_settings_not_set">Не е зададен</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Все още не може да се създават типове елементи. Първо създайте необходимите родителски елементи.</string>
     <string name="projects_create_blocked_no_options">Не може да се създаде: %1$s е задължително, но няма опции за избор. Добавете опции в Дизайн.</string>
     <string name="projects_attachment_remove">Премахване на прикачения файл</string>
+    <string name="projects_create_allow_public">Позволи на всеки да преглежда и коментира проекта</string>
+    <string name="projects_request_delete_title">Изтрий заявката за сливане</string>
+    <string name="projects_request_delete_message">Сигурни ли сте, че искате да изтриете тази заявка за сливане?</string>
+    <string name="projects_board_delete_column_title">Изтрий колоната</string>
+    <string name="projects_board_delete_column_message">Сигурни ли сте, че искате да изтриете колоната \"%1$s\"? Това не може да бъде отменено.</string>
+    <string name="projects_object_delete_named">Сигурни ли сте, че искате да изтриете \"%1$s\"? Това действие не може да бъде отменено.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Сигурни ли сте, че искате да изтриете \"%1$s\" и %2$s елемент под него? Това действие не може да бъде отменено.</item>
+        <item quantity="other">Сигурни ли сте, че искате да изтриете \"%1$s\" и %2$s елемента под него? Това действие не може да бъде отменено.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Неуспешно прикачване: %1$s</string>
 </resources>

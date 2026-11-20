@@ -50,10 +50,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
@@ -173,8 +175,8 @@ fun CreateObjectScreen(
     }
 
     // Per-field values entered on the form, keyed by field id. The title
-    // field's value is sent as the object's title on create; the rest are
-    // applied one per request afterwards, mirroring web's create-object flow.
+    // field's value is sent as the object's title; the rest go as the
+    // create's values, in the same request.
     val fieldValues = remember { mutableStateMapOf<String, String>() }
     val classFields = fields[selectedClassId].orEmpty().sortedBy { field -> field.rank }
     val classOptions = options[selectedClassId].orEmpty()
@@ -242,6 +244,10 @@ fun CreateObjectScreen(
     // is the way out.
     val blockedNoParent = creatable.isEmpty()
 
+    // Once a Create has made the object, its fields are the object's own: a
+    // retry only sends the attachments that did not arrive.
+    val editable = !uiState.isCreating && uiState.made == null
+
     val canCreate = details != null && selectedClassId.isNotBlank() &&
         !blockedNoParent && (!required || selectedParentId != null) &&
         !missingRequired && !uiState.isCreating
@@ -271,8 +277,18 @@ fun CreateObjectScreen(
                             .padding(horizontal = 16.dp, vertical = 12.dp)
                     ) {
                         uiState.createError?.let { error ->
+                            val failed = uiState.failedAttachments
                             Text(
-                                text = error.userMessage(),
+                                text = if (failed > 0) {
+                                    pluralStringResource(
+                                        R.plurals.crm_create_attachments_failed,
+                                        failed,
+                                        LocalFormat.current.formatNumber(failed),
+                                        error.userMessage(),
+                                    )
+                                } else {
+                                    error.userMessage()
+                                },
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.error
                             )
@@ -369,7 +385,7 @@ fun CreateObjectScreen(
                                         .orEmpty(),
                                     onValueChange = {},
                                     readOnly = true,
-                                    enabled = !uiState.isCreating,
+                                    enabled = editable,
                                     label = {
                                         Text(stringResource(R.string.crm_create_object_type))
                                     },
@@ -422,7 +438,7 @@ fun CreateObjectScreen(
                                     value = selectedParentLabel,
                                     onValueChange = {},
                                     readOnly = true,
-                                    enabled = !uiState.isCreating,
+                                    enabled = editable,
                                     label = {
                                         Text(stringResource(R.string.crm_create_object_parent))
                                     },
@@ -477,7 +493,7 @@ fun CreateObjectScreen(
                                 field = field,
                                 value = fieldValues[field.id],
                                 options = classOptions[field.id] ?: emptyList(),
-                                canWrite = !uiState.isCreating,
+                                canWrite = editable,
                                 people = uiState.people,
                                 onValueChange = { value -> fieldValues[field.id] = value },
                                 onSearchUsers = { query -> viewModel.searchPeople(query) }

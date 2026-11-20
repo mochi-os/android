@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">Opravdu chcete smazat tento CRM? Všechny objekty, komentáře a nastavení budou trvale odstraněny.</string>
     <string name="crm_object_unwatch">Přestat sledovat</string>
     <string name="crm_object_delete_title">Smazat objekt</string>
-    <string name="crm_object_delete_message">Opravdu chcete smazat tento objekt? Tuto akci nelze vrátit zpět.</string>
     <string name="crm_parent_none">Bez nadřazeného</string>
     <string name="crm_links_empty">Žádné odkazy</string>
     <string name="crm_links_section_relates">Souvisí s</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Import ze zálohy (volitelné)</string>
     <string name="crm_export">Exportovat data</string>
     <string name="crm_exporting">Připravuje se export…</string>
-    <string name="crm_create_allow_search">Povolit komukoli vyhledávat CRM</string>
     <string name="crm_no_crms_found">Žádná CRM nenalezena</string>
     <string name="crm_create_blocked_no_parents">Zatím nelze vytvořit žádné typy položek. Nejprve vytvořte potřebné nadřazené položky.</string>
     <string name="crm_export_csv">Exportovat CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">Ukázka %1$s</string>
     <string name="crm_option_delete_title">Smazat možnost</string>
     <string name="crm_option_delete_message">Opravdu chcete smazat možnost \"%1$s\"?</string>
+    <string name="crm_create_public">Povolit komukoli zobrazit CRM a komentovat ho</string>
+    <string name="crm_board_delete_column">Smazat sloupec</string>
+    <string name="crm_board_delete_column_message">Opravdu chcete smazat sloupec „%1$s“? Tuto akci nelze vrátit zpět.</string>
+    <string name="crm_object_delete_named">Opravdu chcete smazat „%1$s“? Tuto akci nelze vrátit zpět.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Opravdu chcete smazat „%1$s“ a %2$s položku pod ní? Tuto akci nelze vrátit zpět.</item>
+        <item quantity="few">Opravdu chcete smazat „%1$s“ a %2$s položky pod ní? Tuto akci nelze vrátit zpět.</item>
+        <item quantity="other">Opravdu chcete smazat „%1$s“ a %2$s položek pod ní? Tuto akci nelze vrátit zpět.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s přílohu se nepodařilo přidat: %2$s</item>
+        <item quantity="few">%1$s přílohy se nepodařilo přidat: %2$s</item>
+        <item quantity="other">%1$s příloh se nepodařilo přidat: %2$s</item>
+    </plurals>
 </resources>

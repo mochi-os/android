@@ -71,6 +71,8 @@ import org.mochios.crm.model.CrmField
 import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.Person
 import org.mochios.crm.ui.board.parseColor
+import org.mochios.crm.ui.`object`.DeleteObjectDialog
+import org.mochios.crm.ui.`object`.descendantCount
 import org.mochios.crm.ui.crm.CrmViewModel
 import org.mochios.crm.util.HIERARCHY_ROOT
 import org.mochios.crm.util.parentAllowed
@@ -99,6 +101,7 @@ fun TreeRow(
 ) {
     var showContextMenu by remember { mutableStateOf(false) }
     var showReparentDialog by remember { mutableStateOf(false) }
+    var showDeleteDialog by remember { mutableStateOf(false) }
     val indent = (node.depth * 24).dp
     val obj = node.obj
     val cardFields = viewModel.getCardFields(obj.objectClass)
@@ -282,7 +285,7 @@ fun TreeRow(
                             text = { Text(stringResource(MochiR.string.common_delete)) },
                             onClick = {
                                 showContextMenu = false
-                                onDelete()
+                                showDeleteDialog = true
                             },
                             leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                             destructive = true,
@@ -336,6 +339,19 @@ fun TreeRow(
                 }
             }
         }
+    }
+
+    if (showDeleteDialog) {
+        // The server deletes everything under the row with it.
+        DeleteObjectDialog(
+            title = title,
+            count = descendantCount(allObjects, obj.id),
+            onConfirm = {
+                showDeleteDialog = false
+                onDelete()
+            },
+            onDismiss = { showDeleteDialog = false },
+        )
     }
 
     if (showReparentDialog && onReparent != null) {

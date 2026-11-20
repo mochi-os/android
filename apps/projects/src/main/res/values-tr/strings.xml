@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Açık</string>
     <string name="projects_request_status_merged">Birleştirildi</string>
     <string name="projects_request_merge">Birleştir</string>
-    <string name="projects_request_close">Kapat</string>
     <string name="projects_request_merge_dialog_title">Birleştir</string>
     <string name="projects_request_method">Yöntem</string>
     <string name="projects_request_method_merge">Birleştir</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Bu projeyi silmek istediğinizden emin misiniz? Tüm nesneler, yorumlar ve ayarlar kalıcı olarak kaldırılacak.</string>
     <string name="projects_object_unwatch">İzlemeyi bırak</string>
     <string name="projects_object_delete_title">Nesneyi sil</string>
-    <string name="projects_object_delete_message">Bu nesneyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
     <string name="projects_parent_none">Üst öğe yok</string>
     <string name="projects_links_empty">Bağlantı yok</string>
     <string name="projects_links_section_relates">İlgili</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Ek yok</string>
     <string name="projects_attachment_default_name">ek</string>
     <string name="projects_request_new">Yeni birleştirme isteği</string>
-    <string name="projects_request_status_closed">Kapatıldı</string>
     <string name="projects_request_back_to_list">Listeye dön</string>
     <string name="projects_request_repository">Depo: %1$s</string>
     <string name="projects_request_source">Kaynak: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Tasarlama, oluşturma, düzenleme, yorum yapma ve görüntüleme</string>
     <string name="projects_access_role_write">Oluşturma, düzenleme, yorum yapma ve görüntüleme</string>
     <string name="projects_all_projects">Tüm projeler</string>
-    <string name="projects_create_allow_search">Herkesin projeyi aramasına izin ver</string>
     <string name="projects_create_import_backup">Yedekten içe aktar (isteğe bağlı)</string>
     <string name="projects_create_upload_json">.json dosyası yükle</string>
     <string name="projects_settings_not_set">Ayarlanmamış</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Henüz oluşturulabilecek öge türü yok. Önce gerekli üst ögeleri oluşturun.</string>
     <string name="projects_create_blocked_no_options">Oluşturulamıyor: %1$s gerekli ancak seçenek yok. Tasarım bölümünde seçenek ekleyin.</string>
     <string name="projects_attachment_remove">Eki kaldır</string>
+    <string name="projects_create_allow_public">Herkesin projeyi görüntülemesine ve yorum yapmasına izin ver</string>
+    <string name="projects_request_delete_title">Merge request\'i sil</string>
+    <string name="projects_request_delete_message">Bu merge request\'i silmek istediğinizden emin misiniz?</string>
+    <string name="projects_board_delete_column_title">Sütunu sil</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" sütununu silmek istediğinizden emin misiniz? Bu geri alınamaz.</string>
+    <string name="projects_object_delete_named">\"%1$s\" öğesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" öğesini ve altındaki %2$s öğeyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</item>
+        <item quantity="other">\"%1$s\" öğesini ve altındaki %2$s öğeyi silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Eklenemedi: %1$s</string>
 </resources>

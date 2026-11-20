@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Отворено</string>
     <string name="projects_request_status_merged">Спојено</string>
     <string name="projects_request_merge">Споји</string>
-    <string name="projects_request_close">Затвори</string>
     <string name="projects_request_merge_dialog_title">Споји</string>
     <string name="projects_request_method">Метода</string>
     <string name="projects_request_method_merge">Споји</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Да ли сте сигурни да желите да обришете овај пројекат? Сви објекти, коментари и подешавања биће трајно уклоњени.</string>
     <string name="projects_object_unwatch">Прекини праћење</string>
     <string name="projects_object_delete_title">Обриши објекат</string>
-    <string name="projects_object_delete_message">Да ли сте сигурни да желите да обришете овај објекат? Ова радња се не може опозвати.</string>
     <string name="projects_parent_none">Без надређеног</string>
     <string name="projects_links_empty">Нема веза</string>
     <string name="projects_links_section_relates">Односи се на</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Нема прилога</string>
     <string name="projects_attachment_default_name">прилог</string>
     <string name="projects_request_new">Нови захтев за спајање</string>
-    <string name="projects_request_status_closed">Затворен</string>
     <string name="projects_request_back_to_list">Назад на списак</string>
     <string name="projects_request_repository">Складиште: %1$s</string>
     <string name="projects_request_source">Извор: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Дизајнирање, креирање, уређивање, коментарисање и преглед</string>
     <string name="projects_access_role_write">Креирање, уређивање, коментарисање и преглед</string>
     <string name="projects_all_projects">Сви пројекти</string>
-    <string name="projects_create_allow_search">Дозволи свима да претражују пројекат</string>
     <string name="projects_create_import_backup">Увоз из резервне копије (опционо)</string>
     <string name="projects_create_upload_json">Отпреми .json фајл</string>
     <string name="projects_settings_not_set">Није постављено</string>
@@ -333,4 +329,16 @@
     <string name="projects_create_object_no_types">Још се не могу креирати типови ставки. Прво креирајте потребне родитељске ставке.</string>
     <string name="projects_create_blocked_no_options">Није могуће креирати: %1$s је обавезно, али нема опција за избор. Додајте опције у Дизајну.</string>
     <string name="projects_attachment_remove">Уклони прилог</string>
+    <string name="projects_create_allow_public">Дозволи свима да прегледају и коментаришу пројекат</string>
+    <string name="projects_request_delete_title">Обриши захтев за спајање</string>
+    <string name="projects_request_delete_message">Да ли сте сигурни да желите да обришете овај захтев за спајање?</string>
+    <string name="projects_board_delete_column_title">Обриши колону</string>
+    <string name="projects_board_delete_column_message">Да ли сте сигурни да желите да обришете колону „%1$s“? Ово се не може поништити.</string>
+    <string name="projects_object_delete_named">Да ли сте сигурни да желите да обришете „%1$s“? Ова радња се не може поништити.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Да ли сте сигурни да желите да обришете „%1$s“ и %2$s ставку испод ње? Ова радња се не може поништити.</item>
+        <item quantity="few">Да ли сте сигурни да желите да обришете „%1$s“ и %2$s ставке испод ње? Ова радња се не може поништити.</item>
+        <item quantity="other">Да ли сте сигурни да желите да обришете „%1$s“ и %2$s ставки испод ње? Ова радња се не може поништити.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Није могуће приложити: %1$s</string>
 </resources>

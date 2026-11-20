@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Vuliwe</string>
     <string name="projects_request_status_merged">Idityanisiwe</string>
     <string name="projects_request_merge">Dibanisa</string>
-    <string name="projects_request_close">Vala</string>
     <string name="projects_request_merge_dialog_title">Dibanisa</string>
     <string name="projects_request_method">Indlela</string>
     <string name="projects_request_method_merge">Dibanisa</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Uqinisekile ukuba ufuna ukucima le projekthi? Zonke izinto, izimvo, kunye nezicwangciso ziya kususwa ngonaphakade.</string>
     <string name="projects_object_unwatch">Yeka ukubukela</string>
     <string name="projects_object_delete_title">Cima into</string>
-    <string name="projects_object_delete_message">Uqinisekile ukuba ufuna ukucima le nto? Esi senzo asinakubuyiselwa.</string>
     <string name="projects_parent_none">Akukho mzali</string>
     <string name="projects_links_empty">Akukho makhonkco</string>
     <string name="projects_links_section_relates">Inxulumene ne</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Akukho ziqhotyoshelwa</string>
     <string name="projects_attachment_default_name">isiqhotyoshelwa</string>
     <string name="projects_request_new">Isicelo esitsha sokudibanisa</string>
-    <string name="projects_request_status_closed">Ivaliwe</string>
     <string name="projects_request_back_to_list">Buyela kuluhlu</string>
     <string name="projects_request_repository">Indawo yokugcina: %1$s</string>
     <string name="projects_request_source">Umthombo: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Yila, dala, hlela, phawula, kwaye ubone</string>
     <string name="projects_access_role_write">Dala, hlela, phawula, kwaye ubone</string>
     <string name="projects_all_projects">Zonke iiprojekthi</string>
-    <string name="projects_create_allow_search">Vumela nabani na ukukhangela iprojekthi</string>
     <string name="projects_create_import_backup">Ngenisa ukusuka kokugcina (ekhethekayo)</string>
     <string name="projects_create_upload_json">Layisha ifayile ye-.json</string>
     <string name="projects_settings_not_set">Akumiselwanga</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Akukho ntlobo zezinto ezinokwenziwa okwangoku. Yenza izinto zomzali ezifunekayo kuqala.</string>
     <string name="projects_create_blocked_no_options">Ayikwazi ukwenza: %1$s iyafuneka kodwa ayinakho ukhetho. Yongeza ukhetho kuYilo.</string>
     <string name="projects_attachment_remove">Susa isiqhotyoshelwa</string>
+    <string name="projects_create_allow_public">Vumela nabani na ukuba abone iprojekthi kwaye aphawule ngayo</string>
+    <string name="projects_request_delete_title">Cima isicelo sokudibanisa</string>
+    <string name="projects_request_delete_message">Uqinisekile ufuna ukucima esi sicelo sokudibanisa?</string>
+    <string name="projects_board_delete_column_title">Cima ikholamu</string>
+    <string name="projects_board_delete_column_message">Uqinisekile ufuna ukucima ikholamu \"%1$s\"? Oku akunakubuyiswa.</string>
+    <string name="projects_object_delete_named">Uqinisekile ufuna ukucima \"%1$s\"? Esi senzo asinakubuyiswa.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Uqinisekile ufuna ukucima \"%1$s\" kunye nento e-%2$s engaphantsi kwayo? Esi senzo asinakubuyiswa.</item>
+        <item quantity="other">Uqinisekile ufuna ukucima \"%1$s\" kunye nezinto ezi-%2$s ezingaphantsi kwayo? Esi senzo asinakubuyiswa.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Akukwazekanga ukuqhoboshela: %1$s</string>
 </resources>

@@ -8,7 +8,6 @@
     <string name="projects_create_action">Créer</string>
     <string name="projects_request_create_action">Créer</string>
     <string name="projects_classes_create">Créer</string>
-    <string name="projects_request_close">Fermer</string>
     <string name="projects_create_template_none">Aucun</string>
     <string name="projects_settings">Paramètres</string>
     <string name="projects_settings_title">Paramètres</string>
@@ -112,7 +111,6 @@
     <string name="projects_object_unwatch">Ne plus suivre</string>
     <string name="projects_object_tab_properties">Propriétés</string>
     <string name="projects_object_delete_title">Supprimer l\'objet</string>
-    <string name="projects_object_delete_message">Voulez-vous vraiment supprimer cet objet? Cette action est irréversible.</string>
     <string name="projects_parent_none">Aucun parent</string>
     <string name="projects_links_empty">Aucun lien</string>
     <string name="projects_links_add">Ajouter un lien</string>
@@ -144,7 +142,6 @@
     <string name="projects_request_empty">Aucune demande de fusion</string>
     <string name="projects_request_new">Nouvelle demande de fusion</string>
     <string name="projects_request_status_merged">Fusionnée</string>
-    <string name="projects_request_status_closed">Fermée</string>
     <string name="projects_request_back_to_list">Retour à la liste</string>
     <string name="projects_request_repository">Dépôt : %1$s</string>
     <string name="projects_request_source">Source : %1$s</string>
@@ -304,7 +301,6 @@
     <string name="projects_access_role_design">Concevoir, créer, modifier, commenter et consulter</string>
     <string name="projects_access_role_write">Créer, modifier, commenter et consulter</string>
     <string name="projects_all_projects">Tous les projets</string>
-    <string name="projects_create_allow_search">Autoriser tout le monde à rechercher le projet</string>
     <string name="projects_create_import_backup">Importer depuis une sauvegarde (facultatif)</string>
     <string name="projects_create_upload_json">Téléverser un fichier .json</string>
     <string name="projects_settings_not_set">Non défini</string>

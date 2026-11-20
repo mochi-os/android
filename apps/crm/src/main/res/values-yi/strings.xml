@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">זײַט איר זיכער איר ווילט אױסמעקן דעם CRM? אַלע אָביעקטן, קאָמענטאַרן און אײַנשטעלונגען וועלן ווערן פֿאַר אײביק אַראָפּגענומען.</string>
     <string name="crm_object_unwatch">אױפֿהערן באַאױגן</string>
     <string name="crm_object_delete_title">אױסמעקן אָביעקט</string>
-    <string name="crm_object_delete_message">זײַט איר זיכער איר ווילט אױסמעקן דעם אָביעקט? די אַקציע קען נישט אומגעקערט ווערן.</string>
     <string name="crm_parent_none">קײן עלטערן</string>
     <string name="crm_links_empty">קײן פֿאַרבינדונגען</string>
     <string name="crm_links_section_relates">האָט אַ שײַכות צו</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">אימפּאָרטירן פֿון זיכערונג (אָפּציאָנעל)</string>
     <string name="crm_export">עקספּאָרטירן דאַטן</string>
     <string name="crm_exporting">גרייטן דעם עקספּאָרט…</string>
-    <string name="crm_create_allow_search">דערלויבן עמעצן צו זוכן פֿאַר CRM</string>
     <string name="crm_no_crms_found">קיין CRMס ניט געפֿונען</string>
     <string name="crm_create_blocked_no_parents">קיין עלעמענט טיפּן קענען נאָך ניט זײַן באַשאַפֿן. באַשאַף די נייטיקע עלטערן עלעמענטן ערשט.</string>
     <string name="crm_export_csv">עקספּאָרטירן CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">מוסטער %1$s</string>
     <string name="crm_option_delete_title">אויסמעקן אָפּציע</string>
     <string name="crm_option_delete_message">זײַט איר זיכער איר ווילט אױסמעקן די אָפּציע \"%1$s\"?</string>
+    <string name="crm_create_public">דערלויבן עמעצן צו זען דעם CRM און קאָמענטירן אויף אים</string>
+    <string name="crm_board_delete_column">אויסמעקן זײַל</string>
+    <string name="crm_board_delete_column_message">זענט איר זיכער איר ווילט אויסמעקן די \"%1$s\" זײַל? דאָס קען נישט ווערן אומגעקערט.</string>
+    <string name="crm_object_delete_named">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\"? די אַקציע קען נישט ווערן אומגעקערט.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\" און %2$s זאַך אונטער דעם? די אַקציע קען נישט ווערן אומגעקערט.</item>
+        <item quantity="other">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\" און %2$s זאַכן אונטער דעם? די אַקציע קען נישט ווערן אומגעקערט.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">מען האָט נישט געקענט צולייגן %1$s בײַלאַגע: %2$s</item>
+        <item quantity="other">מען האָט נישט געקענט צולייגן %1$s בײַלאַגעס: %2$s</item>
+    </plurals>
 </resources>

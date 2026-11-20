@@ -148,7 +148,6 @@
     <string name="crm_settings_delete_confirm_message">Er du sikker på at du vil slette denne CRM-en? Alle objekt, kommentarar og innstillingar vil bli permanent fjerna.</string>
     <string name="crm_object_unwatch">Slutt å følgje</string>
     <string name="crm_object_delete_title">Slett objekt</string>
-    <string name="crm_object_delete_message">Er du sikker på at du vil slette dette objektet? Denne handlinga kan ikkje angrast.</string>
     <string name="crm_parent_none">Inga overordna</string>
     <string name="crm_links_empty">Ingen lenkjer</string>
     <string name="crm_links_section_relates">Relaterer til</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importer fra sikkerhetskopi (valgfritt)</string>
     <string name="crm_export">Eksporter data</string>
     <string name="crm_exporting">Førebur eksport…</string>
-    <string name="crm_create_allow_search">Tillat alle å søkje etter CRM</string>
     <string name="crm_no_crms_found">Ingen CRM-ar funne</string>
     <string name="crm_create_blocked_no_parents">Ingen elementtypar kan opprettast enno. Opprett dei påkravde overordna elementa først.</string>
     <string name="crm_export_csv">Eksporter CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Døme %1$s</string>
     <string name="crm_option_delete_title">Slett val</string>
     <string name="crm_option_delete_message">Er du sikker på at du vil slette valet \"%1$s\"?</string>
+    <string name="crm_create_public">Tillat alle å sjå og kommentere CRM</string>
+    <string name="crm_board_delete_column">Slett kolonne</string>
+    <string name="crm_board_delete_column_message">Er du sikker på at du vil slette kolonnen «%1$s»? Dette kan ikkje angrast.</string>
+    <string name="crm_object_delete_named">Er du sikker på at du vil slette «%1$s»? Denne handlinga kan ikkje angrast.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Er du sikker på at du vil slette «%1$s» og %2$s element under det? Denne handlinga kan ikkje angrast.</item>
+        <item quantity="other">Er du sikker på at du vil slette «%1$s» og %2$s element under det? Denne handlinga kan ikkje angrast.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s vedlegg kunne ikkje leggjast til: %2$s</item>
+        <item quantity="other">%1$s vedlegg kunne ikkje leggjast til: %2$s</item>
+    </plurals>
 </resources>

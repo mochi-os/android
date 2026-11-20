@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Открыт</string>
     <string name="projects_request_status_merged">Объединено</string>
     <string name="projects_request_merge">Объединить</string>
-    <string name="projects_request_close">Закрыть</string>
     <string name="projects_request_merge_dialog_title">Объединить</string>
     <string name="projects_request_method">Метод</string>
     <string name="projects_request_method_merge">Объединить</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Вы уверены, что хотите удалить этот проект? Все объекты, комментарии и настройки будут безвозвратно удалены.</string>
     <string name="projects_object_unwatch">Не отслеживать</string>
     <string name="projects_object_delete_title">Удалить объект</string>
-    <string name="projects_object_delete_message">Вы уверены, что хотите удалить этот объект? Это действие нельзя отменить.</string>
     <string name="projects_parent_none">Без родителя</string>
     <string name="projects_links_empty">Нет связей</string>
     <string name="projects_links_section_relates">Связан с</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Нет вложений</string>
     <string name="projects_attachment_default_name">вложение</string>
     <string name="projects_request_new">Новый запрос на слияние</string>
-    <string name="projects_request_status_closed">Закрыт</string>
     <string name="projects_request_back_to_list">Назад к списку</string>
     <string name="projects_request_repository">Репозиторий: %1$s</string>
     <string name="projects_request_source">Источник: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Проектирование, создание, редактирование, комментирование и просмотр</string>
     <string name="projects_access_role_write">Создание, редактирование, комментирование и просмотр</string>
     <string name="projects_all_projects">Все проекты</string>
-    <string name="projects_create_allow_search">Разрешить всем искать проект</string>
     <string name="projects_create_import_backup">Импорт из резервной копии (необязательно)</string>
     <string name="projects_create_upload_json">Загрузить файл .json</string>
     <string name="projects_settings_not_set">Не задано</string>
@@ -334,4 +330,17 @@
     <string name="projects_create_object_no_types">Пока нельзя создать типы элементов. Сначала создайте необходимые родительские элементы.</string>
     <string name="projects_create_blocked_no_options">Не удалось создать: %1$s обязателен, но не имеет вариантов для выбора. Добавьте варианты в Дизайне.</string>
     <string name="projects_attachment_remove">Удалить вложение</string>
+    <string name="projects_create_allow_public">Разрешить всем просматривать и комментировать проект</string>
+    <string name="projects_request_delete_title">Удалить запрос на объединение</string>
+    <string name="projects_request_delete_message">Вы уверены, что хотите удалить этот запрос на объединение?</string>
+    <string name="projects_board_delete_column_title">Удалить колонку</string>
+    <string name="projects_board_delete_column_message">Вы уверены, что хотите удалить колонку «%1$s»? Это необратимо.</string>
+    <string name="projects_object_delete_named">Вы уверены, что хотите удалить «%1$s»? Это действие необратимо.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Вы уверены, что хотите удалить «%1$s» и %2$s вложенный элемент? Это действие необратимо.</item>
+        <item quantity="few">Вы уверены, что хотите удалить «%1$s» и %2$s вложенных элемента? Это действие необратимо.</item>
+        <item quantity="many">Вы уверены, что хотите удалить «%1$s» и %2$s вложенных элементов? Это действие необратимо.</item>
+        <item quantity="other">Вы уверены, что хотите удалить «%1$s» и %2$s вложенного элемента? Это действие необратимо.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Не удалось прикрепить: %1$s</string>
 </resources>

@@ -196,7 +196,6 @@
     <string name="crm_people_empty">Encara no hi ha cap persona amb accés</string>
     <string name="crm_object_unwatch">Deixa de seguir</string>
     <string name="crm_object_delete_title">Suprimeix l\'objecte</string>
-    <string name="crm_object_delete_message">Segur que voleu suprimir aquest objecte? Aquesta acció no es pot desfer.</string>
     <string name="crm_parent_none">Sense pare</string>
     <string name="crm_links_empty">Cap enllaç</string>
     <string name="crm_links_section_relates">Relacionat amb</string>
@@ -276,7 +275,6 @@
     <string name="crm_create_import_backup">Importa des d\'una còpia de seguretat (opcional)</string>
     <string name="crm_export">Exporta les dades</string>
     <string name="crm_exporting">S\'està preparant l\'exportació…</string>
-    <string name="crm_create_allow_search">Permet que qualsevol cerqui el CRM</string>
     <string name="crm_no_crms_found">No s\'ha trobat cap CRM</string>
     <string name="crm_create_blocked_no_parents">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>
     <string name="crm_export_csv">Exporta CSV</string>
@@ -287,4 +285,16 @@
     <string name="crm_design_sample">Mostra %1$s</string>
     <string name="crm_option_delete_title">Suprimeix l\'opció</string>
     <string name="crm_option_delete_message">Esteu segur que voleu eliminar l\'opció \"%1$s\"?</string>
+    <string name="crm_create_public">Permet que qualsevol vegi i comenti el CRM</string>
+    <string name="crm_board_delete_column">Suprimeix la columna</string>
+    <string name="crm_board_delete_column_message">Segur que vols suprimir la columna «%1$s»? Això no es pot desfer.</string>
+    <string name="crm_object_delete_named">Segur que vols suprimir «%1$s»? Aquesta acció no es pot desfer.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Segur que vols suprimir «%1$s» i %2$s element que té a sota? Aquesta acció no es pot desfer.</item>
+        <item quantity="other">Segur que vols suprimir «%1$s» i %2$s elements que té a sota? Aquesta acció no es pot desfer.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">No s\'ha pogut afegir %1$s fitxer adjunt: %2$s</item>
+        <item quantity="other">No s\'han pogut afegir %1$s fitxers adjunts: %2$s</item>
+    </plurals>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Jist\'arata</string>
     <string name="projects_request_status_merged">Mayachthapita</string>
     <string name="projects_request_merge">Mayachthapiña</string>
-    <string name="projects_request_close">Jist\'antaña</string>
     <string name="projects_request_merge_dialog_title">Mayachthapiña</string>
     <string name="projects_request_method">Método</string>
     <string name="projects_request_method_merge">Mayachthapiña</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">¿Chiqpach aka proyecto chhaqtayañ muntati? Taqi objetonaka, comentarionaka ukat wakichäwinakax wiñayatakiw chhaqtayatäni.</string>
     <string name="projects_object_unwatch">Uñch\'ukiñ jaytaña</string>
     <string name="projects_object_delete_title">Objeto chhaqtayaña</string>
-    <string name="projects_object_delete_message">¿Chiqpach aka objeto chhaqtayañ muntati? Aka lurawix janiw kutt\'ayañjamäkiti.</string>
     <string name="projects_parent_none">Jan awki</string>
     <string name="projects_links_empty">Janiw enlacenakax utjkiti</string>
     <string name="projects_links_section_relates">Akamp chikt\'ata</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Janiw adjuntonakax utjkiti</string>
     <string name="projects_attachment_default_name">adjunto</string>
     <string name="projects_request_new">Machaq mayachthapiñ mayiwi</string>
-    <string name="projects_request_status_closed">Jist\'antata</string>
     <string name="projects_request_back_to_list">Listar kutt\'aña</string>
     <string name="projects_request_repository">Repositorio: %1$s</string>
     <string name="projects_request_source">Jalsu: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Diseño, luraña, askichaña, comentaña ukat uñjaña</string>
     <string name="projects_access_role_write">Luraña, askichaña, comentaña ukat uñjaña</string>
     <string name="projects_all_projects">Taqpach proyecto</string>
-    <string name="projects_create_allow_search">Khitirus proyecto thaqhañ iyawsaña</string>
     <string name="projects_create_import_backup">Respaldot apantaña (opcional)</string>
     <string name="projects_create_upload_json">.json archivo apkataña</string>
     <string name="projects_settings_not_set">Jan wakichata</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">Janiraw kuna item tipos luraskaspati. Nayraqat wakisir awki itemanak luram.</string>
     <string name="projects_create_blocked_no_options">Janiw lurañjamäkiti: %1$s wakisiwa ukampis janiw ajlliñatak opcionanakapax utjkiti. Diseño ukan opcionanak yapxatam.</string>
     <string name="projects_attachment_remove">Adjunto apsuña</string>
+    <string name="projects_create_allow_public">Khitirus proyecto uñakipañapataki ukat comentañapataki iyawsaña</string>
+    <string name="projects_request_delete_title">Mayachthapiñ mayiwi chhaqtayaña</string>
+    <string name="projects_request_delete_message">¿Chiqpach aka mayachthapiñ mayiwi chhaqtayañ muntati?</string>
+    <string name="projects_board_delete_column_title">Columna chhaqtayaña</string>
+    <string name="projects_board_delete_column_message">Chiqpach \"%1$s\" columna chhaqtayaña munta? Akax janiw kutt\'ayañjamäkiti.</string>
+    <string name="projects_object_delete_named">Chiqpach \"%1$s\" chhaqtayaña munta? Aka lurawix janiw kutt\'ayañjamäkiti.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Chiqpach \"%1$s\" ukat manqhapankir %2$s itemanaka chhaqtayaña munta? Aka lurawix janiw kutt\'ayañjamäkiti.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Janiw apkatañ atkänti: %1$s</string>
 </resources>

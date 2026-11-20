@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">باز</string>
     <string name="projects_request_status_merged">Merge شد</string>
     <string name="projects_request_merge">ادغام</string>
-    <string name="projects_request_close">بستن</string>
     <string name="projects_request_merge_dialog_title">ادغام</string>
     <string name="projects_request_method">روش</string>
     <string name="projects_request_method_merge">ادغام</string>
@@ -167,7 +166,6 @@
     <string name="projects_settings_delete_confirm_message">آیا مطمئن هستید که می‌خواهید این پروژه را حذف کنید؟ همه اشیاء، نظرات و تنظیمات برای همیشه حذف خواهند شد.</string>
     <string name="projects_object_unwatch">لغو دنبال کردن</string>
     <string name="projects_object_delete_title">حذف شیء</string>
-    <string name="projects_object_delete_message">آیا مطمئن هستید که می‌خواهید این شیء را حذف کنید؟ این کار قابل بازگشت نیست.</string>
     <string name="projects_parent_none">بدون والد</string>
     <string name="projects_links_empty">بدون پیوند</string>
     <string name="projects_links_section_relates">مرتبط با</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">بدون پیوست</string>
     <string name="projects_attachment_default_name">پیوست</string>
     <string name="projects_request_new">درخواست ادغام جدید</string>
-    <string name="projects_request_status_closed">بسته شده</string>
     <string name="projects_request_back_to_list">بازگشت به فهرست</string>
     <string name="projects_request_repository">مخزن: %1$s</string>
     <string name="projects_request_source">مبدأ: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">طراحی، ساخت، ویرایش، نظردادن و مشاهده</string>
     <string name="projects_access_role_write">ساخت، ویرایش، نظردادن و مشاهده</string>
     <string name="projects_all_projects">همهٔ پروژه‌ها</string>
-    <string name="projects_create_allow_search">همه بتوانند پروژه را جست‌وجو کنند</string>
     <string name="projects_create_import_backup">وارد کردن از پشتیبان (اختیاری)</string>
     <string name="projects_create_upload_json">بارگذاری فایل .json</string>
     <string name="projects_settings_not_set">تنظیم نشده</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">هیچ نوع آیتمی هنوز قابل ایجاد نیست. ابتدا آیتم‌های والد مورد نیاز را ایجاد کنید.</string>
     <string name="projects_create_blocked_no_options">امکان ایجاد نیست: %1$s الزامی است اما گزینه‌ای برای انتخاب ندارد. در طرح گزینه اضافه کنید.</string>
     <string name="projects_attachment_remove">حذف پیوست</string>
+    <string name="projects_create_allow_public">همه بتوانند پروژه را ببینند و درباره آن نظر بدهند</string>
+    <string name="projects_request_delete_title">حذف درخواست ادغام</string>
+    <string name="projects_request_delete_message">آیا از حذف این درخواست ادغام مطمئن هستید؟</string>
+    <string name="projects_board_delete_column_title">حذف ستون</string>
+    <string name="projects_board_delete_column_message">آیا از حذف ستون «%1$s» مطمئن هستید؟ این عمل قابل بازگشت نیست.</string>
+    <string name="projects_object_delete_named">آیا از حذف «%1$s» مطمئن هستید؟ این عمل قابل بازگشت نیست.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">آیا از حذف «%1$s» و %2$s مورد زیر آن مطمئن هستید؟ این عمل قابل بازگشت نیست.</item>
+        <item quantity="other">آیا از حذف «%1$s» و %2$s مورد زیر آن مطمئن هستید؟ این عمل قابل بازگشت نیست.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">پیوست کردن ممکن نشد: %1$s</string>
 </resources>

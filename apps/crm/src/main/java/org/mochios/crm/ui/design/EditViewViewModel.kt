@@ -77,7 +77,11 @@ class EditViewViewModel @Inject constructor(
         }
     }
 
-    /** Saves [draft] over the view and raises [EditViewUiState.saved]. */
+    /**
+     * Saves [draft] over the view and raises [EditViewUiState.saved]. Every
+     * setting goes, a blank one as "", so a setting cleared to none (no lane,
+     * no border, no sort, every class) is cleared on the server too.
+     */
     fun updateView(draft: ViewDraft) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isSaving = true, error = null)
@@ -87,13 +91,13 @@ class EditViewViewModel @Inject constructor(
                     viewId,
                     draft.name.trim(),
                     draft.viewtype,
-                    draft.columns,
-                    draft.rows,
-                    draft.filter,
-                    draft.sort,
+                    draft.columns.orEmpty(),
+                    draft.rows.orEmpty(),
+                    draft.filter.orEmpty(),
+                    draft.sort.orEmpty(),
                     draft.direction,
-                    draft.classes,
-                    draft.border
+                    draft.classes.orEmpty(),
+                    draft.border.orEmpty()
                 )
                 _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
             } catch (e: Exception) {

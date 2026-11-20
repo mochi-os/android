@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">פתוח</string>
     <string name="projects_request_status_merged">מוזג</string>
     <string name="projects_request_merge">מיזוג</string>
-    <string name="projects_request_close">סגור</string>
     <string name="projects_request_merge_dialog_title">מיזוג</string>
     <string name="projects_request_method">שיטה</string>
     <string name="projects_request_method_merge">מיזוג</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">האם אתה בטוח שברצונך למחוק את הפרויקט הזה? כל האובייקטים, התגובות וההגדרות יוסרו לצמיתות.</string>
     <string name="projects_object_unwatch">ביטול מעקב</string>
     <string name="projects_object_delete_title">מחיקת אובייקט</string>
-    <string name="projects_object_delete_message">האם אתה בטוח שברצונך למחוק את האובייקט הזה? לא ניתן לבטל פעולה זו.</string>
     <string name="projects_parent_none">ללא הורה</string>
     <string name="projects_links_empty">אין קישורים</string>
     <string name="projects_links_section_relates">קשור ל</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">אין קבצים מצורפים</string>
     <string name="projects_attachment_default_name">קובץ מצורף</string>
     <string name="projects_request_new">בקשת מיזוג חדשה</string>
-    <string name="projects_request_status_closed">סגור</string>
     <string name="projects_request_back_to_list">חזרה לרשימה</string>
     <string name="projects_request_repository">מאגר: %1$s</string>
     <string name="projects_request_source">מקור: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">עיצוב, יצירה, עריכה, הוספת תגובות וצפייה</string>
     <string name="projects_access_role_write">יצירה, עריכה, הוספת תגובות וצפייה</string>
     <string name="projects_all_projects">כל הפרויקטים</string>
-    <string name="projects_create_allow_search">אפשר לכולם לחפש את הפרויקט</string>
     <string name="projects_create_import_backup">ייבוא מגיבוי (אופציונלי)</string>
     <string name="projects_create_upload_json">העלה קובץ .json</string>
     <string name="projects_settings_not_set">לא הוגדר</string>
@@ -334,4 +330,16 @@
     <string name="projects_create_object_no_types">עדיין לא ניתן ליצור סוגי פריטים. צור תחילה את פריטי האב הנדרשים.</string>
     <string name="projects_create_blocked_no_options">לא ניתן ליצור: %1$s נדרש אך אין לו אפשרויות לבחירה. הוסף אפשרויות בעיצוב.</string>
     <string name="projects_attachment_remove">הסרת קובץ מצורף</string>
+    <string name="projects_create_allow_public">אפשר לכולם לצפות בפרויקט ולהגיב עליו</string>
+    <string name="projects_request_delete_title">מחק בקשת מיזוג</string>
+    <string name="projects_request_delete_message">האם אתה בטוח שברצונך למחוק בקשת מיזוג זו?</string>
+    <string name="projects_board_delete_column_title">מחק עמודה</string>
+    <string name="projects_board_delete_column_message">האם אתה בטוח שברצונך למחוק את העמודה \"%1$s\"? לא ניתן לבטל פעולה זו.</string>
+    <string name="projects_object_delete_named">האם אתה בטוח שברצונך למחוק את \"%1$s\"? לא ניתן לבטל פעולה זו.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">האם אתה בטוח שברצונך למחוק את \"%1$s\" ואת הפריט האחד שמתחתיו? לא ניתן לבטל פעולה זו.</item>
+        <item quantity="two">האם אתה בטוח שברצונך למחוק את \"%1$s\" ואת שני הפריטים שמתחתיו? לא ניתן לבטל פעולה זו.</item>
+        <item quantity="other">האם אתה בטוח שברצונך למחוק את \"%1$s\" ואת %2$s הפריטים שמתחתיו? לא ניתן לבטל פעולה זו.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">לא ניתן היה לצרף: %1$s</string>
 </resources>

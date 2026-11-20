@@ -29,12 +29,14 @@ import javax.inject.Inject
  * @property isLoading Whether the design is being fetched.
  * @property error Last failure, cleared by [FieldDetailViewModel.clearError].
  * @property deleted Set once the field is gone, so the screen can navigate away.
+ * @property saves Saves made and read back, so the form seeds itself afresh.
  */
 data class FieldDetailUiState(
     val projectDetails: ProjectDetails? = null,
     val isLoading: Boolean = false,
     val error: MochiError? = null,
-    val deleted: Boolean = false
+    val deleted: Boolean = false,
+    val saves: Int = 0
 )
 
 /**
@@ -80,14 +82,17 @@ class FieldDetailViewModel @Inject constructor(
         }
     }
 
-    /** Saves the edited field. Null arguments leave that property unchanged. */
+    /**
+     * Saves the edited field and reads it back. Null arguments leave that
+     * property unchanged; "" clears it.
+     */
     fun updateField(
         name: String?,
         flags: String?,
         multi: Boolean?,
         card: Boolean?,
         position: String?,
-        rows: Int?,
+        rows: String?,
         pattern: String? = null,
         minlength: Int? = null,
         maxlength: Int? = null
@@ -108,7 +113,16 @@ class FieldDetailViewModel @Inject constructor(
                     minlength,
                     maxlength
                 )
-                loadProject()
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                return@launch
+            }
+            try {
+                val details = repository.getProjectInfo(projectId)
+                _uiState.value = _uiState.value.copy(
+                    projectDetails = details,
+                    saves = _uiState.value.saves + 1
+                )
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

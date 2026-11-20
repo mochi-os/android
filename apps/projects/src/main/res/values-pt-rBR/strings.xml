@@ -62,7 +62,6 @@
     <string name="projects_request_status_open">Aberto</string>
     <string name="projects_request_status_merged">Mesclado</string>
     <string name="projects_request_merge">Mesclar</string>
-    <string name="projects_request_close">Fechar</string>
     <string name="projects_request_merge_dialog_title">Mesclar</string>
     <string name="projects_request_method">Método</string>
     <string name="projects_request_method_merge">Mesclar</string>
@@ -163,7 +162,6 @@
     <string name="projects_settings_delete_confirm_message">Tem certeza de que deseja excluir este projeto? Todos os objetos, comentários e configurações serão removidos permanentemente.</string>
     <string name="projects_object_unwatch">Deixar de observar</string>
     <string name="projects_object_delete_title">Excluir objeto</string>
-    <string name="projects_object_delete_message">Tem certeza de que deseja excluir este objeto? Esta ação não pode ser desfeita.</string>
     <string name="projects_parent_none">Sem pai</string>
     <string name="projects_links_empty">Sem vínculos</string>
     <string name="projects_links_section_relates">Relaciona-se com</string>
@@ -186,7 +184,6 @@
     <string name="projects_attachment_empty">Nenhum anexo</string>
     <string name="projects_attachment_default_name">anexo</string>
     <string name="projects_request_new">Nova solicitação de mesclagem</string>
-    <string name="projects_request_status_closed">Fechada</string>
     <string name="projects_request_back_to_list">Voltar à lista</string>
     <string name="projects_request_repository">Repositório: %1$s</string>
     <string name="projects_request_source">Origem: %1$s</string>
@@ -296,7 +293,6 @@
     <string name="projects_access_role_design">Projetar, criar, editar, comentar e visualizar</string>
     <string name="projects_access_role_write">Criar, editar, comentar e visualizar</string>
     <string name="projects_all_projects">Todos os projetos</string>
-    <string name="projects_create_allow_search">Permitir que qualquer pessoa pesquise o projeto</string>
     <string name="projects_create_import_backup">Importar do backup (opcional)</string>
     <string name="projects_create_upload_json">Enviar arquivo .json</string>
     <string name="projects_settings_not_set">Não definido</string>
@@ -316,4 +312,14 @@
     <string name="projects_option_delete_message">Tem certeza de que deseja excluir a opção \"%1$s\"?</string>
     <string name="projects_create_object_no_types">Nenhum tipo de item pode ser criado ainda. Crie primeiro os itens pais obrigatórios.</string>
     <string name="projects_attachment_remove">Remover anexo</string>
+    <string name="projects_create_allow_public">Permitir que qualquer pessoa visualize e comente o projeto</string>
+    <string name="projects_request_delete_title">Excluir merge request</string>
+    <string name="projects_request_delete_message">Tem certeza de que deseja excluir este merge request?</string>
+    <string name="projects_board_delete_column_title">Excluir coluna</string>
+    <string name="projects_board_delete_column_message">Tem certeza de que deseja excluir a coluna \"%1$s\"? Isto não pode ser desfeito.</string>
+    <string name="projects_object_delete_named">Tem certeza de que deseja excluir \"%1$s\"? Esta ação não pode ser desfeita.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Tem certeza de que deseja excluir \"%1$s\" e o %2$s item abaixo dele? Esta ação não pode ser desfeita.</item>
+        <item quantity="other">Tem certeza de que deseja excluir \"%1$s\" e os %2$s itens abaixo dele? Esta ação não pode ser desfeita.</item>
+    </plurals>
 </resources>

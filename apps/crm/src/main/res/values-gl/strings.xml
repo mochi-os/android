@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Seguro que queres eliminar este CRM? Todos os obxectos, comentarios e axustes eliminaranse permanentemente.</string>
     <string name="crm_object_unwatch">Deixar de observar</string>
     <string name="crm_object_delete_title">Eliminar obxecto</string>
-    <string name="crm_object_delete_message">Seguro que queres eliminar este obxecto? Esta acción non se pode desfacer.</string>
     <string name="crm_parent_none">Sen pai</string>
     <string name="crm_links_empty">Sen ligazóns</string>
     <string name="crm_links_section_relates">Relaciónase con</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importar desde copia de seguridade (opcional)</string>
     <string name="crm_export">Exportar datos</string>
     <string name="crm_exporting">Preparando a exportación…</string>
-    <string name="crm_create_allow_search">Permitir que calquera busque o CRM</string>
     <string name="crm_no_crms_found">Non se atoparon CRMs</string>
     <string name="crm_create_blocked_no_parents">Aínda non se poden crear tipos de elementos. Crea primeiro os elementos pai requiridos.</string>
     <string name="crm_export_csv">Exportar CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Exemplo %1$s</string>
     <string name="crm_option_delete_title">Eliminar opción</string>
     <string name="crm_option_delete_message">Tes a certeza de que queres eliminar a opción \"%1$s\"?</string>
+    <string name="crm_create_public">Permitir que calquera vexa e comente o CRM</string>
+    <string name="crm_board_delete_column">Eliminar columna</string>
+    <string name="crm_board_delete_column_message">Seguro que queres eliminar a columna \"%1$s\"? Isto non se pode desfacer.</string>
+    <string name="crm_object_delete_named">Seguro que queres eliminar \"%1$s\"? Esta acción non se pode desfacer.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Seguro que queres eliminar \"%1$s\" e %2$s elemento que ten debaixo? Esta acción non se pode desfacer.</item>
+        <item quantity="other">Seguro que queres eliminar \"%1$s\" e %2$s elementos que ten debaixo? Esta acción non se pode desfacer.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Non se puido engadir %1$s anexo: %2$s</item>
+        <item quantity="other">Non se puideron engadir %1$s anexos: %2$s</item>
+    </plurals>
 </resources>

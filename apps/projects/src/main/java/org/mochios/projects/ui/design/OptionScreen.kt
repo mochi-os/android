@@ -80,8 +80,8 @@ fun OptionScreen(
         error = uiState.error,
         onBack = onBack,
         onSubmit = {
-            val icon = if (isColumn) null else formState.icon.ifBlank { null }
-            viewModel.save(formState.name, formState.colour.ifBlank { null }, icon)
+            val icon = if (isColumn) null else formState.icon
+            viewModel.save(formState.name, formState.colour, icon)
         }
     ) { padding ->
         FormLoadGate(

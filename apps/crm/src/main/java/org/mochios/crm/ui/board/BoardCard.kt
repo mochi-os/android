@@ -89,7 +89,6 @@ fun BoardCard(
     depth: Int = 0,
     cardDragState: DragState? = null,
     cardIndexInColumn: Int = -1,
-    columnObjectsForDrop: List<CrmObject> = emptyList(),
     targetColumnId: String = "",
     /** The lane this card sits in, sent as row_value so a drop changes lane. */
     targetRowId: String = "",
@@ -151,8 +150,12 @@ fun BoardCard(
                 orientation = DropOrientation.Vertical,
                 acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                 onDrop = { sourceId, edge ->
-                    val rank = dropRank(
-                        columnObjects = columnObjectsForDrop.map { candidate -> candidate.id },
+                    // Counted in the list the server ranks, not the board's
+                    // own: it holds children, classes the view hides and
+                    // cards a sort or a filter moved.
+                    val rank = viewModel.dropPosition(
+                        field = columnFieldId,
+                        value = targetColumnId,
                         targetId = obj.id,
                         sourceId = sourceId,
                         below = edge == DragEdge.Bottom,

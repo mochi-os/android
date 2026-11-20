@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Apa panjenengan yakin arep mbusak CRM iki? Kabeh obyek, komentar, lan setelan bakal dibusak kanthi permanen.</string>
     <string name="crm_object_unwatch">Mandheg nonton</string>
     <string name="crm_object_delete_title">Busak objek</string>
-    <string name="crm_object_delete_message">Apa panjenengan yakin arep mbusak obyek iki? Tindakan iki ora bisa dibatalake.</string>
     <string name="crm_parent_none">Ora ana induk</string>
     <string name="crm_links_empty">Ora ana pranala</string>
     <string name="crm_links_section_relates">Gegandhengan karo</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Impor saka backup (opsional)</string>
     <string name="crm_export">Ekspor data</string>
     <string name="crm_exporting">Nyiapake ekspor…</string>
-    <string name="crm_create_allow_search">Idini sapa waé nggolèki CRM</string>
     <string name="crm_no_crms_found">Ora ana CRM ditemokaké</string>
     <string name="crm_create_blocked_no_parents">Durung ana jenis item sing bisa digawé. Gawé item induk sing dibutuhaké luwih dhisik.</string>
     <string name="crm_export_csv">Ekspor CSV</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">Conto %1$s</string>
     <string name="crm_option_delete_title">Busak pilihan</string>
     <string name="crm_option_delete_message">Apa sampeyan yakin arep mbusak pilihan \"%1$s\"?</string>
+    <string name="crm_create_public">Idini sapa waé ndelok lan menehi komentar ing CRM</string>
+    <string name="crm_board_delete_column">Busak kolom</string>
+    <string name="crm_board_delete_column_message">Sampéyan yakin arep mbusak kolom \"%1$s\"? Iki ora bisa dibatalaké.</string>
+    <string name="crm_object_delete_named">Sampéyan yakin arep mbusak \"%1$s\"? Tindakan iki ora bisa dibatalaké.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Sampéyan yakin arep mbusak \"%1$s\" lan %2$s item ing ngisoré? Tindakan iki ora bisa dibatalaké.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s lampiran ora bisa ditambahaké: %2$s</item>
+    </plurals>
 </resources>

@@ -99,7 +99,6 @@
     <string name="crm_object_unwatch">取消關注</string>
     <string name="crm_object_tab_properties">屬性</string>
     <string name="crm_object_delete_title">刪除物件</string>
-    <string name="crm_object_delete_message">你確定要刪除呢個物件？此操作無法復原。</string>
     <string name="crm_parent_none">無上層項目</string>
     <string name="crm_links_empty">冇連結</string>
     <string name="crm_links_add">新增連結</string>
@@ -282,9 +281,18 @@
     <string name="crm_export_saved">CRM 資料已儲存</string>
     <string name="crm_create_upload_json">上傳 .zip 或 .json 檔案</string>
     <string name="crm_create_blocked_no_options">無法建立：%1$s 為必填項目，但沒有可選選項。請在設計中新增選項。</string>
-    <string name="crm_create_allow_search">容許任何人搜尋 CRM</string>
     <string name="crm_no_crms_found">搵唔到 CRM</string>
     <string name="crm_create_blocked_no_parents">而家仲未可以建立任何項目類型。請先建立所需嘅上層項目。</string>
     <string name="crm_export_csv">匯出 CSV</string>
     <string name="crm_design_sample">範例 %1$s</string>
+    <string name="crm_create_public">允許任何人睇 CRM 同留言</string>
+    <string name="crm_object_delete_named">你確定要刪除「%1$s」？呢個動作冇得還原。</string>
+    <string name="crm_board_delete_column">刪除欄</string>
+    <string name="crm_board_delete_column_message">你確定要刪除「%1$s」欄？呢個冇得還原。</string>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s 個附件加唔到：%2$s</item>
+    </plurals>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">你確定要刪除「%1$s」同佢下面嘅 %2$s 個物件？呢個動作冇得還原。</item>
+    </plurals>
 </resources>

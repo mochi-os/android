@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Та энэ CRM-ийг устгахдаа итгэлтэй байна уу? Бүх объект, сэтгэгдэл, тохиргоо бүрмөсөн устах болно.</string>
     <string name="crm_object_unwatch">Ажиглахаа болих</string>
     <string name="crm_object_delete_title">Объект устгах</string>
-    <string name="crm_object_delete_message">Та энэ объектыг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
     <string name="crm_parent_none">Эх объект байхгүй</string>
     <string name="crm_links_empty">Холбоос байхгүй</string>
     <string name="crm_links_section_relates">Холбоотой</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Нөөцлөлтөөс импортлох (заавал биш)</string>
     <string name="crm_export">Өгөгдөл экспортлох</string>
     <string name="crm_exporting">Экспортыг бэлтгэж байна…</string>
-    <string name="crm_create_allow_search">Хэн ч CRM-ийг хайх боломжтой</string>
     <string name="crm_no_crms_found">CRM олдсонгүй</string>
     <string name="crm_create_blocked_no_parents">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>
     <string name="crm_export_csv">CSV экспортлох</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Жишээ %1$s</string>
     <string name="crm_option_delete_title">Сонголтыг устгах</string>
     <string name="crm_option_delete_message">\"%1$s\" сонголтыг устгахдаа итгэлтэй байна уу?</string>
+    <string name="crm_create_public">Хэнд ч CRM-ийг харах, сэтгэгдэл бичих боломж олгох</string>
+    <string name="crm_board_delete_column">Багана устгах</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" баганыг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
+    <string name="crm_object_delete_named">\"%1$s\"-г устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\" болон түүний доорх %2$s зүйлийг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</item>
+        <item quantity="other">\"%1$s\" болон түүний доорх %2$s зүйлийг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s хавсралт нэмж чадсангүй: %2$s</item>
+        <item quantity="other">%1$s хавсралт нэмж чадсангүй: %2$s</item>
+    </plurals>
 </resources>

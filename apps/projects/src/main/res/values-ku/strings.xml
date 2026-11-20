@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Vekirî</string>
     <string name="projects_request_status_merged">Tevlîkirî</string>
     <string name="projects_request_merge">Tevlîkirin</string>
-    <string name="projects_request_close">Bigire</string>
     <string name="projects_request_merge_dialog_title">Tevlîkirin</string>
     <string name="projects_request_method">Rêbaz</string>
     <string name="projects_request_method_merge">Tevlîkirin</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Bi rastî tu dixwazî vê projeyê jê bibî? Hemû obje, şîrove û mîheng dê bi awayekî mayînde werin rakirin.</string>
     <string name="projects_object_unwatch">Êdî temaşe neke</string>
     <string name="projects_object_delete_title">Objeyê jê bibe</string>
-    <string name="projects_object_delete_message">Bi rastî tu dixwazî vê objeyê jê bibî? Ev kirin nayê vegerandin.</string>
     <string name="projects_parent_none">Dêûbav tune</string>
     <string name="projects_links_empty">Girêdan tune</string>
     <string name="projects_links_section_relates">Têkildar e bi</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Pêvek tune</string>
     <string name="projects_attachment_default_name">pêvek</string>
     <string name="projects_request_new">Daxwaza tevlihevkirinê ya nû</string>
-    <string name="projects_request_status_closed">Girtî</string>
     <string name="projects_request_back_to_list">Vegere lîsteyê</string>
     <string name="projects_request_repository">Depo: %1$s</string>
     <string name="projects_request_source">Çavkanî: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Sêwirandin, afirandin, sererastkirin, şîrovekirin û dîtin</string>
     <string name="projects_access_role_write">Afirandin, sererastkirin, şîrovekirin û dîtin</string>
     <string name="projects_all_projects">Hemû proje</string>
-    <string name="projects_create_allow_search">Destûr bide her kesî ku li proje bigere</string>
     <string name="projects_create_import_backup">Ji paşvekêşê împort bike (vebijarkî)</string>
     <string name="projects_create_upload_json">Pelê .json bar bike</string>
     <string name="projects_settings_not_set">Nehatiye danîn</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne.</string>
     <string name="projects_create_blocked_no_options">Nayê afirandin: %1$s pêwîst e lê vebijarkên wê tune ne. Di Sêwiranê de vebijarkan lê zêde bike.</string>
     <string name="projects_attachment_remove">Pêvekê rake</string>
+    <string name="projects_create_allow_public">Destûr bide her kesî ku projeyê bibîne û şîrove li ser bike</string>
+    <string name="projects_request_delete_title">Daxwaza hevkirinê jê bibe</string>
+    <string name="projects_request_delete_message">Tu bawer î ku dixwazî vê daxwaza hevkirinê jê bibî?</string>
+    <string name="projects_board_delete_column_title">Stûnê jê bibe</string>
+    <string name="projects_board_delete_column_message">Tu bawer î ku dixwazî stûna \"%1$s\" jê bibî? Ev nikare were vegerandin.</string>
+    <string name="projects_object_delete_named">Tu bawer î ku dixwazî \"%1$s\" jê bibî? Ev kar nikare were vegerandin.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Tu bawer î ku dixwazî \"%1$s\" û %2$s hêman di binê wê de jê bibî? Ev kar nikare were vegerandin.</item>
+        <item quantity="other">Tu bawer î ku dixwazî \"%1$s\" û %2$s hêman di binê wê de jê bibî? Ev kar nikare were vegerandin.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nehat pêvekirin: %1$s</string>
 </resources>

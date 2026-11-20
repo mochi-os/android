@@ -37,6 +37,7 @@ import org.mochios.android.websocket.REOPEN
 import org.mochios.projects.ui.board.allOptions
 import org.mochios.projects.ui.board.boardClass
 import org.mochios.projects.ui.board.boardOptions
+import org.mochios.projects.ui.board.dropRank
 import org.mochios.projects.lib.ActiveViewStore
 import org.mochios.projects.lib.CollapsedColumnsStore
 import org.mochios.projects.model.FieldOption
@@ -171,8 +172,9 @@ class ProjectViewModel @Inject constructor(
     private val _shareLink = MutableSharedFlow<String>()
     val shareLink: SharedFlow<String> = _shareLink.asSharedFlow()
 
-    // A mutation that fails after the project has loaded: uiState.error only
-    // renders while nothing is loaded, so these are toasted by the screen.
+    // A failure after the project has loaded - a mutation, an export, a pulled
+    // refresh: uiState.error only renders while nothing is loaded, so these
+    // are toasted by the screen.
     private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
     val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 
@@ -365,10 +367,12 @@ class ProjectViewModel @Inject constructor(
                     error = null
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isRefreshing = false,
-                    error = e.toMochiError()
-                )
+                if (_uiState.value.projectDetails != null) {
+                    _uiState.value = _uiState.value.copy(isRefreshing = false)
+                    _actionFailed.tryEmit(e.toMochiError())
+                } else {
+                    _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
+                }
             }
         }
     }
@@ -429,7 +433,7 @@ class ProjectViewModel @Inject constructor(
                     )
                 )
             } catch (error: Exception) {
-                _uiState.value = _uiState.value.copy(error = error.toMochiError())
+                _actionFailed.tryEmit(error.toMochiError())
             } finally {
                 _uiState.value = _uiState.value.copy(isExporting = false)
             }
@@ -678,7 +682,7 @@ class ProjectViewModel @Inject constructor(
                 }
                 refreshObjects()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -698,7 +702,7 @@ class ProjectViewModel @Inject constructor(
                 repository.moveObject(projectId, objectId, field, value, rank, rowField, rowValue, scopeParent, promote)
                 refreshObjects()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -851,7 +855,7 @@ class ProjectViewModel @Inject constructor(
                 repository.updateObject(projectId, objectId, newParentId)
                 refreshObjects()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -868,22 +872,72 @@ class ProjectViewModel @Inject constructor(
                 repository.updateOption(projectId, classId, fieldId, optionId, name, null, null)
                 refreshProject()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
 
+    /**
+     * Deletes the empty column [optionId] of [fieldId]. A column that holds an
+     * object by now is left alone: its objects would keep an option that no
+     * longer exists.
+     */
     fun deleteColumnOption(fieldId: String, optionId: String) {
         // A column is an option of the board class, so that is the class changed.
         val classId = getBoardClass() ?: return
+        if (columnHolds(fieldId, optionId)) return
         viewModelScope.launch {
             try {
                 repository.deleteOption(projectId, classId, fieldId, optionId)
                 refreshProject()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
+    }
+
+    /**
+     * Whether any object of the project, at any depth and of any class, holds
+     * [optionId] in [fieldId] - not only the cards the board shows.
+     */
+    fun columnHolds(fieldId: String, optionId: String): Boolean =
+        _uiState.value.objects.any { obj ->
+            obj.stringValue(fieldId) == optionId || obj.listValue(fieldId).contains(optionId)
+        }
+
+    /** Whether the signed-in person may change the project's design. */
+    fun canDesign(): Boolean = _uiState.value.projectDetails?.project?.access in DESIGN_ACCESS
+
+    /**
+     * The objects a card dropped into column [value] of [field] is placed
+     * among, as the server ranks them: every object holding that value, at any
+     * depth and of any class, except [moved], in rank order. An empty [value]
+     * keeps the moved object's own, as the server does.
+     */
+    fun rankedColumn(field: String, value: String, moved: String): List<String> {
+        val objects = _uiState.value.objects
+        val target = value.ifBlank { objects.firstOrNull { obj -> obj.id == moved }?.stringValue(field).orEmpty() }
+        return objects
+            .filter { obj -> obj.id != moved && obj.stringValue(field) == target }
+            .sortedBy { obj -> obj.rank }
+            .map { obj -> obj.id }
+    }
+
+    /**
+     * The 1-based position for [moved] dropped above or [below] the card
+     * [target] in column [value] of [field], counted among the column as the
+     * server ranks it, not as the board shows it: the board holds only the
+     * top-level cards of the view's classes, in the view's sort.
+     */
+    fun dropPosition(field: String, value: String, target: String, moved: String, below: Boolean): Int =
+        dropRank(rankedColumn(field, value, moved), target, moved, below)
+
+    /**
+     * Moves [objectId] to the end of column [value] of [field], and into lane
+     * [rowValue] of [rowField] when given.
+     */
+    fun moveToEnd(objectId: String, field: String, value: String, rowField: String? = null, rowValue: String? = null) {
+        moveObject(objectId, field, value, COLUMN_END, rowField, rowValue)
     }
 
     /**
@@ -906,7 +960,7 @@ class ProjectViewModel @Inject constructor(
                 repository.reorderOptions(projectId, classId, fieldId, order.joinToString(","))
                 refreshProject()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -957,15 +1011,8 @@ class ProjectViewModel @Inject constructor(
             }
         }
 
-        // Filter by view's filter field
-        if (view != null && view.filter.isNotBlank()) {
-            val parts = view.filter.split(":")
-            if (parts.size == 2) {
-                val filterFieldId = parts[0]
-                val filterValue = parts[1]
-                objects = objects.filter { it.stringValue(filterFieldId) == filterValue }
-            }
-        }
+        // A view's stored filter is not applied: the web does not read it, and
+        // the editor labels it as not yet applied.
 
         // Filter to watched objects only
         if (state.watchedOnly) {
@@ -1078,6 +1125,13 @@ class ProjectViewModel @Inject constructor(
 
     private companion object {
         const val MAX_WARM_ROUNDS = 60
+
+        /**
+         * A drop position past every object of a column: the server clamps
+         * it to the end and ranks the card after every other, however many
+         * objects the column holds that the board does not show.
+         */
+        const val COLUMN_END = Int.MAX_VALUE
 
         /** Frames that change the items alone. */
         val OBJECT_FRAMES = setOf(

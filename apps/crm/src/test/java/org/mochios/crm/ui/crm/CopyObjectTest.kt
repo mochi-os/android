@@ -131,7 +131,9 @@ class CopyObjectTest {
         create(model)
         val made = sent("p1/-/objects/create").single()
         assertTrue(made, made.contains("\"class\":\"card\"") && made.contains("\"title\":\"Original\""))
-        assertTrue(sent("p1/-/objects/o9/values/status").single().contains("Done"))
+        // The status goes with the create, not after it.
+        assertTrue(made, made.contains("\"values\":{\"status\":\"Done\"}"))
+        assertEquals(emptyList<String>(), sent("p1/-/objects/o9/values/status"))
         assertEquals(listOf("attachments=a1"), sent("p1/-/objects/o9/attachments/copy"))
     }
 

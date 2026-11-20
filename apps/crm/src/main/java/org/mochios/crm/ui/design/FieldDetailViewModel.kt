@@ -18,6 +18,7 @@ import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.util.reorderedTo
+import org.mochios.crm.api.UpdateFieldRequest
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.repository.CrmsRepository
 import javax.inject.Inject
@@ -80,36 +81,11 @@ class FieldDetailViewModel @Inject constructor(
         }
     }
 
-    /** Saves the edited field. Null arguments leave that property unchanged. */
-    fun updateField(
-        name: String?,
-        fieldtype: String?,
-        flags: String?,
-        multi: Boolean?,
-        card: Boolean?,
-        position: String?,
-        rows: Int?,
-        pattern: String? = null,
-        minlength: Int? = null,
-        maxlength: Int? = null
-    ) {
+    /** Saves the edited field. A null in [body] leaves that property unchanged. */
+    fun updateField(body: UpdateFieldRequest) {
         viewModelScope.launch {
             try {
-                repository.updateField(
-                    crmId,
-                    classId,
-                    fieldId,
-                    name,
-                    fieldtype,
-                    flags,
-                    multi,
-                    card,
-                    position,
-                    rows,
-                    pattern,
-                    minlength,
-                    maxlength
-                )
+                repository.updateField(crmId, classId, fieldId, body)
                 loadCrm()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

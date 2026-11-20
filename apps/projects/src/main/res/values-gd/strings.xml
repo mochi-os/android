@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Fosgailte</string>
     <string name="projects_request_status_merged">Air aonachadh</string>
     <string name="projects_request_merge">Aonaich</string>
-    <string name="projects_request_close">Dùin</string>
     <string name="projects_request_merge_dialog_title">Aonaich</string>
     <string name="projects_request_method">Dòigh</string>
     <string name="projects_request_method_merge">Aonaich</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">A bheil thu cinnteach gu bheil thu airson am pròiseact seo a sguabadh às? Thèid a h-uile nì, beachd, agus roghainn a thoirt air falbh gu buan.</string>
     <string name="projects_object_unwatch">Sguir de chumail sùil</string>
     <string name="projects_object_delete_title">Sguab às an nì</string>
-    <string name="projects_object_delete_message">A bheil thu cinnteach gu bheil thu airson an nì seo a sguabadh às? Cha ghabh seo a thilleadh.</string>
     <string name="projects_parent_none">Gun phàrant</string>
     <string name="projects_links_empty">Gun cheanglaichean</string>
     <string name="projects_links_section_relates">A\' buntainn ri</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Chan eil ceanglachain ann</string>
     <string name="projects_attachment_default_name">ceanglachan</string>
     <string name="projects_request_new">Iarrtas co-aonaidh ùr</string>
-    <string name="projects_request_status_closed">Dùinte</string>
     <string name="projects_request_back_to_list">Air ais dhan liosta</string>
     <string name="projects_request_repository">Tasglann: %1$s</string>
     <string name="projects_request_source">Tùs: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dealbhaich, cruthaich, deasaich, thoir beachd agus seall</string>
     <string name="projects_access_role_write">Cruthaich, deasaich, thoir beachd agus seall</string>
     <string name="projects_all_projects">Na pròiseactan uile</string>
-    <string name="projects_create_allow_search">Ceadaich do dhuine sam bith pròiseact a lorg</string>
     <string name="projects_create_import_backup">Ion-phortaich o lethbhreac-glèidhidh (roghainneil)</string>
     <string name="projects_create_upload_json">Luchdaich suas faidhle .json</string>
     <string name="projects_settings_not_set">Cha deach a shuidheachadh</string>
@@ -334,4 +330,17 @@
     <string name="projects_create_object_no_types">Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach.</string>
     <string name="projects_create_blocked_no_options">Cha ghabh a chruthachadh: tha %1$s riatanach ach chan eil roghainnean aige. Cuir roghainnean ris san Dealbhachd.</string>
     <string name="projects_attachment_remove">Thoir air falbh an ceanglachan</string>
+    <string name="projects_create_allow_public">Ceadaich do dhuine sam bith am pròiseact fhaicinn agus beachdan a chur ris</string>
+    <string name="projects_request_delete_title">Sguab às iarrtas co-aonaidh</string>
+    <string name="projects_request_delete_message">A bheil thu cinnteach gu bheil thu airson an t-iarrtas co-aonaidh seo a sguabadh às?</string>
+    <string name="projects_board_delete_column_title">Sguab às colbh</string>
+    <string name="projects_board_delete_column_message">A bheil thu cinnteach gu bheil thu airson an colbh \"%1$s\" a sguabadh às? Cha ghabh seo a thilleadh.</string>
+    <string name="projects_object_delete_named">A bheil thu cinnteach gu bheil thu airson \"%1$s\" a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nì fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+        <item quantity="two">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nì fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+        <item quantity="few">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nithean fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+        <item quantity="other">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nì fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Cha b\' urrainn a cheangal ris: %1$s</string>
 </resources>

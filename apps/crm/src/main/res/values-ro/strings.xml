@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Sigur doriți să ștergeți acest CRM? Toate obiectele, comentariile și setările vor fi eliminate definitiv.</string>
     <string name="crm_object_unwatch">Nu mai urmăriți</string>
     <string name="crm_object_delete_title">Ștergeți obiectul</string>
-    <string name="crm_object_delete_message">Sigur doriți să ștergeți acest obiect? Această acțiune nu poate fi anulată.</string>
     <string name="crm_parent_none">Fără părinte</string>
     <string name="crm_links_empty">Nicio legătură</string>
     <string name="crm_links_section_relates">Legat de</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importă din backup (opțional)</string>
     <string name="crm_export">Exportă datele</string>
     <string name="crm_exporting">Se pregătește exportul…</string>
-    <string name="crm_create_allow_search">Permite oricui să caute CRM-ul</string>
     <string name="crm_no_crms_found">Nu s-au găsit CRM-uri</string>
     <string name="crm_create_blocked_no_parents">Încă nu pot fi create tipuri de elemente. Creează mai întâi elementele părinte necesare.</string>
     <string name="crm_export_csv">Exportă CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">Exemplu %1$s</string>
     <string name="crm_option_delete_title">Șterge opțiunea</string>
     <string name="crm_option_delete_message">Sigur dorești să ștergi opțiunea \"%1$s\"?</string>
+    <string name="crm_create_public">Permite oricui să vadă și să comenteze CRM-ul</string>
+    <string name="crm_board_delete_column">Șterge coloana</string>
+    <string name="crm_board_delete_column_message">Sigur vrei să ștergi coloana „%1$s”? Această acțiune nu poate fi anulată.</string>
+    <string name="crm_object_delete_named">Sigur vrei să ștergi „%1$s”? Această acțiune nu poate fi anulată.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Sigur vrei să ștergi „%1$s” și %2$s element aflat sub el? Această acțiune nu poate fi anulată.</item>
+        <item quantity="few">Sigur vrei să ștergi „%1$s” și %2$s elemente aflate sub el? Această acțiune nu poate fi anulată.</item>
+        <item quantity="other">Sigur vrei să ștergi „%1$s” și %2$s de elemente aflate sub el? Această acțiune nu poate fi anulată.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s atașament nu a putut fi adăugat: %2$s</item>
+        <item quantity="few">%1$s atașamente nu au putut fi adăugate: %2$s</item>
+        <item quantity="other">%1$s de atașamente nu au putut fi adăugate: %2$s</item>
+    </plurals>
 </resources>

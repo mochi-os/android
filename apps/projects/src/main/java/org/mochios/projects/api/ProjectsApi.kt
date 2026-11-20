@@ -71,7 +71,11 @@ data class ObjectListResponse(
     val objects: List<ProjectObject> = emptyList(),
     val watched: List<String> = emptyList()
 )
-data class ObjectResponse(val `object`: ProjectObject = ProjectObject())
+// `-/objects/:object` sends the values beside the object, not inside it.
+data class ObjectResponse(
+    val `object`: ProjectObject = ProjectObject(),
+    val values: Map<String, Any?> = emptyMap(),
+)
 // objects/create returns a flat body (id/number/readable), not a wrapped object.
 data class ObjectCreateResponse(
     val id: String = "",
@@ -84,9 +88,70 @@ data class ActivityListResponse(val activities: List<Activity> = emptyList())
 data class LinkListResponse(val incoming: List<Link> = emptyList(), val outgoing: List<Link> = emptyList())
 data class WatcherListResponse(val watchers: List<Watcher> = emptyList(), val watching: Boolean = false)
 data class MergeRequestListResponse(val requests: List<MergeRequest> = emptyList())
-data class MergeRequestResponse(val request: MergeRequest = MergeRequest())
 data class PeopleResponse(val people: List<Person> = emptyList())
 data class AccessResponse(val rules: List<AccessRule> = emptyList())
+
+// JSON bodies, not forms, for every call that may send an empty value: the
+// server reads an empty form field as absent but an empty JSON string as "".
+// Gson leaves a null out, so a property the user did not touch stays unsent.
+
+// Body of `objects/create`: the object and its first values in one request,
+// so a value the server refuses creates nothing.
+data class CreateObjectRequest(
+    @SerializedName("class") val classId: String,
+    val parent: String?,
+    val title: String,
+    val values: Map<String, String>?,
+)
+
+// Body of `objects/{object}/update`; "" for [parent] moves it to the top level.
+data class UpdateObjectRequest(val parent: String?)
+
+// Body of `objects/{object}/move`; "" for [scope] reorders among the top level.
+data class MoveObjectRequest(
+    val field: String?,
+    val value: String?,
+    val rank: Int?,
+    val row: String?,
+    val scope: String?,
+    val promote: String?,
+)
+
+// Body of `classes/{class}/hierarchy/set`: the parents comma-separated, as the
+// web sends them, "" for the top level only and "_none_" for none.
+data class HierarchyRequest(val parents: String)
+
+// Body of `views/{view}/update`; "" clears a setting.
+data class UpdateViewRequest(
+    val name: String?,
+    val viewtype: String?,
+    val columns: String?,
+    val rows: String?,
+    val filter: String?,
+    val sort: String?,
+    val direction: String?,
+    val classes: String?,
+    val border: String?,
+)
+
+// Body of `fields/{field}/update`; "" clears flags, position, pattern or rows.
+data class UpdateFieldRequest(
+    val name: String?,
+    val flags: String?,
+    val multi: Boolean?,
+    val card: Boolean?,
+    val position: String?,
+    val rows: String?,
+    val pattern: String?,
+    val minlength: Int?,
+    val maxlength: Int?,
+)
+
+// Body of `-/update`; "" clears the description.
+data class UpdateProjectRequest(val name: String?, val description: String?, val prefix: String?)
+
+// Body of `options/{option}/update`; "" clears the colour or icon.
+data class UpdateOptionRequest(val name: String?, val colour: String?, val icon: String?)
 
 // Body for setting a single field value. The values endpoint expects a JSON
 // object ({"value": "…"}); form encoding fails to update some fields (e.g. the
@@ -123,11 +188,8 @@ data class ShareResponse(val link: String = "")
 data class WarmExportResponse(val attachments: Int = 0, val remaining: Int = 0)
 data class ClassListResponse(val classes: List<ProjectClass> = emptyList())
 data class FieldListResponse(val fields: List<ProjectField> = emptyList())
-data class FieldResponse(val field: ProjectField = ProjectField())
 data class OptionListResponse(val options: List<FieldOption> = emptyList())
-data class OptionResponse(val option: FieldOption = FieldOption())
 data class ViewListResponse(val views: List<ProjectView> = emptyList())
-data class ViewResponse(val view: ProjectView = ProjectView())
 data class RepositoryListResponse(val repositories: List<Repository> = emptyList())
 data class BranchListResponse(val branches: List<Branch> = emptyList())
 data class MergeCheckResponse(
@@ -242,13 +304,10 @@ interface ProjectsApi {
     @POST("{projectId}/-/share")
     suspend fun getShareLink(@Path("projectId") projectId: String): Response<ApiResponse<ShareResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/update")
     suspend fun updateProject(
         @Path("projectId") projectId: String,
-        @Field("name") name: String?,
-        @Field("description") description: String?,
-        @Field("prefix") prefix: String?
+        @Body body: UpdateProjectRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/delete")
@@ -280,13 +339,10 @@ interface ProjectsApi {
     @GET("{projectId}/-/objects")
     suspend fun getObjects(@Path("projectId") projectId: String): Response<ApiResponse<ObjectListResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/objects/create")
     suspend fun createObject(
         @Path("projectId") projectId: String,
-        @Field("class") classId: String,
-        @Field("parent") parent: String?,
-        @Field("title") title: String
+        @Body body: CreateObjectRequest
     ): Response<ApiResponse<ObjectCreateResponse>>
 
     @GET("{projectId}/-/objects/{objectId}")
@@ -295,14 +351,13 @@ interface ProjectsApi {
         @Path("objectId") objectId: String
     ): Response<ApiResponse<ObjectResponse>>
 
-    @FormUrlEncoded
+    // Title is a field value (the class's title field), edited via value/set;
+    // object/update only handles parent/class. Do NOT add a title field here.
     @POST("{projectId}/-/objects/{objectId}/update")
     suspend fun updateObject(
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
-        // Title is a field value (the class's title field), edited via value/set;
-        // object/update only handles parent/class. Do NOT add a title field here.
-        @Field("parent") parent: String?
+        @Body body: UpdateObjectRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/objects/{objectId}/delete")
@@ -311,17 +366,11 @@ interface ProjectsApi {
         @Path("objectId") objectId: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/objects/{objectId}/move")
     suspend fun moveObject(
         @Path("projectId") projectId: String,
         @Path("objectId") objectId: String,
-        @Field("field") field: String?,
-        @Field("value") value: String?,
-        @Field("rank") rank: Int?,
-        @Field("row") row: String? = null,
-        @Field("scope") scope: String? = null,
-        @Field("promote") promote: String? = null
+        @Body body: MoveObjectRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @FormUrlEncoded
@@ -452,7 +501,7 @@ interface ProjectsApi {
         @Field("title") title: String,
         @Field("description") description: String?,
         @Field("draft") draft: String?
-    ): Response<ApiResponse<MergeRequestResponse>>
+    ): Response<ApiResponse<MergeRequest>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/objects/{objectId}/requests/{requestId}/update")
@@ -559,7 +608,7 @@ interface ProjectsApi {
         @Field("direction") direction: String?,
         @Field("classes") classes: String?,
         @Field("border") border: String?
-    ): Response<ApiResponse<ViewResponse>>
+    ): Response<ApiResponse<ProjectView>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/views/reorder")
@@ -568,20 +617,11 @@ interface ProjectsApi {
         @Field("order") order: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/views/{viewId}/update")
     suspend fun updateView(
         @Path("projectId") projectId: String,
         @Path("viewId") viewId: String,
-        @Field("name") name: String?,
-        @Field("viewtype") viewtype: String?,
-        @Field("columns") columns: String?,
-        @Field("rows") rows: String?,
-        @Field("filter") filter: String?,
-        @Field("sort") sort: String?,
-        @Field("direction") direction: String?,
-        @Field("classes") classes: String?,
-        @Field("border") border: String?
+        @Body body: UpdateViewRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/views/{viewId}/delete")
@@ -625,12 +665,11 @@ interface ProjectsApi {
         @Path("classId") classId: String
     ): Response<ApiResponse<HierarchyResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/classes/{classId}/hierarchy/set")
     suspend fun setHierarchy(
         @Path("projectId") projectId: String,
         @Path("classId") classId: String,
-        @Field("parents") parents: String
+        @Body body: HierarchyRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Fields ----
@@ -650,7 +689,7 @@ interface ProjectsApi {
         @Field("fieldtype") fieldtype: String,
         @Field("flags") flags: String?,
         @Field("multi") multi: Boolean?
-    ): Response<ApiResponse<FieldResponse>>
+    ): Response<ApiResponse<ProjectField>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/classes/{classId}/fields/reorder")
@@ -660,21 +699,12 @@ interface ProjectsApi {
         @Field("order") order: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/classes/{classId}/fields/{fieldId}/update")
     suspend fun updateField(
         @Path("projectId") projectId: String,
         @Path("classId") classId: String,
         @Path("fieldId") fieldId: String,
-        @Field("name") name: String?,
-        @Field("flags") flags: String?,
-        @Field("multi") multi: Boolean?,
-        @Field("card") card: Boolean?,
-        @Field("position") position: String?,
-        @Field("rows") rows: Int?,
-        @Field("pattern") pattern: String?,
-        @Field("minlength") minlength: Int?,
-        @Field("maxlength") maxlength: Int?
+        @Body body: UpdateFieldRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/classes/{classId}/fields/{fieldId}/delete")
@@ -702,7 +732,7 @@ interface ProjectsApi {
         @Field("name") name: String,
         @Field("colour") colour: String?,
         @Field("icon") icon: String? = null
-    ): Response<ApiResponse<OptionResponse>>
+    ): Response<ApiResponse<FieldOption>>
 
     @FormUrlEncoded
     @POST("{projectId}/-/classes/{classId}/fields/{fieldId}/options/reorder")
@@ -713,16 +743,13 @@ interface ProjectsApi {
         @Field("order") order: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{projectId}/-/classes/{classId}/fields/{fieldId}/options/{optionId}/update")
     suspend fun updateOption(
         @Path("projectId") projectId: String,
         @Path("classId") classId: String,
         @Path("fieldId") fieldId: String,
         @Path("optionId") optionId: String,
-        @Field("name") name: String?,
-        @Field("colour") colour: String?,
-        @Field("icon") icon: String?
+        @Body body: UpdateOptionRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{projectId}/-/classes/{classId}/fields/{fieldId}/options/{optionId}/delete")

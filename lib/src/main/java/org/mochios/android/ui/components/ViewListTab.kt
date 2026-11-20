@@ -98,18 +98,19 @@ data class ViewListItem(
 )
 
 /**
- * The edits a [ViewForm] collected, ready to send to a repository.
- * Blank entries arrive as `null` so an unset field clears server-side.
+ * The edits a [ViewForm] collected, ready to send to a repository. A setting
+ * left blank arrives as "", so an update sent as JSON clears it on the server;
+ * null means the setting is not sent at all.
  *
  * @property name Name typed into the form.
  * @property viewtype Either `board` or `list`.
- * @property columns Field id driving board columns, or null.
- * @property rows Field id driving board swimlanes, or null.
- * @property filter Filter expression, or null.
- * @property sort Field id or pseudo-field to sort on, or null.
+ * @property columns Field id driving board columns, "" for none.
+ * @property rows Field id driving board swimlanes, "" for none.
+ * @property filter Filter expression, "" for none.
+ * @property sort Field id or pseudo-field to sort on, "" for none.
  * @property direction Either `asc` or `desc`.
- * @property classes Comma-joined class ids the view is limited to, or null.
- * @property border Field id driving a card's border colour, or null.
+ * @property classes Comma-joined class ids the view is limited to, "" for all.
+ * @property border Field id driving a card's border colour, "" for none.
  */
 data class ViewDraft(
     val name: String,
@@ -457,17 +458,17 @@ class ViewFormState(private val initialView: ViewListItem?) {
     val canSave: Boolean
         get() = name.isNotBlank()
 
-    /** The form's values as a [ViewDraft], with blank entries sent as null. */
+    /** The form's values as a [ViewDraft], a blank setting as "" so it clears. */
     fun toDraft() = ViewDraft(
         name = name,
         viewtype = viewtype,
-        columns = columns.ifBlank { null },
-        rows = rows.ifBlank { null },
-        filter = filter.ifBlank { null },
-        sort = sort.ifBlank { null },
+        columns = columns.ifBlank { "" },
+        rows = rows.ifBlank { "" },
+        filter = filter.ifBlank { "" },
+        sort = sort.ifBlank { "" },
         direction = direction,
-        classes = classes.joinToString(",").ifBlank { null },
-        border = border.ifBlank { null }
+        classes = classes.joinToString(",").ifBlank { "" },
+        border = border.ifBlank { "" }
     )
 
     /** The view as it would look saved, for the live preview. */

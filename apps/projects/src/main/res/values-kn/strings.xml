@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">ತೆರೆದಿದೆ</string>
     <string name="projects_request_status_merged">ಮರ್ಜ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="projects_request_merge">ಮರ್ಜ್</string>
-    <string name="projects_request_close">ಮುಚ್ಚಿ</string>
     <string name="projects_request_merge_dialog_title">ಮರ್ಜ್</string>
     <string name="projects_request_method">ವಿಧಾನ</string>
     <string name="projects_request_method_merge">ಮರ್ಜ್</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ಈ ಯೋಜನೆಯನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿರುವಿರಾ? ಎಲ್ಲಾ ವಸ್ತುಗಳು, ಕಾಮೆಂಟ್‌ಗಳು ಮತ್ತು ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ.</string>
     <string name="projects_object_unwatch">ವೀಕ್ಷಣೆ ತೆಗೆದುಹಾಕಿ</string>
     <string name="projects_object_delete_title">ಆಬ್ಜೆಕ್ಟ್ ಅಳಿಸಿ</string>
-    <string name="projects_object_delete_message">ಈ ವಸ್ತುವನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿರುವಿರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
     <string name="projects_parent_none">ಪೋಷಕ ಇಲ್ಲ</string>
     <string name="projects_links_empty">ಯಾವುದೇ ಲಿಂಕ್‌ಗಳಿಲ್ಲ</string>
     <string name="projects_links_section_relates">ಸಂಬಂಧಿಸಿದೆ</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">ಯಾವುದೇ ಲಗತ್ತುಗಳಿಲ್ಲ</string>
     <string name="projects_attachment_default_name">ಲಗತ್ತು</string>
     <string name="projects_request_new">ಹೊಸ ವಿಲೀನ ವಿನಂತಿ</string>
-    <string name="projects_request_status_closed">ಮುಚ್ಚಲಾಗಿದೆ</string>
     <string name="projects_request_back_to_list">ಪಟ್ಟಿಗೆ ಹಿಂತಿರುಗಿ</string>
     <string name="projects_request_repository">ರೆಪೋಸಿಟರಿ: %1$s</string>
     <string name="projects_request_source">ಮೂಲ: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ವಿನ್ಯಾಸ, ರಚನೆ, ಸಂಪಾದನೆ, ಕಾಮೆಂಟ್ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
     <string name="projects_access_role_write">ರಚನೆ, ಸಂಪಾದನೆ, ಕಾಮೆಂಟ್ ಮತ್ತು ವೀಕ್ಷಣೆ</string>
     <string name="projects_all_projects">ಎಲ್ಲಾ ಪ್ರಾಜೆಕ್ಟ್‌ಗಳು</string>
-    <string name="projects_create_allow_search">ಯಾರಾದರೂ ಪ್ರಾಜೆಕ್ಟ್ ಹುಡುಕಲು ಅನುಮತಿಸಿ</string>
     <string name="projects_create_import_backup">ಬ್ಯಾಕಪ್‌ನಿಂದ ಆಮದು ಮಾಡಿ (ಐಚ್ಛಿಕ)</string>
     <string name="projects_create_upload_json">.json ಫೈಲ್ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ</string>
     <string name="projects_settings_not_set">ಸೆಟ್ ಮಾಡಲಾಗಿಲ್ಲ</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">ಇನ್ನೂ ಯಾವುದೇ ಐಟಂ ಪ್ರಕಾರಗಳನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮೊದಲು ಅಗತ್ಯವಿರುವ ಪೋಷಕ ಐಟಂಗಳನ್ನು ರಚಿಸಿ.</string>
     <string name="projects_create_blocked_no_options">ರಚಿಸಲಾಗುವುದಿಲ್ಲ: %1$s ಅಗತ್ಯವಿದೆ ಆದರೆ ಆಯ್ಕೆ ಮಾಡಲು ಯಾವುದೇ ಆಯ್ಕೆಗಳಿಲ್ಲ. ವಿನ್ಯಾಸದಲ್ಲಿ ಆಯ್ಕೆಗಳನ್ನು ಸೇರಿಸಿ.</string>
     <string name="projects_attachment_remove">ಲಗತ್ತು ತೆಗೆದುಹಾಕಿ</string>
+    <string name="projects_create_allow_public">ಯಾರಾದರೂ ಪ್ರಾಜೆಕ್ಟ್ ವೀಕ್ಷಿಸಲು ಮತ್ತು ಅದರ ಮೇಲೆ ಕಾಮೆಂಟ್ ಮಾಡಲು ಅನುಮತಿಸಿ</string>
+    <string name="projects_request_delete_title">ಮರ್ಜ್ ರಿಕ್ವೆಸ್ಟ್ ಅಳಿಸಿ</string>
+    <string name="projects_request_delete_message">ಈ ಮರ್ಜ್ ರಿಕ್ವೆಸ್ಟ್ ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ?</string>
+    <string name="projects_board_delete_column_title">ಕಾಲಮ್ ಅಳಿಸಿ</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" ಕಾಲಮ್ ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಇದನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="projects_object_delete_named">\"%1$s\" ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" ಮತ್ತು ಅದರ ಅಡಿಯಲ್ಲಿರುವ %2$s ಐಟಂ ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</item>
+        <item quantity="other">\"%1$s\" ಮತ್ತು ಅದರ ಅಡಿಯಲ್ಲಿರುವ %2$s ಐಟಂಗಳನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ಲಗತ್ತಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %1$s</string>
 </resources>

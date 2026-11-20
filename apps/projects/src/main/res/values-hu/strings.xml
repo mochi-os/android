@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Nyitott</string>
     <string name="projects_request_status_merged">Egyesítve</string>
     <string name="projects_request_merge">Egyesítés</string>
-    <string name="projects_request_close">Lezárás</string>
     <string name="projects_request_merge_dialog_title">Egyesítés</string>
     <string name="projects_request_method">Módszer</string>
     <string name="projects_request_method_merge">Egyesítés</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Biztosan törli ezt a projektet? Minden objektum, hozzászólás és beállítás véglegesen eltávolításra kerül.</string>
     <string name="projects_object_unwatch">Figyelés megszüntetése</string>
     <string name="projects_object_delete_title">Objektum törlése</string>
-    <string name="projects_object_delete_message">Biztosan törli ezt az objektumot? Ez a művelet nem vonható vissza.</string>
     <string name="projects_parent_none">Nincs szülő</string>
     <string name="projects_links_empty">Nincsenek hivatkozások</string>
     <string name="projects_links_section_relates">Kapcsolódik</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Nincsenek mellékletek</string>
     <string name="projects_attachment_default_name">melléklet</string>
     <string name="projects_request_new">Új összevonási kérés</string>
-    <string name="projects_request_status_closed">Lezárva</string>
     <string name="projects_request_back_to_list">Vissza a listához</string>
     <string name="projects_request_repository">Tároló: %1$s</string>
     <string name="projects_request_source">Forrás: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Tervezés, létrehozás, szerkesztés, hozzászólás és megtekintés</string>
     <string name="projects_access_role_write">Létrehozás, szerkesztés, hozzászólás és megtekintés</string>
     <string name="projects_all_projects">Összes projekt</string>
-    <string name="projects_create_allow_search">Bárki kereshet a projektre</string>
     <string name="projects_create_import_backup">Importálás biztonsági mentésből (opcionális)</string>
     <string name="projects_create_upload_json">.json fájl feltöltése</string>
     <string name="projects_settings_not_set">Nincs beállítva</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Egyetlen elemtípus sem hozható még létre. Először hozza létre a szükséges szülőelemeket.</string>
     <string name="projects_create_blocked_no_options">Nem hozható létre: a(z) %1$s kötelező, de nincsenek választható lehetőségei. Adjon hozzá lehetőségeket a Tervben.</string>
     <string name="projects_attachment_remove">Melléklet eltávolítása</string>
+    <string name="projects_create_allow_public">Bárki megtekintheti és kommentálhatja a projektet</string>
+    <string name="projects_request_delete_title">Egyesítési kérés törlése</string>
+    <string name="projects_request_delete_message">Biztosan törli ezt az egyesítési kérést?</string>
+    <string name="projects_board_delete_column_title">Oszlop törlése</string>
+    <string name="projects_board_delete_column_message">Biztosan törli a(z) „%1$s” oszlopot? Ez nem vonható vissza.</string>
+    <string name="projects_object_delete_named">Biztosan törli a következőt: „%1$s”? Ez a művelet nem vonható vissza.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Biztosan törli a következőt: „%1$s”, és az alatta lévő %2$s elemet? Ez a művelet nem vonható vissza.</item>
+        <item quantity="other">Biztosan törli a következőt: „%1$s”, és az alatta lévő %2$s elemet? Ez a művelet nem vonható vissza.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nem sikerült csatolni: %1$s</string>
 </resources>

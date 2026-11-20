@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Vai tiešām vēlaties dzēst šo CRM? Visi objekti, komentāri un iestatījumi tiks neatgriezeniski noņemti.</string>
     <string name="crm_object_unwatch">Pārtraukt vērošanu</string>
     <string name="crm_object_delete_title">Dzēst objektu</string>
-    <string name="crm_object_delete_message">Vai tiešām vēlaties dzēst šo objektu? Šo darbību nevar atsaukt.</string>
     <string name="crm_parent_none">Nav vecākobjekta</string>
     <string name="crm_links_empty">Nav saišu</string>
     <string name="crm_links_section_relates">Saistīts ar</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importēt no rezerves kopijas (neobligāti)</string>
     <string name="crm_export">Eksportēt datus</string>
     <string name="crm_exporting">Sagatavo eksportu…</string>
-    <string name="crm_create_allow_search">Ļaut jebkuram meklēt CRM</string>
     <string name="crm_no_crms_found">CRM nav atrasti</string>
     <string name="crm_create_blocked_no_parents">Vēl nevar izveidot vienumu tipus. Vispirms izveidojiet nepieciešamos vecākvienumus.</string>
     <string name="crm_export_csv">Eksportēt CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">Paraugs %1$s</string>
     <string name="crm_option_delete_title">Dzēst opciju</string>
     <string name="crm_option_delete_message">Vai tiešām vēlaties dzēst opciju \"%1$s\"?</string>
+    <string name="crm_create_public">Ļaut jebkuram skatīt un komentēt CRM</string>
+    <string name="crm_board_delete_column">Dzēst kolonnu</string>
+    <string name="crm_board_delete_column_message">Vai tiešām vēlies dzēst kolonnu \"%1$s\"? To nevar atsaukt.</string>
+    <string name="crm_object_delete_named">Vai tiešām vēlies dzēst \"%1$s\"? Šo darbību nevar atsaukt.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="zero">Vai tiešām vēlies dzēst \"%1$s\" un %2$s vienumus zem tā? Šo darbību nevar atsaukt.</item>
+        <item quantity="one">Vai tiešām vēlies dzēst \"%1$s\" un %2$s vienumu zem tā? Šo darbību nevar atsaukt.</item>
+        <item quantity="other">Vai tiešām vēlies dzēst \"%1$s\" un %2$s vienumus zem tā? Šo darbību nevar atsaukt.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="zero">Neizdevās pievienot %1$s pielikumus: %2$s</item>
+        <item quantity="one">Neizdevās pievienot %1$s pielikumu: %2$s</item>
+        <item quantity="other">Neizdevās pievienot %1$s pielikumus: %2$s</item>
+    </plurals>
 </resources>

@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">هل أنت متأكد من رغبتك في حذف نظام إدارة علاقات العملاء هذا؟ ستتم إزالة جميع العناصر والتعليقات والإعدادات بشكل دائم.</string>
     <string name="crm_object_unwatch">إلغاء المتابعة</string>
     <string name="crm_object_delete_title">حذف العنصر</string>
-    <string name="crm_object_delete_message">هل أنت متأكد من رغبتك في حذف هذا العنصر؟ لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="crm_parent_none">بدون أصل</string>
     <string name="crm_links_empty">لا توجد روابط</string>
     <string name="crm_links_section_relates">متعلق بـ</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">استيراد من نسخة احتياطية (اختياري)</string>
     <string name="crm_export">تصدير البيانات</string>
     <string name="crm_exporting">جارٍ تحضير التصدير…</string>
-    <string name="crm_create_allow_search">السماح لأي شخص بالبحث عن CRM</string>
     <string name="crm_no_crms_found">لم يتم العثور على CRM</string>
     <string name="crm_create_blocked_no_parents">لا يمكن إنشاء أنواع عناصر بعد. أنشئ العناصر الأصلية المطلوبة أولاً.</string>
     <string name="crm_export_csv">تصدير CSV</string>
@@ -285,4 +283,24 @@
     <string name="crm_design_sample">عينة %1$s</string>
     <string name="crm_option_delete_title">حذف الخيار</string>
     <string name="crm_option_delete_message">هل أنت متأكد أنك تريد حذف الخيار \"%1$s\"؟</string>
+    <string name="crm_create_public">السماح لأي شخص بعرض CRM والتعليق عليه</string>
+    <string name="crm_board_delete_column">حذف العمود</string>
+    <string name="crm_board_delete_column_message">هل أنت متأكد من حذف العمود \"%1$s\"؟ لا يمكن التراجع عن ذلك.</string>
+    <string name="crm_object_delete_named">هل أنت متأكد من حذف \"%1$s\"؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="zero">هل أنت متأكد من حذف \"%1$s\" و%2$s عنصر تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="one">هل أنت متأكد من حذف \"%1$s\" وعنصر واحد تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="two">هل أنت متأكد من حذف \"%1$s\" وعنصرين تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="few">هل أنت متأكد من حذف \"%1$s\" و%2$s عناصر تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="many">هل أنت متأكد من حذف \"%1$s\" و%2$s عنصرًا تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="other">هل أنت متأكد من حذف \"%1$s\" و%2$s عنصر تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="zero">تعذّرت إضافة %1$s مرفق: %2$s</item>
+        <item quantity="one">تعذّرت إضافة %1$s مرفق: %2$s</item>
+        <item quantity="two">تعذّرت إضافة %1$s مرفقَين: %2$s</item>
+        <item quantity="few">تعذّرت إضافة %1$s مرفقات: %2$s</item>
+        <item quantity="many">تعذّرت إضافة %1$s مرفقًا: %2$s</item>
+        <item quantity="other">تعذّرت إضافة %1$s مرفق: %2$s</item>
+    </plurals>
 </resources>

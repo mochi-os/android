@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">បើក</string>
     <string name="projects_request_status_merged">បានបញ្ចូល</string>
     <string name="projects_request_merge">បញ្ចូល</string>
-    <string name="projects_request_close">បិទ</string>
     <string name="projects_request_merge_dialog_title">បញ្ចូល</string>
     <string name="projects_request_method">វិធីសាស្ត្រ</string>
     <string name="projects_request_method_merge">បញ្ចូល</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">តើអ្នកប្រាកដថាចង់លុបគម្រោងនេះមែនទេ? វត្ថុ មតិយោបល់ និងការកំណត់ទាំងអស់នឹងត្រូវលុបជាអចិន្ត្រៃយ៍។</string>
     <string name="projects_object_unwatch">ឈប់តាមដាន</string>
     <string name="projects_object_delete_title">លុបវត្ថុ</string>
-    <string name="projects_object_delete_message">តើអ្នកប្រាកដថាចង់លុបវត្ថុនេះមែនទេ? សកម្មភាពនេះមិនអាចមិនធ្វើវិញបានទេ។</string>
     <string name="projects_parent_none">គ្មានមេ</string>
     <string name="projects_links_empty">គ្មានតំណ</string>
     <string name="projects_links_section_relates">ទាក់ទងនឹង</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">មិនមានឯកសារភ្ជាប់</string>
     <string name="projects_attachment_default_name">ឯកសារភ្ជាប់</string>
     <string name="projects_request_new">សំណើបញ្ចូលគ្នាថ្មី</string>
-    <string name="projects_request_status_closed">បានបិទ</string>
     <string name="projects_request_back_to_list">ត្រឡប់ទៅបញ្ជី</string>
     <string name="projects_request_repository">ឃ្លាំង៖ %1$s</string>
     <string name="projects_request_source">ប្រភព៖ %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">រចនា បង្កើត កែសម្រួល បញ្ចេញមតិ និងមើល</string>
     <string name="projects_access_role_write">បង្កើត កែសម្រួល បញ្ចេញមតិ និងមើល</string>
     <string name="projects_all_projects">គម្រោងទាំងអស់</string>
-    <string name="projects_create_allow_search">អនុញ្ញាតឱ្យអ្នកណាក៏អាចស្វែងរកគម្រោង</string>
     <string name="projects_create_import_backup">នាំចូលពីការបម្រុងទុក (ស្រេចចិត្ត)</string>
     <string name="projects_create_upload_json">បង្ហោះឯកសារ .json</string>
     <string name="projects_settings_not_set">មិនបានកំណត់</string>
@@ -331,4 +327,14 @@
     <string name="projects_create_object_no_types">មិនអាចបង្កើតប្រភេទធាតុបានទេ។ បង្កើតធាតុមេដែលត្រូវការជាមុនសិន។</string>
     <string name="projects_create_blocked_no_options">មិនអាចបង្កើតបានទេ៖ %1$s ត្រូវការ ប៉ុន្តែគ្មានជម្រើសឱ្យជ្រើសរើសទេ។ បន្ថែមជម្រើសក្នុងការរចនា។</string>
     <string name="projects_attachment_remove">ដកឯកសារភ្ជាប់ចេញ</string>
+    <string name="projects_create_allow_public">អនុញ្ញាតឱ្យអ្នកណាក៏អាចមើល និងផ្តល់មតិយោបល់លើគម្រោង</string>
+    <string name="projects_request_delete_title">លុបការស្នើសុំបញ្ចូល</string>
+    <string name="projects_request_delete_message">តើអ្នកប្រាកដថាចង់លុបការស្នើសុំបញ្ចូលនេះមែនទេ?</string>
+    <string name="projects_board_delete_column_title">លុបជួរឈរ</string>
+    <string name="projects_board_delete_column_message">តើអ្នកប្រាកដថាចង់លុបជួរឈរ \"%1$s\" មែនទេ? វាមិនអាចបញ្ច្រាសបានទេ។</string>
+    <string name="projects_object_delete_named">តើអ្នកប្រាកដថាចង់លុប \"%1$s\" មែនទេ? សកម្មភាពនេះមិនអាចបញ្ច្រាសបានទេ។</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">តើអ្នកប្រាកដថាចង់លុប \"%1$s\" និង %2$s ធាតុ នៅក្រោមវាមែនទេ? សកម្មភាពនេះមិនអាចបញ្ច្រាសបានទេ។</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">មិនអាចភ្ជាប់បានទេ៖ %1$s</string>
 </resources>

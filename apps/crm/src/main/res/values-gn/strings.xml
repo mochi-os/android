@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">¿Añetehápe reipota embogue ko CRM? Opaite mba\'e, comentario ha ñemboheko oñembogue tapiaitéta.</string>
     <string name="crm_object_unwatch">Ani ema\'ẽve</string>
     <string name="crm_object_delete_title">Emboguete mba\'e</string>
-    <string name="crm_object_delete_message">¿Añetehápe reipota embogue ko mba\'e? Ko tembiapo ndaikatumo\'ãi oñembojevy.</string>
     <string name="crm_parent_none">Ndaipóri sy/ru</string>
     <string name="crm_links_empty">Ndaipóri juajuha</string>
     <string name="crm_links_section_relates">Ojoaju ndive</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Emoinge respaldo-gui (ndaha\'éi mbaretépe)</string>
     <string name="crm_export">Emosẽ mba\'ekuaarã</string>
     <string name="crm_exporting">Oñembosako\'ihína ñemosẽ…</string>
-    <string name="crm_create_allow_search">Eipysyrõ opavavépe oheka CRM</string>
     <string name="crm_no_crms_found">Ndojejuhúi CRM</string>
     <string name="crm_create_blocked_no_parents">Ndaikatúi oñemoheñói gueteri item peteĩchagua. Emoheñói raẽ umi item ru/sy oñeikotevẽva.</string>
     <string name="crm_export_csv">Emosẽ CSV</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">Techapyrã %1$s</string>
     <string name="crm_option_delete_title">Hundi opción</string>
     <string name="crm_option_delete_message">¿Añetehápe reipota embogue jeporavorã \"%1$s\"?</string>
+    <string name="crm_create_public">Eipysyrõ opavavépe ohecha CRM ha ohai comentario hese</string>
+    <string name="crm_board_delete_column">Hundi columna</string>
+    <string name="crm_board_delete_column_message">Añetehápe ehundise \"%1$s\" columna? Kóva ndaikatumo\'ãi oñembojevy.</string>
+    <string name="crm_object_delete_named">Añetehápe ehundise \"%1$s\"? Ko tembiapo ndaikatumo\'ãi oñembojevy.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Añetehápe ehundise \"%1$s\" ha %2$s mba\'e oĩva iguýpe? Ko tembiapo ndaikatumo\'ãi oñembojevy.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s adjuntokuéra ndaikatúi oñembojuaju: %2$s</item>
+    </plurals>
 </resources>

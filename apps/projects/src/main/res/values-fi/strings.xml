@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Avoin</string>
     <string name="projects_request_status_merged">Yhdistetty</string>
     <string name="projects_request_merge">Yhdistä</string>
-    <string name="projects_request_close">Sulje</string>
     <string name="projects_request_merge_dialog_title">Yhdistä</string>
     <string name="projects_request_method">Tapa</string>
     <string name="projects_request_method_merge">Yhdistä</string>
@@ -167,7 +166,6 @@
     <string name="projects_settings_delete_confirm_message">Haluatko varmasti poistaa tämän projektin? Kaikki kohteet, kommentit ja asetukset poistetaan pysyvästi.</string>
     <string name="projects_object_unwatch">Lopeta seuraaminen</string>
     <string name="projects_object_delete_title">Poista kohde</string>
-    <string name="projects_object_delete_message">Haluatko varmasti poistaa tämän kohteen? Tätä toimintoa ei voi peruuttaa.</string>
     <string name="projects_parent_none">Ei yläkohdetta</string>
     <string name="projects_links_empty">Ei linkkejä</string>
     <string name="projects_links_section_relates">Liittyy</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Ei liitteitä</string>
     <string name="projects_attachment_default_name">liite</string>
     <string name="projects_request_new">Uusi yhdistämispyyntö</string>
-    <string name="projects_request_status_closed">Suljettu</string>
     <string name="projects_request_back_to_list">Takaisin listaan</string>
     <string name="projects_request_repository">Tietovarasto: %1$s</string>
     <string name="projects_request_source">Lähde: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Suunnittele, luo, muokkaa, kommentoi ja katsele</string>
     <string name="projects_access_role_write">Luo, muokkaa, kommentoi ja katsele</string>
     <string name="projects_all_projects">Kaikki projektit</string>
-    <string name="projects_create_allow_search">Salli kenen tahansa etsiä projektia</string>
     <string name="projects_create_import_backup">Tuo varmuuskopiosta (valinnainen)</string>
     <string name="projects_create_upload_json">Lähetä .json-tiedosto</string>
     <string name="projects_settings_not_set">Ei asetettu</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Mitään kohdetyyppiä ei voi vielä luoda. Luo ensin vaaditut yläkohteet.</string>
     <string name="projects_create_blocked_no_options">Ei voi luoda: %1$s on pakollinen, mutta sillä ei ole valittavia vaihtoehtoja. Lisää vaihtoehtoja Suunnittelussa.</string>
     <string name="projects_attachment_remove">Poista liite</string>
+    <string name="projects_create_allow_public">Salli kenen tahansa katsella ja kommentoida projektia</string>
+    <string name="projects_request_delete_title">Poista yhdistämispyyntö</string>
+    <string name="projects_request_delete_message">Haluatko varmasti poistaa tämän yhdistämispyynnön?</string>
+    <string name="projects_board_delete_column_title">Poista sarake</string>
+    <string name="projects_board_delete_column_message">Haluatko varmasti poistaa sarakkeen \"%1$s\"? Tätä ei voi kumota.</string>
+    <string name="projects_object_delete_named">Haluatko varmasti poistaa kohteen \"%1$s\"? Tätä toimintoa ei voi kumota.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Haluatko varmasti poistaa kohteen \"%1$s\" ja sen alla olevan %2$s kohteen? Tätä toimintoa ei voi kumota.</item>
+        <item quantity="other">Haluatko varmasti poistaa kohteen \"%1$s\" ja sen alla olevat %2$s kohdetta? Tätä toimintoa ei voi kumota.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Liittäminen epäonnistui: %1$s</string>
 </resources>

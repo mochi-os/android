@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">ڇا توهان پڪ سان هي CRM ختم ڪرڻ چاهيو ٿا؟ سڀ اعتراض، تبصرا، ۽ سيٽنگون مستقل طور تي هٽايون وينديون.</string>
     <string name="crm_object_unwatch">ڏسڻ بند ڪريو</string>
     <string name="crm_object_delete_title">شيءِ ختم ڪريو</string>
-    <string name="crm_object_delete_message">ڇا توهان پڪ سان هي اعتراض ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ڪري سگهجي ٿو.</string>
     <string name="crm_parent_none">ڪوبه والدين ناهي</string>
     <string name="crm_links_empty">ڪوبه لنڪ ناهي</string>
     <string name="crm_links_section_relates">تعلق رکي ٿو</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">بيڪ اپ مان درآمد ڪريو (اختياري)</string>
     <string name="crm_export">ڊيٽا برآمد ڪريو</string>
     <string name="crm_exporting">ايڪسپورٽ تيار ٿي رهيو آهي…</string>
-    <string name="crm_create_allow_search">ڪنهن کي به CRM ڳولڻ جي اجازت ڏيو</string>
     <string name="crm_no_crms_found">ڪا به CRM نه ملي</string>
     <string name="crm_create_blocked_no_parents">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
     <string name="crm_export_csv">CSV ايڪسپورٽ ڪريو</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">نمونو %1$s</string>
     <string name="crm_option_delete_title">اختيار ختم ڪريو</string>
     <string name="crm_option_delete_message">ڇا توھان واقعي اختيار \"%1$s\" حذف ڪرڻ چاھيو ٿا؟</string>
+    <string name="crm_create_public">ڪنهن کي به CRM ڏسڻ ۽ ان تي تبصرو ڪرڻ جي اجازت ڏيو</string>
+    <string name="crm_board_delete_column">ڪالم ختم ڪريو</string>
+    <string name="crm_board_delete_column_message">ڇا توهان پڪ سان \"%1$s\" ڪالم ختم ڪرڻ چاهيو ٿا؟ هي واپس نه ٿو ٿي سگهي.</string>
+    <string name="crm_object_delete_named">ڇا توهان پڪ سان \"%1$s\" ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ٿو ٿي سگهي.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">ڇا توهان پڪ سان \"%1$s\" ۽ ان جي هيٺان %2$s شيءِ ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ٿو ٿي سگهي.</item>
+        <item quantity="other">ڇا توهان پڪ سان \"%1$s\" ۽ ان جي هيٺان %2$s شيون ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ٿو ٿي سگهي.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s ڳنڍيل فائل شامل نه ٿي سگهي: %2$s</item>
+        <item quantity="other">%1$s ڳنڍيل فائلون شامل نه ٿي سگهيون: %2$s</item>
+    </plurals>
 </resources>

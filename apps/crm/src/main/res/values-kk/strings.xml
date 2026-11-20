@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Осы CRM-ді жойғыңыз келетініне сенімдісіз бе? Барлық нысандар, түсіндірмелер мен параметрлер біржола жойылады.</string>
     <string name="crm_object_unwatch">Бақылауды тоқтату</string>
     <string name="crm_object_delete_title">Нысанды жою</string>
-    <string name="crm_object_delete_message">Осы нысанды жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</string>
     <string name="crm_parent_none">Аталық нысан жоқ</string>
     <string name="crm_links_empty">Сілтемелер жоқ</string>
     <string name="crm_links_section_relates">Қатысты</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Сақтық көшірмеден импорттау (міндетті емес)</string>
     <string name="crm_export">Деректерді экспорттау</string>
     <string name="crm_exporting">Экспорт дайындалуда…</string>
-    <string name="crm_create_allow_search">Кез келгенге CRM іздеуге рұқсат ету</string>
     <string name="crm_no_crms_found">CRM табылмады</string>
     <string name="crm_create_blocked_no_parents">Әлі бірде-бір элемент түрі жасалмайды. Алдымен қажетті ата-аналық элементтерді жасаңыз.</string>
     <string name="crm_export_csv">CSV экспорттау</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Үлгі %1$s</string>
     <string name="crm_option_delete_title">Опцияны жою</string>
     <string name="crm_option_delete_message">\"%1$s\" опциясын жойғыңыз келетініне сенімдісіз бе?</string>
+    <string name="crm_create_public">Кез келгенге CRM көруге және оған пікір қалдыруға рұқсат ету</string>
+    <string name="crm_board_delete_column">Бағанды жою</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" бағанын жойғыңыз келетініне сенімдісіз бе? Бұны қайтару мүмкін емес.</string>
+    <string name="crm_object_delete_named">\"%1$s\" жойылғанына сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\" және оның астындағы %2$s элементті жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</item>
+        <item quantity="other">\"%1$s\" және оның астындағы %2$s элементті жойғыңыз келетініне сенімдісіз бе? Бұл әрекетті қайтару мүмкін емес.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s тіркемені қосу мүмкін болмады: %2$s</item>
+        <item quantity="other">%1$s тіркемені қосу мүмкін болмады: %2$s</item>
+    </plurals>
 </resources>

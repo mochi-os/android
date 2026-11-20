@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">का रउआ निश्चित बानीं कि ई CRM के मिटावल चाहत बानीं? सब वस्तु, टिप्पणी, आ सेटिंग्स हमेशा खातिर हटा दिहल जाई।</string>
     <string name="crm_object_unwatch">देखल बंद करीं</string>
     <string name="crm_object_delete_title">वस्तु मिटाईं</string>
-    <string name="crm_object_delete_message">का रउआ निश्चित बानीं कि ई वस्तु के मिटावल चाहत बानीं? ई कार्य पलटल ना जा सके।</string>
     <string name="crm_parent_none">कवनो जनक नइखे</string>
     <string name="crm_links_empty">कवनो लिंक नइखे</string>
     <string name="crm_links_section_relates">एकरा से संबंधित</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">बैकअप से आयात करीं (वैकल्पिक)</string>
     <string name="crm_export">डेटा निर्यात करीं</string>
     <string name="crm_exporting">एक्सपोर्ट तइयार हो रहल बा…</string>
-    <string name="crm_create_allow_search">केहू के CRM खोजे के अनुमति दीं</string>
     <string name="crm_no_crms_found">कौनो CRM ना मिलल</string>
     <string name="crm_create_blocked_no_parents">अबहीं कौनो आइटम प्रकार ना बन सके। पहिले जरूरी मूल आइटम बनाईं।</string>
     <string name="crm_export_csv">CSV निर्यात करीं</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">नमूना %1$s</string>
     <string name="crm_option_delete_title">विकल्प मेटाईं</string>
     <string name="crm_option_delete_message">का रउआ सचमुच विकल्प \"%1$s\" के मिटावे के चाहत बानी?</string>
+    <string name="crm_create_public">केहू के CRM देखे आ ओपर टिप्पणी करे के अनुमति दीं</string>
+    <string name="crm_board_delete_column">कॉलम मेटाईं</string>
+    <string name="crm_board_delete_column_message">का रउआ \"%1$s\" कॉलम के मेटावे चाहत बानी? ई वापस ना हो सकेला।</string>
+    <string name="crm_object_delete_named">का रउआ \"%1$s\" के मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">का रउआ \"%1$s\" आ ओकरा नीचे के %2$s आइटम मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</item>
+        <item quantity="other">का रउआ \"%1$s\" आ ओकरा नीचे के %2$s आइटम मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s संलग्नक जोड़ल ना जा सकल: %2$s</item>
+        <item quantity="other">%1$s संलग्नक जोड़ल ना जा सकल: %2$s</item>
+    </plurals>
 </resources>

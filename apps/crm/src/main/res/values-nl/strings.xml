@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Weet u zeker dat u deze CRM wilt verwijderen? Alle objecten, opmerkingen en instellingen worden permanent verwijderd.</string>
     <string name="crm_object_unwatch">Niet meer volgen</string>
     <string name="crm_object_delete_title">Object verwijderen</string>
-    <string name="crm_object_delete_message">Weet u zeker dat u dit object wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
     <string name="crm_parent_none">Geen bovenliggend item</string>
     <string name="crm_links_empty">Geen koppelingen</string>
     <string name="crm_links_section_relates">Heeft betrekking op</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importeren uit back-up (optioneel)</string>
     <string name="crm_export">Gegevens exporteren</string>
     <string name="crm_exporting">Export voorbereiden…</string>
-    <string name="crm_create_allow_search">Iedereen toestaan te zoeken naar CRM</string>
     <string name="crm_no_crms_found">Geen CRM\'s gevonden</string>
     <string name="crm_create_blocked_no_parents">Er kunnen nog geen itemtypen worden aangemaakt. Maak eerst de vereiste bovenliggende items aan.</string>
     <string name="crm_export_csv">CSV exporteren</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Voorbeeld %1$s</string>
     <string name="crm_option_delete_title">Optie verwijderen</string>
     <string name="crm_option_delete_message">Weet je zeker dat je de optie \"%1$s\" wilt verwijderen?</string>
+    <string name="crm_create_public">Iedereen toestaan het CRM te bekijken en erop te reageren</string>
+    <string name="crm_board_delete_column">Kolom verwijderen</string>
+    <string name="crm_board_delete_column_message">Weet je zeker dat je de kolom \"%1$s\" wilt verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
+    <string name="crm_object_delete_named">Weet je zeker dat je \"%1$s\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Weet je zeker dat je \"%1$s\" en het %2$s item eronder wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</item>
+        <item quantity="other">Weet je zeker dat je \"%1$s\" en de %2$s items eronder wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s bijlage kon niet worden toegevoegd: %2$s</item>
+        <item quantity="other">%1$s bijlagen konden niet worden toegevoegd: %2$s</item>
+    </plurals>
 </resources>

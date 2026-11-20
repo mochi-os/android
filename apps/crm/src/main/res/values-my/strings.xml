@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">ဤ CRM ကို ဖျက်ရန် သေချာပါသလား။ အရာဝတ္ထုများ၊ မှတ်ချက်များနှင့် ဆက်တင်များအားလုံး အပြီးအပိုင် ဖယ်ရှားခံရပါမည်။</string>
     <string name="crm_object_unwatch">စောင့်ကြည့်ခြင်း ရပ်ပါ</string>
     <string name="crm_object_delete_title">အရာဝတ္ထု ဖျက်ပါ</string>
-    <string name="crm_object_delete_message">ဤအရာဝတ္ထုကို ဖျက်ရန် သေချာပါသလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်လည် မပြုလုပ်နိုင်တော့ပါ။</string>
     <string name="crm_parent_none">မိဘ မရှိပါ</string>
     <string name="crm_links_empty">လင့်ခ်များ မရှိပါ</string>
     <string name="crm_links_section_relates">ဆက်စပ်သည်</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">အရန်မှ တင်သွင်းရန် (မရွေးချယ်လည်းရသည်)</string>
     <string name="crm_export">ဒေတာ ထုတ်ယူရန်</string>
     <string name="crm_exporting">တင်ပို့မှု ပြင်ဆင်နေသည်…</string>
-    <string name="crm_create_allow_search">မည်သူမဆို CRM ကို ရှာဖွေခွင့်ပြုမည်</string>
     <string name="crm_no_crms_found">CRM များ မတွေ့ပါ</string>
     <string name="crm_create_blocked_no_parents">အရာ အမျိုးအစားအသစ်များ မဖန်တီးနိုင်သေးပါ။ လိုအပ်သော မိဘ အရာ များကို ဦးစွာဖန်တီးပါ။</string>
     <string name="crm_export_csv">CSV ထုတ်ယူ</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">နမူနာ %1$s</string>
     <string name="crm_option_delete_title">ရွေးချယ်စရာ ဖျက်မည်</string>
     <string name="crm_option_delete_message">ရွေးချယ်စရာ \"%1$s\" ကို ဖျက်လိုသည်မှာ သေချာပါသလား။</string>
+    <string name="crm_create_public">မည်သူမဆို CRM ကို ကြည့်ရှုပြီး မှတ်ချက်ပေးခွင့်ပြုမည်</string>
+    <string name="crm_board_delete_column">ကော်လံ ဖျက်မည်</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" ကော်လံကို ဖျက်မှာသေချာပါသလား? ပြန်လည်ပြုပြင်၍မရပါ။</string>
+    <string name="crm_object_delete_named">\"%1$s\" ကို ဖျက်မှာသေချာပါသလား? ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်၍မရပါ။</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">\"%1$s\" နှင့် ၎င်းအောက်ရှိ %2$s ခု ကို ဖျက်မှာ သေချာပါသလား? ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်၍မရပါ။</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">ပူးတွဲဖိုင် %1$s ခုကို ထည့်၍ မရပါ: %2$s</item>
+    </plurals>
 </resources>

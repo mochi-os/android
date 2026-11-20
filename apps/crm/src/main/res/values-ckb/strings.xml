@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">دڵنیایت لە سڕینەوەی ئەم CRM-ە؟ هەموو بابەت، لێدوان، و ڕێکخستنەکان بە یەکجاری دەسڕێنەوە.</string>
     <string name="crm_object_unwatch">وازهێنان لە چاودێری</string>
     <string name="crm_object_delete_title">سڕینەوەی بابەت</string>
-    <string name="crm_object_delete_message">دڵنیایت لە سڕینەوەی ئەم بابەتە؟ ئەم کردارە ناگەڕێتەوە.</string>
     <string name="crm_parent_none">هیچ باوانێک نییە</string>
     <string name="crm_links_empty">هیچ بەستەرێک نییە</string>
     <string name="crm_links_section_relates">پەیوەندیدارە بە</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">لە باکئەپەوە هاوردە بکە (ئارەزوومەندانە)</string>
     <string name="crm_export">هەناردەکردنی داتا</string>
     <string name="crm_exporting">هەناردە ئامادە دەکرێت…</string>
-    <string name="crm_create_allow_search">ڕێگە بدە بە هەرکەسێک بگەڕێت بۆ CRM</string>
     <string name="crm_no_crms_found">هیچ CRMێک نەدۆزرایەوە</string>
     <string name="crm_create_blocked_no_parents">هێشتا هیچ جۆرە بڕگەیەک ناتوانرێت دروست بکرێت. سەرەتا بڕگە باوانە پێویستەکان دروست بکە.</string>
     <string name="crm_export_csv">هەناردەکردنی CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">نموونە %1$s</string>
     <string name="crm_option_delete_title">سڕینەوەی هەڵبژاردە</string>
     <string name="crm_option_delete_message">دڵنیایت دەتەوێت هەڵبژاردەی \"%1$s\" بسڕیتەوە؟</string>
+    <string name="crm_create_public">ڕێگە بدە بە هەرکەسێک CRM ببینێت و لێدوانی لەسەر بدات</string>
+    <string name="crm_board_delete_column">سڕینەوەی ستوون</string>
+    <string name="crm_board_delete_column_message">ئایا دڵنیایت لە سڕینەوەی ستوونی \"%1$s\"؟ ئەمە ناگەڕێتەوە.</string>
+    <string name="crm_object_delete_named">ئایا دڵنیایت لە سڕینەوەی \"%1$s\"؟ ئەم کردارە ناگەڕێتەوە.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">ئایا دڵنیایت لە سڕینەوەی \"%1$s\" و %2$s بڕگە لە ژێریدا؟ ئەم کردارە ناگەڕێتەوە.</item>
+        <item quantity="other">ئایا دڵنیایت لە سڕینەوەی \"%1$s\" و %2$s بڕگە لە ژێریدا؟ ئەم کردارە ناگەڕێتەوە.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">نەتوانرا %1$s هاوپێچ زیاد بکرێت: %2$s</item>
+        <item quantity="other">نەتوانرا %1$s هاوپێچ زیاد بکرێن: %2$s</item>
+    </plurals>
 </resources>

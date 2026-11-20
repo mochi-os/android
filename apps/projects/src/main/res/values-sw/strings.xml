@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Wazi</string>
     <string name="projects_request_status_merged">Imeunganishwa</string>
     <string name="projects_request_merge">Unganisha</string>
-    <string name="projects_request_close">Funga</string>
     <string name="projects_request_merge_dialog_title">Unganisha</string>
     <string name="projects_request_method">Mbinu</string>
     <string name="projects_request_method_merge">Unganisha</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Una uhakika unataka kufuta mradi huu? Vitu vyote, maoni, na mipangilio vitaondolewa kabisa.</string>
     <string name="projects_object_unwatch">Acha kufuatilia</string>
     <string name="projects_object_delete_title">Futa kitu</string>
-    <string name="projects_object_delete_message">Una uhakika unataka kufuta kitu hiki? Kitendo hiki hakiwezi kutenduliwa.</string>
     <string name="projects_parent_none">Hakuna mzazi</string>
     <string name="projects_links_empty">Hakuna viungo</string>
     <string name="projects_links_section_relates">Inahusiana na</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Hakuna viambatisho</string>
     <string name="projects_attachment_default_name">kiambatisho</string>
     <string name="projects_request_new">Ombi jipya la kuunganisha</string>
-    <string name="projects_request_status_closed">Limefungwa</string>
     <string name="projects_request_back_to_list">Rudi kwenye orodha</string>
     <string name="projects_request_repository">Hazina: %1$s</string>
     <string name="projects_request_source">Chanzo: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Buni, unda, hariri, toa maoni na tazama</string>
     <string name="projects_access_role_write">Unda, hariri, toa maoni na tazama</string>
     <string name="projects_all_projects">Miradi yote</string>
-    <string name="projects_create_allow_search">Ruhusu mtu yeyote kutafuta mradi</string>
     <string name="projects_create_import_backup">Leta kutoka kwenye nakala rudufu (hiari)</string>
     <string name="projects_create_upload_json">Pakia faili la .json</string>
     <string name="projects_settings_not_set">Haijawekwa</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Hakuna aina za vipengele zinazoweza kuundwa bado. Unda vipengele vya mzazi vinavyohitajika kwanza.</string>
     <string name="projects_create_blocked_no_options">Haiwezi kuunda: %1$s inahitajika lakini haina chaguo za kuchagua. Ongeza chaguo katika Muundo.</string>
     <string name="projects_attachment_remove">Ondoa kiambatisho</string>
+    <string name="projects_create_allow_public">Ruhusu mtu yeyote kuona mradi na kutoa maoni juu yake</string>
+    <string name="projects_request_delete_title">Futa ombi la kuunganisha</string>
+    <string name="projects_request_delete_message">Una uhakika unataka kufuta ombi hili la kuunganisha?</string>
+    <string name="projects_board_delete_column_title">Futa safu</string>
+    <string name="projects_board_delete_column_message">Una uhakika unataka kufuta safu ya \"%1$s\"? Hili haliwezi kutenduliwa.</string>
+    <string name="projects_object_delete_named">Una uhakika unataka kufuta \"%1$s\"? Kitendo hiki hakiwezi kutenduliwa.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Una uhakika unataka kufuta \"%1$s\" na kipengee %2$s kilicho chini yake? Kitendo hiki hakiwezi kutenduliwa.</item>
+        <item quantity="other">Una uhakika unataka kufuta \"%1$s\" na vipengee %2$s vilivyo chini yake? Kitendo hiki hakiwezi kutenduliwa.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Imeshindwa kuambatisha: %1$s</string>
 </resources>

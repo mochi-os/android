@@ -71,6 +71,8 @@ import org.mochios.android.R as MochiR
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -78,6 +80,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.api.userMessage
 
 @Composable
 private fun fieldTypeLabel(type: String): String = when (type) {
@@ -135,7 +138,21 @@ fun FieldDetailScreen(
         }
     }
 
+    // A change refused once the field is on screen is shown over it. Before it
+    // loads, the error state below owns the error and its retry: clearing it
+    // here would leave a blank screen when the snackbar times out.
+    val snackbarHostState = remember { SnackbarHostState() }
+    LaunchedEffect(uiState.error, field != null) {
+        if (field != null) {
+            uiState.error?.let { error ->
+                snackbarHostState.showSnackbar(error.userMessage())
+                viewModel.clearError()
+            }
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -171,18 +188,21 @@ fun FieldDetailScreen(
                 }
             }
         } else {
-            var editName by remember(field.id) { mutableStateOf(field.name) }
-            var isRequired by remember(field.id) { mutableStateOf(field.isRequired) }
-            var isReadonly by remember(field.id) { mutableStateOf(field.isReadonly) }
-            var isSortable by remember(field.id) { mutableStateOf(field.isSortable) }
-            var isFilterable by remember(field.id) { mutableStateOf(field.isFilterable) }
-            var showOnCard by remember(field.id) { mutableStateOf(field.showOnCard) }
-            var isMulti by remember(field.id) { mutableStateOf(field.isMulti) }
-            var editRows by remember(field.id) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
-            var editPosition by remember(field.id) { mutableStateOf(field.position) }
-            var editPattern by remember(field.id) { mutableStateOf(field.pattern) }
-            var editMinlength by remember(field.id) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
-            var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
+            // Seeded again from the field as the server has it after each save,
+            // so what it made of the edit shows and Save goes away.
+            val seed = uiState.saves
+            var editName by remember(field.id, seed) { mutableStateOf(field.name) }
+            var isRequired by remember(field.id, seed) { mutableStateOf(field.isRequired) }
+            var isReadonly by remember(field.id, seed) { mutableStateOf(field.isReadonly) }
+            var isSortable by remember(field.id, seed) { mutableStateOf(field.isSortable) }
+            var isFilterable by remember(field.id, seed) { mutableStateOf(field.isFilterable) }
+            var showOnCard by remember(field.id, seed) { mutableStateOf(field.showOnCard) }
+            var isMulti by remember(field.id, seed) { mutableStateOf(field.isMulti) }
+            var editRows by remember(field.id, seed) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
+            var editPosition by remember(field.id, seed) { mutableStateOf(field.position) }
+            var editPattern by remember(field.id, seed) { mutableStateOf(field.pattern) }
+            var editMinlength by remember(field.id, seed) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
+            var editMaxlength by remember(field.id, seed) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
             var showDeleteConfirm by remember { mutableStateOf(false) }
             var deletingOption by remember(field.id) { mutableStateOf<FieldOption?>(null) }
             // No "on" zone: an option row is only ever an insertion point, so the
@@ -316,16 +336,17 @@ fun FieldDetailScreen(
                 Spacer(modifier = Modifier.height(16.dp))
 
                 // Save button
-                val flagsString = buildList {
+                val flags = buildList {
                     if (isRequired) add("required")
                     if (isReadonly) add("readonly")
                     if (isSortable) add("sort")
                     if (isFilterable) add("filter")
-                }.joinToString(",").ifEmpty { null }
+                }
+                val savedFlags = field.flags.split(",").map { flag -> flag.trim() }.filter { flag -> flag.isNotEmpty() }.toSet()
 
                 val rowsInt = editRows.toIntOrNull()
                 val hasChanges = editName != field.name
-                        || flagsString != field.flags.ifEmpty { null }
+                        || flags.toSet() != savedFlags
                         || isMulti != field.isMulti
                         || showOnCard != field.showOnCard
                         || (rowsInt ?: 0) != field.rows
@@ -337,13 +358,16 @@ fun FieldDetailScreen(
                 if (hasChanges) {
                     MochiButton(
                         onClick = {
+                            // Sent as JSON, where "" arrives: flags always go,
+                            // "" when none is on, and a position, pattern or
+                            // row count put back to its default goes as "".
                             viewModel.updateField(
                                 name = editName.takeIf { it != field.name },
-                                flags = flagsString,
+                                flags = flags.joinToString(","),
                                 multi = isMulti.takeIf { it != field.isMulti },
                                 card = showOnCard.takeIf { it != field.showOnCard },
                                 position = editPosition.takeIf { it != field.position },
-                                rows = rowsInt?.takeIf { it != field.rows },
+                                rows = editRows.takeIf { (rowsInt ?: 0) != field.rows },
                                 pattern = editPattern.takeIf { it != field.pattern },
                                 minlength = (editMinlength.toIntOrNull() ?: 0).takeIf { it != field.minlength },
                                 maxlength = (editMaxlength.toIntOrNull() ?: 0).takeIf { it != field.maxlength }

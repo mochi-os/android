@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Đang mở</string>
     <string name="projects_request_status_merged">Đã hợp nhất</string>
     <string name="projects_request_merge">Hợp nhất</string>
-    <string name="projects_request_close">Đóng</string>
     <string name="projects_request_merge_dialog_title">Hợp nhất</string>
     <string name="projects_request_method">Phương thức</string>
     <string name="projects_request_method_merge">Hợp nhất</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Bạn có chắc chắn muốn xóa dự án này không? Tất cả đối tượng, bình luận và cài đặt sẽ bị xóa vĩnh viễn.</string>
     <string name="projects_object_unwatch">Bỏ theo dõi</string>
     <string name="projects_object_delete_title">Xóa đối tượng</string>
-    <string name="projects_object_delete_message">Bạn có chắc chắn muốn xóa đối tượng này không? Hành động này không thể hoàn tác.</string>
     <string name="projects_parent_none">Không có mục cha</string>
     <string name="projects_links_empty">Không có liên kết</string>
     <string name="projects_links_section_relates">Liên quan đến</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Không có tệp đính kèm</string>
     <string name="projects_attachment_default_name">tệp đính kèm</string>
     <string name="projects_request_new">Yêu cầu hợp nhất mới</string>
-    <string name="projects_request_status_closed">Đã đóng</string>
     <string name="projects_request_back_to_list">Quay lại danh sách</string>
     <string name="projects_request_repository">Kho lưu trữ: %1$s</string>
     <string name="projects_request_source">Nguồn: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Thiết kế, tạo, chỉnh sửa, bình luận và xem</string>
     <string name="projects_access_role_write">Tạo, chỉnh sửa, bình luận và xem</string>
     <string name="projects_all_projects">Tất cả dự án</string>
-    <string name="projects_create_allow_search">Cho phép mọi người tìm kiếm dự án</string>
     <string name="projects_create_import_backup">Nhập từ bản sao lưu (tùy chọn)</string>
     <string name="projects_create_upload_json">Tải lên tệp .json</string>
     <string name="projects_settings_not_set">Chưa đặt</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">Chưa thể tạo loại mục nào. Hãy tạo các mục cha cần thiết trước.</string>
     <string name="projects_create_blocked_no_options">Không thể tạo: %1$s là bắt buộc nhưng không có tùy chọn nào để chọn. Thêm tùy chọn trong Thiết kế.</string>
     <string name="projects_attachment_remove">Xóa tệp đính kèm</string>
+    <string name="projects_create_allow_public">Cho phép mọi người xem và bình luận dự án</string>
+    <string name="projects_request_delete_title">Xóa yêu cầu hợp nhất</string>
+    <string name="projects_request_delete_message">Bạn có chắc muốn xóa yêu cầu hợp nhất này?</string>
+    <string name="projects_board_delete_column_title">Xóa cột</string>
+    <string name="projects_board_delete_column_message">Bạn có chắc muốn xóa cột \"%1$s\"? Không thể hoàn tác.</string>
+    <string name="projects_object_delete_named">Bạn có chắc muốn xóa \"%1$s\"? Hành động này không thể hoàn tác.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Bạn có chắc muốn xóa \"%1$s\" và %2$s mục bên dưới? Hành động này không thể hoàn tác.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Không thể đính kèm: %1$s</string>
 </resources>

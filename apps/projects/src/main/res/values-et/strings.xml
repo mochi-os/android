@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Avatud</string>
     <string name="projects_request_status_merged">Liidetud</string>
     <string name="projects_request_merge">Liida</string>
-    <string name="projects_request_close">Sulge</string>
     <string name="projects_request_merge_dialog_title">Liida</string>
     <string name="projects_request_method">Meetod</string>
     <string name="projects_request_method_merge">Liida</string>
@@ -167,7 +166,6 @@
     <string name="projects_settings_delete_confirm_message">Kas oled kindel, et soovid selle projekti kustutada? Kõik objektid, kommentaarid ja seaded eemaldatakse jäädavalt.</string>
     <string name="projects_object_unwatch">Lõpeta jälgimine</string>
     <string name="projects_object_delete_title">Kustuta objekt</string>
-    <string name="projects_object_delete_message">Kas oled kindel, et soovid selle objekti kustutada? Seda toimingut ei saa tagasi võtta.</string>
     <string name="projects_parent_none">Ülemobjekt puudub</string>
     <string name="projects_links_empty">Linke pole</string>
     <string name="projects_links_section_relates">Seotud</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Manuseid pole</string>
     <string name="projects_attachment_default_name">manus</string>
     <string name="projects_request_new">Uus liitmistaotlus</string>
-    <string name="projects_request_status_closed">Suletud</string>
     <string name="projects_request_back_to_list">Tagasi nimekirja</string>
     <string name="projects_request_repository">Hoidla: %1$s</string>
     <string name="projects_request_source">Allikas: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Kujunda, loo, muuda, kommenteeri ja vaata</string>
     <string name="projects_access_role_write">Loo, muuda, kommenteeri ja vaata</string>
     <string name="projects_all_projects">Kõik projektid</string>
-    <string name="projects_create_allow_search">Luba kõigil otsida projekti</string>
     <string name="projects_create_import_backup">Impordi varukoopiast (valikuline)</string>
     <string name="projects_create_upload_json">Lae üles .json fail</string>
     <string name="projects_settings_not_set">Pole määratud</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Ühtegi tüüpi ei saa veel luua. Loo kõigepealt vajalikud vanemüksused.</string>
     <string name="projects_create_blocked_no_options">Ei saa luua: %1$s on nõutav, kuid sellel pole valikuid. Lisage valikud Kujunduses.</string>
     <string name="projects_attachment_remove">Eemalda manus</string>
+    <string name="projects_create_allow_public">Luba kõigil projekti vaadata ja kommenteerida</string>
+    <string name="projects_request_delete_title">Kustuta liitmistaotlus</string>
+    <string name="projects_request_delete_message">Kas oled kindel, et soovid selle liitmistaotluse kustutada?</string>
+    <string name="projects_board_delete_column_title">Kustuta veerg</string>
+    <string name="projects_board_delete_column_message">Kas oled kindel, et soovid kustutada veeru \"%1$s\"? Seda ei saa tagasi võtta.</string>
+    <string name="projects_object_delete_named">Kas oled kindel, et soovid kustutada \"%1$s\"? Seda toimingut ei saa tagasi võtta.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Kas oled kindel, et soovid kustutada \"%1$s\" ja %2$s üksuse selle all? Seda toimingut ei saa tagasi võtta.</item>
+        <item quantity="other">Kas oled kindel, et soovid kustutada \"%1$s\" ja %2$s üksust selle all? Seda toimingut ei saa tagasi võtta.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Manustamine ebaõnnestus: %1$s</string>
 </resources>

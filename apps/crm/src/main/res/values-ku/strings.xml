@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Tu bawerî dixwazî vê CRM-yê jê bibî? Hemû obje, şîrove û mîheng dê bi domdarî werin jêbirin.</string>
     <string name="crm_object_unwatch">Êdî temaşe neke</string>
     <string name="crm_object_delete_title">Objeyê jê bibe</string>
-    <string name="crm_object_delete_message">Tu bawerî dixwazî vê objeyê jê bibî? Ev kar nayê paşvegerandin.</string>
     <string name="crm_parent_none">Dêûbav tune</string>
     <string name="crm_links_empty">Girêdan tune</string>
     <string name="crm_links_section_relates">Têkildar e bi</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Ji paşvekêşê împort bike (vebijarkî)</string>
     <string name="crm_export">Daneyan eksport bike</string>
     <string name="crm_exporting">Hinardekirin tê amadekirin…</string>
-    <string name="crm_create_allow_search">Destûr bide her kesî ku li CRM bigere</string>
     <string name="crm_no_crms_found">Tu CRM nehatin dîtin</string>
     <string name="crm_create_blocked_no_parents">Hêj tu cure babetan nikarin werin afirandin. Pêşî babetên dê yên pêwîst biafirîne.</string>
     <string name="crm_export_csv">CSV derxe</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Nimûne %1$s</string>
     <string name="crm_option_delete_title">Vebijêrkê jê bibe</string>
     <string name="crm_option_delete_message">Ma tu pê ewle yî ku dixwazî vebijêrka \"%1$s\" jê bibî?</string>
+    <string name="crm_create_public">Destûr bide her kesî ku CRM bibîne û şîrove li ser bike</string>
+    <string name="crm_board_delete_column">Stûnê jê bibe</string>
+    <string name="crm_board_delete_column_message">Tu bawer î ku dixwazî stûna \"%1$s\" jê bibî? Ev nikare were vegerandin.</string>
+    <string name="crm_object_delete_named">Tu bawer î ku dixwazî \"%1$s\" jê bibî? Ev kar nikare were vegerandin.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Tu bawer î ku dixwazî \"%1$s\" û %2$s hêman di binê wê de jê bibî? Ev kar nikare were vegerandin.</item>
+        <item quantity="other">Tu bawer î ku dixwazî \"%1$s\" û %2$s hêman di binê wê de jê bibî? Ev kar nikare were vegerandin.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s pêvek nehat zêdekirin: %2$s</item>
+        <item quantity="other">%1$s pêvek nehatin zêdekirin: %2$s</item>
+    </plurals>
 </resources>

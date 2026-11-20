@@ -80,8 +80,9 @@ fun OptionScreen(
         error = uiState.error,
         onBack = onBack,
         onSubmit = {
-            val icon = if (isColumn) null else formState.icon.ifBlank { null }
-            viewModel.save(formState.name, formState.colour.ifBlank { null }, icon)
+            // Blank is sent as blank: on an edit it clears the colour or icon.
+            val icon = if (isColumn) null else formState.icon.trim()
+            viewModel.save(formState.name, formState.colour.trim(), icon)
         }
     ) { padding ->
         FormLoadGate(

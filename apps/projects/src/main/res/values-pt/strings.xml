@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Aberto</string>
     <string name="projects_request_status_merged">Integrado</string>
     <string name="projects_request_merge">Integrar</string>
-    <string name="projects_request_close">Fechar</string>
     <string name="projects_request_merge_dialog_title">Integrar</string>
     <string name="projects_request_method">Método</string>
     <string name="projects_request_method_merge">Integrar</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Tem certeza de que deseja excluir este projeto? Todos os objetos, comentários e configurações serão removidos permanentemente.</string>
     <string name="projects_object_unwatch">Deixar de observar</string>
     <string name="projects_object_delete_title">Excluir objeto</string>
-    <string name="projects_object_delete_message">Tem certeza de que deseja excluir este objeto? Esta ação não pode ser desfeita.</string>
     <string name="projects_parent_none">Sem pai</string>
     <string name="projects_links_empty">Sem links</string>
     <string name="projects_links_section_relates">Relaciona-se com</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Sem anexos</string>
     <string name="projects_attachment_default_name">anexo</string>
     <string name="projects_request_new">Novo pedido de mesclagem</string>
-    <string name="projects_request_status_closed">Fechado</string>
     <string name="projects_request_back_to_list">Voltar à lista</string>
     <string name="projects_request_repository">Repositório: %1$s</string>
     <string name="projects_request_source">Origem: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Conceber, criar, editar, comentar e ver</string>
     <string name="projects_access_role_write">Criar, editar, comentar e ver</string>
     <string name="projects_all_projects">Todos os projetos</string>
-    <string name="projects_create_allow_search">Permitir que qualquer pessoa pesquise o projeto</string>
     <string name="projects_create_import_backup">Importar da cópia de segurança (opcional)</string>
     <string name="projects_create_upload_json">Carregar ficheiro .json</string>
     <string name="projects_settings_not_set">Não definido</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Ainda não é possível criar tipos de item. Crie primeiro os itens pai necessários.</string>
     <string name="projects_create_blocked_no_options">Não é possível criar: %1$s é obrigatório mas não tem opções para escolher. Adicione opções em Design.</string>
     <string name="projects_attachment_remove">Remover anexo</string>
+    <string name="projects_create_allow_public">Permitir que qualquer pessoa veja e comente o projeto</string>
+    <string name="projects_request_delete_title">Eliminar pedido de integração</string>
+    <string name="projects_request_delete_message">Tem a certeza de que pretende eliminar este pedido de integração?</string>
+    <string name="projects_board_delete_column_title">Eliminar coluna</string>
+    <string name="projects_board_delete_column_message">Tem a certeza de que pretende eliminar a coluna \"%1$s\"? Isto não pode ser anulado.</string>
+    <string name="projects_object_delete_named">Tem a certeza de que pretende eliminar \"%1$s\"? Esta ação não pode ser anulada.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Tem a certeza de que pretende eliminar \"%1$s\" e o %2$s item abaixo dele? Esta ação não pode ser anulada.</item>
+        <item quantity="other">Tem a certeza de que pretende eliminar \"%1$s\" e os %2$s itens abaixo dele? Esta ação não pode ser anulada.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Não foi possível anexar: %1$s</string>
 </resources>

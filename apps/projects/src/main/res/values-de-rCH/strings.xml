@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="projects_request_close">Schliessen</string>
 
     <string name="projects_create_name">Name</string>
     <string name="projects_class_name">Name</string>
@@ -108,7 +107,6 @@
     <string name="projects_object_unwatch">Nicht mehr beobachten</string>
     <string name="projects_object_tab_properties">Eigenschaften</string>
     <string name="projects_object_delete_title">Objekt löschen</string>
-    <string name="projects_object_delete_message">Möchten Sie dieses Objekt wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="projects_parent_none">Kein übergeordnetes Element</string>
     <string name="projects_links_empty">Keine Verknüpfungen</string>
     <string name="projects_links_add">Verknüpfung hinzufügen</string>
@@ -140,7 +138,6 @@
     <string name="projects_request_empty">Keine Merge-Requests</string>
     <string name="projects_request_new">Neuer Merge-Request</string>
     <string name="projects_request_status_merged">Zusammengeführt</string>
-    <string name="projects_request_status_closed">Geschlossen</string>
     <string name="projects_request_back_to_list">Zurück zur Liste</string>
     <string name="projects_request_repository">Repository: %1$s</string>
     <string name="projects_request_source">Quelle: %1$s</string>
@@ -295,7 +292,6 @@
     <string name="projects_access_role_design">Entwerfen, erstellen, bearbeiten, kommentieren und ansehen</string>
     <string name="projects_access_role_write">Erstellen, bearbeiten, kommentieren und ansehen</string>
     <string name="projects_all_projects">Alle Projekte</string>
-    <string name="projects_create_allow_search">Allen erlauben, nach Projekt zu suchen</string>
     <string name="projects_create_import_backup">Aus Sicherung importieren (optional)</string>
     <string name="projects_create_upload_json">.json-Datei hochladen</string>
     <string name="projects_settings_not_set">Nicht festgelegt</string>

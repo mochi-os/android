@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Irekita</string>
     <string name="projects_request_status_merged">Bateratuta</string>
     <string name="projects_request_merge">Bateratu</string>
-    <string name="projects_request_close">Itxi</string>
     <string name="projects_request_merge_dialog_title">Bateratu</string>
     <string name="projects_request_method">Metodoa</string>
     <string name="projects_request_method_merge">Bateratu</string>
@@ -167,7 +166,6 @@
     <string name="projects_settings_delete_confirm_message">Ziur zaude proiektu hau ezabatu nahi duzula? Objektu, iruzkin eta ezarpen guztiak betiko kenduko dira.</string>
     <string name="projects_object_unwatch">Utzi jarraitzeari</string>
     <string name="projects_object_delete_title">Ezabatu objektua</string>
-    <string name="projects_object_delete_message">Ziur zaude objektu hau ezabatu nahi duzula? Ekintza hau ezin da desegin.</string>
     <string name="projects_parent_none">Gurasorik ez</string>
     <string name="projects_links_empty">Estekarik ez</string>
     <string name="projects_links_section_relates">Honekin lotuta</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Eranskinik ez</string>
     <string name="projects_attachment_default_name">eranskina</string>
     <string name="projects_request_new">Bateratze-eskaera berria</string>
-    <string name="projects_request_status_closed">Itxita</string>
     <string name="projects_request_back_to_list">Itzuli zerrendara</string>
     <string name="projects_request_repository">Biltegia: %1$s</string>
     <string name="projects_request_source">Iturria: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Diseinatu, sortu, editatu, iruzkindu eta ikusi</string>
     <string name="projects_access_role_write">Sortu, editatu, iruzkindu eta ikusi</string>
     <string name="projects_all_projects">Proiektu guztiak</string>
-    <string name="projects_create_allow_search">Baimendu edonori proiektua bilatzea</string>
     <string name="projects_create_import_backup">Inportatu babeskopiatik (aukerakoa)</string>
     <string name="projects_create_upload_json">Igo .json fitxategia</string>
     <string name="projects_settings_not_set">Ezarri gabe</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elementu gurasoak.</string>
     <string name="projects_create_blocked_no_options">Ezin da sortu: %1$s beharrezkoa da baina ez du aukerarik. Gehitu aukerak Diseinuan.</string>
     <string name="projects_attachment_remove">Kendu eranskina</string>
+    <string name="projects_create_allow_public">Baimendu edonori proiektua ikustea eta iruzkintzea</string>
+    <string name="projects_request_delete_title">Ezabatu fusio eskaera</string>
+    <string name="projects_request_delete_message">Ziur al zaude fusio eskaera hau ezabatu nahi duzula?</string>
+    <string name="projects_board_delete_column_title">Ezabatu zutabea</string>
+    <string name="projects_board_delete_column_message">Ziur al zaude \"%1$s\" zutabea ezabatu nahi duzula? Hau ezin da desegin.</string>
+    <string name="projects_object_delete_named">Ziur al zaude \"%1$s\" ezabatu nahi duzula? Ekintza hau ezin da desegin.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Ziur al zaude \"%1$s\" eta haren azpiko elementu %2$s ezabatu nahi dituzula? Ekintza hau ezin da desegin.</item>
+        <item quantity="other">Ziur al zaude \"%1$s\" eta haren azpiko %2$s elementu ezabatu nahi dituzula? Ekintza hau ezin da desegin.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Ezin izan da erantsi: %1$s</string>
 </resources>

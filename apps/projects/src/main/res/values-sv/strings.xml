@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Öppen</string>
     <string name="projects_request_status_merged">Sammanfogad</string>
     <string name="projects_request_merge">Sammanfoga</string>
-    <string name="projects_request_close">Stäng</string>
     <string name="projects_request_merge_dialog_title">Sammanfoga</string>
     <string name="projects_request_method">Metod</string>
     <string name="projects_request_method_merge">Sammanfoga</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Är du säker på att du vill ta bort det här projektet? Alla objekt, kommentarer och inställningar tas bort permanent.</string>
     <string name="projects_object_unwatch">Sluta bevaka</string>
     <string name="projects_object_delete_title">Ta bort objekt</string>
-    <string name="projects_object_delete_message">Är du säker på att du vill ta bort det här objektet? Åtgärden kan inte ångras.</string>
     <string name="projects_parent_none">Ingen överordnad</string>
     <string name="projects_links_empty">Inga länkar</string>
     <string name="projects_links_section_relates">Relaterar till</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Inga bilagor</string>
     <string name="projects_attachment_default_name">bilaga</string>
     <string name="projects_request_new">Ny sammanslagningsbegäran</string>
-    <string name="projects_request_status_closed">Stängd</string>
     <string name="projects_request_back_to_list">Tillbaka till listan</string>
     <string name="projects_request_repository">Arkiv: %1$s</string>
     <string name="projects_request_source">Källa: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Utforma, skapa, redigera, kommentera och visa</string>
     <string name="projects_access_role_write">Skapa, redigera, kommentera och visa</string>
     <string name="projects_all_projects">Alla projekt</string>
-    <string name="projects_create_allow_search">Tillåt alla att söka efter projekt</string>
     <string name="projects_create_import_backup">Importera från säkerhetskopia (valfritt)</string>
     <string name="projects_create_upload_json">Ladda upp .json-fil</string>
     <string name="projects_settings_not_set">Ej inställd</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Inga objekttyper kan skapas ännu. Skapa de obligatoriska överordnade objekten först.</string>
     <string name="projects_create_blocked_no_options">Kan inte skapa: %1$s krävs men har inga alternativ att välja mellan. Lägg till alternativ i Design.</string>
     <string name="projects_attachment_remove">Ta bort bilaga</string>
+    <string name="projects_create_allow_public">Tillåt alla att visa och kommentera projektet</string>
+    <string name="projects_request_delete_title">Ta bort sammanslagningsförfrågan</string>
+    <string name="projects_request_delete_message">Är du säker på att du vill ta bort denna sammanslagningsförfrågan?</string>
+    <string name="projects_board_delete_column_title">Ta bort kolumn</string>
+    <string name="projects_board_delete_column_message">Är du säker på att du vill ta bort kolumnen \"%1$s\"? Detta kan inte ångras.</string>
+    <string name="projects_object_delete_named">Är du säker på att du vill ta bort \"%1$s\"? Denna åtgärd kan inte ångras.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Är du säker på att du vill ta bort \"%1$s\" och %2$s objekt under det? Denna åtgärd kan inte ångras.</item>
+        <item quantity="other">Är du säker på att du vill ta bort \"%1$s\" och %2$s objekt under det? Denna åtgärd kan inte ångras.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Kunde inte bifoga: %1$s</string>
 </resources>

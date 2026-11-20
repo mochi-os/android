@@ -151,7 +151,6 @@
     <string name="crm_settings_delete_confirm_message">Kas oled kindel, et soovid selle CRM-i kustutada? Kõik objektid, kommentaarid ja seaded eemaldatakse jäädavalt.</string>
     <string name="crm_object_unwatch">Lõpeta jälgimine</string>
     <string name="crm_object_delete_title">Kustuta objekt</string>
-    <string name="crm_object_delete_message">Kas oled kindel, et soovid selle objekti kustutada? Seda toimingut ei saa tagasi võtta.</string>
     <string name="crm_parent_none">Ülemobjekt puudub</string>
     <string name="crm_links_empty">Linke pole</string>
     <string name="crm_links_section_relates">Seotud</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Impordi varukoopiast (valikuline)</string>
     <string name="crm_export">Ekspordi andmed</string>
     <string name="crm_exporting">Ekspordi ettevalmistamine…</string>
-    <string name="crm_create_allow_search">Luba kõigil otsida CRM-i</string>
     <string name="crm_no_crms_found">CRM-e ei leitud</string>
     <string name="crm_create_blocked_no_parents">Ühtegi tüüpi ei saa veel luua. Loo kõigepealt vajalikud vanemüksused.</string>
     <string name="crm_export_csv">Ekspordi CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Näidis %1$s</string>
     <string name="crm_option_delete_title">Kustuta valik</string>
     <string name="crm_option_delete_message">Kas oled kindel, et soovid kustutada valiku \"%1$s\"?</string>
+    <string name="crm_create_public">Luba kõigil CRM-i vaadata ja kommenteerida</string>
+    <string name="crm_board_delete_column">Kustuta veerg</string>
+    <string name="crm_board_delete_column_message">Kas oled kindel, et soovid kustutada veeru \"%1$s\"? Seda ei saa tagasi võtta.</string>
+    <string name="crm_object_delete_named">Kas oled kindel, et soovid kustutada \"%1$s\"? Seda toimingut ei saa tagasi võtta.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Kas oled kindel, et soovid kustutada \"%1$s\" ja %2$s üksuse selle all? Seda toimingut ei saa tagasi võtta.</item>
+        <item quantity="other">Kas oled kindel, et soovid kustutada \"%1$s\" ja %2$s üksust selle all? Seda toimingut ei saa tagasi võtta.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s manust ei õnnestunud lisada: %2$s</item>
+        <item quantity="other">%1$s manust ei õnnestunud lisada: %2$s</item>
+    </plurals>
 </resources>

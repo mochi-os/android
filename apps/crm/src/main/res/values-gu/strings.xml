@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">શું તમે ખરેખર આ CRM કાઢી નાખવા માગો છો? બધી વસ્તુઓ, ટિપ્પણીઓ અને સેટિંગ્સ કાયમ માટે દૂર કરવામાં આવશે.</string>
     <string name="crm_object_unwatch">જોવાનું બંધ કરો</string>
     <string name="crm_object_delete_title">ઑબ્જેક્ટ કાઢી નાખો</string>
-    <string name="crm_object_delete_message">શું તમે ખરેખર આ વસ્તુ કાઢી નાખવા માગો છો? આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</string>
     <string name="crm_parent_none">કોઈ પેરન્ટ નથી</string>
     <string name="crm_links_empty">કોઈ લિંક નથી</string>
     <string name="crm_links_section_relates">સંબંધિત છે</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">બેકઅપમાંથી ઇમ્પોર્ટ કરો (વૈકલ્પિક)</string>
     <string name="crm_export">ડેટા એક્સપોર્ટ કરો</string>
     <string name="crm_exporting">નિકાસ તૈયાર કરી રહ્યાં છીએ…</string>
-    <string name="crm_create_allow_search">કોઈને પણ CRM શોધવાની મંજૂરી આપો</string>
     <string name="crm_no_crms_found">કોઈ CRM મળ્યા નથી</string>
     <string name="crm_create_blocked_no_parents">હજુ સુધી કોઈ આઇટમ પ્રકારો બનાવી શકાતા નથી. પહેલા જરૂરી પેરન્ટ આઇટમ્સ બનાવો.</string>
     <string name="crm_export_csv">CSV એક્સપોર્ટ કરો</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">નમૂનો %1$s</string>
     <string name="crm_option_delete_title">વિકલ્પ કાઢી નાખો</string>
     <string name="crm_option_delete_message">શું તમે ખરેખર \"%1$s\" વિકલ્પને કાઢી નાખવા માગો છો?</string>
+    <string name="crm_create_public">કોઈને પણ CRM જોવાની અને તેના પર ટિપ્પણી કરવાની મંજૂરી આપો</string>
+    <string name="crm_board_delete_column">કૉલમ કાઢી નાખો</string>
+    <string name="crm_board_delete_column_message">શું તમે ખરેખર \"%1$s\" કૉલમ કાઢી નાખવા માંગો છો? આ પૂર્વવત્ કરી શકાતું નથી.</string>
+    <string name="crm_object_delete_named">શું તમે ખરેખર \"%1$s\" કાઢી નાખવા માંગો છો? આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">શું તમે ખરેખર \"%1$s\" અને તેની નીચેની %2$s વસ્તુ કાઢી નાખવા માંગો છો? આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</item>
+        <item quantity="other">શું તમે ખરેખર \"%1$s\" અને તેની નીચેની %2$s વસ્તુઓ કાઢી નાખવા માંગો છો? આ ક્રિયા પૂર્વવત્ કરી શકાતી નથી.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s જોડાણ ઉમેરી શકાયું નથી: %2$s</item>
+        <item quantity="other">%1$s જોડાણો ઉમેરી શકાયા નથી: %2$s</item>
+    </plurals>
 </resources>

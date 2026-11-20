@@ -81,7 +81,6 @@ fun BoardCard(
     depth: Int = 0,
     cardDragState: DragState? = null,
     cardIndexInColumn: Int = -1,
-    columnObjectsForDrop: List<ProjectObject> = emptyList(),
     targetColumnId: String = "",
     /** The lane this card sits in, sent as row_value so a drop changes lane. */
     targetRowId: String = "",
@@ -151,10 +150,11 @@ fun BoardCard(
                 orientation = DropOrientation.Vertical,
                 acceptedEdges = setOf(DragEdge.Top, DragEdge.Bottom),
                 onDrop = { sourceId, edge ->
-                    val rank = dropRank(
-                        columnObjects = columnObjectsForDrop.map { it.id },
-                        targetId = obj.id,
-                        sourceId = sourceId,
+                    val rank = viewModel.dropPosition(
+                        field = columnFieldId,
+                        value = targetColumnId,
+                        target = obj.id,
+                        moved = sourceId,
                         below = edge == DragEdge.Bottom,
                     )
                     // rowField/rowValue carry the lane. Without them the server
@@ -398,10 +398,11 @@ private fun countDeepChildren(parentId: String, childrenByParent: Map<String, Li
 }
 
 /**
- * 1-based server position for a dragged card. [columnObjects] must be the whole
- * column in rank order, not one swimlane: the server ranks per (field, value)
- * and has no lane dimension. The source is excluded because the server ranks
- * without it.
+ * 1-based server position for a dragged card. [columnObjects] must be the
+ * column as the server ranks it ([ProjectViewModel.rankedColumn]): every
+ * object holding the value, children and other classes included, in rank
+ * order, never one swimlane or the board's sort. The source is excluded
+ * because the server ranks without it.
  */
 internal fun dropRank(
     columnObjects: List<String>,

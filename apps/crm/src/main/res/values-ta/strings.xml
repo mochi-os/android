@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">இந்த CRM ஐ நிச்சயமாக நீக்க விரும்புகிறீர்களா? அனைத்து பொருள்கள், கருத்துகள் மற்றும் அமைப்புகள் நிரந்தரமாக அகற்றப்படும்.</string>
     <string name="crm_object_unwatch">கவனிப்பதை நிறுத்து</string>
     <string name="crm_object_delete_title">பொருளை நீக்கு</string>
-    <string name="crm_object_delete_message">இந்த பொருளை நிச்சயமாக நீக்க விரும்புகிறீர்களா? இந்த செயலை திரும்பப் பெற முடியாது.</string>
     <string name="crm_parent_none">பெற்றோர் இல்லை</string>
     <string name="crm_links_empty">இணைப்புகள் இல்லை</string>
     <string name="crm_links_section_relates">தொடர்புடையது</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">காப்புப்பிரதியிலிருந்து இறக்குமதி (விருப்பம்)</string>
     <string name="crm_export">தரவை ஏற்றுமதி செய்</string>
     <string name="crm_exporting">ஏற்றுமதி தயாராகிறது…</string>
-    <string name="crm_create_allow_search">CRM-ஐ யாராவது தேட அனுமதி</string>
     <string name="crm_no_crms_found">CRMகள் எதுவும் கிடைக்கவில்லை</string>
     <string name="crm_create_blocked_no_parents">உருப்படி வகைகள் எதையும் இன்னும் உருவாக்க முடியாது. முதலில் தேவையான பெற்றோர் உருப்படிகளை உருவாக்கவும்.</string>
     <string name="crm_export_csv">CSV ஏற்றுமதி</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">மாதிரி %1$s</string>
     <string name="crm_option_delete_title">விருப்பத்தை நீக்கு</string>
     <string name="crm_option_delete_message">\"%1$s\" விருப்பத்தை நீக்க விரும்புகிறீர்களா?</string>
+    <string name="crm_create_public">CRM-ஐ யாரும் பார்க்கவும் அதில் கருத்து தெரிவிக்கவும் அனுமதி</string>
+    <string name="crm_board_delete_column">நெடுவரிசையை நீக்கு</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" நெடுவரிசையை நீக்க விரும்புகிறீர்களா? இதை மாற்ற முடியாது.</string>
+    <string name="crm_object_delete_named">\"%1$s\"-ஐ நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\"-ஐயும் அதன் கீழுள்ள %2$s உருப்படியையும் நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.</item>
+        <item quantity="other">\"%1$s\"-ஐயும் அதன் கீழுள்ள %2$s உருப்படிகளையும் நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s இணைப்பைச் சேர்க்க முடியவில்லை: %2$s</item>
+        <item quantity="other">%1$s இணைப்புகளைச் சேர்க்க முடியவில்லை: %2$s</item>
+    </plurals>
 </resources>

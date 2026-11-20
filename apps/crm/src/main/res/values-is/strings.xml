@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Ertu viss um að þú viljir eyða þessu CRM? Öllum hlutum, athugasemdum og stillingum verður eytt varanlega.</string>
     <string name="crm_object_unwatch">Hætta að fylgjast með</string>
     <string name="crm_object_delete_title">Eyða hlut</string>
-    <string name="crm_object_delete_message">Ertu viss um að þú viljir eyða þessum hlut? Ekki er hægt að afturkalla þessa aðgerð.</string>
     <string name="crm_parent_none">Enginn yfirhlutur</string>
     <string name="crm_links_empty">Engir tenglar</string>
     <string name="crm_links_section_relates">Tengist</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Flytja inn úr öryggisafriti (valfrjálst)</string>
     <string name="crm_export">Flytja út gögn</string>
     <string name="crm_exporting">Undirbý útflutning…</string>
-    <string name="crm_create_allow_search">Leyfa öllum að leita að CRM</string>
     <string name="crm_no_crms_found">Engin CRM fundust</string>
     <string name="crm_create_blocked_no_parents">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
     <string name="crm_export_csv">Flytja út CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Sýnishorn %1$s</string>
     <string name="crm_option_delete_title">Eyða valkosti</string>
     <string name="crm_option_delete_message">Ertu viss um að þú viljir eyða valkostinum \"%1$s\"?</string>
+    <string name="crm_create_public">Leyfa öllum að skoða CRM og gera athugasemdir við það</string>
+    <string name="crm_board_delete_column">Eyða dálki</string>
+    <string name="crm_board_delete_column_message">Ertu viss um að þú viljir eyða dálknum „%1$s“? Þessu er ekki hægt að afturkalla.</string>
+    <string name="crm_object_delete_named">Ertu viss um að þú viljir eyða „%1$s“? Þessari aðgerð er ekki hægt að afturkalla.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Ertu viss um að þú viljir eyða „%1$s“ og %2$s atriði undir því? Þessari aðgerð er ekki hægt að afturkalla.</item>
+        <item quantity="other">Ertu viss um að þú viljir eyða „%1$s“ og %2$s atriðum undir því? Þessari aðgerð er ekki hægt að afturkalla.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Ekki tókst að bæta við %1$s viðhengi: %2$s</item>
+        <item quantity="other">Ekki tókst að bæta við %1$s viðhengjum: %2$s</item>
+    </plurals>
 </resources>

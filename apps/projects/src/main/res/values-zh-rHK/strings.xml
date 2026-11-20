@@ -10,7 +10,6 @@
     <string name="projects_create_action">建立</string>
     <string name="projects_request_create_action">建立</string>
     <string name="projects_classes_create">建立</string>
-    <string name="projects_request_close">關閉</string>
     <string name="projects_create_template_none">無</string>
     <string name="projects_settings">設定</string>
     <string name="projects_settings_title">設定</string>
@@ -99,7 +98,6 @@
     <string name="projects_object_unwatch">取消關注</string>
     <string name="projects_object_tab_properties">屬性</string>
     <string name="projects_object_delete_title">刪除項目</string>
-    <string name="projects_object_delete_message">你確定要刪除此項目嗎?此操作無法復原。</string>
     <string name="projects_parent_none">沒有上層項目</string>
     <string name="projects_links_empty">沒有連結</string>
     <string name="projects_links_add">新增連結</string>
@@ -135,7 +133,6 @@
     <string name="projects_request_empty">沒有合併請求</string>
     <string name="projects_request_new">新增合併請求</string>
     <string name="projects_request_status_merged">已合併</string>
-    <string name="projects_request_status_closed">已關閉</string>
     <string name="projects_request_back_to_list">返回列表</string>
     <string name="projects_request_repository">儲存庫：%1$s</string>
     <string name="projects_request_source">來源：%1$s</string>
@@ -287,7 +284,6 @@
     <string name="projects_access_role_design">設計、建立、編輯、留言和檢視</string>
     <string name="projects_access_role_write">建立、編輯、留言和檢視</string>
     <string name="projects_all_projects">所有專案</string>
-    <string name="projects_create_allow_search">允許任何人搜尋專案</string>
     <string name="projects_create_import_backup">從備份匯入（選用）</string>
     <string name="projects_create_upload_json">上傳 .json 檔案</string>
     <string name="projects_settings_not_set">未設定</string>
@@ -299,4 +295,5 @@
     <string name="projects_settings_section_identity">身份</string>
     <string name="projects_settings_access_updated">存取權限已更新</string>
     <string name="projects_board_add_column">新增欄位</string>
+    <string name="projects_create_attachments_failed">無法附加：%1$s</string>
 </resources>

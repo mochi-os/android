@@ -34,6 +34,8 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -65,9 +67,11 @@ import org.mochios.android.ui.components.dnd.isTarget
 import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.android.ui.components.dnd.reorderActions
 import org.mochios.android.ui.components.dnd.reorderedAgainst
+import org.mochios.android.api.userMessage
 import org.mochios.crm.R
 import org.mochios.crm.model.CrmClass
 import org.mochios.crm.model.CrmField
+import org.mochios.crm.util.HIERARCHY_ROOT
 import org.mochios.android.R as MochiR
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.CircularProgressIndicator
@@ -118,7 +122,20 @@ fun ClassDetailScreen(
         }
     }
 
+    // A change the server refused, over the loaded class. A failed load is
+    // the error state's below, which clearing here would take away.
+    val snackbarHostState = remember { SnackbarHostState() }
+    val loaded = cls != null
+    LaunchedEffect(uiState.error, loaded) {
+        val error = uiState.error
+        if (error != null && loaded) {
+            snackbarHostState.showSnackbar(error.userMessage())
+            viewModel.clearError()
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -261,6 +278,20 @@ fun ClassDetailScreen(
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                     verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
+                    // The top level is a parent choice like any other: with every chip
+                    // off, no object of this class can be created anywhere.
+                    FilterChip(
+                        selected = HIERARCHY_ROOT in hierarchy,
+                        onClick = {
+                            val newHierarchy = if (HIERARCHY_ROOT in hierarchy) {
+                                hierarchy - HIERARCHY_ROOT
+                            } else {
+                                hierarchy + HIERARCHY_ROOT
+                            }
+                            viewModel.setHierarchy(newHierarchy)
+                        },
+                        label = { Text(stringResource(R.string.crm_tree_root_level)) }
+                    )
                     otherClasses.forEach { otherCls ->
                         FilterChip(
                             selected = otherCls.id in hierarchy,

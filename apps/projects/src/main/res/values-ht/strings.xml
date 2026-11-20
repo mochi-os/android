@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ouvè</string>
     <string name="projects_request_status_merged">Merge</string>
     <string name="projects_request_merge">Fizyone</string>
-    <string name="projects_request_close">Fèmen</string>
     <string name="projects_request_merge_dialog_title">Fizyone</string>
     <string name="projects_request_method">Metòd</string>
     <string name="projects_request_method_merge">Fizyone</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Èske ou sèten ou vle efase pwojè sa a? Tout objè, kòmantè, ak paramèt yo pral retire pou tout tan.</string>
     <string name="projects_object_unwatch">Sispann gade</string>
     <string name="projects_object_delete_title">Efase objè</string>
-    <string name="projects_object_delete_message">Èske ou sèten ou vle efase objè sa a? Aksyon sa a pa ka defèt.</string>
     <string name="projects_parent_none">Pa gen paran</string>
     <string name="projects_links_empty">Pa gen lyen</string>
     <string name="projects_links_section_relates">Gen rapò ak</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Pa gen atachman</string>
     <string name="projects_attachment_default_name">atachman</string>
     <string name="projects_request_new">Nouvo demann fizyon</string>
-    <string name="projects_request_status_closed">Fèmen</string>
     <string name="projects_request_back_to_list">Retounen nan lis</string>
     <string name="projects_request_repository">Depo: %1$s</string>
     <string name="projects_request_source">Sous: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Konsevwa, kreye, modifye, kòmante, epi gade</string>
     <string name="projects_access_role_write">Kreye, modifye, kòmante, epi gade</string>
     <string name="projects_all_projects">Tout pwojè</string>
-    <string name="projects_create_allow_search">Pèmèt nenpòt moun chèche pwojè</string>
     <string name="projects_create_import_backup">Enpòte soti nan backup (opsyonèl)</string>
     <string name="projects_create_upload_json">Telechaje fichye .json</string>
     <string name="projects_settings_not_set">Pa defini</string>
@@ -331,4 +327,14 @@
     <string name="projects_create_object_no_types">Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò.</string>
     <string name="projects_create_blocked_no_options">Pa ka kreye: %1$s obligatwa men li pa gen opsyon pou chwazi. Ajoute opsyon nan Konsèp.</string>
     <string name="projects_attachment_remove">Retire pyès jwenti</string>
+    <string name="projects_create_allow_public">Pèmèt nenpòt moun wè pwojè a epi fè kòmantè sou li</string>
+    <string name="projects_request_delete_title">Efase demand merge</string>
+    <string name="projects_request_delete_message">Èske ou sèten ou vle efase demand merge sa a?</string>
+    <string name="projects_board_delete_column_title">Efase kolòn</string>
+    <string name="projects_board_delete_column_message">Èske ou sèten ou vle efase kolòn \"%1$s\" la? Sa a pa ka anile.</string>
+    <string name="projects_object_delete_named">Èske ou sèten ou vle efase \"%1$s\"? Aksyon sa a pa ka anile.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Èske ou sèten ou vle efase \"%1$s\" ak %2$s atik ki anba li yo? Aksyon sa a pa ka anile.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Pa t kapab tache: %1$s</string>
 </resources>

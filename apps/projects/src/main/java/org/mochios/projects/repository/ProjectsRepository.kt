@@ -26,10 +26,18 @@ import org.mochios.android.model.Comment
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
+import org.mochios.projects.api.CreateObjectRequest
+import org.mochios.projects.api.HierarchyRequest
+import org.mochios.projects.api.MoveObjectRequest
 import org.mochios.projects.api.ProjectsApi
 import org.mochios.projects.api.SetValueRequest
 import org.mochios.projects.api.SubscribeRequest
 import org.mochios.projects.api.UpdateClassRequest
+import org.mochios.projects.api.UpdateFieldRequest
+import org.mochios.projects.api.UpdateObjectRequest
+import org.mochios.projects.api.UpdateOptionRequest
+import org.mochios.projects.api.UpdateProjectRequest
+import org.mochios.projects.api.UpdateViewRequest
 import org.mochios.projects.api.UnsubscribeRequest
 import org.mochios.projects.api.WarmExportResponse
 import org.mochios.projects.model.Activity
@@ -235,7 +243,7 @@ class ProjectsRepository @Inject constructor(
     }
 
     suspend fun updateProject(projectId: String, name: String? = null, description: String? = null, prefix: String? = null) {
-        api.updateProject(projectId, name, description, prefix).unwrap()
+        api.updateProject(projectId, UpdateProjectRequest(name, description, prefix)).unwrap()
     }
 
     suspend fun deleteProject(projectId: String) {
@@ -277,15 +285,28 @@ class ProjectsRepository @Inject constructor(
     /** Watched object ids for the local user from the last [getObjects] fetch. */
     fun getWatched(projectId: String): List<String> = watchedCache[projectId] ?: emptyList()
 
-    /** Returns the new object's id (the create endpoint returns a flat id/number/readable body). */
-    suspend fun createObject(projectId: String, classId: String, parent: String? = null, title: String): String =
-        api.createObject(projectId, classId, parent, title).unwrap().id
+    /**
+     * Creates an object with its first [values], which the server validates
+     * before it writes anything; returns the new object's id.
+     */
+    suspend fun createObject(
+        projectId: String,
+        classId: String,
+        parent: String? = null,
+        title: String,
+        values: Map<String, String> = emptyMap(),
+    ): String =
+        api.createObject(projectId, CreateObjectRequest(classId, parent, title, values.ifEmpty { null })).unwrap().id
 
-    suspend fun getObject(projectId: String, objectId: String): ProjectObject =
-        api.getObject(projectId, objectId).unwrap().`object`
+    suspend fun getObject(projectId: String, objectId: String): ProjectObject {
+        val response = api.getObject(projectId, objectId).unwrap()
+        // Values arrive beside the object, not within it.
+        return response.`object`.copy(values = response.values)
+    }
 
+    /** Changes the object's parent; "" puts it at the top level. */
     suspend fun updateObject(projectId: String, objectId: String, parent: String? = null) {
-        api.updateObject(projectId, objectId, parent).unwrap()
+        api.updateObject(projectId, objectId, UpdateObjectRequest(parent)).unwrap()
     }
 
     suspend fun deleteObject(projectId: String, objectId: String) {
@@ -303,11 +324,10 @@ class ProjectsRepository @Inject constructor(
         scopeParent: String? = null,
         promote: Boolean = false
     ) {
+        val row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() }
         api.moveObject(
-            projectId, objectId, field, value, rank,
-            rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
-            scopeParent,
-            if (promote) "true" else null
+            projectId, objectId,
+            MoveObjectRequest(field, value, rank, row, scopeParent, if (promote) "true" else null)
         ).unwrap()
     }
 
@@ -405,7 +425,7 @@ class ProjectsRepository @Inject constructor(
         type: String? = null
     ): MergeRequest {
         val draftField = draft?.let { if (it) "1" else "0" }
-        return api.createRequest(projectId, objectId, type, repository, source, target, title, description, draftField).unwrap().request
+        return api.createRequest(projectId, objectId, type, repository, source, target, title, description, draftField).unwrap()
     }
 
     suspend fun updateRequest(
@@ -517,7 +537,7 @@ class ProjectsRepository @Inject constructor(
         direction: String? = null,
         classes: String? = null,
         border: String? = null
-    ): ProjectView = api.createView(projectId, name, viewtype, columns, rows, filter, sort, direction, classes, border).unwrap().view
+    ): ProjectView = api.createView(projectId, name, viewtype, columns, rows, filter, sort, direction, classes, border).unwrap()
 
     suspend fun reorderViews(projectId: String, order: String) {
         api.reorderViews(projectId, order).unwrap()
@@ -536,7 +556,10 @@ class ProjectsRepository @Inject constructor(
         classes: String? = null,
         border: String? = null
     ) {
-        api.updateView(projectId, viewId, name, viewtype, columns, rows, filter, sort, direction, classes, border).unwrap()
+        api.updateView(
+            projectId, viewId,
+            UpdateViewRequest(name, viewtype, columns, rows, filter, sort, direction, classes, border)
+        ).unwrap()
     }
 
     suspend fun deleteView(projectId: String, viewId: String) {
@@ -564,8 +587,9 @@ class ProjectsRepository @Inject constructor(
     suspend fun getHierarchy(projectId: String, classId: String): List<String> =
         api.getHierarchy(projectId, classId).unwrap().parents
 
+    /** [parents] as [org.mochios.projects.util.hierarchyParameter] spells them. */
     suspend fun setHierarchy(projectId: String, classId: String, parents: String) {
-        api.setHierarchy(projectId, classId, parents).unwrap()
+        api.setHierarchy(projectId, classId, HierarchyRequest(parents)).unwrap()
     }
 
     // ---- Fields ----
@@ -580,7 +604,7 @@ class ProjectsRepository @Inject constructor(
         fieldtype: String,
         flags: String? = null,
         multi: Boolean? = null
-    ): ProjectField = api.createField(projectId, classId, name, fieldtype, flags, multi).unwrap().field
+    ): ProjectField = api.createField(projectId, classId, name, fieldtype, flags, multi).unwrap()
 
     suspend fun reorderFields(projectId: String, classId: String, order: String) {
         api.reorderFields(projectId, classId, order).unwrap()
@@ -595,12 +619,15 @@ class ProjectsRepository @Inject constructor(
         multi: Boolean? = null,
         card: Boolean? = null,
         position: String? = null,
-        rows: Int? = null,
+        rows: String? = null,
         pattern: String? = null,
         minlength: Int? = null,
         maxlength: Int? = null
     ) {
-        api.updateField(projectId, classId, fieldId, name, flags, multi, card, position, rows, pattern, minlength, maxlength).unwrap()
+        api.updateField(
+            projectId, classId, fieldId,
+            UpdateFieldRequest(name, flags, multi, card, position, rows, pattern, minlength, maxlength)
+        ).unwrap()
     }
 
     suspend fun deleteField(projectId: String, classId: String, fieldId: String) {
@@ -619,7 +646,7 @@ class ProjectsRepository @Inject constructor(
         name: String,
         colour: String? = null,
         icon: String? = null
-    ): FieldOption = api.createOption(projectId, classId, fieldId, name, colour, icon).unwrap().option
+    ): FieldOption = api.createOption(projectId, classId, fieldId, name, colour, icon).unwrap()
 
     suspend fun reorderOptions(projectId: String, classId: String, fieldId: String, order: String) {
         api.reorderOptions(projectId, classId, fieldId, order).unwrap()
@@ -634,7 +661,7 @@ class ProjectsRepository @Inject constructor(
         colour: String? = null,
         icon: String? = null
     ) {
-        api.updateOption(projectId, classId, fieldId, optionId, name, colour, icon).unwrap()
+        api.updateOption(projectId, classId, fieldId, optionId, UpdateOptionRequest(name, colour, icon)).unwrap()
     }
 
     suspend fun deleteOption(projectId: String, classId: String, fieldId: String, optionId: String) {

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">您確定要刪除此 CRM 嗎?所有物件、留言與設定將會永久移除。</string>
     <string name="crm_object_unwatch">取消關注</string>
     <string name="crm_object_delete_title">刪除物件</string>
-    <string name="crm_object_delete_message">您確定要刪除此物件嗎?此操作無法復原。</string>
     <string name="crm_parent_none">無上層</string>
     <string name="crm_links_empty">無連結</string>
     <string name="crm_links_section_relates">相關於</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">從備份匯入（選用）</string>
     <string name="crm_export">匯出資料</string>
     <string name="crm_exporting">正在準備匯出…</string>
-    <string name="crm_create_allow_search">允許任何人搜尋 CRM</string>
     <string name="crm_no_crms_found">找不到 CRM</string>
     <string name="crm_create_blocked_no_parents">尚無法建立任何項目類型。請先建立所需的父項目。</string>
     <string name="crm_export_csv">匯出 CSV</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">範例 %1$s</string>
     <string name="crm_option_delete_title">刪除選項</string>
     <string name="crm_option_delete_message">您確定要刪除選項「%1$s」嗎?</string>
+    <string name="crm_create_public">允許任何人檢視 CRM 並留言</string>
+    <string name="crm_board_delete_column">刪除欄位</string>
+    <string name="crm_board_delete_column_message">您確定要刪除「%1$s」欄位嗎?此操作無法復原。</string>
+    <string name="crm_object_delete_named">您確定要刪除「%1$s」嗎?此操作無法復原。</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">您確定要刪除「%1$s」及其下的 %2$s 項嗎?此操作無法復原。</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s 個附件無法新增：%2$s</item>
+    </plurals>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Ushbu CRMni o\'chirishni xohlayotganingizga ishonchingiz komilmi? Barcha obyektlar, izohlar va sozlamalar butunlay olib tashlanadi.</string>
     <string name="crm_object_unwatch">Kuzatishni bekor qilish</string>
     <string name="crm_object_delete_title">Obyektni o\'chirish</string>
-    <string name="crm_object_delete_message">Ushbu obyektni o\'chirishni xohlayotganingizga ishonchingiz komilmi? Bu amalni bekor qilib bo\'lmaydi.</string>
     <string name="crm_parent_none">Ota element yoʻq</string>
     <string name="crm_links_empty">Havolalar yo\'q</string>
     <string name="crm_links_section_relates">Bog\'liq</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Zaxira nusxasidan import (ixtiyoriy)</string>
     <string name="crm_export">Maʼlumotlarni eksport qilish</string>
     <string name="crm_exporting">Eksport tayyorlanmoqda…</string>
-    <string name="crm_create_allow_search">Hammaga CRM ni qidirishga ruxsat berish</string>
     <string name="crm_no_crms_found">CRM topilmadi</string>
     <string name="crm_create_blocked_no_parents">Hozircha hech qanday element turi yaratib boʻlmaydi. Avval kerakli ota elementlarni yarating.</string>
     <string name="crm_export_csv">CSV eksport qilish</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Namuna %1$s</string>
     <string name="crm_option_delete_title">Variantni oʻchirish</string>
     <string name="crm_option_delete_message">\"%1$s\" variantini oʻchirishga ishonchingiz komilmi?</string>
+    <string name="crm_create_public">Hammaga CRM ni koʻrish va unga izoh qoldirishga ruxsat berish</string>
+    <string name="crm_board_delete_column">Ustunni oʻchirish</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" ustunini oʻchirmoqchimisiz? Buni qaytarib boʻlmaydi.</string>
+    <string name="crm_object_delete_named">\"%1$s\" ni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\" va uning ostidagi %2$s elementni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</item>
+        <item quantity="other">\"%1$s\" va uning ostidagi %2$s elementni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s ta biriktirmani qoʻshib boʻlmadi: %2$s</item>
+        <item quantity="other">%1$s ta biriktirmani qoʻshib boʻlmadi: %2$s</item>
+    </plurals>
 </resources>

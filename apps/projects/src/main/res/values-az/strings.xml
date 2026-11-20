@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Açıq</string>
     <string name="projects_request_status_merged">Birləşdirildi</string>
     <string name="projects_request_merge">Birləşdir</string>
-    <string name="projects_request_close">Bağla</string>
     <string name="projects_request_merge_dialog_title">Birləşdir</string>
     <string name="projects_request_method">Metod</string>
     <string name="projects_request_method_merge">Birləşdir</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">Bu layihəni silmək istədiyinizə əminsiniz? Bütün obyektlər, şərhlər və parametrlər həmişəlik silinəcək.</string>
     <string name="projects_object_unwatch">İzləməni dayandır</string>
     <string name="projects_object_delete_title">Obyekti sil</string>
-    <string name="projects_object_delete_message">Bu obyekti silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
     <string name="projects_parent_none">Üst element yoxdur</string>
     <string name="projects_links_empty">Keçid yoxdur</string>
     <string name="projects_links_section_relates">Əlaqəlidir</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Qoşma yoxdur</string>
     <string name="projects_attachment_default_name">qoşma</string>
     <string name="projects_request_new">Yeni birləşmə sorğusu</string>
-    <string name="projects_request_status_closed">Bağlandı</string>
     <string name="projects_request_back_to_list">Siyahıya qayıt</string>
     <string name="projects_request_repository">Repozitoriya: %1$s</string>
     <string name="projects_request_source">Mənbə: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dizayn, yaratma, redaktə, şərh və baxış</string>
     <string name="projects_access_role_write">Yaratma, redaktə, şərh və baxış</string>
     <string name="projects_all_projects">Bütün layihələr</string>
-    <string name="projects_create_allow_search">Hər kəsə layihə axtarmağa icazə ver</string>
     <string name="projects_create_import_backup">Ehtiyat nüsxədən idxal (istəyə bağlı)</string>
     <string name="projects_create_upload_json">.json faylı yüklə</string>
     <string name="projects_settings_not_set">Təyin edilməyib</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Hələ heç bir element növü yaradıla bilməz. Əvvəlcə tələb olunan əsas elementləri yaradın.</string>
     <string name="projects_create_blocked_no_options">Yaradıla bilmir: %1$s tələb olunur, lakin seçim üçün variantı yoxdur. Dizayn bölməsində variant əlavə edin.</string>
     <string name="projects_attachment_remove">Qoşmanı sil</string>
+    <string name="projects_create_allow_public">Hər kəsə layihəyə baxmağa və şərh yazmağa icazə ver</string>
+    <string name="projects_request_delete_title">Birləşmə sorğusunu sil</string>
+    <string name="projects_request_delete_message">Bu birləşmə sorğusunu silmək istədiyinizə əminsiniz?</string>
+    <string name="projects_board_delete_column_title">Sütunu sil</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" sütununu silmək istədiyinizə əminsiniz? Bu geri qaytarıla bilməz.</string>
+    <string name="projects_object_delete_named">\"%1$s\" silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" və onun altındakı %2$s elementi silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz.</item>
+        <item quantity="other">\"%1$s\" və onun altındakı %2$s elementi silmək istədiyinizə əminsiniz? Bu əməliyyat geri qaytarıla bilməz.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Qoşmaq mümkün olmadı: %1$s</string>
 </resources>

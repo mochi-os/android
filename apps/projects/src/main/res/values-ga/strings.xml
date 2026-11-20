@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Oscailte</string>
     <string name="projects_request_status_merged">Cumasctha</string>
     <string name="projects_request_merge">Cumaisc</string>
-    <string name="projects_request_close">Dún</string>
     <string name="projects_request_merge_dialog_title">Cumaisc</string>
     <string name="projects_request_method">Modh</string>
     <string name="projects_request_method_merge">Cumaisc</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">An bhfuil tú cinnte gur mian leat an tionscadal seo a scriosadh? Bainfear gach réad, nóta tráchta, agus socrú go buan.</string>
     <string name="projects_object_unwatch">Stop ag faire</string>
     <string name="projects_object_delete_title">Scrios réad</string>
-    <string name="projects_object_delete_message">An bhfuil tú cinnte gur mian leat an réad seo a scriosadh? Ní féidir an gníomh seo a chealú.</string>
     <string name="projects_parent_none">Gan tuismitheoir</string>
     <string name="projects_links_empty">Gan naisc</string>
     <string name="projects_links_section_relates">Bainteach le</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Gan iatáin</string>
     <string name="projects_attachment_default_name">iatán</string>
     <string name="projects_request_new">Iarratas cumaisc nua</string>
-    <string name="projects_request_status_closed">Dúnta</string>
     <string name="projects_request_back_to_list">Ar ais chuig an liosta</string>
     <string name="projects_request_repository">Stór: %1$s</string>
     <string name="projects_request_source">Foinse: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dear, cruthaigh, cuir in eagar, déan trácht agus féach</string>
     <string name="projects_access_role_write">Cruthaigh, cuir in eagar, déan trácht agus féach</string>
     <string name="projects_all_projects">Gach tionscadal</string>
-    <string name="projects_create_allow_search">Ceadaigh d\'aon duine cuardach do thionscadal</string>
     <string name="projects_create_import_backup">Iompórtáil ó chúltaca (roghnach)</string>
     <string name="projects_create_upload_json">Uaslódáil comhad .json</string>
     <string name="projects_settings_not_set">Gan socrú</string>
@@ -335,4 +331,18 @@
     <string name="projects_create_object_no_types">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>
     <string name="projects_create_blocked_no_options">Ní féidir a chruthú: tá %1$s riachtanach ach níl aon roghanna aige. Cuir roghanna leis sa Dearadh.</string>
     <string name="projects_attachment_remove">Bain ceangaltán</string>
+    <string name="projects_create_allow_public">Ceadaigh d\'aon duine an tionscadal a fheiceáil agus nótaí tráchta a chur air</string>
+    <string name="projects_request_delete_title">Scrios iarratas cumaisc</string>
+    <string name="projects_request_delete_message">An bhfuil tú cinnte gur mian leat an t-iarratas cumaisc seo a scriosadh?</string>
+    <string name="projects_board_delete_column_title">Scrios colún</string>
+    <string name="projects_board_delete_column_message">An bhfuil tú cinnte gur mian leat an colún \"%1$s\" a scriosadh? Ní féidir é seo a chealú.</string>
+    <string name="projects_object_delete_named">An bhfuil tú cinnte gur mian leat \"%1$s\" a scriosadh? Ní féidir an gníomh seo a chealú.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mhír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="two">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mhír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="few">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mhír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="many">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="other">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Theip ar cheangal: %1$s</string>
 </resources>

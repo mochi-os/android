@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">Вы ўпэўнены, што хочаце выдаліць гэты CRM? Усе аб\'екты, каментарыі і налады будуць выдалены назаўсёды.</string>
     <string name="crm_object_unwatch">Не сачыць</string>
     <string name="crm_object_delete_title">Выдаліць аб\'ект</string>
-    <string name="crm_object_delete_message">Вы ўпэўнены, што хочаце выдаліць гэты аб\'ект? Гэта дзеянне нельга адмяніць.</string>
     <string name="crm_parent_none">Без бацькоўскага</string>
     <string name="crm_links_empty">Няма спасылак</string>
     <string name="crm_links_section_relates">Звязана з</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Імпарт з рэзервовай копіі (неабавязкова)</string>
     <string name="crm_export">Экспартаваць даныя</string>
     <string name="crm_exporting">Падрыхтоўка экспарту…</string>
-    <string name="crm_create_allow_search">Дазволіць усім шукаць CRM</string>
     <string name="crm_no_crms_found">CRM не знойдзены</string>
     <string name="crm_create_blocked_no_parents">Пакуль нельга стварыць тыпы элементаў. Спачатку стварыце патрэбныя бацькоўскія элементы.</string>
     <string name="crm_export_csv">Экспартаваць CSV</string>
@@ -285,4 +283,20 @@
     <string name="crm_design_sample">Узор %1$s</string>
     <string name="crm_option_delete_title">Выдаліць опцыю</string>
     <string name="crm_option_delete_message">Вы ўпэўнены, што хочаце выдаліць опцыю \"%1$s\"?</string>
+    <string name="crm_create_public">Дазволіць усім праглядаць і каментаваць CRM</string>
+    <string name="crm_board_delete_column">Выдаліць слупок</string>
+    <string name="crm_board_delete_column_message">Вы ўпэўнены, што хочаце выдаліць слупок \"%1$s\"? Гэта нельга адмяніць.</string>
+    <string name="crm_object_delete_named">Вы ўпэўнены, што хочаце выдаліць \"%1$s\"? Гэтае дзеянне нельга адмяніць.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Вы ўпэўнены, што хочаце выдаліць \"%1$s\" і %2$s элемент пад ім? Гэтае дзеянне нельга адмяніць.</item>
+        <item quantity="few">Вы ўпэўнены, што хочаце выдаліць \"%1$s\" і %2$s элементы пад ім? Гэтае дзеянне нельга адмяніць.</item>
+        <item quantity="many">Вы ўпэўнены, што хочаце выдаліць \"%1$s\" і %2$s элементаў пад ім? Гэтае дзеянне нельга адмяніць.</item>
+        <item quantity="other">Вы ўпэўнены, што хочаце выдаліць \"%1$s\" і %2$s элемента пад ім? Гэтае дзеянне нельга адмяніць.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Не ўдалося дадаць %1$s укладанне: %2$s</item>
+        <item quantity="few">Не ўдалося дадаць %1$s укладанні: %2$s</item>
+        <item quantity="many">Не ўдалося дадаць %1$s укладанняў: %2$s</item>
+        <item quantity="other">Не ўдалося дадаць %1$s укладання: %2$s</item>
+    </plurals>
 </resources>

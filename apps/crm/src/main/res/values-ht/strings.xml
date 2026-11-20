@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Èske w sèten ou vle efase CRM sa a? Tout objè, kòmantè, ak paramèt yo pral retire pou tout tan.</string>
     <string name="crm_object_unwatch">Sispann gade</string>
     <string name="crm_object_delete_title">Efase objè</string>
-    <string name="crm_object_delete_message">Èske w sèten ou vle efase objè sa a? Aksyon sa a pa kapab anile.</string>
     <string name="crm_parent_none">Pa gen paran</string>
     <string name="crm_links_empty">Pa gen lyen</string>
     <string name="crm_links_section_relates">Gen rapò ak</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Enpòte soti nan backup (opsyonèl)</string>
     <string name="crm_export">Ekspòte done</string>
     <string name="crm_exporting">Prepare ekspòtasyon an…</string>
-    <string name="crm_create_allow_search">Pèmèt nenpòt moun chèche CRM</string>
     <string name="crm_no_crms_found">Pa gen CRM ki jwenn</string>
     <string name="crm_create_blocked_no_parents">Okenn kalite atik pa ka kreye ankò. Kreye atik paran ki nesesè yo dabò.</string>
     <string name="crm_export_csv">Ekspòte CSV</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">Echantiyon %1$s</string>
     <string name="crm_option_delete_title">Efase opsyon</string>
     <string name="crm_option_delete_message">Èske ou sèten ou vle efase opsyon \"%1$s\"?</string>
+    <string name="crm_create_public">Pèmèt nenpòt moun wè CRM nan epi fè kòmantè sou li</string>
+    <string name="crm_board_delete_column">Efase kolòn</string>
+    <string name="crm_board_delete_column_message">Èske ou sèten ou vle efase kolòn \"%1$s\" la? Sa a pa ka anile.</string>
+    <string name="crm_object_delete_named">Èske ou sèten ou vle efase \"%1$s\"? Aksyon sa a pa ka anile.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Èske ou sèten ou vle efase \"%1$s\" ak %2$s atik ki anba li yo? Aksyon sa a pa ka anile.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">Pa t kapab ajoute %1$s atachman: %2$s</item>
+    </plurals>
 </resources>

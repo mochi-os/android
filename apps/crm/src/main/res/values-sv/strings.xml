@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Är du säker på att du vill ta bort denna CRM? Alla objekt, kommentarer och inställningar tas bort permanent.</string>
     <string name="crm_object_unwatch">Sluta bevaka</string>
     <string name="crm_object_delete_title">Ta bort objekt</string>
-    <string name="crm_object_delete_message">Är du säker på att du vill ta bort detta objekt? Åtgärden kan inte ångras.</string>
     <string name="crm_parent_none">Ingen överordnad</string>
     <string name="crm_links_empty">Inga länkar</string>
     <string name="crm_links_section_relates">Relaterar till</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importera från säkerhetskopia (valfritt)</string>
     <string name="crm_export">Exportera data</string>
     <string name="crm_exporting">Förbereder export…</string>
-    <string name="crm_create_allow_search">Tillåt alla att söka efter CRM</string>
     <string name="crm_no_crms_found">Inga CRM-system hittades</string>
     <string name="crm_create_blocked_no_parents">Inga objekttyper kan skapas ännu. Skapa de obligatoriska överordnade objekten först.</string>
     <string name="crm_export_csv">Exportera CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Exempel %1$s</string>
     <string name="crm_option_delete_title">Ta bort alternativ</string>
     <string name="crm_option_delete_message">Är du säker på att du vill radera alternativet \"%1$s\"?</string>
+    <string name="crm_create_public">Tillåt alla att visa och kommentera CRM</string>
+    <string name="crm_board_delete_column">Ta bort kolumn</string>
+    <string name="crm_board_delete_column_message">Är du säker på att du vill ta bort kolumnen \"%1$s\"? Detta kan inte ångras.</string>
+    <string name="crm_object_delete_named">Är du säker på att du vill ta bort \"%1$s\"? Denna åtgärd kan inte ångras.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Är du säker på att du vill ta bort \"%1$s\" och %2$s objekt under det? Denna åtgärd kan inte ångras.</item>
+        <item quantity="other">Är du säker på att du vill ta bort \"%1$s\" och %2$s objekt under det? Denna åtgärd kan inte ångras.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s bilaga kunde inte läggas till: %2$s</item>
+        <item quantity="other">%1$s bilagor kunde inte läggas till: %2$s</item>
+    </plurals>
 </resources>

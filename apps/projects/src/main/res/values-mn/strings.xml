@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Нээлттэй</string>
     <string name="projects_request_status_merged">Нэгтгэгдсэн</string>
     <string name="projects_request_merge">Нэгтгэх</string>
-    <string name="projects_request_close">Хаах</string>
     <string name="projects_request_merge_dialog_title">Нэгтгэх</string>
     <string name="projects_request_method">Арга</string>
     <string name="projects_request_method_merge">Нэгтгэх</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Энэ төслийг устгахдаа итгэлтэй байна уу? Бүх объект, сэтгэгдэл, тохиргоо бүрмөсөн устах болно.</string>
     <string name="projects_object_unwatch">Ажиглахаа болих</string>
     <string name="projects_object_delete_title">Объект устгах</string>
-    <string name="projects_object_delete_message">Энэ объектыг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
     <string name="projects_parent_none">Эх объект байхгүй</string>
     <string name="projects_links_empty">Холбоос байхгүй</string>
     <string name="projects_links_section_relates">Холбоотой</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Хавсралт байхгүй</string>
     <string name="projects_attachment_default_name">хавсралт</string>
     <string name="projects_request_new">Шинэ нэгтгэх хүсэлт</string>
-    <string name="projects_request_status_closed">Хаагдсан</string>
     <string name="projects_request_back_to_list">Жагсаалт руу буцах</string>
     <string name="projects_request_repository">Репозитори: %1$s</string>
     <string name="projects_request_source">Эх сурвалж: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Загварчлах, үүсгэх, засварлах, сэтгэгдэл бичих, үзэх</string>
     <string name="projects_access_role_write">Үүсгэх, засварлах, сэтгэгдэл бичих, үзэх</string>
     <string name="projects_all_projects">Бүх төслүүд</string>
-    <string name="projects_create_allow_search">Хэн ч төсөл хайх боломжтой</string>
     <string name="projects_create_import_backup">Нөөцлөлтөөс импортлох (заавал биш)</string>
     <string name="projects_create_upload_json">.json файл байршуулах</string>
     <string name="projects_settings_not_set">Тохируулаагүй</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Одоогоор зүйл үүсгэх боломжгүй. Эхлээд шаардлагатай эх зүйлийг үүсгэнэ үү.</string>
     <string name="projects_create_blocked_no_options">Үүсгэх боломжгүй: %1$s шаардлагатай боловч сонгох сонголт байхгүй. Загварт сонголт нэмнэ үү.</string>
     <string name="projects_attachment_remove">Хавсралт хасах</string>
+    <string name="projects_create_allow_public">Хэнд ч төслийг харах, сэтгэгдэл бичих боломж олгох</string>
+    <string name="projects_request_delete_title">Нэгтгэх хүсэлт устгах</string>
+    <string name="projects_request_delete_message">Энэ нэгтгэх хүсэлтийг устгахдаа итгэлтэй байна уу?</string>
+    <string name="projects_board_delete_column_title">Багана устгах</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" баганыг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
+    <string name="projects_object_delete_named">\"%1$s\"-г устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" болон түүний доорх %2$s зүйлийг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</item>
+        <item quantity="other">\"%1$s\" болон түүний доорх %2$s зүйлийг устгахдаа итгэлтэй байна уу? Энэ үйлдлийг буцаах боломжгүй.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Хавсаргаж чадсангүй: %1$s</string>
 </resources>

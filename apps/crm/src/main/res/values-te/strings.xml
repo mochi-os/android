@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">మీరు ఈ CRMను తొలగించాలనుకుంటున్నారని నిశ్చయంగా ఉన్నారా? అన్ని ఆబ్జెక్ట్‌లు, వ్యాఖ్యలు మరియు సెట్టింగ్‌లు శాశ్వతంగా తొలగించబడతాయి.</string>
     <string name="crm_object_unwatch">చూడటం ఆపండి</string>
     <string name="crm_object_delete_title">ఆబ్జెక్ట్‌ను తొలగించండి</string>
-    <string name="crm_object_delete_message">మీరు ఈ ఆబ్జెక్ట్‌ను తొలగించాలనుకుంటున్నారని నిశ్చయంగా ఉన్నారా? ఈ చర్యను రద్దు చేయలేరు.</string>
     <string name="crm_parent_none">పేరెంట్ లేదు</string>
     <string name="crm_links_empty">లింక్‌లు లేవు</string>
     <string name="crm_links_section_relates">సంబంధించినది</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">బ్యాకప్ నుండి దిగుమతి (ఐచ్ఛికం)</string>
     <string name="crm_export">డేటాను ఎగుమతి చేయండి</string>
     <string name="crm_exporting">ఎగుమతిని సిద్ధం చేస్తోంది…</string>
-    <string name="crm_create_allow_search">CRM కోసం ఎవరైనా శోధించడానికి అనుమతించండి</string>
     <string name="crm_no_crms_found">CRMలు ఏవీ కనుగొనబడలేదు</string>
     <string name="crm_create_blocked_no_parents">ఇంకా ఏ ఐటెం రకాలను సృష్టించలేము. మొదట అవసరమైన పేరెంట్ ఐటెంలను సృష్టించండి.</string>
     <string name="crm_export_csv">CSVని ఎగుమతి చేయండి</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">నమూనా %1$s</string>
     <string name="crm_option_delete_title">ఎంపికను తొలగించండి</string>
     <string name="crm_option_delete_message">మీరు \"%1$s\" ఎంపికను తొలగించాలనుకుంటున్నారని ఖచ్చితంగా ఉన్నారా?</string>
+    <string name="crm_create_public">CRMను ఎవరైనా చూడటానికి మరియు దానిపై వ్యాఖ్యానించడానికి అనుమతించండి</string>
+    <string name="crm_board_delete_column">కాలమ్‌ను తొలగించండి</string>
+    <string name="crm_board_delete_column_message">మీరు \"%1$s\" కాలమ్‌ను తొలగించాలనుకుంటున్నారా? దీన్ని రద్దు చేయలేరు.</string>
+    <string name="crm_object_delete_named">మీరు \"%1$s\"ని తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">మీరు \"%1$s\"ని మరియు దాని కింద ఉన్న %2$s అంశాన్ని తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</item>
+        <item quantity="other">మీరు \"%1$s\"ని మరియు దాని కింద ఉన్న %2$s అంశాలను తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s అటాచ్‌మెంట్‌ను జోడించడం సాధ్యపడలేదు: %2$s</item>
+        <item quantity="other">%1$s అటాచ్‌మెంట్‌లను జోడించడం సాధ్యపడలేదు: %2$s</item>
+    </plurals>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Biztosan törölni szeretné ezt a CRM-et? Az összes objektum, hozzászólás és beállítás véglegesen törlődik.</string>
     <string name="crm_object_unwatch">Figyelés megszüntetése</string>
     <string name="crm_object_delete_title">Objektum törlése</string>
-    <string name="crm_object_delete_message">Biztosan törölni szeretné ezt az objektumot? Ez a művelet nem vonható vissza.</string>
     <string name="crm_parent_none">Nincs szülő</string>
     <string name="crm_links_empty">Nincsenek hivatkozások</string>
     <string name="crm_links_section_relates">Kapcsolódik</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importálás biztonsági mentésből (opcionális)</string>
     <string name="crm_export">Adatok exportálása</string>
     <string name="crm_exporting">Exportálás előkészítése…</string>
-    <string name="crm_create_allow_search">Bárki kereshet a CRM-re</string>
     <string name="crm_no_crms_found">Nem található CRM</string>
     <string name="crm_create_blocked_no_parents">Egyetlen elemtípus sem hozható még létre. Először hozza létre a szükséges szülőelemeket.</string>
     <string name="crm_export_csv">CSV exportálása</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Minta %1$s</string>
     <string name="crm_option_delete_title">Beállítás törlése</string>
     <string name="crm_option_delete_message">Biztosan törli a(z) \"%1$s\" beállítást?</string>
+    <string name="crm_create_public">Bárki megtekintheti és kommentálhatja a CRM-et</string>
+    <string name="crm_board_delete_column">Oszlop törlése</string>
+    <string name="crm_board_delete_column_message">Biztosan törli a(z) „%1$s” oszlopot? Ez nem vonható vissza.</string>
+    <string name="crm_object_delete_named">Biztosan törli a következőt: „%1$s”? Ez a művelet nem vonható vissza.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Biztosan törli a következőt: „%1$s”, és az alatta lévő %2$s elemet? Ez a művelet nem vonható vissza.</item>
+        <item quantity="other">Biztosan törli a következőt: „%1$s”, és az alatta lévő %2$s elemet? Ez a művelet nem vonható vissza.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s mellékletet nem sikerült hozzáadni: %2$s</item>
+        <item quantity="other">%1$s mellékletet nem sikerült hozzáadni: %2$s</item>
+    </plurals>
 </resources>

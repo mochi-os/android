@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">ღია</string>
     <string name="projects_request_status_merged">შერწყმული</string>
     <string name="projects_request_merge">შერწყმა</string>
-    <string name="projects_request_close">დახურვა</string>
     <string name="projects_request_merge_dialog_title">შერწყმა</string>
     <string name="projects_request_method">მეთოდი</string>
     <string name="projects_request_method_merge">შერწყმა</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ნამდვილად გსურთ ამ პროექტის წაშლა? ყველა ობიექტი, კომენტარი და პარამეტრი სამუდამოდ წაიშლება.</string>
     <string name="projects_object_unwatch">თვალყურის დევნების შეწყვეტა</string>
     <string name="projects_object_delete_title">ობიექტის წაშლა</string>
-    <string name="projects_object_delete_message">ნამდვილად გსურთ ამ ობიექტის წაშლა? ეს მოქმედება ვერ გაუქმდება.</string>
     <string name="projects_parent_none">მშობელი არ არის</string>
     <string name="projects_links_empty">ბმულები არ არის</string>
     <string name="projects_links_section_relates">უკავშირდება</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">დანართები არ არის</string>
     <string name="projects_attachment_default_name">დანართი</string>
     <string name="projects_request_new">ახალი შერწყმის მოთხოვნა</string>
-    <string name="projects_request_status_closed">დახურული</string>
     <string name="projects_request_back_to_list">სიაში დაბრუნება</string>
     <string name="projects_request_repository">რეპოზიტორი: %1$s</string>
     <string name="projects_request_source">წყარო: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">დიზაინი, შექმნა, რედაქტირება, კომენტირება და ნახვა</string>
     <string name="projects_access_role_write">შექმნა, რედაქტირება, კომენტირება და ნახვა</string>
     <string name="projects_all_projects">ყველა პროექტი</string>
-    <string name="projects_create_allow_search">ნებისმიერს პროექტის ძიების ნება დართე</string>
     <string name="projects_create_import_backup">იმპორტი სარეზერვო ასლიდან (არასავალდებულო)</string>
     <string name="projects_create_upload_json">.json ფაილის ატვირთვა</string>
     <string name="projects_settings_not_set">არ არის დაყენებული</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>
     <string name="projects_create_blocked_no_options">შექმნა შეუძლებელია: %1$s სავალდებულოა, მაგრამ არჩევანი არ აქვს. დაამატეთ ვარიანტები დიზაინში.</string>
     <string name="projects_attachment_remove">დანართის ამოღება</string>
+    <string name="projects_create_allow_public">ნებისმიერს პროექტის ნახვისა და კომენტირების ნება დართე</string>
+    <string name="projects_request_delete_title">შერწყმის მოთხოვნის წაშლა</string>
+    <string name="projects_request_delete_message">დარწმუნებული ხართ, რომ გსურთ ამ შერწყმის მოთხოვნის წაშლა?</string>
+    <string name="projects_board_delete_column_title">სვეტის წაშლა</string>
+    <string name="projects_board_delete_column_message">დარწმუნებული ხართ, რომ გსურთ „%1$s“ სვეტის წაშლა? ეს შეუქცევადია.</string>
+    <string name="projects_object_delete_named">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის წაშლა? მოქმედება შეუქცევადია.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის და მის ქვეშ არსებული %2$s ერთეულის წაშლა? მოქმედება შეუქცევადია.</item>
+        <item quantity="other">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის და მის ქვეშ არსებული %2$s ერთეულის წაშლა? მოქმედება შეუქცევადია.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">მიმაგრება ვერ მოხერხდა: %1$s</string>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">დარწმუნებული ხართ, რომ გსურთ ამ CRM-ის წაშლა? ყველა ობიექტი, კომენტარი და პარამეტრი სამუდამოდ წაიშლება.</string>
     <string name="crm_object_unwatch">თვალყურის დევნების შეწყვეტა</string>
     <string name="crm_object_delete_title">ობიექტის წაშლა</string>
-    <string name="crm_object_delete_message">დარწმუნებული ხართ, რომ გსურთ ამ ობიექტის წაშლა? ამ მოქმედების გაუქმება შეუძლებელია.</string>
     <string name="crm_parent_none">მშობელი არ არის</string>
     <string name="crm_links_empty">ბმულები არ არის</string>
     <string name="crm_links_section_relates">უკავშირდება</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">იმპორტი სარეზერვო ასლიდან (არასავალდებულო)</string>
     <string name="crm_export">მონაცემების ექსპორტი</string>
     <string name="crm_exporting">ექსპორტის მომზადება…</string>
-    <string name="crm_create_allow_search">ნებისმიერს CRM-ის ძიების ნება დართე</string>
     <string name="crm_no_crms_found">CRM-ები ვერ მოიძებნა</string>
     <string name="crm_create_blocked_no_parents">ნივთის ტიპების შექმნა ჯერ შეუძლებელია. ჯერ შექმენით საჭირო მშობელი ნივთები.</string>
     <string name="crm_export_csv">CSV-ის ექსპორტი</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">ნიმუში %1$s</string>
     <string name="crm_option_delete_title">ვარიანტის წაშლა</string>
     <string name="crm_option_delete_message">ნამდვილად გსურთ ვარიანტის \"%1$s\" წაშლა?</string>
+    <string name="crm_create_public">ნებისმიერს CRM-ის ნახვისა და კომენტირების ნება დართე</string>
+    <string name="crm_board_delete_column">სვეტის წაშლა</string>
+    <string name="crm_board_delete_column_message">დარწმუნებული ხართ, რომ გსურთ „%1$s“ სვეტის წაშლა? ეს შეუქცევადია.</string>
+    <string name="crm_object_delete_named">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის წაშლა? მოქმედება შეუქცევადია.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის და მის ქვეშ არსებული %2$s ერთეულის წაშლა? მოქმედება შეუქცევადია.</item>
+        <item quantity="other">დარწმუნებული ხართ, რომ გსურთ „%1$s“-ის და მის ქვეშ არსებული %2$s ერთეულის წაშლა? მოქმედება შეუქცევადია.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s დანართის დამატება ვერ მოხერხდა: %2$s</item>
+        <item quantity="other">%1$s დანართის დამატება ვერ მოხერხდა: %2$s</item>
+    </plurals>
 </resources>

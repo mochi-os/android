@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">ဖွင့်ထား</string>
     <string name="projects_request_status_merged">ပေါင်းစည်းပြီး</string>
     <string name="projects_request_merge">ပေါင်းစည်း</string>
-    <string name="projects_request_close">ပိတ်မည်</string>
     <string name="projects_request_merge_dialog_title">ပေါင်းစည်း</string>
     <string name="projects_request_method">နည်းလမ်း</string>
     <string name="projects_request_method_merge">ပေါင်းစည်း</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ဤပရောဂျက်ကို ဖျက်လိုသည်မှာ သေချာပါသလား။ အရာဝတ္ထုများ၊ မှတ်ချက်များနှင့် ဆက်တင်များအားလုံးကို အပြီးတိုင် ဖယ်ရှားပါမည်။</string>
     <string name="projects_object_unwatch">စောင့်ကြည့်ခြင်း ရပ်ပါ</string>
     <string name="projects_object_delete_title">အရာဝတ္ထု ဖျက်ပါ</string>
-    <string name="projects_object_delete_message">ဤအရာဝတ္ထုကို ဖျက်လိုသည်မှာ သေချာပါသလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ဖြုတ်၍ မရပါ။</string>
     <string name="projects_parent_none">မိဘ မရှိပါ</string>
     <string name="projects_links_empty">လင့်ခ်များ မရှိပါ</string>
     <string name="projects_links_section_relates">ဆက်စပ်သည်</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">ပူးတွဲဖိုင်များ မရှိပါ</string>
     <string name="projects_attachment_default_name">ပူးတွဲဖိုင်</string>
     <string name="projects_request_new">ပေါင်းစည်းရန် တောင်းဆိုချက် အသစ်</string>
-    <string name="projects_request_status_closed">ပိတ်ထားသည်</string>
     <string name="projects_request_back_to_list">စာရင်းသို့ ပြန်သွားပါ</string>
     <string name="projects_request_repository">သိုလှောင်ရာ: %1$s</string>
     <string name="projects_request_source">ရင်းမြစ်: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ဒီဇိုင်းဆွဲ၊ ဖန်တီး၊ တည်းဖြတ်၊ မှတ်ချက်ပေး၊ ကြည့်ရှု</string>
     <string name="projects_access_role_write">ဖန်တီး၊ တည်းဖြတ်၊ မှတ်ချက်ပေး၊ ကြည့်ရှု</string>
     <string name="projects_all_projects">project အားလုံး</string>
-    <string name="projects_create_allow_search">မည်သူမဆို ပရောဂျက် ကို ရှာဖွေခွင့်ပြုမည်</string>
     <string name="projects_create_import_backup">အရန်မှ တင်သွင်းရန် (မရွေးချယ်လည်းရသည်)</string>
     <string name="projects_create_upload_json">.json ဖိုင် အပ်လုဒ် လုပ်မည်</string>
     <string name="projects_settings_not_set">မသတ်မှတ်ထားပါ</string>
@@ -331,4 +327,14 @@
     <string name="projects_create_object_no_types">အရာ အမျိုးအစားအသစ်များ မဖန်တီးနိုင်သေးပါ။ လိုအပ်သော မိဘ အရာ များကို ဦးစွာဖန်တီးပါ။</string>
     <string name="projects_create_blocked_no_options">ဖန်တီး၍မရပါ- %1$s လိုအပ်သော်လည်း ရွေးချယ်စရာ မရှိပါ။ ဒီဇိုင်းတွင် ရွေးချယ်စရာများ ထည့်ပါ။</string>
     <string name="projects_attachment_remove">ပူးတွဲဖိုင် ဖယ်ရှားရန်</string>
+    <string name="projects_create_allow_public">မည်သူမဆို ပရောဂျက် ကို ကြည့်ရှုပြီး မှတ်ချက်ပေးခွင့်ပြုမည်</string>
+    <string name="projects_request_delete_title">ပေါင်းစည်းမှုတောင်းဆိုချက် ဖျက်မည်</string>
+    <string name="projects_request_delete_message">ဤပေါင်းစည်းမှုတောင်းဆိုချက်ကို ဖျက်မှာသေချာပါသလား?</string>
+    <string name="projects_board_delete_column_title">ကော်လံ ဖျက်မည်</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" ကော်လံကို ဖျက်မှာသေချာပါသလား? ပြန်လည်ပြုပြင်၍မရပါ။</string>
+    <string name="projects_object_delete_named">\"%1$s\" ကို ဖျက်မှာသေချာပါသလား? ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်၍မရပါ။</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">\"%1$s\" နှင့် ၎င်းအောက်ရှိ %2$s ခု ကို ဖျက်မှာ သေချာပါသလား? ဤလုပ်ဆောင်ချက်ကို ပြန်လည်ပြုပြင်၍မရပါ။</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ပူးတွဲ၍ မရပါ: %1$s</string>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Відкрито</string>
     <string name="projects_request_status_merged">Злито</string>
     <string name="projects_request_merge">Злити</string>
-    <string name="projects_request_close">Закрити</string>
     <string name="projects_request_merge_dialog_title">Злити</string>
     <string name="projects_request_method">Метод</string>
     <string name="projects_request_method_merge">Злити</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Ви впевнені, що хочете видалити цей проєкт? Усі обʼєкти, коментарі та налаштування буде остаточно видалено.</string>
     <string name="projects_object_unwatch">Не стежити</string>
     <string name="projects_object_delete_title">Видалити обʼєкт</string>
-    <string name="projects_object_delete_message">Ви впевнені, що хочете видалити цей обʼєкт? Цю дію не можна скасувати.</string>
     <string name="projects_parent_none">Без батьківського елемента</string>
     <string name="projects_links_empty">Немає посилань</string>
     <string name="projects_links_section_relates">Стосується</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Немає вкладень</string>
     <string name="projects_attachment_default_name">вкладення</string>
     <string name="projects_request_new">Новий запит на злиття</string>
-    <string name="projects_request_status_closed">Закрито</string>
     <string name="projects_request_back_to_list">Назад до списку</string>
     <string name="projects_request_repository">Репозиторій: %1$s</string>
     <string name="projects_request_source">Джерело: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Проєктування, створення, редагування, коментування та перегляд</string>
     <string name="projects_access_role_write">Створення, редагування, коментування та перегляд</string>
     <string name="projects_all_projects">Усі проєкти</string>
-    <string name="projects_create_allow_search">Дозволити всім шукати проєкт</string>
     <string name="projects_create_import_backup">Імпорт із резервної копії (необов\'язково)</string>
     <string name="projects_create_upload_json">Завантажити файл .json</string>
     <string name="projects_settings_not_set">Не встановлено</string>
@@ -334,4 +330,17 @@
     <string name="projects_create_object_no_types">Жоден тип елемента ще не можна створити. Спершу створіть необхідні батьківські елементи.</string>
     <string name="projects_create_blocked_no_options">Не вдалося створити: %1$s обов\'язковий, але не має варіантів вибору. Додайте варіанти в Дизайні.</string>
     <string name="projects_attachment_remove">Видалити вкладення</string>
+    <string name="projects_create_allow_public">Дозволити всім переглядати й коментувати проєкт</string>
+    <string name="projects_request_delete_title">Видалити запит на злиття</string>
+    <string name="projects_request_delete_message">Ви впевнені, що хочете видалити цей запит на злиття?</string>
+    <string name="projects_board_delete_column_title">Видалити стовпець</string>
+    <string name="projects_board_delete_column_message">Ви впевнені, що хочете видалити стовпець \"%1$s\"? Цю дію не можна скасувати.</string>
+    <string name="projects_object_delete_named">Ви впевнені, що хочете видалити \"%1$s\"? Цю дію не можна скасувати.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладений елемент? Цю дію не можна скасувати.</item>
+        <item quantity="few">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладені елементи? Цю дію не можна скасувати.</item>
+        <item quantity="many">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладених елементів? Цю дію не можна скасувати.</item>
+        <item quantity="other">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладеного елемента? Цю дію не можна скасувати.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Не вдалося прикріпити: %1$s</string>
 </resources>

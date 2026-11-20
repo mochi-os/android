@@ -38,7 +38,6 @@
     <string name="projects_create_action">Crear</string>
     <string name="projects_request_create_action">Crear</string>
     <string name="projects_classes_create">Crear</string>
-    <string name="projects_request_close">Cerrar</string>
     <string name="projects_create_template_none">Ninguno</string>
     <string name="projects_settings">Configuración</string>
     <string name="projects_settings_title">Configuración</string>
@@ -129,7 +128,6 @@
     <string name="projects_object_unwatch">Dejar de seguir</string>
     <string name="projects_object_tab_properties">Propiedades</string>
     <string name="projects_object_delete_title">Eliminar objeto</string>
-    <string name="projects_object_delete_message">¿Está seguro de que desea eliminar este objeto? Esta acción no se puede deshacer.</string>
     <string name="projects_parent_none">Sin padre</string>
     <string name="projects_links_empty">Sin enlaces</string>
     <string name="projects_links_section_relates">Se relaciona con</string>
@@ -159,7 +157,6 @@
     <string name="projects_request_empty">No hay solicitudes de fusión</string>
     <string name="projects_request_new">Nueva solicitud de fusión</string>
     <string name="projects_request_status_merged">Fusionada</string>
-    <string name="projects_request_status_closed">Cerrada</string>
     <string name="projects_request_back_to_list">Volver a la lista</string>
     <string name="projects_request_repository">Repositorio: %1$s</string>
     <string name="projects_request_source">Origen: %1$s</string>
@@ -283,7 +280,6 @@
     <string name="projects_access_authenticated_desc">Cualquier persona que haya iniciado sesión</string>
     <string name="projects_access_anyone_desc">Incluidos los usuarios anónimos</string>
     <string name="projects_access_selected">Seleccionado: %1$s</string>
-    <string name="projects_create_allow_search">Permití que cualquiera busque el proyecto</string>
     <string name="projects_create_upload_json">Subí un archivo .json</string>
     <string name="projects_activity_attached">adjuntó</string>
     <string name="projects_activity_commented">comentó</string>
@@ -304,4 +300,10 @@
     <string name="projects_option_delete_title">Eliminá la opción</string>
     <string name="projects_option_delete_message">¿Estás seguro de que querés eliminar la opción \"%1$s\"?</string>
     <string name="projects_attachment_remove">Quitar adjunto</string>
+    <string name="projects_request_delete_title">Eliminá la solicitud de fusión</string>
+    <string name="projects_request_delete_message">¿Estás seguro de que querés eliminar esta solicitud de fusión?</string>
+    <string name="projects_board_delete_column_title">Eliminá la columna</string>
+    <string name="projects_board_delete_column_message">¿Estás seguro de que querés eliminar la columna \"%1$s\"? Esto no se puede deshacer.</string>
+    <string name="projects_object_delete_named">¿Estás seguro de que querés eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <string name="projects_create_attachments_failed">No se pudo adjuntar: %1$s</string>
 </resources>

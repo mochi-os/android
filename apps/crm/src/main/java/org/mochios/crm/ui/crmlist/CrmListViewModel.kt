@@ -8,8 +8,11 @@ package org.mochios.crm.ui.crmlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -35,6 +38,11 @@ class CrmListViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(CrmListUiState())
     val uiState: StateFlow<CrmListUiState> = _uiState.asStateFlow()
+
+    // A failure once the list is showing: uiState.error is drawn only while
+    // the list is empty, so these are toasted by the screen.
+    private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
+    val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 
     init {
         loadCrms()
@@ -71,10 +79,15 @@ class CrmListViewModel @Inject constructor(
                     error = null
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isRefreshing = false,
-                    error = e.toMochiError()
-                )
+                if (_uiState.value.crm.isEmpty()) {
+                    _uiState.value = _uiState.value.copy(
+                        isRefreshing = false,
+                        error = e.toMochiError()
+                    )
+                } else {
+                    _uiState.value = _uiState.value.copy(isRefreshing = false)
+                    _actionFailed.tryEmit(e.toMochiError())
+                }
             }
         }
     }
@@ -108,7 +121,7 @@ class CrmListViewModel @Inject constructor(
                     crm = _uiState.value.crm.filterNot { it.id == crmId }
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }

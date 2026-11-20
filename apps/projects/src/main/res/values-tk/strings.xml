@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Açyk</string>
     <string name="projects_request_status_merged">Birleşdirildi</string>
     <string name="projects_request_merge">Birleşdir</string>
-    <string name="projects_request_close">Ýapmak</string>
     <string name="projects_request_merge_dialog_title">Birleşdir</string>
     <string name="projects_request_method">Usul</string>
     <string name="projects_request_method_merge">Birleşdir</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Bu taslamany pozmak isleýändigiňize ynamlymy? Ähli obýektler, teswirler we sazlamalar hemişelik aýrylar.</string>
     <string name="projects_object_unwatch">Yzarlamagy bes et</string>
     <string name="projects_object_delete_title">Obýekti poz</string>
-    <string name="projects_object_delete_message">Bu obýekti pozmak isleýändigiňize ynamlymy? Bu hereketi yzyna gaýtaryp bolmaýar.</string>
     <string name="projects_parent_none">Ene-ata ýok</string>
     <string name="projects_links_empty">Baglanyşyk ýok</string>
     <string name="projects_links_section_relates">Degişli</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Goşundy ýok</string>
     <string name="projects_attachment_default_name">goşundy</string>
     <string name="projects_request_new">Täze birleşdiriş haýyşy</string>
-    <string name="projects_request_status_closed">Ýapyk</string>
     <string name="projects_request_back_to_list">Sanawa gaýt</string>
     <string name="projects_request_repository">Ammar: %1$s</string>
     <string name="projects_request_source">Çeşme: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dizaýn etmek, döretmek, redaktirlemek, teswir ýazmak we görmek</string>
     <string name="projects_access_role_write">Döretmek, redaktirlemek, teswir ýazmak we görmek</string>
     <string name="projects_all_projects">Ähli proýektler</string>
-    <string name="projects_create_allow_search">Islendik adamyň proýekt gözlemegine rugsat bermek</string>
     <string name="projects_create_import_backup">Ätiýaçlyk nusgasyndan import (hökmany däl)</string>
     <string name="projects_create_upload_json">Ýükle .json faýl</string>
     <string name="projects_settings_not_set">Bellenilmedik</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Heniz hiç bir element görnüşi döredilip bilinmez. Ilki bilen zerur ene-atalar elementlerini dörediň.</string>
     <string name="projects_create_blocked_no_options">Döredip bolmady: %1$s hökmany, ýöne saýlamak üçin warianty ýok. Dizaýnda wariant goşuň.</string>
     <string name="projects_attachment_remove">Goşundyny aýyr</string>
+    <string name="projects_create_allow_public">Islendik adama proýekti görmäge we oňa teswir ýazmaga rugsat bermek</string>
+    <string name="projects_request_delete_title">Birleşdirme haýyşyny pozmak</string>
+    <string name="projects_request_delete_message">Bu birleşdirme haýyşyny pozmak isleýärsiňizmi?</string>
+    <string name="projects_board_delete_column_title">Sütüni pozmak</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" sütünini pozmak isleýändigiňize ynamlymy? Bu yzyna gaýtarylyp bilinmez.</string>
+    <string name="projects_object_delete_named">\"%1$s\" pozmak isleýändigiňize ynamlymy? Bu hereket yzyna gaýtarylyp bilinmez.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" we onuň aşagyndaky %2$s elementi pozmak isleýändigiňize ynamlymy? Bu hereket yzyna gaýtarylyp bilinmez.</item>
+        <item quantity="other">\"%1$s\" we onuň aşagyndaky %2$s elementi pozmak isleýändigiňize ynamlymy? Bu hereket yzyna gaýtarylyp bilinmez.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Goşup bolmady: %1$s</string>
 </resources>

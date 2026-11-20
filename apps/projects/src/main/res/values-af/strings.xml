@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Oop</string>
     <string name="projects_request_status_merged">Saamgevoeg</string>
     <string name="projects_request_merge">Saamvoeg</string>
-    <string name="projects_request_close">Sluit</string>
     <string name="projects_request_merge_dialog_title">Saamvoeg</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Saamvoeg</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">Is jy seker jy wil hierdie projek skrap? Alle objekte, kommentaar en instellings sal permanent verwyder word.</string>
     <string name="projects_object_unwatch">Hou nie meer dop nie</string>
     <string name="projects_object_delete_title">Skrap objek</string>
-    <string name="projects_object_delete_message">Is jy seker jy wil hierdie objek skrap? Hierdie aksie kan nie ongedaan gemaak word nie.</string>
     <string name="projects_parent_none">Geen ouer nie</string>
     <string name="projects_links_empty">Geen skakels nie</string>
     <string name="projects_links_section_relates">Hou verband met</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Geen aanhangsels nie</string>
     <string name="projects_attachment_default_name">aanhangsel</string>
     <string name="projects_request_new">Nuwe samevoegingsversoek</string>
-    <string name="projects_request_status_closed">Gesluit</string>
     <string name="projects_request_back_to_list">Terug na lys</string>
     <string name="projects_request_repository">Bewaarplek: %1$s</string>
     <string name="projects_request_source">Bron: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Ontwerp, skep, redigeer, lewer kommentaar en bekyk</string>
     <string name="projects_access_role_write">Skep, redigeer, lewer kommentaar en bekyk</string>
     <string name="projects_all_projects">Alle projekte</string>
-    <string name="projects_create_allow_search">Laat enigiemand toe om vir projek te soek</string>
     <string name="projects_create_import_backup">Voer in vanaf rugsteun (opsioneel)</string>
     <string name="projects_create_upload_json">Laai .json-lêer op</string>
     <string name="projects_settings_not_set">Nie ingestel nie</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Geen itemtipes kan nog geskep word nie. Skep eers die vereiste ouer-items.</string>
     <string name="projects_create_blocked_no_options">Kan nie skep nie: %1$s is verpligtend maar het geen opsies om uit te kies nie. Voeg opsies by in Ontwerp.</string>
     <string name="projects_attachment_remove">Verwyder aanhangsel</string>
+    <string name="projects_create_allow_public">Laat enigiemand toe om die projek te bekyk en kommentaar te lewer</string>
+    <string name="projects_request_delete_title">Verwyder saamsmeltversoek</string>
+    <string name="projects_request_delete_message">Is jy seker jy wil hierdie saamsmeltversoek verwyder?</string>
+    <string name="projects_board_delete_column_title">Verwyder kolom</string>
+    <string name="projects_board_delete_column_message">Is jy seker jy wil die \"%1$s\"-kolom verwyder? Dit kan nie ongedaan gemaak word nie.</string>
+    <string name="projects_object_delete_named">Is jy seker jy wil \"%1$s\" verwyder? Hierdie aksie kan nie ongedaan gemaak word nie.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Is jy seker jy wil \"%1$s\" en die %2$s item daaronder verwyder? Hierdie aksie kan nie ongedaan gemaak word nie.</item>
+        <item quantity="other">Is jy seker jy wil \"%1$s\" en die %2$s items daaronder verwyder? Hierdie aksie kan nie ongedaan gemaak word nie.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Kon nie aanheg nie: %1$s</string>
 </resources>

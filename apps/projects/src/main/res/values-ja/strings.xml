@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">オープン</string>
     <string name="projects_request_status_merged">マージ済み</string>
     <string name="projects_request_merge">マージ</string>
-    <string name="projects_request_close">クローズ</string>
     <string name="projects_request_merge_dialog_title">マージ</string>
     <string name="projects_request_method">メソッド</string>
     <string name="projects_request_method_merge">マージ</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">このプロジェクトを削除してもよろしいですか? すべてのオブジェクト、コメント、設定が完全に削除されます。</string>
     <string name="projects_object_unwatch">ウォッチを解除</string>
     <string name="projects_object_delete_title">オブジェクトを削除</string>
-    <string name="projects_object_delete_message">このオブジェクトを削除してもよろしいですか? この操作は取り消せません。</string>
     <string name="projects_parent_none">親なし</string>
     <string name="projects_links_empty">リンクはありません</string>
     <string name="projects_links_section_relates">関連</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">添付ファイルはありません</string>
     <string name="projects_attachment_default_name">添付ファイル</string>
     <string name="projects_request_new">新しいマージリクエスト</string>
-    <string name="projects_request_status_closed">クローズ済み</string>
     <string name="projects_request_back_to_list">リストに戻る</string>
     <string name="projects_request_repository">リポジトリ: %1$s</string>
     <string name="projects_request_source">ソース: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">デザイン、作成、編集、コメント、閲覧</string>
     <string name="projects_access_role_write">作成、編集、コメント、閲覧</string>
     <string name="projects_all_projects">すべてのプロジェクト</string>
-    <string name="projects_create_allow_search">誰でもプロジェクトを検索できるようにする</string>
     <string name="projects_create_import_backup">バックアップからインポート（任意）</string>
     <string name="projects_create_upload_json">.json ファイルをアップロード</string>
     <string name="projects_settings_not_set">未設定</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">まだ作成可能な項目タイプがありません。必要な親項目を先に作成してください。</string>
     <string name="projects_create_blocked_no_options">作成できません: %1$s は必須ですが、選択肢がありません。デザインで選択肢を追加してください。</string>
     <string name="projects_attachment_remove">添付を削除</string>
+    <string name="projects_create_allow_public">誰でもプロジェクトを閲覧してコメントできるようにする</string>
+    <string name="projects_request_delete_title">マージリクエストを削除</string>
+    <string name="projects_request_delete_message">このマージリクエストを削除しますか？</string>
+    <string name="projects_board_delete_column_title">カラムを削除</string>
+    <string name="projects_board_delete_column_message">「%1$s」カラムを削除しますか？この操作は取り消せません。</string>
+    <string name="projects_object_delete_named">「%1$s」を削除しますか？この操作は取り消せません。</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">「%1$s」とその下にある%2$s 件の項目を削除しますか？この操作は取り消せません。</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">添付できませんでした：%1$s</string>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Offen</string>
     <string name="projects_request_status_merged">Zusammengeführt</string>
     <string name="projects_request_merge">Zusammenführen</string>
-    <string name="projects_request_close">Schließen</string>
     <string name="projects_request_merge_dialog_title">Zusammenführen</string>
     <string name="projects_request_method">Methode</string>
     <string name="projects_request_method_merge">Zusammenführen</string>
@@ -150,7 +149,6 @@
     <string name="projects_people_empty">Noch hat niemand Zugriff</string>
     <string name="projects_object_unwatch">Nicht mehr beobachten</string>
     <string name="projects_object_delete_title">Objekt löschen</string>
-    <string name="projects_object_delete_message">Möchten Sie dieses Objekt wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="projects_parent_none">Kein übergeordnetes Element</string>
     <string name="projects_links_empty">Keine Verknüpfungen</string>
     <string name="projects_links_section_relates">Bezieht sich auf</string>
@@ -175,7 +173,6 @@
     <string name="projects_attachment_empty">Keine Anhänge</string>
     <string name="projects_attachment_default_name">Anhang</string>
     <string name="projects_request_new">Neue Merge-Anfrage</string>
-    <string name="projects_request_status_closed">Geschlossen</string>
     <string name="projects_request_back_to_list">Zurück zur Liste</string>
     <string name="projects_request_repository">Repository: %1$s</string>
     <string name="projects_request_source">Quelle: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Entwerfen, erstellen, bearbeiten, kommentieren und ansehen</string>
     <string name="projects_access_role_write">Erstellen, bearbeiten, kommentieren und ansehen</string>
     <string name="projects_all_projects">Alle Projekte</string>
-    <string name="projects_create_allow_search">Allen erlauben, nach Projekt zu suchen</string>
     <string name="projects_create_import_backup">Aus Sicherung importieren (optional)</string>
     <string name="projects_create_upload_json">.json-Datei hochladen</string>
     <string name="projects_settings_not_set">Nicht festgelegt</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Es können noch keine Elementtypen erstellt werden. Erstellen Sie zunächst die erforderlichen übergeordneten Elemente.</string>
     <string name="projects_create_blocked_no_options">Erstellen nicht möglich: %1$s ist erforderlich, hat aber keine Optionen zur Auswahl. Fügen Sie Optionen im Design hinzu.</string>
     <string name="projects_attachment_remove">Anhang entfernen</string>
+    <string name="projects_create_allow_public">Allen erlauben, das Projekt anzusehen und zu kommentieren</string>
+    <string name="projects_request_delete_title">Merge Request löschen</string>
+    <string name="projects_request_delete_message">Möchten Sie diesen Merge Request wirklich löschen?</string>
+    <string name="projects_board_delete_column_title">Spalte löschen</string>
+    <string name="projects_board_delete_column_message">Möchten Sie die Spalte \"%1$s\" wirklich löschen? Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="projects_object_delete_named">Möchten Sie \"%1$s\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Möchten Sie \"%1$s\" und %2$s Element darunter wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</item>
+        <item quantity="other">Möchten Sie \"%1$s\" und %2$s Elemente darunter wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Anhängen fehlgeschlagen: %1$s</string>
 </resources>

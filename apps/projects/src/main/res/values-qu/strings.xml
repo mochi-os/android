@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Kichasqa</string>
     <string name="projects_request_status_merged">Hukllachasqa</string>
     <string name="projects_request_merge">Hukllachay</string>
-    <string name="projects_request_close">Wichq\'ay</string>
     <string name="projects_request_merge_dialog_title">Hukllachay</string>
     <string name="projects_request_method">Método</string>
     <string name="projects_request_method_merge">Hukllachay</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">¿Cheqaqchu kay proyectota wischuyta munanki? Llapan objetokuna, comentariokuna, wakichiykunapas wiñaypaq qichusqa kanqa.</string>
     <string name="projects_object_unwatch">Manaña qatipay</string>
     <string name="projects_object_delete_title">Objetota wischuy</string>
-    <string name="projects_object_delete_message">¿Cheqaqchu kay objetota wischuyta munanki? Kay ruwayqa mana kutichiy atikunchu.</string>
     <string name="projects_parent_none">Mana taytayuq</string>
     <string name="projects_links_empty">Mana t\'inkikuna kanchu</string>
     <string name="projects_links_section_relates">T\'inkisqa kaywan</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Mana adjuntokuna kanchu</string>
     <string name="projects_attachment_default_name">adjunto</string>
     <string name="projects_request_new">Musuq hukllachana mañakuy</string>
-    <string name="projects_request_status_closed">Wichq\'asqa</string>
     <string name="projects_request_back_to_list">Listaman kutiy</string>
     <string name="projects_request_repository">Repositorio: %1$s</string>
     <string name="projects_request_source">Pukyu: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Diseñay, kamariy, hukchay, comentay hinaspa qhaway</string>
     <string name="projects_access_role_write">Kamariy, hukchay, comentay hinaspa qhaway</string>
     <string name="projects_all_projects">Llapan proyectokuna</string>
-    <string name="projects_create_allow_search">Pipas proyectota maskananpaq saqiy</string>
     <string name="projects_create_import_backup">Respaldomanta importay (munaspa)</string>
     <string name="projects_create_upload_json">.json archivota wichachiy</string>
     <string name="projects_settings_not_set">Mana churasqa</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">Manaraq ima item layatapas kamariyta atikunchu. Ñawpaqta necesitasqa tayta itemkunata kamariy.</string>
     <string name="projects_create_blocked_no_options">Manam kamariyta atinchu: %1$s necesitakun ichaqa manam akllanan kanchu. Diseño nisqapi akllanakunata yapay.</string>
     <string name="projects_attachment_remove">Adjuntota qichuy</string>
+    <string name="projects_create_allow_public">Pipas proyectota qhawananpaq hinaspa comentananpaq saqiy</string>
+    <string name="projects_request_delete_title">Hukllachana mañakuyta wischuy</string>
+    <string name="projects_request_delete_message">¿Kay hukllachana mañakuyta wischuyta munankichu?</string>
+    <string name="projects_board_delete_column_title">Columna wischuy</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" columna-ta wischuyta munanki? Kayqa mana kutichipuy atinmanchu.</string>
+    <string name="projects_object_delete_named">\"%1$s\"-ta wischuyta munanki? Kay ruway mana kutichipuy atinmanchu.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">\"%1$s\"-ta, ukhunpi kaq %2$s itemkuna-tawan wischuyta munanki? Kay ruway mana kutichipuy atinmanchu.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Mana k\'askachiyta atikurqanchu: %1$s</string>
 </resources>

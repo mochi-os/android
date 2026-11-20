@@ -32,6 +32,8 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -48,6 +50,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiButtonTone
@@ -65,7 +68,7 @@ import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.android.ui.components.dnd.reorderActions
 import org.mochios.android.ui.components.dnd.reorderedAgainst
 import org.mochios.crm.R
-import org.mochios.crm.model.CrmField
+import org.mochios.crm.api.UpdateFieldRequest
 import org.mochios.crm.model.FieldOption
 import org.mochios.android.R as MochiR
 import androidx.compose.foundation.layout.Box
@@ -78,8 +81,6 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import org.mochios.android.ui.components.ErrorState
-
-private val FIELD_TYPE_KEYS = listOf("text", "number", "enumerated", "user", "date", "checkbox", "checklist")
 
 @Composable
 private fun fieldTypeLabel(type: String): String = when (type) {
@@ -102,6 +103,26 @@ private fun positionLabel(value: String): String = when (value) {
     "sidebar" -> stringResource(R.string.crm_field_position_sidebar)
     else -> stringResource(R.string.crm_field_position_default)
 }
+
+/** The flags the form edits, as the server spells them. */
+private val EDITED_FLAGS = listOf("required", "readonly", "sort", "filter")
+
+/**
+ * The flags to store: [stored] with each of [EDITED_FLAGS] on as [on] says,
+ * in that order, and any other flag kept after them. None at all is "".
+ */
+internal fun fieldFlags(stored: String, on: Set<String>): String {
+    val kept = stored.split(",").map { flag -> flag.trim() }
+        .filter { flag -> flag.isNotEmpty() && flag !in EDITED_FLAGS }
+    return (EDITED_FLAGS.filter { flag -> flag in on } + kept).joinToString(",")
+}
+
+/** [flags] as a set, for comparing two spellings of the same flags. */
+private fun flagSet(flags: String): Set<String> =
+    flags.split(",").map { flag -> flag.trim() }.filter { flag -> flag.isNotEmpty() }.toSet()
+
+/** A field's rows, a blank or zero meaning the single row the web shows. */
+private fun rowsOrDefault(rows: Int?): Int = rows?.takeIf { count -> count > 0 } ?: 1
 
 private fun parseColor(hex: String): Color {
     return try {
@@ -138,7 +159,20 @@ fun FieldDetailScreen(
         }
     }
 
+    // A change the server refused, over the loaded form. A failed load is the
+    // error state's below, which clearing here would take away.
+    val snackbarHostState = remember { SnackbarHostState() }
+    val loaded = field != null
+    LaunchedEffect(uiState.error, loaded) {
+        val error = uiState.error
+        if (error != null && loaded) {
+            snackbarHostState.showSnackbar(error.userMessage())
+            viewModel.clearError()
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {
@@ -174,20 +208,20 @@ fun FieldDetailScreen(
                 }
             }
         } else {
-            var editName by remember(field.id) { mutableStateOf(field.name) }
-            var editFieldtype by remember(field.id) { mutableStateOf(field.fieldtype) }
-            var typeExpanded by remember { mutableStateOf(false) }
-            var isRequired by remember(field.id) { mutableStateOf(field.isRequired) }
-            var isReadonly by remember(field.id) { mutableStateOf(field.isReadonly) }
-            var isSortable by remember(field.id) { mutableStateOf(field.isSortable) }
-            var isFilterable by remember(field.id) { mutableStateOf(field.isFilterable) }
-            var showOnCard by remember(field.id) { mutableStateOf(field.showOnCard) }
-            var isMulti by remember(field.id) { mutableStateOf(field.isMulti) }
-            var editRows by remember(field.id) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
-            var editPosition by remember(field.id) { mutableStateOf(field.position) }
-            var editPattern by remember(field.id) { mutableStateOf(field.pattern) }
-            var editMinlength by remember(field.id) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
-            var editMaxlength by remember(field.id) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
+            // Seeded from the field as the server has it, and again whenever
+            // that changes, so a save's reload shows what was stored.
+            var editName by remember(field) { mutableStateOf(field.name) }
+            var isRequired by remember(field) { mutableStateOf(field.isRequired) }
+            var isReadonly by remember(field) { mutableStateOf(field.isReadonly) }
+            var isSortable by remember(field) { mutableStateOf(field.isSortable) }
+            var isFilterable by remember(field) { mutableStateOf(field.isFilterable) }
+            var showOnCard by remember(field) { mutableStateOf(field.showOnCard) }
+            var isMulti by remember(field) { mutableStateOf(field.isMulti) }
+            var editRows by remember(field) { mutableStateOf(if (field.rows > 0) field.rows.toString() else "") }
+            var editPosition by remember(field) { mutableStateOf(field.position) }
+            var editPattern by remember(field) { mutableStateOf(field.pattern) }
+            var editMinlength by remember(field) { mutableStateOf(if (field.minlength > 0) field.minlength.toString() else "") }
+            var editMaxlength by remember(field) { mutableStateOf(if (field.maxlength > 0) field.maxlength.toString() else "") }
             var showDeleteConfirm by remember { mutableStateOf(false) }
             var deletingOption by remember(field.id) { mutableStateOf<FieldOption?>(null) }
             // No "on" zone: an option row is only ever an insertion point, so the
@@ -214,36 +248,16 @@ fun FieldDetailScreen(
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                // Type
-                ExposedDropdownMenuBox(
-                    expanded = typeExpanded,
-                    onExpandedChange = { typeExpanded = it }
-                ) {
-                    MochiTextField(
-                        value = fieldTypeLabel(editFieldtype),
-                        onValueChange = {},
-                        readOnly = true,
-                        label = { Text(stringResource(R.string.crm_field_type)) },
-                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = typeExpanded) },
-                        modifier = Modifier
-                            .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                            .fillMaxWidth()
-                    )
-                    ExposedDropdownMenu(
-                        expanded = typeExpanded,
-                        onDismissRequest = { typeExpanded = false }
-                    ) {
-                        FIELD_TYPE_KEYS.forEach { value ->
-                            MochiDropdownMenuItem(
-                                text = { Text(fieldTypeLabel(value)) },
-                                onClick = {
-                                    editFieldtype = value
-                                    typeExpanded = false
-                                },
-                            )
-                        }
-                    }
-                }
+                // Type: fixed once the field exists. The server never rereads it on
+                // update, so an editable picker here could only pretend.
+                MochiTextField(
+                    value = fieldTypeLabel(field.fieldtype),
+                    onValueChange = {},
+                    readOnly = true,
+                    enabled = false,
+                    label = { Text(stringResource(R.string.crm_field_type)) },
+                    modifier = Modifier.fillMaxWidth()
+                )
 
                 Spacer(modifier = Modifier.height(24.dp))
 
@@ -257,7 +271,7 @@ fun FieldDetailScreen(
                 FlagRow(stringResource(R.string.crm_field_filterable), isFilterable) { isFilterable = it }
                 FlagRow(stringResource(R.string.crm_field_show_on_card), showOnCard) { showOnCard = it }
 
-                if (editFieldtype == "enumerated") {
+                if (field.fieldtype == "enumerated") {
                     FlagRow(stringResource(R.string.crm_field_multi), isMulti) { isMulti = it }
                 }
 
@@ -302,7 +316,7 @@ fun FieldDetailScreen(
                 Text(stringResource(R.string.crm_field_validation), style = MaterialTheme.typography.titleSmall)
                 Spacer(modifier = Modifier.height(8.dp))
 
-                if (editFieldtype == "text") {
+                if (field.fieldtype == "text") {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         MochiTextField(
                             value = editMinlength,
@@ -340,22 +354,24 @@ fun FieldDetailScreen(
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                // Save button
-                val flagsString = buildList {
-                    if (isRequired) add("required")
-                    if (isReadonly) add("readonly")
-                    if (isSortable) add("sort")
-                    if (isFilterable) add("filter")
-                }.joinToString(",").ifEmpty { null }
-
-                val rowsInt = editRows.toIntOrNull()
+                // Save button. Flags always go, "" when none is on, so switching
+                // the last one off reaches the server.
+                val flagsString = fieldFlags(
+                    field.flags,
+                    buildSet {
+                        if (isRequired) add("required")
+                        if (isReadonly) add("readonly")
+                        if (isSortable) add("sort")
+                        if (isFilterable) add("filter")
+                    }
+                )
+                val rowsValue = rowsOrDefault(editRows.toIntOrNull())
                 val hasChanges = editName != field.name
-                        || editFieldtype != field.fieldtype
-                        || flagsString != field.flags.ifEmpty { null }
+                        || flagSet(flagsString) != flagSet(field.flags)
                         || isMulti != field.isMulti
                         || showOnCard != field.showOnCard
                         || editPosition != field.position
-                        || (rowsInt ?: 0) != field.rows
+                        || rowsValue != rowsOrDefault(field.rows)
                         || editPattern != field.pattern
                         || (editMinlength.toIntOrNull() ?: 0) != field.minlength
                         || (editMaxlength.toIntOrNull() ?: 0) != field.maxlength
@@ -364,16 +380,17 @@ fun FieldDetailScreen(
                     MochiButton(
                         onClick = {
                             viewModel.updateField(
-                                name = editName.takeIf { it != field.name },
-                                fieldtype = editFieldtype.takeIf { it != field.fieldtype },
-                                flags = flagsString,
-                                multi = isMulti.takeIf { it != field.isMulti },
-                                card = showOnCard.takeIf { it != field.showOnCard },
-                                position = editPosition.takeIf { it != field.position },
-                                rows = rowsInt?.takeIf { it != field.rows },
-                                pattern = editPattern.takeIf { it != field.pattern },
-                                minlength = (editMinlength.toIntOrNull() ?: 0).takeIf { it != field.minlength },
-                                maxlength = (editMaxlength.toIntOrNull() ?: 0).takeIf { it != field.maxlength }
+                                UpdateFieldRequest(
+                                    name = editName.takeIf { it != field.name },
+                                    flags = flagsString,
+                                    multi = isMulti.takeIf { it != field.isMulti },
+                                    card = showOnCard.takeIf { it != field.showOnCard },
+                                    position = editPosition.takeIf { it != field.position },
+                                    rows = rowsValue.takeIf { it != rowsOrDefault(field.rows) },
+                                    pattern = editPattern.takeIf { it != field.pattern },
+                                    minlength = (editMinlength.toIntOrNull() ?: 0).takeIf { it != field.minlength },
+                                    maxlength = (editMaxlength.toIntOrNull() ?: 0).takeIf { it != field.maxlength }
+                                )
                             )
                         },
                         modifier = Modifier.fillMaxWidth()
@@ -383,7 +400,7 @@ fun FieldDetailScreen(
                 }
 
                 // Options section (only for enumerated fields)
-                if (field.fieldtype == "enumerated" || editFieldtype == "enumerated") {
+                if (field.fieldtype == "enumerated") {
                     Spacer(modifier = Modifier.height(24.dp))
 
                     Row(

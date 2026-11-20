@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">ඔබට මෙම CRM මකා දැමීමට අවශ්‍ය බව ස්ථිරද? සියලු වස්තූන්, අදහස් සහ සැකසුම් ස්ථිරවම ඉවත් කරනු ලැබේ.</string>
     <string name="crm_object_unwatch">නැරඹීම නවත්වන්න</string>
     <string name="crm_object_delete_title">වස්තුව මකන්න</string>
-    <string name="crm_object_delete_message">ඔබට මෙම වස්තුව මකා දැමීමට අවශ්‍ය බව ස්ථිරද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</string>
     <string name="crm_parent_none">මව් වස්තුවක් නැත</string>
     <string name="crm_links_empty">සබැඳි නැත</string>
     <string name="crm_links_section_relates">සම්බන්ධ වේ</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">උපස්ථයෙන් ආයාත කරන්න (විකල්ප)</string>
     <string name="crm_export">දත්ත නිර්යාත කරන්න</string>
     <string name="crm_exporting">නිර්යාතය සූදානම් කරමින්…</string>
-    <string name="crm_create_allow_search">CRM සොයා ගැනීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
     <string name="crm_no_crms_found">CRM කිසිවක් හමු නොවීය</string>
     <string name="crm_create_blocked_no_parents">තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න.</string>
     <string name="crm_export_csv">CSV අපනයනය කරන්න</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">නියැදිය %1$s</string>
     <string name="crm_option_delete_title">විකල්පය මකන්න</string>
     <string name="crm_option_delete_message">ඔබට \"%1$s\" විකල්පය මැකීමට අවශ්‍ය බව සැබෑද?</string>
+    <string name="crm_create_public">CRM බැලීමට සහ එයට අදහස් දැක්වීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
+    <string name="crm_board_delete_column">තීරුව මකන්න</string>
+    <string name="crm_board_delete_column_message">ඔබට \"%1$s\" තීරුව මැකීමට අවශ්‍ය බව විශ්වාසද? මෙය අහෝසි කළ නොහැක.</string>
+    <string name="crm_object_delete_named">ඔබට \"%1$s\" මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">ඔබට \"%1$s\" සහ ඊට යටතේ ඇති අයිතම %2$s මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</item>
+        <item quantity="other">ඔබට \"%1$s\" සහ ඊට යටතේ ඇති අයිතම %2$s මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">ඇමුණුම් %1$s ක් එක් කිරීමට නොහැකි විය: %2$s</item>
+        <item quantity="other">ඇමුණුම් %1$s ක් එක් කිරීමට නොහැකි විය: %2$s</item>
+    </plurals>
 </resources>

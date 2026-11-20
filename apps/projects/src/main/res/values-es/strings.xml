@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Abierto</string>
     <string name="projects_request_status_merged">Combinado</string>
     <string name="projects_request_merge">Combinar</string>
-    <string name="projects_request_close">Cerrar</string>
     <string name="projects_request_merge_dialog_title">Combinar</string>
     <string name="projects_request_method">Método</string>
     <string name="projects_request_method_merge">Combinar</string>
@@ -167,7 +166,6 @@
     <string name="projects_settings_delete_confirm_message">¿Está seguro de que desea eliminar este proyecto? Todos los objetos, comentarios y ajustes se eliminarán permanentemente.</string>
     <string name="projects_object_unwatch">Dejar de seguir</string>
     <string name="projects_object_delete_title">Eliminar objeto</string>
-    <string name="projects_object_delete_message">¿Está seguro de que desea eliminar este objeto? Esta acción no se puede deshacer.</string>
     <string name="projects_parent_none">Sin elemento principal</string>
     <string name="projects_links_empty">Sin enlaces</string>
     <string name="projects_links_section_relates">Relacionado con</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Sin archivos adjuntos</string>
     <string name="projects_attachment_default_name">archivo adjunto</string>
     <string name="projects_request_new">Nueva solicitud de combinación</string>
-    <string name="projects_request_status_closed">Cerrada</string>
     <string name="projects_request_back_to_list">Volver a la lista</string>
     <string name="projects_request_repository">Repositorio: %1$s</string>
     <string name="projects_request_source">Origen: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Diseñar, crear, editar, comentar y ver</string>
     <string name="projects_access_role_write">Crear, editar, comentar y ver</string>
     <string name="projects_all_projects">Todos los proyectos</string>
-    <string name="projects_create_allow_search">Permitir a cualquiera buscar el proyecto</string>
     <string name="projects_create_import_backup">Importar desde copia de seguridad (opcional)</string>
     <string name="projects_create_upload_json">Subir archivo .json</string>
     <string name="projects_settings_not_set">Sin establecer</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Aún no se pueden crear tipos de elementos. Crea primero los elementos principales necesarios.</string>
     <string name="projects_create_blocked_no_options">No se puede crear: %1$s es obligatorio pero no tiene opciones para elegir. Añade opciones en Diseño.</string>
     <string name="projects_attachment_remove">Quitar adjunto</string>
+    <string name="projects_create_allow_public">Permitir a cualquiera ver y comentar el proyecto</string>
+    <string name="projects_request_delete_title">Eliminar solicitud de merge</string>
+    <string name="projects_request_delete_message">¿Seguro que quieres eliminar esta solicitud de merge?</string>
+    <string name="projects_board_delete_column_title">Eliminar columna</string>
+    <string name="projects_board_delete_column_message">¿Seguro que quieres eliminar la columna \"%1$s\"? Esto no se puede deshacer.</string>
+    <string name="projects_object_delete_named">¿Seguro que quieres eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">¿Seguro que quieres eliminar \"%1$s\" y %2$s elemento que tiene debajo? Esta acción no se puede deshacer.</item>
+        <item quantity="other">¿Seguro que quieres eliminar \"%1$s\" y %2$s elementos que tiene debajo? Esta acción no se puede deshacer.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">No se ha podido adjuntar: %1$s</string>
 </resources>

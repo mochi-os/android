@@ -28,9 +28,16 @@ import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.crm.api.CreateObjectRequest
 import org.mochios.crm.api.CrmsApi
+import org.mochios.crm.api.HierarchyRequest
+import org.mochios.crm.api.MoveObjectRequest
 import org.mochios.crm.api.SetValueRequest
 import org.mochios.crm.api.SubscribeRequest
 import org.mochios.crm.api.UpdateClassRequest
+import org.mochios.crm.api.UpdateCrmRequest
+import org.mochios.crm.api.UpdateFieldRequest
+import org.mochios.crm.api.UpdateObjectRequest
+import org.mochios.crm.api.UpdateOptionRequest
+import org.mochios.crm.api.UpdateViewRequest
 import org.mochios.crm.api.UnsubscribeRequest
 import org.mochios.crm.api.WarmExportResponse
 import org.mochios.crm.model.Activity
@@ -46,6 +53,7 @@ import org.mochios.crm.model.CrmObject
 import org.mochios.crm.model.CrmView
 import org.mochios.crm.model.Template
 import org.mochios.crm.model.Watcher
+import org.mochios.crm.util.hierarchyParameter
 import java.io.File
 import javax.inject.Inject
 import java.util.concurrent.ConcurrentHashMap
@@ -200,7 +208,7 @@ class CrmsRepository @Inject constructor(
     }
 
     suspend fun updateCrm(crmId: String, name: String? = null, description: String? = null) {
-        api.updateCrm(crmId, name, description).unwrap()
+        api.updateCrm(crmId, UpdateCrmRequest(name = name, description = description)).unwrap()
     }
 
     suspend fun deleteCrm(crmId: String) {
@@ -242,10 +250,22 @@ class CrmsRepository @Inject constructor(
     /** Watched object ids for the local user from the last [getObjects] fetch. */
     fun getWatched(crmId: String): List<String> = watchedCache[crmId] ?: emptyList()
 
-    suspend fun createObject(crmId: String, classId: String, parent: String? = null, title: String): CrmObject =
+    /** Creates an object with its [values] (field id to value) in one request. */
+    suspend fun createObject(
+        crmId: String,
+        classId: String,
+        parent: String? = null,
+        title: String,
+        values: Map<String, String> = emptyMap(),
+    ): CrmObject =
         api.createObject(
             crmId,
-            CreateObjectRequest(classId = classId, title = title, parent = parent)
+            CreateObjectRequest(
+                classId = classId,
+                title = title,
+                parent = parent,
+                values = values.takeIf { entries -> entries.isNotEmpty() },
+            )
         ).unwrap()
 
     suspend fun getObject(crmId: String, objectId: String): CrmObject {
@@ -254,8 +274,9 @@ class CrmsRepository @Inject constructor(
         return response.`object`.copy(values = response.values)
     }
 
-    suspend fun updateObject(crmId: String, objectId: String, parent: String? = null) {
-        api.updateObject(crmId, objectId, parent).unwrap()
+    /** Moves [objectId] under [parent], or to the top level for "". */
+    suspend fun updateObject(crmId: String, objectId: String, parent: String) {
+        api.updateObject(crmId, objectId, UpdateObjectRequest(parent = parent)).unwrap()
     }
 
     suspend fun deleteObject(crmId: String, objectId: String) {
@@ -274,10 +295,16 @@ class CrmsRepository @Inject constructor(
         promote: Boolean = false
     ) {
         api.moveObject(
-            crmId, objectId, field, value, rank,
-            rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
-            scopeParent,
-            if (promote) "true" else null
+            crmId,
+            objectId,
+            MoveObjectRequest(
+                field = field,
+                value = value,
+                rank = rank,
+                row = rowField?.let { JsonObject().apply { addProperty("field", it); addProperty("value", rowValue ?: "") }.toString() },
+                scope = scopeParent,
+                promote = if (promote) "true" else null,
+            )
         ).unwrap()
     }
 
@@ -465,7 +492,11 @@ class CrmsRepository @Inject constructor(
         classes: String? = null,
         border: String? = null
     ) {
-        api.updateView(crmId, viewId, name, viewtype, columns, rows, filter, sort, direction, classes, border).unwrap()
+        api.updateView(
+            crmId,
+            viewId,
+            UpdateViewRequest(name, viewtype, columns, rows, filter, sort, direction, classes, border)
+        ).unwrap()
     }
 
     suspend fun deleteView(crmId: String, viewId: String) {
@@ -487,8 +518,9 @@ class CrmsRepository @Inject constructor(
 
     // ---- Hierarchy ----
 
-    suspend fun setHierarchy(crmId: String, classId: String, parents: String) {
-        api.setHierarchy(crmId, classId, parents).unwrap()
+    /** Replaces the classes [classId] may sit under; an empty entry is the top level. */
+    suspend fun setHierarchy(crmId: String, classId: String, parents: List<String>) {
+        api.setHierarchy(crmId, classId, HierarchyRequest(hierarchyParameter(parents))).unwrap()
     }
 
     // ---- Fields ----
@@ -510,18 +542,9 @@ class CrmsRepository @Inject constructor(
         crmId: String,
         classId: String,
         fieldId: String,
-        name: String? = null,
-        fieldtype: String? = null,
-        flags: String? = null,
-        multi: Boolean? = null,
-        card: Boolean? = null,
-        position: String? = null,
-        rows: Int? = null,
-        pattern: String? = null,
-        minlength: Int? = null,
-        maxlength: Int? = null
+        body: UpdateFieldRequest,
     ) {
-        api.updateField(crmId, classId, fieldId, name, fieldtype, flags, multi, card, position, rows, pattern, minlength, maxlength).unwrap()
+        api.updateField(crmId, classId, fieldId, body).unwrap()
     }
 
     suspend fun deleteField(crmId: String, classId: String, fieldId: String) {
@@ -552,7 +575,7 @@ class CrmsRepository @Inject constructor(
         colour: String? = null,
         icon: String? = null
     ) {
-        api.updateOption(crmId, classId, fieldId, optionId, name, colour, icon).unwrap()
+        api.updateOption(crmId, classId, fieldId, optionId, UpdateOptionRequest(name, colour, icon)).unwrap()
     }
 
     suspend fun deleteOption(crmId: String, classId: String, fieldId: String, optionId: String) {

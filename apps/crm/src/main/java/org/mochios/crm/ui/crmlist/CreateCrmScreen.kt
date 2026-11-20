@@ -49,8 +49,9 @@ fun CreateCrmScreen(
     val upload by viewModel.upload.collectAsState()
 
     var name by remember { mutableStateOf("") }
-    // The toggle reads "Allow anyone to search for CRM" — on means public.
-    var allowSearch by remember { mutableStateOf(true) }
+    // On means public, which lets everyone view the CRM and every signed-in
+    // person comment on it, so it starts off and says so.
+    var allowPublic by remember { mutableStateOf(false) }
     val context = LocalContext.current
     var backupJson by remember { mutableStateOf<String?>(null) }
     var backupName by remember { mutableStateOf<String?>(null) }
@@ -102,7 +103,7 @@ fun CreateCrmScreen(
         error = uiState.error,
         onBack = onBack,
         onSubmit = {
-            val privacy = if (allowSearch) "public" else "private"
+            val privacy = if (allowPublic) "public" else "private"
             viewModel.createCrm(name, privacy, backupJson, backupArchive)
         }
     ) { padding ->
@@ -117,9 +118,9 @@ fun CreateCrmScreen(
             Spacer(modifier = Modifier.height(16.dp))
 
             LabeledSwitchRow(
-                label = stringResource(R.string.crm_create_allow_search),
-                checked = allowSearch,
-                onCheckedChange = { checked -> allowSearch = checked }
+                label = stringResource(R.string.crm_create_public),
+                checked = allowPublic,
+                onCheckedChange = { checked -> allowPublic = checked }
             )
 
             Spacer(modifier = Modifier.height(16.dp))

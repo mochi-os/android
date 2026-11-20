@@ -36,6 +36,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -55,6 +56,7 @@ import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.projects.R
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.Activity
+import org.mochios.projects.util.objectTitle
 import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.android.util.segment
 import org.mochios.android.R as MochiR
@@ -72,6 +74,8 @@ fun ObjectDetailSheet(
      * a command, not a notification.
      */
     onDeleteObject: () -> Unit,
+    /** How many objects sit under this one; the server deletes them with it. */
+    descendants: Int = 0,
     onViewDiff: (String, String, String, String) -> Unit,
     onNavigateToObject: (String) -> Unit = {},
     onAddChild: (parent: String) -> Unit = {},
@@ -311,20 +315,50 @@ fun ObjectDetailSheet(
         }
     }
 
-    if (showDeleteConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showDeleteConfirm = false },
-            title = stringResource(R.string.projects_object_delete_title),
-            text = stringResource(R.string.projects_object_delete_message),
-            confirmText = stringResource(MochiR.string.common_delete),
+    val shownObject = uiState.obj
+    if (showDeleteConfirm && shownObject != null) {
+        DeleteObjectDialog(
+            title = objectTitle(shownObject, projectDetails.classes, projectDetails.project.prefix),
+            descendants = descendants,
             onConfirm = {
                 showDeleteConfirm = false
                 onDeleteObject()
             },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
+            onDismiss = { showDeleteConfirm = false },
         )
     }
+}
+
+/**
+ * The confirmation before an object is deleted, naming it ([title]) and how
+ * many objects sit under it ([descendants]), which the server deletes with it.
+ */
+@Composable
+internal fun DeleteObjectDialog(
+    title: String,
+    descendants: Int,
+    onConfirm: () -> Unit,
+    onDismiss: () -> Unit,
+) {
+    val message = if (descendants > 0) {
+        pluralStringResource(
+            R.plurals.projects_object_delete_descendants,
+            descendants,
+            title,
+            LocalFormat.current.formatNumber(descendants),
+        )
+    } else {
+        stringResource(R.string.projects_object_delete_named, title)
+    }
+    MochiAlertDialog(
+        onDismissRequest = onDismiss,
+        title = stringResource(R.string.projects_object_delete_title),
+        text = message,
+        confirmText = stringResource(MochiR.string.common_delete),
+        onConfirm = onConfirm,
+        destructive = true,
+        dismissText = stringResource(MochiR.string.common_cancel),
+    )
 }
 
 /** The sheet's tabs, by the view model's numbers for them. */

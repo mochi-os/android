@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Terbuka</string>
     <string name="projects_request_status_merged">Digabungkan</string>
     <string name="projects_request_merge">Gabungkan</string>
-    <string name="projects_request_close">Tutup</string>
     <string name="projects_request_merge_dialog_title">Gabungkan</string>
     <string name="projects_request_method">Kaedah</string>
     <string name="projects_request_method_merge">Gabungkan</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Adakah anda pasti mahu memadamkan projek ini? Semua objek, komen, dan tetapan akan dialih keluar secara kekal.</string>
     <string name="projects_object_unwatch">Berhenti memerhati</string>
     <string name="projects_object_delete_title">Padam objek</string>
-    <string name="projects_object_delete_message">Adakah anda pasti mahu memadamkan objek ini? Tindakan ini tidak boleh dibatalkan.</string>
     <string name="projects_parent_none">Tiada induk</string>
     <string name="projects_links_empty">Tiada pautan</string>
     <string name="projects_links_section_relates">Berkaitan dengan</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Tiada lampiran</string>
     <string name="projects_attachment_default_name">lampiran</string>
     <string name="projects_request_new">Permintaan gabungan baharu</string>
-    <string name="projects_request_status_closed">Ditutup</string>
     <string name="projects_request_back_to_list">Kembali ke senarai</string>
     <string name="projects_request_repository">Repositori: %1$s</string>
     <string name="projects_request_source">Sumber: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Reka bentuk, cipta, edit, komen dan lihat</string>
     <string name="projects_access_role_write">Cipta, edit, komen dan lihat</string>
     <string name="projects_all_projects">Semua projek</string>
-    <string name="projects_create_allow_search">Benarkan sesiapa sahaja mencari projek</string>
     <string name="projects_create_import_backup">Import daripada sandaran (pilihan)</string>
     <string name="projects_create_upload_json">Muat naik fail .json</string>
     <string name="projects_settings_not_set">Tidak ditetapkan</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu.</string>
     <string name="projects_create_blocked_no_options">Tidak boleh dicipta: %1$s diperlukan tetapi tiada pilihan. Tambah pilihan dalam Reka bentuk.</string>
     <string name="projects_attachment_remove">Buang lampiran</string>
+    <string name="projects_create_allow_public">Benarkan sesiapa sahaja melihat dan mengulas projek</string>
+    <string name="projects_request_delete_title">Padam permintaan gabungan</string>
+    <string name="projects_request_delete_message">Adakah anda pasti mahu memadam permintaan gabungan ini?</string>
+    <string name="projects_board_delete_column_title">Padam lajur</string>
+    <string name="projects_board_delete_column_message">Adakah anda pasti mahu memadam lajur \"%1$s\"? Ini tidak boleh dibatalkan.</string>
+    <string name="projects_object_delete_named">Adakah anda pasti mahu memadam \"%1$s\"? Tindakan ini tidak boleh dibatalkan.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Adakah anda pasti mahu memadam \"%1$s\" dan %2$s item di bawahnya? Tindakan ini tidak boleh dibatalkan.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Tidak dapat melampirkan: %1$s</string>
 </resources>

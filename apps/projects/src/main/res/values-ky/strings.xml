@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ачык</string>
     <string name="projects_request_status_merged">Бириктирилди</string>
     <string name="projects_request_merge">Бириктирүү</string>
-    <string name="projects_request_close">Жабуу</string>
     <string name="projects_request_merge_dialog_title">Бириктирүү</string>
     <string name="projects_request_method">Ыкма</string>
     <string name="projects_request_method_merge">Бириктирүү</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Бул долбоорду өчүрүүнү каалайсызбы? Бардык объекттер, комментарийлер жана жөндөөлөр биротоло жок кылынат.</string>
     <string name="projects_object_unwatch">Көзөмөлдөн чыгаруу</string>
     <string name="projects_object_delete_title">Объектти өчүрүү</string>
-    <string name="projects_object_delete_message">Бул объектти өчүрүүнү каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="projects_parent_none">Башкы объект жок</string>
     <string name="projects_links_empty">Шилтемелер жок</string>
     <string name="projects_links_section_relates">Тиешеси бар</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Тиркемелер жок</string>
     <string name="projects_attachment_default_name">тиркеме</string>
     <string name="projects_request_new">Жаңы бириктирүү өтүнүчү</string>
-    <string name="projects_request_status_closed">Жабылган</string>
     <string name="projects_request_back_to_list">Тизмеге кайтуу</string>
     <string name="projects_request_repository">Репозиторий: %1$s</string>
     <string name="projects_request_source">Булак: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Долбоорлоо, түзүү, түзөтүү, комментарий калтыруу жана көрүү</string>
     <string name="projects_access_role_write">Түзүү, түзөтүү, комментарий калтыруу жана көрүү</string>
     <string name="projects_all_projects">Бардык долбоорлор</string>
-    <string name="projects_create_allow_search">Долбоорду издөөгө ар кимге уруксат берүү</string>
     <string name="projects_create_import_backup">Камдыктан импорттоо (милдеттүү эмес)</string>
     <string name="projects_create_upload_json">.json файлды жүктөө</string>
     <string name="projects_settings_not_set">Орнотулган эмес</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Азырынча эч кандай нерсе түрлөрүн түзүүгө болбойт. Адегенде керектүү ата-эне нерселерди түзүңүз.</string>
     <string name="projects_create_blocked_no_options">Түзүү мүмкүн эмес: %1$s милдеттүү, бирок тандоо варианттары жок. Дизайнда варианттарды кошуңуз.</string>
     <string name="projects_attachment_remove">Тиркемени алып салуу</string>
+    <string name="projects_create_allow_public">Ар кимге долбоорду көрүүгө жана ага комментарий жазууга уруксат берүү</string>
+    <string name="projects_request_delete_title">Бириктирүү сурамын жок кылуу</string>
+    <string name="projects_request_delete_message">Бул бириктирүү сурамын жок кылууну каалайсызбы?</string>
+    <string name="projects_board_delete_column_title">Тилкени жок кылуу</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" тилкесин жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
+    <string name="projects_object_delete_named">\"%1$s\" жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" жана анын астындагы %2$s элементти жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</item>
+        <item quantity="other">\"%1$s\" жана анын астындагы %2$s элементти жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Тиркөө мүмкүн болгон жок: %1$s</string>
 </resources>

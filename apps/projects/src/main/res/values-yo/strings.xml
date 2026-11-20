@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ṣíṣí</string>
     <string name="projects_request_status_merged">Ti papọ̀</string>
     <string name="projects_request_merge">Pa pọ̀</string>
-    <string name="projects_request_close">Tì</string>
     <string name="projects_request_merge_dialog_title">Pa pọ̀</string>
     <string name="projects_request_method">Ọ̀nà</string>
     <string name="projects_request_method_merge">Pa pọ̀</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Ṣé o dá ọ lójú pé o fẹ́ pa iṣẹ́ àkànṣe yìí rẹ́? Gbogbo àwọn nǹkan, àwọn àkíyèsí, àti àwọn ètò ni a ó pa rẹ́ pátápátá.</string>
     <string name="projects_object_unwatch">Má wo</string>
     <string name="projects_object_delete_title">Pa nǹkan rẹ́</string>
-    <string name="projects_object_delete_message">Ṣé o dá ọ lójú pé o fẹ́ pa nǹkan yìí rẹ́? A kò lè yí ìṣe yìí padà.</string>
     <string name="projects_parent_none">Kò sí òbí</string>
     <string name="projects_links_empty">Kò sí ọ̀nà ìjápọ̀</string>
     <string name="projects_links_section_relates">Ní ìbátan pẹ̀lú</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Kò sí àfikún</string>
     <string name="projects_attachment_default_name">àfikún</string>
     <string name="projects_request_new">Ìbéèrè ìdàpọ̀ tuntun</string>
-    <string name="projects_request_status_closed">Tí a ti pa</string>
     <string name="projects_request_back_to_list">Padà sí àkójọ</string>
     <string name="projects_request_repository">Ibi ìpamọ́: %1$s</string>
     <string name="projects_request_source">Orísun: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Ṣe àpẹrẹ, ṣẹ̀dá, ṣàtúnṣe, sọ̀rọ̀, kí o sì wò</string>
     <string name="projects_access_role_write">Ṣẹ̀dá, ṣàtúnṣe, sọ̀rọ̀, kí o sì wò</string>
     <string name="projects_all_projects">Gbogbo àwọn iṣẹ́ àkànṣe</string>
-    <string name="projects_create_allow_search">Jẹ́ kí ẹnikẹ́ni wá iṣẹ́ àkànṣe</string>
     <string name="projects_create_import_backup">Gbé wọlé láti backup (àṣàyàn)</string>
     <string name="projects_create_upload_json">Gbé fáìlì .json jáde</string>
     <string name="projects_settings_not_set">A kò ṣètò</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
     <string name="projects_create_blocked_no_options">A kò lè ṣẹ̀dá: %1$s ni a nílò ṣùgbọ́n kò ní àṣàyàn kankan. Fi àṣàyàn kún ní Àpẹẹrẹ.</string>
     <string name="projects_attachment_remove">Yọ àsomọ́ kúrò</string>
+    <string name="projects_create_allow_public">Jẹ́ kí ẹnikẹ́ni wo iṣẹ́ àkànṣe náà kí ó sì sọ àsọyé lórí rẹ̀</string>
+    <string name="projects_request_delete_title">Pa ìbéèrè merge rẹ́</string>
+    <string name="projects_request_delete_message">Ṣé o dájú pé o fẹ́ pa ìbéèrè merge yìí rẹ́?</string>
+    <string name="projects_board_delete_column_title">Pa ọ̀wọ́n rẹ́</string>
+    <string name="projects_board_delete_column_message">Ṣé o dájú pé o fẹ́ pa ọ̀wọ́n \"%1$s\" rẹ́? A kò lè yí èyí padà.</string>
+    <string name="projects_object_delete_named">Ṣé o dájú pé o fẹ́ pa \"%1$s\" rẹ́? A kò lè yí ìṣe yìí padà.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Ṣé o dájú pé o fẹ́ pa \"%1$s\" àti %2$s nkan tí ó wà lábẹ́ rẹ̀ rẹ́? A kò lè yí ìṣe yìí padà.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">A kò lè so pọ̀: %1$s</string>
 </resources>

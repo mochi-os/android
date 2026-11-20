@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ouvert</string>
     <string name="projects_request_status_merged">Fusionné</string>
     <string name="projects_request_merge">Fusionner</string>
-    <string name="projects_request_close">Fermer</string>
     <string name="projects_request_merge_dialog_title">Fusionner</string>
     <string name="projects_request_method">Méthode</string>
     <string name="projects_request_method_merge">Fusionner</string>
@@ -167,7 +166,6 @@
     <string name="projects_settings_delete_confirm_message">Êtes-vous sûr de vouloir supprimer ce projet ? Tous les objets, commentaires et paramètres seront définitivement supprimés.</string>
     <string name="projects_object_unwatch">Ne plus suivre</string>
     <string name="projects_object_delete_title">Supprimer l\'objet</string>
-    <string name="projects_object_delete_message">Êtes-vous sûr de vouloir supprimer cet objet ? Cette action est irréversible.</string>
     <string name="projects_parent_none">Aucun parent</string>
     <string name="projects_links_empty">Aucun lien</string>
     <string name="projects_links_section_relates">En relation avec</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Aucune pièce jointe</string>
     <string name="projects_attachment_default_name">pièce jointe</string>
     <string name="projects_request_new">Nouvelle demande de fusion</string>
-    <string name="projects_request_status_closed">Fermée</string>
     <string name="projects_request_back_to_list">Retour à la liste</string>
     <string name="projects_request_repository">Dépôt : %1$s</string>
     <string name="projects_request_source">Source : %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Concevoir, créer, modifier, commenter et consulter</string>
     <string name="projects_access_role_write">Créer, modifier, commenter et consulter</string>
     <string name="projects_all_projects">Tous les projets</string>
-    <string name="projects_create_allow_search">Autoriser tout le monde à rechercher le projet</string>
     <string name="projects_create_import_backup">Importer depuis une sauvegarde (facultatif)</string>
     <string name="projects_create_upload_json">Téléverser un fichier .json</string>
     <string name="projects_settings_not_set">Non défini</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Aucun type d\'élément ne peut encore être créé. Créez d\'abord les éléments parents requis.</string>
     <string name="projects_create_blocked_no_options">Impossible de créer : %1$s est obligatoire mais n\'a aucune option à choisir. Ajoutez des options dans Conception.</string>
     <string name="projects_attachment_remove">Supprimer la pièce jointe</string>
+    <string name="projects_create_allow_public">Autoriser tout le monde à voir et commenter le projet</string>
+    <string name="projects_request_delete_title">Supprimer la merge request</string>
+    <string name="projects_request_delete_message">Voulez-vous vraiment supprimer cette merge request ?</string>
+    <string name="projects_board_delete_column_title">Supprimer la colonne</string>
+    <string name="projects_board_delete_column_message">Voulez-vous vraiment supprimer la colonne « %1$s » ? Cette action est irréversible.</string>
+    <string name="projects_object_delete_named">Voulez-vous vraiment supprimer « %1$s » ? Cette action est irréversible.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Voulez-vous vraiment supprimer « %1$s » et %2$s élément situé en dessous ? Cette action est irréversible.</item>
+        <item quantity="other">Voulez-vous vraiment supprimer « %1$s » et %2$s éléments situés en dessous ? Cette action est irréversible.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Impossible de joindre : %1$s</string>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ανοιχτό</string>
     <string name="projects_request_status_merged">Συγχωνεύτηκε</string>
     <string name="projects_request_merge">Συγχώνευση</string>
-    <string name="projects_request_close">Κλείσιμο</string>
     <string name="projects_request_merge_dialog_title">Συγχώνευση</string>
     <string name="projects_request_method">Μέθοδος</string>
     <string name="projects_request_method_merge">Συγχώνευση</string>
@@ -167,7 +166,6 @@
     <string name="projects_settings_delete_confirm_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το έργο; Όλα τα αντικείμενα, τα σχόλια και οι ρυθμίσεις θα αφαιρεθούν οριστικά.</string>
     <string name="projects_object_unwatch">Διακοπή παρακολούθησης</string>
     <string name="projects_object_delete_title">Διαγραφή αντικειμένου</string>
-    <string name="projects_object_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το αντικείμενο; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="projects_parent_none">Χωρίς γονέα</string>
     <string name="projects_links_empty">Δεν υπάρχουν σύνδεσμοι</string>
     <string name="projects_links_section_relates">Σχετίζεται με</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Δεν υπάρχουν συνημμένα</string>
     <string name="projects_attachment_default_name">συνημμένο</string>
     <string name="projects_request_new">Νέο αίτημα συγχώνευσης</string>
-    <string name="projects_request_status_closed">Κλειστό</string>
     <string name="projects_request_back_to_list">Πίσω στη λίστα</string>
     <string name="projects_request_repository">Αποθετήριο: %1$s</string>
     <string name="projects_request_source">Πηγή: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Σχεδίαση, δημιουργία, επεξεργασία, σχολιασμός και προβολή</string>
     <string name="projects_access_role_write">Δημιουργία, επεξεργασία, σχολιασμός και προβολή</string>
     <string name="projects_all_projects">Όλα τα έργα</string>
-    <string name="projects_create_allow_search">Να επιτρέπεται σε όλους η αναζήτηση έργου</string>
     <string name="projects_create_import_backup">Εισαγωγή από αντίγραφο ασφαλείας (προαιρετικό)</string>
     <string name="projects_create_upload_json">Μεταφόρτωση αρχείου .json</string>
     <string name="projects_settings_not_set">Δεν έχει οριστεί</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Δεν μπορούν να δημιουργηθούν ακόμη τύποι στοιχείων. Δημιουργήστε πρώτα τα απαιτούμενα γονικά στοιχεία.</string>
     <string name="projects_create_blocked_no_options">Δεν είναι δυνατή η δημιουργία: το %1$s απαιτείται αλλά δεν έχει επιλογές. Προσθέστε επιλογές στη Σχεδίαση.</string>
     <string name="projects_attachment_remove">Αφαίρεση συνημμένου</string>
+    <string name="projects_create_allow_public">Να επιτρέπεται σε όλους η προβολή του έργου και ο σχολιασμός του</string>
+    <string name="projects_request_delete_title">Διαγραφή αιτήματος συγχώνευσης</string>
+    <string name="projects_request_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το αίτημα συγχώνευσης;</string>
+    <string name="projects_board_delete_column_title">Διαγραφή στήλης</string>
+    <string name="projects_board_delete_column_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε τη στήλη \"%1$s\"; Αυτό δεν μπορεί να αναιρεθεί.</string>
+    <string name="projects_object_delete_named">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\"; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\" και το %2$s στοιχείο κάτω από αυτό; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</item>
+        <item quantity="other">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\" και τα %2$s στοιχεία κάτω από αυτό; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Δεν ήταν δυνατή η επισύναψη: %1$s</string>
 </resources>

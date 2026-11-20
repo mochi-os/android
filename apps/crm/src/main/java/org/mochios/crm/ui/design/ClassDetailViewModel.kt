@@ -112,7 +112,7 @@ class ClassDetailViewModel @Inject constructor(
     fun setHierarchy(parents: List<String>) {
         viewModelScope.launch {
             try {
-                repository.setHierarchy(crmId, classId, parents.joinToString(","))
+                repository.setHierarchy(crmId, classId, parents)
                 loadCrm()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

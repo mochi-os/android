@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Bạn có chắc chắn muốn xóa CRM này không? Tất cả đối tượng, bình luận và cài đặt sẽ bị xóa vĩnh viễn.</string>
     <string name="crm_object_unwatch">Bỏ theo dõi</string>
     <string name="crm_object_delete_title">Xóa đối tượng</string>
-    <string name="crm_object_delete_message">Bạn có chắc chắn muốn xóa đối tượng này không? Hành động này không thể hoàn tác.</string>
     <string name="crm_parent_none">Không có mục cha</string>
     <string name="crm_links_empty">Không có liên kết</string>
     <string name="crm_links_section_relates">Liên quan đến</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Nhập từ bản sao lưu (tùy chọn)</string>
     <string name="crm_export">Xuất dữ liệu</string>
     <string name="crm_exporting">Đang chuẩn bị bản xuất…</string>
-    <string name="crm_create_allow_search">Cho phép mọi người tìm kiếm CRM</string>
     <string name="crm_no_crms_found">Không tìm thấy CRM nào</string>
     <string name="crm_create_blocked_no_parents">Chưa thể tạo loại mục nào. Hãy tạo các mục cha cần thiết trước.</string>
     <string name="crm_export_csv">Xuất CSV</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">Mẫu %1$s</string>
     <string name="crm_option_delete_title">Xóa tùy chọn</string>
     <string name="crm_option_delete_message">Bạn có chắc chắn muốn xóa tùy chọn \"%1$s\" không?</string>
+    <string name="crm_create_public">Cho phép mọi người xem và bình luận CRM</string>
+    <string name="crm_board_delete_column">Xóa cột</string>
+    <string name="crm_board_delete_column_message">Bạn có chắc muốn xóa cột \"%1$s\"? Không thể hoàn tác.</string>
+    <string name="crm_object_delete_named">Bạn có chắc muốn xóa \"%1$s\"? Hành động này không thể hoàn tác.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Bạn có chắc muốn xóa \"%1$s\" và %2$s mục bên dưới? Hành động này không thể hoàn tác.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">Không thể thêm %1$s tệp đính kèm: %2$s</item>
+    </plurals>
 </resources>

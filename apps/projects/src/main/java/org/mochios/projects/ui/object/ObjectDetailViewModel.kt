@@ -122,8 +122,8 @@ class ObjectDetailViewModel @Inject constructor(
 
     private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
     /**
-     * Comment/attachment failures while the sheet is open; uiState.error only
-     * renders when no object is loaded.
+     * Failures of what the open sheet does - comments, attachments, links,
+     * merge requests; uiState.error only renders when no object is loaded.
      */
     val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 
@@ -166,6 +166,9 @@ class ObjectDetailViewModel @Inject constructor(
             obj = carried,
             access = access,
             isLoading = carried == null,
+            // The signed-in person's repositories, not this object's: kept for
+            // the next object, which ensureRepositories will not fetch again.
+            repositories = _uiState.value.repositories,
         )
         subscribeWebSocket(projectId)
         // Cancel the previous object's fetch, or its late response overwrites
@@ -187,14 +190,7 @@ class ObjectDetailViewModel @Inject constructor(
                 // Cancellation is cooperative and the tab loaders below read the
                 // current ids, so re-check before writing anything.
                 if (currentProjectId != projectId || currentObjectId != objectId) return@launch
-                // The single-object endpoint doesn't return values — merge with what we have
-                val existing = _uiState.value.obj
-                val merged = if (fetched.values.isEmpty() && existing != null && existing.values.isNotEmpty()) {
-                    fetched.copy(values = existing.values)
-                } else {
-                    fetched
-                }
-                _uiState.value = _uiState.value.copy(obj = merged, isLoading = false)
+                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched), isLoading = false)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
@@ -300,18 +296,35 @@ class ObjectDetailViewModel @Inject constructor(
     }
 
     private fun loadObjectOnly() {
+        val projectId = currentProjectId
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
-                val fetched = repository.getObject(currentProjectId, currentObjectId)
-                val existing = _uiState.value.obj
-                val merged = if (fetched.values.isEmpty() && existing != null && existing.values.isNotEmpty()) {
-                    fetched.copy(values = existing.values)
-                } else {
-                    fetched
-                }
-                _uiState.value = _uiState.value.copy(obj = merged)
+                val fetched = repository.getObject(projectId, objectId)
+                // The sheet may have moved to another object while this was asked.
+                if (currentProjectId != projectId || currentObjectId != objectId) return@launch
+                _uiState.value = _uiState.value.copy(obj = withUnsaved(objectId, fetched))
             } catch (_: Exception) { }
         }
+    }
+
+    /**
+     * [fetched] as the sheet should show it: the server's values and parent,
+     * except where an edit of [objectId] is still waiting or being saved, which
+     * stays as the user left it - a refetch must not undo an edit the server
+     * has not yet had.
+     */
+    private fun withUnsaved(objectId: String, fetched: ProjectObject): ProjectObject {
+        val shown = _uiState.value.obj?.takeIf { obj -> obj.id == objectId } ?: return fetched
+        val prefix = "$objectId/value_"
+        val unsaved = debounceJobs.keys.filter { key -> key.startsWith(prefix) }.map { key -> key.removePrefix(prefix) }
+        val values = if (unsaved.isEmpty()) fetched.values else fetched.values.toMutableMap().apply {
+            for (field in unsaved) {
+                if (field in shown.values) put(field, shown.values[field]) else remove(field)
+            }
+        }
+        val parent = if ("$objectId/parent" in debounceJobs) shown.parent else fetched.parent
+        return fetched.copy(values = values, parent = parent)
     }
 
     fun selectTab(index: Int) {
@@ -465,23 +478,34 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Opens a merge request; [onDone] reports whether the server took it, so
+     * its dialog closes on success and keeps what was typed on a refusal.
+     */
     fun createRequest(
         repository: String,
         source: String,
         target: String,
         title: String,
         description: String?,
-        draft: Boolean
+        draft: Boolean,
+        onDone: (Boolean) -> Unit = {},
     ) {
+        val projectId = currentProjectId
+        val objectId = currentObjectId
         viewModelScope.launch {
             try {
                 this@ObjectDetailViewModel.repository.createRequest(
-                    currentProjectId, currentObjectId,
+                    projectId, objectId,
                     repository, source, target, title, description, draft
                 )
+                onDone(true)
                 refreshSlice("requests") { loadRequests() }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                onDone(false)
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -495,7 +519,7 @@ class ObjectDetailViewModel @Inject constructor(
                 )
                 refreshSlice("requests") { loadRequests() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -529,7 +553,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.deleteRequest(currentProjectId, currentObjectId, requestId)
                 refreshSlice("requests") { loadRequests() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -683,7 +707,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.createLink(currentProjectId, currentObjectId, target, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -695,7 +719,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.createLink(currentProjectId, source, currentObjectId, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -706,7 +730,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.deleteLink(currentProjectId, currentObjectId, target, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -718,7 +742,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.deleteLink(currentProjectId, source, currentObjectId, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }

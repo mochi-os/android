@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">열림</string>
     <string name="projects_request_status_merged">머지됨</string>
     <string name="projects_request_merge">머지</string>
-    <string name="projects_request_close">닫기</string>
     <string name="projects_request_merge_dialog_title">머지</string>
     <string name="projects_request_method">방법</string>
     <string name="projects_request_method_merge">머지</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">이 프로젝트를 삭제하시겠습니까? 모든 객체, 댓글, 설정이 영구적으로 삭제됩니다.</string>
     <string name="projects_object_unwatch">주시 해제</string>
     <string name="projects_object_delete_title">개체 삭제</string>
-    <string name="projects_object_delete_message">이 객체를 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
     <string name="projects_parent_none">상위 항목 없음</string>
     <string name="projects_links_empty">링크 없음</string>
     <string name="projects_links_section_relates">관련 항목</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">첨부 파일 없음</string>
     <string name="projects_attachment_default_name">첨부 파일</string>
     <string name="projects_request_new">새 병합 요청</string>
-    <string name="projects_request_status_closed">닫힘</string>
     <string name="projects_request_back_to_list">목록으로 돌아가기</string>
     <string name="projects_request_repository">저장소: %1$s</string>
     <string name="projects_request_source">소스: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">디자인, 생성, 편집, 댓글 및 보기</string>
     <string name="projects_access_role_write">생성, 편집, 댓글 및 보기</string>
     <string name="projects_all_projects">모든 프로젝트</string>
-    <string name="projects_create_allow_search">누구나 프로젝트를 검색할 수 있도록 허용</string>
     <string name="projects_create_import_backup">백업에서 가져오기 (선택 사항)</string>
     <string name="projects_create_upload_json">.json 파일 업로드</string>
     <string name="projects_settings_not_set">설정되지 않음</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">아직 항목 유형을 만들 수 없어요. 먼저 필요한 상위 항목을 만들어 주세요.</string>
     <string name="projects_create_blocked_no_options">만들 수 없음: %1$s은(는) 필수이지만 선택할 옵션이 없습니다. 디자인에서 옵션을 추가하세요.</string>
     <string name="projects_attachment_remove">첨부 파일 제거</string>
+    <string name="projects_create_allow_public">누구나 프로젝트를 보고 댓글을 달 수 있도록 허용</string>
+    <string name="projects_request_delete_title">병합 요청 삭제</string>
+    <string name="projects_request_delete_message">이 병합 요청을 삭제할까요?</string>
+    <string name="projects_board_delete_column_title">컬럼 삭제</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" 컬럼을 삭제할까요? 이 작업은 되돌릴 수 없어요.</string>
+    <string name="projects_object_delete_named">\"%1$s\"을(를) 삭제할까요? 이 작업은 되돌릴 수 없어요.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">\"%1$s\" 및 그 아래의 항목 %2$s 개를 삭제할까요? 이 작업은 되돌릴 수 없어요.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">첨부하지 못했어요: %1$s</string>
 </resources>

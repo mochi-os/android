@@ -99,7 +99,7 @@ fun TreeView(
  * Turns a tree drop into a move or reparent. Sibling reorders pass
  * `scope` so the server renumbers ranks within that subtree only.
  */
-private fun handleTreeDrop(
+internal fun handleTreeDrop(
     sourceId: String,
     targetNode: TreeNode,
     edge: DragEdge,
@@ -137,10 +137,8 @@ private fun handleTreeDrop(
                 }
                 return
             }
-            // Same-parent reorder. The server reads an empty scope as
-            // unset, so root-level siblings cannot be reordered by drag; the
-            // Move dialog still works.
-            if (newParent.isBlank()) return
+            // Same-parent reorder, among the top level too: the move goes as
+            // JSON, where an empty scope arrives as the top level.
             val siblings = allObjects
                 .filter { it.parent == newParent && it.id != sourceId }
                 .sortedBy { it.rank }

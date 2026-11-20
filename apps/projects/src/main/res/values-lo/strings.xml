@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">ເປີດ</string>
     <string name="projects_request_status_merged">ລວມແລ້ວ</string>
     <string name="projects_request_merge">ລວມ</string>
-    <string name="projects_request_close">ປິດ</string>
     <string name="projects_request_merge_dialog_title">ລວມ</string>
     <string name="projects_request_method">ວິທີ</string>
     <string name="projects_request_method_merge">ລວມ</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບໂປຣເຈັກນີ້? ວັດຖຸ, ຄຳຄິດເຫັນ, ແລະ ການຕັ້ງຄ່າທັງໝົດຈະຖືກລຶບຖາວອນ.</string>
     <string name="projects_object_unwatch">ເຊົາຕິດຕາມ</string>
     <string name="projects_object_delete_title">ລຶບວັດຖຸ</string>
-    <string name="projects_object_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບວັດຖຸນີ້? ການກະທຳນີ້ບໍ່ສາມາດຍ້ອນກັບໄດ້.</string>
     <string name="projects_parent_none">ບໍ່ມີລາຍການແມ່</string>
     <string name="projects_links_empty">ບໍ່ມີລິ້ງ</string>
     <string name="projects_links_section_relates">ກ່ຽວຂ້ອງກັບ</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">ບໍ່ມີໄຟລ໌ແນບ</string>
     <string name="projects_attachment_default_name">ໄຟລ໌ແນບ</string>
     <string name="projects_request_new">ຄຳຂໍລວມໃໝ່</string>
-    <string name="projects_request_status_closed">ປິດແລ້ວ</string>
     <string name="projects_request_back_to_list">ກັບໄປບັນຊີລາຍຊື່</string>
     <string name="projects_request_repository">ບ່ອນເກັບຂໍ້ມູນ: %1$s</string>
     <string name="projects_request_source">ແຫຼ່ງ: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ອອກແບບ, ສ້າງ, ແກ້ໄຂ, ໃຫ້ຄຳເຫັນ ແລະ ເບິ່ງ</string>
     <string name="projects_access_role_write">ສ້າງ, ແກ້ໄຂ, ໃຫ້ຄຳເຫັນ ແລະ ເບິ່ງ</string>
     <string name="projects_all_projects">ໂຄງການທັງໝົດ</string>
-    <string name="projects_create_allow_search">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາໂຄງການ</string>
     <string name="projects_create_import_backup">ນຳເຂົ້າຈາກສຳຮອງຂໍ້ມູນ (ບໍ່ບັງຄັບ)</string>
     <string name="projects_create_upload_json">ອັບໂຫຼດໄຟລ໌ .json</string>
     <string name="projects_settings_not_set">ບໍ່ໄດ້ຕັ້ງຄ່າ</string>
@@ -331,4 +327,14 @@
     <string name="projects_create_object_no_types">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>
     <string name="projects_create_blocked_no_options">ສ້າງບໍ່ໄດ້: %1$s ຈຳເປັນ ແຕ່ບໍ່ມີຕົວເລືອກໃຫ້ເລືອກ. ເພີ່ມຕົວເລືອກໃນການອອກແບບ.</string>
     <string name="projects_attachment_remove">ລຶບໄຟລ໌ແນບ</string>
+    <string name="projects_create_allow_public">ອະນຸຍາດໃຫ້ໃຜກໍຕາມເບິ່ງ ແລະ ສະແດງຄຳເຫັນໃນໂຄງການ</string>
+    <string name="projects_request_delete_title">ລົບຄຳຮ້ອງລວມ</string>
+    <string name="projects_request_delete_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບຄຳຮ້ອງລວມນີ້?</string>
+    <string name="projects_board_delete_column_title">ລົບຖັນ</string>
+    <string name="projects_board_delete_column_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບຖັນ \"%1$s\"? ນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
+    <string name="projects_object_delete_named">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"%1$s\"? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"%1$s\" ແລະ %2$s ລາຍການ ທີ່ຢູ່ກ້ອງມັນ? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ບໍ່ສາມາດແນບໄດ້: %1$s</string>
 </resources>

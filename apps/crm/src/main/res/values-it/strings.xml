@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Sei sicuro di voler eliminare questo CRM? Tutti gli oggetti, i commenti e le impostazioni saranno rimossi in modo permanente.</string>
     <string name="crm_object_unwatch">Smetti di seguire</string>
     <string name="crm_object_delete_title">Elimina oggetto</string>
-    <string name="crm_object_delete_message">Sei sicuro di voler eliminare questo oggetto? Questa azione non può essere annullata.</string>
     <string name="crm_parent_none">Nessun genitore</string>
     <string name="crm_links_empty">Nessun collegamento</string>
     <string name="crm_links_section_relates">Correlato a</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importa da backup (facoltativo)</string>
     <string name="crm_export">Esporta dati</string>
     <string name="crm_exporting">Preparazione dell\'esportazione…</string>
-    <string name="crm_create_allow_search">Consenti a chiunque di cercare il CRM</string>
     <string name="crm_no_crms_found">Nessun CRM trovato</string>
     <string name="crm_create_blocked_no_parents">Nessun tipo di elemento può essere creato per ora. Crea prima gli elementi padre richiesti.</string>
     <string name="crm_export_csv">Esporta CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Esempio %1$s</string>
     <string name="crm_option_delete_title">Elimina opzione</string>
     <string name="crm_option_delete_message">Vuoi davvero eliminare l\'opzione \"%1$s\"?</string>
+    <string name="crm_create_public">Consenti a chiunque di visualizzare e commentare il CRM</string>
+    <string name="crm_board_delete_column">Elimina colonna</string>
+    <string name="crm_board_delete_column_message">Sei sicuro di voler eliminare la colonna \"%1$s\"? Questa azione non può essere annullata.</string>
+    <string name="crm_object_delete_named">Sei sicuro di voler eliminare \"%1$s\"? Questa azione non può essere annullata.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Sei sicuro di voler eliminare \"%1$s\" e %2$s elemento sottostante? Questa azione non può essere annullata.</item>
+        <item quantity="other">Sei sicuro di voler eliminare \"%1$s\" e %2$s elementi sottostanti? Questa azione non può essere annullata.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Impossibile aggiungere %1$s allegato: %2$s</item>
+        <item quantity="other">Impossibile aggiungere %1$s allegati: %2$s</item>
+    </plurals>
 </resources>

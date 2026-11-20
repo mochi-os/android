@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Ali ste prepričani, da želite izbrisati ta CRM? Vsi objekti, komentarji in nastavitve bodo trajno odstranjeni.</string>
     <string name="crm_object_unwatch">Prenehaj spremljati</string>
     <string name="crm_object_delete_title">Izbriši objekt</string>
-    <string name="crm_object_delete_message">Ali ste prepričani, da želite izbrisati ta objekt? Tega dejanja ni mogoče razveljaviti.</string>
     <string name="crm_parent_none">Brez nadrejenega</string>
     <string name="crm_links_empty">Ni povezav</string>
     <string name="crm_links_section_relates">Povezano z</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Uvoz iz varnostne kopije (neobvezno)</string>
     <string name="crm_export">Izvozi podatke</string>
     <string name="crm_exporting">Priprava izvoza…</string>
-    <string name="crm_create_allow_search">Dovoli vsem iskanje CRM-a</string>
     <string name="crm_no_crms_found">Najdenih ni nobenih CRM-jev</string>
     <string name="crm_create_blocked_no_parents">Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente.</string>
     <string name="crm_export_csv">Izvozi CSV</string>
@@ -285,4 +283,20 @@
     <string name="crm_design_sample">Vzorec %1$s</string>
     <string name="crm_option_delete_title">Izbriši možnost</string>
     <string name="crm_option_delete_message">Ali ste prepričani, da želite izbrisati možnost \"%1$s\"?</string>
+    <string name="crm_create_public">Dovoli vsem ogled in komentiranje CRM-a</string>
+    <string name="crm_board_delete_column">Izbriši stolpec</string>
+    <string name="crm_board_delete_column_message">Ali ste prepričani, da želite izbrisati stolpec \"%1$s\"? Tega ni mogoče razveljaviti.</string>
+    <string name="crm_object_delete_named">Ali ste prepričani, da želite izbrisati \"%1$s\"? Tega dejanja ni mogoče razveljaviti.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s element pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+        <item quantity="two">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s elementa pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+        <item quantity="few">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s elemente pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+        <item quantity="other">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s elementov pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s priloge ni bilo mogoče dodati: %2$s</item>
+        <item quantity="two">%1$s prilog ni bilo mogoče dodati: %2$s</item>
+        <item quantity="few">%1$s prilog ni bilo mogoče dodati: %2$s</item>
+        <item quantity="other">%1$s prilog ni bilo mogoče dodati: %2$s</item>
+    </plurals>
 </resources>

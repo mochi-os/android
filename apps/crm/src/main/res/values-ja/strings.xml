@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">このCRMを削除してもよろしいですか?すべてのオブジェクト、コメント、設定が完全に削除されます。</string>
     <string name="crm_object_unwatch">ウォッチを解除</string>
     <string name="crm_object_delete_title">オブジェクトを削除</string>
-    <string name="crm_object_delete_message">このオブジェクトを削除してもよろしいですか?この操作は元に戻せません。</string>
     <string name="crm_parent_none">親なし</string>
     <string name="crm_links_empty">リンクはありません</string>
     <string name="crm_links_section_relates">関連</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">バックアップからインポート（任意）</string>
     <string name="crm_export">データをエクスポート</string>
     <string name="crm_exporting">エクスポートを準備中…</string>
-    <string name="crm_create_allow_search">誰でも CRM を検索できるようにする</string>
     <string name="crm_no_crms_found">CRM が見つかりません</string>
     <string name="crm_create_blocked_no_parents">まだ作成可能な項目タイプがありません。必要な親項目を先に作成してください。</string>
     <string name="crm_export_csv">CSV をエクスポート</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">サンプル %1$s</string>
     <string name="crm_option_delete_title">オプションを削除</string>
     <string name="crm_option_delete_message">オプション \"%1$s\" を削除してもよろしいですか?</string>
+    <string name="crm_create_public">誰でも CRM を閲覧してコメントできるようにする</string>
+    <string name="crm_board_delete_column">カラムを削除</string>
+    <string name="crm_board_delete_column_message">「%1$s」カラムを削除しますか？この操作は取り消せません。</string>
+    <string name="crm_object_delete_named">「%1$s」を削除しますか？この操作は取り消せません。</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">「%1$s」とその下にある%2$s 件の項目を削除しますか？この操作は取り消せません。</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s 件の添付ファイルを追加できませんでした：%2$s</item>
+    </plurals>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Dhugumaan CRM kana haquu barbaadda? Wantoonni, yaadonni, fi qindaa\'inoonni hundi yeroo hundaaf ni haqamu.</string>
     <string name="crm_object_unwatch">Daawwannaa dhaabi</string>
     <string name="crm_object_delete_title">Wanta haqi</string>
-    <string name="crm_object_delete_message">Dhugumaan wanta kana haquu barbaadda? Gocha kana deebisuun hin danda\'amu.</string>
     <string name="crm_parent_none">Maatii hin qabu</string>
     <string name="crm_links_empty">Hidhaawwan hin jiran</string>
     <string name="crm_links_section_relates">Walqabata</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Kuusaa irraa galchi (filannoo)</string>
     <string name="crm_export">Daataa baasi</string>
     <string name="crm_exporting">Alergiinsa qopheessaa jira…</string>
-    <string name="crm_create_allow_search">Eenyu iyyuu CRM barbaaduu hayyami</string>
     <string name="crm_no_crms_found">CRMn hin argamne</string>
     <string name="crm_create_blocked_no_parents">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
     <string name="crm_export_csv">CSV ergi</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Fakkeenya %1$s</string>
     <string name="crm_option_delete_title">Filannoo haqi</string>
     <string name="crm_option_delete_message">Dhugumatti filannoo \"%1$s\" haquu barbaaddaa?</string>
+    <string name="crm_create_public">Eenyu iyyuu CRM akka ilaalu fi irratti yaada kennu hayyami</string>
+    <string name="crm_board_delete_column">Tarjaa haqi</string>
+    <string name="crm_board_delete_column_message">Tarjaa \"%1$s\" haquu mirkanaa\'oo dha? Kun deebi\'uu hin danda\'u.</string>
+    <string name="crm_object_delete_named">\"%1$s\" haquu mirkanaa\'oo dha? Tarkaanfiin kun deebi\'uu hin danda\'u.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\" fi %2$s wanta jala isaa jiran haquu mirkanaa\'oo dha? Tarkaanfiin kun deebi\'uu hin danda\'u.</item>
+        <item quantity="other">\"%1$s\" fi %2$s wantoota jala isaa jiran haquu mirkanaa\'oo dha? Tarkaanfiin kun deebi\'uu hin danda\'u.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Maxxansa %1$s dabaluu hin danda\'amne: %2$s</item>
+        <item quantity="other">Maxxansaalee %1$s dabaluu hin danda\'amne: %2$s</item>
+    </plurals>
 </resources>

@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">¿Chiqpach aka CRM chhaqtayañ muntati? Taqi objetonaka, comentarionaka ukat wakichäwinakax wiñayatakiw chhaqtayatäni.</string>
     <string name="crm_object_unwatch">Uñch\'ukiñ jaytaña</string>
     <string name="crm_object_delete_title">Objeto chhaqtayaña</string>
-    <string name="crm_object_delete_message">¿Chiqpach aka objeto chhaqtayañ muntati? Aka lurawix janiw kutt\'ayañjamäkiti.</string>
     <string name="crm_parent_none">Jan awki</string>
     <string name="crm_links_empty">Janiw enlacenakax utjkiti</string>
     <string name="crm_links_section_relates">Akamp chikt\'ata</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Respaldot apantaña (opcional)</string>
     <string name="crm_export">Datonaka apsuña</string>
     <string name="crm_exporting">Apsuña wakichaskiwa…</string>
-    <string name="crm_create_allow_search">Khitirus CRM thaqhañ iyawsaña</string>
     <string name="crm_no_crms_found">CRM jan jikxatasiti</string>
     <string name="crm_create_blocked_no_parents">Janiraw kuna item tipos luraskaspati. Nayraqat wakisir awki itemanak luram.</string>
     <string name="crm_export_csv">CSV apsuña</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">Uñacht\'äwi %1$s</string>
     <string name="crm_option_delete_title">Opción chhaqtayaña</string>
     <string name="crm_option_delete_message">¿\"%1$s\" opción chhaqtayañ muntati?</string>
+    <string name="crm_create_public">Khitirus CRM uñakipañapataki ukat comentañapataki iyawsaña</string>
+    <string name="crm_board_delete_column">Columna chhaqtayaña</string>
+    <string name="crm_board_delete_column_message">Chiqpach \"%1$s\" columna chhaqtayaña munta? Akax janiw kutt\'ayañjamäkiti.</string>
+    <string name="crm_object_delete_named">Chiqpach \"%1$s\" chhaqtayaña munta? Aka lurawix janiw kutt\'ayañjamäkiti.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Chiqpach \"%1$s\" ukat manqhapankir %2$s itemanaka chhaqtayaña munta? Aka lurawix janiw kutt\'ayañjamäkiti.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s adjuntonakax janiw yapxatañ atkänti: %2$s</item>
+    </plurals>
 </resources>

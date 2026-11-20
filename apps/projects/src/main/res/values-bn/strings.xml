@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">খোলা</string>
     <string name="projects_request_status_merged">মার্জ করা হয়েছে</string>
     <string name="projects_request_merge">মার্জ</string>
-    <string name="projects_request_close">বন্ধ করুন</string>
     <string name="projects_request_merge_dialog_title">মার্জ</string>
     <string name="projects_request_method">পদ্ধতি</string>
     <string name="projects_request_method_merge">মার্জ</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">আপনি কি নিশ্চিত যে এই প্রকল্পটি মুছে ফেলতে চান? সমস্ত অবজেক্ট, মন্তব্য এবং সেটিংস স্থায়ীভাবে সরিয়ে ফেলা হবে।</string>
     <string name="projects_object_unwatch">নজরদারি বন্ধ করুন</string>
     <string name="projects_object_delete_title">অবজেক্ট মুছুন</string>
-    <string name="projects_object_delete_message">আপনি কি নিশ্চিত যে এই অবজেক্টটি মুছে ফেলতে চান? এই ক্রিয়াটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
     <string name="projects_parent_none">কোনো প্যারেন্ট নেই</string>
     <string name="projects_links_empty">কোনো লিঙ্ক নেই</string>
     <string name="projects_links_section_relates">সম্পর্কিত</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">কোনো সংযুক্তি নেই</string>
     <string name="projects_attachment_default_name">সংযুক্তি</string>
     <string name="projects_request_new">নতুন মার্জ অনুরোধ</string>
-    <string name="projects_request_status_closed">বন্ধ</string>
     <string name="projects_request_back_to_list">তালিকায় ফিরে যান</string>
     <string name="projects_request_repository">রিপোজিটরি: %1$s</string>
     <string name="projects_request_source">উৎস: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ডিজাইন, তৈরি, সম্পাদনা, মন্তব্য এবং দেখুন</string>
     <string name="projects_access_role_write">তৈরি, সম্পাদনা, মন্তব্য এবং দেখুন</string>
     <string name="projects_all_projects">সব প্রজেক্ট</string>
-    <string name="projects_create_allow_search">যেকেউ প্রজেক্ট খুঁজতে অনুমতি দিন</string>
     <string name="projects_create_import_backup">ব্যাকআপ থেকে ইম্পোর্ট করুন (ঐচ্ছিক)</string>
     <string name="projects_create_upload_json">.json ফাইল আপলোড করুন</string>
     <string name="projects_settings_not_set">সেট করা নেই</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">এখনও কোনো আইটেম টাইপ তৈরি করা যাবে না। প্রথমে প্রয়োজনীয় প্যারেন্ট আইটেম তৈরি করুন।</string>
     <string name="projects_create_blocked_no_options">তৈরি করা যায়নি: %1$s আবশ্যক কিন্তু বেছে নেওয়ার মতো কোনো বিকল্প নেই। ডিজাইনে বিকল্প যোগ করুন।</string>
     <string name="projects_attachment_remove">সংযুক্তি সরান</string>
+    <string name="projects_create_allow_public">যে কাউকে প্রজেক্ট দেখতে ও মন্তব্য করতে অনুমতি দিন</string>
+    <string name="projects_request_delete_title">মার্জ রিকোয়েস্ট মুছুন</string>
+    <string name="projects_request_delete_message">আপনি কি নিশ্চিত এই মার্জ রিকোয়েস্টটি মুছতে চান?</string>
+    <string name="projects_board_delete_column_title">কলাম মুছুন</string>
+    <string name="projects_board_delete_column_message">আপনি কি নিশ্চিত \"%1$s\" কলাম মুছতে চান? এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
+    <string name="projects_object_delete_named">আপনি কি নিশ্চিত \"%1$s\" মুছতে চান? এই অ্যাকশন পূর্বাবস্থায় ফেরানো যাবে না।</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">আপনি কি নিশ্চিত যে \"%1$s\" এবং এর অধীনের %2$s আইটেম মুছতে চান? এই অ্যাকশন পূর্বাবস্থায় ফেরানো যাবে না।</item>
+        <item quantity="other">আপনি কি নিশ্চিত যে \"%1$s\" এবং এর অধীনের %2$s আইটেম মুছতে চান? এই অ্যাকশন পূর্বাবস্থায় ফেরানো যাবে না।</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">সংযুক্ত করা যায়নি: %1$s</string>
 </resources>

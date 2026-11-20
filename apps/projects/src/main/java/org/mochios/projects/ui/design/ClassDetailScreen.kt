@@ -73,6 +73,8 @@ import org.mochios.projects.util.HIERARCHY_ROOT
 import org.mochios.android.R as MochiR
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.LaunchedEffect
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -80,6 +82,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
 import androidx.compose.foundation.layout.Box
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.api.userMessage
 
 @Composable
 private fun fieldTypeLabel(type: String): String = when (type) {
@@ -119,7 +122,21 @@ fun ClassDetailScreen(
         }
     }
 
+    // A change refused once the class is on screen is shown over it. Before it
+    // loads, the error state below owns the error and its retry: clearing it
+    // here would leave a blank screen when the snackbar times out.
+    val snackbarHostState = remember { SnackbarHostState() }
+    LaunchedEffect(uiState.error, cls != null) {
+        if (cls != null) {
+            uiState.error?.let { error ->
+                snackbarHostState.showSnackbar(error.userMessage())
+                viewModel.clearError()
+            }
+        }
+    }
+
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
                 title = {

@@ -41,7 +41,6 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiEditorSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
@@ -285,18 +284,19 @@ fun ObjectDetailSheet(
         }
     }
 
-    if (showDeleteConfirm) {
-        MochiAlertDialog(
-            onDismissRequest = { showDeleteConfirm = false },
-            title = stringResource(R.string.crm_object_delete_title),
-            text = stringResource(R.string.crm_object_delete_message),
-            confirmText = stringResource(MochiR.string.common_delete),
+    val deleting = uiState.obj
+    if (showDeleteConfirm && deleting != null) {
+        val titleField = crmDetails.classes.find { cls -> cls.id == deleting.objectClass }?.title
+            ?.takeIf { field -> field.isNotBlank() }
+        DeleteObjectDialog(
+            title = titleField?.let { field -> deleting.stringValue(field) }.orEmpty()
+                .ifBlank { stringResource(R.string.crm_untitled) },
+            count = descendantCount(uiState.siblingObjects, deleting.id),
             onConfirm = {
                 showDeleteConfirm = false
                 onDeleteObject()
             },
-            destructive = true,
-            dismissText = stringResource(MochiR.string.common_cancel),
+            onDismiss = { showDeleteConfirm = false },
         )
     }
 }

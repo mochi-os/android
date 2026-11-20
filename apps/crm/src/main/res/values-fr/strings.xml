@@ -151,7 +151,6 @@
     <string name="crm_settings_delete_confirm_message">Êtes-vous sûr de vouloir supprimer ce CRM ? Tous les objets, commentaires et paramètres seront définitivement supprimés.</string>
     <string name="crm_object_unwatch">Ne plus suivre</string>
     <string name="crm_object_delete_title">Supprimer l\'objet</string>
-    <string name="crm_object_delete_message">Êtes-vous sûr de vouloir supprimer cet objet ? Cette action est irréversible.</string>
     <string name="crm_parent_none">Aucun parent</string>
     <string name="crm_links_empty">Aucun lien</string>
     <string name="crm_links_section_relates">En relation avec</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importer depuis une sauvegarde (facultatif)</string>
     <string name="crm_export">Exporter les données</string>
     <string name="crm_exporting">Préparation de l\'export…</string>
-    <string name="crm_create_allow_search">Autoriser tout le monde à rechercher le CRM</string>
     <string name="crm_no_crms_found">Aucun CRM trouvé</string>
     <string name="crm_create_blocked_no_parents">Aucun type d\'élément ne peut encore être créé. Créez d\'abord les éléments parents requis.</string>
     <string name="crm_export_csv">Exporter en CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Exemple %1$s</string>
     <string name="crm_option_delete_title">Supprimer l\'option</string>
     <string name="crm_option_delete_message">Êtes-vous sûr de vouloir supprimer l\'option \"%1$s\" ?</string>
+    <string name="crm_create_public">Autoriser tout le monde à voir et commenter le CRM</string>
+    <string name="crm_board_delete_column">Supprimer la colonne</string>
+    <string name="crm_board_delete_column_message">Voulez-vous vraiment supprimer la colonne « %1$s » ? Cette action est irréversible.</string>
+    <string name="crm_object_delete_named">Voulez-vous vraiment supprimer « %1$s » ? Cette action est irréversible.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Voulez-vous vraiment supprimer « %1$s » et %2$s élément situé en dessous ? Cette action est irréversible.</item>
+        <item quantity="other">Voulez-vous vraiment supprimer « %1$s » et %2$s éléments situés en dessous ? Cette action est irréversible.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Impossible d\'ajouter %1$s pièce jointe : %2$s</item>
+        <item quantity="other">Impossible d\'ajouter %1$s pièces jointes : %2$s</item>
+    </plurals>
 </resources>

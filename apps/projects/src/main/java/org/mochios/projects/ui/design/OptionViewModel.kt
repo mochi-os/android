@@ -98,8 +98,8 @@ class OptionViewModel @Inject constructor(
      * Adds or updates the option and raises [OptionUiState.saved].
      *
      * @param name Option name.
-     * @param colour Hex colour, or null for none.
-     * @param icon Icon name, or null for none.
+     * @param colour Hex colour, blank for none.
+     * @param icon Icon name, blank for none, or null to leave it as it is.
      */
     fun save(name: String, colour: String?, icon: String?) {
         viewModelScope.launch {
@@ -112,11 +112,15 @@ class OptionViewModel @Inject constructor(
                         fieldId,
                         optionId,
                         name.trim(),
+                        // Blank goes as "", which clears it; the update is JSON.
                         colour,
                         icon
                     )
                 } else {
-                    repository.createOption(projectId, classId, fieldId, name.trim(), colour, icon)
+                    repository.createOption(
+                        projectId, classId, fieldId, name.trim(),
+                        colour?.ifBlank { null }, icon?.ifBlank { null }
+                    )
                 }
                 _uiState.value = _uiState.value.copy(isSaving = false, saved = true)
             } catch (e: Exception) {

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Вы уверены, что хотите удалить эту CRM? Все объекты, комментарии и настройки будут безвозвратно удалены.</string>
     <string name="crm_object_unwatch">Не отслеживать</string>
     <string name="crm_object_delete_title">Удалить объект</string>
-    <string name="crm_object_delete_message">Вы уверены, что хотите удалить этот объект? Это действие нельзя отменить.</string>
     <string name="crm_parent_none">Без родителя</string>
     <string name="crm_links_empty">Нет связей</string>
     <string name="crm_links_section_relates">Связан с</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Импорт из резервной копии (необязательно)</string>
     <string name="crm_export">Экспортировать данные</string>
     <string name="crm_exporting">Подготовка экспорта…</string>
-    <string name="crm_create_allow_search">Разрешить всем искать CRM</string>
     <string name="crm_no_crms_found">CRM не найдены</string>
     <string name="crm_create_blocked_no_parents">Пока нельзя создать типы элементов. Сначала создайте необходимые родительские элементы.</string>
     <string name="crm_export_csv">Экспорт в CSV</string>
@@ -285,4 +283,20 @@
     <string name="crm_design_sample">Образец %1$s</string>
     <string name="crm_option_delete_title">Удалить вариант</string>
     <string name="crm_option_delete_message">Вы уверены, что хотите удалить вариант \"%1$s\"?</string>
+    <string name="crm_create_public">Разрешить всем просматривать и комментировать CRM</string>
+    <string name="crm_board_delete_column">Удалить колонку</string>
+    <string name="crm_board_delete_column_message">Вы уверены, что хотите удалить колонку «%1$s»? Это необратимо.</string>
+    <string name="crm_object_delete_named">Вы уверены, что хотите удалить «%1$s»? Это действие необратимо.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Вы уверены, что хотите удалить «%1$s» и %2$s вложенный элемент? Это действие необратимо.</item>
+        <item quantity="few">Вы уверены, что хотите удалить «%1$s» и %2$s вложенных элемента? Это действие необратимо.</item>
+        <item quantity="many">Вы уверены, что хотите удалить «%1$s» и %2$s вложенных элементов? Это действие необратимо.</item>
+        <item quantity="other">Вы уверены, что хотите удалить «%1$s» и %2$s вложенного элемента? Это действие необратимо.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Не удалось добавить %1$s вложение: %2$s</item>
+        <item quantity="few">Не удалось добавить %1$s вложения: %2$s</item>
+        <item quantity="many">Не удалось добавить %1$s вложений: %2$s</item>
+        <item quantity="other">Не удалось добавить %1$s вложения: %2$s</item>
+    </plurals>
 </resources>

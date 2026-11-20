@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">A buɗe</string>
     <string name="projects_request_status_merged">An merge</string>
     <string name="projects_request_merge">Haɗa</string>
-    <string name="projects_request_close">Rufe</string>
     <string name="projects_request_merge_dialog_title">Haɗa</string>
     <string name="projects_request_method">Hanya</string>
     <string name="projects_request_method_merge">Haɗa</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Kana da tabbacin kana son share wannan aikin ginawa? Duk abubuwa, sharhi, da saituna za a cire su har abada.</string>
     <string name="projects_object_unwatch">Daina kallo</string>
     <string name="projects_object_delete_title">Share abu</string>
-    <string name="projects_object_delete_message">Kana da tabbacin kana son share wannan abun? Wannan aikin ba za a iya soke shi ba.</string>
     <string name="projects_parent_none">Babu iyaye</string>
     <string name="projects_links_empty">Babu hanyoyin haɗi</string>
     <string name="projects_links_section_relates">Yana da alaƙa da</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Babu abubuwan da aka haɗa</string>
     <string name="projects_attachment_default_name">abin da aka haɗa</string>
     <string name="projects_request_new">Sabuwar buƙatar haɗewa</string>
-    <string name="projects_request_status_closed">An rufe</string>
     <string name="projects_request_back_to_list">Komawa jeri</string>
     <string name="projects_request_repository">Ma\'ajiya: %1$s</string>
     <string name="projects_request_source">Tushe: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Tsara, ƙirƙira, gyara, sharhi, da kallo</string>
     <string name="projects_access_role_write">Ƙirƙira, gyara, sharhi, da kallo</string>
     <string name="projects_all_projects">Duk projects</string>
-    <string name="projects_create_allow_search">Ba kowa damar nemo project</string>
     <string name="projects_create_import_backup">Shigo da daga backup (na zaɓi)</string>
     <string name="projects_create_upload_json">Loda fayil ɗin .json</string>
     <string name="projects_settings_not_set">Ba a saita ba</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>
     <string name="projects_create_blocked_no_options">Ba a iya ƙirƙira ba: ana buƙatar %1$s amma ba shi da zaɓuɓɓuka. Ƙara zaɓuɓɓuka a Ƙira.</string>
     <string name="projects_attachment_remove">Cire haɗe</string>
+    <string name="projects_create_allow_public">Ba kowa damar duba project da yin sharhi a kansa</string>
+    <string name="projects_request_delete_title">Goge merge request</string>
+    <string name="projects_request_delete_message">Ka tabbata kana son goge wannan merge request?</string>
+    <string name="projects_board_delete_column_title">Goge column</string>
+    <string name="projects_board_delete_column_message">Ka tabbata kana son goge column ɗin \"%1$s\"? Ba za a iya juya wannan ba.</string>
+    <string name="projects_object_delete_named">Ka tabbata kana son goge \"%1$s\"? Ba za a iya juya wannan aiki ba.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Ka tabbata kana son goge \"%1$s\" da abu %2$s da ke ƙarƙashinsa? Ba za a iya juya wannan aiki ba.</item>
+        <item quantity="other">Ka tabbata kana son goge \"%1$s\" da abubuwa %2$s da ke ƙarƙashinsa? Ba za a iya juya wannan aiki ba.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Ba a iya haɗawa ba: %1$s</string>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Una uhakika unataka kufuta CRM hii? Vitu vyote, maoni, na mipangilio vitaondolewa kabisa.</string>
     <string name="crm_object_unwatch">Acha kufuatilia</string>
     <string name="crm_object_delete_title">Futa kitu</string>
-    <string name="crm_object_delete_message">Una uhakika unataka kufuta kitu hiki? Kitendo hiki hakiwezi kutenduliwa.</string>
     <string name="crm_parent_none">Hakuna mzazi</string>
     <string name="crm_links_empty">Hakuna viungo</string>
     <string name="crm_links_section_relates">Inahusiana na</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Leta kutoka kwenye nakala rudufu (hiari)</string>
     <string name="crm_export">Hamisha data</string>
     <string name="crm_exporting">Inaandaa uhamishaji…</string>
-    <string name="crm_create_allow_search">Ruhusu mtu yeyote kutafuta CRM</string>
     <string name="crm_no_crms_found">Hakuna CRM zilizopatikana</string>
     <string name="crm_create_blocked_no_parents">Hakuna aina za vipengele zinazoweza kuundwa bado. Unda vipengele vya mzazi vinavyohitajika kwanza.</string>
     <string name="crm_export_csv">Hamisha CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Sampuli %1$s</string>
     <string name="crm_option_delete_title">Futa chaguo</string>
     <string name="crm_option_delete_message">Una uhakika unataka kufuta chaguo \"%1$s\"?</string>
+    <string name="crm_create_public">Ruhusu mtu yeyote kuona CRM na kutoa maoni juu yake</string>
+    <string name="crm_board_delete_column">Futa safu</string>
+    <string name="crm_board_delete_column_message">Una uhakika unataka kufuta safu ya \"%1$s\"? Hili haliwezi kutenduliwa.</string>
+    <string name="crm_object_delete_named">Una uhakika unataka kufuta \"%1$s\"? Kitendo hiki hakiwezi kutenduliwa.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Una uhakika unataka kufuta \"%1$s\" na kipengee %2$s kilicho chini yake? Kitendo hiki hakiwezi kutenduliwa.</item>
+        <item quantity="other">Una uhakika unataka kufuta \"%1$s\" na vipengee %2$s vilivyo chini yake? Kitendo hiki hakiwezi kutenduliwa.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Kiambatisho %1$s hakikuweza kuongezwa: %2$s</item>
+        <item quantity="other">Viambatisho %1$s havikuweza kuongezwa: %2$s</item>
+    </plurals>
 </resources>

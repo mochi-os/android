@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">खुला</string>
     <string name="projects_request_status_merged">मर्ज गरियो</string>
     <string name="projects_request_merge">मर्ज गर्नुहोस्</string>
-    <string name="projects_request_close">बन्द गर्नुहोस्</string>
     <string name="projects_request_merge_dialog_title">मर्ज गर्नुहोस्</string>
     <string name="projects_request_method">विधि</string>
     <string name="projects_request_method_merge">मर्ज गर्नुहोस्</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">के तपाईं यो परियोजना मेट्न निश्चित हुनुहुन्छ? सबै वस्तुहरू, टिप्पणीहरू र सेटिङहरू स्थायी रूपमा हटाइनेछन्।</string>
     <string name="projects_object_unwatch">हेर्न छोड्नुहोस्</string>
     <string name="projects_object_delete_title">वस्तु मेटाउनुहोस्</string>
-    <string name="projects_object_delete_message">के तपाईं यो वस्तु मेट्न निश्चित हुनुहुन्छ? यो कार्य पूर्ववत गर्न सकिँदैन।</string>
     <string name="projects_parent_none">कुनै अभिभावक छैन</string>
     <string name="projects_links_empty">कुनै लिङ्क छैन</string>
     <string name="projects_links_section_relates">सम्बन्धित छ</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">कुनै संलग्नक छैन</string>
     <string name="projects_attachment_default_name">संलग्नक</string>
     <string name="projects_request_new">नयाँ मर्ज अनुरोध</string>
-    <string name="projects_request_status_closed">बन्द</string>
     <string name="projects_request_back_to_list">सूचीमा फर्कनुहोस्</string>
     <string name="projects_request_repository">भण्डार: %1$s</string>
     <string name="projects_request_source">स्रोत: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">डिजाइन गर्नुहोस्, सिर्जना गर्नुहोस्, सम्पादन गर्नुहोस्, टिप्पणी गर्नुहोस् र हेर्नुहोस्</string>
     <string name="projects_access_role_write">सिर्जना गर्नुहोस्, सम्पादन गर्नुहोस्, टिप्पणी गर्नुहोस् र हेर्नुहोस्</string>
     <string name="projects_all_projects">सबै परियोजनाहरू</string>
-    <string name="projects_create_allow_search">जोसुकैलाई परियोजना खोज्न अनुमति दिनुहोस्</string>
     <string name="projects_create_import_backup">ब्याकअपबाट आयात गर्नुहोस् (वैकल्पिक)</string>
     <string name="projects_create_upload_json">.json फाइल अपलोड गर्नुहोस्</string>
     <string name="projects_settings_not_set">सेट गरिएको छैन</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
     <string name="projects_create_blocked_no_options">सिर्जना गर्न सकिँदैन: %1$s आवश्यक छ तर छनोट गर्न कुनै विकल्प छैन। डिजाइनमा विकल्पहरू थप्नुहोस्।</string>
     <string name="projects_attachment_remove">संलग्नक हटाउनुहोस्</string>
+    <string name="projects_create_allow_public">जोसुकैलाई परियोजना हेर्न र त्यसमा टिप्पणी गर्न अनुमति दिनुहोस्</string>
+    <string name="projects_request_delete_title">मर्ज अनुरोध मेटाउनुहोस्</string>
+    <string name="projects_request_delete_message">के तपाईं यो मर्ज अनुरोध मेटाउन निश्चित हुनुहुन्छ?</string>
+    <string name="projects_board_delete_column_title">स्तम्भ मेटाउनुहोस्</string>
+    <string name="projects_board_delete_column_message">के तपाईं \"%1$s\" स्तम्भ मेटाउन निश्चित हुनुहुन्छ? यो फिर्ता गर्न सकिँदैन।</string>
+    <string name="projects_object_delete_named">के तपाईं \"%1$s\" मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">के तपाईं \"%1$s\" र यसको मुनिका %2$s वस्तु मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</item>
+        <item quantity="other">के तपाईं \"%1$s\" र यसको मुनिका %2$s वस्तु मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">एट्याच गर्न सकिएन: %1$s</string>
 </resources>

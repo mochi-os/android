@@ -201,7 +201,6 @@
     <string name="crm_settings_delete_confirm_message">Adakah anda pasti mahu memadamkan CRM ini? Semua objek, komen dan tetapan akan dialih keluar secara kekal.</string>
     <string name="crm_object_unwatch">Berhenti memerhati</string>
     <string name="crm_object_delete_title">Padam objek</string>
-    <string name="crm_object_delete_message">Adakah anda pasti mahu memadamkan objek ini? Tindakan ini tidak boleh dibatalkan.</string>
     <string name="crm_parent_none">Tiada induk</string>
     <string name="crm_links_empty">Tiada pautan</string>
     <string name="crm_links_section_relates">Berkaitan dengan</string>
@@ -276,7 +275,6 @@
     <string name="crm_create_import_backup">Import daripada sandaran (pilihan)</string>
     <string name="crm_export">Eksport data</string>
     <string name="crm_exporting">Menyediakan eksport…</string>
-    <string name="crm_create_allow_search">Benarkan sesiapa sahaja mencari CRM</string>
     <string name="crm_no_crms_found">Tiada CRM dijumpai</string>
     <string name="crm_create_blocked_no_parents">Tiada jenis item boleh dicipta lagi. Cipta item induk yang diperlukan dahulu.</string>
     <string name="crm_export_csv">Eksport CSV</string>
@@ -287,4 +285,14 @@
     <string name="crm_design_sample">Contoh %1$s</string>
     <string name="crm_option_delete_title">Padam pilihan</string>
     <string name="crm_option_delete_message">Adakah anda pasti mahu memadam pilihan \"%1$s\"?</string>
+    <string name="crm_create_public">Benarkan sesiapa sahaja melihat dan mengulas CRM</string>
+    <string name="crm_board_delete_column">Padam lajur</string>
+    <string name="crm_board_delete_column_message">Adakah anda pasti mahu memadam lajur \"%1$s\"? Ini tidak boleh dibatalkan.</string>
+    <string name="crm_object_delete_named">Adakah anda pasti mahu memadam \"%1$s\"? Tindakan ini tidak boleh dibatalkan.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Adakah anda pasti mahu memadam \"%1$s\" dan %2$s item di bawahnya? Tindakan ini tidak boleh dibatalkan.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s lampiran tidak dapat ditambah: %2$s</item>
+    </plurals>
 </resources>

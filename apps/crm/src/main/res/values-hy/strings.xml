@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Վստա՞հ եք, որ ցանկանում եք ջնջել այս CRM-ը: Բոլոր օբյեկտները, մեկնաբանությունները և կարգավորումները ընդմիշտ կհեռացվեն:</string>
     <string name="crm_object_unwatch">Չհետևել</string>
     <string name="crm_object_delete_title">Ջնջել օբյեկտը</string>
-    <string name="crm_object_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել այս օբյեկտը: Այս գործողությունը չի կարող հետարկվել:</string>
     <string name="crm_parent_none">Ծնող չկա</string>
     <string name="crm_links_empty">Կապեր չկան</string>
     <string name="crm_links_section_relates">Կապված է</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Ներմուծում պահուստավորումից (ընտրովի)</string>
     <string name="crm_export">Արտահանել տվյալները</string>
     <string name="crm_exporting">Արտահանման նախապատրաստում…</string>
-    <string name="crm_create_allow_search">Թույլատրել բոլորին որոնել CRM</string>
     <string name="crm_no_crms_found">CRM-ներ չեն գտնվել</string>
     <string name="crm_create_blocked_no_parents">Տարրերի տեսակներ դեռ հնարավոր չէ ստեղծել։ Նախ ստեղծեք պահանջվող ծնող տարրերը։</string>
     <string name="crm_export_csv">Արտահանել CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Նմուշ %1$s</string>
     <string name="crm_option_delete_title">Ջնջել տարբերակը</string>
     <string name="crm_option_delete_message">Վստա՞հ եք, որ ցանկանում եք ջնջել \"%1$s\" տարբերակը։</string>
+    <string name="crm_create_public">Թույլատրել բոլորին դիտել CRM-ը և մեկնաբանել այն</string>
+    <string name="crm_board_delete_column">Ջնջել սյունակը</string>
+    <string name="crm_board_delete_column_message">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s» սյունակը։ Սա հնարավոր չէ հետարկել։</string>
+    <string name="crm_object_delete_named">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը։ Այս գործողությունը հնարավոր չէ հետարկել։</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը և դրա տակ գտնվող %2$s տարրը։ Այս գործողությունը հնարավոր չէ հետարկել։</item>
+        <item quantity="other">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը և դրա տակ գտնվող %2$s տարրը։ Այս գործողությունը հնարավոր չէ հետարկել։</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Չհաջողվեց ավելացնել %1$s կցորդ: %2$s</item>
+        <item quantity="other">Չհաջողվեց ավելացնել %1$s կցորդ: %2$s</item>
+    </plurals>
 </resources>

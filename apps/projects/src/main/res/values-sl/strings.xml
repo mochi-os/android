@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Odprto</string>
     <string name="projects_request_status_merged">Združeno</string>
     <string name="projects_request_merge">Združi</string>
-    <string name="projects_request_close">Zapri</string>
     <string name="projects_request_merge_dialog_title">Združi</string>
     <string name="projects_request_method">Metoda</string>
     <string name="projects_request_method_merge">Združi</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Ali ste prepričani, da želite izbrisati ta projekt? Vsi objekti, komentarji in nastavitve bodo trajno odstranjeni.</string>
     <string name="projects_object_unwatch">Prenehaj spremljati</string>
     <string name="projects_object_delete_title">Izbriši objekt</string>
-    <string name="projects_object_delete_message">Ali ste prepričani, da želite izbrisati ta objekt? Tega dejanja ni mogoče razveljaviti.</string>
     <string name="projects_parent_none">Brez nadrejenega</string>
     <string name="projects_links_empty">Ni povezav</string>
     <string name="projects_links_section_relates">Povezano z</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Ni prilog</string>
     <string name="projects_attachment_default_name">priloga</string>
     <string name="projects_request_new">Nova zahteva za združitev</string>
-    <string name="projects_request_status_closed">Zaprto</string>
     <string name="projects_request_back_to_list">Nazaj na seznam</string>
     <string name="projects_request_repository">Repozitorij: %1$s</string>
     <string name="projects_request_source">Vir: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Oblikovanje, ustvarjanje, urejanje, komentiranje in ogled</string>
     <string name="projects_access_role_write">Ustvarjanje, urejanje, komentiranje in ogled</string>
     <string name="projects_all_projects">Vsi projekti</string>
-    <string name="projects_create_allow_search">Dovoli vsem iskanje projekta</string>
     <string name="projects_create_import_backup">Uvoz iz varnostne kopije (neobvezno)</string>
     <string name="projects_create_upload_json">Naloži datoteko .json</string>
     <string name="projects_settings_not_set">Ni nastavljeno</string>
@@ -334,4 +330,17 @@
     <string name="projects_create_object_no_types">Trenutno ni mogoče ustvariti nobenih vrst elementov. Najprej ustvarite zahtevane nadrejene elemente.</string>
     <string name="projects_create_blocked_no_options">Ni mogoče ustvariti: %1$s je obvezno, vendar nima možnosti za izbiro. Dodajte možnosti v Oblikovanju.</string>
     <string name="projects_attachment_remove">Odstrani prilogo</string>
+    <string name="projects_create_allow_public">Dovoli vsem ogled in komentiranje projekta</string>
+    <string name="projects_request_delete_title">Izbriši zahtevo za združitev</string>
+    <string name="projects_request_delete_message">Ali ste prepričani, da želite izbrisati to zahtevo za združitev?</string>
+    <string name="projects_board_delete_column_title">Izbriši stolpec</string>
+    <string name="projects_board_delete_column_message">Ali ste prepričani, da želite izbrisati stolpec \"%1$s\"? Tega ni mogoče razveljaviti.</string>
+    <string name="projects_object_delete_named">Ali ste prepričani, da želite izbrisati \"%1$s\"? Tega dejanja ni mogoče razveljaviti.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s element pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+        <item quantity="two">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s elementa pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+        <item quantity="few">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s elemente pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+        <item quantity="other">Ali ste prepričani, da želite izbrisati \"%1$s\" in %2$s elementov pod njim? Tega dejanja ni mogoče razveljaviti.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Ni bilo mogoče priložiti: %1$s</string>
 </resources>

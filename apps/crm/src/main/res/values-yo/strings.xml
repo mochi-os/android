@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Ṣé o dá ọ lójú pé o fẹ́ pa CRM yìí rẹ́? Gbogbo àwọn ohun, àlàyé, àti ètò ni a ó yọ kúrò pátápátá.</string>
     <string name="crm_object_unwatch">Má wo</string>
     <string name="crm_object_delete_title">Pa nǹkan rẹ́</string>
-    <string name="crm_object_delete_message">Ṣé o dá ọ lójú pé o fẹ́ pa ohun yìí rẹ́? Ìṣe yìí kò ṣeé padà.</string>
     <string name="crm_parent_none">Kò sí òbí</string>
     <string name="crm_links_empty">Kò sí ọ̀nà ìjápọ̀</string>
     <string name="crm_links_section_relates">Ní ìbátan pẹ̀lú</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Gbé wọlé láti backup (àṣàyàn)</string>
     <string name="crm_export">Gbé dátà jáde</string>
     <string name="crm_exporting">Ń múra ìkójáde sílẹ̀…</string>
-    <string name="crm_create_allow_search">Jẹ́ kí ẹnikẹ́ni wá CRM</string>
     <string name="crm_no_crms_found">A kò rí CRM kankan</string>
     <string name="crm_create_blocked_no_parents">A kò lè dá oríṣi item kankan sílẹ̀ síbẹ̀. Dá àwọn item òbí tí a nílò sílẹ̀ ní àkọ́kọ́.</string>
     <string name="crm_export_csv">Mú CSV jáde</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">Àpẹẹrẹ %1$s</string>
     <string name="crm_option_delete_title">Pa àṣàyàn rẹ́</string>
     <string name="crm_option_delete_message">Ṣé o dájú pé o fẹ́ pa àṣàyàn \"%1$s\" rẹ́?</string>
+    <string name="crm_create_public">Jẹ́ kí ẹnikẹ́ni wo CRM náà kí ó sì sọ àsọyé lórí rẹ̀</string>
+    <string name="crm_board_delete_column">Pa ọ̀wọ́n rẹ́</string>
+    <string name="crm_board_delete_column_message">Ṣé o dájú pé o fẹ́ pa ọ̀wọ́n \"%1$s\" rẹ́? A kò lè yí èyí padà.</string>
+    <string name="crm_object_delete_named">Ṣé o dájú pé o fẹ́ pa \"%1$s\" rẹ́? A kò lè yí ìṣe yìí padà.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Ṣé o dájú pé o fẹ́ pa \"%1$s\" àti %2$s nkan tí ó wà lábẹ́ rẹ̀ rẹ́? A kò lè yí ìṣe yìí padà.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">A kò lè fi ìsomọ́ %1$s kún: %2$s</item>
+    </plurals>
 </resources>

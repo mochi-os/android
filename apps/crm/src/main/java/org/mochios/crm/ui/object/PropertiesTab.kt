@@ -44,6 +44,7 @@ import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -58,8 +59,8 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import org.mochios.android.model.Checklist
+import org.mochios.android.model.ChecklistItem
 import org.mochios.android.model.User
 import org.mochios.android.ui.components.ChoicePrefix
 import org.mochios.android.ui.components.FormField
@@ -78,7 +79,6 @@ import org.mochios.android.ui.components.PersonPicker
 import org.mochios.crm.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.weekLocale
-import org.mochios.crm.model.ChecklistItem
 import org.mochios.crm.model.FieldOption
 import org.mochios.crm.model.CrmDetails
 import org.mochios.crm.model.CrmField
@@ -729,6 +729,12 @@ private fun parseOptionColour(hex: String): Color {
     }
 }
 
+/**
+ * A checklist field: the value is the web's `[{"id", "text", "done"}]`, read
+ * through [Checklist], which also takes what older phones wrote and skips
+ * anything that is not an item. An edit keeps each item's id and any key
+ * another client added, so the web finds the same items afterwards.
+ */
 @Composable
 private fun ChecklistEditor(
     fieldName: String?,
@@ -736,21 +742,10 @@ private fun ChecklistEditor(
     isReadonly: Boolean,
     onValueChange: (String) -> Unit
 ) {
-    val gson = remember { Gson() }
-    val items = remember(value) {
-        try {
-            if (value.isBlank()) emptyList()
-            else {
-                val type = object : TypeToken<List<ChecklistItem>>() {}.type
-                gson.fromJson<List<ChecklistItem>>(value, type)
-            }
-        } catch (_: Exception) {
-            emptyList()
-        }
-    }
+    val items = remember(value) { Checklist.parse(value) }
 
     fun updateItems(newItems: List<ChecklistItem>) {
-        onValueChange(gson.toJson(newItems))
+        onValueChange(Checklist.write(newItems))
     }
 
     Column {
@@ -764,42 +759,44 @@ private fun ChecklistEditor(
         }
 
         items.forEachIndexed { index, item ->
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Checkbox(
-                    checked = item.checked,
-                    onCheckedChange = { checked ->
-                        if (isReadonly) return@Checkbox
-                        val updated = items.toMutableList()
-                        updated[index] = item.copy(checked = checked)
-                        updateItems(updated)
-                    },
-                    enabled = !isReadonly
-                )
-                MochiTextField(
-                    value = item.text,
-                    onValueChange = { text ->
-                        if (isReadonly) return@MochiTextField
-                        val updated = items.toMutableList()
-                        updated[index] = item.copy(text = text)
-                        updateItems(updated)
-                    },
-                    readOnly = isReadonly,
-                    singleLine = true,
-                    modifier = Modifier.weight(1f)
-                )
-                if (!isReadonly) {
-                    MochiIconButton(
-                        onClick = {
+            key(item.id) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Checkbox(
+                        checked = item.done,
+                        onCheckedChange = { done ->
+                            if (isReadonly) return@Checkbox
                             val updated = items.toMutableList()
-                            updated.removeAt(index)
+                            updated[index] = item.copy(done = done)
                             updateItems(updated)
                         },
-                        modifier = Modifier.size(32.dp)
-                    ) {
-                        Icon(Icons.Default.Close, contentDescription = stringResource(R.string.crm_property_remove), modifier = Modifier.size(16.dp))
+                        enabled = !isReadonly
+                    )
+                    MochiTextField(
+                        value = item.text,
+                        onValueChange = { text ->
+                            if (isReadonly) return@MochiTextField
+                            val updated = items.toMutableList()
+                            updated[index] = item.copy(text = text)
+                            updateItems(updated)
+                        },
+                        readOnly = isReadonly,
+                        singleLine = true,
+                        modifier = Modifier.weight(1f)
+                    )
+                    if (!isReadonly) {
+                        MochiIconButton(
+                            onClick = {
+                                val updated = items.toMutableList()
+                                updated.removeAt(index)
+                                updateItems(updated)
+                            },
+                            modifier = Modifier.size(32.dp)
+                        ) {
+                            Icon(Icons.Default.Close, contentDescription = stringResource(R.string.crm_property_remove), modifier = Modifier.size(16.dp))
+                        }
                     }
                 }
             }
@@ -808,7 +805,7 @@ private fun ChecklistEditor(
         if (!isReadonly) {
             MochiTextButton(
                 onClick = {
-                    updateItems(items + ChecklistItem(text = "", checked = false))
+                    updateItems(items + Checklist.item())
                 }
             ) {
                 Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -818,4 +815,3 @@ private fun ChecklistEditor(
         }
     }
 }
-

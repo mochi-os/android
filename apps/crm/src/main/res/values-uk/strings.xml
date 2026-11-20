@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Ви впевнені, що хочете видалити цей CRM? Усі об\'єкти, коментарі та налаштування буде остаточно видалено.</string>
     <string name="crm_object_unwatch">Не стежити</string>
     <string name="crm_object_delete_title">Видалити об\'єкт</string>
-    <string name="crm_object_delete_message">Ви впевнені, що хочете видалити цей об\'єкт? Цю дію неможливо скасувати.</string>
     <string name="crm_parent_none">Без батьківського елемента</string>
     <string name="crm_links_empty">Немає посилань</string>
     <string name="crm_links_section_relates">Стосується</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Імпорт із резервної копії (необов\'язково)</string>
     <string name="crm_export">Експортувати дані</string>
     <string name="crm_exporting">Підготовка експорту…</string>
-    <string name="crm_create_allow_search">Дозволити всім шукати CRM</string>
     <string name="crm_no_crms_found">CRM не знайдено</string>
     <string name="crm_create_blocked_no_parents">Жоден тип елемента ще не можна створити. Спершу створіть необхідні батьківські елементи.</string>
     <string name="crm_export_csv">Експортувати CSV</string>
@@ -285,4 +283,20 @@
     <string name="crm_design_sample">Зразок %1$s</string>
     <string name="crm_option_delete_title">Видалити варіант</string>
     <string name="crm_option_delete_message">Ви впевнені, що хочете видалити варіант \"%1$s\"?</string>
+    <string name="crm_create_public">Дозволити всім переглядати й коментувати CRM</string>
+    <string name="crm_board_delete_column">Видалити стовпець</string>
+    <string name="crm_board_delete_column_message">Ви впевнені, що хочете видалити стовпець \"%1$s\"? Цю дію не можна скасувати.</string>
+    <string name="crm_object_delete_named">Ви впевнені, що хочете видалити \"%1$s\"? Цю дію не можна скасувати.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладений елемент? Цю дію не можна скасувати.</item>
+        <item quantity="few">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладені елементи? Цю дію не можна скасувати.</item>
+        <item quantity="many">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладених елементів? Цю дію не можна скасувати.</item>
+        <item quantity="other">Ви впевнені, що хочете видалити \"%1$s\" і %2$s вкладеного елемента? Цю дію не можна скасувати.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Не вдалося додати %1$s вкладення: %2$s</item>
+        <item quantity="few">Не вдалося додати %1$s вкладення: %2$s</item>
+        <item quantity="many">Не вдалося додати %1$s вкладень: %2$s</item>
+        <item quantity="other">Не вдалося додати %1$s вкладення: %2$s</item>
+    </plurals>
 </resources>

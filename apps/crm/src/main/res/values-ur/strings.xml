@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">کیا آپ واقعی اس CRM کو حذف کرنا چاہتے ہیں؟ تمام آبجیکٹس، تبصرے، اور ترتیبات مستقل طور پر ہٹا دی جائیں گی۔</string>
     <string name="crm_object_unwatch">نگرانی ختم کریں</string>
     <string name="crm_object_delete_title">آبجیکٹ حذف کریں</string>
-    <string name="crm_object_delete_message">کیا آپ واقعی اس آبجیکٹ کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں کیا جا سکتا۔</string>
     <string name="crm_parent_none">کوئی پیرنٹ نہیں</string>
     <string name="crm_links_empty">کوئی لنکس نہیں</string>
     <string name="crm_links_section_relates">متعلق ہے</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">بیک اپ سے درآمد کریں (اختیاری)</string>
     <string name="crm_export">ڈیٹا برآمد کریں</string>
     <string name="crm_exporting">ایکسپورٹ تیار کیا جا رہا ہے…</string>
-    <string name="crm_create_allow_search">کسی کو بھی CRM تلاش کرنے کی اجازت دیں</string>
     <string name="crm_no_crms_found">کوئی CRM نہیں ملے</string>
     <string name="crm_create_blocked_no_parents">ابھی کوئی آئٹم اقسام نہیں بنائی جا سکتیں۔ پہلے درکار پیرنٹ آئٹمز بنائیں۔</string>
     <string name="crm_export_csv">CSV ایکسپورٹ کریں</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">نمونہ %1$s</string>
     <string name="crm_option_delete_title">آپشن حذف کریں</string>
     <string name="crm_option_delete_message">کیا آپ واقعی آپشن \"%1$s\" کو حذف کرنا چاہتے ہیں؟</string>
+    <string name="crm_create_public">کسی کو بھی CRM دیکھنے اور اس پر تبصرہ کرنے کی اجازت دیں</string>
+    <string name="crm_board_delete_column">کالم حذف کریں</string>
+    <string name="crm_board_delete_column_message">کیا آپ واقعی \"%1$s\" کالم کو حذف کرنا چاہتے ہیں؟ یہ واپس نہیں لیا جا سکتا۔</string>
+    <string name="crm_object_delete_named">کیا آپ واقعی \"%1$s\" کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">کیا آپ واقعی \"%1$s\" اور اس کے نیچے موجود %2$s آئٹم کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔</item>
+        <item quantity="other">کیا آپ واقعی \"%1$s\" اور اس کے نیچے موجود %2$s آئٹمز کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s اٹیچمنٹ شامل نہیں کی جا سکی: %2$s</item>
+        <item quantity="other">%1$s اٹیچمنٹس شامل نہیں کی جا سکیں: %2$s</item>
+    </plurals>
 </resources>

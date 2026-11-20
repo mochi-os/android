@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -40,6 +41,13 @@ data class CreateObjectUiState(
     val createdObjectId: String? = null,
     /** The attachments of the object a copy is made from, which Create copies. */
     val copied: List<Attachment> = emptyList(),
+    /**
+     * The object a create made while some of its attachments did not go up:
+     * a retry uploads them to it instead of creating another.
+     */
+    val created: String? = null,
+    /** The names of the files and copied attachments [created] still lacks. */
+    val unattached: List<String> = emptyList(),
 )
 
 /** Drives the create-object screen. */
@@ -82,6 +90,12 @@ class CreateObjectViewModel @Inject constructor(
     val uiState: StateFlow<CreateObjectUiState> = _uiState.asStateFlow()
 
     private val tracker = UploadTracker()
+
+    /** Picked files already uploaded to [CreateObjectUiState.created]. */
+    private val attached = mutableSetOf<Uri>()
+
+    /** Copied attachments already on [CreateObjectUiState.created]. */
+    private val copiedOnto = mutableSetOf<String>()
 
     /** The attachments picked on the form, while Create uploads them. */
     val upload: StateFlow<Upload?> = tracker.state
@@ -143,9 +157,12 @@ class CreateObjectViewModel @Inject constructor(
     suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     /**
-     * Creates an object and reports its id back through [CreateObjectUiState];
-     * [copies] are attachments of the object a copy is made from, copied onto
-     * the new one.
+     * Creates an object with its values in one request, which the server
+     * refuses whole, then uploads [uris] and copies [copies] (attachments of
+     * the object a copy is made from) onto it, and reports its id back through
+     * [CreateObjectUiState]. When an attachment does not go up the form stays,
+     * naming what is missing, and the next call uploads to the object already
+     * made instead of creating another.
      */
     fun createObject(
         classId: String,
@@ -158,46 +175,67 @@ class CreateObjectViewModel @Inject constructor(
         if (classId.isBlank() || _uiState.value.isCreating) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isCreating = true, createError = null)
-            try {
-                val objectId = repository.createObject(projectId, classId, parent, title)
-                // One field per request through the per-field endpoint: the
-                // bulk values endpoint is form-encoded and drops some field
-                // types (dates), so each value goes as its own JSON body, as
-                // the web dialog sends them.
-                for ((fieldId, value) in initialValues) {
-                    repository.setValue(projectId, objectId, fieldId, value)
-                }
-                // Attachments picked on the form go up once the object exists.
-                // One failure should lose neither the object nor the other
-                // files, so each upload is isolated.
-                tracker.track(uris) {
-                    val files = repository.stageFiles(uris)
-                    tracker.expect(files)
-                    for (file in files) {
-                        runCatching { repository.createAttachment(projectId, objectId, listOf(file), tracker) }
+            val objectId = _uiState.value.created ?: try {
+                repository.createObject(projectId, classId, parent, title, initialValues)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // Nothing was created, so the form stays put for a retry; the
+                // message below Create says why.
+                _uiState.value = _uiState.value.copy(isCreating = false, createError = e.toMochiError())
+                return@launch
+            }
+            // The list the form returns to may read the cache, which does not
+            // hold the new object.
+            repository.invalidateCache(projectId)
+            val missing = mutableListOf<String>()
+            // One request per file, so one failure loses neither the object
+            // nor the other files.
+            val pending = uris.filter { uri -> uri !in attached }
+            tracker.track(pending) {
+                val staged = pending.map { uri -> uri to repository.stageFile(uri) }
+                tracker.expect(staged.mapNotNull { (_, file) -> file })
+                for ((uri, file) in staged) {
+                    val sent = file != null && succeeds {
+                        repository.createAttachment(projectId, objectId, listOf(file), tracker)
                     }
-                    repository.discardStaged(files)
+                    if (sent) attached += uri else missing += repository.fileName(uri).ifBlank { uri.lastPathSegment.orEmpty() }
                 }
-                // A copy's attachments are copied by the server, which holds
-                // the bytes; like an upload, a failure loses no object.
-                if (copies.isNotEmpty()) {
-                    runCatching { repository.copyAttachments(projectId, objectId, copies) }
+                repository.discardStaged(staged.mapNotNull { (_, file) -> file })
+            }
+            // A copy's attachments are copied by the server, which holds the
+            // bytes.
+            val copying = copies.filter { id -> id !in copiedOnto }
+            if (copying.isNotEmpty()) {
+                if (succeeds { repository.copyAttachments(projectId, objectId, copying) }) {
+                    copiedOnto += copying
+                } else {
+                    val names = _uiState.value.copied.associate { attachment -> attachment.id to attachment.name }
+                    missing += copying.map { id -> names[id].orEmpty() }
                 }
-                // The list the form returns to may read the cache, which does
-                // not hold the new object.
-                repository.invalidateCache(projectId)
+            }
+            if (missing.isEmpty()) {
+                attached.clear()
+                copiedOnto.clear()
                 _uiState.value = _uiState.value.copy(
                     isCreating = false,
+                    created = null,
+                    unattached = emptyList(),
                     createdObjectId = objectId.takeIf { id -> id.isNotBlank() },
                 )
-            } catch (e: Exception) {
-                // The form stays put so the entered values survive a retry; the
-                // message below Create is what says why it did nothing.
-                _uiState.value = _uiState.value.copy(
-                    isCreating = false,
-                    createError = e.toMochiError(),
-                )
+            } else {
+                _uiState.value = _uiState.value.copy(isCreating = false, created = objectId, unattached = missing)
             }
         }
+    }
+
+    /** Whether [block] ran without failing; a cancellation still cancels. */
+    private suspend fun succeeds(block: suspend () -> Unit): Boolean = try {
+        block()
+        true
+    } catch (e: CancellationException) {
+        throw e
+    } catch (_: Exception) {
+        false
     }
 }

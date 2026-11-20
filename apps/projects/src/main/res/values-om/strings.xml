@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Banaa</string>
     <string name="projects_request_status_merged">Makame</string>
     <string name="projects_request_merge">Maki</string>
-    <string name="projects_request_close">Cufi</string>
     <string name="projects_request_merge_dialog_title">Maki</string>
     <string name="projects_request_method">Mala</string>
     <string name="projects_request_method_merge">Maki</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Pirojektii kana haquu dhugumatti barbaaddaa? Wantoonni, yaadonni, fi qindaa\'inni hundi yeroo hundaaf haqamu.</string>
     <string name="projects_object_unwatch">Daawwannaa dhaabi</string>
     <string name="projects_object_delete_title">Wanta haqi</string>
-    <string name="projects_object_delete_message">Wanta kana haquu dhugumatti barbaaddaa? Gocha kana deebisuun hin danda\'amu.</string>
     <string name="projects_parent_none">Maatii hin qabu</string>
     <string name="projects_links_empty">Hidhaawwan hin jiran</string>
     <string name="projects_links_section_relates">Walqabata</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Maxxansaawwan hin jiran</string>
     <string name="projects_attachment_default_name">maxxansa</string>
     <string name="projects_request_new">Gaaffii makaa haaraa</string>
-    <string name="projects_request_status_closed">Cufame</string>
     <string name="projects_request_back_to_list">Gara tarreetti deebi\'i</string>
     <string name="projects_request_repository">Kuusaa: %1$s</string>
     <string name="projects_request_source">Madda: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dizaayinii, uumuu, gulaaluu, yaada kennuu fi ilaaluu</string>
     <string name="projects_access_role_write">Uumuu, gulaaluu, yaada kennuu fi ilaaluu</string>
     <string name="projects_all_projects">Pirojektoota hundi</string>
-    <string name="projects_create_allow_search">Eenyu iyyuu pirojektii barbaaduu hayyami</string>
     <string name="projects_create_import_backup">Kuusaa irraa galchi (filannoo)</string>
     <string name="projects_create_upload_json">Faayilii .json olfe\'i</string>
     <string name="projects_settings_not_set">Hin qabamne</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Hanga ammaatti gosti meeshaalee uumamuu hin danda\'u. Jalqaba meeshaalee maatii barbaachisaa uumi.</string>
     <string name="projects_create_blocked_no_options">Uumuun hin danda\'amne: %1$s barbaachisaa dha garuu filannoo hin qabu. Dizaayinii keessatti filannoo dabali.</string>
     <string name="projects_attachment_remove">Maxxansaa haqi</string>
+    <string name="projects_create_allow_public">Eenyu iyyuu pirojektii akka ilaalu fi irratti yaada kennu hayyami</string>
+    <string name="projects_request_delete_title">Iyyannoo daddabarsaa haqi</string>
+    <string name="projects_request_delete_message">Iyyannoo daddabarsaa kana haquu mirkanaa\'oo dha?</string>
+    <string name="projects_board_delete_column_title">Tarjaa haqi</string>
+    <string name="projects_board_delete_column_message">Tarjaa \"%1$s\" haquu mirkanaa\'oo dha? Kun deebi\'uu hin danda\'u.</string>
+    <string name="projects_object_delete_named">\"%1$s\" haquu mirkanaa\'oo dha? Tarkaanfiin kun deebi\'uu hin danda\'u.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" fi %2$s wanta jala isaa jiran haquu mirkanaa\'oo dha? Tarkaanfiin kun deebi\'uu hin danda\'u.</item>
+        <item quantity="other">\"%1$s\" fi %2$s wantoota jala isaa jiran haquu mirkanaa\'oo dha? Tarkaanfiin kun deebi\'uu hin danda\'u.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Hidhuu hin danda\'amne: %1$s</string>
 </resources>

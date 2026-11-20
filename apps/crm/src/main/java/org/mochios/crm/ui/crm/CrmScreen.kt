@@ -250,6 +250,14 @@ private fun AllCrmsContent(
     viewModel: CrmListViewModel,
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
+
+    // An unsubscribe or a pull the server refused, over the list.
+    LaunchedEffect(viewModel) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
+        }
+    }
 
     Scaffold(
         topBar = {

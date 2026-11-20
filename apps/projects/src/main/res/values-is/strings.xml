@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Opið</string>
     <string name="projects_request_status_merged">Sameinað</string>
     <string name="projects_request_merge">Sameina</string>
-    <string name="projects_request_close">Loka</string>
     <string name="projects_request_merge_dialog_title">Sameina</string>
     <string name="projects_request_method">Aðferð</string>
     <string name="projects_request_method_merge">Sameina</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Ertu viss um að þú viljir eyða þessu verkefni? Öllum hlutum, athugasemdum og stillingum verður eytt varanlega.</string>
     <string name="projects_object_unwatch">Hætta að fylgjast með</string>
     <string name="projects_object_delete_title">Eyða hlut</string>
-    <string name="projects_object_delete_message">Ertu viss um að þú viljir eyða þessum hlut? Þessari aðgerð er ekki hægt að afturkalla.</string>
     <string name="projects_parent_none">Enginn yfirhlutur</string>
     <string name="projects_links_empty">Engir tenglar</string>
     <string name="projects_links_section_relates">Tengist</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Engin viðhengi</string>
     <string name="projects_attachment_default_name">viðhengi</string>
     <string name="projects_request_new">Ný sameiningarbeiðni</string>
-    <string name="projects_request_status_closed">Lokað</string>
     <string name="projects_request_back_to_list">Til baka á lista</string>
     <string name="projects_request_repository">Geymsla: %1$s</string>
     <string name="projects_request_source">Uppruni: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Hanna, búa til, breyta, gera athugasemdir og skoða</string>
     <string name="projects_access_role_write">Búa til, breyta, gera athugasemdir og skoða</string>
     <string name="projects_all_projects">Öll verkefni</string>
-    <string name="projects_create_allow_search">Leyfa öllum að leita að verkefninu</string>
     <string name="projects_create_import_backup">Flytja inn úr öryggisafriti (valfrjálst)</string>
     <string name="projects_create_upload_json">Hlaða upp .json-skrá</string>
     <string name="projects_settings_not_set">Ekki stillt</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Ekki er enn hægt að búa til neinar tegundir atriða. Búðu fyrst til nauðsynleg foreldraatriði.</string>
     <string name="projects_create_blocked_no_options">Ekki hægt að búa til: %1$s er nauðsynlegt en hefur enga valkosti. Bættu við valkostum í Hönnun.</string>
     <string name="projects_attachment_remove">Fjarlægja viðhengi</string>
+    <string name="projects_create_allow_public">Leyfa öllum að skoða verkefnið og gera athugasemdir við það</string>
+    <string name="projects_request_delete_title">Eyða Merge Request</string>
+    <string name="projects_request_delete_message">Ertu viss um að þú viljir eyða þessum Merge Request?</string>
+    <string name="projects_board_delete_column_title">Eyða dálki</string>
+    <string name="projects_board_delete_column_message">Ertu viss um að þú viljir eyða dálknum „%1$s“? Þessu er ekki hægt að afturkalla.</string>
+    <string name="projects_object_delete_named">Ertu viss um að þú viljir eyða „%1$s“? Þessari aðgerð er ekki hægt að afturkalla.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Ertu viss um að þú viljir eyða „%1$s“ og %2$s atriði undir því? Þessari aðgerð er ekki hægt að afturkalla.</item>
+        <item quantity="other">Ertu viss um að þú viljir eyða „%1$s“ og %2$s atriðum undir því? Þessari aðgerð er ekki hægt að afturkalla.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Ekki tókst að hengja við: %1$s</string>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">A bheil thu cinnteach gu bheil thu airson an CRM seo a sguabadh às? Thèid a h-uile nì, beachd is roghainn a thoirt air falbh gu buan.</string>
     <string name="crm_object_unwatch">Sguir de chumail sùil</string>
     <string name="crm_object_delete_title">Sguab às an nì</string>
-    <string name="crm_object_delete_message">A bheil thu cinnteach gu bheil thu airson an nì seo a sguabadh às? Cha ghabh an gnìomh seo a neo-dhèanamh.</string>
     <string name="crm_parent_none">Gun phàrant</string>
     <string name="crm_links_empty">Gun cheanglaichean</string>
     <string name="crm_links_section_relates">A\' buntainn ri</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Ion-phortaich o lethbhreac-glèidhidh (roghainneil)</string>
     <string name="crm_export">Às-phortaich an dàta</string>
     <string name="crm_exporting">A\' deasachadh an às-phortaidh…</string>
-    <string name="crm_create_allow_search">Ceadaich do dhuine sam bith CRM a lorg</string>
     <string name="crm_no_crms_found">Cha deach CRM a lorg</string>
     <string name="crm_create_blocked_no_parents">Chan urrainnear seòrsa nì sam bith a chruthachadh fhathast. Cruthaich na nithean pàrant riatanach an toiseach.</string>
     <string name="crm_export_csv">Às-phortaich CSV</string>
@@ -285,4 +283,20 @@
     <string name="crm_design_sample">Sampall %1$s</string>
     <string name="crm_option_delete_title">Sguab às roghainn</string>
     <string name="crm_option_delete_message">A bheil thu cinnteach gu bheil thu airson an roghainn \"%1$s\" a sguabadh às?</string>
+    <string name="crm_create_public">Ceadaich do dhuine sam bith an CRM fhaicinn agus beachdan a chur ris</string>
+    <string name="crm_board_delete_column">Sguab às colbh</string>
+    <string name="crm_board_delete_column_message">A bheil thu cinnteach gu bheil thu airson an colbh \"%1$s\" a sguabadh às? Cha ghabh seo a thilleadh.</string>
+    <string name="crm_object_delete_named">A bheil thu cinnteach gu bheil thu airson \"%1$s\" a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nì fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+        <item quantity="two">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nì fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+        <item quantity="few">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nithean fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+        <item quantity="other">A bheil thu cinnteach gu bheil thu airson \"%1$s\" agus %2$s nì fodha a sguabadh às? Cha ghabh an gnìomh seo a thilleadh.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Cha deach %1$s cheanglachan a chur ris: %2$s</item>
+        <item quantity="two">Cha deach %1$s cheanglachan a chur ris: %2$s</item>
+        <item quantity="few">Cha deach %1$s ceanglachain a chur ris: %2$s</item>
+        <item quantity="other">Cha deach %1$s ceanglachan a chur ris: %2$s</item>
+    </plurals>
 </resources>

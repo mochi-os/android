@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ojepe\'áva</string>
     <string name="projects_request_status_merged">Oñembojuajúma</string>
     <string name="projects_request_merge">Embojuaju</string>
-    <string name="projects_request_close">Mboty</string>
     <string name="projects_request_merge_dialog_title">Embojuaju</string>
     <string name="projects_request_method">Método</string>
     <string name="projects_request_method_merge">Embojuaju</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">¿Añetehápe reipota embogue ko proyecto? Opaite mba\'e, comentario ha ñemboheko oñembogue tapiaitéta.</string>
     <string name="projects_object_unwatch">Ani ema\'ẽve</string>
     <string name="projects_object_delete_title">Emboguete mba\'e</string>
-    <string name="projects_object_delete_message">¿Añetehápe reipota embogue ko mba\'e? Ko tembiapo ndaikatumo\'ãi oñembojevy.</string>
     <string name="projects_parent_none">Ndaipóri sy/ru</string>
     <string name="projects_links_empty">Ndaipóri juajuha</string>
     <string name="projects_links_section_relates">Ojoaju ndive</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Ndaipóri adjunto</string>
     <string name="projects_attachment_default_name">adjunto</string>
     <string name="projects_request_new">Ñembojuaju jerure pyahu</string>
-    <string name="projects_request_status_closed">Oñembotýma</string>
     <string name="projects_request_back_to_list">Ejevy tysýire</string>
     <string name="projects_request_repository">Ñongatuha: %1$s</string>
     <string name="projects_request_source">Heñoiha: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Diseño, emoheñói, embosako\'i, ekomenta ha ehecha</string>
     <string name="projects_access_role_write">Emoheñói, embosako\'i, ekomenta ha ehecha</string>
     <string name="projects_all_projects">Opaite proyecto</string>
-    <string name="projects_create_allow_search">Eipysyrõ opavavépe oheka proyecto</string>
     <string name="projects_create_import_backup">Emoinge respaldo-gui (ndaha\'éi mbaretépe)</string>
     <string name="projects_create_upload_json">Ehupi .json archivo</string>
     <string name="projects_settings_not_set">Noñemoĩri</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">Ndaikatúi oñemoheñói gueteri item peteĩchagua. Emoheñói raẽ umi item ru/sy oñeikotevẽva.</string>
     <string name="projects_create_blocked_no_options">Ndaikatúi oñemoheñói: %1$s tekotevẽ ha ndoguerekói mba\'eporavorã. Embojoapy poravorã Design-pe.</string>
     <string name="projects_attachment_remove">Embogue adjunto</string>
+    <string name="projects_create_allow_public">Eipysyrõ opavavépe ohecha proyecto ha ohai comentario hese</string>
+    <string name="projects_request_delete_title">Hundi ñembojuaju jerure</string>
+    <string name="projects_request_delete_message">Añetehápe ehundise ko ñembojuaju jerure?</string>
+    <string name="projects_board_delete_column_title">Hundi columna</string>
+    <string name="projects_board_delete_column_message">Añetehápe ehundise \"%1$s\" columna? Kóva ndaikatumo\'ãi oñembojevy.</string>
+    <string name="projects_object_delete_named">Añetehápe ehundise \"%1$s\"? Ko tembiapo ndaikatumo\'ãi oñembojevy.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Añetehápe ehundise \"%1$s\" ha %2$s mba\'e oĩva iguýpe? Ko tembiapo ndaikatumo\'ãi oñembojevy.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Ndaikatúi oñembojuaju: %1$s</string>
 </resources>

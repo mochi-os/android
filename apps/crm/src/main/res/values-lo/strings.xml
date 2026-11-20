@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບ CRM ນີ້? ວັດຖຸ, ຄຳເຫັນ, ແລະ ການຕັ້ງຄ່າທັງໝົດຈະຖືກລຶບຖາວອນ.</string>
     <string name="crm_object_unwatch">ເຊົາຕິດຕາມ</string>
     <string name="crm_object_delete_title">ລຶບວັດຖຸ</string>
-    <string name="crm_object_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບວັດຖຸນີ້? ການກະທຳນີ້ບໍ່ສາມາດກັບຄືນໄດ້.</string>
     <string name="crm_parent_none">ບໍ່ມີລາຍການແມ່</string>
     <string name="crm_links_empty">ບໍ່ມີລິ້ງ</string>
     <string name="crm_links_section_relates">ກ່ຽວຂ້ອງກັບ</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">ນຳເຂົ້າຈາກສຳຮອງຂໍ້ມູນ (ບໍ່ບັງຄັບ)</string>
     <string name="crm_export">ສົ່ງອອກຂໍ້ມູນ</string>
     <string name="crm_exporting">ກຳລັງກຽມການສົ່ງອອກ…</string>
-    <string name="crm_create_allow_search">ອະນຸຍາດໃຫ້ໃຜກໍຕາມຊອກຫາ CRM</string>
     <string name="crm_no_crms_found">ບໍ່ພົບ CRM</string>
     <string name="crm_create_blocked_no_parents">ຍັງບໍ່ສາມາດສ້າງປະເພດລາຍການໄດ້. ສ້າງລາຍການແມ່ທີ່ຕ້ອງການກ່ອນ.</string>
     <string name="crm_export_csv">ສົ່ງອອກ CSV</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">ຕົວຢ່າງ %1$s</string>
     <string name="crm_option_delete_title">ລົບຕົວເລືອກ</string>
     <string name="crm_option_delete_message">ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບຕົວເລືອກ \"%1$s\"?</string>
+    <string name="crm_create_public">ອະນຸຍາດໃຫ້ໃຜກໍຕາມເບິ່ງ ແລະ ສະແດງຄຳເຫັນໃນ CRM</string>
+    <string name="crm_board_delete_column">ລົບຖັນ</string>
+    <string name="crm_board_delete_column_message">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບຖັນ \"%1$s\"? ນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
+    <string name="crm_object_delete_named">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"%1$s\"? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລົບ \"%1$s\" ແລະ %2$s ລາຍການ ທີ່ຢູ່ກ້ອງມັນ? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">ບໍ່ສາມາດເພີ່ມໄຟລ໌ແນບ %1$s ລາຍການ: %2$s</item>
+    </plurals>
 </resources>

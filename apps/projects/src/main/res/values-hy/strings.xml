@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Բաց</string>
     <string name="projects_request_status_merged">Միաձուլված է</string>
     <string name="projects_request_merge">Միաձուլել</string>
-    <string name="projects_request_close">Փակել</string>
     <string name="projects_request_merge_dialog_title">Միաձուլել</string>
     <string name="projects_request_method">Եղանակ</string>
     <string name="projects_request_method_merge">Միաձուլել</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Իսկապե՞ս ցանկանում եք ջնջել այս ծրագիրը: Բոլոր օբյեկտները, մեկնաբանությունները և կարգավորումները ընդմիշտ կհեռացվեն:</string>
     <string name="projects_object_unwatch">Չհետևել</string>
     <string name="projects_object_delete_title">Ջնջել օբյեկտը</string>
-    <string name="projects_object_delete_message">Իսկապե՞ս ցանկանում եք ջնջել այս օբյեկտը: Այս գործողությունը հնարավոր չէ հետարկել:</string>
     <string name="projects_parent_none">Ծնող չկա</string>
     <string name="projects_links_empty">Կապեր չկան</string>
     <string name="projects_links_section_relates">Կապված է</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Կցորդներ չկան</string>
     <string name="projects_attachment_default_name">կցորդ</string>
     <string name="projects_request_new">Նոր ձուլման հարցում</string>
-    <string name="projects_request_status_closed">Փակված է</string>
     <string name="projects_request_back_to_list">Վերադառնալ ցանկ</string>
     <string name="projects_request_repository">Պահոց՝ %1$s</string>
     <string name="projects_request_source">Աղբյուր՝ %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Ձևավորել, ստեղծել, խմբագրել, մեկնաբանել և դիտել</string>
     <string name="projects_access_role_write">Ստեղծել, խմբագրել, մեկնաբանել և դիտել</string>
     <string name="projects_all_projects">Բոլոր նախագծերը</string>
-    <string name="projects_create_allow_search">Թույլատրել բոլորին որոնել նախագիծ</string>
     <string name="projects_create_import_backup">Ներմուծում պահուստավորումից (ընտրովի)</string>
     <string name="projects_create_upload_json">Վերբեռնել .json ֆայլ</string>
     <string name="projects_settings_not_set">Չի սահմանված</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Տարրերի տեսակներ դեռ հնարավոր չէ ստեղծել։ Նախ ստեղծեք պահանջվող ծնող տարրերը։</string>
     <string name="projects_create_blocked_no_options">Հնարավոր չէ ստեղծել՝ %1$s-ը պարտադիր է, բայց ընտրելու տարբերակներ չունի. Ավելացրեք տարբերակներ Դիզայնում։</string>
     <string name="projects_attachment_remove">Հեռացնել կցորդը</string>
+    <string name="projects_create_allow_public">Թույլատրել բոլորին դիտել նախագիծը և մեկնաբանել այն</string>
+    <string name="projects_request_delete_title">Ջնջել միաձուլման հարցումը</string>
+    <string name="projects_request_delete_message">Վստա՞հ եք, որ ուզում եք ջնջել այս միաձուլման հարցումը։</string>
+    <string name="projects_board_delete_column_title">Ջնջել սյունակը</string>
+    <string name="projects_board_delete_column_message">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s» սյունակը։ Սա հնարավոր չէ հետարկել։</string>
+    <string name="projects_object_delete_named">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը։ Այս գործողությունը հնարավոր չէ հետարկել։</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը և դրա տակ գտնվող %2$s տարրը։ Այս գործողությունը հնարավոր չէ հետարկել։</item>
+        <item quantity="other">Վստա՞հ եք, որ ուզում եք ջնջել «%1$s»-ը և դրա տակ գտնվող %2$s տարրը։ Այս գործողությունը հնարավոր չէ հետարկել։</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Չհաջողվեց կցել: %1$s</string>
 </resources>

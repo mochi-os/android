@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Ka tabbata kana son share wannan CRM? Duk abubuwa, sharhi, da saituna za a cire su har abada.</string>
     <string name="crm_object_unwatch">Daina kallo</string>
     <string name="crm_object_delete_title">Share abu</string>
-    <string name="crm_object_delete_message">Ka tabbata kana son share wannan abu? Ba za a iya soke wannan aikin ba.</string>
     <string name="crm_parent_none">Babu iyaye</string>
     <string name="crm_links_empty">Babu hanyoyin haɗi</string>
     <string name="crm_links_section_relates">Yana da alaƙa da</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Shigo da daga backup (na zaɓi)</string>
     <string name="crm_export">Fitar da bayanai</string>
     <string name="crm_exporting">Ana shirya fitarwa…</string>
-    <string name="crm_create_allow_search">Ba kowa damar nemo CRM</string>
     <string name="crm_no_crms_found">Babu CRMs da aka samu</string>
     <string name="crm_create_blocked_no_parents">Ba a iya ƙirƙirar nau\'o\'in abubuwa tukuna. Fara ƙirƙirar parent items da ake buƙata.</string>
     <string name="crm_export_csv">Fitar da CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Samfuri %1$s</string>
     <string name="crm_option_delete_title">Goge zaɓi</string>
     <string name="crm_option_delete_message">Kana da tabbacin kana son goge zaɓin \"%1$s\"?</string>
+    <string name="crm_create_public">Ba kowa damar duba CRM da yin sharhi a kansa</string>
+    <string name="crm_board_delete_column">Goge column</string>
+    <string name="crm_board_delete_column_message">Ka tabbata kana son goge column ɗin \"%1$s\"? Ba za a iya juya wannan ba.</string>
+    <string name="crm_object_delete_named">Ka tabbata kana son goge \"%1$s\"? Ba za a iya juya wannan aiki ba.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Ka tabbata kana son goge \"%1$s\" da abu %2$s da ke ƙarƙashinsa? Ba za a iya juya wannan aiki ba.</item>
+        <item quantity="other">Ka tabbata kana son goge \"%1$s\" da abubuwa %2$s da ke ƙarƙashinsa? Ba za a iya juya wannan aiki ba.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Ba a iya ƙara haɗewa %1$s ba: %2$s</item>
+        <item quantity="other">Ba a iya ƙara haɗe-haɗe %1$s ba: %2$s</item>
+    </plurals>
 </resources>

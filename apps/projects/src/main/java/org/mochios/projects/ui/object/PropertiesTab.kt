@@ -44,6 +44,7 @@ import androidx.compose.material3.rememberDatePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -58,8 +59,8 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import org.mochios.android.model.Checklist
+import org.mochios.android.model.ChecklistItem
 import org.mochios.android.model.User
 import org.mochios.android.ui.components.ChoicePrefix
 import org.mochios.android.ui.components.FormField
@@ -79,7 +80,6 @@ import org.mochios.android.ui.components.PersonPicker
 import org.mochios.projects.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.weekLocale
-import org.mochios.projects.model.ChecklistItem
 import org.mochios.projects.model.FieldOption
 import org.mochios.projects.model.ProjectDetails
 import org.mochios.projects.model.ProjectField
@@ -745,28 +745,22 @@ private fun parseOptionColour(hex: String): Color {
     }
 }
 
+/**
+ * A checklist field, in the shape every client of the project shares
+ * ([Checklist]): an edit keeps each item's id and the keys another client
+ * wrote, and a value that is not a list of items reads as no items.
+ */
 @Composable
-private fun ChecklistEditor(
+internal fun ChecklistEditor(
     fieldName: String?,
     value: String,
     isReadonly: Boolean,
     onValueChange: (String) -> Unit
 ) {
-    val gson = remember { Gson() }
-    val items = remember(value) {
-        try {
-            if (value.isBlank()) emptyList()
-            else {
-                val type = object : TypeToken<List<ChecklistItem>>() {}.type
-                gson.fromJson<List<ChecklistItem>>(value, type)
-            }
-        } catch (_: Exception) {
-            emptyList()
-        }
-    }
+    val items = remember(value) { Checklist.parse(value) }
 
     fun updateItems(newItems: List<ChecklistItem>) {
-        onValueChange(gson.toJson(newItems))
+        onValueChange(Checklist.write(newItems))
     }
 
     Column {
@@ -779,17 +773,17 @@ private fun ChecklistEditor(
             Spacer(modifier = Modifier.height(4.dp))
         }
 
-        items.forEachIndexed { index, item ->
+        items.forEachIndexed { index, item -> key(item.id) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Checkbox(
-                    checked = item.checked,
+                    checked = item.done,
                     onCheckedChange = { checked ->
                         if (isReadonly) return@Checkbox
                         val updated = items.toMutableList()
-                        updated[index] = item.copy(checked = checked)
+                        updated[index] = item.copy(done = checked)
                         updateItems(updated)
                     },
                     enabled = !isReadonly
@@ -819,12 +813,12 @@ private fun ChecklistEditor(
                     }
                 }
             }
-        }
+        } }
 
         if (!isReadonly) {
             MochiTextButton(
                 onClick = {
-                    updateItems(items + ChecklistItem(text = "", checked = false))
+                    updateItems(items + Checklist.item())
                 }
             ) {
                 Icon(Icons.Default.Add, contentDescription = null, modifier = Modifier.size(16.dp))

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Atvērts</string>
     <string name="projects_request_status_merged">Apvienots</string>
     <string name="projects_request_merge">Apvienot</string>
-    <string name="projects_request_close">Slēgt</string>
     <string name="projects_request_merge_dialog_title">Apvienot</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Apvienot</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Vai tiešām vēlaties dzēst šo projektu? Visi objekti, komentāri un iestatījumi tiks neatgriezeniski noņemti.</string>
     <string name="projects_object_unwatch">Pārtraukt vērošanu</string>
     <string name="projects_object_delete_title">Dzēst objektu</string>
-    <string name="projects_object_delete_message">Vai tiešām vēlaties dzēst šo objektu? Šo darbību nevar atsaukt.</string>
     <string name="projects_parent_none">Nav vecākobjekta</string>
     <string name="projects_links_empty">Nav saišu</string>
     <string name="projects_links_section_relates">Saistīts ar</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Nav pielikumu</string>
     <string name="projects_attachment_default_name">pielikums</string>
     <string name="projects_request_new">Jauns sapludināšanas pieprasījums</string>
-    <string name="projects_request_status_closed">Slēgts</string>
     <string name="projects_request_back_to_list">Atpakaļ uz sarakstu</string>
     <string name="projects_request_repository">Repozitorijs: %1$s</string>
     <string name="projects_request_source">Avots: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Veidot, izveidot, rediģēt, komentēt un skatīt</string>
     <string name="projects_access_role_write">Izveidot, rediģēt, komentēt un skatīt</string>
     <string name="projects_all_projects">Visi projekti</string>
-    <string name="projects_create_allow_search">Ļaut jebkuram meklēt projektu</string>
     <string name="projects_create_import_backup">Importēt no rezerves kopijas (neobligāti)</string>
     <string name="projects_create_upload_json">Augšupielādēt .json failu</string>
     <string name="projects_settings_not_set">Nav iestatīts</string>
@@ -333,4 +329,16 @@
     <string name="projects_create_object_no_types">Vēl nevar izveidot vienumu tipus. Vispirms izveidojiet nepieciešamos vecākvienumus.</string>
     <string name="projects_create_blocked_no_options">Nevar izveidot: %1$s ir obligāts, taču tam nav izvēles iespēju. Pievienojiet opcijas Dizainā.</string>
     <string name="projects_attachment_remove">Noņemt pielikumu</string>
+    <string name="projects_create_allow_public">Ļaut jebkuram skatīt un komentēt projektu</string>
+    <string name="projects_request_delete_title">Dzēst sapludināšanas pieprasījumu</string>
+    <string name="projects_request_delete_message">Vai tiešām vēlies dzēst šo sapludināšanas pieprasījumu?</string>
+    <string name="projects_board_delete_column_title">Dzēst kolonnu</string>
+    <string name="projects_board_delete_column_message">Vai tiešām vēlies dzēst kolonnu \"%1$s\"? To nevar atsaukt.</string>
+    <string name="projects_object_delete_named">Vai tiešām vēlies dzēst \"%1$s\"? Šo darbību nevar atsaukt.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="zero">Vai tiešām vēlies dzēst \"%1$s\" un %2$s vienumus zem tā? Šo darbību nevar atsaukt.</item>
+        <item quantity="one">Vai tiešām vēlies dzēst \"%1$s\" un %2$s vienumu zem tā? Šo darbību nevar atsaukt.</item>
+        <item quantity="other">Vai tiešām vēlies dzēst \"%1$s\" un %2$s vienumus zem tā? Šo darbību nevar atsaukt.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Neizdevās pievienot: %1$s</string>
 </resources>

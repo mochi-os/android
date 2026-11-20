@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">ክፍት</string>
     <string name="projects_request_status_merged">ተዋህዷል</string>
     <string name="projects_request_merge">አዋህድ</string>
-    <string name="projects_request_close">ዝጋ</string>
     <string name="projects_request_merge_dialog_title">አዋህድ</string>
     <string name="projects_request_method">ዘዴ</string>
     <string name="projects_request_method_merge">አዋህድ</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">ይህን ፕሮጀክት መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት? ሁሉም ነገሮች፣ አስተያየቶች እና ቅንብሮች በቋሚነት ይወገዳሉ።</string>
     <string name="projects_object_unwatch">መከታተል አቁም</string>
     <string name="projects_object_delete_title">ነገር ሰርዝ</string>
-    <string name="projects_object_delete_message">ይህን ነገር መሰረዝ እንደሚፈልጉ እርግጠኛ ነዎት? ይህ ድርጊት መልሶ መመለስ አይቻልም።</string>
     <string name="projects_parent_none">ምንም ወላጅ የለም</string>
     <string name="projects_links_empty">ምንም አገናኞች የሉም</string>
     <string name="projects_links_section_relates">ይዛመዳል ከ</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">ምንም አባሪዎች የሉም</string>
     <string name="projects_attachment_default_name">አባሪ</string>
     <string name="projects_request_new">አዲስ የውህደት ጥያቄ</string>
-    <string name="projects_request_status_closed">ተዘግቷል</string>
     <string name="projects_request_back_to_list">ወደ ዝርዝር ተመለስ</string>
     <string name="projects_request_repository">ማከማቻ: %1$s</string>
     <string name="projects_request_source">ምንጭ: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ይንደፉ፣ ይፍጠሩ፣ ያርትዑ፣ አስተያየት ይስጡ እና ይመልከቱ</string>
     <string name="projects_access_role_write">ይፍጠሩ፣ ያርትዑ፣ አስተያየት ይስጡ እና ይመልከቱ</string>
     <string name="projects_all_projects">ሁሉም ፕሮጀክቶች</string>
-    <string name="projects_create_allow_search">ማንኛውም ሰው ፕሮጀክት እንዲፈልግ ፍቀድ</string>
     <string name="projects_create_import_backup">ከመጠባበቂያ አስመጣ (አማራጭ)</string>
     <string name="projects_create_upload_json">.json ፋይል ይስቀሉ</string>
     <string name="projects_settings_not_set">አልተዋቀረም</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">እስካሁን ምንም የንጥል አይነቶች ሊፈጠሩ አይችሉም። መጀመሪያ የሚያስፈልጉትን የወላጅ ንጥሎች ይፍጠሩ።</string>
     <string name="projects_create_blocked_no_options">መፍጠር አልተቻለም፦ %1$s ያስፈልጋል ግን የሚመረጡ አማራጮች የሉትም። በንድፍ ውስጥ አማራጮችን ያክሉ።</string>
     <string name="projects_attachment_remove">አባሪውን ያስወግዱ</string>
+    <string name="projects_create_allow_public">ማንኛውም ሰው ፕሮጀክቱን እንዲያይ እና አስተያየት እንዲሰጥ ፍቀድ</string>
+    <string name="projects_request_delete_title">የውህደት ጥያቄ ሰርዝ</string>
+    <string name="projects_request_delete_message">ይህን የውህደት ጥያቄ መሰረዝ እንደምትፈልግ እርግጠኛ ነህ?</string>
+    <string name="projects_board_delete_column_title">ዓምድ ሰርዝ</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" ዓምድን መሰረዝ እንደምትፈልግ እርግጠኛ ነህ? ይህ ሊቀለበስ አይችልም።</string>
+    <string name="projects_object_delete_named">\"%1$s\"ን መሰረዝ እንደምትፈልግ እርግጠኛ ነህ? ይህ እርምጃ ሊቀለበስ አይችልም።</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\"ን እና ከሥሩ ያሉትን %2$s ንጥል መሰረዝ እንደምትፈልግ እርግጠኛ ነህ? ይህ እርምጃ ሊቀለበስ አይችልም።</item>
+        <item quantity="other">\"%1$s\"ን እና ከሥሩ ያሉትን %2$s ንጥሎች መሰረዝ እንደምትፈልግ እርግጠኛ ነህ? ይህ እርምጃ ሊቀለበስ አይችልም።</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ማያያዝ አልተቻለም፦ %1$s</string>
 </resources>

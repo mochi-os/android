@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">خلاص</string>
     <string name="projects_request_status_merged">یوځای شو</string>
     <string name="projects_request_merge">یوځای کول</string>
-    <string name="projects_request_close">وتړئ</string>
     <string name="projects_request_merge_dialog_title">یوځای کول</string>
     <string name="projects_request_method">میتود</string>
     <string name="projects_request_method_merge">یوځای کول</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ایا تاسو ډاډه یاست چې غواړئ دا پروژه ړنګه کړئ؟ ټول توکي، تبصرې، او ترتیبات به د تل لپاره لرې شي.</string>
     <string name="projects_object_unwatch">کتل بند کړئ</string>
     <string name="projects_object_delete_title">توکی ړنګ کړئ</string>
-    <string name="projects_object_delete_message">ایا تاسو ډاډه یاست چې غواړئ دا توکی ړنګ کړئ؟ دا کار بیرته نه شي راګرځیدلی.</string>
     <string name="projects_parent_none">هیڅ مور/پلار نشته</string>
     <string name="projects_links_empty">هیڅ لینکونه نشته</string>
     <string name="projects_links_section_relates">اړوند دي له</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">هیڅ ضمیمې نشته</string>
     <string name="projects_attachment_default_name">ضمیمه</string>
     <string name="projects_request_new">د یوځای کولو نوې غوښتنه</string>
-    <string name="projects_request_status_closed">بند شوی</string>
     <string name="projects_request_back_to_list">لیست ته بیرته</string>
     <string name="projects_request_repository">ذخیره: %1$s</string>
     <string name="projects_request_source">سرچینه: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ډیزاین، جوړول، سمول، تبصره او لیدل</string>
     <string name="projects_access_role_write">جوړول، سمول، تبصره او لیدل</string>
     <string name="projects_all_projects">ټول پروژې</string>
-    <string name="projects_create_allow_search">هر چا ته اجازه ورکړئ چې د پروژې لټون وکړي</string>
     <string name="projects_create_import_backup">له بیک اپ څخه وارد کړئ (اختیاري)</string>
     <string name="projects_create_upload_json">د .json فایل اپلوډ کړئ</string>
     <string name="projects_settings_not_set">نه دی ټاکل شوی</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
     <string name="projects_create_blocked_no_options">جوړول نشي کیدی: %1$s اړین دی خو د غوره کولو لپاره کوم انتخاب نلري. په ډیزاین کې انتخابونه اضافه کړئ.</string>
     <string name="projects_attachment_remove">ضمیمه لرې کړئ</string>
+    <string name="projects_create_allow_public">هر چا ته اجازه ورکړئ چې پروژه وګوري او پر هغې تبصره وکړي</string>
+    <string name="projects_request_delete_title">د یوځای کولو غوښتنه ړنګه کړئ</string>
+    <string name="projects_request_delete_message">ایا تاسو ډاډه یاست چې غواړئ دا د یوځای کولو غوښتنه ړنګه کړئ؟</string>
+    <string name="projects_board_delete_column_title">کالم ړنګ کړئ</string>
+    <string name="projects_board_delete_column_message">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" کالم ړنګ کړئ؟ دا نشي بیرته اخیستل کیدلی.</string>
+    <string name="projects_object_delete_named">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" او د هغه لاندې %2$s توکی ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</item>
+        <item quantity="other">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" او د هغه لاندې %2$s توکي ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ضمیمه کول ونشول: %1$s</string>
 </resources>

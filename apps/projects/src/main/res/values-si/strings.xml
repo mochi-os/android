@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">විවෘතයි</string>
     <string name="projects_request_status_merged">ඒකාබද්ධ කරන ලදී</string>
     <string name="projects_request_merge">ඒකාබද්ධ කරන්න</string>
-    <string name="projects_request_close">වසන්න</string>
     <string name="projects_request_merge_dialog_title">ඒකාබද්ධ කරන්න</string>
     <string name="projects_request_method">ක්‍රමය</string>
     <string name="projects_request_method_merge">ඒකාබද්ධ කරන්න</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ඔබට මෙම ව්‍යාපෘතිය මැකීමට අවශ්‍ය බව විශ්වාසද? සියලුම වස්තු, අදහස් සහ සැකසුම් ස්ථිරවම ඉවත් වේ.</string>
     <string name="projects_object_unwatch">නැරඹීම නවත්වන්න</string>
     <string name="projects_object_delete_title">වස්තුව මකන්න</string>
-    <string name="projects_object_delete_message">ඔබට මෙම වස්තුව මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව ආපසු හැරවිය නොහැක.</string>
     <string name="projects_parent_none">මව් වස්තුවක් නැත</string>
     <string name="projects_links_empty">සබැඳි නැත</string>
     <string name="projects_links_section_relates">සම්බන්ධ වේ</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">ඇමුණුම් නැත</string>
     <string name="projects_attachment_default_name">ඇමුණුම</string>
     <string name="projects_request_new">නව ඒකාබද්ධ කිරීමේ ඉල්ලීම</string>
-    <string name="projects_request_status_closed">වසා ඇත</string>
     <string name="projects_request_back_to_list">ලැයිස්තුවට ආපසු</string>
     <string name="projects_request_repository">ගබඩාව: %1$s</string>
     <string name="projects_request_source">මූලාශ්‍රය: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">සැලසුම් කිරීම, සෑදීම, සංස්කරණය, අදහස් දැක්වීම සහ බැලීම</string>
     <string name="projects_access_role_write">සෑදීම, සංස්කරණය, අදහස් දැක්වීම සහ බැලීම</string>
     <string name="projects_all_projects">සියලු ව්‍යාපෘති</string>
-    <string name="projects_create_allow_search">ව්‍යාපෘතිය සොයා ගැනීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
     <string name="projects_create_import_backup">උපස්ථයෙන් ආයාත කරන්න (විකල්ප)</string>
     <string name="projects_create_upload_json">.json ගොනුව උඩුගත කරන්න</string>
     <string name="projects_settings_not_set">සකසා නැත</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">තවම අයිතම වර්ග සෑදිය නොහැක. අවශ්‍ය මූලික අයිතම පළමුව සාදන්න.</string>
     <string name="projects_create_blocked_no_options">සෑදිය නොහැක: %1$s අවශ්‍ය නමුත් තෝරා ගැනීමට විකල්ප නොමැත. නිර්මාණයේ විකල්ප එක් කරන්න.</string>
     <string name="projects_attachment_remove">ඇමුණුම ඉවත් කරන්න</string>
+    <string name="projects_create_allow_public">ව්‍යාපෘතිය බැලීමට සහ එයට අදහස් දැක්වීමට ඕනෑම කෙනෙකුට අවසර දෙන්න</string>
+    <string name="projects_request_delete_title">ඒකාබද්ධ කිරීමේ ඉල්ලීම මකන්න</string>
+    <string name="projects_request_delete_message">ඔබට මෙම ඒකාබද්ධ කිරීමේ ඉල්ලීම මැකීමට අවශ්‍ය බව විශ්වාසද?</string>
+    <string name="projects_board_delete_column_title">තීරුව මකන්න</string>
+    <string name="projects_board_delete_column_message">ඔබට \"%1$s\" තීරුව මැකීමට අවශ්‍ය බව විශ්වාසද? මෙය අහෝසි කළ නොහැක.</string>
+    <string name="projects_object_delete_named">ඔබට \"%1$s\" මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">ඔබට \"%1$s\" සහ ඊට යටතේ ඇති අයිතම %2$s මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</item>
+        <item quantity="other">ඔබට \"%1$s\" සහ ඊට යටතේ ඇති අයිතම %2$s මැකීමට අවශ්‍ය බව විශ්වාසද? මෙම ක්‍රියාව අහෝසි කළ නොහැක.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ඇමිණීමට නොහැකි විය: %1$s</string>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">کھلا</string>
     <string name="projects_request_status_merged">merge ہو گیا</string>
     <string name="projects_request_merge">ضم کریں</string>
-    <string name="projects_request_close">بند کریں</string>
     <string name="projects_request_merge_dialog_title">ضم کریں</string>
     <string name="projects_request_method">طریقہ</string>
     <string name="projects_request_method_merge">ضم کریں</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">کیا آپ واقعی اس پراجیکٹ کو حذف کرنا چاہتے ہیں؟ تمام اشیاء، تبصرے اور ترتیبات مستقل طور پر ہٹا دی جائیں گی۔</string>
     <string name="projects_object_unwatch">نگرانی ختم کریں</string>
     <string name="projects_object_delete_title">آبجیکٹ حذف کریں</string>
-    <string name="projects_object_delete_message">کیا آپ واقعی اس آبجیکٹ کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں ہو سکتا۔</string>
     <string name="projects_parent_none">کوئی پیرنٹ نہیں</string>
     <string name="projects_links_empty">کوئی لنکس نہیں</string>
     <string name="projects_links_section_relates">متعلق ہے</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">کوئی منسلکات نہیں</string>
     <string name="projects_attachment_default_name">منسلکہ</string>
     <string name="projects_request_new">نئی مرج درخواست</string>
-    <string name="projects_request_status_closed">بند</string>
     <string name="projects_request_back_to_list">فہرست پر واپس</string>
     <string name="projects_request_repository">ریپوزٹری: %1$s</string>
     <string name="projects_request_source">ماخذ: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ڈیزائن کرنا، بنانا، ترمیم کرنا، تبصرہ کرنا اور دیکھنا</string>
     <string name="projects_access_role_write">بنانا، ترمیم کرنا، تبصرہ کرنا اور دیکھنا</string>
     <string name="projects_all_projects">تمام پروجیکٹس</string>
-    <string name="projects_create_allow_search">کسی کو بھی پروجیکٹ تلاش کرنے کی اجازت دیں</string>
     <string name="projects_create_import_backup">بیک اپ سے درآمد کریں (اختیاری)</string>
     <string name="projects_create_upload_json">.json فائل اپ لوڈ کریں</string>
     <string name="projects_settings_not_set">سیٹ نہیں ہے</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">ابھی کوئی آئٹم اقسام نہیں بنائی جا سکتیں۔ پہلے درکار پیرنٹ آئٹمز بنائیں۔</string>
     <string name="projects_create_blocked_no_options">بنایا نہیں جا سکتا: %1$s درکار ہے مگر اس میں منتخب کرنے کے لیے کوئی اختیار نہیں۔ ڈیزائن میں اختیارات شامل کریں۔</string>
     <string name="projects_attachment_remove">اٹیچمنٹ ہٹائیں</string>
+    <string name="projects_create_allow_public">کسی کو بھی پروجیکٹ دیکھنے اور اس پر تبصرہ کرنے کی اجازت دیں</string>
+    <string name="projects_request_delete_title">ضم کرنے کی درخواست حذف کریں</string>
+    <string name="projects_request_delete_message">کیا آپ واقعی ضم کرنے کی اس درخواست کو حذف کرنا چاہتے ہیں؟</string>
+    <string name="projects_board_delete_column_title">کالم حذف کریں</string>
+    <string name="projects_board_delete_column_message">کیا آپ واقعی \"%1$s\" کالم کو حذف کرنا چاہتے ہیں؟ یہ واپس نہیں لیا جا سکتا۔</string>
+    <string name="projects_object_delete_named">کیا آپ واقعی \"%1$s\" کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">کیا آپ واقعی \"%1$s\" اور اس کے نیچے موجود %2$s آئٹم کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔</item>
+        <item quantity="other">کیا آپ واقعی \"%1$s\" اور اس کے نیچے موجود %2$s آئٹمز کو حذف کرنا چاہتے ہیں؟ یہ عمل واپس نہیں لیا جا سکتا۔</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">منسلک نہیں کیا جا سکا: %1$s</string>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Open</string>
     <string name="projects_request_status_merged">Samanslegen</string>
     <string name="projects_request_merge">Slå saman</string>
-    <string name="projects_request_close">Lat att</string>
     <string name="projects_request_merge_dialog_title">Slå saman</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Slå saman</string>
@@ -164,7 +163,6 @@
     <string name="projects_settings_delete_confirm_message">Er du sikker på at du vil sletta dette prosjektet? Alle objekt, kommentarar og innstillingar vert fjerna permanent.</string>
     <string name="projects_object_unwatch">Slutt å følgje</string>
     <string name="projects_object_delete_title">Slett objekt</string>
-    <string name="projects_object_delete_message">Er du sikker på at du vil sletta dette objektet? Denne handlinga kan ikkje angrast.</string>
     <string name="projects_parent_none">Inga overordna</string>
     <string name="projects_links_empty">Ingen lenkjer</string>
     <string name="projects_links_section_relates">Relaterer til</string>
@@ -187,7 +185,6 @@
     <string name="projects_attachment_empty">Ingen vedlegg</string>
     <string name="projects_attachment_default_name">vedlegg</string>
     <string name="projects_request_new">Ny fletteførespurnad</string>
-    <string name="projects_request_status_closed">Lukka</string>
     <string name="projects_request_back_to_list">Tilbake til lista</string>
     <string name="projects_request_repository">Lager: %1$s</string>
     <string name="projects_request_source">Kjelde: %1$s</string>
@@ -297,7 +294,6 @@
     <string name="projects_access_selected">Vald: %1$s</string>
     <string name="projects_access_role_comment">Kommenter og sjå</string>
     <string name="projects_all_projects">Alle prosjekt</string>
-    <string name="projects_create_allow_search">Tillat alle å søkje etter prosjekt</string>
     <string name="projects_create_upload_json">Last opp .json-fil</string>
     <string name="projects_settings_not_set">Ikkje sett</string>
     <string name="projects_settings_updated">Prosjekt oppdatert</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Ingen elementtypar kan opprettast enno. Opprett dei påkravde overordna elementa først.</string>
     <string name="projects_create_blocked_no_options">Kan ikkje opprette: %1$s er påkravd, men har ingen alternativ å velje mellom. Legg til alternativ i Design.</string>
     <string name="projects_attachment_remove">Fjern vedlegg</string>
+    <string name="projects_create_allow_public">Tillat alle å sjå og kommentere prosjektet</string>
+    <string name="projects_request_delete_title">Slett fletteførespurnad</string>
+    <string name="projects_request_delete_message">Er du sikker på at du vil slette denne fletteførespurnaden?</string>
+    <string name="projects_board_delete_column_title">Slett kolonne</string>
+    <string name="projects_board_delete_column_message">Er du sikker på at du vil slette kolonnen «%1$s»? Dette kan ikkje angrast.</string>
+    <string name="projects_object_delete_named">Er du sikker på at du vil slette «%1$s»? Denne handlinga kan ikkje angrast.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Er du sikker på at du vil slette «%1$s» og %2$s element under det? Denne handlinga kan ikkje angrast.</item>
+        <item quantity="other">Er du sikker på at du vil slette «%1$s» og %2$s element under det? Denne handlinga kan ikkje angrast.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Kunne ikkje leggje ved: %1$s</string>
 </resources>

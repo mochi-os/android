@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Naozaj chcete odstrániť toto CRM? Všetky objekty, komentáre a nastavenia budú natrvalo odstránené.</string>
     <string name="crm_object_unwatch">Prestať sledovať</string>
     <string name="crm_object_delete_title">Odstrániť objekt</string>
-    <string name="crm_object_delete_message">Naozaj chcete odstrániť tento objekt? Túto akciu nie je možné vrátiť späť.</string>
     <string name="crm_parent_none">Bez nadradeného</string>
     <string name="crm_links_empty">Žiadne prepojenia</string>
     <string name="crm_links_section_relates">Súvisí s</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importovať zo zálohy (voliteľné)</string>
     <string name="crm_export">Exportovať údaje</string>
     <string name="crm_exporting">Pripravuje sa export…</string>
-    <string name="crm_create_allow_search">Povoliť komukoľvek vyhľadávať CRM</string>
     <string name="crm_no_crms_found">Nenašli sa žiadne CRM</string>
     <string name="crm_create_blocked_no_parents">Zatiaľ sa nedajú vytvoriť žiadne typy položiek. Najprv vytvorte požadované nadradené položky.</string>
     <string name="crm_export_csv">Exportovať CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">Ukážka %1$s</string>
     <string name="crm_option_delete_title">Odstrániť možnosť</string>
     <string name="crm_option_delete_message">Naozaj chcete odstrániť možnosť \"%1$s\"?</string>
+    <string name="crm_create_public">Povoliť komukoľvek zobraziť a komentovať CRM</string>
+    <string name="crm_board_delete_column">Odstrániť stĺpec</string>
+    <string name="crm_board_delete_column_message">Naozaj chcete odstrániť stĺpec „%1$s“? Túto akciu nemožno vrátiť späť.</string>
+    <string name="crm_object_delete_named">Naozaj chcete odstrániť „%1$s“? Túto akciu nemožno vrátiť späť.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Naozaj chcete odstrániť „%1$s“ a %2$s položku pod ňou? Túto akciu nemožno vrátiť späť.</item>
+        <item quantity="few">Naozaj chcete odstrániť „%1$s“ a %2$s položky pod ňou? Túto akciu nemožno vrátiť späť.</item>
+        <item quantity="other">Naozaj chcete odstrániť „%1$s“ a %2$s položiek pod ňou? Túto akciu nemožno vrátiť späť.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Nepodarilo sa pridať %1$s prílohu: %2$s</item>
+        <item quantity="few">Nepodarilo sa pridať %1$s prílohy: %2$s</item>
+        <item quantity="other">Nepodarilo sa pridať %1$s príloh: %2$s</item>
+    </plurals>
 </resources>

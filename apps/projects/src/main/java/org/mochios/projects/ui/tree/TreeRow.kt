@@ -69,9 +69,11 @@ import org.mochios.projects.R
 import org.mochios.projects.model.Person
 import org.mochios.projects.model.ProjectField
 import org.mochios.projects.ui.board.parseColor
+import org.mochios.projects.ui.`object`.DeleteObjectDialog
 import org.mochios.projects.ui.project.ProjectViewModel
 import org.mochios.projects.util.HIERARCHY_ROOT
 import org.mochios.projects.util.parentAllowed
+import org.mochios.projects.util.objectTitle
 import org.mochios.projects.util.parentTargets
 import org.mochios.android.R as MochiR
 
@@ -89,6 +91,7 @@ fun TreeRow(
 ) {
     var showContextMenu by remember { mutableStateOf(false) }
     var showReparentDialog by remember { mutableStateOf(false) }
+    var showDeleteConfirm by remember { mutableStateOf(false) }
     val indent = (node.depth * 24).dp
     val obj = node.obj
     val uiState by viewModel.uiState.collectAsState()
@@ -271,7 +274,7 @@ fun TreeRow(
                             text = { Text(stringResource(MochiR.string.common_delete)) },
                             onClick = {
                                 showContextMenu = false
-                                onDelete()
+                                showDeleteConfirm = true
                             },
                             leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                             destructive = true,
@@ -325,6 +328,18 @@ fun TreeRow(
                 }
             }
         }
+    }
+
+    if (showDeleteConfirm) {
+        DeleteObjectDialog(
+            title = objectTitle(obj, projectDetails?.classes.orEmpty(), prefix),
+            descendants = viewModel.collectDescendants(obj.id).size,
+            onConfirm = {
+                showDeleteConfirm = false
+                onDelete()
+            },
+            onDismiss = { showDeleteConfirm = false },
+        )
     }
 
     if (showReparentDialog && onReparent != null) {

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">के तपाईं यो CRM मेटाउन चाहनुहुन्छ भन्ने कुरामा निश्चित हुनुहुन्छ? सबै वस्तुहरू, टिप्पणीहरू, र सेटिङहरू स्थायी रूपमा हटाइनेछन्।</string>
     <string name="crm_object_unwatch">हेर्न छोड्नुहोस्</string>
     <string name="crm_object_delete_title">वस्तु मेटाउनुहोस्</string>
-    <string name="crm_object_delete_message">के तपाईं यो वस्तु मेटाउन चाहनुहुन्छ भन्ने कुरामा निश्चित हुनुहुन्छ? यो कार्य पूर्ववत गर्न सकिँदैन।</string>
     <string name="crm_parent_none">कुनै अभिभावक छैन</string>
     <string name="crm_links_empty">कुनै लिङ्क छैन</string>
     <string name="crm_links_section_relates">सम्बन्धित छ</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">ब्याकअपबाट आयात गर्नुहोस् (वैकल्पिक)</string>
     <string name="crm_export">डेटा निर्यात गर्नुहोस्</string>
     <string name="crm_exporting">निर्यात तयार गर्दै…</string>
-    <string name="crm_create_allow_search">जोसुकैलाई CRM खोज्न अनुमति दिनुहोस्</string>
     <string name="crm_no_crms_found">कुनै CRM भेटिएन</string>
     <string name="crm_create_blocked_no_parents">अहिले कुनै आइटम प्रकार सिर्जना गर्न सकिँदैन। पहिले आवश्यक अभिभावक आइटमहरू सिर्जना गर्नुहोस्।</string>
     <string name="crm_export_csv">CSV निर्यात गर्नुहोस्</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">नमूना %1$s</string>
     <string name="crm_option_delete_title">विकल्प मेटाउनुहोस्</string>
     <string name="crm_option_delete_message">के तपाईं \"%1$s\" विकल्प मेटाउन निश्चित हुनुहुन्छ?</string>
+    <string name="crm_create_public">जोसुकैलाई CRM हेर्न र त्यसमा टिप्पणी गर्न अनुमति दिनुहोस्</string>
+    <string name="crm_board_delete_column">स्तम्भ मेटाउनुहोस्</string>
+    <string name="crm_board_delete_column_message">के तपाईं \"%1$s\" स्तम्भ मेटाउन निश्चित हुनुहुन्छ? यो फिर्ता गर्न सकिँदैन।</string>
+    <string name="crm_object_delete_named">के तपाईं \"%1$s\" मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">के तपाईं \"%1$s\" र यसको मुनिका %2$s वस्तु मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</item>
+        <item quantity="other">के तपाईं \"%1$s\" र यसको मुनिका %2$s वस्तु मेटाउन निश्चित हुनुहुन्छ? यो कार्य फिर्ता गर्न सकिँदैन।</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s एट्याचमेन्ट थप्न सकिएन: %2$s</item>
+        <item quantity="other">%1$s एट्याचमेन्टहरू थप्न सकिएन: %2$s</item>
+    </plurals>
 </resources>

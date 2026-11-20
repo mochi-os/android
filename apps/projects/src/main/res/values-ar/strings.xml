@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">مفتوح</string>
     <string name="projects_request_status_merged">تم الدمج</string>
     <string name="projects_request_merge">دمج</string>
-    <string name="projects_request_close">إغلاق</string>
     <string name="projects_request_merge_dialog_title">دمج</string>
     <string name="projects_request_method">الطريقة</string>
     <string name="projects_request_method_merge">دمج</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">هل أنت متأكد من رغبتك في حذف هذا المشروع؟ ستُحذف جميع العناصر والتعليقات والإعدادات نهائيًا.</string>
     <string name="projects_object_unwatch">إلغاء المتابعة</string>
     <string name="projects_object_delete_title">حذف العنصر</string>
-    <string name="projects_object_delete_message">هل أنت متأكد من رغبتك في حذف هذا العنصر؟ لا يمكن التراجع عن هذا الإجراء.</string>
     <string name="projects_parent_none">بدون أصل</string>
     <string name="projects_links_empty">لا توجد روابط</string>
     <string name="projects_links_section_relates">متعلق بـ</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">لا توجد مرفقات</string>
     <string name="projects_attachment_default_name">مرفق</string>
     <string name="projects_request_new">طلب دمج جديد</string>
-    <string name="projects_request_status_closed">مغلق</string>
     <string name="projects_request_back_to_list">العودة إلى القائمة</string>
     <string name="projects_request_repository">المستودع: %1$s</string>
     <string name="projects_request_source">المصدر: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">التصميم والإنشاء والتعديل والتعليق والعرض</string>
     <string name="projects_access_role_write">الإنشاء والتعديل والتعليق والعرض</string>
     <string name="projects_all_projects">جميع المشاريع</string>
-    <string name="projects_create_allow_search">السماح لأي شخص بالبحث عن المشروع</string>
     <string name="projects_create_import_backup">استيراد من نسخة احتياطية (اختياري)</string>
     <string name="projects_create_upload_json">رفع ملف .json</string>
     <string name="projects_settings_not_set">غير محدد</string>
@@ -336,4 +332,19 @@
     <string name="projects_create_object_no_types">لا يمكن إنشاء أنواع عناصر بعد. أنشئ العناصر الأصلية المطلوبة أولاً.</string>
     <string name="projects_create_blocked_no_options">تعذّر الإنشاء: %1$s مطلوب لكن ليس له خيارات للاختيار منها. أضف خيارات في التصميم.</string>
     <string name="projects_attachment_remove">إزالة المرفق</string>
+    <string name="projects_create_allow_public">السماح لأي شخص بعرض المشروع والتعليق عليه</string>
+    <string name="projects_request_delete_title">حذف طلب الدمج</string>
+    <string name="projects_request_delete_message">هل أنت متأكد من حذف طلب الدمج هذا؟</string>
+    <string name="projects_board_delete_column_title">حذف العمود</string>
+    <string name="projects_board_delete_column_message">هل أنت متأكد من حذف العمود \"%1$s\"؟ لا يمكن التراجع عن ذلك.</string>
+    <string name="projects_object_delete_named">هل أنت متأكد من حذف \"%1$s\"؟ لا يمكن التراجع عن هذا الإجراء.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="zero">هل أنت متأكد من حذف \"%1$s\" و%2$s عنصر تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="one">هل أنت متأكد من حذف \"%1$s\" وعنصر واحد تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="two">هل أنت متأكد من حذف \"%1$s\" وعنصرين تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="few">هل أنت متأكد من حذف \"%1$s\" و%2$s عناصر تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="many">هل أنت متأكد من حذف \"%1$s\" و%2$s عنصرًا تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+        <item quantity="other">هل أنت متأكد من حذف \"%1$s\" و%2$s عنصر تحته؟ لا يمكن التراجع عن هذا الإجراء.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">تعذّر الإرفاق: %1$s</string>
 </resources>

@@ -36,6 +36,7 @@ import androidx.compose.material.icons.outlined.Dashboard
 import androidx.compose.material.icons.outlined.Description
 import androidx.compose.material.icons.outlined.GridView
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -60,6 +61,7 @@ import org.mochios.android.util.slugify
 import org.mochios.android.files.MIME_JSON
 import org.mochios.android.files.MIME_ZIP
 import org.mochios.android.ui.components.CreateEntityScaffold
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LabeledSwitchRow
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -96,8 +98,9 @@ fun CreateProjectScreen(
     var prefix by remember { mutableStateOf("") }
     // The prefix auto-tracks the name until the user edits it by hand.
     var prefixEdited by remember { mutableStateOf(false) }
-    // The toggle reads "Allow anyone to search for project" — on means public.
-    var allowSearch by remember { mutableStateOf(true) }
+    // On means public, which lets anyone view the project and every signed-in
+    // person comment on it, so it starts off.
+    var allowSearch by remember { mutableStateOf(false) }
     // Nothing is preselected — the user must pick a template before creating.
     var selectedTemplate by remember { mutableStateOf<String?>(null) }
     var backupJson by remember { mutableStateOf<String?>(null) }
@@ -146,9 +149,10 @@ fun CreateProjectScreen(
         }
     }
 
-    // An imported backup brings its own design, and a server with no templates
-    // has nothing to show — either way step two is skipped.
-    val usesTemplate = backupJson == null && uiState.templates.isNotEmpty()
+    // An imported backup brings its own design, so step two is skipped. Every
+    // server has templates, and the server refuses a project made without
+    // one, so an empty list is a failed fetch the template step shows.
+    val usesTemplate = backupJson == null
     val goesToTemplate = step == STEP_DETAILS && usesTemplate
     val canContinue = !uiState.isCreating && if (step == STEP_DETAILS) {
         name.isNotBlank()
@@ -228,14 +232,32 @@ fun CreateProjectScreen(
                     .padding(padding)
             )
         } else {
-            TemplateStep(
-                templates = uiState.templates,
-                selectedTemplate = selectedTemplate,
-                onSelect = { templateId -> selectedTemplate = templateId },
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-            )
+            val templatesError = uiState.templatesError
+            when {
+                templatesError != null -> Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(padding)
+                ) {
+                    ErrorState(error = templatesError, onRetry = { viewModel.loadTemplates() })
+                }
+                uiState.templatesLoading -> Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(padding),
+                    contentAlignment = Alignment.Center
+                ) {
+                    CircularProgressIndicator()
+                }
+                else -> TemplateStep(
+                    templates = uiState.templates,
+                    selectedTemplate = selectedTemplate,
+                    onSelect = { templateId -> selectedTemplate = templateId },
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(padding)
+                )
+            }
         }
     }
 }
@@ -281,7 +303,7 @@ private fun DetailsStep(
         Spacer(modifier = Modifier.height(16.dp))
 
         LabeledSwitchRow(
-            label = stringResource(R.string.projects_create_allow_search),
+            label = stringResource(R.string.projects_create_allow_public),
             checked = allowSearch,
             onCheckedChange = onAllowSearchChange
         )

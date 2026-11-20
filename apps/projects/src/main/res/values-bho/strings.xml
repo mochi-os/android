@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">खुलल</string>
     <string name="projects_request_status_merged">मर्ज हो गइल</string>
     <string name="projects_request_merge">मर्ज</string>
-    <string name="projects_request_close">बंद करीं</string>
     <string name="projects_request_merge_dialog_title">मर्ज</string>
     <string name="projects_request_method">विधि</string>
     <string name="projects_request_method_merge">मर्ज</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">का रउआ निश्चित बानी कि एह परियोजना के मिटावल चाहत बानी? सब वस्तु, टिप्पणी, आ सेटिंग स्थायी रूप से हटा दिहल जाई।</string>
     <string name="projects_object_unwatch">देखल बंद करीं</string>
     <string name="projects_object_delete_title">वस्तु मिटाईं</string>
-    <string name="projects_object_delete_message">का रउआ निश्चित बानी कि एह वस्तु के मिटावल चाहत बानी? ई काम वापस ना हो सकेला।</string>
     <string name="projects_parent_none">कवनो जनक नइखे</string>
     <string name="projects_links_empty">कवनो लिंक नइखे</string>
     <string name="projects_links_section_relates">एकरा से संबंधित</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">कवनो संलग्नक नइखे</string>
     <string name="projects_attachment_default_name">संलग्नक</string>
     <string name="projects_request_new">नया मर्ज अनुरोध</string>
-    <string name="projects_request_status_closed">बंद</string>
     <string name="projects_request_back_to_list">सूची पर वापस जाईं</string>
     <string name="projects_request_repository">भंडार: %1$s</string>
     <string name="projects_request_source">स्रोत: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">डिजाइन करीं, बनाईं, संपादित करीं, टिप्पणी करीं, आ देखीं</string>
     <string name="projects_access_role_write">बनाईं, संपादित करीं, टिप्पणी करीं, आ देखीं</string>
     <string name="projects_all_projects">सब परियोजना</string>
-    <string name="projects_create_allow_search">केहू के परियोजना खोजे के अनुमति दीं</string>
     <string name="projects_create_import_backup">बैकअप से आयात करीं (वैकल्पिक)</string>
     <string name="projects_create_upload_json">.json फ़ाइल अपलोड करीं</string>
     <string name="projects_settings_not_set">सेट नइखे</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">अबहीं कौनो आइटम प्रकार ना बन सके। पहिले जरूरी मूल आइटम बनाईं।</string>
     <string name="projects_create_blocked_no_options">बनावल ना जा सकल: %1$s जरूरी बा बाकिर एकरा में चुने खातिर कवनो विकल्प नइखे। डिज़ाइन में विकल्प जोड़ीं।</string>
     <string name="projects_attachment_remove">संलग्नक हटाईं</string>
+    <string name="projects_create_allow_public">केहू के परियोजना देखे आ ओपर टिप्पणी करे के अनुमति दीं</string>
+    <string name="projects_request_delete_title">मर्ज अनुरोध मेटाईं</string>
+    <string name="projects_request_delete_message">का रउआ एह मर्ज अनुरोध के मेटावे चाहत बानी?</string>
+    <string name="projects_board_delete_column_title">कॉलम मेटाईं</string>
+    <string name="projects_board_delete_column_message">का रउआ \"%1$s\" कॉलम के मेटावे चाहत बानी? ई वापस ना हो सकेला।</string>
+    <string name="projects_object_delete_named">का रउआ \"%1$s\" के मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">का रउआ \"%1$s\" आ ओकरा नीचे के %2$s आइटम मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</item>
+        <item quantity="other">का रउआ \"%1$s\" आ ओकरा नीचे के %2$s आइटम मेटावे चाहत बानी? ई क्रिया वापस ना हो सकेला।</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">संलग्न ना हो सकल: %1$s</string>
 </resources>

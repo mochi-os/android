@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">ایا تاسو ډاډه یاست چې غواړئ دا CRM حذف کړئ؟ ټول توکي، نظرونه، او تنظیمات به د تل لپاره لیرې شي.</string>
     <string name="crm_object_unwatch">کتل بند کړئ</string>
     <string name="crm_object_delete_title">توکی ړنګ کړئ</string>
-    <string name="crm_object_delete_message">ایا تاسو ډاډه یاست چې غواړئ دا توکی حذف کړئ؟ دا عمل بېرته نه شي کیدای.</string>
     <string name="crm_parent_none">هیڅ مور/پلار نشته</string>
     <string name="crm_links_empty">هیڅ لینکونه نشته</string>
     <string name="crm_links_section_relates">اړوند دي له</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">له بیک اپ څخه وارد کړئ (اختیاري)</string>
     <string name="crm_export">ډاټا صادرول</string>
     <string name="crm_exporting">صادرول چمتو کیږي…</string>
-    <string name="crm_create_allow_search">هر چا ته اجازه ورکړئ چې د CRM لټون وکړي</string>
     <string name="crm_no_crms_found">هیڅ CRM ونه موندل شو</string>
     <string name="crm_create_blocked_no_parents">تر اوسه د توکو ډولونه نشي جوړیدلی. لومړی اړین مور توکي جوړ کړئ.</string>
     <string name="crm_export_csv">CSV صادر کړئ</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">نمونه %1$s</string>
     <string name="crm_option_delete_title">اختیار ړنګ کړئ</string>
     <string name="crm_option_delete_message">ایا تاسو ډاډه یاست چې غواړئ اختیار \"%1$s\" حذف کړئ؟</string>
+    <string name="crm_create_public">هر چا ته اجازه ورکړئ چې CRM وګوري او پر هغې تبصره وکړي</string>
+    <string name="crm_board_delete_column">کالم ړنګ کړئ</string>
+    <string name="crm_board_delete_column_message">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" کالم ړنګ کړئ؟ دا نشي بیرته اخیستل کیدلی.</string>
+    <string name="crm_object_delete_named">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" او د هغه لاندې %2$s توکی ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</item>
+        <item quantity="other">ایا تاسو ډاډه یاست چې غواړئ \"%1$s\" او د هغه لاندې %2$s توکي ړنګ کړئ؟ دا کړنه نشي بیرته اخیستل کیدلی.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s ضمیمه اضافه نشوه: %2$s</item>
+        <item quantity="other">%1$s ضمیمې اضافه نشوې: %2$s</item>
+    </plurals>
 </resources>

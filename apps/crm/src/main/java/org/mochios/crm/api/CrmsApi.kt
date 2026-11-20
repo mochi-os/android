@@ -93,7 +93,8 @@ data class PreferenceResponse(val preference: String = "")
 
 // JSON body of `-/objects/create`. `class` is a Kotlin keyword, so the field is
 // named classId and mapped back on the wire. `parent` is omitted from the
-// payload when null.
+// payload when null. `values` (field id to value) are checked and written with
+// the object, so a refused value creates nothing.
 data class CreateObjectRequest(
 
     @SerializedName("class")
@@ -101,8 +102,65 @@ data class CreateObjectRequest(
 
     val title: String,
 
-    val parent: String? = null
+    val parent: String? = null,
+
+    val values: Map<String, String>? = null
 )
+
+// The update bodies below are JSON, not forms: the server reads an empty form
+// field as absent, so a value cleared on the phone would never arrive. Gson
+// leaves a null out, so a null field is one the user did not change.
+
+// JSON body of `-/update`; "" clears the description.
+data class UpdateCrmRequest(val name: String? = null, val description: String? = null)
+
+// JSON body of `objects/{object}/update`; "" moves the object to the top level.
+data class UpdateObjectRequest(val parent: String)
+
+// JSON body of `objects/{object}/move`. `scope` names the parent whose
+// children the rank counts among, "" for the top level; `row` is the lane as
+// a JSON object in a string.
+data class MoveObjectRequest(
+    val field: String? = null,
+    val value: String? = null,
+    val rank: Int? = null,
+    val row: String? = null,
+    val scope: String? = null,
+    val promote: String? = null
+)
+
+// JSON body of `views/{view}/update`; "" clears a setting.
+data class UpdateViewRequest(
+    val name: String? = null,
+    val viewtype: String? = null,
+    val columns: String? = null,
+    val rows: String? = null,
+    val filter: String? = null,
+    val sort: String? = null,
+    val direction: String? = null,
+    val classes: String? = null,
+    val border: String? = null
+)
+
+// JSON body of `classes/{class}/hierarchy/set`: the parents comma-separated,
+// as the web sends them (see hierarchyParameter).
+data class HierarchyRequest(val parents: String)
+
+// JSON body of `fields/{field}/update`; "" clears flags, position or pattern.
+data class UpdateFieldRequest(
+    val name: String? = null,
+    val flags: String? = null,
+    val multi: Boolean? = null,
+    val card: Boolean? = null,
+    val position: String? = null,
+    val rows: Int? = null,
+    val pattern: String? = null,
+    val minlength: Int? = null,
+    val maxlength: Int? = null
+)
+
+// JSON body of `options/{option}/update`; "" clears the colour or the icon.
+data class UpdateOptionRequest(val name: String? = null, val colour: String? = null, val icon: String? = null)
 
 // Body for setting a single field value. The values endpoint expects a JSON
 // object ({"value": "…"}); form encoding fails to update some fields (e.g. a
@@ -194,12 +252,10 @@ interface CrmsApi {
     @POST("{crmId}/-/share")
     suspend fun getShareLink(@Path("crmId") crmId: String): Response<ApiResponse<ShareResponse>>
 
-    @FormUrlEncoded
     @POST("{crmId}/-/update")
     suspend fun updateCrm(
         @Path("crmId") crmId: String,
-        @Field("name") name: String?,
-        @Field("description") description: String?
+        @Body body: UpdateCrmRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/delete")
@@ -243,14 +299,13 @@ interface CrmsApi {
         @Path("objectId") objectId: String
     ): Response<ApiResponse<ObjectResponse>>
 
-    @FormUrlEncoded
+    // Title is a field value (the class's title field), edited via value/set;
+    // object/update only handles parent/class. Do NOT add a title field here.
     @POST("{crmId}/-/objects/{objectId}/update")
     suspend fun updateObject(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
-        // Title is a field value (the class's title field), edited via value/set;
-        // object/update only handles parent/class. Do NOT add a title field here.
-        @Field("parent") parent: String?
+        @Body body: UpdateObjectRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/objects/{objectId}/delete")
@@ -259,17 +314,11 @@ interface CrmsApi {
         @Path("objectId") objectId: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{crmId}/-/objects/{objectId}/move")
     suspend fun moveObject(
         @Path("crmId") crmId: String,
         @Path("objectId") objectId: String,
-        @Field("field") field: String?,
-        @Field("value") value: String?,
-        @Field("rank") rank: Int?,
-        @Field("row") row: String? = null,
-        @Field("scope") scope: String? = null,
-        @Field("promote") promote: String? = null
+        @Body body: MoveObjectRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/objects/{objectId}/values/{fieldId}")
@@ -464,20 +513,11 @@ interface CrmsApi {
         @Field("order") order: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{crmId}/-/views/{viewId}/update")
     suspend fun updateView(
         @Path("crmId") crmId: String,
         @Path("viewId") viewId: String,
-        @Field("name") name: String?,
-        @Field("viewtype") viewtype: String?,
-        @Field("columns") columns: String?,
-        @Field("rows") rows: String?,
-        @Field("filter") filter: String?,
-        @Field("sort") sort: String?,
-        @Field("direction") direction: String?,
-        @Field("classes") classes: String?,
-        @Field("border") border: String?
+        @Body body: UpdateViewRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/views/{viewId}/delete")
@@ -512,12 +552,11 @@ interface CrmsApi {
 
     // ---- Hierarchy ----
 
-    @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/hierarchy/set")
     suspend fun setHierarchy(
         @Path("crmId") crmId: String,
         @Path("classId") classId: String,
-        @Field("parents") parents: String
+        @Body body: HierarchyRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     // ---- Fields ----
@@ -541,22 +580,12 @@ interface CrmsApi {
         @Field("order") order: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/fields/{fieldId}/update")
     suspend fun updateField(
         @Path("crmId") crmId: String,
         @Path("classId") classId: String,
         @Path("fieldId") fieldId: String,
-        @Field("name") name: String?,
-        @Field("fieldtype") fieldtype: String?,
-        @Field("flags") flags: String?,
-        @Field("multi") multi: Boolean?,
-        @Field("card") card: Boolean?,
-        @Field("position") position: String?,
-        @Field("rows") rows: Int?,
-        @Field("pattern") pattern: String?,
-        @Field("minlength") minlength: Int?,
-        @Field("maxlength") maxlength: Int?
+        @Body body: UpdateFieldRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/classes/{classId}/fields/{fieldId}/delete")
@@ -588,16 +617,13 @@ interface CrmsApi {
         @Field("order") order: String
     ): Response<ApiResponse<SuccessResponse>>
 
-    @FormUrlEncoded
     @POST("{crmId}/-/classes/{classId}/fields/{fieldId}/options/{optionId}/update")
     suspend fun updateOption(
         @Path("crmId") crmId: String,
         @Path("classId") classId: String,
         @Path("fieldId") fieldId: String,
         @Path("optionId") optionId: String,
-        @Field("name") name: String?,
-        @Field("colour") colour: String?,
-        @Field("icon") icon: String?
+        @Body body: UpdateOptionRequest
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{crmId}/-/classes/{classId}/fields/{fieldId}/options/{optionId}/delete")

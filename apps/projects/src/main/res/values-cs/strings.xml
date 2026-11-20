@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Otevřeno</string>
     <string name="projects_request_status_merged">Sloučeno</string>
     <string name="projects_request_merge">Sloučit</string>
-    <string name="projects_request_close">Zavřít</string>
     <string name="projects_request_merge_dialog_title">Sloučit</string>
     <string name="projects_request_method">Metoda</string>
     <string name="projects_request_method_merge">Sloučit</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">Opravdu chcete tento projekt smazat? Všechny objekty, komentáře a nastavení budou trvale odstraněny.</string>
     <string name="projects_object_unwatch">Přestat sledovat</string>
     <string name="projects_object_delete_title">Smazat objekt</string>
-    <string name="projects_object_delete_message">Opravdu chcete tento objekt smazat? Tuto akci nelze vrátit zpět.</string>
     <string name="projects_parent_none">Bez nadřazeného</string>
     <string name="projects_links_empty">Žádné odkazy</string>
     <string name="projects_links_section_relates">Souvisí s</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Žádné přílohy</string>
     <string name="projects_attachment_default_name">příloha</string>
     <string name="projects_request_new">Nový požadavek na sloučení</string>
-    <string name="projects_request_status_closed">Uzavřeno</string>
     <string name="projects_request_back_to_list">Zpět na seznam</string>
     <string name="projects_request_repository">Repozitář: %1$s</string>
     <string name="projects_request_source">Zdroj: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Navrhovat, vytvářet, upravovat, komentovat a zobrazovat</string>
     <string name="projects_access_role_write">Vytvářet, upravovat, komentovat a zobrazovat</string>
     <string name="projects_all_projects">Všechny projekty</string>
-    <string name="projects_create_allow_search">Povolit komukoli vyhledávat projekt</string>
     <string name="projects_create_import_backup">Import ze zálohy (volitelné)</string>
     <string name="projects_create_upload_json">Nahrát soubor .json</string>
     <string name="projects_settings_not_set">Nenastaveno</string>
@@ -333,4 +329,16 @@
     <string name="projects_create_object_no_types">Zatím nelze vytvořit žádné typy položek. Nejprve vytvořte potřebné nadřazené položky.</string>
     <string name="projects_create_blocked_no_options">Nelze vytvořit: %1$s je povinné, ale nemá žádné možnosti k výběru. Přidejte možnosti v Návrhu.</string>
     <string name="projects_attachment_remove">Odebrat přílohu</string>
+    <string name="projects_create_allow_public">Povolit komukoli zobrazit projekt a komentovat ho</string>
+    <string name="projects_request_delete_title">Smazat merge request</string>
+    <string name="projects_request_delete_message">Opravdu chcete smazat tento merge request?</string>
+    <string name="projects_board_delete_column_title">Smazat sloupec</string>
+    <string name="projects_board_delete_column_message">Opravdu chcete smazat sloupec „%1$s“? Tuto akci nelze vrátit zpět.</string>
+    <string name="projects_object_delete_named">Opravdu chcete smazat „%1$s“? Tuto akci nelze vrátit zpět.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Opravdu chcete smazat „%1$s“ a %2$s položku pod ní? Tuto akci nelze vrátit zpět.</item>
+        <item quantity="few">Opravdu chcete smazat „%1$s“ a %2$s položky pod ní? Tuto akci nelze vrátit zpět.</item>
+        <item quantity="other">Opravdu chcete smazat „%1$s“ a %2$s položek pod ní? Tuto akci nelze vrátit zpět.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nepodařilo se připojit: %1$s</string>
 </resources>

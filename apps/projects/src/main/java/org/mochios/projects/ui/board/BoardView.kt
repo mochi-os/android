@@ -243,7 +243,12 @@ fun BoardView(
             onRename = if (isUnassigned) null else {
                 { newName -> viewModel.renameColumnOption(columnFieldId, columnOption.id, newName) }
             },
-            onDelete = if (isUnassigned) null else {
+            // Only an empty column, counting every object that holds the
+            // option and not only the cards shown, and only for a designer:
+            // the server leaves the objects of a deleted option holding it.
+            onDelete = if (isUnassigned || !viewModel.canDesign() ||
+                viewModel.columnHolds(columnFieldId, columnOption.id)
+            ) null else {
                 { viewModel.deleteColumnOption(columnFieldId, columnOption.id) }
             },
             onCollapse = if (isUnassigned) null else {
@@ -294,7 +299,7 @@ private fun CollapsedColumn(
             itemId = itemId,
             orientation = DropOrientation.OnOnly,
             onDrop = { sourceId, _ ->
-                viewModel.moveObject(sourceId, columnFieldId, option.id, objects.size + 1)
+                viewModel.moveToEnd(sourceId, columnFieldId, option.id)
             },
         ),
     )
@@ -332,9 +337,7 @@ private fun BoardColumn(
             itemId = "column:${option.id}",
             orientation = DropOrientation.OnOnly,
             onDrop = { sourceId, _ ->
-                // Append: rank past the last card of this column.
-                val rank = objects.size + 1
-                viewModel.moveObject(sourceId, columnFieldId, option.id, rank)
+                viewModel.moveToEnd(sourceId, columnFieldId, option.id)
             }
         )
     } else Modifier
@@ -487,6 +490,7 @@ private fun BoardColumn(
             if (onRename != null || onDelete != null || onCollapse != null) {
                 var showMenu by remember { mutableStateOf(false) }
                 var showRenameDialog by remember { mutableStateOf(false) }
+                var showDeleteDialog by remember { mutableStateOf(false) }
                 Box {
                     MochiIconButton(onClick = { showMenu = true }, modifier = Modifier.size(32.dp)) {
                         Icon(
@@ -531,12 +535,26 @@ private fun BoardColumn(
                                 text = { Text(stringResource(MochiR.string.common_delete)) },
                                 onClick = {
                                     showMenu = false
-                                    onDelete()
+                                    showDeleteDialog = true
                                 },
                                 leadingIcon = { Icon(Icons.Outlined.Delete, contentDescription = null) },
                             )
                         }
                     }
+                }
+                if (showDeleteDialog && onDelete != null) {
+                    MochiAlertDialog(
+                        onDismissRequest = { showDeleteDialog = false },
+                        title = stringResource(R.string.projects_board_delete_column_title),
+                        text = stringResource(R.string.projects_board_delete_column_message, option.name),
+                        confirmText = stringResource(MochiR.string.common_delete),
+                        onConfirm = {
+                            showDeleteDialog = false
+                            onDelete()
+                        },
+                        destructive = true,
+                        dismissText = stringResource(MochiR.string.common_cancel),
+                    )
                 }
                 if (showRenameDialog && onRename != null) {
                     var newName by remember { mutableStateOf(option.name) }
@@ -569,7 +587,6 @@ private fun BoardColumn(
         if (rowFieldId != null && rowOptions.isNotEmpty()) {
             // Swimlane mode. Drop ranks are column-scoped, not lane-scoped: the
             // server's rank_move_key has no row dimension.
-            val columnOrder = sortedObjects
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 verticalArrangement = Arrangement.spacedBy(4.dp)
@@ -605,11 +622,10 @@ private fun BoardColumn(
                                     itemId = laneId,
                                     orientation = DropOrientation.OnOnly,
                                     onDrop = { sourceId, _ ->
-                                        viewModel.moveObject(
+                                        viewModel.moveToEnd(
                                             objectId = sourceId,
                                             field = columnFieldId,
                                             value = option.id,
-                                            rank = columnOrder.count { it.id != sourceId } + 1,
                                             rowField = rowFieldId,
                                             rowValue = rowOption.id,
                                         )
@@ -627,10 +643,9 @@ private fun BoardColumn(
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = columnOrder.indexOfFirst { candidate ->
+                            cardIndexInColumn = sortedObjects.indexOfFirst { candidate ->
                                 candidate.id == obj.id
                             },
-                            columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
                             targetRowId = rowOption.id,
                             onOpen = onObjectClick
@@ -661,10 +676,9 @@ private fun BoardColumn(
                             columnFieldId = columnFieldId,
                             rowFieldId = rowFieldId,
                             cardDragState = cardDragState,
-                            cardIndexInColumn = columnOrder.indexOfFirst { candidate ->
+                            cardIndexInColumn = sortedObjects.indexOfFirst { candidate ->
                                 candidate.id == obj.id
                             },
-                            columnObjectsForDrop = columnOrder,
                             targetColumnId = option.id,
                             targetRowId = "",
                             onOpen = onObjectClick
@@ -707,7 +721,6 @@ private fun BoardColumn(
                             cardIndexInColumn = sortedObjects.indexOfFirst { candidate ->
                                 candidate.id == obj.id
                             },
-                            columnObjectsForDrop = sortedObjects,
                             targetColumnId = option.id,
                             onOpen = onObjectClick
                         )

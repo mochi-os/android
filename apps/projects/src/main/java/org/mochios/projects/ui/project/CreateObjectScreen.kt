@@ -226,6 +226,10 @@ fun CreateObjectScreen(
     // dead and the reason is invisible.
     val unsatisfiableFields = unsatisfiable(classFields, classOptions)
 
+    // The class, parent and values went with the create; once the object
+    // exists they are its own, and only its attachments are still to go.
+    val sent = uiState.isCreating || uiState.created != null
+
     val canCreate = details != null && creatable.isNotEmpty() && selectedClassId.isNotBlank() &&
         (!required || parentId != null) && !missingRequired && !uiState.isCreating
 
@@ -261,6 +265,17 @@ fun CreateObjectScreen(
                             )
                             Spacer(modifier = Modifier.height(8.dp))
                         }
+                        if (uiState.unattached.isNotEmpty()) {
+                            Text(
+                                text = stringResource(
+                                    R.string.projects_create_attachments_failed,
+                                    uiState.unattached.joinToString(", "),
+                                ),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.error
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                        }
                         upload?.let { sending ->
                             UploadProgress(sending)
                             Spacer(modifier = Modifier.height(8.dp))
@@ -289,6 +304,9 @@ fun CreateObjectScreen(
                                     strokeWidth = 2.dp,
                                     color = MaterialTheme.colorScheme.onPrimary
                                 )
+                            } else if (uiState.created != null) {
+                                // The object exists; this uploads what it lacks.
+                                Text(stringResource(MochiR.string.common_retry))
                             } else {
                                 Text(stringResource(R.string.projects_create_action))
                             }
@@ -354,7 +372,7 @@ fun CreateObjectScreen(
                                         .orEmpty(),
                                     onValueChange = {},
                                     readOnly = true,
-                                    enabled = !uiState.isCreating,
+                                    enabled = !sent,
                                     label = {
                                         Text(stringResource(R.string.projects_create_object_type))
                                     },
@@ -407,7 +425,7 @@ fun CreateObjectScreen(
                                     value = selectedParentLabel,
                                     onValueChange = {},
                                     readOnly = true,
-                                    enabled = !uiState.isCreating,
+                                    enabled = !sent,
                                     label = {
                                         Text(
                                             stringResource(
@@ -462,7 +480,7 @@ fun CreateObjectScreen(
                                 field = field,
                                 value = fieldValues[field.id],
                                 options = classOptions[field.id].orEmpty(),
-                                canWrite = !uiState.isCreating,
+                                canWrite = !sent,
                                 people = uiState.people,
                                 onValueChange = { value -> fieldValues[field.id] = value },
                                 onSearchUsers = { query -> viewModel.searchPeople(query) }

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед ин CRM-ро нест кунед? Ҳамаи объектҳо, шарҳҳо ва танзимот доимӣ нест карда мешаванд.</string>
     <string name="crm_object_unwatch">Бекор кардани назорат</string>
     <string name="crm_object_delete_title">Нест кардани объект</string>
-    <string name="crm_object_delete_message">Шумо мутмаин ҳастед, ки мехоҳед ин объектро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
     <string name="crm_parent_none">Падар нест</string>
     <string name="crm_links_empty">Истинодҳо нестанд</string>
     <string name="crm_links_section_relates">Алоқаманд аст ба</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Ворид кардан аз нусхаи захиравӣ (ихтиёрӣ)</string>
     <string name="crm_export">Содироти маълумот</string>
     <string name="crm_exporting">Содирот омода мешавад…</string>
-    <string name="crm_create_allow_search">Иҷозат додан, ки ҳар кас CRM-ро ҷустуҷӯ кунад</string>
     <string name="crm_no_crms_found">Ягон CRM ёфт нашуд</string>
     <string name="crm_create_blocked_no_parents">Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед.</string>
     <string name="crm_export_csv">Содироти CSV</string>
@@ -285,4 +283,14 @@
     <string name="crm_design_sample">Намуна %1$s</string>
     <string name="crm_option_delete_title">Нест кардани имкон</string>
     <string name="crm_option_delete_message">Шумо мутмаин ҳастед, ки мехоҳед имкони \"%1$s\"-ро нест кунед?</string>
+    <string name="crm_create_public">Иҷозат додан, ки ҳар кас CRM-ро бинад ва ба он шарҳ нависад</string>
+    <string name="crm_board_delete_column">Нест кардани сутун</string>
+    <string name="crm_board_delete_column_message">Шумо мутмаин ҳастед, ки мехоҳед сутуни \"%1$s\"-ро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
+    <string name="crm_object_delete_named">Шумо мутмаин ҳастед, ки мехоҳед \"%1$s\"-ро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="other">Шумо мутмаин ҳастед, ки мехоҳед \"%1$s\" ва %2$s ҷузъи зери онро нест кунед? Ин амалро бекор кардан мумкин нест.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="other">%1$s замимаро илова карда нашуд: %2$s</item>
+    </plurals>
 </resources>

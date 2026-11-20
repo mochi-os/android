@@ -151,7 +151,6 @@
     <string name="crm_settings_delete_confirm_message">آیا مطمئن هستید که می‌خواهید این CRM را حذف کنید؟ تمام اشیاء، نظرات و تنظیمات برای همیشه حذف خواهند شد.</string>
     <string name="crm_object_unwatch">لغو دنبال کردن</string>
     <string name="crm_object_delete_title">حذف شیء</string>
-    <string name="crm_object_delete_message">آیا مطمئن هستید که می‌خواهید این شیء را حذف کنید؟ این عمل قابل بازگشت نیست.</string>
     <string name="crm_parent_none">بدون والد</string>
     <string name="crm_links_empty">بدون پیوند</string>
     <string name="crm_links_section_relates">مرتبط با</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">وارد کردن از پشتیبان (اختیاری)</string>
     <string name="crm_export">خروجی داده‌ها</string>
     <string name="crm_exporting">در حال آماده‌سازی خروجی…</string>
-    <string name="crm_create_allow_search">همه بتوانند CRM را جست‌وجو کنند</string>
     <string name="crm_no_crms_found">هیچ CRMی یافت نشد</string>
     <string name="crm_create_blocked_no_parents">هیچ نوع آیتمی هنوز قابل ایجاد نیست. ابتدا آیتم‌های والد مورد نیاز را ایجاد کنید.</string>
     <string name="crm_export_csv">خروجی CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">نمونه %1$s</string>
     <string name="crm_option_delete_title">حذف گزینه</string>
     <string name="crm_option_delete_message">آیا مطمئن هستید که می‌خواهید گزینهٔ \"%1$s\" را حذف کنید؟</string>
+    <string name="crm_create_public">همه بتوانند CRM را ببینند و درباره آن نظر بدهند</string>
+    <string name="crm_board_delete_column">حذف ستون</string>
+    <string name="crm_board_delete_column_message">آیا از حذف ستون «%1$s» مطمئن هستید؟ این عمل قابل بازگشت نیست.</string>
+    <string name="crm_object_delete_named">آیا از حذف «%1$s» مطمئن هستید؟ این عمل قابل بازگشت نیست.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">آیا از حذف «%1$s» و %2$s مورد زیر آن مطمئن هستید؟ این عمل قابل بازگشت نیست.</item>
+        <item quantity="other">آیا از حذف «%1$s» و %2$s مورد زیر آن مطمئن هستید؟ این عمل قابل بازگشت نیست.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">افزودن %1$s پیوست ممکن نشد: %2$s</item>
+        <item quantity="other">افزودن %1$s پیوست ممکن نشد: %2$s</item>
+    </plurals>
 </resources>

@@ -64,10 +64,9 @@ fun MoveObjectSheet(
     } ?: emptyList()
     val currentRowValue = rowFieldId?.let { obj.stringValue(it) } ?: ""
 
-    // Objects in the same column for reordering
-    val columnObjects = uiState.objects
-        .filter { it.stringValue(columnFieldId) == currentColumnValue && it.id != obj.id }
-        .sortedBy { it.rank }
+    // The column as the server ranks it, without this object, for reordering.
+    val columnObjects = viewModel.rankOrder(columnFieldId, currentColumnValue)
+        .filter { other -> other.id != obj.id }
     val untitled = stringResource(R.string.crm_untitled)
 
     MochiBottomSheet(

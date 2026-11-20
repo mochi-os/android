@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">کھليل</string>
     <string name="projects_request_status_merged">مرج ٿيو</string>
     <string name="projects_request_merge">مرج ڪريو</string>
-    <string name="projects_request_close">بند ڪريو</string>
     <string name="projects_request_merge_dialog_title">مرج ڪريو</string>
     <string name="projects_request_method">طريقو</string>
     <string name="projects_request_method_merge">مرج ڪريو</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ڇا توھان پڪ سان ھن پروجيڪٽ کي ختم ڪرڻ چاھيو ٿا؟ سڀ شيون، تبصرا، ۽ سيٽنگون مستقل طور تي ختم ٿي وينديون.</string>
     <string name="projects_object_unwatch">ڏسڻ بند ڪريو</string>
     <string name="projects_object_delete_title">شيءِ ختم ڪريو</string>
-    <string name="projects_object_delete_message">ڇا توھان پڪ سان ھن شيءِ کي ختم ڪرڻ چاھيو ٿا؟ ھي عمل واپس نه ٿو ڪري سگھجي.</string>
     <string name="projects_parent_none">ڪوبه والدين ناهي</string>
     <string name="projects_links_empty">ڪوبه لنڪ ناهي</string>
     <string name="projects_links_section_relates">تعلق رکي ٿو</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">ڪوبه ڳنڍيل فائل ناهي</string>
     <string name="projects_attachment_default_name">ڳنڍيل فائل</string>
     <string name="projects_request_new">نئين مرج درخواست</string>
-    <string name="projects_request_status_closed">بند ٿيل</string>
     <string name="projects_request_back_to_list">فھرست ڏانھن واپس</string>
     <string name="projects_request_repository">ريپوزيٽري: %1$s</string>
     <string name="projects_request_source">ذريعو: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ڊيزائن، تخليق، ترميم، تبصرو ۽ ڏسڻ</string>
     <string name="projects_access_role_write">تخليق، ترميم، تبصرو ۽ ڏسڻ</string>
     <string name="projects_all_projects">سڀ پروجيڪٽ</string>
-    <string name="projects_create_allow_search">ڪنهن کي به پروجيڪٽ ڳولڻ جي اجازت ڏيو</string>
     <string name="projects_create_import_backup">بيڪ اپ مان درآمد ڪريو (اختياري)</string>
     <string name="projects_create_upload_json">.json فائل اپ لوڊ ڪريو</string>
     <string name="projects_settings_not_set">سيٽ نه ٿيل</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">اڃا ڪي شيون قسم ٺاهي نٿا سگهجن. پهريائين گهربل والدين شيون ٺاهيو.</string>
     <string name="projects_create_blocked_no_options">ٺاهي نه ٿو سگهجي: %1$s گهربل آهي پر ان لاءِ ڪو اختيار ناهي. ڊيزائن ۾ اختيار شامل ڪريو.</string>
     <string name="projects_attachment_remove">اٽيچمينٽ هٽايو</string>
+    <string name="projects_create_allow_public">ڪنهن کي به پروجيڪٽ ڏسڻ ۽ ان تي تبصرو ڪرڻ جي اجازت ڏيو</string>
+    <string name="projects_request_delete_title">مرج درخواست ختم ڪريو</string>
+    <string name="projects_request_delete_message">ڇا توهان پڪ سان هي مرج درخواست ختم ڪرڻ چاهيو ٿا؟</string>
+    <string name="projects_board_delete_column_title">ڪالم ختم ڪريو</string>
+    <string name="projects_board_delete_column_message">ڇا توهان پڪ سان \"%1$s\" ڪالم ختم ڪرڻ چاهيو ٿا؟ هي واپس نه ٿو ٿي سگهي.</string>
+    <string name="projects_object_delete_named">ڇا توهان پڪ سان \"%1$s\" ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ٿو ٿي سگهي.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">ڇا توهان پڪ سان \"%1$s\" ۽ ان جي هيٺان %2$s شيءِ ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ٿو ٿي سگهي.</item>
+        <item quantity="other">ڇا توهان پڪ سان \"%1$s\" ۽ ان جي هيٺان %2$s شيون ختم ڪرڻ چاهيو ٿا؟ هي عمل واپس نه ٿو ٿي سگهي.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ڳنڍي نه سگهيا: %1$s</string>
 </resources>

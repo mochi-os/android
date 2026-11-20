@@ -111,7 +111,7 @@ fun TreeView(
  * descendants are rejected; sibling reorders pass scope so the server
  * renumbers only that subtree.
  */
-private fun handleTreeDrop(
+internal fun handleTreeDrop(
     sourceId: String,
     targetNode: TreeNode,
     edge: DragEdge,
@@ -149,10 +149,8 @@ private fun handleTreeDrop(
                 }
                 return
             }
-            // Same-parent reorder. The server reads an empty scope as
-            // unset, so root-level siblings cannot be reordered by drag; the
-            // Move dialog still works.
-            if (newParent.isBlank()) return
+            // Same-parent reorder; the move goes as JSON, so a top-level
+            // row's scope of "" arrives and names the top level's rows.
             val siblings = allObjects
                 .filter { it.parent == newParent && it.id != sourceId }
                 .sortedBy { it.rank }

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Бул CRM\'ди чындап өчүргүңүз келеби? Бардык объекттер, комментарийлер жана жөндөөлөр биротоло жок кылынат.</string>
     <string name="crm_object_unwatch">Көзөмөлдөн чыгаруу</string>
     <string name="crm_object_delete_title">Объектти өчүрүү</string>
-    <string name="crm_object_delete_message">Бул объектти чындап өчүргүңүз келеби? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="crm_parent_none">Башкы объект жок</string>
     <string name="crm_links_empty">Шилтемелер жок</string>
     <string name="crm_links_section_relates">Тиешеси бар</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Камдыктан импорттоо (милдеттүү эмес)</string>
     <string name="crm_export">Маалыматтарды экспорттоо</string>
     <string name="crm_exporting">Экспорт даярдалууда…</string>
-    <string name="crm_create_allow_search">CRMди издөөгө ар кимге уруксат берүү</string>
     <string name="crm_no_crms_found">CRM табылган жок</string>
     <string name="crm_create_blocked_no_parents">Азырынча эч кандай нерсе түрлөрүн түзүүгө болбойт. Адегенде керектүү ата-эне нерселерди түзүңүз.</string>
     <string name="crm_export_csv">CSV экспорттоо</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Үлгү %1$s</string>
     <string name="crm_option_delete_title">Тандоону жок кылуу</string>
     <string name="crm_option_delete_message">\"%1$s\" тандоосун чындап өчүргүңүз келеби?</string>
+    <string name="crm_create_public">Ар кимге CRMди көрүүгө жана ага комментарий жазууга уруксат берүү</string>
+    <string name="crm_board_delete_column">Тилкени жок кылуу</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" тилкесин жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
+    <string name="crm_object_delete_named">\"%1$s\" жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\" жана анын астындагы %2$s элементти жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</item>
+        <item quantity="other">\"%1$s\" жана анын астындагы %2$s элементти жок кылууну каалайсызбы? Бул аракетти артка кайтаруу мүмкүн эмес.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s тиркемени кошуу мүмкүн болгон жок: %2$s</item>
+        <item quantity="other">%1$s тиркемени кошуу мүмкүн болгон жок: %2$s</item>
+    </plurals>
 </resources>

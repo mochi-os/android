@@ -151,7 +151,6 @@
     <string name="crm_settings_delete_confirm_message">Haluatko varmasti poistaa tämän CRM:n? Kaikki objektit, kommentit ja asetukset poistetaan pysyvästi.</string>
     <string name="crm_object_unwatch">Lopeta seuraaminen</string>
     <string name="crm_object_delete_title">Poista kohde</string>
-    <string name="crm_object_delete_message">Haluatko varmasti poistaa tämän objektin? Tätä toimintoa ei voi peruuttaa.</string>
     <string name="crm_parent_none">Ei yläkohdetta</string>
     <string name="crm_links_empty">Ei linkkejä</string>
     <string name="crm_links_section_relates">Liittyy</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Tuo varmuuskopiosta (valinnainen)</string>
     <string name="crm_export">Vie tiedot</string>
     <string name="crm_exporting">Valmistellaan vientiä…</string>
-    <string name="crm_create_allow_search">Salli kenen tahansa etsiä CRM:ää</string>
     <string name="crm_no_crms_found">CRM-järjestelmiä ei löytynyt</string>
     <string name="crm_create_blocked_no_parents">Mitään kohdetyyppiä ei voi vielä luoda. Luo ensin vaaditut yläkohteet.</string>
     <string name="crm_export_csv">Vie CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Esimerkki %1$s</string>
     <string name="crm_option_delete_title">Poista vaihtoehto</string>
     <string name="crm_option_delete_message">Haluatko varmasti poistaa vaihtoehdon \"%1$s\"?</string>
+    <string name="crm_create_public">Salli kenen tahansa katsella ja kommentoida CRM:ää</string>
+    <string name="crm_board_delete_column">Poista sarake</string>
+    <string name="crm_board_delete_column_message">Haluatko varmasti poistaa sarakkeen \"%1$s\"? Tätä ei voi kumota.</string>
+    <string name="crm_object_delete_named">Haluatko varmasti poistaa kohteen \"%1$s\"? Tätä toimintoa ei voi kumota.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Haluatko varmasti poistaa kohteen \"%1$s\" ja sen alla olevan %2$s kohteen? Tätä toimintoa ei voi kumota.</item>
+        <item quantity="other">Haluatko varmasti poistaa kohteen \"%1$s\" ja sen alla olevat %2$s kohdetta? Tätä toimintoa ei voi kumota.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s liitettä ei voitu lisätä: %2$s</item>
+        <item quantity="other">%1$s liitettä ei voitu lisätä: %2$s</item>
+    </plurals>
 </resources>

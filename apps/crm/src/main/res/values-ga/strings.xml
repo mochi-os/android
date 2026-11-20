@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">An bhfuil tú cinnte gur mhaith leat an CRM seo a scriosadh? Bainfear gach réad, trácht agus socrú go buan.</string>
     <string name="crm_object_unwatch">Stop ag faire</string>
     <string name="crm_object_delete_title">Scrios réad</string>
-    <string name="crm_object_delete_message">An bhfuil tú cinnte gur mhaith leat an réad seo a scriosadh? Ní féidir an gníomh seo a chur ar ceal.</string>
     <string name="crm_parent_none">Gan tuismitheoir</string>
     <string name="crm_links_empty">Gan naisc</string>
     <string name="crm_links_section_relates">Bainteach le</string>
@@ -276,7 +275,6 @@
     <string name="crm_create_import_backup">Iompórtáil ó chúltaca (roghnach)</string>
     <string name="crm_export">Easpórtáil sonraí</string>
     <string name="crm_exporting">Easpórtáil á hullmhú…</string>
-    <string name="crm_create_allow_search">Ceadaigh d\'aon duine cuardach do CRM</string>
     <string name="crm_no_crms_found">Níor aimsíodh aon CRM</string>
     <string name="crm_create_blocked_no_parents">Ní féidir aon chineál míre a chruthú fós. Cruthaigh na míreanna tuismitheora riachtanacha ar dtús.</string>
     <string name="crm_export_csv">Easpórtáil CSV</string>
@@ -287,4 +285,22 @@
     <string name="crm_design_sample">Sampla %1$s</string>
     <string name="crm_option_delete_title">Scrios rogha</string>
     <string name="crm_option_delete_message">An bhfuil tú cinnte gur mhaith leat an rogha \"%1$s\" a scriosadh?</string>
+    <string name="crm_create_public">Ceadaigh d\'aon duine an CRM a fheiceáil agus nótaí tráchta a chur air</string>
+    <string name="crm_board_delete_column">Scrios colún</string>
+    <string name="crm_board_delete_column_message">An bhfuil tú cinnte gur mian leat an colún \"%1$s\" a scriosadh? Ní féidir é seo a chealú.</string>
+    <string name="crm_object_delete_named">An bhfuil tú cinnte gur mian leat \"%1$s\" a scriosadh? Ní féidir an gníomh seo a chealú.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mhír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="two">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mhír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="few">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mhír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="many">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+        <item quantity="other">An bhfuil tú cinnte gur mian leat \"%1$s\" agus an %2$s mír faoi a scriosadh? Ní féidir an gníomh seo a chealú.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Níorbh fhéidir %1$s cheangaltán a chur leis: %2$s</item>
+        <item quantity="two">Níorbh fhéidir %1$s cheangaltán a chur leis: %2$s</item>
+        <item quantity="few">Níorbh fhéidir %1$s cheangaltán a chur leis: %2$s</item>
+        <item quantity="many">Níorbh fhéidir %1$s gceangaltán a chur leis: %2$s</item>
+        <item quantity="other">Níorbh fhéidir %1$s ceangaltán a chur leis: %2$s</item>
+    </plurals>
 </resources>

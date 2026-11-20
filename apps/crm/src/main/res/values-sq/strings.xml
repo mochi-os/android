@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Jeni i sigurt që dëshironi ta fshini këtë CRM? Të gjitha objektet, komentet dhe cilësimet do të hiqen përgjithmonë.</string>
     <string name="crm_object_unwatch">Hiq ndjekjen</string>
     <string name="crm_object_delete_title">Fshi objektin</string>
-    <string name="crm_object_delete_message">Jeni i sigurt që dëshironi ta fshini këtë objekt? Ky veprim nuk mund të zhbëhet.</string>
     <string name="crm_parent_none">Pa prind</string>
     <string name="crm_links_empty">Asnjë lidhje</string>
     <string name="crm_links_section_relates">Lidhet me</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importo nga kopja rezervë (opsionale)</string>
     <string name="crm_export">Eksporto të dhënat</string>
     <string name="crm_exporting">Po përgatitet eksporti…</string>
-    <string name="crm_create_allow_search">Lejo këdo të kërkojë për CRM</string>
     <string name="crm_no_crms_found">S\'u gjet asnjë CRM</string>
     <string name="crm_create_blocked_no_parents">Asnjë lloj artikulli nuk mund të krijohet ende. Krijoni fillimisht artikujt prind të kërkuar.</string>
     <string name="crm_export_csv">Eksporto CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Shembull %1$s</string>
     <string name="crm_option_delete_title">Fshi opsionin</string>
     <string name="crm_option_delete_message">Jeni i sigurt që dëshironi të fshini opsionin \"%1$s\"?</string>
+    <string name="crm_create_public">Lejo këdo ta shohë dhe ta komentojë CRM-në</string>
+    <string name="crm_board_delete_column">Fshi kolonën</string>
+    <string name="crm_board_delete_column_message">Je i sigurt që do të fshish kolonën \"%1$s\"? Kjo nuk mund të zhbëhet.</string>
+    <string name="crm_object_delete_named">Je i sigurt që do të fshish \"%1$s\"? Ky veprim nuk mund të zhbëhet.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Je i sigurt që do të fshish \"%1$s\" dhe %2$s artikull që ndodhet nën të? Ky veprim nuk mund të zhbëhet.</item>
+        <item quantity="other">Je i sigurt që do të fshish \"%1$s\" dhe %2$s artikuj që ndodhen nën të? Ky veprim nuk mund të zhbëhet.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s bashkëngjitje nuk mund të shtohej: %2$s</item>
+        <item quantity="other">%1$s bashkëngjitje nuk mund të shtoheshin: %2$s</item>
+    </plurals>
 </resources>

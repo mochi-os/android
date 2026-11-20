@@ -151,7 +151,6 @@
     <string name="crm_settings_delete_confirm_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το CRM; Όλα τα αντικείμενα, τα σχόλια και οι ρυθμίσεις θα αφαιρεθούν οριστικά.</string>
     <string name="crm_object_unwatch">Διακοπή παρακολούθησης</string>
     <string name="crm_object_delete_title">Διαγραφή αντικειμένου</string>
-    <string name="crm_object_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτό το αντικείμενο; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="crm_parent_none">Χωρίς γονέα</string>
     <string name="crm_links_empty">Δεν υπάρχουν σύνδεσμοι</string>
     <string name="crm_links_section_relates">Σχετίζεται με</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Εισαγωγή από αντίγραφο ασφαλείας (προαιρετικό)</string>
     <string name="crm_export">Εξαγωγή δεδομένων</string>
     <string name="crm_exporting">Προετοιμασία εξαγωγής…</string>
-    <string name="crm_create_allow_search">Να επιτρέπεται σε όλους η αναζήτηση CRM</string>
     <string name="crm_no_crms_found">Δεν βρέθηκαν CRM</string>
     <string name="crm_create_blocked_no_parents">Δεν μπορούν να δημιουργηθούν ακόμη τύποι στοιχείων. Δημιουργήστε πρώτα τα απαιτούμενα γονικά στοιχεία.</string>
     <string name="crm_export_csv">Εξαγωγή CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Δείγμα %1$s</string>
     <string name="crm_option_delete_title">Διαγραφή επιλογής</string>
     <string name="crm_option_delete_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε την επιλογή \"%1$s\";</string>
+    <string name="crm_create_public">Να επιτρέπεται σε όλους η προβολή του CRM και ο σχολιασμός του</string>
+    <string name="crm_board_delete_column">Διαγραφή στήλης</string>
+    <string name="crm_board_delete_column_message">Είστε βέβαιοι ότι θέλετε να διαγράψετε τη στήλη \"%1$s\"; Αυτό δεν μπορεί να αναιρεθεί.</string>
+    <string name="crm_object_delete_named">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\"; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\" και το %2$s στοιχείο κάτω από αυτό; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</item>
+        <item quantity="other">Είστε βέβαιοι ότι θέλετε να διαγράψετε \"%1$s\" και τα %2$s στοιχεία κάτω από αυτό; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Δεν ήταν δυνατή η προσθήκη %1$s συνημμένου: %2$s</item>
+        <item quantity="other">Δεν ήταν δυνατή η προσθήκη %1$s συνημμένων: %2$s</item>
+    </plurals>
 </resources>

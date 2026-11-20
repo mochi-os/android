@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">తెరిచి ఉంది</string>
     <string name="projects_request_status_merged">విలీనం చేయబడింది</string>
     <string name="projects_request_merge">విలీనం</string>
-    <string name="projects_request_close">మూసివేయండి</string>
     <string name="projects_request_merge_dialog_title">విలీనం</string>
     <string name="projects_request_method">విధానం</string>
     <string name="projects_request_method_merge">విలీనం</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">మీరు ఖచ్చితంగా ఈ ప్రాజెక్ట్‌ను తొలగించాలనుకుంటున్నారా? అన్ని ఆబ్జెక్ట్‌లు, వ్యాఖ్యలు మరియు సెట్టింగ్‌లు శాశ్వతంగా తొలగించబడతాయి.</string>
     <string name="projects_object_unwatch">చూడటం ఆపండి</string>
     <string name="projects_object_delete_title">ఆబ్జెక్ట్‌ను తొలగించండి</string>
-    <string name="projects_object_delete_message">మీరు ఖచ్చితంగా ఈ ఆబ్జెక్ట్‌ను తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</string>
     <string name="projects_parent_none">పేరెంట్ లేదు</string>
     <string name="projects_links_empty">లింక్‌లు లేవు</string>
     <string name="projects_links_section_relates">సంబంధించినది</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">జోడింపులు లేవు</string>
     <string name="projects_attachment_default_name">జోడింపు</string>
     <string name="projects_request_new">కొత్త మెర్జ్ అభ్యర్థన</string>
-    <string name="projects_request_status_closed">మూసివేయబడింది</string>
     <string name="projects_request_back_to_list">జాబితాకు తిరిగి</string>
     <string name="projects_request_repository">రిపోజిటరీ: %1$s</string>
     <string name="projects_request_source">మూలం: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">రూపకల్పన, సృష్టి, సవరణ, వ్యాఖ్య మరియు వీక్షణ</string>
     <string name="projects_access_role_write">సృష్టి, సవరణ, వ్యాఖ్య మరియు వీక్షణ</string>
     <string name="projects_all_projects">అన్ని ప్రాజెక్ట్‌లు</string>
-    <string name="projects_create_allow_search">ప్రాజెక్ట్ కోసం ఎవరైనా శోధించడానికి అనుమతించండి</string>
     <string name="projects_create_import_backup">బ్యాకప్ నుండి దిగుమతి (ఐచ్ఛికం)</string>
     <string name="projects_create_upload_json">.json ఫైల్‌ను అప్‌లోడ్ చేయండి</string>
     <string name="projects_settings_not_set">సెట్ చేయబడలేదు</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">ఇంకా ఏ ఐటెం రకాలను సృష్టించలేము. మొదట అవసరమైన పేరెంట్ ఐటెంలను సృష్టించండి.</string>
     <string name="projects_create_blocked_no_options">సృష్టించలేరు: %1$s అవసరం కానీ ఎంచుకోవడానికి ఎంపికలు లేవు. డిజైన్‌లో ఎంపికలను జోడించండి.</string>
     <string name="projects_attachment_remove">జోడింపును తీసివేయండి</string>
+    <string name="projects_create_allow_public">ప్రాజెక్ట్‌ను ఎవరైనా చూడటానికి మరియు దానిపై వ్యాఖ్యానించడానికి అనుమతించండి</string>
+    <string name="projects_request_delete_title">మెర్జ్ రిక్వెస్ట్‌ను తొలగించండి</string>
+    <string name="projects_request_delete_message">మీరు ఈ మెర్జ్ రిక్వెస్ట్‌ను తొలగించాలనుకుంటున్నారా?</string>
+    <string name="projects_board_delete_column_title">కాలమ్‌ను తొలగించండి</string>
+    <string name="projects_board_delete_column_message">మీరు \"%1$s\" కాలమ్‌ను తొలగించాలనుకుంటున్నారా? దీన్ని రద్దు చేయలేరు.</string>
+    <string name="projects_object_delete_named">మీరు \"%1$s\"ని తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">మీరు \"%1$s\"ని మరియు దాని కింద ఉన్న %2$s అంశాన్ని తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</item>
+        <item quantity="other">మీరు \"%1$s\"ని మరియు దాని కింద ఉన్న %2$s అంశాలను తొలగించాలనుకుంటున్నారా? ఈ చర్యను రద్దు చేయలేరు.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">జతచేయడం సాధ్యపడలేదు: %1$s</string>
 </resources>

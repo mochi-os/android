@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">திறந்துள்ளது</string>
     <string name="projects_request_status_merged">ஒன்றிணைக்கப்பட்டது</string>
     <string name="projects_request_merge">ஒன்றிணை</string>
-    <string name="projects_request_close">மூடு</string>
     <string name="projects_request_merge_dialog_title">ஒன்றிணை</string>
     <string name="projects_request_method">முறை</string>
     <string name="projects_request_method_merge">ஒன்றிணை</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">இந்தத் திட்டப்பணியை நிச்சயமாக நீக்க விரும்புகிறீர்களா? அனைத்து பொருள்கள், கருத்துகள் மற்றும் அமைப்புகள் நிரந்தரமாக அகற்றப்படும்.</string>
     <string name="projects_object_unwatch">கவனிப்பதை நிறுத்து</string>
     <string name="projects_object_delete_title">பொருளை நீக்கு</string>
-    <string name="projects_object_delete_message">இந்தப் பொருளை நிச்சயமாக நீக்க விரும்புகிறீர்களா? இந்தச் செயலைச் செயல்தவிர்க்க முடியாது.</string>
     <string name="projects_parent_none">பெற்றோர் இல்லை</string>
     <string name="projects_links_empty">இணைப்புகள் இல்லை</string>
     <string name="projects_links_section_relates">தொடர்புடையது</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">இணைப்புகள் இல்லை</string>
     <string name="projects_attachment_default_name">இணைப்பு</string>
     <string name="projects_request_new">புதிய ஒன்றிணைப்பு கோரிக்கை</string>
-    <string name="projects_request_status_closed">மூடப்பட்டது</string>
     <string name="projects_request_back_to_list">பட்டியலுக்குத் திரும்பு</string>
     <string name="projects_request_repository">களஞ்சியம்: %1$s</string>
     <string name="projects_request_source">மூலம்: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">வடிவமைத்தல், உருவாக்குதல், திருத்துதல், கருத்திடுதல் மற்றும் பார்வையிடுதல்</string>
     <string name="projects_access_role_write">உருவாக்குதல், திருத்துதல், கருத்திடுதல் மற்றும் பார்வையிடுதல்</string>
     <string name="projects_all_projects">அனைத்து திட்டங்கள்</string>
-    <string name="projects_create_allow_search">திட்டத்தை யாராவது தேட அனுமதி</string>
     <string name="projects_create_import_backup">காப்புப்பிரதியிலிருந்து இறக்குமதி (விருப்பம்)</string>
     <string name="projects_create_upload_json">.json கோப்பை பதிவேற்று</string>
     <string name="projects_settings_not_set">அமைக்கப்படவில்லை</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">உருப்படி வகைகள் எதையும் இன்னும் உருவாக்க முடியாது. முதலில் தேவையான பெற்றோர் உருப்படிகளை உருவாக்கவும்.</string>
     <string name="projects_create_blocked_no_options">உருவாக்க முடியாது: %1$s தேவை ஆனால் தேர்ந்தெடுக்க விருப்பங்கள் இல்லை. வடிவமைப்பில் விருப்பங்களைச் சேர்க்கவும்.</string>
     <string name="projects_attachment_remove">இணைப்பை அகற்று</string>
+    <string name="projects_create_allow_public">திட்டத்தை யாரும் பார்க்கவும் அதில் கருத்து தெரிவிக்கவும் அனுமதி</string>
+    <string name="projects_request_delete_title">ஒன்றிணைப்பு கோரிக்கையை நீக்கு</string>
+    <string name="projects_request_delete_message">இந்த ஒன்றிணைப்பு கோரிக்கையை நீக்க விரும்புகிறீர்களா?</string>
+    <string name="projects_board_delete_column_title">நெடுவரிசையை நீக்கு</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" நெடுவரிசையை நீக்க விரும்புகிறீர்களா? இதை மாற்ற முடியாது.</string>
+    <string name="projects_object_delete_named">\"%1$s\"-ஐ நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\"-ஐயும் அதன் கீழுள்ள %2$s உருப்படியையும் நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.</item>
+        <item quantity="other">\"%1$s\"-ஐயும் அதன் கீழுள்ள %2$s உருப்படிகளையும் நீக்க விரும்புகிறீர்களா? இந்த செயலை மாற்ற முடியாது.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">இணைக்க முடியவில்லை: %1$s</string>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">开放</string>
     <string name="projects_request_status_merged">已合并</string>
     <string name="projects_request_merge">合并</string>
-    <string name="projects_request_close">关闭</string>
     <string name="projects_request_merge_dialog_title">合并</string>
     <string name="projects_request_method">方式</string>
     <string name="projects_request_method_merge">合并</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">确定要删除此项目吗？所有对象、评论和设置都将被永久删除。</string>
     <string name="projects_object_unwatch">取消关注</string>
     <string name="projects_object_delete_title">删除对象</string>
-    <string name="projects_object_delete_message">确定要删除此对象吗？此操作无法撤销。</string>
     <string name="projects_parent_none">无父项</string>
     <string name="projects_links_empty">暂无链接</string>
     <string name="projects_links_section_relates">相关</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">暂无附件</string>
     <string name="projects_attachment_default_name">附件</string>
     <string name="projects_request_new">新建合并请求</string>
-    <string name="projects_request_status_closed">已关闭</string>
     <string name="projects_request_back_to_list">返回列表</string>
     <string name="projects_request_repository">仓库：%1$s</string>
     <string name="projects_request_source">源：%1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">设计、创建、编辑、评论和查看</string>
     <string name="projects_access_role_write">创建、编辑、评论和查看</string>
     <string name="projects_all_projects">所有项目</string>
-    <string name="projects_create_allow_search">允许任何人搜索项目</string>
     <string name="projects_create_import_backup">从备份导入（可选）</string>
     <string name="projects_create_upload_json">上传 .json 文件</string>
     <string name="projects_settings_not_set">未设置</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">尚无可创建的条目类型。请先创建所需的父级条目。</string>
     <string name="projects_create_blocked_no_options">无法创建：%1$s 为必填项，但没有可选选项。请在设计中添加选项。</string>
     <string name="projects_attachment_remove">移除附件</string>
+    <string name="projects_create_allow_public">允许任何人查看和评论项目</string>
+    <string name="projects_request_delete_title">删除合并请求</string>
+    <string name="projects_request_delete_message">确定要删除此合并请求吗?</string>
+    <string name="projects_board_delete_column_title">删除列</string>
+    <string name="projects_board_delete_column_message">确定要删除列 \"%1$s\" 吗?此操作无法撤销。</string>
+    <string name="projects_object_delete_named">确定要删除 \"%1$s\" 吗?此操作无法撤销。</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">确定要删除 \"%1$s\" 及其下的 %2$s 项吗?此操作无法撤销。</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">无法附加：%1$s</string>
 </resources>

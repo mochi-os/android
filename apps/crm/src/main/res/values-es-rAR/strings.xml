@@ -116,7 +116,6 @@
     <string name="crm_object_unwatch">Dejar de seguir</string>
     <string name="crm_object_tab_properties">Propiedades</string>
     <string name="crm_object_delete_title">Eliminar objeto</string>
-    <string name="crm_object_delete_message">¿Seguro que querés eliminar este objeto? Esta acción no se puede deshacer.</string>
     <string name="crm_parent_none">Sin padre</string>
     <string name="crm_links_empty">Sin vínculos</string>
     <string name="crm_links_section_relates">Se relaciona con</string>
@@ -233,7 +232,13 @@
     <string name="crm_settings_server">Servidor</string>
     <string name="crm_access_select_role">Seleccioná un rol</string>
     <string name="crm_create_import_backup">Importar desde copia de seguridad (opcional)</string>
-    <string name="crm_create_allow_search">Permití que cualquiera busque el CRM</string>
     <string name="crm_option_delete_title">Eliminá la opción</string>
     <string name="crm_option_delete_message">¿Estás seguro de que querés eliminar la opción \"%1$s\"?</string>
+    <string name="crm_board_delete_column">Eliminá la columna</string>
+    <string name="crm_board_delete_column_message">¿Estás seguro de que querés eliminar la columna \"%1$s\"? Esto no se puede deshacer.</string>
+    <string name="crm_object_delete_named">¿Estás seguro de que querés eliminar \"%1$s\"? Esta acción no se puede deshacer.</string>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">No se pudo agregar %1$s adjunto: %2$s</item>
+        <item quantity="other">No se pudieron agregar %1$s adjuntos: %2$s</item>
+    </plurals>
 </resources>

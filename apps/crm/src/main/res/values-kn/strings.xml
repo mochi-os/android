@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">ನೀವು ಈ CRM ಅನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಎಲ್ಲಾ ಆಬ್ಜೆಕ್ಟ್‌ಗಳು, ಪ್ರತಿಕ್ರಿಯೆಗಳು ಮತ್ತು ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಶಾಶ್ವತವಾಗಿ ತೆಗೆದುಹಾಕಲಾಗುತ್ತದೆ.</string>
     <string name="crm_object_unwatch">ವೀಕ್ಷಣೆ ತೆಗೆದುಹಾಕಿ</string>
     <string name="crm_object_delete_title">ಆಬ್ಜೆಕ್ಟ್ ಅಳಿಸಿ</string>
-    <string name="crm_object_delete_message">ನೀವು ಈ ಆಬ್ಜೆಕ್ಟ್ ಅನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದುಗೊಳಿಸಲಾಗುವುದಿಲ್ಲ.</string>
     <string name="crm_parent_none">ಪೋಷಕ ಇಲ್ಲ</string>
     <string name="crm_links_empty">ಯಾವುದೇ ಲಿಂಕ್‌ಗಳಿಲ್ಲ</string>
     <string name="crm_links_section_relates">ಸಂಬಂಧಿಸಿದೆ</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">ಬ್ಯಾಕಪ್‌ನಿಂದ ಆಮದು ಮಾಡಿ (ಐಚ್ಛಿಕ)</string>
     <string name="crm_export">ಡೇಟಾ ರಫ್ತು ಮಾಡಿ</string>
     <string name="crm_exporting">ರಫ್ತು ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…</string>
-    <string name="crm_create_allow_search">ಯಾರಾದರೂ CRM ಹುಡುಕಲು ಅನುಮತಿಸಿ</string>
     <string name="crm_no_crms_found">ಯಾವುದೇ CRM ಗಳು ಸಿಗಲಿಲ್ಲ</string>
     <string name="crm_create_blocked_no_parents">ಇನ್ನೂ ಯಾವುದೇ ಐಟಂ ಪ್ರಕಾರಗಳನ್ನು ರಚಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. ಮೊದಲು ಅಗತ್ಯವಿರುವ ಪೋಷಕ ಐಟಂಗಳನ್ನು ರಚಿಸಿ.</string>
     <string name="crm_export_csv">CSV ಎಕ್ಸ್‌ಪೋರ್ಟ್</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">ಮಾದರಿ %1$s</string>
     <string name="crm_option_delete_title">ಆಯ್ಕೆ ಅಳಿಸಿ</string>
     <string name="crm_option_delete_message">ನೀವು \"%1$s\" ಆಯ್ಕೆಯನ್ನು ಅಳಿಸಲು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
+    <string name="crm_create_public">ಯಾರಾದರೂ CRM ವೀಕ್ಷಿಸಲು ಮತ್ತು ಅದರ ಮೇಲೆ ಕಾಮೆಂಟ್ ಮಾಡಲು ಅನುಮತಿಸಿ</string>
+    <string name="crm_board_delete_column">ಕಾಲಮ್ ಅಳಿಸಿ</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" ಕಾಲಮ್ ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಇದನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="crm_object_delete_named">\"%1$s\" ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\" ಮತ್ತು ಅದರ ಅಡಿಯಲ್ಲಿರುವ %2$s ಐಟಂ ಅನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</item>
+        <item quantity="other">\"%1$s\" ಮತ್ತು ಅದರ ಅಡಿಯಲ್ಲಿರುವ %2$s ಐಟಂಗಳನ್ನು ಅಳಿಸಲು ನೀವು ಖಚಿತವಾಗಿದ್ದೀರಾ? ಈ ಕ್ರಿಯೆಯನ್ನು ರದ್ದು ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s ಲಗತ್ತನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %2$s</item>
+        <item quantity="other">%1$s ಲಗತ್ತುಗಳನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ: %2$s</item>
+    </plurals>
 </resources>

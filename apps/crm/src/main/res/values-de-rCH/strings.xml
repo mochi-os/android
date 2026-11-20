@@ -98,7 +98,6 @@
     <string name="crm_object_unwatch">Nicht mehr beobachten</string>
     <string name="crm_object_tab_properties">Eigenschaften</string>
     <string name="crm_object_delete_title">Objekt löschen</string>
-    <string name="crm_object_delete_message">Möchten Sie dieses Objekt wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="crm_parent_none">Kein übergeordnetes Element</string>
     <string name="crm_links_empty">Keine Verknüpfungen</string>
     <string name="crm_links_add">Verknüpfung hinzufügen</string>

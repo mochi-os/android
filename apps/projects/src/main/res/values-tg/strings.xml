@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Кушода</string>
     <string name="projects_request_status_merged">Муттаҳид шуд</string>
     <string name="projects_request_merge">Муттаҳид кардан</string>
-    <string name="projects_request_close">Пӯшидан</string>
     <string name="projects_request_merge_dialog_title">Муттаҳид кардан</string>
     <string name="projects_request_method">Усул</string>
     <string name="projects_request_method_merge">Муттаҳид кардан</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Шумо мутмаин ҳастед, ки мехоҳед ин лоиҳаро нест кунед? Ҳамаи объектҳо, шарҳҳо ва танзимот ба таври доимӣ нест карда мешаванд.</string>
     <string name="projects_object_unwatch">Бекор кардани назорат</string>
     <string name="projects_object_delete_title">Нест кардани объект</string>
-    <string name="projects_object_delete_message">Шумо мутмаин ҳастед, ки мехоҳед ин объектро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
     <string name="projects_parent_none">Падар нест</string>
     <string name="projects_links_empty">Истинодҳо нестанд</string>
     <string name="projects_links_section_relates">Алоқаманд аст ба</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Замимаҳо нестанд</string>
     <string name="projects_attachment_default_name">замима</string>
     <string name="projects_request_new">Дархости нави муттаҳидсозӣ</string>
-    <string name="projects_request_status_closed">Пӯшида</string>
     <string name="projects_request_back_to_list">Бозгашт ба рӯйхат</string>
     <string name="projects_request_repository">Анбор: %1$s</string>
     <string name="projects_request_source">Манбаъ: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Тарроҳӣ, эҷод, таҳрир, шарҳ ва дидан</string>
     <string name="projects_access_role_write">Эҷод, таҳрир, шарҳ ва дидан</string>
     <string name="projects_all_projects">Ҳама лоиҳаҳо</string>
-    <string name="projects_create_allow_search">Иҷозат додан, ки ҳар кас лоиҳаро ҷустуҷӯ кунад</string>
     <string name="projects_create_import_backup">Ворид кардан аз нусхаи захиравӣ (ихтиёрӣ)</string>
     <string name="projects_create_upload_json">Бор кардани файли .json</string>
     <string name="projects_settings_not_set">Танзим нашудааст</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">Ҳеҷ як намуди ашё ҳоло сохта намешавад. Аввал ашёҳои волидайни заруриро эҷод кунед.</string>
     <string name="projects_create_blocked_no_options">Эҷод кардан ғайриимкон: %1$s ҳатмист, аммо имконоти интихоб надорад. Дар Тарҳ имконот илова кунед.</string>
     <string name="projects_attachment_remove">Хориҷ кардани замима</string>
+    <string name="projects_create_allow_public">Иҷозат додан, ки ҳар кас лоиҳаро бинад ва ба он шарҳ нависад</string>
+    <string name="projects_request_delete_title">Нест кардани дархости муттаҳидсозӣ</string>
+    <string name="projects_request_delete_message">Шумо мутмаин ҳастед, ки мехоҳед ин дархости муттаҳидсозиро нест кунед?</string>
+    <string name="projects_board_delete_column_title">Нест кардани сутун</string>
+    <string name="projects_board_delete_column_message">Шумо мутмаин ҳастед, ки мехоҳед сутуни \"%1$s\"-ро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
+    <string name="projects_object_delete_named">Шумо мутмаин ҳастед, ки мехоҳед \"%1$s\"-ро нест кунед? Ин амалро бекор кардан мумкин нест.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Шумо мутмаин ҳастед, ки мехоҳед \"%1$s\" ва %2$s ҷузъи зери онро нест кунед? Ин амалро бекор кардан мумкин нест.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Замима карда нашуд: %1$s</string>
 </resources>

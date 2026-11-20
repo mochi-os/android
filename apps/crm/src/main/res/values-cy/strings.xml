@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">Ydych chi\'n siŵr eich bod am ddileu\'r CRM hwn? Bydd pob gwrthrych, sylw a gosodiad yn cael eu tynnu\'n barhaol.</string>
     <string name="crm_object_unwatch">Peidio â gwylio</string>
     <string name="crm_object_delete_title">Dileu gwrthrych</string>
-    <string name="crm_object_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r gwrthrych hwn? Ni ellir dadwneud y weithred hon.</string>
     <string name="crm_parent_none">Dim rhiant</string>
     <string name="crm_links_empty">Dim dolenni</string>
     <string name="crm_links_section_relates">Yn ymwneud â</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Mewnforio o gopi wrth gefn (dewisol)</string>
     <string name="crm_export">Allforio data</string>
     <string name="crm_exporting">Yn paratoi\'r allforio…</string>
-    <string name="crm_create_allow_search">Caniatáu i unrhyw un chwilio am CRM</string>
     <string name="crm_no_crms_found">Heb ddod o hyd i CRMau</string>
     <string name="crm_create_blocked_no_parents">Ni ellir creu unrhyw fathau o eitemau eto. Crëwch yr eitemau rhiant gofynnol yn gyntaf.</string>
     <string name="crm_export_csv">Allforio CSV</string>
@@ -285,4 +283,24 @@
     <string name="crm_design_sample">Sampl %1$s</string>
     <string name="crm_option_delete_title">Dileu opsiwn</string>
     <string name="crm_option_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r opsiwn \"%1$s\"?</string>
+    <string name="crm_create_public">Caniatáu i unrhyw un weld y CRM a rhoi sylwadau arno</string>
+    <string name="crm_board_delete_column">Dileu colofn</string>
+    <string name="crm_board_delete_column_message">Ydych chi\'n siŵr eich bod am ddileu\'r golofn \"%1$s\"? Ni ellir dadwneud hyn.</string>
+    <string name="crm_object_delete_named">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\"? Ni ellir dadwneud y weithred hon.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="zero">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="one">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="two">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="few">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="many">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="other">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="zero">Nid oedd modd ychwanegu %1$s atodiad: %2$s</item>
+        <item quantity="one">Nid oedd modd ychwanegu %1$s atodiad: %2$s</item>
+        <item quantity="two">Nid oedd modd ychwanegu %1$s atodiad: %2$s</item>
+        <item quantity="few">Nid oedd modd ychwanegu %1$s atodiad: %2$s</item>
+        <item quantity="many">Nid oedd modd ychwanegu %1$s atodiad: %2$s</item>
+        <item quantity="other">Nid oedd modd ychwanegu %1$s o atodiadau: %2$s</item>
+    </plurals>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Żgur li trid tħassar din is-CRM? L-oġġetti, il-kummenti u s-settings kollha jitneħħew għal dejjem.</string>
     <string name="crm_object_unwatch">Tibqax tosserva</string>
     <string name="crm_object_delete_title">Ħassar l-oġġett</string>
-    <string name="crm_object_delete_message">Żgur li trid tħassar dan l-oġġett? Din l-azzjoni ma tistax titreġġa\' lura.</string>
     <string name="crm_parent_none">L-ebda ġenitur</string>
     <string name="crm_links_empty">L-ebda link</string>
     <string name="crm_links_section_relates">Jirrelata ma\'</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importa mill-backup (mhux obbligatorju)</string>
     <string name="crm_export">Esporta d-data</string>
     <string name="crm_exporting">Qed titħejja l-esportazzjoni…</string>
-    <string name="crm_create_allow_search">Ippermetti lil kulħadd ifittex CRM</string>
     <string name="crm_no_crms_found">Ma nstabu l-ebda CRMs</string>
     <string name="crm_create_blocked_no_parents">L-ebda tipi ta\' oġġetti jistgħu jinħolqu għadhom. Oħloq l-oġġetti tal-ġenitur meħtieġa l-ewwel.</string>
     <string name="crm_export_csv">Esporta CSV</string>
@@ -285,4 +283,22 @@
     <string name="crm_design_sample">Kampjun %1$s</string>
     <string name="crm_option_delete_title">Ħassar għażla</string>
     <string name="crm_option_delete_message">Żgur li trid tħassar l-għażla \"%1$s\"?</string>
+    <string name="crm_create_public">Ippermetti lil kulħadd jara CRM u jikkummenta fuqu</string>
+    <string name="crm_board_delete_column">Ħassar kolonna</string>
+    <string name="crm_board_delete_column_message">Żgur trid tħassar il-kolonna \"%1$s\"? Dan ma jistax jiġi ndirizzat.</string>
+    <string name="crm_object_delete_named">Żgur trid tħassar \"%1$s\"? Din l-azzjoni ma tistax tiġi ndirizzata.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Żgur trid tħassar \"%1$s\" u %2$s oġġett taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="two">Żgur trid tħassar \"%1$s\" u %2$s oġġetti taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="few">Żgur trid tħassar \"%1$s\" u %2$s oġġetti taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="many">Żgur trid tħassar \"%1$s\" u %2$s oġġett taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="other">Żgur trid tħassar \"%1$s\" u %2$s oġġett taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s mehmuż ma setax jiżdied: %2$s</item>
+        <item quantity="two">%1$s mehmużin ma setgħux jiżdiedu: %2$s</item>
+        <item quantity="few">%1$s mehmużin ma setgħux jiżdiedu: %2$s</item>
+        <item quantity="many">%1$s mehmuż ma setgħux jiżdiedu: %2$s</item>
+        <item quantity="other">%1$s mehmuż ma setgħux jiżdiedu: %2$s</item>
+    </plurals>
 </resources>

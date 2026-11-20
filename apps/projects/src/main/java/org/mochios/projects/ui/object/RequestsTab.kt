@@ -85,6 +85,10 @@ fun RequestsTab(
     onViewDiff: (String, String, String, String) -> Unit
 ) {
     var showCreateDialog by remember { mutableStateOf(false) }
+    // Set while a new request is with the server: its dialog stays up until
+    // the answer, so a refusal leaves what was typed in place.
+    var creating by remember { mutableStateOf(false) }
+    var deleting by remember { mutableStateOf<MergeRequest?>(null) }
     // Keyed by id, not by the row: the detail view then follows every
     // refetch instead of showing the request as it was when tapped.
     var selectedRequestId by remember { mutableStateOf<String?>(null) }
@@ -116,7 +120,7 @@ fun RequestsTab(
                     RequestItem(
                         request = request,
                         onClick = { selectedRequestId = request.id },
-                        onDelete = { viewModel.deleteRequest(request.id) }
+                        onDelete = { deleting = request }
                     )
                     HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
                 }
@@ -136,11 +140,30 @@ fun RequestsTab(
     if (showCreateDialog) {
         CreateRequestDialog(
             viewModel = viewModel,
-            onDismiss = { showCreateDialog = false },
+            creating = creating,
+            onDismiss = { if (!creating) showCreateDialog = false },
             onCreate = { repo, source, target, title, description, draft ->
-                viewModel.createRequest(repo, source, target, title, description, draft)
-                showCreateDialog = false
+                creating = true
+                viewModel.createRequest(repo, source, target, title, description, draft) { created ->
+                    creating = false
+                    if (created) showCreateDialog = false
+                }
             }
+        )
+    }
+
+    deleting?.let { request ->
+        MochiAlertDialog(
+            onDismissRequest = { deleting = null },
+            title = stringResource(R.string.projects_request_delete_title),
+            text = stringResource(R.string.projects_request_delete_message),
+            confirmText = stringResource(MochiR.string.common_delete),
+            onConfirm = {
+                deleting = null
+                viewModel.deleteRequest(request.id)
+            },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
         )
     }
 }
@@ -209,8 +232,6 @@ private fun StatusChip(status: String, draft: Boolean) {
             stringResource(R.string.projects_request_status_open) to StatusTone.Waiting
         status == "merged" ->
             stringResource(R.string.projects_request_status_merged) to StatusTone.Accent
-        status == "closed" ->
-            stringResource(R.string.projects_request_status_closed) to StatusTone.Negative
         else -> status.replaceFirstChar { char -> char.uppercase() } to StatusTone.Neutral
     }
     val icon = if (!draft && status == "merged") Icons.Outlined.MergeType else tone.defaultIcon
@@ -387,14 +408,6 @@ private fun RequestDetailView(
                     Text(stringResource(R.string.projects_request_mark_ready))
                 }
             }
-
-            if (request.status == "open") {
-                MochiTextButton(onClick = {
-                    viewModel.updateRequest(request.id, null, null, "closed", null)
-                }) {
-                    Text(stringResource(R.string.projects_request_close))
-                }
-            }
         }
     }
 
@@ -469,6 +482,7 @@ private fun MergeDialog(
 @Composable
 private fun CreateRequestDialog(
     viewModel: ObjectDetailViewModel,
+    creating: Boolean,
     onDismiss: () -> Unit,
     onCreate: (String, String, String, String, String?, Boolean) -> Unit
 ) {
@@ -570,9 +584,11 @@ private fun CreateRequestDialog(
                 draft
             )
         },
-        confirmEnabled = title.isNotBlank() && selectedRepo != null &&
+        confirmEnabled = !creating && title.isNotBlank() && selectedRepo != null &&
             selectedSource != null && selectedTarget != null,
+        confirmLoading = creating,
         dismissText = stringResource(MochiR.string.common_cancel),
+        dismissEnabled = !creating,
     )
 }
 

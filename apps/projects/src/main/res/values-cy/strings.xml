@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ar agor</string>
     <string name="projects_request_status_merged">Wedi\'i gyfuno</string>
     <string name="projects_request_merge">Cyfuno</string>
-    <string name="projects_request_close">Cau</string>
     <string name="projects_request_merge_dialog_title">Cyfuno</string>
     <string name="projects_request_method">Dull</string>
     <string name="projects_request_method_merge">Cyfuno</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">Ydych chi\'n siŵr eich bod am ddileu\'r prosiect hwn? Bydd pob gwrthrych, sylw a gosodiad yn cael ei ddileu\'n barhaol.</string>
     <string name="projects_object_unwatch">Peidio â gwylio</string>
     <string name="projects_object_delete_title">Dileu gwrthrych</string>
-    <string name="projects_object_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r gwrthrych hwn? Ni ellir dadwneud y weithred hon.</string>
     <string name="projects_parent_none">Dim rhiant</string>
     <string name="projects_links_empty">Dim dolenni</string>
     <string name="projects_links_section_relates">Yn ymwneud â</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Dim atodiadau</string>
     <string name="projects_attachment_default_name">atodiad</string>
     <string name="projects_request_new">Cais cyfuno newydd</string>
-    <string name="projects_request_status_closed">Ar gau</string>
     <string name="projects_request_back_to_list">Yn ôl i\'r rhestr</string>
     <string name="projects_request_repository">Ystorfa: %1$s</string>
     <string name="projects_request_source">Ffynhonnell: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dylunio, creu, golygu, gwneud sylwadau, a gweld</string>
     <string name="projects_access_role_write">Creu, golygu, gwneud sylwadau, a gweld</string>
     <string name="projects_all_projects">Pob prosiect</string>
-    <string name="projects_create_allow_search">Caniatáu i unrhyw un chwilio am brosiect</string>
     <string name="projects_create_import_backup">Mewnforio o gopi wrth gefn (dewisol)</string>
     <string name="projects_create_upload_json">Llwytho ffeil .json i fyny</string>
     <string name="projects_settings_not_set">Heb ei osod</string>
@@ -336,4 +332,19 @@
     <string name="projects_create_object_no_types">Ni ellir creu unrhyw fathau o eitemau eto. Crëwch yr eitemau rhiant gofynnol yn gyntaf.</string>
     <string name="projects_create_blocked_no_options">Methu creu: mae %1$s yn ofynnol ond nid oes ganddo opsiynau i ddewis ohonynt. Ychwanegwch opsiynau yn y Cynllun.</string>
     <string name="projects_attachment_remove">Tynnu atodiad</string>
+    <string name="projects_create_allow_public">Caniatáu i unrhyw un weld y prosiect a rhoi sylwadau arno</string>
+    <string name="projects_request_delete_title">Dileu cais cyfuno</string>
+    <string name="projects_request_delete_message">Ydych chi\'n siŵr eich bod am ddileu\'r cais cyfuno hwn?</string>
+    <string name="projects_board_delete_column_title">Dileu colofn</string>
+    <string name="projects_board_delete_column_message">Ydych chi\'n siŵr eich bod am ddileu\'r golofn \"%1$s\"? Ni ellir dadwneud hyn.</string>
+    <string name="projects_object_delete_named">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\"? Ni ellir dadwneud y weithred hon.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="zero">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="one">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="two">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="few">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="many">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+        <item quantity="other">Ydych chi\'n siŵr eich bod am ddileu \"%1$s\" a\'r %2$s eitem oddi tano? Ni ellir dadwneud y weithred hon.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nid oedd modd atodi: %1$s</string>
 </resources>

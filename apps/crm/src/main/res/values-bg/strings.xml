@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">Сигурни ли сте, че искате да изтриете този CRM? Всички обекти, коментари и настройки ще бъдат премахнати завинаги.</string>
     <string name="crm_object_unwatch">Спри наблюдението</string>
     <string name="crm_object_delete_title">Изтриване на обект</string>
-    <string name="crm_object_delete_message">Сигурни ли сте, че искате да изтриете този обект? Това действие не може да бъде отменено.</string>
     <string name="crm_parent_none">Без родител</string>
     <string name="crm_links_empty">Няма връзки</string>
     <string name="crm_links_section_relates">Свързано с</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Импортиране от резервно копие (по избор)</string>
     <string name="crm_export">Експортиране на данни</string>
     <string name="crm_exporting">Подготвяне на експорта…</string>
-    <string name="crm_create_allow_search">Позволи на всеки да търси CRM</string>
     <string name="crm_no_crms_found">Не са намерени CRM системи</string>
     <string name="crm_create_blocked_no_parents">Все още не може да се създават типове елементи. Първо създайте необходимите родителски елементи.</string>
     <string name="crm_export_csv">Експорт CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Пример %1$s</string>
     <string name="crm_option_delete_title">Изтрий опцията</string>
     <string name="crm_option_delete_message">Сигурни ли сте, че искате да изтриете опцията \"%1$s\"?</string>
+    <string name="crm_create_public">Позволи на всеки да преглежда и коментира CRM</string>
+    <string name="crm_board_delete_column">Изтрий колоната</string>
+    <string name="crm_board_delete_column_message">Сигурни ли сте, че искате да изтриете колоната \"%1$s\"? Това не може да бъде отменено.</string>
+    <string name="crm_object_delete_named">Сигурни ли сте, че искате да изтриете \"%1$s\"? Това действие не може да бъде отменено.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Сигурни ли сте, че искате да изтриете \"%1$s\" и %2$s елемент под него? Това действие не може да бъде отменено.</item>
+        <item quantity="other">Сигурни ли сте, че искате да изтриете \"%1$s\" и %2$s елемента под него? Това действие не може да бъде отменено.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s прикачен файл не можа да бъде добавен: %2$s</item>
+        <item quantity="other">%1$s прикачени файла не можаха да бъдат добавени: %2$s</item>
+    </plurals>
 </resources>

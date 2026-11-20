@@ -151,7 +151,6 @@
     <string name="crm_settings_delete_confirm_message">Ziur zaude CRM hau ezabatu nahi duzula? Objektu, iruzkin eta ezarpen guztiak betiko kenduko dira.</string>
     <string name="crm_object_unwatch">Utzi jarraitzeari</string>
     <string name="crm_object_delete_title">Ezabatu objektua</string>
-    <string name="crm_object_delete_message">Ziur zaude objektu hau ezabatu nahi duzula? Ekintza hau ezin da desegin.</string>
     <string name="crm_parent_none">Gurasorik ez</string>
     <string name="crm_links_empty">Estekarik ez</string>
     <string name="crm_links_section_relates">Honekin lotuta</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Inportatu babeskopiatik (aukerakoa)</string>
     <string name="crm_export">Esportatu datuak</string>
     <string name="crm_exporting">Esportazioa prestatzen…</string>
-    <string name="crm_create_allow_search">Baimendu edonori CRM bilatzea</string>
     <string name="crm_no_crms_found">Ez da CRMrik aurkitu</string>
     <string name="crm_create_blocked_no_parents">Oraindik ezin da elementu motarik sortu. Sortu lehenik beharrezko elementu gurasoak.</string>
     <string name="crm_export_csv">Esportatu CSV</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">Adibidea %1$s</string>
     <string name="crm_option_delete_title">Ezabatu aukera</string>
     <string name="crm_option_delete_message">Ziur zaude \"%1$s\" aukera ezabatu nahi duzula?</string>
+    <string name="crm_create_public">Baimendu edonori CRM ikustea eta iruzkintzea</string>
+    <string name="crm_board_delete_column">Ezabatu zutabea</string>
+    <string name="crm_board_delete_column_message">Ziur al zaude \"%1$s\" zutabea ezabatu nahi duzula? Hau ezin da desegin.</string>
+    <string name="crm_object_delete_named">Ziur al zaude \"%1$s\" ezabatu nahi duzula? Ekintza hau ezin da desegin.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Ziur al zaude \"%1$s\" eta haren azpiko elementu %2$s ezabatu nahi dituzula? Ekintza hau ezin da desegin.</item>
+        <item quantity="other">Ziur al zaude \"%1$s\" eta haren azpiko %2$s elementu ezabatu nahi dituzula? Ekintza hau ezin da desegin.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Ezin izan da %1$s eranskin gehitu: %2$s</item>
+        <item quantity="other">Ezin izan dira %1$s eranskin gehitu: %2$s</item>
+    </plurals>
 </resources>

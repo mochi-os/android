@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Miftuħ</string>
     <string name="projects_request_status_merged">Magħqud</string>
     <string name="projects_request_merge">Għaqqad</string>
-    <string name="projects_request_close">Agħlaq</string>
     <string name="projects_request_merge_dialog_title">Għaqqad</string>
     <string name="projects_request_method">Metodu</string>
     <string name="projects_request_method_merge">Għaqqad</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Żgur li tixtieq tħassar dan il-proġett? L-oġġetti, il-kummenti, u l-issettjar kollha jitneħħew għal dejjem.</string>
     <string name="projects_object_unwatch">Tibqax tosserva</string>
     <string name="projects_object_delete_title">Ħassar l-oġġett</string>
-    <string name="projects_object_delete_message">Żgur li tixtieq tħassar dan l-oġġett? Din l-azzjoni ma tistax titreġġa\' lura.</string>
     <string name="projects_parent_none">L-ebda ġenitur</string>
     <string name="projects_links_empty">L-ebda link</string>
     <string name="projects_links_section_relates">Jirrelata ma\'</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">L-ebda mehmuż</string>
     <string name="projects_attachment_default_name">mehmuż</string>
     <string name="projects_request_new">Talba ġdida ta\' merge</string>
-    <string name="projects_request_status_closed">Magħluqa</string>
     <string name="projects_request_back_to_list">Lura għal-lista</string>
     <string name="projects_request_repository">Repożitorju: %1$s</string>
     <string name="projects_request_source">Sors: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Iddisinja, oħloq, editja, ikkummenta u ara</string>
     <string name="projects_access_role_write">Oħloq, editja, ikkummenta u ara</string>
     <string name="projects_all_projects">Il-proġetti kollha</string>
-    <string name="projects_create_allow_search">Ippermetti lil kulħadd ifittex proġett</string>
     <string name="projects_create_import_backup">Importa mill-backup (mhux obbligatorju)</string>
     <string name="projects_create_upload_json">Tella\' fajl .json</string>
     <string name="projects_settings_not_set">Mhux issettjat</string>
@@ -335,4 +331,18 @@
     <string name="projects_create_object_no_types">L-ebda tipi ta\' oġġetti jistgħu jinħolqu għadhom. Oħloq l-oġġetti tal-ġenitur meħtieġa l-ewwel.</string>
     <string name="projects_create_blocked_no_options">Ma jistax jinħoloq: %1$s huwa meħtieġ imma m\'għandu ebda għażla. Żid għażliet fid-Disinn.</string>
     <string name="projects_attachment_remove">Neħħi l-mehmuż</string>
+    <string name="projects_create_allow_public">Ippermetti lil kulħadd jara l-proġett u jikkummenta fuqu</string>
+    <string name="projects_request_delete_title">Ħassar merge request</string>
+    <string name="projects_request_delete_message">Żgur trid tħassar dan il-merge request?</string>
+    <string name="projects_board_delete_column_title">Ħassar kolonna</string>
+    <string name="projects_board_delete_column_message">Żgur trid tħassar il-kolonna \"%1$s\"? Dan ma jistax jiġi ndirizzat.</string>
+    <string name="projects_object_delete_named">Żgur trid tħassar \"%1$s\"? Din l-azzjoni ma tistax tiġi ndirizzata.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Żgur trid tħassar \"%1$s\" u %2$s oġġett taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="two">Żgur trid tħassar \"%1$s\" u %2$s oġġetti taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="few">Żgur trid tħassar \"%1$s\" u %2$s oġġetti taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="many">Żgur trid tħassar \"%1$s\" u %2$s oġġett taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+        <item quantity="other">Żgur trid tħassar \"%1$s\" u %2$s oġġett taħtu? Din l-azzjoni ma tistax titreġġa\' lura.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Ma setgħux jiġu mehmużin: %1$s</string>
 </resources>

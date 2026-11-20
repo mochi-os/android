@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Bukak</string>
     <string name="projects_request_status_merged">Wis di-merge</string>
     <string name="projects_request_merge">Merge</string>
-    <string name="projects_request_close">Tutup</string>
     <string name="projects_request_merge_dialog_title">Merge</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Merge</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Panjenengan yakin arep mbusak proyek iki? Kabeh objek, komentar, lan setelan bakal dibusak permanen.</string>
     <string name="projects_object_unwatch">Mandheg nonton</string>
     <string name="projects_object_delete_title">Busak objek</string>
-    <string name="projects_object_delete_message">Panjenengan yakin arep mbusak objek iki? Tumindak iki ora bisa dibatalake.</string>
     <string name="projects_parent_none">Ora ana induk</string>
     <string name="projects_links_empty">Ora ana pranala</string>
     <string name="projects_links_section_relates">Gegandhengan karo</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Ora ana lampiran</string>
     <string name="projects_attachment_default_name">lampiran</string>
     <string name="projects_request_new">Panyuwunan merge anyar</string>
-    <string name="projects_request_status_closed">Ditutup</string>
     <string name="projects_request_back_to_list">Bali menyang dhaptar</string>
     <string name="projects_request_repository">Repository: %1$s</string>
     <string name="projects_request_source">Sumber: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Ngrancang, nggawe, nyunting, menehi komentar, lan ndeleng</string>
     <string name="projects_access_role_write">Nggawe, nyunting, menehi komentar, lan ndeleng</string>
     <string name="projects_all_projects">Kabèh proyek</string>
-    <string name="projects_create_allow_search">Idini sapa waé nggolèki proyek</string>
     <string name="projects_create_import_backup">Impor saka backup (opsional)</string>
     <string name="projects_create_upload_json">Unggah file .json</string>
     <string name="projects_settings_not_set">Ora disetel</string>
@@ -331,4 +327,14 @@
     <string name="projects_create_object_no_types">Durung ana jenis item sing bisa digawé. Gawé item induk sing dibutuhaké luwih dhisik.</string>
     <string name="projects_create_blocked_no_options">Ora bisa nggawe: %1$s wajib nanging ora duwe pilihan. Tambahake pilihan ing Desain.</string>
     <string name="projects_attachment_remove">Cabut lampiran</string>
+    <string name="projects_create_allow_public">Idini sapa waé ndelok lan menehi komentar ing proyek</string>
+    <string name="projects_request_delete_title">Busak panjaluk merge</string>
+    <string name="projects_request_delete_message">Sampéyan yakin arep mbusak panjaluk merge iki?</string>
+    <string name="projects_board_delete_column_title">Busak kolom</string>
+    <string name="projects_board_delete_column_message">Sampéyan yakin arep mbusak kolom \"%1$s\"? Iki ora bisa dibatalaké.</string>
+    <string name="projects_object_delete_named">Sampéyan yakin arep mbusak \"%1$s\"? Tindakan iki ora bisa dibatalaké.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Sampéyan yakin arep mbusak \"%1$s\" lan %2$s item ing ngisoré? Tindakan iki ora bisa dibatalaké.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Ora bisa nglampirké: %1$s</string>
 </resources>

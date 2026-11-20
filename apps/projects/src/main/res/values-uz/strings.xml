@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Ochiq</string>
     <string name="projects_request_status_merged">Birlashtirildi</string>
     <string name="projects_request_merge">Birlashtirish</string>
-    <string name="projects_request_close">Yopish</string>
     <string name="projects_request_merge_dialog_title">Birlashtirish</string>
     <string name="projects_request_method">Usul</string>
     <string name="projects_request_method_merge">Birlashtirish</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Ushbu loyihani o\'chirishga ishonchingiz komilmi? Barcha obyektlar, izohlar va sozlamalar butunlay o\'chiriladi.</string>
     <string name="projects_object_unwatch">Kuzatishni bekor qilish</string>
     <string name="projects_object_delete_title">Obyektni o\'chirish</string>
-    <string name="projects_object_delete_message">Ushbu obyektni o\'chirishga ishonchingiz komilmi? Bu amalni bekor qilib bo\'lmaydi.</string>
     <string name="projects_parent_none">Ota element yoʻq</string>
     <string name="projects_links_empty">Havolalar yo\'q</string>
     <string name="projects_links_section_relates">Bog\'liq</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Ilovalar yo\'q</string>
     <string name="projects_attachment_default_name">ilova</string>
     <string name="projects_request_new">Yangi birlashtirish so\'rovi</string>
-    <string name="projects_request_status_closed">Yopilgan</string>
     <string name="projects_request_back_to_list">Ro\'yxatga qaytish</string>
     <string name="projects_request_repository">Ombor: %1$s</string>
     <string name="projects_request_source">Manba: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dizayn qilish, yaratish, tahrirlash, izoh qoldirish va ko\'rish</string>
     <string name="projects_access_role_write">Yaratish, tahrirlash, izoh qoldirish va ko\'rish</string>
     <string name="projects_all_projects">Barcha loyihalar</string>
-    <string name="projects_create_allow_search">Hammaga loyihani qidirishga ruxsat berish</string>
     <string name="projects_create_import_backup">Zaxira nusxasidan import (ixtiyoriy)</string>
     <string name="projects_create_upload_json">JSON faylni yuklash</string>
     <string name="projects_settings_not_set">Oʻrnatilmagan</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Hozircha hech qanday element turi yaratib boʻlmaydi. Avval kerakli ota elementlarni yarating.</string>
     <string name="projects_create_blocked_no_options">Yaratib bo\'lmaydi: %1$s talab qilinadi, lekin tanlash uchun variantlari yo\'q. Dizaynda variantlar qo\'shing.</string>
     <string name="projects_attachment_remove">Biriktirmani olib tashlash</string>
+    <string name="projects_create_allow_public">Hammaga loyihani koʻrish va unga izoh qoldirishga ruxsat berish</string>
+    <string name="projects_request_delete_title">Birlashtirish soʻrovini oʻchirish</string>
+    <string name="projects_request_delete_message">Bu birlashtirish soʻrovini oʻchirmoqchimisiz?</string>
+    <string name="projects_board_delete_column_title">Ustunni oʻchirish</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" ustunini oʻchirmoqchimisiz? Buni qaytarib boʻlmaydi.</string>
+    <string name="projects_object_delete_named">\"%1$s\" ni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\" va uning ostidagi %2$s elementni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</item>
+        <item quantity="other">\"%1$s\" va uning ostidagi %2$s elementni oʻchirmoqchimisiz? Bu amalni qaytarib boʻlmaydi.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Biriktirib boʻlmadi: %1$s</string>
 </resources>

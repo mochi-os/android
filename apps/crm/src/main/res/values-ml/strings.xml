@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">ഈ CRM ഇല്ലാതാക്കണമെന്ന് ഉറപ്പാണോ? എല്ലാ ഒബ്ജക്റ്റുകളും, അഭിപ്രായങ്ങളും, ക്രമീകരണങ്ങളും ശാശ്വതമായി നീക്കം ചെയ്യപ്പെടും.</string>
     <string name="crm_object_unwatch">വീക്ഷിക്കുന്നത് നിർത്തുക</string>
     <string name="crm_object_delete_title">ഒബ്ജക്റ്റ് ഇല്ലാതാക്കുക</string>
-    <string name="crm_object_delete_message">ഈ ഒബ്ജക്റ്റ് ഇല്ലാതാക്കണമെന്ന് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="crm_parent_none">പേരന്റ് ഇല്ല</string>
     <string name="crm_links_empty">ലിങ്കുകൾ ഇല്ല</string>
     <string name="crm_links_section_relates">ബന്ധപ്പെട്ടത്</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">ബാക്കപ്പിൽ നിന്ന് ഇംപോർട്ട് ചെയ്യുക (ഓപ്ഷണൽ)</string>
     <string name="crm_export">ഡാറ്റ എക്സ്പോർട്ട് ചെയ്യുക</string>
     <string name="crm_exporting">കയറ്റുമതി തയ്യാറാക്കുന്നു…</string>
-    <string name="crm_create_allow_search">ആർക്കും CRM തിരയാൻ അനുവദിക്കുക</string>
     <string name="crm_no_crms_found">CRM-കളൊന്നും കണ്ടെത്തിയില്ല</string>
     <string name="crm_create_blocked_no_parents">ഇതുവരെ ഒരു ഇന തരവും സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ പാരന്റ് ഇനങ്ങൾ ആദ്യം സൃഷ്ടിക്കുക.</string>
     <string name="crm_export_csv">CSV എക്‌സ്‌പോർട്ട് ചെയ്യുക</string>
@@ -285,4 +283,16 @@
     <string name="crm_design_sample">സാമ്പിൾ %1$s</string>
     <string name="crm_option_delete_title">ഓപ്ഷൻ ഇല്ലാതാക്കുക</string>
     <string name="crm_option_delete_message">\"%1$s\" എന്ന ഓപ്ഷൻ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
+    <string name="crm_create_public">ആർക്കും CRM കാണാനും അതിൽ അഭിപ്രായം പറയാനും അനുവദിക്കുക</string>
+    <string name="crm_board_delete_column">കോളം ഇല്ലാതാക്കുക</string>
+    <string name="crm_board_delete_column_message">\"%1$s\" കോളം ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <string name="crm_object_delete_named">\"%1$s\" ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">\"%1$s\", അതിന് കീഴിലുള്ള %2$s ഇനം എന്നിവ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</item>
+        <item quantity="other">\"%1$s\", അതിന് കീഴിലുള്ള %2$s ഇനങ്ങൾ എന്നിവ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s അറ്റാച്ച്മെന്റ് ചേർക്കാനായില്ല: %2$s</item>
+        <item quantity="other">%1$s അറ്റാച്ച്മെന്റുകൾ ചേർക്കാനായില്ല: %2$s</item>
+    </plurals>
 </resources>

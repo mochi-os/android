@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Да ли сте сигурни да желите да обришете овај CRM? Сви објекти, коментари и подешавања биће трајно уклоњени.</string>
     <string name="crm_object_unwatch">Прекини праћење</string>
     <string name="crm_object_delete_title">Обриши објекат</string>
-    <string name="crm_object_delete_message">Да ли сте сигурни да желите да обришете овај објекат? Ова радња се не може поништити.</string>
     <string name="crm_parent_none">Без надређеног</string>
     <string name="crm_links_empty">Нема веза</string>
     <string name="crm_links_section_relates">Односи се на</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Увоз из резервне копије (опционо)</string>
     <string name="crm_export">Извези податке</string>
     <string name="crm_exporting">Припрема извоза…</string>
-    <string name="crm_create_allow_search">Дозволи свима да претражују CRM</string>
     <string name="crm_no_crms_found">Нема пронађених CRM-ова</string>
     <string name="crm_create_blocked_no_parents">Још се не могу креирати типови ставки. Прво креирајте потребне родитељске ставке.</string>
     <string name="crm_export_csv">Извези CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">Пример %1$s</string>
     <string name="crm_option_delete_title">Обриши опцију</string>
     <string name="crm_option_delete_message">Да ли сте сигурни да желите да обришете опцију \"%1$s\"?</string>
+    <string name="crm_create_public">Дозволи свима да прегледају и коментаришу CRM</string>
+    <string name="crm_board_delete_column">Обриши колону</string>
+    <string name="crm_board_delete_column_message">Да ли сте сигурни да желите да обришете колону „%1$s“? Ово се не може поништити.</string>
+    <string name="crm_object_delete_named">Да ли сте сигурни да желите да обришете „%1$s“? Ова радња се не може поништити.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Да ли сте сигурни да желите да обришете „%1$s“ и %2$s ставку испод ње? Ова радња се не може поништити.</item>
+        <item quantity="few">Да ли сте сигурни да желите да обришете „%1$s“ и %2$s ставке испод ње? Ова радња се не може поништити.</item>
+        <item quantity="other">Да ли сте сигурни да желите да обришете „%1$s“ и %2$s ставки испод ње? Ова радња се не може поништити.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Није могуће додати %1$s прилог: %2$s</item>
+        <item quantity="few">Није могуће додати %1$s прилога: %2$s</item>
+        <item quantity="other">Није могуће додати %1$s прилога: %2$s</item>
+    </plurals>
 </resources>

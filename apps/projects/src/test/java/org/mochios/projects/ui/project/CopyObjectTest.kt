@@ -12,6 +12,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.lifecycle.SavedStateHandle
+import com.google.gson.JsonParser
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -129,9 +130,12 @@ class CopyObjectTest {
         assertTrue(rule.onAllNodesWithText("plan.png").fetchSemanticsNodes().isNotEmpty())
         assertEquals(emptyList<String>(), sent("p1/-/objects/create"))
         create(model)
-        val made = sent("p1/-/objects/create").single()
-        assertTrue(made, made.contains("class=card") && made.contains("title=Original"))
-        assertTrue(sent("p1/-/objects/o9/values/status").single().contains("Done"))
+        val made = JsonParser.parseString(sent("p1/-/objects/create").single()).asJsonObject
+        assertEquals("card", made["class"].asString)
+        assertEquals("Original", made["title"].asString)
+        // The status goes with the create, not as a request of its own after it.
+        assertEquals("Done", made["values"].asJsonObject["status"].asString)
+        assertEquals(emptyList<String>(), sent("p1/-/objects/o9/values/status"))
         assertEquals(listOf("attachments=a1"), sent("p1/-/objects/o9/attachments/copy"))
     }
 

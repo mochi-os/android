@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -33,6 +34,10 @@ private fun JsonObject.jsonString(key: String): String? =
 
 data class CreateProjectUiState(
     val templates: List<Template> = emptyList(),
+    // Every server has templates, so none means they could not be fetched:
+    // the template step shows why, with a retry.
+    val templatesLoading: Boolean = true,
+    val templatesError: MochiError? = null,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     val backupPrefill: BackupPrefill? = null,
@@ -73,13 +78,17 @@ class CreateProjectViewModel @Inject constructor(
         loadTemplates()
     }
 
-    private fun loadTemplates() {
+    fun loadTemplates() {
         viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(templatesLoading = true, templatesError = null)
             try {
                 val templates = repository.getTemplates()
                     .sortedWith(compareBy(NaturalCompare) { template -> template.name })
-                _uiState.value = _uiState.value.copy(templates = templates)
-            } catch (_: Exception) {
+                _uiState.value = _uiState.value.copy(templates = templates, templatesLoading = false)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(templatesLoading = false, templatesError = e.toMochiError())
             }
         }
     }

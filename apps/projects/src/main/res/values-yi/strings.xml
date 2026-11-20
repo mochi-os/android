@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">אָפֿן</string>
     <string name="projects_request_status_merged">צונויפֿגעגאָסן</string>
     <string name="projects_request_merge">צונויפֿגיסן</string>
-    <string name="projects_request_close">פֿאַרמאַכן</string>
     <string name="projects_request_merge_dialog_title">צונויפֿגיסן</string>
     <string name="projects_request_method">מעטאָד</string>
     <string name="projects_request_method_merge">צונויפֿגיסן</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">זײַט איר זיכער אַז איר װילט אױסמעקן דעם פּראָיעקט? אַלע אָביעקטן, באַמערקונגען, און אײַנשטעלונגען װעלן זײַן שטענדיק אַראָפּגענומען.</string>
     <string name="projects_object_unwatch">אױפֿהערן באַאױגן</string>
     <string name="projects_object_delete_title">אױסמעקן אָביעקט</string>
-    <string name="projects_object_delete_message">זײַט איר זיכער אַז איר װילט אױסמעקן דעם אָביעקט? די אַקציע קען נישט פֿאַרקערט װערן.</string>
     <string name="projects_parent_none">קײן עלטערן</string>
     <string name="projects_links_empty">קײן פֿאַרבינדונגען</string>
     <string name="projects_links_section_relates">האָט אַ שײַכות צו</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">קײן בײַלאַגעס</string>
     <string name="projects_attachment_default_name">בײַלאַגע</string>
     <string name="projects_request_new">נײַע מערדזש־בקשה</string>
-    <string name="projects_request_status_closed">פֿאַרמאַכט</string>
     <string name="projects_request_back_to_list">צוריק צו רשימה</string>
     <string name="projects_request_repository">רעפּאָזיטאָריע: %1$s</string>
     <string name="projects_request_source">מקור: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">פּלאַנירן, שאַפֿן, רעדאַקטירן, קאָמענטירן, און באַקוקן</string>
     <string name="projects_access_role_write">שאַפֿן, רעדאַקטירן, קאָמענטירן, און באַקוקן</string>
     <string name="projects_all_projects">אַלע פּראָיעקטן</string>
-    <string name="projects_create_allow_search">דערלויבן עמעצן צו זוכן פֿאַר פּראָיעקט</string>
     <string name="projects_create_import_backup">אימפּאָרטירן פֿון זיכערונג (אָפּציאָנעל)</string>
     <string name="projects_create_upload_json">אַרויפֿלאָדן .json טעקע</string>
     <string name="projects_settings_not_set">ניט געשטעלט</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">קיין עלעמענט טיפּן קענען נאָך ניט זײַן באַשאַפֿן. באַשאַף די נייטיקע עלטערן עלעמענטן ערשט.</string>
     <string name="projects_create_blocked_no_options">מ׳קען נישט שאַפֿן: %1$s איז נייטיק אָבער האָט נישט קיין אויסוואַלן. לייגט צו אויסוואַלן אין דיזײַן.</string>
     <string name="projects_attachment_remove">אַראָפּנעמען בײַלאַגע</string>
+    <string name="projects_create_allow_public">דערלויבן עמעצן צו זען דעם פּראָיעקט און קאָמענטירן אויף אים</string>
+    <string name="projects_request_delete_title">אויסמעקן צונויפֿשמעלצונג בקשה</string>
+    <string name="projects_request_delete_message">זענט איר זיכער איר ווילט אויסמעקן דעם צונויפֿשמעלצונג בקשה?</string>
+    <string name="projects_board_delete_column_title">אויסמעקן זײַל</string>
+    <string name="projects_board_delete_column_message">זענט איר זיכער איר ווילט אויסמעקן די \"%1$s\" זײַל? דאָס קען נישט ווערן אומגעקערט.</string>
+    <string name="projects_object_delete_named">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\"? די אַקציע קען נישט ווערן אומגעקערט.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\" און %2$s זאַך אונטער דעם? די אַקציע קען נישט ווערן אומגעקערט.</item>
+        <item quantity="other">זענט איר זיכער איר ווילט אויסמעקן \"%1$s\" און %2$s זאַכן אונטער דעם? די אַקציע קען נישט ווערן אומגעקערט.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">מען האָט נישט געקענט צוהענקען: %1$s</string>
 </resources>

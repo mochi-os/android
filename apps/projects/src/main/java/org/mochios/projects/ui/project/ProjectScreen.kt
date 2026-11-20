@@ -128,7 +128,7 @@ import org.mochios.projects.ui.tree.TreeView
 
 
 // The access levels that may change a project's design (web's canDesign).
-private val DESIGN_ACCESS = setOf("owner", "design")
+internal val DESIGN_ACCESS = setOf("owner", "design")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProjectScreen(
@@ -253,6 +253,14 @@ private fun AllProjectsContent(
     viewModel: ProjectListViewModel,
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
+
+    // A failed unsubscribe leaves the row where it was; say why.
+    LaunchedEffect(viewModel) {
+        viewModel.actionFailed.collect { error ->
+            Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -498,7 +506,8 @@ private fun ProjectContent(
         }
     }
 
-    // A share the server refused: say why instead of doing nothing.
+    // A share, move, delete, column edit, export or refresh the server
+    // refused: say why instead of doing nothing.
     LaunchedEffect(viewModel) {
         viewModel.actionFailed.collect { error ->
             Toast.makeText(context, error.userMessage(), Toast.LENGTH_LONG).show()
@@ -852,6 +861,7 @@ private fun ProjectContent(
             // deleteObject deletes, clears the selection when it matches, and
             // refreshes — so this must not pre-clear the selection it needs.
             onDeleteObject = { viewModel.deleteObject(uiState.selectedObjectId!!) },
+            descendants = viewModel.collectDescendants(uiState.selectedObjectId!!).size,
             onViewDiff = onViewDiff,
             onNavigateToObject = { id -> viewModel.selectObject(id) },
             onAddChild = { parentId ->

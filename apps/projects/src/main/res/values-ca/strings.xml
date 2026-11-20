@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Obert</string>
     <string name="projects_request_status_merged">Fusionat</string>
     <string name="projects_request_merge">Fusiona</string>
-    <string name="projects_request_close">Tanca</string>
     <string name="projects_request_merge_dialog_title">Fusiona</string>
     <string name="projects_request_method">Mètode</string>
     <string name="projects_request_method_merge">Fusiona</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">Segur que voleu suprimir aquest projecte? Tots els objectes, comentaris i paràmetres se suprimiran permanentment.</string>
     <string name="projects_object_unwatch">Deixa de seguir</string>
     <string name="projects_object_delete_title">Suprimeix l\'objecte</string>
-    <string name="projects_object_delete_message">Segur que voleu suprimir aquest objecte? Aquesta acció no es pot desfer.</string>
     <string name="projects_parent_none">Sense pare</string>
     <string name="projects_links_empty">Cap enllaç</string>
     <string name="projects_links_section_relates">Relacionat amb</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Cap adjunt</string>
     <string name="projects_attachment_default_name">adjunt</string>
     <string name="projects_request_new">Nova sol·licitud de fusió</string>
-    <string name="projects_request_status_closed">Tancada</string>
     <string name="projects_request_back_to_list">Torna a la llista</string>
     <string name="projects_request_repository">Dipòsit: %1$s</string>
     <string name="projects_request_source">Origen: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Dissenya, crea, edita, comenta i visualitza</string>
     <string name="projects_access_role_write">Crea, edita, comenta i visualitza</string>
     <string name="projects_all_projects">Tots els projectes</string>
-    <string name="projects_create_allow_search">Permet que qualsevol cerqui el projecte</string>
     <string name="projects_create_import_backup">Importa des d\'una còpia de seguretat (opcional)</string>
     <string name="projects_create_upload_json">Puja un fitxer .json</string>
     <string name="projects_settings_not_set">No establert</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Encara no es pot crear cap tipus d\'element. Crea primer els elements pare necessaris.</string>
     <string name="projects_create_blocked_no_options">No es pot crear: %1$s és obligatori però no té opcions per triar. Afegeix opcions a Disseny.</string>
     <string name="projects_attachment_remove">Elimina l\'adjunt</string>
+    <string name="projects_create_allow_public">Permet que qualsevol vegi i comenti el projecte</string>
+    <string name="projects_request_delete_title">Suprimeix la sol·licitud de fusió</string>
+    <string name="projects_request_delete_message">Segur que vols suprimir aquesta sol·licitud de fusió?</string>
+    <string name="projects_board_delete_column_title">Suprimeix la columna</string>
+    <string name="projects_board_delete_column_message">Segur que vols suprimir la columna «%1$s»? Això no es pot desfer.</string>
+    <string name="projects_object_delete_named">Segur que vols suprimir «%1$s»? Aquesta acció no es pot desfer.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Segur que vols suprimir «%1$s» i %2$s element que té a sota? Aquesta acció no es pot desfer.</item>
+        <item quantity="other">Segur que vols suprimir «%1$s» i %2$s elements que té a sota? Aquesta acció no es pot desfer.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">No s\'ha pogut adjuntar: %1$s</string>
 </resources>

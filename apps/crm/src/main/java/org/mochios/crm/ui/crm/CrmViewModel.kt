@@ -35,6 +35,7 @@ import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.crm.ui.board.boardClass
 import org.mochios.crm.ui.board.boardOptions
+import org.mochios.crm.ui.board.dropRank
 import org.mochios.crm.lib.ActiveViewStore
 import org.mochios.crm.lib.CollapsedColumnsStore
 import org.mochios.crm.model.CrmClass
@@ -53,6 +54,9 @@ import javax.inject.Inject
 
 /** Seconds in a day, for turning an ISO date into an epoch-second sort key. */
 private const val SECONDS_PER_DAY = 86_400L
+
+/** A move position past the end of any column, which the server places last. */
+private const val END_POSITION = Int.MAX_VALUE
 
 data class CrmUiState(
     val crmDetails: CrmDetails? = null,
@@ -312,10 +316,16 @@ class CrmViewModel @Inject constructor(
                     error = null
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isRefreshing = false,
-                    error = e.toMochiError()
-                )
+                // Over a loaded CRM the error state is not drawn, so say it.
+                if (_uiState.value.crmDetails == null) {
+                    _uiState.value = _uiState.value.copy(
+                        isRefreshing = false,
+                        error = e.toMochiError()
+                    )
+                } else {
+                    _uiState.value = _uiState.value.copy(isRefreshing = false)
+                    _actionFailed.tryEmit(e.toMochiError())
+                }
             }
         }
     }
@@ -598,6 +608,15 @@ class CrmViewModel @Inject constructor(
     }
 
     /**
+     * Moves [objectId] to the end of the column of [value], and into the lane
+     * of [rowValue] when [rowField] is given. The server counts objects the
+     * board does not show, so the end is a position past all of them.
+     */
+    fun moveToEnd(objectId: String, field: String, value: String, rowField: String? = null, rowValue: String? = null) {
+        moveObject(objectId, field, value, END_POSITION, rowField, rowValue)
+    }
+
+    /**
      * Reload the object list in the background. Cancels the pending reload
      * and waits [REFRESH_DEBOUNCE] first, so one drag - its move response and
      * the object/update and object/ranks frames it echoes - makes one fetch.
@@ -736,6 +755,7 @@ class CrmViewModel @Inject constructor(
     fun getAllOptionsForField(fieldId: String): List<FieldOption> =
         getOptionsForClasses(fieldId, emptyList())
 
+    /** Moves [objectId] under [newParentId], or to the top level for "". */
     fun reparentObject(objectId: String, newParentId: String) {
         viewModelScope.launch {
             try {
@@ -776,7 +796,25 @@ class CrmViewModel @Inject constructor(
         }
     }
 
+    /**
+     * How many of the CRM's objects hold [optionId] in [fieldId]: every class
+     * and every depth, filtered out or not. A column is only deleted while
+     * this is none, since its objects would keep an option that no longer is.
+     */
+    fun columnHolds(fieldId: String, optionId: String): Int =
+        _uiState.value.objects.count { obj ->
+            obj.stringValue(fieldId) == optionId || obj.listValue(fieldId).contains(optionId)
+        }
+
+    /** Whether the signed-in person may change the CRM's design, columns included. */
+    fun canDesign(): Boolean {
+        val access = _uiState.value.crmDetails?.crm?.access
+        return access == "owner" || access == "design"
+    }
+
+    /** Deletes an empty column; one that has gained objects since is left alone. */
     fun deleteColumnOption(fieldId: String, optionId: String) {
+        if (columnHolds(fieldId, optionId) > 0) return
         // A column is an option of the board class, so that is the class changed.
         val classId = getBoardClass() ?: return
         viewModelScope.launch {
@@ -812,6 +850,28 @@ class CrmViewModel @Inject constructor(
                 _actionFailed.tryEmit(e.toMochiError())
             }
         }
+    }
+
+    /**
+     * The objects holding [value] in [field], in rank order: the list the
+     * server counts a move's position in. Every object of the CRM is in it,
+     * children and classes the view hides included.
+     */
+    fun rankOrder(field: String, value: String): List<CrmObject> =
+        _uiState.value.objects
+            .filter { obj -> obj.stringValue(field) == value }
+            .sortedBy { obj -> obj.rank }
+
+    /**
+     * The position to send for dropping [sourceId] above or below [targetId]
+     * in the column of [value]. A blank [value] moves nothing between columns,
+     * so the server counts in the column the object already holds.
+     */
+    fun dropPosition(field: String, value: String, targetId: String, sourceId: String, below: Boolean): Int {
+        val scope = value.ifEmpty {
+            _uiState.value.objects.firstOrNull { obj -> obj.id == sourceId }?.stringValue(field).orEmpty()
+        }
+        return dropRank(rankOrder(field, scope).map { obj -> obj.id }, targetId, sourceId, below)
     }
 
     /**
@@ -883,15 +943,8 @@ class CrmViewModel @Inject constructor(
             }
         }
 
-        // Filter by view's filter field
-        if (view != null && view.filter.isNotBlank()) {
-            val parts = view.filter.split(":")
-            if (parts.size == 2) {
-                val filterFieldId = parts[0]
-                val filterValue = parts[1]
-                objects = objects.filter { it.stringValue(filterFieldId) == filterValue }
-            }
-        }
+        // A view's stored filter is not applied: the view editor says so, and
+        // the web leaves it out too.
 
         // Filter to watched objects only
         if (state.watchedOnly) {
@@ -1065,7 +1118,8 @@ class CrmViewModel @Inject constructor(
                     )
                 )
             } catch (error: Exception) {
-                _uiState.value = _uiState.value.copy(error = error.toMochiError())
+                // The CRM is loaded, where uiState.error is not drawn.
+                _actionFailed.tryEmit(error.toMochiError())
             } finally {
                 _uiState.value = _uiState.value.copy(isExporting = false)
             }

@@ -117,8 +117,8 @@ class ObjectDetailViewModel @Inject constructor(
 
     private val _actionFailed = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
     /**
-     * Comment/attachment failures while the sheet is open; uiState.error only
-     * renders when no object is loaded.
+     * Comment, attachment, link and watch failures while the sheet is open;
+     * uiState.error only renders when no object is loaded.
      */
     val actionFailed: SharedFlow<MochiError> = _actionFailed.asSharedFlow()
 
@@ -282,17 +282,40 @@ class ObjectDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Reads the open object again after a frame. A field with a save waiting
+     * out its debounce or in flight keeps what was typed, and so does a parent
+     * being saved: the server's copy is older. A save that answers while the
+     * read is out counts too, since the read may have been served before it.
+     * An answer for an object the sheet has left is dropped.
+     */
     private fun loadObjectOnly() {
+        val crmId = currentCrmId
+        val objectId = currentObjectId
+        val saving = debounceJobs.keys.toSet()
         viewModelScope.launch {
             try {
-                val fetched = repository.getObject(currentCrmId, currentObjectId)
+                val fetched = repository.getObject(crmId, objectId)
+                val pending = saving + debounceJobs.keys
+                if (currentCrmId != crmId || currentObjectId != objectId) return@launch
                 val existing = _uiState.value.obj
-                val merged = if (fetched.values.isEmpty() && existing != null && existing.values.isNotEmpty()) {
-                    fetched.copy(values = existing.values)
-                } else {
-                    fetched
+                if (existing == null || existing.id != objectId) {
+                    _uiState.value = _uiState.value.copy(obj = fetched)
+                    return@launch
                 }
-                _uiState.value = _uiState.value.copy(obj = merged)
+                val values = if (fetched.values.isEmpty() && existing.values.isNotEmpty()) {
+                    existing.values
+                } else {
+                    val merged = fetched.values.toMutableMap()
+                    for ((fieldId, value) in existing.values) {
+                        if ("$objectId/value_$fieldId" in pending) merged[fieldId] = value
+                    }
+                    merged
+                }
+                val parent = if ("$objectId/parent" in pending) existing.parent else fetched.parent
+                _uiState.value = _uiState.value.copy(obj = fetched.copy(values = values, parent = parent))
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) { }
         }
     }
@@ -534,7 +557,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.createLink(currentCrmId, currentObjectId, target, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -546,7 +569,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.createLink(currentCrmId, source, currentObjectId, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -557,7 +580,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.deleteLink(currentCrmId, currentObjectId, target, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }
@@ -569,7 +592,7 @@ class ObjectDetailViewModel @Inject constructor(
                 repository.deleteLink(currentCrmId, source, currentObjectId, linktype)
                 refreshSlice("links") { loadLinks() }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _actionFailed.tryEmit(e.toMochiError())
             }
         }
     }

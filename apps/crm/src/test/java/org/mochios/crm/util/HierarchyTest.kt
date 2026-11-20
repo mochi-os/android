@@ -33,6 +33,8 @@ class HierarchyTest {
         assertEquals("_none_", hierarchyParameter(emptyList()))
     }
 
+    // Sent in a JSON body, where the server reads "" as the top level alone;
+    // a form would drop it.
     @Test
     fun `root only is the empty entry`() {
         assertEquals("", hierarchyParameter(listOf(HIERARCHY_ROOT)))

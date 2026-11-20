@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">തുറന്നത്</string>
     <string name="projects_request_status_merged">മെർജ് ചെയ്തു</string>
     <string name="projects_request_merge">മെർജ് ചെയ്യുക</string>
-    <string name="projects_request_close">അടയ്ക്കുക</string>
     <string name="projects_request_merge_dialog_title">മെർജ് ചെയ്യുക</string>
     <string name="projects_request_method">രീതി</string>
     <string name="projects_request_method_merge">മെർജ് ചെയ്യുക</string>
@@ -218,7 +217,6 @@
     <string name="projects_settings_delete_confirm_message">ഈ പ്രോജക്റ്റ് ഇല്ലാതാക്കണമെന്ന് ഉറപ്പാണോ? എല്ലാ ഒബ്ജക്റ്റുകളും, അഭിപ്രായങ്ങളും, ക്രമീകരണങ്ങളും ശാശ്വതമായി നീക്കം ചെയ്യപ്പെടും.</string>
     <string name="projects_object_unwatch">വീക്ഷിക്കുന്നത് നിർത്തുക</string>
     <string name="projects_object_delete_title">ഒബ്ജക്റ്റ് ഇല്ലാതാക്കുക</string>
-    <string name="projects_object_delete_message">ഈ ഒബ്ജക്റ്റ് ഇല്ലാതാക്കണമെന്ന് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="projects_parent_none">പേരന്റ് ഇല്ല</string>
     <string name="projects_links_empty">ലിങ്കുകൾ ഇല്ല</string>
     <string name="projects_links_section_relates">ബന്ധപ്പെട്ടത്</string>
@@ -241,7 +239,6 @@
     <string name="projects_attachment_empty">അറ്റാച്ച്മെന്റുകൾ ഇല്ല</string>
     <string name="projects_attachment_default_name">അറ്റാച്ച്മെന്റ്</string>
     <string name="projects_request_new">പുതിയ ലയന അഭ്യർത്ഥന</string>
-    <string name="projects_request_status_closed">അടച്ചു</string>
     <string name="projects_request_back_to_list">പട്ടികയിലേക്ക് മടങ്ങുക</string>
     <string name="projects_request_repository">റിപ്പോസിറ്ററി: %1$s</string>
     <string name="projects_request_source">ഉറവിടം: %1$s</string>
@@ -301,7 +298,6 @@
     <string name="projects_access_role_design">രൂപകൽപ്പന ചെയ്യുക, സൃഷ്ടിക്കുക, എഡിറ്റ് ചെയ്യുക, അഭിപ്രായമിടുക, കാണുക</string>
     <string name="projects_access_role_write">സൃഷ്ടിക്കുക, എഡിറ്റ് ചെയ്യുക, അഭിപ്രായമിടുക, കാണുക</string>
     <string name="projects_all_projects">എല്ലാ പ്രോജക്റ്റുകളും</string>
-    <string name="projects_create_allow_search">ആർക്കും പ്രോജക്റ്റ് തിരയാൻ അനുവദിക്കുക</string>
     <string name="projects_create_import_backup">ബാക്കപ്പിൽ നിന്ന് ഇംപോർട്ട് ചെയ്യുക (ഓപ്ഷണൽ)</string>
     <string name="projects_create_upload_json">.json ഫയൽ അപ്‌ലോഡ് ചെയ്യുക</string>
     <string name="projects_settings_not_set">സജ്ജമാക്കിയിട്ടില്ല</string>
@@ -334,4 +330,15 @@
     <string name="projects_create_object_no_types">ഇതുവരെ ഒരു ഇന തരവും സൃഷ്ടിക്കാൻ കഴിയില്ല. ആവശ്യമായ പാരന്റ് ഇനങ്ങൾ ആദ്യം സൃഷ്ടിക്കുക.</string>
     <string name="projects_create_blocked_no_options">സൃഷ്ടിക്കാനാകില്ല: %1$s ആവശ്യമാണ്, പക്ഷേ തിരഞ്ഞെടുക്കാൻ ഓപ്ഷനുകളില്ല. ഡിസൈനിൽ ഓപ്ഷനുകൾ ചേർക്കുക.</string>
     <string name="projects_attachment_remove">അറ്റാച്ച്മെന്റ് നീക്കം ചെയ്യുക</string>
+    <string name="projects_create_allow_public">ആർക്കും പ്രോജക്റ്റ് കാണാനും അതിൽ അഭിപ്രായം പറയാനും അനുവദിക്കുക</string>
+    <string name="projects_request_delete_title">മെർജ് റിക്വസ്റ്റ് ഇല്ലാതാക്കുക</string>
+    <string name="projects_request_delete_message">ഈ മെർജ് റിക്വസ്റ്റ് ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ?</string>
+    <string name="projects_board_delete_column_title">കോളം ഇല്ലാതാക്കുക</string>
+    <string name="projects_board_delete_column_message">\"%1$s\" കോളം ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <string name="projects_object_delete_named">\"%1$s\" ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">\"%1$s\", അതിന് കീഴിലുള്ള %2$s ഇനം എന്നിവ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</item>
+        <item quantity="other">\"%1$s\", അതിന് കീഴിലുള്ള %2$s ഇനങ്ങൾ എന്നിവ ഇല്ലാതാക്കണമെന്ന് നിങ്ങൾക്ക് ഉറപ്പാണോ? ഈ പ്രവർത്തനം പഴയപടിയാക്കാൻ കഴിയില്ല.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">അറ്റാച്ച് ചെയ്യാനായില്ല: %1$s</string>
 </resources>

@@ -101,7 +101,6 @@
     <string name="crm_object_unwatch">Ne plus suivre</string>
     <string name="crm_object_tab_properties">Propriétés</string>
     <string name="crm_object_delete_title">Supprimer l\'objet</string>
-    <string name="crm_object_delete_message">Voulez-vous vraiment supprimer cet objet? Cette action est irréversible.</string>
     <string name="crm_parent_none">Aucun parent</string>
     <string name="crm_links_empty">Aucun lien</string>
     <string name="crm_links_add">Ajouter un lien</string>

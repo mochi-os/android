@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">ਖੁੱਲ੍ਹਾ</string>
     <string name="projects_request_status_merged">ਮਰਜ ਹੋ ਗਿਆ</string>
     <string name="projects_request_merge">ਮਰਜ ਕਰੋ</string>
-    <string name="projects_request_close">ਬੰਦ ਕਰੋ</string>
     <string name="projects_request_merge_dialog_title">ਮਰਜ ਕਰੋ</string>
     <string name="projects_request_method">ਤਰੀਕਾ</string>
     <string name="projects_request_method_merge">ਮਰਜ ਕਰੋ</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ ਇਸ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਸਾਰੇ ਆਬਜੈਕਟ, ਟਿੱਪਣੀਆਂ ਅਤੇ ਸੈਟਿੰਗਾਂ ਪੱਕੇ ਤੌਰ \'ਤੇ ਹਟਾ ਦਿੱਤੀਆਂ ਜਾਣਗੀਆਂ।</string>
     <string name="projects_object_unwatch">ਨਿਗਰਾਨੀ ਬੰਦ ਕਰੋ</string>
     <string name="projects_object_delete_title">ਆਬਜੈਕਟ ਮਿਟਾਓ</string>
-    <string name="projects_object_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ ਇਸ ਆਬਜੈਕਟ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।</string>
     <string name="projects_parent_none">ਕੋਈ ਮੂਲ ਨਹੀਂ</string>
     <string name="projects_links_empty">ਕੋਈ ਲਿੰਕ ਨਹੀਂ</string>
     <string name="projects_links_section_relates">ਨਾਲ ਸਬੰਧਤ ਹੈ</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">ਕੋਈ ਅਟੈਚਮੈਂਟ ਨਹੀਂ</string>
     <string name="projects_attachment_default_name">ਅਟੈਚਮੈਂਟ</string>
     <string name="projects_request_new">ਨਵੀਂ ਮਰਜ ਬੇਨਤੀ</string>
-    <string name="projects_request_status_closed">ਬੰਦ</string>
     <string name="projects_request_back_to_list">ਸੂਚੀ \'ਤੇ ਵਾਪਸ</string>
     <string name="projects_request_repository">ਰਿਪੋਜ਼ਟਰੀ: %1$s</string>
     <string name="projects_request_source">ਸਰੋਤ: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ਡਿਜ਼ਾਈਨ ਕਰੋ, ਬਣਾਓ, ਸੋਧੋ, ਟਿੱਪਣੀ ਕਰੋ ਅਤੇ ਵੇਖੋ</string>
     <string name="projects_access_role_write">ਬਣਾਓ, ਸੋਧੋ, ਟਿੱਪਣੀ ਕਰੋ ਅਤੇ ਵੇਖੋ</string>
     <string name="projects_all_projects">ਸਾਰੇ ਪ੍ਰੋਜੈਕਟ</string>
-    <string name="projects_create_allow_search">ਕਿਸੇ ਨੂੰ ਵੀ ਪ੍ਰੋਜੈਕਟ ਖੋਜਣ ਦੀ ਆਗਿਆ ਦਿਓ</string>
     <string name="projects_create_import_backup">ਬੈਕਅੱਪ ਤੋਂ ਇੰਪੋਰਟ ਕਰੋ (ਵਿਕਲਪਿਕ)</string>
     <string name="projects_create_upload_json">.json ਫਾਈਲ ਅੱਪਲੋਡ ਕਰੋ</string>
     <string name="projects_settings_not_set">ਸੈੱਟ ਨਹੀਂ</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">ਅਜੇ ਕੋਈ ਆਈਟਮ ਕਿਸਮ ਨਹੀਂ ਬਣਾਈ ਜਾ ਸਕਦੀ। ਪਹਿਲਾਂ ਜ਼ਰੂਰੀ ਪੇਰੈਂਟ ਆਈਟਮਾਂ ਬਣਾਓ।</string>
     <string name="projects_create_blocked_no_options">ਬਣਾਇਆ ਨਹੀਂ ਜਾ ਸਕਦਾ: %1$s ਲੋੜੀਂਦਾ ਹੈ ਪਰ ਚੁਣਨ ਲਈ ਕੋਈ ਵਿਕਲਪ ਨਹੀਂ ਹੈ। ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵਿਕਲਪ ਸ਼ਾਮਲ ਕਰੋ।</string>
     <string name="projects_attachment_remove">ਅਟੈਚਮੈਂਟ ਹਟਾਓ</string>
+    <string name="projects_create_allow_public">ਕਿਸੇ ਨੂੰ ਵੀ ਪ੍ਰੋਜੈਕਟ ਵੇਖਣ ਅਤੇ ਉਸ ਉੱਤੇ ਟਿੱਪਣੀ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿਓ</string>
+    <string name="projects_request_delete_title">ਮਰਜ ਬੇਨਤੀ ਮਿਟਾਓ</string>
+    <string name="projects_request_delete_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ ਇਹ ਮਰਜ ਬੇਨਤੀ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string name="projects_board_delete_column_title">ਕਾਲਮ ਮਿਟਾਓ</string>
+    <string name="projects_board_delete_column_message">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ \"%1$s\" ਕਾਲਮ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
+    <string name="projects_object_delete_named">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ \"%1$s\" ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ \"%1$s\" ਅਤੇ ਇਸਦੇ ਹੇਠਾਂ ਮੌਜੂਦ %2$s ਆਈਟਮ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।</item>
+        <item quantity="other">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਹੋ ਕਿ ਤੁਸੀਂ \"%1$s\" ਅਤੇ ਇਸਦੇ ਹੇਠਾਂ ਮੌਜੂਦ %2$s ਆਈਟਮਾਂ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ? ਇਹ ਕਾਰਵਾਈ ਵਾਪਸ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ਨੱਥੀ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ: %1$s</string>
 </resources>

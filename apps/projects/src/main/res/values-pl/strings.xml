@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Otwarte</string>
     <string name="projects_request_status_merged">Scalono</string>
     <string name="projects_request_merge">Scal</string>
-    <string name="projects_request_close">Zamknij</string>
     <string name="projects_request_merge_dialog_title">Scal</string>
     <string name="projects_request_method">Metoda</string>
     <string name="projects_request_method_merge">Scal</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Czy na pewno chcesz usunąć ten projekt? Wszystkie obiekty, komentarze i ustawienia zostaną trwale usunięte.</string>
     <string name="projects_object_unwatch">Przestań obserwować</string>
     <string name="projects_object_delete_title">Usuń obiekt</string>
-    <string name="projects_object_delete_message">Czy na pewno chcesz usunąć ten obiekt? Tej operacji nie można cofnąć.</string>
     <string name="projects_parent_none">Brak elementu nadrzędnego</string>
     <string name="projects_links_empty">Brak powiązań</string>
     <string name="projects_links_section_relates">Powiązane z</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Brak załączników</string>
     <string name="projects_attachment_default_name">załącznik</string>
     <string name="projects_request_new">Nowa prośba o scalenie</string>
-    <string name="projects_request_status_closed">Zamknięta</string>
     <string name="projects_request_back_to_list">Powrót do listy</string>
     <string name="projects_request_repository">Repozytorium: %1$s</string>
     <string name="projects_request_source">Źródło: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Projektowanie, tworzenie, edycja, komentowanie i przeglądanie</string>
     <string name="projects_access_role_write">Tworzenie, edycja, komentowanie i przeglądanie</string>
     <string name="projects_all_projects">Wszystkie projekty</string>
-    <string name="projects_create_allow_search">Zezwól każdemu na wyszukiwanie projektu</string>
     <string name="projects_create_import_backup">Importuj z kopii zapasowej (opcjonalnie)</string>
     <string name="projects_create_upload_json">Prześlij plik .json</string>
     <string name="projects_settings_not_set">Nie ustawiono</string>
@@ -334,4 +330,17 @@
     <string name="projects_create_object_no_types">Nie można jeszcze utworzyć żadnych typów elementów. Najpierw utwórz wymagane elementy nadrzędne.</string>
     <string name="projects_create_blocked_no_options">Nie można utworzyć: %1$s jest wymagane, ale nie ma opcji do wyboru. Dodaj opcje w Projekcie.</string>
     <string name="projects_attachment_remove">Usuń załącznik</string>
+    <string name="projects_create_allow_public">Zezwól każdemu na przeglądanie i komentowanie projektu</string>
+    <string name="projects_request_delete_title">Usuń żądanie scalenia</string>
+    <string name="projects_request_delete_message">Czy na pewno chcesz usunąć to żądanie scalenia?</string>
+    <string name="projects_board_delete_column_title">Usuń kolumnę</string>
+    <string name="projects_board_delete_column_message">Czy na pewno chcesz usunąć kolumnę \"%1$s\"? Tego nie można cofnąć.</string>
+    <string name="projects_object_delete_named">Czy na pewno chcesz usunąć \"%1$s\"? Tej akcji nie można cofnąć.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Czy na pewno chcesz usunąć \"%1$s\" i %2$s element pod nim? Tej akcji nie można cofnąć.</item>
+        <item quantity="few">Czy na pewno chcesz usunąć \"%1$s\" i %2$s elementy pod nim? Tej akcji nie można cofnąć.</item>
+        <item quantity="many">Czy na pewno chcesz usunąć \"%1$s\" i %2$s elementów pod nim? Tej akcji nie można cofnąć.</item>
+        <item quantity="other">Czy na pewno chcesz usunąć \"%1$s\" i %2$s elementu pod nim? Tej akcji nie można cofnąć.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nie udało się dołączyć: %1$s</string>
 </resources>

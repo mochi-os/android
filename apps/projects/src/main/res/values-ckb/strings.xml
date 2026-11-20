@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">کراوە</string>
     <string name="projects_request_status_merged">Merge کرا</string>
     <string name="projects_request_merge">تێکەڵکردن</string>
-    <string name="projects_request_close">داخستن</string>
     <string name="projects_request_merge_dialog_title">تێکەڵکردن</string>
     <string name="projects_request_method">ڕێگا</string>
     <string name="projects_request_method_merge">تێکەڵکردن</string>
@@ -216,7 +215,6 @@
     <string name="projects_people_empty">هێشتا هیچ کەسێک دەستی پێی ناگات</string>
     <string name="projects_object_unwatch">وازهێنان لە چاودێری</string>
     <string name="projects_object_delete_title">سڕینەوەی بابەت</string>
-    <string name="projects_object_delete_message">دڵنیایت لە سڕینەوەی ئەم بابەتە؟ ئەم کردارە ناگەڕێتەوە.</string>
     <string name="projects_parent_none">هیچ باوانێک نییە</string>
     <string name="projects_links_empty">هیچ بەستەرێک نییە</string>
     <string name="projects_links_section_relates">پەیوەندیدارە بە</string>
@@ -241,7 +239,6 @@
     <string name="projects_attachment_empty">هیچ هاوپێچێک نییە</string>
     <string name="projects_attachment_default_name">هاوپێچ</string>
     <string name="projects_request_new">داواکاری تێکەڵکردنی نوێ</string>
-    <string name="projects_request_status_closed">داخراو</string>
     <string name="projects_request_back_to_list">گەڕانەوە بۆ لیست</string>
     <string name="projects_request_repository">کۆگا: %1$s</string>
     <string name="projects_request_source">سەرچاوە: %1$s</string>
@@ -301,7 +298,6 @@
     <string name="projects_access_role_design">دیزاین، دروستکردن، دەستکاری، لێدوان، و بینین</string>
     <string name="projects_access_role_write">دروستکردن، دەستکاری، لێدوان، و بینین</string>
     <string name="projects_all_projects">هەموو پڕۆژەکان</string>
-    <string name="projects_create_allow_search">ڕێگە بدە بە هەرکەسێک بگەڕێت بۆ پڕۆژە</string>
     <string name="projects_create_import_backup">لە باکئەپەوە هاوردە بکە (ئارەزوومەندانە)</string>
     <string name="projects_create_upload_json">فایلی .json باربکە</string>
     <string name="projects_settings_not_set">دانەنراوە</string>
@@ -334,4 +330,15 @@
     <string name="projects_create_object_no_types">هێشتا هیچ جۆرە بڕگەیەک ناتوانرێت دروست بکرێت. سەرەتا بڕگە باوانە پێویستەکان دروست بکە.</string>
     <string name="projects_create_blocked_no_options">ناتوانرێت دروست بکرێت: %1$s پێویستە بەڵام هیچ هەڵبژاردەیەکی نییە. لە دیزایندا هەڵبژاردە زیاد بکە.</string>
     <string name="projects_attachment_remove">لابردنی هاوپێچ</string>
+    <string name="projects_create_allow_public">ڕێگە بدە بە هەرکەسێک پڕۆژەکە ببینێت و لێدوانی لەسەر بدات</string>
+    <string name="projects_request_delete_title">سڕینەوەی داواکاری ئاوێتەکردن</string>
+    <string name="projects_request_delete_message">ئایا دڵنیایت لە سڕینەوەی ئەم داواکاری ئاوێتەکردنە؟</string>
+    <string name="projects_board_delete_column_title">سڕینەوەی ستوون</string>
+    <string name="projects_board_delete_column_message">ئایا دڵنیایت لە سڕینەوەی ستوونی \"%1$s\"؟ ئەمە ناگەڕێتەوە.</string>
+    <string name="projects_object_delete_named">ئایا دڵنیایت لە سڕینەوەی \"%1$s\"؟ ئەم کردارە ناگەڕێتەوە.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">ئایا دڵنیایت لە سڕینەوەی \"%1$s\" و %2$s بڕگە لە ژێریدا؟ ئەم کردارە ناگەڕێتەوە.</item>
+        <item quantity="other">ئایا دڵنیایت لە سڕینەوەی \"%1$s\" و %2$s بڕگە لە ژێریدا؟ ئەم کردارە ناگەڕێتەوە.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">هاوپێچکردن نەکرا: %1$s</string>
 </resources>

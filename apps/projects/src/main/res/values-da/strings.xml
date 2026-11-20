@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Åben</string>
     <string name="projects_request_status_merged">Flettet</string>
     <string name="projects_request_merge">Flet</string>
-    <string name="projects_request_close">Luk</string>
     <string name="projects_request_merge_dialog_title">Flet</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Flet</string>
@@ -157,7 +156,6 @@
     <string name="projects_settings_delete_confirm_message">Er du sikker på, at du vil slette dette projekt? Alle objekter, kommentarer og indstillinger vil blive fjernet permanent.</string>
     <string name="projects_object_unwatch">Stop overvågning</string>
     <string name="projects_object_delete_title">Slet objekt</string>
-    <string name="projects_object_delete_message">Er du sikker på, at du vil slette dette objekt? Denne handling kan ikke fortrydes.</string>
     <string name="projects_parent_none">Ingen overordnet</string>
     <string name="projects_links_empty">Ingen links</string>
     <string name="projects_links_section_relates">Relaterer til</string>
@@ -182,7 +180,6 @@
     <string name="projects_attachment_empty">Ingen vedhæftninger</string>
     <string name="projects_attachment_default_name">vedhæftning</string>
     <string name="projects_request_new">Ny merge-anmodning</string>
-    <string name="projects_request_status_closed">Lukket</string>
     <string name="projects_request_back_to_list">Tilbage til listen</string>
     <string name="projects_request_repository">Lager: %1$s</string>
     <string name="projects_request_source">Kilde: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Design, opret, rediger, kommenter og se</string>
     <string name="projects_access_role_write">Opret, rediger, kommenter og se</string>
     <string name="projects_all_projects">Alle projekter</string>
-    <string name="projects_create_allow_search">Tillad alle at søge efter projekt</string>
     <string name="projects_create_import_backup">Importér fra sikkerhedskopi (valgfrit)</string>
     <string name="projects_create_upload_json">Upload .json-fil</string>
     <string name="projects_settings_not_set">Ikke angivet</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">Ingen emnetyper kan oprettes endnu. Opret først de nødvendige overordnede emner.</string>
     <string name="projects_create_blocked_no_options">Kan ikke oprette: %1$s er påkrævet, men har ingen valgmuligheder. Tilføj valgmuligheder i Design.</string>
     <string name="projects_attachment_remove">Fjern vedhæftning</string>
+    <string name="projects_create_allow_public">Tillad alle at se og kommentere projektet</string>
+    <string name="projects_request_delete_title">Slet merge request</string>
+    <string name="projects_request_delete_message">Er du sikker på, at du vil slette denne merge request?</string>
+    <string name="projects_board_delete_column_title">Slet kolonne</string>
+    <string name="projects_board_delete_column_message">Er du sikker på, at du vil slette kolonnen \"%1$s\"? Dette kan ikke fortrydes.</string>
+    <string name="projects_object_delete_named">Er du sikker på, at du vil slette \"%1$s\"? Denne handling kan ikke fortrydes.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Er du sikker på, at du vil slette \"%1$s\" og %2$s element under det? Denne handling kan ikke fortrydes.</item>
+        <item quantity="other">Er du sikker på, at du vil slette \"%1$s\" og %2$s elementer under det? Denne handling kan ikke fortrydes.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Kunne ikke vedhæfte: %1$s</string>
 </resources>

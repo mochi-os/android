@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Terbuka</string>
     <string name="projects_request_status_merged">Digabungkan</string>
     <string name="projects_request_merge">Gabungkan</string>
-    <string name="projects_request_close">Tutup</string>
     <string name="projects_request_merge_dialog_title">Gabungkan</string>
     <string name="projects_request_method">Metode</string>
     <string name="projects_request_method_merge">Gabungkan</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Apakah Anda yakin ingin menghapus proyek ini? Semua objek, komentar, dan pengaturan akan dihapus secara permanen.</string>
     <string name="projects_object_unwatch">Berhenti memantau</string>
     <string name="projects_object_delete_title">Hapus objek</string>
-    <string name="projects_object_delete_message">Apakah Anda yakin ingin menghapus objek ini? Tindakan ini tidak dapat dibatalkan.</string>
     <string name="projects_parent_none">Tanpa induk</string>
     <string name="projects_links_empty">Tidak ada tautan</string>
     <string name="projects_links_section_relates">Terkait dengan</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Tidak ada lampiran</string>
     <string name="projects_attachment_default_name">lampiran</string>
     <string name="projects_request_new">Permintaan merge baru</string>
-    <string name="projects_request_status_closed">Ditutup</string>
     <string name="projects_request_back_to_list">Kembali ke daftar</string>
     <string name="projects_request_repository">Repositori: %1$s</string>
     <string name="projects_request_source">Sumber: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Merancang, membuat, mengedit, mengomentari, dan melihat</string>
     <string name="projects_access_role_write">Membuat, mengedit, mengomentari, dan melihat</string>
     <string name="projects_all_projects">Semua proyek</string>
-    <string name="projects_create_allow_search">Izinkan siapa saja mencari proyek</string>
     <string name="projects_create_import_backup">Impor dari cadangan (opsional)</string>
     <string name="projects_create_upload_json">Unggah berkas .json</string>
     <string name="projects_settings_not_set">Belum diatur</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">Belum ada jenis item yang dapat dibuat. Buat item induk yang diperlukan terlebih dahulu.</string>
     <string name="projects_create_blocked_no_options">Tidak dapat membuat: %1$s wajib diisi tetapi tidak memiliki pilihan. Tambahkan pilihan di Desain.</string>
     <string name="projects_attachment_remove">Hapus lampiran</string>
+    <string name="projects_create_allow_public">Izinkan siapa saja melihat dan mengomentari proyek</string>
+    <string name="projects_request_delete_title">Hapus merge request</string>
+    <string name="projects_request_delete_message">Apakah Anda yakin ingin menghapus merge request ini?</string>
+    <string name="projects_board_delete_column_title">Hapus kolom</string>
+    <string name="projects_board_delete_column_message">Apakah Anda yakin ingin menghapus kolom \"%1$s\"? Ini tidak dapat dibatalkan.</string>
+    <string name="projects_object_delete_named">Apakah Anda yakin ingin menghapus \"%1$s\"? Tindakan ini tidak dapat dibatalkan.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">Apakah Anda yakin ingin menghapus \"%1$s\" dan %2$s item di bawahnya? Tindakan ini tidak dapat dibatalkan.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Tidak dapat melampirkan: %1$s</string>
 </resources>

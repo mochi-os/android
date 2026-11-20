@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Atvira</string>
     <string name="projects_request_status_merged">Sujungta</string>
     <string name="projects_request_merge">Sujungti</string>
-    <string name="projects_request_close">Uždaryti</string>
     <string name="projects_request_merge_dialog_title">Sujungti</string>
     <string name="projects_request_method">Metodas</string>
     <string name="projects_request_method_merge">Sujungti</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Ar tikrai norite ištrinti šį projektą? Visi objektai, komentarai ir nustatymai bus visam laikui pašalinti.</string>
     <string name="projects_object_unwatch">Nebestebėti</string>
     <string name="projects_object_delete_title">Ištrinti objektą</string>
-    <string name="projects_object_delete_message">Ar tikrai norite ištrinti šį objektą? Šio veiksmo atšaukti negalima.</string>
     <string name="projects_parent_none">Be tėvinio</string>
     <string name="projects_links_empty">Nuorodų nėra</string>
     <string name="projects_links_section_relates">Susiję su</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Priedų nėra</string>
     <string name="projects_attachment_default_name">priedas</string>
     <string name="projects_request_new">Naujas sujungimo prašymas</string>
-    <string name="projects_request_status_closed">Uždarytas</string>
     <string name="projects_request_back_to_list">Atgal į sąrašą</string>
     <string name="projects_request_repository">Saugykla: %1$s</string>
     <string name="projects_request_source">Šaltinis: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Kurkite dizainą, kurkite, redaguokite, komentuokite ir peržiūrėkite</string>
     <string name="projects_access_role_write">Kurkite, redaguokite, komentuokite ir peržiūrėkite</string>
     <string name="projects_all_projects">Visi projektai</string>
-    <string name="projects_create_allow_search">Leisti bet kam ieškoti projekto</string>
     <string name="projects_create_import_backup">Importuoti iš atsarginės kopijos (neprivaloma)</string>
     <string name="projects_create_upload_json">Įkelti .json failą</string>
     <string name="projects_settings_not_set">Nenustatyta</string>
@@ -334,4 +330,16 @@
     <string name="projects_create_object_no_types">Kol kas negalima sukurti jokių elementų tipų. Pirma sukurkite reikalingus tėvinius elementus.</string>
     <string name="projects_create_blocked_no_options">Nepavyko sukurti: %1$s privalomas, bet neturi pasirinkimų. Pridėkite parinkčių Dizaine.</string>
     <string name="projects_attachment_remove">Pašalinti priedą</string>
+    <string name="projects_create_allow_public">Leisti bet kam peržiūrėti ir komentuoti projektą</string>
+    <string name="projects_request_delete_title">Ištrinti sujungimo užklausą</string>
+    <string name="projects_request_delete_message">Ar tikrai norite ištrinti šią sujungimo užklausą?</string>
+    <string name="projects_board_delete_column_title">Ištrinti stulpelį</string>
+    <string name="projects_board_delete_column_message">Ar tikrai norite ištrinti stulpelį „%1$s“? Šio veiksmo atšaukti negalima.</string>
+    <string name="projects_object_delete_named">Ar tikrai norite ištrinti „%1$s“? Šio veiksmo atšaukti negalima.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Ar tikrai norite ištrinti „%1$s“ ir %2$s elementą po juo? Šio veiksmo atšaukti negalima.</item>
+        <item quantity="few">Ar tikrai norite ištrinti „%1$s“ ir %2$s elementus po juo? Šio veiksmo atšaukti negalima.</item>
+        <item quantity="other">Ar tikrai norite ištrinti „%1$s“ ir %2$s elementų po juo? Šio veiksmo atšaukti negalima.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nepavyko pridėti: %1$s</string>
 </resources>

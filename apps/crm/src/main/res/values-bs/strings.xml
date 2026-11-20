@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">Jeste li sigurni da želite obrisati ovaj CRM? Svi objekti, komentari i postavke će biti trajno uklonjeni.</string>
     <string name="crm_object_unwatch">Prestani pratiti</string>
     <string name="crm_object_delete_title">Obriši objekat</string>
-    <string name="crm_object_delete_message">Jeste li sigurni da želite obrisati ovaj objekt? Ova radnja se ne može poništiti.</string>
     <string name="crm_parent_none">Bez nadređenog</string>
     <string name="crm_links_empty">Nema veza</string>
     <string name="crm_links_section_relates">Povezano sa</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Uvoz iz rezervne kopije (opcionalno)</string>
     <string name="crm_export">Izvezi podatke</string>
     <string name="crm_exporting">Priprema izvoza…</string>
-    <string name="crm_create_allow_search">Dozvoli svima da pretražuju CRM</string>
     <string name="crm_no_crms_found">Nema pronađenih CRM-ova</string>
     <string name="crm_create_blocked_no_parents">Nijedan tip stavke se još ne može kreirati. Prvo kreirajte potrebne nadređene stavke.</string>
     <string name="crm_export_csv">Izvezi CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">Primjer %1$s</string>
     <string name="crm_option_delete_title">Obriši opciju</string>
     <string name="crm_option_delete_message">Jeste li sigurni da želite obrisati opciju \"%1$s\"?</string>
+    <string name="crm_create_public">Dozvoli svima da pregledaju i komentarišu CRM</string>
+    <string name="crm_board_delete_column">Obriši kolonu</string>
+    <string name="crm_board_delete_column_message">Jeste li sigurni da želite obrisati kolonu \"%1$s\"? Ovo se ne može poništiti.</string>
+    <string name="crm_object_delete_named">Jeste li sigurni da želite obrisati \"%1$s\"? Ova radnja se ne može poništiti.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Jeste li sigurni da želite obrisati \"%1$s\" i %2$s stavku ispod nje? Ova radnja se ne može poništiti.</item>
+        <item quantity="few">Jeste li sigurni da želite obrisati \"%1$s\" i %2$s stavke ispod nje? Ova radnja se ne može poništiti.</item>
+        <item quantity="other">Jeste li sigurni da želite obrisati \"%1$s\" i %2$s stavki ispod nje? Ova radnja se ne može poništiti.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s prilog nije moguće dodati: %2$s</item>
+        <item quantity="few">%1$s priloga nije moguće dodati: %2$s</item>
+        <item quantity="other">%1$s priloga nije moguće dodati: %2$s</item>
+    </plurals>
 </resources>

@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">उघडे</string>
     <string name="projects_request_status_merged">मर्ज केले</string>
     <string name="projects_request_merge">मर्ज करा</string>
-    <string name="projects_request_close">बंद करा</string>
     <string name="projects_request_merge_dialog_title">मर्ज करा</string>
     <string name="projects_request_method">पद्धत</string>
     <string name="projects_request_method_merge">मर्ज करा</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">तुम्हाला खात्री आहे की हा प्रकल्प हटवायचा आहे? सर्व घटक, टिप्पण्या आणि सेटिंग्ज कायमस्वरूपी काढून टाकले जातील.</string>
     <string name="projects_object_unwatch">पाहणे थांबवा</string>
     <string name="projects_object_delete_title">ऑब्जेक्ट हटवा</string>
-    <string name="projects_object_delete_message">तुम्हाला खात्री आहे की हा घटक हटवायचा आहे? ही क्रिया पूर्ववत केली जाऊ शकत नाही.</string>
     <string name="projects_parent_none">मूळ नाही</string>
     <string name="projects_links_empty">कोणतेही दुवे नाहीत</string>
     <string name="projects_links_section_relates">संबंधित</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">कोणतीही संलग्नके नाहीत</string>
     <string name="projects_attachment_default_name">संलग्नक</string>
     <string name="projects_request_new">नवीन विलीन विनंती</string>
-    <string name="projects_request_status_closed">बंद</string>
     <string name="projects_request_back_to_list">यादीकडे परत</string>
     <string name="projects_request_repository">भांडार: %1$s</string>
     <string name="projects_request_source">स्रोत: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">रचना करा, तयार करा, संपादित करा, टिप्पणी द्या आणि पहा</string>
     <string name="projects_access_role_write">तयार करा, संपादित करा, टिप्पणी द्या आणि पहा</string>
     <string name="projects_all_projects">सर्व प्रकल्प</string>
-    <string name="projects_create_allow_search">कोणालाही प्रकल्प शोधण्याची परवानगी द्या</string>
     <string name="projects_create_import_backup">बॅकअपमधून आयात करा (पर्यायी)</string>
     <string name="projects_create_upload_json">.json फाइल अपलोड करा</string>
     <string name="projects_settings_not_set">सेट केलेले नाही</string>
@@ -332,4 +328,15 @@
     <string name="projects_create_object_no_types">अद्याप कोणतेही आयटम प्रकार तयार करता येणार नाहीत. आधी आवश्यक पॅरेंट आयटम्स तयार करा.</string>
     <string name="projects_create_blocked_no_options">तयार करता येत नाही: %1$s आवश्यक आहे पण निवडण्यासाठी पर्याय नाहीत. डिझाइनमध्ये पर्याय जोडा.</string>
     <string name="projects_attachment_remove">संलग्नक काढा</string>
+    <string name="projects_create_allow_public">कोणालाही प्रकल्प पाहण्याची आणि त्यावर टिप्पणी करण्याची परवानगी द्या</string>
+    <string name="projects_request_delete_title">मर्ज विनंती हटवा</string>
+    <string name="projects_request_delete_message">तुम्हाला खरोखरच ही मर्ज विनंती हटवायची आहे का?</string>
+    <string name="projects_board_delete_column_title">कॉलम हटवा</string>
+    <string name="projects_board_delete_column_message">तुम्हाला खरोखरच \"%1$s\" कॉलम हटवायचा आहे का? हे परत करता येणार नाही.</string>
+    <string name="projects_object_delete_named">तुम्हाला खरोखरच \"%1$s\" हटवायचे आहे का? ही क्रिया परत करता येणार नाही.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">तुम्हाला खरोखरच \"%1$s\" आणि त्याखालील %2$s आयटम हटवायचे आहेत का? ही क्रिया परत करता येणार नाही.</item>
+        <item quantity="other">तुम्हाला खरोखरच \"%1$s\" आणि त्याखालील %2$s आयटम हटवायचे आहेत का? ही क्रिया परत करता येणार नाही.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">संलग्न करता आले नाही: %1$s</string>
 </resources>

@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">האם אתם בטוחים שברצונכם למחוק CRM זה? כל האובייקטים, ההערות וההגדרות יוסרו לצמיתות.</string>
     <string name="crm_object_unwatch">ביטול מעקב</string>
     <string name="crm_object_delete_title">מחיקת אובייקט</string>
-    <string name="crm_object_delete_message">האם אתם בטוחים שברצונכם למחוק אובייקט זה? לא ניתן לבטל פעולה זו.</string>
     <string name="crm_parent_none">ללא הורה</string>
     <string name="crm_links_empty">אין קישורים</string>
     <string name="crm_links_section_relates">קשור ל</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">ייבוא מגיבוי (אופציונלי)</string>
     <string name="crm_export">ייצוא נתונים</string>
     <string name="crm_exporting">מכין את הייצוא…</string>
-    <string name="crm_create_allow_search">אפשר לכולם לחפש את ה-CRM</string>
     <string name="crm_no_crms_found">לא נמצאו מערכות CRM</string>
     <string name="crm_create_blocked_no_parents">עדיין לא ניתן ליצור סוגי פריטים. צור תחילה את פריטי האב הנדרשים.</string>
     <string name="crm_export_csv">ייצוא CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">דוגמה %1$s</string>
     <string name="crm_option_delete_title">מחק אפשרות</string>
     <string name="crm_option_delete_message">האם אתה בטוח שברצונך למחוק את האפשרות \"%1$s\"?</string>
+    <string name="crm_create_public">אפשר לכולם לצפות ב-CRM ולהגיב עליו</string>
+    <string name="crm_board_delete_column">מחק עמודה</string>
+    <string name="crm_board_delete_column_message">האם אתה בטוח שברצונך למחוק את העמודה \"%1$s\"? לא ניתן לבטל פעולה זו.</string>
+    <string name="crm_object_delete_named">האם אתה בטוח שברצונך למחוק את \"%1$s\"? לא ניתן לבטל פעולה זו.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">האם אתה בטוח שברצונך למחוק את \"%1$s\" ואת הפריט האחד שמתחתיו? לא ניתן לבטל פעולה זו.</item>
+        <item quantity="two">האם אתה בטוח שברצונך למחוק את \"%1$s\" ואת שני הפריטים שמתחתיו? לא ניתן לבטל פעולה זו.</item>
+        <item quantity="other">האם אתה בטוח שברצונך למחוק את \"%1$s\" ואת %2$s הפריטים שמתחתיו? לא ניתן לבטל פעולה זו.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">לא ניתן היה להוסיף %1$s קובץ מצורף: %2$s</item>
+        <item quantity="two">לא ניתן היה להוסיף %1$s קבצים מצורפים: %2$s</item>
+        <item quantity="other">לא ניתן היה להוסיף %1$s קבצים מצורפים: %2$s</item>
+    </plurals>
 </resources>

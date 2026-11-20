@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">Deschis</string>
     <string name="projects_request_status_merged">Îmbinat</string>
     <string name="projects_request_merge">Îmbină</string>
-    <string name="projects_request_close">Închide</string>
     <string name="projects_request_merge_dialog_title">Îmbină</string>
     <string name="projects_request_method">Metodă</string>
     <string name="projects_request_method_merge">Îmbină</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">Sigur doriți să ștergeți acest proiect? Toate obiectele, comentariile și setările vor fi eliminate definitiv.</string>
     <string name="projects_object_unwatch">Nu mai urmăriți</string>
     <string name="projects_object_delete_title">Ștergeți obiectul</string>
-    <string name="projects_object_delete_message">Sigur doriți să ștergeți acest obiect? Această acțiune nu poate fi anulată.</string>
     <string name="projects_parent_none">Fără părinte</string>
     <string name="projects_links_empty">Nicio legătură</string>
     <string name="projects_links_section_relates">Legat de</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">Niciun atașament</string>
     <string name="projects_attachment_default_name">atașament</string>
     <string name="projects_request_new">Cerere de îmbinare nouă</string>
-    <string name="projects_request_status_closed">Închisă</string>
     <string name="projects_request_back_to_list">Înapoi la listă</string>
     <string name="projects_request_repository">Depozit: %1$s</string>
     <string name="projects_request_source">Sursă: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">Proiectare, creare, editare, comentare și vizualizare</string>
     <string name="projects_access_role_write">Creare, editare, comentare și vizualizare</string>
     <string name="projects_all_projects">Toate proiectele</string>
-    <string name="projects_create_allow_search">Permite oricui să caute proiectul</string>
     <string name="projects_create_import_backup">Importă din backup (opțional)</string>
     <string name="projects_create_upload_json">Încarcă fișier .json</string>
     <string name="projects_settings_not_set">Nesetat</string>
@@ -333,4 +329,16 @@
     <string name="projects_create_object_no_types">Încă nu pot fi create tipuri de elemente. Creează mai întâi elementele părinte necesare.</string>
     <string name="projects_create_blocked_no_options">Nu se poate crea: %1$s este obligatoriu, dar nu are opțiuni de ales. Adaugă opțiuni în Design.</string>
     <string name="projects_attachment_remove">Elimină atașamentul</string>
+    <string name="projects_create_allow_public">Permite oricui să vadă și să comenteze proiectul</string>
+    <string name="projects_request_delete_title">Șterge cererea de merge</string>
+    <string name="projects_request_delete_message">Sigur vrei să ștergi această cerere de merge?</string>
+    <string name="projects_board_delete_column_title">Șterge coloana</string>
+    <string name="projects_board_delete_column_message">Sigur vrei să ștergi coloana „%1$s”? Această acțiune nu poate fi anulată.</string>
+    <string name="projects_object_delete_named">Sigur vrei să ștergi „%1$s”? Această acțiune nu poate fi anulată.</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="one">Sigur vrei să ștergi „%1$s” și %2$s element aflat sub el? Această acțiune nu poate fi anulată.</item>
+        <item quantity="few">Sigur vrei să ștergi „%1$s” și %2$s elemente aflate sub el? Această acțiune nu poate fi anulată.</item>
+        <item quantity="other">Sigur vrei să ștergi „%1$s” și %2$s de elemente aflate sub el? Această acțiune nu poate fi anulată.</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">Nu s-a putut atașa: %1$s</string>
 </resources>

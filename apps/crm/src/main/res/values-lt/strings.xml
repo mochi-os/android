@@ -149,7 +149,6 @@
     <string name="crm_settings_delete_confirm_message">Ar tikrai norite ištrinti šią CRM? Visi objektai, komentarai ir nustatymai bus visam laikui pašalinti.</string>
     <string name="crm_object_unwatch">Nebestebėti</string>
     <string name="crm_object_delete_title">Ištrinti objektą</string>
-    <string name="crm_object_delete_message">Ar tikrai norite ištrinti šį objektą? Šio veiksmo atšaukti negalima.</string>
     <string name="crm_parent_none">Be tėvinio</string>
     <string name="crm_links_empty">Nuorodų nėra</string>
     <string name="crm_links_section_relates">Susiję su</string>
@@ -274,7 +273,6 @@
     <string name="crm_create_import_backup">Importuoti iš atsarginės kopijos (neprivaloma)</string>
     <string name="crm_export">Eksportuoti duomenis</string>
     <string name="crm_exporting">Ruošiamas eksportas…</string>
-    <string name="crm_create_allow_search">Leisti bet kam ieškoti CRM</string>
     <string name="crm_no_crms_found">CRM nerasta</string>
     <string name="crm_create_blocked_no_parents">Kol kas negalima sukurti jokių elementų tipų. Pirma sukurkite reikalingus tėvinius elementus.</string>
     <string name="crm_export_csv">Eksportuoti CSV</string>
@@ -285,4 +283,18 @@
     <string name="crm_design_sample">Pavyzdys %1$s</string>
     <string name="crm_option_delete_title">Ištrinti parinktį</string>
     <string name="crm_option_delete_message">Ar tikrai norite ištrinti parinktį \"%1$s\"?</string>
+    <string name="crm_create_public">Leisti bet kam peržiūrėti ir komentuoti CRM</string>
+    <string name="crm_board_delete_column">Ištrinti stulpelį</string>
+    <string name="crm_board_delete_column_message">Ar tikrai norite ištrinti stulpelį „%1$s“? Šio veiksmo atšaukti negalima.</string>
+    <string name="crm_object_delete_named">Ar tikrai norite ištrinti „%1$s“? Šio veiksmo atšaukti negalima.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Ar tikrai norite ištrinti „%1$s“ ir %2$s elementą po juo? Šio veiksmo atšaukti negalima.</item>
+        <item quantity="few">Ar tikrai norite ištrinti „%1$s“ ir %2$s elementus po juo? Šio veiksmo atšaukti negalima.</item>
+        <item quantity="other">Ar tikrai norite ištrinti „%1$s“ ir %2$s elementų po juo? Šio veiksmo atšaukti negalima.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">Nepavyko pridėti %1$s priedo: %2$s</item>
+        <item quantity="few">Nepavyko pridėti %1$s priedų: %2$s</item>
+        <item quantity="other">Nepavyko pridėti %1$s priedų: %2$s</item>
+    </plurals>
 </resources>

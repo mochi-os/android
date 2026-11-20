@@ -141,7 +141,6 @@
     <string name="crm_settings_delete_confirm_message">Möchten Sie dieses CRM wirklich löschen? Alle Objekte, Kommentare und Einstellungen werden dauerhaft entfernt.</string>
     <string name="crm_object_unwatch">Nicht mehr beobachten</string>
     <string name="crm_object_delete_title">Objekt löschen</string>
-    <string name="crm_object_delete_message">Möchten Sie dieses Objekt wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
     <string name="crm_parent_none">Kein übergeordnetes Element</string>
     <string name="crm_links_empty">Keine Verknüpfungen</string>
     <string name="crm_links_section_relates">Bezieht sich auf</string>
@@ -276,7 +275,6 @@
     <string name="crm_create_import_backup">Aus Sicherung importieren (optional)</string>
     <string name="crm_export">Daten exportieren</string>
     <string name="crm_exporting">Export wird vorbereitet…</string>
-    <string name="crm_create_allow_search">Allen erlauben, nach CRM zu suchen</string>
     <string name="crm_no_crms_found">Keine CRMs gefunden</string>
     <string name="crm_create_blocked_no_parents">Es können noch keine Elementtypen erstellt werden. Erstellen Sie zunächst die erforderlichen übergeordneten Elemente.</string>
     <string name="crm_export_csv">CSV exportieren</string>
@@ -287,4 +285,16 @@
     <string name="crm_design_sample">Beispiel %1$s</string>
     <string name="crm_option_delete_title">Option löschen</string>
     <string name="crm_option_delete_message">Möchten Sie die Option \"%1$s\" wirklich löschen?</string>
+    <string name="crm_create_public">Allen erlauben, das CRM anzusehen und zu kommentieren</string>
+    <string name="crm_board_delete_column">Spalte löschen</string>
+    <string name="crm_board_delete_column_message">Möchten Sie die Spalte \"%1$s\" wirklich löschen? Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="crm_object_delete_named">Möchten Sie \"%1$s\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <plurals name="crm_object_delete_children">
+        <item quantity="one">Möchten Sie \"%1$s\" und %2$s Element darunter wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</item>
+        <item quantity="other">Möchten Sie \"%1$s\" und %2$s Elemente darunter wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.</item>
+    </plurals>
+    <plurals name="crm_create_attachments_failed">
+        <item quantity="one">%1$s Anhang konnte nicht hinzugefügt werden: %2$s</item>
+        <item quantity="other">%1$s Anhänge konnten nicht hinzugefügt werden: %2$s</item>
+    </plurals>
 </resources>

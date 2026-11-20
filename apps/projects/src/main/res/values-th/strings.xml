@@ -64,7 +64,6 @@
     <string name="projects_request_status_open">เปิด</string>
     <string name="projects_request_status_merged">ผสานแล้ว</string>
     <string name="projects_request_merge">ผสาน</string>
-    <string name="projects_request_close">ปิด</string>
     <string name="projects_request_merge_dialog_title">ผสาน</string>
     <string name="projects_request_method">วิธี</string>
     <string name="projects_request_method_merge">ผสาน</string>
@@ -165,7 +164,6 @@
     <string name="projects_settings_delete_confirm_message">คุณแน่ใจหรือไม่ว่าต้องการลบโปรเจกต์นี้ วัตถุ ความคิดเห็น และการตั้งค่าทั้งหมดจะถูกลบอย่างถาวร</string>
     <string name="projects_object_unwatch">เลิกติดตาม</string>
     <string name="projects_object_delete_title">ลบวัตถุ</string>
-    <string name="projects_object_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบวัตถุนี้ การดำเนินการนี้ไม่สามารถยกเลิกได้</string>
     <string name="projects_parent_none">ไม่มีรายการแม่</string>
     <string name="projects_links_empty">ไม่มีลิงก์</string>
     <string name="projects_links_section_relates">เกี่ยวข้องกับ</string>
@@ -188,7 +186,6 @@
     <string name="projects_attachment_empty">ไม่มีไฟล์แนบ</string>
     <string name="projects_attachment_default_name">ไฟล์แนบ</string>
     <string name="projects_request_new">คำขอผสานใหม่</string>
-    <string name="projects_request_status_closed">ปิดแล้ว</string>
     <string name="projects_request_back_to_list">กลับไปยังรายการ</string>
     <string name="projects_request_repository">ที่เก็บข้อมูล: %1$s</string>
     <string name="projects_request_source">ต้นทาง: %1$s</string>
@@ -299,7 +296,6 @@
     <string name="projects_access_role_design">ออกแบบ สร้าง แก้ไข แสดงความคิดเห็น และดู</string>
     <string name="projects_access_role_write">สร้าง แก้ไข แสดงความคิดเห็น และดู</string>
     <string name="projects_all_projects">โครงการทั้งหมด</string>
-    <string name="projects_create_allow_search">อนุญาตให้ใครก็ได้ค้นหาโครงการ</string>
     <string name="projects_create_import_backup">นำเข้าจากข้อมูลสำรอง (ไม่บังคับ)</string>
     <string name="projects_create_upload_json">อัปโหลดไฟล์ .json</string>
     <string name="projects_settings_not_set">ยังไม่ได้ตั้งค่า</string>
@@ -332,4 +328,14 @@
     <string name="projects_create_object_no_types">ยังไม่สามารถสร้างประเภทรายการได้ กรุณาสร้างรายการแม่ที่จำเป็นก่อน</string>
     <string name="projects_create_blocked_no_options">สร้างไม่ได้: %1$s จำเป็นแต่ไม่มีตัวเลือกให้เลือก เพิ่มตัวเลือกในการออกแบบ</string>
     <string name="projects_attachment_remove">ลบไฟล์แนบ</string>
+    <string name="projects_create_allow_public">อนุญาตให้ใครก็ได้ดูและแสดงความคิดเห็นในโครงการ</string>
+    <string name="projects_request_delete_title">ลบคำขอผสาน</string>
+    <string name="projects_request_delete_message">คุณแน่ใจหรือไม่ว่าต้องการลบคำขอผสานนี้?</string>
+    <string name="projects_board_delete_column_title">ลบคอลัมน์</string>
+    <string name="projects_board_delete_column_message">คุณแน่ใจหรือไม่ว่าต้องการลบคอลัมน์\"%1$s\"? การกระทำนี้ไม่สามารถยกเลิกได้</string>
+    <string name="projects_object_delete_named">คุณแน่ใจหรือไม่ว่าต้องการลบ\"%1$s\"? การกระทำนี้ไม่สามารถยกเลิกได้</string>
+    <plurals name="projects_object_delete_descendants">
+        <item quantity="other">คุณแน่ใจหรือไม่ว่าต้องการลบ \"%1$s\" และ %2$s รายการที่อยู่ภายใต้รายการนี้? การกระทำนี้ไม่สามารถยกเลิกได้</item>
+    </plurals>
+    <string name="projects_create_attachments_failed">ไม่สามารถแนบได้: %1$s</string>
 </resources>
