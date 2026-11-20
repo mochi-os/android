@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Flöde omdöpt</string>
     <string name="notifications_rss_deleted">Flöde raderat</string>
     <string name="notifications_rss_default_name">RSS-flöde</string>
+    <string name="networks_off">Avstängt av serveradministratören</string>
 </resources>

@@ -35,6 +35,8 @@ import org.mochios.settings.api.Handle
 import org.mochios.settings.api.NetworkAccount
 import org.mochios.settings.api.NetworksApi
 import org.mochios.settings.api.NetworksData
+import org.mochios.settings.ui.login.SettingsStepUpClient
+import org.mochios.settings.ui.login.StepUpController
 import javax.inject.Inject
 
 /** The scheme the server hands an OAuth consent back to the app on. */
@@ -60,11 +62,21 @@ data class NetworksUiState(
  * on other servers, and what is blocked and muted. Every change refetches the
  * whole, as the web page does, since one shows up in several places at once.
  */
+/**
+ * A Mastodon or Bluesky account becomes a way to sign in once linked, so
+ * linking one takes the step-up first, as linking a sign-in provider does;
+ * another network's account links at once.
+ */
+internal fun linkGated(type: String, stepUp: StepUpController, link: (String?) -> Unit) {
+    if (type == "mastodon" || type == "bluesky") stepUp.request { token -> link(token) } else link(null)
+}
+
 @HiltViewModel
 class NetworksViewModel @Inject constructor(
     private val api: NetworksApi,
     private val sessionManager: SessionManager,
     private val authRepository: AuthRepository,
+    stepUpClient: SettingsStepUpClient,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(NetworksUiState())
@@ -77,6 +89,13 @@ class NetworksViewModel @Inject constructor(
     private val _launch = MutableStateFlow<String?>(null)
     /** A remote server's consent page for the screen to open in the browser. */
     val launch: StateFlow<String?> = _launch.asStateFlow()
+
+    /** Step-up gate for a link that becomes a way to sign in. */
+    val stepUp = StepUpController(
+        client = stepUpClient,
+        scope = viewModelScope,
+        onError = { e -> viewModelScope.launch { _messages.emit(failure(e, R.string.networks_link_failed)) } },
+    )
 
     init {
         refresh()
@@ -171,9 +190,13 @@ class NetworksViewModel @Inject constructor(
      * the app.
      */
     fun link(type: String, fields: Map<String, String>, oauth: Boolean, onLinked: () -> Unit) =
+        linkGated(type, stepUp) { token -> linkWith(type, fields, oauth, token, onLinked) }
+
+    private fun linkWith(type: String, fields: Map<String, String>, oauth: Boolean, token: String?, onLinked: () -> Unit) =
         change("link", R.string.networks_link_failed) {
             val payload = HashMap<String, String>(fields)
             payload["type"] = type
+            if (token != null) payload["token"] = token
             if (oauth) {
                 val verifier = OAuthPkce.generateVerifier()
                 payload["scheme"] = OAUTH_SCHEME
@@ -361,7 +384,7 @@ class NetworksViewModel @Inject constructor(
     }
 
     /** The server's reason for a refusal, else the action's own words for its failure. */
-    private fun failure(e: Exception, fallback: Int): String = when (val error = e.toMochiError()) {
+    private fun failure(e: Throwable, fallback: Int): String = when (val error = e.toMochiError()) {
         is MochiError.Unknown -> error.message ?: AppContext.get().getString(fallback)
         else -> error.userMessage()
     }

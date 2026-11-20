@@ -82,6 +82,7 @@ import org.mochios.settings.api.NetworkBlock
 import org.mochios.settings.api.NetworkFeed
 import org.mochios.settings.api.NetworkMute
 import org.mochios.settings.api.NetworksData
+import org.mochios.settings.ui.login.StepUpHost
 import org.mochios.android.R as MochiR
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -118,6 +119,7 @@ fun NetworksScreen(
         viewModel.consumeLaunch()
     }
 
+    StepUpHost(viewModel.stepUp)
     var linking by remember { mutableStateOf(false) }
     var adding by remember { mutableStateOf<Handle?>(null) }
     var releasing by remember { mutableStateOf<Handle?>(null) }
@@ -410,13 +412,13 @@ internal fun NetworksContent(
                 }
             }
             items(linked, key = { "account:${it.id}" }) { account ->
-                AccountCard(account = account, feeds = data.feeds, busy = account.id in busy, actions = actions)
+                AccountCard(account = account, feeds = data.feeds, networks = data.networks, busy = account.id in busy, actions = actions)
             }
         }
         if (communities.isNotEmpty()) {
             item("communities") { SectionTitle(stringResource(R.string.networks_communities)) }
             items(communities, key = { "account:${it.id}" }) { account ->
-                AccountCard(account = account, feeds = data.feeds, busy = account.id in busy, actions = actions)
+                AccountCard(account = account, feeds = data.feeds, networks = data.networks, busy = account.id in busy, actions = actions)
             }
         }
         item("moderation") {
@@ -506,8 +508,8 @@ internal fun HandleCard(
                     val account = hostedAccount(accounts, row, type)
                     val network = networkLabel(type)
                     val switchLabel = stringResource(R.string.networks_network_for, network, row.name)
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Column(modifier = Modifier.weight(1f)) {
+                    Row(verticalAlignment = Alignment.Top) {
+                        Column(modifier = Modifier.weight(1f).padding(top = inset)) {
                             Text(
                                 if (row == handle) network else stringResource(R.string.networks_name_on, row.name, network),
                                 style = MaterialTheme.typography.bodyMedium,
@@ -517,23 +519,25 @@ internal fun HandleCard(
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
-                            if (account != null) AccountStatusLine(account, feeds)
+                            if (account != null) AccountStatusLine(account, feeds, networks)
                         }
                         // A switch moves when tapped and keeps its look while its
                         // change goes; a tap meanwhile is not taken.
                         val key = "${row.name}/$type"
-                        Switch(
-                            checked = moving[key] ?: account?.let { moving[it.id] } ?: (account != null),
-                            onCheckedChange = {
-                                if (key !in busy && (account == null || account.id !in busy)) onToggle(row, type, account)
-                            },
-                            modifier = Modifier.semantics { contentDescription = switchLabel },
-                        )
-                        if (account != null) {
-                            AccountMenuButton(account = account, busy = account.id in busy, removable = false, actions = actions)
-                        } else {
-                            // The menu's width, so the switches line up
-                            Spacer(Modifier.size(48.dp))
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Switch(
+                                checked = moving[key] ?: account?.let { moving[it.id] } ?: (account != null),
+                                onCheckedChange = {
+                                    if (key !in busy && (account == null || account.id !in busy)) onToggle(row, type, account)
+                                },
+                                modifier = Modifier.semantics { contentDescription = switchLabel },
+                            )
+                            if (account != null) {
+                                AccountMenuButton(account = account, busy = account.id in busy, removable = false, actions = actions)
+                            } else {
+                                // The menu's width, so the switches line up
+                                Spacer(Modifier.size(48.dp))
+                            }
                         }
                     }
                 }
@@ -550,12 +554,13 @@ internal fun HandleCard(
 internal fun AccountCard(
     account: NetworkAccount,
     feeds: List<NetworkFeed>,
+    networks: List<String>,
     busy: Boolean,
     actions: AccountActions,
 ) {
     MochiCard(modifier = Modifier.fillMaxWidth()) {
-        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
-            Column(modifier = Modifier.weight(1f)) {
+        Row(modifier = Modifier.padding(12.dp), verticalAlignment = Alignment.Top) {
+            Column(modifier = Modifier.weight(1f).padding(top = inset)) {
                 val network = networkLabel(account.type)
                 val name = account.label.ifEmpty { account.name }
                 Text(
@@ -567,17 +572,24 @@ internal fun AccountCard(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                AccountStatusLine(account, feeds)
+                AccountStatusLine(account, feeds, networks)
             }
             AccountMenuButton(account = account, busy = busy, removable = true, actions = actions)
         }
     }
 }
 
+/**
+ * How far an account row's label sits below the row's top, so that its first
+ * line is level with the middle of the 48dp switch and menu beside it however
+ * many lines the address and status add below.
+ */
+private val inset = 14.dp
+
 /** What is to be said of an account, if anything, coloured as a problem where it is one. */
 @Composable
-private fun AccountStatusLine(account: NetworkAccount, feeds: List<NetworkFeed>) {
-    val (status, problem) = statusText(accountStatus(account, feeds))
+private fun AccountStatusLine(account: NetworkAccount, feeds: List<NetworkFeed>, networks: List<String>) {
+    val (status, problem) = statusText(accountStatus(account, feeds, networks))
     if (status.isNotEmpty()) {
         Text(
             status,

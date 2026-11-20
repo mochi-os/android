@@ -726,4 +726,5 @@
     <string name="notifications_rss_renamed">تمت إعادة تسمية التغذية</string>
     <string name="notifications_rss_deleted">تم حذف التغذية</string>
     <string name="notifications_rss_default_name">موجز RSS</string>
+    <string name="networks_off">أوقفه مسؤول الخادم</string>
 </resources>

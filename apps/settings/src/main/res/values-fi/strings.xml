@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Syöte nimetty uudelleen</string>
     <string name="notifications_rss_deleted">Syöte poistettu</string>
     <string name="notifications_rss_default_name">RSS-syöte</string>
+    <string name="networks_off">Palvelimen ylläpitäjä on poistanut käytöstä</string>
 </resources>

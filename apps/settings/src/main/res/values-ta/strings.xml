@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">ஃபீட் பெயர் மாற்றப்பட்டது</string>
     <string name="notifications_rss_deleted">ஃபீட் நீக்கப்பட்டது</string>
     <string name="notifications_rss_default_name">RSS ஃபீட்</string>
+    <string name="networks_off">சேவையக நிர்வாகியால் முடக்கப்பட்டது</string>
 </resources>

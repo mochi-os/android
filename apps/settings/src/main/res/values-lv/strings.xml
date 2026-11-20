@@ -687,4 +687,5 @@
     <string name="notifications_rss_renamed">Plūsma pārdēvēta</string>
     <string name="notifications_rss_deleted">Plūsma dzēsta</string>
     <string name="notifications_rss_default_name">RSS plūsma</string>
+    <string name="networks_off">Izslēdzis servera administrators</string>
 </resources>

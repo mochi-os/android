@@ -22,7 +22,6 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
-import androidx.compose.ui.unit.dp
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Rule
@@ -226,14 +225,18 @@ class NetworksScreenTest {
             base.copy(accounts = listOf(bluesky)),
             actions = AccountActions(onKeys = { acted += "keys:${it.id}" }, onRemove = { acted += "remove:${it.id}" }),
         )
+        val label = rule.onNodeWithText("Bluesky").getBoundsInRoot()
         val address = rule.onNodeWithText("alice.a.example").getBoundsInRoot()
         val switch = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "Bluesky", "alice")).getBoundsInRoot()
         val status = rule.onNodeWithText(text(R.string.networks_no_recovery)).getBoundsInRoot()
         val menu = rule.onNodeWithContentDescription(text(R.string.networks_account_actions)).getBoundsInRoot()
-        // The status sits under the row's address, and the menu after the row's switch.
-        assertTrue(status.top >= address.bottom && status.top <= switch.bottom + 24.dp)
-        assertTrue(((menu.top + menu.bottom) / 2 - (switch.top + switch.bottom) / 2).value in -1f..1f)
-        assertTrue(switch.right <= menu.left)
+        // The status sits under the row's address, the switch level with the
+        // row's label however many lines follow it, and the menu after the switch.
+        assertTrue("status $status, address $address", status.top >= address.bottom && status.left == address.left)
+        val middle = (switch.top + switch.bottom) / 2
+        assertTrue("label $label, switch $switch", middle >= label.top && middle <= label.bottom)
+        assertTrue("menu $menu, switch $switch", ((menu.top + menu.bottom) / 2 - middle).value in -1f..1f)
+        assertTrue("menu $menu, switch $switch", switch.right <= menu.left)
         rule.onNodeWithText(text(R.string.networks_linked_accounts)).assertDoesNotExist()
         rule.onNodeWithText(text(R.string.networks_communities)).assertDoesNotExist()
 
@@ -347,7 +350,10 @@ class NetworksScreenTest {
         val switch = rule.onNodeWithContentDescription(text(R.string.networks_network_for, "XMPP", "alice"))
         switch.assertIsOn()
         rule.onAllNodesWithText("alice@a.example").assertCountEquals(1)
-        rule.onNodeWithText(text(R.string.networks_failure_closed)).assertExists()
+        // It says the network is off here, which is why nothing reaches it, over the
+        // failure that follows from that; the account on an offered network says nothing of it.
+        rule.onAllNodesWithText(text(R.string.networks_off)).assertCountEquals(1)
+        rule.onNodeWithText(text(R.string.networks_failure_closed)).assertDoesNotExist()
         rule.onAllNodesWithContentDescription(text(R.string.networks_account_actions)).assertCountEquals(2)
         rule.onNodeWithText(text(R.string.networks_communities)).assertDoesNotExist()
         // A network nobody has an account on since it stopped being offered has no row.

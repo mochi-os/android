@@ -673,4 +673,5 @@
     <string name="notifications_rss_renamed">Номи фид иваз шуд</string>
     <string name="notifications_rss_deleted">Фид ҳазф шуд</string>
     <string name="notifications_rss_default_name">Фиди RSS</string>
+    <string name="networks_off">Аз ҷониби маъмури сервер хомӯш карда шудааст</string>
 </resources>

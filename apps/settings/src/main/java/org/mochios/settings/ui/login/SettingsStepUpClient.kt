@@ -79,7 +79,8 @@ class SettingsStepUpClient @Inject constructor(
         val acceptable = required.contains("oauth") ||
             (required.isEmpty() && oauth != null && oauth.state != "disabled")
         if (!acceptable) return emptyList()
-        return api.listOAuth().unwrapRaw().identities.map { it.provider }.distinct()
+        // Only the providers the server can confirm an identity through.
+        return api.listOAuth().unwrapRaw().identities.filter { it.verify != false }.map { it.provider }.distinct()
     }
 
     override suspend fun oauthBegin(provider: String): String {

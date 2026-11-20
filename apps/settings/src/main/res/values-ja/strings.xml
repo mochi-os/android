@@ -662,4 +662,5 @@
     <string name="notifications_rss_renamed">フィードの名前を変更しました</string>
     <string name="notifications_rss_deleted">フィードを削除しました</string>
     <string name="notifications_rss_default_name">RSS フィード</string>
+    <string name="networks_off">サーバー管理者によって無効にされています</string>
 </resources>

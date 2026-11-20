@@ -673,4 +673,5 @@
     <string name="notifications_rss_renamed">Feed rebatize</string>
     <string name="notifications_rss_deleted">Feed efase</string>
     <string name="notifications_rss_default_name">Flux RSS</string>
+    <string name="networks_off">Administratè sèvè a dezaktive l</string>
 </resources>

@@ -700,4 +700,5 @@
     <string name="notifications_rss_renamed">Лента переименована</string>
     <string name="notifications_rss_deleted">Лента удалена</string>
     <string name="notifications_rss_default_name">RSS-лента</string>
+    <string name="networks_off">Отключено администратором сервера</string>
 </resources>

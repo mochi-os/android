@@ -129,8 +129,8 @@ private val NETWORK_SETTINGS = listOf(
     "fediverse",
     "bluesky",
     "labelers",
-    "xmpp",
     "matrix",
+    "xmpp",
 )
 private val METHOD_STATE_SLOTS = listOf("disabled", "allowed", "required")
 
@@ -140,6 +140,10 @@ private fun isOauth(name: String) = name.startsWith("oauth_")
 private fun isOperator(name: String) = OPERATOR_SETTINGS.contains(name)
 private fun isPush(name: String) = name.startsWith("fcm.")
 private fun isNetwork(name: String) = NETWORK_SETTINGS.contains(name)
+
+/** The settings of the other networks the server lists, in [NETWORK_SETTINGS]' order. */
+internal fun networkSettings(all: List<SystemSetting>): List<SystemSetting> =
+    NETWORK_SETTINGS.mapNotNull { name -> all.firstOrNull { it.name == name } }
 private fun isUserDefault(name: String) = USER_DEFAULT_SETTINGS.contains(name)
 
 private fun isBoolean(setting: SystemSetting) = setting.pattern == "^(true|false)$"
@@ -251,7 +255,7 @@ internal fun SystemSettingsContent(
     val oauth = all.filter { isOauth(it.name) }
     val userDefaults = all.filter { isUserDefault(it.name) }
     val operator = OPERATOR_SETTINGS.mapNotNull { name -> all.firstOrNull { it.name == name } }
-    val networks = NETWORK_SETTINGS.mapNotNull { name -> all.firstOrNull { it.name == name } }
+    val networks = networkSettings(all)
     val push = all.filter { isPush(it.name) }
     val other = all.filter { setting ->
         !isLogin(setting.name) &&

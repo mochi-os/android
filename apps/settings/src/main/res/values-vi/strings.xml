@@ -662,4 +662,5 @@
     <string name="notifications_rss_renamed">Đã đổi tên nguồn cấp</string>
     <string name="notifications_rss_deleted">Đã xoá nguồn cấp</string>
     <string name="notifications_rss_default_name">Feed RSS</string>
+    <string name="networks_off">Đã bị quản trị viên máy chủ tắt</string>
 </resources>

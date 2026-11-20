@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">ഫീഡിന്റെ പേര് മാറ്റി</string>
     <string name="notifications_rss_deleted">ഫീഡ് ഇല്ലാതാക്കി</string>
     <string name="notifications_rss_default_name">RSS ഫീഡ്</string>
+    <string name="networks_off">സെർവർ അഡ്മിനിസ്ട്രേറ്റർ ഓഫ് ചെയ്തിരിക്കുന്നു</string>
 </resources>

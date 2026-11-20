@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Jarioa berrizendatuta</string>
     <string name="notifications_rss_deleted">Jarioa ezabatuta</string>
     <string name="notifications_rss_default_name">RSS jarioa</string>
+    <string name="networks_off">Zerbitzariaren administratzaileak desgaitua</string>
 </resources>

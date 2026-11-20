@@ -677,4 +677,5 @@
     <string name="notifications_rss_renamed">Nome do feed alterado</string>
     <string name="notifications_rss_deleted">Feed eliminado</string>
     <string name="notifications_rss_default_name">Feed RSS</string>
+    <string name="networks_off">Desativado pelo administrador do servidor</string>
 </resources>

@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">फीड के नाम बदल गइल</string>
     <string name="notifications_rss_deleted">फीड मेटा गइल</string>
     <string name="notifications_rss_default_name">RSS फीड</string>
+    <string name="networks_off">सर्वर एडमिनिस्ट्रेटर के ओर से बंद कइल गइल बा</string>
 </resources>

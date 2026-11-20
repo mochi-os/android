@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Ifidi iqanjwe kabusha</string>
     <string name="notifications_rss_deleted">Ifidi isusiwe</string>
     <string name="notifications_rss_default_name">Ifidi ye-RSS</string>
+    <string name="networks_off">Kuvalwe ngumlawuli weseva</string>
 </resources>

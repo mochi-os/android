@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Feed har fått nytt navn</string>
     <string name="notifications_rss_deleted">Feed slettet</string>
     <string name="notifications_rss_default_name">RSS-strøm</string>
+    <string name="networks_off">Slått av av serveradministratoren</string>
 </resources>

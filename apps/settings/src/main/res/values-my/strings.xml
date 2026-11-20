@@ -661,4 +661,5 @@
     <string name="notifications_rss_renamed">ဖိဒ် အမည်ပြောင်းပြီးပါပြီ</string>
     <string name="notifications_rss_deleted">ဖိဒ် ဖျက်ပြီးပါပြီ</string>
     <string name="notifications_rss_default_name">RSS ဖိဒ်</string>
+    <string name="networks_off">ဆာဗာစီမံခန့်ခွဲသူက ပိတ်ထားသည်</string>
 </resources>

@@ -674,4 +674,5 @@
     <string name="notifications_rss_renamed">Feed omdøbt</string>
     <string name="notifications_rss_deleted">Feed slettet</string>
     <string name="notifications_rss_default_name">RSS-feed</string>
+    <string name="networks_off">Slået fra af serveradministratoren</string>
 </resources>

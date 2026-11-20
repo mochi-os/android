@@ -676,4 +676,5 @@
     <string name="notifications_rss_renamed">Straumen fekk nytt namn</string>
     <string name="notifications_rss_deleted">Straum sletta</string>
     <string name="notifications_rss_default_name">RSS-straum</string>
+    <string name="networks_off">Slått av av tenaradministratoren</string>
 </resources>
