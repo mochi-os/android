@@ -44,6 +44,7 @@ import org.mochios.feeds.ui.post.CreatePostViewModel
 import org.mochios.feeds.ui.post.PostDetailViewModel
 import org.mochios.feeds.ui.settings.FeedSettingsViewModel
 import org.mochios.feeds.ui.settings.PublishEvent
+import org.mochios.feeds.ui.settings.PublishTab
 import org.mochios.feeds.ui.settings.PublishingSection
 import org.mochios.feeds.ui.settings.PublishingViewModel
 import org.mochios.feeds.ui.settings.SourcesTab
@@ -631,7 +632,7 @@ class NetworksViewModelsTest {
         val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.loadPublish()
         until("the publish list") { model.publish.value != null }
-        assertEquals(true, org.mochios.feeds.ui.settings.publishable(model.publish.value, null))
+        assertEquals(true, org.mochios.feeds.ui.settings.publishable(model.publish.value, null, null))
         rule.setContent { PublishingSection(model) }
         rule.onNodeWithText("ActivityPub").assertIsDisplayed()
         rule.onNodeWithText("Bluesky").assertIsDisplayed()
@@ -699,13 +700,22 @@ class NetworksViewModelsTest {
     }
 
     @Test
-    fun `A Publish to that fails is decided as nowhere to publish, so the settings stop waiting`() {
+    fun `A Publish to that fails keeps the tab, shows the failure with a retry, and lists the accounts once the retry is answered`() {
         publishFailed = true
         val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
-        assertNull(org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
+        assertNull(org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value, model.failure.value))
         model.loadPublish()
-        until("the answer") { model.publish.value != null }
-        assertEquals(false, org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
+        until("the failure") { model.failure.value != null }
+        // THE POINT: the tab stays, as on the web, so the user sees why and can retry.
+        assertEquals(true, org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value, model.failure.value))
+        assertNull(model.publish.value)
+        rule.setContent { PublishTab(model, onOpenLink = {}) }
+        rule.onNodeWithText("No networks here").assertIsDisplayed()
+        publishFailed = false
+        rule.onNodeWithText(context.getString(org.mochios.android.R.string.common_retry)).performClick()
+        until("the accounts") { model.publish.value != null }
+        assertNull(model.failure.value)
+        rule.onNodeWithText("@me@social.example").assertIsDisplayed()
     }
 
     @Test
@@ -716,7 +726,7 @@ class NetworksViewModelsTest {
         until("the refusal") { model.refusal.value != null }
         assertEquals("Only a public feed publishes to other networks", model.refusal.value!!.message)
         assertNull(model.publish.value)
-        assertEquals(true, org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
+        assertEquals(true, org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value, model.failure.value))
         feedPrivate = false
         model.loadPublish()
         until("the accounts") { model.publish.value != null }

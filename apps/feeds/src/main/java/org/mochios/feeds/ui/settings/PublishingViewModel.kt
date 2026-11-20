@@ -114,18 +114,22 @@ class PublishingViewModel @Inject constructor(
     private val _refusal = MutableStateFlow<MochiError?>(null)
     val refusal: StateFlow<MochiError?> = _refusal.asStateFlow()
 
+    // Any other failure to read it, shown on Publish to with a retry.
+    private val _failure = MutableStateFlow<MochiError?>(null)
+    val failure: StateFlow<MochiError?> = _failure.asStateFlow()
+
     fun loadPublish() {
         viewModelScope.launch {
             try {
                 _publish.value = repository.getPublish(feedId)
                 _refusal.value = null
+                _failure.value = null
             } catch (e: MochiError.ForbiddenError) {
                 _publish.value = null
                 _refusal.value = e
-            } catch (_: Exception) {
-                // A server without the networks says nothing of them: there
-                // is nowhere to publish, and the settings stop waiting.
-                if (_publish.value == null && _refusal.value == null) _publish.value = PublishState()
+                _failure.value = null
+            } catch (e: Exception) {
+                _failure.value = e.toMochiError()
             }
         }
     }

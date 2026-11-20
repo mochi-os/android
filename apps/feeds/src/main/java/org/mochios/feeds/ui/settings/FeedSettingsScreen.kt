@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
@@ -77,16 +78,17 @@ fun FeedSettingsScreen(
 
     // Where a feed publishes is a tab of its own, shown only where there is
     // an account to publish to or a network to set one up on, or the server
-    // says why there is none: a private feed's answer. Asked again when the
-    // feed's privacy changes.
+    // says why there is none (a private feed's answer), or reading it failed
+    // and the tab offers a retry. Asked again when the feed's privacy changes.
     val publishing: PublishingViewModel = hiltViewModel()
     val publishState by publishing.publish.collectAsState()
     val refusal by publishing.refusal.collectAsState()
+    val failure by publishing.failure.collectAsState()
     val privacy = feedInfo?.privacy
     LaunchedEffect(privacy, canManage) {
         if (canManage && privacy != null) publishing.loadPublish()
     }
-    val offered = publishable(publishState, refusal)
+    val offered = publishable(publishState, refusal, failure)
     val tabIds = settingsTabs(
         publishable = offered == true,
         ai = aiAccounts.isNotEmpty(),
@@ -241,21 +243,23 @@ internal fun settingsTabs(publishable: Boolean, ai: Boolean): List<SettingsTab> 
 
 /**
  * Whether Publish to is offered: the owner holds an account the feed may
- * publish to, the server offers a network to set one up on, or the server
- * refused and the tab says why. Null until the server has answered, so the
- * tabs are drawn once, with it or without.
+ * publish to, the server offers a network to set one up on, the server
+ * refused and the tab says why, or reading it failed and the tab shows the
+ * failure with a retry. Null until the server has answered, so the tabs are
+ * drawn once, with it or without.
  */
-internal fun publishable(state: PublishState?, refusal: MochiError?): Boolean? = when {
-    refusal != null -> true
+internal fun publishable(state: PublishState?, refusal: MochiError?, failure: MochiError?): Boolean? = when {
+    refusal != null || failure != null -> true
     state == null -> null
     else -> state.accounts.isNotEmpty() || state.offered.isNotEmpty()
 }
 
 /** Where a public feed publishes, on a tab of its own. */
 @Composable
-private fun PublishTab(publishing: PublishingViewModel, onOpenLink: (String) -> Unit) {
+internal fun PublishTab(publishing: PublishingViewModel, onOpenLink: (String) -> Unit) {
     PublishingEvents(publishing)
     val refusal by publishing.refusal.collectAsState()
+    val failure by publishing.failure.collectAsState()
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -264,7 +268,10 @@ private fun PublishTab(publishing: PublishingViewModel, onOpenLink: (String) -> 
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         val reason = refusal
-        if (reason != null) {
+        val failed = failure
+        if (failed != null) {
+            InlineErrorState(error = failed, onRetry = publishing::loadPublish)
+        } else if (reason != null) {
             // Not a failure to retry: a private feed publishes nowhere.
             Text(
                 reason.userMessage(),

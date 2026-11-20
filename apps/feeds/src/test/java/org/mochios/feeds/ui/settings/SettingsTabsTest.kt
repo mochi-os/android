@@ -35,16 +35,16 @@ class SettingsTabsTest {
     @Test
     fun `Publish to is offered where the owner holds an account, or the server says why not`() {
         val held = PublishState(accounts = listOf(PublishAccount(id = "m1", type = "mastodon", identifier = "@a@b.example")))
-        assertEquals(true, publishable(held, null))
-        assertEquals(false, publishable(PublishState(), null))
+        assertEquals(true, publishable(held, null, null))
+        assertEquals(false, publishable(PublishState(), null, null))
         // A private feed's refusal is the tab's content.
-        assertEquals(true, publishable(null, MochiError.ForbiddenError("Only a public feed publishes to other networks")))
+        assertEquals(true, publishable(null, MochiError.ForbiddenError("Only a public feed publishes to other networks"), null))
     }
 
     @Test
     fun `Publish to is offered where the server offers a network to set an account up on`() {
         // THE POINT: an owner with no account yet is shown where to set one up.
-        assertEquals(true, publishable(PublishState(offered = listOf("bluesky")), null))
+        assertEquals(true, publishable(PublishState(offered = listOf("bluesky")), null, null))
     }
 
     @Test
@@ -58,7 +58,14 @@ class SettingsTabsTest {
     }
 
     @Test
+    fun `Publish to is offered where reading it failed, so the tab shows the failure and a retry`() {
+        // THE POINT: a failure other than a refusal keeps the tab, as on the web.
+        assertEquals(true, publishable(null, null, MochiError.NetworkError()))
+        assertEquals(true, publishable(PublishState(), null, MochiError.ServerError(502, "No networks here")))
+    }
+
+    @Test
     fun `Publish to is undecided until the server answers, so the tabs wait for it`() {
-        assertNull(publishable(null, null))
+        assertNull(publishable(null, null, null))
     }
 }
