@@ -28,11 +28,15 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
 import org.mochios.market.model.Asset
 
+/**
+ * A listing's files by name and size; each carries a download button only
+ * when [onDownload] is given, for someone who can take the files.
+ */
 @Composable
 fun DigitalAssetsList(
     assets: List<Asset>,
     modifier: Modifier = Modifier,
-    onDownload: (Asset) -> Unit = {},
+    onDownload: ((Asset) -> Unit)? = null,
 ) {
     if (assets.isEmpty()) return
     Column(
@@ -70,11 +74,13 @@ fun DigitalAssetsList(
                         )
                     }
                 }
-                MochiIconButton(onClick = { onDownload(asset) }) {
-                    Icon(
-                        imageVector = Icons.Filled.Download,
-                        contentDescription = stringResource(R.string.market_asset_download),
-                    )
+                if (onDownload != null) {
+                    MochiIconButton(onClick = { onDownload(asset) }) {
+                        Icon(
+                            imageVector = Icons.Filled.Download,
+                            contentDescription = stringResource(R.string.market_asset_download),
+                        )
+                    }
                 }
             }
         }

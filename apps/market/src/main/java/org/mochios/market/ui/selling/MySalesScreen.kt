@@ -25,6 +25,7 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.LoadState
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
@@ -52,17 +53,17 @@ fun MySalesScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
-                state.error != null && state.orders.isEmpty() -> {
+                state.load is LoadState.Failed && state.orders.isEmpty() -> {
                     // userMessage() comes back empty when the server sends an
                     // empty error body; keep the specific fallback rather than
                     // rendering an error state with no message in it.
                     ErrorState(
-                        error = state.error!!.takeIf { it.userMessage().isNotEmpty() }
+                        error = (state.load as LoadState.Failed).error.takeIf { it.userMessage().isNotEmpty() }
                             ?: MochiError.Unknown(stringResource(R.string.market_sales_load_failed)),
                         onRetry = viewModel::refresh,
                     )
                 }
-                state.orders.isEmpty() && !state.isLoading -> {
+                state.orders.isEmpty() && state.load == LoadState.Idle -> {
                     EmptyState(
                         icon = Icons.Default.PointOfSale,
                         title = stringResource(R.string.market_sales_empty_title),
@@ -73,8 +74,8 @@ fun MySalesScreen(
                     InfiniteList(
                         items = state.orders,
                         key = { order -> order.id },
-                        isLoading = state.isLoading,
-                        hasMore = state.hasMore,
+                        load = state.load,
+                        hasMore = state.paging.more,
                         onLoadMore = viewModel::loadMore,
                         contentPadding = MarketListPadding,
                         verticalArrangement = MarketListSpacing,

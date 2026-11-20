@@ -21,26 +21,35 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.market.R
-import org.mochios.market.lib.cheapestMatchingZone
+import org.mochios.market.lib.cheapestFor
 import org.mochios.market.lib.currencyDecimals
+import org.mochios.market.lib.optionsFor
 import org.mochios.market.lib.toMinorUnits
+import org.mochios.market.model.Account
 import org.mochios.market.model.Auction
-import org.mochios.market.model.Bid
+import org.mochios.market.model.AuctionStatus
+import org.mochios.market.model.Currency
 import org.mochios.market.model.DeliveryMethod
 import org.mochios.market.model.Listing
+import org.mochios.market.model.ListingType
+import org.mochios.market.model.PricingModel
 import org.mochios.market.model.ShippingOption
+import org.mochios.market.model.ShippingRegions
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 /**
  * Money is in minor units; [amountText] is free text converted on submit.
+ * [addressCountry] is a country code, or a country written before codes as it
+ * was stored. [addressTouched] is set once the buyer edits the address, after
+ * which a required field left empty is marked.
  */
 data class CheckoutUiState(
     val isLoading: Boolean = true,
     val listing: Listing? = null,
     val shipping: List<ShippingOption> = emptyList(),
     val auction: Auction? = null,
-    val wonBid: Bid? = null,
+    val regions: ShippingRegions? = null,
     val delivery: DeliveryMethod? = null,
     val optionId: String? = null,
     val amountText: String = "",
@@ -51,9 +60,74 @@ data class CheckoutUiState(
     val addressRegion: String = "",
     val addressPostcode: String = "",
     val addressCountry: String = "",
+    val addressTouched: Boolean = false,
     val submitting: Boolean = false,
     val error: MochiError? = null,
-)
+) {
+    /** An auction listing, which is bought only by completing the won auction. */
+    val isAuction: Boolean get() = listing?.pricing == PricingModel.AUCTION
+
+    /**
+     * Whether the caller may complete this auction: it has ended with a sale,
+     * and the caller is its winner. The listing detail says both, so no list
+     * of the caller's bids is consulted.
+     */
+    val wonAuction: Boolean
+        get() = isAuction && auction?.let { held -> held.status == AuctionStatus.ENDED_SOLD && held.mine == true } == true
+
+    /** The shipping options a buyer in [addressCountry] may choose. */
+    val options: List<ShippingOption> get() = optionsFor(addressCountry, shipping, regions)
+
+    /** The option postage is charged for: only while delivery is by shipping. */
+    val selectedOption: ShippingOption?
+        get() = if (delivery == DeliveryMethod.SHIPPING) options.firstOrNull { it.id == optionId } else null
+
+    private val currency: Currency get() = listing?.currency ?: Currency.GBP
+
+    /** The item's price: a won auction's winning bid, or the amount a pay-what-you-want buyer offers. */
+    val itemPrice: Long
+        get() {
+            val listing = listing ?: return 0L
+            return when {
+                isAuction -> auction?.bid ?: 0L
+                listing.pricing == PricingModel.PWYW && amountText.isNotBlank() -> toMinorUnits(amountText, currency)
+                else -> listing.price
+            }
+        }
+
+    /** The item and, for shipping, the chosen option's postage. */
+    val total: Long get() = itemPrice + (selectedOption?.price ?: 0L)
+
+    /** A pay-what-you-want amount at or above the listing's minimum. */
+    val amountOk: Boolean
+        get() {
+            val listing = listing ?: return false
+            if (listing.pricing != PricingModel.PWYW) return true
+            return amountText.isNotBlank() && toMinorUnits(amountText, currency) >= listing.price
+        }
+
+    /**
+     * The address fields shipping needs and lacks, by their form field names,
+     * as the Comptroller requires them: name, first line, city and country.
+     */
+    val missing: Set<String>
+        get() = buildSet {
+            if (addressName.isBlank()) add("address_name")
+            if (addressLine1.isBlank()) add("address_line1")
+            if (addressCity.isBlank()) add("address_city")
+            if (addressCountry.isBlank()) add("address_country")
+        }
+
+    /**
+     * Whether Pay can go: a delivery method, an amount the listing accepts,
+     * and for shipping an option and the required address, as the server
+     * checks them; an auction only for its winner.
+     */
+    val canSubmit: Boolean
+        get() = listing != null && delivery != null && !submitting && amountOk &&
+            (!isAuction || wonAuction) &&
+            (delivery != DeliveryMethod.SHIPPING || (selectedOption != null && missing.isEmpty()))
+}
 
 sealed interface CheckoutEvent {
     data class OpenStripe(val url: String) : CheckoutEvent
@@ -87,38 +161,33 @@ class CheckoutViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val detail = repository.getListing(listingId)
-                // Try to find a won bid for this listing so the screen
-                // knows to fall through to the auction-completion flow.
-                val wonBid = if (detail.listing.pricing == org.mochios.market.model.PricingModel.AUCTION) {
-                    runCatching { repository.myBids(status = "won").bids }
-                        .getOrDefault(emptyList())
-                        .firstOrNull { it.listing == listingId }
-                } else {
-                    null
-                }
+                // The regions say which options cover the buyer's country, and
+                // the account holds the buyer's saved address; neither is
+                // needed to check out, so either may fail quietly.
+                val regions = runCatching { repository.shippingRegions() }.getOrNull()
+                val account = runCatching { repository.getAccount() }.getOrNull()
                 val delivery = preselectDelivery(detail.listing, detail.shipping)
                 // Seed the pay-what-you-want field with the listing minimum: an
                 // empty field skips the client-side amount check and the server
                 // rejects it.
                 val amountSeed =
-                    if (detail.listing.pricing == org.mochios.market.model.PricingModel.PWYW &&
-                        detail.listing.currency != null
-                    ) {
+                    if (detail.listing.pricing == PricingModel.PWYW && detail.listing.currency != null) {
                         java.math.BigDecimal(detail.listing.price)
                             .movePointLeft(currencyDecimals(detail.listing.currency))
                             .toPlainString()
                     } else {
                         ""
                     }
-                _uiState.value = _uiState.value.copy(
+                val loaded = _uiState.value.copy(
                     isLoading = false,
                     listing = detail.listing,
                     shipping = detail.shipping,
                     auction = detail.auction,
-                    wonBid = wonBid,
+                    regions = regions,
                     delivery = delivery,
                     amountText = amountSeed,
                 )
+                _uiState.value = if (account != null && !loaded.addressTouched) seeded(loaded, account) else loaded
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -126,6 +195,24 @@ class CheckoutViewModel @Inject constructor(
                 )
             }
         }
+    }
+
+    /**
+     * [state] with the buyer's saved address, and the cheapest option covering
+     * its country.
+     */
+    private fun seeded(state: CheckoutUiState, account: Account): CheckoutUiState {
+        val country = account.addressCountry
+        return state.copy(
+            addressName = account.addressName,
+            addressLine1 = account.addressLine1,
+            addressLine2 = account.addressLine2,
+            addressCity = account.addressCity,
+            addressRegion = account.addressRegion,
+            addressPostcode = account.addressPostcode,
+            addressCountry = country,
+            optionId = cheapestFor(country, state.shipping, state.regions)?.id ?: state.optionId,
+        )
     }
 
     fun onDeliveryChanged(method: DeliveryMethod) {
@@ -146,10 +233,11 @@ class CheckoutViewModel @Inject constructor(
         postcode: String = _uiState.value.addressPostcode,
     ) {
         val before = _uiState.value
-        // Re-pick the cheapest matching zone whenever country changes;
-        // honour any explicit override the buyer has already made.
+        // A new country picks the cheapest option covering it; with none known
+        // to, the buyer's choice stays while it is still offered.
         val nextOption = if (country != before.addressCountry) {
-            cheapestMatchingZone(country, before.shipping)?.id ?: before.optionId
+            cheapestFor(country, before.shipping, before.regions)?.id
+                ?: before.optionId?.takeIf { id -> optionsFor(country, before.shipping, before.regions).any { it.id == id } }
         } else {
             before.optionId
         }
@@ -162,6 +250,7 @@ class CheckoutViewModel @Inject constructor(
             addressRegion = region,
             addressPostcode = postcode,
             optionId = nextOption,
+            addressTouched = true,
         )
     }
 
@@ -173,14 +262,11 @@ class CheckoutViewModel @Inject constructor(
         val state = _uiState.value
         val listing = state.listing ?: return
         val delivery = state.delivery
+        val isSubscription = listing.pricing == PricingModel.SUBSCRIPTION
+        if (!isSubscription && !state.canSubmit) return
         viewModelScope.launch {
             _uiState.value = state.copy(submitting = true)
             try {
-                val isAuctionCompletion = listing.pricing ==
-                    org.mochios.market.model.PricingModel.AUCTION && state.wonBid != null
-                val isSubscription = listing.pricing ==
-                    org.mochios.market.model.PricingModel.SUBSCRIPTION
-
                 if (isSubscription) {
                     val r = repository.createSubscription(
                         listing = listing.id,
@@ -194,8 +280,10 @@ class CheckoutViewModel @Inject constructor(
                     return@launch
                 }
 
-                val fields = buildOrderFields(listing, delivery, state, isAuctionCompletion)
-                val response = if (isAuctionCompletion) {
+                // An auction listing is always bought through its completion,
+                // whose winner the server checks.
+                val fields = buildOrderFields(listing, delivery, state)
+                val response = if (state.isAuction) {
                     repository.createAuctionOrder(fields)
                 } else {
                     repository.createOrder(fields)
@@ -219,19 +307,19 @@ class CheckoutViewModel @Inject constructor(
         listing: Listing,
         delivery: DeliveryMethod?,
         state: CheckoutUiState,
-        isAuctionCompletion: Boolean,
     ): Map<String, String?> {
         // The Comptroller mints the Stripe success_url / cancel_url when
         // client_platform=android so the redirect lands on a mochi:// URI
         // that MainActivity's intent filter catches — not an HTTPS page
         // that the Custom Tab would render in-place.
         val fields = mutableMapOf<String, String?>(
-            "listing" to listing.id.toString(),
+            "listing" to listing.id,
             "delivery" to delivery?.name?.lowercase(),
             "client_platform" to ANDROID_PLATFORM,
         )
-        if (delivery == DeliveryMethod.SHIPPING && state.optionId != null) {
-            fields["option"] = state.optionId.toString()
+        val option = state.selectedOption
+        if (delivery == DeliveryMethod.SHIPPING && option != null) {
+            fields["option"] = option.id
             fields["address_name"] = state.addressName
             fields["address_line1"] = state.addressLine1
             fields["address_line2"] = state.addressLine2
@@ -240,8 +328,8 @@ class CheckoutViewModel @Inject constructor(
             fields["address_postcode"] = state.addressPostcode
             fields["address_country"] = state.addressCountry
         }
-        if (!isAuctionCompletion &&
-            listing.pricing == org.mochios.market.model.PricingModel.PWYW &&
+        if (!state.isAuction &&
+            listing.pricing == PricingModel.PWYW &&
             state.amountText.isNotBlank() &&
             listing.currency != null
         ) {
@@ -266,8 +354,7 @@ private fun preselectDelivery(
     val options = buildList {
         if (listing.shipping > 0 || shipping.isNotEmpty()) add(DeliveryMethod.SHIPPING)
         if (listing.pickup > 0) add(DeliveryMethod.PICKUP)
-        if (listing.type == org.mochios.market.model.ListingType.DIGITAL) add(DeliveryMethod.DOWNLOAD)
+        if (listing.type == ListingType.DIGITAL) add(DeliveryMethod.DOWNLOAD)
     }
     return options.singleOrNull()
 }
-

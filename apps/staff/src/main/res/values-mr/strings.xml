@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ऑर्डर #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">कारण (पर्यायी)</string>
-    <string name="staff_accounts_sales">%1$s विक्री</string>
     <string name="staff_appeals_reason_label">विक्रेत्याचे अपील कारण</string>
     <string name="staff_audit_action_staff_team_role_changed">कर्मचारी भूमिका बदलली</string>
     <string name="staff_categories_delete_desc">“%1$s” हटवायचे? हे पूर्ववत करता येणार नाही.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">संभाषण</string>
     <string name="staff_reports_conversation_empty">मेसेजेस नाहीत</string>
     <string name="staff_reports_conversation_show">संभाषण दाखवा</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s विक्री</item>
+        <item quantity="other">%1$s विक्री</item>
+    </plurals>
 </resources>

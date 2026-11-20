@@ -341,4 +341,7 @@
         <item quantity="other">deebii %1$s dabalataa</item>
     </plurals>
     <string name="drawer_unread">Hin dubbifamne</string>
+    <string name="person_unknown">Hin beekamu</string>
+    <string name="format_time_seconds_short">%1$s sek</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

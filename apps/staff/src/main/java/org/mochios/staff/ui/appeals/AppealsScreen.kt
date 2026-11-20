@@ -129,7 +129,7 @@ private fun AppealsBody(
             else -> InfiniteList(
                 items = state.appeals,
                 key = { appeal -> appeal.id },
-                isLoading = state.isLoadingMore,
+                load = state.load,
                 hasMore = state.appeals.size < state.total,
                 onLoadMore = onLoadMore,
             ) { appeal ->

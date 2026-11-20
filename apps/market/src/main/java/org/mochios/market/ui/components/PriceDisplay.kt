@@ -68,6 +68,18 @@ fun PriceDisplay(
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
+                // Whether the seller's reserve stands between the bids and a
+                // sale, as the web tells a bidder; the amount stays the seller's.
+                if (auction?.hasReserve == true) {
+                    Text(
+                        text = stringResource(
+                            if (auction.reserveMet == true) R.string.market_price_reserve_met
+                            else R.string.market_price_reserve_unmet,
+                        ),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
             }
             PricingModel.PWYW -> {
                 Text(

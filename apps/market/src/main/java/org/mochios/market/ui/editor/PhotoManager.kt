@@ -271,7 +271,7 @@ private fun PhotoCell(
                 ) {
                     Icon(
                         Icons.Default.ArrowUpward,
-                        contentDescription = null,
+                        contentDescription = stringResource(R.string.market_editor_move_up),
                         modifier = Modifier.size(16.dp),
                     )
                 }
@@ -282,7 +282,7 @@ private fun PhotoCell(
                 ) {
                     Icon(
                         Icons.Default.ArrowDownward,
-                        contentDescription = null,
+                        contentDescription = stringResource(R.string.market_editor_move_down),
                         modifier = Modifier.size(16.dp),
                     )
                 }

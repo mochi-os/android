@@ -33,8 +33,10 @@ import org.mochios.android.util.AttachmentOpener
 import org.mochios.market.R
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.lib.ReportedStore
-import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.AssetDownload
+import org.mochios.market.model.AuctionStatus
+import org.mochios.market.model.ListingStatus
+import org.mochios.market.model.PricingModel
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Category
 import org.mochios.market.model.Currency
@@ -58,11 +60,80 @@ data class ListingDetailUiState(
     val downloadingAsset: Boolean = false,
     /** True while the caller's reservation on this listing is being released. */
     val cancellingReservation: Boolean = false,
+    /**
+     * The server's clock less the phone's, in seconds, as the listing was
+     * read: an auction's time left is the server's, not a phone set wrong.
+     */
+    val offset: Long = 0,
 )
 
+/** What the listing page offers its viewer to do, apart from the owner's own actions. */
+sealed interface Offer {
+    /** Buy now; [resume] when the viewer's own checkout is already under way. */
+    data class Buy(val resume: Boolean) : Offer
+    data object Subscribe : Offer
+    /** Already subscribed: manage it from Subscriptions. */
+    data object Subscribed : Offer
+    data object Bid : Offer
+    /** Won the auction and not yet paid. */
+    data object Pay : Offer
+    /** The viewer's order on a listing no longer on sale. */
+    data class Order(val id: String) : Offer
+    /** An auction not yet open, opening at [opens] (epoch seconds). */
+    data class Opens(val opens: Long) : Offer
+    /** An auction over, not won by the viewer. */
+    data object Ended : Offer
+    /** Nothing: the viewer's own listing, or one not on sale, whose status badge says so. */
+    data object None : Offer
+}
+
+/**
+ * What [viewer] can do with this listing, from its status, its auction's,
+ * and the order, checkout and subscription the viewer already holds; as the
+ * web's listing page decides.
+ */
+internal fun ListingDetailResponse.offer(viewer: String?): Offer {
+    if (viewer != null && viewer == listing.seller) return Offer.None
+    val order = myOrder?.id?.takeIf { it.isNotEmpty() }
+    if (listing.pricing == PricingModel.AUCTION) {
+        val auction = auction ?: return Offer.None
+        return when (auction.status) {
+            AuctionStatus.SCHEDULED -> Offer.Opens(auction.opens)
+            AuctionStatus.ACTIVE -> if (listing.status == ListingStatus.ACTIVE) Offer.Bid else Offer.Ended
+            AuctionStatus.ENDED_SOLD, AuctionStatus.PAYMENT_OVERDUE ->
+                if (auction.mine == true) order?.let { Offer.Order(it) } ?: Offer.Pay else Offer.Ended
+            else -> Offer.Ended
+        }
+    }
+    val reserved = myReservation != null
+    if (listing.status != ListingStatus.ACTIVE && !reserved) {
+        return order?.let { Offer.Order(it) } ?: Offer.None
+    }
+    if (listing.pricing == PricingModel.SUBSCRIPTION) {
+        return if (mySubscription != null) Offer.Subscribed else Offer.Subscribe
+    }
+    return Offer.Buy(resume = reserved)
+}
+
+/** Whether [viewer] may download this listing's files: its seller, a buyer with a paid order, or an active subscriber. */
+internal fun ListingDetailResponse.downloadable(viewer: String?): Boolean {
+    if (viewer != null && viewer == listing.seller) return true
+    if (myOrder?.status in PAID) return true
+    return mySubscription?.status == "active"
+}
+
+/** Order statuses the server lets a buyer download in. */
+private val PAID = setOf("paid", "shipped", "delivered", "completed")
+
+/**
+ * A message for the screen's snackbar; with [amount] and [currency], the
+ * message names that price, written in the user's number format as it is
+ * shown.
+ */
 data class ListingDetailSnackbar(
     val messageRes: Int,
-    val args: List<Any> = emptyList(),
+    val amount: Long? = null,
+    val currency: Currency? = null,
 )
 
 /** One-shot outcomes of a digital-asset download. */
@@ -99,7 +170,7 @@ class ListingDetailViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(downloadingAsset = true)
             try {
-                when (val outcome = repository.downloadAsset(assetId)) {
+                when (val outcome = repository.downloadAsset(_state.value.listing?.assets.orEmpty().first { asset -> asset.id == assetId })) {
                     is AssetDownload.External ->
                         _events.tryEmit(ListingDetailEvent.OpenUrl(outcome.url))
                     is AssetDownload.Bytes -> {
@@ -169,7 +240,8 @@ class ListingDetailViewModel @Inject constructor(
                         quietly { repository.listPhotos(id).sortedBy { it.rank } }
                     }
                     val resp = repository.getListing(id)
-                    _state.update { state -> state.copy(isLoading = false, listing = resp, error = null) }
+                    val offset = if (resp.now > 0L) resp.now - System.currentTimeMillis() / 1000L else 0L
+                    _state.update { state -> state.copy(isLoading = false, listing = resp, error = null, offset = offset) }
                     // Each part lands on the state as it is then: awaited first,
                     // so a later answer never puts back an earlier copy.
                     launch {
@@ -229,8 +301,11 @@ class ListingDetailViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 savedRepository.toggle(listing)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.value = _state.value.copy(error = e.toMochiError())
+                // The bookmark is back as it was; say why.
+                _events.emit(ListingDetailEvent.Toast(e.toMochiError().userMessage()))
             }
         }
     }
@@ -294,13 +369,11 @@ class ListingDetailViewModel @Inject constructor(
                     result.instant == true -> ListingDetailSnackbar(
                         org.mochios.market.R.string.market_bid_dialog_instant_win,
                     )
-                    result.outbid == true -> {
-                        val newHigh = formatPrice(result.currentBid ?: amount, currency)
-                        ListingDetailSnackbar(
-                            org.mochios.market.R.string.market_bid_dialog_outbid,
-                            listOf(newHigh),
-                        )
-                    }
+                    result.outbid == true -> ListingDetailSnackbar(
+                        org.mochios.market.R.string.market_bid_dialog_outbid,
+                        amount = result.currentBid ?: amount,
+                        currency = currency,
+                    )
                     else -> ListingDetailSnackbar(
                         org.mochios.market.R.string.market_bid_dialog_success,
                     )
@@ -333,13 +406,10 @@ class ListingDetailViewModel @Inject constructor(
                     )
                 )
                 load(id)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.value = _state.value.copy(error = e.toMochiError())
-                _snackbar.emit(
-                    ListingDetailSnackbar(
-                        org.mochios.market.R.string.market_listing_checkout_cancel_failed,
-                    )
-                )
+                _events.emit(ListingDetailEvent.Toast(e.toMochiError().userMessage()))
             } finally {
                 _state.value = _state.value.copy(cancellingReservation = false)
             }
@@ -353,13 +423,10 @@ class ListingDetailViewModel @Inject constructor(
             try {
                 val resp = repository.relistListing(id)
                 _navigateToEdit.emit(resp.listing.id)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.value = _state.value.copy(error = e.toMochiError())
-                _snackbar.emit(
-                    ListingDetailSnackbar(
-                        org.mochios.market.R.string.market_listing_detail_relist_failed,
-                    )
-                )
+                _events.emit(ListingDetailEvent.Toast(e.toMochiError().userMessage()))
             }
         }
     }
@@ -375,12 +442,11 @@ class ListingDetailViewModel @Inject constructor(
             try {
                 repository.deleteListing(id)
                 _closed.emit(Unit)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _snackbar.emit(
-                    ListingDetailSnackbar(
-                        org.mochios.market.R.string.market_listings_delete_failed,
-                    )
-                )
+                // The server says why, such as orders still open on it.
+                _events.emit(ListingDetailEvent.Toast(e.toMochiError().userMessage()))
             }
         }
     }

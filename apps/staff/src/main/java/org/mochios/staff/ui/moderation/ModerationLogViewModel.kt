@@ -19,6 +19,8 @@ import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.append
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.staff.model.ModerationEntry
 import org.mochios.staff.repository.StaffRepository
@@ -29,7 +31,8 @@ import javax.inject.Inject
 data class ModerationLogUiState(
     val listingId: String? = null,
     val isLoading: Boolean = true,
-    val isLoadingMore: Boolean = false,
+    /** The next page, for the list's foot. */
+    val load: LoadState = LoadState.Idle,
     val entries: List<ModerationEntry> = emptyList(),
     val total: Long = 0,
     val error: MochiError? = null,
@@ -52,6 +55,9 @@ class ModerationLogViewModel @Inject constructor(
     val state: StateFlow<ModerationLogUiState> = _state.asStateFlow()
 
     private var loadJob: Job? = null
+
+    /** Pages read since the last reload; rows a page repeats are dropped, so the count of rows cannot say. */
+    private var pagesLoaded = 0
 
     /** The pending [reloadLatest]; replaced by each newer staff event. */
     private var eventJob: Job? = null
@@ -91,13 +97,14 @@ class ModerationLogViewModel @Inject constructor(
         loadJob?.cancel()
         loadJob = viewModelScope.launch {
             val s = _state.value
-            _state.value = s.copy(isLoading = true, error = null)
+            _state.value = s.copy(isLoading = true, load = LoadState.Idle, error = null)
             try {
                 val r = repository.getModerationLog(
                     listingId = s.listingId,
                     page = 1,
                     limit = PAGE_SIZE,
                 )
+                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     entries = r.log,
@@ -116,23 +123,30 @@ class ModerationLogViewModel @Inject constructor(
 
     fun loadMore() {
         val s = _state.value
-        if (s.isLoadingMore || s.isLoading || s.entries.size >= s.total) return
-        val nextPage = (s.entries.size / PAGE_SIZE) + 1
-        viewModelScope.launch {
-            _state.value = s.copy(isLoadingMore = true)
+        if (s.load == LoadState.Loading || s.isLoading || s.entries.size >= s.total) return
+        val nextPage = pagesLoaded + 1
+        // Tracked in loadJob so a reload replaces it rather than having its
+        // page spliced into the new list.
+        loadJob = viewModelScope.launch {
+            _state.value = s.copy(load = LoadState.Loading)
             try {
                 val r = repository.getModerationLog(
                     listingId = s.listingId,
                     page = nextPage,
                     limit = PAGE_SIZE,
                 )
+                pagesLoaded = nextPage
+                val listed = _state.value.entries.append(r.log) { entry -> entry.id }
                 _state.value = _state.value.copy(
-                    isLoadingMore = false,
-                    entries = _state.value.entries + r.log,
-                    total = r.total,
+                    load = LoadState.Idle,
+                    entries = listed,
+                    // A page with no rows ends the list, whatever total it claims.
+                    total = if (r.log.isEmpty()) listed.size.toLong() else r.total,
                 )
-            } catch (_: Exception) {
-                _state.value = _state.value.copy(isLoadingMore = false)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }

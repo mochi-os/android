@@ -20,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -77,7 +78,7 @@ fun RatingStars(
         if (showCount && count > 0) {
             Spacer(modifier = Modifier.width(4.dp))
             Text(
-                text = stringResource(R.string.market_rating_reviews, LocalFormat.current.formatNumber(count)),
+                text = pluralStringResource(R.plurals.market_rating_reviews, count, LocalFormat.current.formatNumber(count)),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

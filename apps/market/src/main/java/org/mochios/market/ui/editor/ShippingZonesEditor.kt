@@ -18,10 +18,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuAnchorType
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -33,49 +29,37 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiDropdownMenu
-import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.market.lib.WORLD
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.minorToMajorText
+import org.mochios.market.lib.regionName
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Currency
 import org.mochios.market.model.ShippingOption
+import org.mochios.market.ui.components.RegionField
 
 /**
- * Wire codes are ISO 3166 alpha-2 plus the `EU` and `WW` group buckets; the
- * server treats them opaquely.
+ * A listing's shipping options, each for a region from [choices]: the region
+ * groups, then every country by name ([org.mochios.market.lib.regionChoices]).
+ * A region is stored as its code and shown by name.
  */
-private data class RegionChoice(val wireCode: String, val labelRes: Int)
-
-private val REGION_CHOICES: List<RegionChoice> = listOf(
-    RegionChoice("WW", R.string.market_editor_zone_worldwide),
-    RegionChoice("EU", R.string.market_editor_zone_european_union),
-    RegionChoice("GB", R.string.market_editor_zone_country_gb),
-    RegionChoice("US", R.string.market_editor_zone_country_us),
-    RegionChoice("CA", R.string.market_editor_zone_country_ca),
-    RegionChoice("AU", R.string.market_editor_zone_country_au),
-    RegionChoice("DE", R.string.market_editor_zone_country_de),
-    RegionChoice("FR", R.string.market_editor_zone_country_fr),
-    RegionChoice("IT", R.string.market_editor_zone_country_it),
-    RegionChoice("ES", R.string.market_editor_zone_country_es),
-    RegionChoice("NL", R.string.market_editor_zone_country_nl),
-    RegionChoice("JP", R.string.market_editor_zone_country_jp),
-)
-
 @Composable
 fun ShippingZonesEditor(
     zones: List<ShippingOption>,
     currency: Currency,
+    choices: List<String>,
     onChange: (List<ShippingOption>) -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -118,6 +102,7 @@ fun ShippingZonesEditor(
         ZoneDialog(
             initial = null,
             currency = currency,
+            choices = choices,
             onDismiss = { creating = false },
             onSave = { zone ->
                 onChange(zones + zone)
@@ -130,6 +115,7 @@ fun ShippingZonesEditor(
         ZoneDialog(
             initial = editingZone,
             currency = currency,
+            choices = choices,
             onDismiss = { editing = null },
             onSave = { updated ->
                 val replaced = zones.map { if (it === editingZone) updated else it }
@@ -146,9 +132,7 @@ private fun ZoneRow(
     onEdit: () -> Unit,
     onDelete: () -> Unit,
 ) {
-    val regionLabel = REGION_CHOICES.firstOrNull { it.wireCode.equals(zone.region, ignoreCase = true) }
-        ?.let { stringResource(it.labelRes) }
-        ?: zone.region
+    val regionLabel = regionName(zone.region, LocalResources.current, LocalConfiguration.current.locales[0])
     val currency = Currency.entries.firstOrNull { it.name.equals(zone.currency, ignoreCase = true) }
     val priceLabel = if (currency != null) formatPrice(zone.price, currency) else zone.price.toString()
     Row(
@@ -202,25 +186,19 @@ private fun ZoneRow(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ZoneDialog(
     initial: ShippingOption?,
     currency: Currency,
+    choices: List<String>,
     onDismiss: () -> Unit,
     onSave: (ShippingOption) -> Unit,
 ) {
-    var region by remember {
-        mutableStateOf(initial?.region?.ifEmpty { REGION_CHOICES.first().wireCode }
-            ?: REGION_CHOICES.first().wireCode)
-    }
+    var region by remember { mutableStateOf(initial?.region?.ifEmpty { WORLD } ?: WORLD) }
     val initialPriceText = initial?.let { minorToMajorText(it.price, currency) } ?: ""
     var priceText by remember { mutableStateOf(initialPriceText) }
     var daysText by remember { mutableStateOf(initial?.days.orEmpty()) }
     var notesText by remember { mutableStateOf(initial?.notes.orEmpty()) }
-    var regionExpanded by remember { mutableStateOf(false) }
-    val regionLabel = REGION_CHOICES.firstOrNull { it.wireCode == region }
-        ?.let { stringResource(it.labelRes) } ?: region
 
     MochiAlertDialog(
         onDismissRequest = onDismiss,
@@ -228,35 +206,12 @@ private fun ZoneDialog(
         else stringResource(R.string.market_editor_zone_edit),
         content = {
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                ExposedDropdownMenuBox(
-                    expanded = regionExpanded,
-                    onExpandedChange = { regionExpanded = it },
-                ) {
-                    MochiTextField(
-                        value = regionLabel,
-                        onValueChange = {},
-                        readOnly = true,
-                        label = { Text(stringResource(R.string.market_editor_zone_region)) },
-                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = regionExpanded) },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable),
-                    )
-                    MochiDropdownMenu(
-                        expanded = regionExpanded,
-                        onDismissRequest = { regionExpanded = false },
-                    ) {
-                        REGION_CHOICES.forEach { choice ->
-                            MochiDropdownMenuItem(
-                                text = { Text(stringResource(choice.labelRes)) },
-                                onClick = {
-                                    region = choice.wireCode
-                                    regionExpanded = false
-                                },
-                            )
-                        }
-                    }
-                }
+                RegionField(
+                    value = region,
+                    choices = choices,
+                    label = stringResource(R.string.market_editor_zone_region),
+                    onChange = { code -> region = code },
+                )
                 MochiTextField(
                     value = priceText,
                     onValueChange = { priceText = it },

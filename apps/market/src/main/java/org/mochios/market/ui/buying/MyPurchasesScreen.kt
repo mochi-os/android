@@ -112,8 +112,8 @@ private fun PurchasesList(
                 is PurchasesRow.OrderRow -> "order:${row.order.id}"
             }
         },
-        isLoading = state.isLoadingMore,
-        hasMore = state.orders.size < state.total,
+        load = state.load,
+        hasMore = state.paging.more,
         onLoadMore = onLoadMore,
         contentPadding = MarketListPadding,
         verticalArrangement = MarketListSpacing,
@@ -135,8 +135,8 @@ private fun WonBidRow(bid: Bid, onCompletePurchase: (String) -> Unit) {
     val listingId = bid.listing ?: return
     val currency = bid.currency ?: Currency.GBP
     MarketListRow(
-        title = bid.title
-            ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: ""),
+        title = bid.title?.takeIf { it.isNotBlank() }
+            ?: stringResource(R.string.market_listing_untitled),
         onClick = { onCompletePurchase(listingId) },
         subtitle = stringResource(
             R.string.market_purchases_won_for,

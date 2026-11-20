@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s erantzun gehiago</item>
     </plurals>
     <string name="drawer_unread">Irakurri gabea</string>
+    <string name="person_unknown">Ezezaguna</string>
+    <string name="format_time_seconds_short">%1$ss</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

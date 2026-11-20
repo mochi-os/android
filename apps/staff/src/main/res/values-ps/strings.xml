@@ -395,7 +395,6 @@
 
     <string name="staff_accounts_action_unsuspend_title">د بندیز پورته کول</string>
     <string name="staff_accounts_reason_optional_label">دلیل (اختیاري)</string>
-    <string name="staff_accounts_sales">%1$s پلورنې</string>
     <string name="staff_appeals_reason_label">د پلورونکي د استیناف دلیل</string>
     <string name="staff_audit_action_staff_team_role_changed">د کارکوونکي رول بدل شو</string>
     <string name="staff_categories_delete_desc">آیا „%1$s“ ړنګ کړئ؟ دا بیرته نه شي راګرځیدلی.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">خبرې اترې</string>
     <string name="staff_reports_conversation_empty">هیڅ پیغامونه نشته</string>
     <string name="staff_reports_conversation_show">خبرې اترې ښکاره کړئ</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s پلورنه</item>
+        <item quantity="other">%1$s پلورنې</item>
+    </plurals>
 </resources>

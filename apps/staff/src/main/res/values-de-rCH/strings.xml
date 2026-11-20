@@ -72,7 +72,6 @@
     <string name="staff_accounts_history_title">Kontoverlauf</string>
     <string name="staff_accounts_notes_label">Notizen</string>
     <string name="staff_accounts_reason_optional_label">Grund (optional)</string>
-    <string name="staff_accounts_sales">%1$s Verkäufe</string>
     <string name="staff_accounts_search_clear">Suche löschen</string>
     <string name="staff_accounts_seller_buyers">Nur Käufer</string>
     <string name="staff_accounts_seller_chip">Verkäufer</string>
@@ -433,4 +432,8 @@
 
     <string name="staff_disputes_meta_already_refunded">Bereits erstattet</string>
     <string name="staff_disputes_refund_exceeds_remaining">Erstattungsbetrag übersteigt den verbleibenden erstattungsfähigen Betrag</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s Verkauf</item>
+        <item quantity="other">%1$s Verkäufe</item>
+    </plurals>
 </resources>

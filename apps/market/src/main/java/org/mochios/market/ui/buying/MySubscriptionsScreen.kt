@@ -79,9 +79,11 @@ fun MySubscriptionsScreen(
         navController = navController,
         currentRoute = MarketApp.SUBSCRIPTIONS,
         titleRes = R.string.market_subscriptions_title,
+        // The scaffold's slot draws it above the list and clear of the
+        // navigation bar.
+        snackbarHost = { SnackbarHost(snackbar) },
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            SnackbarHost(snackbar, modifier = Modifier.align(Alignment.BottomCenter))
             when {
                 state.isLoading -> Box(
                     Modifier.fillMaxSize(),
@@ -96,8 +98,8 @@ fun MySubscriptionsScreen(
                 else -> InfiniteList(
                     items = state.subscriptions,
                     key = { subscription -> subscription.id },
-                    isLoading = state.isLoadingMore,
-                    hasMore = state.subscriptions.size < state.total,
+                    load = state.load,
+                    hasMore = state.paging.more,
                     onLoadMore = { viewModel.loadMore() },
                     contentPadding = MarketListPadding,
                     verticalArrangement = MarketListSpacing,
@@ -114,9 +116,7 @@ fun MySubscriptionsScreen(
                         },
                         onResubscribe = {
                             if (sub.listing.isNotBlank()) {
-                                navController.navigate(
-                                    "${MarketApp.checkout(sub.listing)}?subscription=true",
-                                )
+                                navController.navigate(MarketApp.checkout(sub.listing))
                             }
                         },
                         onPause = { viewModel.pause(sub.id) },
@@ -163,21 +163,11 @@ private fun SubscriptionRow(
     } else {
         stringResource(R.string.market_subscribers_interval_month)
     }
-    val cancelNote = if (sub.cancelled > 0L &&
-        (sub.status == SubscriptionStatus.ACTIVE || sub.status == SubscriptionStatus.PAUSED)
-    ) {
-        if (sub.ends > 0L) {
-            stringResource(R.string.market_subscriptions_cancels_on, format.formatTimestamp(sub.ends))
-        } else {
-            stringResource(R.string.market_subscriptions_cancels_period_end)
-        }
-    } else {
-        ""
-    }
+    val cancelNote = cancelNote(sub).orEmpty()
     val renews = sub.ends > 0L && sub.cancelled == 0L &&
         (sub.status == SubscriptionStatus.ACTIVE || sub.status == SubscriptionStatus.PAST_DUE)
     MarketListRow(
-        title = sub.title ?: "Subscription #${sub.id}",
+        title = sub.title?.takeIf { it.isNotBlank() } ?: stringResource(R.string.market_listing_untitled),
         onClick = onTap,
         subtitle = if (renews) {
             stringResource(
@@ -241,5 +231,25 @@ private fun SubscriptionRow(
                 }
             }
         }
+    }
+}
+
+/**
+ * When a subscription cancelled but still running ends: on its end date, or at
+ * the end of the current period when the server has not set one. Null for one
+ * not cancelled, or already over. Shared by the buyer's and the seller's lists.
+ */
+@Composable
+internal fun cancelNote(subscription: Subscription): String? {
+    val running = subscription.status == SubscriptionStatus.ACTIVE ||
+        subscription.status == SubscriptionStatus.PAUSED
+    if (subscription.cancelled <= 0L || !running) return null
+    return if (subscription.ends > 0L) {
+        stringResource(
+            R.string.market_subscriptions_cancels_on,
+            LocalFormat.current.formatTimestamp(subscription.ends),
+        )
+    } else {
+        stringResource(R.string.market_subscriptions_cancels_period_end)
     }
 }

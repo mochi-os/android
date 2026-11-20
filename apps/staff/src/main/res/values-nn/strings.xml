@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Merknader</string>
     <string name="staff_accounts_reason_label">Grunn</string>
     <string name="staff_accounts_reason_optional_label">Grunn (valfritt)</string>
-    <string name="staff_accounts_sales">%1$s sal</string>
     <string name="staff_accounts_search_clear">Tøm søk</string>
     <string name="staff_accounts_search_placeholder">Søk</string>
     <string name="staff_accounts_seller_buyers">Berre kjøparar</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Samtale</string>
     <string name="staff_reports_conversation_empty">Ingen meldingar</string>
     <string name="staff_reports_conversation_show">Vis samtale</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s sal</item>
+        <item quantity="other">%1$s sal</item>
+    </plurals>
 </resources>

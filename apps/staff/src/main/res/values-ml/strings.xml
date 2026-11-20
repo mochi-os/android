@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ഓർഡർ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">കാരണം (നിർബന്ധമല്ല)</string>
-    <string name="staff_accounts_sales">%1$s വിൽപ്പനകൾ</string>
     <string name="staff_appeals_reason_label">വിൽപ്പനക്കാരന്റെ അപ്പീൽ കാരണം</string>
     <string name="staff_audit_action_staff_team_role_changed">സ്റ്റാഫ് റോൾ മാറ്റി</string>
     <string name="staff_categories_delete_desc">“%1$s” ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">സംഭാഷണം</string>
     <string name="staff_reports_conversation_empty">സന്ദേശങ്ങളൊന്നുമില്ല</string>
     <string name="staff_reports_conversation_show">സംഭാഷണം കാണിക്കുക</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s വിൽപ്പന</item>
+        <item quantity="other">%1$s വിൽപ്പനകൾ</item>
+    </plurals>
 </resources>

@@ -22,6 +22,8 @@ import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.append
 import org.mochios.android.api.userMessage
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.staff.model.ConversationMessage
@@ -39,7 +41,8 @@ data class ReportsUiState(
     val type: String? = null,
     val status: String? = null,
     val isLoading: Boolean = true,
-    val isLoadingMore: Boolean = false,
+    /** The next page, for the list's foot. */
+    val load: LoadState = LoadState.Idle,
     val reports: List<Report> = emptyList(),
     val total: Long = 0,
     val error: MochiError? = null,
@@ -136,7 +139,7 @@ class ReportsViewModel @Inject constructor(
         moreJob?.cancel()
         loadJob = viewModelScope.launch {
             val s = _state.value
-            _state.value = s.copy(isLoading = true, isLoadingMore = false, error = null)
+            _state.value = s.copy(isLoading = true, load = LoadState.Idle, error = null)
             try {
                 val r = repository.listReports(
                     type = s.type,
@@ -162,10 +165,10 @@ class ReportsViewModel @Inject constructor(
 
     fun loadMore() {
         val s = _state.value
-        if (s.isLoadingMore || s.isLoading || s.reports.size >= s.total) return
+        if (s.load == LoadState.Loading || s.isLoading || s.reports.size >= s.total) return
         val nextPage = pagesLoaded + 1
         moreJob = viewModelScope.launch {
-            _state.value = s.copy(isLoadingMore = true)
+            _state.value = s.copy(load = LoadState.Loading)
             try {
                 val r = repository.listReports(
                     type = s.type,
@@ -174,14 +177,16 @@ class ReportsViewModel @Inject constructor(
                     limit = PAGE_SIZE,
                 )
                 pagesLoaded = nextPage
+                val listed = _state.value.reports.append(r.reports) { report -> report.id }
                 _state.value = _state.value.copy(
-                    isLoadingMore = false,
-                    reports = _state.value.reports + r.reports,
-                    total = r.total,
+                    load = LoadState.Idle,
+                    reports = listed,
+                    // A page with no rows ends the list, whatever total it claims.
+                    total = if (r.reports.isEmpty()) listed.size.toLong() else r.total,
                 )
             } catch (e: Exception) {
                 if (e is CancellationException) throw e
-                _state.value = _state.value.copy(isLoadingMore = false)
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }

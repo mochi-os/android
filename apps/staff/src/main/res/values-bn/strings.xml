@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">নোট</string>
     <string name="staff_accounts_reason_label">কারণ</string>
     <string name="staff_accounts_reason_optional_label">কারণ (ঐচ্ছিক)</string>
-    <string name="staff_accounts_sales">%1$s বিক্রয়</string>
     <string name="staff_accounts_search_clear">অনুসন্ধান পরিষ্কার করুন</string>
     <string name="staff_accounts_search_placeholder">অনুসন্ধান</string>
     <string name="staff_accounts_seller_buyers">শুধুমাত্র ক্রেতা</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">কথোপকথন</string>
     <string name="staff_reports_conversation_empty">কোনো বার্তা নেই</string>
     <string name="staff_reports_conversation_show">কথোপকথন দেখান</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s বিক্রয়</item>
+        <item quantity="other">%1$s বিক্রয়</item>
+    </plurals>
 </resources>

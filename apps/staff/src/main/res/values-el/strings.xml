@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Σημειώσεις</string>
     <string name="staff_accounts_reason_label">Αιτία</string>
     <string name="staff_accounts_reason_optional_label">Αιτία (προαιρετικό)</string>
-    <string name="staff_accounts_sales">%1$s πωλήσεις</string>
     <string name="staff_accounts_search_clear">Εκκαθάριση αναζήτησης</string>
     <string name="staff_accounts_search_placeholder">Αναζήτηση</string>
     <string name="staff_accounts_seller_buyers">Μόνο αγοραστές</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Συνομιλία</string>
     <string name="staff_reports_conversation_empty">Χωρίς μηνύματα</string>
     <string name="staff_reports_conversation_show">Εμφάνιση συνομιλίας</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s πώληση</item>
+        <item quantity="other">%1$s πωλήσεις</item>
+    </plurals>
 </resources>

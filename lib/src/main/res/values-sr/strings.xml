@@ -343,4 +343,7 @@
         <item quantity="other">+%1$s додатних одговора</item>
     </plurals>
     <string name="drawer_unread">Непрочитано</string>
+    <string name="person_unknown">Непознато</string>
+    <string name="format_time_seconds_short">%1$s с</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

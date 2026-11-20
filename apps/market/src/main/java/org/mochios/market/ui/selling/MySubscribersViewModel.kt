@@ -8,21 +8,25 @@ package org.mochios.market.ui.selling
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
 import org.mochios.market.model.Subscription
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 data class MySubscribersUiState(
     val subscriptions: List<Subscription> = emptyList(),
-    val isLoading: Boolean = false,
-    val hasMore: Boolean = true,
-    val error: MochiError? = null,
+    /** The first page while nothing is listed, else the next page below the list. */
+    val load: LoadState = LoadState.Idle,
+    val paging: Paging = Paging(),
 )
 
 @HiltViewModel
@@ -33,60 +37,40 @@ class MySubscribersViewModel @Inject constructor(
     private val _state = MutableStateFlow(MySubscribersUiState())
     val state: StateFlow<MySubscribersUiState> = _state.asStateFlow()
 
-    private var page = 1
-    private val limit = PAGE_LIMIT
+    /** The read under way, which a refresh replaces. */
+    private var job: Job? = null
 
     init {
-        loadFirstPage()
+        loadMore()
     }
 
+    /** Reads the list again from its first page. */
     fun refresh() {
-        page = 1
+        job?.cancel()
         _state.value = MySubscribersUiState()
-        loadFirstPage()
+        loadMore()
     }
 
-    private fun loadFirstPage() {
-        viewModelScope.launch {
-            _state.value = _state.value.copy(isLoading = true, error = null)
-            try {
-                val response = repo.listSubscribers(page = page, limit = limit)
-                _state.value = _state.value.copy(
-                    subscriptions = response.subscriptions,
-                    isLoading = false,
-                    hasMore = response.subscriptions.size.toLong() < response.total,
-                )
-            } catch (e: Exception) {
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
-            }
-        }
-    }
-
+    /**
+     * Reads the next page, from the list's foot or its retry; the first page
+     * when nothing is listed yet.
+     */
     fun loadMore() {
         val current = _state.value
-        if (current.isLoading || !current.hasMore) return
-        viewModelScope.launch {
-            _state.value = current.copy(isLoading = true)
+        if (current.load == LoadState.Loading || !current.paging.more) return
+        _state.value = current.copy(load = LoadState.Loading)
+        job = viewModelScope.launch {
             try {
-                val response = repo.listSubscribers(page = page + 1, limit = limit)
-                // Advance only once the page is in hand. Incrementing first
-                // permanently skips the page on any failure: hasMore stays
-                // true, so the next attempt asks for the one after.
-                page += 1
-                val merged = current.subscriptions + response.subscriptions
+                val response = repo.listSubscribers(page = current.paging.page, limit = PAGE_LIMIT, after = current.paging.cursor)
                 _state.value = _state.value.copy(
-                    subscriptions = merged,
-                    isLoading = false,
-                    hasMore = merged.size.toLong() < response.total,
+                    subscriptions = _state.value.subscriptions.append(response.subscriptions) { subscription -> subscription.id },
+                    load = LoadState.Idle,
+                    paging = current.paging.advance(response.subscriptions.size, response.total, response.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }

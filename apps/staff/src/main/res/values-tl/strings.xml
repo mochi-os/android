@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Mga Tala</string>
     <string name="staff_accounts_reason_label">Dahilan</string>
     <string name="staff_accounts_reason_optional_label">Dahilan (opsyonal)</string>
-    <string name="staff_accounts_sales">%1$s benta</string>
     <string name="staff_accounts_search_clear">Burahin ang paghahanap</string>
     <string name="staff_accounts_search_placeholder">Maghanap</string>
     <string name="staff_accounts_seller_buyers">Mga mamimili lamang</string>
@@ -440,4 +439,8 @@
     <string name="staff_reports_conversation">Pag-uusap</string>
     <string name="staff_reports_conversation_empty">Walang mensahe</string>
     <string name="staff_reports_conversation_show">Ipakita ang pag-uusap</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s benta</item>
+        <item quantity="other">%1$s benta</item>
+    </plurals>
 </resources>

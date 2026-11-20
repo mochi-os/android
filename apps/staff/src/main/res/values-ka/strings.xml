@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">შენიშვნები</string>
     <string name="staff_accounts_reason_label">მიზეზი</string>
     <string name="staff_accounts_reason_optional_label">მიზეზი (არასავალდებულო)</string>
-    <string name="staff_accounts_sales">%1$s გაყიდვა</string>
     <string name="staff_accounts_search_clear">ძიების გასუფთავება</string>
     <string name="staff_accounts_search_placeholder">ძიება</string>
     <string name="staff_accounts_seller_buyers">მხოლოდ მყიდველები</string>
@@ -440,4 +439,8 @@
     <string name="staff_reports_conversation">საუბარი</string>
     <string name="staff_reports_conversation_empty">შეტყობინებები არ არის</string>
     <string name="staff_reports_conversation_show">საუბრის ჩვენება</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s გაყიდვა</item>
+        <item quantity="other">%1$s გაყიდვა</item>
+    </plurals>
 </resources>

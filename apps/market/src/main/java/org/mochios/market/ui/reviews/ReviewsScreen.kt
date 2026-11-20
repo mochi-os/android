@@ -41,8 +41,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.userMessage
+import org.mochios.android.format.personName
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiTab
 import org.mochios.android.ui.components.MochiTabRow
@@ -140,8 +142,8 @@ private fun ReceivedTab(
         InfiniteList(
             items = state.reviews,
             key = { review -> review.id },
-            isLoading = state.isLoading,
-            hasMore = state.hasMore,
+            load = state.load,
+            hasMore = state.paging.more,
             onLoadMore = onLoadMore,
         ) { review ->
             ReceivedReviewCard(
@@ -168,8 +170,8 @@ private fun SentTab(
         InfiniteList(
             items = state.reviews,
             key = { review -> review.id },
-            isLoading = state.isLoading,
-            hasMore = state.hasMore,
+            load = state.load,
+            hasMore = state.paging.more,
             onLoadMore = onLoadMore,
         ) { review ->
             SentReviewCard(
@@ -189,11 +191,12 @@ private fun EmptyOrError(
     onRetry: () -> Unit,
     content: @Composable () -> Unit,
 ) {
+    val load = state.load
     when {
-        state.error != null && state.reviews.isEmpty() -> {
-            ErrorState(error = state.error, onRetry = onRetry)
+        load is LoadState.Failed && state.reviews.isEmpty() -> {
+            ErrorState(error = load.error, onRetry = onRetry)
         }
-        state.reviews.isEmpty() && !state.isLoading -> {
+        state.reviews.isEmpty() && load == LoadState.Idle -> {
             Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -231,7 +234,7 @@ private fun ReceivedReviewCard(
         responseLabel = stringResource(R.string.market_sale_review_response_label),
         heading = {
             ReviewerName(
-                name = review.reviewerName.orEmpty().ifBlank { review.reviewer },
+                name = personName(review.reviewerName, review.reviewerFingerprint),
                 onClick = { onProfileTap(review.reviewer) },
             )
         },
@@ -277,7 +280,7 @@ private fun SentReviewCard(
         responseLabel = stringResource(R.string.market_reviews_response_label),
         heading = {
             ReviewerName(
-                name = review.subjectName.orEmpty().ifBlank { review.subject },
+                name = personName(review.subjectName, review.subjectFingerprint),
                 onClick = { onProfileTap(review.subject) },
             )
         },

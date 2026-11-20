@@ -456,6 +456,30 @@ fun Format.formatRelativeTime(epochSeconds: Long): String {
 }
 
 /**
+ * A time left as its two largest units ("2d 4h", "3h 12m", "5m 9s", "40s"),
+ * in translated abbreviations and the user's digits; nothing is left at zero
+ * or below.
+ */
+@Composable
+fun Format.formatRemaining(seconds: Long): String {
+    val left = seconds.coerceAtLeast(0L)
+    val days = left / 86_400
+    val hours = (left % 86_400) / 3_600
+    val minutes = (left % 3_600) / 60
+    val rest = left % 60
+    val day = stringResource(R.string.format_time_days_short, formatNumber(days))
+    val hour = stringResource(R.string.format_time_hours_short, formatNumber(hours))
+    val minute = stringResource(R.string.format_time_minutes_short, formatNumber(minutes))
+    val second = stringResource(R.string.format_time_seconds_short, formatNumber(rest))
+    return when {
+        days > 0 -> stringResource(R.string.format_time_pair, day, hour)
+        hours > 0 -> stringResource(R.string.format_time_pair, hour, minute)
+        minutes > 0 -> stringResource(R.string.format_time_pair, minute, second)
+        else -> second
+    }
+}
+
+/**
  * The [Format] for Composables; defaults to [UserPreferences] defaults, so wrap
  * the tree in [FormatProvider].
  */

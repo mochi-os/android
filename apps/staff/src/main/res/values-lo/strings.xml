@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ສັ່ງຊື້ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ເຫດຜົນ (ບໍ່ບັງຄັບ)</string>
-    <string name="staff_accounts_sales">%1$s ການຂາຍ</string>
     <string name="staff_appeals_reason_label">ເຫດຜົນການອຸທອນຂອງຜູ້ຂາຍ</string>
     <string name="staff_audit_action_staff_team_role_changed">ປ່ຽນບົດບາດພະນັກງານແລ້ວ</string>
     <string name="staff_categories_delete_desc">ລຶບ \"%1$s\"? ການກະທຳນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">ການສົນທະນາ</string>
     <string name="staff_reports_conversation_empty">ບໍ່ມີຂໍ້ຄວາມ</string>
     <string name="staff_reports_conversation_show">ສະແດງການສົນທະນາ</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s ການຂາຍ</item>
+    </plurals>
 </resources>

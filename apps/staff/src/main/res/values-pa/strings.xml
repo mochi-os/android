@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ਆਰਡਰ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ਕਾਰਨ (ਚੋਣਵਾਂ)</string>
-    <string name="staff_accounts_sales">%1$s ਵਿਕਰੀਆਂ</string>
     <string name="staff_appeals_reason_label">ਵਿਕਰੇਤਾ ਦੀ ਅਪੀਲ ਦਾ ਕਾਰਨ</string>
     <string name="staff_audit_action_staff_team_role_changed">ਸਟਾਫ਼ ਭੂਮਿਕਾ ਬਦਲੀ ਗਈ</string>
     <string name="staff_categories_delete_desc">“%1$s” ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">ਗੱਲਬਾਤ</string>
     <string name="staff_reports_conversation_empty">ਕੋਈ ਸੁਨੇਹੇ ਨਹੀਂ</string>
     <string name="staff_reports_conversation_show">ਗੱਲਬਾਤ ਦਿਖਾਓ</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s ਵਿਕਰੀ</item>
+        <item quantity="other">%1$s ਵਿਕਰੀਆਂ</item>
+    </plurals>
 </resources>

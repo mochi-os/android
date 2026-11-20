@@ -48,8 +48,6 @@
     <string name="market_bid_ended">拍賣已結束</string>
     <string name="market_bid_ends_in">%1$s 後結束</string>
     <string name="market_bids_empty">沒有出價</string>
-    <string name="market_bids_ended">已結束</string>
-    <string name="market_bids_ends_in">%1$s 後結束</string>
     <string name="market_bids_tab_active">進行中</string>
     <string name="market_bids_tab_all">全部</string>
     <string name="market_bids_tab_lost">落敗</string>
@@ -71,15 +69,8 @@
     <string name="market_checkout_start_failed">無法開始結帳</string>
     <string name="market_checkout_subscribing">訂閱中…</string>
     <string name="market_checkout_subscription_start_failed">無法開始訂閱</string>
-    <string name="market_dispute_dialog_attach">附上證據</string>
-    <string name="market_dispute_dialog_attach_count">已附上 %1$s 個檔案</string>
-    <string name="market_dispute_dialog_evidence_role_staff">Mochi 員工</string>
-    <string name="market_dispute_dialog_evidence_section_title">已提交證據</string>
-    <string name="market_dispute_dialog_evidence_submitter_line">由 %1$s 提交</string>
     <string name="market_dispute_dialog_submitting">提交中…</string>
     <string name="market_dispute_dialog_title">回覆爭議</string>
-    <string name="market_editor_appeal">申訴審核</string>
-    <string name="market_editor_appeal_reason">為什麼要申訴?</string>
     <string name="market_editor_asset_add">新增檔案</string>
     <string name="market_editor_asset_delete">移除資源</string>
     <string name="market_editor_asset_delete_confirm_title">刪除資源?</string>
@@ -88,13 +79,11 @@
     <string name="market_editor_asset_external_url">參考 URL</string>
     <string name="market_editor_assets_empty">尚無資源</string>
     <string name="market_editor_category_none">選擇類別</string>
-    <string name="market_editor_days">%1$s 天</string>
     <string name="market_editor_delete">刪除商品</string>
     <string name="market_editor_delete_confirm_message">這將永久刪除商品。</string>
     <string name="market_editor_delete_confirm_title">刪除商品?</string>
     <string name="market_editor_download">直接下載</string>
     <string name="market_editor_duration">拍賣時長</string>
-    <string name="market_editor_instant">即時購買價 (選填)</string>
     <string name="market_editor_instant_help">設為 0 停用</string>
     <string name="market_editor_interval">計費週期</string>
     <string name="market_editor_photo_delete">刪除相片</string>
@@ -119,32 +108,18 @@
     <string name="market_editor_title_required">新增相片或檔案前請先輸入標題</string>
     <string name="market_editor_type">送貨方式</string>
     <string name="market_editor_zone_add">新增區域</string>
-    <string name="market_editor_zone_country_au">澳洲</string>
-    <string name="market_editor_zone_country_ca">加拿大</string>
-    <string name="market_editor_zone_country_de">德國</string>
-    <string name="market_editor_zone_country_es">西班牙</string>
-    <string name="market_editor_zone_country_fr">法國</string>
-    <string name="market_editor_zone_country_gb">英國</string>
-    <string name="market_editor_zone_country_it">意大利</string>
-    <string name="market_editor_zone_country_jp">日本</string>
-    <string name="market_editor_zone_country_nl">荷蘭</string>
     <string name="market_editor_zone_days">送貨估計</string>
     <string name="market_editor_zone_days_placeholder">例如 3-5 個工作日</string>
     <string name="market_editor_zone_delete">移除區域</string>
     <string name="market_editor_zone_edit">編輯區域</string>
-    <string name="market_editor_zone_european_union">歐盟</string>
     <string name="market_editor_zone_notes">備註 (選填)</string>
     <string name="market_editor_zone_price">運費</string>
     <string name="market_editor_zone_save">儲存區域</string>
-    <string name="market_editor_zone_worldwide">全球</string>
     <string name="market_editor_zones_empty">尚無區域</string>
     <string name="market_empty_subtitle">試試調整或清除你的篩選條件。</string>
     <string name="market_empty_title">沒有結果</string>
     <string name="market_fee_disclosure_body">平台手續費: %1$s%%。處理器手續費請見 Stripe 儀表板。</string>
     <string name="market_fee_disclosure_title">平台手續費</string>
-    <string name="market_fee_preview_failed">無法計算費用</string>
-    <string name="market_fee_preview_loading">計算費用中…</string>
-    <string name="market_fee_preview_mochi_fee">Mochi 手續費</string>
     <string name="market_filter_chip_max">最高 %1$s</string>
     <string name="market_filter_chip_min">最低 %1$s</string>
     <string name="market_filter_open">篩選</string>
@@ -152,19 +127,13 @@
     <string name="market_filter_sort_rating">最高評分</string>
     <string name="market_filter_title">篩選</string>
     <string name="market_listing_checkout_cancel">取消結帳</string>
-    <string name="market_listing_checkout_cancel_failed">取消結帳失敗</string>
     <string name="market_listing_checkout_cancelled">已取消結帳</string>
     <string name="market_listing_checkout_in_progress">您有一項針對此商品的付款正在進行中。</string>
     <string name="market_listing_detail_appeal_pending">申訴待處理</string>
     <string name="market_listing_detail_buy">購買</string>
     <string name="market_listing_detail_place_bid">出價</string>
-    <string name="market_listing_detail_relist_failed">無法重新上架</string>
-    <string name="market_listing_detail_sales_count">%1$s 件銷售</string>
-    <string name="market_listing_detail_seller_banned_banner">此賣家已被封鎖。無法下新訂單。</string>
     <string name="market_listing_detail_seller_response">賣家回覆</string>
     <string name="market_listing_detail_seller_reviews_heading">賣家評價</string>
-    <string name="market_listing_detail_seller_suspended_banner">此賣家已被停權。新訂單暫停直到帳戶恢復。</string>
-    <string name="market_listing_detail_seller_suspended_cta_hint">賣家帳戶受限期間停用購買功能。</string>
     <string name="market_listing_no_photo">沒有相片</string>
     <string name="market_listing_photo">商品相片</string>
     <string name="market_listing_save">儲存商品</string>
@@ -179,14 +148,13 @@
     <string name="market_listings_remove_message_auction">這將取消拍賣。商品將對買家隱藏；您可以稍後將其作為新的草稿重新發布。</string>
     <string name="market_listings_remove_title">移除此刊登？</string>
     <string name="market_listings_search_placeholder">搜尋你的商品</string>
-    <string name="market_listings_share_chooser">分享商品</string>
     <string name="market_messages_compose_placeholder">撰寫訊息</string>
     <string name="market_messages_inbox_empty_subtitle">當你向賣家發送訊息 (或買家向你發送訊息) 時,對話將出現在這裡。</string>
     <string name="market_messages_inbox_empty_title">尚無對話</string>
     <string name="market_messages_send">發送</string>
     <string name="market_messages_thread_title">對話</string>
     <string name="market_onboarding_activate">激活</string>
-    <string name="market_onboarding_body">激活您的账户开始买卖。</string>
+    <string name="market_onboarding_body">啟用您的帳戶以開始買賣。</string>
     <string name="market_onboarding_dismiss">忽略</string>
     <string name="market_onboarding_title">欢迎使用市场</string>
     <string name="market_price_from">由 %1$s 起</string>
@@ -199,25 +167,13 @@
     <string name="market_profile_load_failed">無法載入個人資料</string>
     <string name="market_profile_joined">於 %1$s 加入</string>
     <string name="market_profile_no_reviews">尚無評論。</string>
-    <string name="market_profile_sales_count">%1$s 件銷售</string>
     <string name="market_purchase_dispute_chargeback">退款 %1$s</string>
     <string name="market_purchase_dispute_response">賣家的回應</string>
-    <string name="market_purchase_download_many">下載你的 %1$s 個檔案。</string>
-    <string name="market_purchase_download_one">下載你的檔案。</string>
     <string name="market_purchase_review_from">%1$s 的評論</string>
-    <string name="market_purchases_auction_label">拍賣 #%1$s</string>
     <string name="market_purchases_order_label">訂單 #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 已退款</string>
     <string name="market_purchases_won_for">以 %1$s 勝出</string>
-    <string name="market_rating_reviews">(%1$s 則評論)</string>
-    <string name="market_refund_dialog_amount_help">留空以退款整筆訂單。</string>
     <string name="market_refund_dialog_amount_label">金額</string>
-    <string name="market_refund_dialog_prior_kind_full">全額</string>
-    <string name="market_refund_dialog_prior_kind_partial">部分</string>
-    <string name="market_refund_dialog_prior_section_title">先前退款</string>
-    <string name="market_refund_dialog_prior_title">先前退款</string>
-    <string name="market_refund_dialog_reason_duplicate">重複</string>
-    <string name="market_refund_dialog_reason_requested">買家要求</string>
     <string name="market_refund_dialog_submitting">退款中…</string>
     <string name="market_report_dialog_details_label">詳情 (選填)</string>
     <string name="market_report_dialog_submitting">提交中</string>
@@ -254,11 +210,10 @@
     <string name="market_stripe_onboarding_failed">無法開啟 Stripe</string>
     <string name="market_stripe_onboarding_opening">正在開啟 Stripe…</string>
     <string name="market_stripe_onboarding_title">完成付款設定</string>
-    <string name="market_subscribers_cancels_on">在 %1$s 取消</string>
     <string name="market_subscribers_empty_subtitle">你的商品訂閱者會出現在這裡。</string>
     <string name="market_subscribers_empty_title">尚無訂閱者</string>
     <string name="market_subscribers_title">我的訂閱者</string>
-    <string name="market_subscription_detail_next_billing">下一次账单日期:%1$s</string>
+    <string name="market_subscription_detail_next_billing">下一次帳單日期:%1$s</string>
     <string name="market_subscriptions_actions_label">訂閱操作</string>
     <string name="market_subscriptions_cancels_on">在 %1$s 取消</string>
     <string name="market_warnings_title">警告</string>
@@ -282,7 +237,6 @@
     <string name="market_listings_clear">從我的商品中清除</string>
     <string name="market_sidebar_settings">設定</string>
     <string name="market_editor_description">描述</string>
-    <string name="market_refund_dialog_description_label">描述</string>
     <string name="market_filter_type">類型</string>
     <string name="market_editor_title">標題</string>
     <string name="market_condition_new">新增</string>
@@ -292,10 +246,8 @@
     <string name="market_listings_filter_all">全部</string>
     <string name="market_listings_filter_status">狀態</string>
     <string name="market_purchase_dispute_reason">原因</string>
-    <string name="market_refund_dialog_reason_label">原因</string>
     <string name="market_refund_reason_label">原因</string>
     <string name="market_report_dialog_reason_label">原因</string>
-    <string name="market_refund_dialog_reason_other">其他</string>
     <string name="market_refund_reason_other">其他</string>
     <string name="market_report_reason_other">其他</string>
     <string name="market_sale_carrier_other">其他</string>
@@ -313,7 +265,6 @@
     <string name="market_editor_shipping">運送</string>
     <string name="market_filter_delivery_shipping">運送</string>
     <string name="market_purchase_shipping_line">運送</string>
-    <string name="market_dispute_dialog_evidence_role_seller">賣家</string>
     <string name="market_listing_detail_seller_heading">賣家</string>
     <string name="market_purchase_seller">賣家</string>
     <string name="market_dispute_dialog_submit">提交</string>
@@ -326,11 +277,10 @@
     <string name="market_section_listings">最新刊登</string>
     <string name="market_sidebar_listings">刊登</string>
     <string name="market_checkout_delivery_download">下載</string>
-    <string name="market_editor_appeal_submit">提交申訴</string>
-    <string name="market_editor_pricing_subscription">订阅</string>
+    <string name="market_editor_pricing_subscription">訂閱</string>
     <string name="market_editor_section_location">位置</string>
     <string name="market_filter_delivery_download">下載</string>
-    <string name="market_filter_pricing_subscription">订阅</string>
+    <string name="market_filter_pricing_subscription">訂閱</string>
     <string name="market_listing_detail_listed">刊登於 %1$s</string>
     <string name="market_listing_detail_verified">已驗證</string>
     <string name="market_messages_inbox_title">消息</string>
@@ -340,7 +290,6 @@
     <string name="market_title">市場</string>
     <string name="market_checkout_total">總計</string>
     <string name="market_purchase_total">總計</string>
-    <string name="market_dispute_dialog_evidence_role_buyer">買家</string>
     <string name="market_sale_buyer_label">買家</string>
     <string name="market_editor_section_delivery">送貨</string>
     <string name="market_filter_delivery">送貨</string>
@@ -360,7 +309,6 @@
     <string name="market_profile_status_banned">已封禁</string>
     <string name="market_profile_status_suspended">已暫停</string>
     <string name="market_purchase_review_body">評論</string>
-    <string name="market_section_categories">瀏覽分類</string>
 
     <string name="market_account_status_restrictions">帳戶處於此狀態時，部分操作（包括建立新刊登及完成訂單）會受到限制。</string>
     <string name="market_chargeback_reason_check_returned">支票退票</string>
@@ -417,7 +365,6 @@
     <string name="market_editor_section_photos">相片</string>
     <string name="market_editor_section_pricing">定價</string>
     <string name="market_editor_title_edit">編輯刊登</string>
-    <string name="market_editor_zone_country_us">美國</string>
     <string name="market_editor_zone_region">地區</string>
     <string name="market_fee_preview_item">項目</string>
     <string name="market_fee_preview_payout">您的收款</string>
@@ -461,7 +408,6 @@
     <string name="market_purchase_item">項目</string>
     <string name="market_purchase_message_seller">聯絡賣家</string>
     <string name="market_purchase_not_found">找不到訂單</string>
-    <string name="market_purchase_order_label">訂單</string>
     <string name="market_purchase_purchased">已購買</string>
     <string name="market_purchase_refunded_partial">已退款（部分）</string>
     <string name="market_purchase_request_refund">申請退款</string>
@@ -480,7 +426,6 @@
     <string name="market_refund_body">請提供申請退款的原因。</string>
     <string name="market_refund_details_label">詳情</string>
     <string name="market_refund_dialog_failed">退款處理失敗</string>
-    <string name="market_refund_dialog_reason_fraud">欺詐</string>
     <string name="market_refund_dialog_submit">發出退款</string>
     <string name="market_refund_dialog_title">發出退款</string>
     <string name="market_refund_reason_damaged">已損壞</string>
@@ -548,7 +493,6 @@
     <string name="market_subscriptions_empty_body">訂閱是經常性購買 — 賣家以每月或每年的價格列出。</string>
     <string name="market_subscriptions_title">訂閱</string>
 
-    <string name="market_account_address_desc">新增結帳整合後，將在未來結帳時自動填入。</string>
     <string name="market_account_address_title">預設收貨地址</string>
     <string name="market_account_business_desc">用於發票和稅務合規。不會顯示在你的公開檔案中。</string>
     <string name="market_account_business_switch">我以企業身分銷售</string>
@@ -604,7 +548,6 @@
     <string name="market_account_stripe_open_failed">無法開啟 Stripe</string>
     <string name="market_editor_start_time_next">下一步</string>
     <string name="market_editor_start_time_clear">清除</string>
-    <string name="market_listing_detail_buy_now_label">立即購買</string>
     <string name="market_section_recently_viewed">最近瀏覽</string>
     <string name="market_recently_viewed_clear">清除全部</string>
     <string name="market_listings_create">建立</string>
@@ -680,4 +623,42 @@
         <item quantity="one">這將在目前計費週期結束時取消 %1$s 個有效訂閱。訂閱者將收到通知。商品將對買家隱藏。</item>
         <item quantity="other">這將在目前計費週期結束時取消 %1$s 個有效訂閱。訂閱者將收到通知。商品將對買家隱藏。</item>
     </plurals>
+    <string name="market_audit_auction_cancelled">拍賣已取消</string>
+    <string name="market_dispute_status_open">開啟</string>
+    <string name="market_dispute_status_responded">已回覆</string>
+    <string name="market_dispute_status_resolved_buyer">已處理（判予買家）</string>
+    <string name="market_dispute_status_resolved_seller">已處理（判予賣家）</string>
+    <string name="market_editor_move_down">下移</string>
+    <string name="market_editor_move_up">上移</string>
+    <string name="market_review_count">(%1$s)</string>
+    <string name="market_status_unknown">未知</string>
+    <string name="market_editor_instant_below_start">即時購買價必須高於起標價。</string>
+    <string name="market_editor_reserve_above_instant">底價不得超過即時購買價。</string>
+    <string name="market_editor_reserve_below_start">底價必須高於起標價。</string>
+    <string name="market_checkout_auction_unavailable">拍賣結束後，只有得標者才可為此拍賣付款。</string>
+    <string name="market_editor_instant">即時購買價（選填）</string>
+    <string name="market_fee_preview_fee">Mochi 費用（%1$s%%）</string>
+    <string name="market_fee_preview_payout_minimum">您的收款（最低）</string>
+    <string name="market_fee_preview_payout_period">您每期的收款</string>
+    <string name="market_listing_detail_opens">%1$s 開始出價</string>
+    <string name="market_price_reserve_met">已達底價</string>
+    <string name="market_price_reserve_unmet">尚未達底價</string>
+    <string name="market_refund_dialog_amount_invalid">請輸入介乎 %1$s 至 %2$s 的金額</string>
+    <string name="market_refund_dialog_prior">先前退款：%1$s</string>
+    <plurals name="market_editor_days">
+        <item quantity="other">%1$s 天</item>
+    </plurals>
+    <plurals name="market_listing_detail_sales_count">
+        <item quantity="other">%1$s 件銷售</item>
+    </plurals>
+    <plurals name="market_profile_sales_count">
+        <item quantity="other">%1$s 件銷售</item>
+    </plurals>
+    <plurals name="market_purchase_download">
+        <item quantity="other">請在下方下載您的 %1$s 個檔案。</item>
+    </plurals>
+    <plurals name="market_rating_reviews">
+        <item quantity="other">(%1$s 則評論)</item>
+    </plurals>
+    <string name="market_audit_other">其他活動</string>
 </resources>

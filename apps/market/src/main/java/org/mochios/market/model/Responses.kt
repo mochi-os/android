@@ -28,6 +28,13 @@ data class ListingsSearchResponse(
     val total: Long = 0,
     val limit: Long = 0,
     val offset: Long = 0,
+    /** The cursor to send as `after` for the next page; "" after the last. */
+    val next: String? = null,
+)
+
+/** Result of `listings/viewer/batch`: the asked-for listings still open to the caller. */
+data class ListingsBatchResponse(
+    val listings: List<Listing> = emptyList(),
 )
 
 /** Alias name used by [MarketApi.listMyListings]. */
@@ -48,8 +55,18 @@ data class ListingDetailResponse(
     val threads: Long = 0,
     @SerializedName("my_order") val myOrder: MyOrder? = null,
     @SerializedName("my_reservation") val myReservation: MyReservation? = null,
+    /** The caller's active or paused subscription to the listing. */
+    @SerializedName("my_subscription") val mySubscription: MySubscription? = null,
     @SerializedName("appeal_pending") val appealPending: Boolean = false,
     val warnings: List<Warning> = emptyList(),
+    /** The server's clock as it answered, in epoch seconds; 0 from a server that sends none. */
+    val now: Long = 0,
+)
+
+/** Inline `my_subscription` projection on [ListingDetailResponse]. */
+data class MySubscription(
+    val id: String = "",
+    val status: String = "",
 )
 
 /** Inline `my_order` projection on [ListingDetailResponse]. */
@@ -69,6 +86,7 @@ data class MyReservation(
 data class ListingsMineResponse(
     val listings: List<Listing> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /**
@@ -101,7 +119,6 @@ data class RemovalCheck(
     @SerializedName("has_active_auction") val hasActiveAuction: Boolean = false,
     @SerializedName("active_bidders") val activeBidders: Long = 0,
     @SerializedName("active_subscribers") val activeSubscribers: Long = 0,
-    @SerializedName("has_active_orders") val hasActiveOrders: Boolean = false,
 )
 
 // ---- Saved --------------------------------------------------------------
@@ -114,9 +131,18 @@ data class SavedListResponse(
     val total: Long = 0,
 )
 
-/** Result of `saved/add`, `saved/remove`, `saved/clear`. */
+/** Result of `saved/clear`. */
 data class SavedToggleResponse(
     val saved: Boolean = false,
+)
+
+/**
+ * Result of `saved/add` and `saved/remove`: `saved` holds the saved listings
+ * as they now stand, in [SavedListResponse]'s shape. An older server answered
+ * a flag there, so it is read as it comes.
+ */
+data class SavedChangeResponse(
+    val saved: com.google.gson.JsonElement? = null,
 )
 
 // ---- Orders -------------------------------------------------------------
@@ -125,6 +151,7 @@ data class SavedToggleResponse(
 data class OrdersListResponse(
     val orders: List<Order> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /**
@@ -136,16 +163,14 @@ data class OrderDetailResponse(
     val listing: Listing = Listing(),
     val assets: List<Asset> = emptyList(),
     val dispute: Dispute? = null,
-    val refunds: List<Refund> = emptyList(),
-    val evidence: List<DisputeEvidence> = emptyList(),
     val review: Review? = null,
     @SerializedName("peer_review") val peerReview: Review? = null,
     @SerializedName("can_review") val canReview: Boolean = false,
 )
 
 /**
- * Result of `orders/dispute`. The endpoint returns the updated order; the
- * dispute row is fetched separately via `disputes/get`.
+ * Result of `orders/dispute`: the updated order. The answer also carries the
+ * dispute it opened, which nothing here reads.
  */
 data class OrderDisputeResponse(val order: Order = Order())
 
@@ -161,6 +186,7 @@ data class OrderRefundResponse(
 data class BidsMineResponse(
     val bids: List<Bid> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /** Alias name used by [MarketApi.listMyBids]. */
@@ -196,6 +222,7 @@ data class SubscriptionCreateResponse(
 data class SubscriptionsListResponse(
     val subscriptions: List<Subscription> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /** Alias name used by [MarketApi]. */
@@ -207,6 +234,7 @@ typealias SubscriptionListResponse = SubscriptionsListResponse
 data class ThreadsListResponse(
     val threads: List<MarketThread> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /**
@@ -239,6 +267,7 @@ data class ThreadListingPreview(
 data class ReviewsListResponse(
     val reviews: List<Review> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 /**
@@ -255,6 +284,7 @@ typealias SentReviewListResponse = ReviewsListResponse
 data class AuditListResponse(
     val audit: List<AuditEvent> = emptyList(),
     val total: Long = 0,
+    val next: String? = null,
 )
 
 // ---- Accounts -----------------------------------------------------------
@@ -265,8 +295,26 @@ data class AuditListResponse(
  */
 data class StripeOnboardingResponse(val url: String = "")
 
-/** Result of `-/accounts/stripe/oauth/complete`: whether the account is now linked. */
-data class StripeOauthCompletion(val connected: Boolean = false)
+/**
+ * Result of `-/accounts/stripe/oauth/complete`. [connected] is "1" when the
+ * account is linked and can take payments, "pending" when it is linked but
+ * Stripe wants more from the seller, and absent when the exchange failed, as
+ * [error] then says.
+ */
+data class StripeOauthCompletion(
+    val connected: String = "",
+    val error: String = "",
+)
+
+/**
+ * `shipping/regions`: every country code a shipping option may name, and the
+ * region groups by code with their member countries. `world` has no members
+ * listed: it covers every country.
+ */
+data class ShippingRegions(
+    val countries: List<String> = emptyList(),
+    val groups: Map<String, List<String>> = emptyMap(),
+)
 
 // ---- Assets -------------------------------------------------------------
 

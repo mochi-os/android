@@ -26,7 +26,6 @@
     <string name="market_bid_dialog_title">Bieten</string>
     <string name="market_bid_ended">Auktion beendet</string>
     <string name="market_bids_empty">Keine Gebote</string>
-    <string name="market_bids_ended">Auktion beendet</string>
     <string name="market_bids_tab_active">Aktiv</string>
     <string name="market_bids_tab_all">Alle</string>
     <string name="market_bids_tab_lost">Verloren</string>
@@ -80,12 +79,9 @@
     <string name="market_condition_refurbished">Generalüberholt</string>
     <string name="market_condition_used">Gebraucht</string>
     <string name="market_dispute_dialog_cancel">Abbrechen</string>
-    <string name="market_dispute_dialog_evidence_role_buyer">Käufer</string>
-    <string name="market_dispute_dialog_evidence_role_seller">Verkäufer</string>
     <string name="market_dispute_dialog_failed">Antwort konnte nicht eingereicht werden</string>
     <string name="market_dispute_dialog_response_label">Ihre Antwort</string>
     <string name="market_dispute_dialog_submit">Absenden</string>
-    <string name="market_editor_appeal_submit">Einspruch einreichen</string>
     <string name="market_editor_asset_external">Externe URL</string>
     <string name="market_editor_asset_external_filename">Dateiname</string>
     <string name="market_editor_back">Zurück</string>
@@ -122,7 +118,6 @@
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Physisch</string>
     <string name="market_editor_zone_cancel">Abbrechen</string>
-    <string name="market_editor_zone_country_us">Vereinigte Staaten</string>
     <string name="market_editor_zone_region">Region</string>
     <string name="market_fee_preview_item">Element</string>
     <string name="market_fee_preview_payout">Ihre Auszahlung</string>
@@ -208,7 +203,6 @@
     <string name="market_purchase_item">Element</string>
     <string name="market_purchase_message_seller">Verkäufer kontaktieren</string>
     <string name="market_purchase_not_found">Bestellung nicht gefunden</string>
-    <string name="market_purchase_order_label">Bestellung</string>
     <string name="market_purchase_purchased">Gekauft</string>
     <string name="market_purchase_refunded">Erstattet</string>
     <string name="market_purchase_refunded_partial">Erstattet (teilweise)</string>
@@ -232,11 +226,7 @@
     <string name="market_refund_body">Geben Sie einen Grund für Ihre Erstattungsanfrage an.</string>
     <string name="market_refund_details_label">Details</string>
     <string name="market_refund_dialog_cancel">Abbrechen</string>
-    <string name="market_refund_dialog_description_label">Beschreibung</string>
     <string name="market_refund_dialog_failed">Erstattung konnte nicht ausgestellt werden</string>
-    <string name="market_refund_dialog_reason_fraud">Betrügerisch</string>
-    <string name="market_refund_dialog_reason_label">Grund</string>
-    <string name="market_refund_dialog_reason_other">Sonstige</string>
     <string name="market_refund_dialog_submit">Erstattung ausstellen</string>
     <string name="market_refund_dialog_title">Erstattung ausstellen</string>
     <string name="market_refund_reason_damaged">Beschädigt</string>
@@ -284,7 +274,6 @@
     <string name="market_sale_tracking_label">Sendungsnummer</string>
     <string name="market_saved_title">Gespeichert</string>
     <string name="market_search_clear">Suche leeren</string>
-    <string name="market_section_categories">Kategorien durchsuchen</string>
     <string name="market_section_listings">Aktuelle Angebote</string>
     <string name="market_ship_dialog_cancel">Abbrechen</string>
     <string name="market_ship_dialog_submit">Bestätigen</string>
@@ -340,8 +329,6 @@
     <string name="market_sale_review_response_submitting">Wird gesendet…</string>
     <string name="market_checkout_subscribing">Wird abonniert…</string>
     <string name="market_filter_remove">Filter entfernen</string>
-    <string name="market_listing_detail_sales_count">%1$s Verkäufe</string>
-    <string name="market_profile_sales_count">%1$s Verkäufe</string>
     <string name="market_purchase_dispute_response">Antwort des Verkäufers</string>
     <string name="market_purchases_order_label">Bestellung Nr. %1$s</string>
 
@@ -363,7 +350,6 @@
     <string name="market_bid_dialog_no_bids_yet">Noch keine Gebote — Startgebot %1$s</string>
     <string name="market_bid_dialog_submitting">Gebot wird abgegeben</string>
     <string name="market_bid_ends_in">Endet in %1$s</string>
-    <string name="market_bids_ends_in">Endet in %1$s</string>
     <string name="market_bids_your_bid">Ihr Gebot: %1$s</string>
     <string name="market_carousel_main">Foto %1$s von %2$s</string>
     <string name="market_carousel_thumbnail">Vorschaubild %1$s</string>
@@ -373,14 +359,7 @@
     <string name="market_checkout_pwyw_label">Ihr Preis (Mindestbetrag %1$s)</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
-    <string name="market_dispute_dialog_attach">Nachweise anhängen</string>
-    <string name="market_dispute_dialog_attach_count">%1$s Datei(en) angehängt</string>
-    <string name="market_dispute_dialog_evidence_role_staff">Mochi-Team</string>
-    <string name="market_dispute_dialog_evidence_section_title">Eingereichte Nachweise</string>
-    <string name="market_dispute_dialog_evidence_submitter_line">eingereicht von %1$s</string>
     <string name="market_dispute_dialog_title">Auf Streitfall antworten</string>
-    <string name="market_editor_appeal">Einspruch gegen Moderation</string>
-    <string name="market_editor_appeal_reason">Warum legen Sie Einspruch ein?</string>
     <string name="market_editor_asset_add">Datei hinzufügen</string>
     <string name="market_editor_asset_delete">Asset entfernen</string>
     <string name="market_editor_asset_external_add">Externen Link hinzufügen</string>
@@ -388,13 +367,11 @@
     <string name="market_editor_asset_external_url">Referenz-URL</string>
     <string name="market_editor_assets_empty">Noch keine Assets</string>
     <string name="market_editor_category_none">Kategorie auswählen</string>
-    <string name="market_editor_days">%1$s Tage</string>
     <string name="market_editor_delete">Angebot löschen</string>
     <string name="market_editor_delete_confirm_message">Damit wird das Angebot dauerhaft gelöscht.</string>
     <string name="market_editor_delete_confirm_title">Angebot löschen?</string>
     <string name="market_editor_download">Direkter Download</string>
     <string name="market_editor_duration">Auktionsdauer</string>
-    <string name="market_editor_instant">Sofortkaufpreis (optional)</string>
     <string name="market_editor_instant_help">Auf 0 setzen, um zu deaktivieren</string>
     <string name="market_editor_interval">Abrechnungsintervall</string>
     <string name="market_editor_photos_add">Fotos hinzufügen</string>
@@ -413,21 +390,9 @@
     <string name="market_editor_title_required">Gib einen Titel ein, bevor du Fotos oder Dateien hinzufügst</string>
     <string name="market_editor_type">Liefermethoden</string>
     <string name="market_editor_zone_add">Zone hinzufügen</string>
-    <string name="market_editor_zone_country_au">Australien</string>
-    <string name="market_editor_zone_country_ca">Kanada</string>
-    <string name="market_editor_zone_country_de">Deutschland</string>
-    <string name="market_editor_zone_country_es">Spanien</string>
     <string name="market_purchases_refunded_partial">−%1$s erstattet</string>
     <string name="market_purchases_won_for">Gewonnen für %1$s</string>
-    <string name="market_rating_reviews">(%1$s Bewertungen)</string>
-    <string name="market_refund_dialog_amount_help">Leer lassen, um die gesamte Bestellung zu erstatten.</string>
     <string name="market_refund_dialog_amount_label">Betrag</string>
-    <string name="market_refund_dialog_prior_kind_full">vollständig</string>
-    <string name="market_refund_dialog_prior_kind_partial">teilweise</string>
-    <string name="market_refund_dialog_prior_section_title">Frühere Erstattungen</string>
-    <string name="market_refund_dialog_prior_title">Frühere Erstattung</string>
-    <string name="market_refund_dialog_reason_duplicate">Doppelt</string>
-    <string name="market_refund_dialog_reason_requested">Vom Käufer angefragt</string>
     <string name="market_refund_dialog_submitting">Erstattung läuft…</string>
     <string name="market_report_dialog_details_label">Details (optional)</string>
     <string name="market_report_dialog_submitting">Wird gesendet</string>
@@ -459,7 +424,6 @@
     <string name="market_stripe_onboarding_failed">Stripe konnte nicht geöffnet werden</string>
     <string name="market_stripe_onboarding_opening">Stripe wird geöffnet…</string>
     <string name="market_stripe_onboarding_title">Zahlungseinrichtung abschließen</string>
-    <string name="market_subscribers_cancels_on">Wird gekündigt am %1$s</string>
     <string name="market_subscribers_empty_subtitle">Abonnenten Ihrer Angebote erscheinen hier.</string>
     <string name="market_subscribers_empty_title">Noch keine Abonnenten</string>
     <string name="market_subscribers_title">Meine Abonnenten</string>
@@ -468,28 +432,18 @@
     <string name="market_warnings_title">Warnungen</string>
 
 
-    <string name="market_editor_zone_country_fr">Frankreich</string>
-    <string name="market_editor_zone_country_gb">Vereinigtes Königreich</string>
-    <string name="market_editor_zone_country_it">Italien</string>
-    <string name="market_editor_zone_country_jp">Japan</string>
-    <string name="market_editor_zone_country_nl">Niederlande</string>
     <string name="market_editor_zone_days">Voraussichtliche Lieferzeit</string>
     <string name="market_editor_zone_days_placeholder">z. B. 3–5 Werktage</string>
     <string name="market_editor_zone_delete">Zone entfernen</string>
     <string name="market_editor_zone_edit">Zone bearbeiten</string>
-    <string name="market_editor_zone_european_union">Europäische Union</string>
     <string name="market_editor_zone_notes">Notizen (optional)</string>
     <string name="market_editor_zone_price">Versand</string>
     <string name="market_editor_zone_save">Zone speichern</string>
-    <string name="market_editor_zone_worldwide">Weltweit</string>
     <string name="market_editor_zones_empty">Noch keine Zonen</string>
     <string name="market_empty_subtitle">Passen Sie Ihre Filter an oder setzen Sie sie zurück.</string>
     <string name="market_empty_title">Keine Ergebnisse</string>
     <string name="market_fee_disclosure_body">Plattformgebühr: %1$s%%. Die Verarbeitungsgebühren finden Sie in Ihrem Stripe-Dashboard.</string>
     <string name="market_fee_disclosure_title">Plattformgebühren</string>
-    <string name="market_fee_preview_failed">Gebühren konnten nicht berechnet werden</string>
-    <string name="market_fee_preview_loading">Gebühren werden berechnet…</string>
-    <string name="market_fee_preview_mochi_fee">Mochi-Gebühr</string>
     <string name="market_filter_chip_max">Max. %1$s</string>
     <string name="market_filter_chip_min">Min. %1$s</string>
     <string name="market_filter_open">Filter</string>
@@ -497,10 +451,6 @@
     <string name="market_filter_title">Filter</string>
     <string name="market_listing_detail_appeal_pending">Einspruch ausstehend</string>
     <string name="market_listing_detail_buy">Kaufen</string>
-    <string name="market_listing_detail_relist_failed">Erneutes Einstellen fehlgeschlagen</string>
-    <string name="market_listing_detail_seller_banned_banner">Dieser Verkäufer ist gesperrt. Neue Bestellungen sind nicht möglich.</string>
-    <string name="market_listing_detail_seller_suspended_banner">Dieser Verkäufer ist vorübergehend gesperrt. Neue Bestellungen sind pausiert, bis das Konto wieder freigegeben ist.</string>
-    <string name="market_listing_detail_seller_suspended_cta_hint">Käufe sind deaktiviert, solange das Konto des Verkäufers eingeschränkt ist.</string>
     <string name="market_listing_no_photo">Kein Foto</string>
     <string name="market_listing_photo">Angebotsfoto</string>
     <string name="market_listing_save">Angebot speichern</string>
@@ -512,7 +462,6 @@
     <string name="market_listings_load_failed">Ihre Angebote konnten nicht geladen werden</string>
     <string name="market_listings_new">Neues Angebot</string>
     <string name="market_listings_search_placeholder">Ihre Angebote durchsuchen</string>
-    <string name="market_listings_share_chooser">Angebot teilen</string>
     <string name="market_messages_compose_placeholder">Nachricht schreiben</string>
     <string name="market_messages_inbox_empty_subtitle">Wenn Sie einem Verkäufer schreiben (oder ein Käufer Ihnen), erscheint der Chat hier.</string>
     <string name="market_messages_inbox_empty_title">Noch keine Gespräche</string>
@@ -529,12 +478,8 @@
     <string name="market_profile_no_reviews">Noch keine Bewertungen.</string>
     <string name="market_purchase_dispute_chargeback">Rückbuchung %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ihre Bank hat für diese Bestellung eine Rückbuchung veranlasst. Stripe bearbeitet die Streitigkeit mit dem Verkäufer; das Ergebnis erscheint hier, sobald entschieden wurde.</string>
-    <string name="market_purchase_download_many">Laden Sie Ihre %1$s Dateien unten herunter.</string>
-    <string name="market_purchase_download_one">Laden Sie Ihre Datei unten herunter.</string>
     <string name="market_purchase_review_from">Bewertung von %1$s</string>
-    <string name="market_purchases_auction_label">Auktion Nr. %1$s</string>
 
-    <string name="market_account_address_desc">Wird bei künftigen Bestellungen automatisch ausgefüllt, sobald die Checkout-Integration verfügbar ist.</string>
     <string name="market_account_address_title">Standard-Lieferadresse</string>
     <string name="market_account_business_desc">Wird für Rechnungen und die Einhaltung steuerlicher Vorschriften verwendet. Nicht in Ihrem öffentlichen Profil sichtbar.</string>
     <string name="market_account_business_switch">Ich verkaufe als Unternehmen</string>
@@ -596,7 +541,6 @@
     <string name="market_editor_start_time_help">Leer lassen, um beim Veröffentlichen zu starten.</string>
     <string name="market_editor_start_time_next">Weiter</string>
     <string name="market_editor_start_time_clear">Leeren</string>
-    <string name="market_listing_detail_buy_now_label">Sofort kaufen</string>
     <string name="market_section_recently_viewed">Zuletzt angesehen</string>
     <string name="market_recently_viewed_clear">Alle leeren</string>
     <string name="market_listings_create">Erstellen</string>
@@ -605,7 +549,6 @@
     <string name="market_listing_checkout_in_progress">Sie haben einen laufenden Bezahlvorgang für dieses Angebot.</string>
     <string name="market_listing_checkout_cancel">Bezahlvorgang abbrechen</string>
     <string name="market_listing_checkout_cancelled">Bezahlvorgang abgebrochen</string>
-    <string name="market_listing_checkout_cancel_failed">Bezahlvorgang konnte nicht abgebrochen werden</string>
     <string name="market_account_stripe_connected">Stripe verbunden</string>
     <string name="market_audit_account_banned">Gesperrt</string>
     <string name="market_audit_account_seller_activated">Verkäufer aktiviert</string>
@@ -688,4 +631,72 @@
     <string name="market_sale_chargeback_fee_refunded">(erstattet)</string>
     <string name="market_messages_report">Dieses Gespräch melden</string>
     <string name="market_report_conversation_title">Gespräch melden</string>
+    <string name="market_audit_auction_cancelled">Auktion abgebrochen</string>
+    <string name="market_dispute_status_open">Öffnen</string>
+    <string name="market_dispute_status_responded">Beantwortet</string>
+    <string name="market_dispute_status_resolved_buyer">Gelöst (Käufer)</string>
+    <string name="market_dispute_status_resolved_seller">Gelöst (Verkäufer)</string>
+    <string name="market_editor_move_down">Nach unten verschieben</string>
+    <string name="market_editor_move_up">Nach oben verschieben</string>
+    <string name="market_review_count">(%1$s)</string>
+    <string name="market_status_unknown">Unbekannt</string>
+    <string name="market_account_stripe_pending">Stripe verbunden, aber Stripe benötigt weitere Informationen, bevor Sie Zahlungen annehmen können</string>
+    <string name="market_editor_instant_below_start">Der Sofort-Kaufen-Preis muss höher als das Startgebot sein.</string>
+    <string name="market_editor_reserve_above_instant">Der Mindestpreis darf den Sofort-Kaufen-Preis nicht überschreiten.</string>
+    <string name="market_editor_reserve_below_start">Der Mindestpreis muss höher als das Startgebot sein.</string>
+    <string name="market_editor_starting_bid">Startgebot</string>
+    <string name="market_listing_detail_buy_now_price">Sofort kaufen — %1$s</string>
+    <string name="market_listing_detail_manage_subscription">Abonnement verwalten</string>
+    <string name="market_listing_detail_view_order">Ihre Bestellung anzeigen</string>
+    <string name="market_listing_held_title">Dieses Angebot ist bis zur Prüfung zurückgestellt</string>
+    <string name="market_listing_rejected_title">Dieses Angebot wurde abgelehnt</string>
+    <string name="market_listing_untitled">Unbenanntes Angebot</string>
+    <string name="market_listings_status_held">Zur Prüfung zurückgehalten</string>
+    <string name="market_refund_dialog_amount_remaining">Leer lassen, um den vollen verbleibenden Betrag von %1$s zu erstatten.</string>
+    <string name="market_fee_preview_auction">Mochi behält %1$s%% des endgültigen Höchstgebots. Stripe-Bearbeitungsgebühren werden vom Rest abgezogen.</string>
+    <string name="market_fee_preview_sale">Mochi behält %1$s%% von jedem Verkauf. Stripe-Bearbeitungsgebühren werden vom Rest abgezogen.</string>
+    <string name="market_checkout_auction_unavailable">Nur wer den Zuschlag erhalten hat, kann diese Auktion nach ihrem Ende bezahlen.</string>
+    <string name="market_editor_instant">Sofort-Kaufen-Preis (optional)</string>
+    <string name="market_fee_preview_fee">Mochi-Gebühr (%1$s%%)</string>
+    <string name="market_fee_preview_payout_minimum">Ihre Auszahlung (Minimum)</string>
+    <string name="market_fee_preview_payout_period">Ihre Auszahlung pro Periode</string>
+    <string name="market_listing_detail_opens">Gebote ab %1$s</string>
+    <string name="market_price_reserve_met">Mindestpreis erreicht</string>
+    <string name="market_price_reserve_unmet">Mindestpreis noch nicht erreicht</string>
+    <string name="market_refund_dialog_amount_invalid">Geben Sie einen Betrag zwischen %1$s und %2$s ein</string>
+    <string name="market_refund_dialog_prior">Frühere Erstattung: %1$s</string>
+    <plurals name="market_editor_days">
+        <item quantity="one">%1$s Tag</item>
+        <item quantity="other">%1$s Tage</item>
+    </plurals>
+    <plurals name="market_listing_detail_sales_count">
+        <item quantity="one">%1$s Verkauf</item>
+        <item quantity="other">%1$s Verkäufe</item>
+    </plurals>
+    <plurals name="market_profile_sales_count">
+        <item quantity="one">%1$s Verkauf</item>
+        <item quantity="other">%1$s Verkäufe</item>
+    </plurals>
+    <plurals name="market_purchase_download">
+        <item quantity="one">Laden Sie Ihre Datei unten herunter.</item>
+        <item quantity="other">Laden Sie Ihre %1$s Dateien unten herunter.</item>
+    </plurals>
+    <plurals name="market_rating_reviews">
+        <item quantity="one">(%1$s Bewertung)</item>
+        <item quantity="other">(%1$s Bewertungen)</item>
+    </plurals>
+    <string name="market_region_africa">Afrika</string>
+    <string name="market_region_asia">Asien</string>
+    <string name="market_region_asia_pacific">Asien-Pazifik</string>
+    <string name="market_region_eea">Europäischer Wirtschaftsraum</string>
+    <string name="market_region_eu">Europäische Union</string>
+    <string name="market_region_europe">Europa</string>
+    <string name="market_region_latin_america">Lateinamerika</string>
+    <string name="market_region_middle_east">Naher Osten</string>
+    <string name="market_region_north_america">Nordamerika</string>
+    <string name="market_region_oceania">Ozeanien</string>
+    <string name="market_region_south_america">Südamerika</string>
+    <string name="market_region_world">Weltweit</string>
+    <string name="market_audit_order_staff_read">Vom Personal eingesehen</string>
+    <string name="market_audit_other">Sonstige Aktivität</string>
 </resources>

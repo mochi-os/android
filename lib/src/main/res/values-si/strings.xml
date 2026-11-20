@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s තවත් පිළිතුරු</item>
     </plurals>
     <string name="drawer_unread">නොකියවූ</string>
+    <string name="person_unknown">නොදන්නා</string>
+    <string name="format_time_seconds_short">%1$sතත්</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

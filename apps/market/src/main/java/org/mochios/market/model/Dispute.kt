@@ -42,22 +42,3 @@ enum class DisputeReason {
     @SerializedName("unauthorised") UNAUTHORISED,
     @SerializedName("other") OTHER,
 }
-
-/**
- * Dispute evidence entry, drawn from the audit stream. File entries fill [name]
- * / [size] / [url] / [mime]; text notes use [body] only. [role] is `"buyer"`,
- * `"seller"` or `"staff"`.
- */
-data class DisputeEvidence(
-    val id: String = "",
-    val dispute: String = "",
-    val actor: String = "",
-    @SerializedName("actor_name") val actorName: String = "",
-    val role: String = "",
-    val body: String = "",
-    val name: String = "",
-    val size: Long = 0,
-    val url: String = "",
-    val mime: String = "",
-    val created: Long = 0,
-)

@@ -278,4 +278,7 @@
     <string name="launcher_add_to_home">Agregar a la pantalla de inicio</string>
     <string name="common_continue">Continuá</string>
     <string name="drawer_unread">No leídas</string>
+    <string name="person_unknown">Desconocido</string>
+    <string name="format_time_seconds_short">%1$ss</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

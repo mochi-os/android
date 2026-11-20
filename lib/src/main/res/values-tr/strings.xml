@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s yanıt daha</item>
     </plurals>
     <string name="drawer_unread">Okunmamış</string>
+    <string name="person_unknown">Bilinmiyor</string>
+    <string name="format_time_seconds_short">%1$s sn</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

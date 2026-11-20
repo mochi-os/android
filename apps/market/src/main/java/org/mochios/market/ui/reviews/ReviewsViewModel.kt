@@ -8,6 +8,8 @@ package org.mochios.market.ui.reviews
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -16,6 +18,9 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
 import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
@@ -26,9 +31,9 @@ import javax.inject.Inject
  */
 data class ReviewsTabState(
     val reviews: List<Review> = emptyList(),
-    val isLoading: Boolean = false,
-    val hasMore: Boolean = true,
-    val error: MochiError? = null,
+    /** The first page while nothing is listed, else the next page below the list. */
+    val load: LoadState = LoadState.Idle,
+    val paging: Paging = Paging(),
     /** Per-review response drafts keyed by review id. */
     val responseDrafts: Map<String, String> = emptyMap(),
 )
@@ -61,59 +66,62 @@ class ReviewsViewModel @Inject constructor(
     private val _events = Channel<ReviewsEvent>(Channel.BUFFERED)
     val events = _events.receiveAsFlow()
 
-    private var receivedPage: Int = 1
-    private var sentPage: Int = 1
+    /** Each tab's read under way, which a retry of its first page replaces. */
+    private val jobs = mutableMapOf<ReviewsTab, Job>()
 
     init {
-        loadFirstPage(ReviewsTab.RECEIVED)
+        loadMore(ReviewsTab.RECEIVED)
     }
 
+    /** Reads the selected tab again from its first page. */
     fun retry() {
-        loadFirstPage(_state.value.selectedTab)
+        val tab = _state.value.selectedTab
+        jobs.remove(tab)?.cancel()
+        updateTab(tab) { ReviewsTabState(responseDrafts = it.responseDrafts) }
+        loadMore(tab)
     }
 
     fun selectTab(tab: ReviewsTab) {
         if (_state.value.selectedTab == tab) return
         _state.value = _state.value.copy(selectedTab = tab)
         val tabState = currentTabState(tab)
-        if (tabState.reviews.isEmpty() && !tabState.isLoading) {
-            loadFirstPage(tab)
+        if (tabState.reviews.isEmpty() && tabState.load == LoadState.Idle) {
+            loadMore(tab)
         }
     }
 
+    /**
+     * Reads [tab]'s next page, from the list's foot or its retry; the first
+     * page when nothing is listed yet.
+     */
     fun loadMore(tab: ReviewsTab) {
         val tabState = currentTabState(tab)
-        if (tabState.isLoading || !tabState.hasMore) return
-        viewModelScope.launch {
-            updateTab(tab) { it.copy(isLoading = true) }
+        if (tabState.load == LoadState.Loading || !tabState.paging.more) return
+        val paging = tabState.paging
+        updateTab(tab) { it.copy(load = LoadState.Loading) }
+        jobs[tab] = viewModelScope.launch {
             try {
-                // The counter advances only once the page is in hand: bumping it
-                // first leaves a failed page permanently skipped, since the
-                // retry asks for the one after it.
-                val (page, next) = when (tab) {
+                val (page, total, next) = when (tab) {
                     ReviewsTab.RECEIVED -> {
-                        val r = repo.inboxReviews(page = receivedPage + 1, limit = PAGE_LIMIT)
-                        receivedPage += 1
-                        Pair(r.reviews, r.total)
+                        val r = repo.inboxReviews(page = paging.page, limit = PAGE_LIMIT, after = paging.cursor)
+                        Triple(r.reviews, r.total, r.next)
                     }
                     ReviewsTab.SENT -> {
-                        val r = repo.sentReviews(page = sentPage + 1, limit = PAGE_LIMIT)
-                        sentPage += 1
-                        Pair(r.reviews, r.total)
+                        val r = repo.sentReviews(page = paging.page, limit = PAGE_LIMIT, after = paging.cursor)
+                        Triple(r.reviews, r.total, r.next)
                     }
                 }
                 updateTab(tab) {
-                    val merged = it.reviews + page
                     it.copy(
-                        reviews = merged,
-                        isLoading = false,
-                        hasMore = merged.size.toLong() < next,
+                        reviews = it.reviews.append(page) { review -> review.id },
+                        load = LoadState.Idle,
+                        paging = paging.advance(page.size, total, next),
                     )
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                updateTab(tab) {
-                    it.copy(isLoading = false, error = e.toMochiError())
-                }
+                updateTab(tab) { it.copy(load = LoadState.Failed(e.toMochiError())) }
             }
         }
     }
@@ -163,37 +171,6 @@ class ReviewsViewModel @Inject constructor(
                 }
             } catch (e: Exception) {
                 _events.send(ReviewsEvent.Error(e.toMochiError()))
-            }
-        }
-    }
-
-    private fun loadFirstPage(tab: ReviewsTab) {
-        viewModelScope.launch {
-            updateTab(tab) { it.copy(isLoading = true, error = null) }
-            try {
-                val (page, next) = when (tab) {
-                    ReviewsTab.RECEIVED -> {
-                        receivedPage = 1
-                        val r = repo.inboxReviews(page = receivedPage, limit = PAGE_LIMIT)
-                        Pair(r.reviews, r.total)
-                    }
-                    ReviewsTab.SENT -> {
-                        sentPage = 1
-                        val r = repo.sentReviews(page = sentPage, limit = PAGE_LIMIT)
-                        Pair(r.reviews, r.total)
-                    }
-                }
-                updateTab(tab) {
-                    it.copy(
-                        reviews = page,
-                        isLoading = false,
-                        hasMore = page.size.toLong() < next,
-                    )
-                }
-            } catch (e: Exception) {
-                updateTab(tab) {
-                    it.copy(isLoading = false, error = e.toMochiError())
-                }
             }
         }
     }

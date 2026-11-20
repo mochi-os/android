@@ -115,8 +115,8 @@ class ListingDialogsTest {
         val model = ListingDetailViewModel(
             MarketRepository(api, FileStore(context)),
             SavedRepository(api, SessionManager(context)),
-            RecentlyViewedStore(context),
-            ReportedStore(context),
+            RecentlyViewedStore(context, SessionManager(context)),
+            ReportedStore(context, SessionManager(context)),
             context,
             SessionManager(context),
         )

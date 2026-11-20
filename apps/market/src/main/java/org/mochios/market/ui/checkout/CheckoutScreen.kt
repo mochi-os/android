@@ -24,6 +24,7 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Gavel
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -48,6 +49,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
@@ -55,6 +57,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
@@ -65,13 +68,15 @@ import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice
-import org.mochios.market.lib.toMinorUnits
+import org.mochios.market.lib.regionName
 import org.mochios.market.model.Currency
 import org.mochios.market.model.DeliveryMethod
 import org.mochios.market.model.Listing
 import org.mochios.market.model.PricingModel
 import org.mochios.market.model.ShippingOption
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.components.RegionField
+import org.mochios.market.ui.components.rememberCountryChoices
 
 /**
  * Checkout for one listing. Stripe opens in a Custom Tab; its `mochi://` return
@@ -128,9 +133,9 @@ fun CheckoutScreen(
     MochiScaffold(
         title = title,
         onBack = { navController.popBackStack() },
+        snackbarHost = { SnackbarHost(snackbar) },
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            SnackbarHost(snackbar, modifier = Modifier.align(Alignment.BottomCenter))
             when {
                 state.isLoading -> {
                     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -147,6 +152,11 @@ fun CheckoutScreen(
                     listing = state.listing!!,
                     submitting = state.submitting,
                     onSubscribe = { viewModel.submit() },
+                )
+                // Only an auction's winner pays for it, once it has ended.
+                state.isAuction && !state.wonAuction -> EmptyState(
+                    icon = Icons.Default.Gavel,
+                    title = stringResource(R.string.market_checkout_auction_unavailable),
                 )
                 else -> CheckoutBody(state = state, viewModel = viewModel)
             }
@@ -223,24 +233,9 @@ private fun SubscriptionBody(
 private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
     val listing = state.listing ?: return
     val currency = listing.currency ?: Currency.GBP
-    val isAuctionCompletion =
-        listing.pricing == PricingModel.AUCTION && state.wonBid != null
-
-    val itemPrice = when {
-        isAuctionCompletion -> state.wonBid?.amount ?: 0L
-        listing.pricing == PricingModel.PWYW && state.amountText.isNotBlank() ->
-            toMinorUnits(state.amountText, currency)
-        listing.pricing == PricingModel.AUCTION -> state.auction?.bid ?: 0L
-        else -> listing.price
-    }
-    val selectedZone = state.shipping.firstOrNull { it.id == state.optionId }
-    val total = itemPrice + (selectedZone?.price ?: 0L)
-
-    // A pay-what-you-want listing must carry an amount at or above the
-    // minimum before checkout can proceed; otherwise an empty/too-low field
-    // reaches the server and returns "Amount must be at least X".
-    val pwywAmountOk = listing.pricing != PricingModel.PWYW || isAuctionCompletion ||
-        (state.amountText.isNotBlank() && toMinorUnits(state.amountText, currency) >= listing.price)
+    val itemPrice = state.itemPrice
+    val selectedZone = state.selectedOption
+    val total = state.total
 
     val available = remember(listing, state.shipping) {
         buildList {
@@ -259,7 +254,7 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
     ) {
         ListingSummaryCard(listing = listing, itemPrice = itemPrice, currency = currency)
 
-        if (listing.pricing == PricingModel.PWYW && !isAuctionCompletion) {
+        if (listing.pricing == PricingModel.PWYW) {
             PwywAmountInput(
                 value = state.amountText,
                 currency = currency,
@@ -279,9 +274,10 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
         if (state.delivery == DeliveryMethod.SHIPPING && state.shipping.isNotEmpty()) {
             AddressForm(state = state, onChange = viewModel::onAddressChanged)
             ShippingZoneDropdown(
-                zones = state.shipping,
-                selectedId = state.optionId,
+                zones = state.options,
+                selectedId = selectedZone?.id,
                 onSelected = { viewModel.onShippingOptionChanged(it) },
+                isError = state.addressTouched && selectedZone == null,
             )
         }
 
@@ -295,7 +291,7 @@ private fun CheckoutBody(state: CheckoutUiState, viewModel: CheckoutViewModel) {
 
         MochiButton(
             onClick = { viewModel.submit() },
-            enabled = state.delivery != null && !state.submitting && pwywAmountOk,
+            enabled = state.canSubmit,
             modifier = Modifier.fillMaxWidth().height(48.dp),
         ) {
             if (state.submitting) {
@@ -429,19 +425,24 @@ private fun DeliveryRadioGroup(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun AddressForm(state: CheckoutUiState, onChange: (String, String, String, String, String, String, String) -> Unit) {
+    val countries = rememberCountryChoices(state.regions)
+    // Once the buyer has started on the address, a required field left
+    // empty is marked, as the Pay button waits for it.
+    val missing = if (state.addressTouched) state.missing else emptySet()
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text(
             stringResource(R.string.market_checkout_address_heading),
             style = MaterialTheme.typography.labelLarge,
         )
-        MochiTextField(
+        RegionField(
             value = state.addressCountry,
-            onValueChange = {
-                onChange(it, state.addressName, state.addressLine1, state.addressLine2,
+            choices = countries,
+            label = stringResource(R.string.market_checkout_address_country),
+            onChange = { country ->
+                onChange(country, state.addressName, state.addressLine1, state.addressLine2,
                     state.addressCity, state.addressRegion, state.addressPostcode)
             },
-            label = { Text(stringResource(R.string.market_checkout_address_country)) },
-            singleLine = true,
+            isError = "address_country" in missing,
             modifier = Modifier.fillMaxWidth(),
         )
         MochiTextField(
@@ -452,6 +453,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
             },
             label = { Text(stringResource(R.string.market_checkout_address_name)) },
             singleLine = true,
+            isError = "address_name" in missing,
             modifier = Modifier.fillMaxWidth(),
         )
         MochiTextField(
@@ -462,6 +464,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
             },
             label = { Text(stringResource(R.string.market_checkout_address_line1)) },
             singleLine = true,
+            isError = "address_line1" in missing,
             modifier = Modifier.fillMaxWidth(),
         )
         MochiTextField(
@@ -483,6 +486,7 @@ private fun AddressForm(state: CheckoutUiState, onChange: (String, String, Strin
                 },
                 label = { Text(stringResource(R.string.market_checkout_address_city)) },
                 singleLine = true,
+                isError = "address_city" in missing,
                 modifier = Modifier.weight(1f),
             )
             MochiTextField(
@@ -515,19 +519,23 @@ private fun ShippingZoneDropdown(
     zones: List<ShippingOption>,
     selectedId: String?,
     onSelected: (String) -> Unit,
+    isError: Boolean = false,
 ) {
     var expanded by remember { mutableStateOf(false) }
+    val resources = LocalResources.current
+    val locale = LocalConfiguration.current.locales[0]
     val selected = zones.firstOrNull { it.id == selectedId }
     val display = selected?.let { zone ->
         val currency = runCatching { Currency.valueOf(zone.currency.uppercase()) }
             .getOrDefault(Currency.GBP)
+        val region = regionName(zone.region, resources, locale)
         if (zone.days.isNotBlank()) {
             stringResource(
                 R.string.market_checkout_shipping_zone_with_days,
-                zone.region, formatPrice(zone.price, currency), zone.days,
+                region, formatPrice(zone.price, currency), zone.days,
             )
         } else {
-            stringResource(R.string.market_checkout_shipping_zone, zone.region, formatPrice(zone.price, currency))
+            stringResource(R.string.market_checkout_shipping_zone, region, formatPrice(zone.price, currency))
         }
     } ?: ""
 
@@ -543,6 +551,7 @@ private fun ShippingZoneDropdown(
                 readOnly = true,
                 singleLine = true,
                 placeholder = { Text(stringResource(R.string.market_checkout_shipping_placeholder)) },
+                isError = isError,
                 trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
                 modifier = Modifier
                     .fillMaxWidth()
@@ -555,15 +564,16 @@ private fun ShippingZoneDropdown(
                 zones.forEach { zone ->
                     val currency = runCatching { Currency.valueOf(zone.currency.uppercase()) }
                         .getOrDefault(Currency.GBP)
+                    val region = regionName(zone.region, resources, locale)
                     val rowText = if (zone.days.isNotBlank()) {
                         stringResource(
                             R.string.market_checkout_shipping_zone_with_days,
-                            zone.region, formatPrice(zone.price, currency), zone.days,
+                            region, formatPrice(zone.price, currency), zone.days,
                         )
                     } else {
                         stringResource(
                             R.string.market_checkout_shipping_zone,
-                            zone.region, formatPrice(zone.price, currency),
+                            region, formatPrice(zone.price, currency),
                         )
                     }
                     MochiDropdownMenuItem(

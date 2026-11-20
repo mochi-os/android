@@ -26,10 +26,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
+import org.mochios.android.format.personName
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.LoadState
 import org.mochios.market.R
 import org.mochios.market.model.MarketThread
 import org.mochios.market.navigation.MarketApp
@@ -59,27 +61,28 @@ fun MessagesInboxScreen(
                 .padding(padding),
         ) {
             when {
-                state.error != null && state.threads.isEmpty() -> {
+                state.load is LoadState.Failed && state.threads.isEmpty() -> {
                     ErrorState(
-                        error = state.error!!,
+                        error = (state.load as LoadState.Failed).error,
                         onRetry = viewModel::refresh,
                     )
                 }
-                state.threads.isEmpty() && !state.isLoading -> {
+                state.threads.isEmpty() && state.load == LoadState.Idle -> {
                     EmptyInbox()
                 }
                 else -> {
                     InfiniteList(
                         items = state.threads,
                         key = { thread -> thread.id },
-                        isLoading = state.isLoading,
-                        hasMore = state.hasMore,
+                        load = state.load,
+                        hasMore = state.paging.more,
                         onLoadMore = viewModel::loadMore,
                         contentPadding = MarketListPadding,
                         verticalArrangement = MarketListSpacing,
                     ) { thread ->
                         InboxRow(
                             thread = thread,
+                            identity = state.identity,
                             onClick = {
                                 navController.navigate(
                                     MarketApp.messageThread(
@@ -127,14 +130,20 @@ private fun EmptyInbox() {
     }
 }
 
+/**
+ * One conversation, named and pictured by the other party: the signed-in
+ * [identity] is one side of every thread, so the row is never the reader's own
+ * face or id.
+ */
 @Composable
-private fun InboxRow(
+internal fun InboxRow(
     thread: MarketThread,
+    identity: String?,
     onClick: () -> Unit,
 ) {
-    val otherEntity = thread.otherEntityId()
-    val otherName = thread.otherName.orEmpty().ifBlank { otherEntity.orEmpty() }
-    val unread = (thread.unread ?: 0L).toInt()
+    val otherEntity = thread.otherParty(identity)
+    val otherName = personName(thread.otherName, thread.otherFingerprint)
+    val unread = thread.unread ?: 0L
     val timestamp = thread.lastMessageTime ?: thread.updated
     val timeLabel = LocalFormat.current.formatRelativeTime(timestamp)
     MarketListRow(
@@ -149,18 +158,19 @@ private fun InboxRow(
                 MarketListNote(text = timeLabel)
             }
             if (unread > 0) {
-                Badge { Text(text = unread.toString()) }
+                Badge { Text(text = LocalFormat.current.formatNumber(unread)) }
             }
         },
     )
 }
 
 /**
- * Avatar entity for the row. The screen has no current identity to compare
- * against, so it prefers the buyer; the worst case is the wrong avatar.
+ * The party who is not [identity]: the server's `other` when it sends one,
+ * else whichever of buyer and seller the signed-in identity is not; null
+ * until the identity is known.
  */
-private fun MarketThread.otherEntityId(): String? {
-    val b = buyer.takeIf { it.isNotEmpty() }
-    val s = seller.takeIf { it.isNotEmpty() }
-    return b ?: s
+internal fun MarketThread.otherParty(identity: String?): String? {
+    other?.takeIf { it.isNotEmpty() }?.let { return it }
+    if (identity.isNullOrEmpty()) return null
+    return listOf(buyer, seller).firstOrNull { side -> side.isNotEmpty() && side != identity }
 }

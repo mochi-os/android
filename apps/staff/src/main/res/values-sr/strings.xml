@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Белешке</string>
     <string name="staff_accounts_reason_label">Разлог</string>
     <string name="staff_accounts_reason_optional_label">Разлог (опционо)</string>
-    <string name="staff_accounts_sales">%1$s продаја</string>
     <string name="staff_accounts_search_clear">Очисти претрагу</string>
     <string name="staff_accounts_search_placeholder">Претражи</string>
     <string name="staff_accounts_seller_buyers">Само купци</string>
@@ -438,4 +437,9 @@
     <string name="staff_reports_conversation">Разговор</string>
     <string name="staff_reports_conversation_empty">Нема порука</string>
     <string name="staff_reports_conversation_show">Прикажи разговор</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s продаја</item>
+        <item quantity="few">%1$s продаје</item>
+        <item quantity="other">%1$s продаја</item>
+    </plurals>
 </resources>

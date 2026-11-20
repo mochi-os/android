@@ -5,143 +5,125 @@
 
 package org.mochios.market.lib
 
+import android.content.res.Resources
+import androidx.annotation.StringRes
+import org.mochios.android.util.NaturalCompare
+import org.mochios.market.R
 import org.mochios.market.model.ShippingOption
+import org.mochios.market.model.ShippingRegions
+import java.text.Normalizer
+import java.util.Locale
 
 /**
- * Port of `apps/market/web/src/lib/shipping.ts`: heuristic free-text region to
- * buyer-country matching; the picker stays editable so a wrong guess can be
- * corrected.
+ * Shipping regions are codes: a country's ISO 3166-1 alpha-2 code in upper
+ * case ("GB"), or a group of countries in lower case ("europe"), whose members
+ * the Comptroller lists in `shipping/regions`. A region stored before codes
+ * (free text) is shown as it was written and never matched.
  */
 
-private val CATCH_ALL = setOf("worldwide", "international", "global", "anywhere")
+/** The group that covers every country. */
+const val WORLD = "world"
 
-private val EU = setOf(
-    "austria", "belgium", "bulgaria", "croatia", "cyprus", "czechia",
-    "czech republic", "denmark", "estonia", "finland", "france", "germany",
-    "greece", "hungary", "ireland", "italy", "latvia", "lithuania",
-    "luxembourg", "malta", "netherlands", "poland", "portugal", "romania",
-    "slovakia", "slovenia", "spain", "sweden",
+/** The region groups, in the order an editor offers them, with their names. */
+private val GROUPS: List<Pair<String, Int>> = listOf(
+    WORLD to R.string.market_region_world,
+    "europe" to R.string.market_region_europe,
+    "eu" to R.string.market_region_eu,
+    "eea" to R.string.market_region_eea,
+    "north_america" to R.string.market_region_north_america,
+    "south_america" to R.string.market_region_south_america,
+    "latin_america" to R.string.market_region_latin_america,
+    "middle_east" to R.string.market_region_middle_east,
+    "africa" to R.string.market_region_africa,
+    "asia" to R.string.market_region_asia,
+    "oceania" to R.string.market_region_oceania,
+    "asia_pacific" to R.string.market_region_asia_pacific,
 )
 
-private val EEA = EU + setOf("iceland", "liechtenstein", "norway")
+private val COUNTRY = Regex("^[A-Z]{2}$")
 
-private val EUROPE = EEA + setOf(
-    "albania", "andorra", "belarus", "bosnia and herzegovina", "gibraltar",
-    "guernsey", "isle of man", "jersey", "kosovo", "moldova", "monaco",
-    "montenegro", "north macedonia", "russia", "san marino", "serbia",
-    "switzerland", "turkey", "ukraine", "united kingdom", "vatican city",
-)
+/** Whether [region] is a country code. */
+fun isCountry(region: String): Boolean = COUNTRY.matches(region)
 
-private val NORTH_AMERICA = setOf("canada", "mexico", "united states", "usa")
+/** The locale naming country [code], a country code. */
+private fun country(code: String): Locale = Locale.Builder().setRegion(code).build()
 
-private val SOUTH_AMERICA = setOf(
-    "argentina", "bolivia", "brazil", "chile", "colombia", "ecuador",
-    "french guiana", "guyana", "paraguay", "peru", "suriname", "uruguay",
-    "venezuela",
-)
+/** The name of group [region], or null when it is not a group this client knows. */
+@StringRes
+fun groupLabel(region: String): Int? = GROUPS.firstOrNull { (code, _) -> code == region }?.second
 
-private val LATIN_AMERICA = SOUTH_AMERICA + setOf(
-    "belize", "costa rica", "cuba", "dominican republic", "el salvador",
-    "guatemala", "haiti", "honduras", "mexico", "nicaragua", "panama",
-    "puerto rico",
-)
-
-private val AMERICAS = NORTH_AMERICA + SOUTH_AMERICA + LATIN_AMERICA
-
-private val ASIA = setOf(
-    "afghanistan", "bangladesh", "bhutan", "brunei", "cambodia", "china",
-    "india", "indonesia", "japan", "kazakhstan", "kyrgyzstan", "laos",
-    "malaysia", "maldives", "mongolia", "myanmar", "nepal", "north korea",
-    "pakistan", "philippines", "singapore", "south korea", "sri lanka",
-    "taiwan", "tajikistan", "thailand", "timor-leste", "turkmenistan",
-    "uzbekistan", "vietnam",
-)
-
-private val MIDDLE_EAST = setOf(
-    "bahrain", "iran", "iraq", "israel", "jordan", "kuwait", "lebanon", "oman",
-    "palestine", "qatar", "saudi arabia", "syria", "turkey",
-    "united arab emirates", "uae", "yemen",
-)
-
-private val AFRICA = setOf(
-    "algeria", "angola", "benin", "botswana", "burkina faso", "burundi",
-    "cameroon", "cape verde", "central african republic", "chad", "comoros",
-    "democratic republic of the congo", "djibouti", "egypt", "equatorial guinea",
-    "eritrea", "eswatini", "ethiopia", "gabon", "gambia", "ghana", "guinea",
-    "guinea-bissau", "ivory coast", "kenya", "lesotho", "liberia", "libya",
-    "madagascar", "malawi", "mali", "mauritania", "mauritius", "morocco",
-    "mozambique", "namibia", "niger", "nigeria", "rwanda", "senegal",
-    "seychelles", "sierra leone", "somalia", "south africa", "south sudan",
-    "sudan", "tanzania", "togo", "tunisia", "uganda", "zambia", "zimbabwe",
-)
-
-private val OCEANIA = setOf(
-    "australia", "fiji", "kiribati", "marshall islands", "micronesia",
-    "nauru", "new zealand", "palau", "papua new guinea", "samoa",
-    "solomon islands", "tonga", "tuvalu", "vanuatu",
-)
-
-private val ASIA_PACIFIC = ASIA + OCEANIA
-
-private val REGION_GROUPS: Map<String, Set<String>> = mapOf(
-    "africa" to AFRICA,
-    "americas" to AMERICAS,
-    "apac" to ASIA_PACIFIC,
-    "asia" to ASIA,
-    "asia pacific" to ASIA_PACIFIC,
-    "asia-pacific" to ASIA_PACIFIC,
-    "eea" to EEA,
-    "eu" to EU,
-    "europe" to EUROPE,
-    "european economic area" to EEA,
-    "european union" to EU,
-    "latin america" to LATIN_AMERICA,
-    "middle east" to MIDDLE_EAST,
-    "north america" to NORTH_AMERICA,
-    "oceania" to OCEANIA,
-    "south america" to SOUTH_AMERICA,
-)
-
-/** Synonyms — buyer-typed names canonicalised to the keys in REGION_GROUPS. */
-private val COUNTRY_ALIASES: Map<String, String> = mapOf(
-    "america" to "united states",
-    "britain" to "united kingdom",
-    "deutschland" to "germany",
-    "england" to "united kingdom",
-    "españa" to "spain",
-    "espana" to "spain",
-    "great britain" to "united kingdom",
-    "holland" to "netherlands",
-    "italia" to "italy",
-    "northern ireland" to "united kingdom",
-    "scotland" to "united kingdom",
-    "uae" to "united arab emirates",
-    "uk" to "united kingdom",
-    "us" to "united states",
-    "usa" to "united states",
-    "wales" to "united kingdom",
-)
-
-private fun normalise(s: String): String = s.trim().lowercase()
-
-private fun canonicalCountry(country: String): String {
-    val c = normalise(country)
-    return COUNTRY_ALIASES[c] ?: c
+/**
+ * [region] as a reader sees it: a country's name in [locale], a group's
+ * translated name, or anything else (a region written before codes) as it is.
+ */
+fun regionName(region: String, resources: Resources, locale: Locale = Locale.getDefault()): String {
+    if (isCountry(region)) {
+        val name = country(region).getDisplayCountry(locale)
+        return name.ifBlank { region }
+    }
+    val label = groupLabel(region) ?: return region
+    return resources.getString(label)
 }
 
-fun countryInRegion(country: String, region: String): Boolean {
-    val c = canonicalCountry(country)
-    val r = normalise(region)
-    if (c.isEmpty() || r.isEmpty()) return false
-    if (c == r) return true
-    if (r in CATCH_ALL) return true
-    return REGION_GROUPS[r]?.contains(c) == true
+/**
+ * The countries a buyer picks from: the server's list, or the platform's while
+ * the server's is not to hand, sorted by their names in [locale].
+ */
+fun countryChoices(regions: ShippingRegions?, locale: Locale = Locale.getDefault()): List<String> {
+    val codes = regions?.countries?.filter { code -> isCountry(code) }?.takeIf { it.isNotEmpty() }
+        ?: Locale.getISOCountries().toList()
+    return codes.distinct().sortedWith { a, b ->
+        NaturalCompare.compare(country(a).getDisplayCountry(locale), country(b).getDisplayCountry(locale))
+    }
 }
 
-fun cheapestMatchingZone(
-    country: String,
-    zones: List<ShippingOption>,
-): ShippingOption? =
-    zones
-        .filter { countryInRegion(country, it.region) }
-        .minByOrNull { it.price }
+/**
+ * What a seller ships to: the groups first, in their fixed order (only those
+ * the server lists, once its list is to hand), then every country by name.
+ */
+fun regionChoices(regions: ShippingRegions?, locale: Locale = Locale.getDefault()): List<String> {
+    val groups = GROUPS.map { (code, _) -> code }
+        .filter { code -> regions == null || regions.groups.isEmpty() || code in regions.groups }
+    return groups + countryChoices(regions, locale)
+}
+
+/**
+ * Whether [region] covers [country] (a code): true or false when both are
+ * codes and the group's members are known, null when it cannot be said - a
+ * region written before codes, a group whose members are not to hand, or no
+ * country chosen. `world` covers every country.
+ */
+fun covers(region: String, country: String, regions: ShippingRegions?): Boolean? {
+    if (!isCountry(country)) return null
+    if (isCountry(region)) return region == country
+    if (region == WORLD) return true
+    val members = regions?.groups?.get(region) ?: return null
+    return country in members
+}
+
+/**
+ * The options a buyer in [country] may choose: all but those whose region is
+ * known not to cover it. All of them while no country is chosen.
+ */
+fun optionsFor(country: String, options: List<ShippingOption>, regions: ShippingRegions?): List<ShippingOption> =
+    options.filter { option -> covers(option.region, country, regions) != false }
+
+/** The cheapest option whose region covers [country], or null when none is known to. */
+fun cheapestFor(country: String, options: List<ShippingOption>, regions: ShippingRegions?): ShippingOption? =
+    options.filter { option -> covers(option.region, country, regions) == true }.minByOrNull { option -> option.price }
+
+/**
+ * Whether [name], [region]'s name as shown, holds [query] ignoring case and
+ * accents, or [query] is the code itself, for a picker narrowed as the user
+ * types.
+ */
+fun regionMatches(region: String, name: String, query: String): Boolean {
+    val wanted = plain(query)
+    if (wanted.isEmpty()) return true
+    return plain(name).contains(wanted) || region.equals(query.trim(), ignoreCase = true)
+}
+
+private val MARKS = Regex("\\p{Mn}+")
+
+private fun plain(text: String): String =
+    MARKS.replace(Normalizer.normalize(text.trim(), Normalizer.Form.NFD), "").lowercase()

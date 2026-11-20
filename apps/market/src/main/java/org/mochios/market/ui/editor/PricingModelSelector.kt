@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.editor
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -35,6 +36,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.ImeAction
@@ -55,14 +57,15 @@ import org.mochios.market.model.Interval
 import org.mochios.market.model.PricingModel
 
 /**
- * Stripe per-currency minimum charges in minor units; mirrors `STRIPE_MINIMUMS`
- * in `apps/market/web/src/lib/format.ts`.
+ * Stripe's per-currency minimum charges in minor units, as the Comptroller's
+ * `CURRENCY_MINIMUMS` holds them; only the fallback while the server's own
+ * (`accounts/fees`) are not to hand.
  */
 val STRIPE_MINIMUMS: Map<Currency, Long> = mapOf(
-    Currency.GBP to 50L,
+    Currency.GBP to 30L,
     Currency.USD to 50L,
     Currency.EUR to 50L,
-    Currency.JPY to 50L,
+    Currency.JPY to 100L,
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -76,6 +79,7 @@ fun PricingModelSelector(
     reserveText: String,
     instantText: String,
     opensAt: Long?,
+    minimum: Long,
     onPricingChange: (PricingModel) -> Unit,
     onCurrencyChange: (Currency) -> Unit,
     onPriceChange: (String) -> Unit,
@@ -85,6 +89,8 @@ fun PricingModelSelector(
     onInstantChange: (String) -> Unit,
     onOpensChange: (Long?) -> Unit,
     modifier: Modifier = Modifier,
+    @StringRes reserveProblem: Int? = null,
+    @StringRes instantProblem: Int? = null,
 ) {
     Column(
         modifier = modifier.fillMaxWidth(),
@@ -99,6 +105,7 @@ fun PricingModelSelector(
                         value = priceText,
                         onChange = onPriceChange,
                         currency = currency,
+                        minimum = minimum,
                         label = stringResource(R.string.market_editor_price),
                     )
                 }
@@ -110,6 +117,7 @@ fun PricingModelSelector(
                         value = priceText,
                         onChange = onPriceChange,
                         currency = currency,
+                        minimum = minimum,
                         label = stringResource(R.string.market_editor_price),
                     )
                 }
@@ -117,20 +125,31 @@ fun PricingModelSelector(
             PricingModel.AUCTION -> {
                 DurationDropdown(days = durationDays, onChange = onDurationChange)
                 StartTimeField(opensAt = opensAt, onChange = onOpensChange)
+                // The starting bid is the listing's price, which the minimum
+                // charge applies to; reserve and buy-now must each exceed it.
                 CurrencyPriceRow(currency = currency, onCurrencyChange = onCurrencyChange) {
                     PriceField(
-                        value = reserveText,
-                        onChange = onReserveChange,
+                        value = priceText,
+                        onChange = onPriceChange,
                         currency = currency,
-                        label = stringResource(R.string.market_editor_reserve),
+                        minimum = minimum,
+                        label = stringResource(R.string.market_editor_starting_bid),
                     )
                 }
+                PriceField(
+                    value = reserveText,
+                    onChange = onReserveChange,
+                    currency = currency,
+                    label = stringResource(R.string.market_editor_reserve),
+                    problem = reserveProblem?.let { stringResource(it) },
+                )
                 PriceField(
                     value = instantText,
                     onChange = onInstantChange,
                     currency = currency,
                     label = stringResource(R.string.market_editor_instant),
                     helperText = stringResource(R.string.market_editor_instant_help),
+                    problem = instantProblem?.let { stringResource(it) },
                 )
             }
         }
@@ -299,7 +318,7 @@ private fun DurationDropdown(
         onExpandedChange = { expanded = it },
     ) {
         MochiTextField(
-            value = stringResource(R.string.market_editor_days, LocalFormat.current.formatNumber(days)),
+            value = pluralStringResource(R.plurals.market_editor_days, days, LocalFormat.current.formatNumber(days)),
             onValueChange = {},
             readOnly = true,
             label = { Text(stringResource(R.string.market_editor_duration)) },
@@ -314,7 +333,7 @@ private fun DurationDropdown(
         ) {
             AUCTION_DURATIONS.forEach { d ->
                 MochiDropdownMenuItem(
-                    text = { Text(stringResource(R.string.market_editor_days, LocalFormat.current.formatNumber(d))) },
+                    text = { Text(pluralStringResource(R.plurals.market_editor_days, d, LocalFormat.current.formatNumber(d))) },
                     onClick = { onChange(d); expanded = false },
                     selected = days == d,
                 )
@@ -323,23 +342,31 @@ private fun DurationDropdown(
     }
 }
 
+/**
+ * A price in [currency]. Under [minimum], the same figure that holds back
+ * Publish, it says so; [problem] is any other reason the editor refuses it.
+ */
 @Composable
 private fun PriceField(
     value: String,
     onChange: (String) -> Unit,
     currency: Currency,
     label: String,
+    minimum: Long = 0L,
     helperText: String? = null,
+    problem: String? = null,
 ) {
     val minor = remember(value, currency) { toMinorUnits(value, currency) }
-    val minimum = STRIPE_MINIMUMS[currency] ?: 0L
     val belowMin = minor in 1L until minimum
     val warning = if (belowMin) {
         stringResource(
             R.string.market_editor_price_below_min,
             formatPrice(minimum, currency),
         )
-    } else null
+    } else {
+        problem
+    }
+    val flagged = warning != null
     Column(modifier = Modifier.fillMaxWidth()) {
         MochiTextField(
             value = value,
@@ -350,12 +377,12 @@ private fun PriceField(
                 keyboardType = KeyboardType.Decimal,
                 imeAction = ImeAction.Next,
             ),
-            isError = belowMin,
+            isError = flagged,
             supportingText = (warning ?: helperText)?.let { msg ->
                 {
                     Text(
                         text = msg,
-                        color = if (belowMin) MaterialTheme.colorScheme.error
+                        color = if (flagged) MaterialTheme.colorScheme.error
                         else MaterialTheme.colorScheme.onSurfaceVariant,
                         style = MaterialTheme.typography.bodySmall,
                     )

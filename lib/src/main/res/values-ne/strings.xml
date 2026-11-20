@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s थप जवाफहरू</item>
     </plurals>
     <string name="drawer_unread">नपढिएका</string>
+    <string name="person_unknown">अज्ञात</string>
+    <string name="format_time_seconds_short">%1$sसे</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

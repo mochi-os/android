@@ -23,7 +23,6 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -33,7 +32,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
+import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiOutlinedButton
@@ -41,37 +43,29 @@ import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 
+/**
+ * Shown to a seller whose payments are not set up yet, as their own account
+ * says. Check status asks Stripe through the Comptroller, which records the
+ * outcome on the account, and [onReady] follows when both charges and payouts
+ * are enabled, so the caller reads the account again.
+ */
 @Composable
 fun StripeOnboardingBanner(
     repository: MarketRepository,
     returnUrl: String,
+    onReady: () -> Unit,
     modifier: Modifier = Modifier,
-    initialCharges: Boolean = false,
-    initialPayouts: Boolean = false,
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
-    var charges by remember { mutableStateOf(initialCharges) }
-    var payouts by remember { mutableStateOf(initialPayouts) }
+    var ready by remember { mutableStateOf(false) }
     var busy by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
 
     val failedToOpen = stringResource(R.string.market_stripe_onboarding_failed)
 
-    LaunchedEffect(Unit) {
-        // Refresh from server once on first composition so we don't show
-        // the banner for sellers who completed onboarding off-device.
-        try {
-            val status = repository.stripeStatus()
-            charges = status.chargesEnabled
-            payouts = status.payoutsEnabled
-        } catch (_: Exception) {
-            // Keep the banner visible on error — better to over-show than under.
-        }
-    }
-
-    if (charges && payouts) return
+    if (ready) return
 
     MochiCard(
         modifier = modifier.fillMaxWidth(),
@@ -119,8 +113,10 @@ fun StripeOnboardingBanner(
                                 } else {
                                     error = failedToOpen
                                 }
-                            } catch (_: Exception) {
-                                error = failedToOpen
+                            } catch (e: CancellationException) {
+                                throw e
+                            } catch (e: Exception) {
+                                error = e.toMochiError().userMessage()
                             } finally {
                                 busy = false
                             }
@@ -156,10 +152,14 @@ fun StripeOnboardingBanner(
                         scope.launch {
                             try {
                                 val status = repository.stripeStatus()
-                                charges = status.chargesEnabled
-                                payouts = status.payoutsEnabled
-                            } catch (_: Exception) {
-                                // Leave flags alone; the banner stays visible.
+                                if (status.chargesEnabled && status.payoutsEnabled) {
+                                    ready = true
+                                    onReady()
+                                }
+                            } catch (e: CancellationException) {
+                                throw e
+                            } catch (e: Exception) {
+                                error = e.toMochiError().userMessage()
                             } finally {
                                 busy = false
                             }

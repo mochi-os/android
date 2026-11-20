@@ -26,7 +26,6 @@
     <string name="market_bid_dialog_title">Đặt giá</string>
     <string name="market_bid_ended">Phiên đấu giá đã kết thúc</string>
     <string name="market_bids_empty">Không có lượt đặt giá</string>
-    <string name="market_bids_ended">Phiên đấu giá đã kết thúc</string>
     <string name="market_bids_tab_active">Đang hoạt động</string>
     <string name="market_bids_tab_all">Tất cả</string>
     <string name="market_bids_tab_lost">Thua</string>
@@ -80,12 +79,9 @@
     <string name="market_condition_refurbished">Tân trang</string>
     <string name="market_condition_used">Đã qua sử dụng</string>
     <string name="market_dispute_dialog_cancel">Hủy</string>
-    <string name="market_dispute_dialog_evidence_role_buyer">Người mua</string>
-    <string name="market_dispute_dialog_evidence_role_seller">Người bán</string>
     <string name="market_dispute_dialog_failed">Không gửi phản hồi được</string>
     <string name="market_dispute_dialog_response_label">Phản hồi của bạn</string>
     <string name="market_dispute_dialog_submit">Gửi</string>
-    <string name="market_editor_appeal_submit">Gửi kháng nghị</string>
     <string name="market_editor_asset_external">URL bên ngoài</string>
     <string name="market_editor_asset_external_filename">Tên tệp</string>
     <string name="market_editor_back">Quay lại</string>
@@ -107,7 +103,7 @@
     <string name="market_editor_pricing_pwyw">Trả tùy ý</string>
     <string name="market_editor_pricing_subscription">Gói đăng ký</string>
     <string name="market_editor_publish">Xuất bản</string>
-    <string name="market_editor_reserve">Giá khởi điểm</string>
+    <string name="market_editor_reserve">Giá sàn</string>
     <string name="market_editor_save">Lưu</string>
     <string name="market_editor_saved">Đã lưu</string>
     <string name="market_editor_section_assets">Tài sản số</string>
@@ -122,7 +118,6 @@
     <string name="market_editor_type_digital">Kỹ thuật số</string>
     <string name="market_editor_type_physical">Vật lý</string>
     <string name="market_editor_zone_cancel">Hủy</string>
-    <string name="market_editor_zone_country_us">Hoa Kỳ</string>
     <string name="market_editor_zone_region">Khu vực</string>
     <string name="market_fee_preview_item">Mục</string>
     <string name="market_fee_preview_payout">Khoản chi trả cho bạn</string>
@@ -208,7 +203,6 @@
     <string name="market_purchase_item">Mục</string>
     <string name="market_purchase_message_seller">Nhắn tin cho người bán</string>
     <string name="market_purchase_not_found">Không tìm thấy đơn hàng</string>
-    <string name="market_purchase_order_label">Đơn hàng</string>
     <string name="market_purchase_purchased">Đã mua</string>
     <string name="market_purchase_refunded">Đã hoàn tiền</string>
     <string name="market_purchase_refunded_partial">Đã hoàn tiền (một phần)</string>
@@ -232,11 +226,7 @@
     <string name="market_refund_body">Vui lòng nêu lý do yêu cầu hoàn tiền.</string>
     <string name="market_refund_details_label">Chi tiết</string>
     <string name="market_refund_dialog_cancel">Hủy</string>
-    <string name="market_refund_dialog_description_label">Mô tả</string>
     <string name="market_refund_dialog_failed">Không phát hành hoàn tiền được</string>
-    <string name="market_refund_dialog_reason_fraud">Gian lận</string>
-    <string name="market_refund_dialog_reason_label">Lý do</string>
-    <string name="market_refund_dialog_reason_other">Khác</string>
     <string name="market_refund_dialog_submit">Phát hành hoàn tiền</string>
     <string name="market_refund_dialog_title">Phát hành hoàn tiền</string>
     <string name="market_refund_reason_damaged">Hư hỏng</string>
@@ -284,7 +274,6 @@
     <string name="market_sale_tracking_label">Số theo dõi</string>
     <string name="market_saved_title">Đã lưu</string>
     <string name="market_search_clear">Xóa tìm kiếm</string>
-    <string name="market_section_categories">Duyệt danh mục</string>
     <string name="market_section_listings">Tin đăng gần đây</string>
     <string name="market_ship_dialog_cancel">Hủy</string>
     <string name="market_ship_dialog_submit">Xác nhận</string>
@@ -340,8 +329,6 @@
     <string name="market_sale_review_response_submitting">Đang gửi…</string>
     <string name="market_checkout_subscribing">Đang đăng ký…</string>
     <string name="market_filter_remove">Xóa bộ lọc</string>
-    <string name="market_listing_detail_sales_count">%1$s lượt bán</string>
-    <string name="market_profile_sales_count">%1$s lượt bán</string>
     <string name="market_purchase_dispute_response">Phản hồi của người bán</string>
     <string name="market_purchases_order_label">Đơn hàng #%1$s</string>
 
@@ -363,7 +350,6 @@
     <string name="market_bid_dialog_no_bids_yet">Chưa có lượt đặt giá nào — giá khởi điểm %1$s</string>
     <string name="market_bid_dialog_submitting">Đang đặt giá</string>
     <string name="market_bid_ends_in">Kết thúc sau %1$s</string>
-    <string name="market_bids_ends_in">Kết thúc sau %1$s</string>
     <string name="market_bids_your_bid">Mức đặt giá của bạn: %1$s</string>
     <string name="market_carousel_main">Ảnh %1$s trên %2$s</string>
     <string name="market_carousel_thumbnail">Ảnh thu nhỏ %1$s</string>
@@ -373,14 +359,7 @@
     <string name="market_checkout_pwyw_label">Giá của bạn (tối thiểu %1$s)</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
-    <string name="market_dispute_dialog_attach">Đính kèm bằng chứng</string>
-    <string name="market_dispute_dialog_attach_count">Đã đính kèm %1$s tệp</string>
-    <string name="market_dispute_dialog_evidence_role_staff">Nhân viên Mochi</string>
-    <string name="market_dispute_dialog_evidence_section_title">Bằng chứng đã gửi</string>
-    <string name="market_dispute_dialog_evidence_submitter_line">đã gửi bởi %1$s</string>
     <string name="market_dispute_dialog_title">Phản hồi tranh chấp</string>
-    <string name="market_editor_appeal">Kháng nghị kiểm duyệt</string>
-    <string name="market_editor_appeal_reason">Vì sao bạn kháng nghị?</string>
     <string name="market_editor_asset_add">Thêm tệp</string>
     <string name="market_editor_asset_delete">Xóa tài sản</string>
     <string name="market_editor_asset_external_add">Thêm liên kết ngoài</string>
@@ -388,13 +367,11 @@
     <string name="market_editor_asset_external_url">URL tham chiếu</string>
     <string name="market_editor_assets_empty">Chưa có tài sản nào</string>
     <string name="market_editor_category_none">Chọn một danh mục</string>
-    <string name="market_editor_days">%1$s ngày</string>
     <string name="market_editor_delete">Xóa danh sách</string>
     <string name="market_editor_delete_confirm_message">Thao tác này sẽ xóa vĩnh viễn danh sách.</string>
     <string name="market_editor_delete_confirm_title">Xóa tin đăng?</string>
     <string name="market_editor_download">Tải xuống trực tiếp</string>
     <string name="market_editor_duration">Thời lượng đấu giá</string>
-    <string name="market_editor_instant">Giá mua ngay (tùy chọn)</string>
     <string name="market_editor_instant_help">Đặt thành 0 để tắt</string>
     <string name="market_editor_interval">Chu kỳ thanh toán</string>
     <string name="market_editor_photos_add">Thêm ảnh</string>
@@ -413,32 +390,18 @@
     <string name="market_editor_title_required">Nhập tiêu đề trước khi thêm ảnh hoặc tệp</string>
     <string name="market_editor_type">Phương thức giao hàng</string>
     <string name="market_editor_zone_add">Thêm khu vực</string>
-    <string name="market_editor_zone_country_au">Úc</string>
-    <string name="market_editor_zone_country_ca">Canada</string>
-    <string name="market_editor_zone_country_de">Đức</string>
-    <string name="market_editor_zone_country_es">Tây Ban Nha</string>
-    <string name="market_editor_zone_country_fr">Pháp</string>
-    <string name="market_editor_zone_country_gb">Vương quốc Anh</string>
-    <string name="market_editor_zone_country_it">Ý</string>
-    <string name="market_editor_zone_country_jp">Nhật Bản</string>
-    <string name="market_editor_zone_country_nl">Hà Lan</string>
     <string name="market_editor_zone_days">Thời gian giao hàng dự kiến</string>
     <string name="market_editor_zone_days_placeholder">ví dụ 3-5 ngày làm việc</string>
     <string name="market_editor_zone_delete">Xóa khu vực</string>
     <string name="market_editor_zone_edit">Chỉnh sửa khu vực</string>
-    <string name="market_editor_zone_european_union">Liên minh châu Âu</string>
     <string name="market_editor_zone_notes">Ghi chú (tùy chọn)</string>
     <string name="market_editor_zone_price">Phí vận chuyển</string>
     <string name="market_editor_zone_save">Lưu khu vực</string>
-    <string name="market_editor_zone_worldwide">Toàn thế giới</string>
     <string name="market_editor_zones_empty">Chưa có khu vực nào</string>
     <string name="market_empty_subtitle">Hãy thử điều chỉnh hoặc xóa bộ lọc.</string>
     <string name="market_empty_title">Không có kết quả</string>
     <string name="market_fee_disclosure_body">Phí nền tảng: %1$s%%. Xem bảng điều khiển Stripe của bạn để biết phí xử lý.</string>
     <string name="market_fee_disclosure_title">Phí nền tảng</string>
-    <string name="market_fee_preview_failed">Không thể tính phí</string>
-    <string name="market_fee_preview_loading">Đang tính phí…</string>
-    <string name="market_fee_preview_mochi_fee">Phí Mochi</string>
     <string name="market_filter_chip_max">Tối đa %1$s</string>
     <string name="market_filter_chip_min">Tối thiểu %1$s</string>
     <string name="market_filter_open">Bộ lọc</string>
@@ -446,10 +409,6 @@
     <string name="market_filter_title">Bộ lọc</string>
     <string name="market_listing_detail_appeal_pending">Đang chờ khiếu nại</string>
     <string name="market_listing_detail_buy">Mua</string>
-    <string name="market_listing_detail_relist_failed">Không thể đăng lại</string>
-    <string name="market_listing_detail_seller_banned_banner">Người bán này đã bị cấm. Không thể đặt đơn hàng mới.</string>
-    <string name="market_listing_detail_seller_suspended_banner">Người bán này đã bị tạm ngưng. Đơn hàng mới sẽ tạm dừng cho đến khi tài khoản được khôi phục.</string>
-    <string name="market_listing_detail_seller_suspended_cta_hint">Việc mua hàng bị vô hiệu hóa trong khi tài khoản của người bán đang bị hạn chế.</string>
     <string name="market_listing_no_photo">Không có ảnh</string>
     <string name="market_listing_photo">Ảnh tin đăng</string>
     <string name="market_listing_save">Lưu tin đăng</string>
@@ -461,7 +420,6 @@
     <string name="market_listings_load_failed">Không tải được tin đăng của bạn</string>
     <string name="market_listings_new">Tin đăng mới</string>
     <string name="market_listings_search_placeholder">Tìm trong tin đăng của bạn</string>
-    <string name="market_listings_share_chooser">Chia sẻ tin đăng</string>
     <string name="market_messages_compose_placeholder">Viết tin nhắn</string>
     <string name="market_messages_inbox_empty_subtitle">Khi bạn nhắn tin cho người bán (hoặc người mua nhắn cho bạn), cuộc trò chuyện sẽ xuất hiện ở đây.</string>
     <string name="market_messages_inbox_empty_title">Chưa có cuộc trò chuyện nào</string>
@@ -478,23 +436,12 @@
     <string name="market_profile_no_reviews">Chưa có đánh giá nào.</string>
     <string name="market_purchase_dispute_chargeback">Bồi hoàn %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Ngân hàng của bạn đã gửi yêu cầu bồi hoàn cho đơn hàng này. Stripe đang xử lý tranh chấp với người bán; kết quả sẽ hiển thị ở đây khi có quyết định.</string>
-    <string name="market_purchase_download_many">Tải xuống %1$s tệp của bạn bên dưới.</string>
-    <string name="market_purchase_download_one">Tải xuống tệp của bạn bên dưới.</string>
     <string name="market_purchase_review_from">Đánh giá từ %1$s</string>
-    <string name="market_purchases_auction_label">Đấu giá #%1$s</string>
 
 
     <string name="market_purchases_refunded_partial">Đã hoàn −%1$s</string>
     <string name="market_purchases_won_for">Đã thắng với giá %1$s</string>
-    <string name="market_rating_reviews">(%1$s đánh giá)</string>
-    <string name="market_refund_dialog_amount_help">Để trống để hoàn lại toàn bộ đơn hàng.</string>
     <string name="market_refund_dialog_amount_label">Số tiền</string>
-    <string name="market_refund_dialog_prior_kind_full">toàn bộ</string>
-    <string name="market_refund_dialog_prior_kind_partial">một phần</string>
-    <string name="market_refund_dialog_prior_section_title">Các khoản hoàn tiền trước đây</string>
-    <string name="market_refund_dialog_prior_title">Hoàn tiền trước đây</string>
-    <string name="market_refund_dialog_reason_duplicate">Trùng lặp</string>
-    <string name="market_refund_dialog_reason_requested">Người mua yêu cầu</string>
     <string name="market_refund_dialog_submitting">Đang hoàn tiền…</string>
     <string name="market_report_dialog_details_label">Chi tiết (tùy chọn)</string>
     <string name="market_report_dialog_submitting">Đang gửi</string>
@@ -526,7 +473,6 @@
     <string name="market_stripe_onboarding_failed">Không thể mở Stripe</string>
     <string name="market_stripe_onboarding_opening">Đang mở Stripe…</string>
     <string name="market_stripe_onboarding_title">Hoàn tất thiết lập thanh toán</string>
-    <string name="market_subscribers_cancels_on">Hủy vào %1$s</string>
     <string name="market_subscribers_empty_subtitle">Người đăng ký các tin đăng của bạn sẽ hiển thị ở đây.</string>
     <string name="market_subscribers_empty_title">Chưa có người đăng ký nào</string>
     <string name="market_subscribers_title">Người đăng ký của tôi</string>
@@ -534,7 +480,6 @@
     <string name="market_subscriptions_cancels_on">Hủy vào %1$s</string>
     <string name="market_warnings_title">Cảnh báo</string>
 
-    <string name="market_account_address_desc">Tự động điền ở các lần thanh toán sau khi tích hợp thanh toán được thêm vào.</string>
     <string name="market_account_address_title">Địa chỉ giao hàng mặc định</string>
     <string name="market_account_business_desc">Dùng cho hóa đơn và tuân thủ thuế. Không hiển thị trên hồ sơ công khai của bạn.</string>
     <string name="market_account_business_switch">Tôi bán với tư cách doanh nghiệp</string>
@@ -596,7 +541,6 @@
     <string name="market_editor_start_time_help">Để trống để bắt đầu khi xuất bản.</string>
     <string name="market_editor_start_time_next">Tiếp</string>
     <string name="market_editor_start_time_clear">Xóa</string>
-    <string name="market_listing_detail_buy_now_label">Mua ngay</string>
     <string name="market_section_recently_viewed">Đã xem gần đây</string>
     <string name="market_recently_viewed_clear">Xóa tất cả</string>
     <string name="market_listings_create">Tạo</string>
@@ -605,7 +549,6 @@
     <string name="market_listing_checkout_in_progress">Bạn có một thanh toán đang được xử lý cho danh sách này.</string>
     <string name="market_listing_checkout_cancel">Hủy thanh toán</string>
     <string name="market_listing_checkout_cancelled">Đã hủy thanh toán</string>
-    <string name="market_listing_checkout_cancel_failed">Không thể hủy thanh toán</string>
     <string name="market_account_stripe_connected">Đã kết nối Stripe</string>
     <string name="market_audit_account_banned">Đã cấm</string>
     <string name="market_audit_account_seller_activated">Đã kích hoạt người bán</string>
@@ -688,4 +631,67 @@
     <string name="market_sale_chargeback_fee_refunded">(đã hoàn tiền)</string>
     <string name="market_messages_report">Báo cáo cuộc trò chuyện này</string>
     <string name="market_report_conversation_title">Báo cáo cuộc trò chuyện</string>
+    <string name="market_audit_auction_cancelled">Phiên đấu giá đã hủy</string>
+    <string name="market_dispute_status_open">Mở</string>
+    <string name="market_dispute_status_responded">Đã phản hồi</string>
+    <string name="market_dispute_status_resolved_buyer">Đã giải quyết (người mua)</string>
+    <string name="market_dispute_status_resolved_seller">Đã giải quyết (người bán)</string>
+    <string name="market_editor_move_down">Di chuyển xuống</string>
+    <string name="market_editor_move_up">Di chuyển lên</string>
+    <string name="market_review_count">(%1$s)</string>
+    <string name="market_status_unknown">Không rõ</string>
+    <string name="market_account_stripe_pending">Stripe đã liên kết, nhưng Stripe cần thêm thông tin trước khi bạn có thể chấp nhận thanh toán</string>
+    <string name="market_editor_instant_below_start">Giá Mua Ngay phải cao hơn giá khởi điểm đấu giá.</string>
+    <string name="market_editor_reserve_above_instant">Giá sàn không được vượt quá Giá Mua Ngay.</string>
+    <string name="market_editor_reserve_below_start">Giá sàn phải cao hơn giá khởi điểm đấu giá.</string>
+    <string name="market_editor_starting_bid">Giá khởi điểm</string>
+    <string name="market_listing_detail_buy_now_price">Mua ngay — %1$s</string>
+    <string name="market_listing_detail_manage_subscription">Quản lý đăng ký</string>
+    <string name="market_listing_detail_view_order">Xem đơn hàng của bạn</string>
+    <string name="market_listing_held_title">Tin đăng này đang bị tạm giữ chờ xem xét</string>
+    <string name="market_listing_rejected_title">Tin đăng này đã bị từ chối</string>
+    <string name="market_listing_untitled">Tin đăng không tiêu đề</string>
+    <string name="market_listings_status_held">Đang chờ xét duyệt</string>
+    <string name="market_refund_dialog_amount_remaining">Để trống để hoàn lại toàn bộ %1$s còn lại.</string>
+    <string name="market_fee_preview_auction">Mochi lấy %1$s%% giá thắng cuối cùng. Phí xử lý Stripe được trừ vào phần còn lại.</string>
+    <string name="market_fee_preview_sale">Mochi lấy %1$s%% mỗi giao dịch. Phí xử lý Stripe được trừ vào phần còn lại.</string>
+    <string name="market_checkout_auction_unavailable">Chỉ người thắng đấu giá mới có thể thanh toán cho phiên đấu giá này, sau khi phiên kết thúc.</string>
+    <string name="market_editor_instant">Giá Mua ngay (tùy chọn)</string>
+    <string name="market_fee_preview_fee">Phí Mochi (%1$s%%)</string>
+    <string name="market_fee_preview_payout_minimum">Khoản chi trả cho bạn (tối thiểu)</string>
+    <string name="market_fee_preview_payout_period">Khoản chi trả cho bạn mỗi kỳ</string>
+    <string name="market_listing_detail_opens">Mở đặt giá lúc %1$s</string>
+    <string name="market_price_reserve_met">Đã đạt giá sàn</string>
+    <string name="market_price_reserve_unmet">Chưa đạt giá sàn</string>
+    <string name="market_refund_dialog_amount_invalid">Nhập số tiền từ %1$s đến %2$s</string>
+    <string name="market_refund_dialog_prior">Khoản hoàn tiền trước: %1$s</string>
+    <plurals name="market_editor_days">
+        <item quantity="other">%1$s ngày</item>
+    </plurals>
+    <plurals name="market_listing_detail_sales_count">
+        <item quantity="other">%1$s lượt bán</item>
+    </plurals>
+    <plurals name="market_profile_sales_count">
+        <item quantity="other">%1$s lượt bán</item>
+    </plurals>
+    <plurals name="market_purchase_download">
+        <item quantity="other">Tải xuống %1$s tệp của bạn bên dưới.</item>
+    </plurals>
+    <plurals name="market_rating_reviews">
+        <item quantity="other">(%1$s đánh giá)</item>
+    </plurals>
+    <string name="market_region_africa">Châu Phi</string>
+    <string name="market_region_asia">Châu Á</string>
+    <string name="market_region_asia_pacific">Châu Á - Thái Bình Dương</string>
+    <string name="market_region_eea">Khu vực Kinh tế Châu Âu</string>
+    <string name="market_region_eu">Liên Minh Châu Âu</string>
+    <string name="market_region_europe">Châu Âu</string>
+    <string name="market_region_latin_america">Châu Mỹ La-tinh</string>
+    <string name="market_region_middle_east">Trung Đông</string>
+    <string name="market_region_north_america">Bắc Mỹ</string>
+    <string name="market_region_oceania">Châu Đại Dương</string>
+    <string name="market_region_south_america">Nam Mỹ</string>
+    <string name="market_region_world">Toàn thế giới</string>
+    <string name="market_audit_order_staff_read">Đã được nhân viên xem</string>
+    <string name="market_audit_other">Hoạt động khác</string>
 </resources>

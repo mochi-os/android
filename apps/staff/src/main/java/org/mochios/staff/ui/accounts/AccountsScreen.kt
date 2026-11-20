@@ -46,6 +46,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -241,7 +242,7 @@ private fun AccountsBody(
             else -> InfiniteList(
                 items = state.accounts,
                 key = { account -> account.id },
-                isLoading = state.isLoadingMore,
+                load = state.load,
                 hasMore = state.accounts.size < state.total,
                 onLoadMore = onLoadMore,
             ) { account ->
@@ -322,7 +323,7 @@ internal fun AccountRow(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Text(
-                    text = stringResource(R.string.staff_accounts_sales, format.formatNumber(account.sales)),
+                    text = pluralStringResource(R.plurals.staff_accounts_sales, account.sales.toInt(), format.formatNumber(account.sales)),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

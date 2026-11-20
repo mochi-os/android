@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Ghi chú</string>
     <string name="staff_accounts_reason_label">Lý do</string>
     <string name="staff_accounts_reason_optional_label">Lý do (tùy chọn)</string>
-    <string name="staff_accounts_sales">%1$s lượt bán</string>
     <string name="staff_accounts_search_clear">Xóa tìm kiếm</string>
     <string name="staff_accounts_search_placeholder">Tìm kiếm</string>
     <string name="staff_accounts_seller_buyers">Chỉ người mua</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">Cuộc trò chuyện</string>
     <string name="staff_reports_conversation_empty">Không có tin nhắn</string>
     <string name="staff_reports_conversation_show">Hiện cuộc trò chuyện</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s lượt bán</item>
+    </plurals>
 </resources>

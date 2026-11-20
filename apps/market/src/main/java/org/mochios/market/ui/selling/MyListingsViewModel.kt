@@ -19,11 +19,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.market.model.AccountFees
-import org.mochios.market.model.Category
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
+import org.mochios.market.model.Account
 import org.mochios.market.model.Listing
-import org.mochios.market.model.ListingStatus
-import org.mochios.market.model.StripeStatus
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
@@ -43,10 +43,9 @@ enum class ListingsStatusFilter(val wire: String?) {
 data class MyListingsUiState(
     /** Source-of-truth listings as returned by the server (unfiltered). */
     val listings: List<Listing> = emptyList(),
-    val isLoading: Boolean = false,
-    val isRefreshing: Boolean = false,
-    val hasMore: Boolean = false,
-    val error: MochiError? = null,
+    /** The first page while nothing is listed, else the next page below the list. */
+    val load: LoadState = LoadState.Idle,
+    val paging: Paging = Paging(),
 
     val statusFilter: ListingsStatusFilter = ListingsStatusFilter.ALL,
     /** Local title filter applied client-side. The server-side query param is
@@ -54,18 +53,19 @@ data class MyListingsUiState(
      *  inefficiently; the SPA does the same client-side approach. */
     val searchQuery: String = "",
 
-    /** Account fee disclosure rendered at the top of the screen. */
-    val fees: AccountFees? = null,
-    val stripeStatus: StripeStatus? = null,
+    /**
+     * The seller's own account, once read. A seller whose payments are set up
+     * (`onboarded`) can create listings; one whose are not is shown the setup
+     * banner.
+     */
+    val account: Account? = null,
+) {
+    /** Whether New listing is offered. */
+    val listable: Boolean get() = account?.onboarded == 1
 
-    /** Category list used to resolve `Listing.category` ids into names for the badge chip. */
-    val categories: List<Category> = emptyList(),
-
-    /** Listing currently in-flight for a delete or relist mutation. */
-    val mutatingId: String? = null,
-    /** Per-action error message used for inline toast routing. */
-    val mutationError: MochiError? = null,
-)
+    /** Whether the payment setup banner is shown. */
+    val onboarding: Boolean get() = account?.seller == 1 && account.onboarded != 1
+}
 
 /**
  * Side-effect events emitted alongside state changes. Used for snackbar +
@@ -74,6 +74,8 @@ data class MyListingsUiState(
 sealed class MyListingsEvent {
     data class NavigateToEdit(val listingId: String) : MyListingsEvent()
     data class Toast(val message: String) : MyListingsEvent()
+    /** The account is not a seller's: seller settings is where one becomes a seller. */
+    data object NotSeller : MyListingsEvent()
 }
 
 @HiltViewModel
@@ -87,24 +89,30 @@ class MyListingsViewModel @Inject constructor(
     private val _events = MutableSharedFlow<MyListingsEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<MyListingsEvent> = _events.asSharedFlow()
 
-    private var page = 1
-    private val pageLimit = PAGE_LIMIT
     private var loadJob: Job? = null
 
     init {
-        loadFees()
-        loadStripeStatus()
-        loadCategories()
-        loadFirstPage()
+        loadAccount()
+        loadMore()
     }
 
-    private fun loadCategories() {
+    // ---- Account ----
+
+    /**
+     * Reads the seller's own account, held briefly and shared with the other
+     * screens; [fresh] reads it again, after the seller has finished setting
+     * up payments. A failed read leaves the account unknown: neither New
+     * listing nor the banner, and a refresh asks again.
+     */
+    fun loadAccount(fresh: Boolean = false) {
         viewModelScope.launch {
             try {
-                val categories = repo.listCategories()
-                _state.value = _state.value.copy(categories = categories)
+                val account = repo.getAccount(fresh = fresh)
+                _state.value = _state.value.copy(account = account)
+                if (account.seller != 1) _events.emit(MyListingsEvent.NotSeller)
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
-                // Categories are non-critical; cards just omit the chip.
             }
         }
     }
@@ -123,104 +131,47 @@ class MyListingsViewModel @Inject constructor(
 
     // ---- Pagination ----
 
+    /** Reads the list again from its first page, and the account if it is still unknown. */
     fun refresh() {
-        page = 1
+        loadJob?.cancel()
         _state.value = _state.value.copy(
             listings = emptyList(),
-            isRefreshing = true,
-            hasMore = false,
-            error = null,
+            load = LoadState.Idle,
+            paging = Paging(),
         )
-        loadFirstPage()
+        if (_state.value.account == null) loadAccount()
+        loadMore()
     }
 
-    private fun loadFirstPage() {
-        loadJob?.cancel()
-        loadJob = viewModelScope.launch {
-            _state.value = _state.value.copy(isLoading = true, error = null)
-            try {
-                val response = repo.mineListings(
-                    status = _state.value.statusFilter.wire,
-                    query = null,
-                    page = page,
-                    limit = pageLimit,
-                )
-                _state.value = _state.value.copy(
-                    listings = response.listings,
-                    isLoading = false,
-                    isRefreshing = false,
-                    hasMore = response.listings.size.toLong() < response.total,
-                )
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    isRefreshing = false,
-                    error = e.toMochiError(),
-                )
-            }
-        }
-    }
-
+    /**
+     * Reads the next page, from the list's foot or its retry; the first page
+     * when nothing is listed yet.
+     */
     fun loadMore() {
         val current = _state.value
-        if (current.isLoading || !current.hasMore) return
+        if (current.load == LoadState.Loading || !current.paging.more) return
+        _state.value = current.copy(load = LoadState.Loading)
         // Tracked in loadJob so a status-tab switch cancels it: an untracked
         // page fetch finishing after refresh() would merge the previous tab's
         // rows on top of the new tab's list.
-        loadJob?.cancel()
         loadJob = viewModelScope.launch {
-            _state.value = current.copy(isLoading = true)
             try {
                 val response = repo.mineListings(
                     status = current.statusFilter.wire,
                     query = null,
-                    page = page + 1,
-                    limit = pageLimit,
+                    page = current.paging.page,
+                    limit = PAGE_LIMIT,
+                    after = current.paging.cursor,
                 )
-                // Advance only once the page is in hand. Incrementing before
-                // the request permanently skips the page whenever it fails:
-                // hasMore stays true, so the next attempt asks for the one
-                // after, and those listings are unreachable until a refresh.
-                page += 1
-                val merged = _state.value.listings + response.listings
                 _state.value = _state.value.copy(
-                    listings = merged,
-                    isLoading = false,
-                    hasMore = merged.size.toLong() < response.total,
+                    listings = _state.value.listings.append(response.listings) { listing -> listing.id },
+                    load = LoadState.Idle,
+                    paging = current.paging.advance(response.listings.size, response.total, response.next),
                 )
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
-            }
-        }
-    }
-
-    // ---- Account fees + stripe ----
-
-    private fun loadFees() {
-        viewModelScope.launch {
-            try {
-                val fees = repo.getFees()
-                _state.value = _state.value.copy(fees = fees)
-            } catch (_: Exception) {
-                // Non-fatal — the fee disclosure card just hides itself.
-            }
-        }
-    }
-
-    private fun loadStripeStatus() {
-        viewModelScope.launch {
-            try {
-                val status = repo.stripeStatus()
-                _state.value = _state.value.copy(stripeStatus = status)
-            } catch (_: Exception) {
-                // Non-fatal — the banner just hides itself.
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }
@@ -229,17 +180,13 @@ class MyListingsViewModel @Inject constructor(
 
     fun deleteListing(listing: Listing, failureFallback: String) {
         viewModelScope.launch {
-            _state.value = _state.value.copy(mutatingId = listing.id, mutationError = null)
             try {
                 repo.deleteListing(listing.id)
                 _state.value = _state.value.copy(
                     listings = _state.value.listings.filterNot { it.id == listing.id },
-                    mutatingId = null,
                 )
             } catch (e: Exception) {
-                val err = e.toMochiError()
-                _state.value = _state.value.copy(mutatingId = null, mutationError = err)
-                val msg = errorMessageOrFallback(err, failureFallback)
+                val msg = errorMessageOrFallback(e.toMochiError(), failureFallback)
                 _events.emit(MyListingsEvent.Toast(msg))
             }
         }
@@ -247,15 +194,11 @@ class MyListingsViewModel @Inject constructor(
 
     fun relistListing(listing: Listing, failureFallback: String) {
         viewModelScope.launch {
-            _state.value = _state.value.copy(mutatingId = listing.id, mutationError = null)
             try {
                 val response = repo.relistListing(listing.id)
-                _state.value = _state.value.copy(mutatingId = null)
                 _events.emit(MyListingsEvent.NavigateToEdit(response.listing.id))
             } catch (e: Exception) {
-                val err = e.toMochiError()
-                _state.value = _state.value.copy(mutatingId = null, mutationError = err)
-                val msg = errorMessageOrFallback(err, failureFallback)
+                val msg = errorMessageOrFallback(e.toMochiError(), failureFallback)
                 _events.emit(MyListingsEvent.Toast(msg))
             }
         }

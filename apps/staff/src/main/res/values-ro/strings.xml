@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Note</string>
     <string name="staff_accounts_reason_label">Motiv</string>
     <string name="staff_accounts_reason_optional_label">Motiv (opțional)</string>
-    <string name="staff_accounts_sales">%1$s vânzări</string>
     <string name="staff_accounts_search_clear">Golește căutarea</string>
     <string name="staff_accounts_search_placeholder">Caută</string>
     <string name="staff_accounts_seller_buyers">Doar cumpărătorii</string>
@@ -438,4 +437,9 @@
     <string name="staff_reports_conversation">Conversație</string>
     <string name="staff_reports_conversation_empty">Niciun mesaj</string>
     <string name="staff_reports_conversation_show">Afișează conversația</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s vânzare</item>
+        <item quantity="few">%1$s vânzări</item>
+        <item quantity="other">%1$s de vânzări</item>
+    </plurals>
 </resources>

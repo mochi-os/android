@@ -340,4 +340,7 @@
         <item quantity="other">+%1$s balesan liyané</item>
     </plurals>
     <string name="drawer_unread">Durung diwaca</string>
+    <string name="person_unknown">Ora dimangerteni</string>
+    <string name="format_time_seconds_short">%1$sdt</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

@@ -395,7 +395,6 @@
 
     <string name="staff_accounts_action_unsuspend_title">Ɗage dakatarwa</string>
     <string name="staff_accounts_reason_optional_label">Dalili (na zaɓi)</string>
-    <string name="staff_accounts_sales">Sayarwa %1$s</string>
     <string name="staff_appeals_reason_label">Dalilin ƙara na mai sayarwa</string>
     <string name="staff_audit_action_staff_team_role_changed">An canza matsayin ma\'aikaci</string>
     <string name="staff_categories_delete_desc">A goge \"%1$s\"? Ba za a iya warware wannan ba.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Tattaunawa</string>
     <string name="staff_reports_conversation_empty">Babu saƙonni</string>
     <string name="staff_reports_conversation_show">Nuna tattaunawa</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">Sayarwa %1$s</item>
+        <item quantity="other">Sayarwa %1$s</item>
+    </plurals>
 </resources>

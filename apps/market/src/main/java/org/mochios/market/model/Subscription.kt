@@ -28,6 +28,10 @@ data class Subscription(
     val title: String? = null,
     @SerializedName("listing_type") val listingType: String? = null,
     @SerializedName("buyer_name") val buyerName: String? = null,
+    /** On `subscriptions/subscribers` rows. */
+    @SerializedName("buyer_fingerprint") val buyerFingerprint: String? = null,
+    /** On `subscriptions/mine` rows. */
+    @SerializedName("seller_fingerprint") val sellerFingerprint: String? = null,
 )
 
 /**

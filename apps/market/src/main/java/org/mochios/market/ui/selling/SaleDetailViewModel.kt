@@ -132,16 +132,12 @@ class SaleDetailViewModel @Inject constructor(
         }
     }
 
-    fun refundOrder(amount: Long?, reason: String, description: String, fallback: String) {
+    /** Refund [amount] minor units, or the whole remainder when null. */
+    fun refundOrder(amount: Long?, fallback: String) {
         viewModelScope.launch {
             _state.value = _state.value.copy(refundSubmitting = true, refundError = null)
             try {
-                val result = repo.refundOrder(
-                    id = orderId,
-                    amount = amount,
-                    reason = (reason + if (description.isNotBlank()) ": $description" else "")
-                        .takeIf { it.isNotBlank() },
-                )
+                val result = repo.refundOrder(id = orderId, amount = amount)
                 val current = _state.value.order ?: return@launch
                 _state.value = _state.value.copy(
                     order = current.copy(
@@ -150,9 +146,6 @@ class SaleDetailViewModel @Inject constructor(
                     ),
                     refundSubmitting = false,
                 )
-                // Description text is appended onto `reason` because the
-                // comptroller surface accepts a single combined reason field.
-                // No need to thread `description` separately into the repo.
                 _events.emit(SaleDetailEvent.Completed(SaleDialog.REFUND))
             } catch (e: Exception) {
                 val err = e.toMochiError()

@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Eslatmalar</string>
     <string name="staff_accounts_reason_label">Sabab</string>
     <string name="staff_accounts_reason_optional_label">Sabab (ixtiyoriy)</string>
-    <string name="staff_accounts_sales">%1$s sotuv</string>
     <string name="staff_accounts_search_clear">Qidiruvni tozalash</string>
     <string name="staff_accounts_search_placeholder">Qidirish</string>
     <string name="staff_accounts_seller_buyers">Faqat xaridorlar</string>
@@ -440,4 +439,8 @@
     <string name="staff_reports_conversation">Suhbat</string>
     <string name="staff_reports_conversation_empty">Xabarlar yoʻq</string>
     <string name="staff_reports_conversation_show">Suhbatni koʻrsatish</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s sotuv</item>
+        <item quantity="other">%1$s sotuv</item>
+    </plurals>
 </resources>

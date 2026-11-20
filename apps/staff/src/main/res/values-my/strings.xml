@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">အမှာစာ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">အကြောင်းပြချက် (ရွေးချယ်နိုင်)</string>
-    <string name="staff_accounts_sales">ရောင်းအား %1$s ခု</string>
     <string name="staff_appeals_reason_label">ရောင်းသူ၏ အယူခံအကြောင်းပြချက်</string>
     <string name="staff_audit_action_staff_team_role_changed">ဝန်ထမ်းအခန်းကဏ္ဍ ပြောင်းလဲခဲ့သည်</string>
     <string name="staff_categories_delete_desc">“%1$s” ကို ဖျက်မလား။ ဤလုပ်ဆောင်ချက်ကို ပြန်ပြင်၍မရပါ။</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">စကားဝိုင်း</string>
     <string name="staff_reports_conversation_empty">မက်ဆေ့ချ်များ မရှိပါ</string>
     <string name="staff_reports_conversation_show">စကားဝိုင်းကို ပြပါ</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">ရောင်းအား %1$s ခု</item>
+    </plurals>
 </resources>

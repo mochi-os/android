@@ -17,6 +17,7 @@ import kotlinx.coroutines.sync.withLock
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.api.unwrapRaw
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileRepository
@@ -536,8 +537,9 @@ class ForumsRepository @Inject constructor(
         api.adjustTagInterest(forumId, qid, direction).unwrap()
     }
 
+    /** The clear answers no data; only a refusal is a failure. */
     suspend fun clearNotifications(forumId: String) {
-        api.clearNotifications(forumId).unwrap()
+        api.clearNotifications(forumId).unwrapEmpty()
     }
 
     suspend fun getNotifications(forumId: String): NotificationSettings =

@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Bilješke</string>
     <string name="staff_accounts_reason_label">Razlog</string>
     <string name="staff_accounts_reason_optional_label">Razlog (opcionalno)</string>
-    <string name="staff_accounts_sales">%1$s prodaja</string>
     <string name="staff_accounts_search_clear">Očisti pretragu</string>
     <string name="staff_accounts_search_placeholder">Pretraži</string>
     <string name="staff_accounts_seller_buyers">Samo kupci</string>
@@ -438,4 +437,9 @@
     <string name="staff_reports_conversation">Razgovor</string>
     <string name="staff_reports_conversation_empty">Nema poruka</string>
     <string name="staff_reports_conversation_show">Prikaži razgovor</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s prodaja</item>
+        <item quantity="few">%1$s prodaje</item>
+        <item quantity="other">%1$s prodaja</item>
+    </plurals>
 </resources>

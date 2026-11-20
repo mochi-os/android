@@ -56,7 +56,7 @@ class EditListingUnsentTest {
                 requests.add(path to request.body.readUtf8())
                 return when (path) {
                     "-/photos/delete" -> MockResponse().setBody("""{"data": {"ok": true}, "unsent": ["Deleted, without its photo"]}""")
-                    "-/photos/reorder" -> MockResponse().setBody("""{"data": {"ok": true}, "unsent": ["Reordered, without its photo"]}""")
+                    "-/photos/reorder" -> MockResponse().setBody("""{"data": [{"id": "p1", "rank": 0}], "unsent": ["Reordered, without its photo"]}""")
                     "-/listings/publish" -> MockResponse().setBody("""{"data": {"id": "l1"}, "unsent": ["Published, without its photo"]}""")
                     else -> MockResponse().setResponseCode(404)
                 }
@@ -104,7 +104,9 @@ class EditListingUnsentTest {
     @Test
     fun `a reorder and a publish say what the copies went without`() {
         val repository = repository()
-        assertEquals(listOf("Reordered, without its photo"), runBlocking { repository.reorderPhotos("l1", listOf("p1")) })
+        val reordered = runBlocking { repository.reorderPhotos("l1", listOf("p1")) }
+        assertEquals(listOf("p1"), reordered.data.map { it.id })
+        assertEquals(listOf("Reordered, without its photo"), reordered.unsent)
         val published = runBlocking { repository.publishListing(mapOf("id" to "l1")) }
         assertEquals("l1", published.data.id)
         assertEquals(listOf("Published, without its photo"), published.unsent)

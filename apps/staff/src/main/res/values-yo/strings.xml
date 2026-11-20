@@ -393,7 +393,6 @@
     <string name="staff_accounts_action_unban_title">Gbé ìfòfindè kúrò</string>
     <string name="staff_accounts_action_unsuspend_title">Gbé ìdádúró kúrò</string>
     <string name="staff_accounts_reason_optional_label">Ìdí (ìyàn)</string>
-    <string name="staff_accounts_sales">%1$s títà</string>
     <string name="staff_appeals_reason_label">Ìdí ẹ̀bẹ̀ olùtà</string>
     <string name="staff_audit_action_staff_team_role_changed">Ipa òṣìṣẹ́ ti yí padà</string>
     <string name="staff_categories_delete_desc">Pa “%1$s” rẹ́? A kò lè yí èyí padà.</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">Ìjíròrò</string>
     <string name="staff_reports_conversation_empty">Kò sí ìránṣẹ́</string>
     <string name="staff_reports_conversation_show">Fi ìjíròrò hàn</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s títà</item>
+    </plurals>
 </resources>

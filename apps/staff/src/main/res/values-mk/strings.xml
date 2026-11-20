@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Белешки</string>
     <string name="staff_accounts_reason_label">Причина</string>
     <string name="staff_accounts_reason_optional_label">Причина (опционално)</string>
-    <string name="staff_accounts_sales">%1$s продажби</string>
     <string name="staff_accounts_search_clear">Исчисти пребарување</string>
     <string name="staff_accounts_search_placeholder">Барај</string>
     <string name="staff_accounts_seller_buyers">Само купувачи</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Разговор</string>
     <string name="staff_reports_conversation_empty">Нема пораки</string>
     <string name="staff_reports_conversation_show">Прикажи разговор</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s продажба</item>
+        <item quantity="other">%1$s продажби</item>
+    </plurals>
 </resources>

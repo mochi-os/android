@@ -5,6 +5,9 @@
 
 package org.mochios.android.format
 
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
+import org.mochios.android.R
 import java.text.NumberFormat
 import java.util.Currency as JavaCurrency
 import java.util.Locale
@@ -135,6 +138,16 @@ fun formatFingerprint(fingerprint: String): String {
     val fp = fingerprint.substring(0, 9)
     return "${fp.substring(0, 3)}-${fp.substring(3, 6)}-${fp.substring(6, 9)}"
 }
+
+/**
+ * What to call a person: their [name], else their punctuated [fingerprint],
+ * else a translated "Unknown"; never their entity id, which means nothing to a
+ * reader.
+ */
+@Composable
+fun personName(name: String?, fingerprint: String?): String =
+    name?.takeIf { it.isNotBlank() }
+        ?: formatFingerprint(fingerprint.orEmpty()).ifEmpty { stringResource(R.string.person_unknown) }
 
 private fun pow10(n: Int): Long {
     var v = 1L

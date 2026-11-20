@@ -35,11 +35,15 @@ import org.mochios.market.model.AuditEvent
 
 /**
  * The wire action key as a translated label; mirrors web's `useActionLabels`.
- * An action the map does not know renders as its key, as on web.
+ * An action the map does not know reads as "Other activity", never as its key.
  */
 @Composable
-fun auditActionLabel(action: String): String {
-    val resource = when (action) {
+fun auditActionLabel(action: String): String =
+    stringResource(auditActionResource(action) ?: R.string.market_audit_other)
+
+/** The label for the wire action key [action], or null for one this client does not know. */
+internal fun auditActionResource(action: String): Int? {
+    return when (action) {
         "order.created" -> R.string.market_audit_order_created
         "order.paid" -> R.string.market_audit_order_paid
         "order.payment_failed" -> R.string.market_audit_order_payment_failed
@@ -50,6 +54,7 @@ fun auditActionLabel(action: String): String {
         "order.chargeback" -> R.string.market_audit_order_chargeback
         "order.chargeback_won" -> R.string.market_audit_order_chargeback_won
         "order.chargeback_lost" -> R.string.market_audit_order_chargeback_lost
+        "order.staff_read" -> R.string.market_audit_order_staff_read
         "dispute.opened" -> R.string.market_audit_dispute_opened
         "dispute.responded" -> R.string.market_audit_dispute_responded
         "dispute.resolved_buyer" -> R.string.market_audit_dispute_resolved_buyer
@@ -73,8 +78,11 @@ fun auditActionLabel(action: String): String {
         "auction.ended_sold" -> R.string.market_audit_auction_ended_sold
         "auction.ended_unsold" -> R.string.market_audit_auction_ended_unsold
         "auction.payment_overdue" -> R.string.market_audit_auction_payment_overdue
+        "auction.cancelled" -> R.string.market_audit_auction_cancelled
         "subscription.created" -> R.string.market_audit_subscription_created
-        "subscription.activated" -> R.string.market_audit_subscription_activated
+        // The webhook writes the status Stripe reports, which for a
+        // subscription starting again is "active".
+        "subscription.activated", "subscription.active" -> R.string.market_audit_subscription_activated
         "subscription.cancel_scheduled" -> R.string.market_audit_subscription_cancel_scheduled
         "subscription.cancelled" -> R.string.market_audit_subscription_cancelled
         "subscription.paused" -> R.string.market_audit_subscription_paused
@@ -103,7 +111,6 @@ fun auditActionLabel(action: String): String {
         "account.unbanned" -> R.string.market_audit_account_unbanned
         else -> null
     }
-    return if (resource != null) stringResource(resource) else action
 }
 
 /**

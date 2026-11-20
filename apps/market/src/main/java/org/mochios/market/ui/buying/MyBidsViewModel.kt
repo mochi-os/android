@@ -8,12 +8,17 @@ package org.mochios.market.ui.buying
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
 import org.mochios.market.model.Bid
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
@@ -32,9 +37,10 @@ enum class BidsFilter(val wire: String?) {
 data class MyBidsUiState(
     val filter: BidsFilter = BidsFilter.ALL,
     val isLoading: Boolean = true,
-    val isLoadingMore: Boolean = false,
+    /** The next page of bids, for the list's foot. */
+    val load: LoadState = LoadState.Idle,
     val bids: List<Bid> = emptyList(),
-    val total: Long = 0,
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
 )
 
@@ -48,6 +54,9 @@ class MyBidsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(MyBidsUiState())
     val uiState: StateFlow<MyBidsUiState> = _uiState.asStateFlow()
 
+    /** The read under way; a change of tab replaces it, so a page of another tab is not appended. */
+    private var job: Job? = null
+
     init {
         load(BidsFilter.ALL)
     }
@@ -57,16 +66,22 @@ class MyBidsViewModel @Inject constructor(
         load(filter)
     }
 
+    /** Reads [filter]'s first page again, as its error state's retry does. */
+    fun retry() = load(_uiState.value.filter)
+
     private fun load(filter: BidsFilter) {
-        viewModelScope.launch {
+        job?.cancel()
+        job = viewModelScope.launch {
             _uiState.value = MyBidsUiState(filter = filter, isLoading = true)
             try {
                 val r = repository.myBids(status = filter.wire, page = 1, limit = PAGE_SIZE)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     bids = r.bids,
-                    total = r.total,
+                    paging = Paging().advance(r.bids.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -76,21 +91,28 @@ class MyBidsViewModel @Inject constructor(
         }
     }
 
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _uiState.value
-        if (s.isLoadingMore || s.bids.size >= s.total) return
-        val nextPage = (s.bids.size / PAGE_SIZE) + 1
-        viewModelScope.launch {
-            _uiState.value = s.copy(isLoadingMore = true)
+        if (s.isLoading || s.load == LoadState.Loading || !s.paging.more) return
+        job = viewModelScope.launch {
+            _uiState.value = s.copy(load = LoadState.Loading)
             try {
-                val r = repository.myBids(status = s.filter.wire, page = nextPage, limit = PAGE_SIZE)
-                _uiState.value = _uiState.value.copy(
-                    isLoadingMore = false,
-                    bids = _uiState.value.bids + r.bids,
-                    total = r.total,
+                val r = repository.myBids(
+                    status = s.filter.wire,
+                    page = s.paging.page,
+                    limit = PAGE_SIZE,
+                    after = s.paging.cursor,
                 )
-            } catch (_: Exception) {
-                _uiState.value = _uiState.value.copy(isLoadingMore = false)
+                _uiState.value = _uiState.value.copy(
+                    load = LoadState.Idle,
+                    bids = _uiState.value.bids.append(r.bids) { bid -> bid.id },
+                    paging = s.paging.advance(r.bids.size, r.total, r.next),
+                )
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }

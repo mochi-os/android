@@ -395,7 +395,6 @@
     <string name="staff_dashboard_order_fallback">Sargyt #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">Sebäp (hökmany däl)</string>
-    <string name="staff_accounts_sales">%1$s satuw</string>
     <string name="staff_appeals_reason_label">Satyjynyň şikaýat sebäbi</string>
     <string name="staff_audit_action_staff_team_role_changed">Işgär roly üýtgedildi</string>
     <string name="staff_categories_delete_desc">“%1$s” pozulsynmy? Bu yzyna gaýtaryp bolmaýar.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Söhbet</string>
     <string name="staff_reports_conversation_empty">Habarlar ýok</string>
     <string name="staff_reports_conversation_show">Söhbeti görkez</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s satuw</item>
+        <item quantity="other">%1$s satuw</item>
+    </plurals>
 </resources>

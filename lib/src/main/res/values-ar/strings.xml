@@ -349,4 +349,7 @@
         <item quantity="other">+%1$s رد إضافي</item>
     </plurals>
     <string name="drawer_unread">غير المقروءة</string>
+    <string name="person_unknown">غير معروف</string>
+    <string name="format_time_seconds_short">%1$s ث</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

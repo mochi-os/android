@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s ևս պատասխան</item>
     </plurals>
     <string name="drawer_unread">Չկարդացված</string>
+    <string name="person_unknown">Անհայտ</string>
+    <string name="format_time_seconds_short">%1$sվ</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

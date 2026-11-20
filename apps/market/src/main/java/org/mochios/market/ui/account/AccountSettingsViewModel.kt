@@ -18,11 +18,10 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.model.PlaceData
-import org.mochios.market.R
 import org.mochios.market.lib.ParsedLocation
 import org.mochios.market.lib.parseLocation
 import org.mochios.market.model.Account
-import org.mochios.market.model.AccountFees
+import org.mochios.market.model.ShippingRegions
 import org.mochios.market.model.StripeStatus
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
@@ -45,8 +44,8 @@ data class AccountSettingsUiState(
     val addressCountryDraft: String = "",
     val stripeStatus: StripeStatus? = null,
     val stripeStatusLoading: Boolean = false,
-    val stripeConnecting: Boolean = false,
-    val fees: AccountFees? = null,
+    /** The countries a saved address may name, once read. */
+    val regions: ShippingRegions? = null,
     val error: MochiError? = null,
 )
 
@@ -86,7 +85,7 @@ class AccountSettingsViewModel @Inject constructor(
                 if (account.onboarded == 1) {
                     refreshStripe()
                 }
-                loadFees()
+                loadRegions()
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
                     isLoading = false,
@@ -96,11 +95,11 @@ class AccountSettingsViewModel @Inject constructor(
         }
     }
 
-    /** Platform fee % for the "Become a seller" disclosure. Best-effort. */
-    private fun loadFees() {
+    /** The country list the address picks from. Best-effort: the platform's stands in. */
+    private fun loadRegions() {
         viewModelScope.launch {
-            val fees = runCatching { repo.getFees() }.getOrNull() ?: return@launch
-            _state.value = _state.value.copy(fees = fees)
+            val regions = runCatching { repo.shippingRegions() }.getOrNull() ?: return@launch
+            _state.value = _state.value.copy(regions = regions)
         }
     }
 
@@ -181,59 +180,6 @@ class AccountSettingsViewModel @Inject constructor(
                 _events.send(AccountSettingsEvent.Saved)
             } catch (e: Exception) {
                 _state.value = _state.value.copy(isSaving = false)
-                _events.send(AccountSettingsEvent.Error(e.toMochiError()))
-            }
-        }
-    }
-
-    /**
-     * Stripe onboarding requires an activated seller account, so activate first
-     * when the caller is not one yet.
-     */
-    fun connectStripe(returnUrl: String, onUrl: (String) -> Unit) {
-        if (_state.value.stripeConnecting) return
-        viewModelScope.launch {
-            _state.value = _state.value.copy(stripeConnecting = true)
-            try {
-                var account = _state.value.account
-                if (account == null || account.seller != 1) {
-                    account = repo.activateAccount(returnUrl)
-                    _state.value = _state.value.copy(account = account)
-                }
-                val resp = repo.stripeOnboarding(returnUrl)
-                if (resp.url.isNotBlank()) {
-                    onUrl(resp.url)
-                } else {
-                    _events.send(
-                        AccountSettingsEvent.Error(MochiError.Local(R.string.market_account_stripe_open_failed)),
-                    )
-                }
-            } catch (e: Exception) {
-                _events.send(AccountSettingsEvent.Error(e.toMochiError()))
-            } finally {
-                _state.value = _state.value.copy(stripeConnecting = false)
-            }
-        }
-    }
-
-    /**
-     * Reloads the account row as well as the Stripe flags, unlike
-     * [refreshStripe].
-     */
-    fun checkStripeStatus() {
-        if (_state.value.stripeStatusLoading) return
-        viewModelScope.launch {
-            _state.value = _state.value.copy(stripeStatusLoading = true)
-            try {
-                val account = repo.getAccount(fresh = true)
-                val status = runCatching { repo.stripeStatus() }.getOrNull()
-                _state.value = _state.value.copy(
-                    account = account,
-                    stripeStatus = status ?: _state.value.stripeStatus,
-                    stripeStatusLoading = false,
-                )
-            } catch (e: Exception) {
-                _state.value = _state.value.copy(stripeStatusLoading = false)
                 _events.send(AccountSettingsEvent.Error(e.toMochiError()))
             }
         }

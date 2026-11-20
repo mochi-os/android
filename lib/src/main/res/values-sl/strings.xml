@@ -345,4 +345,7 @@
         <item quantity="other">še +%1$s odgovorov</item>
     </plurals>
     <string name="drawer_unread">Neprebrano</string>
+    <string name="person_unknown">Neznano</string>
+    <string name="format_time_seconds_short">%1$s s</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

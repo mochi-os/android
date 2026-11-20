@@ -272,4 +272,7 @@
     <string name="launcher_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="common_continue">Weiter</string>
     <string name="drawer_unread">Ungelesen</string>
+    <string name="person_unknown">Unbekannt</string>
+    <string name="format_time_seconds_short">%1$s Sek.</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

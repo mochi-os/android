@@ -136,6 +136,8 @@
     <string name="person_picker_none">None</string>
     <string name="person_picker_project_members">Project members</string>
     <string name="person_picker_directory">Directory</string>
+    <!-- A person with no name and no fingerprint to show instead -->
+    <string name="person_unknown">Unknown</string>
 
     <!-- Place picker -->
     <string name="place_picker_name">Place name</string>
@@ -209,6 +211,8 @@
     <string name="format_time_days_short">%1$sd</string>
     <string name="format_time_weeks_short">%1$sw</string>
     <string name="format_time_months_short">%1$smo</string>
+    <string name="format_time_seconds_short">%1$ss</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 
     <!-- Reactions -->
     <string name="reaction_add">Add reaction</string>

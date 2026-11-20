@@ -26,7 +26,6 @@
     <string name="market_bid_dialog_title">Υποβολή προσφοράς</string>
     <string name="market_bid_ended">Η δημοπρασία έληξε</string>
     <string name="market_bids_empty">Καμία προσφορά</string>
-    <string name="market_bids_ended">Η δημοπρασία έληξε</string>
     <string name="market_bids_tab_active">Ενεργό</string>
     <string name="market_bids_tab_all">Όλα</string>
     <string name="market_bids_tab_lost">Χαμένη</string>
@@ -80,12 +79,9 @@
     <string name="market_condition_refurbished">Ανακατασκευασμένο</string>
     <string name="market_condition_used">Μεταχειρισμένο</string>
     <string name="market_dispute_dialog_cancel">Ακύρωση</string>
-    <string name="market_dispute_dialog_evidence_role_buyer">Αγοραστής</string>
-    <string name="market_dispute_dialog_evidence_role_seller">Πωλητής</string>
     <string name="market_dispute_dialog_failed">Αποτυχία υποβολής απόκρισης</string>
     <string name="market_dispute_dialog_response_label">Η απάντησή σας</string>
     <string name="market_dispute_dialog_submit">Υποβολή</string>
-    <string name="market_editor_appeal_submit">Υποβολή ένστασης</string>
     <string name="market_editor_asset_external">Εξωτερικό URL</string>
     <string name="market_editor_asset_external_filename">Όνομα αρχείου</string>
     <string name="market_editor_back">Πίσω</string>
@@ -122,7 +118,6 @@
     <string name="market_editor_type_digital">Ψηφιακό</string>
     <string name="market_editor_type_physical">Φυσικό</string>
     <string name="market_editor_zone_cancel">Ακύρωση</string>
-    <string name="market_editor_zone_country_us">Ηνωμένες Πολιτείες</string>
     <string name="market_editor_zone_region">Περιοχή</string>
     <string name="market_fee_preview_item">Στοιχείο</string>
     <string name="market_fee_preview_payout">Η πληρωμή σας</string>
@@ -208,7 +203,6 @@
     <string name="market_purchase_item">Στοιχείο</string>
     <string name="market_purchase_message_seller">Μήνυμα στον πωλητή</string>
     <string name="market_purchase_not_found">Η παραγγελία δεν βρέθηκε</string>
-    <string name="market_purchase_order_label">Παραγγελία</string>
     <string name="market_purchase_purchased">Αγορασμένο</string>
     <string name="market_purchase_refunded">Επιστράφηκαν χρήματα</string>
     <string name="market_purchase_refunded_partial">Μερική επιστροφή</string>
@@ -232,11 +226,7 @@
     <string name="market_refund_body">Δώστε έναν λόγο για το αίτημα επιστροφής χρημάτων.</string>
     <string name="market_refund_details_label">Λεπτομέρειες</string>
     <string name="market_refund_dialog_cancel">Ακύρωση</string>
-    <string name="market_refund_dialog_description_label">Περιγραφή</string>
     <string name="market_refund_dialog_failed">Αποτυχία έκδοσης επιστροφής χρημάτων</string>
-    <string name="market_refund_dialog_reason_fraud">Δόλιο</string>
-    <string name="market_refund_dialog_reason_label">Αιτία</string>
-    <string name="market_refund_dialog_reason_other">Άλλο</string>
     <string name="market_refund_dialog_submit">Έκδοση επιστροφής χρημάτων</string>
     <string name="market_refund_dialog_title">Έκδοση επιστροφής χρημάτων</string>
     <string name="market_refund_reason_damaged">Κατεστραμμένο</string>
@@ -284,7 +274,6 @@
     <string name="market_sale_tracking_label">Αριθμός παρακολούθησης</string>
     <string name="market_saved_title">Αποθηκευμένα</string>
     <string name="market_search_clear">Εκκαθάριση αναζήτησης</string>
-    <string name="market_section_categories">Περιήγηση κατηγοριών</string>
     <string name="market_section_listings">Πρόσφατες καταχωρίσεις</string>
     <string name="market_ship_dialog_cancel">Ακύρωση</string>
     <string name="market_ship_dialog_submit">Επιβεβαίωση</string>
@@ -340,8 +329,6 @@
     <string name="market_sale_review_response_submitting">Υποβολή…</string>
     <string name="market_checkout_subscribing">Εγγραφή…</string>
     <string name="market_filter_remove">Αφαίρεση φίλτρου</string>
-    <string name="market_listing_detail_sales_count">%1$s πωλήσεις</string>
-    <string name="market_profile_sales_count">%1$s πωλήσεις</string>
     <string name="market_purchase_dispute_response">Απάντηση πωλητή</string>
     <string name="market_purchases_order_label">Παραγγελία #%1$s</string>
 
@@ -363,7 +350,6 @@
     <string name="market_bid_dialog_no_bids_yet">Καμία προσφορά ακόμη — αρχική προσφορά %1$s</string>
     <string name="market_bid_dialog_submitting">Υποβολή προσφοράς</string>
     <string name="market_bid_ends_in">Λήγει σε %1$s</string>
-    <string name="market_bids_ends_in">Λήγει σε %1$s</string>
     <string name="market_bids_your_bid">Η προσφορά σας: %1$s</string>
     <string name="market_carousel_main">Φωτογραφία %1$s από %2$s</string>
     <string name="market_carousel_thumbnail">Μικρογραφία %1$s</string>
@@ -373,14 +359,7 @@
     <string name="market_checkout_pwyw_label">Η τιμή σας (ελάχιστο %1$s)</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
-    <string name="market_dispute_dialog_attach">Επισύναψη αποδεικτικών</string>
-    <string name="market_dispute_dialog_attach_count">%1$s αρχείο(α) συνημμένα</string>
-    <string name="market_dispute_dialog_evidence_role_staff">Προσωπικό Mochi</string>
-    <string name="market_dispute_dialog_evidence_section_title">Υποβληθέντα αποδεικτικά</string>
-    <string name="market_dispute_dialog_evidence_submitter_line">υποβλήθηκε από %1$s</string>
     <string name="market_dispute_dialog_title">Απάντηση στη διαφωνία</string>
-    <string name="market_editor_appeal">Προσφυγή κατά συντονισμού</string>
-    <string name="market_editor_appeal_reason">Γιατί ασκείτε προσφυγή;</string>
     <string name="market_editor_asset_add">Προσθήκη αρχείου</string>
     <string name="market_editor_asset_delete">Αφαίρεση πόρου</string>
     <string name="market_editor_asset_external_add">Προσθήκη εξωτερικού συνδέσμου</string>
@@ -388,13 +367,11 @@
     <string name="market_editor_asset_external_url">URL αναφοράς</string>
     <string name="market_editor_assets_empty">Δεν υπάρχουν πόροι ακόμη</string>
     <string name="market_editor_category_none">Επιλέξτε κατηγορία</string>
-    <string name="market_editor_days">%1$s ημέρες</string>
     <string name="market_editor_delete">Διαγραφή καταχώρισης</string>
     <string name="market_editor_delete_confirm_message">Αυτό θα διαγράψει οριστικά την καταχώριση.</string>
     <string name="market_editor_delete_confirm_title">Διαγραφή καταχώρισης;</string>
     <string name="market_editor_download">Άμεση λήψη</string>
     <string name="market_editor_duration">Διάρκεια δημοπρασίας</string>
-    <string name="market_editor_instant">Τιμή άμεσης αγοράς (προαιρετικό)</string>
     <string name="market_editor_instant_help">Ορίστε σε 0 για απενεργοποίηση</string>
     <string name="market_editor_interval">Διάστημα χρέωσης</string>
     <string name="market_editor_photos_add">Προσθήκη φωτογραφιών</string>
@@ -413,32 +390,18 @@
     <string name="market_editor_title_required">Εισαγάγετε έναν τίτλο πριν προσθέσετε φωτογραφίες ή αρχεία</string>
     <string name="market_editor_type">Τρόποι παράδοσης</string>
     <string name="market_editor_zone_add">Προσθήκη ζώνης</string>
-    <string name="market_editor_zone_country_au">Αυστραλία</string>
-    <string name="market_editor_zone_country_ca">Καναδάς</string>
-    <string name="market_editor_zone_country_de">Γερμανία</string>
-    <string name="market_editor_zone_country_es">Ισπανία</string>
-    <string name="market_editor_zone_country_fr">Γαλλία</string>
-    <string name="market_editor_zone_country_gb">Ηνωμένο Βασίλειο</string>
-    <string name="market_editor_zone_country_it">Ιταλία</string>
-    <string name="market_editor_zone_country_jp">Ιαπωνία</string>
-    <string name="market_editor_zone_country_nl">Ολλανδία</string>
     <string name="market_editor_zone_days">Εκτίμηση παράδοσης</string>
     <string name="market_editor_zone_days_placeholder">π.χ. 3-5 εργάσιμες ημέρες</string>
     <string name="market_editor_zone_delete">Αφαίρεση ζώνης</string>
     <string name="market_editor_zone_edit">Επεξεργασία ζώνης</string>
-    <string name="market_editor_zone_european_union">Ευρωπαϊκή Ένωση</string>
     <string name="market_editor_zone_notes">Σημειώσεις (προαιρετικό)</string>
     <string name="market_editor_zone_price">Ταχυδρομικά</string>
     <string name="market_editor_zone_save">Αποθήκευση ζώνης</string>
-    <string name="market_editor_zone_worldwide">Παγκοσμίως</string>
     <string name="market_editor_zones_empty">Δεν υπάρχουν ζώνες ακόμη</string>
     <string name="market_empty_subtitle">Δοκιμάστε να προσαρμόσετε ή να καθαρίσετε τα φίλτρα σας.</string>
     <string name="market_empty_title">Κανένα αποτέλεσμα</string>
     <string name="market_fee_disclosure_body">Χρέωση πλατφόρμας: %1$s%%. Δείτε τον πίνακα ελέγχου Stripe για τις χρεώσεις του επεξεργαστή.</string>
     <string name="market_fee_disclosure_title">Χρεώσεις πλατφόρμας</string>
-    <string name="market_fee_preview_failed">Δεν ήταν δυνατός ο υπολογισμός των χρεώσεων</string>
-    <string name="market_fee_preview_loading">Υπολογισμός χρεώσεων…</string>
-    <string name="market_fee_preview_mochi_fee">Προμήθεια Mochi</string>
     <string name="market_filter_chip_max">Έως %1$s</string>
     <string name="market_filter_chip_min">Από %1$s</string>
     <string name="market_filter_open">Φίλτρα</string>
@@ -446,10 +409,6 @@
     <string name="market_filter_title">Φίλτρα</string>
     <string name="market_listing_detail_appeal_pending">Προσφυγή σε εκκρεμότητα</string>
     <string name="market_listing_detail_buy">Αγορά</string>
-    <string name="market_listing_detail_relist_failed">Δεν ήταν δυνατή η επανακαταχώριση</string>
-    <string name="market_listing_detail_seller_banned_banner">Αυτός ο πωλητής έχει αποκλειστεί. Δεν είναι δυνατή η υποβολή νέων παραγγελιών.</string>
-    <string name="market_listing_detail_seller_suspended_banner">Αυτός ο πωλητής έχει ανασταλεί. Οι νέες παραγγελίες έχουν παύσει μέχρι την αποκατάσταση του λογαριασμού.</string>
-    <string name="market_listing_detail_seller_suspended_cta_hint">Η αγορά είναι απενεργοποιημένη όσο ο λογαριασμός του πωλητή είναι περιορισμένος.</string>
     <string name="market_listing_no_photo">Χωρίς φωτογραφία</string>
     <string name="market_listing_photo">Φωτογραφία καταχώρισης</string>
     <string name="market_listing_save">Αποθήκευση καταχώρισης</string>
@@ -461,7 +420,6 @@
     <string name="market_listings_load_failed">Αποτυχία φόρτωσης των καταχωρίσεών σας</string>
     <string name="market_listings_new">Νέα καταχώριση</string>
     <string name="market_listings_search_placeholder">Αναζήτηση στις καταχωρίσεις σας</string>
-    <string name="market_listings_share_chooser">Κοινοποίηση καταχώρισης</string>
     <string name="market_messages_compose_placeholder">Γράψτε ένα μήνυμα</string>
     <string name="market_messages_inbox_empty_subtitle">Όταν στείλετε μήνυμα σε έναν πωλητή (ή ένας αγοραστής σας στείλει μήνυμα) η συνομιλία θα εμφανιστεί εδώ.</string>
     <string name="market_messages_inbox_empty_title">Καμία συνομιλία ακόμη</string>
@@ -478,23 +436,12 @@
     <string name="market_profile_no_reviews">Δεν υπάρχουν κριτικές ακόμη.</string>
     <string name="market_purchase_dispute_chargeback">Αντιλογισμός %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Η τράπεζά σας υπέβαλε αντιλογισμό για αυτήν την παραγγελία. Η Stripe χειρίζεται τη διαφορά με τον πωλητή· το αποτέλεσμα θα εμφανιστεί εδώ όταν αποφασιστεί.</string>
-    <string name="market_purchase_download_many">Κατεβάστε τα %1$s αρχεία σας παρακάτω.</string>
-    <string name="market_purchase_download_one">Κατεβάστε το αρχείο σας παρακάτω.</string>
     <string name="market_purchase_review_from">Κριτική από %1$s</string>
-    <string name="market_purchases_auction_label">Δημοπρασία #%1$s</string>
 
 
     <string name="market_purchases_refunded_partial">−%1$s επιστράφηκαν</string>
     <string name="market_purchases_won_for">Κερδήθηκε για %1$s</string>
-    <string name="market_rating_reviews">(%1$s κριτικές)</string>
-    <string name="market_refund_dialog_amount_help">Αφήστε κενό για πλήρη επιστροφή της παραγγελίας.</string>
     <string name="market_refund_dialog_amount_label">Ποσό</string>
-    <string name="market_refund_dialog_prior_kind_full">πλήρης</string>
-    <string name="market_refund_dialog_prior_kind_partial">μερική</string>
-    <string name="market_refund_dialog_prior_section_title">Προηγούμενες επιστροφές</string>
-    <string name="market_refund_dialog_prior_title">Προηγούμενη επιστροφή</string>
-    <string name="market_refund_dialog_reason_duplicate">Διπλότυπο</string>
-    <string name="market_refund_dialog_reason_requested">Αιτήθηκε ο αγοραστής</string>
     <string name="market_refund_dialog_submitting">Γίνεται επιστροφή…</string>
     <string name="market_report_dialog_details_label">Λεπτομέρειες (προαιρετικό)</string>
     <string name="market_report_dialog_submitting">Υποβολή</string>
@@ -526,7 +473,6 @@
     <string name="market_stripe_onboarding_failed">Δεν ήταν δυνατό το άνοιγμα του Stripe</string>
     <string name="market_stripe_onboarding_opening">Άνοιγμα Stripe…</string>
     <string name="market_stripe_onboarding_title">Ολοκλήρωση ρύθμισης πληρωμών</string>
-    <string name="market_subscribers_cancels_on">Ακυρώνεται στις %1$s</string>
     <string name="market_subscribers_empty_subtitle">Οι συνδρομητές των αγγελιών σας εμφανίζονται εδώ.</string>
     <string name="market_subscribers_empty_title">Κανένας συνδρομητής ακόμη</string>
     <string name="market_subscribers_title">Οι συνδρομητές μου</string>
@@ -534,7 +480,6 @@
     <string name="market_subscriptions_cancels_on">Ακυρώνεται στις %1$s</string>
     <string name="market_warnings_title">Προειδοποιήσεις</string>
 
-    <string name="market_account_address_desc">Συμπληρώνεται αυτόματα σε μελλοντικές ολοκληρώσεις αγοράς μόλις προστεθεί η ενσωμάτωση ολοκλήρωσης αγοράς.</string>
     <string name="market_account_address_title">Προεπιλεγμένη διεύθυνση αποστολής</string>
     <string name="market_account_business_desc">Χρησιμοποιείται για τιμολόγια και φορολογική συμμόρφωση. Δεν εμφανίζεται στο δημόσιο προφίλ σας.</string>
     <string name="market_account_business_switch">Πουλάω ως επιχείρηση</string>
@@ -596,7 +541,6 @@
     <string name="market_editor_start_time_help">Αφήστε κενό για έναρξη κατά τη δημοσίευση.</string>
     <string name="market_editor_start_time_next">Επόμενο</string>
     <string name="market_editor_start_time_clear">Εκκαθάριση</string>
-    <string name="market_listing_detail_buy_now_label">Αγοράστε τώρα</string>
     <string name="market_section_recently_viewed">Πρόσφατα προβληθέντα</string>
     <string name="market_recently_viewed_clear">Εκκαθάριση όλων</string>
     <string name="market_listings_create">Δημιουργία</string>
@@ -605,7 +549,6 @@
     <string name="market_listing_checkout_in_progress">Έχετε μια πληρωμή σε εξέλιξη για αυτή την καταχώριση.</string>
     <string name="market_listing_checkout_cancel">Ακύρωση ολοκλήρωσης αγοράς</string>
     <string name="market_listing_checkout_cancelled">Η ολοκλήρωση αγοράς ακυρώθηκε</string>
-    <string name="market_listing_checkout_cancel_failed">Αποτυχία ακύρωσης της ολοκλήρωσης αγοράς</string>
     <string name="market_account_stripe_connected">Το Stripe συνδέθηκε</string>
     <string name="market_audit_account_banned">Αποκλεισμένος</string>
     <string name="market_audit_account_seller_activated">Ο πωλητής ενεργοποιήθηκε</string>
@@ -688,4 +631,72 @@
     <string name="market_sale_chargeback_fee_refunded">(επιστράφηκε)</string>
     <string name="market_messages_report">Αναφορά αυτής της συνομιλίας</string>
     <string name="market_report_conversation_title">Αναφορά συνομιλίας</string>
+    <string name="market_audit_auction_cancelled">Η δημοπρασία ακυρώθηκε</string>
+    <string name="market_dispute_status_open">Άνοιγμα</string>
+    <string name="market_dispute_status_responded">Απαντήθηκε</string>
+    <string name="market_dispute_status_resolved_buyer">Επιλύθηκε (αγοραστής)</string>
+    <string name="market_dispute_status_resolved_seller">Επιλύθηκε (πωλητής)</string>
+    <string name="market_editor_move_down">Μετακίνηση κάτω</string>
+    <string name="market_editor_move_up">Μετακίνηση πάνω</string>
+    <string name="market_review_count">(%1$s)</string>
+    <string name="market_status_unknown">Άγνωστο</string>
+    <string name="market_account_stripe_pending">Το Stripe συνδέθηκε, αλλά το Stripe χρειάζεται περισσότερες πληροφορίες πριν μπορέσετε να δέχεστε πληρωμές</string>
+    <string name="market_editor_instant_below_start">Η τιμή Αγόρασέ το Τώρα πρέπει να είναι υψηλότερη από την αρχική προσφορά.</string>
+    <string name="market_editor_reserve_above_instant">Η ελάχιστη τιμή δεν πρέπει να υπερβαίνει την τιμή Αγόρασέ το Τώρα.</string>
+    <string name="market_editor_reserve_below_start">Η ελάχιστη τιμή πρέπει να είναι υψηλότερη από την αρχική προσφορά.</string>
+    <string name="market_editor_starting_bid">Αρχική προσφορά</string>
+    <string name="market_listing_detail_buy_now_price">Αγορά τώρα — %1$s</string>
+    <string name="market_listing_detail_manage_subscription">Διαχείριση συνδρομής</string>
+    <string name="market_listing_detail_view_order">Προβολή της παραγγελίας σας</string>
+    <string name="market_listing_held_title">Αυτή η αγγελία είναι σε αναμονή μέχρι τον έλεγχο</string>
+    <string name="market_listing_rejected_title">Αυτή η αγγελία απορρίφθηκε</string>
+    <string name="market_listing_untitled">Αγγελία χωρίς τίτλο</string>
+    <string name="market_listings_status_held">Σε αναμονή ελέγχου</string>
+    <string name="market_refund_dialog_amount_remaining">Αφήστε κενό για να επιστρέψετε ολόκληρο το υπόλοιπο %1$s.</string>
+    <string name="market_fee_preview_auction">Η Mochi παίρνει %1$s%% από την τελική νικητήρια προσφορά. Οι χρεώσεις επεξεργασίας Stripe αφαιρούνται από το υπόλοιπο.</string>
+    <string name="market_fee_preview_sale">Η Mochi παίρνει %1$s%% από κάθε πώληση. Οι χρεώσεις επεξεργασίας Stripe αφαιρούνται από το υπόλοιπο.</string>
+    <string name="market_checkout_auction_unavailable">Μόνο ο πλειοδότης που κέρδισε μπορεί να πληρώσει για αυτή τη δημοπρασία, αφού λήξει.</string>
+    <string name="market_editor_instant">Τιμή Αγόρασέ το Τώρα (προαιρετικό)</string>
+    <string name="market_fee_preview_fee">Χρέωση Mochi (%1$s%%)</string>
+    <string name="market_fee_preview_payout_minimum">Η πληρωμή σας (ελάχιστο)</string>
+    <string name="market_fee_preview_payout_period">Η πληρωμή σας ανά περίοδο</string>
+    <string name="market_listing_detail_opens">Οι προσφορές ανοίγουν στις %1$s</string>
+    <string name="market_price_reserve_met">Η ελάχιστη τιμή καλύφθηκε</string>
+    <string name="market_price_reserve_unmet">Η ελάχιστη τιμή δεν έχει καλυφθεί ακόμη</string>
+    <string name="market_refund_dialog_amount_invalid">Εισαγάγετε ένα ποσό μεταξύ %1$s και %2$s</string>
+    <string name="market_refund_dialog_prior">Προηγούμενη επιστροφή χρημάτων: %1$s</string>
+    <plurals name="market_editor_days">
+        <item quantity="one">%1$s ημέρα</item>
+        <item quantity="other">%1$s ημέρες</item>
+    </plurals>
+    <plurals name="market_listing_detail_sales_count">
+        <item quantity="one">%1$s πώληση</item>
+        <item quantity="other">%1$s πωλήσεις</item>
+    </plurals>
+    <plurals name="market_profile_sales_count">
+        <item quantity="one">%1$s πώληση</item>
+        <item quantity="other">%1$s πωλήσεις</item>
+    </plurals>
+    <plurals name="market_purchase_download">
+        <item quantity="one">Κατεβάστε το αρχείο σας παρακάτω.</item>
+        <item quantity="other">Κατεβάστε τα %1$s αρχεία σας παρακάτω.</item>
+    </plurals>
+    <plurals name="market_rating_reviews">
+        <item quantity="one">(%1$s κριτική)</item>
+        <item quantity="other">(%1$s κριτικές)</item>
+    </plurals>
+    <string name="market_region_africa">Αφρική</string>
+    <string name="market_region_asia">Ασία</string>
+    <string name="market_region_asia_pacific">Ασία-Ειρηνικός</string>
+    <string name="market_region_eea">Ευρωπαϊκός Οικονομικός Χώρος</string>
+    <string name="market_region_eu">Ευρωπαϊκή Ένωση</string>
+    <string name="market_region_europe">Ευρώπη</string>
+    <string name="market_region_latin_america">Λατινική Αμερική</string>
+    <string name="market_region_middle_east">Μέση Ανατολή</string>
+    <string name="market_region_north_america">Βόρεια Αμερική</string>
+    <string name="market_region_oceania">Ωκεανία</string>
+    <string name="market_region_south_america">Νότια Αμερική</string>
+    <string name="market_region_world">Παγκοσμίως</string>
+    <string name="market_audit_order_staff_read">Προβλήθηκε από το προσωπικό</string>
+    <string name="market_audit_other">Άλλη δραστηριότητα</string>
 </resources>

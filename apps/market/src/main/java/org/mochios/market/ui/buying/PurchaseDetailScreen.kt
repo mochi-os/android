@@ -46,6 +46,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -77,6 +78,7 @@ import org.mochios.market.ui.components.AuditHistoryCard
 import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.disputeReasonLabel
 import org.mochios.market.ui.dialog.RequestRefundDialog
+import org.mochios.market.ui.selling.deliveryLabel
 
 @Composable
 fun PurchaseDetailScreen(
@@ -87,6 +89,7 @@ fun PurchaseDetailScreen(
     val context = LocalContext.current
     val resources = LocalResources.current
     val snackbar = remember { SnackbarHostState() }
+    val browserUnavailable = stringResource(R.string.market_checkout_browser_unavailable)
     var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
     val scope = rememberCoroutineScope()
     var refundDialogOpen by remember { mutableStateOf(false) }
@@ -95,7 +98,7 @@ fun PurchaseDetailScreen(
         viewModel.events.collect { event ->
             when (event) {
                 is PurchaseDetailEvent.Toast -> snackbar.showSnackbar(event.message)
-                is PurchaseDetailEvent.OpenUrl -> openUrl(context, event.url, snackbar, scope)
+                is PurchaseDetailEvent.OpenUrl -> openUrl(context, event.url, snackbar, scope, browserUnavailable)
                 is PurchaseDetailEvent.OpenFile -> {
                     // The ViewModel has already fetched and cached the bytes;
                     // launching a viewer is the part that needs an Activity.
@@ -124,9 +127,12 @@ fun PurchaseDetailScreen(
         UnopenedFileDialog(file = file, onDismiss = { unopened = null })
     }
 
-    MochiScaffold(title = title, onBack = { navController.popBackStack() }) { padding ->
+    MochiScaffold(
+        title = title,
+        onBack = { navController.popBackStack() },
+        snackbarHost = { SnackbarHost(snackbar) },
+    ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-            SnackbarHost(snackbar, modifier = Modifier.align(Alignment.BottomCenter))
             when {
                 state.isLoading -> Box(
                     Modifier.fillMaxSize(),
@@ -149,7 +155,7 @@ fun PurchaseDetailScreen(
                         TrackingCard(detail.order)
                     }
                     if (detail.assets.isNotEmpty()) {
-                        DigitalAssetsCard(detail.assets, onDownload = { viewModel.requestDownload(it) })
+                        DigitalAssetsCard(detail.assets, onDownload = { asset -> viewModel.requestDownload(asset) })
                     }
                     PrimaryActionsCard(
                         order = detail.order,
@@ -208,23 +214,22 @@ private fun OrderSummaryCard(order: Order, listing: Listing) {
                 MarketStatusBadge(status = order.status?.name?.lowercase() ?: "")
             }
             Text(
-                listing.title.ifBlank { "Order #${order.id}" },
+                listing.title.ifBlank { order.title.orEmpty() }
+                    .ifBlank { stringResource(R.string.market_purchase_title) },
                 style = MaterialTheme.typography.titleMedium,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
             SummaryRow(
-                label = stringResource(R.string.market_purchase_order_label),
-                value = "#${order.id}",
-            )
-            SummaryRow(
                 label = stringResource(R.string.market_purchase_seller),
                 value = order.sellerName?.takeIf { it.isNotBlank() } ?: order.sellerFingerprint.orEmpty(),
             )
-            SummaryRow(
-                label = stringResource(R.string.market_purchase_delivery),
-                value = order.delivery?.name?.lowercase() ?: "",
-            )
+            order.delivery?.let { delivery ->
+                SummaryRow(
+                    label = stringResource(R.string.market_purchase_delivery),
+                    value = stringResource(deliveryLabel(delivery)),
+                )
+            }
             SummaryRow(
                 label = stringResource(R.string.market_purchase_purchased),
                 value = format.formatTimestamp(order.created),
@@ -320,7 +325,7 @@ private fun TrackingCard(order: Order) {
 }
 
 @Composable
-private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (String) -> Unit) {
+private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (Asset) -> Unit) {
     MochiCard(shape = RoundedCornerShape(10.dp)) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
@@ -328,20 +333,19 @@ private fun DigitalAssetsCard(assets: List<Asset>, onDownload: (String) -> Unit)
                 style = MaterialTheme.typography.titleSmall,
             )
             Text(
-                if (assets.size == 1) stringResource(R.string.market_purchase_download_one)
-                else stringResource(R.string.market_purchase_download_many, LocalFormat.current.formatNumber(assets.size)),
+                pluralStringResource(R.plurals.market_purchase_download, assets.size, LocalFormat.current.formatNumber(assets.size)),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
             assets.forEach { asset ->
                 MochiOutlinedButton(
-                    onClick = { onDownload(asset.id) },
+                    onClick = { onDownload(asset) },
                     modifier = Modifier.fillMaxWidth(),
                 ) {
                     Icon(Icons.Default.Download, contentDescription = null)
                     Spacer(Modifier.width(8.dp))
                     Text(
-                        asset.filename.ifBlank { "Asset #${asset.id}" },
+                        asset.filename.ifBlank { stringResource(R.string.market_asset_download) },
                         modifier = Modifier.weight(1f),
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
@@ -486,6 +490,7 @@ private fun openUrl(
     url: String,
     snackbar: SnackbarHostState,
     scope: kotlinx.coroutines.CoroutineScope,
+    unavailable: String,
 ) {
     // The asset reference comes from the seller via the Comptroller and
     // launchUrl degrades to ACTION_VIEW, so only a web scheme may leave the app.
@@ -493,6 +498,6 @@ private fun openUrl(
     try {
         CustomTabsIntent.Builder().build().launchUrl(context, target)
     } catch (_: ActivityNotFoundException) {
-        scope.launch { snackbar.showSnackbar("No browser available") }
+        scope.launch { snackbar.showSnackbar(unavailable) }
     }
 }

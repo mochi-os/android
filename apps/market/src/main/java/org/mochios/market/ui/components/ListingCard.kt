@@ -52,6 +52,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiImage
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.theme.LocalEntityRadius
 import org.mochios.market.R
 import org.mochios.market.lib.ratingStars
@@ -64,8 +65,7 @@ import org.mochios.market.model.userAvatarUrl
 
 /**
  * Grid-cell listing card. Seller fields fall back to the [Listing]'s own values
- * ([Listing.sellerRating] is in hundredths, normalised via [ratingStars]);
- * [category] is unused.
+ * ([Listing.sellerRating] is in hundredths, normalised via [ratingStars]).
  */
 @Composable
 fun ListingCard(
@@ -77,7 +77,6 @@ fun ListingCard(
     sellerRating: Float = 0f,
     sellerReviews: Int = 0,
     sellerVerified: Boolean = false,
-    category: String? = null,
     onClick: (Listing) -> Unit = {},
     onToggleSave: (Listing) -> Unit = {},
 ) {
@@ -240,7 +239,10 @@ fun ListingCard(
                         RatingStars(rating = rating, showCount = false, tint = RatingStarGold)
                         if (reviews > 0) {
                             Text(
-                                text = "($reviews)",
+                                text = stringResource(
+                                    R.string.market_review_count,
+                                    LocalFormat.current.formatNumber(reviews),
+                                ),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )

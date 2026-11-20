@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">הערות</string>
     <string name="staff_accounts_reason_label">סיבה</string>
     <string name="staff_accounts_reason_optional_label">סיבה (אופציונלי)</string>
-    <string name="staff_accounts_sales">%1$s מכירות</string>
     <string name="staff_accounts_search_clear">נקה חיפוש</string>
     <string name="staff_accounts_search_placeholder">חיפוש</string>
     <string name="staff_accounts_seller_buyers">קונים בלבד</string>
@@ -438,4 +437,9 @@
     <string name="staff_reports_conversation">שיחה</string>
     <string name="staff_reports_conversation_empty">אין הודעות</string>
     <string name="staff_reports_conversation_show">הצג שיחה</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s מכירה</item>
+        <item quantity="two">%1$s מכירות</item>
+        <item quantity="other">%1$s מכירות</item>
+    </plurals>
 </resources>

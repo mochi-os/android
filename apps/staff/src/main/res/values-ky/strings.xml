@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Эскертүүлөр</string>
     <string name="staff_accounts_reason_label">Себеп</string>
     <string name="staff_accounts_reason_optional_label">Себеп (милдеттүү эмес)</string>
-    <string name="staff_accounts_sales">%1$s сатуу</string>
     <string name="staff_accounts_search_clear">Издөөнү тазалоо</string>
     <string name="staff_accounts_search_placeholder">Издөө</string>
     <string name="staff_accounts_seller_buyers">Сатып алуучулар гана</string>
@@ -440,4 +439,8 @@
     <string name="staff_reports_conversation">Сүйлөшүү</string>
     <string name="staff_reports_conversation_empty">Билдирүүлөр жок</string>
     <string name="staff_reports_conversation_show">Сүйлөшүүнү көрсөтүү</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s сатуу</item>
+        <item quantity="other">%1$s сатуу</item>
+    </plurals>
 </resources>

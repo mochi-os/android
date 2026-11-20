@@ -5,6 +5,9 @@
 
 package org.mochios.market.repository
 
+import com.google.gson.JsonElement
+import com.google.gson.reflect.TypeToken
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -19,6 +22,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.market.api.MarketApi
 import org.mochios.market.model.Listing
@@ -75,20 +80,40 @@ class SavedRepository @Inject constructor(
         _saved.map { list -> list.mapTo(mutableSetOf()) { it.id.toString() } }
 
     /**
-     * Hydrate the mirror from the server; failures (including a 401 before
-     * login completes) leave it untouched.
+     * Hydrate the mirror from the server; a failure (including a 401 before
+     * login completes) leaves it untouched and is answered, for a screen that
+     * shows the list to say why it is empty. Under the same lock as [toggle]
+     * and [clear], so a read under way cannot put back what a toggle has just
+     * changed.
      */
-    suspend fun refresh() {
+    suspend fun refresh(): MochiError? = mutex.withLock {
         val started = generation.get()
         try {
-            val response = api.listSaved().body()?.data ?: return
-            _saved.value = response.saved
-            // An account change that landed meanwhile takes it back out.
-            if (generation.get() != started) _saved.value = emptyList()
-        } catch (_: Exception) {
-            // Leave the existing mirror untouched on failure.
+            val response = api.listSaved().unwrap()
+            hold(response.saved, started)
+            null
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            e.toMochiError()
         }
     }
+
+    /**
+     * Hold [listings] as the server has them, unless the account changed since
+     * [started], when the mirror stays empty for the next one.
+     */
+    private fun hold(listings: List<Listing>, started: Int) {
+        if (generation.get() == started) _saved.value = listings
+    }
+
+    /**
+     * The saved listings a `saved/add` or `saved/remove` answered, in
+     * `saved/list`'s shape; an older server answers a flag, and the optimistic
+     * change then stands.
+     */
+    private fun answered(change: JsonElement?): List<Listing>? =
+        change?.takeIf { element -> element.isJsonArray }?.let { element -> gson.fromJson(element, LISTINGS) }
 
     /**
      * Toggle saved state optimistically, reverting on failure; returns the new
@@ -104,7 +129,7 @@ class SavedRepository @Inject constructor(
             try {
                 // unwrap() turns a non-2xx answer into an exception, so a refused
                 // write reverts the mirror instead of reporting success.
-                api.removeSaved(idString).unwrap()
+                answered(api.removeSaved(idString).unwrap().saved)?.let { listings -> hold(listings, started) }
             } catch (e: Exception) {
                 if (generation.get() == started) _saved.value = previous
                 throw e
@@ -113,7 +138,7 @@ class SavedRepository @Inject constructor(
         } else {
             _saved.value = listOf(listing) + previous
             try {
-                api.addSaved(idString, gson.toJson(listing)).unwrap()
+                answered(api.addSaved(idString, gson.toJson(listing)).unwrap().saved)?.let { listings -> hold(listings, started) }
             } catch (e: Exception) {
                 if (generation.get() == started) _saved.value = previous
                 throw e
@@ -133,5 +158,9 @@ class SavedRepository @Inject constructor(
             if (generation.get() == started) _saved.value = previous
             throw e
         }
+    }
+
+    private companion object {
+        val LISTINGS: java.lang.reflect.Type = object : TypeToken<List<Listing>>() {}.type
     }
 }

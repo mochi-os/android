@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">備註</string>
     <string name="staff_accounts_reason_label">原因</string>
     <string name="staff_accounts_reason_optional_label">原因(選填)</string>
-    <string name="staff_accounts_sales">%1$s 筆銷售</string>
     <string name="staff_accounts_search_clear">清除搜尋</string>
     <string name="staff_accounts_search_placeholder">搜尋</string>
     <string name="staff_accounts_seller_buyers">僅限買家</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">對話</string>
     <string name="staff_reports_conversation_empty">無訊息</string>
     <string name="staff_reports_conversation_show">顯示對話</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s 筆銷售</item>
+    </plurals>
 </resources>

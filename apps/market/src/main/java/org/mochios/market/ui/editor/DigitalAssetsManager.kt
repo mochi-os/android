@@ -223,7 +223,7 @@ private fun AssetRow(
         MochiIconButton(onClick = onMoveUp, enabled = canMoveUp) {
             Icon(
                 Icons.Default.ArrowUpward,
-                contentDescription = null,
+                contentDescription = stringResource(R.string.market_editor_move_up),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(20.dp),
             )
@@ -231,7 +231,7 @@ private fun AssetRow(
         MochiIconButton(onClick = onMoveDown, enabled = canMoveDown) {
             Icon(
                 Icons.Default.ArrowDownward,
-                contentDescription = null,
+                contentDescription = stringResource(R.string.market_editor_move_down),
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(20.dp),
             )

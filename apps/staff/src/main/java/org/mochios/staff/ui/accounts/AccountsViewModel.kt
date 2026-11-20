@@ -20,6 +20,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.append
 import org.mochios.android.api.userMessage
 import org.mochios.staff.model.Account
 import org.mochios.staff.model.AccountSummary
@@ -36,7 +38,8 @@ data class AccountsUiState(
     val seller: String? = null,
     val query: String = "",
     val isLoading: Boolean = true,
-    val isLoadingMore: Boolean = false,
+    /** The next page, for the list's foot. */
+    val load: LoadState = LoadState.Idle,
     val accounts: List<Account> = emptyList(),
     val total: Long = 0,
     val error: MochiError? = null,
@@ -80,6 +83,9 @@ class AccountsViewModel @Inject constructor(
     val events: SharedFlow<AccountsEvent> = _events.asSharedFlow()
 
     private var loadJob: Job? = null
+
+    /** Pages read since the last reload; rows a page repeats are dropped, so the count of rows cannot say. */
+    private var pagesLoaded = 0
     private var moreJob: Job? = null
 
     init {
@@ -120,7 +126,7 @@ class AccountsViewModel @Inject constructor(
         moreJob?.cancel()
         loadJob = viewModelScope.launch {
             val s = _state.value
-            _state.value = s.copy(isLoading = true, isLoadingMore = false, error = null)
+            _state.value = s.copy(isLoading = true, load = LoadState.Idle, error = null)
             try {
                 val r = repository.listAccounts(
                     status = s.status,
@@ -129,6 +135,7 @@ class AccountsViewModel @Inject constructor(
                     page = 1,
                     limit = PAGE_SIZE,
                 )
+                pagesLoaded = 1
                 _state.value = _state.value.copy(
                     isLoading = false,
                     accounts = r.accounts,
@@ -146,10 +153,10 @@ class AccountsViewModel @Inject constructor(
 
     fun loadMore() {
         val s = _state.value
-        if (s.isLoadingMore || s.isLoading || s.accounts.size >= s.total) return
-        val nextPage = (s.accounts.size / PAGE_SIZE) + 1
+        if (s.load == LoadState.Loading || s.isLoading || s.accounts.size >= s.total) return
+        val nextPage = pagesLoaded + 1
         moreJob = viewModelScope.launch {
-            _state.value = s.copy(isLoadingMore = true)
+            _state.value = s.copy(load = LoadState.Loading)
             try {
                 val r = repository.listAccounts(
                     status = s.status,
@@ -158,14 +165,17 @@ class AccountsViewModel @Inject constructor(
                     page = nextPage,
                     limit = PAGE_SIZE,
                 )
+                pagesLoaded = nextPage
+                val listed = _state.value.accounts.append(r.accounts) { account -> account.id }
                 _state.value = _state.value.copy(
-                    isLoadingMore = false,
-                    accounts = _state.value.accounts + r.accounts,
-                    total = r.total,
+                    load = LoadState.Idle,
+                    accounts = listed,
+                    // A page with no rows ends the list, whatever total it claims.
+                    total = if (r.accounts.isEmpty()) listed.size.toLong() else r.total,
                 )
             } catch (e: Exception) {
                 if (e is CancellationException) throw e
-                _state.value = _state.value.copy(isLoadingMore = false)
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }

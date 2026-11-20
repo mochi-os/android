@@ -19,17 +19,24 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.format.toMinorUnits
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.SEARCH_DEBOUNCE
+import org.mochios.android.util.append
 import org.mochios.market.lib.RecentlyViewedStore
 import org.mochios.market.model.Listing
+import org.mochios.market.model.ListingStatus
 import org.mochios.market.repository.MarketRepository
 import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
 /**
- * Search debounce lives in the screen, not here - [setQuery] runs the search
- * synchronously.
+ * Search debounce for the query lives in the screen - [setQuery] runs the
+ * search at once; the price range is debounced here, since its fields change
+ * a filter on every keystroke.
  */
 @HiltViewModel
 class HomeViewModel @Inject constructor(
@@ -49,9 +56,11 @@ class HomeViewModel @Inject constructor(
     private val _saveEvents = MutableSharedFlow<Boolean>(extraBufferCapacity = 4)
     val saveEvents: SharedFlow<Boolean> = _saveEvents.asSharedFlow()
 
+    /** Actions the server refused, for the screen's snackbar. */
+    private val _failures = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
+    val failures: SharedFlow<MochiError> = _failures.asSharedFlow()
+
     private var searchJob: Job? = null
-    private var currentPage: Int = 1
-    private val pageLimit: Int = PAGE_LIMIT
 
     init {
         loadCategories()
@@ -63,9 +72,10 @@ class HomeViewModel @Inject constructor(
 
     /** Mirror the server-saved listing IDs into state so cards fill the bookmark. */
     private fun observeSaved() {
+        // Read once so a fresh session shows the right bookmarks; the collect
+        // below then tracks live toggles.
+        viewModelScope.launch { savedRepository.refresh() }
         viewModelScope.launch {
-            // Hydrate once so freshly-opened sessions show the right bookmark
-            // state; the collect below then tracks live toggles.
             savedRepository.observeIds().collect { ids ->
                 _state.value = _state.value.copy(savedIds = ids)
             }
@@ -88,11 +98,19 @@ class HomeViewModel @Inject constructor(
         runSearch(reset = true)
     }
 
+    /**
+     * Set or clear one filter. A change the search does not send (the
+     * currency while no price is set) asks for nothing, and a price bound
+     * waits for typing to pause.
+     */
     fun setFilter(filter: Filter, value: String?) {
-        val current = _state.value.filters.toMutableMap()
+        val before = _state.value
+        val current = before.filters.toMutableMap()
         if (value.isNullOrBlank()) current.remove(filter) else current[filter] = value
-        _state.value = _state.value.copy(filters = current)
-        runSearch(reset = true)
+        _state.value = before.copy(filters = current)
+        if (buildParams(before, Paging()) == buildParams(_state.value, Paging())) return
+        val price = filter == Filter.PRICE_MIN || filter == Filter.PRICE_MAX
+        runSearch(reset = true, wait = if (price) SEARCH_DEBOUNCE.inWholeMilliseconds else COALESCE)
     }
 
     fun clearFilters() {
@@ -117,9 +135,21 @@ class HomeViewModel @Inject constructor(
 
     // -- Pagination -------------------------------------------------------
 
+    /** The next page, from the grid's foot or its retry. */
     fun loadMore() {
-        if (_state.value.isLoading || !_state.value.hasMore) return
-        runSearch(reset = false)
+        val current = _state.value
+        if (current.load == LoadState.Loading || !current.paging.more) return
+        if (current.listings.isEmpty()) runSearch(reset = true, wait = 0L) else runSearch(reset = false)
+    }
+
+    /**
+     * Try again after a failure: the search from its first page when nothing
+     * is listed, else the page that failed; and the categories, if they did
+     * not load.
+     */
+    fun retry() {
+        if (_state.value.categories.isEmpty()) loadCategories()
+        if (_state.value.listings.isEmpty()) runSearch(reset = true, wait = 0L) else loadMore()
     }
 
     // -- Save / view ------------------------------------------------------
@@ -129,9 +159,12 @@ class HomeViewModel @Inject constructor(
             try {
                 val nowSaved = savedRepository.toggle(listing)
                 _saveEvents.emit(nowSaved)
-            } catch (_: Exception) {
-                // Write-through failed; the optimistic update already reverted,
-                // so the bookmark snaps back. No toast on failure.
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // The optimistic change has already been undone, so the
+                // bookmark is back as it was; say why.
+                _failures.emit(e.toMochiError())
             }
         }
     }
@@ -139,7 +172,7 @@ class HomeViewModel @Inject constructor(
     fun viewListing(listing: Listing) {
         repo.remember(listing)
         viewModelScope.launch {
-            recentStore.push(listing.id.toString())
+            recentStore.push(listing.id)
         }
     }
 
@@ -155,11 +188,12 @@ class HomeViewModel @Inject constructor(
                     activatingAccount = false,
                     accountActive = !isInactiveAccount(account.status),
                 )
-            } catch (_: Exception) {
-                // The card stays so the user can retry; we deliberately don't
-                // surface a screen-level error here — the snack would be
-                // jarring on the cold-start home grid.
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // The card stays so the user can try again.
                 _state.value = _state.value.copy(activatingAccount = false)
+                _failures.emit(e.toMochiError())
             }
         }
     }
@@ -171,19 +205,18 @@ class HomeViewModel @Inject constructor(
     // -- Internals --------------------------------------------------------
 
     /**
-     * A failed account load counts as inactive, so the activation card shows
-     * rather than hides.
+     * Whether the account is active, once read. A read that fails leaves it
+     * unknown, so an established account is not greeted as a newcomer; the
+     * search's own failure tells the user the market is unreachable.
      */
     private fun loadAccount() {
         viewModelScope.launch {
             try {
                 val account = repo.getAccount()
-                _state.value = _state.value.copy(
-                    accountActive = !isInactiveAccount(account.status),
-                    isSeller = account.seller == 1,
-                )
+                _state.value = _state.value.copy(accountActive = !isInactiveAccount(account.status))
+            } catch (e: CancellationException) {
+                throw e
             } catch (_: Exception) {
-                _state.value = _state.value.copy(accountActive = false)
             }
         }
     }
@@ -197,78 +230,80 @@ class HomeViewModel @Inject constructor(
         return key.isEmpty() || key == "inactive"
     }
 
+    /**
+     * The categories name the category filter; without them the filter offers
+     * only "All", and [retry] asks again. Their failure is not the search's.
+     */
     private fun loadCategories() {
         viewModelScope.launch {
             try {
                 val categories = repo.listCategories()
                 _state.value = _state.value.copy(categories = categories)
-            } catch (e: Exception) {
-                // Categories are non-critical; the rest of the screen still
-                // functions without them. Surface as a soft error.
-                _state.value = _state.value.copy(error = e.toMochiError())
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
             }
         }
     }
 
+    /**
+     * The listings the account opened lately, resolved in one call. An id the
+     * server no longer answers, or a listing no longer on sale, is dropped
+     * from the store too, so it is not asked for again; a failed call drops
+     * nothing.
+     */
     private fun loadRecentlyViewed() {
         viewModelScope.launch {
             recentStore.observe().collect { ids ->
-                val listings = repo.getListingsByIds(ids)
-                _state.value = _state.value.copy(recentListings = listings)
+                val listings = try {
+                    repo.getListingsByIds(ids)
+                } catch (e: CancellationException) {
+                    throw e
+                } catch (_: Exception) {
+                    return@collect
+                }
+                val active = listings.filter { listing -> listing.status == ListingStatus.ACTIVE }
+                val kept = active.mapTo(HashSet()) { listing -> listing.id }
+                recentStore.remove(ids.filter { id -> id !in kept })
+                _state.value = _state.value.copy(recentListings = active)
             }
         }
     }
 
-    private fun runSearch(reset: Boolean) {
+    /**
+     * Read the search's first page ([reset]) or its next page. A first page
+     * waits [wait] milliseconds, so a burst of changes makes one request.
+     */
+    private fun runSearch(reset: Boolean, wait: Long = COALESCE) {
         searchJob?.cancel()
         val current = _state.value
-        if (reset) {
-            currentPage = 1
-            _state.value = current.copy(
-                listings = emptyList(),
-                isLoading = true,
-                hasMore = false,
-                error = null,
-            )
+        val paging = if (reset) Paging() else current.paging
+        _state.value = if (reset) {
+            current.copy(listings = emptyList(), load = LoadState.Loading, paging = paging)
         } else {
-            currentPage += 1
-            _state.value = current.copy(isLoading = true, error = null)
+            current.copy(load = LoadState.Loading)
         }
         searchJob = viewModelScope.launch {
-            // Tiny coalesce so the rapid setFilter/setQuery sequence at
-            // session start fires one request instead of many.
-            if (reset) delay(50L)
-            val params = buildParams(_state.value, page = currentPage, limit = pageLimit)
+            if (reset && wait > 0L) delay(wait)
+            val params = buildParams(_state.value, paging)
             try {
                 val response = repo.searchListings(params)
-                val merged = if (reset) {
-                    response.listings
-                } else {
-                    _state.value.listings + response.listings
-                }
                 _state.value = _state.value.copy(
-                    listings = merged,
-                    isLoading = false,
-                    hasMore = merged.size.toLong() < response.total,
+                    listings = _state.value.listings.append(response.listings) { listing -> listing.id },
+                    load = LoadState.Idle,
+                    paging = paging.advance(response.listings.size, response.total, response.next),
                 )
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                // Undo the page advance so a retry re-requests this page
-                // rather than skipping it.
-                if (!reset) currentPage -= 1
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }
 
     private fun buildParams(
         state: HomeUiState,
-        page: Int,
-        limit: Int,
+        paging: Paging,
     ): Map<String, String?> {
         // The server compares min/max against the minor-unit price column of
         // one currency, so the typed major-unit bounds are converted here and
@@ -288,13 +323,21 @@ class HomeViewModel @Inject constructor(
             "currency" to currency.takeIf { ranged },
             "delivery" to state.filters[Filter.DELIVERY],
             "sort" to state.filters[Filter.SORT],
-            "page" to page.toString(),
-            "limit" to limit.toString(),
+            "page" to paging.page.toString(),
+            "limit" to PAGE_LIMIT.toString(),
+            "after" to paging.cursor,
         )
     }
 
     companion object {
         private const val PAGE_LIMIT = 24
+
+        /**
+         * How long a new search waits, so the rapid setFilter/setQuery
+         * sequence at session start fires one request instead of many.
+         */
+        private const val COALESCE = 50L
+
         /** Web's default for an unscoped price range. */
         const val DEFAULT_CURRENCY = "usd"
     }

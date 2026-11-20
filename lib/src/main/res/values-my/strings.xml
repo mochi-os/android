@@ -340,4 +340,7 @@
         <item quantity="other">+ ပြန်ဖြေချက် %1$s ခု ပိုနေသေးသည်</item>
     </plurals>
     <string name="drawer_unread">မဖတ်ရသေး</string>
+    <string name="person_unknown">မသိရသော</string>
+    <string name="format_time_seconds_short">%1$sစက္ကန့်</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

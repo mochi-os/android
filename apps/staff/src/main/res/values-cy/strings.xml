@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Nodiadau</string>
     <string name="staff_accounts_reason_label">Rheswm</string>
     <string name="staff_accounts_reason_optional_label">Rheswm (dewisol)</string>
-    <string name="staff_accounts_sales">%1$s gwerthiant</string>
     <string name="staff_accounts_search_clear">Clirio chwiliad</string>
     <string name="staff_accounts_search_placeholder">Chwilio</string>
     <string name="staff_accounts_seller_buyers">Prynwyr yn unig</string>
@@ -438,4 +437,12 @@
     <string name="staff_reports_conversation">Sgwrs</string>
     <string name="staff_reports_conversation_empty">Dim negeseuon</string>
     <string name="staff_reports_conversation_show">Dangos y sgwrs</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="zero">%1$s gwerthiant</item>
+        <item quantity="one">%1$s gwerthiant</item>
+        <item quantity="two">%1$s werthiant</item>
+        <item quantity="few">%1$s gwerthiant</item>
+        <item quantity="many">%1$s gwerthiant</item>
+        <item quantity="other">%1$s gwerthiant</item>
+    </plurals>
 </resources>

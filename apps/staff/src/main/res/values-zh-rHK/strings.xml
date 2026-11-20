@@ -97,9 +97,8 @@
     <string name="staff_reports_type_listing">刊登</string>
     <string name="staff_dashboard_tab_listings">刊登</string>
     <string name="staff_sidebar_listings">刊登</string>
-    <string name="staff_accounts_sales">%1$s 件銷售</string>
     <string name="staff_audit_action_auction_bid_placed">出價成功</string>
-    <string name="staff_audit_action_auction_cancelled">拍卖取消</string>
+    <string name="staff_audit_action_auction_cancelled">拍賣已取消</string>
     <string name="staff_audit_action_listing_appeal_submitted">已提交申訴</string>
     <string name="staff_categories_dialog_creating">建立中…</string>
     <string name="staff_categories_dialog_saving">正在儲存…</string>
@@ -432,4 +431,7 @@
 
     <string name="staff_disputes_meta_already_refunded">已退款</string>
     <string name="staff_disputes_refund_exceeds_remaining">退款金額超出剩餘可退款金額</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s 件銷售</item>
+    </plurals>
 </resources>

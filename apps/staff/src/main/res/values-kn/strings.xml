@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ಆದೇಶ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">ಕಾರಣ (ಐಚ್ಛಿಕ)</string>
-    <string name="staff_accounts_sales">%1$s ಮಾರಾಟಗಳು</string>
     <string name="staff_appeals_reason_label">ಮಾರಾಟಗಾರನ ಮನವಿಯ ಕಾರಣ</string>
     <string name="staff_audit_action_staff_team_role_changed">ಸಿಬ್ಬಂದಿ ಪಾತ್ರ ಬದಲಾಯಿಸಲಾಗಿದೆ</string>
     <string name="staff_categories_delete_desc">“%1$s” ಅನ್ನು ಅಳಿಸಬೇಕೇ? ಇದನ್ನು ರದ್ದುಗೊಳಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">ಸಂಭಾಷಣೆ</string>
     <string name="staff_reports_conversation_empty">ಯಾವುದೇ ಸಂದೇಶಗಳಿಲ್ಲ</string>
     <string name="staff_reports_conversation_show">ಸಂಭಾಷಣೆಯನ್ನು ತೋರಿಸಿ</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s ಮಾರಾಟ</item>
+        <item quantity="other">%1$s ಮಾರಾಟಗಳು</item>
+    </plurals>
 </resources>

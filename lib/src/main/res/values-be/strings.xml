@@ -345,4 +345,7 @@
         <item quantity="other">яшчэ +%1$s адказу</item>
     </plurals>
     <string name="drawer_unread">Непрачытаныя</string>
+    <string name="person_unknown">Невядома</string>
+    <string name="format_time_seconds_short">%1$s с</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

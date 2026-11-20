@@ -395,7 +395,6 @@
 
     <string name="staff_accounts_action_unsuspend_title">معطلي ختم ڪريو</string>
     <string name="staff_accounts_reason_optional_label">سبب (اختياري)</string>
-    <string name="staff_accounts_sales">%1$s وڪرا</string>
     <string name="staff_appeals_reason_label">وڪرو ڪندڙ جي اپيل جو سبب</string>
     <string name="staff_audit_action_staff_team_role_changed">اسٽاف جو ڪردار تبديل ٿيو</string>
     <string name="staff_categories_delete_desc">”%1$s“ ڊاهيو؟ اهو واپس نه ٿو ٿي سگهي.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">ڳالهه ٻولهه</string>
     <string name="staff_reports_conversation_empty">ڪو پيغام نه آهي</string>
     <string name="staff_reports_conversation_show">ڳالهه ٻولهه ڏيکاريو</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s وڪرو</item>
+        <item quantity="other">%1$s وڪرا</item>
+    </plurals>
 </resources>

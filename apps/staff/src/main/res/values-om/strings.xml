@@ -394,7 +394,6 @@
     <string name="staff_accounts_action_unban_title">Dhorkaa kaasi</string>
     <string name="staff_accounts_action_unsuspend_title">Addaan kutiinsa kaasi</string>
     <string name="staff_accounts_reason_optional_label">Sababa (filannoo)</string>
-    <string name="staff_accounts_sales">gurgurtaa %1$s</string>
     <string name="staff_appeals_reason_label">Sababa ol\'iyyannoo gurguraa</string>
     <string name="staff_audit_action_staff_team_role_changed">Gahee hojjetaa jijjiirame</string>
     <string name="staff_categories_delete_desc">“%1$s” haqi? Kun deebifamuu hin danda\'u.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Marii</string>
     <string name="staff_reports_conversation_empty">Ergaawwan hin jiran</string>
     <string name="staff_reports_conversation_show">Marii agarsiisi</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">Gurgurtaa %1$s</item>
+        <item quantity="other">Gurgurtaa %1$s</item>
+    </plurals>
 </resources>

@@ -10,6 +10,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapEmpty
 import org.mochios.staff.api.StaffApi
 import org.mochios.staff.model.Account
 import org.mochios.staff.model.AccountSummary
@@ -102,7 +103,7 @@ class StaffRepository @Inject constructor(
 
     suspend fun removeTeamMember(id: String) {
         try {
-            api.removeTeamMember(id).unwrap()
+            api.removeTeamMember(id).unwrapEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -236,7 +237,7 @@ class StaffRepository @Inject constructor(
 
     suspend fun deleteCategory(id: String) {
         try {
-            api.deleteCategory(id).unwrap()
+            api.deleteCategory(id).unwrapEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -436,7 +437,7 @@ class StaffRepository @Inject constructor(
 
     suspend fun setConfig(key: String, value: String) {
         try {
-            api.setConfig(key, value).unwrap()
+            api.setConfig(key, value).unwrapEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         }

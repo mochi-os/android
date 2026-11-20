@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">یادداشت‌ها</string>
     <string name="staff_accounts_reason_label">دلیل</string>
     <string name="staff_accounts_reason_optional_label">دلیل (اختیاری)</string>
-    <string name="staff_accounts_sales">%1$s فروش</string>
     <string name="staff_accounts_search_clear">پاک کردن جست‌وجو</string>
     <string name="staff_accounts_search_placeholder">جست‌وجو</string>
     <string name="staff_accounts_seller_buyers">فقط خریداران</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">گفت‌وگو</string>
     <string name="staff_reports_conversation_empty">هیچ پیامی وجود ندارد</string>
     <string name="staff_reports_conversation_show">نمایش گفت‌وگو</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s فروش</item>
+        <item quantity="other">%1$s فروش</item>
+    </plurals>
 </resources>

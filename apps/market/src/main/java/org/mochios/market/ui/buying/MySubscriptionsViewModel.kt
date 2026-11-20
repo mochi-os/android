@@ -8,6 +8,8 @@ package org.mochios.market.ui.buying
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -18,15 +20,19 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
 import org.mochios.market.model.Subscription
 import org.mochios.market.repository.MarketRepository
 import javax.inject.Inject
 
 data class MySubscriptionsUiState(
     val isLoading: Boolean = true,
-    val isLoadingMore: Boolean = false,
+    /** The next page of subscriptions, for the list's foot. */
+    val load: LoadState = LoadState.Idle,
     val subscriptions: List<Subscription> = emptyList(),
-    val total: Long = 0,
+    val paging: Paging = Paging(),
     val error: MochiError? = null,
     val mutatingId: String? = null,
 )
@@ -48,20 +54,26 @@ class MySubscriptionsViewModel @Inject constructor(
     private val _events = MutableSharedFlow<MySubscriptionsEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<MySubscriptionsEvent> = _events.asSharedFlow()
 
+    /** The list read under way, which a reload replaces. */
+    private var job: Job? = null
+
     init {
         load()
     }
 
     fun load() {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+        job?.cancel()
+        job = viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(isLoading = true, error = null, load = LoadState.Idle)
             try {
                 val r = repository.mySubscriptions(page = 1, limit = PAGE_SIZE)
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
                     subscriptions = r.subscriptions,
-                    total = r.total,
+                    paging = Paging().advance(r.subscriptions.size, r.total, r.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
                     isLoading = false,
@@ -71,21 +83,23 @@ class MySubscriptionsViewModel @Inject constructor(
         }
     }
 
+    /** Reads the next page, from the list's foot or its retry. */
     fun loadMore() {
         val s = _uiState.value
-        if (s.isLoadingMore || s.subscriptions.size >= s.total) return
-        val nextPage = (s.subscriptions.size / PAGE_SIZE) + 1
-        viewModelScope.launch {
-            _uiState.value = s.copy(isLoadingMore = true)
+        if (s.isLoading || s.load == LoadState.Loading || !s.paging.more) return
+        job = viewModelScope.launch {
+            _uiState.value = s.copy(load = LoadState.Loading)
             try {
-                val r = repository.mySubscriptions(page = nextPage, limit = PAGE_SIZE)
+                val r = repository.mySubscriptions(page = s.paging.page, limit = PAGE_SIZE, after = s.paging.cursor)
                 _uiState.value = _uiState.value.copy(
-                    isLoadingMore = false,
-                    subscriptions = _uiState.value.subscriptions + r.subscriptions,
-                    total = r.total,
+                    load = LoadState.Idle,
+                    subscriptions = _uiState.value.subscriptions.append(r.subscriptions) { subscription -> subscription.id },
+                    paging = s.paging.advance(r.subscriptions.size, r.total, r.next),
                 )
-            } catch (_: Exception) {
-                _uiState.value = _uiState.value.copy(isLoadingMore = false)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
     }

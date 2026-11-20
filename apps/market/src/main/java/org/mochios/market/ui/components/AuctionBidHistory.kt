@@ -32,7 +32,8 @@ import org.mochios.market.model.Currency
 
 /**
  * Bid rows with the high bid emphasised; [endsAt] (epoch seconds) adds a
- * countdown banner.
+ * countdown banner, which ticks against the server's clock ([offset], the
+ * server's less the phone's) and calls [onEnded] when it reaches zero.
  */
 @Composable
 fun AuctionBidHistory(
@@ -40,6 +41,8 @@ fun AuctionBidHistory(
     modifier: Modifier = Modifier,
     fallbackCurrency: Currency = Currency.GBP,
     endsAt: Long? = null,
+    offset: Long = 0L,
+    onEnded: () -> Unit = {},
 ) {
     if (bids.isEmpty() && (endsAt == null || endsAt <= 0L)) return
 
@@ -47,7 +50,7 @@ fun AuctionBidHistory(
 
     Column(modifier = modifier.fillMaxWidth()) {
         if (endsAt != null && endsAt > 0L) {
-            CountdownRow(endsAt = endsAt)
+            CountdownRow(endsAt = endsAt, offset = offset, onEnded = onEnded)
         }
         bids.forEach { bid ->
             val isHigh = highest != null && bid.id == highest.id
@@ -90,16 +93,9 @@ fun AuctionBidHistory(
 }
 
 @Composable
-private fun CountdownRow(endsAt: Long) {
-    val now = System.currentTimeMillis() / 1000L
-    val remaining = endsAt - now
-    val label = if (remaining > 0L) {
-        stringResource(R.string.market_bid_ends_in, formatRemaining(remaining))
-    } else {
-        stringResource(R.string.market_bid_ended)
-    }
+private fun CountdownRow(endsAt: Long, offset: Long, onEnded: () -> Unit) {
     Text(
-        text = label,
+        text = auctionRemainingLabel(endsAt, offset, onEnded),
         style = MaterialTheme.typography.titleSmall,
         color = MaterialTheme.colorScheme.onPrimaryContainer,
         modifier = Modifier
@@ -108,16 +104,4 @@ private fun CountdownRow(endsAt: Long) {
             .background(MaterialTheme.colorScheme.primaryContainer)
             .padding(horizontal = 12.dp, vertical = 8.dp),
     )
-}
-
-private fun formatRemaining(seconds: Long): String {
-    val s = seconds.coerceAtLeast(0L)
-    val d = s / 86_400L
-    val h = (s % 86_400L) / 3_600L
-    val m = (s % 3_600L) / 60L
-    return when {
-        d > 0 -> "${d}d ${h}h"
-        h > 0 -> "${h}h ${m}m"
-        else -> "${m}m"
-    }
 }

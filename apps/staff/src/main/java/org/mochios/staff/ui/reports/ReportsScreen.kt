@@ -176,7 +176,7 @@ private fun ReportsBody(
             else -> InfiniteList(
                 items = state.reports,
                 key = { report -> report.id },
-                isLoading = state.isLoadingMore,
+                load = state.load,
                 hasMore = state.reports.size < state.total,
                 onLoadMore = onLoadMore,
             ) { report ->

@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s கூடுதல் பதில்கள்</item>
     </plurals>
     <string name="drawer_unread">படிக்கப்படாதது</string>
+    <string name="person_unknown">தெரியாதது</string>
+    <string name="format_time_seconds_short">%1$sவி</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

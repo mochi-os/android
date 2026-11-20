@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Shënime</string>
     <string name="staff_accounts_reason_label">Arsyeja</string>
     <string name="staff_accounts_reason_optional_label">Arsyeja (opsionale)</string>
-    <string name="staff_accounts_sales">%1$s shitje</string>
     <string name="staff_accounts_search_clear">Pastro kërkimin</string>
     <string name="staff_accounts_search_placeholder">Kërko</string>
     <string name="staff_accounts_seller_buyers">Vetëm blerësit</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Bisedë</string>
     <string name="staff_reports_conversation_empty">Asnjë mesazh</string>
     <string name="staff_reports_conversation_show">Shfaq bisedën</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s shitje</item>
+        <item quantity="other">%1$s shitje</item>
+    </plurals>
 </resources>

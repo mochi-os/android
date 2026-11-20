@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Notlar</string>
     <string name="staff_accounts_reason_label">Neden</string>
     <string name="staff_accounts_reason_optional_label">Sebep (isteğe bağlı)</string>
-    <string name="staff_accounts_sales">%1$s satış</string>
     <string name="staff_accounts_search_clear">Aramayı temizle</string>
     <string name="staff_accounts_search_placeholder">Ara</string>
     <string name="staff_accounts_seller_buyers">Yalnızca alıcılar</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Yazışma</string>
     <string name="staff_reports_conversation_empty">Mesaj yok</string>
     <string name="staff_reports_conversation_show">Yazışmayı göster</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s satış</item>
+        <item quantity="other">%1$s satış</item>
+    </plurals>
 </resources>

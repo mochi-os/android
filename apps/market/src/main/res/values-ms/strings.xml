@@ -26,7 +26,6 @@
     <string name="market_bid_dialog_title">Letak bidaan</string>
     <string name="market_bid_ended">Lelongan tamat</string>
     <string name="market_bids_empty">Tiada bidaan</string>
-    <string name="market_bids_ended">Lelongan tamat</string>
     <string name="market_bids_tab_active">Aktif</string>
     <string name="market_bids_tab_all">Semua</string>
     <string name="market_bids_tab_lost">Kalah</string>
@@ -80,12 +79,9 @@
     <string name="market_condition_refurbished">Direkondisi</string>
     <string name="market_condition_used">Terpakai</string>
     <string name="market_dispute_dialog_cancel">Batal</string>
-    <string name="market_dispute_dialog_evidence_role_buyer">Pembeli</string>
-    <string name="market_dispute_dialog_evidence_role_seller">Penjual</string>
     <string name="market_dispute_dialog_failed">Gagal menghantar respons</string>
     <string name="market_dispute_dialog_response_label">Balasan anda</string>
     <string name="market_dispute_dialog_submit">Hantar</string>
-    <string name="market_editor_appeal_submit">Hantar rayuan</string>
     <string name="market_editor_asset_external">URL Luaran</string>
     <string name="market_editor_asset_external_filename">Nama fail</string>
     <string name="market_editor_back">Kembali</string>
@@ -122,7 +118,6 @@
     <string name="market_editor_type_digital">Digital</string>
     <string name="market_editor_type_physical">Fizikal</string>
     <string name="market_editor_zone_cancel">Batal</string>
-    <string name="market_editor_zone_country_us">Amerika Syarikat</string>
     <string name="market_editor_zone_region">Wilayah</string>
     <string name="market_fee_preview_item">Item</string>
     <string name="market_fee_preview_payout">Bayaran anda</string>
@@ -208,7 +203,6 @@
     <string name="market_purchase_item">Item</string>
     <string name="market_purchase_message_seller">Mesej penjual</string>
     <string name="market_purchase_not_found">Pesanan tidak dijumpai</string>
-    <string name="market_purchase_order_label">Pesanan</string>
     <string name="market_purchase_purchased">Dibeli</string>
     <string name="market_purchase_refunded">Dibayar balik</string>
     <string name="market_purchase_refunded_partial">Dibayar balik (sebahagian)</string>
@@ -232,11 +226,7 @@
     <string name="market_refund_body">Berikan sebab untuk permohonan bayaran balik anda.</string>
     <string name="market_refund_details_label">Butiran</string>
     <string name="market_refund_dialog_cancel">Batal</string>
-    <string name="market_refund_dialog_description_label">Penerangan</string>
     <string name="market_refund_dialog_failed">Gagal mengeluarkan bayaran balik</string>
-    <string name="market_refund_dialog_reason_fraud">Penipuan</string>
-    <string name="market_refund_dialog_reason_label">Sebab</string>
-    <string name="market_refund_dialog_reason_other">Lain-lain</string>
     <string name="market_refund_dialog_submit">Keluarkan bayaran balik</string>
     <string name="market_refund_dialog_title">Keluarkan bayaran balik</string>
     <string name="market_refund_reason_damaged">Rosak</string>
@@ -284,7 +274,6 @@
     <string name="market_sale_tracking_label">Nombor penjejakan</string>
     <string name="market_saved_title">Disimpan</string>
     <string name="market_search_clear">Kosongkan carian</string>
-    <string name="market_section_categories">Lihat Kategori</string>
     <string name="market_section_listings">Penyenaraian Terkini</string>
     <string name="market_ship_dialog_cancel">Batal</string>
     <string name="market_ship_dialog_submit">Sahkan</string>
@@ -340,8 +329,6 @@
     <string name="market_sale_review_response_submitting">Menghantar…</string>
     <string name="market_checkout_subscribing">Melanggan…</string>
     <string name="market_filter_remove">Buang penapis</string>
-    <string name="market_listing_detail_sales_count">%1$s jualan</string>
-    <string name="market_profile_sales_count">%1$s jualan</string>
     <string name="market_purchase_dispute_response">Jawapan penjual</string>
     <string name="market_purchases_order_label">Pesanan #%1$s</string>
 
@@ -363,7 +350,6 @@
     <string name="market_bid_dialog_no_bids_yet">Belum ada bidaan — bidaan permulaan %1$s</string>
     <string name="market_bid_dialog_submitting">Membuat bidaan</string>
     <string name="market_bid_ends_in">Berakhir dalam %1$s</string>
-    <string name="market_bids_ends_in">Berakhir dalam %1$s</string>
     <string name="market_bids_your_bid">Bidaan anda: %1$s</string>
     <string name="market_carousel_main">Foto %1$s daripada %2$s</string>
     <string name="market_carousel_thumbnail">Lakaran kenit %1$s</string>
@@ -373,14 +359,7 @@
     <string name="market_checkout_pwyw_label">Harga anda (minimum %1$s)</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
-    <string name="market_dispute_dialog_attach">Lampirkan bukti</string>
-    <string name="market_dispute_dialog_attach_count">%1$s fail dilampirkan</string>
-    <string name="market_dispute_dialog_evidence_role_staff">Kakitangan Mochi</string>
-    <string name="market_dispute_dialog_evidence_section_title">Bukti yang dikemukakan</string>
-    <string name="market_dispute_dialog_evidence_submitter_line">dikemukakan oleh %1$s</string>
     <string name="market_dispute_dialog_title">Maklum balas pertikaian</string>
-    <string name="market_editor_appeal">Rayuan penyederhanaan</string>
-    <string name="market_editor_appeal_reason">Mengapa anda merayu?</string>
     <string name="market_editor_asset_add">Tambah fail</string>
     <string name="market_editor_asset_delete">Buang aset</string>
     <string name="market_editor_asset_external_add">Tambah pautan luaran</string>
@@ -388,13 +367,11 @@
     <string name="market_editor_asset_external_url">URL rujukan</string>
     <string name="market_editor_assets_empty">Belum ada aset</string>
     <string name="market_editor_category_none">Pilih kategori</string>
-    <string name="market_editor_days">%1$s hari</string>
     <string name="market_editor_delete">Padam penyenaraian</string>
     <string name="market_editor_delete_confirm_message">Ini akan memadamkan penyenaraian secara kekal.</string>
     <string name="market_editor_delete_confirm_title">Padam penyenaraian?</string>
     <string name="market_editor_download">Muat turun terus</string>
     <string name="market_editor_duration">Tempoh lelongan</string>
-    <string name="market_editor_instant">Harga beli segera (pilihan)</string>
     <string name="market_editor_instant_help">Tetapkan kepada 0 untuk lumpuhkan</string>
     <string name="market_editor_interval">Selang pengebilan</string>
     <string name="market_editor_photos_add">Tambah foto</string>
@@ -413,32 +390,18 @@
     <string name="market_editor_title_required">Masukkan tajuk sebelum menambah foto atau fail</string>
     <string name="market_editor_type">Kaedah penghantaran</string>
     <string name="market_editor_zone_add">Tambah zon</string>
-    <string name="market_editor_zone_country_au">Australia</string>
-    <string name="market_editor_zone_country_ca">Kanada</string>
-    <string name="market_editor_zone_country_de">Jerman</string>
-    <string name="market_editor_zone_country_es">Sepanyol</string>
-    <string name="market_editor_zone_country_fr">Perancis</string>
-    <string name="market_editor_zone_country_gb">United Kingdom</string>
-    <string name="market_editor_zone_country_it">Itali</string>
-    <string name="market_editor_zone_country_jp">Jepun</string>
-    <string name="market_editor_zone_country_nl">Belanda</string>
     <string name="market_editor_zone_days">Anggaran penghantaran</string>
     <string name="market_editor_zone_days_placeholder">cth. 3-5 hari bekerja</string>
     <string name="market_editor_zone_delete">Buang zon</string>
     <string name="market_editor_zone_edit">Edit zon</string>
-    <string name="market_editor_zone_european_union">Kesatuan Eropah</string>
     <string name="market_editor_zone_notes">Nota (pilihan)</string>
     <string name="market_editor_zone_price">Pos</string>
     <string name="market_editor_zone_save">Simpan zon</string>
-    <string name="market_editor_zone_worldwide">Seluruh dunia</string>
     <string name="market_editor_zones_empty">Tiada zon lagi</string>
     <string name="market_empty_subtitle">Cuba laraskan atau kosongkan penapis anda.</string>
     <string name="market_empty_title">Tiada hasil</string>
     <string name="market_fee_disclosure_body">Yuran platform: %1$s%%. Lihat papan pemuka Stripe anda untuk yuran pemproses.</string>
     <string name="market_fee_disclosure_title">Yuran platform</string>
-    <string name="market_fee_preview_failed">Tidak dapat mengira yuran</string>
-    <string name="market_fee_preview_loading">Mengira yuran…</string>
-    <string name="market_fee_preview_mochi_fee">Yuran Mochi</string>
     <string name="market_filter_chip_max">Maks %1$s</string>
     <string name="market_filter_chip_min">Min %1$s</string>
     <string name="market_filter_open">Penapis</string>
@@ -446,10 +409,6 @@
     <string name="market_filter_title">Penapis</string>
     <string name="market_listing_detail_appeal_pending">Rayuan tertunda</string>
     <string name="market_listing_detail_buy">Beli</string>
-    <string name="market_listing_detail_relist_failed">Tidak dapat menyenarai semula</string>
-    <string name="market_listing_detail_seller_banned_banner">Penjual ini telah diharamkan. Pesanan baru tidak boleh dibuat.</string>
-    <string name="market_listing_detail_seller_suspended_banner">Penjual ini digantung. Pesanan baru ditangguhkan sehingga akaun dipulihkan.</string>
-    <string name="market_listing_detail_seller_suspended_cta_hint">Pembelian dilumpuhkan semasa akaun penjual disekat.</string>
     <string name="market_listing_no_photo">Tiada foto</string>
     <string name="market_listing_photo">Foto penyenaraian</string>
     <string name="market_listing_save">Simpan penyenaraian</string>
@@ -461,7 +420,6 @@
     <string name="market_listings_load_failed">Gagal memuatkan penyenaraian anda</string>
     <string name="market_listings_new">Penyenaraian baharu</string>
     <string name="market_listings_search_placeholder">Cari penyenaraian anda</string>
-    <string name="market_listings_share_chooser">Kongsi penyenaraian</string>
     <string name="market_messages_compose_placeholder">Tulis mesej</string>
     <string name="market_messages_inbox_empty_subtitle">Apabila anda menghantar mesej kepada penjual (atau pembeli menghantar mesej kepada anda) bualan akan muncul di sini.</string>
     <string name="market_messages_inbox_empty_title">Tiada perbualan lagi</string>
@@ -478,21 +436,10 @@
     <string name="market_profile_no_reviews">Tiada ulasan lagi.</string>
     <string name="market_purchase_dispute_chargeback">Caj balik %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">Bank anda telah memfailkan caj balik untuk pesanan ini. Stripe sedang mengendalikan pertikaian ini dengan penjual; hasilnya akan muncul di sini apabila diputuskan.</string>
-    <string name="market_purchase_download_many">Muat turun %1$s fail anda di bawah.</string>
-    <string name="market_purchase_download_one">Muat turun fail anda di bawah.</string>
     <string name="market_purchase_review_from">Ulasan daripada %1$s</string>
-    <string name="market_purchases_auction_label">Lelongan #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s dibayar balik</string>
     <string name="market_purchases_won_for">Dimenangi dengan %1$s</string>
-    <string name="market_rating_reviews">(%1$s ulasan)</string>
-    <string name="market_refund_dialog_amount_help">Biarkan kosong untuk membayar balik keseluruhan pesanan.</string>
     <string name="market_refund_dialog_amount_label">Jumlah</string>
-    <string name="market_refund_dialog_prior_kind_full">penuh</string>
-    <string name="market_refund_dialog_prior_kind_partial">separa</string>
-    <string name="market_refund_dialog_prior_section_title">Bayaran balik sebelumnya</string>
-    <string name="market_refund_dialog_prior_title">Bayaran balik terdahulu</string>
-    <string name="market_refund_dialog_reason_duplicate">Pendua</string>
-    <string name="market_refund_dialog_reason_requested">Diminta oleh pembeli</string>
     <string name="market_refund_dialog_submitting">Membayar balik…</string>
     <string name="market_report_dialog_details_label">Butiran (pilihan)</string>
     <string name="market_report_dialog_submitting">Menghantar</string>
@@ -524,7 +471,6 @@
     <string name="market_stripe_onboarding_failed">Tidak dapat membuka Stripe</string>
     <string name="market_stripe_onboarding_opening">Membuka Stripe…</string>
     <string name="market_stripe_onboarding_title">Lengkapkan persediaan pembayaran</string>
-    <string name="market_subscribers_cancels_on">Dibatalkan pada %1$s</string>
     <string name="market_subscribers_empty_subtitle">Pelanggan kepada penyenaraian anda akan dipaparkan di sini.</string>
     <string name="market_subscribers_empty_title">Tiada pelanggan lagi</string>
     <string name="market_subscribers_title">Pelanggan saya</string>
@@ -532,7 +478,6 @@
     <string name="market_subscriptions_cancels_on">Dibatalkan pada %1$s</string>
     <string name="market_warnings_title">Amaran</string>
 
-    <string name="market_account_address_desc">Diisi secara automatik pada pembayaran akan datang setelah penyepaduan pembayaran ditambah.</string>
     <string name="market_account_address_title">Alamat penghantaran lalai</string>
     <string name="market_account_business_desc">Digunakan untuk invois dan pematuhan cukai. Tidak ditunjukkan pada profil awam anda.</string>
     <string name="market_account_business_switch">Saya menjual sebagai perniagaan</string>
@@ -594,7 +539,6 @@
     <string name="market_editor_start_time_help">Biarkan kosong untuk mula pada penerbitan.</string>
     <string name="market_editor_start_time_next">Seterusnya</string>
     <string name="market_editor_start_time_clear">Kosongkan</string>
-    <string name="market_listing_detail_buy_now_label">Beli sekarang</string>
     <string name="market_section_recently_viewed">Baru dilihat</string>
     <string name="market_recently_viewed_clear">Kosongkan semua</string>
     <string name="market_listings_create">Cipta</string>
@@ -603,7 +547,6 @@
     <string name="market_listing_checkout_in_progress">Anda mempunyai pembayaran sedang berjalan untuk penyenaraian ini.</string>
     <string name="market_listing_checkout_cancel">Batalkan pembayaran</string>
     <string name="market_listing_checkout_cancelled">Pembayaran dibatalkan</string>
-    <string name="market_listing_checkout_cancel_failed">Gagal membatalkan pembayaran</string>
     <string name="market_account_stripe_connected">Stripe disambungkan</string>
     <string name="market_audit_account_banned">Diharamkan</string>
     <string name="market_audit_account_seller_activated">Penjual diaktifkan</string>
@@ -686,4 +629,67 @@
     <string name="market_sale_chargeback_fee_refunded">(dibayar balik)</string>
     <string name="market_messages_report">Laporkan perbualan ini</string>
     <string name="market_report_conversation_title">Laporkan perbualan</string>
+    <string name="market_audit_auction_cancelled">Lelongan dibatalkan</string>
+    <string name="market_dispute_status_open">Buka</string>
+    <string name="market_dispute_status_responded">Telah dibalas</string>
+    <string name="market_dispute_status_resolved_buyer">Diselesaikan (pembeli)</string>
+    <string name="market_dispute_status_resolved_seller">Diselesaikan (penjual)</string>
+    <string name="market_editor_move_down">Alihkan ke bawah</string>
+    <string name="market_editor_move_up">Alihkan ke atas</string>
+    <string name="market_review_count">(%1$s)</string>
+    <string name="market_status_unknown">Tidak diketahui</string>
+    <string name="market_account_stripe_pending">Stripe dipautkan, tetapi Stripe memerlukan lebih banyak maklumat sebelum anda boleh menerima pembayaran</string>
+    <string name="market_editor_instant_below_start">Harga Beli Sekarang mesti lebih tinggi daripada tawaran awal.</string>
+    <string name="market_editor_reserve_above_instant">Harga cadangan tidak boleh melebihi Harga Beli Sekarang.</string>
+    <string name="market_editor_reserve_below_start">Harga cadangan mesti lebih tinggi daripada tawaran awal.</string>
+    <string name="market_editor_starting_bid">Tawaran awal</string>
+    <string name="market_listing_detail_buy_now_price">Beli sekarang — %1$s</string>
+    <string name="market_listing_detail_manage_subscription">Urus langganan</string>
+    <string name="market_listing_detail_view_order">Lihat pesanan anda</string>
+    <string name="market_listing_held_title">Penyenaraian ini ditahan sementara menunggu semakan</string>
+    <string name="market_listing_rejected_title">Penyenaraian ini telah ditolak</string>
+    <string name="market_listing_untitled">Iklan tanpa judul</string>
+    <string name="market_listings_status_held">Ditahan untuk peninjauan</string>
+    <string name="market_refund_dialog_amount_remaining">Biarkan kosong untuk mengembalikan keseluruhan baki %1$s.</string>
+    <string name="market_fee_preview_auction">Mochi mengambil %1$s%% dari tawaran pemenang akhir. Biaya pemrosesan Stripe diambil dari sisanya.</string>
+    <string name="market_fee_preview_sale">Mochi mengambil %1$s%% dari setiap penjualan. Biaya pemrosesan Stripe diambil dari sisanya.</string>
+    <string name="market_checkout_auction_unavailable">Hanya pembida yang menang boleh membayar untuk lelongan ini, selepas lelongan tamat.</string>
+    <string name="market_editor_instant">Harga beli sekarang (pilihan)</string>
+    <string name="market_fee_preview_fee">Yuran Mochi (%1$s%%)</string>
+    <string name="market_fee_preview_payout_minimum">Bayaran anda (minimum)</string>
+    <string name="market_fee_preview_payout_period">Bayaran anda bagi setiap tempoh</string>
+    <string name="market_listing_detail_opens">Pembidaan dibuka %1$s</string>
+    <string name="market_price_reserve_met">Harga cadangan dicapai</string>
+    <string name="market_price_reserve_unmet">Harga cadangan belum dicapai</string>
+    <string name="market_refund_dialog_amount_invalid">Masukkan amaun antara %1$s dan %2$s</string>
+    <string name="market_refund_dialog_prior">Bayaran balik terdahulu: %1$s</string>
+    <plurals name="market_editor_days">
+        <item quantity="other">%1$s hari</item>
+    </plurals>
+    <plurals name="market_listing_detail_sales_count">
+        <item quantity="other">%1$s jualan</item>
+    </plurals>
+    <plurals name="market_profile_sales_count">
+        <item quantity="other">%1$s jualan</item>
+    </plurals>
+    <plurals name="market_purchase_download">
+        <item quantity="other">Muat turun %1$s fail anda di bawah.</item>
+    </plurals>
+    <plurals name="market_rating_reviews">
+        <item quantity="other">(%1$s ulasan)</item>
+    </plurals>
+    <string name="market_region_africa">Afrika</string>
+    <string name="market_region_asia">Asia</string>
+    <string name="market_region_asia_pacific">Asia Pasifik</string>
+    <string name="market_region_eea">Kawasan Ekonomi Eropah</string>
+    <string name="market_region_eu">Kesatuan Eropah</string>
+    <string name="market_region_europe">Eropah</string>
+    <string name="market_region_latin_america">Amerika Latin</string>
+    <string name="market_region_middle_east">Timur Tengah</string>
+    <string name="market_region_north_america">Amerika Utara</string>
+    <string name="market_region_oceania">Oceania</string>
+    <string name="market_region_south_america">Amerika Selatan</string>
+    <string name="market_region_world">Seluruh dunia</string>
+    <string name="market_audit_order_staff_read">Dilihat oleh kakitangan</string>
+    <string name="market_audit_other">Aktiviti lain</string>
 </resources>

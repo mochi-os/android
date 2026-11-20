@@ -5,19 +5,11 @@
 
 package org.mochios.market.ui.dialog
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuAnchorType
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -26,138 +18,123 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
-import org.mochios.android.ui.components.MochiCard
-import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
+import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Currency
-import org.mochios.market.model.Refund
+
+/** What the refund dialog's amount field asks for. */
+internal sealed interface RefundEntry {
+    /** The whole remainder: a blank field, or one naming all of it. Sent as no amount. */
+    data object Whole : RefundEntry
+
+    /** Part of the remainder, in minor units. */
+    data class Part(val amount: Long) : RefundEntry
+
+    /** Not an amount the order can refund. */
+    data object Invalid : RefundEntry
+}
 
 /**
- * The first three are Stripe's refund reason codes, passed through by the
- * comptroller.
+ * Read the refund field [text] for an order with [remaining] minor units left
+ * to refund, as the web does: blank is the whole remainder; anything else must
+ * be a plain amount in whole minor units of [currency], from one minor unit up
+ * to the remainder. Zero, a lone mark, a fraction of a minor unit or text the
+ * field cannot read is [RefundEntry.Invalid], never a full refund.
  */
-private val SELLER_REFUND_REASONS = listOf(
-    "requested_by_customer" to R.string.market_refund_dialog_reason_requested,
-    "fraudulent" to R.string.market_refund_dialog_reason_fraud,
-    "duplicate" to R.string.market_refund_dialog_reason_duplicate,
-    "other" to R.string.market_refund_dialog_reason_other,
-)
+internal fun refundEntry(text: String, currency: Currency, remaining: Long): RefundEntry {
+    val trimmed = text.trim()
+    if (trimmed.isEmpty()) return RefundEntry.Whole
+    val decimals = currencyDecimals(currency)
+    val shape = if (decimals == 0) {
+        Regex("""^\d+$""")
+    } else {
+        Regex("""^(\d+([.,]\d{0,$decimals})?|[.,]\d{1,$decimals})$""")
+    }
+    if (!shape.matches(trimmed)) return RefundEntry.Invalid
+    val amount = toMinorUnits(trimmed, currency)
+    return when {
+        amount < 1L || amount > remaining -> RefundEntry.Invalid
+        amount == remaining -> RefundEntry.Whole
+        else -> RefundEntry.Part(amount)
+    }
+}
 
-@OptIn(ExperimentalMaterial3Api::class)
+/**
+ * The seller's refund: an amount, blank for the whole of [remaining]. Issue
+ * refund waits until the field holds an amount the order can refund, with the
+ * reason under the field; [onSubmit] gets null for the whole remainder.
+ */
 @Composable
 fun IssueRefundDialog(
     open: Boolean,
     currency: Currency,
+    remaining: Long,
     priorRefundedAmount: Long = 0L,
-    priorRefunds: List<Refund> = emptyList(),
     submitting: Boolean = false,
     errorMessage: String? = null,
-    onSubmit: (amountMinor: Long?, reason: String, description: String) -> Unit,
+    onSubmit: (amountMinor: Long?) -> Unit,
     onDismiss: () -> Unit,
 ) {
     if (!open) return
 
-    var reason by remember { mutableStateOf("requested_by_customer") }
     var amountInput by remember { mutableStateOf("") }
-    var description by remember { mutableStateOf("") }
-    var reasonOpen by remember { mutableStateOf(false) }
 
     LaunchedEffect(open) {
         if (open) {
-            reason = "requested_by_customer"
             amountInput = ""
-            description = ""
         }
     }
+
+    val entry = refundEntry(amountInput, currency, remaining)
+    val invalid = entry == RefundEntry.Invalid
 
     MochiAlertDialog(
         onDismissRequest = { if (!submitting) onDismiss() },
         title = stringResource(R.string.market_refund_dialog_title),
         content = {
             Column {
-                if (priorRefunds.isNotEmpty()) {
-                    PriorRefundsSection(
-                        refunds = priorRefunds,
-                        currency = currency,
-                    )
-                    Spacer(Modifier.height(12.dp))
-                } else if (priorRefundedAmount > 0L) {
+                if (priorRefundedAmount > 0L) {
                     Text(
-                        text = stringResource(R.string.market_refund_dialog_prior_title) +
-                            ": " + formatPrice(priorRefundedAmount, currency),
+                        text = stringResource(R.string.market_refund_dialog_prior, formatPrice(priorRefundedAmount, currency)),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     Spacer(Modifier.height(8.dp))
                 }
-
-                val reasonLabel = SELLER_REFUND_REASONS.firstOrNull { it.first == reason }?.second
-                    ?: R.string.market_refund_dialog_reason_other
-                ExposedDropdownMenuBox(
-                    expanded = reasonOpen,
-                    onExpandedChange = { reasonOpen = it },
-                ) {
-                    MochiTextField(
-                        value = stringResource(reasonLabel),
-                        onValueChange = {},
-                        readOnly = true,
-                        singleLine = true,
-                        label = { Text(stringResource(R.string.market_refund_dialog_reason_label)) },
-                        trailingIcon = {
-                            ExposedDropdownMenuDefaults.TrailingIcon(expanded = reasonOpen)
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable),
-                    )
-                    ExposedDropdownMenu(
-                        expanded = reasonOpen,
-                        onDismissRequest = { reasonOpen = false },
-                    ) {
-                        for ((wireValue, labelRes) in SELLER_REFUND_REASONS) {
-                            MochiDropdownMenuItem(
-                                text = { Text(stringResource(labelRes)) },
-                                onClick = {
-                                    reason = wireValue
-                                    reasonOpen = false
-                                },
-                            )
-                        }
-                    }
-                }
-                Spacer(Modifier.height(8.dp))
                 MochiTextField(
                     value = amountInput,
                     onValueChange = { amountInput = it },
                     label = { Text(stringResource(R.string.market_refund_dialog_amount_label)) },
                     supportingText = {
-                        Text(stringResource(R.string.market_refund_dialog_amount_help))
+                        if (invalid) {
+                            Text(
+                                stringResource(
+                                    R.string.market_refund_dialog_amount_invalid,
+                                    formatPrice(1L, currency),
+                                    formatPrice(remaining, currency),
+                                ),
+                            )
+                        } else {
+                            Text(
+                                stringResource(
+                                    R.string.market_refund_dialog_amount_remaining,
+                                    formatPrice(remaining, currency),
+                                ),
+                            )
+                        }
                     },
+                    isError = invalid,
                     singleLine = true,
                     enabled = !submitting,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
-                    modifier = Modifier.fillMaxWidth(),
-                )
-                Spacer(Modifier.height(8.dp))
-                MochiTextField(
-                    value = description,
-                    onValueChange = { description = it },
-                    label = {
-                        Text(stringResource(R.string.market_refund_dialog_description_label))
-                    },
-                    enabled = !submitting,
-                    minLines = 3,
                     modifier = Modifier.fillMaxWidth(),
                 )
                 if (!errorMessage.isNullOrBlank()) {
@@ -176,79 +153,15 @@ fun IssueRefundDialog(
             stringResource(R.string.market_refund_dialog_submit)
         },
         onConfirm = {
-            val minor = amountInput.trim().takeIf { it.isNotEmpty() }
-                ?.let { toMinorUnits(it, currency) }
-            onSubmit(minor, reason, description.trim())
+            when (val chosen = refundEntry(amountInput, currency, remaining)) {
+                RefundEntry.Whole -> onSubmit(null)
+                is RefundEntry.Part -> onSubmit(chosen.amount)
+                RefundEntry.Invalid -> Unit
+            }
         },
+        confirmEnabled = !invalid && remaining > 0L,
         confirmLoading = submitting,
         dismissText = stringResource(R.string.market_refund_dialog_cancel),
         dismissEnabled = !submitting,
     )
-}
-
-@Composable
-private fun PriorRefundsSection(refunds: List<Refund>, currency: Currency) {
-    val format = LocalFormat.current
-    Text(
-        text = stringResource(R.string.market_refund_dialog_prior_section_title),
-        style = MaterialTheme.typography.titleSmall,
-        fontWeight = FontWeight.SemiBold,
-    )
-    Spacer(Modifier.height(8.dp))
-    MochiCard(modifier = Modifier.fillMaxWidth()) {
-        Column {
-            refunds.forEachIndexed { index, refund ->
-                if (index > 0) HorizontalDivider()
-                PriorRefundRow(refund = refund, currency = currency, dateString = format.formatDate(refund.created))
-            }
-        }
-    }
-}
-
-@Composable
-private fun PriorRefundRow(refund: Refund, currency: Currency, dateString: String) {
-    val displayCurrency = refund.currency ?: currency
-    val kindLabel = when (refund.kind.lowercase()) {
-        "full" -> stringResource(R.string.market_refund_dialog_prior_kind_full)
-        "partial" -> stringResource(R.string.market_refund_dialog_prior_kind_partial)
-        else -> refund.kind
-    }
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .padding(horizontal = 12.dp, vertical = 8.dp)) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Text(
-                text = formatPrice(refund.amount, displayCurrency),
-                style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.SemiBold,
-            )
-            if (kindLabel.isNotBlank()) {
-                Text(
-                    text = kindLabel,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            Spacer(Modifier.fillMaxWidth(0f))
-            if (dateString.isNotBlank()) {
-                Text(
-                    text = dateString,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-        }
-        val detail = refund.description.trim().ifBlank { refund.reason.trim() }
-        if (detail.isNotEmpty()) {
-            Spacer(Modifier.height(2.dp))
-            Text(
-                text = detail,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-        }
-    }
 }

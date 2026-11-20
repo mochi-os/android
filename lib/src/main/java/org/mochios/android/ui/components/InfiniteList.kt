@@ -25,9 +25,24 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import org.mochios.android.api.MochiError
+
+/**
+ * Where a paged list's next page stands. The caller owns it: [Loading] while a
+ * page is being read, [Failed] with the reason when the last read failed, and
+ * [Idle] otherwise.
+ */
+sealed interface LoadState {
+    data object Idle : LoadState
+    data object Loading : LoadState
+    data class Failed(val error: MochiError) : LoadState
+}
 
 /**
  * A list that asks for more through [onLoadMore] as its end comes into view.
+ * It asks only while [load] is [LoadState.Idle]: a page that failed is shown
+ * as the list's last row with its reason and a retry, and is not asked for
+ * again until the user retries.
  * With [key], each item is tracked by it, so a row that moves keeps its state
  * and rows that did not change are not redrawn; a page that repeats an item
  * already listed leaves the list unkeyed rather than crashing on the
@@ -36,7 +51,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun <T> InfiniteList(
     items: List<T>,
-    isLoading: Boolean,
+    load: LoadState,
     hasMore: Boolean,
     onLoadMore: () -> Unit,
     modifier: Modifier = Modifier,
@@ -47,12 +62,12 @@ fun <T> InfiniteList(
     key: ((T) -> Any)? = null,
     itemContent: @Composable (T) -> Unit
 ) {
-    if (items.isEmpty() && !isLoading) {
+    if (items.isEmpty() && load == LoadState.Idle) {
         emptyContent()
         return
     }
 
-    // Derive only the scroll position: [hasMore] and [isLoading] are plain
+    // Derive only the scroll position: [hasMore] and [load] are plain
     // parameters, and reading them inside this unkeyed remember would freeze
     // the first composition's values forever. Read them fresh as effect keys.
     val reachedEnd by remember {
@@ -64,8 +79,8 @@ fun <T> InfiniteList(
         }
     }
 
-    LaunchedEffect(reachedEnd, hasMore, isLoading) {
-        if (reachedEnd && hasMore && !isLoading) {
+    LaunchedEffect(reachedEnd, hasMore, load) {
+        if (reachedEnd && hasMore && load == LoadState.Idle) {
             onLoadMore()
         }
     }
@@ -90,8 +105,8 @@ fun <T> InfiniteList(
             }
         }
 
-        if (isLoading) {
-            item {
+        when (load) {
+            LoadState.Loading -> item {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -101,6 +116,14 @@ fun <T> InfiniteList(
                     CircularProgressIndicator()
                 }
             }
+            is LoadState.Failed -> item {
+                InlineErrorState(
+                    error = load.error,
+                    onRetry = onLoadMore,
+                    modifier = Modifier.padding(horizontal = 16.dp),
+                )
+            }
+            LoadState.Idle -> Unit
         }
     }
 }

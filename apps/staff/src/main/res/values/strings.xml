@@ -19,7 +19,6 @@
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_label">Reason</string>
     <string name="staff_accounts_reason_optional_label">Reason (optional)</string>
-    <string name="staff_accounts_sales">%1$s sales</string>
     <string name="staff_accounts_search_clear">Clear search</string>
     <string name="staff_accounts_search_placeholder">Search</string>
     <string name="staff_accounts_seller_buyers">Buyers only</string>
@@ -437,4 +436,8 @@
     <string name="staff_team_toast_removed">Member removed</string>
     <string name="staff_team_toast_added">Member added</string>
     <string name="staff_team_toast_role_updated">Role updated</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s sale</item>
+        <item quantity="other">%1$s sales</item>
+    </plurals>
 </resources>

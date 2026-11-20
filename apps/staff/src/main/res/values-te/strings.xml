@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ఆర్డర్ #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">కారణం (ఐచ్ఛికం)</string>
-    <string name="staff_accounts_sales">%1$s అమ్మకాలు</string>
     <string name="staff_appeals_reason_label">విక్రేత అప్పీలు కారణం</string>
     <string name="staff_audit_action_staff_team_role_changed">సిబ్బంది పాత్ర మార్చబడింది</string>
     <string name="staff_categories_delete_desc">“%1$s”ని తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">సంభాషణ</string>
     <string name="staff_reports_conversation_empty">సందేశాలు లేవు</string>
     <string name="staff_reports_conversation_show">సంభాషణను చూపించు</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s అమ్మకం</item>
+        <item quantity="other">%1$s అమ్మకాలు</item>
+    </plurals>
 </resources>

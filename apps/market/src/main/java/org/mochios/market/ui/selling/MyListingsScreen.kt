@@ -35,7 +35,6 @@ import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
@@ -62,6 +61,8 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -117,6 +118,10 @@ fun MyListingsScreen(
                     navController.navigate(MarketApp.listingEdit(event.listingId.toString()))
                 is MyListingsEvent.Toast ->
                     snackbarHostState.showSnackbar(event.message)
+                MyListingsEvent.NotSeller ->
+                    navController.navigate(MarketApp.SELLER_SETTINGS) {
+                        popUpTo(MarketApp.LISTINGS) { inclusive = true }
+                    }
             }
         }
     }
@@ -126,9 +131,8 @@ fun MyListingsScreen(
         currentRoute = MarketApp.LISTINGS,
         titleRes = R.string.market_listings_title,
         actions = {
-            // Only sellers fully connected to Stripe can create listings.
-            val stripe = state.stripeStatus
-            if (stripe != null && stripe.chargesEnabled && stripe.payoutsEnabled) {
+            // Only a seller whose payments are set up can create listings.
+            if (state.listable) {
                 MochiIconButton(onClick = { navController.navigate(MarketApp.CREATE_LISTING) }) {
                     Icon(
                         Icons.Default.Add,
@@ -141,16 +145,18 @@ fun MyListingsScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             val listState = rememberLazyListState()
-            val shouldLoadMore by remember {
+            // Only the scroll position is derived; the next page is asked for
+            // only while no page is being read or has failed, so a failed page
+            // waits for its retry rather than being asked for again at once.
+            val reachedEnd by remember {
                 derivedStateOf {
                     val info = listState.layoutInfo
-                    val total = info.totalItemsCount
                     val lastVisible = info.visibleItemsInfo.lastOrNull()?.index ?: 0
-                    state.hasMore && !state.isLoading && lastVisible >= total - 4
+                    lastVisible >= info.totalItemsCount - 4
                 }
             }
-            LaunchedEffect(shouldLoadMore) {
-                if (shouldLoadMore) viewModel.loadMore()
+            LaunchedEffect(reachedEnd, state.paging.more, state.load) {
+                if (reachedEnd && state.paging.more && state.load == LoadState.Idle) viewModel.loadMore()
             }
 
             LazyColumn(
@@ -159,15 +165,13 @@ fun MyListingsScreen(
                 verticalArrangement = MarketListSpacing,
                 modifier = Modifier.fillMaxSize(),
             ) {
-                // Header span: Stripe banner + fee disclosure.
-                val stripe = state.stripeStatus
-                if (stripe != null && !(stripe.chargesEnabled && stripe.payoutsEnabled)) {
+                // A seller whose payments are not set up yet is shown how.
+                if (state.onboarding) {
                     item {
                         StripeOnboardingBanner(
                             repository = marketRepo,
                             returnUrl = "mochi://market/account",
-                            initialCharges = stripe.chargesEnabled,
-                            initialPayouts = stripe.payoutsEnabled,
+                            onReady = { viewModel.loadAccount(fresh = true) },
                         )
                     }
                 }
@@ -182,16 +186,17 @@ fun MyListingsScreen(
                 }
 
                 // Listings.
-                if (state.error != null && state.listings.isEmpty()) {
+                val load = state.load
+                if (load is LoadState.Failed && state.listings.isEmpty()) {
                     item {
-                        Text(
-                            text = state.error!!.userMessage()
+                        InlineErrorState(
+                            message = load.error.userMessage()
                                 .ifEmpty { stringResource(R.string.market_listings_load_failed) },
-                            color = MaterialTheme.colorScheme.error,
+                            onRetry = viewModel::refresh,
                             modifier = Modifier.padding(24.dp),
                         )
                     }
-                } else if (visible.isEmpty() && !state.isLoading) {
+                } else if (visible.isEmpty() && load == LoadState.Idle) {
                     item {
                         EmptyState(
                             icon = Icons.Default.Inventory2,
@@ -217,8 +222,8 @@ fun MyListingsScreen(
                             onAppeal = { appealCandidate = listing },
                         )
                     }
-                    if (state.isLoading) {
-                        item {
+                    when (load) {
+                        LoadState.Loading -> item {
                             Box(
                                 modifier = Modifier
                                     .fillMaxWidth()
@@ -228,6 +233,10 @@ fun MyListingsScreen(
                                 CircularProgressIndicator()
                             }
                         }
+                        is LoadState.Failed -> item {
+                            InlineErrorState(error = load.error, onRetry = viewModel::loadMore)
+                        }
+                        LoadState.Idle -> Unit
                     }
                 }
             }
@@ -265,6 +274,7 @@ fun MyListingsScreen(
         AppealRemovalDialog(
             open = true,
             listingId = candidate.id,
+            notes = candidate.notes,
             onDismiss = { appealCandidate = null },
             onSuccess = { viewModel.refresh() },
         )

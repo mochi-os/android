@@ -42,7 +42,9 @@ import org.mochios.market.model.ListingType
 import org.mochios.market.model.Photo
 import org.mochios.market.model.PricingModel
 import org.mochios.market.model.ShippingOption
+import org.mochios.market.model.RelistAuction
 import org.mochios.market.model.ShippingOptionInput
+import org.mochios.market.model.ShippingRegions
 import org.mochios.market.repository.MarketRepository
 import java.io.File
 import javax.inject.Inject
@@ -80,20 +82,31 @@ data class EditUiState(
     // Optional future auction start time (epoch seconds). null = start on
     // publish. The duration runs from this point, mirroring web.
     val opensAt: Long? = null,
+    // Anti-sniping settings a relisted auction carried; null leaves them to
+    // the server's defaults.
+    val extend: Long? = null,
+    val extension: Long? = null,
     // Stock count for fixed-price/subscription listings. "0" (surfaced via
     // unlimitedStock) means unlimited; auctions always sell a single unit.
     val quantityText: String = "1",
     val unlimitedStock: Boolean = false,
+    // Whether the seller has set the stock themselves: until then a download
+    // defaults to unlimited stock, and a physical item back to its count.
+    val stockTouched: Boolean = false,
     val pickup: Boolean = false,
     val shipping: Boolean = false,
     val download: Boolean = false,
     val location: String = "",
+    /** The delivery note the listing page shows under "Delivery information". */
+    val information: String = "",
     val tagsText: String = "",
     val photos: List<Photo> = emptyList(),
     val assets: List<Asset> = emptyList(),
     val zones: List<ShippingOption> = emptyList(),
     /** Server fee terms; `minimums` gates publishing when known. */
     val fees: AccountFees? = null,
+    /** The countries and region groups shipping options may name, once read. */
+    val regions: ShippingRegions? = null,
     val categories: List<Category> = emptyList(),
     val saveStatus: SaveStatus = SaveStatus.IDLE,
     val publishStatus: SaveStatus = SaveStatus.IDLE,
@@ -131,7 +144,7 @@ class EditListingViewModel @Inject constructor(
     private val rawId: String = savedStateHandle.get<String>("id").orEmpty()
     private val isNew: Boolean = rawId.isEmpty() || rawId == "new"
     private val initialId: String = if (isNew) "" else rawId
-    // Title collected by the new-listing dialog on MyListingsScreen. Seeding it
+    // Title collected by CreateListingScreen. Seeding it
     // here means a photo added before any edit already has a title to create
     // the listing row with; the row itself is still created lazily on first save.
     private val initialTitle: String = savedStateHandle.get<String>("title").orEmpty()
@@ -172,6 +185,9 @@ class EditListingViewModel @Inject constructor(
                 // The server's per-currency minimums gate publishing; the
                 // compiled-in table is only the fallback while they are unknown.
                 val fees = runCatching { repository.getFees() }.getOrNull()
+                // Shipping options name regions by code; without the server's
+                // list the editor offers the platform's countries.
+                val regions = runCatching { repository.shippingRegions() }.getOrNull()
                 if (isNew) {
                     _state.value = _state.value.copy(
                         isLoading = false,
@@ -180,6 +196,7 @@ class EditListingViewModel @Inject constructor(
                         categories = categories,
                         stripeOnboarded = stripe?.chargesEnabled,
                         fees = fees,
+                        regions = regions,
                     )
                 } else {
                     val detail = repository.getListing(initialId)
@@ -193,14 +210,18 @@ class EditListingViewModel @Inject constructor(
                     val photos = runCatching {
                         repository.listOwnedPhotos(initialId).sortedBy { it.rank }
                     }.getOrElse { listOfNotNull(detail.listing.photo) }
-                    _state.value = fromListing(
+                    val loaded = fromListing(
                         detail.listing,
                         detail.shipping,
                         detail.assets,
                         categories,
                         stripe?.chargesEnabled,
                         photos,
-                    ).copy(fees = fees)
+                    ).copy(fees = fees, regions = regions)
+                    // A relisted auction's settings, held since the relist,
+                    // fill the form once.
+                    val relisted = repository.takeRelisted(initialId)
+                    _state.value = if (relisted == null) loaded else relistedInto(loaded, relisted)
                 }
             } catch (e: Exception) {
                 _state.value = _state.value.copy(
@@ -247,10 +268,12 @@ class EditListingViewModel @Inject constructor(
             durationDays = 7,
             quantityText = if (listing.quantity == 0L) "1" else listing.quantity.toString(),
             unlimitedStock = listing.quantity == 0L,
+            stockTouched = true,
             pickup = listing.pickup == 1L,
             shipping = listing.shipping == 1L,
             download = type == ListingType.DIGITAL,
             location = listing.location,
+            information = listing.information,
             tagsText = tags.joinToString(", "),
             photos = photos,
             assets = assets,
@@ -261,25 +284,63 @@ class EditListingViewModel @Inject constructor(
         )
     }
 
+    /**
+     * [state] with a relisted auction's reserve, buy-now price, length (the
+     * offered one nearest the old auction's) and anti-sniping settings.
+     */
+    private fun relistedInto(state: EditUiState, auction: RelistAuction): EditUiState {
+        val text: (Long) -> String = { minor -> if (minor <= 0L) "" else minorToMajorText(minor, state.currency) }
+        val days = if (auction.closes > auction.opens) {
+            val length = (auction.closes - auction.opens) / 86_400.0
+            AUCTION_DURATIONS.minByOrNull { offered -> kotlin.math.abs(offered - length) } ?: state.durationDays
+        } else {
+            state.durationDays
+        }
+        return state.copy(
+            reserveText = text(auction.reserve),
+            instantText = text(auction.instant),
+            durationDays = days,
+            extend = auction.extend,
+            extension = auction.extension,
+        )
+    }
+
     // -------------------------------- Setters
 
     fun setTitle(value: String) = mutate { it.copy(title = value) }
     fun setDescription(value: String) = mutate { it.copy(description = value) }
     fun setCategory(value: String) = mutate { it.copy(category = value) }
-    fun setQuantity(value: String) = mutate { it.copy(quantityText = value.filter { c -> c.isDigit() }) }
+    fun setQuantity(value: String) = mutate {
+        it.copy(quantityText = value.filter { c -> c.isDigit() }, stockTouched = true)
+    }
     fun setOpensAt(value: Long?) = mutate { it.copy(opensAt = value) }
     fun setUnlimitedStock(value: Boolean) = mutate {
-        it.copy(unlimitedStock = value, quantityText = if (value) it.quantityText else it.quantityText.ifBlank { "1" })
+        it.copy(
+            unlimitedStock = value,
+            quantityText = if (value) it.quantityText else it.quantityText.ifBlank { "1" },
+            stockTouched = true,
+        )
     }
     fun setCondition(value: Condition?) = mutate { it.copy(condition = value) }
 
     fun setType(value: ListingType) = mutate {
         // Switching to digital implicitly disables shipping/pickup; switching
-        // to physical disables direct download.
+        // to physical disables direct download. Until the seller sets the
+        // stock, a download sells without limit (a stock of one would sell
+        // once), and a physical item goes back to its count.
         if (value == ListingType.DIGITAL) {
-            it.copy(type = value, shipping = false, pickup = false)
+            it.copy(
+                type = value,
+                shipping = false,
+                pickup = false,
+                unlimitedStock = if (it.stockTouched) it.unlimitedStock else true,
+            )
         } else {
-            it.copy(type = value, download = false)
+            it.copy(
+                type = value,
+                download = false,
+                unlimitedStock = if (it.stockTouched) it.unlimitedStock else false,
+            )
         }
     }
 
@@ -310,6 +371,7 @@ class EditListingViewModel @Inject constructor(
     fun setShipping(value: Boolean) = mutate { it.copy(shipping = value) }
     fun setDownload(value: Boolean) = mutate { it.copy(download = value) }
     fun setLocation(value: String) = mutate { it.copy(location = value) }
+    fun setInformation(value: String) = mutate { it.copy(information = value) }
     fun setTagsText(value: String) = mutate { it.copy(tagsText = value) }
 
     private inline fun mutate(block: (EditUiState) -> EditUiState) {
@@ -337,26 +399,31 @@ class EditListingViewModel @Inject constructor(
     // both taking the create branch and making duplicate listings; state is
     // re-read inside the lock so the second saver sees the id the first set.
     private suspend fun saveNow() {
-        saveMutex.withLock {
-            val current = _state.value
-            if (current.isLoading || current.title.isBlank()) return
-            _state.value = _state.value.copy(saveStatus = SaveStatus.SAVING)
-            val fields = buildFields(current)
-            try {
-                val updated = if (current.isNew || current.listingId.isEmpty()) {
-                    repository.createListing(fields)
-                } else {
-                    repository.updateListing(fields + ("id" to current.listingId))
-                }
-                _state.value = _state.value.copy(
-                    listingId = updated.id,
-                    isNew = false,
-                    saveStatus = SaveStatus.SAVED,
-                )
-            } catch (e: Exception) {
-                _state.value = _state.value.copy(saveStatus = SaveStatus.ERROR)
-                _events.emit(EditListingEvent.Error(e.toMochiError()))
+        saveMutex.withLock { saveHeld() }
+    }
+
+    /** The save itself, run with [saveMutex] held; true when it was saved. */
+    private suspend fun saveHeld(): Boolean {
+        val current = _state.value
+        if (current.isLoading || current.title.isBlank()) return false
+        _state.value = _state.value.copy(saveStatus = SaveStatus.SAVING)
+        val fields = buildFields(current)
+        return try {
+            val updated = if (current.isNew || current.listingId.isEmpty()) {
+                repository.createListing(fields)
+            } else {
+                repository.updateListing(fields + ("id" to current.listingId))
             }
+            _state.value = _state.value.copy(
+                listingId = updated.id,
+                isNew = false,
+                saveStatus = SaveStatus.SAVED,
+            )
+            true
+        } catch (e: Exception) {
+            _state.value = _state.value.copy(saveStatus = SaveStatus.ERROR)
+            _events.emit(EditListingEvent.Error(e.toMochiError()))
+            false
         }
     }
 
@@ -385,39 +452,41 @@ class EditListingViewModel @Inject constructor(
             "pickup" to (if (s.pickup) "1" else "0"),
             "shipping" to (if (s.shipping) "1" else "0"),
             "location" to s.location,
+            "information" to s.information,
             "tags" to gson.toJson(tags),
         )
     }
 
     // -------------------------------- Publish
 
+    /**
+     * Save the draft as it is on screen, then publish it, in that order and
+     * under the save lock: the Comptroller publishes the draft it last
+     * stored and takes no edit after, so a change still waiting for its
+     * autosave, or a save under way, would otherwise go live without it. A
+     * save that fails stops the publish; its error is already shown.
+     */
     fun publish() {
         val current = _state.value
-        // Block below-minimum prices at the boundary so the inline error on the
-        // price field isn't the only thing stopping a doomed Stripe charge from
-        // being created server-side.
-        if (priceBelowStripeMinimum(current)) {
+        // Block below-minimum prices and auction prices the server refuses at
+        // the boundary, so the inline errors are not the only thing stopping
+        // a doomed publish.
+        if (priceBelowStripeMinimum(current) || auctionProblems(current) != (null to null)) {
             return
         }
-        if (current.listingId.isEmpty()) {
-            viewModelScope.launch {
-                // saveNow, not save(): save() only launches the write, so
-                // listingId would still be empty on the next line and publish
-                // would silently do nothing.
-                if (_state.value.title.isBlank()) {
-                    // saveNow returns without saving on a blank title, so
-                    // without this publish would be silent again.
-                    _events.emit(EditListingEvent.TitleRequired)
-                    return@launch
-                }
-                saveNow()
-                // Create failed; saveNow already surfaced the error.
-                if (_state.value.listingId.isEmpty()) return@launch
+        viewModelScope.launch {
+            if (_state.value.title.isBlank()) {
+                // saveHeld returns without saving on a blank title, so
+                // without this publish would be silent.
+                _events.emit(EditListingEvent.TitleRequired)
+                return@launch
+            }
+            autoSaveJob?.cancel()
+            saveMutex.withLock {
+                if (!saveHeld() || _state.value.listingId.isEmpty()) return@withLock
                 doPublish(_state.value)
             }
-            return
         }
-        viewModelScope.launch { doPublish(current) }
     }
 
     private suspend fun doPublish(current: EditUiState) {
@@ -435,6 +504,8 @@ class EditListingViewModel @Inject constructor(
             val opens = current.opensAt?.takeIf { it > nowSec } ?: nowSec
             if (opens > nowSec) fields["opens"] = opens.toString()
             fields["closes"] = (opens + current.durationDays * 24L * 60L * 60L).toString()
+            current.extend?.let { extend -> fields["extend"] = extend.toString() }
+            current.extension?.let { extension -> fields["extension"] = extension.toString() }
         }
         try {
             val published = repository.publishListing(fields)
@@ -461,21 +532,6 @@ class EditListingViewModel @Inject constructor(
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             } finally {
                 _state.value = _state.value.copy(isDeleting = false)
-            }
-        }
-    }
-
-    // -------------------------------- Appeal
-
-    fun appeal(reason: String) {
-        val id = _state.value.listingId
-        if (id.isEmpty() || reason.isBlank()) return
-        viewModelScope.launch {
-            try {
-                repository.appealListing(id, reason.trim())
-                _events.emit(EditListingEvent.Notice(R.string.market_appeal_dialog_success))
-            } catch (e: Exception) {
-                _events.emit(EditListingEvent.Error(e.toMochiError()))
             }
         }
     }
@@ -539,8 +595,11 @@ class EditListingViewModel @Inject constructor(
         _state.value = _state.value.copy(photos = newOrder)
         viewModelScope.launch {
             try {
-                repository.reorderPhotos(listingId, newOrder.map { it.id })
-                    .forEach { _events.emit(EditListingEvent.Unsent(it)) }
+                // The server answers the photos in their new order, which
+                // replaces the order assumed above.
+                val reordered = repository.reorderPhotos(listingId, newOrder.map { it.id })
+                _state.value = _state.value.copy(photos = reordered.data.sortedBy { photo -> photo.rank })
+                reordered.unsent.orEmpty().forEach { _events.emit(EditListingEvent.Unsent(it)) }
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             }
@@ -605,7 +664,7 @@ class EditListingViewModel @Inject constructor(
         _state.value = _state.value.copy(assets = newOrder)
         viewModelScope.launch {
             try {
-                repository.reorderAssets(listingId, newOrder.map { it.id })
+                _state.value = _state.value.copy(assets = repository.reorderAssets(listingId, newOrder.map { it.id }))
             } catch (e: Exception) {
                 _events.emit(EditListingEvent.Error(e.toMochiError()))
             }
@@ -668,17 +727,47 @@ class EditListingViewModel @Inject constructor(
 }
 
 /**
- * Zero and empty pass for every model (pay-what-you-want may sit at zero);
- * auctions check the reserve.
+ * The minimum charge for [state]'s currency in minor units: the server's, once
+ * read, else the compiled fallback.
+ */
+fun minimumCharge(state: EditUiState): Long =
+    state.fees?.minimums?.get(state.currency.name.lowercase())
+        ?: STRIPE_MINIMUMS[state.currency]
+        ?: 0L
+
+/**
+ * Whether the price falls under the minimum charge; for an auction the
+ * starting bid, which is the listing's price. Zero and empty pass for every
+ * model (pay-what-you-want may sit at zero).
  */
 fun priceBelowStripeMinimum(state: EditUiState): Boolean {
-    val text = if (state.pricing == PricingModel.AUCTION) state.reserveText else state.priceText
-    val minor = toMinorUnits(text, state.currency)
+    val minor = toMinorUnits(state.priceText, state.currency)
     if (minor <= 0L) return false
-    val minimum = state.fees?.minimums?.get(state.currency.name.lowercase())
-        ?: STRIPE_MINIMUMS[state.currency]
-        ?: return false
-    return minor < minimum
+    return minor < minimumCharge(state)
+}
+
+/**
+ * Why an auction's reserve and buy-now prices would be refused, as the
+ * Comptroller checks them at publish: each must be above the starting bid,
+ * and the reserve not above the buy-now price. A pair of string resources,
+ * null where that price is fine; both null for any other model.
+ */
+fun auctionProblems(state: EditUiState): Pair<Int?, Int?> {
+    if (state.pricing != PricingModel.AUCTION) return null to null
+    val start = toMinorUnits(state.priceText, state.currency)
+    val reserve = toMinorUnits(state.reserveText, state.currency)
+    val instant = toMinorUnits(state.instantText, state.currency)
+    val reserveProblem = when {
+        reserve > 0L && start > 0L && reserve <= start -> R.string.market_editor_reserve_below_start
+        reserve > 0L && instant > 0L && reserve > instant -> R.string.market_editor_reserve_above_instant
+        else -> null
+    }
+    val instantProblem = if (instant > 0L && start > 0L && instant <= start) {
+        R.string.market_editor_instant_below_start
+    } else {
+        null
+    }
+    return reserveProblem to instantProblem
 }
 
 // -------------------------------- Wire helpers

@@ -5,8 +5,8 @@
 
 package org.mochios.market.ui.account
 
-import android.os.Bundle
 import androidx.annotation.StringRes
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -54,6 +54,7 @@ sealed interface SellerSettingsEvent {
 @HiltViewModel
 class SellerSettingsViewModel @Inject constructor(
     private val repo: MarketRepository,
+    savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(SellerSettingsUiState())
@@ -63,8 +64,18 @@ class SellerSettingsViewModel @Inject constructor(
     val events = _events.receiveAsFlow()
 
     init {
-        load(initial = true)
         loadFees()
+        // Stripe's OAuth return arrives as this route's arguments. Its code
+        // and state are single-use, so it is taken out of the handle, which
+        // outlives a rotation and the process, and completed here once; the
+        // completion reads the account after it.
+        val stripeReturn = StripeOauthReturn.from(savedStateHandle)
+        if (stripeReturn != null) {
+            StripeOauthReturn.KEYS.forEach { key -> savedStateHandle.remove<String>(key) }
+            completeStripeOauth(stripeReturn)
+        } else {
+            load(initial = true)
+        }
     }
 
     /**
@@ -146,12 +157,13 @@ class SellerSettingsViewModel @Inject constructor(
 
     /**
      * Finish the Stripe Connect ceremony the browser handed back through
-     * `mochi://market/stripe/oauth`. The Comptroller answers a refused or
-     * replayed state with an error, which reaches the snackbar as usual; a
-     * completed exchange re-reads the account so the linked state shows.
+     * `mochi://market/stripe/oauth`. The Comptroller answers "1" when the
+     * account can take payments, "pending" when it is linked but Stripe wants
+     * more from the seller, and no `connected` when the exchange failed; the
+     * account is read again whatever the answer, since a refused exchange can
+     * follow one that linked it.
      */
-    fun completeStripeOauth(oauth: StripeOauthReturn) {
-        if (_state.value.connecting) return
+    private fun completeStripeOauth(oauth: StripeOauthReturn) {
         viewModelScope.launch {
             _state.value = _state.value.copy(connecting = true)
             try {
@@ -161,19 +173,19 @@ class SellerSettingsViewModel @Inject constructor(
                     error = oauth.error,
                     errorDescription = oauth.errorDescription,
                 )
-                _state.value = _state.value.copy(connecting = false)
-                if (result.connected) {
-                    _events.send(SellerSettingsEvent.Notice(R.string.market_account_stripe_connected))
-                    checkStatus()
-                } else {
-                    _events.send(
-                        SellerSettingsEvent.Error(MochiError.Local(R.string.market_account_stripe_connect_failed)),
-                    )
-                }
+                _events.send(
+                    when (result.connected) {
+                        "1" -> SellerSettingsEvent.Notice(R.string.market_account_stripe_connected)
+                        "pending" -> SellerSettingsEvent.Notice(R.string.market_account_stripe_pending)
+                        else -> SellerSettingsEvent.Error(MochiError.Local(R.string.market_account_stripe_connect_failed))
+                    },
+                )
             } catch (e: Exception) {
-                _state.value = _state.value.copy(connecting = false)
                 _events.send(SellerSettingsEvent.Error(e.toMochiError()))
+            } finally {
+                _state.value = _state.value.copy(connecting = false)
             }
+            load(initial = true)
         }
     }
 
@@ -199,7 +211,8 @@ class SellerSettingsViewModel @Inject constructor(
 
 /**
  * Stripe's raw OAuth return, as MainActivity hands it over from
- * `mochi://market/stripe/oauth`; absent when the screen opened normally.
+ * `mochi://market/stripe/oauth` in the seller settings route's arguments;
+ * absent when the screen opened normally.
  */
 data class StripeOauthReturn(
     val code: String?,
@@ -208,13 +221,16 @@ data class StripeOauthReturn(
     val errorDescription: String?,
 ) {
     companion object {
-        fun from(arguments: Bundle?): StripeOauthReturn? {
-            val state = arguments?.getString("state")?.takeIf { it.isNotBlank() } ?: return null
+        /** The route arguments a return arrives in. */
+        val KEYS = listOf("code", "state", "error", "error_description")
+
+        fun from(handle: SavedStateHandle): StripeOauthReturn? {
+            val state = handle.get<String>("state")?.takeIf { it.isNotBlank() } ?: return null
             return StripeOauthReturn(
-                code = arguments.getString("code"),
+                code = handle.get<String>("code"),
                 state = state,
-                error = arguments.getString("error"),
-                errorDescription = arguments.getString("error_description"),
+                error = handle.get<String>("error"),
+                errorDescription = handle.get<String>("error_description"),
             )
         }
     }

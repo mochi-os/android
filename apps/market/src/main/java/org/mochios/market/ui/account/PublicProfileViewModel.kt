@@ -9,12 +9,17 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.ui.components.LoadState
+import org.mochios.android.util.Paging
+import org.mochios.android.util.append
 import org.mochios.market.model.Account
 import org.mochios.market.model.Review
 import org.mochios.market.repository.MarketRepository
@@ -23,38 +28,12 @@ import javax.inject.Inject
 data class PublicProfileUiState(
     val account: Account? = null,
     val reviews: List<Review> = emptyList(),
-    val ratingBreakdown: IntArray = IntArray(5),
     val isLoading: Boolean = true,
-    val isLoadingReviews: Boolean = false,
-    val hasMore: Boolean = true,
     val error: MochiError? = null,
-) {
-    // IntArray equality is reference-based by default; data class generated
-    // equals/hashCode would compare by identity. Override so two states with
-    // the same breakdown compare equal — useful for state-flow distinct.
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (other !is PublicProfileUiState) return false
-        return account == other.account &&
-            reviews == other.reviews &&
-            ratingBreakdown.contentEquals(other.ratingBreakdown) &&
-            isLoading == other.isLoading &&
-            isLoadingReviews == other.isLoadingReviews &&
-            hasMore == other.hasMore &&
-            error == other.error
-    }
-
-    override fun hashCode(): Int {
-        var result = account?.hashCode() ?: 0
-        result = 31 * result + reviews.hashCode()
-        result = 31 * result + ratingBreakdown.contentHashCode()
-        result = 31 * result + isLoading.hashCode()
-        result = 31 * result + isLoadingReviews.hashCode()
-        result = 31 * result + hasMore.hashCode()
-        result = 31 * result + (error?.hashCode() ?: 0)
-        return result
-    }
-}
+    /** The reviews' first page while none is listed, else the next page below them. */
+    val load: LoadState = LoadState.Idle,
+    val paging: Paging = Paging(),
+)
 
 @HiltViewModel
 class PublicProfileViewModel @Inject constructor(
@@ -67,17 +46,20 @@ class PublicProfileViewModel @Inject constructor(
     private val _state = MutableStateFlow(PublicProfileUiState())
     val state: StateFlow<PublicProfileUiState> = _state.asStateFlow()
 
-    private var reviewsPage: Int = 1
+    /** The reviews' read under way, which a retry replaces. */
+    private var job: Job? = null
 
     init {
         loadAccount()
-        loadReviewsFirstPage()
+        loadMoreReviews()
     }
 
     /** Re-runs the initial load for the error state's retry button. */
     fun retry() {
         loadAccount()
-        loadReviewsFirstPage()
+        job?.cancel()
+        _state.value = _state.value.copy(reviews = emptyList(), load = LoadState.Idle, paging = Paging())
+        loadMoreReviews()
     }
 
     private fun loadAccount() {
@@ -98,66 +80,33 @@ class PublicProfileViewModel @Inject constructor(
         }
     }
 
-    private fun loadReviewsFirstPage() {
-        viewModelScope.launch {
-            reviewsPage = 1
-            _state.value = _state.value.copy(isLoadingReviews = true)
-            try {
-                val response = repo.accountReviews(
-                    id = accountId,
-                    page = reviewsPage,
-                    limit = PAGE_LIMIT,
-                )
-                val merged = response.reviews
-                _state.value = _state.value.copy(
-                    reviews = merged,
-                    ratingBreakdown = computeBreakdown(merged),
-                    isLoadingReviews = false,
-                    hasMore = merged.size.toLong() < response.total,
-                )
-            } catch (e: Exception) {
-                _state.value = _state.value.copy(
-                    isLoadingReviews = false,
-                    error = e.toMochiError(),
-                )
-            }
-        }
-    }
-
+    /**
+     * Reads the next page of reviews, from the list's foot or its retry; the
+     * first page when none is listed yet.
+     */
     fun loadMoreReviews() {
         val current = _state.value
-        if (current.isLoadingReviews || !current.hasMore) return
-        viewModelScope.launch {
-            _state.value = current.copy(isLoadingReviews = true)
+        if (current.load == LoadState.Loading || !current.paging.more) return
+        _state.value = current.copy(load = LoadState.Loading)
+        job = viewModelScope.launch {
             try {
-                // Advance the counter only once the page is in hand, so a
-                // failed request is retried rather than skipped.
                 val response = repo.accountReviews(
                     id = accountId,
-                    page = reviewsPage + 1,
+                    page = current.paging.page,
                     limit = PAGE_LIMIT,
+                    after = current.paging.cursor,
                 )
-                reviewsPage += 1
-                val merged = current.reviews + response.reviews
                 _state.value = _state.value.copy(
-                    reviews = merged,
-                    ratingBreakdown = computeBreakdown(merged),
-                    isLoadingReviews = false,
-                    hasMore = merged.size.toLong() < response.total,
+                    reviews = _state.value.reviews.append(response.reviews) { review -> review.id },
+                    load = LoadState.Idle,
+                    paging = current.paging.advance(response.reviews.size, response.total, response.next),
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _state.value = _state.value.copy(isLoadingReviews = false)
+                _state.value = _state.value.copy(load = LoadState.Failed(e.toMochiError()))
             }
         }
-    }
-
-    private fun computeBreakdown(reviews: List<Review>): IntArray {
-        val counts = IntArray(5)
-        for (review in reviews) {
-            val r = review.rating.toInt().coerceIn(1, 5) - 1
-            counts[r] += 1
-        }
-        return counts
     }
 
     companion object {

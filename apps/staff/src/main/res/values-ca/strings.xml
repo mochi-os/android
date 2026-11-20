@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_label">Motiu</string>
     <string name="staff_accounts_reason_optional_label">Motiu (opcional)</string>
-    <string name="staff_accounts_sales">%1$s vendes</string>
     <string name="staff_accounts_search_clear">Esborra la cerca</string>
     <string name="staff_accounts_search_placeholder">Cerca</string>
     <string name="staff_accounts_seller_buyers">Només compradors</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Conversa</string>
     <string name="staff_reports_conversation_empty">Sense missatges</string>
     <string name="staff_reports_conversation_show">Mostra la conversa</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s venda</item>
+        <item quantity="other">%1$s vendes</item>
+    </plurals>
 </resources>

@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Notas</string>
     <string name="staff_accounts_reason_label">Rede</string>
     <string name="staff_accounts_reason_optional_label">Rede (opsioneel)</string>
-    <string name="staff_accounts_sales">%1$s verkope</string>
     <string name="staff_accounts_search_clear">Maak soektog skoon</string>
     <string name="staff_accounts_search_placeholder">Soek</string>
     <string name="staff_accounts_seller_buyers">Slegs kopers</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Gesprek</string>
     <string name="staff_reports_conversation_empty">Geen boodskappe</string>
     <string name="staff_reports_conversation_show">Wys gesprek</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s verkoop</item>
+        <item quantity="other">%1$s verkope</item>
+    </plurals>
 </resources>

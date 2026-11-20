@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Заметки</string>
     <string name="staff_accounts_reason_label">Причина</string>
     <string name="staff_accounts_reason_optional_label">Причина (необязательно)</string>
-    <string name="staff_accounts_sales">Продаж: %1$s</string>
     <string name="staff_accounts_search_clear">Очистить поиск</string>
     <string name="staff_accounts_search_placeholder">Поиск</string>
     <string name="staff_accounts_seller_buyers">Только покупатели</string>
@@ -438,4 +437,10 @@
     <string name="staff_reports_conversation">Переписка</string>
     <string name="staff_reports_conversation_empty">Нет сообщений</string>
     <string name="staff_reports_conversation_show">Показать переписку</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s продажа</item>
+        <item quantity="few">%1$s продажи</item>
+        <item quantity="many">%1$s продаж</item>
+        <item quantity="other">%1$s продажи</item>
+    </plurals>
 </resources>

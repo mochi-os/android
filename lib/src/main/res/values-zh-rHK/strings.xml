@@ -289,4 +289,7 @@
         <item quantity="other">+%1$s 則更多回覆</item>
     </plurals>
     <string name="drawer_unread">未讀</string>
+    <string name="person_unknown">未知</string>
+    <string name="format_time_seconds_short">%1$s 秒</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

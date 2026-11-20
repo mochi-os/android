@@ -45,7 +45,6 @@ data class Bid(
     val created: Long = 0,
     val mine: Boolean? = null,
     val title: String? = null,
-    @SerializedName("start_price") val startPrice: Long? = null,
     val currency: Currency? = null,
     @SerializedName("current_bid") val currentBid: Long? = null,
     val closes: Long? = null,

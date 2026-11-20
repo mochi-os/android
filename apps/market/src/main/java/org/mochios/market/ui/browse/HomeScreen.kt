@@ -30,14 +30,12 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -47,6 +45,8 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -69,7 +69,11 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.FilterButton
 import org.mochios.android.ui.components.FilterChipRow
 import org.mochios.android.ui.components.FilterSheet
@@ -81,16 +85,12 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.market.R
-import org.mochios.market.model.Category
+import org.mochios.market.lib.formatPrice
+import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.MarketLayout
-
-// The "Browse categories" grid is hidden for now: with few listings it takes a
-// lot of vertical space for little value. Flip to `true` to bring it back once
-// listing volume grows. The category filter (filter sheet / pill) is unaffected.
-private const val SHOW_CATEGORY_BROWSER = false
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -112,6 +112,11 @@ fun HomeScreen(
             )
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         }
+    }
+    // An action the server refused, in its own words.
+    val snackbar = remember { SnackbarHostState() }
+    LaunchedEffect(Unit) {
+        viewModel.failures.collect { failure -> snackbar.showSnackbar(failure.userMessage()) }
     }
 
     // Debounce search input so the ViewModel doesn't fire a request per
@@ -139,6 +144,7 @@ fun HomeScreen(
             )
             NotificationBell(onClick = onOpenNotifications)
         },
+        snackbarHost = { SnackbarHost(snackbar) },
     ) { padding ->
         HomeContent(
             padding = padding,
@@ -153,6 +159,7 @@ fun HomeScreen(
             onRemoveFilter = { viewModel.setFilter(it, null) },
             onClearAll = { viewModel.clearFilters() },
             onLoadMore = viewModel::loadMore,
+            onRetry = viewModel::retry,
             onListingClick = { listing ->
                 viewModel.viewListing(listing)
                 navController.navigate(
@@ -160,9 +167,6 @@ fun HomeScreen(
                 )
             },
             onToggleSave = viewModel::toggleSave,
-            onCategoryClick = { category ->
-                viewModel.setFilter(Filter.CATEGORY, category.id.toString())
-            },
             onActivateAccount = viewModel::activateAccount,
             onDismissOnboarding = viewModel::dismissOnboarding,
             onClearRecent = viewModel::clearRecentlyViewed,
@@ -182,9 +186,10 @@ fun HomeScreen(
     }
 }
 
+/** The browse screen below its top bar, apart for testing: the screen's bell cannot render in a test. */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun HomeContent(
+internal fun HomeContent(
     padding: PaddingValues,
     state: HomeUiState,
     searchInput: String,
@@ -194,18 +199,21 @@ private fun HomeContent(
     onRemoveFilter: (Filter) -> Unit,
     onClearAll: () -> Unit,
     onLoadMore: () -> Unit,
+    onRetry: () -> Unit,
     onListingClick: (Listing) -> Unit,
     onToggleSave: (Listing) -> Unit,
-    onCategoryClick: (Category) -> Unit,
     onActivateAccount: () -> Unit,
     onDismissOnboarding: () -> Unit,
     onClearRecent: () -> Unit,
 ) {
     val gridState = rememberLazyGridState()
     // Only the scroll position is derived here — it depends solely on the
-    // stably-remembered gridState. The `hasMore`/`isLoading` flags are read
-    // fresh in the LaunchedEffect below; capturing them inside this remembered
-    // block would freeze them at their first-composition values.
+    // stably-remembered gridState. Whether there is more and how the last
+    // page went are read fresh in the LaunchedEffect below; capturing them
+    // inside this remembered block would freeze them at their
+    // first-composition values. The next page is asked for only while no page
+    // is being read or has failed, so a failed page waits for its retry
+    // rather than being asked for again at once.
     val reachedEnd by remember {
         derivedStateOf {
             val info = gridState.layoutInfo
@@ -214,15 +222,15 @@ private fun HomeContent(
             total > 0 && last >= total - 6
         }
     }
-    LaunchedEffect(reachedEnd, state.hasMore, state.isLoading) {
-        if (reachedEnd && state.hasMore && !state.isLoading) {
+    LaunchedEffect(reachedEnd, state.paging.more, state.load) {
+        if (reachedEnd && state.paging.more && state.load == LoadState.Idle) {
             onLoadMore()
         }
     }
 
     val isColdStart = state.query.isBlank() && state.filters.isEmpty()
     Column(modifier = Modifier.fillMaxSize().padding(padding)) {
-        if (!state.accountActive) {
+        if (state.accountActive == false) {
             OnboardingCard(
                 activating = state.activatingAccount,
                 onActivate = onActivateAccount,
@@ -253,6 +261,13 @@ private fun HomeContent(
         FilterPillsRow(state = state, onOpenFilter = onOpenFilter)
         ActiveFilterChips(state = state, onRemove = onRemoveFilter, onClearAll = onClearAll)
 
+        val load = state.load
+        if (load is LoadState.Failed && state.listings.isEmpty()) {
+            Box(modifier = Modifier.fillMaxSize()) {
+                ErrorState(error = load.error, onRetry = onRetry)
+            }
+            return@Column
+        }
         Box(modifier = Modifier.fillMaxSize()) {
             LazyVerticalGrid(
                 state = gridState,
@@ -291,31 +306,12 @@ private fun HomeContent(
                                 org.mochios.market.ui.components.ListingCard(
                                     listing = listing,
                                     modifier = Modifier.width(160.dp),
-                                    category = state.categories
-                                        .firstOrNull { it.id == listing.category }?.name,
                                     saved = listing.id.toString() in state.savedIds,
                                     onClick = { onListingClick(listing) },
                                     onToggleSave = onToggleSave,
                                 )
                             }
                         }
-                    }
-                }
-
-                if (SHOW_CATEGORY_BROWSER && isColdStart && state.categories.isNotEmpty()) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        Text(
-                            text = stringResource(R.string.market_section_categories),
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.SemiBold,
-                            modifier = Modifier.padding(vertical = 8.dp),
-                        )
-                    }
-                    item(span = { GridItemSpan(maxLineSpan) }) {
-                        CategoryGrid(
-                            categories = state.categories,
-                            onClick = onCategoryClick,
-                        )
                     }
                 }
 
@@ -333,16 +329,14 @@ private fun HomeContent(
                 items(state.listings, key = { it.id }) { listing ->
                     org.mochios.market.ui.components.ListingCard(
                         listing = listing,
-                        category = state.categories
-                            .firstOrNull { it.id == listing.category }?.name,
                         saved = listing.id.toString() in state.savedIds,
                         onClick = { onListingClick(listing) },
                         onToggleSave = onToggleSave,
                     )
                 }
 
-                if (state.isLoading) {
-                    item(span = { GridItemSpan(maxLineSpan) }) {
+                when (load) {
+                    LoadState.Loading -> item(span = { GridItemSpan(maxLineSpan) }) {
                         Box(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -352,10 +346,15 @@ private fun HomeContent(
                             CircularProgressIndicator()
                         }
                     }
+                    is LoadState.Failed -> item(span = { GridItemSpan(maxLineSpan) }) {
+                        InlineErrorState(error = load.error, onRetry = onRetry)
+                    }
+                    LoadState.Idle -> Unit
                 }
             }
 
-            if (state.listings.isEmpty() && !state.isLoading && !isColdStart) {
+            // Only a search that answered with nothing; a failure is above.
+            if (state.listings.isEmpty() && load == LoadState.Idle && !isColdStart) {
                 EmptyState(
                     icon = Icons.Default.SearchOff,
                     title = stringResource(R.string.market_empty_title),
@@ -414,9 +413,11 @@ private fun ActiveFilterChips(
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
         for ((filter, value) in state.filters) {
+            // The currency is how the price chips read, not a filter of its own.
+            val label = labelForFilter(state, filter, value) ?: continue
             AssistChip(
                 onClick = { onRemove(filter) },
-                label = { Text(labelForFilter(state, filter, value)) },
+                label = { Text(label) },
                 trailingIcon = {
                     Icon(
                         Icons.Default.Close,
@@ -433,58 +434,73 @@ private fun ActiveFilterChips(
     }
 }
 
+/**
+ * An active filter's chip text, from the same labels the filter sheet offers;
+ * null for a value with no label, and for the currency, which the price
+ * chips carry. A category whose name has not loaded reads as the filter's
+ * name, never its id.
+ */
 @Composable
-private fun labelForFilter(state: HomeUiState, filter: Filter, value: String): String {
+internal fun labelForFilter(state: HomeUiState, filter: Filter, value: String): String? {
     return when (filter) {
-        Filter.CATEGORY -> state.categories.firstOrNull { it.id.toString() == value }?.name ?: value
-        Filter.PRICE_MIN -> stringResource(R.string.market_filter_chip_min, value)
-        Filter.PRICE_MAX -> stringResource(R.string.market_filter_chip_max, value)
-        else -> value.replaceFirstChar { it.titlecase() }
+        Filter.CATEGORY -> state.categories.firstOrNull { it.id == value }?.name
+            ?: stringResource(R.string.market_filter_category)
+        Filter.PRICE_MIN -> stringResource(R.string.market_filter_chip_min, priceLabel(state, value))
+        Filter.PRICE_MAX -> stringResource(R.string.market_filter_chip_max, priceLabel(state, value))
+        Filter.CURRENCY -> null
+        else -> filterOptions(filter).firstOrNull { (option, _) -> option == value }?.second
     }
 }
 
+/** A typed price bound as a price in the range's currency, or as typed when that cannot be read. */
 @Composable
-private fun CategoryGrid(
-    categories: List<Category>,
-    onClick: (Category) -> Unit,
-) {
-    // Hand-rolled grid: nesting LazyVerticalGrid inside LazyVerticalGrid is
-    // illegal in Compose. Capping at the first 12 categories matches what the
-    // web cold-start surface shows above the fold.
-    val capped = categories.take(12)
-    val rows = capped.chunked(3)
-    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
-        for (row in rows) {
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
-            ) {
-                for (category in row) {
-                    AssistChip(
-                        onClick = { onClick(category) },
-                        modifier = Modifier.weight(1f),
-                        label = {
-                            Text(
-                                text = category.name,
-                                style = MaterialTheme.typography.bodySmall,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis,
-                            )
-                        },
-                        leadingIcon = {
-                            Icon(
-                                imageVector = Icons.AutoMirrored.Outlined.Label,
-                                contentDescription = null,
-                                tint = MaterialTheme.colorScheme.primary,
-                                modifier = Modifier.size(AssistChipDefaults.IconSize),
-                            )
-                        },
-                    )
-                }
-                repeat(3 - row.size) { Spacer(modifier = Modifier.weight(1f)) }
-            }
-        }
-    }
+private fun priceLabel(state: HomeUiState, value: String): String {
+    val code = state.filters[Filter.CURRENCY] ?: HomeViewModel.DEFAULT_CURRENCY
+    val currency = Currency.entries.firstOrNull { entry -> entry.name.equals(code, ignoreCase = true) }
+        ?: return value
+    return formatPrice(toMinorUnits(value, currency), currency)
 }
+
+/**
+ * The values [filter] can take and their labels, shared by the filter sheet
+ * and the active-filter chips; empty for a filter that is not chosen from a
+ * list.
+ */
+@Composable
+private fun filterOptions(filter: Filter): List<Pair<String, String>> = when (filter) {
+    Filter.TYPE -> listOf(
+        "physical" to stringResource(R.string.market_filter_type_physical),
+        "digital" to stringResource(R.string.market_filter_type_digital),
+    )
+    Filter.CONDITION -> listOf(
+        "new" to stringResource(R.string.market_filter_condition_new),
+        "used" to stringResource(R.string.market_filter_condition_used),
+        "refurbished" to stringResource(R.string.market_filter_condition_refurbished),
+    )
+    Filter.PRICING -> listOf(
+        "fixed" to stringResource(R.string.market_filter_pricing_fixed),
+        "pwyw" to stringResource(R.string.market_filter_pricing_pwyw),
+        "subscription" to stringResource(R.string.market_filter_pricing_subscription),
+        "auction" to stringResource(R.string.market_filter_pricing_auction),
+    )
+    Filter.DELIVERY -> listOf(
+        "shipping" to stringResource(R.string.market_filter_delivery_shipping),
+        "pickup" to stringResource(R.string.market_filter_delivery_pickup),
+        "download" to stringResource(R.string.market_filter_delivery_download),
+    )
+    Filter.SORT -> listOf(
+        "recent" to stringResource(R.string.market_filter_sort_recent),
+        "price_low" to stringResource(R.string.market_filter_sort_price_low),
+        "price_high" to stringResource(R.string.market_filter_sort_price_high),
+        "rating" to stringResource(R.string.market_filter_sort_rating),
+    )
+    else -> emptyList()
+}
+
+/** [filter]'s options in the sheet, after "All". */
+@Composable
+private fun sheetOptions(filter: Filter): List<Pair<String?, String>> =
+    listOf(null to stringResource(R.string.market_filter_all)) + filterOptions(filter)
 
 @Composable
 private fun OnboardingCard(
@@ -550,48 +566,28 @@ private fun MarketFilterSheet(
 
         SectionLabel(stringResource(R.string.market_filter_type))
         FilterChipRow(
-            options = listOf(
-                null to stringResource(R.string.market_filter_all),
-                "physical" to stringResource(R.string.market_filter_type_physical),
-                "digital" to stringResource(R.string.market_filter_type_digital),
-            ),
+            options = sheetOptions(Filter.TYPE),
             isSelected = { option -> option == state.filters[Filter.TYPE] },
             onSelect = { onUpdate(Filter.TYPE, it) },
         )
 
         SectionLabel(stringResource(R.string.market_filter_condition))
         FilterChipRow(
-            options = listOf(
-                null to stringResource(R.string.market_filter_all),
-                "new" to stringResource(R.string.market_filter_condition_new),
-                "used" to stringResource(R.string.market_filter_condition_used),
-                "refurbished" to stringResource(R.string.market_filter_condition_refurbished),
-            ),
+            options = sheetOptions(Filter.CONDITION),
             isSelected = { option -> option == state.filters[Filter.CONDITION] },
             onSelect = { onUpdate(Filter.CONDITION, it) },
         )
 
         SectionLabel(stringResource(R.string.market_filter_pricing))
         FilterChipRow(
-            options = listOf(
-                null to stringResource(R.string.market_filter_all),
-                "fixed" to stringResource(R.string.market_filter_pricing_fixed),
-                "pwyw" to stringResource(R.string.market_filter_pricing_pwyw),
-                "subscription" to stringResource(R.string.market_filter_pricing_subscription),
-                "auction" to stringResource(R.string.market_filter_pricing_auction),
-            ),
+            options = sheetOptions(Filter.PRICING),
             isSelected = { option -> option == state.filters[Filter.PRICING] },
             onSelect = { onUpdate(Filter.PRICING, it) },
         )
 
         SectionLabel(stringResource(R.string.market_filter_delivery))
         FilterChipRow(
-            options = listOf(
-                null to stringResource(R.string.market_filter_all),
-                "shipping" to stringResource(R.string.market_filter_delivery_shipping),
-                "pickup" to stringResource(R.string.market_filter_delivery_pickup),
-                "download" to stringResource(R.string.market_filter_delivery_download),
-            ),
+            options = sheetOptions(Filter.DELIVERY),
             isSelected = { option -> option == state.filters[Filter.DELIVERY] },
             onSelect = { onUpdate(Filter.DELIVERY, it) },
         )
@@ -722,13 +718,8 @@ private fun SortDropdown(
     onUpdate: (Filter, String?) -> Unit,
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val sortOptions = listOf(
-        null to stringResource(R.string.market_filter_sort_default),
-        "recent" to stringResource(R.string.market_filter_sort_recent),
-        "price_low" to stringResource(R.string.market_filter_sort_price_low),
-        "price_high" to stringResource(R.string.market_filter_sort_price_high),
-        "rating" to stringResource(R.string.market_filter_sort_rating),
-    )
+    val sortOptions = listOf(null to stringResource(R.string.market_filter_sort_default)) +
+        filterOptions(Filter.SORT)
     val current = state.filters[Filter.SORT]
     val selectedLabel = sortOptions.firstOrNull { it.first == current }?.second
         ?: stringResource(R.string.market_filter_sort_default)

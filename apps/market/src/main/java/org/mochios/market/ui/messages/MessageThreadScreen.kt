@@ -73,7 +73,6 @@ import org.mochios.android.websocket.REOPEN
 import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.market.R
-import org.mochios.market.lib.currencyDecimals
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Message
@@ -100,10 +99,12 @@ fun MessageThreadScreen(
     // category where other apps put the entity, so the whole path is named or
     // one thread would cover every message notification. A thread in front of
     // the user is read, like a chat. Blank until the thread exists, which
-    // registers nothing.
+    // registers nothing. A conversation opened by its id alone takes its
+    // listing from the thread.
+    val listingId = viewModel.listingId.ifBlank { state.listing.id }
     VisibleEntityEffect(
         "market",
-        threadId?.let { id -> "messages/${viewModel.listingId}/$id" }.orEmpty(),
+        threadId?.let { id -> "messages/$listingId/$id" }.orEmpty(),
         socketKey = threadId?.let { id -> "market-thread-$id" }.orEmpty(),
         marksRead = true,
     )
@@ -190,9 +191,9 @@ fun MessageThreadScreen(
                 priceLabel = priceLabel(state.listing.price, state.listing.currency),
                 photo = state.photo,
                 onClick = {
-                    if (viewModel.listingId.isNotBlank()) {
+                    if (listingId.isNotBlank()) {
                         navController.navigate(
-                            MarketApp.listingDetail(viewModel.listingId, state.listing.title),
+                            MarketApp.listingDetail(listingId, state.listing.title),
                         )
                     }
                 },
@@ -396,13 +397,10 @@ private fun Bubble(message: Message, isMine: Boolean) {
     }
 }
 
+@Composable
 private fun priceLabel(price: Long, currency: Currency?): String {
     if (price <= 0L) return ""
     val c = currency ?: return ""
-    // currencyDecimals defends formatPrice from accidental misuse — we just
-    // call into it.
-    @Suppress("UNUSED_VARIABLE")
-    val unused = currencyDecimals(c)
     return formatPrice(price, c)
 }
 

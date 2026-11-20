@@ -24,15 +24,10 @@ import org.mochios.android.ui.components.DrawerItem
 import org.mochios.market.R
 import org.mochios.market.navigation.MarketApp
 
-/**
- * Drawer body shared by the top-level market screens. [savedBadge] counts saved
- * listings with price drops or ending-soon auctions; zero hides it.
- */
+/** Drawer body shared by the top-level market screens. */
 @Composable
 fun marketDrawerItems(
     isSeller: Boolean = true,
-    savedBadge: Int = 0,
-    inboxUnreadBadge: Int = 0,
 ): List<DrawerItem> {
     val browse = stringResource(R.string.market_sidebar_browse)
     val buying = stringResource(R.string.market_sidebar_buying)
@@ -53,7 +48,6 @@ fun marketDrawerItems(
                 id = MarketApp.SAVED,
                 title = stringResource(R.string.market_sidebar_saved),
                 icon = Icons.Outlined.Bookmark,
-                unread = savedBadge,
                 section = buying,
             )
         )
@@ -112,7 +106,6 @@ fun marketDrawerItems(
                 id = MarketApp.MESSAGES,
                 title = stringResource(R.string.market_sidebar_inbox),
                 icon = Icons.Outlined.Email,
-                unread = inboxUnreadBadge,
                 section = messages,
             )
         )

@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Maelezo</string>
     <string name="staff_accounts_reason_label">Sababu</string>
     <string name="staff_accounts_reason_optional_label">Sababu (hiari)</string>
-    <string name="staff_accounts_sales">Mauzo %1$s</string>
     <string name="staff_accounts_search_clear">Futa utafutaji</string>
     <string name="staff_accounts_search_placeholder">Tafuta</string>
     <string name="staff_accounts_seller_buyers">Wanunuzi pekee</string>
@@ -440,4 +439,8 @@
     <string name="staff_reports_conversation">Mazungumzo</string>
     <string name="staff_reports_conversation_empty">Hakuna ujumbe</string>
     <string name="staff_reports_conversation_show">Onyesha mazungumzo</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">Mauzo %1$s</item>
+        <item quantity="other">Mauzo %1$s</item>
+    </plurals>
 </resources>

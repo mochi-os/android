@@ -26,7 +26,6 @@
     <string name="market_bid_dialog_title">입찰</string>
     <string name="market_bid_ended">경매가 종료되었어요</string>
     <string name="market_bids_empty">입찰이 없어요</string>
-    <string name="market_bids_ended">경매가 종료되었어요</string>
     <string name="market_bids_tab_active">활성</string>
     <string name="market_bids_tab_all">전체</string>
     <string name="market_bids_tab_lost">실패</string>
@@ -80,12 +79,9 @@
     <string name="market_condition_refurbished">리퍼</string>
     <string name="market_condition_used">중고</string>
     <string name="market_dispute_dialog_cancel">취소</string>
-    <string name="market_dispute_dialog_evidence_role_buyer">구매자</string>
-    <string name="market_dispute_dialog_evidence_role_seller">판매자</string>
     <string name="market_dispute_dialog_failed">응답 제출에 실패했어요</string>
     <string name="market_dispute_dialog_response_label">본인의 응답</string>
     <string name="market_dispute_dialog_submit">제출</string>
-    <string name="market_editor_appeal_submit">이의 제기 제출</string>
     <string name="market_editor_asset_external">외부 URL</string>
     <string name="market_editor_asset_external_filename">파일명</string>
     <string name="market_editor_back">뒤로</string>
@@ -122,7 +118,6 @@
     <string name="market_editor_type_digital">디지털</string>
     <string name="market_editor_type_physical">실물</string>
     <string name="market_editor_zone_cancel">취소</string>
-    <string name="market_editor_zone_country_us">미국</string>
     <string name="market_editor_zone_region">지역</string>
     <string name="market_fee_preview_item">항목</string>
     <string name="market_fee_preview_payout">본인의 정산</string>
@@ -208,7 +203,6 @@
     <string name="market_purchase_item">항목</string>
     <string name="market_purchase_message_seller">판매자에게 메시지</string>
     <string name="market_purchase_not_found">주문을 찾을 수 없어요</string>
-    <string name="market_purchase_order_label">주문</string>
     <string name="market_purchase_purchased">구매됨</string>
     <string name="market_purchase_refunded">환불됨</string>
     <string name="market_purchase_refunded_partial">환불됨 (부분)</string>
@@ -232,11 +226,7 @@
     <string name="market_refund_body">환불 요청 사유를 입력해 주세요.</string>
     <string name="market_refund_details_label">세부 정보</string>
     <string name="market_refund_dialog_cancel">취소</string>
-    <string name="market_refund_dialog_description_label">설명</string>
     <string name="market_refund_dialog_failed">환불 처리에 실패했어요</string>
-    <string name="market_refund_dialog_reason_fraud">사기성</string>
-    <string name="market_refund_dialog_reason_label">사유</string>
-    <string name="market_refund_dialog_reason_other">기타</string>
     <string name="market_refund_dialog_submit">환불 처리</string>
     <string name="market_refund_dialog_title">환불 처리</string>
     <string name="market_refund_reason_damaged">파손됨</string>
@@ -284,7 +274,6 @@
     <string name="market_sale_tracking_label">추적 번호</string>
     <string name="market_saved_title">저장됨</string>
     <string name="market_search_clear">검색 지우기</string>
-    <string name="market_section_categories">카테고리 둘러보기</string>
     <string name="market_section_listings">최근 상품</string>
     <string name="market_ship_dialog_cancel">취소</string>
     <string name="market_ship_dialog_submit">확인</string>
@@ -340,8 +329,6 @@
     <string name="market_sale_review_response_submitting">제출 중…</string>
     <string name="market_checkout_subscribing">구독 중…</string>
     <string name="market_filter_remove">필터 제거</string>
-    <string name="market_listing_detail_sales_count">%1$s건의 판매</string>
-    <string name="market_profile_sales_count">%1$s건의 판매</string>
     <string name="market_purchase_dispute_response">판매자 응답</string>
     <string name="market_purchases_order_label">주문 #%1$s</string>
 
@@ -363,7 +350,6 @@
     <string name="market_bid_dialog_no_bids_yet">아직 입찰 없음 — 시작 가격 %1$s</string>
     <string name="market_bid_dialog_submitting">입찰 중</string>
     <string name="market_bid_ends_in">%1$s 후 종료</string>
-    <string name="market_bids_ends_in">%1$s 후 종료</string>
     <string name="market_bids_your_bid">내 입찰가: %1$s</string>
     <string name="market_carousel_main">사진 %1$s / %2$s</string>
     <string name="market_carousel_thumbnail">썸네일 %1$s</string>
@@ -373,14 +359,7 @@
     <string name="market_checkout_pwyw_label">지불 금액 (최소 %1$s)</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
-    <string name="market_dispute_dialog_attach">증거 첨부</string>
-    <string name="market_dispute_dialog_attach_count">파일 %1$s개 첨부됨</string>
-    <string name="market_dispute_dialog_evidence_role_staff">Mochi 스태프</string>
-    <string name="market_dispute_dialog_evidence_section_title">제출된 증거</string>
-    <string name="market_dispute_dialog_evidence_submitter_line">%1$s 제출</string>
     <string name="market_dispute_dialog_title">분쟁에 응답</string>
-    <string name="market_editor_appeal">모더레이션 결과 이의 신청</string>
-    <string name="market_editor_appeal_reason">이의 신청 사유는 무엇입니까?</string>
     <string name="market_editor_asset_add">파일 추가</string>
     <string name="market_editor_asset_delete">자산 제거</string>
     <string name="market_editor_asset_external_add">외부 링크 추가</string>
@@ -388,13 +367,11 @@
     <string name="market_editor_asset_external_url">참조 URL</string>
     <string name="market_editor_assets_empty">아직 자산이 없습니다</string>
     <string name="market_editor_category_none">카테고리를 선택하세요</string>
-    <string name="market_editor_days">%1$s일</string>
     <string name="market_editor_delete">상품 삭제</string>
     <string name="market_editor_delete_confirm_message">상품이 영구적으로 삭제됩니다.</string>
     <string name="market_editor_delete_confirm_title">상품을 삭제할까요?</string>
     <string name="market_editor_download">직접 다운로드</string>
     <string name="market_editor_duration">경매 기간</string>
-    <string name="market_editor_instant">즉시 구매 가격 (선택 사항)</string>
     <string name="market_editor_instant_help">0으로 설정하면 비활성화됩니다</string>
     <string name="market_editor_interval">결제 주기</string>
     <string name="market_editor_photos_add">사진 추가</string>
@@ -413,32 +390,18 @@
     <string name="market_editor_title_required">사진이나 파일을 추가하기 전에 제목을 입력하세요</string>
     <string name="market_editor_type">배송 방법</string>
     <string name="market_editor_zone_add">지역 추가</string>
-    <string name="market_editor_zone_country_au">호주</string>
-    <string name="market_editor_zone_country_ca">캐나다</string>
-    <string name="market_editor_zone_country_de">독일</string>
-    <string name="market_editor_zone_country_es">스페인</string>
-    <string name="market_editor_zone_country_fr">프랑스</string>
-    <string name="market_editor_zone_country_gb">영국</string>
-    <string name="market_editor_zone_country_it">이탈리아</string>
-    <string name="market_editor_zone_country_jp">일본</string>
-    <string name="market_editor_zone_country_nl">네덜란드</string>
     <string name="market_editor_zone_days">예상 배송 기간</string>
     <string name="market_editor_zone_days_placeholder">예: 영업일 기준 3~5일</string>
     <string name="market_editor_zone_delete">구역 삭제</string>
     <string name="market_editor_zone_edit">구역 편집</string>
-    <string name="market_editor_zone_european_union">유럽 연합</string>
     <string name="market_editor_zone_notes">메모 (선택 사항)</string>
     <string name="market_editor_zone_price">배송비</string>
     <string name="market_editor_zone_save">구역 저장</string>
-    <string name="market_editor_zone_worldwide">전 세계</string>
     <string name="market_editor_zones_empty">아직 구역이 없습니다</string>
     <string name="market_empty_subtitle">필터를 조정하거나 해제해 보세요.</string>
     <string name="market_empty_title">결과 없음</string>
     <string name="market_fee_disclosure_body">플랫폼 수수료: %1$s%%. 결제 처리 수수료는 Stripe 대시보드를 참조하세요.</string>
     <string name="market_fee_disclosure_title">플랫폼 수수료</string>
-    <string name="market_fee_preview_failed">수수료를 계산할 수 없습니다</string>
-    <string name="market_fee_preview_loading">수수료 계산 중…</string>
-    <string name="market_fee_preview_mochi_fee">Mochi 수수료</string>
     <string name="market_filter_chip_max">최대 %1$s</string>
     <string name="market_filter_chip_min">최소 %1$s</string>
     <string name="market_filter_open">필터</string>
@@ -446,10 +409,6 @@
     <string name="market_filter_title">필터</string>
     <string name="market_listing_detail_appeal_pending">이의 신청 처리 중</string>
     <string name="market_listing_detail_buy">구매</string>
-    <string name="market_listing_detail_relist_failed">다시 등록할 수 없습니다</string>
-    <string name="market_listing_detail_seller_banned_banner">이 판매자는 차단되었습니다. 새 주문을 할 수 없습니다.</string>
-    <string name="market_listing_detail_seller_suspended_banner">이 판매자는 정지되었습니다. 계정이 복구될 때까지 새 주문이 일시 중단됩니다.</string>
-    <string name="market_listing_detail_seller_suspended_cta_hint">판매자 계정이 제한된 동안에는 구매가 비활성화됩니다.</string>
     <string name="market_listing_no_photo">사진 없음</string>
     <string name="market_listing_photo">상품 사진</string>
     <string name="market_listing_save">상품 저장</string>
@@ -461,7 +420,6 @@
     <string name="market_listings_load_failed">상품을 불러오지 못했습니다</string>
     <string name="market_listings_new">새 상품</string>
     <string name="market_listings_search_placeholder">내 상품 검색</string>
-    <string name="market_listings_share_chooser">상품 공유</string>
     <string name="market_messages_compose_placeholder">메시지 작성</string>
     <string name="market_messages_inbox_empty_subtitle">판매자에게 메시지를 보내거나 구매자가 메시지를 보내면 여기에 스레드가 표시됩니다.</string>
     <string name="market_messages_inbox_empty_title">아직 대화가 없습니다</string>
@@ -478,21 +436,10 @@
     <string name="market_profile_no_reviews">아직 리뷰가 없습니다.</string>
     <string name="market_purchase_dispute_chargeback">지급 거절 %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">은행에서 이 주문에 대해 지급 거절을 제기했습니다. Stripe가 판매자와 분쟁을 처리 중이며, 결정이 나면 여기에 결과가 표시됩니다.</string>
-    <string name="market_purchase_download_many">아래에서 파일 %1$s개를 다운로드하세요.</string>
-    <string name="market_purchase_download_one">아래에서 파일을 다운로드하세요.</string>
     <string name="market_purchase_review_from">%1$s님의 리뷰</string>
-    <string name="market_purchases_auction_label">경매 #%1$s</string>
     <string name="market_purchases_refunded_partial">−%1$s 환불됨</string>
     <string name="market_purchases_won_for">%1$s에 낙찰</string>
-    <string name="market_rating_reviews">(리뷰 %1$s개)</string>
-    <string name="market_refund_dialog_amount_help">전액 환불하려면 비워 두세요.</string>
     <string name="market_refund_dialog_amount_label">금액</string>
-    <string name="market_refund_dialog_prior_kind_full">전액</string>
-    <string name="market_refund_dialog_prior_kind_partial">부분</string>
-    <string name="market_refund_dialog_prior_section_title">이전 환불</string>
-    <string name="market_refund_dialog_prior_title">이전 환불</string>
-    <string name="market_refund_dialog_reason_duplicate">중복</string>
-    <string name="market_refund_dialog_reason_requested">구매자 요청</string>
     <string name="market_refund_dialog_submitting">환불 중…</string>
     <string name="market_report_dialog_details_label">세부 정보 (선택)</string>
     <string name="market_report_dialog_submitting">제출 중</string>
@@ -524,7 +471,6 @@
     <string name="market_stripe_onboarding_failed">Stripe를 열 수 없습니다</string>
     <string name="market_stripe_onboarding_opening">Stripe 여는 중…</string>
     <string name="market_stripe_onboarding_title">결제 설정 완료</string>
-    <string name="market_subscribers_cancels_on">%1$s에 취소됨</string>
     <string name="market_subscribers_empty_subtitle">내 상품의 구독자가 여기에 표시됩니다.</string>
     <string name="market_subscribers_empty_title">아직 구독자가 없습니다</string>
     <string name="market_subscribers_title">내 구독자</string>
@@ -532,7 +478,6 @@
     <string name="market_subscriptions_cancels_on">%1$s에 취소됨</string>
     <string name="market_warnings_title">경고</string>
 
-    <string name="market_account_address_desc">결제 연동이 추가되면 향후 결제 시 자동으로 입력됩니다.</string>
     <string name="market_account_address_title">기본 배송 주소</string>
     <string name="market_account_business_desc">청구서 및 세무 처리에 사용됩니다. 공개 프로필에는 표시되지 않습니다.</string>
     <string name="market_account_business_switch">사업자로 판매합니다</string>
@@ -594,7 +539,6 @@
     <string name="market_editor_start_time_help">게시 시 시작하려면 비워 두세요.</string>
     <string name="market_editor_start_time_next">다음</string>
     <string name="market_editor_start_time_clear">지우기</string>
-    <string name="market_listing_detail_buy_now_label">즉시 구매</string>
     <string name="market_section_recently_viewed">최근 본 상품</string>
     <string name="market_recently_viewed_clear">모두 지우기</string>
     <string name="market_listings_create">생성</string>
@@ -603,7 +547,6 @@
     <string name="market_listing_checkout_in_progress">이 상품에 대해 진행 중인 결제가 있습니다.</string>
     <string name="market_listing_checkout_cancel">결제 취소</string>
     <string name="market_listing_checkout_cancelled">결제가 취소되었습니다</string>
-    <string name="market_listing_checkout_cancel_failed">결제를 취소하지 못했습니다</string>
     <string name="market_account_stripe_connected">Stripe가 연결되었어요</string>
     <string name="market_audit_account_banned">차단됨</string>
     <string name="market_audit_account_seller_activated">판매자가 활성화되었어요</string>
@@ -686,4 +629,67 @@
     <string name="market_sale_chargeback_fee_refunded">(환불됨)</string>
     <string name="market_messages_report">이 대화 신고</string>
     <string name="market_report_conversation_title">대화 신고</string>
+    <string name="market_audit_auction_cancelled">경매 취소됨</string>
+    <string name="market_dispute_status_open">열기</string>
+    <string name="market_dispute_status_responded">응답함</string>
+    <string name="market_dispute_status_resolved_buyer">해결됨 (구매자)</string>
+    <string name="market_dispute_status_resolved_seller">해결됨 (판매자)</string>
+    <string name="market_editor_move_down">아래로 이동</string>
+    <string name="market_editor_move_up">위로 이동</string>
+    <string name="market_review_count">(%1$s)</string>
+    <string name="market_status_unknown">알 수 없음</string>
+    <string name="market_account_stripe_pending">Stripe가 연결되었지만, 결제를 수락하려면 Stripe에 추가 정보가 필요합니다</string>
+    <string name="market_editor_instant_below_start">즉시 구매가는 시작 입찰가보다 높아야 합니다.</string>
+    <string name="market_editor_reserve_above_instant">최저 낙찰가는 즉시 구매가를 초과할 수 없습니다.</string>
+    <string name="market_editor_reserve_below_start">최저 낙찰가는 시작 입찰가보다 높아야 합니다.</string>
+    <string name="market_editor_starting_bid">시작 입찰가</string>
+    <string name="market_listing_detail_buy_now_price">지금 구매 — %1$s</string>
+    <string name="market_listing_detail_manage_subscription">구독 관리</string>
+    <string name="market_listing_detail_view_order">주문 보기</string>
+    <string name="market_listing_held_title">이 상품은 검토 대기 중으로 보류되었습니다</string>
+    <string name="market_listing_rejected_title">이 상품은 거부되었습니다</string>
+    <string name="market_listing_untitled">제목 없는 상품</string>
+    <string name="market_listings_status_held">검토를 위해 보류됨</string>
+    <string name="market_refund_dialog_amount_remaining">남은 전체 %1$s을 환불하려면 비워 두세요.</string>
+    <string name="market_fee_preview_auction">Mochi는 최종 낙찰가의 %1$s%%를 가져갑니다. Stripe 처리 수수료는 나머지에서 차감됩니다.</string>
+    <string name="market_fee_preview_sale">Mochi는 각 판매에서 %1$s%%를 가져갑니다. Stripe 처리 수수료는 나머지에서 차감됩니다.</string>
+    <string name="market_checkout_auction_unavailable">이 경매는 종료된 후 낙찰자만 결제할 수 있습니다.</string>
+    <string name="market_editor_instant">즉시 구매가(선택 사항)</string>
+    <string name="market_fee_preview_fee">Mochi 수수료(%1$s%%)</string>
+    <string name="market_fee_preview_payout_minimum">본인의 정산(최소)</string>
+    <string name="market_fee_preview_payout_period">기간당 본인의 정산</string>
+    <string name="market_listing_detail_opens">입찰 시작: %1$s</string>
+    <string name="market_price_reserve_met">최저 낙찰가 도달</string>
+    <string name="market_price_reserve_unmet">최저 낙찰가 미도달</string>
+    <string name="market_refund_dialog_amount_invalid">%1$s~%2$s 사이의 금액을 입력하세요</string>
+    <string name="market_refund_dialog_prior">이전 환불: %1$s</string>
+    <plurals name="market_editor_days">
+        <item quantity="other">%1$s일</item>
+    </plurals>
+    <plurals name="market_listing_detail_sales_count">
+        <item quantity="other">%1$s건의 판매</item>
+    </plurals>
+    <plurals name="market_profile_sales_count">
+        <item quantity="other">%1$s건의 판매</item>
+    </plurals>
+    <plurals name="market_purchase_download">
+        <item quantity="other">아래에서 %1$s개의 파일을 다운로드하세요.</item>
+    </plurals>
+    <plurals name="market_rating_reviews">
+        <item quantity="other">(리뷰 %1$s개)</item>
+    </plurals>
+    <string name="market_region_africa">아프리카</string>
+    <string name="market_region_asia">아시아</string>
+    <string name="market_region_asia_pacific">아시아 태평양</string>
+    <string name="market_region_eea">유럽 경제 지역</string>
+    <string name="market_region_eu">유럽 연합</string>
+    <string name="market_region_europe">유럽</string>
+    <string name="market_region_latin_america">라틴 아메리카</string>
+    <string name="market_region_middle_east">중동</string>
+    <string name="market_region_north_america">북아메리카</string>
+    <string name="market_region_oceania">오세아니아</string>
+    <string name="market_region_south_america">남아메리카</string>
+    <string name="market_region_world">전 세계</string>
+    <string name="market_audit_order_staff_read">스태프가 열람함</string>
+    <string name="market_audit_other">기타 활동</string>
 </resources>

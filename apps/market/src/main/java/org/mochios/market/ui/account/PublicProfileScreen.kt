@@ -47,6 +47,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -57,8 +58,11 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.format.personName
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.InlineErrorState
+import org.mochios.android.ui.components.LoadState
 import org.mochios.android.ui.components.LocationMapView
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.android.ui.components.MochiIconButton
@@ -125,8 +129,8 @@ fun PublicProfileScreen(
                 ProfileBody(
                     account = state.account!!,
                     reviews = state.reviews,
-                    isLoadingReviews = state.isLoadingReviews,
-                    hasMore = state.hasMore,
+                    load = state.load,
+                    hasMore = state.paging.more,
                     accountId = viewModel.accountId,
                     onLoadMore = viewModel::loadMoreReviews,
                     modifier = Modifier.padding(padding),
@@ -140,7 +144,7 @@ fun PublicProfileScreen(
 private fun ProfileBody(
     account: Account,
     reviews: List<Review>,
-    isLoadingReviews: Boolean,
+    load: LoadState,
     hasMore: Boolean,
     accountId: String,
     onLoadMore: () -> Unit,
@@ -152,7 +156,7 @@ private fun ProfileBody(
     val locationLabel = locationName(parsedLocation)
 
     val listState = rememberLazyListState()
-    LoadMoreEffect(listState, hasMore, isLoadingReviews, onLoadMore)
+    LoadMoreEffect(listState, hasMore, load, onLoadMore)
 
     LazyColumn(
         state = listState,
@@ -214,7 +218,7 @@ private fun ProfileBody(
             )
         }
 
-        if (reviews.isEmpty() && !isLoadingReviews) {
+        if (reviews.isEmpty() && load == LoadState.Idle) {
             item(key = "reviews_empty") {
                 Text(
                     text = stringResource(R.string.market_profile_no_reviews),
@@ -231,33 +235,40 @@ private fun ProfileBody(
             }
         }
 
-        if (isLoadingReviews) {
-            item(key = "reviews_loading") {
+        when (load) {
+            LoadState.Loading -> item(key = "reviews_loading") {
                 Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                     CircularProgressIndicator()
                 }
             }
+            is LoadState.Failed -> item(key = "reviews_failed") {
+                InlineErrorState(error = load.error, onRetry = onLoadMore)
+            }
+            LoadState.Idle -> Unit
         }
     }
 }
 
-/** Auto-load the next page of reviews as the list nears its end. */
+/**
+ * Auto-load the next page of reviews as the list nears its end, only while no
+ * page is being read or has failed: a failed page waits for its retry.
+ */
 @Composable
 private fun LoadMoreEffect(
     listState: LazyListState,
     hasMore: Boolean,
-    isLoading: Boolean,
+    load: LoadState,
     onLoadMore: () -> Unit,
 ) {
-    val shouldLoadMore by remember(hasMore, isLoading) {
+    val reachedEnd by remember {
         derivedStateOf {
             val layoutInfo = listState.layoutInfo
             val lastVisible = layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0
-            hasMore && !isLoading && lastVisible >= layoutInfo.totalItemsCount - 3
+            lastVisible >= layoutInfo.totalItemsCount - 3
         }
     }
-    LaunchedEffect(shouldLoadMore) {
-        if (shouldLoadMore) onLoadMore()
+    LaunchedEffect(reachedEnd, hasMore, load) {
+        if (reachedEnd && hasMore && load == LoadState.Idle) onLoadMore()
     }
 }
 
@@ -334,8 +345,9 @@ private fun ProfileHeaderCard(
                         }
                     }
                     Text(
-                        text = stringResource(
-                            R.string.market_profile_sales_count,
+                        text = pluralStringResource(
+                            R.plurals.market_profile_sales_count,
+                            account.sales.toInt(),
                             LocalFormat.current.formatNumber(account.sales),
                         ),
                         style = MaterialTheme.typography.bodyMedium,
@@ -364,7 +376,10 @@ private fun ProfileHeaderCard(
             if (account.reviews > 0) {
                 Spacer(Modifier.width(6.dp))
                 Text(
-                    text = "(${account.reviews})",
+                    text = stringResource(
+                        R.string.market_review_count,
+                        LocalFormat.current.formatNumber(account.reviews),
+                    ),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -406,7 +421,7 @@ private fun ProfileHeaderCard(
 
 @Composable
 private fun ReviewCard(review: Review, dateTimeText: String) {
-    val name = review.reviewerName.orEmpty().ifBlank { review.reviewer }
+    val name = personName(review.reviewerName, review.reviewerFingerprint)
     val avatarUrl = review.reviewer.takeIf { it.isNotBlank() }?.let { userAvatarUrl(it) }
     ProfileCard {
         Row(

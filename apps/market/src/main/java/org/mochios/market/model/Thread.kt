@@ -23,7 +23,10 @@ data class MarketThread(
     @SerializedName("last_message") val lastMessage: String? = null,
     @SerializedName("last_message_time") val lastMessageTime: Long? = null,
     val unread: Long? = null,
+    /** On `threads/mine` rows: the party who is not the caller, and their name and fingerprint. */
+    val other: String? = null,
     @SerializedName("other_name") val otherName: String? = null,
+    @SerializedName("other_fingerprint") val otherFingerprint: String? = null,
 )
 
 /**

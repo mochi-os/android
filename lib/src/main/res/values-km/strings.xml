@@ -340,4 +340,7 @@
         <item quantity="other">+%1$s ការឆ្លើយតបបន្ថែម</item>
     </plurals>
     <string name="drawer_unread">មិនទាន់អាន</string>
+    <string name="person_unknown">មិនស្គាល់</string>
+    <string name="format_time_seconds_short">%1$s វិ</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

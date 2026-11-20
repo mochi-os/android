@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s köp jogap</item>
     </plurals>
     <string name="drawer_unread">Okalmadyk</string>
+    <string name="person_unknown">Näbelli</string>
+    <string name="format_time_seconds_short">%1$ssek</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

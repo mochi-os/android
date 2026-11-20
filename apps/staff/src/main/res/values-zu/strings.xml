@@ -395,7 +395,6 @@
 
     <string name="staff_accounts_action_unsuspend_title">Susa ukumiswa</string>
     <string name="staff_accounts_reason_optional_label">Isizathu (akudingekile)</string>
-    <string name="staff_accounts_sales">%1$s ukuthengiswa</string>
     <string name="staff_appeals_reason_label">Isizathu sokudlulisa kukamthengisi</string>
     <string name="staff_audit_action_staff_team_role_changed">Indima yesisebenzi ishintshiwe</string>
     <string name="staff_categories_delete_desc">Susa “%1$s”? Lokhu ngeke kuhlehliswe.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Ingxoxo</string>
     <string name="staff_reports_conversation_empty">Ayikho imiyalezo</string>
     <string name="staff_reports_conversation_show">Bonisa ingxoxo</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s ukuthengiswa</item>
+        <item quantity="other">%1$s ukuthengiswa</item>
+    </plurals>
 </resources>

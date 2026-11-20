@@ -19,7 +19,6 @@
     <string name="staff_accounts_notes_label">Cathetan</string>
     <string name="staff_accounts_reason_label">Alesan</string>
     <string name="staff_accounts_reason_optional_label">Alesan (opsional)</string>
-    <string name="staff_accounts_sales">%1$s dol</string>
     <string name="staff_accounts_search_clear">Resiki panggolékan</string>
     <string name="staff_accounts_search_placeholder">Goleki</string>
     <string name="staff_accounts_seller_buyers">Pembeli waé</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">Obrolan</string>
     <string name="staff_reports_conversation_empty">Ora ana pesen</string>
     <string name="staff_reports_conversation_show">Tampilake obrolan</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s dol</item>
+    </plurals>
 </resources>

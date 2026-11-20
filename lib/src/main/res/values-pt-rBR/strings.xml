@@ -317,4 +317,7 @@
     <string name="comment_share">Compartilhar</string>
     <string name="comment_all">Todos os comentários</string>
     <string name="drawer_unread">Não lidas</string>
+    <string name="person_unknown">Desconhecido</string>
+    <string name="format_time_seconds_short">%1$ss</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

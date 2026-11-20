@@ -31,7 +31,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
@@ -162,5 +161,3 @@ private fun EmptyCarouselPlaceholder(modifier: Modifier = Modifier) {
     }
 }
 
-@Suppress("unused")
-private fun Modifier.translucent(): Modifier = background(Color.Black.copy(alpha = 0.4f))

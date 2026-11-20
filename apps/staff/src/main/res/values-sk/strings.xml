@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Poznámky</string>
     <string name="staff_accounts_reason_label">Dôvod</string>
     <string name="staff_accounts_reason_optional_label">Dôvod (voliteľné)</string>
-    <string name="staff_accounts_sales">%1$s predajov</string>
     <string name="staff_accounts_search_clear">Vymazať vyhľadávanie</string>
     <string name="staff_accounts_search_placeholder">Hľadať</string>
     <string name="staff_accounts_seller_buyers">Iba kupujúci</string>
@@ -438,4 +437,9 @@
     <string name="staff_reports_conversation">Konverzácia</string>
     <string name="staff_reports_conversation_empty">Žiadne správy</string>
     <string name="staff_reports_conversation_show">Zobraziť konverzáciu</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s predaj</item>
+        <item quantity="few">%1$s predaje</item>
+        <item quantity="other">%1$s predajov</item>
+    </plurals>
 </resources>

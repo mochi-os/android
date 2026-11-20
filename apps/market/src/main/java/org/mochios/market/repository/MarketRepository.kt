@@ -8,17 +8,20 @@ package org.mochios.market.repository
 import android.net.Uri
 import android.os.SystemClock
 import com.google.gson.Gson
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
-import kotlinx.coroutines.awaitAll
-import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.drop
+import kotlinx.coroutines.launch
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.mochios.android.api.MochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
 import org.mochios.android.api.unwrapEmpty
@@ -49,12 +52,14 @@ import org.mochios.market.model.OrderCreateResponse
 import org.mochios.market.model.OrderDetailResponse
 import org.mochios.market.model.OrdersListResponse
 import org.mochios.market.model.Photo
+import org.mochios.market.model.RelistAuction
 import org.mochios.market.model.RelistResponse
 import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.model.ReviewsListResponse
 import org.mochios.market.model.ShippingOption
 import org.mochios.market.model.ShippingOptionInput
+import org.mochios.market.model.ShippingRegions
 import org.mochios.market.model.StripeOauthCompletion
 import org.mochios.market.model.StripeOnboardingResponse
 import org.mochios.market.model.StripeStatus
@@ -77,9 +82,9 @@ import retrofit2.HttpException
 class MarketRepository @Inject constructor(
     private val api: MarketApi,
     fileStore: FileStore,
+    session: SessionManager? = null,
 ) : FileRepository(fileStore) {
 
-    private val FILENAME_PARAMETER = Regex("filename=\"?([^\";]+)\"?")
     private val text = "text/plain".toMediaTypeOrNull()
     private val gson = Gson()
 
@@ -250,10 +255,13 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    /** Release the caller's in-progress checkout on a listing. */
+    /**
+     * Release the caller's in-progress checkout on a listing. Its answer
+     * carries no data, so it is not read (unwrapEmpty), as for the deletes.
+     */
     suspend fun cancelReservation(listing: String) {
         try {
-            api.cancelReservation(listing).unwrap()
+            api.cancelReservation(listing).unwrapEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -261,7 +269,7 @@ class MarketRepository @Inject constructor(
 
     suspend fun deleteListing(id: String) {
         try {
-            api.deleteListing(id.toString()).unwrap()
+            api.deleteListing(id.toString()).unwrapEmpty()
             knownListings.remove(id)
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -294,13 +302,30 @@ class MarketRepository @Inject constructor(
         }
     }
 
+    /**
+     * Relist [id] as a new draft. An auction's settings come back with it and
+     * are held for the editor that opens the draft, which takes them once
+     * ([takeRelisted]).
+     */
     suspend fun relistListing(id: String): RelistResponse {
         return try {
-            api.relistListing(id.toString()).unwrap().also { knownListings.remove(id) }
+            api.relistListing(id.toString()).unwrap().also { response ->
+                knownListings.remove(id)
+                val auction = response.auction
+                if (auction != null && response.listing.id.isNotEmpty()) {
+                    relisted[response.listing.id] = auction
+                }
+            }
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
+
+    /** Auction settings of relisted drafts, by the draft's id, until the editor takes them. */
+    private val relisted = ConcurrentHashMap<String, RelistAuction>()
+
+    /** The auction settings draft [id] was relisted with, once; null after or otherwise. */
+    fun takeRelisted(id: String): RelistAuction? = relisted.remove(id)
 
     suspend fun searchListings(params: Map<String, String?>): ListingsSearchResponse {
         return try {
@@ -318,6 +343,7 @@ class MarketRepository @Inject constructor(
                 sort = params["sort"],
                 page = params["page"]?.toIntOrNull(),
                 limit = params["limit"]?.toIntOrNull(),
+                after = params["after"],
             ).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -364,26 +390,44 @@ class MarketRepository @Inject constructor(
     /**
      * Resolve listings by id, in the order asked: from those read or shown in
      * the last [KNOWN_LISTING_LIFETIME] milliseconds, then a listing page's read
-     * under way, else parallel `listings/get` calls, since `listings/search`
-     * has no `ids=` parameter. Ids that fail to resolve are dropped.
+     * under way, and the rest in one `listings/viewer/batch` call. An id the
+     * batch leaves out is gone (removed, held or unknown) and is left out
+     * here; a batch call that fails throws, so a caller never takes its ids
+     * for gone.
      */
-    suspend fun getListingsByIds(ids: List<String>): List<Listing> = coroutineScope {
+    suspend fun getListingsByIds(ids: List<String>): List<Listing> {
         val now = SystemClock.elapsedRealtime()
-        ids.map { id ->
-            async {
-                val known = knownListings[id]?.takeIf { held ->
-                    now - held.read < KNOWN_LISTING_LIFETIME
-                }
-                known?.listing ?: try {
-                    val reading = listingReads[id]
-                    val listing = reading?.await()?.listing ?: api.getListing(id).unwrap().listing
-                    remember(listing)
-                    listing
-                } catch (_: Exception) {
-                    null
-                }
+        val found = HashMap<String, Listing>()
+        for (id in ids) {
+            knownListings[id]?.takeIf { held -> now - held.read < KNOWN_LISTING_LIFETIME }
+                ?.let { held -> found[id] = held.listing }
+        }
+        for (id in ids) {
+            if (id in found) continue
+            val reading = listingReads[id] ?: continue
+            try {
+                found[id] = reading.await().listing
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                // Left to the batch below.
             }
-        }.awaitAll().filterNotNull()
+        }
+        val rest = ids.filter { id -> id !in found }.distinct()
+        for (chunk in rest.chunked(BATCH_LIMIT)) {
+            val answered = try {
+                api.batchListings(gson.toJson(chunk)).unwrap().listings
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                throw e.toMochiError()
+            }
+            for (listing in answered) {
+                remember(listing)
+                found[listing.id] = listing
+            }
+        }
+        return ids.mapNotNull { id -> found[id] }
     }
 
     suspend fun mineListings(
@@ -391,9 +435,10 @@ class MarketRepository @Inject constructor(
         query: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): ListingsMineResponse {
         return try {
-            api.listMyListings(status, query, page, limit).unwrap()
+            api.listMyListings(status, query, page, limit, after).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -419,6 +464,17 @@ class MarketRepository @Inject constructor(
             throw e.toMochiError()
         }
     }
+
+    /** The countries and region groups, read once for the session. */
+    private val regions = SharedRead(REGIONS_LIFETIME, readScope) {
+        try {
+            api.shippingRegions().unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
+    }
+
+    suspend fun shippingRegions(): ShippingRegions = regions.get()
 
     // ---- Photos ----
 
@@ -457,10 +513,13 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    /** Reorder [listing]'s photos; answers what its copies went without. */
-    suspend fun reorderPhotos(listing: String, ids: List<String>): List<String> {
+    /**
+     * Reorder [listing]'s photos; answers them in the server's new order, and
+     * what its copies went without.
+     */
+    suspend fun reorderPhotos(listing: String, ids: List<String>): Changed<List<Photo>> {
         return try {
-            api.reorderPhotos(listing.toString(), gson.toJson(ids)).unwrapRaw().unsent.orEmpty()
+            api.reorderPhotos(listing.toString(), gson.toJson(ids)).unwrapRaw()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -491,16 +550,18 @@ class MarketRepository @Inject constructor(
         }
     }
 
+    /** Remove an asset; its answer carries no data (unwrapEmpty). */
     suspend fun removeAsset(id: String) {
         try {
-            api.removeAsset(id.toString()).unwrap()
+            api.removeAsset(id.toString()).unwrapEmpty()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
 
-    suspend fun reorderAssets(listing: String, ids: List<String>) {
-        try {
+    /** Reorder [listing]'s assets; answers them in the server's new order. */
+    suspend fun reorderAssets(listing: String, ids: List<String>): List<Asset> {
+        return try {
             api.reorderAssets(listing.toString(), gson.toJson(ids)).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -508,14 +569,17 @@ class MarketRepository @Inject constructor(
     }
 
     /**
-     * Fetch a purchased asset: a JSON envelope naming an external URL or the
-     * file bytes, decided only by Content-Type. It cannot go through a Custom
-     * Tab - the action is not public and the tab carries neither bearer token
-     * nor session cookie.
+     * Fetch a purchased [asset]: an external one answers a JSON envelope naming
+     * its URL, a hosted one its bytes with the seller's own type, which may be
+     * JSON too, so the asset's `hosting` decides how the answer is read, as the
+     * web does. A hosted file is named from the asset row, which holds its full
+     * name where the header's plain filename drops every non-ASCII letter. It
+     * cannot go through a Custom Tab - the action is not public and the tab
+     * carries neither bearer token nor session cookie.
      */
-    suspend fun downloadAsset(id: String): AssetDownload {
+    suspend fun downloadAsset(asset: Asset): AssetDownload {
         val response = try {
-            api.downloadAsset(id)
+            api.downloadAsset(asset.id)
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -523,23 +587,16 @@ class MarketRepository @Inject constructor(
             throw HttpException(response).toMochiError()
         }
         val body = response.body() ?: throw MochiError.Unknown()
-        val contentType = response.headers()["Content-Type"].orEmpty()
-        if (contentType.startsWith("application/json")) {
+        if (asset.hosting == "external") {
             val envelope = gson.fromJson(body.string(), AssetDownloadEnvelope::class.java)
             val reference = envelope?.data?.asset?.reference.orEmpty()
             if (reference.isBlank()) throw MochiError.Unknown()
             return AssetDownload.External(reference)
         }
-        // Content-Disposition carries the seller's filename; fall back to the
-        // asset id so something sane reaches the cache either way.
-        val name = filenameFrom(response.headers()["Content-Disposition"]) ?: "asset-$id"
-        return AssetDownload.Bytes(name, contentType, body)
+        val contentType = response.headers()["Content-Type"].orEmpty()
+        val name = asset.filename.ifBlank { "asset-${asset.id}" }
+        return AssetDownload.Bytes(name, contentType.ifBlank { asset.mime }, body)
     }
-
-    /** The `filename="..."` parameter, when the header carries a usable one. */
-    private fun filenameFrom(disposition: String?): String? =
-        FILENAME_PARAMETER.find(disposition.orEmpty())
-            ?.groupValues?.get(1)?.trim()?.takeIf { it.isNotBlank() }
 
     // ---- Bids ----
 
@@ -551,16 +608,17 @@ class MarketRepository @Inject constructor(
         }
     }
 
-    data class MyBidsResult(val bids: List<Bid>, val total: Long)
+    data class MyBidsResult(val bids: List<Bid>, val total: Long, val next: String? = null)
 
     suspend fun myBids(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): MyBidsResult {
         return try {
-            val r = api.listMyBids(status, page, limit).unwrap()
-            MyBidsResult(bids = r.bids, total = r.total)
+            val r = api.listMyBids(status, page, limit, after).unwrap()
+            MyBidsResult(bids = r.bids, total = r.total, next = r.next)
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -621,9 +679,10 @@ class MarketRepository @Inject constructor(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): OrdersListResponse {
         return try {
-            api.listPurchases(status, page, limit).unwrap()
+            api.listPurchases(status, page, limit, after).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -633,9 +692,10 @@ class MarketRepository @Inject constructor(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): OrdersListResponse {
         return try {
-            api.listSales(status, page, limit).unwrap()
+            api.listSales(status, page, limit, after).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -684,13 +744,13 @@ class MarketRepository @Inject constructor(
 
     data class RefundResult(val order: Order, val dispute: Dispute?)
 
+    /** Refund [amount] minor units of order [id]; null refunds the whole remainder. */
     suspend fun refundOrder(
         id: String,
         amount: Long? = null,
-        reason: String? = null,
     ): RefundResult {
         return try {
-            val r = api.refundOrder(id.toString(), amount?.toString(), reason).unwrap()
+            val r = api.refundOrder(id.toString(), amount?.toString()).unwrap()
             RefundResult(order = r.order, dispute = r.dispute)
         } catch (e: Exception) {
             throw e.toMochiError()
@@ -716,9 +776,10 @@ class MarketRepository @Inject constructor(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): SubscriptionsListResponse {
         return try {
-            api.listMySubscriptions(status, page, limit).unwrap()
+            api.listMySubscriptions(status, page, limit, after).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -729,9 +790,10 @@ class MarketRepository @Inject constructor(
         status: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): SubscriptionsListResponse {
         return try {
-            api.listSubscribers(listing?.toString(), status, page, limit).unwrap()
+            api.listSubscribers(listing?.toString(), status, page, limit, after).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -783,9 +845,10 @@ class MarketRepository @Inject constructor(
         role: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): ThreadsListResponse {
         return try {
-            api.listMyThreads(role, page, limit).unwrap()
+            api.listMyThreads(role, page, limit, after).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -840,31 +903,32 @@ class MarketRepository @Inject constructor(
         role: String? = null,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): ReviewsListResponse {
         return try {
-            api.listAccountReviews(id, role, page, limit).unwrap()
+            api.listAccountReviews(id, role, page, limit, after).unwrap()
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
 
-    data class InboxReviewsResult(val reviews: List<Review>, val total: Long)
+    data class InboxReviewsResult(val reviews: List<Review>, val total: Long, val next: String? = null)
 
-    suspend fun inboxReviews(page: Int? = null, limit: Int? = null): InboxReviewsResult {
+    suspend fun inboxReviews(page: Int? = null, limit: Int? = null, after: String? = null): InboxReviewsResult {
         return try {
-            val r = api.listInboxReviews(page, limit).unwrap()
-            InboxReviewsResult(reviews = r.reviews, total = r.total)
+            val r = api.listInboxReviews(page, limit, after).unwrap()
+            InboxReviewsResult(reviews = r.reviews, total = r.total, next = r.next)
         } catch (e: Exception) {
             throw e.toMochiError()
         }
     }
 
-    data class SentReviewsResult(val reviews: List<Review>, val total: Long)
+    data class SentReviewsResult(val reviews: List<Review>, val total: Long, val next: String? = null)
 
-    suspend fun sentReviews(page: Int? = null, limit: Int? = null): SentReviewsResult {
+    suspend fun sentReviews(page: Int? = null, limit: Int? = null, after: String? = null): SentReviewsResult {
         return try {
-            val r = api.listSentReviews(page, limit).unwrap()
-            SentReviewsResult(reviews = r.reviews, total = r.total)
+            val r = api.listSentReviews(page, limit, after).unwrap()
+            SentReviewsResult(reviews = r.reviews, total = r.total, next = r.next)
         } catch (e: Exception) {
             throw e.toMochiError()
         }
@@ -888,14 +952,6 @@ class MarketRepository @Inject constructor(
 
     // ---- Disputes ----
 
-    suspend fun getDispute(id: String): Dispute {
-        return try {
-            api.getDispute(id.toString()).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
-
     suspend fun respondToDispute(id: String, body: String): Dispute {
         return try {
             api.respondDispute(id.toString(), body).unwrap()
@@ -906,19 +962,35 @@ class MarketRepository @Inject constructor(
 
     // ---- Audit ----
 
-    data class AuditObjectResult(val audit: List<AuditEvent>, val total: Long)
+    data class AuditObjectResult(val audit: List<AuditEvent>, val total: Long, val next: String? = null)
 
     suspend fun auditObject(
         kind: String,
         objectId: String,
         page: Int? = null,
         limit: Int? = null,
+        after: String? = null,
     ): AuditObjectResult {
         return try {
-            val r = api.getObjectAudit(kind, objectId, page, limit).unwrap()
-            AuditObjectResult(audit = r.audit, total = r.total)
+            val r = api.getObjectAudit(kind, objectId, page, limit, after).unwrap()
+            AuditObjectResult(audit = r.audit, total = r.total, next = r.next)
         } catch (e: Exception) {
             throw e.toMochiError()
+        }
+    }
+
+    // Last, so every field it clears is in place.
+    init {
+        // What is held is one account's: its own market account, and listing
+        // cards that carry the seller's own fields on their own listings. When
+        // another account signs in, none of it is handed to the next.
+        session?.let { manager ->
+            readScope.launch {
+                manager.boundIdentity.distinctUntilChanged().drop(1).collect {
+                    ownAccount.forget()
+                    knownListings.clear()
+                }
+            }
         }
     }
 
@@ -934,7 +1006,13 @@ class MarketRepository @Inject constructor(
         /** How long the categories are handed out before they are read again. */
         private const val CATEGORIES_LIFETIME = 3_600_000L
 
+        /** The shipping regions change only with a server release: held for the session. */
+        private const val REGIONS_LIFETIME = Long.MAX_VALUE
+
         /** How long a listing read or shown stands in for another read of it. */
         private const val KNOWN_LISTING_LIFETIME = 300_000L
+
+        /** The most ids one `listings/viewer/batch` call takes. */
+        private const val BATCH_LIMIT = 100
     }
 }

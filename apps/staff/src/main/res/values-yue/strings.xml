@@ -85,7 +85,6 @@
     <string name="staff_reports_type_listing">刊登</string>
     <string name="staff_dashboard_tab_listings">刊登</string>
     <string name="staff_sidebar_listings">刊登</string>
-    <string name="staff_accounts_sales">%1$s 件售出</string>
     <string name="staff_accounts_search_clear">清除搜尋</string>
     <string name="staff_accounts_status_suspended">已暫停</string>
     <string name="staff_audit_title">歷史</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">對話</string>
     <string name="staff_reports_conversation_empty">冇訊息</string>
     <string name="staff_reports_conversation_show">顯示對話</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s 件售出</item>
+    </plurals>
 </resources>

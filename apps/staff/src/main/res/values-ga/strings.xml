@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Nótaí</string>
     <string name="staff_accounts_reason_label">Cúis</string>
     <string name="staff_accounts_reason_optional_label">Cúis (roghnach)</string>
-    <string name="staff_accounts_sales">%1$s díolacháin</string>
     <string name="staff_accounts_search_clear">Glan cuardach</string>
     <string name="staff_accounts_search_placeholder">Cuardach</string>
     <string name="staff_accounts_seller_buyers">Ceannaitheoirí amháin</string>
@@ -440,4 +439,11 @@
     <string name="staff_reports_conversation">Comhrá</string>
     <string name="staff_reports_conversation_empty">Níl aon teachtaireacht</string>
     <string name="staff_reports_conversation_show">Taispeáin an comhrá</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s díolachán</item>
+        <item quantity="two">%1$s dhíolachán</item>
+        <item quantity="few">%1$s dhíolachán</item>
+        <item quantity="many">%1$s ndíolachán</item>
+        <item quantity="other">%1$s díolachán</item>
+    </plurals>
 </resources>

@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Oharrak</string>
     <string name="staff_accounts_reason_label">Arrazoia</string>
     <string name="staff_accounts_reason_optional_label">Arrazoia (aukerakoa)</string>
-    <string name="staff_accounts_sales">%1$s salmenta</string>
     <string name="staff_accounts_search_clear">Garbitu bilaketa</string>
     <string name="staff_accounts_search_placeholder">Bilatu</string>
     <string name="staff_accounts_seller_buyers">Erostaileak soilik</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Elkarrizketa</string>
     <string name="staff_reports_conversation_empty">Mezurik ez</string>
     <string name="staff_reports_conversation_show">Erakutsi elkarrizketa</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s salmenta</item>
+        <item quantity="other">%1$s salmenta</item>
+    </plurals>
 </resources>

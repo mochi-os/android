@@ -340,4 +340,7 @@
         <item quantity="other">+%1$s ຕອບກັບເພີ່ມເຕີມ</item>
     </plurals>
     <string name="drawer_unread">ຍັງບໍ່ໄດ້ອ່ານ</string>
+    <string name="person_unknown">ບໍ່ຮູ້ຈັກ</string>
+    <string name="format_time_seconds_short">%1$s ວິ</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

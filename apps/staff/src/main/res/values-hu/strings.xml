@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Jegyzetek</string>
     <string name="staff_accounts_reason_label">Indok</string>
     <string name="staff_accounts_reason_optional_label">Indok (nem kötelező)</string>
-    <string name="staff_accounts_sales">%1$s eladás</string>
     <string name="staff_accounts_search_clear">Keresés törlése</string>
     <string name="staff_accounts_search_placeholder">Keresés</string>
     <string name="staff_accounts_seller_buyers">Csak vevők</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Beszélgetés</string>
     <string name="staff_reports_conversation_empty">Nincsenek üzenetek</string>
     <string name="staff_reports_conversation_show">Beszélgetés megjelenítése</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s eladás</item>
+        <item quantity="other">%1$s eladás</item>
+    </plurals>
 </resources>

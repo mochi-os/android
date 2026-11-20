@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s juk\'ampi jaysawinaka</item>
     </plurals>
     <string name="drawer_unread">Jan ullt\'ata</string>
+    <string name="person_unknown">Jan uñt\'ata</string>
+    <string name="format_time_seconds_short">%1$ss</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

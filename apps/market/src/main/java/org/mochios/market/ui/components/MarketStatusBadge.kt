@@ -22,8 +22,10 @@ import org.mochios.market.R
 import org.mochios.market.model.BidStatus
 
 /**
- * Badge for a market order, listing or subscription status, drawn with the
- * shared status badge so a state reads the same here as in every other app.
+ * Badge for a market order, listing, subscription or dispute status, drawn
+ * with the shared status badge so a state reads the same here as in every
+ * other app. A status it does not know reads as "Unknown", never as its wire
+ * value.
  *
  * @param status the wire status, matched case-insensitively.
  * @param localised a label to show instead of the known one for [status].
@@ -39,7 +41,7 @@ fun MarketStatusBadge(
     val key = status.trim().lowercase()
     val tone = statusTone(key)
     StatusBadge(
-        label = localised ?: knownStatusLabel(key) ?: key,
+        label = localised ?: knownStatusLabel(key) ?: stringResource(R.string.market_status_unknown),
         tone = tone,
         icon = statusIcon(key) ?: tone.defaultIcon,
         modifier = modifier,
@@ -78,11 +80,16 @@ fun BidStatusBadge(status: BidStatus?, modifier: Modifier = Modifier, cancelled:
     )
 }
 
+/**
+ * A dispute's tone is the web's: open is waiting on the seller, responded on
+ * the market, and a resolution is settled for the seller or in the buyer's
+ * favour.
+ */
 internal fun statusTone(key: String): StatusTone = when (key) {
-    "active", "paid", "shipped", "delivered", "completed" -> StatusTone.Positive
-    "pending", "paused" -> StatusTone.Waiting
+    "active", "paid", "shipped", "delivered", "completed", "resolved_seller" -> StatusTone.Positive
+    "pending", "paused", "open", "resolved_buyer", "held" -> StatusTone.Waiting
     "disputed", "cancelled", "past_due", "rejected", "removed" -> StatusTone.Negative
-    "sold" -> StatusTone.Info
+    "sold", "responded" -> StatusTone.Info
     else -> StatusTone.Neutral
 }
 
@@ -106,5 +113,9 @@ internal fun knownStatusLabel(key: String): String? = when (key) {
     "active" -> stringResource(R.string.market_status_active)
     "paused" -> stringResource(R.string.market_status_paused)
     "past_due" -> stringResource(R.string.market_status_past_due)
+    "open" -> stringResource(R.string.market_dispute_status_open)
+    "responded" -> stringResource(R.string.market_dispute_status_responded)
+    "resolved_buyer" -> stringResource(R.string.market_dispute_status_resolved_buyer)
+    "resolved_seller" -> stringResource(R.string.market_dispute_status_resolved_seller)
     else -> null
 }

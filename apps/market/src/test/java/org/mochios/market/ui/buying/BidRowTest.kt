@@ -58,7 +58,7 @@ class BidRowTest {
 
     private fun text(id: Int) = context.getString(id)
 
-    private fun endsIn() = text(R.string.market_bids_ends_in).substringBefore("%")
+    private fun endsIn() = text(R.string.market_bid_ends_in).substringBefore("%")
 
     @Test
     fun `a bid on a cancelled auction is labelled Cancelled, not Lost`() {
@@ -86,5 +86,12 @@ class BidRowTest {
         rule.onNodeWithText(text(R.string.market_bids_tab_outbid)).assertIsDisplayed()
         rule.onNodeWithText(endsIn(), substring = true).assertIsDisplayed()
         rule.onAllNodesWithText(text(R.string.market_status_cancelled)).assertCountEquals(0)
+    }
+
+    @Test
+    fun `a bid on a listing with no title reads Untitled listing, not the auction's id`() {
+        show(bid(BidStatus.ACTIVE, AuctionStatus.ACTIVE).copy(title = null))
+        rule.onNodeWithText(text(R.string.market_listing_untitled)).assertExists()
+        rule.onAllNodesWithText("a1", substring = true).assertCountEquals(0)
     }
 }

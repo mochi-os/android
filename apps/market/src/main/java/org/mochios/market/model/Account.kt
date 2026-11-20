@@ -96,16 +96,3 @@ data class AccountFees(
     /** Stripe's per-currency minimum charge in minor units, keyed by lowercase code. */
     val minimums: Map<String, Long> = emptyMap(),
 )
-
-/**
- * How an order's `total` decomposes into item, postage, fee and payout; minor
- * units.
- */
-data class FeeBreakdown(
-    val item: Long = 0,
-    val postage: Long = 0,
-    val total: Long = 0,
-    val fee: Long = 0,
-    val payout: Long = 0,
-    val currency: Currency? = null,
-)

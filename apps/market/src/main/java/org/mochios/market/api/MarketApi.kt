@@ -21,6 +21,7 @@ import org.mochios.market.model.Dispute
 import org.mochios.market.model.InboxReviewListResponse
 import org.mochios.market.model.Listing
 import org.mochios.market.model.ListingDetailResponse
+import org.mochios.market.model.ListingsBatchResponse
 import org.mochios.market.model.ListingsListResponse
 import org.mochios.market.model.ListingsSearchResponse
 import org.mochios.market.model.MarketThread
@@ -39,9 +40,11 @@ import org.mochios.market.model.RemovalCheck
 import org.mochios.market.model.Review
 import org.mochios.market.model.ReviewsListResponse
 import org.mochios.market.model.SavedListResponse
+import org.mochios.market.model.SavedChangeResponse
 import org.mochios.market.model.SavedToggleResponse
 import org.mochios.market.model.SentReviewListResponse
 import org.mochios.market.model.ShippingOption
+import org.mochios.market.model.ShippingRegions
 import org.mochios.market.model.StripeOauthCompletion
 import org.mochios.market.model.StripeOnboardingResponse
 import org.mochios.market.model.StripeStatus
@@ -61,14 +64,6 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 /**
- * Retrofit interface for the market app, mirroring the `-/...` actions in
- * `apps/market/app.json`. Bound to a per-app Retrofit with baseUrl
- * `<server>/market/`. Mutations post form-urlencoded because the Starlark proxy
- * reads `a.input(...)`; photo and asset uploads are multipart because it reads
- * `a.file(...)`. Static-asset and photo routes are fetched as plain URLs and
- * are not modelled here.
- */
-/**
  * A change to a listing, and what its copies on other networks went without,
  * a line each in the user's language; null where the server sends none.
  */
@@ -77,6 +72,14 @@ data class Changed<T>(
     val unsent: List<String>? = null,
 )
 
+/**
+ * Retrofit interface for the market app, mirroring the `-/...` actions in
+ * `apps/market/app.json`. Bound to a per-app Retrofit with baseUrl
+ * `<server>/market/`. Mutations post form-urlencoded because the Starlark proxy
+ * reads `a.input(...)`; photo and asset uploads are multipart because it reads
+ * `a.file(...)`. Static-asset and photo routes are fetched as plain URLs and
+ * are not modelled here.
+ */
 interface MarketApi {
 
     // ---- Accounts ----
@@ -266,6 +269,7 @@ interface MarketApi {
         @Query("sort") sort: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ListingsSearchResponse>>
 
     /**
@@ -277,6 +281,15 @@ interface MarketApi {
         @Query("id") id: String,
     ): Response<ApiResponse<ListingDetailResponse>>
 
+    /**
+     * The current cards of the listings [ids] names (a JSON array, at most
+     * 100) that the caller can still open; one that is gone is left out.
+     */
+    @GET("-/listings/viewer/batch")
+    suspend fun batchListings(
+        @Query("ids") ids: String,
+    ): Response<ApiResponse<ListingsBatchResponse>>
+
     /** Current identity's own listings (draft / active / closed). */
     @GET("-/listings/mine")
     suspend fun listMyListings(
@@ -284,6 +297,7 @@ interface MarketApi {
         @Query("query") query: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ListingsListResponse>>
 
     /** Appeal a listing that has been held or rejected by moderation. */
@@ -309,14 +323,14 @@ interface MarketApi {
     suspend fun addSaved(
         @Field("listing") listing: String, // contract-ok: read via _saved_listing_id(a) helper
         @Field("data") data: String,
-    ): Response<ApiResponse<SavedToggleResponse>>
+    ): Response<ApiResponse<SavedChangeResponse>>
 
     /** Remove a listing from the saved set. */
     @FormUrlEncoded
     @POST("-/saved/remove")
     suspend fun removeSaved(
         @Field("listing") listing: String, // contract-ok: read via _saved_listing_id(a) helper
-    ): Response<ApiResponse<SavedToggleResponse>>
+    ): Response<ApiResponse<SavedChangeResponse>>
 
 
     /** Remove all of the current identity's saved listings. */
@@ -335,6 +349,10 @@ interface MarketApi {
         @Field("listing") listing: String,
         @Field("options") optionsJson: String,
     ): Response<ApiResponse<List<ShippingOption>>>
+
+    /** The country codes and region groups a shipping option may name. */
+    @GET("-/shipping/regions")
+    suspend fun shippingRegions(): Response<ApiResponse<ShippingRegions>>
 
     // ---- Photos ----
 
@@ -378,7 +396,7 @@ interface MarketApi {
     suspend fun reorderPhotos(
         @Field("listing") listing: String,
         @Field("ids") idsJson: String,
-    ): Response<Changed<OkResponse>>
+    ): Response<Changed<List<Photo>>>
 
     // ---- Assets (digital downloads) ----
 
@@ -407,13 +425,13 @@ interface MarketApi {
         @Field("id") id: String,
     ): Response<ApiResponse<OkResponse>>
 
-    /** Reorder assets (`ids` is the JSON-encoded array). */
+    /** Reorder assets (`ids` is the JSON-encoded array); answers the assets in their new order. */
     @FormUrlEncoded
     @POST("-/assets/reorder")
     suspend fun reorderAssets(
         @Field("listing") listing: String,
         @Field("ids") idsJson: String,
-    ): Response<ApiResponse<OkResponse>>
+    ): Response<ApiResponse<AssetListResponse>>
 
     /**
      * Download a purchased asset: either a JSON envelope naming an external URL
@@ -441,6 +459,7 @@ interface MarketApi {
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<BidsListResponse>>
 
     // ---- Orders ----
@@ -493,6 +512,7 @@ interface MarketApi {
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<OrdersListResponse>>
 
     /** Orders the current identity has sold. */
@@ -501,6 +521,7 @@ interface MarketApi {
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<OrdersListResponse>>
 
     /** Detailed view of a single order (with listing, assets, dispute, review). */
@@ -535,13 +556,15 @@ interface MarketApi {
         @Field("description") description: String? = null,
     ): Response<ApiResponse<OrderDisputeResponse>>
 
-    /** Seller issues a refund (full or partial); may also resolve the dispute. */
+    /**
+     * Seller issues a refund; may also resolve the dispute. No `amount`
+     * refunds the whole remainder.
+     */
     @FormUrlEncoded
     @POST("-/orders/refund")
     suspend fun refundOrder(
         @Field("id") id: String,
         @Field("amount") amount: String? = null,
-        @Field("reason") reason: String? = null,
     ): Response<ApiResponse<OrderRefundResponse>>
 
     // ---- Subscriptions ----
@@ -565,6 +588,7 @@ interface MarketApi {
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<SubscriptionListResponse>>
 
     /** Subscribers on a listing the current identity is selling. */
@@ -574,6 +598,7 @@ interface MarketApi {
         @Query("status") status: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<SubscriptionListResponse>>
 
     /** Cancel an active subscription (at end of current period). */
@@ -620,6 +645,7 @@ interface MarketApi {
         @Query("role") role: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ThreadsListResponse>>
 
     /** Single thread with its messages and the related listing. */
@@ -671,6 +697,7 @@ interface MarketApi {
         @Query("role") role: String? = null,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<ReviewsListResponse>>
 
     /** Reviews where the current identity is the subject. */
@@ -678,6 +705,7 @@ interface MarketApi {
     suspend fun listInboxReviews(
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<InboxReviewListResponse>>
 
     /** Reviews the current identity has written. */
@@ -685,6 +713,7 @@ interface MarketApi {
     suspend fun listSentReviews(
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<SentReviewListResponse>>
 
     // ---- Reports ----
@@ -705,12 +734,6 @@ interface MarketApi {
 
     // ---- Disputes ----
 
-    /** Detailed view of a single dispute (server enforces ownership/staff). */
-    @GET("-/disputes/get")
-    suspend fun getDispute(
-        @Query("id") id: String,
-    ): Response<ApiResponse<Dispute>>
-
     /** Add a response message to an open dispute. */
     @FormUrlEncoded
     @POST("-/disputes/respond")
@@ -730,5 +753,6 @@ interface MarketApi {
         @Query("object") `object`: String,
         @Query("page") page: Int? = null,
         @Query("limit") limit: Int? = null,
+        @Query("after") after: String? = null,
     ): Response<ApiResponse<AuditListResponse>>
 }

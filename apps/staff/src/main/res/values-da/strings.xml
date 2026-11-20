@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Noter</string>
     <string name="staff_accounts_reason_label">Årsag</string>
     <string name="staff_accounts_reason_optional_label">Årsag (valgfri)</string>
-    <string name="staff_accounts_sales">%1$s salg</string>
     <string name="staff_accounts_search_clear">Ryd søgning</string>
     <string name="staff_accounts_search_placeholder">Søg</string>
     <string name="staff_accounts_seller_buyers">Kun købere</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Samtale</string>
     <string name="staff_reports_conversation_empty">Ingen beskeder</string>
     <string name="staff_reports_conversation_show">Vis samtale</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s salg</item>
+        <item quantity="other">%1$s salg</item>
+    </plurals>
 </resources>

@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Nòt</string>
     <string name="staff_accounts_reason_label">Rezon</string>
     <string name="staff_accounts_reason_optional_label">Rezon (opsyonèl)</string>
-    <string name="staff_accounts_sales">%1$s vant</string>
     <string name="staff_accounts_search_clear">Efase rechèch</string>
     <string name="staff_accounts_search_placeholder">Chèche</string>
     <string name="staff_accounts_seller_buyers">Achtè sèlman</string>
@@ -440,4 +439,7 @@
     <string name="staff_reports_conversation">Konvèsasyon</string>
     <string name="staff_reports_conversation_empty">Pa gen mesaj</string>
     <string name="staff_reports_conversation_show">Montre konvèsasyon</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s vant</item>
+    </plurals>
 </resources>

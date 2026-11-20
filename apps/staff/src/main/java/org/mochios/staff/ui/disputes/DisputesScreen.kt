@@ -155,7 +155,7 @@ private fun DisputesBody(
             else -> InfiniteList(
                 items = state.disputes,
                 key = { dispute -> dispute.id },
-                isLoading = state.isLoadingMore,
+                load = state.load,
                 hasMore = state.disputes.size < state.total,
                 onLoadMore = onLoadMore,
             ) { dispute ->

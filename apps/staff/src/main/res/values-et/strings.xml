@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Märkmed</string>
     <string name="staff_accounts_reason_label">Põhjus</string>
     <string name="staff_accounts_reason_optional_label">Põhjus (valikuline)</string>
-    <string name="staff_accounts_sales">%1$s müüki</string>
     <string name="staff_accounts_search_clear">Tühjenda otsing</string>
     <string name="staff_accounts_search_placeholder">Otsi</string>
     <string name="staff_accounts_seller_buyers">Ainult ostjad</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">Vestlus</string>
     <string name="staff_reports_conversation_empty">Sõnumeid pole</string>
     <string name="staff_reports_conversation_show">Näita vestlust</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s müük</item>
+        <item quantity="other">%1$s müüki</item>
+    </plurals>
 </resources>

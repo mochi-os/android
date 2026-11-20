@@ -5,7 +5,6 @@
 
 package org.mochios.market.ui.listing
 
-import android.content.Intent
 import androidx.annotation.StringRes
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.BorderStroke
@@ -43,13 +42,11 @@ import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Storefront
 import androidx.compose.material.icons.filled.Verified
-import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -77,6 +74,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalResources
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -117,6 +115,7 @@ import org.mochios.market.lib.parseLocation
 import org.mochios.market.lib.ratingStars
 import org.mochios.market.model.AccountSummary
 import org.mochios.market.model.Asset
+import org.mochios.market.model.AuctionStatus
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.Bid
 import org.mochios.market.model.Condition
@@ -133,18 +132,19 @@ import org.mochios.market.model.photoAddress
 import org.mochios.market.model.userAvatarUrl
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.AuctionBidHistory
+import org.mochios.market.ui.components.rememberRemaining
 import org.mochios.market.ui.components.AuditHistoryCard
 import org.mochios.market.ui.components.DigitalAssetsList
 import org.mochios.market.ui.components.ListingStatusBadge
 import org.mochios.market.ui.components.MarketStatusBadge
 import org.mochios.market.ui.components.PhotoCarousel
 import org.mochios.market.ui.components.PriceDisplay
-import org.mochios.market.ui.components.PricingFill
 import org.mochios.market.ui.components.RatingStarGold
 import org.mochios.market.ui.components.RatingStars
 import org.mochios.market.ui.components.SellerReviewsSection
 import org.mochios.market.ui.components.ShippingOptionsTable
 import org.mochios.market.ui.components.VerifiedGreen
+import org.mochios.market.ui.components.ModerationNotice
 import org.mochios.market.ui.components.WarningsSection
 import org.mochios.market.ui.components.conditionBadgeColor
 import org.mochios.market.ui.components.conditionLabel
@@ -202,14 +202,18 @@ fun ListingDetailScreen(
     var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
     val snackbarContext = LocalContext.current
     val resources = LocalResources.current
+    val format = LocalFormat.current
     // Surface the view model's one-shot bid / report messages (e.g. instant
     // buy-it-now win, immediate proxy outbid) via the scaffold snackbar.
     LaunchedEffect(viewModel) {
         viewModel.snackbar.collect { message ->
-            val text = resources.getString(
-                message.messageRes,
-                *message.args.toTypedArray(),
-            )
+            val amount = message.amount
+            val currency = message.currency
+            val text = if (amount != null && currency != null) {
+                resources.getString(message.messageRes, formatPrice(amount, currency, format))
+            } else {
+                resources.getString(message.messageRes)
+            }
             snackbarHostState.showSnackbar(text)
         }
     }
@@ -256,7 +260,6 @@ fun ListingDetailScreen(
     var bidOpen by remember { mutableStateOf(false) }
 
     val listingTitle = state.listing?.listing?.title.orEmpty()
-    val currentListingId = state.listing?.listing?.id
 
     unopened?.let { file ->
         UnopenedFileDialog(file = file, onDismiss = { unopened = null })
@@ -336,6 +339,10 @@ fun ListingDetailScreen(
                         audit = state.audit,
                         reviews = state.sellerReviews,
                         isOwner = isOwner,
+                        offer = response.offer(currentUserId),
+                        offset = state.offset,
+                        downloadable = response.downloadable(currentUserId),
+                        onReload = { viewModel.load(listingId) },
                         isSaved = isSaved,
                         isReported = isReported,
                         onPhotoTap = { i ->
@@ -380,23 +387,14 @@ fun ListingDetailScreen(
                                 )
                             }
                         },
-                        onPrimaryCta = {
-                            when (listing.pricing) {
-                                PricingModel.AUCTION -> {
-                                    bidOpen = true
-                                }
-
-                                PricingModel.SUBSCRIPTION -> {
-                                    navController.navigate(
-                                        "${MarketApp.checkout(listing.id.toString())}?subscription=true",
-                                    )
-                                }
-
-                                else -> {
-                                    navController.navigate(
-                                        MarketApp.checkout(listing.id.toString()),
-                                    )
-                                }
+                        onOffer = { offer ->
+                            when (offer) {
+                                Offer.Bid -> bidOpen = true
+                                is Offer.Order -> navController.navigate(MarketApp.purchaseDetail(offer.id))
+                                Offer.Subscribed -> navController.navigate(MarketApp.SUBSCRIPTIONS)
+                                is Offer.Buy, Offer.Pay, Offer.Subscribe ->
+                                    navController.navigate(MarketApp.checkout(listing.id))
+                                is Offer.Opens, Offer.Ended, Offer.None -> Unit
                             }
                         },
                         onRelist = { viewModel.relistListing() },
@@ -460,6 +458,7 @@ fun ListingDetailScreen(
         AppealRemovalDialog(
             open = true,
             listingId = listingId,
+            notes = state.listing?.listing?.notes.orEmpty(),
             onDismiss = { appealOpen = false },
             onSuccess = { viewModel.load(listingId) },
         )
@@ -576,6 +575,10 @@ private fun ListingDetailContent(
     audit: List<AuditEvent>,
     reviews: List<Review>,
     isOwner: Boolean,
+    offer: Offer,
+    offset: Long,
+    downloadable: Boolean,
+    onReload: () -> Unit,
     isSaved: Boolean,
     isReported: Boolean,
     onPhotoTap: (Int) -> Unit,
@@ -583,7 +586,7 @@ private fun ListingDetailContent(
     onToggleSave: () -> Unit,
     onReport: () -> Unit,
     onMessageSeller: () -> Unit,
-    onPrimaryCta: () -> Unit,
+    onOffer: (Offer) -> Unit,
     onBuyNow: () -> Unit,
     onRelist: () -> Unit,
     onEdit: () -> Unit,
@@ -604,8 +607,14 @@ private fun ListingDetailContent(
         // listing's embedded primary photo when that list is empty.
         carouselUrls(photos, detail.listing)
     }
-    val sellerStatus = seller.status.orEmpty().lowercase()
-    val sellerSuspended = sellerStatus == "suspended" || sellerStatus == "banned"
+    // A running auction's page reads again as it closes, and a scheduled one's
+    // as it opens, so the outcome replaces the bid form.
+    when {
+        auction?.status == AuctionStatus.ACTIVE && auction.closes > 0L ->
+            rememberRemaining(auction.closes, offset, onReload)
+        auction?.status == AuctionStatus.SCHEDULED && auction.opens > 0L ->
+            rememberRemaining(auction.opens, offset, onReload)
+    }
     val showAppealPending = detail.appealPending &&
             currentUserId != null &&
             currentUserId == seller.id
@@ -617,17 +626,14 @@ private fun ListingDetailContent(
             .padding(horizontal = 16.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
+        // A held or rejected listing says so to its seller, with staff's reason.
+        if (currentUserId != null && currentUserId == seller.id) ModerationNotice(detail.listing)
         // Warnings (above the fold per spec).
         if (detail.warnings.isNotEmpty()) {
             WarningsSection(
                 warnings = detail.warnings,
                 modifier = Modifier.fillMaxWidth(),
             )
-        }
-
-        // Suspended/banned seller banner.
-        if (sellerSuspended) {
-            SellerStatusBanner(status = sellerStatus)
         }
 
         PhotoCarousel(
@@ -800,20 +806,18 @@ private fun ListingDetailContent(
                         }
                     }
 
-                    if (!isOwner) {
-                        PrimaryCta(
-                            pricing = listing.pricing,
-                            onClick = onPrimaryCta,
-                            enabled = !sellerSuspended,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                    }
+                    OfferActions(
+                        offer = offer,
+                        pricing = listing.pricing,
+                        onOffer = onOffer,
+                        modifier = Modifier.fillMaxWidth(),
+                    )
 
                     // Auction "Buy it now": when the seller set an instant-buy
                     // price, offer it alongside the bid CTA (mirrors web). A
                     // tap bids at the instant amount, which the server resolves
                     // as an instant win -> checkout.
-                    if (!isOwner && listing.pricing == PricingModel.AUCTION && auction != null && auction.instant > 0 && !sellerSuspended) {
+                    if (offer == Offer.Bid && auction != null && auction.instant > 0) {
                         MochiOutlinedButton(
                             onClick = onBuyNow,
                             modifier = Modifier.fillMaxWidth(),
@@ -825,23 +829,13 @@ private fun ListingDetailContent(
                                 modifier = Modifier.size(18.dp),
                             )
                             Spacer(Modifier.width(8.dp))
-                            // "Buy it now" is translated; the price is appended
-                            // as a formatted, language-neutral amount (web shows
-                            // the same "Buy it now — <price>").
                             Text(
-                                stringResource(R.string.market_listing_detail_buy_now_label) +
-                                    " — " + formatPrice(auction.instant, listing.currency ?: Currency.GBP)
+                                stringResource(
+                                    R.string.market_listing_detail_buy_now_price,
+                                    formatPrice(auction.instant, listing.currency ?: Currency.GBP),
+                                ),
                             )
                         }
-                    }
-
-                    if (!isOwner && sellerSuspended) {
-                        Text(
-                            text = stringResource(R.string.market_listing_detail_seller_suspended_cta_hint),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.fillMaxWidth(),
-                        )
                     }
 
                     // Message + save + report.
@@ -978,7 +972,10 @@ private fun ListingDetailContent(
                         )
                         if (sellerReviews > 0) {
                             Text(
-                                text = "($sellerReviews)",
+                                text = stringResource(
+                                    R.string.market_review_count,
+                                    LocalFormat.current.formatNumber(sellerReviews),
+                                ),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                             )
@@ -988,8 +985,9 @@ private fun ListingDetailContent(
 
                 if (sellerSales > 0) {
                     Text(
-                        text = stringResource(
-                            R.string.market_listing_detail_sales_count,
+                        text = pluralStringResource(
+                            R.plurals.market_listing_detail_sales_count,
+                            sellerSales,
                             LocalFormat.current.formatNumber(sellerSales),
                         ),
                         style = MaterialTheme.typography.bodySmall,
@@ -1005,9 +1003,11 @@ private fun ListingDetailContent(
                 text = stringResource(R.string.market_listing_detail_assets_heading),
                 style = MaterialTheme.typography.titleSmall,
             )
+            // Only someone who can take the files is offered them; anyone
+            // else sees what they are, as on the web.
             DigitalAssetsList(
                 assets = assets,
-                onDownload = onAssetDownload,
+                onDownload = if (downloadable) onAssetDownload else null,
             )
         }
 
@@ -1020,7 +1020,8 @@ private fun ListingDetailContent(
             AuctionBidHistory(
                 bids = bids,
                 fallbackCurrency = listing.currency ?: Currency.GBP,
-                endsAt = auction.closes,
+                endsAt = auction.closes.takeIf { auction.status == AuctionStatus.ACTIVE },
+                offset = offset,
             )
         }
 
@@ -1078,6 +1079,10 @@ private fun OwnerActions(
             OwnerAction(Icons.Outlined.Delete, R.string.market_listings_clear, onClear)
             OwnerAction(Icons.Outlined.Flag, R.string.market_listings_appeal, onAppeal)
         }
+        status == ListingStatus.HELD -> {
+            OwnerAction(Icons.Outlined.Flag, R.string.market_listings_appeal, onAppeal)
+            OwnerAction(Icons.Outlined.Delete, R.string.market_listings_remove_listing, onDelete)
+        }
         status == ListingStatus.REMOVED -> {
             OwnerAction(Icons.Outlined.Delete, R.string.market_listings_clear, onClear)
         }
@@ -1111,16 +1116,6 @@ private fun ConditionChip(condition: Condition) {
     DetailBadgeChip(
         label = conditionLabel(condition),
         containerColor = conditionBadgeColor(condition),
-        contentColor = Color.White,
-    )
-}
-
-/** Pricing chip — ListingCard's dark fill at the shared [DetailBadgeChip] size. */
-@Composable
-private fun PricingChip(label: String) {
-    DetailBadgeChip(
-        label = label,
-        containerColor = PricingFill,
         contentColor = Color.White,
     )
 }
@@ -1179,38 +1174,6 @@ private fun DetailBadgeChip(
 }
 
 @Composable
-private fun SellerStatusBanner(status: String) {
-    val message = stringResource(
-        if (status == "banned") R.string.market_listing_detail_seller_banned_banner
-        else R.string.market_listing_detail_seller_suspended_banner,
-    )
-    MochiCard(
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(10.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.errorContainer,
-            contentColor = MaterialTheme.colorScheme.onErrorContainer,
-        ),
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            modifier = Modifier.padding(12.dp),
-        ) {
-            Icon(
-                imageVector = Icons.Default.Warning,
-                contentDescription = null,
-            )
-            Text(
-                text = message,
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.weight(1f),
-            )
-        }
-    }
-}
-
-@Composable
 private fun AppealPendingPill() {
     StatusBadge(
         label = stringResource(R.string.market_listing_detail_appeal_pending),
@@ -1219,27 +1182,85 @@ private fun AppealPendingPill() {
     )
 }
 
+/**
+ * The page's own action for [offer]: Buy now (Complete purchase over the
+ * viewer's own checkout), Subscribe, Place bid, Complete purchase for a won
+ * auction, View your order, Manage subscription; or why there is none.
+ */
 @Composable
-private fun PrimaryCta(
+private fun OfferActions(
+    offer: Offer,
     pricing: PricingModel?,
-    onClick: () -> Unit,
-    enabled: Boolean = true,
+    onOffer: (Offer) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val labelRes = when (pricing) {
-        PricingModel.AUCTION -> R.string.market_listing_detail_place_bid
-        PricingModel.SUBSCRIPTION -> R.string.market_listing_detail_subscribe
-        PricingModel.PWYW -> R.string.market_listing_detail_buy
-        else -> R.string.market_listing_detail_buy_now
+    when (offer) {
+        is Offer.Buy -> OfferButton(
+            label = when {
+                offer.resume -> R.string.market_purchases_complete_purchase
+                pricing == PricingModel.PWYW -> R.string.market_listing_detail_buy
+                else -> R.string.market_listing_detail_buy_now
+            },
+            icon = Icons.Default.ShoppingCart,
+            onClick = { onOffer(offer) },
+            modifier = modifier,
+        )
+        Offer.Subscribe -> OfferButton(
+            label = R.string.market_listing_detail_subscribe,
+            onClick = { onOffer(offer) },
+            modifier = modifier,
+        )
+        Offer.Bid -> OfferButton(
+            label = R.string.market_listing_detail_place_bid,
+            onClick = { onOffer(offer) },
+            modifier = modifier,
+        )
+        Offer.Pay -> OfferButton(
+            label = R.string.market_purchases_complete_purchase,
+            icon = Icons.Default.ShoppingCart,
+            onClick = { onOffer(offer) },
+            modifier = modifier,
+        )
+        is Offer.Order -> MochiOutlinedButton(
+            onClick = { onOffer(offer) },
+            modifier = modifier,
+            shape = RoundedCornerShape(10.dp),
+        ) {
+            Text(stringResource(R.string.market_listing_detail_view_order))
+        }
+        Offer.Subscribed -> MochiOutlinedButton(
+            onClick = { onOffer(offer) },
+            modifier = modifier,
+            shape = RoundedCornerShape(10.dp),
+        ) {
+            Text(stringResource(R.string.market_listing_detail_manage_subscription))
+        }
+        is Offer.Opens -> Text(
+            text = stringResource(
+                R.string.market_listing_detail_opens,
+                LocalFormat.current.formatDateTime(offer.opens),
+            ),
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = modifier,
+        )
+        Offer.Ended -> Text(
+            text = stringResource(R.string.market_bid_ended),
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = modifier,
+        )
+        Offer.None -> Unit
     }
-    // A cart fits the buy-style CTAs; auction / subscription read better label-only.
-    val icon = when (pricing) {
-        PricingModel.AUCTION, PricingModel.SUBSCRIPTION -> null
-        else -> Icons.Default.ShoppingCart
-    }
+}
+
+@Composable
+private fun OfferButton(
+    label: Int,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    icon: ImageVector? = null,
+) {
     MochiButton(
         onClick = onClick,
-        enabled = enabled,
         shape = RoundedCornerShape(10.dp),
         modifier = modifier,
     ) {
@@ -1251,26 +1272,8 @@ private fun PrimaryCta(
             )
             Spacer(Modifier.width(8.dp))
         }
-        Text(stringResource(labelRes))
+        Text(stringResource(label))
     }
-}
-
-private fun shareListing(
-    context: android.content.Context,
-    listingId: Long,
-    listingTitle: String,
-) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_SUBJECT, listingTitle)
-        putExtra(Intent.EXTRA_TEXT, "mochi://market/listing/$listingId")
-    }
-    val chooser = Intent.createChooser(
-        intent,
-        context.getString(R.string.market_listings_share_chooser),
-    )
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
 }
 
 private fun parseTags(json: String): List<String> {

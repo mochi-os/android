@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Нататкі</string>
     <string name="staff_accounts_reason_label">Прычына</string>
     <string name="staff_accounts_reason_optional_label">Прычына (неабавязкова)</string>
-    <string name="staff_accounts_sales">%1$s продажаў</string>
     <string name="staff_accounts_search_clear">Ачысціць пошук</string>
     <string name="staff_accounts_search_placeholder">Пошук</string>
     <string name="staff_accounts_seller_buyers">Толькі пакупнікі</string>
@@ -440,4 +439,10 @@
     <string name="staff_reports_conversation">Размова</string>
     <string name="staff_reports_conversation_empty">Паведамленняў няма</string>
     <string name="staff_reports_conversation_show">Паказаць размову</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s продаж</item>
+        <item quantity="few">%1$s продажы</item>
+        <item quantity="many">%1$s продажаў</item>
+        <item quantity="other">%1$s продажу</item>
+    </plurals>
 </resources>

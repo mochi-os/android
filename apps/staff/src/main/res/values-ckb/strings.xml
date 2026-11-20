@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">تێبینییەکان</string>
     <string name="staff_accounts_reason_label">هۆکار</string>
     <string name="staff_accounts_reason_optional_label">هۆکار (ئاڵۆز)</string>
-    <string name="staff_accounts_sales">%1$s فرۆشتن</string>
     <string name="staff_accounts_search_clear">پاککردنەوەی گەڕان</string>
     <string name="staff_accounts_search_placeholder">گەڕان</string>
     <string name="staff_accounts_seller_buyers">تەنها کڕیاران</string>
@@ -440,4 +439,8 @@
     <string name="staff_reports_conversation">گفتوگۆ</string>
     <string name="staff_reports_conversation_empty">هیچ پەیامێک نییە</string>
     <string name="staff_reports_conversation_show">پیشاندانی گفتوگۆ</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s فرۆشتن</item>
+        <item quantity="other">%1$s فرۆشتن</item>
+    </plurals>
 </resources>

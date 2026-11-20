@@ -26,7 +26,6 @@
     <string name="market_bid_dialog_title">ประมูล</string>
     <string name="market_bid_ended">การประมูลสิ้นสุดแล้ว</string>
     <string name="market_bids_empty">ไม่มีการประมูล</string>
-    <string name="market_bids_ended">การประมูลสิ้นสุดแล้ว</string>
     <string name="market_bids_tab_active">ใช้งานอยู่</string>
     <string name="market_bids_tab_all">ทั้งหมด</string>
     <string name="market_bids_tab_lost">แพ้</string>
@@ -80,12 +79,9 @@
     <string name="market_condition_refurbished">ซ่อมแซมใหม่</string>
     <string name="market_condition_used">มือสอง</string>
     <string name="market_dispute_dialog_cancel">ยกเลิก</string>
-    <string name="market_dispute_dialog_evidence_role_buyer">ผู้ซื้อ</string>
-    <string name="market_dispute_dialog_evidence_role_seller">ผู้ขาย</string>
     <string name="market_dispute_dialog_failed">ไม่สามารถส่งการตอบกลับได้</string>
     <string name="market_dispute_dialog_response_label">การตอบกลับของคุณ</string>
     <string name="market_dispute_dialog_submit">ส่ง</string>
-    <string name="market_editor_appeal_submit">ส่งคำอุทธรณ์</string>
     <string name="market_editor_asset_external">URL ภายนอก</string>
     <string name="market_editor_asset_external_filename">ชื่อไฟล์</string>
     <string name="market_editor_back">ย้อนกลับ</string>
@@ -122,7 +118,6 @@
     <string name="market_editor_type_digital">ดิจิทัล</string>
     <string name="market_editor_type_physical">สินค้าจับต้องได้</string>
     <string name="market_editor_zone_cancel">ยกเลิก</string>
-    <string name="market_editor_zone_country_us">สหรัฐอเมริกา</string>
     <string name="market_editor_zone_region">ภูมิภาค</string>
     <string name="market_fee_preview_item">รายการ</string>
     <string name="market_fee_preview_payout">การจ่ายเงินของคุณ</string>
@@ -208,7 +203,6 @@
     <string name="market_purchase_item">รายการ</string>
     <string name="market_purchase_message_seller">ส่งข้อความถึงผู้ขาย</string>
     <string name="market_purchase_not_found">ไม่พบคำสั่งซื้อ</string>
-    <string name="market_purchase_order_label">คำสั่งซื้อ</string>
     <string name="market_purchase_purchased">ซื้อแล้ว</string>
     <string name="market_purchase_refunded">คืนเงินแล้ว</string>
     <string name="market_purchase_refunded_partial">คืนเงินแล้ว (บางส่วน)</string>
@@ -232,11 +226,7 @@
     <string name="market_refund_body">ระบุเหตุผลในการขอคืนเงิน</string>
     <string name="market_refund_details_label">รายละเอียด</string>
     <string name="market_refund_dialog_cancel">ยกเลิก</string>
-    <string name="market_refund_dialog_description_label">คำอธิบาย</string>
     <string name="market_refund_dialog_failed">ไม่สามารถออกการคืนเงินได้</string>
-    <string name="market_refund_dialog_reason_fraud">ฉ้อฉล</string>
-    <string name="market_refund_dialog_reason_label">เหตุผล</string>
-    <string name="market_refund_dialog_reason_other">อื่น ๆ</string>
     <string name="market_refund_dialog_submit">ออกการคืนเงิน</string>
     <string name="market_refund_dialog_title">ออกการคืนเงิน</string>
     <string name="market_refund_reason_damaged">เสียหาย</string>
@@ -284,7 +274,6 @@
     <string name="market_sale_tracking_label">หมายเลขติดตาม</string>
     <string name="market_saved_title">รายการที่บันทึก</string>
     <string name="market_search_clear">ล้างการค้นหา</string>
-    <string name="market_section_categories">เลือกดูหมวดหมู่</string>
     <string name="market_section_listings">ประกาศล่าสุด</string>
     <string name="market_ship_dialog_cancel">ยกเลิก</string>
     <string name="market_ship_dialog_submit">ยืนยัน</string>
@@ -340,8 +329,6 @@
     <string name="market_sale_review_response_submitting">กำลังส่ง…</string>
     <string name="market_checkout_subscribing">กำลังสมัครสมาชิก…</string>
     <string name="market_filter_remove">ลบตัวกรอง</string>
-    <string name="market_listing_detail_sales_count">%1$s รายการขาย</string>
-    <string name="market_profile_sales_count">%1$s รายการขาย</string>
     <string name="market_purchase_dispute_response">การตอบของผู้ขาย</string>
     <string name="market_purchases_order_label">คำสั่งซื้อ #%1$s</string>
 
@@ -363,7 +350,6 @@
     <string name="market_bid_dialog_no_bids_yet">ยังไม่มีการประมูล — ราคาเริ่มต้น %1$s</string>
     <string name="market_bid_dialog_submitting">กำลังวางการประมูล</string>
     <string name="market_bid_ends_in">สิ้นสุดใน %1$s</string>
-    <string name="market_bids_ends_in">สิ้นสุดใน %1$s</string>
     <string name="market_bids_your_bid">การประมูลของคุณ: %1$s</string>
     <string name="market_carousel_main">รูปภาพ %1$s จาก %2$s</string>
     <string name="market_carousel_thumbnail">ภาพย่อ %1$s</string>
@@ -373,14 +359,7 @@
     <string name="market_checkout_pwyw_label">ราคาของคุณ (ขั้นต่ำ %1$s)</string>
     <string name="market_checkout_shipping_zone">%1$s — %2$s</string>
     <string name="market_checkout_shipping_zone_with_days">%1$s — %2$s (%3$s)</string>
-    <string name="market_dispute_dialog_attach">แนบหลักฐาน</string>
-    <string name="market_dispute_dialog_attach_count">แนบไฟล์แล้ว %1$s ไฟล์</string>
-    <string name="market_dispute_dialog_evidence_role_staff">ทีมงาน Mochi</string>
-    <string name="market_dispute_dialog_evidence_section_title">หลักฐานที่ส่ง</string>
-    <string name="market_dispute_dialog_evidence_submitter_line">ส่งโดย %1$s</string>
     <string name="market_dispute_dialog_title">ตอบกลับข้อพิพาท</string>
-    <string name="market_editor_appeal">อุทธรณ์การพิจารณา</string>
-    <string name="market_editor_appeal_reason">เหตุใดคุณจึงต้องการยื่นอุทธรณ์?</string>
     <string name="market_editor_asset_add">เพิ่มไฟล์</string>
     <string name="market_editor_asset_delete">ลบสินทรัพย์</string>
     <string name="market_editor_asset_external_add">เพิ่มลิงก์ภายนอก</string>
@@ -388,13 +367,11 @@
     <string name="market_editor_asset_external_url">URL อ้างอิง</string>
     <string name="market_editor_assets_empty">ยังไม่มีสินทรัพย์</string>
     <string name="market_editor_category_none">เลือกหมวดหมู่</string>
-    <string name="market_editor_days">%1$s วัน</string>
     <string name="market_editor_delete">ลบรายการประกาศ</string>
     <string name="market_editor_delete_confirm_message">การดำเนินการนี้จะลบรายการประกาศอย่างถาวร</string>
     <string name="market_editor_delete_confirm_title">ลบประกาศ?</string>
     <string name="market_editor_download">ดาวน์โหลดโดยตรง</string>
     <string name="market_editor_duration">ระยะเวลาประมูล</string>
-    <string name="market_editor_instant">ราคาซื้อทันที (ไม่บังคับ)</string>
     <string name="market_editor_instant_help">ตั้งค่าเป็น 0 เพื่อปิดใช้งาน</string>
     <string name="market_editor_interval">รอบการเรียกเก็บเงิน</string>
     <string name="market_editor_photos_add">เพิ่มรูปภาพ</string>
@@ -413,32 +390,18 @@
     <string name="market_editor_title_required">ป้อนชื่อก่อนเพิ่มรูปภาพหรือไฟล์</string>
     <string name="market_editor_type">วิธีการจัดส่ง</string>
     <string name="market_editor_zone_add">เพิ่มเขต</string>
-    <string name="market_editor_zone_country_au">ออสเตรเลีย</string>
-    <string name="market_editor_zone_country_ca">แคนาดา</string>
-    <string name="market_editor_zone_country_de">เยอรมนี</string>
-    <string name="market_editor_zone_country_es">สเปน</string>
-    <string name="market_editor_zone_country_fr">ฝรั่งเศส</string>
-    <string name="market_editor_zone_country_gb">สหราชอาณาจักร</string>
-    <string name="market_editor_zone_country_it">อิตาลี</string>
-    <string name="market_editor_zone_country_jp">ญี่ปุ่น</string>
-    <string name="market_editor_zone_country_nl">เนเธอร์แลนด์</string>
     <string name="market_editor_zone_days">ระยะเวลาจัดส่งโดยประมาณ</string>
     <string name="market_editor_zone_days_placeholder">เช่น 3-5 วันทำการ</string>
     <string name="market_editor_zone_delete">ลบเขต</string>
     <string name="market_editor_zone_edit">แก้ไขเขต</string>
-    <string name="market_editor_zone_european_union">สหภาพยุโรป</string>
     <string name="market_editor_zone_notes">หมายเหตุ (ไม่บังคับ)</string>
     <string name="market_editor_zone_price">ค่าจัดส่ง</string>
     <string name="market_editor_zone_save">บันทึกเขต</string>
-    <string name="market_editor_zone_worldwide">ทั่วโลก</string>
     <string name="market_editor_zones_empty">ยังไม่มีเขต</string>
     <string name="market_empty_subtitle">ลองปรับหรือล้างตัวกรองของคุณ</string>
     <string name="market_empty_title">ไม่พบผลลัพธ์</string>
     <string name="market_fee_disclosure_body">ค่าธรรมเนียมแพลตฟอร์ม: %1$s%% ดูค่าธรรมเนียมตัวประมวลผลได้ที่แดชบอร์ด Stripe ของคุณ</string>
     <string name="market_fee_disclosure_title">ค่าธรรมเนียมแพลตฟอร์ม</string>
-    <string name="market_fee_preview_failed">ไม่สามารถคำนวณค่าธรรมเนียมได้</string>
-    <string name="market_fee_preview_loading">กำลังคำนวณค่าธรรมเนียม…</string>
-    <string name="market_fee_preview_mochi_fee">ค่าธรรมเนียม Mochi</string>
     <string name="market_filter_chip_max">สูงสุด %1$s</string>
     <string name="market_filter_chip_min">ต่ำสุด %1$s</string>
     <string name="market_filter_open">ตัวกรอง</string>
@@ -446,10 +409,6 @@
     <string name="market_filter_title">ตัวกรอง</string>
     <string name="market_listing_detail_appeal_pending">การอุทธรณ์รอดำเนินการ</string>
     <string name="market_listing_detail_buy">ซื้อ</string>
-    <string name="market_listing_detail_relist_failed">ไม่สามารถลงรายการใหม่ได้</string>
-    <string name="market_listing_detail_seller_banned_banner">ผู้ขายรายนี้ถูกแบน ไม่สามารถสั่งซื้อใหม่ได้</string>
-    <string name="market_listing_detail_seller_suspended_banner">ผู้ขายรายนี้ถูกระงับ การสั่งซื้อใหม่จะหยุดชั่วคราวจนกว่าบัญชีจะได้รับการคืนสถานะ</string>
-    <string name="market_listing_detail_seller_suspended_cta_hint">การซื้อถูกปิดใช้งานขณะที่บัญชีของผู้ขายถูกจำกัด</string>
     <string name="market_listing_no_photo">ไม่มีรูปภาพ</string>
     <string name="market_listing_photo">รูปภาพรายการ</string>
     <string name="market_listing_save">บันทึกรายการ</string>
@@ -461,7 +420,6 @@
     <string name="market_listings_load_failed">โหลดรายการของคุณไม่สำเร็จ</string>
     <string name="market_listings_new">ประกาศใหม่</string>
     <string name="market_listings_search_placeholder">ค้นหารายการของคุณ</string>
-    <string name="market_listings_share_chooser">แชร์รายการ</string>
     <string name="market_messages_compose_placeholder">เขียนข้อความ</string>
     <string name="market_messages_inbox_empty_subtitle">เมื่อคุณส่งข้อความถึงผู้ขาย (หรือผู้ซื้อส่งข้อความถึงคุณ) การสนทนาจะปรากฏที่นี่</string>
     <string name="market_messages_inbox_empty_title">ยังไม่มีการสนทนา</string>
@@ -478,21 +436,10 @@
     <string name="market_profile_no_reviews">ยังไม่มีรีวิว</string>
     <string name="market_purchase_dispute_chargeback">การปฏิเสธการชำระเงิน %1$s</string>
     <string name="market_purchase_dispute_chargeback_body">ธนาคารของคุณได้ยื่นการปฏิเสธการชำระเงินสำหรับคำสั่งซื้อนี้ Stripe กำลังจัดการข้อพิพาทกับผู้ขาย ผลลัพธ์จะปรากฏที่นี่เมื่อมีการตัดสิน</string>
-    <string name="market_purchase_download_many">ดาวน์โหลดไฟล์ของคุณ %1$s ไฟล์ด้านล่าง</string>
-    <string name="market_purchase_download_one">ดาวน์โหลดไฟล์ของคุณด้านล่าง</string>
     <string name="market_purchase_review_from">รีวิวจาก %1$s</string>
-    <string name="market_purchases_auction_label">การประมูล #%1$s</string>
     <string name="market_purchases_refunded_partial">คืนเงิน −%1$s</string>
     <string name="market_purchases_won_for">ชนะที่ %1$s</string>
-    <string name="market_rating_reviews">(%1$s รีวิว)</string>
-    <string name="market_refund_dialog_amount_help">เว้นว่างไว้เพื่อคืนเงินเต็มจำนวนของคำสั่งซื้อ</string>
     <string name="market_refund_dialog_amount_label">จำนวนเงิน</string>
-    <string name="market_refund_dialog_prior_kind_full">เต็มจำนวน</string>
-    <string name="market_refund_dialog_prior_kind_partial">บางส่วน</string>
-    <string name="market_refund_dialog_prior_section_title">การคืนเงินก่อนหน้า</string>
-    <string name="market_refund_dialog_prior_title">การคืนเงินก่อนหน้า</string>
-    <string name="market_refund_dialog_reason_duplicate">ซ้ำซ้อน</string>
-    <string name="market_refund_dialog_reason_requested">ผู้ซื้อร้องขอ</string>
     <string name="market_refund_dialog_submitting">กำลังคืนเงิน…</string>
     <string name="market_report_dialog_details_label">รายละเอียด (ไม่บังคับ)</string>
     <string name="market_report_dialog_submitting">กำลังส่ง</string>
@@ -524,7 +471,6 @@
     <string name="market_stripe_onboarding_failed">ไม่สามารถเปิด Stripe ได้</string>
     <string name="market_stripe_onboarding_opening">กำลังเปิด Stripe…</string>
     <string name="market_stripe_onboarding_title">ตั้งค่าการชำระเงินให้เสร็จสมบูรณ์</string>
-    <string name="market_subscribers_cancels_on">ยกเลิกในวันที่ %1$s</string>
     <string name="market_subscribers_empty_subtitle">ผู้สมัครสมาชิกรายการของคุณจะแสดงที่นี่</string>
     <string name="market_subscribers_empty_title">ยังไม่มีผู้สมัครสมาชิก</string>
     <string name="market_subscribers_title">ผู้สมัครสมาชิกของฉัน</string>
@@ -532,7 +478,6 @@
     <string name="market_subscriptions_cancels_on">ยกเลิกในวันที่ %1$s</string>
     <string name="market_warnings_title">คำเตือน</string>
 
-    <string name="market_account_address_desc">กรอกข้อมูลล่วงหน้าในการชำระเงินครั้งถัดไปเมื่อเพิ่มการเชื่อมต่อการชำระเงินแล้ว</string>
     <string name="market_account_address_title">ที่อยู่จัดส่งเริ่มต้น</string>
     <string name="market_account_business_desc">ใช้สำหรับใบแจ้งหนี้และการปฏิบัติตามภาษี ไม่แสดงบนโปรไฟล์สาธารณะของคุณ</string>
     <string name="market_account_business_switch">ฉันขายในนามธุรกิจ</string>
@@ -594,7 +539,6 @@
     <string name="market_editor_start_time_help">เว้นว่างเพื่อเริ่มต้นเมื่อเผยแพร่</string>
     <string name="market_editor_start_time_next">ถัดไป</string>
     <string name="market_editor_start_time_clear">ล้าง</string>
-    <string name="market_listing_detail_buy_now_label">ซื้อเลย</string>
     <string name="market_section_recently_viewed">ดูล่าสุด</string>
     <string name="market_recently_viewed_clear">ล้างทั้งหมด</string>
     <string name="market_listings_create">สร้าง</string>
@@ -603,7 +547,6 @@
     <string name="market_listing_checkout_in_progress">คุณมีการชำระเงินที่กำลังดำเนินการสำหรับรายการนี้</string>
     <string name="market_listing_checkout_cancel">ยกเลิกการชำระเงิน</string>
     <string name="market_listing_checkout_cancelled">ยกเลิกการชำระเงินแล้ว</string>
-    <string name="market_listing_checkout_cancel_failed">ไม่สามารถยกเลิกการชำระเงินได้</string>
     <string name="market_account_stripe_connected">เชื่อมต่อ Stripe แล้ว</string>
     <string name="market_audit_account_banned">ถูกแบน</string>
     <string name="market_audit_account_seller_activated">เปิดใช้งานผู้ขายแล้ว</string>
@@ -686,4 +629,67 @@
     <string name="market_sale_chargeback_fee_refunded">(คืนเงินแล้ว)</string>
     <string name="market_messages_report">รายงานการสนทนานี้</string>
     <string name="market_report_conversation_title">รายงานการสนทนา</string>
+    <string name="market_audit_auction_cancelled">ยกเลิกการประมูลแล้ว</string>
+    <string name="market_dispute_status_open">เปิด</string>
+    <string name="market_dispute_status_responded">ตอบกลับแล้ว</string>
+    <string name="market_dispute_status_resolved_buyer">แก้ไขแล้ว (ผู้ซื้อ)</string>
+    <string name="market_dispute_status_resolved_seller">แก้ไขแล้ว (ผู้ขาย)</string>
+    <string name="market_editor_move_down">เลื่อนลง</string>
+    <string name="market_editor_move_up">เลื่อนขึ้น</string>
+    <string name="market_review_count">(%1$s)</string>
+    <string name="market_status_unknown">ไม่ทราบ</string>
+    <string name="market_account_stripe_pending">Stripe เชื่อมต่อแล้ว แต่ Stripe ต้องการข้อมูลเพิ่มเติมก่อนที่คุณจะสามารถรับการชำระเงินได้</string>
+    <string name="market_editor_instant_below_start">ราคาซื้อทันทีต้องสูงกว่าราคาเริ่มต้น</string>
+    <string name="market_editor_reserve_above_instant">ราคาขั้นต่ำต้องไม่เกินราคาซื้อทันที</string>
+    <string name="market_editor_reserve_below_start">ราคาขั้นต่ำต้องสูงกว่าราคาเริ่มต้น</string>
+    <string name="market_editor_starting_bid">ราคาเริ่มต้น</string>
+    <string name="market_listing_detail_buy_now_price">ซื้อตอนนี้ — %1$s</string>
+    <string name="market_listing_detail_manage_subscription">จัดการการสมัครสมาชิก</string>
+    <string name="market_listing_detail_view_order">ดูคำสั่งซื้อของคุณ</string>
+    <string name="market_listing_held_title">ประกาศนี้ถูกระงับไว้รอการตรวจสอบ</string>
+    <string name="market_listing_rejected_title">ประกาศนี้ถูกปฏิเสธ</string>
+    <string name="market_listing_untitled">รายการไม่มีชื่อ</string>
+    <string name="market_listings_status_held">รอการตรวจสอบ</string>
+    <string name="market_refund_dialog_amount_remaining">เว้นว่างเพื่อคืนเงินทั้งหมดที่เหลือ %1$s</string>
+    <string name="market_fee_preview_auction">Mochi รับ %1$s%% ของราคาประมูลที่ชนะสุดท้าย ค่าธรรมเนียมการประมวลผลของ Stripe หักจากส่วนที่เหลือ</string>
+    <string name="market_fee_preview_sale">Mochi รับ %1$s%% ของแต่ละการขาย ค่าธรรมเนียมการประมวลผลของ Stripe หักจากส่วนที่เหลือ</string>
+    <string name="market_checkout_auction_unavailable">เฉพาะผู้ชนะการประมูลเท่านั้นที่ชำระเงินสำหรับการประมูลนี้ได้ หลังจากการประมูลสิ้นสุดลง</string>
+    <string name="market_editor_instant">ราคาซื้อทันที (ไม่บังคับ)</string>
+    <string name="market_fee_preview_fee">ค่าธรรมเนียม Mochi (%1$s%%)</string>
+    <string name="market_fee_preview_payout_minimum">การจ่ายเงินของคุณ (ขั้นต่ำ)</string>
+    <string name="market_fee_preview_payout_period">การจ่ายเงินของคุณต่อรอบ</string>
+    <string name="market_listing_detail_opens">เปิดให้ประมูล %1$s</string>
+    <string name="market_price_reserve_met">ถึงราคาขั้นต่ำแล้ว</string>
+    <string name="market_price_reserve_unmet">ยังไม่ถึงราคาขั้นต่ำ</string>
+    <string name="market_refund_dialog_amount_invalid">ป้อนจำนวนเงินระหว่าง %1$s ถึง %2$s</string>
+    <string name="market_refund_dialog_prior">การคืนเงินก่อนหน้า: %1$s</string>
+    <plurals name="market_editor_days">
+        <item quantity="other">%1$s วัน</item>
+    </plurals>
+    <plurals name="market_listing_detail_sales_count">
+        <item quantity="other">%1$s รายการขาย</item>
+    </plurals>
+    <plurals name="market_profile_sales_count">
+        <item quantity="other">%1$s รายการขาย</item>
+    </plurals>
+    <plurals name="market_purchase_download">
+        <item quantity="other">ดาวน์โหลดไฟล์ %1$s ไฟล์ของคุณด้านล่าง</item>
+    </plurals>
+    <plurals name="market_rating_reviews">
+        <item quantity="other">(%1$s รีวิว)</item>
+    </plurals>
+    <string name="market_region_africa">แอฟริกา</string>
+    <string name="market_region_asia">เอเชีย</string>
+    <string name="market_region_asia_pacific">เอเชียแปซิฟิก</string>
+    <string name="market_region_eea">เขตเศรษฐกิจยุโรป</string>
+    <string name="market_region_eu">สหภาพยุโรป</string>
+    <string name="market_region_europe">ยุโรป</string>
+    <string name="market_region_latin_america">ละตินอเมริกา</string>
+    <string name="market_region_middle_east">ตะวันออกกลาง</string>
+    <string name="market_region_north_america">อเมริกาเหนือ</string>
+    <string name="market_region_oceania">โอเชียเนีย</string>
+    <string name="market_region_south_america">อเมริกาใต้</string>
+    <string name="market_region_world">ทั่วโลก</string>
+    <string name="market_audit_order_staff_read">เจ้าหน้าที่ดูแล้ว</string>
+    <string name="market_audit_other">กิจกรรมอื่น ๆ</string>
 </resources>

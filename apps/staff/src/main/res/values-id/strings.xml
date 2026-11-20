@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Catatan</string>
     <string name="staff_accounts_reason_label">Alasan</string>
     <string name="staff_accounts_reason_optional_label">Alasan (opsional)</string>
-    <string name="staff_accounts_sales">%1$s penjualan</string>
     <string name="staff_accounts_search_clear">Bersihkan pencarian</string>
     <string name="staff_accounts_search_placeholder">Cari</string>
     <string name="staff_accounts_seller_buyers">Khusus pembeli</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">Percakapan</string>
     <string name="staff_reports_conversation_empty">Tidak ada pesan</string>
     <string name="staff_reports_conversation_show">Tampilkan percakapan</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s penjualan</item>
+    </plurals>
 </resources>

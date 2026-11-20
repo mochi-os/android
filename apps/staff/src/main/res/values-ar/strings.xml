@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">ملاحظات</string>
     <string name="staff_accounts_reason_label">السبب</string>
     <string name="staff_accounts_reason_optional_label">السبب (اختياري)</string>
-    <string name="staff_accounts_sales">%1$s مبيعات</string>
     <string name="staff_accounts_search_clear">مسح البحث</string>
     <string name="staff_accounts_search_placeholder">بحث</string>
     <string name="staff_accounts_seller_buyers">المشترون فقط</string>
@@ -438,4 +437,12 @@
     <string name="staff_reports_conversation">المحادثة</string>
     <string name="staff_reports_conversation_empty">لا توجد رسائل</string>
     <string name="staff_reports_conversation_show">عرض المحادثة</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="zero">%1$s عملية بيع</item>
+        <item quantity="one">%1$s عملية بيع</item>
+        <item quantity="two">%1$s عملية بيع</item>
+        <item quantity="few">%1$s عمليات بيع</item>
+        <item quantity="many">%1$s عملية بيع</item>
+        <item quantity="other">%1$s عملية بيع</item>
+    </plurals>
 </resources>

@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Нотатки</string>
     <string name="staff_accounts_reason_label">Причина</string>
     <string name="staff_accounts_reason_optional_label">Причина (необов\'язково)</string>
-    <string name="staff_accounts_sales">Продажів: %1$s</string>
     <string name="staff_accounts_search_clear">Очистити пошук</string>
     <string name="staff_accounts_search_placeholder">Пошук</string>
     <string name="staff_accounts_seller_buyers">Лише покупці</string>
@@ -438,4 +437,10 @@
     <string name="staff_reports_conversation">Розмова</string>
     <string name="staff_reports_conversation_empty">Немає повідомлень</string>
     <string name="staff_reports_conversation_show">Показати розмову</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s продаж</item>
+        <item quantity="few">%1$s продажі</item>
+        <item quantity="many">%1$s продажів</item>
+        <item quantity="other">%1$s продажу</item>
+    </plurals>
 </resources>

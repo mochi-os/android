@@ -21,7 +21,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
@@ -33,12 +32,10 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -46,7 +43,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
@@ -55,7 +51,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
@@ -66,6 +61,8 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
+import org.mochios.market.ui.components.RegionField
+import org.mochios.market.ui.components.rememberCountryChoices
 import org.mochios.market.navigation.MarketApp
 import org.mochios.android.i18n.LocalFormat
 
@@ -189,6 +186,7 @@ fun AccountSettingsScreen(
                         region = state.addressRegionDraft,
                         postcode = state.addressPostcodeDraft,
                         country = state.addressCountryDraft,
+                        countries = rememberCountryChoices(state.regions),
                         onNameChange = viewModel::updateAddressName,
                         onLine1Change = viewModel::updateAddressLine1,
                         onLine2Change = viewModel::updateAddressLine2,
@@ -202,7 +200,6 @@ fun AccountSettingsScreen(
                         StripeCard(
                             chargesEnabled = state.stripeStatus?.chargesEnabled,
                             payoutsEnabled = state.stripeStatus?.payoutsEnabled,
-                            testMode = account.stripeTestmode,
                             isLoading = state.stripeStatusLoading,
                             onDashboard = {
                                 val url = if (account.stripeTestmode) {
@@ -290,21 +287,6 @@ private fun SuspensionWarning(status: String, reason: String) {
         }
     }
 }
-
-/** Default platform fee % shown before the live fees endpoint resolves. */
-private const val DEFAULT_PLATFORM_FEE = 5.0
-
-private val SellerGreen = Color(0xFF16A34A)
-private val SellerGreenBg = Color(0xFFF0FDF4)
-private val SellerGreenBorder = Color(0xFFBBF7D0)
-private val FeesBg = Color(0xFFFEF6E7)
-private val FeesBorder = Color(0xFFFDE68A)
-
-// The step/fees boxes use fixed light fills in both themes, so their text must
-// use fixed dark colours — theme onSurface/onSurfaceVariant turn white in dark
-// mode and disappear against the light fills.
-private val OnPastelText = Color(0xFF1F2937)
-private val OnPastelSubtext = Color(0xFF6B7280)
 
 /** White card holding the editable profile fields (biography + location). */
 @Composable
@@ -520,7 +502,6 @@ private fun BusinessDetailsSection(
 private fun StripeCard(
     chargesEnabled: Boolean?,
     payoutsEnabled: Boolean?,
-    @Suppress("UNUSED_PARAMETER") testMode: Boolean,
     isLoading: Boolean,
     onDashboard: () -> Unit,
     onRefresh: () -> Unit,
@@ -601,6 +582,7 @@ private fun ShippingAddressSection(
     region: String,
     postcode: String,
     country: String,
+    countries: List<String>,
     onNameChange: (String) -> Unit,
     onLine1Change: (String) -> Unit,
     onLine2Change: (String) -> Unit,
@@ -617,11 +599,6 @@ private fun ShippingAddressSection(
             text = stringResource(R.string.market_account_address_title),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold,
-        )
-        Text(
-            text = stringResource(R.string.market_account_address_desc),
-            style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         MochiTextField(
             value = name,
@@ -665,11 +642,11 @@ private fun ShippingAddressSection(
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
         )
-        MochiTextField(
+        RegionField(
             value = country,
-            onValueChange = onCountryChange,
-            label = { Text(stringResource(R.string.market_checkout_address_country)) },
-            singleLine = true,
+            choices = countries,
+            label = stringResource(R.string.market_checkout_address_country),
+            onChange = onCountryChange,
             modifier = Modifier.fillMaxWidth(),
         )
     }

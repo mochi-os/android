@@ -390,7 +390,6 @@
     <string name="staff_accounts_action_unban_title">Jark\'aqäwi apaqaña</string>
     <string name="staff_accounts_action_unsuspend_title">Sayt\'ayäwi apaqaña</string>
     <string name="staff_accounts_reason_optional_label">Layku (opcional)</string>
-    <string name="staff_accounts_sales">%1$s aljäwinaka</string>
     <string name="staff_appeals_reason_label">Aljirin apelación laykupa</string>
     <string name="staff_audit_action_auction_cancelled">Subasta jaytatawa</string>
     <string name="staff_audit_action_staff_team_role_changed">Irnaqirin rolapax mayjt\'ayata</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">Parlawi</string>
     <string name="staff_reports_conversation_empty">Jan mensajenak</string>
     <string name="staff_reports_conversation_show">Parlawi uñacht\'ayaña</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s aljäwinaka</item>
+    </plurals>
 </resources>

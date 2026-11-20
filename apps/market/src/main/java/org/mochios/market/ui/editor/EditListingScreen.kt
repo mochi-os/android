@@ -74,11 +74,10 @@ import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.PlacePicker
 import org.mochios.market.R
-import org.mochios.market.lib.formatPrice
+import org.mochios.market.ui.components.rememberRegionChoices
 import org.mochios.market.lib.toMinorUnits
 import org.mochios.market.model.Category
 import org.mochios.market.model.Condition
-import org.mochios.market.model.Currency
 import org.mochios.market.model.ListingType
 import org.mochios.market.model.PricingModel
 
@@ -114,7 +113,8 @@ fun EditListingScreen(
 
     var showDeleteConfirm by remember { mutableStateOf(false) }
     var assetToDelete by remember { mutableStateOf<String?>(null) }
-    var showAppealDialog by remember { mutableStateOf(false) }
+    val regionChoices = rememberRegionChoices(state.regions)
+    val (reserveProblem, instantProblem) = auctionProblems(state)
 
     Scaffold(
         snackbarHost = { SnackbarHost(snackbar) },
@@ -240,6 +240,9 @@ fun EditListingScreen(
                     reserveText = state.reserveText,
                     instantText = state.instantText,
                     opensAt = state.opensAt,
+                    minimum = minimumCharge(state),
+                    reserveProblem = reserveProblem,
+                    instantProblem = instantProblem,
                     onPricingChange = viewModel::setPricing,
                     onCurrencyChange = viewModel::setCurrency,
                     onPriceChange = viewModel::setPriceText,
@@ -305,6 +308,14 @@ fun EditListingScreen(
                         onChange = viewModel::setDownload,
                     )
                 }
+                Spacer(Modifier.padding(top = 8.dp))
+                MochiTextField(
+                    value = state.information,
+                    onValueChange = viewModel::setInformation,
+                    label = { Text(stringResource(R.string.market_listing_detail_information_heading)) },
+                    minLines = 2,
+                    modifier = Modifier.fillMaxWidth(),
+                )
             }
 
             // ---- Shipping zones (conditional) ----
@@ -313,6 +324,7 @@ fun EditListingScreen(
                     ShippingZonesEditor(
                         zones = state.zones,
                         currency = state.currency,
+                        choices = regionChoices,
                         onChange = viewModel::saveZones,
                     )
                 }
@@ -342,16 +354,18 @@ fun EditListingScreen(
                 )
             }
 
-            // ---- Fee preview (only when price > 0) ----
-            val priceMinor = remember(state.priceText, state.currency) {
-                toMinorUnits(state.priceText, state.currency)
-            }
-            if (priceMinor > 0L) {
+            // ---- Fee preview, from the fee terms the editor read ----
+            val fees = state.fees
+            if (fees != null) {
+                val priceMinor = remember(state.priceText, state.currency) {
+                    toMinorUnits(state.priceText, state.currency)
+                }
                 EditorSection(title = stringResource(R.string.market_editor_section_fee_preview)) {
                     FeePreview(
                         price = priceMinor,
                         currency = state.currency,
-                        pricingModel = state.pricing,
+                        pricing = state.pricing,
+                        percent = fees.platform,
                     )
                 }
             }
@@ -362,7 +376,9 @@ fun EditListingScreen(
                 onClick = { viewModel.publish() },
                 enabled = state.publishStatus != SaveStatus.SAVING &&
                     state.title.isNotBlank() &&
-                    !priceBelowStripeMinimum(state),
+                    !priceBelowStripeMinimum(state) &&
+                    reserveProblem == null &&
+                    instantProblem == null,
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 if (state.publishStatus == SaveStatus.SAVING) {
@@ -388,12 +404,6 @@ fun EditListingScreen(
                     )
                     Spacer(Modifier.width(6.dp))
                     Text(stringResource(R.string.market_editor_delete))
-                }
-                MochiOutlinedButton(
-                    onClick = { showAppealDialog = true },
-                    modifier = Modifier.fillMaxWidth(),
-                ) {
-                    Text(stringResource(R.string.market_editor_appeal))
                 }
             }
             Spacer(Modifier.padding(top = 24.dp))
@@ -430,30 +440,6 @@ fun EditListingScreen(
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
             dismissEnabled = !state.isDeletingAsset,
-        )
-    }
-
-    if (showAppealDialog) {
-        var reason by remember { mutableStateOf("") }
-        MochiAlertDialog(
-            onDismissRequest = { showAppealDialog = false },
-            title = stringResource(R.string.market_editor_appeal),
-            content = {
-                MochiTextField(
-                    value = reason,
-                    onValueChange = { reason = it },
-                    label = { Text(stringResource(R.string.market_editor_appeal_reason)) },
-                    minLines = 3,
-                    modifier = Modifier.fillMaxWidth(),
-                )
-            },
-            confirmText = stringResource(R.string.market_editor_appeal_submit),
-            onConfirm = {
-                viewModel.appeal(reason)
-                showAppealDialog = false
-            },
-            confirmEnabled = reason.isNotBlank(),
-            dismissText = stringResource(R.string.market_editor_zone_cancel),
         )
     }
 }
@@ -670,27 +656,6 @@ private fun StripeOnboardingBanner() {
             )
         }
     }
-}
-
-/**
- * Local placeholder; the shared [org.mochios.market.ui.components.FeePreview]
- * needs a repository this screen does not wire.
- */
-@Composable
-private fun FeePreview(
-    price: Long,
-    currency: Currency,
-    pricingModel: PricingModel,
-) {
-    Text(
-        text = formatPrice(price, currency),
-        style = MaterialTheme.typography.bodyMedium,
-    )
-    Text(
-        text = pricingModel.name.lowercase(),
-        style = MaterialTheme.typography.bodySmall,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-    )
 }
 
 private fun parseLocationToPlace(json: String): PlaceData? {

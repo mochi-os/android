@@ -22,12 +22,15 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -39,6 +42,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.navigation.NavController
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -47,13 +51,15 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.market.R
 import org.mochios.market.ui.components.MarketLayout
-import org.mochios.market.model.Category
 import org.mochios.market.model.Listing
 import org.mochios.market.navigation.MarketApp
-import org.mochios.market.repository.MarketRepository
 import org.mochios.market.repository.SavedRepository
 import javax.inject.Inject
 
@@ -75,6 +81,11 @@ fun SavedListingsScreen(
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         }
     }
+    // A change the server refused, in its own words.
+    val snackbar = remember { SnackbarHostState() }
+    LaunchedEffect(Unit) {
+        viewModel.failures.collect { failure -> snackbar.showSnackbar(failure.userMessage()) }
+    }
     MarketLayout(
         navController = navController,
         currentRoute = MarketApp.SAVED,
@@ -89,11 +100,16 @@ fun SavedListingsScreen(
                 }
             }
         },
+        snackbarHost = { SnackbarHost(snackbar) },
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
                 state.isLoading && state.listings.isEmpty() -> CircularProgressIndicator(
                     modifier = Modifier.align(Alignment.Center),
+                )
+                state.error != null && state.listings.isEmpty() -> ErrorState(
+                    error = state.error!!,
+                    onRetry = viewModel::refresh,
                 )
                 state.listings.isEmpty() -> org.mochios.android.ui.components.EmptyState(
                     icon = Icons.Default.BookmarkBorder,
@@ -110,8 +126,6 @@ fun SavedListingsScreen(
                     items(state.listings, key = { it.id }) { listing ->
                         org.mochios.market.ui.components.ListingCard(
                             listing = listing,
-                            category = state.categories
-                                .firstOrNull { it.id == listing.category }?.name,
                             saved = true,
                             onClick = {
                                 navController.navigate(
@@ -130,12 +144,12 @@ fun SavedListingsScreen(
 data class SavedListingsUiState(
     val isLoading: Boolean = true,
     val listings: List<Listing> = emptyList(),
-    val categories: List<Category> = emptyList(),
+    /** Why the saved listings could not be read, while none is held. */
+    val error: MochiError? = null,
 )
 
 @HiltViewModel
 class SavedListingsViewModel @Inject constructor(
-    private val repo: MarketRepository,
     private val savedRepository: SavedRepository,
 ) : ViewModel() {
 
@@ -155,26 +169,25 @@ class SavedListingsViewModel @Inject constructor(
     private val _saveEvents = MutableSharedFlow<Boolean>(extraBufferCapacity = 4)
     val saveEvents: SharedFlow<Boolean> = _saveEvents.asSharedFlow()
 
+    /** Changes the server refused, for the screen's snackbar. */
+    private val _failures = MutableSharedFlow<MochiError>(extraBufferCapacity = 4)
+    val failures: SharedFlow<MochiError> = _failures.asSharedFlow()
+
     init {
         observe()
-        loadCategories()
         refresh()
     }
 
-    private fun loadCategories() {
-        viewModelScope.launch {
-            try {
-                val categories = repo.listCategories()
-                internalState.value = internalState.value.copy(categories = categories)
-            } catch (_: Exception) {
-                // Categories are non-critical; cards just omit the chip.
-            }
-        }
-    }
-
+    /** Remove every saved listing; a refusal puts them back and says why. */
     fun clearAll() {
         viewModelScope.launch {
-            runCatching { savedRepository.clear() }
+            try {
+                savedRepository.clear()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _failures.emit(e.toMochiError())
+            }
         }
     }
 
@@ -183,8 +196,11 @@ class SavedListingsViewModel @Inject constructor(
             try {
                 val nowSaved = savedRepository.toggle(listing)
                 _saveEvents.emit(nowSaved)
-            } catch (_: Exception) {
-                // Optimistic update already reverted; nothing to surface.
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // The optimistic change has been undone; say why.
+                _failures.emit(e.toMochiError())
             }
         }
     }
@@ -199,11 +215,11 @@ class SavedListingsViewModel @Inject constructor(
     }
 
     /** Pull the latest saved set from the server, toggling the load spinner. */
-    private fun refresh() {
+    fun refresh() {
         viewModelScope.launch {
-            internalState.value = internalState.value.copy(isLoading = true)
-            runCatching { savedRepository.refresh() }
-            internalState.value = internalState.value.copy(isLoading = false)
+            internalState.value = internalState.value.copy(isLoading = true, error = null)
+            val failure = savedRepository.refresh()
+            internalState.value = internalState.value.copy(isLoading = false, error = failure)
         }
     }
 }

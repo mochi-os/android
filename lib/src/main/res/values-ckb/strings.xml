@@ -341,4 +341,7 @@
         <item quantity="other">+%1$s وەڵامی زیاتر</item>
     </plurals>
     <string name="drawer_unread">نەخوێندراوە</string>
+    <string name="person_unknown">نەناسراو</string>
+    <string name="format_time_seconds_short">%1$sچ</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

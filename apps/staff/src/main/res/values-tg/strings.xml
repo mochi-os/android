@@ -20,7 +20,6 @@
     <string name="staff_accounts_notes_label">Қайдҳо</string>
     <string name="staff_accounts_reason_label">Сабаб</string>
     <string name="staff_accounts_reason_optional_label">Сабаб (ихтиёрӣ)</string>
-    <string name="staff_accounts_sales">%1$s фурӯш</string>
     <string name="staff_accounts_search_clear">Тоза кардани ҷустуҷӯ</string>
     <string name="staff_accounts_search_placeholder">Ҷустуҷӯ</string>
     <string name="staff_accounts_seller_buyers">Танҳо харидорон</string>
@@ -440,4 +439,7 @@
     <string name="staff_reports_conversation">Сӯҳбат</string>
     <string name="staff_reports_conversation_empty">Ягон паём нест</string>
     <string name="staff_reports_conversation_show">Нишон додани сӯҳбат</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s фурӯш</item>
+    </plurals>
 </resources>

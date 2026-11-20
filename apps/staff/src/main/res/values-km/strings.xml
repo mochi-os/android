@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ការបញ្ជា #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">មូលហេតុ (ស្រេចចិត្ត)</string>
-    <string name="staff_accounts_sales">ការលក់ %1$s</string>
     <string name="staff_appeals_reason_label">មូលហេតុបណ្តឹងសាទុក្ខរបស់អ្នកលក់</string>
     <string name="staff_audit_action_staff_team_role_changed">តួនាទីបុគ្គលិកត្រូវបានផ្លាស់ប្តូរ</string>
     <string name="staff_categories_delete_desc">លុប “%1$s”? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">ការសន្ទនា</string>
     <string name="staff_reports_conversation_empty">មិនមានសារ</string>
     <string name="staff_reports_conversation_show">បង្ហាញការសន្ទនា</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">ការលក់ %1$s</item>
+    </plurals>
 </resources>

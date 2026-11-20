@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -18,6 +19,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
@@ -56,10 +59,24 @@ class MessageThreadViewModel @Inject constructor(
     private val sessionManager: SessionManager,
 ) : ViewModel() {
 
+    /** The listing the route names; blank when a conversation is opened by its id alone. */
     val listingId: String = savedStateHandle.get<String>("listingId").orEmpty()
     val threadId: String = savedStateHandle.get<String>("threadId").orEmpty()
 
+    /** The buyer a seller opens a new conversation with; the server requires it of a seller. */
+    private val buyer: String? = savedStateHandle.get<String>("buyer")?.takeIf { it.isNotBlank() }
+
     private var resolvedThreadId: String = threadId.takeIf { it.isNotBlank() && it != "new" } ?: ""
+
+    /**
+     * Reads of the thread and sends into it take turns, so an answer read
+     * before a send landed cannot replace the list after the send added to it.
+     */
+    private val turns = Mutex()
+    private var refreshing: Job? = null
+
+    /** The header photo once looked up, kept across refreshes; null until then. */
+    private var lookedUpPhoto: String? = null
 
     private val _state = MutableStateFlow(MessageThreadUiState())
     val state: StateFlow<MessageThreadUiState> = _state.asStateFlow()
@@ -71,48 +88,60 @@ class MessageThreadViewModel @Inject constructor(
         refresh()
     }
 
+    /**
+     * Read the thread again, superseding a read still under way, so a burst of
+     * pokes ends in one current answer.
+     */
     fun refresh() {
-        viewModelScope.launch {
-            _state.value = _state.value.copy(isLoading = true, error = null)
-            try {
-                // Opened from a listing? The route carries threadId="new", so
-                // open (or reuse) the thread for this listing first — the
-                // server returns the existing thread when one already exists.
-                // Mirrors the web flow's threads/create → threads/get sequence.
-                if (resolvedThreadId.isEmpty()) {
-                    val listing = listingId.ifBlank {
-                        throw IllegalStateException("Missing listing id for new thread")
-                    }
-                    resolvedThreadId = repo.createThread(listing).id
+        refreshing?.cancel()
+        refreshing = viewModelScope.launch { turns.withLock { load() } }
+    }
+
+    private suspend fun load() {
+        _state.value = _state.value.copy(isLoading = true, error = null)
+        try {
+            // Opened from a listing? The route carries threadId="new", so
+            // open (or reuse) the thread for this listing first — the
+            // server returns the existing thread when one already exists.
+            // Mirrors the web flow's threads/create → threads/get sequence.
+            if (resolvedThreadId.isEmpty()) {
+                val listing = listingId.ifBlank {
+                    throw IllegalStateException("Missing listing id for new thread")
                 }
-                val response = repo.getThread(resolvedThreadId)
-                val me = sessionManager.boundIdentity.first().orEmpty()
-                val photo = response.listing.photo?.id.orEmpty()
-                    .ifBlank { listingPhoto(response.listing.id.ifBlank { listingId }) }
-                _state.value = _state.value.copy(
-                    thread = response.thread,
-                    me = me,
-                    photo = photo,
-                    listing = response.listing,
-                    messages = response.messages,
-                    isLoading = false,
-                )
-                markRead()
-            } catch (e: Exception) {
-                _state.value = _state.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
+                resolvedThreadId = repo.createThread(listing, buyer).id
             }
+            val response = repo.getThread(resolvedThreadId)
+            val me = sessionManager.boundIdentity.first().orEmpty()
+            val photo = response.listing.photo?.id?.takeIf { it.isNotBlank() }
+                ?: lookedUpPhoto
+                ?: listingPhoto(response.listing.id.ifBlank { listingId })?.also { lookedUpPhoto = it }
+                ?: ""
+            _state.value = _state.value.copy(
+                thread = response.thread,
+                me = me,
+                photo = photo,
+                listing = response.listing,
+                messages = response.messages,
+                isLoading = false,
+            )
+            markRead()
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            _state.value = _state.value.copy(
+                isLoading = false,
+                error = e.toMochiError(),
+            )
         }
     }
 
     /**
      * The first photo of [listing] by rank, read from its photo list when the
      * thread's preview of it carries none, as the listing page reads them, and
-     * from its detail's primary photo after that; blank when neither has one.
+     * from its detail's primary photo after that; blank when neither has one,
+     * and null when it could not be read, so a later refresh tries again.
      */
-    private suspend fun listingPhoto(listing: String): String {
+    private suspend fun listingPhoto(listing: String): String? {
         if (listing.isBlank()) {
             return ""
         }
@@ -122,7 +151,7 @@ class MessageThreadViewModel @Inject constructor(
         } catch (e: CancellationException) {
             throw e
         } catch (_: Exception) {
-            ""
+            null
         }
     }
 
@@ -172,23 +201,37 @@ class MessageThreadViewModel @Inject constructor(
         _state.value = _state.value.copy(draft = value)
     }
 
+    /**
+     * Send the draft. A read under way is dropped, since its answer may predate
+     * the message, and read again once the message is in; the message joins
+     * the list once, whatever a read brought meanwhile.
+     */
     fun sendMessage() {
         val trimmed = _state.value.draft.trim()
-        if (trimmed.isEmpty() || _state.value.isSending) return
+        if (trimmed.isEmpty() || _state.value.isSending || resolvedThreadId.isEmpty()) return
+        _state.value = _state.value.copy(isSending = true)
+        val interrupted = refreshing?.isActive == true
+        refreshing?.cancel()
         viewModelScope.launch {
-            _state.value = _state.value.copy(isSending = true)
             try {
-                val saved = repo.sendMessage(resolvedThreadId, trimmed)
-                _state.value = _state.value.copy(
-                    draft = "",
-                    isSending = false,
-                    messages = _state.value.messages + saved,
-                )
+                val saved = turns.withLock {
+                    repo.sendMessage(resolvedThreadId, trimmed).also { saved ->
+                        val messages = _state.value.messages
+                        _state.value = _state.value.copy(
+                            draft = "",
+                            isSending = false,
+                            messages = if (messages.any { it.id == saved.id }) messages else messages + saved,
+                        )
+                    }
+                }
                 _events.send(MessageThreadEvent.Appended(saved))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _state.value = _state.value.copy(isSending = false)
                 _events.send(MessageThreadEvent.Error(e.toMochiError()))
             }
+            if (interrupted) refresh()
         }
     }
 }

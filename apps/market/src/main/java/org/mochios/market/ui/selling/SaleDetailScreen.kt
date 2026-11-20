@@ -46,7 +46,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.LinkAnnotation
 import androidx.compose.ui.text.SpanStyle
@@ -69,6 +71,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.util.webUri
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
+import org.mochios.market.lib.regionName
 import org.mochios.market.model.Currency
 import org.mochios.market.model.DeliveryMethod
 import org.mochios.market.model.Dispute
@@ -173,11 +176,15 @@ fun SaleDetailScreen(
                             navController.navigate(MarketApp.publicProfile(account))
                         }
                     },
+                    // The seller opens (or reopens) the conversation with this
+                    // order's buyer; the server needs the buyer named, since a
+                    // seller has one conversation per buyer on a listing.
                     onMessageBuyer = {
                         navController.navigate(
                             MarketApp.messageThread(
-                                listingId = detail.listing.id.toString(),
+                                listingId = detail.listing.id.ifBlank { detail.order.listing },
                                 threadId = "new",
+                                buyer = detail.order.buyer,
                             ),
                         )
                     },
@@ -207,13 +214,11 @@ fun SaleDetailScreen(
             // a flag — the comptroller accumulates into it — so it is the value
             // itself that the seller needs when deciding how much more to
             // refund. Treating it as a flag reported the whole order total.
+            remaining = (detail.order.total - detail.order.refunded).coerceAtLeast(0L),
             priorRefundedAmount = detail.order.refunded,
-            priorRefunds = detail.refunds,
             submitting = state.refundSubmitting,
             errorMessage = state.refundError,
-            onSubmit = { amount, reason, description ->
-                viewModel.refundOrder(amount, reason, description, refundFailedFallback)
-            },
+            onSubmit = { amount -> viewModel.refundOrder(amount, refundFailedFallback) },
             onDismiss = { refundDialogOpen = false },
         )
         val dispute = detail.dispute
@@ -221,14 +226,9 @@ fun SaleDetailScreen(
             DisputeResponseDialog(
                 open = disputeDialogOpen,
                 disputeStatus = dispute.status,
-                existingEvidence = detail.evidence,
                 submitting = state.disputeSubmitting,
                 errorMessage = state.disputeError,
-                onSubmit = { response, _ ->
-                    // Evidence URIs are collected but not sent: the API takes a
-                    // single body string and has no evidence upload yet.
-                    viewModel.respondToDispute(response, disputeFailedFallback)
-                },
+                onSubmit = { response -> viewModel.respondToDispute(response, disputeFailedFallback) },
                 onDismiss = { disputeDialogOpen = false },
             )
         }
@@ -505,7 +505,8 @@ private fun SummaryValue(text: String) {
     Text(text = text, style = MaterialTheme.typography.bodyLarge)
 }
 
-private fun deliveryLabel(delivery: DeliveryMethod): Int = when (delivery) {
+/** A delivery method's translated name, as the sale and purchase summaries show it. */
+internal fun deliveryLabel(delivery: DeliveryMethod): Int = when (delivery) {
     DeliveryMethod.SHIPPING -> R.string.market_checkout_delivery_shipping
     DeliveryMethod.PICKUP -> R.string.market_checkout_delivery_pickup
     DeliveryMethod.DOWNLOAD -> R.string.market_checkout_delivery_download
@@ -513,6 +514,8 @@ private fun deliveryLabel(delivery: DeliveryMethod): Int = when (delivery) {
 
 @Composable
 private fun ShippingAddressCard(order: Order) {
+    // The country is a code, shown by its name in the reader's language.
+    val country = regionName(order.addressCountry, LocalResources.current, LocalConfiguration.current.locales[0])
     val locality = listOf(order.addressCity, order.addressRegion)
         .filter { part -> part.isNotBlank() }
         .joinToString(", ")
@@ -523,7 +526,7 @@ private fun ShippingAddressCard(order: Order) {
         listOf(locality, order.addressPostcode)
             .filter { part -> part.isNotBlank() }
             .joinToString(" "),
-        order.addressCountry,
+        country,
     ).filter { line -> line.isNotBlank() }
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(

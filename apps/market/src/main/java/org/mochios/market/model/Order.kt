@@ -70,7 +70,8 @@ enum class OrderStatus {
 
 /**
  * `orders/create` / `orders/auction` response; `checkout_url` is the Stripe
- * Checkout URL, or the success URL when no payment is due.
+ * Checkout URL, or empty when no payment is due and the order is answered
+ * already placed.
  */
 data class OrderCreateResponse(
     val order: Order? = null,
@@ -81,20 +82,4 @@ data class Tracking(
     val carrier: String = "",
     val tracking: String = "",
     val url: String = "",
-)
-
-/**
- * Staff-side refund row. `kind` is `"partial"` or `"full"`; `description` is
- * the seller's note.
- */
-data class Refund(
-    val id: String = "",
-    val order: String = "",
-    val amount: Long = 0,
-    val currency: Currency? = null,
-    val reason: String = "",
-    val description: String = "",
-    val kind: String = "",
-    val stripe: String = "",
-    val created: Long = 0,
 )

@@ -396,7 +396,6 @@
     <string name="staff_dashboard_order_fallback">ඇණවුම #%1$s</string>
 
     <string name="staff_accounts_reason_optional_label">හේතුව (අත්‍යවශ්‍ය නොවේ)</string>
-    <string name="staff_accounts_sales">විකුණුම් %1$s</string>
     <string name="staff_appeals_reason_label">විකුණුම්කරුගේ අභියාචනා හේතුව</string>
     <string name="staff_audit_action_staff_team_role_changed">කාර්ය මණ්ඩල භූමිකාව වෙනස් කරන ලදී</string>
     <string name="staff_categories_delete_desc">“%1$s” මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
@@ -438,4 +437,8 @@
     <string name="staff_reports_conversation">සංවාදය</string>
     <string name="staff_reports_conversation_empty">පණිවිඩ නැත</string>
     <string name="staff_reports_conversation_show">සංවාදය පෙන්වන්න</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">විකුණුම් %1$s</item>
+        <item quantity="other">විකුණුම් %1$s</item>
+    </plurals>
 </resources>

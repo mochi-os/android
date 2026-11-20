@@ -5,15 +5,17 @@
 
 package org.mochios.market.lib
 
+import androidx.compose.runtime.Composable
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import org.mochios.android.format.currencyDecimals as libCurrencyDecimals
 import org.mochios.android.format.formatPrice as libFormatPrice
 import org.mochios.android.format.minorToMajorText as libMinorToMajorText
 import org.mochios.android.format.toMinorUnits as libToMinorUnits
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.PlaceData
 import org.mochios.market.model.Currency
-import java.util.Locale
 
 /**
  * Market formatting helpers; mirrors `apps/market/web/src/lib/format.ts`. Money
@@ -23,11 +25,17 @@ import java.util.Locale
 /** Decimal places for a given currency. Matches CURRENCIES_DATA on the web. */
 fun currencyDecimals(currency: Currency): Int = libCurrencyDecimals(currency.name)
 
-fun formatPrice(
-    amount: Long,
-    currency: Currency,
-    locale: Locale = Locale.getDefault(),
-): String = libFormatPrice(amount, currency.name, locale)
+/**
+ * A minor-unit amount as a price, its digits in the user's number format as
+ * every other number on the screen is; the currency's symbol and placement
+ * come from the device's locale.
+ */
+@Composable
+fun formatPrice(amount: Long, currency: Currency): String = formatPrice(amount, currency, LocalFormat.current)
+
+/** [formatPrice] outside composition, in [format]'s digits. */
+fun formatPrice(amount: Long, currency: Currency, format: Format): String =
+    libFormatPrice(amount, currency.name, format = format)
 
 /**
  * Convert a free-text major-unit input (e.g. "12.34") into minor units for

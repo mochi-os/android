@@ -24,6 +24,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.util.AttachmentOpener
+import org.mochios.market.model.Asset
 import org.mochios.market.model.AssetDownload
 import org.mochios.market.model.AuditEvent
 import org.mochios.market.model.OrderDetailResponse
@@ -146,12 +147,12 @@ class PurchaseDetailViewModel @Inject constructor(
      * needs a Context, so the bytes land here and the screen only launches the
      * viewer.
      */
-    fun requestDownload(assetId: String) {
+    fun requestDownload(asset: Asset) {
         if (_uiState.value.downloading) return
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(downloading = true)
             try {
-                when (val outcome = repository.downloadAsset(assetId)) {
+                when (val outcome = repository.downloadAsset(asset)) {
                     is AssetDownload.External ->
                         _events.tryEmit(PurchaseDetailEvent.OpenUrl(outcome.url))
                     is AssetDownload.Bytes -> {

@@ -14,7 +14,6 @@ import androidx.navigation.navArgument
 import org.mochios.market.ui.account.AccountSettingsScreen
 import org.mochios.market.ui.account.PublicProfileScreen
 import org.mochios.market.ui.account.SellerSettingsScreen
-import org.mochios.market.ui.account.StripeOauthReturn
 import org.mochios.market.ui.browse.HomeScreen
 import org.mochios.market.ui.buying.MyBidsScreen
 import org.mochios.market.ui.buying.MyPurchasesScreen
@@ -69,7 +68,13 @@ object MarketApp {
     const val CHECKOUT = "market/checkout/{listingId}"
     const val PURCHASE_DETAIL = "market/purchases/{orderId}"
     const val SALE_DETAIL = "market/sales/{orderId}"
-    const val MESSAGE_THREAD = "market/messages/{listingId}/{threadId}"
+    /**
+     * A conversation about a listing; `new` as the thread opens (or reopens)
+     * the caller's, and a seller names the [buyer] it is with.
+     */
+    const val MESSAGE_THREAD = "market/messages/{listingId}/{threadId}?buyer={buyer}"
+    /** A conversation known by its id alone, as an order's message link names it. */
+    const val CONVERSATION = "market/messages/{threadId}"
     const val PROFILE_PATTERN = "market/account/{accountId}"
 
     // ---- Detail route builders ----
@@ -84,8 +89,11 @@ object MarketApp {
     fun checkout(listingId: String) = "market/checkout/$listingId"
     fun purchaseDetail(orderId: String) = "market/purchases/$orderId"
     fun saleDetail(orderId: String) = "market/sales/$orderId"
-    fun messageThread(listingId: String, threadId: String) =
-        "market/messages/$listingId/$threadId"
+    fun messageThread(listingId: String, threadId: String, buyer: String? = null): String {
+        val query = buyer?.takeIf { id -> id.isNotBlank() }?.let { id -> "?buyer=${Uri.encode(id)}" }
+        return "market/messages/$listingId/$threadId${query.orEmpty()}"
+    }
+    fun conversation(threadId: String) = "market/messages/$threadId"
     fun publicProfile(accountId: String) = "market/account/$accountId"
 
     /** Seller settings carrying Stripe's OAuth return, for the deep-link handler. */
@@ -96,37 +104,72 @@ object MarketApp {
         return if (query.isEmpty()) SELLER_SETTINGS else "$SELLER_SETTINGS?$query"
     }
 
-    /** Browse pre-filtered by category id. */
-    fun homeWithCategory(categoryId: String) = "market?category=${Uri.encode(categoryId)}"
-
     /**
      * The screens a `/market/...` link opens over the market home, in order,
-     * from the path after `market/` and a reader of its query: a listing
-     * (`listings/<id>` as the server writes it, or `listing/<id>` as this
-     * client's own shortcuts do) with its conversation on top when the link
-     * names one (`listings/<id>/messages/<thread>`), the bids, a purchase or
-     * the purchases, the subscriptions, or the seller settings a Stripe return
-     * carries. Empty for a link that names none of them: the home alone.
+     * from the path after `market/` and a reader of its query, for every shape
+     * the Comptroller writes: a listing (`listings/<id>`, or `listing/<id>` as
+     * this client's own shortcuts write it) with its conversation on top when
+     * the link names one (`listings/<id>/messages/<thread>`), or the seller's
+     * listings for `listings` alone; the bids; a purchase or a sale, with the
+     * conversation on top for `?thread=<id>`, or the purchases or the sales;
+     * the subscriptions and the subscribers; the account, an account's
+     * profile, or the seller settings a Stripe return carries. Empty for a
+     * link that names none of them: the home alone.
      */
     fun linkRoutes(parts: List<String>, query: (String) -> String?): List<String> {
         val id = parts.getOrNull(1)?.takeIf { it.isNotEmpty() }
         return when (parts.getOrNull(0)) {
             "listing", "listings" -> {
-                if (id == null) return emptyList()
+                if (id == null) return listOf(LISTINGS)
                 val thread = parts.getOrNull(3)?.takeIf { parts.getOrNull(2) == "messages" && it.isNotEmpty() }
                 listOfNotNull(listingDetail(id), thread?.let { messageThread(id, it) })
             }
             "bids" -> listOf(BIDS)
-            "purchases" -> listOf(if (id != null) purchaseDetail(id) else PURCHASES)
+            "purchases" -> order(id, PURCHASES, purchaseDetail(id.orEmpty()), query("thread"))
+            "sales" -> order(id, SALES, saleDetail(id.orEmpty()), query("thread"))
             "subscriptions" -> listOf(SUBSCRIPTIONS)
-            "account" -> if (id == "seller") {
-                listOf(sellerSettings(query("code"), query("state"), query("error"), query("error_description")))
-            } else {
-                emptyList()
+            "subscribers" -> listOf(SUBSCRIBERS)
+            "account" -> when (id) {
+                null -> listOf(ACCOUNT)
+                "seller" -> listOf(
+                    sellerSettings(query("code"), query("state"), query("error"), query("error_description")),
+                )
+                else -> listOf(publicProfile(id))
             }
             else -> emptyList()
         }
     }
+
+    /**
+     * An order's page, or the [list] it is in when the link names no order,
+     * with the conversation [thread] names on top, so Back from it lands on
+     * the order. A thread that is not an id is left out.
+     */
+    private fun order(id: String?, list: String, page: String, thread: String?): List<String> {
+        if (id == null) return listOf(list)
+        val conversation = thread?.takeIf { value -> value.matches(IDENTIFIER) }?.let { value -> conversation(value) }
+        return listOfNotNull(page, conversation)
+    }
+
+    /**
+     * Where Stripe Checkout's return to the app (`mochi://market/checkout/<outcome>`)
+     * leads, as a `/market/...` link: a paid subscription to the
+     * subscriptions, any other success to the purchases, and a cancel back to
+     * its listing, or the market when the listing is not an id. Null for an
+     * outcome it does not know. The values ride in an intent any app can send,
+     * so a listing is accepted only in an identifier's shape: it cannot smuggle
+     * path segments or a query of its own into the route.
+     */
+    fun checkoutReturn(outcome: String, kind: String?, listing: String?): String? = when (outcome) {
+        "success" -> if (kind == "subscription") "/market/subscriptions" else "/market/purchases"
+        "cancel" -> listing?.takeIf { value -> value.matches(IDENTIFIER) }
+            ?.let { value -> "/market/listing/$value" }
+            ?: "/market"
+        else -> null
+    }
+
+    /** The shape of an id a link may carry into a route. */
+    private val IDENTIFIER = Regex("[A-Za-z0-9]{1,64}")
 }
 
 /**
@@ -172,11 +215,10 @@ fun NavGraphBuilder.marketNavGraph(
                 defaultValue = null
             }
         },
-    ) { entry ->
-        SellerSettingsScreen(
-            navController = navController,
-            stripeReturn = StripeOauthReturn.from(entry.arguments),
-        )
+    ) {
+        // The screen's view model reads a Stripe return from these arguments
+        // and completes it once.
+        SellerSettingsScreen(navController = navController)
     }
 
     // ---- Detail routes ----
@@ -224,7 +266,16 @@ fun NavGraphBuilder.marketNavGraph(
         arguments = listOf(
             navArgument("listingId") { type = NavType.StringType },
             navArgument("threadId") { type = NavType.StringType },
+            navArgument("buyer") {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
         ),
+    ) { MessageThreadScreen(navController = navController) }
+    composable(
+        route = MarketApp.CONVERSATION,
+        arguments = listOf(navArgument("threadId") { type = NavType.StringType }),
     ) { MessageThreadScreen(navController = navController) }
     composable(
         route = MarketApp.PROFILE_PATTERN,

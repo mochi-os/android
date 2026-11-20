@@ -310,4 +310,7 @@
     <string name="comment_share">Delen</string>
     <string name="comment_all">Alle reacties</string>
     <string name="drawer_unread">Ongelezen</string>
+    <string name="person_unknown">Onbekend</string>
+    <string name="format_time_seconds_short">%1$ss</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

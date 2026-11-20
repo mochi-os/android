@@ -121,7 +121,7 @@ fun ModerationLogScreen(
             else -> InfiniteList(
                 items = state.entries,
                 key = { entry -> entry.id },
-                isLoading = state.isLoadingMore,
+                load = state.load,
                 hasMore = state.entries.size < state.total,
                 onLoadMore = viewModel::loadMore,
             ) { entry ->

@@ -53,6 +53,13 @@ enum class ListingStatus {
     @SerializedName("expired") EXPIRED,
     @SerializedName("rejected") REJECTED,
     @SerializedName("removed") REMOVED,
+
+    /**
+     * Shown to the seller only: live but held by moderation, so no buyer sees
+     * it until staff approve it. The server sends it as `active` with
+     * `moderation` "hold" ([org.mochios.market.ui.components.shownStatus]).
+     */
+    @SerializedName("held") HELD,
 }
 
 enum class ReportReason {
@@ -62,9 +69,4 @@ enum class ReportReason {
     @SerializedName("inappropriate") INAPPROPRIATE,
     @SerializedName("spam") SPAM,
     @SerializedName("other") OTHER,
-}
-
-enum class ReportType {
-    @SerializedName("listing") LISTING,
-    @SerializedName("user") USER,
 }

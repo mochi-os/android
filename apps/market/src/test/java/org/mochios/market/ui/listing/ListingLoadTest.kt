@@ -129,8 +129,8 @@ class ListingLoadTest {
         val model = ListingDetailViewModel(
             MarketRepository(api, FileStore(context)),
             SavedRepository(api, SessionManager(context)),
-            RecentlyViewedStore(context),
-            ReportedStore(context),
+            RecentlyViewedStore(context, session),
+            ReportedStore(context, session),
             context,
             session,
         )

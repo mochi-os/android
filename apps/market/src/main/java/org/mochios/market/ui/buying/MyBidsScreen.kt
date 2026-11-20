@@ -22,19 +22,14 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableLongStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import kotlinx.coroutines.delay
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
 import org.mochios.android.ui.components.EmptyState
@@ -50,6 +45,7 @@ import org.mochios.market.model.Bid
 import org.mochios.market.model.Currency
 import org.mochios.market.navigation.MarketApp
 import org.mochios.market.ui.components.BidStatusBadge
+import org.mochios.market.ui.components.auctionRemainingLabel
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.MarketListPadding
 import org.mochios.market.ui.components.MarketListPrice
@@ -76,7 +72,7 @@ fun MyBidsScreen(
                         Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center,
                     ) { CircularProgressIndicator() }
-                    state.error != null -> ErrorState(error = state.error!!) { viewModel.setFilter(state.filter) }
+                    state.error != null -> ErrorState(error = state.error!!) { viewModel.retry() }
                     state.bids.isEmpty() -> EmptyState(
                         icon = Icons.Default.Gavel,
                         title = stringResource(R.string.market_bids_empty),
@@ -84,8 +80,8 @@ fun MyBidsScreen(
                     else -> InfiniteList(
                         items = state.bids,
                         key = { bid -> bid.id },
-                        isLoading = state.isLoadingMore,
-                        hasMore = state.bids.size < state.total,
+                        load = state.load,
+                        hasMore = state.paging.more,
                         onLoadMore = { viewModel.loadMore() },
                         contentPadding = MarketListPadding,
                         verticalArrangement = MarketListSpacing,
@@ -131,7 +127,7 @@ internal fun BidRow(
 ) {
     val format = LocalFormat.current
     val currency = bid.currency ?: Currency.GBP
-    val title = bid.title ?: stringResource(R.string.market_purchases_auction_label, bid.auction ?: "")
+    val title = bid.title?.takeIf { it.isNotBlank() } ?: stringResource(R.string.market_listing_untitled)
     val current = bid.currentBid
     val closes = bid.closes ?: 0L
     // A cancelled auction has no time left, whatever its close time says.
@@ -139,7 +135,7 @@ internal fun BidRow(
     val subtitle = listOf(
         stringResource(R.string.market_bids_your_bid, formatPrice(bid.amount, currency)),
         when {
-            closes > 0L && !cancelled -> remainingLabel(closes)
+            closes > 0L && !cancelled -> auctionRemainingLabel(closes)
             bid.created > 0L -> format.formatTimestamp(bid.created)
             else -> ""
         },
@@ -173,29 +169,4 @@ internal fun BidRow(
             )
         },
     )
-}
-
-@Composable
-private fun remainingLabel(closes: Long): String {
-    // closes is epoch seconds. Tick once per second via a state var so
-    // the row re-renders without rebuilding the screen.
-    var now by remember { mutableLongStateOf(System.currentTimeMillis() / 1000L) }
-    LaunchedEffect(closes) {
-        while (now < closes) {
-            delay(1_000L)
-            now = System.currentTimeMillis() / 1000L
-        }
-    }
-    val remaining = closes - now
-    if (remaining <= 0L) return stringResource(R.string.market_bids_ended)
-    val hours = remaining / 3600
-    val minutes = (remaining % 3600) / 60
-    val seconds = remaining % 60
-    val pretty = when {
-        hours >= 24 -> "${hours / 24}d ${hours % 24}h"
-        hours > 0 -> "${hours}h ${minutes}m"
-        minutes > 0 -> "${minutes}m ${seconds}s"
-        else -> "${seconds}s"
-    }
-    return stringResource(R.string.market_bids_ends_in, pretty)
 }

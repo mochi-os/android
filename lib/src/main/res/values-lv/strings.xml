@@ -343,4 +343,7 @@
         <item quantity="other">+%1$s vēl atbildes</item>
     </plurals>
     <string name="drawer_unread">Nelasīti</string>
+    <string name="person_unknown">Nezināms</string>
+    <string name="format_time_seconds_short">%1$s s</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

@@ -35,12 +35,17 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.market.R
 import org.mochios.market.repository.MarketRepository
 
+/**
+ * The seller's appeal of a held or rejected listing, with [notes], the reason
+ * staff gave, above the field when they gave one.
+ */
 @Composable
 fun AppealRemovalDialog(
     open: Boolean,
     listingId: String,
     onDismiss: () -> Unit,
     onSuccess: () -> Unit = {},
+    notes: String = "",
 ) {
     if (!open) return
     val context = LocalContext.current
@@ -72,6 +77,14 @@ fun AppealRemovalDialog(
         title = stringResource(R.string.market_appeal_dialog_title),
         content = {
             Column {
+                if (notes.isNotBlank()) {
+                    Text(
+                        text = notes,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                }
                 MochiTextField(
                     value = reason,
                     onValueChange = { reason = it },

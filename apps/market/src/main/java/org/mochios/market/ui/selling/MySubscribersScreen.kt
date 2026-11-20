@@ -23,17 +23,18 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
-import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.i18n.formatRelativeTime
+import org.mochios.android.format.personName
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InfiniteList
+import org.mochios.android.ui.components.LoadState
 import org.mochios.market.R
 import org.mochios.market.lib.formatPrice
 import org.mochios.market.model.Currency
 import org.mochios.market.model.Interval
 import org.mochios.market.model.Subscription
 import org.mochios.market.navigation.MarketApp
+import org.mochios.market.ui.buying.cancelNote
 import org.mochios.market.ui.components.MarketLayout
 import org.mochios.market.ui.components.MarketListNote
 import org.mochios.market.ui.components.MarketListPadding
@@ -57,17 +58,17 @@ fun MySubscribersScreen(
     ) { padding ->
         Box(modifier = Modifier.fillMaxSize().padding(padding)) {
             when {
-                state.error != null && state.subscriptions.isEmpty() -> {
+                state.load is LoadState.Failed && state.subscriptions.isEmpty() -> {
                     // userMessage() comes back empty when the server sends an
                     // empty error body; keep the specific fallback rather than
                     // rendering an error state with no message in it.
                     ErrorState(
-                        error = state.error!!.takeIf { it.userMessage().isNotEmpty() }
+                        error = (state.load as LoadState.Failed).error.takeIf { it.userMessage().isNotEmpty() }
                             ?: MochiError.Unknown(stringResource(R.string.market_subscribers_load_failed)),
                         onRetry = viewModel::refresh,
                     )
                 }
-                state.subscriptions.isEmpty() && !state.isLoading -> {
+                state.subscriptions.isEmpty() && state.load == LoadState.Idle -> {
                     EmptyState(
                         icon = Icons.Default.Group,
                         title = stringResource(R.string.market_subscribers_empty_title),
@@ -78,8 +79,8 @@ fun MySubscribersScreen(
                     InfiniteList(
                         items = state.subscriptions,
                         key = { subscription -> subscription.id },
-                        isLoading = state.isLoading,
-                        hasMore = state.hasMore,
+                        load = state.load,
+                        hasMore = state.paging.more,
                         onLoadMore = viewModel::loadMore,
                         contentPadding = MarketListPadding,
                         verticalArrangement = MarketListSpacing,
@@ -102,14 +103,14 @@ fun MySubscribersScreen(
 }
 
 @Composable
-private fun SubscriberRow(subscription: Subscription, onClickBuyer: () -> Unit) {
-    val format = LocalFormat.current
+internal fun SubscriberRow(subscription: Subscription, onClickBuyer: () -> Unit) {
     val currency = subscription.currency ?: Currency.GBP
     val intervalSuffix = when (subscription.interval) {
         Interval.YEARLY -> stringResource(R.string.market_subscribers_interval_year)
         else -> stringResource(R.string.market_subscribers_interval_month)
     }
-    val name = subscription.buyerName.orEmpty().ifBlank { subscription.buyer }
+    val name = personName(subscription.buyerName, subscription.buyerFingerprint)
+    val ending = cancelNote(subscription)
     MarketListRow(
         title = name,
         onClick = onClickBuyer,
@@ -118,12 +119,9 @@ private fun SubscriberRow(subscription: Subscription, onClickBuyer: () -> Unit) 
             subscription.status?.let { status ->
                 MarketStatusBadge(status = status.name.lowercase())
             }
-            if (subscription.cancelled > 0L) {
+            if (ending != null) {
                 Text(
-                    text = stringResource(
-                        R.string.market_subscribers_cancels_on,
-                        format.formatRelativeTime(subscription.cancelled),
-                    ),
+                    text = ending,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,

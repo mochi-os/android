@@ -19,7 +19,6 @@
     <string name="staff_accounts_notes_label">Notaichean</string>
     <string name="staff_accounts_reason_label">Adhbhar</string>
     <string name="staff_accounts_reason_optional_label">Adhbhar (roghainneil)</string>
-    <string name="staff_accounts_sales">%1$s reic</string>
     <string name="staff_accounts_search_clear">Falamhaich an lorg</string>
     <string name="staff_accounts_search_placeholder">Lorg</string>
     <string name="staff_accounts_seller_buyers">Ceannaichean a-mhàin</string>
@@ -438,4 +437,10 @@
     <string name="staff_reports_conversation">Còmhradh</string>
     <string name="staff_reports_conversation_empty">Gun teachdaireachdan</string>
     <string name="staff_reports_conversation_show">Seall an còmhradh</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s reic</item>
+        <item quantity="two">%1$s reic</item>
+        <item quantity="few">%1$s reicean</item>
+        <item quantity="other">%1$s reic</item>
+    </plurals>
 </resources>

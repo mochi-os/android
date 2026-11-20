@@ -29,6 +29,10 @@ fun MochiScaffold(
     onBack: (() -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
     floatingActionButton: @Composable () -> Unit = {},
+    // A screen's SnackbarHost goes here, not into its content: the scaffold
+    // draws it above the content and clear of the navigation bar and the
+    // floating button, where content painted after it would cover it.
+    snackbarHost: @Composable () -> Unit = {},
     content: @Composable (PaddingValues) -> Unit
 ) {
     Scaffold(
@@ -49,6 +53,7 @@ fun MochiScaffold(
             )
         },
         floatingActionButton = floatingActionButton,
+        snackbarHost = snackbarHost,
         // The keyboard is room the content gives up, so a field typed in
         // stays in view above it instead of behind it.
         contentWindowInsets = ScaffoldDefaults.contentWindowInsets.union(WindowInsets.ime),

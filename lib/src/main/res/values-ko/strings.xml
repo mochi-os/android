@@ -341,4 +341,7 @@
         <item quantity="other">답글 +%1$s개 더</item>
     </plurals>
     <string name="drawer_unread">읽지 않음</string>
+    <string name="person_unknown">알 수 없음</string>
+    <string name="format_time_seconds_short">%1$s초</string>
+    <string name="format_time_pair">%1$s %2$s</string>
 </resources>

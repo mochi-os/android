@@ -394,7 +394,6 @@
     <string name="staff_accounts_action_unban_title">Hark\'ayta qichuy</string>
     <string name="staff_accounts_action_unsuspend_title">Sayachiyta qichuy</string>
     <string name="staff_accounts_reason_optional_label">Imarayku (munaspa)</string>
-    <string name="staff_accounts_sales">%1$s rantikuykuna</string>
     <string name="staff_appeals_reason_label">Qhatuqpa apelación raykun</string>
     <string name="staff_audit_action_staff_team_role_changed">Llamk\'aqpa rolnin tikrasqa</string>
     <string name="staff_categories_delete_desc">¿\"%1$s\"-ta wischunki? Kayqa mana kutichiy atikunchu.</string>
@@ -438,4 +437,7 @@
     <string name="staff_reports_conversation">Rimanakuy</string>
     <string name="staff_reports_conversation_empty">Mana willakuykuna kanchu</string>
     <string name="staff_reports_conversation_show">Rimanakuyta rikuchiy</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="other">%1$s rantikuykuna</item>
+    </plurals>
 </resources>

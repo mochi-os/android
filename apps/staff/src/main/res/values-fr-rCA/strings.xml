@@ -69,7 +69,6 @@
     <string name="staff_accounts_history_title">Historique du compte</string>
     <string name="staff_accounts_notes_label">Notes</string>
     <string name="staff_accounts_reason_optional_label">Motif (facultatif)</string>
-    <string name="staff_accounts_sales">%1$s ventes</string>
     <string name="staff_accounts_search_clear">Effacer la recherche</string>
     <string name="staff_accounts_seller_buyers">Acheteurs seulement</string>
     <string name="staff_accounts_seller_chip">Vendeur</string>
@@ -432,4 +431,8 @@
 
     <string name="staff_disputes_meta_already_refunded">Déjà remboursé</string>
     <string name="staff_disputes_refund_exceeds_remaining">Le montant du remboursement dépasse le montant remboursable restant</string>
+    <plurals name="staff_accounts_sales">
+        <item quantity="one">%1$s vente</item>
+        <item quantity="other">%1$s ventes</item>
+    </plurals>
 </resources>

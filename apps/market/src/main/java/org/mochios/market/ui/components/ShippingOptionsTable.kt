@@ -16,14 +16,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiCard
 import org.mochios.market.R
-import org.mochios.market.lib.formatPrice
-import org.mochios.market.model.Currency
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.market.lib.regionName
 import org.mochios.market.model.ShippingOption
 
 /**
@@ -63,7 +65,7 @@ private fun ShippingOptionCard(option: ShippingOption) {
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 Text(
-                    text = option.region,
+                    text = regionName(option.region, LocalResources.current, LocalConfiguration.current.locales[0]),
                     style = MaterialTheme.typography.bodyLarge,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
@@ -93,8 +95,7 @@ private fun ShippingOptionCard(option: ShippingOption) {
     }
 }
 
-private fun formatPriceSafe(amount: Long, currency: String): String {
-    val curr = runCatching { Currency.valueOf(currency.uppercase()) }
-        .getOrDefault(Currency.GBP)
-    return formatPrice(amount, curr)
-}
+/** The option's price in its own currency, whichever the seller set, in the user's number format. */
+@Composable
+private fun formatPriceSafe(amount: Long, currency: String): String =
+    org.mochios.android.format.formatPrice(amount, currency, format = LocalFormat.current)
