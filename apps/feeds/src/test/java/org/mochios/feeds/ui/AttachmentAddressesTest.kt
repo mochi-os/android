@@ -157,7 +157,7 @@ class AttachmentAddressesTest {
         assertEscaped(shown {
             PostContent(
                 post = Post(id = "p1", feed = "f1", body = "Body", attachments = images),
-                tags = emptyList(), permissions = Permissions(), serverUrl = "https://server", feedId = "f1",
+                tags = emptyList(), permissions = Permissions(), feedId = "f1",
                 onReact = {}, onAddTag = {}, onAdjustInterest = { _, _ -> },
             )
         })

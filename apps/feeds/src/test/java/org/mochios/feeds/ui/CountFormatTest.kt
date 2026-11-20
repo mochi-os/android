@@ -24,6 +24,7 @@ import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.PostData
 import org.mochios.feeds.model.Source
 import org.mochios.feeds.ui.feed.GalleryTile
+import org.mochios.feeds.ui.feed.PostActionBar
 import org.mochios.feeds.ui.feed.PostByline
 import org.mochios.feeds.ui.feed.PostCommentsPreview
 import org.mochios.feeds.ui.settings.SourceCard
@@ -59,6 +60,20 @@ class CountFormatTest {
             )
         }
         rule.onNodeWithText("1.000", substring = true).assertExists()
+    }
+
+    @Test
+    fun `a post's comments beside its comment icon, replies counted`() {
+        val thread = Comment(id = "c", body = "c", children = List(1002) { index -> Comment(id = "r$index", body = "r$index") })
+        show {
+            PostActionBar(
+                post = Post(id = "p", comments = listOf(thread)),
+                isSaved = false, canManage = false,
+                onReact = {}, onComments = {}, onToggleSave = {}, onAddTag = {}, onAdjustInterest = { _, _ -> },
+                onEdit = {}, onDelete = {},
+            )
+        }
+        rule.onNodeWithText("1.003").assertExists()
     }
 
     @Test

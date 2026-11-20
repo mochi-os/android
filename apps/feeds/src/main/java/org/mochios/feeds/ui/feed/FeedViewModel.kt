@@ -28,8 +28,10 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.REOPEN_GRACE
 import org.mochios.android.util.UndoChain
 import org.mochios.android.util.appendDistinct
+import org.mochios.android.util.mergeReload
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
 import org.mochios.android.model.WebSocketEvent
@@ -101,8 +103,8 @@ class FeedViewModel @Inject constructor(
      *  each post card can show its bookmark filled/empty without awaiting. */
     val savedIds: StateFlow<Set<String>> = savedRepository.savedIds
 
-    /** Count of real-time new posts queued behind the refresh button's badge
-     *  rather than injected into the pager while the user is reading. */
+    /** Count of real-time new posts, written in the bar beside the refresh
+     *  button rather than injected into the pager while the user is reading. */
     private val newPosts = NewPosts()
     val newPostsCount: StateFlow<Int> = newPosts.count
 
@@ -158,15 +160,16 @@ class FeedViewModel @Inject constructor(
     private val _isRefreshing = MutableStateFlow(false)
     val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
 
-    // Spinner for the top-bar button, which refreshes only the post in view.
-    // Kept separate from [isRefreshing] so it doesn't drive the pull-to-refresh
-    // indicator.
-
     private val _isLoadingMore = MutableStateFlow(false)
     val isLoadingMore: StateFlow<Boolean> = _isLoadingMore.asStateFlow()
 
     private val _hasMore = MutableStateFlow(false)
     val hasMore: StateFlow<Boolean> = _hasMore.asStateFlow()
+
+    /** Why the next page failed, shown below the last post with a retry;
+     *  null while none has failed since the list was last read. */
+    private val _loadMoreError = MutableStateFlow<MochiError?>(null)
+    val loadMoreError: StateFlow<MochiError?> = _loadMoreError.asStateFlow()
 
     private var nextCursor: Long = 0
     // Where the next page resumes, from a server that sends it: posts sharing
@@ -198,11 +201,6 @@ class FeedViewModel @Inject constructor(
 
     private val _unreadOnly = MutableStateFlow(prefs.getBoolean(KEY_UNREAD_ONLY, false))
     val unreadOnly: StateFlow<Boolean> = _unreadOnly.asStateFlow()
-
-    // The viewer's own entity id, so comment items can offer edit/delete on the
-    // viewer's own comments. Resolved once from the bound session identity.
-    private val _currentUserId = MutableStateFlow<String?>(null)
-    val currentUserId: StateFlow<String?> = _currentUserId.asStateFlow()
 
     val isAllFeeds: Boolean = feedId == "__all__"
 
@@ -294,7 +292,6 @@ class FeedViewModel @Inject constructor(
         loadNotifications()
         subscribeToWebSocket()
         viewModelScope.launch { savedRepository.load() }
-        viewModelScope.launch { _currentUserId.value = sessionManager.getBoundIdentity() }
     }
 
     /**
@@ -312,6 +309,24 @@ class FeedViewModel @Inject constructor(
                     "$serverUrl/feeds/$feedId/rss?token=$token"
                 }
                 _actionEvents.emit(FeedActionEvent.RssUrlReady(url))
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
+            }
+        }
+    }
+
+    /**
+     * Clear the feed's RSS token, every feed's for the aggregate, so every URL
+     * already handed out stops working. Also the only way to rotate one:
+     * minting returns the token already held.
+     */
+    fun revokeRssToken() {
+        viewModelScope.launch {
+            try {
+                repository.revokeRssToken(if (isAllFeeds) "*" else feedId)
+                _actionEvents.emit(FeedActionEvent.Done(org.mochios.android.R.string.rss_revoked))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
@@ -407,6 +422,7 @@ class FeedViewModel @Inject constructor(
         viewModelScope.launch {
             _error.value = null
             _isNotFound.value = false
+            _loadMoreError.value = null
 
             if (isAllFeeds) {
                 _isLoading.value = true
@@ -624,6 +640,7 @@ class FeedViewModel @Inject constructor(
                 }
                 // The reader asked for the list as it now is, from the top.
                 reached = null
+                _loadMoreError.value = null
                 // The fresh list incorporates any queued posts — a count left
                 // up would just promise posts the user now has.
                 newPosts.clear()
@@ -635,37 +652,11 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    /**
-     * Delete a comment from a post shown in the feed, then refresh that post so
-     * it drops out of the card's preview.
-     */
-    fun deleteComment(postFeedId: String, postId: String, commentId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteComment(postFeedId, postId, commentId)
-                patch(postId, postFeedId)
-            } catch (_: Exception) {
-                // Silent — best-effort.
-            }
-        }
-    }
-
     // Re-fetch a single post and patch it in place without the refresh spinner.
     private suspend fun refreshPostQuietly(postFeedId: String, postId: String) {
         val fresh = repository.getPost(postFeedId, postId, shared = true).post
         _posts.value = _posts.value.map { existing ->
             if (existing.id != postId) existing else mergeRefreshedPost(existing, fresh)
-        }
-    }
-
-    fun reactToComment(postFeedId: String, postId: String, commentId: String, reaction: String) {
-        viewModelScope.launch {
-            try {
-                repository.reactToComment(postFeedId, postId, commentId, reaction)
-                patch(postId, postFeedId)
-            } catch (_: Exception) {
-                // Silent — best-effort.
-            }
         }
     }
 
@@ -683,11 +674,17 @@ class FeedViewModel @Inject constructor(
     private val isRelevanceSort: Boolean
         get() = _currentSort.value in listOf("interests", "ai", "relevant")
 
+    /**
+     * Read the next page. A failure is kept in [loadMoreError] rather than
+     * dropped: the screen shows it with a retry and asks again only when the
+     * reader does, or moves to another post.
+     */
     fun loadMore() {
         if (_isLoadingMore.value || !_hasMore.value || _isLoading.value) return
 
         loadMoreJob = viewModelScope.launch {
             _isLoadingMore.value = true
+            _loadMoreError.value = null
             try {
                 // The server's cursor names the next page exactly. From a
                 // server that predates it: relevance sorts page by opaque
@@ -708,77 +705,106 @@ class FeedViewModel @Inject constructor(
                 _hasMore.value = result.hasMore
                 nextCursor = result.nextCursor
                 cursor = result.cursor
-            } catch (_: Exception) {
-                // Silent failure for pagination
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _loadMoreError.value = e.toMochiError()
             } finally {
                 _isLoadingMore.value = false
             }
         }
     }
 
+    /**
+     * List the posts in [sort] and save it: the all-feeds view as the account's
+     * default, a single feed as its own. The tick moves on the tap; if the
+     * server refuses the save or the list cannot be read in the new order, the
+     * previous sort comes back, saved back too if this one was, and the
+     * failure is said.
+     */
     fun setSort(sort: String) {
-        if (_currentSort.value == sort) return
+        val previous = _currentSort.value
+        if (previous == sort) return
         _currentSort.value = sort
-        // Persist the choice. The all-feeds view writes the global default;
-        // a single feed writes a per-feed override.
-        viewModelScope.launch {
-            try {
-                if (isAllFeeds) {
-                    repository.setGlobalSort(sort)
-                } else {
-                    repository.setFeedSort(feedId, sort)
-                    // Reflect the new override in cached feed info so a later
-                    // re-render doesn't snap back to the previous value.
-                    _feedInfo.value = _feedInfo.value?.copy(sort = sort)
+        var saved = false
+        reloadPosts(
+            save = {
+                saveSort(sort)
+                saved = true
+            },
+            restore = {
+                if (_currentSort.value == sort) {
+                    _currentSort.value = previous
+                    if (saved) viewModelScope.launch { runCatching { saveSort(previous) } }
                 }
-            } catch (_: Exception) {
-                // Non-critical — UI state already reflects the change.
-            }
-        }
-        reloadPosts()
+            },
+        )
     }
 
-
+    private suspend fun saveSort(sort: String) {
+        if (isAllFeeds) {
+            repository.setGlobalSort(sort)
+        } else {
+            repository.setFeedSort(feedId, sort)
+            // The held feed information carries the override, so a later
+            // re-render does not snap back to the previous one.
+            _feedInfo.value = _feedInfo.value?.copy(sort = sort)
+        }
+    }
 
     /** Filter the posts by [tag], or show every post again when [tag] is the
-     *  one already filtered by, or null. */
+     *  one already filtered by, or null. A list that cannot be read puts the
+     *  previous filter back. */
     fun setTag(tag: String?) {
-        val next = if (tag == _currentTag.value) null else tag
-        if (next == _currentTag.value) return
+        val previous = _currentTag.value
+        val next = if (tag == previous) null else tag
+        if (next == previous) return
         _currentTag.value = next
-        reloadPosts()
+        reloadPosts(restore = { if (_currentTag.value == next) _currentTag.value = previous })
     }
 
+    /** Show unread posts only, or every post. A list that cannot be read
+     *  puts the previous choice back. */
     fun setUnreadOnly(unreadOnly: Boolean) {
         if (_unreadOnly.value == unreadOnly) return
         _unreadOnly.value = unreadOnly
         prefs.edit().putBoolean(KEY_UNREAD_ONLY, unreadOnly).apply()
-        reloadPosts()
+        reloadPosts(restore = {
+            if (_unreadOnly.value == unreadOnly) {
+                _unreadOnly.value = !unreadOnly
+                prefs.edit().putBoolean(KEY_UNREAD_ONLY, !unreadOnly).apply()
+            }
+        })
     }
 
     /** Toggle the saved ("read-later") state of a post. The bookmark fill
-     *  updates optimistically via [savedIds]; a failed call reverts it. */
+     *  updates optimistically via [savedIds]; a refused call puts it back,
+     *  and the failure is said. */
     fun toggleSave(post: Post) {
         viewModelScope.launch {
             try {
                 savedRepository.toggle(post)
-            } catch (_: Exception) {
-                // SavedRepository already reverted the optimistic mirror update.
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
         }
     }
 
+    /** React to a post, "none" taking the reader's reaction back; the post
+     *  shows it once the server has it. */
     fun reactToPost(feed: String, postId: String, reaction: String) {
         viewModelScope.launch {
             try {
                 repository.reactToPost(feed, postId, reaction)
-                // Optimistically update the post's reaction
                 _posts.value = _posts.value.map { post ->
                     if (post.id == postId) post.copy(myReaction = applied(reaction)) else post
                 }
-            } catch (_: Exception) {
-                // Revert on failure by refreshing
-                refresh()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
         }
     }
@@ -793,8 +819,10 @@ class FeedViewModel @Inject constructor(
             try {
                 repository.addTag(target, postId, label, qid)
                 patch(postId, target)
-            } catch (_: Exception) {
-                // Best-effort, like reactToPost — a failed add simply doesn't appear.
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
         }
     }
@@ -874,13 +902,16 @@ class FeedViewModel @Inject constructor(
         }
     }
 
+    /** Delete a post; a refused delete leaves it where it is and says why. */
     fun deletePost(postId: String) {
         viewModelScope.launch {
             try {
                 repository.deletePost(feedId, postId)
                 drop(postId)
-            } catch (_: Exception) {
-                refresh()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             }
         }
     }
@@ -1044,12 +1075,24 @@ class FeedViewModel @Inject constructor(
         }
     }
 
-    private fun reloadPosts() {
+    /**
+     * Read the list from the top under the current sort and filters, after
+     * [save] stores what changed, if anything does. A failure of either keeps
+     * the list as it was and calls [restore] to put the setting back to match
+     * it; it is said when [report], for a change the reader made.
+     */
+    private fun reloadPosts(
+        save: (suspend () -> Unit)? = null,
+        restore: (() -> Unit)? = null,
+        report: Boolean = true,
+    ) {
         loadMoreJob?.cancel()
         _isLoadingMore.value = false
+        _loadMoreError.value = null
         viewModelScope.launch {
             _isLoading.value = true
             try {
+                save?.invoke()
                 if (isAllFeeds) {
                     // The aggregate view fans out per feed (and honours
                     // unreadOnly / sort there); "__all__" is not a real entity,
@@ -1070,8 +1113,11 @@ class FeedViewModel @Inject constructor(
                     cursor = result.cursor
                 }
                 reached = null
-            } catch (_: Exception) {
-                // Keep existing data
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                restore?.invoke()
+                if (report) _actionEvents.emit(FeedActionEvent.Failure(e.toMochiError()))
             } finally {
                 _isLoading.value = false
             }
@@ -1206,7 +1252,7 @@ class FeedViewModel @Inject constructor(
     private suspend fun refreshSilently() {
         try {
             val result = fetchPosts(forceRefresh = true)
-            val merged = mergeReload(_posts.value, result.posts, reached) ?: return
+            val merged = mergeReload(_posts.value, result.posts, reached) { post -> post.id } ?: return
             _posts.value = merged
             _hasMore.value = result.hasMore
             nextCursor = result.nextCursor
@@ -1277,7 +1323,12 @@ class FeedViewModel @Inject constructor(
                     refreshFeedInfo()
                     _feedInfo.value?.let { feed -> applyFeedSort(feed) }
                 }
-                if (_currentSort.value != before) reloadPosts() else refreshSilently()
+                val now = _currentSort.value
+                if (now != before) {
+                    reloadPosts(restore = { if (_currentSort.value == now) _currentSort.value = before }, report = false)
+                } else {
+                    refreshSilently()
+                }
             }
         }
     }

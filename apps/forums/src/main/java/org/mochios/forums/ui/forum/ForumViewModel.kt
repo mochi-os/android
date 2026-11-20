@@ -26,6 +26,8 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.appendDistinct
+import org.mochios.android.util.mergeReload
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.R
 import org.mochios.forums.api.ForumTagCount
@@ -34,6 +36,7 @@ import org.mochios.forums.model.Forum
 import org.mochios.forums.model.forumServer
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.rejectMessage
+import org.mochios.forums.model.unique
 import org.mochios.forums.repository.ForumsRepository
 import org.mochios.forums.repository.SavedRepository
 import javax.inject.Inject
@@ -62,6 +65,8 @@ data class ForumUiState(
     /** The user's activity notifications for this forum; null until loaded,
      *  and for the aggregate, which has no single forum to notify about. */
     val notifications: NotificationSettings? = null,
+    /** Whether the forum's posts have been read, so the app may open on it next time. */
+    val loaded: Boolean = false,
 )
 
 /**
@@ -92,6 +97,26 @@ sealed class ForumEvent {
 /** What the server orders by when a request carries no sort. */
 private const val DEFAULT_SORT = "new"
 
+/** How many posts the server answers a request for a forum's posts with, unless asked for more. */
+private const val PAGE = 20
+
+/** The most posts the server answers one request with. */
+private const val LIMIT = 100
+
+/**
+ * The list a reload of a forum's first page leaves when the reader holds more
+ * than one request can read again: the [fresh] page, then the [held] posts
+ * after the last one it also holds, as the reader paged to them - see
+ * [mergeReload]. Null when the fresh page shares no post with the list, or
+ * leaves nothing after it, and replaces the list, its paging with it.
+ */
+internal fun fold(held: List<Post>, fresh: List<Post>): List<Post>? {
+    val ids = fresh.mapTo(HashSet()) { post -> post.id }
+    val seam = held.indexOfLast { post -> post.id in ids }
+    if (seam < 0) return null
+    return mergeReload(fresh, held.subList(seam + 1, held.size), fresh.last().id) { post -> post.id }
+}
+
 @HiltViewModel
 class ForumViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
@@ -115,8 +140,8 @@ class ForumViewModel @Inject constructor(
      *  each post card can show its bookmark filled/empty without awaiting. */
     val savedIds: StateFlow<Set<String>> = savedRepository.savedIds
 
-    /** Count of real-time new posts queued behind the refresh button's badge
-     *  rather than injected into the list while the user is reading. */
+    /** Count of real-time new posts, written in the bar beside the refresh
+     *  button rather than injected into the list while the user is reading. */
     private val _newPostsCount = MutableStateFlow(0)
     val newPostsCount: StateFlow<Int> = _newPostsCount.asStateFlow()
 
@@ -229,48 +254,54 @@ class ForumViewModel @Inject constructor(
     private fun subscribeWebSocket(forumKey: String) {
         if (forumKey.isBlank() || subscriptionId != null) return
         val serverUrl = sessionManager.getServerUrlBlocking()
+        // The socket calls back on its own thread. The frame is handled on the
+        // main one, where every other change to this screen's state is made.
         subscriptionId = webSocket.subscribe(serverUrl, forumKey, app = "forums") { event ->
-            // The forum was left, deleted or renamed: the held roster no longer
-            // says so, and the drawer reads it next.
-            if (event.type.orEmpty().startsWith("forum/")) repository.forget()
-            // The owner removed this user from the forum, or deleted it. The
-            // local replica is already purged, so a refresh would only fail.
-            if (event.type == "forum/removed" || event.type == "forum/deleted") {
-                _uiState.value = _uiState.value.copy(
-                    gone = if (event.type == "forum/removed") {
-                        R.string.forums_removed_from_forum
-                    } else {
-                        R.string.forums_forum_deleted
-                    },
-                )
-                return@subscribe
-            }
-            // New posts queue behind the count so the list doesn't shift;
-            // everything else mutates visible items, so refresh silently.
-            if (event.type == "post/create") {
-                // The user's own post shouldn't hide behind a count they'd have to
-                // tap. It arrives here when the create response beat the list
-                // query — pull it in rather than counting it.
-                if (isListed(event.post)) {
-                    awaitingOwnPost = false
-                } else if (awaitingOwnPost) {
-                    if (!hidden) {
-                        refreshLatest()
-                    }
+            viewModelScope.launch { frame(event) }
+        }
+    }
+
+    private fun frame(event: WebSocketEvent) {
+        // The forum was left, deleted or renamed: the held roster no longer
+        // says so, and the drawer reads it again.
+        if (event.type.orEmpty().startsWith("forum/")) repository.forget()
+        // The owner removed this user from the forum, or deleted it. The
+        // local replica is already purged, so a refresh would only fail.
+        if (event.type == "forum/removed" || event.type == "forum/deleted") {
+            _uiState.value = _uiState.value.copy(
+                gone = if (event.type == "forum/removed") {
+                    R.string.forums_removed_from_forum
                 } else {
-                    _newPostsCount.value += 1
-                }
-            } else {
-                // A rejection deletes the author's optimistic copy on the
-                // subscriber's server, so a silent refresh would just make
-                // their post vanish. Name the owner's reason first.
-                if (event.type == "post/reject" || event.type == "comment/reject") {
-                    val message = rejectMessage(event.reason, event.type == "comment/reject")
-                    viewModelScope.launch { _events.emit(ForumEvent.ShowMessage(message)) }
-                }
+                    R.string.forums_forum_deleted
+                },
+            )
+            return
+        }
+        // New posts queue behind the count so the list doesn't shift;
+        // everything else mutates visible items, so refresh silently.
+        if (event.type == "post/create") {
+            // The user's own post shouldn't hide behind a count they'd have to
+            // tap. It arrives here when the create response beat the list
+            // query — pull it in rather than counting it.
+            if (isListed(event.post)) {
+                awaitingOwnPost = false
+            } else if (awaitingOwnPost) {
                 if (!hidden) {
                     refreshLatest()
                 }
+            } else {
+                _newPostsCount.value += 1
+            }
+        } else {
+            // A rejection deletes the author's optimistic copy on the
+            // subscriber's server, so a silent refresh would just make
+            // their post vanish. Name the owner's reason first.
+            if (event.type == "post/reject" || event.type == "comment/reject") {
+                val message = rejectMessage(event.reason, event.type == "comment/reject")
+                viewModelScope.launch { _events.emit(ForumEvent.ShowMessage(message)) }
+            }
+            if (!hidden) {
+                refreshLatest()
             }
         }
     }
@@ -330,16 +361,25 @@ class ForumViewModel @Inject constructor(
         }
     }
 
-    /** Pull the latest list silently (no spinner) and clear the new-posts count,
-     *  since the fresh list already incorporates any queued posts. It may have
-     *  replaced a [refresh] under way, whose spinner is then this one's to end. */
+    /**
+     * Read the list again silently (no spinner) and clear the new-posts count,
+     * since the fresh list already incorporates any queued posts. Nobody asked
+     * for it, so the pages the reader has loaded stay: one request reads them
+     * all again where one can carry them, and past that the first page is read
+     * and [fold]ed over them. It may have replaced a [refresh] under way, whose
+     * spinner is then this one's to end.
+     */
     private suspend fun refreshSilently() {
         try {
-            val previousCount = _uiState.value.posts.size
+            val held = _uiState.value.posts
+            // Pinned posts come with every first page, beside the page's own.
+            val paged = held.count { post -> !post.pinned }
+            val whole = paged <= LIMIT
             val r = repository.viewForum(
                 forumId,
                 sort = _uiState.value.sort.ifEmpty { null },
                 tag = _uiState.value.currentTag,
+                limit = if (whole) paged.takeIf { count -> count > PAGE } else LIMIT,
             )
             if (resolving) {
                 // A sort saved elsewhere since lists the forum afresh in it.
@@ -350,19 +390,33 @@ class ForumViewModel @Inject constructor(
                     return
                 }
             }
-            _uiState.value = _uiState.value.copy(
-                forum = r.forum,
-                posts = r.posts,
-                canManage = r.can_manage,
-                canModerate = r.can_moderate,
-                hasMore = r.hasMore,
-                nextCursor = r.nextCursor,
-                cursor = r.cursor,
-                isRefreshing = false,
-            )
-            // The awaited post has landed once the list grows; anything arriving
-            // after this belongs to somebody else and gets counted.
-            if (r.posts.size > previousCount) awaitingOwnPost = false
+            val fresh = unique(r.posts)
+            val folded = if (whole) null else fold(held, fresh)
+            _uiState.value = if (folded != null) {
+                // The later pages stay, and so does where the next one resumes.
+                _uiState.value.copy(
+                    forum = r.forum,
+                    posts = folded,
+                    canManage = r.can_manage,
+                    canModerate = r.can_moderate,
+                    isRefreshing = false,
+                )
+            } else {
+                _uiState.value.copy(
+                    forum = r.forum,
+                    posts = fresh,
+                    canManage = r.can_manage,
+                    canModerate = r.can_moderate,
+                    hasMore = r.hasMore,
+                    nextCursor = r.nextCursor,
+                    cursor = r.cursor,
+                    isRefreshing = false,
+                )
+            }
+            // The awaited post has landed once the list holds one it did not;
+            // anything arriving after this belongs to somebody else and gets counted.
+            val known = held.mapTo(HashSet()) { post -> post.id }
+            if (fresh.any { post -> post.id !in known }) awaitingOwnPost = false
             _newPostsCount.value = 0
             loadTags()
         } catch (e: CancellationException) {
@@ -427,7 +481,7 @@ class ForumViewModel @Inject constructor(
                 }
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
-                    posts = r.posts,
+                    posts = unique(r.posts),
                     canManage = r.can_manage,
                     canModerate = r.can_moderate,
                     hasAi = r.hasAi,
@@ -435,7 +489,8 @@ class ForumViewModel @Inject constructor(
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
                     cursor = r.cursor,
-                    isLoading = false
+                    isLoading = false,
+                    loaded = true,
                 )
                 subscribeWebSocket(r.forum.fingerprint)
             } catch (e: Exception) {
@@ -456,7 +511,7 @@ class ForumViewModel @Inject constructor(
                 val r = repository.viewForum(forumId, sort = _uiState.value.sort.ifEmpty { null }, tag = _uiState.value.currentTag)
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
-                    posts = r.posts,
+                    posts = unique(r.posts),
                     canManage = r.can_manage,
                     canModerate = r.can_moderate,
                     hasMore = r.hasMore,
@@ -471,8 +526,21 @@ class ForumViewModel @Inject constructor(
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
+                failed(e.toMochiError())
             }
+        }
+    }
+
+    /**
+     * A refresh or a page that failed: over posts already shown it is said in
+     * a snackbar and the list stays; with none, the screen shows it in their place.
+     */
+    private suspend fun failed(error: MochiError) {
+        if (_uiState.value.posts.isEmpty()) {
+            _uiState.value = _uiState.value.copy(isRefreshing = false, isLoadingMore = false, error = error)
+        } else {
+            _uiState.value = _uiState.value.copy(isRefreshing = false, isLoadingMore = false)
+            _events.emit(ForumEvent.ShowError(error))
         }
     }
 
@@ -511,7 +579,7 @@ class ForumViewModel @Inject constructor(
                 val servers = r.forums.associate { forum -> forum.id to forumServer(forum) }
                 _uiState.value = _uiState.value.copy(
                     forum = Forum(),
-                    posts = r.posts.map { post ->
+                    posts = unique(r.posts).map { post ->
                         val named = if (post.forumName.isNotBlank()) post else post.copy(forumName = names[post.forum].orEmpty())
                         named.copy(forumServer = servers[post.forum].orEmpty())
                     },
@@ -526,13 +594,19 @@ class ForumViewModel @Inject constructor(
                     currentTag = null,
                     isLoading = false,
                     isRefreshing = false,
+                    loaded = true,
                 )
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    isRefreshing = false,
-                    error = e.toMochiError(),
-                )
+                val error = e.toMochiError()
+                when {
+                    !refreshing && !quiet -> _uiState.value = _uiState.value.copy(isLoading = false, error = error)
+                    // Coming back reads the list for nobody who asked; a failure
+                    // leaves the posts shown, and says nothing.
+                    quiet && _uiState.value.posts.isNotEmpty() -> _uiState.value = _uiState.value.copy(isRefreshing = false)
+                    else -> failed(error)
+                }
             }
         }
     }
@@ -561,7 +635,7 @@ class ForumViewModel @Inject constructor(
                     // page, and a scored list paged by position can repeat a
                     // post that moved up; duplicate ids would be duplicate
                     // LazyColumn keys, which Compose throws on.
-                    posts = appendDistinct(_uiState.value.posts, r.posts) { it.id },
+                    posts = appendDistinct(_uiState.value.posts, unique(r.posts)) { it.id },
                     hasMore = r.hasMore,
                     nextCursor = r.nextCursor,
                     cursor = r.cursor,
@@ -570,7 +644,7 @@ class ForumViewModel @Inject constructor(
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoadingMore = false, error = e.toMochiError())
+                failed(e.toMochiError())
             }
         }
     }
@@ -596,9 +670,10 @@ class ForumViewModel @Inject constructor(
         load(sort)
     }
 
+    /** Narrow the list to [tag]; the tag already set clears the filter. */
     fun setTagFilter(tag: String?) {
-        if (_uiState.value.currentTag == tag) return
-        _uiState.value = _uiState.value.copy(currentTag = tag)
+        val next = if (tag == _uiState.value.currentTag) null else tag
+        _uiState.value = _uiState.value.copy(currentTag = next)
         load(sort = _uiState.value.sort.ifEmpty { null })
     }
 
@@ -613,28 +688,6 @@ class ForumViewModel @Inject constructor(
                 val tags = repository.getForumTags(forumId)
                 _uiState.value = _uiState.value.copy(tags = tags)
             } catch (_: Exception) {
-            }
-        }
-    }
-
-    fun votePost(postId: String, vote: String) {
-        // In the aggregate each post belongs to a different forum, so vote against
-        // the post's own forum rather than the (synthetic) screen forum id.
-        val targetForum = if (isAll) {
-            _uiState.value.posts.firstOrNull { post -> post.id == postId }?.forum ?: forumId
-        } else {
-            forumId
-        }
-        viewModelScope.launch {
-            try {
-                repository.votePost(targetForum, postId, vote)
-                if (isAll) {
-                    refresh()
-                } else {
-                    refreshLatest()
-                }
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }
@@ -704,7 +757,6 @@ class ForumViewModel @Inject constructor(
         }
     }
 
-    /** Unsubscribe from this forum, then signal the screen to navigate away. */
     /**
      * Block a community joined on another network through a linked account:
      * the server drops it and the account no longer follows it.
@@ -722,6 +774,7 @@ class ForumViewModel @Inject constructor(
         }
     }
 
+    /** Unsubscribe from this forum, then signal the screen to navigate away. */
     fun unsubscribe() {
         if (forumId.isBlank() || isAll) return
         viewModelScope.launch {

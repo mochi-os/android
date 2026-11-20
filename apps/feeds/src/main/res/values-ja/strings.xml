@@ -281,7 +281,6 @@
     <string name="feeds_source_read_with">読み込みに使うアカウント</string>
     <string name="feeds_source_follow_pending">フォロー承認待ち</string>
     <string name="feeds_import_follows">ファイルからフォローをインポート</string>
-    <string name="feeds_follows_importing">%1$s 件のフォローをインポート中、これまでに %2$s 件を追加</string>
     <string name="feeds_publish_to_account">%1$s に公開</string>
     <string name="feeds_import_posts">投稿をインポート</string>
     <string name="feeds_import_bookmarks">ブックマークをインポート</string>
@@ -295,7 +294,6 @@
     <string name="feeds_generator_off">Bluesky フィードではなくなりました</string>
     <string name="feeds_generator_failed">Bluesky フィードを変更できませんでした</string>
     <string name="feeds_copies_delete_title">%1$s 上のコピーを削除しますか？</string>
-    <string name="feeds_copies_delete_message">このフィードはそこに %1$s 件の投稿を公開しました。削除しない限り残ります。</string>
     <string name="feeds_copies_delete">コピーを削除</string>
     <string name="feeds_copies_keep">残す</string>
     <string name="feeds_copies_delete_failed">コピーを削除できませんでした</string>
@@ -303,7 +301,6 @@
     <string name="feeds_import_failed">インポートできませんでした</string>
     <string name="feeds_imported">%1$s 件をインポートしました</string>
     <string name="feeds_imported_more">%1$s 件をインポートしました。残りも順次インポートされます</string>
-    <string name="feeds_import_sources_more">%1$s 件のソースを追加しました。残りも順次追加されます</string>
     <string name="feeds_waiting_title">権限を待っています</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s 人</item>
@@ -356,4 +353,20 @@
     <string name="feeds_filtered_by_tag">タグでフィルタリング中:</string>
     <string name="feeds_setup">設定</string>
     <string name="feeds_search_example">名前、ID、フィンガープリント、URL、または %1$s で検索</string>
+    <string name="feeds_member_remove_message">この人のこのフィードでのリアクションは削除されます。</string>
+    <string name="feeds_member_block_message">このフィードを閲覧できなくなります。</string>
+    <string name="feeds_member_block_title">%1$s をブロックしますか？</string>
+    <string name="feeds_member_remove_title">%1$s を削除しますか？</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="other">%s 件のフォローをインポート中</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="other">これまでに %s 件を追加</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="other">フィードはそこに %s 件の投稿を公開しました。削除しない限り残ります。</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="other">これまでに %s 件のソースを追加しました。残りも順次追加されます</item>
+    </plurals>
 </resources>

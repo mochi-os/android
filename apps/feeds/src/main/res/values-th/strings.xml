@@ -281,7 +281,6 @@
     <string name="feeds_source_read_with">อ่านด้วย</string>
     <string name="feeds_source_follow_pending">รอการติดตาม</string>
     <string name="feeds_import_follows">นำเข้าบัญชีที่ติดตามจากไฟล์</string>
-    <string name="feeds_follows_importing">กำลังนำเข้าบัญชีที่ติดตาม %1$s รายการ เพิ่มแล้ว %2$s รายการ</string>
     <string name="feeds_publish_to_account">เผยแพร่ไปยัง %1$s</string>
     <string name="feeds_import_posts">นำเข้าโพสต์</string>
     <string name="feeds_import_bookmarks">นำเข้าบุ๊กมาร์ก</string>
@@ -295,7 +294,6 @@
     <string name="feeds_generator_off">ไม่ได้เป็นฟีด Bluesky อีกต่อไป</string>
     <string name="feeds_generator_failed">ไม่สามารถเปลี่ยนฟีด Bluesky ได้</string>
     <string name="feeds_copies_delete_title">ลบสำเนาบน %1$s หรือไม่</string>
-    <string name="feeds_copies_delete_message">ฟีดเผยแพร่ %1$s โพสต์ที่นั่น โพสต์เหล่านั้นจะยังคงอยู่จนกว่าคุณจะลบ</string>
     <string name="feeds_copies_delete">ลบสำเนา</string>
     <string name="feeds_copies_keep">เก็บไว้</string>
     <string name="feeds_copies_delete_failed">ไม่สามารถลบสำเนาได้</string>
@@ -303,7 +301,6 @@
     <string name="feeds_import_failed">ไม่สามารถนำเข้าได้</string>
     <string name="feeds_imported">นำเข้าแล้ว %1$s รายการ</string>
     <string name="feeds_imported_more">นำเข้าแล้ว %1$s รายการ ส่วนที่เหลือจะตามมา</string>
-    <string name="feeds_import_sources_more">เพิ่มแล้ว %1$s แหล่งที่มา ส่วนที่เหลือจะตามมา</string>
     <string name="feeds_waiting_title">กำลังรอสิทธิ์</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s คน</item>
@@ -356,4 +353,20 @@
     <string name="feeds_filtered_by_tag">กรองตามแท็ก:</string>
     <string name="feeds_setup">ตั้งค่า</string>
     <string name="feeds_search_example">ค้นหาตามชื่อ ID ลายนิ้วมือ URL หรือ %1$s</string>
+    <string name="feeds_member_remove_message">รีแอ็กชันของบุคคลนี้ในฟีดนี้จะถูกลบ</string>
+    <string name="feeds_member_block_message">ผู้ใช้รายนี้จะไม่สามารถดูฟีดนี้ได้อีก</string>
+    <string name="feeds_member_block_title">บล็อก %1$s ไหม</string>
+    <string name="feeds_member_remove_title">นำ %1$s ออกไหม</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="other">กำลังนำเข้าบัญชีที่ติดตาม %s รายการ</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="other">เพิ่มแล้ว %s รายการ</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="other">ฟีดได้เผยแพร่โพสต์ %s รายการไว้ที่นั่น โพสต์เหล่านั้นจะยังอยู่จนกว่าคุณจะลบ</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="other">เพิ่ม %s แหล่งที่มาแล้ว ส่วนที่เหลือจะตามมา</item>
+    </plurals>
 </resources>

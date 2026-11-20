@@ -286,7 +286,6 @@
     <string name="feeds_source_read_with">Хондан бо ҳисоб</string>
     <string name="feeds_source_follow_pending">Обуна дар интизор</string>
     <string name="feeds_import_follows">Ворид кардани обунаҳо аз файл</string>
-    <string name="feeds_follows_importing">%1$s обуна ворид карда мешавад; то ҳол %2$s илова шуд</string>
     <string name="feeds_publish_to_account">Нашр дар %1$s</string>
     <string name="feeds_import_posts">Воридоти постҳо</string>
     <string name="feeds_import_bookmarks">Воридоти хатчӯбҳо</string>
@@ -300,7 +299,6 @@
     <string name="feeds_generator_off">Дигар фиди Bluesky нест</string>
     <string name="feeds_generator_failed">Фиди Bluesky-ро тағйир додан нашуд</string>
     <string name="feeds_copies_delete_title">Нусхаҳо дар %1$s нест карда шаванд?</string>
-    <string name="feeds_copies_delete_message">Фид дар он ҷо %1$s пост нашр кард. Онҳо то он даме ки нест накунед, боқӣ мемонанд.</string>
     <string name="feeds_copies_delete">Нест кардани нусхаҳо</string>
     <string name="feeds_copies_keep">Нигоҳ доштан</string>
     <string name="feeds_copies_delete_failed">Нусхаҳоро нест кардан нашуд</string>
@@ -308,7 +306,6 @@
     <string name="feeds_import_failed">Ворид кардан нашуд</string>
     <string name="feeds_imported">%1$s ворид карда шуд</string>
     <string name="feeds_imported_more">То ҳол %1$s ворид карда шуд; боқимонда баъдтар ворид мешавад</string>
-    <string name="feeds_import_sources_more">То ҳол %1$s манбаъ илова шуд; боқимонда баъдтар илова мешавад</string>
     <string name="feeds_waiting_title">Интизори иҷозат</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s нафар</item>
@@ -369,4 +366,20 @@
     <string name="feeds_filtered_by_tag">Бо нишона филтр карда шуд:</string>
     <string name="feeds_setup">Танзим кардан</string>
     <string name="feeds_search_example">Ҷустуҷӯ аз рӯи ном, ID, изи ангушт, URL ё %1$s</string>
+    <string name="feeds_member_remove_message">Аксуламалҳои ин шахс дар ин фид нест карда мешаванд.</string>
+    <string name="feeds_member_block_message">Ӯ дигар ин фидро дида наметавонад.</string>
+    <string name="feeds_member_block_title">%1$s баста шавад?</string>
+    <string name="feeds_member_remove_title">%1$s хориҷ карда шавад?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="other">%s обуна ворид карда мешавад</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="other">то ҳол %s илова шуд</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="other">Фид дар он ҷо %s пост нашр кард. Агар шумо онҳоро нест накунед, онҳо мемонанд.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="other">То ҳол %s манбаъ илова шуд; боқимонда баъдтар илова мешавад</item>
+    </plurals>
 </resources>

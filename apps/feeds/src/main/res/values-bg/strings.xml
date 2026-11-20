@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Чети с</string>
     <string name="feeds_source_follow_pending">Последването чака одобрение</string>
     <string name="feeds_import_follows">Импортирай последвани от файл</string>
-    <string name="feeds_follows_importing">Импортиране на последвани: %1$s; досега добавени: %2$s</string>
     <string name="feeds_publish_to_account">Публикуване в %1$s</string>
     <string name="feeds_import_posts">Импортирай публикации</string>
     <string name="feeds_import_bookmarks">Импортирай отметки</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Вече не е емисия в Bluesky</string>
     <string name="feeds_generator_failed">Емисията в Bluesky не можа да бъде променена</string>
     <string name="feeds_copies_delete_title">Да се изтрият ли копията в %1$s?</string>
-    <string name="feeds_copies_delete_message">Емисията е публикувала там %1$s публикации. Те остават, освен ако не ги изтриете.</string>
     <string name="feeds_copies_delete">Изтрий копията</string>
     <string name="feeds_copies_keep">Запази</string>
     <string name="feeds_copies_delete_failed">Копията не можаха да бъдат изтрити</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Импортирането не бе успешно</string>
     <string name="feeds_imported">Импортирани: %1$s</string>
     <string name="feeds_imported_more">Досега са импортирани %1$s; останалите следват</string>
-    <string name="feeds_import_sources_more">Досега са добавени %1$s източника; останалите следват</string>
     <string name="feeds_waiting_title">Изчакване на разрешение</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s човек</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Филтрирано по таг:</string>
     <string name="feeds_setup">Настройка</string>
     <string name="feeds_search_example">Търси по име, ID, отпечатък, URL или адрес %1$s</string>
+    <string name="feeds_member_remove_message">Реакциите на този човек в тази емисия се изтриват.</string>
+    <string name="feeds_member_block_message">Вече няма да може да вижда тази емисия.</string>
+    <string name="feeds_member_block_title">Да се блокира ли %1$s?</string>
+    <string name="feeds_member_remove_title">Да се премахне ли %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Импортира се %s последван</item>
+        <item quantity="other">Импортират се %s последвани</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">досега е добавен %s</item>
+        <item quantity="other">досега са добавени %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Емисията е публикувала там %s публикация. Тя остава, освен ако не я изтриете.</item>
+        <item quantity="other">Емисията е публикувала там %s публикации. Те остават, освен ако не ги изтриете.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Досега е добавен %s източник; останалите следват</item>
+        <item quantity="other">Досега са добавени %s източника; останалите следват</item>
+    </plurals>
 </resources>

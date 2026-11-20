@@ -360,7 +360,7 @@ class ForumRosterTest {
 
     @Test
     fun `a forum renamed, left or deleted while one of its posts is open drops the held roster`() {
-        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "f1", "postId" to "p1")), context, repository, session, socket)
+        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "f1", "postId" to "p1")), repository, session, socket)
         until { model.uiState.value.post.id == "p1" && live != null }
         settle()
         dropsOn("forum/update")

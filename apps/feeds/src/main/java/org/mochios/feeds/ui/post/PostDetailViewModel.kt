@@ -5,7 +5,6 @@
 
 package org.mochios.feeds.ui.post
 
-import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -27,6 +26,7 @@ import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.UndoChain
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.REOPEN
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Permissions
 import org.mochios.feeds.model.Post
@@ -48,7 +48,6 @@ class PostDetailViewModel @Inject constructor(
     private val repository: FeedsRepository,
     private val webSocket: MochiWebSocket,
     private val sessionManager: SessionManager,
-    private val application: Application
 ) : ViewModel() {
 
     /** The picked file's real name, for labelling a draft attachment. */
@@ -238,13 +237,17 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
+    /** React to the post, "none" taking the reader's reaction back; a
+     *  refusal leaves the post as it was and says why. */
     fun reactToPost(reaction: String) {
         viewModelScope.launch {
             try {
                 repository.reactToPost(feedId, postId, reaction)
                 _post.value = _post.value?.copy(myReaction = applied(reaction))
-            } catch (_: Exception) {
-                refreshPost()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _actionError.value = e.toMochiError()
             }
         }
     }
@@ -285,7 +288,6 @@ class PostDetailViewModel @Inject constructor(
                         body = body,
                         parent = _replyingTo.value,
                         files = files,
-                        context = application,
                         attachment = anchor,
                         tracker = commentTracker,
                     )
@@ -537,8 +539,8 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
-    /** Block, mute or report the person on another network behind a comment. */
-    /** Block, mute or report a commenter; [onDone] says whether the server took it. */
+    /** Block, mute or report the person on another network behind a
+     *  comment; [onDone] says whether the server took it. */
     fun moderate(commentId: String, action: String, reason: String = "", onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
@@ -576,27 +578,32 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Frames arrive on the socket's own thread; each is handed to the main
+     * thread, where the post's fetch and the taps' holds are kept, so they
+     * are touched from one thread.
+     */
     private fun subscribeToWebSocket() {
         if (feedId.isEmpty()) return
         val serverUrl = sessionManager.getServerUrlBlocking()
         subscriptionId = webSocket.subscribe(serverUrl, feedId, app = "feeds") { event ->
-            // The socket was down: a comment or reaction sent meanwhile is gone.
-            if (event.type == REOPEN) {
-                refreshPost()
-                return@subscribe
-            }
-            if (event.post == postId) {
-                // Server event types are slash-namespaced (feeds.star commit
-                // hook + handlers); the old underscore names never matched.
-                when (event.type) {
-                    "comment/create", "comment/delete", "comment/edit",
-                    "react/post", "react/comment", "post/edit",
-                    "tag/add", "tag/remove" -> {
-                        refreshPost()
-                    }
-                }
-            }
+            viewModelScope.launch { onFrame(event) }
         }
+    }
+
+    /**
+     * Fetch the post again for a frame about it, or for the socket opening
+     * again after a gap. While a tap waits on the server the fetch is held
+     * until none does, as a fetch landing before the answer would put the
+     * old value back over the tap's guess.
+     */
+    internal fun onFrame(event: WebSocketEvent) {
+        // The socket was down: a comment or reaction sent meanwhile is gone.
+        // Server event types are slash-namespaced (feeds.star commit hook and
+        // handlers).
+        val about = event.type == REOPEN || event.post == postId && event.type in FRAMES
+        if (!about) return
+        if (waiting > 0) stopped = true else refreshPost()
     }
 
     private suspend fun refreshSilently() {
@@ -618,3 +625,10 @@ class PostDetailViewModel @Inject constructor(
 
 /** The post route's argument naming the comment it is opened on. */
 private const val COMMENT = "comment"
+
+/** The frames that say something about a post has changed. */
+private val FRAMES = setOf(
+    "comment/create", "comment/delete", "comment/edit",
+    "react/post", "react/comment", "post/edit",
+    "tag/add", "tag/remove",
+)

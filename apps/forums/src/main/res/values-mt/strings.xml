@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">L-ebda attività tal-moderaturi s\'issa</string>
     <string name="forums_moderation_log_meta">Minn %1$s · Mira %2$s</string>
     <string name="forums_moderation_restriction_add">Żid restrizzjoni</string>
-    <string name="forums_moderation_restriction_user">Identità tal-utent</string>
     <string name="forums_moderation_restriction_type_shadowban">Projbizzjoni moħbija</string>
-    <string name="forums_moderation_restriction_duration_seconds">Tul (sekondi, ħalli vojt għal permanenti)</string>
     <string name="forums_moderation_restriction_expires">Tiskadi %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanenti</string>
     <string name="forums_report_reason_hate">Mibegħda</string>
@@ -201,7 +199,6 @@
     <string name="forums_settings_field_name">Isem</string>
     <string name="forums_settings_field_entity_id">ID tal-entità</string>
     <string name="forums_settings_field_fingerprint_label">Marka tas-swaba\'</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Editja l-isem</string>
     <string name="forums_settings_name_cancel_cd">Ikkanċella l-editjar</string>
     <string name="forums_settings_save_name">Issejvja l-isem</string>
@@ -311,8 +308,6 @@
     <string name="forums_import_settings">Importa l-issettjar</string>
     <string name="forums_communities_add">Żid komunitajiet</string>
     <string name="forums_communities_add_failed">Ma setgħux jiżdiedu l-komunitajiet</string>
-    <string name="forums_imported_settings">Importati: komunitajiet %1$s, imblokkar %2$s, posts salvati %3$s</string>
-    <string name="forums_imported_settings_more">S\'issa importati: komunitajiet %1$s, imblokkar %2$s, posts salvati %3$s; il-bqija ġejjin</string>
     <string name="forums_import_failed">L-importazzjoni ma rnexxietx</string>
     <string name="forums_community">Komunità</string>
     <string name="forums_community_name">Isem tal-komunità</string>
@@ -344,4 +339,44 @@
     <string name="forums_community_destination">Jiġi ppubblikat fil-komunità %1$s bħala %2$s</string>
     <string name="forums_find_search_example">Fittex skond isem, ID, fingerprint, URL, jew %1$s</string>
     <string name="forums_setup">Issettja</string>
+    <string name="forums_post_remove_title">Neħħi post</string>
+    <string name="forums_post_remove_message">Dan se jaħbi l-post minn utenti regolari. Il-moderaturi xorta jistgħu jarawh u jirrestawrawh aktar tard.</string>
+    <string name="forums_comment_remove_title">Neħħi kumment</string>
+    <string name="forums_comment_remove_message">Dan se jaħbi l-kumment minn utenti regolari. Il-moderaturi xorta jistgħu jarawh u jirrestawrawh aktar tard.</string>
+    <string name="forums_report_submitted">Rapport sottomess</string>
+    <string name="forums_member_remove_message">Il-voti ta\' din il-persuna f\'dan il-forum jitħassru.</string>
+    <string name="forums_member_block_message">Mhux se jkun jista\' jara dan il-forum aktar.</string>
+    <string name="forums_member_block_title">Timblokka lil %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Imwarrab</string>
+    <string name="forums_moderation_restriction_member">Membru</string>
+    <string name="forums_moderation_restriction_duration">Tul</string>
+    <string name="forums_moderation_duration_hour">Siegħa</string>
+    <string name="forums_moderation_duration_day">Jum</string>
+    <string name="forums_moderation_duration_week">Ġimgħa</string>
+    <string name="forums_moderation_duration_month">Xahar</string>
+    <string name="forums_member_remove">Neħħi</string>
+    <string name="forums_member_remove_title">Tneħħi lil %1$s?</string>
+    <string name="forums_imported">Importati: %1$s</string>
+    <string name="forums_imported_more">S\'issa importati: %1$s; il-bqija ġejjin</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s komunità</item>
+        <item quantity="two">%s komunitajiet</item>
+        <item quantity="few">%s komunitajiet</item>
+        <item quantity="many">%s komunità</item>
+        <item quantity="other">%s komunità</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s imblokkar</item>
+        <item quantity="two">%s imblokkar</item>
+        <item quantity="few">%s imblokkar</item>
+        <item quantity="many">%s imblokkar</item>
+        <item quantity="other">%s imblokkar</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s post issejvjat</item>
+        <item quantity="two">%s posts issejvjati</item>
+        <item quantity="few">%s posts issejvjati</item>
+        <item quantity="many">%s post issejvjat</item>
+        <item quantity="other">%s post issejvjat</item>
+    </plurals>
 </resources>

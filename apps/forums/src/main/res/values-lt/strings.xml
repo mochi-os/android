@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Moderatoriaus veiklos dar nėra</string>
     <string name="forums_moderation_log_meta">Atliko %1$s · Taikinys %2$s</string>
     <string name="forums_moderation_restriction_add">Pridėti apribojimą</string>
-    <string name="forums_moderation_restriction_user">Naudotojo tapatybė</string>
     <string name="forums_moderation_restriction_type_shadowban">Šešėlinis blokavimas</string>
-    <string name="forums_moderation_restriction_duration_seconds">Trukmė (sekundėmis, palikite tuščią, jei nuolatinis)</string>
     <string name="forums_moderation_restriction_expires">Galioja iki %1$s</string>
     <string name="forums_moderation_restriction_permanent">Nuolatinis</string>
     <string name="forums_report_reason_hate">Neapykanta</string>
@@ -200,7 +198,6 @@
     <string name="forums_settings_field_name">Pavadinimas</string>
     <string name="forums_settings_field_entity_id">Subjekto ID</string>
     <string name="forums_settings_field_fingerprint_label">Pirštų atspaudas</string>
-    <string name="forums_settings_field_server">Serveris</string>
     <string name="forums_settings_name_edit_cd">Redaguoti pavadinimą</string>
     <string name="forums_settings_name_cancel_cd">Atšaukti redagavimą</string>
     <string name="forums_settings_save_name">Išsaugoti pavadinimą</string>
@@ -310,8 +307,6 @@
     <string name="forums_import_settings">Importuoti nustatymus</string>
     <string name="forums_communities_add">Pridėti bendruomenes</string>
     <string name="forums_communities_add_failed">Nepavyko pridėti bendruomenių</string>
-    <string name="forums_imported_settings">Importuota: bendruomenių – %1$s, blokavimų – %2$s, išsaugotų įrašų – %3$s</string>
-    <string name="forums_imported_settings_more">Kol kas importuota: bendruomenių – %1$s, blokavimų – %2$s, išsaugotų įrašų – %3$s; likę bus importuoti vėliau</string>
     <string name="forums_import_failed">Nepavyko importuoti</string>
     <string name="forums_community">Bendruomenė</string>
     <string name="forums_community_name">Bendruomenės vardas</string>
@@ -341,4 +336,38 @@
     <string name="forums_community_destination">Skelbiama bendruomenėje %1$s kaip %2$s</string>
     <string name="forums_find_search_example">Ieškoti pagal pavadinimą, ID, atspaudą, URL ar adresą %1$s</string>
     <string name="forums_setup">Nustatyti</string>
+    <string name="forums_post_remove_title">Šalinti įrašą</string>
+    <string name="forums_post_remove_message">Tai paslėps įrašą nuo įprastų vartotojų. Moderatoriai vis tiek galės jį matyti ir vėliau atkurti.</string>
+    <string name="forums_comment_remove_title">Šalinti komentarą</string>
+    <string name="forums_comment_remove_message">Tai paslėps komentarą nuo įprastų vartotojų. Moderatoriai vis tiek galės jį matyti ir vėliau atkurti.</string>
+    <string name="forums_report_submitted">Pranešimas pateiktas</string>
+    <string name="forums_member_remove_message">Šio asmens balsai šiame forume ištrinami.</string>
+    <string name="forums_member_block_message">Jis nebegalės matyti šio forumo.</string>
+    <string name="forums_member_block_title">Blokuoti %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Atmesta</string>
+    <string name="forums_moderation_restriction_member">Narys</string>
+    <string name="forums_moderation_restriction_duration">Trukmė</string>
+    <string name="forums_moderation_duration_hour">Viena valanda</string>
+    <string name="forums_moderation_duration_day">Viena diena</string>
+    <string name="forums_moderation_duration_week">Viena savaitė</string>
+    <string name="forums_moderation_duration_month">Vienas mėnuo</string>
+    <string name="forums_member_remove">Šalinti</string>
+    <string name="forums_member_remove_title">Šalinti %1$s?</string>
+    <string name="forums_imported">Importuota: %1$s</string>
+    <string name="forums_imported_more">Kol kas importuota: %1$s; likę bus importuoti vėliau</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s bendruomenė</item>
+        <item quantity="few">%s bendruomenės</item>
+        <item quantity="other">%s bendruomenių</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokavimas</item>
+        <item quantity="few">%s blokavimai</item>
+        <item quantity="other">%s blokavimų</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s išsaugotas įrašas</item>
+        <item quantity="few">%s išsaugoti įrašai</item>
+        <item quantity="other">%s išsaugotų įrašų</item>
+    </plurals>
 </resources>

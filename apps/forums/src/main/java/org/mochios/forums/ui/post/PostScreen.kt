@@ -106,7 +106,6 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.Upload
-import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.i18n.formatTimestamp
@@ -178,6 +177,8 @@ fun PostScreen(
     var draft by remember { mutableStateOf(TextFieldValue("")) }
     var showDeletePostConfirm by remember { mutableStateOf(false) }
     var commentToDelete by remember { mutableStateOf<ForumComment?>(null) }
+    var showRemovePostConfirm by remember { mutableStateOf(false) }
+    var commentToRemove by remember { mutableStateOf<ForumComment?>(null) }
     var editingId by rememberSaveable { mutableStateOf<String?>(null) }
     var editText by rememberSaveable { mutableStateOf("") }
     var showReportPost by remember { mutableStateOf(false) }
@@ -196,6 +197,10 @@ fun PostScreen(
         val done = uiState.done ?: return@LaunchedEffect
         snackbar.showSnackbar(resources.getString(done))
         viewModel.clearDone()
+    }
+    // An action the server refused, said over the post, which stays as it is.
+    LaunchedEffect(viewModel) {
+        viewModel.errors.collect { error -> snackbar.showSnackbar(error.userMessage()) }
     }
     var showPostMenu by remember { mutableStateOf(false) }
     val isPostAuthor = uiState.post.member == uiState.identity && uiState.identity.isNotBlank()
@@ -250,7 +255,7 @@ fun PostScreen(
         },
         onDelete = { commentToDelete = it },
         onApprove = { viewModel.approveComment(it.id) },
-        onRemove = { viewModel.removeComment(it.id) },
+        onRemove = { commentToRemove = it },
         onRestore = { viewModel.restoreComment(it.id) },
         onReport = { reportingComment = it },
         // Quoting cites a comment; it does not thread under it. Only Reply sets
@@ -266,11 +271,14 @@ fun PostScreen(
         editing = editingId,
         editText = editText,
         onEditTextChange = { text -> editText = text },
+        // The edit box closes once the server has the edit; refused, it stays
+        // open with what was typed.
         onSaveEdit = {
             val id = editingId
             if (id != null && editText.isNotBlank()) {
-                viewModel.editComment(id, editText.trim())
-                editingId = null
+                viewModel.editComment(id, editText.trim()) {
+                    if (editingId == id) editingId = null
+                }
             }
         },
         onCancelEdit = { editingId = null },
@@ -301,7 +309,7 @@ fun PostScreen(
             onAddAttachments = { uris -> viewModel.addCommentAttachments(uris) },
             onRemoveAttachment = { uri -> viewModel.removeCommentAttachment(uri) },
             resolveFileName = viewModel::fileName,
-            onSend = { text -> viewModel.submitComment(text, anchor = att.id) },
+            onSend = { text, sent -> viewModel.submitComment(text, anchor = att.id, onSent = sent) },
         )
     }
     val attachmentCommentCount: (Attachment) -> Int = { att ->
@@ -396,7 +404,7 @@ fun PostScreen(
                                 onLock = viewModel::lockPost,
                                 onUnlock = viewModel::unlockPost,
                                 onApprove = viewModel::approvePost,
-                                onRemove = viewModel::removePost,
+                                onRemove = { showRemovePostConfirm = true },
                                 onRestore = viewModel::restorePost,
                                 onReport = { showReportPost = true },
                                 onQuote = {
@@ -525,9 +533,14 @@ fun PostScreen(
                         ComposeBar(
                             value = draft,
                             onValueChange = { value -> draft = value },
+                            // The words stay until the server has the comment,
+                            // and stay when it is refused. Anything typed while
+                            // it went is kept too.
                             onSend = {
-                                viewModel.submitComment(draft.text)
-                                draft = TextFieldValue("")
+                                val sent = draft.text
+                                viewModel.submitComment(sent) {
+                                    if (draft.text == sent) draft = TextFieldValue("")
+                                }
                             },
                             placeholder = stringResource(R.string.forums_write_comment),
                             enabled = !uiState.post.locked,
@@ -591,6 +604,36 @@ fun PostScreen(
             onConfirm = {
                 showDeletePostConfirm = false
                 viewModel.deletePost()
+            },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
+    }
+
+    if (showRemovePostConfirm) {
+        MochiAlertDialog(
+            onDismissRequest = { showRemovePostConfirm = false },
+            title = stringResource(R.string.forums_post_remove_title),
+            text = stringResource(R.string.forums_post_remove_message),
+            confirmText = stringResource(R.string.forums_post_remove),
+            onConfirm = {
+                showRemovePostConfirm = false
+                viewModel.removePost()
+            },
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+        )
+    }
+
+    commentToRemove?.let { c ->
+        MochiAlertDialog(
+            onDismissRequest = { commentToRemove = null },
+            title = stringResource(R.string.forums_comment_remove_title),
+            text = stringResource(R.string.forums_comment_remove_message),
+            confirmText = stringResource(R.string.forums_comment_remove),
+            onConfirm = {
+                commentToRemove = null
+                viewModel.removeComment(c.id)
             },
             destructive = true,
             dismissText = stringResource(MochiR.string.common_cancel),
@@ -1086,7 +1129,8 @@ private fun LazyListScope.commentsItems(
 ) {
     rows.forEach { row ->
         val c = row.comment
-        item(key = c.id) {
+        // Prefixed, so no comment's id can match a fixed key such as "all_comments".
+        item(key = "comment/" + c.id) {
             val isAuthor = c.member == currentIdentity && currentIdentity.isNotBlank()
             val canEditThis = isAuthor || canManage
             CommentCard(
@@ -1151,7 +1195,8 @@ private fun AttachmentComments(
     onAddAttachments: (List<Uri>) -> Unit,
     onRemoveAttachment: (Uri) -> Unit,
     resolveFileName: suspend (Uri) -> String,
-    onSend: (String) -> Unit,
+    // The text to send, and what to do once the server has it.
+    onSend: (String, () -> Unit) -> Unit,
 ) {
     var showAll by rememberSaveable(attachmentId) { mutableStateOf(false) }
     val collapsed = rememberCollapsedComments()
@@ -1233,8 +1278,10 @@ private fun AttachmentComments(
                 value = draft,
                 onValueChange = { draft = it },
                 onSend = {
-                    onSend(draft.text)
-                    draft = TextFieldValue("")
+                    val sent = draft.text
+                    onSend(sent) {
+                        if (draft.text == sent) draft = TextFieldValue("")
+                    }
                 },
                 placeholder = stringResource(MochiR.string.lightbox_comment_placeholder),
                 isSending = isSending,
@@ -1456,15 +1503,4 @@ private fun quoteText(body: String, currentDraft: String): String {
     } + "\n\n"
     return if (currentDraft.isBlank()) quoted else "$quoted$currentDraft"
 }
-
-/**
- * The provider's display name for [uri]. A `content://` path segment is an
- * opaque id, so the picker's chip would otherwise read "1000000042".
- */
-@Composable
-private fun rememberFileName(
-    uri: Uri,
-    fallback: String,
-    resolve: suspend (Uri) -> String,
-): String = rememberFileLabel(uri, resolve, fallback)
 

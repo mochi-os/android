@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Dim gweithgaredd cymedrolwr eto</string>
     <string name="forums_moderation_log_meta">Gan %1$s · Targed %2$s</string>
     <string name="forums_moderation_restriction_add">Ychwanegu cyfyngiad</string>
-    <string name="forums_moderation_restriction_user">Hunaniaeth defnyddiwr</string>
     <string name="forums_moderation_restriction_type_shadowban">Gwahardd cudd</string>
-    <string name="forums_moderation_restriction_duration_seconds">Hyd (eiliadau, gwag am barhaol)</string>
     <string name="forums_moderation_restriction_expires">Yn dod i ben %1$s</string>
     <string name="forums_moderation_restriction_permanent">Parhaol</string>
     <string name="forums_report_reason_hate">Casineb</string>
@@ -202,7 +200,6 @@
     <string name="forums_settings_field_name">Enw</string>
     <string name="forums_settings_field_entity_id">ID endid</string>
     <string name="forums_settings_field_fingerprint_label">Olion bysedd</string>
-    <string name="forums_settings_field_server">Gweinydd</string>
     <string name="forums_settings_name_edit_cd">Golygu enw</string>
     <string name="forums_settings_name_cancel_cd">Canslo golygu</string>
     <string name="forums_settings_save_name">Cadw’r enw</string>
@@ -312,8 +309,6 @@
     <string name="forums_import_settings">Mewnforio gosodiadau</string>
     <string name="forums_communities_add">Ychwanegu cymunedau</string>
     <string name="forums_communities_add_failed">Methu ychwanegu\'r cymunedau</string>
-    <string name="forums_imported_settings">Mewnforiwyd %1$s cymuned, %2$s gweinydd wedi\'u blocio a %3$s postiad wedi\'u cadw</string>
-    <string name="forums_imported_settings_more">Mewnforiwyd %1$s cymuned, %2$s gweinydd wedi\'u blocio a %3$s postiad wedi\'u cadw hyd yma; bydd y gweddill yn dilyn</string>
     <string name="forums_import_failed">Methu mewnforio</string>
     <string name="forums_community">Cymuned</string>
     <string name="forums_community_name">Enw\'r gymuned</string>
@@ -346,4 +341,47 @@
     <string name="forums_community_destination">Yn postio i %1$s fel %2$s</string>
     <string name="forums_find_search_example">Chwilio yn ôl enw, ID, ôl bys, URL, neu %1$s</string>
     <string name="forums_setup">Gosod</string>
+    <string name="forums_post_remove_title">Tynnu postiad</string>
+    <string name="forums_post_remove_message">Bydd hyn yn cuddio\'r postiad rhag defnyddwyr rheolaidd. Gall cymedrolwyr ei weld o hyd a\'i adfer yn ddiweddarach.</string>
+    <string name="forums_comment_remove_title">Tynnu sylw</string>
+    <string name="forums_comment_remove_message">Bydd hyn yn cuddio\'r sylw rhag defnyddwyr rheolaidd. Gall cymedrolwyr ei weld o hyd a\'i adfer yn ddiweddarach.</string>
+    <string name="forums_report_submitted">Adroddiad wedi\'i gyflwyno</string>
+    <string name="forums_member_remove_message">Caiff pleidleisiau\'r person hwn yn y fforwm hwn eu dileu.</string>
+    <string name="forums_member_block_message">Ni fydd yn gallu gweld y fforwm hwn mwyach.</string>
+    <string name="forums_member_block_title">Blocio %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Wedi\'i ddiystyru</string>
+    <string name="forums_moderation_restriction_member">Aelod</string>
+    <string name="forums_moderation_restriction_duration">Hyd</string>
+    <string name="forums_moderation_duration_hour">Awr</string>
+    <string name="forums_moderation_duration_day">Diwrnod</string>
+    <string name="forums_moderation_duration_week">Wythnos</string>
+    <string name="forums_moderation_duration_month">Mis</string>
+    <string name="forums_member_remove">Tynnu</string>
+    <string name="forums_member_remove_title">Tynnu %1$s?</string>
+    <string name="forums_imported">Mewnforiwyd %1$s</string>
+    <string name="forums_imported_more">Mewnforiwyd %1$s hyd yma; bydd y gweddill yn dilyn</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="zero">%s cymuned</item>
+        <item quantity="one">%s gymuned</item>
+        <item quantity="two">%s gymuned</item>
+        <item quantity="few">%s cymuned</item>
+        <item quantity="many">%s chymuned</item>
+        <item quantity="other">%s cymuned</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="zero">%s bloc</item>
+        <item quantity="one">%s bloc</item>
+        <item quantity="two">%s floc</item>
+        <item quantity="few">%s bloc</item>
+        <item quantity="many">%s bloc</item>
+        <item quantity="other">%s bloc</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="zero">%s postiad wedi\'u cadw</item>
+        <item quantity="one">%s postiad wedi\'i gadw</item>
+        <item quantity="two">%s bostiad wedi\'u cadw</item>
+        <item quantity="few">%s phostiad wedi\'u cadw</item>
+        <item quantity="many">%s phostiad wedi\'u cadw</item>
+        <item quantity="other">%s postiad wedi\'u cadw</item>
+    </plurals>
 </resources>

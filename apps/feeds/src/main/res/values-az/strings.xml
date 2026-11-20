@@ -290,7 +290,6 @@
     <string name="feeds_source_read_with">Oxuma hesabı</string>
     <string name="feeds_source_follow_pending">İzləmə gözləmədədir</string>
     <string name="feeds_import_follows">İzlənən hesabları fayldan idxal et</string>
-    <string name="feeds_follows_importing">%1$s izlənən hesab idxal edilir; indiyədək %2$s əlavə edildi</string>
     <string name="feeds_publish_to_account">%1$s hesabına dərc et</string>
     <string name="feeds_import_posts">Postları idxal et</string>
     <string name="feeds_import_bookmarks">Əlfəcinləri idxal et</string>
@@ -304,7 +303,6 @@
     <string name="feeds_generator_off">Artıq Bluesky lenti deyil</string>
     <string name="feeds_generator_failed">Bluesky lentini dəyişmək mümkün olmadı</string>
     <string name="feeds_copies_delete_title">%1$s üzərindəki nüsxələr silinsin?</string>
-    <string name="feeds_copies_delete_message">Lent orada %1$s post dərc edib. Siz silməsəniz, onlar qalır.</string>
     <string name="feeds_copies_delete">Nüsxələri sil</string>
     <string name="feeds_copies_keep">Saxla</string>
     <string name="feeds_copies_delete_failed">Nüsxələr silinə bilmədi</string>
@@ -312,7 +310,6 @@
     <string name="feeds_import_failed">İdxal etmək mümkün olmadı</string>
     <string name="feeds_imported">%1$s idxal edildi</string>
     <string name="feeds_imported_more">İndiyədək %1$s idxal edildi; qalanları ardınca gələcək</string>
-    <string name="feeds_import_sources_more">İndiyədək %1$s mənbə əlavə edildi; qalanları ardınca gələcək</string>
     <string name="feeds_waiting_title">İcazə gözlənilir</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s nəfər</item>
@@ -375,4 +372,24 @@
     <string name="feeds_filtered_by_tag">Etiketə görə filtrləndi:</string>
     <string name="feeds_setup">Quraşdır</string>
     <string name="feeds_search_example">Ad, ID, fingerprint, URL və ya %1$s ilə axtar</string>
+    <string name="feeds_member_remove_message">Bu şəxsin bu lentdəki reaksiyaları silinir.</string>
+    <string name="feeds_member_block_message">O, bu lenti artıq görə bilməyəcək.</string>
+    <string name="feeds_member_block_title">%1$s bloklansın?</string>
+    <string name="feeds_member_remove_title">%1$s silinsin?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s izlənən hesab idxal edilir</item>
+        <item quantity="other">%s izlənən hesab idxal edilir</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">indiyədək %s əlavə edildi</item>
+        <item quantity="other">indiyədək %s əlavə edildi</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Lent oraya %s yazı dərc edib. Siz silməsəniz, orada qalacaq.</item>
+        <item quantity="other">Lent oraya %s yazı dərc edib. Siz silməsəniz, onlar orada qalacaq.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">İndiyədək %s mənbə əlavə edildi; qalanları ardınca gələcək</item>
+        <item quantity="other">İndiyədək %s mənbə əlavə edildi; qalanları ardınca gələcək</item>
+    </plurals>
 </resources>

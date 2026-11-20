@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Oʻqish hisobi</string>
     <string name="feeds_source_follow_pending">Obuna kutilmoqda</string>
     <string name="feeds_import_follows">Obunalarni fayldan import qilish</string>
-    <string name="feeds_follows_importing">%1$s ta obuna import qilinmoqda; hozircha %2$s ta qoʻshildi</string>
     <string name="feeds_publish_to_account">Nashr qilish: %1$s</string>
     <string name="feeds_import_posts">Postlarni import qilish</string>
     <string name="feeds_import_bookmarks">Xatchoʻplarni import qilish</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Endi Bluesky tasmasi emas</string>
     <string name="feeds_generator_failed">Bluesky tasmasini oʻzgartirib boʻlmadi</string>
     <string name="feeds_copies_delete_title">%1$s hisobidagi nusxalar oʻchirilsinmi?</string>
-    <string name="feeds_copies_delete_message">Tasma u yerda %1$s ta post nashr qildi. Siz oʻchirmaguningizcha ular qoladi.</string>
     <string name="feeds_copies_delete">Nusxalarni oʻchirish</string>
     <string name="feeds_copies_keep">Saqlab qolish</string>
     <string name="feeds_copies_delete_failed">Nusxalarni oʻchirib boʻlmadi</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Import qilib boʻlmadi</string>
     <string name="feeds_imported">%1$s ta import qilindi</string>
     <string name="feeds_imported_more">Hozircha %1$s ta import qilindi; qolganlari keyinroq qoʻshiladi</string>
-    <string name="feeds_import_sources_more">Hozircha %1$s ta manba qoʻshildi; qolganlari keyinroq qoʻshiladi</string>
     <string name="feeds_waiting_title">Ruxsat kutilmoqda</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s kishi</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Yorliq boʻyicha filtrlangan:</string>
     <string name="feeds_setup">Sozlash</string>
     <string name="feeds_search_example">Nomi, IDsi, fingerprinti, URL yoki %1$s manzili boʻyicha qidirish</string>
+    <string name="feeds_member_remove_message">Bu shaxsning bu tasmadagi reaksiyalari oʻchiriladi.</string>
+    <string name="feeds_member_block_message">U endi bu tasmani koʻra olmaydi.</string>
+    <string name="feeds_member_block_title">%1$s bloklansinmi?</string>
+    <string name="feeds_member_remove_title">%1$s olib tashlansinmi?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s ta obuna import qilinmoqda</item>
+        <item quantity="other">%s ta obuna import qilinmoqda</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">hozircha %s ta qoʻshildi</item>
+        <item quantity="other">hozircha %s ta qoʻshildi</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Tasma u yerda %s ta post eʼlon qildi. Uni oʻchirmasangiz, u oʻsha yerda qoladi.</item>
+        <item quantity="other">Tasma u yerda %s ta post eʼlon qildi. Ularni oʻchirmasangiz, ular oʻsha yerda qoladi.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Hozircha %s manba qoʻshildi; qolganlari keyinroq qoʻshiladi</item>
+        <item quantity="other">Hozircha %s manba qoʻshildi; qolganlari keyinroq qoʻshiladi</item>
+    </plurals>
 </resources>

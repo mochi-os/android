@@ -5,7 +5,6 @@
 
 package org.mochios.feeds.ui
 
-import android.app.Application
 import android.content.Context
 import android.os.Looper
 import androidx.lifecycle.SavedStateHandle
@@ -193,7 +192,6 @@ class FeedInstantTest {
             repository,
             socket,
             session,
-            context as Application,
         )
         until { model.post.value != null }
         settle()

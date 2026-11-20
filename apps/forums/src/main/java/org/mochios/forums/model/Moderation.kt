@@ -9,10 +9,10 @@ import androidx.annotation.StringRes
 import org.mochios.forums.R
 
 /**
- * The moderation screen renders four server enums - a log entry's action, the
- * object a report or log entry is about, and a report's reason. Each maps to a
- * translated label, and an unrecognised value falls back to [humanise] rather
- * than reaching the user as `resolve_report`.
+ * The moderation screen renders the server's enums - a log entry's action, the
+ * object a report or log entry is about, a report's reason and how it was
+ * resolved. Each maps to a translated label, and an unrecognised value falls
+ * back to [humanise] rather than reaching the user as `resolve_report`.
  */
 
 /** The recorded action of a log entry (`log_moderation` in forums.star). */
@@ -50,6 +50,14 @@ fun moderationReason(reason: String): Int? = when (reason) {
     "misinformation" -> R.string.forums_moderation_reason_misinformation
     "offtopic" -> R.string.forums_moderation_reason_offtopic
     "other" -> R.string.forums_moderation_reason_other
+    else -> null
+}
+
+/** How a report was resolved: the Dismiss and Remove buttons send these (`report_resolve` in forums.star). */
+@StringRes
+fun moderationResolution(resolution: String): Int? = when (resolution) {
+    "ignored" -> R.string.forums_moderation_resolution_ignored
+    "removed" -> R.string.forums_moderation_action_remove
     else -> null
 }
 

@@ -81,3 +81,21 @@ object NaturalCompare : Comparator<String> {
 
 /** Free-function alias matching the web export. */
 fun naturalCompare(a: String, b: String): Int = NaturalCompare.compare(a, b)
+
+/**
+ * Languages by their own names: Latin-script names first, then the rest, each
+ * part in [NaturalCompare] order. Plain alphabetical order puts Arabic at the
+ * top, and code-point order puts "Čeština" after "Zulu".
+ */
+object LanguageCompare : Comparator<String> {
+    override fun compare(a: String, b: String): Int {
+        val script = scriptBucket(a).compareTo(scriptBucket(b))
+        return if (script != 0) script else NaturalCompare.compare(a, b)
+    }
+}
+
+/** 0 for a name whose first letter is Latin, 1 for any other script. */
+fun scriptBucket(native: String): Int {
+    val first = native.firstOrNull { it.isLetter() } ?: return 0
+    return if (first.code < 0x0250) 0 else 1
+}

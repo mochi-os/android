@@ -9,8 +9,12 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -19,6 +23,7 @@ import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.R
 import org.mochios.forums.api.ModerationQueueResponse
 import org.mochios.forums.api.ModerationReportsResponse
+import org.mochios.forums.model.ForumMember
 import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationSettings
 import org.mochios.forums.model.Restriction
@@ -44,6 +49,7 @@ data class ModerationUiState(
     val settings: ModerationSettings? = null,
     /** Snackbar/toast message resource for a finished action. */
     val actionMessage: Int? = null,
+    /** A tab or the settings failed to load; a refused action is a [ModerationViewModel.failures] event. */
     val error: MochiError? = null,
     val selectedTab: ModerationTab = ModerationTab.QUEUE,
 )
@@ -58,6 +64,14 @@ class ModerationViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(ModerationUiState())
     val uiState: StateFlow<ModerationUiState> = _uiState.asStateFlow()
+
+    /**
+     * An action the server refused, said over the tab, which stays as it was:
+     * as [ModerationUiState.error] it put the failed-load page in the tab's
+     * place, whose Retry reloads the tab and never repeats the action.
+     */
+    private val _failures = MutableSharedFlow<MochiError>(extraBufferCapacity = 1)
+    val failures: SharedFlow<MochiError> = _failures.asSharedFlow()
 
     init {
         loadTab(ModerationTab.QUEUE)
@@ -132,15 +146,9 @@ class ModerationViewModel @Inject constructor(
         }
     }
 
-    fun resolveReport(reportId: String, resolution: String) {
-        viewModelScope.launch {
-            try {
-                repository.resolveReport(forumId, reportId, resolution)
-                loadTab(ModerationTab.REPORTS, refreshing = true)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
+    fun resolveReport(reportId: String, resolution: String) = mutate {
+        repository.resolveReport(forumId, reportId, resolution)
+        loadTab(ModerationTab.REPORTS, refreshing = true)
     }
 
     fun approvePost(postId: String) = mutate {
@@ -163,9 +171,34 @@ class ModerationViewModel @Inject constructor(
         loadTab(ModerationTab.QUEUE, refreshing = true)
     }
 
-    fun addRestriction(user: String, type: String, reason: String, durationSeconds: Long? = null) = mutate {
+    /**
+     * [onDone] says whether the server took the restriction, so the add dialog
+     * closes on it and keeps what was chosen when it is refused.
+     */
+    fun addRestriction(
+        user: String,
+        type: String,
+        reason: String,
+        durationSeconds: Long? = null,
+        onDone: (Boolean) -> Unit = {},
+    ) = mutate(onDone) {
         repository.restrict(forumId, user, type, reason, durationSeconds)
         loadTab(ModerationTab.RESTRICTIONS, refreshing = true)
+    }
+
+    /**
+     * The forum's members whose names hold [query], for the add dialog to
+     * choose from; the first the forum lists when [query] is empty. None when
+     * the search fails: the field then simply offers nobody.
+     */
+    suspend fun searchMembers(query: String): List<ForumMember> = try {
+        repository.searchMembers(forumId, query.trim()).members
+            .filter { member -> member.id.isNotEmpty() }
+            .sortedWith(compareBy(NaturalCompare) { member -> member.name })
+    } catch (e: CancellationException) {
+        throw e
+    } catch (_: Exception) {
+        emptyList()
     }
 
     fun removeRestriction(user: String) = mutate {
@@ -216,12 +249,14 @@ class ModerationViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(actionMessage = null)
     }
 
-    private fun mutate(block: suspend () -> Unit) {
+    private fun mutate(onDone: (Boolean) -> Unit = {}, block: suspend () -> Unit) {
         viewModelScope.launch {
             try {
                 block()
+                onDone(true)
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                onDone(false)
+                _failures.emit(e.toMochiError())
             }
         }
     }

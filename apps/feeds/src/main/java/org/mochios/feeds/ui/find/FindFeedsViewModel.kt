@@ -66,6 +66,11 @@ class FindFeedsViewModel @Inject constructor(
     private val _isProbing = MutableStateFlow(false)
     val isProbing: StateFlow<Boolean> = _isProbing.asStateFlow()
 
+    /** Why a pasted link could not be asked about, shown with a retry; null
+     *  when it was, a 404 included, which is the server finding nothing. */
+    private val _probeError = MutableStateFlow<MochiError?>(null)
+    val probeError: StateFlow<MochiError?> = _probeError.asStateFlow()
+
     // One-shot: the feed to open after a successful subscribe. The screen
     // navigates into that feed, whose screen reloads and shows the suggestions.
     private val _navigateToFeed = MutableSharedFlow<String>(extraBufferCapacity = 1)
@@ -177,6 +182,7 @@ class FindFeedsViewModel @Inject constructor(
                 }
             }
         }
+        _probeError.value = null
         if (query.isBlank()) {
             _searchResults.value = emptyList()
             _probeResult.value = null
@@ -210,6 +216,13 @@ class FindFeedsViewModel @Inject constructor(
         }
     }
 
+    /** Ask again about the query as it stands, after a probe that failed. */
+    fun retry() = setSearchQuery(_searchQuery.value)
+
+    /**
+     * Ask the server what feed [url] serves. Its 404 is an answer, nothing
+     * found there; any other failure is a failure to ask, said as such.
+     */
     private suspend fun probe(url: String) {
         _isProbing.value = true
         try {
@@ -217,8 +230,10 @@ class FindFeedsViewModel @Inject constructor(
             _probeResult.value = result.feed
         } catch (e: CancellationException) {
             throw e
-        } catch (_: Exception) {
+        } catch (e: Exception) {
             _probeResult.value = null
+            val failure = e.toMochiError()
+            if (failure !is MochiError.NotFoundError) _probeError.value = failure
         } finally {
             _isProbing.value = false
         }

@@ -72,6 +72,9 @@ dependencies {
     api(libs.okhttp)
     implementation(libs.okhttp.logging)
     api(libs.gson)
+    // A model's Kotlin nullability and constructor defaults, which the
+    // parse guard in ApiClient reads (NullGuard).
+    implementation(libs.kotlin.reflect)
 
     api(libs.coroutines.core)
     api(libs.coroutines.android)

@@ -27,8 +27,10 @@ import org.mochios.feeds.ui.settings.SourcesScreen
 
 object FeedsApp {
     /**
-     * HOME is the router: it resolves the last-viewed feed (or "__all__"),
-     * navigates to FEED and pops itself off the back stack.
+     * The router, by two names for one route: HOME, where the app opens the
+     * feeds, and ROUTER, where this graph declares it. It resolves the
+     * last-viewed feed (or "__all__"), navigates to FEED and pops itself off
+     * the back stack.
      */
     const val HOME = "feeds/router"
     const val ROUTER = "feeds/router"

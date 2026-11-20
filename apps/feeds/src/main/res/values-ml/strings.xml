@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">ഇതുപയോഗിച്ച് വായിക്കുക</string>
     <string name="feeds_source_follow_pending">പിന്തുടരൽ തീർപ്പാക്കാനുണ്ട്</string>
     <string name="feeds_import_follows">ഒരു ഫയലിൽ നിന്ന് പിന്തുടരുന്ന അക്കൗണ്ടുകൾ ഇമ്പോർട്ട് ചെയ്യുക</string>
-    <string name="feeds_follows_importing">പിന്തുടരുന്ന %1$s അക്കൗണ്ടുകൾ ഇമ്പോർട്ട് ചെയ്യുന്നു; ഇതുവരെ %2$s ചേർത്തു</string>
     <string name="feeds_publish_to_account">%1$s-ലേക്ക് പ്രസിദ്ധീകരിക്കുക</string>
     <string name="feeds_import_posts">പോസ്റ്റുകൾ ഇമ്പോർട്ട് ചെയ്യുക</string>
     <string name="feeds_import_bookmarks">ബുക്ക്മാർക്കുകൾ ഇമ്പോർട്ട് ചെയ്യുക</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">ഇനി Bluesky ഫീഡ് അല്ല</string>
     <string name="feeds_generator_failed">Bluesky ഫീഡ് മാറ്റാനായില്ല</string>
     <string name="feeds_copies_delete_title">%1$s-ലെ പകർപ്പുകൾ ഇല്ലാതാക്കണോ?</string>
-    <string name="feeds_copies_delete_message">ഫീഡ് അവിടെ %1$s പോസ്റ്റുകൾ പ്രസിദ്ധീകരിച്ചു. നിങ്ങൾ ഇല്ലാതാക്കിയില്ലെങ്കിൽ അവ നിലനിൽക്കും.</string>
     <string name="feeds_copies_delete">പകർപ്പുകൾ ഇല്ലാതാക്കുക</string>
     <string name="feeds_copies_keep">നിലനിർത്തുക</string>
     <string name="feeds_copies_delete_failed">പകർപ്പുകൾ ഇല്ലാതാക്കാൻ കഴിഞ്ഞില്ല</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">ഇമ്പോർട്ട് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="feeds_imported">%1$s ഇമ്പോർട്ട് ചെയ്തു</string>
     <string name="feeds_imported_more">ഇതുവരെ %1$s ഇമ്പോർട്ട് ചെയ്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</string>
-    <string name="feeds_import_sources_more">ഇതുവരെ %1$s സ്രോതസ്സുകൾ ചേർത്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</string>
     <string name="feeds_waiting_title">അനുമതിക്കായി കാത്തിരിക്കുന്നു</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s വ്യക്തി</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">ടാഗ് പ്രകാരം ഫിൽട്ടർ ചെയ്തത്:</string>
     <string name="feeds_setup">സജ്ജമാക്കുക</string>
     <string name="feeds_search_example">പേര്, ID, ഫിംഗർപ്രിന്റ്, URL അല്ലെങ്കിൽ %1$s ഉപയോഗിച്ച് തിരയുക</string>
+    <string name="feeds_member_remove_message">ഈ വ്യക്തിയുടെ ഈ ഫീഡിലെ പ്രതികരണങ്ങൾ ഇല്ലാതാക്കപ്പെടും.</string>
+    <string name="feeds_member_block_message">അവർക്ക് ഇനി ഈ ഫീഡ് കാണാൻ കഴിയില്ല.</string>
+    <string name="feeds_member_block_title">%1$s എന്നയാളെ ബ്ലോക്ക് ചെയ്യണോ?</string>
+    <string name="feeds_member_remove_title">%1$s എന്നയാളെ നീക്കം ചെയ്യണോ?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">പിന്തുടരുന്ന %s അക്കൗണ്ട് ഇമ്പോർട്ട് ചെയ്യുന്നു</item>
+        <item quantity="other">പിന്തുടരുന്ന %s അക്കൗണ്ടുകൾ ഇമ്പോർട്ട് ചെയ്യുന്നു</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">ഇതുവരെ %s ചേർത്തു</item>
+        <item quantity="other">ഇതുവരെ %s ചേർത്തു</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">ഫീഡ് അവിടെ %s പോസ്റ്റ് പ്രസിദ്ധീകരിച്ചു. നിങ്ങൾ ഇല്ലാതാക്കിയില്ലെങ്കിൽ അത് അവിടെ തുടരും.</item>
+        <item quantity="other">ഫീഡ് അവിടെ %s പോസ്റ്റുകൾ പ്രസിദ്ധീകരിച്ചു. നിങ്ങൾ ഇല്ലാതാക്കിയില്ലെങ്കിൽ അവ അവിടെ തുടരും.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">ഇതുവരെ %s സ്രോതസ്സ് ചേർത്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</item>
+        <item quantity="other">ഇതുവരെ %s സ്രോതസ്സുകൾ ചേർത്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</item>
+    </plurals>
 </resources>

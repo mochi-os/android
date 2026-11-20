@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Մոդերացիայի ակտիվություն չկա</string>
     <string name="forums_moderation_log_meta">%1$s-ի կողմից · Թիրախ՝ %2$s</string>
     <string name="forums_moderation_restriction_add">Ավելացնել սահմանափակում</string>
-    <string name="forums_moderation_restriction_user">Օգտատիրոջ ինքնություն</string>
     <string name="forums_moderation_restriction_type_shadowban">Թաքնված արգելք</string>
-    <string name="forums_moderation_restriction_duration_seconds">Տևողություն (վայրկյաններ, դատարկ՝ մշտականի համար)</string>
     <string name="forums_moderation_restriction_expires">Ավարտվում է %1$s</string>
     <string name="forums_moderation_restriction_permanent">Մշտական</string>
     <string name="forums_report_reason_hate">Ատելություն</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Անուն</string>
     <string name="forums_settings_field_entity_id">Էնտիտետի ID</string>
     <string name="forums_settings_field_fingerprint_label">Մատնահետք</string>
-    <string name="forums_settings_field_server">Սերվեր</string>
     <string name="forums_settings_name_edit_cd">Խմբագրել անունը</string>
     <string name="forums_settings_name_cancel_cd">Չեղարկել խմբագրումը</string>
     <string name="forums_settings_save_name">Պահպանել անունը</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Ներմուծել կարգավորումները</string>
     <string name="forums_communities_add">Ավելացնել համայնքներ</string>
     <string name="forums_communities_add_failed">Չհաջողվեց ավելացնել համայնքները</string>
-    <string name="forums_imported_settings">Ներմուծվեց %1$s համայնք, %2$s արգելափակում և %3$s պահված գրառում</string>
-    <string name="forums_imported_settings_more">Առայժմ ներմուծվել է %1$s համայնք, %2$s արգելափակում և %3$s պահված գրառում, մնացածը՝ հետո</string>
     <string name="forums_import_failed">Չհաջողվեց ներմուծել</string>
     <string name="forums_community">Համայնք</string>
     <string name="forums_community_name">Համայնքի անուն</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Հրապարակվում է %1$s-ում որպես %2$s</string>
     <string name="forums_find_search_example">Որոնել ըստ անվան, ID-ի, մատնահետքի, URL-ի կամ %1$s հասցեի</string>
     <string name="forums_setup">Կարգավորել</string>
+    <string name="forums_post_remove_title">Հեռացնել գրառումը</string>
+    <string name="forums_post_remove_message">Սա կթաքցնի գրառումը սովորական օգտատերերից: Մոդերատորները դեռ կարող են տեսնել այն և հետագայում վերականգնել:</string>
+    <string name="forums_comment_remove_title">Հեռացնել մեկնաբանությունը</string>
+    <string name="forums_comment_remove_message">Սա կթաքցնի մեկնաբանությունը սովորական օգտատերերից: Մոդերատորները դեռ կարող են տեսնել այն և հետագայում վերականգնել:</string>
+    <string name="forums_report_submitted">Հաղորդումը ներկայացվեց</string>
+    <string name="forums_member_remove_message">Այս անձի քվեները այս ֆորումում ջնջվում են։</string>
+    <string name="forums_member_block_message">Նա այլևս չի կարողանա դիտել այս ֆորումը։</string>
+    <string name="forums_member_block_title">Արգելափակե՞լ %1$s-ին։</string>
+    <string name="forums_moderation_resolution_ignored">Մերժված</string>
+    <string name="forums_moderation_restriction_member">Անդամ</string>
+    <string name="forums_moderation_restriction_duration">Տևողություն</string>
+    <string name="forums_moderation_duration_hour">Մեկ ժամ</string>
+    <string name="forums_moderation_duration_day">Մեկ օր</string>
+    <string name="forums_moderation_duration_week">Մեկ շաբաթ</string>
+    <string name="forums_moderation_duration_month">Մեկ ամիս</string>
+    <string name="forums_member_remove">Հեռացնել</string>
+    <string name="forums_member_remove_title">Հեռացնե՞լ %1$s-ին։</string>
+    <string name="forums_imported">Ներմուծվեց %1$s</string>
+    <string name="forums_imported_more">Առայժմ ներմուծվել է %1$s, մնացածը՝ հետո</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s համայնք</item>
+        <item quantity="other">%s համայնք</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s արգելափակում</item>
+        <item quantity="other">%s արգելափակում</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s պահված գրառում</item>
+        <item quantity="other">%s պահված գրառում</item>
+    </plurals>
 </resources>

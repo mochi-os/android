@@ -128,10 +128,5 @@ fun ForumIdentitySection(
                 DataChip(value = forum.fingerprint, truncate = Truncate.MIDDLE)
             }
         }
-        if (forum.server.isNotBlank()) {
-            IdentityRow(label = stringResource(R.string.forums_settings_field_server)) {
-                DataChip(value = forum.server, truncate = Truncate.MIDDLE)
-            }
-        }
     }
 }

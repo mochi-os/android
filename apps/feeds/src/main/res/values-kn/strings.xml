@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">ಓದುವ ಖಾತೆ</string>
     <string name="feeds_source_follow_pending">ಅನುಸರಣೆ ಬಾಕಿ ಇದೆ</string>
     <string name="feeds_import_follows">ಫೈಲ್‌ನಿಂದ ಅನುಸರಿಸುವ ಖಾತೆಗಳನ್ನು ಆಮದು ಮಾಡಿ</string>
-    <string name="feeds_follows_importing">%1$s ಅನುಸರಿಸುವ ಖಾತೆಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗುತ್ತಿದೆ; ಇಲ್ಲಿಯವರೆಗೆ %2$s ಸೇರಿಸಲಾಗಿದೆ</string>
     <string name="feeds_publish_to_account">%1$s ಗೆ ಪ್ರಕಟಿಸಿ</string>
     <string name="feeds_import_posts">ಪೋಸ್ಟ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಿ</string>
     <string name="feeds_import_bookmarks">ಬುಕ್‌ಮಾರ್ಕ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಿ</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">ಇನ್ನು ಮುಂದೆ Bluesky ಫೀಡ್ ಅಲ್ಲ</string>
     <string name="feeds_generator_failed">Bluesky ಫೀಡ್ ಬದಲಾಯಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="feeds_copies_delete_title">%1$s ನಲ್ಲಿರುವ ಪ್ರತಿಗಳನ್ನು ಅಳಿಸಬೇಕೆ?</string>
-    <string name="feeds_copies_delete_message">ಫೀಡ್ ಅಲ್ಲಿ %1$s ಪೋಸ್ಟ್‌ಗಳನ್ನು ಪ್ರಕಟಿಸಿದೆ. ನೀವು ಅಳಿಸದ ಹೊರತು ಅವು ಉಳಿಯುತ್ತವೆ.</string>
     <string name="feeds_copies_delete">ಪ್ರತಿಗಳನ್ನು ಅಳಿಸಿ</string>
     <string name="feeds_copies_keep">ಇರಿಸಿಕೊಳ್ಳಿ</string>
     <string name="feeds_copies_delete_failed">ಪ್ರತಿಗಳನ್ನು ಅಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">ಆಮದು ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="feeds_imported">%1$s ಆಮದು ಮಾಡಲಾಗಿದೆ</string>
     <string name="feeds_imported_more">ಇದುವರೆಗೆ %1$s ಆಮದು ಮಾಡಲಾಗಿದೆ; ಉಳಿದವು ನಂತರ ಬರುತ್ತವೆ</string>
-    <string name="feeds_import_sources_more">ಇದುವರೆಗೆ %1$s ಮೂಲಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ; ಉಳಿದವು ನಂತರ ಬರುತ್ತವೆ</string>
     <string name="feeds_waiting_title">ಅನುಮತಿಗಾಗಿ ಕಾಯಲಾಗುತ್ತಿದೆ</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s ವ್ಯಕ್ತಿ</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">ಟ್ಯಾಗ್‌ನಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಲಾಗಿದೆ:</string>
     <string name="feeds_setup">ಸೆಟಪ್ ಮಾಡಿ</string>
     <string name="feeds_search_example">ಹೆಸರು, ID, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್, URL ಅಥವಾ %1$s ನಿಂದ ಹುಡುಕಿ</string>
+    <string name="feeds_member_remove_message">ಈ ವ್ಯಕ್ತಿಯ ಪ್ರತಿಕ್ರಿಯೆಗಳನ್ನು ಈ ಫೀಡ್‌ನಲ್ಲಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="feeds_member_block_message">ಅವರು ಇನ್ನು ಮುಂದೆ ಈ ಫೀಡ್ ಅನ್ನು ನೋಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="feeds_member_block_title">%1$s ಅವರನ್ನು ನಿರ್ಬಂಧಿಸಬೇಕೇ?</string>
+    <string name="feeds_member_remove_title">%1$s ಅವರನ್ನು ತೆಗೆದುಹಾಕಬೇಕೇ?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s ಅನುಸರಿಸುವ ಖಾತೆಯನ್ನು ಆಮದು ಮಾಡಲಾಗುತ್ತಿದೆ</item>
+        <item quantity="other">%s ಅನುಸರಿಸುವ ಖಾತೆಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗುತ್ತಿದೆ</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">ಇದುವರೆಗೆ %s ಸೇರಿಸಲಾಗಿದೆ</item>
+        <item quantity="other">ಇದುವರೆಗೆ %s ಸೇರಿಸಲಾಗಿದೆ</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">ಫೀಡ್ ಅಲ್ಲಿ %s ಪೋಸ್ಟ್ ಪ್ರಕಟಿಸಿದೆ. ನೀವು ಅಳಿಸದ ಹೊರತು ಅದು ಉಳಿಯುತ್ತದೆ.</item>
+        <item quantity="other">ಫೀಡ್ ಅಲ್ಲಿ %s ಪೋಸ್ಟ್‌ಗಳನ್ನು ಪ್ರಕಟಿಸಿದೆ. ನೀವು ಅಳಿಸದ ಹೊರತು ಅವು ಉಳಿಯುತ್ತವೆ.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">ಇದುವರೆಗೆ %s ಮೂಲ ಸೇರಿಸಲಾಗಿದೆ; ಉಳಿದವು ನಂತರ ಬರುತ್ತವೆ</item>
+        <item quantity="other">ಇದುವರೆಗೆ %s ಮೂಲಗಳನ್ನು ಸೇರಿಸಲಾಗಿದೆ; ಉಳಿದವು ನಂತರ ಬರುತ್ತವೆ</item>
+    </plurals>
 </resources>

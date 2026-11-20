@@ -11,7 +11,6 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import androidx.navigation.navDeepLink
 import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.forums.ui.find.FindForumsScreen
@@ -97,9 +96,6 @@ fun NavGraphBuilder.forumsNavGraph(
             defaultValue = ""
             nullable = false
         }),
-        deepLinks = listOf(
-            navDeepLink { uriPattern = "https://{host}/forums/{forumId}" }
-        )
     ) { backStackEntry ->
         val forumId = backStackEntry.arguments?.getString("forumId").orEmpty()
         ForumScreen(
@@ -138,13 +134,6 @@ fun NavGraphBuilder.forumsNavGraph(
                 defaultValue = null
             },
         ),
-        deepLinks = listOf(
-            // What a web user shares is the SPA route, `/forums/<forum>/<post>`,
-            // with `?comment=` when they share one comment.
-            navDeepLink { uriPattern = "https://{host}/forums/{forumId}/{postId}?comment={comment}" },
-            // The `-/` form is what the RSS feed and the server's own links use.
-            navDeepLink { uriPattern = "https://{host}/forums/{forumId}/-/{postId}" },
-        )
     ) {
         PostScreen(
             onBack = { navController.popBackStack() },

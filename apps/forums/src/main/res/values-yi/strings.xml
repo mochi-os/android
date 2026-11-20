@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">נאָך קײן מאָדעראַטאָר־טעטיקייט</string>
     <string name="forums_moderation_log_meta">פֿון %1$s · ציל %2$s</string>
     <string name="forums_moderation_restriction_add">צולײגן באַגרענעצונג</string>
-    <string name="forums_moderation_restriction_user">באַניצער־אידענטיטעט</string>
     <string name="forums_moderation_restriction_type_shadowban">שאָטן־פֿאַרווער</string>
-    <string name="forums_moderation_restriction_duration_seconds">געדויער (סעקונדעס, ליידיק פֿאַר תּמידיק)</string>
     <string name="forums_moderation_restriction_expires">לויפֿט אויס %1$s</string>
     <string name="forums_moderation_restriction_permanent">תּמידיק</string>
     <string name="forums_report_reason_hate">האַס</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">נאָמען</string>
     <string name="forums_settings_field_entity_id">ענטיטעט־ID</string>
     <string name="forums_settings_field_fingerprint_label">פֿינגער־אָפּדרוק</string>
-    <string name="forums_settings_field_server">סערווער</string>
     <string name="forums_settings_name_edit_cd">רעדאַקטירן נאָמען</string>
     <string name="forums_settings_name_cancel_cd">בטל מאַכן די רעדאַקטירונג</string>
     <string name="forums_settings_save_name">אָפּהיטן נאָמען</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">אימפּאָרטירן אײַנשטעלונגען</string>
     <string name="forums_communities_add">צולייגן קהילות</string>
     <string name="forums_communities_add_failed">ניט געלונגען צוצולייגן די קהילות</string>
-    <string name="forums_imported_settings">אימפּאָרטירט %1$s קהילות, %2$s בלאָקירונגען און %3$s אויפֿגעהיטענע אַרײַנשרײַבן</string>
-    <string name="forums_imported_settings_more">ביז איצט אימפּאָרטירט %1$s קהילות, %2$s בלאָקירונגען און %3$s אויפֿגעהיטענע אַרײַנשרײַבן; די רעשט קומט נאָך</string>
     <string name="forums_import_failed">ניט געלונגען צו אימפּאָרטירן</string>
     <string name="forums_community">קהילה</string>
     <string name="forums_community_name">נאָמען פֿון דער קהילה</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">ווערט פֿאַרעפֿנטלעכט אין %1$s ווי %2$s</string>
     <string name="forums_find_search_example">זוך לויט נאָמען, ID, פֿינגערפּרינט, URL, אָדער %1$s</string>
     <string name="forums_setup">שטעל אויף</string>
+    <string name="forums_post_remove_title">אַראָפּנעמען פּאָסט</string>
+    <string name="forums_post_remove_message">דאָס וועט באַהאַלטן דעם פּאָסט פֿון רעגולערע באַניצערס. מאָדעראַטאָרן קאָנען אים נאָך זען און שפּעטער צוריקקערן.</string>
+    <string name="forums_comment_remove_title">אַראָפּנעמען באַמערקונג</string>
+    <string name="forums_comment_remove_message">דאָס וועט באַהאַלטן דעם קאָמענטאַר פֿון רעגולערע באַניצערס. מאָדעראַטאָרן קאָנען אים נאָך זען און שפּעטער צוריקקערן.</string>
+    <string name="forums_report_submitted">באַריכט אײַנגעגעבן</string>
+    <string name="forums_member_remove_message">די שטימען פֿון דער פּערזאָן אין דעם פֿאָרום ווערן אויסגעמעקט.</string>
+    <string name="forums_member_block_message">זיי וועלן מער ניט קענען זען דעם פֿאָרום.</string>
+    <string name="forums_member_block_title">בלאָקיר %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">אַראָפּגעזאָגט</string>
+    <string name="forums_moderation_restriction_member">מיטגליד</string>
+    <string name="forums_moderation_restriction_duration">געדויער</string>
+    <string name="forums_moderation_duration_hour">איין שעה</string>
+    <string name="forums_moderation_duration_day">איין טאָג</string>
+    <string name="forums_moderation_duration_week">איין וואָך</string>
+    <string name="forums_moderation_duration_month">איין חודש</string>
+    <string name="forums_member_remove">אַראָפּנעמען</string>
+    <string name="forums_member_remove_title">אַראָפּנעמען %1$s?</string>
+    <string name="forums_imported">%1$s אימפּאָרטירט</string>
+    <string name="forums_imported_more">ביז איצט %1$s אימפּאָרטירט; די איבעריקע קומען שפּעטער</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s קהילה</item>
+        <item quantity="other">%s קהילות</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s בלאָקירונג</item>
+        <item quantity="other">%s בלאָקירונגען</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s געהיטענער פּאָסט</item>
+        <item quantity="other">%s געהיטענע פּאָסטן</item>
+    </plurals>
 </resources>

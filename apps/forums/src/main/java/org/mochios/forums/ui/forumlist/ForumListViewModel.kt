@@ -8,12 +8,11 @@ package org.mochios.forums.ui.forumlist
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.mochios.android.api.MochiError
-import org.mochios.android.api.toMochiError
 import org.mochios.android.util.NaturalCompare
 import org.mochios.forums.model.Forum
 import org.mochios.forums.repository.ForumsRepository
@@ -21,12 +20,6 @@ import javax.inject.Inject
 
 data class ForumListUiState(
     val forums: List<Forum> = emptyList(),
-    val isLoading: Boolean = false,
-    val isRefreshing: Boolean = false,
-    val error: MochiError? = null,
-    // The user's global default post sort, from the list response's settings.
-    // "" means no explicit default (server falls back to "new").
-    val defaultSort: String = ""
 )
 
 @HiltViewModel
@@ -39,67 +32,31 @@ class ForumListViewModel @Inject constructor(
 
     init {
         load()
+        // A write, a forum's frame or the forum screen coming back has dropped
+        // the held roster: what it said may have changed, so it is read again.
+        viewModelScope.launch {
+            repository.forgotten.collect { load() }
+        }
     }
+
+    /** Read the roster afresh, as the screen comes back: a forum may have been
+     *  renamed, joined or left elsewhere since. Dropping the held one is
+     *  enough, as the drawer reads it again whenever it is dropped. */
+    fun refresh() = repository.forget()
 
     /** The drawer's roster: `-/information` lists every forum without the
      *  posts `-/list` carries, and the forum screen opening beside it shares
-     *  the one answer. */
+     *  the one answer. A read that fails leaves the drawer as it was. */
     fun load() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
                 val r = repository.forumsInformation()
-                val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(
-                    forums = sorted, isLoading = false, defaultSort = r.settings.sort,
+                    forums = r.forums.sortedWith(compareBy(NaturalCompare) { it.name }),
                 )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
-            }
-        }
-    }
-
-    fun refresh() {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isRefreshing = true)
-            try {
-                repository.forget()
-                val r = repository.forumsInformation()
-                val sorted = r.forums.sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(
-                    forums = sorted, isRefreshing = false, error = null,
-                    defaultSort = r.settings.sort,
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
-            }
-        }
-    }
-
-    /**
-     * Set the user's global default post sort, applied to forums with no
-     * per-forum override.
-     */
-    fun setDefaultSort(sort: String) {
-        _uiState.value = _uiState.value.copy(defaultSort = sort)
-        viewModelScope.launch {
-            try {
-                repository.setDefaultSort(sort)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun unsubscribe(forumId: String) {
-        viewModelScope.launch {
-            try {
-                repository.unsubscribe(forumId)
-                _uiState.value = _uiState.value.copy(
-                    forums = _uiState.value.forums.filterNot { it.id == forumId }
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
             }
         }
     }

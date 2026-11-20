@@ -10,6 +10,7 @@ import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -65,6 +66,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.AttachmentCaptionDialog
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MarkdownPreviewSheet
@@ -183,7 +185,8 @@ fun NewPostScreen(
                     }
                     MochiButton(
                         onClick = { viewModel.submit() },
-                        enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting && linkError(link) == null,
+                        enabled = title.isNotBlank() && body.isNotBlank() && !uiState.isPosting && linkError(link) == null &&
+                            (!isEditing || uiState.original is Original.Loaded),
                         modifier = Modifier.fillMaxWidth(),
                     ) {
                         if (uiState.isPosting) {
@@ -204,6 +207,23 @@ fun NewPostScreen(
             }
         },
     ) { padding ->
+        // An edit's form shows once the post has been read: until then it
+        // holds none of the post's attachments or marks.
+        when (val original = uiState.original) {
+            Original.Loading -> {
+                Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) {
+                    CircularProgressIndicator()
+                }
+                return@Scaffold
+            }
+            is Original.Failed -> {
+                Box(Modifier.fillMaxSize().padding(padding)) {
+                    ErrorState(error = original.error, onRetry = viewModel::retry)
+                }
+                return@Scaffold
+            }
+            else -> Unit
+        }
         Column(
             modifier = Modifier
                 .fillMaxSize()

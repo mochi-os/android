@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Aucune activité de modération pour le moment</string>
     <string name="forums_moderation_log_meta">Par %1$s · Cible %2$s</string>
     <string name="forums_moderation_restriction_add">Ajouter une restriction</string>
-    <string name="forums_moderation_restriction_user">Identité de l\'utilisateur</string>
     <string name="forums_moderation_restriction_type_shadowban">Bannissement furtif</string>
-    <string name="forums_moderation_restriction_duration_seconds">Durée (secondes, vide pour permanent)</string>
     <string name="forums_moderation_restriction_expires">Expire le %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Haine</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nom</string>
     <string name="forums_settings_field_entity_id">ID d\'entité</string>
     <string name="forums_settings_field_fingerprint_label">Empreinte</string>
-    <string name="forums_settings_field_server">Serveur</string>
     <string name="forums_settings_name_edit_cd">Modifier le nom</string>
     <string name="forums_settings_name_cancel_cd">Annuler la modification</string>
     <string name="forums_settings_save_name">Enregistrer le nom</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Importer les paramètres</string>
     <string name="forums_communities_add">Ajouter les communautés</string>
     <string name="forums_communities_add_failed">Impossible d\'ajouter les communautés</string>
-    <string name="forums_imported_settings">%1$s communautés, %2$s serveurs bloqués et %3$s publications enregistrées importés</string>
-    <string name="forums_imported_settings_more">%1$s communautés, %2$s serveurs bloqués et %3$s publications enregistrées importés pour l\'instant ; la suite arrive</string>
     <string name="forums_import_failed">Impossible d\'importer</string>
     <string name="forums_community">Communauté</string>
     <string name="forums_community_name">Nom de la communauté</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Publié dans %1$s en tant que %2$s</string>
     <string name="forums_find_search_example">Rechercher par nom, ID, empreinte, URL ou %1$s</string>
     <string name="forums_setup">Configurer</string>
+    <string name="forums_post_remove_title">Supprimer le message</string>
+    <string name="forums_post_remove_message">Cela masquera la publication pour les utilisateurs normaux. Les modérateurs peuvent toujours la voir et la restaurer plus tard.</string>
+    <string name="forums_comment_remove_title">Supprimer le commentaire</string>
+    <string name="forums_comment_remove_message">Cela masquera le commentaire pour les utilisateurs normaux. Les modérateurs peuvent toujours le voir et le restaurer plus tard.</string>
+    <string name="forums_report_submitted">Signalement envoyé</string>
+    <string name="forums_member_remove_message">Les votes de cette personne dans ce forum sont supprimés.</string>
+    <string name="forums_member_block_message">Cette personne ne pourra plus voir ce forum.</string>
+    <string name="forums_member_block_title">Bloquer %1$s ?</string>
+    <string name="forums_moderation_resolution_ignored">Rejeté</string>
+    <string name="forums_moderation_restriction_member">Membre</string>
+    <string name="forums_moderation_restriction_duration">Durée</string>
+    <string name="forums_moderation_duration_hour">Une heure</string>
+    <string name="forums_moderation_duration_day">Un jour</string>
+    <string name="forums_moderation_duration_week">Une semaine</string>
+    <string name="forums_moderation_duration_month">Un mois</string>
+    <string name="forums_member_remove">Retirer</string>
+    <string name="forums_member_remove_title">Retirer %1$s ?</string>
+    <string name="forums_imported">Importés : %1$s</string>
+    <string name="forums_imported_more">Importés pour l\'instant : %1$s ; la suite arrive</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s communauté</item>
+        <item quantity="other">%s communautés</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blocage</item>
+        <item quantity="other">%s blocages</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s message enregistré</item>
+        <item quantity="other">%s messages enregistrés</item>
+    </plurals>
 </resources>

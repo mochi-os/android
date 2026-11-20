@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Δεν υπάρχει δραστηριότητα συντονιστή ακόμη</string>
     <string name="forums_moderation_log_meta">Από %1$s · Στόχος %2$s</string>
     <string name="forums_moderation_restriction_add">Προσθήκη περιορισμού</string>
-    <string name="forums_moderation_restriction_user">Ταυτότητα χρήστη</string>
     <string name="forums_moderation_restriction_type_shadowban">Σκιώδης αποκλεισμός</string>
-    <string name="forums_moderation_restriction_duration_seconds">Διάρκεια (δευτερόλεπτα, κενό για μόνιμο)</string>
     <string name="forums_moderation_restriction_expires">Λήγει %1$s</string>
     <string name="forums_moderation_restriction_permanent">Μόνιμο</string>
     <string name="forums_report_reason_hate">Μίσος</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Όνομα</string>
     <string name="forums_settings_field_entity_id">ID οντότητας</string>
     <string name="forums_settings_field_fingerprint_label">Αποτύπωμα</string>
-    <string name="forums_settings_field_server">Διακομιστής</string>
     <string name="forums_settings_name_edit_cd">Επεξεργασία ονόματος</string>
     <string name="forums_settings_name_cancel_cd">Ακύρωση επεξεργασίας</string>
     <string name="forums_settings_save_name">Αποθήκευση ονόματος</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Εισαγωγή ρυθμίσεων</string>
     <string name="forums_communities_add">Προσθήκη κοινοτήτων</string>
     <string name="forums_communities_add_failed">Δεν ήταν δυνατή η προσθήκη των κοινοτήτων</string>
-    <string name="forums_imported_settings">Εισήχθησαν %1$s κοινότητες, %2$s αποκλεισμένοι διακομιστές και %3$s αποθηκευμένες αναρτήσεις</string>
-    <string name="forums_imported_settings_more">Έως τώρα εισήχθησαν %1$s κοινότητες, %2$s αποκλεισμένοι διακομιστές και %3$s αποθηκευμένες αναρτήσεις· τα υπόλοιπα ακολουθούν</string>
     <string name="forums_import_failed">Δεν ήταν δυνατή η εισαγωγή</string>
     <string name="forums_community">Κοινότητα</string>
     <string name="forums_community_name">Όνομα κοινότητας</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Δημοσιεύεται στο %1$s ως %2$s</string>
     <string name="forums_find_search_example">Αναζήτηση κατά όνομα, ID, αποτύπωμα, URL ή %1$s</string>
     <string name="forums_setup">Ρύθμιση</string>
+    <string name="forums_post_remove_title">Αφαίρεση ανάρτησης</string>
+    <string name="forums_post_remove_message">Αυτό θα κρύψει την ανάρτηση από τους κανονικούς χρήστες. Οι συντονιστές μπορούν ακόμα να τη δουν και να την επαναφέρουν αργότερα.</string>
+    <string name="forums_comment_remove_title">Αφαίρεση σχολίου</string>
+    <string name="forums_comment_remove_message">Αυτό θα κρύψει το σχόλιο από τους κανονικούς χρήστες. Οι συντονιστές μπορούν ακόμα να το δουν και να το επαναφέρουν αργότερα.</string>
+    <string name="forums_report_submitted">Η αναφορά υποβλήθηκε</string>
+    <string name="forums_member_remove_message">Οι ψήφοι αυτού του ατόμου σε αυτό το φόρουμ διαγράφονται.</string>
+    <string name="forums_member_block_message">Δεν θα μπορεί πλέον να δει αυτό το φόρουμ.</string>
+    <string name="forums_member_block_title">Αποκλεισμός %1$s;</string>
+    <string name="forums_moderation_resolution_ignored">Απορρίφθηκε</string>
+    <string name="forums_moderation_restriction_member">Μέλος</string>
+    <string name="forums_moderation_restriction_duration">Διάρκεια</string>
+    <string name="forums_moderation_duration_hour">Μία ώρα</string>
+    <string name="forums_moderation_duration_day">Μία ημέρα</string>
+    <string name="forums_moderation_duration_week">Μία εβδομάδα</string>
+    <string name="forums_moderation_duration_month">Ένας μήνας</string>
+    <string name="forums_member_remove">Αφαίρεση</string>
+    <string name="forums_member_remove_title">Αφαίρεση %1$s;</string>
+    <string name="forums_imported">Εισήχθησαν %1$s</string>
+    <string name="forums_imported_more">Εισήχθησαν %1$s μέχρι στιγμής· τα υπόλοιπα ακολουθούν</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s κοινότητα</item>
+        <item quantity="other">%s κοινότητες</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s αποκλεισμός</item>
+        <item quantity="other">%s αποκλεισμοί</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s αποθηκευμένη ανάρτηση</item>
+        <item quantity="other">%s αποθηκευμένες αναρτήσεις</item>
+    </plurals>
 </resources>

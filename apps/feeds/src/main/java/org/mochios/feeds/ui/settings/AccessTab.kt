@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.AccessCandidate
 import org.mochios.android.ui.components.AccessLabels
 import org.mochios.android.ui.components.AccessRulesSection
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
@@ -61,6 +62,9 @@ private fun feedsAccessLevelLabel(level: String): String = when (level) {
     else -> level.replaceFirstChar { char -> char.uppercase() }
 }
 
+/** A member the owner is asked to confirm removing, or blocking when [block]. */
+private data class PendingMember(val id: String, val name: String, val block: Boolean)
+
 /**
  * Access tab: access rules with inline level dropdowns, plus a Members section.
  * Subscription is subscriber-initiated, so there is no owner-side add - only
@@ -78,6 +82,10 @@ fun AccessTab(
     val groups by viewModel.groups.collectAsState()
     var memberQuery by remember { mutableStateOf("") }
     val resources = LocalResources.current
+    // The member a removal or block waits on the owner's say-so for; the
+    // confirmation stays open, its button spinning, until the server answers.
+    var pending by remember { mutableStateOf<PendingMember?>(null) }
+    var busy by remember { mutableStateOf(false) }
 
     // Members are managed here, so only load them for a viewer who can.
     LaunchedEffect(permissions.manage) {
@@ -184,14 +192,15 @@ fun AccessTab(
                                     overflow = TextOverflow.Ellipsis,
                                     modifier = Modifier.weight(1f),
                                 )
-                                MochiIconButton(onClick = { viewModel.removeMember(member.id) }) {
+                                val name = member.name.ifBlank { member.id }
+                                MochiIconButton(onClick = { pending = PendingMember(member.id, name, block = false) }) {
                                     Icon(
                                         Icons.Default.Close,
                                         contentDescription = stringResource(R.string.feeds_remove),
                                         tint = MaterialTheme.colorScheme.onSurfaceVariant,
                                     )
                                 }
-                                MochiIconButton(onClick = { viewModel.blockMember(member.id) }) {
+                                MochiIconButton(onClick = { pending = PendingMember(member.id, name, block = true) }) {
                                     Icon(
                                         Icons.Default.Block,
                                         contentDescription = stringResource(R.string.feeds_block),
@@ -204,5 +213,31 @@ fun AccessTab(
                 }
             }
         }
+    }
+
+    pending?.let { target ->
+        MochiAlertDialog(
+            onDismissRequest = { if (!busy) pending = null },
+            title = stringResource(
+                if (target.block) R.string.feeds_member_block_title else R.string.feeds_member_remove_title,
+                target.name,
+            ),
+            text = stringResource(
+                if (target.block) R.string.feeds_member_block_message else R.string.feeds_member_remove_message,
+            ),
+            confirmText = stringResource(if (target.block) R.string.feeds_block else R.string.feeds_remove),
+            onConfirm = {
+                busy = true
+                val done: (Boolean) -> Unit = { taken ->
+                    busy = false
+                    if (taken) pending = null
+                }
+                if (target.block) viewModel.blockMember(target.id, done) else viewModel.removeMember(target.id, done)
+            },
+            confirmLoading = busy,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+            dismissEnabled = !busy,
+        )
     }
 }

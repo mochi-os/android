@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">לייענען מיט</string>
     <string name="feeds_source_follow_pending">נאָכפֿאָלגן וואַרט</string>
     <string name="feeds_import_follows">אימפּאָרטירן נאָכגעפֿאָלגטע קאָנטעס פֿון אַ טעקע</string>
-    <string name="feeds_follows_importing">אימפּאָרטירט %1$s נאָכגעפֿאָלגטע; ביז איצט צוגעלייגט %2$s</string>
     <string name="feeds_publish_to_account">פּובליקירן אויף %1$s</string>
     <string name="feeds_import_posts">אימפּאָרטירן פּאָסטן</string>
     <string name="feeds_import_bookmarks">אימפּאָרטירן לייענצייכנס</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">מער ניט קיין Bluesky־פֿיד</string>
     <string name="feeds_generator_failed">ניט געלונגען צו ענדערן דעם Bluesky־פֿיד</string>
     <string name="feeds_copies_delete_title">אויסמעקן די קאָפּיעס אויף %1$s?</string>
-    <string name="feeds_copies_delete_message">דער פֿיד האָט דאָרט פּובליקירט %1$s פּאָסטן. זיי בלײַבן סײַדן איר מעקט זיי אויס.</string>
     <string name="feeds_copies_delete">אויסמעקן קאָפּיעס</string>
     <string name="feeds_copies_keep">האַלטן</string>
     <string name="feeds_copies_delete_failed">ניט געלונגען אויסצומעקן די קאָפּיעס</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">ניט געלונגען צו אימפּאָרטירן</string>
     <string name="feeds_imported">%1$s אימפּאָרטירט</string>
     <string name="feeds_imported_more">ביז איצט %1$s אימפּאָרטירט; די איבעריקע קומען שפּעטער</string>
-    <string name="feeds_import_sources_more">ביז איצט %1$s מקורים צוגעלייגט; די איבעריקע קומען שפּעטער</string>
     <string name="feeds_waiting_title">מע וואַרט אויף דערלויבעניש</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s מענטש</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">געפֿילטערט לויט טאַג:</string>
     <string name="feeds_setup">שטעל אויף</string>
     <string name="feeds_search_example">זוך לויט נאָמען, ID, פֿינגערפּרינט, URL, אָדער %1$s</string>
+    <string name="feeds_member_remove_message">די רעאַקציעס פֿון דער פּערזאָן אין דעם פֿיד ווערן אויסגעמעקט.</string>
+    <string name="feeds_member_block_message">זיי וועלן מער ניט קענען זען דעם פֿיד.</string>
+    <string name="feeds_member_block_title">בלאָקירן %1$s?</string>
+    <string name="feeds_member_remove_title">אַראָפּנעמען %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">מע אימפּאָרטירט %s נאָכגעפֿאָלגטן</item>
+        <item quantity="other">מע אימפּאָרטירט %s נאָכגעפֿאָלגטע</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">ביז איצט %s צוגעלייגט</item>
+        <item quantity="other">ביז איצט %s צוגעלייגט</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">דער פֿיד האָט דאָרט פֿאַרעפֿנטלעכט %s פּאָסט. ער בלײַבט, סײַדן איר מעקט אים אויס.</item>
+        <item quantity="other">דער פֿיד האָט דאָרט פֿאַרעפֿנטלעכט %s פּאָסטן. זיי בלײַבן, סײַדן איר מעקט זיי אויס.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">ביז איצט %s מקור צוגעלייגט; די איבעריקע קומען שפּעטער</item>
+        <item quantity="other">ביז איצט %s מקורים צוגעלייגט; די איבעריקע קומען שפּעטער</item>
+    </plurals>
 </resources>

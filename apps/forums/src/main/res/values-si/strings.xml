@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">තවම මධ්‍යස්ථ කිරීමේ ක්‍රියාකාරකම් නොමැත</string>
     <string name="forums_moderation_log_meta">%1$s විසින් · ඉලක්කය %2$s</string>
     <string name="forums_moderation_restriction_add">සීමාව එක් කරන්න</string>
-    <string name="forums_moderation_restriction_user">පරිශීලක අනන්‍යතාව</string>
     <string name="forums_moderation_restriction_type_shadowban">රහසිගත තහනම</string>
-    <string name="forums_moderation_restriction_duration_seconds">කාලය (තත්පර, ස්ථිර සඳහා හිස්ව තබන්න)</string>
     <string name="forums_moderation_restriction_expires">%1$s දින කල් ඉකුත් වේ</string>
     <string name="forums_moderation_restriction_permanent">ස්ථිර</string>
     <string name="forums_report_reason_hate">වෛරය</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">නම</string>
     <string name="forums_settings_field_entity_id">ආයතන හැඳුනුම</string>
     <string name="forums_settings_field_fingerprint_label">ඇඟිලි සලකුණ</string>
-    <string name="forums_settings_field_server">සේවාදායකය</string>
     <string name="forums_settings_name_edit_cd">නාමය සංස්කරණය කරන්න</string>
     <string name="forums_settings_name_cancel_cd">සංස්කරණය අවලංගු කරන්න</string>
     <string name="forums_settings_save_name">නම සුරකින්න</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">සැකසුම් ආයාත කරන්න</string>
     <string name="forums_communities_add">ප්‍රජාවන් එක් කරන්න</string>
     <string name="forums_communities_add_failed">ප්‍රජාවන් එක් කළ නොහැකි විය</string>
-    <string name="forums_imported_settings">ප්‍රජාවන් %1$sක්, අවහිර කිරීම් %2$sක් සහ සුරැකි පළ කිරීම් %3$sක් ආයාත කරන ලදී</string>
-    <string name="forums_imported_settings_more">මේ දක්වා ප්‍රජාවන් %1$sක්, අවහිර කිරීම් %2$sක් සහ සුරැකි පළ කිරීම් %3$sක් ආයාත කරන ලදී; ඉතිරිය පසුව එයි</string>
     <string name="forums_import_failed">ආයාත කළ නොහැකි විය</string>
     <string name="forums_community">ප්‍රජාව</string>
     <string name="forums_community_name">ප්‍රජා නාමය</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s වෙත %2$s ලෙස පළ කෙරේ</string>
     <string name="forums_find_search_example">නම, ID, ඇඟිලි සලකුණ, URL, හෝ %1$s අනුව සොයන්න</string>
     <string name="forums_setup">සකසන්න</string>
+    <string name="forums_post_remove_title">පළ කිරීම ඉවත් කරන්න</string>
+    <string name="forums_post_remove_message">මෙය සාමාන්‍ය පරිශීලකයන්ගෙන් පෝස්ටුව සඟවනු ඇත. මධ්‍යස්ථකරුවන්ට තවමත් එය බැලීමට සහ පසුව ප්‍රතිස්ථාපනය කළ හැකිය.</string>
+    <string name="forums_comment_remove_title">අදහස ඉවත් කරන්න</string>
+    <string name="forums_comment_remove_message">මෙය සාමාන්‍ය පරිශීලකයන්ගෙන් අදහස සඟවනු ඇත. මධ්‍යස්ථකරුවන්ට තවමත් එය බැලීමට සහ පසුව ප්‍රතිස්ථාපනය කළ හැකිය.</string>
+    <string name="forums_report_submitted">වාර්තාව ඉදිරිපත් කරන ලදී</string>
+    <string name="forums_member_remove_message">මෙම පුද්ගලයාගේ ඡන්ද මෙම සභාවෙන් මකා දැමේ.</string>
+    <string name="forums_member_block_message">ඔවුන්ට තවදුරටත් මෙම සංසදය බැලීමට නොහැක.</string>
+    <string name="forums_member_block_title">%1$s අවහිර කරන්නද?</string>
+    <string name="forums_moderation_resolution_ignored">ඉවත ලන ලදී</string>
+    <string name="forums_moderation_restriction_member">සාමාජිකයා</string>
+    <string name="forums_moderation_restriction_duration">කාලසීමාව</string>
+    <string name="forums_moderation_duration_hour">පැයක්</string>
+    <string name="forums_moderation_duration_day">දිනක්</string>
+    <string name="forums_moderation_duration_week">සතියක්</string>
+    <string name="forums_moderation_duration_month">මාසයක්</string>
+    <string name="forums_member_remove">ඉවත් කරන්න</string>
+    <string name="forums_member_remove_title">%1$s ඉවත් කරන්නද?</string>
+    <string name="forums_imported">%1$s ආයාත කරන ලදී</string>
+    <string name="forums_imported_more">මෙතෙක් %1$s ආයාත කරන ලදී; ඉතිරිය පසුව එයි</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">ප්‍රජා %sක්</item>
+        <item quantity="other">ප්‍රජා %sක්</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">අවහිර කිරීම් %sක්</item>
+        <item quantity="other">අවහිර කිරීම් %sක්</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">සුරැකි පළ කිරීම් %sක්</item>
+        <item quantity="other">සුරැකි පළ කිරීම් %sක්</item>
+    </plurals>
 </resources>

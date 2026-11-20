@@ -309,7 +309,6 @@
     <string name="feeds_source_read_with">Léigh le</string>
     <string name="feeds_source_follow_pending">Leanúint ar feitheamh</string>
     <string name="feeds_import_follows">Iompórtáil cuntais a leantar ó chomhad</string>
-    <string name="feeds_follows_importing">Ag iompórtáil %1$s cuntas a leantar; %2$s curtha leis go dtí seo</string>
     <string name="feeds_publish_to_account">Foilsigh chuig %1$s</string>
     <string name="feeds_import_posts">Iompórtáil postálacha</string>
     <string name="feeds_import_bookmarks">Iompórtáil leabharmharcanna</string>
@@ -323,7 +322,6 @@
     <string name="feeds_generator_off">Ní fotha Bluesky é a thuilleadh</string>
     <string name="feeds_generator_failed">Níorbh fhéidir an fotha Bluesky a athrú</string>
     <string name="feeds_copies_delete_title">Scrios na cóipeanna ar %1$s?</string>
-    <string name="feeds_copies_delete_message">Postálacha a d\'fhoilsigh an fotha ansin: %1$s. Fanann siad mura scriosann tú iad.</string>
     <string name="feeds_copies_delete">Scrios cóipeanna</string>
     <string name="feeds_copies_keep">Coinnigh</string>
     <string name="feeds_copies_delete_failed">Níorbh fhéidir na cóipeanna a scriosadh</string>
@@ -331,7 +329,6 @@
     <string name="feeds_import_failed">Níorbh fhéidir iompórtáil</string>
     <string name="feeds_imported">Iompórtáilte: %1$s</string>
     <string name="feeds_imported_more">Iompórtáilte go dtí seo: %1$s; tiocfaidh an chuid eile</string>
-    <string name="feeds_import_sources_more">Foinsí curtha leis go dtí seo: %1$s; tiocfaidh an chuid eile</string>
     <string name="feeds_waiting_title">Ag fanacht le cead</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s duine</item>
@@ -427,4 +424,36 @@
     <string name="feeds_filtered_by_tag">Scagtha de réir clibe:</string>
     <string name="feeds_setup">Socraigh</string>
     <string name="feeds_search_example">Cuardaigh de réir ainm, aitheantas, méarlorg, URL, nó %1$s</string>
+    <string name="feeds_member_remove_message">Scriosfar freagairtí an duine seo san fhotha seo.</string>
+    <string name="feeds_member_block_message">Ní bheidh an duine in ann an fotha seo a fheiceáil níos mó.</string>
+    <string name="feeds_member_block_title">Blocáil %1$s?</string>
+    <string name="feeds_member_remove_title">Bain %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Ag iompórtáil %s cuntas a leantar</item>
+        <item quantity="two">Ag iompórtáil %s chuntas a leantar</item>
+        <item quantity="few">Ag iompórtáil %s chuntas a leantar</item>
+        <item quantity="many">Ag iompórtáil %s gcuntas a leantar</item>
+        <item quantity="other">Ag iompórtáil %s cuntas a leantar</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s curtha leis go dtí seo</item>
+        <item quantity="two">%s curtha leis go dtí seo</item>
+        <item quantity="few">%s curtha leis go dtí seo</item>
+        <item quantity="many">%s curtha leis go dtí seo</item>
+        <item quantity="other">%s curtha leis go dtí seo</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">D\'fhoilsigh an fotha %s phostáil ansin. Fanfaidh sí ann mura scriosann tú í.</item>
+        <item quantity="two">D\'fhoilsigh an fotha %s phostáil ansin. Fanfaidh siad ann mura scriosann tú iad.</item>
+        <item quantity="few">D\'fhoilsigh an fotha %s phostáil ansin. Fanfaidh siad ann mura scriosann tú iad.</item>
+        <item quantity="many">D\'fhoilsigh an fotha %s bpostáil ansin. Fanfaidh siad ann mura scriosann tú iad.</item>
+        <item quantity="other">D\'fhoilsigh an fotha %s postáil ansin. Fanfaidh siad ann mura scriosann tú iad.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Cuireadh %s fhoinse leis go dtí seo; tiocfaidh an chuid eile</item>
+        <item quantity="two">Cuireadh %s fhoinse leis go dtí seo; tiocfaidh an chuid eile</item>
+        <item quantity="few">Cuireadh %s fhoinse leis go dtí seo; tiocfaidh an chuid eile</item>
+        <item quantity="many">Cuireadh %s bhfoinse leis go dtí seo; tiocfaidh an chuid eile</item>
+        <item quantity="other">Cuireadh %s foinse leis go dtí seo; tiocfaidh an chuid eile</item>
+    </plurals>
 </resources>

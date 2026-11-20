@@ -302,7 +302,6 @@
     <string name="feeds_source_read_with">Читать от имени</string>
     <string name="feeds_source_follow_pending">Подписка ожидает</string>
     <string name="feeds_import_follows">Импортировать подписки из файла</string>
-    <string name="feeds_follows_importing">Импорт подписок: %1$s; уже добавлено: %2$s</string>
     <string name="feeds_publish_to_account">Публиковать в %1$s</string>
     <string name="feeds_import_posts">Импортировать публикации</string>
     <string name="feeds_import_bookmarks">Импортировать закладки</string>
@@ -316,7 +315,6 @@
     <string name="feeds_generator_off">Больше не лента Bluesky</string>
     <string name="feeds_generator_failed">Не удалось изменить ленту Bluesky</string>
     <string name="feeds_copies_delete_title">Удалить копии в аккаунте %1$s?</string>
-    <string name="feeds_copies_delete_message">Лента опубликовала там публикаций: %1$s. Они останутся, если вы их не удалите.</string>
     <string name="feeds_copies_delete">Удалить копии</string>
     <string name="feeds_copies_keep">Оставить</string>
     <string name="feeds_copies_delete_failed">Не удалось удалить копии</string>
@@ -324,7 +322,6 @@
     <string name="feeds_import_failed">Не удалось импортировать</string>
     <string name="feeds_imported">Импортировано: %1$s</string>
     <string name="feeds_imported_more">Импортировано: %1$s; остальное будет импортировано позже</string>
-    <string name="feeds_import_sources_more">Добавлено источников: %1$s; остальные будут добавлены позже</string>
     <string name="feeds_waiting_title">Ожидание разрешения</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s человек</item>
@@ -409,4 +406,32 @@
     <string name="feeds_filtered_by_tag">Фильтр по тегу:</string>
     <string name="feeds_setup">Настроить</string>
     <string name="feeds_search_example">Поиск по названию, ID, отпечатку, URL или адресу %1$s</string>
+    <string name="feeds_member_remove_message">Реакции этого подписчика в этой ленте будут удалены.</string>
+    <string name="feeds_member_block_message">Пользователь больше не сможет просматривать эту ленту.</string>
+    <string name="feeds_member_block_title">Заблокировать %1$s?</string>
+    <string name="feeds_member_remove_title">Удалить %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Импортируется %s подписка</item>
+        <item quantity="few">Импортируются %s подписки</item>
+        <item quantity="many">Импортируется %s подписок</item>
+        <item quantity="other">Импортируется %s подписки</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">пока добавлена %s</item>
+        <item quantity="few">пока добавлено %s</item>
+        <item quantity="many">пока добавлено %s</item>
+        <item quantity="other">пока добавлено %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Лента опубликовала там %s публикацию. Она останется, если вы её не удалите.</item>
+        <item quantity="few">Лента опубликовала там %s публикации. Они останутся, если вы их не удалите.</item>
+        <item quantity="many">Лента опубликовала там %s публикаций. Они останутся, если вы их не удалите.</item>
+        <item quantity="other">Лента опубликовала там %s публикации. Они останутся, если вы их не удалите.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Пока добавлен %s источник; остальные будут добавлены позже</item>
+        <item quantity="few">Пока добавлено %s источника; остальные будут добавлены позже</item>
+        <item quantity="many">Пока добавлено %s источников; остальные будут добавлены позже</item>
+        <item quantity="other">Пока добавлено %s источника; остальные будут добавлены позже</item>
+    </plurals>
 </resources>

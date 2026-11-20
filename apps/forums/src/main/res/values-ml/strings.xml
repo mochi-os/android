@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ഇതുവരെ മോഡറേറ്റർ പ്രവർത്തനമൊന്നുമില്ല</string>
     <string name="forums_moderation_log_meta">%1$s നടത്തിയത് · ലക്ഷ്യം %2$s</string>
     <string name="forums_moderation_restriction_add">നിയന്ത്രണം ചേർക്കുക</string>
-    <string name="forums_moderation_restriction_user">ഉപയോക്തൃ ഐഡന്റിറ്റി</string>
     <string name="forums_moderation_restriction_type_shadowban">ഷാഡോബാൻ</string>
-    <string name="forums_moderation_restriction_duration_seconds">ദൈർഘ്യം (സെക്കൻഡുകൾ, ശാശ്വതത്തിന് ശൂന്യമായി വിടുക)</string>
     <string name="forums_moderation_restriction_expires">%1$s-ന് കാലഹരണപ്പെടും</string>
     <string name="forums_moderation_restriction_permanent">ശാശ്വതം</string>
     <string name="forums_report_reason_hate">വിദ്വേഷം</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">പേര്</string>
     <string name="forums_settings_field_entity_id">എന്റിറ്റി ID</string>
     <string name="forums_settings_field_fingerprint_label">വിരലടയാളം</string>
-    <string name="forums_settings_field_server">സെർവർ</string>
     <string name="forums_settings_name_edit_cd">പേര് എഡിറ്റ് ചെയ്യുക</string>
     <string name="forums_settings_name_cancel_cd">തിരുത്തൽ റദ്ദാക്കുക</string>
     <string name="forums_settings_save_name">പേര് സംരക്ഷിക്കുക</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">ക്രമീകരണങ്ങൾ ഇമ്പോർട്ട് ചെയ്യുക</string>
     <string name="forums_communities_add">കമ്മ്യൂണിറ്റികൾ ചേർക്കുക</string>
     <string name="forums_communities_add_failed">കമ്മ്യൂണിറ്റികൾ ചേർക്കാൻ കഴിഞ്ഞില്ല</string>
-    <string name="forums_imported_settings">%1$s കമ്മ്യൂണിറ്റികൾ, %2$s ബ്ലോക്കുകൾ, %3$s സംരക്ഷിച്ച പോസ്റ്റുകൾ എന്നിവ ഇമ്പോർട്ട് ചെയ്തു</string>
-    <string name="forums_imported_settings_more">ഇതുവരെ %1$s കമ്മ്യൂണിറ്റികൾ, %2$s ബ്ലോക്കുകൾ, %3$s സംരക്ഷിച്ച പോസ്റ്റുകൾ എന്നിവ ഇമ്പോർട്ട് ചെയ്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</string>
     <string name="forums_import_failed">ഇമ്പോർട്ട് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="forums_community">കമ്മ്യൂണിറ്റി</string>
     <string name="forums_community_name">കമ്മ്യൂണിറ്റിയുടെ പേര്</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s ലേക്ക് %2$s ആയി പോസ്റ്റ് ചെയ്യുന്നു</string>
     <string name="forums_find_search_example">പേര്, ID, ഫിംഗർപ്രിന്റ്, URL അല്ലെങ്കിൽ %1$s ഉപയോഗിച്ച് തിരയുക</string>
     <string name="forums_setup">സജ്ജമാക്കുക</string>
+    <string name="forums_post_remove_title">പോസ്റ്റ് നീക്കം ചെയ്യുക</string>
+    <string name="forums_post_remove_message">ഇത് സാധാരണ ഉപയോക്താക്കളിൽ നിന്ന് പോസ്റ്റ് മറയ്ക്കും. മോഡറേറ്റർമാർക്ക് ഇപ്പോഴും അത് കാണാനും പിന്നീട് പുനഃസ്ഥാപിക്കാനും കഴിയും.</string>
+    <string name="forums_comment_remove_title">അഭിപ്രായം നീക്കംചെയ്യുക</string>
+    <string name="forums_comment_remove_message">ഇത് സാധാരണ ഉപയോക്താക്കളിൽ നിന്ന് അഭിപ്രായം മറയ്ക്കും. മോഡറേറ്റർമാർക്ക് ഇപ്പോഴും അത് കാണാനും പിന്നീട് പുനഃസ്ഥാപിക്കാനും കഴിയും.</string>
+    <string name="forums_report_submitted">റിപ്പോർട്ട് സമർപ്പിച്ചു</string>
+    <string name="forums_member_remove_message">ഈ വ്യക്തിയുടെ ഈ ഫോറത്തിലെ വോട്ടുകൾ ഇല്ലാതാക്കപ്പെടും.</string>
+    <string name="forums_member_block_message">അവർക്ക് ഇനി ഈ ഫോറം കാണാൻ കഴിയില്ല.</string>
+    <string name="forums_member_block_title">%1$s ബ്ലോക്ക് ചെയ്യണോ?</string>
+    <string name="forums_moderation_resolution_ignored">ഒഴിവാക്കി</string>
+    <string name="forums_moderation_restriction_member">അംഗം</string>
+    <string name="forums_moderation_restriction_duration">ദൈർഘ്യം</string>
+    <string name="forums_moderation_duration_hour">ഒരു മണിക്കൂർ</string>
+    <string name="forums_moderation_duration_day">ഒരു ദിവസം</string>
+    <string name="forums_moderation_duration_week">ഒരാഴ്ച</string>
+    <string name="forums_moderation_duration_month">ഒരു മാസം</string>
+    <string name="forums_member_remove">നീക്കം ചെയ്യുക</string>
+    <string name="forums_member_remove_title">%1$s എന്നയാളെ നീക്കം ചെയ്യണോ?</string>
+    <string name="forums_imported">%1$s ഇമ്പോർട്ട് ചെയ്തു</string>
+    <string name="forums_imported_more">ഇതുവരെ %1$s ഇമ്പോർട്ട് ചെയ്തു; ബാക്കിയുള്ളവ പിന്നാലെ വരും</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s കമ്മ്യൂണിറ്റി</item>
+        <item quantity="other">%s കമ്മ്യൂണിറ്റികൾ</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s ബ്ലോക്ക്</item>
+        <item quantity="other">%s ബ്ലോക്കുകൾ</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">സംരക്ഷിച്ച %s പോസ്റ്റ്</item>
+        <item quantity="other">സംരക്ഷിച്ച %s പോസ്റ്റുകൾ</item>
+    </plurals>
 </resources>

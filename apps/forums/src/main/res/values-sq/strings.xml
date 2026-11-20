@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Ende s\'ka aktivitet moderatori</string>
     <string name="forums_moderation_log_meta">Nga %1$s · Objektivi %2$s</string>
     <string name="forums_moderation_restriction_add">Shtoni kufizim</string>
-    <string name="forums_moderation_restriction_user">Identiteti i përdoruesit</string>
     <string name="forums_moderation_restriction_type_shadowban">Bllokim i fshehtë</string>
-    <string name="forums_moderation_restriction_duration_seconds">Kohëzgjatja (sekonda, lëreni bosh për të përhershëm)</string>
     <string name="forums_moderation_restriction_expires">Skadon më %1$s</string>
     <string name="forums_moderation_restriction_permanent">I përhershëm</string>
     <string name="forums_report_reason_hate">Urrejtje</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Emri</string>
     <string name="forums_settings_field_entity_id">ID e entitetit</string>
     <string name="forums_settings_field_fingerprint_label">Gjurma</string>
-    <string name="forums_settings_field_server">Serveri</string>
     <string name="forums_settings_name_edit_cd">Modifiko emrin</string>
     <string name="forums_settings_name_cancel_cd">Anulo redaktimin</string>
     <string name="forums_settings_save_name">Ruaj emrin</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Importo cilësimet</string>
     <string name="forums_communities_add">Shto komunitete</string>
     <string name="forums_communities_add_failed">Komunitetet nuk u shtuan dot</string>
-    <string name="forums_imported_settings">U importuan %1$s komunitete, %2$s bllokime dhe %3$s postime të ruajtura</string>
-    <string name="forums_imported_settings_more">Deri tani u importuan %1$s komunitete, %2$s bllokime dhe %3$s postime të ruajtura; pjesa tjetër vjen më pas</string>
     <string name="forums_import_failed">Importimi nuk u krye dot</string>
     <string name="forums_community">Komuniteti</string>
     <string name="forums_community_name">Emri i komunitetit</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Publikohet në %1$s si %2$s</string>
     <string name="forums_find_search_example">Kërko sipas emrit, ID-së, gjurmës, URL-së ose adresës %1$s</string>
     <string name="forums_setup">Konfiguro</string>
+    <string name="forums_post_remove_title">Hiq postimin</string>
+    <string name="forums_post_remove_message">Kjo do të fshehë postimin nga përdoruesit e zakonshëm. Moderatorët mund ta shohin ende dhe ta rikthejnë më vonë.</string>
+    <string name="forums_comment_remove_title">Hiq komentin</string>
+    <string name="forums_comment_remove_message">Kjo do të fshehë komentin nga përdoruesit e zakonshëm. Moderatorët mund ta shohin ende dhe ta rikthejnë më vonë.</string>
+    <string name="forums_report_submitted">Raporti u dërgua</string>
+    <string name="forums_member_remove_message">Votat e këtij personi në këtë forum fshihen.</string>
+    <string name="forums_member_block_message">Nuk do të mund ta shohë më këtë forum.</string>
+    <string name="forums_member_block_title">Të bllokohet %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">I hedhur poshtë</string>
+    <string name="forums_moderation_restriction_member">Anëtar</string>
+    <string name="forums_moderation_restriction_duration">Kohëzgjatja</string>
+    <string name="forums_moderation_duration_hour">Një orë</string>
+    <string name="forums_moderation_duration_day">Një ditë</string>
+    <string name="forums_moderation_duration_week">Një javë</string>
+    <string name="forums_moderation_duration_month">Një muaj</string>
+    <string name="forums_member_remove">Hiq</string>
+    <string name="forums_member_remove_title">Të hiqet %1$s?</string>
+    <string name="forums_imported">U importuan %1$s</string>
+    <string name="forums_imported_more">Deri tani u importuan %1$s; të tjerat vijnë më pas</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s komunitet</item>
+        <item quantity="other">%s komunitete</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s bllokim</item>
+        <item quantity="other">%s bllokime</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s postim i ruajtur</item>
+        <item quantity="other">%s postime të ruajtura</item>
+    </plurals>
 </resources>

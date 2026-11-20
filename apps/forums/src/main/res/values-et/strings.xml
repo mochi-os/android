@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Moderaatori tegevust pole veel</string>
     <string name="forums_moderation_log_meta">Autor %1$s · Sihtmärk %2$s</string>
     <string name="forums_moderation_restriction_add">Lisa piirang</string>
-    <string name="forums_moderation_restriction_user">Kasutaja identiteet</string>
     <string name="forums_moderation_restriction_type_shadowban">Varjukeeld</string>
-    <string name="forums_moderation_restriction_duration_seconds">Kestus (sekundites, tühi tähendab püsivat)</string>
     <string name="forums_moderation_restriction_expires">Aegub %1$s</string>
     <string name="forums_moderation_restriction_permanent">Püsiv</string>
     <string name="forums_report_reason_hate">Vihkamine</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nimi</string>
     <string name="forums_settings_field_entity_id">Olemi ID</string>
     <string name="forums_settings_field_fingerprint_label">Sõrmejälg</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Muuda nime</string>
     <string name="forums_settings_name_cancel_cd">Tühista muutmine</string>
     <string name="forums_settings_save_name">Salvesta nimi</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Impordi seaded</string>
     <string name="forums_communities_add">Lisa kogukonnad</string>
     <string name="forums_communities_add_failed">Kogukondade lisamine ebaõnnestus</string>
-    <string name="forums_imported_settings">Imporditi %1$s kogukonda, %2$s blokeeritud serverit ja %3$s salvestatud postitust</string>
-    <string name="forums_imported_settings_more">Seni imporditi %1$s kogukonda, %2$s blokeeritud serverit ja %3$s salvestatud postitust; ülejäänud tulevad hiljem</string>
     <string name="forums_import_failed">Importimine ebaõnnestus</string>
     <string name="forums_community">Kogukond</string>
     <string name="forums_community_name">Kogukonna nimi</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Postitatakse kogukonda %1$s kasutajana %2$s</string>
     <string name="forums_find_search_example">Otsi nime, ID, sõrmejälje, URL-i või aadressi %1$s järgi</string>
     <string name="forums_setup">Seadista</string>
+    <string name="forums_post_remove_title">Eemalda postitus</string>
+    <string name="forums_post_remove_message">See peidab postituse tavakasutajate eest. Moderaatorid näevad seda endiselt ja saavad selle hiljem taastada.</string>
+    <string name="forums_comment_remove_title">Eemalda kommentaar</string>
+    <string name="forums_comment_remove_message">See peidab kommentaari tavakasutajate eest. Moderaatorid näevad seda endiselt ja saavad selle hiljem taastada.</string>
+    <string name="forums_report_submitted">Raport esitatud</string>
+    <string name="forums_member_remove_message">Selle inimese hääled selles foorumis kustutatakse.</string>
+    <string name="forums_member_block_message">Ta ei näe seda foorumit enam.</string>
+    <string name="forums_member_block_title">Kas blokeerida %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Tagasi lükatud</string>
+    <string name="forums_moderation_restriction_member">Liige</string>
+    <string name="forums_moderation_restriction_duration">Kestus</string>
+    <string name="forums_moderation_duration_hour">Üks tund</string>
+    <string name="forums_moderation_duration_day">Üks päev</string>
+    <string name="forums_moderation_duration_week">Üks nädal</string>
+    <string name="forums_moderation_duration_month">Üks kuu</string>
+    <string name="forums_member_remove">Eemalda</string>
+    <string name="forums_member_remove_title">Kas eemaldada %1$s?</string>
+    <string name="forums_imported">Imporditud: %1$s</string>
+    <string name="forums_imported_more">Seni imporditud: %1$s; ülejäänud tulevad hiljem</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s kogukond</item>
+        <item quantity="other">%s kogukonda</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokeering</item>
+        <item quantity="other">%s blokeeringut</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s salvestatud postitus</item>
+        <item quantity="other">%s salvestatud postitust</item>
+    </plurals>
 </resources>

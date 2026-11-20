@@ -295,7 +295,6 @@
     <string name="feeds_source_read_with">Citește cu</string>
     <string name="feeds_source_follow_pending">Urmărire în așteptare</string>
     <string name="feeds_import_follows">Importă conturi urmărite dintr-un fișier</string>
-    <string name="feeds_follows_importing">Se importă conturi urmărite: %1$s; adăugate până acum: %2$s</string>
     <string name="feeds_publish_to_account">Publică pe %1$s</string>
     <string name="feeds_import_posts">Importă postările</string>
     <string name="feeds_import_bookmarks">Importă marcajele</string>
@@ -309,7 +308,6 @@
     <string name="feeds_generator_off">Nu mai este un flux Bluesky</string>
     <string name="feeds_generator_failed">Nu s-a putut schimba fluxul Bluesky</string>
     <string name="feeds_copies_delete_title">Ștergi copiile de pe %1$s?</string>
-    <string name="feeds_copies_delete_message">Fluxul a publicat acolo %1$s postări. Rămân acolo dacă nu le ștergi.</string>
     <string name="feeds_copies_delete">Șterge copiile</string>
     <string name="feeds_copies_keep">Păstrează</string>
     <string name="feeds_copies_delete_failed">Nu s-au putut șterge copiile</string>
@@ -317,7 +315,6 @@
     <string name="feeds_import_failed">Nu s-a putut importa</string>
     <string name="feeds_imported">Importate: %1$s</string>
     <string name="feeds_imported_more">Importate până acum: %1$s; restul urmează</string>
-    <string name="feeds_import_sources_more">Surse adăugate până acum: %1$s; restul urmează</string>
     <string name="feeds_waiting_title">Se așteaptă permisiunea</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s persoană</item>
@@ -391,4 +388,28 @@
     <string name="feeds_filtered_by_tag">Filtrat după etichetă:</string>
     <string name="feeds_setup">Configurează</string>
     <string name="feeds_search_example">Caută după nume, ID, amprentă, URL sau %1$s</string>
+    <string name="feeds_member_remove_message">Reacțiile sale din acest flux sunt șterse.</string>
+    <string name="feeds_member_block_message">Nu va mai putea vedea acest flux.</string>
+    <string name="feeds_member_block_title">Blochezi %1$s?</string>
+    <string name="feeds_member_remove_title">Elimini %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Se importă %s cont urmărit</item>
+        <item quantity="few">Se importă %s conturi urmărite</item>
+        <item quantity="other">Se importă %s de conturi urmărite</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s adăugat până acum</item>
+        <item quantity="few">%s adăugate până acum</item>
+        <item quantity="other">%s adăugate până acum</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Fluxul a publicat acolo %s postare. Rămâne acolo dacă nu o ștergi.</item>
+        <item quantity="few">Fluxul a publicat acolo %s postări. Rămân acolo dacă nu le ștergi.</item>
+        <item quantity="other">Fluxul a publicat acolo %s de postări. Rămân acolo dacă nu le ștergi.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">A fost adăugată %s sursă până acum; restul urmează</item>
+        <item quantity="few">Au fost adăugate %s surse până acum; restul urmează</item>
+        <item quantity="other">Au fost adăugate %s de surse până acum; restul urmează</item>
+    </plurals>
 </resources>

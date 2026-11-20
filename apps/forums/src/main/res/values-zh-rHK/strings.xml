@@ -91,11 +91,9 @@
     <string name="forums_moderation_log_meta">由 %1$s · 對象 %2$s</string>
     <string name="forums_moderation_restrictions_empty">沒有限制</string>
     <string name="forums_moderation_restriction_add">新增限制</string>
-    <string name="forums_moderation_restriction_user">使用者身分</string>
     <string name="forums_moderation_restriction_type_muted">靜音</string>
     <string name="forums_moderation_restriction_type_banned">封禁</string>
     <string name="forums_moderation_restriction_type_shadowban">暗中封禁</string>
-    <string name="forums_moderation_restriction_duration_seconds">持續時間（秒，留空表示永久）</string>
     <string name="forums_moderation_restriction_expires">於 %1$s 到期</string>
     <string name="forums_moderation_restriction_permanent">永久</string>
     <string name="forums_moderation_section_premoderation">預先審核</string>
@@ -167,7 +165,6 @@
     <string name="forums_settings_field_name">名稱</string>
     <string name="forums_settings_field_entity_id">實體 ID</string>
     <string name="forums_settings_field_fingerprint_label">指紋</string>
-    <string name="forums_settings_field_server">伺服器</string>
     <string name="forums_settings_name_edit_cd">編輯名稱</string>
     <string name="forums_settings_name_cancel_cd">取消編輯</string>
     <string name="forums_settings_save_name">儲存名稱</string>
@@ -230,4 +227,6 @@
     <string name="forums_community_published">論壇已作為社群發布</string>
     <string name="forums_community_publish_failed">無法發布論壇</string>
     <string name="forums_community_link">連結</string>
+    <string name="forums_post_remove_message">這會對一般用戶隱藏該貼文。版主仍可看到並稍後復原。</string>
+    <string name="forums_comment_remove_message">這會對一般用戶隱藏該留言。版主仍可看到並稍後復原。</string>
 </resources>

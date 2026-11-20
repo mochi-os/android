@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Ingen modereringsaktivitet ännu</string>
     <string name="forums_moderation_log_meta">Av %1$s · Mål %2$s</string>
     <string name="forums_moderation_restriction_add">Lägg till begränsning</string>
-    <string name="forums_moderation_restriction_user">Användaridentitet</string>
     <string name="forums_moderation_restriction_type_shadowban">Skuggbann</string>
-    <string name="forums_moderation_restriction_duration_seconds">Varaktighet (sekunder, lämna tomt för permanent)</string>
     <string name="forums_moderation_restriction_expires">Upphör %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Hat</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Namn</string>
     <string name="forums_settings_field_entity_id">Entitets-ID</string>
     <string name="forums_settings_field_fingerprint_label">Fingeravtryck</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Redigera namn</string>
     <string name="forums_settings_name_cancel_cd">Avbryt redigering</string>
     <string name="forums_settings_save_name">Spara namn</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Importera inställningar</string>
     <string name="forums_communities_add">Lägg till gemenskaper</string>
     <string name="forums_communities_add_failed">Det gick inte att lägga till gemenskaperna</string>
-    <string name="forums_imported_settings">Importerade %1$s gemenskaper, %2$s blockeringar och %3$s sparade inlägg</string>
-    <string name="forums_imported_settings_more">Hittills importerade: %1$s gemenskaper, %2$s blockeringar och %3$s sparade inlägg; resten följer</string>
     <string name="forums_import_failed">Det gick inte att importera</string>
     <string name="forums_community">Gemenskap</string>
     <string name="forums_community_name">Gemenskapens namn</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Publiceras i %1$s som %2$s</string>
     <string name="forums_find_search_example">Sök efter namn, ID, fingeravtryck, URL eller %1$s</string>
     <string name="forums_setup">Konfigurera</string>
+    <string name="forums_post_remove_title">Ta bort inlägg</string>
+    <string name="forums_post_remove_message">Detta kommer att dölja inlägget från vanliga användare. Moderatorer kan fortfarande se det och återställa det senare.</string>
+    <string name="forums_comment_remove_title">Ta bort kommentar</string>
+    <string name="forums_comment_remove_message">Detta kommer att dölja kommentaren från vanliga användare. Moderatorer kan fortfarande se den och återställa den senare.</string>
+    <string name="forums_report_submitted">Rapport skickad</string>
+    <string name="forums_member_remove_message">Personens röster i det här forumet raderas.</string>
+    <string name="forums_member_block_message">Personen kan inte längre se det här forumet.</string>
+    <string name="forums_member_block_title">Blockera %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Avfärdad</string>
+    <string name="forums_moderation_restriction_member">Medlem</string>
+    <string name="forums_moderation_restriction_duration">Varaktighet</string>
+    <string name="forums_moderation_duration_hour">En timme</string>
+    <string name="forums_moderation_duration_day">En dag</string>
+    <string name="forums_moderation_duration_week">En vecka</string>
+    <string name="forums_moderation_duration_month">En månad</string>
+    <string name="forums_member_remove">Ta bort</string>
+    <string name="forums_member_remove_title">Ta bort %1$s?</string>
+    <string name="forums_imported">%1$s importerade</string>
+    <string name="forums_imported_more">%1$s importerade hittills; resten följer</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s gemenskap</item>
+        <item quantity="other">%s gemenskaper</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blockering</item>
+        <item quantity="other">%s blockeringar</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s sparat inlägg</item>
+        <item quantity="other">%s sparade inlägg</item>
+    </plurals>
 </resources>

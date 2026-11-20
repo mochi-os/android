@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Ei vielä valvojan toimintaa</string>
     <string name="forums_moderation_log_meta">Tekijä %1$s · Kohde %2$s</string>
     <string name="forums_moderation_restriction_add">Lisää rajoitus</string>
-    <string name="forums_moderation_restriction_user">Käyttäjäidentiteetti</string>
     <string name="forums_moderation_restriction_type_shadowban">Varjoesto</string>
-    <string name="forums_moderation_restriction_duration_seconds">Kesto (sekunteina, tyhjä = pysyvä)</string>
     <string name="forums_moderation_restriction_expires">Päättyy %1$s</string>
     <string name="forums_moderation_restriction_permanent">Pysyvä</string>
     <string name="forums_report_reason_hate">Viha</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nimi</string>
     <string name="forums_settings_field_entity_id">Entiteetin tunnus</string>
     <string name="forums_settings_field_fingerprint_label">Sormenjälki</string>
-    <string name="forums_settings_field_server">Palvelin</string>
     <string name="forums_settings_name_edit_cd">Muokkaa nimeä</string>
     <string name="forums_settings_name_cancel_cd">Peruuta muokkaus</string>
     <string name="forums_settings_save_name">Tallenna nimi</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Tuo asetukset</string>
     <string name="forums_communities_add">Lisää yhteisöt</string>
     <string name="forums_communities_add_failed">Yhteisöjen lisääminen epäonnistui</string>
-    <string name="forums_imported_settings">Tuotiin %1$s yhteisöä, %2$s estettyä palvelinta ja %3$s tallennettua julkaisua</string>
-    <string name="forums_imported_settings_more">Tähän mennessä tuotiin %1$s yhteisöä, %2$s estettyä palvelinta ja %3$s tallennettua julkaisua; loput tulevat perässä</string>
     <string name="forums_import_failed">Tuonti epäonnistui</string>
     <string name="forums_community">Yhteisö</string>
     <string name="forums_community_name">Yhteisön nimi</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Julkaistaan yhteisöön %1$s käyttäjänä %2$s</string>
     <string name="forums_find_search_example">Hae nimellä, tunnuksella, sormenjäljellä, URL-osoitteella tai osoitteella %1$s</string>
     <string name="forums_setup">Aseta</string>
+    <string name="forums_post_remove_title">Poista julkaisu</string>
+    <string name="forums_post_remove_message">Tämä piilottaa viestin tavallisilta käyttäjiltä. Moderaattorit näkevät sen edelleen ja voivat palauttaa sen myöhemmin.</string>
+    <string name="forums_comment_remove_title">Poista kommentti</string>
+    <string name="forums_comment_remove_message">Tämä piilottaa kommentin tavallisilta käyttäjiltä. Moderaattorit näkevät sen edelleen ja voivat palauttaa sen myöhemmin.</string>
+    <string name="forums_report_submitted">Ilmoitus lähetetty</string>
+    <string name="forums_member_remove_message">Tämän henkilön äänet tällä foorumilla poistetaan.</string>
+    <string name="forums_member_block_message">Hän ei voi enää nähdä tätä foorumia.</string>
+    <string name="forums_member_block_title">Estetäänkö %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Hylätty</string>
+    <string name="forums_moderation_restriction_member">Jäsen</string>
+    <string name="forums_moderation_restriction_duration">Kesto</string>
+    <string name="forums_moderation_duration_hour">Tunti</string>
+    <string name="forums_moderation_duration_day">Päivä</string>
+    <string name="forums_moderation_duration_week">Viikko</string>
+    <string name="forums_moderation_duration_month">Kuukausi</string>
+    <string name="forums_member_remove">Poista</string>
+    <string name="forums_member_remove_title">Poistetaanko %1$s?</string>
+    <string name="forums_imported">Tuotu: %1$s</string>
+    <string name="forums_imported_more">Tuotu tähän mennessä: %1$s; loput seuraavat</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s yhteisö</item>
+        <item quantity="other">%s yhteisöä</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s esto</item>
+        <item quantity="other">%s estoa</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s tallennettu julkaisu</item>
+        <item quantity="other">%s tallennettua julkaisua</item>
+    </plurals>
 </resources>

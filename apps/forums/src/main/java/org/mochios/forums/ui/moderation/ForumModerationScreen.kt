@@ -7,6 +7,7 @@ package org.mochios.forums.ui.moderation
 
 import org.mochios.android.api.OwnedAddress
 import androidx.annotation.StringRes
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
@@ -27,10 +29,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.outlined.VolumeOff
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Group
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Group
 import androidx.compose.material.icons.outlined.History
@@ -43,6 +47,8 @@ import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
@@ -59,6 +65,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.delay
 import org.mochios.android.util.attachmentModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
@@ -84,14 +91,17 @@ import org.mochios.android.ui.components.StatusTone
 import org.mochios.android.ui.components.defaultIcon
 import org.mochios.android.util.addressed
 import org.mochios.android.util.attachmentAddress
+import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.android.util.segment
 import org.mochios.forums.R
+import org.mochios.forums.model.ForumMember
 import org.mochios.forums.model.ModerationLogEntry
 import org.mochios.forums.model.ModerationReport
 import org.mochios.forums.model.Restriction
 import org.mochios.forums.model.humanise
 import org.mochios.forums.model.moderationAction
 import org.mochios.forums.model.moderationReason
+import org.mochios.forums.model.moderationResolution
 import org.mochios.forums.model.moderationTarget
 import org.mochios.forums.ui.components.authorAvatars
 import org.mochios.forums.ui.components.commentAvatar
@@ -139,8 +149,14 @@ fun ForumModerationScreen(
         .coerceAtLeast(0)
     // Owned here rather than in the tab, so the Scaffold's FAB can open it.
     var showAddRestriction by remember { mutableStateOf(false) }
+    val snackbar = remember { SnackbarHostState() }
+
+    LaunchedEffect(viewModel) {
+        viewModel.failures.collect { error -> snackbar.showSnackbar(error.userMessage()) }
+    }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbar) },
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.forums_moderation_title)) },
@@ -640,7 +656,11 @@ internal fun ReportCard(
                     stringResource(
                         R.string.forums_moderation_report_resolved_by,
                         report.resolverName.ifBlank { "\u2014" },
-                        report.resolution.ifBlank { "\u2014" },
+                        if (report.resolution.isBlank()) {
+                            "\u2014"
+                        } else {
+                            moderationLabel(moderationResolution(report.resolution), report.resolution)
+                        },
                     ),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -650,7 +670,6 @@ internal fun ReportCard(
     }
 }
 
-/** A report's own status: still waiting on a moderator, or already dealt with. */
 /**
  * [label] when the server's enum is one this build knows, and the humanised
  * raw value when it is not - a value added server-side reads as a phrase
@@ -660,6 +679,7 @@ internal fun ReportCard(
 private fun moderationLabel(@StringRes label: Int?, raw: String): String =
     if (label != null) stringResource(label) else humanise(raw)
 
+/** A report's own status: still waiting on a moderator, or already dealt with. */
 @Composable
 private fun ReportStatusBadge(status: String) {
     val tone = if (status == "pending") StatusTone.Waiting else StatusTone.Positive
@@ -778,12 +798,18 @@ private fun RestrictionsTab(
     }
 
     if (showAdd) {
+        var sending by remember { mutableStateOf(false) }
         AddRestrictionDialog(
             onConfirm = { user, type, reason, duration ->
-                viewModel.addRestriction(user, type, reason, duration)
-                onDismissAdd()
+                sending = true
+                viewModel.addRestriction(user, type, reason, duration) { added ->
+                    sending = false
+                    if (added) onDismissAdd()
+                }
             },
             onDismiss = onDismissAdd,
+            onSearch = viewModel::searchMembers,
+            sending = sending,
         )
     }
 }
@@ -913,17 +939,39 @@ private fun RestrictionBadge(type: String) {
     StatusBadge(label = label, tone = tone, icon = icon)
 }
 
+/**
+ * How long a restriction added from the Restrictions tab lasts, as the
+ * moderator chooses it; [seconds] is what the server is sent, null for one
+ * that lasts until removed.
+ */
+internal enum class RestrictionDuration(val seconds: Long?, @StringRes val label: Int) {
+    HOUR(3_600, R.string.forums_moderation_duration_hour),
+    DAY(86_400, R.string.forums_moderation_duration_day),
+    WEEK(604_800, R.string.forums_moderation_duration_week),
+    // Thirty days.
+    MONTH(2_592_000, R.string.forums_moderation_duration_month),
+    PERMANENT(null, R.string.forums_moderation_restriction_permanent),
+}
+
+/**
+ * Restrict a member: chosen by name from the forum's members, never typed as
+ * an id, for a length chosen from [RestrictionDuration]. Stays open, its
+ * button spinning, while [sending], so a refusal leaves the choices in place.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun AddRestrictionDialog(
+internal fun AddRestrictionDialog(
     onConfirm: (user: String, type: String, reason: String, durationSeconds: Long?) -> Unit,
     onDismiss: () -> Unit,
+    onSearch: suspend (String) -> List<ForumMember>,
+    sending: Boolean = false,
 ) {
-    var user by remember { mutableStateOf("") }
+    var member by remember { mutableStateOf<ForumMember?>(null) }
     var type by remember { mutableStateOf("muted") }
     var typeExpanded by remember { mutableStateOf(false) }
     var reason by remember { mutableStateOf("") }
-    var duration by remember { mutableStateOf("") }
+    var duration by remember { mutableStateOf(RestrictionDuration.PERMANENT) }
+    var durationExpanded by remember { mutableStateOf(false) }
     val typeLabels = listOf(
         "muted" to stringResource(R.string.forums_moderation_restriction_type_muted),
         "banned" to stringResource(R.string.forums_moderation_restriction_type_banned),
@@ -932,16 +980,14 @@ private fun AddRestrictionDialog(
     val typeLabel = typeLabels.firstOrNull { it.first == type }?.second ?: ""
 
     MochiAlertDialog(
-        onDismissRequest = onDismiss,
+        onDismissRequest = { if (!sending) onDismiss() },
         title = stringResource(R.string.forums_moderation_restriction_add),
         content = {
             Column {
-                MochiTextField(
-                    value = user,
-                    onValueChange = { user = it },
-                    label = { Text(stringResource(R.string.forums_moderation_restriction_user)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth(),
+                RestrictionMemberField(
+                    chosen = member,
+                    onChoose = { chosen -> member = chosen },
+                    onSearch = onSearch,
                 )
                 Spacer(Modifier.height(8.dp))
                 ExposedDropdownMenuBox(
@@ -983,18 +1029,105 @@ private fun AddRestrictionDialog(
                     modifier = Modifier.fillMaxWidth(),
                 )
                 Spacer(Modifier.height(8.dp))
-                MochiTextField(
-                    value = duration,
-                    onValueChange = { duration = it.filter { c -> c.isDigit() } },
-                    label = { Text(stringResource(R.string.forums_moderation_restriction_duration_seconds)) },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth(),
-                )
+                ExposedDropdownMenuBox(
+                    expanded = durationExpanded,
+                    onExpandedChange = { durationExpanded = it },
+                ) {
+                    MochiTextField(
+                        value = stringResource(duration.label),
+                        onValueChange = {},
+                        readOnly = true,
+                        label = { Text(stringResource(R.string.forums_moderation_restriction_duration)) },
+                        trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = durationExpanded) },
+                        modifier = Modifier
+                            .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
+                            .fillMaxWidth(),
+                    )
+                    ExposedDropdownMenu(
+                        expanded = durationExpanded,
+                        onDismissRequest = { durationExpanded = false },
+                    ) {
+                        RestrictionDuration.entries.forEach { choice ->
+                            MochiDropdownMenuItem(
+                                text = { Text(stringResource(choice.label)) },
+                                onClick = {
+                                    duration = choice
+                                    durationExpanded = false
+                                },
+                            )
+                        }
+                    }
+                }
             }
         },
         confirmText = stringResource(R.string.forums_moderation_restriction_add),
-        onConfirm = { onConfirm(user.trim(), type, reason, duration.toLongOrNull()) },
-        confirmEnabled = user.isNotBlank(),
+        onConfirm = {
+            member?.let { chosen -> onConfirm(chosen.id, type, reason, duration.seconds) }
+        },
+        confirmEnabled = member != null,
+        confirmLoading = sending,
         dismissText = stringResource(MochiR.string.common_cancel),
+        dismissEnabled = !sending,
     )
+}
+
+/**
+ * The member a restriction is for: a search over the forum's members, listing
+ * the first it holds before anything is typed, and once one is chosen, their
+ * name, with a way to choose again.
+ */
+@Composable
+private fun RestrictionMemberField(
+    chosen: ForumMember?,
+    onChoose: (ForumMember?) -> Unit,
+    onSearch: suspend (String) -> List<ForumMember>,
+) {
+    var query by remember { mutableStateOf("") }
+    var found by remember { mutableStateOf<List<ForumMember>>(emptyList()) }
+    val unnamed = stringResource(R.string.forums_post_default_author)
+    val label: @Composable () -> Unit = { Text(stringResource(R.string.forums_moderation_restriction_member)) }
+
+    if (chosen != null) {
+        MochiTextField(
+            value = chosen.name.ifBlank { unnamed },
+            onValueChange = {},
+            readOnly = true,
+            label = label,
+            singleLine = true,
+            trailingIcon = {
+                MochiIconButton(onClick = { onChoose(null) }) {
+                    Icon(Icons.Default.Close, contentDescription = stringResource(MochiR.string.person_picker_clear))
+                }
+            },
+            modifier = Modifier.fillMaxWidth(),
+        )
+        return
+    }
+
+    LaunchedEffect(query) {
+        if (query.isNotBlank()) delay(SEARCH_DEBOUNCE)
+        found = onSearch(query)
+    }
+    MochiTextField(
+        value = query,
+        onValueChange = { query = it },
+        label = label,
+        leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+        singleLine = true,
+        modifier = Modifier.fillMaxWidth(),
+    )
+    LazyColumn(modifier = Modifier.heightIn(max = 200.dp)) {
+        items(found, key = { it.id }) { member ->
+            Text(
+                text = member.name.ifBlank { unnamed },
+                style = MaterialTheme.typography.bodyLarge,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onChoose(member) }
+                    .padding(horizontal = 4.dp, vertical = 12.dp),
+            )
+        }
+    }
 }

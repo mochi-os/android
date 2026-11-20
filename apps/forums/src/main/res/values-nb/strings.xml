@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Ingen moderatoraktivitet ennå</string>
     <string name="forums_moderation_log_meta">Av %1$s · Mål %2$s</string>
     <string name="forums_moderation_restriction_add">Legg til begrensning</string>
-    <string name="forums_moderation_restriction_user">Brukeridentitet</string>
     <string name="forums_moderation_restriction_type_shadowban">Skyggebannlysing</string>
-    <string name="forums_moderation_restriction_duration_seconds">Varighet (sekunder, blankt for permanent)</string>
     <string name="forums_moderation_restriction_expires">Utløper %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Hat</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Navn</string>
     <string name="forums_settings_field_entity_id">Entitets-ID</string>
     <string name="forums_settings_field_fingerprint_label">Fingeravtrykk</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Rediger navn</string>
     <string name="forums_settings_name_cancel_cd">Avbryt redigering</string>
     <string name="forums_settings_save_name">Lagre navn</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Importer innstillinger</string>
     <string name="forums_communities_add">Legg til fellesskap</string>
     <string name="forums_communities_add_failed">Kunne ikke legge til fellesskapene</string>
-    <string name="forums_imported_settings">Importerte %1$s fellesskap, %2$s blokkeringer og %3$s lagrede innlegg</string>
-    <string name="forums_imported_settings_more">Importerte %1$s fellesskap, %2$s blokkeringer og %3$s lagrede innlegg så langt; resten følger</string>
     <string name="forums_import_failed">Kunne ikke importere</string>
     <string name="forums_community">Fellesskap</string>
     <string name="forums_community_name">Fellesskapsnavn</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Publiseres i %1$s som %2$s</string>
     <string name="forums_find_search_example">Søk etter navn, ID, fingeravtrykk, URL eller %1$s</string>
     <string name="forums_setup">Sett opp</string>
+    <string name="forums_post_remove_title">Fjern innlegg</string>
+    <string name="forums_post_remove_message">Dette vil skjule innlegget for vanlige brukere. Moderatorer kan fortsatt se det og gjenopprette det senere.</string>
+    <string name="forums_comment_remove_title">Fjern kommentar</string>
+    <string name="forums_comment_remove_message">Dette vil skjule kommentaren for vanlige brukere. Moderatorer kan fortsatt se den og gjenopprette den senere.</string>
+    <string name="forums_report_submitted">Rapport sendt</string>
+    <string name="forums_member_remove_message">Stemmene til denne personen i dette forumet slettes.</string>
+    <string name="forums_member_block_message">De kan ikke lenger se dette forumet.</string>
+    <string name="forums_member_block_title">Blokkere %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Avvist</string>
+    <string name="forums_moderation_restriction_member">Medlem</string>
+    <string name="forums_moderation_restriction_duration">Varighet</string>
+    <string name="forums_moderation_duration_hour">En time</string>
+    <string name="forums_moderation_duration_day">En dag</string>
+    <string name="forums_moderation_duration_week">En uke</string>
+    <string name="forums_moderation_duration_month">En måned</string>
+    <string name="forums_member_remove">Fjern</string>
+    <string name="forums_member_remove_title">Fjerne %1$s?</string>
+    <string name="forums_imported">Importerte %1$s</string>
+    <string name="forums_imported_more">Importerte %1$s så langt; resten følger</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s fellesskap</item>
+        <item quantity="other">%s fellesskap</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokkering</item>
+        <item quantity="other">%s blokkeringer</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s lagret innlegg</item>
+        <item quantity="other">%s lagrede innlegg</item>
+    </plurals>
 </resources>

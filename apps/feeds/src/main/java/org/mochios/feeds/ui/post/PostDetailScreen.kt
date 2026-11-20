@@ -470,7 +470,6 @@ internal fun PostDetailContent(
                         post = currentPost,
                         tags = tags,
                         permissions = permissions,
-                        serverUrl = viewModel.serverUrl,
                         feedId = viewModel.feedId,
                         onReact = { viewModel.reactToPost(it) },
                         onAddTag = onAddTag,
@@ -616,7 +615,6 @@ internal fun PostContent(
     post: Post,
     tags: List<Tag>,
     permissions: Permissions,
-    serverUrl: String,
     feedId: String,
     onReact: (String) -> Unit,
     onAddTag: (String) -> Unit,
@@ -883,7 +881,9 @@ internal fun PostContent(
             ReactionBar(
                 reactions = toReactionCounts(post.reactions, post.myReaction),
                 onReact = onReact,
-                onRemoveReaction = { onReact(post.myReaction) },
+                // The server's react is no toggle: only "none" takes a
+                // reaction back, as the feed card and comments send.
+                onRemoveReaction = { onReact("none") },
                 currentReaction = currentReactionType(post.myReaction),
             )
             PostBoosts(post.boosts, modifier = Modifier.padding(start = 16.dp))

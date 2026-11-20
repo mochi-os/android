@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">የሚያነቡበት መለያ</string>
     <string name="feeds_source_follow_pending">መከተል በመጠባበቅ ላይ</string>
     <string name="feeds_import_follows">የሚከተሏቸውን መለያዎች ከፋይል አስመጣ</string>
-    <string name="feeds_follows_importing">%1$s የሚከተሏቸው መለያዎች በማስመጣት ላይ፤ እስካሁን %2$s ታክለዋል</string>
     <string name="feeds_publish_to_account">ወደ %1$s አትም</string>
     <string name="feeds_import_posts">ልጥፎችን አስመጣ</string>
     <string name="feeds_import_bookmarks">ዕልባቶችን አስመጣ</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">ከእንግዲህ የBluesky ፊድ አይደለም</string>
     <string name="feeds_generator_failed">የBluesky ፊዱን መቀየር አልተቻለም</string>
     <string name="feeds_copies_delete_title">በ%1$s ላይ ያሉት ቅጂዎች ይሰረዙ?</string>
-    <string name="feeds_copies_delete_message">ፊዱ በዚያ %1$s ልጥፎችን አትሟል። ካልሰረዟቸው በስተቀር ይቆያሉ።</string>
     <string name="feeds_copies_delete">ቅጂዎችን ሰርዝ</string>
     <string name="feeds_copies_keep">አቆይ</string>
     <string name="feeds_copies_delete_failed">ቅጂዎቹን መሰረዝ አልተቻለም</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">ማስመጣት አልተቻለም</string>
     <string name="feeds_imported">%1$s ገብተዋል</string>
     <string name="feeds_imported_more">እስካሁን %1$s ገብተዋል፤ የቀሩት ይከተላሉ</string>
-    <string name="feeds_import_sources_more">እስካሁን %1$s ምንጮች ተጨምረዋል፤ የቀሩት ይከተላሉ</string>
     <string name="feeds_waiting_title">ፈቃድ በመጠበቅ ላይ</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s ሰው</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">በመለያ ተጣርቷል:</string>
     <string name="feeds_setup">ያዘጋጁ</string>
     <string name="feeds_search_example">በስም፣ መታወቂያ፣ ጣት አሻራ፣ URL ወይም %1$s ይፈልጉ</string>
+    <string name="feeds_member_remove_message">የዚህ ሰው ስሜት መግለጫዎች በዚህ ፊድ ውስጥ ይሰረዛሉ።</string>
+    <string name="feeds_member_block_message">ከዚህ በኋላ ይህን ፊድ ማየት አይችሉም።</string>
+    <string name="feeds_member_block_title">%1$sን ይታገድ?</string>
+    <string name="feeds_member_remove_title">%1$s ይወገድ?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s የሚከተሉት መለያ እየገባ ነው</item>
+        <item quantity="other">%s የሚከተሏቸው መለያዎች እየገቡ ነው</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">እስካሁን %s ተጨምሯል</item>
+        <item quantity="other">እስካሁን %s ተጨምረዋል</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">ፊዱ %s ልጥፍ እዚያ አትሟል። ካልሰረዙት እዚያው ይቆያል።</item>
+        <item quantity="other">ፊዱ %s ልጥፎችን እዚያ አትሟል። ካልሰረዟቸው እዚያው ይቆያሉ።</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">እስካሁን %s ምንጭ ተጨምሯል፤ የቀሩት ይከተላሉ</item>
+        <item quantity="other">እስካሁን %s ምንጮች ተጨምረዋል፤ የቀሩት ይከተላሉ</item>
+    </plurals>
 </resources>

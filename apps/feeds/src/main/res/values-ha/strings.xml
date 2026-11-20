@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Asusun da zai karanta</string>
     <string name="feeds_source_follow_pending">Bi yana jira</string>
     <string name="feeds_import_follows">Shigo da waɗanda kake bi daga fayil</string>
-    <string name="feeds_follows_importing">Ana shigo da waɗanda kake bi %1$s; an ƙara %2$s zuwa yanzu</string>
     <string name="feeds_publish_to_account">Wallafa zuwa %1$s</string>
     <string name="feeds_import_posts">Shigo da saƙonni</string>
     <string name="feeds_import_bookmarks">Shigo da alamomin shafi</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Ba jerin labarai na Bluesky ba ne kuma</string>
     <string name="feeds_generator_failed">Ba a iya canza jerin labarai na Bluesky ba</string>
     <string name="feeds_copies_delete_title">A goge kwafin da ke %1$s?</string>
-    <string name="feeds_copies_delete_message">Jerin labarai ya wallafa saƙonni %1$s a can. Za su kasance sai dai idan ka goge su.</string>
     <string name="feeds_copies_delete">Goge kwafi</string>
     <string name="feeds_copies_keep">Ajiye</string>
     <string name="feeds_copies_delete_failed">Ba a iya goge kwafin ba</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Ba a iya shigo da su ba</string>
     <string name="feeds_imported">An shigo da %1$s</string>
     <string name="feeds_imported_more">An shigo da %1$s zuwa yanzu; sauran na biye</string>
-    <string name="feeds_import_sources_more">An ƙara tushe %1$s zuwa yanzu; sauran na biye</string>
     <string name="feeds_waiting_title">Ana jiran izini</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">mutum %s</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">An tace ta tag:</string>
     <string name="feeds_setup">Saitawa</string>
     <string name="feeds_search_example">Bincika ta suna, ID, fingerprint, URL, ko %1$s</string>
+    <string name="feeds_member_remove_message">Za a share martanin wannan mutumin a wannan ciyarwar.</string>
+    <string name="feeds_member_block_message">Ba zai sake ganin wannan feed ba.</string>
+    <string name="feeds_member_block_title">A toshe %1$s?</string>
+    <string name="feeds_member_remove_title">A cire %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Ana shigo da wanda kake bi %s</item>
+        <item quantity="other">Ana shigo da waɗanda kake bi %s</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">an ƙara %s zuwa yanzu</item>
+        <item quantity="other">an ƙara %s zuwa yanzu</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Feed ɗin ya wallafa saƙo %s a can. Zai ci gaba da kasancewa sai dai idan ka goge shi.</item>
+        <item quantity="other">Feed ɗin ya wallafa saƙonni %s a can. Za su ci gaba da kasancewa sai dai idan ka goge su.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">An ƙara tushe %s zuwa yanzu; sauran na biye</item>
+        <item quantity="other">An ƙara tushe %s zuwa yanzu; sauran na biye</item>
+    </plurals>
 </resources>

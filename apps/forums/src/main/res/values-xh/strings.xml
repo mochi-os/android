@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Akukho msebenzi womlawuli okwangoku</string>
     <string name="forums_moderation_log_meta">Ngu-%1$s · Ekujoliswe kuyo %2$s</string>
     <string name="forums_moderation_restriction_add">Yongeza isithintelo</string>
-    <string name="forums_moderation_restriction_user">Isazisi somsebenzisi</string>
     <string name="forums_moderation_restriction_type_shadowban">Ukuvimbela okufihlakeleyo</string>
-    <string name="forums_moderation_restriction_duration_seconds">Ubude bexesha (imizuzwana, shiya ze ukuze ibe ngonaphakade)</string>
     <string name="forums_moderation_restriction_expires">Iphelelwa %1$s</string>
     <string name="forums_moderation_restriction_permanent">Ngonaphakade</string>
     <string name="forums_report_reason_hate">Inzondo</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Igama</string>
     <string name="forums_settings_field_entity_id">I-ID yequmrhu</string>
     <string name="forums_settings_field_fingerprint_label">Uphawu lomnwe</string>
-    <string name="forums_settings_field_server">Iseva</string>
     <string name="forums_settings_name_edit_cd">Hlela igama</string>
     <string name="forums_settings_name_cancel_cd">Rhoxisa uhlelo</string>
     <string name="forums_settings_save_name">Gcina igama</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Ngenisa iisetingi</string>
     <string name="forums_communities_add">Yongeza amaqela oluntu</string>
     <string name="forums_communities_add_failed">Akukwazekanga ukongeza amaqela oluntu</string>
-    <string name="forums_imported_settings">Kungeniswe amaqela oluntu angu-%1$s, izithintelo ezingu-%2$s neeposti ezigciniweyo ezingu-%3$s</string>
-    <string name="forums_imported_settings_more">Ukuza kuthi ga ngoku kungeniswe amaqela oluntu angu-%1$s, izithintelo ezingu-%2$s neeposti ezigciniweyo ezingu-%3$s; ezinye ziyalandela</string>
     <string name="forums_import_failed">Akukwazekanga ukungenisa</string>
     <string name="forums_community">Uluntu</string>
     <string name="forums_community_name">Igama leqela loluntu</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Ithunyelwa ku-%1$s njenge-%2$s</string>
     <string name="forums_find_search_example">Khangela ngegama, i-ID, umnwe, i-URL, okanye %1$s</string>
     <string name="forums_setup">Misela</string>
+    <string name="forums_post_remove_title">Susa umyalezo</string>
+    <string name="forums_post_remove_message">Oku kuya kufihla isithuba kubasebenzisi abaqhelekileyo. Abalawuli basenokusibona kwaye basibuyisele kamva.</string>
+    <string name="forums_comment_remove_title">Susa uluvo</string>
+    <string name="forums_comment_remove_message">Oku kuya kufihla isimvo kubasebenzisi abaqhelekileyo. Abalawuli basenokusibona kwaye basibuyisele kamva.</string>
+    <string name="forums_report_submitted">Ingxelo ingenisiwe</string>
+    <string name="forums_member_remove_message">Iivoti zalo mntu kule foramu ziyacinywa.</string>
+    <string name="forums_member_block_message">Abasakwazi ukubona le foramu.</string>
+    <string name="forums_member_block_title">Vimbela u-%1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Ikhatyiwe</string>
+    <string name="forums_moderation_restriction_member">Ilungu</string>
+    <string name="forums_moderation_restriction_duration">Ixesha</string>
+    <string name="forums_moderation_duration_hour">Iyure enye</string>
+    <string name="forums_moderation_duration_day">Usuku olunye</string>
+    <string name="forums_moderation_duration_week">Iveki enye</string>
+    <string name="forums_moderation_duration_month">Inyanga enye</string>
+    <string name="forums_member_remove">Susa</string>
+    <string name="forums_member_remove_title">Susa u-%1$s?</string>
+    <string name="forums_imported">Kungeniswe %1$s</string>
+    <string name="forums_imported_more">Kungeniswe %1$s ukuza kuthi ga ngoku; okunye kuza kulandela</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">iqela loluntu eli-%s</item>
+        <item quantity="other">amaqela oluntu angama-%s</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">uvimbelo o-%s</item>
+        <item quantity="other">izivimbelo ezi-%s</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">umyalezo ogciniweyo o-%s</item>
+        <item quantity="other">imiyalezo egciniweyo eyi-%s</item>
+    </plurals>
 </resources>

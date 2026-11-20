@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">अहिलेसम्म कुनै मध्यस्थता गतिविधि छैन</string>
     <string name="forums_moderation_log_meta">%1$s द्वारा · लक्ष्य %2$s</string>
     <string name="forums_moderation_restriction_add">प्रतिबन्ध थप्नुहोस्</string>
-    <string name="forums_moderation_restriction_user">प्रयोगकर्ता पहिचान</string>
     <string name="forums_moderation_restriction_type_shadowban">छाया प्रतिबन्ध</string>
-    <string name="forums_moderation_restriction_duration_seconds">अवधि (सेकेन्ड, स्थायीको लागि खाली)</string>
     <string name="forums_moderation_restriction_expires">%1$s मा समाप्त हुन्छ</string>
     <string name="forums_moderation_restriction_permanent">स्थायी</string>
     <string name="forums_report_reason_hate">घृणा</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">नाम</string>
     <string name="forums_settings_field_entity_id">एन्टिटी आईडी</string>
     <string name="forums_settings_field_fingerprint_label">औंलाछाप</string>
-    <string name="forums_settings_field_server">सर्भर</string>
     <string name="forums_settings_name_edit_cd">नाम सम्पादन गर्नुहोस्</string>
     <string name="forums_settings_name_cancel_cd">सम्पादन रद्द गर्नुहोस्</string>
     <string name="forums_settings_save_name">नाम सुरक्षित गर्नुहोस्</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">सेटिङहरू आयात गर्नुहोस्</string>
     <string name="forums_communities_add">समुदायहरू थप्नुहोस्</string>
     <string name="forums_communities_add_failed">समुदायहरू थप्न सकिएन</string>
-    <string name="forums_imported_settings">%1$s समुदाय, %2$s ब्लक र %3$s सुरक्षित पोस्टहरू आयात गरियो</string>
-    <string name="forums_imported_settings_more">अहिलेसम्म %1$s समुदाय, %2$s ब्लक र %3$s सुरक्षित पोस्टहरू आयात गरियो; बाँकी पछि आउनेछन्</string>
     <string name="forums_import_failed">आयात गर्न सकिएन</string>
     <string name="forums_community">समुदाय</string>
     <string name="forums_community_name">समुदायको नाम</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s मा %2$s को रूपमा पोस्ट हुन्छ</string>
     <string name="forums_find_search_example">नाम, ID, फिङ्गरप्रिन्ट, URL वा %1$s ले खोज्नुहोस्</string>
     <string name="forums_setup">सेटअप गर्नुहोस्</string>
+    <string name="forums_post_remove_title">पोस्ट हटाउनुहोस्</string>
+    <string name="forums_post_remove_message">यसले नियमित प्रयोगकर्ताहरूबाट पोस्ट लुकाउनेछ। मध्यस्थहरूले अझै पनि यो देख्न र पछि पुनर्स्थापना गर्न सक्छन्।</string>
+    <string name="forums_comment_remove_title">टिप्पणी हटाउनुहोस्</string>
+    <string name="forums_comment_remove_message">यसले नियमित प्रयोगकर्ताहरूबाट टिप्पणी लुकाउनेछ। मध्यस्थहरूले अझै पनि यो देख्न र पछि पुनर्स्थापना गर्न सक्छन्।</string>
+    <string name="forums_report_submitted">रिपोर्ट पेस गरियो</string>
+    <string name="forums_member_remove_message">यो व्यक्तिका यस फोरममा भएका मतहरू मेटिन्छन्।</string>
+    <string name="forums_member_block_message">उनीहरूले अब यो फोरम हेर्न पाउने छैनन्।</string>
+    <string name="forums_member_block_title">%1$s लाई ब्लक गर्ने?</string>
+    <string name="forums_moderation_resolution_ignored">खारेज गरिएको</string>
+    <string name="forums_moderation_restriction_member">सदस्य</string>
+    <string name="forums_moderation_restriction_duration">अवधि</string>
+    <string name="forums_moderation_duration_hour">एक घण्टा</string>
+    <string name="forums_moderation_duration_day">एक दिन</string>
+    <string name="forums_moderation_duration_week">एक हप्ता</string>
+    <string name="forums_moderation_duration_month">एक महिना</string>
+    <string name="forums_member_remove">हटाउनुहोस्</string>
+    <string name="forums_member_remove_title">%1$s लाई हटाउने?</string>
+    <string name="forums_imported">%1$s आयात गरियो</string>
+    <string name="forums_imported_more">अहिलेसम्म %1$s आयात गरियो; बाँकी पछि आउनेछन्</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s समुदाय</item>
+        <item quantity="other">%s समुदायहरू</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s ब्लक</item>
+        <item quantity="other">%s ब्लकहरू</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s सुरक्षित पोस्ट</item>
+        <item quantity="other">%s सुरक्षित पोस्टहरू</item>
+    </plurals>
 </resources>

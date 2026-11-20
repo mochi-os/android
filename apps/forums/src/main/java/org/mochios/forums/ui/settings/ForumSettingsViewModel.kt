@@ -24,6 +24,7 @@ import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.forums.R
 import org.mochios.forums.api.ForumPermissions
 import org.mochios.forums.model.AiPrompts
+import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumMember
 import org.mochios.forums.repository.ForumsRepository
@@ -34,7 +35,6 @@ data class ForumSettingsUiState(
     /** The viewer's permissions; `manage` gates every editing surface. */
     val permissions: ForumPermissions = ForumPermissions(),
     val isLoading: Boolean = false,
-    val isSaving: Boolean = false,
     val error: MochiError? = null,
     val actionMessage: Int? = null,
     val deleted: Boolean = false,
@@ -44,6 +44,13 @@ data class ForumSettingsUiState(
     val accessLevels: List<String> = emptyList(),
     val members: List<ForumMember> = emptyList(),
     val aiPrompts: AiPrompts? = null,
+    /**
+     * The forum's AI mode and account as `ai/prompts/get` answers them to the
+     * owner; the forum row leaves the account out. Null until that answer.
+     */
+    val aiSettings: AiSettings? = null,
+    /** Why the AI tab's answer could not be read; the tab offers a retry. */
+    val aiError: MochiError? = null,
     val aiAccounts: List<org.mochios.android.model.Account> = emptyList(),
     val userSearchResults: List<org.mochios.forums.model.User> = emptyList(),
     val groups: List<org.mochios.forums.model.Group> = emptyList(),
@@ -93,16 +100,14 @@ class ForumSettingsViewModel @Inject constructor(
 
     fun rename(newName: String) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSaving = true)
             try {
                 repository.renameForum(forumId, newName)
                 _uiState.value = _uiState.value.copy(
                     forum = _uiState.value.forum.copy(name = newName),
-                    isSaving = false,
                     actionMessage = R.string.forums_settings_forum_renamed,
                 )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }
@@ -251,32 +256,39 @@ class ForumSettingsViewModel @Inject constructor(
         }
     }
 
-    fun removeMember(memberId: String) {
+    /** [onDone] reports whether the removal succeeded, so its confirmation can close or stay. */
+    fun removeMember(memberId: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.removeMember(forumId, memberId)
+                onDone(true)
                 _uiState.value = _uiState.value.copy(
                     actionMessage = R.string.forums_settings_member_removed,
                 )
                 loadMembers()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
     }
 
-    // The "No access" level offered on the row: a deny on every level, and the
-    // server drops the membership with it.
-    fun blockMember(memberId: String) {
+    /**
+     * The "No access" level offered on the row: a deny on every level, and the
+     * server drops the membership with it. [onDone] as [removeMember].
+     */
+    fun blockMember(memberId: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.setAccess(forumId, memberId, "none")
+                onDone(true)
                 _uiState.value = _uiState.value.copy(
                     actionMessage = R.string.forums_settings_member_blocked,
                 )
                 loadMembers()
                 loadAccess()
             } catch (e: Exception) {
+                onDone(false)
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }
         }
@@ -297,16 +309,26 @@ class ForumSettingsViewModel @Inject constructor(
     }
 
     /**
-     * Load the prompt defaults for the AI section's "reset to default" action.
-     * The current mode/account/prompt values come from the forum row itself.
+     * Load the AI tab: the custom prompts and their defaults, and the forum's
+     * AI mode and account, which come from here rather than the forum row - it
+     * leaves the account out, and a mode change sends the account the tab
+     * holds. A server that does not send them falls back to the row.
      */
     fun loadAiPrompts() {
         viewModelScope.launch {
+            _uiState.value = _uiState.value.copy(aiError = null)
             try {
-                val prompts = repository.getAiPrompts(forumId)
-                _uiState.value = _uiState.value.copy(aiPrompts = prompts)
+                val answer = repository.getAiPrompts(forumId)
+                val forum = _uiState.value.forum
+                _uiState.value = _uiState.value.copy(
+                    aiPrompts = AiPrompts(prompts = answer.prompts, defaults = answer.defaults),
+                    aiSettings = AiSettings(
+                        mode = answer.mode ?: forum.aiMode,
+                        account = answer.account ?: forum.aiAccount,
+                    ),
+                )
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(aiError = e.toMochiError())
             }
         }
     }
@@ -317,6 +339,7 @@ class ForumSettingsViewModel @Inject constructor(
                 repository.setAiSettings(forumId, mode, account)
                 _uiState.value = _uiState.value.copy(
                     forum = _uiState.value.forum.copy(aiMode = mode, aiAccount = account),
+                    aiSettings = AiSettings(mode = mode, account = account),
                     actionMessage = R.string.forums_settings_ai_updated,
                 )
             } catch (e: Exception) {
@@ -335,27 +358,6 @@ class ForumSettingsViewModel @Inject constructor(
                         ?: AiPrompts(prompts = mapOf(type to prompt)),
                     actionMessage = R.string.forums_settings_prompt_saved,
                 )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun clearNotifications() {
-        viewModelScope.launch {
-            try {
-                repository.clearNotifications(forumId)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
-
-    fun unsubscribe(onDone: () -> Unit) {
-        viewModelScope.launch {
-            try {
-                repository.unsubscribe(forumId)
-                onDone()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())
             }

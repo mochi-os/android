@@ -281,7 +281,6 @@
     <string name="feeds_source_read_with">使用此账户阅读</string>
     <string name="feeds_source_follow_pending">关注待确认</string>
     <string name="feeds_import_follows">从文件导入关注列表</string>
-    <string name="feeds_follows_importing">正在导入 %1$s 个关注；目前已添加 %2$s 个</string>
     <string name="feeds_publish_to_account">发布到 %1$s</string>
     <string name="feeds_import_posts">导入帖子</string>
     <string name="feeds_import_bookmarks">导入书签</string>
@@ -295,7 +294,6 @@
     <string name="feeds_generator_off">已不再是 Bluesky 信息流</string>
     <string name="feeds_generator_failed">无法更改 Bluesky 信息流</string>
     <string name="feeds_copies_delete_title">删除 %1$s 上的副本？</string>
-    <string name="feeds_copies_delete_message">此信息流已在那里发布 %1$s 条帖子。除非你删除，否则它们会一直保留。</string>
     <string name="feeds_copies_delete">删除副本</string>
     <string name="feeds_copies_keep">保留</string>
     <string name="feeds_copies_delete_failed">无法删除副本</string>
@@ -303,7 +301,6 @@
     <string name="feeds_import_failed">无法导入</string>
     <string name="feeds_imported">已导入 %1$s 项</string>
     <string name="feeds_imported_more">已导入 %1$s 项，其余稍后导入</string>
-    <string name="feeds_import_sources_more">已添加 %1$s 个来源，其余稍后添加</string>
     <string name="feeds_waiting_title">正在等待权限</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s 人</item>
@@ -356,4 +353,20 @@
     <string name="feeds_filtered_by_tag">按标签筛选:</string>
     <string name="feeds_setup">设置</string>
     <string name="feeds_search_example">按名称、ID、指纹、URL 或 %1$s 搜索</string>
+    <string name="feeds_member_remove_message">该成员在此信息流中的反应将被删除。</string>
+    <string name="feeds_member_block_message">对方将无法再查看此信息流。</string>
+    <string name="feeds_member_block_title">屏蔽 %1$s？</string>
+    <string name="feeds_member_remove_title">移除 %1$s？</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="other">正在导入 %s 个关注</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="other">目前已添加 %s 个</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="other">此信息流已在那里发布 %s 个帖子。除非你删除，否则它们会一直保留。</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="other">目前已添加 %s 个来源，其余稍后添加</item>
+    </plurals>
 </resources>

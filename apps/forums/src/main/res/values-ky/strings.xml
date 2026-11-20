@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Азырынча модератордун аракети жок</string>
     <string name="forums_moderation_log_meta">%1$s тарабынан · Объект %2$s</string>
     <string name="forums_moderation_restriction_add">Чектөө кошуу</string>
-    <string name="forums_moderation_restriction_user">Колдонуучунун иденттүүлүгү</string>
     <string name="forums_moderation_restriction_type_shadowban">Көмүскө бан</string>
-    <string name="forums_moderation_restriction_duration_seconds">Узактыгы (секунд, түбөлүк үчүн бош калтырыңыз)</string>
     <string name="forums_moderation_restriction_expires">Аякталат: %1$s</string>
     <string name="forums_moderation_restriction_permanent">Түбөлүк</string>
     <string name="forums_report_reason_hate">Жек көрүү</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Аты</string>
     <string name="forums_settings_field_entity_id">Субъект ID</string>
     <string name="forums_settings_field_fingerprint_label">Манжа изи</string>
-    <string name="forums_settings_field_server">Сервер</string>
     <string name="forums_settings_name_edit_cd">Атын түзөтүү</string>
     <string name="forums_settings_name_cancel_cd">Түзөтүүнү жокко чыгаруу</string>
     <string name="forums_settings_save_name">Атын сактоо</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Жөндөөлөрдү импорттоо</string>
     <string name="forums_communities_add">Коомчулуктарды кошуу</string>
     <string name="forums_communities_add_failed">Коомчулуктарды кошуу мүмкүн болбоду</string>
-    <string name="forums_imported_settings">%1$s коомчулук, %2$s бөгөт жана %3$s сакталган жазуу импорттолду</string>
-    <string name="forums_imported_settings_more">Азырынча %1$s коомчулук, %2$s бөгөт жана %3$s сакталган жазуу импорттолду; калганы кийин</string>
     <string name="forums_import_failed">Импорттоо мүмкүн болбоду</string>
     <string name="forums_community">Коомчулук</string>
     <string name="forums_community_name">Коомчулуктун аты</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s коомчулугунда %2$s катары жарыяланат</string>
     <string name="forums_find_search_example">Аты, ID, манжа изи, URL же %1$s дареги боюнча издөө</string>
     <string name="forums_setup">Орнотуу</string>
+    <string name="forums_post_remove_title">Постту алуу</string>
+    <string name="forums_post_remove_message">Бул постту кадимки колдонуучулардан жашырат. Модераторлор аны көрө алат жана кийин кайра калыбына келтире алат.</string>
+    <string name="forums_comment_remove_title">Комментарийди алуу</string>
+    <string name="forums_comment_remove_message">Бул комментарийди кадимки колдонуучулардан жашырат. Модераторлор аны көрө алат жана кийин кайра калыбына келтире алат.</string>
+    <string name="forums_report_submitted">Билдирүү жөнөтүлдү</string>
+    <string name="forums_member_remove_message">Бул адамдын ушул форумдагы добуштары өчүрүлөт.</string>
+    <string name="forums_member_block_message">Ал мындан ары бул форумду көрө албайт.</string>
+    <string name="forums_member_block_title">%1$s бөгөттөлсүнбү?</string>
+    <string name="forums_moderation_resolution_ignored">Четке кагылды</string>
+    <string name="forums_moderation_restriction_member">Мүчө</string>
+    <string name="forums_moderation_restriction_duration">Узактыгы</string>
+    <string name="forums_moderation_duration_hour">Бир саат</string>
+    <string name="forums_moderation_duration_day">Бир күн</string>
+    <string name="forums_moderation_duration_week">Бир апта</string>
+    <string name="forums_moderation_duration_month">Бир ай</string>
+    <string name="forums_member_remove">Алуу</string>
+    <string name="forums_member_remove_title">%1$s алынсынбы?</string>
+    <string name="forums_imported">%1$s импорттолду</string>
+    <string name="forums_imported_more">Азырынча %1$s импорттолду; калганы кийин</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s коомчулук</item>
+        <item quantity="other">%s коомчулук</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s бөгөт</item>
+        <item quantity="other">%s бөгөт</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s сакталган пост</item>
+        <item quantity="other">%s сакталган пост</item>
+    </plurals>
 </resources>

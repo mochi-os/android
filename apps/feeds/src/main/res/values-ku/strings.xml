@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Bi vê bixwîne</string>
     <string name="feeds_source_follow_pending">Şopandin li benda pejirandinê ye</string>
     <string name="feeds_import_follows">Şopandinan ji pelekê îthal bike</string>
-    <string name="feeds_follows_importing">Şopandin têne îthalkirin: %1$s; heta niha hatin zêdekirin: %2$s</string>
     <string name="feeds_publish_to_account">Li %1$s biweşîne</string>
     <string name="feeds_import_posts">Posteyan îthal bike</string>
     <string name="feeds_import_bookmarks">Nîşanan îthal bike</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Êdî ne feeda Bluesky ye</string>
     <string name="feeds_generator_failed">Feeda Bluesky nehat guhertin</string>
     <string name="feeds_copies_delete_title">Kopiyên li ser %1$s jê bibî?</string>
-    <string name="feeds_copies_delete_message">Feedê li wir %1$s poste weşandin. Heta tu wan jê nebî, ew dimînin.</string>
     <string name="feeds_copies_delete">Kopiyan jê bibe</string>
     <string name="feeds_copies_keep">Bihêle</string>
     <string name="feeds_copies_delete_failed">Kopî nehatin jêbirin</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Îthalkirin pêk nehat</string>
     <string name="feeds_imported">%1$s hatin îthalkirin</string>
     <string name="feeds_imported_more">Heta niha %1$s hatin îthalkirin; yên mayî dê paşê werin</string>
-    <string name="feeds_import_sources_more">Heta niha %1$s çavkanî hatin zêdekirin; yên mayî dê paşê werin</string>
     <string name="feeds_waiting_title">Li benda destûrê</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s kes</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Bi tagê hate parzûnkirin:</string>
     <string name="feeds_setup">Saz bike</string>
     <string name="feeds_search_example">Li gor nav, ID, fingerprint, URL an %1$s bigere</string>
+    <string name="feeds_member_remove_message">Bertekên vî kesî di vê feedê de tên jêbirin.</string>
+    <string name="feeds_member_block_message">Ew êdî nikare vê feedê bibîne.</string>
+    <string name="feeds_member_block_title">%1$s were astengkirin?</string>
+    <string name="feeds_member_remove_title">%1$s were rakirin?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s şopandin tê îthalkirin</item>
+        <item quantity="other">%s şopandin tên îthalkirin</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">heta niha %s hat zêdekirin</item>
+        <item quantity="other">heta niha %s hatin zêdekirin</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Feedê li wir %s post weşand. Heta tu jê nebî, ew dimîne.</item>
+        <item quantity="other">Feedê li wir %s post weşandin. Heta tu wan jê nebî, ew dimînin.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Heta niha %s çavkanî hat zêdekirin; yên mayî dê paşê werin</item>
+        <item quantity="other">Heta niha %s çavkanî hatin zêdekirin; yên mayî dê paşê werin</item>
+    </plurals>
 </resources>

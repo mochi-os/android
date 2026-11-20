@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ఇంకా మోడరేటర్ కార్యకలాపాలు లేవు</string>
     <string name="forums_moderation_log_meta">%1$s ద్వారా · లక్ష్యం %2$s</string>
     <string name="forums_moderation_restriction_add">పరిమితిని జోడించండి</string>
-    <string name="forums_moderation_restriction_user">వినియోగదారు గుర్తింపు</string>
     <string name="forums_moderation_restriction_type_shadowban">షాడోబ్యాన్</string>
-    <string name="forums_moderation_restriction_duration_seconds">వ్యవధి (సెకన్లు, శాశ్వతం కోసం ఖాళీగా ఉంచండి)</string>
     <string name="forums_moderation_restriction_expires">%1$sన ముగుస్తుంది</string>
     <string name="forums_moderation_restriction_permanent">శాశ్వతం</string>
     <string name="forums_report_reason_hate">ద్వేషం</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">పేరు</string>
     <string name="forums_settings_field_entity_id">ఎంటిటీ ID</string>
     <string name="forums_settings_field_fingerprint_label">వేలిముద్ర</string>
-    <string name="forums_settings_field_server">సర్వర్</string>
     <string name="forums_settings_name_edit_cd">పేరును సవరించండి</string>
     <string name="forums_settings_name_cancel_cd">సవరణను రద్దు చేయండి</string>
     <string name="forums_settings_save_name">పేరును భద్రపరచండి</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">సెట్టింగ్‌లను దిగుమతి చేయండి</string>
     <string name="forums_communities_add">సంఘాలను జోడించండి</string>
     <string name="forums_communities_add_failed">సంఘాలను జోడించడం సాధ్యం కాలేదు</string>
-    <string name="forums_imported_settings">%1$s సంఘాలు, %2$s బ్లాక్‌లు, %3$s సేవ్ చేసిన పోస్ట్‌లు దిగుమతి చేయబడ్డాయి</string>
-    <string name="forums_imported_settings_more">ఇప్పటివరకు %1$s సంఘాలు, %2$s బ్లాక్‌లు, %3$s సేవ్ చేసిన పోస్ట్‌లు దిగుమతి చేయబడ్డాయి; మిగిలినవి తర్వాత వస్తాయి</string>
     <string name="forums_import_failed">దిగుమతి చేయడం సాధ్యం కాలేదు</string>
     <string name="forums_community">సంఘం</string>
     <string name="forums_community_name">సంఘం పేరు</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s లో %2$s గా పోస్ట్ అవుతుంది</string>
     <string name="forums_find_search_example">పేరు, ID, ఫింగర్‌ప్రింట్, URL లేదా %1$s ద్వారా శోధించండి</string>
     <string name="forums_setup">సెటప్ చేయండి</string>
+    <string name="forums_post_remove_title">పోస్ట్‌ను తొలగించండి</string>
+    <string name="forums_post_remove_message">ఇది సాధారణ వినియోగదారుల నుండి పోస్ట్‌ను దాచిపెడుతుంది. మోడరేటర్లు ఇప్పటికీ దానిని చూడవచ్చు మరియు తర్వాత పునరుద్ధరించవచ్చు.</string>
+    <string name="forums_comment_remove_title">కామెంట్‌ను తొలగించండి</string>
+    <string name="forums_comment_remove_message">ఇది సాధారణ వినియోగదారుల నుండి వ్యాఖ్యను దాచిపెడుతుంది. మోడరేటర్లు ఇప్పటికీ దానిని చూడవచ్చు మరియు తర్వాత పునరుద్ధరించవచ్చు.</string>
+    <string name="forums_report_submitted">రిపోర్ట్ సమర్పించబడింది</string>
+    <string name="forums_member_remove_message">ఈ ఫోరమ్‌లో ఆ వ్యక్తి ఓట్లు తొలగించబడతాయి.</string>
+    <string name="forums_member_block_message">వారు ఈ ఫోరమ్‌ను ఇకపై చూడలేరు.</string>
+    <string name="forums_member_block_title">%1$sని బ్లాక్ చేయాలా?</string>
+    <string name="forums_moderation_resolution_ignored">విస్మరించబడింది</string>
+    <string name="forums_moderation_restriction_member">సభ్యుడు</string>
+    <string name="forums_moderation_restriction_duration">వ్యవధి</string>
+    <string name="forums_moderation_duration_hour">ఒక గంట</string>
+    <string name="forums_moderation_duration_day">ఒక రోజు</string>
+    <string name="forums_moderation_duration_week">ఒక వారం</string>
+    <string name="forums_moderation_duration_month">ఒక నెల</string>
+    <string name="forums_member_remove">తొలగించండి</string>
+    <string name="forums_member_remove_title">%1$sని తొలగించాలా?</string>
+    <string name="forums_imported">%1$s దిగుమతి చేయబడ్డాయి</string>
+    <string name="forums_imported_more">ఇప్పటివరకు %1$s దిగుమతి చేయబడ్డాయి; మిగిలినవి తర్వాత వస్తాయి</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s సంఘం</item>
+        <item quantity="other">%s సంఘాలు</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s బ్లాక్</item>
+        <item quantity="other">%s బ్లాక్‌లు</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s సేవ్ చేసిన పోస్ట్</item>
+        <item quantity="other">%s సేవ్ చేసిన పోస్ట్‌లు</item>
+    </plurals>
 </resources>

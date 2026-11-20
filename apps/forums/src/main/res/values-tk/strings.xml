@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Heniz moderator işjeňligi ýok</string>
     <string name="forums_moderation_log_meta">%1$s tarapyndan · Maksat %2$s</string>
     <string name="forums_moderation_restriction_add">Çäklendirme goşmak</string>
-    <string name="forums_moderation_restriction_user">Ulanyjy şahsyýeti</string>
     <string name="forums_moderation_restriction_type_shadowban">Kölegeli gadagan</string>
-    <string name="forums_moderation_restriction_duration_seconds">Dowamlylygy (sekuntda, hemişelik üçin boş)</string>
     <string name="forums_moderation_restriction_expires">Möhleti gutarýar %1$s</string>
     <string name="forums_moderation_restriction_permanent">Hemişelik</string>
     <string name="forums_report_reason_hate">Ýigrenç</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">At</string>
     <string name="forums_settings_field_entity_id">Essas ID</string>
     <string name="forums_settings_field_fingerprint_label">Barmak yzy</string>
-    <string name="forums_settings_field_server">Serwer</string>
     <string name="forums_settings_name_edit_cd">Ady düzet</string>
     <string name="forums_settings_name_cancel_cd">Redaktirlemegi ýatyr</string>
     <string name="forums_settings_save_name">Ady ýatda sakla</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Sazlamalary import et</string>
     <string name="forums_communities_add">Jemgyýetleri goş</string>
     <string name="forums_communities_add_failed">Jemgyýetleri goşup bolmady</string>
-    <string name="forums_imported_settings">%1$s jemgyýet, %2$s bloklama we %3$s saklanan ýazgy import edildi</string>
-    <string name="forums_imported_settings_more">Häzirlikçe %1$s jemgyýet, %2$s bloklama we %3$s saklanan ýazgy import edildi; galanlary yzyndan geler</string>
     <string name="forums_import_failed">Import edip bolmady</string>
     <string name="forums_community">Jemgyýet</string>
     <string name="forums_community_name">Jemgyýetiň ady</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s jemgyýetinde %2$s hökmünde çap edilýär</string>
     <string name="forums_find_search_example">At, ID, fingerprint, URL ýa-da %1$s boýunça gözle</string>
     <string name="forums_setup">Düzmek</string>
+    <string name="forums_post_remove_title">Posty aýyr</string>
+    <string name="forums_post_remove_message">Bu posty adaty ulanyjylardan gizlär. Moderatorlar henizem ony görüp we soň dikeldip bilerler.</string>
+    <string name="forums_comment_remove_title">Teswiri aýyr</string>
+    <string name="forums_comment_remove_message">Bu teswiri adaty ulanyjylardan gizlär. Moderatorlar henizem ony görüp we soň dikeldip bilerler.</string>
+    <string name="forums_report_submitted">Hasabat tabşyryldy</string>
+    <string name="forums_member_remove_message">Bu adamyň bu forumdaky sesleri pozular.</string>
+    <string name="forums_member_block_message">Ol indi bu forumy görüp bilmez.</string>
+    <string name="forums_member_block_title">%1$s petiklenilsinmi?</string>
+    <string name="forums_moderation_resolution_ignored">Ret edildi</string>
+    <string name="forums_moderation_restriction_member">Agza</string>
+    <string name="forums_moderation_restriction_duration">Dowamlylyk</string>
+    <string name="forums_moderation_duration_hour">Bir sagat</string>
+    <string name="forums_moderation_duration_day">Bir gün</string>
+    <string name="forums_moderation_duration_week">Bir hepde</string>
+    <string name="forums_moderation_duration_month">Bir aý</string>
+    <string name="forums_member_remove">Aýyr</string>
+    <string name="forums_member_remove_title">%1$s aýrylsynmy?</string>
+    <string name="forums_imported">%1$s import edildi</string>
+    <string name="forums_imported_more">Häzirlikçe %1$s import edildi; galanlary yzyndan geler</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s jemgyýet</item>
+        <item quantity="other">%s jemgyýet</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s petikleme</item>
+        <item quantity="other">%s petikleme</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s ýatda saklanan post</item>
+        <item quantity="other">%s ýatda saklanan post</item>
+    </plurals>
 </resources>

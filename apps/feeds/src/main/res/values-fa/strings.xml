@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">خواندن با</string>
     <string name="feeds_source_follow_pending">دنبال کردن در انتظار</string>
     <string name="feeds_import_follows">وارد کردن دنبال‌شده‌ها از فایل</string>
-    <string name="feeds_follows_importing">در حال وارد کردن %1$s دنبال‌شده؛ تاکنون %2$s مورد افزوده شد</string>
     <string name="feeds_publish_to_account">انتشار در %1$s</string>
     <string name="feeds_import_posts">وارد کردن پست‌ها</string>
     <string name="feeds_import_bookmarks">وارد کردن نشانک‌ها</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">دیگر فید Bluesky نیست</string>
     <string name="feeds_generator_failed">تغییر فید Bluesky ممکن نشد</string>
     <string name="feeds_copies_delete_title">نسخه‌های روی %1$s حذف شوند؟</string>
-    <string name="feeds_copies_delete_message">فید %1$s پست در آنجا منتشر کرده است. تا وقتی حذفشان نکنید، باقی می‌مانند.</string>
     <string name="feeds_copies_delete">حذف نسخه‌ها</string>
     <string name="feeds_copies_keep">نگه داشتن</string>
     <string name="feeds_copies_delete_failed">حذف نسخه‌ها ممکن نشد</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">وارد کردن ممکن نشد</string>
     <string name="feeds_imported">%1$s مورد وارد شد</string>
     <string name="feeds_imported_more">تاکنون %1$s مورد وارد شد؛ بقیه در پی می‌آیند</string>
-    <string name="feeds_import_sources_more">تاکنون %1$s منبع افزوده شد؛ بقیه در پی می‌آیند</string>
     <string name="feeds_waiting_title">در انتظار مجوز</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s نفر</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">فیلتر شده با برچسب:</string>
     <string name="feeds_setup">راه‌اندازی</string>
     <string name="feeds_search_example">جست‌وجو بر اساس نام، شناسه، اثرانگشت، URL یا %1$s</string>
+    <string name="feeds_member_remove_message">واکنش‌های این شخص در این فید حذف می‌شود.</string>
+    <string name="feeds_member_block_message">او دیگر نمی‌تواند این فید را ببیند.</string>
+    <string name="feeds_member_block_title">%1$s مسدود شود؟</string>
+    <string name="feeds_member_remove_title">%1$s حذف شود؟</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">در حال وارد کردن %s دنبال‌شده</item>
+        <item quantity="other">در حال وارد کردن %s دنبال‌شده</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">تاکنون %s مورد افزوده شد</item>
+        <item quantity="other">تاکنون %s مورد افزوده شد</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">فید %s پست در آنجا منتشر کرد. تا وقتی حذفش نکنید، باقی می‌ماند.</item>
+        <item quantity="other">فید %s پست در آنجا منتشر کرد. تا وقتی حذفشان نکنید، باقی می‌مانند.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">تاکنون %s منبع افزوده شد؛ بقیه در پی می‌آیند</item>
+        <item quantity="other">تاکنون %s منبع افزوده شد؛ بقیه در پی می‌آیند</item>
+    </plurals>
 </resources>

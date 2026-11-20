@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Все още няма активност от модератори</string>
     <string name="forums_moderation_log_meta">От %1$s · Цел %2$s</string>
     <string name="forums_moderation_restriction_add">Добавяне на ограничение</string>
-    <string name="forums_moderation_restriction_user">Самоличност на потребителя</string>
     <string name="forums_moderation_restriction_type_shadowban">Скрито блокиране</string>
-    <string name="forums_moderation_restriction_duration_seconds">Продължителност (секунди, празно за постоянно)</string>
     <string name="forums_moderation_restriction_expires">Изтича на %1$s</string>
     <string name="forums_moderation_restriction_permanent">Постоянно</string>
     <string name="forums_report_reason_hate">Омраза</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Име</string>
     <string name="forums_settings_field_entity_id">ID на обект</string>
     <string name="forums_settings_field_fingerprint_label">Отпечатък</string>
-    <string name="forums_settings_field_server">Сървър</string>
     <string name="forums_settings_name_edit_cd">Редактиране на име</string>
     <string name="forums_settings_name_cancel_cd">Отказ от редактирането</string>
     <string name="forums_settings_save_name">Запази името</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Импортирай настройки</string>
     <string name="forums_communities_add">Добави общности</string>
     <string name="forums_communities_add_failed">Общностите не можаха да бъдат добавени</string>
-    <string name="forums_imported_settings">Импортирани са %1$s общности, %2$s блокирани сървъра и %3$s запазени публикации</string>
-    <string name="forums_imported_settings_more">Досега са импортирани %1$s общности, %2$s блокирани сървъра и %3$s запазени публикации; останалите следват</string>
     <string name="forums_import_failed">Импортирането не бе успешно</string>
     <string name="forums_community">Общност</string>
     <string name="forums_community_name">Име на общността</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Публикува се в %1$s като %2$s</string>
     <string name="forums_find_search_example">Търси по име, ID, отпечатък, URL или адрес %1$s</string>
     <string name="forums_setup">Настройка</string>
+    <string name="forums_post_remove_title">Премахни публикация</string>
+    <string name="forums_post_remove_message">Това ще скрие публикацията от обикновените потребители. Модераторите все още могат да я виждат и да я възстановят по-късно.</string>
+    <string name="forums_comment_remove_title">Премахни коментар</string>
+    <string name="forums_comment_remove_message">Това ще скрие коментара от обикновените потребители. Модераторите все още могат да го виждат и да го възстановят по-късно.</string>
+    <string name="forums_report_submitted">Докладът е изпратен</string>
+    <string name="forums_member_remove_message">Гласовете на този човек в този форум се изтриват.</string>
+    <string name="forums_member_block_message">Вече няма да може да вижда този форум.</string>
+    <string name="forums_member_block_title">Блокиране на %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Отхвърлен</string>
+    <string name="forums_moderation_restriction_member">Член</string>
+    <string name="forums_moderation_restriction_duration">Продължителност</string>
+    <string name="forums_moderation_duration_hour">Един час</string>
+    <string name="forums_moderation_duration_day">Един ден</string>
+    <string name="forums_moderation_duration_week">Една седмица</string>
+    <string name="forums_moderation_duration_month">Един месец</string>
+    <string name="forums_member_remove">Премахни</string>
+    <string name="forums_member_remove_title">Да се премахне ли %1$s?</string>
+    <string name="forums_imported">Импортирани: %1$s</string>
+    <string name="forums_imported_more">Досега са импортирани %1$s; останалите следват</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s общност</item>
+        <item quantity="other">%s общности</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s блокиране</item>
+        <item quantity="other">%s блокирания</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s запазена публикация</item>
+        <item quantity="other">%s запазени публикации</item>
+    </plurals>
 </resources>

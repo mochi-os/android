@@ -5,7 +5,6 @@
 
 package org.mochios.feeds.ui.feedlist
 
-import android.app.Application
 import android.content.Context
 import android.os.Looper
 import androidx.lifecycle.SavedStateHandle
@@ -356,7 +355,6 @@ class FeedSocketsTest {
             repository,
             socket,
             session,
-            context as Application,
         )
         until { model.post.value != null && socket.isLive("f1") }
         settle()

@@ -28,6 +28,7 @@ import org.mochios.feeds.R
 import org.mochios.android.i18n.LanguageStore
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.PollInput
+import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.PostFeatures
 import org.mochios.feeds.model.PublishState
 import org.mochios.feeds.repository.FeedsRepository
@@ -50,6 +51,24 @@ import javax.inject.Inject
  */
 internal fun editOrder(loaded: Boolean, existing: List<String>, removed: Set<String>, added: Int): List<String>? =
     if (loaded) existing.filter { it !in removed } + List(added) { "new:$it" } else null
+
+/** The post an edit opens on: on its way, loaded, or failed to load. */
+sealed interface EditState {
+    data object Loading : EditState
+    data class Loaded(val post: Post) : EditState
+    data class Failed(val error: MochiError) : EditState
+}
+
+/**
+ * The features an edit sends: each the user changed from the loaded [post],
+ * null for those left as they were, so the server keeps its own.
+ */
+internal fun editedFeatures(post: Post, visibility: String, warning: String, sensitive: Boolean): PostFeatures =
+    PostFeatures(
+        visibility = visibility.takeIf { it != post.visibility.ifEmpty { "public" } },
+        warning = warning.trim().takeIf { it != post.warning },
+        sensitive = sensitive.takeIf { it != (post.sensitive != 0) },
+    )
 
 @HiltViewModel
 class CreatePostViewModel @Inject constructor(
@@ -85,8 +104,6 @@ class CreatePostViewModel @Inject constructor(
     val existingAttachments: StateFlow<List<Attachment>> = _existingAttachments.asStateFlow()
 
     private val _removedExistingIds = MutableStateFlow<Set<String>>(emptySet())
-    // Whether the edited post's attachments have loaded.
-    private var loaded = false
     val removedExistingIds: StateFlow<Set<String>> = _removedExistingIds.asStateFlow()
 
     // Captions keyed by the new file's Uri and the saved attachment's id, so
@@ -119,6 +136,14 @@ class CreatePostViewModel @Inject constructor(
 
     private val _error = MutableStateFlow<MochiError?>(null)
     val error: StateFlow<MochiError?> = _error.asStateFlow()
+
+    /**
+     * The post being edited, null for a new post. The form shows only once it
+     * has loaded, so nothing typed is overwritten by a late answer, and Save
+     * exists only then, so the form's defaults never replace what it holds.
+     */
+    private val _edit = MutableStateFlow<EditState?>(if (editingPostId != null) EditState.Loading else null)
+    val edit: StateFlow<EditState?> = _edit.asStateFlow()
 
     private val _postSuccess = MutableStateFlow(false)
     val postSuccess: StateFlow<Boolean> = _postSuccess.asStateFlow()
@@ -176,16 +201,21 @@ class CreatePostViewModel @Inject constructor(
                     _selectedFeed.value = feeds.first().fingerprint.ifEmpty { feeds.first().id }
                 }
                 loadPublish()
-            } catch (_: Exception) {
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
             } finally {
                 _isLoadingFeeds.value = false
             }
         }
     }
 
-    private fun loadExistingPost() {
+    /** Read the post being edited into the form; also the retry of a failed read. */
+    fun loadExistingPost() {
         val feedId = preSelectedFeedId ?: return
         val postId = editingPostId ?: return
+        _edit.value = EditState.Loading
         viewModelScope.launch {
             try {
                 val result = repository.getPost(feedId, postId)
@@ -194,7 +224,6 @@ class CreatePostViewModel @Inject constructor(
                 _existingCaptions.value = result.post.attachments
                     .filter { it.caption.isNotEmpty() }
                     .associate { it.id to it.caption }
-                loaded = true
                 _visibility.value = result.post.visibility.ifEmpty { "public" }
                 _warning.value = result.post.warning
                 _sensitive.value = result.post.sensitive != 0
@@ -202,8 +231,11 @@ class CreatePostViewModel @Inject constructor(
                 result.post.data?.checkin?.let { _checkin.value = it }
                 result.post.data?.travelling?.origin?.let { _travellingOrigin.value = it }
                 result.post.data?.travelling?.destination?.let { _travellingDestination.value = it }
+                _edit.value = EditState.Loaded(result.post)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _error.value = e.toMochiError()
+                _edit.value = EditState.Failed(e.toMochiError())
             }
         }
     }
@@ -362,6 +394,10 @@ class CreatePostViewModel @Inject constructor(
     }
 
     fun createPost() {
+        // An edit saves only over the post as it loaded.
+        val edit = _edit.value
+        val loaded = edit as? EditState.Loaded
+        if (edit != null && loaded == null) return
         val feedId = _selectedFeed.value
         if (feedId.isEmpty()) {
             _error.value = MochiError.Local(R.string.feeds_post_select_feed)
@@ -376,13 +412,17 @@ class CreatePostViewModel @Inject constructor(
             return
         }
         if (!pollValid(_poll.value)) return
-        val features = PostFeatures(
-            visibility = _visibility.value,
-            warning = _warning.value.trim(),
-            sensitive = _sensitive.value,
-            // The post's language is the writer's own, as the app runs in it.
-            language = if (isEditing) null else writerLanguage(),
-        )
+        val features = if (loaded != null) {
+            editedFeatures(loaded.post, _visibility.value, _warning.value, _sensitive.value)
+        } else {
+            PostFeatures(
+                visibility = _visibility.value,
+                warning = _warning.value.trim(),
+                sensitive = _sensitive.value,
+                // The post's language is the writer's own, as the app runs in it.
+                language = writerLanguage(),
+            )
+        }
 
         viewModelScope.launch {
             _isPosting.value = true
@@ -394,7 +434,7 @@ class CreatePostViewModel @Inject constructor(
                         .filter { it.id !in _removedExistingIds.value }
                         .map { it.id }
                     val order = editOrder(
-                        loaded,
+                        loaded != null,
                         _existingAttachments.value.map { it.id },
                         _removedExistingIds.value,
                         _attachments.value.size
@@ -418,7 +458,6 @@ class CreatePostViewModel @Inject constructor(
                             order = order,
                             newFiles = newFileUris,
                             captions = captions,
-                            context = application,
                             checkin = _checkin.value,
                             travellingOrigin = _travellingOrigin.value,
                             travellingDestination = _travellingDestination.value,
@@ -434,7 +473,6 @@ class CreatePostViewModel @Inject constructor(
                             body = bodyText,
                             uris = uris,
                             captions = uris.map { _newCaptions.value[it] ?: "" },
-                            context = application,
                             checkin = _checkin.value,
                             travellingOrigin = _travellingOrigin.value,
                             travellingDestination = _travellingDestination.value,

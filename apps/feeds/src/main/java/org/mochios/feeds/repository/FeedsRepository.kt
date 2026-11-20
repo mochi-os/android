@@ -33,7 +33,6 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.android.model.AccessRule
-import org.mochios.android.model.Comment
 import org.mochios.android.model.PlaceData
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.util.REFRESH_DEBOUNCE
@@ -405,7 +404,11 @@ class FeedsRepository @Inject constructor(
 
     /** Clears the entity's RSS token, so its published URLs stop working. */
     suspend fun revokeRssToken(entity: String) {
-        api.revokeRssToken(entity).unwrap()
+        try {
+            api.revokeRssToken(entity).unwrap()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
     }
 
     suspend fun getRssToken(entity: String, mode: String): String {
@@ -615,32 +618,10 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun createPost(
-        feedId: String,
-        body: String,
-        files: List<Pair<String, ByteArray>>,
-        fileTypes: List<String>,
-        checkin: PlaceData? = null,
-        travellingOrigin: PlaceData? = null,
-        travellingDestination: PlaceData? = null
-    ) {
-        try {
-            val multipartBody = buildPostBody(feedId, body, checkin, travellingOrigin, travellingDestination)
-            files.forEachIndexed { index, (name, bytes) ->
-                val mediaType = fileTypes.getOrElse(index) { FileStore.DEFAULT_MIME }
-                multipartBody.addPart(fileStore.bytesPart("files", name, mediaType, bytes))
-            }
-            api.createPost(feedId, multipartBody.build()).unwrap()
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
-
     suspend fun createPostFromUris(
         feedId: String,
         body: String,
         uris: List<Uri>,
-        context: Context,
         // Per-file captions aligned with `uris`; sent only when one is set.
         captions: List<String> = emptyList(),
         checkin: PlaceData? = null,
@@ -726,7 +707,6 @@ class FeedsRepository @Inject constructor(
         // Null leaves the post's attachments untouched.
         order: List<String>?,
         newFiles: List<Uri>,
-        context: Context,
         // Caption edits keyed by attachment id or "new:N" placeholder.
         captions: Map<String, String> = emptyMap(),
         checkin: PlaceData? = null,
@@ -859,10 +839,9 @@ class FeedsRepository @Inject constructor(
         body: String,
         parent: String? = null,
         files: List<Uri>,
-        context: Context,
         attachment: String? = null,
         tracker: UploadTracker? = null,
-    ): Comment {
+    ): String {
         val cachedFiles = fileStore.cacheFiles(files)
         return try {
             val builder = MultipartBody.Builder()
@@ -878,7 +857,7 @@ class FeedsRepository @Inject constructor(
             for (file in cachedFiles) {
                 builder.addPart(fileStore.filePart("files", file, tracker = tracker))
             }
-            api.createComment(feedId, postId, builder.build()).unwrap().comment
+            api.createComment(feedId, postId, builder.build()).unwrap().id
         } catch (e: Exception) {
             throw e.toMochiError()
         } finally {
@@ -943,14 +922,6 @@ class FeedsRepository @Inject constructor(
     }
 
     // --- Sources ---
-
-    suspend fun getSources(feedId: String): List<Source> {
-        return try {
-            api.getSources(feedId).unwrap().sources
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
 
     /** The feed's sources, and the servers people of its imports wait on. */
     suspend fun getSourceList(feedId: String): SourceListResponse = mapped { api.getSources(feedId).unwrap() }

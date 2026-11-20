@@ -9,6 +9,7 @@ import android.content.Context
 import android.os.SystemClock
 import android.util.Log
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -25,7 +26,7 @@ import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
 import org.mochios.forums.api.AccessResponse
-import org.mochios.forums.api.BannerResponse
+import org.mochios.forums.api.AiPromptsResponse
 import org.mochios.forums.api.CreateCommentResponse
 import org.mochios.forums.api.CreatePostResponse
 import org.mochios.forums.api.ForumInfoResponse
@@ -45,7 +46,6 @@ import org.mochios.forums.api.UnsubscribeRequest
 import org.mochios.forums.api.ViewForumResponse
 import org.mochios.forums.api.ViewPostResponse
 import org.mochios.android.util.NaturalCompare
-import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.CommunitiesAdded
 import org.mochios.forums.model.CommunitiesImported
 import org.mochios.forums.model.CommunityFound
@@ -56,7 +56,6 @@ import org.mochios.forums.model.AiSettings
 import org.mochios.forums.model.DirectoryEntry
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ModerationSettings
-import java.io.File
 import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -90,6 +89,10 @@ class ForumsRepository @Inject constructor(
 
     /** Moved on by [forget], so a read already under way keeps nothing. */
     private val generation = AtomicInteger()
+
+    /** Says that [forget] has dropped the roster, so a list showing it reads it again. */
+    private val _forgotten = MutableSharedFlow<Unit>(extraBufferCapacity = 1, onBufferOverflow = BufferOverflow.DROP_OLDEST)
+    val forgotten: SharedFlow<Unit> = _forgotten.asSharedFlow()
 
     /** The user's forums, which those pinned to the home screen are brought into line with. */
     suspend fun listForums(sort: String? = null): ForumListResponse =
@@ -131,6 +134,7 @@ class ForumsRepository @Inject constructor(
     fun forget() {
         generation.incrementAndGet()
         roster = null
+        _forgotten.tryEmit(Unit)
     }
 
     /** Brings the forums pinned to the home screen into line with a roster just read. */
@@ -138,8 +142,16 @@ class ForumsRepository @Inject constructor(
         Shortcuts.reconcile(context, "forums", Shortcuts.paths(response.forums, { it.name }) { listOf(it.id, it.fingerprint) })
     }
 
-    suspend fun viewForum(forumId: String, before: Long? = null, sort: String? = null, tag: String? = null, cursor: String? = null): ViewForumResponse =
-        api.viewForum(forumId, before = before, cursor = cursor, sort = sort, tag = tag).unwrap()
+    /** A page of the forum's posts: [limit] of them, the server's own page size when null, a hundred at most. */
+    suspend fun viewForum(
+        forumId: String,
+        before: Long? = null,
+        sort: String? = null,
+        tag: String? = null,
+        cursor: String? = null,
+        limit: Int? = null,
+    ): ViewForumResponse =
+        api.viewForum(forumId, limit = limit, before = before, cursor = cursor, sort = sort, tag = tag).unwrap()
 
     /** Fetch the forum row plus viewer permissions (no posts) — used by settings. */
     suspend fun getForumInfo(forumId: String): ForumInfoResponse =
@@ -259,24 +271,11 @@ class ForumsRepository @Inject constructor(
         api.reportComment(forumId, postId, commentId, reason, details).unwrap()
     }
 
-    suspend fun createPost(forumId: String, title: String, body: String, files: List<File> = emptyList()): CreatePostResponse {
-        val parts = fileStore.fileParts("files", files)
-        val response = api.createPost(
-            forum = forumId.toRequestBody(text),
-            title = title.toRequestBody(text),
-            body = body.toRequestBody(text),
-            files = parts
-        ).unwrap()
-        _postCreated.tryEmit(forumId)
-        return response
-    }
-
     suspend fun createPostFromUris(
         forumId: String,
         title: String,
         body: String,
         uris: List<android.net.Uri>,
-        context: android.content.Context,
         // Per-file captions aligned with `uris`; sent only when one is set.
         captions: List<String> = emptyList(),
         tracker: UploadTracker? = null,
@@ -317,7 +316,6 @@ class ForumsRepository @Inject constructor(
         body: String,
         keptAttachmentIds: List<String>?,
         newFileUris: List<android.net.Uri>,
-        context: android.content.Context,
         // Caption edits keyed by attachment id or "new:N" placeholder.
         captions: Map<String, String> = emptyMap(),
         tracker: UploadTracker? = null,
@@ -351,41 +349,17 @@ class ForumsRepository @Inject constructor(
         }
     }
 
-    suspend fun createComment(forumId: String, postId: String, body: String, parent: String? = null, files: List<File> = emptyList()): CreateCommentResponse {
-        val parts = fileStore.fileParts("files", files)
-        return api.createComment(
-            forumId = forumId,
-            postId = postId,
-            forum = forumId.toRequestBody(text),
-            post = postId.toRequestBody(text),
-            body = body.toRequestBody(text),
-            parent = parent?.toRequestBody(text),
-            attachment = null,
-            files = parts
-        ).unwrap()
-    }
-
     suspend fun voteComment(forumId: String, postId: String, commentId: String, vote: String) {
         api.voteComment(forumId, postId, commentId, vote.ifEmpty { "none" }).unwrap()
     }
 
-    suspend fun editComment(
-        forumId: String,
-        postId: String,
-        commentId: String,
-        body: String,
-        order: List<String>? = null,
-        files: List<File> = emptyList(),
-    ) {
-        val parts = fileStore.fileParts("files", files)
-        val orderJson = order?.let { com.google.gson.Gson().toJson(it).toRequestBody(text) }
+    /** A comment's new body. Its attachments are left as they are, as the web leaves them. */
+    suspend fun editComment(forumId: String, postId: String, commentId: String, body: String) {
         api.editComment(
             forumId = forumId,
             postId = postId,
             commentId = commentId,
             body = body.toRequestBody(text),
-            order = orderJson,
-            files = parts,
         ).unwrap()
     }
 
@@ -401,7 +375,6 @@ class ForumsRepository @Inject constructor(
         body: String,
         parent: String? = null,
         uris: List<android.net.Uri>,
-        context: android.content.Context,
         attachment: String? = null,
         tracker: UploadTracker? = null,
     ): CreateCommentResponse {
@@ -498,9 +471,6 @@ class ForumsRepository @Inject constructor(
         api.saveMembers(forumId, remove = memberId).unwrap()
     }
 
-    suspend fun getBanner(forumId: String): BannerResponse =
-        api.getBanner(forumId).unwrap()
-
     suspend fun setBanner(forumId: String, banner: String) {
         api.setBanner(forumId, banner).unwrap()
     }
@@ -518,7 +488,7 @@ class ForumsRepository @Inject constructor(
         api.setAiSettings(forumId, mode, account).unwrap()
     }
 
-    suspend fun getAiPrompts(forumId: String): AiPrompts =
+    suspend fun getAiPrompts(forumId: String): AiPromptsResponse =
         api.getAiPrompts(forumId).unwrap()
 
     suspend fun setAiPrompt(forumId: String, type: String, prompt: String) {

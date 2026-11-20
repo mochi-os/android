@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Níl aon ghníomhaíocht ó mhodhnóir ann fós</string>
     <string name="forums_moderation_log_meta">Ag %1$s · Sprioc %2$s</string>
     <string name="forums_moderation_restriction_add">Cuir srian leis</string>
-    <string name="forums_moderation_restriction_user">Aitheantas an úsáideora</string>
     <string name="forums_moderation_restriction_type_shadowban">Scáthchosc</string>
-    <string name="forums_moderation_restriction_duration_seconds">Fad (soicindí, fág bán le haghaidh buan)</string>
     <string name="forums_moderation_restriction_expires">Imíonn as feidhm %1$s</string>
     <string name="forums_moderation_restriction_permanent">Buan</string>
     <string name="forums_report_reason_hate">Fuath</string>
@@ -201,7 +199,6 @@
     <string name="forums_settings_field_name">Ainm</string>
     <string name="forums_settings_field_entity_id">ID an aonáin</string>
     <string name="forums_settings_field_fingerprint_label">Méarlorg</string>
-    <string name="forums_settings_field_server">Freastalaí</string>
     <string name="forums_settings_name_edit_cd">Cuir ainm in eagar</string>
     <string name="forums_settings_name_cancel_cd">Cealaigh an eagarthóireacht</string>
     <string name="forums_settings_save_name">Sábháil ainm</string>
@@ -311,8 +308,6 @@
     <string name="forums_import_settings">Iompórtáil socruithe</string>
     <string name="forums_communities_add">Cuir pobail leis</string>
     <string name="forums_communities_add_failed">Níorbh fhéidir na pobail a chur leis</string>
-    <string name="forums_imported_settings">Iompórtáladh – pobail: %1$s, freastalaithe coiscthe: %2$s, postálacha sábháilte: %3$s</string>
-    <string name="forums_imported_settings_more">Iompórtáladh go dtí seo – pobail: %1$s, freastalaithe coiscthe: %2$s, postálacha sábháilte: %3$s; tiocfaidh an chuid eile</string>
     <string name="forums_import_failed">Níorbh fhéidir iompórtáil</string>
     <string name="forums_community">Pobal</string>
     <string name="forums_community_name">Ainm an phobail</string>
@@ -344,4 +339,44 @@
     <string name="forums_community_destination">Postáiltear chuig %1$s mar %2$s</string>
     <string name="forums_find_search_example">Cuardaigh de réir ainm, aitheantas, méarlorg, URL, nó %1$s</string>
     <string name="forums_setup">Socraigh</string>
+    <string name="forums_post_remove_title">Bain postáil</string>
+    <string name="forums_post_remove_message">Cuirfidh sé seo an postáil i bhfolach ó ghnáthúsáideoirí. Is féidir le modhnóirí í a fheiceáil fós agus í a athbhunú níos déanaí.</string>
+    <string name="forums_comment_remove_title">Bain trácht</string>
+    <string name="forums_comment_remove_message">Cuirfidh sé seo an nóta tráchta i bhfolach ó ghnáthúsáideoirí. Is féidir le modhnóirí é a fheiceáil fós agus é a athbhunú níos déanaí.</string>
+    <string name="forums_report_submitted">Cuireadh isteach an tuairisc</string>
+    <string name="forums_member_remove_message">Scriosfar vótaí an duine seo san fhóram seo.</string>
+    <string name="forums_member_block_message">Ní bheidh an duine in ann an fóram seo a fheiceáil níos mó.</string>
+    <string name="forums_member_block_title">Cuir bac ar %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Diúltaithe</string>
+    <string name="forums_moderation_restriction_member">Ball</string>
+    <string name="forums_moderation_restriction_duration">Fad</string>
+    <string name="forums_moderation_duration_hour">Uair an chloig</string>
+    <string name="forums_moderation_duration_day">Lá</string>
+    <string name="forums_moderation_duration_week">Seachtain</string>
+    <string name="forums_moderation_duration_month">Mí</string>
+    <string name="forums_member_remove">Bain</string>
+    <string name="forums_member_remove_title">Bain %1$s?</string>
+    <string name="forums_imported">Iompórtáilte: %1$s</string>
+    <string name="forums_imported_more">Iompórtáilte go dtí seo: %1$s; tiocfaidh an chuid eile</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s phobal</item>
+        <item quantity="two">%s phobal</item>
+        <item quantity="few">%s phobal</item>
+        <item quantity="many">%s bpobal</item>
+        <item quantity="other">%s pobal</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s bhac</item>
+        <item quantity="two">%s bhac</item>
+        <item quantity="few">%s bhac</item>
+        <item quantity="many">%s mbac</item>
+        <item quantity="other">%s bac</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s phostáil shábháilte</item>
+        <item quantity="two">%s phostáil shábháilte</item>
+        <item quantity="few">%s phostáil shábháilte</item>
+        <item quantity="many">%s bpostáil shábháilte</item>
+        <item quantity="other">%s postáil shábháilte</item>
+    </plurals>
 </resources>

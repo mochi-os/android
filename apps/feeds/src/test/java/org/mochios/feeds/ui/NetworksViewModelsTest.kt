@@ -276,7 +276,7 @@ class NetworksViewModelsTest {
     private fun detail(): PostDetailViewModel {
         val model = PostDetailViewModel(
             SavedStateHandle(mapOf("feedId" to "f1", "postId" to "p1")),
-            repository, socket, session, context,
+            repository, socket, session,
         )
         until("the post") { model.post.value != null }
         return model

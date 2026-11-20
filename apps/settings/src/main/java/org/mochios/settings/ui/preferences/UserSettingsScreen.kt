@@ -51,7 +51,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.ZonePicker
-import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.LanguageCompare
 import org.mochios.android.util.Zones
 import java.text.Normalizer
 import java.util.Locale
@@ -195,15 +195,6 @@ private fun languageName(tag: String): String {
 }
 
 /**
- * Latin-script names first, then the rest; plain alphabetical order puts Arabic
- * at the top.
- */
-private fun scriptBucket(native: String): Int {
-    val first = native.firstOrNull { it.isLetter() } ?: return 0
-    return if (first.code < 0x0250) 0 else 1
-}
-
-/**
  * The automatic choice is stored as "auto", as the web stores it: the server
  * skips a blank value, so a blank could never clear a language once set.
  * [current] is included even if the server does not list it, so a saved value
@@ -219,10 +210,7 @@ internal fun languageOptions(
         .distinct()
     val sorted = installed
         .map { it to languageName(it) }
-        .sortedWith(
-            compareBy<Pair<String, String>> { scriptBucket(it.second) }
-                .thenComparing({ it.second }, NaturalCompare),
-        )
+        .sortedWith(compareBy(LanguageCompare) { it.second })
     return listOf("auto" to defaultLabel) + sorted
 }
 

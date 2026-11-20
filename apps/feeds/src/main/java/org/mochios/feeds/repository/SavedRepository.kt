@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.unwrap
 import org.mochios.android.auth.SessionManager
-import org.mochios.android.model.Attachment
 import org.mochios.feeds.api.FeedsApi
 import org.mochios.feeds.model.Post
 import org.mochios.feeds.model.SavedItem
@@ -105,9 +104,10 @@ class SavedRepository @Inject constructor(
         val identity = session.getBoundIdentity() ?: return
         val started = started()
         try {
-            val saved = api.listSaved().unwrap().saved.map { item ->
-                item.copy(post = item.post.withAttachmentDefaults())
-            }
+            // Read with the app's Gson, whose null guard gives a field a
+            // snapshot leaves out or sends null (the web's leaves out an empty
+            // caption) its default.
+            val saved = api.listSaved().unwrap().saved
             // Signed out, or in as somebody else, before the watcher has seen it.
             if (session.getBoundIdentity() != identity) return
             mirror(started, saved, saved.map { it.post.id }.toSet(), identity)
@@ -190,22 +190,4 @@ internal fun snapshotOf(post: Post): SavedSnapshot = SavedSnapshot(
     data = post.data,
     attachments = post.attachments,
     tags = post.tags,
-)
-
-/**
- * [this] with each attachment's text fields filled in. A snapshot is written
- * by whichever client saved the post, and one that leaves a field out - the
- * web's leaves out an empty caption - comes back from Gson as a null in a
- * non-null field: [Attachment] has no no-argument constructor for Gson to run
- * its defaults through. The casts make the null checks real ones.
- */
-@Suppress("USELESS_CAST")
-internal fun SavedSnapshot.withAttachmentDefaults(): SavedSnapshot = copy(
-    attachments = (attachments as List<Attachment>?).orEmpty().map { attachment ->
-        attachment.copy(
-            name = (attachment.name as String?).orEmpty(),
-            type = (attachment.type as String?).orEmpty(),
-            caption = (attachment.caption as String?).orEmpty(),
-        )
-    },
 )

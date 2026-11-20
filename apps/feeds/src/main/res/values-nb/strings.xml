@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Les med</string>
     <string name="feeds_source_follow_pending">Følging venter</string>
     <string name="feeds_import_follows">Importer fulgte kontoer fra en fil</string>
-    <string name="feeds_follows_importing">Importerer %1$s fulgte kontoer; %2$s lagt til så langt</string>
     <string name="feeds_publish_to_account">Publiser til %1$s</string>
     <string name="feeds_import_posts">Importer innlegg</string>
     <string name="feeds_import_bookmarks">Importer bokmerker</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Ikke lenger en Bluesky-strøm</string>
     <string name="feeds_generator_failed">Kunne ikke endre Bluesky-strømmen</string>
     <string name="feeds_copies_delete_title">Slette kopiene på %1$s?</string>
-    <string name="feeds_copies_delete_message">Strømmen publiserte %1$s innlegg der. De blir værende med mindre du sletter dem.</string>
     <string name="feeds_copies_delete">Slett kopier</string>
     <string name="feeds_copies_keep">Behold</string>
     <string name="feeds_copies_delete_failed">Kunne ikke slette kopiene</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Kunne ikke importere</string>
     <string name="feeds_imported">Importerte %1$s</string>
     <string name="feeds_imported_more">Importerte %1$s så langt; resten følger</string>
-    <string name="feeds_import_sources_more">La til %1$s kilder så langt; resten følger</string>
     <string name="feeds_waiting_title">Venter på tillatelse</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s person</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Filtrert etter tagg:</string>
     <string name="feeds_setup">Sett opp</string>
     <string name="feeds_search_example">Søk etter navn, ID, fingeravtrykk, URL eller %1$s</string>
+    <string name="feeds_member_remove_message">Reaksjonene til denne personen i denne feeden slettes.</string>
+    <string name="feeds_member_block_message">De kan ikke lenger se denne feeden.</string>
+    <string name="feeds_member_block_title">Blokkere %1$s?</string>
+    <string name="feeds_member_remove_title">Fjerne %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Importerer %s fulgt konto</item>
+        <item quantity="other">Importerer %s fulgte kontoer</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s lagt til så langt</item>
+        <item quantity="other">%s lagt til så langt</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Feeden publiserte %s innlegg der. Det blir liggende med mindre du sletter det.</item>
+        <item quantity="other">Feeden publiserte %s innlegg der. De blir liggende med mindre du sletter dem.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">La til %s kilde så langt; resten følger</item>
+        <item quantity="other">La til %s kilder så langt; resten følger</item>
+    </plurals>
 </resources>

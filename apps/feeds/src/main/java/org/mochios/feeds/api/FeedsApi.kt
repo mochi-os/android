@@ -12,7 +12,6 @@ import org.mochios.android.api.Slow
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
 import org.mochios.android.model.Attachment
-import org.mochios.android.model.Comment
 import org.mochios.feeds.model.Backups
 import org.mochios.feeds.model.Copies
 import org.mochios.feeds.model.CopiesDeleted
@@ -53,10 +52,8 @@ import retrofit2.http.Streaming
 
 data class FeedListResponse(
     val feeds: List<Feed> = emptyList(),
-    val entity: Boolean = false,
     val hasAi: Boolean = false,
     val settings: FeedSettings = FeedSettings(),
-    @SerializedName("user_id") val userId: String = "",
     /** The key every feed's frames also reach; absent from an older server. */
     val websocket: String? = null,
 )
@@ -82,7 +79,6 @@ data class PostListResponse(
     // to scope permissions to and returns null. A non-null type would let Gson
     // set the field to null and then NPE when constructing PostListResult.
     val permissions: Permissions? = null,
-    val owner: Boolean = false
 )
 
 data class PostDetailResponse(
@@ -186,10 +182,6 @@ data class ShareResponse(
     val peer: String = ""
 )
 
-data class BannerResponse(
-    val banner: String = ""
-)
-
 data class SourceListResponse(
     val sources: List<Source> = emptyList(),
     val waiting: List<WaitingServer> = emptyList(),
@@ -215,8 +207,10 @@ data class AiPromptsResponse(
     val prompts: Map<String, String> = emptyMap()
 )
 
+/** What `comment/create` answers: the new comment's [id] and its [post]. */
 data class CommentCreateResponse(
-    val comment: Comment
+    val id: String = "",
+    val post: String = "",
 )
 
 data class NewPostResponse(

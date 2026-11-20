@@ -6,15 +6,18 @@
 package org.mochios.forums.ui.settings
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
@@ -22,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.model.Account
 import org.mochios.android.ui.components.AiPromptField
 import org.mochios.android.ui.components.ChoiceRow
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.aiAccountOptions
 import org.mochios.forums.R
 import org.mochios.forums.model.AiPrompts
@@ -30,14 +34,27 @@ import org.mochios.forums.model.AiSettings
 /**
  * AI settings tab: a row-based form to pick the AI mode, account, and prompt
  * source. Only reachable when the account has at least one AI-capable account.
+ * Shown once the owner's own settings have arrived: a mode chosen before then
+ * would be sent with an account the tab does not yet know, and reset it.
  */
 @Composable
 fun AiTab(viewModel: ForumSettingsViewModel) {
     val uiState by viewModel.uiState.collectAsState()
 
-    // Load the prompt defaults in the background; the mode/account rows come from
-    // the already-loaded forum row and render immediately.
     LaunchedEffect(Unit) { viewModel.loadAiPrompts() }
+
+    val settings = uiState.aiSettings
+    if (settings == null) {
+        val error = uiState.aiError
+        if (error != null) {
+            ErrorState(error = error, onRetry = viewModel::loadAiPrompts)
+        } else {
+            Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
+        }
+        return
+    }
 
     Column(
         modifier = Modifier
@@ -48,10 +65,7 @@ fun AiTab(viewModel: ForumSettingsViewModel) {
             .padding(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 16.dp),
     ) {
         AiSettingsContent(
-            settings = AiSettings(
-                mode = uiState.forum.aiMode,
-                account = uiState.forum.aiAccount,
-            ),
+            settings = settings,
             prompts = uiState.aiPrompts,
             aiAccounts = uiState.aiAccounts,
             onSetSettings = { mode, account -> viewModel.setAiSettings(mode, account) },

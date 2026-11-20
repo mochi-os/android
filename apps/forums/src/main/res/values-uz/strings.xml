@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Hali moderator faoliyati yoʻq</string>
     <string name="forums_moderation_log_meta">%1$s tomonidan · Manzil %2$s</string>
     <string name="forums_moderation_restriction_add">Cheklov qoʻshish</string>
-    <string name="forums_moderation_restriction_user">Foydalanuvchi identifikatsiyasi</string>
     <string name="forums_moderation_restriction_type_shadowban">Yashirin taqiq</string>
-    <string name="forums_moderation_restriction_duration_seconds">Davomiyligi (soniyalarda, doimiy uchun boʻsh qoldiring)</string>
     <string name="forums_moderation_restriction_expires">Muddati tugaydi: %1$s</string>
     <string name="forums_moderation_restriction_permanent">Doimiy</string>
     <string name="forums_report_reason_hate">Nafrat</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nomi</string>
     <string name="forums_settings_field_entity_id">Obyekt ID</string>
     <string name="forums_settings_field_fingerprint_label">Barmoq izi</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Nomni tahrirlash</string>
     <string name="forums_settings_name_cancel_cd">Tahrirlashni bekor qilish</string>
     <string name="forums_settings_save_name">Nomni saqlash</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Sozlamalarni import qilish</string>
     <string name="forums_communities_add">Hamjamiyatlarni qoʻshish</string>
     <string name="forums_communities_add_failed">Hamjamiyatlarni qoʻshib boʻlmadi</string>
-    <string name="forums_imported_settings">%1$s hamjamiyat, %2$s bloklash va %3$s saqlangan post import qilindi</string>
-    <string name="forums_imported_settings_more">Hozircha %1$s hamjamiyat, %2$s bloklash va %3$s saqlangan post import qilindi; qolgani keyin keladi</string>
     <string name="forums_import_failed">Import qilib boʻlmadi</string>
     <string name="forums_community">Hamjamiyat</string>
     <string name="forums_community_name">Hamjamiyat nomi</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s hamjamiyatiga %2$s sifatida joylanadi</string>
     <string name="forums_find_search_example">Nomi, IDsi, fingerprinti, URL yoki %1$s manzili boʻyicha qidirish</string>
     <string name="forums_setup">Sozlash</string>
+    <string name="forums_post_remove_title">Postni olib tashlash</string>
+    <string name="forums_post_remove_message">Bu postni oddiy foydalanuvchilardan yashiradi. Moderatorlar uni hali ham koʻrishlari va keyinroq tiklashlari mumkin.</string>
+    <string name="forums_comment_remove_title">Izohni olib tashlash</string>
+    <string name="forums_comment_remove_message">Bu izohni oddiy foydalanuvchilardan yashiradi. Moderatorlar uni hali ham koʻrishlari va keyinroq tiklashlari mumkin.</string>
+    <string name="forums_report_submitted">Hisobot yuborildi</string>
+    <string name="forums_member_remove_message">Bu shaxsning bu forumdagi ovozlari oʻchiriladi.</string>
+    <string name="forums_member_block_message">U endi bu forumni koʻra olmaydi.</string>
+    <string name="forums_member_block_title">%1$s bloklanadimi?</string>
+    <string name="forums_moderation_resolution_ignored">Rad etilgan</string>
+    <string name="forums_moderation_restriction_member">Aʼzo</string>
+    <string name="forums_moderation_restriction_duration">Davomiylik</string>
+    <string name="forums_moderation_duration_hour">Bir soat</string>
+    <string name="forums_moderation_duration_day">Bir kun</string>
+    <string name="forums_moderation_duration_week">Bir hafta</string>
+    <string name="forums_moderation_duration_month">Bir oy</string>
+    <string name="forums_member_remove">Olib tashlash</string>
+    <string name="forums_member_remove_title">%1$s olib tashlansinmi?</string>
+    <string name="forums_imported">%1$s import qilindi</string>
+    <string name="forums_imported_more">Hozircha %1$s import qilindi; qolganlari keyinroq qoʻshiladi</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s ta hamjamiyat</item>
+        <item quantity="other">%s ta hamjamiyat</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s ta bloklash</item>
+        <item quantity="other">%s ta bloklash</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s ta saqlangan post</item>
+        <item quantity="other">%s ta saqlangan post</item>
+    </plurals>
 </resources>

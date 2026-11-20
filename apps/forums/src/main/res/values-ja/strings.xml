@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">モデレーター活動はまだありません</string>
     <string name="forums_moderation_log_meta">%1$s 実施 · 対象 %2$s</string>
     <string name="forums_moderation_restriction_add">制限を追加</string>
-    <string name="forums_moderation_restriction_user">ユーザーアイデンティティ</string>
     <string name="forums_moderation_restriction_type_shadowban">シャドウバン</string>
-    <string name="forums_moderation_restriction_duration_seconds">期間（秒、空欄で永久）</string>
     <string name="forums_moderation_restriction_expires">有効期限 %1$s</string>
     <string name="forums_moderation_restriction_permanent">永久</string>
     <string name="forums_report_reason_hate">ヘイト</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">名前</string>
     <string name="forums_settings_field_entity_id">エンティティ ID</string>
     <string name="forums_settings_field_fingerprint_label">フィンガープリント</string>
-    <string name="forums_settings_field_server">サーバー</string>
     <string name="forums_settings_name_edit_cd">名前を編集</string>
     <string name="forums_settings_name_cancel_cd">編集をキャンセル</string>
     <string name="forums_settings_save_name">名前を保存</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">設定をインポート</string>
     <string name="forums_communities_add">コミュニティを追加</string>
     <string name="forums_communities_add_failed">コミュニティを追加できませんでした</string>
-    <string name="forums_imported_settings">コミュニティ %1$s 件、ブロック %2$s 件、保存した投稿 %3$s 件をインポートしました</string>
-    <string name="forums_imported_settings_more">これまでにコミュニティ %1$s 件、ブロック %2$s 件、保存した投稿 %3$s 件をインポートしました。残りも順次インポートされます</string>
     <string name="forums_import_failed">インポートできませんでした</string>
     <string name="forums_community">コミュニティ</string>
     <string name="forums_community_name">コミュニティ名</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">%1$s に %2$s として投稿します</string>
     <string name="forums_find_search_example">名前、ID、フィンガープリント、URL、または %1$s で検索</string>
     <string name="forums_setup">設定</string>
+    <string name="forums_post_remove_title">投稿を削除</string>
+    <string name="forums_post_remove_message">これにより、通常のユーザーから投稿が非表示になります。モデレーターは引き続き表示でき、後で復元できます。</string>
+    <string name="forums_comment_remove_title">コメントを削除</string>
+    <string name="forums_comment_remove_message">これにより、通常のユーザーからコメントが非表示になります。モデレーターは引き続き表示でき、後で復元できます。</string>
+    <string name="forums_report_submitted">報告を送信しました</string>
+    <string name="forums_member_remove_message">この人のこのフォーラムでの投票は削除されます。</string>
+    <string name="forums_member_block_message">このフォーラムを閲覧できなくなります。</string>
+    <string name="forums_member_block_title">%1$sをブロックしますか？</string>
+    <string name="forums_moderation_resolution_ignored">却下</string>
+    <string name="forums_moderation_restriction_member">メンバー</string>
+    <string name="forums_moderation_restriction_duration">期間</string>
+    <string name="forums_moderation_duration_hour">1 時間</string>
+    <string name="forums_moderation_duration_day">1 日</string>
+    <string name="forums_moderation_duration_week">1 週間</string>
+    <string name="forums_moderation_duration_month">1 か月</string>
+    <string name="forums_member_remove">削除</string>
+    <string name="forums_member_remove_title">%1$sを削除しますか？</string>
+    <string name="forums_imported">%1$s をインポートしました</string>
+    <string name="forums_imported_more">%1$s をインポートしました。残りも順次インポートされます</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s 件のコミュニティ</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s 件のブロック</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s 件の保存済み投稿</item>
+    </plurals>
 </resources>

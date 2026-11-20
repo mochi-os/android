@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Hələ moderator fəaliyyəti yoxdur</string>
     <string name="forums_moderation_log_meta">Edən %1$s · Hədəf %2$s</string>
     <string name="forums_moderation_restriction_add">Məhdudiyyət əlavə et</string>
-    <string name="forums_moderation_restriction_user">İstifadəçi şəxsiyyəti</string>
     <string name="forums_moderation_restriction_type_shadowban">Gizli qadağa</string>
-    <string name="forums_moderation_restriction_duration_seconds">Müddət (saniyə, daimi üçün boş)</string>
     <string name="forums_moderation_restriction_expires">Bitir %1$s</string>
     <string name="forums_moderation_restriction_permanent">Daimi</string>
     <string name="forums_report_reason_hate">Nifrət</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Ad</string>
     <string name="forums_settings_field_entity_id">Qurum ID</string>
     <string name="forums_settings_field_fingerprint_label">Barmaq izi</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Adı redaktə et</string>
     <string name="forums_settings_name_cancel_cd">Redaktəni ləğv et</string>
     <string name="forums_settings_save_name">Adı saxla</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Parametrləri idxal et</string>
     <string name="forums_communities_add">İcmaları əlavə et</string>
     <string name="forums_communities_add_failed">İcmaları əlavə etmək mümkün olmadı</string>
-    <string name="forums_imported_settings">%1$s icma, %2$s bloklanmış server və %3$s saxlanmış yazı idxal edildi</string>
-    <string name="forums_imported_settings_more">İndiyədək %1$s icma, %2$s bloklanmış server və %3$s saxlanmış yazı idxal edildi; qalanı ardınca gələcək</string>
     <string name="forums_import_failed">İdxal etmək mümkün olmadı</string>
     <string name="forums_community">İcma</string>
     <string name="forums_community_name">İcma adı</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s icmasında %2$s kimi dərc edilir</string>
     <string name="forums_find_search_example">Ad, ID, fingerprint, URL və ya %1$s ilə axtar</string>
     <string name="forums_setup">Quraşdır</string>
+    <string name="forums_post_remove_title">Postu sil</string>
+    <string name="forums_post_remove_message">Bu, paylaşımı adi istifadəçilərdən gizlədəcək. Moderatorlar onu yenə görə və sonra bərpa edə bilərlər.</string>
+    <string name="forums_comment_remove_title">Şərhi sil</string>
+    <string name="forums_comment_remove_message">Bu, şərhi adi istifadəçilərdən gizlədəcək. Moderatorlar onu yenə görə və sonra bərpa edə bilərlər.</string>
+    <string name="forums_report_submitted">Hesabat təqdim edildi</string>
+    <string name="forums_member_remove_message">Bu şəxsin bu forumdakı səsləri silinir.</string>
+    <string name="forums_member_block_message">O, bu forumu artıq görə bilməyəcək.</string>
+    <string name="forums_member_block_title">%1$s bloklansın?</string>
+    <string name="forums_moderation_resolution_ignored">Rədd edildi</string>
+    <string name="forums_moderation_restriction_member">Üzv</string>
+    <string name="forums_moderation_restriction_duration">Müddət</string>
+    <string name="forums_moderation_duration_hour">Bir saat</string>
+    <string name="forums_moderation_duration_day">Bir gün</string>
+    <string name="forums_moderation_duration_week">Bir həftə</string>
+    <string name="forums_moderation_duration_month">Bir ay</string>
+    <string name="forums_member_remove">Sil</string>
+    <string name="forums_member_remove_title">%1$s silinsin?</string>
+    <string name="forums_imported">%1$s idxal edildi</string>
+    <string name="forums_imported_more">İndiyədək %1$s idxal edildi; qalanları ardınca gələcək</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s icma</item>
+        <item quantity="other">%s icma</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s bloklama</item>
+        <item quantity="other">%s bloklama</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s saxlanılmış post</item>
+        <item quantity="other">%s saxlanılmış post</item>
+    </plurals>
 </resources>

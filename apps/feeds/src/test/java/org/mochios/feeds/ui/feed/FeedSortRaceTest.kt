@@ -81,6 +81,8 @@ class FeedSortRaceTest {
                         cursor = url.queryParameter("cursor"),
                         before = url.queryParameter("before"),
                     )
+                    // The sort is saved before the list is read in it.
+                    "/feeds/f1/-/sort/set" -> ok("""{"sort": "top"}""")
                     else -> MockResponse().setResponseCode(404)
                 }
             }

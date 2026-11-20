@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">I-akhawunti yokufunda</string>
     <string name="feeds_source_follow_pending">Ukulandela kulindile</string>
     <string name="feeds_import_follows">Ngenisa ii-akhawunti olandela zona kwifayile</string>
-    <string name="feeds_follows_importing">Kungeniswa ii-akhawunti ezili-%1$s olandela zona; sele kongezwe ezi-%2$s</string>
     <string name="feeds_publish_to_account">Papasha ku-%1$s</string>
     <string name="feeds_import_posts">Ngenisa iimpapasho</string>
     <string name="feeds_import_bookmarks">Ngenisa iibhukimaki</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Ayisekho ifidi ye-Bluesky</string>
     <string name="feeds_generator_failed">Akukwazekanga ukutshintsha ifidi ye-Bluesky</string>
     <string name="feeds_copies_delete_title">Cima iikopi ku-%1$s?</string>
-    <string name="feeds_copies_delete_message">Ifidi ipapashe iimpapasho ezi-%1$s apho. Ziya kuhlala zikhona ngaphandle kokuba uzicime.</string>
     <string name="feeds_copies_delete">Cima iikopi</string>
     <string name="feeds_copies_keep">Gcina</string>
     <string name="feeds_copies_delete_failed">Akukwazekanga ukucima iikopi</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Akukwazekanga ukungenisa</string>
     <string name="feeds_imported">Kungeniswe %1$s</string>
     <string name="feeds_imported_more">Kungeniswe %1$s ukuza kuthi ga ngoku; okunye kuza kulandela</string>
-    <string name="feeds_import_sources_more">Kongezwe imithombo eyi-%1$s ukuza kuthi ga ngoku; eminye iza kulandela</string>
     <string name="feeds_waiting_title">Kulindwe imvume</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">umntu %s</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Kuhluzwe ngethegi:</string>
     <string name="feeds_setup">Misela</string>
     <string name="feeds_search_example">Khangela ngegama, i-ID, umnwe, i-URL, okanye %1$s</string>
+    <string name="feeds_member_remove_message">Iimvakalelo zalo mntu kule fidi ziyacinywa.</string>
+    <string name="feeds_member_block_message">Abasakwazi ukubona le fidi.</string>
+    <string name="feeds_member_block_title">Vala u-%1$s?</string>
+    <string name="feeds_member_remove_title">Susa u-%1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Kungeniswa i-akhawunti e-%s olandela yona</item>
+        <item quantity="other">Kungeniswa ii-akhawunti ezi-%s olandela zona</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">kongezwe e-%s ukuza kuthi ga ngoku</item>
+        <item quantity="other">kongezwe ezi-%s ukuza kuthi ga ngoku</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Ifidi ipapashe umyalezo o-%s apho. Uza kuhlala apho ngaphandle kokuba uwucime.</item>
+        <item quantity="other">Ifidi ipapashe imiyalezo eyi-%s apho. Iza kuhlala apho ngaphandle kokuba uyicime.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Kongezwe umthombo o-%s ukuza kuthi ga ngoku; okunye kuza kulandela</item>
+        <item quantity="other">Kongezwe imithombo eyi-%s ukuza kuthi ga ngoku; okunye kuza kulandela</item>
+    </plurals>
 </resources>

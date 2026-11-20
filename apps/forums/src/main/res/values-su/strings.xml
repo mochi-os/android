@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Acan aya aktivitas moderator</string>
     <string name="forums_moderation_log_meta">Ku %1$s · Sasaran %2$s</string>
     <string name="forums_moderation_restriction_add">Tambihkeun watesan</string>
-    <string name="forums_moderation_restriction_user">Idéntitas pamaké</string>
     <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Lilana (detik, kosongkeun pikeun permanén)</string>
     <string name="forums_moderation_restriction_expires">Béak %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanén</string>
     <string name="forums_report_reason_hate">Kabencian</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Ngaran</string>
     <string name="forums_settings_field_entity_id">ID Éntitas</string>
     <string name="forums_settings_field_fingerprint_label">Sidik ramo</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Édit ngaran</string>
     <string name="forums_settings_name_cancel_cd">Bolaykeun ngédit</string>
     <string name="forums_settings_save_name">Simpen ngaran</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Impor setélan</string>
     <string name="forums_communities_add">Tambah komunitas</string>
     <string name="forums_communities_add_failed">Teu bisa nambahkeun komunitas</string>
-    <string name="forums_imported_settings">Diimpor %1$s komunitas, %2$s blokiran jeung %3$s pos nu disimpen</string>
-    <string name="forums_imported_settings_more">Nepi ka ayeuna diimpor %1$s komunitas, %2$s blokiran jeung %3$s pos nu disimpen; sésana nyusul</string>
     <string name="forums_import_failed">Teu bisa ngimpor</string>
     <string name="forums_community">Komunitas</string>
     <string name="forums_community_name">Ngaran komunitas</string>
@@ -337,4 +332,32 @@
     <string name="forums_community_destination">Dipasang ka %1$s salaku %2$s</string>
     <string name="forums_find_search_example">Paluruh ku ngaran, ID, fingerprint, URL, atawa %1$s</string>
     <string name="forums_setup">Pasang</string>
+    <string name="forums_post_remove_title">Cabut pos</string>
+    <string name="forums_post_remove_message">Ieu bakal nyumputkeun postingan ti pamaké biasa. Modérator masih tiasa nempo sarta malikkeun deui.</string>
+    <string name="forums_comment_remove_title">Pupus koméntar</string>
+    <string name="forums_comment_remove_message">Ieu bakal nyumputkeun koméntar ti pamaké biasa. Modérator masih tiasa nempo sarta malikkeun deui.</string>
+    <string name="forums_report_submitted">Laporan dikirim</string>
+    <string name="forums_member_remove_message">Vote jalma ieu dina forum ieu dipupus.</string>
+    <string name="forums_member_block_message">Manéhna moal bisa ningali forum ieu deui.</string>
+    <string name="forums_member_block_title">Blokir %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Ditolak</string>
+    <string name="forums_moderation_restriction_member">Anggota</string>
+    <string name="forums_moderation_restriction_duration">Lilana</string>
+    <string name="forums_moderation_duration_hour">Sajam</string>
+    <string name="forums_moderation_duration_day">Sapoé</string>
+    <string name="forums_moderation_duration_week">Saminggu</string>
+    <string name="forums_moderation_duration_month">Sabulan</string>
+    <string name="forums_member_remove">Pupus</string>
+    <string name="forums_member_remove_title">Pupus %1$s?</string>
+    <string name="forums_imported">%1$s diimpor</string>
+    <string name="forums_imported_more">%1$s geus diimpor; sésana engké nyusul</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s komunitas</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s blokiran</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s pos nu disimpen</item>
+    </plurals>
 </resources>

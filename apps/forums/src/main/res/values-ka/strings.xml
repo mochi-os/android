@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">მოდერატორის აქტივობა ჯერ არ არის</string>
     <string name="forums_moderation_log_meta">შემსრულებელი %1$s · სამიზნე %2$s</string>
     <string name="forums_moderation_restriction_add">შეზღუდვის დამატება</string>
-    <string name="forums_moderation_restriction_user">მომხმარებლის იდენტობა</string>
     <string name="forums_moderation_restriction_type_shadowban">ფარული ბანი</string>
-    <string name="forums_moderation_restriction_duration_seconds">ხანგრძლივობა (წამები, ცარიელი მუდმივისთვის)</string>
     <string name="forums_moderation_restriction_expires">ვადა %1$s</string>
     <string name="forums_moderation_restriction_permanent">მუდმივი</string>
     <string name="forums_report_reason_hate">სიძულვილი</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">სახელი</string>
     <string name="forums_settings_field_entity_id">ერთეულის ID</string>
     <string name="forums_settings_field_fingerprint_label">ანაბეჭდი</string>
-    <string name="forums_settings_field_server">სერვერი</string>
     <string name="forums_settings_name_edit_cd">სახელის რედაქტირება</string>
     <string name="forums_settings_name_cancel_cd">რედაქტირების გაუქმება</string>
     <string name="forums_settings_save_name">სახელის შენახვა</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">პარამეტრების იმპორტი</string>
     <string name="forums_communities_add">საზოგადოებების დამატება</string>
     <string name="forums_communities_add_failed">საზოგადოებების დამატება ვერ მოხერხდა</string>
-    <string name="forums_imported_settings">იმპორტირებულია %1$s საზოგადოება, %2$s დაბლოკვა და %3$s შენახული პოსტი</string>
-    <string name="forums_imported_settings_more">ჯერჯერობით იმპორტირებულია %1$s საზოგადოება, %2$s დაბლოკვა და %3$s შენახული პოსტი; დანარჩენი მოგვიანებით</string>
     <string name="forums_import_failed">იმპორტი ვერ მოხერხდა</string>
     <string name="forums_community">საზოგადოება</string>
     <string name="forums_community_name">საზოგადოების სახელი</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">ქვეყნდება %1$s-ში, როგორც %2$s</string>
     <string name="forums_find_search_example">ძიება სახელით, ID-ით, ანაბეჭდით, URL-ით ან მისამართით %1$s</string>
     <string name="forums_setup">დაყენება</string>
+    <string name="forums_post_remove_title">პოსტის წაშლა</string>
+    <string name="forums_post_remove_message">ეს დამალავს პოსტს ჩვეულებრივი მომხმარებლებისგან. მოდერატორებს მაინც შეუძლიათ ნახონ და მოგვიანებით აღადგინონ.</string>
+    <string name="forums_comment_remove_title">კომენტარის წაშლა</string>
+    <string name="forums_comment_remove_message">ეს დამალავს კომენტარს ჩვეულებრივი მომხმარებლებისგან. მოდერატორებს მაინც შეუძლიათ ნახონ და მოგვიანებით აღადგინონ.</string>
+    <string name="forums_report_submitted">საჩივარი გაგზავნილია</string>
+    <string name="forums_member_remove_message">ამ ადამიანის ხმები ამ ფორუმში წაიშლება.</string>
+    <string name="forums_member_block_message">ის ვეღარ შეძლებს ამ ფორუმის ნახვას.</string>
+    <string name="forums_member_block_title">დაიბლოკოს %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">უარყოფილი</string>
+    <string name="forums_moderation_restriction_member">წევრი</string>
+    <string name="forums_moderation_restriction_duration">ხანგრძლივობა</string>
+    <string name="forums_moderation_duration_hour">ერთი საათი</string>
+    <string name="forums_moderation_duration_day">ერთი დღე</string>
+    <string name="forums_moderation_duration_week">ერთი კვირა</string>
+    <string name="forums_moderation_duration_month">ერთი თვე</string>
+    <string name="forums_member_remove">წაშლა</string>
+    <string name="forums_member_remove_title">წაიშალოს %1$s?</string>
+    <string name="forums_imported">იმპორტირებულია %1$s</string>
+    <string name="forums_imported_more">ჯერჯერობით იმპორტირებულია %1$s; დანარჩენი მოგვიანებით</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s საზოგადოება</item>
+        <item quantity="other">%s საზოგადოება</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s დაბლოკვა</item>
+        <item quantity="other">%s დაბლოკვა</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s შენახული პოსტი</item>
+        <item quantity="other">%s შენახული პოსტი</item>
+    </plurals>
 </resources>

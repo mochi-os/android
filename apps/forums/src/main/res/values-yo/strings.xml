@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Kò sí iṣẹ́ alábòójútó síbẹ̀</string>
     <string name="forums_moderation_log_meta">Láti ọwọ́ %1$s · Àfojúsùn %2$s</string>
     <string name="forums_moderation_restriction_add">Ṣàfikún ìdíwọ́</string>
-    <string name="forums_moderation_restriction_user">Ìdánimọ̀ olùṣàmúlò</string>
     <string name="forums_moderation_restriction_type_shadowban">Ìfòfindè òjìji</string>
-    <string name="forums_moderation_restriction_duration_seconds">Ìgbà (ìṣẹ́jú-aaya, fi sílẹ̀ òfo fún àìnípẹ̀kun)</string>
     <string name="forums_moderation_restriction_expires">Pari %1$s</string>
     <string name="forums_moderation_restriction_permanent">Àìnípẹ̀kun</string>
     <string name="forums_report_reason_hate">Ìkórìíra</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Orúkọ</string>
     <string name="forums_settings_field_entity_id">ID Ẹ̀ka</string>
     <string name="forums_settings_field_fingerprint_label">Àmì-ìka</string>
-    <string name="forums_settings_field_server">Sáfà</string>
     <string name="forums_settings_name_edit_cd">Ṣàtúnṣe orúkọ</string>
     <string name="forums_settings_name_cancel_cd">Fagilé àtúnṣe</string>
     <string name="forums_settings_save_name">Fi orúkọ pamọ́</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Kó àwọn ìṣètò wọlé</string>
     <string name="forums_communities_add">Fi àwọn àwùjọ kún</string>
     <string name="forums_communities_add_failed">Kò ṣeé ṣe láti fi àwọn àwùjọ kún</string>
-    <string name="forums_imported_settings">A kó àwùjọ %1$s, ìdènà %2$s àti ìfìwéránṣẹ́ tí a fipamọ́ %3$s wọlé</string>
-    <string name="forums_imported_settings_more">Títí di ìsinsìnyí, a ti kó àwùjọ %1$s, ìdènà %2$s àti ìfìwéránṣẹ́ tí a fipamọ́ %3$s wọlé; ìyókù ń bọ̀</string>
     <string name="forums_import_failed">Kò ṣeé ṣe láti kó wọlé</string>
     <string name="forums_community">Àwùjọ</string>
     <string name="forums_community_name">Orúkọ àwùjọ</string>
@@ -337,4 +332,32 @@
     <string name="forums_community_destination">Ó ń fi ránṣẹ́ sí %1$s gẹ́gẹ́ bí %2$s</string>
     <string name="forums_find_search_example">Wá nípa orúkọ, ID, fingerprint, URL, tàbí %1$s</string>
     <string name="forums_setup">Ṣètò</string>
+    <string name="forums_post_remove_title">Yọ ìfìránṣẹ́ kúrò</string>
+    <string name="forums_post_remove_message">Èyí yóò fi àkọsílẹ̀ pamọ́ kúrò lọ́dọ̀ àwọn olùmúlò gbogbogbò. Àwọn alábòójútó ṣì lè rí i kí wọ́n sì padà gbé e dé.</string>
+    <string name="forums_comment_remove_title">Yọ àlàyé kúrò</string>
+    <string name="forums_comment_remove_message">Èyí yóò fi ìfìwéránṣẹ́ pamọ́ kúrò lọ́dọ̀ àwọn olùmúlò gbogbogbò. Àwọn alábòójútó ṣì lè rí i kí wọ́n sì padà gbé e dé.</string>
+    <string name="forums_report_submitted">A ti fi ìròyìn ránṣẹ́</string>
+    <string name="forums_member_remove_message">Àwọn ìdìbò ẹni yìí nínú forum yìí yóò parẹ́.</string>
+    <string name="forums_member_block_message">Wọn kò lè rí forum yìí mọ́.</string>
+    <string name="forums_member_block_title">Dènà %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Ti kọ̀ ọ́</string>
+    <string name="forums_moderation_restriction_member">Ọmọ ẹgbẹ́</string>
+    <string name="forums_moderation_restriction_duration">Àkókò</string>
+    <string name="forums_moderation_duration_hour">Wákàtí kan</string>
+    <string name="forums_moderation_duration_day">Ọjọ́ kan</string>
+    <string name="forums_moderation_duration_week">Ọ̀sẹ̀ kan</string>
+    <string name="forums_moderation_duration_month">Oṣù kan</string>
+    <string name="forums_member_remove">Yọ kúrò</string>
+    <string name="forums_member_remove_title">Yọ %1$s kúrò?</string>
+    <string name="forums_imported">A ti kó %1$s wọlé</string>
+    <string name="forums_imported_more">A ti kó %1$s wọlé báyìí; àwọn yòókù ń bọ̀</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">àwùjọ %s</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">ìdínà %s</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">ìfìránṣẹ́ tí a fipamọ́ %s</item>
+    </plurals>
 </resources>

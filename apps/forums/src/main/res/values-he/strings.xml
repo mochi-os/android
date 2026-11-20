@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">אין עדיין פעילות מנהלים</string>
     <string name="forums_moderation_log_meta">מאת %1$s · יעד %2$s</string>
     <string name="forums_moderation_restriction_add">הוספת הגבלה</string>
-    <string name="forums_moderation_restriction_user">זהות משתמש</string>
     <string name="forums_moderation_restriction_type_shadowban">חסימה סמויה</string>
-    <string name="forums_moderation_restriction_duration_seconds">משך (שניות, ריק לקבע)</string>
     <string name="forums_moderation_restriction_expires">פג בתאריך %1$s</string>
     <string name="forums_moderation_restriction_permanent">קבוע</string>
     <string name="forums_report_reason_hate">שנאה</string>
@@ -200,7 +198,6 @@
     <string name="forums_settings_field_name">שם</string>
     <string name="forums_settings_field_entity_id">מזהה ישות</string>
     <string name="forums_settings_field_fingerprint_label">טביעת אצבע</string>
-    <string name="forums_settings_field_server">שרת</string>
     <string name="forums_settings_name_edit_cd">ערוך שם</string>
     <string name="forums_settings_name_cancel_cd">ביטול העריכה</string>
     <string name="forums_settings_save_name">שמור שם</string>
@@ -310,8 +307,6 @@
     <string name="forums_import_settings">ייבא הגדרות</string>
     <string name="forums_communities_add">הוסף קהילות</string>
     <string name="forums_communities_add_failed">לא ניתן להוסיף את הקהילות</string>
-    <string name="forums_imported_settings">יובאו %1$s קהילות, %2$s שרתים חסומים ו-%3$s פוסטים שמורים</string>
-    <string name="forums_imported_settings_more">עד כה יובאו %1$s קהילות, %2$s שרתים חסומים ו-%3$s פוסטים שמורים; השאר בדרך</string>
     <string name="forums_import_failed">לא ניתן לייבא</string>
     <string name="forums_community">קהילה</string>
     <string name="forums_community_name">שם הקהילה</string>
@@ -341,4 +336,38 @@
     <string name="forums_community_destination">מתפרסם ב־%1$s בתור %2$s</string>
     <string name="forums_find_search_example">חפש לפי שם, מזהה, טביעת אצבע, כתובת URL או %1$s</string>
     <string name="forums_setup">הגדר</string>
+    <string name="forums_post_remove_title">הסר פוסט</string>
+    <string name="forums_post_remove_message">פעולה זו תסתיר את הפוסט ממשתמשים רגילים. מנהלים עדיין יכולים לראות אותו ולשחזר אותו מאוחר יותר.</string>
+    <string name="forums_comment_remove_title">הסר תגובה</string>
+    <string name="forums_comment_remove_message">פעולה זו תסתיר את התגובה ממשתמשים רגילים. מנהלים עדיין יכולים לראות אותה ולשחזר אותה מאוחר יותר.</string>
+    <string name="forums_report_submitted">הדיווח נשלח</string>
+    <string name="forums_member_remove_message">ההצבעות של אדם זה בפורום הזה יימחקו.</string>
+    <string name="forums_member_block_message">לא יוכל עוד לצפות בפורום הזה.</string>
+    <string name="forums_member_block_title">לחסום את %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">נדחה</string>
+    <string name="forums_moderation_restriction_member">חבר</string>
+    <string name="forums_moderation_restriction_duration">משך</string>
+    <string name="forums_moderation_duration_hour">שעה</string>
+    <string name="forums_moderation_duration_day">יום</string>
+    <string name="forums_moderation_duration_week">שבוע</string>
+    <string name="forums_moderation_duration_month">חודש</string>
+    <string name="forums_member_remove">הסר</string>
+    <string name="forums_member_remove_title">להסיר את %1$s?</string>
+    <string name="forums_imported">יובאו %1$s</string>
+    <string name="forums_imported_more">יובאו %1$s עד כה; השאר בדרך</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s קהילה</item>
+        <item quantity="two">%s קהילות</item>
+        <item quantity="other">%s קהילות</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s חסימה</item>
+        <item quantity="two">%s חסימות</item>
+        <item quantity="other">%s חסימות</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s פוסט שמור</item>
+        <item quantity="two">%s פוסטים שמורים</item>
+        <item quantity="other">%s פוסטים שמורים</item>
+    </plurals>
 </resources>

@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">មិនទាន់មានសកម្មភាពអ្នកសម្របសម្រួលទេ</string>
     <string name="forums_moderation_log_meta">ដោយ %1$s · គោលដៅ %2$s</string>
     <string name="forums_moderation_restriction_add">បន្ថែមការដាក់កម្រិត</string>
-    <string name="forums_moderation_restriction_user">អត្តសញ្ញាណអ្នកប្រើ</string>
     <string name="forums_moderation_restriction_type_shadowban">ហាមឃាត់ដោយលាក់</string>
-    <string name="forums_moderation_restriction_duration_seconds">រយៈពេល (វិនាទី, ទទេសម្រាប់អចិន្ត្រៃយ៍)</string>
     <string name="forums_moderation_restriction_expires">ផុតកំណត់ %1$s</string>
     <string name="forums_moderation_restriction_permanent">អចិន្ត្រៃយ៍</string>
     <string name="forums_report_reason_hate">ការស្អប់ខ្ពើម</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">ឈ្មោះ</string>
     <string name="forums_settings_field_entity_id">លេខសម្គាល់អង្គភាព</string>
     <string name="forums_settings_field_fingerprint_label">ស្នាមម្រាមដៃ</string>
-    <string name="forums_settings_field_server">ម៉ាស៊ីនមេ</string>
     <string name="forums_settings_name_edit_cd">កែសម្រួលឈ្មោះ</string>
     <string name="forums_settings_name_cancel_cd">បោះបង់ការកែសម្រួល</string>
     <string name="forums_settings_save_name">រក្សាទុកឈ្មោះ</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">នាំចូលការកំណត់</string>
     <string name="forums_communities_add">បន្ថែមសហគមន៍</string>
     <string name="forums_communities_add_failed">មិនអាចបន្ថែមសហគមន៍បានទេ</string>
-    <string name="forums_imported_settings">បាននាំចូលសហគមន៍ %1$s, ការរារាំង %2$s និងការបង្ហោះដែលបានរក្សាទុក %3$s</string>
-    <string name="forums_imported_settings_more">បាននាំចូលសហគមន៍ %1$s, ការរារាំង %2$s និងការបង្ហោះដែលបានរក្សាទុក %3$s ហើយ; ដែលនៅសល់នឹងមកបន្ទាប់</string>
     <string name="forums_import_failed">មិនអាចនាំចូលបានទេ</string>
     <string name="forums_community">សហគមន៍</string>
     <string name="forums_community_name">ឈ្មោះសហគមន៍</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">បង្ហោះទៅ %1$s ជា %2$s</string>
     <string name="forums_find_search_example">ស្វែងរកតាមឈ្មោះ ID ស្នាមម្រាមដៃ URL ឬ %1$s</string>
     <string name="forums_setup">រៀបចំ</string>
+    <string name="forums_post_remove_title">យកប្រកាសចេញ</string>
+    <string name="forums_post_remove_message">នេះនឹងលាក់ការប្រកាសពីអ្នកប្រើប្រាស់ធម្មតា។ អ្នកគ្រប់គ្រងនៅតែអាចមើលឃើញវា ហើយស្តារវាឡើងវិញនៅពេលក្រោយ។</string>
+    <string name="forums_comment_remove_title">យកមតិយោបល់ចេញ</string>
+    <string name="forums_comment_remove_message">នេះនឹងលាក់មតិយោបល់ពីអ្នកប្រើប្រាស់ធម្មតា។ អ្នកគ្រប់គ្រងនៅតែអាចមើលឃើញវា ហើយស្តារវាឡើងវិញនៅពេលក្រោយ។</string>
+    <string name="forums_report_submitted">បានដាក់ស្នើរបាយការណ៍</string>
+    <string name="forums_member_remove_message">ការបោះឆ្នោតរបស់បុគ្គលនេះនៅក្នុងវេទិកានេះនឹងត្រូវលុប។</string>
+    <string name="forums_member_block_message">គាត់នឹងមិនអាចមើលវេទិកានេះបានទៀតទេ។</string>
+    <string name="forums_member_block_title">រារាំង %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">បានច្រានចោល</string>
+    <string name="forums_moderation_restriction_member">សមាជិក</string>
+    <string name="forums_moderation_restriction_duration">រយៈពេល</string>
+    <string name="forums_moderation_duration_hour">មួយម៉ោង</string>
+    <string name="forums_moderation_duration_day">មួយថ្ងៃ</string>
+    <string name="forums_moderation_duration_week">មួយសប្ដាហ៍</string>
+    <string name="forums_moderation_duration_month">មួយខែ</string>
+    <string name="forums_member_remove">យកចេញ</string>
+    <string name="forums_member_remove_title">ដក %1$s ចេញ?</string>
+    <string name="forums_imported">បាននាំចូល %1$s</string>
+    <string name="forums_imported_more">បាននាំចូល %1$s ហើយ; ដែលនៅសល់នឹងមកបន្ទាប់</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">សហគមន៍ %s</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">ការរារាំង %s</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">ការប្រកាសដែលបានរក្សាទុក %s</item>
+    </plurals>
 </resources>

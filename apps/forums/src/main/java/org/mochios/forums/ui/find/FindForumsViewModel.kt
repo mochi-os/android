@@ -25,8 +25,6 @@ import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
 
-/** Debounce before a typed query is sent to the directory, in milliseconds. */
-
 /**
  * One discovery row from any source (search, recommendations, URL probe). [key]
  * is the fingerprint when known, else [id] - the tracking key and the route
@@ -231,11 +229,6 @@ class FindForumsViewModel @Inject constructor(
         return runCatching { repository.subscribe(target, null, peer) }
             .mapCatching { landingId -> landingId }
             .recoverCatching { retryError -> throw retryError.toMochiError() }
-    }
-
-    /** Open an already-subscribed row without re-subscribing. */
-    fun openForum(item: ForumDirectoryItem) {
-        viewModelScope.launch { _navigateToForum.emit(item.key) }
     }
 
     fun clearError() {

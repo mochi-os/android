@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Поки немає активності модераторів</string>
     <string name="forums_moderation_log_meta">Від %1$s · Ціль %2$s</string>
     <string name="forums_moderation_restriction_add">Додати обмеження</string>
-    <string name="forums_moderation_restriction_user">Особистість користувача</string>
     <string name="forums_moderation_restriction_type_shadowban">Тіньове блокування</string>
-    <string name="forums_moderation_restriction_duration_seconds">Тривалість (у секундах, порожнє — назавжди)</string>
     <string name="forums_moderation_restriction_expires">Закінчується %1$s</string>
     <string name="forums_moderation_restriction_permanent">Назавжди</string>
     <string name="forums_report_reason_hate">Ненависть</string>
@@ -200,7 +198,6 @@
     <string name="forums_settings_field_name">Назва</string>
     <string name="forums_settings_field_entity_id">ID сутності</string>
     <string name="forums_settings_field_fingerprint_label">Відбиток</string>
-    <string name="forums_settings_field_server">Сервер</string>
     <string name="forums_settings_name_edit_cd">Редагувати назву</string>
     <string name="forums_settings_name_cancel_cd">Скасувати редагування</string>
     <string name="forums_settings_save_name">Зберегти назву</string>
@@ -310,8 +307,6 @@
     <string name="forums_import_settings">Імпортувати налаштування</string>
     <string name="forums_communities_add">Додати спільноти</string>
     <string name="forums_communities_add_failed">Не вдалося додати спільноти</string>
-    <string name="forums_imported_settings">Імпортовано спільнот: %1$s, блокувань: %2$s, збережених дописів: %3$s</string>
-    <string name="forums_imported_settings_more">Наразі імпортовано спільнот: %1$s, блокувань: %2$s, збережених дописів: %3$s; решта згодом</string>
     <string name="forums_import_failed">Не вдалося імпортувати</string>
     <string name="forums_community">Спільнота</string>
     <string name="forums_community_name">Ім\'я спільноти</string>
@@ -342,4 +337,41 @@
     <string name="forums_community_destination">Публікується в %1$s від імені %2$s</string>
     <string name="forums_find_search_example">Пошук за назвою, ID, відбитком, URL або адресою %1$s</string>
     <string name="forums_setup">Налаштувати</string>
+    <string name="forums_post_remove_title">Видалити допис</string>
+    <string name="forums_post_remove_message">Це сховає допис від звичайних користувачів. Модератори все ще можуть його бачити та відновити пізніше.</string>
+    <string name="forums_comment_remove_title">Видалити коментар</string>
+    <string name="forums_comment_remove_message">Це сховає коментар від звичайних користувачів. Модератори все ще можуть його бачити та відновити пізніше.</string>
+    <string name="forums_report_submitted">Скаргу подано</string>
+    <string name="forums_member_remove_message">Голоси цієї особи на цьому форумі буде видалено.</string>
+    <string name="forums_member_block_message">Користувач більше не зможе переглядати цей форум.</string>
+    <string name="forums_member_block_title">Заблокувати %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Відхилено</string>
+    <string name="forums_moderation_restriction_member">Учасник</string>
+    <string name="forums_moderation_restriction_duration">Тривалість</string>
+    <string name="forums_moderation_duration_hour">Година</string>
+    <string name="forums_moderation_duration_day">День</string>
+    <string name="forums_moderation_duration_week">Тиждень</string>
+    <string name="forums_moderation_duration_month">Місяць</string>
+    <string name="forums_member_remove">Видалити</string>
+    <string name="forums_member_remove_title">Видалити %1$s?</string>
+    <string name="forums_imported">Імпортовано: %1$s</string>
+    <string name="forums_imported_more">Поки імпортовано: %1$s; решту буде імпортовано згодом</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s спільнота</item>
+        <item quantity="few">%s спільноти</item>
+        <item quantity="many">%s спільнот</item>
+        <item quantity="other">%s спільноти</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s блокування</item>
+        <item quantity="few">%s блокування</item>
+        <item quantity="many">%s блокувань</item>
+        <item quantity="other">%s блокування</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s збережений допис</item>
+        <item quantity="few">%s збережені дописи</item>
+        <item quantity="many">%s збережених дописів</item>
+        <item quantity="other">%s збереженого допису</item>
+    </plurals>
 </resources>

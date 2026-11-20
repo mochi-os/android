@@ -75,8 +75,7 @@ class CommunitiesViewModel @Inject constructor(
     private val _lemmy = MutableStateFlow<List<NetworkAccount>>(emptyList())
     val lemmy: StateFlow<List<NetworkAccount>> = _lemmy.asStateFlow()
 
-    /** "join", or the Lemmy account whose read is on its way. */
-    /** What changes are waiting or running for: an account, or "join". */
+    /** The actions waiting or running: "join", or a Lemmy account's add or import ([lemmyKey]). */
     private val _busy = MutableStateFlow<Set<String>>(emptySet())
     val busy: StateFlow<Set<String>> = _busy.asStateFlow()
 

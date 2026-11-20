@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">تر اوسه د مدیر هیڅ فعالیت نشته</string>
     <string name="forums_moderation_log_meta">د %1$s لخوا · هدف %2$s</string>
     <string name="forums_moderation_restriction_add">محدودیت اضافه کړئ</string>
-    <string name="forums_moderation_restriction_user">د کارن پېژندنه</string>
     <string name="forums_moderation_restriction_type_shadowban">سیوري بندیز</string>
-    <string name="forums_moderation_restriction_duration_seconds">موده (په ثانیو کې، د دایمي لپاره خالي پرېږدئ)</string>
     <string name="forums_moderation_restriction_expires">د پای نېټه %1$s</string>
     <string name="forums_moderation_restriction_permanent">دایمي</string>
     <string name="forums_report_reason_hate">کرکه</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">نوم</string>
     <string name="forums_settings_field_entity_id">د موجودیت ID</string>
     <string name="forums_settings_field_fingerprint_label">د ګوتو نښه</string>
-    <string name="forums_settings_field_server">سرور</string>
     <string name="forums_settings_name_edit_cd">د نوم سمول</string>
     <string name="forums_settings_name_cancel_cd">سمون لغوه کول</string>
     <string name="forums_settings_save_name">نوم خوندي کړئ</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">تنظیمات وارد کړئ</string>
     <string name="forums_communities_add">ټولنې اضافه کړئ</string>
     <string name="forums_communities_add_failed">ټولنې اضافه نه شوې</string>
-    <string name="forums_imported_settings">%1$s ټولنې، %2$s بندیزونه او %3$s خوندي شوي پوسټونه وارد شول</string>
-    <string name="forums_imported_settings_more">تر اوسه %1$s ټولنې، %2$s بندیزونه او %3$s خوندي شوي پوسټونه وارد شول؛ پاتې نور وروسته راځي</string>
     <string name="forums_import_failed">وارد نه شو</string>
     <string name="forums_community">ټولنه</string>
     <string name="forums_community_name">د ټولنې نوم</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s ته د %2$s په توګه خپریږي</string>
     <string name="forums_find_search_example">د نوم، ID، فنګر پرنټ، URL، یا %1$s له مخې وپلټئ</string>
     <string name="forums_setup">تنظیم</string>
+    <string name="forums_post_remove_title">لیکنه لرې کړئ</string>
+    <string name="forums_post_remove_message">دا به پوسټ له منظمو کاروونکو څخه پټ کړي. ماډراتورانو ته به یې لیدل وکولی شي او وروسته یې بیرته راګرځولی شي.</string>
+    <string name="forums_comment_remove_title">تبصره لرې کړئ</string>
+    <string name="forums_comment_remove_message">دا به تبصره له منظمو کاروونکو څخه پټه کړي. ماډراتورانو ته به یې لیدل وکولی شي او وروسته یې بیرته راګرځولی شي.</string>
+    <string name="forums_report_submitted">راپور وسپارل شو</string>
+    <string name="forums_member_remove_message">د دې شخص رایې په دې فورم کې ړنګ شي.</string>
+    <string name="forums_member_block_message">دوی نور دا فورم نه شي کتلی.</string>
+    <string name="forums_member_block_title">%1$s بلاک کړئ؟</string>
+    <string name="forums_moderation_resolution_ignored">رد شوی</string>
+    <string name="forums_moderation_restriction_member">غړی</string>
+    <string name="forums_moderation_restriction_duration">موده</string>
+    <string name="forums_moderation_duration_hour">یو ساعت</string>
+    <string name="forums_moderation_duration_day">یوه ورځ</string>
+    <string name="forums_moderation_duration_week">یوه اونۍ</string>
+    <string name="forums_moderation_duration_month">یوه میاشت</string>
+    <string name="forums_member_remove">لرې کول</string>
+    <string name="forums_member_remove_title">%1$s لرې کړئ؟</string>
+    <string name="forums_imported">%1$s وارد شول</string>
+    <string name="forums_imported_more">تر اوسه %1$s وارد شول؛ نور به وروسته راشي</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s ټولنه</item>
+        <item quantity="other">%s ټولنې</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s بندیز</item>
+        <item quantity="other">%s بندیزونه</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s خوندي شوې لیکنه</item>
+        <item quantity="other">%s خوندي شوې لیکنې</item>
+    </plurals>
 </resources>

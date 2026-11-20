@@ -230,10 +230,13 @@ object ApiClient {
         }
         // Strict parsing on purpose: lenient mode silently accepts malformed
         // JSON, which turns a server contract break into a wrong value instead
-        // of an error the contract check can chase.
+        // of an error the contract check can chase. NullGuard holds each
+        // model to its Kotlin types: a null where none may be takes the
+        // class's default, or refuses the answer.
         return GsonBuilder()
             .registerTypeAdapter(Boolean::class.java, boolAdapter)
             .registerTypeAdapter(Boolean::class.javaPrimitiveType, boolAdapter)
+            .registerTypeAdapterFactory(NullGuard())
             .create()
     }
 

@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui.settings
 
+import android.content.res.Resources
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,6 +18,7 @@ import androidx.compose.foundation.layout.size
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -88,11 +90,7 @@ fun SourcesScreen(
         imported?.let { answer ->
             snackbarHostState.showSnackbar(
                 if (answer.more) {
-                    resources.getString(
-                        R.string.feeds_follows_importing,
-                        format.formatNumber(answer.total),
-                        format.formatNumber(answer.imported),
-                    )
+                    importingMessage(resources, format, answer.total, answer.imported)
                 } else {
                     resources.getQuantityString(R.plurals.feeds_follows_imported, answer.imported, format.formatNumber(answer.imported))
                 },
@@ -105,7 +103,7 @@ fun SourcesScreen(
         allowed?.let { answer ->
             snackbarHostState.showSnackbar(
                 if (answer.more) {
-                    resources.getString(R.string.feeds_import_sources_more, format.formatNumber(answer.imported))
+                    resources.getQuantityString(R.plurals.feeds_import_sources_more, answer.imported, format.formatNumber(answer.imported))
                 } else {
                     resources.getQuantityString(R.plurals.feeds_import_sources, answer.imported, format.formatNumber(answer.imported))
                 },
@@ -176,3 +174,16 @@ fun SourcesScreen(
         )
     }
 }
+
+/**
+ * Follows still being imported: how many in all and how many added so far,
+ * each a phrase counted in the language's own plural forms, joined as the
+ * language lists them.
+ */
+internal fun importingMessage(resources: Resources, format: Format, total: Int, imported: Int): String =
+    format.formatList(
+        listOf(
+            resources.getQuantityString(R.plurals.feeds_follows_importing, total, format.formatNumber(total)),
+            resources.getQuantityString(R.plurals.feeds_follows_added, imported, format.formatNumber(imported)),
+        ),
+    )

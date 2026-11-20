@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Irakurri honekin</string>
     <string name="feeds_source_follow_pending">Jarraipena zain</string>
     <string name="feeds_import_follows">Inportatu jarraitutakoak fitxategi batetik</string>
-    <string name="feeds_follows_importing">%1$s jarraitutako inportatzen; orain arte %2$s gehitu dira</string>
     <string name="feeds_publish_to_account">Argitaratu %1$s(e)n</string>
     <string name="feeds_import_posts">Inportatu argitalpenak</string>
     <string name="feeds_import_bookmarks">Inportatu laster-markak</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Jada ez da Bluesky jarioa</string>
     <string name="feeds_generator_failed">Ezin izan da Bluesky jarioa aldatu</string>
     <string name="feeds_copies_delete_title">%1$s(e)ko kopiak ezabatu?</string>
-    <string name="feeds_copies_delete_message">Jarioak %1$s argitalpen argitaratu ditu han. Bertan geratzen dira ezabatzen ez badituzu.</string>
     <string name="feeds_copies_delete">Ezabatu kopiak</string>
     <string name="feeds_copies_keep">Mantendu</string>
     <string name="feeds_copies_delete_failed">Ezin izan dira kopiak ezabatu</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Ezin izan da inportatu</string>
     <string name="feeds_imported">%1$s inportatu dira</string>
     <string name="feeds_imported_more">Orain arte %1$s inportatu dira; gainerakoak ondoren datoz</string>
-    <string name="feeds_import_sources_more">Orain arte %1$s iturri gehitu dira; gainerakoak ondoren datoz</string>
     <string name="feeds_waiting_title">Baimenaren zain</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s pertsona</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Etiketaren arabera iragazia:</string>
     <string name="feeds_setup">Konfiguratu</string>
     <string name="feeds_search_example">Bilatu izenez, IDz, hatz-markaz, URLz edo %1$s helbidez</string>
+    <string name="feeds_member_remove_message">Pertsona honen erreakzioak ezabatu egiten dira jario honetan.</string>
+    <string name="feeds_member_block_message">Ez du jario hau gehiago ikusiko.</string>
+    <string name="feeds_member_block_title">%1$s blokeatu?</string>
+    <string name="feeds_member_remove_title">%1$s kendu?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Jarraitutako %s inportatzen</item>
+        <item quantity="other">Jarraitutako %s inportatzen</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s gehitu da orain arte</item>
+        <item quantity="other">%s gehitu dira orain arte</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Jarioak %s argitalpen argitaratu du han. Han geratuko da ezabatzen ez baduzu.</item>
+        <item quantity="other">Jarioak %s argitalpen argitaratu ditu han. Han geratuko dira ezabatzen ez badituzu.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Orain arte %s iturri gehitu da; gainerakoak ondoren datoz</item>
+        <item quantity="other">Orain arte %s iturri gehitu dira; gainerakoak ondoren datoz</item>
+    </plurals>
 </resources>

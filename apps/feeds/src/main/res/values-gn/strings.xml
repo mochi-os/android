@@ -286,7 +286,6 @@
     <string name="feeds_source_read_with">Emoñe\'ẽ ko\'águi</string>
     <string name="feeds_source_follow_pending">Jemoirũ oha\'arõ</string>
     <string name="feeds_import_follows">Egueru mba\'ete removirũva peteĩ marandurendágui</string>
-    <string name="feeds_follows_importing">Ojegueru %1$s jemoirũ; %2$s oñembojuajúma ko\'ágã peve</string>
     <string name="feeds_publish_to_account">Emoherakuã %1$s-pe</string>
     <string name="feeds_import_posts">Egueru marandukuéra</string>
     <string name="feeds_import_bookmarks">Egueru marcadorkuéra</string>
@@ -300,7 +299,6 @@
     <string name="feeds_generator_off">Ndaha\'evéima Bluesky marandu syry</string>
     <string name="feeds_generator_failed">Ndaikatúi oñemoambue Bluesky marandu syry</string>
     <string name="feeds_copies_delete_title">¿Embogue kópiakuéra %1$s-pegua?</string>
-    <string name="feeds_copies_delete_message">Feed omoherakuã %1$s marandu upépe. Opytáta rehundi peve.</string>
     <string name="feeds_copies_delete">Embogue kópiakuéra</string>
     <string name="feeds_copies_keep">Eñongatu</string>
     <string name="feeds_copies_delete_failed">Ndaikatúi oñembogue kópiakuéra</string>
@@ -308,7 +306,6 @@
     <string name="feeds_import_failed">Ndaikatúi ojegueru</string>
     <string name="feeds_imported">%1$s ojegueru</string>
     <string name="feeds_imported_more">Ko\'ágã peve %1$s ojegueru; hembýva ou upe rire</string>
-    <string name="feeds_import_sources_more">Ko\'ágã peve %1$s heñoiha oñembojuaju; hembýva ou upe rire</string>
     <string name="feeds_waiting_title">Oñeha\'arõ ñemoneĩ</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s tapicha</item>
@@ -369,4 +366,20 @@
     <string name="feeds_filtered_by_tag">Oñembogua teramoĩ rupive:</string>
     <string name="feeds_setup">Emboheko</string>
     <string name="feeds_search_example">Eheka téra, ID, fingerprint, URL, térã %1$s rupive</string>
+    <string name="feeds_member_remove_message">Ko tapicha reacciones-kuéra ko feed-pe ojehundíta.</string>
+    <string name="feeds_member_block_message">Ndaikatuvéima ohecha ko feed.</string>
+    <string name="feeds_member_block_title">¿Ejokóta %1$s?</string>
+    <string name="feeds_member_remove_title">¿Embogue %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="other">Ojegueruhína %s jemoirũ</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="other">ko\'ágã peve %s oñembojuaju</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="other">Feed omoherakuã upépe %s marandu. Opytáta nde rehundi\'ỹramo.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="other">Ko\'ágã peve %s heñoiha oñembojuaju; hembýva ou upe rire</item>
+    </plurals>
 </resources>

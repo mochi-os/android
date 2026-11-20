@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Oraindik ez dago moderatzaile-jarduerarik</string>
     <string name="forums_moderation_log_meta">Egilea: %1$s · Helburua: %2$s</string>
     <string name="forums_moderation_restriction_add">Gehitu murrizketa</string>
-    <string name="forums_moderation_restriction_user">Erabiltzailearen identitatea</string>
     <string name="forums_moderation_restriction_type_shadowban">Itzal-debekua</string>
-    <string name="forums_moderation_restriction_duration_seconds">Iraupena (segundoak, hutsik betirako)</string>
     <string name="forums_moderation_restriction_expires">Iraungitzea: %1$s</string>
     <string name="forums_moderation_restriction_permanent">Betirako</string>
     <string name="forums_report_reason_hate">Gorrotoa</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Izena</string>
     <string name="forums_settings_field_entity_id">Entitate IDa</string>
     <string name="forums_settings_field_fingerprint_label">Hatz-marka</string>
-    <string name="forums_settings_field_server">Zerbitzaria</string>
     <string name="forums_settings_name_edit_cd">Editatu izena</string>
     <string name="forums_settings_name_cancel_cd">Utzi editatzea</string>
     <string name="forums_settings_save_name">Gorde izena</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Inportatu ezarpenak</string>
     <string name="forums_communities_add">Gehitu komunitateak</string>
     <string name="forums_communities_add_failed">Ezin izan dira komunitateak gehitu</string>
-    <string name="forums_imported_settings">%1$s komunitate, blokeatutako %2$s zerbitzari eta gordetako %3$s argitalpen inportatu dira</string>
-    <string name="forums_imported_settings_more">Orain arte %1$s komunitate, blokeatutako %2$s zerbitzari eta gordetako %3$s argitalpen inportatu dira; gainerakoak gero etorriko dira</string>
     <string name="forums_import_failed">Ezin izan da inportatu</string>
     <string name="forums_community">Komunitatea</string>
     <string name="forums_community_name">Komunitatearen izena</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s komunitatean argitaratzen da %2$s gisa</string>
     <string name="forums_find_search_example">Bilatu izenez, IDz, hatz-markaz, URLz edo %1$s helbidez</string>
     <string name="forums_setup">Konfiguratu</string>
+    <string name="forums_post_remove_title">Kendu argitalpena</string>
+    <string name="forums_post_remove_message">Honek mezua ohiko erabiltzaileengandik ezkutatuko du. Moderatzaileek ikusi eta berreskuratu egin dezakete geroago.</string>
+    <string name="forums_comment_remove_title">Kendu iruzkina</string>
+    <string name="forums_comment_remove_message">Honek iruzkina ohiko erabiltzaileengandik ezkutatuko du. Moderatzaileek ikusi eta berreskuratu egin dezakete geroago.</string>
+    <string name="forums_report_submitted">Salaketa bidali da</string>
+    <string name="forums_member_remove_message">Pertsona honen botoak ezabatu egiten dira foro honetan.</string>
+    <string name="forums_member_block_message">Ez du foro hau gehiago ikusiko.</string>
+    <string name="forums_member_block_title">%1$s blokeatu?</string>
+    <string name="forums_moderation_resolution_ignored">Baztertua</string>
+    <string name="forums_moderation_restriction_member">Kidea</string>
+    <string name="forums_moderation_restriction_duration">Iraupena</string>
+    <string name="forums_moderation_duration_hour">Ordubete</string>
+    <string name="forums_moderation_duration_day">Egun bat</string>
+    <string name="forums_moderation_duration_week">Aste bat</string>
+    <string name="forums_moderation_duration_month">Hilabete bat</string>
+    <string name="forums_member_remove">Kendu</string>
+    <string name="forums_member_remove_title">%1$s kendu?</string>
+    <string name="forums_imported">%1$s inportatu dira</string>
+    <string name="forums_imported_more">Orain arte %1$s inportatu dira; gainerakoak ondoren datoz</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s komunitate</item>
+        <item quantity="other">%s komunitate</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokeo</item>
+        <item quantity="other">%s blokeo</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">gordetako %s argitalpen</item>
+        <item quantity="other">gordetako %s argitalpen</item>
+    </plurals>
 </resources>

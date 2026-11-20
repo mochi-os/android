@@ -223,7 +223,6 @@
     <string name="feeds_feed_deleted">呢個資訊串已經刪除</string>
     <string name="feeds_removed_from_feed">你已經被移除出呢個資訊串</string>
     <string name="feeds_settings_member_blocked">已封鎖成員</string>
-    <string name="feeds_follows_importing">正在匯入 %1$s 個追蹤；暫時加咗 %2$s 個</string>
     <string name="feeds_filter_phrase">要隱藏嘅字詞</string>
     <string name="feeds_people_you_know">你識嘅人</string>
     <string name="feeds_boosted_by">由 %1$s 轉推</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">已經唔再係 Bluesky 資訊串</string>
     <string name="feeds_generator_failed">改唔到 Bluesky 資訊串</string>
     <string name="feeds_copies_delete_title">要刪除 %1$s 上面嘅副本？</string>
-    <string name="feeds_copies_delete_message">呢個資訊串喺嗰度發布咗 %1$s 篇貼文。除非你刪除，否則佢哋會留低。</string>
     <string name="feeds_copies_delete">刪除副本</string>
     <string name="feeds_copies_keep">保留</string>
     <string name="feeds_copies_delete_failed">刪除唔到副本</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">匯入唔到</string>
     <string name="feeds_imported">已匯入 %1$s</string>
     <string name="feeds_imported_more">暫時匯入咗 %1$s；其餘嘅之後會到</string>
-    <string name="feeds_import_sources_more">暫時加咗 %1$s 個來源；其餘嘅之後會到</string>
     <string name="feeds_waiting_title">等緊權限</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s 個人</item>
@@ -356,4 +353,20 @@
     </plurals>
     <string name="feeds_setup">設定</string>
     <string name="feeds_search_example">用名稱、ID、指紋、網址或者 %1$s 搜尋</string>
+    <string name="feeds_member_remove_title">要移除 %1$s？</string>
+    <string name="feeds_member_remove_message">佢喺呢個資訊串嘅回應會被刪除。</string>
+    <string name="feeds_member_block_title">要封鎖 %1$s？</string>
+    <string name="feeds_member_block_message">佢之後唔可以再睇呢個資訊串。</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="other">正在匯入 %s 個追蹤</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="other">暫時加咗 %s 個</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="other">呢個資訊串喺嗰度發布咗 %s 篇貼文。除非你刪除，否則會一直保留。</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="other">暫時加咗 %s 個來源；其餘嘅之後會到</item>
+    </plurals>
 </resources>

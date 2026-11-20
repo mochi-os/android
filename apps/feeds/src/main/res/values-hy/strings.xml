@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Կարդալ հաշվով</string>
     <string name="feeds_source_follow_pending">Հետևումը սպասման մեջ է</string>
     <string name="feeds_import_follows">Ներմուծել հետևումները ֆայլից</string>
-    <string name="feeds_follows_importing">Ներմուծվում է %1$s հետևում, մինչ այժմ ավելացվել է %2$s</string>
     <string name="feeds_publish_to_account">Հրապարակել %1$s-ում</string>
     <string name="feeds_import_posts">Ներմուծել գրառումները</string>
     <string name="feeds_import_bookmarks">Ներմուծել էջանիշները</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Այլևս Bluesky հոսք չէ</string>
     <string name="feeds_generator_failed">Չհաջողվեց փոխել Bluesky հոսքը</string>
     <string name="feeds_copies_delete_title">Ջնջե՞լ պատճենները %1$s-ում</string>
-    <string name="feeds_copies_delete_message">Հոսքն այնտեղ հրապարակել է %1$s գրառում։ Դրանք կմնան, եթե չջնջեք։</string>
     <string name="feeds_copies_delete">Ջնջել պատճենները</string>
     <string name="feeds_copies_keep">Պահել</string>
     <string name="feeds_copies_delete_failed">Չհաջողվեց ջնջել պատճենները</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Չհաջողվեց ներմուծել</string>
     <string name="feeds_imported">Ներմուծվեց %1$s</string>
     <string name="feeds_imported_more">Առայժմ ներմուծվել է %1$s, մնացածը՝ հետո</string>
-    <string name="feeds_import_sources_more">Առայժմ ավելացվել է %1$s աղբյուր, մնացածը՝ հետո</string>
     <string name="feeds_waiting_title">Սպասում է թույլտվության</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s մարդ</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Զտված ըստ պիտակի՝</string>
     <string name="feeds_setup">Կարգավորել</string>
     <string name="feeds_search_example">Որոնել ըստ անվան, ID-ի, մատնահետքի, URL-ի կամ %1$s հասցեի</string>
+    <string name="feeds_member_remove_message">Այս անձի արձագանքները այս հոսքում ջնջվում են։</string>
+    <string name="feeds_member_block_message">Նա այլևս չի կարողանա դիտել այս հոսքը։</string>
+    <string name="feeds_member_block_title">Արգելափակե՞լ %1$s-ին</string>
+    <string name="feeds_member_remove_title">Հեռացնե՞լ %1$s-ին</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Ներմուծվում է %s հետևում</item>
+        <item quantity="other">Ներմուծվում է %s հետևում</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">առայժմ ավելացվել է %s</item>
+        <item quantity="other">առայժմ ավելացվել է %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Հոսքը այնտեղ հրապարակել է %s գրառում։ Այն կմնա, եթե չջնջեք։</item>
+        <item quantity="other">Հոսքը այնտեղ հրապարակել է %s գրառում։ Դրանք կմնան, եթե չջնջեք։</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Առայժմ ավելացվել է %s աղբյուր, մնացածը՝ հետո</item>
+        <item quantity="other">Առայժմ ավելացվել է %s աղբյուր, մնացածը՝ հետո</item>
+    </plurals>
 </resources>

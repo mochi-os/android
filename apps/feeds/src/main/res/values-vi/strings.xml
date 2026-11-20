@@ -281,7 +281,6 @@
     <string name="feeds_source_read_with">Đọc bằng</string>
     <string name="feeds_source_follow_pending">Đang chờ theo dõi</string>
     <string name="feeds_import_follows">Nhập các tài khoản đang theo dõi từ tệp</string>
-    <string name="feeds_follows_importing">Đang nhập %1$s tài khoản đang theo dõi; đã thêm %2$s</string>
     <string name="feeds_publish_to_account">Đăng lên %1$s</string>
     <string name="feeds_import_posts">Nhập bài viết</string>
     <string name="feeds_import_bookmarks">Nhập dấu trang</string>
@@ -295,7 +294,6 @@
     <string name="feeds_generator_off">Không còn là nguồn cấp Bluesky</string>
     <string name="feeds_generator_failed">Không thể thay đổi nguồn cấp Bluesky</string>
     <string name="feeds_copies_delete_title">Xóa các bản sao trên %1$s?</string>
-    <string name="feeds_copies_delete_message">Nguồn cấp đã đăng %1$s bài viết ở đó. Chúng sẽ được giữ lại trừ khi bạn xóa.</string>
     <string name="feeds_copies_delete">Xóa bản sao</string>
     <string name="feeds_copies_keep">Giữ lại</string>
     <string name="feeds_copies_delete_failed">Không thể xóa các bản sao</string>
@@ -303,7 +301,6 @@
     <string name="feeds_import_failed">Không thể nhập</string>
     <string name="feeds_imported">Đã nhập %1$s</string>
     <string name="feeds_imported_more">Đã nhập %1$s; phần còn lại sẽ được nhập sau</string>
-    <string name="feeds_import_sources_more">Đã thêm %1$s nguồn; phần còn lại sẽ được thêm sau</string>
     <string name="feeds_waiting_title">Đang chờ quyền</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s người</item>
@@ -356,4 +353,20 @@
     <string name="feeds_filtered_by_tag">Đã lọc theo thẻ:</string>
     <string name="feeds_setup">Thiết lập</string>
     <string name="feeds_search_example">Tìm kiếm theo tên, ID, dấu vân tay, URL hoặc %1$s</string>
+    <string name="feeds_member_remove_message">Phản ứng của người này trong nguồn cấp này sẽ bị xóa.</string>
+    <string name="feeds_member_block_message">Họ sẽ không còn xem được nguồn cấp này.</string>
+    <string name="feeds_member_block_title">Chặn %1$s?</string>
+    <string name="feeds_member_remove_title">Xóa %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="other">Đang nhập %s tài khoản đang theo dõi</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="other">đã thêm %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="other">Nguồn cấp đã đăng %s bài viết ở đó. Chúng sẽ vẫn còn trừ khi bạn xóa chúng.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="other">Đã thêm %s nguồn; phần còn lại sẽ được thêm sau</item>
+    </plurals>
 </resources>

@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Сè уште нема активност од модератор</string>
     <string name="forums_moderation_log_meta">Од %1$s · Цел %2$s</string>
     <string name="forums_moderation_restriction_add">Додај ограничување</string>
-    <string name="forums_moderation_restriction_user">Идентитет на корисник</string>
     <string name="forums_moderation_restriction_type_shadowban">Прикриена забрана</string>
-    <string name="forums_moderation_restriction_duration_seconds">Времетраење (во секунди, празно за трајно)</string>
     <string name="forums_moderation_restriction_expires">Истекува на %1$s</string>
     <string name="forums_moderation_restriction_permanent">Трајно</string>
     <string name="forums_report_reason_hate">Омраза</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Име</string>
     <string name="forums_settings_field_entity_id">ID на ентитет</string>
     <string name="forums_settings_field_fingerprint_label">Отпечаток</string>
-    <string name="forums_settings_field_server">Сервер</string>
     <string name="forums_settings_name_edit_cd">Уреди име</string>
     <string name="forums_settings_name_cancel_cd">Откажи го уредувањето</string>
     <string name="forums_settings_save_name">Зачувај име</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Увези поставки</string>
     <string name="forums_communities_add">Додај заедници</string>
     <string name="forums_communities_add_failed">Не можеа да се додадат заедниците</string>
-    <string name="forums_imported_settings">Увезени: заедници %1$s, блокирања %2$s, зачувани објави %3$s</string>
-    <string name="forums_imported_settings_more">Досега увезени: заедници %1$s, блокирања %2$s, зачувани објави %3$s; останатите следуваат</string>
     <string name="forums_import_failed">Увозот не успеа</string>
     <string name="forums_community">Заедница</string>
     <string name="forums_community_name">Име на заедницата</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Се објавува во %1$s како %2$s</string>
     <string name="forums_find_search_example">Пребарај по име, ID, отпечаток, URL или адреса %1$s</string>
     <string name="forums_setup">Поставете</string>
+    <string name="forums_post_remove_title">Отстрани објава</string>
+    <string name="forums_post_remove_message">Ова ќе го скрие постот од обичните корисници. Модераторите сè уште можат да го видат и да го вратат подоцна.</string>
+    <string name="forums_comment_remove_title">Отстрани коментар</string>
+    <string name="forums_comment_remove_message">Ова ќе го скрие коментарот од обичните корисници. Модераторите сè уште можат да го видат и да го вратат подоцна.</string>
+    <string name="forums_report_submitted">Извештајот е поднесен</string>
+    <string name="forums_member_remove_message">Гласовите на оваа личност на овој форум се бришат.</string>
+    <string name="forums_member_block_message">Повеќе не може да го гледа овој форум.</string>
+    <string name="forums_member_block_title">Да го блокирате %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Отфрлено</string>
+    <string name="forums_moderation_restriction_member">Член</string>
+    <string name="forums_moderation_restriction_duration">Траење</string>
+    <string name="forums_moderation_duration_hour">Еден час</string>
+    <string name="forums_moderation_duration_day">Еден ден</string>
+    <string name="forums_moderation_duration_week">Една недела</string>
+    <string name="forums_moderation_duration_month">Еден месец</string>
+    <string name="forums_member_remove">Отстрани</string>
+    <string name="forums_member_remove_title">Да се отстрани %1$s?</string>
+    <string name="forums_imported">Увезени: %1$s</string>
+    <string name="forums_imported_more">Досега увезени: %1$s; останатите следуваат</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s заедница</item>
+        <item quantity="other">%s заедници</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s блокирање</item>
+        <item quantity="other">%s блокирања</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s зачувана објава</item>
+        <item quantity="other">%s зачувани објави</item>
+    </plurals>
 </resources>

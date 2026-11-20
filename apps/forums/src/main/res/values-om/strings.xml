@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Ammaaf gocha to\'attootaa hin jiru</string>
     <string name="forums_moderation_log_meta">%1$s hojjete · Galma %2$s</string>
     <string name="forums_moderation_restriction_add">Daangaa dabali</string>
-    <string name="forums_moderation_restriction_user">Eenyummaa fayyadamaa</string>
     <string name="forums_moderation_restriction_type_shadowban">Dhoksaadhaan dhorkuu</string>
-    <string name="forums_moderation_restriction_duration_seconds">Yeroo (sekondii, yoo duumessa ta\'e hanga dhumaatti)</string>
     <string name="forums_moderation_restriction_expires">%1$s xumurama</string>
     <string name="forums_moderation_restriction_permanent">Hanga dhumaatti</string>
     <string name="forums_report_reason_hate">Jibba</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Maqaa</string>
     <string name="forums_settings_field_entity_id">ID Qaamaa</string>
     <string name="forums_settings_field_fingerprint_label">Maxxansa quba</string>
-    <string name="forums_settings_field_server">Sarvarii</string>
     <string name="forums_settings_name_edit_cd">Maqaa sirreessi</string>
     <string name="forums_settings_name_cancel_cd">Gulaaluu dhiisi</string>
     <string name="forums_settings_save_name">Maqaa olkaa\'i</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Qindaa\'inoota alaa galchi</string>
     <string name="forums_communities_add">Hawaasota dabali</string>
     <string name="forums_communities_add_failed">Hawaasota dabaluun hin danda\'amne</string>
-    <string name="forums_imported_settings">Hawaasota %1$s, dhorkaawwan %2$s fi maxxansaalee olkaa\'aman %3$s alaa galfameera</string>
-    <string name="forums_imported_settings_more">Hanga ammaatti hawaasota %1$s, dhorkaawwan %2$s fi maxxansaalee olkaa\'aman %3$s alaa galfameera; kanneen hafan ni dhufu</string>
     <string name="forums_import_failed">Alaa galchuu hin dandeenye</string>
     <string name="forums_community">Hawaasa</string>
     <string name="forums_community_name">Maqaa hawaasaa</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s irratti akka %2$s tti maxxanfama</string>
     <string name="forums_find_search_example">Maqaa, ID, fingerprintii, URL, ykn %1$s barbaadi</string>
     <string name="forums_setup">Qophaa\'i</string>
+    <string name="forums_post_remove_title">Maxxansa haqi</string>
+    <string name="forums_post_remove_message">Kun postii fayyadamtoota dhaabbii irraa dhoksa. To\'attoonni ammallee arguu fi boodaa deebisanii sirreessuu danda\'u.</string>
+    <string name="forums_comment_remove_title">Yaada haqi</string>
+    <string name="forums_comment_remove_message">Kun yaada fayyadamtoota dhaabbii irraa dhoksa. To\'attoonni ammallee arguu fi boodaa deebisanii sirreessuu danda\'u.</string>
+    <string name="forums_report_submitted">Gabaasni dhiyaate</string>
+    <string name="forums_member_remove_message">Sagaleen nama kanaa foramii kana keessaa ni haqama.</string>
+    <string name="forums_member_block_message">Isaan si\'achi foramii kana ilaaluu hin danda\'an.</string>
+    <string name="forums_member_block_title">%1$s ugguruu?</string>
+    <string name="forums_moderation_resolution_ignored">Dhiisame</string>
+    <string name="forums_moderation_restriction_member">Miseensa</string>
+    <string name="forums_moderation_restriction_duration">Turtii</string>
+    <string name="forums_moderation_duration_hour">Sa\'aatii tokko</string>
+    <string name="forums_moderation_duration_day">Guyyaa tokko</string>
+    <string name="forums_moderation_duration_week">Torban tokko</string>
+    <string name="forums_moderation_duration_month">Ji\'a tokko</string>
+    <string name="forums_member_remove">Haqi</string>
+    <string name="forums_member_remove_title">%1$s haquu?</string>
+    <string name="forums_imported">%1$s alaa galfameera</string>
+    <string name="forums_imported_more">Hanga ammaatti %1$s alaa galfameera; kanneen hafan ni dhufu</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">hawaasa %s</item>
+        <item quantity="other">hawaasota %s</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">uggura %s</item>
+        <item quantity="other">ugguraalee %s</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">postii olkaa\'ame %s</item>
+        <item quantity="other">postiiwwan olkaa\'aman %s</item>
+    </plurals>
 </resources>

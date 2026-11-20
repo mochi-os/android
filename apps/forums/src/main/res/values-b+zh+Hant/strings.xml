@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">尚無審核活動</string>
     <string name="forums_moderation_log_meta">由 %1$s · 對象 %2$s</string>
     <string name="forums_moderation_restriction_add">新增限制</string>
-    <string name="forums_moderation_restriction_user">使用者身分</string>
     <string name="forums_moderation_restriction_type_shadowban">隱形封鎖</string>
-    <string name="forums_moderation_restriction_duration_seconds">持續時間（秒，留空表示永久）</string>
     <string name="forums_moderation_restriction_expires">於 %1$s 到期</string>
     <string name="forums_moderation_restriction_permanent">永久</string>
     <string name="forums_report_reason_hate">仇恨</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">名稱</string>
     <string name="forums_settings_field_entity_id">實體 ID</string>
     <string name="forums_settings_field_fingerprint_label">指紋</string>
-    <string name="forums_settings_field_server">伺服器</string>
     <string name="forums_settings_name_edit_cd">編輯名稱</string>
     <string name="forums_settings_name_cancel_cd">取消編輯</string>
     <string name="forums_settings_save_name">儲存名稱</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">匯入設定</string>
     <string name="forums_communities_add">新增社群</string>
     <string name="forums_communities_add_failed">無法新增社群</string>
-    <string name="forums_imported_settings">已匯入 %1$s 個社群、%2$s 項封鎖和 %3$s 則已儲存的貼文</string>
-    <string name="forums_imported_settings_more">目前已匯入 %1$s 個社群、%2$s 項封鎖和 %3$s 則已儲存的貼文；其餘將隨後匯入</string>
     <string name="forums_import_failed">無法匯入</string>
     <string name="forums_community">社群</string>
     <string name="forums_community_name">社群名稱</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">以 %2$s 的身分發佈到 %1$s</string>
     <string name="forums_find_search_example">依名稱、ID、指紋、網址或 %1$s 搜尋</string>
     <string name="forums_setup">設定</string>
+    <string name="forums_post_remove_title">移除貼文</string>
+    <string name="forums_post_remove_message">這將向一般使用者隱藏貼文。版主仍然可以看到並稍後復原。</string>
+    <string name="forums_comment_remove_title">移除留言</string>
+    <string name="forums_comment_remove_message">這將向一般使用者隱藏留言。版主仍然可以看到並稍後復原。</string>
+    <string name="forums_report_submitted">已提交檢舉</string>
+    <string name="forums_member_remove_message">該成員在此論壇中的投票將被刪除。</string>
+    <string name="forums_member_block_message">對方將無法再查看此論壇。</string>
+    <string name="forums_member_block_title">封鎖%1$s？</string>
+    <string name="forums_moderation_resolution_ignored">已駁回</string>
+    <string name="forums_moderation_restriction_member">成員</string>
+    <string name="forums_moderation_restriction_duration">持續時間</string>
+    <string name="forums_moderation_duration_hour">一小時</string>
+    <string name="forums_moderation_duration_day">一天</string>
+    <string name="forums_moderation_duration_week">一週</string>
+    <string name="forums_moderation_duration_month">一個月</string>
+    <string name="forums_member_remove">移除</string>
+    <string name="forums_member_remove_title">移除%1$s？</string>
+    <string name="forums_imported">已匯入 %1$s</string>
+    <string name="forums_imported_more">已匯入 %1$s，其餘將陸續匯入</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s 個社群</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s 個封鎖</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s 則已儲存的貼文</item>
+    </plurals>
 </resources>

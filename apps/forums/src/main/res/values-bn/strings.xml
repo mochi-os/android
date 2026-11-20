@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">এখনও কোনো মডারেটরের কার্যকলাপ নেই</string>
     <string name="forums_moderation_log_meta">%1$s দ্বারা · লক্ষ্য %2$s</string>
     <string name="forums_moderation_restriction_add">নিষেধাজ্ঞা যোগ করুন</string>
-    <string name="forums_moderation_restriction_user">ব্যবহারকারীর পরিচয়</string>
     <string name="forums_moderation_restriction_type_shadowban">শ্যাডোব্যান</string>
-    <string name="forums_moderation_restriction_duration_seconds">সময়কাল (সেকেন্ড, স্থায়ীর জন্য খালি)</string>
     <string name="forums_moderation_restriction_expires">%1$s-এ মেয়াদ শেষ হয়</string>
     <string name="forums_moderation_restriction_permanent">স্থায়ী</string>
     <string name="forums_report_reason_hate">ঘৃণা</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">নাম</string>
     <string name="forums_settings_field_entity_id">ইউনিট আইডি</string>
     <string name="forums_settings_field_fingerprint_label">ফিঙ্গারপ্রিন্ট</string>
-    <string name="forums_settings_field_server">সার্ভার</string>
     <string name="forums_settings_name_edit_cd">নাম সম্পাদনা করুন</string>
     <string name="forums_settings_name_cancel_cd">সম্পাদনা বাতিল করুন</string>
     <string name="forums_settings_save_name">নাম সংরক্ষণ করুন</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">সেটিংস ইমপোর্ট করুন</string>
     <string name="forums_communities_add">কমিউনিটি যোগ করুন</string>
     <string name="forums_communities_add_failed">কমিউনিটিগুলো যোগ করা যায়নি</string>
-    <string name="forums_imported_settings">%1$sটি কমিউনিটি, %2$sটি ব্লক করা সার্ভার এবং %3$sটি সংরক্ষিত পোস্ট ইমপোর্ট করা হয়েছে</string>
-    <string name="forums_imported_settings_more">এখন পর্যন্ত %1$sটি কমিউনিটি, %2$sটি ব্লক করা সার্ভার এবং %3$sটি সংরক্ষিত পোস্ট ইমপোর্ট করা হয়েছে; বাকিগুলো পরে আসবে</string>
     <string name="forums_import_failed">ইমপোর্ট করা যায়নি</string>
     <string name="forums_community">কমিউনিটি</string>
     <string name="forums_community_name">কমিউনিটির নাম</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s-এ %2$s হিসেবে পোস্ট হয়</string>
     <string name="forums_find_search_example">নাম, ID, ফিঙ্গারপ্রিন্ট, URL, বা %1$s দিয়ে অনুসন্ধান করুন</string>
     <string name="forums_setup">সেট আপ করুন</string>
+    <string name="forums_post_remove_title">পোস্ট সরান</string>
+    <string name="forums_post_remove_message">এটি সাধারণ ব্যবহারকারীদের কাছ থেকে পোস্টটি লুকিয়ে রাখবে। মডারেটররা এখনও এটি দেখতে পারেন এবং পরে পুনরুদ্ধার করতে পারেন।</string>
+    <string name="forums_comment_remove_title">মন্তব্য সরান</string>
+    <string name="forums_comment_remove_message">এটি সাধারণ ব্যবহারকারীদের কাছ থেকে মন্তব্যটি লুকিয়ে রাখবে। মডারেটররা এখনও এটি দেখতে পারেন এবং পরে পুনরুদ্ধার করতে পারেন।</string>
+    <string name="forums_report_submitted">রিপোর্ট জমা দেওয়া হয়েছে</string>
+    <string name="forums_member_remove_message">এই ফোরামে এই ব্যক্তির ভোটগুলি মুছে ফেলা হবে।</string>
+    <string name="forums_member_block_message">তিনি আর এই ফোরাম দেখতে পাবেন না।</string>
+    <string name="forums_member_block_title">%1$s-কে ব্লক করবেন?</string>
+    <string name="forums_moderation_resolution_ignored">খারিজ করা হয়েছে</string>
+    <string name="forums_moderation_restriction_member">সদস্য</string>
+    <string name="forums_moderation_restriction_duration">সময়কাল</string>
+    <string name="forums_moderation_duration_hour">এক ঘণ্টা</string>
+    <string name="forums_moderation_duration_day">এক দিন</string>
+    <string name="forums_moderation_duration_week">এক সপ্তাহ</string>
+    <string name="forums_moderation_duration_month">এক মাস</string>
+    <string name="forums_member_remove">সরান</string>
+    <string name="forums_member_remove_title">%1$s-কে সরাবেন?</string>
+    <string name="forums_imported">%1$s ইমপোর্ট করা হয়েছে</string>
+    <string name="forums_imported_more">এখন পর্যন্ত %1$s ইমপোর্ট করা হয়েছে; বাকিগুলো আসছে</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%sটি কমিউনিটি</item>
+        <item quantity="other">%sটি কমিউনিটি</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%sটি ব্লক</item>
+        <item quantity="other">%sটি ব্লক</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%sটি সংরক্ষিত পোস্ট</item>
+        <item quantity="other">%sটি সংরক্ষিত পোস্ট</item>
+    </plurals>
 </resources>

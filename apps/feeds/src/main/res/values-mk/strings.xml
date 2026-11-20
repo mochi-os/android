@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Читај со</string>
     <string name="feeds_source_follow_pending">Следењето чека</string>
     <string name="feeds_import_follows">Увези следени сметки од датотека</string>
-    <string name="feeds_follows_importing">Се увезуваат %1$s следени сметки; досега се додадени %2$s</string>
     <string name="feeds_publish_to_account">Објавувај на %1$s</string>
     <string name="feeds_import_posts">Увези објави</string>
     <string name="feeds_import_bookmarks">Увези обележувачи</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Веќе не е Bluesky канал</string>
     <string name="feeds_generator_failed">Не може да се промени Bluesky каналот</string>
     <string name="feeds_copies_delete_title">Да се избришат копиите на %1$s?</string>
-    <string name="feeds_copies_delete_message">Каналот објави %1$s објави таму. Тие остануваат освен ако не ги избришете.</string>
     <string name="feeds_copies_delete">Избриши копии</string>
     <string name="feeds_copies_keep">Задржи</string>
     <string name="feeds_copies_delete_failed">Копиите не можеа да се избришат</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Увозот не успеа</string>
     <string name="feeds_imported">Увезени: %1$s</string>
     <string name="feeds_imported_more">Досега увезени: %1$s; останатите следуваат</string>
-    <string name="feeds_import_sources_more">Досега се додадени %1$s извори; останатите следуваат</string>
     <string name="feeds_waiting_title">Се чека дозвола</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s човек</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Филтрирано по ознака:</string>
     <string name="feeds_setup">Поставете</string>
     <string name="feeds_search_example">Пребарај по име, ID, отпечаток, URL или адреса %1$s</string>
+    <string name="feeds_member_remove_message">Реакциите на оваа личност во овој фид се бришат.</string>
+    <string name="feeds_member_block_message">Повеќе не може да го гледа овој канал.</string>
+    <string name="feeds_member_block_title">Да се блокира %1$s?</string>
+    <string name="feeds_member_remove_title">Да се отстрани %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Се увезува %s следена сметка</item>
+        <item quantity="other">Се увезуваат %s следени сметки</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">досега е додадена %s</item>
+        <item quantity="other">досега се додадени %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Каналот објави %s пост таму. Тој останува, освен ако не го избришете.</item>
+        <item quantity="other">Каналот објави %s постови таму. Тие остануваат, освен ако не ги избришете.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Досега е додаден %s извор; останатите следуваат</item>
+        <item quantity="other">Досега се додадени %s извори; останатите следуваат</item>
+    </plurals>
 </resources>

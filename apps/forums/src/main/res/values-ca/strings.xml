@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Encara no hi ha activitat del moderador</string>
     <string name="forums_moderation_log_meta">Per %1$s · Objectiu %2$s</string>
     <string name="forums_moderation_restriction_add">Afegeix restricció</string>
-    <string name="forums_moderation_restriction_user">Identitat de l\'usuari</string>
     <string name="forums_moderation_restriction_type_shadowban">Vetatge ocult</string>
-    <string name="forums_moderation_restriction_duration_seconds">Durada (segons, en blanc per permanent)</string>
     <string name="forums_moderation_restriction_expires">Caduca %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Odi</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nom</string>
     <string name="forums_settings_field_entity_id">ID de l\'entitat</string>
     <string name="forums_settings_field_fingerprint_label">Empremta</string>
-    <string name="forums_settings_field_server">Servidor</string>
     <string name="forums_settings_name_edit_cd">Edita el nom</string>
     <string name="forums_settings_name_cancel_cd">Cancel·la l\'edició</string>
     <string name="forums_settings_save_name">Desa el nom</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Importa la configuració</string>
     <string name="forums_communities_add">Afegeix comunitats</string>
     <string name="forums_communities_add_failed">No s\'han pogut afegir les comunitats</string>
-    <string name="forums_imported_settings">S\'han importat %1$s comunitats, %2$s servidors bloquejats i %3$s publicacions desades</string>
-    <string name="forums_imported_settings_more">De moment s\'han importat %1$s comunitats, %2$s servidors bloquejats i %3$s publicacions desades; la resta vindrà després</string>
     <string name="forums_import_failed">No s\'ha pogut importar</string>
     <string name="forums_community">Comunitat</string>
     <string name="forums_community_name">Nom de la comunitat</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Es publica a %1$s com a %2$s</string>
     <string name="forums_find_search_example">Cerca per nom, ID, empremta, URL o %1$s</string>
     <string name="forums_setup">Configura</string>
+    <string name="forums_post_remove_title">Elimina la publicació</string>
+    <string name="forums_post_remove_message">Això amagarà el missatge als usuaris normals. Els moderadors encara el podran veure i restaurar-lo més tard.</string>
+    <string name="forums_comment_remove_title">Elimina el comentari</string>
+    <string name="forums_comment_remove_message">Això amagarà el comentari als usuaris normals. Els moderadors encara el podran veure i restaurar-lo més tard.</string>
+    <string name="forums_report_submitted">Informe enviat</string>
+    <string name="forums_member_remove_message">Els vots d\'aquesta persona en aquest fòrum s\'eliminen.</string>
+    <string name="forums_member_block_message">Ja no podrà veure aquest fòrum.</string>
+    <string name="forums_member_block_title">Vols bloquejar %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Descartat</string>
+    <string name="forums_moderation_restriction_member">Membre</string>
+    <string name="forums_moderation_restriction_duration">Durada</string>
+    <string name="forums_moderation_duration_hour">Una hora</string>
+    <string name="forums_moderation_duration_day">Un dia</string>
+    <string name="forums_moderation_duration_week">Una setmana</string>
+    <string name="forums_moderation_duration_month">Un mes</string>
+    <string name="forums_member_remove">Elimina</string>
+    <string name="forums_member_remove_title">Vols eliminar %1$s?</string>
+    <string name="forums_imported">S\'han importat %1$s</string>
+    <string name="forums_imported_more">De moment s\'han importat %1$s; la resta vindrà després</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s comunitat</item>
+        <item quantity="other">%s comunitats</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s bloqueig</item>
+        <item quantity="other">%s bloquejos</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s publicació desada</item>
+        <item quantity="other">%s publicacions desades</item>
+    </plurals>
 </resources>

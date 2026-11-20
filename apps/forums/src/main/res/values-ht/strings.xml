@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Poko gen aktivite moderatè</string>
     <string name="forums_moderation_log_meta">Pa %1$s · Sib %2$s</string>
     <string name="forums_moderation_restriction_add">Ajoute restriksyon</string>
-    <string name="forums_moderation_restriction_user">Idantite itilizatè</string>
     <string name="forums_moderation_restriction_type_shadowban">Entèdiksyon kache</string>
-    <string name="forums_moderation_restriction_duration_seconds">Dire (segond, vid pou pèmanan)</string>
     <string name="forums_moderation_restriction_expires">Ekspire %1$s</string>
     <string name="forums_moderation_restriction_permanent">Pèmanan</string>
     <string name="forums_report_reason_hate">Rayisman</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Non</string>
     <string name="forums_settings_field_entity_id">ID Antite</string>
     <string name="forums_settings_field_fingerprint_label">Anprent dijital</string>
-    <string name="forums_settings_field_server">Sèvè</string>
     <string name="forums_settings_name_edit_cd">Modifye non</string>
     <string name="forums_settings_name_cancel_cd">Anile modifikasyon an</string>
     <string name="forums_settings_save_name">Sove non</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Enpòte paramèt yo</string>
     <string name="forums_communities_add">Ajoute kominote</string>
     <string name="forums_communities_add_failed">Pa t kapab ajoute kominote yo</string>
-    <string name="forums_imported_settings">%1$s kominote, %2$s blokaj ak %3$s pòs ki sove enpòte</string>
-    <string name="forums_imported_settings_more">%1$s kominote, %2$s blokaj ak %3$s pòs ki sove enpòte pou kounye a; rès la ap vini</string>
     <string name="forums_import_failed">Pa t kapab enpòte</string>
     <string name="forums_community">Kominote</string>
     <string name="forums_community_name">Non kominote</string>
@@ -338,4 +333,32 @@
     <string name="forums_community_destination">Pibliye nan %1$s kòm %2$s</string>
     <string name="forums_find_search_example">Chèche pa non, ID, fingerprint, URL, oswa %1$s</string>
     <string name="forums_setup">Konfigire</string>
+    <string name="forums_post_remove_title">Retire pòs</string>
+    <string name="forums_post_remove_message">Sa pral kache pòs la nan men itilizatè regilye yo. Moderatè yo ka toujou wè l epi restore l pita.</string>
+    <string name="forums_comment_remove_title">Retire kòmantè</string>
+    <string name="forums_comment_remove_message">Sa pral kache kòmantè a nan men itilizatè regilye yo. Moderatè yo ka toujou wè l epi restore l pita.</string>
+    <string name="forums_report_submitted">Rapò soumèt</string>
+    <string name="forums_member_remove_message">Yo efase vòt li yo nan fowòm sa a.</string>
+    <string name="forums_member_block_message">Li p ap ka wè fowòm sa a ankò.</string>
+    <string name="forums_member_block_title">Bloke %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Rejte</string>
+    <string name="forums_moderation_restriction_member">Manm</string>
+    <string name="forums_moderation_restriction_duration">Dire</string>
+    <string name="forums_moderation_duration_hour">Inèdtan</string>
+    <string name="forums_moderation_duration_day">Yon jou</string>
+    <string name="forums_moderation_duration_week">Yon semèn</string>
+    <string name="forums_moderation_duration_month">Yon mwa</string>
+    <string name="forums_member_remove">Retire</string>
+    <string name="forums_member_remove_title">Retire %1$s?</string>
+    <string name="forums_imported">%1$s enpòte</string>
+    <string name="forums_imported_more">%1$s enpòte pou kounye a; rès la ap vini</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s kominote</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s blokaj</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s pòs anrejistre</item>
+    </plurals>
 </resources>

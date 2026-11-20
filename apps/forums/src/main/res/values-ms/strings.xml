@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Belum ada aktiviti moderator</string>
     <string name="forums_moderation_log_meta">Oleh %1$s · Sasaran %2$s</string>
     <string name="forums_moderation_restriction_add">Tambah sekatan</string>
-    <string name="forums_moderation_restriction_user">Identiti pengguna</string>
     <string name="forums_moderation_restriction_type_shadowban">Sekatan bayangan</string>
-    <string name="forums_moderation_restriction_duration_seconds">Tempoh (saat, kosongkan untuk kekal)</string>
     <string name="forums_moderation_restriction_expires">Tamat %1$s</string>
     <string name="forums_moderation_restriction_permanent">Kekal</string>
     <string name="forums_report_reason_hate">Kebencian</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nama</string>
     <string name="forums_settings_field_entity_id">ID Entiti</string>
     <string name="forums_settings_field_fingerprint_label">Cap jari</string>
-    <string name="forums_settings_field_server">Pelayan</string>
     <string name="forums_settings_name_edit_cd">Edit nama</string>
     <string name="forums_settings_name_cancel_cd">Batalkan pengeditan</string>
     <string name="forums_settings_save_name">Simpan nama</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Import tetapan</string>
     <string name="forums_communities_add">Tambah komuniti</string>
     <string name="forums_communities_add_failed">Tidak dapat menambah komuniti</string>
-    <string name="forums_imported_settings">%1$s komuniti, %2$s sekatan dan %3$s siaran disimpan diimport</string>
-    <string name="forums_imported_settings_more">Setakat ini %1$s komuniti, %2$s sekatan dan %3$s siaran disimpan diimport; selebihnya menyusul</string>
     <string name="forums_import_failed">Tidak dapat mengimport</string>
     <string name="forums_community">Komuniti</string>
     <string name="forums_community_name">Nama komuniti</string>
@@ -337,4 +332,32 @@
     <string name="forums_community_destination">Disiarkan ke %1$s sebagai %2$s</string>
     <string name="forums_find_search_example">Cari mengikut nama, ID, cap jari, URL atau %1$s</string>
     <string name="forums_setup">Sediakan</string>
+    <string name="forums_post_remove_title">Alih keluar hantaran</string>
+    <string name="forums_post_remove_message">Ini akan menyembunyikan kiriman daripada pengguna biasa. Penyelia masih boleh melihatnya dan memulihkannya kemudian.</string>
+    <string name="forums_comment_remove_title">Alih keluar komen</string>
+    <string name="forums_comment_remove_message">Ini akan menyembunyikan komen daripada pengguna biasa. Penyelia masih boleh melihatnya dan memulihkannya kemudian.</string>
+    <string name="forums_report_submitted">Laporan dihantar</string>
+    <string name="forums_member_remove_message">Undian orang ini dalam forum ini dipadam.</string>
+    <string name="forums_member_block_message">Mereka tidak lagi boleh melihat forum ini.</string>
+    <string name="forums_member_block_title">Sekat %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Ditolak</string>
+    <string name="forums_moderation_restriction_member">Ahli</string>
+    <string name="forums_moderation_restriction_duration">Tempoh</string>
+    <string name="forums_moderation_duration_hour">Satu jam</string>
+    <string name="forums_moderation_duration_day">Satu hari</string>
+    <string name="forums_moderation_duration_week">Satu minggu</string>
+    <string name="forums_moderation_duration_month">Satu bulan</string>
+    <string name="forums_member_remove">Alih keluar</string>
+    <string name="forums_member_remove_title">Alih keluar %1$s?</string>
+    <string name="forums_imported">%1$s diimport</string>
+    <string name="forums_imported_more">Setakat ini %1$s diimport; selebihnya menyusul</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s komuniti</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s sekatan</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s hantaran disimpan</item>
+    </plurals>
 </resources>

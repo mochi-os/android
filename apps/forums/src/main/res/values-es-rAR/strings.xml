@@ -100,10 +100,8 @@
     <string name="forums_moderation_log_meta">Por %1$s · Objetivo %2$s</string>
     <string name="forums_moderation_restrictions_empty">Sin restricciones</string>
     <string name="forums_moderation_restriction_add">Agregar restricción</string>
-    <string name="forums_moderation_restriction_user">Identidad del usuario</string>
     <string name="forums_moderation_restriction_type_banned">Banear</string>
     <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Duración (segundos, en blanco para permanente)</string>
     <string name="forums_moderation_restriction_expires">Expira %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanente</string>
     <string name="forums_moderation_section_premoderation">Premoderación</string>
@@ -176,7 +174,6 @@
     <string name="forums_settings_field_name">Nombre</string>
     <string name="forums_settings_field_entity_id">ID de entidad</string>
     <string name="forums_settings_field_fingerprint_label">Huella</string>
-    <string name="forums_settings_field_server">Servidor</string>
     <string name="forums_settings_name_edit_cd">Editá el nombre</string>
     <string name="forums_settings_name_cancel_cd">Cancelá la edición</string>
     <string name="forums_settings_save_name">Guardá el nombre</string>
@@ -234,4 +231,6 @@
     <string name="forums_already_subscribed">Ya estás suscrito a este foro</string>
     <string name="forums_community_link">Enlace</string>
     <string name="forums_find_search_example">Buscá por nombre, ID, huella, URL o %1$s</string>
+    <string name="forums_post_remove_title">Quitá el posteo</string>
+    <string name="forums_comment_remove_title">Quitá el comentario</string>
 </resources>

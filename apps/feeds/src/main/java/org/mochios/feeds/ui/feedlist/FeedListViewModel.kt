@@ -27,7 +27,7 @@ import org.mochios.feeds.repository.FeedsInfoResult
 import org.mochios.feeds.repository.FeedsRepository
 import org.mochios.feeds.repository.listed
 import org.mochios.feeds.repository.unwrap
-import org.mochios.feeds.ui.feed.REOPEN_GRACE
+import org.mochios.android.util.REOPEN_GRACE
 import kotlin.time.Duration
 import javax.inject.Inject
 
@@ -41,26 +41,15 @@ class FeedListViewModel @Inject constructor(
     private val _feeds = MutableStateFlow<List<Feed>>(emptyList())
     val feeds: StateFlow<List<Feed>> = _feeds.asStateFlow()
 
-    // Whether the server has an AI provider configured; gates the AI sort
-    // option offered for every feed.
+    // Whether the server has an AI account; gates the AI sort offered for
+    // every feed.
     private val _hasAi = MutableStateFlow(false)
     val hasAi: StateFlow<Boolean> = _hasAi.asStateFlow()
 
-    private val _isLoading = MutableStateFlow(false)
-    val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
-
-    private val _isRefreshing = MutableStateFlow(false)
-    val isRefreshing: StateFlow<Boolean> = _isRefreshing.asStateFlow()
-
+    /** Why the feeds could not be read, shown in the drawer with a retry;
+     *  null once a read succeeds. */
     private val _error = MutableStateFlow<MochiError?>(null)
     val error: StateFlow<MochiError?> = _error.asStateFlow()
-
-    private val _currentSort = MutableStateFlow("")
-    val currentSort: StateFlow<String> = _currentSort.asStateFlow()
-
-    // Global RSS URL state — null when not yet generated, set once a token
-    // has been minted for the chosen mode. Resetting (mode change) wipes it.
-
 
     private val subscriptionIds = mutableListOf<String>()
 
@@ -91,25 +80,12 @@ class FeedListViewModel @Inject constructor(
         }
     }
 
-    fun setSort(sort: String) {
-        if (_currentSort.value == sort) return
-        _currentSort.value = sort
-        viewModelScope.launch {
-            try {
-                repository.setGlobalSort(sort)
-            } catch (_: Exception) {
-                // Non-critical — UI state already updated.
-            }
-        }
-    }
-
     /** The drawer's feeds, with unread counts as they are now: a class
      *  `-/info` read already under way, the feed screen's sort lookup as it
      *  opens, is shared, and an older answer held is not. */
     fun loadFeeds() = synchronized(this) {
         feedsJob?.cancel()
         feedsJob = viewModelScope.launch {
-            _isLoading.value = true
             _error.value = null
             try {
                 val info = repository.getFeedsInfo(current = true)
@@ -117,16 +93,11 @@ class FeedListViewModel @Inject constructor(
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = overlay(feedList)
                 _hasAi.value = info.hasAi
-                if (info.sort.isNotEmpty()) {
-                    _currentSort.value = info.sort
-                }
                 subscribeToWebSockets(info)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
-            } finally {
-                _isLoading.value = false
             }
         }
         Unit
@@ -162,20 +133,18 @@ class FeedListViewModel @Inject constructor(
     fun refresh() = synchronized(this) {
         feedsJob?.cancel()
         feedsJob = viewModelScope.launch {
-            _isRefreshing.value = true
             try {
                 val info = repository.getFeedsInfo(fresh = true)
                 val feedList = info.feeds
                     .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
                 _feeds.value = overlay(feedList)
                 _hasAi.value = info.hasAi
+                _error.value = null
                 subscribeToWebSockets(info)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
-            } finally {
-                _isRefreshing.value = false
             }
         }
         Unit
@@ -237,6 +206,7 @@ class FeedListViewModel @Inject constructor(
                 .sortedWith(compareBy(NaturalCompare) { feed -> feed.name })
             _feeds.value = overlay(feedList)
             _hasAi.value = info.hasAi
+            _error.value = null
             subscribeToWebSockets(info)
         } catch (_: Exception) {
             // Silent refresh failure

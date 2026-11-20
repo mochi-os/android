@@ -295,7 +295,6 @@
     <string name="feeds_source_read_with">Čitaj s</string>
     <string name="feeds_source_follow_pending">Praćenje na čekanju</string>
     <string name="feeds_import_follows">Uvezi praćenja iz datoteke</string>
-    <string name="feeds_follows_importing">Uvozi se %1$s praćenja; dosad dodano %2$s</string>
     <string name="feeds_publish_to_account">Objavljuj na %1$s</string>
     <string name="feeds_import_posts">Uvezi objave</string>
     <string name="feeds_import_bookmarks">Uvezi oznake</string>
@@ -309,7 +308,6 @@
     <string name="feeds_generator_off">Više nije Bluesky feed</string>
     <string name="feeds_generator_failed">Nije moguće promijeniti Bluesky feed</string>
     <string name="feeds_copies_delete_title">Obrisati kopije na %1$s?</string>
-    <string name="feeds_copies_delete_message">Broj objava koje je feed ondje objavio: %1$s. Ostaju dok ih ne obrišete.</string>
     <string name="feeds_copies_delete">Obriši kopije</string>
     <string name="feeds_copies_keep">Zadrži</string>
     <string name="feeds_copies_delete_failed">Nije moguće obrisati kopije</string>
@@ -317,7 +315,6 @@
     <string name="feeds_import_failed">Uvoz nije uspio</string>
     <string name="feeds_imported">Uvezeno: %1$s</string>
     <string name="feeds_imported_more">Dosad uvezeno: %1$s; ostalo slijedi</string>
-    <string name="feeds_import_sources_more">Dosad dodano izvora: %1$s; ostali slijede</string>
     <string name="feeds_waiting_title">Čeka se dozvola</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s osoba</item>
@@ -391,4 +388,28 @@
     <string name="feeds_filtered_by_tag">Filtrirano po oznaci:</string>
     <string name="feeds_setup">Postavi</string>
     <string name="feeds_search_example">Pretraži po nazivu, ID-u, otisku, URL-u ili adresi %1$s</string>
+    <string name="feeds_member_remove_message">Reakcije ove osobe u ovom feedu se brišu.</string>
+    <string name="feeds_member_block_message">Više ne može vidjeti ovaj feed.</string>
+    <string name="feeds_member_block_title">Blokirati %1$s?</string>
+    <string name="feeds_member_remove_title">Ukloniti %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Uvozi se %s praćenje</item>
+        <item quantity="few">Uvoze se %s praćenja</item>
+        <item quantity="other">Uvozi se %s praćenja</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">dosad dodano %s</item>
+        <item quantity="few">dosad dodana %s</item>
+        <item quantity="other">dosad dodano %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Feed je tamo objavio %s objavu. Ostaje ako je ne obrišete.</item>
+        <item quantity="few">Feed je tamo objavio %s objave. Ostaju ako ih ne obrišete.</item>
+        <item quantity="other">Feed je tamo objavio %s objava. Ostaju ako ih ne obrišete.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Dosad je dodan %s izvor; ostalo slijedi</item>
+        <item quantity="few">Dosad su dodana %s izvora; ostalo slijedi</item>
+        <item quantity="other">Dosad je dodano %s izvora; ostalo slijedi</item>
+    </plurals>
 </resources>

@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Vēl nav moderatoru darbību</string>
     <string name="forums_moderation_log_meta">Veica %1$s · Mērķis %2$s</string>
     <string name="forums_moderation_restriction_add">Pievienot ierobežojumu</string>
-    <string name="forums_moderation_restriction_user">Lietotāja identitāte</string>
     <string name="forums_moderation_restriction_type_shadowban">Slēptais aizliegums</string>
-    <string name="forums_moderation_restriction_duration_seconds">Ilgums (sekundēs, atstājiet tukšu pastāvīgam)</string>
     <string name="forums_moderation_restriction_expires">Beidzas %1$s</string>
     <string name="forums_moderation_restriction_permanent">Pastāvīgs</string>
     <string name="forums_report_reason_hate">Naids</string>
@@ -199,7 +197,6 @@
     <string name="forums_settings_field_name">Nosaukums</string>
     <string name="forums_settings_field_entity_id">Entītijas ID</string>
     <string name="forums_settings_field_fingerprint_label">Pirkstu nospiedums</string>
-    <string name="forums_settings_field_server">Serveris</string>
     <string name="forums_settings_name_edit_cd">Rediģēt nosaukumu</string>
     <string name="forums_settings_name_cancel_cd">Atcelt rediģēšanu</string>
     <string name="forums_settings_save_name">Saglabāt nosaukumu</string>
@@ -309,8 +306,6 @@
     <string name="forums_import_settings">Importēt iestatījumus</string>
     <string name="forums_communities_add">Pievienot kopienas</string>
     <string name="forums_communities_add_failed">Nevarēja pievienot kopienas</string>
-    <string name="forums_imported_settings">Importēts: kopienas – %1$s, bloķējumi – %2$s, saglabātie ieraksti – %3$s</string>
-    <string name="forums_imported_settings_more">Pagaidām importēts: kopienas – %1$s, bloķējumi – %2$s, saglabātie ieraksti – %3$s; pārējie sekos</string>
     <string name="forums_import_failed">Nevarēja importēt</string>
     <string name="forums_community">Kopiena</string>
     <string name="forums_community_name">Kopienas vārds</string>
@@ -340,4 +335,38 @@
     <string name="forums_community_destination">Tiek publicēts kopienā %1$s kā %2$s</string>
     <string name="forums_find_search_example">Meklēt pēc nosaukuma, ID, pirkstu nospieduma, URL vai adreses %1$s</string>
     <string name="forums_setup">Iestatīt</string>
+    <string name="forums_post_remove_title">Noņemt ierakstu</string>
+    <string name="forums_post_remove_message">Tas paslēps ziņu no parastajiem lietotājiem. Moderatori joprojām var to redzēt un vēlāk atjaunot.</string>
+    <string name="forums_comment_remove_title">Noņemt komentāru</string>
+    <string name="forums_comment_remove_message">Tas paslēps komentāru no parastajiem lietotājiem. Moderatori joprojām var to redzēt un vēlāk atjaunot.</string>
+    <string name="forums_report_submitted">Ziņojums iesniegts</string>
+    <string name="forums_member_remove_message">Šīs personas balsis šajā forumā tiek dzēstas.</string>
+    <string name="forums_member_block_message">Viņi vairs nevarēs skatīt šo forumu.</string>
+    <string name="forums_member_block_title">Bloķēt %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Noraidīts</string>
+    <string name="forums_moderation_restriction_member">Dalībnieks</string>
+    <string name="forums_moderation_restriction_duration">Ilgums</string>
+    <string name="forums_moderation_duration_hour">Viena stunda</string>
+    <string name="forums_moderation_duration_day">Viena diena</string>
+    <string name="forums_moderation_duration_week">Viena nedēļa</string>
+    <string name="forums_moderation_duration_month">Viens mēnesis</string>
+    <string name="forums_member_remove">Noņemt</string>
+    <string name="forums_member_remove_title">Noņemt %1$s?</string>
+    <string name="forums_imported">Importēti: %1$s</string>
+    <string name="forums_imported_more">Pagaidām importēti: %1$s; pārējie sekos</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="zero">%s kopienas</item>
+        <item quantity="one">%s kopiena</item>
+        <item quantity="other">%s kopienas</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="zero">%s bloķējumi</item>
+        <item quantity="one">%s bloķējums</item>
+        <item quantity="other">%s bloķējumi</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="zero">%s saglabāti ieraksti</item>
+        <item quantity="one">%s saglabāts ieraksts</item>
+        <item quantity="other">%s saglabāti ieraksti</item>
+    </plurals>
 </resources>

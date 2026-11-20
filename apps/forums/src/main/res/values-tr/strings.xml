@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Henüz moderatör etkinliği yok</string>
     <string name="forums_moderation_log_meta">Yapan: %1$s · Hedef: %2$s</string>
     <string name="forums_moderation_restriction_add">Kısıtlama ekle</string>
-    <string name="forums_moderation_restriction_user">Kullanıcı kimliği</string>
     <string name="forums_moderation_restriction_type_shadowban">Gizli engelleme</string>
-    <string name="forums_moderation_restriction_duration_seconds">Süre (saniye, kalıcı için boş bırakın)</string>
     <string name="forums_moderation_restriction_expires">Süresi dolacak: %1$s</string>
     <string name="forums_moderation_restriction_permanent">Kalıcı</string>
     <string name="forums_report_reason_hate">Nefret</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Ad</string>
     <string name="forums_settings_field_entity_id">Varlık kimliği</string>
     <string name="forums_settings_field_fingerprint_label">Parmak izi</string>
-    <string name="forums_settings_field_server">Sunucu</string>
     <string name="forums_settings_name_edit_cd">Adı düzenle</string>
     <string name="forums_settings_name_cancel_cd">Düzenlemeyi iptal et</string>
     <string name="forums_settings_save_name">Adı kaydet</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Ayarları içe aktar</string>
     <string name="forums_communities_add">Toplulukları ekle</string>
     <string name="forums_communities_add_failed">Topluluklar eklenemedi</string>
-    <string name="forums_imported_settings">%1$s topluluk, %2$s engelleme ve %3$s kayıtlı gönderi içe aktarıldı</string>
-    <string name="forums_imported_settings_more">Şimdiye kadar %1$s topluluk, %2$s engelleme ve %3$s kayıtlı gönderi içe aktarıldı; kalanı ardından gelecek</string>
     <string name="forums_import_failed">İçe aktarılamadı</string>
     <string name="forums_community">Topluluk</string>
     <string name="forums_community_name">Topluluk adı</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s topluluğunda %2$s olarak paylaşılır</string>
     <string name="forums_find_search_example">Ad, kimlik, parmak izi, URL veya %1$s biçiminde bir adresle ara</string>
     <string name="forums_setup">Kur</string>
+    <string name="forums_post_remove_title">Gönderiyi kaldır</string>
+    <string name="forums_post_remove_message">Bu işlem gönderiyi sıradan kullanıcılardan gizleyecek. Moderatörler hâlâ görebilir ve daha sonra geri yükleyebilir.</string>
+    <string name="forums_comment_remove_title">Yorumu kaldır</string>
+    <string name="forums_comment_remove_message">Bu işlem yorumu sıradan kullanıcılardan gizleyecek. Moderatörler hâlâ görebilir ve daha sonra geri yükleyebilir.</string>
+    <string name="forums_report_submitted">Rapor gönderildi</string>
+    <string name="forums_member_remove_message">Bu kişinin bu forumdaki oyları silinir.</string>
+    <string name="forums_member_block_message">Bu forumu artık göremeyecek.</string>
+    <string name="forums_member_block_title">%1$s engellensin mi?</string>
+    <string name="forums_moderation_resolution_ignored">Reddedildi</string>
+    <string name="forums_moderation_restriction_member">Üye</string>
+    <string name="forums_moderation_restriction_duration">Süre</string>
+    <string name="forums_moderation_duration_hour">Bir saat</string>
+    <string name="forums_moderation_duration_day">Bir gün</string>
+    <string name="forums_moderation_duration_week">Bir hafta</string>
+    <string name="forums_moderation_duration_month">Bir ay</string>
+    <string name="forums_member_remove">Kaldır</string>
+    <string name="forums_member_remove_title">%1$s kaldırılsın mı?</string>
+    <string name="forums_imported">%1$s içe aktarıldı</string>
+    <string name="forums_imported_more">Şimdiye kadar %1$s içe aktarıldı; gerisi ardından gelecek</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s topluluk</item>
+        <item quantity="other">%s topluluk</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s engelleme</item>
+        <item quantity="other">%s engelleme</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s kayıtlı gönderi</item>
+        <item quantity="other">%s kayıtlı gönderi</item>
+    </plurals>
 </resources>

@@ -6,7 +6,6 @@
 package org.mochios.forums.ui.forum
 
 import org.mochios.android.api.OwnedAddress
-import android.content.Intent
 import android.content.Context
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -129,6 +128,7 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.rememberCopier
+import org.mochios.android.util.shareLink
 import org.mochios.forums.R
 import org.mochios.forums.model.communityHandle
 import org.mochios.forums.model.forumPath
@@ -215,17 +215,26 @@ fun ForumScreen(
     onOpenNotifications: () -> Unit,
     listViewModel: ForumListViewModel = hiltViewModel(),
 ) {
-    val context = LocalContext.current
     val drawerState = rememberDrawerState(
         if (forumId.isEmpty()) DrawerValue.Open else DrawerValue.Closed
     )
     val drawerScope = rememberCoroutineScope()
     val listUiState by listViewModel.uiState.collectAsState()
 
-    LaunchedEffect(forumId) {
-        if (forumId.isNotBlank()) {
-            LastViewedStore.set(context, FORUMS_FEATURE, forumId)
+    // The drawer reads its forums again each time the screen comes back: a
+    // forum renamed, joined or left elsewhere since. The first resume arrives
+    // as the screen opens, behind the drawer's own first read.
+    val drawerLifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(drawerLifecycleOwner) {
+        var resumed = false
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                if (resumed) listViewModel.refresh()
+                resumed = true
+            }
         }
+        drawerLifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { drawerLifecycleOwner.lifecycle.removeObserver(observer) }
     }
     VisibleEntityEffect("forums", forumId, socketKey = forumId)
 
@@ -289,6 +298,7 @@ fun ForumScreen(
             )
         } else {
             ForumContent(
+                forumId = forumId,
                 forums = listUiState.forums,
                 onOpenDrawer = { drawerScope.launch { drawerState.open() } },
                 onPostClick = onPostClick,
@@ -308,15 +318,15 @@ fun ForumScreen(
 
 }
 
+/** Whether a forum is a community read through a linked account, which may be blocked there. */
+internal fun blockableCommunity(forum: Forum): Boolean =
+    forum.id.isNotEmpty() && forum.account.isNotEmpty() && forum.address.isNotEmpty() && forum.hosted.isEmpty()
+
 /**
  * Whether [forum] is among [forums], those the user holds, as the drawer
  * lists them, rather than one only browsed. Only a held forum goes on the
  * home screen, as only those are kept in step with the list.
  */
-/** Whether a forum is a community read through a linked account, which may be blocked there. */
-internal fun blockableCommunity(forum: Forum): Boolean =
-    forum.id.isNotEmpty() && forum.account.isNotEmpty() && forum.address.isNotEmpty() && forum.hosted.isEmpty()
-
 internal fun holds(forums: List<Forum>, forum: Forum): Boolean = forums.any { held ->
     held.id == forum.id || (held.fingerprint.isNotEmpty() && held.fingerprint == forum.fingerprint)
 }
@@ -324,6 +334,7 @@ internal fun holds(forums: List<Forum>, forum: Forum): Boolean = forums.any { he
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun ForumContent(
+    forumId: String,
     forums: List<Forum>,
     onOpenDrawer: () -> Unit,
     onPostClick: (String, String) -> Unit,
@@ -361,6 +372,12 @@ private fun ForumContent(
     val rssClipboardLabel = stringResource(R.string.forums_rss_clipboard_label)
     val rssCopiedMessage = stringResource(R.string.forums_rss_copied)
     val shareLinkTitle = stringResource(R.string.forums_share_link_title)
+
+    // Opened next time the app starts only once it has loaded: a forum that
+    // fails to open would otherwise reopen, and fail, at every start.
+    LaunchedEffect(uiState.loaded) {
+        if (uiState.loaded) LastViewedStore.set(context, FORUMS_FEATURE, forumId)
+    }
 
     // Silently reload the forum when it returns to the foreground — e.g. after
     // editing the banner in settings — so the change shows without a manual
@@ -822,23 +839,6 @@ internal fun TopEffect(
     }
 }
 
-/**
- * Hand [link] to the system share sheet, whose target list already includes
- * "Copy" — so there is no in-app copy affordance to maintain.
- */
-private fun shareLink(context: Context, link: String, title: String) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_TEXT, link)
-        // Names the sheet's content preview. Android 10+ ignores the
-        // createChooser title, so without this the sheet reads "Sharing text".
-        putExtra(Intent.EXTRA_TITLE, title)
-    }
-    val chooser = Intent.createChooser(intent, title)
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
-}
-
 @Composable
 private fun PostCard(
     post: Post,
@@ -903,16 +903,7 @@ private fun PostCard(
             // A sensitive post's text and link wait behind a cover.
             SensitiveCover(sensitive = post.sensitive != 0, key = post.id) {
                 Column {
-                    if (post.body.isNotBlank()) {
-                        Spacer(Modifier.height(4.dp))
-                        Text(
-                            text = post.body,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            maxLines = 3,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
+                    PostPreview(post = post, onClick = onClick)
                     if (post.url.isNotEmpty()) {
                         Spacer(Modifier.height(8.dp))
                         PostLinkCard(post = post, compact = true)
@@ -1011,6 +1002,19 @@ private fun PostCard(
             }
         }
     }
+}
+
+/**
+ * The opening of a post's text on its card, rendered from the markdown as the
+ * post screen shows it rather than as the author typed it. A tap on the text
+ * opens the post, as a tap anywhere else on the card does.
+ */
+@Composable
+internal fun PostPreview(post: Post, onClick: () -> Unit) {
+    val text = post.bodyMarkdown.ifBlank { post.body }
+    if (text.isBlank()) return
+    Spacer(Modifier.height(4.dp))
+    HtmlContent(html = text, maxLines = 3, passThroughTouches = true, onClick = onClick)
 }
 
 /**

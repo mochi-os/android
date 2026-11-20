@@ -5,12 +5,12 @@
 
 package org.mochios.forums.ui.newpost
 
-import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -23,6 +23,7 @@ import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.MentionSuggestion
 import org.mochios.forums.R
 import org.mochios.forums.model.Destination
+import org.mochios.forums.model.Post
 import org.mochios.forums.repository.ForumsRepository
 import org.mochios.forums.repository.PostMarks
 import javax.inject.Inject
@@ -39,6 +40,13 @@ internal fun linkError(link: String): Int? {
     return if (web) null else R.string.forums_link_not_web
 }
 
+/** Where the post an edit changes stands: on its way, read, or refused. */
+sealed interface Original {
+    data object Loading : Original
+    data class Loaded(val post: Post) : Original
+    data class Failed(val error: MochiError) : Original
+}
+
 data class NewPostUiState(
     val isPosting: Boolean = false,
 
@@ -48,13 +56,14 @@ data class NewPostUiState(
 
     val createdForum: String = "",
     val createdPost: String = "",
-    val error: MochiError? = null
+    val error: MochiError? = null,
+    /** The post an edit changes, as the server holds it; null for a new post. */
+    val original: Original? = null,
 )
 
 @HiltViewModel
 class NewPostViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
-    private val application: Application,
     private val repository: ForumsRepository
 ) : ViewModel() {
 
@@ -135,8 +144,17 @@ class NewPostViewModel @Inject constructor(
         }
     }
 
+    /** Read the post an edit changes again, after it failed to come. */
+    fun retry() = loadExistingPost()
+
+    /**
+     * Read the post an edit changes. Until it has come the form holds none of
+     * its attachments, link or marks, so the screen shows the form, and
+     * [submit] sends it, only once it has.
+     */
     private fun loadExistingPost() {
         val postId = editingPostId ?: return
+        _uiState.value = _uiState.value.copy(original = Original.Loading)
         viewModelScope.launch {
             try {
                 val r = repository.viewPost(forumId, postId)
@@ -149,8 +167,11 @@ class NewPostViewModel @Inject constructor(
                 _link.value = r.post.url
                 _sensitive.value = r.post.sensitive != 0
                 _language.value = r.post.language
+                _uiState.value = _uiState.value.copy(original = Original.Loaded(r.post))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(original = Original.Failed(e.toMochiError()))
             }
         }
     }
@@ -241,9 +262,23 @@ class NewPostViewModel @Inject constructor(
         val title = _title.value
         val body = _body.value
         if (linkError(_link.value) != null) return
-        // An edit sends each mark as it stands, so clearing one reaches the
-        // server; a new post sends only what it carries.
-        val marks = PostMarks(url = _link.value.trim(), sensitive = _sensitive.value, language = _language.value)
+        val original = _uiState.value.original
+        // An edit goes only over the post as it was read: before then the form
+        // holds none of its attachments or marks, and would clear them.
+        if (isEditing && original !is Original.Loaded) return
+        val link = _link.value.trim()
+        // An edit sends only the marks changed, so clearing one reaches the
+        // server and the rest are left as they are; a new post sends only
+        // what it carries.
+        val marks = if (original is Original.Loaded) {
+            PostMarks(
+                url = link.takeIf { it != original.post.url },
+                sensitive = _sensitive.value.takeIf { it != (original.post.sensitive != 0) },
+                language = _language.value.takeIf { it != original.post.language },
+            )
+        } else {
+            PostMarks(url = link, sensitive = _sensitive.value, language = _language.value)
+        }
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isPosting = true, error = null)
             try {
@@ -272,7 +307,6 @@ class NewPostViewModel @Inject constructor(
                             keptAttachmentIds = keptExisting,
                             newFileUris = uris,
                             captions = captions,
-                            context = application,
                             tracker = tracker,
                             marks = marks,
                         )
@@ -292,7 +326,6 @@ class NewPostViewModel @Inject constructor(
                             body = body,
                             uris = uris,
                             captions = uris.map { _newCaptions.value[it] ?: "" },
-                            context = application,
                             tracker = tracker,
                             marks = marks,
                         )

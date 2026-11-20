@@ -87,6 +87,12 @@ internal fun CommunitySection(viewModel: CommunityViewModel) {
     var name by remember { mutableStateOf("") }
     var domain by remember { mutableStateOf("") }
     var open by remember { mutableStateOf(false) }
+    // The name goes once it is the community's: a refused one stays, to be
+    // changed rather than typed again, and a withdrawn community offers an
+    // empty field.
+    LaunchedEffect(current.published) {
+        if (current.published) name = ""
+    }
     val domains = viewModel.domains(current)
     val chosen = domain.ifEmpty { domains.firstOrNull().orEmpty() }
     Section(
@@ -143,10 +149,7 @@ internal fun CommunitySection(viewModel: CommunityViewModel) {
                     }
                 }
                 MochiButton(
-                    onClick = {
-                        viewModel.publish(name, chosen)
-                        name = ""
-                    },
+                    onClick = { viewModel.publish(name, chosen) },
                     enabled = name.isNotBlank() && chosen.isNotEmpty() && !busy,
                 ) {
                     if (busy) {

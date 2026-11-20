@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ထိန်းညှိသူ၏ လုပ်ဆောင်ချက် မရှိသေးပါ</string>
     <string name="forums_moderation_log_meta">%1$s က · ပစ်မှတ် %2$s</string>
     <string name="forums_moderation_restriction_add">ကန့်သတ်ချက် ထည့်ပါ</string>
-    <string name="forums_moderation_restriction_user">အသုံးပြုသူ အထောက်အထား</string>
     <string name="forums_moderation_restriction_type_shadowban">လျှို့ဝှက်ပိတ်ပင်မှု</string>
-    <string name="forums_moderation_restriction_duration_seconds">ကြာချိန် (စက္ကန့်များ, အမြဲတမ်းအတွက် ကွက်လပ်ထားပါ)</string>
     <string name="forums_moderation_restriction_expires">%1$s တွင် သက်တမ်းကုန်မည်</string>
     <string name="forums_moderation_restriction_permanent">အမြဲတမ်း</string>
     <string name="forums_report_reason_hate">မုန်းတီးမှု</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">အမည်</string>
     <string name="forums_settings_field_entity_id">အရာ ID</string>
     <string name="forums_settings_field_fingerprint_label">လက်ဗွေ</string>
-    <string name="forums_settings_field_server">ဆာဗာ</string>
     <string name="forums_settings_name_edit_cd">အမည် တည်းဖြတ်</string>
     <string name="forums_settings_name_cancel_cd">တည်းဖြတ်ခြင်းကို ပယ်ဖျက်ရန်</string>
     <string name="forums_settings_save_name">အမည် သိမ်းပါ</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">ဆက်တင်များ တင်သွင်းမည်</string>
     <string name="forums_communities_add">အသိုင်းအဝိုင်းများ ထည့်မည်</string>
     <string name="forums_communities_add_failed">အသိုင်းအဝိုင်းများကို ထည့်၍ မရပါ</string>
-    <string name="forums_imported_settings">အသိုင်းအဝိုင်း %1$s ခု၊ ပိတ်ဆို့မှု %2$s ခုနှင့် သိမ်းထားသော ပို့စ် %3$s ခု တင်သွင်းပြီး</string>
-    <string name="forums_imported_settings_more">ယခုထိ အသိုင်းအဝိုင်း %1$s ခု၊ ပိတ်ဆို့မှု %2$s ခုနှင့် သိမ်းထားသော ပို့စ် %3$s ခု တင်သွင်းပြီး၊ ကျန်သည်များ နောက်မှ လာမည်</string>
     <string name="forums_import_failed">တင်သွင်း၍ မရပါ</string>
     <string name="forums_community">အသိုင်းအဝိုင်း</string>
     <string name="forums_community_name">အသိုင်းအဝိုင်း အမည်</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">%1$s သို့ %2$s အဖြစ် ပို့စ်တင်မည်</string>
     <string name="forums_find_search_example">အမည်၊ ID၊ လက်ဗွေ၊ URL၊ သို့မဟုတ် %1$s ဖြင့် ရှာဖွေ</string>
     <string name="forums_setup">ပြင်ဆင်မည်</string>
+    <string name="forums_post_remove_title">ပို့စ် ဖယ်ရှား</string>
+    <string name="forums_post_remove_message">၎င်းသည် ပို့စ် ကို ပုံမှန်သုံးစွဲသူများထံမှ ဝှက်ထားပါမည်။ စိစစ်သူများ မြင်ရဆဲဖြစ်ပြီး နောက်မှ ပြန်ပြသနိုင်သည်။</string>
+    <string name="forums_comment_remove_title">မှတ်ချက် ဖယ်ရှား</string>
+    <string name="forums_comment_remove_message">၎င်းသည် မှတ်ချက်ကို ပုံမှန်သုံးစွဲသူများထံမှ ဝှက်ထားပါမည်။ စိစစ်သူများ မြင်ရဆဲဖြစ်ပြီး နောက်မှ ပြန်ပြသနိုင်သည်။</string>
+    <string name="forums_report_submitted">အစီရင်ခံစာ တင်ပြီး</string>
+    <string name="forums_member_remove_message">ဤသူ၏ ဤဖိုရမ်အတွင်းရှိ မဲများကို ဖျက်လိုက်ပါမည်။</string>
+    <string name="forums_member_block_message">သူတို့ ဤဖိုရမ်ကို ကြည့်နိုင်တော့မည် မဟုတ်ပါ။</string>
+    <string name="forums_member_block_title">%1$s ကို ပိတ်ဆို့မလား?</string>
+    <string name="forums_moderation_resolution_ignored">ပယ်ပြီး</string>
+    <string name="forums_moderation_restriction_member">အဖွဲ့ဝင်</string>
+    <string name="forums_moderation_restriction_duration">ကြာချိန်</string>
+    <string name="forums_moderation_duration_hour">တစ်နာရီ</string>
+    <string name="forums_moderation_duration_day">တစ်ရက်</string>
+    <string name="forums_moderation_duration_week">တစ်ပတ်</string>
+    <string name="forums_moderation_duration_month">တစ်လ</string>
+    <string name="forums_member_remove">ဖယ်ရှား</string>
+    <string name="forums_member_remove_title">%1$s ကို ဖယ်ရှားမလား?</string>
+    <string name="forums_imported">%1$s တင်သွင်းပြီး</string>
+    <string name="forums_imported_more">ယခုထိ %1$s တင်သွင်းပြီး၊ ကျန်သည်များ နောက်မှ လာမည်</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">အသိုင်းအဝိုင်း %s ခု</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">ပိတ်ဆို့မှု %s ခု</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">သိမ်းထားသော ပို့စ် %s ခု</item>
+    </plurals>
 </resources>

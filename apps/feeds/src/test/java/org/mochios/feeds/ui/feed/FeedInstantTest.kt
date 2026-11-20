@@ -257,7 +257,8 @@ class FeedInstantTest {
         until { writes.contains("/feeds/f1/-/read-all") }
         val before = rosters.get()
         drawer.refresh()
-        until { rosters.get() > before && !drawer.isRefreshing.value }
+        until { rosters.get() > before }
+        settle()
         assertEquals(0, drawer.unread("f1"))
 
         refuse = true

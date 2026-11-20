@@ -59,6 +59,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.EmptyState
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.feeds.R
@@ -138,6 +139,7 @@ fun FindFeedsContent(
     val subscribedFeeds by viewModel.subscribedFeeds.collectAsState()
     val probeResult by viewModel.probeResult.collectAsState()
     val isProbing by viewModel.isProbing.collectAsState()
+    val probeError by viewModel.probeError.collectAsState()
     val lookup by viewModel.lookup.collectAsState()
     val isLookingUp by viewModel.isLookingUp.collectAsState()
     val people by viewModel.people.collectAsState()
@@ -253,6 +255,8 @@ fun FindFeedsContent(
             ) {
                 CircularProgressIndicator()
             }
+        } else if (probeError != null && !isProbing) {
+            InlineErrorState(error = probeError!!, onRetry = viewModel::retry)
         } else if (displayFeeds.isEmpty() && searchQuery.isNotBlank() && !isSearching && !isProbing && lookup == null && !isLookingUp) {
             EmptyState(
                 icon = Icons.Default.Search,

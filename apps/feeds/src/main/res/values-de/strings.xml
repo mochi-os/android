@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Lesen mit</string>
     <string name="feeds_source_follow_pending">Folgeanfrage ausstehend</string>
     <string name="feeds_import_follows">Gefolgte Konten aus einer Datei importieren</string>
-    <string name="feeds_follows_importing">%1$s gefolgte Konten werden importiert; bisher %2$s hinzugefügt</string>
     <string name="feeds_publish_to_account">Auf %1$s veröffentlichen</string>
     <string name="feeds_import_posts">Beiträge importieren</string>
     <string name="feeds_import_bookmarks">Lesezeichen importieren</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Kein Bluesky-Feed mehr</string>
     <string name="feeds_generator_failed">Bluesky-Feed konnte nicht geändert werden</string>
     <string name="feeds_copies_delete_title">Kopien auf %1$s löschen?</string>
-    <string name="feeds_copies_delete_message">Der Feed hat dort %1$s Beiträge veröffentlicht. Sie bleiben, bis du sie löschst.</string>
     <string name="feeds_copies_delete">Kopien löschen</string>
     <string name="feeds_copies_keep">Behalten</string>
     <string name="feeds_copies_delete_failed">Kopien konnten nicht gelöscht werden</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Import fehlgeschlagen</string>
     <string name="feeds_imported">%1$s importiert</string>
     <string name="feeds_imported_more">Bisher %1$s importiert; der Rest folgt</string>
-    <string name="feeds_import_sources_more">Bisher %1$s Quellen hinzugefügt; der Rest folgt</string>
     <string name="feeds_waiting_title">Warten auf Berechtigung</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s Person</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Gefiltert nach Tag:</string>
     <string name="feeds_setup">Einrichten</string>
     <string name="feeds_search_example">Nach Name, ID, Fingerabdruck, URL oder %1$s suchen</string>
+    <string name="feeds_member_remove_message">Die Reaktionen dieser Person in diesem Feed werden gelöscht.</string>
+    <string name="feeds_member_block_message">Die Person kann diesen Feed nicht mehr sehen.</string>
+    <string name="feeds_member_block_title">%1$s blockieren?</string>
+    <string name="feeds_member_remove_title">%1$s entfernen?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s gefolgtes Konto wird importiert</item>
+        <item quantity="other">%s gefolgte Konten werden importiert</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s bisher hinzugefügt</item>
+        <item quantity="other">%s bisher hinzugefügt</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Der Feed hat dort %s Beitrag veröffentlicht. Er bleibt bestehen, sofern du ihn nicht löschst.</item>
+        <item quantity="other">Der Feed hat dort %s Beiträge veröffentlicht. Sie bleiben bestehen, sofern du sie nicht löschst.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Bisher %s Quelle hinzugefügt; der Rest folgt</item>
+        <item quantity="other">Bisher %s Quellen hinzugefügt; der Rest folgt</item>
+    </plurals>
 </resources>

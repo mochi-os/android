@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">اڃا تائين ڪابه ماڊريٽر سرگرمي ناهي</string>
     <string name="forums_moderation_log_meta">%1$s پاران · ھدف %2$s</string>
     <string name="forums_moderation_restriction_add">پابندي شامل ڪريو</string>
-    <string name="forums_moderation_restriction_user">صارف سڃاڻپ</string>
     <string name="forums_moderation_restriction_type_shadowban">شيڊو بين</string>
-    <string name="forums_moderation_restriction_duration_seconds">مدت (سيڪنڊ، مستقل لاءِ خالي ڇڏيو)</string>
     <string name="forums_moderation_restriction_expires">%1$s ختم ٿئي ٿو</string>
     <string name="forums_moderation_restriction_permanent">مستقل</string>
     <string name="forums_report_reason_hate">نفرت</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">نالو</string>
     <string name="forums_settings_field_entity_id">اينٽٽي ID</string>
     <string name="forums_settings_field_fingerprint_label">فنگر پرنٽ</string>
-    <string name="forums_settings_field_server">سرور</string>
     <string name="forums_settings_name_edit_cd">نالي ۾ ترميم ڪريو</string>
     <string name="forums_settings_name_cancel_cd">ترميم رد ڪريو</string>
     <string name="forums_settings_save_name">نالو محفوظ ڪريو</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">سيٽنگون درآمد ڪريو</string>
     <string name="forums_communities_add">برادريون شامل ڪريو</string>
     <string name="forums_communities_add_failed">برادريون شامل نه ٿي سگهيون</string>
-    <string name="forums_imported_settings">%1$s برادريون، %2$s بلاڪ ۽ %3$s محفوظ ٿيل پوسٽون درآمد ٿيون</string>
-    <string name="forums_imported_settings_more">هيستائين %1$s برادريون، %2$s بلاڪ ۽ %3$s محفوظ ٿيل پوسٽون درآمد ٿيون؛ باقي پوءِ اينديون</string>
     <string name="forums_import_failed">درآمد نه ٿي سگهي</string>
     <string name="forums_community">برادري</string>
     <string name="forums_community_name">برادري جو نالو</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s ۾ %2$s طور پوسٽ ٿيندو</string>
     <string name="forums_find_search_example">نالو، ID، فنگر پرنٽ، URL، يا %1$s سان ڳوليو</string>
     <string name="forums_setup">ترتيب ڏيو</string>
+    <string name="forums_post_remove_title">پوسٽ هٽايو</string>
+    <string name="forums_post_remove_message">ھي پوسٽ عام صارفن کان لڪائيندو. ماڊريٽرز اڃا ان کي ڏسي سگھن ٿا ۽ ان کي بعد ۾ بحال ڪري سگھن ٿا.</string>
+    <string name="forums_comment_remove_title">تبصرو هٽايو</string>
+    <string name="forums_comment_remove_message">ھي تبصرو عام صارفن کان لڪائيندو. ماڊريٽرز اڃا ان کي ڏسي سگھن ٿا ۽ ان کي بعد ۾ بحال ڪري سگھن ٿا.</string>
+    <string name="forums_report_submitted">رپورٽ جمع ٿي</string>
+    <string name="forums_member_remove_message">ھن فورم ۾ ھن شخص جا ووٽ حذف ٿي ويندا.</string>
+    <string name="forums_member_block_message">هو هاڻي هي فورم نه ڏسي سگهندو.</string>
+    <string name="forums_member_block_title">%1$s کي بلاڪ ڪريو؟</string>
+    <string name="forums_moderation_resolution_ignored">رد ٿيل</string>
+    <string name="forums_moderation_restriction_member">ميمبر</string>
+    <string name="forums_moderation_restriction_duration">مدو</string>
+    <string name="forums_moderation_duration_hour">هڪ ڪلاڪ</string>
+    <string name="forums_moderation_duration_day">هڪ ڏينهن</string>
+    <string name="forums_moderation_duration_week">هڪ هفتو</string>
+    <string name="forums_moderation_duration_month">هڪ مهينو</string>
+    <string name="forums_member_remove">هٽايو</string>
+    <string name="forums_member_remove_title">%1$s کي هٽايو؟</string>
+    <string name="forums_imported">%1$s درآمد ڪيا ويا</string>
+    <string name="forums_imported_more">اڃا تائين %1$s درآمد ڪيا ويا؛ باقي پوءِ ايندا</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s برادري</item>
+        <item quantity="other">%s برادريون</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s بلاڪ</item>
+        <item quantity="other">%s بلاڪ</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s محفوظ ٿيل پوسٽ</item>
+        <item quantity="other">%s محفوظ ٿيل پوسٽون</item>
+    </plurals>
 </resources>

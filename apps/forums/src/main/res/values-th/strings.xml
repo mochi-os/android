@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ยังไม่มีกิจกรรมของผู้ดูแล</string>
     <string name="forums_moderation_log_meta">โดย %1$s · เป้าหมาย %2$s</string>
     <string name="forums_moderation_restriction_add">เพิ่มข้อจำกัด</string>
-    <string name="forums_moderation_restriction_user">ตัวตนผู้ใช้</string>
     <string name="forums_moderation_restriction_type_shadowban">แบนแบบเงียบ</string>
-    <string name="forums_moderation_restriction_duration_seconds">ระยะเวลา (วินาที, เว้นว่างสำหรับถาวร)</string>
     <string name="forums_moderation_restriction_expires">หมดอายุ %1$s</string>
     <string name="forums_moderation_restriction_permanent">ถาวร</string>
     <string name="forums_report_reason_hate">เกลียดชัง</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">ชื่อ</string>
     <string name="forums_settings_field_entity_id">รหัสเอนทิตี</string>
     <string name="forums_settings_field_fingerprint_label">ลายนิ้วมือ</string>
-    <string name="forums_settings_field_server">เซิร์ฟเวอร์</string>
     <string name="forums_settings_name_edit_cd">แก้ไขชื่อ</string>
     <string name="forums_settings_name_cancel_cd">ยกเลิกการแก้ไข</string>
     <string name="forums_settings_save_name">บันทึกชื่อ</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">นำเข้าการตั้งค่า</string>
     <string name="forums_communities_add">เพิ่มชุมชน</string>
     <string name="forums_communities_add_failed">ไม่สามารถเพิ่มชุมชนได้</string>
-    <string name="forums_imported_settings">นำเข้า %1$s ชุมชน %2$s การบล็อก และ %3$s โพสต์ที่บันทึกไว้แล้ว</string>
-    <string name="forums_imported_settings_more">จนถึงตอนนี้นำเข้า %1$s ชุมชน %2$s การบล็อก และ %3$s โพสต์ที่บันทึกไว้แล้ว ส่วนที่เหลือจะตามมา</string>
     <string name="forums_import_failed">ไม่สามารถนำเข้าได้</string>
     <string name="forums_community">ชุมชน</string>
     <string name="forums_community_name">ชื่อชุมชน</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">โพสต์ไปยัง %1$s ในนาม %2$s</string>
     <string name="forums_find_search_example">ค้นหาตามชื่อ ID ลายนิ้วมือ URL หรือ %1$s</string>
     <string name="forums_setup">ตั้งค่า</string>
+    <string name="forums_post_remove_title">ลบโพสต์</string>
+    <string name="forums_post_remove_message">การดำเนินการนี้จะซ่อนโพสต์จากผู้ใช้ทั่วไป ผู้ดูแลยังคงมองเห็นและกู้คืนได้ในภายหลัง</string>
+    <string name="forums_comment_remove_title">ลบความคิดเห็น</string>
+    <string name="forums_comment_remove_message">การดำเนินการนี้จะซ่อนความคิดเห็นจากผู้ใช้ทั่วไป ผู้ดูแลยังคงมองเห็นและกู้คืนได้ในภายหลัง</string>
+    <string name="forums_report_submitted">ส่งรายงานแล้ว</string>
+    <string name="forums_member_remove_message">คะแนนโหวตของบุคคลนี้ในฟอรัมนี้จะถูกลบ</string>
+    <string name="forums_member_block_message">ผู้ใช้รายนี้จะไม่สามารถดูฟอรัมนี้ได้อีก</string>
+    <string name="forums_member_block_title">บล็อก %1$s หรือไม่</string>
+    <string name="forums_moderation_resolution_ignored">ถูกปฏิเสธ</string>
+    <string name="forums_moderation_restriction_member">สมาชิก</string>
+    <string name="forums_moderation_restriction_duration">ระยะเวลา</string>
+    <string name="forums_moderation_duration_hour">1 ชั่วโมง</string>
+    <string name="forums_moderation_duration_day">1 วัน</string>
+    <string name="forums_moderation_duration_week">1 สัปดาห์</string>
+    <string name="forums_moderation_duration_month">1 เดือน</string>
+    <string name="forums_member_remove">นำออก</string>
+    <string name="forums_member_remove_title">นำ %1$s ออกหรือไม่</string>
+    <string name="forums_imported">นำเข้าแล้ว %1$s</string>
+    <string name="forums_imported_more">นำเข้าแล้ว %1$s ส่วนที่เหลือจะตามมา</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s ชุมชน</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">การบล็อก %s รายการ</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">โพสต์ที่บันทึกไว้ %s รายการ</item>
+    </plurals>
 </resources>

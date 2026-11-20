@@ -83,7 +83,7 @@ internal fun PublishingEvents(viewModel: PublishingViewModel) {
                     resources.getString(if (event.on) R.string.feeds_generator_on else R.string.feeds_generator_off)
                 is PublishEvent.Imported -> when {
                     event.kind == "follows" && event.more ->
-                        resources.getString(R.string.feeds_import_sources_more, format.formatNumber(event.count))
+                        resources.getQuantityString(R.plurals.feeds_import_sources_more, event.count, format.formatNumber(event.count))
                     event.kind == "follows" ->
                         resources.getQuantityString(R.plurals.feeds_import_sources, event.count, format.formatNumber(event.count))
                     event.more -> resources.getString(R.string.feeds_imported_more, format.formatNumber(event.count))
@@ -190,7 +190,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel, onOpenLink: (Stri
         MochiAlertDialog(
             onDismissRequest = { viewModel.keep() },
             title = stringResource(R.string.feeds_copies_delete_title, offer.account.identifier),
-            text = stringResource(R.string.feeds_copies_delete_message, format.formatNumber(offer.count)),
+            text = pluralStringResource(R.plurals.feeds_copies_delete_message, offer.count, format.formatNumber(offer.count)),
             confirmText = stringResource(R.string.feeds_copies_delete),
             onConfirm = { viewModel.forget(offer.account) },
             destructive = true,

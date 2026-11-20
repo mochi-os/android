@@ -290,7 +290,6 @@
     <string name="feeds_source_read_with">Llegeix amb</string>
     <string name="feeds_source_follow_pending">Seguiment pendent</string>
     <string name="feeds_import_follows">Importa seguiments d\'un fitxer</string>
-    <string name="feeds_follows_importing">S\'estan important %1$s seguiments; %2$s afegits fins ara</string>
     <string name="feeds_publish_to_account">Publica a %1$s</string>
     <string name="feeds_import_posts">Importa les publicacions</string>
     <string name="feeds_import_bookmarks">Importa els marcadors</string>
@@ -304,7 +303,6 @@
     <string name="feeds_generator_off">Ja no és un canal de Bluesky</string>
     <string name="feeds_generator_failed">No s\'ha pogut canviar el canal de Bluesky</string>
     <string name="feeds_copies_delete_title">Vols suprimir les còpies a %1$s?</string>
-    <string name="feeds_copies_delete_message">El canal hi ha publicat %1$s publicacions. Es mantenen tret que les suprimeixis.</string>
     <string name="feeds_copies_delete">Suprimeix les còpies</string>
     <string name="feeds_copies_keep">Conserva</string>
     <string name="feeds_copies_delete_failed">No s\'han pogut suprimir les còpies</string>
@@ -312,7 +310,6 @@
     <string name="feeds_import_failed">No s\'ha pogut importar</string>
     <string name="feeds_imported">S\'han importat %1$s</string>
     <string name="feeds_imported_more">De moment s\'han importat %1$s; la resta vindrà després</string>
-    <string name="feeds_import_sources_more">De moment s\'han afegit %1$s fonts; la resta vindrà després</string>
     <string name="feeds_waiting_title">S\'està esperant el permís</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s persona</item>
@@ -376,4 +373,24 @@
     <string name="feeds_filtered_by_tag">Filtrat per etiqueta:</string>
     <string name="feeds_setup">Configura</string>
     <string name="feeds_search_example">Cerca per nom, ID, empremta, URL o %1$s</string>
+    <string name="feeds_member_remove_message">Les reaccions d\'aquesta persona en aquest canal s\'eliminen.</string>
+    <string name="feeds_member_block_message">Ja no podrà veure aquest canal.</string>
+    <string name="feeds_member_block_title">Voleu blocar %1$s?</string>
+    <string name="feeds_member_remove_title">Voleu eliminar %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">S\'està important %s seguiment</item>
+        <item quantity="other">S\'estan important %s seguiments</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s afegit fins ara</item>
+        <item quantity="other">%s afegits fins ara</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">El canal hi va publicar %s missatge. Es mantindrà tret que l\'elimineu.</item>
+        <item quantity="other">El canal hi va publicar %s missatges. Es mantindran tret que els elimineu.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">De moment s\'ha afegit %s font; la resta vindrà després</item>
+        <item quantity="other">De moment s\'han afegit %s fonts; la resta vindrà després</item>
+    </plurals>
 </resources>

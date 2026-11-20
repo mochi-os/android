@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Još nema aktivnosti moderatora</string>
     <string name="forums_moderation_log_meta">Od %1$s · Cilj %2$s</string>
     <string name="forums_moderation_restriction_add">Dodaj ograničenje</string>
-    <string name="forums_moderation_restriction_user">Identitet korisnika</string>
     <string name="forums_moderation_restriction_type_shadowban">Tajna zabrana</string>
-    <string name="forums_moderation_restriction_duration_seconds">Trajanje (sekunde, prazno za trajno)</string>
     <string name="forums_moderation_restriction_expires">Istječe %1$s</string>
     <string name="forums_moderation_restriction_permanent">Trajno</string>
     <string name="forums_report_reason_hate">Mržnja</string>
@@ -199,7 +197,6 @@
     <string name="forums_settings_field_name">Naziv</string>
     <string name="forums_settings_field_entity_id">ID entiteta</string>
     <string name="forums_settings_field_fingerprint_label">Otisak</string>
-    <string name="forums_settings_field_server">Poslužitelj</string>
     <string name="forums_settings_name_edit_cd">Uredi naziv</string>
     <string name="forums_settings_name_cancel_cd">Odustani od uređivanja</string>
     <string name="forums_settings_save_name">Spremi naziv</string>
@@ -309,8 +306,6 @@
     <string name="forums_import_settings">Uvezi postavke</string>
     <string name="forums_communities_add">Dodaj zajednice</string>
     <string name="forums_communities_add_failed">Dodavanje zajednica nije uspjelo</string>
-    <string name="forums_imported_settings">Uvezeno zajednica: %1$s, blokiranih poslužitelja: %2$s, spremljenih objava: %3$s</string>
-    <string name="forums_imported_settings_more">Dosad uvezeno zajednica: %1$s, blokiranih poslužitelja: %2$s, spremljenih objava: %3$s; ostalo slijedi</string>
     <string name="forums_import_failed">Uvoz nije uspio</string>
     <string name="forums_community">Zajednica</string>
     <string name="forums_community_name">Ime zajednice</string>
@@ -340,4 +335,38 @@
     <string name="forums_community_destination">Objavljuje se u %1$s kao %2$s</string>
     <string name="forums_find_search_example">Pretraži po nazivu, ID-u, otisku, URL-u ili adresi %1$s</string>
     <string name="forums_setup">Postavi</string>
+    <string name="forums_post_remove_title">Ukloni objavu</string>
+    <string name="forums_post_remove_message">Ovo će sakriti objavu od običnih korisnika. Moderatori je i dalje mogu vidjeti i kasnije vratiti.</string>
+    <string name="forums_comment_remove_title">Ukloni komentar</string>
+    <string name="forums_comment_remove_message">Ovo će sakriti komentar od običnih korisnika. Moderatori ga i dalje mogu vidjeti i kasnije vratiti.</string>
+    <string name="forums_report_submitted">Prijava poslana</string>
+    <string name="forums_member_remove_message">Glasovi ove osobe na ovom forumu se brišu.</string>
+    <string name="forums_member_block_message">Više ne može vidjeti ovaj forum.</string>
+    <string name="forums_member_block_title">Blokirati %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Odbačeno</string>
+    <string name="forums_moderation_restriction_member">Član</string>
+    <string name="forums_moderation_restriction_duration">Trajanje</string>
+    <string name="forums_moderation_duration_hour">Jedan sat</string>
+    <string name="forums_moderation_duration_day">Jedan dan</string>
+    <string name="forums_moderation_duration_week">Jedan tjedan</string>
+    <string name="forums_moderation_duration_month">Jedan mjesec</string>
+    <string name="forums_member_remove">Ukloni</string>
+    <string name="forums_member_remove_title">Ukloniti %1$s?</string>
+    <string name="forums_imported">Uvezeno: %1$s</string>
+    <string name="forums_imported_more">Dosad uvezeno: %1$s; ostalo slijedi</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s zajednica</item>
+        <item quantity="few">%s zajednice</item>
+        <item quantity="other">%s zajednica</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokada</item>
+        <item quantity="few">%s blokade</item>
+        <item quantity="other">%s blokada</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s spremljena objava</item>
+        <item quantity="few">%s spremljene objave</item>
+        <item quantity="other">%s spremljenih objava</item>
+    </plurals>
 </resources>

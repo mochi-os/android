@@ -10,7 +10,6 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.Slow
 import org.mochios.android.api.ApiResponse
-import org.mochios.forums.model.AiPrompts
 import org.mochios.forums.model.CommunitiesAdded
 import org.mochios.forums.model.CommunitiesImported
 import org.mochios.forums.model.CommunityFound
@@ -203,8 +202,16 @@ data class MemberSearchResponse(
     val members: List<ForumMember> = emptyList(),
 )
 
-data class BannerResponse(
-    val banner: String = "",
+/**
+ * `ai/prompts/get`, the owner's own: the custom prompts and their defaults,
+ * and the forum's AI [mode] and [account], which the forum row leaves out.
+ * Null [mode] and [account] from a server that does not send them.
+ */
+data class AiPromptsResponse(
+    val prompts: Map<String, String> = emptyMap(),
+    val defaults: Map<String, String> = emptyMap(),
+    val mode: String? = null,
+    val account: String? = null,
 )
 
 data class RssTokenResponse(
@@ -528,8 +535,6 @@ interface ForumsApi {
         @Path("postId") postId: String,
         @Path("commentId") commentId: String,
         @Part("body") body: RequestBody,
-        @Part("order") order: RequestBody?,
-        @Part files: List<MultipartBody.Part>,
     ): Response<ApiResponse<SuccessResponse>>
 
     @POST("{forumId}/-/{postId}/{commentId}/delete")
@@ -694,9 +699,6 @@ interface ForumsApi {
         @Field("remove") remove: String? = null,
     ): Response<ApiResponse<SuccessResponse>>
 
-    @GET("{forumId}/-/banner/get")
-    suspend fun getBanner(@Path("forumId") forumId: String): Response<ApiResponse<BannerResponse>>
-
     @FormUrlEncoded
     @POST("{forumId}/-/banner/set")
     suspend fun setBanner(
@@ -721,7 +723,7 @@ interface ForumsApi {
     ): Response<ApiResponse<SuccessResponse>>
 
     @GET("{forumId}/-/ai/prompts/get")
-    suspend fun getAiPrompts(@Path("forumId") forumId: String): Response<ApiResponse<AiPrompts>>
+    suspend fun getAiPrompts(@Path("forumId") forumId: String): Response<ApiResponse<AiPromptsResponse>>
 
     @FormUrlEncoded
     @POST("{forumId}/-/ai/prompts/set")

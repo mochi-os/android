@@ -163,6 +163,11 @@ class FeedSettingsViewModel @Inject constructor(
     private val _error = MutableStateFlow<MochiError?>(null)
     val error: StateFlow<MochiError?> = _error.asStateFlow()
 
+    /** Why the feed could not be read, shown in place of the settings with a
+     *  retry; null once it is. */
+    private val _loadError = MutableStateFlow<MochiError?>(null)
+    val loadError: StateFlow<MochiError?> = _loadError.asStateFlow()
+
     /** Snackbar message resource — screens render via stringResource. */
     private val _actionMessage = MutableStateFlow<Int?>(null)
     val actionMessage: StateFlow<Int?> = _actionMessage.asStateFlow()
@@ -179,9 +184,6 @@ class FeedSettingsViewModel @Inject constructor(
     private val _members = MutableStateFlow<List<Member>>(emptyList())
     val members: StateFlow<List<Member>> = _members.asStateFlow()
 
-    private val _isLoadingMembers = MutableStateFlow(false)
-    val isLoadingMembers: StateFlow<Boolean> = _isLoadingMembers.asStateFlow()
-
     init {
         loadFeedInfo()
     }
@@ -189,6 +191,7 @@ class FeedSettingsViewModel @Inject constructor(
     fun loadFeedInfo() {
         viewModelScope.launch {
             _isLoading.value = true
+            _loadError.value = null
             try {
                 val info = repository.getFeedInfo(feedId)
                 if (info.permissions.manage) {
@@ -200,8 +203,10 @@ class FeedSettingsViewModel @Inject constructor(
                 _feedName.value = info.feed.name
                 _aiMode.value = info.feed.aiMode ?: ""
                 _aiAccount.value = info.feed.aiAccount
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _error.value = e.toMochiError()
+                _loadError.value = e.toMochiError()
             } finally {
                 _isLoading.value = false
             }
@@ -688,66 +693,84 @@ class FeedSettingsViewModel @Inject constructor(
 
     fun loadMembers() {
         viewModelScope.launch {
-            _isLoadingMembers.value = true
             try {
                 _members.value = repository.getMembers(feedId)
                     .sortedWith(compareBy(NaturalCompare) { it.name })
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
-            } finally {
-                _isLoadingMembers.value = false
             }
         }
     }
 
-    fun removeMember(memberEntityId: String) {
+    /** Remove a subscriber; [onDone] says whether the server took it, so the
+     *  confirmation can close or stay. */
+    fun removeMember(memberEntityId: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.removeMember(feedId, memberEntityId)
                 _actionMessage.value = R.string.feeds_settings_member_removed
+                onDone(true)
                 loadMembers()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
+                onDone(false)
             }
         }
     }
 
     // The "No access" level offered on the row: a deny on every level, and the
-    // server drops the subscription with it.
-    fun blockMember(memberEntityId: String) {
+    // server drops the subscription with it. [onDone] as for removeMember.
+    fun blockMember(memberEntityId: String, onDone: (Boolean) -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.setAccess(accessFeedId(), memberEntityId, "none")
                 _actionMessage.value = R.string.feeds_settings_member_blocked
+                onDone(true)
                 loadMembers()
                 loadAccessRules()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
                 _error.value = e.toMochiError()
+                onDone(false)
             }
         }
     }
 
     // --- AI ---
 
+    /** The feed's AI mode; it shows on the tap and goes back, with the
+     *  error, if the server refuses, unless a later tap has moved it since. */
     fun setAiMode(mode: String) {
+        val before = _aiMode.value
         _aiMode.value = mode
         viewModelScope.launch {
             try {
                 repository.setAiSettings(feedId, mode, _aiAccount.value)
                 _actionMessage.value = R.string.feeds_settings_ai_mode_updated
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                if (_aiMode.value == mode) _aiMode.value = before
                 _error.value = e.toMochiError()
             }
         }
     }
 
+    /** The feed's AI account, shown and put back as [setAiMode] does. */
     fun setAiAccount(accountId: String) {
+        val before = _aiAccount.value
         _aiAccount.value = accountId
         viewModelScope.launch {
             try {
                 repository.setAiSettings(feedId, _aiMode.value, accountId)
                 _actionMessage.value = R.string.feeds_settings_ai_account_updated
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
+                if (_aiAccount.value == accountId) _aiAccount.value = before
                 _error.value = e.toMochiError()
             }
         }
@@ -759,8 +782,10 @@ class FeedSettingsViewModel @Inject constructor(
                 val (defaults, overrides) = repository.getAiPrompts(feedId)
                 _aiDefaults.value = defaults
                 _aiOverrides.value = overrides
-            } catch (_: Exception) {
-                // Non-critical
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
             }
         }
     }
@@ -785,7 +810,11 @@ class FeedSettingsViewModel @Inject constructor(
                 repository.setAiPrompt(feedId, type, "")
                 _aiOverrides.value -= type
                 _actionMessage.value = R.string.feeds_settings_prompt_reset
-            } catch (_: Exception) { }
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _error.value = e.toMochiError()
+            }
         }
     }
 
@@ -795,10 +824,6 @@ class FeedSettingsViewModel @Inject constructor(
 
     fun clearActionMessage() {
         _actionMessage.value = null
-    }
-
-    fun setActionMessage(messageRes: Int) {
-        _actionMessage.value = messageRes
     }
 }
 

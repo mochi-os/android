@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ابھی تک کوئی منتظم سرگرمی نہیں</string>
     <string name="forums_moderation_log_meta">بذریعہ %1$s · ہدف %2$s</string>
     <string name="forums_moderation_restriction_add">پابندی شامل کریں</string>
-    <string name="forums_moderation_restriction_user">صارف کی شناخت</string>
     <string name="forums_moderation_restriction_type_shadowban">شیڈو بین</string>
-    <string name="forums_moderation_restriction_duration_seconds">مدت (سیکنڈز، مستقل کے لیے خالی چھوڑیں)</string>
     <string name="forums_moderation_restriction_expires">ختم ہونے کی تاریخ %1$s</string>
     <string name="forums_moderation_restriction_permanent">مستقل</string>
     <string name="forums_report_reason_hate">نفرت</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">نام</string>
     <string name="forums_settings_field_entity_id">اینٹٹی ID</string>
     <string name="forums_settings_field_fingerprint_label">فنگر پرنٹ</string>
-    <string name="forums_settings_field_server">سرور</string>
     <string name="forums_settings_name_edit_cd">نام میں ترمیم</string>
     <string name="forums_settings_name_cancel_cd">ترمیم منسوخ کریں</string>
     <string name="forums_settings_save_name">نام محفوظ کریں</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">سیٹنگز درآمد کریں</string>
     <string name="forums_communities_add">کمیونٹیز شامل کریں</string>
     <string name="forums_communities_add_failed">کمیونٹیز شامل نہیں ہو سکیں</string>
-    <string name="forums_imported_settings">%1$s کمیونٹیز، %2$s بلاکس اور %3$s محفوظ شدہ پوسٹس درآمد ہو گئیں</string>
-    <string name="forums_imported_settings_more">اب تک %1$s کمیونٹیز، %2$s بلاکس اور %3$s محفوظ شدہ پوسٹس درآمد ہو گئیں؛ باقی بعد میں آئیں گی</string>
     <string name="forums_import_failed">درآمد نہیں ہو سکا</string>
     <string name="forums_community">کمیونٹی</string>
     <string name="forums_community_name">کمیونٹی کا نام</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s میں %2$s کے طور پر پوسٹ ہوتا ہے</string>
     <string name="forums_find_search_example">نام، ID، فنگر پرنٹ، URL، یا %1$s سے تلاش کریں</string>
     <string name="forums_setup">سیٹ اپ کریں</string>
+    <string name="forums_post_remove_title">پوسٹ ہٹائیں</string>
+    <string name="forums_post_remove_message">یہ پوسٹ کو عام صارفین سے چھپا دے گا۔ ماڈریٹرز اب بھی اسے دیکھ سکتے ہیں اور بعد میں بحال کر سکتے ہیں۔</string>
+    <string name="forums_comment_remove_title">تبصرہ ہٹائیں</string>
+    <string name="forums_comment_remove_message">یہ تبصرہ عام صارفین سے چھپا دے گا۔ ماڈریٹرز اب بھی اسے دیکھ سکتے ہیں اور بعد میں بحال کر سکتے ہیں۔</string>
+    <string name="forums_report_submitted">رپورٹ جمع ہو گئی</string>
+    <string name="forums_member_remove_message">اس فورم میں اس شخص کے ووٹ حذف ہو جائیں گے۔</string>
+    <string name="forums_member_block_message">وہ اب یہ فورم نہیں دیکھ سکیں گے۔</string>
+    <string name="forums_member_block_title">%1$s کو بلاک کریں؟</string>
+    <string name="forums_moderation_resolution_ignored">مسترد</string>
+    <string name="forums_moderation_restriction_member">ممبر</string>
+    <string name="forums_moderation_restriction_duration">دورانیہ</string>
+    <string name="forums_moderation_duration_hour">ایک گھنٹہ</string>
+    <string name="forums_moderation_duration_day">ایک دن</string>
+    <string name="forums_moderation_duration_week">ایک ہفتہ</string>
+    <string name="forums_moderation_duration_month">ایک مہینہ</string>
+    <string name="forums_member_remove">ہٹائیں</string>
+    <string name="forums_member_remove_title">%1$s کو ہٹائیں؟</string>
+    <string name="forums_imported">%1$s درآمد کیے گئے</string>
+    <string name="forums_imported_more">اب تک %1$s درآمد کیے گئے؛ باقی بعد میں آئیں گے</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s کمیونٹی</item>
+        <item quantity="other">%s کمیونٹیز</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s بلاک</item>
+        <item quantity="other">%s بلاکس</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s محفوظ کردہ پوسٹ</item>
+        <item quantity="other">%s محفوظ کردہ پوسٹس</item>
+    </plurals>
 </resources>

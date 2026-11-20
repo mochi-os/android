@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Ανάγνωση με</string>
     <string name="feeds_source_follow_pending">Ακολούθηση σε εκκρεμότητα</string>
     <string name="feeds_import_follows">Εισαγωγή ακολουθούμενων από αρχείο</string>
-    <string name="feeds_follows_importing">Εισαγωγή %1$s ακολουθούμενων, %2$s προστέθηκαν μέχρι στιγμής</string>
     <string name="feeds_publish_to_account">Δημοσίευση στο %1$s</string>
     <string name="feeds_import_posts">Εισαγωγή αναρτήσεων</string>
     <string name="feeds_import_bookmarks">Εισαγωγή σελιδοδεικτών</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Δεν είναι πλέον ροή Bluesky</string>
     <string name="feeds_generator_failed">Δεν ήταν δυνατή η αλλαγή της ροής Bluesky</string>
     <string name="feeds_copies_delete_title">Διαγραφή των αντιγράφων στο %1$s;</string>
-    <string name="feeds_copies_delete_message">Η ροή δημοσίευσε εκεί %1$s αναρτήσεις. Παραμένουν εκτός αν τις διαγράψετε.</string>
     <string name="feeds_copies_delete">Διαγραφή αντιγράφων</string>
     <string name="feeds_copies_keep">Διατήρηση</string>
     <string name="feeds_copies_delete_failed">Δεν ήταν δυνατή η διαγραφή των αντιγράφων</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Δεν ήταν δυνατή η εισαγωγή</string>
     <string name="feeds_imported">Εισήχθησαν %1$s</string>
     <string name="feeds_imported_more">Εισήχθησαν %1$s μέχρι στιγμής· τα υπόλοιπα ακολουθούν</string>
-    <string name="feeds_import_sources_more">Προστέθηκαν %1$s πηγές μέχρι στιγμής· οι υπόλοιπες ακολουθούν</string>
     <string name="feeds_waiting_title">Αναμονή για άδεια</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s άτομο</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Φιλτραρισμένα κατά ετικέτα:</string>
     <string name="feeds_setup">Ρύθμιση</string>
     <string name="feeds_search_example">Αναζήτηση κατά όνομα, ID, αποτύπωμα, URL ή %1$s</string>
+    <string name="feeds_member_remove_message">Οι αντιδράσεις αυτού του ατόμου σε αυτή τη ροή διαγράφονται.</string>
+    <string name="feeds_member_block_message">Δεν θα μπορεί πλέον να δει αυτή τη ροή.</string>
+    <string name="feeds_member_block_title">Αποκλεισμός του %1$s;</string>
+    <string name="feeds_member_remove_title">Αφαίρεση του %1$s;</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Εισαγωγή %s ακολουθούμενου</item>
+        <item quantity="other">Εισαγωγή %s ακολουθούμενων</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s προστέθηκε μέχρι στιγμής</item>
+        <item quantity="other">%s προστέθηκαν μέχρι στιγμής</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Η ροή δημοσίευσε εκεί %s ανάρτηση. Παραμένει, εκτός αν τη διαγράψετε.</item>
+        <item quantity="other">Η ροή δημοσίευσε εκεί %s αναρτήσεις. Παραμένουν, εκτός αν τις διαγράψετε.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Προστέθηκε %s πηγή μέχρι στιγμής· οι υπόλοιπες ακολουθούν</item>
+        <item quantity="other">Προστέθηκαν %s πηγές μέχρι στιγμής· οι υπόλοιπες ακολουθούν</item>
+    </plurals>
 </resources>

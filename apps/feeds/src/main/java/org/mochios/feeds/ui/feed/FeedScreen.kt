@@ -6,7 +6,6 @@
 package org.mochios.feeds.ui.feed
 
 import android.content.Context
-import android.content.Intent
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -82,7 +81,6 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableLongStateOf
@@ -122,6 +120,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import org.mochios.android.util.attachmentModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
@@ -140,6 +139,7 @@ import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FlipBook
 import org.mochios.android.ui.components.HtmlContent
+import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.ui.components.LightboxScreen
 import org.mochios.android.ui.components.LocationMapView
@@ -160,6 +160,7 @@ import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.RefreshButton
+import org.mochios.android.ui.components.RssRevokeDialog
 import org.mochios.android.ui.components.TileVariant
 import org.mochios.android.ui.components.videoFrame
 import org.mochios.android.ui.components.VideoPlayer
@@ -167,6 +168,7 @@ import org.mochios.android.ui.components.mediumAddress
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.addressed
 import org.mochios.android.util.attachmentAddress
+import org.mochios.android.util.shareLink
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Post
@@ -218,6 +220,9 @@ fun FeedScreen(
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     val drawerFeeds by feedListViewModel.feeds.collectAsState()
+    val drawerError by feedListViewModel.error.collectAsState()
+    // The AI sort is offered only where the server has an AI account to run it.
+    val hasAi by feedListViewModel.hasAi.collectAsState()
 
     // Interest-thumb feedback: confirm boosted/reduced/removed, or show the
     // error.
@@ -233,6 +238,7 @@ fun FeedScreen(
     // True while the unsubscribe confirmation dialog is open. It stays open,
     // its button spinning, until the unsubscribe answers; only success closes it.
     var pendingUnsubscribe by remember { mutableStateOf(false) }
+    var revokeRssOpen by remember { mutableStateOf(false) }
     val isUnsubscribing by viewModel.isUnsubscribing.collectAsState()
     // Turn one-shot overflow-menu actions into a clipboard write, a toast, or a
     // jump back to the "All feeds" aggregate after unsubscribing.
@@ -314,6 +320,7 @@ fun FeedScreen(
     val isRefreshing by viewModel.isRefreshing.collectAsState()
     val isLoadingMore by viewModel.isLoadingMore.collectAsState()
     val hasMore by viewModel.hasMore.collectAsState()
+    val loadMoreError by viewModel.loadMoreError.collectAsState()
     val error by viewModel.error.collectAsState()
     val isNotFound by viewModel.isNotFound.collectAsState()
     val gone by viewModel.gone.collectAsState()
@@ -400,18 +407,7 @@ fun FeedScreen(
             }
     }
 
-    // Load more when within 3 pages of the end. Pager state's currentPage
-    // updates as the user flips, so the fetch fires while there's still
-    // headroom — by the time they reach the end of the current batch the
-    // next page has already loaded.
-    val nearEnd by remember(pagerState) {
-        derivedStateOf { pagerState.currentPage >= latestPosts.size - 3 }
-    }
-    LaunchedEffect(nearEnd, posts.size, hasMore, isLoadingMore, isLoading) {
-        if (hasMore && !isLoadingMore && !isLoading && nearEnd) {
-            viewModel.loadMore()
-        }
-    }
+    LoadMoreEffect(pagerState, posts.size, hasMore, isLoading, isLoadingMore, viewModel::loadMore)
 
     val totalUnread = drawerFeeds.sumOf { it.unread }
     val allId = LastViewedStore.ALL
@@ -439,6 +435,10 @@ fun FeedScreen(
         header = { DrawerTitle(stringResource(R.string.feeds_title)) },
         items = drawerItems,
         allItem = drawerAll,
+        // A drawer that could not read the feeds says why, with a retry.
+        emptyState = drawerError?.let { failure ->
+            { InlineErrorState(error = failure, onRetry = feedListViewModel::loadFeeds) }
+        },
         selectedId = currentDrawerId,
         onItemClick = { item ->
             drawerScope.launch { drawerState.close() }
@@ -548,22 +548,16 @@ fun FeedScreen(
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     modifier = Modifier.padding(start = 16.dp, top = 8.dp, bottom = 4.dp)
                                 )
-                                val sortOptions = listOf(
-                                    "ai" to R.string.feeds_sort_ai,
-                                    "interests" to R.string.feeds_sort_interests,
-                                    "new" to R.string.feeds_sort_new,
-                                    "hot" to R.string.feeds_sort_hot,
-                                    "top" to R.string.feeds_sort_top,
-                                )
-                                sortOptions.forEach { (value, labelRes) ->
+                                val shown = shownSort(currentSort, hasAi)
+                                sortOptions(hasAi).forEach { value ->
                                     MochiDropdownMenuItem(
-                                        text = { Text(stringResource(labelRes)) },
+                                        text = { Text(stringResource(sortLabel(value))) },
                                         onClick = {
                                             viewModel.setSort(value)
                                             showOverflowMenu = false
                                         },
                                         leadingIcon = {
-                                            if (currentSort == value) {
+                                            if (shown == value) {
                                                 Icon(Icons.Outlined.Check, contentDescription = null)
                                             } else {
                                                 Spacer(Modifier.size(24.dp))
@@ -689,6 +683,15 @@ fun FeedScreen(
                                         },
                                         onClick = {
                                             viewModel.copyRssUrl("all")
+                                            showRssSubmenu = false
+                                            showOverflowMenu = false
+                                        },
+                                    )
+                                    MochiDropdownMenuDivider()
+                                    MochiDropdownMenuItem(
+                                        text = { Text(stringResource(MochiR.string.rss_revoke)) },
+                                        onClick = {
+                                            revokeRssOpen = true
                                             showRssSubmenu = false
                                             showOverflowMenu = false
                                         },
@@ -858,7 +861,7 @@ fun FeedScreen(
                                     val avatars = remember(posts) {
                                         timelineAvatars(posts, viewModel.feedId)
                                     }
-                                    val renderPost: @Composable (Int) -> Unit = { index ->
+                                    val renderCard: @Composable (Int) -> Unit = { index ->
                                         val post = posts[index]
                                         // Prefer the fingerprint, but fall back to the feed's
                                         // entity id (always present on a post) before the
@@ -948,6 +951,14 @@ fun FeedScreen(
                                             onBoost = { viewModel.toggleBoost(routeFeedId, post.id) },
                                         )
                                     }
+                                    val renderPost: @Composable (Int) -> Unit = { index ->
+                                        PostPage(
+                                            failure = loadMoreError.takeIf { index == posts.lastIndex },
+                                            onRetry = viewModel::loadMore,
+                                        ) {
+                                            renderCard(index)
+                                        }
+                                    }
                                     Box(
                                         modifier = Modifier
                                             .fillMaxSize()
@@ -1006,6 +1017,16 @@ fun FeedScreen(
             )
         }
 
+        if (revokeRssOpen) {
+            RssRevokeDialog(
+                onConfirm = {
+                    revokeRssOpen = false
+                    viewModel.revokeRssToken()
+                },
+                onDismiss = { revokeRssOpen = false },
+            )
+        }
+
         if (pendingUnsubscribe) {
             MochiAlertDialog(
                 onDismissRequest = { if (!isUnsubscribing) pendingUnsubscribe = false },
@@ -1044,6 +1065,58 @@ internal fun TopEffect(
             pagerState.requestScrollToPage(0)
         }
     }
+}
+
+/**
+ * Asks for the next page once the reader is within three posts of the end:
+ * when they move to another post, or the list grows or reloads. A page that
+ * failed is not asked for again on its own, since the failure changes none of
+ * these: the reader moves on or taps the retry the last post shows. One page
+ * at a time, so a move while [loadingMore] asks nothing.
+ */
+@Composable
+internal fun LoadMoreEffect(
+    pagerState: PagerState,
+    size: Int,
+    hasMore: Boolean,
+    loading: Boolean,
+    loadingMore: Boolean,
+    loadMore: () -> Unit,
+) {
+    val count by rememberUpdatedState(size)
+    val busy by rememberUpdatedState(loadingMore)
+    LaunchedEffect(pagerState, hasMore, loading) {
+        snapshotFlow { pagerState.currentPage to count }
+            .collect { (page, total) ->
+                if (hasMore && !loading && !busy && page >= total - 3) loadMore()
+            }
+    }
+}
+
+/** A post's page: the last carries why the next page failed, with a retry. */
+@Composable
+internal fun PostPage(failure: MochiError?, onRetry: () -> Unit, content: @Composable () -> Unit) {
+    Column(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.surface)) {
+        Box(modifier = Modifier.weight(1f)) { content() }
+        if (failure != null) InlineErrorState(error = failure, onRetry = onRetry)
+    }
+}
+
+/** The sorts the feed's menu offers: AI only where the server has an AI
+ *  account to run it, as on the web. */
+internal fun sortOptions(ai: Boolean): List<String> =
+    listOfNotNull("ai".takeIf { ai }, "interests", "new", "hot", "top")
+
+/** The sort shown ticked: one saved as AI, with no AI account to run it,
+ *  lists in interest order on the server, and shows so. */
+internal fun shownSort(sort: String, ai: Boolean): String = if (sort == "ai" && !ai) "interests" else sort
+
+private fun sortLabel(sort: String): Int = when (sort) {
+    "ai" -> R.string.feeds_sort_ai
+    "interests" -> R.string.feeds_sort_interests
+    "new" -> R.string.feeds_sort_new
+    "hot" -> R.string.feeds_sort_hot
+    else -> R.string.feeds_sort_top
 }
 
 // A click with no ripple / press indication. The post card's title and body
@@ -2016,7 +2089,7 @@ internal fun PostActionBar(
             if (hasComments) {
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
-                    text = "${post.comments.size}",
+                    text = LocalFormat.current.formatNumber(countComments(post.comments)),
                     style = MaterialTheme.typography.labelMedium,
                     color = commentColor
                 )
@@ -2115,10 +2188,6 @@ private fun bannerContentHash(content: String): String {
 }
 
 /**
- * Dismissible feed banner; dismissal is stored per feed keyed by a content
- * hash, so changed text reappears.
- */
-/**
  * The feed [feed] names among [feeds], those the user holds, owned or
  * subscribed, as the drawer lists them; null for a feed only browsed. Only a
  * held feed goes on the home screen, as only those are kept in step with the
@@ -2127,6 +2196,10 @@ private fun bannerContentHash(content: String): String {
 internal fun heldFeed(feeds: List<Feed>, feed: String): Feed? =
     feeds.firstOrNull { held -> held.id == feed || (held.fingerprint.isNotEmpty() && held.fingerprint == feed) }
 
+/**
+ * Dismissible feed banner; dismissal is stored per feed keyed by a content
+ * hash, so changed text reappears.
+ */
 @Composable
 private fun FeedBanner(banner: String, feedId: String) {
     val context = LocalContext.current
@@ -2161,23 +2234,6 @@ private fun FeedBanner(banner: String, feedId: String) {
             }
         }
     }
-}
-
-/**
- * Hand [link] to the system share sheet, whose target list already includes
- * "Copy" — so there is no in-app copy affordance to maintain.
- */
-private fun shareLink(context: Context, link: String, title: String) {
-    val intent = Intent(Intent.ACTION_SEND).apply {
-        type = "text/plain"
-        putExtra(Intent.EXTRA_TEXT, link)
-        // Names the sheet's content preview. Android 10+ ignores the
-        // createChooser title, so without this the sheet reads "Sharing text".
-        putExtra(Intent.EXTRA_TITLE, title)
-    }
-    val chooser = Intent.createChooser(intent, title)
-    chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    context.startActivity(chooser)
 }
 
 @Composable

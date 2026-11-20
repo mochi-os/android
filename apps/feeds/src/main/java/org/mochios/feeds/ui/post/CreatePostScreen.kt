@@ -83,6 +83,7 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.PlaceData
 import org.mochios.android.ui.components.AttachmentCaptionDialog
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.FileKindPreview
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.LocationPreviewMap
@@ -147,7 +148,10 @@ fun CreatePostScreen(
     val warning by viewModel.warning.collectAsState()
     val sensitive by viewModel.sensitive.collectAsState()
     val poll by viewModel.poll.collectAsState()
+    val edit by viewModel.edit.collectAsState()
     val isEditing = viewModel.isEditing
+    // An edit's form, and its Save, wait for the post it edits.
+    val formReady = edit == null || edit is EditState.Loaded
 
     var showCheckinSheet by remember { mutableStateOf(false) }
     var showTravellingSheet by remember { mutableStateOf(false) }
@@ -217,6 +221,7 @@ fun CreatePostScreen(
             )
         },
         bottomBar = {
+            if (!formReady) return@Scaffold
             // Posting sits under the thumb rather than in the far corner of the
             // bar, the way the wiki editor saves.
             Surface(color = MaterialTheme.colorScheme.surface) {
@@ -260,6 +265,20 @@ fun CreatePostScreen(
             }
         },
     ) { paddingValues ->
+        val pending = edit
+        if (!formReady) {
+            Box(
+                modifier = Modifier.fillMaxSize().padding(paddingValues),
+                contentAlignment = Alignment.Center,
+            ) {
+                if (pending is EditState.Failed) {
+                    ErrorState(error = pending.error, onRetry = viewModel::loadExistingPost)
+                } else {
+                    CircularProgressIndicator()
+                }
+            }
+            return@Scaffold
+        }
         Column(
             modifier = Modifier
                 .fillMaxSize()

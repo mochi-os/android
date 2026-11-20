@@ -6,6 +6,7 @@
 package org.mochios.forums.model
 
 import com.google.gson.annotations.SerializedName
+import org.mochios.android.model.Attachment
 
 data class Forum(
     val id: String = "",
@@ -84,11 +85,6 @@ data class Tag(
     val interest: Float = 0f
 )
 
-// Forums shares the lib/android `Attachment` shape — see
-// org.mochios.android.model.Attachment. PostAttachment was an older,
-// duplicated form; the type alias keeps existing references compiling.
-typealias PostAttachment = org.mochios.android.model.Attachment
-
 data class Post(
     val id: String = "",
     val forum: String = "",
@@ -105,7 +101,7 @@ data class Post(
     val updated: Long = 0,
     val edited: Long = 0,
     @SerializedName("user_vote") val userVote: String = "",
-    val attachments: List<PostAttachment> = emptyList(),
+    val attachments: List<Attachment> = emptyList(),
     val forumName: String = "",
     /** The server of the post's forum where it is a community on another network. */
     val forumServer: String = "",
@@ -144,7 +140,7 @@ data class ForumComment(
     val edited: Long = 0,
     @SerializedName("user_vote") val userVote: String = "",
     val children: List<ForumComment> = emptyList(),
-    val attachments: List<org.mochios.android.model.Attachment> = emptyList(),
+    val attachments: List<Attachment> = emptyList(),
     @SerializedName("can_vote") val canVote: Boolean = false,
     @SerializedName("can_comment") val canComment: Boolean = false,
     val status: String = "",
@@ -165,6 +161,29 @@ data class ForumComment(
 /** Every comment in the trees, replies included - what a lightbox comments count shows. */
 fun countComments(comments: List<ForumComment>): Int =
     comments.sumOf { 1 + countComments(it.children) }
+
+/**
+ * [posts] as a list keyed by id can show them: a post without an id, and each
+ * repeat of one, left out. A forum relayed from another server arrives as that
+ * server wrote it, and a lazy list closes the app on a repeated key.
+ */
+internal fun unique(posts: List<Post>): List<Post> {
+    val seen = HashSet<String>()
+    return posts.filter { post -> post.id.isNotEmpty() && seen.add(post.id) }
+}
+
+/**
+ * A thread as the post screen keys it: each comment once wherever it sits,
+ * where it first comes in reading order, and none without an id.
+ */
+internal fun thread(comments: List<ForumComment>, seen: MutableSet<String> = HashSet()): List<ForumComment> =
+    comments.mapNotNull { comment ->
+        when {
+            comment.id.isEmpty() || !seen.add(comment.id) -> null
+            comment.children.isEmpty() -> comment
+            else -> comment.copy(children = thread(comment.children, seen))
+        }
+    }
 
 data class DirectoryEntry(
     val id: String = "",
@@ -207,7 +226,7 @@ data class ModerationReport(
     @SerializedName("action") val resolution: String = "",
     @SerializedName("content_title") val contentTitle: String = "",
     @SerializedName("content_preview") val contentPreview: String = "",
-    val attachments: List<PostAttachment> = emptyList(),
+    val attachments: List<Attachment> = emptyList(),
 )
 
 data class Restriction(

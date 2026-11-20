@@ -302,7 +302,6 @@
     <string name="feeds_source_read_with">Čítať pomocou</string>
     <string name="feeds_source_follow_pending">Sledovanie čaká</string>
     <string name="feeds_import_follows">Importovať sledované účty zo súboru</string>
-    <string name="feeds_follows_importing">Importuje sa %1$s sledovaných účtov; zatiaľ pridané: %2$s</string>
     <string name="feeds_publish_to_account">Publikovať do %1$s</string>
     <string name="feeds_import_posts">Importovať príspevky</string>
     <string name="feeds_import_bookmarks">Importovať záložky</string>
@@ -316,7 +315,6 @@
     <string name="feeds_generator_off">Už nie je kanálom Bluesky</string>
     <string name="feeds_generator_failed">Kanál Bluesky sa nepodarilo zmeniť</string>
     <string name="feeds_copies_delete_title">Odstrániť kópie na účte %1$s?</string>
-    <string name="feeds_copies_delete_message">Kanál tam zverejnil príspevky: %1$s. Zostanú tam, kým ich neodstránite.</string>
     <string name="feeds_copies_delete">Odstrániť kópie</string>
     <string name="feeds_copies_keep">Ponechať</string>
     <string name="feeds_copies_delete_failed">Kópie sa nepodarilo odstrániť</string>
@@ -324,7 +322,6 @@
     <string name="feeds_import_failed">Import sa nepodaril</string>
     <string name="feeds_imported">Importované: %1$s</string>
     <string name="feeds_imported_more">Zatiaľ importované: %1$s; ostatné budú nasledovať</string>
-    <string name="feeds_import_sources_more">Zatiaľ pridané zdroje: %1$s; ostatné budú nasledovať</string>
     <string name="feeds_waiting_title">Čaká sa na povolenie</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s osoba</item>
@@ -399,4 +396,28 @@
     <string name="feeds_filtered_by_tag">Filtrované podľa značky:</string>
     <string name="feeds_setup">Nastaviť</string>
     <string name="feeds_search_example">Hľadať podľa názvu, ID, odtlačku, URL alebo adresy %1$s</string>
+    <string name="feeds_member_remove_message">Reakcie tejto osoby v tomto kanáli budú odstránené.</string>
+    <string name="feeds_member_block_message">Tento kanál už nebude môcť zobraziť.</string>
+    <string name="feeds_member_block_title">Zablokovať %1$s?</string>
+    <string name="feeds_member_remove_title">Odstrániť %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Importuje sa %s sledovaný účet</item>
+        <item quantity="few">Importujú sa %s sledované účty</item>
+        <item quantity="other">Importuje sa %s sledovaných účtov</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">zatiaľ pridaný %s</item>
+        <item quantity="few">zatiaľ pridané %s</item>
+        <item quantity="other">zatiaľ pridaných %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Kanál tam zverejnil %s príspevok. Zostane tam, kým ho neodstránite.</item>
+        <item quantity="few">Kanál tam zverejnil %s príspevky. Zostanú tam, kým ich neodstránite.</item>
+        <item quantity="other">Kanál tam zverejnil %s príspevkov. Zostanú tam, kým ich neodstránite.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Zatiaľ pridaný %s zdroj; ostatné budú nasledovať</item>
+        <item quantity="few">Zatiaľ pridané %s zdroje; ostatné budú nasledovať</item>
+        <item quantity="other">Zatiaľ pridaných %s zdrojov; ostatné budú nasledovať</item>
+    </plurals>
 </resources>

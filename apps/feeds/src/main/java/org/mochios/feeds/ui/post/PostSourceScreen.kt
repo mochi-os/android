@@ -101,6 +101,7 @@ import org.mochios.feeds.ui.component.CommentItem
 import org.mochios.feeds.ui.component.threadRows
 import org.mochios.feeds.ui.component.commentAvatar
 import org.mochios.feeds.ui.component.commenterAvatars
+import org.mochios.feeds.ui.component.countComments
 import org.mochios.feeds.ui.component.stripHtml
 import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
@@ -657,13 +658,5 @@ private fun PostSourceSheet(
             )
         }
     }
-}
-
-private fun countComments(comments: List<org.mochios.android.model.Comment>): Int {
-    var n = 0
-    for (c in comments) {
-        n += 1 + countComments(c.children)
-    }
-    return n
 }
 

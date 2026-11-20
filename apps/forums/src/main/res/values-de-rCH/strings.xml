@@ -93,11 +93,9 @@
     <string name="forums_moderation_log_meta">Von %1$s · Ziel %2$s</string>
     <string name="forums_moderation_restrictions_empty">Keine Einschränkungen</string>
     <string name="forums_moderation_restriction_add">Einschränkung hinzufügen</string>
-    <string name="forums_moderation_restriction_user">Benutzeridentität</string>
     <string name="forums_moderation_restriction_type_muted">Stummschalten</string>
     <string name="forums_moderation_restriction_type_banned">Sperren</string>
     <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Dauer (Sekunden, leer für dauerhaft)</string>
     <string name="forums_moderation_restriction_expires">Läuft ab am %1$s</string>
     <string name="forums_moderation_restriction_permanent">Dauerhaft</string>
     <string name="forums_moderation_section_premoderation">Vormoderation</string>
@@ -178,7 +176,6 @@
     <string name="forums_settings_field_name">Name</string>
     <string name="forums_settings_field_entity_id">Entitäts-ID</string>
     <string name="forums_settings_field_fingerprint_label">Fingerabdruck</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Namen bearbeiten</string>
     <string name="forums_settings_name_cancel_cd">Bearbeitung abbrechen</string>
     <string name="forums_settings_save_name">Namen speichern</string>

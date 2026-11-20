@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Nog geen moderatie-activiteit</string>
     <string name="forums_moderation_log_meta">Door %1$s · Doelwit %2$s</string>
     <string name="forums_moderation_restriction_add">Beperking toevoegen</string>
-    <string name="forums_moderation_restriction_user">Gebruikersidentiteit</string>
     <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Duur (seconden, leeg voor permanent)</string>
     <string name="forums_moderation_restriction_expires">Verloopt op %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Haat</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Naam</string>
     <string name="forums_settings_field_entity_id">Entiteit-ID</string>
     <string name="forums_settings_field_fingerprint_label">Vingerafdruk</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Naam bewerken</string>
     <string name="forums_settings_name_cancel_cd">Bewerken annuleren</string>
     <string name="forums_settings_save_name">Naam opslaan</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Instellingen importeren</string>
     <string name="forums_communities_add">Gemeenschappen toevoegen</string>
     <string name="forums_communities_add_failed">Kan de gemeenschappen niet toevoegen</string>
-    <string name="forums_imported_settings">%1$s gemeenschappen, %2$s blokkeringen en %3$s opgeslagen berichten geïmporteerd</string>
-    <string name="forums_imported_settings_more">Tot nu toe %1$s gemeenschappen, %2$s blokkeringen en %3$s opgeslagen berichten geïmporteerd; de rest volgt</string>
     <string name="forums_import_failed">Kan niet importeren</string>
     <string name="forums_community">Gemeenschap</string>
     <string name="forums_community_name">Gemeenschapsnaam</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Wordt geplaatst in %1$s als %2$s</string>
     <string name="forums_find_search_example">Zoek op naam, ID, fingerprint, URL of %1$s</string>
     <string name="forums_setup">Instellen</string>
+    <string name="forums_post_remove_title">Post verwijderen</string>
+    <string name="forums_post_remove_message">Hierdoor wordt het bericht verborgen voor gewone gebruikers. Moderators kunnen het nog steeds zien en later herstellen.</string>
+    <string name="forums_comment_remove_title">Reactie verwijderen</string>
+    <string name="forums_comment_remove_message">Hierdoor wordt de reactie verborgen voor gewone gebruikers. Moderators kunnen het nog steeds zien en later herstellen.</string>
+    <string name="forums_report_submitted">Melding ingediend</string>
+    <string name="forums_member_remove_message">De stemmen van deze persoon in dit forum worden verwijderd.</string>
+    <string name="forums_member_block_message">Deze persoon kan dit forum niet meer bekijken.</string>
+    <string name="forums_member_block_title">%1$s blokkeren?</string>
+    <string name="forums_moderation_resolution_ignored">Afgewezen</string>
+    <string name="forums_moderation_restriction_member">Lid</string>
+    <string name="forums_moderation_restriction_duration">Duur</string>
+    <string name="forums_moderation_duration_hour">Een uur</string>
+    <string name="forums_moderation_duration_day">Een dag</string>
+    <string name="forums_moderation_duration_week">Een week</string>
+    <string name="forums_moderation_duration_month">Een maand</string>
+    <string name="forums_member_remove">Verwijderen</string>
+    <string name="forums_member_remove_title">%1$s verwijderen?</string>
+    <string name="forums_imported">%1$s geïmporteerd</string>
+    <string name="forums_imported_more">Tot nu toe %1$s geïmporteerd; de rest volgt</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s gemeenschap</item>
+        <item quantity="other">%s gemeenschappen</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokkering</item>
+        <item quantity="other">%s blokkeringen</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s opgeslagen post</item>
+        <item quantity="other">%s opgeslagen posts</item>
+    </plurals>
 </resources>

@@ -79,7 +79,6 @@ class PublishingViewModel @Inject constructor(
     private val _publish = MutableStateFlow<PublishState?>(null)
     val publish: StateFlow<PublishState?> = _publish.asStateFlow()
 
-    /** The account, or "filter" and filter id, whose change is on its way. */
     /** What changes are waiting or running for: an account, a filter, or "filter" for an add. */
     private val _busy = MutableStateFlow<Set<String>>(emptySet())
     val busy: StateFlow<Set<String>> = _busy.asStateFlow()
@@ -108,7 +107,6 @@ class PublishingViewModel @Inject constructor(
     fun accounts(state: PublishState?): List<PublishAccount> =
         state?.accounts.orEmpty().sortedWith(compareBy(NaturalCompare) { it.identifier })
 
-    /** Read where the feed publishes, for a public feed the user owns. */
     // The server's refusal to publish the feed anywhere: a private feed's,
     // which says only a public feed publishes, for Publish to to show.
     private val _refusal = MutableStateFlow<MochiError?>(null)
@@ -118,6 +116,7 @@ class PublishingViewModel @Inject constructor(
     private val _failure = MutableStateFlow<MochiError?>(null)
     val failure: StateFlow<MochiError?> = _failure.asStateFlow()
 
+    /** Read where the feed publishes, for a public feed the user owns. */
     fun loadPublish() {
         viewModelScope.launch {
             try {

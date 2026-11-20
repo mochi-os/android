@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">እስካሁን ምንም የአወያይ እንቅስቃሴ የለም</string>
     <string name="forums_moderation_log_meta">በ%1$s · ኢላማ %2$s</string>
     <string name="forums_moderation_restriction_add">ገደብ ጨምር</string>
-    <string name="forums_moderation_restriction_user">የተጠቃሚ ማንነት</string>
     <string name="forums_moderation_restriction_type_shadowban">የጥላ እገዳ</string>
-    <string name="forums_moderation_restriction_duration_seconds">ቆይታ (በሰከንዶች፣ ለቋሚ ባዶ ይተውት)</string>
     <string name="forums_moderation_restriction_expires">ያበቃል %1$s</string>
     <string name="forums_moderation_restriction_permanent">ቋሚ</string>
     <string name="forums_report_reason_hate">ጥላቻ</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">ስም</string>
     <string name="forums_settings_field_entity_id">የአካል መለያ</string>
     <string name="forums_settings_field_fingerprint_label">ጣት አሻራ</string>
-    <string name="forums_settings_field_server">ሰርቨር</string>
     <string name="forums_settings_name_edit_cd">ስም አስተካክል</string>
     <string name="forums_settings_name_cancel_cd">አርትዖትን ሰርዝ</string>
     <string name="forums_settings_save_name">ስም አስቀምጥ</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">ቅንብሮችን አስመጣ</string>
     <string name="forums_communities_add">ማህበረሰቦችን ጨምር</string>
     <string name="forums_communities_add_failed">ማህበረሰቦቹን መጨመር አልተቻለም</string>
-    <string name="forums_imported_settings">%1$s ማህበረሰቦች፣ %2$s የታገዱ ሰርቨሮች እና %3$s የተቀመጡ ልጥፎች መጥተዋል</string>
-    <string name="forums_imported_settings_more">እስካሁን %1$s ማህበረሰቦች፣ %2$s የታገዱ ሰርቨሮች እና %3$s የተቀመጡ ልጥፎች መጥተዋል፤ ቀሪዎቹ ይከተላሉ</string>
     <string name="forums_import_failed">ማስመጣት አልተቻለም</string>
     <string name="forums_community">ማህበረሰብ</string>
     <string name="forums_community_name">የማህበረሰብ ስም</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">ወደ %1$s እንደ %2$s ይለጠፋል</string>
     <string name="forums_find_search_example">በስም፣ መታወቂያ፣ ጣት አሻራ፣ URL ወይም %1$s ይፈልጉ</string>
     <string name="forums_setup">ያዘጋጁ</string>
+    <string name="forums_post_remove_title">ልጥፍ አስወግድ</string>
+    <string name="forums_post_remove_message">ይህ ልጥፉን ከመደበኛ ተጠቃሚዎች ይደብቃል። ሞዴሬተሮች አሁንም ሊያዩት እና በኋላ ሊመልሱት ይችላሉ።</string>
+    <string name="forums_comment_remove_title">አስተያየት አስወግድ</string>
+    <string name="forums_comment_remove_message">ይህ አስተያየቱን ከመደበኛ ተጠቃሚዎች ይደብቃል። ሞዴሬተሮች አሁንም ሊያዩት እና በኋላ ሊመልሱት ይችላሉ።</string>
+    <string name="forums_report_submitted">ሪፖርት ተልኳል</string>
+    <string name="forums_member_remove_message">የዚህ ሰው ድምፆች በዚህ መድረክ ውስጥ ይሰረዛሉ።</string>
+    <string name="forums_member_block_message">ከዚህ በኋላ ይህን ፎረም ማየት አይችሉም።</string>
+    <string name="forums_member_block_title">%1$s ይታገድ?</string>
+    <string name="forums_moderation_resolution_ignored">ውድቅ ተደርጓል</string>
+    <string name="forums_moderation_restriction_member">አባል</string>
+    <string name="forums_moderation_restriction_duration">የቆይታ ጊዜ</string>
+    <string name="forums_moderation_duration_hour">አንድ ሰዓት</string>
+    <string name="forums_moderation_duration_day">አንድ ቀን</string>
+    <string name="forums_moderation_duration_week">አንድ ሳምንት</string>
+    <string name="forums_moderation_duration_month">አንድ ወር</string>
+    <string name="forums_member_remove">አስወግድ</string>
+    <string name="forums_member_remove_title">%1$s ይወገድ?</string>
+    <string name="forums_imported">%1$s ገብተዋል</string>
+    <string name="forums_imported_more">እስካሁን %1$s ገብተዋል፤ የቀሩት ይከተላሉ</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s ማህበረሰብ</item>
+        <item quantity="other">%s ማህበረሰቦች</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s እገዳ</item>
+        <item quantity="other">%s እገዳዎች</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s የተቀመጠ ልጥፍ</item>
+        <item quantity="other">%s የተቀመጡ ልጥፎች</item>
+    </plurals>
 </resources>

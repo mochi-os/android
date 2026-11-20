@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Chưa có hoạt động kiểm duyệt nào</string>
     <string name="forums_moderation_log_meta">Bởi %1$s · Mục tiêu %2$s</string>
     <string name="forums_moderation_restriction_add">Thêm hạn chế</string>
-    <string name="forums_moderation_restriction_user">Danh tính người dùng</string>
     <string name="forums_moderation_restriction_type_shadowban">Cấm ngầm</string>
-    <string name="forums_moderation_restriction_duration_seconds">Thời lượng (giây, để trống nếu vĩnh viễn)</string>
     <string name="forums_moderation_restriction_expires">Hết hạn %1$s</string>
     <string name="forums_moderation_restriction_permanent">Vĩnh viễn</string>
     <string name="forums_report_reason_hate">Thù ghét</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">Tên</string>
     <string name="forums_settings_field_entity_id">ID thực thể</string>
     <string name="forums_settings_field_fingerprint_label">Dấu vân tay</string>
-    <string name="forums_settings_field_server">Máy chủ</string>
     <string name="forums_settings_name_edit_cd">Sửa tên</string>
     <string name="forums_settings_name_cancel_cd">Hủy chỉnh sửa</string>
     <string name="forums_settings_save_name">Lưu tên</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">Nhập cài đặt</string>
     <string name="forums_communities_add">Thêm cộng đồng</string>
     <string name="forums_communities_add_failed">Không thể thêm các cộng đồng</string>
-    <string name="forums_imported_settings">Đã nhập %1$s cộng đồng, %2$s lượt chặn và %3$s bài viết đã lưu</string>
-    <string name="forums_imported_settings_more">Đến nay đã nhập %1$s cộng đồng, %2$s lượt chặn và %3$s bài viết đã lưu; phần còn lại sẽ tiếp theo</string>
     <string name="forums_import_failed">Không thể nhập</string>
     <string name="forums_community">Cộng đồng</string>
     <string name="forums_community_name">Tên cộng đồng</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">Đăng lên %1$s với tư cách %2$s</string>
     <string name="forums_find_search_example">Tìm kiếm theo tên, ID, dấu vân tay, URL hoặc %1$s</string>
     <string name="forums_setup">Thiết lập</string>
+    <string name="forums_post_remove_title">Xoá bài viết</string>
+    <string name="forums_post_remove_message">Điều này sẽ ẩn bài đăng khỏi người dùng thông thường. Người kiểm duyệt vẫn có thể xem và khôi phục sau.</string>
+    <string name="forums_comment_remove_title">Xoá bình luận</string>
+    <string name="forums_comment_remove_message">Điều này sẽ ẩn bình luận khỏi người dùng thông thường. Người kiểm duyệt vẫn có thể xem và khôi phục sau.</string>
+    <string name="forums_report_submitted">Đã gửi báo cáo</string>
+    <string name="forums_member_remove_message">Phiếu bầu của người này trong diễn đàn này sẽ bị xóa.</string>
+    <string name="forums_member_block_message">Họ sẽ không còn xem được diễn đàn này.</string>
+    <string name="forums_member_block_title">Chặn %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Đã bỏ qua</string>
+    <string name="forums_moderation_restriction_member">Thành viên</string>
+    <string name="forums_moderation_restriction_duration">Thời lượng</string>
+    <string name="forums_moderation_duration_hour">Một giờ</string>
+    <string name="forums_moderation_duration_day">Một ngày</string>
+    <string name="forums_moderation_duration_week">Một tuần</string>
+    <string name="forums_moderation_duration_month">Một tháng</string>
+    <string name="forums_member_remove">Xoá</string>
+    <string name="forums_member_remove_title">Xoá %1$s?</string>
+    <string name="forums_imported">Đã nhập %1$s</string>
+    <string name="forums_imported_more">Đã nhập %1$s; phần còn lại sẽ được nhập sau</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s cộng đồng</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s lượt chặn</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s bài viết đã lưu</item>
+    </plurals>
 </resources>

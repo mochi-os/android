@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">لا يوجد نشاط للمشرفين بعد</string>
     <string name="forums_moderation_log_meta">بواسطة %1$s · الهدف %2$s</string>
     <string name="forums_moderation_restriction_add">إضافة قيد</string>
-    <string name="forums_moderation_restriction_user">هوية المستخدم</string>
     <string name="forums_moderation_restriction_type_shadowban">حظر خفي</string>
-    <string name="forums_moderation_restriction_duration_seconds">المدة (بالثواني، اتركها فارغة للحظر الدائم)</string>
     <string name="forums_moderation_restriction_expires">تنتهي %1$s</string>
     <string name="forums_moderation_restriction_permanent">دائم</string>
     <string name="forums_report_reason_hate">كراهية</string>
@@ -202,7 +200,6 @@
     <string name="forums_settings_field_name">الاسم</string>
     <string name="forums_settings_field_entity_id">معرّف الكيان</string>
     <string name="forums_settings_field_fingerprint_label">البصمة</string>
-    <string name="forums_settings_field_server">الخادم</string>
     <string name="forums_settings_name_edit_cd">تعديل الاسم</string>
     <string name="forums_settings_name_cancel_cd">إلغاء التعديل</string>
     <string name="forums_settings_save_name">حفظ الاسم</string>
@@ -312,8 +309,6 @@
     <string name="forums_import_settings">استيراد الإعدادات</string>
     <string name="forums_communities_add">إضافة المجتمعات</string>
     <string name="forums_communities_add_failed">تعذّرت إضافة المجتمعات</string>
-    <string name="forums_imported_settings">تم الاستيراد: المجتمعات %1$s، الخوادم المحظورة %2$s، المنشورات المحفوظة %3$s</string>
-    <string name="forums_imported_settings_more">تم الاستيراد حتى الآن: المجتمعات %1$s، الخوادم المحظورة %2$s، المنشورات المحفوظة %3$s؛ والبقية تتبع</string>
     <string name="forums_import_failed">تعذّر الاستيراد</string>
     <string name="forums_community">مجتمع</string>
     <string name="forums_community_name">اسم المجتمع</string>
@@ -346,4 +341,47 @@
     <string name="forums_community_destination">يُنشر في %1$s باسم %2$s</string>
     <string name="forums_find_search_example">البحث بالاسم أو المعرف أو البصمة أو URL أو %1$s</string>
     <string name="forums_setup">إعداد</string>
+    <string name="forums_post_remove_title">إزالة المنشور</string>
+    <string name="forums_post_remove_message">سيخفي هذا المنشور من المستخدمين العاديين. لا يزال بإمكان المشرفين رؤيته واستعادته لاحقاً.</string>
+    <string name="forums_comment_remove_title">إزالة التعليق</string>
+    <string name="forums_comment_remove_message">سيخفي هذا التعليق من المستخدمين العاديين. لا يزال بإمكان المشرفين رؤيته واستعادته لاحقاً.</string>
+    <string name="forums_report_submitted">تم إرسال التقرير</string>
+    <string name="forums_member_remove_message">تُحذف أصوات هذا الشخص في هذا المنتدى.</string>
+    <string name="forums_member_block_message">لن يتمكن بعد الآن من عرض هذا المنتدى.</string>
+    <string name="forums_member_block_title">حظر %1$s؟</string>
+    <string name="forums_moderation_resolution_ignored">مرفوض</string>
+    <string name="forums_moderation_restriction_member">العضو</string>
+    <string name="forums_moderation_restriction_duration">المدة</string>
+    <string name="forums_moderation_duration_hour">ساعة واحدة</string>
+    <string name="forums_moderation_duration_day">يوم واحد</string>
+    <string name="forums_moderation_duration_week">أسبوع واحد</string>
+    <string name="forums_moderation_duration_month">شهر واحد</string>
+    <string name="forums_member_remove">إزالة</string>
+    <string name="forums_member_remove_title">إزالة %1$s؟</string>
+    <string name="forums_imported">تم استيراد %1$s</string>
+    <string name="forums_imported_more">تم استيراد %1$s حتى الآن، والبقية تتبع</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="zero">%s مجتمع</item>
+        <item quantity="one">%s مجتمع</item>
+        <item quantity="two">%s مجتمعان</item>
+        <item quantity="few">%s مجتمعات</item>
+        <item quantity="many">%s مجتمعًا</item>
+        <item quantity="other">%s مجتمع</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="zero">%s عملية حظر</item>
+        <item quantity="one">%s عملية حظر</item>
+        <item quantity="two">%s عمليتا حظر</item>
+        <item quantity="few">%s عمليات حظر</item>
+        <item quantity="many">%s عملية حظر</item>
+        <item quantity="other">%s عملية حظر</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="zero">%s منشور محفوظ</item>
+        <item quantity="one">%s منشور محفوظ</item>
+        <item quantity="two">%s منشوران محفوظان</item>
+        <item quantity="few">%s منشورات محفوظة</item>
+        <item quantity="many">%s منشورًا محفوظًا</item>
+        <item quantity="other">%s منشور محفوظ</item>
+    </plurals>
 </resources>

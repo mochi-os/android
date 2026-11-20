@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ຍັງບໍ່ມີກິດຈະກຳຂອງຜູ້ກວດສອບ</string>
     <string name="forums_moderation_log_meta">ໂດຍ %1$s · ເປົ້າໝາຍ %2$s</string>
     <string name="forums_moderation_restriction_add">ເພີ່ມການຈຳກັດ</string>
-    <string name="forums_moderation_restriction_user">ຕົວຕົນຜູ້ໃຊ້</string>
     <string name="forums_moderation_restriction_type_shadowban">ແບນແບບເງົາ</string>
-    <string name="forums_moderation_restriction_duration_seconds">ໄລຍະເວລາ (ວິນາທີ, ປ່ອຍວ່າງເພື່ອຖາວອນ)</string>
     <string name="forums_moderation_restriction_expires">ໝົດອາຍຸ %1$s</string>
     <string name="forums_moderation_restriction_permanent">ຖາວອນ</string>
     <string name="forums_report_reason_hate">ຄວາມກຽດຊັງ</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">ຊື່</string>
     <string name="forums_settings_field_entity_id">ID ຂອງເອັນຕິຕີ້</string>
     <string name="forums_settings_field_fingerprint_label">ລາຍນິ້ວມື</string>
-    <string name="forums_settings_field_server">ເຊີບເວີ</string>
     <string name="forums_settings_name_edit_cd">ແກ້ໄຂຊື່</string>
     <string name="forums_settings_name_cancel_cd">ຍົກເລີກການແກ້ໄຂ</string>
     <string name="forums_settings_save_name">ບັນທຶກຊື່</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">ນຳເຂົ້າການຕັ້ງຄ່າ</string>
     <string name="forums_communities_add">ເພີ່ມຊຸມຊົນ</string>
     <string name="forums_communities_add_failed">ບໍ່ສາມາດເພີ່ມຊຸມຊົນໄດ້</string>
-    <string name="forums_imported_settings">ນຳເຂົ້າ %1$s ຊຸມຊົນ, %2$s ການບລັອກ ແລະ %3$s ໂພສທີ່ບັນທຶກໄວ້ແລ້ວ</string>
-    <string name="forums_imported_settings_more">ນຳເຂົ້າແລ້ວ %1$s ຊຸມຊົນ, %2$s ການບລັອກ ແລະ %3$s ໂພສທີ່ບັນທຶກໄວ້; ສ່ວນທີ່ເຫຼືອຈະຕາມມາ</string>
     <string name="forums_import_failed">ບໍ່ສາມາດນຳເຂົ້າໄດ້</string>
     <string name="forums_community">ຊຸມຊົນ</string>
     <string name="forums_community_name">ຊື່ຊຸມຊົນ</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">ໂພສໄປທີ່ %1$s ໃນນາມ %2$s</string>
     <string name="forums_find_search_example">ຄົ້ນຫາຕາມຊື່, ID, ລາຍນິ້ວມື, URL, ຫຼື %1$s</string>
     <string name="forums_setup">ຕັ້ງຄ່າ</string>
+    <string name="forums_post_remove_title">ລຶບໂພສ</string>
+    <string name="forums_post_remove_message">ນີ້ຈະເຊື່ອງໂພສຈາກຜູ້ໃຊ້ທົ່ວໄປ. ຜູ້ຄວບຄຸມຍັງສາມາດເຫັນແລະກູ້ຄືນພາຍຫຼັງໄດ້.</string>
+    <string name="forums_comment_remove_title">ລຶບຄຳເຫັນ</string>
+    <string name="forums_comment_remove_message">ນີ້ຈະເຊື່ອງຄຳເຫັນຈາກຜູ້ໃຊ້ທົ່ວໄປ. ຜູ້ຄວບຄຸມຍັງສາມາດເຫັນແລະກູ້ຄືນພາຍຫຼັງໄດ້.</string>
+    <string name="forums_report_submitted">ສົ່ງລາຍງານແລ້ວ</string>
+    <string name="forums_member_remove_message">ໂຫວດຂອງຄົນນີ້ໃນກະດານສົນທະນານີ້ຈະຖືກລຶບ.</string>
+    <string name="forums_member_block_message">ເຂົາຈະບໍ່ສາມາດເບິ່ງກະດານສົນທະນານີ້ໄດ້ອີກ.</string>
+    <string name="forums_member_block_title">ບລັອກ %1$s ບໍ?</string>
+    <string name="forums_moderation_resolution_ignored">ປະຕິເສດແລ້ວ</string>
+    <string name="forums_moderation_restriction_member">ສະມາຊິກ</string>
+    <string name="forums_moderation_restriction_duration">ໄລຍະເວລາ</string>
+    <string name="forums_moderation_duration_hour">ໜຶ່ງຊົ່ວໂມງ</string>
+    <string name="forums_moderation_duration_day">ໜຶ່ງມື້</string>
+    <string name="forums_moderation_duration_week">ໜຶ່ງອາທິດ</string>
+    <string name="forums_moderation_duration_month">ໜຶ່ງເດືອນ</string>
+    <string name="forums_member_remove">ລຶບອອກ</string>
+    <string name="forums_member_remove_title">ລຶບ %1$s ອອກບໍ?</string>
+    <string name="forums_imported">ນຳເຂົ້າ %1$s ແລ້ວ</string>
+    <string name="forums_imported_more">ນຳເຂົ້າແລ້ວ %1$s; ສ່ວນທີ່ເຫຼືອຈະຕາມມາ</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s ຊຸມຊົນ</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s ການບລັອກ</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s ໂພສທີ່ບັນທຶກໄວ້</item>
+    </plurals>
 </resources>

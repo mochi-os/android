@@ -89,6 +89,8 @@
     <string name="forums_post_unlock">Unlock</string>
     <string name="forums_post_approve">Approve</string>
     <string name="forums_post_remove">Remove</string>
+    <string name="forums_post_remove_title">Remove post</string>
+    <string name="forums_post_remove_message">This will hide the post from regular users. Moderators can still see it and restore it later.</string>
     <string name="forums_post_restore">Restore</string>
     <string name="forums_post_report">Report</string>
     <string name="forums_post_quote">Quote in reply</string>
@@ -96,6 +98,8 @@
     <!-- Comment moderation -->
     <string name="forums_comment_approve">Approve</string>
     <string name="forums_comment_remove">Remove</string>
+    <string name="forums_comment_remove_title">Remove comment</string>
+    <string name="forums_comment_remove_message">This will hide the comment from regular users. Moderators can still see it and restore it later.</string>
     <string name="forums_comment_restore">Restore</string>
     <string name="forums_comment_report">Report</string>
     <string name="forums_comment_quote">Quote in reply</string>
@@ -201,6 +205,7 @@
     <string name="forums_moderation_report_reported_by">Reported by %1$s</string>
     <string name="forums_moderation_report_dismiss">Dismiss</string>
     <string name="forums_moderation_report_resolved_by">Resolved by %1$s — %2$s</string>
+    <string name="forums_moderation_resolution_ignored">Dismissed</string>
     <string name="forums_moderation_log_empty">No moderation activity</string>
     <string name="forums_moderation_log_empty_subtitle">There are no moderation actions recorded yet</string>
     <string name="forums_moderation_log_meta">By %1$s · Target %2$s</string>
@@ -210,12 +215,16 @@
     <string name="forums_moderation_restriction_remove">Remove</string>
     <string name="forums_moderation_restriction_remove_title">Remove restriction on %1$s?</string>
     <string name="forums_moderation_restriction_remove_message">They regain full access to the forum straight away.</string>
-    <string name="forums_moderation_restriction_user">User identity</string>
+    <string name="forums_moderation_restriction_member">Member</string>
     <string name="forums_moderation_restriction_type">Type</string>
     <string name="forums_moderation_restriction_type_muted">Mute</string>
     <string name="forums_moderation_restriction_type_banned">Ban</string>
     <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Duration (seconds, blank for permanent)</string>
+    <string name="forums_moderation_restriction_duration">Duration</string>
+    <string name="forums_moderation_duration_hour">An hour</string>
+    <string name="forums_moderation_duration_day">A day</string>
+    <string name="forums_moderation_duration_week">A week</string>
+    <string name="forums_moderation_duration_month">A month</string>
     <string name="forums_moderation_restriction_expires">Expires %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_moderation_restriction_by">By %1$s</string>
@@ -245,6 +254,7 @@
     <string name="forums_report_reason">Reason</string>
     <string name="forums_report_details">Details</string>
     <string name="forums_report_submit">Submit report</string>
+    <string name="forums_report_submitted">Report submitted</string>
     <string name="forums_report_reason_spam">Spam</string>
     <string name="forums_report_reason_harassment">Harassment</string>
     <string name="forums_report_reason_hate">Hate</string>
@@ -276,13 +286,17 @@
     <string name="forums_settings_access_revoked">Access revoked</string>
     <string name="forums_settings_member_removed">Member removed</string>
     <string name="forums_settings_member_blocked">Member blocked</string>
+    <string name="forums_member_remove">Remove</string>
+    <string name="forums_member_remove_title">Remove %1$s?</string>
+    <string name="forums_member_remove_message">Their votes in this forum are deleted.</string>
+    <string name="forums_member_block_title">Block %1$s?</string>
+    <string name="forums_member_block_message">They can no longer view this forum.</string>
     <string name="forums_settings_ai_updated">AI settings updated</string>
     <string name="forums_settings_prompt_saved">Prompt saved</string>
     <string name="forums_settings_section_identity">Identity</string>
     <string name="forums_settings_field_name">Name</string>
     <string name="forums_settings_field_entity_id">Entity ID</string>
     <string name="forums_settings_field_fingerprint_label">Fingerprint</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Edit name</string>
     <string name="forums_settings_name_cancel_cd">Cancel editing</string>
     <string name="forums_settings_name_clear_cd">Clear name</string>
@@ -362,8 +376,20 @@
         <item quantity="other">Added %s communities</item>
     </plurals>
     <string name="forums_communities_add_failed">Could not add the communities</string>
-    <string name="forums_imported_settings">Imported %1$s communities, %2$s blocks and %3$s saved posts</string>
-    <string name="forums_imported_settings_more">Imported %1$s communities, %2$s blocks and %3$s saved posts so far; the rest follow</string>
+    <string name="forums_imported">Imported %1$s</string>
+    <string name="forums_imported_more">Imported %1$s so far; the rest follow</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s community</item>
+        <item quantity="other">%s communities</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s block</item>
+        <item quantity="other">%s blocks</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s saved post</item>
+        <item quantity="other">%s saved posts</item>
+    </plurals>
     <string name="forums_import_failed">Could not import</string>
     <string name="forums_community">Community</string>
     <string name="forums_community_name">Community name</string>

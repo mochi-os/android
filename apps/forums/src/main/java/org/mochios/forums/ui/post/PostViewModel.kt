@@ -14,8 +14,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -25,12 +28,14 @@ import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.UndoChain
+import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.forums.R
 import org.mochios.forums.model.Forum
 import org.mochios.forums.model.ForumComment
 import org.mochios.forums.model.Post
 import org.mochios.forums.model.rejectMessage
+import org.mochios.forums.model.thread
 import org.mochios.forums.repository.ForumsRepository
 import javax.inject.Inject
 
@@ -47,6 +52,7 @@ data class PostUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val isSending: Boolean = false,
+    /** Why the post could not be read; an action's failure goes to [PostViewModel.errors]. */
     val error: MochiError? = null,
     val replyTo: ForumComment? = null,
     val deleted: Boolean = false,
@@ -67,7 +73,6 @@ data class PostUiState(
 @HiltViewModel
 class PostViewModel @Inject constructor(
     private val savedStateHandle: SavedStateHandle,
-    private val application: android.app.Application,
     private val repository: ForumsRepository,
     private val sessionManager: SessionManager,
     private val webSocket: MochiWebSocket,
@@ -103,6 +108,10 @@ class PostViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(PostUiState())
     val uiState: StateFlow<PostUiState> = _uiState.asStateFlow()
 
+    /** Each action the server refused, or a reload after one that failed, to be said once over the post. */
+    private val _errors = MutableSharedFlow<MochiError>(extraBufferCapacity = 8)
+    val errors: SharedFlow<MochiError> = _errors.asSharedFlow()
+
     private val commentTracker = UploadTracker()
 
     /** The files of the comment being sent, for the composer. */
@@ -123,36 +132,42 @@ class PostViewModel @Inject constructor(
 
     private fun subscribeWebSocket(forumKey: String) {
         if (forumKey.isBlank() || subscriptionId != null) return
+        // The socket calls back on its own thread. The frame is handled on the
+        // main one, where every other change to this screen's state is made.
         subscriptionId = webSocket.subscribe(
             sessionManager.getServerUrlBlocking(),
             forumKey,
             app = "forums",
         ) { event ->
-            // The forum was left, deleted or renamed: the held roster no longer
-            // says so, and the drawer reads it next.
-            if (event.type.orEmpty().startsWith("forum/")) repository.forget()
-            // The owner removed this user from the forum, or deleted it. The
-            // local replica is already purged, so a reload would only fail.
-            if (event.type == "forum/removed" || event.type == "forum/deleted") {
-                _uiState.value = _uiState.value.copy(
-                    gone = if (event.type == "forum/removed") {
-                        R.string.forums_removed_from_forum
-                    } else {
-                        R.string.forums_forum_deleted
-                    },
-                )
-                return@subscribe
-            }
-            // A rejection deletes the author's optimistic copy, so a silent
-            // reload alone would make their comment vanish with no reason.
-            if (event.type == "post/reject" || event.type == "comment/reject") {
-                _uiState.value = _uiState.value.copy(
-                    rejected = rejectMessage(event.reason, event.type == "comment/reject"),
-                )
-            }
-            if (!_uiState.value.deleted) {
-                reloadQuietly()
-            }
+            viewModelScope.launch { frame(event) }
+        }
+    }
+
+    private fun frame(event: WebSocketEvent) {
+        // The forum was left, deleted or renamed: the held roster no longer
+        // says so, and the drawer reads it again.
+        if (event.type.orEmpty().startsWith("forum/")) repository.forget()
+        // The owner removed this user from the forum, or deleted it. The
+        // local replica is already purged, so a reload would only fail.
+        if (event.type == "forum/removed" || event.type == "forum/deleted") {
+            _uiState.value = _uiState.value.copy(
+                gone = if (event.type == "forum/removed") {
+                    R.string.forums_removed_from_forum
+                } else {
+                    R.string.forums_forum_deleted
+                },
+            )
+            return
+        }
+        // A rejection deletes the author's optimistic copy, so a silent
+        // reload alone would make their comment vanish with no reason.
+        if (event.type == "post/reject" || event.type == "comment/reject") {
+            _uiState.value = _uiState.value.copy(
+                rejected = rejectMessage(event.reason, event.type == "comment/reject"),
+            )
+        }
+        if (!_uiState.value.deleted) {
+            reloadQuietly()
         }
     }
 
@@ -170,7 +185,7 @@ class PostViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
                     post = r.post,
-                    comments = r.comments,
+                    comments = thread(r.comments),
                     isRefreshing = false,
                 )
             } catch (e: CancellationException) {
@@ -199,7 +214,7 @@ class PostViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
                     post = r.post,
-                    comments = r.comments,
+                    comments = thread(r.comments),
                     canVote = r.can_vote,
                     canComment = r.can_comment,
                     canManage = r.can_manage,
@@ -230,7 +245,7 @@ class PostViewModel @Inject constructor(
                 _uiState.value = _uiState.value.copy(
                     forum = r.forum,
                     post = r.post,
-                    comments = r.comments,
+                    comments = thread(r.comments),
                     canVote = r.can_vote,
                     canComment = r.can_comment,
                     canManage = r.can_manage,
@@ -242,7 +257,8 @@ class PostViewModel @Inject constructor(
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
+                _uiState.value = _uiState.value.copy(isRefreshing = false)
+                _errors.emit(e.toMochiError())
             }
         }
     }
@@ -299,7 +315,8 @@ class PostViewModel @Inject constructor(
                 var state = _uiState.value
                 val before = step?.refused()
                 if (before != null && read(state) == shown) state = write(state, before.value)
-                _uiState.value = state.copy(error = e.toMochiError())
+                _uiState.value = state
+                _errors.emit(e.toMochiError())
                 if (waiting == 0 && stopped) {
                     stopped = false
                     reloadQuietly()
@@ -351,8 +368,10 @@ class PostViewModel @Inject constructor(
     /**
      * Sends the draft. From the lightbox's comments panel, [anchor] is the
      * image the comment is about; a reply keeps its parent's context instead.
+     * [onSent] runs once the server has the comment, so the composer keeps
+     * its words until then, and keeps them when it is refused.
      */
-    fun submitComment(body: String, anchor: String? = null) {
+    fun submitComment(body: String, anchor: String? = null, onSent: () -> Unit = {}) {
         val trimmed = body.trim()
         // The server rejects an empty body with 400, even when files are attached.
         if (trimmed.isEmpty()) return
@@ -368,16 +387,18 @@ class PostViewModel @Inject constructor(
                         body = trimmed,
                         parent = parent,
                         uris = uris,
-                        context = application,
                         attachment = anchor,
                         tracker = commentTracker,
                     )
                     _commentAttachments.value = emptyList()
                     _uiState.value = _uiState.value.copy(replyTo = null)
+                    onSent()
                     refresh()
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _errors.emit(e.toMochiError())
             } finally {
                 _uiState.value = _uiState.value.copy(isSending = false)
             }
@@ -392,8 +413,10 @@ class PostViewModel @Inject constructor(
                 subscriptionId?.let { id -> webSocket.unsubscribe(id) }
                 subscriptionId = null
                 _uiState.value = _uiState.value.copy(deleted = true)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _errors.emit(e.toMochiError())
             }
         }
     }
@@ -403,8 +426,10 @@ class PostViewModel @Inject constructor(
             try {
                 repository.deleteComment(forumId, postId, commentId)
                 refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _errors.emit(e.toMochiError())
             }
         }
     }
@@ -413,15 +438,19 @@ class PostViewModel @Inject constructor(
      * Edit a comment's body. Body only, as on web: `action_comment_edit`
      * applies attachment changes on the owner branch alone, and forwards
      * `{id, body}` on the subscriber branch — sending files there confirms an
-     * edit the server discards.
+     * edit the server discards. [onSaved] runs once the server has the edit,
+     * so the edit box stays open, with what was typed, when it is refused.
      */
-    fun editComment(commentId: String, newBody: String) {
+    fun editComment(commentId: String, newBody: String, onSaved: () -> Unit = {}) {
         viewModelScope.launch {
             try {
                 repository.editComment(forumId, postId, commentId, newBody)
+                onSaved()
                 refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _errors.emit(e.toMochiError())
             }
         }
     }
@@ -442,8 +471,8 @@ class PostViewModel @Inject constructor(
                 val state = _uiState.value
                 _uiState.value = state.copy(
                     following = if (state.following == following) before else state.following,
-                    error = e.toMochiError(),
                 )
+                _errors.emit(e.toMochiError())
             }
         }
     }
@@ -474,7 +503,7 @@ class PostViewModel @Inject constructor(
     fun removePost() = moderate { repository.removePost(forumId, postId) }
     fun restorePost() = moderate { repository.restorePost(forumId, postId) }
     fun reportPost(reason: String, details: String) =
-        moderate { repository.reportPost(forumId, postId, reason, details) }
+        moderate(R.string.forums_report_submitted) { repository.reportPost(forumId, postId, reason, details) }
 
     fun removeComment(commentId: String) =
         moderate { repository.removeComment(forumId, postId, commentId) }
@@ -483,7 +512,7 @@ class PostViewModel @Inject constructor(
     fun approveComment(commentId: String) =
         moderate { repository.approveComment(forumId, postId, commentId) }
     fun reportComment(commentId: String, reason: String, details: String) =
-        moderate { repository.reportComment(forumId, postId, commentId, reason, details) }
+        moderate(R.string.forums_report_submitted) { repository.reportComment(forumId, postId, commentId, reason, details) }
 
     fun addPostTag(label: String) = moderate {
         repository.addPostTag(forumId, postId, label)
@@ -497,8 +526,10 @@ class PostViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.adjustTagInterest(forumId, qid, direction)
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _errors.emit(e.toMochiError())
             }
         }
     }
@@ -514,8 +545,10 @@ class PostViewModel @Inject constructor(
                 repository.addBlock(target)
                 _uiState.value = _uiState.value.copy(done = R.string.forums_blocked)
                 refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _errors.emit(e.toMochiError())
             }
         }
     }
@@ -524,13 +557,17 @@ class PostViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(done = null)
     }
 
-    private fun moderate(block: suspend () -> Unit) {
+    /** Send [block], saying [done] once the server has it and the failure when it is refused. */
+    private fun moderate(@StringRes done: Int? = null, block: suspend () -> Unit) {
         viewModelScope.launch {
             try {
                 block()
+                if (done != null) _uiState.value = _uiState.value.copy(done = done)
                 refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _errors.emit(e.toMochiError())
             }
         }
     }

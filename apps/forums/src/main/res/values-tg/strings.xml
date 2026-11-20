@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Ҳанӯз фаъолияти модератор нест</string>
     <string name="forums_moderation_log_meta">Аз %1$s · Ҳадаф %2$s</string>
     <string name="forums_moderation_restriction_add">Маҳдудият илова кунед</string>
-    <string name="forums_moderation_restriction_user">Шахсияти корбар</string>
     <string name="forums_moderation_restriction_type_shadowban">Бани пинҳонӣ</string>
-    <string name="forums_moderation_restriction_duration_seconds">Давомнокӣ (сонияҳо, барои доимӣ холӣ гузоред)</string>
     <string name="forums_moderation_restriction_expires">Ба охир мерасад %1$s</string>
     <string name="forums_moderation_restriction_permanent">Доимӣ</string>
     <string name="forums_report_reason_hate">Нафрат</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Ном</string>
     <string name="forums_settings_field_entity_id">ID-и объект</string>
     <string name="forums_settings_field_fingerprint_label">Нақши ангушт</string>
-    <string name="forums_settings_field_server">Сервер</string>
     <string name="forums_settings_name_edit_cd">Таҳрири ном</string>
     <string name="forums_settings_name_cancel_cd">Бекор кардани таҳрир</string>
     <string name="forums_settings_save_name">Номро нигоҳ доштан</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Ворид кардани танзимот</string>
     <string name="forums_communities_add">Иловаи ҷомеаҳо</string>
     <string name="forums_communities_add_failed">Ҷомеаҳоро илова кардан нашуд</string>
-    <string name="forums_imported_settings">%1$s ҷомеа, %2$s манъкунӣ ва %3$s паёми захирашуда ворид карда шуд</string>
-    <string name="forums_imported_settings_more">То ҳол %1$s ҷомеа, %2$s манъкунӣ ва %3$s паёми захирашуда ворид карда шуд; боқимонда баъдтар меояд</string>
     <string name="forums_import_failed">Ворид кардан нашуд</string>
     <string name="forums_community">Ҷомеа</string>
     <string name="forums_community_name">Номи ҷомеа</string>
@@ -338,4 +333,32 @@
     <string name="forums_community_destination">Ба %1$s ҳамчун %2$s нашр мешавад</string>
     <string name="forums_find_search_example">Ҷустуҷӯ аз рӯи ном, ID, изи ангушт, URL ё %1$s</string>
     <string name="forums_setup">Танзим кардан</string>
+    <string name="forums_post_remove_title">Хориҷ кардани пост</string>
+    <string name="forums_post_remove_message">Ин паёмро аз корбарони муқаррарӣ пинҳон мекунад. Модераторон то ҳол онро дида метавонанд ва баъдтар барқарор карда метавонанд.</string>
+    <string name="forums_comment_remove_title">Хориҷ кардани шарҳ</string>
+    <string name="forums_comment_remove_message">Ин шарҳро аз корбарони муқаррарӣ пинҳон мекунад. Модераторон то ҳол онро дида метавонанд ва баъдтар барқарор карда метавонанд.</string>
+    <string name="forums_report_submitted">Гузориш фиристода шуд</string>
+    <string name="forums_member_remove_message">Овозҳои ин шахс дар ин форум нест карда мешаванд.</string>
+    <string name="forums_member_block_message">Ӯ дигар ин форумро дида наметавонад.</string>
+    <string name="forums_member_block_title">%1$s-ро манъ мекунед?</string>
+    <string name="forums_moderation_resolution_ignored">Рад шуд</string>
+    <string name="forums_moderation_restriction_member">Узв</string>
+    <string name="forums_moderation_restriction_duration">Давомнокӣ</string>
+    <string name="forums_moderation_duration_hour">Як соат</string>
+    <string name="forums_moderation_duration_day">Як рӯз</string>
+    <string name="forums_moderation_duration_week">Як ҳафта</string>
+    <string name="forums_moderation_duration_month">Як моҳ</string>
+    <string name="forums_member_remove">Хориҷ кардан</string>
+    <string name="forums_member_remove_title">%1$s-ро хориҷ мекунед?</string>
+    <string name="forums_imported">%1$s ворид карда шуд</string>
+    <string name="forums_imported_more">То ҳол %1$s ворид карда шуд; боқимонда баъдтар ворид мешавад</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s ҷомеа</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s манъкунӣ</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s пости захирашуда</item>
+    </plurals>
 </resources>

@@ -96,11 +96,9 @@
     <string name="forums_moderation_log_meta">Par %1$s · Cible %2$s</string>
     <string name="forums_moderation_restrictions_empty">Aucune restriction</string>
     <string name="forums_moderation_restriction_add">Ajouter une restriction</string>
-    <string name="forums_moderation_restriction_user">Identité de l\'utilisateur</string>
     <string name="forums_moderation_restriction_type_muted">Mettre en sourdine</string>
     <string name="forums_moderation_restriction_type_banned">Bannir</string>
     <string name="forums_moderation_restriction_type_shadowban">Bannissement furtif</string>
-    <string name="forums_moderation_restriction_duration_seconds">Durée (secondes, vide pour permanent)</string>
     <string name="forums_moderation_restriction_expires">Expire %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_moderation_section_premoderation">Prémodération</string>
@@ -183,7 +181,6 @@
     <string name="forums_settings_field_name">Nom</string>
     <string name="forums_settings_field_entity_id">Identifiant de l\'entité</string>
     <string name="forums_settings_field_fingerprint_label">Empreinte</string>
-    <string name="forums_settings_field_server">Serveur</string>
     <string name="forums_settings_name_edit_cd">Modifier le nom</string>
     <string name="forums_settings_name_cancel_cd">Annuler la modification</string>
     <string name="forums_settings_save_name">Enregistrer le nom</string>

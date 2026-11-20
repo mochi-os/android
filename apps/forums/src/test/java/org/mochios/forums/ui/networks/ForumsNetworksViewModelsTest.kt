@@ -186,7 +186,7 @@ class ForumsNetworksViewModelsTest {
 
     @Test
     fun `a new post carries its link, its sensitive mark and its language, and an unmarked one none`() {
-        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), context, repository)
+        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository)
         model.setTitle("Title")
         model.setBody("Body")
         model.setLink(" https://there.example/a ")
@@ -200,7 +200,7 @@ class ForumsNetworksViewModelsTest {
         assertEquals("fr", part(body, "language"))
 
         requests.clear()
-        val plain = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), context, repository)
+        val plain = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository)
         plain.setTitle("Title")
         plain.setBody("Body")
         plain.submit()
@@ -216,11 +216,11 @@ class ForumsNetworksViewModelsTest {
     // ours, whose information names none, gets no line.
     @Test
     fun `a new post in a community learns where it goes, and one in a forum of ours learns nothing`() {
-        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "c2")), context, repository)
+        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "c2")), repository)
         until("the destination") { model.destination.value != null }
         assertEquals(Destination("!books@lemmy.example", "@me@lemmy.example"), model.destination.value)
 
-        val ours = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), context, repository)
+        val ours = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository)
         until("the information asked for") { requests.any { it.first == "/forums/f1/-/information" } }
         repeat(5) { shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS); Thread.sleep(10) }
         assertNull(ours.destination.value)
@@ -228,14 +228,14 @@ class ForumsNetworksViewModelsTest {
 
     @Test
     fun `a post in a community carries where its comments go`() {
-        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "c2", "postId" to "p2")), context, repository, session, socket)
+        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "c2", "postId" to "p2")), repository, session, socket)
         until("the post") { model.uiState.value.post.id == "p2" }
         assertEquals(Destination("!books@lemmy.example", "@me@lemmy.example"), model.uiState.value.forum.destination)
     }
 
     @Test
     fun `a link that is not a web address is not sent`() {
-        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), context, repository)
+        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1")), repository)
         model.setTitle("Title")
         model.setBody("Body")
         model.setLink("there.example")
@@ -246,7 +246,7 @@ class ForumsNetworksViewModelsTest {
 
     @Test
     fun `an edit loads the post's marks and sends each as it stands, so clearing one reaches the server`() {
-        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1", "postId" to "p1")), context, repository)
+        val model = NewPostViewModel(SavedStateHandle(mapOf("forumId" to "f1", "postId" to "p1")), repository)
         until("the post") { model.link.value.isNotEmpty() }
         assertTrue(model.sensitive.value)
         assertEquals("fr", model.language.value)
@@ -263,7 +263,7 @@ class ForumsNetworksViewModelsTest {
 
     @Test
     fun `an author from another network is blocked by their page, and their server by its domain`() {
-        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "f1", "postId" to "p1")), context, repository, session, socket)
+        val model = PostViewModel(SavedStateHandle(mapOf("forumId" to "f1", "postId" to "p1")), repository, session, socket)
         until("the post") { model.uiState.value.post.id == "p1" }
         model.block("https://lemmy.example/u/someone")
         until("the block") { model.uiState.value.done == R.string.forums_blocked }

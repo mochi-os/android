@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Babu aikin masu sarrafawa har yanzu</string>
     <string name="forums_moderation_log_meta">Daga %1$s · Manufa %2$s</string>
     <string name="forums_moderation_restriction_add">Ƙara takunkumi</string>
-    <string name="forums_moderation_restriction_user">Asalin mai amfani</string>
     <string name="forums_moderation_restriction_type_shadowban">Hana inuwa</string>
-    <string name="forums_moderation_restriction_duration_seconds">Tsawon lokaci (daƙiƙa, sarari don na dindindin)</string>
     <string name="forums_moderation_restriction_expires">Ya ƙare %1$s</string>
     <string name="forums_moderation_restriction_permanent">Na dindindin</string>
     <string name="forums_report_reason_hate">Ƙiyayya</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Suna</string>
     <string name="forums_settings_field_entity_id">ID ɗin mahaɗi</string>
     <string name="forums_settings_field_fingerprint_label">Sawun yatsa</string>
-    <string name="forums_settings_field_server">Sabar</string>
     <string name="forums_settings_name_edit_cd">Gyara suna</string>
     <string name="forums_settings_name_cancel_cd">Soke gyara</string>
     <string name="forums_settings_save_name">Adana suna</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Shigo da saituna</string>
     <string name="forums_communities_add">Ƙara al\'ummomi</string>
     <string name="forums_communities_add_failed">Ba a iya ƙara al\'ummomin ba</string>
-    <string name="forums_imported_settings">An shigo da al\'ummomi %1$s, sabobin da aka toshe %2$s da saƙonnin da aka ajiye %3$s</string>
-    <string name="forums_imported_settings_more">Zuwa yanzu an shigo da al\'ummomi %1$s, sabobin da aka toshe %2$s da saƙonnin da aka ajiye %3$s; sauran na zuwa</string>
     <string name="forums_import_failed">Ba a iya shigo da su ba</string>
     <string name="forums_community">Al\'umma</string>
     <string name="forums_community_name">Sunan al\'umma</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Ana wallafawa a %1$s a matsayin %2$s</string>
     <string name="forums_find_search_example">Bincika ta suna, ID, fingerprint, URL, ko %1$s</string>
     <string name="forums_setup">Saitawa</string>
+    <string name="forums_post_remove_title">Cire post</string>
+    <string name="forums_post_remove_message">Wannan zai ɓoye saƙon daga masu amfani na yau da kullum. Masu sa ido za su iya gani da maido da shi daga baya.</string>
+    <string name="forums_comment_remove_title">Cire sharhi</string>
+    <string name="forums_comment_remove_message">Wannan zai ɓoye sharhin daga masu amfani na yau da kullum. Masu sa ido za su iya gani da maido da shi daga baya.</string>
+    <string name="forums_report_submitted">An gabatar da rahoto</string>
+    <string name="forums_member_remove_message">Za a share ƙuri\'un wannan mutumin a wannan dandalin.</string>
+    <string name="forums_member_block_message">Ba zai sake ganin wannan forum ba.</string>
+    <string name="forums_member_block_title">Toshe %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">An kau da shi</string>
+    <string name="forums_moderation_restriction_member">Memba</string>
+    <string name="forums_moderation_restriction_duration">Tsawon lokaci</string>
+    <string name="forums_moderation_duration_hour">Awa ɗaya</string>
+    <string name="forums_moderation_duration_day">Kwana ɗaya</string>
+    <string name="forums_moderation_duration_week">Mako ɗaya</string>
+    <string name="forums_moderation_duration_month">Wata ɗaya</string>
+    <string name="forums_member_remove">Cire</string>
+    <string name="forums_member_remove_title">Cire %1$s?</string>
+    <string name="forums_imported">An shigo da %1$s</string>
+    <string name="forums_imported_more">An shigo da %1$s zuwa yanzu; sauran na biye</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">al\'umma %s</item>
+        <item quantity="other">al\'ummomi %s</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">toshewa %s</item>
+        <item quantity="other">toshewa %s</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">post %s da aka ajiye</item>
+        <item quantity="other">post %s da aka ajiye</item>
+    </plurals>
 </resources>

@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">यावरून वाचा</string>
     <string name="feeds_source_follow_pending">फॉलो प्रलंबित</string>
     <string name="feeds_import_follows">फाइलमधून फॉलो केलेली खाती आयात करा</string>
-    <string name="feeds_follows_importing">%1$s फॉलो आयात करत आहे; आतापर्यंत %2$s जोडले</string>
     <string name="feeds_publish_to_account">%1$s वर प्रकाशित करा</string>
     <string name="feeds_import_posts">पोस्ट्स आयात करा</string>
     <string name="feeds_import_bookmarks">बुकमार्क्स आयात करा</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">आता Bluesky फीड नाही</string>
     <string name="feeds_generator_failed">Bluesky फीड बदलता आला नाही</string>
     <string name="feeds_copies_delete_title">%1$s वरील प्रती हटवायच्या?</string>
-    <string name="feeds_copies_delete_message">फीडने तेथे %1$s पोस्ट्स प्रकाशित केल्या. तुम्ही हटवल्याशिवाय त्या तशाच राहतील.</string>
     <string name="feeds_copies_delete">प्रती हटवा</string>
     <string name="feeds_copies_keep">ठेवा</string>
     <string name="feeds_copies_delete_failed">प्रती हटवता आल्या नाहीत</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">आयात करता आले नाही</string>
     <string name="feeds_imported">%1$s आयात केले</string>
     <string name="feeds_imported_more">आतापर्यंत %1$s आयात केले; उर्वरित नंतर आयात होतील</string>
-    <string name="feeds_import_sources_more">आतापर्यंत %1$s स्रोत जोडले; उर्वरित नंतर जोडले जातील</string>
     <string name="feeds_waiting_title">परवानगीची प्रतीक्षा करत आहे</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s व्यक्ती</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">टॅगनुसार फिल्टर केले:</string>
     <string name="feeds_setup">सेट अप करा</string>
     <string name="feeds_search_example">नाव, ID, फिंगरप्रिंट, URL, किंवा %1$s ने शोधा</string>
+    <string name="feeds_member_remove_message">या व्यक्तीच्या या फीडमधील प्रतिक्रिया हटवल्या जातात.</string>
+    <string name="feeds_member_block_message">त्यांना यापुढे हे फीड पाहता येणार नाही.</string>
+    <string name="feeds_member_block_title">%1$s ला ब्लॉक करायचे?</string>
+    <string name="feeds_member_remove_title">%1$s ला काढायचे?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s फॉलो आयात होत आहे</item>
+        <item quantity="other">%s फॉलो आयात होत आहेत</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">आतापर्यंत %s जोडला</item>
+        <item quantity="other">आतापर्यंत %s जोडले</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">फीडने तेथे %s पोस्ट प्रकाशित केली. तुम्ही ती हटवेपर्यंत ती राहील.</item>
+        <item quantity="other">फीडने तेथे %s पोस्ट प्रकाशित केल्या. तुम्ही त्या हटवेपर्यंत त्या राहतील.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">आतापर्यंत %s स्रोत जोडला; उर्वरित नंतर येतील</item>
+        <item quantity="other">आतापर्यंत %s स्रोत जोडले; उर्वरित नंतर येतील</item>
+    </plurals>
 </resources>

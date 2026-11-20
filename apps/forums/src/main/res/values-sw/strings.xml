@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Hakuna shughuli ya msimamizi bado</string>
     <string name="forums_moderation_log_meta">Na %1$s · Lengo %2$s</string>
     <string name="forums_moderation_restriction_add">Ongeza kizuizi</string>
-    <string name="forums_moderation_restriction_user">Utambulisho wa mtumiaji</string>
     <string name="forums_moderation_restriction_type_shadowban">Marufuku ya kivuli</string>
-    <string name="forums_moderation_restriction_duration_seconds">Muda (sekunde, acha tupu kwa kudumu)</string>
     <string name="forums_moderation_restriction_expires">Inaisha %1$s</string>
     <string name="forums_moderation_restriction_permanent">Ya kudumu</string>
     <string name="forums_report_reason_hate">Chuki</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Jina</string>
     <string name="forums_settings_field_entity_id">Kitambulisho cha kitengo</string>
     <string name="forums_settings_field_fingerprint_label">Alama ya kidole</string>
-    <string name="forums_settings_field_server">Seva</string>
     <string name="forums_settings_name_edit_cd">Hariri jina</string>
     <string name="forums_settings_name_cancel_cd">Ghairi kuhariri</string>
     <string name="forums_settings_save_name">Hifadhi jina</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Ingiza mipangilio</string>
     <string name="forums_communities_add">Ongeza jumuiya</string>
     <string name="forums_communities_add_failed">Imeshindwa kuongeza jumuiya</string>
-    <string name="forums_imported_settings">Zimeingizwa jumuiya %1$s, vizuizi %2$s na machapisho yaliyohifadhiwa %3$s</string>
-    <string name="forums_imported_settings_more">Hadi sasa zimeingizwa jumuiya %1$s, vizuizi %2$s na machapisho yaliyohifadhiwa %3$s; vilivyobaki vinafuata</string>
     <string name="forums_import_failed">Imeshindwa kuingiza</string>
     <string name="forums_community">Jumuiya</string>
     <string name="forums_community_name">Jina la jumuiya</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Inachapishwa kwenye %1$s kama %2$s</string>
     <string name="forums_find_search_example">Tafuta kwa jina, ID, alama ya kidole, URL, au %1$s</string>
     <string name="forums_setup">Sanidi</string>
+    <string name="forums_post_remove_title">Ondoa chapisho</string>
+    <string name="forums_post_remove_message">Hii itaficha chapisho kutoka kwa watumiaji wa kawaida. Wasimamizi bado wanaweza kuona na kulirudisha baadaye.</string>
+    <string name="forums_comment_remove_title">Ondoa maoni</string>
+    <string name="forums_comment_remove_message">Hii itaficha maoni kutoka kwa watumiaji wa kawaida. Wasimamizi bado wanaweza kuona na kuyarudisha baadaye.</string>
+    <string name="forums_report_submitted">Ripoti imewasilishwa</string>
+    <string name="forums_member_remove_message">Kura za mtu huyu katika jukwaa hili zitafutwa.</string>
+    <string name="forums_member_block_message">Hataweza kuona jukwaa hili tena.</string>
+    <string name="forums_member_block_title">Zuia %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Imetupiliwa mbali</string>
+    <string name="forums_moderation_restriction_member">Mwanachama</string>
+    <string name="forums_moderation_restriction_duration">Muda</string>
+    <string name="forums_moderation_duration_hour">Saa moja</string>
+    <string name="forums_moderation_duration_day">Siku moja</string>
+    <string name="forums_moderation_duration_week">Wiki moja</string>
+    <string name="forums_moderation_duration_month">Mwezi mmoja</string>
+    <string name="forums_member_remove">Ondoa</string>
+    <string name="forums_member_remove_title">Ondoa %1$s?</string>
+    <string name="forums_imported">Vimeingizwa: %1$s</string>
+    <string name="forums_imported_more">Vimeingizwa %1$s hadi sasa; vingine vinafuata</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">jumuiya %s</item>
+        <item quantity="other">jumuiya %s</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">uzuiaji %s</item>
+        <item quantity="other">uzuiaji %s</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">chapisho %s lililohifadhiwa</item>
+        <item quantity="other">machapisho %s yaliyohifadhiwa</item>
+    </plurals>
 </resources>

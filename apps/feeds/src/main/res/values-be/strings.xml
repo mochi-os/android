@@ -304,7 +304,6 @@
     <string name="feeds_source_read_with">Чытаць праз</string>
     <string name="feeds_source_follow_pending">Падпіска чакае</string>
     <string name="feeds_import_follows">Імпартаваць падпіскі з файла</string>
-    <string name="feeds_follows_importing">Імпарт падпісак: %1$s; пакуль дададзена %2$s</string>
     <string name="feeds_publish_to_account">Публікаваць у %1$s</string>
     <string name="feeds_import_posts">Імпартаваць пасты</string>
     <string name="feeds_import_bookmarks">Імпартаваць закладкі</string>
@@ -318,7 +317,6 @@
     <string name="feeds_generator_off">Больш не стужка Bluesky</string>
     <string name="feeds_generator_failed">Не ўдалося змяніць стужку Bluesky</string>
     <string name="feeds_copies_delete_title">Выдаліць копіі ў %1$s?</string>
-    <string name="feeds_copies_delete_message">Стужка апублікавала там пастоў: %1$s. Яны застануцца, калі вы іх не выдаліце.</string>
     <string name="feeds_copies_delete">Выдаліць копіі</string>
     <string name="feeds_copies_keep">Пакінуць</string>
     <string name="feeds_copies_delete_failed">Не ўдалося выдаліць копіі</string>
@@ -326,7 +324,6 @@
     <string name="feeds_import_failed">Не ўдалося імпартаваць</string>
     <string name="feeds_imported">Імпартавана: %1$s</string>
     <string name="feeds_imported_more">Пакуль імпартавана: %1$s; астатняе будзе пазней</string>
-    <string name="feeds_import_sources_more">Пакуль дададзена крыніц: %1$s; астатнія будуць пазней</string>
     <string name="feeds_waiting_title">Чаканне дазволу</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s чалавек</item>
@@ -411,4 +408,32 @@
     <string name="feeds_filtered_by_tag">Адфільтравана па тэгу:</string>
     <string name="feeds_setup">Наладзіць</string>
     <string name="feeds_search_example">Пошук па назве, ID, адбітку, URL або адрасе %1$s</string>
+    <string name="feeds_member_remove_message">Рэакцыі гэтага чалавека ў гэтай стужцы будуць выдалены.</string>
+    <string name="feeds_member_block_message">Больш не зможа праглядаць гэтую стужку.</string>
+    <string name="feeds_member_block_title">Заблакаваць %1$s?</string>
+    <string name="feeds_member_remove_title">Выдаліць %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Імпартуецца %s падпіска</item>
+        <item quantity="few">Імпартуюцца %s падпіскі</item>
+        <item quantity="many">Імпартуецца %s падпісак</item>
+        <item quantity="other">Імпартуецца %s падпіскі</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">пакуль дададзена %s</item>
+        <item quantity="few">пакуль дададзены %s</item>
+        <item quantity="many">пакуль дададзена %s</item>
+        <item quantity="other">пакуль дададзена %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Стужка апублікавала там %s публікацыю. Яна застанецца, калі вы яе не выдаліце.</item>
+        <item quantity="few">Стужка апублікавала там %s публікацыі. Яны застануцца, калі вы іх не выдаліце.</item>
+        <item quantity="many">Стужка апублікавала там %s публікацый. Яны застануцца, калі вы іх не выдаліце.</item>
+        <item quantity="other">Стужка апублікавала там %s публікацыі. Яны застануцца, калі вы іх не выдаліце.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Пакуль дададзена %s крыніца; астатняе будзе пазней</item>
+        <item quantity="few">Пакуль дададзены %s крыніцы; астатняе будзе пазней</item>
+        <item quantity="many">Пакуль дададзена %s крыніц; астатняе будзе пазней</item>
+        <item quantity="other">Пакуль дададзена %s крыніцы; астатняе будзе пазней</item>
+    </plurals>
 </resources>

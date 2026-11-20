@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">წაკითხვა ანგარიშით</string>
     <string name="feeds_source_follow_pending">გამოწერა მოლოდინშია</string>
     <string name="feeds_import_follows">გამოწერების იმპორტი ფაილიდან</string>
-    <string name="feeds_follows_importing">მიმდინარეობს %1$s გამოწერის იმპორტი; ჯერჯერობით დაემატა %2$s</string>
     <string name="feeds_publish_to_account">გამოქვეყნება %1$s-ზე</string>
     <string name="feeds_import_posts">პოსტების იმპორტი</string>
     <string name="feeds_import_bookmarks">სანიშნეების იმპორტი</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">აღარ არის Bluesky-ის არხი</string>
     <string name="feeds_generator_failed">Bluesky-ის არხის შეცვლა ვერ მოხერხდა</string>
     <string name="feeds_copies_delete_title">წაიშალოს ასლები %1$s-ზე?</string>
-    <string name="feeds_copies_delete_message">არხმა იქ %1$s პოსტი გამოაქვეყნა. ისინი დარჩება, თუ არ წაშლით.</string>
     <string name="feeds_copies_delete">ასლების წაშლა</string>
     <string name="feeds_copies_keep">შენარჩუნება</string>
     <string name="feeds_copies_delete_failed">ასლების წაშლა ვერ მოხერხდა</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">იმპორტი ვერ მოხერხდა</string>
     <string name="feeds_imported">იმპორტირებულია %1$s</string>
     <string name="feeds_imported_more">ჯერჯერობით იმპორტირებულია %1$s; დანარჩენი მოგვიანებით</string>
-    <string name="feeds_import_sources_more">ჯერჯერობით დაემატა %1$s წყარო; დანარჩენი მოგვიანებით დაემატება</string>
     <string name="feeds_waiting_title">ნებართვის მოლოდინში</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s ადამიანი</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">ფილტრი ტეგით:</string>
     <string name="feeds_setup">დაყენება</string>
     <string name="feeds_search_example">ძიება სახელით, ID-ით, ანაბეჭდით, URL-ით ან მისამართით %1$s</string>
+    <string name="feeds_member_remove_message">ამ ადამიანის რეაქციები ამ არხში წაიშლება.</string>
+    <string name="feeds_member_block_message">ის ვეღარ შეძლებს ამ არხის ნახვას.</string>
+    <string name="feeds_member_block_title">დაიბლოკოს %1$s?</string>
+    <string name="feeds_member_remove_title">წაიშალოს %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">მიმდინარეობს %s გამოწერის იმპორტი</item>
+        <item quantity="other">მიმდინარეობს %s გამოწერის იმპორტი</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">ჯერჯერობით დაემატა %s</item>
+        <item quantity="other">ჯერჯერობით დაემატა %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">არხმა იქ %s პოსტი გამოაქვეყნა. ის დარჩება, თუ არ წაშლით.</item>
+        <item quantity="other">არხმა იქ %s პოსტი გამოაქვეყნა. ისინი დარჩებიან, თუ არ წაშლით.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">ჯერჯერობით დაემატა %s წყარო; დანარჩენი მოგვიანებით</item>
+        <item quantity="other">ჯერჯერობით დაემატა %s წყარო; დანარჩენი მოგვიანებით</item>
+    </plurals>
 </resources>

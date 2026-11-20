@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Chan eil gnìomh modaratair ann fhathast</string>
     <string name="forums_moderation_log_meta">Le %1$s · Targaid %2$s</string>
     <string name="forums_moderation_restriction_add">Cuir cuingealachadh ris</string>
-    <string name="forums_moderation_restriction_user">Dearbh-aithne a\' chleachdaiche</string>
     <string name="forums_moderation_restriction_type_shadowban">Toirmeasg falaichte</string>
-    <string name="forums_moderation_restriction_duration_seconds">Faid (diogan, fàg bàn airson buan)</string>
     <string name="forums_moderation_restriction_expires">Falbhaidh %1$s</string>
     <string name="forums_moderation_restriction_permanent">Buan</string>
     <string name="forums_report_reason_hate">Gràin</string>
@@ -200,7 +198,6 @@
     <string name="forums_settings_field_name">Ainm</string>
     <string name="forums_settings_field_entity_id">ID an aonaid</string>
     <string name="forums_settings_field_fingerprint_label">Meur-lorg</string>
-    <string name="forums_settings_field_server">Frithealaiche</string>
     <string name="forums_settings_name_edit_cd">Deasaich an t-ainm</string>
     <string name="forums_settings_name_cancel_cd">Sguir dhen deasachadh</string>
     <string name="forums_settings_save_name">Sàbhail an t-ainm</string>
@@ -310,8 +307,6 @@
     <string name="forums_import_settings">Ion-phortaich roghainnean</string>
     <string name="forums_communities_add">Cuir coimhearsnachdan ris</string>
     <string name="forums_communities_add_failed">Cha b\' urrainn dhuinn na coimhearsnachdan a chur ris</string>
-    <string name="forums_imported_settings">Air an ion-phortadh – coimhearsnachdan: %1$s, frithealaichean bacte: %2$s, postaichean air an sàbhaladh: %3$s</string>
-    <string name="forums_imported_settings_more">Air an ion-phortadh gu ruige seo – coimhearsnachdan: %1$s, frithealaichean bacte: %2$s, postaichean air an sàbhaladh: %3$s; thig an còrr an ceann greis</string>
     <string name="forums_import_failed">Cha b\' urrainn dhuinn ion-phortadh</string>
     <string name="forums_community">Coimhearsnachd</string>
     <string name="forums_community_name">Ainm na coimhearsnachd</string>
@@ -342,4 +337,41 @@
     <string name="forums_community_destination">Ga phostadh gu %1$s mar %2$s</string>
     <string name="forums_find_search_example">Lorg le ainm, ID, lorg-meòir, URL, no %1$s</string>
     <string name="forums_setup">Suidhich</string>
+    <string name="forums_post_remove_title">Thoir am post air falbh</string>
+    <string name="forums_post_remove_message">Falaichidh seo am post bho ghnàth-chleachdaichean. Chì modaratairean fhathast e is faodaidh iad ath-aiseag e nas fhaide air adhart.</string>
+    <string name="forums_comment_remove_title">Thoir am beachd air falbh</string>
+    <string name="forums_comment_remove_message">Falaichidh seo am beachd bho ghnàth-chleachdaichean. Chì modaratairean fhathast e is faodaidh iad ath-aiseag e nas fhaide air adhart.</string>
+    <string name="forums_report_submitted">Chaidh an aithisg a chur a-steach</string>
+    <string name="forums_member_remove_message">Thèid bhòtaichean an neach seo san fhòram seo a sguabadh às.</string>
+    <string name="forums_member_block_message">Chan fhaic an neach seo am fòram seo tuilleadh.</string>
+    <string name="forums_member_block_title">Bac %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Air leigeil seachad</string>
+    <string name="forums_moderation_restriction_member">Ball</string>
+    <string name="forums_moderation_restriction_duration">Faid</string>
+    <string name="forums_moderation_duration_hour">Uair a thìde</string>
+    <string name="forums_moderation_duration_day">Latha</string>
+    <string name="forums_moderation_duration_week">Seachdain</string>
+    <string name="forums_moderation_duration_month">Mìos</string>
+    <string name="forums_member_remove">Thoir air falbh</string>
+    <string name="forums_member_remove_title">Thoir air falbh %1$s?</string>
+    <string name="forums_imported">Air an ion-phortadh: %1$s</string>
+    <string name="forums_imported_more">Air an ion-phortadh gu ruige seo: %1$s; thig an còrr an ceann greis</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s choimhearsnachd</item>
+        <item quantity="two">%s choimhearsnachd</item>
+        <item quantity="few">%s coimhearsnachdan</item>
+        <item quantity="other">%s coimhearsnachd</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s bhacadh</item>
+        <item quantity="two">%s bhacadh</item>
+        <item quantity="few">%s bacaidhean</item>
+        <item quantity="other">%s bacadh</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s phost air a shàbhaladh</item>
+        <item quantity="two">%s phost air an sàbhaladh</item>
+        <item quantity="few">%s postaichean air an sàbhaladh</item>
+        <item quantity="other">%s post air an sàbhaladh</item>
+    </plurals>
 </resources>

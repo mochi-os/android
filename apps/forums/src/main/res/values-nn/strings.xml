@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Ingen moderatoraktivitet enno</string>
     <string name="forums_moderation_log_meta">Av %1$s · Mål %2$s</string>
     <string name="forums_moderation_restriction_add">Legg til avgrensing</string>
-    <string name="forums_moderation_restriction_user">Brukaridentitet</string>
     <string name="forums_moderation_restriction_type_shadowban">Skuggebann</string>
-    <string name="forums_moderation_restriction_duration_seconds">Varigheit (sekund, tomt for permanent)</string>
     <string name="forums_moderation_restriction_expires">Går ut %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Hat</string>
@@ -188,7 +186,6 @@
     <string name="forums_settings_field_name">Namn</string>
     <string name="forums_settings_field_entity_id">Entitets-ID</string>
     <string name="forums_settings_field_fingerprint_label">Fingeravtrykk</string>
-    <string name="forums_settings_field_server">Tenar</string>
     <string name="forums_settings_name_edit_cd">Rediger namn</string>
     <string name="forums_settings_name_cancel_cd">Avbryt redigering</string>
     <string name="forums_settings_save_name">Lagre namn</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Importer innstillingar</string>
     <string name="forums_communities_add">Legg til fellesskap</string>
     <string name="forums_communities_add_failed">Klarte ikkje å leggje til fellesskapa</string>
-    <string name="forums_imported_settings">Importerte %1$s fellesskap, %2$s blokkeringar og %3$s lagra innlegg</string>
-    <string name="forums_imported_settings_more">Importerte %1$s fellesskap, %2$s blokkeringar og %3$s lagra innlegg så langt; resten kjem etter</string>
     <string name="forums_import_failed">Klarte ikkje å importere</string>
     <string name="forums_community">Fellesskap</string>
     <string name="forums_community_name">Fellesskapsnamn</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Vert publisert i %1$s som %2$s</string>
     <string name="forums_find_search_example">Søk på namn, ID, fingeravtrykk, URL eller %1$s</string>
     <string name="forums_setup">Sett opp</string>
+    <string name="forums_post_remove_title">Fjern innlegg</string>
+    <string name="forums_post_remove_message">Dette vil skjule innlegget frå vanlege brukarar. Moderatorar kan framleis sjå det og gjenopprette det seinare.</string>
+    <string name="forums_comment_remove_title">Fjern kommentar</string>
+    <string name="forums_comment_remove_message">Dette vil skjule kommentaren frå vanlege brukarar. Moderatorar kan framleis sjå han og gjenopprette han seinare.</string>
+    <string name="forums_report_submitted">Rapport sendt inn</string>
+    <string name="forums_member_remove_message">Stemmene til denne personen i dette forumet blir sletta.</string>
+    <string name="forums_member_block_message">Dei kan ikkje lenger sjå dette forumet.</string>
+    <string name="forums_member_block_title">Blokkere %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Avvist</string>
+    <string name="forums_moderation_restriction_member">Medlem</string>
+    <string name="forums_moderation_restriction_duration">Varigheit</string>
+    <string name="forums_moderation_duration_hour">Ein time</string>
+    <string name="forums_moderation_duration_day">Ein dag</string>
+    <string name="forums_moderation_duration_week">Ei veke</string>
+    <string name="forums_moderation_duration_month">Ein månad</string>
+    <string name="forums_member_remove">Fjern</string>
+    <string name="forums_member_remove_title">Fjerne %1$s?</string>
+    <string name="forums_imported">Importerte %1$s</string>
+    <string name="forums_imported_more">Importerte %1$s så langt; resten kjem etter</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s fellesskap</item>
+        <item quantity="other">%s fellesskap</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokkering</item>
+        <item quantity="other">%s blokkeringar</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s lagra innlegg</item>
+        <item quantity="other">%s lagra innlegg</item>
+    </plurals>
 </resources>

@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Пакуль няма дзеянняў мадэратараў</string>
     <string name="forums_moderation_log_meta">Кім %1$s · Мэта %2$s</string>
     <string name="forums_moderation_restriction_add">Дадаць абмежаванне</string>
-    <string name="forums_moderation_restriction_user">Ідэнтычнасць карыстальніка</string>
     <string name="forums_moderation_restriction_type_shadowban">Цянёвая блакіроўка</string>
-    <string name="forums_moderation_restriction_duration_seconds">Працягласць (секунды, пустое для пастаяннай)</string>
     <string name="forums_moderation_restriction_expires">Заканчваецца %1$s</string>
     <string name="forums_moderation_restriction_permanent">Пастаянная</string>
     <string name="forums_report_reason_hate">Нянавісць</string>
@@ -200,7 +198,6 @@
     <string name="forums_settings_field_name">Назва</string>
     <string name="forums_settings_field_entity_id">ID сутнасці</string>
     <string name="forums_settings_field_fingerprint_label">Адбітак пальца</string>
-    <string name="forums_settings_field_server">Сервер</string>
     <string name="forums_settings_name_edit_cd">Рэдагаваць назву</string>
     <string name="forums_settings_name_cancel_cd">Скасаваць рэдагаванне</string>
     <string name="forums_settings_save_name">Захаваць назву</string>
@@ -310,8 +307,6 @@
     <string name="forums_import_settings">Імпартаваць налады</string>
     <string name="forums_communities_add">Дадаць супольнасці</string>
     <string name="forums_communities_add_failed">Не ўдалося дадаць супольнасці</string>
-    <string name="forums_imported_settings">Імпартавана супольнасцей: %1$s, заблакаваных сервераў: %2$s, захаваных допісаў: %3$s</string>
-    <string name="forums_imported_settings_more">Пакуль імпартавана супольнасцей: %1$s, заблакаваных сервераў: %2$s, захаваных допісаў: %3$s; астатняе будзе далей</string>
     <string name="forums_import_failed">Не ўдалося імпартаваць</string>
     <string name="forums_community">Супольнасць</string>
     <string name="forums_community_name">Імя супольнасці</string>
@@ -342,4 +337,41 @@
     <string name="forums_community_destination">Публікуецца ў %1$s ад імя %2$s</string>
     <string name="forums_find_search_example">Пошук па назве, ID, адбітку, URL або адрасе %1$s</string>
     <string name="forums_setup">Наладзіць</string>
+    <string name="forums_post_remove_title">Выдаліць пост</string>
+    <string name="forums_post_remove_message">Гэта схавае публікацыю ад звычайных карыстальнікаў. Мадэратары змогуць яе бачыць і пазней аднавіць.</string>
+    <string name="forums_comment_remove_title">Выдаліць каментар</string>
+    <string name="forums_comment_remove_message">Гэта схавае каментарый ад звычайных карыстальнікаў. Мадэратары змогуць яго бачыць і пазней аднавіць.</string>
+    <string name="forums_report_submitted">Скарга адпраўлена</string>
+    <string name="forums_member_remove_message">Галасы гэтага чалавека на гэтым форуме будуць выдалены.</string>
+    <string name="forums_member_block_message">Больш не зможа праглядаць гэты форум.</string>
+    <string name="forums_member_block_title">Заблакаваць %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Адхілена</string>
+    <string name="forums_moderation_restriction_member">Удзельнік</string>
+    <string name="forums_moderation_restriction_duration">Працягласць</string>
+    <string name="forums_moderation_duration_hour">Гадзіна</string>
+    <string name="forums_moderation_duration_day">Дзень</string>
+    <string name="forums_moderation_duration_week">Тыдзень</string>
+    <string name="forums_moderation_duration_month">Месяц</string>
+    <string name="forums_member_remove">Выдаліць</string>
+    <string name="forums_member_remove_title">Выдаліць %1$s?</string>
+    <string name="forums_imported">Імпартавана: %1$s</string>
+    <string name="forums_imported_more">Пакуль імпартавана: %1$s; астатняе будзе пазней</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s супольнасць</item>
+        <item quantity="few">%s супольнасці</item>
+        <item quantity="many">%s супольнасцей</item>
+        <item quantity="other">%s супольнасці</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s блакіроўка</item>
+        <item quantity="few">%s блакіроўкі</item>
+        <item quantity="many">%s блакіровак</item>
+        <item quantity="other">%s блакіроўкі</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s захаваны пост</item>
+        <item quantity="few">%s захаваныя пасты</item>
+        <item quantity="many">%s захаваных пастоў</item>
+        <item quantity="other">%s захаванага паста</item>
+    </plurals>
 </resources>

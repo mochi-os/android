@@ -19,6 +19,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.CardDefaults
@@ -32,12 +33,16 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -60,9 +65,13 @@ private const val SAVE_DEBOUNCE_MS = 700L
 private val NUMBER_FIELD_WIDTH = 80.dp
 private val NUMBER_FIELD_HEIGHT = 44.dp
 
+/** The number boxes, to say which one has focus. */
+private enum class NumberBox { DAYS, POSTS, COMMENTS, WINDOW }
+
 /**
  * Moderation settings tab. Edits save themselves - toggles at once, typed
- * numbers after [SAVE_DEBOUNCE_MS] - and each save reports a string resource
+ * numbers after [SAVE_DEBOUNCE_MS], or as their box loses focus or the
+ * keyboard's Done is pressed - and each save reports a string resource
  * through [onMessage]; the settings screen owns the snackbar.
  */
 @Composable
@@ -91,29 +100,37 @@ fun ModerationTab(
         }
     }
 
-    var moderationPosts by remember(uiState.settings) {
-        mutableStateOf(uiState.settings?.moderationPosts ?: false)
-    }
-    var moderationComments by remember(uiState.settings) {
-        mutableStateOf(uiState.settings?.moderationComments ?: false)
-    }
-    var moderationNew by remember(uiState.settings) {
-        mutableStateOf(uiState.settings?.moderationNew ?: false)
-    }
-    var newUserDays by remember(uiState.settings) {
-        mutableStateOf((uiState.settings?.newUserDays ?: 0).toString())
-    }
-    var postLimit by remember(uiState.settings) {
-        mutableStateOf((uiState.settings?.postLimit ?: 0).toString())
-    }
-    var commentLimit by remember(uiState.settings) {
-        mutableStateOf((uiState.settings?.commentLimit ?: 0).toString())
-    }
-    var limitWindow by remember(uiState.settings) {
-        mutableStateOf((uiState.settings?.limitWindow ?: 3600).toString())
-    }
+    var moderationPosts by remember { mutableStateOf(false) }
+    var moderationComments by remember { mutableStateOf(false) }
+    var moderationNew by remember { mutableStateOf(false) }
+    var newUserDays by remember { mutableStateOf("") }
+    var postLimit by remember { mutableStateOf("") }
+    var commentLimit by remember { mutableStateOf("") }
+    var limitWindow by remember { mutableStateOf("") }
+    var focused by remember { mutableStateOf<NumberBox?>(null) }
+    // The edit last sent, so a pause and a focus loss do not both send it.
+    var sent by remember { mutableStateOf<ModerationSettings?>(null) }
+    var seeded by remember { mutableStateOf<ModerationSettings?>(null) }
 
     val saved = uiState.settings
+    // The controls follow what the forum holds - after a load, a save, or a
+    // refused save's reread - but never the box being typed in: rewriting it
+    // would put a value under the moderator's cursor mid-edit. By identity: a
+    // refused save's reread equals what was seeded, and must still put the
+    // controls back.
+    if (saved != null && saved !== seeded) {
+        seeded = saved
+        sent = null
+        moderationPosts = saved.moderationPosts
+        moderationComments = saved.moderationComments
+        moderationNew = saved.moderationNew
+        if (focused != NumberBox.DAYS) newUserDays = saved.newUserDays.toString()
+        if (focused != NumberBox.POSTS) postLimit = saved.postLimit.toString()
+        if (focused != NumberBox.COMMENTS) commentLimit = saved.commentLimit.toString()
+        if (focused != NumberBox.WINDOW) limitWindow = saved.limitWindow.toString()
+    }
+    val current by rememberUpdatedState(saved)
+
     if (saved == null) {
         Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             CircularProgressIndicator()
@@ -121,26 +138,52 @@ fun ModerationTab(
         return
     }
 
-    // The edits as they stand. Reads the state vars directly, so a row that
-    // writes its var before calling this sees its own new value.
-    fun draft() = ModerationSettings(
+    // The edits as they stand, or null while a number box holds no number: an
+    // empty box is not a value, and saved as 0 it lifted the limit. Reads the
+    // state vars directly, so a row that writes its var before calling this
+    // sees its own new value.
+    fun draft(): ModerationSettings? = ModerationSettings(
         moderationPosts = moderationPosts,
         moderationComments = moderationComments,
         moderationNew = moderationNew,
-        newUserDays = newUserDays.toIntOrNull() ?: 0,
-        postLimit = postLimit.toIntOrNull() ?: 0,
-        commentLimit = commentLimit.toIntOrNull() ?: 0,
-        limitWindow = limitWindow.toIntOrNull() ?: 3600,
+        newUserDays = newUserDays.toIntOrNull() ?: return null,
+        postLimit = postLimit.toIntOrNull() ?: return null,
+        commentLimit = commentLimit.toIntOrNull() ?: return null,
+        limitWindow = limitWindow.toIntOrNull() ?: return null,
     )
+
+    fun save(edited: ModerationSettings) {
+        if (edited == current || edited == sent) return
+        sent = edited
+        viewModel.saveSettings(edited)
+    }
+
+    // A switch saves at once, with the numbers as saved while a box is empty.
+    fun switched() = draft() ?: saved.copy(
+        moderationPosts = moderationPosts,
+        moderationComments = moderationComments,
+        moderationNew = moderationNew,
+    )
+
+    // A box losing focus saves what it holds, as does the keyboard's Done,
+    // which takes the focus away.
+    fun leave(box: NumberBox, hasFocus: Boolean) {
+        if (hasFocus) {
+            focused = box
+            return
+        }
+        if (focused == box) focused = null
+        draft()?.let(::save)
+    }
 
     // Typing saves once the user pauses; a per-keystroke POST would be a
     // request per digit. Toggles save on the spot instead (see below), so this
     // is keyed on the numeric fields only.
     LaunchedEffect(newUserDays, postLimit, commentLimit, limitWindow) {
-        val edited = draft()
-        if (edited == saved) return@LaunchedEffect
+        val edited = draft() ?: return@LaunchedEffect
+        if (edited == current) return@LaunchedEffect
         delay(SAVE_DEBOUNCE_MS)
-        viewModel.saveSettings(edited)
+        save(edited)
     }
 
     Column(
@@ -162,7 +205,7 @@ fun ModerationTab(
                 checked = moderationPosts,
                 onCheckedChange = { checked ->
                     moderationPosts = checked
-                    viewModel.saveSettings(draft())
+                    save(switched())
                 },
             )
             ToggleRow(
@@ -173,7 +216,7 @@ fun ModerationTab(
                 checked = moderationComments,
                 onCheckedChange = { checked ->
                     moderationComments = checked
-                    viewModel.saveSettings(draft())
+                    save(switched())
                 },
             )
             ToggleRow(
@@ -184,7 +227,7 @@ fun ModerationTab(
                 checked = moderationNew,
                 onCheckedChange = { checked ->
                     moderationNew = checked
-                    viewModel.saveSettings(draft())
+                    save(switched())
                 },
             )
             // The threshold only bites while new users are pre-moderated, so it
@@ -209,6 +252,7 @@ fun ModerationTab(
                         NumberField(
                             value = newUserDays,
                             onValueChange = { value -> newUserDays = value },
+                            onFocus = { hasFocus -> leave(NumberBox.DAYS, hasFocus) },
                         )
                         Spacer(Modifier.width(8.dp))
                         UnitLabel(stringResource(R.string.forums_moderation_unit_days))
@@ -228,18 +272,21 @@ fun ModerationTab(
                 unit = stringResource(R.string.forums_moderation_unit_posts),
                 value = postLimit,
                 onValueChange = { value -> postLimit = value },
+                onFocus = { hasFocus -> leave(NumberBox.POSTS, hasFocus) },
             )
             LimitRow(
                 label = stringResource(R.string.forums_moderation_comment_limit),
                 unit = stringResource(R.string.forums_moderation_unit_replies),
                 value = commentLimit,
                 onValueChange = { value -> commentLimit = value },
+                onFocus = { hasFocus -> leave(NumberBox.COMMENTS, hasFocus) },
             )
             LimitRow(
                 label = stringResource(R.string.forums_moderation_limit_window),
                 unit = stringResource(R.string.forums_moderation_unit_seconds),
                 value = limitWindow,
                 onValueChange = { value -> limitWindow = value },
+                onFocus = { hasFocus -> leave(NumberBox.WINDOW, hasFocus) },
             )
         }
     }
@@ -284,6 +331,7 @@ private fun LimitRow(
     unit: String,
     value: String,
     onValueChange: (String) -> Unit,
+    onFocus: (Boolean) -> Unit,
 ) {
     Row(
         modifier = Modifier
@@ -297,18 +345,20 @@ private fun LimitRow(
             modifier = Modifier.weight(1f),
         )
         Spacer(Modifier.width(12.dp))
-        NumberField(value = value, onValueChange = onValueChange)
+        NumberField(value = value, onValueChange = onValueChange, onFocus = onFocus)
         Spacer(Modifier.width(8.dp))
         UnitLabel(unit)
     }
 }
 
-/** Digits-only box sized for the numbers these settings hold. */
+/** Digits-only box sized for the numbers these settings hold; [onFocus] hears it gain and lose focus. */
 @Composable
 private fun NumberField(
     value: String,
     onValueChange: (String) -> Unit,
+    onFocus: (Boolean) -> Unit,
 ) {
+    val focusManager = LocalFocusManager.current
     // A plain MochiTextField can't go under its 56.dp minimum without
     // clipping its own padding, so this is a BasicTextField wearing the same
     // outline — the only way to a box this small that still centres its digits.
@@ -322,8 +372,10 @@ private fun NumberField(
             textAlign = TextAlign.Center,
         ),
         cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
-        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number, imeAction = ImeAction.Done),
+        keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() }),
         modifier = Modifier
+            .onFocusChanged { state -> onFocus(state.isFocused) }
             .width(NUMBER_FIELD_WIDTH)
             .height(NUMBER_FIELD_HEIGHT)
             .border(1.dp, MaterialTheme.colorScheme.outline, shape)

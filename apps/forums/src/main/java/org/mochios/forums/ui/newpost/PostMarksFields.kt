@@ -30,6 +30,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.LanguageCompare
 import java.util.Locale
 
 /**
@@ -52,6 +53,10 @@ internal fun languageName(tag: String): String {
     if (name.isNullOrBlank() || name == tag) return tag
     return name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(locale) else it.toString() }
 }
+
+/** Each language a post may be in, with its own name, in the order a reader looks for theirs. */
+internal fun postLanguageChoices(): List<Pair<String, String>> =
+    POST_LANGUAGES.map { it to languageName(it) }.sortedWith(compareBy(LanguageCompare) { it.second })
 
 /** The link field of a forum post, with what is wrong with what was typed. */
 @Composable
@@ -84,7 +89,7 @@ internal fun PostMarksFields(
 ) {
     var open by remember { mutableStateOf(false) }
     val none = stringResource(org.mochios.forums.R.string.forums_post_language_none)
-    val languages = remember { POST_LANGUAGES.map { it to languageName(it) }.sortedBy { it.second.lowercase() } }
+    val languages = remember { postLanguageChoices() }
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         ExposedDropdownMenuBox(expanded = open, onExpandedChange = { open = it }) {
             MochiTextField(

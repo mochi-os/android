@@ -41,11 +41,13 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.components.AccessCandidate
 import org.mochios.android.ui.components.AccessLabels
 import org.mochios.android.ui.components.AccessRulesSection
+import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.Section
 import org.mochios.android.ui.components.toSubjectRule
 import org.mochios.forums.R
+import org.mochios.forums.model.ForumMember
 import org.mochios.android.R as MochiR
 
 @Composable
@@ -59,6 +61,9 @@ private fun accessLevelLabel(operation: String): String = when (operation) {
     else -> operation
 }
 
+/** A member's removal or block waiting on its confirmation. */
+private data class MemberChange(val member: ForumMember, val block: Boolean)
+
 // The forum's levels come from `-/access`; this stands in only if that load
 // failed, so a dropdown is never empty. Highest-to-lowest, matching web's order.
 private val ACCESS_LEVEL_FALLBACK_KEYS = listOf("moderate", "post", "comment", "vote", "view")
@@ -68,6 +73,11 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
     val uiState by viewModel.uiState.collectAsState()
     var memberQuery by remember { mutableStateOf("") }
     val resources = LocalResources.current
+    // Removing deletes the member's votes and blocking denies them every
+    // level, and the two buttons sit a thumb apart, so each asks first; the
+    // dialog stays, its button spinning, until the server answers.
+    var confirming by remember { mutableStateOf<MemberChange?>(null) }
+    var sending by remember { mutableStateOf(false) }
 
     LaunchedEffect(Unit) {
         viewModel.loadAccess()
@@ -165,16 +175,14 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
                                 overflow = TextOverflow.Ellipsis,
                                 modifier = Modifier.weight(1f),
                             )
-                            MochiIconButton(onClick = { viewModel.removeMember(member.id) }) {
+                            MochiIconButton(onClick = { confirming = MemberChange(member, block = false) }) {
                                 Icon(
                                     Icons.Default.Close,
-                                    contentDescription = stringResource(
-                                        MochiR.string.common_delete
-                                    ),
+                                    contentDescription = stringResource(R.string.forums_member_remove),
                                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                                 )
                             }
-                            MochiIconButton(onClick = { viewModel.blockMember(member.id) }) {
+                            MochiIconButton(onClick = { confirming = MemberChange(member, block = true) }) {
                                 Icon(
                                     Icons.Default.Block,
                                     contentDescription = stringResource(R.string.forums_block),
@@ -186,5 +194,36 @@ fun AccessTab(viewModel: ForumSettingsViewModel) {
                 }
             }
         }
+    }
+
+    confirming?.let { change ->
+        val name = change.member.name.ifBlank { change.member.id }
+        val done: (Boolean) -> Unit = { finished ->
+            sending = false
+            if (finished) confirming = null
+        }
+        MochiAlertDialog(
+            onDismissRequest = { if (!sending) confirming = null },
+            title = stringResource(
+                if (change.block) R.string.forums_member_block_title else R.string.forums_member_remove_title,
+                name,
+            ),
+            text = stringResource(
+                if (change.block) R.string.forums_member_block_message else R.string.forums_member_remove_message,
+            ),
+            confirmText = stringResource(if (change.block) R.string.forums_block else R.string.forums_member_remove),
+            onConfirm = {
+                sending = true
+                if (change.block) {
+                    viewModel.blockMember(change.member.id, done)
+                } else {
+                    viewModel.removeMember(change.member.id, done)
+                }
+            },
+            confirmLoading = sending,
+            destructive = true,
+            dismissText = stringResource(MochiR.string.common_cancel),
+            dismissEnabled = !sending,
+        )
     }
 }

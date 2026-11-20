@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Wala pang aktibidad ng moderator</string>
     <string name="forums_moderation_log_meta">Ni %1$s · Target %2$s</string>
     <string name="forums_moderation_restriction_add">Magdagdag ng paghihigpit</string>
-    <string name="forums_moderation_restriction_user">Pagkakakilanlan ng user</string>
     <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Tagal (segundo, iwanang blangko para permanente)</string>
     <string name="forums_moderation_restriction_expires">Mag-e-expire %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanente</string>
     <string name="forums_report_reason_hate">Pagkamuhi</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Pangalan</string>
     <string name="forums_settings_field_entity_id">Entity ID</string>
     <string name="forums_settings_field_fingerprint_label">Fingerprint</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">I-edit ang pangalan</string>
     <string name="forums_settings_name_cancel_cd">Kanselahin ang pag-edit</string>
     <string name="forums_settings_save_name">I-save ang pangalan</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">I-import ang mga setting</string>
     <string name="forums_communities_add">Magdagdag ng mga komunidad</string>
     <string name="forums_communities_add_failed">Hindi maidagdag ang mga komunidad</string>
-    <string name="forums_imported_settings">Na-import ang %1$s komunidad, %2$s pagharang at %3$s naka-save na post</string>
-    <string name="forums_imported_settings_more">Sa ngayon, na-import na ang %1$s komunidad, %2$s pagharang at %3$s naka-save na post; susunod ang iba</string>
     <string name="forums_import_failed">Hindi ma-import</string>
     <string name="forums_community">Komunidad</string>
     <string name="forums_community_name">Pangalan ng komunidad</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Ipo-post sa %1$s bilang %2$s</string>
     <string name="forums_find_search_example">Maghanap ayon sa pangalan, ID, fingerprint, URL, o %1$s</string>
     <string name="forums_setup">I-set up</string>
+    <string name="forums_post_remove_title">Alisin ang post</string>
+    <string name="forums_post_remove_message">Itatago nito ang post mula sa mga regular na user. Maaari pa ring makita ng mga moderator at i-restore mamaya.</string>
+    <string name="forums_comment_remove_title">Alisin ang komento</string>
+    <string name="forums_comment_remove_message">Itatago nito ang komento mula sa mga regular na user. Maaari pa ring makita ng mga moderator at i-restore mamaya.</string>
+    <string name="forums_report_submitted">Naipasa ang report</string>
+    <string name="forums_member_remove_message">Tatanggalin ang mga boto niya sa forum na ito.</string>
+    <string name="forums_member_block_message">Hindi na nila makikita ang forum na ito.</string>
+    <string name="forums_member_block_title">I-block si %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Na-dismiss</string>
+    <string name="forums_moderation_restriction_member">Miyembro</string>
+    <string name="forums_moderation_restriction_duration">Tagal</string>
+    <string name="forums_moderation_duration_hour">Isang oras</string>
+    <string name="forums_moderation_duration_day">Isang araw</string>
+    <string name="forums_moderation_duration_week">Isang linggo</string>
+    <string name="forums_moderation_duration_month">Isang buwan</string>
+    <string name="forums_member_remove">Alisin</string>
+    <string name="forums_member_remove_title">Alisin si %1$s?</string>
+    <string name="forums_imported">Na-import ang %1$s</string>
+    <string name="forums_imported_more">%1$s na ang na-import; susunod ang iba pa</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s komunidad</item>
+        <item quantity="other">%s na komunidad</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s pag-block</item>
+        <item quantity="other">%s na pag-block</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s naka-save na post</item>
+        <item quantity="other">%s na naka-save na post</item>
+    </plurals>
 </resources>

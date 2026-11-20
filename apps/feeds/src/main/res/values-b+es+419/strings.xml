@@ -282,7 +282,6 @@
     <string name="feeds_source_read_with">Leer con</string>
     <string name="feeds_source_follow_pending">Seguimiento pendiente</string>
     <string name="feeds_import_follows">Importar cuentas seguidas desde un archivo</string>
-    <string name="feeds_follows_importing">Importando %1$s cuentas seguidas; %2$s agregadas hasta ahora</string>
     <string name="feeds_publish_to_account">Publicar en %1$s</string>
     <string name="feeds_import_posts">Importar publicaciones</string>
     <string name="feeds_import_bookmarks">Importar marcadores</string>
@@ -296,7 +295,6 @@
     <string name="feeds_generator_off">Ya no es un feed de Bluesky</string>
     <string name="feeds_generator_failed">No se pudo cambiar el feed de Bluesky</string>
     <string name="feeds_copies_delete_title">¿Eliminar las copias en %1$s?</string>
-    <string name="feeds_copies_delete_message">El feed publicó %1$s publicaciones allí. Se mantienen a menos que las elimines.</string>
     <string name="feeds_copies_delete">Eliminar copias</string>
     <string name="feeds_copies_keep">Conservar</string>
     <string name="feeds_copies_delete_failed">No se pudieron eliminar las copias</string>
@@ -304,7 +302,6 @@
     <string name="feeds_import_failed">No se pudo importar</string>
     <string name="feeds_imported">Se importaron %1$s</string>
     <string name="feeds_imported_more">Se importaron %1$s hasta ahora; el resto llegará después</string>
-    <string name="feeds_import_sources_more">Se agregaron %1$s fuentes hasta ahora; el resto llegará después</string>
     <string name="feeds_waiting_title">Esperando permiso</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s persona</item>
@@ -368,4 +365,7 @@
     <string name="feeds_filtered_by_tag">Filtrado por etiqueta:</string>
     <string name="feeds_setup">Configurar</string>
     <string name="feeds_search_example">Buscar por nombre, ID, huella, URL o %1$s</string>
+    <string name="feeds_member_remove_message">Se eliminan las reacciones de esta persona en este feed.</string>
+    <string name="feeds_member_block_message">Ya no podrá ver este feed.</string>
+    <string name="feeds_member_block_title">¿Bloquear a %1$s?</string>
 </resources>

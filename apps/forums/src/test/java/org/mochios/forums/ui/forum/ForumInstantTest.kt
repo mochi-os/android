@@ -22,12 +22,12 @@ import okhttp3.mockwebserver.MockWebServer
 import okhttp3.mockwebserver.RecordedRequest
 import org.junit.After
 import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.MochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.websocket.MochiWebSocket
@@ -89,6 +89,9 @@ class ForumInstantTest {
 
     private val events = mutableListOf<ForumEvent>()
     private var collector: Job? = null
+
+    /** What the post screen was told went wrong, each once. */
+    private val errors = mutableListOf<MochiError>()
 
     @Before
     fun begin() {
@@ -226,11 +229,11 @@ class ForumInstantTest {
     private fun post(): PostViewModel {
         val model = PostViewModel(
             SavedStateHandle(mapOf("forumId" to "f1", "postId" to "p1")),
-            context,
             repository,
             session,
             socket,
         )
+        collector = CoroutineScope(Dispatchers.Main).launch { model.errors.collect { errors += it } }
         until { model.uiState.value.following != null && !model.uiState.value.isLoading }
         settle()
         return model
@@ -272,8 +275,9 @@ class ForumInstantTest {
 
         refuse = true
         gate.countDown()
-        until { model.uiState.value.error != null }
-        assertNotNull(model.uiState.value.error)
+        until { errors.isNotEmpty() }
+        // The post stays on screen: the refusal is said over it, not in its place.
+        assertNull(model.uiState.value.error)
         assertEquals(false, model.uiState.value.following)
     }
 
@@ -285,7 +289,7 @@ class ForumInstantTest {
         until { writes.contains("/forums/f1/-/p1/follow") }
         settle()
         assertEquals(true, model.uiState.value.following)
-        assertNull(model.uiState.value.error)
+        assertTrue(errors.isEmpty())
     }
 
     @Test
@@ -298,7 +302,7 @@ class ForumInstantTest {
 
         refuse = true
         gate.countDown()
-        until { model.uiState.value.error != null }
+        until { errors.isNotEmpty() }
         assertEquals(2, model.uiState.value.post.up)
         assertEquals("", model.uiState.value.post.userVote)
     }
@@ -312,7 +316,7 @@ class ForumInstantTest {
         settle()
         assertEquals(3, model.uiState.value.post.up)
         assertEquals("up", model.uiState.value.post.userVote)
-        assertNull(model.uiState.value.error)
+        assertTrue(errors.isEmpty())
     }
 
     @Test
@@ -329,7 +333,7 @@ class ForumInstantTest {
 
         refused += "/forums/f1/-/p1/c1/vote/up"
         first.countDown()
-        until { model.uiState.value.error != null }
+        until { errors.isNotEmpty() }
         assertEquals(1, comment("c1").up)
         assertEquals("", comment("c1").userVote)
         // The reply's vote still waits on the server, and still shows.
@@ -353,7 +357,7 @@ class ForumInstantTest {
 
         refuse = true
         gate.countDown()
-        until { model.uiState.value.error != null }
+        until { errors.isNotEmpty() }
         settle()
         assertEquals(false, model.uiState.value.post.locked)
         assertEquals(false, model.uiState.value.post.pinned)
@@ -367,6 +371,6 @@ class ForumInstantTest {
         until { writes.contains("/forums/f1/-/p1/lock") }
         settle()
         assertTrue(model.uiState.value.post.locked)
-        assertNull(model.uiState.value.error)
+        assertTrue(errors.isEmpty())
     }
 }

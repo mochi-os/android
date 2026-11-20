@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Läs med</string>
     <string name="feeds_source_follow_pending">Följning väntar</string>
     <string name="feeds_import_follows">Importera följda konton från en fil</string>
-    <string name="feeds_follows_importing">Importerar %1$s följda konton; %2$s tillagda hittills</string>
     <string name="feeds_publish_to_account">Publicera till %1$s</string>
     <string name="feeds_import_posts">Importera inlägg</string>
     <string name="feeds_import_bookmarks">Importera bokmärken</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Inte längre ett Bluesky-flöde</string>
     <string name="feeds_generator_failed">Det gick inte att ändra Bluesky-flödet</string>
     <string name="feeds_copies_delete_title">Ta bort kopiorna på %1$s?</string>
-    <string name="feeds_copies_delete_message">Flödet publicerade %1$s inlägg där. De finns kvar om du inte tar bort dem.</string>
     <string name="feeds_copies_delete">Ta bort kopior</string>
     <string name="feeds_copies_keep">Behåll</string>
     <string name="feeds_copies_delete_failed">Det gick inte att ta bort kopiorna</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Det gick inte att importera</string>
     <string name="feeds_imported">%1$s importerade</string>
     <string name="feeds_imported_more">%1$s importerade hittills; resten följer</string>
-    <string name="feeds_import_sources_more">%1$s källor tillagda hittills; resten följer</string>
     <string name="feeds_waiting_title">Väntar på behörighet</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s person</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Filtrerat efter tagg:</string>
     <string name="feeds_setup">Konfigurera</string>
     <string name="feeds_search_example">Sök efter namn, ID, fingeravtryck, URL eller %1$s</string>
+    <string name="feeds_member_remove_message">Personens reaktioner i det här flödet raderas.</string>
+    <string name="feeds_member_block_message">Personen kan inte längre se det här flödet.</string>
+    <string name="feeds_member_block_title">Blockera %1$s?</string>
+    <string name="feeds_member_remove_title">Ta bort %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Importerar %s följt konto</item>
+        <item quantity="other">Importerar %s följda konton</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s tillagt hittills</item>
+        <item quantity="other">%s tillagda hittills</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Flödet publicerade %s inlägg där. Det finns kvar om du inte tar bort det.</item>
+        <item quantity="other">Flödet publicerade %s inlägg där. De finns kvar om du inte tar bort dem.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">%s källa tillagd hittills; resten följer</item>
+        <item quantity="other">%s källor tillagda hittills; resten följer</item>
+    </plurals>
 </resources>

@@ -304,7 +304,6 @@
     <string name="feeds_source_read_with">Leugh le</string>
     <string name="feeds_source_follow_pending">Leantainn a\' feitheamh</string>
     <string name="feeds_import_follows">Ion-phortaich cunntasan a leanas tu o fhaidhle</string>
-    <string name="feeds_follows_importing">Ag ion-phortadh nan cunntasan a leanas tu: %1$s; air an cur ris gu ruige seo: %2$s</string>
     <string name="feeds_publish_to_account">Foillsich gu %1$s</string>
     <string name="feeds_import_posts">Ion-phortaich postaichean</string>
     <string name="feeds_import_bookmarks">Ion-phortaich comharran-lìn</string>
@@ -318,7 +317,6 @@
     <string name="feeds_generator_off">Chan e inbhir Bluesky a th\' ann tuilleadh</string>
     <string name="feeds_generator_failed">Cha b\' urrainn an t-inbhir Bluesky atharrachadh</string>
     <string name="feeds_copies_delete_title">Sguab às na lethbhric air %1$s?</string>
-    <string name="feeds_copies_delete_message">Postaichean a dh\'fhoillsich an t-inbhir an sin: %1$s. Fanaidh iad ann mura sguab thu às iad.</string>
     <string name="feeds_copies_delete">Sguab às na lethbhric</string>
     <string name="feeds_copies_keep">Cùm</string>
     <string name="feeds_copies_delete_failed">Cha b\' urrainn dhuinn na lethbhric a sguabadh às</string>
@@ -326,7 +324,6 @@
     <string name="feeds_import_failed">Cha b\' urrainn dhuinn ion-phortadh</string>
     <string name="feeds_imported">Air an ion-phortadh: %1$s</string>
     <string name="feeds_imported_more">Air an ion-phortadh gu ruige seo: %1$s; thig an còrr an ceann greis</string>
-    <string name="feeds_import_sources_more">Tùsan air an cur ris gu ruige seo: %1$s; thig an còrr an ceann greis</string>
     <string name="feeds_waiting_title">A\' feitheamh ri cead</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s neach</item>
@@ -411,4 +408,32 @@
     <string name="feeds_filtered_by_tag">Air a shìoladh le taga:</string>
     <string name="feeds_setup">Suidhich</string>
     <string name="feeds_search_example">Lorg le ainm, ID, lorg-meòir, URL, no %1$s</string>
+    <string name="feeds_member_remove_message">Thèid ath-bhualaidhean an neach seo san inbhir seo a sguabadh às.</string>
+    <string name="feeds_member_block_message">Chan fhaic an neach seo an inbhir seo tuilleadh.</string>
+    <string name="feeds_member_block_title">A bheil thu airson %1$s a bhacadh?</string>
+    <string name="feeds_member_remove_title">A bheil thu airson %1$s a thoirt air falbh?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Ag ion-phortadh %s chunntas</item>
+        <item quantity="two">Ag ion-phortadh %s chunntas</item>
+        <item quantity="few">Ag ion-phortadh %s cunntasan</item>
+        <item quantity="other">Ag ion-phortadh %s cunntas</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s air a chur ris gu ruige seo</item>
+        <item quantity="two">%s air an cur ris gu ruige seo</item>
+        <item quantity="few">%s air an cur ris gu ruige seo</item>
+        <item quantity="other">%s air an cur ris gu ruige seo</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Dh\'fhoillsich an inbhir %s phost an sin. Fanaidh e ann mura sguab thu às e.</item>
+        <item quantity="two">Dh\'fhoillsich an inbhir %s phost an sin. Fanaidh iad ann mura sguab thu às iad.</item>
+        <item quantity="few">Dh\'fhoillsich an inbhir %s postaichean an sin. Fanaidh iad ann mura sguab thu às iad.</item>
+        <item quantity="other">Dh\'fhoillsich an inbhir %s post an sin. Fanaidh iad ann mura sguab thu às iad.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Chaidh %s tùs a chur ris gu ruige seo; thig an còrr an ceann greis</item>
+        <item quantity="two">Chaidh %s thùs a chur ris gu ruige seo; thig an còrr an ceann greis</item>
+        <item quantity="few">Chaidh %s tùsan a chur ris gu ruige seo; thig an còrr an ceann greis</item>
+        <item quantity="other">Chaidh %s tùs a chur ris gu ruige seo; thig an còrr an ceann greis</item>
+    </plurals>
 </resources>

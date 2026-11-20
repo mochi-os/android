@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Zatím žádná aktivita moderátorů</string>
     <string name="forums_moderation_log_meta">Od %1$s · Cíl %2$s</string>
     <string name="forums_moderation_restriction_add">Přidat omezení</string>
-    <string name="forums_moderation_restriction_user">Identita uživatele</string>
     <string name="forums_moderation_restriction_type_shadowban">Stínový ban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Doba trvání (sekundy, prázdné pro trvalé)</string>
     <string name="forums_moderation_restriction_expires">Vyprší %1$s</string>
     <string name="forums_moderation_restriction_permanent">Trvalé</string>
     <string name="forums_report_reason_hate">Nenávist</string>
@@ -200,7 +198,6 @@
     <string name="forums_settings_field_name">Název</string>
     <string name="forums_settings_field_entity_id">ID entity</string>
     <string name="forums_settings_field_fingerprint_label">Otisk</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Upravit název</string>
     <string name="forums_settings_name_cancel_cd">Zrušit úpravy</string>
     <string name="forums_settings_save_name">Uložit název</string>
@@ -310,8 +307,6 @@
     <string name="forums_import_settings">Importovat nastavení</string>
     <string name="forums_communities_add">Přidat komunity</string>
     <string name="forums_communities_add_failed">Komunity se nepodařilo přidat</string>
-    <string name="forums_imported_settings">Importováno komunit: %1$s, blokovaných serverů: %2$s, uložených příspěvků: %3$s</string>
-    <string name="forums_imported_settings_more">Zatím importováno komunit: %1$s, blokovaných serverů: %2$s, uložených příspěvků: %3$s; zbytek bude následovat</string>
     <string name="forums_import_failed">Import se nezdařil</string>
     <string name="forums_community">Komunita</string>
     <string name="forums_community_name">Jméno komunity</string>
@@ -341,4 +336,38 @@
     <string name="forums_community_destination">Publikuje se do %1$s jako %2$s</string>
     <string name="forums_find_search_example">Hledat podle názvu, ID, otisku, URL nebo adresy %1$s</string>
     <string name="forums_setup">Nastavit</string>
+    <string name="forums_post_remove_title">Odebrat příspěvek</string>
+    <string name="forums_post_remove_message">Tímto se příspěvek skryje běžným uživatelům. Moderátoři jej stále uvidí a později jej budou moci obnovit.</string>
+    <string name="forums_comment_remove_title">Odebrat komentář</string>
+    <string name="forums_comment_remove_message">Tímto se komentář skryje běžným uživatelům. Moderátoři jej stále uvidí a později jej budou moci obnovit.</string>
+    <string name="forums_report_submitted">Hlášení odesláno</string>
+    <string name="forums_member_remove_message">Hlasy této osoby na tomto fóru budou smazány.</string>
+    <string name="forums_member_block_message">Už neuvidí toto fórum.</string>
+    <string name="forums_member_block_title">Blokovat %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Zamítnuto</string>
+    <string name="forums_moderation_restriction_member">Člen</string>
+    <string name="forums_moderation_restriction_duration">Doba trvání</string>
+    <string name="forums_moderation_duration_hour">Jedna hodina</string>
+    <string name="forums_moderation_duration_day">Jeden den</string>
+    <string name="forums_moderation_duration_week">Jeden týden</string>
+    <string name="forums_moderation_duration_month">Jeden měsíc</string>
+    <string name="forums_member_remove">Odebrat</string>
+    <string name="forums_member_remove_title">Odebrat %1$s?</string>
+    <string name="forums_imported">Importováno: %1$s</string>
+    <string name="forums_imported_more">Zatím importováno: %1$s; zbytek bude následovat</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s komunita</item>
+        <item quantity="few">%s komunity</item>
+        <item quantity="other">%s komunit</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blokování</item>
+        <item quantity="few">%s blokování</item>
+        <item quantity="other">%s blokování</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s uložený příspěvek</item>
+        <item quantity="few">%s uložené příspěvky</item>
+        <item quantity="other">%s uložených příspěvků</item>
+    </plurals>
 </resources>

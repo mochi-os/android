@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Активности модераторов пока нет</string>
     <string name="forums_moderation_log_meta">Кем %1$s · Цель %2$s</string>
     <string name="forums_moderation_restriction_add">Добавить ограничение</string>
-    <string name="forums_moderation_restriction_user">Профиль пользователя</string>
     <string name="forums_moderation_restriction_type_shadowban">Теневой бан</string>
-    <string name="forums_moderation_restriction_duration_seconds">Длительность (в секундах, пусто — навсегда)</string>
     <string name="forums_moderation_restriction_expires">Истекает %1$s</string>
     <string name="forums_moderation_restriction_permanent">Навсегда</string>
     <string name="forums_report_reason_hate">Ненависть</string>
@@ -200,7 +198,6 @@
     <string name="forums_settings_field_name">Название</string>
     <string name="forums_settings_field_entity_id">Идентификатор сущности</string>
     <string name="forums_settings_field_fingerprint_label">Отпечаток</string>
-    <string name="forums_settings_field_server">Сервер</string>
     <string name="forums_settings_name_edit_cd">Изменить название</string>
     <string name="forums_settings_name_cancel_cd">Отменить редактирование</string>
     <string name="forums_settings_save_name">Сохранить название</string>
@@ -310,8 +307,6 @@
     <string name="forums_import_settings">Импортировать настройки</string>
     <string name="forums_communities_add">Добавить сообщества</string>
     <string name="forums_communities_add_failed">Не удалось добавить сообщества</string>
-    <string name="forums_imported_settings">Импортировано сообществ: %1$s, блокировок: %2$s, сохранённых публикаций: %3$s</string>
-    <string name="forums_imported_settings_more">Пока импортировано сообществ: %1$s, блокировок: %2$s, сохранённых публикаций: %3$s; остальное последует</string>
     <string name="forums_import_failed">Не удалось импортировать</string>
     <string name="forums_community">Сообщество</string>
     <string name="forums_community_name">Имя сообщества</string>
@@ -342,4 +337,41 @@
     <string name="forums_community_destination">Публикуется в %1$s от имени %2$s</string>
     <string name="forums_find_search_example">Поиск по названию, ID, отпечатку, URL или адресу %1$s</string>
     <string name="forums_setup">Настроить</string>
+    <string name="forums_post_remove_title">Удалить публикацию</string>
+    <string name="forums_post_remove_message">Это скроет пост от обычных пользователей. Модераторы по-прежнему могут видеть его и восстановить позже.</string>
+    <string name="forums_comment_remove_title">Удалить комментарий</string>
+    <string name="forums_comment_remove_message">Это скроет комментарий от обычных пользователей. Модераторы по-прежнему могут видеть его и восстановить позже.</string>
+    <string name="forums_report_submitted">Жалоба отправлена</string>
+    <string name="forums_member_remove_message">Голоса этого участника в этом форуме будут удалены.</string>
+    <string name="forums_member_block_message">Пользователь больше не сможет просматривать этот форум.</string>
+    <string name="forums_member_block_title">Заблокировать %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Отклонено</string>
+    <string name="forums_moderation_restriction_member">Участник</string>
+    <string name="forums_moderation_restriction_duration">Срок</string>
+    <string name="forums_moderation_duration_hour">Час</string>
+    <string name="forums_moderation_duration_day">День</string>
+    <string name="forums_moderation_duration_week">Неделя</string>
+    <string name="forums_moderation_duration_month">Месяц</string>
+    <string name="forums_member_remove">Удалить</string>
+    <string name="forums_member_remove_title">Удалить %1$s?</string>
+    <string name="forums_imported">Импортировано: %1$s</string>
+    <string name="forums_imported_more">Пока импортировано: %1$s; остальное будет импортировано позже</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s сообщество</item>
+        <item quantity="few">%s сообщества</item>
+        <item quantity="many">%s сообществ</item>
+        <item quantity="other">%s сообщества</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s блокировка</item>
+        <item quantity="few">%s блокировки</item>
+        <item quantity="many">%s блокировок</item>
+        <item quantity="other">%s блокировки</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s сохранённая публикация</item>
+        <item quantity="few">%s сохранённые публикации</item>
+        <item quantity="many">%s сохранённых публикаций</item>
+        <item quantity="other">%s сохранённой публикации</item>
+    </plurals>
 </resources>

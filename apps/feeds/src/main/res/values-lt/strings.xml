@@ -302,7 +302,6 @@
     <string name="feeds_source_read_with">Skaityti su</string>
     <string name="feeds_source_follow_pending">Sekimas laukia patvirtinimo</string>
     <string name="feeds_import_follows">Importuoti sekamas paskyras iš failo</string>
-    <string name="feeds_follows_importing">Importuojama sekamų paskyrų: %1$s; kol kas pridėta: %2$s</string>
     <string name="feeds_publish_to_account">Skelbti į %1$s</string>
     <string name="feeds_import_posts">Importuoti įrašus</string>
     <string name="feeds_import_bookmarks">Importuoti žymes</string>
@@ -316,7 +315,6 @@
     <string name="feeds_generator_off">Nebėra Bluesky srautas</string>
     <string name="feeds_generator_failed">Nepavyko pakeisti Bluesky srauto</string>
     <string name="feeds_copies_delete_title">Ištrinti kopijas iš %1$s?</string>
-    <string name="feeds_copies_delete_message">Srautas ten paskelbė įrašų: %1$s. Jie liks, nebent juos ištrinsite.</string>
     <string name="feeds_copies_delete">Ištrinti kopijas</string>
     <string name="feeds_copies_keep">Palikti</string>
     <string name="feeds_copies_delete_failed">Nepavyko ištrinti kopijų</string>
@@ -324,7 +322,6 @@
     <string name="feeds_import_failed">Nepavyko importuoti</string>
     <string name="feeds_imported">Importuota: %1$s</string>
     <string name="feeds_imported_more">Kol kas importuota: %1$s; likę bus importuoti vėliau</string>
-    <string name="feeds_import_sources_more">Kol kas pridėta šaltinių: %1$s; likę bus pridėti vėliau</string>
     <string name="feeds_waiting_title">Laukiama leidimo</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s žmogus</item>
@@ -399,4 +396,28 @@
     <string name="feeds_filtered_by_tag">Filtruota pagal žymą:</string>
     <string name="feeds_setup">Nustatyti</string>
     <string name="feeds_search_example">Ieškoti pagal pavadinimą, ID, atspaudą, URL ar adresą %1$s</string>
+    <string name="feeds_member_remove_message">Šio asmens reakcijos šiame sraute ištrinamos.</string>
+    <string name="feeds_member_block_message">Jis nebegalės matyti šio srauto.</string>
+    <string name="feeds_member_block_title">Užblokuoti %1$s?</string>
+    <string name="feeds_member_remove_title">Pašalinti %1$s?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Importuojama %s sekama paskyra</item>
+        <item quantity="few">Importuojamos %s sekamos paskyros</item>
+        <item quantity="other">Importuojama %s sekamų paskyrų</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">kol kas pridėta %s</item>
+        <item quantity="few">kol kas pridėtos %s</item>
+        <item quantity="other">kol kas pridėta %s</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Srautas ten paskelbė %s įrašą. Jis liks, nebent jį ištrinsite.</item>
+        <item quantity="few">Srautas ten paskelbė %s įrašus. Jie liks, nebent juos ištrinsite.</item>
+        <item quantity="other">Srautas ten paskelbė %s įrašų. Jie liks, nebent juos ištrinsite.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Kol kas pridėtas %s šaltinis; likę bus pridėti vėliau</item>
+        <item quantity="few">Kol kas pridėti %s šaltiniai; likę bus pridėti vėliau</item>
+        <item quantity="other">Kol kas pridėta %s šaltinių; likę bus pridėti vėliau</item>
+    </plurals>
 </resources>

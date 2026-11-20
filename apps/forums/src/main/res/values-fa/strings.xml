@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">هنوز فعالیت ناظری ثبت نشده است</string>
     <string name="forums_moderation_log_meta">توسط %1$s · هدف %2$s</string>
     <string name="forums_moderation_restriction_add">افزودن محدودیت</string>
-    <string name="forums_moderation_restriction_user">هویت کاربر</string>
     <string name="forums_moderation_restriction_type_shadowban">ممنوعیت پنهان</string>
-    <string name="forums_moderation_restriction_duration_seconds">مدت (ثانیه، برای دائمی خالی بگذارید)</string>
     <string name="forums_moderation_restriction_expires">انقضا %1$s</string>
     <string name="forums_moderation_restriction_permanent">دائمی</string>
     <string name="forums_report_reason_hate">نفرت‌پراکنی</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">نام</string>
     <string name="forums_settings_field_entity_id">شناسه موجودیت</string>
     <string name="forums_settings_field_fingerprint_label">اثر انگشت</string>
-    <string name="forums_settings_field_server">سرور</string>
     <string name="forums_settings_name_edit_cd">ویرایش نام</string>
     <string name="forums_settings_name_cancel_cd">لغو ویرایش</string>
     <string name="forums_settings_save_name">ذخیره نام</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">وارد کردن تنظیمات</string>
     <string name="forums_communities_add">افزودن جامعه‌ها</string>
     <string name="forums_communities_add_failed">افزودن جامعه‌ها ممکن نشد</string>
-    <string name="forums_imported_settings">%1$s جامعه، %2$s سرور مسدودشده و %3$s پست ذخیره‌شده وارد شد</string>
-    <string name="forums_imported_settings_more">تاکنون %1$s جامعه، %2$s سرور مسدودشده و %3$s پست ذخیره‌شده وارد شد؛ بقیه در راه است</string>
     <string name="forums_import_failed">وارد کردن ممکن نشد</string>
     <string name="forums_community">جامعه</string>
     <string name="forums_community_name">نام جامعه</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">در %1$s با نام %2$s منتشر می‌شود</string>
     <string name="forums_find_search_example">جست‌وجو بر اساس نام، شناسه، اثرانگشت، URL یا %1$s</string>
     <string name="forums_setup">راه‌اندازی</string>
+    <string name="forums_post_remove_title">حذف پست</string>
+    <string name="forums_post_remove_message">این کار پست را از کاربران عادی پنهان می‌کند. ناظران همچنان می‌توانند آن را ببینند و بعداً بازیابی کنند.</string>
+    <string name="forums_comment_remove_title">حذف نظر</string>
+    <string name="forums_comment_remove_message">این کار نظر را از کاربران عادی پنهان می‌کند. ناظران همچنان می‌توانند آن را ببینند و بعداً بازیابی کنند.</string>
+    <string name="forums_report_submitted">گزارش ارسال شد</string>
+    <string name="forums_member_remove_message">رأی‌های این شخص در این انجمن حذف می‌شود.</string>
+    <string name="forums_member_block_message">او دیگر نمی‌تواند این انجمن را ببیند.</string>
+    <string name="forums_member_block_title">%1$s مسدود شود؟</string>
+    <string name="forums_moderation_resolution_ignored">رد شده</string>
+    <string name="forums_moderation_restriction_member">عضو</string>
+    <string name="forums_moderation_restriction_duration">مدت</string>
+    <string name="forums_moderation_duration_hour">یک ساعت</string>
+    <string name="forums_moderation_duration_day">یک روز</string>
+    <string name="forums_moderation_duration_week">یک هفته</string>
+    <string name="forums_moderation_duration_month">یک ماه</string>
+    <string name="forums_member_remove">حذف</string>
+    <string name="forums_member_remove_title">%1$s حذف شود؟</string>
+    <string name="forums_imported">%1$s وارد شد</string>
+    <string name="forums_imported_more">تاکنون %1$s وارد شد؛ بقیه در پی می‌آیند</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s جامعه</item>
+        <item quantity="other">%s جامعه</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s مسدودسازی</item>
+        <item quantity="other">%s مسدودسازی</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s پست ذخیره‌شده</item>
+        <item quantity="other">%s پست ذخیره‌شده</item>
+    </plurals>
 </resources>

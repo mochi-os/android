@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ಇನ್ನೂ ಮಾಡರೇಟರ್ ಚಟುವಟಿಕೆ ಇಲ್ಲ</string>
     <string name="forums_moderation_log_meta">%1$s ರಿಂದ · ಗುರಿ %2$s</string>
     <string name="forums_moderation_restriction_add">ನಿರ್ಬಂಧವನ್ನು ಸೇರಿಸಿ</string>
-    <string name="forums_moderation_restriction_user">ಬಳಕೆದಾರ ಗುರುತು</string>
     <string name="forums_moderation_restriction_type_shadowban">ಶ್ಯಾಡೋಬ್ಯಾನ್</string>
-    <string name="forums_moderation_restriction_duration_seconds">ಅವಧಿ (ಸೆಕೆಂಡುಗಳು, ಶಾಶ್ವತಕ್ಕಾಗಿ ಖಾಲಿ ಬಿಡಿ)</string>
     <string name="forums_moderation_restriction_expires">%1$s ಗೆ ಅವಧಿ ಮುಗಿಯುತ್ತದೆ</string>
     <string name="forums_moderation_restriction_permanent">ಶಾಶ್ವತ</string>
     <string name="forums_report_reason_hate">ದ್ವೇಷ</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">ಹೆಸರು</string>
     <string name="forums_settings_field_entity_id">ಎಂಟಿಟಿ ID</string>
     <string name="forums_settings_field_fingerprint_label">ಬೆರಳಚ್ಚು</string>
-    <string name="forums_settings_field_server">ಸರ್ವರ್</string>
     <string name="forums_settings_name_edit_cd">ಹೆಸರು ಸಂಪಾದಿಸಿ</string>
     <string name="forums_settings_name_cancel_cd">ಸಂಪಾದನೆಯನ್ನು ರದ್ದುಮಾಡಿ</string>
     <string name="forums_settings_save_name">ಹೆಸರು ಉಳಿಸಿ</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಿ</string>
     <string name="forums_communities_add">ಸಮುದಾಯಗಳನ್ನು ಸೇರಿಸಿ</string>
     <string name="forums_communities_add_failed">ಸಮುದಾಯಗಳನ್ನು ಸೇರಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
-    <string name="forums_imported_settings">%1$s ಸಮುದಾಯಗಳು, %2$s ನಿರ್ಬಂಧಗಳು ಮತ್ತು %3$s ಉಳಿಸಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗಿದೆ</string>
-    <string name="forums_imported_settings_more">ಇದುವರೆಗೆ %1$s ಸಮುದಾಯಗಳು, %2$s ನಿರ್ಬಂಧಗಳು ಮತ್ತು %3$s ಉಳಿಸಿದ ಪೋಸ್ಟ್‌ಗಳನ್ನು ಆಮದು ಮಾಡಲಾಗಿದೆ; ಉಳಿದವು ನಂತರ ಬರುತ್ತವೆ</string>
     <string name="forums_import_failed">ಆಮದು ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="forums_community">ಸಮುದಾಯ</string>
     <string name="forums_community_name">ಸಮುದಾಯದ ಹೆಸರು</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s ಗೆ %2$s ಆಗಿ ಪೋಸ್ಟ್ ಆಗುತ್ತದೆ</string>
     <string name="forums_find_search_example">ಹೆಸರು, ID, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್, URL ಅಥವಾ %1$s ನಿಂದ ಹುಡುಕಿ</string>
     <string name="forums_setup">ಸೆಟಪ್ ಮಾಡಿ</string>
+    <string name="forums_post_remove_title">ಪೋಸ್ಟ್ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="forums_post_remove_message">ಇದು ಸಾಮಾನ್ಯ ಬಳಕೆದಾರರಿಂದ ಪೋಸ್ಟ್ ಅನ್ನು ಮರೆಮಾಡುತ್ತದೆ. ಮಾಡರೇಟರ್‌ಗಳು ಇನ್ನೂ ಅದನ್ನು ನೋಡಬಹುದು ಮತ್ತು ನಂತರ ಪುನಃಸ್ಥಾಪಿಸಬಹುದು.</string>
+    <string name="forums_comment_remove_title">ಕಾಮೆಂಟ್ ತೆಗೆದುಹಾಕಿ</string>
+    <string name="forums_comment_remove_message">ಇದು ಸಾಮಾನ್ಯ ಬಳಕೆದಾರರಿಂದ ಕಾಮೆಂಟ್ ಅನ್ನು ಮರೆಮಾಡುತ್ತದೆ. ಮಾಡರೇಟರ್‌ಗಳು ಇನ್ನೂ ಅದನ್ನು ನೋಡಬಹುದು ಮತ್ತು ನಂತರ ಪುನಃಸ್ಥಾಪಿಸಬಹುದು.</string>
+    <string name="forums_report_submitted">ರಿಪೋರ್ಟ್ ಸಲ್ಲಿಸಲಾಗಿದೆ</string>
+    <string name="forums_member_remove_message">ಈ ವ್ಯಕ್ತಿಯ ಮತಗಳನ್ನು ಈ ಫೋರಮ್‌ನಲ್ಲಿ ಅಳಿಸಲಾಗುತ್ತದೆ.</string>
+    <string name="forums_member_block_message">ಅವರು ಇನ್ನು ಮುಂದೆ ಈ ಫೋರಮ್ ಅನ್ನು ನೋಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="forums_member_block_title">%1$s ಅವರನ್ನು ನಿರ್ಬಂಧಿಸಬೇಕೆ?</string>
+    <string name="forums_moderation_resolution_ignored">ತಿರಸ್ಕರಿಸಲಾಗಿದೆ</string>
+    <string name="forums_moderation_restriction_member">ಸದಸ್ಯ</string>
+    <string name="forums_moderation_restriction_duration">ಅವಧಿ</string>
+    <string name="forums_moderation_duration_hour">ಒಂದು ಗಂಟೆ</string>
+    <string name="forums_moderation_duration_day">ಒಂದು ದಿನ</string>
+    <string name="forums_moderation_duration_week">ಒಂದು ವಾರ</string>
+    <string name="forums_moderation_duration_month">ಒಂದು ತಿಂಗಳು</string>
+    <string name="forums_member_remove">ತೆಗೆದುಹಾಕಿ</string>
+    <string name="forums_member_remove_title">%1$s ಅವರನ್ನು ತೆಗೆದುಹಾಕಬೇಕೆ?</string>
+    <string name="forums_imported">%1$s ಆಮದು ಮಾಡಲಾಗಿದೆ</string>
+    <string name="forums_imported_more">ಇದುವರೆಗೆ %1$s ಆಮದು ಮಾಡಲಾಗಿದೆ; ಉಳಿದವು ನಂತರ ಬರುತ್ತವೆ</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s ಸಮುದಾಯ</item>
+        <item quantity="other">%s ಸಮುದಾಯಗಳು</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s ನಿರ್ಬಂಧ</item>
+        <item quantity="other">%s ನಿರ್ಬಂಧಗಳು</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s ಉಳಿಸಿದ ಪೋಸ್ಟ್</item>
+        <item quantity="other">%s ಉಳಿಸಿದ ಪೋಸ್ಟ್‌ಗಳು</item>
+    </plurals>
 </resources>

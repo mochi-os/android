@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Lire avec</string>
     <string name="feeds_source_follow_pending">Abonnement en attente</string>
     <string name="feeds_import_follows">Importer des abonnements depuis un fichier</string>
-    <string name="feeds_follows_importing">Import de %1$s abonnements ; %2$s ajoutés pour l\'instant</string>
     <string name="feeds_publish_to_account">Publier sur %1$s</string>
     <string name="feeds_import_posts">Importer les publications</string>
     <string name="feeds_import_bookmarks">Importer les marque-pages</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">N\'est plus un flux Bluesky</string>
     <string name="feeds_generator_failed">Impossible de modifier le flux Bluesky</string>
     <string name="feeds_copies_delete_title">Supprimer les copies sur %1$s ?</string>
-    <string name="feeds_copies_delete_message">Le flux y a publié %1$s publications. Elles restent en place, sauf si vous les supprimez.</string>
     <string name="feeds_copies_delete">Supprimer les copies</string>
     <string name="feeds_copies_keep">Conserver</string>
     <string name="feeds_copies_delete_failed">Impossible de supprimer les copies</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Impossible d\'importer</string>
     <string name="feeds_imported">Importés : %1$s</string>
     <string name="feeds_imported_more">Importés pour l\'instant : %1$s ; la suite arrive</string>
-    <string name="feeds_import_sources_more">%1$s sources ajoutées pour l\'instant ; les autres suivent</string>
     <string name="feeds_waiting_title">En attente de permission</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s personne</item>
@@ -374,4 +371,24 @@
     <string name="feeds_filtered_by_tag">Filtré par étiquette :</string>
     <string name="feeds_setup">Configurer</string>
     <string name="feeds_search_example">Rechercher par nom, ID, empreinte, URL ou %1$s</string>
+    <string name="feeds_member_remove_message">Les réactions de cette personne dans ce flux sont supprimées.</string>
+    <string name="feeds_member_block_message">Cette personne ne pourra plus voir ce flux.</string>
+    <string name="feeds_member_block_title">Bloquer %1$s ?</string>
+    <string name="feeds_member_remove_title">Retirer %1$s ?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Importation de %s abonnement</item>
+        <item quantity="other">Importation de %s abonnements</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s ajouté pour l\'instant</item>
+        <item quantity="other">%s ajoutés pour l\'instant</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Le flux y a publié %s article. Il y reste, sauf si vous le supprimez.</item>
+        <item quantity="other">Le flux y a publié %s articles. Ils y restent, sauf si vous les supprimez.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">%s source ajoutée pour l\'instant ; la suite arrive</item>
+        <item quantity="other">%s sources ajoutées pour l\'instant ; la suite arrive</item>
+    </plurals>
 </resources>

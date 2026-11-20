@@ -124,9 +124,7 @@
     <string name="forums_moderation_log_empty">Jan moderación lurawi</string>
     <string name="forums_moderation_log_meta">%1$s tuqi · Destino %2$s</string>
     <string name="forums_moderation_restriction_add">Jark\'aqaña yapxataña</string>
-    <string name="forums_moderation_restriction_user">Apnaqiri identidad</string>
     <string name="forums_moderation_restriction_type_shadowban">Ch\'amakar jark\'aqaña</string>
-    <string name="forums_moderation_restriction_duration_seconds">Pacha (segundos, ch\'usa wiñaytatakixa)</string>
     <string name="forums_moderation_restriction_expires">%1$s tukusi</string>
     <string name="forums_moderation_restriction_permanent">Wiñayataki</string>
     <string name="forums_report_reason_hate">Uñiña</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Suti</string>
     <string name="forums_settings_field_entity_id">Entidad ID</string>
     <string name="forums_settings_field_fingerprint_label">Luk\'ana unancha</string>
-    <string name="forums_settings_field_server">Servidor</string>
     <string name="forums_settings_name_edit_cd">Suti askichaña</string>
     <string name="forums_settings_name_cancel_cd">Askichäwi jaytaña</string>
     <string name="forums_settings_save_name">Suti imaña</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Wakichawinak apantaña</string>
     <string name="forums_communities_add">Ayllunak yapxataña</string>
     <string name="forums_communities_add_failed">Janiw ayllunak yapxatañjamäkiti</string>
-    <string name="forums_imported_settings">%1$s ayllunaka, %2$s jark\'at servidoranaka ukat %3$s imat qillqatanaka apantatawa</string>
-    <string name="forums_imported_settings_more">Jichhakamax %1$s ayllunaka, %2$s jark\'at servidoranaka ukat %3$s imat qillqatanaka apantatawa; mayninakax arkaniwa</string>
     <string name="forums_import_failed">Janiw apantañjamäkiti</string>
     <string name="forums_community">Ayllu</string>
     <string name="forums_community_name">Ayllu suti</string>
@@ -338,4 +333,32 @@
     <string name="forums_community_destination">%1$s ukar %2$s sutimpi uñt\'ayatawa</string>
     <string name="forums_find_search_example">Suti, ID, fingerprint, URL, jan ukax %1$s ukamp thaqhama</string>
     <string name="forums_setup">Wakichaña</string>
+    <string name="forums_post_remove_title">Qillqata aparma</string>
+    <string name="forums_post_remove_message">Akax qillqata apnaqirinakat imantaniwa. Moderadoranakax uñjapxaskakiniwa ukat qhipat kutt\'ayapxaspawa.</string>
+    <string name="forums_comment_remove_title">Comentario aparma</string>
+    <string name="forums_comment_remove_message">Akax comentario apnaqirinakat imantaniwa. Moderadoranakax uñjapxaskakiniwa ukat qhipharux kutt\'ayapxaspawa.</string>
+    <string name="forums_report_submitted">Reporte apayata</string>
+    <string name="forums_member_remove_message">Aka foron votonakapax chhaqtayatawa.</string>
+    <string name="forums_member_block_message">Janiw jupax aka foro uñjkaniti.</string>
+    <string name="forums_member_block_title">¿%1$s jark\'ama?</string>
+    <string name="forums_moderation_resolution_ignored">Jaytata</string>
+    <string name="forums_moderation_restriction_member">Integrante</string>
+    <string name="forums_moderation_restriction_duration">Qhawqha pacha</string>
+    <string name="forums_moderation_duration_hour">Mä hora</string>
+    <string name="forums_moderation_duration_day">Mä uru</string>
+    <string name="forums_moderation_duration_week">Mä semana</string>
+    <string name="forums_moderation_duration_month">Mä phaxsi</string>
+    <string name="forums_member_remove">Aparma</string>
+    <string name="forums_member_remove_title">¿%1$s apsuñati?</string>
+    <string name="forums_imported">%1$s apantata</string>
+    <string name="forums_imported_more">Jichhakamax %1$s apantata; mayninakax arkani</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s ayllunaka</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s jark\'awinaka</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s imata qillqatanaka</item>
+    </plurals>
 </resources>

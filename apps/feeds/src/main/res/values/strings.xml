@@ -253,6 +253,10 @@
     <string name="feeds_settings_access_revoked">Access revoked</string>
     <string name="feeds_settings_member_removed">Member removed</string>
     <string name="feeds_settings_member_blocked">Member blocked</string>
+    <string name="feeds_member_remove_title">Remove %1$s?</string>
+    <string name="feeds_member_remove_message">Their reactions in this feed are deleted.</string>
+    <string name="feeds_member_block_title">Block %1$s?</string>
+    <string name="feeds_member_block_message">They can no longer view this feed.</string>
     <string name="feeds_settings_ai_mode_updated">AI mode updated</string>
     <string name="feeds_settings_ai_account_updated">AI account updated</string>
     <string name="feeds_settings_prompt_saved">Prompt saved</string>
@@ -361,7 +365,14 @@
     <string name="feeds_source_unfollowed">Not following</string>
     <string name="feeds_source_follow_again">Follow again</string>
     <string name="feeds_import_follows">Import follows from a file</string>
-    <string name="feeds_follows_importing">Importing %1$s follows; %2$s added so far</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">Importing %s follow</item>
+        <item quantity="other">Importing %s follows</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">%s added so far</item>
+        <item quantity="other">%s added so far</item>
+    </plurals>
     <plurals name="feeds_follows_imported">
         <item quantity="one">%s follow imported</item>
         <item quantity="other">%s follows imported</item>
@@ -384,7 +395,10 @@
     <string name="feeds_generator_off">No longer a Bluesky feed</string>
     <string name="feeds_generator_failed">Could not change the Bluesky feed</string>
     <string name="feeds_copies_delete_title">Delete the copies on %1$s?</string>
-    <string name="feeds_copies_delete_message">The feed published %1$s posts there. They stay unless you delete them.</string>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">The feed published %s post there. It stays unless you delete it.</item>
+        <item quantity="other">The feed published %s posts there. They stay unless you delete them.</item>
+    </plurals>
     <string name="feeds_copies_delete">Delete copies</string>
     <string name="feeds_copies_keep">Keep</string>
     <plurals name="feeds_copies_deleted">
@@ -400,7 +414,10 @@
         <item quantity="one">Added %s source</item>
         <item quantity="other">Added %s sources</item>
     </plurals>
-    <string name="feeds_import_sources_more">Added %1$s sources so far; the rest follow</string>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Added %s source so far; the rest follow</item>
+        <item quantity="other">Added %s sources so far; the rest follow</item>
+    </plurals>
     <string name="feeds_waiting_title">Waiting for permission</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s person</item>

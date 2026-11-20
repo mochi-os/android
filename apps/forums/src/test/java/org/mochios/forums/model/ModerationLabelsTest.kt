@@ -52,7 +52,18 @@ class ModerationLabelsTest {
     }
 
     @Test
+    fun `each resolution the server takes has a label of its own`() {
+        // report_resolve in forums.star takes exactly these.
+        val resolutions = listOf("ignored", "removed")
+        for (resolution in resolutions) {
+            assertNotNull("no label for $resolution", moderationResolution(resolution))
+        }
+        assertEquals(resolutions.size, resolutions.map { moderationResolution(it) }.toSet().size)
+    }
+
+    @Test
     fun `an unknown value has no label and is humanised instead`() {
+        assertNull(moderationResolution("escalated"))
         assertNull(moderationAction("quarantine"))
         assertNull(moderationTarget("attachment"))
         assertNull(moderationReason("nonsense"))

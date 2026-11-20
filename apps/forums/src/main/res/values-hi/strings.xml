@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">अभी तक कोई मॉडरेटर गतिविधि नहीं</string>
     <string name="forums_moderation_log_meta">%1$s द्वारा · लक्ष्य %2$s</string>
     <string name="forums_moderation_restriction_add">प्रतिबंध जोड़ें</string>
-    <string name="forums_moderation_restriction_user">उपयोगकर्ता पहचान</string>
     <string name="forums_moderation_restriction_type_shadowban">शैडोबैन</string>
-    <string name="forums_moderation_restriction_duration_seconds">अवधि (सेकंड, स्थायी के लिए रिक्त छोड़ें)</string>
     <string name="forums_moderation_restriction_expires">%1$s को समाप्त होगा</string>
     <string name="forums_moderation_restriction_permanent">स्थायी</string>
     <string name="forums_report_reason_hate">घृणा</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">नाम</string>
     <string name="forums_settings_field_entity_id">एंटिटी ID</string>
     <string name="forums_settings_field_fingerprint_label">फिंगरप्रिंट</string>
-    <string name="forums_settings_field_server">सर्वर</string>
     <string name="forums_settings_name_edit_cd">नाम संपादित करें</string>
     <string name="forums_settings_name_cancel_cd">संपादन रद्द करें</string>
     <string name="forums_settings_save_name">नाम सहेजें</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">सेटिंग्स इम्पोर्ट करें</string>
     <string name="forums_communities_add">समुदाय जोड़ें</string>
     <string name="forums_communities_add_failed">समुदाय नहीं जोड़े जा सके</string>
-    <string name="forums_imported_settings">%1$s समुदाय, %2$s ब्लॉक किए गए सर्वर और %3$s सहेजी गई पोस्ट इम्पोर्ट की गईं</string>
-    <string name="forums_imported_settings_more">अब तक %1$s समुदाय, %2$s ब्लॉक किए गए सर्वर और %3$s सहेजी गई पोस्ट इम्पोर्ट की गईं; बाकी बाद में आएँगी</string>
     <string name="forums_import_failed">इम्पोर्ट नहीं किया जा सका</string>
     <string name="forums_community">समुदाय</string>
     <string name="forums_community_name">समुदाय का नाम</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s में %2$s के रूप में पोस्ट होता है</string>
     <string name="forums_find_search_example">नाम, ID, फ़िंगरप्रिंट, URL, या %1$s से खोजें</string>
     <string name="forums_setup">सेट अप करें</string>
+    <string name="forums_post_remove_title">पोस्ट हटाएँ</string>
+    <string name="forums_post_remove_message">यह नियमित उपयोगकर्ताओं से पोस्ट को छिपा देगा। मॉडरेटर अभी भी इसे देख सकते हैं और बाद में पुनर्स्थापित कर सकते हैं।</string>
+    <string name="forums_comment_remove_title">कमेंट हटाएँ</string>
+    <string name="forums_comment_remove_message">यह नियमित उपयोगकर्ताओं से टिप्पणी को छिपा देगा। मॉडरेटर अभी भी इसे देख सकते हैं और बाद में पुनर्स्थापित कर सकते हैं।</string>
+    <string name="forums_report_submitted">रिपोर्ट सबमिट की गई</string>
+    <string name="forums_member_remove_message">इस फोरम में इस व्यक्ति के वोट हटा दिए जाएँगे।</string>
+    <string name="forums_member_block_message">वे अब यह फ़ोरम नहीं देख पाएंगे।</string>
+    <string name="forums_member_block_title">%1$s को ब्लॉक करें?</string>
+    <string name="forums_moderation_resolution_ignored">खारिज किया गया</string>
+    <string name="forums_moderation_restriction_member">सदस्य</string>
+    <string name="forums_moderation_restriction_duration">अवधि</string>
+    <string name="forums_moderation_duration_hour">एक घंटा</string>
+    <string name="forums_moderation_duration_day">एक दिन</string>
+    <string name="forums_moderation_duration_week">एक सप्ताह</string>
+    <string name="forums_moderation_duration_month">एक महीना</string>
+    <string name="forums_member_remove">हटाएँ</string>
+    <string name="forums_member_remove_title">%1$s को हटाएँ?</string>
+    <string name="forums_imported">%1$s इम्पोर्ट किए गए</string>
+    <string name="forums_imported_more">अब तक %1$s इम्पोर्ट किए गए; बाकी आ रहे हैं</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s समुदाय</item>
+        <item quantity="other">%s समुदाय</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s ब्लॉक</item>
+        <item quantity="other">%s ब्लॉक</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s सहेजी गई पोस्ट</item>
+        <item quantity="other">%s सहेजी गई पोस्ट</item>
+    </plurals>
 </resources>

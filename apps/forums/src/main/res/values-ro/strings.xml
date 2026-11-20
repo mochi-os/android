@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Încă nicio activitate de moderare</string>
     <string name="forums_moderation_log_meta">De %1$s · Țintă %2$s</string>
     <string name="forums_moderation_restriction_add">Adăugați restricție</string>
-    <string name="forums_moderation_restriction_user">Identitatea utilizatorului</string>
     <string name="forums_moderation_restriction_type_shadowban">Interdicție ascunsă</string>
-    <string name="forums_moderation_restriction_duration_seconds">Durată (secunde, lăsați gol pentru permanent)</string>
     <string name="forums_moderation_restriction_expires">Expiră %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanent</string>
     <string name="forums_report_reason_hate">Ură</string>
@@ -199,7 +197,6 @@
     <string name="forums_settings_field_name">Nume</string>
     <string name="forums_settings_field_entity_id">ID entitate</string>
     <string name="forums_settings_field_fingerprint_label">Amprentă</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Editează numele</string>
     <string name="forums_settings_name_cancel_cd">Anulează editarea</string>
     <string name="forums_settings_save_name">Salvează numele</string>
@@ -309,8 +306,6 @@
     <string name="forums_import_settings">Importă setările</string>
     <string name="forums_communities_add">Adaugă comunități</string>
     <string name="forums_communities_add_failed">Nu s-au putut adăuga comunitățile</string>
-    <string name="forums_imported_settings">Comunități importate: %1$s, blocări: %2$s, postări salvate: %3$s</string>
-    <string name="forums_imported_settings_more">Comunități importate până acum: %1$s, blocări: %2$s, postări salvate: %3$s; restul urmează</string>
     <string name="forums_import_failed">Nu s-a putut importa</string>
     <string name="forums_community">Comunitate</string>
     <string name="forums_community_name">Numele comunității</string>
@@ -340,4 +335,38 @@
     <string name="forums_community_destination">Se publică în %1$s ca %2$s</string>
     <string name="forums_find_search_example">Caută după nume, ID, amprentă, URL sau %1$s</string>
     <string name="forums_setup">Configurează</string>
+    <string name="forums_post_remove_title">Elimină postarea</string>
+    <string name="forums_post_remove_message">Aceasta va ascunde postarea de utilizatorii obișnuiți. Moderatorii o pot vedea în continuare și o pot restaura mai târziu.</string>
+    <string name="forums_comment_remove_title">Elimină comentariul</string>
+    <string name="forums_comment_remove_message">Aceasta va ascunde comentariul de utilizatorii obișnuiți. Moderatorii îl pot vedea în continuare și îl pot restaura mai târziu.</string>
+    <string name="forums_report_submitted">Raport trimis</string>
+    <string name="forums_member_remove_message">Voturile sale din acest forum sunt șterse.</string>
+    <string name="forums_member_block_message">Nu va mai putea vedea acest forum.</string>
+    <string name="forums_member_block_title">Blochezi %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Respins</string>
+    <string name="forums_moderation_restriction_member">Membru</string>
+    <string name="forums_moderation_restriction_duration">Durată</string>
+    <string name="forums_moderation_duration_hour">O oră</string>
+    <string name="forums_moderation_duration_day">O zi</string>
+    <string name="forums_moderation_duration_week">O săptămână</string>
+    <string name="forums_moderation_duration_month">O lună</string>
+    <string name="forums_member_remove">Elimină</string>
+    <string name="forums_member_remove_title">Elimini %1$s?</string>
+    <string name="forums_imported">Importate: %1$s</string>
+    <string name="forums_imported_more">Importate până acum: %1$s; restul urmează</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s comunitate</item>
+        <item quantity="few">%s comunități</item>
+        <item quantity="other">%s de comunități</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s blocare</item>
+        <item quantity="few">%s blocări</item>
+        <item quantity="other">%s de blocări</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s postare salvată</item>
+        <item quantity="few">%s postări salvate</item>
+        <item quantity="other">%s de postări salvate</item>
+    </plurals>
 </resources>

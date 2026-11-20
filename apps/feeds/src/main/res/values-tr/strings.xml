@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Şununla oku</string>
     <string name="feeds_source_follow_pending">Takip beklemede</string>
     <string name="feeds_import_follows">Takip edilenleri dosyadan içe aktar</string>
-    <string name="feeds_follows_importing">%1$s takip içe aktarılıyor; şimdiye kadar %2$s eklendi</string>
     <string name="feeds_publish_to_account">%1$s hesabında yayımla</string>
     <string name="feeds_import_posts">Gönderileri içe aktar</string>
     <string name="feeds_import_bookmarks">Yer imlerini içe aktar</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Artık bir Bluesky akışı değil</string>
     <string name="feeds_generator_failed">Bluesky akışı değiştirilemedi</string>
     <string name="feeds_copies_delete_title">%1$s üzerindeki kopyalar silinsin mi?</string>
-    <string name="feeds_copies_delete_message">Akış orada %1$s gönderi yayımladı. Siz silmedikçe orada kalırlar.</string>
     <string name="feeds_copies_delete">Kopyaları sil</string>
     <string name="feeds_copies_keep">Koru</string>
     <string name="feeds_copies_delete_failed">Kopyalar silinemedi</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">İçe aktarılamadı</string>
     <string name="feeds_imported">%1$s öğe içe aktarıldı</string>
     <string name="feeds_imported_more">Şimdiye kadar %1$s öğe içe aktarıldı; gerisi ardından gelecek</string>
-    <string name="feeds_import_sources_more">Şimdiye kadar %1$s kaynak eklendi; gerisi ardından gelecek</string>
     <string name="feeds_waiting_title">İzin bekleniyor</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s kişi</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Etikete göre filtrelendi:</string>
     <string name="feeds_setup">Kur</string>
     <string name="feeds_search_example">Ad, kimlik, parmak izi, URL veya %1$s biçiminde bir adresle ara</string>
+    <string name="feeds_member_remove_message">Bu kişinin bu akıştaki tepkileri silinir.</string>
+    <string name="feeds_member_block_message">Bu akışı artık göremeyecek.</string>
+    <string name="feeds_member_block_title">%1$s engellensin mi?</string>
+    <string name="feeds_member_remove_title">%1$s kaldırılsın mı?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s takip içe aktarılıyor</item>
+        <item quantity="other">%s takip içe aktarılıyor</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">şimdiye kadar %s eklendi</item>
+        <item quantity="other">şimdiye kadar %s eklendi</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Akış orada %s gönderi yayımladı. Siz silmedikçe orada kalır.</item>
+        <item quantity="other">Akış orada %s gönderi yayımladı. Siz silmedikçe orada kalırlar.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Şimdiye kadar %s kaynak eklendi; gerisi ardından gelecek</item>
+        <item quantity="other">Şimdiye kadar %s kaynak eklendi; gerisi ardından gelecek</item>
+    </plurals>
 </resources>

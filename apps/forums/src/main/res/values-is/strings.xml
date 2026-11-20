@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Engin umsjónarvirkni ennþá</string>
     <string name="forums_moderation_log_meta">Af %1$s · Markmið %2$s</string>
     <string name="forums_moderation_restriction_add">Bæta við takmörkun</string>
-    <string name="forums_moderation_restriction_user">Notandaauðkenni</string>
     <string name="forums_moderation_restriction_type_shadowban">Skuggabann</string>
-    <string name="forums_moderation_restriction_duration_seconds">Lengd (sekúndur, autt fyrir varanlegt)</string>
     <string name="forums_moderation_restriction_expires">Rennur út %1$s</string>
     <string name="forums_moderation_restriction_permanent">Varanlegt</string>
     <string name="forums_report_reason_hate">Hatur</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nafn</string>
     <string name="forums_settings_field_entity_id">Auðkenni einingar</string>
     <string name="forums_settings_field_fingerprint_label">Fingrafar</string>
-    <string name="forums_settings_field_server">Þjónn</string>
     <string name="forums_settings_name_edit_cd">Breyta nafni</string>
     <string name="forums_settings_name_cancel_cd">Hætta við breytingu</string>
     <string name="forums_settings_save_name">Vista nafn</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Flytja inn stillingar</string>
     <string name="forums_communities_add">Bæta við samfélögum</string>
     <string name="forums_communities_add_failed">Ekki tókst að bæta við samfélögunum</string>
-    <string name="forums_imported_settings">Flutt inn: samfélög %1$s, lokanir %2$s, vistaðar færslur %3$s</string>
-    <string name="forums_imported_settings_more">Flutt inn hingað til: samfélög %1$s, lokanir %2$s, vistaðar færslur %3$s; restin fylgir á eftir</string>
     <string name="forums_import_failed">Ekki tókst að flytja inn</string>
     <string name="forums_community">Samfélag</string>
     <string name="forums_community_name">Nafn samfélags</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Birtist í %1$s sem %2$s</string>
     <string name="forums_find_search_example">Leita eftir nafni, auðkenni, fingrafari, slóð eða %1$s</string>
     <string name="forums_setup">Setja upp</string>
+    <string name="forums_post_remove_title">Fjarlægja færslu</string>
+    <string name="forums_post_remove_message">Þetta felur færsluna fyrir venjulegum notendum. Stýrendur geta enn séð hana og endurheimt hana síðar.</string>
+    <string name="forums_comment_remove_title">Fjarlægja athugasemd</string>
+    <string name="forums_comment_remove_message">Þetta felur ummælin fyrir venjulegum notendum. Stýrendur geta enn séð þau og endurheimt þau síðar.</string>
+    <string name="forums_report_submitted">Tilkynning send</string>
+    <string name="forums_member_remove_message">Atkvæði þessa aðila á þessu spjallborði eru eydd.</string>
+    <string name="forums_member_block_message">Viðkomandi getur ekki lengur séð þetta spjallborð.</string>
+    <string name="forums_member_block_title">Loka á %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Hafnað</string>
+    <string name="forums_moderation_restriction_member">Meðlimur</string>
+    <string name="forums_moderation_restriction_duration">Tímalengd</string>
+    <string name="forums_moderation_duration_hour">Ein klukkustund</string>
+    <string name="forums_moderation_duration_day">Einn dagur</string>
+    <string name="forums_moderation_duration_week">Ein vika</string>
+    <string name="forums_moderation_duration_month">Einn mánuður</string>
+    <string name="forums_member_remove">Fjarlægja</string>
+    <string name="forums_member_remove_title">Fjarlægja %1$s?</string>
+    <string name="forums_imported">%1$s flutt inn</string>
+    <string name="forums_imported_more">%1$s flutt inn hingað til; restin fylgir á eftir</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s samfélag</item>
+        <item quantity="other">%s samfélög</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s lokun</item>
+        <item quantity="other">%s lokanir</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s vistuð færsla</item>
+        <item quantity="other">%s vistaðar færslur</item>
+    </plurals>
 </resources>

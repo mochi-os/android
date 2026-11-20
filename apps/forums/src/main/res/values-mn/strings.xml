@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Зохицуулагчийн үйл ажиллагаа алга</string>
     <string name="forums_moderation_log_meta">Хийсэн: %1$s · Зорилт %2$s</string>
     <string name="forums_moderation_restriction_add">Хязгаарлалт нэмэх</string>
-    <string name="forums_moderation_restriction_user">Хэрэглэгчийн танилт</string>
     <string name="forums_moderation_restriction_type_shadowban">Сүүдэр хориг</string>
-    <string name="forums_moderation_restriction_duration_seconds">Хугацаа (секундээр, байнгын бол хоосон)</string>
     <string name="forums_moderation_restriction_expires">Дуусах: %1$s</string>
     <string name="forums_moderation_restriction_permanent">Байнгын</string>
     <string name="forums_report_reason_hate">Үзэн ядалт</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Нэр</string>
     <string name="forums_settings_field_entity_id">Нэгжийн ID</string>
     <string name="forums_settings_field_fingerprint_label">Хурууны хээ</string>
-    <string name="forums_settings_field_server">Сервер</string>
     <string name="forums_settings_name_edit_cd">Нэр засах</string>
     <string name="forums_settings_name_cancel_cd">Засварлахыг цуцлах</string>
     <string name="forums_settings_save_name">Нэрийг хадгалах</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Тохиргоог импортлох</string>
     <string name="forums_communities_add">Нийгэмлэгүүд нэмэх</string>
     <string name="forums_communities_add_failed">Нийгэмлэгүүдийг нэмж чадсангүй</string>
-    <string name="forums_imported_settings">%1$s нийгэмлэг, %2$s блок, %3$s хадгалсан нийтлэл импортлогдлоо</string>
-    <string name="forums_imported_settings_more">Одоогоор %1$s нийгэмлэг, %2$s блок, %3$s хадгалсан нийтлэл импортлогдлоо; үлдсэн нь удахгүй</string>
     <string name="forums_import_failed">Импортлож чадсангүй</string>
     <string name="forums_community">Нийгэмлэг</string>
     <string name="forums_community_name">Нийгэмлэгийн нэр</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s-д %2$s нэрээр нийтлэгдэнэ</string>
     <string name="forums_find_search_example">Нэр, ID, хурууны хээ, URL, эсвэл %1$s хаягаар хайх</string>
     <string name="forums_setup">Тохируулах</string>
+    <string name="forums_post_remove_title">Нийтлэл хасах</string>
+    <string name="forums_post_remove_message">Энэ нь постыг энгийн хэрэглэгчдээс далдална. Модераторууд харах ба дараа нь сэргээх боломжтой.</string>
+    <string name="forums_comment_remove_title">Сэтгэгдэл хасах</string>
+    <string name="forums_comment_remove_message">Энэ нь сэтгэгдлийг энгийн хэрэглэгчдээс далдална. Модераторууд харах ба дараа нь сэргээх боломжтой.</string>
+    <string name="forums_report_submitted">Гомдол илгээгдсэн</string>
+    <string name="forums_member_remove_message">Энэ хүний энэ форум дахь саналууд устгагдана.</string>
+    <string name="forums_member_block_message">Тэр цаашид энэ форумыг харах боломжгүй болно.</string>
+    <string name="forums_member_block_title">%1$s-г блоклох уу?</string>
+    <string name="forums_moderation_resolution_ignored">Хэрэгсэхгүй болгосон</string>
+    <string name="forums_moderation_restriction_member">Гишүүн</string>
+    <string name="forums_moderation_restriction_duration">Хугацаа</string>
+    <string name="forums_moderation_duration_hour">Нэг цаг</string>
+    <string name="forums_moderation_duration_day">Нэг өдөр</string>
+    <string name="forums_moderation_duration_week">Нэг долоо хоног</string>
+    <string name="forums_moderation_duration_month">Нэг сар</string>
+    <string name="forums_member_remove">Хасах</string>
+    <string name="forums_member_remove_title">%1$s-г хасах уу?</string>
+    <string name="forums_imported">%1$s импортлогдлоо</string>
+    <string name="forums_imported_more">Одоогоор %1$s импортлогдлоо; үлдсэн нь удахгүй</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s нийгэмлэг</item>
+        <item quantity="other">%s нийгэмлэг</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s хориг</item>
+        <item quantity="other">%s хориг</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s хадгалсан нийтлэл</item>
+        <item quantity="other">%s хадгалсан нийтлэл</item>
+    </plurals>
 </resources>

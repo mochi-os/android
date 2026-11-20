@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">ਅਜੇ ਕੋਈ ਸੰਚਾਲਕ ਗਤੀਵਿਧੀ ਨਹੀਂ</string>
     <string name="forums_moderation_log_meta">%1$s ਦੁਆਰਾ · ਨਿਸ਼ਾਨਾ %2$s</string>
     <string name="forums_moderation_restriction_add">ਪਾਬੰਦੀ ਜੋੜੋ</string>
-    <string name="forums_moderation_restriction_user">ਉਪਭੋਗਤਾ ਪਛਾਣ</string>
     <string name="forums_moderation_restriction_type_shadowban">ਸ਼ੈਡੋਬੈਨ</string>
-    <string name="forums_moderation_restriction_duration_seconds">ਮਿਆਦ (ਸਕਿੰਟ, ਸਥਾਈ ਲਈ ਖਾਲੀ)</string>
     <string name="forums_moderation_restriction_expires">%1$s ਨੂੰ ਮਿਆਦ ਖਤਮ</string>
     <string name="forums_moderation_restriction_permanent">ਸਥਾਈ</string>
     <string name="forums_report_reason_hate">ਨਫ਼ਰਤ</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">ਨਾਮ</string>
     <string name="forums_settings_field_entity_id">ਇਕਾਈ ID</string>
     <string name="forums_settings_field_fingerprint_label">ਫਿੰਗਰਪ੍ਰਿੰਟ</string>
-    <string name="forums_settings_field_server">ਸਰਵਰ</string>
     <string name="forums_settings_name_edit_cd">ਨਾਮ ਸੰਪਾਦਿਤ ਕਰੋ</string>
     <string name="forums_settings_name_cancel_cd">ਸੋਧਣਾ ਰੱਦ ਕਰੋ</string>
     <string name="forums_settings_save_name">ਨਾਮ ਸੰਭਾਲੋ</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">ਸੈਟਿੰਗਾਂ ਆਯਾਤ ਕਰੋ</string>
     <string name="forums_communities_add">ਭਾਈਚਾਰੇ ਜੋੜੋ</string>
     <string name="forums_communities_add_failed">ਭਾਈਚਾਰੇ ਜੋੜੇ ਨਹੀਂ ਜਾ ਸਕੇ</string>
-    <string name="forums_imported_settings">%1$s ਭਾਈਚਾਰੇ, %2$s ਬਲੌਕ ਅਤੇ %3$s ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਆਯਾਤ ਕੀਤੀਆਂ ਗਈਆਂ</string>
-    <string name="forums_imported_settings_more">ਹੁਣ ਤੱਕ %1$s ਭਾਈਚਾਰੇ, %2$s ਬਲੌਕ ਅਤੇ %3$s ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ ਆਯਾਤ ਕੀਤੀਆਂ ਗਈਆਂ; ਬਾਕੀ ਬਾਅਦ ਵਿੱਚ ਆਉਣਗੀਆਂ</string>
     <string name="forums_import_failed">ਆਯਾਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ</string>
     <string name="forums_community">ਭਾਈਚਾਰਾ</string>
     <string name="forums_community_name">ਭਾਈਚਾਰੇ ਦਾ ਨਾਮ</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">%1$s ਵਿੱਚ %2$s ਵਜੋਂ ਪੋਸਟ ਹੁੰਦਾ ਹੈ</string>
     <string name="forums_find_search_example">ਨਾਮ, ID, ਫਿੰਗਰਪ੍ਰਿੰਟ, URL, ਜਾਂ %1$s ਨਾਲ ਖੋਜੋ</string>
     <string name="forums_setup">ਸੈੱਟ ਅੱਪ ਕਰੋ</string>
+    <string name="forums_post_remove_title">ਪੋਸਟ ਹਟਾਓ</string>
+    <string name="forums_post_remove_message">ਇਹ ਨਿਯਮਤ ਉਪਭੋਗਤਾਵਾਂ ਤੋਂ ਪੋਸਟ ਨੂੰ ਲੁਕਾ ਦੇਵੇਗਾ। ਸੰਚਾਲਕ ਅਜੇ ਵੀ ਇਸਨੂੰ ਵੇਖ ਸਕਦੇ ਹਨ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਇਸਨੂੰ ਬਹਾਲ ਕਰ ਸਕਦੇ ਹਨ।</string>
+    <string name="forums_comment_remove_title">ਟਿੱਪਣੀ ਹਟਾਓ</string>
+    <string name="forums_comment_remove_message">ਇਹ ਨਿਯਮਤ ਉਪਭੋਗਤਾਵਾਂ ਤੋਂ ਟਿੱਪਣੀ ਨੂੰ ਲੁਕਾ ਦੇਵੇਗਾ। ਸੰਚਾਲਕ ਅਜੇ ਵੀ ਇਸਨੂੰ ਵੇਖ ਸਕਦੇ ਹਨ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਇਸਨੂੰ ਬਹਾਲ ਕਰ ਸਕਦੇ ਹਨ।</string>
+    <string name="forums_report_submitted">ਰਿਪੋਰਟ ਜਮ੍ਹਾਂ ਹੋਈ</string>
+    <string name="forums_member_remove_message">ਇਸ ਵਿਅਕਤੀ ਦੀਆਂ ਇਸ ਫੋਰਮ ਵਿਚਲੀਆਂ ਵੋਟਾਂ ਮਿਟਾ ਦਿੱਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।</string>
+    <string name="forums_member_block_message">ਉਹ ਅੱਗੇ ਤੋਂ ਇਹ ਫੋਰਮ ਨਹੀਂ ਦੇਖ ਸਕਣਗੇ।</string>
+    <string name="forums_member_block_title">%1$s ਨੂੰ ਬਲੌਕ ਕਰਨਾ ਹੈ?</string>
+    <string name="forums_moderation_resolution_ignored">ਖਾਰਜ ਕੀਤਾ</string>
+    <string name="forums_moderation_restriction_member">ਮੈਂਬਰ</string>
+    <string name="forums_moderation_restriction_duration">ਮਿਆਦ</string>
+    <string name="forums_moderation_duration_hour">ਇੱਕ ਘੰਟਾ</string>
+    <string name="forums_moderation_duration_day">ਇੱਕ ਦਿਨ</string>
+    <string name="forums_moderation_duration_week">ਇੱਕ ਹਫ਼ਤਾ</string>
+    <string name="forums_moderation_duration_month">ਇੱਕ ਮਹੀਨਾ</string>
+    <string name="forums_member_remove">ਹਟਾਓ</string>
+    <string name="forums_member_remove_title">%1$s ਨੂੰ ਹਟਾਉਣਾ ਹੈ?</string>
+    <string name="forums_imported">%1$s ਆਯਾਤ ਕੀਤੇ ਗਏ</string>
+    <string name="forums_imported_more">ਹੁਣ ਤੱਕ %1$s ਆਯਾਤ ਕੀਤੇ ਗਏ; ਬਾਕੀ ਬਾਅਦ ਵਿੱਚ ਆਉਣਗੇ</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s ਭਾਈਚਾਰਾ</item>
+        <item quantity="other">%s ਭਾਈਚਾਰੇ</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s ਬਲੌਕ</item>
+        <item quantity="other">%s ਬਲੌਕ</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s ਸੰਭਾਲੀ ਪੋਸਟ</item>
+        <item quantity="other">%s ਸੰਭਾਲੀਆਂ ਪੋਸਟਾਂ</item>
+    </plurals>
 </resources>

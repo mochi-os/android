@@ -288,7 +288,6 @@
     <string name="feeds_source_read_with">Окуучу аккаунт</string>
     <string name="feeds_source_follow_pending">Жазылуу күтүүдө</string>
     <string name="feeds_import_follows">Жазылууларды файлдан импорттоо</string>
-    <string name="feeds_follows_importing">%1$s жазылуу импорттолууда; азырынча %2$s кошулду</string>
     <string name="feeds_publish_to_account">Жарыялоо: %1$s</string>
     <string name="feeds_import_posts">Постторду импорттоо</string>
     <string name="feeds_import_bookmarks">Кыстармаларды импорттоо</string>
@@ -302,7 +301,6 @@
     <string name="feeds_generator_off">Мындан ары Bluesky лентасы эмес</string>
     <string name="feeds_generator_failed">Bluesky лентасын өзгөртүү мүмкүн болбоду</string>
     <string name="feeds_copies_delete_title">%1$s ичиндеги көчүрмөлөр жок кылынсынбы?</string>
-    <string name="feeds_copies_delete_message">Лента ал жерге %1$s пост жарыялады. Аларды жок кылмайынча, алар сакталып калат.</string>
     <string name="feeds_copies_delete">Көчүрмөлөрдү жок кылуу</string>
     <string name="feeds_copies_keep">Калтыруу</string>
     <string name="feeds_copies_delete_failed">Көчүрмөлөрдү жок кылуу мүмкүн болбоду</string>
@@ -310,7 +308,6 @@
     <string name="feeds_import_failed">Импорттоо мүмкүн болбоду</string>
     <string name="feeds_imported">%1$s импорттолду</string>
     <string name="feeds_imported_more">Азырынча %1$s импорттолду; калганы кийин</string>
-    <string name="feeds_import_sources_more">Азырынча %1$s булак кошулду; калганы кийин кошулат</string>
     <string name="feeds_waiting_title">Уруксат күтүлүүдө</string>
     <plurals name="feeds_waiting_people">
         <item quantity="one">%s адам</item>
@@ -373,4 +370,24 @@
     <string name="feeds_filtered_by_tag">Тег боюнча чыпкаланды:</string>
     <string name="feeds_setup">Орнотуу</string>
     <string name="feeds_search_example">Аты, ID, манжа изи, URL же %1$s дареги боюнча издөө</string>
+    <string name="feeds_member_remove_message">Бул адамдын ушул лентадагы реакциялары өчүрүлөт.</string>
+    <string name="feeds_member_block_message">Ал мындан ары бул лентаны көрө албайт.</string>
+    <string name="feeds_member_block_title">%1$s бөгөттөлсүнбү?</string>
+    <string name="feeds_member_remove_title">%1$s алынсынбы?</string>
+    <plurals name="feeds_follows_importing">
+        <item quantity="one">%s жазылуу импорттолууда</item>
+        <item quantity="other">%s жазылуу импорттолууда</item>
+    </plurals>
+    <plurals name="feeds_follows_added">
+        <item quantity="one">азырынча %s кошулду</item>
+        <item quantity="other">азырынча %s кошулду</item>
+    </plurals>
+    <plurals name="feeds_copies_delete_message">
+        <item quantity="one">Лента ал жерге %s пост жарыялады. Сиз өчүрбөсөңүз, ал ошол жерде калат.</item>
+        <item quantity="other">Лента ал жерге %s пост жарыялады. Сиз өчүрбөсөңүз, алар ошол жерде калат.</item>
+    </plurals>
+    <plurals name="feeds_import_sources_more">
+        <item quantity="one">Азырынча %s булак кошулду; калганы кийин</item>
+        <item quantity="other">Азырынча %s булак кошулду; калганы кийин</item>
+    </plurals>
 </resources>

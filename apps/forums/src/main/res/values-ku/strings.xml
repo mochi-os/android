@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Hêj çalakiya rêvebir tune</string>
     <string name="forums_moderation_log_meta">Ji aliyê %1$s · Armanc %2$s</string>
     <string name="forums_moderation_restriction_add">Sînorkirinê zêde bike</string>
-    <string name="forums_moderation_restriction_user">Nasnameya bikarhêner</string>
     <string name="forums_moderation_restriction_type_shadowban">Qedexeya veşartî</string>
-    <string name="forums_moderation_restriction_duration_seconds">Dem (çirke, vala ji bo herdem)</string>
     <string name="forums_moderation_restriction_expires">Diqede %1$s</string>
     <string name="forums_moderation_restriction_permanent">Herdemî</string>
     <string name="forums_report_reason_hate">Nefret</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Nav</string>
     <string name="forums_settings_field_entity_id">Nasnameya mîhengehê</string>
     <string name="forums_settings_field_fingerprint_label">Tilîya destan</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Navê sererast bike</string>
     <string name="forums_settings_name_cancel_cd">Sererastkirinê betal bike</string>
     <string name="forums_settings_save_name">Navê tomar bike</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Mîhengan îthal bike</string>
     <string name="forums_communities_add">Civakan zêde bike</string>
     <string name="forums_communities_add_failed">Civak nehatin zêdekirin</string>
-    <string name="forums_imported_settings">%1$s civak, %2$s astengkirin û %3$s şandiyên tomarkirî hatin îthalkirin</string>
-    <string name="forums_imported_settings_more">Heta niha %1$s civak, %2$s astengkirin û %3$s şandiyên tomarkirî hatin îthalkirin; yên mayî dê paşê werin</string>
     <string name="forums_import_failed">Îthalkirin pêk nehat</string>
     <string name="forums_community">Civak</string>
     <string name="forums_community_name">Navê civakê</string>
@@ -338,4 +333,35 @@
     <string name="forums_community_destination">Di %1$s de wekî %2$s tê weşandin</string>
     <string name="forums_find_search_example">Li gor nav, ID, fingerprint, URL an %1$s bigere</string>
     <string name="forums_setup">Saz bike</string>
+    <string name="forums_post_remove_title">Posteyê rake</string>
+    <string name="forums_post_remove_message">Ev dê postê ji bikarhênerên asayî veşêre. Moderator dîsa jî dikarin wê bibînin û paşê vegerînin.</string>
+    <string name="forums_comment_remove_title">Şîrovekirin rake</string>
+    <string name="forums_comment_remove_message">Ev dê şîroveyê ji bikarhênerên asayî veşêre. Moderator dîsa jî dikarin wê bibînin û paşê vegerînin.</string>
+    <string name="forums_report_submitted">Rapor hate şandin</string>
+    <string name="forums_member_remove_message">Dengên vî kesî di vê forumê de tên jêbirin.</string>
+    <string name="forums_member_block_message">Ew êdî nikare vê forumê bibîne.</string>
+    <string name="forums_member_block_title">%1$s asteng bike?</string>
+    <string name="forums_moderation_resolution_ignored">Redkirî</string>
+    <string name="forums_moderation_restriction_member">Endam</string>
+    <string name="forums_moderation_restriction_duration">Dirêjahiya demê</string>
+    <string name="forums_moderation_duration_hour">Saetek</string>
+    <string name="forums_moderation_duration_day">Rojek</string>
+    <string name="forums_moderation_duration_week">Hefteyek</string>
+    <string name="forums_moderation_duration_month">Mehek</string>
+    <string name="forums_member_remove">Rake</string>
+    <string name="forums_member_remove_title">%1$s rake?</string>
+    <string name="forums_imported">%1$s hatin îthalkirin</string>
+    <string name="forums_imported_more">Heta niha %1$s hatin îthalkirin; yên mayî dê paşê werin</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="one">%s civak</item>
+        <item quantity="other">%s civak</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="one">%s astengkirin</item>
+        <item quantity="other">%s astengkirin</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="one">%s posteya tomarkirî</item>
+        <item quantity="other">%s posteyên tomarkirî</item>
+    </plurals>
 </resources>

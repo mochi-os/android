@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">Dereng wonten kagiyatan moderator</string>
     <string name="forums_moderation_log_meta">Dening %1$s · Target %2$s</string>
     <string name="forums_moderation_restriction_add">Tambah watesan</string>
-    <string name="forums_moderation_restriction_user">Identitas pangangge</string>
     <string name="forums_moderation_restriction_type_shadowban">Shadowban</string>
-    <string name="forums_moderation_restriction_duration_seconds">Dangu (detik, kosong kangge permanen)</string>
     <string name="forums_moderation_restriction_expires">Kadaluwarsa %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanen</string>
     <string name="forums_report_reason_hate">Sengit</string>
@@ -198,7 +196,6 @@
     <string name="forums_settings_field_name">Jeneng</string>
     <string name="forums_settings_field_entity_id">ID Entitas</string>
     <string name="forums_settings_field_fingerprint_label">Sidik jari</string>
-    <string name="forums_settings_field_server">Server</string>
     <string name="forums_settings_name_edit_cd">Owahi jeneng</string>
     <string name="forums_settings_name_cancel_cd">Batalake nyunting</string>
     <string name="forums_settings_save_name">Simpen jeneng</string>
@@ -308,8 +305,6 @@
     <string name="forums_import_settings">Impor setelan</string>
     <string name="forums_communities_add">Tambah komunitas</string>
     <string name="forums_communities_add_failed">Ora bisa nambah komunitas</string>
-    <string name="forums_imported_settings">%1$s komunitas, %2$s blokiran lan %3$s kiriman sing disimpen wis diimpor</string>
-    <string name="forums_imported_settings_more">Nganti saiki %1$s komunitas, %2$s blokiran lan %3$s kiriman sing disimpen wis diimpor; sisané nyusul</string>
     <string name="forums_import_failed">Ora bisa ngimpor</string>
     <string name="forums_community">Komunitas</string>
     <string name="forums_community_name">Jeneng komunitas</string>
@@ -337,4 +332,32 @@
     <string name="forums_community_destination">Dikirim menyang %1$s minangka %2$s</string>
     <string name="forums_find_search_example">Goleki miturut jeneng, ID, fingerprint, URL, utawa %1$s</string>
     <string name="forums_setup">Setel</string>
+    <string name="forums_post_remove_title">Cabut postingan</string>
+    <string name="forums_post_remove_message">Iki bakal ndhelikaké postingan saka panganggo biasa. Moderator isih bisa weruh lan mulihaké iku mengko.</string>
+    <string name="forums_comment_remove_title">Cabut komentar</string>
+    <string name="forums_comment_remove_message">Iki bakal ndhelikaké komentar saka panganggo biasa. Moderator isih bisa weruh lan mulihaké iku mengko.</string>
+    <string name="forums_report_submitted">Laporan dikirim</string>
+    <string name="forums_member_remove_message">Vote wong iki ing forum iki dibusak.</string>
+    <string name="forums_member_block_message">Dhèwèké ora bisa ndeleng forum iki manèh.</string>
+    <string name="forums_member_block_title">Blokir %1$s?</string>
+    <string name="forums_moderation_resolution_ignored">Disingkiraké</string>
+    <string name="forums_moderation_restriction_member">Anggota</string>
+    <string name="forums_moderation_restriction_duration">Durasi</string>
+    <string name="forums_moderation_duration_hour">Sak jam</string>
+    <string name="forums_moderation_duration_day">Sak dina</string>
+    <string name="forums_moderation_duration_week">Sak minggu</string>
+    <string name="forums_moderation_duration_month">Sak sasi</string>
+    <string name="forums_member_remove">Busak</string>
+    <string name="forums_member_remove_title">Busak %1$s?</string>
+    <string name="forums_imported">%1$s diimpor</string>
+    <string name="forums_imported_more">Nganti saiki %1$s diimpor; sisané nyusul</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s komunitas</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s blokiran</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s postingan sing disimpen</item>
+    </plurals>
 </resources>

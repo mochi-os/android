@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.find
 
+import android.content.res.Resources
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -38,6 +39,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MochiButton
@@ -45,8 +47,10 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.NetworkSetup
+import org.mochios.android.util.isWebUrl
 import org.mochios.android.util.providerName
 import org.mochios.forums.R
+import org.mochios.forums.model.CommunitiesImported
 import org.mochios.forums.model.CommunityFound
 import org.mochios.forums.model.NetworkAccount
 import org.mochios.forums.model.communityHandle
@@ -109,14 +113,7 @@ internal fun CommunitiesSections(
                 is CommunitiesEvent.Added -> onMessage(
                     resources.getQuantityString(R.plurals.forums_communities_added, event.answer.added, format.formatNumber(event.answer.added)),
                 )
-                is CommunitiesEvent.Imported -> onMessage(
-                    resources.getString(
-                        if (event.answer.more) R.string.forums_imported_settings_more else R.string.forums_imported_settings,
-                        format.formatNumber(event.answer.communities),
-                        format.formatNumber(event.answer.blocks),
-                        format.formatNumber(event.answer.saved),
-                    ),
-                )
+                is CommunitiesEvent.Imported -> onMessage(importedMessage(resources, format, event.answer))
             }
         }
     }
@@ -159,6 +156,23 @@ internal fun CommunitiesSections(
 }
 
 /**
+ * What an import of a Lemmy account's settings read in: a plural phrase for
+ * each count, so each agrees with its own number, joined as the language
+ * joins a list.
+ */
+internal fun importedMessage(resources: Resources, format: Format, answer: CommunitiesImported): String {
+    val parts = listOf(
+        resources.getQuantityString(R.plurals.forums_imported_communities, answer.communities, format.formatNumber(answer.communities)),
+        resources.getQuantityString(R.plurals.forums_imported_blocks, answer.blocks, format.formatNumber(answer.blocks)),
+        resources.getQuantityString(R.plurals.forums_imported_saved, answer.saved, format.formatNumber(answer.saved)),
+    )
+    return resources.getString(
+        if (answer.more) R.string.forums_imported_more else R.string.forums_imported,
+        format.formatList(parts),
+    )
+}
+
+/**
  * A community joined: its forum opens at once, which says it was joined. A
  * message first would hold the opening back for as long as it shows, as a
  * snackbar keeps its caller waiting; only a join with no forum to open says
@@ -186,6 +200,13 @@ private fun Heading(text: String) {
 }
 
 /**
+ * Where a looked-up community's avatar is fetched from: a web address only. The
+ * answer relays another server's field, and an address of this server's own
+ * would be fetched as one of the app's routes.
+ */
+internal fun communityAvatar(community: CommunityFound): String? = community.avatar.takeIf { isWebUrl(it) }
+
+/**
  * The community a search names, as a result like the forums found here, with
  * Join; where the user has more than one hosted account, Join asks which.
  */
@@ -204,7 +225,7 @@ internal fun CommunityResult(
     ) {
         EntityAvatar(
             name = community.name,
-            remote = community.avatar.ifBlank { null },
+            remote = communityAvatar(community),
             seed = community.id,
             size = 44.dp,
         )

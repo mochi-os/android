@@ -8,7 +8,9 @@ package org.mochios.android.model
 import com.google.gson.annotations.SerializedName
 
 data class Attachment(
-    val id: String,
+    // A default of its own, so the class has a constructor taking nothing and
+    // a field the answer leaves out takes its default, not null.
+    val id: String = "",
     val name: String = "",
     val size: Long = 0,
     val type: String = "",

@@ -125,9 +125,7 @@
     <string name="forums_moderation_log_empty">暂无审核活动</string>
     <string name="forums_moderation_log_meta">操作人 %1$s · 对象 %2$s</string>
     <string name="forums_moderation_restriction_add">添加限制</string>
-    <string name="forums_moderation_restriction_user">用户身份</string>
     <string name="forums_moderation_restriction_type_shadowban">隐形封禁</string>
-    <string name="forums_moderation_restriction_duration_seconds">时长(秒,留空表示永久)</string>
     <string name="forums_moderation_restriction_expires">%1$s 到期</string>
     <string name="forums_moderation_restriction_permanent">永久</string>
     <string name="forums_report_reason_hate">仇恨言论</string>
@@ -197,7 +195,6 @@
     <string name="forums_settings_field_name">名称</string>
     <string name="forums_settings_field_entity_id">实体 ID</string>
     <string name="forums_settings_field_fingerprint_label">指纹</string>
-    <string name="forums_settings_field_server">服务器</string>
     <string name="forums_settings_name_edit_cd">编辑名称</string>
     <string name="forums_settings_name_cancel_cd">取消编辑</string>
     <string name="forums_settings_save_name">保存名称</string>
@@ -307,8 +304,6 @@
     <string name="forums_import_settings">导入设置</string>
     <string name="forums_communities_add">添加社区</string>
     <string name="forums_communities_add_failed">无法添加社区</string>
-    <string name="forums_imported_settings">已导入 %1$s 个社区、%2$s 项屏蔽和 %3$s 条已保存的帖子</string>
-    <string name="forums_imported_settings_more">目前已导入 %1$s 个社区、%2$s 项屏蔽和 %3$s 条已保存的帖子；其余的随后导入</string>
     <string name="forums_import_failed">无法导入</string>
     <string name="forums_community">社区</string>
     <string name="forums_community_name">社区名称</string>
@@ -336,4 +331,32 @@
     <string name="forums_community_destination">以 %2$s 的身份发布到 %1$s</string>
     <string name="forums_find_search_example">按名称、ID、指纹、URL 或 %1$s 搜索</string>
     <string name="forums_setup">设置</string>
+    <string name="forums_post_remove_title">移除帖子</string>
+    <string name="forums_post_remove_message">这将向普通用户隐藏帖子。审核员仍然可以看到它并在稍后恢复。</string>
+    <string name="forums_comment_remove_title">移除评论</string>
+    <string name="forums_comment_remove_message">这将向普通用户隐藏评论。审核员仍然可以看到它并在稍后恢复。</string>
+    <string name="forums_report_submitted">举报已提交</string>
+    <string name="forums_member_remove_message">该成员在此论坛中的投票将被删除。</string>
+    <string name="forums_member_block_message">对方将无法再查看此论坛。</string>
+    <string name="forums_member_block_title">屏蔽%1$s？</string>
+    <string name="forums_moderation_resolution_ignored">已驳回</string>
+    <string name="forums_moderation_restriction_member">成员</string>
+    <string name="forums_moderation_restriction_duration">时长</string>
+    <string name="forums_moderation_duration_hour">一小时</string>
+    <string name="forums_moderation_duration_day">一天</string>
+    <string name="forums_moderation_duration_week">一周</string>
+    <string name="forums_moderation_duration_month">一个月</string>
+    <string name="forums_member_remove">移除</string>
+    <string name="forums_member_remove_title">移除%1$s？</string>
+    <string name="forums_imported">已导入 %1$s</string>
+    <string name="forums_imported_more">已导入 %1$s，其余稍后导入</string>
+    <plurals name="forums_imported_communities">
+        <item quantity="other">%s 个社区</item>
+    </plurals>
+    <plurals name="forums_imported_blocks">
+        <item quantity="other">%s 个屏蔽</item>
+    </plurals>
+    <plurals name="forums_imported_saved">
+        <item quantity="other">%s 个已保存的帖子</item>
+    </plurals>
 </resources>

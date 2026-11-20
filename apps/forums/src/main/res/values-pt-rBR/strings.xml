@@ -123,9 +123,7 @@
     <string name="forums_moderation_log_empty">Nenhuma atividade de moderador ainda</string>
     <string name="forums_moderation_log_meta">Por %1$s · Alvo %2$s</string>
     <string name="forums_moderation_restriction_add">Adicionar restrição</string>
-    <string name="forums_moderation_restriction_user">Identidade do usuário</string>
     <string name="forums_moderation_restriction_type_shadowban">Banimento oculto</string>
-    <string name="forums_moderation_restriction_duration_seconds">Duração (segundos, em branco para permanente)</string>
     <string name="forums_moderation_restriction_expires">Expira em %1$s</string>
     <string name="forums_moderation_restriction_permanent">Permanente</string>
     <string name="forums_report_reason_hate">Ódio</string>
@@ -193,7 +191,6 @@
     <string name="forums_settings_field_name">Nome</string>
     <string name="forums_settings_field_entity_id">ID da entidade</string>
     <string name="forums_settings_field_fingerprint_label">Impressão digital</string>
-    <string name="forums_settings_field_server">Servidor</string>
     <string name="forums_settings_name_edit_cd">Editar nome</string>
     <string name="forums_settings_name_cancel_cd">Cancelar edição</string>
     <string name="forums_settings_save_name">Salvar nome</string>
@@ -302,8 +299,6 @@
     <string name="forums_import_settings">Importar configurações</string>
     <string name="forums_communities_add">Adicionar comunidades</string>
     <string name="forums_communities_add_failed">Não foi possível adicionar as comunidades</string>
-    <string name="forums_imported_settings">Importadas %1$s comunidades, %2$s bloqueios e %3$s publicações salvas</string>
-    <string name="forums_imported_settings_more">Importadas até agora %1$s comunidades, %2$s bloqueios e %3$s publicações salvas; o restante vem em seguida</string>
     <string name="forums_import_failed">Não foi possível importar</string>
     <string name="forums_community">Comunidade</string>
     <string name="forums_community_name">Nome da comunidade</string>
@@ -332,4 +327,12 @@
     <string name="forums_community_destination">Publicado em %1$s como %2$s</string>
     <string name="forums_find_search_example">Pesquisar por nome, ID, fingerprint, URL ou %1$s</string>
     <string name="forums_setup">Configurar</string>
+    <string name="forums_post_remove_title">Remover postagem</string>
+    <string name="forums_post_remove_message">Isso ocultará a publicação dos usuários normais. Os moderadores ainda podem vê-la e restaurá-la posteriormente.</string>
+    <string name="forums_comment_remove_title">Remover comentário</string>
+    <string name="forums_comment_remove_message">Isso ocultará o comentário dos usuários normais. Os moderadores ainda podem vê-lo e restaurá-lo posteriormente.</string>
+    <string name="forums_report_submitted">Denúncia enviada</string>
+    <string name="forums_member_remove_message">Os votos desta pessoa neste fórum são excluídos.</string>
+    <string name="forums_member_block_message">Essa pessoa não poderá mais ver este fórum.</string>
+    <string name="forums_member_block_title">Bloquear %1$s?</string>
 </resources>

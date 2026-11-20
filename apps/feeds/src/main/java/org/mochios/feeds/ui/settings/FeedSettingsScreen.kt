@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTab
@@ -68,6 +69,7 @@ fun FeedSettingsScreen(
     val permissions by viewModel.permissions.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
+    val loadError by viewModel.loadError.collectAsState()
     val actionMessage by viewModel.actionMessage.collectAsState()
     val isUnsubscribing by viewModel.isUnsubscribing.collectAsState()
     val aiAccounts by viewModel.aiAccounts.collectAsState()
@@ -158,9 +160,12 @@ fun FeedSettingsScreen(
                 .padding(paddingValues)
         ) {
             val info = feedInfo
-            when {
-                // The owner's tabs wait for whether Publish to is one of them.
-                (isLoading && info == null) || (canManage && offered == null) -> {
+            when (settingsBody(isLoading, info, loadError, canManage, offered)) {
+                SettingsBody.Failed -> {
+                    ErrorState(error = loadError!!, onRetry = viewModel::loadFeedInfo)
+                }
+
+                SettingsBody.Loading -> {
                     Box(
                         modifier = Modifier.fillMaxSize(),
                         contentAlignment = Alignment.Center
@@ -169,15 +174,15 @@ fun FeedSettingsScreen(
                     }
                 }
 
-                !canManage && info != null -> {
+                SettingsBody.Subscriber -> {
                     SubscriberSettings(
-                        feed = info,
+                        feed = info!!,
                         isUnsubscribing = isUnsubscribing,
                         onUnsubscribe = { viewModel.unsubscribe { onUnsubscribed() } },
                     )
                 }
 
-                else -> {
+                SettingsBody.Tabs -> {
                     MochiTabRow(
                         tabs = tabIds.map { tab ->
                             MochiTab(stringResource(tab.titleRes), tab.icon)
@@ -240,6 +245,28 @@ internal fun settingsTabs(publishable: Boolean, ai: Boolean): List<SettingsTab> 
     SettingsTab.entries.filter { tab ->
         (tab != SettingsTab.Publish || publishable) && (tab != SettingsTab.Ai || ai)
     }
+
+/** What the settings screen shows. */
+internal enum class SettingsBody { Loading, Failed, Subscriber, Tabs }
+
+/**
+ * What the settings screen shows: the feed could not be read, and a retry
+ * stands in for every setting, a subscriber's own or an owner's; it is on its
+ * way, or the owner's tabs wait for whether Publish to is one of them
+ * ([offered] null); a subscriber's view; or the owner's tabs.
+ */
+internal fun settingsBody(
+    loading: Boolean,
+    feed: Feed?,
+    failure: MochiError?,
+    manage: Boolean,
+    offered: Boolean?,
+): SettingsBody = when {
+    feed == null && failure != null && !loading -> SettingsBody.Failed
+    feed == null || (manage && offered == null) -> SettingsBody.Loading
+    !manage -> SettingsBody.Subscriber
+    else -> SettingsBody.Tabs
+}
 
 /**
  * Whether Publish to is offered: the owner holds an account the feed may
