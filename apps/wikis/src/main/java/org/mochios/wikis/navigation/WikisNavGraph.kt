@@ -91,7 +91,7 @@ object WikisApp {
 
 fun NavGraphBuilder.wikisNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(WikisApp.HOME) {

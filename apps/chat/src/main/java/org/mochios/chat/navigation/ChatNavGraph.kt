@@ -48,7 +48,7 @@ object ChatApp {
 
 fun NavGraphBuilder.chatNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(ChatApp.ROUTER) { entry ->

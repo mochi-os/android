@@ -112,7 +112,7 @@ private const val PEOPLE_ROUTE_PREFIX = "people/"
 
 fun NavGraphBuilder.peopleNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     val drawer = PeopleDrawerNavigation(
@@ -304,6 +304,7 @@ fun NavGraphBuilder.peopleNavGraph(
             onBack = { navController.popBackStack() },
             onOpenPerson = { id -> navController.navigate(PeopleApp.personView(id)) },
             onAddMember = { navController.navigate(PeopleApp.groupAddMember(groupId)) },
+            onOpenNotifications = onOpenNotifications,
         )
     }
 

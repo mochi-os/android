@@ -72,7 +72,7 @@ fun WordsGameListScreen(
     onGameClick: (String) -> Unit,
     onGameClosed: () -> Unit,
     onNewGame: () -> Unit,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
     viewModel: WordsGameListViewModel = hiltViewModel(),
 ) {

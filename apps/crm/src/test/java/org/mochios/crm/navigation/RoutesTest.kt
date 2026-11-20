@@ -27,7 +27,7 @@ class RoutesTest {
 
     private val navigation = NavHostController(RuntimeEnvironment.getApplication()).apply {
         navigatorProvider.addNavigator(ComposeNavigator())
-        graph = createGraph(startDestination = CrmsApp.ROUTER) { crmsNavGraph(this@apply) }
+        graph = createGraph(startDestination = CrmsApp.ROUTER) { crmsNavGraph(this@apply, onOpenNotifications = {}) }
     }
 
     /** Opens [built] and checks it reached [pattern] with each of [names] filled with [AWKWARD]. */

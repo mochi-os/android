@@ -95,7 +95,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun WikiListScreen(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     viewModel: WikiListViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()

@@ -32,7 +32,7 @@ object GoApp {
  */
 fun NavGraphBuilder.goNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(GoApp.HOME) { entry ->

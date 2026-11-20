@@ -75,7 +75,7 @@ import org.mochios.android.R as MochiR
 fun GoGameListScreen(
     navController: NavController,
     gameId: String,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
     viewModel: GoGameListViewModel = hiltViewModel(),
 ) {

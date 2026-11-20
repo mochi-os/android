@@ -94,7 +94,7 @@ object CrmsApp {
 
 fun NavGraphBuilder.crmsNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
 ) {
     composable(CrmsApp.ROUTER) { entry ->
         CrmsRouter(onResolve = { crmId ->
@@ -169,6 +169,7 @@ fun NavGraphBuilder.crmsNavGraph(
                 navController.navigate(CrmsApp.createObject(crmId, emptyMap(), copy = id))
             },
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
+            onOpenNotifications = onOpenNotifications,
         )
     }
 

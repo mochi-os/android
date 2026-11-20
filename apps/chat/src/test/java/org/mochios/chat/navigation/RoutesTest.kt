@@ -26,7 +26,7 @@ class RoutesTest {
 
     private val navigation = NavHostController(RuntimeEnvironment.getApplication()).apply {
         navigatorProvider.addNavigator(ComposeNavigator())
-        graph = createGraph(startDestination = ChatApp.ROUTER) { chatNavGraph(this@apply) }
+        graph = createGraph(startDestination = ChatApp.ROUTER) { chatNavGraph(this@apply, onOpenNotifications = {}) }
     }
 
     /** Opens [route] and answers the destination it matched and the arguments it filled. */

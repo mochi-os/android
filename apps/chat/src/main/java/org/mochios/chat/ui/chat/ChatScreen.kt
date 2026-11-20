@@ -182,7 +182,7 @@ fun ChatScreen(
     onNewChat: () -> Unit,
     onSettings: (String) -> Unit,
     onChatDeleted: () -> Unit = {},
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     listViewModel: ChatListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current

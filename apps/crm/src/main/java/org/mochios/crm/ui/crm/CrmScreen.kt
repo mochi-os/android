@@ -141,7 +141,7 @@ fun CrmScreen(
     onAddColumn: (id: String, classId: String, fieldId: String) -> Unit,
     onCreateObject: (presetValues: Map<String, String>) -> Unit = {},
     onCopyObject: (String) -> Unit = {},
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
     listViewModel: CrmListViewModel = hiltViewModel(),
 ) {

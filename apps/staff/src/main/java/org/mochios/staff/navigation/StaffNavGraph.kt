@@ -86,7 +86,7 @@ private const val TEAM_MEMBER_ADDED = "team_member_added"
 
 fun NavGraphBuilder.staffNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
 ) {
     composable(StaffApp.HOME) {
         StaffLayout(

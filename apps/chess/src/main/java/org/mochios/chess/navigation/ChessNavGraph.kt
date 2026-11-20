@@ -31,7 +31,7 @@ object ChessApp {
 
 fun NavGraphBuilder.chessNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(ChessApp.HOME) { entry ->

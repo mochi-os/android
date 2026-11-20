@@ -80,7 +80,7 @@ fun GroupDetailScreen(
     onBack: () -> Unit,
     onOpenPerson: (id: String) -> Unit,
     onAddMember: () -> Unit = {},
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     viewModel: GroupDetailViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()

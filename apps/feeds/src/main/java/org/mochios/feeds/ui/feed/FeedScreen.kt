@@ -209,7 +209,7 @@ fun FeedScreen(
     onSelectFeed: (String) -> Unit,
     onNavigateToFindFeeds: () -> Unit,
     onNavigateToCreateFeed: () -> Unit,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     viewModel: FeedViewModel = hiltViewModel(),
     feedListViewModel: FeedListViewModel = hiltViewModel(),
 ) {

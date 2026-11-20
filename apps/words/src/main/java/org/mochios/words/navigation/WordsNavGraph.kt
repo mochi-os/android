@@ -31,7 +31,7 @@ object WordsApp {
 
 fun NavGraphBuilder.wordsNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(WordsApp.HOME) { entry ->

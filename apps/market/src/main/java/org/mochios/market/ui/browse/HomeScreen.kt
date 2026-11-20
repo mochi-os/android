@@ -96,7 +96,7 @@ import org.mochios.market.ui.components.MarketLayout
 @Composable
 fun HomeScreen(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     viewModel: HomeViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()

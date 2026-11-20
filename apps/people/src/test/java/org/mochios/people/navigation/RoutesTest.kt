@@ -34,7 +34,7 @@ class RoutesTest {
 
     private val navigation = NavHostController(RuntimeEnvironment.getApplication()).apply {
         navigatorProvider.addNavigator(ComposeNavigator())
-        graph = createGraph(startDestination = PeopleApp.ROUTER) { peopleNavGraph(this@apply) }
+        graph = createGraph(startDestination = PeopleApp.ROUTER) { peopleNavGraph(this@apply, onOpenNotifications = {}) }
     }
 
     /** Opens [route] and answers the destination it matched and the arguments it filled. */

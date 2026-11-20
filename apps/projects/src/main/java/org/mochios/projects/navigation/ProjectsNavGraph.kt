@@ -124,7 +124,7 @@ object ProjectsApp {
 
 fun NavGraphBuilder.projectsNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
 ) {
     composable(ProjectsApp.ROUTER) { entry ->
         ProjectsRouter(onResolve = { projectId ->
@@ -209,6 +209,7 @@ fun NavGraphBuilder.projectsNavGraph(
                 navController.navigate(ProjectsApp.createObject(projectId, copy = id))
             },
             initialObjectId = backStackEntry.arguments?.getString("objectId"),
+            onOpenNotifications = onOpenNotifications,
         )
     }
 

@@ -143,7 +143,7 @@ fun ProjectScreen(
     onViewDiff: (String, String, String, String) -> Unit,
     onCreateObject: (parent: String?, presetValues: Map<String, String>) -> Unit = { _, _ -> },
     onCopyObject: (String) -> Unit = {},
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     initialObjectId: String? = null,
     listViewModel: ProjectListViewModel = hiltViewModel(),
 ) {

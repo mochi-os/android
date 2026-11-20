@@ -81,7 +81,7 @@ object ForumsApp {
 
 fun NavGraphBuilder.forumsNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(ForumsApp.ROUTER) { entry ->

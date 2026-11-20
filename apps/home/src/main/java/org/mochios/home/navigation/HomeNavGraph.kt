@@ -20,7 +20,7 @@ object HomeApp {
  * the notification categories in settings.
  */
 fun NavGraphBuilder.homeNavGraph(
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onLogout: () -> Unit = {},
     onOpenLink: (String) -> Unit = {},
     onManageCategories: () -> Unit = {},

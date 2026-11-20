@@ -178,7 +178,7 @@ object MarketApp {
  */
 fun NavGraphBuilder.marketNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
 ) {
     // ---- Class-level routes ----
     composable(

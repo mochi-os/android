@@ -129,7 +129,7 @@ fun WordsGameDetailScreen(
     @Suppress("UNUSED_PARAMETER") gameId: String,
     onBack: () -> Unit,
     onOpenGame: (String) -> Unit,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenDrawer: () -> Unit,
     viewModel: WordsGameViewModel = hiltViewModel(),
 ) {

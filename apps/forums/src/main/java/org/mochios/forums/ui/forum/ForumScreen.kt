@@ -212,7 +212,7 @@ fun ForumScreen(
     onSettings: (String) -> Unit,
     onModeration: (String) -> Unit = {},
     onNavigateToSaved: () -> Unit = {},
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     listViewModel: ForumListViewModel = hiltViewModel(),
 ) {
     val context = LocalContext.current

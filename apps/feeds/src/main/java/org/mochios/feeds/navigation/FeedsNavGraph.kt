@@ -98,7 +98,7 @@ internal fun highlightArgument(arguments: Bundle?): String = arguments?.getStrin
 
 fun NavGraphBuilder.feedsNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(FeedsApp.ROUTER) { entry ->

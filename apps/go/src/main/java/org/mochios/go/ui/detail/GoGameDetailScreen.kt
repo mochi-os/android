@@ -110,7 +110,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun GoGameDetailScreen(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenDrawer: () -> Unit,
     viewModel: GoGameViewModel = hiltViewModel(),
 ) {

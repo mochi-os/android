@@ -122,7 +122,7 @@ import org.mochios.android.R as MochiR
 fun ChessGameDetailScreen(
     navController: NavController,
     onOpenDrawer: () -> Unit,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     viewModel: ChessGameViewModel = hiltViewModel(),
 ) {
 

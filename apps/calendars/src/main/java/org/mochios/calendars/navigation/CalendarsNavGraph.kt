@@ -247,7 +247,7 @@ object CalendarsApp {
 
 fun NavGraphBuilder.calendarsNavGraph(
     navController: NavController,
-    onOpenNotifications: () -> Unit = {},
+    onOpenNotifications: () -> Unit,
     onOpenLink: (String) -> Unit = {},
 ) {
     composable(
