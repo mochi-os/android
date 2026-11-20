@@ -186,4 +186,5 @@
     <string name="chat_refused_friends_only">%1$s принимает чаты только от друзей.</string>
     <string name="chat_message_earlier">Сообщения, отправленные до добавления этого аккаунта в Mochi, зашифрованы и не могут быть прочитаны здесь</string>
     <string name="chat_message_excluded">Зашифровано только для других устройств</string>
+    <string name="chat_setup">Настроить</string>
 </resources>

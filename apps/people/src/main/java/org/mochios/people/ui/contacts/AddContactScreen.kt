@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.contacts
 
+import org.mochios.android.api.OwnedAddress
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -609,12 +610,12 @@ private fun EmptyHint(title: String) {
 internal fun avatarUrlFor(
     info: PersonInformation,
     fallback: User,
-): String? {
+): OwnedAddress? {
     val id = segment(info.id.ifBlank { fallback.id }.ifBlank { return null }) ?: return null
     val version = info.avatar
-    if (version.isBlank()) return "/people/$id/-/avatar"
-    val escaped = segment(version) ?: return "/people/$id/-/avatar"
-    return "/people/$id/-/avatar?v=$escaped"
+    if (version.isBlank()) return OwnedAddress.of("/people/$id/-/avatar")
+    val escaped = segment(version) ?: return OwnedAddress.of("/people/$id/-/avatar")
+    return OwnedAddress.of("/people/$id/-/avatar?v=$escaped")
 }
 
 /**
@@ -624,9 +625,9 @@ internal fun avatarUrlFor(
 internal fun bannerUrlFor(
     info: PersonInformation,
     fallback: User,
-): String? {
+): OwnedAddress? {
     if (info.banner.isBlank()) return null
     val id = segment(info.id.ifBlank { fallback.id }.ifBlank { return null }) ?: return null
-    val version = segment(info.banner) ?: return "/people/$id/-/banner"
-    return "/people/$id/-/banner?v=$version"
+    val version = segment(info.banner) ?: return OwnedAddress.of("/people/$id/-/banner")
+    return OwnedAddress.of("/people/$id/-/banner?v=$version")
 }

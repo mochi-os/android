@@ -443,4 +443,6 @@
     <string name="feeds_source_unfollowed">Ddim yn dilyn</string>
     <string name="feeds_source_follow_again">Dilyn eto</string>
     <string name="feeds_filtered_by_tag">Wedi\'i hidlo yn ôl tag:</string>
+    <string name="feeds_setup">Gosod</string>
+    <string name="feeds_search_example">Chwilio yn ôl enw, ID, ôl bys, URL, neu %1$s</string>
 </resources>

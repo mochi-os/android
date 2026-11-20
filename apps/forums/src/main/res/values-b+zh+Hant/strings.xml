@@ -334,4 +334,6 @@
     </plurals>
     <string name="forums_comment_op">樓主</string>
     <string name="forums_community_destination">以 %2$s 的身分發佈到 %1$s</string>
+    <string name="forums_find_search_example">依名稱、ID、指紋、網址或 %1$s 搜尋</string>
+    <string name="forums_setup">設定</string>
 </resources>

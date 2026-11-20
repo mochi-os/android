@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tunniste ei voi olla tyhjä</string>
     <string name="wikis_attachments_search_placeholder">Etsi liitteitä</string>
     <string name="wikis_attachments_delete_confirm_message">Poistetaanko \"%1$s\"? Tätä ei voi kumota.</string>
-    <string name="wikis_attachments_downloading">Ladataan…</string>
     <string name="wikis_attachments_empty_description">Napauta Lataa lisätäksesi tiedostoja tälle sivulle.</string>
     <string name="wikis_settings_name_save_cd">Tallenna nimi</string>
     <string name="wikis_settings_name_cancel_cd">Peruuta muokkaus</string>

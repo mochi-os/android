@@ -318,7 +318,6 @@
     <string name="error_server_https">Alamat server kudu diwiwiti https://</string>
     <string name="device_name_fallback">Piranti seluler</string>
     <string name="account_error_token_type">Jinis token ora didhukung</string>
-    <string name="account_error_caller">Sing nyeluk ora diidini</string>
     <string name="zone_sea">Ing segara</string>
     <string name="access_remove">Cabut</string>
     <string name="access_remove_title">Cabut akses?</string>
@@ -343,4 +342,10 @@
     <string name="person_unknown">Ora dimangerteni</string>
     <string name="format_time_seconds_short">%1$sdt</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Ngundhuh %1$s…</string>
+    <string name="downloads_saved">%1$s disimpen</string>
+    <string name="downloads_failed">Ora bisa nyimpen %1$s: %2$s</string>
+    <string name="sync_conflict">Diganti ing server</string>
+    <string name="sync_missing">Wis ora ana ing server</string>
+    <string name="sync_refused">Ditolak server</string>
 </resources>

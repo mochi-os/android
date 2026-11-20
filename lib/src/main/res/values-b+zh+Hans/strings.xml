@@ -318,7 +318,6 @@
     <string name="error_server_https">服务器地址必须以 https:// 开头</string>
     <string name="device_name_fallback">移动设备</string>
     <string name="account_error_token_type">不支持的令牌类型</string>
-    <string name="account_error_caller">不允许该调用方</string>
     <string name="zone_sea">海上</string>
     <string name="access_remove">移除</string>
     <string name="access_remove_title">移除访问权限?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">未知</string>
     <string name="format_time_seconds_short">%1$s 秒</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">正在下载 %1$s…</string>
+    <string name="downloads_saved">%1$s 已保存</string>
+    <string name="downloads_failed">无法保存 %1$s：%2$s</string>
+    <string name="sync_conflict">已在服务器上更改</string>
+    <string name="sync_missing">已不在服务器上</string>
+    <string name="sync_refused">被服务器拒绝</string>
 </resources>

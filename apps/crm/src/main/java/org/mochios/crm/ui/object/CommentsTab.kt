@@ -32,6 +32,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.util.attachmentModel
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.R as MochiR
 import org.mochios.android.files.Upload
 import org.mochios.android.model.Comment
@@ -70,7 +72,7 @@ fun CommentsTab(
     // Builds the avatar proxy path for a commenter. Should return a
     // server-relative path to the crm app's proxy action, e.g.
     // "/crm/<crm>/-/comment/<comment.id>/asset/avatar".
-    avatarUrlBuilder: ((Comment) -> String?)? = null
+    avatarUrlBuilder: ((Comment) -> OwnedAddress?)? = null
 ) {
     val draft = drafts.draft(target)
     val defaultName = stringResource(R.string.crm_attachment_default_name)
@@ -177,7 +179,7 @@ private fun CommentItem(
     comment: Comment,
     depth: Int,
     crmId: String,
-    avatarUrlBuilder: ((Comment) -> String?)?,
+    avatarUrlBuilder: ((Comment) -> OwnedAddress?)?,
     drafts: CommentDrafts,
     currentUserId: String?,
     onReply: (String, String) -> Unit,
@@ -201,10 +203,10 @@ private fun CommentItem(
         avatarUrl = avatarUrlBuilder?.invoke(comment),
         attachments = addressed(comment.attachments, "crm", crmId),
         attachmentUrl = { att ->
-            att.url ?: attachmentAddress("crm", crmId, att.id).orEmpty()
+            attachmentModel(att.url, attachmentAddress("crm", crmId, att.id))
         },
         attachmentThumbnailUrl = { att ->
-            att.thumbnailUrl ?: attachmentAddress("crm", crmId, att.id, "thumbnail").orEmpty()
+            attachmentModel(att.thumbnailUrl, attachmentAddress("crm", crmId, att.id, "thumbnail"))
         },
         isEditing = edit != null,
         editText = edit ?: comment.text,

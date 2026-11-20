@@ -318,7 +318,6 @@
     <string name="error_server_https">د سرور پته باید له https:// پیل شي</string>
     <string name="device_name_fallback">ګرځنده وسیله</string>
     <string name="account_error_token_type">د ټوکن ناملاتړ ډول</string>
-    <string name="account_error_caller">غږوونکي ته اجازه نشته</string>
     <string name="zone_sea">په سمندر کې</string>
     <string name="access_remove">لرې کول</string>
     <string name="access_remove_title">لاسرسی لرې کړو؟</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">نامعلوم</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s ښکته کیږي…</string>
+    <string name="downloads_saved">%1$s خوندي شو</string>
+    <string name="downloads_failed">%1$s خوندي نه شو: %2$s</string>
+    <string name="sync_conflict">په سرور کې بدل شو</string>
+    <string name="sync_missing">نور په سرور کې نشته</string>
+    <string name="sync_refused">سرور رد کړ</string>
 </resources>

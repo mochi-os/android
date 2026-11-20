@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Merki má ekki vera tómt</string>
     <string name="wikis_attachments_search_placeholder">Leita í viðhengjum</string>
     <string name="wikis_attachments_delete_confirm_message">Eyða „%1$s“? Þetta er ekki hægt að afturkalla.</string>
-    <string name="wikis_attachments_downloading">Sæki…</string>
     <string name="wikis_attachments_empty_description">Ýttu á Hlaða upp til að bæta skrám við þessa síðu.</string>
     <string name="wikis_settings_name_save_cd">Vista nafn</string>
     <string name="wikis_settings_name_cancel_cd">Hætta við breytingu</string>

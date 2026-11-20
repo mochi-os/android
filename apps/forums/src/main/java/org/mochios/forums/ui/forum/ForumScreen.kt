@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.forum
 
+import org.mochios.android.api.OwnedAddress
 import android.content.Intent
 import android.content.Context
 import androidx.compose.foundation.clickable
@@ -843,7 +844,7 @@ private fun PostCard(
     post: Post,
     forumId: String,
     // One avatar address per author across the list (authorAvatars).
-    avatars: Map<String, String>,
+    avatars: Map<String, OwnedAddress>,
     isSaved: Boolean,
     onClick: () -> Unit,
     onToggleSave: () -> Unit,

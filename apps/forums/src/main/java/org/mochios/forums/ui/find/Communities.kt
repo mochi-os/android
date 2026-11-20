@@ -44,6 +44,7 @@ import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.NetworkSetup
 import org.mochios.android.util.providerName
 import org.mochios.forums.R
 import org.mochios.forums.model.CommunityFound
@@ -61,10 +62,22 @@ internal fun looksLikeCommunity(query: String): Boolean {
 }
 
 /**
+ * Whether a search names a community the user has no account to join through,
+ * read as having none, on a server that hosts fediverse accounts: a way to
+ * set one up is shown in place of the community.
+ */
+internal fun settable(query: String, listed: Boolean, hosted: List<NetworkAccount>, networks: List<String>): Boolean =
+    looksLikeCommunity(query) && listed && hosted.isEmpty() && "fediverse" in networks
+
+/** A community's address as the search field's example, where the server hosts fediverse accounts to join one through. */
+internal fun communityExample(networks: List<String>): String? = if ("fediverse" in networks) "!name@example.social" else null
+
+/**
  * The Find screen's ways in from other networks: the community a search
- * names, joined as one of the user's hosted fediverse accounts, and, while
- * nothing is searched, the communities and settings of a linked Lemmy account
- * read in. Each shows only where the user has such an account.
+ * names, joined as one of the user's hosted fediverse accounts, or a way to
+ * set one up where the user has none, and, while nothing is searched, the
+ * communities and settings of a linked Lemmy account read in. Each shows only
+ * where the user has such an account, or the server may host one.
  */
 @Composable
 internal fun CommunitiesSections(
@@ -73,8 +86,11 @@ internal fun CommunitiesSections(
     onOpenForum: (String) -> Unit,
     modifier: Modifier = Modifier,
     typed: String? = null,
+    onOpenLink: (String) -> Unit = {},
 ) {
     val hosted by viewModel.hosted.collectAsState()
+    val listed by viewModel.listed.collectAsState()
+    val networks by viewModel.networks.collectAsState()
     val lemmy by viewModel.lemmy.collectAsState()
     val busy by viewModel.busy.collectAsState()
     val found by viewModel.found.collectAsState()
@@ -105,6 +121,15 @@ internal fun CommunitiesSections(
         }
     }
     if (typed != null) {
+        if (settable(typed, listed, hosted, networks)) {
+            NetworkSetup(
+                network = "fediverse",
+                label = stringResource(R.string.forums_setup),
+                onOpenLink = onOpenLink,
+                modifier = modifier,
+            )
+            return
+        }
         if (hosted.isEmpty() || found.query != typed) return
         val community = found.community
         if (community != null) {
@@ -179,7 +204,7 @@ internal fun CommunityResult(
     ) {
         EntityAvatar(
             name = community.name,
-            src = community.avatar.ifBlank { null },
+            remote = community.avatar.ifBlank { null },
             seed = community.id,
             size = 44.dp,
         )

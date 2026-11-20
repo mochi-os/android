@@ -318,7 +318,6 @@
     <string name="error_server_https">ဆာဗာလိပ်စာသည် https:// ဖြင့် စတင်ရမည်</string>
     <string name="device_name_fallback">မိုဘိုင်းစက်ပစ္စည်း</string>
     <string name="account_error_token_type">မပံ့ပိုးသော တိုကင်အမျိုးအစား</string>
-    <string name="account_error_caller">ခေါ်ဆိုသူကို ခွင့်မပြုပါ</string>
     <string name="zone_sea">ပင်လယ်ပြင်တွင်</string>
     <string name="access_remove">ဖယ်ရှား</string>
     <string name="access_remove_title">ဝင်ရောက်ခွင့် ဖယ်ရှားမလား?</string>
@@ -343,4 +342,10 @@
     <string name="person_unknown">မသိရသော</string>
     <string name="format_time_seconds_short">%1$sစက္ကန့်</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s ကို ဒေါင်းလုဒ်ဆွဲနေသည်…</string>
+    <string name="downloads_saved">%1$s ကို သိမ်းပြီး</string>
+    <string name="downloads_failed">%1$s ကို သိမ်း၍မရပါ: %2$s</string>
+    <string name="sync_conflict">ဆာဗာတွင် ပြောင်းလဲထားသည်</string>
+    <string name="sync_missing">ဆာဗာတွင် မရှိတော့ပါ</string>
+    <string name="sync_refused">ဆာဗာက ငြင်းပယ်သည်</string>
 </resources>

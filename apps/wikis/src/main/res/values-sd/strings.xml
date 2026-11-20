@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ٽيگ خالي نٿو ٿي سگهي</string>
     <string name="wikis_attachments_search_placeholder">اٽيچمينٽس ڳوليو</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ڊاھجي؟ ھي واپس نٿو ٿي سگهي.</string>
-    <string name="wikis_attachments_downloading">ڊائون لوڊ ٿي رهيو آهي…</string>
     <string name="wikis_attachments_empty_description">ھن صفحي ۾ فائلون شامل ڪرڻ لاءِ اپلوڊ کي ڇُھو.</string>
     <string name="wikis_settings_name_save_cd">نالو محفوظ ڪريو</string>
     <string name="wikis_settings_name_cancel_cd">ايڊٽ منسوخ ڪريو</string>

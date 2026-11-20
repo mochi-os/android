@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Verbind tans…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Herkoppel…</string>
-    <string name="chess_ws_failed">Verbinding het misluk</string>
     <string name="chess_move_capture">%1$s het %2$s geneem</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

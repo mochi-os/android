@@ -318,7 +318,6 @@
     <string name="error_server_https">సర్వర్ చిరునామా https:// తో ప్రారంభం కావాలి</string>
     <string name="device_name_fallback">మొబైల్ పరికరం</string>
     <string name="account_error_token_type">మద్దతు లేని టోకెన్ రకం</string>
-    <string name="account_error_caller">కాలర్‌కు అనుమతి లేదు</string>
     <string name="zone_sea">సముద్రంలో</string>
     <string name="access_remove">తొలగించండి</string>
     <string name="access_remove_title">యాక్సెస్‌ను తొలగించాలా?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">తెలియదు</string>
     <string name="format_time_seconds_short">%1$sసె</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s డౌన్‌లోడ్ అవుతోంది…</string>
+    <string name="downloads_saved">%1$s సేవ్ చేయబడింది</string>
+    <string name="downloads_failed">%1$s సేవ్ చేయడం సాధ్యం కాలేదు: %2$s</string>
+    <string name="sync_conflict">సర్వర్‌లో మార్చబడింది</string>
+    <string name="sync_missing">ఇకపై సర్వర్‌లో లేదు</string>
+    <string name="sync_refused">సర్వర్ తిరస్కరించింది</string>
 </resources>

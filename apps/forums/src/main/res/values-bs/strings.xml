@@ -338,4 +338,6 @@
     </plurals>
     <string name="forums_comment_op">Autor</string>
     <string name="forums_community_destination">Objavljuje se u %1$s kao %2$s</string>
+    <string name="forums_find_search_example">Pretraži po nazivu, ID-u, otisku, URL-u ili adresi %1$s</string>
+    <string name="forums_setup">Postavi</string>
 </resources>

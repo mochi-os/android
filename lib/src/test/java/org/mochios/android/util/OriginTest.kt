@@ -6,7 +6,9 @@
 package org.mochios.android.util
 
 import okhttp3.HttpUrl.Companion.toHttpUrl
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -99,5 +101,20 @@ class OriginTest {
         // all rather than merely being stricter about scheme and port.
         assertFalse(hostOnly("https://attacker.example/x.png"))
         assertFalse(isServerOrigin("https://attacker.example/x.png".toHttpUrl(), server))
+    }
+
+    @Test
+    fun `a server is stored as its origin, with nothing after it`() {
+        assertEquals("https://example.org", serverOrigin("https://example.org/login?next=1#top"))
+        assertEquals("https://example.org", serverOrigin(" https://example.org:443/ "))
+        assertEquals("http://localhost:8081", serverOrigin("http://localhost:8081/feeds/"))
+        assertEquals("https://[::1]:8443", serverOrigin("https://[::1]:8443/x"))
+    }
+
+    @Test
+    fun `an address with a user name or password, or none at all, has no origin`() {
+        assertNull(serverOrigin("https://user@example.org"))
+        assertNull(serverOrigin("https://user:secret@example.org"))
+        assertNull(serverOrigin("example.org"))
     }
 }

@@ -69,7 +69,7 @@ class SavedFailuresTest {
         runBlocking {
             session.clearAll()
             session.setServerUrl(base)
-            session.setBoundAccount("me", base)
+            session.setBoundAccount("me")
         }
     }
 

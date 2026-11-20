@@ -443,4 +443,6 @@
     <string name="feeds_source_unfollowed">غير متابَع</string>
     <string name="feeds_source_follow_again">متابعة مجددًا</string>
     <string name="feeds_filtered_by_tag">مصفّى حسب الوسم:</string>
+    <string name="feeds_setup">إعداد</string>
+    <string name="feeds_search_example">البحث بالاسم أو المعرف أو البصمة أو URL أو %1$s</string>
 </resources>

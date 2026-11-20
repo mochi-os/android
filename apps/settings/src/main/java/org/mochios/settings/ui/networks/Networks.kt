@@ -14,6 +14,7 @@ import org.mochios.settings.api.Handle
 import org.mochios.settings.api.NetworkAccount
 import org.mochios.settings.api.NetworkFailure
 import org.mochios.settings.api.NetworkFeed
+import org.mochios.settings.api.NetworkProvider
 import org.mochios.settings.api.NetworksData
 import java.text.Normalizer
 
@@ -34,6 +35,26 @@ internal fun networkLabel(type: String): String = when (type) {
     "mastodon" -> "Mastodon"
     "lemmy" -> "Lemmy"
     else -> type
+}
+
+/**
+ * The provider an account on a network is linked through, where it is not the
+ * network's own name: a fediverse account by Mastodon's.
+ */
+private val LINKED_THROUGH = mapOf("fediverse" to "mastodon")
+
+/**
+ * Where the screen takes someone another app sent to set up [network]: the
+ * link form of the provider an account there is linked through, where the
+ * server hosts no accounts on that network. A network it hosts needs nothing
+ * more, as the screen opens on the handle chooser or the first handle's card.
+ *
+ * @return the provider to open the link dialog on, or null to open as usual.
+ */
+internal fun arrival(network: String?, networks: List<String>, providers: List<NetworkProvider>): String? {
+    if (network.isNullOrEmpty() || network in networks) return null
+    val type = LINKED_THROUGH[network] ?: network
+    return type.takeIf { providers.any { it.type == type } }
 }
 
 /** Why a name cannot be reserved, in the user's words. */

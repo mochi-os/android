@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui.settings
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -21,7 +22,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
-import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Downloads
 import org.mochios.android.util.NaturalCompare
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Backups
@@ -29,7 +30,6 @@ import org.mochios.feeds.model.Filter
 import org.mochios.feeds.model.PublishAccount
 import org.mochios.feeds.model.PublishState
 import org.mochios.feeds.repository.FeedsRepository
-import java.net.URLEncoder
 import javax.inject.Inject
 import org.mochios.android.R as MochiR
 
@@ -45,6 +45,13 @@ sealed interface PublishEvent {
     /** An import from an account: how many so far, and whether more follow. */
     data class Imported(val kind: String, val count: Int, val more: Boolean) : PublishEvent
 }
+
+/** The network an account publishes on: a linked Mastodon account's is the fediverse, as a hosted one's is. */
+private fun networkOf(account: PublishAccount): String = if (account.type == "mastodon") "fediverse" else account.type
+
+/** The networks the server offers that none of the owner's accounts is on, each with a way to set one up. */
+internal fun unset(offered: List<String>, accounts: List<PublishAccount>): List<String> =
+    offered.filter { network -> accounts.none { account -> networkOf(account) == network } }
 
 /** The copies a feed keeps on an account that just left its list, offered for deletion. */
 data class KeptCopies(val account: PublishAccount, val count: Int)
@@ -64,7 +71,7 @@ data class AccountBackups(val account: PublishAccount, val files: List<String>?,
 class PublishingViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: FeedsRepository,
-    private val sessionManager: SessionManager,
+    private val downloads: Downloads,
 ) : ViewModel() {
 
     val feedId: String = savedStateHandle.get<String>("feedId") ?: ""
@@ -228,11 +235,12 @@ class PublishingViewModel @Inject constructor(
         _backups.value = null
     }
 
-    /** Where one archive file downloads from, and the token that may fetch it. */
-    fun backupFile(account: PublishAccount, name: String): Pair<String, String?> {
-        val server = sessionManager.getServerUrlBlocking().trimEnd('/')
-        val url = "$server/feeds/$feedId/-/backups/file?account=${encode(account.id)}&name=${encode(name)}"
-        return url to sessionManager.getTokenBlocking("feeds")
+    /**
+     * Saves one archive file of [account] into [destination], through the feeds
+     * client: the transfer outlives this screen, and says how it ended.
+     */
+    fun saveBackup(account: String, name: String, destination: Uri) {
+        downloads.save(destination, name) { repository.backupFile(feedId, account, name) }
     }
 
     /** Add a keyword filter; [onAdded] runs once the server has it. */
@@ -273,6 +281,4 @@ class PublishingViewModel @Inject constructor(
     }
 
     private fun sorted(filters: List<Filter>) = filters.sortedWith(compareBy(NaturalCompare) { it.phrase })
-
-    private fun encode(value: String): String = URLEncoder.encode(value, "UTF-8")
 }

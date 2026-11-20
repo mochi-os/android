@@ -397,4 +397,6 @@
     <string name="feeds_source_unfollowed">Nesekama</string>
     <string name="feeds_source_follow_again">Sekti vėl</string>
     <string name="feeds_filtered_by_tag">Filtruota pagal žymą:</string>
+    <string name="feeds_setup">Nustatyti</string>
+    <string name="feeds_search_example">Ieškoti pagal pavadinimą, ID, atspaudą, URL ar adresą %1$s</string>
 </resources>

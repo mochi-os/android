@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s یوازې د ملګرو چټونه مني.</string>
     <string name="chat_message_earlier">د دې حساب Mochi ته له ورزیاتېدو مخکې پیغامونه کوډ شوي دي او دلته نشي لوستل کېدای</string>
     <string name="chat_message_excluded">یوازې د نورو وسیلو لپاره کوډ شوی</string>
+    <string name="chat_setup">تنظیم</string>
 </resources>

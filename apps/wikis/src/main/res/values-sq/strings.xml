@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">Etiketa nuk mund të jetë bosh</string>
     <string name="wikis_attachments_search_placeholder">Kërko bashkëngjitje</string>
     <string name="wikis_attachments_delete_confirm_message">Fshi „%1$s\"? Kjo nuk mund të zhbëhet.</string>
-    <string name="wikis_attachments_downloading">Duke shkarkuar…</string>
     <string name="wikis_attachments_empty_description">Trokit Ngarko për të shtuar skedarë në këtë faqe.</string>
     <string name="wikis_settings_name_save_cd">Ruaj emrin</string>
     <string name="wikis_settings_name_cancel_cd">Anulo redaktimin</string>

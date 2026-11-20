@@ -318,7 +318,6 @@
     <string name="error_server_https">سرور جو پتو https:// سان شروع ٿيڻ گهرجي</string>
     <string name="device_name_fallback">موبائل ڊوائيس</string>
     <string name="account_error_token_type">غير حمايت ٿيل ٽوڪن جو قسم</string>
-    <string name="account_error_caller">ڪال ڪندڙ کي اجازت ناهي</string>
     <string name="zone_sea">سمنڊ ۾</string>
     <string name="access_remove">هٽايو</string>
     <string name="access_remove_title">رسائي هٽائجي؟</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">اڻڄاتل</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s ڊائونلوڊ ٿي رهيو آهي…</string>
+    <string name="downloads_saved">%1$s محفوظ ٿيو</string>
+    <string name="downloads_failed">%1$s محفوظ نه ٿي سگهي: %2$s</string>
+    <string name="sync_conflict">سرور تي تبديل ٿيو</string>
+    <string name="sync_missing">هاڻي سرور تي ناهي</string>
+    <string name="sync_refused">سرور رد ڪيو</string>
 </resources>

@@ -318,7 +318,6 @@
     <string name="error_server_https">A kiszolgáló címének https:// előtaggal kell kezdődnie</string>
     <string name="device_name_fallback">Mobileszköz</string>
     <string name="account_error_token_type">Nem támogatott tokentípus</string>
-    <string name="account_error_caller">A hívó nem engedélyezett</string>
     <string name="zone_sea">Tengeren</string>
     <string name="access_remove">Eltávolítás</string>
     <string name="access_remove_title">Eltávolítja a hozzáférést?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Ismeretlen</string>
     <string name="format_time_seconds_short">%1$s mp</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s letöltése…</string>
+    <string name="downloads_saved">%1$s mentve</string>
+    <string name="downloads_failed">%1$s mentése sikertelen: %2$s</string>
+    <string name="sync_conflict">Módosult a kiszolgálón</string>
+    <string name="sync_missing">Már nincs a kiszolgálón</string>
+    <string name="sync_refused">A kiszolgáló elutasította</string>
 </resources>

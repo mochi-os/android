@@ -18,7 +18,7 @@ class OpponentAvatarTest {
 
     @Test
     fun `an opponent's avatar goes through the game's user-asset proxy`() {
-        assertEquals("/chess/g1/-/user/u1/asset/avatar", opponentAvatarUrl("g1", "u1"))
+        assertEquals("/chess/g1/-/user/u1/asset/avatar", opponentAvatarUrl("g1", "u1")?.address)
     }
 
     @Test
@@ -27,7 +27,7 @@ class OpponentAvatarTest {
             assertNull(opponentAvatarUrl("g1", hostile))
             assertNull(opponentAvatarUrl(hostile, "u1"))
         }
-        assertEquals("/chess/g1/-/user/a%3Fb/asset/avatar", opponentAvatarUrl("g1", "a?b"))
-        assertEquals("/chess/a%3Fb/-/user/u1/asset/avatar", opponentAvatarUrl("a?b", "u1"))
+        assertEquals("/chess/g1/-/user/a%3Fb/asset/avatar", opponentAvatarUrl("g1", "a?b")?.address)
+        assertEquals("/chess/a%3Fb/-/user/u1/asset/avatar", opponentAvatarUrl("a?b", "u1")?.address)
     }
 }

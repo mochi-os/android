@@ -5,6 +5,7 @@
 
 package org.mochios.forums.navigation
 
+import android.net.Uri
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -22,7 +23,6 @@ import org.mochios.forums.ui.post.PostScreen
 import org.mochios.forums.ui.router.ForumsRouter
 import org.mochios.forums.ui.saved.SavedScreen
 import org.mochios.forums.ui.settings.ForumSettingsScreen
-import java.net.URLEncoder
 
 object ForumsApp {
     const val HOME = "forums/router"
@@ -46,15 +46,20 @@ object ForumsApp {
     const val MODERATION = "forums/forum/{forumId}/moderation"
     const val SAVED = "forums/saved"
 
-    fun forum(forumId: String) = "forums/forum/$forumId"
-    fun post(forumId: String, postId: String, comment: String? = null) =
-        if (comment.isNullOrEmpty()) "forums/forum/$forumId/post/$postId"
-        else "forums/forum/$forumId/post/$postId?comment=${URLEncoder.encode(comment, Charsets.UTF_8.name())}"
+    // Every value a builder puts in a route is escaped with Uri.encode, which
+    // Navigation undoes once as it fills the destination's arguments: an id
+    // another server chose, holding `/`, `?`, `#`, `&` or `%`, then still
+    // names its own screen rather than another or none.
+    fun forum(forumId: String) = "forums/forum/${Uri.encode(forumId)}"
+    fun post(forumId: String, postId: String, comment: String? = null): String {
+        val base = "forums/forum/${Uri.encode(forumId)}/post/${Uri.encode(postId)}"
+        return if (comment.isNullOrEmpty()) base else "$base?comment=${Uri.encode(comment)}"
+    }
     fun newPost(forumId: String, postId: String? = null) =
-        if (postId.isNullOrEmpty()) "forums/forum/$forumId/new"
-        else "forums/forum/$forumId/new?postId=$postId"
+        if (postId.isNullOrEmpty()) "forums/forum/${Uri.encode(forumId)}/new"
+        else "forums/forum/${Uri.encode(forumId)}/new?postId=${Uri.encode(postId)}"
     fun findForums(link: String? = null) =
-        if (link.isNullOrEmpty()) "forums/discover" else "forums/discover?link=${URLEncoder.encode(link, Charsets.UTF_8.name())}"
+        if (link.isNullOrEmpty()) "forums/discover" else "forums/discover?link=${Uri.encode(link)}"
 
     /**
      * The screen a `/forums/<forum>[/<post>][?server=<peer>]` link opens: a
@@ -70,13 +75,14 @@ object ForumsApp {
         !postId.isNullOrEmpty() -> post(forumId, postId, comment)
         else -> forum(forumId)
     }
-    fun forumSettings(forumId: String) = "forums/forum/$forumId/settings"
-    fun moderation(forumId: String) = "forums/forum/$forumId/moderation"
+    fun forumSettings(forumId: String) = "forums/forum/${Uri.encode(forumId)}/settings"
+    fun moderation(forumId: String) = "forums/forum/${Uri.encode(forumId)}/moderation"
 }
 
 fun NavGraphBuilder.forumsNavGraph(
     navController: NavController,
     onOpenNotifications: () -> Unit = {},
+    onOpenLink: (String) -> Unit = {},
 ) {
     composable(ForumsApp.ROUTER) { entry ->
         ForumsRouter(onResolve = { forumId ->
@@ -199,6 +205,7 @@ fun NavGraphBuilder.forumsNavGraph(
                     popUpTo(ForumsApp.FIND_FORUMS) { inclusive = true }
                 }
             },
+            onOpenLink = onOpenLink,
         )
     }
 

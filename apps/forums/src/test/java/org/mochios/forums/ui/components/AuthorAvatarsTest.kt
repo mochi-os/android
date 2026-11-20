@@ -34,7 +34,7 @@ class AuthorAvatarsTest {
                 "bob" to "/forums/f1/-/p1/c2/asset/avatar",
                 "cat" to "/forums/f1/-/p1/c3/asset/avatar",
             ),
-            found,
+            found.mapValues { it.value.address },
         )
     }
 
@@ -46,7 +46,7 @@ class AuthorAvatarsTest {
             listOf(comment("c1", "ann", "removed"), comment("c2", "ann"), comment("c3", "bob", "pending")),
             "f1",
         )
-        assertEquals(mapOf("ann" to "/forums/f1/-/p1/c2/asset/avatar"), found)
+        assertEquals(mapOf("ann" to "/forums/f1/-/p1/c2/asset/avatar"), found.mapValues { it.value.address })
     }
 
     @Test
@@ -58,7 +58,7 @@ class AuthorAvatarsTest {
         )
         assertEquals(
             mapOf("ann" to "/forums/x/-/p1/asset/avatar", "bob" to "/forums/y/-/p2/asset/avatar"),
-            authorAvatars(posts, { it.forum }),
+            authorAvatars(posts, { it.forum }).mapValues { it.value.address },
         )
     }
 
@@ -67,7 +67,7 @@ class AuthorAvatarsTest {
     // session, to whatever action the path then names.
     @Test
     fun `a post id a peer chose cannot point the avatar at another action`() {
-        assertEquals("/forums/f1/-/p1%3Fx%3D1/asset/avatar", postAvatar("f1", "p1?x=1"))
+        assertEquals("/forums/f1/-/p1%3Fx%3D1/asset/avatar", postAvatar("f1", "p1?x=1")?.address)
         // The server decodes the path before it routes, so no escaping keeps a
         // slash from dividing it: members/<user> would reach the members route.
         assertNull(postAvatar("f1", "../../people/-/x"))
@@ -76,7 +76,7 @@ class AuthorAvatarsTest {
 
     @Test
     fun `a comment id a peer chose cannot point the avatar at another action`() {
-        assertEquals("/forums/f1/-/p%3F/y%3Fz/asset/avatar", commentAvatar("f1", "p?", "y?z"))
+        assertEquals("/forums/f1/-/p%3F/y%3Fz/asset/avatar", commentAvatar("f1", "p?", "y?z")?.address)
         assertNull(commentAvatar("f1", "../p", "c1"))
         assertNull(commentAvatar("f1", "p1", "moderation/someone"))
     }
@@ -91,12 +91,12 @@ class AuthorAvatarsTest {
             listOf(comment("c1", "ann")),
             "f1",
         )
-        assertEquals(mapOf("ann" to "/forums/f1/-/p1/c1/asset/avatar"), found)
+        assertEquals(mapOf("ann" to "/forums/f1/-/p1/c1/asset/avatar"), found.mapValues { it.value.address })
     }
 
     @Test
     fun `a comment whose id is a dot segment does not stand in, and the commenter's next one does`() {
         val found = authorAvatars(emptyList(), { "f1" }, listOf(comment(".", "bob"), comment("c2", "bob")), "f1")
-        assertEquals(mapOf("bob" to "/forums/f1/-/p1/c2/asset/avatar"), found)
+        assertEquals(mapOf("bob" to "/forums/f1/-/p1/c2/asset/avatar"), found.mapValues { it.value.address })
     }
 }

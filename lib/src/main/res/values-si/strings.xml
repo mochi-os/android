@@ -318,7 +318,6 @@
     <string name="error_server_https">සේවාදායක ලිපිනය https:// වලින් ආරම්භ විය යුතුය</string>
     <string name="device_name_fallback">ජංගම උපාංගය</string>
     <string name="account_error_token_type">සහාය නොදක්වන ටෝකන වර්ගය</string>
-    <string name="account_error_caller">අමතන්නාට අවසර නැත</string>
     <string name="zone_sea">මුහුදේ</string>
     <string name="access_remove">ඉවත් කරන්න</string>
     <string name="access_remove_title">ප්‍රවේශය ඉවත් කරන්නද?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">නොදන්නා</string>
     <string name="format_time_seconds_short">%1$sතත්</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s බාගත වෙමින්…</string>
+    <string name="downloads_saved">%1$s සුරකින ලදී</string>
+    <string name="downloads_failed">%1$s සුරැකිය නොහැකි විය: %2$s</string>
+    <string name="sync_conflict">සේවාදායකයේ වෙනස් කර ඇත</string>
+    <string name="sync_missing">තවදුරටත් සේවාදායකයේ නැත</string>
+    <string name="sync_refused">සේවාදායකය ප්‍රතික්ෂේප කළේය</string>
 </resources>

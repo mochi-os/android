@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">پەیوەست دەبێت…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">دووبارە پەیوەستکردن…</string>
-    <string name="chess_ws_failed">پەیوەندی سەرکەوتوو نەبوو</string>
     <string name="chess_move_capture">%1$s %2$sی برد</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

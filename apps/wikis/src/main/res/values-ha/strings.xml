@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Alamar ba za ta iya zama fanko ba</string>
     <string name="wikis_attachments_search_placeholder">Bincika abubuwan haɗe</string>
     <string name="wikis_attachments_delete_confirm_message">Share “%1$s”? Ba za a iya soke wannan ba.</string>
-    <string name="wikis_attachments_downloading">Ana saukewa…</string>
     <string name="wikis_attachments_empty_description">Danna Loda don ƙara fayiloli a wannan shafin.</string>
     <string name="wikis_settings_name_save_cd">Adana suna</string>
     <string name="wikis_settings_name_cancel_cd">Soke gyaran</string>

@@ -8,6 +8,7 @@ package org.mochios.android.api
 import org.mochios.android.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
+import com.google.gson.JsonParser
 import com.google.gson.TypeAdapter
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken
@@ -23,12 +24,15 @@ import okhttp3.HttpUrl
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.ResponseBody.Companion.toResponseBody
 import okhttp3.logging.HttpLoggingInterceptor
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.push.DeviceStore
 import org.mochios.android.util.isServerOrigin
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.IOException
 import java.util.concurrent.TimeUnit
 import javax.inject.Qualifier
 import javax.inject.Singleton
@@ -80,6 +84,80 @@ internal fun serverInterceptor(server: () -> String): Interceptor = Interceptor 
     val request = chain.request()
     val target = retargetToServer(request.url, server())
     chain.proceed(if (target == request.url) request else request.newBuilder().url(target).build())
+}
+
+/** The error code core's own 401 answers carry. */
+internal const val AUTHENTICATION_REQUIRED = "authentication_required"
+
+/**
+ * Clears the session, through [clear], on a 401 that is about the session the
+ * request rode, read through [session], and only while that session is still
+ * the one held. Only a JSON 401 counts: an HTML one is a captive portal or a
+ * proxy.
+ *
+ * Not every 401 is about the session. An app's action answers whatever status
+ * it chooses, and one that relays a peer server's answer can relay that
+ * server's 401, so a 401 on an app's path may be another server's word; taken
+ * as core's, any server's operator could sign a reader out, and take their
+ * synced contacts and calendars with them. So a 401 from core's own paths
+ * (`/_/...`, which no app and no peer answers) carrying core's
+ * [AUTHENTICATION_REQUIRED] signs out; any other is put to core as `GET
+ * /_/identity` with the same session, and signs out only when that answers
+ * 401 too. Otherwise the session stays, and the request's own error reaches
+ * its caller. The body alone is not enough: an app relaying a peer's answer
+ * can carry core's code in it.
+ */
+internal fun invalidationInterceptor(
+    session: suspend () -> String?,
+    clear: suspend () -> Unit,
+): Interceptor = Interceptor { chain ->
+    val request = chain.request()
+    val sessionAtSend = runBlocking { session() }
+    val response = chain.proceed(request)
+    if (response.code != 401 || sessionAtSend == null) return@Interceptor response
+    if (response.header("Content-Type")?.contains("application/json") != true) return@Interceptor response
+    // The body is read whole, so the answer can still be handed on after the
+    // identity read below reuses the call.
+    val type = response.body.contentType()
+    val bytes = response.body.bytes()
+    val answer = response.newBuilder().body(bytes.toResponseBody(type)).build()
+    val core = request.url.encodedPath.startsWith("/_/")
+    val dead = when {
+        core && authenticationRequired(bytes) -> true
+        request.url.encodedPath == IDENTITY_PATH -> true
+        else -> identityRefused(chain, request)
+    }
+    if (dead && runBlocking { session() } == sessionAtSend) {
+        runBlocking { clear() }
+    }
+    answer
+}
+
+/** Core's identity read, which every client signed in can make and no app answers. */
+private const val IDENTITY_PATH = "/_/identity"
+
+/** Whether [body] is a JSON object whose `error` is [AUTHENTICATION_REQUIRED]. */
+private fun authenticationRequired(body: ByteArray): Boolean =
+    runCatching {
+        JsonParser.parseString(String(body, Charsets.UTF_8)).asJsonObject.get("error")?.asString == AUTHENTICATION_REQUIRED
+    }.getOrDefault(false)
+
+/**
+ * Whether core refuses the session [request] rode: `GET /_/identity` on the
+ * same origin, carrying the session cookie and nothing of the request's own,
+ * answers 401. An answer that does not come, or any other, keeps the session.
+ */
+private fun identityRefused(chain: Interceptor.Chain, request: Request): Boolean {
+    val identity = Request.Builder()
+        .url(request.url.newBuilder().encodedPath(IDENTITY_PATH).query(null).fragment(null).build())
+        .header("Accept", "application/json")
+        .apply { request.header("Device")?.let { device -> header("Device", device) } }
+        .build()
+    return try {
+        chain.proceed(identity).use { answer -> answer.code == 401 }
+    } catch (e: IOException) {
+        false
+    }
 }
 
 /**
@@ -187,34 +265,24 @@ object ApiClient {
     }
 
     /**
-     * Clears the session on a 401 that the session we still hold actually rode,
-     * and only for a JSON body - an HTML 401 is a captive portal or proxy. 403
-     * is left alone: it can mean a missing app token or a real permission
+     * Signs out on a 401 about this session; see [invalidationInterceptor].
+     * 403 is left alone: it can mean a missing app token or a real permission
      * failure.
      */
     @Provides
     @Singleton
     @InvalidationInterceptor
-    fun provideInvalidationInterceptor(sessionManager: SessionManager): Interceptor {
-        return Interceptor { chain ->
-            val sessionAtSend = runBlocking { sessionManager.currentToken.first() }
-            val response = chain.proceed(chain.request())
-            if (response.code == 401 && sessionAtSend != null) {
-                val json = response.header("Content-Type")?.contains("application/json") == true
-                val sessionNow = runBlocking { sessionManager.currentToken.first() }
-                if (json && sessionNow == sessionAtSend) {
-                    runBlocking { sessionManager.clearAll() }
-                }
-            }
-            response
-        }
-    }
+    fun provideInvalidationInterceptor(sessionManager: SessionManager): Interceptor =
+        invalidationInterceptor(
+            session = { sessionManager.currentToken.first() },
+            clear = { sessionManager.clearAll() },
+        )
 
     @Provides
     @Singleton
     @ServerInterceptor
     fun provideServerInterceptor(sessionManager: SessionManager): Interceptor =
-        serverInterceptor { sessionManager.getServerUrlBlocking() }
+        serverInterceptor { sessionManager.server.value }
 
     @Provides
     @Singleton
@@ -293,8 +361,7 @@ object ApiClient {
     @Provides
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient, gson: Gson, sessionManager: SessionManager): Retrofit {
-        val serverUrl = sessionManager.getServerUrlBlocking()
-        return createRetrofit(serverUrl, okHttpClient, gson)
+        return createRetrofit(sessionManager.server.value, okHttpClient, gson)
     }
 
     fun createRetrofit(serverUrl: String, okHttpClient: OkHttpClient, gson: Gson): Retrofit {

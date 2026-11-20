@@ -49,6 +49,8 @@ class HomeMenuViewModelTest {
         var accent: String? = null
         var styleFails = false
         val styled = mutableListOf<String>()
+        var personFails = false
+        var held: Person? = null
 
         override fun follow() {
             followed = true
@@ -56,7 +58,11 @@ class HomeMenuViewModelTest {
         override suspend fun recount() {
             recounts++
         }
-        override suspend fun person() = Person("p1", "Ada")
+        override suspend fun person(): Person {
+            if (personFails) throw RuntimeException("offline")
+            return Person("p1", "Ada")
+        }
+        override suspend fun held() = held
         override suspend fun accent(identity: String): String? {
             styled += identity
             if (styleFails) throw RuntimeException("HTTP 502")
@@ -97,6 +103,37 @@ class HomeMenuViewModelTest {
         assertTrue(source.followed)
         assertEquals("Ada", model.state.value.name)
         assertEquals("p1", model.state.value.identity)
+    }
+
+    @Test
+    fun `a first read that failed is made again as the home screen returns`() {
+        val source = Source().apply {
+            personFails = true
+            accent = "#00ff00"
+        }
+        val model = model(source)
+        assertEquals("", model.state.value.identity)
+        source.personFails = false
+        model.restyle()
+        settle()
+        assertEquals("Ada", model.state.value.name)
+        assertEquals("p1", model.state.value.identity)
+        assertEquals("then the accent", "#00ff00", model.state.value.accent)
+    }
+
+    @Test
+    fun `who the device holds draws the avatar while the server cannot be reached`() {
+        val source = Source().apply {
+            personFails = true
+            held = Person("p1", "Ada on this phone")
+        }
+        val model = model(source)
+        assertEquals("Ada on this phone", model.state.value.name)
+        assertEquals("p1", model.state.value.identity)
+        source.personFails = false
+        model.restyle()
+        settle()
+        assertEquals("the server's word replaces it", "Ada", model.state.value.name)
     }
 
     @Test

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Hindi puwedeng walang laman ang tag</string>
     <string name="wikis_attachments_search_placeholder">Maghanap ng mga attachment</string>
     <string name="wikis_attachments_delete_confirm_message">Tanggalin ang “%1$s”? Hindi ito maibabalik.</string>
-    <string name="wikis_attachments_downloading">Dina-download…</string>
     <string name="wikis_attachments_empty_description">I-tap ang Upload para magdagdag ng mga file sa pahinang ito.</string>
     <string name="wikis_settings_name_save_cd">I-save ang pangalan</string>
     <string name="wikis_settings_name_cancel_cd">Kanselahin ang pag-edit</string>

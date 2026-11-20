@@ -318,7 +318,6 @@
     <string name="error_server_https">Серверийн хаяг https:// -ээр эхлэх ёстой</string>
     <string name="device_name_fallback">Гар утасны төхөөрөмж</string>
     <string name="account_error_token_type">Дэмжигдээгүй токены төрөл</string>
-    <string name="account_error_caller">Дуудагчид зөвшөөрөгдөөгүй</string>
     <string name="zone_sea">Далайд</string>
     <string name="access_remove">Хасах</string>
     <string name="access_remove_title">Хандалтыг хасах уу?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Үл мэдэгдэх</string>
     <string name="format_time_seconds_short">%1$s сек</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s татаж байна…</string>
+    <string name="downloads_saved">%1$s хадгалагдлаа</string>
+    <string name="downloads_failed">%1$s хадгалж чадсангүй: %2$s</string>
+    <string name="sync_conflict">Сервер дээр өөрчлөгдсөн</string>
+    <string name="sync_missing">Сервер дээр байхгүй болсон</string>
+    <string name="sync_refused">Сервер татгалзсан</string>
 </resources>

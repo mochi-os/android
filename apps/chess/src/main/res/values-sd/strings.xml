@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">ڳنڍجي رهيو آهي…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">ٻيهر ڳنڍجي رهيو آهي…</string>
-    <string name="chess_ws_failed">ڪنيڪشن ناڪام ٿيو</string>
     <string name="chess_move_capture">%1$s %2$s کنيو</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

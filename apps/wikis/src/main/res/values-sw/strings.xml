@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">Lebo haiwezi kuwa tupu</string>
     <string name="wikis_attachments_search_placeholder">Tafuta viambatisho</string>
     <string name="wikis_attachments_delete_confirm_message">Futa „%1$s\"? Hii haiwezi kutendekwa.</string>
-    <string name="wikis_attachments_downloading">Inapakua…</string>
     <string name="wikis_attachments_empty_description">Gusa Pakia ili kuongeza faili kwa ukurasa huu.</string>
     <string name="wikis_settings_name_save_cd">Hifadhi jina</string>
     <string name="wikis_settings_name_cancel_cd">Ghairi uhariri</string>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Тег бос болмауы керек</string>
     <string name="wikis_attachments_search_placeholder">Тіркемелерді іздеу</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” жойылсын ба? Мұны қайтару мүмкін емес.</string>
-    <string name="wikis_attachments_downloading">Жүктеліп жатыр…</string>
     <string name="wikis_attachments_empty_description">Осы бетке файл қосу үшін Жүктеу түймесін түртіңіз.</string>
     <string name="wikis_settings_name_save_cd">Атауды сақтау</string>
     <string name="wikis_settings_name_cancel_cd">Өңдеуден бас тарту</string>

@@ -13,10 +13,9 @@ import org.mochios.android.auth.Keystore
 import org.mochios.android.auth.Sealed
 
 /**
- * Persistent registry of UnifiedPush subscriptions, keyed by the per-App token.
- * `subId` is the server-allocated id forming the endpoint path
- * `/notifications/-/push/inbound/<subId>`; `auth`/`p256dh` are base64url Web
- * Push keys.
+ * Persistent registry of UnifiedPush subscriptions, keyed by the connector's
+ * token. `subId` is the id forming the endpoint path
+ * `/notifications/-/push/inbound/<subId>`.
  */
 class DistributorStore(context: Context) {
 
@@ -33,8 +32,6 @@ class DistributorStore(context: Context) {
         val appPackage: String,
         val subId: String,
         val server: String,
-        val auth: String,
-        val p256dh: String,
     )
 
     fun put(entry: Entry) {
@@ -78,8 +75,6 @@ class DistributorStore(context: Context) {
         put("appPackage", e.appPackage)
         put("subId", e.subId)
         put("server", e.server)
-        put("auth", e.auth)
-        put("p256dh", e.p256dh)
     }
 
     private fun entryFromJson(o: JSONObject) = Entry(
@@ -87,8 +82,6 @@ class DistributorStore(context: Context) {
         appPackage = o.getString("appPackage"),
         subId = o.getString("subId"),
         server = o.getString("server"),
-        auth = o.getString("auth"),
-        p256dh = o.getString("p256dh"),
     )
 
     private companion object {

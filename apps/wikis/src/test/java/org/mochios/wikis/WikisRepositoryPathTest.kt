@@ -86,4 +86,15 @@ class WikisRepositoryPathTest {
         val escaped = server.takeRequest().path ?: ""
         assertTrue(escaped, escaped == "/wikis/abcdefghi/-/pages/caf%C3%A9%3Fx")
     }
+
+    @Test
+    fun `an attachment is fetched as one escaped segment under its wiki`() = runBlocking {
+        server.enqueue(MockResponse().setBody("the bytes"))
+        val body = repository.attachmentFile("abcdefghi", "a?1 b")
+        assertEquals("the bytes", body.use { it.string() })
+        assertEquals("/wikis/abcdefghi/-/attachments/a%3F1%20b", server.takeRequest().path)
+        refused { repository.attachmentFile("abcdefghi", "a/../delete") }
+        refused { repository.attachmentFile("abcdefghi", "..") }
+        assertEquals(1, server.requestCount)
+    }
 }

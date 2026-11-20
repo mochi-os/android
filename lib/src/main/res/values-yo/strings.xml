@@ -318,7 +318,6 @@
     <string name="error_server_https">Àdírẹ́sì olùpèsè gbọ́dọ̀ bẹ̀rẹ̀ pẹ̀lú https://</string>
     <string name="device_name_fallback">Ẹ̀rọ alágbèéká</string>
     <string name="account_error_token_type">Irú àmì tí kò ní àtìlẹ́yìn</string>
-    <string name="account_error_caller">A kò gba olùpè láàyè</string>
     <string name="zone_sea">Lórí òkun</string>
     <string name="access_remove">Yọ kúrò</string>
     <string name="access_remove_title">Yọ àyè kúrò?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Aláìmọ̀</string>
     <string name="format_time_seconds_short">ìṣẹ́jú-àáyá %1$s</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Ń gba %1$s sílẹ̀…</string>
+    <string name="downloads_saved">A ti fi %1$s pamọ́</string>
+    <string name="downloads_failed">Kò ṣeé ṣe láti fi %1$s pamọ́: %2$s</string>
+    <string name="sync_conflict">A ti yí i padà lórí olùṣẹ́</string>
+    <string name="sync_missing">Kò sí lórí olùṣẹ́ mọ́</string>
+    <string name="sync_refused">Olùṣẹ́ kọ̀ ọ́</string>
 </resources>

@@ -10,6 +10,7 @@ import org.mochios.android.api.ApiResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 /**
  * One app on the home screen as the server lists it. [link] is the path the
@@ -43,9 +44,14 @@ data class Style(val accent: String? = null)
 /** The home app's actions, at the server's root, where the home app is served. */
 interface HomeApi {
 
-    /** The apps the user can open, after the server's role and visibility checks. */
+    /**
+     * The apps the user can open, after the server's role and visibility
+     * checks. Without each app's icon inlined: the grid draws the glyphs
+     * built into the client, and [data] false spares every return to the
+     * home screen the download. A server that predates it ignores it.
+     */
     @GET("-/icons")
-    suspend fun icons(): Response<IconsResponse>
+    suspend fun icons(@Query("data") data: Boolean = false): Response<IconsResponse>
 
     /**
      * A person's style, from the people app, which serves it to every app as

@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Автор</string>
     <string name="forums_community_destination">%1$s коомчулугунда %2$s катары жарыяланат</string>
+    <string name="forums_find_search_example">Аты, ID, манжа изи, URL же %1$s дареги боюнча издөө</string>
+    <string name="forums_setup">Орнотуу</string>
 </resources>

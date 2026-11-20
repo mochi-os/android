@@ -340,4 +340,6 @@
     </plurals>
     <string name="forums_comment_op">Ùghdar</string>
     <string name="forums_community_destination">Ga phostadh gu %1$s mar %2$s</string>
+    <string name="forums_find_search_example">Lorg le ainm, ID, lorg-meòir, URL, no %1$s</string>
+    <string name="forums_setup">Suidhich</string>
 </resources>

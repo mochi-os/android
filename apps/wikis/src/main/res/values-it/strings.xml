@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Il tag non può essere vuoto</string>
     <string name="wikis_attachments_search_placeholder">Cerca allegati</string>
     <string name="wikis_attachments_delete_confirm_message">Eliminare «%1$s»? Questa azione non può essere annullata.</string>
-    <string name="wikis_attachments_downloading">Download in corso…</string>
     <string name="wikis_attachments_empty_description">Tocca Carica per aggiungere file a questa pagina.</string>
     <string name="wikis_settings_name_save_cd">Salva nome</string>
     <string name="wikis_settings_name_cancel_cd">Annulla modifica</string>

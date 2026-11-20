@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Značka nesmí být prázdná</string>
     <string name="wikis_attachments_search_placeholder">Hledat přílohy</string>
     <string name="wikis_attachments_delete_confirm_message">Smazat „%1$s\"? Akci nelze vrátit.</string>
-    <string name="wikis_attachments_downloading">Stahování…</string>
     <string name="wikis_attachments_empty_description">Klepněte na Nahrát pro přidání souborů na tuto stránku.</string>
     <string name="wikis_settings_name_save_cd">Uložit název</string>
     <string name="wikis_settings_name_cancel_cd">Zrušit úpravu</string>

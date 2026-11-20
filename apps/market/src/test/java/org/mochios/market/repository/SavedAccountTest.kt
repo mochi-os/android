@@ -67,7 +67,7 @@ class SavedAccountTest {
         runBlocking {
             session.clearAll()
             session.setServerUrl(base)
-            session.setBoundAccount("first", base)
+            session.setBoundAccount("first")
         }
         api = Retrofit.Builder()
             .baseUrl(server.url("/market/"))
@@ -102,7 +102,7 @@ class SavedAccountTest {
     fun `another account signing in is not shown the previous one's saved listings`() {
         held()
         assertEquals(listOf("l1"), repository.saved.value.map { it.id })
-        runBlocking { session.setBoundAccount("second", base) }
+        runBlocking { session.setBoundAccount("second") }
         until { repository.saved.value.isEmpty() }
     }
 
@@ -120,7 +120,7 @@ class SavedAccountTest {
         val before = lists.get()
         val read = thread { runBlocking { fresh.refresh() } }
         until { lists.get() > before }
-        runBlocking { session.setBoundAccount("first", base) }
+        runBlocking { session.setBoundAccount("first") }
         Thread.sleep(300)
         hold!!.countDown()
         read.join(5_000)
@@ -134,7 +134,7 @@ class SavedAccountTest {
         val before = lists.get()
         val read = thread { runBlocking { repository.refresh() } }
         until { lists.get() > before }
-        runBlocking { session.setBoundAccount("second", base) }
+        runBlocking { session.setBoundAccount("second") }
         until { repository.saved.value.isEmpty() }
         hold!!.countDown()
         read.join(5_000)

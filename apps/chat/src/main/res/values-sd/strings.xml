@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s صرف دوستن کان چيٽ قبول ڪري ٿو.</string>
     <string name="chat_message_earlier">هن اڪائونٽ کي Mochi ۾ شامل ڪرڻ کان اڳ جا پيغام انڪرپٽ ٿيل آهن ۽ هتي پڙهي نٿا سگهجن</string>
     <string name="chat_message_excluded">صرف ٻين ڊوائيسز لاءِ انڪرپٽ ٿيل</string>
+    <string name="chat_setup">ترتيب ڏيو</string>
 </resources>

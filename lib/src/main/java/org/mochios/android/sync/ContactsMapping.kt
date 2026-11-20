@@ -82,23 +82,13 @@ object ContactsMapping {
     )
 
     /**
-     * Whether a `Data` row is one the sync owns. A download replaces exactly
-     * these rows and leaves the rest — a photo set on the phone, a group, an
-     * anniversary, an instant-messaging handle — as the phone had them.
-     */
-    fun managed(row: DataRow): Boolean = when (row.mimetype) {
-        Event.CONTENT_ITEM_TYPE -> row.values[Event.TYPE] == Event.TYPE_BIRTHDAY.toString()
-        Photo.CONTENT_ITEM_TYPE, Im.CONTENT_ITEM_TYPE -> row.values[Data.SYNC1] == MARKER
-        else -> row.mimetype in KINDS
-    }
-
-    /**
      * The `Data` rows a download replaces on one raw contact, as a provider
      * selection to follow `raw_contact_id=? and`, with its arguments: the
      * kinds replaced whole, the birthday, the marked photo and messaging rows,
      * and a messaging row the phone added whose address [written] holds -
      * the upload took it to the server, which now sends it back to be written
-     * marked.
+     * marked. Everything else - a photo set on the phone, a group, an
+     * anniversary - stays as the phone had it.
      */
     fun replaced(written: List<DataRow>): Pair<String, List<String>> {
         val addresses = written.filter { it.mimetype == Im.CONTENT_ITEM_TYPE }.map { it.get(Im.DATA) }.distinct()
@@ -118,9 +108,6 @@ object ContactsMapping {
             (if (addresses.isNotEmpty()) listOf(Im.CONTENT_ITEM_TYPE) + addresses else emptyList())
         return selection to arguments
     }
-
-    /** The kinds a download deletes whole before writing its rows afresh. */
-    fun kinds(): Set<String> = KINDS
 
     /** The kinds an upload reads properties from. */
     fun readable(): Set<String> = KINDS + Event.CONTENT_ITEM_TYPE + Im.CONTENT_ITEM_TYPE

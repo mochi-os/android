@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Kapcsolódás…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Újracsatlakozás…</string>
-    <string name="chess_ws_failed">A kapcsolódás sikertelen</string>
     <string name="chess_move_capture">%1$s elvette: %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

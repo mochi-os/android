@@ -318,7 +318,6 @@
     <string name="error_server_https">نشانی سرور باید با https:// آغاز شود</string>
     <string name="device_name_fallback">دستگاه همراه</string>
     <string name="account_error_token_type">نوع توکن پشتیبانی‌نشده</string>
-    <string name="account_error_caller">فراخوان مجاز نیست</string>
     <string name="zone_sea">در دریا</string>
     <string name="access_remove">حذف</string>
     <string name="access_remove_title">حذف دسترسی؟</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">ناشناخته</string>
     <string name="format_time_seconds_short">%1$s ثانیه</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">در حال دانلود %1$s…</string>
+    <string name="downloads_saved">%1$s ذخیره شد</string>
+    <string name="downloads_failed">ذخیره %1$s ممکن نشد: %2$s</string>
+    <string name="sync_conflict">در سرور تغییر کرده است</string>
+    <string name="sync_missing">دیگر در سرور نیست</string>
+    <string name="sync_refused">سرور آن را رد کرد</string>
 </resources>

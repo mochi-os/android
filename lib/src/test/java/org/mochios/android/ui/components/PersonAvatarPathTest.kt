@@ -18,7 +18,7 @@ class PersonAvatarPathTest {
 
     @Test
     fun `a person's avatar is the people app's route`() {
-        assertEquals("/people/p1/-/avatar", personAvatarPath("p1"))
+        assertEquals("/people/p1/-/avatar", personAvatarPath("p1")?.address)
     }
 
     @Test
@@ -26,7 +26,7 @@ class PersonAvatarPathTest {
         assertNull(personAvatarPath("x/-/delete?"))
         assertNull(personAvatarPath(".."))
         assertNull(personAvatarPath("."))
-        assertEquals("/people/a%3Fb/-/avatar", personAvatarPath("a?b"))
+        assertEquals("/people/a%3Fb/-/avatar", personAvatarPath("a?b")?.address)
     }
 
     @Test

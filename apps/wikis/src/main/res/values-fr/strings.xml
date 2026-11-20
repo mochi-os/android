@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">L\'étiquette ne peut pas être vide</string>
     <string name="wikis_attachments_search_placeholder">Rechercher des pièces jointes</string>
     <string name="wikis_attachments_delete_confirm_message">Supprimer « %1$s » ? Cette action est irréversible.</string>
-    <string name="wikis_attachments_downloading">Téléchargement…</string>
     <string name="wikis_attachments_empty_description">Touchez Téléverser pour ajouter des fichiers à cette page.</string>
     <string name="wikis_settings_name_save_cd">Enregistrer le nom</string>
     <string name="wikis_settings_name_cancel_cd">Annuler la modification</string>

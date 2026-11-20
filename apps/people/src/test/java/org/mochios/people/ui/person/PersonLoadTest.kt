@@ -91,7 +91,7 @@ class PersonLoadTest {
         session = SessionManager(context)
         runBlocking {
             session.setServerUrl(base)
-            session.setBoundAccount("me", base)
+            session.setBoundAccount("me")
         }
     }
 

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">แท็กไม่สามารถว่างเปล่าได้</string>
     <string name="wikis_attachments_search_placeholder">ค้นหาไฟล์แนบ</string>
     <string name="wikis_attachments_delete_confirm_message">ลบ \"%1$s\"? ไม่สามารถยกเลิกได้</string>
-    <string name="wikis_attachments_downloading">กำลังดาวน์โหลด…</string>
     <string name="wikis_attachments_empty_description">แตะอัปโหลดเพื่อเพิ่มไฟล์ไปยังหน้านี้</string>
     <string name="wikis_settings_name_save_cd">บันทึกชื่อ</string>
     <string name="wikis_settings_name_cancel_cd">ยกเลิกการแก้ไข</string>

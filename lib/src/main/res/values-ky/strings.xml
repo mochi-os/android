@@ -318,7 +318,6 @@
     <string name="error_server_https">Сервердин дареги https:// менен башталышы керек</string>
     <string name="device_name_fallback">Мобилдик түзмөк</string>
     <string name="account_error_token_type">Колдоого алынбаган токен түрү</string>
-    <string name="account_error_caller">Чакыруучуга уруксат жок</string>
     <string name="zone_sea">Деңизде</string>
     <string name="access_remove">Алуу</string>
     <string name="access_remove_title">Кирүүнү аласызбы?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Белгисиз</string>
     <string name="format_time_seconds_short">%1$sсек</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s жүктөлүүдө…</string>
+    <string name="downloads_saved">%1$s сакталды</string>
+    <string name="downloads_failed">%1$s сакталган жок: %2$s</string>
+    <string name="sync_conflict">Серверде өзгөртүлгөн</string>
+    <string name="sync_missing">Серверде эми жок</string>
+    <string name="sync_refused">Сервер четке какты</string>
 </resources>

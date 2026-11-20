@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Ithegi ayinakuba ze</string>
     <string name="wikis_attachments_search_placeholder">Khangela iziqhotyoshelwa</string>
     <string name="wikis_attachments_delete_confirm_message">Cima “%1$s”? Oku akunakubuyiselwa.</string>
-    <string name="wikis_attachments_downloading">Iyakhuphela…</string>
     <string name="wikis_attachments_empty_description">Cofa uLayisho ukongeza iifayile kweli phepha.</string>
     <string name="wikis_settings_name_save_cd">Gcina igama</string>
     <string name="wikis_settings_name_cancel_cd">Rhoxisa ukuhlela</string>

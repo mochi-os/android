@@ -318,7 +318,6 @@
     <string name="error_server_https">Alamat server kudu dimimitian ku https://</string>
     <string name="device_name_fallback">Alat sélulér</string>
     <string name="account_error_token_type">Jinis token teu dirojong</string>
-    <string name="account_error_caller">Nu nelepon teu diidinan</string>
     <string name="zone_sea">Di laut</string>
     <string name="access_remove">Pupus</string>
     <string name="access_remove_title">Cabut aksés?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Teu dipikanyaho</string>
     <string name="format_time_seconds_short">%1$sdtk</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Ngundeur %1$s…</string>
+    <string name="downloads_saved">%1$s disimpen</string>
+    <string name="downloads_failed">Teu tiasa nyimpen %1$s: %2$s</string>
+    <string name="sync_conflict">Dirobih di server</string>
+    <string name="sync_missing">Tos teu aya di server</string>
+    <string name="sync_refused">Ditolak ku server</string>
 </resources>

@@ -73,9 +73,10 @@ fun AboutDialog(onDismiss: () -> Unit) {
     // the installer the moment the dialog opened, unasked.
     var watching by remember { mutableStateOf(false) }
 
-    // A staged APK is ready — hand off to the system installer. forcePrompt (vs
-    // promptIfPending) because the user explicitly asked, so an
-    // already-declined-this-version suppression shouldn't apply. Needs an
+    // A staged APK is ready — hand off to the system installer. forcePrompt
+    // (not the offer UpdateInstaller.pending makes on resume) because the user
+    // explicitly asked, so an already-declined-this-version suppression
+    // shouldn't apply. Needs an
     // Activity (it calls startActivity); context here is the hosting Activity.
     fun promptInstall() {
         (context as? Activity)?.let { UpdateInstaller.forcePrompt(it) }

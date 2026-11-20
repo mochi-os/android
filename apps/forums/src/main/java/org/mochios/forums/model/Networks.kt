@@ -93,6 +93,11 @@ data class HandleName(
  */
 data class CommunityState(
     val published: Boolean = false,
+    /**
+     * Whether the server hosts accounts on the fediverse, which a community
+     * needs; a published one is shown, to be withdrawn, even when it does not.
+     */
+    val offered: Boolean = false,
     val address: String = "",
     val identifier: String = "",
     val domains: List<String> = emptyList(),
@@ -100,3 +105,6 @@ data class CommunityState(
 )
 
 data class SensitiveState(val sensitive: Int = 0)
+
+/** The networks the server hosts accounts on. */
+data class HostedNetworks(val networks: List<String> = emptyList())

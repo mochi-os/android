@@ -25,8 +25,9 @@ private val PROVIDER_NAMES = mapOf(
     "fediverse" to "ActivityPub",
 )
 
+/** The name for [key], whatever its case; a key not listed is shown capitalised. */
 fun providerName(key: String): String =
-    PROVIDER_NAMES[key] ?: key.replaceFirstChar { it.uppercaseChar() }
+    PROVIDER_NAMES[key.lowercase()] ?: key.replaceFirstChar { it.uppercaseChar() }
 
 /**
  * Open a peer-supplied web link in the browser. Anything but http and https is

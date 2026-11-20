@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Ansluter…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Återansluter…</string>
-    <string name="chess_ws_failed">Anslutningen misslyckades</string>
     <string name="chess_move_capture">%1$s tog %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

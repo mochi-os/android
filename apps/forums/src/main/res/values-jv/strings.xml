@@ -335,4 +335,6 @@
     </plurals>
     <string name="forums_comment_op">Penulis</string>
     <string name="forums_community_destination">Dikirim menyang %1$s minangka %2$s</string>
+    <string name="forums_find_search_example">Goleki miturut jeneng, ID, fingerprint, URL, utawa %1$s</string>
+    <string name="forums_setup">Setel</string>
 </resources>

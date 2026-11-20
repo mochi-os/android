@@ -64,7 +64,8 @@ import java.util.concurrent.ConcurrentLinkedQueue
 
 /**
  * The list view as the web's draws it: a first page with nothing on it
- * still reaches what comes after, a page that fails stops and offers Retry,
+ * still reaches what comes after, nothing from the anchor on says "No
+ * events", a page that fails stops and offers Retry,
  * "Earlier events" reaches back past empty pages, as far as before 1970,
  * each day is headed across the width by its weekday and its date in the
  * user's date format, the heading staying at the top, its rows open with
@@ -177,6 +178,39 @@ class ListViewTest {
         show()
         waitFor("Concert")
         assertEquals(0, rule.onAllNodesWithText(context.getString(R.string.calendars_list_empty)).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `a calendar with nothing on it says No events, with no heading above it`() {
+        val format = Format(UserPreferences())
+        show(format = format)
+        waitFor(context.getString(R.string.calendars_list_empty))
+        rule.onNodeWithText(heading(anchor, format)).assertDoesNotExist()
+        rule.onNodeWithText(context.getString(R.string.calendars_list_earlier)).assertDoesNotExist()
+    }
+
+    @Test
+    fun `events only before the anchor leave Earlier events above No events, which goes once they load`() {
+        events = listOf(anchor.minusDays(10) to "Past")
+        first = noon(anchor.minusDays(10))
+        last = noon(anchor.minusDays(10))
+        show()
+        val empty = context.getString(R.string.calendars_list_empty)
+        waitFor(empty)
+        rule.onNodeWithText(context.getString(R.string.calendars_list_earlier)).performClick()
+        waitFor("Past")
+        rule.onNodeWithText(empty).assertDoesNotExist()
+    }
+
+    @Test
+    fun `every calendar hidden says No events rather than waiting on a read`() {
+        VisibilityStore.hidden(context, setOf("c1"))
+        events = listOf(anchor to "Today")
+        first = noon(anchor)
+        last = noon(anchor)
+        show()
+        waitFor(context.getString(R.string.calendars_list_empty))
+        rule.onNodeWithText("Today").assertDoesNotExist()
     }
 
     @Test

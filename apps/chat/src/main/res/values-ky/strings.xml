@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s чаттарды достордон гана кабыл алат.</string>
     <string name="chat_message_earlier">Бул аккаунт Mochi-ге кошулганга чейинки билдирүүлөр шифрленген жана аларды бул жерде окуу мүмкүн эмес</string>
     <string name="chat_message_excluded">Башка түзмөктөр үчүн гана шифрленген</string>
+    <string name="chat_setup">Орнотуу</string>
 </resources>

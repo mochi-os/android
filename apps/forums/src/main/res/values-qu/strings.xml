@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Qillqaq</string>
     <string name="forums_community_destination">%1$s nisqaman %2$s hina churasqa</string>
+    <string name="forums_find_search_example">Sutiwan, ID-wan, ruk\'ana unanchawan, URL-wan utaq %1$s-wan maskay</string>
+    <string name="forums_setup">Wakichiy</string>
 </resources>

@@ -5,6 +5,7 @@
 
 package org.mochios.settings.ui.account
 
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -18,11 +19,10 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrapRaw
-import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Downloads
 import org.mochios.settings.api.AccountApi
 import org.mochios.settings.ui.login.SettingsStepUpClient
 import org.mochios.settings.ui.login.StepUpController
-import java.net.URLEncoder
 import javax.inject.Inject
 
 data class Identity(
@@ -32,16 +32,6 @@ data class Identity(
     val name: String = "",
     val privacy: String = "private",
     val role: String = "",
-)
-
-/** Everything the screen needs to stream a built export bundle to storage via
- *  Android's DownloadManager: the public download URL, a friendly save name,
- *  and the bearer token (DownloadManager runs out-of-process, so it carries
- *  the Authorization header inline). */
-data class ExportDownload(
-    val url: String,
-    val filename: String,
-    val token: String?,
 )
 
 data class AccountUiState(
@@ -60,16 +50,11 @@ data class AccountUiState(
 class AccountViewModel @Inject constructor(
     private val api: AccountApi,
     stepUpClient: SettingsStepUpClient,
-    sessionManager: SessionManager,
+    private val downloads: Downloads,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(AccountUiState())
     val uiState: StateFlow<AccountUiState> = _uiState.asStateFlow()
-
-    /** Captured for the export download: DownloadManager runs outside the app's interceptor
-     *  stack, so the URL must carry its own auth. */
-    private val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
-    private val token: String? = sessionManager.getTokenBlocking("settings")
 
     /** Step-up gate for closing the account and for building a data export —
      *  both are key-bearing or destructive, so they re-verify the login
@@ -85,10 +70,10 @@ class AccountViewModel @Inject constructor(
     private val _closed = MutableSharedFlow<Unit>()
     val closed: SharedFlow<Unit> = _closed.asSharedFlow()
 
-    // Emitted once the export bundle is built; the screen hands the authenticated
-    // URL to DownloadManager to stream the (possibly multi-GB) file to storage.
-    private val _exportReady = MutableSharedFlow<ExportDownload>()
-    val exportReady: SharedFlow<ExportDownload> = _exportReady.asSharedFlow()
+    // The built bundle's filename, once it is built: the screen asks where to
+    // save it, and saveExport streams it there.
+    private val _exportReady = MutableSharedFlow<String>()
+    val exportReady: SharedFlow<String> = _exportReady.asSharedFlow()
 
     init {
         refresh()
@@ -105,17 +90,21 @@ class AccountViewModel @Inject constructor(
 
     /** Begin a data export. The screen collects the passphrase first; this
      *  re-verifies the login factor(s), builds the encrypted bundle, then emits
-     *  an authenticated download URL for the screen to enqueue. */
+     *  its filename for the screen to ask where it goes. */
     fun exportData(passphrase: String) {
         val pass = passphrase.trim()
         if (pass.isEmpty()) return
         stepUp.request { stepUpToken ->
-            val filename = api.exportData(stepUpToken, pass).unwrapRaw().filename
-            val url = serverUrl +
-                "/settings/-/user/account/export/download?file=" +
-                URLEncoder.encode(filename, "UTF-8")
-            _exportReady.emit(ExportDownload(url = url, filename = filename, token = token))
+            _exportReady.emit(api.exportData(stepUpToken, pass).unwrapRaw().filename)
         }
+    }
+
+    /** Streams built bundle [filename] into [destination], through the
+     *  settings client: the transfer outlives this screen and says how it
+     *  ended. The server deletes the bundle as it serves it, so one transfer
+     *  is all there is. */
+    fun saveExport(filename: String, destination: Uri) {
+        downloads.save(destination, filename) { api.downloadExport(filename).unwrapRaw() }
     }
 
     fun refresh() {

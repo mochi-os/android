@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Chimpux janiw ch\'usäñapakiti</string>
     <string name="wikis_attachments_search_placeholder">Adjuntonak thaqhama</string>
     <string name="wikis_attachments_delete_confirm_message">¿“%1$s” chhaqtayañati? Janiw kutt\'ayañjamäkiti.</string>
-    <string name="wikis_attachments_downloading">Apaqasa…</string>
     <string name="wikis_attachments_empty_description">Aka laphir archivonak yapxatañatakix Apkataña limt\'am.</string>
     <string name="wikis_settings_name_save_cd">Suti imaña</string>
     <string name="wikis_settings_name_cancel_cd">Askichawi jaytaña</string>

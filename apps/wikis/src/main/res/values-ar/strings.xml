@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">لا يمكن أن يكون الوسم فارغاً</string>
     <string name="wikis_attachments_search_placeholder">البحث في المرفقات</string>
     <string name="wikis_attachments_delete_confirm_message">حذف «%1$s»؟ لا يمكن التراجع عن هذا.</string>
-    <string name="wikis_attachments_downloading">جارٍ التحميل…</string>
     <string name="wikis_attachments_empty_description">اضغط على رفع لإضافة ملفات إلى هذه الصفحة.</string>
     <string name="wikis_settings_name_save_cd">حفظ الاسم</string>
     <string name="wikis_settings_name_cancel_cd">إلغاء التحرير</string>

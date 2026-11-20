@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s tekur aðeins við spjalli frá vinum.</string>
     <string name="chat_message_earlier">Skilaboð frá því áður en þessum aðgangi var bætt við Mochi eru dulkóðuð og ekki er hægt að lesa þau hér</string>
     <string name="chat_message_excluded">Aðeins dulkóðuð fyrir önnur tæki</string>
+    <string name="chat_setup">Setja upp</string>
 </resources>

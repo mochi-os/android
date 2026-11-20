@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">जडान हुँदैछ…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">पुन: जडान हुँदै…</string>
-    <string name="chess_ws_failed">जडान असफल भयो</string>
     <string name="chess_move_capture">%1$s ले %2$s लियो</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

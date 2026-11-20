@@ -318,7 +318,6 @@
     <string name="error_server_https">អាសយដ្ឋានម៉ាស៊ីនមេត្រូវចាប់ផ្ដើមដោយ https://</string>
     <string name="device_name_fallback">ឧបករណ៍ចល័ត</string>
     <string name="account_error_token_type">ប្រភេទថូខឹនមិនត្រូវបានគាំទ្រ</string>
-    <string name="account_error_caller">អ្នកហៅមិនត្រូវបានអនុញ្ញាត</string>
     <string name="zone_sea">នៅសមុទ្រ</string>
     <string name="access_remove">យកចេញ</string>
     <string name="access_remove_title">យកសិទ្ធិចូលប្រើចេញ?</string>
@@ -343,4 +342,10 @@
     <string name="person_unknown">មិនស្គាល់</string>
     <string name="format_time_seconds_short">%1$s វិ</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">កំពុងទាញយក %1$s…</string>
+    <string name="downloads_saved">បានរក្សាទុក %1$s</string>
+    <string name="downloads_failed">មិនអាចរក្សាទុក %1$s បានទេ៖ %2$s</string>
+    <string name="sync_conflict">បានផ្លាស់ប្ដូរនៅលើម៉ាស៊ីនមេ</string>
+    <string name="sync_missing">លែងមាននៅលើម៉ាស៊ីនមេ</string>
+    <string name="sync_refused">ត្រូវបានម៉ាស៊ីនមេបដិសេធ</string>
 </resources>

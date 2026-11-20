@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import okhttp3.MultipartBody
+import okhttp3.ResponseBody
 import org.mochios.android.api.ApiError
 import org.mochios.android.api.ApiException
 import org.mochios.android.api.MochiError
@@ -392,11 +393,9 @@ class FeedsRepository @Inject constructor(
         }
     }
 
-    suspend fun unsubscribeFeed(feed: String, server: String? = null) {
+    suspend fun unsubscribeFeed(feed: String) {
         try {
-            api.unsubscribe(
-                UnsubscribeRequest(feed = feed, server = server?.takeIf { it.isNotBlank() })
-            ).unwrap()
+            api.unsubscribe(UnsubscribeRequest(feed = feed)).unwrap()
             forget()
             _subscriptionChanges.emit(Unit)
         } catch (e: Exception) {
@@ -1269,6 +1268,9 @@ class FeedsRepository @Inject constructor(
     /** The user's accounts on other networks, hosted or linked. */
     suspend fun networkAccounts(): List<PublishAccount> = mapped { api.listNetworkAccounts().unwrapRaw() }
 
+    /** The networks the server hosts accounts on, which Find looks people up on. */
+    suspend fun hostedNetworks(): List<String> = mapped { api.getNetworks().unwrapRaw().networks }
+
     suspend fun getPublish(feedId: String): PublishState = mapped { api.getPublish(feedId).unwrapRaw() }
 
     suspend fun setPublish(feedId: String, accounts: List<String>): PublishSaved =
@@ -1285,6 +1287,10 @@ class FeedsRepository @Inject constructor(
 
     suspend fun backups(feedId: String, account: String): Backups =
         mapped { api.getBackups(feedId, account).unwrapRaw() }
+
+    /** One archive file of [account], streamed; the caller closes it. */
+    suspend fun backupFile(feedId: String, account: String, name: String): ResponseBody =
+        mapped { api.getBackupFile(feedId, account, name).unwrapRaw() }
 
     private suspend fun <T> mapped(block: suspend () -> T): T = try {
         block()

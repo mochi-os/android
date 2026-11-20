@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Автор</string>
     <string name="forums_community_destination">Се објавува во %1$s како %2$s</string>
+    <string name="forums_find_search_example">Пребарај по име, ID, отпечаток, URL или адреса %1$s</string>
+    <string name="forums_setup">Поставете</string>
 </resources>

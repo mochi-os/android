@@ -66,7 +66,7 @@ fun QuoteCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 EntityAvatar(
                     name = label,
-                    src = avatar.takeIf { isWebUrl(it) },
+                    remote = avatar.takeIf { isWebUrl(it) },
                     seed = seed.ifEmpty { address },
                     size = 20.dp,
                 )

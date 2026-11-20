@@ -122,21 +122,25 @@ object VisibleEntity {
      *   and [Cover.NONE] when nothing does.
      */
     fun coverFor(link: String, isLive: (String) -> Boolean): Cover {
-        val segments = link.split('/').filter { segment -> segment.isNotEmpty() }
-        if (segments.size < 2) return Cover.NONE
-        val app = segments[0]
-        val path = segments.drop(1)
         var cover = Cover.NONE
         for (shown in showing.values) {
-            if (shown.app != app) continue
+            if (!linkUnder(link, shown.app, shown.path)) continue
             if (!isLive(shown.socketKey)) continue
-            // A screen covers everything under what it shows, so a wiki covers
-            // its pages; naming more segments narrows it to one of them.
-            if (path.size < shown.path.size) continue
-            if (path.subList(0, shown.path.size) != shown.path) continue
             if (shown.marksRead) return Cover.READ
             cover = Cover.SUPPRESS
         }
         return cover
     }
+}
+
+/**
+ * Whether [link], `/<app>/<entity>[/<sub>...]`, lies under [path] in [app]. A
+ * screen covers everything under what it shows, so a wiki covers its pages;
+ * naming more segments narrows it to one of them.
+ */
+internal fun linkUnder(link: String, app: String, path: List<String>): Boolean {
+    val segments = link.split('/').filter { segment -> segment.isNotEmpty() }
+    if (segments.size < 2 || segments[0] != app) return false
+    val rest = segments.drop(1)
+    return rest.size >= path.size && rest.subList(0, path.size) == path
 }

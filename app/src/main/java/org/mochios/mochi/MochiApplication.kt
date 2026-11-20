@@ -25,6 +25,7 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.ui.components.AnonymousImageFetcherFactory
 import org.mochios.android.ui.components.AnonymousImageKeyer
+import org.mochios.android.ui.components.OwnedAddressMapper
 import org.mochios.android.ui.components.OwnedInterceptor
 import org.mochios.android.ui.components.RelativeAssetUrlMapper
 import org.mochios.android.ui.components.RevalidatingCacheStrategy
@@ -81,13 +82,15 @@ class MochiApplication : Application(), SingletonImageLoader.Factory {
     override fun newImageLoader(context: PlatformContext): ImageLoader =
         ImageLoader.Builder(context)
             .components {
-                // Mark a request for one of the app's own, server-relative
-                // addresses, the only kind the asset client sends the session
-                // and a token with: an absolute URL may be a peer's choice.
+                // Mark a request for one of the app's own addresses, an
+                // OwnedAddress, the only kind the asset client sends a
+                // credential with: any String may be a peer's choice.
                 add(OwnedInterceptor())
-                // Expand server-relative asset paths ("/people/<id>/-/avatar")
+                // Expand server-relative addresses ("/people/<id>/-/avatar")
                 // to absolute URLs, so call sites pass relative paths without
-                // threading the server URL through.
+                // threading the server URL through; a String one goes without
+                // a credential.
+                add(OwnedAddressMapper(sessionManager))
                 add(RelativeAssetUrlMapper(sessionManager))
                 // Avatars live at addresses that do not change with them; the
                 // strategy asks again once the server's max-age has passed, and

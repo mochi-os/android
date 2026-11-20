@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Ní féidir leis an gclib a bheith folamh</string>
     <string name="wikis_attachments_search_placeholder">Cuardaigh ceangaltáin</string>
     <string name="wikis_attachments_delete_confirm_message">Scrios “%1$s”? Ní féidir é seo a chur ar ais.</string>
-    <string name="wikis_attachments_downloading">Á íoslódáil…</string>
     <string name="wikis_attachments_empty_description">Tapáil Uaslódáil chun comhaid a chur leis an leathanach seo.</string>
     <string name="wikis_settings_name_save_cd">Sábháil ainm</string>
     <string name="wikis_settings_name_cancel_cd">Cealaigh eagarthóireacht</string>

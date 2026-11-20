@@ -5,6 +5,7 @@
 
 package org.mochios.projects.ui.`object`
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -42,7 +43,7 @@ fun ActivityTab(
     // Builds the avatar proxy path for an activity actor. Should return a
     // server-relative path to the projects app's proxy action, e.g.
     // "/projects/<project>/-/activity/<activity.id>/asset/avatar".
-    avatarUrlBuilder: ((Activity) -> String?)? = null
+    avatarUrlBuilder: ((Activity) -> OwnedAddress?)? = null
 ) {
     if (activity.isEmpty()) {
         Box(
@@ -76,7 +77,7 @@ fun ActivityTab(
 private fun ActivityItem(
     item: Activity,
     projectDetails: ProjectDetails,
-    avatarUrl: String?
+    avatarUrl: OwnedAddress?
 ) {
     val fieldName = if (item.field.isNotBlank()) {
         // Try to find field name from project details

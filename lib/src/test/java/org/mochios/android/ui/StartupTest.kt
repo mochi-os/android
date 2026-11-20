@@ -72,6 +72,22 @@ class StartupTest {
         assertFalse(warmed.get())
     }
 
+    // A sign-up left before its identity: core mints for the account, and
+    // refuses it every private action until it has one.
+    @Test
+    fun `an account read as having no identity goes to making one`() {
+        val (outcome, _) = run(
+            identity = { delay(TRIP); IdentityInfo(Identity("", "", "ann@example.com", ""), AccountStatus("active", 0)) },
+        )
+        assertEquals(Startup.NeedsIdentity, outcome)
+    }
+
+    @Test
+    fun `an identity read that failed is not taken for none`() {
+        val (outcome, _) = run(identity = { delay(TRIP); null })
+        assertEquals(Startup.Continue(null), outcome)
+    }
+
     @Test
     fun `an unreachable server is not waited on any further`() {
         val (outcome, took) = run(

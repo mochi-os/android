@@ -8,6 +8,7 @@ package org.mochios.chat.model
 import com.google.gson.annotations.SerializedName
 import org.mochios.android.model.Attachment
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.util.segment
 
 // Chat status values mirrored from the server (chats.status). 'active' = current
@@ -47,7 +48,7 @@ data class Chat(
  * people route cannot. Null when the id, a peer's, cannot be one segment of
  * the address ([segment]).
  */
-fun personAvatarUrl(person: String): String? = segment(person)?.let { id -> "/chat/-/person/$id/asset/avatar" }
+fun personAvatarUrl(person: String): OwnedAddress? = segment(person)?.let { id -> OwnedAddress.of("/chat/-/person/$id/asset/avatar") }
 
 data class ChatMember(
     val id: String = "",

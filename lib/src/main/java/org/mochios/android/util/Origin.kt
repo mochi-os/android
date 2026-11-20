@@ -21,6 +21,20 @@ fun isServerOrigin(url: HttpUrl, serverUrl: String): Boolean {
 }
 
 /**
+ * The origin of [address] as the app stores a server: `scheme://host`, with
+ * the port only when it is not the scheme's own, and nothing after it. Null
+ * when [address] does not parse or carries a user name or password. A path
+ * kept with it would go into every address built from the stored one: a
+ * pasted `https://example.org/login` would send the socket, the images and
+ * push to `/login/...`.
+ */
+fun serverOrigin(address: String): String? {
+    val url = address.trim().toHttpUrlOrNull() ?: return null
+    if (url.username.isNotEmpty() || url.password.isNotEmpty()) return null
+    return HttpUrl.Builder().scheme(url.scheme).host(url.host).port(url.port).build().toString().trimEnd('/')
+}
+
+/**
  * Cache key for [url]'s origin - scheme, host and effective port, matching
  * [isServerOrigin]. A host-only key shares one bucket between http and https,
  * so a cookie set by one is replayed to the other.

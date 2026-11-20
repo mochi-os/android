@@ -26,6 +26,8 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.api.ApiException
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.Identity
 import org.mochios.android.auth.IdentityInfo
@@ -41,10 +43,11 @@ import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
 
 /**
- * Booting -> (NeedsAccountChoice | NeedsLogin) -> Bootstrapping -> Ready. The
- * JWT is minted only from Bootstrapping, except after a transport-level
- * failure: Ready is then entered on the cached JWT and the mint retries, since
- * an unreachable server is not a dead session.
+ * Booting -> (NeedsAccountChoice | NeedsLogin) -> Bootstrapping -> Ready, with
+ * NeedsIdentity or NeedsReactivation between the last two when the account
+ * needs either first. The JWT is minted only from Bootstrapping, except after
+ * a transport-level failure: Ready is then entered on the cached JWT and the
+ * mint retries, since an unreachable server is not a dead session.
  */
 sealed class AuthStage {
     /** Initial; ViewModel is evaluating account state. */
@@ -60,11 +63,19 @@ sealed class AuthStage {
     data object Bootstrapping : AuthStage()
 
     /**
+     * Signed in to an account with no identity yet: core refuses it every
+     * private app action until it has one, so the identity is created first.
+     * A sign-up left before its identity, by the app being closed or its
+     * process ending, resumes here.
+     */
+    data object NeedsIdentity : AuthStage()
+
+    /**
      * Account pending self-service closure: the session is valid but every app
      * action is refused. [purge] is the unix-seconds deletion deadline, 0 if
-     * unknown.
+     * unknown; [failure] is why the last attempt to reactivate it did not.
      */
-    data class NeedsReactivation(val purge: Long) : AuthStage()
+    data class NeedsReactivation(val purge: Long, val failure: MochiError? = null) : AuthStage()
 
     /**
      * [recreateForLocale] is set when bootstrap fetched a different language
@@ -98,18 +109,15 @@ class AppBootstrapViewModel @Inject constructor(
     // it up; see [reauthenticate].
     private var hinted: String? = null
 
-    // The server of the account being signed in again, for the sign-in screen
-    // once its session is found dead.
-    private var resigning: String? = null
-
     init {
         // The ViewModel survives Activity.recreate(), so logout's clearAll
-        // would leave _stage at Ready. Re-evaluate when the session goes null.
+        // would leave _stage at Ready. Re-evaluate when the session goes null:
+        // signed out, or an identity never made abandoned.
         viewModelScope.launch {
             sessionManager.currentToken.collect { session ->
                 if (session == null) {
                     val s = _stage.value
-                    if (s is AuthStage.Ready || s is AuthStage.Bootstrapping) {
+                    if (s is AuthStage.Ready || s is AuthStage.Bootstrapping || s is AuthStage.NeedsIdentity) {
                         evaluate()
                     }
                 }
@@ -183,13 +191,13 @@ class AppBootstrapViewModel @Inject constructor(
 
     /**
      * Start [identity]'s account afresh, switching to it if it is not the
-     * signed-in one.
+     * signed-in one. Its session found dead, the sign-in screen opens on its
+     * server, which signing out keeps.
      *
      * @return whether it is an account on the device.
      */
     private suspend fun resign(identity: String): Boolean {
         val snap = MochiAccount.all(context).firstOrNull { account -> account.identity == identity } ?: return false
-        resigning = snap.server
         if (sessionManager.getBoundIdentity() != identity) adopt(snap)
         bootstrap()
         return true
@@ -247,7 +255,7 @@ class AppBootstrapViewModel @Inject constructor(
             // server-side push account, but without this the distributor keeps
             // the local registration and its endpoint, and the next sign-in
             // registers a second one.
-            MochiPushClient.unregister(context, context.packageName)
+            MochiPushClient.unregisterBound(context, sessionManager)
             // Clear the session before tearDown(): Firebase re-registers after
             // unregister() and fires onRegistered, which only skips
             // re-registering while no session is active.
@@ -256,12 +264,25 @@ class AppBootstrapViewModel @Inject constructor(
         }
     }
 
-    /** Cancel a pending account closure from the reactivation interstitial,
-     *  then re-run bootstrap so the now-active session lands in the app. */
+    /**
+     * Cancel a pending account closure from the reactivation interstitial,
+     * then re-run bootstrap so the now-active session lands in the app. A
+     * cancel that fails leaves the interstitial up with the reason: the
+     * account is still closing, and a bootstrap would only show it again
+     * with nothing said.
+     */
     fun reactivate() {
+        val purge = (_stage.value as? AuthStage.NeedsReactivation)?.purge ?: 0L
         _stage.value = AuthStage.Bootstrapping
         viewModelScope.launch {
-            runCatching { authRepository.cancelClose() }
+            try {
+                authRepository.cancelClose()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _stage.value = AuthStage.NeedsReactivation(purge, e.toMochiError())
+                return@launch
+            }
             bootstrap()
         }
     }
@@ -296,7 +317,7 @@ class AppBootstrapViewModel @Inject constructor(
     private suspend fun adopt(snap: MochiAccount.Snapshot) {
         sessionManager.setServerUrl(snap.server)
         sessionManager.saveSession(snap.session)
-        sessionManager.setBoundAccount(snap.identity, snap.server)
+        sessionManager.setBoundAccount(snap.identity)
     }
 
     private suspend fun bootstrap() {
@@ -330,22 +351,19 @@ class AppBootstrapViewModel @Inject constructor(
         val going = when (outcome) {
             Startup.SignedOut -> {
                 sessionManager.clearAll()
-                // Signing an account in again: the sign-in screen opens on
-                // its server rather than the default.
-                resigning?.let { server -> sessionManager.setServerUrl(server) }
-                resigning = null
                 _stage.value = AuthStage.NeedsLogin
                 return
             }
             is Startup.Closing -> {
-                resigning = null
                 _stage.value = AuthStage.NeedsReactivation(outcome.purge)
+                return
+            }
+            Startup.NeedsIdentity -> {
+                _stage.value = AuthStage.NeedsIdentity
                 return
             }
             is Startup.Continue -> outcome
         }
-        // The session lives after all; nothing to sign in again.
-        resigning = null
         val identityInfo = going.identity
         val unreachable = going.unreachable
         if (unreachable) {
@@ -366,9 +384,9 @@ class AppBootstrapViewModel @Inject constructor(
                 }
         }
 
-        // Republish every bootstrap so a missing AccountManager record
-        // self-heals. The local session is canonical; AccountManager only
-        // shares it.
+        // Republish every bootstrap so a missing account record self-heals.
+        // The local session is canonical; the account's sealed copy is what
+        // push and the account picker read.
         runCatching { publishAccount(identityInfo?.identity) }
 
         // The locale matters only after a fresh authentication; returning users
@@ -413,8 +431,10 @@ class AppBootstrapViewModel @Inject constructor(
         }
     }
 
-    /** Write/refresh the AccountManager record so sibling installs can adopt this
-     *  session. Best-effort. */
+    /**
+     * Write or refresh the phone's account for this identity, which the sync
+     * adapters, the account picker and push read, with its session. Best-effort.
+     */
     private suspend fun publishAccount(identity: Identity?) {
         val session = sessionManager.currentToken.first() ?: return
         val server = sessionManager.serverUrl.first()
@@ -422,7 +442,7 @@ class AppBootstrapViewModel @Inject constructor(
 
         // Write the local binding before the best-effort AccountManager upsert:
         // an addAccountExplicitly failure must not leave boundIdentity empty.
-        sessionManager.setBoundAccount(identity.identity, server)
+        sessionManager.setBoundAccount(identity.identity)
 
         val displayName = identity.name.takeIf { it.isNotBlank() }
             ?: identity.email.takeIf { it.isNotBlank() }
@@ -437,7 +457,7 @@ class AppBootstrapViewModel @Inject constructor(
                 fingerprint = identity.fingerprint.takeIf { it.isNotBlank() },
                 session = session
             )
-        }.onFailure { e -> Log.e(TAG, "AccountManager sharing upsert failed", e) }
+        }.onFailure { e -> Log.e(TAG, "Account upsert failed", e) }
     }
 
     private companion object {
@@ -461,6 +481,9 @@ internal sealed class Startup {
     /** The account is being closed; the reactivation interstitial comes first. */
     data class Closing(val purge: Long) : Startup()
 
+    /** The account has no identity yet; making one comes first. */
+    object NeedsIdentity : Startup()
+
     /**
      * Go on to Ready, with the identity when it was read. [unreachable] when
      * the mint could not reach the server, [failure] saying why.
@@ -482,9 +505,11 @@ internal sealed class Startup {
  * draw with the default appearance, font size and formats and switch a round
  * trip later - and sent alongside the rest they add no round trip of their
  * own. A 401 from the mint signs out, "closing" shows the reactivation
- * interstitial, and a transport failure goes on with the cached credentials;
- * each abandons whatever is still in flight, which after a transport failure
- * would only spend its connect timeout on the spinner.
+ * interstitial, an account that read as having no identity goes to making one
+ * - a read that failed is not taken for that - and a transport failure goes
+ * on with the cached credentials; each abandons whatever is still in flight,
+ * which after a transport failure would only spend its connect timeout on the
+ * spinner.
  */
 internal suspend fun startup(
     mint: suspend () -> Result<String>,
@@ -509,6 +534,10 @@ internal suspend fun startup(
     if (info?.status?.status == "closing") {
         warm.cancel()
         return@coroutineScope Startup.Closing(info.status.purge)
+    }
+    if (info != null && info.identity.identity.isBlank()) {
+        warm.cancel()
+        return@coroutineScope Startup.NeedsIdentity
     }
     // The scope ends only once the preferences have answered too.
     Startup.Continue(info)

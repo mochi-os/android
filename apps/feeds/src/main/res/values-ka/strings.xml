@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">არ არის გამოწერილი</string>
     <string name="feeds_source_follow_again">ხელახლა გამოწერა</string>
     <string name="feeds_filtered_by_tag">ფილტრი ტეგით:</string>
+    <string name="feeds_setup">დაყენება</string>
+    <string name="feeds_search_example">ძიება სახელით, ID-ით, ანაბეჭდით, URL-ით ან მისამართით %1$s</string>
 </resources>

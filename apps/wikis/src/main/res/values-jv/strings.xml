@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tag ora bisa kosong</string>
     <string name="wikis_attachments_search_placeholder">Goleki lampiran</string>
     <string name="wikis_attachments_delete_confirm_message">Busak “%1$s”? Iki ora bisa dibalèkake.</string>
-    <string name="wikis_attachments_downloading">Ngundhuh…</string>
     <string name="wikis_attachments_empty_description">Tutul Unggah kanggo nambahake berkas ing kaca iki.</string>
     <string name="wikis_settings_name_save_cd">Simpen jeneng</string>
     <string name="wikis_settings_name_cancel_cd">Batalaké suntingan</string>

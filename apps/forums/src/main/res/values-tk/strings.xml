@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Awtor</string>
     <string name="forums_community_destination">%1$s jemgyýetinde %2$s hökmünde çap edilýär</string>
+    <string name="forums_find_search_example">At, ID, fingerprint, URL ýa-da %1$s boýunça gözle</string>
+    <string name="forums_setup">Düzmek</string>
 </resources>

@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">ບໍ່ໄດ້ຕິດຕາມ</string>
     <string name="feeds_source_follow_again">ຕິດຕາມອີກຄັ້ງ</string>
     <string name="feeds_filtered_by_tag">ກອງຕາມແທັກ:</string>
+    <string name="feeds_setup">ຕັ້ງຄ່າ</string>
+    <string name="feeds_search_example">ຄົ້ນຫາຕາມຊື່, ID, ລາຍນິ້ວມື, URL, ຫຼື %1$s</string>
 </resources>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ტეგი ცარიელი ვერ იქნება</string>
     <string name="wikis_attachments_search_placeholder">დანართების ძიება</string>
     <string name="wikis_attachments_delete_confirm_message">წაიშალოს „%1$s“? ამის გაუქმება შეუძლებელია.</string>
-    <string name="wikis_attachments_downloading">ჩამოიტვირთება…</string>
     <string name="wikis_attachments_empty_description">შეეხეთ ატვირთვას ამ გვერდზე ფაილების დასამატებლად.</string>
     <string name="wikis_settings_name_save_cd">სახელის შენახვა</string>
     <string name="wikis_settings_name_cancel_cd">რედაქტირების გაუქმება</string>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Тег не може бути порожнім</string>
     <string name="wikis_attachments_search_placeholder">Пошук вкладень</string>
     <string name="wikis_attachments_delete_confirm_message">Видалити „%1$s\"? Цю дію не можна скасувати.</string>
-    <string name="wikis_attachments_downloading">Завантаження…</string>
     <string name="wikis_attachments_empty_description">Торкніться Завантажити, щоб додати файли до цієї сторінки.</string>
     <string name="wikis_settings_name_save_cd">Зберегти назву</string>
     <string name="wikis_settings_name_cancel_cd">Скасувати редагування</string>

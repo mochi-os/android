@@ -373,4 +373,6 @@
     <string name="feeds_source_unfollowed">İzlənilmir</string>
     <string name="feeds_source_follow_again">Yenidən izlə</string>
     <string name="feeds_filtered_by_tag">Etiketə görə filtrləndi:</string>
+    <string name="feeds_setup">Quraşdır</string>
+    <string name="feeds_search_example">Ad, ID, fingerprint, URL və ya %1$s ilə axtar</string>
 </resources>

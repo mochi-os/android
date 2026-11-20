@@ -300,23 +300,40 @@ class FileStore @Inject constructor(
         return name.ifBlank { fallback }
     }
 
-    private fun copyToCache(uri: Uri, fallbackName: String): File? {
+    /**
+     * [uri] copied into the cache, or null when it cannot be read: gone, no
+     * longer permitted, or failing part way. The provider says so by throwing
+     * as often as by answering null, and a copy cut short leaves nothing
+     * behind.
+     */
+    internal fun copyToCache(uri: Uri, fallbackName: String): File? {
         val resolver = context.contentResolver
-        // Two picked files can share a display name (and a crashed upload can
-        // leave a stale copy behind); writing to the same path would upload one
-        // file's bytes twice. Disambiguate with a counter before the extension.
-        var target = File(context.cacheDir, resolveName(uri, fallbackName))
-        var counter = 2
-        while (target.exists()) {
-            val extension = target.extension
-            val stem = target.nameWithoutExtension
-            val name = if (extension.isEmpty()) "$stem-$counter" else "$stem-$counter.$extension"
-            target = File(context.cacheDir, name)
-            counter++
-        }
-        return resolver.openInputStream(uri)?.use { input ->
-            target.outputStream().use { output -> input.copyTo(output) }
-            target
+        var target: File? = null
+        return try {
+            // Two picked files can share a display name (and a crashed upload
+            // can leave a stale copy behind); writing to the same path would
+            // upload one file's bytes twice. Disambiguate with a counter before
+            // the extension.
+            var candidate = File(context.cacheDir, resolveName(uri, fallbackName))
+            var counter = 2
+            while (candidate.exists()) {
+                val extension = candidate.extension
+                val stem = candidate.nameWithoutExtension
+                val name = if (extension.isEmpty()) "$stem-$counter" else "$stem-$counter.$extension"
+                candidate = File(context.cacheDir, name)
+                counter++
+            }
+            target = candidate
+            resolver.openInputStream(uri)?.use { input ->
+                candidate.outputStream().use { output -> input.copyTo(output) }
+                candidate
+            }
+        } catch (e: IOException) {
+            target?.delete()
+            null
+        } catch (e: SecurityException) {
+            target?.delete()
+            null
         }
     }
 

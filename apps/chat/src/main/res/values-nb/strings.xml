@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s godtar bare chatter fra venner.</string>
     <string name="chat_message_earlier">Meldinger fra før denne kontoen ble lagt til i Mochi er krypterte og kan ikke leses her</string>
     <string name="chat_message_excluded">Kun kryptert for andre enheter</string>
+    <string name="chat_setup">Sett opp</string>
 </resources>

@@ -8,7 +8,6 @@ package org.mochios.android.notifications
 import android.content.Context
 import android.os.SystemClock
 import android.util.Log
-import androidx.core.app.NotificationManagerCompat
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -24,6 +23,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.model.WebSocketEvent
+import org.mochios.android.push.SystemNotifications
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.websocket.MochiWebSocket
 import javax.inject.Inject
@@ -152,8 +152,7 @@ class NotificationsUnreadStore @Inject constructor(
         val app = event.app ?: return
         val topic = event.topic ?: return
         val obj = event.objectId ?: return
-        val tag = "$app-$topic-$obj"
-        NotificationManagerCompat.from(context).cancel(tag, tag.hashCode())
+        SystemNotifications.cancel(context, "$app-$topic-$obj")
     }
 
     private fun cancelSystemNotificationsForObject(event: WebSocketEvent) {
@@ -161,22 +160,19 @@ class NotificationsUnreadStore @Inject constructor(
         val obj = event.objectId ?: return
         val prefix = "$app-"
         val suffix = "-$obj"
-        val nm = NotificationManagerCompat.from(context)
-        try {
-            for (active in nm.activeNotifications) {
-                val tag = active.tag ?: continue
-                if (tag.startsWith(prefix) && tag.endsWith(suffix)) {
-                    nm.cancel(tag, active.id)
-                }
-            }
-        } catch (e: SecurityException) {
-            // getActiveNotifications can throw on revoked listener access.
-            Log.w(TAG, "cancelSystemNotificationsForObject: ${e.message}")
+        SystemNotifications.cancelWhere(context) { row ->
+            val tag = row.tag ?: return@cancelWhere false
+            tag.startsWith(prefix) && tag.endsWith(suffix)
         }
     }
 
+    /**
+     * Everything read: the signed-in account's push rows go, and nothing
+     * else - a sign-in prompt, another account's pushes and the push
+     * service's own notice stay.
+     */
     private fun cancelAllSystemNotifications() {
-        NotificationManagerCompat.from(context).cancelAll()
+        SystemNotifications.cancelPushes(context, sessionManager.getBoundIdentityBlocking())
     }
 
     /**

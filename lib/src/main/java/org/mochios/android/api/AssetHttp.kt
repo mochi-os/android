@@ -5,6 +5,7 @@
 
 package org.mochios.android.api
 
+import dagger.Lazy
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.EntryPoint
@@ -15,6 +16,7 @@ import okhttp3.CookieJar
 import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.isServerOrigin
 import javax.inject.Qualifier
@@ -35,8 +37,8 @@ annotation class AnonymousAssetHttpClient
 
 /**
  * The header marking an asset request as one of this app's own addresses (see
- * [owned]). The asset client sends the session and an app token to the user's
- * server only with it, and takes it off before the request leaves.
+ * [owned]). The asset client sends a credential to the user's server only with
+ * it ([credentialed]), and takes it off before the request leaves.
  */
 const val OWNED = "Mochi-Owned"
 
@@ -45,12 +47,49 @@ const val OWNED = "Mochi-Owned"
  * as every address the app builds from its own routes is, and as the user's
  * server gives the ones it serves. An absolute URL is never one, even on the
  * user's server: it may be a peer's choice - a link, a page's image, a feed's
- * enclosure - and with the session and the token of the app its path named, a
- * request for it would run any of that app's actions as the user. A backslash
- * or a control character, which no address the app builds holds, makes it none.
+ * enclosure - and with a credential for the app its path named, a request for
+ * it would act as the user. A backslash or a control character, which no
+ * address the app builds holds, makes it none, and so does a `.` or `..`
+ * segment, escaped or not: the request would be sent for the path they
+ * resolve to, another app's, with the credential the first segment chose.
  */
-fun owned(address: String): Boolean =
-    address.startsWith("/") && !address.startsWith("//") && address.none { it == '\\' || it.isISOControl() }
+fun owned(address: String): Boolean {
+    if (!address.startsWith("/") || address.startsWith("//")) return false
+    if (address.any { it == '\\' || it.isISOControl() }) return false
+    val path = address.substringBefore('?').substringBefore('#')
+    return path.split('/').none { segment -> segment.replace("%2e", ".", ignoreCase = true) in DOTS }
+}
+
+private val DOTS = setOf(".", "..")
+
+/**
+ * One of the app's own addresses on the user's server ([owned]): the only
+ * kind of image, media or file address the asset client sends a credential
+ * with. A `String`, whatever it holds, is fetched without one, so an address
+ * another server chose cannot gain a credential by reaching the wrong
+ * parameter: it becomes one of these only through [of], called where the
+ * address is built from the app's own routes with each id escaped
+ * ([org.mochios.android.util.segment]), or read from the user's own server's
+ * answer about its own routes (an attachment's `url`).
+ */
+@JvmInline
+value class OwnedAddress private constructor(val address: String) {
+
+    override fun toString(): String = address
+
+    companion object {
+        /** [address] as one of the app's own, or null when it is not one ([owned]). */
+        fun of(address: String?): OwnedAddress? = address?.takeIf { text -> owned(text) }?.let { text -> OwnedAddress(text) }
+    }
+}
+
+/**
+ * The own addresses whose action core does not mark `asset`, so it sets an
+ * asset token aside there: the people app's banner and favicon. They go with
+ * the session and the app's token, as every own address did before asset
+ * tokens.
+ */
+private val SESSIONED = Regex("^/people/[^/]+/-/(banner|favicon)$")
 
 /** [address] resolved against [server]: an [owned] one onto it, any other as given. */
 fun resolved(server: String, address: String): String =
@@ -58,11 +97,11 @@ fun resolved(server: String, address: String): String =
 
 /**
  * Media-asset client, with no invalidation interceptor - an image 401 must not
- * sign the user out. A request marked [OWNED] for the user's server carries the
- * session cookie and the token of the app its path names; any other request for
- * the user's server carries neither, so an address someone else chose reaches
- * the server as an anonymous one. Foreign hosts get browser UA/Accept/Referer,
- * which bot-mitigated CDNs require.
+ * sign the user out. A request marked [OWNED] for the user's server carries
+ * the credential [credentialed] gives it; any other request for the user's
+ * server carries none, so an address someone else chose reaches the server as
+ * an anonymous one. Foreign hosts get browser UA/Accept/Referer, which
+ * bot-mitigated CDNs require.
  */
 @Module
 @InstallIn(SingletonComponent::class)
@@ -78,18 +117,25 @@ object AssetHttpModule {
     @Provides
     @Singleton
     @AssetHttpClient
-    fun provideAssetHttpClient(sessionManager: SessionManager): OkHttpClient =
+    fun provideAssetHttpClient(sessionManager: SessionManager, authRepository: Lazy<AuthRepository>): OkHttpClient =
         assetClient(
-            server = sessionManager::getServerUrlBlocking,
+            server = { sessionManager.server.value },
             token = sessionManager::getTokenBlocking,
+            asset = { app -> authRepository.get().assetBlocking(app) },
             jar = sessionManager.cookieJar,
         )
 
     /**
      * The asset client over [server], the user's server's origin, [token],
-     * an app's token by name, and [jar], the session's cookie jar.
+     * an app's token by name, [asset], an app's asset token by name, and
+     * [jar], the session's cookie jar.
      */
-    internal fun assetClient(server: () -> String, token: (String) -> String?, jar: CookieJar): OkHttpClient =
+    internal fun assetClient(
+        server: () -> String,
+        token: (String) -> String?,
+        asset: (String) -> String?,
+        jar: CookieJar,
+    ): OkHttpClient =
         OkHttpClient.Builder()
             .cookieJar(foreign(jar) { url -> isServerOrigin(url, server()) })
             .addInterceptor { chain ->
@@ -112,8 +158,7 @@ object AssetHttpModule {
                 if (call.header(OWNED) == null || request.url != call.url || !isServerOrigin(request.url, server())) {
                     return@addNetworkInterceptor chain.proceed(request)
                 }
-                val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
-                chain.proceed(session(authorised(request, app?.let(token)), jar.loadForRequest(request.url)))
+                chain.proceed(credentialed(request, token, asset, jar))
             }
             .build()
 
@@ -130,7 +175,7 @@ object AssetHttpModule {
     fun provideAnonymousAssetHttpClient(
         @AssetHttpClient assetHttpClient: OkHttpClient,
         sessionManager: SessionManager,
-    ): OkHttpClient = anonymousClient(sessionManager::getServerUrlBlocking, assetHttpClient)
+    ): OkHttpClient = anonymousClient({ sessionManager.server.value }, assetHttpClient)
 
     /**
      * The anonymous client over [server], the user's server's origin, sharing
@@ -162,8 +207,31 @@ object AssetHttpModule {
             .build()
 }
 
-/** The header [AssetHttpClient] reads: [OWNED] for one of the app's own addresses ([owned]), nothing for any other. */
-fun assetHeaders(address: String): Map<String, String> = if (owned(address)) mapOf(OWNED to "1") else emptyMap()
+/**
+ * [request], for one of the app's own addresses on the user's server, with
+ * its credential: the asset token of the app its path names ([asset]), and
+ * nothing else. Core honours that token only on the actions an app marks as
+ * serving assets, and only to read, so an address that names any other action
+ * reaches it as an anonymous request whatever its path says. An address
+ * whose action is not so marked ([SESSIONED]), or one for an app no asset
+ * token can be had for, goes with the session cookie ([jar]) and the app's
+ * own token ([token]) instead.
+ */
+internal fun credentialed(
+    request: Request,
+    token: (String) -> String?,
+    asset: (String) -> String?,
+    jar: CookieJar,
+): Request {
+    val app = request.url.pathSegments.firstOrNull { segment -> segment.isNotEmpty() }
+    if (app != null && !SESSIONED.matches(request.url.encodedPath)) {
+        asset(app)?.let { held -> return authorised(request, held) }
+    }
+    return session(authorised(request, app?.let(token)), jar.loadForRequest(request.url))
+}
+
+/** The header [AssetHttpClient] reads: [OWNED] for one of the app's own addresses, nothing for none. */
+fun assetHeaders(address: OwnedAddress?): Map<String, String> = if (address != null) mapOf(OWNED to "1") else emptyMap()
 
 /**
  * The asset client's cookie jar: [jar] for foreign hosts, whose cookies a
@@ -223,4 +291,6 @@ interface AssetHttpEntryPoint {
 
     @AssetHttpClient
     fun assetHttpClient(): OkHttpClient
+
+    fun sessionManager(): SessionManager
 }

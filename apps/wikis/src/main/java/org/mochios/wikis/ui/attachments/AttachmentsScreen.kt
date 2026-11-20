@@ -5,7 +5,6 @@
 
 package org.mochios.wikis.ui.attachments
 
-import android.app.DownloadManager
 import android.content.Context
 import android.net.Uri
 import android.widget.Toast
@@ -94,8 +93,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
-import org.mochios.android.files.FileStore
+import org.mochios.android.files.DownloadRequest
+import org.mochios.android.files.MIME_BINARY
 import org.mochios.android.files.Upload
+import org.mochios.android.files.rememberDownloadSaver
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Attachment as MochiAttachment
 import org.mochios.android.model.FileKind
@@ -119,13 +120,10 @@ import org.mochios.android.ui.components.VideoFrame
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.NaturalCompare
-import org.mochios.android.util.destination
 import org.mochios.android.util.segment
-import org.mochios.android.util.webUri
 import org.mochios.wikis.R
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.ui.components.LocalWikiContext
-import org.mochios.wikis.ui.components.attachmentAt
 import org.mochios.wikis.ui.components.attachmentPath
 import org.mochios.wikis.ui.components.WikiContextValue
 
@@ -144,6 +142,10 @@ fun AttachmentsScreen(
     val upload by viewModel.upload.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
+    // A file goes where the user picks, fetched by the wikis client.
+    val saveAttachment = rememberDownloadSaver { request, destination ->
+        viewModel.saveAttachment(request.key, request.name, destination)
+    }
 
     // Forward ViewModel events onto the snackbar host.
     LaunchedEffect(Unit) {
@@ -269,7 +271,7 @@ fun AttachmentsScreen(
                         AttachmentsBody(
                             state = state,
                             baseURL = wikiCtx.baseURL,
-                            token = viewModel.token,
+                            onDownload = { attachment -> saveAttachment(downloadRequest(attachment)) },
                             onSearchChange = viewModel::setSearchQuery,
                             onClearSearch = viewModel::clearSearch,
                             onFilterChange = viewModel::setFilter,
@@ -437,7 +439,7 @@ internal fun AttachmentsTopBar(
 internal fun AttachmentsBody(
     state: AttachmentsUiState,
     baseURL: String,
-    token: String?,
+    onDownload: (Attachment) -> Unit,
     onSearchChange: (String) -> Unit,
     onClearSearch: () -> Unit,
     onFilterChange: (AttachmentsFilter) -> Unit,
@@ -513,7 +515,7 @@ internal fun AttachmentsBody(
                     AttachmentsGrid(
                         attachments = filtered,
                         baseURL = baseURL,
-                        token = token,
+                        onDownload = onDownload,
                         deletingId = state.deletingId,
                         onOpenImageAt = { id ->
                             val idx = imageAttachments.indexOfFirst { it.id == id }
@@ -527,7 +529,7 @@ internal fun AttachmentsBody(
                     AttachmentsList(
                         attachments = filtered,
                         baseURL = baseURL,
-                        token = token,
+                        onDownload = onDownload,
                         deletingId = state.deletingId,
                         onOpenImageAt = { id ->
                             val idx = imageAttachments.indexOfFirst { it.id == id }
@@ -544,7 +546,7 @@ internal fun AttachmentsBody(
     // Lightbox overlay
     val openIdx = lightboxIndex
     if (openIdx != null && imageAttachments.isNotEmpty()) {
-        val urls = imageAttachments.map { attachmentPath(baseURL, it.id).orEmpty() }
+        val urls = imageAttachments.map { attachmentPath(baseURL, it.id) ?: "" }
         LightboxScreen(
             images = urls,
             initialIndex = openIdx.coerceIn(0, urls.size - 1),
@@ -739,7 +741,7 @@ private fun ViewModeToggle(
 private fun AttachmentsGrid(
     attachments: List<Attachment>,
     baseURL: String,
-    token: String?,
+    onDownload: (Attachment) -> Unit,
     deletingId: String?,
     onOpenImageAt: (String) -> Unit,
     onRequestDelete: (Attachment) -> Unit,
@@ -769,15 +771,7 @@ private fun AttachmentsGrid(
                         }
                     }
                 },
-                onDownload = {
-                    startAttachmentDownload(
-                        context = context,
-                        url = attachmentAt(baseURL, attachment.id).orEmpty(),
-                        name = attachment.name,
-                        mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
-                        token = token,
-                    )
-                },
+                onDownload = { onDownload(attachment) },
                 onRequestDelete = { onRequestDelete(attachment) },
                 onRequestCaption = { onRequestCaption(attachment) },
             )
@@ -796,7 +790,7 @@ private fun AttachmentsGrid(
 private fun AttachmentsList(
     attachments: List<Attachment>,
     baseURL: String,
-    token: String?,
+    onDownload: (Attachment) -> Unit,
     deletingId: String?,
     onOpenImageAt: (String) -> Unit,
     onRequestDelete: (Attachment) -> Unit,
@@ -810,17 +804,7 @@ private fun AttachmentsList(
         modifier = Modifier.fillMaxSize(),
     ) {
         items(attachments, key = { it.id }) { attachment ->
-            // Typed: the download call answers with an id this caller has no
-            // use for, and a callback that returns one is not a click handler.
-            val download: () -> Unit = {
-                startAttachmentDownload(
-                    context = context,
-                    url = attachmentAt(baseURL, attachment.id).orEmpty(),
-                    name = attachment.name,
-                    mimeType = attachment.type.ifBlank { FileStore.DEFAULT_MIME },
-                    token = token,
-                )
-            }
+            val download: () -> Unit = { onDownload(attachment) }
             AttachmentListRow(
                 attachment = attachment,
                 baseURL = baseURL,
@@ -1153,7 +1137,7 @@ private fun AttachmentPreview(
             // VideoFrame routes to VideoFrameFetcher, which range-extracts the
             // opening frame rather than pulling the whole clip down for it.
             AsyncImage(
-                model = attachmentPath(baseURL, attachment.id)?.let { VideoFrame(it) },
+                model = attachmentPath(baseURL, attachment.id)?.let { VideoFrame.of(it) },
                 contentDescription = label,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize(),
@@ -1214,34 +1198,12 @@ private fun filterAndSort(
     }
 }
 
-/**
- * Hand an attachment to [DownloadManager]. The Authorization header is set
- * inline: DownloadManager runs outside the app process and never sees the
- * interceptor stack.
- */
-private fun startAttachmentDownload(
-    context: Context,
-    url: String,
-    name: String,
-    mimeType: String,
-    token: String?,
-): Long {
-    val dm = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-    // The URL is origin-pinned by construction (baseURL prefix), but gate the
-    // scheme anyway: DownloadManager throws on non-web URIs, and the Bearer
-    // header below must never ride on anything but a web request.
-    val uri = webUri(url) ?: return -1
-    val req = DownloadManager.Request(uri)
-        .setTitle(name)
-        .setDescription(context.getString(R.string.wikis_attachments_downloading))
-        .setMimeType(mimeType.ifBlank { FileStore.DEFAULT_MIME })
-        .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-        .destination(context, sanitiseFilename(name))
-    if (!token.isNullOrBlank()) {
-        req.addRequestHeader("Authorization", "Bearer $token")
-    }
-    return dm.enqueue(req)
-}
+/** What the save dialog offers for [attachment]: its name, under its own type. */
+private fun downloadRequest(attachment: Attachment) = DownloadRequest(
+    key = attachment.id,
+    name = attachment.name.trim().ifEmpty { "download" },
+    mimeType = attachment.type.ifBlank { MIME_BINARY },
+)
 
 /**
  * Show a file the app has no viewer of its own for. The bytes are fetched
@@ -1278,7 +1240,7 @@ private fun previewInViewer(
         )
         val result = AttachmentOpener.open(
             context,
-            attachmentPath(baseURL, attachment.id).orEmpty(),
+            attachmentPath(baseURL, attachment.id) ?: "",
             mochiAttachment,
         )
         if (result == AttachmentOpener.OpenResult.NO_APP) {
@@ -1296,12 +1258,4 @@ private fun previewInViewer(
     }
 }
 
-/**
- * DownloadManager rejects names with path separators, so replace anything
- * unsafe with an underscore.
- */
-private fun sanitiseFilename(name: String): String {
-    val trimmed = name.trim()
-    if (trimmed.isEmpty()) return "download"
-    return trimmed.replace(Regex("[/\\\\ ]"), "_")
-}
+

@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Ez duzu jarraitzen</string>
     <string name="feeds_source_follow_again">Jarraitu berriro</string>
     <string name="feeds_filtered_by_tag">Etiketaren arabera iragazia:</string>
+    <string name="feeds_setup">Konfiguratu</string>
+    <string name="feeds_search_example">Bilatu izenez, IDz, hatz-markaz, URLz edo %1$s helbidez</string>
 </resources>

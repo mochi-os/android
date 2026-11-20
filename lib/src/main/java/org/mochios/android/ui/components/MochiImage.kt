@@ -42,7 +42,9 @@ import coil3.compose.AsyncImagePainter
  *
  * The caller fixes the size; an image has no dimensions until it arrives.
  *
- * @param model What Coil loads: a URL, a server-relative path or a request.
+ * @param model What Coil loads: one of the app's own addresses, an
+ *   [org.mochios.android.api.OwnedAddress], fetched with a credential; or a URL,
+ *   a server-relative path or a request, fetched without.
  * @param contentDescription The image's description for accessibility.
  * @param modifier Size, clip and the like, as for an [AsyncImage].
  * @param alignment Where the image sits when it does not fill the box.

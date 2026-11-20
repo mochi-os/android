@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">فالو نه ڪري رهيا آهيو</string>
     <string name="feeds_source_follow_again">ٻيهر فالو ڪريو</string>
     <string name="feeds_filtered_by_tag">ٽيگ سان فلٽر ٿيل:</string>
+    <string name="feeds_setup">ترتيب ڏيو</string>
+    <string name="feeds_search_example">نالو، ID، فنگر پرنٽ، URL، يا %1$s سان ڳوليو</string>
 </resources>

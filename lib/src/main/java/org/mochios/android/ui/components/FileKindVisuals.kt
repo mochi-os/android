@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import android.net.Uri
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -141,7 +142,8 @@ fun rememberFileKind(uri: Uri, name: String = ""): FileKind {
  *
  * @param kind The kind of file being drawn.
  * @param model What to load an image from - a picked `content://` [Uri], an
- *   absolute URL, or a server-relative path. Null where the caller has no
+ *   absolute URL, or one of the app's own addresses, an [OwnedAddress],
+ *   the only kind fetched with a credential. Null where the caller has no
  *   preview to offer, which draws the icon.
  * @param videoModel Where a video's frame is decoded from, which is the clip
  *   itself rather than a thumbnail: the server serves no thumbnail for a video.
@@ -164,7 +166,11 @@ fun FileKindPreview(
     // server-relative address itself (see `VideoFrameFetcher`).
     val source = when (kind) {
         FileKind.IMAGE -> model
-        FileKind.VIDEO -> videoModel?.let { clip -> VideoFrame(clip.toString()) }
+        FileKind.VIDEO -> when (videoModel) {
+            null -> null
+            is OwnedAddress -> VideoFrame.of(videoModel)
+            else -> VideoFrame(videoModel.toString())
+        }
         else -> null
     }
 

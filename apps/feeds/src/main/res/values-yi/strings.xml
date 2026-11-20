@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">פֿאָלגט ניט נאָך</string>
     <string name="feeds_source_follow_again">נאָכפֿאָלגן ווידער</string>
     <string name="feeds_filtered_by_tag">געפֿילטערט לויט טאַג:</string>
+    <string name="feeds_setup">שטעל אויף</string>
+    <string name="feeds_search_example">זוך לויט נאָמען, ID, פֿינגערפּרינט, URL, אָדער %1$s</string>
 </resources>

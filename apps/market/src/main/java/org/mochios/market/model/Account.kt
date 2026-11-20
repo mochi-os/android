@@ -5,6 +5,7 @@
 
 package org.mochios.market.model
 
+import org.mochios.android.api.OwnedAddress
 import com.google.gson.annotations.SerializedName
 import org.mochios.android.util.segment
 
@@ -46,7 +47,7 @@ data class Account(
  * Null when the id, a peer's, cannot be one segment of the address
  * ([segment]).
  */
-fun userAvatarUrl(user: String): String? = segment(user)?.let { id -> "/market/-/user/$id/asset/avatar" }
+fun userAvatarUrl(user: String): OwnedAddress? = segment(user)?.let { id -> OwnedAddress.of("/market/-/user/$id/asset/avatar") }
 
 /**
  * Public seller-card projection; mirrors `AccountSummary` in web

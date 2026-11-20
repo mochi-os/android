@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tagg får inte vara tom</string>
     <string name="wikis_attachments_search_placeholder">Sök bilagor</string>
     <string name="wikis_attachments_delete_confirm_message">Radera \"%1$s\"? Detta kan inte ångras.</string>
-    <string name="wikis_attachments_downloading">Laddar ner…</string>
     <string name="wikis_attachments_empty_description">Tryck på Ladda upp för att lägga till filer på denna sida.</string>
     <string name="wikis_settings_name_save_cd">Spara namn</string>
     <string name="wikis_settings_name_cancel_cd">Avbryt redigering</string>

@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Nincs követve</string>
     <string name="feeds_source_follow_again">Követés újra</string>
     <string name="feeds_filtered_by_tag">Szűrve címke szerint:</string>
+    <string name="feeds_setup">Beállítás</string>
+    <string name="feeds_search_example">Keresés név, azonosító, ujjlenyomat, URL vagy %1$s alapján</string>
 </resources>

@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Apohára</string>
     <string name="forums_community_destination">Oñemoherakuã %1$s-pe %2$s ramo</string>
+    <string name="forums_find_search_example">Eheka téra, ID, fingerprint, URL, térã %1$s rupive</string>
+    <string name="forums_setup">Emboheko</string>
 </resources>

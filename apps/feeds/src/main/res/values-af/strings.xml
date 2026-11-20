@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Volg nie</string>
     <string name="feeds_source_follow_again">Volg weer</string>
     <string name="feeds_filtered_by_tag">Gefiltreer volgens etiket:</string>
+    <string name="feeds_setup">Stel op</string>
+    <string name="feeds_search_example">Soek volgens naam, ID, vingerafdruk, URL of %1$s</string>
 </resources>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">태그는 비워둘 수 없습니다</string>
     <string name="wikis_attachments_search_placeholder">첨부 파일 검색</string>
     <string name="wikis_attachments_delete_confirm_message">「%1$s」을(를) 삭제하시겠습니까? 이 작업은 취소할 수 없습니다.</string>
-    <string name="wikis_attachments_downloading">다운로드 중…</string>
     <string name="wikis_attachments_empty_description">이 페이지에 파일을 추가하려면 업로드를 탭하세요.</string>
     <string name="wikis_settings_name_save_cd">이름 저장</string>
     <string name="wikis_settings_name_cancel_cd">편집 취소</string>

@@ -48,7 +48,7 @@ class AnonymousImageKeyer(
 ) : Keyer<AnonymousImage> {
 
     override fun key(data: AnonymousImage, options: Options): String? =
-        resolveAnonymousImage(data.destination, sessionManager.getServerUrlBlocking())
+        resolveAnonymousImage(data.destination, sessionManager.server.value)
 }
 
 /**
@@ -72,7 +72,7 @@ class AnonymousImageFetcherFactory(
         options: Options,
         imageLoader: ImageLoader,
     ): Fetcher? {
-        val url = resolveAnonymousImage(data.destination, sessionManager.getServerUrlBlocking())
+        val url = resolveAnonymousImage(data.destination, sessionManager.server.value)
             ?: return null
         return network.create(url.toUri(), options, imageLoader)
     }

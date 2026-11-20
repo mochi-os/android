@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Walqunnamaa jira…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Irra deebi’ee walqabsiisaa jira…</string>
-    <string name="chess_ws_failed">Walqunnamtiin hin milkoofne</string>
     <string name="chess_move_capture">%1$s %2$s fudhate</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

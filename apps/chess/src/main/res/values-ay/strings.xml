@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Chikacht\'asiski…</string>
     <string name="chess_ws_disconnected">Jan chikacht\'ata</string>
     <string name="chess_ws_reconnecting">Wasitat chikacht\'asiskiwa…</string>
-    <string name="chess_ws_failed">Chikacht\'awix pantjatawa</string>
     <string name="chess_move_capture">%1$s %2$s apsuna</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

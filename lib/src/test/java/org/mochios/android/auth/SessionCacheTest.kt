@@ -12,6 +12,7 @@ import coil3.asImage
 import coil3.disk.DiskCache
 import coil3.memory.MemoryCache
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -159,11 +160,11 @@ class SessionCacheTest {
 
     @Test
     fun `another account taking the binding empties the image cache`() {
-        runBlocking { session.setBoundAccount("first-identity", server.url("/").toString()) }
+        runBlocking { session.setBoundAccount("first-identity") }
         hold()
-        runBlocking { session.setBoundAccount("first-identity", server.url("/").toString()) }
+        runBlocking { session.setBoundAccount("first-identity") }
         assertEquals("the same account keeps its images", true, held())
-        runBlocking { session.setBoundAccount("second-identity", server.url("/").toString()) }
+        runBlocking { session.setBoundAccount("second-identity") }
         assertEquals(false, held())
     }
 
@@ -186,12 +187,69 @@ class SessionCacheTest {
 
     @Test
     fun `another account taking the binding forgets the items the apps last had open`() {
-        runBlocking { session.setBoundAccount("first-identity", server.url("/").toString()) }
+        runBlocking { session.setBoundAccount("first-identity") }
         LastViewedStore.set(context, "forums", "forum1")
-        runBlocking { session.setBoundAccount("first-identity", server.url("/").toString()) }
+        runBlocking { session.setBoundAccount("first-identity") }
         assertEquals("the same account keeps them", "forum1", LastViewedStore.get(context, "forums"))
-        runBlocking { session.setBoundAccount("second-identity", server.url("/").toString()) }
+        runBlocking { session.setBoundAccount("second-identity") }
         assertNull(LastViewedStore.get(context, "forums"))
+    }
+
+    // The address is where the app points, not part of the session: emptied,
+    // the next sign-in went to mochi-os.org with nothing saying so.
+    @Test
+    fun `signing out keeps the server address and its theme`() {
+        runBlocking {
+            session.saveTheme(1f, 2f, 3f)
+            session.saveToken("feeds", "token")
+            session.setBoundAccount("first-identity")
+            session.clearAll()
+        }
+        val origin = server.url("/").toString().trimEnd('/')
+        assertEquals(origin, runBlocking { session.serverUrl.first() })
+        assertEquals(origin, session.server.value)
+        assertEquals(SessionManager.ThemeAnchors(1f, 2f, 3f), runBlocking { session.themeAnchors.first() })
+        assertNull(runBlocking { session.currentToken.first() })
+        assertNull(runBlocking { session.getToken("feeds") })
+        assertNull(runBlocking { session.getBoundIdentity() })
+    }
+
+    @Test
+    fun `signing out deletes the downloaded attachments`() {
+        val held = File(File(context.cacheDir, "attachments"), "1_report.pdf").apply {
+            parentFile!!.mkdirs()
+            writeText("x")
+        }
+        runBlocking { session.clearAll() }
+        assertEquals(false, held.exists())
+    }
+
+    // A pasted page's address kept its path in every address built from it:
+    // the socket, the images and push all went to /login/...
+    @Test
+    fun `the server is stored as its origin`() {
+        runBlocking { session.setServerUrl("https://example.org:8443/login?next=1#top") }
+        assertEquals("https://example.org:8443", runBlocking { session.serverUrl.first() })
+        assertEquals("held in memory at once", "https://example.org:8443", session.server.value)
+        runBlocking { session.setServerUrl("https://example.org:443/") }
+        assertEquals("https://example.org", session.server.value)
+    }
+
+    // Requests are retargeted from the address held in memory: a write that
+    // left it to the store's next emission would send the first requests
+    // after it to the server before.
+    @Test
+    fun `the address is held in memory as it is written`() {
+        val still = SessionManager(context, CoroutineScope(java.util.concurrent.Executor { }.asCoroutineDispatcher()))
+        runBlocking { still.setServerUrl("https://written.example/login") }
+        assertEquals("https://written.example", still.server.value)
+    }
+
+    @Test
+    fun `an address carrying a user name is refused`() {
+        val refused = runCatching { runBlocking { session.setServerUrl("https://user:secret@example.org") } }
+        assertEquals(IllegalArgumentException::class.java, refused.exceptionOrNull()?.javaClass)
+        assertEquals(server.url("/").toString().trimEnd('/'), session.server.value)
     }
 
     @Test

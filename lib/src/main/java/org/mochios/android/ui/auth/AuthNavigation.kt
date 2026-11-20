@@ -86,10 +86,16 @@ fun AuthNavigation(
         }
     }
 
+    // Into identity creation once the code verifies for an account with none,
+    // and back to the email step when the user abandons it.
     LaunchedEffect(uiState.needsIdentity) {
         if (uiState.needsIdentity) {
             navController.navigate("identity") {
                 popUpTo("login") { inclusive = true }
+            }
+        } else if (navController.currentDestination?.route == "identity") {
+            navController.navigate("login") {
+                popUpTo("identity") { inclusive = true }
             }
         }
     }

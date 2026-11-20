@@ -39,7 +39,11 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.account.MochiAccount
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.userMessage
 import org.mochios.android.ui.auth.AuthNavigation
+import org.mochios.android.ui.auth.AuthViewModel
+import org.mochios.android.ui.auth.IdentityScreen
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
@@ -95,8 +99,11 @@ fun AppBootstrapHost(
             }
         }
 
+        is AuthStage.NeedsIdentity -> IdentityStage(onCreated = viewModel::onAuthSuccess)
+
         is AuthStage.NeedsReactivation -> ReactivationScreen(
             purge = s.purge,
+            failure = s.failure,
             onReactivate = viewModel::reactivate,
             onSignOut = viewModel::logout,
         )
@@ -147,11 +154,38 @@ private fun Loading() {
     }
 }
 
-/** Reactivation interstitial for a soft-deleted ("closing") account, mirroring web's
- *  /login/closing. */
+/**
+ * Identity creation for an account signed in without one, as the sign-in
+ * flow's own step shows it. [onCreated] runs once the identity is made;
+ * abandoning it signs the account out, and the stage follows the session.
+ */
+@Composable
+private fun IdentityStage(onCreated: () -> Unit) {
+    val viewModel: AuthViewModel = hiltViewModel()
+    val state by viewModel.uiState.collectAsState()
+    LaunchedEffect(state.authComplete) {
+        if (state.authComplete) {
+            onCreated()
+            viewModel.consumeAuthComplete()
+        }
+    }
+    IdentityScreen(
+        uiState = state,
+        onUpdateName = viewModel::updateIdentityName,
+        onUpdatePrivacy = viewModel::updateIdentityPrivacy,
+        onCreate = viewModel::createIdentity,
+        onAbandon = viewModel::abandonIdentity,
+    )
+}
+
+/**
+ * Reactivation interstitial for a soft-deleted ("closing") account, mirroring
+ * web's /login/closing. [failure] is why the last Reactivate did not work.
+ */
 @Composable
 private fun ReactivationScreen(
     purge: Long,
+    failure: MochiError?,
     onReactivate: () -> Unit,
     onSignOut: () -> Unit,
 ) {
@@ -175,6 +209,13 @@ private fun ReactivationScreen(
                 stringResource(R.string.reactivation_body)
             }
             Text(text = body, style = MaterialTheme.typography.bodyMedium)
+            if (failure != null) {
+                Text(
+                    text = failure.userMessage(),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.error,
+                )
+            }
             Spacer(Modifier.height(8.dp))
             MochiButton(onClick = onReactivate, modifier = Modifier.fillMaxWidth()) {
                 Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))

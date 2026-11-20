@@ -340,4 +340,6 @@
     </plurals>
     <string name="forums_comment_op">Аўтар</string>
     <string name="forums_community_destination">Публікуецца ў %1$s ад імя %2$s</string>
+    <string name="forums_find_search_example">Пошук па назве, ID, адбітку, URL або адрасе %1$s</string>
+    <string name="forums_setup">Наладзіць</string>
 </resources>

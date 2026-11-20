@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Ühendamine…</string>
     <string name="chess_ws_disconnected">Ühendamata</string>
     <string name="chess_ws_reconnecting">Uuesti ühendamine…</string>
-    <string name="chess_ws_failed">Ühendus ebaõnnestus</string>
     <string name="chess_move_capture">%1$s võttis %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

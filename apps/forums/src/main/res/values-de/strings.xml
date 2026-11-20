@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Autor</string>
     <string name="forums_community_destination">Wird in %1$s als %2$s veröffentlicht</string>
+    <string name="forums_find_search_example">Nach Name, ID, Fingerabdruck, URL oder %1$s suchen</string>
+    <string name="forums_setup">Einrichten</string>
 </resources>

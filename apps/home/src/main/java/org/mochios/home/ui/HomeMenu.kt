@@ -34,6 +34,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.notifications.MochiNotification
@@ -44,16 +45,16 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.NotificationCard
 import org.mochios.android.ui.components.NotificationCategoryItems
-import org.mochios.android.util.segment
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.home.R
 import org.mochios.android.R as MochiR
 
 /**
  * The user's avatar as the people app serves it, or none before the identity
- * is known or when it cannot be one segment of the address ([segment]).
+ * is known or when it cannot be one segment of the address ([personAvatarPath]).
  */
-internal fun avatar(identity: String): String? =
-    if (identity.isBlank()) null else segment(identity)?.let { id -> "/people/$id/-/avatar" }
+internal fun avatar(identity: String): OwnedAddress? =
+    if (identity.isBlank()) null else personAvatarPath(identity)
 
 /** The size of the avatar in the top bar, and beside the name in the menu. */
 private val AVATAR = 32.dp

@@ -285,10 +285,10 @@ internal fun ThreadMessage(message: ChatMessage, chatId: String) {
                 if (attachments.isNotEmpty()) {
                     AttachmentGallery(
                         attachments = attachments,
-                        urlBuilder = { att -> attachmentAddress("chat", chatId, att.id).orEmpty() },
-                        thumbnailUrlBuilder = { att -> attachmentAddress("chat", chatId, att.id, "thumbnail").orEmpty() },
+                        urlBuilder = { att -> attachmentAddress("chat", chatId, att.id) },
+                        thumbnailUrlBuilder = { att -> attachmentAddress("chat", chatId, att.id, "thumbnail") },
                         previewUrlBuilder = { att ->
-                            attachmentAddress("chat", chatId, att.id, if (att.previewUrl != null) "preview" else "thumbnail").orEmpty()
+                            attachmentAddress("chat", chatId, att.id, if (att.previewUrl != null) "preview" else "thumbnail")
                         },
                     )
                 }

@@ -69,13 +69,29 @@ data class NewChatUiState(
     /** The account chosen, with people there by their addresses; empty for Mochi. */
     val account: String = "",
     val addresses: String = "",
+    /** The networks the server offers an account on that chats are had on. */
+    val offered: List<String> = emptyList(),
+    /** A network chosen that the user has no account on yet, set up from here. */
+    val setup: String? = null,
 ) {
     val selected: Set<String>
         get() = picked.map { friend -> friend.id }.toSet()
 
     /** The account chosen, when one is. */
     val chosen: ChatAccount? get() = accounts.firstOrNull { it.id == account }
+
+    /** The networks offered that none of the user's accounts is on, listed after the accounts. */
+    val missing: List<String> get() = unset(offered, accounts)
 }
+
+/**
+ * The networks the server offers that none of the user's accounts is on: a
+ * linked Mastodon account is on the fediverse, as a hosted one is.
+ */
+internal fun unset(offered: List<String>, accounts: List<ChatAccount>): List<String> =
+    offered.filter { network ->
+        accounts.none { account -> (if (account.network == "mastodon") "fediverse" else account.network) == network }
+    }
 
 @HiltViewModel
 class NewChatViewModel @Inject constructor(
@@ -108,7 +124,7 @@ class NewChatViewModel @Inject constructor(
             try {
                 val data = repository.getNewChatData()
                 val friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(me = data.name, accounts = data.accounts)
+                _uiState.value = _uiState.value.copy(me = data.name, accounts = data.accounts, offered = data.offered)
 
                 if (handoffAccount.isNotBlank() && handoffAddress.isNotBlank()) {
                     try {
@@ -232,7 +248,13 @@ class NewChatViewModel @Inject constructor(
 
     /** Choose the account the conversation is had through; empty for Mochi. */
     fun selectAccount(account: String) {
-        _uiState.value = _uiState.value.copy(account = account, picked = emptyList())
+        _uiState.value = _uiState.value.copy(account = account, setup = null, picked = emptyList())
+        refreshExisting()
+    }
+
+    /** Choose a network the user has no account on, which is set up from here instead of chatted on. */
+    fun selectSetup(network: String) {
+        _uiState.value = _uiState.value.copy(account = "", setup = network, picked = emptyList())
         refreshExisting()
     }
 

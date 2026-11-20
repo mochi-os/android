@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Барчасб холӣ буда наметавонад</string>
     <string name="wikis_attachments_search_placeholder">Ҷустуҷӯи замимаҳо</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” нест карда шавад? Инро бекор кардан мумкин нест.</string>
-    <string name="wikis_attachments_downloading">Боргирӣ…</string>
     <string name="wikis_attachments_empty_description">Барои илова кардани файлҳо ба ин саҳифа Бор кардан-ро пахш кунед.</string>
     <string name="wikis_settings_name_save_cd">Номро нигоҳ доштан</string>
     <string name="wikis_settings_name_cancel_cd">Таҳрирро бекор кардан</string>

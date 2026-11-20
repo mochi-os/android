@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">تگ نمی‌تواند خالی باشد</string>
     <string name="wikis_attachments_search_placeholder">جستجوی پیوست‌ها</string>
     <string name="wikis_attachments_delete_confirm_message">«%1$s» را حذف کنم؟ این عمل قابل بازگشت نیست.</string>
-    <string name="wikis_attachments_downloading">در حال دانلود…</string>
     <string name="wikis_attachments_empty_description">روی آپلود ضربه بزنید تا فایل به این صفحه اضافه کنید.</string>
     <string name="wikis_settings_name_save_cd">ذخیره نام</string>
     <string name="wikis_settings_name_cancel_cd">لغو ویرایش</string>

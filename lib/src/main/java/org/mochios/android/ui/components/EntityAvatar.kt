@@ -33,9 +33,8 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import dagger.hilt.android.EntryPointAccessors
 import org.mochios.android.R
-import org.mochios.android.auth.SessionEntryPoint
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.util.segment
 
 /**
@@ -43,36 +42,19 @@ import org.mochios.android.util.segment
  * `src`. Null when the id is blank, or, a peer's, cannot be one segment of the
  * address ([segment]), leaving the initials placeholder in charge.
  */
-fun personAvatarPath(entityId: String?): String? =
-    entityId?.takeIf { id -> id.isNotBlank() }?.let(::segment)?.let { id -> "/people/$id/-/avatar" }
+fun personAvatarPath(entityId: String?): OwnedAddress? =
+    entityId?.takeIf { id -> id.isNotBlank() }?.let(::segment)?.let { id -> OwnedAddress.of("/people/$id/-/avatar") }
 
 /**
- * The session server URL (no trailing slash), from `SessionManager` via Hilt.
- * Returns "" outside a Hilt application (e.g. a `@Preview`).
- */
-@Composable
-fun rememberServerUrl(): String {
-    val context = LocalContext.current
-    return remember(context) {
-        runCatching {
-            EntryPointAccessors
-                .fromApplication(context.applicationContext, SessionEntryPoint::class.java)
-                .sessionManager()
-                .getServerUrlBlocking()
-                .trimEnd('/')
-        }.getOrDefault("")
-    }
-}
-
-/**
- * Circular avatar for a person entity. [src] may be absolute or server-relative
- * ("/people/<id>/-/avatar"), which `RelativeAssetUrlMapper` expands against the
- * session server; a blank or failing URL falls back to seeded initials.
+ * Circular avatar for a person entity: [src], one of the app's own addresses
+ * ("/people/<id>/-/avatar"), fetched with a credential, or [remote], an
+ * address another server gave, fetched without one. With neither, or one that
+ * fails, it falls back to seeded initials.
  */
 @Composable
 fun EntityAvatar(
     name: String,
-    src: String? = null,
+    src: OwnedAddress? = null,
     seed: String? = null,
     size: Dp = 24.dp,
     shape: Shape = CircleShape,
@@ -81,8 +63,10 @@ fun EntityAvatar(
     contentColor: Color = Color.Black,
     borderColor: Color = MaterialTheme.colorScheme.outlineVariant,
     modifier: Modifier = Modifier,
+    remote: String? = null,
 ) {
-    var loadFailed by remember(src) { mutableStateOf(false) }
+    val image: Any? = src ?: remote?.takeIf { address -> address.isNotBlank() }
+    var loadFailed by remember(image) { mutableStateOf(false) }
 
     val ringColor = accent?.let { parseHexColour(it) }
     val ringModifier = when {
@@ -92,12 +76,12 @@ fun EntityAvatar(
     }
     val outer = modifier.size(size).then(ringModifier).clip(shape)
 
-    val useImage = !src.isNullOrBlank() && !loadFailed
+    val useImage = image != null && !loadFailed
     if (useImage) {
         val context = LocalContext.current
         AsyncImage(
             model = ImageRequest.Builder(context)
-                .data(src)
+                .data(image)
                 .crossfade(true)
                 .build(),
             contentDescription = stringResource(R.string.entity_avatar_alt, name),

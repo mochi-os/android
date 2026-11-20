@@ -334,4 +334,6 @@
     </plurals>
     <string name="forums_comment_op">เจ้าของกระทู้</string>
     <string name="forums_community_destination">โพสต์ไปยัง %1$s ในนาม %2$s</string>
+    <string name="forums_find_search_example">ค้นหาตามชื่อ ID ลายนิ้วมือ URL หรือ %1$s</string>
+    <string name="forums_setup">ตั้งค่า</string>
 </resources>

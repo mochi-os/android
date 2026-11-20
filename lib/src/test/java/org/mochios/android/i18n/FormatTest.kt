@@ -104,6 +104,16 @@ class FormatTest {
         assertEquals(listOf("hms"), japan.skeletons)
     }
 
+    // The platform's writer keeps the digits 0 to 9 in every language, where
+    // the JDK's would write a date in Arabic or Bengali digits beside a time
+    // in Latin ones.
+    @Test
+    fun `a date is written by the platform's writer, in the zone asked for`() {
+        val japan = Platform(Locale.JAPANESE, japanese)
+        assertEquals("2026-09-29", format(TimeFormat.H24, japan).formatDate(afternoon, "Asia/Tokyo"))
+        assertEquals(listOf("Asia/Tokyo"), japan.zones)
+    }
+
     @Test
     fun `a long date and a run of days take the language's own patterns`() {
         val japan = Platform(Locale.JAPANESE, japanese + ("EEEEdMMMMy" to "y年M月d日EEEE"))

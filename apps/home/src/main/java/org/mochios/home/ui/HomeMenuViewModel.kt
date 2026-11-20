@@ -59,28 +59,46 @@ class HomeMenuViewModel @Inject constructor(
     /** The unread count the avatar carries, shared with every app's bell. */
     val count: StateFlow<Int> = source.count
 
+    // Whether the server has said who is signed in: until it has, each return
+    // to the home screen asks again.
+    private var known = false
+
     init {
         source.follow()
         viewModelScope.launch {
-            runCatching { source.person() }.onSuccess { person ->
+            // Who the device holds draws the avatar at once, offline too, until
+            // the server answers.
+            runCatching { source.held() }.getOrNull()?.let { person ->
                 _state.update { it.copy(name = person.name, identity = person.identity) }
-                restyle()
             }
+            identify()
         }
     }
 
     /**
-     * Read the user's accent again; called as the home screen comes back, so
-     * one changed elsewhere rings the avatar. A failed read keeps the ring it
-     * had.
+     * Read the user's accent again, and who they are while the server has not
+     * yet said; called as the home screen comes back, so one changed
+     * elsewhere rings the avatar and a start without the network is made good
+     * once it returns. A failed read keeps what was shown.
      */
     fun restyle() {
+        viewModelScope.launch { if (known) accent() else identify() }
+    }
+
+    /** Who is signed in, from the server, then their accent. */
+    private suspend fun identify() {
+        runCatching { source.person() }.onSuccess { person ->
+            known = true
+            _state.update { it.copy(name = person.name, identity = person.identity) }
+        }
+        accent()
+    }
+
+    private suspend fun accent() {
         val identity = _state.value.identity
         if (identity.isBlank()) return
-        viewModelScope.launch {
-            runCatching { source.accent(identity) }.onSuccess { accent ->
-                _state.update { it.copy(accent = accent) }
-            }
+        runCatching { source.accent(identity) }.onSuccess { accent ->
+            _state.update { it.copy(accent = accent) }
         }
     }
 

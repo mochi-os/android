@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">نووسەر</string>
     <string name="forums_community_destination">لە %1$s وەک %2$s بڵاو دەکرێتەوە</string>
+    <string name="forums_find_search_example">گەڕان بە ناو، ناسنامە، پەنجەمۆر، URL، یان %1$s</string>
+    <string name="forums_setup">ڕێکخستن</string>
 </resources>

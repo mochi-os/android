@@ -12,14 +12,16 @@ import coil3.network.httpHeaders
 import coil3.request.ImageResult
 import coil3.request.Options
 import org.mochios.android.api.OWNED
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.owned
 import org.mochios.android.auth.SessionManager
 
 /**
- * Coil [Mapper] expanding a server-relative asset path
- * ("/people/<id>/-/avatar") into an absolute URL against the session server, so
- * call sites need no host. Anything else returns null, meaning "not mine - pass
- * through unchanged".
+ * Coil [Mapper] expanding a server-relative address held as a plain `String`
+ * into an absolute URL on the session server. It is fetched without a
+ * credential, as every `String` is; resolved here, it cannot be read as a
+ * path on the device instead. Anything else returns null, meaning "not mine -
+ * pass through unchanged".
  */
 class RelativeAssetUrlMapper(
     private val sessionManager: SessionManager,
@@ -27,31 +29,41 @@ class RelativeAssetUrlMapper(
 
     override fun map(data: String, options: Options): String? {
         if (!owned(data)) return null
-        val base = sessionManager.getServerUrlBlocking().trimEnd('/')
+        val base = sessionManager.server.value.trimEnd('/')
         return if (base.isBlank()) null else "$base$data"
     }
 }
 
+/** Coil [Mapper] expanding one of the app's own addresses into an absolute URL on the session server. */
+class OwnedAddressMapper(
+    private val sessionManager: SessionManager,
+) : Mapper<OwnedAddress, String> {
+
+    override fun map(data: OwnedAddress, options: Options): String? {
+        val base = sessionManager.server.value.trimEnd('/')
+        return if (base.isBlank()) null else base + data.address
+    }
+}
+
 /**
- * Marks an image request for one of this app's own addresses ([owned]) with
- * [OWNED], before [RelativeAssetUrlMapper] makes it absolute, so the asset
- * client sends it the session and the app's token. Any other request goes
- * without: an absolute URL may be a peer's choice even on the user's server.
- * The two are cached apart, so an absolute URL naming the same file is never
- * answered with what the session fetched, nor an own address with what an
- * anonymous request was given. The disk cache is cleared on sign-out, so the
- * server-relative key cannot answer for another server.
+ * Marks an image request for one of the app's own addresses, an
+ * [OwnedAddress], with [OWNED] before [OwnedAddressMapper] makes it absolute,
+ * so the asset client sends it a credential. Any other request goes without,
+ * a server-relative `String` included: only the type says an address is the
+ * app's own. The two are cached apart, so an absolute URL naming the same
+ * file is never answered with what a credential fetched, nor an own address
+ * with what an anonymous request was given. The disk cache is cleared on
+ * sign-out, so the server-relative key cannot answer for another server.
  */
 class OwnedInterceptor : Interceptor {
 
     override suspend fun intercept(chain: Interceptor.Chain): ImageResult {
-        val data = chain.request.data
-        if (data !is String || !owned(data)) return chain.proceed()
+        val data = chain.request.data as? OwnedAddress ?: return chain.proceed()
         val headers = NetworkHeaders.Builder(chain.request.httpHeaders).set(OWNED, "1").build()
         val request = chain.request.newBuilder()
             .httpHeaders(headers)
             .memoryCacheKeyExtra(OWNED, "1")
-            .diskCacheKey("$OWNED $data")
+            .diskCacheKey("$OWNED ${data.address}")
             .build()
         return chain.withRequest(request).proceed()
     }

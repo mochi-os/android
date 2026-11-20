@@ -23,6 +23,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Downloads
 import org.mochios.android.files.FileStore
 import org.mochios.wikis.R
 import org.mochios.wikis.api.WikisApi
@@ -130,7 +131,7 @@ class WikiInstantTest {
     }
 
     private fun attachments(): Pair<AttachmentsViewModel, MutableList<AttachmentsEvent>> {
-        val model = AttachmentsViewModel(SavedStateHandle(mapOf("wikiId" to "w1", "page" to "home")), repository, session)
+        val model = AttachmentsViewModel(SavedStateHandle(mapOf("wikiId" to "w1", "page" to "home")), repository, session, Downloads(context, FileStore(context)))
         val events = mutableListOf<AttachmentsEvent>()
         jobs += CoroutineScope(Dispatchers.Main).launch { model.events.collect { events += it } }
         until { model.uiState.value.attachments.size == 2 }

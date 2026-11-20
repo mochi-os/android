@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Nîşan nikare vala be</string>
     <string name="wikis_attachments_search_placeholder">Li pêvekan bigere</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” were jêbirin? Ev nayê vegerandin.</string>
-    <string name="wikis_attachments_downloading">Tê daxistin…</string>
     <string name="wikis_attachments_empty_description">Ji bo lêzêdekirina pelan li vê rûpelê pêl Barkirinê bike.</string>
     <string name="wikis_settings_name_save_cd">Navê tomar bike</string>
     <string name="wikis_settings_name_cancel_cd">Sererastkirinê betal bike</string>

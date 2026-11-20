@@ -318,7 +318,6 @@
     <string name="error_server_https">সার্ভারের ঠিকানা https:// দিয়ে শুরু হতে হবে</string>
     <string name="device_name_fallback">মোবাইল ডিভাইস</string>
     <string name="account_error_token_type">অসমর্থিত টোকেনের ধরন</string>
-    <string name="account_error_caller">কলারের অনুমতি নেই</string>
     <string name="zone_sea">সমুদ্রে</string>
     <string name="access_remove">সরান</string>
     <string name="access_remove_title">অ্যাক্সেস সরাবেন?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">অজানা</string>
     <string name="format_time_seconds_short">%1$sসে</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s ডাউনলোড হচ্ছে…</string>
+    <string name="downloads_saved">%1$s সংরক্ষিত হয়েছে</string>
+    <string name="downloads_failed">%1$s সংরক্ষণ করা যায়নি: %2$s</string>
+    <string name="sync_conflict">সার্ভারে পরিবর্তিত হয়েছে</string>
+    <string name="sync_missing">আর সার্ভারে নেই</string>
+    <string name="sync_refused">সার্ভার প্রত্যাখ্যান করেছে</string>
 </resources>

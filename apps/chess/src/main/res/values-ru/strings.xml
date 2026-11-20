@@ -60,7 +60,6 @@
     <string name="chess_open_sidebar">Открыть боковую панель</string>
     <string name="chess_ws_connecting">Подключение…</string>
     <string name="chess_ws_disconnected">Не в сети</string>
-    <string name="chess_ws_failed">Не удалось подключиться</string>
     <string name="chess_ws_reconnecting">Повторное подключение…</string>
     <string name="chess_piece_white">Белый %1$s</string>
     <string name="chess_piece_black">Чёрный %1$s</string>

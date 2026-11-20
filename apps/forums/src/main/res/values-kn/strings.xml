@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">ಲೇಖಕ</string>
     <string name="forums_community_destination">%1$s ಗೆ %2$s ಆಗಿ ಪೋಸ್ಟ್ ಆಗುತ್ತದೆ</string>
+    <string name="forums_find_search_example">ಹೆಸರು, ID, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್, URL ಅಥವಾ %1$s ನಿಂದ ಹುಡುಕಿ</string>
+    <string name="forums_setup">ಸೆಟಪ್ ಮಾಡಿ</string>
 </resources>

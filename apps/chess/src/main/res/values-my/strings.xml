@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">ချိတ်ဆက်နေသည်…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">ပြန်လည်ချိတ်ဆက်နေသည်…</string>
-    <string name="chess_ws_failed">ချိတ်ဆက်မှု မအောင်မြင်ပါ</string>
     <string name="chess_move_capture">%1$s သည် %2$s ကို ယူသည်</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

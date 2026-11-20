@@ -186,7 +186,8 @@ data class SubscribeResponse(
 
 // JSON body of `-/unsubscribe`. `server` is accepted for symmetry with
 // subscribe but ignored server-side — unsubscribe resolves the CRM locally.
-data class UnsubscribeRequest(val crm: String, val server: String? = null)
+// The server unsubscribes through the server it stored for the CRM.
+data class UnsubscribeRequest(val crm: String)
 
 // JSON body of `classes/{class}/update`; a null field is left out, an empty
 // `title` clears the class's title field.

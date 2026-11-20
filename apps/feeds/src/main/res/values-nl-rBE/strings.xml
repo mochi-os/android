@@ -308,4 +308,6 @@
     <string name="feeds_source_unfollowed">Niet gevolgd</string>
     <string name="feeds_source_follow_again">Opnieuw volgen</string>
     <string name="feeds_filtered_by_tag">Gefilterd op tag:</string>
+    <string name="feeds_setup">Instellen</string>
+    <string name="feeds_search_example">Zoeken op naam, ID, fingerprint, URL of %1$s</string>
 </resources>

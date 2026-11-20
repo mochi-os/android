@@ -367,4 +367,6 @@
     <string name="feeds_source_unfollowed">Manam qatipachkankichu</string>
     <string name="feeds_source_follow_again">Kaqmanta qatipay</string>
     <string name="feeds_filtered_by_tag">Unanchawan filtrasqa:</string>
+    <string name="feeds_setup">Wakichiy</string>
+    <string name="feeds_search_example">Sutiwan, ID-wan, ruk\'ana unanchawan, URL-wan utaq %1$s-wan maskay</string>
 </resources>

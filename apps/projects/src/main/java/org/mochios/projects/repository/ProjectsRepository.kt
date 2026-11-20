@@ -182,8 +182,8 @@ class ProjectsRepository @Inject constructor(
         return response.fingerprint.ifEmpty { response.id.ifEmpty { project } }
     }
 
-    suspend fun unsubscribe(project: String, server: String? = null) {
-        api.unsubscribe(UnsubscribeRequest(project = project, server = server)).unwrap()
+    suspend fun unsubscribe(project: String) {
+        api.unsubscribe(UnsubscribeRequest(project = project)).unwrap()
     }
 
     suspend fun searchUsers(query: String): List<Person> =

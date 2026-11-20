@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Teg bo‘sh bo‘lishi mumkin emas</string>
     <string name="wikis_attachments_search_placeholder">Biriktirmalarni qidirish</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” o‘chirilsinmi? Buni qaytarib bo‘lmaydi.</string>
-    <string name="wikis_attachments_downloading">Yuklab olinmoqda…</string>
     <string name="wikis_attachments_empty_description">Ushbu sahifaga fayl qo‘shish uchun Yuklash tugmasini bosing.</string>
     <string name="wikis_settings_name_save_cd">Nomni saqlash</string>
     <string name="wikis_settings_name_cancel_cd">Tahrirni bekor qilish</string>

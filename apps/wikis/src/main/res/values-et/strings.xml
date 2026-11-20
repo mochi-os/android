@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Silt ei saa olla tühi</string>
     <string name="wikis_attachments_search_placeholder">Otsi manuseid</string>
     <string name="wikis_attachments_delete_confirm_message">Kustuta „%1$s\"? Seda ei saa tagasi võtta.</string>
-    <string name="wikis_attachments_downloading">Allalaadimine…</string>
     <string name="wikis_attachments_empty_description">Toksake Lae üles, et lisada faile sellele lehele.</string>
     <string name="wikis_settings_name_save_cd">Salvesta nimi</string>
     <string name="wikis_settings_name_cancel_cd">Tühista muutmine</string>

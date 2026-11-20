@@ -10,8 +10,8 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.net.Uri
 import org.mochios.android.push.NonceStore
+import org.mochios.android.push.notificationUri
 import org.mochios.android.ui.components.activity
 
 /**
@@ -119,9 +119,8 @@ fun openInApp(context: Context, link: String, current: String?): Boolean {
     if (!launchable(app) || app == current?.lowercase()) return false
     val component = launcherComponentFor(context, app) ?: return false
     val nonce = NonceStore(context).issue()
-    val uri = Uri.parse("mochi:notification?link=" + Uri.encode(link) + "&nonce=" + Uri.encode(nonce))
     // launch-ok: a mochi: URI built here, addressed to this client's own activity
-    val intent = Intent(Intent.ACTION_VIEW, uri)
+    val intent = Intent(Intent.ACTION_VIEW, notificationUri(link, null, nonce))
         .setComponent(component)
         .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
     return try {

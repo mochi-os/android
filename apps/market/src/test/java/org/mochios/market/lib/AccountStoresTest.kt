@@ -34,7 +34,7 @@ class AccountStoresTest {
         runBlocking {
             session.clearAll()
             session.setServerUrl("https://example.org")
-            session.setBoundAccount("first", "https://example.org")
+            session.setBoundAccount("first")
             // The store outlives a test; start each with nothing viewed.
             RecentlyViewedStore(context, session).clear()
         }
@@ -62,7 +62,7 @@ class AccountStoresTest {
         }
         eventually(listOf("l1")) { recent.observe().first() }
         eventually(setOf("l2")) { reported.observe().first() }
-        runBlocking { session.setBoundAccount("second", "https://example.org") }
+        runBlocking { session.setBoundAccount("second") }
         eventually(emptyList<String>()) { recent.observe().first() }
         eventually(emptySet<String>()) { reported.observe().first() }
     }
@@ -72,11 +72,11 @@ class AccountStoresTest {
         val recent = RecentlyViewedStore(context, session)
         runBlocking { recent.push("l1") }
         eventually(listOf("l1")) { recent.observe().first() }
-        runBlocking { session.setBoundAccount("second", "https://example.org") }
+        runBlocking { session.setBoundAccount("second") }
         eventually(emptyList<String>()) { recent.observe().first() }
         runBlocking { recent.push("l9") }
         eventually(listOf("l9")) { recent.observe().first() }
-        runBlocking { session.setBoundAccount("first", "https://example.org") }
+        runBlocking { session.setBoundAccount("first") }
         eventually(emptyList<String>()) { recent.observe().first() }
     }
 }

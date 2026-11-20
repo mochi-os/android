@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Umlobi</string>
     <string name="forums_community_destination">Kuthunyelwa ku-%1$s njengo-%2$s</string>
+    <string name="forums_find_search_example">Sesha ngegama, i-ID, isigxivizo somunwe, i-URL, noma %1$s</string>
+    <string name="forums_setup">Setha</string>
 </resources>

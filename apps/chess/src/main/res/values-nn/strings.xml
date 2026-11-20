@@ -57,7 +57,6 @@
     <string name="chess_ws_connecting">Koplar til…</string>
     <string name="chess_ws_disconnected">Frakopla</string>
     <string name="chess_ws_reconnecting">Koplar til igjen…</string>
-    <string name="chess_ws_failed">Tilkopling mislukkast</string>
     <string name="chess_move_capture">%1$s tok %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_piece_white">Kvit %1$s</string>

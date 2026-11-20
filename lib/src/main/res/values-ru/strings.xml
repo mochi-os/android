@@ -320,7 +320,6 @@
     <string name="error_server_https">Адрес сервера должен начинаться с https://</string>
     <string name="device_name_fallback">Мобильное устройство</string>
     <string name="account_error_token_type">Неподдерживаемый тип токена</string>
-    <string name="account_error_caller">Вызывающей стороне отказано</string>
     <string name="zone_sea">В море</string>
     <string name="access_remove">Удалить</string>
     <string name="access_remove_title">Удалить доступ?</string>
@@ -348,4 +347,10 @@
     <string name="person_unknown">Неизвестно</string>
     <string name="format_time_seconds_short">%1$s с</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Скачивание %1$s…</string>
+    <string name="downloads_saved">Сохранено: %1$s</string>
+    <string name="downloads_failed">Не удалось сохранить %1$s: %2$s</string>
+    <string name="sync_conflict">Изменено на сервере</string>
+    <string name="sync_missing">Больше нет на сервере</string>
+    <string name="sync_refused">Отклонено сервером</string>
 </resources>

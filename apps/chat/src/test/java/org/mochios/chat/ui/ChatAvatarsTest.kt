@@ -65,7 +65,7 @@ class ChatAvatarsTest {
     fun `each sender gets their first message's address`() {
         assertEquals(
             mapOf("ann" to "/chat/c1/-/m0/asset/avatar", "bob" to "/chat/c1/-/m1/asset/avatar"),
-            messageAvatars(messages, "c1"),
+            messageAvatars(messages, "c1").mapValues { it.value.address },
         )
     }
 
@@ -78,14 +78,14 @@ class ChatAvatarsTest {
         val hostile = listOf("../../people/-/x", "m1?x=1").map { ChatMessage(id = it, member = "ann", name = "ann", body = "Hi") }
         // The server decodes the path before it routes, so a slash gets no
         // address at all, and the sender's next message stands in.
-        assertEquals(mapOf("ann" to "/chat/c1/-/m1%3Fx%3D1/asset/avatar"), messageAvatars(hostile, "c1"))
+        assertEquals(mapOf("ann" to "/chat/c1/-/m1%3Fx%3D1/asset/avatar"), messageAvatars(hostile, "c1").mapValues { it.value.address })
     }
 
     // The URL resolves "." and ".." away, escaped or not.
     @Test
     fun `a message whose id is a dot segment does not stand in, and the sender's next one does`() {
         val dotted = listOf("..", ".", "m2").map { ChatMessage(id = it, member = "ann", name = "ann", body = "Hi") }
-        assertEquals(mapOf("ann" to "/chat/c1/-/m2/asset/avatar"), messageAvatars(dotted, "c1"))
+        assertEquals(mapOf("ann" to "/chat/c1/-/m2/asset/avatar"), messageAvatars(dotted, "c1").mapValues { it.value.address })
     }
 
     @Test

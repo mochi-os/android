@@ -389,4 +389,6 @@
     <string name="feeds_source_unfollowed">Nesekojat</string>
     <string name="feeds_source_follow_again">Sekot vēlreiz</string>
     <string name="feeds_filtered_by_tag">Filtrēts pēc birkas:</string>
+    <string name="feeds_setup">Iestatīt</string>
+    <string name="feeds_search_example">Meklēt pēc nosaukuma, ID, pirkstu nospieduma, URL vai adreses %1$s</string>
 </resources>

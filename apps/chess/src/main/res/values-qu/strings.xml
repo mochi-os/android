@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">T\'inkichkan…</string>
     <string name="chess_ws_disconnected">Mana t\'inkisqa</string>
     <string name="chess_ws_reconnecting">Kutimanta t\'inkichkan…</string>
-    <string name="chess_ws_failed">T\'inkiy mana atikurqanchu</string>
     <string name="chess_move_capture">%1$s %2$sta hapirqan</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

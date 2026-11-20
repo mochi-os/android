@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui.component
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -25,6 +26,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.mochios.android.util.attachmentModel
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
@@ -50,7 +52,7 @@ import org.mochios.android.ui.components.ReactionBar
 internal fun CommentItem(
     comment: Comment,
     depth: Int,
-    avatarUrl: String?,
+    avatarUrl: OwnedAddress?,
     feedId: String,
     isEditing: Boolean,
     editText: String,
@@ -94,9 +96,9 @@ internal fun CommentItem(
         seed = comment.authorId,
         avatarUrl = avatarUrl,
         attachments = addressed(comment.attachments, "feeds", feedId),
-        attachmentUrl = { att -> att.url ?: attachmentAddress("feeds", feedId, att.id).orEmpty() },
+        attachmentUrl = { att -> attachmentModel(att.url, attachmentAddress("feeds", feedId, att.id)) },
         attachmentThumbnailUrl = { att ->
-            att.thumbnailUrl ?: attachmentAddress("feeds", feedId, att.id, "thumbnail").orEmpty()
+            attachmentModel(att.thumbnailUrl, attachmentAddress("feeds", feedId, att.id, "thumbnail"))
         },
         isEditing = isEditing,
         editText = editText,
@@ -190,11 +192,11 @@ internal fun threadRows(comments: List<Comment>, collapsed: Set<String> = emptyS
  * Where a commenter's avatar is served: under one of their comments. Null when
  * an id, a peer's, cannot be one segment of the address ([segment]).
  */
-internal fun commentAvatar(feedId: String, postId: String, commentId: String): String? {
+internal fun commentAvatar(feedId: String, postId: String, commentId: String): OwnedAddress? {
     val feed = segment(feedId) ?: return null
     val post = segment(postId) ?: return null
     val comment = segment(commentId) ?: return null
-    return "/feeds/$feed/-/$post/$comment/asset/avatar"
+    return OwnedAddress.of("/feeds/$feed/-/$post/$comment/asset/avatar")
 }
 
 /**
@@ -209,8 +211,8 @@ internal fun commenterAvatars(
     comments: List<Comment>,
     feedId: String,
     postId: String,
-    found: MutableMap<String, String> = mutableMapOf(),
-): Map<String, String> = addressByAuthor(
+    found: MutableMap<String, OwnedAddress> = mutableMapOf(),
+): Map<String, OwnedAddress> = addressByAuthor(
     comments, { it.authorId }, { commentAvatar(feedId, postId, it.id) }, { it.children }, found,
 )
 
@@ -218,8 +220,8 @@ internal fun commenterAvatars(
  * [commenterAvatars] across a timeline, each post's comments addressed under
  * its own feed, or [fallbackFeedId] where the post names none.
  */
-internal fun timelineAvatars(posts: List<Post>, fallbackFeedId: String): Map<String, String> {
-    val found = mutableMapOf<String, String>()
+internal fun timelineAvatars(posts: List<Post>, fallbackFeedId: String): Map<String, OwnedAddress> {
+    val found = mutableMapOf<String, OwnedAddress>()
     for (post in posts) {
         val feedId = post.feedFingerprint.ifEmpty { post.feed }.ifEmpty { fallbackFeedId }
         commenterAvatars(post.comments, feedId, post.id, found)

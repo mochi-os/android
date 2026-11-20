@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.profile
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -343,8 +344,8 @@ private fun Editor(
 private fun PreviewCard(
     name: String,
     fingerprint: String,
-    avatarUrl: String?,
-    bannerUrl: String?,
+    avatarUrl: OwnedAddress?,
+    bannerUrl: OwnedAddress?,
     accent: String?,
     uploadingAvatar: Boolean,
     uploadingBanner: Boolean,
@@ -687,7 +688,7 @@ private fun AccentSection(
 
 @Composable
 private fun FaviconSection(
-    faviconUrl: String?,
+    faviconUrl: OwnedAddress?,
     uploading: Boolean,
     upload: Upload?,
     onUpload: () -> Unit,
@@ -943,11 +944,11 @@ internal fun ProfilePreviewDialog(
  * The image in [slot] at its version. Null when the id cannot be one segment
  * of the address ([segment]); a version that cannot is left off.
  */
-internal fun imageUrl(id: String, slot: String, version: String?): String? {
+internal fun imageUrl(id: String, slot: String, version: String?): OwnedAddress? {
     if (id.isBlank() || version.isNullOrBlank()) return null
     val person = segment(id) ?: return null
-    val escaped = segment(version) ?: return "/people/$person/-/$slot"
-    return "/people/$person/-/$slot?v=$escaped"
+    val escaped = segment(version) ?: return OwnedAddress.of("/people/$person/-/$slot")
+    return OwnedAddress.of("/people/$person/-/$slot?v=$escaped")
 }
 
 /**
@@ -956,9 +957,9 @@ internal fun imageUrl(id: String, slot: String, version: String?): String? {
  * cannot be one segment of the address ([segment]); a version that cannot is
  * left off.
  */
-internal fun avatarPath(id: String, version: String?): String? {
+internal fun avatarPath(id: String, version: String?): OwnedAddress? {
     if (id.isBlank() || version.isNullOrBlank()) return null
     val person = segment(id) ?: return null
-    val escaped = segment(version) ?: return "/people/$person/-/avatar"
-    return "/people/$person/-/avatar?v=$escaped"
+    val escaped = segment(version) ?: return OwnedAddress.of("/people/$person/-/avatar")
+    return OwnedAddress.of("/people/$person/-/avatar?v=$escaped")
 }

@@ -78,7 +78,7 @@ class CalendarsSyncCycle(
         var downloaded = 0
         var uploaded = 0
         var removed = 0
-        val failures = mutableListOf<String>()
+        val failures = mutableListOf<SyncRefusal>()
 
         // ---- 0. Calendars ----
         val served = source.calendars()
@@ -185,7 +185,7 @@ class CalendarsSyncCycle(
                     store.remove(group.rows)
                     removed++
                 } catch (e: SyncRefused) {
-                    failures.add(e.message.orEmpty())
+                    failures.add(SyncRefusal(SyncRefusal.Kind.REFUSED, e.message))
                 }
                 continue
             }
@@ -205,28 +205,28 @@ class CalendarsSyncCycle(
                 val saved = send(group, remote, etag, calendar.remote, before)
                 store.bind(group.rows, saved, settled = store.rows(group.rows) == before)
                 uploaded++
-            } catch (e: SyncConflict) {
+            } catch (_: SyncConflict) {
                 // A create has no etag to be stale against; a 412 on one is
                 // the server refusing it, not a conflict to resolve.
                 if (remote == null) {
-                    failures.add(e.message.orEmpty())
+                    failures.add(SyncRefusal(SyncRefusal.Kind.CONFLICT))
                 } else if (restore(group, remote, local)) {
                     downloaded++
                 } else {
                     removed++
                 }
-            } catch (e: SyncMissing) {
+            } catch (_: SyncMissing) {
                 // Gone from the server: the server wins over a phone edit. An
                 // event made on the phone was never there, so a 404 on its
                 // create is a refusal and the rows stay for the next attempt.
                 if (remote == null) {
-                    failures.add(e.message.orEmpty())
+                    failures.add(SyncRefusal(SyncRefusal.Kind.MISSING))
                 } else {
                     store.remove(group.rows)
                     removed++
                 }
             } catch (e: SyncRefused) {
-                failures.add(e.message.orEmpty())
+                failures.add(SyncRefusal(SyncRefusal.Kind.REFUSED, e.message))
             }
         }
         return SyncOutcome(downloaded, uploaded, removed, failures)

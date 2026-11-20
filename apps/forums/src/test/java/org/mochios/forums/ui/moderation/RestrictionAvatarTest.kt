@@ -18,7 +18,7 @@ class RestrictionAvatarTest {
 
     @Test
     fun `a restricted user's avatar goes through the forum's moderation proxy`() {
-        assertEquals("/forums/f1/-/moderation/u1/asset/avatar", restrictionAvatar("f1", "u1"))
+        assertEquals("/forums/f1/-/moderation/u1/asset/avatar", restrictionAvatar("f1", "u1")?.address)
     }
 
     @Test
@@ -26,13 +26,13 @@ class RestrictionAvatarTest {
         assertNull(restrictionAvatar("f1", "x/-/delete?"))
         assertNull(restrictionAvatar("f1", ".."))
         assertNull(restrictionAvatar("f1", ""))
-        assertEquals("/forums/f1/-/moderation/a%3Fb/asset/avatar", restrictionAvatar("f1", "a?b"))
+        assertEquals("/forums/f1/-/moderation/a%3Fb/asset/avatar", restrictionAvatar("f1", "a?b")?.address)
     }
 
     @Test
     fun `a forum's id cannot point the avatar at another action`() {
         assertNull(restrictionAvatar("x/-/delete?", "u1"))
         assertNull(restrictionAvatar("..", "u1"))
-        assertEquals("/forums/a%3Fb/-/moderation/u1/asset/avatar", restrictionAvatar("a?b", "u1"))
+        assertEquals("/forums/a%3Fb/-/moderation/u1/asset/avatar", restrictionAvatar("a?b", "u1")?.address)
     }
 }

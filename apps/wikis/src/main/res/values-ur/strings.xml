@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">ٹیگ خالی نہیں ہو سکتا</string>
     <string name="wikis_attachments_search_placeholder">اٹیچمنٹس تلاش کریں</string>
     <string name="wikis_attachments_delete_confirm_message">„%1$s\" حذف کریں؟ یہ کالعدم نہیں ہو سکتا۔</string>
-    <string name="wikis_attachments_downloading">ڈاؤن لوڈ ہو رہا ہے…</string>
     <string name="wikis_attachments_empty_description">اس صفحے میں فائلیں شامل کرنے کے لیے اپ لوڈ پر ٹیپ کریں۔</string>
     <string name="wikis_settings_name_save_cd">نام محفوظ کریں</string>
     <string name="wikis_settings_name_cancel_cd">ترمیم منسوخ کریں</string>

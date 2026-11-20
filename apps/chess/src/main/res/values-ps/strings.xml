@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">وصلېږي…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">بیا نښلول کیږي…</string>
-    <string name="chess_ws_failed">نښلول ناکام شو</string>
     <string name="chess_move_capture">%1$s %2$s واخیست</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

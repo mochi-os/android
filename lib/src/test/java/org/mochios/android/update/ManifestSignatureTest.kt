@@ -17,7 +17,8 @@ import java.util.Base64
  * The update manifest decides which version to fetch and which SHA-256 to
  * accept, so an unverified one lets whoever serves the android subtree freeze
  * every client on an old release. These drive the pure half of the check with
- * a generated key pair - the release key is not in the tree.
+ * a generated key pair - the release key is not in the tree - through both
+ * verifiers, so Android 8 to 12 refuse what 13 and later refuse.
  */
 class ManifestSignatureTest {
 
@@ -37,12 +38,18 @@ class ManifestSignatureTest {
         return Base64.getEncoder().encodeToString(signer.sign())
     }
 
+    /** Both verifiers: the platform's from API 33, Tink's below it. */
+    private val verifiers = listOf(true, false)
+
     @Test
     fun `a manifest signed by the release key verifies`() {
         val key = pair()
-        assertTrue(
-            UpdateChecker.signature_verified(manifest, sign(key, manifest), published(key))
-        )
+        for (platform in verifiers) {
+            assertTrue(
+                "platform=$platform",
+                UpdateChecker.signature_verified(manifest, sign(key, manifest), published(key), platform),
+            )
+        }
     }
 
     @Test
@@ -50,23 +57,29 @@ class ManifestSignatureTest {
         val key = pair()
         val signature = sign(key, manifest)
         val tampered = manifest.replace("0.19", "0.01")
-        assertFalse(UpdateChecker.signature_verified(tampered, signature, published(key)))
+        for (platform in verifiers) {
+            assertFalse(UpdateChecker.signature_verified(tampered, signature, published(key), platform))
+        }
     }
 
     @Test
     fun `a signature from another key does not verify`() {
         val key = pair()
         val attacker = pair()
-        assertFalse(
-            UpdateChecker.signature_verified(manifest, sign(attacker, manifest), published(key))
-        )
+        for (platform in verifiers) {
+            assertFalse(
+                UpdateChecker.signature_verified(manifest, sign(attacker, manifest), published(key), platform)
+            )
+        }
     }
 
     @Test
     fun `a malformed signature or key does not verify`() {
         val key = pair()
-        assertFalse(UpdateChecker.signature_verified(manifest, "", published(key)))
-        assertFalse(UpdateChecker.signature_verified(manifest, "not-base64!!", published(key)))
-        assertFalse(UpdateChecker.signature_verified(manifest, sign(key, manifest), "short"))
+        for (platform in verifiers) {
+            assertFalse(UpdateChecker.signature_verified(manifest, "", published(key), platform))
+            assertFalse(UpdateChecker.signature_verified(manifest, "not-base64!!", published(key), platform))
+            assertFalse(UpdateChecker.signature_verified(manifest, sign(key, manifest), "short", platform))
+        }
     }
 }

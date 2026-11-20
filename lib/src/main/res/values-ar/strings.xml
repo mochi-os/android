@@ -322,7 +322,6 @@
     <string name="error_server_https">يجب أن يبدأ عنوان الخادم بـ https://</string>
     <string name="device_name_fallback">جهاز محمول</string>
     <string name="account_error_token_type">نوع رمز غير مدعوم</string>
-    <string name="account_error_caller">المتصل غير مسموح له</string>
     <string name="zone_sea">في البحر</string>
     <string name="access_remove">إزالة</string>
     <string name="access_remove_title">إزالة الوصول؟</string>
@@ -352,4 +351,10 @@
     <string name="person_unknown">غير معروف</string>
     <string name="format_time_seconds_short">%1$s ث</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">جارٍ تنزيل %1$s…</string>
+    <string name="downloads_saved">تم حفظ %1$s</string>
+    <string name="downloads_failed">تعذّر حفظ %1$s: %2$s</string>
+    <string name="sync_conflict">تم تغييره على الخادم</string>
+    <string name="sync_missing">لم يعد موجودًا على الخادم</string>
+    <string name="sync_refused">رفضه الخادم</string>
 </resources>

@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Takip edilmiyor</string>
     <string name="feeds_source_follow_again">Yeniden takip et</string>
     <string name="feeds_filtered_by_tag">Etikete göre filtrelendi:</string>
+    <string name="feeds_setup">Kur</string>
+    <string name="feeds_search_example">Ad, kimlik, parmak izi, URL veya %1$s biçiminde bir adresle ara</string>
 </resources>

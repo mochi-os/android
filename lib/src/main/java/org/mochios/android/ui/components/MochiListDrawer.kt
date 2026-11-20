@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.background
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.contentDescription
@@ -72,7 +73,7 @@ data class DrawerItem(
     val unread: Int = 0,
     val icon: ImageVector? = null,
     val trailingIcon: ImageVector? = null,
-    val avatarUrl: String? = null,
+    val avatarUrl: OwnedAddress? = null,
     val seed: String? = null,
     val section: String? = null,
     /** A dot where the count would be: marked unread, with nothing counted. */
@@ -389,7 +390,7 @@ private fun DrawerItemRow(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         when {
-            !item.avatarUrl.isNullOrBlank() -> {
+            item.avatarUrl != null -> {
                 EntityAvatar(
                     name = item.title,
                     src = item.avatarUrl,

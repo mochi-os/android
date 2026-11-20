@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">फॉलो करत नाही</string>
     <string name="feeds_source_follow_again">पुन्हा फॉलो करा</string>
     <string name="feeds_filtered_by_tag">टॅगनुसार फिल्टर केले:</string>
+    <string name="feeds_setup">सेट अप करा</string>
+    <string name="feeds_search_example">नाव, ID, फिंगरप्रिंट, URL, किंवा %1$s ने शोधा</string>
 </resources>

@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Konu sahibi</string>
     <string name="forums_community_destination">%1$s topluluğunda %2$s olarak paylaşılır</string>
+    <string name="forums_find_search_example">Ad, kimlik, parmak izi, URL veya %1$s biçiminde bir adresle ara</string>
+    <string name="forums_setup">Kur</string>
 </resources>

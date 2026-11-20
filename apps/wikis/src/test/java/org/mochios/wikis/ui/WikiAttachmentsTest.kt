@@ -26,6 +26,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.OwnedAddress
 import org.mochios.wikis.model.Attachment
 import org.mochios.wikis.model.WikiInfo
 import org.mochios.wikis.model.WikiPermissions
@@ -128,9 +129,9 @@ class WikiAttachmentsTest {
     fun `the lightbox asks this wiki's attachments as its own, and another host's image as given`() {
         // Only a server-relative address goes with the session: an absolute one
         // may be a page author's choice even on the user's server.
-        assertEquals("/wikis/w1/-/attachments/a1", wiki.local("${base}attachments/a1"))
-        assertEquals("https://example.com/p.png", wiki.local("https://example.com/p.png"))
-        assertEquals("https://server/settings/-/x", wiki.local("https://server/settings/-/x"))
+        assertEquals(OwnedAddress.of("/wikis/w1/-/attachments/a1"), wiki.local("${base}attachments/a1"))
+        assertEquals("https://example.com/p.png", wiki.local("https://example.com/p.png") as String)
+        assertEquals("https://server/settings/-/x", wiki.local("https://server/settings/-/x") as String)
     }
 
     private fun image(id: String) = Attachment(id = id, name = "$id.png", type = "image/png")
@@ -183,7 +184,7 @@ class WikiAttachmentsTest {
     private fun body(mode: AttachmentsViewMode) = shown {
         AttachmentsBody(
             state = AttachmentsUiState(isLoading = false, attachments = images, wiki = WikiInfo(id = "w1"), viewMode = mode),
-            baseURL = base, token = null,
+            baseURL = base, onDownload = {},
             onSearchChange = {}, onClearSearch = {}, onFilterChange = {}, onSortChange = {}, onViewModeChange = {},
             onRefresh = {}, onRequestDelete = {}, onRequestCaption = {}, onRetry = {},
         )

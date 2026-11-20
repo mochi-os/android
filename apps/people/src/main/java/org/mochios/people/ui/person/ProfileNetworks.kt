@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.person
 
+import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -39,9 +40,13 @@ import org.mochios.people.R
 import org.mochios.people.model.ProfileAccount
 import org.mochios.people.model.ProfileHistory
 
-/** The link a forum post or comment opens in Forums: the post, under its forum. */
+/**
+ * The link a forum post or comment opens in Forums: the post, under its forum.
+ * Both come from the person's server, so each is escaped as one path part and
+ * cannot add parts or a query (a `?server=` of its choosing) to the link.
+ */
 internal fun forumLink(item: ProfileHistory): String =
-    "forums/${item.fingerprint.ifBlank { item.forum }}/${item.post}"
+    "forums/${Uri.encode(item.fingerprint.ifBlank { item.forum })}/${Uri.encode(item.post)}"
 
 /**
  * What a profile shows beyond the person's own words: their accounts on other

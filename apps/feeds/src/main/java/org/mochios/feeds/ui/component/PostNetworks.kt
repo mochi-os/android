@@ -127,7 +127,7 @@ internal fun PostHeadline(post: Post, modifier: Modifier = Modifier) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 EntityAvatar(
                     name = author.label,
-                    src = author.avatar.takeIf { isWebUrl(it) },
+                    remote = author.avatar.takeIf { isWebUrl(it) },
                     seed = author.id.ifEmpty { author.address },
                     size = 28.dp,
                 )

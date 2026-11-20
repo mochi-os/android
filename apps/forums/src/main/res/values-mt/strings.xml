@@ -342,4 +342,6 @@
     </plurals>
     <string name="forums_comment_op">Awtur</string>
     <string name="forums_community_destination">Jiġi ppubblikat fil-komunità %1$s bħala %2$s</string>
+    <string name="forums_find_search_example">Fittex skond isem, ID, fingerprint, URL, jew %1$s</string>
+    <string name="forums_setup">Issettja</string>
 </resources>

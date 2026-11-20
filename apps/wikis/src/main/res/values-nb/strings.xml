@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Etikett kan ikke være tom</string>
     <string name="wikis_attachments_search_placeholder">Søk vedlegg</string>
     <string name="wikis_attachments_delete_confirm_message">Slette \"%1$s\"? Dette kan ikke angres.</string>
-    <string name="wikis_attachments_downloading">Laster ned…</string>
     <string name="wikis_attachments_empty_description">Trykk Last opp for å legge til filer på denne siden.</string>
     <string name="wikis_settings_name_save_cd">Lagre navn</string>
     <string name="wikis_settings_name_cancel_cd">Avbryt redigering</string>

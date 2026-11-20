@@ -318,7 +318,6 @@
     <string name="error_server_https">伺服器地址一定要以 https:// 開頭</string>
     <string name="device_name_fallback">流動裝置</string>
     <string name="account_error_token_type">唔支援嘅權杖類型</string>
-    <string name="account_error_caller">唔准呢個呼叫方</string>
     <string name="zone_sea">海上</string>
     <string name="access_remove">移除</string>
     <string name="access_remove_title">移除存取權？</string>
@@ -343,4 +342,10 @@
     <string name="person_unknown">未知</string>
     <string name="format_time_seconds_short">%1$s秒</string>
     <string name="format_time_pair">%1$s%2$s</string>
+    <string name="downloads_started">下載緊 %1$s…</string>
+    <string name="downloads_saved">已儲存 %1$s</string>
+    <string name="downloads_failed">儲存唔到 %1$s：%2$s</string>
+    <string name="sync_conflict">伺服器上面已經改咗</string>
+    <string name="sync_missing">伺服器上面已經冇咗</string>
+    <string name="sync_refused">被伺服器拒絕</string>
 </resources>

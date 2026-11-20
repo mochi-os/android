@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui.post
 
+import org.mochios.android.util.attachmentModel
 import android.net.Uri
 import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -534,12 +535,16 @@ fun CreatePostScreen(
                                 leadingIcon = {
                                     FileKindPreview(
                                         kind = attachment.fileKind,
-                                        model = attachment.thumbnailUrl
-                                            ?: attachmentAddress("feeds", selectedFeed, attachment.id, "thumbnail"),
+                                        model = attachmentModel(
+                                            attachment.thumbnailUrl,
+                                            attachmentAddress("feeds", selectedFeed, attachment.id, "thumbnail"),
+                                        ),
                                         // No thumbnail route for a video: the
                                         // frame is decoded from the clip.
-                                        videoModel = attachment.url
-                                            ?: attachmentAddress("feeds", selectedFeed, attachment.id),
+                                        videoModel = attachmentModel(
+                                            attachment.url,
+                                            attachmentAddress("feeds", selectedFeed, attachment.id),
+                                        ),
                                         modifier = Modifier.size(16.dp)
                                     )
                                 },

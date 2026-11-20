@@ -183,4 +183,5 @@
     <string name="chat_refused_friends_only">%1$s pieņem čatus tikai no draugiem.</string>
     <string name="chat_message_earlier">Ziņojumi no laika pirms šī konta pievienošanas Mochi ir šifrēti, un tos šeit nevar izlasīt</string>
     <string name="chat_message_excluded">Šifrēts tikai citām ierīcēm</string>
+    <string name="chat_setup">Iestatīt</string>
 </resources>

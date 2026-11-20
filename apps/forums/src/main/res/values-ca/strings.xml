@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Autor</string>
     <string name="forums_community_destination">Es publica a %1$s com a %2$s</string>
+    <string name="forums_find_search_example">Cerca per nom, ID, empremta, URL o %1$s</string>
+    <string name="forums_setup">Configura</string>
 </resources>

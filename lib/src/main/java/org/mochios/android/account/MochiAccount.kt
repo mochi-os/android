@@ -11,33 +11,50 @@ import android.accounts.OnAccountsUpdateListener
 import android.content.ContentResolver
 import android.content.Context
 import android.content.PeriodicSync
+import android.content.SharedPreferences
 import android.os.Bundle
 import java.net.URI
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
+import org.mochios.android.auth.Keystore
+import org.mochios.android.auth.Sealed
 
 /**
- * Cross-app session sharing via AccountManager: every Mochi app registers
- * account type [TYPE], and the same signing key is the only access guard.
+ * The phone's accounts for the Mochi identities signed in on this device, of
+ * type [TYPE]: what the contacts and calendar sync adapters sync under, what
+ * the account picker offers, and what the push service opens a channel for.
  * [Account.name] is what the phone shows for the account, in its calendar and
  * contacts apps and its account settings: the identity's email address, else
  * its name and the server it signs in to. The identity entity ID is kept in the
  * account's own data; an account written before that was named after it, and
  * is renamed on the next sign-in. Accounts on different servers coexist.
+ *
+ * Each account's session is kept in the app's own storage, sealed with the
+ * AndroidKeyStore key the signed-in session is, and keyed by identity. The
+ * account's password, where the framework would keep it in the clear, is
+ * left empty.
  */
 object MochiAccount {
 
     /** Single account type for all Mochi accounts. */
     const val TYPE = "org.mochios.account"
 
-    /** Auth-token type for the raw session cookie. */
-    const val TOKEN_SESSION = "session"
-
     private const val USER_DATA_IDENTITY = "identity"
     private const val USER_DATA_SERVER = "server"
     private const val USER_DATA_NAME = "name"
     private const val USER_DATA_FINGERPRINT = "fingerprint"
+
+    /** The preferences file holding each account's sealed session, by identity. */
+    private const val SESSIONS = "mochi_sessions"
+
+    /** The AndroidKeyStore key the sessions are sealed with: the signed-in session's. */
+    private const val KEYSTORE_ALIAS = "mochi.credentials"
+
+    private val sealed by lazy { Sealed(Keystore(KEYSTORE_ALIAS)) }
+
+    private fun sessions(context: Context): SharedPreferences =
+        context.applicationContext.getSharedPreferences(SESSIONS, Context.MODE_PRIVATE)
 
     data class Snapshot(
         val identity: String,
@@ -58,6 +75,9 @@ object MochiAccount {
     ) {
         if (identity.isBlank()) return
         val am = AccountManager.get(context)
+        // Kept before the account is written: adding it tells every listener,
+        // and the push service reads the session as it hears.
+        keep(context, identity, session)
         val existing = find(am, identity)
         val taken = am.getAccountsByType(TYPE).filter { it != existing }.map { it.name }.toSet()
         val wanted = unique(label(email, name, server, identity), host(server), taken)
@@ -68,10 +88,12 @@ object MochiAccount {
                 putString(USER_DATA_SERVER, server)
                 if (fingerprint != null) putString(USER_DATA_FINGERPRINT, fingerprint)
             }
-            am.addAccountExplicitly(Account(wanted, TYPE), session, data)
+            am.addAccountExplicitly(Account(wanted, TYPE), null, data)
             return
         }
-        am.setPassword(existing, session)
+        // An account written before the sealed store held its session as the
+        // password, in the clear.
+        if (am.getPassword(existing) != null) am.setPassword(existing, null)
         am.setUserData(existing, USER_DATA_IDENTITY, identity)
         am.setUserData(existing, USER_DATA_NAME, name)
         am.setUserData(existing, USER_DATA_SERVER, server)
@@ -180,21 +202,7 @@ object MochiAccount {
         return try {
             val am = AccountManager.get(context)
             val account = find(am, identity) ?: return null
-            snapshotOf(am, account)
-        } catch (_: SecurityException) {
-            null
-        }
-    }
-
-    /** First account whose stored server matches [server] exactly, or null. */
-    fun byServer(context: Context, server: String): Snapshot? {
-        return try {
-            val am = AccountManager.get(context)
-            for (a in am.getAccountsByType(TYPE)) {
-                val s = am.getUserData(a, USER_DATA_SERVER) ?: continue
-                if (s == server) return snapshotOf(am, a)
-            }
-            null
+            snapshotOf(context, am, account)
         } catch (_: SecurityException) {
             null
         }
@@ -204,17 +212,15 @@ object MochiAccount {
     fun all(context: Context): List<Snapshot> {
         return try {
             val am = AccountManager.get(context)
-            am.getAccountsByType(TYPE).mapNotNull { snapshotOf(am, it) }
+            am.getAccountsByType(TYPE).mapNotNull { snapshotOf(context, am, it) }
         } catch (_: SecurityException) {
             emptyList()
         }
     }
 
-    /** Convenience: first available account (used by single-account adoption). */
-    fun first(context: Context): Snapshot? = all(context).firstOrNull()
-
-    /** Remove the identity's account. */
+    /** Remove the identity's account and its session. */
     fun remove(context: Context, identity: String) {
+        sessions(context).edit().remove(identity).apply()
         try {
             val am = AccountManager.get(context)
             find(am, identity)?.let {
@@ -236,11 +242,30 @@ object MochiAccount {
         awaitClose { am.removeOnAccountsUpdatedListener(listener) }
     }
 
-    private fun snapshotOf(am: AccountManager, account: Account): Snapshot? {
-        val session = am.getPassword(account) ?: return null
+    private fun snapshotOf(context: Context, am: AccountManager, account: Account): Snapshot? {
+        val identity = identityOf(am, account)
+        val session = session(context, am, account, identity) ?: return null
         val server = am.getUserData(account, USER_DATA_SERVER) ?: return null
         val name = am.getUserData(account, USER_DATA_NAME).orEmpty()
         val fingerprint = am.getUserData(account, USER_DATA_FINGERPRINT)
-        return Snapshot(identityOf(am, account), name, server, fingerprint, session)
+        return Snapshot(identity, name, server, fingerprint, session)
+    }
+
+    /** Hold [session] as [identity]'s, sealed. */
+    private fun keep(context: Context, identity: String, session: String) {
+        sessions(context).edit().putString(identity, sealed.seal(session)).apply()
+    }
+
+    /**
+     * [identity]'s session, or null when none is held. An account written
+     * before the sealed store kept it as its password: that one moves into the
+     * store, and the password is cleared.
+     */
+    private fun session(context: Context, am: AccountManager, account: Account, identity: String): String? {
+        sessions(context).getString(identity, null)?.let { stored -> return sealed.open(stored) }
+        val legacy = am.getPassword(account) ?: return null
+        keep(context, identity, legacy)
+        am.setPassword(account, null)
+        return legacy
     }
 }

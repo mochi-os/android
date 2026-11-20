@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Otè</string>
     <string name="forums_community_destination">Pibliye nan %1$s kòm %2$s</string>
+    <string name="forums_find_search_example">Chèche pa non, ID, fingerprint, URL, oswa %1$s</string>
+    <string name="forums_setup">Konfigire</string>
 </resources>

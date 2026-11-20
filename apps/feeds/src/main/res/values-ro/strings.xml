@@ -389,4 +389,6 @@
     <string name="feeds_source_unfollowed">Neurmărit</string>
     <string name="feeds_source_follow_again">Urmărește din nou</string>
     <string name="feeds_filtered_by_tag">Filtrat după etichetă:</string>
+    <string name="feeds_setup">Configurează</string>
+    <string name="feeds_search_example">Caută după nume, ID, amprentă, URL sau %1$s</string>
 </resources>

@@ -5,37 +5,23 @@
 
 package org.mochios.android.push
 
-import android.app.PendingIntent
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.util.Log
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.EntryPointAccessors
-import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import org.mochios.android.launcher.launcherComponentFor
-import org.mochios.android.notifications.NotificationsRepository
-import org.mochios.android.sync.SyncSignal
 
 /**
- * Receives FCM messages and posts the system notification on the app's channel.
- * The server sends the UnifiedPush envelope in `message.data`: `{app, link,
- * title, body, tag, id}`, so both transports share [notificationChannelFor].
+ * Receives FCM messages. The server sends the UnifiedPush payload's fields in
+ * `message.data` (`app`, `link`, `title`, `body`, `tag`, `id`, or `sync`), so
+ * both transports deliver through [deliverPush]. FCM is registered for the
+ * signed-in account alone, so a message names no account.
  */
-@AndroidEntryPoint
 class MochiFirebaseMessagingService : FirebaseMessagingService() {
-
-    @Inject
-    lateinit var notificationsRepository: NotificationsRepository
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
@@ -43,23 +29,7 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
         EntryPointAccessors.fromApplication(applicationContext, PushEntryPoint::class.java)
 
     override fun onMessageReceived(message: RemoteMessage) {
-        val data = message.data
-        SyncSignal.kind(data)?.let {
-            SyncSignal.run(applicationContext, it, deps().sessionManager())
-            return
-        }
-        val title = data["title"].orEmpty()
-        val body = data["body"].orEmpty()
-        val link = data["link"].orEmpty()
-        val tag = data["tag"].orEmpty()
-        val app = data["app"].orEmpty()
-        val id = data["id"].orEmpty()
-
-        if (title.isBlank() && body.isBlank()) {
-            Log.w(TAG, "FCM payload missing title/body; ignoring")
-            return
-        }
-        postSystemNotification(applicationContext, title, body, link, tag, app, id)
+        deliverPush(applicationContext, message.data, null)
     }
 
     override fun onRegistered(installationId: String) {
@@ -80,100 +50,6 @@ class MochiFirebaseMessagingService : FirebaseMessagingService() {
                 return@launch
             }
             FcmRegistrar.register(applicationContext, deps.okHttpClient(), server, installationId)
-        }
-    }
-
-    /**
-     * Retire a row the user has already read on screen, so the web bell and
-     * their other devices stop announcing it. Best effort: the tray row is
-     * suppressed either way.
-     */
-    private fun markRead(id: String) {
-        scope.launch {
-            try {
-                notificationsRepository.markRead(id)
-            } catch (e: Exception) {
-                Log.w(TAG, "markRead failed: ${e.message}")
-            }
-        }
-    }
-
-    private fun channelIdFor(app: String, link: String): String =
-        notificationChannelFor(app, link)
-
-    private fun postSystemNotification(
-        context: Context,
-        title: String,
-        body: String,
-        link: String,
-        tag: String,
-        app: String,
-        id: String,
-    ) {
-        // The socket has already put this in front of the user; a tray row
-        // would only repeat what they are reading. Checked before the nonce is
-        // issued, so a suppressed notification does not spend one.
-        // A screen only covers a push while the socket behind it is up: the
-        // tray row is dropped on the promise that the content arrives live.
-        val webSocket = EntryPointAccessors
-            .fromApplication(context.applicationContext, PushEntryPoint::class.java)
-            .webSocket()
-        val cover = VisibleEntity.coverFor(link) { key -> webSocket.isLive(key) }
-        if (cover != VisibleEntity.Cover.NONE) {
-            Log.i(TAG, "Entity is on screen; not posting")
-            // Only a screen that is the entity itself, a chat or a game, can
-            // say the user has read this; a feed being open cannot.
-            if (cover == VisibleEntity.Cover.READ && id.isNotEmpty()) {
-                markRead(id)
-            }
-            return
-        }
-
-        val channelId = channelIdFor(app, link)
-
-        // mochi:notification?link=<encoded>[&id=<encoded>]&nonce=<encoded>, the
-        // same URI the UnifiedPush dispatcher uses. `id` marks the row read on
-        // tap; the nonce proves the tap came from our notification, since
-        // MainActivity is exported.
-        val nonce = NonceStore(context).issue()
-        val ssp = buildString {
-            append("notification?link=").append(Uri.encode(link))
-            if (id.isNotEmpty()) append("&id=").append(Uri.encode(id))
-            append("&nonce=").append(Uri.encode(nonce))
-        }
-        val deepLink = Uri.parse("mochi:$ssp")
-        // launch-ok: deepLink is the mochi: URI this file builds from the push payload's link
-        val intent = Intent(Intent.ACTION_VIEW, deepLink).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-            // Pin the PendingIntent to the matching launcher activity so badge-
-            // capable launchers (Octopi etc.) attribute the unread dot to the
-            // right Mochi-app icon. Without this every alias targeting
-            // MainActivity shows the badge.
-            launcherComponentFor(context, app)?.let { component = it }
-        }
-        val pendingFlags = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        val pending = PendingIntent.getActivity(context, 0, intent, pendingFlags)
-
-        val builder = NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(notificationIconFor(app))
-            .setContentTitle(title)
-            .setContentText(body)
-            .setAutoCancel(true)
-            // Damp bursts: a batch of server events re-posts the same tag in
-            // rapid succession (e.g. an RSS poll ingesting several posts);
-            // the first alerts, the rest update the tray silently.
-            .setOnlyAlertOnce(!SystemNotifications.shouldAlert(tag.ifBlank { "mochi" }))
-            .setContentIntent(pending)
-            // Retire the nonce on swipe-away; see the UnifiedPush twin.
-            .setDeleteIntent(dismissIntent(context, nonce))
-
-        val nm = NotificationManagerCompat.from(context)
-        if (nm.areNotificationsEnabled()) {
-            try {
-                nm.notify(tag.ifBlank { "mochi" }, tag.hashCode(), builder.build())
-            } catch (e: SecurityException) {
-                Log.w(TAG, "Notification post denied: ${e.message}")
-            }
         }
     }
 

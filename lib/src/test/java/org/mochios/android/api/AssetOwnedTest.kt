@@ -22,11 +22,12 @@ import org.junit.Test
 import java.util.concurrent.TimeUnit
 
 /**
- * The asset client sends the session and an app token only with a request for
- * one of the app's own, server-relative addresses. An absolute URL on the
- * user's server may be a peer's choice - a link card, a page's image, a feed's
- * enclosure - and with the credentials it would run whatever action of whatever
- * app its path named, as the user.
+ * The asset client sends a credential only with a request for one of the
+ * app's own, server-relative addresses, and then the app's asset token, which
+ * core honours only to read the actions an app marks as serving assets. An
+ * absolute URL on the user's server may be a peer's choice - a link card, a
+ * page's image, a feed's enclosure - and with the credentials it would run
+ * whatever action of whatever app its path named, as the user.
  */
 class AssetOwnedTest {
 
@@ -44,9 +45,13 @@ class AssetOwnedTest {
 
     private fun origin() = server.url("/").toString().trimEnd('/')
 
+    /** The asset tokens the client holds, by app; none for an app not listed. */
+    private var assets: (String) -> String? = { app -> "asset-$app" }
+
     private fun client() = AssetHttpModule.assetClient(
         server = ::origin,
         token = { app -> "token-$app" },
+        asset = { app -> assets(app) },
         jar = jar,
     )
 
@@ -81,22 +86,54 @@ class AssetOwnedTest {
         assertFalse(owned(""))
         assertFalse("no address the app builds holds a backslash", owned("/\\attacker.example/x"))
         assertFalse("nor a control character", owned("/feeds/1abc/-/a\n"))
+        assertFalse("a dot segment sends it to another app's path", owned("/people/../settings/-/account/delete"))
+        assertFalse("escaped as well", owned("/people/%2E%2e/settings/-/x"))
+        assertFalse(owned("/feeds/./x"))
+        assertTrue("a query is its own", owned("/people/1abc/-/avatar?v=3"))
+        assertTrue("dots inside a name are not a segment", owned("/feeds/1abc/-/attachments/a..b"))
+    }
+
+    // The only way a String becomes one of the app's own, which the asset
+    // client credentials: through the check that it is one.
+    @Test
+    fun `an address is made the app's own only when it is one`() {
+        assertEquals("/feeds/1abc/-/attachments/9", OwnedAddress.of("/feeds/1abc/-/attachments/9")?.address)
+        assertNull(OwnedAddress.of("https://mochi.example/feeds/1abc/-/attachments/9"))
+        assertNull(OwnedAddress.of("/people/../settings/-/x"))
+        assertNull(OwnedAddress.of(null))
     }
 
     @Test
     fun `an own address resolves onto the server, any other stays as given`() {
         assertEquals("https://mochi.example/feeds/1/-/a", resolved("https://mochi.example/", "/feeds/1/-/a"))
         assertEquals("https://attacker.example/x", resolved("https://mochi.example", "https://attacker.example/x"))
-        assertEquals(mapOf(OWNED to "1"), assetHeaders("/chat/1/-/attachments/9"))
-        assertEquals(emptyMap<String, String>(), assetHeaders("https://mochi.example/chat/1/-/attachments/9"))
+        assertEquals(mapOf(OWNED to "1"), assetHeaders(OwnedAddress.of("/chat/1/-/attachments/9")))
+        assertEquals(emptyMap<String, String>(), assetHeaders(OwnedAddress.of("https://mochi.example/chat/1/-/attachments/9")))
     }
 
     @Test
-    fun `a marked request for the user's server carries its app's token and the session`() {
-        val recorded = fetch(origin() + "/forums/1abc/-/attachments/9", assetHeaders("/forums/1abc/-/attachments/9"))
+    fun `a marked request for the user's server carries its app's asset token and nothing else`() {
+        val recorded = fetch(origin() + "/forums/1abc/-/attachments/9", assetHeaders(OwnedAddress.of("/forums/1abc/-/attachments/9")))
+        assertEquals("Bearer asset-forums", recorded.getHeader("Authorization"))
+        assertNull("THE POINT: no session", recorded.getHeader("Cookie"))
+        assertNull("the mark never leaves the phone", recorded.getHeader(OWNED))
+    }
+
+    // Core does not mark the people app's banner and favicon as assets, and
+    // sets an asset token aside there.
+    @Test
+    fun `an own address whose action is not an asset's goes with the session and the app's token`() {
+        val recorded = fetch(origin() + "/people/1abc/-/banner", assetHeaders(OwnedAddress.of("/people/1abc/-/banner")))
+        assertEquals("Bearer token-people", recorded.getHeader("Authorization"))
+        assertEquals("session=s3cret", recorded.getHeader("Cookie"))
+    }
+
+    @Test
+    fun `an app no asset token can be had for goes with the session and the app's token`() {
+        assets = { null }
+        val recorded = fetch(origin() + "/forums/1abc/-/attachments/9", assetHeaders(OwnedAddress.of("/forums/1abc/-/attachments/9")))
         assertEquals("Bearer token-forums", recorded.getHeader("Authorization"))
         assertEquals("session=s3cret", recorded.getHeader("Cookie"))
-        assertNull("the mark never leaves the phone", recorded.getHeader(OWNED))
     }
 
     @Test
@@ -122,10 +159,10 @@ class AssetOwnedTest {
         server.enqueue(MockResponse().setResponseCode(302).setHeader("Location", elsewhere.url("/icon.png").toString()))
         elsewhere.enqueue(MockResponse().setBody("x"))
         val request = Request.Builder().url(origin() + "/feeds/1abc/-/post/comment/asset/avatar")
-        for ((name, value) in assetHeaders("/feeds/1abc/-/post/comment/asset/avatar")) request.header(name, value)
+        for ((name, value) in assetHeaders(OwnedAddress.of("/feeds/1abc/-/post/comment/asset/avatar"))) request.header(name, value)
         client().newCall(request.build()).execute().close()
         val first = server.takeRequest(5, TimeUnit.SECONDS)!!
-        assertEquals("the own address itself is credentialed", "session=s3cret", first.getHeader("Cookie"))
+        assertEquals("the own address itself is credentialed", "Bearer asset-feeds", first.getHeader("Authorization"))
         val hop = elsewhere.takeRequest(5, TimeUnit.SECONDS)!!
         assertNull("THE POINT: the session does not follow the redirect", hop.getHeader("Cookie"))
         assertNull(hop.getHeader("Authorization"))
@@ -137,9 +174,9 @@ class AssetOwnedTest {
         server.enqueue(MockResponse().setResponseCode(302).setHeader("Location", "/settings/-/account/delete?confirm=1"))
         server.enqueue(MockResponse().setBody("x"))
         val request = Request.Builder().url(origin() + "/feeds/1abc/-/post/comment/asset/avatar")
-        for ((name, value) in assetHeaders("/feeds/1abc/-/post/comment/asset/avatar")) request.header(name, value)
+        for ((name, value) in assetHeaders(OwnedAddress.of("/feeds/1abc/-/post/comment/asset/avatar"))) request.header(name, value)
         client().newCall(request.build()).execute().close()
-        assertEquals("Bearer token-feeds", server.takeRequest(5, TimeUnit.SECONDS)!!.getHeader("Authorization"))
+        assertEquals("Bearer asset-feeds", server.takeRequest(5, TimeUnit.SECONDS)!!.getHeader("Authorization"))
         val hop = server.takeRequest(5, TimeUnit.SECONDS)!!
         assertEquals("/settings/-/account/delete?confirm=1", hop.path)
         assertNull("THE POINT: no token for the action the answer named", hop.getHeader("Authorization"))

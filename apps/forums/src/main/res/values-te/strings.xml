@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">రచయిత</string>
     <string name="forums_community_destination">%1$s లో %2$s గా పోస్ట్ అవుతుంది</string>
+    <string name="forums_find_search_example">పేరు, ID, ఫింగర్‌ప్రింట్, URL లేదా %1$s ద్వారా శోధించండి</string>
+    <string name="forums_setup">సెటప్ చేయండి</string>
 </resources>

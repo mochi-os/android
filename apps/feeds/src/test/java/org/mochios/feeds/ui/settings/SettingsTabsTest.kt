@@ -42,6 +42,22 @@ class SettingsTabsTest {
     }
 
     @Test
+    fun `Publish to is offered where the server offers a network to set an account up on`() {
+        // THE POINT: an owner with no account yet is shown where to set one up.
+        assertEquals(true, publishable(PublishState(offered = listOf("bluesky")), null))
+    }
+
+    @Test
+    fun `the networks to set up are those offered that no account is on, a linked Mastodon account on the fediverse`() {
+        val mastodon = PublishAccount(id = "m1", type = "mastodon", identifier = "@a@b.example")
+        val bluesky = PublishAccount(id = "b1", type = "bluesky", identifier = "a.bsky.social", hosted = true)
+        assertEquals(listOf("bluesky"), unset(listOf("fediverse", "bluesky"), listOf(mastodon)))
+        assertEquals(listOf("fediverse"), unset(listOf("fediverse", "bluesky"), listOf(bluesky)))
+        assertEquals(emptyList<String>(), unset(listOf("fediverse", "bluesky"), listOf(mastodon, bluesky)))
+        assertEquals(listOf("fediverse", "bluesky"), unset(listOf("fediverse", "bluesky"), emptyList()))
+    }
+
+    @Test
     fun `Publish to is undecided until the server answers, so the tabs wait for it`() {
         assertNull(publishable(null, null))
     }

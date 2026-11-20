@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Jungiamasi…</string>
     <string name="chess_ws_disconnected">Atjungta</string>
     <string name="chess_ws_reconnecting">Jungiamasi vėl…</string>
-    <string name="chess_ws_failed">Prisijungti nepavyko</string>
     <string name="chess_move_capture">%1$s paėmė %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

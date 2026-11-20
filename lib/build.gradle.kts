@@ -95,6 +95,7 @@ dependencies {
     api(libs.firebase.messaging)
 
     implementation(libs.work.runtime)
+    implementation(libs.tink)
 
     testImplementation(libs.junit)
     testImplementation(libs.okhttp.mockwebserver)

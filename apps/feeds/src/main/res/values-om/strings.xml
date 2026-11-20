@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Hin hordofamne</string>
     <string name="feeds_source_follow_again">Irra deebiin hordofi</string>
     <string name="feeds_filtered_by_tag">Mallattoodhaan filatame:</string>
+    <string name="feeds_setup">Qophaa\'i</string>
+    <string name="feeds_search_example">Maqaa, ID, fingerprintii, URL, ykn %1$s barbaadi</string>
 </resources>

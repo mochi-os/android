@@ -565,7 +565,7 @@ class CalendarsSyncCycleTest {
         store.make(calendar.local, dirty = true)
         source.refuse = "that event is not acceptable"
         val outcome = run(source, store)
-        assertEquals(listOf("that event is not acceptable"), outcome.failures)
+        assertEquals(listOf(SyncRefusal(SyncRefusal.Kind.REFUSED, "that event is not acceptable")), outcome.failures)
         assertTrue("the row stays for the next attempt", store.rows.values.single().dirty)
     }
 

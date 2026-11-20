@@ -100,6 +100,8 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.util.attachmentModel
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
@@ -571,7 +573,7 @@ fun PostScreen(
     if (openIndex >= 0) {
         AttachmentLightbox(
             images = images,
-            urlBuilder = { att -> att.url ?: attachmentAddress("forums", viewModel.forumId, att.id).orEmpty() },
+            urlBuilder = { att -> attachmentModel(att.url, attachmentAddress("forums", viewModel.forumId, att.id)) },
             initialIndex = openIndex,
             onDismiss = { openAttachment = null },
             commentCount = attachmentCommentCount,
@@ -917,19 +919,17 @@ internal fun PostHeader(
             AttachmentGallery(
                 attachments = attachments,
                 urlBuilder = { att ->
-                    att.url ?: attachmentAddress("forums", forumId, att.id).orEmpty()
+                    attachmentModel(att.url, attachmentAddress("forums", forumId, att.id))
                 },
                 thumbnailUrlBuilder = { att ->
-                    att.thumbnailUrl ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
+                    attachmentModel(att.thumbnailUrl, attachmentAddress("forums", forumId, att.id, "thumbnail"))
                 },
                 // previewUrl is absent on servers that predate the preview
                 // variant; falling back to the thumbnail chain keeps working.
                 previewUrlBuilder = { att ->
-                    att.previewUrl
-                        ?: att.thumbnailUrl
-                        ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
+                    attachmentModel(att.previewUrl ?: att.thumbnailUrl, attachmentAddress("forums", forumId, att.id, "thumbnail"))
                 },
-                mediumUrlBuilder = { att -> mediumAddress(att.previewUrl) },
+                mediumUrlBuilder = { att -> mediumAddress(OwnedAddress.of(att.previewUrl)) },
                 commentCount = commentCount,
                 comments = comments,
             )
@@ -1075,7 +1075,7 @@ private fun forumRows(comments: List<ForumComment>, collapsed: CollapsedComments
 private fun LazyListScope.commentsItems(
     rows: List<CommentRow<ForumComment>>,
     forumId: String,
-    avatars: Map<String, String>,
+    avatars: Map<String, OwnedAddress>,
     currentIdentity: String,
     canManage: Boolean,
     canModerate: Boolean,
@@ -1134,7 +1134,7 @@ private fun LazyListScope.commentsItems(
 private fun AttachmentComments(
     attachmentId: String,
     comments: List<ForumComment>,
-    avatars: Map<String, String>,
+    avatars: Map<String, OwnedAddress>,
     postAuthor: String,
     forumId: String,
     currentIdentity: String,
@@ -1267,7 +1267,7 @@ internal fun CommentCard(
     depth: Int,
     forumId: String,
     // One avatar address per author across the thread (authorAvatars).
-    avatars: Map<String, String>,
+    avatars: Map<String, OwnedAddress>,
     canEdit: Boolean,
     canModerate: Boolean,
     isAuthor: Boolean,
@@ -1307,9 +1307,9 @@ internal fun CommentCard(
         seed = comment.member,
         avatarUrl = avatars[comment.member] ?: commentAvatar(forumId, comment.post, comment.id),
         attachments = addressed(comment.attachments, "forums", forumId),
-        attachmentUrl = { att -> att.url ?: attachmentAddress("forums", forumId, att.id).orEmpty() },
+        attachmentUrl = { att -> attachmentModel(att.url, attachmentAddress("forums", forumId, att.id)) },
         attachmentThumbnailUrl = { att ->
-            att.thumbnailUrl ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
+            attachmentModel(att.thumbnailUrl, attachmentAddress("forums", forumId, att.id, "thumbnail"))
         },
         horizontalPadding = 12.dp,
         anchorThumbnailUrl = anchor.takeIf { it.isNotEmpty() }

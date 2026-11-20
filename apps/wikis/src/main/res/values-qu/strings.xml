@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Unancha mana ch\'usaq kanmanchu</string>
     <string name="wikis_attachments_search_placeholder">Adjuntokunata maskay</string>
     <string name="wikis_attachments_delete_confirm_message">¿\"%1$s\"-ta wischunki? Kayqa mana kutichiy atikunchu.</string>
-    <string name="wikis_attachments_downloading">Uraykachichkan…</string>
     <string name="wikis_attachments_empty_description">Kay páginaman archivokunata yapanaykipaq Wichachiy ñit\'iy.</string>
     <string name="wikis_settings_name_save_cd">Sutita waqaychay</string>
     <string name="wikis_settings_name_cancel_cd">Hukchayta mana ruway</string>

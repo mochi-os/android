@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">התג אינו יכול להיות ריק</string>
     <string name="wikis_attachments_search_placeholder">חפש קבצים מצורפים</string>
     <string name="wikis_attachments_delete_confirm_message">מחק „%1$s\"? לא ניתן לבטל זאת.</string>
-    <string name="wikis_attachments_downloading">מוריד…</string>
     <string name="wikis_attachments_empty_description">הקש על העלה כדי להוסיף קבצים לדף זה.</string>
     <string name="wikis_settings_name_save_cd">שמור שם</string>
     <string name="wikis_settings_name_cancel_cd">בטל עריכה</string>

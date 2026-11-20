@@ -54,6 +54,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -89,6 +90,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun NetworksScreen(
     onBack: () -> Unit,
+    network: String? = null,
     viewModel: NetworksViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
@@ -120,7 +122,17 @@ fun NetworksScreen(
     }
 
     StepUpHost(viewModel.stepUp)
-    var linking by remember { mutableStateOf(false) }
+    // The link dialog, open on a provider ("" for the first offered) or closed.
+    var linking by remember { mutableStateOf<String?>(null) }
+    // Sent by another app to set up [network]: once the screen has loaded, a
+    // network the server only links opens the link dialog on its provider.
+    var arrived by rememberSaveable(network) { mutableStateOf(false) }
+    LaunchedEffect(state.data, network) {
+        val loaded = state.data ?: return@LaunchedEffect
+        if (arrived || network.isNullOrEmpty()) return@LaunchedEffect
+        arrived = true
+        arrival(network, loaded.networks, loaded.providers)?.let { linking = it }
+    }
     var adding by remember { mutableStateOf<Handle?>(null) }
     var releasing by remember { mutableStateOf<Handle?>(null) }
     var removing by remember { mutableStateOf<NetworkAccount?>(null) }
@@ -166,7 +178,7 @@ fun NetworksScreen(
                     moving = state.moving,
                     check = viewModel::available,
                     onReserve = viewModel::reserve,
-                    onLink = { linking = true },
+                    onLink = { linking = "" },
                     onToggle = { handle, network, account ->
                         if (account != null) {
                             removing = account
@@ -208,12 +220,14 @@ fun NetworksScreen(
     }
 
     val data = state.data
-    if (linking && data != null) {
+    val chosen = linking
+    if (chosen != null && data != null) {
         LinkDialog(
             providers = data.providers,
             busy = "link" in state.busy,
-            onLink = { type, fields, oauth -> viewModel.link(type, fields, oauth) { linking = false } },
-            onDismiss = { linking = false },
+            onLink = { type, fields, oauth -> viewModel.link(type, fields, oauth) { linking = null } },
+            onDismiss = { linking = null },
+            initial = chosen,
         )
     }
     adding?.let { parent ->

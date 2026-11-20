@@ -93,7 +93,7 @@ internal fun LookupResult(
             .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(10.dp))
             .padding(12.dp),
     ) {
-        EntityAvatar(name = name, src = lookup.avatar.takeIf { isWebUrl(it) }, seed = lookup.id.ifEmpty { query }, size = 44.dp)
+        EntityAvatar(name = name, remote = lookup.avatar.takeIf { isWebUrl(it) }, seed = lookup.id.ifEmpty { query }, size = 44.dp)
         Spacer(modifier = Modifier.width(12.dp))
         Column(modifier = Modifier.weight(1f)) {
             Text(name, style = MaterialTheme.typography.titleSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)
@@ -130,7 +130,7 @@ internal fun PersonRow(
         .filter { it.isNotEmpty() }
         .joinToString(" · ")
     Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier.fillMaxWidth().padding(vertical = 8.dp)) {
-        EntityAvatar(name = name, src = person.avatar.takeIf { isWebUrl(it) }, seed = person.contact, size = 44.dp)
+        EntityAvatar(name = name, remote = person.avatar.takeIf { isWebUrl(it) }, seed = person.contact, size = 44.dp)
         Spacer(modifier = Modifier.width(12.dp))
         Column(modifier = Modifier.weight(1f)) {
             Text(name, style = MaterialTheme.typography.titleSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)

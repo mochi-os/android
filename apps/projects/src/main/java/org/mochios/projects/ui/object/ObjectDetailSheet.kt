@@ -5,6 +5,7 @@
 
 package org.mochios.projects.ui.`object`
 
+import org.mochios.android.api.OwnedAddress
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -387,10 +388,10 @@ internal fun commentCount(comments: List<Comment>): Int =
  * item. Null when an id, a peer's, cannot be one segment of the address
  * ([segment]).
  */
-internal fun commentAvatar(projectId: String, commentId: String): String? {
+internal fun commentAvatar(projectId: String, commentId: String): OwnedAddress? {
     val project = segment(projectId) ?: return null
     val comment = segment(commentId) ?: return null
-    return "/projects/$project/-/comment/$comment/asset/avatar"
+    return OwnedAddress.of("/projects/$project/-/comment/$comment/asset/avatar")
 }
 
 /**
@@ -398,10 +399,10 @@ internal fun commentAvatar(projectId: String, commentId: String): String? {
  * rows. Null when an id, a peer's, cannot be one segment of the address
  * ([segment]).
  */
-internal fun activityAvatar(projectId: String, activityId: String): String? {
+internal fun activityAvatar(projectId: String, activityId: String): OwnedAddress? {
     val project = segment(projectId) ?: return null
     val activity = segment(activityId) ?: return null
-    return "/projects/$project/-/activity/$activity/asset/avatar"
+    return OwnedAddress.of("/projects/$project/-/activity/$activity/asset/avatar")
 }
 
 /**
@@ -409,9 +410,9 @@ internal fun activityAvatar(projectId: String, activityId: String): String? {
  * order, replies included. Any comment on the item answers with its author's
  * picture, so every listed comment may stand in.
  */
-internal fun commentAvatars(comments: List<Comment>, projectId: String): Map<String, String> =
+internal fun commentAvatars(comments: List<Comment>, projectId: String): Map<String, OwnedAddress> =
     addressByAuthor(comments, { it.authorId }, { commentAvatar(projectId, it.id) }, { it.children })
 
 /** One avatar address per person across the activity tab, from their first row. */
-internal fun activityAvatars(activity: List<Activity>, projectId: String): Map<String, String> =
+internal fun activityAvatars(activity: List<Activity>, projectId: String): Map<String, OwnedAddress> =
     addressByAuthor(activity, { it.user }, { activityAvatar(projectId, it.id) })

@@ -5,22 +5,52 @@
 
 package org.mochios.android.sync
 
+import android.content.Context
+import org.mochios.android.R
 import java.util.UUID
 
 /**
  * What one run did. [failures] are rows the server refused for a reason a
- * retry will not fix — a card it will not accept — with the server's message;
- * they are reported and skipped rather than blocking the rest.
+ * retry will not fix — a card it will not accept; they are reported and
+ * skipped rather than blocking the rest.
  */
 data class SyncOutcome(
     val downloaded: Int = 0,
     val uploaded: Int = 0,
     val removed: Int = 0,
-    val failures: List<String> = emptyList(),
+    val failures: List<SyncRefusal> = emptyList(),
 )
 
-/** A row the server refused with a client error other than 412 or 404. */
-class SyncRefused(message: String?) : Exception(message ?: "refused")
+/**
+ * A row the server refused, as the sync status line reports it: [kind], and
+ * [message], the server's own words in the user's language when it gave any.
+ */
+data class SyncRefusal(val kind: Kind, val message: String? = null) {
+
+    enum class Kind {
+        /** A create answered 412: the server holds a row of that name it will not merge. */
+        CONFLICT,
+
+        /** A create answered 404. */
+        MISSING,
+
+        /** Any other client error. */
+        REFUSED,
+    }
+
+    /** What the status line shows: the server's message, else the kind's own, in the app's language. */
+    fun text(context: Context): String =
+        message?.takeIf { text -> text.isNotBlank() } ?: context.getString(
+            when (kind) {
+                Kind.CONFLICT -> R.string.sync_conflict
+                Kind.MISSING -> R.string.sync_missing
+                Kind.REFUSED -> R.string.sync_refused
+            }
+        )
+}
+
+/** A row the server refused with a client error other than 412 or 404, and its message, if any. */
+class SyncRefused(message: String?) : Exception(message)
 
 /**
  * One sync of the account's contacts: download what changed on the server,
@@ -59,7 +89,7 @@ class ContactsSyncCycle(
         var downloaded = 0
         var uploaded = 0
         var removed = 0
-        val failures = mutableListOf<String>()
+        val failures = mutableListOf<SyncRefusal>()
 
         // ---- 1. Download ----
         val since = store.version()
@@ -145,7 +175,7 @@ class ContactsSyncCycle(
                     store.remove(row.local)
                     removed++
                 } catch (e: SyncRefused) {
-                    failures.add(e.message.orEmpty())
+                    failures.add(SyncRefusal(SyncRefusal.Kind.REFUSED, e.message))
                 }
                 continue
             }
@@ -160,28 +190,28 @@ class ContactsSyncCycle(
                 }
                 store.bind(row.local, saved, row.version)
                 uploaded++
-            } catch (e: SyncConflict) {
+            } catch (_: SyncConflict) {
                 // A create has no etag to be stale against; a 412 on one is
                 // the server refusing it, not a conflict to resolve.
                 if (remote == null) {
-                    failures.add(e.message.orEmpty())
+                    failures.add(SyncRefusal(SyncRefusal.Kind.CONFLICT))
                 } else if (restore(row, remote)) {
                     downloaded++
                 } else {
                     removed++
                 }
-            } catch (e: SyncMissing) {
+            } catch (_: SyncMissing) {
                 // Gone from the server: the server wins over a phone edit. A
                 // contact made on the phone was never there, so a 404 on its
                 // create is a refusal and the row stays for the next attempt.
                 if (remote == null) {
-                    failures.add(e.message.orEmpty())
+                    failures.add(SyncRefusal(SyncRefusal.Kind.MISSING))
                 } else {
                     store.remove(row.local)
                     removed++
                 }
             } catch (e: SyncRefused) {
-                failures.add(e.message.orEmpty())
+                failures.add(SyncRefusal(SyncRefusal.Kind.REFUSED, e.message))
             }
         }
         return SyncOutcome(downloaded, uploaded, removed, failures)

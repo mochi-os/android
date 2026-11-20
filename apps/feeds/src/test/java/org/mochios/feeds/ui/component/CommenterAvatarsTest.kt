@@ -28,7 +28,7 @@ class CommenterAvatarsTest {
                 "ann" to "/feeds/f1/-/p1/c1/asset/avatar",
                 "bob" to "/feeds/f1/-/p1/c2/asset/avatar",
             ),
-            commenterAvatars(comments, "f1", "p1"),
+            commenterAvatars(comments, "f1", "p1").mapValues { it.value.address },
         )
     }
 
@@ -45,7 +45,7 @@ class CommenterAvatarsTest {
                 "bob" to "/feeds/feed-b/-/p2/c3/asset/avatar",
                 "cat" to "/feeds/fallback/-/p3/c4/asset/avatar",
             ),
-            timelineAvatars(posts, "fallback"),
+            timelineAvatars(posts, "fallback").mapValues { it.value.address },
         )
     }
 
@@ -54,7 +54,7 @@ class CommenterAvatarsTest {
     // session, to whatever action the path then names.
     @Test
     fun `an id a peer chose cannot point the avatar at another action`() {
-        assertEquals("/feeds/f1/-/p1%3Fx%3D1/c1%23y/asset/avatar", commentAvatar("f1", "p1?x=1", "c1#y"))
+        assertEquals("/feeds/f1/-/p1%3Fx%3D1/c1%23y/asset/avatar", commentAvatar("f1", "p1?x=1", "c1#y")?.address)
         // The server decodes the path before it routes, so no escaping keeps a
         // slash from dividing it.
         assertNull(commentAvatar("f1", "../../people/-/x", "c1"))
@@ -66,11 +66,11 @@ class CommenterAvatarsTest {
     @Test
     fun `a comment whose id is a dot segment does not stand in, and the commenter's next one does`() {
         val comments = listOf(by("..", "ann"), by(".", "bob"), by("c3", "ann"))
-        assertEquals(mapOf("ann" to "/feeds/f1/-/p1/c3/asset/avatar"), commenterAvatars(comments, "f1", "p1"))
+        assertEquals(mapOf("ann" to "/feeds/f1/-/p1/c3/asset/avatar"), commenterAvatars(comments, "f1", "p1").mapValues { it.value.address })
     }
 
     @Test
     fun `a post whose id is a dot segment addresses no comment`() {
-        assertEquals(emptyMap<String, String>(), commenterAvatars(listOf(by("c1", "ann")), "f1", ".."))
+        assertEquals(emptyMap<String, String>(), commenterAvatars(listOf(by("c1", "ann")), "f1", "..").mapValues { it.value.address })
     }
 }

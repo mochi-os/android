@@ -29,6 +29,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.R as MochiR
 import org.mochios.android.files.Upload
 import org.mochios.android.model.Attachment
@@ -66,15 +67,15 @@ fun AttachmentsSection(
     }
 
     // An id no segment can carry has no address, and the gallery leaves it out.
-    val urlBuilder: (Attachment) -> String = { attachment ->
-        attachmentAddress("projects", projectId, attachment.id).orEmpty()
+    val urlBuilder: (Attachment) -> OwnedAddress? = { attachment ->
+        attachmentAddress("projects", projectId, attachment.id)
     }
-    val thumbnailUrlBuilder: (Attachment) -> String = { attachment ->
-        attachmentAddress("projects", projectId, attachment.id, "thumbnail").orEmpty()
+    val thumbnailUrlBuilder: (Attachment) -> OwnedAddress? = { attachment ->
+        attachmentAddress("projects", projectId, attachment.id, "thumbnail")
     }
     // The lightbox shows the server's 1280px variant, not the original.
-    val previewUrlBuilder: (Attachment) -> String = { attachment ->
-        attachmentAddress("projects", projectId, attachment.id, "preview").orEmpty()
+    val previewUrlBuilder: (Attachment) -> OwnedAddress? = { attachment ->
+        attachmentAddress("projects", projectId, attachment.id, "preview")
     }
 
     // Newest first.

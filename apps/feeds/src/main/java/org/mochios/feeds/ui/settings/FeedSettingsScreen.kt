@@ -60,6 +60,7 @@ fun FeedSettingsScreen(
     onNavigateBack: () -> Unit,
     onFeedDeleted: () -> Unit,
     onUnsubscribed: () -> Unit,
+    onOpenLink: (String) -> Unit = {},
     viewModel: FeedSettingsViewModel = hiltViewModel()
 ) {
     val feedInfo by viewModel.feedInfo.collectAsState()
@@ -75,8 +76,9 @@ fun FeedSettingsScreen(
     val canManage = permissions.manage
 
     // Where a feed publishes is a tab of its own, shown only where there is
-    // an account to publish to, or the server says why there is none: a
-    // private feed's answer. Asked again when the feed's privacy changes.
+    // an account to publish to or a network to set one up on, or the server
+    // says why there is none: a private feed's answer. Asked again when the
+    // feed's privacy changes.
     val publishing: PublishingViewModel = hiltViewModel()
     val publishState by publishing.publish.collectAsState()
     val refusal by publishing.refusal.collectAsState()
@@ -187,7 +189,7 @@ fun FeedSettingsScreen(
                             viewModel = viewModel,
                             onFeedDeleted = onFeedDeleted
                         )
-                        SettingsTab.Publish -> PublishTab(publishing)
+                        SettingsTab.Publish -> PublishTab(publishing, onOpenLink)
                         SettingsTab.Access -> AccessTab(viewModel = viewModel)
                         SettingsTab.Ai -> AiTab(viewModel = viewModel)
                     }
@@ -239,18 +241,19 @@ internal fun settingsTabs(publishable: Boolean, ai: Boolean): List<SettingsTab> 
 
 /**
  * Whether Publish to is offered: the owner holds an account the feed may
- * publish to, or the server refused and the tab says why. Null until the
- * server has answered, so the tabs are drawn once, with it or without.
+ * publish to, the server offers a network to set one up on, or the server
+ * refused and the tab says why. Null until the server has answered, so the
+ * tabs are drawn once, with it or without.
  */
 internal fun publishable(state: PublishState?, refusal: MochiError?): Boolean? = when {
     refusal != null -> true
     state == null -> null
-    else -> state.accounts.isNotEmpty()
+    else -> state.accounts.isNotEmpty() || state.offered.isNotEmpty()
 }
 
 /** Where a public feed publishes, on a tab of its own. */
 @Composable
-private fun PublishTab(publishing: PublishingViewModel) {
+private fun PublishTab(publishing: PublishingViewModel, onOpenLink: (String) -> Unit) {
     PublishingEvents(publishing)
     val refusal by publishing.refusal.collectAsState()
     Column(
@@ -269,7 +272,7 @@ private fun PublishTab(publishing: PublishingViewModel) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
         } else {
-            PublishingSection(publishing)
+            PublishingSection(publishing, onOpenLink)
         }
     }
 }

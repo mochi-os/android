@@ -35,6 +35,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.KeyboardArrowUp
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.ButtonDefaults
@@ -98,6 +99,7 @@ import kotlinx.coroutines.delay
 import org.mochios.android.i18n.DateFormat
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.InlineErrorState
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.util.NaturalCompare
@@ -859,7 +861,8 @@ private fun Modifier.pick(day: LocalDate, onPick: (Offset) -> Unit): Modifier {
  * [onTop] is told the day of the topmost row in view as the list scrolls,
  * whose month the toolbar names. The day it opens on, the anchor, leads it
  * even when empty, as its heading alone, and the list scrolls back to it
- * whenever the anchor moves. A new
+ * whenever the anchor moves; with nothing from the anchor on in everything
+ * there is to load, the list says "No events" instead. A new
  * anchor the pages already held reach is shown at once; one beyond them
  * shows a spinner in place of the old range until it has been read, so
  * nothing is drawn and then pushed aside. A page read in before the earliest, from a pull
@@ -977,7 +980,12 @@ fun AgendaList(
         }
         return
     }
-    val opened = state.anchor.takeIf { search.isEmpty() }
+    // Nothing from the anchor on in everything there is to load says "No
+    // events" in place of the anchor's lone heading, as the web's list does;
+    // "Earlier events" still leads it when there is something before, and
+    // it stays while those pages load, until one lands.
+    val empty = search.isEmpty() && matched.isEmpty() && !later && state.stalled == null
+    val opened = state.anchor.takeIf { search.isEmpty() && !empty }
     val rows = remember(grouped, opened) { rows(grouped, opened) }
     var head by remember { mutableStateOf(state.earliest) }
     LaunchedEffect(state.earliest) {
@@ -1002,54 +1010,67 @@ fun AgendaList(
             days[key]?.let { day -> top(day) }
         }
     }
-    LazyColumn(
-        state = listState,
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(bottom = 88.dp),
-    ) {
-        if (earlier) {
-            item(key = "earlier") {
-                Box(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), contentAlignment = Alignment.Center) {
-                    MochiOutlinedButton(onClick = { viewModel.earlier() }, enabled = !state.paging) {
-                        if (state.paging) {
-                            CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
-                        } else {
-                            Icon(Icons.Outlined.KeyboardArrowUp, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+    // With no heading to report, the toolbar names the anchor's month.
+    LaunchedEffect(empty, state.anchor) {
+        if (empty) top(state.anchor)
+    }
+    // Behind the list, so a pull and "Earlier events" still reach it.
+    Box(modifier = Modifier.fillMaxSize()) {
+        if (empty) {
+            EmptyState(
+                icon = Icons.Outlined.CalendarMonth,
+                title = stringResource(R.string.calendars_list_empty),
+            )
+        }
+        LazyColumn(
+            state = listState,
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(bottom = 88.dp),
+        ) {
+            if (earlier) {
+                item(key = "earlier") {
+                    Box(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp), contentAlignment = Alignment.Center) {
+                        MochiOutlinedButton(onClick = { viewModel.earlier() }, enabled = !state.paging) {
+                            if (state.paging) {
+                                CircularProgressIndicator(Modifier.size(ButtonDefaults.IconSize), strokeWidth = 2.dp)
+                            } else {
+                                Icon(Icons.Outlined.KeyboardArrowUp, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
+                            }
+                            Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                            Text(stringResource(R.string.calendars_list_earlier))
                         }
-                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
-                        Text(stringResource(R.string.calendars_list_earlier))
                     }
                 }
             }
-        }
-        for (row in rows) {
-            when (row) {
-                is Listed.Day -> stickyHeader(key = row.key) {
-                    Heading(row.day, current = row.day == today)
-                }
-                is Listed.Event -> item(key = row.key) {
-                    AgendaRow(
-                        instance = row.instance,
-                        viewModel = viewModel,
-                        chosen = same(row.instance, selected),
-                        calendar = if (wide) names[row.instance.calendar].orEmpty() else null,
-                        divided = !row.last,
-                        now = now,
-                        today = today,
-                    ) { onOpen(row.instance) }
+            for (row in rows) {
+                when (row) {
+                    is Listed.Day -> stickyHeader(key = row.key) {
+                        Heading(row.day, current = row.day == today)
+                    }
+                    is Listed.Event -> item(key = row.key) {
+                        AgendaRow(
+                            instance = row.instance,
+                            viewModel = viewModel,
+                            chosen = same(row.instance, selected),
+                            calendar = if (wide) names[row.instance.calendar].orEmpty() else null,
+                            divided = !row.last,
+                            now = now,
+                            today = today,
+                        ) { onOpen(row.instance) }
+                    }
                 }
             }
-        }
-        state.stalled?.let { stalled ->
-            item(key = "stalled") {
-                InlineErrorState(error = stalled.error, onRetry = { viewModel.resume() })
+            state.stalled?.let { stalled ->
+                item(key = "stalled") {
+                    InlineErrorState(error = stalled.error, onRetry = { viewModel.resume() })
+                }
             }
+            if (state.paging) {
+                item(key = "paging") { Paging() }
+            }
+            // Always last, so a list too short to scroll still has its foot in view.
+            item(key = "foot") { Spacer(Modifier.height(1.dp)) }
         }
-        if (state.paging) {
-            item(key = "paging") { Paging() }
-        }
-        // Always last, so a list too short to scroll still has its foot in view.
-        item(key = "foot") { Spacer(Modifier.height(1.dp)) }
     }
 }
 

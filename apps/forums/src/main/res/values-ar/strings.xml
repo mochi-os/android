@@ -344,4 +344,6 @@
     </plurals>
     <string name="forums_comment_op">صاحب المنشور</string>
     <string name="forums_community_destination">يُنشر في %1$s باسم %2$s</string>
+    <string name="forums_find_search_example">البحث بالاسم أو المعرف أو البصمة أو URL أو %1$s</string>
+    <string name="forums_setup">إعداد</string>
 </resources>

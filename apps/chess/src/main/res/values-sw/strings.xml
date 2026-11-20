@@ -57,7 +57,6 @@
     <string name="chess_ws_connecting">Inaunganisha…</string>
     <string name="chess_ws_disconnected">Nje ya mtandao</string>
     <string name="chess_ws_reconnecting">Inaunganisha tena…</string>
-    <string name="chess_ws_failed">Muunganisho umeshindwa</string>
     <string name="chess_move_capture">%1$s alichukua %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_piece_white">%1$s Mweupe</string>

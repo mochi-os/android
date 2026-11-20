@@ -389,4 +389,6 @@
     <string name="feeds_source_unfollowed">Не пратите</string>
     <string name="feeds_source_follow_again">Прати поново</string>
     <string name="feeds_filtered_by_tag">Филтрирано по ознаци:</string>
+    <string name="feeds_setup">Подеси</string>
+    <string name="feeds_search_example">Претражи по називу, ID-у, отиску, URL-у или адреси %1$s</string>
 </resources>

@@ -6,7 +6,6 @@
 package org.mochios.android.push
 
 import android.content.Context
-import android.content.Intent
 import android.util.Log
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.CoroutineScope
@@ -17,9 +16,8 @@ import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
+import org.mochios.android.BuildConfig
 import org.mochios.android.auth.AuthRepository
-import org.mochios.android.launcher.launcherComponentFor
-import org.mochios.android.sync.SyncSignal
 import org.mochios.android.util.isServerOrigin
 import org.unifiedpush.android.connector.MessagingReceiver
 import org.unifiedpush.android.connector.data.PushEndpoint
@@ -42,37 +40,26 @@ internal fun collapseLocalEndpoint(endpointUrl: String, server: String): String 
 }
 
 /**
- * Bridges UnifiedPush callbacks into Mochi events; subclasses supply the
- * channel and deep-link routing.
+ * The UnifiedPush connector's callbacks for this app: the endpoint the
+ * distributor hands out is registered with the server, and a message is
+ * delivered through [deliverPush]. The instance is the identity the
+ * registration was made for ([MochiPushClient.register]).
+ *
+ * Only a distributor's broadcasts arrive here. This app's own distributor,
+ * [PushService], delivers in process instead, so nothing on this exported
+ * receiver can raise a notification without the connector's decrypt.
  */
-abstract class MochiPushReceiver : MessagingReceiver() {
-
-    /**
-     * Channel id for the notification: the payload's [app] slug, falling back
-     * to [link]'s first path segment.
-     */
-    abstract fun channelId(context: Context, instance: String, app: String, link: String): String
-
-    /**
-     * Deep-link Uri for the notification tap. [id] marks the row read; [nonce]
-     * must be carried on the URI - MainActivity is exported and ignores taps it
-     * cannot match to an outstanding nonce (see [NonceStore]).
-     */
-    abstract fun deepLinkFor(
-        context: Context,
-        instance: String,
-        link: String,
-        id: String,
-        nonce: String
-    ): android.net.Uri
+class MochiPushReceiver : MessagingReceiver() {
 
     private fun deps(context: Context): PushEntryPoint =
         EntryPointAccessors.fromApplication(context.applicationContext, PushEntryPoint::class.java)
 
     override fun onNewEndpoint(context: Context, endpoint: PushEndpoint, instance: String) {
         // The endpoint URL ends in the subscription id, which is the unguessable
-        // capability anyone can post a push to, so log only its origin.
-        Log.i(TAG, "onNewEndpoint instance=$instance host=${endpointHost(endpoint.url)}")
+        // capability anyone can post a push to, so log only its origin; the
+        // instance is the identity, and stays out of a release log.
+        Log.i(TAG, "onNewEndpoint")
+        if (BuildConfig.DEBUG) Log.d(TAG, "onNewEndpoint instance=$instance host=${endpointHost(endpoint.url)}")
         val keys = endpoint.pubKeySet
         if (keys == null) {
             Log.w(TAG, "Endpoint has no Web Push keys — server can't encrypt; aborting")
@@ -88,11 +75,11 @@ abstract class MochiPushReceiver : MessagingReceiver() {
                 // WebSocket fast-path instead of POSTing RFC 8030 back to itself
                 // (which would hit the still-stubbed inbound endpoint and 501).
                 val endpointToSend = collapseLocalEndpoint(endpoint.url, server)
-                Log.i(
-                    TAG,
-                    "register: endpoint host=${endpointHost(endpoint.url)} server=$server " +
-                        "local=${endpointToSend != endpoint.url}"
-                )
+                // Which server the user is on stays out of a release log.
+                Log.i(TAG, "register: local=${endpointToSend != endpoint.url}")
+                if (BuildConfig.DEBUG) {
+                    Log.d(TAG, "register: endpoint host=${endpointHost(endpoint.url)} server=$server")
+                }
                 // The distributor re-announces the endpoint on every register
                 // call, and PushTransport registers on every resume; post it only
                 // when the server has not already accepted or refused it.
@@ -141,7 +128,7 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         runCatching { android.net.Uri.parse(endpointUrl).host }.getOrNull() ?: "unparseable"
 
     override fun onUnregistered(context: Context, instance: String) {
-        Log.i(TAG, "onUnregistered instance=$instance")
+        Log.i(TAG, "onUnregistered")
         val store = deps(context).pushAccountStore()
         val accountId = store.read(instance) ?: return
         store.clear(instance)
@@ -169,87 +156,19 @@ abstract class MochiPushReceiver : MessagingReceiver() {
         reason: org.unifiedpush.android.connector.FailedReason,
         instance: String,
     ) {
-        Log.w(TAG, "onRegistrationFailed instance=$instance reason=$reason")
-    }
-
-    /**
-     * Deliver a MESSAGE this distributor sent us directly, bypassing the
-     * connector's decrypt. The local fast path is cleartext by design, so it
-     * cannot satisfy [onMessage]'s decrypted gate; the sender's identity
-     * stands in for it. Every other action goes to the connector unchanged, so
-     * a third-party distributor still gets the RFC 8291 treatment.
-     */
-    override fun onReceive(context: Context, intent: Intent) {
-        if (intent.action != PushService.ACTION_LOCAL_MESSAGE) {
-            super.onReceive(context, intent)
-            return
-        }
-        val sender = senderPackage(intent)
-        val content = intent.getByteArrayExtra(PushService.EXTRA_BYTES_MESSAGE)
-        when (judgeLocalPush(sender, sender != null && mochiSigned(context, sender), content)) {
-            LocalPush.UNIDENTIFIED -> {
-                Log.w(TAG, "Local push carried no PendingIntent to identify the sender; ignoring")
-                return
-            }
-            LocalPush.UNTRUSTED -> {
-                Log.w(TAG, "Local push from unrelated package $sender; ignoring")
-                return
-            }
-            LocalPush.EMPTY -> {
-                Log.w(TAG, "Local push carried no payload; ignoring")
-                return
-            }
-            LocalPush.ACCEPT -> Unit
-        }
-        // The connector resolves an instance name from the token through its
-        // own private registration store, which we cannot read. Instance
-        // reaches only the notification tag's fallback (channelId and
-        // deepLinkFor both ignore it), and the token identifies the same
-        // registration, so it serves the same purpose here.
-        deliver(context, content!!, intent.getStringExtra(PushService.EXTRA_TOKEN).orEmpty())
+        Log.w(TAG, "onRegistrationFailed reason=$reason")
     }
 
     override fun onMessage(context: Context, message: PushMessage, instance: String) {
         // The only authenticity gate on push content from a third-party
         // distributor: the connector calls this with decrypted = false after a
         // failed decrypt, so without the check anyone holding the endpoint URL
-        // can post an arbitrary notification. Our own distributor does not
-        // reach here - see onReceive.
+        // can post an arbitrary notification.
         if (!message.decrypted) {
             Log.w(TAG, "Push payload was not decrypted; ignoring")
             return
         }
-        deliver(context, message.content, instance)
-    }
-
-    /** Parse a delivered payload and raise the notification it describes. */
-    private fun deliver(context: Context, content: ByteArray, instance: String) {
-        val text = content.toString(Charsets.UTF_8)
-        val payload = try {
-            JSONObject(text)
-        } catch (_: Exception) {
-            Log.w(TAG, "Push payload not JSON; ignoring")
-            return
-        }
-
-        SyncSignal.kind(mapOf("sync" to payload.optString("sync", "")))?.let {
-            SyncSignal.run(context, it, deps(context).sessionManager())
-            return
-        }
-
-        val title = payload.optString("title", "")
-        val body = payload.optString("body", "")
-        val link = payload.optString("link", "")
-        val tag = payload.optString("tag", "")
-        val app = payload.optString("app", "")
-        val id = payload.optString("id", "")
-
-        if (title.isBlank() && body.isBlank()) {
-            Log.w(TAG, "Push payload has no title/body; ignoring")
-            return
-        }
-
-        postSystemNotification(context, instance, title, body, link, tag, app, id)
+        deliverPush(context, message.content, instance)
     }
 
     private suspend fun postPushRegister(
@@ -311,90 +230,6 @@ abstract class MochiPushReceiver : MessagingReceiver() {
             .post(form)
             .build()
         client.newCall(request).execute().close()
-    }
-
-    private fun postSystemNotification(
-        context: Context,
-        instance: String,
-        title: String,
-        body: String,
-        link: String,
-        tag: String,
-        app: String,
-        id: String,
-    ) {
-        // See the FCM twin: what the socket already delivered to the open
-        // screen does not need a tray row, and a suppressed one must not spend
-        // a nonce.
-        // A screen only covers a push while the socket behind it is up: the
-        // tray row is dropped on the promise that the content arrives live.
-        val webSocket = EntryPointAccessors
-            .fromApplication(context.applicationContext, PushEntryPoint::class.java)
-            .webSocket()
-        val cover = VisibleEntity.coverFor(link) { key -> webSocket.isLive(key) }
-        if (cover != VisibleEntity.Cover.NONE) {
-            Log.i(TAG, "Entity is on screen; not posting")
-            // Only a screen that is the entity itself, a chat or a game, can
-            // say the user has read this; a feed being open cannot.
-            if (cover == VisibleEntity.Cover.READ && id.isNotEmpty()) {
-                // Retire the row so the web bell and the user's other devices
-                // stop announcing what they have already read here. Best
-                // effort; the tray row is suppressed either way.
-                val repository = EntryPointAccessors
-                    .fromApplication(context.applicationContext, PushEntryPoint::class.java)
-                    .notificationsRepository()
-                CoroutineScope(Dispatchers.IO).launch {
-                    try {
-                        repository.markRead(id)
-                    } catch (e: Exception) {
-                        Log.w(TAG, "markRead failed: ${e.message}")
-                    }
-                }
-            }
-            return
-        }
-
-        val channelId = channelId(context, instance, app, link)
-        val nonce = NonceStore(context).issue()
-        val deepLink = deepLinkFor(context, instance, link, id, nonce)
-
-        // launch-ok: deepLink is the mochi: URI this file builds from the push payload's link
-        val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, deepLink).apply {
-            flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or
-                    android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
-            // Pin the PendingIntent to the matching launcher activity so badge-
-            // capable launchers attribute the unread dot to the right Mochi-
-            // app icon (every alias targets MainActivity, so without this the
-            // badge stamps on every Mochi icon).
-            launcherComponentFor(context, app)?.let { component = it }
-        }
-        val pendingFlags = android.app.PendingIntent.FLAG_UPDATE_CURRENT or
-                android.app.PendingIntent.FLAG_IMMUTABLE
-        val pending = android.app.PendingIntent.getActivity(context, 0, intent, pendingFlags)
-
-        val builder = androidx.core.app.NotificationCompat.Builder(context, channelId)
-            .setSmallIcon(notificationIconFor(app))
-            .setContentTitle(title)
-            .setContentText(body)
-            .setAutoCancel(true)
-            // Damp bursts: a batch of server events re-posts the same tag in
-            // rapid succession (e.g. an RSS poll ingesting several posts);
-            // the first alerts, the rest update the tray silently.
-            .setOnlyAlertOnce(!SystemNotifications.shouldAlert(tag.ifBlank { instance }))
-            .setContentIntent(pending)
-            // Retire the nonce when the notification is swiped away. Without
-            // this only a tap spent one, so the store filled with nonces no tap
-            // would ever present and evicted live ones to make room.
-            .setDeleteIntent(dismissIntent(context, nonce))
-
-        val nm = androidx.core.app.NotificationManagerCompat.from(context)
-        if (nm.areNotificationsEnabled()) {
-            try {
-                nm.notify(tag.ifBlank { instance }, tag.hashCode(), builder.build())
-            } catch (e: SecurityException) {
-                Log.w(TAG, "Notification post denied: ${e.message}")
-            }
-        }
     }
 
     private companion object {

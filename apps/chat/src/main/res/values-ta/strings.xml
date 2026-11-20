@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s நண்பர்களிடமிருந்து மட்டுமே அரட்டைகளை ஏற்கிறார்.</string>
     <string name="chat_message_earlier">இந்தக் கணக்கு Mochi-இல் சேர்க்கப்படுவதற்கு முந்தைய செய்திகள் மறையாக்கப்பட்டுள்ளன, அவற்றை இங்கே படிக்க முடியாது</string>
     <string name="chat_message_excluded">பிற சாதனங்களுக்கு மட்டும் மறையாக்கப்பட்டது</string>
+    <string name="chat_setup">அமைக்க</string>
 </resources>

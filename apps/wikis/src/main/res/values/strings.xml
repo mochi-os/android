@@ -325,7 +325,6 @@
     <string name="wikis_attachments_delete_failed">Failed to delete attachment</string>
     <string name="wikis_attachments_caption_save_failed">Failed to save caption</string>
 
-    <string name="wikis_attachments_downloading">Downloading…</string>
 
     <string name="wikis_attachments_empty_title">No attachments yet</string>
     <string name="wikis_attachments_empty_description">Tap Upload to add files to this page.</string>

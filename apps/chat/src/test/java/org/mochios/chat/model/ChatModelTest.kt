@@ -44,10 +44,10 @@ class ChatModelTest {
     @Test
     fun `a member avatar goes through the chat app's person-asset proxy`() {
         val url = personAvatarUrl("p1")
-        assertEquals("/chat/-/person/p1/asset/avatar", url)
+        assertEquals("/chat/-/person/p1/asset/avatar", url?.address)
         // The direct people route cannot serve a member whose person entity
         // lives on another server.
-        assertFalse(url!!.startsWith("/people/"))
+        assertFalse(url!!.address.startsWith("/people/"))
     }
 
     // A member's id reaches the phone from their server, and the image request
@@ -57,7 +57,7 @@ class ChatModelTest {
         assertNull(personAvatarUrl("x/-/delete?"))
         assertNull(personAvatarUrl(".."))
         assertNull(personAvatarUrl(""))
-        assertEquals("/chat/-/person/a%3Fb/asset/avatar", personAvatarUrl("a?b"))
+        assertEquals("/chat/-/person/a%3Fb/asset/avatar", personAvatarUrl("a?b")?.address)
     }
 
     /** The settings list and the chat's heading order members as the web does. */

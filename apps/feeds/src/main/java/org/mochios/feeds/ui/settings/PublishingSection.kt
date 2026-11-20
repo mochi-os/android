@@ -5,8 +5,6 @@
 
 package org.mochios.feeds.ui.settings
 
-import android.app.DownloadManager
-import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -50,6 +48,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.DownloadRequest
+import org.mochios.android.files.rememberDownloadSaver
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButton
@@ -57,10 +57,9 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NetworkSetup
 import org.mochios.android.ui.components.Section
-import org.mochios.android.util.destination
 import org.mochios.android.util.providerName
-import org.mochios.android.util.webUri
 import org.mochios.feeds.R
 import org.mochios.feeds.model.Filter
 import org.mochios.feeds.model.PublishAccount
@@ -100,10 +99,12 @@ internal fun PublishingEvents(viewModel: PublishingViewModel) {
  * Where a public feed publishes: the owner's accounts on other networks, each
  * switched on or off for the feed. Switching one off offers to delete the
  * copies already there, keeping them by default. Each account's history can
- * be imported into the feed, and its archive downloaded.
+ * be imported into the feed, and its archive downloaded. A network the server
+ * offers that the owner has no account on is listed with a way to set one up,
+ * which [onOpenLink] opens.
  */
 @Composable
-internal fun PublishingSection(viewModel: PublishingViewModel) {
+internal fun PublishingSection(viewModel: PublishingViewModel, onOpenLink: (String) -> Unit = {}) {
     val state by viewModel.publish.collectAsState()
     // A server people of an import wait on, put to the user one at a time.
     val waitingPermission by viewModel.waitingPermission.collectAsState()
@@ -122,12 +123,16 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
     val kept by viewModel.kept.collectAsState()
     val backups by viewModel.backups.collectAsState()
     val accounts = viewModel.accounts(state)
-    if (accounts.isEmpty()) return
+    val missing = unset(state?.offered.orEmpty(), accounts)
+    if (accounts.isEmpty() && missing.isEmpty()) return
     val publish = state?.publish.orEmpty()
     val copies = state?.copies.orEmpty()
     val generators = state?.generators.orEmpty()
     val format = LocalFormat.current
-    val context = LocalContext.current
+    // An archive file goes where the user picks, fetched by the feeds client.
+    val saveBackup = rememberDownloadSaver { request, destination ->
+        viewModel.saveBackup(request.key, request.name, destination)
+    }
 
     Section(title = stringResource(R.string.feeds_publish_to)) {
         accounts.forEach { account ->
@@ -176,6 +181,9 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
                 )
             }
         }
+        missing.forEach { network ->
+            NetworkSetup(network = network, label = stringResource(R.string.feeds_setup), onOpenLink = onOpenLink)
+        }
     }
 
     kept?.let { offer ->
@@ -193,10 +201,7 @@ internal fun PublishingSection(viewModel: PublishingViewModel) {
     backups?.let { shown ->
         BackupsDialog(
             backups = shown,
-            onDownload = { name ->
-                val (url, token) = viewModel.backupFile(shown.account, name)
-                startBackupDownload(context, url, name, token)
-            },
+            onDownload = { name -> saveBackup(DownloadRequest(key = shown.account.id, name = name)) },
             onDismiss = { viewModel.closeBackups() },
         )
     }
@@ -315,22 +320,6 @@ private fun BackupsDialog(
         confirmText = stringResource(MochiR.string.common_close),
         onConfirm = onDismiss,
     )
-}
-
-/**
- * Hand an archive file to [DownloadManager]. The Authorization header is set
- * inline: DownloadManager runs outside the app process and never sees the
- * interceptor stack.
- */
-private fun startBackupDownload(context: Context, url: String, name: String, token: String?) {
-    val uri = webUri(url) ?: return
-    val safe = name.trim().replace(Regex("[/\\\\ ]"), "_").ifEmpty { "backup" }
-    val request = DownloadManager.Request(uri)
-        .setTitle(safe)
-        .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-        .destination(context, safe)
-    if (!token.isNullOrBlank()) request.addRequestHeader("Authorization", "Bearer $token")
-    (context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager).enqueue(request)
 }
 
 /**

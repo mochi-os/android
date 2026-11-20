@@ -13,6 +13,7 @@ import androidx.compose.ui.test.onNodeWithText
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.NumberFormat
@@ -57,7 +58,7 @@ class CountFormatTest {
     /** The position among the photos is counted; a thumbnail's number is a label. */
     @Test
     fun `a carousel's photo position and thumbnail`() {
-        val urls = List(1234) { index -> "https://example.org/$index.png" }
+        val urls = List(1234) { index -> OwnedAddress.of("/market/-/photo/p$index")!! }
         show { PhotoCarousel(photoUrls = urls, thumbnailUrls = urls) }
         rule.onNodeWithContentDescription("الصورة 1 من 1.234").assertExists()
         rule.onNodeWithContentDescription("صورة مصغرة 1").assertExists()

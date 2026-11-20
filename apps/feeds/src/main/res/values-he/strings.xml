@@ -396,4 +396,6 @@
     <string name="feeds_source_unfollowed">לא במעקב</string>
     <string name="feeds_source_follow_again">עקוב שוב</string>
     <string name="feeds_filtered_by_tag">מסונן לפי תגית:</string>
+    <string name="feeds_setup">הגדר</string>
+    <string name="feeds_search_example">חפש לפי שם, מזהה, טביעת אצבע, כתובת URL או %1$s</string>
 </resources>

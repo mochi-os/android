@@ -45,7 +45,7 @@ object AppModule {
         gson: Gson,
         sessionManager: SessionManager,
     ): Retrofit {
-        val serverUrl = sessionManager.getServerUrlBlocking().trimEnd('/')
+        val serverUrl = sessionManager.server.value.trimEnd('/')
         val client = okHttpClient.newBuilder()
             .addInterceptor(Interceptor { chain ->
                 val token = sessionManager.getTokenBlocking(APP)

@@ -164,7 +164,7 @@ fun CommentAttachments(
 
     if (showLightbox && images.isNotEmpty()) {
         LightboxScreen(
-            images = images.map { attachmentPath(baseURL, it.id).orEmpty() },
+            images = images.map { attachmentPath(baseURL, it.id) ?: "" },
             initialIndex = lightboxIndex,
             onDismiss = { showLightbox = false },
         )

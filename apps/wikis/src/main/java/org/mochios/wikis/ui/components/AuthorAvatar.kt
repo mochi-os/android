@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
@@ -53,7 +54,7 @@ fun AuthorAvatar(
     @Suppress("UNUSED_VARIABLE")
     // An id no segment can carry has the placeholder.
     val styleUrl = segment(revisionId)?.let { "${base}revision/$it/asset/style" }
-    val src = segment(revisionId)?.let { "${base}revision/$it/asset/avatar" }
+    val src = segment(revisionId)?.let { OwnedAddress.of("${base}revision/$it/asset/avatar") }
 
     EntityAvatar(
         name = authorName,

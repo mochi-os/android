@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">लेखक</string>
     <string name="forums_community_destination">%1$s मा %2$s को रूपमा पोस्ट हुन्छ</string>
+    <string name="forums_find_search_example">नाम, ID, फिङ्गरप्रिन्ट, URL वा %1$s ले खोज्नुहोस्</string>
+    <string name="forums_setup">सेटअप गर्नुहोस्</string>
 </resources>

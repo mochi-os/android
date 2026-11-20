@@ -334,4 +334,6 @@
     </plurals>
     <string name="forums_comment_op">投稿者</string>
     <string name="forums_community_destination">%1$s に %2$s として投稿します</string>
+    <string name="forums_find_search_example">名前、ID、フィンガープリント、URL、または %1$s で検索</string>
+    <string name="forums_setup">設定</string>
 </resources>

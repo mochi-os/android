@@ -144,6 +144,8 @@ fun FindFeedsContent(
     val owned by viewModel.owned.collectAsState()
     val following by viewModel.following.collectAsState()
     val pendingPermission by viewModel.pendingPermission.collectAsState()
+    val networks by viewModel.networks.collectAsState()
+    val example = addressExample(networks)
     val context = LocalContext.current
     val resources = LocalResources.current
     val format = LocalFormat.current
@@ -173,7 +175,15 @@ fun FindFeedsContent(
                     onSearch = { },
                     expanded = false,
                     onExpandedChange = { },
-                    placeholder = { Text(stringResource(R.string.feeds_search_placeholder)) },
+                    placeholder = {
+                        Text(
+                            if (example != null) {
+                                stringResource(R.string.feeds_search_example, example)
+                            } else {
+                                stringResource(R.string.feeds_search_placeholder)
+                            },
+                        )
+                    },
                     leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                     trailingIcon = if (isSearching || isProbing || isLookingUp) {
                         { CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp) }

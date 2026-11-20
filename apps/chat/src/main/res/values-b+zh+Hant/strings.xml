@@ -177,4 +177,5 @@
     <string name="chat_refused_friends_only">%1$s 只接受好友發起的聊天。</string>
     <string name="chat_message_earlier">此帳戶加入 Mochi 之前的訊息已加密，無法在此閱讀</string>
     <string name="chat_message_excluded">僅為其他裝置加密</string>
+    <string name="chat_setup">設定</string>
 </resources>

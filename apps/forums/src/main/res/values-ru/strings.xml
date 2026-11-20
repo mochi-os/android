@@ -340,4 +340,6 @@
     </plurals>
     <string name="forums_comment_op">Автор</string>
     <string name="forums_community_destination">Публикуется в %1$s от имени %2$s</string>
+    <string name="forums_find_search_example">Поиск по названию, ID, отпечатку, URL или адресу %1$s</string>
+    <string name="forums_setup">Настроить</string>
 </resources>

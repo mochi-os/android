@@ -319,7 +319,6 @@
     <string name="error_server_https">Server manzili https:// bilan boshlanishi kerak</string>
     <string name="device_name_fallback">Mobil qurilma</string>
     <string name="account_error_token_type">Qo‘llab-quvvatlanmaydigan token turi</string>
-    <string name="account_error_caller">Chaqiruvchiga ruxsat yo‘q</string>
     <string name="zone_sea">Dengizda</string>
     <string name="access_remove">Olib tashlash</string>
     <string name="access_remove_title">Kirishni olib tashlasinmi?</string>
@@ -345,4 +344,10 @@
     <string name="person_unknown">Nomaʼlum</string>
     <string name="format_time_seconds_short">%1$s son</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s yuklab olinmoqda…</string>
+    <string name="downloads_saved">%1$s saqlandi</string>
+    <string name="downloads_failed">%1$s saqlab boʻlmadi: %2$s</string>
+    <string name="sync_conflict">Serverda oʻzgartirilgan</string>
+    <string name="sync_missing">Serverda endi yoʻq</string>
+    <string name="sync_refused">Server rad etdi</string>
 </resources>

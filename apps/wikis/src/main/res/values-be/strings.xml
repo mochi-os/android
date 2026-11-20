@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">Тэг не можа быць пустым</string>
     <string name="wikis_attachments_search_placeholder">Пошук укладанняў</string>
     <string name="wikis_attachments_delete_confirm_message">Выдаліць „%1$s\"? Гэта нельга адмяніць.</string>
-    <string name="wikis_attachments_downloading">Загрузка…</string>
     <string name="wikis_attachments_empty_description">Дакраніцеся да Загрузіць, каб дадаць файлы на гэту старонку.</string>
     <string name="wikis_settings_name_save_cd">Захаваць назву</string>
     <string name="wikis_settings_name_cancel_cd">Скасаваць рэдагаванне</string>

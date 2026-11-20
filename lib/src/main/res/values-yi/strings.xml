@@ -318,7 +318,6 @@
     <string name="error_server_https">דער סערווער־אַדרעס מוז אָנהייבן מיט https://</string>
     <string name="device_name_fallback">מאָבילער מיטל</string>
     <string name="account_error_token_type">ניט־געשטיצטער טאָקן־טיפּ</string>
-    <string name="account_error_caller">דער רופֿער איז ניט דערלויבט</string>
     <string name="zone_sea">אויפֿן ים</string>
     <string name="access_remove">אַראָפּנעמען</string>
     <string name="access_remove_title">אַראָפּנעמען צוטריט?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">אומבאַקאַנט</string>
     <string name="format_time_seconds_short">%1$sס</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s ווערט אַראָפּגעלאָדן…</string>
+    <string name="downloads_saved">%1$s אויפֿגעהיט</string>
+    <string name="downloads_failed">מען האָט נישט געקענט היטן %1$s: %2$s</string>
+    <string name="sync_conflict">געביטן אויפֿן סערווער</string>
+    <string name="sync_missing">שוין נישטאָ אויפֿן סערווער</string>
+    <string name="sync_refused">אָפּגעוואָרפֿן פֿונעם סערווער</string>
 </resources>

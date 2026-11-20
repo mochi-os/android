@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">פֿאַרבינדט זיך…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">פֿאַרבינדט זיך ווידער…</string>
-    <string name="chess_ws_failed">פֿאַרבינדונג האָט נישט געלונגען</string>
     <string name="chess_move_capture">%1$s האָט גענומען %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

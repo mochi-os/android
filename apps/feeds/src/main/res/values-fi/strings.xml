@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Ei seurata</string>
     <string name="feeds_source_follow_again">Seuraa uudelleen</string>
     <string name="feeds_filtered_by_tag">Suodatettu tunnisteen mukaan:</string>
+    <string name="feeds_setup">Aseta</string>
+    <string name="feeds_search_example">Hae nimellä, tunnuksella, sormenjäljellä, URL-osoitteella tai osoitteella %1$s</string>
 </resources>

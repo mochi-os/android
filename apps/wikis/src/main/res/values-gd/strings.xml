@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Chan fhaod an taga a bhith falamh</string>
     <string name="wikis_attachments_search_placeholder">Lorg sna ceanglachain</string>
     <string name="wikis_attachments_delete_confirm_message">Sguab às “%1$s”? Cha ghabh seo a neo-dhèanamh.</string>
-    <string name="wikis_attachments_downloading">A\' luchdadh a-nuas…</string>
     <string name="wikis_attachments_empty_description">Thoir gnogag air Luchdaich suas gus faidhlichean a chur ris an duilleag seo.</string>
     <string name="wikis_settings_name_save_cd">Sàbhail an t-ainm</string>
     <string name="wikis_settings_name_cancel_cd">Sguir den deasachadh</string>

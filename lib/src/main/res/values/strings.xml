@@ -103,6 +103,9 @@
     <string name="common_file_save_to_device">Save to device</string>
     <string name="common_file_share">Share</string>
     <string name="common_file_save_failed">Couldn\'t save the file</string>
+    <string name="downloads_started">Downloading %1$s…</string>
+    <string name="downloads_saved">%1$s saved</string>
+    <string name="downloads_failed">Couldn\'t save %1$s: %2$s</string>
     <string name="common_file_open_failed">Couldn\'t open file</string>
     <string name="common_attachment_unavailable">Attachment temporarily unavailable</string>
     <string name="common_unavailable">Unavailable</string>
@@ -399,8 +402,10 @@
     <string name="settings_card_flat">Flat</string>
     <string name="settings_card_raised">Raised</string>
     <string name="error_server_https">The server address must start with https://</string>
-    <string name="account_error_caller">Caller not allowed</string>
     <string name="account_error_token_type">Unsupported token type</string>
+    <string name="sync_conflict">Changed on the server</string>
+    <string name="sync_missing">No longer on the server</string>
+    <string name="sync_refused">Refused by the server</string>
     <string name="device_name_fallback">Mobile device</string>
     <string name="zone_sea">At sea</string>
     <string name="zone_attribution" translatable="false">© OpenStreetMap contributors</string>

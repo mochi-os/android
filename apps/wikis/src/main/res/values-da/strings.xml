@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tag må ikke være tomt</string>
     <string name="wikis_attachments_search_placeholder">Søg vedhæftninger</string>
     <string name="wikis_attachments_delete_confirm_message">Slet \"%1$s\"? Dette kan ikke fortrydes.</string>
-    <string name="wikis_attachments_downloading">Henter…</string>
     <string name="wikis_attachments_empty_description">Tryk på Upload for at tilføje filer til denne side.</string>
     <string name="wikis_settings_name_save_cd">Gem navn</string>
     <string name="wikis_settings_name_cancel_cd">Annullér redigering</string>

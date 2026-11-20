@@ -14,13 +14,18 @@ import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import kotlinx.coroutines.flow.combine
 import okhttp3.Cookie
 import okhttp3.CookieJar
 import okhttp3.HttpUrl
@@ -29,8 +34,10 @@ import org.mochios.android.account.MochiAccount
 import org.mochios.android.sync.CalendarsSync
 import org.mochios.android.sync.ContactsSync
 import org.mochios.android.ui.components.LastViewedStore
+import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.isServerOrigin
 import org.mochios.android.util.originOf
+import org.mochios.android.util.serverOrigin
 import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -38,9 +45,17 @@ import javax.inject.Singleton
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "mochi_session")
 
 @Singleton
-class SessionManager @Inject constructor(
-    @param:ApplicationContext private val context: Context
+class SessionManager internal constructor(
+    private val context: Context,
+    following: CoroutineScope,
 ) {
+    /**
+     * [following] is where [server] is kept current from the store; a test
+     * holds it still to see what [setServerUrl] sets by itself.
+     */
+    @Inject constructor(@ApplicationContext context: Context) :
+        this(context, CoroutineScope(SupervisorJob() + Dispatchers.IO))
+
     companion object {
         private val KEY_SERVER_URL = stringPreferencesKey("server_url")
         private val KEY_SESSION_COOKIE = stringPreferencesKey("session_cookie")
@@ -63,10 +78,20 @@ class SessionManager @Inject constructor(
         private val KEY_OAUTH_GRANT_RETURN_CODE = stringPreferencesKey("oauth_grant_return_code")
         private val KEY_OAUTH_GRANT_RETURN_ERROR = stringPreferencesKey("oauth_grant_return_error")
         private val KEY_BOUND_IDENTITY = stringPreferencesKey("bound_identity")
+        // Written by releases before this one and read by none: dropped on the
+        // next binding.
         private val KEY_BOUND_SERVER = stringPreferencesKey("bound_server")
         private const val TOKEN_PREFIX = "token_"
         private const val DEFAULT_SERVER_URL = "https://mochi-os.org"
         private const val KEYSTORE_ALIAS = "mochi.credentials"
+
+        /**
+         * What signing out keeps: where the app points and the theme that
+         * server gave, which are the server's and not the session's. Emptied,
+         * the next sign-in would go to mochi-os.org, with nothing on screen
+         * saying so when the server step is already behind the user.
+         */
+        private val KEPT = setOf(KEY_SERVER_URL, KEY_THEME_HUE, KEY_THEME_CHROMA, KEY_THEME_HUE_BG)
     }
 
     data class ThemeAnchors(val hue: Float, val chroma: Float, val hueBg: Float)
@@ -98,6 +123,22 @@ class SessionManager @Inject constructor(
         prefs[KEY_SERVER_URL] ?: DEFAULT_SERVER_URL
     }
 
+    private val held = MutableStateFlow(runBlocking { dataStore.data.first()[KEY_SERVER_URL] ?: DEFAULT_SERVER_URL })
+
+    /**
+     * The server address, held in memory: read once as this is made, then
+     * kept current from the store, and set as [setServerUrl] writes. For the
+     * image pipeline and the players, which ask on the main thread for every
+     * request, and for anything else that needs it without a suspension.
+     */
+    val server: StateFlow<String> = held.asStateFlow()
+
+    init {
+        following.launch {
+            serverUrl.collect { address -> held.value = address }
+        }
+    }
+
     val isAuthenticated: Flow<Boolean> = dataStore.data.map { prefs ->
         prefs[KEY_SESSION_COOKIE] != null
     }
@@ -107,13 +148,17 @@ class SessionManager @Inject constructor(
     }
 
     /**
-     * Point the client at [url]. A different origin invalidates the session
-     * cookie and every per-app token, dropped in the same transaction.
-     * "Different" is an origin comparison, so a trailing slash or explicit :443
-     * is not a sign-out.
+     * Point the client at [url], stored as its origin ([serverOrigin]): a
+     * path, query or fragment typed or pasted with it is dropped. A different
+     * origin invalidates the session cookie and every per-app token, dropped
+     * in the same transaction. "Different" is an origin comparison, so a
+     * trailing slash or explicit :443 is not a sign-out.
+     *
+     * @throws IllegalArgumentException for an address that does not parse or
+     *   carries a user name or password.
      */
     suspend fun setServerUrl(url: String) {
-        val server = url.trimEnd('/')
+        val server = requireNotNull(serverOrigin(url)) { "not a server address" }
         var changed = false
         dataStore.edit { prefs ->
             val previous = prefs[KEY_SERVER_URL]
@@ -130,8 +175,8 @@ class SessionManager @Inject constructor(
             // The binding names an identity on the old server. Left in place, a
             // surviving AccountManager row is adopted and points us back at it.
             prefs.remove(KEY_BOUND_IDENTITY)
-            prefs.remove(KEY_BOUND_SERVER)
         }
+        held.value = server
         if (changed) {
             cookieStore.clear()
             sealed.forget()
@@ -148,15 +193,12 @@ class SessionManager @Inject constructor(
     /** Identity (network-unique entity ID) this app is currently bound to. */
     val boundIdentity: Flow<String?> = dataStore.data.map { it[KEY_BOUND_IDENTITY] }
 
-    /** Server this app's bound account belongs to. */
-    val boundServer: Flow<String?> = dataStore.data.map { it[KEY_BOUND_SERVER] }
-
-    suspend fun setBoundAccount(identity: String, server: String) {
+    suspend fun setBoundAccount(identity: String) {
         var previous: String? = null
         dataStore.edit { prefs ->
             previous = prefs[KEY_BOUND_IDENTITY]
             prefs[KEY_BOUND_IDENTITY] = identity
-            prefs[KEY_BOUND_SERVER] = server
+            prefs.remove(KEY_BOUND_SERVER)
         }
         // An account adopted from a sibling install arrives without a sign-out
         // here, so what was held for the one before it goes now.
@@ -165,11 +207,12 @@ class SessionManager @Inject constructor(
 
     /**
      * Forget what the device holds for the account before: the item each app
-     * last had open, which the next account would be sent to and not find,
-     * and the image cache, which serves a held image by its address without
+     * last had open, which the next account would be sent to and not find;
+     * the image cache, which serves a held image by its address without
      * asking the server, so the next account would be shown the previous
      * one's avatars and attachments without the server deciding whether it
-     * may see them.
+     * may see them; and the documents downloaded to open or share, which the
+     * opener hands to a viewer again without asking.
      */
     private suspend fun forgetAccount() {
         LastViewedStore.forget(context)
@@ -179,6 +222,7 @@ class SessionManager @Inject constructor(
             loader.memoryCache?.clear()
             withContext(Dispatchers.IO) { loader.diskCache?.clear() }
         }
+        runCatching { withContext(Dispatchers.IO) { AttachmentOpener.forget(context) } }
     }
 
     suspend fun getBoundIdentity(): String? = dataStore.data.first()[KEY_BOUND_IDENTITY]
@@ -215,10 +259,15 @@ class SessionManager @Inject constructor(
         }
     }
 
+    /**
+     * Sign out: the session, every app token, the binding and any ceremony in
+     * flight go, with the account's synced contacts and calendars; the server
+     * address and its theme stay ([KEPT]).
+     */
     suspend fun clearAll() {
         val identity = dataStore.data.first()[KEY_BOUND_IDENTITY]
         dataStore.edit { prefs ->
-            prefs.clear()
+            for (key in prefs.asMap().keys - KEPT) prefs.remove(key)
         }
         // Drop the in-memory cookies too, or the stale `session` rides the next
         // request and the rolling Set-Cookie re-persists what was just cleared.
@@ -403,11 +452,11 @@ class SessionManager @Inject constructor(
         }
     }
 
-    fun getServerUrlBlocking(): String {
-        return runBlocking {
-            dataStore.data.first()[KEY_SERVER_URL] ?: DEFAULT_SERVER_URL
-        }
-    }
+    /**
+     * The server address. It no longer blocks: it reads [server], and is kept
+     * for the callers not yet moved to that.
+     */
+    fun getServerUrlBlocking(): String = server.value
 
     private fun getSessionCookieBlocking(): String? {
         return runBlocking {
@@ -425,7 +474,7 @@ class SessionManager @Inject constructor(
 
     /** True when [url] is the user's own Mochi server. See [isServerOrigin]. */
     private fun isServerOrigin(url: HttpUrl): Boolean =
-        isServerOrigin(url, getServerUrlBlocking())
+        isServerOrigin(url, server.value)
 
     /**
      * Carries the Mochi session cookie to the user's own server and nowhere

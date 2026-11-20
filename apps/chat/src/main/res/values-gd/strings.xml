@@ -186,4 +186,5 @@
     <string name="chat_refused_friends_only">Cha ghabh %1$s ri cabadaich ach o charaidean.</string>
     <string name="chat_message_earlier">Tha teachdaireachdan o mus deach an cunntas seo a chur ri Mochi crioptaichte agus cha ghabh an leughadh an-seo</string>
     <string name="chat_message_excluded">Crioptaichte airson uidheaman eile a-mhàin</string>
+    <string name="chat_setup">Suidhich</string>
 </resources>

@@ -119,6 +119,7 @@
     <string name="chat_as_address">As %1$s</string>
     <string name="chat_new_network">Network</string>
     <string name="chat_new_network_mochi" translatable="false">Mochi</string>
+    <string name="chat_setup">Set up</string>
     <string name="chat_new_addresses">Addresses</string>
     <string name="chat_new_address_fediverse" translatable="false">@name@server.example</string>
     <string name="chat_new_address_xmpp" translatable="false">name@server.example</string>

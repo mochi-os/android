@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">未追蹤</string>
     <string name="feeds_source_follow_again">重新追蹤</string>
     <string name="feeds_filtered_by_tag">依標籤篩選:</string>
+    <string name="feeds_setup">設定</string>
+    <string name="feeds_search_example">依名稱、ID、指紋、網址或 %1$s 搜尋</string>
 </resources>

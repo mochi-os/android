@@ -10,6 +10,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.junit.runner.RunWith
 import org.mochios.android.sync.ContactProperty
 import org.mochios.people.model.Contact
 import org.mochios.people.model.ContactMessage
@@ -21,12 +22,17 @@ import org.mochios.people.ui.invitations.inviteAvatar
 import org.mochios.people.ui.invitations.receivedDetail
 import org.mochios.people.ui.invitations.sentDetail
 import org.mochios.people.ui.person.forumLink
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
 /**
  * A contact's handles on other networks and messaging addresses, as the
  * editor reads and writes them, and the links and states the screens build
- * from what the server says of networks.
+ * from what the server says of networks. Robolectric for the links, which
+ * escape their values with Android's own encoder.
  */
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [35])
 class NetworksFormTest {
 
     private val card = listOf(
@@ -112,7 +118,7 @@ class NetworksFormTest {
             message = ContactMessage(address = "matrix:u/ada:example.org", account = "a1"),
         )
         assertEquals(
-            "chat/new?account=a1&address=matrix%3Au%2Fada%3Aexample.org&name=Ada+Lovelace",
+            "chat/new?account=a1&address=matrix%3Au%2Fada%3Aexample.org&name=Ada%20Lovelace",
             messageLink(other),
         )
         assertNull(messageLink(Contact(id = "c3", name = "Nobody")))
@@ -146,7 +152,7 @@ class NetworksFormTest {
         assertNull(inviteAvatar(xmpp))
         val mochi = FriendInvite(id = "p1", name = "Ada")
         assertEquals("Pending", sentDetail(mochi, "Pending"))
-        assertEquals("/people/p1/-/avatar", inviteAvatar(mochi))
+        assertEquals("/people/p1/-/avatar", inviteAvatar(mochi)?.address)
     }
 
     @Test

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tag mag niet leeg zijn</string>
     <string name="wikis_attachments_search_placeholder">Bijlagen zoeken</string>
     <string name="wikis_attachments_delete_confirm_message">\"%1$s\" verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
-    <string name="wikis_attachments_downloading">Downloaden…</string>
     <string name="wikis_attachments_empty_description">Tik op Uploaden om bestanden aan deze pagina toe te voegen.</string>
     <string name="wikis_settings_name_save_cd">Naam opslaan</string>
     <string name="wikis_settings_name_cancel_cd">Bewerking annuleren</string>

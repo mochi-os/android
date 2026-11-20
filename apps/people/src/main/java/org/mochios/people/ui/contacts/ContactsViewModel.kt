@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.contacts
 
+import android.net.Uri
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -380,8 +381,7 @@ class ContactsViewModel @Inject constructor(
  * reaches it; null where there is neither.
  */
 internal fun messageLink(contact: Contact): String? {
-    if (contact.friend && contact.person.isNotBlank()) return "chat/new?friend=${contact.person}"
+    if (contact.friend && contact.person.isNotBlank()) return "chat/new?friend=${Uri.encode(contact.person)}"
     val message = contact.message ?: return null
-    fun encode(value: String) = java.net.URLEncoder.encode(value, Charsets.UTF_8.name())
-    return "chat/new?account=${encode(message.account)}&address=${encode(message.address)}&name=${encode(contact.name)}"
+    return "chat/new?account=${Uri.encode(message.account)}&address=${Uri.encode(message.address)}&name=${Uri.encode(contact.name)}"
 }

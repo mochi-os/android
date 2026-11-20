@@ -28,6 +28,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.R as MochiR
 import org.mochios.android.files.Upload
 import org.mochios.android.model.Attachment
@@ -62,11 +63,11 @@ fun AttachmentsSection(
     }
 
     // An id no segment can carry has no address, and the gallery leaves it out.
-    val urlBuilder: (Attachment) -> String = { attachment ->
-        attachmentAddress("crm", crmId, attachment.id).orEmpty()
+    val urlBuilder: (Attachment) -> OwnedAddress? = { attachment ->
+        attachmentAddress("crm", crmId, attachment.id)
     }
-    val thumbnailUrlBuilder: (Attachment) -> String = { attachment ->
-        attachmentAddress("crm", crmId, attachment.id, "thumbnail").orEmpty()
+    val thumbnailUrlBuilder: (Attachment) -> OwnedAddress? = { attachment ->
+        attachmentAddress("crm", crmId, attachment.id, "thumbnail")
     }
 
     // Newest first.

@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s ჩატებს მხოლოდ მეგობრებისგან იღებს.</string>
     <string name="chat_message_earlier">შეტყობინებები ამ ანგარიშის Mochi-ში დამატებამდე დაშიფრულია და აქ ვერ წაიკითხება</string>
     <string name="chat_message_excluded">დაშიფრულია მხოლოდ სხვა მოწყობილობებისთვის</string>
+    <string name="chat_setup">დაყენება</string>
 </resources>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tag teu meunang kosong</string>
     <string name="wikis_attachments_search_placeholder">Milarian lampiran</string>
     <string name="wikis_attachments_delete_confirm_message">Hapus “%1$s”? Ieu teu bisa dibolaykeun.</string>
-    <string name="wikis_attachments_downloading">Nuju ngunduh…</string>
     <string name="wikis_attachments_empty_description">Toél Unggah pikeun nambahan koropak kana kaca ieu.</string>
     <string name="wikis_settings_name_save_cd">Simpen ngaran</string>
     <string name="wikis_settings_name_cancel_cd">Bolaykeun éditan</string>

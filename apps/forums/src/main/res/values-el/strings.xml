@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Συντάκτης</string>
     <string name="forums_community_destination">Δημοσιεύεται στο %1$s ως %2$s</string>
+    <string name="forums_find_search_example">Αναζήτηση κατά όνομα, ID, αποτύπωμα, URL ή %1$s</string>
+    <string name="forums_setup">Ρύθμιση</string>
 </resources>

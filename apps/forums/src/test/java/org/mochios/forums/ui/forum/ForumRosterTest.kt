@@ -147,7 +147,7 @@ class ForumRosterTest {
         session = SessionManager(context)
         runBlocking {
             session.setServerUrl(base)
-            session.setBoundAccount("a1", base)
+            session.setBoundAccount("a1")
         }
         socket = MochiWebSocket(OkHttpClient(), Gson(), object : SocketSession {
             override suspend fun serverUrl(): String = base
@@ -268,7 +268,7 @@ class ForumRosterTest {
         assertEquals(1, informations.get())
         // Somebody else signs in: the first account's roster is not theirs.
         owner = "b2"
-        session.setBoundAccount("b2", base)
+        session.setBoundAccount("b2")
         assertEquals("b2 forum", repository.forumsInformation().forums.single().name)
         assertEquals(2, informations.get())
         // Signed out, nobody's roster is held.
@@ -283,7 +283,7 @@ class ForumRosterTest {
         val saved = SavedRepository(api, Gson(), session)
         runBlocking { saved.load() }
         assertEquals(setOf("s1"), saved.savedIds.value)
-        runBlocking { session.setBoundAccount("b2", base) }
+        runBlocking { session.setBoundAccount("b2") }
         until { saved.savedIds.value.isEmpty() && saved.saved.value.isEmpty() }
         runBlocking { saved.load() }
         assertEquals(setOf("s1"), saved.savedIds.value)
@@ -300,7 +300,7 @@ class ForumRosterTest {
         val reading = Thread { runBlocking { saved.load() } }
         reading.start()
         until { reads.get() == 2 }
-        runBlocking { session.setBoundAccount("b2", base) }
+        runBlocking { session.setBoundAccount("b2") }
         until { saved.savedIds.value.isEmpty() }
         held.countDown()
         reading.join(5_000)
@@ -375,10 +375,10 @@ class ForumRosterTest {
         val reading = Thread { runBlocking { repository.forumsInformation() } }
         reading.start()
         until { informations.get() == 1 }
-        runBlocking { session.setBoundAccount("b2", base) }
+        runBlocking { session.setBoundAccount("b2") }
         held.countDown()
         reading.join(5_000)
-        runBlocking { session.setBoundAccount("a1", base) }
+        runBlocking { session.setBoundAccount("a1") }
         runBlocking { repository.forumsInformation() }
         assertEquals(2, informations.get())
     }
@@ -389,7 +389,7 @@ class ForumRosterTest {
         val saved = SavedRepository(api, Gson(), session)
         runBlocking { saved.load() }
         assertEquals(emptySet<String>(), saved.savedIds.value)
-        runBlocking { session.setBoundAccount("c3", base) }
+        runBlocking { session.setBoundAccount("c3") }
         runBlocking { saved.load() }
         assertEquals(setOf("s1"), saved.savedIds.value)
     }
@@ -401,7 +401,7 @@ class ForumRosterTest {
         settle()
         runBlocking { saved.add(Post(id = "x", forum = "f1")) }
         assertEquals(setOf("x"), saved.savedIds.value)
-        runBlocking { session.setBoundAccount("c3", base) }
+        runBlocking { session.setBoundAccount("c3") }
         until { saved.savedIds.value.isEmpty() }
     }
 

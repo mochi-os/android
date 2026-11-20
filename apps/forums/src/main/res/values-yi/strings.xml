@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">מחבר</string>
     <string name="forums_community_destination">ווערט פֿאַרעפֿנטלעכט אין %1$s ווי %2$s</string>
+    <string name="forums_find_search_example">זוך לויט נאָמען, ID, פֿינגערפּרינט, URL, אָדער %1$s</string>
+    <string name="forums_setup">שטעל אויף</string>
 </resources>

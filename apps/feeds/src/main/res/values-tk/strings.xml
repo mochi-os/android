@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Yzarlanmaýar</string>
     <string name="feeds_source_follow_again">Täzeden yzarla</string>
     <string name="feeds_filtered_by_tag">Bellik boýunça süzüldi:</string>
+    <string name="feeds_setup">Düzmek</string>
+    <string name="feeds_search_example">At, ID, fingerprint, URL ýa-da %1$s boýunça gözle</string>
 </resources>

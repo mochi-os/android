@@ -318,7 +318,6 @@
     <string name="error_server_https">Adireshin sabar dole ne ya fara da https://</string>
     <string name="device_name_fallback">Na\'urar wayar hannu</string>
     <string name="account_error_token_type">Nau\'in alama da ba a tallafawa</string>
-    <string name="account_error_caller">Ba a yarda mai kira ba</string>
     <string name="zone_sea">A teku</string>
     <string name="access_remove">Cire</string>
     <string name="access_remove_title">A cire damar shiga?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Ba a sani ba</string>
     <string name="format_time_seconds_short">%1$sd</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Ana sauke %1$s…</string>
+    <string name="downloads_saved">An adana %1$s</string>
+    <string name="downloads_failed">An kasa adana %1$s: %2$s</string>
+    <string name="sync_conflict">An canza a kan sabar</string>
+    <string name="sync_missing">Ba ya kan sabar yanzu</string>
+    <string name="sync_refused">Sabar ta ƙi</string>
 </resources>

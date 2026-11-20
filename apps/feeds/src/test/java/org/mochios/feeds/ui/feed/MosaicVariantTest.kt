@@ -23,6 +23,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.model.Attachment
 import org.mochios.android.ui.components.mediumAddress
 import org.robolectric.RobolectricTestRunner
@@ -69,7 +70,7 @@ class MosaicVariantTest {
             GalleryMosaic(
                 media = media,
                 tileModel = { it.previewUrl.orEmpty() },
-                mediumModel = { mediumAddress(it.previewUrl) },
+                mediumModel = { mediumAddress(OwnedAddress.of(it.previewUrl)) },
                 onTap = {},
                 modifier = Modifier.size(411.dp),
             )

@@ -237,7 +237,8 @@ object PushTransport {
     ): JSONObject? {
         val appToken = authRepository.fetchToken("notifications").getOrNull() ?: return null
         val url = server.trimEnd('/') + "/notifications/-/push/setup"
-        // GET — the action takes no parameters; server reads from settings.
+        // A POST with an empty body: the action takes no parameters and
+        // answers from the server's settings.
         val request = Request.Builder()
             .url(url)
             .header("Authorization", "Bearer $appToken")

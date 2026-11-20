@@ -322,7 +322,6 @@
     <string name="error_server_https">L-indirizz tas-server irid jibda b\'https://</string>
     <string name="device_name_fallback">Apparat mobbli</string>
     <string name="account_error_token_type">Tip ta\' token mhux appoġġjat</string>
-    <string name="account_error_caller">Min iċempel mhux permess</string>
     <string name="zone_sea">Fuq il-baħar</string>
     <string name="access_remove">Neħħi</string>
     <string name="access_remove_title">Tneħħi l-aċċess?</string>
@@ -351,4 +350,10 @@
     <string name="person_unknown">Mhux magħruf</string>
     <string name="format_time_seconds_short">%1$ssek</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Qed jitniżżel %1$s…</string>
+    <string name="downloads_saved">%1$s issejvjat</string>
+    <string name="downloads_failed">%1$s ma setax jiġi ssejvjat: %2$s</string>
+    <string name="sync_conflict">Inbidel fuq is-server</string>
+    <string name="sync_missing">M\'għadux fuq is-server</string>
+    <string name="sync_refused">Miċħud mis-server</string>
 </resources>

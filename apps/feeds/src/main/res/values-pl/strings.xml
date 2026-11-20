@@ -407,4 +407,6 @@
     <string name="feeds_source_unfollowed">Nie obserwujesz</string>
     <string name="feeds_source_follow_again">Obserwuj ponownie</string>
     <string name="feeds_filtered_by_tag">Filtrowane według tagu:</string>
+    <string name="feeds_setup">Skonfiguruj</string>
+    <string name="feeds_search_example">Szukaj według nazwy, ID, identyfikatora, adresu URL lub adresu %1$s</string>
 </resources>

@@ -318,7 +318,6 @@
     <string name="error_server_https">Սերվերի հասցեն պետք է սկսվի https://</string>
     <string name="device_name_fallback">Բջջային սարք</string>
     <string name="account_error_token_type">Չաջակցվող նշանի տեսակ</string>
-    <string name="account_error_caller">Կանչողին թույլատրված չէ</string>
     <string name="zone_sea">Ծովում</string>
     <string name="access_remove">Հեռացնել</string>
     <string name="access_remove_title">Հեռացնե՞լ մուտքը։</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Անհայտ</string>
     <string name="format_time_seconds_short">%1$sվ</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Ներբեռնվում է %1$s…</string>
+    <string name="downloads_saved">%1$s պահպանված է</string>
+    <string name="downloads_failed">Չհաջողվեց պահպանել %1$s: %2$s</string>
+    <string name="sync_conflict">Փոխվել է սերվերում</string>
+    <string name="sync_missing">Այլևս սերվերում չէ</string>
+    <string name="sync_refused">Մերժվել է սերվերի կողմից</string>
 </resources>

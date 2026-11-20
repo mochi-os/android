@@ -68,7 +68,8 @@ private fun ButtonProgress() {
 
 /**
  * Linking an existing account: the network, then what its provider's form
- * asks; a server's consent takes the user to the browser and back.
+ * asks; a server's consent takes the user to the browser and back. [initial]
+ * is the provider chosen as it opens, the first offered where it is none.
  */
 @Composable
 internal fun LinkDialog(
@@ -76,8 +77,11 @@ internal fun LinkDialog(
     busy: Boolean,
     onLink: (type: String, fields: Map<String, String>, oauth: Boolean) -> Unit,
     onDismiss: () -> Unit,
+    initial: String? = null,
 ) {
-    var type by remember { mutableStateOf(providers.firstOrNull()?.type.orEmpty()) }
+    var type by remember {
+        mutableStateOf((providers.firstOrNull { it.type == initial } ?: providers.firstOrNull())?.type.orEmpty())
+    }
     var picking by remember { mutableStateOf(false) }
     val values = remember(type) { mutableStateMapOf<String, String>() }
     val provider = providers.firstOrNull { it.type == type }

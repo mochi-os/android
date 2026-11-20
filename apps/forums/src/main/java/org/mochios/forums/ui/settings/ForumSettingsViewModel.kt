@@ -131,7 +131,7 @@ class ForumSettingsViewModel @Inject constructor(
     fun unsubscribe() {
         viewModelScope.launch {
             try {
-                repository.unsubscribe(entityId(), _uiState.value.forum.server.ifBlank { null })
+                repository.unsubscribe(entityId())
                 _uiState.value = _uiState.value.copy(unsubscribed = true)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(error = e.toMochiError())

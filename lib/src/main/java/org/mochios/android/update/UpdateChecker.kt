@@ -16,8 +16,12 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.NetworkType
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.PeriodicWorkRequest
+import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import androidx.work.workDataOf
+import com.google.crypto.tink.subtle.Ed25519Verify
 import java.security.KeyFactory
 import java.security.Signature
 import java.security.spec.X509EncodedKeySpec
@@ -46,10 +50,10 @@ import java.security.MessageDigest
 import java.util.concurrent.TimeUnit
 
 /**
- * Daily poll of `packages.mochi-os.org/android/versions.json`. A newer
- * production version is staged in `cacheDir/updates/` and recorded as
- * `pending_version`, which [UpdateInstaller.promptIfPending] offers on the next
- * foreground entry.
+ * Daily poll of `packages.mochi-os.org/android/versions.json`, on any network.
+ * A newer production version is downloaded on an unmetered one, staged in
+ * `cacheDir/updates/` and recorded as `pending_version`, which
+ * [UpdateInstaller.pending] offers on the next foreground entry.
  */
 class UpdateChecker(
     context: Context,
@@ -61,6 +65,18 @@ class UpdateChecker(
         // burn this worker's ten-minute window (and a wakelock) doing nothing,
         // so back off and let WorkManager re-run us once it has finished.
         if (state.value is DownloadState.Running) return Result.retry()
+        // The daily poll reads only the manifest, and hands a newer version's
+        // download to the work that waits for an unmetered network.
+        if (inputData.getBoolean(KEY_POLL, false)) {
+            return when (checkForUpdate(applicationContext)) {
+                is UpdateStatus.Available -> {
+                    enqueueUnmeteredDownload(applicationContext)
+                    Result.success()
+                }
+                UpdateStatus.UpToDate, is UpdateStatus.Ready -> Result.success()
+                UpdateStatus.Offline -> Result.retry()
+            }
+        }
         return when (checkNow(applicationContext)) {
             CheckOutcome.UpToDate, CheckOutcome.UpdateStaged -> Result.success()
             CheckOutcome.NetworkError, CheckOutcome.DownloadFailed -> Result.retry()
@@ -73,6 +89,10 @@ class UpdateChecker(
         // Background download used to finish an update if the process is killed
         // mid-download (the foreground inline path is the primary one).
         private const val ONESHOT_WORK = "mochi_update_check_oneshot"
+        // The download the daily poll starts, held until the phone is on an
+        // unmetered network.
+        private const val UNMETERED_WORK = "mochi_update_download"
+        private const val KEY_POLL = "poll"
         const val PREFS = "mochi_update"
         const val KEY_PENDING = "pending_version"
         const val KEY_PENDING_PATH = "pending_path"
@@ -81,6 +101,9 @@ class UpdateChecker(
         // it was verified is discarded rather than handed over as good.
         const val KEY_PENDING_SIZE = "pending_size"
         const val KEY_PENDING_SHA = "pending_sha256"
+        // The generation time of the newest manifest accepted, the watermark
+        // an older one is refused under.
+        const val KEY_GENERATED = "manifest_generated"
         private const val TRACK = "production"
         private const val BASE_URL = "https://packages.mochi-os.org/android"
         private const val VERSIONS_URL = "$BASE_URL/versions.json"
@@ -90,6 +113,15 @@ class UpdateChecker(
         // core/server/update.go - the server manifests use it too.
         private const val MANIFEST_PUBLIC_KEY =
             "e8W9tRQLNhmcqDAxIYSuKyXGPSThMC90FWSQMCktMAA="
+        private const val PLATFORM = "android"
+
+        // How far ahead of this phone's clock a manifest's generation time may
+        // be, as core allows (update_manifest_skew). Further, and it would
+        // raise the watermark past every real manifest to come.
+        private const val SKEW = 24L * 60 * 60
+
+        // The shape of a version the build produces: "1.17", or "1.17.2".
+        private val VERSION = Regex("""^\d+(\.\d+){1,2}$""")
 
         // Absolute ceiling on a download, whatever the manifest claims. The
         // APK is ~40 MB; this only bounds how much cache a compromised or
@@ -151,19 +183,44 @@ class UpdateChecker(
         /**
          * Idempotent daily schedule; call from the host Application's onCreate.
          * Cancels any existing work when the APK came from an app store.
+         *
+         * UPDATE keeps the work already scheduled and its next run time: the
+         * process is started by much more than the user - a push, a sync,
+         * boot - and REPLACE ran the check at each start. It still takes up a
+         * change to the request, which KEEP would ignore for ever.
          */
         fun schedule(context: Context) {
             if (InstallSource.isStoreInstalled(context)) {
                 WorkManager.getInstance(context).cancelUniqueWork(WORK_NAME)
+                WorkManager.getInstance(context).cancelUniqueWork(UNMETERED_WORK)
                 return
             }
-            val request = PeriodicWorkRequestBuilder<UpdateChecker>(
-                24, TimeUnit.HOURS,
-            ).build()
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
                 WORK_NAME,
-                ExistingPeriodicWorkPolicy.REPLACE,
-                request,
+                ExistingPeriodicWorkPolicy.UPDATE,
+                pollRequest(),
+            )
+        }
+
+        /** The daily manifest poll: small, so any network will do. */
+        internal fun pollRequest(): PeriodicWorkRequest =
+            PeriodicWorkRequestBuilder<UpdateChecker>(24, TimeUnit.HOURS)
+                .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build())
+                .setInputData(workDataOf(KEY_POLL to true))
+                .build()
+
+        /**
+         * The ~40 MB download the daily poll starts unasked, held for an
+         * unmetered network so it never runs on mobile data or roaming.
+         */
+        internal fun unmeteredRequest(): OneTimeWorkRequest =
+            OneTimeWorkRequestBuilder<UpdateChecker>()
+                .setConstraints(Constraints.Builder().setRequiredNetworkType(NetworkType.UNMETERED).build())
+                .build()
+
+        private fun enqueueUnmeteredDownload(context: Context) {
+            WorkManager.getInstance(context).enqueueUniqueWork(
+                UNMETERED_WORK, ExistingWorkPolicy.KEEP, unmeteredRequest(),
             )
         }
 
@@ -176,8 +233,11 @@ class UpdateChecker(
             val ctx = context.applicationContext
             if (InstallSource.isStoreInstalled(ctx)) return@withContext UpdateStatus.UpToDate
             val current = currentVersionName(ctx) ?: return@withContext UpdateStatus.UpToDate
+            // Unreachable and refused alike are a check that did not happen,
+            // never "up to date": a refused manifest is what someone holding
+            // clients on an old release would serve.
             val manifest = try {
-                fetchManifest()
+                fetchManifest(ctx)
             } catch (e: Exception) {
                 Log.i(TAG, "Fetch versions.json failed: ${e.message}")
                 return@withContext UpdateStatus.Offline
@@ -229,7 +289,7 @@ class UpdateChecker(
             val current = currentVersionName(ctx) ?: return@withContext CheckOutcome.UpToDate
 
             val manifest = try {
-                fetchManifest()
+                fetchManifest(ctx)
             } catch (e: Exception) {
                 Log.i(TAG, "Fetch versions.json failed: ${e.message}")
                 return@withContext CheckOutcome.NetworkError
@@ -343,32 +403,15 @@ class UpdateChecker(
         }
 
         /**
-         * Fetch and parse versions.json: the production track's version and the
-         * release entry (file, size, SHA-256). A missing entry yields a null
-         * [Manifest.release], which refuses to stage rather than downloading
-         * blind.
+         * Whether [body] carries a valid detached ed25519 signature from
+         * [key], fetched from [signatureUrl]. The manifest decides which
+         * version to fetch and which SHA-256 to accept, so unverified it rests
+         * on TLS alone: whoever serves the android subtree could freeze every
+         * client on an old release or send them after junk.
          */
-        /**
-         * Whether [body] carries a valid detached ed25519 signature from the
-         * release key. The manifest decides which version to fetch and which
-         * SHA-256 to accept, so unverified it rests on TLS alone: whoever
-         * serves the android subtree can freeze every client on an old release
-         * or send them after junk.
-         *
-         * Ed25519 reached java.security at API 33. Below that the platform has
-         * no provider and the check cannot run, so the manifest is taken as it
-         * was before this existed rather than stranding those devices with no
-         * updates at all - the package installer still enforces signing-key
-         * continuity and version-code monotonicity, so the worst an attacker
-         * gets there is the freeze, not arbitrary code.
-         */
-        private fun manifest_verified(body: String): Boolean {
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
-                Log.i(TAG, "Manifest signature not checked: Ed25519 needs API 33")
-                return true
-            }
+        private fun manifest_verified(body: String, signatureUrl: String, key: String, platform: Boolean): Boolean {
             val encoded = try {
-                val req = Request.Builder().url(SIGNATURE_URL).get().build()
+                val req = Request.Builder().url(signatureUrl).get().build()
                 metaClient().newCall(req).execute().use { resp ->
                     if (!resp.isSuccessful) null else resp.body?.string()?.trim()
                 }
@@ -376,10 +419,10 @@ class UpdateChecker(
                 null
             }
             if (encoded.isNullOrBlank()) {
-                Log.w(TAG, "Refusing the manifest: no signature at $SIGNATURE_URL")
+                Log.w(TAG, "Refusing the manifest: no signature at $signatureUrl")
                 return false
             }
-            if (!signature_verified(body, encoded, MANIFEST_PUBLIC_KEY)) {
+            if (!signature_verified(body, encoded, key, platform)) {
                 Log.w(TAG, "Refusing the manifest: signature does not verify")
                 return false
             }
@@ -392,43 +435,96 @@ class UpdateChecker(
          * key bytes). False for any malformed input, so a caller never has to
          * tell "bad signature" from "bad encoding" - both mean do not trust it.
          *
-         * Split out from [manifest_verified] because it is the half that is
-         * pure: no network, no Build gate, so a test can drive it.
+         * Ed25519 reached java.security at API 33; below that ([platform]
+         * false) Tink's verifier does the same check.
          */
         internal fun signature_verified(
             body: String,
             encoded: String,
             publicKey: String,
+            platform: Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU,
         ): Boolean = try {
             val signature = Base64.getDecoder().decode(encoded)
-            // X.509 SubjectPublicKeyInfo around the 32 raw key bytes, which is
-            // the only encoding KeyFactory takes; the prefix is the fixed
-            // ed25519 algorithm identifier.
-            val wrapped = byteArrayOf(
-                0x30, 0x2a, 0x30, 0x05, 0x06, 0x03, 0x2b, 0x65, 0x70, 0x03, 0x21, 0x00,
-            ) + Base64.getDecoder().decode(publicKey)
-            val public = KeyFactory.getInstance("Ed25519")
-                .generatePublic(X509EncodedKeySpec(wrapped))
-            val verifier = Signature.getInstance("Ed25519")
-            verifier.initVerify(public)
-            verifier.update(body.toByteArray(Charsets.UTF_8))
-            verifier.verify(signature)
+            val key = Base64.getDecoder().decode(publicKey)
+            val message = body.toByteArray(Charsets.UTF_8)
+            if (platform) {
+                // X.509 SubjectPublicKeyInfo around the 32 raw key bytes, which
+                // is the only encoding KeyFactory takes; the prefix is the
+                // fixed ed25519 algorithm identifier.
+                val wrapped = byteArrayOf(
+                    0x30, 0x2a, 0x30, 0x05, 0x06, 0x03, 0x2b, 0x65, 0x70, 0x03, 0x21, 0x00,
+                ) + key
+                val public = KeyFactory.getInstance("Ed25519")
+                    .generatePublic(X509EncodedKeySpec(wrapped))
+                val verifier = Signature.getInstance("Ed25519")
+                verifier.initVerify(public)
+                verifier.update(message)
+                verifier.verify(signature)
+            } else {
+                // Throws for a signature that does not verify.
+                Ed25519Verify(key).verify(signature, message)
+                true
+            }
         } catch (_: Exception) {
             false
         }
 
-        private fun fetchManifest(): Manifest? {
-            val req = Request.Builder().url(VERSIONS_URL).get().build()
+        /**
+         * Why a signed manifest generated at [generated] (Unix seconds) for
+         * [platform] may not be trusted at [now], given the newest one
+         * accepted was generated at [accepted]; null when it may. Core's
+         * update_manifest_fresh: the signature binds the bytes to the release
+         * key, this binds them to now, so whoever can only replay an old
+         * signed manifest cannot hold the phone on a release it has moved
+         * past.
+         */
+        internal fun manifest_refusal(generated: Long, platform: String, now: Long, accepted: Long): String? = when {
+            generated <= 0 -> "it carries no generation time"
+            platform != PLATFORM -> "it is for platform \"$platform\""
+            generated > now + SKEW -> "it was generated in the future"
+            generated < accepted -> "it is older than the last one accepted"
+            else -> null
+        }
+
+        /** Whether [version] has the shape the build produces; it becomes a file name. */
+        internal fun version_valid(version: String): Boolean = VERSION.matches(version)
+
+        /**
+         * Fetch, verify and parse versions.json: the production track's
+         * version and the release entry (file, size, SHA-256). Throws when
+         * the manifest cannot be had or must not be trusted - an error status,
+         * a missing or bad signature, a replayed or future one, a version
+         * that is not one - and answers null only for a trusted manifest that
+         * names no production version. A missing release entry yields a null
+         * [Manifest.release], which refuses to stage rather than downloading
+         * blind.
+         */
+        internal fun fetchManifest(
+            ctx: Context,
+            base: String = BASE_URL,
+            key: String = MANIFEST_PUBLIC_KEY,
+            platform: Boolean = Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU,
+            now: Long = System.currentTimeMillis() / 1000,
+        ): Manifest? {
+            val req = Request.Builder().url("$base/versions.json").get().build()
             metaClient().newCall(req).execute().use { resp ->
-                if (!resp.isSuccessful) {
-                    Log.i(TAG, "Fetch $VERSIONS_URL: status ${resp.code}")
-                    return null
-                }
+                if (!resp.isSuccessful) throw ManifestRefused("status ${resp.code}")
                 val body = resp.body?.string().orEmpty()
-                if (!manifest_verified(body)) return null
+                if (!manifest_verified(body, "$base/versions.json.sig", key, platform)) {
+                    throw ManifestRefused("its signature does not verify")
+                }
                 val root = JSONObject(body)
+                val generated = root.optLong("generated")
+                val accepted = prefs(ctx).getLong(KEY_GENERATED, 0L)
+                manifest_refusal(generated, root.optString("platform"), now, accepted)?.let { reason ->
+                    throw ManifestRefused(reason)
+                }
                 val tracks = root.optJSONObject("tracks") ?: return null
                 val version = tracks.optString(TRACK).takeIf { it.isNotBlank() } ?: return null
+                // The version names the staged file and reaches the log and
+                // the dialog, so a path or anything else is refused.
+                if (!version_valid(version)) throw ManifestRefused("its version is not one")
+                if (generated > accepted) prefs(ctx).edit().putLong(KEY_GENERATED, generated).apply()
                 val entry = root.optJSONObject("releases")?.optJSONObject(version)
                 val release = entry?.let {
                     val file = it.optString("file")
@@ -623,6 +719,9 @@ class UpdateChecker(
  * null [release] blocks the download rather than staging blind.
  */
 internal data class Manifest(val version: String, val release: Release?)
+
+/** A manifest that could not be had, or must not be trusted; see [UpdateChecker.fetchManifest]. */
+internal class ManifestRefused(reason: String) : Exception("manifest refused: $reason")
 
 /**
  * One downloadable artifact from versions.json. [file] is a bare name relative

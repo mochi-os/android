@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Wrthi\'n cysylltu…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Ailgysylltu…</string>
-    <string name="chess_ws_failed">Methodd y cysylltiad</string>
     <string name="chess_move_capture">Cymerodd %1$s %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

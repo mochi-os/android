@@ -8,7 +8,6 @@ package org.mochios.android.sync
 import android.accounts.Account
 import android.content.ContentProviderClient
 import android.content.ContentProviderOperation
-import android.content.ContentUris
 import android.content.ContentValues
 import android.graphics.Color
 import android.net.Uri
@@ -304,9 +303,6 @@ class ProviderCalendarsStore(
             )
         }
     }
-
-    /** The provider row for one event of the account, for the module's own reads. */
-    fun uri(local: Long): Uri = ContentUris.withAppendedId(Events.CONTENT_URI, local)
 
     private fun Map<String, Any?>.toContentValues(): ContentValues = ContentValues().apply {
         for ((column, value) in this@toContentValues) {

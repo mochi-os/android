@@ -359,4 +359,6 @@
     <string name="feeds_source_unfollowed">Kò tẹ̀lé</string>
     <string name="feeds_source_follow_again">Tẹ̀lé lẹ́ẹ̀kan sí i</string>
     <string name="feeds_filtered_by_tag">Tí a yọ́ nípa tag:</string>
+    <string name="feeds_setup">Ṣètò</string>
+    <string name="feeds_search_example">Wá nípa orúkọ, ID, fingerprint, URL, tàbí %1$s</string>
 </resources>

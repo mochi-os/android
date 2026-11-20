@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Marubuci</string>
     <string name="forums_community_destination">Ana wallafawa a %1$s a matsayin %2$s</string>
+    <string name="forums_find_search_example">Bincika ta suna, ID, fingerprint, URL, ko %1$s</string>
+    <string name="forums_setup">Saitawa</string>
 </resources>

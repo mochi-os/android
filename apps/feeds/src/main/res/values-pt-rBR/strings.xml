@@ -350,4 +350,6 @@
     <string name="feeds_source_unfollowed">Não seguindo</string>
     <string name="feeds_source_follow_again">Seguir novamente</string>
     <string name="feeds_filtered_by_tag">Filtrado por tag:</string>
+    <string name="feeds_setup">Configurar</string>
+    <string name="feeds_search_example">Pesquisar por nome, ID, fingerprint, URL ou %1$s</string>
 </resources>

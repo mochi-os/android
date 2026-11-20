@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Atzīme nevar būt tukša</string>
     <string name="wikis_attachments_search_placeholder">Meklēt pielikumus</string>
     <string name="wikis_attachments_delete_confirm_message">Dzēst „%1$s\"? To nevar atsaukt.</string>
-    <string name="wikis_attachments_downloading">Lejupielādē…</string>
     <string name="wikis_attachments_empty_description">Pieskarieties Augšupielādēt, lai pievienotu failus šai lapai.</string>
     <string name="wikis_settings_name_save_cd">Saglabāt nosaukumu</string>
     <string name="wikis_settings_name_cancel_cd">Atcelt rediģēšanu</string>

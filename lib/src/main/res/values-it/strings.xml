@@ -319,7 +319,6 @@
     <string name="error_server_https">L\'indirizzo del server deve iniziare con https://</string>
     <string name="device_name_fallback">Dispositivo mobile</string>
     <string name="account_error_token_type">Tipo di token non supportato</string>
-    <string name="account_error_caller">Chiamante non autorizzato</string>
     <string name="zone_sea">In mare</string>
     <string name="access_remove">Rimuovi</string>
     <string name="access_remove_title">Rimuovere l\'accesso?</string>
@@ -345,4 +344,10 @@
     <string name="person_unknown">Sconosciuto</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Download di %1$s…</string>
+    <string name="downloads_saved">%1$s salvato</string>
+    <string name="downloads_failed">Impossibile salvare %1$s: %2$s</string>
+    <string name="sync_conflict">Modificato sul server</string>
+    <string name="sync_missing">Non più presente sul server</string>
+    <string name="sync_refused">Rifiutato dal server</string>
 </resources>

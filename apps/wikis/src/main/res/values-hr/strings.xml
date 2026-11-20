@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Oznaka ne može biti prazna</string>
     <string name="wikis_attachments_search_placeholder">Pretraži privitke</string>
     <string name="wikis_attachments_delete_confirm_message">Izbrisati „%1$s\"? Ovo se ne može poništiti.</string>
-    <string name="wikis_attachments_downloading">Preuzimanje…</string>
     <string name="wikis_attachments_empty_description">Dodirnite Prenesi za dodavanje datoteka na ovu stranicu.</string>
     <string name="wikis_settings_name_save_cd">Spremi naziv</string>
     <string name="wikis_settings_name_cancel_cd">Otkaži uređivanje</string>

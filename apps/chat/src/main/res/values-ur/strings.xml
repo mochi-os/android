@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s صرف دوستوں سے چیٹ قبول کرتے ہیں۔</string>
     <string name="chat_message_earlier">اس اکاؤنٹ کو Mochi میں شامل کرنے سے پہلے کے پیغامات خفیہ کردہ ہیں اور یہاں پڑھے نہیں جا سکتے</string>
     <string name="chat_message_excluded">صرف دوسرے آلات کے لیے خفیہ کردہ</string>
+    <string name="chat_setup">سیٹ اپ کریں</string>
 </resources>

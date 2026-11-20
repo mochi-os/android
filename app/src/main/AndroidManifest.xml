@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Mochi shell app. Source lives at apps/menu/android/ to match the menu Mochi
-  app convention; the Android package is org.mochios.mochi to match the
-  user-facing "Mochi" launcher brand.
+  Mochi shell app: the one Android app hosting every Mochi app. Its package is
+  org.mochios.mochi, after the user-facing "Mochi" launcher brand.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -33,6 +32,17 @@
     <uses-permission android:name="android.permission.READ_SYNC_STATS" />
 
     <!--
+      Guards the UnifiedPush distributor: only an app signed with Mochi's
+      certificate can send it REGISTER or UNREGISTER. The system checks the
+      broadcast's real sender, which a PendingIntent's creator cannot prove:
+      Mochi hands its PendingIntents out with every notification it posts.
+    -->
+    <permission
+        android:name="${applicationId}.permission.DISTRIBUTOR"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="${applicationId}.permission.DISTRIBUTOR" />
+
+    <!--
       Package visibility, narrowed from QUERY_ALL_PACKAGES: the only thing this
       app needs to see is the set of installed UnifiedPush distributors, which
       MochiPushClient.ensureDistributor enumerates. QUERY_ALL_PACKAGES read the
@@ -47,14 +57,15 @@
 
     <!--
       allowBackup="false": the session cookie, every per-app JWT, the OAuth
-      PKCE verifier and the UnifiedPush subscription tokens all sit unencrypted
-      in mochi_session / mochi_distributor / mochi_push, so Auto Backup and
-      device-to-device transfer would carry a working authenticated session onto
-      another device. Nothing else on disk is worth restoring - identity, apps
-      and content live on the user's Mochi server and return on next login, so
-      local state is only a cache. Preferred over dataExtractionRules +
-      fullBackupContent because it cannot drift: a store added later is excluded
-      by default rather than backed up until someone remembers to deny it.
+      PKCE verifier and the UnifiedPush subscriptions sit in mochi_session and
+      mochi_distributor, wrapped with an AndroidKeyStore key that never leaves
+      this device - a backup restored elsewhere could not open them, and would
+      only carry stale state. Nothing else on disk is worth restoring -
+      identity, apps and content live on the user's Mochi server and return on
+      next login, so local state is only a cache. Preferred over
+      dataExtractionRules + fullBackupContent because it cannot drift: a store
+      added later is excluded by default rather than backed up until someone
+      remembers to deny it.
     -->
     <application
         android:name=".MochiApplication"
@@ -80,6 +91,11 @@
           shows one icon; a user who wants an app on the home screen pins it
           from the grid. They keep their label and icon, which name each
           app's task in Recents.
+
+          The per-app classes are not exported: only this app starts them -
+          MainActivity's forwarding, the home grid, its notifications'
+          PendingIntents and its pinned shortcuts, which the launcher starts as
+          this app. Any other app reaches them through MainActivity.
         -->
         <!--
           MainActivity itself has no launcher entry and never draws. It receives
@@ -150,7 +166,7 @@
         <activity
             android:name=".MochiFeedsLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_feeds"
             android:icon="@mipmap/ic_feeds"
             android:roundIcon="@mipmap/ic_feeds_round"
@@ -164,7 +180,7 @@
         <activity
             android:name=".MochiChatLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_chat"
             android:icon="@mipmap/ic_chat"
             android:roundIcon="@mipmap/ic_chat_round"
@@ -178,7 +194,7 @@
         <activity
             android:name=".MochiForumsLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_forums"
             android:icon="@mipmap/ic_forums"
             android:roundIcon="@mipmap/ic_forums_round"
@@ -192,7 +208,7 @@
         <activity
             android:name=".MochiProjectsLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_projects"
             android:icon="@mipmap/ic_projects"
             android:roundIcon="@mipmap/ic_projects_round"
@@ -206,7 +222,7 @@
         <activity
             android:name=".MochiCrmLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_crm"
             android:icon="@mipmap/ic_crm"
             android:roundIcon="@mipmap/ic_crm_round"
@@ -220,7 +236,7 @@
         <activity
             android:name=".MochiPeopleLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_people"
             android:icon="@mipmap/ic_people"
             android:roundIcon="@mipmap/ic_people_round"
@@ -234,7 +250,7 @@
         <activity
             android:name=".MochiSettingsLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_settings"
             android:icon="@mipmap/ic_settings"
             android:roundIcon="@mipmap/ic_settings_round"
@@ -248,7 +264,7 @@
         <activity
             android:name=".MochiWikisLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_wikis"
             android:icon="@mipmap/ic_wikis"
             android:roundIcon="@mipmap/ic_wikis_round"
@@ -262,7 +278,7 @@
         <activity
             android:name=".MochiChessLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_chess"
             android:icon="@mipmap/ic_chess"
             android:roundIcon="@mipmap/ic_chess_round"
@@ -276,7 +292,7 @@
         <activity
             android:name=".MochiGoLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_go"
             android:icon="@mipmap/ic_go"
             android:roundIcon="@mipmap/ic_go_round"
@@ -290,7 +306,7 @@
         <activity
             android:name=".MochiWordsLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_words"
             android:icon="@mipmap/ic_words"
             android:roundIcon="@mipmap/ic_words_round"
@@ -304,7 +320,7 @@
         <activity
             android:name=".MochiMarketLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_market"
             android:icon="@mipmap/ic_market"
             android:roundIcon="@mipmap/ic_market_round"
@@ -325,7 +341,7 @@
         <activity
             android:name=".MochiStaffLauncher"
             android:enabled="false"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_staff"
             android:icon="@mipmap/ic_staff"
             android:roundIcon="@mipmap/ic_staff_round"
@@ -339,7 +355,7 @@
         <activity
             android:name=".MochiCalendarsLauncher"
             android:enabled="true"
-            android:exported="true"
+            android:exported="false"
             android:label="@string/launcher_calendars"
             android:icon="@mipmap/ic_calendars"
             android:roundIcon="@mipmap/ic_calendars_round"
@@ -351,16 +367,14 @@
         </activity>
 
         <!--
-          UnifiedPush MessagingReceiver for the Android client. Catches
-          MESSAGE / NEW_ENDPOINT / UNREGISTERED / REGISTRATION_FAILED broadcasts
-          from PushService and posts a system notification on the right per-app
-          channel (routed by the deep-link's first path segment in
-          MochiPushDispatcher.channelId). Replaces the four per-app
-          XxxPushReceiver classes that existed when feeds / chat / forums /
-          projects shipped as separate APKs.
+          The UnifiedPush connector's receiver: NEW_ENDPOINT, UNREGISTERED and
+          REGISTRATION_FAILED from the distributor, and MESSAGE from a
+          third-party distributor, whose payload the connector decrypts before
+          MochiPushReceiver delivers it. Mochi's own distributor, PushService,
+          delivers in process and sends nothing here.
         -->
         <receiver
-            android:name=".push.MochiPushDispatcher"
+            android:name="org.mochios.android.push.MochiPushReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -368,30 +382,20 @@
                 <action android:name="org.unifiedpush.android.connector.UNREGISTERED" />
                 <action android:name="org.unifiedpush.android.connector.NEW_ENDPOINT" />
                 <action android:name="org.unifiedpush.android.connector.REGISTRATION_FAILED" />
-                <!--
-                  Mochi's own distributor delivers on this action instead of
-                  the connector's MESSAGE, because the local payload is
-                  cleartext and the connector would mark it undecrypted and
-                  drop it. MochiPushReceiver.onReceive gates it on the
-                  sender's PendingIntent creator.
-                -->
-                <action android:name="org.mochios.android.push.MESSAGE" />
             </intent-filter>
         </receiver>
 
         <!--
-          UnifiedPush distributor receiver. The class lives in lib/android
-          and is shared by every Mochi-signed app, but only this shell
-          declares it in its manifest so the system distributor picker
-          shows a single "Mochi" candidate. Per-app apps (Feeds, Chat,
-          Forums, Projects) deliberately do NOT include this receiver.
-          See claude/plans/android-notifications.md → "Manifest additions"
-          and lib/android/src/distributor/AndroidManifest.xml (template).
+          Mochi's UnifiedPush distributor (lib/.../push/MochiDistributorReceiver),
+          so the system distributor picker shows "Mochi". The DISTRIBUTOR
+          permission above limits its callers to apps signed as Mochi is; the
+          intent filter stays, as it is how the connector finds a distributor.
         -->
         <receiver
             android:name="org.mochios.android.push.MochiDistributorReceiver"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:permission="${applicationId}.permission.DISTRIBUTOR">
             <intent-filter>
                 <action android:name="org.unifiedpush.android.distributor.REGISTER" />
                 <action android:name="org.unifiedpush.android.distributor.UNREGISTER" />
@@ -428,12 +432,13 @@
         </provider>
 
         <!--
-          AccountManager authenticator for cross-app session sharing. Makes
-          org.mochios.mochi the owner of the "org.mochios.account" type so
-          MochiAccount.upsert() can call addAccountExplicitly without a
-          SecurityException. Bound by the system AccountManagerService, so it
-          must be exported. The referenced @xml/authenticator declares the
-          matching account type (MochiAccount.TYPE).
+          AccountManager authenticator for the "org.mochios.account" type,
+          which the contacts and calendar sync adapters and the push service
+          need an account of. Owning the type lets MochiAccount.upsert() call
+          addAccountExplicitly without a SecurityException. Bound by the
+          system AccountManagerService, so it must be exported. The referenced
+          @xml/authenticator declares the matching account type
+          (MochiAccount.TYPE).
         -->
         <service
             android:name="org.mochios.android.account.AuthenticatorService"

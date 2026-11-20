@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s n\'accepte que les chats de ses amis.</string>
     <string name="chat_message_earlier">Les messages antérieurs à l\'ajout de ce compte à Mochi sont chiffrés et ne peuvent pas être lus ici</string>
     <string name="chat_message_excluded">Chiffré uniquement pour d\'autres appareils</string>
+    <string name="chat_setup">Configurer</string>
 </resources>

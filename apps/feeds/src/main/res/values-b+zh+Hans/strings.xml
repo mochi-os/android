@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">未关注</string>
     <string name="feeds_source_follow_again">重新关注</string>
     <string name="feeds_filtered_by_tag">按标签筛选:</string>
+    <string name="feeds_setup">设置</string>
+    <string name="feeds_search_example">按名称、ID、指纹、URL 或 %1$s 搜索</string>
 </resources>

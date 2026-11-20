@@ -407,4 +407,6 @@
     <string name="feeds_source_unfollowed">Ви не підписані</string>
     <string name="feeds_source_follow_again">Підписатися знову</string>
     <string name="feeds_filtered_by_tag">Фільтр за тегом:</string>
+    <string name="feeds_setup">Налаштувати</string>
+    <string name="feeds_search_example">Пошук за назвою, ID, відбитком, URL або адресою %1$s</string>
 </resources>

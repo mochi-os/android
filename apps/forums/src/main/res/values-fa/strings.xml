@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">نویسنده</string>
     <string name="forums_community_destination">در %1$s با نام %2$s منتشر می‌شود</string>
+    <string name="forums_find_search_example">جست‌وجو بر اساس نام، شناسه، اثرانگشت، URL یا %1$s</string>
+    <string name="forums_setup">راه‌اندازی</string>
 </resources>

@@ -186,4 +186,5 @@
     <string name="chat_refused_friends_only">%1$s приймає чати лише від друзів.</string>
     <string name="chat_message_earlier">Повідомлення з часу до додавання цього облікового запису в Mochi зашифровані, і їх не можна прочитати тут</string>
     <string name="chat_message_excluded">Зашифровано лише для інших пристроїв</string>
+    <string name="chat_setup">Налаштувати</string>
 </resources>

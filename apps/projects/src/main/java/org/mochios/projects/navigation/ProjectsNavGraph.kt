@@ -63,37 +63,43 @@ object ProjectsApp {
     const val CREATE_OBJECT =
         "projects/project/{projectId}/create-object?parent={parent}&field={field}&value={value}&copy={copy}"
 
-    fun project(projectId: String) = "projects/project/$projectId"
-    fun projectObject(projectId: String, objectId: String) = "projects/project/$projectId/object/$objectId"
-    fun projectSettings(projectId: String) = "projects/project/$projectId/settings"
-    fun projectDesign(projectId: String) = "projects/project/$projectId/design"
+    // Every value a builder puts in a route is escaped with Uri.encode, which
+    // Navigation undoes once as it fills the destination's arguments. A
+    // subscribed project's ids are its owner's server's: one holding `/`,
+    // `?`, `#` or `%` would otherwise match another screen, or none, which
+    // throws.
+    fun project(projectId: String) = "projects/project/${Uri.encode(projectId)}"
+    fun projectObject(projectId: String, objectId: String) =
+        "${project(projectId)}/object/${Uri.encode(objectId)}"
+    fun projectSettings(projectId: String) = "${project(projectId)}/settings"
+    fun projectDesign(projectId: String) = "${project(projectId)}/design"
     fun projectDesignClass(projectId: String, classId: String) =
-        "projects/project/$projectId/design/class/$classId"
+        "${project(projectId)}/design/class/${Uri.encode(classId)}"
     fun projectDesignCreateClass(projectId: String) =
-        "projects/project/$projectId/design/create-class"
+        "${project(projectId)}/design/create-class"
     fun projectDesignView(projectId: String, viewId: String) =
-        "projects/project/$projectId/design/view/$viewId"
+        "${project(projectId)}/design/view/${Uri.encode(viewId)}"
     fun projectDesignCreateView(projectId: String) =
-        "projects/project/$projectId/design/create-view"
+        "${project(projectId)}/design/create-view"
     fun projectDesignCreateField(projectId: String, classId: String) =
-        "projects/project/$projectId/design/class/$classId/create-field"
+        "${projectDesignClass(projectId, classId)}/create-field"
     fun projectDesignOption(
         projectId: String,
         classId: String,
         fieldId: String,
         optionId: String = ""
     ) =
-        "projects/project/$projectId/design/class/$classId/field/$fieldId/option?optionId=$optionId"
+        "${projectDesignField(projectId, classId, fieldId)}/option?optionId=${Uri.encode(optionId)}"
     fun projectAddColumn(projectId: String, classId: String, fieldId: String) =
-        "projects/project/$projectId/board/class/$classId/field/$fieldId/add-column"
+        "${project(projectId)}/board/class/${Uri.encode(classId)}/field/${Uri.encode(fieldId)}/add-column"
     fun projectDesignField(projectId: String, classId: String, fieldId: String) =
-        "projects/project/$projectId/design/class/$classId/field/$fieldId"
+        "${projectDesignClass(projectId, classId)}/field/${Uri.encode(fieldId)}"
     /**
      * Diff-viewer route. Branch names carry slashes, so every argument is
      * encoded; a raw one would add path segments and match no route.
      */
     fun diffViewer(projectId: String, repo: String, source: String, target: String) =
-        "projects/project/$projectId/diff/${Uri.encode(repo)}" +
+        "${project(projectId)}/diff/${Uri.encode(repo)}" +
             "?source=${Uri.encode(source)}&target=${Uri.encode(target)}"
 
     /**
@@ -111,7 +117,7 @@ object ProjectsApp {
         val parentArg = Uri.encode(parent.orEmpty())
         val field = Uri.encode(preset?.key.orEmpty())
         val value = Uri.encode(preset?.value.orEmpty())
-        return "projects/project/$projectId/create-object" +
+        return "${project(projectId)}/create-object" +
             "?parent=$parentArg&field=$field&value=$value&copy=${Uri.encode(copy.orEmpty())}"
     }
 }

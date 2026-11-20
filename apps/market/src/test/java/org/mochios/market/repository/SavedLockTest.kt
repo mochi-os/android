@@ -73,7 +73,7 @@ class SavedLockTest {
         runBlocking {
             session.clearAll()
             session.setServerUrl(base)
-            session.setBoundAccount("first", base)
+            session.setBoundAccount("first")
         }
         val api = Retrofit.Builder()
             .baseUrl(server.url("/market/"))

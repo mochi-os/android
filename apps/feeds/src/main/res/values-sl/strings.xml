@@ -407,4 +407,6 @@
     <string name="feeds_source_unfollowed">Ne sledite</string>
     <string name="feeds_source_follow_again">Znova sledi</string>
     <string name="feeds_filtered_by_tag">Filtrirano po oznaki:</string>
+    <string name="feeds_setup">Nastavi</string>
+    <string name="feeds_search_example">Iskanje po imenu, ID-ju, prstnem odtisu, URL-ju ali naslovu %1$s</string>
 </resources>

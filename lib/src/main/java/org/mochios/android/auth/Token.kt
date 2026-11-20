@@ -10,9 +10,9 @@ import java.util.Base64
 /**
  * Reads the expiry of a per-app JWT so a cached token can be reused instead of
  * minted again. The server signs the token; nothing here verifies it - the
- * payload is read only to decide whether asking for a new one is worthwhile,
- * and a token the server has since rejected is cleared by the 401 handling on
- * the request that used it.
+ * payload is read only to decide whether asking for a new one is worthwhile.
+ * A token is signed with its session's secret, so the server rejects it once
+ * that session ends, and the sign-out the 401 handling then confirms clears it.
  */
 object Token {
     /** How much life a cached token must have left to be handed out without a mint. */

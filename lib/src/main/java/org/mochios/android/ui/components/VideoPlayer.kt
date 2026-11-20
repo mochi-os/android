@@ -6,6 +6,7 @@
 package org.mochios.android.ui.components
 
 import android.content.Context
+import android.net.Uri
 import androidx.annotation.OptIn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -24,25 +25,34 @@ import androidx.media3.ui.PlayerView
 import dagger.hilt.android.EntryPointAccessors
 import org.mochios.android.api.AssetHttpEntryPoint
 import org.mochios.android.api.OWNED
-import org.mochios.android.api.owned
-import org.mochios.android.api.resolved
+import org.mochios.android.api.OwnedAddress
 
-/**
- * A video at [url]: one of the app's own server-relative addresses, streamed
- * with the session, or any other URL, streamed without (see `owned`).
- */
-@OptIn(UnstableApi::class)
+/** One of the app's own videos, at [address], streamed with a credential. */
+@Composable
+fun VideoPlayer(
+    address: OwnedAddress,
+    modifier: Modifier = Modifier
+) = VideoPlayer(address.address, own = true, modifier)
+
+/** A video at [url], streamed without a credential. */
 @Composable
 fun VideoPlayer(
     url: String,
     modifier: Modifier = Modifier
+) = VideoPlayer(url, own = false, modifier)
+
+@OptIn(UnstableApi::class)
+@Composable
+private fun VideoPlayer(
+    url: String,
+    own: Boolean,
+    modifier: Modifier,
 ) {
     val context = LocalContext.current
-    val serverUrl = rememberServerUrl()
-    val exoPlayer = remember(url) { assetPlayer(context, url, serverUrl) }
+    val exoPlayer = remember(url, own) { assetPlayer(context, url, own) }
 
-    DisposableEffect(url) {
-        val mediaItem = MediaItem.fromUri(resolved(serverUrl, url))
+    DisposableEffect(url, own) {
+        val mediaItem = MediaItem.fromUri(url)
         exoPlayer.setMediaItem(mediaItem)
         exoPlayer.prepare()
 
@@ -63,25 +73,37 @@ fun VideoPlayer(
 }
 
 /**
- * A player streaming [url] through the asset client. When [url] is one of the
- * app's own addresses ([owned]), the request for it, resolved onto [server], is
- * marked [OWNED], so the asset client sends it the session and the app's token
- * as a session-gated attachment needs. No other request the player makes is: a
- * media file may name further addresses, chosen by whoever made it.
+ * A player streaming [url] through the asset client. When [own], [url] is one
+ * of the app's own addresses and the request for it is marked [OWNED], so the
+ * asset client sends it the credential a session-gated attachment needs. No
+ * other request the player makes is: a media file may name further addresses,
+ * chosen by whoever made it. Server-relative addresses are resolved onto the
+ * server as each request is made ([marked]), so the player needs no address
+ * of its own and follows a change of server.
  */
 @OptIn(UnstableApi::class)
-internal fun assetPlayer(context: Context, url: String, server: String): ExoPlayer {
-    val client = EntryPointAccessors
-        .fromApplication(context.applicationContext, AssetHttpEntryPoint::class.java)
-        .assetHttpClient()
-    val own = if (owned(url)) resolved(server, url) else null
-    val source = ResolvingDataSource.Factory(OkHttpDataSource.Factory(client)) { spec -> marked(spec, own) }
+internal fun assetPlayer(context: Context, url: String, own: Boolean): ExoPlayer {
+    val entry = EntryPointAccessors.fromApplication(context.applicationContext, AssetHttpEntryPoint::class.java)
+    val client = entry.assetHttpClient()
+    val sessions = entry.sessionManager()
+    val mine = if (own) url else null
+    val source = ResolvingDataSource.Factory(OkHttpDataSource.Factory(client)) { spec ->
+        marked(spec, mine, sessions.server.value)
+    }
     return ExoPlayer.Builder(context)
         .setMediaSourceFactory(DefaultMediaSourceFactory(source))
         .build()
 }
 
-/** [spec] marked [OWNED] when it asks for [own], the player's own address; any other as given. */
+/**
+ * [spec] as it is sent: a server-relative address resolved onto [server], and
+ * marked [OWNED] when it is [own], the player's own address; any other as
+ * given.
+ */
 @OptIn(UnstableApi::class)
-internal fun marked(spec: DataSpec, own: String?): DataSpec =
-    if (own != null && spec.uri.toString() == own) spec.withAdditionalHeaders(mapOf(OWNED to "1")) else spec
+internal fun marked(spec: DataSpec, own: String?, server: String): DataSpec {
+    val address = spec.uri.toString()
+    if (spec.uri.scheme != null || !address.startsWith("/") || address.startsWith("//")) return spec
+    val absolute = spec.withUri(Uri.parse(server.trimEnd('/') + address))
+    return if (own != null && address == own) absolute.withAdditionalHeaders(mapOf(OWNED to "1")) else absolute
+}

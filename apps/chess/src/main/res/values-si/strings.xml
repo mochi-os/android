@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">සම්බන්ධ වෙමින්…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">නැවත සම්බන්ධ වෙමින්…</string>
-    <string name="chess_ws_failed">සම්බන්ධතාවය අසාර්ථක විය</string>
     <string name="chess_move_capture">%1$s %2$s ගත්තා</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

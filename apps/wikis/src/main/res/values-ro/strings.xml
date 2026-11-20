@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Eticheta nu poate fi goală</string>
     <string name="wikis_attachments_search_placeholder">Caută atașamente</string>
     <string name="wikis_attachments_delete_confirm_message">Ștergeți „%1$s\"? Aceasta nu poate fi anulată.</string>
-    <string name="wikis_attachments_downloading">Se descarcă…</string>
     <string name="wikis_attachments_empty_description">Atingeți Încarcă pentru a adăuga fișiere pe această pagină.</string>
     <string name="wikis_settings_name_save_cd">Salvează numele</string>
     <string name="wikis_settings_name_cancel_cd">Anulează editarea</string>

@@ -320,7 +320,6 @@
     <string name="error_server_https">Serveradressen skal begynde med https://</string>
     <string name="device_name_fallback">Mobilenhed</string>
     <string name="account_error_token_type">Ikke-understøttet tokentype</string>
-    <string name="account_error_caller">Kalderen har ikke tilladelse</string>
     <string name="zone_sea">Til søs</string>
     <string name="access_remove">Fjern</string>
     <string name="access_remove_title">Fjern adgang?</string>
@@ -346,4 +345,10 @@
     <string name="person_unknown">Ukendt</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Downloader %1$s…</string>
+    <string name="downloads_saved">%1$s er gemt</string>
+    <string name="downloads_failed">Kunne ikke gemme %1$s: %2$s</string>
+    <string name="sync_conflict">Ændret på serveren</string>
+    <string name="sync_missing">Findes ikke længere på serveren</string>
+    <string name="sync_refused">Afvist af serveren</string>
 </resources>

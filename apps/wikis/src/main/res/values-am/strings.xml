@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">መለያው ባዶ መሆን አይችልም</string>
     <string name="wikis_attachments_search_placeholder">አባሪዎችን ይፈልጉ</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s”ን ይሰረዝ? ይህ ሊቀለበስ አይችልም።</string>
-    <string name="wikis_attachments_downloading">በማውረድ ላይ…</string>
     <string name="wikis_attachments_empty_description">በዚህ ገጽ ላይ ፋይሎችን ለመጨመር ስቀል የሚለውን ይንኩ።</string>
     <string name="wikis_settings_name_save_cd">ስም አስቀምጥ</string>
     <string name="wikis_settings_name_cancel_cd">ማስተካከያን ሰርዝ</string>

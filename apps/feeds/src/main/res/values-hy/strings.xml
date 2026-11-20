@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Չեք հետևում</string>
     <string name="feeds_source_follow_again">Կրկին հետևել</string>
     <string name="feeds_filtered_by_tag">Զտված ըստ պիտակի՝</string>
+    <string name="feeds_setup">Կարգավորել</string>
+    <string name="feeds_search_example">Որոնել ըստ անվան, ID-ի, մատնահետքի, URL-ի կամ %1$s հասցեի</string>
 </resources>

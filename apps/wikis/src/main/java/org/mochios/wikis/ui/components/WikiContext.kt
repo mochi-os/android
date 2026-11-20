@@ -7,6 +7,7 @@ package org.mochios.wikis.ui.components
 
 import androidx.compose.runtime.compositionLocalOf
 import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.util.isServerOrigin
 import org.mochios.android.util.segment
 import org.mochios.wikis.model.WikiInfo
@@ -36,17 +37,18 @@ data class WikiContextValue(
 
     /**
      * [baseURL] without the server: the base of the addresses the image
-     * loader, the players and the file opener are given. Only a server-relative
-     * address goes to the server with the session (see `owned`).
+     * loader, the players and the file opener are given. Only an
+     * [OwnedAddress] goes to the server with a credential.
      */
     val path: String get() = "/wikis/$wikiId/-/"
 
     /**
-     * [url] made server-relative when it is one of this wiki's own addresses
-     * under [baseURL]; any other URL as given, which the loaders then ask
-     * without the session.
+     * [url] as a Coil model: one of this wiki's own addresses under [baseURL]
+     * made an [OwnedAddress], fetched with a credential; any other URL as
+     * given, which the loaders then ask without one.
      */
-    fun local(url: String): String = if (url.startsWith(baseURL)) path + url.removePrefix(baseURL) else url
+    fun local(url: String): Any =
+        if (url.startsWith(baseURL)) OwnedAddress.of(path + url.removePrefix(baseURL)) ?: url else url
 
     /**
      * Resolve a markdown-relative attachment URL against [baseURL]:
@@ -112,13 +114,14 @@ internal fun attachmentAt(baseURL: String, id: String, variant: String? = null):
     segment(id)?.let { "${baseURL}attachments/$it" + if (variant == null) "" else "/$variant" }
 
 /**
- * [attachmentAt] made server-relative, for the image loader, the players and
- * the file opener, which send only such an address with the session. Null when
- * [baseURL] will not parse or no segment can carry the id.
+ * [attachmentAt] made server-relative, one of the app's own addresses, for the
+ * image loader, the players and the file opener, which send only such an
+ * address with a credential. Null when [baseURL] will not parse or no segment
+ * can carry the id.
  */
-internal fun attachmentPath(baseURL: String, id: String, variant: String? = null): String? {
+internal fun attachmentPath(baseURL: String, id: String, variant: String? = null): OwnedAddress? {
     val path = baseURL.toHttpUrlOrNull()?.encodedPath ?: return null
-    return attachmentAt(path, id, variant)
+    return OwnedAddress.of(attachmentAt(path, id, variant))
 }
 
 /**

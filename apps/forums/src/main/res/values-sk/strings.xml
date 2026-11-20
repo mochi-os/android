@@ -339,4 +339,6 @@
     </plurals>
     <string name="forums_comment_op">Autor</string>
     <string name="forums_community_destination">Publikuje sa do %1$s ako %2$s</string>
+    <string name="forums_find_search_example">Hľadať podľa názvu, ID, odtlačku, URL alebo adresy %1$s</string>
+    <string name="forums_setup">Nastaviť</string>
 </resources>

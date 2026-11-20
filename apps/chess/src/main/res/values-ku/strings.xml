@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Tê girêdan…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Ji nû ve tê girêdan…</string>
-    <string name="chess_ws_failed">Girêdan bi ser neket</string>
     <string name="chess_move_capture">%1$s %2$s girt</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

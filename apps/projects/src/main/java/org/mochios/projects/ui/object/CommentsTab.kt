@@ -33,6 +33,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.util.attachmentModel
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.R as MochiR
 import org.mochios.android.files.Upload
 import org.mochios.android.model.Comment
@@ -71,7 +73,7 @@ fun CommentsTab(
     // Builds the avatar proxy path for a commenter. Should return a
     // server-relative path to the projects app's proxy action, e.g.
     // "/projects/<project>/-/comment/<comment.id>/asset/avatar".
-    avatarUrlBuilder: ((Comment) -> String?)? = null
+    avatarUrlBuilder: ((Comment) -> OwnedAddress?)? = null
 ) {
     val context = LocalContext.current
     val draft = drafts.draft(target)
@@ -179,7 +181,7 @@ private fun CommentItem(
     comment: Comment,
     depth: Int,
     projectId: String,
-    avatarUrlBuilder: ((Comment) -> String?)?,
+    avatarUrlBuilder: ((Comment) -> OwnedAddress?)?,
     drafts: CommentDrafts,
     currentUserId: String?,
     onReply: (String, String) -> Unit,
@@ -203,10 +205,10 @@ private fun CommentItem(
         avatarUrl = avatarUrlBuilder?.invoke(comment),
         attachments = addressed(comment.attachments, "projects", projectId),
         attachmentUrl = { att ->
-            att.url ?: attachmentAddress("projects", projectId, att.id).orEmpty()
+            attachmentModel(att.url, attachmentAddress("projects", projectId, att.id))
         },
         attachmentThumbnailUrl = { att ->
-            att.thumbnailUrl ?: attachmentAddress("projects", projectId, att.id, "thumbnail").orEmpty()
+            attachmentModel(att.thumbnailUrl, attachmentAddress("projects", projectId, att.id, "thumbnail"))
         },
         isEditing = edit != null,
         editText = edit ?: comment.text,

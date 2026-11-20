@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">പിന്തുടരുന്നില്ല</string>
     <string name="feeds_source_follow_again">വീണ്ടും പിന്തുടരുക</string>
     <string name="feeds_filtered_by_tag">ടാഗ് പ്രകാരം ഫിൽട്ടർ ചെയ്തത്:</string>
+    <string name="feeds_setup">സജ്ജമാക്കുക</string>
+    <string name="feeds_search_example">പേര്, ID, ഫിംഗർപ്രിന്റ്, URL അല്ലെങ്കിൽ %1$s ഉപയോഗിച്ച് തിരയുക</string>
 </resources>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">タグは空にできません</string>
     <string name="wikis_attachments_search_placeholder">添付を検索</string>
     <string name="wikis_attachments_delete_confirm_message">「%1$s」を削除しますか？この操作は取り消せません。</string>
-    <string name="wikis_attachments_downloading">ダウンロード中…</string>
     <string name="wikis_attachments_empty_description">アップロードをタップして、このページにファイルを追加します。</string>
     <string name="wikis_settings_name_save_cd">名前を保存</string>
     <string name="wikis_settings_name_cancel_cd">編集をキャンセル</string>

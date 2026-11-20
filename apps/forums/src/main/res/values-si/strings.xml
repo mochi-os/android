@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">කතුවරයා</string>
     <string name="forums_community_destination">%1$s වෙත %2$s ලෙස පළ කෙරේ</string>
+    <string name="forums_find_search_example">නම, ID, ඇඟිලි සලකුණ, URL, හෝ %1$s අනුව සොයන්න</string>
+    <string name="forums_setup">සකසන්න</string>
 </resources>

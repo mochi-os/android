@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s സുഹൃത്തുക്കളിൽ നിന്നുള്ള ചാറ്റുകൾ മാത്രമേ സ്വീകരിക്കൂ.</string>
     <string name="chat_message_earlier">ഈ അക്കൗണ്ട് Mochi-യിൽ ചേർക്കുന്നതിന് മുമ്പുള്ള സന്ദേശങ്ങൾ എൻക്രിപ്റ്റ് ചെയ്തതാണ്, അവ ഇവിടെ വായിക്കാൻ കഴിയില്ല</string>
     <string name="chat_message_excluded">മറ്റ് ഉപകരണങ്ങൾക്ക് മാത്രം എൻക്രിപ്റ്റ് ചെയ്തത്</string>
+    <string name="chat_setup">സജ്ജമാക്കുക</string>
 </resources>

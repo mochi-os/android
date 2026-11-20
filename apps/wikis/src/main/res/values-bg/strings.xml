@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Тагът не може да бъде празен</string>
     <string name="wikis_attachments_search_placeholder">Търсене на прикачени файлове</string>
     <string name="wikis_attachments_delete_confirm_message">Изтрий „%1$s\"? Това не може да бъде отменено.</string>
-    <string name="wikis_attachments_downloading">Изтегляне…</string>
     <string name="wikis_attachments_empty_description">Докоснете Качване, за да добавите файлове към тази страница.</string>
     <string name="wikis_settings_name_save_cd">Запази името</string>
     <string name="wikis_settings_name_cancel_cd">Отмени редактирането</string>

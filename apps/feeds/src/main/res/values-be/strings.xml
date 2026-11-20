@@ -409,4 +409,6 @@
     <string name="feeds_source_unfollowed">Не падпісаны</string>
     <string name="feeds_source_follow_again">Падпісацца зноў</string>
     <string name="feeds_filtered_by_tag">Адфільтравана па тэгу:</string>
+    <string name="feeds_setup">Наладзіць</string>
+    <string name="feeds_search_example">Пошук па назве, ID, адбітку, URL або адрасе %1$s</string>
 </resources>

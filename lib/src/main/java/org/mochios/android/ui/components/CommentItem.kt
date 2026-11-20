@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -88,10 +89,10 @@ fun CommentItem(
     depth: Int,
     seed: String,
     attachments: List<Attachment>,
-    attachmentUrl: (Attachment) -> String,
-    attachmentThumbnailUrl: (Attachment) -> String,
+    attachmentUrl: (Attachment) -> Any?,
+    attachmentThumbnailUrl: (Attachment) -> Any?,
     modifier: Modifier = Modifier,
-    avatarUrl: String? = null,
+    avatarUrl: OwnedAddress? = null,
     edited: Long = 0,
     isEditing: Boolean = false,
     editText: String = "",
@@ -99,7 +100,7 @@ fun CommentItem(
     onSaveEdit: () -> Unit = {},
     onCancelEdit: () -> Unit = {},
     horizontalPadding: Dp = 16.dp,
-    anchorThumbnailUrl: String? = null,
+    anchorThumbnailUrl: OwnedAddress? = null,
     anchorCaption: String = "",
     onOpenAnchor: (() -> Unit)? = null,
     // Opens the author's page, for a comment by a person on another network.
@@ -307,7 +308,7 @@ fun CommentItem(
  */
 @Composable
 private fun AnchorChip(
-    thumbnailUrl: String,
+    thumbnailUrl: OwnedAddress,
     caption: String,
     onClick: (() -> Unit)?,
 ) {
@@ -430,13 +431,13 @@ fun <T> findInThread(roots: List<T>, target: String, id: (T) -> String, children
  * shows to some viewers only; seed [found] to put a row first, as a post goes
  * before its comments.
  */
-fun <T> addressByAuthor(
+fun <T, A : Any> addressByAuthor(
     roots: List<T>,
     author: (T) -> String,
-    address: (T) -> String?,
+    address: (T) -> A?,
     children: (T) -> List<T> = { emptyList() },
-    found: MutableMap<String, String> = mutableMapOf(),
-): Map<String, String> {
+    found: MutableMap<String, A> = mutableMapOf(),
+): Map<String, A> {
     fun walk(rows: List<T>) {
         for (row in rows) {
             val who = author(row)

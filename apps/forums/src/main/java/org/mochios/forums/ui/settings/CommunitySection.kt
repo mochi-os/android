@@ -73,7 +73,9 @@ internal fun CommunityEvents(viewModel: CommunityViewModel) {
 /**
  * The forum as a community on the fediverse: published on a community name
  * the owner takes on one of the domains they may take names on, or withdrawn,
- * which frees the name and tells the followers.
+ * which frees the name and tells the followers. Nothing where the server
+ * hosts no accounts on the fediverse, unless the forum is a community already
+ * and may be withdrawn, and nothing while that is asked.
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -81,6 +83,7 @@ internal fun CommunitySection(viewModel: CommunityViewModel) {
     val state by viewModel.state.collectAsState()
     val busy by viewModel.busy.collectAsState()
     val current = state ?: return
+    if (!current.published && !current.offered) return
     var name by remember { mutableStateOf("") }
     var domain by remember { mutableStateOf("") }
     var open by remember { mutableStateOf(false) }

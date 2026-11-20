@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">লেখক</string>
     <string name="forums_community_destination">%1$s-এ %2$s হিসেবে পোস্ট হয়</string>
+    <string name="forums_find_search_example">নাম, ID, ফিঙ্গারপ্রিন্ট, URL, বা %1$s দিয়ে অনুসন্ধান করুন</string>
+    <string name="forums_setup">সেট আপ করুন</string>
 </resources>

@@ -38,6 +38,7 @@
     <!-- Find forums -->
     <string name="forums_find_title">Find forums</string>
     <string name="forums_find_search_placeholder">Search forums or paste URL</string>
+    <string name="forums_find_search_example">Search by name, ID, fingerprint, URL, or %1$s</string>
     <string name="forums_find_recommended">Recommended</string>
     <string name="forums_find_results">Search results</string>
     <string name="forums_find_search_hint">Search for forums to subscribe to</string>
@@ -349,6 +350,7 @@
     <string name="forums_block_community">Block community</string>
     <string name="forums_blocked">Blocked</string>
     <string name="forums_join">Join</string>
+    <string name="forums_setup">Set up</string>
     <string name="forums_joined">Joined</string>
     <string name="forums_already_subscribed">You are already subscribed to this forum</string>
     <string name="forums_join_failed">Could not join the community</string>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ಟ್ಯಾಗ್ ಖಾಲಿ ಇರುವಂತಿಲ್ಲ</string>
     <string name="wikis_attachments_search_placeholder">ಲಗತ್ತುಗಳನ್ನು ಹುಡುಕಿ</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ಅಳಿಸುವುದೇ? ಇದನ್ನು ಹಿಂತಿರುಗಿಸಲಾಗದು.</string>
-    <string name="wikis_attachments_downloading">ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
     <string name="wikis_attachments_empty_description">ಈ ಪುಟಕ್ಕೆ ಫೈಲ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಅಪ್‌ಲೋಡ್ ಒತ್ತಿ.</string>
     <string name="wikis_settings_name_save_cd">ಹೆಸರು ಉಳಿಸಿ</string>
     <string name="wikis_settings_name_cancel_cd">ಸಂಪಾದನೆ ರದ್ದುಮಾಡಿ</string>

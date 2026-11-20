@@ -5,6 +5,8 @@
 
 package org.mochios.feeds.navigation
 
+import android.net.Uri
+import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavType
@@ -22,8 +24,6 @@ import org.mochios.feeds.ui.router.FeedsRouter
 import org.mochios.feeds.ui.saved.SavedScreen
 import org.mochios.feeds.ui.settings.FeedSettingsScreen
 import org.mochios.feeds.ui.settings.SourcesScreen
-import java.net.URLEncoder
-import java.nio.charset.StandardCharsets
 
 object FeedsApp {
     /**
@@ -46,10 +46,13 @@ object FeedsApp {
     const val FEED_SOURCES = "feeds/feedSources/{feedId}?source={source}"
     const val SAVED = "feeds/saved"
 
-    fun feed(feedId: String) = "feeds/feed/$feedId"
+    // Every value a builder puts in a route is escaped with Uri.encode, which
+    // Navigation undoes once as it fills the destination's arguments: an id
+    // holding `/`, `?`, `#`, `&` or `%` then still names its own screen.
+    fun feed(feedId: String) = "feeds/feed/${Uri.encode(feedId)}"
     fun findFeeds(link: String? = null) =
         if (link.isNullOrEmpty()) "feeds/findFeeds"
-        else "feeds/findFeeds?link=${URLEncoder.encode(link, StandardCharsets.UTF_8.name())}"
+        else "feeds/findFeeds?link=${Uri.encode(link)}"
 
     /**
      * The screen a `/feeds/...` notification link opens: discovery for
@@ -63,33 +66,40 @@ object FeedsApp {
         !postId.isNullOrEmpty() -> post(feedId, postId, comment)
         else -> feed(feedId)
     }
-    fun post(feedId: String, postId: String, comment: String? = null) =
-        if (comment.isNullOrEmpty()) "feeds/post/$feedId/$postId"
-        else "feeds/post/$feedId/$postId?comment=${URLEncoder.encode(comment, StandardCharsets.UTF_8.name())}"
-    fun postSource(feedId: String, postId: String, url: String, expand: Boolean): String {
-        val encoded = URLEncoder.encode(url, StandardCharsets.UTF_8.name())
-        return "feeds/postSource/$feedId/$postId?url=$encoded&expand=$expand"
+    fun post(feedId: String, postId: String, comment: String? = null): String {
+        val base = "feeds/post/${Uri.encode(feedId)}/${Uri.encode(postId)}"
+        return if (comment.isNullOrEmpty()) base else "$base?comment=${Uri.encode(comment)}"
     }
+    fun postSource(feedId: String, postId: String, url: String, expand: Boolean) =
+        "feeds/postSource/${Uri.encode(feedId)}/${Uri.encode(postId)}?url=${Uri.encode(url)}&expand=$expand"
     fun createPost(feedId: String? = null, postId: String? = null): String {
         val params = listOfNotNull(
-            feedId?.let { "feedId=$it" },
-            postId?.let { "postId=$it" }
+            feedId?.let { "feedId=${Uri.encode(it)}" },
+            postId?.let { "postId=${Uri.encode(it)}" }
         )
         return if (params.isEmpty()) "feeds/createPost" else "feeds/createPost?${params.joinToString("&")}"
     }
-    fun feedSettings(feedId: String) = "feeds/feedSettings/$feedId"
+    fun feedSettings(feedId: String) = "feeds/feedSettings/${Uri.encode(feedId)}"
     fun feedSources(feedId: String, source: String? = null): String {
-        val base = "feeds/feedSources/$feedId"
-        return source?.takeIf { it.isNotEmpty() }?.let {
-            val encoded = URLEncoder.encode(it, StandardCharsets.UTF_8.name())
-            "$base?source=$encoded"
-        } ?: base
+        val base = "feeds/feedSources/${Uri.encode(feedId)}"
+        return source?.takeIf { it.isNotEmpty() }?.let { "$base?source=${Uri.encode(it)}" } ?: base
     }
 }
+
+/**
+ * The address a post-source screen opens, as its route carried it: Navigation
+ * has already undone the builder's escaping, so decoding again would turn an
+ * escape inside the address itself (`%2F`, `%26`, `+`) into the character.
+ */
+internal fun sourceArgument(arguments: Bundle?): String = arguments?.getString("url").orEmpty()
+
+/** The source the sources screen scrolls to, as its route carried it; see [sourceArgument]. */
+internal fun highlightArgument(arguments: Bundle?): String = arguments?.getString("source").orEmpty()
 
 fun NavGraphBuilder.feedsNavGraph(
     navController: NavController,
     onOpenNotifications: () -> Unit = {},
+    onOpenLink: (String) -> Unit = {},
 ) {
     composable(FeedsApp.ROUTER) { entry ->
         FeedsRouter(onResolve = { feedId ->
@@ -186,12 +196,8 @@ fun NavGraphBuilder.feedsNavGraph(
             }
         )
     ) { backStackEntry ->
-        val encodedUrl = backStackEntry.arguments?.getString("url").orEmpty()
-        val sourceUrl = runCatching {
-            java.net.URLDecoder.decode(encodedUrl, StandardCharsets.UTF_8.name())
-        }.getOrDefault(encodedUrl)
         PostSourceScreen(
-            sourceUrl = sourceUrl,
+            sourceUrl = sourceArgument(backStackEntry.arguments),
             initiallyExpanded = backStackEntry.arguments?.getBoolean("expand") == true,
             onNavigateBack = { navController.popBackStack() },
             onEditPost = { feedId, postId ->
@@ -270,6 +276,7 @@ fun NavGraphBuilder.feedsNavGraph(
                     popUpTo(FeedsApp.FEED) { inclusive = true }
                 }
             },
+            onOpenLink = onOpenLink,
         )
     }
 
@@ -283,10 +290,7 @@ fun NavGraphBuilder.feedsNavGraph(
             }
         )
     ) { backStackEntry ->
-        val encodedSource = backStackEntry.arguments?.getString("source").orEmpty()
-        val highlightSource = runCatching {
-            java.net.URLDecoder.decode(encodedSource, StandardCharsets.UTF_8.name())
-        }.getOrDefault(encodedSource)
+        val highlightSource = highlightArgument(backStackEntry.arguments)
         SourcesScreen(
             highlightSource = highlightSource.takeIf { it.isNotEmpty() },
             onNavigateBack = { navController.popBackStack() },

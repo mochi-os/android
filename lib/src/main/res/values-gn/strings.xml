@@ -318,7 +318,6 @@
     <string name="error_server_https">Mohendaha dirección oñepyrũva\'erã https:// ndive</string>
     <string name="device_name_fallback">Pumbyry</string>
     <string name="account_error_token_type">Token tipo ndojeguerohorýiva</string>
-    <string name="account_error_caller">Ohenóiva noñemoneĩri</string>
     <string name="zone_sea">Paraguasúpe</string>
     <string name="access_remove">Embogue</string>
     <string name="access_remove_title">¿Embogue jeike?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Ojekuaa\'ỹva</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Oñemboguejy %1$s…</string>
+    <string name="downloads_saved">%1$s oñeñongatúma</string>
+    <string name="downloads_failed">Ndaikatúi oñeñongatu %1$s: %2$s</string>
+    <string name="sync_conflict">Oñemoambue mohendahápe</string>
+    <string name="sync_missing">Ndaipóriveima mohendahápe</string>
+    <string name="sync_refused">Mohendaha omboyke</string>
 </resources>

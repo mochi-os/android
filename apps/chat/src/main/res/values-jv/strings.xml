@@ -177,4 +177,5 @@
     <string name="chat_refused_friends_only">%1$s mung nampa obrolan saka kanca.</string>
     <string name="chat_message_earlier">Pesen saka sadurunge akun iki ditambahake menyang Mochi dienkripsi lan ora bisa diwaca ing kene</string>
     <string name="chat_message_excluded">Mung dienkripsi kanggo piranti liya</string>
+    <string name="chat_setup">Setel</string>
 </resources>

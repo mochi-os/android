@@ -120,7 +120,7 @@ class ListingLoadTest {
 
     /** The listing's screen as [viewer] opens it. */
     private fun open(viewer: String): ListingDetailViewModel {
-        runBlocking { session.setBoundAccount(viewer, base) }
+        runBlocking { session.setBoundAccount(viewer) }
         val retrofit = Retrofit.Builder()
             .baseUrl(server.url("/market/"))
             .addConverterFactory(GsonConverterFactory.create())

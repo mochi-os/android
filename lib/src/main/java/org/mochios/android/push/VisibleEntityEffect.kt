@@ -52,7 +52,7 @@ fun VisibleEntityEffect(
             when (event) {
                 Lifecycle.Event.ON_RESUME -> {
                     VisibleEntity.show(token, app, path, marksRead, socketKey)
-                    SystemNotifications.cancelFor(context, app, path.substringBefore('/'))
+                    SystemNotifications.cancelFor(context, app, path)
                 }
 
                 Lifecycle.Event.ON_PAUSE -> VisibleEntity.hide(token)

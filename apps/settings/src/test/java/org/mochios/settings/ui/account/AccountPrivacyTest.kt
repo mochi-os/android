@@ -19,6 +19,8 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.auth.PasskeyManager
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Downloads
+import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
 import org.mochios.settings.api.AccountApi
 import org.mochios.settings.ui.login.SettingsStepUpClient
@@ -103,7 +105,7 @@ class AccountPrivacyTest {
         val api = retrofit.create(AccountApi::class.java)
         val session = SessionManager(context)
         runBlocking { session.clearAll() }
-        val made = AccountViewModel(api, SettingsStepUpClient(api, PasskeyManager(context)), session)
+        val made = AccountViewModel(api, SettingsStepUpClient(api, PasskeyManager(context)), Downloads(context, FileStore(context)))
         until { !made.uiState.value.isLoading && made.uiState.value.identity.username.isNotEmpty() }
         return made
     }

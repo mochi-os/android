@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Δεν ακολουθείτε</string>
     <string name="feeds_source_follow_again">Ακολούθηση ξανά</string>
     <string name="feeds_filtered_by_tag">Φιλτραρισμένα κατά ετικέτα:</string>
+    <string name="feeds_setup">Ρύθμιση</string>
+    <string name="feeds_search_example">Αναζήτηση κατά όνομα, ID, αποτύπωμα, URL ή %1$s</string>
 </resources>

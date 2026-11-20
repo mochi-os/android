@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Thẻ không thể trống</string>
     <string name="wikis_attachments_search_placeholder">Tìm tệp đính kèm</string>
     <string name="wikis_attachments_delete_confirm_message">Xóa \"%1$s\"? Không thể hoàn tác.</string>
-    <string name="wikis_attachments_downloading">Đang tải xuống…</string>
     <string name="wikis_attachments_empty_description">Chạm vào Tải lên để thêm tệp vào trang này.</string>
     <string name="wikis_settings_name_save_cd">Lưu tên</string>
     <string name="wikis_settings_name_cancel_cd">Hủy chỉnh sửa</string>

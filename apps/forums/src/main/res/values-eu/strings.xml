@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Egilea</string>
     <string name="forums_community_destination">%1$s komunitatean argitaratzen da %2$s gisa</string>
+    <string name="forums_find_search_example">Bilatu izenez, IDz, hatz-markaz, URLz edo %1$s helbidez</string>
+    <string name="forums_setup">Konfiguratu</string>
 </resources>

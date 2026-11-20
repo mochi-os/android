@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.person
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -55,8 +56,8 @@ internal fun PersonHeader(
     name: String,
     seed: String,
     fingerprint: String,
-    avatarUrl: String?,
-    bannerUrl: String?,
+    avatarUrl: OwnedAddress?,
+    bannerUrl: OwnedAddress?,
     accent: String?,
     status: PersonStatus? = null,
 ) {

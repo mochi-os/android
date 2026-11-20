@@ -318,7 +318,6 @@
     <string name="error_server_https">सर्व्हर पत्ता https:// ने सुरू व्हावा</string>
     <string name="device_name_fallback">मोबाइल डिव्हाइस</string>
     <string name="account_error_token_type">असमर्थित टोकन प्रकार</string>
-    <string name="account_error_caller">कॉल करणाऱ्यास परवानगी नाही</string>
     <string name="zone_sea">समुद्रात</string>
     <string name="access_remove">काढा</string>
     <string name="access_remove_title">प्रवेश काढायचा?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">अज्ञात</string>
     <string name="format_time_seconds_short">%1$sसे</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s डाउनलोड होत आहे…</string>
+    <string name="downloads_saved">%1$s जतन केले</string>
+    <string name="downloads_failed">%1$s जतन करता आले नाही: %2$s</string>
+    <string name="sync_conflict">सर्व्हरवर बदलले</string>
+    <string name="sync_missing">आता सर्व्हरवर नाही</string>
+    <string name="sync_refused">सर्व्हरने नाकारले</string>
 </resources>

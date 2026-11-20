@@ -359,4 +359,6 @@
     <string name="feeds_source_unfollowed">Teu nuturkeun</string>
     <string name="feeds_source_follow_again">Turutan deui</string>
     <string name="feeds_filtered_by_tag">Disaring dumasar tag:</string>
+    <string name="feeds_setup">Pasang</string>
+    <string name="feeds_search_example">Paluruh ku ngaran, ID, fingerprint, URL, atawa %1$s</string>
 </resources>

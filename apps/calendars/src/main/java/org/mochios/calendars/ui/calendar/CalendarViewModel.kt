@@ -359,7 +359,9 @@ class CalendarViewModel @Inject constructor(
                 val shown = shown()
                 if (shown.isEmpty()) {
                     // With every calendar hidden there is nothing to fetch,
-                    // and nothing can be too many.
+                    // and nothing can be too many. The list holds its empty
+                    // page around the anchor, so it says "No events" rather
+                    // than waiting on a read that never comes.
                     _uiState.value = _uiState.value.copy(
                         instances = emptyList(),
                         truncated = false,
@@ -369,7 +371,7 @@ class CalendarViewModel @Inject constructor(
                         paging = false,
                         isLoading = false,
                         isRefreshing = false,
-                        fetched = null,
+                        fetched = state.anchor.takeIf { state.view == CalendarsSection.LIST },
                     )
                 } else if (state.view == CalendarsSection.LIST) {
                     pages(state, reset, shown)

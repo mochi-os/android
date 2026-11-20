@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tag tidak boleh kosong</string>
     <string name="wikis_attachments_search_placeholder">Cari lampiran</string>
     <string name="wikis_attachments_delete_confirm_message">Hapus \"%1$s\"? Ini tidak dapat dibatalkan.</string>
-    <string name="wikis_attachments_downloading">Mengunduh…</string>
     <string name="wikis_attachments_empty_description">Ketuk Unggah untuk menambahkan file ke halaman ini.</string>
     <string name="wikis_settings_name_save_cd">Simpan nama</string>
     <string name="wikis_settings_name_cancel_cd">Batalkan suntingan</string>

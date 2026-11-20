@@ -19,6 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.util.attachmentModel
 import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiImage
 import org.mochios.android.ui.components.SavedListLabels
@@ -82,7 +83,7 @@ internal fun SavedPostCardContent(
     val images = addressed(post.attachments, "feeds", post.feedId).filter { attachment -> attachment.isImage }
     val attachmentImageUrls = images
         .map { attachment ->
-            attachment.url ?: attachmentAddress("feeds", post.feedId, attachment.id).orEmpty()
+            attachmentModel(attachment.url, attachmentAddress("feeds", post.feedId, attachment.id)) ?: ""
         }
     val heroUrl = attachmentImageUrls.firstOrNull()
         ?: articleImage(post.data?.rss?.image)
@@ -100,9 +101,7 @@ internal fun SavedPostCardContent(
             GalleryMosaic(
                 media = images,
                 tileModel = { attachment ->
-                    attachment.previewUrl
-                        ?: attachment.thumbnailUrl
-                        ?: attachmentAddress("feeds", post.feedId, attachment.id, "thumbnail").orEmpty()
+                    attachmentModel(attachment.previewUrl ?: attachment.thumbnailUrl, attachmentAddress("feeds", post.feedId, attachment.id, "thumbnail")) ?: ""
                 },
                 onTap = { onClick() },
                 modifier = Modifier

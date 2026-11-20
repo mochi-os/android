@@ -17,9 +17,9 @@ class AssetAddressesTest {
 
     @Test
     fun `a photo is the market's photo route, with the variant after it`() {
-        assertEquals("/market/-/photo/p1", photoAddress("p1"))
-        assertEquals("/market/-/photo/p1/thumbnail", photoAddress("p1", "thumbnail"))
-        assertEquals("/market/-/photo/owned/p1/thumbnail", photoAddress("p1", "thumbnail", owned = true))
+        assertEquals("/market/-/photo/p1", photoAddress("p1")?.address)
+        assertEquals("/market/-/photo/p1/thumbnail", photoAddress("p1", "thumbnail")?.address)
+        assertEquals("/market/-/photo/owned/p1/thumbnail", photoAddress("p1", "thumbnail", owned = true)?.address)
     }
 
     @Test
@@ -29,12 +29,12 @@ class AssetAddressesTest {
             assertNull(photoAddress(hostile, "thumbnail"))
             assertNull(photoAddress(hostile, "thumbnail", owned = true))
         }
-        assertEquals("/market/-/photo/a%3Fb/thumbnail", photoAddress("a?b", "thumbnail"))
+        assertEquals("/market/-/photo/a%3Fb/thumbnail", photoAddress("a?b", "thumbnail")?.address)
     }
 
     @Test
     fun `a user's avatar goes through the market's own proxy`() {
-        assertEquals("/market/-/user/u1/asset/avatar", userAvatarUrl("u1"))
+        assertEquals("/market/-/user/u1/asset/avatar", userAvatarUrl("u1")?.address)
     }
 
     @Test
@@ -42,6 +42,6 @@ class AssetAddressesTest {
         assertNull(userAvatarUrl("x/-/delete?"))
         assertNull(userAvatarUrl(".."))
         assertNull(userAvatarUrl(""))
-        assertEquals("/market/-/user/a%3Fb/asset/avatar", userAvatarUrl("a?b"))
+        assertEquals("/market/-/user/a%3Fb/asset/avatar", userAvatarUrl("a?b")?.address)
     }
 }

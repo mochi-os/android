@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">ট্যাগ খালি হতে পারে না</string>
     <string name="wikis_attachments_search_placeholder">সংযুক্তি খুঁজুন</string>
     <string name="wikis_attachments_delete_confirm_message">„%1$s\" মুছে ফেলবেন? এটি পূর্বাবস্থায় ফেরানো যাবে না।</string>
-    <string name="wikis_attachments_downloading">ডাউনলোড হচ্ছে…</string>
     <string name="wikis_attachments_empty_description">এই পৃষ্ঠায় ফাইল যোগ করতে আপলোডে টোকা দিন।</string>
     <string name="wikis_settings_name_save_cd">নাম সংরক্ষণ করুন</string>
     <string name="wikis_settings_name_cancel_cd">সম্পাদনা বাতিল করুন</string>

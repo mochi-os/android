@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Barreessaa</string>
     <string name="forums_community_destination">%1$s irratti akka %2$s tti maxxanfama</string>
+    <string name="forums_find_search_example">Maqaa, ID, fingerprintii, URL, ykn %1$s barbaadi</string>
+    <string name="forums_setup">Qophaa\'i</string>
 </resources>

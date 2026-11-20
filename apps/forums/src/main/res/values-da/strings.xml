@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Trådstarter</string>
     <string name="forums_community_destination">Slås op i %1$s som %2$s</string>
+    <string name="forums_find_search_example">Søg efter navn, ID, fingeraftryk, URL eller %1$s</string>
+    <string name="forums_setup">Opsæt</string>
 </resources>

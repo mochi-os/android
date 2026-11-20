@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">A címke nem lehet üres</string>
     <string name="wikis_attachments_search_placeholder">Mellékletek keresése</string>
     <string name="wikis_attachments_delete_confirm_message">Törli ezt: „%1$s\"? Ez nem vonható vissza.</string>
-    <string name="wikis_attachments_downloading">Letöltés…</string>
     <string name="wikis_attachments_empty_description">Koppintson a Feltöltés gombra, hogy fájlokat adjon ehhez az oldalhoz.</string>
     <string name="wikis_settings_name_save_cd">Név mentése</string>
     <string name="wikis_settings_name_cancel_cd">Szerkesztés megszakítása</string>

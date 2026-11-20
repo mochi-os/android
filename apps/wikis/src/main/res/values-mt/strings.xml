@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">It-tikketta ma tistax tkun vojta</string>
     <string name="wikis_attachments_search_placeholder">Fittex il-mehmużin</string>
     <string name="wikis_attachments_delete_confirm_message">Tħassar “%1$s”? Dan ma jistax jitreġġa’ lura.</string>
-    <string name="wikis_attachments_downloading">Qed jitniżżel…</string>
     <string name="wikis_attachments_empty_description">Agħfas Tella’ biex iżżid fajls ma’ din il-paġna.</string>
     <string name="wikis_settings_name_save_cd">Issejvja l-isem</string>
     <string name="wikis_settings_name_cancel_cd">Ikkanċella l-editjar</string>

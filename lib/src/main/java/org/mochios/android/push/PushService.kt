@@ -6,7 +6,6 @@
 package org.mochios.android.push
 
 import android.app.Notification
-import android.app.PendingIntent
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.Service
@@ -38,6 +37,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 import org.json.JSONObject
+import org.mochios.android.BuildConfig
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.api.ApiClient
 import org.mochios.android.api.foreignClient
@@ -55,8 +55,8 @@ import kotlin.math.min
 /**
  * Foreground service hosting the Mochi UnifiedPush distributor. Holds one
  * WebSocket subscription per Mochi identity on the `unifiedpush` channel and
- * broadcasts each incoming `{subscription, payload}` as a MESSAGE intent to the
- * registered app.
+ * delivers each incoming `{subscription, payload}` in process, through
+ * [deliverPush].
  */
 @AndroidEntryPoint
 class PushService : Service() {
@@ -186,17 +186,17 @@ class PushService : Service() {
                     held = { channels.holds(slot) },
                     pause = { attempt -> online.await(ladder(attempt)) },
                 )
+                // Which server the user is on, and who they are, stay out of
+                // a release log.
                 if (token == null) {
-                    Log.w(
-                        TAG,
-                        "Could not mint token for ${account.server}; WS will not authenticate"
-                    )
+                    Log.w(TAG, "Could not mint a token; the push channel will not authenticate")
+                    if (BuildConfig.DEBUG) Log.d(TAG, "No token for ${account.server}")
                     return@launch
                 }
-                Log.i(
-                    TAG,
-                    "Subscribing to push channel on ${account.server} (identity ${account.identity})"
-                )
+                Log.i(TAG, "Subscribing to a push channel")
+                if (BuildConfig.DEBUG) {
+                    Log.d(TAG, "Push channel on ${account.server} for ${account.identity}")
+                }
                 val identity = account.identity
                 credentials[identity] = token
                 val drainer = drainers.getOrPut(identity) { Drainer() }
@@ -213,10 +213,12 @@ class PushService : Service() {
                         // Drained events take the live dispatch path.
                         drain = {
                             scope.launch {
-                                drainer.request { credentials[identity]?.let { current -> drainPending(account.server, current) } }
+                                drainer.request {
+                                    credentials[identity]?.let { current -> drainPending(account.server, current, identity) }
+                                }
                             }
                         },
-                        onEvent = { event -> handleEvent(event, account.server, credentials[identity] ?: token) },
+                        onEvent = { event -> handleEvent(event, account.server, credentials[identity] ?: token, identity) },
                     )
                 }
             } finally {
@@ -275,10 +277,11 @@ class PushService : Service() {
         event: org.mochios.android.model.WebSocketEvent,
         server: String,
         token: String,
+        identity: String,
     ) {
         val subId = event.subId ?: return
         val payload = event.payload ?: return
-        dispatchPush(subId, payload)
+        dispatchPush(subId, payload, identity)
         // Ack so the server drops the push_pending row. `account` identifies
         // it; the subscription id is only a routing token. Without it the row waits
         // for the TTL sweep.
@@ -287,7 +290,15 @@ class PushService : Service() {
         scope.launch { ackEvent(server, token, account, eventId) }
     }
 
-    private fun dispatchPush(subId: String, payload: String) {
+    /**
+     * Deliver [payload], pushed to [subId] on [identity]'s channel. The
+     * payload is cleartext by design - the server sends it over the account's
+     * authenticated WebSocket rather than encrypting it to a Web Push key
+     * (core/server/accounts.go, account_deliver_unifiedpush) - so it is
+     * delivered here in process: a broadcast would be an exported entry point
+     * that anything able to reach it could post notifications through.
+     */
+    private fun dispatchPush(subId: String, payload: String, identity: String) {
         val entry = store.bySubId(subId)
         // Never log the subscription id: it is the unguessable segment of the
         // push endpoint, so anything that reads logcat would learn the
@@ -297,29 +308,11 @@ class PushService : Service() {
             Log.w(TAG, "Received push for an unknown subscription; dropping")
             return
         }
-        Log.i(TAG, "Dispatching push to ${entry.appPackage}")
-        // Our own action, not the connector's. The connector decrypts every
-        // MESSAGE it receives and marks a payload that fails as undecrypted,
-        // and this one is cleartext by design - the server sends it that way
-        // over the user's authenticated WebSocket rather than encrypting to a
-        // Web Push key (core/server/accounts.go, account_deliver_unifiedpush).
-        // Broadcast on the connector's action and the receiver correctly drops
-        // it, which is what left self-hosted push inert.
-        //
-        // The PendingIntent is what replaces the decrypt as the authenticity
-        // check: it carries no action of its own and is never sent, it exists
-        // so the receiver can read creatorPackage and know the broadcast came
-        // from this distributor rather than any app that guessed the action.
-        val identity = PendingIntent.getBroadcast(
-            applicationContext, 0, Intent(), PendingIntent.FLAG_IMMUTABLE,
-        )
-        val out = Intent(ACTION_LOCAL_MESSAGE).apply {
-            setPackage(entry.appPackage)
-            putExtra(EXTRA_TOKEN, entry.token)
-            putExtra(EXTRA_BYTES_MESSAGE, payload.toByteArray(Charsets.UTF_8))
-            putExtra(MochiDistributorReceiver.EXTRA_PI, identity)
+        if (entry.appPackage != packageName) {
+            Log.w(TAG, "Received push for ${entry.appPackage}, which is not this app; dropping")
+            return
         }
-        applicationContext.sendBroadcast(out)
+        deliverPush(applicationContext, payload.toByteArray(Charsets.UTF_8), identity)
     }
 
     /**
@@ -327,7 +320,7 @@ class PushService : Service() {
      * each time the account's socket opens. The ack is a separate POST, so a
      * crash mid-drain leaves the rows for the next open.
      */
-    private fun drainPending(server: String, token: String) {
+    private fun drainPending(server: String, token: String, identity: String) {
         val url = server.trimEnd('/') + "/notifications/-/push/drain"
         val request = Request.Builder()
             .url(url)
@@ -352,7 +345,7 @@ class PushService : Service() {
                     val account = ev.optString("account")
                     val eventId = ev.optString("event")
                     if (subId.isBlank() || payload.isBlank()) continue
-                    dispatchPush(subId, payload)
+                    dispatchPush(subId, payload, identity)
                     if (account.isNotBlank() && eventId.isNotBlank()) {
                         acks.put(JSONObject().put("account", account).put("event", eventId))
                     }
@@ -476,16 +469,6 @@ class PushService : Service() {
         const val CHANNEL_GROUP_ID = "mochi_service_status"
         const val NOTIFICATION_ID = 0x4D43_0001 // 'MC' 0001
         const val FINGERPRINT = "unifiedpush"
-
-        // UnifiedPush v3 wire constants for the App-bound MESSAGE broadcast.
-        const val ACTION_MESSAGE = "org.unifiedpush.android.connector.MESSAGE"
-
-        // Mochi's own delivery action. A third-party distributor still uses
-        // ACTION_MESSAGE above and its payload is genuinely encrypted; this one
-        // is for the local fast path, whose payload is not.
-        const val ACTION_LOCAL_MESSAGE = "org.mochios.android.push.MESSAGE"
-        const val EXTRA_TOKEN = "token"
-        const val EXTRA_BYTES_MESSAGE = "bytesMessage"
 
         const val TAG = "MochiPushService"
 

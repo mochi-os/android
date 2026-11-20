@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ටැගය හිස් විය නොහැක</string>
     <string name="wikis_attachments_search_placeholder">ඇමුණුම් සොයන්න</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” මකන්නද? මෙය පසුගමනය කළ නොහැක.</string>
-    <string name="wikis_attachments_downloading">බාගත කරමින්…</string>
     <string name="wikis_attachments_empty_description">මෙම පිටුවට ගොනු එක් කිරීමට උඩුගත කරන්න තට්ටු කරන්න.</string>
     <string name="wikis_settings_name_save_cd">නම සුරකින්න</string>
     <string name="wikis_settings_name_cancel_cd">සංස්කරණය අවලංගු කරන්න</string>

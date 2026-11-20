@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Yhdistetään…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Yhdistetään uudelleen…</string>
-    <string name="chess_ws_failed">Yhteys epäonnistui</string>
     <string name="chess_move_capture">%1$s otti %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

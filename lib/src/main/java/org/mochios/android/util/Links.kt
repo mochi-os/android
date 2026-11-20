@@ -5,9 +5,11 @@
 
 package org.mochios.android.util
 
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.i18n.Flights
 import org.mochios.android.i18n.Maps
 import org.mochios.android.model.Attachment
@@ -74,17 +76,68 @@ fun segment(id: String): String? {
 private const val HEX = "0123456789ABCDEF"
 
 /**
+ * The parts of an in-app link's [path], each decoded once. A link arrives
+ * escaped - a notification's, a shortcut's - and every module's route builder
+ * escapes what it puts in a route, so a part handed on still escaped would be
+ * escaped twice and name another item.
+ */
+fun linkParts(path: String): List<String> = path.split('/').map { part -> Uri.decode(part) }
+
+/**
+ * [part] when it is a plain identifier, RFC 3986's unreserved characters
+ * alone as [segment] leaves them, else null: for a route builder that puts
+ * what it is given into a route as it stands, where a decoded `/` or `?`
+ * would name another destination or none.
+ */
+fun plain(part: String): String? = part.takeIf { segment(it) == it }
+
+/**
+ * What a `mochi:` URI is, for a log line: the system intent's name
+ * (`notification`, `oauth-return`), the authority of a hierarchical one, or
+ * `entity`. Never its query or path, which carry codes, nonces and ids.
+ */
+fun uriName(uri: Uri): String = when {
+    !uri.isHierarchical -> uri.encodedSchemeSpecificPart.orEmpty().substringBefore('?')
+    !uri.authority.isNullOrEmpty() -> uri.authority.orEmpty()
+    else -> "entity"
+}
+
+/**
+ * The launch [intent] handed on to [component]: its action, data, type,
+ * categories and flags, and none of its extras. The activity that forwards is
+ * exported, so any app's extras arrive with the launch; the forwarder adds
+ * back the one the receiver routes by.
+ */
+fun forwardedIntent(intent: Intent, component: ComponentName): Intent =
+    Intent(intent.action ?: Intent.ACTION_MAIN).apply {
+        setDataAndType(intent.data, intent.type)
+        intent.categories?.forEach { category -> addCategory(category) }
+        flags = intent.flags
+        setComponent(component)
+    }
+
+/**
  * The address of attachment [id] of [entity] in [app] on the user's server,
  * `/<app>/<entity>/-/attachments/<id>`, with [variant] ("thumbnail",
  * "preview") after it, or null when [entity] or [id] cannot be one segment
  * ([segment]). Both can reach the phone from another server, in a remote
  * view.
  */
-fun attachmentAddress(app: String, entity: String, id: String, variant: String? = null): String? {
+fun attachmentAddress(app: String, entity: String, id: String, variant: String? = null): OwnedAddress? {
     val owner = segment(entity) ?: return null
     val attachment = segment(id) ?: return null
-    return "/$app/$owner/-/attachments/$attachment" + if (variant == null) "" else "/$variant"
+    return OwnedAddress.of("/$app/$owner/-/attachments/$attachment" + if (variant == null) "" else "/$variant")
 }
+
+/**
+ * An attachment's image, media or file as a Coil model: [url], the address
+ * the server gave for it, when it is one of the app's own (an [OwnedAddress],
+ * fetched with a credential) or another host's web address, such as a feed
+ * source's enclosure (fetched without); else [built], the address the app
+ * builds from its own routes.
+ */
+fun attachmentModel(url: String?, built: OwnedAddress?): Any? =
+    OwnedAddress.of(url) ?: url?.takeIf { address -> isWebUrl(address) } ?: built
 
 /**
  * [attachments] of [entity] in [app] that have an address: the one the

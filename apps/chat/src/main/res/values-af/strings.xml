@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s aanvaar slegs geselsies van vriende.</string>
     <string name="chat_message_earlier">Boodskappe van voordat hierdie rekening by Mochi gevoeg is, is geënkripteer en kan nie hier gelees word nie</string>
     <string name="chat_message_excluded">Slegs vir ander toestelle geënkripteer</string>
+    <string name="chat_setup">Stel op</string>
 </resources>

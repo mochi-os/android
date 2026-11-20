@@ -7,61 +7,105 @@ package org.mochios.android.push
 
 import android.content.Context
 import android.util.Base64
+import org.json.JSONArray
+import org.json.JSONObject
 import java.security.SecureRandom
 
 /**
  * Most nonces to keep outstanding; see [NonceStore].
  *
- * Well past the ~50 notifications Android will hold for one app, because
- * eviction here is a backstop rather than the mechanism: a nonce is retired
- * when its notification is tapped or dismissed, so the outstanding set tracks
- * the tray. At 64 it did not - dismissal retired nothing, so a busy feed
- * evicted nonces whose notifications were still on screen, and tapping one of
- * those did nothing at all.
+ * A backstop, not the mechanism: each tray tag holds one nonce, replaced when
+ * the tag is posted again and retired when its notification is tapped,
+ * swiped away or cancelled by the app, so the outstanding set tracks the tray.
  */
 internal const val MAXIMUM_NONCES = 256
 
 /**
- * Outstanding nonces after issuing [nonce]. Oldest first, so dropping from the
- * front past [maximum] retires the least recently posted notification.
+ * One outstanding nonce and the tray tag of the notification carrying it.
+ * [tag] is blank for a nonce no notification carries - [org.mochios.android.launcher.openInApp]
+ * issues one for a link tapped in the app - which nothing replaces.
+ */
+internal data class Outstanding(val tag: String, val nonce: String)
+
+/**
+ * Outstanding nonces after issuing [nonce] for [tag]. A notification posted
+ * again under its tag replaces the one before, which fires no delete intent,
+ * so its nonce goes with it. Oldest first, so dropping from the front past
+ * [maximum] retires the least recently posted.
  */
 internal fun noncesAfterIssue(
-    outstanding: List<String>,
+    outstanding: List<Outstanding>,
+    tag: String,
     nonce: String,
     maximum: Int = MAXIMUM_NONCES,
-): List<String> = (outstanding + nonce).takeLast(maximum)
+): List<Outstanding> = (noncesAfterRetire(outstanding, tag) + Outstanding(tag, nonce)).takeLast(maximum)
+
+/** Outstanding nonces after [tag]'s notification is cancelled by the app. */
+internal fun noncesAfterRetire(outstanding: List<Outstanding>, tag: String): List<Outstanding> =
+    if (tag.isBlank()) outstanding else outstanding.filter { entry -> entry.tag != tag }
 
 /**
  * Outstanding nonces after spending [nonce], or null when it was not
  * outstanding - the signal to ignore the tap.
  */
-internal fun noncesAfterConsume(outstanding: List<String>, nonce: String?): List<String>? {
-    if (nonce.isNullOrEmpty() || nonce !in outstanding) return null
-    return outstanding - nonce
+internal fun noncesAfterConsume(outstanding: List<Outstanding>, nonce: String?): List<Outstanding>? {
+    if (nonce.isNullOrEmpty() || outstanding.none { entry -> entry.nonce == nonce }) return null
+    return outstanding.filter { entry -> entry.nonce != nonce }
 }
+
+/**
+ * The outstanding list as stored. A value written before nonces were keyed by
+ * tag is a comma-separated list of nonces, read as tagless so the taps of
+ * notifications already in the tray still work.
+ */
+internal fun noncesFromStored(stored: String): List<Outstanding> {
+    if (!stored.startsWith("[")) {
+        return stored.split(',').filter { it.isNotEmpty() }.map { nonce -> Outstanding("", nonce) }
+    }
+    return runCatching {
+        val array = JSONArray(stored)
+        (0 until array.length()).mapNotNull { index ->
+            val entry = array.optJSONObject(index) ?: return@mapNotNull null
+            val nonce = entry.optString("nonce").takeIf { it.isNotEmpty() } ?: return@mapNotNull null
+            Outstanding(entry.optString("tag"), nonce)
+        }
+    }.getOrDefault(emptyList())
+}
+
+internal fun noncesToStored(outstanding: List<Outstanding>): String =
+    JSONArray(outstanding.map { entry -> JSONObject().put("tag", entry.tag).put("nonce", entry.nonce) }).toString()
 
 /**
  * Single-use proofs that a `mochi:notification` tap came from a notification
  * this app posted: MainActivity is exported, so intent extras authenticate
- * nothing. Persistent, and bounded at [MAXIMUM_NONCES] - unspent nonces are
- * dropped oldest first.
+ * nothing. Persistent, one per tray tag, and bounded at [MAXIMUM_NONCES].
  */
 class NonceStore(context: Context) {
 
     private val preferences =
         context.applicationContext.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE)
 
-    /** Issue a nonce for a notification about to be posted. */
-    fun issue(): String {
+    /**
+     * Issue a nonce for a notification about to be posted under [tag], blank
+     * for one no notification carries.
+     */
+    fun issue(tag: String = ""): String {
         val bytes = ByteArray(16)
         SecureRandom().nextBytes(bytes)
-        // URL-safe base64 is [A-Za-z0-9-_], so a value can never contain the
-        // separator the outstanding list is stored with.
         val nonce = Base64.encodeToString(bytes, Base64.URL_SAFE or Base64.NO_PADDING or Base64.NO_WRAP)
         synchronized(lock) {
-            write(noncesAfterIssue(read(), nonce))
+            write(noncesAfterIssue(read(), tag, nonce))
         }
         return nonce
+    }
+
+    /** Retire [tag]'s nonce: the app has cancelled its notification. */
+    fun retire(tag: String) {
+        synchronized(lock) {
+            val outstanding = read()
+            val remaining = noncesAfterRetire(outstanding, tag)
+            if (remaining.size != outstanding.size) write(remaining)
+        }
     }
 
     /** True if [nonce] was outstanding; it is spent either way. */
@@ -73,19 +117,15 @@ class NonceStore(context: Context) {
         }
     }
 
-    private fun read(): List<String> =
-        preferences.getString(KEY, "").orEmpty()
-            .split(SEPARATOR)
-            .filter { it.isNotEmpty() }
+    private fun read(): List<Outstanding> = noncesFromStored(preferences.getString(KEY, "").orEmpty())
 
-    private fun write(nonces: List<String>) {
-        preferences.edit().putString(KEY, nonces.joinToString(SEPARATOR)).apply()
+    private fun write(outstanding: List<Outstanding>) {
+        preferences.edit().putString(KEY, noncesToStored(outstanding)).apply()
     }
 
     private companion object {
         const val PREFERENCES = "mochi_notification_taps"
         const val KEY = "nonces"
-        const val SEPARATOR = ","
 
         // Both push transports post from their own threads.
         val lock = Any()

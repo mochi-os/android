@@ -339,4 +339,6 @@
     </plurals>
     <string name="forums_comment_op">Autorius</string>
     <string name="forums_community_destination">Skelbiama bendruomenėje %1$s kaip %2$s</string>
+    <string name="forums_find_search_example">Ieškoti pagal pavadinimą, ID, atspaudą, URL ar adresą %1$s</string>
+    <string name="forums_setup">Nustatyti</string>
 </resources>

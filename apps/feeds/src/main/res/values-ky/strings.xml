@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Жазылган эмессиз</string>
     <string name="feeds_source_follow_again">Кайра жазылуу</string>
     <string name="feeds_filtered_by_tag">Тег боюнча чыпкаланды:</string>
+    <string name="feeds_setup">Орнотуу</string>
+    <string name="feeds_search_example">Аты, ID, манжа изи, URL же %1$s дареги боюнча издөө</string>
 </resources>

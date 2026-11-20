@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Nicht gefolgt</string>
     <string name="feeds_source_follow_again">Erneut folgen</string>
     <string name="feeds_filtered_by_tag">Gefiltert nach Tag:</string>
+    <string name="feeds_setup">Einrichten</string>
+    <string name="feeds_search_example">Nach Name, ID, Fingerabdruck, URL oder %1$s suchen</string>
 </resources>

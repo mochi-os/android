@@ -5,9 +5,6 @@
 
 package org.mochios.settings.ui.account
 
-import android.app.DownloadManager
-import android.content.Context
-import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -43,9 +40,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import org.mochios.android.api.userMessage
+import org.mochios.android.files.DownloadRequest
+import org.mochios.android.files.MIME_ZIP
+import org.mochios.android.files.rememberDownloadSaver
 import org.mochios.android.ui.components.CopyButton
-import org.mochios.android.util.destination
-import org.mochios.android.util.webUri
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiButtonTone
 import org.mochios.android.ui.components.MochiIconButton
@@ -78,7 +76,6 @@ fun AccountScreen(
     viewModel: AccountViewModel = hiltViewModel(),
 ) {
     val state by viewModel.uiState.collectAsState()
-    val context = LocalContext.current
 
     // Closing soft-deletes the account and revokes every session; sign out so
     // the app drops to login (the user reactivates from the login flow).
@@ -86,12 +83,14 @@ fun AccountScreen(
         viewModel.closed.collect { onClosed() }
     }
 
-    // The export bundle is built server-side; once ready, stream it to the
-    // public Downloads directory via Android's DownloadManager (the auth token
-    // is carried inline because DownloadManager runs out-of-process).
+    // The export bundle is built server-side; once ready, it goes where the
+    // user picks, fetched by the settings client.
+    val saveExport = rememberDownloadSaver { request, destination ->
+        viewModel.saveExport(request.key, destination)
+    }
     LaunchedEffect(Unit) {
-        viewModel.exportReady.collect { download ->
-            startExportDownload(context, download)
+        viewModel.exportReady.collect { filename ->
+            saveExport(DownloadRequest(key = filename, name = filename, mimeType = MIME_ZIP))
         }
     }
 
@@ -215,36 +214,6 @@ private fun DataSection(onExport: (passphrase: String) -> Unit) {
             dismissText = stringResource(R.string.account_cancel),
         )
     }
-}
-
-/**
- * Hands the export to [DownloadManager], which runs out-of-process and bypasses
- * the app's interceptors, so the bearer token goes in the request header
- * directly.
- */
-private fun startExportDownload(context: Context, download: ExportDownload) {
-    val dm = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-    val name = sanitiseFilename(download.filename)
-    // Origin-pinned by construction (built from serverUrl), but gate the scheme
-    // anyway: DownloadManager throws on a non-web URI, and the Bearer header
-    // below must never ride on anything but a web request. Same as the wikis twin.
-    val uri = webUri(download.url) ?: return
-    val req = DownloadManager.Request(uri)
-        .setTitle(name)
-        .setMimeType("application/zip")
-        .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
-        .destination(context, name)
-    if (!download.token.isNullOrBlank()) {
-        req.addRequestHeader("Authorization", "Bearer ${download.token}")
-    }
-    dm.enqueue(req)
-}
-
-/** DownloadManager rejects names containing path separators or NULs. */
-private fun sanitiseFilename(name: String): String {
-    val trimmed = name.trim()
-    if (trimmed.isEmpty()) return "mochi-export.zip"
-    return trimmed.replace(Regex("[/\\\\ ]"), "_")
 }
 
 @Composable

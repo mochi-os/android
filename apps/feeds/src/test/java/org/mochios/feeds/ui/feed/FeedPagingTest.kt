@@ -95,7 +95,7 @@ class FeedPagingTest {
         session = SessionManager(context)
         runBlocking {
             session.setServerUrl(base)
-            session.setBoundAccount("a1", base)
+            session.setBoundAccount("a1")
         }
         socket = MochiWebSocket(OkHttpClient(), Gson(), object : SocketSession {
             override suspend fun serverUrl(): String = base

@@ -5,9 +5,15 @@
 
 package org.mochios.home.repository
 
+import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.withContext
+import org.mochios.android.account.MochiAccount
 import org.mochios.android.api.unwrap
 import org.mochios.android.auth.AuthRepository
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.NotificationTopic
@@ -33,6 +39,12 @@ interface MenuSource {
 
     suspend fun person(): Person
 
+    /**
+     * Who the device holds as signed in, read without the server: the bound
+     * identity and the name its account carries. Null when none is held.
+     */
+    suspend fun held(): Person? = null
+
     /** The accent colour [identity]'s avatar is ringed in, or null for none. */
     suspend fun accent(identity: String): String?
 
@@ -53,6 +65,8 @@ class ServerMenuSource @Inject constructor(
     private val store: NotificationsUnreadStore,
     private val auth: AuthRepository,
     private val api: HomeApi,
+    private val session: SessionManager,
+    @param:ApplicationContext private val context: Context,
 ) : MenuSource {
     override val count: StateFlow<Int> = store.count
 
@@ -62,6 +76,12 @@ class ServerMenuSource @Inject constructor(
 
     override suspend fun person(): Person =
         auth.getIdentityInfo().identity.let { Person(it.identity, it.name) }
+
+    override suspend fun held(): Person? {
+        val identity = session.getBoundIdentity() ?: return null
+        val name = withContext(Dispatchers.IO) { MochiAccount.byIdentity(context, identity)?.name }
+        return Person(identity, name.orEmpty())
+    }
 
     override suspend fun accent(identity: String): String? =
         api.style(identity).unwrap().accent?.takeIf { it.isNotBlank() }

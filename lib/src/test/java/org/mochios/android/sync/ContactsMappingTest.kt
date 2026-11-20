@@ -149,12 +149,13 @@ class ContactsMappingTest {
 
     @Test
     fun `a download replaces only the rows it owns`() {
-        assertTrue(ContactsMapping.managed(DataRow(Email.CONTENT_ITEM_TYPE, emptyMap())))
-        assertTrue(ContactsMapping.managed(DataRow(Event.CONTENT_ITEM_TYPE, mapOf(Event.TYPE to Event.TYPE_BIRTHDAY.toString()))))
-        assertFalse(ContactsMapping.managed(DataRow(Event.CONTENT_ITEM_TYPE, mapOf(Event.TYPE to Event.TYPE_ANNIVERSARY.toString()))))
-        assertFalse(ContactsMapping.managed(DataRow(Photo.CONTENT_ITEM_TYPE, emptyMap())))
-        assertTrue(ContactsMapping.managed(DataRow(Photo.CONTENT_ITEM_TYPE, mapOf(Data.SYNC1 to ContactsMapping.MARKER))))
-        assertFalse(ContactsMapping.managed(DataRow(GroupMembership.CONTENT_ITEM_TYPE, emptyMap())))
+        val (selection, arguments) = ContactsMapping.replaced(emptyList())
+        assertTrue(Email.CONTENT_ITEM_TYPE in arguments)
+        assertTrue("an event only as a birthday", "(mimetype=? and data2=?)" in selection)
+        assertEquals(Event.TYPE_BIRTHDAY.toString(), arguments[arguments.indexOf(Event.CONTENT_ITEM_TYPE) + 1])
+        assertTrue("a photo only when marked", "(mimetype in (?,?) and data_sync1=?)" in selection)
+        assertEquals(listOf(Photo.CONTENT_ITEM_TYPE, Im.CONTENT_ITEM_TYPE, ContactsMapping.MARKER), arguments.takeLast(3))
+        assertFalse("a group stays", GroupMembership.CONTENT_ITEM_TYPE in arguments)
     }
 
     @Test
@@ -356,7 +357,6 @@ class ContactsMappingTest {
         val three = photo(ContactProperty("PHOTO", mapOf("ENCODING" to listOf("b"), "TYPE" to listOf("JPEG")), encoded)).single()
         assertArrayEquals(bytes, three.blob)
         assertEquals(ContactsMapping.MARKER, three.values[Data.SYNC1])
-        assertTrue(ContactsMapping.managed(three))
 
         val four = photo(ContactProperty("PHOTO", emptyMap(), "data:image/jpeg;base64,$encoded")).single()
         assertArrayEquals(bytes, four.blob)
@@ -440,11 +440,6 @@ class ContactsMappingTest {
 
     @Test
     fun `a download replaces the messaging rows it wrote and those the phone added that it writes back`() {
-        val marked = DataRow(Im.CONTENT_ITEM_TYPE, mapOf(Data.SYNC1 to ContactsMapping.MARKER, Im.DATA to "a@b.c"))
-        val added = DataRow(Im.CONTENT_ITEM_TYPE, mapOf(Im.DATA to "a@b.c"))
-        assertTrue(ContactsMapping.managed(marked))
-        assertFalse(ContactsMapping.managed(added))
-
         val written = ContactsMapping.rows(listOf(ContactProperty("IMPP", emptyMap(), "xmpp:ada@example.org")))
         val (selection, arguments) = ContactsMapping.replaced(written)
         assertTrue(selection, selection.endsWith("or (mimetype=? and data1 in (?)))"))

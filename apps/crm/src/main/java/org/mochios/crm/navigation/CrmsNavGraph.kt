@@ -57,24 +57,28 @@ object CrmsApp {
     // pattern above also matches, with objectId='create'.
     const val CREATE_OBJECT = "crm/crm/{crmId}/create-object?field={field}&value={value}&copy={copy}"
 
-    fun crm(crmId: String) = "crm/crm/$crmId"
-    fun crmObject(crmId: String, objectId: String) = "crm/crm/$crmId/object/$objectId"
-    fun crmSettings(crmId: String) = "crm/crm/$crmId/settings"
-    fun crmDesign(crmId: String) = "crm/crm/$crmId/design"
+    // Every value a builder puts in a route is escaped with Uri.encode, which
+    // Navigation undoes once as it fills the destination's arguments. A
+    // subscribed CRM's ids are its owner's server's: one holding `/`, `?`,
+    // `#` or `%` would otherwise match another screen, or none, which throws.
+    fun crm(crmId: String) = "crm/crm/${Uri.encode(crmId)}"
+    fun crmObject(crmId: String, objectId: String) = "${crm(crmId)}/object/${Uri.encode(objectId)}"
+    fun crmSettings(crmId: String) = "${crm(crmId)}/settings"
+    fun crmDesign(crmId: String) = "${crm(crmId)}/design"
     fun crmDesignClass(crmId: String, classId: String) =
-        "crm/crm/$crmId/design/class/$classId"
-    fun crmDesignCreateClass(crmId: String) = "crm/crm/$crmId/design/create-class"
+        "${crm(crmId)}/design/class/${Uri.encode(classId)}"
+    fun crmDesignCreateClass(crmId: String) = "${crm(crmId)}/design/create-class"
     fun crmDesignView(crmId: String, viewId: String) =
-        "crm/crm/$crmId/design/view/$viewId"
-    fun crmDesignCreateView(crmId: String) = "crm/crm/$crmId/design/create-view"
+        "${crm(crmId)}/design/view/${Uri.encode(viewId)}"
+    fun crmDesignCreateView(crmId: String) = "${crm(crmId)}/design/create-view"
     fun crmDesignCreateField(crmId: String, classId: String) =
-        "crm/crm/$crmId/design/class/$classId/create-field"
+        "${crmDesignClass(crmId, classId)}/create-field"
     fun crmDesignOption(crmId: String, classId: String, fieldId: String, optionId: String = "") =
-        "crm/crm/$crmId/design/class/$classId/field/$fieldId/option?optionId=$optionId"
+        "${crmDesignField(crmId, classId, fieldId)}/option?optionId=${Uri.encode(optionId)}"
     fun crmAddColumn(crmId: String, classId: String, fieldId: String) =
-        "crm/crm/$crmId/board/class/$classId/field/$fieldId/add-column"
+        "${crm(crmId)}/board/class/${Uri.encode(classId)}/field/${Uri.encode(fieldId)}/add-column"
     fun crmDesignField(crmId: String, classId: String, fieldId: String) =
-        "crm/crm/$crmId/design/class/$classId/field/$fieldId"
+        "${crmDesignClass(crmId, classId)}/field/${Uri.encode(fieldId)}"
 
     /**
      * Create-object route for [crmId], seeded with the one field value a board
@@ -84,7 +88,7 @@ object CrmsApp {
         val preset = presetValues.entries.firstOrNull()
         val field = Uri.encode(preset?.key.orEmpty())
         val value = Uri.encode(preset?.value.orEmpty())
-        return "crm/crm/$crmId/create-object?field=$field&value=$value&copy=${Uri.encode(copy.orEmpty())}"
+        return "${crm(crmId)}/create-object?field=$field&value=$value&copy=${Uri.encode(copy.orEmpty())}"
     }
 }
 

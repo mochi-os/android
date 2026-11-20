@@ -74,7 +74,7 @@ class ProfilePrivacyTest {
         session = SessionManager(context)
         runBlocking {
             session.setServerUrl(base)
-            session.setBoundAccount("p1", base)
+            session.setBoundAccount("p1")
         }
         val retrofit = Retrofit.Builder()
             .baseUrl(server.url("/people/"))

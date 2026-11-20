@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Mwandishi</string>
     <string name="forums_community_destination">Inachapishwa kwenye %1$s kama %2$s</string>
+    <string name="forums_find_search_example">Tafuta kwa jina, ID, alama ya kidole, URL, au %1$s</string>
+    <string name="forums_setup">Sanidi</string>
 </resources>

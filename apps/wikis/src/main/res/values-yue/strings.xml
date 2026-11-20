@@ -219,7 +219,6 @@
     <string name="wikis_attachments_delete_confirm_message">刪除「%1$s」？呢個操作冇得還原。</string>
     <string name="wikis_attachments_delete_success">已刪除附件</string>
     <string name="wikis_attachments_delete_failed">刪除附件失敗</string>
-    <string name="wikis_attachments_downloading">下載緊…</string>
     <string name="wikis_attachments_empty_title">重未有附件</string>
     <string name="wikis_attachments_empty_description">㩒「上載」加檔案落呢一頁。</string>
     <string name="wikis_attachments_no_results_title">冇附件符合你嘅搜尋</string>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Պիտակը չի կարող դատարկ լինել</string>
     <string name="wikis_attachments_search_placeholder">Որոնել կցորդներում</string>
     <string name="wikis_attachments_delete_confirm_message">Ջնջե՞լ «%1$s»-ը։ Սա անդառնալի է։</string>
-    <string name="wikis_attachments_downloading">Ներբեռնվում է…</string>
     <string name="wikis_attachments_empty_description">Հպեք Վերբեռնել՝ այս էջին ֆայլեր ավելացնելու համար։</string>
     <string name="wikis_settings_name_save_cd">Պահպանել անունը</string>
     <string name="wikis_settings_name_cancel_cd">Չեղարկել խմբագրումը</string>

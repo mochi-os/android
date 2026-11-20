@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Ekki fylgt</string>
     <string name="feeds_source_follow_again">Fylgja aftur</string>
     <string name="feeds_filtered_by_tag">Síað eftir merki:</string>
+    <string name="feeds_setup">Setja upp</string>
+    <string name="feeds_search_example">Leita eftir nafni, auðkenni, fingrafari, slóð eða %1$s</string>
 </resources>

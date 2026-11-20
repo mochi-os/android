@@ -125,10 +125,19 @@ class AuthViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(identityPrivacy = privacy)
     }
 
-    /** Abandon the in-progress identity-creation and drop the user back to
-     *  the email entry step. Mirrors web's "Use a different account" link. */
+    /**
+     * Abandon the in-progress identity creation and drop the user back to the
+     * email entry step, as the web's "Use a different account" link does. The
+     * account's session, saved when its code verified, is signed out with it:
+     * kept, the account the user turned away from would stay signed in on
+     * the phone. The server and its sign-in methods stay, so the email step
+     * can be shown at once.
+     */
     fun abandonIdentity() {
-        _uiState.value = AuthUiState(serverUrl = _uiState.value.serverUrl)
+        viewModelScope.launch {
+            sessionManager.clearAll()
+            resetForLogin()
+        }
     }
 
     fun updateRecoveryCode(code: String) {
@@ -207,7 +216,9 @@ class AuthViewModel @Inject constructor(
             )
             return
         }
-        if (parsed == null) {
+        // A user name or password in the address is refused: the server is
+        // stored as its origin alone (SessionManager.setServerUrl).
+        if (parsed == null || parsed.username.isNotEmpty() || parsed.password.isNotEmpty()) {
             _uiState.value = _uiState.value.copy(
                 error = MochiError.Unknown(AppContext.get().getString(R.string.error_enter_server_url))
             )

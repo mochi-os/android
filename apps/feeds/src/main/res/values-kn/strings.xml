@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">ಅನುಸರಿಸುತ್ತಿಲ್ಲ</string>
     <string name="feeds_source_follow_again">ಮತ್ತೆ ಅನುಸರಿಸಿ</string>
     <string name="feeds_filtered_by_tag">ಟ್ಯಾಗ್‌ನಿಂದ ಫಿಲ್ಟರ್ ಮಾಡಲಾಗಿದೆ:</string>
+    <string name="feeds_setup">ಸೆಟಪ್ ಮಾಡಿ</string>
+    <string name="feeds_search_example">ಹೆಸರು, ID, ಫಿಂಗರ್‌ಪ್ರಿಂಟ್, URL ಅಥವಾ %1$s ನಿಂದ ಹುಡುಕಿ</string>
 </resources>

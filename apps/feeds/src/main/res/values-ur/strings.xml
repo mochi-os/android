@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">فالو نہیں کر رہے</string>
     <string name="feeds_source_follow_again">دوبارہ فالو کریں</string>
     <string name="feeds_filtered_by_tag">ٹیگ کے ذریعے فلٹر شدہ:</string>
+    <string name="feeds_setup">سیٹ اپ کریں</string>
+    <string name="feeds_search_example">نام، ID، فنگر پرنٹ، URL، یا %1$s سے تلاش کریں</string>
 </resources>

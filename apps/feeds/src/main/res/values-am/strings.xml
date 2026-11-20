@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">አልተከተሉም</string>
     <string name="feeds_source_follow_again">እንደገና ተከተል</string>
     <string name="feeds_filtered_by_tag">በመለያ ተጣርቷል:</string>
+    <string name="feeds_setup">ያዘጋጁ</string>
+    <string name="feeds_search_example">በስም፣ መታወቂያ፣ ጣት አሻራ፣ URL ወይም %1$s ይፈልጉ</string>
 </resources>

@@ -7,6 +7,7 @@ package org.mochios.android.push
 
 import android.content.Context
 import android.util.Log
+import org.mochios.android.auth.SessionManager
 import org.unifiedpush.android.connector.UnifiedPush
 
 /**
@@ -34,6 +35,22 @@ object MochiPushClient {
         } catch (e: Exception) {
             Log.w(TAG, "registerApp failed: ${e.message}")
         }
+    }
+
+    /**
+     * Retire the signed-in identity's registration on sign-out: the instance
+     * [register] was called with, by [PushTransport]. Read before the session
+     * is cleared, which forgets it.
+     *
+     * @param unregister retires one instance.
+     */
+    suspend fun unregisterBound(
+        context: Context,
+        sessions: SessionManager,
+        unregister: (String) -> Unit = { instance -> unregister(context, instance) },
+    ) {
+        val identity = sessions.getBoundIdentity()?.takeIf { it.isNotBlank() } ?: return
+        unregister(identity)
     }
 
     /** Tear down the subscription on logout / account removal. */

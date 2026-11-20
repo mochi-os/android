@@ -409,4 +409,6 @@
     <string name="feeds_source_unfollowed">Gun leantainn</string>
     <string name="feeds_source_follow_again">Lean a-rithist</string>
     <string name="feeds_filtered_by_tag">Air a shìoladh le taga:</string>
+    <string name="feeds_setup">Suidhich</string>
+    <string name="feeds_search_example">Lorg le ainm, ID, lorg-meòir, URL, no %1$s</string>
 </resources>

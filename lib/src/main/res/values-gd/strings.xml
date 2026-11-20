@@ -320,7 +320,6 @@
     <string name="error_server_https">Feumaidh seòladh an fhrithealaiche tòiseachadh le https://</string>
     <string name="device_name_fallback">Inneal-làimhe</string>
     <string name="account_error_token_type">Seòrsa tòcain gun taic</string>
-    <string name="account_error_caller">Chan eil cead aig an neach-gairm</string>
     <string name="zone_sea">Aig muir</string>
     <string name="access_remove">Thoir air falbh</string>
     <string name="access_remove_title">Thoir an cothrom air falbh?</string>
@@ -348,4 +347,10 @@
     <string name="person_unknown">Neo-aithnichte</string>
     <string name="format_time_seconds_short">%1$sd</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">A’ luchdadh a-nuas %1$s…</string>
+    <string name="downloads_saved">Chaidh %1$s a shàbhaladh</string>
+    <string name="downloads_failed">Cha b’ urrainn %1$s a shàbhaladh: %2$s</string>
+    <string name="sync_conflict">Air atharrachadh air an fhrithealaiche</string>
+    <string name="sync_missing">Chan eil e air an fhrithealaiche tuilleadh</string>
+    <string name="sync_refused">Dhiùlt am frithealaiche e</string>
 </resources>

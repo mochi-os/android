@@ -5,6 +5,7 @@
 
 package org.mochios.market.model
 
+import org.mochios.android.api.OwnedAddress
 import com.google.gson.annotations.SerializedName
 import org.mochios.android.util.segment
 
@@ -63,10 +64,10 @@ data class Photo(
  * takes the seller's own route, which also serves a draft's photos. Null when
  * the id, a peer's, cannot be one segment of the address ([segment]).
  */
-fun photoAddress(id: String, variant: String? = null, owned: Boolean = false): String? {
+fun photoAddress(id: String, variant: String? = null, owned: Boolean = false): OwnedAddress? {
     val photo = segment(id) ?: return null
     val route = if (owned) "/market/-/photo/owned/$photo" else "/market/-/photo/$photo"
-    return route + if (variant == null) "" else "/$variant"
+    return OwnedAddress.of(route + if (variant == null) "" else "/$variant")
 }
 
 /**

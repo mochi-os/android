@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Ojoajuhína…</string>
     <string name="chess_ws_disconnected">Ndojoajúi</string>
     <string name="chess_ws_reconnecting">Ojoaju jey…</string>
-    <string name="chess_ws_failed">Ñemoirũ ndoikói</string>
     <string name="chess_move_capture">%1$s ojagarra %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

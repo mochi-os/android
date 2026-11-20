@@ -55,7 +55,7 @@ class AccountChangeTest {
         runBlocking {
             session.clearAll()
             session.setServerUrl(base)
-            session.setBoundAccount("first", base)
+            session.setBoundAccount("first")
         }
         val api = Retrofit.Builder()
             .baseUrl(server.url("/market/"))
@@ -73,7 +73,7 @@ class AccountChangeTest {
         // Let the repository see the first account before the change.
         Thread.sleep(300)
         assertEquals("first", runBlocking { repository.getAccount() }.id)
-        runBlocking { session.setBoundAccount("second", base) }
+        runBlocking { session.setBoundAccount("second") }
         val deadline = System.currentTimeMillis() + 5_000
         var held = runBlocking { repository.getAccount() }.id
         while (held != "second" && System.currentTimeMillis() < deadline) {

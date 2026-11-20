@@ -57,7 +57,6 @@
     <string name="chess_ws_connecting">منسلک ہو رہا ہے…</string>
     <string name="chess_ws_disconnected">آف لائن</string>
     <string name="chess_ws_reconnecting">دوبارہ جوڑ رہے ہیں…</string>
-    <string name="chess_ws_failed">کنکشن ناکام ہوا</string>
     <string name="chess_move_capture">%1$s نے %2$s کو لیا</string>
     <string name="chess_captured_multiplier">×%1$s</string>
     <string name="chess_piece_white">سفید %1$s</string>

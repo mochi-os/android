@@ -7,6 +7,7 @@ package org.mochios.wikis.api
 
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.wikis.model.ProbeResponse
 import org.mochios.wikis.model.AccessListResponse
@@ -60,6 +61,7 @@ import retrofit2.http.POST
 import retrofit2.http.Part
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.Streaming
 
 /**
  * Retrofit interface for the wikis app, bound to a per-app Retrofit with
@@ -409,6 +411,14 @@ interface WikisApi {
         @Path(value = "wiki", encoded = true) wiki: String,
         @Query("page") page: String, // contract-ok: no server-side pagination for attachments; page ignored
     ): Response<ApiResponse<AttachmentsResponse>>
+
+    // The file itself, not a JSON envelope; @Streaming keeps it off the heap.
+    @Streaming
+    @GET("{wiki}/-/attachments/{id}")
+    suspend fun getAttachmentFile(
+        @Path(value = "wiki", encoded = true) wiki: String,
+        @Path(value = "id", encoded = true) id: String,
+    ): Response<ResponseBody>
 
     
     @Multipart

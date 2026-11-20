@@ -11,8 +11,14 @@ import retrofit2.http.POST
 
 data class TokenRequest(val app: String)
 
+/**
+ * A mint's answer: [token], the app's year-long JWT, and [asset], a JWT good
+ * for half an hour that core honours only to read the app's asset actions;
+ * empty from a server that issues none.
+ */
 data class TokenResponse(
-    val token: String = ""
+    val token: String = "",
+    val asset: String = "",
 )
 
 /**

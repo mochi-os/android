@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">అనుసరించడం లేదు</string>
     <string name="feeds_source_follow_again">మళ్లీ అనుసరించు</string>
     <string name="feeds_filtered_by_tag">ట్యాగ్ ద్వారా ఫిల్టర్ చేయబడింది:</string>
+    <string name="feeds_setup">సెటప్ చేయండి</string>
+    <string name="feeds_search_example">పేరు, ID, ఫింగర్‌ప్రింట్, URL లేదా %1$s ద్వారా శోధించండి</string>
 </resources>

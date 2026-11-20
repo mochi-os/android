@@ -318,7 +318,6 @@
     <string name="error_server_https">Adresa e serverit duhet të fillojë me https://</string>
     <string name="device_name_fallback">Pajisje celulare</string>
     <string name="account_error_token_type">Lloj shenje i pambështetur</string>
-    <string name="account_error_caller">Thirrësi nuk lejohet</string>
     <string name="zone_sea">Në det</string>
     <string name="access_remove">Hiq</string>
     <string name="access_remove_title">Të hiqet qasja?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">I panjohur</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Po shkarkohet %1$s…</string>
+    <string name="downloads_saved">%1$s u ruajt</string>
+    <string name="downloads_failed">%1$s nuk u ruajt dot: %2$s</string>
+    <string name="sync_conflict">Ndryshuar në server</string>
+    <string name="sync_missing">Nuk është më në server</string>
+    <string name="sync_refused">Refuzuar nga serveri</string>
 </resources>

@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Свързване…</string>
     <string name="chess_ws_disconnected">Офлайн</string>
     <string name="chess_ws_reconnecting">Повторно свързване…</string>
-    <string name="chess_ws_failed">Връзката не бе осъществена</string>
     <string name="chess_move_capture">%1$s взе %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">Tumatanggap lang si %1$s ng chat mula sa mga kaibigan.</string>
     <string name="chat_message_earlier">Ang mga mensahe mula bago idagdag ang account na ito sa Mochi ay naka-encrypt at hindi mababasa rito</string>
     <string name="chat_message_excluded">Naka-encrypt para lang sa ibang mga device</string>
+    <string name="chat_setup">I-set up</string>
 </resources>

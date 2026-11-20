@@ -60,7 +60,6 @@
     <string name="chess_open_sidebar">Otwórz panel boczny</string>
     <string name="chess_ws_connecting">Łączenie…</string>
     <string name="chess_ws_disconnected">Offline</string>
-    <string name="chess_ws_failed">Połączenie nie powiodło się</string>
     <string name="chess_ws_reconnecting">Ponowne łączenie…</string>
     <string name="chess_piece_white">Biały %1$s</string>
     <string name="chess_piece_black">Czarny %1$s</string>

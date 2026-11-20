@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">တဂ်သည် ဗလာမဖြစ်ရပါ</string>
     <string name="wikis_attachments_search_placeholder">ပူးတွဲဖိုင်များ ရှာရန်</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ကို ဖျက်မလား။ ဤအရာကို ပြန်လည်ပြင်၍မရပါ။</string>
-    <string name="wikis_attachments_downloading">ဒေါင်းလုဒ်လုပ်နေသည်…</string>
     <string name="wikis_attachments_empty_description">ဤစာမျက်နှာသို့ ဖိုင်များထည့်ရန် တင်မည် ကို နှိပ်ပါ။</string>
     <string name="wikis_settings_name_save_cd">အမည် သိမ်းပါ</string>
     <string name="wikis_settings_name_cancel_cd">တည်းဖြတ်ခြင်း ပယ်ဖျက်ပါ</string>

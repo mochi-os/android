@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ស្លាកមិនអាចទទេបានទេ</string>
     <string name="wikis_attachments_search_placeholder">ស្វែងរកឯកសារភ្ជាប់</string>
     <string name="wikis_attachments_delete_confirm_message">លុប “%1$s” ឬ? វាមិនអាចត្រឡប់វិញបានទេ។</string>
-    <string name="wikis_attachments_downloading">កំពុងទាញយក…</string>
     <string name="wikis_attachments_empty_description">ចុច ផ្ទុកឡើង ដើម្បីបន្ថែមឯកសារទៅទំព័រនេះ។</string>
     <string name="wikis_settings_name_save_cd">រក្សាទុកឈ្មោះ</string>
     <string name="wikis_settings_name_cancel_cd">បោះបង់ការកែសម្រួល</string>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">L\'etiqueta no pot estar buida</string>
     <string name="wikis_attachments_search_placeholder">Cerca adjunts</string>
     <string name="wikis_attachments_delete_confirm_message">Eliminar «%1$s»? Això no es pot desfer.</string>
-    <string name="wikis_attachments_downloading">Descarregant…</string>
     <string name="wikis_attachments_empty_description">Toca Pujar per afegir fitxers a aquesta pàgina.</string>
     <string name="wikis_settings_name_save_cd">Desa el nom</string>
     <string name="wikis_settings_name_cancel_cd">Cancel·la l\'edició</string>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Značka nesmie byť prázdna</string>
     <string name="wikis_attachments_search_placeholder">Hľadať prílohy</string>
     <string name="wikis_attachments_delete_confirm_message">Zmazať „%1$s\"? Akciu nemožno vrátiť.</string>
-    <string name="wikis_attachments_downloading">Sťahovanie…</string>
     <string name="wikis_attachments_empty_description">Klepnite na Nahrať pre pridanie súborov na túto stránku.</string>
     <string name="wikis_settings_name_save_cd">Uložiť názov</string>
     <string name="wikis_settings_name_cancel_cd">Zrušiť úpravu</string>

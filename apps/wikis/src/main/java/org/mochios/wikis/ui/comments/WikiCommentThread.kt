@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.comments
 
+import org.mochios.android.api.OwnedAddress
 import android.widget.TextView
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -82,7 +83,7 @@ fun WikiCommentThread(
     val displayName = comment.name.ifBlank { comment.author.orEmpty() }
 
     val avatarSrc = wiki?.let { ctx ->
-        segment(avatars[comment.author] ?: comment.id)?.let { "/wikis/${ctx.wikiId}/-/comment/$it/asset/avatar" }
+        segment(avatars[comment.author] ?: comment.id)?.let { OwnedAddress.of("/wikis/${ctx.wikiId}/-/comment/$it/asset/avatar") }
     }
 
     val totalDescendants = remember(comment) { countDescendants(comment) }

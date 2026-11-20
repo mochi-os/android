@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.ui.components.addressByAuthor
 import org.mochios.android.util.segment
 import org.mochios.forums.model.ForumComment
@@ -14,21 +15,21 @@ import org.mochios.forums.model.Post
  * Where a post author's avatar is served: under the post. Null when an id, a
  * peer's, cannot be one segment of the address ([segment]).
  */
-internal fun postAvatar(forumId: String, postId: String): String? {
+internal fun postAvatar(forumId: String, postId: String): OwnedAddress? {
     val forum = segment(forumId) ?: return null
     val post = segment(postId) ?: return null
-    return "/forums/$forum/-/$post/asset/avatar"
+    return OwnedAddress.of("/forums/$forum/-/$post/asset/avatar")
 }
 
 /**
  * Where a commenter's avatar is served: under one of their comments. Null when
  * an id, a peer's, cannot be one segment of the address ([segment]).
  */
-internal fun commentAvatar(forumId: String, postId: String, commentId: String): String? {
+internal fun commentAvatar(forumId: String, postId: String, commentId: String): OwnedAddress? {
     val forum = segment(forumId) ?: return null
     val post = segment(postId) ?: return null
     val comment = segment(commentId) ?: return null
-    return "/forums/$forum/-/$post/$comment/asset/avatar"
+    return OwnedAddress.of("/forums/$forum/-/$post/$comment/asset/avatar")
 }
 
 /**
@@ -51,8 +52,8 @@ internal fun authorAvatars(
     comments: List<ForumComment> = emptyList(),
     commentForum: String = "",
     standIn: (status: String) -> Boolean = ::approved,
-): Map<String, String> {
-    val found = mutableMapOf<String, String>()
+): Map<String, OwnedAddress> {
+    val found = mutableMapOf<String, OwnedAddress>()
     addressByAuthor(
         posts.filter { it.id.isNotEmpty() },
         { it.member },

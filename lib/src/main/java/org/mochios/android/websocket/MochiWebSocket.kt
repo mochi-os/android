@@ -24,6 +24,8 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import okhttp3.CookieJar
+import okhttp3.HttpUrl
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
@@ -44,15 +46,14 @@ import javax.inject.Singleton
 import kotlin.math.min
 
 /**
- * Connection state of one stream, for screens that surface it. FAILED is
- * unused: retries are unbounded.
+ * Connection state of one stream, for screens that surface it. There is no
+ * failed state: retries are unbounded.
  */
 enum class StreamWsStatus {
     CONNECTING,
     CONNECTED,
     DISCONNECTED,
     RECONNECTING,
-    FAILED,
 }
 
 /**
@@ -646,16 +647,16 @@ class MochiWebSocket @Inject constructor(
                     return
                 }
             } else {
-                val wsUrl = entry.server
-                    .replace("https://", "wss://")
-                    .replace("http://", "ws://")
-                    .trimEnd('/')
+                val url = socketUrl(entry.server, entry.fingerprint) ?: run {
+                    entry.status.value = StreamWsStatus.DISCONNECTED
+                    return
+                }
                 val token = entry.token
                 // The token travels in the Bearer header only, which core reads
                 // first. A query string lands in every access log between here
                 // and there, and the token is good for a year.
                 val request = Request.Builder()
-                    .url(socketUrl(wsUrl, entry.fingerprint))
+                    .url(url)
                     .apply { if (token != null) header("Authorization", "Bearer $token") }
                     .build()
                 entry.status.value = if (entry.attempts > 0) StreamWsStatus.RECONNECTING else StreamWsStatus.CONNECTING
@@ -985,11 +986,29 @@ sealed interface Mint {
 const val REOPEN = "socket/reopen"
 
 /**
- * Handshake URL for a subscription. It carries the key and no credential: the
- * token goes in the `Authorization: Bearer` header, so a handshake sent without
- * one connects and then hears nothing. Core also accepts `?token=` for browsers,
- * which cannot set a header on a handshake; putting it back here would write the
- * token into every access log on the way. See [SocketUrlTest].
+ * Handshake URL for a subscription to [key] on [server]: core's socket path on
+ * the server's origin, with the key as its one query value, escaped - a key
+ * can come from another server, and pasted in as it stands, an `&` in it would
+ * add parameters of its own to an authenticated handshake and a `#` cut it
+ * short.
+ * http(s), which OkHttp upgrades. Null for a blank key or a server address
+ * that does not parse.
+ *
+ * It carries no credential: the token goes in the `Authorization: Bearer`
+ * header, so a handshake sent without one connects and then hears nothing.
+ * Core also accepts `?token=` for browsers, which cannot set a header on a
+ * handshake; putting it back here would write the token into every access log
+ * on the way. See [SocketUrlTest].
  */
-internal fun socketUrl(wsBase: String, fingerprint: String): String =
-    "$wsBase/_/websocket?key=$fingerprint"
+internal fun socketUrl(server: String, key: String): HttpUrl? {
+    if (key.isBlank()) return null
+    val base = server.toHttpUrlOrNull() ?: return null
+    return HttpUrl.Builder()
+        .scheme(base.scheme)
+        .host(base.host)
+        .port(base.port)
+        .addPathSegment("_")
+        .addPathSegment("websocket")
+        .addQueryParameter("key", key)
+        .build()
+}

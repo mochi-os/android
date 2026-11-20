@@ -318,7 +318,6 @@
     <string name="error_server_https">Servidor chiqaxa https:// ukampi qalltañapawa</string>
     <string name="device_name_fallback">Celular</string>
     <string name="account_error_token_type">Token kastax janiw yanapt\'atäkiti</string>
-    <string name="account_error_caller">Jawsirix janiw iyawsatäkiti</string>
     <string name="zone_sea">Lamarana</string>
     <string name="access_remove">Aparma</string>
     <string name="access_remove_title">¿Mantaña aparañati?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Jan uñt\'ata</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s apaqaskiwa…</string>
+    <string name="downloads_saved">%1$s imatawa</string>
+    <string name="downloads_failed">Janiw %1$s imañjamäkiti: %2$s</string>
+    <string name="sync_conflict">Servidoran mayjt\'ayatawa</string>
+    <string name="sync_missing">Janiw servidoran utjxiti</string>
+    <string name="sync_refused">Servidorax janiw katuqkiti</string>
 </resources>

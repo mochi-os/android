@@ -178,4 +178,5 @@
     <string name="chat_refused_friends_only">%1$s só aceita chats de amigos.</string>
     <string name="chat_message_earlier">As mensagens de antes de esta conta ser adicionada ao Mochi estão criptografadas e não podem ser lidas aqui</string>
     <string name="chat_message_excluded">Criptografada apenas para outros dispositivos</string>
+    <string name="chat_setup">Configurar</string>
 </resources>

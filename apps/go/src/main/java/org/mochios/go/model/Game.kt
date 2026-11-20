@@ -6,6 +6,7 @@
 package org.mochios.go.model
 
 import com.google.gson.annotations.SerializedName
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.util.segment
 
 /**
@@ -71,8 +72,8 @@ data class Game(
  * request to the people app carries this app's token and is refused. Null
  * when an id, a peer's, cannot be one segment of the address ([segment]).
  */
-fun opponentAvatarUrl(game: String, opponent: String): String? {
+fun opponentAvatarUrl(game: String, opponent: String): OwnedAddress? {
     val entity = segment(game) ?: return null
     val user = segment(opponent) ?: return null
-    return "/go/$entity/-/user/$user/asset/avatar"
+    return OwnedAddress.of("/go/$entity/-/user/$user/asset/avatar")
 }

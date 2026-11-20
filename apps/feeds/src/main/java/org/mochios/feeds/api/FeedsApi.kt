@@ -7,6 +7,7 @@ package org.mochios.feeds.api
 
 import com.google.gson.annotations.SerializedName
 import okhttp3.RequestBody
+import okhttp3.ResponseBody
 import org.mochios.android.api.Slow
 import org.mochios.android.api.ApiResponse
 import org.mochios.android.model.AccessRule
@@ -19,6 +20,7 @@ import org.mochios.feeds.model.Feed
 import org.mochios.feeds.model.Filters
 import org.mochios.feeds.model.Generators
 import org.mochios.feeds.model.Group
+import org.mochios.feeds.model.HostedNetworks
 import org.mochios.feeds.model.Imported
 import org.mochios.feeds.model.WaitingServer
 import org.mochios.feeds.model.Lookup
@@ -45,6 +47,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
+import retrofit2.http.Streaming
 
 // Response wrapper types
 
@@ -140,10 +143,8 @@ data class SubscribeRequest(
     val peer: String? = null
 )
 
-data class UnsubscribeRequest(
-    val feed: String,
-    val server: String? = null
-)
+// The server unsubscribes through the server it stored for the feed.
+data class UnsubscribeRequest(val feed: String)
 
 data class AccessSetRequest(
     val feed: String,
@@ -808,6 +809,9 @@ interface FeedsApi {
         @Query("capability") capability: String = "network",
     ): Response<List<PublishAccount>>
 
+    @GET("-/networks")
+    suspend fun getNetworks(): Response<HostedNetworks>
+
     @GET("{feedId}/-/publish")
     suspend fun getPublish(
         @Path("feedId") feedId: String,
@@ -851,6 +855,16 @@ interface FeedsApi {
         @Path("feedId") feedId: String,
         @Query("account") account: String,
     ): Response<Backups>
+
+    // The archive file itself, not a JSON envelope; @Streaming keeps it off
+    // the heap.
+    @Streaming
+    @GET("{feedId}/-/backups/file")
+    suspend fun getBackupFile(
+        @Path("feedId") feedId: String,
+        @Query("account") account: String,
+        @Query("name") name: String,
+    ): Response<ResponseBody>
 }
 
 data class SortResponse(

@@ -5,6 +5,7 @@
 
 package org.mochios.feeds.ui
 
+import android.net.Uri
 import android.os.Looper
 import androidx.lifecycle.SavedStateHandle
 import com.google.gson.Gson
@@ -26,6 +27,7 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Downloads
 import org.mochios.android.files.FileStore
 import org.mochios.android.i18n.AppContext
 import org.mochios.android.websocket.MochiWebSocket
@@ -66,6 +68,7 @@ import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowToast
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.ByteArrayOutputStream
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.TimeUnit
 
@@ -84,7 +87,11 @@ class NetworksViewModelsTest {
     private lateinit var server: MockWebServer
     private lateinit var repository: FeedsRepository
     private lateinit var session: SessionManager
+    private lateinit var downloads: Downloads
     private lateinit var socket: MochiWebSocket
+
+    /** The query an archive file was asked for with. */
+    @Volatile private var backupQuery: String? = null
 
     /** Each request the server took: its path, without the query, and its body. */
     private val requests = ConcurrentLinkedQueue<Pair<String, String>>()
@@ -110,6 +117,9 @@ class NetworksViewModelsTest {
 
     /** Whether the feed is private, so Publish to is refused with the reason. */
     @Volatile private var feedPrivate = false
+
+    /** What Publish to answers in place of the usual accounts, where a test sets its own. */
+    @Volatile private var publishAnswer: String? = null
 
     /** Whether Publish to fails, as on a server without the networks. */
     @Volatile private var publishFailed = false
@@ -175,6 +185,8 @@ class NetworksViewModelsTest {
                         MockResponse().setResponseCode(502).setBody("""{"error": "No networks here"}""")
                     } else if (feedPrivate) {
                         MockResponse().setResponseCode(403).setBody("""{"error": "Only a public feed publishes to other networks"}""")
+                    } else if (publishAnswer != null) {
+                        raw(publishAnswer!!)
                     } else raw("""{"accounts": [{"id": "l1", "type": "mastodon", "identifier": "@me@social.example"},
                         {"id": "b2", "type": "bluesky", "identifier": "me.here.example", "hosted": true}],
                         "publish": ["l1"], "copies": {"l1": 3}, "generators": {}}""")
@@ -189,6 +201,10 @@ class NetworksViewModelsTest {
                     "/feeds/f1/-/generator/set" -> raw("""{"generators": {"b2": "at://did/app.bsky.feed.generator/f1"}}""")
                     "/feeds/f1/-/import" -> raw(importAnswer)
                     "/feeds/f1/-/backups" -> raw("""{"files": ["posts-2026-11.jsonl"], "repository": "The repository could not be saved: bsky.example answered 400: RepoNotFound"}""")
+                    "/feeds/f1/-/backups/file" -> {
+                        backupQuery = request.path.orEmpty().substringAfter("?")
+                        MockResponse().setBody(BACKUP)
+                    }
                     "/feeds/f1/-/filters" -> ok("""{"filters": [{"id": "x", "phrase": "zebra"}, {"id": "y", "phrase": "Apple"}]}""")
                     "/feeds/f1/-/filters/add" -> if (filterRefused) {
                         MockResponse().setResponseCode(400).setBody("""{"error": "Invalid phrase"}""")
@@ -209,6 +225,7 @@ class NetworksViewModelsTest {
                     "/feeds/-/lookup" -> raw("""{"kind": "person", "network": "fediverse", "id": "https://there.example/u/a", "name": "Alice"}""")
                     "/feeds/-/people" -> ok("""{"people": [{"contact": "c", "name": "Zoe", "handle": "@zoe@there.example", "network": "fediverse"}, {"contact": "d", "name": "Adam", "handle": "@adam@there.example", "network": "fediverse"}]}""")
                     "/feeds/-/recommendations" -> ok("""{"feeds": []}""")
+                    "/feeds/-/networks" -> raw("""{"networks": ["bluesky", "fediverse"]}""")
                     else -> MockResponse().setResponseCode(404)
                 }
             }
@@ -220,6 +237,7 @@ class NetworksViewModelsTest {
             .build()
         repository = FeedsRepository(retrofit.create(FeedsApi::class.java), retrofit.create(MenuApi::class.java), FileStore(context), context, SessionManager(context))
         session = SessionManager(context)
+        downloads = Downloads(context, FileStore(context))
         val base = server.url("/").toString().trimEnd('/')
         runBlocking { session.setServerUrl(base) }
         socket = MochiWebSocket(OkHttpClient(), Gson(), object : SocketSession {
@@ -416,7 +434,7 @@ class NetworksViewModelsTest {
 
     @Test
     fun `switching an account off offers to delete the copies kept there, and deleting says how many went`() {
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         val events = mutableListOf<PublishEvent>()
         val job = collect(model, events)
         model.loadPublish()
@@ -435,7 +453,7 @@ class NetworksViewModelsTest {
 
     @Test
     fun `a hosted Bluesky account publishes the feed as a custom feed, and an import says what it brought`() {
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         val events = mutableListOf<PublishEvent>()
         val job = collect(model, events)
         model.loadPublish()
@@ -452,7 +470,7 @@ class NetworksViewModelsTest {
 
     @Test
     fun `filters are listed by phrase, and an added one is cut and trimmed`() {
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.loadFilters()
         until("the filters") { model.filters.value.isNotEmpty() }
         assertEquals(listOf("Apple", "zebra"), model.filters.value.map { it.phrase })
@@ -464,7 +482,7 @@ class NetworksViewModelsTest {
 
     @Test
     fun `an account's Backups list its files and say why the last backup kept no repository`() {
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.openBackups(org.mochios.feeds.model.PublishAccount(id = "b1"))
         until("the backups") { model.backups.value?.files != null }
         assertEquals(listOf("posts-2026-11.jsonl"), model.backups.value!!.files)
@@ -472,10 +490,16 @@ class NetworksViewModelsTest {
     }
 
     @Test
-    fun `an archive file downloads from its address under the feed, with the feeds token`() {
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
-        val (url, _) = model.backupFile(org.mochios.feeds.model.PublishAccount(id = "a b"), "2026-10-21.zip")
-        assertTrue(url.endsWith("/feeds/f1/-/backups/file?account=a+b&name=2026-10-21.zip"))
+    fun `an archive file is saved through the feeds client, from its address under the feed`() {
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
+        val destination = Uri.parse("content://org.mochios.test/posts-2026-10.jsonl")
+        val written = ByteArrayOutputStream()
+        shadowOf(context.contentResolver).registerOutputStream(destination, written)
+        model.saveBackup("a b", "posts-2026-10.jsonl", destination)
+        until("the archive file") { downloads.running.value.isEmpty() && written.size() > 0 }
+        assertEquals(BACKUP, written.toString(Charsets.UTF_8.name()))
+        assertEquals("account=a%20b&name=posts-2026-10.jsonl", backupQuery)
+        until("the outcome") { ShadowToast.getTextOfLatestToast() == "posts-2026-10.jsonl saved" }
     }
 
     @Test
@@ -535,7 +559,7 @@ class NetworksViewModelsTest {
     fun `an account import asks at once for the server people wait on, and allowing it adds them`() {
         importAnswer = """{"imported": 4, "more": false, "waiting": [{"server": "wasabi.example", "count": 2}]}"""
         allowRefused = true
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         val events = mutableListOf<PublishEvent>()
         val job = collect(model, events)
         model.loadPublish()
@@ -585,8 +609,47 @@ class NetworksViewModelsTest {
     }
 
     @Test
+    fun `Publish to offers to set up each offered network no account is on, a linked Mastodon account counting as the fediverse`() {
+        publishAnswer = """{"accounts": [{"id": "l1", "type": "mastodon", "identifier": "@me@social.example"}],
+            "publish": [], "copies": {}, "generators": {}, "offered": ["fediverse", "bluesky"]}"""
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
+        model.loadPublish()
+        until("the publish list") { model.publish.value != null }
+        val opened = mutableListOf<String>()
+        rule.setContent { PublishingSection(model, onOpenLink = { opened += it }) }
+        rule.onNodeWithText("@me@social.example").assertIsDisplayed()
+        // THE POINT: the Mastodon account is on the fediverse, so only Bluesky is to set up.
+        rule.onNodeWithText("ActivityPub").assertDoesNotExist()
+        rule.onNodeWithText("Bluesky").assertIsDisplayed()
+        rule.onNodeWithText(context.getString(R.string.feeds_setup)).performClick()
+        assertEquals(listOf("settings/user/networks?network=bluesky"), opened)
+    }
+
+    @Test
+    fun `Publish to with no account to publish to shows each offered network to set one up on`() {
+        publishAnswer = """{"accounts": [], "publish": [], "copies": {}, "generators": {}, "offered": ["fediverse", "bluesky"]}"""
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
+        model.loadPublish()
+        until("the publish list") { model.publish.value != null }
+        assertEquals(true, org.mochios.feeds.ui.settings.publishable(model.publish.value, null))
+        rule.setContent { PublishingSection(model) }
+        rule.onNodeWithText("ActivityPub").assertIsDisplayed()
+        rule.onNodeWithText("Bluesky").assertIsDisplayed()
+        assertEquals(2, rule.onAllNodesWithText(context.getString(R.string.feeds_setup)).fetchSemanticsNodes().size)
+    }
+
+    @Test
+    fun `the Find screen's field shows an example address of a network the server hosts`() {
+        val model = FindFeedsViewModel(SavedStateHandle(), repository)
+        until("the networks") { model.networks.value.isNotEmpty() }
+        assertEquals("@name@example.social", org.mochios.feeds.ui.find.addressExample(model.networks.value))
+        rule.setContent { org.mochios.feeds.ui.find.FindFeedsContent(model) }
+        rule.onNodeWithText(context.getString(R.string.feeds_search_example, "@name@example.social")).assertExists()
+    }
+
+    @Test
     fun `the Publish to section switches each account by address, with its copies, and only a hosted Bluesky account publishes a custom feed`() {
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.loadPublish()
         until("the publish list") { model.publish.value != null }
         rule.setContent { PublishingSection(model) }
@@ -638,7 +701,7 @@ class NetworksViewModelsTest {
     @Test
     fun `A Publish to that fails is decided as nowhere to publish, so the settings stop waiting`() {
         publishFailed = true
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         assertNull(org.mochios.feeds.ui.settings.publishable(model.publish.value, model.refusal.value))
         model.loadPublish()
         until("the answer") { model.publish.value != null }
@@ -648,7 +711,7 @@ class NetworksViewModelsTest {
     @Test
     fun `Publish to says why a private feed publishes nowhere, and lists the accounts once it is public`() {
         feedPrivate = true
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.loadPublish()
         until("the refusal") { model.refusal.value != null }
         assertEquals("Only a public feed publishes to other networks", model.refusal.value!!.message)
@@ -735,7 +798,7 @@ class NetworksViewModelsTest {
     fun `a publish switch flipped while another account's save runs waits for it, and both end up in the list`() {
         val gate = java.util.concurrent.CountDownLatch(1)
         publishGate = gate
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.loadPublish()
         until("the publish list") { model.publish.value != null }
         assertEquals(listOf("l1"), model.publish.value!!.publish)
@@ -755,7 +818,7 @@ class NetworksViewModelsTest {
     fun `a publish switch moves at once, and back when its change is refused`() {
         val gate = java.util.concurrent.CountDownLatch(1)
         publishGate = gate
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.loadPublish()
         until("the publish list") { model.publish.value != null }
         val bluesky = model.publish.value!!.accounts.first { it.id == "b2" }
@@ -790,7 +853,7 @@ class NetworksViewModelsTest {
 
     @Test
     fun `a refused filter phrase stays in the field, and one the server takes is cleared`() {
-        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, session)
+        val model = PublishingViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, downloads)
         model.loadFilters()
         until("the filters") { model.filters.value.isNotEmpty() }
         rule.setContent { FiltersSection(model) }
@@ -811,3 +874,6 @@ class NetworksViewModelsTest {
 /** Collects the publishing events into [into] until the job is cancelled. */
 private fun collect(model: PublishingViewModel, into: MutableList<PublishEvent>) =
     CoroutineScope(Dispatchers.Unconfined).launch { model.events.collect { into.add(it) } }
+
+/** An archive file's lines, as the server serves them. */
+private const val BACKUP = "{\"id\": \"1\", \"text\": \"Hello\"}\n{\"id\": \"2\", \"text\": \"Again\"}\n"

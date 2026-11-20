@@ -10,10 +10,9 @@ import android.content.Intent
 import android.os.IBinder
 
 /**
- * Exposes [MochiAuthenticator] to AccountManager. Every Mochi app declares this
- * service identically; Android elects one as the device-wide owner, and apps
- * signed with the same key read the shared session via
- * [AccountManager.getPassword].
+ * Exposes [MochiAuthenticator] to AccountManager, which needs a bound
+ * authenticator for the account type the sync adapters and the phone's
+ * account settings use.
  */
 class AuthenticatorService : Service() {
     override fun onBind(intent: Intent): IBinder = MochiAuthenticator(this).iBinder

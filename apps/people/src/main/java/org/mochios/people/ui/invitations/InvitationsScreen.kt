@@ -5,10 +5,10 @@
 
 package org.mochios.people.ui.invitations
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -31,14 +31,16 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.PersonAddAlt
-import androidx.compose.material.icons.filled.PersonOff
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledIconButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.OutlinedIconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
@@ -71,7 +73,6 @@ import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.EmptyState
 import org.mochios.android.ui.components.EntityAvatar
-import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.MochiDropdownMenu
@@ -349,15 +350,15 @@ internal fun sentDetail(invite: FriendInvite, pending: String): String =
     if (invite.address.isEmpty()) pending else "$pending · ${invite.address}"
 
 /** An invite's avatar: a Mochi person's own; someone on XMPP has none here. */
-internal fun inviteAvatar(invite: FriendInvite): String? =
+internal fun inviteAvatar(invite: FriendInvite): OwnedAddress? =
     if (invite.address.isEmpty()) avatarUrl(invite.id) else null
 
 /**
- * A received invite: the name and detail take the row's full width beside the
- * avatar, with Accept and Decline on a line of their own beneath them, the
- * second wrapping under the first where a translation runs long.
+ * A received invite on one line, as a sent one is: the name and detail take the
+ * row's width, and Accept and Decline are icon buttons at its end, named for
+ * screen readers by their labels. Labelled buttons left the name a few letters
+ * of a phone's width, or a line of their own beneath it.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun ReceivedRow(
     invite: FriendInvite,
@@ -369,7 +370,7 @@ internal fun ReceivedRow(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 8.dp),
-        verticalAlignment = Alignment.Top,
+        verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp),
     ) {
         EntityAvatar(
@@ -379,32 +380,30 @@ internal fun ReceivedRow(
             size = 40.dp,
         )
         val listed = stringResource(R.string.people_invitations_listed_as)
-        Column(
-            modifier = Modifier.weight(1f),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
+        Column(modifier = Modifier.weight(1f)) {
             InviteName(
                 name = invite.name,
                 detail = receivedDetail(invite) { listed.format(it) },
             )
-            FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            FilledIconButton(onClick = onAccept) {
+                Icon(
+                    Icons.Default.Check,
+                    contentDescription = stringResource(R.string.people_invitations_accept),
+                )
+            }
+            OutlinedIconButton(
+                onClick = onDecline,
+                colors = IconButtonDefaults.outlinedIconButtonColors(
+                    contentColor = MaterialTheme.colorScheme.primary,
+                ),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.5f)),
             ) {
-                MochiButton(
-                    onClick = onAccept,
-                    contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
-                ) {
-                    ButtonIcon(Icons.Default.Check)
-                    Text(stringResource(R.string.people_invitations_accept))
-                }
-                MochiOutlinedButton(
-                    onClick = onDecline,
-                    contentPadding = ButtonDefaults.ButtonWithIconContentPadding,
-                ) {
-                    ButtonIcon(Icons.Default.PersonOff)
-                    Text(stringResource(R.string.people_invitations_decline))
-                }
+                Icon(
+                    Icons.Default.Close,
+                    contentDescription = stringResource(R.string.people_invitations_decline),
+                )
             }
         }
     }
@@ -588,8 +587,8 @@ private data class PolicyOption(
 )
 
 /** A person's avatar; null when the id, a peer's, cannot be one segment of the address ([segment]). */
-private fun avatarUrl(id: String): String? {
+private fun avatarUrl(id: String): OwnedAddress? {
     if (id.isBlank()) return null
     val person = segment(id) ?: return null
-    return "/people/$person/-/avatar"
+    return OwnedAddress.of("/people/$person/-/avatar")
 }

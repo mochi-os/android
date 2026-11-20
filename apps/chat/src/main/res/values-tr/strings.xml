@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s yalnızca arkadaşlarından sohbet kabul ediyor.</string>
     <string name="chat_message_earlier">Bu hesap Mochi\'ye eklenmeden önceki mesajlar şifrelidir ve burada okunamaz</string>
     <string name="chat_message_excluded">Yalnızca diğer cihazlar için şifreli</string>
+    <string name="chat_setup">Kur</string>
 </resources>

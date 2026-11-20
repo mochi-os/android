@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Nuk ndiqet</string>
     <string name="feeds_source_follow_again">Ndiq përsëri</string>
     <string name="feeds_filtered_by_tag">Filtruar sipas etiketës:</string>
+    <string name="feeds_setup">Konfiguro</string>
+    <string name="feeds_search_example">Kërko sipas emrit, ID-së, gjurmës, URL-së ose adresës %1$s</string>
 </resources>

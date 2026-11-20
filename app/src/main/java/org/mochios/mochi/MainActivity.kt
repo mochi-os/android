@@ -37,6 +37,11 @@ import org.mochios.android.auth.oauthReturnKind
 import org.mochios.android.auth.shouldAcceptOAuthReturn
 import org.mochios.android.util.entityDeepLink
 import org.mochios.android.util.followLink
+import org.mochios.android.util.forwardedIntent
+import org.mochios.android.util.linkParts
+import org.mochios.android.util.plain
+import org.mochios.android.util.segment
+import org.mochios.android.util.uriName
 import org.mochios.android.util.holds
 import org.mochios.android.util.isAt
 import org.mochios.android.util.openInPlace
@@ -46,7 +51,6 @@ import org.mochios.android.i18n.PreferencesManager
 import org.mochios.android.push.NonceStore
 import org.mochios.android.push.OemBackgroundHintDialog
 import org.mochios.android.push.PushTransport
-import org.mochios.android.push.Reauth
 import org.mochios.android.push.RequestNotificationPermission
 import org.mochios.android.launcher.launcherComponentFor
 import org.mochios.android.launcher.launcherEnabled
@@ -138,9 +142,11 @@ open class MainActivity : ComponentActivity() {
         }
         app = hosted
         enableEdgeToEdge()
-        handleMochiUri(intent)
-        // A recreated activity has taken its prompt already.
-        if (savedInstanceState == null) takeReauth(intent)
+        // Once per launch: the intent outlives a rotation, a theme or language
+        // change and a restore after process death, and handled again it would
+        // reopen a shortcut's item, a spent Stripe return or a sign-in prompt.
+        // A link a restore must not lose is persisted, and taken up below.
+        if (savedInstanceState == null) handleMochiUri(intent)
         // Restore a deep link persisted across process death - the update
         // installer kills the process between a notification tap and the
         // relaunch. One for another app stays on disk for that app's launch.
@@ -220,6 +226,7 @@ open class MainActivity : ComponentActivity() {
                             feedsNavGraph(
                                 navController,
                                 onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             chatNavGraph(
                                 navController,
@@ -229,6 +236,7 @@ open class MainActivity : ComponentActivity() {
                             forumsNavGraph(
                                 navController,
                                 onOpenNotifications = openNotifications,
+                                onOpenLink = { link -> navigateToLink(navController, link) },
                             )
                             projectsNavGraph(
                                 navController,
@@ -301,19 +309,24 @@ open class MainActivity : ComponentActivity() {
         super.onNewIntent(intent)
         setIntent(intent)
         // singleTop delivers only this class's own intents here, so the app
-        // never changes; the URI may carry a deep link or a return.
+        // never changes; the URI may carry a deep link, a return or a prompt.
         handleMochiUri(intent)
-        takeReauth(intent)
     }
 
     /**
-     * A tapped sign-in prompt names the account whose session is dead; the
-     * app leads to signing that account in. See [Reauth].
+     * A tapped sign-in prompt, `mochi:reauth?account=<identity>&nonce=<nonce>`,
+     * names the account whose session is dead; the app leads to signing that
+     * account in. The activity is exported, so any app can send the URI: it
+     * is acted on only with the nonce the prompt was posted with, and only
+     * once.
      */
-    private fun takeReauth(intent: Intent?) {
-        val identity = intent?.getStringExtra(Reauth.EXTRA_ACCOUNT) ?: return
-        intent.removeExtra(Reauth.EXTRA_ACCOUNT)
-        bootstrap.reauthenticate(identity)
+    private fun applyReauth(account: String?, nonce: String?) {
+        if (account.isNullOrBlank()) return
+        if (!NonceStore(this).consume(nonce)) {
+            Log.w(TAG, "Ignoring mochi:reauth with no outstanding nonce")
+            return
+        }
+        bootstrap.reauthenticate(account)
     }
 
     /**
@@ -401,8 +414,10 @@ open class MainActivity : ComponentActivity() {
 
     /**
      * Hand this launch to [app]'s own class, so it lands in that app's task.
-     * The intent goes across whole - data, extras, flags - and the receiver
-     * handles its URI once. Flags that would give the receiver a throwaway
+     * The data and flags go across, and the receiver handles its URI once; of
+     * the extras only the app hint the receiver routes by, since this
+     * activity is exported and any app's extras arrive with it
+     * ([forwardedIntent]). Flags that would give the receiver a throwaway
      * task or history entry are dropped; a caller's launcher-style flags
      * (clear top, clear task) are kept, as they were meant for the app. An
      * app whose class cannot be started - none at all, or Staff's switched
@@ -413,15 +428,18 @@ open class MainActivity : ComponentActivity() {
     private fun forward(app: String) {
         val open = if (launcherEnabled(this, app)) app else DEFAULT_APP
         val component = launcherComponentFor(this, open) ?: return
-        val forwarded = Intent(intent ?: Intent(Intent.ACTION_MAIN)).setComponent(component)
-        if (open != app) forwarded.putExtra(EXTRA_APP_HINT, open)
+        val received = intent ?: Intent(Intent.ACTION_MAIN)
+        val forwarded = forwardedIntent(received, component)
+        val hint = if (open != app) open else received.getStringExtra(EXTRA_APP_HINT)
+        if (hint != null) forwarded.putExtra(EXTRA_APP_HINT, hint)
         val dropped = Intent.FLAG_ACTIVITY_NO_HISTORY or
             Intent.FLAG_ACTIVITY_MULTIPLE_TASK or
             Intent.FLAG_ACTIVITY_NEW_DOCUMENT or
             Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS or
             Intent.FLAG_ACTIVITY_FORWARD_RESULT
         forwarded.flags = (forwarded.flags and dropped.inv()) or Intent.FLAG_ACTIVITY_NEW_TASK
-        Log.i(TAG, "Forwarding ${intent?.data ?: intent?.action} to $open")
+        // The URI's name only: its query carries codes, nonces and ids.
+        Log.i(TAG, "Forwarding ${intent?.data?.let(::uriName) ?: intent?.action} to $open")
         try {
             startActivity(forwarded)
         } catch (e: ActivityNotFoundException) {
@@ -510,20 +528,16 @@ open class MainActivity : ComponentActivity() {
      */
     private fun handleMarketCheckoutDeepLink(uri: Uri) {
         val outcome = uri.pathSegments.getOrNull(1) ?: return
-        val link = when (outcome) {
-            "success" -> "/market/purchases?paid=1"
-            "cancel" -> {
-                // The listing id rides in an intent any app can send; accept
-                // only an identifier shape so it cannot smuggle path segments
-                // or a query of its own into the navigation route.
-                val listing = uri.getQueryParameter("listing")
-                    ?.takeIf { it.matches(Regex("[A-Za-z0-9]{1,64}")) }
-                if (listing.isNullOrBlank()) "/market" else "/market/listing/$listing"
-            }
-            else -> {
-                Log.w(TAG, "Unknown market checkout outcome: $uri")
-                return
-            }
+        // A subscription returns to the subscriptions (`kind=subscription`),
+        // an order to the purchases; MarketApp checks the listing's shape.
+        val link = MarketApp.checkoutReturn(
+            outcome = outcome,
+            kind = uri.getQueryParameter("kind"),
+            listing = uri.getQueryParameter("listing"),
+        )
+        if (link == null) {
+            Log.w(TAG, "Unknown market checkout outcome: $uri")
+            return
         }
         pendingLink.value = link
     }
@@ -559,11 +573,12 @@ open class MainActivity : ComponentActivity() {
         val params = parseOpaqueQuery(query)
         when (name) {
             "notification" -> setNotificationDeepLink(params["link"], params["id"], params["nonce"])
+            "reauth" -> applyReauth(params["account"], params["nonce"])
             else -> when (oauthReturnKind(name)) {
                 OAuthReturnKind.LOGIN -> applyOAuthReturn(params["code"], params["error"], params["nonce"])
                 OAuthReturnKind.LINK -> applyOAuthLinkReturn(params["code"], params["error"], params["nonce"])
                 OAuthReturnKind.GRANT -> applyOAuthGrantReturn(params["code"], params["error"], params["nonce"])
-                null -> Log.w(TAG, "Unknown system intent in $uri")
+                null -> Log.w(TAG, "Unknown system intent: ${uriName(uri)}")
             }
         }
     }
@@ -627,7 +642,7 @@ open class MainActivity : ComponentActivity() {
             intent.getStringExtra(EXTRA_APP_HINT), uri.pathSegments, MOCHI_APPS,
         )
         if (link == null) {
-            Log.w(TAG, "Entity URI refused: $uri")
+            Log.w(TAG, "Entity URI refused")
             return
         }
         pendingLink.value = link
@@ -638,7 +653,7 @@ open class MainActivity : ComponentActivity() {
      * routed.
      */
     private fun handleCrossPeerEntityIntent(intent: Intent, uri: Uri) {
-        Log.w(TAG, "Cross-peer URI not yet supported: $uri")
+        Log.w(TAG, "Cross-peer URI not yet supported")
     }
 
     /**
@@ -754,7 +769,9 @@ open class MainActivity : ComponentActivity() {
         val pathAndQuery = link.trimStart('/').split('?', limit = 2)
         val path = pathAndQuery[0]
         val query = pathAndQuery.getOrNull(1).orEmpty()
-        val parts = path.split('/')
+        // Each part decoded once here; the modules' builders escape what they
+        // put in a route, and Navigation decodes it once more as it reads it.
+        val parts = linkParts(path)
         val firstSegment = parts.firstOrNull()?.lowercase() ?: return
         val id = parts.getOrNull(1)
         when (firstSegment) {
@@ -849,20 +866,25 @@ open class MainActivity : ComponentActivity() {
             }
             "market" -> {
                 navController.openAppHome(MarketApp.HOME)
-                for (route in MarketApp.linkRoutes(parts.drop(1)) { key -> parseQueryParam(query, key) }) {
+                // Its builders put what they are given into a route as it
+                // stands, so only plain parts reach them.
+                val plainParts = parts.drop(1).map { part -> plain(part).orEmpty() }
+                for (route in MarketApp.linkRoutes(plainParts) { key -> parseQueryParam(query, key) }) {
                     navController.navigate(route) { launchSingleTop = true }
                 }
             }
             "wikis" -> {
                 navController.openAppHome(WikisApp.HOME)
-                if (id != null) {
-                    navController.navigate(WikisApp.wikiHome(id)) { launchSingleTop = true }
-                    val page = parts.getOrNull(2)
+                // Its builders refuse a part that cannot be one segment.
+                val wiki = id?.takeIf { part -> segment(part) != null }
+                if (wiki != null) {
+                    navController.navigate(WikisApp.wikiHome(wiki)) { launchSingleTop = true }
+                    val page = parts.getOrNull(2)?.takeIf { part -> segment(part) != null }
                     if (page != null) {
                         if (parts.getOrNull(3) == "comments") {
-                            navController.navigate(WikisApp.comments(id, page)) { launchSingleTop = true }
+                            navController.navigate(WikisApp.comments(wiki, page)) { launchSingleTop = true }
                         } else {
-                            navController.navigate(WikisApp.pageView(id, page)) { launchSingleTop = true }
+                            navController.navigate(WikisApp.pageView(wiki, page)) { launchSingleTop = true }
                         }
                     }
                 }
@@ -897,24 +919,27 @@ open class MainActivity : ComponentActivity() {
                 }
             }
             "chess" -> {
-                if (id == null) {
+                val game = id?.let(::plain)
+                if (game == null) {
                     navController.openAppHome(ChessApp.HOME)
                 } else {
-                    navController.openInPlace(ChessApp.HOME, ChessApp.GAME, ChessApp.gameDetail(id))
+                    navController.openInPlace(ChessApp.HOME, ChessApp.GAME, ChessApp.gameDetail(game))
                 }
             }
             "go" -> {
-                if (id == null) {
+                val game = id?.let(::plain)
+                if (game == null) {
                     navController.openAppHome(GoApp.HOME)
                 } else {
-                    navController.openInPlace(GoApp.HOME, GoApp.GAME, GoApp.gameDetail(id))
+                    navController.openInPlace(GoApp.HOME, GoApp.GAME, GoApp.gameDetail(game))
                 }
             }
             "words" -> {
-                if (id == null) {
+                val game = id?.let(::plain)
+                if (game == null) {
                     navController.openAppHome(WordsApp.HOME)
                 } else {
-                    navController.openInPlace(WordsApp.HOME, WordsApp.GAME, WordsApp.gameDetail(id))
+                    navController.openInPlace(WordsApp.HOME, WordsApp.GAME, WordsApp.gameDetail(game))
                 }
             }
             "staff" -> {
@@ -928,8 +953,10 @@ open class MainActivity : ComponentActivity() {
                     if (!navController.isAt(path)) navController.navigate(path) { launchSingleTop = true }
                 } else if (path == "settings/user/networks") {
                     // The web's Settings › Networks, which People's profile
-                    // editor opens to change which accounts the profile shows.
-                    if (!navController.isAt(SettingsApp.NETWORKS)) navController.navigate(SettingsApp.NETWORKS) { launchSingleTop = true }
+                    // editor opens to change which accounts the profile shows,
+                    // and an app opens at a network to set up an account there.
+                    val route = SettingsApp.networks(parseQueryParam(query, "network"))
+                    if (!navController.isAt(route)) navController.navigate(route) { launchSingleTop = true }
                 } else {
                     navController.openAppHome(SettingsApp.HOME)
                 }

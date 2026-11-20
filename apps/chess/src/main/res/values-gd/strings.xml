@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">A\' ceangal…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Ag ath-cheangal…</string>
-    <string name="chess_ws_failed">Dh’fhàillig an ceangal</string>
     <string name="chess_move_capture">Ghabh %1$s %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

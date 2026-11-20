@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -73,7 +74,7 @@ fun ListingCard(
     modifier: Modifier = Modifier,
     saved: Boolean = false,
     sellerName: String? = null,
-    sellerAvatarUrl: String? = null,
+    sellerAvatarUrl: OwnedAddress? = null,
     sellerRating: Float = 0f,
     sellerReviews: Int = 0,
     sellerVerified: Boolean = false,
@@ -91,12 +92,12 @@ fun ListingCard(
                 .fillMaxWidth()
                 .aspectRatio(1f),
         ) {
-            // Resolve the photo from the listing itself. The relative path is
-            // expanded by RelativeAssetUrlMapper inside the Coil pipeline.
+            // Resolve the photo from the listing itself: one of the app's own
+            // addresses, which the Coil pipeline expands and credentials.
             val photoUrl = listing.photo?.id
                 ?.takeIf { id -> id.isNotBlank() }
                 ?.let { id -> photoAddress(id, "thumbnail") }
-            if (photoUrl.isNullOrBlank()) {
+            if (photoUrl == null) {
                 NoPhotoPlaceholder(modifier = Modifier.fillMaxSize())
             } else {
                 val context = LocalContext.current

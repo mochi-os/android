@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">Không theo dõi</string>
     <string name="feeds_source_follow_again">Theo dõi lại</string>
     <string name="feeds_filtered_by_tag">Đã lọc theo thẻ:</string>
+    <string name="feeds_setup">Thiết lập</string>
+    <string name="feeds_search_example">Tìm kiếm theo tên, ID, dấu vân tay, URL hoặc %1$s</string>
 </resources>

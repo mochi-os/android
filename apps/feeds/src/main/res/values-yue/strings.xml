@@ -354,4 +354,6 @@
     <plurals name="feeds_source_added_posts">
         <item quantity="other">已新增來源（匯入咗 %s 篇貼文）</item>
     </plurals>
+    <string name="feeds_setup">設定</string>
+    <string name="feeds_search_example">用名稱、ID、指紋、網址或者 %1$s 搜尋</string>
 </resources>

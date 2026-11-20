@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Àmì kò lè ṣófo</string>
     <string name="wikis_attachments_search_placeholder">Wá àwọn àsomọ́</string>
     <string name="wikis_attachments_delete_confirm_message">Pa “%1$s” rẹ́? Èyí kò ṣeé yí padà.</string>
-    <string name="wikis_attachments_downloading">Ó ń gbà sílẹ̀…</string>
     <string name="wikis_attachments_empty_description">Tẹ Gbé sókè láti fi àwọn fáìlì kún ojú-ìwé yìí.</string>
     <string name="wikis_settings_name_save_cd">Fi orúkọ pamọ́</string>
     <string name="wikis_settings_name_cancel_cd">Fagilé àtúnṣe</string>

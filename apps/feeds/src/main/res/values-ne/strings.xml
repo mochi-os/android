@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">फलो गरिएको छैन</string>
     <string name="feeds_source_follow_again">फेरि फलो गर्नुहोस्</string>
     <string name="feeds_filtered_by_tag">ट्यागद्वारा फिल्टर गरिएको:</string>
+    <string name="feeds_setup">सेटअप गर्नुहोस्</string>
+    <string name="feeds_search_example">नाम, ID, फिङ्गरप्रिन्ट, URL वा %1$s ले खोज्नुहोस्</string>
 </resources>

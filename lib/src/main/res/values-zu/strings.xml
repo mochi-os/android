@@ -318,7 +318,6 @@
     <string name="error_server_https">Ikheli leseva kumele liqale nge-https://</string>
     <string name="device_name_fallback">Idivayisi yeselula</string>
     <string name="account_error_token_type">Uhlobo lwethokheni olungasekelwe</string>
-    <string name="account_error_caller">Umshayeli akavunyelwe</string>
     <string name="zone_sea">Olwandle</string>
     <string name="access_remove">Khipha</string>
     <string name="access_remove_title">Khipha ukufinyelela?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Akwaziwa</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s iyalandwa…</string>
+    <string name="downloads_saved">%1$s ilondoloziwe</string>
+    <string name="downloads_failed">Ayikwazanga ukulondoloza %1$s: %2$s</string>
+    <string name="sync_conflict">Kushintshiwe kuseva</string>
+    <string name="sync_missing">Akusekho kuseva</string>
+    <string name="sync_refused">Kwenqatshwe iseva</string>
 </resources>

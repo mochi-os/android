@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Följer inte</string>
     <string name="feeds_source_follow_again">Följ igen</string>
     <string name="feeds_filtered_by_tag">Filtrerat efter tagg:</string>
+    <string name="feeds_setup">Konfigurera</string>
+    <string name="feeds_search_example">Sök efter namn, ID, fingeravtryck, URL eller %1$s</string>
 </resources>

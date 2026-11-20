@@ -5,6 +5,7 @@
 
 package org.mochios.words.ui.detail
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -1077,7 +1078,7 @@ data class WordsHeaderModel(
     val playersLabel: String?,
     val opponentId: String,
     val opponentName: String,
-    val avatarUrl: String?,
+    val avatarUrl: OwnedAddress?,
 )
 
 @Composable

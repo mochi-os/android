@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Nyambungkeun…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Nyambungkeun deui…</string>
-    <string name="chess_ws_failed">Sambungan gagal</string>
     <string name="chess_move_capture">%1$s nyokot %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

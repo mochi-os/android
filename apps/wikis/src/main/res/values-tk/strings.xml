@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Bellik boş bolup bilmez</string>
     <string name="wikis_attachments_search_placeholder">Goşundylary gözle</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” pozulsunmy? Muny yzyna gaýtaryp bolmaýar.</string>
-    <string name="wikis_attachments_downloading">Ýüklenýär…</string>
     <string name="wikis_attachments_empty_description">Bu sahypa faýl goşmak üçin Ýükle düwmesine basyň.</string>
     <string name="wikis_settings_name_save_cd">Ady ýatda sakla</string>
     <string name="wikis_settings_name_cancel_cd">Üýtgetmegi ýatyr</string>

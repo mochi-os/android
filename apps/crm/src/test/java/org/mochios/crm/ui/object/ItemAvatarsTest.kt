@@ -25,7 +25,7 @@ class ItemAvatarsTest {
         val comments = listOf(by("c1", "bob", by("c2", "ann"), by("c3", "bob")), by("c4", "ann"))
         assertEquals(
             mapOf("bob" to "/crm/x1/-/comment/c1/asset/avatar", "ann" to "/crm/x1/-/comment/c2/asset/avatar"),
-            commentAvatars(comments, "x1"),
+            commentAvatars(comments, "x1").mapValues { it.value.address },
         )
     }
 
@@ -39,7 +39,7 @@ class ItemAvatarsTest {
         )
         assertEquals(
             mapOf("ann" to "/crm/x1/-/activity/a1/asset/avatar", "bob" to "/crm/x1/-/activity/a2/asset/avatar"),
-            activityAvatars(activity, "x1"),
+            activityAvatars(activity, "x1").mapValues { it.value.address },
         )
     }
 
@@ -53,13 +53,13 @@ class ItemAvatarsTest {
             assertNull(commentAvatar(hostile, "c1"))
             assertNull(activityAvatar(hostile, "a1"))
         }
-        assertEquals("/crm/x1/-/comment/a%3Fb/asset/avatar", commentAvatar("x1", "a?b"))
-        assertEquals("/crm/a%3Fb/-/activity/a1/asset/avatar", activityAvatar("a?b", "a1"))
+        assertEquals("/crm/x1/-/comment/a%3Fb/asset/avatar", commentAvatar("x1", "a?b")?.address)
+        assertEquals("/crm/a%3Fb/-/activity/a1/asset/avatar", activityAvatar("a?b", "a1")?.address)
     }
 
     @Test
     fun `a commenter whose first comment has no address gets their next one's`() {
         val comments = listOf(by("x/-/delete?", "bob"), by("c2", "bob"))
-        assertEquals(mapOf("bob" to "/crm/x1/-/comment/c2/asset/avatar"), commentAvatars(comments, "x1"))
+        assertEquals(mapOf("bob" to "/crm/x1/-/comment/c2/asset/avatar"), commentAvatars(comments, "x1").mapValues { it.value.address })
     }
 }

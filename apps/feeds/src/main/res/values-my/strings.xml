@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">စောင့်ကြည့်မနေပါ</string>
     <string name="feeds_source_follow_again">ထပ်မံ စောင့်ကြည့်မည်</string>
     <string name="feeds_filtered_by_tag">တဂ်အလိုက် စိစစ်ထား -</string>
+    <string name="feeds_setup">ပြင်ဆင်မည်</string>
+    <string name="feeds_search_example">အမည်၊ ID၊ လက်ဗွေ၊ URL၊ သို့မဟုတ် %1$s ဖြင့် ရှာဖွေ</string>
 </resources>

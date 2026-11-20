@@ -34,13 +34,16 @@ object ChatApp {
     const val NEW_CHAT = "chat/new?friend={friend}&account={account}&address={address}&name={name}"
     const val CHAT_SETTINGS = "chat/chat/{chatId}/settings"
 
-    fun chat(chatId: String) = "chat/chat/$chatId"
-    fun newChat(friendId: String = "") = if (friendId.isEmpty()) "chat/new" else "chat/new?friend=$friendId"
+    // Every value a builder puts in a route is escaped with Uri.encode, which
+    // Navigation undoes once as it fills the destination's arguments, so a
+    // value holding `&`, `#` or `%` cannot add arguments of its own.
+    fun chat(chatId: String) = "chat/chat/${Uri.encode(chatId)}"
+    fun newChat(friendId: String = "") = if (friendId.isEmpty()) "chat/new" else "chat/new?friend=${Uri.encode(friendId)}"
 
     /** New chat on [account] with the person at [address] there, as people hands a messaging address over. */
     fun newChat(account: String, address: String, name: String) =
         "chat/new?account=${Uri.encode(account)}&address=${Uri.encode(address)}&name=${Uri.encode(name)}"
-    fun chatSettings(chatId: String) = "chat/chat/$chatId/settings"
+    fun chatSettings(chatId: String) = "chat/chat/${Uri.encode(chatId)}/settings"
 }
 
 fun NavGraphBuilder.chatNavGraph(

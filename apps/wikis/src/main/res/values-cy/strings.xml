@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Ni all y tag fod yn wag</string>
     <string name="wikis_attachments_search_placeholder">Chwilio atodiadau</string>
     <string name="wikis_attachments_delete_confirm_message">Dileu “%1$s”? Ni ellir dadwneud hyn.</string>
-    <string name="wikis_attachments_downloading">Wrthi\'n lawrlwytho…</string>
     <string name="wikis_attachments_empty_description">Tapiwch Uwchlwytho i ychwanegu ffeiliau at y dudalen hon.</string>
     <string name="wikis_settings_name_save_cd">Cadw’r enw</string>
     <string name="wikis_settings_name_cancel_cd">Canslo golygu</string>

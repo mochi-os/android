@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">பதிவர்</string>
     <string name="forums_community_destination">%1$s இல் %2$s ஆக இடுகையிடப்படும்</string>
+    <string name="forums_find_search_example">பெயர், ID, ஃபிங்கர்பிரிண்ட், URL அல்லது %1$s மூலம் தேடு</string>
+    <string name="forums_setup">அமைக்க</string>
 </resources>

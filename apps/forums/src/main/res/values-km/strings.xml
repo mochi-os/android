@@ -334,4 +334,6 @@
     </plurals>
     <string name="forums_comment_op">អ្នកនិពន្ធ</string>
     <string name="forums_community_destination">បង្ហោះទៅ %1$s ជា %2$s</string>
+    <string name="forums_find_search_example">ស្វែងរកតាមឈ្មោះ ID ស្នាមម្រាមដៃ URL ឬ %1$s</string>
+    <string name="forums_setup">រៀបចំ</string>
 </resources>

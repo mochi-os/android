@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">دنبال نمی‌کنید</string>
     <string name="feeds_source_follow_again">دنبال کردن دوباره</string>
     <string name="feeds_filtered_by_tag">فیلتر شده با برچسب:</string>
+    <string name="feeds_setup">راه‌اندازی</string>
+    <string name="feeds_search_example">جست‌وجو بر اساس نام، شناسه، اثرانگشت، URL یا %1$s</string>
 </resources>

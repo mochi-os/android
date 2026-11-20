@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Не следите</string>
     <string name="feeds_source_follow_again">Следи повторно</string>
     <string name="feeds_filtered_by_tag">Филтрирано по ознака:</string>
+    <string name="feeds_setup">Поставете</string>
+    <string name="feeds_search_example">Пребарај по име, ID, отпечаток, URL или адреса %1$s</string>
 </resources>

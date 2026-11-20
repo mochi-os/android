@@ -121,6 +121,8 @@ import coil3.compose.AsyncImage
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
+import org.mochios.android.util.attachmentModel
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
@@ -159,7 +161,7 @@ import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
 import org.mochios.android.ui.components.RefreshButton
 import org.mochios.android.ui.components.TileVariant
-import org.mochios.android.ui.components.VideoFrame
+import org.mochios.android.ui.components.videoFrame
 import org.mochios.android.ui.components.VideoPlayer
 import org.mochios.android.ui.components.mediumAddress
 import org.mochios.android.ui.components.rememberCopier
@@ -1064,7 +1066,7 @@ private const val GALLERY_CAPTION_LIMIT = 200
 // What an image tap asks the lightbox to show: the image set, the per-image
 // captions aligned with it, and where to start. null = closed.
 private data class LightboxRequest(
-    val urls: List<String>,
+    val urls: List<Any>,
     val captions: List<String>,
     val index: Int,
     // The post attachment behind each image, aligned with `urls`; empty for
@@ -1172,16 +1174,16 @@ private fun GalleryContent(
     caption: String,
     fallbackFeedId: String,
     onOpenImage: (imageIndex: Int) -> Unit,
-    onPlayVideo: (url: String) -> Unit,
+    onPlayVideo: (url: Any) -> Unit,
     onOpenPost: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val attachmentFeed = post.feed.ifEmpty { fallbackFeedId }
     // Every consumer - Coil, the video frame decoder, ExoPlayer - resolves a
-    // server-relative address itself and sends it as the app's own, with the
-    // session; an absolute one, such as a source's enclosure, goes without.
-    val fullUrl: (Attachment) -> String = { attachment ->
-        attachment.url ?: attachmentAddress("feeds", attachmentFeed, attachment.id).orEmpty()
+    // server-relative address itself; one of the app's own goes with a
+    // credential, and another host's, such as a source's enclosure, without.
+    val fullUrl: (Attachment) -> Any = { attachment ->
+        attachmentModel(attachment.url, attachmentAddress("feeds", attachmentFeed, attachment.id)) ?: ""
     }
 
     // Zero-range verticalScroll (inner column pinned to viewport height) exists
@@ -1237,19 +1239,17 @@ private fun GalleryContent(
                         if (attachment.isVideo) {
                             // No server video-thumbnail route: decode the opening
                             // frame from the video itself (VideoFrameFetcher).
-                            VideoFrame(fullUrl(attachment))
+                            videoFrame(fullUrl(attachment))
                         } else {
                             // Mosaic tiles render at up to full screen width, so
                             // prefer the preview variant; previewUrl is absent on
                             // servers that predate it, where the thumbnail chain
                             // keeps working.
-                            attachment.previewUrl
-                                ?: attachment.thumbnailUrl
-                                ?: attachmentAddress("feeds", attachmentFeed, attachment.id, "thumbnail").orEmpty()
+                            attachmentModel(attachment.previewUrl ?: attachment.thumbnailUrl, attachmentAddress("feeds", attachmentFeed, attachment.id, "thumbnail")) ?: ""
                         }
                     },
                     // A tile drawn small enough takes the 640px medium.
-                    mediumModel = { attachment -> mediumAddress(attachment.previewUrl) },
+                    mediumModel = { attachment -> mediumAddress(OwnedAddress.of(attachment.previewUrl)) },
                     onTap = { index ->
                         val attachment = media[index]
                         if (attachment.isVideo) {
@@ -1304,7 +1304,7 @@ internal fun GalleryMosaic(
     media: List<Attachment>,
     tileModel: (Attachment) -> Any,
     onTap: (index: Int) -> Unit,
-    mediumModel: ((Attachment) -> String?)? = null,
+    mediumModel: ((Attachment) -> Any?)? = null,
     modifier: Modifier = Modifier,
 ) {
     val shown = media.take(GALLERY_TILE_LIMIT)
@@ -1397,7 +1397,7 @@ internal fun GalleryTile(
     contentScale: ContentScale,
     more: Int,
     // The image's 640px medium, taken when the tile is drawn small enough.
-    medium: String? = null,
+    medium: Any? = null,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -1422,7 +1422,7 @@ internal fun GalleryTile(
                 )
             }
         } else {
-            TileVariant(medium = medium, preview = model as String, modifier = Modifier.fillMaxSize()) { source, fallback ->
+            TileVariant(medium = medium, preview = model, modifier = Modifier.fillMaxSize()) { source, fallback ->
                 MochiImage(
                     model = source,
                     fallback = fallback,
@@ -1462,7 +1462,7 @@ internal fun PostCard(
     post: Post,
     fallbackFeedId: String,
     // One avatar address per commenter across the timeline (timelineAvatars).
-    avatars: Map<String, String> = emptyMap(),
+    avatars: Map<String, OwnedAddress> = emptyMap(),
     // Article og:image resolved by the ViewModel, upgrading the RSS item's
     // (often tiny) thumbnail. Null = not resolved yet, "" = nothing better.
     upgradedRssImage: String?,
@@ -1510,7 +1510,7 @@ internal fun PostCard(
     }
     val attachmentImageUrls = remember(attachmentImages, attachmentFeed) {
         attachmentImages.map { att ->
-            att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty()
+            attachmentModel(att.url, attachmentAddress("feeds", attachmentFeed, att.id)) ?: ""
         }
     }
     val attachmentImageCaptions = remember(attachmentImages) {
@@ -1525,7 +1525,7 @@ internal fun PostCard(
     // need multi-megabyte originals (the lightbox still gets them). previewUrl
     // is absent on servers that predate it, where the original keeps working.
     val heroUrl = if (heroFromAttachment) {
-        attachmentImages.first().previewUrl ?: attachmentImageUrls.first()
+        attachmentModel(attachmentImages.first().previewUrl, null) ?: attachmentImageUrls.first()
     } else {
         rssImageUrl
     }
@@ -1539,7 +1539,7 @@ internal fun PostCard(
     val isGallery = post.data?.rss == null && mediaAttachments.isNotEmpty() &&
         captionText.length <= GALLERY_CAPTION_LIMIT && post.warning.isEmpty()
     // Full-screen playback for a tapped gallery video tile. null = closed.
-    var playingVideoUrl by remember { mutableStateOf<String?>(null) }
+    var playingVideoUrl by remember { mutableStateOf<Any?>(null) }
 
     Column(
         modifier = Modifier
@@ -1713,11 +1713,9 @@ internal fun PostCard(
                         MediaGrid(
                             urls = attachmentImageUrls.drop(gridStartIndex),
                             thumbnailUrls = gridImages.map { att ->
-                                att.previewUrl
-                                    ?: att.thumbnailUrl
-                                    ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
+                                attachmentModel(att.previewUrl ?: att.thumbnailUrl, attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail")) ?: ""
                             },
-                            mediumUrls = gridImages.map { att -> mediumAddress(att.previewUrl) },
+                            mediumUrls = gridImages.map { att -> mediumAddress(OwnedAddress.of(att.previewUrl)) },
                             contentDescriptions = gridImages.map { it.caption.ifEmpty { it.name } },
                             captions = gridImages.map { it.caption },
                             onClick = { index ->
@@ -1843,7 +1841,11 @@ internal fun PostCard(
                     .aspectRatio(16f / 9f)
                     .background(Color.Black),
             ) {
-                VideoPlayer(url = url, modifier = Modifier.fillMaxSize())
+                if (url is OwnedAddress) {
+                    VideoPlayer(address = url, modifier = Modifier.fillMaxSize())
+                } else {
+                    VideoPlayer(url = url.toString(), modifier = Modifier.fillMaxSize())
+                }
             }
         }
     }
@@ -1864,7 +1866,7 @@ internal fun PostCommentsPreview(
     post: Post,
     fallbackFeedId: String,
     onViewComments: () -> Unit,
-    avatars: Map<String, String> = emptyMap(),
+    avatars: Map<String, OwnedAddress> = emptyMap(),
 ) {
     if (post.comments.isEmpty()) return
 
@@ -2183,7 +2185,7 @@ private fun CommentPreviewRow(
     comment: Comment,
     commentFeedId: String,
     postId: String,
-    avatars: Map<String, String>,
+    avatars: Map<String, OwnedAddress>,
     modifier: Modifier = Modifier,
 ) {
     val anonymous = stringResource(R.string.feeds_anonymous)
@@ -2240,7 +2242,7 @@ private fun CommentPreviewRow(
 @Composable
 private fun LightboxCommentsPreview(
     post: Post,
-    avatars: Map<String, String>,
+    avatars: Map<String, OwnedAddress>,
     attachmentId: String,
     commentFeedId: String,
     onViewPost: () -> Unit,

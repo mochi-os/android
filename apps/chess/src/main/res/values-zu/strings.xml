@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Iyaxhuma…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Iyaxhuma kabusha…</string>
-    <string name="chess_ws_failed">Uxhumano luhlulekile</string>
     <string name="chess_move_capture">U-%1$s uthathe u-%2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

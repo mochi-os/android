@@ -65,17 +65,27 @@ object PeopleApp {
     /** A new contact copying [contact], made by its Create. */
     fun contactCopy(contact: String): String = "people/contacts/new?copy=${Uri.encode(contact)}"
 
-    fun groupDetail(id: String) = "people/groups/$id"
-    fun groupAddMember(id: String) = "people/groups/$id/add-member"
-    fun personView(id: String) = "people/person/$id"
-    fun contactEdit(id: String) = "people/contacts/$id"
-    fun book(id: String) = "people/books/$id"
+    // Ids are escaped with Uri.encode, which Navigation undoes once as it
+    // fills the destination's arguments, so an id holding `/`, `?`, `#` or
+    // `%` still names its own screen.
+    fun groupDetail(id: String) = "people/groups/${Uri.encode(id)}"
+    fun groupAddMember(id: String) = "people/groups/${Uri.encode(id)}/add-member"
+    fun personView(id: String) = "people/person/${Uri.encode(id)}"
+    fun contactEdit(id: String) = "people/contacts/${Uri.encode(id)}"
+    fun book(id: String) = "people/books/${Uri.encode(id)}"
     fun contacts(action: String? = null): String = if (action.isNullOrBlank()) {
         "people/contacts"
     } else {
-        "people/contacts?action=$action"
+        "people/contacts?action=${Uri.encode(action)}"
     }
 }
+
+/**
+ * The link Message on a person's page opens: a new chat with [person]. The id
+ * is another server's when the page is a relayed one, so it is escaped as a
+ * query value and cannot add `account` or `address` values of its own.
+ */
+internal fun chatLink(person: String): String = "chat/new?friend=${Uri.encode(person)}"
 
 private fun NavController.openPeopleSection(section: PeopleSidebarSection) {
     val target = when (section) {
@@ -322,7 +332,7 @@ fun NavGraphBuilder.peopleNavGraph(
         PersonViewScreen(
             onBack = { navController.popBackStack() },
             onMessage = { personId, _ ->
-                onOpenLink("chat/new?friend=$personId")
+                onOpenLink(chatLink(personId))
             },
             onOpenLink = onOpenLink,
         )

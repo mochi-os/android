@@ -16,6 +16,7 @@ import org.mochios.forums.model.CommunitiesImported
 import org.mochios.forums.model.CommunityFound
 import org.mochios.forums.model.CommunityJoined
 import org.mochios.forums.model.CommunityState
+import org.mochios.forums.model.HostedNetworks
 import org.mochios.forums.model.NetworkAccount
 import org.mochios.forums.model.SensitiveState
 import org.mochios.forums.model.AiSettings
@@ -114,10 +115,8 @@ data class SubscribeRequest(
 )
 
 /** JSON body of `-/unsubscribe`. */
-data class UnsubscribeRequest(
-    val forum: String,
-    val server: String? = null
-)
+// The server unsubscribes through the server it stored for the forum.
+data class UnsubscribeRequest(val forum: String)
 
 data class ViewPostResponse(
     val forum: Forum = Forum(),
@@ -805,6 +804,11 @@ interface ForumsApi {
     suspend fun listNetworkAccounts(
         @Query("capability") capability: String,
     ): Response<List<NetworkAccount>>
+
+    // The networks the server hosts accounts on: Find offers to set up an
+    // ActivityPub account where a community is looked for without one.
+    @GET("-/networks")
+    suspend fun getNetworks(): Response<ApiResponse<HostedNetworks>>
 
     // A community on another server, by !name@host or its address, as Find
     // shows it before it is joined.

@@ -716,7 +716,6 @@ private fun ChatHeader(wsStatus: StreamWsStatus?) {
                     StreamWsStatus.CONNECTED -> ""
                     StreamWsStatus.DISCONNECTED -> stringResource(R.string.chess_ws_disconnected)
                     StreamWsStatus.RECONNECTING -> stringResource(R.string.chess_ws_reconnecting)
-                    StreamWsStatus.FAILED -> stringResource(R.string.chess_ws_failed)
                 },
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,

@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Ba a bi ba</string>
     <string name="feeds_source_follow_again">Sake bi</string>
     <string name="feeds_filtered_by_tag">An tace ta tag:</string>
+    <string name="feeds_setup">Saitawa</string>
+    <string name="feeds_search_example">Bincika ta suna, ID, fingerprint, URL, ko %1$s</string>
 </resources>

@@ -15,6 +15,7 @@ import org.mochios.settings.api.Handles
 import org.mochios.settings.api.NetworkAccount
 import org.mochios.settings.api.NetworkFailure
 import org.mochios.settings.api.NetworkFeed
+import org.mochios.settings.api.NetworkProvider
 import org.mochios.settings.api.NetworksData
 import org.mochios.settings.api.OtherToken
 import org.mochios.settings.ui.sessions.recentFirst
@@ -40,6 +41,20 @@ class NetworksRulesTest {
         val all = listOf(zed, news, community, alice, elsewhere)
         assertEquals(listOf("alice", "Zed"), parentHandles(all).map { it.name })
         assertEquals(listOf("alice_news"), childHandles(all, alice).map { it.name })
+    }
+
+    @Test
+    fun `an app sent here for a network the server only links opens the link form of its provider`() {
+        val providers = listOf(NetworkProvider(type = "mastodon"), NetworkProvider(type = "matrix"))
+        // THE POINT: a fediverse account is linked through Mastodon.
+        assertEquals("mastodon", arrival("fediverse", emptyList(), providers))
+        assertEquals("matrix", arrival("matrix", listOf("fediverse"), providers))
+        // A hosted network opens as usual, on the chooser or the first handle's card.
+        assertNull(arrival("fediverse", listOf("fediverse"), providers))
+        // Nothing links it, or nothing was asked for.
+        assertNull(arrival("xmpp", emptyList(), providers))
+        assertNull(arrival(null, emptyList(), providers))
+        assertNull(arrival("", emptyList(), providers))
     }
 
     @Test

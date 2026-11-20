@@ -35,14 +35,15 @@ import org.mochios.android.i18n.LocalFormat
  * Grid of image attachments in the conventional Mochi layout: one full-width,
  * two side by side, or a large image over a row of up to `maxDisplay` cells
  * with a "+N" overlay. `thumbnailUrls` (same order as `urls`) is used when
- * present.
+ * present. Each address is a Coil model: an [org.mochios.android.api.OwnedAddress],
+ * fetched with a credential, or a URL fetched without.
  */
 @Composable
 fun MediaGrid(
-    urls: List<String>,
+    urls: List<Any>,
     onClick: (index: Int) -> Unit,
     modifier: Modifier = Modifier,
-    thumbnailUrls: List<String>? = null,
+    thumbnailUrls: List<Any>? = null,
     contentDescriptions: List<String>? = null,
     // Per-image captions (same length / order as `urls`); an empty or absent
     // entry draws no scrim. The "+N" overlay cell keeps its count instead —
@@ -52,14 +53,14 @@ fun MediaGrid(
     // The 640px medium of each image (same order as `urls`), or null where
     // there is none. A cell drawn small enough takes it instead of its
     // thumbnailUrls entry, which it falls back to if the medium fails.
-    mediumUrls: List<String?>? = null,
+    mediumUrls: List<Any?>? = null,
 ) {
     if (urls.isEmpty()) return
 
     val displayCount = minOf(urls.size, maxDisplay)
     val shape = RoundedCornerShape(10.dp)
 
-    fun thumbOrUrl(i: Int): String = thumbnailUrls?.getOrNull(i) ?: urls[i]
+    fun thumbOrUrl(i: Int): Any = thumbnailUrls?.getOrNull(i) ?: urls[i]
     fun describe(i: Int): String? = contentDescriptions?.getOrNull(i)
     fun captionFor(i: Int): String? = captions?.getOrNull(i)?.takeIf { it.isNotEmpty() }
     val image: @Composable (Int) -> Unit = { i ->

@@ -176,7 +176,8 @@ data class SubscribeResponse(
 
 // JSON body of `-/unsubscribe`. `server` is accepted for symmetry with
 // subscribe but ignored server-side — unsubscribe resolves the project locally.
-data class UnsubscribeRequest(val project: String, val server: String? = null)
+// The server unsubscribes through the server it stored for the project.
+data class UnsubscribeRequest(val project: String)
 
 // JSON body of `classes/{class}/update`; a null field is left out, an empty
 // `title` clears the class's title field.

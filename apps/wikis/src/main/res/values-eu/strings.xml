@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">Etiketa ezin da hutsik egon</string>
     <string name="wikis_attachments_search_placeholder">Bilatu eranskinak</string>
     <string name="wikis_attachments_delete_confirm_message">«%1$s» ezabatu? Hau ezin da desegin.</string>
-    <string name="wikis_attachments_downloading">Deskargatzen…</string>
     <string name="wikis_attachments_empty_description">Sakatu Igo orri honetan fitxategiak gehitzeko.</string>
     <string name="wikis_settings_name_save_cd">Gorde izena</string>
     <string name="wikis_settings_name_cancel_cd">Utzi edizioa</string>

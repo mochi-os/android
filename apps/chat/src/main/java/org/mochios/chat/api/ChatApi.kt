@@ -44,6 +44,8 @@ data class NewChatResponse(
     val friends: List<Friend> = emptyList(),
     /** The user's accounts on other networks a conversation can be had through. */
     val accounts: List<ChatAccount> = emptyList(),
+    /** The networks the server offers an account on that chats are had on. */
+    val offered: List<String> = emptyList(),
 )
 
 data class MessageListResponse(

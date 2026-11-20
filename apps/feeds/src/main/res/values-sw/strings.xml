@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Hufuati</string>
     <string name="feeds_source_follow_again">Fuata tena</string>
     <string name="feeds_filtered_by_tag">Imechujwa kwa tagi:</string>
+    <string name="feeds_setup">Sanidi</string>
+    <string name="feeds_search_example">Tafuta kwa jina, ID, alama ya kidole, URL, au %1$s</string>
 </resources>

@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">تعقیب یې نه کوئ</string>
     <string name="feeds_source_follow_again">بیا تعقیب کړئ</string>
     <string name="feeds_filtered_by_tag">د ټګ په واسطه فلټر شوی:</string>
+    <string name="feeds_setup">تنظیم</string>
+    <string name="feeds_search_example">د نوم، ID، فنګر پرنټ، URL، یا %1$s له مخې وپلټئ</string>
 </resources>

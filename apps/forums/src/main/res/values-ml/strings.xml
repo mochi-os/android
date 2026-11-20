@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">രചയിതാവ്</string>
     <string name="forums_community_destination">%1$s ലേക്ക് %2$s ആയി പോസ്റ്റ് ചെയ്യുന്നു</string>
+    <string name="forums_find_search_example">പേര്, ID, ഫിംഗർപ്രിന്റ്, URL അല്ലെങ്കിൽ %1$s ഉപയോഗിച്ച് തിരയുക</string>
+    <string name="forums_setup">സജ്ജമാക്കുക</string>
 </resources>

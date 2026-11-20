@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s diňe dostlardan söhbet kabul edýär.</string>
     <string name="chat_message_earlier">Bu hasap Mochi-de goşulmazdan öňki habarlar şifrlenen we olary şu ýerde okap bolmaýar</string>
     <string name="chat_message_excluded">Diňe beýleki enjamlar üçin şifrlenen</string>
+    <string name="chat_setup">Düzmek</string>
 </resources>

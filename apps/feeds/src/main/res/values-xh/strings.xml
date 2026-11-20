@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Awulandeli</string>
     <string name="feeds_source_follow_again">Landela kwakhona</string>
     <string name="feeds_filtered_by_tag">Kuhluzwe ngethegi:</string>
+    <string name="feeds_setup">Misela</string>
+    <string name="feeds_search_example">Khangela ngegama, i-ID, umnwe, i-URL, okanye %1$s</string>
 </resources>

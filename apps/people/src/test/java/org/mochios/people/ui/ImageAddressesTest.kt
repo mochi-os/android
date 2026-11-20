@@ -31,21 +31,21 @@ class ImageAddressesTest {
 
     @Test
     fun `an invitation's avatar is the person's own`() {
-        assertEquals("/people/p1/-/avatar", inviteAvatar(FriendInvite(id = "p1")))
-        assertEquals("/people/a%3Fb/-/avatar", inviteAvatar(FriendInvite(id = "a?b")))
+        assertEquals("/people/p1/-/avatar", inviteAvatar(FriendInvite(id = "p1"))?.address)
+        assertEquals("/people/a%3Fb/-/avatar", inviteAvatar(FriendInvite(id = "a?b"))?.address)
         for (id in hostile) assertNull(inviteAvatar(FriendInvite(id = id)))
     }
 
     @Test
     fun `a person's avatar and banner carry their versions`() {
         val info = PersonInformation(id = "p1", avatar = "v1", banner = "v2")
-        assertEquals("/people/p1/-/avatar?v=v1", personAvatar(info))
-        assertEquals("/people/p1/-/banner?v=v2", personBanner(info))
-        assertEquals("/people/p1/-/avatar?v=v1", contactAvatar(info, User()))
-        assertEquals("/people/p1/-/banner?v=v2", contactBanner(info, User()))
-        assertEquals("/people/p1/-/avatar", contactAvatar(PersonInformation(), User(id = "p1")))
-        assertEquals("/people/p1/-/avatar?v=v1", avatarPath("p1", "v1"))
-        assertEquals("/people/p1/-/banner?v=v2", imageUrl("p1", "banner", "v2"))
+        assertEquals("/people/p1/-/avatar?v=v1", personAvatar(info)?.address)
+        assertEquals("/people/p1/-/banner?v=v2", personBanner(info)?.address)
+        assertEquals("/people/p1/-/avatar?v=v1", contactAvatar(info, User())?.address)
+        assertEquals("/people/p1/-/banner?v=v2", contactBanner(info, User())?.address)
+        assertEquals("/people/p1/-/avatar", contactAvatar(PersonInformation(), User(id = "p1"))?.address)
+        assertEquals("/people/p1/-/avatar?v=v1", avatarPath("p1", "v1")?.address)
+        assertEquals("/people/p1/-/banner?v=v2", imageUrl("p1", "banner", "v2")?.address)
     }
 
     @Test
@@ -61,19 +61,19 @@ class ImageAddressesTest {
             assertNull(imageUrl(id, "banner", "v2"))
         }
         val info = PersonInformation(id = "a?b", avatar = "v1", banner = "v2")
-        assertEquals("/people/a%3Fb/-/avatar?v=v1", personAvatar(info))
-        assertEquals("/people/a%3Fb/-/banner?v=v2", contactBanner(info, User()))
-        assertEquals("/people/a%3Fb/-/favicon?v=v2", imageUrl("a?b", "favicon", "v2"))
+        assertEquals("/people/a%3Fb/-/avatar?v=v1", personAvatar(info)?.address)
+        assertEquals("/people/a%3Fb/-/banner?v=v2", contactBanner(info, User())?.address)
+        assertEquals("/people/a%3Fb/-/favicon?v=v2", imageUrl("a?b", "favicon", "v2")?.address)
     }
 
     @Test
     fun `a version is escaped, and one no segment can carry is left off`() {
         val info = PersonInformation(id = "p1", avatar = "x/-/delete?", banner = "a?b&c")
-        assertEquals("/people/p1/-/avatar", personAvatar(info))
-        assertEquals("/people/p1/-/banner?v=a%3Fb%26c", personBanner(info))
-        assertEquals("/people/p1/-/avatar", contactAvatar(info, User()))
-        assertEquals("/people/p1/-/banner?v=a%3Fb%26c", contactBanner(info, User()))
-        assertEquals("/people/p1/-/avatar", avatarPath("p1", ".."))
-        assertEquals("/people/p1/-/banner?v=a%3Fb%26c", imageUrl("p1", "banner", "a?b&c"))
+        assertEquals("/people/p1/-/avatar", personAvatar(info)?.address)
+        assertEquals("/people/p1/-/banner?v=a%3Fb%26c", personBanner(info)?.address)
+        assertEquals("/people/p1/-/avatar", contactAvatar(info, User())?.address)
+        assertEquals("/people/p1/-/banner?v=a%3Fb%26c", contactBanner(info, User())?.address)
+        assertEquals("/people/p1/-/avatar", avatarPath("p1", "..")?.address)
+        assertEquals("/people/p1/-/banner?v=a%3Fb%26c", imageUrl("p1", "banner", "a?b&c")?.address)
     }
 }

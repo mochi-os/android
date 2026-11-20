@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ట్యాగ్ ఖాళీగా ఉండకూడదు</string>
     <string name="wikis_attachments_search_placeholder">జోడింపులను శోధించండి</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
-    <string name="wikis_attachments_downloading">డౌన్‌లోడ్ చేస్తోంది…</string>
     <string name="wikis_attachments_empty_description">ఈ పేజీకి ఫైల్‌లను జోడించడానికి అప్‌లోడ్ నొక్కండి.</string>
     <string name="wikis_settings_name_save_cd">పేరును భద్రపరచండి</string>
     <string name="wikis_settings_name_cancel_cd">సవరణను రద్దు చేయండి</string>

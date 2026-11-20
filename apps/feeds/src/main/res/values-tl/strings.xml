@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Hindi sinusundan</string>
     <string name="feeds_source_follow_again">Sundan muli</string>
     <string name="feeds_filtered_by_tag">Naka-filter sa tag:</string>
+    <string name="feeds_setup">I-set up</string>
+    <string name="feeds_search_example">Maghanap ayon sa pangalan, ID, fingerprint, URL, o %1$s</string>
 </resources>

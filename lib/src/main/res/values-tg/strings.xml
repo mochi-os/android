@@ -318,7 +318,6 @@
     <string name="error_server_https">Суроғаи сервер бояд бо https:// оғоз шавад</string>
     <string name="device_name_fallback">Дастгоҳи мобилӣ</string>
     <string name="account_error_token_type">Навъи рамз дастгирӣ намешавад</string>
-    <string name="account_error_caller">Ба даъваткунанда иҷозат нест</string>
     <string name="zone_sea">Дар баҳр</string>
     <string name="access_remove">Хориҷ кардан</string>
     <string name="access_remove_title">Дастрасиро хориҷ кардан?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Номаълум</string>
     <string name="format_time_seconds_short">%1$s сон</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Боргирии %1$s…</string>
+    <string name="downloads_saved">%1$s захира шуд</string>
+    <string name="downloads_failed">%1$s захира нашуд: %2$s</string>
+    <string name="sync_conflict">Дар сервер тағйир ёфт</string>
+    <string name="sync_missing">Дигар дар сервер нест</string>
+    <string name="sync_refused">Сервер рад кард</string>
 </resources>

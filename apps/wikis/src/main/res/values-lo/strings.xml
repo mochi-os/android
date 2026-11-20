@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ແທັກຫວ່າງເປົ່າບໍ່ໄດ້</string>
     <string name="wikis_attachments_search_placeholder">ຊອກຫາໄຟລ໌ແນບ</string>
     <string name="wikis_attachments_delete_confirm_message">ລຶບ “%1$s” ບໍ? ນີ້ບໍ່ສາມາດຍົກເລີກໄດ້.</string>
-    <string name="wikis_attachments_downloading">ກຳລັງດາວໂຫຼດ…</string>
     <string name="wikis_attachments_empty_description">ແຕະ ອັບໂຫຼດ ເພື່ອເພີ່ມໄຟລ໌ໃສ່ໜ້ານີ້.</string>
     <string name="wikis_settings_name_save_cd">ບັນທຶກຊື່</string>
     <string name="wikis_settings_name_cancel_cd">ຍົກເລີກການແກ້ໄຂ</string>

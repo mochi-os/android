@@ -397,4 +397,6 @@
     <string name="feeds_source_unfollowed">Nesledujete</string>
     <string name="feeds_source_follow_again">Znova sledovať</string>
     <string name="feeds_filtered_by_tag">Filtrované podľa značky:</string>
+    <string name="feeds_setup">Nastaviť</string>
+    <string name="feeds_search_example">Hľadať podľa názvu, ID, odtlačku, URL alebo adresy %1$s</string>
 </resources>

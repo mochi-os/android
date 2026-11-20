@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.moderation
 
+import org.mochios.android.api.OwnedAddress
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -58,6 +59,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.util.attachmentModel
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
@@ -337,7 +339,7 @@ private fun QueueByline(
     name: String,
     member: String,
     created: Long,
-    avatarUrl: String?,
+    avatarUrl: OwnedAddress?,
 ) {
     val format = LocalFormat.current
     val authorName = name.ifBlank { stringResource(R.string.forums_post_default_author) }
@@ -580,10 +582,10 @@ internal fun ReportCard(
                 AttachmentGallery(
                     attachments = attachments,
                     urlBuilder = { att ->
-                        att.url ?: attachmentAddress("forums", forumId, att.id).orEmpty()
+                        attachmentModel(att.url, attachmentAddress("forums", forumId, att.id))
                     },
                     thumbnailUrlBuilder = { att ->
-                        att.thumbnailUrl ?: attachmentAddress("forums", forumId, att.id, "thumbnail").orEmpty()
+                        attachmentModel(att.thumbnailUrl, attachmentAddress("forums", forumId, att.id, "thumbnail"))
                     },
                     compact = true,
                 )
@@ -791,10 +793,10 @@ private fun RestrictionsTab(
  * proxy. Null when an id, a peer's, cannot be one segment of the address
  * ([segment]).
  */
-internal fun restrictionAvatar(forumId: String, user: String): String? {
+internal fun restrictionAvatar(forumId: String, user: String): OwnedAddress? {
     val forum = segment(forumId) ?: return null
     val person = segment(user) ?: return null
-    return "/forums/$forum/-/moderation/$person/asset/avatar"
+    return OwnedAddress.of("/forums/$forum/-/moderation/$person/asset/avatar")
 }
 
 /**

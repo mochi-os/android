@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">பின்தொடரவில்லை</string>
     <string name="feeds_source_follow_again">மீண்டும் பின்தொடர்</string>
     <string name="feeds_filtered_by_tag">டேக் மூலம் வடிகட்டப்பட்டது:</string>
+    <string name="feeds_setup">அமைக்க</string>
+    <string name="feeds_search_example">பெயர், ID, ஃபிங்கர்பிரிண்ட், URL அல்லது %1$s மூலம் தேடு</string>
 </resources>

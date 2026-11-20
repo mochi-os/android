@@ -66,10 +66,15 @@ import org.mochios.android.R as MochiR
 fun FindForumsScreen(
     onBack: () -> Unit,
     onForumSubscribed: (String) -> Unit,
+    onOpenLink: (String) -> Unit = {},
     viewModel: FindForumsViewModel = hiltViewModel(),
     communities: CommunitiesViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val hosted by communities.hosted.collectAsState()
+    val listed by communities.listed.collectAsState()
+    val networks by communities.networks.collectAsState()
+    val example = communityExample(networks)
     val snackbarHostState = remember { SnackbarHostState() }
     // The search field keeps the keyboard up, which covers the snackbar the
     // subscribe result lands in — drop it before the request goes out.
@@ -115,7 +120,13 @@ fun FindForumsScreen(
                         expanded = false,
                         onExpandedChange = { },
                         placeholder = {
-                            Text(stringResource(R.string.forums_find_search_placeholder))
+                            Text(
+                                if (example != null) {
+                                    stringResource(R.string.forums_find_search_example, example)
+                                } else {
+                                    stringResource(R.string.forums_find_search_placeholder)
+                                },
+                            )
                         },
                         leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
                         trailingIcon = if (uiState.isSearching || uiState.isProbing) {
@@ -143,11 +154,12 @@ fun FindForumsScreen(
 
             // Communities on other networks, beside the forums found here: the
             // ways in while nothing is searched, and the community a search
-            // names, which then stands in for "no forums found".
+            // names, or a way to set up an account to join it through, which
+            // then stands in for "no forums found".
             val query = uiState.searchQuery.trim()
             val found by communities.found.collectAsState()
             LaunchedEffect(query) { communities.look(query) }
-            val elsewhere = found.answers(query)
+            val elsewhere = found.answers(query) || settable(query, listed, hosted, networks)
             if (query.isEmpty() || looksLikeCommunity(query)) {
                 CommunitiesSections(
                     viewModel = communities,
@@ -155,6 +167,7 @@ fun FindForumsScreen(
                     onOpenForum = onForumSubscribed,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
                     typed = query.ifEmpty { null },
+                    onOpenLink = onOpenLink,
                 )
             }
 

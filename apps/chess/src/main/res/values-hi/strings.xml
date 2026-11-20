@@ -60,7 +60,6 @@
     <string name="chess_open_sidebar">साइडबार खोलें</string>
     <string name="chess_ws_connecting">कनेक्ट हो रहा है…</string>
     <string name="chess_ws_disconnected">ऑफ़लाइन</string>
-    <string name="chess_ws_failed">कनेक्शन विफल रहा</string>
     <string name="chess_ws_reconnecting">पुनः कनेक्ट हो रहा है…</string>
     <string name="chess_piece_white">सफेद %1$s</string>
     <string name="chess_piece_black">काला %1$s</string>

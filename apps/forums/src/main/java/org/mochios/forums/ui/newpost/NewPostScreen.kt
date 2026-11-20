@@ -5,6 +5,7 @@
 
 package org.mochios.forums.ui.newpost
 
+import org.mochios.android.util.attachmentModel
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -529,12 +530,16 @@ internal fun ExistingAttachmentChips(
                     leadingIcon = {
                         FileKindPreview(
                             kind = attachment.fileKind,
-                            model = attachment.thumbnailUrl
-                                ?: attachmentAddress("forums", forumId, attachment.id, "thumbnail"),
+                            model = attachmentModel(
+                                attachment.thumbnailUrl,
+                                attachmentAddress("forums", forumId, attachment.id, "thumbnail"),
+                            ),
                             // No thumbnail route for a video: the frame is
                             // decoded from the clip itself.
-                            videoModel = attachment.url
-                                ?: attachmentAddress("forums", forumId, attachment.id),
+                            videoModel = attachmentModel(
+                                attachment.url,
+                                attachmentAddress("forums", forumId, attachment.id),
+                            ),
                             modifier = Modifier.size(16.dp)
                         )
                     },

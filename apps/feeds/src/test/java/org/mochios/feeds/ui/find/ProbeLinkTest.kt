@@ -17,6 +17,14 @@ import org.mochios.feeds.repository.probeFeed
 class ProbeLinkTest {
 
     @Test
+    fun `the search's example address is the fediverse's where hosted, else Bluesky's, else none`() {
+        assertEquals("@name@example.social", addressExample(listOf("bluesky", "fediverse")))
+        assertEquals("name.bsky.social", addressExample(listOf("bluesky", "matrix")))
+        assertNull(addressExample(listOf("matrix")))
+        assertNull(addressExample(emptyList()))
+    }
+
+    @Test
     fun `a share link is resolved through the probe, as a web URL is`() {
         assertTrue(isProbeLink("mochi://12D3KooWPeer/abc"))
         assertTrue(isProbeLink(" https://example.com/feeds/abc "))

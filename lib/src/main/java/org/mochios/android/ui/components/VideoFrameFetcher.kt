@@ -26,6 +26,8 @@ import kotlinx.coroutines.async
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okio.Buffer
+import org.mochios.android.api.OWNED
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.assetHeaders
 import org.mochios.android.api.resolved
 import org.mochios.android.auth.SessionManager
@@ -35,9 +37,24 @@ import java.io.IOException
 /**
  * Coil model routing a request to [VideoFrameFetcher]. Attachment URLs carry no
  * extension, so a distinct type is the only way the fetcher can claim them.
- * The url may be a server URL or a `content://` clip picked on the device.
+ * The url may be a server URL or a `content://` clip picked on the device;
+ * [owned] when it was made from an [OwnedAddress], the only kind fetched with
+ * a credential.
  */
-data class VideoFrame(val url: String)
+class VideoFrame private constructor(val url: String, val owned: Boolean) {
+
+    /** A clip at [url], fetched without a credential. */
+    constructor(url: String) : this(url, false)
+
+    override fun equals(other: Any?): Boolean = other is VideoFrame && other.url == url && other.owned == owned
+
+    override fun hashCode(): Int = url.hashCode() * 31 + owned.hashCode()
+
+    companion object {
+        /** One of the app's own clips, at [address], fetched with a credential. */
+        fun of(address: OwnedAddress): VideoFrame = VideoFrame(address.address, true)
+    }
+}
 
 /**
  * Decodes a video's opening frame with [MediaMetadataRetriever], which reads
@@ -76,8 +93,9 @@ class VideoFrameFetcher(
             if (local) {
                 retriever.setDataSource(context, data.url.toUri())
             } else {
-                val url = resolved(sessionManager.getServerUrlBlocking(), data.url)
-                retriever.setDataSource(AssetMediaSource(client(), url, assetHeaders(data.url)))
+                val url = resolved(sessionManager.server.value, data.url)
+                val own = if (data.owned) OwnedAddress.of(data.url) else null
+                retriever.setDataSource(AssetMediaSource(client(), url, assetHeaders(own)))
             }
             retriever.getFrameAtTime(0L, MediaMetadataRetriever.OPTION_CLOSEST_SYNC)
         } catch (_: Exception) {
@@ -225,5 +243,5 @@ internal class AssetMediaSource(
  * frame from the server again.
  */
 class VideoFrameKeyer : Keyer<VideoFrame> {
-    override fun key(data: VideoFrame, options: Options): String = data.url
+    override fun key(data: VideoFrame, options: Options): String = if (data.owned) "$OWNED ${data.url}" else data.url
 }

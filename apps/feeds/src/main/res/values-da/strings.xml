@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Følger ikke</string>
     <string name="feeds_source_follow_again">Følg igen</string>
     <string name="feeds_filtered_by_tag">Filtreret efter tag:</string>
+    <string name="feeds_setup">Opsæt</string>
+    <string name="feeds_search_example">Søg efter navn, ID, fingeraftryk, URL eller %1$s</string>
 </resources>

@@ -335,4 +335,6 @@
     </plurals>
     <string name="forums_comment_op">Òǹkọ̀wé</string>
     <string name="forums_community_destination">Ó ń fi ránṣẹ́ sí %1$s gẹ́gẹ́ bí %2$s</string>
+    <string name="forums_find_search_example">Wá nípa orúkọ, ID, fingerprint, URL, tàbí %1$s</string>
+    <string name="forums_setup">Ṣètò</string>
 </resources>

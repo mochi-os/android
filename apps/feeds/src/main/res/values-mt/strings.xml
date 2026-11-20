@@ -427,4 +427,6 @@
     <string name="feeds_source_unfollowed">Mhux qed issegwi</string>
     <string name="feeds_source_follow_again">Erġa\' segwi</string>
     <string name="feeds_filtered_by_tag">Iffiltrat skont it-tag:</string>
+    <string name="feeds_setup">Issettja</string>
+    <string name="feeds_search_example">Fittex skond isem, ID, fingerprint, URL, jew %1$s</string>
 </resources>

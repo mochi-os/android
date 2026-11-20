@@ -65,6 +65,22 @@ class NetworksDialogsTest {
     }
 
     @Test
+    fun `the link dialog opens on the provider an app sent the user here for`() {
+        val providers = listOf(
+            NetworkProvider(type = "lemmy", link = NetworkLink(flow = "form", fields = listOf(ProviderField(name = "server", label = "Server URL", required = true)))),
+            NetworkProvider(type = "mastodon", link = NetworkLink(flow = "oauth", fields = listOf(ProviderField(name = "server", label = "Server URL", required = true)))),
+        )
+        val linked = mutableListOf<String>()
+        rule.setContent {
+            LinkDialog(providers = providers, busy = false, onLink = { type, _, _ -> linked += type }, onDismiss = {}, initial = "mastodon")
+        }
+        rule.onNodeWithText("Mastodon").assertExists()
+        rule.onNodeWithText("Server URL").performTextInput("mastodon.social")
+        rule.onNodeWithText(text(org.mochios.android.R.string.common_continue)).performClick()
+        assertEquals(listOf("mastodon"), linked)
+    }
+
+    @Test
     fun `a name under a handle is offered once the server says it is free`() {
         val added = mutableListOf<String>()
         rule.setContent {

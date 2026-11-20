@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">குறிச்சொல் காலியாக இருக்கக்கூடாது</string>
     <string name="wikis_attachments_search_placeholder">இணைப்புகளைத் தேடு</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ஐ நீக்கவா? இதைச் செயல்தவிர்க்க முடியாது.</string>
-    <string name="wikis_attachments_downloading">பதிவிறக்குகிறது…</string>
     <string name="wikis_attachments_empty_description">இந்தப் பக்கத்தில் கோப்புகளைச் சேர்க்க பதிவேற்று என்பதைத் தட்டவும்.</string>
     <string name="wikis_settings_name_save_cd">பெயரைச் சேமி</string>
     <string name="wikis_settings_name_cancel_cd">திருத்தத்தை ரத்துசெய்</string>

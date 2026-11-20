@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
@@ -50,7 +51,7 @@ fun EntityListRow(
     subtitle: String? = null,
     trailing: (@Composable () -> Unit)? = null,
     onLongClick: (() -> Unit)? = null,
-    avatarUrl: String? = null,
+    avatarUrl: OwnedAddress? = null,
     initials: Boolean = false,
 ) {
     val clickable = if (onLongClick != null) {
@@ -88,7 +89,7 @@ fun EntityListRow(
                 }
             },
             leadingContent = {
-                if (!avatarUrl.isNullOrBlank() || initials) {
+                if (avatarUrl != null || initials) {
                     EntityAvatar(name = name, src = avatarUrl, seed = seed, size = 40.dp)
                 } else {
                     EntityIconCircle(seed = seed, icon = icon)

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ट्याग खाली हुन सक्दैन</string>
     <string name="wikis_attachments_search_placeholder">संलग्नकहरू खोज्नुहोस्</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” मेट्ने? यो फिर्ता गर्न सकिँदैन।</string>
-    <string name="wikis_attachments_downloading">डाउनलोड गर्दै…</string>
     <string name="wikis_attachments_empty_description">यस पृष्ठमा फाइल थप्न अपलोड थिच्नुहोस्।</string>
     <string name="wikis_settings_name_save_cd">नाम सुरक्षित गर्नुहोस्</string>
     <string name="wikis_settings_name_cancel_cd">सम्पादन रद्द गर्नुहोस्</string>

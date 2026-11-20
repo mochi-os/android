@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ټاګ نشي کولی خالي وي</string>
     <string name="wikis_attachments_search_placeholder">ضمیمې ولټوئ</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ړنګ کړئ؟ دا بیرته نه اخیستل کیږي.</string>
-    <string name="wikis_attachments_downloading">ډاونلوډ کیږي…</string>
     <string name="wikis_attachments_empty_description">دې پاڼې ته د فایلونو اضافه کولو لپاره پورته کول ووهئ.</string>
     <string name="wikis_settings_name_save_cd">نوم خوندي کړئ</string>
     <string name="wikis_settings_name_cancel_cd">سمون لغوه کړئ</string>

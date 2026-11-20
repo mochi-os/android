@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">מתחבר…</string>
     <string name="chess_ws_disconnected">לא מקוון</string>
     <string name="chess_ws_reconnecting">מתחבר מחדש…</string>
-    <string name="chess_ws_failed">ההתחברות נכשלה</string>
     <string name="chess_move_capture">%1$s לקח %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">در حال اتصال…</string>
     <string name="chess_ws_disconnected">آفلاین</string>
     <string name="chess_ws_reconnecting">در حال اتصال مجدد…</string>
-    <string name="chess_ws_failed">اتصال ناموفق بود</string>
     <string name="chess_move_capture">%1$s مهره %2$s را گرفت</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

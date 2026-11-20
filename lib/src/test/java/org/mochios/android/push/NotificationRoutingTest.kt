@@ -11,9 +11,10 @@ import org.junit.Test
 import org.mochios.android.launcher.LAUNCHER_ACTIVITIES
 
 /**
- * Both transports resolve a channel through [notificationChannelFor]. These pin
- * the channel set against the launcher activities: a channel with none badges
- * every Mochi icon, and an app with no channel posts on Feeds.
+ * Both transports resolve a push's app through [pushApp], for its channel, icon
+ * and activity. These pin the channel set against the launcher activities: a
+ * channel with none badges every Mochi icon, and an app with no channel posts
+ * on Feeds.
  */
 class NotificationRoutingTest {
 
@@ -46,6 +47,26 @@ class NotificationRoutingTest {
     @Test
     fun `the app slug wins over the link`() {
         assertEquals("chess", notificationChannelFor("chess", "/feeds/abc"))
+    }
+
+    /**
+     * On a server running published apps the payload's `app` is the sending
+     * app's entity id; the link, which starts with the app's path, names it.
+     */
+    @Test
+    fun `a published app's id routes by the link`() {
+        val id = "12254aHfG39LqrizXg8Wv7"
+        assertEquals("chat", pushApp(id, "/chat/c1"))
+        assertEquals("chat", notificationChannelFor(id, "/chat/c1"))
+        assertEquals("market", pushApp(id, "/market?tab=orders"))
+        assertEquals("forums", notificationChannelFor(id, "forums/f1/p1"))
+    }
+
+    @Test
+    fun `an app that names no client app with no app in its link has none`() {
+        assertEquals(null, pushApp("12254aHfG39LqrizXg8Wv7", "/air/game"))
+        assertEquals(null, pushApp(null, null))
+        assertEquals(FALLBACK_NOTIFICATION_CHANNEL, notificationChannelFor("12254aHfG39LqrizXg8Wv7", "/air/game"))
     }
 
     @Test

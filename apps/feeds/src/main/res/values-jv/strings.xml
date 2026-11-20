@@ -358,4 +358,6 @@
     <string name="feeds_source_unfollowed">Ora ditutake</string>
     <string name="feeds_source_follow_again">Tutake maneh</string>
     <string name="feeds_filtered_by_tag">Disaring miturut tag:</string>
+    <string name="feeds_setup">Setel</string>
+    <string name="feeds_search_example">Goleki miturut jeneng, ID, fingerprint, URL, utawa %1$s</string>
 </resources>

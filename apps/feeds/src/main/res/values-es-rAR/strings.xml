@@ -203,4 +203,5 @@
     <string name="feeds_filter_remove">Quitá %1$s</string>
     <string name="feeds_filter_add_failed">No se pudo agregar el filtro</string>
     <string name="feeds_people_you_know">Gente que conocés</string>
+    <string name="feeds_search_example">Buscá por nombre, ID, huella, URL o %1$s</string>
 </resources>

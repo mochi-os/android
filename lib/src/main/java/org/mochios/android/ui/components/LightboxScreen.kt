@@ -70,10 +70,12 @@ import org.mochios.android.i18n.LocalFormat
  * Fullscreen image lightbox: swipe between images, pinch-zoom, swipe down to
  * dismiss. Hosted in a `Dialog`, so it needs no navigation entry. The comments
  * panel's open state is remembered unless [commentsInitiallyOpen] forces it.
+ * Each of [images] is a Coil model: an [org.mochios.android.api.OwnedAddress],
+ * fetched with a credential, or a URL fetched without.
  */
 @Composable
 fun LightboxScreen(
-    images: List<String>,
+    images: List<Any>,
     initialIndex: Int,
     onDismiss: () -> Unit,
     // Per-image captions (same length / order as `images`); an empty or
@@ -254,7 +256,7 @@ private fun rememberCommentsOpen(context: Context, open: Boolean) {
 
 @Composable
 private fun ZoomableImage(
-    url: String,
+    url: Any,
     onDismiss: () -> Unit
 ) {
     var scale by remember { mutableFloatStateOf(1f) }

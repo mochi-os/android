@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">تاگ ناتوانێت بەتاڵ بێت</string>
     <string name="wikis_attachments_search_placeholder">گەڕان لە هاوپێچەکان</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” بسڕدرێتەوە؟ ئەمە ناگەڕێتەوە.</string>
-    <string name="wikis_attachments_downloading">دادەگیرێت…</string>
     <string name="wikis_attachments_empty_description">کرتە لە بارکردن بکە بۆ زیادکردنی فایل بۆ ئەم لاپەڕەیە.</string>
     <string name="wikis_settings_name_save_cd">پاشەکەوتکردنی ناو</string>
     <string name="wikis_settings_name_cancel_cd">هەڵوەشاندنەوەی دەستکاری</string>

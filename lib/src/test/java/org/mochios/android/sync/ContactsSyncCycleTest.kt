@@ -650,7 +650,7 @@ class ContactsSyncCycleTest {
 
         assertTrue(store.rows.getValue(local).dirty)
         assertNull(store.rows.getValue(local).remote)
-        assertEquals(1, outcome.failures.size)
+        assertEquals("a refusal of its kind, with no English of the client's", listOf(SyncRefusal(SyncRefusal.Kind.MISSING)), outcome.failures)
     }
 
     @Test
@@ -664,7 +664,7 @@ class ContactsSyncCycleTest {
 
         val outcome = run(source, store)
 
-        assertEquals(listOf("Not allowed"), outcome.failures)
+        assertEquals(listOf(SyncRefusal(SyncRefusal.Kind.REFUSED, "Not allowed")), outcome.failures)
         assertTrue(store.rows.getValue(local).deleted)
         assertTrue(source.contacts.containsKey("a"))
     }
@@ -715,7 +715,7 @@ class ContactsSyncCycleTest {
 
         val outcome = run(source, store)
 
-        assertEquals(listOf("Contact name is required"), outcome.failures)
+        assertEquals(listOf(SyncRefusal(SyncRefusal.Kind.REFUSED, "Contact name is required")), outcome.failures)
         assertTrue(store.rows.getValue(refused).dirty)
         assertFalse(store.rows.getValue(edited).dirty)
         assertEquals(1, outcome.uploaded)

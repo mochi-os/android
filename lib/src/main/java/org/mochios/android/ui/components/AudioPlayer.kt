@@ -43,29 +43,41 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
 import kotlinx.coroutines.delay
 import org.mochios.android.R
-import org.mochios.android.api.resolved
+import org.mochios.android.api.OwnedAddress
 
 /**
- * Compact inline player for audio attachments. Drives [ExoPlayer] directly
- * rather than Media3's `PlayerView` so the row is plain Compose and themes
- * inside a chat bubble. [url] is one of the app's own server-relative
- * addresses, streamed with the session, or any other URL, streamed without.
+ * Compact inline player for one of the app's own audio attachments, streamed
+ * with a credential. Drives [ExoPlayer] directly rather than Media3's
+ * `PlayerView` so the row is plain Compose and themes inside a chat bubble.
  */
-@OptIn(UnstableApi::class)
+@Composable
+fun AudioPlayer(
+    address: OwnedAddress,
+    modifier: Modifier = Modifier
+) = AudioPlayer(address.address, own = true, modifier)
+
+/** Compact inline player for audio at [url], streamed without a credential. */
 @Composable
 fun AudioPlayer(
     url: String,
     modifier: Modifier = Modifier
+) = AudioPlayer(url, own = false, modifier)
+
+@OptIn(UnstableApi::class)
+@Composable
+private fun AudioPlayer(
+    url: String,
+    own: Boolean,
+    modifier: Modifier,
 ) {
     val context = LocalContext.current
-    val serverUrl = rememberServerUrl()
-    val exoPlayer = remember(url) { assetPlayer(context, url, serverUrl) }
+    val exoPlayer = remember(url, own) { assetPlayer(context, url, own) }
 
     var isPlaying by remember { mutableStateOf(false) }
     var durationMs by remember { mutableLongStateOf(0L) }
     var positionMs by remember { mutableLongStateOf(0L) }
 
-    DisposableEffect(url) {
+    DisposableEffect(url, own) {
         val listener = object : Player.Listener {
             override fun onPlaybackStateChanged(state: Int) {
                 if (state == Player.STATE_READY) {
@@ -82,7 +94,7 @@ fun AudioPlayer(
             }
         }
         exoPlayer.addListener(listener)
-        exoPlayer.setMediaItem(MediaItem.fromUri(resolved(serverUrl, url)))
+        exoPlayer.setMediaItem(MediaItem.fromUri(url))
         exoPlayer.prepare()
 
         onDispose {

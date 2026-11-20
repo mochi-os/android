@@ -10,12 +10,15 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
+import retrofit2.http.Streaming
 import javax.inject.Singleton
 
 // ---------- Shared ----------
@@ -238,6 +241,12 @@ interface AccountApi {
         @Field("token") token: String,
         @Field("passphrase") passphrase: String,
     ): Response<ExportResponse>
+
+    /** The built bundle itself, not a JSON envelope; the server deletes it as
+     *  it serves it. @Streaming keeps it off the heap. */
+    @Streaming
+    @GET("settings/-/user/account/export/download")
+    suspend fun downloadExport(@Query("file") file: String): Response<ResponseBody>
 
     // ---------- Step-up re-authentication ----------
 

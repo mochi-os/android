@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s මිතුරන්ගෙන් පමණක් චැට් පිළිගනී.</string>
     <string name="chat_message_earlier">මෙම ගිණුම Mochi වෙත එක් කිරීමට පෙර පණිවිඩ සංකේතනය කර ඇති අතර ඒවා මෙහි කියවිය නොහැක</string>
     <string name="chat_message_excluded">වෙනත් උපාංග සඳහා පමණක් සංකේතනය කර ඇත</string>
+    <string name="chat_setup">සකසන්න</string>
 </resources>

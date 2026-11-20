@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Etiket boş ola bilməz</string>
     <string name="wikis_attachments_search_placeholder">Qoşmaları axtar</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” silinsin? Bu geri qaytarıla bilməz.</string>
-    <string name="wikis_attachments_downloading">Endirilir…</string>
     <string name="wikis_attachments_empty_description">Bu səhifəyə fayl əlavə etmək üçün Yüklə düyməsinə toxunun.</string>
     <string name="wikis_settings_name_save_cd">Adı saxla</string>
     <string name="wikis_settings_name_cancel_cd">Redaktəni ləğv et</string>

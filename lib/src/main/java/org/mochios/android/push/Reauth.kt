@@ -10,9 +10,11 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import org.mochios.android.launcher.launcherComponentFor
 import java.util.concurrent.ConcurrentHashMap
 
 /**
@@ -28,12 +30,6 @@ object Reauth {
     private const val NOTIFICATION_ID = 0x4D43_0002 // 'MC' 0002 (PushService FG uses 0001)
     private const val CHANNEL_ID = "mochi_reauth_required"
     private const val THRESHOLD = 3
-
-    /**
-     * The extra a sign-in notification's tap carries: the identity of the
-     * account whose session is dead, which the app then signs in.
-     */
-    const val EXTRA_ACCOUNT = "org.mochios.android.extra.REAUTH_ACCOUNT"
 
     private val consecutiveFailures = ConcurrentHashMap<String, Int>()
 
@@ -62,20 +58,31 @@ object Reauth {
                 NotificationManagerCompat.from(context).cancel(identity, NOTIFICATION_ID)
             } catch (_: Exception) {
             }
+            NonceStore(context).retire(identity)
         }
     }
 
     private fun postSignInRequired(context: Context, identity: String) {
         ensureChannel(context)
+        val nm = NotificationManagerCompat.from(context)
+        // Before the nonce: a prompt that is never posted must not hold one.
+        if (!nm.areNotificationsEnabled()) return
 
-        val launchIntent = context.packageManager.getLaunchIntentForPackage(context.packageName)
-            ?.putExtra(EXTRA_ACCOUNT, identity)
+        // The tap is `mochi:reauth?account=<identity>&nonce=<nonce>` to the
+        // home grid's activity, the app's launcher entry. The activity is
+        // exported, so the nonce, kept under the prompt's tag, is what proves
+        // the tap came from this prompt.
+        val nonce = NonceStore(context).issue(identity)
+        // launch-ok: a mochi: URI built here, addressed to this client's own activity
+        val intent = Intent(Intent.ACTION_VIEW, reauthUri(identity, nonce)).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            setPackage(context.packageName)
+            launcherComponentFor(context, "home")?.let { component = it }
+        }
         val pendingFlags = PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         // One per account: a shared request code would leave every account's
         // notification opening the last one's.
-        val tap = launchIntent?.let {
-            PendingIntent.getActivity(context, identity.hashCode(), it, pendingFlags)
-        }
+        val tap = PendingIntent.getActivity(context, identity.hashCode(), intent, pendingFlags)
 
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setContentTitle(context.getString(org.mochios.android.R.string.reauth_signin_title))
@@ -83,14 +90,14 @@ object Reauth {
             .setSmallIcon(org.mochios.android.R.drawable.ic_mochi_notification)
             .setAutoCancel(true)
             .setOnlyAlertOnce(true)
-            .apply { if (tap != null) setContentIntent(tap) }
+            .setContentIntent(tap)
+            // A swipe retires the nonce, as for a push.
+            .setDeleteIntent(dismissIntent(context, nonce))
 
-        val nm = NotificationManagerCompat.from(context)
-        if (nm.areNotificationsEnabled()) {
-            try {
-                nm.notify(identity, NOTIFICATION_ID, builder.build())
-            } catch (_: SecurityException) {
-            }
+        try {
+            nm.notify(identity, NOTIFICATION_ID, builder.build())
+        } catch (_: SecurityException) {
+            NonceStore(context).retire(identity)
         }
     }
 
@@ -107,3 +114,10 @@ object Reauth {
         nm.createNotificationChannel(channel)
     }
 }
+
+/**
+ * `mochi:reauth?account=<identity>&nonce=<nonce>`, the URI a tapped sign-in
+ * prompt opens. Opaque, as [notificationUri] is.
+ */
+internal fun reauthUri(identity: String, nonce: String): Uri =
+    Uri.parse("mochi:reauth?account=" + Uri.encode(identity) + "&nonce=" + Uri.encode(nonce))

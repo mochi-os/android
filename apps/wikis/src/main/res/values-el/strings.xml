@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Η ετικέτα δεν μπορεί να είναι κενή</string>
     <string name="wikis_attachments_search_placeholder">Αναζήτηση συνημμένων</string>
     <string name="wikis_attachments_delete_confirm_message">Διαγραφή «%1$s»; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
-    <string name="wikis_attachments_downloading">Λήψη…</string>
     <string name="wikis_attachments_empty_description">Πατήστε Μεταφόρτωση για να προσθέσετε αρχεία σε αυτή τη σελίδα.</string>
     <string name="wikis_settings_name_save_cd">Αποθήκευση ονόματος</string>
     <string name="wikis_settings_name_cancel_cd">Ακύρωση επεξεργασίας</string>

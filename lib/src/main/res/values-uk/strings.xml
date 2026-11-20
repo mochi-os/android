@@ -320,7 +320,6 @@
     <string name="error_server_https">Адреса сервера має починатися з https://</string>
     <string name="device_name_fallback">Мобільний пристрій</string>
     <string name="account_error_token_type">Непідтримуваний тип токена</string>
-    <string name="account_error_caller">Викликачу не дозволено</string>
     <string name="zone_sea">У морі</string>
     <string name="access_remove">Видалити</string>
     <string name="access_remove_title">Видалити доступ?</string>
@@ -348,4 +347,10 @@
     <string name="person_unknown">Невідомо</string>
     <string name="format_time_seconds_short">%1$s с</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Завантаження %1$s…</string>
+    <string name="downloads_saved">Збережено: %1$s</string>
+    <string name="downloads_failed">Не вдалося зберегти %1$s: %2$s</string>
+    <string name="sync_conflict">Змінено на сервері</string>
+    <string name="sync_missing">Більше немає на сервері</string>
+    <string name="sync_refused">Відхилено сервером</string>
 </resources>

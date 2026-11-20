@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">팔로우하지 않음</string>
     <string name="feeds_source_follow_again">다시 팔로우</string>
     <string name="feeds_filtered_by_tag">태그로 필터링됨:</string>
+    <string name="feeds_setup">설정</string>
+    <string name="feeds_search_example">이름, ID, 지문, URL 또는 %1$s 형식의 주소로 검색</string>
 </resources>

@@ -113,7 +113,7 @@ class HomeLoadTest {
         runBlocking {
             session.clearAll()
             session.setServerUrl(base)
-            session.setBoundAccount("me", base)
+            session.setBoundAccount("me")
             // The store outlives a test; start each with nothing viewed.
             recent.clear()
         }

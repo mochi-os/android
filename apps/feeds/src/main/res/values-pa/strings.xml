@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">ਫਾਲੋ ਨਹੀਂ ਕਰ ਰਹੇ</string>
     <string name="feeds_source_follow_again">ਮੁੜ ਫਾਲੋ ਕਰੋ</string>
     <string name="feeds_filtered_by_tag">ਟੈਗ ਨਾਲ ਫਿਲਟਰ ਕੀਤਾ:</string>
+    <string name="feeds_setup">ਸੈੱਟ ਅੱਪ ਕਰੋ</string>
+    <string name="feeds_search_example">ਨਾਮ, ID, ਫਿੰਗਰਪ੍ਰਿੰਟ, URL, ਜਾਂ %1$s ਨਾਲ ਖੋਜੋ</string>
 </resources>

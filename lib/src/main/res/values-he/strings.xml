@@ -320,7 +320,6 @@
     <string name="error_server_https">כתובת השרת חייבת להתחיל ב-https://</string>
     <string name="device_name_fallback">מכשיר נייד</string>
     <string name="account_error_token_type">סוג אסימון שאינו נתמך</string>
-    <string name="account_error_caller">הקורא אינו מורשה</string>
     <string name="zone_sea">בים</string>
     <string name="access_remove">הסר</string>
     <string name="access_remove_title">להסיר גישה?</string>
@@ -348,4 +347,10 @@
     <string name="person_unknown">לא ידוע</string>
     <string name="format_time_seconds_short">%1$s שנ\'</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">מוריד את %1$s…</string>
+    <string name="downloads_saved">%1$s נשמר</string>
+    <string name="downloads_failed">לא ניתן לשמור את %1$s: %2$s</string>
+    <string name="sync_conflict">שונה בשרת</string>
+    <string name="sync_missing">כבר לא קיים בשרת</string>
+    <string name="sync_refused">נדחה על ידי השרת</string>
 </resources>

@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">დაკავშირება…</string>
     <string name="chess_ws_disconnected">ოფლაინ</string>
     <string name="chess_ws_reconnecting">ხელახლა დაკავშირება…</string>
-    <string name="chess_ws_failed">კავშირი ვერ დამყარდა</string>
     <string name="chess_move_capture">%1$s-მა აიღო %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

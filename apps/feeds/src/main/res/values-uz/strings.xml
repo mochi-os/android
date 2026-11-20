@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Obuna boʻlinmagan</string>
     <string name="feeds_source_follow_again">Qayta obuna boʻlish</string>
     <string name="feeds_filtered_by_tag">Yorliq boʻyicha filtrlangan:</string>
+    <string name="feeds_setup">Sozlash</string>
+    <string name="feeds_search_example">Nomi, IDsi, fingerprinti, URL yoki %1$s manzili boʻyicha qidirish</string>
 </resources>

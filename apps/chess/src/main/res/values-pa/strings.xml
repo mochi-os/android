@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">ਕਨੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…</string>
     <string name="chess_ws_disconnected">ਔਫਲਾਈਨ</string>
     <string name="chess_ws_reconnecting">ਦੁਬਾਰਾ ਕਨੈਕਟ ਹੋ ਰਿਹਾ ਹੈ…</string>
-    <string name="chess_ws_failed">ਕਨੈਕਸ਼ਨ ਅਸਫਲ ਰਿਹਾ</string>
     <string name="chess_move_capture">%1$s ਨੇ %2$s ਲਿਆ</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

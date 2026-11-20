@@ -334,4 +334,6 @@
     </plurals>
     <string name="forums_comment_op">ရေးသူ</string>
     <string name="forums_community_destination">%1$s သို့ %2$s အဖြစ် ပို့စ်တင်မည်</string>
+    <string name="forums_find_search_example">အမည်၊ ID၊ လက်ဗွေ၊ URL၊ သို့မဟုတ် %1$s ဖြင့် ရှာဖွေ</string>
+    <string name="forums_setup">ပြင်ဆင်မည်</string>
 </resources>

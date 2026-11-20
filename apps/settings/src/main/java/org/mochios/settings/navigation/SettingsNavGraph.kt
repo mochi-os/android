@@ -5,6 +5,7 @@
 
 package org.mochios.settings.navigation
 
+import android.net.Uri
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -63,13 +64,17 @@ object SettingsApp {
     const val DOMAINS = "settings/domains"
     const val DOCUMENT = "settings/document/{kind}"
     const val SYSTEM_DOCUMENTS = "settings/system/documents"
-    const val NETWORKS = "settings/networks"
+    const val NETWORKS = "settings/networks?network={network}"
     const val SYSTEM_HANDLES = "settings/system/handles"
     const val SYSTEM_REPORTS = "settings/system/reports"
     const val SYSTEM_BLOCKS = "settings/system/blocks"
     const val SYSTEM_FEDERATION = "settings/system/federation"
 
     fun document(kind: String) = "settings/document/$kind"
+
+    /** Networks, at [network] where another app sent the user to set up an account there. */
+    fun networks(network: String? = null): String =
+        if (network.isNullOrEmpty()) "settings/networks" else "settings/networks?network=${Uri.encode(network)}"
 
     fun categoryEdit(id: String) = "settings/notification-prefs/category/edit/$id"
 }
@@ -109,7 +114,7 @@ fun NavGraphBuilder.settingsNavGraph(
             onOpenDomains = { navController.navigate(SettingsApp.DOMAINS) },
             onOpenDocument = { kind -> navController.navigate(SettingsApp.document(kind)) },
             onOpenSystemDocuments = { navController.navigate(SettingsApp.SYSTEM_DOCUMENTS) },
-            onOpenNetworks = { navController.navigate(SettingsApp.NETWORKS) },
+            onOpenNetworks = { navController.navigate(SettingsApp.networks()) },
             onOpenSystemHandles = { navController.navigate(SettingsApp.SYSTEM_HANDLES) },
             onOpenSystemReports = { navController.navigate(SettingsApp.SYSTEM_REPORTS) },
             onOpenSystemBlocks = { navController.navigate(SettingsApp.SYSTEM_BLOCKS) },
@@ -197,8 +202,20 @@ fun NavGraphBuilder.settingsNavGraph(
     composable(SettingsApp.SYSTEM_DOCUMENTS) {
         SystemDocumentsScreen(onBack = { navController.popBackStack() })
     }
-    composable(SettingsApp.NETWORKS) {
-        NetworksScreen(onBack = { navController.popBackStack() })
+    composable(
+        SettingsApp.NETWORKS,
+        arguments = listOf(
+            navArgument("network") {
+                type = NavType.StringType
+                nullable = true
+                defaultValue = null
+            },
+        ),
+    ) { entry ->
+        NetworksScreen(
+            onBack = { navController.popBackStack() },
+            network = entry.arguments?.getString("network"),
+        )
     }
     composable(SettingsApp.SYSTEM_HANDLES) {
         SystemHandlesScreen(onBack = { navController.popBackStack() })

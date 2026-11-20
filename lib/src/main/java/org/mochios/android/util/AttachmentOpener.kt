@@ -21,6 +21,7 @@ import kotlinx.coroutines.withContext
 import okhttp3.Request
 import okhttp3.ResponseBody
 import org.mochios.android.api.AssetHttpEntryPoint
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.assetHeaders
 import org.mochios.android.api.resolved
 import org.mochios.android.auth.SessionEntryPoint
@@ -41,6 +42,14 @@ object AttachmentOpener {
 
     private const val SHARED_DIR = "shared"
 
+    /**
+     * How long, in ms, a downloaded or staged file is kept after it was last
+     * written or reused: a week. Older ones are deleted as the next is
+     * written, so the directory stays bounded while one account stays
+     * signed in; signing out deletes it whole ([forget]).
+     */
+    private const val AGE = 7L * 24 * 60 * 60 * 1000
+
     /** Outcome of an [open] attempt, so the caller can surface the right message. */
     enum class OpenResult { OPENED, NO_APP, FAILED, UNAVAILABLE }
 
@@ -58,14 +67,14 @@ object AttachmentOpener {
     private class StatusException(val status: Int) : IOException("HTTP " + status)
 
     /**
-     * Fetch [url] through the asset client, cache it, and launch an
-     * `ACTION_VIEW`. One of the app's own server-relative addresses goes with
-     * the session; any other URL without (see `owned`). Safe to call from the main thread; the network and disk
-     * work runs on [Dispatchers.IO].
+     * Fetch [model] through the asset client, cache it, and launch an
+     * `ACTION_VIEW`: one of the app's own addresses, an [OwnedAddress], with
+     * its credential, any other URL without. Safe to call from the main
+     * thread; the network and disk work runs on [Dispatchers.IO].
      */
-    suspend fun open(context: Context, url: String, attachment: Attachment): OpenResult {
+    suspend fun open(context: Context, model: Any, attachment: Attachment): OpenResult {
         val file = try {
-            withContext(Dispatchers.IO) { download(context, url, attachment) }
+            withContext(Dispatchers.IO) { download(context, model, attachment) }
         } catch (e: StatusException) {
             Log.w(TAG, "Failed to download ${attachment.name}: ${e.message}")
             // The server's failure class, as the web gallery reads it: its
@@ -117,6 +126,7 @@ object AttachmentOpener {
      */
     fun cacheBytes(context: Context, fileName: String, body: ResponseBody): File {
         val dir = File(context.cacheDir, CACHE_DIR).apply { mkdirs() }
+        prune(dir, System.currentTimeMillis())
         val target = File(dir, safeName(fileName))
         body.use { source ->
             target.outputStream().use { out -> source.byteStream().copyTo(out) }
@@ -191,6 +201,7 @@ object AttachmentOpener {
         val named = try {
             withContext(Dispatchers.IO) {
                 val dir = File(File(context.cacheDir, CACHE_DIR), SHARED_DIR).apply { mkdirs() }
+                prune(dir, System.currentTimeMillis())
                 unopened.file.copyTo(File(dir, safeName(unopened.name)), overwrite = true)
             }
         } catch (e: IOException) {
@@ -232,20 +243,43 @@ object AttachmentOpener {
     internal fun safeName(fileName: String): String =
         fileName.replace(UNSAFE_FILENAME, "_").takeLast(120).ifBlank { "download" }
 
-    /** Hand [file] to a viewer through the FileProvider. */
-    private fun launch(context: Context, file: File, mime: String): OpenResult {
-        val uri = FileProvider.getUriForFile(
-            context,
-            context.packageName + AUTHORITY_SUFFIX,
-            file,
-        )
-        // launch-ok: content: FileProvider URI, with the type held to the MimeSafety allowlist
-        val view = Intent(Intent.ACTION_VIEW).apply {
-            setDataAndType(uri, mime)
-            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    /**
+     * Delete every file downloaded or staged here, for an account signing out
+     * or another taking its place: [download] hands a held copy to a viewer
+     * without asking the server. Blocking: call it off the main thread.
+     */
+    fun forget(context: Context) {
+        File(context.cacheDir, CACHE_DIR).deleteRecursively()
+    }
+
+    /**
+     * Delete the files in [dir], and in its shared copies, last written more
+     * than [AGE] before [now].
+     */
+    internal fun prune(dir: File, now: Long) {
+        val files = dir.listFiles().orEmpty().toList() + File(dir, SHARED_DIR).listFiles().orEmpty().toList()
+        for (file in files) {
+            if (file.isFile && now - file.lastModified() > AGE) file.delete()
         }
+    }
+
+    /**
+     * Hand [file] to a viewer through the FileProvider: [OpenResult.FAILED]
+     * for a file outside the provider's roots, which it refuses.
+     */
+    internal fun launch(context: Context, file: File, mime: String): OpenResult {
         return try {
+            val uri = FileProvider.getUriForFile(
+                context,
+                context.packageName + AUTHORITY_SUFFIX,
+                file,
+            )
+            // launch-ok: content: FileProvider URI, with the type held to the MimeSafety allowlist
+            val view = Intent(Intent.ACTION_VIEW).apply {
+                setDataAndType(uri, mime)
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            }
             context.startActivity(view)
             OpenResult.OPENED
         } catch (e: ActivityNotFoundException) {
@@ -261,11 +295,15 @@ object AttachmentOpener {
     /** Anything outside this class is replaced before a value reaches a path. */
     private val UNSAFE_FILENAME = Regex("[^A-Za-z0-9._-]")
 
-    private fun download(context: Context, url: String, attachment: Attachment): File {
+    private fun download(context: Context, model: Any, attachment: Attachment): File {
         val dir = File(context.cacheDir, CACHE_DIR).apply { mkdirs() }
+        val now = System.currentTimeMillis()
+        prune(dir, now)
         val target = File(dir, cacheName(attachment))
-        // Reuse an already-downloaded copy when its size matches the server's.
+        // Reuse an already-downloaded copy when its size matches the server's,
+        // and keep it from the next prune.
         if (target.exists() && attachment.size > 0 && target.length() == attachment.size) {
+            target.setLastModified(now)
             return target
         }
         val client = EntryPointAccessors
@@ -274,9 +312,10 @@ object AttachmentOpener {
         val server = EntryPointAccessors
             .fromApplication(context.applicationContext, SessionEntryPoint::class.java)
             .sessionManager()
-            .getServerUrlBlocking()
-        val request = Request.Builder().url(resolved(server, url))
-        for ((name, value) in assetHeaders(url)) request.header(name, value)
+            .server.value
+        val own = model as? OwnedAddress
+        val request = Request.Builder().url(resolved(server, own?.address ?: model.toString()))
+        for ((name, value) in assetHeaders(own)) request.header(name, value)
         client.newCall(request.build()).execute().use { response ->
             if (!response.isSuccessful) {
                 throw StatusException(response.code)

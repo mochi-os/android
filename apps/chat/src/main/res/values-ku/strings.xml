@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s tenê chatên ji hevalan qebûl dike.</string>
     <string name="chat_message_earlier">Peyamên berî ku ev hesab li Mochi were zêdekirin şîfrekirî ne û li vir nayên xwendin</string>
     <string name="chat_message_excluded">Tenê ji bo cîhazên din şîfrekirî ye</string>
+    <string name="chat_setup">Saz bike</string>
 </resources>

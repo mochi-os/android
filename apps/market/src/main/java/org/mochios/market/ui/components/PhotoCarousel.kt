@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -50,8 +51,8 @@ import org.mochios.android.ui.components.MochiImage
  */
 @Composable
 fun PhotoCarousel(
-    photoUrls: List<String>,
-    thumbnailUrls: List<String>,
+    photoUrls: List<OwnedAddress>,
+    thumbnailUrls: List<OwnedAddress>,
     modifier: Modifier = Modifier,
     onPhotoTap: (Int) -> Unit = {},
 ) {

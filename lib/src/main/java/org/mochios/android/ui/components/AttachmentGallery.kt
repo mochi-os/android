@@ -53,6 +53,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Attachment
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.util.AttachmentOpener
 
 /** Fixed thumbnail height for [AttachmentGallery]'s compact (comment) layout. */
@@ -62,14 +63,17 @@ private val COMPACT_IMAGE_HEIGHT = 120.dp
 @Composable
 fun AttachmentGallery(
     attachments: List<Attachment>,
-    urlBuilder: (Attachment) -> String,
-    thumbnailUrlBuilder: ((Attachment) -> String)? = null,
+    // Each builder answers a Coil model: one of the app's own addresses, an
+    // OwnedAddress, fetched with a credential, or another host's URL, such as
+    // a feed source's enclosure, fetched without (see attachmentModel).
+    urlBuilder: (Attachment) -> Any?,
+    thumbnailUrlBuilder: ((Attachment) -> Any?)? = null,
     // Larger image variant for the full-width grid; the compact (comment)
     // layout always stays on thumbnails. Falls back to thumbnailUrlBuilder.
-    previewUrlBuilder: ((Attachment) -> String)? = null,
+    previewUrlBuilder: ((Attachment) -> Any?)? = null,
     // The 640px medium, for grid cells drawn small enough for it; null where
     // there is none. A cell falls back to the preview if the medium fails.
-    mediumUrlBuilder: ((Attachment) -> String?)? = null,
+    mediumUrlBuilder: ((Attachment) -> Any?)? = null,
     compact: Boolean = false,
     onDelete: ((Attachment) -> Unit)? = null,
     modifier: Modifier = Modifier,
@@ -78,9 +82,9 @@ fun AttachmentGallery(
     commentCount: ((Attachment) -> Int)? = null,
     comments: (@Composable (Attachment) -> Unit)? = null,
 ) {
-    // An attachment with no address is not shown: resolved, an empty one
-    // named the server's root.
-    val addressed = attachments.filter { urlBuilder(it).isNotEmpty() }
+    // An attachment with no address, null or empty, is not shown: resolved,
+    // an empty one named the server's root.
+    val addressed = attachments.filter { attachment -> urlBuilder(attachment).let { model -> model != null && model != "" } }
     if (addressed.isEmpty()) return
 
     val images = addressed.filter { it.isImage }
@@ -90,7 +94,7 @@ fun AttachmentGallery(
 
     var showViewer by rememberSaveable { mutableStateOf(false) }
     var viewerIndex by rememberSaveable { mutableIntStateOf(0) }
-    var showVideoUrl by remember { mutableStateOf<String?>(null) }
+    var showVideoUrl by remember { mutableStateOf<Any?>(null) }
     var downloadingId by remember { mutableStateOf<String?>(null) }
     var unopened by remember { mutableStateOf<AttachmentOpener.UnopenedFile?>(null) }
 
@@ -98,12 +102,13 @@ fun AttachmentGallery(
     val resources = LocalResources.current
     val scope = rememberCoroutineScope()
 
-    // The caller's addresses go to every consumer as given: each resolves a
-    // server-relative one against the server and sends it as the app's own,
-    // with the session, and an absolute one without (see `owned`).
-    val resolvedUrl: (Attachment) -> String = urlBuilder
-    val resolvedThumb: ((Attachment) -> String)? = thumbnailUrlBuilder
-    val resolvedPreview: ((Attachment) -> String)? = previewUrlBuilder ?: thumbnailUrlBuilder
+    // Each consumer is handed the caller's model as it is: the type decides
+    // whether it goes with a credential. Every attachment shown has one.
+    val resolvedUrl: (Attachment) -> Any = { attachment -> checkNotNull(urlBuilder(attachment)) }
+    val resolvedThumb: (Attachment) -> Any = { attachment -> thumbnailUrlBuilder?.invoke(attachment) ?: resolvedUrl(attachment) }
+    val resolvedPreview: (Attachment) -> Any = { attachment ->
+        (previewUrlBuilder ?: thumbnailUrlBuilder)?.invoke(attachment) ?: resolvedUrl(attachment)
+    }
 
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
         if (images.isNotEmpty()) {
@@ -118,7 +123,7 @@ fun AttachmentGallery(
                     images.forEachIndexed { index, image ->
                         Box {
                             AttachmentImage(
-                                model = resolvedThumb?.let { tb -> tb(image) } ?: resolvedUrl(image),
+                                model = resolvedThumb(image),
                                 contentDescription = image.caption.ifEmpty { image.name },
                                 // Fixed height; width follows the image's aspect ratio.
                                 contentScale = ContentScale.FillHeight,
@@ -142,7 +147,7 @@ fun AttachmentGallery(
             } else {
                 MediaGrid(
                     urls = images.map { resolvedUrl(it) },
-                    thumbnailUrls = resolvedPreview?.let { pb -> images.map { pb(it) } },
+                    thumbnailUrls = images.map { resolvedPreview(it) },
                     mediumUrls = mediumUrlBuilder?.let { mb -> images.map { mb(it) } },
                     contentDescriptions = images.map { it.caption.ifEmpty { it.name } },
                     captions = images.map { it.caption },
@@ -256,10 +261,11 @@ fun AttachmentGallery(
                     .aspectRatio(16f / 9f)
                     .background(Color.Black)
             ) {
-                VideoPlayer(
-                    url = videoUrl,
-                    modifier = Modifier.fillMaxSize()
-                )
+                if (videoUrl is OwnedAddress) {
+                    VideoPlayer(address = videoUrl, modifier = Modifier.fillMaxSize())
+                } else {
+                    VideoPlayer(url = videoUrl.toString(), modifier = Modifier.fillMaxSize())
+                }
             }
         }
     }
@@ -268,7 +274,7 @@ fun AttachmentGallery(
 @Composable
 private fun VideoThumbnail(
     video: Attachment,
-    frameUrl: String,
+    frameUrl: Any,
     onClick: () -> Unit,
     onDelete: (() -> Unit)? = null
 ) {
@@ -284,7 +290,7 @@ private fun VideoThumbnail(
         // VideoFrame routes to VideoFrameFetcher, which range-extracts the
         // opening frame and caches it in Coil's memory cache.
         AsyncImage(
-            model = VideoFrame(frameUrl),
+            model = videoFrame(frameUrl),
             contentDescription = video.name,
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize()
@@ -307,7 +313,7 @@ private fun VideoThumbnail(
 @Composable
 private fun AudioAttachment(
     audio: Attachment,
-    url: String,
+    url: Any,
     onDelete: (() -> Unit)? = null
 ) {
     val format = LocalFormat.current
@@ -324,10 +330,11 @@ private fun AudioAttachment(
                 DeleteIcon(onClick = onDelete)
             }
         }
-        AudioPlayer(
-            url = url,
-            modifier = Modifier.fillMaxWidth()
-        )
+        if (url is OwnedAddress) {
+            AudioPlayer(address = url, modifier = Modifier.fillMaxWidth())
+        } else {
+            AudioPlayer(url = url.toString(), modifier = Modifier.fillMaxWidth())
+        }
     }
 }
 
@@ -407,20 +414,26 @@ private fun DeleteIcon(onClick: () -> Unit) {
 @Composable
 fun AttachmentLightbox(
     images: List<Attachment>,
-    urlBuilder: (Attachment) -> String,
+    urlBuilder: (Attachment) -> Any?,
     initialIndex: Int,
     onDismiss: () -> Unit,
     commentCount: ((Attachment) -> Int)? = null,
     comments: (@Composable (Attachment) -> Unit)? = null,
     commentsInitiallyOpen: Boolean = false,
 ) {
+    // An image without an address has nothing to show.
+    val shown = images.mapNotNull { image -> urlBuilder(image)?.let { address -> image to address } }
     LightboxScreen(
-        images = images.map { urlBuilder(it) },
-        initialIndex = initialIndex.coerceIn(0, (images.size - 1).coerceAtLeast(0)),
+        images = shown.map { (_, address) -> address },
+        initialIndex = initialIndex.coerceIn(0, (shown.size - 1).coerceAtLeast(0)),
         onDismiss = onDismiss,
-        captions = images.map { it.caption },
-        commentCount = commentCount?.let { count -> { index -> images.getOrNull(index)?.let(count) ?: 0 } },
-        comments = comments?.let { slot -> { index -> images.getOrNull(index)?.let { slot(it) } } },
+        captions = shown.map { (image, _) -> image.caption },
+        commentCount = commentCount?.let { count -> { index -> shown.getOrNull(index)?.first?.let(count) ?: 0 } },
+        comments = comments?.let { slot -> { index -> shown.getOrNull(index)?.first?.let { slot(it) } } },
         commentsInitiallyOpen = commentsInitiallyOpen,
     )
 }
+
+/** The frame [model] decodes from: one of the app's own clips with a credential, any other without. */
+fun videoFrame(model: Any): VideoFrame =
+    if (model is OwnedAddress) VideoFrame.of(model) else VideoFrame(model.toString())

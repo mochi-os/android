@@ -10,6 +10,7 @@ import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.model.Attachment
 
 class LinksTest {
@@ -97,9 +98,9 @@ class LinksTest {
     @Test
     fun `an attachment's address is its entity's route, with the variant after it`() {
         val id = "019a2b3c4d5e6f708192a3b4c5d6e7f8"
-        assertEquals("/feeds/f1/-/attachments/$id", attachmentAddress("feeds", "f1", id))
-        assertEquals("/forums/f1/-/attachments/$id/thumbnail", attachmentAddress("forums", "f1", id, "thumbnail"))
-        assertEquals("/chat/c1/-/attachments/$id/preview", attachmentAddress("chat", "c1", id, "preview"))
+        assertEquals("/feeds/f1/-/attachments/$id", attachmentAddress("feeds", "f1", id)?.address)
+        assertEquals("/forums/f1/-/attachments/$id/thumbnail", attachmentAddress("forums", "f1", id, "thumbnail")?.address)
+        assertEquals("/chat/c1/-/attachments/$id/preview", attachmentAddress("chat", "c1", id, "preview")?.address)
     }
 
     // Attachment ids and entity ids reach the phone from other servers, in a
@@ -112,8 +113,8 @@ class LinksTest {
         assertNull(attachmentAddress("feeds", "f1", ".."))
         assertNull(attachmentAddress("feeds", "f1", "."))
         assertNull(attachmentAddress("feeds", "f1", ""))
-        assertEquals("/feeds/f1/-/attachments/a1%3Fx%3D1/thumbnail", attachmentAddress("feeds", "f1", "a1?x=1", "thumbnail"))
-        assertEquals("/feeds/f1/-/attachments/a1%23y", attachmentAddress("feeds", "f1", "a1#y"))
+        assertEquals("/feeds/f1/-/attachments/a1%3Fx%3D1/thumbnail", attachmentAddress("feeds", "f1", "a1?x=1", "thumbnail")?.address)
+        assertEquals("/feeds/f1/-/attachments/a1%23y", attachmentAddress("feeds", "f1", "a1#y")?.address)
     }
 
     @Test
@@ -121,7 +122,7 @@ class LinksTest {
         assertNull(attachmentAddress("feeds", "../people", "a1"))
         assertNull(attachmentAddress("feeds", "..", "a1"))
         assertNull(attachmentAddress("feeds", "", "a1"))
-        assertEquals("/feeds/f%3Fx/-/attachments/a1", attachmentAddress("feeds", "f?x", "a1"))
+        assertEquals("/feeds/f%3Fx/-/attachments/a1", attachmentAddress("feeds", "f?x", "a1")?.address)
     }
 
     @Test
@@ -132,5 +133,18 @@ class LinksTest {
         val given = Attachment(id = "../x", url = "/feeds/f1/-/attachments/a9")
         assertEquals(listOf(plain, given), addressed(listOf(plain, pathed, dotted, given), "feeds", "f1"))
         assertEquals(listOf(given), addressed(listOf(plain, pathed, given), "feeds", "../f1"))
+    }
+
+    // An attachment's address from the server is promoted to the app's own
+    // only when it is one; another host's goes as a String, without a
+    // credential, and anything else gives way to the address the app builds.
+    @Test
+    fun `an attachment's model is its own address, another host's URL or the built one`() {
+        val built = OwnedAddress.of("/feeds/f1/-/attachments/a1")
+        assertEquals(OwnedAddress.of("/feeds/f1/-/attachments/a2"), attachmentModel("/feeds/f1/-/attachments/a2", built))
+        assertEquals("https://source.example/a.jpg", attachmentModel("https://source.example/a.jpg", built))
+        assertEquals(built, attachmentModel("file:///data/data/x", built))
+        assertEquals(built, attachmentModel("/feeds/../settings/-/x", built))
+        assertEquals(built, attachmentModel(null, built))
     }
 }

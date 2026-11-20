@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Дагаагүй байна</string>
     <string name="feeds_source_follow_again">Дахин дагах</string>
     <string name="feeds_filtered_by_tag">Шошгоор шүүсэн:</string>
+    <string name="feeds_setup">Тохируулах</string>
+    <string name="feeds_search_example">Нэр, ID, хурууны хээ, URL, эсвэл %1$s хаягаар хайх</string>
 </resources>

@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">May-akda</string>
     <string name="forums_community_destination">Ipo-post sa %1$s bilang %2$s</string>
+    <string name="forums_find_search_example">Maghanap ayon sa pangalan, ID, fingerprint, URL, o %1$s</string>
+    <string name="forums_setup">I-set up</string>
 </resources>

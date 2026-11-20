@@ -318,7 +318,6 @@
     <string name="error_server_https">സെർവർ വിലാസം https:// എന്നതിൽ ആരംഭിക്കണം</string>
     <string name="device_name_fallback">മൊബൈൽ ഉപകരണം</string>
     <string name="account_error_token_type">പിന്തുണയ്ക്കാത്ത ടോക്കൺ തരം</string>
-    <string name="account_error_caller">വിളിക്കുന്നയാൾക്ക് അനുമതിയില്ല</string>
     <string name="zone_sea">കടലിൽ</string>
     <string name="access_remove">നീക്കം ചെയ്യുക</string>
     <string name="access_remove_title">ആക്സസ് നീക്കം ചെയ്യണോ?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">അജ്ഞാതം</string>
     <string name="format_time_seconds_short">%1$sസെ</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">%1$s ഡൗൺലോഡ് ചെയ്യുന്നു…</string>
+    <string name="downloads_saved">%1$s സംരക്ഷിച്ചു</string>
+    <string name="downloads_failed">%1$s സംരക്ഷിക്കാനായില്ല: %2$s</string>
+    <string name="sync_conflict">സെർവറിൽ മാറ്റം വരുത്തി</string>
+    <string name="sync_missing">ഇനി സെർവറിൽ ഇല്ല</string>
+    <string name="sync_refused">സെർവർ നിരസിച്ചു</string>
 </resources>

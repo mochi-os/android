@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Пайвастшавӣ…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Аз нав пайваст мешавад…</string>
-    <string name="chess_ws_failed">Пайвастшавӣ ноком шуд</string>
     <string name="chess_move_capture">%1$s %2$s гирифт</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

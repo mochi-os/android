@@ -334,4 +334,6 @@
     </plurals>
     <string name="forums_comment_op">ເຈົ້າຂອງກະທູ້</string>
     <string name="forums_community_destination">ໂພສໄປທີ່ %1$s ໃນນາມ %2$s</string>
+    <string name="forums_find_search_example">ຄົ້ນຫາຕາມຊື່, ID, ລາຍນິ້ວມື, URL, ຫຼື %1$s</string>
+    <string name="forums_setup">ຕັ້ງຄ່າ</string>
 </resources>

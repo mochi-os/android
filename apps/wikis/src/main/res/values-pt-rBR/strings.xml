@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">A etiqueta não pode estar vazia</string>
     <string name="wikis_attachments_search_placeholder">Procurar anexos</string>
     <string name="wikis_attachments_delete_confirm_message">Excluir «%1$s»? Esta ação não pode ser desfeita.</string>
-    <string name="wikis_attachments_downloading">Baixando…</string>
     <string name="wikis_attachments_empty_description">Toque em Enviar para adicionar arquivos a esta página.</string>
     <string name="wikis_settings_name_save_cd">Salvar nome</string>
     <string name="wikis_settings_name_cancel_cd">Cancelar edição</string>

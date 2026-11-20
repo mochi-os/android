@@ -318,7 +318,6 @@
     <string name="error_server_https">ناونیشانی ڕاژە دەبێت بە https:// دەست پێبکات</string>
     <string name="device_name_fallback">ئامێری مۆبایل</string>
     <string name="account_error_token_type">جۆری تۆکنی پشتگیرینەکراو</string>
-    <string name="account_error_caller">بانگکەر ڕێگەپێدراو نییە</string>
     <string name="zone_sea">لە دەریادا</string>
     <string name="access_remove">لابردن</string>
     <string name="access_remove_title">دەستڕاگەیشتن لاببەیت؟</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">نەناسراو</string>
     <string name="format_time_seconds_short">%1$sچ</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">داگرتنی %1$s…</string>
+    <string name="downloads_saved">%1$s پاشەکەوت کرا</string>
+    <string name="downloads_failed">نەتوانرا %1$s پاشەکەوت بکرێت: %2$s</string>
+    <string name="sync_conflict">لەسەر ڕاژەکار گۆڕدرا</string>
+    <string name="sync_missing">چیتر لەسەر ڕاژەکار نییە</string>
+    <string name="sync_refused">لەلایەن ڕاژەکارەوە ڕەتکرایەوە</string>
 </resources>

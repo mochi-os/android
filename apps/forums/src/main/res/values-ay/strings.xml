@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Qillqiri</string>
     <string name="forums_community_destination">%1$s ukar %2$s sutimpi uñt\'ayatawa</string>
+    <string name="forums_find_search_example">Suti, ID, fingerprint, URL, jan ukax %1$s ukamp thaqhama</string>
+    <string name="forums_setup">Wakichaña</string>
 </resources>

@@ -102,6 +102,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.userMessage
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
@@ -1030,7 +1031,7 @@ internal fun MessageBubble(
     onEdit: () -> Unit,
     // The sender's avatar as the list addresses it (messageAvatars); null for
     // the message's own.
-    avatar: String? = null,
+    avatar: OwnedAddress? = null,
 ) {
     val format = LocalFormat.current
     var menuExpanded by remember { mutableStateOf(false) }
@@ -1154,16 +1155,16 @@ internal fun MessageBubble(
                                 // not serve the asset here. Always build the chat
                                 // asset route instead: `/chat/<chatId>/-/attachments/<id>`.
                                 urlBuilder = { att ->
-                                    attachmentAddress("chat", chatId, att.id).orEmpty()
+                                    attachmentAddress("chat", chatId, att.id)
                                 },
                                 thumbnailUrlBuilder = { att ->
-                                    attachmentAddress("chat", chatId, att.id, "thumbnail").orEmpty()
+                                    attachmentAddress("chat", chatId, att.id, "thumbnail")
                                 },
                                 previewUrlBuilder = { att ->
                                     // previewUrl's presence signals the server
                                     // generates previews; the path itself is
                                     // rebuilt on the chat asset route (see above).
-                                    attachmentAddress("chat", chatId, att.id, if (att.previewUrl != null) "preview" else "thumbnail").orEmpty()
+                                    attachmentAddress("chat", chatId, att.id, if (att.previewUrl != null) "preview" else "thumbnail")
                                 }
                             )
                         }
@@ -1694,10 +1695,10 @@ internal fun pinnable(chat: ChatDetail): Boolean = chat.status == ChatStatus.ACT
  * Where a sender's avatar is served: under one of their messages in the chat.
  * Null when an id cannot be one segment of the address ([segment]).
  */
-internal fun messageAvatar(chatId: String, messageId: String): String? {
+internal fun messageAvatar(chatId: String, messageId: String): OwnedAddress? {
     val chat = segment(chatId) ?: return null
     val message = segment(messageId) ?: return null
-    return "/chat/$chat/-/$message/asset/avatar"
+    return OwnedAddress.of("/chat/$chat/-/$message/asset/avatar")
 }
 
 /**
@@ -1715,5 +1716,5 @@ internal fun messageAvatar(chatId: String, messageId: String): String? {
 internal fun messageAttachments(chatId: String, attachments: List<Attachment>): List<Attachment> =
     attachments.filter { attachmentAddress("chat", chatId, it.id) != null }
 
-internal fun messageAvatars(messages: List<ChatMessage>, chatId: String): Map<String, String> =
+internal fun messageAvatars(messages: List<ChatMessage>, chatId: String): Map<String, OwnedAddress> =
     addressByAuthor(messages, { it.member }, { messageAvatar(chatId, it.id) })

@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.border
@@ -50,7 +51,7 @@ fun GameTopBarTitle(
     title: String,
     opponentFingerprint: String? = null,
     opponentName: String? = null,
-    avatarUrl: String? = null,
+    avatarUrl: OwnedAddress? = null,
     modifier: Modifier = Modifier,
 ) {
     Row(

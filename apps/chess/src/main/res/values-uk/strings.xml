@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Підключення…</string>
     <string name="chess_ws_disconnected">Офлайн</string>
     <string name="chess_ws_reconnecting">Перепідключення…</string>
-    <string name="chess_ws_failed">Не вдалося підключитися</string>
     <string name="chess_move_capture">%1$s взяв %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

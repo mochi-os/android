@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -29,12 +30,12 @@ fun tileTakesMedium(width: Int, height: Int): Boolean =
  * same route with `medium` for `preview`. Null with no preview address, from
  * a server whose app predates the variants.
  */
-fun mediumAddress(preview: String?): String? {
-    if (preview == null) return null
-    val query = preview.indexOf('?').let { if (it < 0) preview.length else it }
-    val path = preview.substring(0, query)
+fun mediumAddress(preview: OwnedAddress?): OwnedAddress? {
+    val address = preview?.address ?: return null
+    val query = address.indexOf('?').let { if (it < 0) address.length else it }
+    val path = address.substring(0, query)
     if (!path.endsWith("/preview")) return null
-    return path.removeSuffix("/preview") + "/medium" + preview.substring(query)
+    return OwnedAddress.of(path.removeSuffix("/preview") + "/medium" + address.substring(query))
 }
 
 /**
@@ -42,14 +43,15 @@ fun mediumAddress(preview: String?): String? {
  * when the tile fits within it, [preview] otherwise or with no medium. The
  * size is known before the first request, so the tile fetches once. [content]
  * gets the address and, for a medium, the preview to fall back to: a server
- * whose app has no medium route yet refuses it.
+ * whose app has no medium route yet refuses it. Each is a Coil model: an
+ * [OwnedAddress], fetched with a credential, or a URL fetched without.
  */
 @Composable
 fun TileVariant(
-    medium: String?,
-    preview: String,
+    medium: Any?,
+    preview: Any,
     modifier: Modifier = Modifier,
-    content: @Composable (model: String, fallback: String?) -> Unit,
+    content: @Composable (model: Any, fallback: Any?) -> Unit,
 ) {
     BoxWithConstraints(modifier) {
         if (medium != null && tileTakesMedium(constraints.maxWidth, constraints.maxHeight)) {

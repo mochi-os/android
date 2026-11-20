@@ -25,6 +25,7 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.api.AssetHttpModule
 import org.mochios.android.api.OWNED
 import org.mochios.android.api.assetHeaders
@@ -55,7 +56,7 @@ class AssetMediaSourceTest {
 
     private fun origin() = server.url("/").toString().trimEnd('/')
 
-    private fun client() = AssetHttpModule.assetClient(server = ::origin, token = { app -> "token-$app" }, jar = jar)
+    private fun client() = AssetHttpModule.assetClient(server = ::origin, token = { app -> "token-$app" }, asset = { null }, jar = jar)
 
     @Before
     fun start() {
@@ -88,7 +89,7 @@ class AssetMediaSourceTest {
     @Test
     fun `an own clip is read in ranges with the session and its app's token`() {
         val address = "/feeds/1abc/-/attachments/9"
-        val source = AssetMediaSource(client(), origin() + address, assetHeaders(address))
+        val source = AssetMediaSource(client(), origin() + address, assetHeaders(OwnedAddress.of(address)))
         assertEquals(clip.size.toLong(), source.size)
         val across = read(source, 262_100, 200)!!
         assertArrayEquals("a read stops at its block's end", clip.copyOfRange(262_100, 262_144), across)
@@ -103,14 +104,14 @@ class AssetMediaSourceTest {
     fun `a server that ignores the range is read up to the block wanted`() {
         ranges = false
         val address = "/feeds/1abc/-/attachments/9"
-        val source = AssetMediaSource(client(), origin() + address, assetHeaders(address))
+        val source = AssetMediaSource(client(), origin() + address, assetHeaders(OwnedAddress.of(address)))
         assertArrayEquals(clip.copyOfRange(300_000, 300_100), read(source, 300_000, 100))
         assertEquals(clip.size.toLong(), source.size)
     }
 
     @Test
     fun `an absolute clip on the user's server is read without either`() {
-        val source = AssetMediaSource(client(), origin() + "/settings/-/x", assetHeaders(origin() + "/settings/-/x"))
+        val source = AssetMediaSource(client(), origin() + "/settings/-/x", assetHeaders(OwnedAddress.of(origin() + "/settings/-/x")))
         read(source, 0, 10)
         assertNull("THE POINT: no token", seen.single().getHeader("Authorization"))
         assertNull("THE POINT: and no session", seen.single().getHeader("Cookie"))
@@ -126,12 +127,17 @@ class AssetMediaSourceTest {
     @androidx.annotation.OptIn(UnstableApi::class)
     @Test
     fun `a player marks the request for its own address and no other`() {
-        val own = "https://mochi.example/feeds/1abc/-/attachments/9"
-        assertEquals("1", marked(DataSpec(Uri.parse(own)), own).httpRequestHeaders[OWNED])
+        val own = "/feeds/1abc/-/attachments/9"
+        val server = "https://mochi.example"
+        assertEquals("1", marked(DataSpec(Uri.parse(own)), own, server).httpRequestHeaders[OWNED])
         assertNull(
             "THE POINT: an address the media file named goes unmarked",
-            marked(DataSpec(Uri.parse("https://mochi.example/settings/-/x")), own).httpRequestHeaders[OWNED],
+            marked(DataSpec(Uri.parse("/settings/-/x")), own, server).httpRequestHeaders[OWNED],
         )
-        assertNull("a player for another URL marks nothing", marked(DataSpec(Uri.parse(own)), null).httpRequestHeaders[OWNED])
+        assertNull(
+            "nor an absolute one naming the same file",
+            marked(DataSpec(Uri.parse("$server$own")), own, server).httpRequestHeaders[OWNED],
+        )
+        assertNull("a player for another URL marks nothing", marked(DataSpec(Uri.parse(own)), null, server).httpRequestHeaders[OWNED])
     }
 }

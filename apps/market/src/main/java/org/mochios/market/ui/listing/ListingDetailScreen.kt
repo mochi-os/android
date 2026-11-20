@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.listing
 
+import org.mochios.android.api.OwnedAddress
 import androidx.annotation.StringRes
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.compose.foundation.BorderStroke
@@ -1290,7 +1291,7 @@ private fun parseTags(json: String): List<String> {
 // against the session server inside the Coil pipeline, as ListingCard does.
 // With no variant each is the original upload; a variant ("thumbnail") names
 // the same photos at that size, in the same order.
-internal fun buildPhotoUrls(photos: List<Photo>, listing: Listing?, variant: String? = null): List<String> {
+internal fun buildPhotoUrls(photos: List<Photo>, listing: Listing?, variant: String? = null): List<OwnedAddress> {
     val urls = photos.mapNotNull { photo ->
         photo.id.takeIf { it.isNotBlank() }?.let { photoAddress(it, variant) }
     }
@@ -1300,7 +1301,7 @@ internal fun buildPhotoUrls(photos: List<Photo>, listing: Listing?, variant: Str
 }
 
 /** The carousel's addresses: its pages and the tiles of its strip. */
-internal data class CarouselUrls(val pages: List<String>, val tiles: List<String>)
+internal data class CarouselUrls(val pages: List<OwnedAddress>, val tiles: List<OwnedAddress>)
 
 // The pager is a square no wider than the screen, so it draws the 1280 px
 // preview (a camera photo's original is twenty times its size) and the strip

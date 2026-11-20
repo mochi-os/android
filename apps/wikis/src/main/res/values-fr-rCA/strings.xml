@@ -215,7 +215,6 @@
     <string name="wikis_attachments_delete_confirm_message">Supprimer \"%1$s\"? Cette action est irréversible.</string>
     <string name="wikis_attachments_delete_success">Pièce jointe supprimée</string>
     <string name="wikis_attachments_delete_failed">Échec de la suppression de la pièce jointe</string>
-    <string name="wikis_attachments_downloading">Téléchargement…</string>
     <string name="wikis_attachments_empty_title">Aucune pièce jointe pour le moment</string>
     <string name="wikis_attachments_empty_description">Touchez Téléverser pour ajouter des fichiers à cette page.</string>
     <string name="wikis_attachments_no_results_title">Aucune pièce jointe ne correspond à votre recherche</string>

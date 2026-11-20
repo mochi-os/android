@@ -342,4 +342,6 @@
     </plurals>
     <string name="forums_comment_op">Údar</string>
     <string name="forums_community_destination">Postáiltear chuig %1$s mar %2$s</string>
+    <string name="forums_find_search_example">Cuardaigh de réir ainm, aitheantas, méarlorg, URL, nó %1$s</string>
+    <string name="forums_setup">Socraigh</string>
 </resources>

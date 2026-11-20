@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Se conectează…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Se reconectează…</string>
-    <string name="chess_ws_failed">Conexiunea a eșuat</string>
     <string name="chess_move_capture">%1$s a luat %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

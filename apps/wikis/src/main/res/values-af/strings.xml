@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Etiket kan nie leeg wees nie</string>
     <string name="wikis_attachments_search_placeholder">Soek aanhangsels</string>
     <string name="wikis_attachments_delete_confirm_message">Skrap “%1$s”? Dit kan nie ongedaan gemaak word nie.</string>
-    <string name="wikis_attachments_downloading">Laai tans af…</string>
     <string name="wikis_attachments_empty_description">Tik Laai op om lêers by hierdie bladsy te voeg.</string>
     <string name="wikis_settings_name_save_cd">Stoor naam</string>
     <string name="wikis_settings_name_cancel_cd">Kanselleer redigering</string>

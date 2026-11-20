@@ -15,10 +15,14 @@ import org.mochios.android.account.MochiAccount
 import java.security.SecureRandom
 
 /**
- * Distributor side of the UnifiedPush v3 protocol, wired only by builds that
- * host it (the Mochi shell). Apps send REGISTER / UNREGISTER / MESSAGE_ACK; the
- * distributor broadcasts NEW_ENDPOINT, REGISTRATION_FAILED, UNREGISTERED and
- * MESSAGE to the app.
+ * Distributor side of the UnifiedPush v3 protocol, declared by the shell's
+ * manifest. The connector sends REGISTER / UNREGISTER / MESSAGE_ACK; the
+ * distributor answers NEW_ENDPOINT, REGISTRATION_FAILED and UNREGISTERED, and
+ * [PushService] delivers each message in process.
+ *
+ * The manifest guards the receiver with a signature permission, so the system
+ * refuses a broadcast from any app not signed with Mochi's certificate before
+ * it gets here; the PendingIntent's creator is checked as well.
  */
 class MochiDistributorReceiver : BroadcastReceiver() {
 
@@ -28,7 +32,7 @@ class MochiDistributorReceiver : BroadcastReceiver() {
             Log.w(TAG, "Rejecting over-long token (${token.length} characters)")
             return
         }
-        // Identify the caller only from the PendingIntent, whose creator the
+        // Identify the caller from the PendingIntent, whose creator the
         // system records and a sender cannot forge. The protocol's
         // "application" extra is a plain string the caller chooses, so it
         // attests nothing and is deliberately not consulted.
@@ -95,12 +99,11 @@ class MochiDistributorReceiver : BroadcastReceiver() {
                 appPackage = appPackage,
                 subId = subId,
                 server = account.server,
-                auth = "",  // TODO populate when server-side registration is wired
-                p256dh = "",
             )
         )
 
-        Log.i(TAG, "REGISTER from $appPackage on ${account.server}")
+        // Which server the user is on stays out of a release log.
+        Log.i(TAG, "REGISTER from $appPackage")
         sendBroadcast(
             context, appPackage, ACTION_NEW_ENDPOINT,
             Bundle1(EXTRA_TOKEN to token, EXTRA_ENDPOINT to endpoint),
@@ -108,11 +111,11 @@ class MochiDistributorReceiver : BroadcastReceiver() {
     }
 
     /**
-     * The account this device is signed in as. Never `MochiAccount.first()`:
-     * AccountManager's list is device-wide, shared across every Mochi install,
-     * and in no particular order, so with two identities on two servers the
-     * endpoint would name the wrong server and that identity's pushes would be
-     * delivered nowhere. Null while unbound, which REGISTER refuses.
+     * The account this device is signed in as, whose server the endpoint
+     * names. Not any account the phone holds: with two identities on two
+     * servers the endpoint would name the wrong server and that identity's
+     * pushes would be delivered nowhere. Null while unbound, which REGISTER
+     * refuses.
      */
     private fun boundAccount(context: Context): MochiAccount.Snapshot? {
         val sessions = EntryPointAccessors

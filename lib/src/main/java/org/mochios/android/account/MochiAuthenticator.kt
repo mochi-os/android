@@ -10,16 +10,14 @@ import android.accounts.Account
 import android.accounts.AccountAuthenticatorResponse
 import android.accounts.AccountManager
 import android.content.Context
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.os.Process
 import org.mochios.android.R
 
 /**
- * Authenticator backing [MochiAccount]. Deliberately minimal: per-app JWTs are
- * minted locally via `/_/token`, so this only hands out the account session,
- * and only for [MochiAccount.TOKEN_SESSION] to a caller signed with our
- * certificate.
+ * Authenticator backing [MochiAccount]: the account type needs one for the
+ * sync adapters and the phone's account settings. It hands out nothing: an
+ * account's session is kept sealed in the app's own storage, and per-app JWTs
+ * are minted from it through `/_/token`.
  */
 class MochiAuthenticator(private val context: Context) :
     AbstractAccountAuthenticator(context) {
@@ -40,36 +38,11 @@ class MochiAuthenticator(private val context: Context) :
         account: Account,
         authTokenType: String,
         options: Bundle?
-    ): Bundle {
-        val result = Bundle()
-        result.putString(AccountManager.KEY_ACCOUNT_NAME, account.name)
-        result.putString(AccountManager.KEY_ACCOUNT_TYPE, account.type)
-        if (authTokenType != MochiAccount.TOKEN_SESSION) {
-            result.putInt(AccountManager.KEY_ERROR_CODE, AccountManager.ERROR_CODE_BAD_ARGUMENTS)
-            result.putString(
-                AccountManager.KEY_ERROR_MESSAGE,
-                context.getString(R.string.account_error_token_type),
-            )
-            return result
-        }
-        // The framework stamps the caller's uid into the options bundle. Refuse
-        // a caller not signed with our certificate, and refuse an absent uid.
-        val caller = options?.getInt(AccountManager.KEY_CALLER_UID, -1) ?: -1
-        val match = caller >= 0 &&
-            context.packageManager.checkSignatures(caller, Process.myUid()) ==
-            PackageManager.SIGNATURE_MATCH
-        if (!match) {
-            result.putInt(AccountManager.KEY_ERROR_CODE, AccountManager.ERROR_CODE_BAD_REQUEST)
-            result.putString(
-                AccountManager.KEY_ERROR_MESSAGE,
-                context.getString(R.string.account_error_caller),
-            )
-            return result
-        }
-        val am = AccountManager.get(context)
-        val session = am.getPassword(account)
-        if (session != null) result.putString(AccountManager.KEY_AUTHTOKEN, session)
-        return result
+    ): Bundle = Bundle().apply {
+        putString(AccountManager.KEY_ACCOUNT_NAME, account.name)
+        putString(AccountManager.KEY_ACCOUNT_TYPE, account.type)
+        putInt(AccountManager.KEY_ERROR_CODE, AccountManager.ERROR_CODE_UNSUPPORTED_OPERATION)
+        putString(AccountManager.KEY_ERROR_MESSAGE, context.getString(R.string.account_error_token_type))
     }
 
     /** Shown on the framework's consent screen, so it is user-facing text. */

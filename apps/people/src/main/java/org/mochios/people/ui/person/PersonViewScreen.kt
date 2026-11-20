@@ -5,6 +5,7 @@
 
 package org.mochios.people.ui.person
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -342,20 +343,20 @@ private fun ActionRow(
  * A person's avatar at its version. Null when the id, a peer's, cannot be one
  * segment of the address ([segment]); a version that cannot is left off.
  */
-internal fun avatarUrlFor(info: org.mochios.people.model.PersonInformation): String? {
+internal fun avatarUrlFor(info: org.mochios.people.model.PersonInformation): OwnedAddress? {
     if (info.avatar.isBlank()) return null
     val id = segment(info.id.ifBlank { return null }) ?: return null
-    val version = segment(info.avatar) ?: return "/people/$id/-/avatar"
-    return "/people/$id/-/avatar?v=$version"
+    val version = segment(info.avatar) ?: return OwnedAddress.of("/people/$id/-/avatar")
+    return OwnedAddress.of("/people/$id/-/avatar?v=$version")
 }
 
 /**
  * A person's banner at its version. Null when the id, a peer's, cannot be one
  * segment of the address ([segment]); a version that cannot is left off.
  */
-internal fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): String? {
+internal fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): OwnedAddress? {
     if (info.banner.isBlank()) return null
     val id = segment(info.id.ifBlank { return null }) ?: return null
-    val version = segment(info.banner) ?: return "/people/$id/-/banner"
-    return "/people/$id/-/banner?v=$version"
+    val version = segment(info.banner) ?: return OwnedAddress.of("/people/$id/-/banner")
+    return OwnedAddress.of("/people/$id/-/banner?v=$version")
 }

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Teramoĩ ndaikatúi nandi</string>
     <string name="wikis_attachments_search_placeholder">Eheka adjunto</string>
     <string name="wikis_attachments_delete_confirm_message">¿Emboguete “%1$s”? Kóva ndaikatumo\'ãi oñembojevy.</string>
-    <string name="wikis_attachments_downloading">Oñemboguejyhína…</string>
     <string name="wikis_attachments_empty_description">Epoko Ehupi rembojuaju hag̃ua archivo ko kuatiaroguépe.</string>
     <string name="wikis_settings_name_save_cd">Eñongatu téra</string>
     <string name="wikis_settings_name_cancel_cd">Heja ñembosako\'i</string>

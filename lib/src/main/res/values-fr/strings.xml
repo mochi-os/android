@@ -319,7 +319,6 @@
     <string name="error_server_https">L\'adresse du serveur doit commencer par https://</string>
     <string name="device_name_fallback">Appareil mobile</string>
     <string name="account_error_token_type">Type de jeton non pris en charge</string>
-    <string name="account_error_caller">Appelant non autorisé</string>
     <string name="zone_sea">En mer</string>
     <string name="access_remove">Retirer</string>
     <string name="access_remove_title">Supprimer l\'accès ?</string>
@@ -345,4 +344,10 @@
     <string name="person_unknown">Inconnu</string>
     <string name="format_time_seconds_short">%1$s s</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Téléchargement de %1$s…</string>
+    <string name="downloads_saved">%1$s enregistré</string>
+    <string name="downloads_failed">Impossible d\'enregistrer %1$s : %2$s</string>
+    <string name="sync_conflict">Modifié sur le serveur</string>
+    <string name="sync_missing">N\'est plus sur le serveur</string>
+    <string name="sync_refused">Refusé par le serveur</string>
 </resources>

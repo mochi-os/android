@@ -318,7 +318,6 @@
     <string name="error_server_https">სერვერის მისამართი უნდა იწყებოდეს https://</string>
     <string name="device_name_fallback">მობილური მოწყობილობა</string>
     <string name="account_error_token_type">მხარდაუჭერელი ჟეტონის ტიპი</string>
-    <string name="account_error_caller">გამომძახებელს არ აქვს უფლება</string>
     <string name="zone_sea">ზღვაზე</string>
     <string name="access_remove">წაშლა</string>
     <string name="access_remove_title">წვდომის წაშლა?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">უცნობი</string>
     <string name="format_time_seconds_short">%1$s წმ</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">იტვირთება %1$s…</string>
+    <string name="downloads_saved">%1$s შენახულია</string>
+    <string name="downloads_failed">%1$s ვერ შეინახა: %2$s</string>
+    <string name="sync_conflict">შეიცვალა სერვერზე</string>
+    <string name="sync_missing">აღარ არის სერვერზე</string>
+    <string name="sync_refused">სერვერმა უარყო</string>
 </resources>

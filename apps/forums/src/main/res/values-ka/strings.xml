@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">ავტორი</string>
     <string name="forums_community_destination">ქვეყნდება %1$s-ში, როგორც %2$s</string>
+    <string name="forums_find_search_example">ძიება სახელით, ID-ით, ანაბეჭდით, URL-ით ან მისამართით %1$s</string>
+    <string name="forums_setup">დაყენება</string>
 </resources>

@@ -178,8 +178,8 @@ class CrmsRepository @Inject constructor(
         return response.fingerprint.ifEmpty { response.id.ifEmpty { crm } }
     }
 
-    suspend fun unsubscribe(crm: String, server: String? = null) {
-        api.unsubscribe(UnsubscribeRequest(crm = crm, server = server)).unwrap()
+    suspend fun unsubscribe(crm: String) {
+        api.unsubscribe(UnsubscribeRequest(crm = crm)).unwrap()
     }
 
     suspend fun searchUsers(query: String): List<Person> =

@@ -17,7 +17,6 @@ import android.icu.text.DateIntervalFormat
 import android.icu.text.DateTimePatternGenerator
 import android.icu.util.DateInterval
 import android.icu.util.ULocale
-import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.time.ZoneOffset
 import java.util.Calendar
@@ -336,9 +335,9 @@ class Format(
             DateFormat.MM_SLASH_DD_YYYY -> "MM/dd/yyyy"
             DateFormat.D_MMM_YYYY -> "d MMM yyyy"
         }
-        val sdf = SimpleDateFormat(pattern, Locale.getDefault())
-        sdf.timeZone = tz
-        return sdf.format(date)
+        // Through the clock, as the time is: in the digits 0 to 9 whatever the
+        // language's own, and a month name in the app's language.
+        return clock.write(pattern, date.time, tz)
     }
 
     private fun formatTimeInternal(date: Date, tz: TimeZone = timeZone): String =

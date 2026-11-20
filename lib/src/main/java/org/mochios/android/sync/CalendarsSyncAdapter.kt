@@ -86,7 +86,7 @@ class CalendarsSyncAdapter(context: Context) : AbstractThreadedSyncAdapter(conte
             if (outcome.failures.isEmpty()) {
                 CalendarsSync.record(context, SyncFailure.NONE)
             } else {
-                CalendarsSync.record(context, SyncFailure.REFUSED, outcome.failures.first())
+                CalendarsSync.record(context, SyncFailure.REFUSED, outcome.failures.first().text(context))
             }
         } catch (_: SyncAuthorization) {
             result.stats.numAuthExceptions++
@@ -95,7 +95,7 @@ class CalendarsSyncAdapter(context: Context) : AbstractThreadedSyncAdapter(conte
             // The server refused the change listing or a fetch: retrying
             // later is all there is to do, and the message says why.
             result.stats.numIoExceptions++
-            CalendarsSync.record(context, SyncFailure.REFUSED, e.message)
+            CalendarsSync.record(context, SyncFailure.REFUSED, SyncRefusal(SyncRefusal.Kind.REFUSED, e.message).text(context))
         } catch (_: IOException) {
             result.stats.numIoExceptions++
             CalendarsSync.record(context, SyncFailure.TRANSPORT)

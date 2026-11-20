@@ -183,4 +183,5 @@
     <string name="chat_refused_friends_only">%1$s prijíma chaty iba od priateľov.</string>
     <string name="chat_message_earlier">Správy z obdobia pred pridaním tohto účtu do Mochi sú šifrované a nedajú sa tu prečítať</string>
     <string name="chat_message_excluded">Šifrovaná iba pre iné zariadenia</string>
+    <string name="chat_setup">Nastaviť</string>
 </resources>

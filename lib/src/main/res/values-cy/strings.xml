@@ -323,7 +323,6 @@
     <string name="error_server_https">Rhaid i gyfeiriad y gweinydd ddechrau gyda https://</string>
     <string name="device_name_fallback">Dyfais symudol</string>
     <string name="account_error_token_type">Math o docyn heb ei gefnogi</string>
-    <string name="account_error_caller">Ni chaniateir y galwr</string>
     <string name="zone_sea">Ar y môr</string>
     <string name="access_remove">Tynnu</string>
     <string name="access_remove_title">Tynnu mynediad?</string>
@@ -353,4 +352,10 @@
     <string name="person_unknown">Anhysbys</string>
     <string name="format_time_seconds_short">%1$se</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Yn lawrlwytho %1$s…</string>
+    <string name="downloads_saved">Wedi cadw %1$s</string>
+    <string name="downloads_failed">Methu cadw %1$s: %2$s</string>
+    <string name="sync_conflict">Wedi newid ar y gweinydd</string>
+    <string name="sync_missing">Dim ar y gweinydd mwyach</string>
+    <string name="sync_refused">Gwrthodwyd gan y gweinydd</string>
 </resources>

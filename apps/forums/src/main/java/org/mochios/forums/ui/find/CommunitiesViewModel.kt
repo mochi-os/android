@@ -64,6 +64,14 @@ class CommunitiesViewModel @Inject constructor(
     private val _hosted = MutableStateFlow<List<NetworkAccount>>(emptyList())
     val hosted: StateFlow<List<NetworkAccount>> = _hosted.asStateFlow()
 
+    /** Whether the hosted accounts have been read: until then, none is no answer. */
+    private val _listed = MutableStateFlow(false)
+    val listed: StateFlow<Boolean> = _listed.asStateFlow()
+
+    /** The networks the server hosts accounts on, for a way to set one up and the search's example. */
+    private val _networks = MutableStateFlow<List<String>>(emptyList())
+    val networks: StateFlow<List<String>> = _networks.asStateFlow()
+
     private val _lemmy = MutableStateFlow<List<NetworkAccount>>(emptyList())
     val lemmy: StateFlow<List<NetworkAccount>> = _lemmy.asStateFlow()
 
@@ -86,6 +94,7 @@ class CommunitiesViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 _hosted.value = repository.hostedAccounts()
+                _listed.value = true
                 look(wanted)
             } catch (_: Exception) {
                 // Nobody to join as.
@@ -94,6 +103,13 @@ class CommunitiesViewModel @Inject constructor(
                 _lemmy.value = repository.lemmyAccounts()
             } catch (_: Exception) {
                 // No linked Lemmy account.
+            }
+        }
+        viewModelScope.launch {
+            try {
+                _networks.value = repository.hostedNetworks()
+            } catch (_: Exception) {
+                // A server without the networks has none to set up.
             }
         }
     }

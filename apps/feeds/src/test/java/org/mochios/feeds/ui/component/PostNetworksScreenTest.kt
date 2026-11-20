@@ -456,13 +456,13 @@ class PostNetworksScreenTest {
             androidx.compose.foundation.layout.Column {
                 CommentItem(
                     comment = Comment(id = "c1", user = "https://there.example/u/e", authorName = "Eve", body = "Hi"),
-                    depth = 0, avatarUrl = "", feedId = "f1", isEditing = false, editText = "",
+                    depth = 0, avatarUrl = null, feedId = "f1", isEditing = false, editText = "",
                     onEditTextChange = {}, onSaveEdit = {}, onCancelEdit = {}, onReply = {}, onEdit = {}, onDelete = {},
                     onReact = {}, canManage = true, onModerate = { action = it },
                 )
                 CommentItem(
                     comment = Comment(id = "c2", user = "1local", authorName = "Frank", body = "Hi"),
-                    depth = 0, avatarUrl = "", feedId = "f1", isEditing = false, editText = "",
+                    depth = 0, avatarUrl = null, feedId = "f1", isEditing = false, editText = "",
                     onEditTextChange = {}, onSaveEdit = {}, onCancelEdit = {}, onReply = {}, onEdit = {}, onDelete = {},
                     onReact = {}, canManage = true, onModerate = { action = it },
                 )

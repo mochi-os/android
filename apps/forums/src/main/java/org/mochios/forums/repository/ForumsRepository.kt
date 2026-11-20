@@ -176,8 +176,8 @@ class ForumsRepository @Inject constructor(
         return r.fingerprint.ifEmpty { r.id.ifEmpty { forumId } }
     }
 
-    suspend fun unsubscribe(forumId: String, server: String? = null) {
-        api.unsubscribe(forumId, UnsubscribeRequest(forum = forumId, server = server)).unwrap()
+    suspend fun unsubscribe(forumId: String) {
+        api.unsubscribe(forumId, UnsubscribeRequest(forum = forumId)).unwrap()
         forget()
     }
 
@@ -576,6 +576,9 @@ class ForumsRepository @Inject constructor(
         api.listNetworkAccounts("social").unwrapRaw()
             .filter { it.type == "lemmy" && !it.hosted }
             .sortedWith(compareBy(NaturalCompare) { it.identifier })
+
+    /** The networks the server hosts accounts on. */
+    suspend fun hostedNetworks(): List<String> = api.getNetworks().unwrap().networks
 
     suspend fun lookupCommunity(address: String): CommunityFound = api.lookupCommunity(address).unwrap()
 

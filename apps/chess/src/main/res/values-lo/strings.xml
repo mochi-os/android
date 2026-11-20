@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">ກຳລັງເຊື່ອມຕໍ່…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">ກຳລັງເຊື່ອມຕໍ່ຄືນ…</string>
-    <string name="chess_ws_failed">ການເຊື່ອມຕໍ່ລົ້ມເຫລວ</string>
     <string name="chess_move_capture">%1$s ໄດ້ເອົາ %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

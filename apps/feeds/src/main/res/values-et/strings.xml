@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Ei jälgi</string>
     <string name="feeds_source_follow_again">Jälgi uuesti</string>
     <string name="feeds_filtered_by_tag">Filtreeritud sildi järgi:</string>
+    <string name="feeds_setup">Seadista</string>
+    <string name="feeds_search_example">Otsi nime, ID, sõrmejälje, URL-i või aadressi %1$s järgi</string>
 </resources>

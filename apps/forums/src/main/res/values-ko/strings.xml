@@ -334,4 +334,6 @@
     </plurals>
     <string name="forums_comment_op">작성자</string>
     <string name="forums_community_destination">%2$s(으)로 %1$s에 게시됩니다</string>
+    <string name="forums_find_search_example">이름, ID, 지문, URL 또는 %1$s 형식의 주소로 검색</string>
+    <string name="forums_setup">설정</string>
 </resources>

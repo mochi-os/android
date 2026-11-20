@@ -31,14 +31,14 @@ data class ContactsChanges(
     val reset: Boolean = false,
 )
 
-/** The server changed the contact since the phone's copy was taken (412). */
-class SyncConflict : Exception("contact changed on the server")
+/** The server changed the row since the phone's copy was taken (412). */
+class SyncConflict : Exception()
 
-/** The server no longer holds the contact (404). */
-class SyncMissing : Exception("contact not on the server")
+/** The server no longer holds the row (404). */
+class SyncMissing : Exception()
 
 /** The session or app token is no longer accepted (401, 403). */
-class SyncAuthorization : Exception("not allowed")
+class SyncAuthorization : Exception()
 
 /**
  * The server side of contacts sync: the people app's JSON actions, called with

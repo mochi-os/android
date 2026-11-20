@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">ไม่ได้ติดตาม</string>
     <string name="feeds_source_follow_again">ติดตามอีกครั้ง</string>
     <string name="feeds_filtered_by_tag">กรองตามแท็ก:</string>
+    <string name="feeds_setup">ตั้งค่า</string>
+    <string name="feeds_search_example">ค้นหาตามชื่อ ID ลายนิ้วมือ URL หรือ %1$s</string>
 </resources>

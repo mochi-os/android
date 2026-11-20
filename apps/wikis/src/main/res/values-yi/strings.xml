@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">טאַג קען נישט זײַן ליידיק</string>
     <string name="wikis_attachments_search_placeholder">זוך בײַלאַגעס</string>
     <string name="wikis_attachments_delete_confirm_message">אויסמעקן „%1$s“? דאָס קען מען נישט צוריקדרייען.</string>
-    <string name="wikis_attachments_downloading">לאָדט אַראָפּ…</string>
     <string name="wikis_attachments_empty_description">טאַפּט אַרויפֿלאָדן צו צולייגן טעקעס צו דעם בלאַט.</string>
     <string name="wikis_settings_name_save_cd">אָפּהיטן נאָמען</string>
     <string name="wikis_settings_name_cancel_cd">אָפּזאָגן רעדאַקטירונג</string>

@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s csak barátoktól fogad csevegést.</string>
     <string name="chat_message_earlier">A fiók Mochihoz adása előtti üzenetek titkosítottak, és itt nem olvashatók</string>
     <string name="chat_message_excluded">Csak más eszközökre titkosítva</string>
+    <string name="chat_setup">Beállítás</string>
 </resources>

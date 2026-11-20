@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s ውይይቶችን የሚቀበለው ከጓደኞች ብቻ ነው።</string>
     <string name="chat_message_earlier">ይህ መለያ ወደ Mochi ከመታከሉ በፊት የነበሩ መልዕክቶች የተመሰጠሩ ናቸው እና እዚህ ሊነበቡ አይችሉም</string>
     <string name="chat_message_excluded">ለሌሎች መሣሪያዎች ብቻ የተመሰጠረ</string>
+    <string name="chat_setup">ያዘጋጁ</string>
 </resources>

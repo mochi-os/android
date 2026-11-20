@@ -180,4 +180,5 @@
     <string name="chat_refused_friends_only">%1$s чатҳоро танҳо аз дӯстон қабул мекунад.</string>
     <string name="chat_message_earlier">Паёмҳои пеш аз илова шудани ин ҳисоб ба Mochi рамзгузорӣ шудаанд ва онҳоро дар ин ҷо хондан мумкин нест</string>
     <string name="chat_message_excluded">Танҳо барои дастгоҳҳои дигар рамзгузорӣ шудааст</string>
+    <string name="chat_setup">Танзим кардан</string>
 </resources>

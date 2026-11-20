@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Connectant…</string>
     <string name="chess_ws_disconnected">Fora de línia</string>
     <string name="chess_ws_reconnecting">Reconnectant…</string>
-    <string name="chess_ws_failed">Ha fallat la connexió</string>
     <string name="chess_move_capture">%1$s va capturar %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

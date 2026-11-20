@@ -71,7 +71,7 @@ class CrmAccountTest {
         runBlocking {
             session.clearAll()
             session.setServerUrl(base)
-            session.setBoundAccount("first", base)
+            session.setBoundAccount("first")
         }
         api = Retrofit.Builder()
             .baseUrl(server.url("/crm/"))
@@ -111,7 +111,7 @@ class CrmAccountTest {
     fun `another account signing in is not shown the previous one's answers`() {
         held()
         assertEquals(listOf("o1"), repository.getWatched("x1"))
-        runBlocking { session.setBoundAccount("second", base) }
+        runBlocking { session.setBoundAccount("second") }
         until { repository.getCachedCrmInfo("x1") == null }
         assertNull(repository.getCachedObjects("x1"))
         assertEquals(emptyList<String>(), repository.getWatched("x1"))
@@ -131,7 +131,7 @@ class CrmAccountTest {
         val before = informations.get()
         val read = thread { runBlocking { fresh.getCrmInfo("x1") } }
         until { informations.get() > before }
-        runBlocking { session.setBoundAccount("first", base) }
+        runBlocking { session.setBoundAccount("first") }
         Thread.sleep(300)
         hold!!.countDown()
         read.join(5_000)
@@ -147,7 +147,7 @@ class CrmAccountTest {
         val before = informations.get()
         val read = thread { runBlocking { repository.getCrmInfo("x1") } }
         until { informations.get() > before }
-        runBlocking { session.setBoundAccount("second", base) }
+        runBlocking { session.setBoundAccount("second") }
         // The switch has reached the caches once the objects are gone.
         until { repository.getCachedObjects("x1") == null }
         hold!!.countDown()

@@ -318,7 +318,6 @@
     <string name="error_server_https">Vistfang netþjóns verður að byrja á https://</string>
     <string name="device_name_fallback">Fartæki</string>
     <string name="account_error_token_type">Óstudd tegund teikns</string>
-    <string name="account_error_caller">Kallandi hefur ekki leyfi</string>
     <string name="zone_sea">Á sjó</string>
     <string name="access_remove">Fjarlægja</string>
     <string name="access_remove_title">Fjarlægja aðgang?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Óþekkt</string>
     <string name="format_time_seconds_short">%1$s sek</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Sæki %1$s…</string>
+    <string name="downloads_saved">%1$s vistað</string>
+    <string name="downloads_failed">Ekki tókst að vista %1$s: %2$s</string>
+    <string name="sync_conflict">Breytt á þjóninum</string>
+    <string name="sync_missing">Ekki lengur á þjóninum</string>
+    <string name="sync_refused">Þjónninn hafnaði</string>
 </resources>

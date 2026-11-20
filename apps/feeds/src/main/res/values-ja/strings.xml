@@ -354,4 +354,6 @@
     <string name="feeds_source_unfollowed">フォローしていません</string>
     <string name="feeds_source_follow_again">もう一度フォロー</string>
     <string name="feeds_filtered_by_tag">タグでフィルタリング中:</string>
+    <string name="feeds_setup">設定</string>
+    <string name="feeds_search_example">名前、ID、フィンガープリント、URL、または %1$s で検索</string>
 </resources>

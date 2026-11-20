@@ -318,7 +318,6 @@
     <string name="error_server_https">Η διεύθυνση του διακομιστή πρέπει να ξεκινά με https://</string>
     <string name="device_name_fallback">Κινητή συσκευή</string>
     <string name="account_error_token_type">Μη υποστηριζόμενος τύπος διακριτικού</string>
-    <string name="account_error_caller">Δεν επιτρέπεται ο καλών</string>
     <string name="zone_sea">Στη θάλασσα</string>
     <string name="access_remove">Αφαίρεση</string>
     <string name="access_remove_title">Αφαίρεση πρόσβασης;</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">Άγνωστο</string>
     <string name="format_time_seconds_short">%1$sδ</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">Λήψη %1$s…</string>
+    <string name="downloads_saved">Το %1$s αποθηκεύτηκε</string>
+    <string name="downloads_failed">Δεν ήταν δυνατή η αποθήκευση του %1$s: %2$s</string>
+    <string name="sync_conflict">Άλλαξε στον διακομιστή</string>
+    <string name="sync_missing">Δεν υπάρχει πλέον στον διακομιστή</string>
+    <string name="sync_refused">Απορρίφθηκε από τον διακομιστή</string>
 </resources>

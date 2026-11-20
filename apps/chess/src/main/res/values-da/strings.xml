@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Opretter forbindelse…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Genopretter forbindelse…</string>
-    <string name="chess_ws_failed">Forbindelse mislykkedes</string>
     <string name="chess_move_capture">%1$s tog %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

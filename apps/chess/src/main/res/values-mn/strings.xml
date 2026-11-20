@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Холбогдож байна…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Дахин холбогдож байна…</string>
-    <string name="chess_ws_failed">Холболт амжилтгүй</string>
     <string name="chess_move_capture">%1$s %2$s авлаа</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Kobler til…</string>
     <string name="chess_ws_disconnected">Frakoblet</string>
     <string name="chess_ws_reconnecting">Kobler til igjen…</string>
-    <string name="chess_ws_failed">Tilkobling mislyktes</string>
     <string name="chess_move_capture">%1$s tok %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

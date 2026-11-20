@@ -83,6 +83,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import org.mochios.android.util.attachmentModel
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.R as MochiR
 import org.mochios.android.api.userMessage
 import org.mochios.android.files.rememberFileLabel
@@ -571,7 +573,7 @@ internal fun PostDetailContent(
             if (openIndex >= 0) {
                 AttachmentLightbox(
                     images = images,
-                    urlBuilder = { att -> att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty() },
+                    urlBuilder = { att -> attachmentModel(att.url, attachmentAddress("feeds", attachmentFeed, att.id)) },
                     initialIndex = openIndex,
                     onDismiss = { openAttachment = null },
                     commentCount = { att -> anchoredCommentCount(currentPost.comments, att.id) },
@@ -808,19 +810,17 @@ internal fun PostContent(
             AttachmentGallery(
                 attachments = attachments,
                 urlBuilder = { att ->
-                    att.url ?: attachmentAddress("feeds", attachmentFeed, att.id).orEmpty()
+                    attachmentModel(att.url, attachmentAddress("feeds", attachmentFeed, att.id))
                 },
                 thumbnailUrlBuilder = { att ->
-                    att.thumbnailUrl ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
+                    attachmentModel(att.thumbnailUrl, attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail"))
                 },
                 // previewUrl is absent on servers that predate the preview
                 // variant; falling back to the thumbnail chain keeps working.
                 previewUrlBuilder = { att ->
-                    att.previewUrl
-                        ?: att.thumbnailUrl
-                        ?: attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail").orEmpty()
+                    attachmentModel(att.previewUrl ?: att.thumbnailUrl, attachmentAddress("feeds", attachmentFeed, att.id, "thumbnail"))
                 },
-                mediumUrlBuilder = { att -> mediumAddress(att.previewUrl) },
+                mediumUrlBuilder = { att -> mediumAddress(OwnedAddress.of(att.previewUrl)) },
                 commentCount = commentCount,
                 comments = comments,
             )

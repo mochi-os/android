@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Метка не может быть пустой</string>
     <string name="wikis_attachments_search_placeholder">Поиск вложений</string>
     <string name="wikis_attachments_delete_confirm_message">Удалить «%1$s»? Это действие нельзя отменить.</string>
-    <string name="wikis_attachments_downloading">Загрузка…</string>
     <string name="wikis_attachments_empty_description">Нажмите Загрузить, чтобы добавить файлы на эту страницу.</string>
     <string name="wikis_settings_name_save_cd">Сохранить название</string>
     <string name="wikis_settings_name_cancel_cd">Отменить редактирование</string>

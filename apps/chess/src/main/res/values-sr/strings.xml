@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Повезивање…</string>
     <string name="chess_ws_disconnected">Ван мреже</string>
     <string name="chess_ws_reconnecting">Поновно повезивање…</string>
-    <string name="chess_ws_failed">Повезивање није успело</string>
     <string name="chess_move_capture">%1$s је узео %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

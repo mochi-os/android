@@ -336,4 +336,6 @@
     </plurals>
     <string name="forums_comment_op">Skrywer</string>
     <string name="forums_community_destination">Plaas in %1$s as %2$s</string>
+    <string name="forums_find_search_example">Soek volgens naam, ID, vingerafdruk, URL of %1$s</string>
+    <string name="forums_setup">Stel op</string>
 </resources>

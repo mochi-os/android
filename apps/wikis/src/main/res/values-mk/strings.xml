@@ -267,7 +267,6 @@
     <string name="wikis_tag_dialog_empty">Ознаката не може да биде празна</string>
     <string name="wikis_attachments_search_placeholder">Барај прилози</string>
     <string name="wikis_attachments_delete_confirm_message">Избриши „%1$s\"? Ова не може да се поништи.</string>
-    <string name="wikis_attachments_downloading">Преземање…</string>
     <string name="wikis_attachments_empty_description">Допрете Прикачи за да додадете датотеки на оваа страница.</string>
     <string name="wikis_settings_name_save_cd">Зачувај име</string>
     <string name="wikis_settings_name_cancel_cd">Откажи уредување</string>

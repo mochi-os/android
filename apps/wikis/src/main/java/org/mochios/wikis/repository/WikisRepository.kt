@@ -14,9 +14,11 @@ import kotlinx.coroutines.flow.asStateFlow
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.ResponseBody
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapRaw
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
@@ -609,6 +611,14 @@ class WikisRepository @Inject constructor(
             throw e.toMochiError()
         }
     }
+
+    /** Attachment [id] of [wiki], streamed; the caller closes it. */
+    suspend fun attachmentFile(wiki: String, id: String): ResponseBody =
+        try {
+            api.getAttachmentFile(escaped(wiki), escaped(id)).unwrapRaw()
+        } catch (e: Exception) {
+            throw e.toMochiError()
+        }
 
     suspend fun uploadAttachments(
         wiki: String,

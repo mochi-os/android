@@ -61,6 +61,7 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NetworkSetup
 import org.mochios.android.util.providerName
 import org.mochios.chat.R
 import org.mochios.chat.model.ChatAccount
@@ -87,8 +88,12 @@ fun NewChatScreen(
     }
 
     val remote = uiState.chosen
+    // A network chosen to set up an account on, in place of chatting there.
+    val setup = uiState.setup
+    val missing = uiState.missing
     val addresses = addressList(uiState.addresses)
     val isGroup = if (remote != null) addresses.size > 1 else uiState.picked.size > 1
+    // A network chosen to set up has dropped the people picked, so Create waits.
     val canCreate = if (remote != null) {
         addresses.isNotEmpty() && (!isGroup || uiState.groupName.isNotBlank())
     } else {
@@ -170,18 +175,28 @@ fun NewChatScreen(
                         }
                     }
 
-                    if (uiState.accounts.isNotEmpty()) {
+                    if (uiState.accounts.isNotEmpty() || missing.isNotEmpty()) {
                         NetworkPicker(
                             accounts = uiState.accounts,
                             chosen = uiState.account,
                             onChoose = viewModel::selectAccount,
+                            missing = missing,
+                            setup = setup,
+                            onSetup = viewModel::selectSetup,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(horizontal = 16.dp, vertical = 8.dp),
                         )
                     }
 
-                    if (remote != null) {
+                    if (setup != null) {
+                        NetworkSetup(
+                            network = setup,
+                            label = stringResource(R.string.chat_setup),
+                            onOpenLink = onOpenLink,
+                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
+                        )
+                    } else if (remote != null) {
                         MochiTextField(
                             value = uiState.addresses,
                             onValueChange = viewModel::updateAddresses,
@@ -256,7 +271,7 @@ fun NewChatScreen(
 
                     val filtered = viewModel.filteredFriends()
                         .filterNot { friend -> friend.id in uiState.selected }
-                    if (remote != null) {
+                    if (remote != null || setup != null) {
                         Spacer(modifier = Modifier.weight(1f))
                     } else if (filtered.isEmpty()) {
                         Box(
@@ -423,18 +438,27 @@ private fun addressHint(network: String): String = stringResource(
     },
 )
 
-/** Mochi, or one of the user's accounts on another network. */
+/**
+ * Mochi, one of the user's accounts on another network, or a network the
+ * server offers that the user has no account on yet, by its name, to set one
+ * up on.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun NetworkPicker(
     accounts: List<ChatAccount>,
     chosen: String,
     onChoose: (String) -> Unit,
+    missing: List<String>,
+    setup: String?,
+    onSetup: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     var open by remember { mutableStateOf(false) }
     val mochi = stringResource(R.string.chat_new_network_mochi)
-    val label = accounts.firstOrNull { it.id == chosen }?.let { accountLabel(it) } ?: mochi
+    val label = setup?.let { providerName(it) }
+        ?: accounts.firstOrNull { it.id == chosen }?.let { accountLabel(it) }
+        ?: mochi
     ExposedDropdownMenuBox(expanded = open, onExpandedChange = { open = it }, modifier = modifier) {
         MochiTextField(
             value = label,
@@ -460,6 +484,15 @@ private fun NetworkPicker(
                     onClick = {
                         open = false
                         onChoose(account.id)
+                    },
+                )
+            }
+            missing.forEach { network ->
+                MochiDropdownMenuItem(
+                    text = { Text(providerName(network)) },
+                    onClick = {
+                        open = false
+                        onSetup(network)
                     },
                 )
             }

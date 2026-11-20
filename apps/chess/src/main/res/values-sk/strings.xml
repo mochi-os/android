@@ -59,7 +59,6 @@
     <string name="chess_ws_connecting">Pripája sa…</string>
     <string name="chess_ws_disconnected">Offline</string>
     <string name="chess_ws_reconnecting">Opätovné pripájanie…</string>
-    <string name="chess_ws_failed">Pripojenie zlyhalo</string>
     <string name="chess_move_capture">%1$s vzal %2$s</string>
     <string name="chess_captured_multiplier">×%1$s</string>
 

@@ -1036,7 +1036,7 @@ private fun HandleRow(
                 modifier = Modifier.padding(start = 28.dp, top = 4.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                EntityAvatar(name = found.name, src = found.avatar.ifBlank { null }, size = 20.dp)
+                EntityAvatar(name = found.name, remote = found.avatar.ifBlank { null }, size = 20.dp)
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = listOf(found.name, found.address).filter { it.isNotBlank() }.joinToString(" · "),

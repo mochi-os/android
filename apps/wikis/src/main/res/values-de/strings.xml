@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Tag darf nicht leer sein</string>
     <string name="wikis_attachments_search_placeholder">Anhänge durchsuchen</string>
     <string name="wikis_attachments_delete_confirm_message">„%1$s\" löschen? Dies kann nicht rückgängig gemacht werden.</string>
-    <string name="wikis_attachments_downloading">Wird heruntergeladen…</string>
     <string name="wikis_attachments_empty_description">Tippe auf Hochladen, um Dateien zu dieser Seite hinzuzufügen.</string>
     <string name="wikis_settings_name_save_cd">Namen speichern</string>
     <string name="wikis_settings_name_cancel_cd">Bearbeitung abbrechen</string>

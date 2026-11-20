@@ -177,4 +177,5 @@
     <string name="chat_refused_friends_only">%1$s gba ìfọ̀rọ̀wérọ̀ láti ọ̀dọ̀ àwọn ọ̀rẹ́ nìkan.</string>
     <string name="chat_message_earlier">Àwọn ìránṣẹ́ láti ìgbà kí a tó fi àkọọ́lẹ̀ yìí kún Mochi ni a ti fi kóòdù pa mọ́, a kò sì lè kà wọ́n níbí</string>
     <string name="chat_message_excluded">A fi kóòdù pa mọ́ fún àwọn ẹ̀rọ mìíràn nìkan</string>
+    <string name="chat_setup">Ṣètò</string>
 </resources>

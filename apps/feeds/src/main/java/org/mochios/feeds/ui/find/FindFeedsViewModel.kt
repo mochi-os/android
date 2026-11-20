@@ -85,6 +85,10 @@ class FindFeedsViewModel @Inject constructor(
 
     private var lookupJob: Job? = null
 
+    /** The networks the server hosts accounts on, which the search looks people up on. */
+    private val _networks = MutableStateFlow<List<String>>(emptyList())
+    val networks: StateFlow<List<String>> = _networks.asStateFlow()
+
     /** The user's contacts with a handle on another network, to follow. */
     private val _people = MutableStateFlow<List<Person>>(emptyList())
     val people: StateFlow<List<Person>> = _people.asStateFlow()
@@ -109,6 +113,7 @@ class FindFeedsViewModel @Inject constructor(
         loadRecommendations()
         loadSubscribed()
         loadPeople()
+        loadNetworks()
         // Arriving with a share link resolves it straight away, as if pasted.
         savedStateHandle.get<String>("link")?.takeIf { it.isNotBlank() }?.let { setSearchQuery(it) }
     }
@@ -137,6 +142,16 @@ class FindFeedsViewModel @Inject constructor(
                 _people.value = repository.people().sortedWith(compareBy(NaturalCompare) { it.name.ifEmpty { it.handle } })
             } catch (_: Exception) {
                 // A server without the networks has nobody to offer.
+            }
+        }
+    }
+
+    private fun loadNetworks() {
+        viewModelScope.launch {
+            try {
+                _networks.value = repository.hostedNetworks()
+            } catch (_: Exception) {
+                // A server without the networks looks nobody up there.
             }
         }
     }
@@ -299,6 +314,17 @@ data class PendingFollow(
     val feed: Feed,
     val query: String,
 )
+
+/**
+ * An address the search looks someone up on another network by, shown as an
+ * example in its field: the fediverse's form where the server is on it, else
+ * Bluesky's; none where it is on neither.
+ */
+internal fun addressExample(networks: List<String>): String? = when {
+    "fediverse" in networks -> "@name@example.social"
+    "bluesky" in networks -> "name.bsky.social"
+    else -> null
+}
 
 /**
  * Whether a search names someone or something on another network: a handle,

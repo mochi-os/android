@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">ടാഗ് ശൂന്യമാകാൻ പാടില്ല</string>
     <string name="wikis_attachments_search_placeholder">അറ്റാച്ച്മെന്റുകൾ തിരയുക</string>
     <string name="wikis_attachments_delete_confirm_message">“%1$s” ഇല്ലാതാക്കണോ? ഇത് പഴയപടിയാക്കാനാവില്ല.</string>
-    <string name="wikis_attachments_downloading">ഡൗൺലോഡ് ചെയ്യുന്നു…</string>
     <string name="wikis_attachments_empty_description">ഈ പേജിലേക്ക് ഫയലുകൾ ചേർക്കാൻ അപ്‌ലോഡ് ടാപ്പ് ചെയ്യുക.</string>
     <string name="wikis_settings_name_save_cd">പേര് സംരക്ഷിക്കുക</string>
     <string name="wikis_settings_name_cancel_cd">എഡിറ്റ് റദ്ദാക്കുക</string>

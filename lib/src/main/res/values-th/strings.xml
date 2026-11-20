@@ -318,7 +318,6 @@
     <string name="error_server_https">ที่อยู่เซิร์ฟเวอร์ต้องขึ้นต้นด้วย https://</string>
     <string name="device_name_fallback">อุปกรณ์มือถือ</string>
     <string name="account_error_token_type">ไม่รองรับประเภทโทเค็นนี้</string>
-    <string name="account_error_caller">ไม่อนุญาตผู้เรียก</string>
     <string name="zone_sea">ในทะเล</string>
     <string name="access_remove">ลบ</string>
     <string name="access_remove_title">ลบสิทธิ์การเข้าถึง?</string>
@@ -344,4 +343,10 @@
     <string name="person_unknown">ไม่ทราบ</string>
     <string name="format_time_seconds_short">%1$s วิ.</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="downloads_started">กำลังดาวน์โหลด %1$s…</string>
+    <string name="downloads_saved">บันทึก %1$s แล้ว</string>
+    <string name="downloads_failed">บันทึก %1$s ไม่ได้: %2$s</string>
+    <string name="sync_conflict">มีการเปลี่ยนแปลงบนเซิร์ฟเวอร์</string>
+    <string name="sync_missing">ไม่มีอยู่บนเซิร์ฟเวอร์แล้ว</string>
+    <string name="sync_refused">เซิร์ฟเวอร์ปฏิเสธ</string>
 </resources>

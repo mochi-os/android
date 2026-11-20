@@ -364,4 +364,6 @@
     <string name="feeds_source_unfollowed">Pa swiv</string>
     <string name="feeds_source_follow_again">Swiv ankò</string>
     <string name="feeds_filtered_by_tag">Filtre pa tag:</string>
+    <string name="feeds_setup">Konfigire</string>
+    <string name="feeds_search_example">Chèche pa non, ID, fingerprint, URL, oswa %1$s</string>
 </resources>

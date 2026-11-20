@@ -22,6 +22,7 @@ import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.auth.SessionManager
+import org.mochios.android.files.Downloads
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
 import org.mochios.wikis.model.Attachment
@@ -87,6 +88,7 @@ class AttachmentsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val repository: WikisRepository,
     sessionManager: SessionManager,
+    private val downloads: Downloads,
 ) : ViewModel() {
 
     val wikiId: String = savedStateHandle.get<String>("wikiId").orEmpty()
@@ -95,11 +97,6 @@ class AttachmentsViewModel @Inject constructor(
     /** Origin of the Mochi server the session is bound to. Trimmed of trailing slash. */
     val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
-    /**
-     * Bearer token for this session, so the screen can add it to a
-     * [DownloadManager] request without touching [SessionManager].
-     */
-    val token: String? = sessionManager.getTokenBlocking("wikis")
 
     private val _uiState = MutableStateFlow(AttachmentsUiState())
     val uiState: StateFlow<AttachmentsUiState> = _uiState.asStateFlow()
@@ -195,6 +192,16 @@ class AttachmentsViewModel @Inject constructor(
 
     fun clearSearch() {
         _uiState.value = _uiState.value.copy(searchQuery = "")
+    }
+
+    // ---------------- Download ----------------
+
+    /**
+     * Saves attachment [id] into [destination], through the wikis client: the
+     * transfer outlives this screen, and says how it ended.
+     */
+    fun saveAttachment(id: String, name: String, destination: Uri) {
+        downloads.save(destination, name) { repository.attachmentFile(wikiId, id) }
     }
 
     // ---------------- Upload ----------------

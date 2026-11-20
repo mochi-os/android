@@ -7,6 +7,7 @@ package org.mochios.android.websocket
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Test
 
 /**
@@ -25,17 +26,41 @@ class SocketUrlTest {
     @Test
     fun `the handshake url carries only the subscription key`() {
         assertEquals(
-            "wss://mochi-os.org/_/websocket?key=abc123def",
-            socketUrl("wss://mochi-os.org", "abc123def"),
+            "https://mochi-os.org/_/websocket?key=abc123def",
+            socketUrl("https://mochi-os.org", "abc123def").toString(),
         )
     }
 
     @Test
     fun `no token appears in the url for any input`() {
-        for (base in listOf("wss://mochi-os.org", "ws://localhost:8081", "wss://self.hosted.example")) {
-            val url = socketUrl(base, "abc123def")
+        for (base in listOf("https://mochi-os.org", "http://localhost:8081", "https://self.hosted.example")) {
+            val url = socketUrl(base, "abc123def").toString()
             assertFalse("token must never be a query parameter: $url", url.contains("token"))
             assertFalse(url.contains("Bearer"))
         }
+    }
+
+    // A key can come from another server: one holding & or # must stay one
+    // value of the one parameter.
+    @Test
+    fun `a key is escaped into one query value`() {
+        val url = socketUrl("https://mochi-os.org", "a&token=x#b%c")!!
+        assertEquals(listOf("key"), url.queryParameterNames.toList())
+        assertEquals("a&token=x#b%c", url.queryParameter("key"))
+        assertEquals(null, url.fragment)
+    }
+
+    @Test
+    fun `the url is built on the server's origin alone`() {
+        assertEquals(
+            "http://localhost:8081/_/websocket?key=k",
+            socketUrl("http://localhost:8081/login/", "k").toString(),
+        )
+    }
+
+    @Test
+    fun `a blank key or an unreadable server opens nothing`() {
+        assertNull(socketUrl("https://mochi-os.org", " "))
+        assertNull(socketUrl("not a server", "k"))
     }
 }

@@ -6,8 +6,13 @@
 package org.mochios.android.auth
 
 import android.os.SystemClock
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.mochios.android.api.unwrapRaw
+import java.util.concurrent.ConcurrentHashMap
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -139,8 +144,7 @@ class AuthRepository @Inject constructor(
      * The app's JWT: the cached one while it has more than [Token.MARGIN] of
      * life left, otherwise a fresh mint. [fresh] forces the mint - the
      * bootstrap uses the mint's 401 as its session-liveness probe. A cached
-     * token the server has since rejected is cleared by the 401 handling on
-     * the request that carried it, so the next call here mints.
+     * token dies with its session, and the sign-out that follows clears it.
      */
     suspend fun fetchToken(app: String, fresh: Boolean = false): Result<String> {
         if (!fresh) {
@@ -150,11 +154,60 @@ class AuthRepository @Inject constructor(
             }
         }
         return runCatching {
+            val session = sessionManager.currentToken.first()
             val response = tokenApi.fetchToken(TokenRequest(Token.path(app))).unwrapRaw()
             sessionManager.saveToken(app, response.token)
+            hold(app, session, response.asset)
             response.token
         }
     }
+
+    /**
+     * [app]'s asset token, for the images, media and files the app shows from
+     * the user's server: the one held while it has more than
+     * [ASSET_MARGIN] of its half hour left and was minted for the session
+     * held now, otherwise a fresh mint. Null when there is no session, the
+     * mint fails, or the server issues none. Held in memory only: it lives
+     * half an hour. One mint at a time per app, so a screen of images asks
+     * once.
+     */
+    suspend fun asset(app: String): String? {
+        val session = sessionManager.currentToken.first() ?: return null
+        held(app, session)?.let { return it }
+        return minting.computeIfAbsent(app) { Mutex() }.withLock {
+            held(app, session)?.let { return@withLock it }
+            val response = try {
+                tokenApi.fetchToken(TokenRequest(Token.path(app))).unwrapRaw()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                return@withLock null
+            }
+            hold(app, session, response.asset)
+            held(app, session)
+        }
+    }
+
+    /** [asset] for the asset client's threads, which have no coroutine. */
+    fun assetBlocking(app: String): String? = runBlocking { asset(app) }
+
+    /** An asset token [app] holds for [session] with life left. */
+    private fun held(app: String, session: String): String? =
+        assets[app]
+            ?.takeIf { held -> held.session == session && Token.fresh(held.token, System.currentTimeMillis(), ASSET_MARGIN) }
+            ?.token
+
+    private fun hold(app: String, session: String?, asset: String) {
+        if (session == null || asset.isBlank()) return
+        assets[app] = HeldAsset(session, asset)
+    }
+
+    /** An asset token and the session it was minted for. */
+    private class HeldAsset(val session: String, val token: String)
+
+    private val assets = ConcurrentHashMap<String, HeldAsset>()
+
+    private val minting = ConcurrentHashMap<String, Mutex>()
 
     /**
      * Creates the signed-in user's identity and drops the held
@@ -176,7 +229,7 @@ class AuthRepository @Inject constructor(
      * either half drop the held answer.
      */
     suspend fun getIdentityInfo(): IdentityInfo {
-        val key = sessionManager.getServerUrlBlocking() + "|" +
+        val key = sessionManager.server.value + "|" +
             sessionManager.currentToken.first().orEmpty()
         val held = heldIdentity
         if (held != null && held.key == key &&
@@ -322,5 +375,8 @@ class AuthRepository @Inject constructor(
     private companion object {
         /** How long, in ms, an identity read stands for the same session. */
         const val IDENTITY_LIFETIME = 10_000L
+
+        /** How much life, in ms, a held asset token must have left to be used. */
+        const val ASSET_MARGIN = 5L * 60 * 1000
     }
 }

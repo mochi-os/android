@@ -425,4 +425,6 @@
     <string name="feeds_source_unfollowed">Gan leanúint</string>
     <string name="feeds_source_follow_again">Lean arís</string>
     <string name="feeds_filtered_by_tag">Scagtha de réir clibe:</string>
+    <string name="feeds_setup">Socraigh</string>
+    <string name="feeds_search_example">Cuardaigh de réir ainm, aitheantas, méarlorg, URL, nó %1$s</string>
 </resources>

@@ -269,7 +269,6 @@
     <string name="wikis_tag_dialog_empty">Etiket boş olamaz</string>
     <string name="wikis_attachments_search_placeholder">Ekleri ara</string>
     <string name="wikis_attachments_delete_confirm_message">\"%1$s\" silinsin mi? Bu geri alınamaz.</string>
-    <string name="wikis_attachments_downloading">İndiriliyor…</string>
     <string name="wikis_attachments_empty_description">Bu sayfaya dosya eklemek için Yükle\'ye dokunun.</string>
     <string name="wikis_settings_name_save_cd">Adı kaydet</string>
     <string name="wikis_settings_name_cancel_cd">Düzenlemeyi iptal et</string>

@@ -5,6 +5,7 @@
 
 package org.mochios.market.ui.account
 
+import org.mochios.android.api.OwnedAddress
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -275,7 +276,7 @@ private fun LoadMoreEffect(
 @Composable
 private fun ProfileHeaderCard(
     account: Account,
-    avatarUrl: String?,
+    avatarUrl: OwnedAddress?,
     accountId: String,
     joinedText: String?,
 ) {

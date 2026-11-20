@@ -5,6 +5,7 @@
 
 package org.mochios.android.ui.components
 
+import org.mochios.android.api.OwnedAddress
 import android.graphics.Bitmap
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
@@ -125,13 +126,13 @@ class TileVariantTest {
 
     @Test
     fun `the medium address is the preview's route with medium`() {
-        assertEquals("/feeds/f1/-/attachments/a1/medium", mediumAddress("/feeds/f1/-/attachments/a1/preview"))
+        assertEquals("/feeds/f1/-/attachments/a1/medium", mediumAddress(OwnedAddress.of("/feeds/f1/-/attachments/a1/preview"))?.address)
         assertEquals(
             "/forums/f1/-/attachments/a1/medium?server=x",
-            mediumAddress("/forums/f1/-/attachments/a1/preview?server=x"),
+            mediumAddress(OwnedAddress.of("/forums/f1/-/attachments/a1/preview?server=x"))?.address,
         )
         assertNull("no preview address, no medium", mediumAddress(null))
-        assertNull("not a preview address", mediumAddress("/feeds/f1/-/attachments/a1/thumbnail"))
+        assertNull("not a preview address", mediumAddress(OwnedAddress.of("/feeds/f1/-/attachments/a1/thumbnail"))?.address)
     }
 
     @Test

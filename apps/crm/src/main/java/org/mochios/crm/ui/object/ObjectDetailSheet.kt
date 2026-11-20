@@ -5,6 +5,7 @@
 
 package org.mochios.crm.ui.`object`
 
+import org.mochios.android.api.OwnedAddress
 import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -306,10 +307,10 @@ fun ObjectDetailSheet(
  * item. Null when an id, a peer's, cannot be one segment of the address
  * ([segment]).
  */
-internal fun commentAvatar(crmId: String, commentId: String): String? {
+internal fun commentAvatar(crmId: String, commentId: String): OwnedAddress? {
     val crm = segment(crmId) ?: return null
     val comment = segment(commentId) ?: return null
-    return "/crm/$crm/-/comment/$comment/asset/avatar"
+    return OwnedAddress.of("/crm/$crm/-/comment/$comment/asset/avatar")
 }
 
 /**
@@ -317,10 +318,10 @@ internal fun commentAvatar(crmId: String, commentId: String): String? {
  * rows. Null when an id, a peer's, cannot be one segment of the address
  * ([segment]).
  */
-internal fun activityAvatar(crmId: String, activityId: String): String? {
+internal fun activityAvatar(crmId: String, activityId: String): OwnedAddress? {
     val crm = segment(crmId) ?: return null
     val activity = segment(activityId) ?: return null
-    return "/crm/$crm/-/activity/$activity/asset/avatar"
+    return OwnedAddress.of("/crm/$crm/-/activity/$activity/asset/avatar")
 }
 
 /**
@@ -328,9 +329,9 @@ internal fun activityAvatar(crmId: String, activityId: String): String? {
  * order, replies included. Any comment on the item answers with its author's
  * picture, so every listed comment may stand in.
  */
-internal fun commentAvatars(comments: List<Comment>, crmId: String): Map<String, String> =
+internal fun commentAvatars(comments: List<Comment>, crmId: String): Map<String, OwnedAddress> =
     addressByAuthor(comments, { it.authorId }, { commentAvatar(crmId, it.id) }, { it.children })
 
 /** One avatar address per person across the activity tab, from their first row. */
-internal fun activityAvatars(activity: List<Activity>, crmId: String): Map<String, String> =
+internal fun activityAvatars(activity: List<Activity>, crmId: String): Map<String, OwnedAddress> =
     addressByAuthor(activity, { it.user }, { activityAvatar(crmId, it.id) })

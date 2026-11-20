@@ -192,4 +192,5 @@
     <string name="chat_refused_friends_only">يقبل %1$s المحادثات من الأصدقاء فقط.</string>
     <string name="chat_message_earlier">الرسائل السابقة لإضافة هذا الحساب إلى Mochi مشفرة ولا يمكن قراءتها هنا</string>
     <string name="chat_message_excluded">مشفرة لأجهزة أخرى فقط</string>
+    <string name="chat_setup">إعداد</string>
 </resources>

@@ -233,4 +233,5 @@
     <string name="forums_post_link">Enlace</string>
     <string name="forums_already_subscribed">Ya estás suscrito a este foro</string>
     <string name="forums_community_link">Enlace</string>
+    <string name="forums_find_search_example">Buscá por nombre, ID, huella, URL o %1$s</string>
 </resources>

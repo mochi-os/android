@@ -335,4 +335,6 @@
     </plurals>
     <string name="forums_comment_op">Pangarang</string>
     <string name="forums_community_destination">Dipasang ka %1$s salaku %2$s</string>
+    <string name="forums_find_search_example">Paluruh ku ngaran, ID, fingerprint, URL, atawa %1$s</string>
+    <string name="forums_setup">Pasang</string>
 </resources>

@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">Nayê şopandin</string>
     <string name="feeds_source_follow_again">Dîsa bişopîne</string>
     <string name="feeds_filtered_by_tag">Bi tagê hate parzûnkirin:</string>
+    <string name="feeds_setup">Saz bike</string>
+    <string name="feeds_search_example">Li gor nav, ID, fingerprint, URL an %1$s bigere</string>
 </resources>

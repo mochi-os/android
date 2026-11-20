@@ -371,4 +371,6 @@
     <string name="feeds_source_unfollowed">අනුගමනය නොකරයි</string>
     <string name="feeds_source_follow_again">නැවත අනුගමනය කරන්න</string>
     <string name="feeds_filtered_by_tag">ටැගයෙන් පෙරන ලද:</string>
+    <string name="feeds_setup">සකසන්න</string>
+    <string name="feeds_search_example">නම, ID, ඇඟිලි සලකුණ, URL, හෝ %1$s අනුව සොයන්න</string>
 </resources>

@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.editor
 
+import org.mochios.android.api.OwnedAddress
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
@@ -178,7 +179,7 @@ fun InsertAttachmentDialog(
 @Composable
 private fun AttachmentTile(
     attachment: Attachment,
-    thumbnailUrl: String?,
+    thumbnailUrl: OwnedAddress?,
     onClick: () -> Unit,
 ) {
     Column(

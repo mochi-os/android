@@ -52,6 +52,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.util.providerName
 
 /** Email-entry step of the sign-in flow: email field, passkey and the enabled OAuth
  *  providers. */
@@ -267,7 +268,7 @@ private fun InitialMethods(
         if (oauthScheme != null) {
             oauthProviders.forEach { provider ->
                 MethodButton(
-                    text = providerLabel(provider),
+                    text = providerName(provider),
                     iconRes = providerIcon(provider),
                     iconVector = if (providerIcon(provider) == null) {
                         Icons.Default.AccountCircle
@@ -398,7 +399,7 @@ private fun AccountMethods(
         if (oauthScheme != null) {
             oauthProviders.forEach { provider ->
                 MethodButton(
-                    text = providerLabel(provider),
+                    text = providerName(provider),
                     iconRes = providerIcon(provider),
                     iconVector = if (providerIcon(provider) == null) {
                         Icons.Default.AccountCircle
@@ -584,12 +585,6 @@ private fun MethodButton(
             Text(text)
         }
     }
-}
-
-private fun providerLabel(name: String): String = when (name.lowercase()) {
-    "github" -> "GitHub"
-    "x" -> "X"
-    else -> name.replaceFirstChar { char -> char.uppercase() }
 }
 
 private fun providerIcon(name: String): Int? = when (name.lowercase()) {

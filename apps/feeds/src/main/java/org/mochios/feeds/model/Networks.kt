@@ -93,15 +93,20 @@ data class PublishAccount(
 
 /**
  * What a public feed publishes to: the owner's accounts, the ids chosen, how
- * many copies the feed holds on each, and the Bluesky custom feed it is
- * published as from each hosted Bluesky account.
+ * many copies the feed holds on each, the Bluesky custom feed it is published
+ * as from each hosted Bluesky account, and the networks the server offers an
+ * account on that a feed publishes to.
  */
 data class PublishState(
     val accounts: List<PublishAccount> = emptyList(),
     val publish: List<String> = emptyList(),
     val copies: Map<String, Int> = emptyMap(),
     val generators: Map<String, String> = emptyMap(),
+    val offered: List<String> = emptyList(),
 )
+
+/** The networks the server hosts accounts on, which Find looks people up on. */
+data class HostedNetworks(val networks: List<String> = emptyList())
 
 /** The list as saved, and the copies kept on the accounts that left it, by account. */
 data class PublishSaved(
