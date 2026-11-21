@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Адамдар табылган жок</string>
     <string name="people_friends_try_adjusting">Издөөңүздү тууралап көрүңүз</string>
     <string name="people_friends_pending">Күтүүдө</string>
-    <string name="people_friends_received_tab">Алынды</string>
-    <string name="people_friends_sent_tab">Жөнөтүлдү</string>
     <string name="people_invitations_incoming">Келүүчү чакыруулар</string>
     <string name="people_invitations_empty">Күтүлгөн чакыруулар жок</string>
     <string name="people_invitations_empty_hint">Жаңы чакыруулар бул жерде көрүнөт</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s аттуу адамдын чакыруусу кабыл алынды</string>
     <string name="people_invitations_toast_declined">%1$s аттуу адамдын чакыруусу четке кагылды</string>
     <string name="people_invitations_toast_cancelled">%1$s аттуу адамга жөнөтүлгөн чакыруу жокко чыгарылды</string>
-    <string name="people_groups_empty">Топтор жок</string>
     <string name="people_group_delete_confirm">\"%1$s\" тобун өчүрөсүзбү? Бул аракетти артка кайтаруу мүмкүн эмес.</string>
     <string name="people_member_remove_confirm">%1$s аттуу адамды бул топтон чындап эле өчүргүңүз келеби?</string>
     <string name="people_member_remove_with_name">%1$s өчүрүү</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s сүрөтүн иштетүү мүмкүн болгон жок</string>
     <string name="people_profile_accent_invalid">Туура hex түсүн киргизиңиз (мисалы #a78bfa)</string>
     <string name="people_profile_accent_none">Эч кимиси</string>
-    <string name="people_profile_privacy_private_desc">Профилиңизди өз ара досторуңуз гана көрө алат</string>
     <string name="people_welcome_title">Адамдар бөлүмүнө кош келиңиз</string>
     <string name="people_person_banner_alt">%1$s үчүн баннер</string>
-    <string name="people_person_private">Бул профиль жашыруун</string>
     <string name="people_person_state_invited">Чакырылган</string>
 
     <string name="people_invitations_accept_all">Баарын кабыл алуу</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi боюнча досторду таап, байланышыңыз. Чакыруу жөнөтүү үчүн Байланыш кошуу баскычын басыңыз.</string>
     <string name="people_person_state_contact">Байланыштарда</string>
-    <string name="people_device_create">Түзүү</string>
-    <string name="people_device_add">Түзмөк кошуу</string>
-    <string name="people_device_username">Колдонуучунун аты</string>
-    <string name="people_device_done">Бүттү</string>
-    <string name="people_device_used">Акыркы колдонуу %1$s</string>
-    <string name="people_device_never">Эч качан</string>
     <string name="people_sync_now">Азыр синхрондоштуруу</string>
-    <string name="people_device_title">Туташтырылган түзмөктөр</string>
-    <string name="people_device_name">Түзмөктүн аты</string>
     <string name="people_device_address">Даректер китепчесинин URL дареги</string>
-    <string name="people_device_password">Сырсөз</string>
-    <string name="people_device_copy">%1$s көчүрүү</string>
-    <string name="people_device_warning">Бул сырсөздү азыр сактап коюңуз. Аны кайра көрсөтүү мүмкүн эмес.</string>
-    <string name="people_device_empty">Туташтырылган түзмөктөр жок.</string>
-    <string name="people_device_created">Түзүлдү %1$s</string>
-    <string name="people_device_delete">Түзмөктү өчүрүү</string>
-    <string name="people_device_delete_title">Түзмөк өчүрүлсүнбү?</string>
-    <string name="people_device_delete_message">Түзмөк мындан ары байланыштарды же календарларды шайкештире албайт.</string>
-    <string name="people_device_deleted">Түзмөк өчүрүлдү</string>
     <string name="people_sync_title">Ушул телефон менен синхрондоштуруу</string>
     <string name="people_sync_confirm">Ушул телефондун Байланыштар колдонмосунда достун байланышын өчүрсөңүз, достук да аяктайт.</string>
     <string name="people_sync_enable">Күйгүзүү</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Жөндөөлөр</string>
     <string name="people_contacts_invitation_sent">Чакыруу жөнөтүлдү</string>
     <string name="people_contact_keep">Калтыруу</string>
+    <string name="people_invitations_received_count">Алынды (%1$s)</string>
+    <string name="people_invitations_sent_count">Жөнөтүлдү (%1$s)</string>
+    <string name="people_contact_discard">Өзгөртүүлөрдү таштоо</string>
+    <string name="people_person_unavailable">Адам жеткиликсиз</string>
 </resources>

@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">No s\'ha trobat ningú</string>
     <string name="people_friends_try_adjusting">Prova d\'ajustar la cerca</string>
     <string name="people_friends_pending">Pendent</string>
-    <string name="people_friends_received_tab">Rebut</string>
-    <string name="people_friends_sent_tab">Enviat</string>
     <string name="people_invitations_incoming">Invitacions entrants</string>
     <string name="people_invitations_empty">Cap invitació pendent</string>
     <string name="people_invitations_empty_hint">Les invitacions noves apareixeran aquí</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">S\'ha acceptat la invitació de %1$s</string>
     <string name="people_invitations_toast_declined">S\'ha rebutjat la invitació de %1$s</string>
     <string name="people_invitations_toast_cancelled">S\'ha cancel·lat la invitació a %1$s</string>
-    <string name="people_groups_empty">No hi ha grups</string>
     <string name="people_group_delete_confirm">Voleu suprimir el grup \"%1$s\"? Aquesta acció no es pot desfer.</string>
     <string name="people_member_remove_confirm">Esteu segur que voleu eliminar %1$s d\'aquest grup?</string>
     <string name="people_member_remove_with_name">Elimina %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">No s\'ha pogut processar la imatge de %1$s</string>
     <string name="people_profile_accent_invalid">Introduïu un color hexadecimal vàlid (p. ex. #a78bfa)</string>
     <string name="people_profile_accent_none">Cap</string>
-    <string name="people_profile_privacy_private_desc">Només els amics mutus poden veure el vostre perfil</string>
     <string name="people_welcome_title">Us donem la benvinguda a Persones</string>
     <string name="people_person_banner_alt">Bàner de %1$s</string>
-    <string name="people_person_private">Aquest perfil és privat</string>
     <string name="people_person_state_invited">Convidat</string>
 
     <string name="people_invitations_accept_all">Accepta-ho tot</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Trobeu amics per tot Mochi i connecteu-vos-hi. Toqueu Afegeix un contacte per enviar una invitació.</string>
     <string name="people_person_state_contact">Als contactes</string>
-    <string name="people_device_create">Crea</string>
-    <string name="people_device_add">Afegeix un dispositiu</string>
-    <string name="people_device_username">Nom d\'usuari</string>
-    <string name="people_device_done">Fet</string>
-    <string name="people_device_used">Darrer ús %1$s</string>
-    <string name="people_device_never">Mai</string>
     <string name="people_sync_now">Sincronitza ara</string>
-    <string name="people_device_title">Dispositius connectats</string>
-    <string name="people_device_name">Nom del dispositiu</string>
     <string name="people_device_address">URL de la llibreta d\'adreces</string>
-    <string name="people_device_password">Contrasenya</string>
-    <string name="people_device_copy">Copia %1$s</string>
-    <string name="people_device_warning">Deseu aquesta contrasenya ara. No es podrà tornar a mostrar.</string>
-    <string name="people_device_empty">No hi ha cap dispositiu connectat.</string>
-    <string name="people_device_created">Creat %1$s</string>
-    <string name="people_device_delete">Suprimeix el dispositiu</string>
-    <string name="people_device_delete_title">Voleu suprimir el dispositiu?</string>
-    <string name="people_device_delete_message">El dispositiu ja no podrà sincronitzar els contactes ni els calendaris.</string>
-    <string name="people_device_deleted">S\'ha suprimit el dispositiu</string>
     <string name="people_sync_title">Sincronitza amb aquest telèfon</string>
     <string name="people_sync_confirm">Si suprimiu el contacte d\'un amic a l\'aplicació Contactes d\'aquest telèfon, també s\'acaba l\'amistat.</string>
     <string name="people_sync_enable">Activa</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Configuració</string>
     <string name="people_contacts_invitation_sent">Invitació enviada</string>
     <string name="people_contact_keep">Conserva</string>
+    <string name="people_invitations_received_count">Rebut (%1$s)</string>
+    <string name="people_invitations_sent_count">Enviat (%1$s)</string>
+    <string name="people_contact_discard">Descarta els canvis</string>
+    <string name="people_person_unavailable">Persona no disponible</string>
 </resources>

@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ხალხი ვერ მოიძებნა</string>
     <string name="people_friends_try_adjusting">სცადეთ ძიების შეცვლა</string>
     <string name="people_friends_pending">მოლოდინში</string>
-    <string name="people_friends_received_tab">მიღებული</string>
-    <string name="people_friends_sent_tab">გაგზავნილი</string>
     <string name="people_invitations_incoming">შემომავალი მოწვევები</string>
     <string name="people_invitations_empty">მოლოდინში მყოფი მოწვევები არ არის</string>
     <string name="people_invitations_empty_hint">ახალი მოწვევები აქ გამოჩნდება</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s-ის მოწვევა მიღებულია</string>
     <string name="people_invitations_toast_declined">%1$s-ის მოწვევა უარყოფილია</string>
     <string name="people_invitations_toast_cancelled">%1$s-ისთვის გაგზავნილი მოწვევა გაუქმებულია</string>
-    <string name="people_groups_empty">ჯგუფები არ არის</string>
     <string name="people_group_delete_confirm">წაიშალოს ჯგუფი \"%1$s\"? ეს მოქმედება შეუქცევადია.</string>
     <string name="people_member_remove_confirm">ნამდვილად გსურთ %1$s-ის წაშლა ამ ჯგუფიდან?</string>
     <string name="people_member_remove_with_name">%1$s-ის წაშლა</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s სურათის დამუშავება ვერ მოხერხდა</string>
     <string name="people_profile_accent_invalid">შეიყვანეთ სწორი hex-ფერი (მაგ. #a78bfa)</string>
     <string name="people_profile_accent_none">არცერთი</string>
-    <string name="people_profile_privacy_private_desc">მხოლოდ ორმხრივ მეგობრებს შეუძლიათ თქვენი პროფილის ნახვა</string>
     <string name="people_welcome_title">კეთილი იყოს თქვენი მობრძანება აპში „ადამიანები“</string>
     <string name="people_person_banner_alt">%1$s-ის ბანერი</string>
-    <string name="people_person_private">ეს პროფილი დახურულია</string>
     <string name="people_person_state_invited">მოწვეული</string>
 
     <string name="people_invitations_accept_all">ყველას მიღება</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">იპოვეთ მეგობრები Mochi-ს მასშტაბით და დაუკავშირდით. მოსაწვევის გასაგზავნად შეეხეთ კონტაქტის დამატებას.</string>
     <string name="people_person_state_contact">კონტაქტებშია</string>
-    <string name="people_device_create">შექმნა</string>
-    <string name="people_device_add">მოწყობილობის დამატება</string>
-    <string name="people_device_username">მომხმარებლის სახელი</string>
-    <string name="people_device_done">მზადაა</string>
-    <string name="people_device_used">ბოლოს გამოყენებული %1$s</string>
-    <string name="people_device_never">არასოდეს</string>
     <string name="people_sync_now">ახლავე სინქრონიზება</string>
-    <string name="people_device_title">დაკავშირებული მოწყობილობები</string>
-    <string name="people_device_name">მოწყობილობის სახელი</string>
     <string name="people_device_address">მისამართების წიგნის URL</string>
-    <string name="people_device_password">პაროლი</string>
-    <string name="people_device_copy">%1$s კოპირება</string>
-    <string name="people_device_warning">შეინახეთ ეს პაროლი ახლავე. მისი ხელახლა ჩვენება შეუძლებელია.</string>
-    <string name="people_device_empty">დაკავშირებული მოწყობილობები არ არის.</string>
-    <string name="people_device_created">შექმნილია %1$s</string>
-    <string name="people_device_delete">მოწყობილობის წაშლა</string>
-    <string name="people_device_delete_title">წაიშალოს მოწყობილობა?</string>
-    <string name="people_device_delete_message">მოწყობილობა ვეღარ შეძლებს კონტაქტების ან კალენდრების სინქრონიზაციას.</string>
-    <string name="people_device_deleted">მოწყობილობა წაიშალა</string>
     <string name="people_sync_title">სინქრონიზება ამ ტელეფონთან</string>
     <string name="people_sync_confirm">ამ ტელეფონის კონტაქტების აპში მეგობრის კონტაქტის წაშლა მეგობრობასაც ასრულებს.</string>
     <string name="people_sync_enable">ჩართვა</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">პარამეტრები</string>
     <string name="people_contacts_invitation_sent">მოწვევა გაიგზავნა</string>
     <string name="people_contact_keep">შენარჩუნება</string>
+    <string name="people_invitations_received_count">მიღებული (%1$s)</string>
+    <string name="people_invitations_sent_count">გაგზავნილი (%1$s)</string>
+    <string name="people_contact_discard">ცვლილებების გადაგდება</string>
+    <string name="people_person_unavailable">პირი მიუწვდომელია</string>
 </resources>

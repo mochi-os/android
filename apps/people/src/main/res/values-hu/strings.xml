@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Nem találhatók személyek</string>
     <string name="people_friends_try_adjusting">Próbálja módosítani a keresést</string>
     <string name="people_friends_pending">Függőben</string>
-    <string name="people_friends_received_tab">Kézhez kapva</string>
-    <string name="people_friends_sent_tab">Elküldve</string>
     <string name="people_invitations_incoming">Beérkező meghívások</string>
     <string name="people_invitations_empty">Nincsenek függő meghívók</string>
     <string name="people_invitations_empty_hint">Az új meghívók itt jelennek meg</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Elfogadta %1$s meghívóját</string>
     <string name="people_invitations_toast_declined">Elutasította %1$s meghívóját</string>
     <string name="people_invitations_toast_cancelled">Visszavonta a %1$s részére küldött meghívót</string>
-    <string name="people_groups_empty">Nincsenek csoportok</string>
     <string name="people_group_delete_confirm">Törli a(z) \"%1$s\" csoportot? Ez nem vonható vissza.</string>
     <string name="people_member_remove_confirm">Biztosan eltávolítja %1$s nevű tagot ebből a csoportból?</string>
     <string name="people_member_remove_with_name">%1$s eltávolítása</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s kép feldolgozása sikertelen</string>
     <string name="people_profile_accent_invalid">Adjon meg érvényes hexadecimális színt (pl. #a78bfa)</string>
     <string name="people_profile_accent_none">Nincs</string>
-    <string name="people_profile_privacy_private_desc">Csak a kölcsönös ismerősök tekinthetik meg a profilját</string>
     <string name="people_welcome_title">Üdvözöljük a Személyek alkalmazásban</string>
     <string name="people_person_banner_alt">%1$s borítóképe</string>
-    <string name="people_person_private">Ez a profil zárt</string>
     <string name="people_person_state_invited">Meghívva</string>
 
     <string name="people_invitations_accept_all">Összes elfogadása</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Találjon ismerősöket a Mochi egészén, és lépjen velük kapcsolatba. Meghívó küldéséhez koppintson a Névjegy hozzáadása lehetőségre.</string>
     <string name="people_person_state_contact">A névjegyek között</string>
-    <string name="people_device_create">Létrehozás</string>
-    <string name="people_device_add">Eszköz hozzáadása</string>
-    <string name="people_device_username">Felhasználónév</string>
-    <string name="people_device_done">Kész</string>
-    <string name="people_device_used">Utoljára használva %1$s</string>
-    <string name="people_device_never">Soha</string>
     <string name="people_sync_now">Szinkronizálás most</string>
-    <string name="people_device_title">Csatlakoztatott eszközök</string>
-    <string name="people_device_name">Eszköz neve</string>
     <string name="people_device_address">Címjegyzék URL-je</string>
-    <string name="people_device_password">Jelszó</string>
-    <string name="people_device_copy">%1$s másolása</string>
-    <string name="people_device_warning">Mentse el ezt a jelszót most. Később nem jeleníthető meg újra.</string>
-    <string name="people_device_empty">Nincs csatlakoztatott eszköz.</string>
-    <string name="people_device_created">Létrehozva: %1$s</string>
-    <string name="people_device_delete">Eszköz törlése</string>
-    <string name="people_device_delete_title">Törli az eszközt?</string>
-    <string name="people_device_delete_message">Az eszköz többé nem tudja szinkronizálni a névjegyeket és a naptárakat.</string>
-    <string name="people_device_deleted">Eszköz törölve</string>
     <string name="people_sync_title">Szinkronizálás erre a telefonra</string>
     <string name="people_sync_confirm">Ha egy ismerős névjegyét törli ennek a telefonnak a Névjegyek alkalmazásában, az ismeretség is megszűnik.</string>
     <string name="people_sync_enable">Bekapcsolás</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Beállítások</string>
     <string name="people_contacts_invitation_sent">Meghívó elküldve</string>
     <string name="people_contact_keep">Megtartás</string>
+    <string name="people_invitations_received_count">Kézhez kapva (%1$s)</string>
+    <string name="people_invitations_sent_count">Elküldve (%1$s)</string>
+    <string name="people_contact_discard">Módosítások elvetése</string>
+    <string name="people_person_unavailable">A személy nem elérhető</string>
 </resources>

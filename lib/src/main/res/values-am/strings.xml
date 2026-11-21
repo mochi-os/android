@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ጨዋታውን ቀጥሏል</string>
     <string name="game_not_found">ጨዋታው አልተገኘም</string>
     <string name="game_chat_move_played_you">እርስዎ %1$s ተጫውተዋል</string>
+    <string name="devices_add">መሳሪያ ያክሉ</string>
+    <string name="devices_copy">%1$s ቅዳ</string>
+    <string name="devices_create">ፍጠር</string>
+    <string name="devices_created">የተፈጠረ %1$s</string>
+    <string name="devices_delete">መሳሪያ ሰርዝ</string>
+    <string name="devices_delete_message">መሳሪያው ከእንግዲህ እውቂያዎችን ወይም የቀን መቁጠሪያዎችን ማመሳሰል አይችልም።</string>
+    <string name="devices_delete_title">መሳሪያውን ይሰረዝ?</string>
+    <string name="devices_deleted">መሳሪያው ተሰርዟል</string>
+    <string name="devices_done">ተጠናቅቋል</string>
+    <string name="devices_empty">ምንም መሳሪያ አልተገናኘም</string>
+    <string name="devices_name">የመሳሪያ ስም</string>
+    <string name="devices_password">የይለፍ ቃል</string>
+    <string name="devices_title">የተገናኙ መሳሪያዎች</string>
+    <string name="devices_used">መጨረሻ የተጠቀመው %1$s</string>
+    <string name="devices_username">የተጠቃሚ ስም</string>
+    <string name="devices_warning">የይለፍ ቃሉን አሁን ቅዳ፦ እንደገና ሊታይ አይችልም።</string>
+    <string name="devices_unused">ጥቅም ላይ ውሎ አያውቅም</string>
 </resources>

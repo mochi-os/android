@@ -11,5 +11,12 @@ package org.mochios.android.util
  * and is never cut in half, where `take` counts UTF-16 units.
  */
 fun characters(text: String, maximum: Int): String =
-    if (text.codePointCount(0, text.length) <= maximum) text
+    if (length(text) <= maximum) text
     else text.substring(0, text.offsetByCodePoints(0, maximum))
+
+/**
+ * How many characters [text] holds, counted as the server counts a limit a
+ * person types against: by code point, where `String.length` counts UTF-16
+ * units and an emoji counts two.
+ */
+fun length(text: String): Int = text.codePointCount(0, text.length)

@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s lîstik ji nû ve dest pê kir</string>
     <string name="game_not_found">Lîstik nehat dîtin</string>
     <string name="game_chat_move_played_you">Te %1$s lîst</string>
+    <string name="devices_add">Cîhazekê zêde bike</string>
+    <string name="devices_copy">%1$s kopî bike</string>
+    <string name="devices_create">Çêbike</string>
+    <string name="devices_created">Hat çêkirin %1$s</string>
+    <string name="devices_delete">Cîhazê jê bibe</string>
+    <string name="devices_delete_message">Cîhaz êdî nikare kontakt an salnameyan hevdem bike.</string>
+    <string name="devices_delete_title">Cîhaz were jêbirin?</string>
+    <string name="devices_deleted">Cîhaz hate jêbirin</string>
+    <string name="devices_done">Qediya</string>
+    <string name="devices_empty">Tu cîhaz ne girêdayî ye</string>
+    <string name="devices_name">Navê cîhazê</string>
+    <string name="devices_password">Şîfre</string>
+    <string name="devices_title">Cîhazên girêdayî</string>
+    <string name="devices_used">Bikaranîna dawî %1$s</string>
+    <string name="devices_username">Navê bikarhêner</string>
+    <string name="devices_warning">Şîfreyê niha kopî bike: careke din nayê nîşandan.</string>
+    <string name="devices_unused">Qet nehatiye bikaranîn</string>
 </resources>

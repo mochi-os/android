@@ -11,7 +11,6 @@ import org.junit.Test
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.model.Zone
 import org.mochios.calendars.navigation.CalendarsApp
-import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.router.CalendarsSection
 import org.mochios.calendars.ui.router.calendarsView
 import org.mochios.calendars.ui.router.sharedView
@@ -81,7 +80,6 @@ class CalendarsRouterTest {
             CalendarsApp.EVENT_EDIT,
             CalendarsApp.newEvent(0),
             CalendarsApp.event("event-1", 1_790_067_600),
-            CalendarsApp.copyEvent("event-1", 1_790_067_600, Scope.ONE),
             CalendarsApp.copyOccurrence(Instance(summary = "Tea")),
         )
         for (route in routes) {
@@ -99,16 +97,25 @@ class CalendarsRouterTest {
         assertEquals("calendars/events/new?start=0", CalendarsApp.newEvent())
     }
 
+    /**
+     * A moved occurrence opens at the occurrence its override replaces, which
+     * the listing names; a core that does not name it gives the override's own
+     * start, and the route says so, for the editor to find it by that.
+     */
     @Test
-    fun `a copy of a stored event names it, the occurrence and how far the copy reaches`() {
+    fun `an occurrence opens at the one its override replaces`() {
+        val moved = Instance(event = "event-1", start = 1_790_172_000, recurring = true, exception = true, replaced = 1_790_067_600)
+        assertEquals("calendars/events/edit/event-1?occurrence=1790067600", CalendarsApp.event(moved))
         assertEquals(
-            "calendars/events/new?source=event&copy=event-1&occurrence=1790067600&scope=one",
-            CalendarsApp.copyEvent("event-1", 1_790_067_600, Scope.ONE),
+            "calendars/events/edit/event-1?occurrence=1790172000&moved=1",
+            CalendarsApp.event(moved.copy(replaced = null)),
         )
         assertEquals(
-            "calendars/events/new?source=event&copy=event-1&occurrence=0&scope=all",
-            CalendarsApp.copyEvent("event-1", 0, Scope.ALL),
+            "calendars/events/edit/event-1?occurrence=1790067600",
+            CalendarsApp.event(Instance(event = "event-1", start = 1_790_067_600, recurring = true)),
         )
+        assertEquals("calendars/events/edit/event-1?occurrence=0", CalendarsApp.event(Instance(event = "event-1", start = 5)))
+        assertTrue(CalendarsApp.EVENT_EDIT.contains("&moved={moved}"))
     }
 
     /**
@@ -146,7 +153,6 @@ class CalendarsRouterTest {
     @Test
     fun `every parameter a copy route carries is one the new-event pattern names`() {
         val routes = listOf(
-            CalendarsApp.copyEvent("event-1", 1, Scope.ALL),
             CalendarsApp.copyOccurrence(Instance(summary = "Tea", date = "2026-09-16", zone = Zone("a", "b"))),
         )
         for (route in routes) {

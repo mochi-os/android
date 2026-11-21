@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ක්‍රීඩාව නැවත ආරම්භ කළා</string>
     <string name="game_not_found">ක්‍රීඩාව හමු නොවීය</string>
     <string name="game_chat_move_played_you">ඔබ %1$s ක්‍රීඩා කළා</string>
+    <string name="devices_add">උපාංගයක් එක් කරන්න</string>
+    <string name="devices_copy">%1$s පිටපත් කරන්න</string>
+    <string name="devices_create">නිර්මාණය කරන්න</string>
+    <string name="devices_created">සාදන ලදී %1$s</string>
+    <string name="devices_delete">උපාංගය මකන්න</string>
+    <string name="devices_delete_message">උපාංගයට තවදුරටත් සම්බන්ධතා හෝ දින දර්ශන සමමුහුර්ත කළ නොහැක.</string>
+    <string name="devices_delete_title">උපාංගය මකන්නද?</string>
+    <string name="devices_deleted">උපාංගය මකා දමන ලදී</string>
+    <string name="devices_done">නිමයි</string>
+    <string name="devices_empty">උපාංග කිසිවක් සම්බන්ධ කර නැත</string>
+    <string name="devices_name">උපාංගයේ නම</string>
+    <string name="devices_password">මුරපදය</string>
+    <string name="devices_title">සම්බන්ධිත උපාංග</string>
+    <string name="devices_used">අවසන් භාවිතය %1$s</string>
+    <string name="devices_username">පරිශීලක නාමය</string>
+    <string name="devices_warning">මුරපදය දැන් පිටපත් කරන්න: එය නැවත පෙන්විය නොහැක.</string>
+    <string name="devices_unused">කවදාවත් භාවිත කර නැත</string>
 </resources>

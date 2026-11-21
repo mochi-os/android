@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Heb ddod o hyd i bobl</string>
     <string name="people_friends_try_adjusting">Ceisiwch addasu eich chwiliad</string>
     <string name="people_friends_pending">Ar y gweill</string>
-    <string name="people_friends_received_tab">Wedi derbyn</string>
-    <string name="people_friends_sent_tab">Wedi anfon</string>
     <string name="people_invitations_incoming">Gwahoddiadau sy\'n dod i mewn</string>
     <string name="people_invitations_empty">Dim gwahoddiadau ar y gweill</string>
     <string name="people_invitations_empty_hint">Bydd gwahoddiadau newydd yn ymddangos yma</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Derbyniwyd gwahoddiad gan %1$s</string>
     <string name="people_invitations_toast_declined">Gwrthodwyd gwahoddiad gan %1$s</string>
     <string name="people_invitations_toast_cancelled">Canslwyd gwahoddiad at %1$s</string>
-    <string name="people_groups_empty">Dim grwpiau</string>
     <string name="people_group_delete_confirm">Dileu grŵp \"%1$s\"? Ni ellir dadwneud hyn.</string>
     <string name="people_member_remove_confirm">Ydych chi\'n siŵr eich bod am dynnu %1$s o\'r grŵp hwn?</string>
     <string name="people_member_remove_with_name">Tynnu %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Methwyd prosesu delwedd %1$s</string>
     <string name="people_profile_accent_invalid">Rhowch liw hecs dilys (e.e. #a78bfa)</string>
     <string name="people_profile_accent_none">Dim</string>
-    <string name="people_profile_privacy_private_desc">Dim ond ffrindiau cyffredin all weld eich proffil</string>
     <string name="people_welcome_title">Croeso i Pobl</string>
     <string name="people_person_banner_alt">Baner ar gyfer %1$s</string>
-    <string name="people_person_private">Mae\'r proffil hwn yn breifat</string>
     <string name="people_person_state_invited">Wedi\'i wahodd</string>
 
     <string name="people_invitations_accept_all">Derbyn popeth</string>
@@ -181,25 +176,8 @@
     </plurals>
     <string name="people_welcome_body">Dewch o hyd i ffrindiau ar draws Mochi a chysylltu â nhw. Tapiwch Ychwanegu cysylltiad i anfon gwahoddiad.</string>
     <string name="people_person_state_contact">Yn y cysylltiadau</string>
-    <string name="people_device_create">Creu</string>
-    <string name="people_device_add">Ychwanegu dyfais</string>
-    <string name="people_device_username">Enw defnyddiwr</string>
-    <string name="people_device_done">Wedi gorffen</string>
-    <string name="people_device_used">Defnyddiwyd ddiwethaf %1$s</string>
-    <string name="people_device_never">Byth</string>
     <string name="people_sync_now">Cysoni nawr</string>
-    <string name="people_device_title">Dyfeisiau cysylltiedig</string>
-    <string name="people_device_name">Enw\'r ddyfais</string>
     <string name="people_device_address">URL y llyfr cyfeiriadau</string>
-    <string name="people_device_password">Cyfrinair</string>
-    <string name="people_device_copy">Copïo %1$s</string>
-    <string name="people_device_warning">Cadwch y cyfrinair hwn nawr. Ni ellir ei ddangos eto.</string>
-    <string name="people_device_empty">Dim dyfeisiau wedi\'u cysylltu.</string>
-    <string name="people_device_created">Wedi\'i greu %1$s</string>
-    <string name="people_device_delete">Dileu dyfais</string>
-    <string name="people_device_delete_title">Dileu\'r ddyfais?</string>
-    <string name="people_device_delete_message">Ni fydd y ddyfais yn gallu cysoni cysylltiadau na chalendrau mwyach.</string>
-    <string name="people_device_deleted">Dyfais wedi\'i dileu</string>
     <string name="people_sync_title">Cysoni i\'r ffôn hwn</string>
     <string name="people_sync_confirm">Mae dileu cyswllt ffrind yn ap Cysylltiadau\'r ffôn hwn hefyd yn dod â\'r cyfeillgarwch i ben.</string>
     <string name="people_sync_enable">Troi ymlaen</string>
@@ -231,4 +209,8 @@
     <string name="people_profile_settings">Gosodiadau</string>
     <string name="people_contacts_invitation_sent">Gwahoddiad wedi\'i anfon</string>
     <string name="people_contact_keep">Cadw</string>
+    <string name="people_invitations_received_count">Wedi derbyn (%1$s)</string>
+    <string name="people_invitations_sent_count">Wedi anfon (%1$s)</string>
+    <string name="people_contact_discard">Hepgor newidiadau</string>
+    <string name="people_person_unavailable">Person ddim ar gael</string>
 </resources>

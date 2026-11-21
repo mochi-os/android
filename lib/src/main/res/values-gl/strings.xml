@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s retomou a partida</string>
     <string name="game_not_found">Non se atopou a partida</string>
     <string name="game_chat_move_played_you">Xogaches %1$s</string>
+    <string name="devices_add">Engadir un dispositivo</string>
+    <string name="devices_copy">Copiar %1$s</string>
+    <string name="devices_create">Crear</string>
+    <string name="devices_created">Creado %1$s</string>
+    <string name="devices_delete">Eliminar o dispositivo</string>
+    <string name="devices_delete_message">O dispositivo xa non poderá sincronizar os contactos nin os calendarios.</string>
+    <string name="devices_delete_title">Eliminar o dispositivo?</string>
+    <string name="devices_deleted">Dispositivo eliminado</string>
+    <string name="devices_done">Feito</string>
+    <string name="devices_empty">Non hai dispositivos conectados</string>
+    <string name="devices_name">Nome do dispositivo</string>
+    <string name="devices_password">Contrasinal</string>
+    <string name="devices_title">Dispositivos conectados</string>
+    <string name="devices_used">Último uso %1$s</string>
+    <string name="devices_username">Nome de usuario</string>
+    <string name="devices_warning">Copia o contrasinal agora: non se poderá mostrar de novo.</string>
+    <string name="devices_unused">Nunca usado</string>
 </resources>

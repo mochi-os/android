@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Adamlar tapylmady</string>
     <string name="people_friends_try_adjusting">Gözlegiňi düzelt</string>
     <string name="people_friends_pending">Garaşylýar</string>
-    <string name="people_friends_received_tab">Alyndy</string>
-    <string name="people_friends_sent_tab">Iberildi</string>
     <string name="people_invitations_incoming">Gelýän çakylyklar</string>
     <string name="people_invitations_empty">Garaşylýan çakylyklar ýok</string>
     <string name="people_invitations_empty_hint">Täze çakylyklar şu ýerde peýda bolar</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s tarapyndan çakylyk kabul edildi</string>
     <string name="people_invitations_toast_declined">%1$s tarapyndan çakylyk ret edildi</string>
     <string name="people_invitations_toast_cancelled">%1$s adama iberilen çakylyk goýbolsun edildi</string>
-    <string name="people_groups_empty">Topar ýok</string>
     <string name="people_group_delete_confirm">\"%1$s\" topary pozulsynmy? Muny yzyna gaýtaryp bolmaýar.</string>
     <string name="people_member_remove_confirm">%1$s bu topardan aýyrmak isleýändigiňize ynanýarsyňyzmy?</string>
     <string name="people_member_remove_with_name">%1$s aýyrmak</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s suraty işläp bilinmedi</string>
     <string name="people_profile_accent_invalid">Dogry on altylyk reňk giriziň (mysal #a78bfa)</string>
     <string name="people_profile_accent_none">Hiç biri</string>
-    <string name="people_profile_privacy_private_desc">Profiliňizi diňe özara dostlar görüp biler</string>
     <string name="people_welcome_title">Adamlara hoş geldiňiz</string>
     <string name="people_person_banner_alt">%1$s üçin baner</string>
-    <string name="people_person_private">Bu profil hususy</string>
     <string name="people_person_state_invited">Çakylyk iberildi</string>
 
     <string name="people_invitations_accept_all">Hemmesini kabul et</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi boýunça dostlary tapyň we aragatnaşyk guruň. Çakylyk ibermek üçin Kontakt goş düwmesine basyň.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>
-    <string name="people_device_create">Döretmek</string>
-    <string name="people_device_add">Enjam goş</string>
-    <string name="people_device_username">Ulanyjy ady</string>
-    <string name="people_device_done">Taýýar</string>
-    <string name="people_device_used">Iň soňky ulanyş %1$s</string>
-    <string name="people_device_never">Hiç haçan</string>
     <string name="people_sync_now">Indi sinhronlaşdyr</string>
-    <string name="people_device_title">Birikdirilen enjamlar</string>
-    <string name="people_device_name">Enjamyň ady</string>
     <string name="people_device_address">Salgy kitabynyň URL-i</string>
-    <string name="people_device_password">Parol</string>
-    <string name="people_device_copy">%1$s nusgala</string>
-    <string name="people_device_warning">Bu paroly häzir ýatda sakla. Ony gaýtadan görkezip bolmaz.</string>
-    <string name="people_device_empty">Birikdirilen enjam ýok.</string>
-    <string name="people_device_created">Döredildi %1$s</string>
-    <string name="people_device_delete">Enjamy poz</string>
-    <string name="people_device_delete_title">Enjam pozulsynmy?</string>
-    <string name="people_device_delete_message">Enjam indi kontaktlary ýa-da senenamalary sinhronlap bilmez.</string>
-    <string name="people_device_deleted">Enjam pozuldy</string>
     <string name="people_sync_title">Bu telefon bilen sinhronlaşdyr</string>
     <string name="people_sync_confirm">Bu telefonyň Kontaktlar programmasynda dostuň kontaktyny pozmak dostlugy hem tamamlaýar.</string>
     <string name="people_sync_enable">Işjeňleşdir</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Sazlamalar</string>
     <string name="people_contacts_invitation_sent">Çakylyk iberildi</string>
     <string name="people_contact_keep">Saklamak</string>
+    <string name="people_invitations_received_count">Alyndy (%1$s)</string>
+    <string name="people_invitations_sent_count">Iberildi (%1$s)</string>
+    <string name="people_contact_discard">Üýtgetmeleri taşla</string>
+    <string name="people_person_unavailable">Adam elýeterli däl</string>
 </resources>

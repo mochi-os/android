@@ -261,6 +261,124 @@ class EditorFlowTest {
     }
 
     @Test
+    fun `a refused save keeps Reload on screen until it is answered`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        respond("-/events/update", changed)
+        val model = show("event" to "e1")
+        waitFor("Stand-up")
+        title().performTextReplacement("Stand-up, moved")
+        model.save()
+        waitFor(string(R.string.calendars_reload))
+        rule.mainClock.advanceTimeBy(30_000)
+        rule.onNodeWithText(string(R.string.calendars_reload)).assertExists()
+    }
+
+    @Test
+    fun `after a refused save, leaving asks before the change is dropped, and then goes`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        respond("-/events/update", changed)
+        val model = show("event" to "e1")
+        waitFor("Stand-up")
+        title().performTextReplacement("Stand-up, moved")
+        model.save()
+        waitFor(string(R.string.calendars_event_changed))
+        model.leave()
+        waitFor(string(R.string.calendars_discard_title))
+        assertFalse(left)
+        rule.onNodeWithText(string(R.string.calendars_discard)).performClick()
+        answered { left }
+        assertEquals(1, asked.count { it == "-/events/update" })
+    }
+
+    @Test
+    fun `a save leaving makes that is refused asks before the change is dropped`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        respond("-/events/update", changed)
+        val model = show("event" to "e1")
+        waitFor("Stand-up")
+        title().performTextReplacement("Stand-up, moved")
+        model.leave()
+        waitFor(string(R.string.calendars_discard_title))
+        assertFalse(left)
+        rule.onNodeWithText(string(R.string.calendars_discard)).performClick()
+        answered { left }
+        assertEquals(1, asked.count { it == "-/events/update" })
+    }
+
+    /** A daily series from the 2nd whose occurrence of the 5th, 11:00 London, was moved to the 6th at 15:00. */
+    private fun late() = ok(
+        """{"event": {"id": "e1", "calendar": "c1", "etag": "a", "recurring": true, "components": [
+            {"name": "VEVENT", "properties": [
+                {"name": "UID", "params": {}, "value": "uid-1"},
+                {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
+                {"name": "DTSTART", "params": {}, "value": "20261002T100000Z"},
+                {"name": "DTEND", "params": {}, "value": "20261002T110000Z"},
+                {"name": "RRULE", "params": {}, "value": "FREQ=DAILY"}
+            ], "components": []},
+            {"name": "VEVENT", "properties": [
+                {"name": "UID", "params": {}, "value": "uid-1"},
+                {"name": "SUMMARY", "params": {}, "value": "Late"},
+                {"name": "RECURRENCE-ID", "params": {}, "value": "20261005T100000Z"},
+                {"name": "DTSTART", "params": {}, "value": "20261006T140000Z"},
+                {"name": "DTEND", "params": {}, "value": "20261006T150000Z"}
+            ], "components": []}
+        ]}}""",
+    )
+
+    /**
+     * A moved occurrence opens on its own override, found by the occurrence
+     * it replaces, and "This event" replaces that override rather than adding
+     * a second; it goes on being found after the save. A core that does not
+     * name the occurrence gives the override's own start, which finds it too.
+     */
+    @Test
+    fun `a moved occurrence opens on its own override, and this event replaces it`() =
+        opensMoved("occurrence" to "1791194400")
+
+    @Test
+    fun `a moved occurrence a core lists only where it now falls opens on its override too`() =
+        opensMoved("occurrence" to "1791295200", "moved" to "1")
+
+    private fun opensMoved(vararg route: Pair<String, String>) {
+        respond("-/events/get", late())
+        respond("-/events/update", late())
+        val model = show("event" to "e1", *route)
+        waitFor("Late")
+        assertEquals(1_791_194_400L, model.uiState.value.moment)
+        title().performTextReplacement("Late, again")
+        model.save()
+        rule.waitUntil(5_000) {
+            rule.onAllNodesWithText(string(R.string.calendars_scope_save)).fetchSemanticsNodes().isNotEmpty()
+        }
+        model.scope(org.mochios.calendars.ui.editor.Scope.ONE)
+        answered { asked.contains("-/events/update") && !model.uiState.value.isSaving }
+        val body = bodies["-/events/update"]!!
+        assertEquals(body, 1, Regex("RECURRENCE-ID").findAll(body).count())
+        assertTrue(body, body.contains("Late, again"))
+        assertTrue(body, body.contains("20261005T110000"))
+        // Read again, the form is still the override's.
+        model.reload()
+        answered { model.uiState.value.title != "Late, again" }
+        assertEquals("Late", model.uiState.value.title)
+    }
+
+    @Test
+    fun `after a refused save undone by hand, leaving goes at once`() {
+        respond("-/events/get", event("a", "Stand-up"))
+        respond("-/events/update", changed)
+        val model = show("event" to "e1")
+        waitFor("Stand-up")
+        title().performTextReplacement("Stand-up, moved")
+        model.save()
+        waitFor(string(R.string.calendars_event_changed))
+        title().performTextReplacement("Stand-up")
+        model.leave()
+        answered { left }
+        assertEquals(0, rule.onAllNodesWithText(string(R.string.calendars_discard_title)).fetchSemanticsNodes().size)
+        assertEquals(1, asked.count { it == "-/events/update" })
+    }
+
+    @Test
     fun `a delete of an event changed elsewhere is refused`() {
         respond("-/events/get", event("a", "Stand-up"))
         respond("-/events/delete", changed)
@@ -426,7 +544,9 @@ class EditorFlowTest {
     fun `a copy opens as a new event, made only by Create, tentative as its original`() {
         respond("-/events/get", event("a", "Stand-up", status = "TENTATIVE"))
         respond("-/events/create", event("c", "Stand-up"))
-        show("source" to "event", "copy" to "e1")
+        show("event" to "e1")
+        waitFor("Stand-up")
+        rule.onNodeWithContentDescription(string(R.string.calendars_event_copy)).performClick()
         waitFor(string(R.string.calendars_create_submit))
         rule.onNodeWithText(string(R.string.calendars_event_new)).assertExists()
         rest()

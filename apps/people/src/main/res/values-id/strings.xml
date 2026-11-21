@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Tidak ada orang yang ditemukan</string>
     <string name="people_friends_try_adjusting">Coba sesuaikan pencarian Anda</string>
     <string name="people_friends_pending">Tertunda</string>
-    <string name="people_friends_received_tab">Diterima</string>
-    <string name="people_friends_sent_tab">Terkirim</string>
     <string name="people_invitations_incoming">Undangan masuk</string>
     <string name="people_invitations_empty">Tidak ada undangan yang tertunda</string>
     <string name="people_invitations_empty_hint">Undangan baru akan muncul di sini</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Undangan dari %1$s diterima</string>
     <string name="people_invitations_toast_declined">Undangan dari %1$s ditolak</string>
     <string name="people_invitations_toast_cancelled">Undangan ke %1$s dibatalkan</string>
-    <string name="people_groups_empty">Tidak ada grup</string>
     <string name="people_group_delete_confirm">Hapus grup \"%1$s\"? Ini tidak dapat dibatalkan.</string>
     <string name="people_member_remove_confirm">Apakah Anda yakin ingin menghapus %1$s dari grup ini?</string>
     <string name="people_member_remove_with_name">Hapus %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Tidak dapat memproses gambar %1$s</string>
     <string name="people_profile_accent_invalid">Masukkan warna heksa yang valid (mis. #a78bfa)</string>
     <string name="people_profile_accent_none">Tidak ada</string>
-    <string name="people_profile_privacy_private_desc">Hanya teman bersama yang dapat melihat profil Anda</string>
     <string name="people_welcome_title">Selamat datang di Orang</string>
     <string name="people_person_banner_alt">Spanduk untuk %1$s</string>
-    <string name="people_person_private">Profil ini bersifat pribadi</string>
     <string name="people_person_state_invited">Diundang</string>
 
     <string name="people_invitations_accept_all">Terima semua</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">Temukan teman di seluruh Mochi dan terhubung. Ketuk Tambah kontak untuk mengirim undangan.</string>
     <string name="people_person_state_contact">Ada di kontak</string>
-    <string name="people_device_create">Buat</string>
-    <string name="people_device_add">Tambah perangkat</string>
-    <string name="people_device_username">Nama pengguna</string>
-    <string name="people_device_done">Selesai</string>
-    <string name="people_device_used">Terakhir digunakan %1$s</string>
-    <string name="people_device_never">Tidak pernah</string>
     <string name="people_sync_now">Sinkronkan sekarang</string>
-    <string name="people_device_title">Perangkat terhubung</string>
-    <string name="people_device_name">Nama perangkat</string>
     <string name="people_device_address">URL buku alamat</string>
-    <string name="people_device_password">Kata sandi</string>
-    <string name="people_device_copy">Salin %1$s</string>
-    <string name="people_device_warning">Simpan kata sandi ini sekarang. Kata sandi ini tidak dapat ditampilkan lagi.</string>
-    <string name="people_device_empty">Tidak ada perangkat yang terhubung.</string>
-    <string name="people_device_created">Dibuat %1$s</string>
-    <string name="people_device_delete">Hapus perangkat</string>
-    <string name="people_device_delete_title">Hapus perangkat?</string>
-    <string name="people_device_delete_message">Perangkat tidak akan bisa lagi menyinkronkan kontak atau kalender.</string>
-    <string name="people_device_deleted">Perangkat dihapus</string>
     <string name="people_sync_title">Sinkronkan ke ponsel ini</string>
     <string name="people_sync_confirm">Menghapus kontak teman di aplikasi Kontak ponsel ini juga mengakhiri pertemanan.</string>
     <string name="people_sync_enable">Aktifkan</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">Pengaturan</string>
     <string name="people_contacts_invitation_sent">Undangan terkirim</string>
     <string name="people_contact_keep">Pertahankan</string>
+    <string name="people_invitations_received_count">Diterima (%1$s)</string>
+    <string name="people_invitations_sent_count">Terkirim (%1$s)</string>
+    <string name="people_contact_discard">Buang perubahan</string>
+    <string name="people_person_unavailable">Orang tidak tersedia</string>
 </resources>

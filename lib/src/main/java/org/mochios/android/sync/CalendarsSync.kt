@@ -115,9 +115,10 @@ object CalendarsSync {
     }
 
     /**
-     * Turns one calendar's sync on or off. Off removes its events from the
-     * phone; on brings them back on the next run, which lists everything
-     * again because the cursor no longer covers the calendar. Blocking.
+     * Turns one calendar's sync on or off. Off has the run it asks for remove
+     * its events from the phone; on brings them back on the next run, which
+     * lists everything again because the cursor no longer covers the
+     * calendar. Blocking.
      */
     fun calendar(context: Context, account: Account, local: Long, sync: Boolean) {
         if (!permitted(context)) return

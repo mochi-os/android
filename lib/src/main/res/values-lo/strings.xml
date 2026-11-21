@@ -352,4 +352,21 @@
     <string name="game_system_score_resume">%1$s ຫຼິ້ນຕໍ່</string>
     <string name="game_not_found">ບໍ່ພົບເກມ</string>
     <string name="game_chat_move_played_you">ທ່ານຫຼິ້ນ %1$s</string>
+    <string name="devices_add">ເພີ່ມອຸປະກອນ</string>
+    <string name="devices_copy">ສຳເນົາ %1$s</string>
+    <string name="devices_create">ສ້າງ</string>
+    <string name="devices_created">ສ້າງ %1$s ແລ້ວ</string>
+    <string name="devices_delete">ລຶບອຸປະກອນ</string>
+    <string name="devices_delete_message">ອຸປະກອນຈະບໍ່ສາມາດຊິງຄ໌ລາຍຊື່ຜູ້ຕິດຕໍ່ ຫຼື ປະຕິທິນໄດ້ອີກຕໍ່ໄປ.</string>
+    <string name="devices_delete_title">ລຶບອຸປະກອນບໍ?</string>
+    <string name="devices_deleted">ລຶບອຸປະກອນແລ້ວ</string>
+    <string name="devices_done">ສຳເລັດແລ້ວ</string>
+    <string name="devices_empty">ບໍ່ມີອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
+    <string name="devices_name">ຊື່ອຸປະກອນ</string>
+    <string name="devices_password">ລະຫັດຜ່ານ</string>
+    <string name="devices_title">ອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
+    <string name="devices_used">ໃຊ້ຄັ້ງສຸດທ້າຍ %1$s</string>
+    <string name="devices_username">ຊື່ຜູ້ໃຊ້</string>
+    <string name="devices_warning">ສຳເນົາລະຫັດຜ່ານດຽວນີ້: ມັນຈະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
+    <string name="devices_unused">ບໍ່ເຄີຍໃຊ້</string>
 </resources>

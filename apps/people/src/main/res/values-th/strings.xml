@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ไม่พบผู้คน</string>
     <string name="people_friends_try_adjusting">ลองปรับการค้นหาของคุณ</string>
     <string name="people_friends_pending">รอดำเนินการ</string>
-    <string name="people_friends_received_tab">ได้รับแล้ว</string>
-    <string name="people_friends_sent_tab">ส่งแล้ว</string>
     <string name="people_invitations_incoming">คำเชิญเข้ามา</string>
     <string name="people_invitations_empty">ไม่มีคำเชิญที่รอดำเนินการ</string>
     <string name="people_invitations_empty_hint">คำเชิญใหม่จะปรากฏที่นี่</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">ยอมรับคำเชิญจาก %1$s แล้ว</string>
     <string name="people_invitations_toast_declined">ปฏิเสธคำเชิญจาก %1$s แล้ว</string>
     <string name="people_invitations_toast_cancelled">ยกเลิกคำเชิญถึง %1$s แล้ว</string>
-    <string name="people_groups_empty">ไม่มีกลุ่ม</string>
     <string name="people_group_delete_confirm">ลบกลุ่ม \"%1$s\"? การกระทำนี้ไม่สามารถยกเลิกได้</string>
     <string name="people_member_remove_confirm">คุณแน่ใจหรือไม่ว่าต้องการลบ %1$s ออกจากกลุ่มนี้?</string>
     <string name="people_member_remove_with_name">ลบ %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">ไม่สามารถประมวลผลรูปภาพ %1$s ได้</string>
     <string name="people_profile_accent_invalid">ป้อนรหัสสีฐานสิบหกที่ถูกต้อง (เช่น #a78bfa)</string>
     <string name="people_profile_accent_none">ไม่มี</string>
-    <string name="people_profile_privacy_private_desc">เฉพาะเพื่อนที่เป็นเพื่อนกันเท่านั้นที่ดูโปรไฟล์ของคุณได้</string>
     <string name="people_welcome_title">ยินดีต้อนรับสู่ผู้คน</string>
     <string name="people_person_banner_alt">แบนเนอร์สำหรับ %1$s</string>
-    <string name="people_person_private">โปรไฟล์นี้เป็นแบบส่วนตัว</string>
     <string name="people_person_state_invited">เชิญแล้ว</string>
 
     <string name="people_invitations_accept_all">ยอมรับทั้งหมด</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">ค้นหาเพื่อนทั่ว Mochi และเชื่อมต่อกัน แตะ เพิ่มรายชื่อติดต่อ เพื่อส่งคำเชิญ</string>
     <string name="people_person_state_contact">อยู่ในผู้ติดต่อแล้ว</string>
-    <string name="people_device_create">สร้าง</string>
-    <string name="people_device_add">เพิ่มอุปกรณ์</string>
-    <string name="people_device_username">ชื่อผู้ใช้</string>
-    <string name="people_device_done">เสร็จสิ้น</string>
-    <string name="people_device_used">ใช้ล่าสุด %1$s</string>
-    <string name="people_device_never">ไม่เลย</string>
     <string name="people_sync_now">ซิงค์เดี๋ยวนี้</string>
-    <string name="people_device_title">อุปกรณ์ที่เชื่อมต่อ</string>
-    <string name="people_device_name">ชื่ออุปกรณ์</string>
     <string name="people_device_address">URL สมุดที่อยู่</string>
-    <string name="people_device_password">รหัสผ่าน</string>
-    <string name="people_device_copy">คัดลอก %1$s</string>
-    <string name="people_device_warning">บันทึกรหัสผ่านนี้ตอนนี้ จะไม่สามารถแสดงได้อีก</string>
-    <string name="people_device_empty">ไม่มีอุปกรณ์ที่เชื่อมต่อ</string>
-    <string name="people_device_created">สร้าง %1$s</string>
-    <string name="people_device_delete">ลบอุปกรณ์</string>
-    <string name="people_device_delete_title">ลบอุปกรณ์หรือไม่</string>
-    <string name="people_device_delete_message">อุปกรณ์จะไม่สามารถซิงค์รายชื่อผู้ติดต่อหรือปฏิทินได้อีกต่อไป</string>
-    <string name="people_device_deleted">ลบอุปกรณ์แล้ว</string>
     <string name="people_sync_title">ซิงค์กับโทรศัพท์เครื่องนี้</string>
     <string name="people_sync_confirm">การลบรายชื่อติดต่อของเพื่อนในแอปรายชื่อติดต่อของโทรศัพท์เครื่องนี้จะทำให้มิตรภาพสิ้นสุดลงด้วย</string>
     <string name="people_sync_enable">เปิด</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">การตั้งค่า</string>
     <string name="people_contacts_invitation_sent">ส่งคำเชิญแล้ว</string>
     <string name="people_contact_keep">เก็บไว้</string>
+    <string name="people_invitations_received_count">ได้รับแล้ว (%1$s)</string>
+    <string name="people_invitations_sent_count">ส่งแล้ว (%1$s)</string>
+    <string name="people_contact_discard">ละทิ้งการเปลี่ยนแปลง</string>
+    <string name="people_person_unavailable">ไม่สามารถแสดงบุคคลนี้ได้</string>
 </resources>

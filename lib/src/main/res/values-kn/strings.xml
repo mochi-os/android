@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ಆಟವನ್ನು ಮುಂದುವರಿಸಿದರು</string>
     <string name="game_not_found">ಆಟ ಕಂಡುಬಂದಿಲ್ಲ</string>
     <string name="game_chat_move_played_you">ನೀವು %1$s ಆಡಿದಿರಿ</string>
+    <string name="devices_add">ಸಾಧನವನ್ನು ಸೇರಿಸಿ</string>
+    <string name="devices_copy">%1$s ನಕಲಿಸಿ</string>
+    <string name="devices_create">ರಚಿಸಿ</string>
+    <string name="devices_created">ರಚಿಸಲಾಗಿದೆ %1$s</string>
+    <string name="devices_delete">ಸಾಧನವನ್ನು ಅಳಿಸಿ</string>
+    <string name="devices_delete_message">ಸಾಧನವು ಇನ್ನು ಮುಂದೆ ಸಂಪರ್ಕಗಳನ್ನು ಅಥವಾ ಕ್ಯಾಲೆಂಡರ್‌ಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="devices_delete_title">ಸಾಧನವನ್ನು ಅಳಿಸುವುದೇ?</string>
+    <string name="devices_deleted">ಸಾಧನವನ್ನು ಅಳಿಸಲಾಗಿದೆ</string>
+    <string name="devices_done">ಮುಗಿಯಿತು</string>
+    <string name="devices_empty">ಯಾವುದೇ ಸಾಧನಗಳು ಸಂಪರ್ಕಗೊಂಡಿಲ್ಲ</string>
+    <string name="devices_name">ಸಾಧನದ ಹೆಸರು</string>
+    <string name="devices_password">ಪಾಸ್‌ವರ್ಡ್</string>
+    <string name="devices_title">ಸಂಪರ್ಕಗೊಂಡ ಸಾಧನಗಳು</string>
+    <string name="devices_used">ಕೊನೆಯದಾಗಿ ಬಳಸಲಾಗಿದೆ %1$s</string>
+    <string name="devices_username">ಬಳಕೆದಾರಹೆಸರು</string>
+    <string name="devices_warning">ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಈಗಲೇ ನಕಲಿಸಿ: ಇದನ್ನು ಮತ್ತೆ ತೋರಿಸಲಾಗುವುದಿಲ್ಲ.</string>
+    <string name="devices_unused">ಎಂದಿಗೂ ಬಳಸಿಲ್ಲ</string>
 </resources>

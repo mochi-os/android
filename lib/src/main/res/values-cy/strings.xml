@@ -362,4 +362,21 @@
     <string name="game_system_score_resume">Ailddechreuodd %1$s chwarae</string>
     <string name="game_not_found">Heb ddod o hyd i\'r gêm</string>
     <string name="game_chat_move_played_you">Chwaraeoch %1$s</string>
+    <string name="devices_add">Ychwanegu dyfais</string>
+    <string name="devices_copy">Copïo %1$s</string>
+    <string name="devices_create">Creu</string>
+    <string name="devices_created">Wedi\'i greu %1$s</string>
+    <string name="devices_delete">Dileu dyfais</string>
+    <string name="devices_delete_message">Ni fydd y ddyfais yn gallu cysoni cysylltiadau na chalendrau mwyach.</string>
+    <string name="devices_delete_title">Dileu\'r ddyfais?</string>
+    <string name="devices_deleted">Dyfais wedi\'i dileu</string>
+    <string name="devices_done">Wedi gorffen</string>
+    <string name="devices_empty">Dim dyfeisiau wedi\'u cysylltu</string>
+    <string name="devices_name">Enw\'r ddyfais</string>
+    <string name="devices_password">Cyfrinair</string>
+    <string name="devices_title">Dyfeisiau cysylltiedig</string>
+    <string name="devices_used">Defnyddiwyd ddiwethaf %1$s</string>
+    <string name="devices_username">Enw defnyddiwr</string>
+    <string name="devices_warning">Copïwch y cyfrinair nawr: ni ellir ei ddangos eto.</string>
+    <string name="devices_unused">Heb ei ddefnyddio erioed</string>
 </resources>

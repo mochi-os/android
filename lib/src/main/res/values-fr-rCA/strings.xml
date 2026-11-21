@@ -283,4 +283,8 @@
     <string name="person_unknown">Inconnu</string>
     <string name="format_time_seconds_short">%1$s s</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="devices_create">Créer</string>
+    <string name="devices_done">Terminé</string>
+    <string name="devices_used">Dernière utilisation %1$s</string>
+    <string name="devices_username">Nom d\'utilisateur</string>
 </resources>

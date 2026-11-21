@@ -167,7 +167,18 @@ data class CreateGroupResponse(val id: String = "")
 
 data class WelcomeResponse(
     val seen: Boolean = false,
-    val count: Int = 0,
+)
+
+/**
+ * `-/friends/standing`: where the user stands with one person. [contact] is
+ * the user's contact for them, empty for none; [friend] whether that contact
+ * is a friend; [sent] and [received] an invitation waiting either way.
+ */
+data class StandingResponse(
+    val contact: String = "",
+    val friend: Boolean = false,
+    val sent: Boolean = false,
+    val received: Boolean = false,
 )
 
 data class PreferenceResponse(
@@ -316,6 +327,11 @@ interface PeopleApi {
         /** For an `xmpp:` person, ends it through this account alone; every account when null. */
         @Field("account") account: String? = null,
     ): Response<ApiResponse<EmptyResponse>>
+
+    /** Where the user stands with one person, without listing every contact. */
+    @GET("-/friends/standing")
+    // contract-ok: the handler reads person through its person_input helper.
+    suspend fun getStanding(@Query("person") person: String): Response<ApiResponse<StandingResponse>>
 
     // ---- Welcome ----
 

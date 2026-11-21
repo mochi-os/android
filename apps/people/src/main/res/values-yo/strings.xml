@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">A kò rí ènìyàn kankan</string>
     <string name="people_friends_try_adjusting">Gbìyànjú láti ṣàtúnṣe ìwákiri rẹ</string>
     <string name="people_friends_pending">Ń dúró</string>
-    <string name="people_friends_received_tab">Gba</string>
-    <string name="people_friends_sent_tab">A fi ránṣẹ́</string>
     <string name="people_invitations_incoming">Àwọn ìpè tí ó ń wọlé</string>
     <string name="people_invitations_empty">Kò sí ìpè tó dúró</string>
     <string name="people_invitations_empty_hint">Àwọn ìpè tuntun yóò farahàn níbí</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Ìpè láti ọ̀dọ̀ %1$s ti gbà</string>
     <string name="people_invitations_toast_declined">Ìpè láti ọ̀dọ̀ %1$s ti kọ̀</string>
     <string name="people_invitations_toast_cancelled">Ìpè sí %1$s ti fagilé</string>
-    <string name="people_groups_empty">Kò sí ẹgbẹ́</string>
     <string name="people_group_delete_confirm">Pa ẹgbẹ́ \"%1$s\" rẹ́? Èyí kò ní ṣeé yí padà.</string>
     <string name="people_member_remove_confirm">Ṣé o dájú pé o fẹ́ yọ %1$s kúrò nínú ẹgbẹ́ yìí?</string>
     <string name="people_member_remove_with_name">Yọ %1$s kúrò</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">A kò lè ṣe ìtọ́jú àwòrán %1$s</string>
     <string name="people_profile_accent_invalid">Tẹ àwọ̀ hex tó tọ́ (fún àpẹẹrẹ #a78bfa)</string>
     <string name="people_profile_accent_none">Kòsí</string>
-    <string name="people_profile_privacy_private_desc">Àwọn ọ̀rẹ́ apapọ̀ nìkan ló lè wo profaìlì rẹ</string>
     <string name="people_welcome_title">Káàbọ̀ sí Àwọn ènìyàn</string>
     <string name="people_person_banner_alt">Bánà fún %1$s</string>
-    <string name="people_person_private">Profaìlì yìí jẹ́ àdáni</string>
     <string name="people_person_state_invited">A ti pè</string>
 
     <string name="people_invitations_accept_all">Gba gbogbo rẹ̀</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">Wá àwọn ọ̀rẹ́ káàkiri Mochi kí o sì bá wọn ṣepọ̀. Tẹ Fi olùbásọ̀rọ̀ kún láti fi ìpè ránṣẹ́.</string>
     <string name="people_person_state_contact">Nínú àwọn olùbásọ̀rọ̀</string>
-    <string name="people_device_create">Dá</string>
-    <string name="people_device_add">Fi ẹ̀rọ kan kún</string>
-    <string name="people_device_username">Orúkọ olùmúlò</string>
-    <string name="people_device_done">Ti parí</string>
-    <string name="people_device_used">Lò gbẹyìn %1$s</string>
-    <string name="people_device_never">Láéláé</string>
     <string name="people_sync_now">Ṣe àmúṣiṣẹ́pọ̀ báyìí</string>
-    <string name="people_device_title">Àwọn ẹ̀rọ tí a so pọ̀</string>
-    <string name="people_device_name">Orúkọ ẹ̀rọ</string>
     <string name="people_device_address">URL ìwé àdírẹ́sì</string>
-    <string name="people_device_password">Ọ̀rọ̀ aṣínà</string>
-    <string name="people_device_copy">Ṣe àdàkọ %1$s</string>
-    <string name="people_device_warning">Fi ọ̀rọ̀ aṣínà yìí pamọ́ báyìí. A kò lè fi hàn mọ́.</string>
-    <string name="people_device_empty">Kò sí ẹ̀rọ tí a so pọ̀.</string>
-    <string name="people_device_created">Ṣẹdá %1$s</string>
-    <string name="people_device_delete">Pa ẹ̀rọ rẹ́</string>
-    <string name="people_device_delete_title">Pa ẹ̀rọ náà rẹ́?</string>
-    <string name="people_device_delete_message">Ẹ̀rọ náà kò ní lè ṣe àmúṣiṣẹ́pọ̀ àwọn olùbásọ̀rọ̀ tàbí àwọn kàlẹ́ńdà mọ́.</string>
-    <string name="people_device_deleted">A ti pa ẹ̀rọ náà rẹ́</string>
     <string name="people_sync_title">Ṣe àmúṣiṣẹ́pọ̀ sí fóònù yìí</string>
     <string name="people_sync_confirm">Pípa olùbásọ̀rọ̀ ọ̀rẹ́ kan rẹ́ nínú app Àwọn olùbásọ̀rọ̀ fóònù yìí tún máa fòpin sí ìbáṣepọ̀ ọ̀rẹ́ náà.</string>
     <string name="people_sync_enable">Tàn án</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">Àwọn ìṣètò</string>
     <string name="people_contacts_invitation_sent">Ìpè ti ránṣẹ́</string>
     <string name="people_contact_keep">Tọ́jú</string>
+    <string name="people_invitations_received_count">Gba (%1$s)</string>
+    <string name="people_invitations_sent_count">A fi ránṣẹ́ (%1$s)</string>
+    <string name="people_contact_discard">Sọ àwọn àyípadà nù</string>
+    <string name="people_person_unavailable">Ẹni náà kò sí</string>
 </resources>

@@ -5,8 +5,7 @@
 
 package org.mochios.calendars.model
 
-import java.time.LocalDate
-import java.time.ZoneOffset
+import com.google.gson.annotations.SerializedName
 
 /**
  * One occurrence of an event inside a range, as `-/events` returns it. The
@@ -22,6 +21,9 @@ import java.time.ZoneOffset
  * predates the field leaves it out. [status] is the event's `STATUS` as
  * written, blank when it has none. [colour] is the colour the occurrence is
  * drawn in: its event's own `COLOR` when it carries one, else its calendar's.
+ * [replaced] is, on an exception, the start of the occurrence it replaces,
+ * given as [start] is: an override is listed at its own start, which "This
+ * event" may have moved. A core that predates the field leaves it out.
  */
 data class Instance(
     val event: String = "",
@@ -40,6 +42,7 @@ data class Instance(
     val date: String? = null,
     val recurring: Boolean = false,
     val exception: Boolean = false,
+    @SerializedName("occurrence") val replaced: Long? = null,
     val zone: Zone? = null,
     val alarm: Boolean = false,
 ) {
@@ -59,15 +62,20 @@ data class Instance(
     val editable: Boolean get() = !readonly && !birthday
 
     /**
-     * The start an override of this occurrence is matched by, which is how
-     * the event's tree names it: a timed occurrence's own instant, and the
-     * UTC midnight of an all-day one's date, which is what its `DATE` value
-     * reads as. [start] itself is the user's midnight for an all-day one.
+     * The occurrence of its series this is, as the listing gives a start:
+     * the one an override replaces, else its own [start]. The editor and a
+     * drag find its override by it; a core that does not name the occurrence
+     * an override replaces gives the override's own start, and [moved] says
+     * so.
      */
-    val occurrence: Long
-        get() = date?.let { value ->
-            runCatching { LocalDate.parse(value).atStartOfDay(ZoneOffset.UTC).toEpochSecond() }.getOrNull()
-        } ?: start
+    val occurrence: Long get() = replaced ?: start
+
+    /**
+     * An override listed by a core that does not name the occurrence it
+     * replaces: its [occurrence] is where it now falls, and where it was moved
+     * from is read from its event's tree.
+     */
+    val moved: Boolean get() = exception && replaced == null
 
     companion object {
         const val BIRTHDAY = "birthday-"

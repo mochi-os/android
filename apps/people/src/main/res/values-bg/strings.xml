@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Не са намерени хора</string>
     <string name="people_friends_try_adjusting">Опитайте да коригирате търсенето си</string>
     <string name="people_friends_pending">В очакване</string>
-    <string name="people_friends_received_tab">Получено</string>
-    <string name="people_friends_sent_tab">Изпратено</string>
     <string name="people_invitations_incoming">Входящи покани</string>
     <string name="people_invitations_empty">Няма чакащи покани</string>
     <string name="people_invitations_empty_hint">Новите покани ще се появят тук</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Поканата от %1$s е приета</string>
     <string name="people_invitations_toast_declined">Поканата от %1$s е отказана</string>
     <string name="people_invitations_toast_cancelled">Поканата до %1$s е отменена</string>
-    <string name="people_groups_empty">Няма групи</string>
     <string name="people_group_delete_confirm">Изтриване на групата \"%1$s\"? Това не може да бъде отменено.</string>
     <string name="people_member_remove_confirm">Сигурни ли сте, че искате да премахнете %1$s от тази група?</string>
     <string name="people_member_remove_with_name">Премахване на %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Изображението %1$s не може да бъде обработено</string>
     <string name="people_profile_accent_invalid">Въведете валиден шестнадесетичен цвят (напр. #a78bfa)</string>
     <string name="people_profile_accent_none">Няма</string>
-    <string name="people_profile_privacy_private_desc">Само взаимни приятели могат да видят профила ви</string>
     <string name="people_welcome_title">Добре дошли в Хора</string>
     <string name="people_person_banner_alt">Банер за %1$s</string>
-    <string name="people_person_private">Този профил е личен</string>
     <string name="people_person_state_invited">Поканен(а)</string>
 
     <string name="people_invitations_accept_all">Приеми всички</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Намирайте приятели в Mochi и се свързвайте с тях. Докоснете Добавяне на контакт, за да изпратите покана.</string>
     <string name="people_person_state_contact">В контактите</string>
-    <string name="people_device_create">Създай</string>
-    <string name="people_device_add">Добавяне на устройство</string>
-    <string name="people_device_username">Потребителско име</string>
-    <string name="people_device_done">Готово</string>
-    <string name="people_device_used">Последно използван %1$s</string>
-    <string name="people_device_never">Никога</string>
     <string name="people_sync_now">Синхронизирай сега</string>
-    <string name="people_device_title">Свързани устройства</string>
-    <string name="people_device_name">Име на устройството</string>
     <string name="people_device_address">URL на адресната книга</string>
-    <string name="people_device_password">Парола</string>
-    <string name="people_device_copy">Копирай %1$s</string>
-    <string name="people_device_warning">Запазете тази парола сега. Тя не може да бъде показана отново.</string>
-    <string name="people_device_empty">Няма свързани устройства.</string>
-    <string name="people_device_created">Създадено %1$s</string>
-    <string name="people_device_delete">Изтриване на устройството</string>
-    <string name="people_device_delete_title">Да се изтрие ли устройството?</string>
-    <string name="people_device_delete_message">Устройството повече няма да може да синхронизира контакти или календари.</string>
-    <string name="people_device_deleted">Устройството е изтрито</string>
     <string name="people_sync_title">Синхронизиране с този телефон</string>
     <string name="people_sync_confirm">Изтриването на контакта на приятел в приложението „Контакти“ на този телефон прекратява и приятелството.</string>
     <string name="people_sync_enable">Включи</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Настройки</string>
     <string name="people_contacts_invitation_sent">Поканата е изпратена</string>
     <string name="people_contact_keep">Запази</string>
+    <string name="people_invitations_received_count">Получено (%1$s)</string>
+    <string name="people_invitations_sent_count">Изпратено (%1$s)</string>
+    <string name="people_contact_discard">Отхвърли промените</string>
+    <string name="people_person_unavailable">Лицето е недостъпно</string>
 </resources>

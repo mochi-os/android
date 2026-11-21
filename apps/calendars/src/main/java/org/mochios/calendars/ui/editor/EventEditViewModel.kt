@@ -51,8 +51,9 @@ import javax.inject.Inject
  * original, whose title opens selected to be typed over. [occurrence] is the occurrence the user opened, which "This
  * event" detaches, as the event's tree names it: a timed occurrence's own
  * start, epoch seconds, and the UTC midnight of an all-day one's date;
- * [moment] is the same occurrence's start as the server listed it, which a
- * series cut there is told. Both are 0 for a new event or one that does not
+ * [moment] is the same occurrence's start as the server lists it, which a
+ * series cut there is told: for an override, the start of the occurrence it
+ * replaces, wherever it was moved. Both are 0 for a new event or one that does not
  * repeat. [zone] is the zone each end is typed and written in, the user's
  * own for a new event. [copy] is a copy the user asked for, with how far it
  * reaches, which the screen opens the editor on.
@@ -73,6 +74,8 @@ data class EditorUiState(
     val start: Long = 0,
     val finish: Long = 0,
     val zone: Zone = Zone(),
+    /** The zone a floating event's times were read in, which they are written back floating from; blank for any other. */
+    val floating: String = "",
     val location: String = "",
     /** The event's own colour, blank for its calendar's. */
     val colour: String = "",
@@ -194,8 +197,7 @@ class EventEditViewModel @Inject constructor(
             else -> null
         }
         val source = handle.get<String>("source")
-        val copied = handle.get<String>("copy").orEmpty()
-        val scope = Scope.entries.firstOrNull { it.name.equals(handle.get<String>("scope"), ignoreCase = true) } ?: Scope.ALL
+        val moved = handle.get<String>("moved") == "1"
         val zones = handle.get<String>("zones").orEmpty().split(",")
         val instance = Instance(
             summary = handle.get<String>("summary").orEmpty(),
@@ -209,14 +211,10 @@ class EventEditViewModel @Inject constructor(
         )
         _uiState.value = EditorUiState(
             event = event,
-            copying = source == "event" || source == "occurrence",
+            copying = source == "occurrence",
         )
         opening = {
-            when (source) {
-                "event" -> copy(copied, occurrence, scope)
-                "occurrence" -> copy(instance)
-                else -> load(event, occurrence, start, allday, instance.finish)
-            }
+            if (source == "occurrence") copy(instance) else load(event, occurrence, start, allday, instance.finish, moved)
         }
         opening()
     }
@@ -256,9 +254,11 @@ class EventEditViewModel @Inject constructor(
      * Opens the stored [event], or a new one at [start] when it names none:
      * over [finish] when a span was marked out on the grid, all day across
      * the days from [start] to [finish] when a run of days was picked, and
-     * for the default length otherwise.
+     * for the default length otherwise. [moved] says the stored event's
+     * [occurrence] is an override's own start, which a core that does not
+     * name the occurrence it replaces lists it at.
      */
-    private fun load(event: String?, occurrence: Long, start: Long, allday: Boolean?, finish: Long) {
+    private fun load(event: String?, occurrence: Long, start: Long, allday: Boolean?, finish: Long, moved: Boolean) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
             val calendars = calendars() ?: return@launch
@@ -311,28 +311,7 @@ class EventEditViewModel @Inject constructor(
             try {
                 val loaded = repository.getEvent(event)
                 preferring.await()
-                fill(loaded, occurrence, calendars)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, failure = e.toMochiError())
-            }
-        }
-    }
-
-    /**
-     * A copy of the stored [event], opened as a new event whose form is the
-     * original's, which Create makes: the occurrence at [occurrence] alone,
-     * or the whole series, as [scope] says. It lands in the original's
-     * calendar when that can be written to, else where a new event would.
-     */
-    private fun copy(event: String, occurrence: Long, scope: Scope) {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null, failure = null)
-            val calendars = calendars() ?: return@launch
-            try {
-                val loaded = repository.getEvent(event)
-                val form = copied(loaded.components, occurrence, scope, zone) ?: EventForm()
-                val preference = read()?.calendar.orEmpty()
-                open(form, calendars, calendars.firstOrNull { it.id == loaded.calendar }?.id ?: preferred(calendars, preference))
+                fill(loaded, if (moved) original(loaded.components, occurrence, zone) else occurrence, calendars)
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, failure = e.toMochiError())
             }
@@ -373,6 +352,7 @@ class EventEditViewModel @Inject constructor(
             start = form.start,
             finish = form.finish,
             zone = form.zone,
+            floating = form.floating,
             location = form.location,
             colour = form.colour,
             url = form.url,
@@ -416,25 +396,23 @@ class EventEditViewModel @Inject constructor(
     private fun preferred(calendars: List<Calendar>, preference: String): String =
         calendars.firstOrNull { it.id == chosen }?.id ?: defaultCalendar(calendars, preference)
 
-    /** The form for a loaded event, showing the occurrence the user opened. */
+    /**
+     * The form for a loaded event, showing the occurrence the user opened,
+     * which the server lists at [moment]. A floating time reads in the user's
+     * own zone, as the server lists it.
+     */
     private fun fill(loaded: Event, moment: Long, calendars: List<Calendar>) {
         carried = loaded
         val master = loaded.master()
         // The tree names an all-day occurrence by its date, which reads as
         // that day's UTC midnight; the server lists it at the user's own.
-        val series = master?.property("DTSTART")
-        val occurrence = if (moment > 0 && series != null && CalendarsMapping.date(series)) {
-            Instant.ofEpochSecond(moment).atZone(ZoneId.of(zone)).toLocalDate()
-                .atStartOfDay(ZoneOffset.UTC).toEpochSecond()
-        } else {
-            moment
-        }
-        val override = loaded.overrides().firstOrNull { matches(it, occurrence) }
+        val occurrence = named(loaded.components, moment, zone)
+        val override = loaded.overrides().firstOrNull { matches(it, occurrence, zone) }
         val shown = override ?: master ?: EventComponent("VEVENT")
         val starts = shown.property("DTSTART")
         val allday = starts != null && CalendarsMapping.date(starts)
-        val declared = starts?.let { CalendarsMapping.moment(it) / 1000 } ?: loaded.start
-        val length = shown.property("DTEND")?.let { CalendarsMapping.moment(it) / 1000 - declared }
+        val declared = starts?.let { CalendarsMapping.moment(it, zone) / 1000 } ?: loaded.start
+        val length = shown.property("DTEND")?.let { CalendarsMapping.moment(it, zone) / 1000 - declared }
             ?: shown.value("DURATION").takeIf { it.isNotBlank() }?.let { CalendarsMapping.seconds(it) }
             ?: if (allday) 86_400L else 3_600L
         // An occurrence with no override of its own still shows its own times
@@ -447,7 +425,7 @@ class EventEditViewModel @Inject constructor(
         // A timed series' own start, which says the last day its end lets in.
         val first = master?.property("DTSTART")
             ?.takeIf { !CalendarsMapping.date(it) }
-            ?.let { CalendarsMapping.moment(it) / 1000 } ?: 0L
+            ?.let { CalendarsMapping.moment(it, zone) / 1000 } ?: 0L
         val repeat = recurrence(master?.value("RRULE"), master?.let { written(it, zone).start } ?: zone, first)
         _uiState.value = EditorUiState(
             event = loaded.id,
@@ -460,6 +438,7 @@ class EventEditViewModel @Inject constructor(
             start = begins,
             finish = ends,
             zone = written(shown, zone),
+            floating = if (CalendarsMapping.floating(starts)) zone else "",
             location = shown.value("LOCATION"),
             colour = shown.value("COLOR"),
             url = shown.value("URL"),
@@ -471,7 +450,7 @@ class EventEditViewModel @Inject constructor(
             reminders = alarms.mapNotNull(::alarmMinutes).distinct(),
             etag = loaded.etag,
             recurring = master?.property("RRULE") != null || master?.property("RDATE") != null,
-            series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0,
+            series = master?.property("DTSTART")?.let { CalendarsMapping.moment(it, zone) / 1000 } ?: 0,
             isLoading = false,
         )
         settled()
@@ -572,12 +551,18 @@ class EventEditViewModel @Inject constructor(
      * asks first which occurrences the change is for. A change that cannot
      * be saved, no title or an end before the start, waits; leaving with one
      * asks before it is dropped. [closing] is the save leaving makes, after
-     * which the screen goes.
+     * which the screen goes. Once a save was refused nothing is written until
+     * Reload, so leaving asks before what was typed is dropped, or goes at
+     * once when nothing was.
      */
     fun save(closing: Boolean = false) {
         pause?.cancel()
         val state = _uiState.value
-        if (state.event == null || state.prompt != null || refused) return
+        if (state.event == null || state.prompt != null) return
+        if (refused) {
+            if (closing) _uiState.value = if (dirty(state)) state.copy(discarding = true) else state.copy(left = true)
+            return
+        }
         if (!dirty(state)) {
             if (closing) after(closing = true)
             return
@@ -726,7 +711,10 @@ class EventEditViewModel @Inject constructor(
             writing.withLock {
                 val state = _uiState.value
                 // A save queued behind one that was refused writes nothing over the change.
-                if (refused) return@withLock
+                if (refused) {
+                    if (closing) _uiState.value = if (dirty(state)) state.copy(discarding = true) else state.copy(left = true)
+                    return@withLock
+                }
                 if (!dirty(state)) {
                     after(closing)
                     return@withLock
@@ -751,9 +739,10 @@ class EventEditViewModel @Inject constructor(
                 } catch (_: EventChangedException) {
                     // The server's copy moved on since it was read: writing the
                     // form over it would undo that change, so the save is refused
-                    // and Reload reads it again, as the web editor does.
+                    // and Reload reads it again, as the web editor does. The
+                    // save leaving made asks before the change is dropped.
                     refused = true
-                    _uiState.value = _uiState.value.copy(isSaving = false, changed = true)
+                    _uiState.value = _uiState.value.copy(isSaving = false, changed = true, discarding = closing)
                 } catch (e: Exception) {
                     _uiState.value = _uiState.value.copy(isSaving = false, error = e.toMochiError())
                 }
@@ -774,8 +763,8 @@ class EventEditViewModel @Inject constructor(
         val home = carried?.calendar
         if (scope == Scope.ONE && state.recurring && state.occurrence > 0 && home != null && state.calendar != home) {
             return moveOccurrence(
-                create = { repository.createEvent(state.calendar, single(form(state), carried?.components.orEmpty())) },
-                exclude = { repository.excludeOccurrence(state.event, state.occurrence) },
+                create = { repository.createEvent(state.calendar, single(form(state), carried?.components.orEmpty(), zone)) },
+                exclude = { repository.excludeOccurrence(state.event, state.occurrence, user = zone) },
                 delete = { created -> repository.deleteEvent(created.id, created.etag) },
             )
         }
@@ -810,8 +799,8 @@ class EventEditViewModel @Inject constructor(
                         repository.deleteEvent(event, state.etag)
                         whole
                     }
-                    Scope.FOLLOWING -> repository.truncateEvent(event, state.occurrence, stored)?.let { series(it) } ?: whole
-                    Scope.ONE -> series(repository.excludeOccurrence(event, state.occurrence, stored))
+                    Scope.FOLLOWING -> repository.truncateEvent(event, state.occurrence, stored, zone)?.let { series(it) } ?: whole
+                    Scope.ONE -> series(repository.excludeOccurrence(event, state.occurrence, stored, zone))
                 }
                 if (stored != null) repository.deleted(back)
                 _uiState.value = _uiState.value.copy(isDeleting = false, deleted = true)
@@ -827,7 +816,7 @@ class EventEditViewModel @Inject constructor(
 
     /** The tree to send, built from the form over what the server holds. */
     fun components(state: EditorUiState, scope: Scope): List<EventComponent> =
-        components(form(state), carried?.components.orEmpty(), scope)
+        components(form(state), carried?.components.orEmpty(), scope, zone)
 
     /** The editor's fields, as the tree builder wants them. */
     private fun form(state: EditorUiState) = form(state, zone)
@@ -896,6 +885,7 @@ internal fun form(state: EditorUiState, user: String) = EventForm(
     reminders = state.reminders,
     occurrence = state.occurrence,
     series = state.series,
+    floating = state.floating,
 )
 
 /**
@@ -909,14 +899,14 @@ internal fun dirty(state: EditorUiState, user: String): Boolean =
  * The state once [saved], the form it wrote, has landed under [etag]: that
  * form is what the next change is measured against, while what was typed
  * since stays. A save of the whole series that moved its start moves the
- * occurrence open with it; a save of this occurrence alone leaves it where
- * its series put it, now listed at its new start.
+ * occurrence open with it; a save of this occurrence alone leaves it the
+ * occurrence its series put there, which its override goes on naming
+ * wherever it now starts.
  */
 internal fun written(current: EditorUiState, saved: EditorUiState, scope: Scope, etag: String, user: String): EditorUiState {
     val moved = saved.start - (saved.opened?.first?.start ?: saved.start)
     val shifted = when {
-        !saved.recurring || saved.occurrence == 0L -> current
-        scope == Scope.ONE -> current.copy(moment = saved.start)
+        !saved.recurring || saved.occurrence == 0L || scope == Scope.ONE -> current
         else -> current.copy(
             occurrence = saved.occurrence + moved,
             moment = saved.moment + moved,

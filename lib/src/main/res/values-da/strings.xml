@@ -355,4 +355,21 @@
     <string name="game_system_score_resume">%1$s genoptog spillet</string>
     <string name="game_not_found">Spillet blev ikke fundet</string>
     <string name="game_chat_move_played_you">Du spillede %1$s</string>
+    <string name="devices_add">Tilføj en enhed</string>
+    <string name="devices_copy">Kopier %1$s</string>
+    <string name="devices_create">Opret</string>
+    <string name="devices_created">Oprettet %1$s</string>
+    <string name="devices_delete">Slet enhed</string>
+    <string name="devices_delete_message">Enheden vil ikke længere kunne synkronisere kontakter eller kalendere.</string>
+    <string name="devices_delete_title">Slet enhed?</string>
+    <string name="devices_deleted">Enhed slettet</string>
+    <string name="devices_done">Færdig</string>
+    <string name="devices_empty">Ingen enheder tilsluttet</string>
+    <string name="devices_name">Enhedsnavn</string>
+    <string name="devices_password">Adgangskode</string>
+    <string name="devices_title">Tilsluttede enheder</string>
+    <string name="devices_used">Sidst brugt %1$s</string>
+    <string name="devices_username">Brugernavn</string>
+    <string name="devices_warning">Kopier adgangskoden nu: den kan ikke vises igen.</string>
+    <string name="devices_unused">Aldrig brugt</string>
 </resources>

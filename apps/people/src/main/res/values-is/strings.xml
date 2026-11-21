@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Engir notendur fundust</string>
     <string name="people_friends_try_adjusting">Reyndu að breyta leitinni þinni</string>
     <string name="people_friends_pending">Í bið</string>
-    <string name="people_friends_received_tab">Móttekið</string>
-    <string name="people_friends_sent_tab">Sent</string>
     <string name="people_invitations_incoming">Móttekin boð</string>
     <string name="people_invitations_empty">Engin boð í bið</string>
     <string name="people_invitations_empty_hint">Ný boð birtast hér</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Samþykkti boð frá %1$s</string>
     <string name="people_invitations_toast_declined">Hafnaði boði frá %1$s</string>
     <string name="people_invitations_toast_cancelled">Hætti við boð til %1$s</string>
-    <string name="people_groups_empty">Engir hópar</string>
     <string name="people_group_delete_confirm">Eyða hópnum \"%1$s\"? Ekki er hægt að afturkalla þetta.</string>
     <string name="people_member_remove_confirm">Ertu viss um að þú viljir fjarlægja %1$s úr þessum hópi?</string>
     <string name="people_member_remove_with_name">Fjarlægja %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Ekki tókst að vinna úr mynd %1$s</string>
     <string name="people_profile_accent_invalid">Sláðu inn gildan hex-lit (t.d. #a78bfa)</string>
     <string name="people_profile_accent_none">Ekkert</string>
-    <string name="people_profile_privacy_private_desc">Aðeins gagnkvæmir vinir geta skoðað prófílinn þinn</string>
     <string name="people_welcome_title">Velkomin/n á Fólk</string>
     <string name="people_person_banner_alt">Borði fyrir %1$s</string>
-    <string name="people_person_private">Þessi prófíll er einkamál</string>
     <string name="people_person_state_invited">Boðið</string>
 
     <string name="people_invitations_accept_all">Samþykkja allt</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Finndu vini um allt Mochi og tengstu þeim. Ýttu á Bæta við tengilið til að senda boð.</string>
     <string name="people_person_state_contact">Í tengiliðum</string>
-    <string name="people_device_create">Búa til</string>
-    <string name="people_device_add">Bæta við tæki</string>
-    <string name="people_device_username">Notandanafn</string>
-    <string name="people_device_done">Lokið</string>
-    <string name="people_device_used">Síðast notað %1$s</string>
-    <string name="people_device_never">Aldrei</string>
     <string name="people_sync_now">Samstilla núna</string>
-    <string name="people_device_title">Tengd tæki</string>
-    <string name="people_device_name">Heiti tækis</string>
     <string name="people_device_address">URL tengiliðaskrár</string>
-    <string name="people_device_password">Lykilorð</string>
-    <string name="people_device_copy">Afrita %1$s</string>
-    <string name="people_device_warning">Vistaðu þetta lykilorð núna. Ekki er hægt að birta það aftur.</string>
-    <string name="people_device_empty">Engin tæki tengd.</string>
-    <string name="people_device_created">Búið til %1$s</string>
-    <string name="people_device_delete">Eyða tæki</string>
-    <string name="people_device_delete_title">Eyða tæki?</string>
-    <string name="people_device_delete_message">Tækið mun ekki lengur geta samstillt tengiliði eða dagatöl.</string>
-    <string name="people_device_deleted">Tæki eytt</string>
     <string name="people_sync_title">Samstilla við þennan síma</string>
     <string name="people_sync_confirm">Ef þú eyðir tengilið vinar í forritinu Tengiliðir í þessum síma lýkur vináttunni einnig.</string>
     <string name="people_sync_enable">Kveikja</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Stillingar</string>
     <string name="people_contacts_invitation_sent">Boð sent</string>
     <string name="people_contact_keep">Halda</string>
+    <string name="people_invitations_received_count">Móttekið (%1$s)</string>
+    <string name="people_invitations_sent_count">Sent (%1$s)</string>
+    <string name="people_contact_discard">Henda breytingum</string>
+    <string name="people_person_unavailable">Einstaklingur ekki tiltækur</string>
 </resources>

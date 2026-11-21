@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s оюнду улантты</string>
     <string name="game_not_found">Оюн табылган жок</string>
     <string name="game_chat_move_played_you">Сиз %1$s ойнодуңуз</string>
+    <string name="devices_add">Түзмөк кошуу</string>
+    <string name="devices_copy">%1$s көчүрүү</string>
+    <string name="devices_create">Түзүү</string>
+    <string name="devices_created">Түзүлдү %1$s</string>
+    <string name="devices_delete">Түзмөктү өчүрүү</string>
+    <string name="devices_delete_message">Түзмөк мындан ары байланыштарды же календарларды шайкештире албайт.</string>
+    <string name="devices_delete_title">Түзмөк өчүрүлсүнбү?</string>
+    <string name="devices_deleted">Түзмөк өчүрүлдү</string>
+    <string name="devices_done">Бүттү</string>
+    <string name="devices_empty">Туташтырылган түзмөктөр жок</string>
+    <string name="devices_name">Түзмөктүн аты</string>
+    <string name="devices_password">Сырсөз</string>
+    <string name="devices_title">Туташтырылган түзмөктөр</string>
+    <string name="devices_used">Акыркы колдонуу %1$s</string>
+    <string name="devices_username">Колдонуучунун аты</string>
+    <string name="devices_warning">Сырсөздү азыр көчүрүп алыңыз: аны кайра көрсөтүү мүмкүн эмес.</string>
+    <string name="devices_unused">Эч качан колдонулган эмес</string>
 </resources>

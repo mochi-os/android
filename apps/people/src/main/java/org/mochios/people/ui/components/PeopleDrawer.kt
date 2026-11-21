@@ -30,6 +30,7 @@ import org.mochios.android.ui.components.DrawerTitle
 import org.mochios.android.ui.components.MochiListDrawer
 import org.mochios.people.R
 import org.mochios.people.ui.sync.ContactsSyncRows
+import org.mochios.android.R as MochiR
 
 /**
  * Where the People drawer's rows lead, built once per route in the nav graph
@@ -126,7 +127,7 @@ fun PeopleDrawer(
                 },
             )
             DrawerActionRow(
-                title = stringResource(R.string.people_device_title),
+                title = stringResource(MochiR.string.devices_title),
                 icon = Icons.Outlined.Smartphone,
                 onClick = {
                     scope.launch { drawerState.close() }

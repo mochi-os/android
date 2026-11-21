@@ -50,7 +50,6 @@ import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -87,8 +86,16 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import kotlinx.coroutines.launch
 import org.mochios.android.R as MochiR
+import android.content.res.Resources
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.files.Upload
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.personAsset
+import org.mochios.android.i18n.Format
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.util.length
 import org.mochios.android.ui.components.EntityAvatar
 import org.mochios.android.ui.components.MarkdownToolbar
 import org.mochios.android.ui.components.MochiButton
@@ -107,7 +114,6 @@ import org.mochios.people.ui.person.ProfileNetworks
 import org.mochios.android.util.isProfileUrl
 import org.mochios.android.util.openProfileLink
 import org.mochios.android.util.providerName
-import org.mochios.android.util.segment
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.ProfileAccount
 import org.mochios.people.ui.components.PeopleDrawer
@@ -120,7 +126,7 @@ import org.mochios.people.ui.router.RememberPeopleSection
 @Composable
 fun ProfileScreen(
     drawer: PeopleDrawerNavigation,
-    @Suppress("unused") onOpenNotifications: () -> Unit,
+    onOpenNotifications: () -> Unit,
     /** Opens a link in the app: a forum post from the user's history. */
     onOpenLink: (String) -> Unit = {},
     viewModel: ProfileViewModel = hiltViewModel(),
@@ -138,8 +144,7 @@ fun ProfileScreen(
     LaunchedEffect(state.error) {
         val err = state.error ?: return@LaunchedEffect
         if (state.info != null) {
-            val msg = err.message?.takeUnless { it.isBlank() }
-                ?: resources.getString(R.string.people_profile_save_failed)
+            val msg = profileFailure(err, resources)
             scope.launch { snackbar.showSnackbar(msg) }
             viewModel.clearError()
         }
@@ -165,6 +170,7 @@ fun ProfileScreen(
                         }
                     },
                     actions = {
+                        NotificationBell(onClick = onOpenNotifications)
                         if (state.info != null) {
                             MochiIconButton(onClick = { showPreview = true }) {
                                 Icon(
@@ -178,9 +184,10 @@ fun ProfileScreen(
             },
             snackbarHost = { SnackbarHost(snackbar) },
         ) { padding ->
+            val failure = state.error
             when {
                 state.isLoading -> LoadingBlock(padding)
-                state.info == null && state.error != null -> ErrorBlock(padding) { viewModel.refresh() }
+                state.info == null && failure != null -> ErrorBlock(padding, failure) { viewModel.refresh() }
                 state.info != null -> Editor(padding, state, viewModel, snackbar, scope, context, onOpenLink)
             }
         }
@@ -210,15 +217,20 @@ private fun LoadingBlock(padding: PaddingValues) {
     }
 }
 
+/** The profile could not be read: why, in the server's words or the network's, and Retry. */
 @Composable
-private fun ErrorBlock(padding: PaddingValues, onRetry: () -> Unit) {
+internal fun ErrorBlock(padding: PaddingValues, error: MochiError, onRetry: () -> Unit) {
     Box(modifier = Modifier.fillMaxSize().padding(padding)) {
-        ErrorState(
-            message = stringResource(R.string.people_profile_save_failed),
-            onRetry = onRetry,
-        )
+        ErrorState(error = error, onRetry = onRetry)
     }
 }
+
+/**
+ * The line a failed change shows: the server's reason, the network's when the
+ * request never reached it, and "Failed to save" only when neither says more.
+ */
+internal fun profileFailure(error: MochiError, resources: Resources): String =
+    error.messageOrFallback(resources.getString(R.string.people_profile_save_failed))
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -593,10 +605,10 @@ private fun BioSection(
     info: PersonInformation,
     viewModel: ProfileViewModel,
 ) {
-    val length = state.bioDraft.length
-    val tooLong = length > ProfileViewModel.BIO_MAX
+    val count = length(state.bioDraft)
+    val tooLong = count > ProfileViewModel.PROFILE_MAXIMUM
     val dirty = state.bioDraft != info.profile
-    val progress = (length.toFloat() / ProfileViewModel.BIO_MAX).coerceIn(0f, 1f)
+    val progress = (count.toFloat() / ProfileViewModel.PROFILE_MAXIMUM).coerceIn(0f, 1f)
 
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         // The toolbar marks up a selection, so the cursor lives here rather
@@ -640,7 +652,7 @@ private fun BioSection(
                 modifier = Modifier.weight(1f),
             )
             Text(
-                text = "%,d / %,d".format(length, ProfileViewModel.BIO_MAX),
+                text = profileLength(count, LocalFormat.current),
                 style = MaterialTheme.typography.bodySmall,
                 color = if (tooLong) MaterialTheme.colorScheme.error
                         else MaterialTheme.colorScheme.onSurfaceVariant,
@@ -664,6 +676,11 @@ private fun BioSection(
         }
     }
 }
+
+/** The profile's length against the server's limit, in the user's number format. */
+@Composable
+internal fun profileLength(count: Int, format: Format): String =
+    stringResource(R.string.people_profile_length, format.formatNumber(count), format.formatNumber(ProfileViewModel.PROFILE_MAXIMUM))
 
 @Composable
 private fun AccentSection(
@@ -786,36 +803,25 @@ private fun PrivacySection(
     state: ProfileUiState,
     viewModel: ProfileViewModel,
 ) {
-    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-        ) {
-            Text(
-                text = stringResource(R.string.people_profile_directory_listing),
-                style = MaterialTheme.typography.titleSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.weight(1f),
-            )
-            // It moves when tapped and keeps its look while the change goes.
-            Switch(
-                checked = state.privacyDraft == "public",
-                onCheckedChange = { checked ->
-                    viewModel.savePrivacy(if (checked) "public" else "private")
-                },
-            )
-        }
-        if (state.privacyDraft == "private") {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                RadioButton(selected = true, onClick = null)
-                Spacer(Modifier.width(8.dp))
-                Text(
-                    text = stringResource(R.string.people_profile_privacy_private_desc),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-        }
+    // The switch decides whether the directory lists the profile, and nothing
+    // more: the profile stays readable by anyone holding its address.
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+    ) {
+        Text(
+            text = stringResource(R.string.people_profile_directory_listing),
+            style = MaterialTheme.typography.titleSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.weight(1f),
+        )
+        // It moves when tapped and keeps its look while the change goes.
+        Switch(
+            checked = state.privacyDraft == "public",
+            onCheckedChange = { checked ->
+                viewModel.savePrivacy(if (checked) "public" else "private")
+            },
+        )
     }
 }
 
@@ -941,25 +947,11 @@ internal fun ProfilePreviewDialog(
 // ---- Helpers ----
 
 /**
- * The image in [slot] at its version. Null when the id cannot be one segment
- * of the address ([segment]); a version that cannot is left off.
+ * The image in [slot] at its version; none for a slot with no image
+ * ([personAsset]).
  */
-internal fun imageUrl(id: String, slot: String, version: String?): OwnedAddress? {
-    if (id.isBlank() || version.isNullOrBlank()) return null
-    val person = segment(id) ?: return null
-    val escaped = segment(version) ?: return OwnedAddress.of("/people/$person/-/$slot")
-    return OwnedAddress.of("/people/$person/-/$slot?v=$escaped")
-}
+internal fun imageUrl(id: String, slot: String, version: String?): OwnedAddress? =
+    if (version.isNullOrBlank()) null else personAsset(id, slot, version)
 
-/**
- * Server-relative path for [EntityAvatar], which resolves the host; banner and
- * favicon need [imageUrl]'s absolute URL for `AsyncImage`. Null when the id
- * cannot be one segment of the address ([segment]); a version that cannot is
- * left off.
- */
-internal fun avatarPath(id: String, version: String?): OwnedAddress? {
-    if (id.isBlank() || version.isNullOrBlank()) return null
-    val person = segment(id) ?: return null
-    val escaped = segment(version) ?: return OwnedAddress.of("/people/$person/-/avatar")
-    return OwnedAddress.of("/people/$person/-/avatar?v=$escaped")
-}
+/** The avatar at its version; none when the person has none ([imageUrl]). */
+internal fun avatarPath(id: String, version: String?): OwnedAddress? = imageUrl(id, "avatar", version)

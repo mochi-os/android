@@ -19,6 +19,7 @@ import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Upload
 import org.mochios.android.files.UploadTracker
+import org.mochios.android.util.length
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.PersonStyle
@@ -130,7 +131,7 @@ class ProfileViewModel @Inject constructor(
         val info = _uiState.value.info ?: return
         val value = _uiState.value.bioDraft
         if (value == info.profile) return
-        if (value.length > BIO_MAX) {
+        if (length(value) > PROFILE_MAXIMUM) {
             onError(MochiError.Local(R.string.people_profile_too_long))
             return
         }
@@ -198,7 +199,8 @@ class ProfileViewModel @Inject constructor(
     private fun uploadSlot(slot: ImageSlot, bytes: ByteArray) {
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(savingSlot = slot, error = null)
-            val file = File(context.cacheDir, "${slot.name.lowercase()}-${UUID.randomUUID()}.jpg")
+            val extension = SLOT_SPECS.getValue(slot).format.extension
+            val file = File(context.cacheDir, "${slot.name.lowercase()}-${UUID.randomUUID()}.$extension")
             try {
                 file.writeBytes(bytes)
                 val person = sessionManager.getBoundIdentity()
@@ -255,7 +257,8 @@ class ProfileViewModel @Inject constructor(
     }
 
     companion object {
-        const val BIO_MAX = 100 * 1024 // 100KB cap (web uses 100*100 chars; spec asks for 100KB)
+        /** The server's limit on the profile text, in characters as [length] counts them. */
+        const val PROFILE_MAXIMUM = 100 * 1024
         val ACCENT_PATTERN = Regex("^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$")
     }
 }

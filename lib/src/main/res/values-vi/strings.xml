@@ -354,4 +354,21 @@
     <string name="game_system_score_resume">%1$s đã chơi tiếp</string>
     <string name="game_not_found">Không tìm thấy ván đấu</string>
     <string name="game_chat_move_played_you">Bạn đã đi %1$s</string>
+    <string name="devices_add">Thêm thiết bị</string>
+    <string name="devices_copy">Sao chép %1$s</string>
+    <string name="devices_create">Tạo</string>
+    <string name="devices_created">Đã tạo %1$s</string>
+    <string name="devices_delete">Xóa thiết bị</string>
+    <string name="devices_delete_message">Thiết bị sẽ không thể đồng bộ danh bạ hoặc lịch nữa.</string>
+    <string name="devices_delete_title">Xóa thiết bị?</string>
+    <string name="devices_deleted">Đã xóa thiết bị</string>
+    <string name="devices_done">Xong</string>
+    <string name="devices_empty">Chưa có thiết bị nào kết nối</string>
+    <string name="devices_name">Tên thiết bị</string>
+    <string name="devices_password">Mật khẩu</string>
+    <string name="devices_title">Thiết bị đã kết nối</string>
+    <string name="devices_used">Lần cuối sử dụng %1$s</string>
+    <string name="devices_username">Tên người dùng</string>
+    <string name="devices_warning">Hãy sao chép mật khẩu ngay: mật khẩu sẽ không hiện lại.</string>
+    <string name="devices_unused">Chưa từng sử dụng</string>
 </resources>

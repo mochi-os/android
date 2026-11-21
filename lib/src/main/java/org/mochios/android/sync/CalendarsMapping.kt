@@ -88,14 +88,16 @@ object CalendarsMapping {
 
     /**
      * The provider rows for a server event, master first. [calendar] is the
-     * provider row id of the calendar the event belongs to.
+     * provider row id of the calendar the event belongs to. A floating time,
+     * one that names no zone, is read in [floating], the phone's own zone,
+     * which the row then carries as its zone.
      */
-    fun rows(event: SyncedEvent, calendar: Long): List<EventRow> {
+    fun rows(event: SyncedEvent, calendar: Long, floating: String = UTC): List<EventRow> {
         val events = event.components.filter { it.name.equals("VEVENT", ignoreCase = true) }
         val master = events.firstOrNull { !it.exception() } ?: return emptyList()
-        val out = mutableListOf(row(master, event, calendar, null))
+        val out = mutableListOf(row(master, event, calendar, null, floating))
         for (override in events.filter { it.exception() }) {
-            out.add(row(override, event, calendar, master))
+            out.add(row(override, event, calendar, master, floating))
         }
         return out
     }
@@ -109,6 +111,7 @@ object CalendarsMapping {
         event: SyncedEvent,
         calendar: Long,
         master: EventComponent?,
+        floating: String,
     ): EventRow {
         val values = mutableMapOf<String, Any?>()
         values[Events.CALENDAR_ID] = calendar
@@ -132,9 +135,9 @@ object CalendarsMapping {
         val start = component.property("DTSTART")
         val allday = start != null && date(start)
         values[Events.ALL_DAY] = if (allday) 1 else 0
-        val zone = zone(start)
+        val zone = zone(start, floating)
         values[Events.EVENT_TIMEZONE] = if (allday) UTC else zone
-        val began = start?.let { moment(it) } ?: 0L
+        val began = start?.let { moment(it, floating) } ?: 0L
         values[Events.DTSTART] = began
 
         // The provider refuses DTEND on a recurring event and wants its span
@@ -146,29 +149,29 @@ object CalendarsMapping {
             values[Events.DTEND] = null
             values[Events.DURATION] = when {
                 duration.isNotBlank() -> duration
-                finish != null -> span(began, moment(finish), allday)
+                finish != null -> span(began, moment(finish, floating), allday)
                 allday -> "P1D"
                 else -> "PT0S"
             }
         } else {
             values[Events.DURATION] = null
             values[Events.DTEND] = when {
-                finish != null -> moment(finish)
+                finish != null -> moment(finish, floating)
                 duration.isNotBlank() -> began + seconds(duration) * 1000L
                 allday -> began + 86_400_000L
                 else -> began
             }
             val end = component.property("DTEND")
-            values[Events.EVENT_END_TIMEZONE] = if (allday || end == null) null else zone(end)
+            values[Events.EVENT_END_TIMEZONE] = if (allday || end == null) null else zone(end, floating)
         }
 
         values[Events.RRULE] = component.value("RRULE").takeIf { it.isNotBlank() }
-        values[Events.RDATE] = dates(component.all("RDATE"), allday)
-        values[Events.EXDATE] = dates(component.all("EXDATE"), allday)
+        values[Events.RDATE] = dates(component.all("RDATE"), allday, floating)
+        values[Events.EXDATE] = dates(component.all("EXDATE"), allday, floating)
 
         if (master != null) {
             val recurrence = component.property("RECURRENCE-ID")
-            val original = recurrence?.let { moment(it) } ?: 0L
+            val original = recurrence?.let { moment(it, floating) } ?: 0L
             values[Events._SYNC_ID] = name(event.id, original)
             values[Events.ORIGINAL_SYNC_ID] = event.id
             values[Events.ORIGINAL_INSTANCE_TIME] = original
@@ -190,14 +193,17 @@ object CalendarsMapping {
     private fun alarms(component: EventComponent): List<Int> =
         component.components
             .filter { it.name.equals("VALARM", ignoreCase = true) }
-            .mapNotNull { alarm -> alarm.property("TRIGGER")?.let { minutes(it) } }
+            .mapNotNull { minutes(it) }
 
     /**
-     * A `TRIGGER` as minutes before the start, which is all the provider
-     * holds. A trigger relative to the end, or an absolute one, has no column
-     * and is left to the server, which sends the notification itself.
+     * How many minutes before the start an alarm fires, which is all the
+     * provider holds and all a reminder can say. An alarm relative to the
+     * end, at a fixed time, after the start or with no trigger is null: it
+     * has no column, and is left to the server, which sends the notification
+     * itself.
      */
-    private fun minutes(trigger: EventProperty): Int? {
+    fun minutes(alarm: EventComponent): Int? {
+        val trigger = alarm.property("TRIGGER") ?: return null
         if (trigger.parameter("RELATED").equals("END", ignoreCase = true)) return null
         if (trigger.parameter("VALUE").equals("DATE-TIME", ignoreCase = true)) return null
         val value = trigger.value.trim()
@@ -205,7 +211,28 @@ object CalendarsMapping {
         val total = seconds(value.removePrefix("-"))
         if (total < 0) return null
         val signed = if (value.startsWith("-")) total else -total
-        return (signed / 60).toInt()
+        return (signed / 60).toInt().takeIf { it >= 0 }
+    }
+
+    /**
+     * The `VALARM`s an event holds once its reminders are [minutes], each how
+     * long before the start one fires, over the [carried] alarms the server
+     * holds. An alarm a reminder cannot say ([minutes] of it is null) is kept
+     * as it is, and one with no trigger, which fires at nothing, goes. Each
+     * one a reminder can say is paired with a reminder at its minutes and
+     * kept whole - its action, description and whatever another client put
+     * on it - or dropped once no reminder is left for it; a reminder no alarm
+     * pairs with becomes a new one, which [summary] describes.
+     */
+    fun alarms(carried: List<EventComponent>, minutes: List<Int>, summary: String): List<EventComponent> {
+        val left = minutes.toMutableList()
+        val out = mutableListOf<EventComponent>()
+        for (alarm in carried) {
+            if (alarm.property("TRIGGER") == null) continue
+            val at = minutes(alarm)
+            if (at == null || left.remove(at)) out.add(alarm)
+        }
+        return out + left.map { alarm(it, summary) }
     }
 
     // ---- provider -> components ----
@@ -219,21 +246,31 @@ object CalendarsMapping {
      * A row the phone marked deleted contributes an `EXDATE` to the master
      * rather than a component, which is how the phone's calendar app says one
      * occurrence of a recurring event is off.
+     *
+     * A floating event, whose times name no zone, was read in [floating], the
+     * phone's own zone, and stays floating while its row is still in that
+     * zone; a zone picked on the phone pins it there.
      */
-    fun components(rows: List<EventRow>, carried: List<EventComponent> = emptyList()): List<EventComponent> {
+    fun components(
+        rows: List<EventRow>,
+        carried: List<EventComponent> = emptyList(),
+        floating: String = UTC,
+    ): List<EventComponent> {
         val master = rows.firstOrNull { it.values[Events.ORIGINAL_SYNC_ID] == null } ?: return emptyList()
         val overrides = rows.filter { it !== master }
         val previous = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
         val kept = previous.firstOrNull { !it.exception() }
+        // An override names its occurrence as the series' start does.
+        val series = floating(kept?.property("DTSTART"))
 
         val excluded = overrides.filter { it.deleted }.mapNotNull { it.values[Events.ORIGINAL_INSTANCE_TIME] as? Long }
-        val out = mutableListOf(component(master, kept, excluded))
+        val out = mutableListOf(component(master, kept, excluded, floating, series))
         for (override in overrides.filterNot { it.deleted }) {
             val original = override.values[Events.ORIGINAL_INSTANCE_TIME] as? Long ?: continue
             val before = previous.firstOrNull {
-                it.exception() && it.property("RECURRENCE-ID")?.let { property -> moment(property) } == original
+                it.exception() && it.property("RECURRENCE-ID")?.let { property -> moment(property, floating) } == original
             }
-            out.add(component(override, before, emptyList()))
+            out.add(component(override, before, emptyList(), floating, series))
         }
         return out
     }
@@ -242,13 +279,25 @@ object CalendarsMapping {
      * One component from one row. [carried] is the same component as the
      * server last sent it, if any; its unmanaged properties and its
      * components other than `VALARM` are kept, since the phone has nowhere to
-     * hold them and dropping them would lose them on the first edit.
+     * hold them and dropping them would lose them on the first edit. Its
+     * times stay floating where [carried]'s were and the row is still in the
+     * [floating] zone they were read in; [series] says the series' own start
+     * floats, which an override's `RECURRENCE-ID` follows, and a new
+     * override's times.
      */
-    private fun component(row: EventRow, carried: EventComponent?, excluded: List<Long>): EventComponent {
+    private fun component(
+        row: EventRow,
+        carried: EventComponent?,
+        excluded: List<Long>,
+        floating: String,
+        series: Boolean,
+    ): EventComponent {
         val values = row.values
         val allday = number(values[Events.ALL_DAY]) == 1L
         val zone = (values[Events.EVENT_TIMEZONE] as? String)?.takeIf { it.isNotBlank() } ?: UTC
         val began = number(values[Events.DTSTART])
+        // A new override of a floating series floats as the series does.
+        val loose = zone == floating && (carried?.property("DTSTART")?.let { floating(it) } ?: series)
 
         // A description edited on the phone leaves behind the rich copy
         // another client kept beside it, which would go on showing the old
@@ -268,32 +317,43 @@ object CalendarsMapping {
             properties.add(property("TRANSP", "TRANSPARENT"))
         }
 
-        properties.add(stamp("DTSTART", began, zone, allday))
+        properties.add(stamp("DTSTART", began, zone, allday, loose))
         val finish = values[Events.DTEND]
         val duration = text(values[Events.DURATION])
         when {
-            finish != null -> properties.add(
-                stamp("DTEND", number(finish), (values[Events.EVENT_END_TIMEZONE] as? String) ?: zone, allday),
-            )
+            finish != null -> {
+                val ends = (values[Events.EVENT_END_TIMEZONE] as? String) ?: zone
+                properties.add(stamp("DTEND", number(finish), ends, allday, loose && ends == floating))
+            }
             duration != null -> properties.add(property("DURATION", standard(duration)))
         }
 
         text(values[Events.RRULE])?.let { properties.add(property("RRULE", it)) }
-        for (value in split(values[Events.RDATE])) properties.add(stamp("RDATE", value, zone, allday))
+        for (value in split(values[Events.RDATE])) properties.add(stamp("RDATE", value, zone, allday, loose))
         val exdates = split(values[Events.EXDATE]) + excluded
-        for (value in exdates.distinct()) properties.add(stamp("EXDATE", value, zone, allday))
+        for (value in exdates.distinct()) properties.add(stamp("EXDATE", value, zone, allday, loose))
 
         val original = values[Events.ORIGINAL_INSTANCE_TIME] as? Long
         if (original != null) {
             val originally = number(values[Events.ORIGINAL_ALL_DAY]) == 1L
-            properties.add(stamp("RECURRENCE-ID", original, zone, originally))
+            properties.add(
+                if (series) stamp("RECURRENCE-ID", original, floating, originally, true)
+                else stamp("RECURRENCE-ID", original, zone, originally),
+            )
         }
 
-        // VALARMs are rebuilt from the Reminders rows; every other nested
-        // component the server holds is carried through.
-        val nested = carried?.components?.filterNot { it.name.equals("VALARM", ignoreCase = true) }.orEmpty()
-        val alarms = row.reminders.map { alarm(it, text(values[Events.TITLE]).orEmpty()) }
-        return EventComponent("VEVENT", properties, nested + alarms)
+        // The alarms the server holds are paired with the phone's reminders:
+        // those the phone cannot hold, and those whose reminder it still
+        // has, go back as they were. Every other nested component the server
+        // holds is carried through.
+        val nested = carried?.components.orEmpty()
+        val alarms = alarms(
+            nested.filter { it.name.equals("VALARM", ignoreCase = true) },
+            row.reminders,
+            text(values[Events.TITLE]).orEmpty(),
+        )
+        val others = nested.filterNot { it.name.equals("VALARM", ignoreCase = true) }
+        return EventComponent("VEVENT", properties, others + alarms)
     }
 
     /**
@@ -329,9 +389,11 @@ object CalendarsMapping {
     /**
      * The epoch millisecond a date or date-time property names. An all-day
      * value is the UTC midnight of its date, which is what the provider
-     * stores; a floating one is read in the zone its `TZID` names, else UTC.
+     * stores; a date-time is read in the zone its `TZID` names, and a
+     * floating one, which names none, in [floating]: the viewer's own zone,
+     * as the server lists it.
      */
-    fun moment(property: EventProperty): Long {
+    fun moment(property: EventProperty, floating: String = UTC): Long {
         val value = property.value.trim()
         if (value.isEmpty()) return 0
         if (date(property)) {
@@ -345,7 +407,7 @@ object CalendarsMapping {
             if (value.endsWith("Z")) {
                 LocalDateTime.parse(value.dropLast(1), STAMP).toInstant(ZoneOffset.UTC).toEpochMilli()
             } else {
-                LocalDateTime.parse(value, STAMP).atZone(zone(property).let(::zoneOf)).toInstant().toEpochMilli()
+                LocalDateTime.parse(value, STAMP).atZone(zone(property, floating).let(::zoneOf)).toInstant().toEpochMilli()
             }
         } catch (_: DateTimeParseException) {
             0
@@ -357,11 +419,20 @@ object CalendarsMapping {
         property.parameter("VALUE").equals("DATE", ignoreCase = true) ||
             (property.value.length == 8 && property.value.all { it.isDigit() })
 
-    /** The zone a property names, UTC when it names none. */
-    fun zone(property: EventProperty?): String {
+    /**
+     * Whether the property is a floating date-time: one that names no zone
+     * and is not in UTC, so it reads the same on the clock wherever it is
+     * read.
+     */
+    fun floating(property: EventProperty?): Boolean =
+        property != null && property.value.isNotBlank() && !date(property) &&
+            property.parameter("TZID").isNullOrBlank() && !property.value.trim().endsWith("Z")
+
+    /** The zone a property names: [floating] for a floating date-time, UTC when it names none. */
+    fun zone(property: EventProperty?, floating: String = UTC): String {
         if (property == null) return UTC
-        property.parameter("TZID")?.let { return it }
-        return UTC
+        property.parameter("TZID")?.takeIf { it.isNotBlank() }?.let { return it }
+        return if (floating(property)) floating else UTC
     }
 
     private fun zoneOf(name: String): ZoneId = try {
@@ -370,12 +441,17 @@ object CalendarsMapping {
         ZoneOffset.UTC
     }
 
-    /** A date or date-time property for an epoch millisecond. */
-    fun stamp(name: String, moment: Long, zone: String, allday: Boolean): EventProperty {
+    /**
+     * A date or date-time property for an epoch millisecond, in [zone]; with
+     * [floating] set, it is written as the clock reads in [zone] but names no
+     * zone, so it stays floating.
+     */
+    fun stamp(name: String, moment: Long, zone: String, allday: Boolean, floating: Boolean = false): EventProperty {
         if (allday) {
             val day = Instant.ofEpochMilli(moment).atZone(ZoneOffset.UTC).toLocalDate()
             return property(name, DATE.format(day), "VALUE", "DATE")
         }
+        if (floating) return property(name, STAMP.format(ZonedDateTime.ofInstant(Instant.ofEpochMilli(moment), zoneOf(zone))))
         if (zone.isBlank() || zone == UTC) {
             val universal = Instant.ofEpochMilli(moment).atZone(ZoneOffset.UTC)
             return property(name, STAMP.format(universal) + "Z")
@@ -385,18 +461,29 @@ object CalendarsMapping {
     }
 
     /**
+     * A date or date-time property for an epoch millisecond, in the form
+     * [sample] takes: a date, a time in its zone, one in UTC, or a floating
+     * one, written as the clock reads in [floating], the zone floating times
+     * are read in. With no [sample] it is in UTC.
+     */
+    fun like(name: String, moment: Long, sample: EventProperty?, floating: String = UTC): EventProperty {
+        val loose = floating(sample)
+        return stamp(name, moment, if (loose) floating else zone(sample), sample != null && date(sample), loose)
+    }
+
+    /**
      * The provider's comma-separated list of date-times for a run of `RDATE`
      * or `EXDATE` properties, each of which may itself carry several values.
      * Written in UTC, which every value parses to and which needs no zone
-     * prefix on the row.
+     * prefix on the row; a floating value is read in [floating].
      */
-    private fun dates(properties: List<EventProperty>, allday: Boolean): String? {
+    private fun dates(properties: List<EventProperty>, allday: Boolean, floating: String): String? {
         val out = mutableListOf<String>()
         for (property in properties) {
             for (value in property.value.split(",")) {
                 val single = property.copy(value = value.trim())
                 if (single.value.isEmpty()) continue
-                out.add(listed(moment(single), allday))
+                out.add(listed(moment(single, floating), allday))
             }
         }
         return out.takeIf { it.isNotEmpty() }?.joinToString(",")

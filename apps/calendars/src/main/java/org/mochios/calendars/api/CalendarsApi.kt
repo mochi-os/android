@@ -134,12 +134,6 @@ interface CalendarsApi {
     suspend fun listCalendars(): Response<ApiResponse<CalendarsResponse>>
 
     @FormUrlEncoded
-    @POST("-/calendars/get")
-    suspend fun getCalendar(
-        @Field("calendar") calendar: String,
-    ): Response<ApiResponse<CalendarResponse>>
-
-    @FormUrlEncoded
     @POST("-/calendars/create")
     suspend fun createCalendar(
         // contract-ok: the handler reads name through name_input.

@@ -63,13 +63,14 @@ data class Recurrence(
      * `INTERVAL` left out when it is 1, which is its default, so a plain
      * weekly rule reads as one. An end on a day takes in the whole of it: the
      * day itself for an [allday] series, whose `UNTIL` is a date as its start
-     * is, else the last second of the day in [zone], in UTC. A rule kept as
-     * read has its `UNTIL` rewritten in the other form when the series has
-     * turned all day or back, so a date never ends a timed series nor a time
-     * a whole-day one.
+     * is, else the last second of the day in [zone], in UTC, or for a
+     * [floating] series, whose `UNTIL` must float as its start does, as the
+     * clock reads then. A rule kept as read has its `UNTIL` rewritten in the
+     * other form when the series has turned all day or back, so a date never
+     * ends a timed series nor a time a whole-day one.
      */
-    fun rule(zone: String = CalendarsMapping.UTC, allday: Boolean = false): String? {
-        if (!rule.isNullOrBlank()) return kept(rule, zone, allday)
+    fun rule(zone: String = CalendarsMapping.UTC, allday: Boolean = false, floating: Boolean = false): String? {
+        if (!rule.isNullOrBlank()) return kept(rule, zone, allday, floating)
         if (frequency == Frequency.NEVER) return null
         val parts = mutableListOf("FREQ=" + frequency.name)
         if (interval > 1) parts.add("INTERVAL=$interval")
@@ -77,7 +78,7 @@ data class Recurrence(
             parts.add("BYDAY=" + days.sorted().joinToString(",") { WEEKDAYS[it] })
         }
         when (ending) {
-            Ending.UNTIL -> until?.let { parts.add("UNTIL=" + last(it, zone, allday)) }
+            Ending.UNTIL -> until?.let { parts.add("UNTIL=" + last(it, zone, allday, floating)) }
             Ending.COUNT -> parts.add("COUNT=${count.coerceAtLeast(1)}")
             Ending.NEVER -> Unit
         }
@@ -85,21 +86,22 @@ data class Recurrence(
     }
 
     /** [rule] with its `UNTIL` in the form the series' start takes. */
-    private fun kept(rule: String, zone: String, allday: Boolean): String {
+    private fun kept(rule: String, zone: String, allday: Boolean, floating: Boolean): String {
         val day = until ?: return rule
         val parts = rule.split(";")
         val index = parts.indexOfFirst { it.substringBefore('=').trim().equals("UNTIL", ignoreCase = true) }
         if (index < 0) return rule
         val dated = parts[index].substringAfter('=').trim().length == 8
         if (dated == allday) return rule
-        return parts.toMutableList().apply { this[index] = "UNTIL=" + last(day, zone, allday) }.joinToString(";")
+        return parts.toMutableList().apply { this[index] = "UNTIL=" + last(day, zone, allday, floating) }.joinToString(";")
     }
 
     private companion object {
         val STAMP: DateTimeFormatter = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'")
 
-        fun last(day: LocalDate, zone: String, allday: Boolean): String {
+        fun last(day: LocalDate, zone: String, allday: Boolean, floating: Boolean): String {
             if (allday) return DATE.format(day)
+            if (floating) return PLAIN_STAMP.format(day.atTime(23, 59, 59))
             val id = runCatching { ZoneId.of(zone) }.getOrDefault(ZoneOffset.UTC)
             val ends = day.plusDays(1).atStartOfDay(id).minusSeconds(1)
             return STAMP.format(ends.withZoneSameInstant(ZoneOffset.UTC))

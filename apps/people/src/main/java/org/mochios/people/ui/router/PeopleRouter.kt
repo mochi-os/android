@@ -46,17 +46,21 @@ const val PEOPLE_FEATURE = "people"
 object PeopleSection {
     const val CONTACTS = "contacts"
     const val INVITATIONS = "invitations"
-    const val GROUPS = "groups"
     const val PROFILE = "profile"
 
     /** What the module wrote for this section before contacts replaced friends. */
     const val LEGACY_FRIENDS = "friends"
+
+    /** What the groups list wrote, before each group became a row of the drawer. */
+    const val LEGACY_GROUPS = "groups"
 }
 
 /**
- * The section a stored token names. A token written before contacts replaced
- * friends still resolves, so an upgrade lands where the user left off rather
- * than on an unknown section.
+ * The section a stored token names. A token written for a section since
+ * retired, friends or the groups list, lands on contacts, so an upgrade opens
+ * a section that exists rather than one the drawer no longer has.
  */
-fun peopleSection(stored: String): String =
-    if (stored == PeopleSection.LEGACY_FRIENDS) PeopleSection.CONTACTS else stored
+fun peopleSection(stored: String): String = when (stored) {
+    PeopleSection.LEGACY_FRIENDS, PeopleSection.LEGACY_GROUPS -> PeopleSection.CONTACTS
+    else -> stored
+}

@@ -355,4 +355,21 @@
     <string name="game_system_score_resume">%1$s je nastavio igru</string>
     <string name="game_not_found">Igra nije pronađena</string>
     <string name="game_chat_move_played_you">Odigrali ste %1$s</string>
+    <string name="devices_add">Dodaj uređaj</string>
+    <string name="devices_copy">Kopiraj %1$s</string>
+    <string name="devices_create">Stvori</string>
+    <string name="devices_created">Stvoreno %1$s</string>
+    <string name="devices_delete">Izbriši uređaj</string>
+    <string name="devices_delete_message">Uređaj više neće moći sinkronizirati kontakte ni kalendare.</string>
+    <string name="devices_delete_title">Izbrisati uređaj?</string>
+    <string name="devices_deleted">Uređaj izbrisan</string>
+    <string name="devices_done">Gotovo</string>
+    <string name="devices_empty">Nema povezanih uređaja</string>
+    <string name="devices_name">Naziv uređaja</string>
+    <string name="devices_password">Lozinka</string>
+    <string name="devices_title">Povezani uređaji</string>
+    <string name="devices_used">Zadnje korišteno %1$s</string>
+    <string name="devices_username">Korisničko ime</string>
+    <string name="devices_warning">Kopirajte lozinku sada: ne može se ponovno prikazati.</string>
+    <string name="devices_unused">Nikad korišteno</string>
 </resources>

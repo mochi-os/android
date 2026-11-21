@@ -37,7 +37,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -49,7 +48,7 @@ import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiButton
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
-import org.mochios.android.util.segment
+import org.mochios.android.ui.components.personAsset
 import org.mochios.people.R
 import org.mochios.android.R as MochiR
 
@@ -136,14 +135,6 @@ internal fun PersonBody(
     onOpenLink: (String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    // Private profile + not a mutual friend → render avatar + name only.
-    val gated = info.privacy == "private" && friendState !is FriendState.Friend &&
-        friendState !is FriendState.Self
-
-    val accent = info.style.accent
-    val avatarUrl = avatarUrlFor(info)
-    val bannerUrl = bannerUrlFor(info)
-
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -153,31 +144,13 @@ internal fun PersonBody(
             name = info.name,
             seed = info.id,
             fingerprint = info.fingerprint,
-            avatarUrl = if (gated) null else avatarUrl,
-            bannerUrl = if (gated) null else bannerUrl,
-            accent = accent,
+            avatarUrl = avatarUrlFor(info),
+            bannerUrl = bannerUrlFor(info),
+            accent = info.style.accent,
             status = friendState.status(),
         )
 
         Spacer(Modifier.height(16.dp))
-
-        if (gated) {
-            // Private profile + non-friend: minimal body.
-            HorizontalDivider()
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(24.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-            ) {
-                Text(
-                    text = stringResource(R.string.people_person_private),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-            }
-            return@Column
-        }
 
         // ---- Action buttons ----
         ActionRow(
@@ -339,24 +312,10 @@ private fun ActionRow(
     }
 }
 
-/**
- * A person's avatar at its version. Null when the id, a peer's, cannot be one
- * segment of the address ([segment]); a version that cannot is left off.
- */
-internal fun avatarUrlFor(info: org.mochios.people.model.PersonInformation): OwnedAddress? {
-    if (info.avatar.isBlank()) return null
-    val id = segment(info.id.ifBlank { return null }) ?: return null
-    val version = segment(info.avatar) ?: return OwnedAddress.of("/people/$id/-/avatar")
-    return OwnedAddress.of("/people/$id/-/avatar?v=$version")
-}
+/** A person's avatar at its version; none when they have none ([personAsset]). */
+internal fun avatarUrlFor(info: org.mochios.people.model.PersonInformation): OwnedAddress? =
+    if (info.avatar.isBlank()) null else personAsset(info.id, "avatar", info.avatar)
 
-/**
- * A person's banner at its version. Null when the id, a peer's, cannot be one
- * segment of the address ([segment]); a version that cannot is left off.
- */
-internal fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): OwnedAddress? {
-    if (info.banner.isBlank()) return null
-    val id = segment(info.id.ifBlank { return null }) ?: return null
-    val version = segment(info.banner) ?: return OwnedAddress.of("/people/$id/-/banner")
-    return OwnedAddress.of("/people/$id/-/banner?v=$version")
-}
+/** A person's banner at its version; none when they have none ([personAsset]). */
+internal fun bannerUrlFor(info: org.mochios.people.model.PersonInformation): OwnedAddress? =
+    if (info.banner.isBlank()) null else personAsset(info.id, "banner", info.banner)

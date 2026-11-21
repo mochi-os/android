@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s oýny dowam etdirdi</string>
     <string name="game_not_found">Oýun tapylmady</string>
     <string name="game_chat_move_played_you">Sen %1$s oýnadyň</string>
+    <string name="devices_add">Enjam goş</string>
+    <string name="devices_copy">%1$s nusgala</string>
+    <string name="devices_create">Döretmek</string>
+    <string name="devices_created">Döredildi %1$s</string>
+    <string name="devices_delete">Enjamy poz</string>
+    <string name="devices_delete_message">Enjam indi kontaktlary ýa-da senenamalary sinhronlap bilmez.</string>
+    <string name="devices_delete_title">Enjam pozulsynmy?</string>
+    <string name="devices_deleted">Enjam pozuldy</string>
+    <string name="devices_done">Taýýar</string>
+    <string name="devices_empty">Birikdirilen enjam ýok</string>
+    <string name="devices_name">Enjamyň ady</string>
+    <string name="devices_password">Parol</string>
+    <string name="devices_title">Birikdirilen enjamlar</string>
+    <string name="devices_used">Iň soňky ulanyş %1$s</string>
+    <string name="devices_username">Ulanyjy ady</string>
+    <string name="devices_warning">Paroly häzir göçüriň: gaýtadan görkezilmez.</string>
+    <string name="devices_unused">Hiç haçan ulanylmadyk</string>
 </resources>

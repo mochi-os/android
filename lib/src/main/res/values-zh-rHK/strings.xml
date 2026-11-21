@@ -291,4 +291,8 @@
     <string name="person_unknown">未知</string>
     <string name="format_time_seconds_short">%1$s 秒</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="devices_create">建立</string>
+    <string name="devices_done">完成</string>
+    <string name="devices_used">上次使用 %1$s</string>
+    <string name="devices_username">使用者名稱</string>
 </resources>

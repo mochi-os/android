@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Людей не знайдено</string>
     <string name="people_friends_try_adjusting">Спробуйте змінити пошуковий запит</string>
     <string name="people_friends_pending">В очікуванні</string>
-    <string name="people_friends_received_tab">Отримано</string>
-    <string name="people_friends_sent_tab">Надіслано</string>
     <string name="people_invitations_incoming">Вхідні запрошення</string>
     <string name="people_invitations_empty">Немає очікуваних запрошень</string>
     <string name="people_invitations_empty_hint">Нові запрошення з\'являться тут</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Запрошення від %1$s прийнято</string>
     <string name="people_invitations_toast_declined">Запрошення від %1$s відхилено</string>
     <string name="people_invitations_toast_cancelled">Запрошення до %1$s скасовано</string>
-    <string name="people_groups_empty">Немає груп</string>
     <string name="people_group_delete_confirm">Видалити групу \"%1$s\"? Цю дію не можна скасувати.</string>
     <string name="people_member_remove_confirm">Ви дійсно хочете видалити %1$s з цієї групи?</string>
     <string name="people_member_remove_with_name">Видалити %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Не вдалося обробити зображення %1$s</string>
     <string name="people_profile_accent_invalid">Введіть дійсний шістнадцятковий колір (напр. #a78bfa)</string>
     <string name="people_profile_accent_none">Немає</string>
-    <string name="people_profile_privacy_private_desc">Тільки спільні друзі можуть переглядати ваш профіль</string>
     <string name="people_welcome_title">Ласкаво просимо до застосунку «Люди»</string>
     <string name="people_person_banner_alt">Банер для %1$s</string>
-    <string name="people_person_private">Цей профіль приватний</string>
     <string name="people_person_state_invited">Запрошено</string>
 
     <string name="people_invitations_accept_all">Прийняти всі</string>
@@ -179,25 +174,8 @@
     </plurals>
     <string name="people_welcome_body">Знаходьте друзів у всьому Mochi та спілкуйтеся. Торкніться Додати контакт, щоб надіслати запрошення.</string>
     <string name="people_person_state_contact">У контактах</string>
-    <string name="people_device_create">Створити</string>
-    <string name="people_device_add">Додати пристрій</string>
-    <string name="people_device_username">Ім\'я користувача</string>
-    <string name="people_device_done">Готово</string>
-    <string name="people_device_used">Востаннє використано %1$s</string>
-    <string name="people_device_never">Ніколи</string>
     <string name="people_sync_now">Синхронізувати зараз</string>
-    <string name="people_device_title">Підключені пристрої</string>
-    <string name="people_device_name">Назва пристрою</string>
     <string name="people_device_address">URL адресної книги</string>
-    <string name="people_device_password">Пароль</string>
-    <string name="people_device_copy">Копіювати %1$s</string>
-    <string name="people_device_warning">Збережіть цей пароль зараз. Його не можна буде показати знову.</string>
-    <string name="people_device_empty">Немає підключених пристроїв.</string>
-    <string name="people_device_created">Створено %1$s</string>
-    <string name="people_device_delete">Видалити пристрій</string>
-    <string name="people_device_delete_title">Видалити пристрій?</string>
-    <string name="people_device_delete_message">Пристрій більше не зможе синхронізувати контакти або календарі.</string>
-    <string name="people_device_deleted">Пристрій видалено</string>
     <string name="people_sync_title">Синхронізація з цим телефоном</string>
     <string name="people_sync_confirm">Видалення контакту друга в застосунку «Контакти» на цьому телефоні також завершує дружбу.</string>
     <string name="people_sync_enable">Увімкнути</string>
@@ -229,4 +207,8 @@
     <string name="people_profile_settings">Налаштування</string>
     <string name="people_contacts_invitation_sent">Запрошення надіслано</string>
     <string name="people_contact_keep">Залишити</string>
+    <string name="people_invitations_received_count">Отримано (%1$s)</string>
+    <string name="people_invitations_sent_count">Надіслано (%1$s)</string>
+    <string name="people_contact_discard">Відхилити зміни</string>
+    <string name="people_person_unavailable">Особа недоступна</string>
 </resources>

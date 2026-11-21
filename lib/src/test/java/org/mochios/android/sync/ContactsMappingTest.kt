@@ -41,6 +41,8 @@ class ContactsMappingTest {
     private val card = listOf(
         ContactProperty("FN", emptyMap(), "Ada Lovelace"),
         ContactProperty("N", emptyMap(), "Lovelace;Ada;Augusta;Lady;OBE"),
+        ContactProperty("X-PHONETIC-FIRST-NAME", emptyMap(), "ay-da"),
+        ContactProperty("X-PHONETIC-LAST-NAME", emptyMap(), "luv-lace"),
         ContactProperty("NICKNAME", emptyMap(), "Ada"),
         ContactProperty("EMAIL", mapOf("TYPE" to listOf("home")), "ada@example.org"),
         ContactProperty("EMAIL", mapOf("TYPE" to listOf("work")), "a.lovelace@example.com"),
@@ -82,6 +84,9 @@ class ContactsMappingTest {
         assertEquals("Augusta", name.values[StructuredName.MIDDLE_NAME])
         assertEquals("Lady", name.values[StructuredName.PREFIX])
         assertEquals("OBE", name.values[StructuredName.SUFFIX])
+        assertEquals("ay-da", name.values[StructuredName.PHONETIC_GIVEN_NAME])
+        assertEquals("luv-lace", name.values[StructuredName.PHONETIC_FAMILY_NAME])
+        assertFalse(StructuredName.PHONETIC_MIDDLE_NAME in name.values)
 
         assertEquals("Ada", rows.of(Nickname.CONTENT_ITEM_TYPE).single().values[Nickname.NAME])
 
@@ -129,6 +134,37 @@ class ContactsMappingTest {
     fun `the managed properties survive a round trip exactly`() {
         val managed = card.filter { it.name in ContactsMapping.MANAGED }
         assertEquals(managed, ContactsMapping.properties(ContactsMapping.rows(card)))
+    }
+
+    @Test
+    fun `a name's reading typed on the phone uploads, and a download writes it back`() {
+        val typed = listOf(
+            DataRow(StructuredName.CONTENT_ITEM_TYPE, mapOf(
+                StructuredName.DISPLAY_NAME to "田中 宏",
+                StructuredName.PHONETIC_FAMILY_NAME to "たなか",
+                StructuredName.PHONETIC_MIDDLE_NAME to "の",
+                StructuredName.PHONETIC_GIVEN_NAME to "ひろし",
+            )),
+        )
+        val properties = ContactsMapping.properties(typed)
+        fun reading(name: String) = properties.firstOrNull { it.name == name }?.value
+        // THE POINT: the reading reaches the server as other vCard writers name it.
+        assertEquals("ひろし", reading("X-PHONETIC-FIRST-NAME"))
+        assertEquals("の", reading("X-PHONETIC-MIDDLE-NAME"))
+        assertEquals("たなか", reading("X-PHONETIC-LAST-NAME"))
+        // Named as managed, so the server drops a reading the phone cleared.
+        assertTrue(ContactsMapping.MANAGED.containsAll(properties.map { it.name }))
+        // THE POINT: the name row a download writes in place of the phone's keeps it.
+        val name = ContactsMapping.rows(properties).first { it.mimetype == StructuredName.CONTENT_ITEM_TYPE }
+        assertEquals("ひろし", name.values[StructuredName.PHONETIC_GIVEN_NAME])
+        assertEquals("の", name.values[StructuredName.PHONETIC_MIDDLE_NAME])
+        assertEquals("たなか", name.values[StructuredName.PHONETIC_FAMILY_NAME])
+    }
+
+    @Test
+    fun `a reading alone still makes the name row`() {
+        val rows = ContactsMapping.rows(listOf(ContactProperty("X-PHONETIC-LAST-NAME", emptyMap(), "たなか")))
+        assertEquals("たなか", rows.firstOrNull { it.mimetype == StructuredName.CONTENT_ITEM_TYPE }?.values?.get(StructuredName.PHONETIC_FAMILY_NAME))
     }
 
     @Test

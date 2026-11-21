@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s已继续对局</string>
     <string name="game_not_found">未找到对局</string>
     <string name="game_chat_move_played_you">您走了 %1$s</string>
+    <string name="devices_add">添加设备</string>
+    <string name="devices_copy">复制%1$s</string>
+    <string name="devices_create">创建</string>
+    <string name="devices_created">创建于 %1$s</string>
+    <string name="devices_delete">删除设备</string>
+    <string name="devices_delete_message">该设备将无法再同步联系人或日历。</string>
+    <string name="devices_delete_title">删除此设备？</string>
+    <string name="devices_deleted">设备已删除</string>
+    <string name="devices_done">完成</string>
+    <string name="devices_empty">没有已连接的设备</string>
+    <string name="devices_name">设备名称</string>
+    <string name="devices_password">密码</string>
+    <string name="devices_title">已连接的设备</string>
+    <string name="devices_used">最近使用 %1$s</string>
+    <string name="devices_username">用户名</string>
+    <string name="devices_warning">请立即复制密码：它无法再次显示。</string>
+    <string name="devices_unused">从未使用</string>
 </resources>

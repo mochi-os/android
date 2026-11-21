@@ -357,4 +357,21 @@
     <string name="game_system_score_resume">%1$s відновив гру</string>
     <string name="game_not_found">Гру не знайдено</string>
     <string name="game_chat_move_played_you">Ви зіграли %1$s</string>
+    <string name="devices_add">Додати пристрій</string>
+    <string name="devices_copy">Копіювати %1$s</string>
+    <string name="devices_create">Створити</string>
+    <string name="devices_created">Створено %1$s</string>
+    <string name="devices_delete">Видалити пристрій</string>
+    <string name="devices_delete_message">Пристрій більше не зможе синхронізувати контакти або календарі.</string>
+    <string name="devices_delete_title">Видалити пристрій?</string>
+    <string name="devices_deleted">Пристрій видалено</string>
+    <string name="devices_done">Готово</string>
+    <string name="devices_empty">Немає підключених пристроїв</string>
+    <string name="devices_name">Назва пристрою</string>
+    <string name="devices_password">Пароль</string>
+    <string name="devices_title">Підключені пристрої</string>
+    <string name="devices_used">Востаннє використано %1$s</string>
+    <string name="devices_username">Ім\'я користувача</string>
+    <string name="devices_warning">Скопіюйте пароль зараз: він більше не відображатиметься.</string>
+    <string name="devices_unused">Жодного разу не використано</string>
 </resources>

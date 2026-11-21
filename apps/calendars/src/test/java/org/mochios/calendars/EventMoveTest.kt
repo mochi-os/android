@@ -19,6 +19,7 @@ import org.mochios.calendars.ui.editor.advanced
 import org.mochios.calendars.ui.editor.components
 import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.instant
+import org.mochios.calendars.ui.editor.named
 import org.mochios.calendars.ui.editor.shifted
 import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.editor.truncated
@@ -299,14 +300,39 @@ class EventMoveTest {
     // ---- the occurrence an override is matched by ----
 
     @Test
-    fun `a timed occurrence is matched by its start and an all-day one by its date`() {
+    fun `an occurrence is the one its override replaces, as the listing names it`() {
         assertEquals(THIRD, Instance(start = THIRD).occurrence)
-        val allday = Instance(
-            start = LocalDate.of(2026, 9, 18).atStartOfDay(ZoneId.of(LONDON)).toEpochSecond(),
-            allday = true,
-            date = "2026-09-18",
+        val moved = Instance(start = THIRD + 5 * 3600, exception = true, replaced = THIRD)
+        assertEquals(THIRD, moved.occurrence)
+        assertFalse(moved.moved)
+        // A core that does not name it lists the override at its own start.
+        val older = moved.copy(replaced = null)
+        assertEquals(THIRD + 5 * 3600, older.occurrence)
+        assertTrue(older.moved)
+        assertFalse(Instance(start = THIRD).moved)
+    }
+
+    @Test
+    fun `the listing's occurrence field is the one an override replaces`() {
+        val read = com.google.gson.Gson().fromJson(
+            """{"event": "e1", "start": 1790172000, "exception": true, "occurrence": 1790067600}""",
+            Instance::class.java,
         )
-        assertEquals(LocalDate.of(2026, 9, 18).atStartOfDay(ZoneOffset.UTC).toEpochSecond(), allday.occurrence)
-        assertFalse(allday.occurrence == allday.start)
+        assertEquals(1_790_067_600L, read.replaced)
+        assertEquals(1_790_067_600L, read.occurrence)
+    }
+
+    @Test
+    fun `an all-day occurrence the listing gives at the user's midnight is named by its date`() {
+        val allday = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("DTSTART", "20260916", "VALUE", "DATE"),
+                property("RRULE", "FREQ=DAILY"),
+            ),
+        )
+        val listed = LocalDate.of(2026, 9, 18).atStartOfDay(ZoneId.of(LONDON)).toEpochSecond()
+        assertEquals(LocalDate.of(2026, 9, 18).atStartOfDay(ZoneOffset.UTC).toEpochSecond(), named(listOf(allday), listed, LONDON))
+        assertEquals(THIRD, named(listOf(master()), THIRD, LONDON))
     }
 }

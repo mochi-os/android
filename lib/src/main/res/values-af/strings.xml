@@ -355,4 +355,21 @@
     <string name="game_system_score_resume">%1$s het die spel hervat</string>
     <string name="game_not_found">Speletjie nie gevind nie</string>
     <string name="game_chat_move_played_you">Jy het %1$s gespeel</string>
+    <string name="devices_add">Voeg \'n toestel by</string>
+    <string name="devices_copy">Kopieer %1$s</string>
+    <string name="devices_create">Skep</string>
+    <string name="devices_created">Geskep %1$s</string>
+    <string name="devices_delete">Verwyder toestel</string>
+    <string name="devices_delete_message">Die toestel sal nie meer kontakte of kalenders kan sinchroniseer nie.</string>
+    <string name="devices_delete_title">Verwyder toestel?</string>
+    <string name="devices_deleted">Toestel verwyder</string>
+    <string name="devices_done">Klaar</string>
+    <string name="devices_empty">Geen toestelle verbind nie</string>
+    <string name="devices_name">Toestelnaam</string>
+    <string name="devices_password">Wagwoord</string>
+    <string name="devices_title">Verbinde toestelle</string>
+    <string name="devices_used">Laaste gebruik %1$s</string>
+    <string name="devices_username">Gebruikersnaam</string>
+    <string name="devices_warning">Kopieer die wagwoord nou: dit kan nie weer gewys word nie.</string>
+    <string name="devices_unused">Nog nooit gebruik nie</string>
 </resources>

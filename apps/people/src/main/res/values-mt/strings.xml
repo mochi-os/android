@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Ma nstabu l-ebda nies</string>
     <string name="people_friends_try_adjusting">Ipprova taġġusta t-tfittxija tiegħek</string>
     <string name="people_friends_pending">Pendenti</string>
-    <string name="people_friends_received_tab">Riċevut</string>
-    <string name="people_friends_sent_tab">Mibgħut</string>
     <string name="people_invitations_incoming">Stediniet deħlin</string>
     <string name="people_invitations_empty">L-ebda stediniet pendenti</string>
     <string name="people_invitations_empty_hint">Stediniet ġodda jidhru hawn</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Aċċettajt l-istedina minn %1$s</string>
     <string name="people_invitations_toast_declined">Irrifjutajt l-istedina minn %1$s</string>
     <string name="people_invitations_toast_cancelled">Ikkanċellajt l-istedina lil %1$s</string>
-    <string name="people_groups_empty">L-ebda grupp</string>
     <string name="people_group_delete_confirm">Tħassar il-grupp \"%1$s\"? Dan ma jistax jiġi annullat.</string>
     <string name="people_member_remove_confirm">Żgur li trid tneħħi lil %1$s minn dan il-grupp?</string>
     <string name="people_member_remove_with_name">Neħħi lil %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Ma setax jiġi pproċessat l-istampa ta\' %1$s</string>
     <string name="people_profile_accent_invalid">Daħħal kulur eżadeċimali validu (eż. #a78bfa)</string>
     <string name="people_profile_accent_none">Xejn</string>
-    <string name="people_profile_privacy_private_desc">Huma biss il-ħbieb komuni li jistgħu jaraw il-profil tiegħek</string>
     <string name="people_welcome_title">Merħba fl-app Nies</string>
     <string name="people_person_banner_alt">Banner għal %1$s</string>
-    <string name="people_person_private">Dan il-profil huwa privat</string>
     <string name="people_person_state_invited">Mistieden</string>
 
     <string name="people_invitations_accept_all">Aċċetta kollox</string>
@@ -180,25 +175,8 @@
     </plurals>
     <string name="people_welcome_body">Sib ħbieb madwar Mochi u ikkomunika magħhom. Agħfas Żid kuntatt biex tibgħat stedina.</string>
     <string name="people_person_state_contact">Fil-kuntatti</string>
-    <string name="people_device_create">Oħloq</string>
-    <string name="people_device_add">Żid apparat</string>
-    <string name="people_device_username">Isem tal-utent</string>
-    <string name="people_device_done">Lest</string>
-    <string name="people_device_used">L-aħħar uża %1$s</string>
-    <string name="people_device_never">Qatt</string>
     <string name="people_sync_now">Sinkronizza issa</string>
-    <string name="people_device_title">Apparati mqabbda</string>
-    <string name="people_device_name">Isem l-apparat</string>
     <string name="people_device_address">URL tal-ktieb tal-indirizzi</string>
-    <string name="people_device_password">Password</string>
-    <string name="people_device_copy">Ikkupja %1$s</string>
-    <string name="people_device_warning">Issejvja din il-password issa. Ma tistax tintwera mill-ġdid.</string>
-    <string name="people_device_empty">L-ebda apparat mhu mqabbad.</string>
-    <string name="people_device_created">Maħluq %1$s</string>
-    <string name="people_device_delete">Ħassar l-apparat</string>
-    <string name="people_device_delete_title">Tħassar l-apparat?</string>
-    <string name="people_device_delete_message">L-apparat ma jkunx jista\' jissinkronizza l-kuntatti jew il-kalendarji aktar.</string>
-    <string name="people_device_deleted">L-apparat tħassar</string>
     <string name="people_sync_title">Issinkronizza ma\' dan it-telefon</string>
     <string name="people_sync_confirm">Jekk tħassar il-kuntatt ta\' ħabib fl-app tal-Kuntatti ta\' dan it-telefon, tintemm ukoll il-ħbiberija.</string>
     <string name="people_sync_enable">Ixgħel</string>
@@ -230,4 +208,8 @@
     <string name="people_profile_settings">Issettjar</string>
     <string name="people_contacts_invitation_sent">L-istedina ntbagħtet</string>
     <string name="people_contact_keep">Żomm</string>
+    <string name="people_invitations_received_count">Riċevut (%1$s)</string>
+    <string name="people_invitations_sent_count">Mibgħut (%1$s)</string>
+    <string name="people_contact_discard">Armi l-bidliet</string>
+    <string name="people_person_unavailable">Il-persuna mhix disponibbli</string>
 </resources>

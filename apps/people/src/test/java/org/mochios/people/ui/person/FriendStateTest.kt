@@ -9,6 +9,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.people.api.ContactsListResponse
+import org.mochios.people.api.StandingResponse
 import org.mochios.people.model.Contact
 import org.mochios.people.model.FriendInvite
 
@@ -66,5 +67,18 @@ class FriendStateTest {
         // A plain address-book entry has no entity id, so an empty person must
         // not collide with it.
         assertEquals(FriendState.NotFriend, friendState(contacts, ""))
+    }
+
+    @Test
+    fun `one person's standing reads as the list does`() {
+        val none = StandingResponse()
+        assertEquals(FriendState.Friend, friendState(none.copy(contact = "c1", friend = true), "p1"))
+        assertEquals(FriendState.InvitedByThem("p1"), friendState(none.copy(received = true), "p1"))
+        assertEquals(FriendState.InvitedThem, friendState(none.copy(sent = true), "p1"))
+        assertEquals(FriendState.Contact, friendState(none.copy(contact = "c1"), "p1"))
+        assertEquals(FriendState.NotFriend, friendState(none, "p1"))
+        assertEquals(FriendState.Self, friendState(none, "me", me = "me"))
+        // Their invitation comes before a contact's invite button.
+        assertEquals(FriendState.InvitedByThem("p1"), friendState(none.copy(contact = "c1", received = true), "p1"))
     }
 }

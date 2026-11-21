@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">شخصی یافت نشد</string>
     <string name="people_friends_try_adjusting">جست‌وجوی خود را تنظیم کنید</string>
     <string name="people_friends_pending">در انتظار</string>
-    <string name="people_friends_received_tab">دریافت شد</string>
-    <string name="people_friends_sent_tab">ارسال شد</string>
     <string name="people_invitations_incoming">دعوت‌های دریافتی</string>
     <string name="people_invitations_empty">هیچ دعوت در انتظاری وجود ندارد</string>
     <string name="people_invitations_empty_hint">دعوت‌های جدید اینجا نمایش داده می‌شوند</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">دعوت %1$s پذیرفته شد</string>
     <string name="people_invitations_toast_declined">دعوت %1$s رد شد</string>
     <string name="people_invitations_toast_cancelled">دعوت به %1$s لغو شد</string>
-    <string name="people_groups_empty">بدون گروه</string>
     <string name="people_group_delete_confirm">گروه «%1$s» حذف شود؟ این کار قابل بازگشت نیست.</string>
     <string name="people_member_remove_confirm">آیا مطمئن هستید که می‌خواهید %1$s را از این گروه حذف کنید؟</string>
     <string name="people_member_remove_with_name">حذف %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">پردازش تصویر %1$s ممکن نشد</string>
     <string name="people_profile_accent_invalid">یک رنگ هگز معتبر وارد کنید (مثلاً #a78bfa)</string>
     <string name="people_profile_accent_none">هیچ‌کدام</string>
-    <string name="people_profile_privacy_private_desc">فقط دوستان مشترک می‌توانند نمایه شما را مشاهده کنند</string>
     <string name="people_welcome_title">به افراد خوش آمدید</string>
     <string name="people_person_banner_alt">بنر برای %1$s</string>
-    <string name="people_person_private">این نمایه خصوصی است</string>
     <string name="people_person_state_invited">دعوت‌شده</string>
 
     <string name="people_invitations_accept_all">پذیرش همه</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">در سراسر Mochi دوستان را بیابید و ارتباط بگیرید. برای فرستادن دعوت، افزودن مخاطب را بزنید.</string>
     <string name="people_person_state_contact">در مخاطبین</string>
-    <string name="people_device_create">ساختن</string>
-    <string name="people_device_add">افزودن دستگاه</string>
-    <string name="people_device_username">نام کاربری</string>
-    <string name="people_device_done">انجام شد</string>
-    <string name="people_device_used">آخرین استفاده %1$s</string>
-    <string name="people_device_never">هرگز</string>
     <string name="people_sync_now">همگام‌سازی اکنون</string>
-    <string name="people_device_title">دستگاه‌های متصل</string>
-    <string name="people_device_name">نام دستگاه</string>
     <string name="people_device_address">نشانی URL دفترچه نشانی</string>
-    <string name="people_device_password">گذرواژه</string>
-    <string name="people_device_copy">کپی %1$s</string>
-    <string name="people_device_warning">این گذرواژه را همین حالا ذخیره کنید. دیگر نمایش داده نخواهد شد.</string>
-    <string name="people_device_empty">هیچ دستگاهی متصل نیست.</string>
-    <string name="people_device_created">ساخته‌شده %1$s</string>
-    <string name="people_device_delete">حذف دستگاه</string>
-    <string name="people_device_delete_title">دستگاه حذف شود؟</string>
-    <string name="people_device_delete_message">این دستگاه دیگر نمی‌تواند مخاطبان یا تقویم‌ها را همگام‌سازی کند.</string>
-    <string name="people_device_deleted">دستگاه حذف شد</string>
     <string name="people_sync_title">همگام‌سازی با این تلفن</string>
     <string name="people_sync_confirm">حذف مخاطب یک دوست در برنامه مخاطبین این تلفن، دوستی را هم پایان می‌دهد.</string>
     <string name="people_sync_enable">روشن کردن</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">تنظیمات</string>
     <string name="people_contacts_invitation_sent">دعوت ارسال شد</string>
     <string name="people_contact_keep">نگه داشتن</string>
+    <string name="people_invitations_received_count">دریافت شد (%1$s)</string>
+    <string name="people_invitations_sent_count">ارسال شد (%1$s)</string>
+    <string name="people_contact_discard">دور انداختن تغییرات</string>
+    <string name="people_person_unavailable">شخص در دسترس نیست</string>
 </resources>

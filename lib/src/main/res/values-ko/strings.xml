@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s님이 대국을 재개했습니다</string>
     <string name="game_not_found">게임을 찾을 수 없습니다</string>
     <string name="game_chat_move_played_you">본인이 %1$s을(를) 두었습니다</string>
+    <string name="devices_add">기기 추가</string>
+    <string name="devices_copy">%1$s 복사</string>
+    <string name="devices_create">생성</string>
+    <string name="devices_created">생성 %1$s</string>
+    <string name="devices_delete">기기 삭제</string>
+    <string name="devices_delete_message">이 기기는 더 이상 연락처나 캘린더를 동기화할 수 없어요.</string>
+    <string name="devices_delete_title">기기를 삭제할까요?</string>
+    <string name="devices_deleted">기기가 삭제되었어요</string>
+    <string name="devices_done">완료</string>
+    <string name="devices_empty">연결된 기기가 없어요</string>
+    <string name="devices_name">기기 이름</string>
+    <string name="devices_password">비밀번호</string>
+    <string name="devices_title">연결된 기기</string>
+    <string name="devices_used">마지막 사용 %1$s</string>
+    <string name="devices_username">사용자 이름</string>
+    <string name="devices_warning">비밀번호를 지금 복사하세요. 다시 표시할 수 없어요.</string>
+    <string name="devices_unused">사용한 적 없음</string>
 </resources>

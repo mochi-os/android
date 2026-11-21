@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Mana runakuna tarisqachu</string>
     <string name="people_friends_try_adjusting">Maskayniykita allichay</string>
     <string name="people_friends_pending">Suyakuchkan</string>
-    <string name="people_friends_received_tab">Chaskisqa</string>
-    <string name="people_friends_sent_tab">Apachisqa</string>
     <string name="people_invitations_incoming">Hamuq waqyaykuna</string>
     <string name="people_invitations_empty">Mana suyakuq waqyaykuna kanchu</string>
     <string name="people_invitations_empty_hint">Musuq waqyaykuna kaypi rikurinqa</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s-pa waqyaynin chaskisqa</string>
     <string name="people_invitations_toast_declined">%1$s-pa waqyaynin mana chaskisqa</string>
     <string name="people_invitations_toast_cancelled">%1$s-paq waqyay chinkachisqa</string>
-    <string name="people_groups_empty">Mana huñukuna kanchu</string>
     <string name="people_group_delete_confirm">¿\"%1$s\" huñuta wischunki? Kayqa mana kutichiy atikunchu.</string>
     <string name="people_member_remove_confirm">¿Cheqaqchu %1$s-ta kay huñumanta qichuyta munanki?</string>
     <string name="people_member_remove_with_name">%1$s-ta qichuy</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s imagenta mana allichayta atikurqanchu</string>
     <string name="people_profile_accent_invalid">Allin hex llimp\'ita qillqay (ejemplo #a78bfa)</string>
     <string name="people_profile_accent_none">Mana imapas</string>
-    <string name="people_profile_privacy_private_desc">Iskaynin lado masikunallam perfilniykita qhawayta atinku</string>
     <string name="people_welcome_title">Runakunaman allin hamusqayki</string>
     <string name="people_person_banner_alt">%1$s-paq banner</string>
-    <string name="people_person_private">Kay perfilqa pakasqam</string>
     <string name="people_person_state_invited">Waqyasqa</string>
 
     <string name="people_invitations_accept_all">Llapanta chaskiy</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi ukhupi masikunata tariy, t\'inkinakuy ima. Waqyayta apachinaykipaq Contacto yapayta ñit\'iy.</string>
     <string name="people_person_state_contact">Contactokunapi</string>
-    <string name="people_device_create">Kamariy</string>
-    <string name="people_device_add">Dispositivo yapay</string>
-    <string name="people_device_username">Apaykachaq suti</string>
-    <string name="people_device_done">Tukusqa</string>
-    <string name="people_device_used">Qhipa llamk\'achisqa %1$s</string>
-    <string name="people_device_never">Mana hayk\'aqpas</string>
     <string name="people_sync_now">Kunan sincronizay</string>
-    <string name="people_device_title">T\'inkisqa dispositivokuna</string>
-    <string name="people_device_name">Dispositivopa sutin</string>
     <string name="people_device_address">Direccion maytu URL</string>
-    <string name="people_device_password">Contraseña</string>
-    <string name="people_device_copy">%1$s copiay</string>
-    <string name="people_device_warning">Kay contraseñata kunan waqaychay. Manam huktawan rikuchikuyta atinchu.</string>
-    <string name="people_device_empty">Mana dispositivokuna t\'inkisqachu.</string>
-    <string name="people_device_created">%1$s kamarisqa</string>
-    <string name="people_device_delete">Dispositivota wischuy</string>
-    <string name="people_device_delete_title">¿Dispositivota wischunki?</string>
-    <string name="people_device_delete_message">Kay dispositivo manaña contactokunata nitaq calendariokunata sincronizayta atinqachu.</string>
-    <string name="people_device_deleted">Dispositivo wischusqa</string>
     <string name="people_sync_title">Kay telefonoman sincronizay</string>
     <string name="people_sync_confirm">Kay telefonopa Contactokuna appninpi masiykipa contactonta wischuspaqa, masi kayniykichikpas tukukunqa.</string>
     <string name="people_sync_enable">Activay</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Wakichiykuna</string>
     <string name="people_contacts_invitation_sent">Waqyay apachisqa</string>
     <string name="people_contact_keep">Waqaychay</string>
+    <string name="people_invitations_received_count">Chaskisqa (%1$s)</string>
+    <string name="people_invitations_sent_count">Apachisqa (%1$s)</string>
+    <string name="people_contact_discard">Tikraykunata wikch\'uy</string>
+    <string name="people_person_unavailable">Runaqa mana kanchu</string>
 </resources>

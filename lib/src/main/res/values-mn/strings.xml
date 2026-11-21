@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s тоглоомоо үргэлжлүүллээ</string>
     <string name="game_not_found">Тоглоом олдсонгүй</string>
     <string name="game_chat_move_played_you">Та %1$s-г тоглосон</string>
+    <string name="devices_add">Төхөөрөмж нэмэх</string>
+    <string name="devices_copy">%1$s хуулах</string>
+    <string name="devices_create">Үүсгэх</string>
+    <string name="devices_created">%1$s үүссэн</string>
+    <string name="devices_delete">Төхөөрөмж устгах</string>
+    <string name="devices_delete_message">Төхөөрөмж цаашид харилцагчид эсвэл хуанлиудыг синк хийх боломжгүй болно.</string>
+    <string name="devices_delete_title">Төхөөрөмжийг устгах уу?</string>
+    <string name="devices_deleted">Төхөөрөмж устлаа</string>
+    <string name="devices_done">Дууссан</string>
+    <string name="devices_empty">Холбогдсон төхөөрөмж байхгүй</string>
+    <string name="devices_name">Төхөөрөмжийн нэр</string>
+    <string name="devices_password">Нууц үг</string>
+    <string name="devices_title">Холбогдсон төхөөрөмжүүд</string>
+    <string name="devices_used">Сүүлд ашигласан %1$s</string>
+    <string name="devices_username">Хэрэглэгчийн нэр</string>
+    <string name="devices_warning">Нууц үгийг одоо хуулж авна уу: дахин харуулах боломжгүй.</string>
+    <string name="devices_unused">Хэзээ ч ашиглаагүй</string>
 </resources>

@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Geen mense gevind nie</string>
     <string name="people_friends_try_adjusting">Probeer jou soektog aanpas</string>
     <string name="people_friends_pending">Hangend</string>
-    <string name="people_friends_received_tab">Ontvang</string>
-    <string name="people_friends_sent_tab">Gestuur</string>
     <string name="people_invitations_incoming">Inkomende uitnodigings</string>
     <string name="people_invitations_empty">Geen hangende uitnodigings nie</string>
     <string name="people_invitations_empty_hint">Nuwe uitnodigings sal hier verskyn</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Uitnodiging van %1$s aanvaar</string>
     <string name="people_invitations_toast_declined">Uitnodiging van %1$s afgewys</string>
     <string name="people_invitations_toast_cancelled">Uitnodiging aan %1$s gekanselleer</string>
-    <string name="people_groups_empty">Geen groepe nie</string>
     <string name="people_group_delete_confirm">Skrap groep \"%1$s\"? Dit kan nie ongedaan gemaak word nie.</string>
     <string name="people_member_remove_confirm">Is jy seker jy wil %1$s uit hierdie groep verwyder?</string>
     <string name="people_member_remove_with_name">Verwyder %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Kon nie %1$s-beeld verwerk nie</string>
     <string name="people_profile_accent_invalid">Voer \'n geldige hekskleur in (bv. #a78bfa)</string>
     <string name="people_profile_accent_none">Geen</string>
-    <string name="people_profile_privacy_private_desc">Slegs wedersydse vriende kan jou profiel bekyk</string>
     <string name="people_welcome_title">Welkom by Mense</string>
     <string name="people_person_banner_alt">Baniere vir %1$s</string>
-    <string name="people_person_private">Hierdie profiel is privaat</string>
     <string name="people_person_state_invited">Uitgenooi</string>
 
     <string name="people_invitations_accept_all">Aanvaar almal</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Vind vriende regoor Mochi en maak kontak. Tik Voeg kontak by om \'n uitnodiging te stuur.</string>
     <string name="people_person_state_contact">In kontakte</string>
-    <string name="people_device_create">Skep</string>
-    <string name="people_device_add">Voeg \'n toestel by</string>
-    <string name="people_device_username">Gebruikersnaam</string>
-    <string name="people_device_done">Klaar</string>
-    <string name="people_device_used">Laaste gebruik %1$s</string>
-    <string name="people_device_never">Nooit</string>
     <string name="people_sync_now">Sinkroniseer nou</string>
-    <string name="people_device_title">Verbinde toestelle</string>
-    <string name="people_device_name">Toestelnaam</string>
     <string name="people_device_address">Adresboek-URL</string>
-    <string name="people_device_password">Wagwoord</string>
-    <string name="people_device_copy">Kopieer %1$s</string>
-    <string name="people_device_warning">Stoor hierdie wagwoord nou. Dit kan nie weer gewys word nie.</string>
-    <string name="people_device_empty">Geen toestelle gekoppel nie.</string>
-    <string name="people_device_created">Geskep %1$s</string>
-    <string name="people_device_delete">Verwyder toestel</string>
-    <string name="people_device_delete_title">Verwyder toestel?</string>
-    <string name="people_device_delete_message">Die toestel sal nie meer kontakte of kalenders kan sinchroniseer nie.</string>
-    <string name="people_device_deleted">Toestel verwyder</string>
     <string name="people_sync_title">Sinkroniseer met hierdie foon</string>
     <string name="people_sync_confirm">As jy \'n vriend se kontak in hierdie foon se Kontakte-app uitvee, eindig die vriendskap ook.</string>
     <string name="people_sync_enable">Skakel aan</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Instellings</string>
     <string name="people_contacts_invitation_sent">Uitnodiging gestuur</string>
     <string name="people_contact_keep">Behou</string>
+    <string name="people_invitations_received_count">Ontvang (%1$s)</string>
+    <string name="people_invitations_sent_count">Gestuur (%1$s)</string>
+    <string name="people_contact_discard">Gooi veranderinge weg</string>
+    <string name="people_person_unavailable">Persoon nie beskikbaar nie</string>
 </resources>

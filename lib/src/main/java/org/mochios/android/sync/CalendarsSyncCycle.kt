@@ -43,10 +43,13 @@ import java.util.UUID
  *    copy being added, and the upload resolves them as any bound event.
  *
  * Nothing here touches Android, so the cycle runs against fakes in tests.
+ * [zone] is the phone's own, which a floating event's times are read in on
+ * the way down and written back from on the way up.
  */
 class CalendarsSyncCycle(
     private val source: CalendarsSource,
     private val store: CalendarsStore,
+    private val zone: String = java.util.TimeZone.getDefault().id,
 ) {
 
     /**
@@ -88,6 +91,12 @@ class CalendarsSyncCycle(
         }
         val local = mutableMapOf<String, Long>()
         for (calendar in served) local[calendar.id] = store.calendar(calendar)
+        // A calendar switched off keeps none of its events, edits not yet
+        // uploaded among them: the provider leaves them, hidden, where they
+        // would go stale, and the listing never sees them again.
+        for (calendar in store.calendars()) {
+            if (!calendar.sync) store.clear(calendar)
+        }
         val enabled = store.calendars().filter { it.sync }.map { it.remote }.toSet()
         // A calendar the phone may not write to takes no uploads, and the
         // server would refuse them anyway.
@@ -248,12 +257,12 @@ class CalendarsSyncCycle(
     ): SyncedEvent {
         if (remote == null) {
             val slug = group.slug ?: name(group.master.local)
-            return source.create(calendar, CalendarsMapping.components(rows), slug)
+            return source.create(calendar, CalendarsMapping.components(rows, floating = zone), slug)
         }
         val current = source.fetch(listOf(remote)).firstOrNull() ?: throw SyncMissing()
         if (current.etag != etag) throw SyncConflict()
         val move = if (current.calendar == calendar) null else calendar
-        return source.update(remote, etag, move, CalendarsMapping.components(rows, current.components))
+        return source.update(remote, etag, move, CalendarsMapping.components(rows, current.components, zone))
     }
 
     /**

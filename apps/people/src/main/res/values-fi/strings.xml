@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Henkilöitä ei löytynyt</string>
     <string name="people_friends_try_adjusting">Kokeile muuttaa hakuasi</string>
     <string name="people_friends_pending">Odottaa</string>
-    <string name="people_friends_received_tab">Vastaanotettu</string>
-    <string name="people_friends_sent_tab">Lähetetty</string>
     <string name="people_invitations_incoming">Saapuvat kutsut</string>
     <string name="people_invitations_empty">Ei odottavia kutsuja</string>
     <string name="people_invitations_empty_hint">Uudet kutsut näkyvät täällä</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Hyväksyttiin kutsu käyttäjältä %1$s</string>
     <string name="people_invitations_toast_declined">Hylättiin kutsu käyttäjältä %1$s</string>
     <string name="people_invitations_toast_cancelled">Peruutettiin kutsu käyttäjälle %1$s</string>
-    <string name="people_groups_empty">Ei ryhmiä</string>
     <string name="people_group_delete_confirm">Poistetaanko ryhmä \"%1$s\"? Tätä ei voi peruuttaa.</string>
     <string name="people_member_remove_confirm">Haluatko varmasti poistaa käyttäjän %1$s tästä ryhmästä?</string>
     <string name="people_member_remove_with_name">Poista %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Kuvan %1$s käsittely ei onnistunut</string>
     <string name="people_profile_accent_invalid">Anna kelvollinen heksaväri (esim. #a78bfa)</string>
     <string name="people_profile_accent_none">Ei mitään</string>
-    <string name="people_profile_privacy_private_desc">Vain molemminpuoliset kaverit voivat katsella profiiliasi</string>
     <string name="people_welcome_title">Tervetuloa Ihmiset-sovellukseen</string>
     <string name="people_person_banner_alt">Käyttäjän %1$s banneri</string>
-    <string name="people_person_private">Tämä profiili on yksityinen</string>
     <string name="people_person_state_invited">Kutsuttu</string>
 
     <string name="people_invitations_accept_all">Hyväksy kaikki</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Löydä kavereita kaikkialta Mochista ja ota yhteyttä. Lähetä kutsu napauttamalla Lisää yhteystieto.</string>
     <string name="people_person_state_contact">Yhteystiedoissa</string>
-    <string name="people_device_create">Luo</string>
-    <string name="people_device_add">Lisää laite</string>
-    <string name="people_device_username">Käyttäjätunnus</string>
-    <string name="people_device_done">Valmis</string>
-    <string name="people_device_used">Viimeksi käytetty %1$s</string>
-    <string name="people_device_never">Ei koskaan</string>
     <string name="people_sync_now">Synkronoi nyt</string>
-    <string name="people_device_title">Yhdistetyt laitteet</string>
-    <string name="people_device_name">Laitteen nimi</string>
     <string name="people_device_address">Osoitekirjan URL</string>
-    <string name="people_device_password">Salasana</string>
-    <string name="people_device_copy">Kopioi %1$s</string>
-    <string name="people_device_warning">Tallenna tämä salasana nyt. Sitä ei voi näyttää uudelleen.</string>
-    <string name="people_device_empty">Ei yhdistettyjä laitteita.</string>
-    <string name="people_device_created">Luotu %1$s</string>
-    <string name="people_device_delete">Poista laite</string>
-    <string name="people_device_delete_title">Poistetaanko laite?</string>
-    <string name="people_device_delete_message">Laite ei voi enää synkronoida yhteystietoja eikä kalentereita.</string>
-    <string name="people_device_deleted">Laite poistettu</string>
     <string name="people_sync_title">Synkronoi tähän puhelimeen</string>
     <string name="people_sync_confirm">Kaverin yhteystiedon poistaminen tämän puhelimen Yhteystiedot-sovelluksesta päättää myös kaveruuden.</string>
     <string name="people_sync_enable">Ota käyttöön</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Asetukset</string>
     <string name="people_contacts_invitation_sent">Kutsu lähetetty</string>
     <string name="people_contact_keep">Säilytä</string>
+    <string name="people_invitations_received_count">Vastaanotettu (%1$s)</string>
+    <string name="people_invitations_sent_count">Lähetetty (%1$s)</string>
+    <string name="people_contact_discard">Hylkää muutokset</string>
+    <string name="people_person_unavailable">Henkilö ei ole saatavilla</string>
 </resources>

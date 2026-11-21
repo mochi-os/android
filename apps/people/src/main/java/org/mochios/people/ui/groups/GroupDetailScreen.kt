@@ -67,6 +67,8 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.personAvatarPath
+import org.mochios.android.api.OwnedAddress
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.people.R
@@ -78,7 +80,6 @@ import org.mochios.android.R as MochiR
 @Composable
 fun GroupDetailScreen(
     onBack: () -> Unit,
-    onOpenPerson: (id: String) -> Unit,
     onAddMember: () -> Unit = {},
     onOpenNotifications: () -> Unit,
     viewModel: GroupDetailViewModel = hiltViewModel(),
@@ -428,6 +429,12 @@ internal fun memberLabel(member: GroupMember, unknown: String, deleted: String):
         }
     }
 
+/** A person member's avatar, as the web's member list shows it; a nested group has none. */
+internal fun memberAvatar(member: GroupMember): OwnedAddress? = when (member.type) {
+    GroupMemberType.USER -> personAvatarPath(member.member)
+    GroupMemberType.GROUP -> null
+}
+
 @Composable
 private fun MemberRow(
     member: GroupMember,
@@ -453,6 +460,7 @@ private fun MemberRow(
         when (member.type) {
             GroupMemberType.USER -> EntityAvatar(
                 name = label,
+                src = memberAvatar(member),
                 seed = member.member,
                 size = 32.dp,
             )

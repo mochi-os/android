@@ -105,6 +105,13 @@ interface CalendarsStore {
     /** Removes a calendar and every event in it. */
     fun remove(calendar: StoredCalendar)
 
+    /**
+     * Removes every event of a calendar and keeps the calendar: one whose
+     * sync is off, which the provider leaves holding its events, hidden,
+     * where they would go stale.
+     */
+    fun clear(calendar: StoredCalendar)
+
     /** Every event row of the account, deleted ones included. */
     fun events(): List<StoredEvent>
 

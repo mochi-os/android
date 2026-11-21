@@ -354,4 +354,21 @@
     <string name="game_system_score_resume">%1$s ойынды жалғастырды</string>
     <string name="game_not_found">Ойын табылмады</string>
     <string name="game_chat_move_played_you">Сіз %1$s ойнадыңыз</string>
+    <string name="devices_add">Құрылғы қосу</string>
+    <string name="devices_copy">%1$s көшіру</string>
+    <string name="devices_create">Құру</string>
+    <string name="devices_created">%1$s құрылды</string>
+    <string name="devices_delete">Құрылғыны жою</string>
+    <string name="devices_delete_message">Құрылғы енді контактілерді немесе күнтізбелерді синхрондай алмайды.</string>
+    <string name="devices_delete_title">Құрылғыны жою керек пе?</string>
+    <string name="devices_deleted">Құрылғы жойылды</string>
+    <string name="devices_done">Дайын</string>
+    <string name="devices_empty">Қосылған құрылғылар жоқ</string>
+    <string name="devices_name">Құрылғы атауы</string>
+    <string name="devices_password">Құпия сөз</string>
+    <string name="devices_title">Қосылған құрылғылар</string>
+    <string name="devices_used">Соңғы пайдаланылды %1$s</string>
+    <string name="devices_username">Пайдаланушы аты</string>
+    <string name="devices_warning">Құпия сөзді қазір көшіріңіз: оны қайта көрсету мүмкін емес.</string>
+    <string name="devices_unused">Ешқашан пайдаланылмаған</string>
 </resources>

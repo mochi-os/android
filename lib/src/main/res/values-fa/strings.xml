@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s بازی را از سر گرفت</string>
     <string name="game_not_found">بازی پیدا نشد</string>
     <string name="game_chat_move_played_you">شما %1$s را بازی کردید</string>
+    <string name="devices_add">افزودن دستگاه</string>
+    <string name="devices_copy">کپی %1$s</string>
+    <string name="devices_create">ساختن</string>
+    <string name="devices_created">ساخته‌شده %1$s</string>
+    <string name="devices_delete">حذف دستگاه</string>
+    <string name="devices_delete_message">این دستگاه دیگر نمی‌تواند مخاطبان یا تقویم‌ها را همگام‌سازی کند.</string>
+    <string name="devices_delete_title">دستگاه حذف شود؟</string>
+    <string name="devices_deleted">دستگاه حذف شد</string>
+    <string name="devices_done">انجام شد</string>
+    <string name="devices_empty">هیچ دستگاهی متصل نیست</string>
+    <string name="devices_name">نام دستگاه</string>
+    <string name="devices_password">گذرواژه</string>
+    <string name="devices_title">دستگاه‌های متصل</string>
+    <string name="devices_used">آخرین استفاده %1$s</string>
+    <string name="devices_username">نام کاربری</string>
+    <string name="devices_warning">گذرواژه را همین حالا کپی کنید: دیگر نمایش داده نخواهد شد.</string>
+    <string name="devices_unused">هرگز استفاده نشده</string>
 </resources>

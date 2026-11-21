@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ఎవరూ కనుగొనబడలేదు</string>
     <string name="people_friends_try_adjusting">మీ శోధనను సర్దుబాటు చేయడం ప్రయత్నించండి</string>
     <string name="people_friends_pending">పెండింగ్</string>
-    <string name="people_friends_received_tab">స్వీకరించారు</string>
-    <string name="people_friends_sent_tab">పంపబడింది</string>
     <string name="people_invitations_incoming">వచ్చే ఆహ్వానాలు</string>
     <string name="people_invitations_empty">పెండింగ్ ఆహ్వానాలు లేవు</string>
     <string name="people_invitations_empty_hint">కొత్త ఆహ్వానాలు ఇక్కడ కనిపిస్తాయి</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s నుండి ఆహ్వానాన్ని అంగీకరించారు</string>
     <string name="people_invitations_toast_declined">%1$s నుండి ఆహ్వానాన్ని తిరస్కరించారు</string>
     <string name="people_invitations_toast_cancelled">%1$s కు పంపిన ఆహ్వానాన్ని రద్దు చేశారు</string>
-    <string name="people_groups_empty">సమూహాలు లేవు</string>
     <string name="people_group_delete_confirm">\"%1$s\" సమూహాన్ని తొలగించాలా? దీన్ని రద్దు చేయలేరు.</string>
     <string name="people_member_remove_confirm">మీరు ఈ సమూహం నుండి %1$s ను తీసివేయాలనుకుంటున్నారా?</string>
     <string name="people_member_remove_with_name">%1$s ను తీసివేయండి</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s చిత్రాన్ని ప్రాసెస్ చేయలేకపోయింది</string>
     <string name="people_profile_accent_invalid">చెల్లుబాటు అయ్యే హెక్స్ రంగును నమోదు చేయండి (ఉదా. #a78bfa)</string>
     <string name="people_profile_accent_none">ఏదీ లేదు</string>
-    <string name="people_profile_privacy_private_desc">పరస్పర స్నేహితులు మాత్రమే మీ ప్రొఫైల్‌ను చూడగలరు</string>
     <string name="people_welcome_title">వ్యక్తులకు స్వాగతం</string>
     <string name="people_person_banner_alt">%1$s కోసం బ్యానర్</string>
-    <string name="people_person_private">ఈ ప్రొఫైల్ ప్రైవేట్</string>
     <string name="people_person_state_invited">ఆహ్వానించబడింది</string>
 
     <string name="people_invitations_accept_all">అన్నీ అంగీకరించు</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi అంతటా స్నేహితులను కనుగొని కలవండి. ఆహ్వానం పంపడానికి పరిచయాన్ని జోడించు నొక్కండి.</string>
     <string name="people_person_state_contact">పరిచయాలలో</string>
-    <string name="people_device_create">సృష్టించండి</string>
-    <string name="people_device_add">పరికరాన్ని జోడించండి</string>
-    <string name="people_device_username">వినియోగదారు పేరు</string>
-    <string name="people_device_done">పూర్తయింది</string>
-    <string name="people_device_used">చివరిగా ఉపయోగించబడింది %1$s</string>
-    <string name="people_device_never">ఎప్పుడూ లేదు</string>
     <string name="people_sync_now">ఇప్పుడే సింక్ చేయండి</string>
-    <string name="people_device_title">కనెక్ట్ చేసిన పరికరాలు</string>
-    <string name="people_device_name">పరికరం పేరు</string>
     <string name="people_device_address">చిరునామా పుస్తకం URL</string>
-    <string name="people_device_password">పాస్‌వర్డ్</string>
-    <string name="people_device_copy">%1$s కాపీ చేయండి</string>
-    <string name="people_device_warning">ఈ పాస్‌వర్డ్‌ను ఇప్పుడే సేవ్ చేయండి. దీన్ని మళ్లీ చూపించడం సాధ్యం కాదు.</string>
-    <string name="people_device_empty">ఏ పరికరాలు కనెక్ట్ కాలేదు.</string>
-    <string name="people_device_created">సృష్టించబడింది %1$s</string>
-    <string name="people_device_delete">పరికరాన్ని తొలగించండి</string>
-    <string name="people_device_delete_title">పరికరాన్ని తొలగించాలా?</string>
-    <string name="people_device_delete_message">పరికరం ఇకపై కాంటాక్ట్‌లను లేదా క్యాలెండర్‌లను సింక్ చేయలేదు.</string>
-    <string name="people_device_deleted">పరికరం తొలగించబడింది</string>
     <string name="people_sync_title">ఈ ఫోన్‌కు సింక్ చేయండి</string>
     <string name="people_sync_confirm">ఈ ఫోన్ కాంటాక్ట్‌ల యాప్‌లో స్నేహితుడి కాంటాక్ట్‌ను తొలగిస్తే స్నేహం కూడా ముగుస్తుంది.</string>
     <string name="people_sync_enable">ఆన్ చేయండి</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">సెట్టింగ్‌లు</string>
     <string name="people_contacts_invitation_sent">ఆహ్వానం పంపబడింది</string>
     <string name="people_contact_keep">ఉంచు</string>
+    <string name="people_invitations_received_count">స్వీకరించారు (%1$s)</string>
+    <string name="people_invitations_sent_count">పంపబడింది (%1$s)</string>
+    <string name="people_contact_discard">మార్పులను విస్మరించు</string>
+    <string name="people_person_unavailable">వ్యక్తి అందుబాటులో లేరు</string>
 </resources>

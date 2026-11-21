@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Ingen personar funne</string>
     <string name="people_friends_try_adjusting">Prøv å justere søket</string>
     <string name="people_friends_pending">Ventar</string>
-    <string name="people_friends_received_tab">Motteke</string>
-    <string name="people_friends_sent_tab">Sendt</string>
     <string name="people_invitations_incoming">Innkomande invitasjonar</string>
     <string name="people_invitations_empty">Ingen invitasjonar som ventar</string>
     <string name="people_invitations_empty_hint">Nye invitasjonar vil dukka opp her</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Godtok invitasjon frå %1$s</string>
     <string name="people_invitations_toast_declined">Avviste invitasjon frå %1$s</string>
     <string name="people_invitations_toast_cancelled">Avbraut invitasjon til %1$s</string>
-    <string name="people_groups_empty">Ingen grupper</string>
     <string name="people_group_delete_confirm">Vil du slette gruppa \"%1$s\"? Dette kan ikkje angrast.</string>
     <string name="people_member_remove_confirm">Er du sikker på at du vil fjerne %1$s frå denne gruppa?</string>
     <string name="people_member_remove_with_name">Fjern %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Kunne ikkje handsama %1$s-biletet</string>
     <string name="people_profile_accent_invalid">Skriv inn ein gyldig heks-farge (t.d. #a78bfa)</string>
     <string name="people_profile_accent_none">Ingen</string>
-    <string name="people_profile_privacy_private_desc">Berre gjensidige vener kan sjå profilen din</string>
     <string name="people_welcome_title">Velkomen til Personar</string>
     <string name="people_person_banner_alt">Banner for %1$s</string>
-    <string name="people_person_private">Denne profilen er privat</string>
     <string name="people_person_state_invited">Invitert</string>
 
     <string name="people_invitations_accept_all">Godta alle</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Finn vener på tvers av Mochi og ta kontakt. Trykk på Legg til kontakt for å sende ein invitasjon.</string>
     <string name="people_person_state_contact">I kontaktar</string>
-    <string name="people_device_create">Opprett</string>
-    <string name="people_device_add">Legg til ei eining</string>
-    <string name="people_device_username">Brukarnamn</string>
-    <string name="people_device_done">Ferdig</string>
-    <string name="people_device_used">Sist brukt %1$s</string>
-    <string name="people_device_never">Aldri</string>
     <string name="people_sync_now">Synkroniser no</string>
-    <string name="people_device_title">Tilkopla einingar</string>
-    <string name="people_device_name">Einingsnamn</string>
     <string name="people_device_address">URL til adresseboka</string>
-    <string name="people_device_password">Passord</string>
-    <string name="people_device_copy">Kopier %1$s</string>
-    <string name="people_device_warning">Lagre dette passordet no. Det kan ikkje visast igjen.</string>
-    <string name="people_device_empty">Ingen einingar tilkopla.</string>
-    <string name="people_device_created">Oppretta %1$s</string>
-    <string name="people_device_delete">Slett eining</string>
-    <string name="people_device_delete_title">Slette eining?</string>
-    <string name="people_device_delete_message">Eininga vil ikkje lenger kunne synkronisera kontaktar eller kalendrar.</string>
-    <string name="people_device_deleted">Eining sletta</string>
     <string name="people_sync_title">Synkroniser med denne telefonen</string>
     <string name="people_sync_confirm">Viss du slettar kontakten til ein ven i Kontaktar-appen på denne telefonen, tek òg vennskapen slutt.</string>
     <string name="people_sync_enable">Slå på</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Innstillingar</string>
     <string name="people_contacts_invitation_sent">Invitasjon sendt</string>
     <string name="people_contact_keep">Behald</string>
+    <string name="people_invitations_received_count">Motteke (%1$s)</string>
+    <string name="people_invitations_sent_count">Sendt (%1$s)</string>
+    <string name="people_contact_discard">Forkast endringar</string>
+    <string name="people_person_unavailable">Personen er ikkje tilgjengeleg</string>
 </resources>

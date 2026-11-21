@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s бозиро идома дод</string>
     <string name="game_not_found">Бозӣ ёфт нашуд</string>
     <string name="game_chat_move_played_you">Шумо %1$s бозӣ кардед</string>
+    <string name="devices_add">Иловаи дастгоҳ</string>
+    <string name="devices_copy">Нусхабардории %1$s</string>
+    <string name="devices_create">Эҷод кардан</string>
+    <string name="devices_created">Эҷод шуд %1$s</string>
+    <string name="devices_delete">Нест кардани дастгоҳ</string>
+    <string name="devices_delete_message">Дастгоҳ дигар тамосҳо ё тақвимҳоро ҳамоҳанг карда наметавонад.</string>
+    <string name="devices_delete_title">Дастгоҳ нест карда шавад?</string>
+    <string name="devices_deleted">Дастгоҳ нест карда шуд</string>
+    <string name="devices_done">Иҷро шуд</string>
+    <string name="devices_empty">Ягон дастгоҳ пайваст нест</string>
+    <string name="devices_name">Номи дастгоҳ</string>
+    <string name="devices_password">Рамз</string>
+    <string name="devices_title">Дастгоҳҳои пайвастшуда</string>
+    <string name="devices_used">Истифодаи охирин %1$s</string>
+    <string name="devices_username">Номи корбар</string>
+    <string name="devices_warning">Ниҳонвожаро ҳозир нусха кунед: он дигар нишон дода намешавад.</string>
+    <string name="devices_unused">Ҳеҷ гоҳ истифода нашудааст</string>
 </resources>

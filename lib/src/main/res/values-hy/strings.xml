@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s-ը վերսկսեց խաղը</string>
     <string name="game_not_found">Խաղը չի գտնվել</string>
     <string name="game_chat_move_played_you">Դուք խաղացիք %1$s</string>
+    <string name="devices_add">Ավելացնել սարք</string>
+    <string name="devices_copy">Պատճենել %1$s</string>
+    <string name="devices_create">Ստեղծել</string>
+    <string name="devices_created">Ստեղծվել է %1$s</string>
+    <string name="devices_delete">Ջնջել սարքը</string>
+    <string name="devices_delete_message">Սարքն այլևս չի կարողանա համաժամացնել կոնտակտները կամ օրացույցները։</string>
+    <string name="devices_delete_title">Ջնջե՞լ սարքը</string>
+    <string name="devices_deleted">Սարքը ջնջվեց</string>
+    <string name="devices_done">Կատարված է</string>
+    <string name="devices_empty">Միացված սարքեր չկան</string>
+    <string name="devices_name">Սարքի անունը</string>
+    <string name="devices_password">Գաղտնաբառ</string>
+    <string name="devices_title">Միացված սարքեր</string>
+    <string name="devices_used">Վերջին օգտագործումը %1$s</string>
+    <string name="devices_username">Օգտանուն</string>
+    <string name="devices_warning">Պատճենեք գաղտնաբառը հիմա։ Այն այլևս հնարավոր չի լինի ցուցադրել։</string>
+    <string name="devices_unused">Երբեք չի օգտագործվել</string>
 </resources>

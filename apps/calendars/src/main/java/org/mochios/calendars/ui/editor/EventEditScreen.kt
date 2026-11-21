@@ -184,7 +184,8 @@ fun EventEditScreen(
         uiState.error?.let { snackbar.showSnackbar(it.userMessage()) }
     }
     // A save or delete refused because the event changed elsewhere says so,
-    // and Reload reads it again, as the web editor's toast does. Said from
+    // and Reload reads it again, as the web editor's toast does. Nothing is
+    // saved until then, so the message stays until it is answered. Said from
     // the screen's own scope: the flag clears at once, which restarts this
     // effect, and the message has to outlive it.
     val changed = stringResource(R.string.calendars_event_changed)
@@ -194,7 +195,7 @@ fun EventEditScreen(
         if (uiState.changed) {
             viewModel.told()
             scope.launch {
-                val chosen = snackbar.showSnackbar(changed, actionLabel = reload, duration = SnackbarDuration.Long)
+                val chosen = snackbar.showSnackbar(changed, actionLabel = reload, duration = SnackbarDuration.Indefinite)
                 if (chosen == SnackbarResult.ActionPerformed) viewModel.reload()
             }
         }

@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Nu s-au găsit persoane</string>
     <string name="people_friends_try_adjusting">Încearcă să ajustezi căutarea</string>
     <string name="people_friends_pending">În așteptare</string>
-    <string name="people_friends_received_tab">Primit</string>
-    <string name="people_friends_sent_tab">Trimis</string>
     <string name="people_invitations_incoming">Invitații primite</string>
     <string name="people_invitations_empty">Nicio invitație în așteptare</string>
     <string name="people_invitations_empty_hint">Invitațiile noi vor apărea aici</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Invitație acceptată de la %1$s</string>
     <string name="people_invitations_toast_declined">Invitație refuzată de la %1$s</string>
     <string name="people_invitations_toast_cancelled">Invitație anulată către %1$s</string>
-    <string name="people_groups_empty">Niciun grup</string>
     <string name="people_group_delete_confirm">Ștergeți grupul \"%1$s\"? Această acțiune nu poate fi anulată.</string>
     <string name="people_member_remove_confirm">Sigur doriți să eliminați pe %1$s din acest grup?</string>
     <string name="people_member_remove_with_name">Elimină pe %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Imaginea %1$s nu a putut fi procesată</string>
     <string name="people_profile_accent_invalid">Introduceți o culoare hex validă (de ex. #a78bfa)</string>
     <string name="people_profile_accent_none">Niciuna</string>
-    <string name="people_profile_privacy_private_desc">Doar prietenii reciproci vă pot vedea profilul</string>
     <string name="people_welcome_title">Bun venit în Persoane</string>
     <string name="people_person_banner_alt">Banner pentru %1$s</string>
-    <string name="people_person_private">Acest profil este privat</string>
     <string name="people_person_state_invited">Invitat</string>
 
     <string name="people_invitations_accept_all">Acceptă tot</string>
@@ -178,25 +173,8 @@
     </plurals>
     <string name="people_welcome_body">Găsiți prieteni în tot Mochi și luați legătura. Atingeți Adaugă contact pentru a trimite o invitație.</string>
     <string name="people_person_state_contact">În contacte</string>
-    <string name="people_device_create">Creează</string>
-    <string name="people_device_add">Adaugă un dispozitiv</string>
-    <string name="people_device_username">Nume de utilizator</string>
-    <string name="people_device_done">Terminat</string>
-    <string name="people_device_used">Ultima utilizare %1$s</string>
-    <string name="people_device_never">Niciodată</string>
     <string name="people_sync_now">Sincronizează acum</string>
-    <string name="people_device_title">Dispozitive conectate</string>
-    <string name="people_device_name">Numele dispozitivului</string>
     <string name="people_device_address">URL-ul agendei</string>
-    <string name="people_device_password">Parolă</string>
-    <string name="people_device_copy">Copiază %1$s</string>
-    <string name="people_device_warning">Salvează această parolă acum. Nu va mai putea fi afișată.</string>
-    <string name="people_device_empty">Niciun dispozitiv conectat.</string>
-    <string name="people_device_created">Creat %1$s</string>
-    <string name="people_device_delete">Șterge dispozitivul</string>
-    <string name="people_device_delete_title">Ștergi dispozitivul?</string>
-    <string name="people_device_delete_message">Dispozitivul nu va mai putea sincroniza contactele sau calendarele.</string>
-    <string name="people_device_deleted">Dispozitiv șters</string>
     <string name="people_sync_title">Sincronizare cu acest telefon</string>
     <string name="people_sync_confirm">Ștergerea contactului unui prieten din aplicația Contacte a acestui telefon încheie și prietenia.</string>
     <string name="people_sync_enable">Activează</string>
@@ -228,4 +206,8 @@
     <string name="people_profile_settings">Setări</string>
     <string name="people_contacts_invitation_sent">Invitație trimisă</string>
     <string name="people_contact_keep">Păstrează</string>
+    <string name="people_invitations_received_count">Primit (%1$s)</string>
+    <string name="people_invitations_sent_count">Trimis (%1$s)</string>
+    <string name="people_contact_discard">Renunță la modificări</string>
+    <string name="people_person_unavailable">Persoană indisponibilă</string>
 </resources>

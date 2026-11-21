@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">कुनै व्यक्ति भेटिएन</string>
     <string name="people_friends_try_adjusting">आफ्नो खोज समायोजन गर्ने प्रयास गर्नुहोस्</string>
     <string name="people_friends_pending">बाँकी</string>
-    <string name="people_friends_received_tab">प्राप्त</string>
-    <string name="people_friends_sent_tab">पाठवले</string>
     <string name="people_invitations_incoming">आउने निमन्त्रणाहरू</string>
     <string name="people_invitations_empty">कुनै बाँकी निम्तो छैन</string>
     <string name="people_invitations_empty_hint">नयाँ निम्तोहरू यहाँ देखा पर्नेछन्</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s को निमन्त्रणा स्वीकार गरियो</string>
     <string name="people_invitations_toast_declined">%1$s को निमन्त्रणा अस्वीकार गरियो</string>
     <string name="people_invitations_toast_cancelled">%1$s लाई पठाइएको निमन्त्रणा रद्द गरियो</string>
-    <string name="people_groups_empty">कुनै समूह छैन</string>
     <string name="people_group_delete_confirm">समूह \"%1$s\" मेटाउने? यो पूर्ववत् गर्न सकिँदैन।</string>
     <string name="people_member_remove_confirm">के तपाईं %1$s लाई यस समूहबाट हटाउन चाहनुहुन्छ?</string>
     <string name="people_member_remove_with_name">%1$s लाई हटाउनुहोस्</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s छवि प्रशोधन गर्न सकिएन</string>
     <string name="people_profile_accent_invalid">मान्य हेक्स रङ लेख्नुहोस् (उदाहरण #a78bfa)</string>
     <string name="people_profile_accent_none">कुनै पनि होइन</string>
-    <string name="people_profile_privacy_private_desc">केवल पारस्परिक साथीहरूले मात्र तपाईंको प्रोफाइल हेर्न सक्छन्</string>
     <string name="people_welcome_title">मानिसहरूमा स्वागत छ</string>
     <string name="people_person_banner_alt">%1$s को ब्यानर</string>
-    <string name="people_person_private">यो प्रोफाइल निजी छ</string>
     <string name="people_person_state_invited">निमन्त्रित</string>
 
     <string name="people_invitations_accept_all">सबै स्वीकार गर्नुहोस्</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi भरि साथीहरू खोज्नुहोस् र जोडिनुहोस्। निमन्त्रणा पठाउन सम्पर्क थप्नुहोस् थिच्नुहोस्।</string>
     <string name="people_person_state_contact">सम्पर्कहरूमा</string>
-    <string name="people_device_create">सिर्जना गर्नुहोस्</string>
-    <string name="people_device_add">उपकरण थप्नुहोस्</string>
-    <string name="people_device_username">प्रयोगकर्ता नाम</string>
-    <string name="people_device_done">सम्पन्न</string>
-    <string name="people_device_used">अन्तिम पटक प्रयोग गरियो %1$s</string>
-    <string name="people_device_never">कहिल्यै होइन</string>
     <string name="people_sync_now">अहिले सिङ्क गर्नुहोस्</string>
-    <string name="people_device_title">जडान गरिएका उपकरणहरू</string>
-    <string name="people_device_name">उपकरणको नाम</string>
     <string name="people_device_address">ठेगाना पुस्तिकाको URL</string>
-    <string name="people_device_password">पासवर्ड</string>
-    <string name="people_device_copy">%1$s प्रतिलिपि गर्नुहोस्</string>
-    <string name="people_device_warning">यो पासवर्ड अहिले नै सुरक्षित गर्नुहोस्। यो फेरि देखाउन सकिँदैन।</string>
-    <string name="people_device_empty">कुनै उपकरण जडान गरिएको छैन।</string>
-    <string name="people_device_created">सिर्जना गरिएको %1$s</string>
-    <string name="people_device_delete">उपकरण मेटाउनुहोस्</string>
-    <string name="people_device_delete_title">उपकरण मेटाउने?</string>
-    <string name="people_device_delete_message">उपकरणले अब सम्पर्क वा क्यालेन्डरहरू सिंक गर्न सक्ने छैन।</string>
-    <string name="people_device_deleted">उपकरण मेटाइयो</string>
     <string name="people_sync_title">यो फोनमा सिङ्क गर्नुहोस्</string>
     <string name="people_sync_confirm">यो फोनको सम्पर्क एपमा साथीको सम्पर्क मेटाउँदा मित्रता पनि समाप्त हुन्छ।</string>
     <string name="people_sync_enable">अन गर्नुहोस्</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">सेटिङहरू</string>
     <string name="people_contacts_invitation_sent">निमन्त्रणा पठाइयो</string>
     <string name="people_contact_keep">राख्नुहोस्</string>
+    <string name="people_invitations_received_count">प्राप्त (%1$s)</string>
+    <string name="people_invitations_sent_count">पाठवले (%1$s)</string>
+    <string name="people_contact_discard">परिवर्तनहरू हटाउनुहोस्</string>
+    <string name="people_person_unavailable">व्यक्ति अनुपलब्ध</string>
 </resources>

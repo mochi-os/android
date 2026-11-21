@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s-მა თამაში განაახლა</string>
     <string name="game_not_found">თამაში ვერ მოიძებნა</string>
     <string name="game_chat_move_played_you">თქვენ ითამაშეთ %1$s</string>
+    <string name="devices_add">მოწყობილობის დამატება</string>
+    <string name="devices_copy">%1$s კოპირება</string>
+    <string name="devices_create">შექმნა</string>
+    <string name="devices_created">შექმნილია %1$s</string>
+    <string name="devices_delete">მოწყობილობის წაშლა</string>
+    <string name="devices_delete_message">მოწყობილობა ვეღარ შეძლებს კონტაქტების ან კალენდრების სინქრონიზაციას.</string>
+    <string name="devices_delete_title">წაიშალოს მოწყობილობა?</string>
+    <string name="devices_deleted">მოწყობილობა წაიშალა</string>
+    <string name="devices_done">მზადაა</string>
+    <string name="devices_empty">დაკავშირებული მოწყობილობები არ არის</string>
+    <string name="devices_name">მოწყობილობის სახელი</string>
+    <string name="devices_password">პაროლი</string>
+    <string name="devices_title">დაკავშირებული მოწყობილობები</string>
+    <string name="devices_used">ბოლოს გამოყენებული %1$s</string>
+    <string name="devices_username">მომხმარებლის სახელი</string>
+    <string name="devices_warning">დააკოპირეთ პაროლი ახლავე: მისი ხელახლა ჩვენება შეუძლებელია.</string>
+    <string name="devices_unused">არასოდეს გამოყენებულა</string>
 </resources>

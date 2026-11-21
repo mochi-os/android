@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
@@ -34,6 +35,12 @@ sealed class InvitationsEvent {
     data class BatchAccepted(val allSucceeded: Boolean) : InvitationsEvent()
     data class BatchDeclined(val allSucceeded: Boolean) : InvitationsEvent()
     data class BatchCancelled(val allSucceeded: Boolean) : InvitationsEvent()
+
+    /**
+     * An action on a list already showing failed, or reading the lists again
+     * after one did: the list stays, and the snackbar says why.
+     */
+    data class Failed(val error: MochiError) : InvitationsEvent()
 }
 
 data class InvitationsUiState(
@@ -43,9 +50,12 @@ data class InvitationsUiState(
     val searchQuery: String = "",
     val policy: String = "notify",
     val policyError: MochiError? = null,
+    /** Why the policy chosen in the dialog could not be saved, shown in the dialog. */
+    val policyFailure: MochiError? = null,
     val settingsDialogOpen: Boolean = false,
     val savingPolicy: Boolean = false,
     val batchInProgress: Boolean = false,
+    /** Why the lists could not be read, with none showing. */
     val error: MochiError? = null,
 )
 
@@ -65,24 +75,30 @@ class InvitationsViewModel @Inject constructor(
         loadPolicy()
     }
 
+    /**
+     * The lists again. A failure with none showing takes their place; over
+     * lists already showing they stay, and the snackbar says why.
+     */
     fun refresh() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.update { state -> state.copy(isLoading = true, error = null) }
             try {
                 // Preserve server-order on invites (most-recent first) to
                 // match the web. Alphabetical sort would scramble the
                 // recency cue users expect on an invitations list.
                 val response = repository.listContacts()
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    received = response.received,
-                    sent = response.sent,
-                )
+                _uiState.update { state ->
+                    state.copy(isLoading = false, received = response.received, sent = response.sent)
+                }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
+                val failure = e.toMochiError()
+                val state = _uiState.value
+                if (state.received.isEmpty() && state.sent.isEmpty()) {
+                    _uiState.update { current -> current.copy(isLoading = false, error = failure) }
+                } else {
+                    _uiState.update { current -> current.copy(isLoading = false) }
+                    _events.trySend(InvitationsEvent.Failed(failure))
+                }
             }
         }
     }
@@ -119,6 +135,8 @@ class InvitationsViewModel @Inject constructor(
         return list.filter { it.name.lowercase().contains(q) }
     }
 
+    // An action is taken on a list that is showing, so its failure is said in
+    // the snackbar and the list stays.
     fun accept(invite: FriendInvite) {
         viewModelScope.launch {
             try {
@@ -126,7 +144,7 @@ class InvitationsViewModel @Inject constructor(
                 _events.trySend(InvitationsEvent.Accepted(invite.name))
                 refresh()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _events.trySend(InvitationsEvent.Failed(e.toMochiError()))
             }
         }
     }
@@ -138,7 +156,7 @@ class InvitationsViewModel @Inject constructor(
                 _events.trySend(InvitationsEvent.Declined(invite.name))
                 refresh()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _events.trySend(InvitationsEvent.Failed(e.toMochiError()))
             }
         }
     }
@@ -152,7 +170,7 @@ class InvitationsViewModel @Inject constructor(
                 _events.trySend(InvitationsEvent.Cancelled(invite.name))
                 refresh()
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
+                _events.trySend(InvitationsEvent.Failed(e.toMochiError()))
             }
         }
     }
@@ -196,36 +214,28 @@ class InvitationsViewModel @Inject constructor(
         }
     }
 
-    fun clearError() {
-        _uiState.value = _uiState.value.copy(error = null)
-    }
-
     fun openSettings() {
-        _uiState.value = _uiState.value.copy(settingsDialogOpen = true)
+        _uiState.update { state -> state.copy(settingsDialogOpen = true, policyFailure = null) }
         // Refresh the policy in case it was changed elsewhere.
         loadPolicy()
     }
 
     fun closeSettings() {
-        _uiState.value = _uiState.value.copy(settingsDialogOpen = false)
+        _uiState.update { state -> state.copy(settingsDialogOpen = false, policyFailure = null) }
     }
 
+    /** Saves the policy; a refusal stays in the dialog, saying why, so it can be tried again. */
     fun setPolicy(policy: String) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(savingPolicy = true)
+            _uiState.update { state -> state.copy(savingPolicy = true, policyFailure = null) }
             try {
                 repository.setInvitePolicy(policy)
-                _uiState.value = _uiState.value.copy(
-                    policy = policy,
-                    savingPolicy = false,
-                    settingsDialogOpen = false,
-                )
+                _uiState.update { state ->
+                    state.copy(policy = policy, savingPolicy = false, settingsDialogOpen = false)
+                }
                 _events.trySend(InvitationsEvent.PolicyUpdated(policy))
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(
-                    savingPolicy = false,
-                    error = e.toMochiError(),
-                )
+                _uiState.update { state -> state.copy(savingPolicy = false, policyFailure = e.toMochiError()) }
             }
         }
     }

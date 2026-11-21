@@ -10,11 +10,8 @@ import com.google.gson.Gson
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.asStateFlow
 import org.mochios.android.api.ApiError
 import org.mochios.android.api.ApiException
 import org.mochios.android.api.MochiError
@@ -25,6 +22,7 @@ import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
 import org.mochios.android.launcher.Shortcuts
+import org.mochios.android.sync.CalendarsMapping
 import org.mochios.android.sync.EventComponent
 import org.mochios.calendars.api.CalendarsApi
 import org.mochios.calendars.api.EventCreateRequest
@@ -90,11 +88,6 @@ class CalendarsRepository @Inject constructor(
     @param:ApplicationContext private val context: Context,
 ) : FileRepository(fileStore) {
 
-    private val _calendars = MutableStateFlow<List<Calendar>>(emptyList())
-
-    /** The calendars as last read, for screens that open without one. */
-    val calendars: StateFlow<List<Calendar>> = _calendars.asStateFlow()
-
     private val _calendarsChanged = MutableSharedFlow<Unit>(extraBufferCapacity = 4)
 
     /** Fires when a calendar is created, renamed, recoloured, subscribed or deleted. */
@@ -111,7 +104,6 @@ class CalendarsRepository @Inject constructor(
     suspend fun listCalendars(): List<Calendar> = call {
         api.listCalendars().unwrap().calendars
     }.also { calendars ->
-        _calendars.value = calendars
         Shortcuts.reconcile(context, "calendars", Shortcuts.paths(calendars, { it.name }) { listOf(Calendar.path(it.id)) })
     }
 
@@ -360,14 +352,15 @@ class CalendarsRepository @Inject constructor(
      * is the caller's to answer: the editor refuses rather than delete from
      * an event that changed under it.
      */
-    suspend fun excludeOccurrence(event: String, occurrence: Long, stored: Event? = null): Event {
-        if (stored != null) return updateEvent(event, stored.etag, null, excluded(stored.components, occurrence))
+    suspend fun excludeOccurrence(event: String, occurrence: Long, stored: Event? = null, user: String = CalendarsMapping.UTC): Event {
+        // A floating series' occurrence is named as the clock reads in the [user]'s zone.
+        if (stored != null) return updateEvent(event, stored.etag, null, excluded(stored.components, occurrence, user))
         val current = getEvent(event)
         return try {
-            updateEvent(event, current.etag, null, excluded(current.components, occurrence))
+            updateEvent(event, current.etag, null, excluded(current.components, occurrence, user))
         } catch (_: EventChangedException) {
             val fresh = getEvent(event)
-            updateEvent(event, fresh.etag, null, excluded(fresh.components, occurrence))
+            updateEvent(event, fresh.etag, null, excluded(fresh.components, occurrence, user))
         }
     }
 
@@ -378,11 +371,12 @@ class CalendarsRepository @Inject constructor(
      * before it, so removing from there deletes the event. A 412 means the
      * server moved on, so the event is read again and the cut applied to
      * that copy; given the event as the caller [stored] it, the cut is
-     * written over that copy alone and a 412 is the caller's to answer.
+     * written over that copy alone and a 412 is the caller's to answer. A
+     * floating series reads, and is cut, in the [user]'s zone.
      */
-    suspend fun truncateEvent(event: String, occurrence: Long, stored: Event? = null): Event? {
+    suspend fun truncateEvent(event: String, occurrence: Long, stored: Event? = null, user: String = CalendarsMapping.UTC): Event? {
         suspend fun cut(current: Event): Event? {
-            val components = truncated(current.components, occurrence)
+            val components = truncated(current.components, occurrence, user)
             if (components == null) {
                 deleteEvent(event, current.etag)
                 return null

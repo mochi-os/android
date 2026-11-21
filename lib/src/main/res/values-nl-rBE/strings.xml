@@ -316,4 +316,17 @@
     <string name="game_system_score_accept">%1$s heeft de score geaccepteerd</string>
     <string name="game_system_score_resume">%1$s heeft het spel hervat</string>
     <string name="game_chat_move_played_you">U speelde %1$s</string>
+    <string name="devices_copy">%1$s kopiëren</string>
+    <string name="devices_create">Aanmaken</string>
+    <string name="devices_created">Aangemaakt %1$s</string>
+    <string name="devices_delete">Apparaat verwijderen</string>
+    <string name="devices_delete_message">Het apparaat kan dan geen contacten of agenda\'s meer synchroniseren.</string>
+    <string name="devices_delete_title">Apparaat verwijderen?</string>
+    <string name="devices_deleted">Apparaat verwijderd</string>
+    <string name="devices_done">Klaar</string>
+    <string name="devices_name">Apparaatnaam</string>
+    <string name="devices_password">Wachtwoord</string>
+    <string name="devices_used">Laatst gebruikt %1$s</string>
+    <string name="devices_username">Gebruikersnaam</string>
+    <string name="devices_unused">Nooit gebruikt</string>
 </resources>

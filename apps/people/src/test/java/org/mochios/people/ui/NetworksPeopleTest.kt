@@ -278,6 +278,18 @@ class NetworksPeopleTest {
     }
 
     @Test
+    fun `a refused switch does not keep the editor from being left`() {
+        friendsRefuse = true
+        val model = editor()
+        model.toggleXmpp(model.uiState.value.contact!!.xmpp.single(), true)
+        until { !model.uiState.value.isToggling }
+        assertTrue(model.uiState.value.error != null)
+        model.leave()
+        // THE POINT: with nothing unsaved, an earlier failure is no reason to stay.
+        until { model.uiState.value.left }
+    }
+
+    @Test
     fun `the friend switch moves at once when inviting`() {
         friendsDelay = 1500
         linked = true
@@ -568,6 +580,26 @@ class NetworksPeopleTest {
         assertFalse(model.uiState.value.networksLoading)
         assertTrue(bodies("contacts/search").single().contains("networks=separate"))
         assertTrue(bodies("contacts/search/networks").single().contains("search=ada"))
+    }
+
+    @Test
+    fun `what is done while other networks are searched stands once they answer`() {
+        directory = """[{"id": "p1", "name": "Ada Lovelace", "fingerprint": "abcdefghi"}]"""
+        networksDelay = 1_500
+        val model = AddContactViewModel(SavedStateHandle(), repository)
+        model.updateSearchQuery("ada")
+        model.search()
+        until { model.uiState.value.searchResults.isNotEmpty() }
+        val ada = model.uiState.value.searchResults.single()
+        model.addToContacts(ada)
+        until { ada.id in model.uiState.value.addedUserIds }
+        model.openPreview(ada)
+        assertTrue(model.uiState.value.networksLoading)
+        until { model.uiState.value.networkResults.isNotEmpty() }
+        // THE POINT: the person added, and the preview opened, are not undone.
+        assertTrue(ada.id in model.uiState.value.addedUserIds)
+        assertTrue(model.uiState.value.contactsChanged)
+        assertEquals("p1", model.uiState.value.preview?.targetUser?.id)
     }
 
     @Test

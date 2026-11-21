@@ -164,10 +164,10 @@ class CalendarMenuTest {
     fun `the address and device questions use the web's words`() {
         assertEquals("Calendar address", context.getString(R.string.calendars_link_title))
         assertEquals("Copy calendar address", context.getString(R.string.calendars_link_copy))
-        assertEquals("Delete device?", context.getString(R.string.calendars_device_delete_title))
+        assertEquals("Delete device?", context.getString(MochiR.string.devices_delete_title))
         assertEquals(
             "The device will no longer be able to sync contacts or calendars.",
-            context.getString(R.string.calendars_device_delete_message),
+            context.getString(MochiR.string.devices_delete_message),
         )
     }
 }

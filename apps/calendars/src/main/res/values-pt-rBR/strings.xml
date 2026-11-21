@@ -3,9 +3,6 @@
     <string name="calendars_subscribe_submit">Inscrever-se</string>
     <string name="calendars_delete">Excluir</string>
     <string name="calendars_view">Visualização</string>
-    <string name="calendars_device_password">Senha</string>
-    <string name="calendars_device_done">Pronto</string>
-    <string name="calendars_device_delete">Excluir</string>
     <string name="calendars_sync_title">Sincronizar com este celular</string>
     <string name="calendars_preferences_zones">Mostrar os eventos no próprio fuso horário</string>
     <string name="calendars_event_zone_finish">Fuso horário de término</string>
@@ -55,9 +52,6 @@
     <string name="calendars_linked">Calendário vinculado</string>
     <string name="calendars_subscribed">Inscrito</string>
     <string name="calendars_link_exists">Este endereço do calendário já foi emitido e não pode ser exibido novamente.</string>
-    <string name="calendars_device_delete_title">Excluir o dispositivo?</string>
-    <string name="calendars_device_delete_message">O dispositivo não poderá mais sincronizar contatos nem calendários.</string>
-    <string name="calendars_device_deleted">Dispositivo excluído</string>
     <string name="calendars_subscribe_google_enable_action">Ativar contas do Google</string>
     <string name="calendars_location_map">Mostrar no mapa</string>
     <string name="calendars_location_flight">Acompanhar voo</string>

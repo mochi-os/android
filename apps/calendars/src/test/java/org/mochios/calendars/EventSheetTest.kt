@@ -23,6 +23,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.UserPreferences
+import org.mochios.android.util.descriptionText
 import org.mochios.calendars.model.Instance
 import org.mochios.calendars.ui.calendar.EventSheet
 import org.robolectric.RobolectricTestRunner
@@ -93,6 +94,19 @@ class EventSheetTest {
         val centre = pixels[pixels.width / 2, pixels.height / 2]
         val green = Color(0xFF16A34A)
         assertTrue("$centre", abs(centre.red - green.red) < 0.02f && abs(centre.green - green.green) < 0.02f && abs(centre.blue - green.blue) < 0.02f)
+    }
+
+    /**
+     * A subscription's description is written by whoever publishes it: an
+     * HTML one shows as its text, as the web's summary does, so no image it
+     * names is fetched when the sheet opens.
+     */
+    @Test
+    fun `an HTML description shows as its text`() {
+        val html = """<p>Bring <b>tea</b></p><img src="https://tracker.example/pixel.png">"""
+        show(meeting().copy(description = html))
+        assertEquals(1, rule.onAllNodesWithText(descriptionText(html)).fetchSemanticsNodes().size)
+        assertTrue(descriptionText(html).contains("Bring tea"))
     }
 
     @Test

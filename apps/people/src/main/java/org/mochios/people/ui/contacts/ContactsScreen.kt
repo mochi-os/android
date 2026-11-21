@@ -28,7 +28,6 @@ import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.PersonAdd
 import androidx.compose.material.icons.filled.PersonRemove
 import androidx.compose.material.icons.filled.Search
@@ -78,6 +77,7 @@ import org.mochios.android.ui.components.MochiFab
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.people.R
 import org.mochios.people.model.Contact
@@ -173,12 +173,7 @@ fun ContactsScreen(
                         }
                     },
                     actions = {
-                        MochiIconButton(onClick = onOpenNotifications) {
-                            Icon(
-                                Icons.Default.Notifications,
-                                contentDescription = stringResource(MochiR.string.common_notifications),
-                            )
-                        }
+                        NotificationBell(onClick = onOpenNotifications)
                         // The book's own actions belong to the screen showing
                         // it: the drawer's rows carry no menu of their own.
                         if (book != null) {

@@ -274,4 +274,8 @@
     <string name="person_unknown">Unbekannt</string>
     <string name="format_time_seconds_short">%1$s Sek.</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="devices_create">Erstellen</string>
+    <string name="devices_done">Fertig</string>
+    <string name="devices_used">Zuletzt verwendet %1$s</string>
+    <string name="devices_username">Benutzername</string>
 </resources>

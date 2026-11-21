@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s(e)k partidari berrekin dio</string>
     <string name="game_not_found">Ez da partida aurkitu</string>
     <string name="game_chat_move_played_you">%1$s jokatu duzu</string>
+    <string name="devices_add">Gehitu gailu bat</string>
+    <string name="devices_copy">Kopiatu %1$s</string>
+    <string name="devices_create">Sortu</string>
+    <string name="devices_created">%1$s sortua</string>
+    <string name="devices_delete">Ezabatu gailua</string>
+    <string name="devices_delete_message">Gailuak ezin izango ditu kontaktuak edo egutegiak sinkronizatu aurrerantzean.</string>
+    <string name="devices_delete_title">Gailua ezabatu?</string>
+    <string name="devices_deleted">Gailua ezabatu da</string>
+    <string name="devices_done">Eginda</string>
+    <string name="devices_empty">Ez dago gailurik konektatuta</string>
+    <string name="devices_name">Gailuaren izena</string>
+    <string name="devices_password">Pasahitza</string>
+    <string name="devices_title">Konektatutako gailuak</string>
+    <string name="devices_used">Azken erabilera %1$s</string>
+    <string name="devices_username">Erabiltzaile-izena</string>
+    <string name="devices_warning">Kopiatu pasahitza orain: ezin izango da berriro erakutsi.</string>
+    <string name="devices_unused">Inoiz erabili gabea</string>
 </resources>

@@ -38,8 +38,6 @@
     <string name="people_friends_searching">Buscando…</string>
     <string name="people_friends_no_people_found">No se encontraron personas</string>
     <string name="people_friends_pending">Pendiente</string>
-    <string name="people_friends_received_tab">Recibidas</string>
-    <string name="people_friends_sent_tab">Enviadas</string>
     <string name="people_invitations_incoming">Invitaciones entrantes</string>
     <string name="people_invitations_empty">No hay invitaciones pendientes</string>
     <string name="people_invitations_empty_hint">Las nuevas invitaciones aparecerán acá</string>
@@ -55,7 +53,6 @@
     <string name="people_invite_settings_reject_description">Las invitaciones de remitentes desconocidos se descartan. Las invitaciones mutuas igual conectan.</string>
     <string name="people_invite_settings_accept_automatically">Aceptar automáticamente</string>
     <string name="people_invite_settings_accept_description">Todas las invitaciones se aceptan sin tu aprobación.</string>
-    <string name="people_groups_empty">No hay grupos</string>
     <string name="people_groups_not_found">Grupo no encontrado</string>
     <string name="people_group_name">Nombre del grupo</string>
     <string name="people_group_name_required">El nombre es obligatorio</string>
@@ -85,10 +82,8 @@
     <string name="people_profile_accent_invalid">Ingresá un color hexadecimal válido (por ejemplo, #a78bfa)</string>
     <string name="people_profile_accent_none">Ninguno</string>
     <string name="people_profile_clear">Quitar</string>
-    <string name="people_profile_privacy_private_desc">Solo tus amigos mutuos pueden ver tu perfil</string>
     <string name="people_welcome_dismiss">Descartar</string>
     <string name="people_person_banner_alt">Banner de %1$s</string>
-    <string name="people_person_private">Este perfil es privado</string>
     <string name="people_person_state_friend">Amigos</string>
     <string name="people_person_state_invited">Invitado</string>
 
@@ -113,9 +108,6 @@
     <string name="people_contacts_unfriend">Quitá al amigo</string>
     <string name="people_add_contact_search_placeholder">Escribí para buscar</string>
     <string name="people_add_contact_search_start">Empezá a escribir para buscar usuarios</string>
-    <string name="people_device_create">Crear</string>
-    <string name="people_device_username">Nombre de usuario</string>
-    <string name="people_device_done">Listo</string>
-    <string name="people_device_used">Último uso %1$s</string>
-    <string name="people_device_never">Nunca</string>
+    <string name="people_invitations_received_count">Recibidas (%1$s)</string>
+    <string name="people_invitations_sent_count">Enviadas (%1$s)</string>
 </resources>

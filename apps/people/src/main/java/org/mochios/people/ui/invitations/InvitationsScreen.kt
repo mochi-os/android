@@ -6,6 +6,7 @@
 package org.mochios.people.ui.invitations
 
 import org.mochios.android.api.OwnedAddress
+import androidx.annotation.StringRes
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.BorderStroke
@@ -65,6 +66,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.format.formatFingerprint
@@ -80,7 +82,8 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
-import org.mochios.android.util.segment
+import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.personAvatarPath
 import org.mochios.people.R
 import org.mochios.people.model.FriendInvite
 import org.mochios.people.ui.components.PeopleDrawer
@@ -94,6 +97,7 @@ import org.mochios.android.R as MochiR
 @Composable
 fun InvitationsScreen(
     drawer: PeopleDrawerNavigation,
+    onOpenNotifications: () -> Unit,
     viewModel: InvitationsViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -105,30 +109,7 @@ fun InvitationsScreen(
 
     // Snackbar toasts on accept/decline/cancel/policy-update, matching web.
     val snackbarHostState = remember { SnackbarHostState() }
-    val acceptedFmt = stringResource(R.string.people_invitations_toast_accepted)
-    val declinedFmt = stringResource(R.string.people_invitations_toast_declined)
-    val cancelledFmt = stringResource(R.string.people_invitations_toast_cancelled)
-    val policyFmt = stringResource(R.string.people_invitations_toast_policy)
-    val allAccepted = stringResource(R.string.people_invitations_all_accepted)
-    val allDeclined = stringResource(R.string.people_invitations_all_declined)
-    val allCancelled = stringResource(R.string.people_invitations_all_cancelled)
-    val someAcceptFailed = stringResource(R.string.people_invitations_some_accept_failed)
-    val someDeclineFailed = stringResource(R.string.people_invitations_some_decline_failed)
-    val someCancelFailed = stringResource(R.string.people_invitations_some_cancel_failed)
-    LaunchedEffect(Unit) {
-        viewModel.events.collect { event ->
-            val msg = when (event) {
-                is InvitationsEvent.Accepted -> acceptedFmt.format(event.name)
-                is InvitationsEvent.Declined -> declinedFmt.format(event.name)
-                is InvitationsEvent.Cancelled -> cancelledFmt.format(event.name)
-                is InvitationsEvent.PolicyUpdated -> policyFmt
-                is InvitationsEvent.BatchAccepted -> if (event.allSucceeded) allAccepted else someAcceptFailed
-                is InvitationsEvent.BatchDeclined -> if (event.allSucceeded) allDeclined else someDeclineFailed
-                is InvitationsEvent.BatchCancelled -> if (event.allSucceeded) allCancelled else someCancelFailed
-            }
-            snackbarHostState.showSnackbar(msg)
-        }
-    }
+    InvitationsSnackbars(viewModel.events, snackbarHostState)
 
     RememberPeopleSection(PeopleSection.INVITATIONS)
 
@@ -151,6 +132,7 @@ fun InvitationsScreen(
                     }
                 },
                 actions = {
+                    NotificationBell(onClick = onOpenNotifications)
                     Box {
                         MochiIconButton(onClick = { showOverflow = true }) {
                             Icon(
@@ -222,7 +204,7 @@ fun InvitationsScreen(
                     if (received.isNotEmpty()) {
                         item {
                             StackedSectionHeader(
-                                text = stringResource(R.string.people_friends_received_tab),
+                                heading = R.string.people_invitations_received_count,
                                 count = received.size,
                                 action = {
                                     MochiTextButton(
@@ -248,7 +230,7 @@ fun InvitationsScreen(
                         }
                         item {
                             StackedSectionHeader(
-                                text = stringResource(R.string.people_friends_sent_tab),
+                                heading = R.string.people_invitations_sent_count,
                                 count = sent.size,
                                 action = {
                                     MochiTextButton(
@@ -273,6 +255,7 @@ fun InvitationsScreen(
         InviteSettingsDialog(
             initial = uiState.policy,
             loadError = uiState.policyError,
+            failure = uiState.policyFailure,
             isSaving = uiState.savingPolicy,
             onDismiss = { viewModel.closeSettings() },
             onSave = { viewModel.setPolicy(it) },
@@ -280,9 +263,43 @@ fun InvitationsScreen(
     }
 }
 
+/** What the screen's [events] say, each in the snackbar: what was done, or why it failed. */
 @Composable
-private fun StackedSectionHeader(
-    text: String,
+internal fun InvitationsSnackbars(events: Flow<InvitationsEvent>, host: SnackbarHostState) {
+    val acceptedFmt = stringResource(R.string.people_invitations_toast_accepted)
+    val declinedFmt = stringResource(R.string.people_invitations_toast_declined)
+    val cancelledFmt = stringResource(R.string.people_invitations_toast_cancelled)
+    val policyFmt = stringResource(R.string.people_invitations_toast_policy)
+    val allAccepted = stringResource(R.string.people_invitations_all_accepted)
+    val allDeclined = stringResource(R.string.people_invitations_all_declined)
+    val allCancelled = stringResource(R.string.people_invitations_all_cancelled)
+    val someAcceptFailed = stringResource(R.string.people_invitations_some_accept_failed)
+    val someDeclineFailed = stringResource(R.string.people_invitations_some_decline_failed)
+    val someCancelFailed = stringResource(R.string.people_invitations_some_cancel_failed)
+    LaunchedEffect(events) {
+        events.collect { event ->
+            val msg = when (event) {
+                is InvitationsEvent.Accepted -> acceptedFmt.format(event.name)
+                is InvitationsEvent.Declined -> declinedFmt.format(event.name)
+                is InvitationsEvent.Cancelled -> cancelledFmt.format(event.name)
+                is InvitationsEvent.PolicyUpdated -> policyFmt
+                is InvitationsEvent.BatchAccepted -> if (event.allSucceeded) allAccepted else someAcceptFailed
+                is InvitationsEvent.BatchDeclined -> if (event.allSucceeded) allDeclined else someDeclineFailed
+                is InvitationsEvent.BatchCancelled -> if (event.allSucceeded) allCancelled else someCancelFailed
+                is InvitationsEvent.Failed -> event.error.userMessage()
+            }
+            host.showSnackbar(msg)
+        }
+    }
+}
+
+/**
+ * A section's heading, [heading] holding its [count] where each language puts
+ * it, in the user's number format, and the section's actions.
+ */
+@Composable
+internal fun StackedSectionHeader(
+    @StringRes heading: Int,
     count: Int,
     action: (@Composable RowScope.() -> Unit)? = null,
 ) {
@@ -293,7 +310,7 @@ private fun StackedSectionHeader(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
-            text = "$text (${LocalFormat.current.formatNumber(count)})",
+            text = stringResource(heading, LocalFormat.current.formatNumber(count)),
             style = MaterialTheme.typography.titleSmall,
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.weight(1f),
@@ -351,7 +368,7 @@ internal fun sentDetail(invite: FriendInvite, pending: String): String =
 
 /** An invite's avatar: a Mochi person's own; someone on XMPP has none here. */
 internal fun inviteAvatar(invite: FriendInvite): OwnedAddress? =
-    if (invite.address.isEmpty()) avatarUrl(invite.id) else null
+    if (invite.address.isEmpty()) personAvatarPath(invite.id) else null
 
 /**
  * A received invite on one line, as a sent one is: the name and detail take the
@@ -493,9 +510,11 @@ private fun InvitationsEmptyState(isSearching: Boolean) {
 }
 
 @Composable
-private fun InviteSettingsDialog(
+internal fun InviteSettingsDialog(
     initial: String,
     loadError: MochiError?,
+    /** Why the last save was refused, said under the choices. */
+    failure: MochiError?,
     isSaving: Boolean,
     onDismiss: () -> Unit,
     onSave: (String) -> Unit,
@@ -569,6 +588,13 @@ private fun InviteSettingsDialog(
                         }
                     }
                 }
+                failure?.let { refused ->
+                    Text(
+                        text = refused.userMessage(),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.error,
+                    )
+                }
             }
         },
         confirmText = stringResource(R.string.people_common_save),
@@ -585,10 +611,3 @@ private data class PolicyOption(
     val label: String,
     val description: String,
 )
-
-/** A person's avatar; null when the id, a peer's, cannot be one segment of the address ([segment]). */
-private fun avatarUrl(id: String): OwnedAddress? {
-    if (id.isBlank()) return null
-    val person = segment(id) ?: return null
-    return OwnedAddress.of("/people/$person/-/avatar")
-}

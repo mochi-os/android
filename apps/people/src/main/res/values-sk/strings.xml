@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Nenašli sa žiadni ľudia</string>
     <string name="people_friends_try_adjusting">Skúste upraviť vyhľadávanie</string>
     <string name="people_friends_pending">Čaká sa</string>
-    <string name="people_friends_received_tab">Prijaté</string>
-    <string name="people_friends_sent_tab">Odoslané</string>
     <string name="people_invitations_incoming">Prichádzajúce pozvánky</string>
     <string name="people_invitations_empty">Žiadne čakajúce pozvánky</string>
     <string name="people_invitations_empty_hint">Nové pozvánky sa zobrazia tu</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Pozvánka od %1$s bola prijatá</string>
     <string name="people_invitations_toast_declined">Pozvánka od %1$s bola odmietnutá</string>
     <string name="people_invitations_toast_cancelled">Pozvánka pre %1$s bola zrušená</string>
-    <string name="people_groups_empty">Žiadne skupiny</string>
     <string name="people_group_delete_confirm">Odstrániť skupinu \"%1$s\"? Túto akciu nemožno vrátiť späť.</string>
     <string name="people_member_remove_confirm">Naozaj chcete odstrániť používateľa %1$s z tejto skupiny?</string>
     <string name="people_member_remove_with_name">Odstrániť %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Nepodarilo sa spracovať obrázok %1$s</string>
     <string name="people_profile_accent_invalid">Zadajte platnú hexadecimálnu farbu (napr. #a78bfa)</string>
     <string name="people_profile_accent_none">Žiadne</string>
-    <string name="people_profile_privacy_private_desc">Váš profil môžu zobraziť iba vzájomní priatelia</string>
     <string name="people_welcome_title">Vitajte v Ľuďoch</string>
     <string name="people_person_banner_alt">Baner pre %1$s</string>
-    <string name="people_person_private">Tento profil je súkromný</string>
     <string name="people_person_state_invited">Pozvaný</string>
 
     <string name="people_invitations_accept_all">Prijať všetky</string>
@@ -178,25 +173,8 @@
     </plurals>
     <string name="people_welcome_body">Nájdite priateľov naprieč Mochi a spojte sa. Ťuknutím na Pridať kontakt odošlete pozvánku.</string>
     <string name="people_person_state_contact">V kontaktoch</string>
-    <string name="people_device_create">Vytvoriť</string>
-    <string name="people_device_add">Pridať zariadenie</string>
-    <string name="people_device_username">Používateľské meno</string>
-    <string name="people_device_done">Hotovo</string>
-    <string name="people_device_used">Naposledy použité %1$s</string>
-    <string name="people_device_never">Nikdy</string>
     <string name="people_sync_now">Synchronizovať teraz</string>
-    <string name="people_device_title">Pripojené zariadenia</string>
-    <string name="people_device_name">Názov zariadenia</string>
     <string name="people_device_address">URL adresára</string>
-    <string name="people_device_password">Heslo</string>
-    <string name="people_device_copy">Kopírovať %1$s</string>
-    <string name="people_device_warning">Uložte si toto heslo teraz. Už sa nedá znova zobraziť.</string>
-    <string name="people_device_empty">Žiadne pripojené zariadenia.</string>
-    <string name="people_device_created">Vytvorené %1$s</string>
-    <string name="people_device_delete">Odstrániť zariadenie</string>
-    <string name="people_device_delete_title">Odstrániť zariadenie?</string>
-    <string name="people_device_delete_message">Zariadenie už nebude môcť synchronizovať kontakty ani kalendáre.</string>
-    <string name="people_device_deleted">Zariadenie bolo odstránené</string>
     <string name="people_sync_title">Synchronizovať s týmto telefónom</string>
     <string name="people_sync_confirm">Odstránením kontaktu priateľa v aplikácii Kontakty v tomto telefóne sa skončí aj priateľstvo.</string>
     <string name="people_sync_enable">Zapnúť</string>
@@ -228,4 +206,8 @@
     <string name="people_profile_settings">Nastavenia</string>
     <string name="people_contacts_invitation_sent">Pozvánka odoslaná</string>
     <string name="people_contact_keep">Ponechať</string>
+    <string name="people_invitations_received_count">Prijaté (%1$s)</string>
+    <string name="people_invitations_sent_count">Odoslané (%1$s)</string>
+    <string name="people_contact_discard">Zahodiť zmeny</string>
+    <string name="people_person_unavailable">Osoba nie je dostupná</string>
 </resources>

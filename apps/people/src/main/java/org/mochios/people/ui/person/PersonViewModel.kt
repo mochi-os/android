@@ -17,14 +17,18 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.sync.ContactProperty
+import org.mochios.people.R
 import org.mochios.people.api.ContactsListResponse
+import org.mochios.people.api.StandingResponse
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.repository.PeopleRepository
+import java.security.MessageDigest
 import javax.inject.Inject
 
 sealed class FriendState {
@@ -56,9 +60,46 @@ data class PersonViewUiState(
 )
 
 /**
+ * Where the viewer stands with [person], as their server answers for that one
+ * person: a friend, an invitation waiting either way, a contact who is not
+ * one, or a stranger. [me] is the viewer's own identity.
+ */
+fun friendState(standing: StandingResponse, person: String, me: String? = null): FriendState {
+    if (person.isBlank()) return FriendState.NotFriend
+    if (me != null && me == person) return FriendState.Self
+    if (standing.friend) return FriendState.Friend
+    if (standing.received) return FriendState.InvitedByThem(person)
+    if (standing.sent) return FriendState.InvitedThem
+    if (standing.contact.isNotBlank()) return FriendState.Contact
+    return FriendState.NotFriend
+}
+
+/** The letters core writes an entity's fingerprint in. */
+private const val FINGERPRINT_LETTERS = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz"
+
+/** The nine-letter fingerprint core derives from an entity id. */
+internal fun fingerprintOf(id: String): String {
+    val hash = MessageDigest.getInstance("SHA-256").digest(id.toByteArray())
+    return String(CharArray(9) { index -> FINGERPRINT_LETTERS[(hash[index].toInt() and 0xff) % FINGERPRINT_LETTERS.length] })
+}
+
+/** A route that names a person by fingerprint rather than by id. */
+internal fun isFingerprint(route: String): Boolean =
+    route.length == 9 && route.all { it in FINGERPRINT_LETTERS }
+
+/**
+ * Whether [info] is the person [route] asked for: their id, or the
+ * fingerprint derived from it. The answer is their server's, relayed, so it
+ * is the one place another identity could be named.
+ */
+internal fun answersFor(route: String, info: PersonInformation): Boolean =
+    info.id.isNotBlank() && (info.id == route || (isFingerprint(route) && fingerprintOf(info.id) == route))
+
+/**
  * Where the viewer stands with a person, read off the contacts response: a
  * friend, a contact who is not one, an invitation waiting either way, or a
- * stranger. [me] is the viewer's own identity.
+ * stranger. [me] is the viewer's own identity. For a server that predates
+ * `-/friends/standing`.
  */
 fun friendState(
     contacts: ContactsListResponse,
@@ -100,51 +141,70 @@ class PersonViewModel @Inject constructor(
 
     fun refresh() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
-            // The contacts are asked for beside the person, not after them: the
-            // person's information is a relay to their server when they live
-            // elsewhere, about half a second, and the contacts waited behind it
-            // on every person page. Best-effort, so a failed read of them still
-            // shows the person.
-            val contacts = async {
-                try {
-                    repository.listContacts()
-                } catch (e: CancellationException) {
-                    throw e
-                } catch (_: Exception) {
-                    null
-                }
-            }
+            _uiState.update { state -> state.copy(isLoading = true, error = null) }
+            // Where the viewer stands is asked for beside the person, not after
+            // them: the person's information is a relay to their server when
+            // they live elsewhere, about half a second. A page opened by
+            // fingerprint learns the id to ask with from the answer. Best-effort,
+            // so a failed read of it still shows the person.
+            val standing = if (isFingerprint(personId)) null else async { standingOrNull(personId) }
             try {
                 val info = repository.getPersonInformation(personId)
-                val state = friendStateOf(info.id, contacts.await())
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    info = info,
-                    friendState = state,
-                )
+                // The answer is relayed from the person's server, which could
+                // name someone else; the page is the person asked for or none.
+                if (!answersFor(personId, info)) {
+                    standing?.cancel()
+                    _uiState.update { state ->
+                        state.copy(isLoading = false, error = MochiError.Local(R.string.people_person_unavailable))
+                    }
+                    return@launch
+                }
+                val read = if (standing != null) standing.await() else standingOrNull(info.id)
+                val state = friendStateOf(info.id, read)
+                _uiState.update { current -> current.copy(isLoading = false, info = info, friendState = state) }
             } catch (e: Exception) {
-                contacts.cancel()
+                standing?.cancel()
                 if (e is CancellationException) throw e
-                _uiState.value = _uiState.value.copy(
-                    isLoading = false,
-                    error = e.toMochiError(),
-                )
+                _uiState.update { state -> state.copy(isLoading = false, error = e.toMochiError()) }
             }
         }
     }
 
-    /** Where the viewer stands with [personEntityId], from contacts already read, or null for a read that failed. */
-    private suspend fun friendStateOf(personEntityId: String, contacts: ContactsListResponse?): FriendState {
-        val me = sessionManager.getBoundIdentity()
-        if (me != null && me == personEntityId) return FriendState.Self
-        return if (contacts == null) FriendState.Unknown else friendState(contacts, personEntityId, me)
+    /** Where the viewer stands with [person], or null for a read that failed. */
+    private suspend fun standingOrNull(person: String): FriendState? = try {
+        resolveFriendState(person)
+    } catch (e: CancellationException) {
+        throw e
+    } catch (_: Exception) {
+        null
     }
 
+    /** Where the viewer stands with [personEntityId], or not known for a read that failed. */
+    private suspend fun friendStateOf(personEntityId: String, read: FriendState?): FriendState {
+        val me = sessionManager.getBoundIdentity()
+        if (me != null && me == personEntityId) return FriendState.Self
+        return read ?: FriendState.Unknown
+    }
+
+    /**
+     * Where the viewer stands with [personEntityId], asked for that person
+     * alone; a server that predates the question is read from the whole list.
+     */
     private suspend fun resolveFriendState(personEntityId: String): FriendState {
         val me = sessionManager.getBoundIdentity()
         if (me != null && me == personEntityId) return FriendState.Self
-        return friendState(repository.listContacts(), personEntityId, me)
+        val standing = try {
+            repository.getStanding(personEntityId)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (_: Exception) {
+            null
+        }
+        return if (standing != null) {
+            friendState(standing, personEntityId, me)
+        } else {
+            friendState(repository.listContacts(), personEntityId, me)
+        }
     }
 
     /** Saves the person as a contact, without inviting them. */

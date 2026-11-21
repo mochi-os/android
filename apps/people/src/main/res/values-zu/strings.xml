@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Abakho abantu abatholakele</string>
     <string name="people_friends_try_adjusting">Zama ukulungisa ukusesha kwakho</string>
     <string name="people_friends_pending">Kulindile</string>
-    <string name="people_friends_received_tab">Ifunyenwe</string>
-    <string name="people_friends_sent_tab">Ithunyelwe</string>
     <string name="people_invitations_incoming">Izimemo ezingenayo</string>
     <string name="people_invitations_empty">Azikho izimemo ezilindile</string>
     <string name="people_invitations_empty_hint">Izimemo ezintsha zizovela lapha</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Wamukele isimemo esivela ku-%1$s</string>
     <string name="people_invitations_toast_declined">Wenqabe isimemo esivela ku-%1$s</string>
     <string name="people_invitations_toast_cancelled">Ukhanselile isimemo esiya ku-%1$s</string>
-    <string name="people_groups_empty">Awekho amaqembu</string>
     <string name="people_group_delete_confirm">Susa iqembu elithi \"%1$s\"? Lokhu akunakuhlehliswa.</string>
     <string name="people_member_remove_confirm">Uqinisekile ufuna ukususa u-%1$s kuleli qembu?</string>
     <string name="people_member_remove_with_name">Susa u-%1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Ayikwazanga ukucubungula isithombe sika-%1$s</string>
     <string name="people_profile_accent_invalid">Faka umbala we-hex osebenzayo (isb. #a78bfa)</string>
     <string name="people_profile_accent_none">Lutho</string>
-    <string name="people_profile_privacy_private_desc">Abangani enibathandanayo kuphela abangabuka iphrofayela yakho</string>
     <string name="people_welcome_title">Siyakwamukela ku-Abantu</string>
     <string name="people_person_banner_alt">Ibhena ka-%1$s</string>
-    <string name="people_person_private">Le phrofayela iyimfihlo</string>
     <string name="people_person_state_invited">Umenyiwe</string>
 
     <string name="people_invitations_accept_all">Yamukela konke</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Thola abangane kuyo yonke i-Mochi bese uxhumana nabo. Thepha u-Engeza oxhumana naye ukuze uthumele isimemo.</string>
     <string name="people_person_state_contact">Koxhumana nabo</string>
-    <string name="people_device_create">Dala</string>
-    <string name="people_device_add">Engeza idivayisi</string>
-    <string name="people_device_username">Igama lomsebenzisi</string>
-    <string name="people_device_done">Kwenziwe</string>
-    <string name="people_device_used">Isetshenziswe okokugcina %1$s</string>
-    <string name="people_device_never">Akekho</string>
     <string name="people_sync_now">Vumelanisa manje</string>
-    <string name="people_device_title">Amadivayisi axhunyiwe</string>
-    <string name="people_device_name">Igama ledivayisi</string>
     <string name="people_device_address">I-URL yencwadi yamakheli</string>
-    <string name="people_device_password">Iphasiwedi</string>
-    <string name="people_device_copy">Kopisha %1$s</string>
-    <string name="people_device_warning">Londoloza le phasiwedi manje. Ayikwazi ukuboniswa futhi.</string>
-    <string name="people_device_empty">Awekho amadivayisi axhunyiwe.</string>
-    <string name="people_device_created">Kudaliwe %1$s</string>
-    <string name="people_device_delete">Susa idivayisi</string>
-    <string name="people_device_delete_title">Susa idivayisi?</string>
-    <string name="people_device_delete_message">Idivayisi ngeke isakwazi ukuvumelanisa oxhumana nabo noma amakhalenda.</string>
-    <string name="people_device_deleted">Idivayisi isusiwe</string>
     <string name="people_sync_title">Vumelanisa nale foni</string>
     <string name="people_sync_confirm">Ukususa othintwayo womngane ku-app ye-Abathintwayo yale foni kuphinde kuqede ubungane.</string>
     <string name="people_sync_enable">Vula</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Izilungiselelo</string>
     <string name="people_contacts_invitation_sent">Isimemo sithunyelwe</string>
     <string name="people_contact_keep">Gcina</string>
+    <string name="people_invitations_received_count">Ifunyenwe (%1$s)</string>
+    <string name="people_invitations_sent_count">Ithunyelwe (%1$s)</string>
+    <string name="people_contact_discard">Lahla izinguquko</string>
+    <string name="people_person_unavailable">Umuntu akatholakali</string>
 </resources>

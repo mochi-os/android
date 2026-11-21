@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ምንም ሰዎች አልተገኙም</string>
     <string name="people_friends_try_adjusting">ፍለጋዎን ማስተካከል ይሞክሩ</string>
     <string name="people_friends_pending">በመጠባበቅ ላይ</string>
-    <string name="people_friends_received_tab">ተቀብሏል</string>
-    <string name="people_friends_sent_tab">ተልኳል</string>
     <string name="people_invitations_incoming">የሚመጡ ግብዣዎች</string>
     <string name="people_invitations_empty">ምንም በመጠባበቅ ላይ ያሉ ግብዣዎች የሉም</string>
     <string name="people_invitations_empty_hint">አዲስ ግብዣዎች እዚህ ይታያሉ</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">ከ%1$s የመጣ ግብዣ ተቀብለዋል</string>
     <string name="people_invitations_toast_declined">ከ%1$s የመጣ ግብዣ ውድቅ አድርገዋል</string>
     <string name="people_invitations_toast_cancelled">ለ%1$s የተላከ ግብዣ ሰርዘዋል</string>
-    <string name="people_groups_empty">ምንም ቡድኖች የሉም</string>
     <string name="people_group_delete_confirm">ቡድን \"%1$s\" ይሰረዝ? ይህ መልሶ መመለስ አይቻልም።</string>
     <string name="people_member_remove_confirm">%1$sን ከዚህ ቡድን ማስወገድ ይፈልጋሉ?</string>
     <string name="people_member_remove_with_name">%1$sን አስወግድ</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">የ%1$s ምስልን ማስኬድ አልተቻለም</string>
     <string name="people_profile_accent_invalid">ትክክለኛ የሄክስ ቀለም ያስገቡ (ለምሳሌ #a78bfa)</string>
     <string name="people_profile_accent_none">ምንም</string>
-    <string name="people_profile_privacy_private_desc">የጋራ ጓደኞች ብቻ መገለጫዎን ማየት ይችላሉ</string>
     <string name="people_welcome_title">ወደ ሰዎች እንኳን በደህና መጡ</string>
     <string name="people_person_banner_alt">የ%1$s ሰንደቅ</string>
-    <string name="people_person_private">ይህ መገለጫ የግል ነው</string>
     <string name="people_person_state_invited">ተጋብዟል</string>
 
     <string name="people_invitations_accept_all">ሁሉንም ተቀበል</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">በMochi ላይ ጓደኞችን ያግኙ እና ይገናኙ። ግብዣ ለመላክ እውቂያ አክል የሚለውን ይንኩ።</string>
     <string name="people_person_state_contact">በእውቂያዎች ውስጥ</string>
-    <string name="people_device_create">ፍጠር</string>
-    <string name="people_device_add">መሳሪያ ያክሉ</string>
-    <string name="people_device_username">የተጠቃሚ ስም</string>
-    <string name="people_device_done">ተጠናቅቋል</string>
-    <string name="people_device_used">መጨረሻ የተጠቀመው %1$s</string>
-    <string name="people_device_never">በፍፁም</string>
     <string name="people_sync_now">አሁን ያመሳስሉ</string>
-    <string name="people_device_title">የተገናኙ መሳሪያዎች</string>
-    <string name="people_device_name">የመሳሪያ ስም</string>
     <string name="people_device_address">የአድራሻ ደብተር URL</string>
-    <string name="people_device_password">የይለፍ ቃል</string>
-    <string name="people_device_copy">%1$s ቅዳ</string>
-    <string name="people_device_warning">ይህን የይለፍ ቃል አሁን ያስቀምጡ። እንደገና ሊታይ አይችልም።</string>
-    <string name="people_device_empty">ምንም መሳሪያ አልተገናኘም።</string>
-    <string name="people_device_created">የተፈጠረ %1$s</string>
-    <string name="people_device_delete">መሳሪያ ሰርዝ</string>
-    <string name="people_device_delete_title">መሳሪያውን ይሰረዝ?</string>
-    <string name="people_device_delete_message">መሳሪያው ከእንግዲህ እውቂያዎችን ወይም የቀን መቁጠሪያዎችን ማመሳሰል አይችልም።</string>
-    <string name="people_device_deleted">መሳሪያው ተሰርዟል</string>
     <string name="people_sync_title">ከዚህ ስልክ ጋር ማመሳሰል</string>
     <string name="people_sync_confirm">በዚህ ስልክ የእውቂያዎች መተግበሪያ ውስጥ የጓደኛን እውቂያ መሰረዝ ጓደኝነቱንም ያበቃል።</string>
     <string name="people_sync_enable">ያብሩ</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">ቅንብሮች</string>
     <string name="people_contacts_invitation_sent">ግብዣ ተልኳል</string>
     <string name="people_contact_keep">አቆይ</string>
+    <string name="people_invitations_received_count">ተቀብሏል (%1$s)</string>
+    <string name="people_invitations_sent_count">ተልኳል (%1$s)</string>
+    <string name="people_contact_discard">ለውጦችን ጣል</string>
+    <string name="people_person_unavailable">ሰውየው አይገኝም</string>
 </resources>

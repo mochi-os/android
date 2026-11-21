@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Δεν βρέθηκαν άτομα</string>
     <string name="people_friends_try_adjusting">Δοκιμάστε να προσαρμόσετε την αναζήτησή σας</string>
     <string name="people_friends_pending">Σε εκκρεμότητα</string>
-    <string name="people_friends_received_tab">Παραλήφθηκε</string>
-    <string name="people_friends_sent_tab">Στάλθηκε</string>
     <string name="people_invitations_incoming">Εισερχόμενες προσκλήσεις</string>
     <string name="people_invitations_empty">Καμία εκκρεμής πρόσκληση</string>
     <string name="people_invitations_empty_hint">Νέες προσκλήσεις θα εμφανίζονται εδώ</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Αποδεχθήκατε την πρόσκληση από τον/την %1$s</string>
     <string name="people_invitations_toast_declined">Απορρίψατε την πρόσκληση από τον/την %1$s</string>
     <string name="people_invitations_toast_cancelled">Ακυρώσατε την πρόσκληση προς τον/την %1$s</string>
-    <string name="people_groups_empty">Δεν υπάρχουν ομάδες</string>
     <string name="people_group_delete_confirm">Διαγραφή ομάδας \"%1$s\"; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
     <string name="people_member_remove_confirm">Είστε βέβαιοι ότι θέλετε να αφαιρέσετε τον/την %1$s από αυτή την ομάδα;</string>
     <string name="people_member_remove_with_name">Αφαίρεση %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Δεν ήταν δυνατή η επεξεργασία της εικόνας %1$s</string>
     <string name="people_profile_accent_invalid">Εισαγάγετε ένα έγκυρο δεκαεξαδικό χρώμα (π.χ. #a78bfa)</string>
     <string name="people_profile_accent_none">Κανένα</string>
-    <string name="people_profile_privacy_private_desc">Μόνο αμοιβαίοι φίλοι μπορούν να δουν το προφίλ σας</string>
     <string name="people_welcome_title">Καλώς ήρθατε στα Άτομα</string>
     <string name="people_person_banner_alt">Πανό για τον/την %1$s</string>
-    <string name="people_person_private">Αυτό το προφίλ είναι ιδιωτικό</string>
     <string name="people_person_state_invited">Προσκλήθηκε</string>
 
     <string name="people_invitations_accept_all">Αποδοχή όλων</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Βρείτε φίλους σε όλο το Mochi και συνδεθείτε. Πατήστε Προσθήκη επαφής για να στείλετε πρόσκληση.</string>
     <string name="people_person_state_contact">Στις επαφές</string>
-    <string name="people_device_create">Δημιουργία</string>
-    <string name="people_device_add">Προσθήκη συσκευής</string>
-    <string name="people_device_username">Όνομα χρήστη</string>
-    <string name="people_device_done">Ολοκληρώθηκε</string>
-    <string name="people_device_used">Τελευταία χρήση %1$s</string>
-    <string name="people_device_never">Ποτέ</string>
     <string name="people_sync_now">Συγχρονισμός τώρα</string>
-    <string name="people_device_title">Συνδεδεμένες συσκευές</string>
-    <string name="people_device_name">Όνομα συσκευής</string>
     <string name="people_device_address">URL βιβλίου διευθύνσεων</string>
-    <string name="people_device_password">Κωδικός πρόσβασης</string>
-    <string name="people_device_copy">Αντιγραφή %1$s</string>
-    <string name="people_device_warning">Αποθηκεύστε αυτόν τον κωδικό πρόσβασης τώρα. Δεν μπορεί να εμφανιστεί ξανά.</string>
-    <string name="people_device_empty">Δεν υπάρχουν συνδεδεμένες συσκευές.</string>
-    <string name="people_device_created">Δημιουργήθηκε %1$s</string>
-    <string name="people_device_delete">Διαγραφή συσκευής</string>
-    <string name="people_device_delete_title">Διαγραφή συσκευής;</string>
-    <string name="people_device_delete_message">Η συσκευή δεν θα μπορεί πλέον να συγχρονίζει επαφές ή ημερολόγια.</string>
-    <string name="people_device_deleted">Η συσκευή διαγράφηκε</string>
     <string name="people_sync_title">Συγχρονισμός με αυτό το τηλέφωνο</string>
     <string name="people_sync_confirm">Η διαγραφή της επαφής ενός φίλου στην εφαρμογή Επαφές αυτού του τηλεφώνου τερματίζει και τη φιλία.</string>
     <string name="people_sync_enable">Ενεργοποίηση</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Ρυθμίσεις</string>
     <string name="people_contacts_invitation_sent">Η πρόσκληση στάλθηκε</string>
     <string name="people_contact_keep">Διατήρηση</string>
+    <string name="people_invitations_received_count">Παραλήφθηκε (%1$s)</string>
+    <string name="people_invitations_sent_count">Στάλθηκε (%1$s)</string>
+    <string name="people_contact_discard">Απόρριψη αλλαγών</string>
+    <string name="people_person_unavailable">Το άτομο δεν είναι διαθέσιμο</string>
 </resources>

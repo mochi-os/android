@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Namoonni hin argamne</string>
     <string name="people_friends_try_adjusting">Barbaacha kee sirreessuu yaali</string>
     <string name="people_friends_pending">Eegaa jira</string>
-    <string name="people_friends_received_tab">Argame</string>
-    <string name="people_friends_sent_tab">Ergame</string>
     <string name="people_invitations_incoming">Affeerraawwan dhufan</string>
     <string name="people_invitations_empty">Affeerraan eegaa jiru hin jiru</string>
     <string name="people_invitations_empty_hint">Affeerraawwan haaraan asitti mul\'atu</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Affeerraan %1$s irraa fudhatame</string>
     <string name="people_invitations_toast_declined">Affeerraan %1$s irraa didame</string>
     <string name="people_invitations_toast_cancelled">Affeerraan %1$sf ergame haqame</string>
-    <string name="people_groups_empty">Garoolee hin jiran</string>
     <string name="people_group_delete_confirm">Garee \"%1$s\" haquu? Kun deebi\'uu hin danda\'u.</string>
     <string name="people_member_remove_confirm">Dhugumatti %1$s garee kana keessaa haquu barbaaddaa?</string>
     <string name="people_member_remove_with_name">%1$s haqi</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Suuraa %1$s adeemsisuun hin dandeenye</string>
     <string name="people_profile_accent_invalid">Bifa hex sirrii galchi (fkn #a78bfa)</string>
     <string name="people_profile_accent_none">Tokko illee</string>
-    <string name="people_profile_privacy_private_desc">Hiriyoonni walqixxee qofatu piroofaayilii kee ilaaluu danda\'u</string>
     <string name="people_welcome_title">Baga Namootatti Nagaan Dhuftan</string>
     <string name="people_person_banner_alt">Baanarii %1$s</string>
-    <string name="people_person_private">Piroofaayiliin kun dhuunfaadha</string>
     <string name="people_person_state_invited">Affeerameera</string>
 
     <string name="people_invitations_accept_all">Hunda fudhadhu</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi guutuu keessatti hiriyoota barbaadi walqunnami. Afeerraa erguuf Quunnamtii dabali tuqi.</string>
     <string name="people_person_state_contact">Quunnamtiiwwan keessa</string>
-    <string name="people_device_create">Uumi</string>
-    <string name="people_device_add">Meeshaa dabali</string>
-    <string name="people_device_username">Maqaa fayyadamaa</string>
-    <string name="people_device_done">Xumurame</string>
-    <string name="people_device_used">Yeroo dhumaa fayyadamame %1$s</string>
-    <string name="people_device_never">Gonkumaa</string>
     <string name="people_sync_now">Amma walsimsiisi</string>
-    <string name="people_device_title">Meeshaalee walqabsiifaman</string>
-    <string name="people_device_name">Maqaa meeshaa</string>
     <string name="people_device_address">URL kitaaba teessoo</string>
-    <string name="people_device_password">Jecha darbii</string>
-    <string name="people_device_copy">%1$s garagalchi</string>
-    <string name="people_device_warning">Jecha darbii kana amma olkaa\'i. Lammata mul\'achuu hin danda\'u.</string>
-    <string name="people_device_empty">Meeshaan walqabsiifame hin jiru.</string>
-    <string name="people_device_created">%1$s uumame</string>
-    <string name="people_device_delete">Meeshaa haqi</string>
-    <string name="people_device_delete_title">Meeshaa haquu?</string>
-    <string name="people_device_delete_message">Meeshaan kun kana booda qunnamtiiwwan ykn kaalaandaroota walsimsiisuu hin danda\'u.</string>
-    <string name="people_device_deleted">Meeshaan haqameera</string>
     <string name="people_sync_title">Bilbila kana waliin walsimsiisi</string>
     <string name="people_sync_confirm">Appii Quunnamtiiwwan bilbila kanaa keessatti quunnamtii hiriyaa tokkoo haquun hiriyummaas ni dhaabsa.</string>
     <string name="people_sync_enable">Dandeessisi</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Qindaa\'inoota</string>
     <string name="people_contacts_invitation_sent">Affeerraan ergame</string>
     <string name="people_contact_keep">Qabadhu</string>
+    <string name="people_invitations_received_count">Argame (%1$s)</string>
+    <string name="people_invitations_sent_count">Ergame (%1$s)</string>
+    <string name="people_contact_discard">Jijjiirama gati</string>
+    <string name="people_person_unavailable">Namni hin argamu</string>
 </resources>

@@ -44,17 +44,15 @@ import org.mochios.calendars.repository.CalendarsRepository
 import org.mochios.calendars.repository.EventChangedException
 import org.mochios.calendars.storage.VisibilityStore
 import org.mochios.calendars.ui.editor.EventForm
-import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.editor.advanced
-import org.mochios.calendars.ui.editor.alarmMinutes
-import org.mochios.calendars.ui.editor.alarms
 import org.mochios.calendars.ui.editor.components
 import org.mochios.calendars.ui.editor.defaultStart
 import org.mochios.calendars.ui.editor.draft
 import org.mochios.calendars.ui.editor.instant
 import org.mochios.calendars.ui.editor.matches
-import org.mochios.calendars.ui.editor.recurrence
+import org.mochios.calendars.ui.editor.named
+import org.mochios.calendars.ui.editor.original
 import org.mochios.calendars.ui.editor.split
 import org.mochios.calendars.ui.router.CALENDARS_FEATURE
 import org.mochios.calendars.ui.router.CalendarsSection
@@ -106,8 +104,6 @@ data class CalendarUiState(
     val isLoading: Boolean = true,
     val isRefreshing: Boolean = false,
     val error: MochiError? = null,
-    /** What the open occurrence's page shows beyond the range's listing, once loaded. */
-    val details: EventDetails? = null,
     /**
      * The anchor the list view's pages were last read around, null until
      * they have been, and while another view's range is held; while it
@@ -127,19 +123,6 @@ data class CalendarUiState(
 
 /** A list page that failed: why, and whether it was the next page or the one before. */
 data class Stalled(val error: MochiError, val forward: Boolean)
-
-/**
- * What an occurrence's page shows that the range's listing does not carry,
- * read from its whole event: its [reminders], in minutes before the start, and
- * the [recurrence] of its series. [event] and [occurrence] say which
- * occurrence it is for.
- */
-data class EventDetails(
-    val event: String = "",
-    val occurrence: Long = 0,
-    val reminders: List<Int> = emptyList(),
-    val recurrence: Recurrence = Recurrence(),
-)
 
 /**
  * The calendar's ICS address while its dialog is open. [url] is set once,
@@ -202,8 +185,6 @@ class CalendarViewModel @Inject constructor(
 
     /** True once the calendars and preferences have been read, so a range can be fetched. */
     private var ready = false
-
-    private var detailing: Job? = null
 
     /** Set while another screen, the editor most often, covers this one. */
     private var covered = false
@@ -762,38 +743,6 @@ class CalendarViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(listed = day)
     }
 
-    /**
-     * Reads [instance]'s whole event for its page: the reminders of the
-     * occurrence, an override's own when it has one, and the series' repeat
-     * rule. A read-only occurrence has no event to read, and one that fails
-     * to load leaves the page with what the listing says.
-     */
-    fun details(instance: Instance) {
-        detailing?.cancel()
-        _uiState.value = _uiState.value.copy(details = null)
-        if (!instance.editable) return
-        detailing = viewModelScope.launch {
-            val loaded = try {
-                repository.getEvent(instance.event)
-            } catch (e: kotlinx.coroutines.CancellationException) {
-                throw e
-            } catch (_: Exception) {
-                return@launch
-            }
-            val master = loaded.master()
-            val shown = loaded.overrides().firstOrNull { override -> matches(override, instance.occurrence) }
-                ?: master
-                ?: return@launch
-            val details = EventDetails(
-                event = instance.event,
-                occurrence = instance.occurrence,
-                reminders = alarms(shown).mapNotNull(::alarmMinutes).distinct().sorted(),
-                recurrence = recurrence(master?.value("RRULE")),
-            )
-            _uiState.value = _uiState.value.copy(details = details)
-        }
-    }
-
     /** Chooses a day the view already shows, without moving the view. */
     fun focus(date: LocalDate) {
         if (date == _uiState.value.focus) return
@@ -988,7 +937,11 @@ class CalendarViewModel @Inject constructor(
             val event = repository.getEvent(instance.event)
             val master = event.master() ?: return
             val user = zone.id
-            val key = instance.occurrence
+            // The occurrence as the server lists it, an override's the one it
+            // replaces, and as the event's tree names it.
+            val moment = if (instance.moved) original(event.components, instance.start, user) else instance.occurrence
+            val key = named(event.components, moment, user)
+            val override = event.overrides().firstOrNull { matches(it, key, user) }
             val restore: suspend (String) -> Unit = { etag ->
                 repository.updateEvent(event.id, etag, null, event.components)
             }
@@ -1003,7 +956,7 @@ class CalendarViewModel @Inject constructor(
                     val (kept, following) = repository.splitEvent(
                         event.id,
                         event.etag,
-                        instance.start,
+                        moment,
                         halves.first,
                         halves.second,
                     )
@@ -1017,7 +970,6 @@ class CalendarViewModel @Inject constructor(
                 chosen = Scope.ALL
             }
 
-            val override = event.overrides().firstOrNull { matches(it, key) }
             val base = when {
                 chosen == Scope.ALL || !event.recurring -> draft(master, user)
                 override != null -> draft(override, user)

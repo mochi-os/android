@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ఆటను తిరిగి ప్రారంభించారు</string>
     <string name="game_not_found">ఆట కనుగొనబడలేదు</string>
     <string name="game_chat_move_played_you">మీరు %1$s ఆడారు</string>
+    <string name="devices_add">పరికరాన్ని జోడించండి</string>
+    <string name="devices_copy">%1$s కాపీ చేయండి</string>
+    <string name="devices_create">సృష్టించండి</string>
+    <string name="devices_created">సృష్టించబడింది %1$s</string>
+    <string name="devices_delete">పరికరాన్ని తొలగించండి</string>
+    <string name="devices_delete_message">పరికరం ఇకపై కాంటాక్ట్‌లను లేదా క్యాలెండర్‌లను సింక్ చేయలేదు.</string>
+    <string name="devices_delete_title">పరికరాన్ని తొలగించాలా?</string>
+    <string name="devices_deleted">పరికరం తొలగించబడింది</string>
+    <string name="devices_done">పూర్తయింది</string>
+    <string name="devices_empty">ఏ పరికరం కనెక్ట్ కాలేదు</string>
+    <string name="devices_name">పరికరం పేరు</string>
+    <string name="devices_password">పాస్‌వర్డ్</string>
+    <string name="devices_title">కనెక్ట్ చేసిన పరికరాలు</string>
+    <string name="devices_used">చివరిగా ఉపయోగించబడింది %1$s</string>
+    <string name="devices_username">వినియోగదారు పేరు</string>
+    <string name="devices_warning">పాస్‌వర్డ్‌ను ఇప్పుడే కాపీ చేయండి: ఇది మళ్లీ చూపబడదు.</string>
+    <string name="devices_unused">ఎప్పుడూ ఉపయోగించలేదు</string>
 </resources>

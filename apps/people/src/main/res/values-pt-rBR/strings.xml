@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Nenhuma pessoa encontrada</string>
     <string name="people_friends_try_adjusting">Tente ajustar sua pesquisa</string>
     <string name="people_friends_pending">Pendente</string>
-    <string name="people_friends_received_tab">Recebido</string>
-    <string name="people_friends_sent_tab">Enviado</string>
     <string name="people_invitations_incoming">Convites recebidos</string>
     <string name="people_invitations_empty">Nenhum convite pendente</string>
     <string name="people_invitations_empty_hint">Novos convites aparecerão aqui</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Convite de %1$s aceito</string>
     <string name="people_invitations_toast_declined">Convite de %1$s recusado</string>
     <string name="people_invitations_toast_cancelled">Convite para %1$s cancelado</string>
-    <string name="people_groups_empty">Nenhum grupo</string>
     <string name="people_group_delete_confirm">Excluir grupo \"%1$s\"? Esta ação não pode ser desfeita.</string>
     <string name="people_member_remove_confirm">Tem certeza de que deseja remover %1$s deste grupo?</string>
     <string name="people_member_remove_with_name">Remover %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Não foi possível processar a imagem %1$s</string>
     <string name="people_profile_accent_invalid">Insira uma cor hexadecimal válida (ex.: #a78bfa)</string>
     <string name="people_profile_accent_none">Nenhum</string>
-    <string name="people_profile_privacy_private_desc">Apenas amigos em comum podem ver seu perfil</string>
     <string name="people_welcome_title">Bem-vindo a Pessoas</string>
     <string name="people_person_banner_alt">Banner de %1$s</string>
-    <string name="people_person_private">Este perfil é privado</string>
     <string name="people_person_state_invited">Convidado</string>
 
     <string name="people_invitations_accept_all">Aceitar tudo</string>
@@ -140,23 +135,8 @@
     <string name="people_contact_phone">Telefone</string>
     <string name="people_contact_title">Cargo</string>
     <string name="people_contacts_title">Contatos</string>
-    <string name="people_device_create">Criar</string>
-    <string name="people_device_username">Nome de usuário</string>
-    <string name="people_device_done">Pronto</string>
-    <string name="people_device_used">Último uso em %1$s</string>
-    <string name="people_device_never">Nunca</string>
     <string name="people_sync_now">Sincronizar agora</string>
-    <string name="people_device_name">Nome do dispositivo</string>
     <string name="people_device_address">URL do catálogo de endereços</string>
-    <string name="people_device_password">Senha</string>
-    <string name="people_device_copy">Copiar %1$s</string>
-    <string name="people_device_warning">Salve esta senha agora. Ela não poderá ser exibida novamente.</string>
-    <string name="people_device_empty">Nenhum dispositivo conectado.</string>
-    <string name="people_device_created">Criado %1$s</string>
-    <string name="people_device_delete">Excluir dispositivo</string>
-    <string name="people_device_delete_title">Excluir o dispositivo?</string>
-    <string name="people_device_delete_message">O dispositivo não poderá mais sincronizar contatos nem calendários.</string>
-    <string name="people_device_deleted">Dispositivo excluído</string>
     <string name="people_sync_title">Sincronizar com este celular</string>
     <string name="people_contact_friend">Amigo no Mochi</string>
     <string name="people_contact_birthday_day">Dia</string>
@@ -175,4 +155,8 @@
     <string name="people_profile_settings">Configurações</string>
     <string name="people_contacts_invitation_sent">Convite enviado</string>
     <string name="people_contact_keep">Manter</string>
+    <string name="people_invitations_received_count">Recebido (%1$s)</string>
+    <string name="people_invitations_sent_count">Enviado (%1$s)</string>
+    <string name="people_contact_discard">Descartar alterações</string>
+    <string name="people_person_unavailable">Pessoa indisponível</string>
 </resources>

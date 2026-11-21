@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s neruskeun kaulinan</string>
     <string name="game_not_found">Kaulinan teu kapendak</string>
     <string name="game_chat_move_played_you">Anjeun maén %1$s</string>
+    <string name="devices_add">Tambah pakakas</string>
+    <string name="devices_copy">Salin %1$s</string>
+    <string name="devices_create">Jieun</string>
+    <string name="devices_created">Dijieun %1$s</string>
+    <string name="devices_delete">Hapus pakakas</string>
+    <string name="devices_delete_message">Pakakas moal bisa nyingkronkeun kontak atawa kalénder deui.</string>
+    <string name="devices_delete_title">Hapus pakakas?</string>
+    <string name="devices_deleted">Pakakas geus dihapus</string>
+    <string name="devices_done">Beres</string>
+    <string name="devices_empty">Teu aya alat nu nyambung</string>
+    <string name="devices_name">Ngaran pakakas</string>
+    <string name="devices_password">Kecap sandi</string>
+    <string name="devices_title">Alat nu nyambung</string>
+    <string name="devices_used">Pamungkas dipake %1$s</string>
+    <string name="devices_username">Ngaran pamaké</string>
+    <string name="devices_warning">Salin kecap konci ayeuna: moal dipidangkeun deui.</string>
+    <string name="devices_unused">Can kungsi dipake</string>
 </resources>

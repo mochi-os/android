@@ -179,13 +179,26 @@ class CalendarFlowTest {
 
     private fun ok(data: String) = MockResponse().setBody("""{"data": $data}""")
 
-    private fun stored() = """{"event": {"id": "e1", "calendar": "$holding", "etag": "v$version", "components": [
+    private fun stored() = """{"event": {"id": "e1", "calendar": "$holding", "etag": "v$version", "recurring": $weekly, "components": [
         {"name": "VEVENT", "properties": [
             {"name": "UID", "params": {}, "value": "uid-1"},
             {"name": "SUMMARY", "params": {}, "value": "Stand-up"},
-            ${if (whole) DAY else TIMED}
-        ], "components": []}
+            ${if (whole) DAY else TIMED}${if (weekly) WEEKLY else ""}
+        ], "components": []}${if (weekly) LATE else ""}
     ]}}"""
+
+    /** Whether the stored event repeats weekly, with the 12th's occurrence moved to Tuesday the 13th at 14:00. */
+    @Volatile private var weekly = false
+
+    private val WEEKLY = """, {"name": "RRULE", "params": {}, "value": "FREQ=WEEKLY"}"""
+
+    private val LATE = """, {"name": "VEVENT", "properties": [
+            {"name": "UID", "params": {}, "value": "uid-1"},
+            {"name": "SUMMARY", "params": {}, "value": "Late"},
+            {"name": "RECURRENCE-ID", "params": {}, "value": "20261012T090000Z"},
+            {"name": "DTSTART", "params": {}, "value": "20261013T130000Z"},
+            {"name": "DTEND", "params": {}, "value": "20261013T140000Z"}
+        ], "components": []}"""
 
     private val TIMED = """{"name": "DTSTART", "params": {}, "value": "20261005T090000Z"},
             {"name": "DTEND", "params": {}, "value": "20261005T100000Z"}"""
@@ -536,6 +549,38 @@ class CalendarFlowTest {
         until { said.count { it is CalendarEvent.Moved || it is CalendarEvent.Changed } == 2 }
         assertEquals(listOf(CalendarEvent.Moved, CalendarEvent.Moved), said.filter { it is CalendarEvent.Moved || it is CalendarEvent.Changed })
         assertEquals(3, version)
+    }
+
+    /**
+     * A drag of an occurrence "This event" moved before moves its override
+     * again, found by the occurrence it replaces, rather than adding another.
+     * A core that does not name that occurrence lists the override only where
+     * it now falls, and the override is found by its start.
+     */
+    @Test
+    fun `a moved occurrence dragged again with this event moves its own override`() {
+        for (replaced in listOf<Long?>(1_791_795_600, null)) {
+            weekly = true
+            written = ""
+            val model = model()
+            val said = mutableListOf<CalendarEvent>()
+            val scope = CoroutineScope(Dispatchers.Main.immediate)
+            scope.launch { model.events.collect { said += it } }
+            scopes += scope
+            // Listed at its own start, Tuesday 13 October 14:00 London.
+            val late = LocalDate.of(2026, 10, 13).atTime(14, 0).atZone(london).toEpochSecond()
+            val instance = org.mochios.calendars.model.Instance(
+                event = "e1", calendar = "c1", start = late, finish = late + 3_600,
+                recurring = true, exception = true, replaced = replaced,
+            )
+            model.move(instance, late + 3_600, late + 7_200, org.mochios.calendars.ui.editor.Scope.ONE)
+            until { said.isNotEmpty() }
+            assertEquals(CalendarEvent.Moved, said.single())
+            assertEquals(written, 1, Regex("RECURRENCE-ID").findAll(written).count())
+            assertTrue(written, written.contains("\"value\":\"Late\""))
+            assertTrue(written, written.contains("\"value\":\"20261012T100000\""))
+            assertTrue(written, written.contains("\"value\":\"20261013T150000\""))
+        }
     }
 
     @Test

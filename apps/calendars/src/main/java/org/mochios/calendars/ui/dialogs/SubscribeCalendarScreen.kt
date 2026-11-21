@@ -575,6 +575,9 @@ fun SubscribeCalendarScreen(
         }
     }
 
+    // The app asking is always this one, which the server names by its id,
+    // a long entity id on an install from the publisher: it is named here by
+    // its own title.
     uiState.permission?.let { pending ->
         MochiAlertDialog(
             onDismissRequest = viewModel::deny,
@@ -586,7 +589,7 @@ fun SubscribeCalendarScreen(
             content = {
                 Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text(
-                        text = stringResource(R.string.calendars_permission_message, pending.app),
+                        text = stringResource(R.string.calendars_permission_message, stringResource(R.string.calendars_drawer_title)),
                         style = MaterialTheme.typography.bodyMedium,
                     )
                     Text(

@@ -357,4 +357,21 @@
     <string name="game_system_score_resume">%1$s pokračoval v hre</string>
     <string name="game_not_found">Hra sa nenašla</string>
     <string name="game_chat_move_played_you">Hrali ste %1$s</string>
+    <string name="devices_add">Pridať zariadenie</string>
+    <string name="devices_copy">Kopírovať %1$s</string>
+    <string name="devices_create">Vytvoriť</string>
+    <string name="devices_created">Vytvorené %1$s</string>
+    <string name="devices_delete">Odstrániť zariadenie</string>
+    <string name="devices_delete_message">Zariadenie už nebude môcť synchronizovať kontakty ani kalendáre.</string>
+    <string name="devices_delete_title">Odstrániť zariadenie?</string>
+    <string name="devices_deleted">Zariadenie bolo odstránené</string>
+    <string name="devices_done">Hotovo</string>
+    <string name="devices_empty">Žiadne pripojené zariadenia</string>
+    <string name="devices_name">Názov zariadenia</string>
+    <string name="devices_password">Heslo</string>
+    <string name="devices_title">Pripojené zariadenia</string>
+    <string name="devices_used">Naposledy použité %1$s</string>
+    <string name="devices_username">Používateľské meno</string>
+    <string name="devices_warning">Skopírujte heslo teraz: už sa nezobrazí.</string>
+    <string name="devices_unused">Nikdy nepoužité</string>
 </resources>

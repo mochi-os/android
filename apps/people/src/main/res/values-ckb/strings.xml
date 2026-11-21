@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">هیچ کەسێک نەدۆزرایەوە</string>
     <string name="people_friends_try_adjusting">هەوڵبدە گەڕانەکەت ڕێکبخەیت</string>
     <string name="people_friends_pending">چاوەڕوان</string>
-    <string name="people_friends_received_tab">وەرگیراو</string>
-    <string name="people_friends_sent_tab">نێردرا</string>
     <string name="people_invitations_incoming">بانگهێشتە هاتووەکان</string>
     <string name="people_invitations_empty">هیچ بانگهێشتێکی چاوەڕوان نییە</string>
     <string name="people_invitations_empty_hint">بانگهێشتە نوێیەکان لێرە دەردەکەون</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">بانگهێشتنامەی %1$s قبووڵ کرا</string>
     <string name="people_invitations_toast_declined">بانگهێشتنامەی %1$s ڕەتکرایەوە</string>
     <string name="people_invitations_toast_cancelled">بانگهێشتنامەی نێردراو بۆ %1$s پاشگەزبۆوە</string>
-    <string name="people_groups_empty">هیچ گروپێک نییە</string>
     <string name="people_group_delete_confirm">گروپی \"%1$s\" بسڕیتەوە؟ ئەمە ناتوانرێت بگەڕێنرێتەوە.</string>
     <string name="people_member_remove_confirm">دڵنیایت لە لابردنی %1$s لەم گروپە؟</string>
     <string name="people_member_remove_with_name">لابردنی %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">نەتوانرا وێنەی %1$s پرۆسێس بکرێت</string>
     <string name="people_profile_accent_invalid">ڕەنگێکی هێکسی دروست بنووسە (بۆ نموونە #a78bfa)</string>
     <string name="people_profile_accent_none">هیچ</string>
-    <string name="people_profile_privacy_private_desc">تەنها هاوڕێ هاوبەشەکان دەتوانن پرۆفایلەکەت ببینن</string>
     <string name="people_welcome_title">بەخێربێیت بۆ خەڵک</string>
     <string name="people_person_banner_alt">بانەری %1$s</string>
-    <string name="people_person_private">ئەم پرۆفایلە تایبەتە</string>
     <string name="people_person_state_invited">بانگهێشتکراو</string>
 
     <string name="people_invitations_accept_all">هەمووی قبوڵ بکە</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">لە Mochi هاوڕێ بدۆزەرەوە و پەیوەندی بکە. بۆ ناردنی بانگهێشت دەست بنێ بە زیادکردنی پەیوەندی.</string>
     <string name="people_person_state_contact">لە پەیوەندییەکاندا</string>
-    <string name="people_device_create">دروستکردن</string>
-    <string name="people_device_add">زیادکردنی ئامێر</string>
-    <string name="people_device_username">ناوی بەکارهێنەر</string>
-    <string name="people_device_done">تەواوبوو</string>
-    <string name="people_device_used">کۆتا بەکارھێنان %1$s</string>
-    <string name="people_device_never">هەرگیز</string>
     <string name="people_sync_now">ئێستا هاوکاتبکە</string>
-    <string name="people_device_title">ئامێرە پەیوەستکراوەکان</string>
-    <string name="people_device_name">ناوی ئامێر</string>
     <string name="people_device_address">URLی دەفتەری ناونیشان</string>
-    <string name="people_device_password">وشەی نهێنی</string>
-    <string name="people_device_copy">کۆپیکردنی %1$s</string>
-    <string name="people_device_warning">ئەم وشەی نهێنییە ئێستا پاشەکەوت بکە. دووبارە پیشان نادرێتەوە.</string>
-    <string name="people_device_empty">هیچ ئامێرێک نەبەستراوەتەوە.</string>
-    <string name="people_device_created">دروستکرا %1$s</string>
-    <string name="people_device_delete">سڕینەوەی ئامێر</string>
-    <string name="people_device_delete_title">ئامێرەکە بسڕدرێتەوە؟</string>
-    <string name="people_device_delete_message">ئامێرەکە چیتر ناتوانێت پەیوەندییەکان یان ڕۆژژمێرەکان هاوکات بکات.</string>
-    <string name="people_device_deleted">ئامێرەکە سڕایەوە</string>
     <string name="people_sync_title">هاوکاتکردن لەگەڵ ئەم مۆبایلە</string>
     <string name="people_sync_confirm">سڕینەوەی پەیوەندیی هاوڕێیەک لە ئەپی پەیوەندییەکانی ئەم مۆبایلە، هاوڕێیەتییەکەش کۆتایی پێدەهێنێت.</string>
     <string name="people_sync_enable">چالاککردن</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">ڕێکخستنەکان</string>
     <string name="people_contacts_invitation_sent">بانگهێشت نێردرا</string>
     <string name="people_contact_keep">هێشتنەوە</string>
+    <string name="people_invitations_received_count">وەرگیراو (%1$s)</string>
+    <string name="people_invitations_sent_count">نێردرا (%1$s)</string>
+    <string name="people_contact_discard">گۆڕانکارییەکان فڕێبدە</string>
+    <string name="people_person_unavailable">کەسەکە بەردەست نییە</string>
 </resources>

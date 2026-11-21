@@ -110,7 +110,6 @@ internal fun PublishingSection(viewModel: PublishingViewModel, onOpenLink: (Stri
     val waitingPermission by viewModel.waitingPermission.collectAsState()
     waitingPermission?.let { pending ->
         PermissionRequestDialog(
-            appId = pending.app,
             permissionName = pending.name,
             onAllow = { viewModel.allowWaitingPermission() },
             onDeny = { viewModel.denyWaitingPermission() },

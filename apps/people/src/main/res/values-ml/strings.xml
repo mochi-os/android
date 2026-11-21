@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ആളുകളെ കണ്ടെത്തിയില്ല</string>
     <string name="people_friends_try_adjusting">നിങ്ങളുടെ തിരച്ചിൽ ക്രമീകരിക്കാൻ ശ്രമിക്കുക</string>
     <string name="people_friends_pending">തീർപ്പുകൽപ്പിക്കാത്തത്</string>
-    <string name="people_friends_received_tab">ലഭിച്ചു</string>
-    <string name="people_friends_sent_tab">അയച്ചു</string>
     <string name="people_invitations_incoming">ഇൻകമിംഗ് ക്ഷണങ്ങൾ</string>
     <string name="people_invitations_empty">തീർപ്പുകൽപ്പിക്കാത്ത ക്ഷണങ്ങളൊന്നുമില്ല</string>
     <string name="people_invitations_empty_hint">പുതിയ ക്ഷണങ്ങൾ ഇവിടെ ദൃശ്യമാകും</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s ൽ നിന്നുള്ള ക്ഷണം സ്വീകരിച്ചു</string>
     <string name="people_invitations_toast_declined">%1$s ൽ നിന്നുള്ള ക്ഷണം നിരസിച്ചു</string>
     <string name="people_invitations_toast_cancelled">%1$s ന് അയച്ച ക്ഷണം റദ്ദാക്കി</string>
-    <string name="people_groups_empty">ഗ്രൂപ്പുകൾ ഇല്ല</string>
     <string name="people_group_delete_confirm">\"%1$s\" ഗ്രൂപ്പ് ഇല്ലാതാക്കണോ? ഇത് പിന്നീട് പഴയപടിയാക്കാൻ കഴിയില്ല.</string>
     <string name="people_member_remove_confirm">%1$s നെ ഈ ഗ്രൂപ്പിൽ നിന്ന് നീക്കം ചെയ്യണമെന്ന് ഉറപ്പാണോ?</string>
     <string name="people_member_remove_with_name">%1$s നെ നീക്കം ചെയ്യുക</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s ചിത്രം പ്രോസസ് ചെയ്യാൻ കഴിഞ്ഞില്ല</string>
     <string name="people_profile_accent_invalid">സാധുവായ ഹെക്സ് നിറം നൽകുക (ഉദാ. #a78bfa)</string>
     <string name="people_profile_accent_none">ഒന്നുമില്ല</string>
-    <string name="people_profile_privacy_private_desc">പരസ്പര സുഹൃത്തുക്കൾക്ക് മാത്രമേ നിങ്ങളുടെ പ്രൊഫൈൽ കാണാൻ കഴിയൂ</string>
     <string name="people_welcome_title">ആളുകളിലേക്ക് സ്വാഗതം</string>
     <string name="people_person_banner_alt">%1$s ന്റെ ബാനർ</string>
-    <string name="people_person_private">ഈ പ്രൊഫൈൽ സ്വകാര്യമാണ്</string>
     <string name="people_person_state_invited">ക്ഷണിച്ചു</string>
 
     <string name="people_invitations_accept_all">എല്ലാം സ്വീകരിക്കുക</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi യിലുടനീളം സുഹൃത്തുക്കളെ കണ്ടെത്തി ബന്ധപ്പെടുക. ക്ഷണം അയയ്ക്കാൻ കോൺടാക്റ്റ് ചേർക്കുക അമർത്തുക.</string>
     <string name="people_person_state_contact">കോൺടാക്റ്റുകളിൽ</string>
-    <string name="people_device_create">സൃഷ്ടിക്കുക</string>
-    <string name="people_device_add">ഒരു ഡിവൈസ് ചേർക്കുക</string>
-    <string name="people_device_username">ഉപയോക്തൃനാമം</string>
-    <string name="people_device_done">പൂർത്തിയായി</string>
-    <string name="people_device_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
-    <string name="people_device_never">ഒരിക്കലുമില്ല</string>
     <string name="people_sync_now">ഇപ്പോൾ സിങ്ക് ചെയ്യുക</string>
-    <string name="people_device_title">ബന്ധിപ്പിച്ച ഡിവൈസുകൾ</string>
-    <string name="people_device_name">ഡിവൈസിന്റെ പേര്</string>
     <string name="people_device_address">വിലാസപ്പുസ്തകത്തിന്റെ URL</string>
-    <string name="people_device_password">പാസ്‌വേഡ്</string>
-    <string name="people_device_copy">%1$s പകർത്തുക</string>
-    <string name="people_device_warning">ഈ പാസ്‌വേഡ് ഇപ്പോൾ തന്നെ സംരക്ഷിക്കുക. ഇത് വീണ്ടും കാണിക്കാനാകില്ല.</string>
-    <string name="people_device_empty">ഡിവൈസുകളൊന്നും ബന്ധിപ്പിച്ചിട്ടില്ല.</string>
-    <string name="people_device_created">സൃഷ്ടിച്ചത് %1$s</string>
-    <string name="people_device_delete">ഡിവൈസ് ഇല്ലാതാക്കുക</string>
-    <string name="people_device_delete_title">ഡിവൈസ് ഇല്ലാതാക്കണോ?</string>
-    <string name="people_device_delete_message">ഡിവൈസിന് ഇനി കോൺടാക്റ്റുകളോ കലണ്ടറുകളോ സമന്വയിപ്പിക്കാനാകില്ല.</string>
-    <string name="people_device_deleted">ഡിവൈസ് ഇല്ലാതാക്കി</string>
     <string name="people_sync_title">ഈ ഫോണിലേക്ക് സിങ്ക് ചെയ്യുക</string>
     <string name="people_sync_confirm">ഈ ഫോണിലെ കോൺടാക്റ്റുകൾ ആപ്പിൽ ഒരു സുഹൃത്തിന്റെ കോൺടാക്റ്റ് ഇല്ലാതാക്കിയാൽ സൗഹൃദവും അവസാനിക്കും.</string>
     <string name="people_sync_enable">ഓണാക്കുക</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">ക്രമീകരണങ്ങൾ</string>
     <string name="people_contacts_invitation_sent">ക്ഷണം അയച്ചു</string>
     <string name="people_contact_keep">നിലനിർത്തുക</string>
+    <string name="people_invitations_received_count">ലഭിച്ചു (%1$s)</string>
+    <string name="people_invitations_sent_count">അയച്ചു (%1$s)</string>
+    <string name="people_contact_discard">മാറ്റങ്ങൾ ഉപേക്ഷിക്കുക</string>
+    <string name="people_person_unavailable">വ്യക്തി ലഭ്യമല്ല</string>
 </resources>

@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Babu mutane da aka samu</string>
     <string name="people_friends_try_adjusting">Gwada gyara binciken ku</string>
     <string name="people_friends_pending">Jiran</string>
-    <string name="people_friends_received_tab">An karɓa</string>
-    <string name="people_friends_sent_tab">An aika</string>
     <string name="people_invitations_incoming">Gayyata masu shigowa</string>
     <string name="people_invitations_empty">Babu gayyace-gayyace masu jiran tabbatarwa</string>
     <string name="people_invitations_empty_hint">Sabbin gayyace-gayyace za su bayyana a nan</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">An karɓi gayyata daga %1$s</string>
     <string name="people_invitations_toast_declined">An ƙi gayyata daga %1$s</string>
     <string name="people_invitations_toast_cancelled">An soke gayyata zuwa ga %1$s</string>
-    <string name="people_groups_empty">Babu ƙungiyoyi</string>
     <string name="people_group_delete_confirm">Goge ƙungiyar \"%1$s\"? Ba za a iya soke wannan ba.</string>
     <string name="people_member_remove_confirm">Ka tabbata kana son cire %1$s daga wannan ƙungiyar?</string>
     <string name="people_member_remove_with_name">Cire %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">An kasa sarrafa hoton %1$s</string>
     <string name="people_profile_accent_invalid">Shigar da ingantaccen launi na hex (misali #a78bfa)</string>
     <string name="people_profile_accent_none">Babu</string>
-    <string name="people_profile_privacy_private_desc">Abokan juna kawai za su iya kallon martabarka</string>
     <string name="people_welcome_title">Barka da zuwa Mutane</string>
     <string name="people_person_banner_alt">Tutar %1$s</string>
-    <string name="people_person_private">Wannan martabar tana sirri ce</string>
     <string name="people_person_state_invited">An gayyata</string>
 
     <string name="people_invitations_accept_all">Karɓi duka</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Nemo abokai a duk faɗin Mochi ka haɗu da su. Danna Ƙara lamba don aika gayyata.</string>
     <string name="people_person_state_contact">Cikin lambobin sadarwa</string>
-    <string name="people_device_create">Ƙirƙira</string>
-    <string name="people_device_add">Ƙara na\'ura</string>
-    <string name="people_device_username">Sunan mai amfani</string>
-    <string name="people_device_done">An gama</string>
-    <string name="people_device_used">Amfani na ƙarshe %1$s</string>
-    <string name="people_device_never">Babu lokaci</string>
     <string name="people_sync_now">Daidaita yanzu</string>
-    <string name="people_device_title">Na\'urorin da aka haɗa</string>
-    <string name="people_device_name">Sunan na\'ura</string>
     <string name="people_device_address">URL na littafin adireshi</string>
-    <string name="people_device_password">Kalmar sirri</string>
-    <string name="people_device_copy">Kwafi %1$s</string>
-    <string name="people_device_warning">Ajiye wannan kalmar sirri yanzu. Ba za a sake nuna ta ba.</string>
-    <string name="people_device_empty">Babu na\'urar da aka haɗa.</string>
-    <string name="people_device_created">An ƙirƙira %1$s</string>
-    <string name="people_device_delete">Goge na\'ura</string>
-    <string name="people_device_delete_title">Goge na\'urar?</string>
-    <string name="people_device_delete_message">Na\'urar ba za ta ƙara iya daidaita lambobin sadarwa ko kalandoci ba.</string>
-    <string name="people_device_deleted">An goge na\'urar</string>
     <string name="people_sync_title">Daidaita da wannan wayar</string>
     <string name="people_sync_confirm">Share lambar sadarwar aboki a manhajar Lambobin sadarwa ta wannan wayar zai kuma kawo ƙarshen abotar.</string>
     <string name="people_sync_enable">Kunna</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Saitunan</string>
     <string name="people_contacts_invitation_sent">An aika gayyata</string>
     <string name="people_contact_keep">Ajiye</string>
+    <string name="people_invitations_received_count">An karɓa (%1$s)</string>
+    <string name="people_invitations_sent_count">An aika (%1$s)</string>
+    <string name="people_contact_discard">Watsar da canje-canje</string>
+    <string name="people_person_unavailable">Mutumin ba ya samuwa</string>
 </resources>

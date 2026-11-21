@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ڪو ماڻهو نه مليو</string>
     <string name="people_friends_try_adjusting">پنھنجي ڳولا کي ترتيب ڏيڻ جي ڪوشش ڪريو</string>
     <string name="people_friends_pending">زير التوا</string>
-    <string name="people_friends_received_tab">وصول ٿيو</string>
-    <string name="people_friends_sent_tab">موڪليل</string>
     <string name="people_invitations_incoming">ايندڙ دعوتون</string>
     <string name="people_invitations_empty">ڪا التوا ۾ دعوت نه آهي</string>
     <string name="people_invitations_empty_hint">نيون دعوتون هتي ظاهر ٿينديون</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s کان دعوت قبول ڪئي وئي</string>
     <string name="people_invitations_toast_declined">%1$s کان دعوت رد ڪئي وئي</string>
     <string name="people_invitations_toast_cancelled">%1$s ڏانهن دعوت منسوخ ڪئي وئي</string>
-    <string name="people_groups_empty">ڪو گروپ ڪونهي</string>
     <string name="people_group_delete_confirm">گروپ \"%1$s\" ڊاهيو؟ هي واپس نه ٿو ڪري سگهجي.</string>
     <string name="people_member_remove_confirm">ڇا توهان واقعي %1$s کي هن گروپ مان هٽائڻ چاهيو ٿا؟</string>
     <string name="people_member_remove_with_name">%1$s کي هٽايو</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s تصوير تي عمل نه ٿي سگهيو</string>
     <string name="people_profile_accent_invalid">صحيح هيڪس رنگ داخل ڪريو (مثال طور #a78bfa)</string>
     <string name="people_profile_accent_none">ڪا به نه</string>
-    <string name="people_profile_privacy_private_desc">صرف باهمي دوست توهان جو پروفائل ڏسي سگهن ٿا</string>
     <string name="people_welcome_title">ماڻهو ايپ ۾ ڀليڪار</string>
     <string name="people_person_banner_alt">%1$s لاءِ بينر</string>
-    <string name="people_person_private">هي پروفائل نجي آهي</string>
     <string name="people_person_state_invited">دعوت ڏنل</string>
 
     <string name="people_invitations_accept_all">سڀ قبول ڪريو</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi ۾ دوست ڳوليو ۽ ڳنڍجو. دعوت موڪلڻ لاءِ رابطو شامل ڪريو تي ٽيپ ڪريو.</string>
     <string name="people_person_state_contact">رابطن ۾</string>
-    <string name="people_device_create">ٺاهيو</string>
-    <string name="people_device_add">ڊوائيس شامل ڪريو</string>
-    <string name="people_device_username">صارف نالو</string>
-    <string name="people_device_done">مڪمل</string>
-    <string name="people_device_used">آخري استعمال %1$s</string>
-    <string name="people_device_never">ڪڏهن به نه</string>
     <string name="people_sync_now">هاڻي سنڪ ڪريو</string>
-    <string name="people_device_title">ڳنڍيل ڊوائيس</string>
-    <string name="people_device_name">ڊوائيس جو نالو</string>
     <string name="people_device_address">ايڊريس بڪ جو URL</string>
-    <string name="people_device_password">پاسورڊ</string>
-    <string name="people_device_copy">%1$s ڪاپي ڪريو</string>
-    <string name="people_device_warning">هي پاسورڊ هاڻي محفوظ ڪريو. اهو ٻيهر نه ڏيکاري سگهبو.</string>
-    <string name="people_device_empty">ڪا به ڊوائيس ڳنڍيل ناهي.</string>
-    <string name="people_device_created">ٺاهيو ويو %1$s</string>
-    <string name="people_device_delete">ڊوائيس ختم ڪريو</string>
-    <string name="people_device_delete_title">ڊوائيس ختم ڪريو؟</string>
-    <string name="people_device_delete_message">ڊوائيس هاڻي رابطن يا ڪئلينڊرن کي سنڪ نه ڪري سگهندي.</string>
-    <string name="people_device_deleted">ڊوائيس ختم ڪئي وئي</string>
     <string name="people_sync_title">هن فون سان سنڪ ڪريو</string>
     <string name="people_sync_confirm">هن فون جي رابطن واري ايپ ۾ ڪنهن دوست جو رابطو ڊاهڻ سان دوستي به ختم ٿي ويندي آهي.</string>
     <string name="people_sync_enable">چالو ڪريو</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">سيٽنگون</string>
     <string name="people_contacts_invitation_sent">دعوت موڪلي وئي</string>
     <string name="people_contact_keep">رکو</string>
+    <string name="people_invitations_received_count">وصول ٿيو (%1$s)</string>
+    <string name="people_invitations_sent_count">موڪليل (%1$s)</string>
+    <string name="people_contact_discard">تبديليون رد ڪريو</string>
+    <string name="people_person_unavailable">شخص دستياب نه آهي</string>
 </resources>

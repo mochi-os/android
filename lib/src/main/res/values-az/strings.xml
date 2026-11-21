@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s oyunu davam etdirdi</string>
     <string name="game_not_found">Oyun tapılmadı</string>
     <string name="game_chat_move_played_you">Siz %1$s oynadınız</string>
+    <string name="devices_add">Cihaz əlavə et</string>
+    <string name="devices_copy">%1$s kopyala</string>
+    <string name="devices_create">Yarat</string>
+    <string name="devices_created">%1$s yaradıldı</string>
+    <string name="devices_delete">Cihazı sil</string>
+    <string name="devices_delete_message">Cihaz artıq kontaktları və ya təqvimləri sinxronlaşdıra bilməyəcək.</string>
+    <string name="devices_delete_title">Cihaz silinsin?</string>
+    <string name="devices_deleted">Cihaz silindi</string>
+    <string name="devices_done">Hazırdır</string>
+    <string name="devices_empty">Heç bir cihaz qoşulmayıb</string>
+    <string name="devices_name">Cihaz adı</string>
+    <string name="devices_password">Şifrə</string>
+    <string name="devices_title">Qoşulmuş cihazlar</string>
+    <string name="devices_used">Son istifadə %1$s</string>
+    <string name="devices_username">İstifadəçi adı</string>
+    <string name="devices_warning">Şifrəni indi kopyalayın: bir daha göstərilə bilməz.</string>
+    <string name="devices_unused">Heç vaxt istifadə olunmayıb</string>
 </resources>

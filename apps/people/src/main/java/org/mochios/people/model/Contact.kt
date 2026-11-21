@@ -41,6 +41,11 @@ data class Contact(
      * each of the user's hosted XMPP accounts; only `-/contacts/get` sends it.
      */
     val xmpp: List<XmppContact> = emptyList(),
+    /**
+     * Whether the user's invitation to [person] is out; only `-/contacts/get`
+     * sends it, and null from a server that predates it.
+     */
+    val invited: Boolean? = null,
 )
 
 /** A messaging address ([address], as the card holds it) and the user's [account] that reaches it. */

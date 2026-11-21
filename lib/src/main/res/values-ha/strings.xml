@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ya ci gaba da wasa</string>
     <string name="game_not_found">Ba a sami wasan ba</string>
     <string name="game_chat_move_played_you">Ka yi %1$s</string>
+    <string name="devices_add">Ƙara na\'ura</string>
+    <string name="devices_copy">Kwafi %1$s</string>
+    <string name="devices_create">Ƙirƙira</string>
+    <string name="devices_created">An ƙirƙira %1$s</string>
+    <string name="devices_delete">Goge na\'ura</string>
+    <string name="devices_delete_message">Na\'urar ba za ta ƙara iya daidaita lambobin sadarwa ko kalandoci ba.</string>
+    <string name="devices_delete_title">Goge na\'urar?</string>
+    <string name="devices_deleted">An goge na\'urar</string>
+    <string name="devices_done">An gama</string>
+    <string name="devices_empty">Babu na\'urar da aka haɗa</string>
+    <string name="devices_name">Sunan na\'ura</string>
+    <string name="devices_password">Kalmar sirri</string>
+    <string name="devices_title">Na\'urorin da aka haɗa</string>
+    <string name="devices_used">Amfani na ƙarshe %1$s</string>
+    <string name="devices_username">Sunan mai amfani</string>
+    <string name="devices_warning">Kwafi kalmar sirri yanzu: ba za a sake nuna ta ba.</string>
+    <string name="devices_unused">Ba a taɓa amfani da shi ba</string>
 </resources>

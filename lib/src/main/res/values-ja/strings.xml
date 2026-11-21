@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$sが対局を再開しました</string>
     <string name="game_not_found">ゲームが見つかりません</string>
     <string name="game_chat_move_played_you">あなたが%1$sを指しました</string>
+    <string name="devices_add">デバイスを追加</string>
+    <string name="devices_copy">%1$sをコピー</string>
+    <string name="devices_create">作成</string>
+    <string name="devices_created">作成 %1$s</string>
+    <string name="devices_delete">デバイスを削除</string>
+    <string name="devices_delete_message">このデバイスは連絡先やカレンダーを同期できなくなります。</string>
+    <string name="devices_delete_title">デバイスを削除しますか？</string>
+    <string name="devices_deleted">デバイスを削除しました</string>
+    <string name="devices_done">完了</string>
+    <string name="devices_empty">接続されているデバイスはありません</string>
+    <string name="devices_name">デバイス名</string>
+    <string name="devices_password">パスワード</string>
+    <string name="devices_title">接続中のデバイス</string>
+    <string name="devices_used">最終使用 %1$s</string>
+    <string name="devices_username">ユーザー名</string>
+    <string name="devices_warning">今すぐパスワードをコピーしてください。再表示することはできません。</string>
+    <string name="devices_unused">未使用</string>
 </resources>

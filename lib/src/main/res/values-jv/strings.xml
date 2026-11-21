@@ -352,4 +352,21 @@
     <string name="game_system_score_resume">%1$s nerusake dolanan</string>
     <string name="game_not_found">Game ora ditemokaké</string>
     <string name="game_chat_move_played_you">Sampéyan main %1$s</string>
+    <string name="devices_add">Tambah piranti</string>
+    <string name="devices_copy">Salin %1$s</string>
+    <string name="devices_create">Gawé</string>
+    <string name="devices_created">Digawé %1$s</string>
+    <string name="devices_delete">Busak piranti</string>
+    <string name="devices_delete_message">Piranti ora bakal bisa nyelarasake kontak utawa kalender maneh.</string>
+    <string name="devices_delete_title">Busak piranti?</string>
+    <string name="devices_deleted">Piranti dibusak</string>
+    <string name="devices_done">Rampung</string>
+    <string name="devices_empty">Ora ana piranti sing kasambung</string>
+    <string name="devices_name">Jeneng piranti</string>
+    <string name="devices_password">Tembung sandhi</string>
+    <string name="devices_title">Piranti sing kasambung</string>
+    <string name="devices_used">Pungkasan dianggo %1$s</string>
+    <string name="devices_username">Jeneng panganggo</string>
+    <string name="devices_warning">Salin tembung sandhi saiki: ora bisa ditampilake manèh.</string>
+    <string name="devices_unused">Durung tau dianggo</string>
 </resources>

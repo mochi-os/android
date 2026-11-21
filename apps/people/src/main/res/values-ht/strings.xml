@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Pa gen moun ki jwenn</string>
     <string name="people_friends_try_adjusting">Eseye ajiste rechèch ou</string>
     <string name="people_friends_pending">Annatant</string>
-    <string name="people_friends_received_tab">Resevwa</string>
-    <string name="people_friends_sent_tab">Voye</string>
     <string name="people_invitations_incoming">Envitasyon ki rive</string>
     <string name="people_invitations_empty">Pa gen envitasyon annatant</string>
     <string name="people_invitations_empty_hint">Nouvo envitasyon yo ap parèt isit la</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Aksepte envitasyon %1$s</string>
     <string name="people_invitations_toast_declined">Refize envitasyon %1$s</string>
     <string name="people_invitations_toast_cancelled">Anile envitasyon bay %1$s</string>
-    <string name="people_groups_empty">Pa gen gwoup</string>
     <string name="people_group_delete_confirm">Efase gwoup \"%1$s\"? Sa pa ka defèt.</string>
     <string name="people_member_remove_confirm">Èske ou sèten ou vle retire %1$s nan gwoup sa a?</string>
     <string name="people_member_remove_with_name">Retire %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Pa t kapab trete imaj %1$s</string>
     <string name="people_profile_accent_invalid">Antre yon koulè eks valab (egzanp #a78bfa)</string>
     <string name="people_profile_accent_none">Okenn</string>
-    <string name="people_profile_privacy_private_desc">Sèlman zanmi mityèl ka gade pwofil ou</string>
     <string name="people_welcome_title">Byenvini nan Moun</string>
     <string name="people_person_banner_alt">Banyè pou %1$s</string>
-    <string name="people_person_private">Pwofil sa a prive</string>
     <string name="people_person_state_invited">Envite</string>
 
     <string name="people_invitations_accept_all">Aksepte tout</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Jwenn zanmi toupatou nan Mochi epi konekte. Peze Ajoute kontak pou voye yon envitasyon.</string>
     <string name="people_person_state_contact">Nan kontak</string>
-    <string name="people_device_create">Kreye</string>
-    <string name="people_device_add">Ajoute yon aparèy</string>
-    <string name="people_device_username">Non itilizatè</string>
-    <string name="people_device_done">Fini</string>
-    <string name="people_device_used">Dènye itilizasyon %1$s</string>
-    <string name="people_device_never">Janmen</string>
     <string name="people_sync_now">Sinkronize kounye a</string>
-    <string name="people_device_title">Aparèy konekte yo</string>
-    <string name="people_device_name">Non aparèy la</string>
     <string name="people_device_address">URL kanè adrès la</string>
-    <string name="people_device_password">Modpas</string>
-    <string name="people_device_copy">Kopye %1$s</string>
-    <string name="people_device_warning">Sove modpas sa a kounye a. Li pa ka parèt ankò.</string>
-    <string name="people_device_empty">Pa gen okenn aparèy konekte.</string>
-    <string name="people_device_created">Kreye %1$s</string>
-    <string name="people_device_delete">Efase aparèy</string>
-    <string name="people_device_delete_title">Efase aparèy la?</string>
-    <string name="people_device_delete_message">Aparèy la p ap ka senkronize kontak oswa kalandriye ankò.</string>
-    <string name="people_device_deleted">Aparèy la efase</string>
     <string name="people_sync_title">Senkronize ak telefòn sa a</string>
     <string name="people_sync_confirm">Si ou efase kontak yon zanmi nan aplikasyon Kontak telefòn sa a, zanmitay la ap fini tou.</string>
     <string name="people_sync_enable">Aktive</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Paramèt</string>
     <string name="people_contacts_invitation_sent">Envitasyon voye</string>
     <string name="people_contact_keep">Kenbe</string>
+    <string name="people_invitations_received_count">Resevwa (%1$s)</string>
+    <string name="people_invitations_sent_count">Voye (%1$s)</string>
+    <string name="people_contact_discard">Jete chanjman yo</string>
+    <string name="people_person_unavailable">Moun nan pa disponib</string>
 </resources>

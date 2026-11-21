@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">לא נמצאו אנשים</string>
     <string name="people_friends_try_adjusting">נסה להתאים את החיפוש שלך</string>
     <string name="people_friends_pending">ממתין</string>
-    <string name="people_friends_received_tab">התקבל</string>
-    <string name="people_friends_sent_tab">נשלח</string>
     <string name="people_invitations_incoming">הזמנות נכנסות</string>
     <string name="people_invitations_empty">אין הזמנות ממתינות</string>
     <string name="people_invitations_empty_hint">הזמנות חדשות יופיעו כאן</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">הזמנה מ-%1$s התקבלה</string>
     <string name="people_invitations_toast_declined">הזמנה מ-%1$s נדחתה</string>
     <string name="people_invitations_toast_cancelled">הזמנה אל %1$s בוטלה</string>
-    <string name="people_groups_empty">אין קבוצות</string>
     <string name="people_group_delete_confirm">למחוק את הקבוצה \"%1$s\"? לא ניתן לבטל זאת.</string>
     <string name="people_member_remove_confirm">האם אתה בטוח שברצונך להסיר את %1$s מקבוצה זו?</string>
     <string name="people_member_remove_with_name">הסר את %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">לא ניתן היה לעבד את תמונת %1$s</string>
     <string name="people_profile_accent_invalid">הזן צבע הקס תקין (לדוגמה ‎#a78bfa)</string>
     <string name="people_profile_accent_none">ללא</string>
-    <string name="people_profile_privacy_private_desc">רק חברים הדדיים יכולים לצפות בפרופיל שלך</string>
     <string name="people_welcome_title">ברוכים הבאים לאנשים</string>
     <string name="people_person_banner_alt">באנר עבור %1$s</string>
-    <string name="people_person_private">פרופיל זה פרטי</string>
     <string name="people_person_state_invited">הוזמן</string>
 
     <string name="people_invitations_accept_all">קבל הכול</string>
@@ -178,25 +173,8 @@
     </plurals>
     <string name="people_welcome_body">מצאו חברים בכל Mochi והתחברו אליהם. הקישו על הוספת איש קשר כדי לשלוח הזמנה.</string>
     <string name="people_person_state_contact">באנשי הקשר</string>
-    <string name="people_device_create">צור</string>
-    <string name="people_device_add">הוספת מכשיר</string>
-    <string name="people_device_username">שם משתמש</string>
-    <string name="people_device_done">בוצע</string>
-    <string name="people_device_used">שימוש אחרון %1$s</string>
-    <string name="people_device_never">אף פעם</string>
     <string name="people_sync_now">סנכרן עכשיו</string>
-    <string name="people_device_title">מכשירים מחוברים</string>
-    <string name="people_device_name">שם המכשיר</string>
     <string name="people_device_address">כתובת URL של פנקס הכתובות</string>
-    <string name="people_device_password">סיסמה</string>
-    <string name="people_device_copy">העתק %1$s</string>
-    <string name="people_device_warning">שמרו את הסיסמה הזו עכשיו. לא ניתן יהיה להציג אותה שוב.</string>
-    <string name="people_device_empty">אין מכשירים מחוברים.</string>
-    <string name="people_device_created">נוצר %1$s</string>
-    <string name="people_device_delete">מחיקת מכשיר</string>
-    <string name="people_device_delete_title">למחוק את המכשיר?</string>
-    <string name="people_device_delete_message">המכשיר לא יוכל עוד לסנכרן אנשי קשר או יומנים.</string>
-    <string name="people_device_deleted">המכשיר נמחק</string>
     <string name="people_sync_title">סנכרון עם הטלפון הזה</string>
     <string name="people_sync_confirm">מחיקת איש הקשר של חבר באפליקציית אנשי הקשר בטלפון הזה מסיימת גם את החברות.</string>
     <string name="people_sync_enable">הפעל</string>
@@ -228,4 +206,8 @@
     <string name="people_profile_settings">הגדרות</string>
     <string name="people_contacts_invitation_sent">ההזמנה נשלחה</string>
     <string name="people_contact_keep">השאר</string>
+    <string name="people_invitations_received_count">התקבל (%1$s)</string>
+    <string name="people_invitations_sent_count">נשלח (%1$s)</string>
+    <string name="people_contact_discard">מחיקת השינויים</string>
+    <string name="people_person_unavailable">האדם לא זמין</string>
 </resources>

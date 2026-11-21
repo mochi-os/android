@@ -24,7 +24,6 @@ import org.mochios.people.ui.devices.ConnectDeviceScreen
 import org.mochios.people.ui.groups.AddMemberScreen
 import org.mochios.people.ui.groups.CreateGroupScreen
 import org.mochios.people.ui.groups.GroupDetailScreen
-import org.mochios.people.ui.groups.GroupsScreen
 import org.mochios.people.ui.invitations.InvitationsScreen
 import org.mochios.people.ui.person.PersonViewScreen
 import org.mochios.people.ui.profile.ProfileScreen
@@ -44,7 +43,6 @@ object PeopleApp {
     const val BOOK = "people/books/{id}"
     const val INVITATIONS = "people/invitations"
     const val PROFILE = "people/profile"
-    const val GROUPS = "people/groups"
     const val GROUP_DETAIL = "people/groups/{id}"
     const val GROUP_CREATE = "people/groups/create"
     const val GROUP_ADD_MEMBER = "people/groups/{id}/add-member"
@@ -91,7 +89,6 @@ private fun NavController.openPeopleSection(section: PeopleSidebarSection) {
     val target = when (section) {
         PeopleSidebarSection.CONTACTS -> PeopleApp.contacts()
         PeopleSidebarSection.INVITATIONS -> PeopleApp.INVITATIONS
-        PeopleSidebarSection.GROUPS -> PeopleApp.GROUPS
         PeopleSidebarSection.PROFILE -> PeopleApp.PROFILE
     }
     navigateFromDrawer(target)
@@ -129,7 +126,6 @@ fun NavGraphBuilder.peopleNavGraph(
         PeopleRouter(onResolve = { section ->
             val target = when (section) {
                 PeopleSection.INVITATIONS -> PeopleApp.INVITATIONS
-                PeopleSection.GROUPS -> PeopleApp.GROUPS
                 PeopleSection.PROFILE -> PeopleApp.PROFILE
                 else -> PeopleApp.contacts()
             }
@@ -212,11 +208,6 @@ fun NavGraphBuilder.peopleNavGraph(
         ContactEditScreen(
             // Create goes back here too, to where the new one was started.
             onBack = { navController.popBackStack() },
-            onOpen = { id ->
-                navController.navigate(PeopleApp.contactEdit(id)) {
-                    popUpTo(PeopleApp.CONTACT_NEW) { inclusive = true }
-                }
-            },
             onDeleted = { navController.openContacts() },
         )
     }
@@ -262,6 +253,7 @@ fun NavGraphBuilder.peopleNavGraph(
     composable(PeopleApp.INVITATIONS) {
         InvitationsScreen(
             drawer = drawer,
+            onOpenNotifications = onOpenNotifications,
         )
     }
 
@@ -273,20 +265,11 @@ fun NavGraphBuilder.peopleNavGraph(
         )
     }
 
-    composable(PeopleApp.GROUPS) {
-        GroupsScreen(
-            onOpenGroup = { id -> navController.navigate(PeopleApp.groupDetail(id)) },
-            onCreateGroup = { navController.navigate(PeopleApp.GROUP_CREATE) },
-            drawer = drawer,
-            onOpenNotifications = onOpenNotifications,
-        )
-    }
-
     composable(PeopleApp.GROUP_CREATE) {
         CreateGroupScreen(
             onBack = { navController.popBackStack() },
             // Drop the create screen and open the new group, so Back from the
-            // detail lands on the list — which reloads and shows the group.
+            // detail lands where the group was started.
             onCreated = { id ->
                 navController.navigate(PeopleApp.groupDetail(id)) {
                     popUpTo(PeopleApp.GROUP_CREATE) { inclusive = true }
@@ -302,7 +285,6 @@ fun NavGraphBuilder.peopleNavGraph(
         val groupId = backStackEntry.arguments?.getString("id").orEmpty()
         GroupDetailScreen(
             onBack = { navController.popBackStack() },
-            onOpenPerson = { id -> navController.navigate(PeopleApp.personView(id)) },
             onAddMember = { navController.navigate(PeopleApp.groupAddMember(groupId)) },
             onOpenNotifications = onOpenNotifications,
         )

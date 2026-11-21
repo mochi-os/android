@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ਕੋਈ ਲੋਕ ਨਹੀਂ ਮਿਲੇ</string>
     <string name="people_friends_try_adjusting">ਆਪਣੀ ਖੋਜ ਠੀਕ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
     <string name="people_friends_pending">ਬਕਾਇਆ</string>
-    <string name="people_friends_received_tab">ਪ੍ਰਾਪਤ</string>
-    <string name="people_friends_sent_tab">ਭੇਜਿਆ</string>
     <string name="people_invitations_incoming">ਆਉਣ ਵਾਲੇ ਸੱਦੇ</string>
     <string name="people_invitations_empty">ਕੋਈ ਬਕਾਇਆ ਸੱਦੇ ਨਹੀਂ</string>
     <string name="people_invitations_empty_hint">ਨਵੇਂ ਸੱਦੇ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s ਤੋਂ ਸੱਦਾ ਸਵੀਕਾਰ ਕੀਤਾ</string>
     <string name="people_invitations_toast_declined">%1$s ਤੋਂ ਸੱਦਾ ਅਸਵੀਕਾਰ ਕੀਤਾ</string>
     <string name="people_invitations_toast_cancelled">%1$s ਨੂੰ ਭੇਜਿਆ ਸੱਦਾ ਰੱਦ ਕੀਤਾ</string>
-    <string name="people_groups_empty">ਕੋਈ ਸਮੂਹ ਨਹੀਂ</string>
     <string name="people_group_delete_confirm">ਸਮੂਹ \"%1$s\" ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ।</string>
     <string name="people_member_remove_confirm">ਕੀ ਤੁਸੀਂ ਯਕੀਨੀ ਤੌਰ \'ਤੇ %1$s ਨੂੰ ਇਸ ਸਮੂਹ ਵਿੱਚੋਂ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
     <string name="people_member_remove_with_name">%1$s ਨੂੰ ਹਟਾਓ</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s ਚਿੱਤਰ \'ਤੇ ਕਾਰਵਾਈ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ</string>
     <string name="people_profile_accent_invalid">ਇੱਕ ਜਾਇਜ਼ ਹੈਕਸ ਰੰਗ ਦਾਖਲ ਕਰੋ (ਜਿਵੇਂ #a78bfa)</string>
     <string name="people_profile_accent_none">ਕੋਈ ਨਹੀਂ</string>
-    <string name="people_profile_privacy_private_desc">ਸਿਰਫ਼ ਆਪਸੀ ਦੋਸਤ ਹੀ ਤੁਹਾਡੀ ਪ੍ਰੋਫਾਈਲ ਵੇਖ ਸਕਦੇ ਹਨ</string>
     <string name="people_welcome_title">ਲੋਕ ਵਿੱਚ ਜੀ ਆਇਆਂ ਨੂੰ</string>
     <string name="people_person_banner_alt">%1$s ਲਈ ਬੈਨਰ</string>
-    <string name="people_person_private">ਇਹ ਪ੍ਰੋਫਾਈਲ ਨਿਜੀ ਹੈ</string>
     <string name="people_person_state_invited">ਸੱਦਾ ਭੇਜਿਆ</string>
 
     <string name="people_invitations_accept_all">ਸਭ ਸਵੀਕਾਰ ਕਰੋ</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi ਵਿੱਚ ਦੋਸਤ ਲੱਭੋ ਅਤੇ ਜੁੜੋ। ਸੱਦਾ ਭੇਜਣ ਲਈ ਸੰਪਰਕ ਸ਼ਾਮਲ ਕਰੋ ਦਬਾਓ।</string>
     <string name="people_person_state_contact">ਸੰਪਰਕਾਂ ਵਿੱਚ</string>
-    <string name="people_device_create">ਬਣਾਓ</string>
-    <string name="people_device_add">ਡਿਵਾਈਸ ਜੋੜੋ</string>
-    <string name="people_device_username">ਉਪਭੋਗਤਾ ਨਾਮ</string>
-    <string name="people_device_done">ਹੋ ਗਿਆ</string>
-    <string name="people_device_used">ਆਖਰੀ ਵਾਰ ਵਰਤਿਆ %1$s</string>
-    <string name="people_device_never">ਕਦੇ ਨਹੀਂ</string>
     <string name="people_sync_now">ਹੁਣੇ ਸਿੰਕ ਕਰੋ</string>
-    <string name="people_device_title">ਜੁੜੇ ਹੋਏ ਡਿਵਾਈਸ</string>
-    <string name="people_device_name">ਡਿਵਾਈਸ ਦਾ ਨਾਮ</string>
     <string name="people_device_address">ਪਤਾ ਕਿਤਾਬ ਦਾ URL</string>
-    <string name="people_device_password">ਪਾਸਵਰਡ</string>
-    <string name="people_device_copy">%1$s ਕਾਪੀ ਕਰੋ</string>
-    <string name="people_device_warning">ਇਹ ਪਾਸਵਰਡ ਹੁਣੇ ਸੰਭਾਲੋ। ਇਹ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾ ਸਕਦਾ।</string>
-    <string name="people_device_empty">ਕੋਈ ਡਿਵਾਈਸ ਕਨੈਕਟ ਨਹੀਂ ਹੈ।</string>
-    <string name="people_device_created">ਬਣਾਇਆ %1$s</string>
-    <string name="people_device_delete">ਡਿਵਾਈਸ ਮਿਟਾਓ</string>
-    <string name="people_device_delete_title">ਡਿਵਾਈਸ ਮਿਟਾਉਣੀ ਹੈ?</string>
-    <string name="people_device_delete_message">ਡਿਵਾਈਸ ਹੁਣ ਸੰਪਰਕ ਜਾਂ ਕੈਲੰਡਰ ਸਿੰਕ ਨਹੀਂ ਕਰ ਸਕੇਗੀ।</string>
-    <string name="people_device_deleted">ਡਿਵਾਈਸ ਮਿਟਾਈ ਗਈ</string>
     <string name="people_sync_title">ਇਸ ਫ਼ੋਨ ਨਾਲ ਸਿੰਕ ਕਰੋ</string>
     <string name="people_sync_confirm">ਇਸ ਫ਼ੋਨ ਦੀ ਸੰਪਰਕ ਐਪ ਵਿੱਚ ਕਿਸੇ ਦੋਸਤ ਦਾ ਸੰਪਰਕ ਮਿਟਾਉਣ ਨਾਲ ਦੋਸਤੀ ਵੀ ਖ਼ਤਮ ਹੋ ਜਾਂਦੀ ਹੈ।</string>
     <string name="people_sync_enable">ਚਾਲੂ ਕਰੋ</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">ਸੈਟਿੰਗਾਂ</string>
     <string name="people_contacts_invitation_sent">ਸੱਦਾ ਭੇਜਿਆ ਗਿਆ</string>
     <string name="people_contact_keep">ਰੱਖੋ</string>
+    <string name="people_invitations_received_count">ਪ੍ਰਾਪਤ (%1$s)</string>
+    <string name="people_invitations_sent_count">ਭੇਜਿਆ (%1$s)</string>
+    <string name="people_contact_discard">ਬਦਲਾਅ ਛੱਡ ਦਿਓ</string>
+    <string name="people_person_unavailable">ਵਿਅਕਤੀ ਅਣਉਪਲਬਧ</string>
 </resources>

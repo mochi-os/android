@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s vazhdoi lojën</string>
     <string name="game_not_found">Loja nuk u gjet</string>
     <string name="game_chat_move_played_you">Ti luajte %1$s</string>
+    <string name="devices_add">Shto një pajisje</string>
+    <string name="devices_copy">Kopjo %1$s</string>
+    <string name="devices_create">Krijo</string>
+    <string name="devices_created">U krijua %1$s</string>
+    <string name="devices_delete">Fshi pajisjen</string>
+    <string name="devices_delete_message">Pajisja nuk do të mund të sinkronizojë më kontaktet ose kalendarët.</string>
+    <string name="devices_delete_title">Të fshihet pajisja?</string>
+    <string name="devices_deleted">Pajisja u fshi</string>
+    <string name="devices_done">Përfunduar</string>
+    <string name="devices_empty">Asnjë pajisje e lidhur</string>
+    <string name="devices_name">Emri i pajisjes</string>
+    <string name="devices_password">Fjalëkalimi</string>
+    <string name="devices_title">Pajisjet e lidhura</string>
+    <string name="devices_used">Përdorur së fundi %1$s</string>
+    <string name="devices_username">Emri i përdoruesit</string>
+    <string name="devices_warning">Kopjojeni fjalëkalimin tani: nuk mund të shfaqet sërish.</string>
+    <string name="devices_unused">Nuk është përdorur kurrë</string>
 </resources>

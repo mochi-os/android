@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s കളി പുനരാരംഭിച്ചു</string>
     <string name="game_not_found">ഗെയിം കണ്ടെത്തിയില്ല</string>
     <string name="game_chat_move_played_you">നിങ്ങൾ %1$s കളിച്ചു</string>
+    <string name="devices_add">ഒരു ഡിവൈസ് ചേർക്കുക</string>
+    <string name="devices_copy">%1$s പകർത്തുക</string>
+    <string name="devices_create">സൃഷ്ടിക്കുക</string>
+    <string name="devices_created">സൃഷ്ടിച്ചത് %1$s</string>
+    <string name="devices_delete">ഡിവൈസ് ഇല്ലാതാക്കുക</string>
+    <string name="devices_delete_message">ഡിവൈസിന് ഇനി കോൺടാക്റ്റുകളോ കലണ്ടറുകളോ സമന്വയിപ്പിക്കാനാകില്ല.</string>
+    <string name="devices_delete_title">ഡിവൈസ് ഇല്ലാതാക്കണോ?</string>
+    <string name="devices_deleted">ഡിവൈസ് ഇല്ലാതാക്കി</string>
+    <string name="devices_done">പൂർത്തിയായി</string>
+    <string name="devices_empty">ഡിവൈസുകളൊന്നും ബന്ധിപ്പിച്ചിട്ടില്ല</string>
+    <string name="devices_name">ഡിവൈസിന്റെ പേര്</string>
+    <string name="devices_password">പാസ്‌വേഡ്</string>
+    <string name="devices_title">ബന്ധിപ്പിച്ച ഡിവൈസുകൾ</string>
+    <string name="devices_used">അവസാനം ഉപയോഗിച്ചത് %1$s</string>
+    <string name="devices_username">ഉപയോക്തൃനാമം</string>
+    <string name="devices_warning">പാസ്‌വേഡ് ഇപ്പോൾ തന്നെ പകർത്തുക: ഇത് വീണ്ടും കാണിക്കാനാകില്ല.</string>
+    <string name="devices_unused">ഒരിക്കലും ഉപയോഗിച്ചിട്ടില്ല</string>
 </resources>

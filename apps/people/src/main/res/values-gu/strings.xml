@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">કોઈ લોકો મળ્યા નથી</string>
     <string name="people_friends_try_adjusting">તમારી શોધને સમાયોજિત કરવાનો પ્રયાસ કરો</string>
     <string name="people_friends_pending">બાકી</string>
-    <string name="people_friends_received_tab">પ્રાપ્ત</string>
-    <string name="people_friends_sent_tab">મોકલેલ</string>
     <string name="people_invitations_incoming">આવનારા આમંત્રણો</string>
     <string name="people_invitations_empty">કોઈ બાકી આમંત્રણો નથી</string>
     <string name="people_invitations_empty_hint">નવા આમંત્રણો અહીં દેખાશે</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s તરફથી આમંત્રણ સ્વીકાર્યું</string>
     <string name="people_invitations_toast_declined">%1$s તરફથી આમંત્રણ નકાર્યું</string>
     <string name="people_invitations_toast_cancelled">%1$s ને મોકલેલ આમંત્રણ રદ કર્યું</string>
-    <string name="people_groups_empty">કોઈ જૂથ નથી</string>
     <string name="people_group_delete_confirm">જૂથ \"%1$s\" કાઢી નાખવું? આ પાછું લઈ શકાશે નહીં.</string>
     <string name="people_member_remove_confirm">શું તમે ખરેખર %1$s ને આ જૂથમાંથી દૂર કરવા માંગો છો?</string>
     <string name="people_member_remove_with_name">%1$s ને દૂર કરો</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s છબી પર પ્રક્રિયા કરી શકાઈ નહીં</string>
     <string name="people_profile_accent_invalid">માન્ય હેક્સ રંગ દાખલ કરો (દા.ત. #a78bfa)</string>
     <string name="people_profile_accent_none">કોઈ નહીં</string>
-    <string name="people_profile_privacy_private_desc">ફક્ત પરસ્પર મિત્રો જ તમારી પ્રોફાઇલ જોઈ શકે છે</string>
     <string name="people_welcome_title">લોકોમાં આપનું સ્વાગત છે</string>
     <string name="people_person_banner_alt">%1$s માટેનું બેનર</string>
-    <string name="people_person_private">આ પ્રોફાઇલ ખાનગી છે</string>
     <string name="people_person_state_invited">આમંત્રિત</string>
 
     <string name="people_invitations_accept_all">બધાં સ્વીકારો</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi પર મિત્રો શોધો અને જોડાઓ. આમંત્રણ મોકલવા માટે સંપર્ક ઉમેરો પર ટૅપ કરો.</string>
     <string name="people_person_state_contact">સંપર્કોમાં</string>
-    <string name="people_device_create">બનાવો</string>
-    <string name="people_device_add">ઉપકરણ ઉમેરો</string>
-    <string name="people_device_username">વપરાશકર્તા નામ</string>
-    <string name="people_device_done">થઈ ગયું</string>
-    <string name="people_device_used">છેલ્લે ઉપયોગ કર્યો %1$s</string>
-    <string name="people_device_never">ક્યારેય નહીં</string>
     <string name="people_sync_now">હમણાં સિંક કરો</string>
-    <string name="people_device_title">જોડાયેલાં ઉપકરણો</string>
-    <string name="people_device_name">ઉપકરણનું નામ</string>
     <string name="people_device_address">સરનામાં પુસ્તિકાનું URL</string>
-    <string name="people_device_password">પાસવર્ડ</string>
-    <string name="people_device_copy">%1$s કૉપિ કરો</string>
-    <string name="people_device_warning">આ પાસવર્ડ હમણાં જ સાચવો. તે ફરીથી બતાવી શકાશે નહીં.</string>
-    <string name="people_device_empty">કોઈ ઉપકરણ કનેક્ટ થયેલ નથી.</string>
-    <string name="people_device_created">બનાવેલ %1$s</string>
-    <string name="people_device_delete">ઉપકરણ કાઢી નાખો</string>
-    <string name="people_device_delete_title">ઉપકરણ કાઢી નાખવું?</string>
-    <string name="people_device_delete_message">ઉપકરણ હવે સંપર્કો કે કૅલેન્ડર સિંક કરી શકશે નહીં.</string>
-    <string name="people_device_deleted">ઉપકરણ કાઢી નાખ્યું</string>
     <string name="people_sync_title">આ ફોન સાથે સિંક કરો</string>
     <string name="people_sync_confirm">આ ફોનની સંપર્કો ઍપમાં મિત્રનો સંપર્ક કાઢી નાખવાથી મિત્રતા પણ સમાપ્ત થાય છે.</string>
     <string name="people_sync_enable">ચાલુ કરો</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">સેટિંગ્સ</string>
     <string name="people_contacts_invitation_sent">આમંત્રણ મોકલવામાં આવ્યું</string>
     <string name="people_contact_keep">રાખો</string>
+    <string name="people_invitations_received_count">પ્રાપ્ત (%1$s)</string>
+    <string name="people_invitations_sent_count">મોકલેલ (%1$s)</string>
+    <string name="people_contact_discard">ફેરફારો છોડી દો</string>
+    <string name="people_person_unavailable">વ્યક્તિ અનુપલબ્ધ</string>
 </resources>

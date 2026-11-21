@@ -331,6 +331,37 @@ class ContactFormTest {
     }
 
     @Test
+    fun `an organisation reads as its name, and its units ride along`() {
+        val card = listOf(
+            ContactProperty("FN", emptyMap(), "Ada"),
+            ContactProperty("ORG", emptyMap(), "Acme;Sales;North"),
+        )
+        val form = contactForm(card)
+        // THE POINT: a card a phone saved with a department shows its organisation alone.
+        assertEquals("Acme", form.organisation)
+        assertEquals(listOf("Sales", "North"), form.organisationUnits)
+        // Left alone, it is written back as it came.
+        assertEquals(card[1], form.written("ORG"))
+        // Renamed, the units stay.
+        assertEquals("Acme Ltd;Sales;North", form.copy(organisation = "Acme Ltd").written("ORG").value)
+    }
+
+    @Test
+    fun `a semicolon in an organisation's name is its own, not a unit`() {
+        val form = contactForm(listOf(ContactProperty("FN", emptyMap(), "Ada"), ContactProperty("ORG", emptyMap(), "Smith\\; Jones")))
+        assertEquals("Smith; Jones", form.organisation)
+        assertEquals(emptyList<String>(), form.organisationUnits)
+        val typed = ContactForm(name = "Ada", organisation = "Smith; Jones").written("ORG")
+        assertEquals("Smith\\; Jones", typed.value)
+    }
+
+    @Test
+    fun `removing the organisation takes its units too`() {
+        val form = contactForm(listOf(ContactProperty("FN", emptyMap(), "Ada"), ContactProperty("ORG", emptyMap(), "Acme;Sales")))
+        assertTrue(form.emptied(Single.ORGANISATION).properties().none { it.name == "ORG" })
+    }
+
+    @Test
     fun `a separator inside a component survives the round trip`() {
         val value = joinComponents(listOf("a;b", "c\\d", "e"))
         // Only the separator is escaped; the backslash stays as it is.

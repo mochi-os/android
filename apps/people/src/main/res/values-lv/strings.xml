@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Cilvēki nav atrasti</string>
     <string name="people_friends_try_adjusting">Mēģiniet pielāgot meklēšanu</string>
     <string name="people_friends_pending">Gaida</string>
-    <string name="people_friends_received_tab">Saņemts</string>
-    <string name="people_friends_sent_tab">Nosūtīts</string>
     <string name="people_invitations_incoming">Ienākošie ielūgumi</string>
     <string name="people_invitations_empty">Nav neizskatītu uzaicinājumu</string>
     <string name="people_invitations_empty_hint">Jauni uzaicinājumi parādīsies šeit</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Pieņemts %1$s ielūgums</string>
     <string name="people_invitations_toast_declined">Noraidīts %1$s ielūgums</string>
     <string name="people_invitations_toast_cancelled">Atcelts ielūgums lietotājam %1$s</string>
-    <string name="people_groups_empty">Nav grupu</string>
     <string name="people_group_delete_confirm">Dzēst grupu \"%1$s\"? Šo darbību nevar atsaukt.</string>
     <string name="people_member_remove_confirm">Vai tiešām vēlaties noņemt %1$s no šīs grupas?</string>
     <string name="people_member_remove_with_name">Noņemt %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Nevarēja apstrādāt %1$s attēlu</string>
     <string name="people_profile_accent_invalid">Ievadiet derīgu hex krāsu (piem., #a78bfa)</string>
     <string name="people_profile_accent_none">Nav</string>
-    <string name="people_profile_privacy_private_desc">Jūsu profilu var skatīt tikai abpusēji draugi</string>
     <string name="people_welcome_title">Laipni lūdzam sadaļā Cilvēki</string>
     <string name="people_person_banner_alt">%1$s banners</string>
-    <string name="people_person_private">Šis profils ir privāts</string>
     <string name="people_person_state_invited">Uzaicināts</string>
 
     <string name="people_invitations_accept_all">Pieņemt visus</string>
@@ -178,25 +173,8 @@
     </plurals>
     <string name="people_welcome_body">Atrodiet draugus visā Mochi un sazinieties. Pieskarieties Pievienot kontaktu, lai nosūtītu ielūgumu.</string>
     <string name="people_person_state_contact">Kontaktos</string>
-    <string name="people_device_create">Izveidot</string>
-    <string name="people_device_add">Pievienot jaunu ierīci</string>
-    <string name="people_device_username">Lietotājvārds</string>
-    <string name="people_device_done">Pabeigts</string>
-    <string name="people_device_used">Pēdējoreiz lietots %1$s</string>
-    <string name="people_device_never">Nekad</string>
     <string name="people_sync_now">Sinhronizēt tagad</string>
-    <string name="people_device_title">Pievienotās ierīces</string>
-    <string name="people_device_name">Ierīces nosaukums</string>
     <string name="people_device_address">Adrešu grāmatas URL</string>
-    <string name="people_device_password">Parole</string>
-    <string name="people_device_copy">Kopēt %1$s</string>
-    <string name="people_device_warning">Saglabājiet šo paroli tagad. To vairs nevarēs parādīt.</string>
-    <string name="people_device_empty">Nav pievienotu ierīču.</string>
-    <string name="people_device_created">Izveidots %1$s</string>
-    <string name="people_device_delete">Dzēst ierīci</string>
-    <string name="people_device_delete_title">Dzēst ierīci?</string>
-    <string name="people_device_delete_message">Ierīce vairs nevarēs sinhronizēt kontaktus vai kalendārus.</string>
-    <string name="people_device_deleted">Ierīce dzēsta</string>
     <string name="people_sync_title">Sinhronizēt ar šo tālruni</string>
     <string name="people_sync_confirm">Dzēšot drauga kontaktu šī tālruņa lietotnē Kontakti, beidzas arī draudzība.</string>
     <string name="people_sync_enable">Ieslēgt</string>
@@ -228,4 +206,8 @@
     <string name="people_profile_settings">Iestatījumi</string>
     <string name="people_contacts_invitation_sent">Ielūgums nosūtīts</string>
     <string name="people_contact_keep">Paturēt</string>
+    <string name="people_invitations_received_count">Saņemts (%1$s)</string>
+    <string name="people_invitations_sent_count">Nosūtīts (%1$s)</string>
+    <string name="people_contact_discard">Atmest izmaiņas</string>
+    <string name="people_person_unavailable">Persona nav pieejama</string>
 </resources>

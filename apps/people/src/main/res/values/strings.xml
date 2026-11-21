@@ -81,6 +81,7 @@
     <string name="people_contact_remove">Remove</string>
     <string name="people_contact_keep">Keep</string>
     <string name="people_contact_conflict">Contact changed</string>
+    <string name="people_contact_discard">Discard changes</string>
 
     <!-- Add contact -->
     <string name="people_add_contact_title">Add contact</string>
@@ -104,8 +105,8 @@
     <string name="people_friends_search_placeholder">Search</string>
     <string name="people_friends_no_people_found">No people found</string>
     <string name="people_friends_try_adjusting">Try adjusting your search</string>
-    <string name="people_friends_received_tab">Received</string>
-    <string name="people_friends_sent_tab">Sent</string>
+    <string name="people_invitations_received_count">Received (%1$s)</string>
+    <string name="people_invitations_sent_count">Sent (%1$s)</string>
     <string name="people_invitations_accept_all">Accept all</string>
     <string name="people_invitations_decline_all">Decline all</string>
     <string name="people_invitations_cancel_all">Cancel all</string>
@@ -140,7 +141,6 @@
     <string name="people_invite_settings_accept_description">All invites are accepted without your approval.</string>
 
     <!-- Groups -->
-    <string name="people_groups_empty">No groups</string>
     <string name="people_groups_create">Create group</string>
     <string name="people_groups_not_found">Group not found</string>
 
@@ -197,7 +197,6 @@
     <string name="people_profile_accent_invalid">Enter a valid hex colour (e.g. #a78bfa)</string>
     <string name="people_profile_accent_none">None</string>
     <string name="people_profile_clear">Clear</string>
-    <string name="people_profile_privacy_private_desc">Only mutual friends can view your profile</string>
 
     <!-- Common -->
     <string name="people_common_edit">Edit</string>
@@ -217,7 +216,7 @@
 
     <!-- Public profile (PersonView) -->
     <string name="people_person_banner_alt">Banner for %1$s</string>
-    <string name="people_person_private">This profile is private</string>
+    <string name="people_person_unavailable">Person unavailable</string>
     <string name="people_person_state_friend">Friends</string>
     <string name="people_person_state_self">You</string>
     <string name="people_person_state_invited">Invited</string>
@@ -227,26 +226,11 @@
     <string name="people_person_accept">Accept</string>
     <string name="people_person_decline">Decline</string>
     <string name="people_profile_too_long">Profile is too long</string>
+    <!-- The profile's length against its limit: %1$s and %2$s are counts -->
+    <string name="people_profile_length" translatable="false">%1$s / %2$s</string>
 
-    <!-- Connect device (CardDAV) -->
-    <string name="people_device_title">Connected devices</string>
-    <string name="people_device_name">Device name</string>
-    <string name="people_device_create">Create</string>
-    <string name="people_device_add">Add device</string>
+    <!-- Connected devices: the address a device's CardDAV account takes -->
     <string name="people_device_address">Address book URL</string>
-    <string name="people_device_username">Username</string>
-    <string name="people_device_password">Password</string>
-    <string name="people_device_copy">Copy %1$s</string>
-    <string name="people_device_warning">Save this password now. It cannot be shown again.</string>
-    <string name="people_device_done">Done</string>
-    <string name="people_device_empty">No devices connected.</string>
-    <string name="people_device_created">Created %1$s</string>
-    <string name="people_device_used">Last used %1$s</string>
-    <string name="people_device_never">Never</string>
-    <string name="people_device_delete">Delete device</string>
-    <string name="people_device_delete_title">Delete device?</string>
-    <string name="people_device_delete_message">The device will no longer be able to sync contacts or calendars.</string>
-    <string name="people_device_deleted">Device deleted</string>
 
     <!-- Sync to this phone (contacts sync adapter) -->
     <string name="people_sync_title">Sync to this phone</string>

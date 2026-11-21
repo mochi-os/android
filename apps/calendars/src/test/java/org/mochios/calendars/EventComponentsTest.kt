@@ -27,6 +27,9 @@ import org.mochios.calendars.ui.editor.duplicate
 import org.mochios.calendars.ui.editor.excluded
 import org.mochios.calendars.ui.editor.follow
 import org.mochios.calendars.ui.editor.moved
+import org.mochios.calendars.ui.editor.named
+import org.mochios.calendars.ui.editor.original
+import org.mochios.calendars.ui.editor.shifted
 import org.mochios.calendars.ui.editor.truncated
 import org.mochios.calendars.ui.editor.moveOccurrence
 import org.mochios.calendars.ui.editor.single
@@ -610,5 +613,181 @@ class EventComponentsTest {
         // 10:00 London on the 22nd reads 10:00 New York five hours later.
         assertEquals(TEN + 5 * 3600, moved(TEN, LONDON, NEW_YORK))
         assertEquals(TEN, moved(TEN, LONDON, LONDON))
+    }
+
+    // ---- an occurrence moved by "This event" ----
+
+    /** The override of the 29th starts at 14:00, where the listing gives it. */
+    private val MOVED = NEXT + 4 * 3600
+
+    @Test
+    fun `an override listed where it was moved to is found by the occurrence it replaces`() {
+        val tree = listOf(master(), override())
+        assertEquals(NEXT, original(tree, MOVED, LONDON))
+        assertEquals("a start no override was moved to is itself", TEN, original(tree, TEN, LONDON))
+        assertEquals(NEXT, named(tree, NEXT, LONDON))
+    }
+
+    @Test
+    fun `an all-day occurrence the listing gives at the user's midnight is named by its date`() {
+        val series = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("DTSTART", "20260922", "VALUE", "DATE"),
+                property("DTEND", "20260923", "VALUE", "DATE"),
+                property("RRULE", "FREQ=WEEKLY"),
+            ),
+        )
+        val moved = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("RECURRENCE-ID", "20260929", "VALUE", "DATE"),
+                property("DTSTART", "20261001", "VALUE", "DATE"),
+                property("DTEND", "20261002", "VALUE", "DATE"),
+            ),
+        )
+        fun midnight(day: Int, zone: String) =
+            java.time.LocalDate.of(2026, 9, 1).plusDays(day - 1L).atStartOfDay(java.time.ZoneId.of(zone)).toEpochSecond()
+        val listed = java.time.LocalDate.of(2026, 10, 1).atStartOfDay(java.time.ZoneId.of(NEW_YORK)).toEpochSecond()
+        assertEquals(midnight(29, NEW_YORK), original(listOf(series, moved), listed, NEW_YORK))
+        assertEquals(midnight(29, "UTC"), named(listOf(series, moved), midnight(29, NEW_YORK), NEW_YORK))
+    }
+
+    @Test
+    fun `this event on a moved occurrence replaces its override rather than adding one`() {
+        val tree = listOf(master(), override())
+        val opened = named(tree, original(tree, MOVED, LONDON), LONDON)
+        val saved = components(
+            form(title = "Moved again", start = MOVED + 3600, finish = MOVED + 7200, occurrence = opened),
+            tree,
+            Scope.ONE,
+            LONDON,
+        )
+        assertEquals(2, saved.size)
+        assertEquals("Moved again", saved[1].value("SUMMARY"))
+        assertEquals(NEXT, CalendarsMapping.moment(saved[1].property("RECURRENCE-ID")!!) / 1000)
+        val gone = excluded(tree, opened, LONDON)
+        assertEquals(1, gone.size)
+        assertEquals(NEXT, CalendarsMapping.moment(gone[0].all("EXDATE").single()) / 1000)
+    }
+
+    // ---- a floating event, whose times name no zone ----
+
+    private fun floating(rrule: String? = "FREQ=WEEKLY") = EventComponent(
+        name = "VEVENT",
+        properties = listOfNotNull(
+            property("UID", "uid-2@mochi"),
+            property("SUMMARY", "Yoga"),
+            property("DTSTART", "20260922T100000"),
+            property("DTEND", "20260922T110000"),
+            rrule?.let { property("RRULE", it) },
+        ),
+    )
+
+    /** 10:00 on the 22nd, and a week later, in New York. */
+    private val YORK = 1_790_085_600L
+    private val YORK_NEXT = YORK + 7 * 86_400
+
+    @Test
+    fun `a floating event reads at its clock time in the user's zone`() {
+        val read = draft(floating(null), NEW_YORK)
+        assertEquals(YORK, read.start)
+        assertEquals(YORK + 3600, read.finish)
+        assertEquals(NEW_YORK, read.floating)
+    }
+
+    @Test
+    fun `a floating event stays floating through a save that kept its zone`() {
+        val read = draft(floating(null), NEW_YORK)
+        val tree = components(read.copy(title = "Yoga, upstairs"), listOf(floating(null)), Scope.ALL, NEW_YORK)
+        assertEquals(property("DTSTART", "20260922T100000"), tree[0].property("DTSTART"))
+        assertEquals(property("DTEND", "20260922T110000"), tree[0].property("DTEND"))
+    }
+
+    @Test
+    fun `a floating event given a zone is pinned there`() {
+        val read = draft(floating(null), NEW_YORK)
+        val tree = components(read.copy(zone = Zone(LONDON, LONDON)), listOf(floating(null)), Scope.ALL, NEW_YORK)
+        assertEquals(property("DTSTART", "20260922T150000", "TZID", LONDON), tree[0].property("DTSTART"))
+    }
+
+    @Test
+    fun `a floating series names its occurrences floating`() {
+        val read = draft(floating(), NEW_YORK, YORK_NEXT)
+        val tree = components(read.copy(title = "Just this one", occurrence = YORK_NEXT), listOf(floating()), Scope.ONE, NEW_YORK)
+        assertEquals(property("RECURRENCE-ID", "20260929T100000"), tree[1].property("RECURRENCE-ID"))
+        assertEquals(property("DTSTART", "20260929T100000"), tree[1].property("DTSTART"))
+        val gone = excluded(listOf(floating()), YORK_NEXT, NEW_YORK)
+        assertEquals(property("EXDATE", "20260929T100000"), gone[0].property("EXDATE"))
+    }
+
+    @Test
+    fun `a floating series cut there ends floating, as its start is`() {
+        val cut = truncated(listOf(floating()), YORK_NEXT, NEW_YORK)!!.first()
+        assertEquals("FREQ=WEEKLY;UNTIL=20260929T095959", cut.value("RRULE"))
+    }
+
+    @Test
+    fun `a floating series' end on a day is floating`() {
+        val until = Recurrence(Frequency.WEEKLY, ending = org.mochios.calendars.ui.editor.Ending.UNTIL, until = java.time.LocalDate.of(2026, 10, 20))
+        assertEquals("FREQ=WEEKLY;UNTIL=20261020T235959", until.rule(NEW_YORK, floating = true))
+    }
+
+    // ---- a series of listed dates alone ----
+
+    private fun listed() = master(rrule = null).let {
+        it.copy(properties = it.properties + property("RDATE", "20260925T100000,20260929T100000,20261006T100000", "TZID", LONDON))
+    }
+
+    @Test
+    fun `a series of listed dates alone keeps them through a save of all events`() {
+        val read = draft(listed(), LONDON)
+        val tree = components(read.copy(title = "Renamed"), listOf(listed()), Scope.ALL, LONDON)
+        assertEquals("20260925T100000,20260929T100000,20261006T100000", tree[0].value("RDATE"))
+        val moved = components(shifted(read, 3600), listOf(listed()), Scope.ALL, LONDON)
+        assertEquals("20260925T110000,20260929T110000,20261006T110000", moved[0].value("RDATE"))
+    }
+
+    @Test
+    fun `a series of listed dates alone is cut at the occurrence`() {
+        val cut = truncated(listOf(listed()), NEXT, LONDON)
+        assertNotNull(cut)
+        assertEquals("20260925T100000", cut!!.single().value("RDATE"))
+        assertNull(cut.single().property("RRULE"))
+    }
+
+    // ---- alarms the editor keeps ----
+
+    private fun alarm(minutes: Int, action: String, description: String) = EventComponent(
+        "VALARM",
+        listOf(
+            property("ACTION", action),
+            property("DESCRIPTION", description),
+            property("TRIGGER", CalendarsMapping.trigger(minutes)),
+            property("X-WR-ALARMUID", "alarm-$minutes-$action"),
+        ),
+    )
+
+    @Test
+    fun `an alarm whose reminder the form still has is kept as the event holds it`() {
+        val carried = master().copy(
+            components = listOf(alarm(15, "EMAIL", "Leave now"), alarm(15, "DISPLAY", "Leave now"), alarm(30, "AUDIO", "Soon")),
+        )
+        val read = draft(carried, LONDON)
+        assertEquals(listOf(15, 30), read.reminders)
+        val tree = components(read.copy(title = "Renamed", reminders = listOf(15, 60)), listOf(carried), Scope.ALL, LONDON)
+        val alarms = tree[0].components.filter { it.name == "VALARM" }
+        assertEquals(alarm(15, "EMAIL", "Leave now"), alarms[0])
+        assertEquals(alarm(15, "DISPLAY", "Leave now"), alarms[1])
+        assertEquals(listOf("-PT60M"), alarms.drop(2).map { it.value("TRIGGER") })
+        assertEquals(3, alarms.size)
+    }
+
+    @Test
+    fun `a new override keeps the series' alarms the form showed`() {
+        val carried = master().copy(components = listOf(alarm(15, "EMAIL", "Leave now")))
+        val read = draft(carried, LONDON, NEXT)
+        val tree = components(read.copy(title = "Just this one", occurrence = NEXT), listOf(carried), Scope.ONE, LONDON)
+        assertEquals(listOf(alarm(15, "EMAIL", "Leave now")), tree[1].components.filter { it.name == "VALARM" })
     }
 }

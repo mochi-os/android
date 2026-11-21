@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">कौनो लोग ना मिलल</string>
     <string name="people_friends_try_adjusting">अपना खोज समायोजित करे के कोशिश करीं</string>
     <string name="people_friends_pending">लंबित</string>
-    <string name="people_friends_received_tab">मिलल</string>
-    <string name="people_friends_sent_tab">भेजल गइल</string>
     <string name="people_invitations_incoming">आवत निमंत्रण</string>
     <string name="people_invitations_empty">कौनो लंबित निमंत्रण नइखे</string>
     <string name="people_invitations_empty_hint">नया निमंत्रण इहाँ देखाई दीहें</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s से मिलल निमंत्रण स्वीकार कइल गइल</string>
     <string name="people_invitations_toast_declined">%1$s से मिलल निमंत्रण अस्वीकार कइल गइल</string>
     <string name="people_invitations_toast_cancelled">%1$s के भेजल निमंत्रण रद्द कइल गइल</string>
-    <string name="people_groups_empty">कवनो समूह नइखे</string>
     <string name="people_group_delete_confirm">समूह \"%1$s\" के मेटावल जाव? ई वापस नइखे हो सकत.</string>
     <string name="people_member_remove_confirm">का रउआ निश्चित बानी कि %1$s के एह समूह से हटावल चाहत बानी?</string>
     <string name="people_member_remove_with_name">%1$s के हटाईं</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s इमेज के प्रोसेस ना कइल जा सकल</string>
     <string name="people_profile_accent_invalid">एगो वैध हेक्स रंग डालीं (जइसे #a78bfa)</string>
     <string name="people_profile_accent_none">कुछुओ ना</string>
-    <string name="people_profile_privacy_private_desc">खाली आपसी दोस्त रउआ के प्रोफाइल देख सकेलें</string>
     <string name="people_welcome_title">लोग ऐप में स्वागत बा</string>
     <string name="people_person_banner_alt">%1$s खातिर बैनर</string>
-    <string name="people_person_private">ई प्रोफाइल निजी बा</string>
     <string name="people_person_state_invited">निमंत्रित</string>
 
     <string name="people_invitations_accept_all">सभे के स्वीकार करीं</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi पर दोस्त खोजीं आ जुड़ीं। नेवता भेजे खातिर संपर्क जोड़ीं पर टैप करीं।</string>
     <string name="people_person_state_contact">संपर्क में बा</string>
-    <string name="people_device_create">बनाईं</string>
-    <string name="people_device_add">उपकरण शामिल करीं</string>
-    <string name="people_device_username">उपयोगकर्ता नाम</string>
-    <string name="people_device_done">हो गइल</string>
-    <string name="people_device_used">आखिरी इस्तेमाल %1$s</string>
-    <string name="people_device_never">कबो ना</string>
     <string name="people_sync_now">अब सिंक करीं</string>
-    <string name="people_device_title">जुड़ल उपकरण</string>
-    <string name="people_device_name">उपकरण के नाम</string>
     <string name="people_device_address">पता किताब के URL</string>
-    <string name="people_device_password">पासवर्ड</string>
-    <string name="people_device_copy">%1$s कॉपी करीं</string>
-    <string name="people_device_warning">ई पासवर्ड अबहीं सहेज लीं। ई फेर से ना देखावल जाई।</string>
-    <string name="people_device_empty">कवनो उपकरण जुड़ल नइखे।</string>
-    <string name="people_device_created">%1$s बनावल गइल</string>
-    <string name="people_device_delete">उपकरण मेटाईं</string>
-    <string name="people_device_delete_title">उपकरण मेटा दीं?</string>
-    <string name="people_device_delete_message">उपकरण अब संपर्क भा कैलेंडर सिंक ना कर पाई।</string>
-    <string name="people_device_deleted">उपकरण मेटा गइल</string>
     <string name="people_sync_title">एह फोन पर सिंक करीं</string>
     <string name="people_sync_confirm">एह फोन के संपर्क ऐप में कवनो दोस्त के संपर्क मिटावला से दोस्ती भी खतम हो जाई।</string>
     <string name="people_sync_enable">चालू करीं</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">सेटिंग सब</string>
     <string name="people_contacts_invitation_sent">निमंत्रण भेजल गइल</string>
     <string name="people_contact_keep">रहे दीं</string>
+    <string name="people_invitations_received_count">मिलल (%1$s)</string>
+    <string name="people_invitations_sent_count">भेजल गइल (%1$s)</string>
+    <string name="people_contact_discard">बदलाव छोड़ीं</string>
+    <string name="people_person_unavailable">व्यक्ति अनुपलब्ध बा</string>
 </resources>

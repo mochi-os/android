@@ -10,8 +10,6 @@ import android.content.ContentProviderClient
 import android.content.ContentProviderOperation
 import android.content.ContentValues
 import android.database.Cursor
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.net.Uri
 import android.provider.ContactsContract
 import android.provider.ContactsContract.CommonDataKinds.Photo
@@ -19,7 +17,10 @@ import android.provider.ContactsContract.Data
 import android.provider.ContactsContract.RawContacts
 import android.provider.ContactsContract.Settings
 import android.provider.SyncStateContract
-import java.io.ByteArrayOutputStream
+import org.mochios.android.util.ImageFormat
+import org.mochios.android.util.decodeImage
+import org.mochios.android.util.encodeImage
+import java.io.ByteArrayInputStream
 
 /**
  * [ContactsStore] over the contacts provider, for one account. Every URI
@@ -261,25 +262,15 @@ class ProviderContactsStore(
     /**
      * A picture small enough to cross to the provider in one transaction.
      * The provider scales every photo down itself, so one past [PHOTO_MAXIMUM]
-     * is shrunk here first rather than refused.
+     * is shrunk here first rather than refused, upright, since the copy
+     * written here carries no orientation tag of its own.
      */
     private fun fit(bytes: ByteArray): ByteArray? {
         if (bytes.size <= PHOTO_MAXIMUM) return bytes
-        val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-        BitmapFactory.decodeByteArray(bytes, 0, bytes.size, bounds)
-        if (bounds.outWidth <= 0 || bounds.outHeight <= 0) return null
-        var sample = 1
-        while (maxOf(bounds.outWidth, bounds.outHeight) / (sample * 2) >= PHOTO_EDGE) sample *= 2
-        val bitmap = BitmapFactory.decodeByteArray(
-            bytes,
-            0,
-            bytes.size,
-            BitmapFactory.Options().apply { inSampleSize = sample },
-        ) ?: return null
-        val out = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 90, out)
+        val bitmap = decodeImage({ ByteArrayInputStream(bytes) }, PHOTO_EDGE) ?: return null
+        val out = encodeImage(bitmap, ImageFormat.JPEG, 90)
         bitmap.recycle()
-        return out.toByteArray().takeIf { it.size <= PHOTO_MAXIMUM }
+        return out.takeIf { it.size <= PHOTO_MAXIMUM }
     }
 
     private companion object {

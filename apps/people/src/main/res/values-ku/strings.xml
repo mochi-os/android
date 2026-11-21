@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Tu kes nehatin dîtin</string>
     <string name="people_friends_try_adjusting">Lêgerîna xwe eyar bike</string>
     <string name="people_friends_pending">Li bendê</string>
-    <string name="people_friends_received_tab">Hate stendin</string>
-    <string name="people_friends_sent_tab">Şandî</string>
     <string name="people_invitations_incoming">Vexwendinên hatî</string>
     <string name="people_invitations_empty">Tu vexwendinên ber-bûyer tune</string>
     <string name="people_invitations_empty_hint">Vexwendinên nû dê li vir xuya bibin</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Vexwendina ji %1$s hate qebûlkirin</string>
     <string name="people_invitations_toast_declined">Vexwendina ji %1$s hate redkirin</string>
     <string name="people_invitations_toast_cancelled">Vexwendina ji %1$s re hate betalkirin</string>
-    <string name="people_groups_empty">Tu kom tune</string>
     <string name="people_group_delete_confirm">Koma \"%1$s\" jê bibe? Ev nayê vegerandin.</string>
     <string name="people_member_remove_confirm">Tu dixwazî %1$s ji vê komê rakî?</string>
     <string name="people_member_remove_with_name">%1$s rake</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Wêneya %1$s nehate hilberandin</string>
     <string name="people_profile_accent_invalid">Rengekî hex yê derbasdar binivîse (mînak #a78bfa)</string>
     <string name="people_profile_accent_none">Tu</string>
-    <string name="people_profile_privacy_private_desc">Tenê hevalên hevbeş dikarin profîla te bibînin</string>
     <string name="people_welcome_title">Bi xêr hatî bo Mirovan</string>
     <string name="people_person_banner_alt">Bannera %1$s</string>
-    <string name="people_person_private">Ev profîl taybet e</string>
     <string name="people_person_state_invited">Vexwendî</string>
 
     <string name="people_invitations_accept_all">Hemûyan bipejirîne</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Li seranserê Mochi hevalan bibîne û têkilî deyne. Ji bo şandina vexwendinê Têkilî lê zêde bike bitikîne.</string>
     <string name="people_person_state_contact">Di têkiliyan de</string>
-    <string name="people_device_create">Çêbike</string>
-    <string name="people_device_add">Cîhazekê zêde bike</string>
-    <string name="people_device_username">Navê bikarhêner</string>
-    <string name="people_device_done">Qediya</string>
-    <string name="people_device_used">Bikaranîna dawî %1$s</string>
-    <string name="people_device_never">Tu car</string>
     <string name="people_sync_now">Niha hev demîne bike</string>
-    <string name="people_device_title">Cîhazên girêdayî</string>
-    <string name="people_device_name">Navê cîhazê</string>
     <string name="people_device_address">URLa pirtûka navnîşanan</string>
-    <string name="people_device_password">Şîfre</string>
-    <string name="people_device_copy">%1$s kopî bike</string>
-    <string name="people_device_warning">Vê şîfreyê niha tomar bike. Careke din nayê nîşandan.</string>
-    <string name="people_device_empty">Tu cîhaz ne girêdayî ye.</string>
-    <string name="people_device_created">Hat çêkirin %1$s</string>
-    <string name="people_device_delete">Cîhazê jê bibe</string>
-    <string name="people_device_delete_title">Cîhaz were jêbirin?</string>
-    <string name="people_device_delete_message">Cîhaz êdî nikare kontakt an salnameyan hevdem bike.</string>
-    <string name="people_device_deleted">Cîhaz hate jêbirin</string>
     <string name="people_sync_title">Bi vê telefonê re hevdem bike</string>
     <string name="people_sync_confirm">Jêbirina kontakta hevalekî di sepana Kontakt a vê telefonê de hevaltiyê jî diqedîne.</string>
     <string name="people_sync_enable">Çalak bike</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Mîheng</string>
     <string name="people_contacts_invitation_sent">Vexwendin hat şandin</string>
     <string name="people_contact_keep">Bihêle</string>
+    <string name="people_invitations_received_count">Hate stendin (%1$s)</string>
+    <string name="people_invitations_sent_count">Şandî (%1$s)</string>
+    <string name="people_contact_discard">Guhertinan bavêje</string>
+    <string name="people_person_unavailable">Kes ne berdest e</string>
 </resources>

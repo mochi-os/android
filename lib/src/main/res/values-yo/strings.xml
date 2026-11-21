@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ti bẹ̀rẹ̀ eré padà</string>
     <string name="game_not_found">A kò rí eré náà</string>
     <string name="game_chat_move_played_you">O ṣe %1$s</string>
+    <string name="devices_add">Fi ẹ̀rọ kan kún</string>
+    <string name="devices_copy">Ṣe àdàkọ %1$s</string>
+    <string name="devices_create">Dá</string>
+    <string name="devices_created">Ṣẹdá %1$s</string>
+    <string name="devices_delete">Pa ẹ̀rọ rẹ́</string>
+    <string name="devices_delete_message">Ẹ̀rọ náà kò ní lè ṣe àmúṣiṣẹ́pọ̀ àwọn olùbásọ̀rọ̀ tàbí àwọn kàlẹ́ńdà mọ́.</string>
+    <string name="devices_delete_title">Pa ẹ̀rọ náà rẹ́?</string>
+    <string name="devices_deleted">A ti pa ẹ̀rọ náà rẹ́</string>
+    <string name="devices_done">Ti parí</string>
+    <string name="devices_empty">Kò sí ẹ̀rọ tí a so pọ̀</string>
+    <string name="devices_name">Orúkọ ẹ̀rọ</string>
+    <string name="devices_password">Ọ̀rọ̀ aṣínà</string>
+    <string name="devices_title">Àwọn ẹ̀rọ tí a so pọ̀</string>
+    <string name="devices_used">Lò gbẹyìn %1$s</string>
+    <string name="devices_username">Orúkọ olùmúlò</string>
+    <string name="devices_warning">Ṣe àdàkọ ọ̀rọ̀ ìgbaniwọlé báyìí: kò ní farahàn mọ́.</string>
+    <string name="devices_unused">Kò tíì lò rí</string>
 </resources>

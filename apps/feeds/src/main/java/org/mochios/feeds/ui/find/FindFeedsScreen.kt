@@ -299,7 +299,6 @@ fun FindFeedsContent(
 
     pendingPermission?.let { pending ->
         PermissionRequestDialog(
-            appId = pending.app,
             permissionName = pending.name,
             onAllow = { viewModel.allowPendingPermission() },
             onDeny = { viewModel.denyPendingPermission() }

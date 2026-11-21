@@ -21,11 +21,15 @@ class PeopleSectionTest {
     }
 
     @Test
+    fun `the token the retired groups list wrote resolves to contacts`() {
+        assertEquals(PeopleSection.CONTACTS, peopleSection("groups"))
+    }
+
+    @Test
     fun `every current token resolves to itself`() {
         for (section in listOf(
             PeopleSection.CONTACTS,
             PeopleSection.INVITATIONS,
-            PeopleSection.GROUPS,
             PeopleSection.PROFILE,
         )) {
             assertEquals(section, peopleSection(section))

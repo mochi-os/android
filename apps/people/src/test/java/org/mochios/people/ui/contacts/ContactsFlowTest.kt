@@ -23,6 +23,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -97,6 +98,27 @@ class ContactsFlowTest {
     /** The list comes back with no contacts in it. */
     @Volatile private var empty = false
 
+    /** Holds the contacts list's reply until released. */
+    @Volatile private var listing: CountDownLatch? = null
+
+    /** The status reading a contact fails with, while set. */
+    @Volatile private var unreadable: Int? = null
+
+    /**
+     * Ada linked to a person, with whether the invitation to them is out, as
+     * a server that answers it sends; unset, the server predates the field.
+     */
+    @Volatile private var invitation: Boolean? = null
+
+    /** The etag a read of Ada answers with, her card the same, while set: the server restamped it. */
+    @Volatile private var restamp: String? = null
+
+    /** Every update fails, while set. */
+    @Volatile private var failing = false
+
+    /** Holds a contact's read until released. */
+    @Volatile private var reading: CountDownLatch? = null
+
     /** Collectors of a view model's events, stopped at the end. */
     private val listening = mutableListOf<Job>()
 
@@ -114,6 +136,7 @@ class ContactsFlowTest {
                 }
                 return when (path) {
                     "-/contacts" -> when {
+                        listing?.await(10, TimeUnit.SECONDS) == false -> MockResponse().setResponseCode(504)
                         down -> MockResponse().setResponseCode(500)
                             .setBody("""{"error": "The address book could not be read"}""")
                         empty -> ok("""{"contacts": []}""")
@@ -123,12 +146,23 @@ class ContactsFlowTest {
                     }
                     "-/friends/invite", "-/friends/remove", "-/books/rename", "-/books/delete" -> ok("{}")
                     "-/contacts/get" -> when {
+                        reading?.await(10, TimeUnit.SECONDS) == false -> MockResponse().setResponseCode(504)
+                        unreadable != null -> MockResponse().setResponseCode(unreadable!!).setBody(
+                            if (unreadable == 404) """{"error": "Contact not found"}""" else """{"error": "The contact could not be read"}""",
+                        )
                         body.contains("source=c2") -> ok("""{"contact": $MERGED, "source": $ADA}""")
                         body.contains("source=c3") -> MockResponse().setResponseCode(409)
                             .setBody("""{"error": "Both contacts are linked to Mochi people and cannot be merged"}""")
-                        else -> ok("""{"contact": $ADA}""")
+                        else -> {
+                            var contact = ADA
+                            invitation?.let { out -> contact = contact.replace("\"name\": \"Ada\",", "\"name\": \"Ada\", \"person\": \"p1\", \"invited\": $out,") }
+                            restamp?.let { tag -> contact = contact.replace("\"etag\": \"e1\"", "\"etag\": \"$tag\"") }
+                            ok("""{"contact": $contact}""")
+                        }
                     }
-                    "-/contacts/update" -> if (stale) {
+                    "-/contacts/update" -> if (failing) {
+                        MockResponse().setResponseCode(500).setBody("""{"error": "Not now"}""")
+                    } else if (stale) {
                         MockResponse().setResponseCode(412)
                             .setBody("""{"error": "The contact was changed elsewhere. Reload and try again."}""")
                     } else if (body.contains("\"source\"")) {
@@ -621,6 +655,200 @@ class ContactsFlowTest {
         rule.waitUntil(5_000) {
             rule.onAllNodesWithText("You have already invited this person").fetchSemanticsNodes().isNotEmpty()
         }
+    }
+
+    // ---- leaving, a failed read, and what the editor reads ----
+
+    /** An editor on a contact whose read has failed, once it has. */
+    private fun unread(status: Int): ContactEditViewModel {
+        unreadable = status
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        until { model.uiState.value.error != null && !model.uiState.value.isLoading }
+        return model
+    }
+
+    @Test
+    fun `an editor whose contact could not be read is left at once`() {
+        val model = unread(500)
+        model.leave()
+        // THE POINT: the failed read does not keep the screen.
+        until { model.uiState.value.left }
+    }
+
+    @Test
+    fun `a failed read is read again by Retry`() {
+        val model = unread(500)
+        unreadable = null
+        model.load()
+        until { model.uiState.value.contact != null }
+        assertEquals(null, model.uiState.value.error)
+        assertEquals("Ada", model.uiState.value.form.name)
+    }
+
+    @Test
+    fun `a failed read shows why with Retry, not a form that could never be saved`() {
+        AppContext.set(context)
+        val model = unread(500)
+        rule.setContent { ContactEditScreen(onBack = {}, onDeleted = {}, viewModel = model) }
+        rule.onNodeWithText("The contact could not be read").assertExists()
+        // THE POINT: nothing to type into, and no menu acting on a contact never read.
+        assertTrue(rule.onAllNodes(hasSetTextAction()).fetchSemanticsNodes().isEmpty())
+        rule.onNodeWithContentDescription("Contact actions").assertDoesNotExist()
+        unreadable = null
+        rule.onNodeWithText("Retry").performClick()
+        until { model.uiState.value.contact != null }
+        rule.waitForIdle()
+        assertTrue(rule.onAllNodes(hasSetTextAction()).fetchSemanticsNodes().isNotEmpty())
+    }
+
+    @Test
+    fun `a contact that is gone is not found, with the way back`() {
+        AppContext.set(context)
+        val model = unread(404)
+        var backs = 0
+        rule.setContent { ContactEditScreen(onBack = { backs++ }, onDeleted = {}, viewModel = model) }
+        rule.onNodeWithText("Contact not found").assertExists()
+        rule.onNodeWithText("Retry").assertDoesNotExist()
+        rule.onNodeWithText("Back").performClick()
+        until { model.uiState.value.left }
+        rule.waitForIdle()
+        assertEquals(1, backs)
+    }
+
+    @Test
+    fun `a save that fails on the way out keeps the editor, offering to leave without it`() {
+        AppContext.set(context)
+        val model = editor()
+        failing = true
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.leave()
+        until { model.uiState.value.unsaved != null }
+        assertFalse(model.uiState.value.left)
+        assertEquals("Not now", model.uiState.value.unsaved?.userMessage())
+        model.discard()
+        assertTrue(model.uiState.value.left)
+        // A field losing its focus on the way out saves nothing more.
+        model.save()
+        pass()
+        assertEquals(1, sent("update").size)
+    }
+
+    @Test
+    fun `the screen offers to discard the edit leaving could not save`() {
+        AppContext.set(context)
+        val model = editor()
+        failing = true
+        var backs = 0
+        rule.setContent { ContactEditScreen(onBack = { backs++ }, onDeleted = {}, viewModel = model) }
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.leave()
+        until { model.uiState.value.unsaved != null }
+        rule.waitForIdle()
+        // Said in the dialog, and above the form as any failed save is.
+        assertTrue(rule.onAllNodesWithText("Not now").fetchSemanticsNodes().isNotEmpty())
+        rule.onNodeWithText("Discard changes").performClick()
+        until { model.uiState.value.left }
+        rule.waitForIdle()
+        assertEquals(1, backs)
+    }
+
+    @Test
+    fun `Copy waits on a save that fails, rather than copy the card without the edit`() {
+        val model = editor()
+        failing = true
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.copy()
+        until { model.uiState.value.error != null && !model.uiState.value.isSaving }
+        pass()
+        assertEquals(null, model.uiState.value.copied)
+    }
+
+    @Test
+    fun `a merge waits on a save that fails, saying why in its list`() {
+        AppContext.set(context)
+        val model = editor()
+        failing = true
+        model.openMerge()
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        model.merge("c2")
+        until { model.uiState.value.mergeError != null }
+        assertEquals("Not now", model.uiState.value.mergeError?.userMessage())
+        assertTrue(sent("get").none { it.contains("source=c2") })
+        assertEquals(null, model.uiState.value.opened)
+    }
+
+    @Test
+    fun `a copy's form shows once the card it copies is read, so nothing typed is written over`() {
+        val held = CountDownLatch(1)
+        reading = held
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("copy" to "c1")), repository)
+        rule.setContent { ContactEditScreen(onBack = {}, onDeleted = {}, viewModel = model) }
+        until { reads().isNotEmpty() }
+        rule.waitForIdle()
+        // THE POINT: no form to type into while the card is on its way.
+        assertTrue(rule.onAllNodes(hasSetTextAction()).fetchSemanticsNodes().isEmpty())
+        held.countDown()
+        until { model.uiState.value.form.name == "Ada" && !model.uiState.value.isLoading }
+        rule.waitForIdle()
+        assertTrue(rule.onAllNodes(hasSetTextAction()).fetchSemanticsNodes().isNotEmpty())
+    }
+
+    @Test
+    fun `an older server's list is read before the form shows, so typing is never written over`() {
+        val held = CountDownLatch(1)
+        listing = held
+        val model = ContactEditViewModel(SavedStateHandle(mapOf("id" to "c1")), repository)
+        until { listed().isNotEmpty() }
+        // THE POINT: no form to type into while the read that follows it is out.
+        assertEquals(null, model.uiState.value.contact)
+        held.countDown()
+        until { model.uiState.value.contact != null && !model.uiState.value.isLoading }
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        pass()
+        assertEquals("Ada Lovelace", model.uiState.value.form.name)
+    }
+
+    @Test
+    fun `the editor learns the invitation from the contact, listing no contacts`() {
+        invitation = true
+        val model = editor()
+        pass()
+        assertEquals(setOf("p1"), model.uiState.value.sent)
+        // THE POINT: no list of every contact is read for one contact's switch.
+        assertTrue(listed().isEmpty())
+        val before = reads().size
+        runBlocking { repository.removeFriend("p9") }
+        until(advance = true) { reads().size > before }
+        pass()
+        // Nor when a change elsewhere has the contact read again.
+        assertTrue(listed().isEmpty())
+    }
+
+    @Test
+    fun `a server that predates the field is asked for the list`() {
+        val model = editor()
+        until { listed().isNotEmpty() }
+        assertEquals(emptySet<String>(), model.uiState.value.sent)
+    }
+
+    @Test
+    fun `a card the server only restamped takes its new etag while an edit is typed`() {
+        invitation = false
+        val model = editor()
+        pass()
+        model.updateForm(model.uiState.value.form.copy(name = "Ada Lovelace"))
+        restamp = "e7"
+        val before = reads().size
+        // A change signal, as a friend's photo arriving sends: the card is read again.
+        runBlocking { repository.removeFriend("p9") }
+        until(advance = true) { reads().size > before }
+        until { model.uiState.value.contact?.etag == "e7" }
+        model.save()
+        until { sent("update").isNotEmpty() }
+        val body = sent("update").single()
+        // THE POINT: the save goes against the etag the card now has, not refused as changed elsewhere.
+        assertTrue(body, body.contains("\"etag\":\"e7\""))
+        assertTrue(body, body.contains("Ada Lovelace"))
     }
 }
 

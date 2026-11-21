@@ -8,6 +8,7 @@ package org.mochios.people.ui.groups
 import com.google.gson.Gson
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.mochios.people.model.GroupMember
@@ -16,7 +17,8 @@ import org.mochios.people.model.GroupMemberType
 /**
  * A group's member list names every member: a person the server cannot look
  * up and a nested group since deleted arrive with an empty name and are
- * labelled, never shown by their raw id; the member search reads as searching
+ * labelled, never shown by their raw id; a person shows their avatar, as on
+ * the web, where every member used to show initials; the member search reads as searching
  * from the first keystroke.
  */
 class GroupMembersTest {
@@ -46,6 +48,18 @@ class GroupMembersTest {
     fun `a nested group since deleted is labelled, not shown by its id`() {
         val member = GroupMember(member = "019fadb5", name = "", type = GroupMemberType.GROUP)
         assertEquals("Deleted group", label(member))
+    }
+
+    @Test
+    fun `a person member shows their avatar, and a nested group none`() {
+        assertEquals("/people/p1/-/avatar", memberAvatar(GroupMember(member = "p1", name = "Ada"))?.address)
+        assertNull(memberAvatar(GroupMember(member = "019fadb5", name = "Friends", type = GroupMemberType.GROUP)))
+    }
+
+    @Test
+    fun `a member id that cannot be one segment of the address has no avatar`() {
+        assertNull(memberAvatar(GroupMember(member = "../settings", name = "Mallory")))
+        assertNull(memberAvatar(GroupMember(member = "", name = "Nobody")))
     }
 
     @Test

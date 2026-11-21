@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Մարդիկ չեն գտնվել</string>
     <string name="people_friends_try_adjusting">Փորձեք ճշգրտել ձեր որոնումը</string>
     <string name="people_friends_pending">Սպասվող</string>
-    <string name="people_friends_received_tab">Ստացված է</string>
-    <string name="people_friends_sent_tab">Ուղարկված</string>
     <string name="people_invitations_incoming">Մուտքային հրավերներ</string>
     <string name="people_invitations_empty">Սպասվող հրավերներ չկան</string>
     <string name="people_invitations_empty_hint">Նոր հրավերները կհայտնվեն այստեղ</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Ընդունված է %1$s-ի հրավերը</string>
     <string name="people_invitations_toast_declined">Մերժված է %1$s-ի հրավերը</string>
     <string name="people_invitations_toast_cancelled">Չեղարկված է %1$s-ին ուղարկված հրավերը</string>
-    <string name="people_groups_empty">Խմբեր չկան</string>
     <string name="people_group_delete_confirm">Ջնջե՞լ «%1$s» խումբը։ Սա անդառնալի է։</string>
     <string name="people_member_remove_confirm">Վստա՞հ եք, որ ցանկանում եք հեռացնել %1$s-ին այս խմբից։</string>
     <string name="people_member_remove_with_name">Հեռացնել %1$s-ը</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s պատկերը մշակել չհաջողվեց</string>
     <string name="people_profile_accent_invalid">Մուտքագրեք վավեր տասնվեցական գույն (օր.՝ #a78bfa)</string>
     <string name="people_profile_accent_none">Ոչ մեկը</string>
-    <string name="people_profile_privacy_private_desc">Միայն փոխադարձ ընկերները կարող են դիտել ձեր հաշվի էջը</string>
     <string name="people_welcome_title">Բարի գալուստ Մարդիկ</string>
     <string name="people_person_banner_alt">%1$s-ի դրոշակ</string>
-    <string name="people_person_private">Այս հաշվի էջը գաղտնի է</string>
     <string name="people_person_state_invited">Հրավիրված</string>
 
     <string name="people_invitations_accept_all">Ընդունել բոլորը</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Գտեք ընկերների Mochi-ի ողջ տարածքում և կապ հաստատեք։ Հրավեր ուղարկելու համար հպեք Ավելացնել կոնտակտ։</string>
     <string name="people_person_state_contact">Կոնտակտներում</string>
-    <string name="people_device_create">Ստեղծել</string>
-    <string name="people_device_add">Ավելացնել սարք</string>
-    <string name="people_device_username">Օգտանուն</string>
-    <string name="people_device_done">Կատարված է</string>
-    <string name="people_device_used">Վերջին օգտագործումը %1$s</string>
-    <string name="people_device_never">Երբեք</string>
     <string name="people_sync_now">Համաժամանակեցնել հիմա</string>
-    <string name="people_device_title">Միացված սարքեր</string>
-    <string name="people_device_name">Սարքի անունը</string>
     <string name="people_device_address">Հասցեագրքի URL</string>
-    <string name="people_device_password">Գաղտնաբառ</string>
-    <string name="people_device_copy">Պատճենել %1$s</string>
-    <string name="people_device_warning">Պահեք այս գաղտնաբառը հիմա։ Այն այլևս հնարավոր չի լինի ցուցադրել։</string>
-    <string name="people_device_empty">Միացված սարքեր չկան։</string>
-    <string name="people_device_created">Ստեղծվել է %1$s</string>
-    <string name="people_device_delete">Ջնջել սարքը</string>
-    <string name="people_device_delete_title">Ջնջե՞լ սարքը</string>
-    <string name="people_device_delete_message">Սարքն այլևս չի կարողանա համաժամացնել կոնտակտները կամ օրացույցները։</string>
-    <string name="people_device_deleted">Սարքը ջնջվեց</string>
     <string name="people_sync_title">Համաժամացնել այս հեռախոսի հետ</string>
     <string name="people_sync_confirm">Այս հեռախոսի Կոնտակտներ հավելվածում ընկերոջ կոնտակտը ջնջելը նաև ավարտում է ընկերությունը։</string>
     <string name="people_sync_enable">Միացնել</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Կարգավորումներ</string>
     <string name="people_contacts_invitation_sent">Հրավերն ուղարկվեց</string>
     <string name="people_contact_keep">Պահել</string>
+    <string name="people_invitations_received_count">Ստացված է (%1$s)</string>
+    <string name="people_invitations_sent_count">Ուղարկված (%1$s)</string>
+    <string name="people_contact_discard">Հրաժարվել փոփոխություններից</string>
+    <string name="people_person_unavailable">Անձն անհասանելի է</string>
 </resources>

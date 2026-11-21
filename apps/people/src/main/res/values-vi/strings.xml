@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Không tìm thấy người nào</string>
     <string name="people_friends_try_adjusting">Hãy thử điều chỉnh tìm kiếm</string>
     <string name="people_friends_pending">Đang chờ</string>
-    <string name="people_friends_received_tab">Đã nhận</string>
-    <string name="people_friends_sent_tab">Đã gửi</string>
     <string name="people_invitations_incoming">Lời mời đến</string>
     <string name="people_invitations_empty">Không có lời mời đang chờ</string>
     <string name="people_invitations_empty_hint">Lời mời mới sẽ xuất hiện ở đây</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Đã chấp nhận lời mời từ %1$s</string>
     <string name="people_invitations_toast_declined">Đã từ chối lời mời từ %1$s</string>
     <string name="people_invitations_toast_cancelled">Đã hủy lời mời đến %1$s</string>
-    <string name="people_groups_empty">Không có nhóm nào</string>
     <string name="people_group_delete_confirm">Xóa nhóm \"%1$s\"? Hành động này không thể hoàn tác.</string>
     <string name="people_member_remove_confirm">Bạn có chắc chắn muốn xóa %1$s khỏi nhóm này không?</string>
     <string name="people_member_remove_with_name">Xóa %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Không thể xử lý ảnh %1$s</string>
     <string name="people_profile_accent_invalid">Nhập mã màu hex hợp lệ (ví dụ: #a78bfa)</string>
     <string name="people_profile_accent_none">Không có</string>
-    <string name="people_profile_privacy_private_desc">Chỉ bạn bè chung mới có thể xem hồ sơ của bạn</string>
     <string name="people_welcome_title">Chào mừng đến với Mọi người</string>
     <string name="people_person_banner_alt">Ảnh bìa của %1$s</string>
-    <string name="people_person_private">Hồ sơ này ở chế độ riêng tư</string>
     <string name="people_person_state_invited">Đã mời</string>
 
     <string name="people_invitations_accept_all">Chấp nhận tất cả</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">Tìm bạn bè trên khắp Mochi và kết nối. Nhấn Thêm liên hệ để gửi lời mời.</string>
     <string name="people_person_state_contact">Có trong danh bạ</string>
-    <string name="people_device_create">Tạo</string>
-    <string name="people_device_add">Thêm thiết bị</string>
-    <string name="people_device_username">Tên người dùng</string>
-    <string name="people_device_done">Xong</string>
-    <string name="people_device_used">Lần cuối sử dụng %1$s</string>
-    <string name="people_device_never">Không bao giờ</string>
     <string name="people_sync_now">Đồng bộ ngay</string>
-    <string name="people_device_title">Thiết bị đã kết nối</string>
-    <string name="people_device_name">Tên thiết bị</string>
     <string name="people_device_address">URL sổ địa chỉ</string>
-    <string name="people_device_password">Mật khẩu</string>
-    <string name="people_device_copy">Sao chép %1$s</string>
-    <string name="people_device_warning">Hãy lưu mật khẩu này ngay. Mật khẩu sẽ không thể hiển thị lại.</string>
-    <string name="people_device_empty">Chưa có thiết bị nào được kết nối.</string>
-    <string name="people_device_created">Đã tạo %1$s</string>
-    <string name="people_device_delete">Xóa thiết bị</string>
-    <string name="people_device_delete_title">Xóa thiết bị?</string>
-    <string name="people_device_delete_message">Thiết bị sẽ không thể đồng bộ danh bạ hoặc lịch nữa.</string>
-    <string name="people_device_deleted">Đã xóa thiết bị</string>
     <string name="people_sync_title">Đồng bộ với điện thoại này</string>
     <string name="people_sync_confirm">Xóa liên hệ của một người bạn trong ứng dụng Danh bạ của điện thoại này cũng sẽ kết thúc tình bạn.</string>
     <string name="people_sync_enable">Bật</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">Cài đặt</string>
     <string name="people_contacts_invitation_sent">Đã gửi lời mời</string>
     <string name="people_contact_keep">Giữ lại</string>
+    <string name="people_invitations_received_count">Đã nhận (%1$s)</string>
+    <string name="people_invitations_sent_count">Đã gửi (%1$s)</string>
+    <string name="people_contact_discard">Loại bỏ thay đổi</string>
+    <string name="people_person_unavailable">Người này không khả dụng</string>
 </resources>

@@ -355,4 +355,21 @@
     <string name="game_system_score_resume">%1$s a reluat jocul</string>
     <string name="game_not_found">Jocul nu a fost găsit</string>
     <string name="game_chat_move_played_you">Ai jucat %1$s</string>
+    <string name="devices_add">Adaugă un dispozitiv</string>
+    <string name="devices_copy">Copiază %1$s</string>
+    <string name="devices_create">Creează</string>
+    <string name="devices_created">Creat %1$s</string>
+    <string name="devices_delete">Șterge dispozitivul</string>
+    <string name="devices_delete_message">Dispozitivul nu va mai putea sincroniza contactele sau calendarele.</string>
+    <string name="devices_delete_title">Ștergi dispozitivul?</string>
+    <string name="devices_deleted">Dispozitiv șters</string>
+    <string name="devices_done">Terminat</string>
+    <string name="devices_empty">Niciun dispozitiv conectat</string>
+    <string name="devices_name">Numele dispozitivului</string>
+    <string name="devices_password">Parolă</string>
+    <string name="devices_title">Dispozitive conectate</string>
+    <string name="devices_used">Ultima utilizare %1$s</string>
+    <string name="devices_username">Nume de utilizator</string>
+    <string name="devices_warning">Copiază parola acum: nu mai poate fi afișată.</string>
+    <string name="devices_unused">Nefolosit niciodată</string>
 </resources>

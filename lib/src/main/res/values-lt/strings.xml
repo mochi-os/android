@@ -357,4 +357,21 @@
     <string name="game_system_score_resume">%1$s tęsė žaidimą</string>
     <string name="game_not_found">Žaidimas nerastas</string>
     <string name="game_chat_move_played_you">Jūs sužaidėte %1$s</string>
+    <string name="devices_add">Pridėti įrenginį</string>
+    <string name="devices_copy">Kopijuoti %1$s</string>
+    <string name="devices_create">Sukurti</string>
+    <string name="devices_created">Sukurta %1$s</string>
+    <string name="devices_delete">Ištrinti įrenginį</string>
+    <string name="devices_delete_message">Įrenginys nebegalės sinchronizuoti kontaktų ar kalendorių.</string>
+    <string name="devices_delete_title">Ištrinti įrenginį?</string>
+    <string name="devices_deleted">Įrenginys ištrintas</string>
+    <string name="devices_done">Atlikta</string>
+    <string name="devices_empty">Nėra prijungtų įrenginių</string>
+    <string name="devices_name">Įrenginio pavadinimas</string>
+    <string name="devices_password">Slaptažodis</string>
+    <string name="devices_title">Prijungti įrenginiai</string>
+    <string name="devices_used">Paskutinį kartą naudota %1$s</string>
+    <string name="devices_username">Vartotojo vardas</string>
+    <string name="devices_warning">Nukopijuokite slaptažodį dabar: jo nebus galima parodyti dar kartą.</string>
+    <string name="devices_unused">Niekada nenaudota</string>
 </resources>

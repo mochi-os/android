@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Hakuna watu waliopatikana</string>
     <string name="people_friends_try_adjusting">Jaribu kurekebisha utafutaji wako</string>
     <string name="people_friends_pending">Inasubiri</string>
-    <string name="people_friends_received_tab">Imepokelewa</string>
-    <string name="people_friends_sent_tab">Imetumwa</string>
     <string name="people_invitations_incoming">Mialiko inayoingia</string>
     <string name="people_invitations_empty">Hakuna mialiko inayosubiri</string>
     <string name="people_invitations_empty_hint">Mialiko mipya itaonekana hapa</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Mwaliko kutoka kwa %1$s umekubaliwa</string>
     <string name="people_invitations_toast_declined">Mwaliko kutoka kwa %1$s umekataliwa</string>
     <string name="people_invitations_toast_cancelled">Mwaliko kwa %1$s umeghairiwa</string>
-    <string name="people_groups_empty">Hakuna vikundi</string>
     <string name="people_group_delete_confirm">Futa kikundi \"%1$s\"? Hili haliwezi kutenduliwa.</string>
     <string name="people_member_remove_confirm">Una uhakika unataka kumwondoa %1$s kwenye kikundi hiki?</string>
     <string name="people_member_remove_with_name">Mwondoe %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Haikuweza kuchakata picha ya %1$s</string>
     <string name="people_profile_accent_invalid">Ingiza rangi halali ya heksi (mf. #a78bfa)</string>
     <string name="people_profile_accent_none">Hakuna</string>
-    <string name="people_profile_privacy_private_desc">Marafiki wa pande zote pekee wanaweza kuona wasifu wako</string>
     <string name="people_welcome_title">Karibu kwenye Watu</string>
     <string name="people_person_banner_alt">Bango la %1$s</string>
-    <string name="people_person_private">Wasifu huu ni wa faragha</string>
     <string name="people_person_state_invited">Amealikwa</string>
 
     <string name="people_invitations_accept_all">Kubali zote</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Tafuta marafiki kote kwenye Mochi na uungane nao. Gusa Ongeza anwani ili kutuma mwaliko.</string>
     <string name="people_person_state_contact">Katika anwani</string>
-    <string name="people_device_create">Unda</string>
-    <string name="people_device_add">Ongeza kifaa</string>
-    <string name="people_device_username">Jina la mtumiaji</string>
-    <string name="people_device_done">Imekamilika</string>
-    <string name="people_device_used">Mara ya mwisho kutumika %1$s</string>
-    <string name="people_device_never">Kamwe</string>
     <string name="people_sync_now">Sawazisha sasa</string>
-    <string name="people_device_title">Vifaa vilivyounganishwa</string>
-    <string name="people_device_name">Jina la kifaa</string>
     <string name="people_device_address">URL ya kitabu cha anwani</string>
-    <string name="people_device_password">Nenosiri</string>
-    <string name="people_device_copy">Nakili %1$s</string>
-    <string name="people_device_warning">Hifadhi nenosiri hili sasa. Haliwezi kuonyeshwa tena.</string>
-    <string name="people_device_empty">Hakuna vifaa vilivyounganishwa.</string>
-    <string name="people_device_created">Imeundwa %1$s</string>
-    <string name="people_device_delete">Futa kifaa</string>
-    <string name="people_device_delete_title">Futa kifaa?</string>
-    <string name="people_device_delete_message">Kifaa hakitaweza tena kusawazisha anwani wala kalenda.</string>
-    <string name="people_device_deleted">Kifaa kimefutwa</string>
     <string name="people_sync_title">Sawazisha na simu hii</string>
     <string name="people_sync_confirm">Kufuta anwani ya rafiki katika programu ya Anwani ya simu hii pia kunamaliza urafiki.</string>
     <string name="people_sync_enable">Washa</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Mipangilio</string>
     <string name="people_contacts_invitation_sent">Mwaliko umetumwa</string>
     <string name="people_contact_keep">Ziache</string>
+    <string name="people_invitations_received_count">Imepokelewa (%1$s)</string>
+    <string name="people_invitations_sent_count">Imetumwa (%1$s)</string>
+    <string name="people_contact_discard">Tupa mabadiliko</string>
+    <string name="people_person_unavailable">Mtu hapatikani</string>
 </resources>

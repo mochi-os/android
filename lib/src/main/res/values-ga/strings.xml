@@ -359,4 +359,21 @@
     <string name="game_system_score_resume">D\'athchromaigh %1$s ar an imirt</string>
     <string name="game_not_found">Níor aimsíodh an cluiche</string>
     <string name="game_chat_move_played_you">D\'imir tú %1$s</string>
+    <string name="devices_add">Cuir gléas leis</string>
+    <string name="devices_copy">Cóipeáil %1$s</string>
+    <string name="devices_create">Cruthaigh</string>
+    <string name="devices_created">Cruthaithe %1$s</string>
+    <string name="devices_delete">Scrios an gléas</string>
+    <string name="devices_delete_message">Ní bheidh an gléas in ann teagmhálaithe ná féilirí a shioncrónú a thuilleadh.</string>
+    <string name="devices_delete_title">Scrios an gléas?</string>
+    <string name="devices_deleted">Gléas scriosta</string>
+    <string name="devices_done">Críochnaithe</string>
+    <string name="devices_empty">Níl aon ghléas ceangailte</string>
+    <string name="devices_name">Ainm an ghléis</string>
+    <string name="devices_password">Pasfhocal</string>
+    <string name="devices_title">Gléasanna ceangailte</string>
+    <string name="devices_used">Úsáidte go deireanach %1$s</string>
+    <string name="devices_username">Ainm úsáideora</string>
+    <string name="devices_warning">Cóipeáil an pasfhocal anois: ní féidir é a thaispeáint arís.</string>
+    <string name="devices_unused">Níor úsáideadh riamh</string>
 </resources>

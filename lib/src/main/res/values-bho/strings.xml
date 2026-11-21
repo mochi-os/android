@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s खेल फेर से शुरू कइलें</string>
     <string name="game_not_found">खेल ना मिलल</string>
     <string name="game_chat_move_played_you">रउरा %1$s खेलनीं</string>
+    <string name="devices_add">उपकरण शामिल करीं</string>
+    <string name="devices_copy">%1$s कॉपी करीं</string>
+    <string name="devices_create">बनाईं</string>
+    <string name="devices_created">%1$s बनावल गइल</string>
+    <string name="devices_delete">उपकरण मेटाईं</string>
+    <string name="devices_delete_message">उपकरण अब संपर्क भा कैलेंडर सिंक ना कर पाई।</string>
+    <string name="devices_delete_title">उपकरण मेटा दीं?</string>
+    <string name="devices_deleted">उपकरण मेटा गइल</string>
+    <string name="devices_done">हो गइल</string>
+    <string name="devices_empty">कवनो उपकरण जुड़ल नइखे</string>
+    <string name="devices_name">उपकरण के नाम</string>
+    <string name="devices_password">पासवर्ड</string>
+    <string name="devices_title">जुड़ल उपकरण</string>
+    <string name="devices_used">आखिरी इस्तेमाल %1$s</string>
+    <string name="devices_username">उपयोगकर्ता नाम</string>
+    <string name="devices_warning">पासवर्ड अबहीं कॉपी कर लीं: ई फेर से ना देखावल जाई।</string>
+    <string name="devices_unused">कबो इस्तेमाल ना भइल</string>
 </resources>

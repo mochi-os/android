@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Inimesi ei leitud</string>
     <string name="people_friends_try_adjusting">Proovi otsingut kohandada</string>
     <string name="people_friends_pending">Ootel</string>
-    <string name="people_friends_received_tab">Vastu võetud</string>
-    <string name="people_friends_sent_tab">Saadetud</string>
     <string name="people_invitations_incoming">Saabuvad kutsed</string>
     <string name="people_invitations_empty">Ootel kutseid pole</string>
     <string name="people_invitations_empty_hint">Uued kutsed ilmuvad siia</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Võtsid vastu kutse kasutajalt %1$s</string>
     <string name="people_invitations_toast_declined">Lükkasid tagasi kutse kasutajalt %1$s</string>
     <string name="people_invitations_toast_cancelled">Tühistasid kutse kasutajale %1$s</string>
-    <string name="people_groups_empty">Rühmi pole</string>
     <string name="people_group_delete_confirm">Kas kustutada rühm \"%1$s\"? Seda ei saa tagasi võtta.</string>
     <string name="people_member_remove_confirm">Kas oled kindel, et soovid eemaldada kasutaja %1$s sellest rühmast?</string>
     <string name="people_member_remove_with_name">Eemalda %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Pildi %1$s töötlemine ebaõnnestus</string>
     <string name="people_profile_accent_invalid">Sisesta sobiv kuueteistkümnendvärv (nt #a78bfa)</string>
     <string name="people_profile_accent_none">Puudub</string>
-    <string name="people_profile_privacy_private_desc">Profiili saavad vaadata ainult vastastikused sõbrad</string>
     <string name="people_welcome_title">Tere tulemast rakendusse Inimesed</string>
     <string name="people_person_banner_alt">Kasutaja %1$s bänner</string>
-    <string name="people_person_private">See profiil on privaatne</string>
     <string name="people_person_state_invited">Kutsutud</string>
 
     <string name="people_invitations_accept_all">Nõustu kõigiga</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Leia sõpru kogu Mochis ja võta ühendust. Kutse saatmiseks puuduta Lisa kontakt.</string>
     <string name="people_person_state_contact">Kontaktides</string>
-    <string name="people_device_create">Loo</string>
-    <string name="people_device_add">Lisa seade</string>
-    <string name="people_device_username">Kasutajanimi</string>
-    <string name="people_device_done">Tehtud</string>
-    <string name="people_device_used">Viimati kasutatud %1$s</string>
-    <string name="people_device_never">Mitte kunagi</string>
     <string name="people_sync_now">Sünkroniseeri kohe</string>
-    <string name="people_device_title">Ühendatud seadmed</string>
-    <string name="people_device_name">Seadme nimi</string>
     <string name="people_device_address">Aadressiraamatu URL</string>
-    <string name="people_device_password">Parool</string>
-    <string name="people_device_copy">Kopeeri %1$s</string>
-    <string name="people_device_warning">Salvesta see parool kohe. Seda ei saa uuesti kuvada.</string>
-    <string name="people_device_empty">Ühtegi seadet pole ühendatud.</string>
-    <string name="people_device_created">Loodud %1$s</string>
-    <string name="people_device_delete">Kustuta seade</string>
-    <string name="people_device_delete_title">Kas kustutada seade?</string>
-    <string name="people_device_delete_message">Seade ei saa enam kontakte ega kalendreid sünkroonida.</string>
-    <string name="people_device_deleted">Seade kustutatud</string>
     <string name="people_sync_title">Sünkroniseeri selle telefoniga</string>
     <string name="people_sync_confirm">Sõbra kontakti kustutamine selle telefoni rakenduses Kontaktid lõpetab ka sõpruse.</string>
     <string name="people_sync_enable">Lülita sisse</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Seaded</string>
     <string name="people_contacts_invitation_sent">Kutse saadetud</string>
     <string name="people_contact_keep">Säilita</string>
+    <string name="people_invitations_received_count">Vastu võetud (%1$s)</string>
+    <string name="people_invitations_sent_count">Saadetud (%1$s)</string>
+    <string name="people_contact_discard">Loobu muudatustest</string>
+    <string name="people_person_unavailable">Isik pole saadaval</string>
 </resources>

@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">Ipinagpatuloy ni %1$s ang laro</string>
     <string name="game_not_found">Hindi nahanap ang laro</string>
     <string name="game_chat_move_played_you">Naglaro ka ng %1$s</string>
+    <string name="devices_add">Magdagdag ng device</string>
+    <string name="devices_copy">Kopyahin ang %1$s</string>
+    <string name="devices_create">Gumawa</string>
+    <string name="devices_created">Ginawa noong %1$s</string>
+    <string name="devices_delete">I-delete ang device</string>
+    <string name="devices_delete_message">Hindi na maisi-sync ng device ang mga contact o kalendaryo.</string>
+    <string name="devices_delete_title">I-delete ang device?</string>
+    <string name="devices_deleted">Na-delete na ang device</string>
+    <string name="devices_done">Tapos na</string>
+    <string name="devices_empty">Walang nakakonektang device</string>
+    <string name="devices_name">Pangalan ng device</string>
+    <string name="devices_password">Password</string>
+    <string name="devices_title">Mga nakakonektang device</string>
+    <string name="devices_used">Huling ginamit %1$s</string>
+    <string name="devices_username">Username</string>
+    <string name="devices_warning">Kopyahin ang password ngayon: hindi na ito maipapakita ulit.</string>
+    <string name="devices_unused">Hindi pa nagamit</string>
 </resources>

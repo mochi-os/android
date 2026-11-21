@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Nenhuma pessoa encontrada</string>
     <string name="people_friends_try_adjusting">Experimente ajustar a sua pesquisa</string>
     <string name="people_friends_pending">Pendente</string>
-    <string name="people_friends_received_tab">Recebido</string>
-    <string name="people_friends_sent_tab">Enviado</string>
     <string name="people_invitations_incoming">Convites recebidos</string>
     <string name="people_invitations_empty">Sem convites pendentes</string>
     <string name="people_invitations_empty_hint">Os novos convites aparecerão aqui</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Convite de %1$s aceite</string>
     <string name="people_invitations_toast_declined">Convite de %1$s recusado</string>
     <string name="people_invitations_toast_cancelled">Convite a %1$s cancelado</string>
-    <string name="people_groups_empty">Sem grupos</string>
     <string name="people_group_delete_confirm">Eliminar o grupo \"%1$s\"? Esta ação não pode ser anulada.</string>
     <string name="people_member_remove_confirm">Tem a certeza de que pretende remover %1$s deste grupo?</string>
     <string name="people_member_remove_with_name">Remover %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Não foi possível processar a imagem de %1$s</string>
     <string name="people_profile_accent_invalid">Introduza uma cor hexadecimal válida (por exemplo, #a78bfa)</string>
     <string name="people_profile_accent_none">Nenhum</string>
-    <string name="people_profile_privacy_private_desc">Apenas amigos mútuos podem ver o seu perfil</string>
     <string name="people_welcome_title">Bem-vindo à secção Pessoas</string>
     <string name="people_person_banner_alt">Imagem de capa de %1$s</string>
-    <string name="people_person_private">Este perfil é privado</string>
     <string name="people_person_state_invited">Convidado</string>
 
     <string name="people_invitations_accept_all">Aceitar tudo</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Encontre amigos por todo o Mochi e ligue-se a eles. Toque em Adicionar contacto para enviar um convite.</string>
     <string name="people_person_state_contact">Nos contactos</string>
-    <string name="people_device_create">Criar</string>
-    <string name="people_device_add">Adicionar um dispositivo</string>
-    <string name="people_device_username">Nome de utilizador</string>
-    <string name="people_device_done">Concluído</string>
-    <string name="people_device_used">Último uso %1$s</string>
-    <string name="people_device_never">Nunca</string>
     <string name="people_sync_now">Sincronizar agora</string>
-    <string name="people_device_title">Dispositivos ligados</string>
-    <string name="people_device_name">Nome do dispositivo</string>
     <string name="people_device_address">URL do livro de endereços</string>
-    <string name="people_device_password">Palavra-passe</string>
-    <string name="people_device_copy">Copiar %1$s</string>
-    <string name="people_device_warning">Guarde esta palavra-passe agora. Não poderá ser mostrada novamente.</string>
-    <string name="people_device_empty">Nenhum dispositivo ligado.</string>
-    <string name="people_device_created">Criado %1$s</string>
-    <string name="people_device_delete">Eliminar dispositivo</string>
-    <string name="people_device_delete_title">Eliminar o dispositivo?</string>
-    <string name="people_device_delete_message">O dispositivo deixará de poder sincronizar contactos ou calendários.</string>
-    <string name="people_device_deleted">Dispositivo eliminado</string>
     <string name="people_sync_title">Sincronizar com este telemóvel</string>
     <string name="people_sync_confirm">Eliminar o contacto de um amigo na aplicação Contactos deste telemóvel também termina a amizade.</string>
     <string name="people_sync_enable">Ativar</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Definições</string>
     <string name="people_contacts_invitation_sent">Convite enviado</string>
     <string name="people_contact_keep">Manter</string>
+    <string name="people_invitations_received_count">Recebido (%1$s)</string>
+    <string name="people_invitations_sent_count">Enviado (%1$s)</string>
+    <string name="people_contact_discard">Descartar alterações</string>
+    <string name="people_person_unavailable">Pessoa indisponível</string>
 </resources>

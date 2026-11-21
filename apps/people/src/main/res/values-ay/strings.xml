@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Jaqinak jan jikxatasiti</string>
     <string name="people_friends_try_adjusting">Thaqhäwim mayjt\'ayañ yant\'am</string>
     <string name="people_friends_pending">Suyaski</string>
-    <string name="people_friends_received_tab">Katuqata</string>
-    <string name="people_friends_sent_tab">Apayata</string>
     <string name="people_invitations_incoming">Puriri jawsäwinaka</string>
     <string name="people_invitations_empty">Janiw suyaskir jawsäwinakax utjkiti</string>
     <string name="people_invitations_empty_hint">Machaqa jawsäwinak akan uñstani</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s jaqin jawsäwip katuqatawa</string>
     <string name="people_invitations_toast_declined">%1$s jaqin jawsäwip jan katuqatawa</string>
     <string name="people_invitations_toast_cancelled">%1$s jaqir jawsäwix jaytatawa</string>
-    <string name="people_groups_empty">Janiw tamanakax utjkiti</string>
     <string name="people_group_delete_confirm">¿\"%1$s\" tama chhaqtayañati? Janiw kutt\'ayañjamäkiti.</string>
     <string name="people_member_remove_confirm">¿Chiqpach %1$s aka tamat apsuñ muntati?</string>
     <string name="people_member_remove_with_name">%1$s apsuña</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s jamuqax janiw luräñjamäkiti</string>
     <string name="people_profile_accent_invalid">Mä suma hex sami qillqt\'ama (sañani #a78bfa)</string>
     <string name="people_profile_accent_none">Janiw kunas</string>
-    <string name="people_profile_privacy_private_desc">Purapat masinakakiw perfilam uñjapxaspa</string>
     <string name="people_welcome_title">Jaqinakar suma jutawi</string>
     <string name="people_person_banner_alt">%1$s ukan bannerapa</string>
-    <string name="people_person_private">Aka perfilax imantatawa</string>
     <string name="people_person_state_invited">Jawsata</string>
 
     <string name="people_invitations_accept_all">Taqi katuqaña</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochin masinak thaqham ukat chikacht\'asim. Mä jawsäwi apayañatakix Contacto yapxataña limt\'am.</string>
     <string name="people_person_state_contact">Contactonakankiwa</string>
-    <string name="people_device_create">Luraña</string>
-    <string name="people_device_add">Mä dispositivo yapxataña</string>
-    <string name="people_device_username">Apnaqiri suti</string>
-    <string name="people_device_done">Tukuyata</string>
-    <string name="people_device_used">Qhipa apnaqata %1$s</string>
-    <string name="people_device_never">Janipuni</string>
     <string name="people_sync_now">Jichha sincronizaña</string>
-    <string name="people_device_title">Chikacht\'at dispositivonaka</string>
-    <string name="people_device_name">Dispositivon sutipa</string>
     <string name="people_device_address">Direccionanak libro URL</string>
-    <string name="people_device_password">Contraseña</string>
-    <string name="people_device_copy">%1$s copiaña</string>
-    <string name="people_device_warning">Aka contraseña jichha imaña. Janiw wasitat uñachayaskaspati.</string>
-    <string name="people_device_empty">Janiw dispositivonakax chikacht\'atäkiti.</string>
-    <string name="people_device_created">Lurata %1$s</string>
-    <string name="people_device_delete">Dispositivo chhaqtayaña</string>
-    <string name="people_device_delete_title">Dispositivo chhaqtayañati?</string>
-    <string name="people_device_delete_message">Dispositivox janiw contactonaka jan ukax calendarionak sincronizañ atkxaniti.</string>
-    <string name="people_device_deleted">Dispositivo chhaqtayatawa</string>
     <string name="people_sync_title">Aka telefonoru sincronizaña</string>
     <string name="people_sync_confirm">Aka telefonon Contactonaka app ukan mä masin contactop chhaqtayañax masisiñsa tukuyarakiwa.</string>
     <string name="people_sync_enable">Activaña</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Wakichawinaka</string>
     <string name="people_contacts_invitation_sent">Jawsäwi apayatawa</string>
     <string name="people_contact_keep">Imaña</string>
+    <string name="people_invitations_received_count">Katuqata (%1$s)</string>
+    <string name="people_invitations_sent_count">Apayata (%1$s)</string>
+    <string name="people_contact_discard">Mayjt\'awinak jaqsuña</string>
+    <string name="people_person_unavailable">Jaqix janiw utjkiti</string>
 </resources>

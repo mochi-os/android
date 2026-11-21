@@ -354,4 +354,21 @@
     <string name="game_system_score_resume">%1$s ha ripreso la partita</string>
     <string name="game_not_found">Partita non trovata</string>
     <string name="game_chat_move_played_you">Hai giocato %1$s</string>
+    <string name="devices_add">Aggiungi un dispositivo</string>
+    <string name="devices_copy">Copia %1$s</string>
+    <string name="devices_create">Crea</string>
+    <string name="devices_created">Creato %1$s</string>
+    <string name="devices_delete">Elimina dispositivo</string>
+    <string name="devices_delete_message">Il dispositivo non potrà più sincronizzare i contatti né i calendari.</string>
+    <string name="devices_delete_title">Eliminare il dispositivo?</string>
+    <string name="devices_deleted">Dispositivo eliminato</string>
+    <string name="devices_done">Fatto</string>
+    <string name="devices_empty">Nessun dispositivo collegato</string>
+    <string name="devices_name">Nome del dispositivo</string>
+    <string name="devices_password">Password</string>
+    <string name="devices_title">Dispositivi collegati</string>
+    <string name="devices_used">Ultimo uso %1$s</string>
+    <string name="devices_username">Nome utente</string>
+    <string name="devices_warning">Copia la password adesso: non potrà essere mostrata di nuovo.</string>
+    <string name="devices_unused">Mai usato</string>
 </resources>

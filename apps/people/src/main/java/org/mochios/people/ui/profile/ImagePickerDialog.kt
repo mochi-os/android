@@ -5,9 +5,6 @@
 
 package org.mochios.people.ui.profile
 
-import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -19,25 +16,33 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.io.ByteArrayOutputStream
+import org.mochios.android.util.ImageFormat
+import org.mochios.android.util.decodeImage
+import org.mochios.android.util.encodeImage
+import java.io.InputStream
 
 /**
- * Per-slot resize target and byte cap; mirrors the web's `SLOT_RESIZE`.
+ * How a slot's image is written: its longest side at most [edge] pixels, as
+ * [format], first at [quality], and no more than [maximum] bytes, the
+ * server's cap for the slot.
  */
-data class ImageSlotSpec(val maxDimension: Int, val maxBytes: Int)
+data class ImageSlotSpec(val edge: Int, val format: ImageFormat, val quality: Int, val maximum: Int)
 
+/** The web's `SLOT_RESIZE`, with the server's caps. */
 val SLOT_SPECS: Map<ImageSlot, ImageSlotSpec> = mapOf(
-    ImageSlot.AVATAR to ImageSlotSpec(maxDimension = 256, maxBytes = 2 * 1024 * 1024),     //  2 MB
-    ImageSlot.BANNER to ImageSlotSpec(maxDimension = 1200, maxBytes = 10 * 1024 * 1024),   // 10 MB
-    ImageSlot.FAVICON to ImageSlotSpec(maxDimension = 256, maxBytes = 64 * 1024),          // 64 KB
+    ImageSlot.AVATAR to ImageSlotSpec(edge = 256, format = ImageFormat.JPEG, quality = 90, maximum = 2 * 1024 * 1024),
+    ImageSlot.BANNER to ImageSlotSpec(edge = 1600, format = ImageFormat.JPEG, quality = 85, maximum = 10 * 1024 * 1024),
+    // A favicon keeps its transparency.
+    ImageSlot.FAVICON to ImageSlotSpec(edge = 128, format = ImageFormat.PNG, quality = 100, maximum = 64 * 1024),
 )
 
 /**
- * Launches the system image picker and hands back the picked image resized to
- * the slot's spec as JPEG bytes.
+ * Launches the system image picker and hands back the picked image written
+ * to the slot's spec.
  */
 class ImagePicker(
     val launch: () -> Unit,
@@ -65,16 +70,18 @@ fun rememberImagePicker(
         scope.launch {
             try {
                 val bytes = withContext(Dispatchers.IO) {
-                    processImage(context, uri, spec)
+                    processImage({ context.contentResolver.openInputStream(uri) }, spec)
                 } ?: run {
                     onError(IllegalStateException("Could not decode image"))
                     return@launch
                 }
-                if (bytes.size > spec.maxBytes) {
+                if (bytes.size > spec.maximum) {
                     onTooLarge()
                 } else {
                     onPicked(bytes)
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (t: Throwable) {
                 onError(t)
             }
@@ -87,43 +94,22 @@ fun rememberImagePicker(
 }
 
 /**
- * Decode → scale → JPEG-compress an image URI down to a byte array that fits
- * under `spec.maxBytes`. Returns `null` when the URI can't be decoded.
+ * The image [open] reads, upright, scaled to the slot and written as its
+ * format; null when it does not decode. A JPEG steps its quality down until
+ * it fits under the slot's cap, and comes back at the lowest when even that
+ * does not, for the caller to refuse.
  */
-private fun processImage(
-    context: Context,
-    uri: Uri,
-    spec: ImageSlotSpec,
-): ByteArray? {
-    val raw = context.contentResolver.openInputStream(uri)?.use { it.readBytes() } ?: return null
-    val bitmap = BitmapFactory.decodeByteArray(raw, 0, raw.size) ?: return null
-    val scaled = scale(bitmap, spec.maxDimension)
-    // Try quality 85 → 70 → 55 → 40 → 30; return whatever fits, or the
-    // smallest if even quality 30 is still over the cap (caller decides
-    // whether to reject).
-    var quality = 85
-    var lastBytes: ByteArray = encodeJpeg(scaled, quality)
-    while (lastBytes.size > spec.maxBytes && quality > 30) {
-        quality -= 15
-        lastBytes = encodeJpeg(scaled, quality)
+internal fun processImage(open: () -> InputStream?, spec: ImageSlotSpec): ByteArray? {
+    val bitmap = decodeImage(open, spec.edge) ?: return null
+    try {
+        var quality = spec.quality
+        var bytes = encodeImage(bitmap, spec.format, quality)
+        while (spec.format == ImageFormat.JPEG && bytes.size > spec.maximum && quality > 30) {
+            quality -= 15
+            bytes = encodeImage(bitmap, spec.format, quality)
+        }
+        return bytes
+    } finally {
+        bitmap.recycle()
     }
-    if (scaled !== bitmap) scaled.recycle()
-    bitmap.recycle()
-    return lastBytes
-}
-
-private fun scale(src: Bitmap, maxDim: Int): Bitmap {
-    val w = src.width
-    val h = src.height
-    if (w <= maxDim && h <= maxDim) return src
-    val ratio = maxDim.toFloat() / maxOf(w, h)
-    val nw = (w * ratio).toInt().coerceAtLeast(1)
-    val nh = (h * ratio).toInt().coerceAtLeast(1)
-    return Bitmap.createScaledBitmap(src, nw, nh, true)
-}
-
-private fun encodeJpeg(bitmap: Bitmap, quality: Int): ByteArray {
-    val out = ByteArrayOutputStream()
-    bitmap.compress(Bitmap.CompressFormat.JPEG, quality, out)
-    return out.toByteArray()
 }

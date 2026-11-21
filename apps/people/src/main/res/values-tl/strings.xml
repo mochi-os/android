@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Walang nakitang tao</string>
     <string name="people_friends_try_adjusting">Subukang ayusin ang iyong paghahanap</string>
     <string name="people_friends_pending">Nakabinbin</string>
-    <string name="people_friends_received_tab">Natanggap</string>
-    <string name="people_friends_sent_tab">Naipadala</string>
     <string name="people_invitations_incoming">Mga papasok na invitation</string>
     <string name="people_invitations_empty">Walang nakabinbing imbitasyon</string>
     <string name="people_invitations_empty_hint">Lalabas dito ang mga bagong imbitasyon</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Tinanggap ang imbitasyon mula kay %1$s</string>
     <string name="people_invitations_toast_declined">Tinanggihan ang imbitasyon mula kay %1$s</string>
     <string name="people_invitations_toast_cancelled">Kinansela ang imbitasyon kay %1$s</string>
-    <string name="people_groups_empty">Walang grupo</string>
     <string name="people_group_delete_confirm">Tanggalin ang grupong \"%1$s\"? Hindi na ito maibabalik.</string>
     <string name="people_member_remove_confirm">Sigurado ka bang gusto mong alisin si %1$s sa grupong ito?</string>
     <string name="people_member_remove_with_name">Alisin si %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Hindi maproseso ang larawan ng %1$s</string>
     <string name="people_profile_accent_invalid">Maglagay ng wastong hex na kulay (hal. #a78bfa)</string>
     <string name="people_profile_accent_none">Wala</string>
-    <string name="people_profile_privacy_private_desc">Mga magkaibigan lamang ang makakatingin ng iyong profile</string>
     <string name="people_welcome_title">Maligayang pagdating sa Mga Tao</string>
     <string name="people_person_banner_alt">Banner para kay %1$s</string>
-    <string name="people_person_private">Pribado ang profile na ito</string>
     <string name="people_person_state_invited">Inimbitahan</string>
 
     <string name="people_invitations_accept_all">Tanggapin lahat</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Maghanap ng mga kaibigan sa buong Mochi at makipag-ugnayan. I-tap ang Magdagdag ng contact para magpadala ng imbitasyon.</string>
     <string name="people_person_state_contact">Nasa mga contact</string>
-    <string name="people_device_create">Gumawa</string>
-    <string name="people_device_add">Magdagdag ng device</string>
-    <string name="people_device_username">Username</string>
-    <string name="people_device_done">Tapos na</string>
-    <string name="people_device_used">Huling ginamit %1$s</string>
-    <string name="people_device_never">Hindi kailanman</string>
     <string name="people_sync_now">Mag-sync ngayon</string>
-    <string name="people_device_title">Mga nakakonektang device</string>
-    <string name="people_device_name">Pangalan ng device</string>
     <string name="people_device_address">URL ng address book</string>
-    <string name="people_device_password">Password</string>
-    <string name="people_device_copy">Kopyahin ang %1$s</string>
-    <string name="people_device_warning">I-save ang password na ito ngayon. Hindi na ito maipapakita muli.</string>
-    <string name="people_device_empty">Walang nakakonektang device.</string>
-    <string name="people_device_created">Ginawa noong %1$s</string>
-    <string name="people_device_delete">I-delete ang device</string>
-    <string name="people_device_delete_title">I-delete ang device?</string>
-    <string name="people_device_delete_message">Hindi na maisi-sync ng device ang mga contact o kalendaryo.</string>
-    <string name="people_device_deleted">Na-delete na ang device</string>
     <string name="people_sync_title">I-sync sa teleponong ito</string>
     <string name="people_sync_confirm">Ang pagtanggal ng contact ng isang kaibigan sa app na Mga Contact ng teleponong ito ay tatapos din sa pagkakaibigan.</string>
     <string name="people_sync_enable">I-on</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Mga setting</string>
     <string name="people_contacts_invitation_sent">Naipadala ang imbitasyon</string>
     <string name="people_contact_keep">Panatilihin</string>
+    <string name="people_invitations_received_count">Natanggap (%1$s)</string>
+    <string name="people_invitations_sent_count">Naipadala (%1$s)</string>
+    <string name="people_contact_discard">Itapon ang mga pagbabago</string>
+    <string name="people_person_unavailable">Hindi available ang tao</string>
 </resources>

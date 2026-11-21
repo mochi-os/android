@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">هیڅ خلک ونه موندل شول</string>
     <string name="people_friends_try_adjusting">خپل لټون سمول هڅه وکړئ</string>
     <string name="people_friends_pending">په تمه</string>
-    <string name="people_friends_received_tab">ترلاسه شوی</string>
-    <string name="people_friends_sent_tab">ولېږل شو</string>
     <string name="people_invitations_incoming">راتلونکې بلنې</string>
     <string name="people_invitations_empty">هیڅ په تمه بلنې نشته</string>
     <string name="people_invitations_empty_hint">نوې بلنې به دلته ښکاره شي</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">د %1$s بلنه ومنل شوه</string>
     <string name="people_invitations_toast_declined">د %1$s بلنه رد شوه</string>
     <string name="people_invitations_toast_cancelled">%1$s ته بلنه لغوه شوه</string>
-    <string name="people_groups_empty">هېڅ ډلې نشته</string>
     <string name="people_group_delete_confirm">ډله \"%1$s\" ړنګه کړئ؟ دا کار بېرته نه شي اړول کیدی.</string>
     <string name="people_member_remove_confirm">ایا تاسو ډاډه یاست چې %1$s له دې ډلې لرې کړئ؟</string>
     <string name="people_member_remove_with_name">%1$s لرې کړئ</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">د %1$s انځور نه شو پروسس کېدی</string>
     <string name="people_profile_accent_invalid">د سم هیکس رنګ ولیکئ (لکه #a78bfa)</string>
     <string name="people_profile_accent_none">هیڅوک</string>
-    <string name="people_profile_privacy_private_desc">یوازې دوه اړخیز ملګري کولی شي ستاسو پېژندنه وګوري</string>
     <string name="people_welcome_title">خلکو ته ښه راغلاست</string>
     <string name="people_person_banner_alt">د %1$s بېنر</string>
-    <string name="people_person_private">دا پېژندنه شخصي ده</string>
     <string name="people_person_state_invited">بلنه ورکړل شوه</string>
 
     <string name="people_invitations_accept_all">ټول ومنه</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">په ټول Mochi کې ملګري ومومئ او اړیکه ونیسئ. بلنه لیږلو لپاره اړیکه ورزیاته کړئ کېکاږئ.</string>
     <string name="people_person_state_contact">په اړیکو کې</string>
-    <string name="people_device_create">جوړ کړئ</string>
-    <string name="people_device_add">وسیله اضافه کړئ</string>
-    <string name="people_device_username">د کاروونکي نوم</string>
-    <string name="people_device_done">ترسره شو</string>
-    <string name="people_device_used">وروستی کارول %1$s</string>
-    <string name="people_device_never">هیڅکله</string>
     <string name="people_sync_now">اوس همغږي کړئ</string>
-    <string name="people_device_title">نښلول شوې وسیلې</string>
-    <string name="people_device_name">د وسیلې نوم</string>
     <string name="people_device_address">د پتو کتابچې URL</string>
-    <string name="people_device_password">پټنوم</string>
-    <string name="people_device_copy">%1$s کاپي کړئ</string>
-    <string name="people_device_warning">دا پټنوم اوس خوندي کړئ. بیا نشي ښودل کېدای.</string>
-    <string name="people_device_empty">هیڅ وسیله وصل نه ده.</string>
-    <string name="people_device_created">جوړ شو %1$s</string>
-    <string name="people_device_delete">وسیله ړنګه کړئ</string>
-    <string name="people_device_delete_title">وسیله ړنګه شي؟</string>
-    <string name="people_device_delete_message">وسیله به نور ونشي کولای اړیکې یا کليزونه همغږي کړي.</string>
-    <string name="people_device_deleted">وسیله ړنګه شوه</string>
     <string name="people_sync_title">له دې موبایل سره همغږي کړئ</string>
     <string name="people_sync_confirm">د دې موبایل د اړیکو په اپلیکیشن کې د یوه ملګري د اړیکې ړنګول ملګرتیا هم پای ته رسوي.</string>
     <string name="people_sync_enable">فعال کړئ</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">تنظیمات</string>
     <string name="people_contacts_invitation_sent">بلنه ولیږل شوه</string>
     <string name="people_contact_keep">وساتئ</string>
+    <string name="people_invitations_received_count">ترلاسه شوی (%1$s)</string>
+    <string name="people_invitations_sent_count">ولېږل شو (%1$s)</string>
+    <string name="people_contact_discard">بدلونونه ړنګ کړئ</string>
+    <string name="people_person_unavailable">کس شتون نه لري</string>
 </resources>

@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s เล่นต่อแล้ว</string>
     <string name="game_not_found">ไม่พบเกม</string>
     <string name="game_chat_move_played_you">คุณเดิน %1$s</string>
+    <string name="devices_add">เพิ่มอุปกรณ์</string>
+    <string name="devices_copy">คัดลอก %1$s</string>
+    <string name="devices_create">สร้าง</string>
+    <string name="devices_created">สร้าง %1$s</string>
+    <string name="devices_delete">ลบอุปกรณ์</string>
+    <string name="devices_delete_message">อุปกรณ์จะไม่สามารถซิงค์รายชื่อผู้ติดต่อหรือปฏิทินได้อีกต่อไป</string>
+    <string name="devices_delete_title">ลบอุปกรณ์หรือไม่</string>
+    <string name="devices_deleted">ลบอุปกรณ์แล้ว</string>
+    <string name="devices_done">เสร็จสิ้น</string>
+    <string name="devices_empty">ไม่มีอุปกรณ์ที่เชื่อมต่อ</string>
+    <string name="devices_name">ชื่ออุปกรณ์</string>
+    <string name="devices_password">รหัสผ่าน</string>
+    <string name="devices_title">อุปกรณ์ที่เชื่อมต่อ</string>
+    <string name="devices_used">ใช้ล่าสุด %1$s</string>
+    <string name="devices_username">ชื่อผู้ใช้</string>
+    <string name="devices_warning">คัดลอกรหัสผ่านตอนนี้ เพราะจะไม่แสดงอีก</string>
+    <string name="devices_unused">ไม่เคยใช้</string>
 </resources>

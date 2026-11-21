@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ले खेल पुनः सुरु गर्नुभयो</string>
     <string name="game_not_found">खेल फेला परेन</string>
     <string name="game_chat_move_played_you">तपाईंले %1$s खेल्नुभयो</string>
+    <string name="devices_add">उपकरण थप्नुहोस्</string>
+    <string name="devices_copy">%1$s प्रतिलिपि गर्नुहोस्</string>
+    <string name="devices_create">सिर्जना गर्नुहोस्</string>
+    <string name="devices_created">सिर्जना गरिएको %1$s</string>
+    <string name="devices_delete">उपकरण मेटाउनुहोस्</string>
+    <string name="devices_delete_message">उपकरणले अब सम्पर्क वा क्यालेन्डरहरू सिंक गर्न सक्ने छैन।</string>
+    <string name="devices_delete_title">उपकरण मेटाउने?</string>
+    <string name="devices_deleted">उपकरण मेटाइयो</string>
+    <string name="devices_done">सम्पन्न</string>
+    <string name="devices_empty">कुनै उपकरण जडान गरिएको छैन</string>
+    <string name="devices_name">उपकरणको नाम</string>
+    <string name="devices_password">पासवर्ड</string>
+    <string name="devices_title">जडान गरिएका उपकरणहरू</string>
+    <string name="devices_used">अन्तिम पटक प्रयोग गरियो %1$s</string>
+    <string name="devices_username">प्रयोगकर्ता नाम</string>
+    <string name="devices_warning">पासवर्ड अहिले नै प्रतिलिपि गर्नुहोस्: यो फेरि देखाउन सकिँदैन।</string>
+    <string name="devices_unused">कहिल्यै प्रयोग गरिएको छैन</string>
 </resources>

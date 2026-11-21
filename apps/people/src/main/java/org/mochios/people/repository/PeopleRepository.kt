@@ -22,6 +22,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import okhttp3.MultipartBody
 import org.mochios.android.api.unwrap
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileRepository
 import org.mochios.android.files.FileStore
 import org.mochios.android.files.UploadTracker
@@ -35,6 +36,7 @@ import org.mochios.people.api.NetworkPerson
 import org.mochios.people.api.SearchUsersResponse
 import org.mochios.people.api.PeopleApi
 import org.mochios.people.api.PreferenceResponse
+import org.mochios.people.api.StandingResponse
 import org.mochios.people.api.WelcomeResponse
 import org.mochios.people.model.Book
 import org.mochios.people.model.Contact
@@ -47,9 +49,9 @@ import org.mochios.people.model.GroupMemberType
 import org.mochios.people.model.LocalUser
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.PersonStyle
-import org.mochios.people.model.User
 import java.io.File
 import java.util.concurrent.atomic.AtomicBoolean
+import java.util.concurrent.atomic.AtomicInteger
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -57,6 +59,8 @@ import javax.inject.Singleton
 class PeopleRepository @Inject constructor(
     private val api: PeopleApi,
     fileStore: FileStore,
+    /** The signed-in identity, whose change empties what this holds; null where no one signs in. */
+    session: SessionManager? = null,
 ) : FileRepository(fileStore) {
 
     /**
@@ -213,9 +217,6 @@ class PeopleRepository @Inject constructor(
         notifyChanged()
     }
 
-    suspend fun searchDirectory(query: String): List<User> =
-        api.searchDirectory(query).unwrap().results
-
     /** The directory's people for [query]; other networks' come from [searchNetworks]. */
     suspend fun searchPeople(query: String): SearchUsersResponse =
         api.searchDirectory(query).unwrap()
@@ -257,10 +258,46 @@ class PeopleRepository @Inject constructor(
     }
 
     private suspend fun fetchBooks(): List<Book> {
+        val began = generation.get()
         val fetched = api.listBooks().unwrap().books
-        _books.value = fetched
-        booksStale = false
+        // A read begun for the account before is not kept for the next one.
+        if (generation.get() == began) {
+            _books.value = fetched
+            booksStale = false
+        }
         return fetched
+    }
+
+    // The books and the shared reads are one account's, and this outlives a
+    // sign-out, so they go whenever the signed-in identity changes: the next
+    // account on the phone was otherwise shown the previous one's books.
+    private val generation = AtomicInteger()
+
+    /** The identity what is held answers for. */
+    @Volatile
+    private var holder: String? = null
+
+    init {
+        if (session != null) {
+            readScope.launch {
+                session.boundIdentity.collect { identity ->
+                    // From no account to one there is nothing to clear: signing
+                    // out cleared it, and clearing then would drop the first
+                    // read of a cold start.
+                    if (identity != holder) {
+                        if (holder != null) forgetAccount()
+                        holder = identity
+                    }
+                }
+            }
+        }
+    }
+
+    private fun forgetAccount() {
+        generation.incrementAndGet()
+        _books.value = emptyList()
+        booksStale = true
+        forgetReads()
     }
 
     suspend fun createBook(name: String): Book {
@@ -321,6 +358,10 @@ class PeopleRepository @Inject constructor(
         api.removeFriend(person, account).unwrap()
         notifyChanged()
     }
+
+    /** Where the user stands with [person]; throws where the server has no such action. */
+    suspend fun getStanding(person: String): StandingResponse =
+        api.getStanding(person).unwrap()
 
     // ---- Welcome state ----
 
@@ -426,11 +467,13 @@ class PeopleRepository @Inject constructor(
         api.setFavicon(person, multipart(file, tracker)).unwrap()
     }
 
-    // The picker always re-encodes to JPEG, so the part must declare an image
-    // Content-Type — the server rejects "application/octet-stream" with
-    // "<slot> must be an image". Field name "file" matches the web upload.
+    // The picker writes each slot in its own format - the avatar and banner as
+    // JPEG, the favicon as PNG - and names the file for it, so the part's
+    // type is taken from the extension: the server rejects
+    // "application/octet-stream" with "<slot> must be an image". Field name
+    // "file" matches the web upload.
     private fun multipart(file: File, tracker: UploadTracker?): MultipartBody.Part =
-        fileStore.filePart("file", file, "image/jpeg", tracker)
+        fileStore.filePart("file", file, tracker = tracker)
 
     private fun wireType(type: GroupMemberType): String = when (type) {
         GroupMemberType.USER -> "user"

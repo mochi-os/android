@@ -352,4 +352,21 @@
     <string name="game_system_score_resume">%1$s បានបន្តលេង</string>
     <string name="game_not_found">រកមិនឃើញល្បែង</string>
     <string name="game_chat_move_played_you">អ្នកបានលេង %1$s</string>
+    <string name="devices_add">បន្ថែមឧបករណ៍</string>
+    <string name="devices_copy">ចម្លង %1$s</string>
+    <string name="devices_create">បង្កើត</string>
+    <string name="devices_created">បានបង្កើត %1$s</string>
+    <string name="devices_delete">លុបឧបករណ៍</string>
+    <string name="devices_delete_message">ឧបករណ៍នេះនឹងលែងអាចធ្វើសមកាលកម្មទំនាក់ទំនង ឬប្រតិទិនបានទៀតហើយ។</string>
+    <string name="devices_delete_title">លុបឧបករណ៍?</string>
+    <string name="devices_deleted">បានលុបឧបករណ៍</string>
+    <string name="devices_done">រួចរាល់</string>
+    <string name="devices_empty">គ្មានឧបករណ៍ដែលបានភ្ជាប់ទេ</string>
+    <string name="devices_name">ឈ្មោះឧបករណ៍</string>
+    <string name="devices_password">ពាក្យសម្ងាត់</string>
+    <string name="devices_title">ឧបករណ៍ដែលបានភ្ជាប់</string>
+    <string name="devices_used">ប្រើចុងក្រោយ %1$s</string>
+    <string name="devices_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
+    <string name="devices_warning">ចម្លងពាក្យសម្ងាត់ឥឡូវនេះ៖ វាមិនអាចបង្ហាញម្ដងទៀតបានទេ។</string>
+    <string name="devices_unused">មិនដែលប្រើ</string>
 </resources>

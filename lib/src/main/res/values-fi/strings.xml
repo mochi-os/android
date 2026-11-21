@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s jatkoi peliä</string>
     <string name="game_not_found">Peliä ei löytynyt</string>
     <string name="game_chat_move_played_you">Pelasit %1$s</string>
+    <string name="devices_add">Lisää laite</string>
+    <string name="devices_copy">Kopioi %1$s</string>
+    <string name="devices_create">Luo</string>
+    <string name="devices_created">Luotu %1$s</string>
+    <string name="devices_delete">Poista laite</string>
+    <string name="devices_delete_message">Laite ei voi enää synkronoida yhteystietoja eikä kalentereita.</string>
+    <string name="devices_delete_title">Poistetaanko laite?</string>
+    <string name="devices_deleted">Laite poistettu</string>
+    <string name="devices_done">Valmis</string>
+    <string name="devices_empty">Ei yhdistettyjä laitteita</string>
+    <string name="devices_name">Laitteen nimi</string>
+    <string name="devices_password">Salasana</string>
+    <string name="devices_title">Yhdistetyt laitteet</string>
+    <string name="devices_used">Viimeksi käytetty %1$s</string>
+    <string name="devices_username">Käyttäjätunnus</string>
+    <string name="devices_warning">Kopioi salasana nyt: sitä ei voi näyttää uudelleen.</string>
+    <string name="devices_unused">Ei koskaan käytetty</string>
 </resources>

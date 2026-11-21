@@ -46,13 +46,13 @@ class LinkTest {
 
     @Test
     fun `an occurrence opens in the editor when it can be changed, else in its sheet`() {
-        val edited = mutableListOf<Pair<String, Long>>()
+        val edited = mutableListOf<String>()
         val shown = mutableListOf<Instance>()
-        open(Instance(event = "e1", start = 100, recurring = true), { e, o -> edited += e to o }) { shown += it }
-        open(Instance(event = "e2", start = 100), { e, o -> edited += e to o }) { shown += it }
-        open(Instance(event = "e3", readonly = true), { e, o -> edited += e to o }) { shown += it }
-        open(Instance(event = "birthday-c1-2026", start = 100), { e, o -> edited += e to o }) { shown += it }
-        assertEquals(listOf("e1" to 100L, "e2" to 0L), edited)
+        open(Instance(event = "e1", start = 100, recurring = true), { edited += it.event }) { shown += it }
+        open(Instance(event = "e2", start = 100), { edited += it.event }) { shown += it }
+        open(Instance(event = "e3", readonly = true), { edited += it.event }) { shown += it }
+        open(Instance(event = "birthday-c1-2026", start = 100), { edited += it.event }) { shown += it }
+        assertEquals(listOf("e1", "e2"), edited)
         assertEquals(listOf("e3", "birthday-c1-2026"), shown.map { it.event })
     }
 }

@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s oñepyrũ jey ñembosarái</string>
     <string name="game_not_found">Ñembosarái ndojejuhúi</string>
     <string name="game_chat_move_played_you">Nde rembosarái %1$s</string>
+    <string name="devices_add">Embojuaju peteĩ mba\'e\'oka</string>
+    <string name="devices_copy">Kopia %1$s</string>
+    <string name="devices_create">Emoheñói</string>
+    <string name="devices_created">Oñemoheñói %1$s</string>
+    <string name="devices_delete">Ehundi mba\'e\'oka</string>
+    <string name="devices_delete_message">Mba\'e\'oka ndaikatuvéima ombojoja contacto térã arapapaha.</string>
+    <string name="devices_delete_title">Ehundíta mba\'e\'oka?</string>
+    <string name="devices_deleted">Mba\'e\'oka oñehundíma</string>
+    <string name="devices_done">Oĩma</string>
+    <string name="devices_empty">Ndaipóri mba\'e\'oka oñembojoajúva</string>
+    <string name="devices_name">Mba\'e\'oka réra</string>
+    <string name="devices_password">Ñe\'ẽñemi</string>
+    <string name="devices_title">Mba\'e\'oka oñembojoajúva</string>
+    <string name="devices_used">Iporu paha %1$s</string>
+    <string name="devices_username">Puruhára réra</string>
+    <string name="devices_warning">Ekopia ñe\'ẽñemi ko\'ág̃a: ndaikatumo\'ãi ojehechauka jey.</string>
+    <string name="devices_unused">Ojepuru\'ỹva araka\'eve</string>
 </resources>

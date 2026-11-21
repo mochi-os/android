@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">人が見つかりません</string>
     <string name="people_friends_try_adjusting">検索条件を変えてみてください</string>
     <string name="people_friends_pending">保留中</string>
-    <string name="people_friends_received_tab">受領</string>
-    <string name="people_friends_sent_tab">送信済み</string>
     <string name="people_invitations_incoming">受信した招待</string>
     <string name="people_invitations_empty">保留中の招待はありません</string>
     <string name="people_invitations_empty_hint">新しい招待はここに表示されます</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s からの招待を承諾しました</string>
     <string name="people_invitations_toast_declined">%1$s からの招待を辞退しました</string>
     <string name="people_invitations_toast_cancelled">%1$s への招待をキャンセルしました</string>
-    <string name="people_groups_empty">グループがありません</string>
     <string name="people_group_delete_confirm">グループ \"%1$s\" を削除しますか？この操作は取り消せません。</string>
     <string name="people_member_remove_confirm">%1$s をこのグループから削除してもよろしいですか？</string>
     <string name="people_member_remove_with_name">%1$s を削除</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s の画像を処理できませんでした</string>
     <string name="people_profile_accent_invalid">有効な16進カラーコードを入力してください (例: #a78bfa)</string>
     <string name="people_profile_accent_none">なし</string>
-    <string name="people_profile_privacy_private_desc">相互の友だちのみがあなたのプロフィールを閲覧できます</string>
     <string name="people_welcome_title">ピープルへようこそ</string>
     <string name="people_person_banner_alt">%1$s のバナー</string>
-    <string name="people_person_private">このプロフィールは非公開です</string>
     <string name="people_person_state_invited">招待済み</string>
 
     <string name="people_invitations_accept_all">すべて承認</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi 全体で友達を見つけてつながりましょう。招待を送るには連絡先を追加をタップします。</string>
     <string name="people_person_state_contact">連絡先に登録済み</string>
-    <string name="people_device_create">作成</string>
-    <string name="people_device_add">デバイスを追加</string>
-    <string name="people_device_username">ユーザー名</string>
-    <string name="people_device_done">完了</string>
-    <string name="people_device_used">最終使用 %1$s</string>
-    <string name="people_device_never">なし</string>
     <string name="people_sync_now">今すぐ同期</string>
-    <string name="people_device_title">接続中のデバイス</string>
-    <string name="people_device_name">デバイス名</string>
     <string name="people_device_address">アドレス帳のURL</string>
-    <string name="people_device_password">パスワード</string>
-    <string name="people_device_copy">%1$sをコピー</string>
-    <string name="people_device_warning">このパスワードを今すぐ保存してください。再表示することはできません。</string>
-    <string name="people_device_empty">接続されているデバイスはありません。</string>
-    <string name="people_device_created">作成 %1$s</string>
-    <string name="people_device_delete">デバイスを削除</string>
-    <string name="people_device_delete_title">デバイスを削除しますか？</string>
-    <string name="people_device_delete_message">このデバイスは連絡先やカレンダーを同期できなくなります。</string>
-    <string name="people_device_deleted">デバイスを削除しました</string>
     <string name="people_sync_title">このスマートフォンに同期</string>
     <string name="people_sync_confirm">このスマートフォンの連絡帳アプリで友達の連絡先を削除すると、友達関係も終了します。</string>
     <string name="people_sync_enable">オンにする</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">設定</string>
     <string name="people_contacts_invitation_sent">招待を送信しました</string>
     <string name="people_contact_keep">残す</string>
+    <string name="people_invitations_received_count">受領 (%1$s)</string>
+    <string name="people_invitations_sent_count">送信済み (%1$s)</string>
+    <string name="people_contact_discard">変更を破棄</string>
+    <string name="people_person_unavailable">この人を表示できません</string>
 </resources>

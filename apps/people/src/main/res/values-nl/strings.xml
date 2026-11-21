@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Geen mensen gevonden</string>
     <string name="people_friends_try_adjusting">Probeer je zoekopdracht aan te passen</string>
     <string name="people_friends_pending">In afwachting</string>
-    <string name="people_friends_received_tab">Ontvangen</string>
-    <string name="people_friends_sent_tab">Verzonden</string>
     <string name="people_invitations_incoming">Inkomende uitnodigingen</string>
     <string name="people_invitations_empty">Geen lopende uitnodigingen</string>
     <string name="people_invitations_empty_hint">Nieuwe uitnodigingen verschijnen hier</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Uitnodiging van %1$s geaccepteerd</string>
     <string name="people_invitations_toast_declined">Uitnodiging van %1$s afgewezen</string>
     <string name="people_invitations_toast_cancelled">Uitnodiging aan %1$s geannuleerd</string>
-    <string name="people_groups_empty">Geen groepen</string>
     <string name="people_group_delete_confirm">Groep \"%1$s\" verwijderen? Dit kan niet ongedaan worden gemaakt.</string>
     <string name="people_member_remove_confirm">Weet u zeker dat u %1$s uit deze groep wilt verwijderen?</string>
     <string name="people_member_remove_with_name">%1$s verwijderen</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Kan afbeelding %1$s niet verwerken</string>
     <string name="people_profile_accent_invalid">Voer een geldige hexkleur in (bijv. #a78bfa)</string>
     <string name="people_profile_accent_none">Geen</string>
-    <string name="people_profile_privacy_private_desc">Alleen wederzijdse vrienden kunnen uw profiel bekijken</string>
     <string name="people_welcome_title">Welkom bij Mensen</string>
     <string name="people_person_banner_alt">Banner voor %1$s</string>
-    <string name="people_person_private">Dit profiel is privé</string>
     <string name="people_person_state_invited">Uitgenodigd</string>
 
     <string name="people_invitations_accept_all">Alles accepteren</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Vind vrienden op heel Mochi en maak verbinding. Tik op Contact toevoegen om een uitnodiging te sturen.</string>
     <string name="people_person_state_contact">In contacten</string>
-    <string name="people_device_create">Aanmaken</string>
-    <string name="people_device_add">Apparaat toevoegen</string>
-    <string name="people_device_username">Gebruikersnaam</string>
-    <string name="people_device_done">Klaar</string>
-    <string name="people_device_used">Laatst gebruikt %1$s</string>
-    <string name="people_device_never">Nooit</string>
     <string name="people_sync_now">Nu synchroniseren</string>
-    <string name="people_device_title">Gekoppelde apparaten</string>
-    <string name="people_device_name">Apparaatnaam</string>
     <string name="people_device_address">URL van het adresboek</string>
-    <string name="people_device_password">Wachtwoord</string>
-    <string name="people_device_copy">%1$s kopiëren</string>
-    <string name="people_device_warning">Bewaar dit wachtwoord nu. Het kan niet opnieuw worden getoond.</string>
-    <string name="people_device_empty">Geen apparaten gekoppeld.</string>
-    <string name="people_device_created">Aangemaakt %1$s</string>
-    <string name="people_device_delete">Apparaat verwijderen</string>
-    <string name="people_device_delete_title">Apparaat verwijderen?</string>
-    <string name="people_device_delete_message">Het apparaat kan dan geen contacten of agenda\'s meer synchroniseren.</string>
-    <string name="people_device_deleted">Apparaat verwijderd</string>
     <string name="people_sync_title">Synchroniseren met deze telefoon</string>
     <string name="people_sync_confirm">Als je het contact van een vriend verwijdert in de Contacten-app van deze telefoon, eindigt ook jullie vriendschap.</string>
     <string name="people_sync_enable">Inschakelen</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Instellingen</string>
     <string name="people_contacts_invitation_sent">Uitnodiging verzonden</string>
     <string name="people_contact_keep">Behouden</string>
+    <string name="people_invitations_received_count">Ontvangen (%1$s)</string>
+    <string name="people_invitations_sent_count">Verzonden (%1$s)</string>
+    <string name="people_contact_discard">Wijzigingen verwerpen</string>
+    <string name="people_person_unavailable">Persoon niet beschikbaar</string>
 </resources>

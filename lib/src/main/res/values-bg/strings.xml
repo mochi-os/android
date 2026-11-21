@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s поднови играта</string>
     <string name="game_not_found">Играта не е намерена</string>
     <string name="game_chat_move_played_you">Изиграхте %1$s</string>
+    <string name="devices_add">Добавяне на устройство</string>
+    <string name="devices_copy">Копирай %1$s</string>
+    <string name="devices_create">Създай</string>
+    <string name="devices_created">Създадено %1$s</string>
+    <string name="devices_delete">Изтриване на устройството</string>
+    <string name="devices_delete_message">Устройството повече няма да може да синхронизира контакти или календари.</string>
+    <string name="devices_delete_title">Да се изтрие ли устройството?</string>
+    <string name="devices_deleted">Устройството е изтрито</string>
+    <string name="devices_done">Готово</string>
+    <string name="devices_empty">Няма свързани устройства</string>
+    <string name="devices_name">Име на устройството</string>
+    <string name="devices_password">Парола</string>
+    <string name="devices_title">Свързани устройства</string>
+    <string name="devices_used">Последно използван %1$s</string>
+    <string name="devices_username">Потребителско име</string>
+    <string name="devices_warning">Копирайте паролата сега: не може да бъде показана отново.</string>
+    <string name="devices_unused">Никога не е използван</string>
 </resources>

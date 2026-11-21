@@ -354,4 +354,21 @@
     <string name="game_system_score_resume">%1$s a repris la partie</string>
     <string name="game_not_found">Partie introuvable</string>
     <string name="game_chat_move_played_you">Vous avez joué %1$s</string>
+    <string name="devices_add">Ajouter un appareil</string>
+    <string name="devices_copy">Copier %1$s</string>
+    <string name="devices_create">Créer</string>
+    <string name="devices_created">Créé le %1$s</string>
+    <string name="devices_delete">Supprimer l\'appareil</string>
+    <string name="devices_delete_message">L\'appareil ne pourra plus synchroniser les contacts ni les calendriers.</string>
+    <string name="devices_delete_title">Supprimer l\'appareil ?</string>
+    <string name="devices_deleted">Appareil supprimé</string>
+    <string name="devices_done">Terminé</string>
+    <string name="devices_empty">Aucun appareil connecté</string>
+    <string name="devices_name">Nom de l\'appareil</string>
+    <string name="devices_password">Mot de passe</string>
+    <string name="devices_title">Appareils connectés</string>
+    <string name="devices_used">Dernière utilisation %1$s</string>
+    <string name="devices_username">Nom d\'utilisateur</string>
+    <string name="devices_warning">Copiez le mot de passe maintenant : il ne pourra plus être affiché.</string>
+    <string name="devices_unused">Jamais utilisé</string>
 </resources>

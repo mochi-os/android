@@ -354,4 +354,21 @@
     <string name="game_system_score_resume">%1$s oʻyinni davom ettirdi</string>
     <string name="game_not_found">Oʻyin topilmadi</string>
     <string name="game_chat_move_played_you">Siz %1$s oʻynadingiz</string>
+    <string name="devices_add">Qurilma qoʻshish</string>
+    <string name="devices_copy">%1$s nusxalash</string>
+    <string name="devices_create">Yaratish</string>
+    <string name="devices_created">%1$s yaratildi</string>
+    <string name="devices_delete">Qurilmani oʻchirish</string>
+    <string name="devices_delete_message">Qurilma endi kontaktlar yoki kalendarlarni sinxronlay olmaydi.</string>
+    <string name="devices_delete_title">Qurilma oʻchirilsinmi?</string>
+    <string name="devices_deleted">Qurilma oʻchirildi</string>
+    <string name="devices_done">Bajarildi</string>
+    <string name="devices_empty">Ulangan qurilma yoʻq</string>
+    <string name="devices_name">Qurilma nomi</string>
+    <string name="devices_password">Parol</string>
+    <string name="devices_title">Ulangan qurilmalar</string>
+    <string name="devices_used">Oxirgi foydalanish %1$s</string>
+    <string name="devices_username">Foydalanuvchi nomi</string>
+    <string name="devices_warning">Parolni hozir nusxalang: u boshqa koʻrsatilmaydi.</string>
+    <string name="devices_unused">Hech qachon foydalanilmagan</string>
 </resources>

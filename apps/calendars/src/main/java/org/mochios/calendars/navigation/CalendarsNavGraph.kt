@@ -22,7 +22,6 @@ import org.mochios.calendars.ui.devices.ConnectDeviceScreen
 import org.mochios.calendars.ui.dialogs.CreateCalendarScreen
 import org.mochios.calendars.ui.dialogs.SubscribeCalendarScreen
 import org.mochios.calendars.ui.editor.EventEditScreen
-import org.mochios.calendars.ui.editor.Scope
 import org.mochios.calendars.ui.preferences.PreferencesScreen
 import org.mochios.calendars.ui.settings.CalendarSettingsScreen
 import java.net.URLDecoder
@@ -68,15 +67,14 @@ object CalendarsApp {
     // The two editor routes sit on separate paths rather than one path with
     // "new" as an id: a single pattern would match both and the nav graph
     // would have to pick between them.
-    // The new-event route also opens a copy: `source` says what the form is
-    // filled from - `event` for a stored event the editor loads, named by
-    // `copy`, or `occurrence` for one it cannot load, whose fields the route
-    // carries itself - and is blank for a blank form.
-    const val EVENT_NEW = "calendars/events/new?start={start}&source={source}&copy={copy}" +
-        "&occurrence={occurrence}&scope={scope}&finish={finish}&allday={allday}&date={date}" +
+    // The new-event route also opens a copy: `source` is `occurrence` for an
+    // occurrence the editor cannot load, whose fields the route carries
+    // itself, and blank for a blank form.
+    const val EVENT_NEW = "calendars/events/new?start={start}&source={source}" +
+        "&finish={finish}&allday={allday}&date={date}" +
         "&summary={summary}&location={location}&description={description}&zones={zones}" +
         "&calendar={calendar}"
-    const val EVENT_EDIT = "calendars/events/edit/{event}?occurrence={occurrence}"
+    const val EVENT_EDIT = "calendars/events/edit/{event}?occurrence={occurrence}&moved={moved}"
 
     /** The flag it carries once the editor deleted something, which it offers to undo. */
     const val DELETED = "deleted"
@@ -159,10 +157,19 @@ object CalendarsApp {
 
     /**
      * An event's editor. [occurrence] is the occurrence the user opened, epoch
-     * seconds, which "This event" detaches; 0 for one that does not repeat.
+     * seconds, as the server lists it, which "This event" detaches; 0 for one
+     * that does not repeat. [moved] says it is an override's own start, which
+     * a core that does not name the occurrence an override replaces lists.
      */
-    fun event(event: String, occurrence: Long = 0): String =
-        "calendars/events/edit/$event?occurrence=$occurrence"
+    fun event(event: String, occurrence: Long = 0, moved: Boolean = false): String =
+        "calendars/events/edit/$event?occurrence=$occurrence" + if (moved) "&moved=1" else ""
+
+    /**
+     * The editor on the occurrence [instance] is: of a series, the occurrence
+     * of it an override replaces, wherever it was moved.
+     */
+    fun event(instance: Instance): String =
+        if (instance.recurring) event(instance.event, instance.occurrence, instance.moved) else event(instance.event)
 
     /**
      * What a notification's link names, or null when it names no event. A
@@ -218,16 +225,6 @@ object CalendarsApp {
     }
 
     /**
-     * The editor on a copy of a stored event, as a new event. [occurrence] is
-     * the occurrence copied, as the event's tree names it, and [scope] says
-     * whether the copy is of that occurrence alone or of the whole series;
-     * both are moot for an event that does not repeat.
-     */
-    fun copyEvent(event: String, occurrence: Long, scope: Scope): String =
-        "calendars/events/new?source=event&copy=${encoded(event)}&occurrence=$occurrence" +
-            "&scope=${scope.name.lowercase()}"
-
-    /**
      * The editor on a copy of an occurrence the editor cannot load - a
      * subscription's or a birthday - as a new event. The route carries the
      * occurrence itself: its ends, its date when all day, its title,
@@ -270,10 +267,7 @@ fun NavGraphBuilder.calendarsNavGraph(
             onNewEvent = { start, allday, finish, calendar ->
                 navController.navigate(CalendarsApp.newEvent(start, allday, finish, calendar))
             },
-            onEditEvent = { event, occurrence -> navController.navigate(CalendarsApp.event(event, occurrence)) },
-            onCopyEvent = { event, occurrence, scope ->
-                navController.navigate(CalendarsApp.copyEvent(event, occurrence, scope))
-            },
+            onEditEvent = { instance -> navController.navigate(CalendarsApp.event(instance)) },
             onCopyOccurrence = { instance -> navController.navigate(CalendarsApp.copyOccurrence(instance)) },
             deleted = deleted,
             onDeletedShown = { entry.savedStateHandle[CalendarsApp.DELETED] = false },
@@ -352,7 +346,7 @@ fun NavGraphBuilder.calendarsNavGraph(
                 defaultValue = "0"
             },
         ) + listOf(
-            "source", "copy", "occurrence", "scope", "finish", "allday", "date",
+            "source", "finish", "allday", "date",
             "summary", "location", "description", "zones", "calendar",
         ).map { name ->
             navArgument(name) {
@@ -384,6 +378,10 @@ fun NavGraphBuilder.calendarsNavGraph(
             navArgument("occurrence") {
                 type = NavType.StringType
                 defaultValue = "0"
+            },
+            navArgument("moved") {
+                type = NavType.StringType
+                defaultValue = ""
             },
         ),
     ) {

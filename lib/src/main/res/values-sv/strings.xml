@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s återupptog spelet</string>
     <string name="game_not_found">Spelet hittades inte</string>
     <string name="game_chat_move_played_you">Du spelade %1$s</string>
+    <string name="devices_add">Lägg till en enhet</string>
+    <string name="devices_copy">Kopiera %1$s</string>
+    <string name="devices_create">Skapa</string>
+    <string name="devices_created">Skapad %1$s</string>
+    <string name="devices_delete">Ta bort enhet</string>
+    <string name="devices_delete_message">Enheten kommer inte längre att kunna synkronisera kontakter eller kalendrar.</string>
+    <string name="devices_delete_title">Ta bort enhet?</string>
+    <string name="devices_deleted">Enhet borttagen</string>
+    <string name="devices_done">Klar</string>
+    <string name="devices_empty">Inga enheter anslutna</string>
+    <string name="devices_name">Enhetsnamn</string>
+    <string name="devices_password">Lösenord</string>
+    <string name="devices_title">Anslutna enheter</string>
+    <string name="devices_used">Senast använd %1$s</string>
+    <string name="devices_username">Användarnamn</string>
+    <string name="devices_warning">Kopiera lösenordet nu: det kan inte visas igen.</string>
+    <string name="devices_unused">Aldrig använd</string>
 </resources>

@@ -75,6 +75,11 @@ class SubscribeScreenTest {
                     "-/calendars/remote" -> ok(
                         """{"calendars": [{"href": "/w", "name": "Work"}, {"href": "/b", "name": "birthdays"}, {"href": "/h", "name": "Home"}]}""",
                     )
+                    // A server that installed Calendars from the publisher names it by its entity id.
+                    "-/calendars/subscribe" -> MockResponse().setResponseCode(403).setBody(
+                        """{"error": "permission_required", "app": "$ENTITY", "permission": "url:example.org"}""",
+                    )
+                    "-/permissions/name" -> ok("""{"name": "Fetch from example.org"}""")
                     else -> MockResponse().setResponseCode(404)
                 }
             }
@@ -86,6 +91,8 @@ class SubscribeScreenTest {
     fun end() = server.shutdown()
 
     private fun ok(data: String) = MockResponse().setBody("""{"data": $data}""")
+
+    private val ENTITY = "1aBcDeFgHiJkLmNoPqRsTuVwXyZ23456789aBcDeFgHiJkLmNo"
 
     private fun model(): SubscribeCalendarViewModel {
         val retrofit = Retrofit.Builder()
@@ -169,6 +176,24 @@ class SubscribeScreenTest {
         rule.onNodeWithText("Work").performClick()
         until { model.uiState.value.remote.isNotEmpty() }
         assertEquals(listOf("/b", "/h", "/w"), model.uiState.value.remote.map { it.href })
+    }
+
+    @Test
+    fun `the consent a subscription needs names the app by its title, not its id`() {
+        val model = model()
+        settle(model)
+        rule.setContent {
+            SubscribeCalendarScreen(onBack = {}, onSubscribed = {}, onEnableGoogle = {}, viewModel = model)
+        }
+        model.choose(SubscribeKind.ADDRESS)
+        model.setUrl("https://example.org/holidays.ics")
+        model.subscribe()
+        until { model.uiState.value.permission != null }
+        val asking = context.getString(R.string.calendars_permission_message, context.getString(R.string.calendars_drawer_title))
+        assertEquals(1, count(asking))
+        assertEquals(1, count("Fetch from example.org"))
+        assertEquals(0, rule.onAllNodes(hasText(ENTITY, substring = true)).fetchSemanticsNodes().size)
+        assertEquals(ENTITY, model.uiState.value.permission?.app)
     }
 
     @Test

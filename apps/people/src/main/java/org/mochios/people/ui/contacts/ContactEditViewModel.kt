@@ -14,6 +14,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -59,6 +60,11 @@ data class ContactEditUiState(
     val copied: String? = null,
     /** Leaving saved what was pending, or Create made the contact, so the screen can go. */
     val left: Boolean = false,
+    /**
+     * Why the save leaving made failed: the screen stays, offering to leave
+     * without the edit.
+     */
+    val unsaved: MochiError? = null,
 
     /** Persons with an invitation out, which is how a pending invite is known. */
     val sent: Set<String> = emptySet(),
@@ -90,6 +96,20 @@ data class ContactEditUiState(
 
 /** What the server holds, as the form writes it: the line a change is measured from. */
 private data class Baseline(val properties: List<ContactProperty>, val book: String)
+
+/** What a save of the form came to. */
+private enum class Outcome {
+    /** The form held nothing the server does not. */
+    NOTHING,
+
+    /** A change that cannot be saved, a contact left with no name, went unsent. */
+    DROPPED,
+    SAVED,
+    FAILED,
+
+    /** Another device wrote the card first: the form is read again. */
+    CONFLICTED,
+}
 
 /** How long typing rests before it is saved. */
 private const val PAUSE = 1_000L
@@ -172,18 +192,22 @@ class ContactEditViewModel @Inject constructor(
         val form = contactForm(contact.card, contact.book)
         etag = contact.etag
         baseline = Baseline(form.properties(), form.book)
-        _uiState.value = _uiState.value.copy(contact = contact, form = form)
+        _uiState.update { state -> state.copy(contact = contact, form = form) }
     }
 
-    /** Opens the form on the card a copy is made from, as it is stored. */
+    /**
+     * Opens the form on the card a copy is made from, as it is stored. The
+     * form shows once that card is read, so nothing typed before is lost.
+     */
     private fun copying() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.update { state -> state.copy(isLoading = true, error = null) }
             try {
                 val contact = repository.getContact(source)
-                _uiState.value = _uiState.value.copy(isLoading = false, form = contactForm(contact.card, contact.book))
+                val form = contactForm(contact.card, contact.book)
+                _uiState.update { state -> state.copy(isLoading = false, form = form) }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+                _uiState.update { state -> state.copy(isLoading = false, error = e.toMochiError()) }
             }
             fetchBooks()
         }
@@ -191,38 +215,51 @@ class ContactEditViewModel @Inject constructor(
 
     fun load() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
+            _uiState.update { state -> state.copy(isLoading = true, error = null) }
             try {
                 val contact = repository.getContact(contactId)
+                // Read before the form is filled and written over the state as
+                // it then is, so nothing typed once the form shows is lost.
+                val sent = sentOf(contact)
                 apply(contact)
-                _uiState.value = _uiState.value.copy(isLoading = false, sent = fetchSent())
+                _uiState.update { state -> state.copy(isLoading = false, sent = sent) }
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+                _uiState.update { state -> state.copy(isLoading = false, error = e.toMochiError()) }
             }
             fetchBooks()
         }
     }
 
     /**
-     * The contact and the sent list again. A card changed elsewhere replaces
+     * The contact and its invitation again. A card changed elsewhere replaces
      * the form while it holds nothing unsaved; an edit waits, its save is
-     * refused, and the reload that follows reads the card.
+     * refused, and the reload that follows reads the card. A card the server
+     * only restamped - a friend's photo, a directory name, the friend switch -
+     * still holds what the edit was made from, so the edit goes on against
+     * the new etag.
      */
     private suspend fun refresh() {
         val before = writes
         try {
             val contact = repository.getContact(contactId)
-            val sent = fetchSent()
+            val sent = sentOf(contact)
             if (writes != before) return
-            if (contact.etag != etag && !dirty()) {
-                apply(contact)
-            } else {
-                _uiState.value = _uiState.value.copy(contact = contact)
+            val base = baseline
+            when {
+                contact.etag == etag -> Unit
+                !dirty() -> apply(contact)
+                base != null && restamped(contact, base) -> etag = contact.etag
             }
-            _uiState.value = _uiState.value.copy(sent = sent)
+            _uiState.update { state -> state.copy(contact = contact, sent = sent) }
         } catch (_: Exception) {
             // A failed refresh leaves the last state showing; the next action reloads.
         }
+    }
+
+    /** Whether [contact], under a new etag, holds the card and book [base] was read from. */
+    private fun restamped(contact: Contact, base: Baseline): Boolean {
+        val fetched = contactForm(contact.card, contact.book)
+        return fetched.properties() == base.properties && contact.book.ifBlank { base.book } == base.book
     }
 
     /**
@@ -260,6 +297,16 @@ class ContactEditViewModel @Inject constructor(
             }
             job = latest
         }
+    }
+
+    /**
+     * The persons with the user's invitation out, as far as this contact
+     * goes: its own answer says, and a server that predates that is asked for
+     * the whole list.
+     */
+    private suspend fun sentOf(contact: Contact): Set<String> {
+        val invited = contact.invited ?: return fetchSent()
+        return if (invited && contact.person.isNotBlank()) setOf(contact.person) else emptySet()
     }
 
     private suspend fun fetchSent(): Set<String> = try {
@@ -352,7 +399,7 @@ class ContactEditViewModel @Inject constructor(
             } catch (e: Exception) {
                 e.toMochiError()
             }
-            _uiState.value = _uiState.value.settle(failure).copy(switching = emptyMap())
+            _uiState.update { state -> state.settle(failure).copy(switching = emptyMap()) }
         }
     }
 
@@ -395,18 +442,20 @@ class ContactEditViewModel @Inject constructor(
     /** Saves what the form holds now, after any save under way: a field was left. */
     fun save() {
         pause?.cancel()
-        if (creating) return
+        // Nothing is saved once the screen is going: an edit left unsaved
+        // stays so, as a field losing its focus on the way out would save it.
+        if (creating || _uiState.value.left) return
         viewModelScope.launch { writing.withLock { send() } }
     }
 
-    private suspend fun send() {
-        if (creating || !dirty()) return
+    private suspend fun send(): Outcome {
+        if (creating || !dirty()) return Outcome.NOTHING
         val form = _uiState.value.form
         // A contact keeps its name; a change without one waits for it.
-        if (!form.valid) return
+        if (!form.valid) return Outcome.DROPPED
         val properties = form.properties()
-        _uiState.value = _uiState.value.copy(isSaving = true, save = SaveStatus.Saving, error = null, conflict = null)
-        try {
+        _uiState.update { state -> state.copy(isSaving = true, save = SaveStatus.Saving, error = null, conflict = null) }
+        return try {
             val contact = repository.updateContact(
                 contact = contactId,
                 etag = etag,
@@ -418,37 +467,55 @@ class ContactEditViewModel @Inject constructor(
             saved = true
             etag = contact.etag
             baseline = Baseline(properties, form.book)
-            // Saved, unless the form changed while this was on its way.
-            val current = if (_uiState.value.form == form) SaveStatus.Saved else SaveStatus.Idle
-            _uiState.value = _uiState.value.copy(isSaving = false, save = current, contact = contact)
+            _uiState.update { state ->
+                // Saved, unless the form changed while this was on its way.
+                val current = if (state.form == form) SaveStatus.Saved else SaveStatus.Idle
+                state.copy(isSaving = false, save = current, contact = contact)
+            }
+            Outcome.SAVED
         } catch (e: Exception) {
             // 412 is the compare-and-swap losing to another device. The
             // server's message says so; the card it now holds replaces the
             // form, since saving over it is exactly what was refused.
             if (e is ApiException && e.code == 412) {
-                _uiState.value = _uiState.value.copy(isSaving = false, save = SaveStatus.Error, conflict = e.message)
+                _uiState.update { state -> state.copy(isSaving = false, save = SaveStatus.Error, conflict = e.message) }
                 baseline = null
                 load()
+                Outcome.CONFLICTED
             } else {
-                _uiState.value = _uiState.value.copy(isSaving = false, save = SaveStatus.Error, error = e.toMochiError())
+                _uiState.update { state -> state.copy(isSaving = false, save = SaveStatus.Error, error = e.toMochiError()) }
+                Outcome.FAILED
             }
         }
     }
 
     /**
-     * Leaving the screen saves what is pending first. A save that fails keeps
-     * the screen, saying why; a change that cannot be saved, a contact left
-     * with no name, is dropped.
+     * Leaving the screen saves what is pending first, and depends on that
+     * save alone: a failure from before - a failed load, a refused switch -
+     * never keeps the screen. A save that fails keeps it, saying why and
+     * offering to leave without the edit; a change that cannot be saved, a
+     * contact left with no name, is dropped.
      */
     fun leave() {
         pause?.cancel()
         viewModelScope.launch {
-            writing.withLock { send() }
-            val state = _uiState.value
-            if (state.error == null && state.conflict == null) {
-                _uiState.value = state.copy(left = true)
+            when (writing.withLock { send() }) {
+                Outcome.FAILED -> _uiState.update { state -> state.copy(unsaved = state.error) }
+                Outcome.CONFLICTED -> Unit
+                else -> _uiState.update { state -> state.copy(left = true) }
             }
         }
+    }
+
+    /** Leaves without the edit whose save failed. */
+    fun discard() {
+        pause?.cancel()
+        _uiState.update { state -> state.copy(unsaved = null, left = true) }
+    }
+
+    /** Stays on the edit whose save failed, to try again. */
+    fun stay() {
+        _uiState.update { state -> state.copy(unsaved = null) }
     }
 
     fun clearConflict() {
@@ -456,8 +523,8 @@ class ContactEditViewModel @Inject constructor(
     }
 
     /**
-     * Saves a new contact; the screen then goes back to where it was started,
-     * as the web's panel closes. A copy, made to be changed, opens instead.
+     * Saves a new contact, a copy as any other; the screen then goes back to
+     * where it was started, as the web's panel closes.
      */
     fun create() {
         val state = _uiState.value
@@ -481,15 +548,17 @@ class ContactEditViewModel @Inject constructor(
     /**
      * Saves what is pending, then opens a copy of this contact as a new one,
      * on the card as it now stands, which Create makes, as the web's panel
-     * does.
+     * does. A save that fails or loses to another device keeps the editor,
+     * saying why, rather than copy a card without the edit.
      */
     fun copy() {
         if (creating || !_uiState.value.form.valid) return
         pause?.cancel()
         viewModelScope.launch {
             writing.withLock {
-                send()
-                _uiState.value = _uiState.value.copy(copied = contactId)
+                val outcome = send()
+                if (outcome == Outcome.FAILED || outcome == Outcome.CONFLICTED) return@withLock
+                _uiState.update { state -> state.copy(copied = contactId) }
             }
         }
     }
@@ -518,14 +587,25 @@ class ContactEditViewModel @Inject constructor(
      * Merges [source] into this contact as soon as it is picked: the server
      * combines the two cards. The survivor is whichever is linked to a Mochi
      * person, so the screen may go on as the other contact. A refusal stays
-     * in the list, saying why.
+     * in the list, saying why, as does a failed save of what was pending; one
+     * that lost to another device closes the list over the card read again.
      */
     fun merge(source: String) {
         if (creating || _uiState.value.mergePending != null) return
         pause?.cancel()
         viewModelScope.launch {
             writing.withLock {
-                send()
+                when (send()) {
+                    Outcome.FAILED -> {
+                        _uiState.update { state -> state.copy(mergeError = state.error) }
+                        return@withLock
+                    }
+                    Outcome.CONFLICTED -> {
+                        _uiState.update { state -> state.copy(mergeOpen = false, mergePending = null, mergeError = null) }
+                        return@withLock
+                    }
+                    else -> Unit
+                }
                 _uiState.value = _uiState.value.copy(mergePending = source, mergeError = null)
                 try {
                     val merge = repository.previewMerge(contactId, source)

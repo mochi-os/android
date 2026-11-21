@@ -38,12 +38,25 @@ import org.mochios.android.api.OwnedAddress
 import org.mochios.android.util.segment
 
 /**
+ * The people app's address for a person's image - [kind] is `avatar`,
+ * `banner` or `favicon` - at [version], the stamp their information carries,
+ * so a new upload is a new address. The one place these addresses are built:
+ * the id and version reach the phone from another server, and the request
+ * carries the session. Null when the id is blank or cannot be one segment of
+ * the address ([segment]); a version that cannot is left off.
+ */
+fun personAsset(entityId: String?, kind: String, version: String? = null): OwnedAddress? {
+    val id = entityId?.takeIf { value -> value.isNotBlank() }?.let(::segment) ?: return null
+    val stamp = version?.takeIf { value -> value.isNotBlank() }?.let(::segment)
+    return OwnedAddress.of(if (stamp == null) "/people/$id/-/$kind" else "/people/$id/-/$kind?v=$stamp")
+}
+
+/**
  * The people app's avatar path for a person entity id, as an [EntityAvatar]
  * `src`. Null when the id is blank, or, a peer's, cannot be one segment of the
  * address ([segment]), leaving the initials placeholder in charge.
  */
-fun personAvatarPath(entityId: String?): OwnedAddress? =
-    entityId?.takeIf { id -> id.isNotBlank() }?.let(::segment)?.let { id -> OwnedAddress.of("/people/$id/-/avatar") }
+fun personAvatarPath(entityId: String?): OwnedAddress? = personAsset(entityId, "avatar")
 
 /**
  * Circular avatar for a person entity: [src], one of the app's own addresses

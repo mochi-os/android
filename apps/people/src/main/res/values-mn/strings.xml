@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Хүн олдсонгүй</string>
     <string name="people_friends_try_adjusting">Хайлтаа засахыг туршаад үз</string>
     <string name="people_friends_pending">Хүлээгдэж буй</string>
-    <string name="people_friends_received_tab">Хүлээн авсан</string>
-    <string name="people_friends_sent_tab">Илгээсэн</string>
     <string name="people_invitations_incoming">Ирж буй урилгууд</string>
     <string name="people_invitations_empty">Хүлээгдэж буй урилга алга</string>
     <string name="people_invitations_empty_hint">Шинэ урилгууд энд харагдана</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s-ийн урилгыг хүлээн авлаа</string>
     <string name="people_invitations_toast_declined">%1$s-ийн урилгаас татгалзлаа</string>
     <string name="people_invitations_toast_cancelled">%1$s-д илгээсэн урилгыг цуцаллаа</string>
-    <string name="people_groups_empty">Бүлэг алга</string>
     <string name="people_group_delete_confirm">\"%1$s\" бүлгийг устгах уу? Үүнийг буцаах боломжгүй.</string>
     <string name="people_member_remove_confirm">%1$s-г энэ бүлгээс хасахдаа итгэлтэй байна уу?</string>
     <string name="people_member_remove_with_name">%1$s-г хасах</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s зургийг боловсруулж чадсангүй</string>
     <string name="people_profile_accent_invalid">Зөв hex өнгө оруулна уу (жишээ нь #a78bfa)</string>
     <string name="people_profile_accent_none">Алга</string>
-    <string name="people_profile_privacy_private_desc">Зөвхөн харилцан найзууд таны профайлыг үзэх боломжтой</string>
     <string name="people_welcome_title">Хүмүүс апп-д тавтай морилно уу</string>
     <string name="people_person_banner_alt">%1$s-н баннер</string>
-    <string name="people_person_private">Энэ профайл хувийн</string>
     <string name="people_person_state_invited">Уригдсан</string>
 
     <string name="people_invitations_accept_all">Бүгдийг хүлээн зөвшөөрөх</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi даяар найзуудаа олж, холбоо тогтоо. Урилга илгээхийн тулд Харилцагч нэмэх дээр дарна уу.</string>
     <string name="people_person_state_contact">Харилцагчдад байна</string>
-    <string name="people_device_create">Үүсгэх</string>
-    <string name="people_device_add">Төхөөрөмж нэмэх</string>
-    <string name="people_device_username">Хэрэглэгчийн нэр</string>
-    <string name="people_device_done">Дууссан</string>
-    <string name="people_device_used">Сүүлд ашигласан %1$s</string>
-    <string name="people_device_never">Хэзээ ч</string>
     <string name="people_sync_now">Одоо синк хийх</string>
-    <string name="people_device_title">Холбогдсон төхөөрөмжүүд</string>
-    <string name="people_device_name">Төхөөрөмжийн нэр</string>
     <string name="people_device_address">Хаягийн дэвтрийн URL</string>
-    <string name="people_device_password">Нууц үг</string>
-    <string name="people_device_copy">%1$s хуулах</string>
-    <string name="people_device_warning">Энэ нууц үгийг одоо хадгална уу. Дахин харуулах боломжгүй.</string>
-    <string name="people_device_empty">Холбогдсон төхөөрөмж байхгүй.</string>
-    <string name="people_device_created">%1$s үүссэн</string>
-    <string name="people_device_delete">Төхөөрөмж устгах</string>
-    <string name="people_device_delete_title">Төхөөрөмжийг устгах уу?</string>
-    <string name="people_device_delete_message">Төхөөрөмж цаашид харилцагчид эсвэл хуанлиудыг синк хийх боломжгүй болно.</string>
-    <string name="people_device_deleted">Төхөөрөмж устлаа</string>
     <string name="people_sync_title">Энэ утастай синк хийх</string>
     <string name="people_sync_confirm">Энэ утасны Харилцагчид аппаас найзын харилцагчийг устгавал найзын харилцаа мөн дуусна.</string>
     <string name="people_sync_enable">Асаах</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Тохиргоо</string>
     <string name="people_contacts_invitation_sent">Урилга илгээгдсэн</string>
     <string name="people_contact_keep">Үлдээх</string>
+    <string name="people_invitations_received_count">Хүлээн авсан (%1$s)</string>
+    <string name="people_invitations_sent_count">Илгээсэн (%1$s)</string>
+    <string name="people_contact_discard">Өөрчлөлтийг хаях</string>
+    <string name="people_person_unavailable">Хүнийг харуулах боломжгүй</string>
 </resources>

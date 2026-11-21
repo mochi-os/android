@@ -23,11 +23,13 @@ import org.json.JSONObject
  * [CalendarsStore] over the calendar provider, for one account. Every URI
  * carries [CalendarContract.CALLER_IS_SYNCADAPTER] and the account, so the
  * provider neither marks these writes dirty nor hides deleted rows from the
- * queries.
+ * queries. [zone] is the phone's own, which a floating event's times are read
+ * in.
  */
 class ProviderCalendarsStore(
     private val provider: ContentProviderClient,
     private val account: Account,
+    private val zone: String = java.util.TimeZone.getDefault().id,
 ) : CalendarsStore {
 
     override fun cursor(): SyncCursor {
@@ -137,6 +139,14 @@ class ProviderCalendarsStore(
         )
     }
 
+    override fun clear(calendar: StoredCalendar) {
+        provider.delete(
+            Events.CONTENT_URI.adapter(account),
+            "${Events.CALENDAR_ID}=?",
+            arrayOf(calendar.local.toString()),
+        )
+    }
+
     override fun events(): List<StoredEvent> {
         val out = mutableListOf<StoredEvent>()
         val synced = calendars().filter { it.sync }.map { it.local }
@@ -241,7 +251,7 @@ class ProviderCalendarsStore(
                     .build(),
             )
         }
-        for (row in CalendarsMapping.rows(event, calendar)) {
+        for (row in CalendarsMapping.rows(event, calendar, zone)) {
             val index = batch.size
             batch.add(
                 ContentProviderOperation.newInsert(Events.CONTENT_URI.adapter(account))

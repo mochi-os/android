@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">İnsan tapılmadı</string>
     <string name="people_friends_try_adjusting">Axtarış terminlərinizi tənzimləməyə cəhd edin</string>
     <string name="people_friends_pending">Gözləmədə</string>
-    <string name="people_friends_received_tab">Alındı</string>
-    <string name="people_friends_sent_tab">Göndərildi</string>
     <string name="people_invitations_incoming">Gələn dəvətlər</string>
     <string name="people_invitations_empty">Gözləyən dəvət yoxdur</string>
     <string name="people_invitations_empty_hint">Yeni dəvətlər burada görünəcək</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s adlı şəxsdən gələn dəvət qəbul edildi</string>
     <string name="people_invitations_toast_declined">%1$s adlı şəxsdən gələn dəvət rədd edildi</string>
     <string name="people_invitations_toast_cancelled">%1$s adlı şəxsə göndərilən dəvət ləğv edildi</string>
-    <string name="people_groups_empty">Qrup yoxdur</string>
     <string name="people_group_delete_confirm">\"%1$s\" qrupu silinsin? Bu geri qaytarıla bilməz.</string>
     <string name="people_member_remove_confirm">%1$s adlı şəxsi bu qrupdan silmək istədiyinizə əminsiniz?</string>
     <string name="people_member_remove_with_name">%1$s adlı şəxsi sil</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s şəkli emal edilə bilmədi</string>
     <string name="people_profile_accent_invalid">Düzgün hex rəng daxil edin (məs. #a78bfa)</string>
     <string name="people_profile_accent_none">Heç biri</string>
-    <string name="people_profile_privacy_private_desc">Profilinizə yalnız qarşılıqlı dostlar baxa bilər</string>
     <string name="people_welcome_title">İnsanlar bölməsinə xoş gəlmisiniz</string>
     <string name="people_person_banner_alt">%1$s üçün banner</string>
-    <string name="people_person_private">Bu profil gizlidir</string>
     <string name="people_person_state_invited">Dəvət edilib</string>
 
     <string name="people_invitations_accept_all">Hamısını qəbul et</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi boyunca dostlar tapın və əlaqə qurun. Dəvət göndərmək üçün Kontakt əlavə et düyməsinə toxunun.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>
-    <string name="people_device_create">Yarat</string>
-    <string name="people_device_add">Cihaz əlavə et</string>
-    <string name="people_device_username">İstifadəçi adı</string>
-    <string name="people_device_done">Hazırdır</string>
-    <string name="people_device_used">Son istifadə %1$s</string>
-    <string name="people_device_never">Heç vaxt</string>
     <string name="people_sync_now">İndi sinxronlaşdır</string>
-    <string name="people_device_title">Qoşulmuş cihazlar</string>
-    <string name="people_device_name">Cihaz adı</string>
     <string name="people_device_address">Ünvan kitabçası URL-i</string>
-    <string name="people_device_password">Şifrə</string>
-    <string name="people_device_copy">%1$s kopyala</string>
-    <string name="people_device_warning">Bu şifrəni indi yadda saxlayın. Bir daha göstərilə bilməz.</string>
-    <string name="people_device_empty">Heç bir cihaz qoşulmayıb.</string>
-    <string name="people_device_created">%1$s yaradıldı</string>
-    <string name="people_device_delete">Cihazı sil</string>
-    <string name="people_device_delete_title">Cihaz silinsin?</string>
-    <string name="people_device_delete_message">Cihaz artıq kontaktları və ya təqvimləri sinxronlaşdıra bilməyəcək.</string>
-    <string name="people_device_deleted">Cihaz silindi</string>
     <string name="people_sync_title">Bu telefonla sinxronlaşdır</string>
     <string name="people_sync_confirm">Bu telefonun Kontaktlar tətbiqində dostun kontaktını silmək dostluğu da sona çatdırır.</string>
     <string name="people_sync_enable">Aktiv et</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Parametrlər</string>
     <string name="people_contacts_invitation_sent">Dəvət göndərildi</string>
     <string name="people_contact_keep">Saxla</string>
+    <string name="people_invitations_received_count">Alındı (%1$s)</string>
+    <string name="people_invitations_sent_count">Göndərildi (%1$s)</string>
+    <string name="people_contact_discard">Dəyişiklikləri at</string>
+    <string name="people_person_unavailable">Şəxs əlçatan deyil</string>
 </resources>

@@ -103,7 +103,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import java.time.Instant
 import java.time.LocalDate
-import java.time.ZoneId
 import java.time.temporal.ChronoUnit
 import kotlinx.coroutines.delay
 import org.mochios.android.i18n.LocalFormat
@@ -222,9 +221,6 @@ sealed interface Moved {
     /** A bar dropped in the grid: timed on [day] from [hours] past midnight, as long as a new event. */
     data class Timed(val day: LocalDate, val hours: Float) : Moved
 }
-
-/** The key the landing bar is laid out under among the band's own. */
-private const val LANDING = "landing"
 
 /**
  * The day and week views: an all-day band above a scrolling time grid of
@@ -1591,7 +1587,3 @@ fun String.toColour(fallback: Color): Color = try {
 @Composable
 fun weekdayLabel(day: LocalDate): String =
     day.dayOfWeek.getDisplayName(java.time.format.TextStyle.SHORT, LocalConfiguration.current.locales[0])
-
-/** The moment an occurrence's day starts, for the views' own arithmetic. */
-fun Instance.moment(zone: ZoneId): java.time.ZonedDateTime =
-    Instant.ofEpochSecond(start).atZone(zone)

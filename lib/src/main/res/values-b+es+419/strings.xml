@@ -335,4 +335,17 @@
     <string name="game_system_score_accept">%1$s aceptó la puntuación</string>
     <string name="game_system_score_resume">%1$s reanudó la partida</string>
     <string name="game_not_found">No se encontró el juego</string>
+    <string name="devices_copy">Copiar %1$s</string>
+    <string name="devices_create">Crear</string>
+    <string name="devices_created">Creado %1$s</string>
+    <string name="devices_delete">Eliminar dispositivo</string>
+    <string name="devices_delete_message">El dispositivo ya no podrá sincronizar contactos ni calendarios.</string>
+    <string name="devices_delete_title">¿Eliminar el dispositivo?</string>
+    <string name="devices_deleted">Dispositivo eliminado</string>
+    <string name="devices_done">Hecho</string>
+    <string name="devices_name">Nombre del dispositivo</string>
+    <string name="devices_password">Contraseña</string>
+    <string name="devices_used">Último uso %1$s</string>
+    <string name="devices_username">Nombre de usuario</string>
+    <string name="devices_unused">Nunca usado</string>
 </resources>

@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s hélt leik áfram</string>
     <string name="game_not_found">Leikur fannst ekki</string>
     <string name="game_chat_move_played_you">Þú lékst %1$s</string>
+    <string name="devices_add">Bæta við tæki</string>
+    <string name="devices_copy">Afrita %1$s</string>
+    <string name="devices_create">Búa til</string>
+    <string name="devices_created">Búið til %1$s</string>
+    <string name="devices_delete">Eyða tæki</string>
+    <string name="devices_delete_message">Tækið mun ekki lengur geta samstillt tengiliði eða dagatöl.</string>
+    <string name="devices_delete_title">Eyða tæki?</string>
+    <string name="devices_deleted">Tæki eytt</string>
+    <string name="devices_done">Lokið</string>
+    <string name="devices_empty">Engin tæki tengd</string>
+    <string name="devices_name">Heiti tækis</string>
+    <string name="devices_password">Lykilorð</string>
+    <string name="devices_title">Tengd tæki</string>
+    <string name="devices_used">Síðast notað %1$s</string>
+    <string name="devices_username">Notandanafn</string>
+    <string name="devices_warning">Afritaðu lykilorðið núna: ekki er hægt að birta það aftur.</string>
+    <string name="devices_unused">Aldrei notað</string>
 </resources>

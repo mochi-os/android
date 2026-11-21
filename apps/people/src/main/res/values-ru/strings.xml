@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Люди не найдены</string>
     <string name="people_friends_try_adjusting">Попробуйте изменить параметры поиска</string>
     <string name="people_friends_pending">Ожидание</string>
-    <string name="people_friends_received_tab">Получено</string>
-    <string name="people_friends_sent_tab">Отправлено</string>
     <string name="people_invitations_incoming">Входящие приглашения</string>
     <string name="people_invitations_empty">Нет ожидающих приглашений</string>
     <string name="people_invitations_empty_hint">Новые приглашения будут отображаться здесь</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Приглашение от %1$s принято</string>
     <string name="people_invitations_toast_declined">Приглашение от %1$s отклонено</string>
     <string name="people_invitations_toast_cancelled">Приглашение для %1$s отменено</string>
-    <string name="people_groups_empty">Нет групп</string>
     <string name="people_group_delete_confirm">Удалить группу «%1$s»? Это действие нельзя отменить.</string>
     <string name="people_member_remove_confirm">Удалить %1$s из этой группы?</string>
     <string name="people_member_remove_with_name">Удалить %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Не удалось обработать изображение «%1$s»</string>
     <string name="people_profile_accent_invalid">Введите корректный HEX-цвет (например, #a78bfa)</string>
     <string name="people_profile_accent_none">Нет</string>
-    <string name="people_profile_privacy_private_desc">Ваш профиль смогут просматривать только взаимные друзья</string>
     <string name="people_welcome_title">Добро пожаловать в раздел «Люди»</string>
     <string name="people_person_banner_alt">Баннер пользователя %1$s</string>
-    <string name="people_person_private">Этот профиль является приватным</string>
     <string name="people_person_state_invited">Приглашение отправлено</string>
 
     <string name="people_invitations_accept_all">Принять все</string>
@@ -179,25 +174,8 @@
     </plurals>
     <string name="people_welcome_body">Находите друзей по всему Mochi и общайтесь. Нажмите Добавить контакт, чтобы отправить приглашение.</string>
     <string name="people_person_state_contact">В контактах</string>
-    <string name="people_device_create">Создать</string>
-    <string name="people_device_add">Добавить устройство</string>
-    <string name="people_device_username">Имя пользователя</string>
-    <string name="people_device_done">Готово</string>
-    <string name="people_device_used">Последнее использование %1$s</string>
-    <string name="people_device_never">Никогда</string>
     <string name="people_sync_now">Синхронизировать сейчас</string>
-    <string name="people_device_title">Подключённые устройства</string>
-    <string name="people_device_name">Название устройства</string>
     <string name="people_device_address">URL адресной книги</string>
-    <string name="people_device_password">Пароль</string>
-    <string name="people_device_copy">Копировать %1$s</string>
-    <string name="people_device_warning">Сохраните этот пароль сейчас. Его нельзя будет показать снова.</string>
-    <string name="people_device_empty">Нет подключённых устройств.</string>
-    <string name="people_device_created">Создано %1$s</string>
-    <string name="people_device_delete">Удалить устройство</string>
-    <string name="people_device_delete_title">Удалить устройство?</string>
-    <string name="people_device_delete_message">Устройство больше не сможет синхронизировать контакты или календари.</string>
-    <string name="people_device_deleted">Устройство удалено</string>
     <string name="people_sync_title">Синхронизация с этим телефоном</string>
     <string name="people_sync_confirm">Удаление контакта друга в приложении «Контакты» на этом телефоне также прекращает дружбу.</string>
     <string name="people_sync_enable">Включить</string>
@@ -229,4 +207,8 @@
     <string name="people_profile_settings">Настройки</string>
     <string name="people_contacts_invitation_sent">Приглашение отправлено</string>
     <string name="people_contact_keep">Оставить</string>
+    <string name="people_invitations_received_count">Получено (%1$s)</string>
+    <string name="people_invitations_sent_count">Отправлено (%1$s)</string>
+    <string name="people_contact_discard">Отменить изменения</string>
+    <string name="people_person_unavailable">Человек недоступен</string>
 </resources>

@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">Ο/Η %1$s συνέχισε το παιχνίδι</string>
     <string name="game_not_found">Το παιχνίδι δεν βρέθηκε</string>
     <string name="game_chat_move_played_you">Παίξατε %1$s</string>
+    <string name="devices_add">Προσθήκη συσκευής</string>
+    <string name="devices_copy">Αντιγραφή %1$s</string>
+    <string name="devices_create">Δημιουργία</string>
+    <string name="devices_created">Δημιουργήθηκε %1$s</string>
+    <string name="devices_delete">Διαγραφή συσκευής</string>
+    <string name="devices_delete_message">Η συσκευή δεν θα μπορεί πλέον να συγχρονίζει επαφές ή ημερολόγια.</string>
+    <string name="devices_delete_title">Διαγραφή συσκευής;</string>
+    <string name="devices_deleted">Η συσκευή διαγράφηκε</string>
+    <string name="devices_done">Ολοκληρώθηκε</string>
+    <string name="devices_empty">Δεν υπάρχουν συνδεδεμένες συσκευές</string>
+    <string name="devices_name">Όνομα συσκευής</string>
+    <string name="devices_password">Κωδικός πρόσβασης</string>
+    <string name="devices_title">Συνδεδεμένες συσκευές</string>
+    <string name="devices_used">Τελευταία χρήση %1$s</string>
+    <string name="devices_username">Όνομα χρήστη</string>
+    <string name="devices_warning">Αντιγράψτε τον κωδικό πρόσβασης τώρα: δεν μπορεί να εμφανιστεί ξανά.</string>
+    <string name="devices_unused">Δεν έχει χρησιμοποιηθεί ποτέ</string>
 </resources>

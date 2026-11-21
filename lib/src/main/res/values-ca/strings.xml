@@ -355,4 +355,21 @@
     <string name="game_system_score_resume">%1$s ha reprès la partida</string>
     <string name="game_not_found">No s\'ha trobat la partida</string>
     <string name="game_chat_move_played_you">Has jugat %1$s</string>
+    <string name="devices_add">Afegeix un dispositiu</string>
+    <string name="devices_copy">Copia %1$s</string>
+    <string name="devices_create">Crea</string>
+    <string name="devices_created">Creat %1$s</string>
+    <string name="devices_delete">Suprimeix el dispositiu</string>
+    <string name="devices_delete_message">El dispositiu ja no podrà sincronitzar els contactes ni els calendaris.</string>
+    <string name="devices_delete_title">Voleu suprimir el dispositiu?</string>
+    <string name="devices_deleted">S\'ha suprimit el dispositiu</string>
+    <string name="devices_done">Fet</string>
+    <string name="devices_empty">No hi ha cap dispositiu connectat</string>
+    <string name="devices_name">Nom del dispositiu</string>
+    <string name="devices_password">Contrasenya</string>
+    <string name="devices_title">Dispositius connectats</string>
+    <string name="devices_used">Darrer ús %1$s</string>
+    <string name="devices_username">Nom d\'usuari</string>
+    <string name="devices_warning">Copieu la contrasenya ara: no es podrà tornar a mostrar.</string>
+    <string name="devices_unused">Mai utilitzat</string>
 </resources>

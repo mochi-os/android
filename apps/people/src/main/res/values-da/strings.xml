@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Ingen personer fundet</string>
     <string name="people_friends_try_adjusting">Prøv at justere din søgning</string>
     <string name="people_friends_pending">Afventer</string>
-    <string name="people_friends_received_tab">Modtaget</string>
-    <string name="people_friends_sent_tab">Sendt</string>
     <string name="people_invitations_incoming">Indkommende invitationer</string>
     <string name="people_invitations_empty">Ingen ventende invitationer</string>
     <string name="people_invitations_empty_hint">Nye invitationer vises her</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Accepterede invitation fra %1$s</string>
     <string name="people_invitations_toast_declined">Afviste invitation fra %1$s</string>
     <string name="people_invitations_toast_cancelled">Annullerede invitation til %1$s</string>
-    <string name="people_groups_empty">Ingen grupper</string>
     <string name="people_group_delete_confirm">Slet gruppen \"%1$s\"? Dette kan ikke fortrydes.</string>
     <string name="people_member_remove_confirm">Er du sikker på, at du vil fjerne %1$s fra denne gruppe?</string>
     <string name="people_member_remove_with_name">Fjern %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Kunne ikke behandle billedet %1$s</string>
     <string name="people_profile_accent_invalid">Indtast en gyldig hex-farve (f.eks. #a78bfa)</string>
     <string name="people_profile_accent_none">Ingen</string>
-    <string name="people_profile_privacy_private_desc">Kun fælles venner kan se din profil</string>
     <string name="people_welcome_title">Velkommen til Personer</string>
     <string name="people_person_banner_alt">Banner for %1$s</string>
-    <string name="people_person_private">Denne profil er privat</string>
     <string name="people_person_state_invited">Inviteret</string>
 
     <string name="people_invitations_accept_all">Accepter alle</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Find venner på tværs af Mochi, og kom i kontakt. Tryk på Tilføj kontakt for at sende en invitation.</string>
     <string name="people_person_state_contact">I kontakter</string>
-    <string name="people_device_create">Opret</string>
-    <string name="people_device_add">Tilføj en enhed</string>
-    <string name="people_device_username">Brugernavn</string>
-    <string name="people_device_done">Færdig</string>
-    <string name="people_device_used">Sidst brugt %1$s</string>
-    <string name="people_device_never">Aldrig</string>
     <string name="people_sync_now">Synkronisér nu</string>
-    <string name="people_device_title">Tilsluttede enheder</string>
-    <string name="people_device_name">Enhedsnavn</string>
     <string name="people_device_address">Adressebogens URL</string>
-    <string name="people_device_password">Adgangskode</string>
-    <string name="people_device_copy">Kopier %1$s</string>
-    <string name="people_device_warning">Gem denne adgangskode nu. Den kan ikke vises igen.</string>
-    <string name="people_device_empty">Ingen enheder tilsluttet.</string>
-    <string name="people_device_created">Oprettet %1$s</string>
-    <string name="people_device_delete">Slet enhed</string>
-    <string name="people_device_delete_title">Slet enhed?</string>
-    <string name="people_device_delete_message">Enheden vil ikke længere kunne synkronisere kontakter eller kalendere.</string>
-    <string name="people_device_deleted">Enhed slettet</string>
     <string name="people_sync_title">Synkronisér med denne telefon</string>
     <string name="people_sync_confirm">Hvis du sletter en vens kontakt i denne telefons Kontakter-app, ophører venskabet også.</string>
     <string name="people_sync_enable">Slå til</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Indstillinger</string>
     <string name="people_contacts_invitation_sent">Invitation sendt</string>
     <string name="people_contact_keep">Behold</string>
+    <string name="people_invitations_received_count">Modtaget (%1$s)</string>
+    <string name="people_invitations_sent_count">Sendt (%1$s)</string>
+    <string name="people_contact_discard">Kassér ændringer</string>
+    <string name="people_person_unavailable">Personen er ikke tilgængelig</string>
 </resources>

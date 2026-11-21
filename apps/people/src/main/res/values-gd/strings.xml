@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Cha deach daoine a lorg</string>
     <string name="people_friends_try_adjusting">Feuch ri an lorg agad atharrachadh</string>
     <string name="people_friends_pending">Ri làimhseachadh</string>
-    <string name="people_friends_received_tab">Air fhaighinn</string>
-    <string name="people_friends_sent_tab">Air a chur</string>
     <string name="people_invitations_incoming">Cuiridhean a\' tighinn a-steach</string>
     <string name="people_invitations_empty">Chan eil cuireadh ri freagairt</string>
     <string name="people_invitations_empty_hint">Nochdaidh cuireadh ùr an seo</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Ghabh thu ris a\' chuireadh o %1$s</string>
     <string name="people_invitations_toast_declined">Dhiùlt thu an cuireadh o %1$s</string>
     <string name="people_invitations_toast_cancelled">Sguir thu dhen chuireadh gu %1$s</string>
-    <string name="people_groups_empty">Chan eil buidheann ann</string>
     <string name="people_group_delete_confirm">A bheil thu airson am buidheann \"%1$s\" a sguabadh às? Cha ghabh seo a neo-dhèanamh.</string>
     <string name="people_member_remove_confirm">A bheil thu cinnteach gu bheil thu airson %1$s a thoirt air falbh on bhuidheann seo?</string>
     <string name="people_member_remove_with_name">Thoir %1$s air falbh</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Cha b\' urrainn dhuinn dealbh %1$s a phròiseasadh</string>
     <string name="people_profile_accent_invalid">Cuir a-steach dath sia-dheicheach dligheach (m.e. #a78bfa)</string>
     <string name="people_profile_accent_none">Chan eil gin</string>
-    <string name="people_profile_privacy_private_desc">Chan fhaic ach caraidean dha chèile do phròifil</string>
     <string name="people_welcome_title">Fàilte gu Daoine</string>
     <string name="people_person_banner_alt">Bratach airson %1$s</string>
-    <string name="people_person_private">Tha a\' phròifil seo prìobhaideach</string>
     <string name="people_person_state_invited">Chaidh cuireadh a thoirt</string>
 
     <string name="people_invitations_accept_all">Gabh ris na h-uile</string>
@@ -179,25 +174,8 @@
     </plurals>
     <string name="people_welcome_body">Lorg caraidean air feadh Mochi is ceangail riutha. Thoir gnogag air Cuir neach-aithne ris gus cuireadh a chur.</string>
     <string name="people_person_state_contact">San luchd-aithne</string>
-    <string name="people_device_create">Cruthaich</string>
-    <string name="people_device_add">Cuir inneal ris</string>
-    <string name="people_device_username">Ainm-cleachdaiche</string>
-    <string name="people_device_done">Deiseil</string>
-    <string name="people_device_used">Chleachdte mu dheireadh %1$s</string>
-    <string name="people_device_never">Chaoidh</string>
     <string name="people_sync_now">Sioncronaich a-nis</string>
-    <string name="people_device_title">Innealan ceangailte</string>
-    <string name="people_device_name">Ainm an inneil</string>
     <string name="people_device_address">URL an leabhair-sheòlaidhean</string>
-    <string name="people_device_password">Facal-faire</string>
-    <string name="people_device_copy">Dèan lethbhreac de %1$s</string>
-    <string name="people_device_warning">Sàbhail am facal-faire seo an-dràsta. Chan urrainn dhuinn a shealltainn a-rithist.</string>
-    <string name="people_device_empty">Chan eil inneal sam bith ceangailte.</string>
-    <string name="people_device_created">Cruthaichte %1$s</string>
-    <string name="people_device_delete">Sguab às an t-inneal</string>
-    <string name="people_device_delete_title">A bheil thu airson an t-inneal a sguabadh às?</string>
-    <string name="people_device_delete_message">Chan urrainn dhan inneal luchd-aithne no mìosachain a shioncronachadh tuilleadh.</string>
-    <string name="people_device_deleted">Chaidh an t-inneal a sguabadh às</string>
     <string name="people_sync_title">Sioncronaich ris an fhòn seo</string>
     <string name="people_sync_confirm">Ma sguabas tu às neach-aithne caraid ann an aplacaid Luchd-aithne an fhòn seo, thig an càirdeas gu crìch cuideachd.</string>
     <string name="people_sync_enable">Cuir air</string>
@@ -229,4 +207,8 @@
     <string name="people_profile_settings">Roghainnean</string>
     <string name="people_contacts_invitation_sent">Chaidh an cuireadh a chur</string>
     <string name="people_contact_keep">Cùm</string>
+    <string name="people_invitations_received_count">Air fhaighinn (%1$s)</string>
+    <string name="people_invitations_sent_count">Air a chur (%1$s)</string>
+    <string name="people_contact_discard">Tilg na h-atharraichean air falbh</string>
+    <string name="people_person_unavailable">Chan eil an neach ri làimh</string>
 </resources>

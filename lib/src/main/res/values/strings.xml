@@ -414,6 +414,29 @@
     <string name="sync_missing">No longer on the server</string>
     <string name="sync_refused">Refused by the server</string>
     <string name="device_name_fallback">Mobile device</string>
+
+    <!-- Connected devices: the CalDAV and CardDAV passwords a phone or computer signs in with -->
+    <string name="devices_title">Connected devices</string>
+    <string name="devices_name">Device name</string>
+    <string name="devices_create">Create</string>
+    <string name="devices_add">Add device</string>
+    <string name="devices_username">Username</string>
+    <string name="devices_password">Password</string>
+    <!-- A copy button's label, for those who cannot see it: %1$s is the field, such as Username -->
+    <string name="devices_copy">Copy %1$s</string>
+    <string name="devices_warning">Copy the password now: it cannot be shown again.</string>
+    <string name="devices_done">Done</string>
+    <string name="devices_empty">No devices connected</string>
+    <!-- %1$s is a date and time -->
+    <string name="devices_created">Created %1$s</string>
+    <!-- %1$s is a date and time -->
+    <string name="devices_used">Last used %1$s</string>
+    <string name="devices_unused">Never used</string>
+    <string name="devices_delete">Delete device</string>
+    <string name="devices_delete_title">Delete device?</string>
+    <string name="devices_delete_message">The device will no longer be able to sync contacts or calendars.</string>
+    <string name="devices_deleted">Device deleted</string>
+
     <string name="zone_sea">At sea</string>
     <string name="zone_attribution" translatable="false">© OpenStreetMap contributors</string>
     <string name="color_picker_custom">Custom</string>

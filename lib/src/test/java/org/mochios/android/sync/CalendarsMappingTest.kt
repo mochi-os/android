@@ -316,6 +316,99 @@ class CalendarsMappingTest {
         assertEquals(0L, CalendarsMapping.seconds("nonsense"))
     }
 
+    // ---- alarms ----
+
+    private fun alarm(trigger: String, action: String = "DISPLAY", parameter: String? = null, argument: String? = null) =
+        EventComponent(
+            "VALARM",
+            listOf(
+                property("ACTION", action),
+                property("DESCRIPTION", "Leave now"),
+                property("TRIGGER", trigger, parameter, argument),
+                property("ACKNOWLEDGED", "20260921T090000Z"),
+            ),
+        )
+
+    private fun alarms(component: EventComponent) = component.components.filter { it.name == "VALARM" }
+
+    @Test
+    fun `an alarm the phone cannot hold gets no reminder and survives an upload`() {
+        val held = listOf(
+            alarm("-PT15M", parameter = "RELATED", argument = "END"),
+            alarm("20260922T080000Z", parameter = "VALUE", argument = "DATE-TIME"),
+            alarm("PT10M"),
+        )
+        val carried = timed().copy(components = held)
+        val row = CalendarsMapping.rows(event(carried), 7).single()
+        assertEquals(emptyList<Int>(), row.reminders)
+        val renamed = EventRow(row.values + (Events.TITLE to "Renamed"), row.reminders)
+        assertEquals(held, alarms(CalendarsMapping.components(listOf(renamed), listOf(carried)).single()))
+    }
+
+    @Test
+    fun `an alarm whose reminder the phone kept goes back as the server holds it`() {
+        val carried = timed().copy(components = listOf(alarm("-PT15M", "EMAIL"), alarm("-PT15M"), alarm("-PT30M", "AUDIO")))
+        val row = CalendarsMapping.rows(event(carried), 7).single()
+        assertEquals(listOf(15, 15, 30), row.reminders)
+        // The phone drops the half-hour reminder and adds one an hour before.
+        val back = CalendarsMapping.components(listOf(EventRow(row.values, listOf(15, 15, 60))), listOf(carried)).single()
+        val sent = alarms(back)
+        assertEquals(listOf(alarm("-PT15M", "EMAIL"), alarm("-PT15M")), sent.take(2))
+        assertEquals(listOf("-PT60M"), sent.drop(2).map { it.value("TRIGGER") })
+        assertEquals("DISPLAY", sent[2].value("ACTION"))
+        // One of the two at the same time dropped leaves the first.
+        val one = CalendarsMapping.components(listOf(EventRow(row.values, listOf(15))), listOf(carried)).single()
+        assertEquals(listOf(alarm("-PT15M", "EMAIL")), alarms(one))
+    }
+
+    // ---- floating times ----
+
+    private val YORK = "America/New_York"
+
+    private fun floating() = EventComponent(
+        name = "VEVENT",
+        properties = listOf(
+            property("UID", "uid-3@mochi"),
+            property("SUMMARY", "Yoga"),
+            property("DTSTART", "20260922T100000"),
+            property("DTEND", "20260922T110000"),
+        ),
+    )
+
+    @Test
+    fun `a floating event is read in the phone's zone and goes back floating`() {
+        val row = CalendarsMapping.rows(event(floating()), 7, YORK).single()
+        assertEquals(YORK, row.values[Events.EVENT_TIMEZONE])
+        // 10:00 in New York is 14:00 UTC, five hours after 10:00 in London.
+        assertEquals(TEN + 5 * 3_600_000L, row.values[Events.DTSTART])
+        val back = CalendarsMapping.components(listOf(row), listOf(floating()), YORK).single()
+        assertEquals(property("DTSTART", "20260922T100000"), back.property("DTSTART"))
+        assertEquals(property("DTEND", "20260922T110000"), back.property("DTEND"))
+        // A zone picked on the phone pins it there.
+        val moved = EventRow(row.values + (Events.EVENT_TIMEZONE to LONDON) + (Events.EVENT_END_TIMEZONE to LONDON))
+        val pinned = CalendarsMapping.components(listOf(moved), listOf(floating()), YORK).single()
+        assertEquals(LONDON, pinned.property("DTSTART")!!.parameter("TZID"))
+    }
+
+    @Test
+    fun `a floating series' override names its occurrence floating`() {
+        val master = floating().let { it.copy(properties = it.properties + property("RRULE", "FREQ=WEEKLY")) }
+        val override = EventComponent(
+            name = "VEVENT",
+            properties = listOf(
+                property("SUMMARY", "Yoga, late"),
+                property("RECURRENCE-ID", "20260929T100000"),
+                property("DTSTART", "20260929T140000"),
+                property("DTEND", "20260929T150000"),
+            ),
+        )
+        val rows = CalendarsMapping.rows(event(master, override), 7, YORK)
+        assertEquals(NEXT + 5 * 3_600_000L, rows[1].values[Events.ORIGINAL_INSTANCE_TIME])
+        val back = CalendarsMapping.components(rows, listOf(master, override), YORK)
+        assertEquals(property("RECURRENCE-ID", "20260929T100000"), back[1].property("RECURRENCE-ID"))
+        assertEquals(property("DTSTART", "20260929T140000"), back[1].property("DTSTART"))
+    }
+
     @Test
     fun `a UTC date-time needs no zone and reads back the same`() {
         val stamped = CalendarsMapping.stamp("DTSTART", TEN, CalendarsMapping.UTC, allday = false)

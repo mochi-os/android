@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Ez da pertsonarik aurkitu</string>
     <string name="people_friends_try_adjusting">Saiatu zure bilaketa doitzen</string>
     <string name="people_friends_pending">Zain</string>
-    <string name="people_friends_received_tab">Jasota</string>
-    <string name="people_friends_sent_tab">Bidalita</string>
     <string name="people_invitations_incoming">Sarrerako gonbidapenak</string>
     <string name="people_invitations_empty">Zain dauden gonbidapenik ez</string>
     <string name="people_invitations_empty_hint">Gonbidapen berriak hemen agertuko dira</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s erabiltzailearen gonbidapena onartuta</string>
     <string name="people_invitations_toast_declined">%1$s erabiltzailearen gonbidapena ukatuta</string>
     <string name="people_invitations_toast_cancelled">%1$s erabiltzaileari bidalitako gonbidapena bertan behera utzita</string>
-    <string name="people_groups_empty">Talderik ez</string>
     <string name="people_group_delete_confirm">\"%1$s\" taldea ezabatu? Hau ezin da desegin.</string>
     <string name="people_member_remove_confirm">Ziur zaude %1$s talde honetatik kendu nahi duzula?</string>
     <string name="people_member_remove_with_name">Kendu %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Ezin izan da %1$s irudia prozesatu</string>
     <string name="people_profile_accent_invalid">Sartu baliozko kolore hamaseitar bat (adib. #a78bfa)</string>
     <string name="people_profile_accent_none">Bat ere ez</string>
-    <string name="people_profile_privacy_private_desc">Elkarrekiko lagunek bakarrik ikus dezakete zure profila</string>
     <string name="people_welcome_title">Ongi etorri Pertsonetara</string>
     <string name="people_person_banner_alt">%1$s erabiltzailearen banderatxoa</string>
-    <string name="people_person_private">Profil hau pribatua da</string>
     <string name="people_person_state_invited">Gonbidatuta</string>
 
     <string name="people_invitations_accept_all">Onartu guztiak</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Aurkitu lagunak Mochi osoan eta konektatu haiekin. Sakatu Gehitu kontaktua gonbidapen bat bidaltzeko.</string>
     <string name="people_person_state_contact">Kontaktuetan</string>
-    <string name="people_device_create">Sortu</string>
-    <string name="people_device_add">Gehitu gailu bat</string>
-    <string name="people_device_username">Erabiltzaile-izena</string>
-    <string name="people_device_done">Eginda</string>
-    <string name="people_device_used">Azken erabilera %1$s</string>
-    <string name="people_device_never">Inoiz ez</string>
     <string name="people_sync_now">Sinkronizatu orain</string>
-    <string name="people_device_title">Konektatutako gailuak</string>
-    <string name="people_device_name">Gailuaren izena</string>
     <string name="people_device_address">Helbide-liburuaren URLa</string>
-    <string name="people_device_password">Pasahitza</string>
-    <string name="people_device_copy">Kopiatu %1$s</string>
-    <string name="people_device_warning">Gorde pasahitz hau orain. Ezin izango da berriro erakutsi.</string>
-    <string name="people_device_empty">Ez dago gailurik konektatuta.</string>
-    <string name="people_device_created">%1$s sortua</string>
-    <string name="people_device_delete">Ezabatu gailua</string>
-    <string name="people_device_delete_title">Gailua ezabatu?</string>
-    <string name="people_device_delete_message">Gailuak ezin izango ditu kontaktuak edo egutegiak sinkronizatu aurrerantzean.</string>
-    <string name="people_device_deleted">Gailua ezabatu da</string>
     <string name="people_sync_title">Sinkronizatu telefono honekin</string>
     <string name="people_sync_confirm">Telefono honetako Kontaktuak aplikazioan lagun baten kontaktua ezabatzeak laguntasuna ere amaitzen du.</string>
     <string name="people_sync_enable">Aktibatu</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Ezarpenak</string>
     <string name="people_contacts_invitation_sent">Gonbidapena bidalita</string>
     <string name="people_contact_keep">Mantendu</string>
+    <string name="people_invitations_received_count">Jasota (%1$s)</string>
+    <string name="people_invitations_sent_count">Bidalita (%1$s)</string>
+    <string name="people_contact_discard">Baztertu aldaketak</string>
+    <string name="people_person_unavailable">Pertsona ez dago erabilgarri</string>
 </resources>

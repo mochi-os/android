@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ја продолжи играта</string>
     <string name="game_not_found">Играта не е пронајдена</string>
     <string name="game_chat_move_played_you">Вие игравте %1$s</string>
+    <string name="devices_add">Додај уред</string>
+    <string name="devices_copy">Копирај %1$s</string>
+    <string name="devices_create">Создај</string>
+    <string name="devices_created">Создадено %1$s</string>
+    <string name="devices_delete">Избриши уред</string>
+    <string name="devices_delete_message">Уредот повеќе нема да може да синхронизира контакти или календари.</string>
+    <string name="devices_delete_title">Да се избрише ли уредот?</string>
+    <string name="devices_deleted">Уредот е избришан</string>
+    <string name="devices_done">Готово</string>
+    <string name="devices_empty">Нема поврзани уреди</string>
+    <string name="devices_name">Име на уредот</string>
+    <string name="devices_password">Лозинка</string>
+    <string name="devices_title">Поврзани уреди</string>
+    <string name="devices_used">Последно користен %1$s</string>
+    <string name="devices_username">Корисничко име</string>
+    <string name="devices_warning">Копирајте ја лозинката сега: не може повторно да се прикаже.</string>
+    <string name="devices_unused">Никогаш не е користен</string>
 </resources>

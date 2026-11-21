@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s melanjutkan permainan</string>
     <string name="game_not_found">Permainan tidak ditemukan</string>
     <string name="game_chat_move_played_you">Anda memainkan %1$s</string>
+    <string name="devices_add">Tambah perangkat</string>
+    <string name="devices_copy">Salin %1$s</string>
+    <string name="devices_create">Buat</string>
+    <string name="devices_created">Dibuat %1$s</string>
+    <string name="devices_delete">Hapus perangkat</string>
+    <string name="devices_delete_message">Perangkat tidak akan bisa lagi menyinkronkan kontak atau kalender.</string>
+    <string name="devices_delete_title">Hapus perangkat?</string>
+    <string name="devices_deleted">Perangkat dihapus</string>
+    <string name="devices_done">Selesai</string>
+    <string name="devices_empty">Tidak ada perangkat yang terhubung</string>
+    <string name="devices_name">Nama perangkat</string>
+    <string name="devices_password">Kata sandi</string>
+    <string name="devices_title">Perangkat terhubung</string>
+    <string name="devices_used">Terakhir digunakan %1$s</string>
+    <string name="devices_username">Nama pengguna</string>
+    <string name="devices_warning">Salin kata sandi sekarang: kata sandi tidak dapat ditampilkan lagi.</string>
+    <string name="devices_unused">Belum pernah digunakan</string>
 </resources>

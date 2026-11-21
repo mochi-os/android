@@ -253,7 +253,6 @@ fun SourcesTab(
 
     pendingPermission?.let { pending ->
         PermissionRequestDialog(
-            appId = pending.app,
             permissionName = pending.name,
             onAllow = { viewModel.allowPendingPermission() },
             onDeny = { viewModel.denyPendingPermission() }
@@ -263,7 +262,6 @@ fun SourcesTab(
     // A server people of an import wait on, put to the user one at a time.
     waitingPermission?.let { pending ->
         PermissionRequestDialog(
-            appId = pending.app,
             permissionName = pending.name,
             onAllow = { viewModel.allowWaitingPermission() },
             onDeny = { viewModel.denyWaitingPermission() }
@@ -271,9 +269,13 @@ fun SourcesTab(
     }
 }
 
+/**
+ * Asks whether Feeds may have [permissionName]. The app asking is always this
+ * one, which the server names by its id - on an install from the publisher,
+ * a long entity id - so the dialog names it by its own title.
+ */
 @Composable
 internal fun PermissionRequestDialog(
-    appId: String,
     permissionName: String,
     onAllow: () -> Unit,
     onDeny: () -> Unit
@@ -292,7 +294,7 @@ internal fun PermissionRequestDialog(
         content = {
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(
-                    text = stringResource(R.string.feeds_permission_request_message, appId),
+                    text = stringResource(R.string.feeds_permission_request_message, stringResource(R.string.feeds_title)),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center

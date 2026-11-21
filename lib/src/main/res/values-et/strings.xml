@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s jätkas mängu</string>
     <string name="game_not_found">Mängu ei leitud</string>
     <string name="game_chat_move_played_you">Sa mängisid %1$s</string>
+    <string name="devices_add">Lisa seade</string>
+    <string name="devices_copy">Kopeeri %1$s</string>
+    <string name="devices_create">Loo</string>
+    <string name="devices_created">Loodud %1$s</string>
+    <string name="devices_delete">Kustuta seade</string>
+    <string name="devices_delete_message">Seade ei saa enam kontakte ega kalendreid sünkroonida.</string>
+    <string name="devices_delete_title">Kas kustutada seade?</string>
+    <string name="devices_deleted">Seade kustutatud</string>
+    <string name="devices_done">Tehtud</string>
+    <string name="devices_empty">Ühtegi seadet pole ühendatud</string>
+    <string name="devices_name">Seadme nimi</string>
+    <string name="devices_password">Parool</string>
+    <string name="devices_title">Ühendatud seadmed</string>
+    <string name="devices_used">Viimati kasutatud %1$s</string>
+    <string name="devices_username">Kasutajanimi</string>
+    <string name="devices_warning">Kopeeri parool kohe: seda ei saa uuesti kuvada.</string>
+    <string name="devices_unused">Pole kunagi kasutatud</string>
 </resources>

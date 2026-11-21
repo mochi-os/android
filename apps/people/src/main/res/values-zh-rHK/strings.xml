@@ -35,8 +35,6 @@
     <string name="people_friends_searching">搜尋中…</string>
     <string name="people_friends_no_people_found">找不到任何人</string>
     <string name="people_friends_try_adjusting">請嘗試調整你的搜尋</string>
-    <string name="people_friends_received_tab">已收到</string>
-    <string name="people_friends_sent_tab">已發送</string>
     <string name="people_invitations_incoming">收到的邀請</string>
     <string name="people_invitations_empty">沒有待處理的邀請</string>
     <string name="people_invitations_empty_hint">新邀請會顯示於此</string>
@@ -53,7 +51,6 @@
     <string name="people_invite_settings_reject_description">來自陌生人的邀請會被捨棄。雙向邀請仍可建立聯繫。</string>
     <string name="people_invite_settings_accept_automatically">自動接受</string>
     <string name="people_invite_settings_accept_description">所有邀請均會在未經你批准的情況下被接受。</string>
-    <string name="people_groups_empty">沒有群組</string>
     <string name="people_groups_create">建立群組</string>
     <string name="people_groups_not_found">找不到群組</string>
     <string name="people_group_name">群組名稱</string>
@@ -86,11 +83,9 @@
     <string name="people_profile_accent_invalid">請輸入有效的十六進位色彩(例如 #a78bfa)</string>
     <string name="people_profile_accent_none">無</string>
     <string name="people_profile_clear">清除</string>
-    <string name="people_profile_privacy_private_desc">只有共同朋友可檢視您的個人檔案</string>
     <string name="people_welcome_title">歡迎使用聯絡人</string>
     <string name="people_open_sidebar">開啟導覽</string>
     <string name="people_person_banner_alt">%1$s 的橫額</string>
-    <string name="people_person_private">此個人檔案為私人</string>
     <string name="people_person_state_friend">朋友</string>
     <string name="people_person_state_invited">已邀請</string>
 
@@ -115,9 +110,7 @@
     <string name="people_contacts_unfriend">移除好友</string>
     <string name="people_add_contact_search_placeholder">輸入以搜尋</string>
     <string name="people_add_contact_search_start">開始輸入以搜尋用戶</string>
-    <string name="people_device_create">建立</string>
-    <string name="people_device_username">使用者名稱</string>
-    <string name="people_device_done">完成</string>
-    <string name="people_device_used">上次使用 %1$s</string>
     <string name="people_contact_create">建立</string>
+    <string name="people_invitations_received_count">已收到 (%1$s)</string>
+    <string name="people_invitations_sent_count">已發送 (%1$s)</string>
 </resources>

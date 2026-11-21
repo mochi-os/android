@@ -140,7 +140,10 @@ data class ContactForm(
     val handles: List<HandleEntry> = emptyList(),
     val messaging: List<MessagingEntry> = emptyList(),
     val birthday: String = "",
+    /** `ORG`'s first component: the organisation's name. */
     val organisation: String = "",
+    /** `ORG`'s further components, its units, which the form has no field for and writes back. */
+    val organisationUnits: List<String> = emptyList(),
     val title: String = "",
     val url: TypedEntry = TypedEntry(),
     val note: String = "",
@@ -237,7 +240,12 @@ fun contactForm(card: List<ContactProperty>?, book: String = ""): ContactForm {
                 )
             }
             "BDAY" -> form = form.copy(birthday = birthday(property))
-            "ORG" -> form = form.copy(organisation = property.value)
+            // A structured value: the organisation, then its units, as the
+            // web editor and the phone sync read it.
+            "ORG" -> {
+                val parts = splitComponents(property.value)
+                form = form.copy(organisation = parts.component(0), organisationUnits = parts.drop(1))
+            }
             "TITLE" -> form = form.copy(title = property.value)
             "URL" -> form = form.copy(url = TypedEntry(value = property.value))
             "NOTE" -> form = form.copy(note = property.value)
@@ -287,7 +295,7 @@ internal enum class Single { NICKNAME, BIRTHDAY, ORGANISATION, TITLE, URL, NOTE 
 internal fun ContactForm.filled(): Set<Single> = buildSet {
     if (nickname.isNotBlank()) add(Single.NICKNAME)
     if (birthday.isNotBlank()) add(Single.BIRTHDAY)
-    if (organisation.isNotBlank()) add(Single.ORGANISATION)
+    if (organisation.isNotBlank() || organisationUnits.any { it.isNotBlank() }) add(Single.ORGANISATION)
     if (title.isNotBlank()) add(Single.TITLE)
     if (url.value.isNotBlank()) add(Single.URL)
     if (note.isNotBlank()) add(Single.NOTE)
@@ -298,7 +306,7 @@ internal fun ContactForm.emptied(single: Single): ContactForm = when (single) {
     Single.NICKNAME -> copy(nickname = "")
     // A birthday half typed goes with it, and no longer holds the save back.
     Single.BIRTHDAY -> copy(birthday = "", birthdayInvalid = false)
-    Single.ORGANISATION -> copy(organisation = "")
+    Single.ORGANISATION -> copy(organisation = "", organisationUnits = emptyList())
     Single.TITLE -> copy(title = "")
     Single.URL -> copy(url = url.copy(value = ""))
     Single.NOTE -> copy(note = "")
@@ -307,12 +315,13 @@ internal fun ContactForm.emptied(single: Single): ContactForm = when (single) {
 /** The value each single-valued field writes, by property name. */
 private fun ContactForm.singles(): Map<String, String> {
     val structured = listOf(family, given, additional, prefix, suffix)
+    val company = listOf(organisation.trim()) + organisationUnits
     return mapOf(
         "FN" to name.trim(),
         "N" to if (structured.any { it.isNotBlank() }) joinComponents(structured) else "",
         "NICKNAME" to nickname.trim(),
         "BDAY" to birthday.trim(),
-        "ORG" to organisation.trim(),
+        "ORG" to if (company.any { it.isNotBlank() }) joinComponents(company) else "",
         "TITLE" to title.trim(),
         "URL" to url.value.trim(),
         "NOTE" to note.trim(),
@@ -331,7 +340,8 @@ fun ContactForm.properties(): List<ContactProperty> {
     // changed value drops the ones that described the old one: its sort key,
     // its value type, which a date entered in the fields no longer is, and
     // Apple's placeholder year. A birthday left alone is written as the card
-    // held it, so Apple's form keeps the year its parameter names.
+    // held it, so Apple's form keeps the year its parameter names, and so is
+    // an organisation, whose components keep the escapes they were written with.
     fun single(name: String) {
         val value = written[name].orEmpty()
         if (value.isBlank()) return
@@ -349,7 +359,7 @@ fun ContactForm.properties(): List<ContactProperty> {
                     !it.equals("X-APPLE-OMIT-YEAR", ignoreCase = true)
             }
         }
-        val kept = name == "BDAY" && value == original.value
+        val kept = (name == "BDAY" || name == "ORG") && value == original.value
         out.add(ContactProperty(name, params, if (kept) original.raw else value, original.group))
     }
     single("FN")

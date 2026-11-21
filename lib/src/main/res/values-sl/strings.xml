@@ -357,4 +357,21 @@
     <string name="game_system_score_resume">%1$s je nadaljeval igro</string>
     <string name="game_not_found">Igre ni bilo mogoče najti</string>
     <string name="game_chat_move_played_you">Odigrali ste %1$s</string>
+    <string name="devices_add">Dodaj napravo</string>
+    <string name="devices_copy">Kopiraj %1$s</string>
+    <string name="devices_create">Ustvari</string>
+    <string name="devices_created">Ustvarjeno %1$s</string>
+    <string name="devices_delete">Izbriši napravo</string>
+    <string name="devices_delete_message">Naprava ne bo več mogla sinhronizirati stikov ali koledarjev.</string>
+    <string name="devices_delete_title">Izbrišem napravo?</string>
+    <string name="devices_deleted">Naprava je izbrisana</string>
+    <string name="devices_done">Končano</string>
+    <string name="devices_empty">Nobena naprava ni povezana</string>
+    <string name="devices_name">Ime naprave</string>
+    <string name="devices_password">Geslo</string>
+    <string name="devices_title">Povezane naprave</string>
+    <string name="devices_used">Nazadnje uporabljeno %1$s</string>
+    <string name="devices_username">Uporabniško ime</string>
+    <string name="devices_warning">Kopirajte geslo zdaj: ne bo ga več mogoče prikazati.</string>
+    <string name="devices_unused">Nikoli uporabljeno</string>
 </resources>

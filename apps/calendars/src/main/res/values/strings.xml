@@ -286,22 +286,5 @@
     <string name="calendars_sync_permission_blocked">Calendar access is turned off for this app. You can turn it on under Permissions in the app\'s settings.</string>
 
     <!-- Connect device -->
-    <string name="calendars_device_title">Connected devices</string>
-    <string name="calendars_device_name">Device name</string>
-    <string name="calendars_device_create">Create</string>
-    <string name="calendars_device_add">Add device</string>
     <string name="calendars_device_address">Address</string>
-    <string name="calendars_device_username">Username</string>
-    <string name="calendars_device_password">Password</string>
-    <string name="calendars_device_copy">Copy %1$s</string>
-    <string name="calendars_device_warning">Copy the password now: it cannot be shown again.</string>
-    <string name="calendars_device_done">Done</string>
-    <string name="calendars_device_empty">No devices connected</string>
-    <string name="calendars_device_created">Created %1$s</string>
-    <string name="calendars_device_used">last used %1$s</string>
-    <string name="calendars_device_never">never</string>
-    <string name="calendars_device_delete">Delete</string>
-    <string name="calendars_device_deleted">Device deleted</string>
-    <string name="calendars_device_delete_title">Delete device?</string>
-    <string name="calendars_device_delete_message">The device will no longer be able to sync contacts or calendars.</string>
 </resources>

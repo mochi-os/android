@@ -355,4 +355,21 @@
     <string name="game_system_score_resume">%1$s atsāka spēli</string>
     <string name="game_not_found">Spēle nav atrasta</string>
     <string name="game_chat_move_played_you">Jūs spēlējāt %1$s</string>
+    <string name="devices_add">Pievienot jaunu ierīci</string>
+    <string name="devices_copy">Kopēt %1$s</string>
+    <string name="devices_create">Izveidot</string>
+    <string name="devices_created">Izveidots %1$s</string>
+    <string name="devices_delete">Dzēst ierīci</string>
+    <string name="devices_delete_message">Ierīce vairs nevarēs sinhronizēt kontaktus vai kalendārus.</string>
+    <string name="devices_delete_title">Dzēst ierīci?</string>
+    <string name="devices_deleted">Ierīce dzēsta</string>
+    <string name="devices_done">Pabeigts</string>
+    <string name="devices_empty">Nav pievienotu ierīču</string>
+    <string name="devices_name">Ierīces nosaukums</string>
+    <string name="devices_password">Parole</string>
+    <string name="devices_title">Pievienotās ierīces</string>
+    <string name="devices_used">Pēdējoreiz lietots %1$s</string>
+    <string name="devices_username">Lietotājvārds</string>
+    <string name="devices_warning">Nokopējiet paroli tagad: to vairs nevarēs parādīt.</string>
+    <string name="devices_unused">Nekad nav lietots</string>
 </resources>

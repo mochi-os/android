@@ -16,6 +16,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
@@ -201,10 +202,11 @@ class AddContactViewModel @Inject constructor(
             }
             // A server whose People app predates the separate action has no
             // answer for it and sends its people in the search answer instead.
-            _uiState.value = _uiState.value.copy(
-                networkResults = if (other) networks?.await() ?: combined else emptyList(),
-                networksLoading = false,
-            )
+            // Awaited before the state is read: the other networks answer
+            // seconds later, and what was done meanwhile - a preview opened,
+            // a person added or invited - stands.
+            val found = if (other) networks?.await() ?: combined else emptyList()
+            _uiState.update { state -> state.copy(networkResults = found, networksLoading = false) }
         }
     }
 

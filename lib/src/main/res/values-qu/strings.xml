@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s pukllayta kutimanta qallarirqan</string>
     <string name="game_not_found">Pukllayqa manam tarisqachu</string>
     <string name="game_chat_move_played_you">Qam %1$sta pukllarqanki</string>
+    <string name="devices_add">Dispositivo yapay</string>
+    <string name="devices_copy">%1$s copiay</string>
+    <string name="devices_create">Kamariy</string>
+    <string name="devices_created">%1$s kamarisqa</string>
+    <string name="devices_delete">Dispositivota wischuy</string>
+    <string name="devices_delete_message">Kay dispositivo manaña contactokunata nitaq calendariokunata sincronizayta atinqachu.</string>
+    <string name="devices_delete_title">¿Dispositivota wischunki?</string>
+    <string name="devices_deleted">Dispositivo wischusqa</string>
+    <string name="devices_done">Tukusqa</string>
+    <string name="devices_empty">Mana dispositivokuna t\'inkisqachu</string>
+    <string name="devices_name">Dispositivopa sutin</string>
+    <string name="devices_password">Contraseña</string>
+    <string name="devices_title">T\'inkisqa dispositivokuna</string>
+    <string name="devices_used">Qhipa llamk\'achisqa %1$s</string>
+    <string name="devices_username">Apaykachaq suti</string>
+    <string name="devices_warning">Contraseñata kunan copiay: manaña rikuchikunqachu.</string>
+    <string name="devices_unused">Mana hayk\'aqpas llamk\'achisqa</string>
 </resources>

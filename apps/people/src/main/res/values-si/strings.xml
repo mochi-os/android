@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">පුද්ගලයන් හමු නොවීය</string>
     <string name="people_friends_try_adjusting">ඔබේ සෙවීම සකස් කිරීම උත්සාහ කරන්න</string>
     <string name="people_friends_pending">පොරොත්තුවෙන්</string>
-    <string name="people_friends_received_tab">ලැබුණු</string>
-    <string name="people_friends_sent_tab">යවන ලද</string>
     <string name="people_invitations_incoming">එන ආරාධනා</string>
     <string name="people_invitations_empty">සැලකිල්ලට පැමිණි ආරාධනා නැත</string>
     <string name="people_invitations_empty_hint">නව ආරාධනා මෙහි දිස්වනු ඇත</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s ගෙන් ලද ආරාධනාව පිළිගන්නා ලදී</string>
     <string name="people_invitations_toast_declined">%1$s ගෙන් ලද ආරාධනාව ප්‍රතික්ෂේප කරන ලදී</string>
     <string name="people_invitations_toast_cancelled">%1$s වෙත වූ ආරාධනාව අවලංගු කරන ලදී</string>
-    <string name="people_groups_empty">කණ්ඩායම් නොමැත</string>
     <string name="people_group_delete_confirm">\"%1$s\" කණ්ඩායම මකන්නද? මෙය ආපසු හැරවිය නොහැක.</string>
     <string name="people_member_remove_confirm">ඔබට %1$s ව මෙම කණ්ඩායමෙන් ඉවත් කිරීමට අවශ්‍ය බව ස්ථිරද?</string>
     <string name="people_member_remove_with_name">%1$s ඉවත් කරන්න</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s රූපය සැකසිය නොහැකි විය</string>
     <string name="people_profile_accent_invalid">වලංගු hex වර්ණයක් ඇතුළත් කරන්න (උදා. #a78bfa)</string>
     <string name="people_profile_accent_none">කිසිවක් නැත</string>
-    <string name="people_profile_privacy_private_desc">අන්‍යෝන්‍ය මිතුරන්ට පමණක් ඔබේ පැතිකඩ බැලිය හැක</string>
     <string name="people_welcome_title">පුද්ගලයන් වෙත සාදරයෙන් පිළිගනිමු</string>
     <string name="people_person_banner_alt">%1$s සඳහා බැනරය</string>
-    <string name="people_person_private">මෙම පැතිකඩ පෞද්ගලිකයි</string>
     <string name="people_person_state_invited">ආරාධිතයි</string>
 
     <string name="people_invitations_accept_all">සියල්ල පිළිගන්න</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi පුරා මිතුරන් සොයාගෙන සම්බන්ධ වන්න. ආරාධනයක් යැවීමට සම්බන්ධතාවය එක් කරන්න තට්ටු කරන්න.</string>
     <string name="people_person_state_contact">සම්බන්ධතාවල</string>
-    <string name="people_device_create">නිර්මාණය කරන්න</string>
-    <string name="people_device_add">උපාංගයක් එක් කරන්න</string>
-    <string name="people_device_username">පරිශීලක නාමය</string>
-    <string name="people_device_done">නිමයි</string>
-    <string name="people_device_used">අවසන් භාවිතය %1$s</string>
-    <string name="people_device_never">කවදාවත්</string>
     <string name="people_sync_now">දැන් සමමුහුර්ත කරන්න</string>
-    <string name="people_device_title">සම්බන්ධිත උපාංග</string>
-    <string name="people_device_name">උපාංගයේ නම</string>
     <string name="people_device_address">ලිපින පොතේ URL</string>
-    <string name="people_device_password">මුරපදය</string>
-    <string name="people_device_copy">%1$s පිටපත් කරන්න</string>
-    <string name="people_device_warning">මෙම මුරපදය දැන් සුරකින්න. එය නැවත පෙන්විය නොහැක.</string>
-    <string name="people_device_empty">සම්බන්ධ කළ උපාංග නොමැත.</string>
-    <string name="people_device_created">සාදන ලදී %1$s</string>
-    <string name="people_device_delete">උපාංගය මකන්න</string>
-    <string name="people_device_delete_title">උපාංගය මකන්නද?</string>
-    <string name="people_device_delete_message">උපාංගයට තවදුරටත් සම්බන්ධතා හෝ දින දර්ශන සමමුහුර්ත කළ නොහැක.</string>
-    <string name="people_device_deleted">උපාංගය මකා දමන ලදී</string>
     <string name="people_sync_title">මෙම දුරකථනයට සමමුහුර්ත කරන්න</string>
     <string name="people_sync_confirm">මෙම දුරකථනයේ සම්බන්ධතා යෙදුමේ මිතුරෙකුගේ සම්බන්ධතාවය මැකීමෙන් මිත්‍රත්වයද අවසන් වේ.</string>
     <string name="people_sync_enable">ක්‍රියාත්මක කරන්න</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">සැකසුම්</string>
     <string name="people_contacts_invitation_sent">ආරාධනය යවා ඇත</string>
     <string name="people_contact_keep">තබා ගන්න</string>
+    <string name="people_invitations_received_count">ලැබුණු (%1$s)</string>
+    <string name="people_invitations_sent_count">යවන ලද (%1$s)</string>
+    <string name="people_contact_discard">වෙනස්කම් ඉවත ලන්න</string>
+    <string name="people_person_unavailable">පුද්ගලයා ලබා ගත නොහැක</string>
 </resources>

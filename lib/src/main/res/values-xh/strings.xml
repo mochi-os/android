@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s uqhubekile nokudlala</string>
     <string name="game_not_found">Umdlalo awufumanekanga</string>
     <string name="game_chat_move_played_you">Wena udlale %1$s</string>
+    <string name="devices_add">Yongeza isixhobo</string>
+    <string name="devices_copy">Kotshela %1$s</string>
+    <string name="devices_create">Yenza</string>
+    <string name="devices_created">Yenziwe %1$s</string>
+    <string name="devices_delete">Cima isixhobo</string>
+    <string name="devices_delete_message">Isixhobo asisayi kukwazi ukungqamanisa abaqhagamshelwa okanye iikhalenda.</string>
+    <string name="devices_delete_title">Cima isixhobo?</string>
+    <string name="devices_deleted">Isixhobo sicinyiwe</string>
+    <string name="devices_done">Kwenziwe</string>
+    <string name="devices_empty">Akukho zixhobo zidibeneyo</string>
+    <string name="devices_name">Igama lesixhobo</string>
+    <string name="devices_password">Igama lokugqitha</string>
+    <string name="devices_title">Izixhobo ezidibeneyo</string>
+    <string name="devices_used">Isetyenziswe kokokugqibela %1$s</string>
+    <string name="devices_username">Igama lomsebenzisi</string>
+    <string name="devices_warning">Khuphela iphasiwedi ngoku: ayinakuboniswa kwakhona.</string>
+    <string name="devices_unused">Ayikaze isetyenziswe</string>
 </resources>

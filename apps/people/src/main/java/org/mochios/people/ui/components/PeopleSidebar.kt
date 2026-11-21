@@ -19,7 +19,7 @@ import org.mochios.people.R
 import org.mochios.people.model.Book
 import org.mochios.people.model.Group
 
-enum class PeopleSidebarSection { CONTACTS, INVITATIONS, GROUPS, PROFILE }
+enum class PeopleSidebarSection { CONTACTS, INVITATIONS, PROFILE }
 
 /** Marks a drawer row as an address book rather than a section. */
 private const val BOOK_PREFIX = "book:"

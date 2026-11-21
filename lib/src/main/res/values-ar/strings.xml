@@ -361,4 +361,21 @@
     <string name="game_system_score_resume">استأنف %1$s اللعب</string>
     <string name="game_not_found">لم يتم العثور على اللعبة</string>
     <string name="game_chat_move_played_you">لعبت %1$s</string>
+    <string name="devices_add">إضافة جهاز</string>
+    <string name="devices_copy">نسخ %1$s</string>
+    <string name="devices_create">إنشاء</string>
+    <string name="devices_created">تم الإنشاء %1$s</string>
+    <string name="devices_delete">حذف الجهاز</string>
+    <string name="devices_delete_message">لن يتمكن الجهاز من مزامنة جهات الاتصال أو التقويمات بعد الآن.</string>
+    <string name="devices_delete_title">حذف الجهاز؟</string>
+    <string name="devices_deleted">تم حذف الجهاز</string>
+    <string name="devices_done">منتهٍ</string>
+    <string name="devices_empty">لا توجد أجهزة متصلة</string>
+    <string name="devices_name">اسم الجهاز</string>
+    <string name="devices_password">كلمة المرور</string>
+    <string name="devices_title">الأجهزة المتصلة</string>
+    <string name="devices_used">آخر استخدام %1$s</string>
+    <string name="devices_username">اسم المستخدم</string>
+    <string name="devices_warning">انسخ كلمة المرور الآن: لا يمكن عرضها مرة أخرى.</string>
+    <string name="devices_unused">لم يُستخدم قط</string>
 </resources>

@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">S\'u gjet asnjë person</string>
     <string name="people_friends_try_adjusting">Provo të rregullosh kërkimin</string>
     <string name="people_friends_pending">Në pritje</string>
-    <string name="people_friends_received_tab">I marrë</string>
-    <string name="people_friends_sent_tab">Dërguar</string>
     <string name="people_invitations_incoming">Ftesat hyrëse</string>
     <string name="people_invitations_empty">Asnjë ftesë në pritje</string>
     <string name="people_invitations_empty_hint">Ftesat e reja do të shfaqen këtu</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Ftesa nga %1$s u pranua</string>
     <string name="people_invitations_toast_declined">Ftesa nga %1$s u refuzua</string>
     <string name="people_invitations_toast_cancelled">Ftesa për %1$s u anulua</string>
-    <string name="people_groups_empty">Asnjë grup</string>
     <string name="people_group_delete_confirm">Të fshihet grupi \"%1$s\"? Ky veprim nuk mund të zhbëhet.</string>
     <string name="people_member_remove_confirm">Jeni i sigurt që doni ta hiqni %1$s nga ky grup?</string>
     <string name="people_member_remove_with_name">Hiq %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Nuk u përpunua dot imazhi i %1$s</string>
     <string name="people_profile_accent_invalid">Vendosni një ngjyrë heks të vlefshme (p.sh. #a78bfa)</string>
     <string name="people_profile_accent_none">Asnjë</string>
-    <string name="people_profile_privacy_private_desc">Vetëm miqtë e ndërsjellë mund ta shohin profilin tuaj</string>
     <string name="people_welcome_title">Mirë se vini te Njerëz</string>
     <string name="people_person_banner_alt">Banderolë për %1$s</string>
-    <string name="people_person_private">Ky profil është privat</string>
     <string name="people_person_state_invited">I ftuar</string>
 
     <string name="people_invitations_accept_all">Prano të gjitha</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Gjeni miq në të gjithë Mochi dhe lidhuni. Prekni Shto kontakt për të dërguar një ftesë.</string>
     <string name="people_person_state_contact">Në kontakte</string>
-    <string name="people_device_create">Krijo</string>
-    <string name="people_device_add">Shto një pajisje</string>
-    <string name="people_device_username">Emri i përdoruesit</string>
-    <string name="people_device_done">Përfunduar</string>
-    <string name="people_device_used">Përdorur së fundi %1$s</string>
-    <string name="people_device_never">Asnjëherë</string>
     <string name="people_sync_now">Sinkronizo tani</string>
-    <string name="people_device_title">Pajisjet e lidhura</string>
-    <string name="people_device_name">Emri i pajisjes</string>
     <string name="people_device_address">URL-ja e librit të adresave</string>
-    <string name="people_device_password">Fjalëkalimi</string>
-    <string name="people_device_copy">Kopjo %1$s</string>
-    <string name="people_device_warning">Ruajeni këtë fjalëkalim tani. Nuk mund të shfaqet më.</string>
-    <string name="people_device_empty">Nuk ka pajisje të lidhura.</string>
-    <string name="people_device_created">U krijua %1$s</string>
-    <string name="people_device_delete">Fshi pajisjen</string>
-    <string name="people_device_delete_title">Të fshihet pajisja?</string>
-    <string name="people_device_delete_message">Pajisja nuk do të mund të sinkronizojë më kontaktet ose kalendarët.</string>
-    <string name="people_device_deleted">Pajisja u fshi</string>
     <string name="people_sync_title">Sinkronizo me këtë telefon</string>
     <string name="people_sync_confirm">Fshirja e kontaktit të një miku në aplikacionin Kontaktet të këtij telefoni përfundon edhe miqësinë.</string>
     <string name="people_sync_enable">Aktivizo</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Cilësimet</string>
     <string name="people_contacts_invitation_sent">Ftesa u dërgua</string>
     <string name="people_contact_keep">Mbaji</string>
+    <string name="people_invitations_received_count">I marrë (%1$s)</string>
+    <string name="people_invitations_sent_count">Dërguar (%1$s)</string>
+    <string name="people_contact_discard">Hidh ndryshimet</string>
+    <string name="people_person_unavailable">Personi nuk është i disponueshëm</string>
 </resources>

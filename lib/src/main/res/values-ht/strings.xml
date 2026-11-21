@@ -352,4 +352,21 @@
     <string name="game_system_score_resume">%1$s rekòmanse jwe</string>
     <string name="game_not_found">Nou pa jwenn jwèt la</string>
     <string name="game_chat_move_played_you">Ou jwe %1$s</string>
+    <string name="devices_add">Ajoute yon aparèy</string>
+    <string name="devices_copy">Kopye %1$s</string>
+    <string name="devices_create">Kreye</string>
+    <string name="devices_created">Kreye %1$s</string>
+    <string name="devices_delete">Efase aparèy</string>
+    <string name="devices_delete_message">Aparèy la p ap ka senkronize kontak oswa kalandriye ankò.</string>
+    <string name="devices_delete_title">Efase aparèy la?</string>
+    <string name="devices_deleted">Aparèy la efase</string>
+    <string name="devices_done">Fini</string>
+    <string name="devices_empty">Pa gen okenn aparèy konekte</string>
+    <string name="devices_name">Non aparèy la</string>
+    <string name="devices_password">Modpas</string>
+    <string name="devices_title">Aparèy konekte yo</string>
+    <string name="devices_used">Dènye itilizasyon %1$s</string>
+    <string name="devices_username">Non itilizatè</string>
+    <string name="devices_warning">Kopye modpas la kounye a: li pa ka parèt ankò.</string>
+    <string name="devices_unused">Pa janm itilize</string>
 </resources>

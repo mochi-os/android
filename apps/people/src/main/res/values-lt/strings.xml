@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Žmonių nerasta</string>
     <string name="people_friends_try_adjusting">Pabandykite koreguoti paiešką</string>
     <string name="people_friends_pending">Laukiama</string>
-    <string name="people_friends_received_tab">Gauta</string>
-    <string name="people_friends_sent_tab">Išsiųsta</string>
     <string name="people_invitations_incoming">Gauti kvietimai</string>
     <string name="people_invitations_empty">Laukiančių pakvietimų nėra</string>
     <string name="people_invitations_empty_hint">Nauji pakvietimai pasirodys čia</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Pakvietimas iš %1$s priimtas</string>
     <string name="people_invitations_toast_declined">Pakvietimas iš %1$s atmestas</string>
     <string name="people_invitations_toast_cancelled">Pakvietimas, skirtas %1$s, atšauktas</string>
-    <string name="people_groups_empty">Grupių nėra</string>
     <string name="people_group_delete_confirm">Ištrinti grupę „%1$s\"? Šio veiksmo atšaukti nebus galima.</string>
     <string name="people_member_remove_confirm">Ar tikrai norite pašalinti %1$s iš šios grupės?</string>
     <string name="people_member_remove_with_name">Pašalinti %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Nepavyko apdoroti %1$s vaizdo</string>
     <string name="people_profile_accent_invalid">Įveskite tinkamą šešioliktainį spalvos kodą (pvz., #a78bfa)</string>
     <string name="people_profile_accent_none">Nėra</string>
-    <string name="people_profile_privacy_private_desc">Jūsų profilį gali matyti tik abipusiai draugai</string>
     <string name="people_welcome_title">Sveiki atvykę į Žmones</string>
     <string name="people_person_banner_alt">%1$s baneris</string>
-    <string name="people_person_private">Šis profilis yra privatus</string>
     <string name="people_person_state_invited">Pakviesta</string>
 
     <string name="people_invitations_accept_all">Priimti visus</string>
@@ -178,25 +173,8 @@
     </plurals>
     <string name="people_welcome_body">Raskite draugų visoje Mochi ir susisiekite. Palieskite Pridėti kontaktą, kad išsiųstumėte kvietimą.</string>
     <string name="people_person_state_contact">Kontaktuose</string>
-    <string name="people_device_create">Sukurti</string>
-    <string name="people_device_add">Pridėti įrenginį</string>
-    <string name="people_device_username">Vartotojo vardas</string>
-    <string name="people_device_done">Atlikta</string>
-    <string name="people_device_used">Paskutinį kartą naudota %1$s</string>
-    <string name="people_device_never">Niekada</string>
     <string name="people_sync_now">Sinchronizuoti dabar</string>
-    <string name="people_device_title">Prijungti įrenginiai</string>
-    <string name="people_device_name">Įrenginio pavadinimas</string>
     <string name="people_device_address">Adresų knygos URL</string>
-    <string name="people_device_password">Slaptažodis</string>
-    <string name="people_device_copy">Kopijuoti %1$s</string>
-    <string name="people_device_warning">Išsaugokite šį slaptažodį dabar. Jo nebus galima parodyti dar kartą.</string>
-    <string name="people_device_empty">Nėra prijungtų įrenginių.</string>
-    <string name="people_device_created">Sukurta %1$s</string>
-    <string name="people_device_delete">Ištrinti įrenginį</string>
-    <string name="people_device_delete_title">Ištrinti įrenginį?</string>
-    <string name="people_device_delete_message">Įrenginys nebegalės sinchronizuoti kontaktų ar kalendorių.</string>
-    <string name="people_device_deleted">Įrenginys ištrintas</string>
     <string name="people_sync_title">Sinchronizuoti su šiuo telefonu</string>
     <string name="people_sync_confirm">Ištrynus draugo kontaktą šio telefono programoje „Kontaktai“, baigiasi ir draugystė.</string>
     <string name="people_sync_enable">Įjungti</string>
@@ -228,4 +206,8 @@
     <string name="people_profile_settings">Nustatymai</string>
     <string name="people_contacts_invitation_sent">Kvietimas išsiųstas</string>
     <string name="people_contact_keep">Palikti</string>
+    <string name="people_invitations_received_count">Gauta (%1$s)</string>
+    <string name="people_invitations_sent_count">Išsiųsta (%1$s)</string>
+    <string name="people_contact_discard">Atmesti pakeitimus</string>
+    <string name="people_person_unavailable">Asmuo nepasiekiamas</string>
 </resources>

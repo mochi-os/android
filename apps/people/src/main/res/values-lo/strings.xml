@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">ບໍ່ພົບຄົນ</string>
     <string name="people_friends_try_adjusting">ລອງປັບປ່ຽນການຄົ້ນຫາຂອງທ່ານ</string>
     <string name="people_friends_pending">ກຳລັງລໍຖ້າ</string>
-    <string name="people_friends_received_tab">ໄດ້ຮັບແລ້ວ</string>
-    <string name="people_friends_sent_tab">ສົ່ງແລ້ວ</string>
     <string name="people_invitations_incoming">ຄຳເຊີນຂາເຂົ້າ</string>
     <string name="people_invitations_empty">ບໍ່ມີຄຳເຊີນທີ່ກຳລັງລໍຖ້າ</string>
     <string name="people_invitations_empty_hint">ຄຳເຊີນໃໝ່ຈະປະກົດຢູ່ນີ້</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">ຮັບເອົາຄຳເຊີນຈາກ %1$s ແລ້ວ</string>
     <string name="people_invitations_toast_declined">ປະຕິເສດຄຳເຊີນຈາກ %1$s ແລ້ວ</string>
     <string name="people_invitations_toast_cancelled">ຍົກເລີກຄຳເຊີນຫາ %1$s ແລ້ວ</string>
-    <string name="people_groups_empty">ບໍ່ມີກຸ່ມ</string>
     <string name="people_group_delete_confirm">ລຶບກຸ່ມ \"%1$s\"? ການກະທຳນີ້ບໍ່ສາມາດຍ້ອນກັບໄດ້.</string>
     <string name="people_member_remove_confirm">ທ່ານແນ່ໃຈບໍວ່າຕ້ອງການລຶບ %1$s ອອກຈາກກຸ່ມນີ້?</string>
     <string name="people_member_remove_with_name">ລຶບ %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">ບໍ່ສາມາດປະມວນຜົນຮູບ %1$s ໄດ້</string>
     <string name="people_profile_accent_invalid">ໃສ່ລະຫັດສີ hex ທີ່ຖືກຕ້ອງ (ເຊັ່ນ #a78bfa)</string>
     <string name="people_profile_accent_none">ບໍ່ມີ</string>
-    <string name="people_profile_privacy_private_desc">ສະເພາະໝູ່ຮ່ວມກັນເທົ່ານັ້ນທີ່ສາມາດເບິ່ງໂປຣໄຟລ໌ຂອງທ່ານໄດ້</string>
     <string name="people_welcome_title">ຍິນດີຕ້ອນຮັບສູ່ແອັບ “ບຸກຄົນ”</string>
     <string name="people_person_banner_alt">ປ້າຍສຳລັບ %1$s</string>
-    <string name="people_person_private">ໂປຣໄຟລ໌ນີ້ເປັນສ່ວນຕົວ</string>
     <string name="people_person_state_invited">ເຊີນແລ້ວ</string>
 
     <string name="people_invitations_accept_all">ຍອມຮັບທັງໝົດ</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">ຊອກຫາໝູ່ທົ່ວ Mochi ແລະເຊື່ອມຕໍ່. ແຕະ ເພີ່ມຜູ້ຕິດຕໍ່ ເພື່ອສົ່ງຄຳເຊີນ.</string>
     <string name="people_person_state_contact">ຢູ່ໃນຜູ້ຕິດຕໍ່</string>
-    <string name="people_device_create">ສ້າງ</string>
-    <string name="people_device_add">ເພີ່ມອຸປະກອນ</string>
-    <string name="people_device_username">ຊື່ຜູ້ໃຊ້</string>
-    <string name="people_device_done">ສຳເລັດແລ້ວ</string>
-    <string name="people_device_used">ໃຊ້ຄັ້ງສຸດທ້າຍ %1$s</string>
-    <string name="people_device_never">ບໍ່ເຄີຍ</string>
     <string name="people_sync_now">ຊິງຄ໌ດຽວນີ້</string>
-    <string name="people_device_title">ອຸປະກອນທີ່ເຊື່ອມຕໍ່</string>
-    <string name="people_device_name">ຊື່ອຸປະກອນ</string>
     <string name="people_device_address">URL ປຶ້ມທີ່ຢູ່</string>
-    <string name="people_device_password">ລະຫັດຜ່ານ</string>
-    <string name="people_device_copy">ສຳເນົາ %1$s</string>
-    <string name="people_device_warning">ບັນທຶກລະຫັດຜ່ານນີ້ດຽວນີ້. ມັນຈະບໍ່ສາມາດສະແດງໄດ້ອີກ.</string>
-    <string name="people_device_empty">ບໍ່ມີອຸປະກອນທີ່ເຊື່ອມຕໍ່.</string>
-    <string name="people_device_created">ສ້າງ %1$s ແລ້ວ</string>
-    <string name="people_device_delete">ລຶບອຸປະກອນ</string>
-    <string name="people_device_delete_title">ລຶບອຸປະກອນບໍ?</string>
-    <string name="people_device_delete_message">ອຸປະກອນຈະບໍ່ສາມາດຊິງຄ໌ລາຍຊື່ຜູ້ຕິດຕໍ່ ຫຼື ປະຕິທິນໄດ້ອີກຕໍ່ໄປ.</string>
-    <string name="people_device_deleted">ລຶບອຸປະກອນແລ້ວ</string>
     <string name="people_sync_title">ຊິງຄ໌ກັບໂທລະສັບນີ້</string>
     <string name="people_sync_confirm">ການລຶບຜູ້ຕິດຕໍ່ຂອງໝູ່ໃນແອັບຜູ້ຕິດຕໍ່ຂອງໂທລະສັບນີ້ ຈະເຮັດໃຫ້ມິດຕະພາບສິ້ນສຸດນຳ.</string>
     <string name="people_sync_enable">ເປີດ</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">ການຕັ້ງຄ່າ</string>
     <string name="people_contacts_invitation_sent">ສົ່ງຄຳເຊີນແລ້ວ</string>
     <string name="people_contact_keep">ເກັບໄວ້</string>
+    <string name="people_invitations_received_count">ໄດ້ຮັບແລ້ວ (%1$s)</string>
+    <string name="people_invitations_sent_count">ສົ່ງແລ້ວ (%1$s)</string>
+    <string name="people_contact_discard">ຖິ້ມການປ່ຽນແປງ</string>
+    <string name="people_person_unavailable">ບຸກຄົນນີ້ບໍ່ມີໃຫ້ບໍລິການ</string>
 </resources>

@@ -69,24 +69,14 @@ data class LinkResponse(
  * A connected device's credential as `-/token/list` returns it. [hash]
  * identifies it for deletion; the token itself is shown only when created.
  * [created] and [used] are epoch seconds, [used] 0 until the device first
- * signs in with it. [scopes] separates a device credential (`dav`) from the
- * tokens an ICS link mints (`ics`), which are not devices and are revoked
- * from the calendar's own menu.
+ * signs in with it.
  */
 data class DeviceToken(
     val hash: String = "",
     val name: String = "",
     val created: Long = 0,
     val used: Long = 0,
-    val scopes: List<String> = emptyList(),
-    val action: String = "",
-) {
-    val device: Boolean get() = scopes.contains(DAV)
-
-    companion object {
-        const val DAV = "dav"
-    }
-}
+)
 
 /** The body of `-/token/list`: the devices, and the username every device enters. */
 data class TokensResponse(val tokens: List<DeviceToken> = emptyList(), val username: String = "")

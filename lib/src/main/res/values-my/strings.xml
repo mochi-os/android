@@ -352,4 +352,21 @@
     <string name="game_system_score_resume">%1$s က ကစားပွဲကို ပြန်စသည်</string>
     <string name="game_not_found">ဂိမ်းကို ရှာမတွေ့ပါ</string>
     <string name="game_chat_move_played_you">သင် %1$s ကို ကစားခဲ့သည်</string>
+    <string name="devices_add">ကိရိယာ ထည့်မည်</string>
+    <string name="devices_copy">%1$s ကူးမည်</string>
+    <string name="devices_create">ဖန်တီးမည်</string>
+    <string name="devices_created">%1$s ဖန်တီးပြီး</string>
+    <string name="devices_delete">ကိရိယာ ဖျက်မည်</string>
+    <string name="devices_delete_message">ကိရိယာသည် အဆက်အသွယ်များ သို့မဟုတ် ပြက္ခဒိန်များကို ထပ်မံ ချိန်ကိုက်နိုင်တော့မည် မဟုတ်ပါ။</string>
+    <string name="devices_delete_title">ကိရိယာကို ဖျက်မလား?</string>
+    <string name="devices_deleted">ကိရိယာ ဖျက်ပြီးပါပြီ</string>
+    <string name="devices_done">ပြီးပါပြီ</string>
+    <string name="devices_empty">ချိတ်ဆက်ထားသော ကိရိယာ မရှိပါ</string>
+    <string name="devices_name">ကိရိယာအမည်</string>
+    <string name="devices_password">စကားဝှက်</string>
+    <string name="devices_title">ချိတ်ဆက်ထားသော ကိရိယာများ</string>
+    <string name="devices_used">နောက်ဆုံး အသုံးပြုခဲ့သည် %1$s</string>
+    <string name="devices_username">သုံးစွဲသူအမည်</string>
+    <string name="devices_warning">စကားဝှက်ကို ယခု ကူးယူပါ။ ထပ်မံ ပြသ၍ မရပါ။</string>
+    <string name="devices_unused">ဘယ်တော့မှ အသုံးမပြုရသေး</string>
 </resources>

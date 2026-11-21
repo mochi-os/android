@@ -69,11 +69,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.ui.components.CompactTextField
 import org.mochios.android.ui.components.CreateEntityForm
 import org.mochios.android.ui.components.CreateEntityScaffold
 import org.mochios.android.ui.components.EntityAvatar
+import org.mochios.android.ui.components.ErrorState
 import org.mochios.android.ui.components.LabeledSelectField
 import org.mochios.android.ui.components.LoadingState
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -83,6 +85,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiScaffold
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.SaveStatusIndicator
 import org.mochios.android.util.providerName
 import org.mochios.people.R
@@ -102,7 +105,7 @@ import org.mochios.android.R as MochiR
 fun ContactEditScreen(
     onBack: () -> Unit,
     /** Goes on as another contact: the one a merge left standing. */
-    onOpen: (String) -> Unit,
+    onOpen: (String) -> Unit = {},
     /** Opens a copy of the contact named, as a new contact. */
     onCopy: (String) -> Unit = {},
     onDeleted: () -> Unit,
@@ -132,26 +135,35 @@ fun ContactEditScreen(
         CreateEntityScaffold(
             title = stringResource(R.string.people_contact_new_title),
             submitLabel = stringResource(R.string.people_contact_create),
-            submitEnabled = form.valid && !uiState.isSaving,
+            submitEnabled = form.valid && !uiState.isSaving && !uiState.isLoading,
             isBusy = uiState.isSaving,
             error = uiState.error,
             onBack = onBack,
             onSubmit = { viewModel.create() },
         ) { padding ->
-            CreateEntityForm(padding) {
-                ContactFields(
-                    form = form,
-                    books = uiState.books,
-                    onChange = viewModel::updateForm,
-                    lookups = uiState.handles,
-                    onLookup = viewModel::lookup,
-                )
+            // A copy's form shows once the card it copies is read, so nothing
+            // typed before is written over.
+            if (uiState.isLoading) {
+                Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+                    LoadingState()
+                }
+            } else {
+                CreateEntityForm(padding) {
+                    ContactFields(
+                        form = form,
+                        books = uiState.books,
+                        onChange = viewModel::updateForm,
+                        lookups = uiState.handles,
+                        onLookup = viewModel::lookup,
+                    )
+                }
             }
         }
     } else {
         EditScaffold(
             state = uiState,
             onBack = { viewModel.leave() },
+            onRetry = { viewModel.load() },
             onLeave = { viewModel.save() },
             onRequestDelete = { viewModel.requestDelete() },
             onCopy = { viewModel.copy() },
@@ -234,6 +246,18 @@ fun ContactEditScreen(
             text = conflict,
             confirmText = stringResource(MochiR.string.common_close),
             onConfirm = { viewModel.clearConflict() },
+        )
+    }
+
+    // Leaving's own save failed: why, and the way out without the edit.
+    uiState.unsaved?.let { failure ->
+        MochiAlertDialog(
+            onDismissRequest = { viewModel.stay() },
+            text = failure.userMessage(),
+            confirmText = stringResource(R.string.people_contact_discard),
+            onConfirm = { viewModel.discard() },
+            destructive = true,
+            dismissText = stringResource(R.string.people_common_cancel),
         )
     }
 }
@@ -401,6 +425,8 @@ internal fun XmppSwitch(
 private fun EditScaffold(
     state: ContactEditUiState,
     onBack: () -> Unit,
+    /** Reads the contact again after a failed load. */
+    onRetry: () -> Unit,
     /** A field was left: the editor saves it. */
     onLeave: () -> Unit,
     onRequestDelete: () -> Unit,
@@ -420,7 +446,8 @@ private fun EditScaffold(
         actions = {
             // An edit saves as it goes: say so, as typing rests and the save lands.
             SaveStatusIndicator(state.save, modifier = Modifier.padding(horizontal = 4.dp))
-            Box {
+            // Copy, Merge and Delete act on a contact that was read.
+            if (state.contact != null) Box {
                 MochiIconButton(onClick = { menuOpen = true }) {
                     Icon(
                         Icons.Default.MoreVert,
@@ -456,9 +483,21 @@ private fun EditScaffold(
             }
         },
     ) { padding ->
+        val failure = state.error
         if (state.isLoading && state.contact == null) {
             Box(modifier = Modifier.fillMaxSize().padding(padding)) {
                 LoadingState()
+            }
+        } else if (state.contact == null && failure is MochiError.NotFoundError) {
+            // Deleted on another device, or never there: nothing to retry.
+            Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+                NotFoundState(title = failure.userMessage(), onBack = onBack)
+            }
+        } else if (state.contact == null && failure != null) {
+            // No card was read, so there is no form to type into: a blank one
+            // could never be saved.
+            Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+                ErrorState(error = failure, onRetry = onRetry)
             }
         } else {
             Column(

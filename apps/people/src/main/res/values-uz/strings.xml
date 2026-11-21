@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Odamlar topilmadi</string>
     <string name="people_friends_try_adjusting">Qidiruvingizni sozlashga harakat qiling</string>
     <string name="people_friends_pending">Kutilmoqda</string>
-    <string name="people_friends_received_tab">Qabul qilindi</string>
-    <string name="people_friends_sent_tab">Yuborilgan</string>
     <string name="people_invitations_incoming">Kiruvchi takliflar</string>
     <string name="people_invitations_empty">Kutilayotgan takliflar yoʻq</string>
     <string name="people_invitations_empty_hint">Yangi takliflar bu yerda paydo boʻladi</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s dan kelgan taklif qabul qilindi</string>
     <string name="people_invitations_toast_declined">%1$s dan kelgan taklif rad etildi</string>
     <string name="people_invitations_toast_cancelled">%1$s ga yuborilgan taklif bekor qilindi</string>
-    <string name="people_groups_empty">Guruhlar yo\'q</string>
     <string name="people_group_delete_confirm">\"%1$s\" guruhi o\'chirilsinmi? Bu amalni qaytarib bo\'lmaydi.</string>
     <string name="people_member_remove_confirm">%1$s ni ushbu guruhdan olib tashlamoqchimisiz?</string>
     <string name="people_member_remove_with_name">%1$s ni olib tashlash</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s rasmini qayta ishlab bo\'lmadi</string>
     <string name="people_profile_accent_invalid">Yaroqli hex rangini kiriting (masalan #a78bfa)</string>
     <string name="people_profile_accent_none">Hech qanday</string>
-    <string name="people_profile_privacy_private_desc">Faqat o\'zaro do\'stlar sizning profilingizni ko\'ra oladi</string>
     <string name="people_welcome_title">Odamlarga xush kelibsiz</string>
     <string name="people_person_banner_alt">%1$s uchun banner</string>
-    <string name="people_person_private">Ushbu profil shaxsiy</string>
     <string name="people_person_state_invited">Taklif qilingan</string>
 
     <string name="people_invitations_accept_all">Hammasini qabul qilish</string>
@@ -177,25 +172,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi bo\'ylab do\'stlarni toping va bog\'laning. Taklif yuborish uchun Kontakt qo\'shish tugmasini bosing.</string>
     <string name="people_person_state_contact">Kontaktlarda</string>
-    <string name="people_device_create">Yaratish</string>
-    <string name="people_device_add">Qurilma qoʻshish</string>
-    <string name="people_device_username">Foydalanuvchi nomi</string>
-    <string name="people_device_done">Bajarildi</string>
-    <string name="people_device_used">Oxirgi foydalanish %1$s</string>
-    <string name="people_device_never">Hech qachon</string>
     <string name="people_sync_now">Hozir sinxronlash</string>
-    <string name="people_device_title">Ulangan qurilmalar</string>
-    <string name="people_device_name">Qurilma nomi</string>
     <string name="people_device_address">Manzillar kitobi URL manzili</string>
-    <string name="people_device_password">Parol</string>
-    <string name="people_device_copy">%1$s nusxalash</string>
-    <string name="people_device_warning">Bu parolni hozir saqlab qoʻying. Uni qayta koʻrsatib boʻlmaydi.</string>
-    <string name="people_device_empty">Ulangan qurilmalar yoʻq.</string>
-    <string name="people_device_created">%1$s yaratildi</string>
-    <string name="people_device_delete">Qurilmani oʻchirish</string>
-    <string name="people_device_delete_title">Qurilma oʻchirilsinmi?</string>
-    <string name="people_device_delete_message">Qurilma endi kontaktlar yoki kalendarlarni sinxronlay olmaydi.</string>
-    <string name="people_device_deleted">Qurilma oʻchirildi</string>
     <string name="people_sync_title">Bu telefon bilan sinxronlash</string>
     <string name="people_sync_confirm">Bu telefondagi Kontaktlar ilovasida do\'stning kontaktini o\'chirish do\'stlikni ham tugatadi.</string>
     <string name="people_sync_enable">Yoqish</string>
@@ -227,4 +205,8 @@
     <string name="people_profile_settings">Sozlamalar</string>
     <string name="people_contacts_invitation_sent">Taklif yuborildi</string>
     <string name="people_contact_keep">Saqlab qolish</string>
+    <string name="people_invitations_received_count">Qabul qilindi (%1$s)</string>
+    <string name="people_invitations_sent_count">Yuborilgan (%1$s)</string>
+    <string name="people_contact_discard">Oʻzgarishlarni tashlab yuborish</string>
+    <string name="people_person_unavailable">Shaxs mavjud emas</string>
 </resources>

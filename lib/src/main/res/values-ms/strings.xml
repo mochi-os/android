@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s menyambung permainan</string>
     <string name="game_not_found">Permainan tidak ditemui</string>
     <string name="game_chat_move_played_you">Anda bermain %1$s</string>
+    <string name="devices_add">Tambah peranti</string>
+    <string name="devices_copy">Salin %1$s</string>
+    <string name="devices_create">Cipta</string>
+    <string name="devices_created">Dibuat %1$s</string>
+    <string name="devices_delete">Padam peranti</string>
+    <string name="devices_delete_message">Peranti ini tidak lagi dapat menyegerakkan kenalan atau kalendar.</string>
+    <string name="devices_delete_title">Padam peranti?</string>
+    <string name="devices_deleted">Peranti dipadamkan</string>
+    <string name="devices_done">Selesai</string>
+    <string name="devices_empty">Tiada peranti disambungkan</string>
+    <string name="devices_name">Nama peranti</string>
+    <string name="devices_password">Kata laluan</string>
+    <string name="devices_title">Peranti yang disambungkan</string>
+    <string name="devices_used">Terakhir digunakan %1$s</string>
+    <string name="devices_username">Nama pengguna</string>
+    <string name="devices_warning">Salin kata laluan sekarang: ia tidak boleh dipaparkan lagi.</string>
+    <string name="devices_unused">Tidak pernah digunakan</string>
 </resources>

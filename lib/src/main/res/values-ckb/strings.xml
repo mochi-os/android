@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s یاری دەستپێکردەوە</string>
     <string name="game_not_found">یاری نەدۆزرایەوە</string>
     <string name="game_chat_move_played_you">تۆ یاریت کرد %1$s</string>
+    <string name="devices_add">زیادکردنی ئامێر</string>
+    <string name="devices_copy">کۆپیکردنی %1$s</string>
+    <string name="devices_create">دروستکردن</string>
+    <string name="devices_created">دروستکرا %1$s</string>
+    <string name="devices_delete">سڕینەوەی ئامێر</string>
+    <string name="devices_delete_message">ئامێرەکە چیتر ناتوانێت پەیوەندییەکان یان ڕۆژژمێرەکان هاوکات بکات.</string>
+    <string name="devices_delete_title">ئامێرەکە بسڕدرێتەوە؟</string>
+    <string name="devices_deleted">ئامێرەکە سڕایەوە</string>
+    <string name="devices_done">تەواوبوو</string>
+    <string name="devices_empty">هیچ ئامێرێک پەیوەست نەکراوە</string>
+    <string name="devices_name">ناوی ئامێر</string>
+    <string name="devices_password">وشەی نهێنی</string>
+    <string name="devices_title">ئامێرە پەیوەستکراوەکان</string>
+    <string name="devices_used">کۆتا بەکارھێنان %1$s</string>
+    <string name="devices_username">ناوی بەکارهێنەر</string>
+    <string name="devices_warning">ئێستا وشەی نهێنی کۆپی بکە: دووبارە پیشان نادرێتەوە.</string>
+    <string name="devices_unused">هەرگیز بەکارنەهاتووە</string>
 </resources>

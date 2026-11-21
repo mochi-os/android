@@ -132,11 +132,10 @@ import org.mochios.calendars.ui.router.CalendarsSection
  * The calendars app's one screen: the drawer of calendars, the toolbar that
  * moves the range, the view itself and the "New event" button. Every view
  * renders from the same occurrence list, so switching between them is a
- * redraw and not a fetch of a different shape. [onCopyEvent] opens the
- * editor on a copy of a stored event's occurrence, with how far the copy
- * reaches; [onCopyOccurrence] on a copy of one the editor cannot load, a
- * subscription's or a birthday; either is made by the editor's Create, as
- * a new event is. [deleted] says the editor deleted something, reported once with Undo and cleared by
+ * redraw and not a fetch of a different shape. [onEditEvent] opens the
+ * editor on an occurrence the user can change; [onCopyOccurrence] opens it on
+ * a copy of one they cannot, a subscription's or a birthday, which the
+ * editor's Create makes, as a new event. [deleted] says the editor deleted something, reported once with Undo and cleared by
  * [onDeletedShown]; [saved] that the editor saved an event,
  * [CalendarsApp.CREATED] or [CalendarsApp.CHANGED], reported once and
  * cleared by [onSavedShown]. [sole] is a calendar to show on its own, as a
@@ -152,8 +151,7 @@ fun CalendarScreen(
     onPreferences: () -> Unit,
     onCalendarSettings: (String) -> Unit,
     onNewEvent: (Long, Boolean?, Long?, String?) -> Unit,
-    onEditEvent: (String, Long) -> Unit,
-    onCopyEvent: (String, Long, Scope) -> Unit,
+    onEditEvent: (Instance) -> Unit,
     onCopyOccurrence: (Instance) -> Unit,
     deleted: Boolean = false,
     onDeletedShown: () -> Unit = {},
@@ -183,7 +181,6 @@ fun CalendarScreen(
             viewModel.search("")
         }
     }
-    var copying by remember { mutableStateOf<Instance?>(null) }
     var moving by remember { mutableStateOf<Move?>(null) }
     var renaming by remember { mutableStateOf<Calendar?>(null) }
     var colouring by remember { mutableStateOf<Calendar?>(null) }
@@ -232,10 +229,7 @@ fun CalendarScreen(
                     is CalendarEvent.Exported -> snackbar.showSnackbar(
                         resources.getString(if (event.saved) R.string.calendars_exported else R.string.calendars_export_failed),
                     )
-                    is CalendarEvent.Open -> open(event.instance, onEditEvent) { instance ->
-                        selected = instance
-                        viewModel.details(instance)
-                    }
+                    is CalendarEvent.Open -> open(event.instance, onEditEvent) { instance -> selected = instance }
                     is CalendarEvent.Done -> snackbar.showSnackbar(resources.getString(event.message))
                 }
             }
@@ -438,10 +432,7 @@ fun CalendarScreen(
                                         viewModel,
                                         selected = selected,
                                         onOpen = { instance ->
-                                            open(instance, onEditEvent) { shown ->
-                                                selected = shown
-                                                viewModel.details(shown)
-                                            }
+                                            open(instance, onEditEvent) { shown -> selected = shown }
                                         },
                                         onNewEvent = create,
                                         onMove = { instance, moved ->
@@ -498,49 +489,17 @@ fun CalendarScreen(
         )
     }
 
-    // A copy of a repeating stored event asks how far it reaches; one of an
-    // event that does not repeat, or of an occurrence with no stored event
-    // to load, is a single event and opens at once.
-    copying?.let { instance ->
-        ScopeDialog(
-            title = stringResource(R.string.calendars_scope_copy),
-            following = false,
-            onDismiss = { copying = null },
-            onOne = {
-                copying = null
-                onCopyEvent(instance.event, instance.occurrence, Scope.ONE)
-            },
-            onAll = {
-                copying = null
-                onCopyEvent(instance.event, instance.occurrence, Scope.ALL)
-            },
-        )
-    }
-
+    // The sheet is a read-only occurrence's, whose copy the editor makes
+    // from the occurrence as listed.
     selected?.let { instance ->
         EventSheet(
             instance = instance,
             calendar = uiState.calendars.firstOrNull { it.id == instance.calendar },
             zones = uiState.preferences.zones,
-            details = uiState.details?.takeIf { details ->
-                details.event == instance.event && details.occurrence == instance.occurrence
-            },
             onDismiss = { selected = null },
             onCopy = {
                 selected = null
-                when {
-                    !instance.editable -> onCopyOccurrence(instance)
-                    instance.recurring -> copying = instance
-                    else -> onCopyEvent(instance.event, 0, Scope.ALL)
-                }
-            },
-            onEdit = if (instance.editable) {
-                {
-                    selected = null
-                    onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
-                }
-            } else {
-                null
+                onCopyOccurrence(instance)
             },
         )
     }
@@ -603,12 +562,8 @@ fun CalendarScreen(
  * change, else its summary, [show]n in a sheet, as a subscription's or a
  * birthday is.
  */
-internal fun open(instance: Instance, onEditEvent: (String, Long) -> Unit, show: (Instance) -> Unit) {
-    if (instance.editable) {
-        onEditEvent(instance.event, if (instance.recurring) instance.start else 0)
-    } else {
-        show(instance)
-    }
+internal fun open(instance: Instance, onEditEvent: (Instance) -> Unit, show: (Instance) -> Unit) {
+    if (instance.editable) onEditEvent(instance) else show(instance)
 }
 
 /** A dragged repeating occurrence, waiting for the user to say which occurrences move. */

@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">Nije pronađen nijedan korisnik</string>
     <string name="people_friends_try_adjusting">Pokušajte prilagoditi pretragu</string>
     <string name="people_friends_pending">Na čekanju</string>
-    <string name="people_friends_received_tab">Primljeno</string>
-    <string name="people_friends_sent_tab">Poslano</string>
     <string name="people_invitations_incoming">Dolazne pozivnice</string>
     <string name="people_invitations_empty">Nema pozivnica na čekanju</string>
     <string name="people_invitations_empty_hint">Nove pozivnice pojavit će se ovdje</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">Prihvaćena pozivnica od osobe %1$s</string>
     <string name="people_invitations_toast_declined">Odbijena pozivnica od osobe %1$s</string>
     <string name="people_invitations_toast_cancelled">Otkazana pozivnica za osobu %1$s</string>
-    <string name="people_groups_empty">Nema grupa</string>
     <string name="people_group_delete_confirm">Izbrisati grupu \"%1$s\"? Ovo se ne može poništiti.</string>
     <string name="people_member_remove_confirm">Jeste li sigurni da želite ukloniti osobu %1$s iz ove grupe?</string>
     <string name="people_member_remove_with_name">Ukloni %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">Nije moguće obraditi sliku %1$s</string>
     <string name="people_profile_accent_invalid">Unesite valjanu hex boju (npr. #a78bfa)</string>
     <string name="people_profile_accent_none">Ništa</string>
-    <string name="people_profile_privacy_private_desc">Samo međusobni prijatelji mogu vidjeti vaš profil</string>
     <string name="people_welcome_title">Dobro došli u aplikaciju Ljudi</string>
     <string name="people_person_banner_alt">Pozadinska slika za %1$s</string>
-    <string name="people_person_private">Ovaj profil je privatan</string>
     <string name="people_person_state_invited">Pozvan</string>
 
     <string name="people_invitations_accept_all">Prihvati sve</string>
@@ -178,25 +173,8 @@
     </plurals>
     <string name="people_welcome_body">Pronađite prijatelje diljem Mochija i povežite se. Dodirnite Dodaj kontakt da pošaljete pozivnicu.</string>
     <string name="people_person_state_contact">U kontaktima</string>
-    <string name="people_device_create">Stvori</string>
-    <string name="people_device_add">Dodaj uređaj</string>
-    <string name="people_device_username">Korisničko ime</string>
-    <string name="people_device_done">Gotovo</string>
-    <string name="people_device_used">Zadnje korišteno %1$s</string>
-    <string name="people_device_never">Nikad</string>
     <string name="people_sync_now">Sinkroniziraj sada</string>
-    <string name="people_device_title">Povezani uređaji</string>
-    <string name="people_device_name">Naziv uređaja</string>
     <string name="people_device_address">URL adresara</string>
-    <string name="people_device_password">Lozinka</string>
-    <string name="people_device_copy">Kopiraj %1$s</string>
-    <string name="people_device_warning">Spremite ovu lozinku sada. Ne može se ponovno prikazati.</string>
-    <string name="people_device_empty">Nema povezanih uređaja.</string>
-    <string name="people_device_created">Stvoreno %1$s</string>
-    <string name="people_device_delete">Izbriši uređaj</string>
-    <string name="people_device_delete_title">Izbrisati uređaj?</string>
-    <string name="people_device_delete_message">Uređaj više neće moći sinkronizirati kontakte ni kalendare.</string>
-    <string name="people_device_deleted">Uređaj izbrisan</string>
     <string name="people_sync_title">Sinkroniziraj s ovim telefonom</string>
     <string name="people_sync_confirm">Brisanjem kontakta prijatelja u aplikaciji Kontakti na ovom telefonu prestaje i prijateljstvo.</string>
     <string name="people_sync_enable">Uključi</string>
@@ -228,4 +206,8 @@
     <string name="people_profile_settings">Postavke</string>
     <string name="people_contacts_invitation_sent">Pozivnica poslana</string>
     <string name="people_contact_keep">Zadrži</string>
+    <string name="people_invitations_received_count">Primljeno (%1$s)</string>
+    <string name="people_invitations_sent_count">Poslano (%1$s)</string>
+    <string name="people_contact_discard">Odbaci promjene</string>
+    <string name="people_person_unavailable">Osoba nije dostupna</string>
 </resources>

@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s ਨੇ ਖੇਡ ਮੁੜ ਸ਼ੁਰੂ ਕੀਤੀ</string>
     <string name="game_not_found">ਖੇਡ ਨਹੀਂ ਮਿਲੀ</string>
     <string name="game_chat_move_played_you">ਤੁਸੀਂ %1$s ਖੇਡਿਆ</string>
+    <string name="devices_add">ਡਿਵਾਈਸ ਜੋੜੋ</string>
+    <string name="devices_copy">%1$s ਕਾਪੀ ਕਰੋ</string>
+    <string name="devices_create">ਬਣਾਓ</string>
+    <string name="devices_created">ਬਣਾਇਆ %1$s</string>
+    <string name="devices_delete">ਡਿਵਾਈਸ ਮਿਟਾਓ</string>
+    <string name="devices_delete_message">ਡਿਵਾਈਸ ਹੁਣ ਸੰਪਰਕ ਜਾਂ ਕੈਲੰਡਰ ਸਿੰਕ ਨਹੀਂ ਕਰ ਸਕੇਗੀ।</string>
+    <string name="devices_delete_title">ਡਿਵਾਈਸ ਮਿਟਾਉਣੀ ਹੈ?</string>
+    <string name="devices_deleted">ਡਿਵਾਈਸ ਮਿਟਾਈ ਗਈ</string>
+    <string name="devices_done">ਹੋ ਗਿਆ</string>
+    <string name="devices_empty">ਕੋਈ ਡਿਵਾਈਸ ਨਹੀਂ ਜੁੜਿਆ</string>
+    <string name="devices_name">ਡਿਵਾਈਸ ਦਾ ਨਾਮ</string>
+    <string name="devices_password">ਪਾਸਵਰਡ</string>
+    <string name="devices_title">ਜੁੜੇ ਹੋਏ ਡਿਵਾਈਸ</string>
+    <string name="devices_used">ਆਖਰੀ ਵਾਰ ਵਰਤਿਆ %1$s</string>
+    <string name="devices_username">ਉਪਭੋਗਤਾ ਨਾਮ</string>
+    <string name="devices_warning">ਪਾਸਵਰਡ ਹੁਣੇ ਕਾਪੀ ਕਰੋ: ਇਹ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾਵੇਗਾ।</string>
+    <string name="devices_unused">ਕਦੇ ਨਹੀਂ ਵਰਤਿਆ</string>
 </resources>

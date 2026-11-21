@@ -5,9 +5,6 @@
 
 package org.mochios.calendars.ui.calendar
 
-import android.icu.text.MeasureFormat
-import android.icu.util.Measure
-import android.icu.util.MeasureUnit
 import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -31,9 +28,7 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.CalendarToday
 import androidx.compose.material.icons.outlined.Block
 import androidx.compose.material.icons.outlined.ContentCopy
-import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Flight
-import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Public
 import androidx.compose.material.icons.outlined.Repeat
@@ -53,35 +48,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
-import java.time.DayOfWeek
 import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
-import java.time.format.TextStyle
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
-import org.mochios.android.ui.components.HtmlContent
 import org.mochios.android.ui.components.MochiBottomSheet
 import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.util.Zones
+import org.mochios.android.util.descriptionText
 import org.mochios.android.util.flightNumber
-import org.mochios.android.util.isHtml
 import org.mochios.android.util.zoneCity
 import org.mochios.calendars.R
 import org.mochios.calendars.model.Calendar
 import org.mochios.calendars.model.Instance
-import org.mochios.calendars.ui.dialogs.reminderLabel
-import org.mochios.calendars.ui.editor.Frequency
-import org.mochios.calendars.ui.editor.Recurrence
 import org.mochios.android.R as MochiR
 
 /** How a summary puts its parts together, in the user's language. */
@@ -176,19 +164,14 @@ fun places(
 }
 
 /**
- * One occurrence, shown when it is tapped in a sheet that takes 85% of the
- * screen, under the header every sheet has: its colour and what it is
- * called, with "Edit" and a menu beside them. Beneath, each beside its icon: when it is and whether it is
- * cancelled or tentative, the zones it is written in when they are not the
- * user's, how it repeats, where it is, its reminders, which calendar it is in
- * and its description. The repeat
- * rule and the reminders come from [details], the whole event read once the
- * page opens; until then, or when it cannot be read, a repeating occurrence
- * says only that it repeats. "Edit", which [onEdit]
- * answers, is there only for an editable occurrence; the menu holds "Copy",
- * which [onCopy] answers. A read-only occurrence - a subscription's or a
- * birthday - can only be copied, into a calendar of the user's own. Nothing
- * here deletes; the editor does.
+ * A read-only occurrence - a subscription's or a birthday - shown when it is
+ * tapped, in a sheet that takes 85% of the screen, under the header every
+ * sheet has: its colour and what it is called, with a menu beside them.
+ * Beneath, each beside its icon: when it is and whether it is cancelled or
+ * tentative, the zones it is written in when they are not the user's, that it
+ * repeats, where it is, which calendar it is in and its description. The
+ * menu holds "Copy", which [onCopy] answers, into a calendar of the user's
+ * own. An occurrence the user can change opens in the editor instead.
  *
  * A timed occurrence written in another zone than the user's names the
  * zones: with [zones] on, the span reads each end in its own zone with the
@@ -201,10 +184,8 @@ fun EventSheet(
     instance: Instance,
     calendar: Calendar?,
     zones: Boolean = false,
-    details: EventDetails? = null,
     onDismiss: () -> Unit,
     onCopy: () -> Unit,
-    onEdit: (() -> Unit)? = null,
 ) {
     val format = LocalFormat.current
     val day = stringResource(R.string.calendars_span_day)
@@ -245,11 +226,6 @@ fun EventSheet(
                     )
                 },
             ) {
-                if (onEdit != null) {
-                    MochiIconButton(onClick = onEdit) {
-                        Icon(Icons.Outlined.Edit, contentDescription = stringResource(R.string.calendars_event_edit))
-                    }
-                }
                 Box {
                     MochiIconButton(onClick = { menu = true }) {
                         Icon(
@@ -317,11 +293,7 @@ fun EventSheet(
                 }
                 if (instance.recurring) {
                     Detail(icon = Icons.Outlined.Repeat) {
-                        Text(
-                            text = details?.recurrence?.let { recurrence -> repeats(recurrence) }
-                                ?: stringResource(R.string.calendars_event_recurring),
-                            style = MaterialTheme.typography.bodyLarge,
-                        )
+                        Text(text = stringResource(R.string.calendars_event_recurring), style = MaterialTheme.typography.bodyLarge)
                     }
                 }
                 if (instance.location.isNotBlank()) {
@@ -337,26 +309,16 @@ fun EventSheet(
                         )
                     }
                 }
-                if (!details?.reminders.isNullOrEmpty()) {
-                    Detail(icon = Icons.Outlined.Notifications) {
-                        details.reminders.forEach { minutes ->
-                            Text(text = reminderLabel(minutes), style = MaterialTheme.typography.bodyLarge)
-                        }
-                    }
-                }
                 Detail(icon = Icons.Outlined.CalendarToday) {
                     Text(text = calendar?.name.orEmpty(), style = MaterialTheme.typography.bodyLarge)
                 }
-                if (instance.description.isNotBlank()) {
+                // A subscription's description is written by whoever publishes
+                // the calendar and may be HTML, as Google's are: it shows as its
+                // text, as the web's summary does, so nothing it names is fetched.
+                val description = descriptionText(instance.description)
+                if (description.isNotBlank()) {
                     Detail(icon = Icons.AutoMirrored.Outlined.Notes) {
-                        if (isHtml(instance.description)) {
-                            // A subscription's description may be HTML, as Google's
-                            // are: rendered, so its breaks and emphasis show rather
-                            // than their tags.
-                            HtmlContent(html = instance.description)
-                        } else {
-                            Text(text = instance.description, style = MaterialTheme.typography.bodyLarge)
-                        }
+                        Text(text = description, style = MaterialTheme.typography.bodyLarge)
                     }
                 }
             }
@@ -378,59 +340,6 @@ private fun Dashed(colour: Color) {
             ),
         )
     }
-}
-
-/**
- * How a series repeats, in words the editor already has: "Repeats" and
- * "daily", "weekly" and the like, or "every" and a span such as "2 weeks"
- * when it skips, then the weekdays it picks and how many times it runs, when
- * it says. A rule with no plain unit, or one that does not repeat at all, as
- * an override can, reads as "Repeats" alone.
- */
-@Composable
-private fun repeats(recurrence: Recurrence): String {
-    val format = LocalFormat.current
-    val locale = LocalConfiguration.current.locales[0]
-    val unit = recurrence.rule.orEmpty().split(";")
-        .firstOrNull { part -> part.trim().startsWith("FREQ=", ignoreCase = true) }
-        ?.substringAfter('=')?.trim()?.uppercase()
-    val plain = when (unit) {
-        "DAILY" -> R.string.calendars_repeat_daily
-        "WEEKLY" -> R.string.calendars_repeat_weekly
-        "MONTHLY" -> R.string.calendars_repeat_monthly
-        "YEARLY" -> R.string.calendars_repeat_yearly
-        else -> null
-    }
-    val measure = when (unit) {
-        "DAILY" -> MeasureUnit.DAY
-        "WEEKLY" -> MeasureUnit.WEEK
-        "MONTHLY" -> MeasureUnit.MONTH
-        "YEARLY" -> MeasureUnit.YEAR
-        else -> null
-    }
-    val every = stringResource(R.string.calendars_repeat_interval)
-    val how = when {
-        recurrence.frequency == Frequency.NEVER -> null
-        plain != null && recurrence.interval == 1 -> stringResource(plain)
-        measure != null -> every + " " +
-            MeasureFormat.getInstance(locale, MeasureFormat.FormatWidth.WIDE)
-                .format(Measure(recurrence.interval, measure))
-        else -> null
-    }
-    val repeats = stringResource(R.string.calendars_event_recurring)
-    val base = how?.let { phrase -> repeats + " " + phrase.replaceFirstChar { first -> first.lowercase(locale) } }
-        ?: repeats
-    val days = recurrence.days.sorted().map { index ->
-        DayOfWeek.of(if (index == 0) 7 else index).getDisplayName(TextStyle.SHORT, locale)
-    }
-    val count = recurrence.count?.let { times ->
-        stringResource(R.string.calendars_repeat_count) + ": " + format.formatNumber(times)
-    }
-    return listOfNotNull(
-        base,
-        days.takeIf { names -> names.isNotEmpty() }?.let { names -> format.formatList(names) },
-        count,
-    ).joinToString(" · ")
 }
 
 /** One row of the event page: [icon] in the left column and [content] beside it. */

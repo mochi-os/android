@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">사람을 찾을 수 없어요</string>
     <string name="people_friends_try_adjusting">검색을 조정해 보세요</string>
     <string name="people_friends_pending">대기 중</string>
-    <string name="people_friends_received_tab">받음</string>
-    <string name="people_friends_sent_tab">보냄</string>
     <string name="people_invitations_incoming">받은 초대</string>
     <string name="people_invitations_empty">대기 중인 초대가 없어요</string>
     <string name="people_invitations_empty_hint">새 초대가 여기에 표시돼요</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">%1$s 님의 초대를 수락했습니다</string>
     <string name="people_invitations_toast_declined">%1$s 님의 초대를 거절했습니다</string>
     <string name="people_invitations_toast_cancelled">%1$s 님에게 보낸 초대를 취소했습니다</string>
-    <string name="people_groups_empty">그룹 없음</string>
     <string name="people_group_delete_confirm">\"%1$s\" 그룹을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.</string>
     <string name="people_member_remove_confirm">%1$s 님을 이 그룹에서 삭제하시겠습니까?</string>
     <string name="people_member_remove_with_name">%1$s 삭제</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">%1$s 이미지를 처리할 수 없습니다</string>
     <string name="people_profile_accent_invalid">유효한 16진수 색상을 입력하세요 (예: #a78bfa)</string>
     <string name="people_profile_accent_none">없음</string>
-    <string name="people_profile_privacy_private_desc">상호 친구만 프로필을 볼 수 있습니다</string>
     <string name="people_welcome_title">사람 앱에 오신 것을 환영합니다</string>
     <string name="people_person_banner_alt">%1$s 님의 배너</string>
-    <string name="people_person_private">이 프로필은 비공개입니다</string>
     <string name="people_person_state_invited">초대됨</string>
 
     <string name="people_invitations_accept_all">모두 수락</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">Mochi 전체에서 친구를 찾아 소통하세요. 초대를 보내려면 연락처 추가를 누르세요.</string>
     <string name="people_person_state_contact">연락처에 있음</string>
-    <string name="people_device_create">생성</string>
-    <string name="people_device_add">기기 추가</string>
-    <string name="people_device_username">사용자 이름</string>
-    <string name="people_device_done">완료</string>
-    <string name="people_device_used">마지막 사용 %1$s</string>
-    <string name="people_device_never">안 함</string>
     <string name="people_sync_now">지금 동기화</string>
-    <string name="people_device_title">연결된 기기</string>
-    <string name="people_device_name">기기 이름</string>
     <string name="people_device_address">주소록 URL</string>
-    <string name="people_device_password">비밀번호</string>
-    <string name="people_device_copy">%1$s 복사</string>
-    <string name="people_device_warning">이 비밀번호를 지금 저장하세요. 다시 표시할 수 없어요.</string>
-    <string name="people_device_empty">연결된 기기가 없어요.</string>
-    <string name="people_device_created">생성 %1$s</string>
-    <string name="people_device_delete">기기 삭제</string>
-    <string name="people_device_delete_title">기기를 삭제할까요?</string>
-    <string name="people_device_delete_message">이 기기는 더 이상 연락처나 캘린더를 동기화할 수 없어요.</string>
-    <string name="people_device_deleted">기기가 삭제되었어요</string>
     <string name="people_sync_title">이 휴대전화에 동기화</string>
     <string name="people_sync_confirm">이 휴대전화의 연락처 앱에서 친구의 연락처를 삭제하면 친구 관계도 종료됩니다.</string>
     <string name="people_sync_enable">켜기</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">설정</string>
     <string name="people_contacts_invitation_sent">초대를 보냈습니다</string>
     <string name="people_contact_keep">유지</string>
+    <string name="people_invitations_received_count">받음 (%1$s)</string>
+    <string name="people_invitations_sent_count">보냄 (%1$s)</string>
+    <string name="people_contact_discard">변경 사항 버리기</string>
+    <string name="people_person_unavailable">이 사람을 표시할 수 없음</string>
 </resources>

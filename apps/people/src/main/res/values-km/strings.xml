@@ -10,8 +10,6 @@
     <string name="people_friends_no_people_found">រកមិនឃើញមនុស្ស</string>
     <string name="people_friends_try_adjusting">សាកល្បងកែតម្រូវការស្វែងរករបស់អ្នក</string>
     <string name="people_friends_pending">កំពុងរង់ចាំ</string>
-    <string name="people_friends_received_tab">បានទទួល</string>
-    <string name="people_friends_sent_tab">បានផ្ញើ</string>
     <string name="people_invitations_incoming">ការអញ្ជើញចូលមក</string>
     <string name="people_invitations_empty">មិនមានការអញ្ជើញកំពុងរង់ចាំ</string>
     <string name="people_invitations_empty_hint">ការអញ្ជើញថ្មីនឹងបង្ហាញនៅទីនេះ</string>
@@ -84,7 +82,6 @@
     <string name="people_invitations_toast_accepted">បានទទួលយកការអញ្ជើញពី %1$s</string>
     <string name="people_invitations_toast_declined">បានបដិសេធការអញ្ជើញពី %1$s</string>
     <string name="people_invitations_toast_cancelled">បានបោះបង់ការអញ្ជើញទៅ %1$s</string>
-    <string name="people_groups_empty">គ្មានក្រុម</string>
     <string name="people_group_delete_confirm">លុបក្រុម \"%1$s\"? សកម្មភាពនេះមិនអាចត្រឡប់វិញបានទេ។</string>
     <string name="people_member_remove_confirm">តើអ្នកប្រាកដថាចង់លុប %1$s ចេញពីក្រុមនេះមែនទេ?</string>
     <string name="people_member_remove_with_name">លុប %1$s</string>
@@ -94,10 +91,8 @@
     <string name="people_profile_image_process_failed">មិនអាចដំណើរការរូបភាព %1$s បានទេ</string>
     <string name="people_profile_accent_invalid">បញ្ចូលលេខកូដពណ៌ hex ត្រឹមត្រូវ (ឧ. #a78bfa)</string>
     <string name="people_profile_accent_none">គ្មាន</string>
-    <string name="people_profile_privacy_private_desc">មានតែមិត្តភក្តិទៅវិញទៅមកប៉ុណ្ណោះដែលអាចមើលប្រវត្តិរូបរបស់អ្នកបាន</string>
     <string name="people_welcome_title">សូមស្វាគមន៍មកកាន់ «មនុស្ស»</string>
     <string name="people_person_banner_alt">បដាសម្រាប់ %1$s</string>
-    <string name="people_person_private">ប្រវត្តិរូបនេះគឺឯកជន</string>
     <string name="people_person_state_invited">បានអញ្ជើញ</string>
 
     <string name="people_invitations_accept_all">ទទួលយកទាំងអស់</string>
@@ -176,25 +171,8 @@
     </plurals>
     <string name="people_welcome_body">ស្វែងរកមិត្តភក្តិនៅទូទាំង Mochi ហើយភ្ជាប់ទំនាក់ទំនង។ ចុច បន្ថែមទំនាក់ទំនង ដើម្បីផ្ញើការអញ្ជើញ។</string>
     <string name="people_person_state_contact">មានក្នុងទំនាក់ទំនង</string>
-    <string name="people_device_create">បង្កើត</string>
-    <string name="people_device_add">បន្ថែមឧបករណ៍</string>
-    <string name="people_device_username">ឈ្មោះអ្នកប្រើប្រាស់</string>
-    <string name="people_device_done">រួចរាល់</string>
-    <string name="people_device_used">ប្រើចុងក្រោយ %1$s</string>
-    <string name="people_device_never">មិនដែល</string>
     <string name="people_sync_now">ធ្វើសមកាលកម្មឥឡូវនេះ</string>
-    <string name="people_device_title">ឧបករណ៍ដែលបានភ្ជាប់</string>
-    <string name="people_device_name">ឈ្មោះឧបករណ៍</string>
     <string name="people_device_address">URL សៀវភៅអាសយដ្ឋាន</string>
-    <string name="people_device_password">ពាក្យសម្ងាត់</string>
-    <string name="people_device_copy">ចម្លង %1$s</string>
-    <string name="people_device_warning">រក្សាទុកពាក្យសម្ងាត់នេះឥឡូវនេះ។ វាមិនអាចបង្ហាញម្ដងទៀតបានទេ។</string>
-    <string name="people_device_empty">គ្មានឧបករណ៍ដែលបានភ្ជាប់ទេ។</string>
-    <string name="people_device_created">បានបង្កើត %1$s</string>
-    <string name="people_device_delete">លុបឧបករណ៍</string>
-    <string name="people_device_delete_title">លុបឧបករណ៍?</string>
-    <string name="people_device_delete_message">ឧបករណ៍នេះនឹងលែងអាចធ្វើសមកាលកម្មទំនាក់ទំនង ឬប្រតិទិនបានទៀតហើយ។</string>
-    <string name="people_device_deleted">បានលុបឧបករណ៍</string>
     <string name="people_sync_title">ធ្វើសមកាលកម្មទៅទូរសព្ទនេះ</string>
     <string name="people_sync_confirm">ការលុបទំនាក់ទំនងរបស់មិត្តភក្តិនៅក្នុងកម្មវិធីទំនាក់ទំនងនៃទូរសព្ទនេះ ក៏នឹងបញ្ចប់មិត្តភាពដែរ។</string>
     <string name="people_sync_enable">បើក</string>
@@ -226,4 +204,8 @@
     <string name="people_profile_settings">ការកំណត់</string>
     <string name="people_contacts_invitation_sent">បានផ្ញើការអញ្ជើញ</string>
     <string name="people_contact_keep">រក្សា</string>
+    <string name="people_invitations_received_count">បានទទួល (%1$s)</string>
+    <string name="people_invitations_sent_count">បានផ្ញើ (%1$s)</string>
+    <string name="people_contact_discard">បោះចោលការផ្លាស់ប្តូរ</string>
+    <string name="people_person_unavailable">បុគ្គលនេះមិនអាចប្រើបាន</string>
 </resources>

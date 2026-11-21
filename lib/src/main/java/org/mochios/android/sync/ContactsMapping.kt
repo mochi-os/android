@@ -51,7 +51,18 @@ object ContactsMapping {
      * managed, so the server replaces it even when the phone now has none.
      * The server keeps the rest, `SOCIALPROFILE` among them.
      */
-    val MANAGED = setOf("FN", "N", "NICKNAME", "EMAIL", "TEL", "ADR", "BDAY", "ORG", "TITLE", "URL", "NOTE", "IMPP")
+    val MANAGED = setOf(
+        "FN", "N", "NICKNAME", "EMAIL", "TEL", "ADR", "BDAY", "ORG", "TITLE", "URL", "NOTE", "IMPP",
+        PHONETIC_GIVEN, PHONETIC_MIDDLE, PHONETIC_FAMILY,
+    )
+
+    /**
+     * A name's reading, as other vCard writers carry the phone's phonetic
+     * name parts: what Japanese, Chinese and Korean names sort and search by.
+     */
+    private const val PHONETIC_GIVEN = "X-PHONETIC-FIRST-NAME"
+    private const val PHONETIC_MIDDLE = "X-PHONETIC-MIDDLE-NAME"
+    private const val PHONETIC_FAMILY = "X-PHONETIC-LAST-NAME"
 
     /**
      * `data_sync1` of a photo or messaging row a download wrote. A later
@@ -166,6 +177,7 @@ object ContactsMapping {
         val display = properties.firstOrNull { it.name.equals("FN", true) }?.value.orEmpty()
         val parts = properties.firstOrNull { it.name.equals("N", true) }?.value
             ?.let(::splitComponents).orEmpty()
+        fun reading(name: String) = properties.firstOrNull { it.name.equals(name, true) }?.value.orEmpty()
         val values = mapOf(
             StructuredName.DISPLAY_NAME to display,
             StructuredName.FAMILY_NAME to parts.component(0),
@@ -173,6 +185,9 @@ object ContactsMapping {
             StructuredName.MIDDLE_NAME to parts.component(2),
             StructuredName.PREFIX to parts.component(3),
             StructuredName.SUFFIX to parts.component(4),
+            StructuredName.PHONETIC_GIVEN_NAME to reading(PHONETIC_GIVEN),
+            StructuredName.PHONETIC_MIDDLE_NAME to reading(PHONETIC_MIDDLE),
+            StructuredName.PHONETIC_FAMILY_NAME to reading(PHONETIC_FAMILY),
         )
         if (values.values.all { it.isBlank() }) return null
         return DataRow(StructuredName.CONTENT_ITEM_TYPE, values.filterValues { it.isNotBlank() })
@@ -332,6 +347,14 @@ object ContactsMapping {
             .ifBlank { phones.firstOrNull()?.get(Phone.NUMBER).orEmpty() }
         if (display.isNotBlank()) out.add(ContactProperty("FN", emptyMap(), display))
         if (parts.any { it.isNotBlank() }) out.add(ContactProperty("N", emptyMap(), joinComponents(parts)))
+        for ((column, property) in listOf(
+            StructuredName.PHONETIC_GIVEN_NAME to PHONETIC_GIVEN,
+            StructuredName.PHONETIC_MIDDLE_NAME to PHONETIC_MIDDLE,
+            StructuredName.PHONETIC_FAMILY_NAME to PHONETIC_FAMILY,
+        )) {
+            val reading = name?.get(column).orEmpty()
+            if (reading.isNotBlank()) out.add(ContactProperty(property, emptyMap(), reading))
+        }
         for (nickname in nicknames) out.add(ContactProperty("NICKNAME", emptyMap(), nickname))
         for (row in emails) {
             out.add(ContactProperty("EMAIL", typeParameter(emailLabels(row)), row.get(Email.ADDRESS)))

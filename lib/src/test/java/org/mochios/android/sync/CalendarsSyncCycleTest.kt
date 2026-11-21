@@ -167,6 +167,10 @@ class CalendarsSyncCycleTest {
             for (row in rows.values.filter { it.calendar == calendar.local }) rows.remove(row.local)
         }
 
+        override fun clear(calendar: StoredCalendar) {
+            for (row in rows.values.filter { it.calendar == calendar.local }) rows.remove(row.local)
+        }
+
         override fun events(): List<StoredEvent> =
             rows.values.filter { row -> calendars[row.calendar]?.sync != false }
 
@@ -278,6 +282,26 @@ class CalendarsSyncCycleTest {
         run(source, store)
         assertNull(store.calendars().firstOrNull { it.remote == "calendar-2" })
         assertTrue(store.rows.values.none { it.remote == "orphan" })
+    }
+
+    @Test
+    fun `a calendar switched off keeps none of its events, edits not yet uploaded among them`() {
+        val source = FakeSource()
+        source.calendars["calendar-2"] = SyncedCalendar("calendar-2", "Later")
+        val store = FakeStore()
+        run(source, store)
+        val second = store.calendars().first { it.remote == "calendar-2" }
+        val first = store.calendars().first { it.remote == "calendar-1" }
+        store.make(second.local, remote = "kept", etag = "e")
+        store.make(second.local, remote = "edited", etag = "e", dirty = true)
+        store.make(first.local, remote = "other", etag = "e")
+        // The user turns the second calendar off.
+        store.calendars[second.local] = second.copy(sync = false)
+        run(source, store)
+        assertTrue(store.rows.values.none { it.calendar == second.local })
+        assertTrue("the calendar itself stays", store.calendars().any { it.remote == "calendar-2" })
+        assertTrue(store.rows.values.any { it.remote == "other" })
+        assertTrue("nothing of it went up", source.calls.none { "edited" in it })
     }
 
     @Test

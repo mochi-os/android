@@ -353,4 +353,21 @@
     <string name="game_system_score_resume">%1$s راند ٻيهر شروع ڪئي</string>
     <string name="game_not_found">راند نه ملي</string>
     <string name="game_chat_move_played_you">توهان %1$s کيڏيو</string>
+    <string name="devices_add">ڊوائيس شامل ڪريو</string>
+    <string name="devices_copy">%1$s ڪاپي ڪريو</string>
+    <string name="devices_create">ٺاهيو</string>
+    <string name="devices_created">ٺاهيو ويو %1$s</string>
+    <string name="devices_delete">ڊوائيس ختم ڪريو</string>
+    <string name="devices_delete_message">ڊوائيس هاڻي رابطن يا ڪئلينڊرن کي سنڪ نه ڪري سگهندي.</string>
+    <string name="devices_delete_title">ڊوائيس ختم ڪريو؟</string>
+    <string name="devices_deleted">ڊوائيس ختم ڪئي وئي</string>
+    <string name="devices_done">مڪمل</string>
+    <string name="devices_empty">ڪوبه ڊوائيس ڳنڍيل ناهي</string>
+    <string name="devices_name">ڊوائيس جو نالو</string>
+    <string name="devices_password">پاسورڊ</string>
+    <string name="devices_title">ڳنڍيل ڊوائيس</string>
+    <string name="devices_used">آخري استعمال %1$s</string>
+    <string name="devices_username">صارف نالو</string>
+    <string name="devices_warning">پاسورڊ هاڻي ڪاپي ڪريو: هي وري نه ڏيکاريو ويندو.</string>
+    <string name="devices_unused">ڪڏهن به استعمال نه ٿيو</string>
 </resources>

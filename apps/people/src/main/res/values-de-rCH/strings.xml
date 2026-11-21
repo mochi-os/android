@@ -26,8 +26,6 @@
     <string name="people_friends_no_people_found">Keine Personen gefunden</string>
     <string name="people_friends_try_adjusting">Passen Sie Ihre Suche an</string>
     <string name="people_friends_pending">Ausstehend</string>
-    <string name="people_friends_received_tab">Erhalten</string>
-    <string name="people_friends_sent_tab">Gesendet</string>
     <string name="people_invitations_incoming">Eingehende Einladungen</string>
     <string name="people_invitations_empty">Keine ausstehenden Einladungen</string>
     <string name="people_invitations_empty_hint">Neue Einladungen erscheinen hier</string>
@@ -46,7 +44,6 @@
     <string name="people_invite_settings_reject_description">Einladungen von unbekannten Absendern werden verworfen. Gegenseitige Einladungen verbinden trotzdem.</string>
     <string name="people_invite_settings_accept_automatically">Automatisch annehmen</string>
     <string name="people_invite_settings_accept_description">Alle Einladungen werden ohne Ihre Bestätigung angenommen.</string>
-    <string name="people_groups_empty">Keine Gruppen</string>
     <string name="people_groups_create">Gruppe erstellen</string>
     <string name="people_groups_not_found">Gruppe nicht gefunden</string>
     <string name="people_group_name">Gruppenname</string>
@@ -85,11 +82,9 @@
     <string name="people_profile_accent_invalid">Geben Sie eine gültige Hex-Farbe ein (z. B. #a78bfa)</string>
     <string name="people_profile_accent_none">Keine</string>
     <string name="people_profile_clear">Löschen</string>
-    <string name="people_profile_privacy_private_desc">Nur gegenseitige Freunde können Ihr Profil ansehen</string>
     <string name="people_sidebar_header">Personen</string>
     <string name="people_open_sidebar">Navigation öffnen</string>
     <string name="people_person_banner_alt">Banner für %1$s</string>
-    <string name="people_person_private">Dieses Profil ist privat</string>
     <string name="people_person_state_friend">Befreundet</string>
     <string name="people_person_state_invited">Eingeladen</string>
     <string name="people_person_accept">Annehmen</string>
@@ -116,9 +111,6 @@
     <string name="people_contacts_unfriend">Freund entfernen</string>
     <string name="people_add_contact_search_placeholder">Zum Suchen tippen</string>
     <string name="people_add_contact_search_start">Beginnen Sie zu tippen, um nach Benutzern zu suchen</string>
-    <string name="people_device_create">Erstellen</string>
-    <string name="people_device_username">Benutzername</string>
-    <string name="people_device_done">Fertig</string>
-    <string name="people_device_used">Zuletzt verwendet %1$s</string>
-    <string name="people_device_never">Nie</string>
+    <string name="people_invitations_received_count">Erhalten (%1$s)</string>
+    <string name="people_invitations_sent_count">Gesendet (%1$s)</string>
 </resources>

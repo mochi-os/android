@@ -48,6 +48,10 @@ enum class Scope {
  * event does not repeat; [series] is the master's own start. The form shows
  * the occurrence, so a change to the whole series moves the master by however
  * far the user moved that occurrence rather than onto its date.
+ *
+ * [floating] is the zone a floating event, one whose times name no zone, was
+ * read in, and blank for any other: an end still in that zone is written
+ * floating again, and one the user moved to another zone is pinned there.
  */
 data class EventForm(
     val title: String = "",
@@ -68,6 +72,7 @@ data class EventForm(
     val reminders: List<Int> = emptyList(),
     val occurrence: Long = 0,
     val series: Long = 0,
+    val floating: String = "",
 )
 
 /**
@@ -160,6 +165,7 @@ private val MANAGED = setOf(
  * override for the occurrence the user opened, adding one when there was
  * none. [Scope.FOLLOWING] is two events, which [split] builds; here it reads
  * as the whole series, which is what it is on the series' first occurrence.
+ * A floating time in [carried] is read in [user]'s zone.
  */
 fun components(
     form: EventForm,
@@ -177,22 +183,26 @@ fun components(
         } else {
             form.start
         }
-        val head = component(form, master, recurrence = true, occurrence = 0, start = start)
-        val first = master?.let { begins(it) } ?: 0L
+        val head = component(form, master, recurrence = true, occurrence = 0, start = start, user = user)
+        val first = master?.let { begins(it, user) } ?: 0L
         val shift = if (first == 0L) 0L else start - first
-        val kept = unopened(overrides, form)
+        val kept = unopened(overrides, form, user)
         if (shift == 0L) return listOf(head) + kept
-        return listOf(relisted(head, master!!, Long.MIN_VALUE, shift)) +
+        return listOf(relisted(head, master!!, Long.MIN_VALUE, shift, user)) +
             carried(kept, head, Long.MIN_VALUE, shift, user)
     }
+    val own = overrides.firstOrNull { matches(it, form.occurrence, user) }
+    // A new override's reminders are the ones the form showed, the series'.
     val replaced = component(
         form,
-        overrides.firstOrNull { matches(it, form.occurrence) },
+        own,
         recurrence = false,
         occurrence = form.occurrence,
         start = form.start,
+        user = user,
+        alarmed = own ?: master,
     )
-    return listOf(master) + overrides.filterNot { matches(it, form.occurrence) } + replaced
+    return listOf(master) + overrides.filterNot { matches(it, form.occurrence, user) } + replaced
 }
 
 /**
@@ -206,8 +216,8 @@ fun components(
 fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventForm {
     val starts = component.property("DTSTART")
     val allday = starts != null && CalendarsMapping.date(starts)
-    val start = starts?.let { CalendarsMapping.moment(it) / 1000 } ?: 0L
-    val length = component.property("DTEND")?.let { CalendarsMapping.moment(it) / 1000 - start }
+    val start = starts?.let { CalendarsMapping.moment(it, user) / 1000 } ?: 0L
+    val length = component.property("DTEND")?.let { CalendarsMapping.moment(it, user) / 1000 - start }
         ?: component.value("DURATION").takeIf { it.isNotBlank() }?.let { CalendarsMapping.seconds(it) }
         ?: if (allday) 86_400L else 0L
     val zone = written(component, user)
@@ -225,6 +235,7 @@ fun draft(component: EventComponent, user: String, occurrence: Long = 0): EventF
         original = component.value("DESCRIPTION"),
         recurrence = recurrence(component.value("RRULE"), zone.start, if (allday) 0L else start),
         reminders = alarms(component).mapNotNull(::alarmMinutes).distinct(),
+        floating = if (CalendarsMapping.floating(starts)) user else "",
     )
     return if (occurrence > 0 && start != 0L) shifted(form, occurrence - start) else form
 }
@@ -272,7 +283,7 @@ fun copied(carried: List<EventComponent>, occurrence: Long, scope: Scope, user: 
     val master = events.firstOrNull { !it.exception() } ?: return null
     val whole = draft(master, user)
     if (scope != Scope.ONE || occurrence == 0L) return whole
-    val override = events.firstOrNull { it.exception() && matches(it, occurrence) }
+    val override = events.firstOrNull { it.exception() && matches(it, occurrence, user) }
     val own = if (override != null) draft(override, user) else draft(master, user, occurrence)
     return own.copy(recurrence = Recurrence())
 }
@@ -303,7 +314,8 @@ fun duplicate(form: EventForm, scope: Scope): EventForm {
  * in, the [user]'s own where it names none.
  */
 fun copied(instance: Instance, user: String, reminder: Int): EventForm {
-    val start = if (instance.allday) instance.occurrence else instance.start
+    val day = instance.date?.let { runCatching { LocalDate.parse(it).atStartOfDay(ZoneOffset.UTC).toEpochSecond() }.getOrNull() }
+    val start = if (instance.allday && day != null) day else instance.start
     val length = if (instance.allday) {
         maxOf(1L, Math.round((instance.finish - instance.start) / 86_400.0)) * 86_400
     } else {
@@ -327,34 +339,39 @@ fun copied(instance: Instance, user: String, reminder: Int): EventForm {
 /**
  * The series cut to end just before the occurrence at [occurrence]: the
  * master's rule gains an `UNTIL` there and loses any `COUNT`, and the
- * overrides and listed dates from that occurrence on are dropped. Null when
- * the occurrence is the series' first, since nothing would be left, or when
- * the event is no series.
+ * overrides and listed dates from that occurrence on are dropped. A series
+ * that repeats by its listed dates alone, with no rule, loses those from the
+ * occurrence on. Null when the occurrence is the series' first, since nothing
+ * would be left, or when the event is no series. A floating time is read in
+ * the [user]'s zone.
  */
-fun truncated(carried: List<EventComponent>, occurrence: Long): List<EventComponent>? {
+fun truncated(carried: List<EventComponent>, occurrence: Long, user: String = CalendarsMapping.UTC): List<EventComponent>? {
     val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
     val master = events.firstOrNull { !it.exception() } ?: return null
     val starts = master.property("DTSTART") ?: return null
     val rule = master.value("RRULE")
-    val first = begins(master)
-    if (rule.isBlank() || first == 0L || occurrence <= first) return null
+    val first = begins(master, user)
+    if ((rule.isBlank() && master.property("RDATE") == null) || first == 0L || occurrence <= first) return null
     // UNTIL is inclusive, and takes the form of DTSTART: the day before for
-    // a whole-day series, otherwise the second before, in UTC.
+    // a whole-day series, otherwise the second before, in UTC, or as the
+    // clock reads for a floating one, which UNTIL must be as well.
     val allday = CalendarsMapping.date(starts)
+    val loose = CalendarsMapping.floating(starts)
     val until = CalendarsMapping.stamp(
         "UNTIL",
         (occurrence - if (allday) 86_400L else 1L) * 1000,
-        CalendarsMapping.UTC,
+        if (loose) user else CalendarsMapping.UTC,
         allday,
+        loose,
     ).value
     val parts = rule.split(";").filterNot {
         it.uppercase().startsWith("UNTIL=") || it.uppercase().startsWith("COUNT=")
     } + "UNTIL=$until"
-    val (before, _) = dates(master.properties, occurrence, 0)
+    val (before, _) = dates(master.properties, occurrence, 0, user)
     val properties = master.properties.filterNot { listed(it) }.map {
         if (it.name.equals("RRULE", ignoreCase = true)) it.copy(value = parts.joinToString(";")) else it
     } + before
-    val kept = events.filter { it.exception() && key(it).let { at -> at == 0L || at < occurrence } }
+    val kept = events.filter { it.exception() && key(it, user).let { at -> at == 0L || at < occurrence } }
     return listOf(master.copy(properties = properties)) + kept
 }
 
@@ -377,13 +394,13 @@ fun split(
     occurrence: Long,
     user: String,
 ): Pair<List<EventComponent>, List<EventComponent>>? {
-    val before = truncated(carried, occurrence) ?: return null
+    val before = truncated(carried, occurrence, user) ?: return null
     val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
     val master = events.first { !it.exception() }
     val shift = form.start - occurrence
-    val head = component(form, master, recurrence = true, occurrence = 0, start = form.start)
-    val after = listOf(relisted(head, master, occurrence, shift)) +
-        carried(unopened(events.filter { it.exception() }, form), head, occurrence, shift, user)
+    val head = component(form, master, recurrence = true, occurrence = 0, start = form.start, user = user)
+    val after = listOf(relisted(head, master, occurrence, shift, user)) +
+        carried(unopened(events.filter { it.exception() }, form, user), head, occurrence, shift, user)
     return before to after
 }
 
@@ -393,16 +410,16 @@ fun split(
  * and the ones after it. A drag's form names no occurrence, and a dragged
  * occurrence's override moves along with it.
  */
-private fun unopened(overrides: List<EventComponent>, form: EventForm): List<EventComponent> =
-    if (form.occurrence > 0) overrides.filterNot { matches(it, form.occurrence) } else overrides
+private fun unopened(overrides: List<EventComponent>, form: EventForm, user: String): List<EventComponent> =
+    if (form.occurrence > 0) overrides.filterNot { matches(it, form.occurrence, user) } else overrides
 
 /** The instant a master begins, 0 for one without a readable `DTSTART`. */
-private fun begins(master: EventComponent): Long =
-    master.property("DTSTART")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0L
+private fun begins(master: EventComponent, user: String): Long =
+    master.property("DTSTART")?.let { CalendarsMapping.moment(it, user) / 1000 } ?: 0L
 
 /** The occurrence an override replaces, 0 when its `RECURRENCE-ID` will not read. */
-private fun key(override: EventComponent): Long =
-    override.property("RECURRENCE-ID")?.let { CalendarsMapping.moment(it) / 1000 } ?: 0L
+private fun key(override: EventComponent, user: String): Long =
+    override.property("RECURRENCE-ID")?.let { CalendarsMapping.moment(it, user) / 1000 } ?: 0L
 
 /** Whether a property lists dates: `RDATE` or `EXDATE`. */
 private fun listed(property: EventProperty): Boolean =
@@ -410,12 +427,12 @@ private fun listed(property: EventProperty): Boolean =
 
 /**
  * The head with the master's listed dates from [from] on, each moved by
- * [shift], in place of any it carries. A rule the form dropped took the
- * dates with it, and gets none back.
+ * [shift], in place of any it carries. A head with neither a rule nor listed
+ * dates of its own repeats no longer, and gets none back.
  */
-private fun relisted(head: EventComponent, master: EventComponent, from: Long, shift: Long): EventComponent {
-    if (head.property("RRULE") == null) return head
-    val (_, after) = dates(master.properties, from, shift)
+private fun relisted(head: EventComponent, master: EventComponent, from: Long, shift: Long, user: String): EventComponent {
+    if (head.property("RRULE") == null && head.property("RDATE") == null) return head
+    val (_, after) = dates(master.properties, from, shift, user)
     return head.copy(properties = head.properties.filterNot { listed(it) } + after)
 }
 
@@ -423,12 +440,14 @@ private fun relisted(head: EventComponent, master: EventComponent, from: Long, s
  * The master's list-valued dates, `RDATE` and `EXDATE`, kept to one side of a
  * cut: the first of the pair keeps those naming instants before [from], the
  * second the rest, each moved by [shift] seconds in the form it had. A
- * property left with no values is dropped.
+ * property left with no values is dropped. A floating value is read, and
+ * written, as the clock reads in the [user]'s zone.
  */
 private fun dates(
     properties: List<EventProperty>,
     from: Long,
     shift: Long,
+    user: String,
 ): Pair<List<EventProperty>, List<EventProperty>> {
     val before = mutableListOf<EventProperty>()
     val after = mutableListOf<EventProperty>()
@@ -439,18 +458,11 @@ private fun dates(
         for (value in property.value.split(",")) {
             val single = property.copy(value = value.trim())
             if (single.value.isEmpty()) continue
-            val seconds = CalendarsMapping.moment(single) / 1000
+            val seconds = CalendarsMapping.moment(single, user) / 1000
             if (seconds == 0L || seconds < from) {
                 early.add(single.value)
             } else {
-                late.add(
-                    CalendarsMapping.stamp(
-                        property.name,
-                        (seconds + shift) * 1000,
-                        CalendarsMapping.zone(single),
-                        CalendarsMapping.date(single),
-                    ),
-                )
+                late.add(CalendarsMapping.like(property.name, (seconds + shift) * 1000, single, user))
             }
         }
         if (early.isNotEmpty()) before.add(property.copy(value = early.joinToString(",")))
@@ -473,7 +485,7 @@ private fun carried(
 ): List<EventComponent> {
     val out = mutableListOf<EventComponent>()
     for (item in overrides) {
-        val at = key(item)
+        val at = key(item, user)
         if (at == 0L || at < from) continue
         if (shift == 0L) {
             out.add(item)
@@ -486,8 +498,9 @@ private fun carried(
             recurrence = false,
             occurrence = 0,
             start = own.start,
+            user = user,
         )
-        out.add(rewritten.copy(properties = rewritten.properties + identifier(head, at + shift)))
+        out.add(rewritten.copy(properties = rewritten.properties + identifier(head, at + shift, user)))
     }
     return out
 }
@@ -496,28 +509,20 @@ private fun carried(
  * A `RECURRENCE-ID` naming the occurrence at [occurrence], in the form the
  * [head]'s own `DTSTART` uses so the two describe the same instant.
  */
-private fun identifier(head: EventComponent, occurrence: Long): EventProperty {
-    val starts = head.property("DTSTART")
-    return CalendarsMapping.stamp(
-        "RECURRENCE-ID",
-        occurrence * 1000,
-        CalendarsMapping.zone(starts),
-        starts != null && CalendarsMapping.date(starts),
-    )
-}
+private fun identifier(head: EventComponent, occurrence: Long, user: String): EventProperty =
+    CalendarsMapping.like("RECURRENCE-ID", occurrence * 1000, head.property("DTSTART"), user)
 
 /**
  * The tree with one occurrence excluded: its override dropped and its start
  * added to the master's `EXDATE`, which is how an occurrence is taken out of
- * a series.
+ * a series. The `EXDATE` takes the form of the series' start, a floating one
+ * as the clock reads in the [user]'s zone.
  */
-fun excluded(carried: List<EventComponent>, occurrence: Long): List<EventComponent> {
+fun excluded(carried: List<EventComponent>, occurrence: Long, user: String = CalendarsMapping.UTC): List<EventComponent> {
     val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
     val master = events.firstOrNull { !it.exception() } ?: return carried
-    val start = master.property("DTSTART")
-    val allday = start != null && CalendarsMapping.date(start)
-    val exdate = CalendarsMapping.stamp("EXDATE", occurrence * 1000, CalendarsMapping.zone(start), allday)
-    val kept = events.filter { it.exception() && !matches(it, occurrence) }
+    val exdate = CalendarsMapping.like("EXDATE", occurrence * 1000, master.property("DTSTART"), user)
+    val kept = events.filter { it.exception() && !matches(it, occurrence, user) }
     return listOf(master.copy(properties = master.properties + exdate)) + kept
 }
 
@@ -526,11 +531,11 @@ fun excluded(carried: List<EventComponent>, occurrence: Long): List<EventCompone
  * occurrence's own override or, failing one, the master, with nothing of the
  * series on it.
  */
-fun single(form: EventForm, carried: List<EventComponent>): List<EventComponent> {
+fun single(form: EventForm, carried: List<EventComponent>, user: String = CalendarsMapping.UTC): List<EventComponent> {
     val events = carried.filter { it.name.equals("VEVENT", ignoreCase = true) }
-    val own = events.firstOrNull { it.exception() && matches(it, form.occurrence) }
+    val own = events.firstOrNull { it.exception() && matches(it, form.occurrence, user) }
         ?: events.firstOrNull { !it.exception() }
-    return listOf(component(form, own, recurrence = false, occurrence = 0, start = form.start))
+    return listOf(component(form, own, recurrence = false, occurrence = 0, start = form.start, user = user))
 }
 
 /**
@@ -554,9 +559,48 @@ suspend fun <T> moveOccurrence(
     return created
 }
 
-/** Whether an override replaces the occurrence starting at [occurrence]. */
-fun matches(override: EventComponent, occurrence: Long): Boolean =
-    override.property("RECURRENCE-ID")?.let { CalendarsMapping.moment(it) / 1000 } == occurrence
+/**
+ * Whether an override replaces the occurrence starting at [occurrence], its
+ * `RECURRENCE-ID` read as the tree names one, a floating one in the [user]'s
+ * zone.
+ */
+fun matches(override: EventComponent, occurrence: Long, user: String = CalendarsMapping.UTC): Boolean =
+    override.property("RECURRENCE-ID")?.let { CalendarsMapping.moment(it, user) / 1000 } == occurrence
+
+/**
+ * The occurrence the listing gives at [moment], as [carried], the event's
+ * tree, names it: the same instant in a timed series, and in an all-day one,
+ * whose days the listing gives at the [user]'s own midnight and the tree as
+ * their dates, that day's UTC midnight.
+ */
+fun named(carried: List<EventComponent>, moment: Long, user: String): Long {
+    val starts = carried.firstOrNull { it.name.equals("VEVENT", ignoreCase = true) && !it.exception() }
+        ?.property("DTSTART")
+    if (moment <= 0 || starts == null || !CalendarsMapping.date(starts)) return moment
+    return Instant.ofEpochSecond(moment).atZone(zoneOf(user)).toLocalDate().atStartOfDay(ZoneOffset.UTC).toEpochSecond()
+}
+
+/**
+ * Where the listing would give the occurrence that the override of
+ * [carried] listed at [start], its own start, replaces: a core that does not
+ * name it lists an override only where it now falls. [start] itself when no
+ * override starts there.
+ */
+fun original(carried: List<EventComponent>, start: Long, user: String): Long {
+    val override = carried.firstOrNull {
+        it.name.equals("VEVENT", ignoreCase = true) && it.exception() && listing(it.property("DTSTART"), user) == start
+    } ?: return start
+    return listing(override.property("RECURRENCE-ID"), user) ?: start
+}
+
+/** Where the listing gives a date property's moment: a date-time's own instant, a date at the [user]'s midnight. */
+private fun listing(property: EventProperty?, user: String): Long? {
+    if (property == null) return null
+    val seconds = CalendarsMapping.moment(property, user) / 1000
+    if (seconds == 0L) return null
+    if (!CalendarsMapping.date(property)) return seconds
+    return Instant.ofEpochSecond(seconds).atZone(ZoneOffset.UTC).toLocalDate().atStartOfDay(zoneOf(user)).toEpochSecond()
+}
 
 /**
  * One `VEVENT` from the form. [carried] is the component as the server last
@@ -565,7 +609,10 @@ fun matches(override: EventComponent, occurrence: Long): Boolean =
  * [occurrence] is non-zero for an override, whose `RECURRENCE-ID` it is.
  * [start] is the component's own start: the occurrence's for an override and
  * the master's for the series. Each end is stamped in its own zone, so
- * `DTSTART` and `DTEND` may carry different `TZID`s.
+ * `DTSTART` and `DTEND` may carry different `TZID`s, and an end still in the
+ * zone a floating event was read in is written floating. [alarmed] holds the
+ * alarms the form's reminders were read from, [carried]'s own unless this is
+ * a new override, whose are its series'.
  */
 private fun component(
     form: EventForm,
@@ -573,9 +620,12 @@ private fun component(
     recurrence: Boolean,
     occurrence: Long,
     start: Long,
+    user: String,
+    alarmed: EventComponent? = carried,
 ): EventComponent {
     val zone = form.zone.start.ifBlank { CalendarsMapping.UTC }
     val ends = form.zone.finish.ifBlank { zone }
+    val loose = form.floating.isNotBlank() && zone == form.floating
     val finish = start + (form.finish - form.start)
     // A description edited here leaves behind the rich copy another client
     // kept beside it, which would go on showing the old text there.
@@ -589,8 +639,10 @@ private fun component(
             (it.name.equals("STATUS", ignoreCase = true) && (form.tentative || it.value.equals("TENTATIVE", ignoreCase = true)))
     }?.let(properties::addAll)
     properties.add(property("SUMMARY", form.title.trim()))
-    properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday))
-    properties.add(CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday))
+    properties.add(CalendarsMapping.stamp("DTSTART", start * 1000, zone, form.allday, loose))
+    properties.add(
+        CalendarsMapping.stamp("DTEND", finish * 1000, ends, form.allday, form.floating.isNotBlank() && ends == form.floating),
+    )
     if (form.location.isNotBlank()) properties.add(property("LOCATION", form.location.trim()))
     if (form.colour.isNotBlank()) properties.add(property("COLOR", form.colour.trim()))
     if (form.url.isNotBlank()) properties.add(property("URL", form.url.trim()))
@@ -598,25 +650,36 @@ private fun component(
     val description = if (edited) form.description.trim() else form.original
     if (description.isNotBlank()) properties.add(property("DESCRIPTION", description))
     if (recurrence) {
-        val rule = form.recurrence.rule(zone, form.allday)
-        if (rule != null) {
-            properties.add(property("RRULE", rule))
-            // An RRULE the editor dropped takes its exclusions with it.
+        val rule = form.recurrence.rule(zone, form.allday, loose)
+        if (rule != null) properties.add(property("RRULE", rule))
+        // A series of listed dates alone, with no rule, keeps them, as the
+        // repeat setting cannot say them; an RRULE the editor dropped takes
+        // its exclusions and dates with it.
+        if (rule != null || carried?.property("RRULE") == null) {
             carried?.all("EXDATE")?.let(properties::addAll)
             carried?.all("RDATE")?.let(properties::addAll)
         }
     }
     if (occurrence > 0) {
-        val allday = carried?.property("RECURRENCE-ID")?.let { CalendarsMapping.date(it) } ?: form.allday
-        properties.add(CalendarsMapping.stamp("RECURRENCE-ID", occurrence * 1000, zone, allday))
+        val named = carried?.property("RECURRENCE-ID")
+        val allday = named?.let { CalendarsMapping.date(it) } ?: form.allday
+        // The occurrence is named as its series names it: a floating
+        // series' as the clock reads in the zone it was read in.
+        val floats = named?.let { CalendarsMapping.floating(it) } ?: form.floating.isNotBlank()
+        properties.add(
+            if (floats) CalendarsMapping.stamp("RECURRENCE-ID", occurrence * 1000, form.floating.ifBlank { user }, allday, true)
+            else CalendarsMapping.stamp("RECURRENCE-ID", occurrence * 1000, zone, allday),
+        )
     }
-    // The alarms the reminder setting cannot say are kept as they are; the
-    // ones it can are replaced by it.
-    val nested = carried?.components?.filterNot {
-        it.name.equals("VALARM", ignoreCase = true) && (it.property("TRIGGER") == null || alarmMinutes(it) != null)
-    }.orEmpty()
-    val alarms = form.reminders.distinct().map { CalendarsMapping.alarm(it, form.title.trim()) }
-    return EventComponent("VEVENT", properties, nested + alarms)
+    // The alarms the reminder setting cannot say are kept as they are, and so
+    // is each one it can whose reminder the form still has; a reminder no
+    // alarm holds is a new one. The form shows alarms at the same time as
+    // one reminder, so each it keeps keeps every one of them.
+    val nested = carried?.components?.filterNot { it.name.equals("VALARM", ignoreCase = true) }.orEmpty()
+    val held = alarmed?.let(::alarms).orEmpty()
+    val counts = held.mapNotNull(CalendarsMapping::minutes)
+    val asked = form.reminders.distinct().flatMap { minutes -> List(maxOf(1, counts.count { it == minutes })) { minutes } }
+    return EventComponent("VEVENT", properties, nested + CalendarsMapping.alarms(held, asked, form.title.trim()))
 }
 
 /**

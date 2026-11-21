@@ -69,8 +69,8 @@ import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusBadgeSize
+import org.mochios.android.ui.components.personAsset
 import org.mochios.android.ui.components.personAvatarPath
-import org.mochios.android.util.segment
 import org.mochios.people.R
 import org.mochios.people.model.PersonInformation
 import org.mochios.people.model.User
@@ -603,31 +603,18 @@ private fun EmptyHint(title: String) {
 }
 
 /**
- * A person's avatar, at its version when it has one. Null when the id, a
- * peer's, cannot be one segment of the address ([segment]); a version that
- * cannot is left off.
+ * A person's avatar, at its version when it has one: one with none is still
+ * asked for, as the search result's own face. Null when the id cannot be one
+ * segment of the address ([personAsset]).
  */
 internal fun avatarUrlFor(
     info: PersonInformation,
     fallback: User,
-): OwnedAddress? {
-    val id = segment(info.id.ifBlank { fallback.id }.ifBlank { return null }) ?: return null
-    val version = info.avatar
-    if (version.isBlank()) return OwnedAddress.of("/people/$id/-/avatar")
-    val escaped = segment(version) ?: return OwnedAddress.of("/people/$id/-/avatar")
-    return OwnedAddress.of("/people/$id/-/avatar?v=$escaped")
-}
+): OwnedAddress? = personAsset(info.id.ifBlank { fallback.id }, "avatar", info.avatar)
 
-/**
- * A person's banner at its version. Null when the id, a peer's, cannot be one
- * segment of the address ([segment]); a version that cannot is left off.
- */
+/** A person's banner at its version; none when they have none ([personAsset]). */
 internal fun bannerUrlFor(
     info: PersonInformation,
     fallback: User,
-): OwnedAddress? {
-    if (info.banner.isBlank()) return null
-    val id = segment(info.id.ifBlank { fallback.id }.ifBlank { return null }) ?: return null
-    val version = segment(info.banner) ?: return OwnedAddress.of("/people/$id/-/banner")
-    return OwnedAddress.of("/people/$id/-/banner?v=$version")
-}
+): OwnedAddress? =
+    if (info.banner.isBlank()) null else personAsset(info.id.ifBlank { fallback.id }, "banner", info.banner)

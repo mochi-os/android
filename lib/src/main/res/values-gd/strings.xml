@@ -357,4 +357,21 @@
     <string name="game_system_score_resume">Thòisich %1$s a\' cluich a-rithist</string>
     <string name="game_not_found">Cha deach an geama a lorg</string>
     <string name="game_chat_move_played_you">Chluich thu %1$s</string>
+    <string name="devices_add">Cuir inneal ris</string>
+    <string name="devices_copy">Dèan lethbhreac de %1$s</string>
+    <string name="devices_create">Cruthaich</string>
+    <string name="devices_created">Cruthaichte %1$s</string>
+    <string name="devices_delete">Sguab às an t-inneal</string>
+    <string name="devices_delete_message">Chan urrainn dhan inneal luchd-aithne no mìosachain a shioncronachadh tuilleadh.</string>
+    <string name="devices_delete_title">A bheil thu airson an t-inneal a sguabadh às?</string>
+    <string name="devices_deleted">Chaidh an t-inneal a sguabadh às</string>
+    <string name="devices_done">Deiseil</string>
+    <string name="devices_empty">Chan eil inneal sam bith ceangailte</string>
+    <string name="devices_name">Ainm an inneil</string>
+    <string name="devices_password">Facal-faire</string>
+    <string name="devices_title">Innealan ceangailte</string>
+    <string name="devices_used">Chleachdte mu dheireadh %1$s</string>
+    <string name="devices_username">Ainm-cleachdaiche</string>
+    <string name="devices_warning">Dèan lethbhreac dhen fhacal-faire an-dràsta: chan urrainn dhuinn a shealltainn a-rithist.</string>
+    <string name="devices_unused">Cha deach a chleachdadh a-riamh</string>
 </resources>

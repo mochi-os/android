@@ -27,6 +27,13 @@ class CharactersTest {
     }
 
     @Test
+    fun `a length counts an emoji as one character, as the server does`() {
+        assertEquals(4, length("Work"))
+        assertEquals(2, length("a📅"))
+        assertEquals(100, length("📅".repeat(100)))
+    }
+
+    @Test
     fun `an emoji counts as one character and is never split`() {
         val text = "a".repeat(99) + "📅" + "b"
         val cut = characters(text, 100)
