@@ -43,10 +43,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -414,20 +414,23 @@ fun FieldDetailScreen(
                         }
                     }
 
-                    val sortedOptions = options.sortedBy { option -> option.rank }
-                    val optionIds = sortedOptions.map { entry -> entry.id }
+                    val sortedOptions = remember(options) {
+                        options.sortedBy { option -> option.rank }
+                    }
+                    val optionIds = remember(sortedOptions) {
+                        sortedOptions.map { entry -> entry.id }
+                    }
                     val moveUpLabel = stringResource(R.string.crm_class_move_up)
                     val moveDownLabel = stringResource(R.string.crm_class_move_down)
                     val dragHint = stringResource(R.string.crm_drag_row)
                     val insertionColour = MaterialTheme.colorScheme.primary
                     sortedOptions.forEach { option ->
-                        val isDropTarget = dragState.isTarget(option.id) &&
-                            dragState.draggingItemId != option.id
-                        val insertEdge = dragState.targetEdge
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .alpha(if (dragState.isDragging(option.id)) 0.4f else 1f)
+                                .graphicsLayer {
+                                    alpha = if (dragState.isDragging(option.id)) 0.4f else 1f
+                                }
                                 .dropTarget(
                                     state = dragState,
                                     itemId = option.id,
@@ -447,8 +450,11 @@ fun FieldDetailScreen(
                                     onReorder = { order -> viewModel.reorderOptions(order) }
                                 )
                                 .drawBehind {
-                                    if (!isDropTarget) return@drawBehind
-                                    val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                                    val dropping = dragState.isTarget(option.id) &&
+                                        dragState.draggingItemId != option.id
+                                    if (!dropping) return@drawBehind
+                                    val bottom = dragState.targetEdge == DragEdge.Bottom
+                                    val y = if (bottom) size.height else 0f
                                     drawLine(
                                         color = insertionColour,
                                         start = Offset(0f, y),

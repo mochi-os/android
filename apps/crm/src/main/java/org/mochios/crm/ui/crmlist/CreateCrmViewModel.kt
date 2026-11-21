@@ -82,12 +82,13 @@ class CreateCrmViewModel @Inject constructor(
             // Exports name the top-level object after the app that wrote them;
             // older project-shaped backups still say "project".
             val crm = root.getAsJsonObject("crm") ?: root.getAsJsonObject("project")
+            val archive = uri.takeIf { repository.isArchive(uri) }
             _uiState.value = _uiState.value.copy(
                 backupPrefill = BackupPrefill(
                     json = content,
                     fileName = fileName,
                     name = crm?.jsonString("name"),
-                    archive = uri.takeIf { repository.isArchive(it) }
+                    archive = archive
                 )
             )
         }

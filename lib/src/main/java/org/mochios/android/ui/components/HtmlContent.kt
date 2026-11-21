@@ -5,7 +5,10 @@
 
 package org.mochios.android.ui.components
 
+import android.content.Context
+import android.text.Spanned
 import android.text.TextUtils
+import android.view.View
 import android.widget.TextView
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -13,6 +16,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.viewinterop.AndroidView
 import io.noties.markwon.AbstractMarkwonPlugin
 import io.noties.markwon.LinkResolverDef
@@ -25,6 +29,7 @@ import io.noties.markwon.ext.tables.TablePlugin
 import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.html.HtmlPlugin
 import io.noties.markwon.linkify.LinkifyPlugin
+import org.mochios.android.R
 import org.mochios.android.util.webUri
 
 @Composable
@@ -39,31 +44,8 @@ fun HtmlContent(
     onTextViewReady: ((TextView) -> Unit)? = null
 ) {
     val context = LocalContext.current
-    val markwon = remember(context) {
-        Markwon.builder(context)
-            // CommonMark folds a single newline into the surrounding paragraph and
-            // renders it as a space, so a body typed as two lines came out as one.
-            // People write these bodies in a message box, where Enter means Enter.
-            .usePlugin(SoftBreakAddsNewLinePlugin.create())
-            .usePlugin(HtmlPlugin.create())
-            .usePlugin(CoilImagesPlugin.create(context))
-            .usePlugin(TablePlugin.create(context))
-            .usePlugin(StrikethroughPlugin.create())
-            .usePlugin(TaskListPlugin.create(context))
-            .usePlugin(LinkifyPlugin.create())
-            // The body is peer-authored content; Markwon's default resolver
-            // fires ACTION_VIEW on whatever scheme a link carries. Only web
-            // links may leave the app — tel:, intent:, file: and custom
-            // schemes are dropped rather than launched.
-            .usePlugin(object : AbstractMarkwonPlugin() {
-                override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
-                    builder.linkResolver { view, link ->
-                        webUri(link)?.let { LinkResolverDef().resolve(view, it.toString()) }
-                    }
-                }
-            })
-            .build()
-    }
+    val root = LocalView.current.rootView
+    val markwon = remember(context, root) { sharedMarkwon(context, root) }
 
     val spanned = remember(html) {
         markwon.toMarkdown(html)
@@ -104,6 +86,7 @@ fun HtmlContent(
             if (textView.isTextSelectable != wantSelectable) {
                 textView.setTextIsSelectable(wantSelectable)
                 textView.movementMethod = TableAwareMovementMethod.create()
+                view.shownMarkdown = null
             }
             if (clampToBoundedHeight) {
                 // Truncation (with an appended "…") is done in onMeasure from the
@@ -119,7 +102,10 @@ fun HtmlContent(
             textView.passThroughTouches = passThroughTouches
             textView.onImageLongPress = onImageLongPress
             textView.imageAltByUrl = altByUrl
-            markwon.setParsedMarkdown(textView, spanned)
+            if (view.shownMarkdown !== spanned) {
+                markwon.setParsedMarkdown(textView, spanned)
+                view.shownMarkdown = if (clampToBoundedHeight) null else spanned
+            }
             // Source for height-clamped truncation; null when not clamping so
             // onMeasure leaves the text alone for every other caller.
             view.fullText = if (clampToBoundedHeight) spanned else null
@@ -128,6 +114,50 @@ fun HtmlContent(
         modifier = modifier
     )
 }
+
+/** A window's renderer, kept on its root view so every body in it shares one. */
+private class SharedMarkwon(val context: Context, val markwon: Markwon)
+
+/**
+ * The renderer for bodies drawn with [context] in the window under [root],
+ * built the first time one is drawn there.
+ */
+private fun sharedMarkwon(context: Context, root: View): Markwon {
+    val cached = root.getTag(R.id.html_content_markwon) as? SharedMarkwon
+    if (cached != null && cached.context === context) {
+        return cached.markwon
+    }
+    val markwon = buildMarkwon(context)
+    if (cached == null) {
+        root.setTag(R.id.html_content_markwon, SharedMarkwon(context, markwon))
+    }
+    return markwon
+}
+
+private fun buildMarkwon(context: Context): Markwon =
+    Markwon.builder(context)
+        // CommonMark folds a single newline into the surrounding paragraph and
+        // renders it as a space, so a body typed as two lines came out as one.
+        // People write these bodies in a message box, where Enter means Enter.
+        .usePlugin(SoftBreakAddsNewLinePlugin.create())
+        .usePlugin(HtmlPlugin.create())
+        .usePlugin(CoilImagesPlugin.create(context))
+        .usePlugin(TablePlugin.create(context))
+        .usePlugin(StrikethroughPlugin.create())
+        .usePlugin(TaskListPlugin.create(context))
+        .usePlugin(LinkifyPlugin.create())
+        // The body is peer-authored content; Markwon's default resolver
+        // fires ACTION_VIEW on whatever scheme a link carries. Only web
+        // links may leave the app — tel:, intent:, file: and custom
+        // schemes are dropped rather than launched.
+        .usePlugin(object : AbstractMarkwonPlugin() {
+            override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
+                builder.linkResolver { view, link ->
+                    webUri(link)?.let { LinkResolverDef().resolve(view, it.toString()) }
+                }
+            }
+        })
+        .build()
 
 private val IMG_TAG = Regex("<img\\b[^>]*>", RegexOption.IGNORE_CASE)
 private val IMG_SRC = Regex("\\bsrc\\s*=\\s*[\"']([^\"']+)[\"']", RegexOption.IGNORE_CASE)

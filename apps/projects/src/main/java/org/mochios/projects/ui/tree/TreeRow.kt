@@ -371,7 +371,7 @@ fun TreeRow(
                             HorizontalDivider()
                         }
                     }
-                    items(possibleParents) { parent ->
+                    items(possibleParents, key = { parent -> parent.id }) { parent ->
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()

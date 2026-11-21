@@ -100,6 +100,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavBackStackEntry
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.OwnedAddress
@@ -140,6 +142,7 @@ import org.mochios.android.ui.components.MochiTextField
 import org.mochios.android.ui.components.NotFoundState
 import org.mochios.android.ui.components.NotificationBell
 import org.mochios.android.ui.components.ReactionBar
+import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.ReplyComposerBanner
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.ui.components.rememberReplyFocus
@@ -331,7 +334,21 @@ private fun ChatContent(
     onOpenNotifications: () -> Unit,
     viewModel: ChatViewModel = hiltViewModel(),
 ) {
-    val uiState by viewModel.uiState.collectAsState()
+    val uiState by remember(viewModel) {
+        viewModel.uiState
+            .map { state -> state.withoutDrafts() }
+            .distinctUntilChanged()
+    }.collectAsState(initial = viewModel.uiState.value.withoutDrafts())
+    val draft = remember(viewModel) {
+        viewModel.uiState
+            .map { state -> state.draft }
+            .distinctUntilChanged()
+    }.collectAsState(initial = viewModel.uiState.value.draft)
+    val threadDraft = remember(viewModel) {
+        viewModel.uiState
+            .map { state -> state.thread?.draft.orEmpty() }
+            .distinctUntilChanged()
+    }.collectAsState(initial = viewModel.uiState.value.thread?.draft.orEmpty())
     val upload by viewModel.upload.collectAsState()
 
     // A one-to-one conversation asks whether the other person is online while
@@ -693,6 +710,22 @@ private fun ChatContent(
                     val avatars = remember(uiState.messages, uiState.chat.id) {
                         messageAvatars(uiState.messages, uiState.chat.id)
                     }
+                    val byId = remember(uiState.messages) {
+                        uiState.messages.associateBy { message -> message.id }
+                    }
+                    val me = uiState.identity
+                    val receipts = remember(uiState.messages, uiState.receipts, me, showsReceipts) {
+                        if (!showsReceipts) {
+                            emptyMap()
+                        } else {
+                            uiState.messages
+                                .filter { message -> message.member == me && !message.deleted }
+                                .associate { message ->
+                                    val state = receiptState(message.created, uiState.receipts, me)
+                                    message.id to state
+                                }
+                        }
+                    }
                     val seen = remember(uiState.messages, uiState.receipts, uiState.identity, isGroupChat(uiState.chat)) {
                         if (isGroupChat(uiState.chat)) seenBy(uiState.messages, uiState.receipts, uiState.identity) else null
                     }
@@ -736,11 +769,7 @@ private fun ChatContent(
                                         MessageBubble(
                                             message = entry.message,
                                             isOwn = own,
-                                            receipt = if (own && showsReceipts && !entry.message.deleted) {
-                                                receiptState(entry.message.created, uiState.receipts, uiState.identity)
-                                            } else {
-                                                null
-                                            },
+                                            receipt = receipts[entry.message.id],
                                             seen = seen?.takeIf { it.id == entry.message.id }?.names,
                                             onThread = if (opensThreads && !entry.message.deleted) {
                                                 { viewModel.openThread(entry.message) }
@@ -754,9 +783,8 @@ private fun ChatContent(
                                             isSelected = entry.message.id in uiState.selectedIds,
                                             isSearchMatch = entry.message.id == activeMatchId,
                                             searchQuery = if (uiState.searchOpen) uiState.searchQuery else "",
-                                            replyToMessage = entry.message.reply?.let { rid ->
-                                                uiState.messages.firstOrNull { it.id == rid }
-                                            },
+                                            replyToMessage = entry.message.reply
+                                                ?.let { rid -> byId[rid] },
                                             onStartSelect = { viewModel.enterSelection(entry.message.id) },
                                             onToggleSelect = { viewModel.toggleSelection(entry.message.id) },
                                             onReply = { viewModel.startReply(entry.message) },
@@ -802,56 +830,59 @@ private fun ChatContent(
             if (uiState.chat.active() && uiState.typing.isNotEmpty()) {
                 TypingLine(uiState.typing)
             }
-            ComposeBar(
-                value = uiState.draft,
-                onValueChange = viewModel::setDraft,
-                onSend = {
-                    if (uiState.editing != null) {
-                        viewModel.saveEdit()
+            Reading(draft) { text ->
+                ComposeBar(
+                    value = text,
+                    onValueChange = viewModel::setDraft,
+                    onSend = {
+                        if (uiState.editing != null) {
+                            viewModel.saveEdit()
+                        } else {
+                            viewModel.sendMessage()
+                        }
+                    },
+                    placeholder = stringResource(R.string.chat_message_placeholder),
+                    enabled = uiState.chat.id.isNotEmpty() &&
+                        uiState.chat.status == ChatStatus.ACTIVE,
+                    isSending = uiState.isSending,
+                    upload = upload,
+                    sendLabel = if (uiState.editing != null) {
+                        stringResource(MochiR.string.common_save)
                     } else {
-                        viewModel.sendMessage()
-                    }
-                },
-                placeholder = stringResource(R.string.chat_message_placeholder),
-                enabled = uiState.chat.id.isNotEmpty() && uiState.chat.status == ChatStatus.ACTIVE,
-                isSending = uiState.isSending,
-                upload = upload,
-                sendLabel = if (uiState.editing != null) {
-                    stringResource(MochiR.string.common_save)
-                } else {
-                    stringResource(R.string.chat_message_send)
-                },
-                windowInsets = ComposeBarDefaults.WindowInsets,
-                attachments = ComposeBarAttachments(
-                    pending = uiState.pendingAttachments,
-                    onAdd = { viewModel.addAttachments(it) },
-                    onRemove = { viewModel.removeAttachment(it) },
-                    resolveFileName = viewModel::fileName,
-                    addLabel = stringResource(R.string.chat_attachment_add),
-                    fallbackLabel = stringResource(R.string.chat_attachment_label),
-                    removeLabel = stringResource(R.string.chat_attachment_remove),
-                    onMove = { uri, dir -> viewModel.moveAttachment(uri, dir) },
-                    moveUpLabel = stringResource(R.string.chat_attachment_move_up),
-                    moveDownLabel = stringResource(R.string.chat_attachment_move_down),
-                ),
-                banner = uiState.editing?.let {
-                    {
-                        EditComposerPreview(onCancel = { viewModel.cancelEdit() })
-                    }
-                } ?: uiState.replyingTo?.let { replied ->
-                    {
-                        ReplyComposerBanner(
-                            label = stringResource(R.string.chat_replying_to, replied.name),
-                            preview = replied.body.ifBlank {
-                                stringResource(R.string.chat_reply_attachment)
-                            },
-                            cancelLabel = stringResource(MochiR.string.common_cancel),
-                            onCancel = { viewModel.cancelReply() },
-                        )
-                    }
-                },
-                focusRequester = rememberReplyFocus(uiState.replyingTo?.id),
-            )
+                        stringResource(R.string.chat_message_send)
+                    },
+                    windowInsets = ComposeBarDefaults.WindowInsets,
+                    attachments = ComposeBarAttachments(
+                        pending = uiState.pendingAttachments,
+                        onAdd = { viewModel.addAttachments(it) },
+                        onRemove = { viewModel.removeAttachment(it) },
+                        resolveFileName = viewModel::fileName,
+                        addLabel = stringResource(R.string.chat_attachment_add),
+                        fallbackLabel = stringResource(R.string.chat_attachment_label),
+                        removeLabel = stringResource(R.string.chat_attachment_remove),
+                        onMove = { uri, dir -> viewModel.moveAttachment(uri, dir) },
+                        moveUpLabel = stringResource(R.string.chat_attachment_move_up),
+                        moveDownLabel = stringResource(R.string.chat_attachment_move_down),
+                    ),
+                    banner = uiState.editing?.let {
+                        {
+                            EditComposerPreview(onCancel = { viewModel.cancelEdit() })
+                        }
+                    } ?: uiState.replyingTo?.let { replied ->
+                        {
+                            ReplyComposerBanner(
+                                label = stringResource(R.string.chat_replying_to, replied.name),
+                                preview = replied.body.ifBlank {
+                                    stringResource(R.string.chat_reply_attachment)
+                                },
+                                cancelLabel = stringResource(MochiR.string.common_cancel),
+                                onCancel = { viewModel.cancelReply() },
+                            )
+                        }
+                    },
+                    focusRequester = rememberReplyFocus(uiState.replyingTo?.id),
+                )
+            }
             }
 
             uiState.thread?.let { thread ->
@@ -863,6 +894,7 @@ private fun ChatContent(
                     onSend = viewModel::sendThreadReply,
                     onEarlier = viewModel::loadEarlierReplies,
                     onDismiss = viewModel::closeThread,
+                    draft = threadDraft,
                 )
             }
 
@@ -1136,7 +1168,9 @@ internal fun MessageBubble(
                     } else {
                         if (message.body.isNotEmpty()) {
                             Text(
-                                text = highlightQuery(message.body, searchQuery),
+                                text = remember(message.body, searchQuery) {
+                                    highlightQuery(message.body, searchQuery)
+                                },
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = if (isOwn) {
                                     MaterialTheme.colorScheme.onPrimaryContainer
@@ -1667,6 +1701,10 @@ private fun EarlierHistoryLine() {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
     )
 }
+
+/** The state with both composers' text left out, so typing changes nothing else. */
+private fun ChatUiState.withoutDrafts(): ChatUiState =
+    copy(draft = "", thread = thread?.copy(draft = ""))
 
 @Composable
 private fun DateSeparator(epochSeconds: Long) {

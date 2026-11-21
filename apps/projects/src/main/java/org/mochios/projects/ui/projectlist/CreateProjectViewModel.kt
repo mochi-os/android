@@ -108,13 +108,14 @@ class CreateProjectViewModel @Inject constructor(
             }
             val fileName = repository.fileName(uri)
             val project = root.getAsJsonObject("project")
+            val archive = uri.takeIf { repository.isArchive(uri) }
             _uiState.value = _uiState.value.copy(
                 backupPrefill = BackupPrefill(
                     json = content,
                     fileName = fileName,
                     name = project?.jsonString("name"),
                     prefix = project?.jsonString("prefix"),
-                    archive = uri.takeIf { repository.isArchive(it) }
+                    archive = archive
                 )
             )
         }

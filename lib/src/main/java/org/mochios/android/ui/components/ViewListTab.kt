@@ -48,9 +48,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -263,13 +263,15 @@ fun ViewListTab(
                 )
             }
         } else {
+            val sortedViews = remember(views) { views.sortedBy { view -> view.rank } }
+            val viewIds = remember(sortedViews) { sortedViews.map { view -> view.id } }
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(padding)
             ) {
                 if (preview != null) {
-                    val topView = views.sortedBy { view -> view.rank }.firstOrNull()
+                    val topView = sortedViews.firstOrNull()
                     item(key = "preview") {
                         preview(
                             topView,
@@ -277,8 +279,6 @@ fun ViewListTab(
                         )
                     }
                 }
-                val sortedViews = views.sortedBy { view -> view.rank }
-                val viewIds = sortedViews.map { view -> view.id }
                 itemsIndexed(sortedViews, key = { _, view -> view.id }) { _, view ->
                     ViewRow(
                         view = view,
@@ -324,13 +324,11 @@ private fun ViewRow(
     viewIds: List<String>,
     onReorder: (List<String>) -> Unit
 ) {
-    val isDropTarget = dragState.isTarget(view.id) && dragState.draggingItemId != view.id
-    val insertEdge = dragState.targetEdge
     val insertionColour = MaterialTheme.colorScheme.primary
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .alpha(if (dragState.isDragging(view.id)) 0.4f else 1f)
+            .graphicsLayer { alpha = if (dragState.isDragging(view.id)) 0.4f else 1f }
             .dropTarget(
                 state = dragState,
                 itemId = view.id,
@@ -348,8 +346,10 @@ private fun ViewRow(
                 onReorder = onReorder
             )
             .drawBehind {
-                if (!isDropTarget) return@drawBehind
-                val y = if (insertEdge == DragEdge.Bottom) size.height else 0f
+                val dropping = dragState.isTarget(view.id) &&
+                    dragState.draggingItemId != view.id
+                if (!dropping) return@drawBehind
+                val y = if (dragState.targetEdge == DragEdge.Bottom) size.height else 0f
                 drawLine(
                     color = insertionColour,
                     start = Offset(0f, y),
