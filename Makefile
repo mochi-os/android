@@ -74,8 +74,9 @@ release: apk
 	  printf '{"generated": %s, "platform": "android", "tracks": {"production": "%s"}, "releases": {"%s": {"file": "mochi-%s.apk", "size": %s, "sha256": "%s"}}}\n' \
 	  '$(generated)' '$(version)' '$(version)' '$(version)' "$$size" "$$sha" > $(packages)/versions.json
 	# Signed like the server manifests: a client can then refuse a manifest the
-	# package host did not get from a release. -rawin needs openssl 3.0+.
-	openssl pkeyutl -sign -rawin -inkey $(key) -in $(packages)/versions.json | base64 -w0 > $(packages)/versions.json.sig
+	# package host did not get from a release. The script checks each signature
+	# against the key the server pins before it replaces the old one.
+	../../core/build/scripts/sign-manifest $(key) $(packages)/versions.json
 	# Two passes: rsync creates a symlink up front but transfers its target minutes
 	# later, so a single pass leaves the download URL pointing at nothing for the
 	# whole upload; the second repoints the link.
