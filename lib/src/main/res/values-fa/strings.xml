@@ -117,7 +117,6 @@
     <string name="game_chat_empty">هنوز پیامی وجود ندارد</string>
     <string name="game_chat_input_placeholder">یک پیام تایپ کنید</string>
     <string name="game_chat_send">ارسال پیام</string>
-    <string name="game_chat_subject_you">شما</string>
 
     <string name="common_not_saved">ذخیره نشد</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">در سرور تغییر کرده است</string>
     <string name="sync_missing">دیگر در سرور نیست</string>
     <string name="sync_refused">سرور آن را رد کرد</string>
+    <string name="game_system_score_agreed">بر سر امتیاز توافق شد</string>
+    <string name="game_system_score_accept">%1$s امتیاز را پذیرفت</string>
+    <string name="game_system_score_resume">%1$s بازی را از سر گرفت</string>
+    <string name="game_not_found">بازی پیدا نشد</string>
+    <string name="game_chat_move_played_you">شما %1$s را بازی کردید</string>
 </resources>

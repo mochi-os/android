@@ -81,4 +81,6 @@
     <string name="go_score_resume">თამაშის გაგრძელება</string>
     <string name="go_error_score_resume_failed">თამაშის გაგრძელება ვერ მოხერხდა</string>
     <string name="go_error_score_accept_failed">ქულის მიღება ვერ მოხერხდა</string>
+    <string name="go_chat_player_passed">%1$s-მა გაატარა სვლა</string>
+    <string name="go_chat_you_passed">თქვენ გამოტოვეთ სვლა</string>
 </resources>

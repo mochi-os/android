@@ -579,16 +579,13 @@ class PostDetailViewModel @Inject constructor(
     }
 
     /**
-     * Frames arrive on the socket's own thread; each is handed to the main
-     * thread, where the post's fetch and the taps' holds are kept, so they
-     * are touched from one thread.
+     * Frames arrive on the main thread, where the post's fetch and the taps'
+     * holds are kept, so they are touched from one thread.
      */
     private fun subscribeToWebSocket() {
         if (feedId.isEmpty()) return
         val serverUrl = sessionManager.getServerUrlBlocking()
-        subscriptionId = webSocket.subscribe(serverUrl, feedId, app = "feeds") { event ->
-            viewModelScope.launch { onFrame(event) }
-        }
+        subscriptionId = webSocket.subscribe(serverUrl, feedId, app = "feeds") { event -> onFrame(event) }
     }
 
     /**

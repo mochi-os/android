@@ -81,4 +81,6 @@
     <string name="go_score_resume">Hefja leik að nýju</string>
     <string name="go_error_score_resume_failed">Tókst ekki að hefja leikinn að nýju</string>
     <string name="go_error_score_accept_failed">Tókst ekki að samþykkja stigin</string>
+    <string name="go_chat_player_passed">%1$s sagði pass</string>
+    <string name="go_chat_you_passed">Þú sagðir pass</string>
 </resources>

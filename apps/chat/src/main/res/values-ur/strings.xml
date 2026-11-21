@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">مکمل</string>
     <string name="chat_encryption_key">بازیابی کلید</string>
     <string name="chat_encryption_restore">بحال کریں</string>
-    <string name="chat_encryption_recovery_refused">یہ آپ کی بازیابی کلید نہیں ہے</string>
     <string name="chat_verification_own">اپنی ڈیوائس کی تصدیق کریں</string>
     <string name="chat_verification_compare">چیک کریں کہ دوسری اسکرین پر وہی ایموجی نظر آ رہے ہیں۔</string>
     <string name="chat_verification_requested_own">آپ کی ایک اور ڈیوائس اس کی تصدیق کرنا چاہتی ہے۔</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s آپ کی تصدیق کرنا چاہتے ہیں۔</string>
     <string name="chat_typing_one">%1$s ٹائپ کر رہا ہے...</string>
     <string name="chat_typing_many">%1$s ٹائپ کر رہے ہیں...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s جواب</item>
-        <item quantity="other">%1$s جوابات</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s پچھلا جواب</item>
         <item quantity="other">%1$s پچھلے جوابات</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">اس اکاؤنٹ کو Mochi میں شامل کرنے سے پہلے کے پیغامات خفیہ کردہ ہیں اور یہاں پڑھے نہیں جا سکتے</string>
     <string name="chat_message_excluded">صرف دوسرے آلات کے لیے خفیہ کردہ</string>
     <string name="chat_setup">سیٹ اپ کریں</string>
+    <string name="chat_jump_bottom">نیچے جائیں</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s نئے پیغام پر جائیں</item>
+        <item quantity="other">%1$s نئے پیغامات پر جائیں</item>
+    </plurals>
+    <string name="chat_message_distrusted">ایسے آلے سے بھیجا گیا جس پر آپ نے اعتماد نہیں کیا</string>
+    <string name="chat_message_mismatched">ایسے آلے سے بھیجا گیا جس کی کلیدیں مماثل نہیں ہیں</string>
+    <string name="chat_list_select">چیٹ منتخب کریں</string>
+    <string name="chat_message_discard">رد کریں</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">پیغام %1$s حرف زیادہ لمبا ہے</item>
+        <item quantity="other">پیغام %1$s حروف زیادہ لمبا ہے</item>
+    </plurals>
 </resources>

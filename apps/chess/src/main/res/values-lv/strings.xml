@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Neizšķirts</string>
     <string name="chess_status_check_your_move">Šahs — tavs gājiens</string>
     <string name="chess_status_your_move">Jūsu gājiens</string>
-    <string name="chess_move_subject_you">Jūs</string>
     <string name="chess_promotion_title">Paaugstināt uz:</string>
 
     <string name="chess_resign_message">Vai tiešām vēlies padoties? %1$s uzvarēs spēli.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Baltais %1$s</string>
     <string name="chess_piece_black">Melnais %1$s</string>
+    <string name="chess_move_played_you">Jūs spēlējāt %1$s</string>
+    <string name="chess_move_capture_you">Jūs paņēmāt %1$s</string>
 </resources>

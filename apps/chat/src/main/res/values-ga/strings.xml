@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Críochnaithe</string>
     <string name="chat_encryption_key">Eochair athshlánaithe</string>
     <string name="chat_encryption_restore">Athchóirigh</string>
-    <string name="chat_encryption_recovery_refused">Ní hí sin d\'eochair athshlánaithe</string>
     <string name="chat_verification_own">Fíoraigh do ghléas</string>
     <string name="chat_verification_compare">Seiceáil go bhfuil na emoji céanna ar an scáileán eile.</string>
     <string name="chat_verification_requested_own">Tá gléas eile de do chuid ag iarraidh an gléas seo a fhíorú.</string>
@@ -160,13 +159,6 @@
     <string name="chat_verification_requested">Tá %1$s ag iarraidh tú a fhíorú.</string>
     <string name="chat_typing_one">Tá %1$s ag clóscríobh...</string>
     <string name="chat_typing_many">Tá %1$s ag clóscríobh...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s fhreagra</item>
-        <item quantity="two">%1$s fhreagra</item>
-        <item quantity="few">%1$s fhreagra</item>
-        <item quantity="many">%1$s bhfreagra</item>
-        <item quantity="other">%1$s freagra</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s fhreagra níos luaithe</item>
         <item quantity="two">%1$s fhreagra níos luaithe</item>
@@ -190,4 +182,23 @@
     <string name="chat_message_earlier">Tá teachtaireachtaí ó roimh an gcuntas seo a chur le Mochi criptithe agus ní féidir iad a léamh anseo</string>
     <string name="chat_message_excluded">Criptithe do ghléasanna eile amháin</string>
     <string name="chat_setup">Socraigh</string>
+    <string name="chat_jump_bottom">Léim go bun</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Léim go %1$s teachtaireacht nua</item>
+        <item quantity="two">Léim go %1$s theachtaireacht nua</item>
+        <item quantity="few">Léim go %1$s theachtaireacht nua</item>
+        <item quantity="many">Léim go %1$s dteachtaireacht nua</item>
+        <item quantity="other">Léim go %1$s teachtaireacht nua</item>
+    </plurals>
+    <string name="chat_message_distrusted">Seolta ó ghléas nach bhfuil muinín agat as</string>
+    <string name="chat_message_mismatched">Seolta ó ghléas nach dtagann a eochracha le chéile</string>
+    <string name="chat_list_select">Roghnaigh comhrá</string>
+    <string name="chat_message_discard">Cuir i leataobh</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Tá an teachtaireacht %1$s carachtar rófhada</item>
+        <item quantity="two">Tá an teachtaireacht %1$s carachtar rófhada</item>
+        <item quantity="few">Tá an teachtaireacht %1$s carachtar rófhada</item>
+        <item quantity="many">Tá an teachtaireacht %1$s carachtar rófhada</item>
+        <item quantity="other">Tá an teachtaireacht %1$s carachtar rófhada</item>
+    </plurals>
 </resources>

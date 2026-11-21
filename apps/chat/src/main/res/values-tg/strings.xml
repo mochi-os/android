@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Иҷро шуд</string>
     <string name="chat_encryption_key">Калиди барқарорсозӣ</string>
     <string name="chat_encryption_restore">Барқарор кардан</string>
-    <string name="chat_encryption_recovery_refused">Ин калиди барқарорсозии шумо нест</string>
     <string name="chat_verification_own">Тасдиқ кардани дастгоҳи шумо</string>
     <string name="chat_verification_compare">Санҷед, ки дар экрани дигар ҳамон эмодзиҳо пайдо мешаванд.</string>
     <string name="chat_verification_requested_own">Яке аз дастгоҳҳои дигари шумо мехоҳад ин дастгоҳро тасдиқ кунад.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s мехоҳад шуморо тасдиқ кунад.</string>
     <string name="chat_typing_one">%1$s менависад...</string>
     <string name="chat_typing_many">%1$s менависанд...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s ҷавоб</item>
-        <item quantity="other">%1$s ҷавоб</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ҷавоби пештара</item>
         <item quantity="other">%1$s ҷавоби пештара</item>
@@ -181,4 +176,15 @@
     <string name="chat_message_earlier">Паёмҳои пеш аз илова шудани ин ҳисоб ба Mochi рамзгузорӣ шудаанд ва онҳоро дар ин ҷо хондан мумкин нест</string>
     <string name="chat_message_excluded">Танҳо барои дастгоҳҳои дигар рамзгузорӣ шудааст</string>
     <string name="chat_setup">Танзим кардан</string>
+    <string name="chat_jump_bottom">Ба поён гузаштан</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Ба %1$s паёми нав гузаштан</item>
+    </plurals>
+    <string name="chat_message_distrusted">Аз дастгоҳе фиристода шудааст, ки шумо ба он эътимод надоред</string>
+    <string name="chat_message_mismatched">Аз дастгоҳе фиристода шудааст, ки калидҳояш мувофиқ нестанд</string>
+    <string name="chat_list_select">Як чатро интихоб кунед</string>
+    <string name="chat_message_discard">Партофтан</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Паём %1$s аломат аз ҳад дароз аст</item>
+    </plurals>
 </resources>

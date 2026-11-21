@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">ਹਾਲੇ ਕੋਈ ਖੇਡ ਨਹੀਂ।</string>
     <string name="words_new_game_choose_opponents">ਵਿਰੋਧੀ ਚੁਣੋ</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s ਖਿਡਾਰੀ</string>
     <string name="words_new_game_no_friends_subtitle">ਖੇਡਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਲੋਕ ਐਪ ਵਿੱਚ ਦੋਸਤ ਜੋੜੋ।</string>
     <string name="words_detail_title">ਗੇਮ</string>
     <string name="words_detail_status_opponent_move">%1$s ਦੀ ਚਾਲ</string>
     <string name="words_detail_status_winner_wins">%1$s ਜਿੱਤੇ</string>
     <string name="words_detail_player_fallback">ਖਿਡਾਰੀ %1$s</string>
-    <string name="words_detail_player_count">%1$s ਖਿਡਾਰੀ</string>
-    <string name="words_detail_label_tiles_left">%1$s ਟਾਈਲਾਂ ਬਾਕੀ</string>
     <string name="words_detail_action_open_chat">ਚੈਟ ਖੋਲ੍ਹੋ</string>
     <string name="words_detail_action_more">ਗੇਮ ਕਾਰਵਾਈਆਂ</string>
     <string name="words_detail_exchange_count">ਬਦਲੋ (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">ਕੋਈ ਵੈਧ ਸ਼ਬਦ ਨਹੀਂ ਬਣਿਆ</string>
     <string name="words_validation_offline">ਪੁਸ਼ਟੀ ਔਫ਼ਲਾਈਨ ਹੈ — ਤੁਸੀਂ ਫਿਰ ਵੀ ਜਮ੍ਹਾਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
     <string name="words_validation_unknown_words">ਅਣਜਾਣ ਸ਼ਬਦ ਹਨ। ਤੁਸੀਂ ਫਿਰ ਵੀ ਜਮ੍ਹਾਂ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string name="words_detail_label_tiles">ਬਾਕੀ ਟਾਈਲਾਂ</string>
+    <string name="words_detail_submit_score">ਜਮ੍ਹਾਂ ਕਰੋ +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3ਸ਼</string>
+    <string name="words_board_premium_double_word">2ਸ਼</string>
+    <string name="words_board_premium_triple_letter">3ਅ</string>
+    <string name="words_board_premium_double_letter">2ਅ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s ਖਿਡਾਰੀ</item>
+        <item quantity="other">%1$s ਖਿਡਾਰੀ</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s ਖਿਡਾਰੀ</item>
+        <item quantity="other">%1$s ਖਿਡਾਰੀ</item>
+    </plurals>
 </resources>

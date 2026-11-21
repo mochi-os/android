@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">منتهٍ</string>
     <string name="chat_encryption_key">مفتاح الاسترداد</string>
     <string name="chat_encryption_restore">استعادة</string>
-    <string name="chat_encryption_recovery_refused">هذا ليس مفتاح الاسترداد الخاص بك</string>
     <string name="chat_verification_own">التحقق من جهازك</string>
     <string name="chat_verification_compare">تأكد من ظهور الرموز التعبيرية نفسها على الشاشة الأخرى.</string>
     <string name="chat_verification_requested_own">يريد أحد أجهزتك الأخرى التحقق من هذا الجهاز.</string>
@@ -160,14 +159,6 @@
     <string name="chat_verification_requested">يريد %1$s التحقق منك.</string>
     <string name="chat_typing_one">%1$s يكتب...</string>
     <string name="chat_typing_many">%1$s يكتبون...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="zero">%1$s رد</item>
-        <item quantity="one">%1$s رد</item>
-        <item quantity="two">%1$s ردان</item>
-        <item quantity="few">%1$s ردود</item>
-        <item quantity="many">%1$s ردًا</item>
-        <item quantity="other">%1$s رد</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="zero">%1$s رد سابق</item>
         <item quantity="one">%1$s رد سابق</item>
@@ -193,4 +184,25 @@
     <string name="chat_message_earlier">الرسائل السابقة لإضافة هذا الحساب إلى Mochi مشفرة ولا يمكن قراءتها هنا</string>
     <string name="chat_message_excluded">مشفرة لأجهزة أخرى فقط</string>
     <string name="chat_setup">إعداد</string>
+    <string name="chat_jump_bottom">الانتقال إلى الأسفل</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="zero">الانتقال إلى %1$s رسالة جديدة</item>
+        <item quantity="one">الانتقال إلى رسالة جديدة واحدة</item>
+        <item quantity="two">الانتقال إلى رسالتين جديدتين</item>
+        <item quantity="few">الانتقال إلى %1$s رسائل جديدة</item>
+        <item quantity="many">الانتقال إلى %1$s رسالة جديدة</item>
+        <item quantity="other">الانتقال إلى %1$s رسالة جديدة</item>
+    </plurals>
+    <string name="chat_message_distrusted">أُرسلت من جهاز لا تثق به</string>
+    <string name="chat_message_mismatched">أُرسلت من جهاز لا تتطابق مفاتيحه</string>
+    <string name="chat_list_select">اختر محادثة</string>
+    <string name="chat_message_discard">تجاهل</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="zero">الرسالة أطول من الحد بمقدار %1$s حرف</item>
+        <item quantity="one">الرسالة أطول من الحد بمقدار %1$s حرف</item>
+        <item quantity="two">الرسالة أطول من الحد بمقدار %1$s حرفين</item>
+        <item quantity="few">الرسالة أطول من الحد بمقدار %1$s أحرف</item>
+        <item quantity="many">الرسالة أطول من الحد بمقدار %1$s حرفًا</item>
+        <item quantity="other">الرسالة أطول من الحد بمقدار %1$s حرف</item>
+    </plurals>
 </resources>

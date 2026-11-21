@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Билдирүүлөр азырынча жок</string>
     <string name="game_chat_input_placeholder">Билдирүү жазыңыз</string>
     <string name="game_chat_send">Билдирүү жөнөтүү</string>
-    <string name="game_chat_subject_you">Сиз</string>
 
     <string name="common_not_saved">Сакталган жок</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Серверде өзгөртүлгөн</string>
     <string name="sync_missing">Серверде эми жок</string>
     <string name="sync_refused">Сервер четке какты</string>
+    <string name="game_system_score_agreed">Упай макулдашылды</string>
+    <string name="game_system_score_accept">%1$s эсепти кабыл алды</string>
+    <string name="game_system_score_resume">%1$s оюнду улантты</string>
+    <string name="game_not_found">Оюн табылган жок</string>
+    <string name="game_chat_move_played_you">Сиз %1$s ойнодуңуз</string>
 </resources>

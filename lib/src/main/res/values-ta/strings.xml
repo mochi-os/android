@@ -117,7 +117,6 @@
     <string name="game_chat_empty">செய்திகள் இன்னும் இல்லை</string>
     <string name="game_chat_input_placeholder">ஒரு செய்தியை தட்டச்சு செய்</string>
     <string name="game_chat_send">செய்தியை அனுப்பு</string>
-    <string name="game_chat_subject_you">நீங்கள்</string>
 
     <string name="common_not_saved">சேமிக்கப்படவில்லை</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">சேவையகத்தில் மாற்றப்பட்டது</string>
     <string name="sync_missing">இனி சேவையகத்தில் இல்லை</string>
     <string name="sync_refused">சேவையகம் நிராகரித்தது</string>
+    <string name="game_system_score_agreed">மதிப்பெண் ஒப்புக்கொள்ளப்பட்டது</string>
+    <string name="game_system_score_accept">%1$s மதிப்பெண்ணை ஏற்றார்</string>
+    <string name="game_system_score_resume">%1$s ஆட்டத்தை மீண்டும் தொடங்கினார்</string>
+    <string name="game_not_found">ஆட்டம் கிடைக்கவில்லை</string>
+    <string name="game_chat_move_played_you">நீங்கள் %1$s விளையாடினீர்கள்</string>
 </resources>

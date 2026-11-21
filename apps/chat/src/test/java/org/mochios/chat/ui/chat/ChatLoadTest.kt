@@ -27,12 +27,14 @@ import org.junit.runner.RunWith
 import org.mochios.android.api.MochiError
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.chat.api.ChatApi
 import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.data.UnreadChatsStore
 import org.mochios.chat.repository.ChatRepository
+import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
@@ -91,6 +93,7 @@ class ChatLoadTest {
                         if (status != null) MockResponse().setResponseCode(status).setBody("""{"error": "down"}""")
                         else ok("""{"messages": [{"id": "m1", "chat": "c1", "body": "Hello"}], "more": false}""")
                     }
+                    "/chat/c1/-/delete" -> ok("""{"success": true}""")
                     "/_/websocket" -> MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
                         override fun onOpen(webSocket: WebSocket, response: Response) = Unit
 
@@ -137,9 +140,9 @@ class ChatLoadTest {
         ChatRepository(api, FileStore(context), context),
         socket,
         session,
-        PinnedChatsStore(context),
+        PinnedChatsStore(context, session),
         context,
-        UnreadChatsStore(context),
+        UnreadChatsStore(context, session),
     )
 
     /** Runs the main looper the network's answers resume on until [done]. */
@@ -168,6 +171,40 @@ class ChatLoadTest {
         assertTrue(model.uiState.value.error is MochiError.NotFoundError)
         assertNull(model.uiState.value.notice)
         assertEquals(emptyList<Any>(), model.uiState.value.messages)
+    }
+
+    @Test
+    fun `a chat is kept as the one to reopen only once it has loaded`() {
+        LastViewedStore.set(context, CHAT_FEATURE, "c0")
+        refusal = 404
+        val failed = open()
+        until { !failed.uiState.value.isLoading && failed.uiState.value.error != null }
+        assertEquals("a chat that did not load is not kept", "c0", LastViewedStore.get(context, CHAT_FEATURE))
+        refusal = null
+        val model = open()
+        until { model.uiState.value.messages.isNotEmpty() && !model.uiState.value.isLoading }
+        assertEquals("c1", LastViewedStore.get(context, CHAT_FEATURE))
+    }
+
+    @Test
+    fun `a chat gone or closed to the user is forgotten as the one to reopen`() {
+        for (status in listOf(404, 403)) {
+            refusal = status
+            LastViewedStore.set(context, CHAT_FEATURE, "c1")
+            val model = open()
+            until { !model.uiState.value.isLoading && model.uiState.value.error != null }
+            assertNull("forgotten after a $status", LastViewedStore.get(context, CHAT_FEATURE))
+        }
+    }
+
+    @Test
+    fun `a chat deleted here is forgotten as the one to reopen`() {
+        val model = open()
+        until { model.uiState.value.messages.isNotEmpty() && !model.uiState.value.isLoading }
+        assertEquals("c1", LastViewedStore.get(context, CHAT_FEATURE))
+        model.deleteChat()
+        until { model.uiState.value.chatDeleted }
+        assertNull(LastViewedStore.get(context, CHAT_FEATURE))
     }
 
     @Test

@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Pabeigts</string>
     <string name="chat_encryption_key">Atkopšanas atslēga</string>
     <string name="chat_encryption_restore">Atjaunot</string>
-    <string name="chat_encryption_recovery_refused">Tā nav jūsu atkopšanas atslēga</string>
     <string name="chat_verification_own">Verificēt savu ierīci</string>
     <string name="chat_verification_compare">Pārbaudiet, vai otrā ekrānā redzamas tās pašas emocijzīmes.</string>
     <string name="chat_verification_requested_own">Kāda cita jūsu ierīce vēlas verificēt šo.</string>
@@ -160,11 +159,6 @@
     <string name="chat_verification_requested">%1$s vēlas jūs verificēt.</string>
     <string name="chat_typing_one">%1$s raksta...</string>
     <string name="chat_typing_many">%1$s raksta...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="zero">%1$s atbilžu</item>
-        <item quantity="one">%1$s atbilde</item>
-        <item quantity="other">%1$s atbildes</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="zero">%1$s agrāku atbilžu</item>
         <item quantity="one">%1$s agrāka atbilde</item>
@@ -184,4 +178,19 @@
     <string name="chat_message_earlier">Ziņojumi no laika pirms šī konta pievienošanas Mochi ir šifrēti, un tos šeit nevar izlasīt</string>
     <string name="chat_message_excluded">Šifrēts tikai citām ierīcēm</string>
     <string name="chat_setup">Iestatīt</string>
+    <string name="chat_jump_bottom">Pāriet uz apakšu</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="zero">Pāriet uz %1$s jaunām ziņām</item>
+        <item quantity="one">Pāriet uz %1$s jaunu ziņu</item>
+        <item quantity="other">Pāriet uz %1$s jaunām ziņām</item>
+    </plurals>
+    <string name="chat_message_distrusted">Nosūtīts no ierīces, kurai jūs neuzticaties</string>
+    <string name="chat_message_mismatched">Nosūtīts no ierīces, kuras atslēgas nesakrīt</string>
+    <string name="chat_list_select">Atlasīt čatu</string>
+    <string name="chat_message_discard">Atmest</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="zero">Ziņa ir par %1$s rakstzīmēm par garu</item>
+        <item quantity="one">Ziņa ir par %1$s rakstzīmi par garu</item>
+        <item quantity="other">Ziņa ir par %1$s rakstzīmēm par garu</item>
+    </plurals>
 </resources>

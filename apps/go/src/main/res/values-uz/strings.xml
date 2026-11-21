@@ -81,4 +81,6 @@
     <string name="go_score_resume">Oʻyinni davom ettirish</string>
     <string name="go_error_score_resume_failed">Oʻyinni davom ettirib boʻlmadi</string>
     <string name="go_error_score_accept_failed">Hisobni qabul qilib boʻlmadi</string>
+    <string name="go_chat_player_passed">%1$s yurishni o\'tkazib yubordi</string>
+    <string name="go_chat_you_passed">Siz yurishni oʻtkazib yubordingiz</string>
 </resources>

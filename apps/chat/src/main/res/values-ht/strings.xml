@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Fini</string>
     <string name="chat_encryption_key">Kle rekiperasyon</string>
     <string name="chat_encryption_restore">Retabli</string>
-    <string name="chat_encryption_recovery_refused">Sa a se pa kle rekiperasyon ou</string>
     <string name="chat_verification_own">Verifye aparèy ou</string>
     <string name="chat_verification_compare">Tcheke si menm emoji yo parèt sou lòt ekran an.</string>
     <string name="chat_verification_requested_own">Youn nan lòt aparèy ou yo vle verifye sa a.</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s vle verifye ou.</string>
     <string name="chat_typing_one">%1$s ap tape...</string>
     <string name="chat_typing_many">%1$s ap tape...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s repons</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s repons ki pi ansyen</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">Mesaj ki te la anvan yo te ajoute kont sa a nan Mochi chifre epi yo pa ka li isit la</string>
     <string name="chat_message_excluded">Chifre pou lòt aparèy sèlman</string>
     <string name="chat_setup">Konfigire</string>
+    <string name="chat_jump_bottom">Ale anba</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Ale nan %1$s nouvo mesaj</item>
+    </plurals>
+    <string name="chat_message_distrusted">Voye soti nan yon aparèy ou pa fè konfyans</string>
+    <string name="chat_message_mismatched">Voye soti nan yon aparèy ki gen kle ki pa koresponn</string>
+    <string name="chat_list_select">Chwazi yon chat</string>
+    <string name="chat_message_discard">Jete</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Mesaj la gen %1$s karaktè twòp</item>
+    </plurals>
 </resources>

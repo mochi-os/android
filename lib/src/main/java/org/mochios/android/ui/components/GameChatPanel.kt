@@ -30,12 +30,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -45,7 +47,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import java.util.Calendar
 import java.util.TimeZone
-import kotlinx.coroutines.flow.distinctUntilChanged
 import org.mochios.android.R
 import org.mochios.android.api.MochiError
 import org.mochios.android.i18n.LocalFormat
@@ -68,21 +69,21 @@ data class GameChatMessage(
 
 /**
  * Chat panel for chess / go / words: date-grouped, pinned to the bottom, with
- * optional renderer slots so each game customises its move and system rows
- * without duplicating the bubble scaffold. [messages] is newest-last.
+ * a move renderer slot so each game words its own moves without duplicating
+ * the bubble scaffold. [messages] is newest-last. [error] is shown only while
+ * nothing is loaded.
  */
 @Composable
 fun GameChatPanel(
     messages: List<GameChatMessage>,
     currentUserIdentity: String,
     isLoading: Boolean = false,
-    isError: Boolean = false,
+    error: MochiError? = null,
     hasMore: Boolean = false,
     isLoadingMore: Boolean = false,
     onLoadMore: () -> Unit = {},
     onRetry: () -> Unit = {},
     moveMessageRenderer: ((GameChatMessage, Boolean) -> @Composable () -> Unit)? = null,
-    systemMessageRenderer: ((GameChatMessage) -> @Composable () -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     when {
@@ -90,9 +91,8 @@ fun GameChatPanel(
             ChatSkeletons(modifier = modifier)
             return
         }
-        isError && messages.isEmpty() -> {
-            val mochiError = remember { MochiError.Unknown(null) }
-            ErrorState(error = mochiError, onRetry = onRetry)
+        error != null && messages.isEmpty() -> {
+            ErrorState(error = error, onRetry = onRetry, modifier = modifier)
             return
         }
         messages.isEmpty() -> {
@@ -102,7 +102,10 @@ fun GameChatPanel(
     }
 
     val listState = rememberLazyListState()
-    val grouped = remember(messages) { groupMessagesByDay(messages) }
+    // Bucketed in the zone the headers are written in, the user's, not the
+    // device's: otherwise a message near midnight sits under the wrong date.
+    val zone = LocalFormat.current.timeZone
+    val grouped = remember(messages, zone) { groupMessagesByDay(messages, zone) }
 
     // Pin to bottom on initial load and on append. The LazyColumn renders
     // newest-last so the last index is the "messages end" anchor; scrolling
@@ -127,22 +130,19 @@ fun GameChatPanel(
         }
     }
 
-    // Fire onLoadMore when the user scrolls near the top. snapshotFlow keeps
-    // the listener out of every recomposition.
+    // Ask for the next older page while the top is in view. Keyed on what
+    // the decision reads, so it is taken afresh: an effect started once would
+    // keep the first composition's hasMore and isLoadingMore, asking again
+    // after the history ran out and never once it turned up.
     val nearTop by remember(listState) {
         derivedStateOf {
             val first = listState.layoutInfo.visibleItemsInfo.firstOrNull()?.index ?: return@derivedStateOf false
             first < 3
         }
     }
-    LaunchedEffect(listState) {
-        snapshotFlow { nearTop }
-            .distinctUntilChanged()
-            .collect { atTop ->
-                if (atTop && hasMore && !isLoadingMore) {
-                    onLoadMore()
-                }
-            }
+    val currentOnLoadMore by rememberUpdatedState(onLoadMore)
+    LaunchedEffect(nearTop, hasMore, isLoadingMore) {
+        if (nearTop && hasMore && !isLoadingMore) currentOnLoadMore()
     }
 
     LazyColumn(
@@ -187,14 +187,7 @@ fun GameChatPanel(
                         message.member == currentUserIdentity
                     item(key = message.id) {
                         when (message.type) {
-                            "system" -> {
-                                val slot = systemMessageRenderer?.invoke(message)
-                                if (slot != null) {
-                                    slot()
-                                } else {
-                                    SystemMessageRow(message)
-                                }
-                            }
+                            "system" -> SystemMessageRow(message)
                             "move" -> {
                                 val slot = moveMessageRenderer?.invoke(message, isSent)
                                 if (slot != null) {
@@ -214,19 +207,89 @@ fun GameChatPanel(
     }
 }
 
+/**
+ * A game's chat as chess, go and words show it, in their side panel and their
+ * phone sheet: the [GameChatPanel] over a one-line composer whose draft is
+ * cleared only once [onSend] reports the message sent. A failed send keeps the
+ * words for another try; the caller says why it failed.
+ *
+ * @param chat the holder's state.
+ * @param message one of [chat]'s rows as the panel draws it.
+ * @param onSend sends a trimmed body and calls back with whether it went.
+ * @param draft the composer's text; hoisted by a screen whose two hosts share it.
+ * @param composerWindowInsets the keyboard inset the composer takes: the
+ *     default suits a sheet, which lifts its own content; a side panel in the
+ *     screen body has to ask for it.
+ */
+@Composable
+fun <T> GameChatColumn(
+    chat: GameChatState<T>,
+    message: (T) -> GameChatMessage,
+    currentUserIdentity: String,
+    onLoadMore: () -> Unit,
+    onRetry: () -> Unit,
+    onSend: (String, (Boolean) -> Unit) -> Unit,
+    modifier: Modifier = Modifier,
+    draft: MutableState<String> = rememberSaveable { mutableStateOf("") },
+    composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
+    moveMessageRenderer: ((GameChatMessage, Boolean) -> @Composable () -> Unit)? = null,
+) {
+    val messages = remember(chat.messages) { chat.messages.map(message) }
+    var sending by remember { mutableStateOf(false) }
+    Column(modifier = modifier.fillMaxSize()) {
+        GameChatPanel(
+            messages = messages,
+            currentUserIdentity = currentUserIdentity,
+            isLoading = chat.isLoading,
+            error = chat.error,
+            hasMore = chat.hasMore,
+            isLoadingMore = chat.isLoadingMore,
+            onLoadMore = onLoadMore,
+            onRetry = onRetry,
+            moveMessageRenderer = moveMessageRenderer,
+            modifier = Modifier.weight(1f),
+        )
+        Reading(draft) { text ->
+            ComposeBar(
+                value = text,
+                onValueChange = { draft.value = it },
+                onSend = {
+                    val body = draft.value
+                    if (body.isNotBlank() && !sending) {
+                        sending = true
+                        onSend(body.trim()) { sent ->
+                            sending = false
+                            // Words typed while it was sending are kept.
+                            if (sent && draft.value == body) draft.value = ""
+                        }
+                    }
+                },
+                isSending = sending,
+                placeholder = stringResource(R.string.game_chat_input_placeholder),
+                sendLabel = stringResource(R.string.game_chat_send),
+                // One line, and the keyboard's action key sends: a game chat
+                // message is a sentence, not a comment body.
+                maxLines = 1,
+                sendOnImeAction = true,
+                windowInsets = composerWindowInsets,
+            )
+        }
+    }
+}
+
 // --- internals ---
 
-private sealed class GameChatEntry {
+internal sealed class GameChatEntry {
     data class DateHeader(val dayKey: String, val epochSeconds: Long) : GameChatEntry()
     data class Item(val message: GameChatMessage) : GameChatEntry()
 }
 
-private fun groupMessagesByDay(messages: List<GameChatMessage>): List<GameChatEntry> {
-    val tz = TimeZone.getDefault()
+/** [messages] with a header before each day's first, the day taken in [zone]. */
+internal fun groupMessagesByDay(messages: List<GameChatMessage>, zone: TimeZone): List<GameChatEntry> {
     val out = mutableListOf<GameChatEntry>()
     var lastKey: String? = null
     for (msg in messages) {
-        val cal = Calendar.getInstance(tz).apply { timeInMillis = msg.created * 1000L }
+        val cal = Calendar.getInstance(zone).apply { timeInMillis = msg.created * 1000L }
         val key = "${cal.get(Calendar.YEAR)}-" +
             "${cal.get(Calendar.MONTH) + 1}-" +
             "${cal.get(Calendar.DAY_OF_MONTH)}"
@@ -257,14 +320,19 @@ private fun DateSeparator(epochSeconds: Long) {
 
 @Composable
 private fun SystemMessageRow(message: GameChatMessage) {
-    // Localise per viewer from the structured event kind; legacy rows (no
-    // event) fall back to the server-stored English body. Mirrors web's
-    // chat-message-list system branch.
-    val text = when (message.event) {
-        "resign" -> stringResource(R.string.game_system_resign, message.name)
-        "draw_offer" -> stringResource(R.string.game_system_draw_offer, message.name)
-        "draw_accept" -> stringResource(R.string.game_system_draw_accept)
-        "draw_decline" -> stringResource(R.string.game_system_draw_decline, message.name)
+    // Localised per viewer from the event kind and the actor's name, as the
+    // web's game-chat-message-list does; the stored body is the acting
+    // player's language. A row without an event, or one naming nobody (a
+    // resign frame from an older server), falls back to that body.
+    val name = message.name
+    val text = when {
+        message.event == "resign" && name.isNotBlank() -> stringResource(R.string.game_system_resign, name)
+        message.event == "draw_offer" -> stringResource(R.string.game_system_draw_offer, name)
+        message.event == "draw_accept" -> stringResource(R.string.game_system_draw_accept)
+        message.event == "draw_decline" -> stringResource(R.string.game_system_draw_decline, name)
+        message.event == "score_accept" -> stringResource(R.string.game_system_score_accept, name)
+        message.event == "score_agreed" -> stringResource(R.string.game_system_score_agreed)
+        message.event == "score_resume" -> stringResource(R.string.game_system_score_resume, name)
         else -> message.body
     }
     Row(
@@ -284,13 +352,19 @@ private fun SystemMessageRow(message: GameChatMessage) {
 
 @Composable
 private fun DefaultMoveRow(message: GameChatMessage, isSent: Boolean) {
-    val subject = if (isSent) stringResource(R.string.game_chat_subject_you) else message.name
+    // Two sentences, not "You" put in the player's place: the verb agrees
+    // with its subject in most languages.
+    val text = if (isSent) {
+        stringResource(R.string.game_chat_move_played_you, message.body)
+    } else {
+        stringResource(R.string.game_chat_move_played, message.name, message.body)
+    }
     Row(
         modifier = Modifier.fillMaxWidth().padding(vertical = 1.dp),
         horizontalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = stringResource(R.string.game_chat_move_played, subject, message.body),
+            text = text,
             style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
             textAlign = TextAlign.Center,

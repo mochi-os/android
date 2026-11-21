@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">हो गइल</string>
     <string name="chat_encryption_key">रिकवरी कुंजी</string>
     <string name="chat_encryption_restore">बहाल करीं</string>
-    <string name="chat_encryption_recovery_refused">ई राउर रिकवरी कुंजी ना ह</string>
     <string name="chat_verification_own">आपन उपकरण सत्यापित करीं</string>
     <string name="chat_verification_compare">जाँचीं कि दोसरा स्क्रीन पर उहे इमोजी देखात बा।</string>
     <string name="chat_verification_requested_own">राउर एगो दोसर उपकरण एकरा के सत्यापित कइल चाहत बा।</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s रउआ के सत्यापित कइल चाहत बाड़े।</string>
     <string name="chat_typing_one">%1$s टाइप कर रहल बा...</string>
     <string name="chat_typing_many">%1$s टाइप कर रहल बाड़ें...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s जवाब</item>
-        <item quantity="other">%1$s जवाब</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s पहिले के जवाब</item>
         <item quantity="other">%1$s पहिले के जवाब</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">ई खाता के Mochi में जोड़ल जाए से पहिले के संदेश एन्क्रिप्टेड बाड़न आ इहाँ पढ़ल ना जा सकेला</string>
     <string name="chat_message_excluded">सिरिफ दोसर डिवाइस खातिर एन्क्रिप्टेड</string>
     <string name="chat_setup">सेट अप</string>
+    <string name="chat_jump_bottom">सबसे नीचे जाईं</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s नया मैसेज पर जाईं</item>
+        <item quantity="other">%1$s नया मैसेज पर जाईं</item>
+    </plurals>
+    <string name="chat_message_distrusted">ओह डिवाइस से भेजल गइल जेकरा पर रउरा भरोसा ना कइलीं</string>
+    <string name="chat_message_mismatched">ओह डिवाइस से भेजल गइल जेकर कुंजी मेल ना खाले</string>
+    <string name="chat_list_select">चैट चुनीं</string>
+    <string name="chat_message_discard">छोड़ीं</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">संदेस सीमा से %1$s अक्षर लंबा बा</item>
+        <item quantity="other">संदेस सीमा से %1$s अक्षर लंबा बा</item>
+    </plurals>
 </resources>

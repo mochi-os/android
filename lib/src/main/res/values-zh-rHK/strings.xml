@@ -28,7 +28,6 @@
     <string name="settings_radius_none">無</string>
     <string name="settings_background_off">無</string>
     <string name="settings_title">設定</string>
-    <string name="game_chat_subject_you">你</string>
     <string name="auth_privacy_public">公開</string>
     <string name="auth_privacy_private">私人</string>
     <string name="common_notifications">通知</string>

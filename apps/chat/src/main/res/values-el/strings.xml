@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Ολοκληρώθηκε</string>
     <string name="chat_encryption_key">Κλειδί ανάκτησης</string>
     <string name="chat_encryption_restore">Επαναφορά</string>
-    <string name="chat_encryption_recovery_refused">Αυτό δεν είναι το κλειδί ανάκτησής σας</string>
     <string name="chat_verification_own">Επαλήθευση της συσκευής σας</string>
     <string name="chat_verification_compare">Ελέγξτε ότι εμφανίζονται τα ίδια emoji στην άλλη οθόνη.</string>
     <string name="chat_verification_requested_own">Μια άλλη συσκευή σας θέλει να επαληθεύσει αυτήν.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s θέλει να σας επαληθεύσει.</string>
     <string name="chat_typing_one">%1$s πληκτρολογεί...</string>
     <string name="chat_typing_many">%1$s πληκτρολογούν...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s απάντηση</item>
-        <item quantity="other">%1$s απαντήσεις</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s προηγούμενη απάντηση</item>
         <item quantity="other">%1$s προηγούμενες απαντήσεις</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Τα μηνύματα από πριν προστεθεί αυτός ο λογαριασμός στο Mochi είναι κρυπτογραφημένα και δεν μπορούν να διαβαστούν εδώ</string>
     <string name="chat_message_excluded">Κρυπτογραφημένο μόνο για άλλες συσκευές</string>
     <string name="chat_setup">Ρύθμιση</string>
+    <string name="chat_jump_bottom">Μετάβαση στο τέλος</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Μετάβαση σε %1$s νέο μήνυμα</item>
+        <item quantity="other">Μετάβαση σε %1$s νέα μηνύματα</item>
+    </plurals>
+    <string name="chat_message_distrusted">Στάλθηκε από συσκευή που σημειώσατε ως μη αξιόπιστη</string>
+    <string name="chat_message_mismatched">Στάλθηκε από συσκευή της οποίας τα κλειδιά δεν ταιριάζουν</string>
+    <string name="chat_list_select">Επιλέξτε μια συνομιλία</string>
+    <string name="chat_message_discard">Απόρριψη</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Το μήνυμα υπερβαίνει το όριο κατά %1$s χαρακτήρα</item>
+        <item quantity="other">Το μήνυμα υπερβαίνει το όριο κατά %1$s χαρακτήρες</item>
+    </plurals>
 </resources>

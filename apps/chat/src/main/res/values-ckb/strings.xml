@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">تەواوبوو</string>
     <string name="chat_encryption_key">کلیلی گەڕاندنەوە</string>
     <string name="chat_encryption_restore">گەڕاندنەوە</string>
-    <string name="chat_encryption_recovery_refused">ئەمە کلیلی گەڕاندنەوەکەت نییە</string>
     <string name="chat_verification_own">ئامێرەکەت پشتڕاستبکەرەوە</string>
     <string name="chat_verification_compare">دڵنیابەرەوە کە هەمان ئیمۆجی لەسەر شاشەکەی تر دەردەکەون.</string>
     <string name="chat_verification_requested_own">یەکێک لە ئامێرەکانی ترت دەیەوێت ئەم ئامێرە پشتڕاست بکاتەوە.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s دەیەوێت تۆ پشتڕاست بکاتەوە.</string>
     <string name="chat_typing_one">%1$s دەنووسێت...</string>
     <string name="chat_typing_many">%1$s دەنووسن...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s وەڵام</item>
-        <item quantity="other">%1$s وەڵام</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s وەڵامی پێشوو</item>
         <item quantity="other">%1$s وەڵامی پێشوو</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">پەیامەکانی پێش زیادکردنی ئەم هەژمارە بۆ Mochi شفرەکراون و لێرە ناخوێنرێنەوە</string>
     <string name="chat_message_excluded">تەنها بۆ ئامێرەکانی تر شفرەکراوە</string>
     <string name="chat_setup">ڕێکخستن</string>
+    <string name="chat_jump_bottom">بازدان بۆ خوارەوە</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">بازدان بۆ %1$s پەیامی نوێ</item>
+        <item quantity="other">بازدان بۆ %1$s پەیامی نوێ</item>
+    </plurals>
+    <string name="chat_message_distrusted">لە ئامێرێکەوە نێردراوە کە متمانەت پێی نییە</string>
+    <string name="chat_message_mismatched">لە ئامێرێکەوە نێردراوە کە کلیلەکانی یەک ناگرنەوە</string>
+    <string name="chat_list_select">گفتوگۆیەک هەڵبژێرە</string>
+    <string name="chat_message_discard">فڕێدان</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">نامەکە %1$s پیت لە سنوور درێژترە</item>
+        <item quantity="other">نامەکە %1$s پیت لە سنوور درێژترە</item>
+    </plurals>
 </resources>

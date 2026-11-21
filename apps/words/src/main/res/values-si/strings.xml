@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">තවම ක්‍රීඩා නොමැත.</string>
     <string name="words_new_game_choose_opponents">ප්‍රතිවාදීන් තෝරන්න</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">ක්‍රීඩකයන් %1$s</string>
     <string name="words_new_game_no_friends_subtitle">සෙල්ලම් කිරීමට පුද්ගලයන් යෙදුමේ මිතුරන් එක් කරන්න.</string>
     <string name="words_detail_title">ක්‍රීඩාව</string>
     <string name="words_detail_status_opponent_move">%1$sගේ ගමන</string>
     <string name="words_detail_status_winner_wins">%1$s ජයග්‍රහණය කරයි</string>
     <string name="words_detail_player_fallback">ක්‍රීඩකයා %1$s</string>
-    <string name="words_detail_player_count">ක්‍රීඩකයන් %1$s</string>
-    <string name="words_detail_label_tiles_left">ටයිල් %1$s ක් ඉතිරියි</string>
     <string name="words_detail_action_open_chat">චැට් විවෘත කරන්න</string>
     <string name="words_detail_action_more">ක්‍රීඩා ක්‍රියා</string>
     <string name="words_detail_exchange_count">හුවමාරු (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">වලංගු වචන කිසිවක් සෑදී නැත</string>
     <string name="words_validation_offline">තහවුරු කිරීම නොබැඳිය — ඔබට තවමත් ඉදිරිපත් කළ හැකිය.</string>
     <string name="words_validation_unknown_words">නොදන්නා වචන අඩංගුයි. ඔබට තවමත් ඉදිරිපත් කළ හැකිය.</string>
+    <string name="words_detail_label_tiles">ඉතිරි ටයිල්</string>
+    <string name="words_detail_submit_score">ඉදිරිපත් කරන්න +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3ව</string>
+    <string name="words_board_premium_double_word">2ව</string>
+    <string name="words_board_premium_triple_letter">3අ</string>
+    <string name="words_board_premium_double_letter">2අ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">ක්‍රීඩකයන් %1$s</item>
+        <item quantity="other">ක්‍රීඩකයන් %1$s</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">ක්‍රීඩකයන් %1$s</item>
+        <item quantity="other">ක්‍රීඩකයන් %1$s</item>
+    </plurals>
 </resources>

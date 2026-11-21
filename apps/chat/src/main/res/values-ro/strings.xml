@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Terminat</string>
     <string name="chat_encryption_key">Cheie de recuperare</string>
     <string name="chat_encryption_restore">Restaurează</string>
-    <string name="chat_encryption_recovery_refused">Aceasta nu este cheia ta de recuperare</string>
     <string name="chat_verification_own">Verifică-ți dispozitivul</string>
     <string name="chat_verification_compare">Verifică dacă pe celălalt ecran apar aceleași emoji.</string>
     <string name="chat_verification_requested_own">Un alt dispozitiv al tău vrea să îl verifice pe acesta.</string>
@@ -160,11 +159,6 @@
     <string name="chat_verification_requested">%1$s vrea să te verifice.</string>
     <string name="chat_typing_one">%1$s scrie...</string>
     <string name="chat_typing_many">%1$s scriu...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s răspuns</item>
-        <item quantity="few">%1$s răspunsuri</item>
-        <item quantity="other">%1$s de răspunsuri</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s răspuns anterior</item>
         <item quantity="few">%1$s răspunsuri anterioare</item>
@@ -184,4 +178,19 @@
     <string name="chat_message_earlier">Mesajele de dinainte ca acest cont să fie adăugat în Mochi sunt criptate și nu pot fi citite aici</string>
     <string name="chat_message_excluded">Criptat doar pentru alte dispozitive</string>
     <string name="chat_setup">Configurează</string>
+    <string name="chat_jump_bottom">Sari la final</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Sari la %1$s mesaj nou</item>
+        <item quantity="few">Sari la %1$s mesaje noi</item>
+        <item quantity="other">Sari la %1$s de mesaje noi</item>
+    </plurals>
+    <string name="chat_message_distrusted">Trimis de pe un dispozitiv pe care l-ai marcat ca nesigur</string>
+    <string name="chat_message_mismatched">Trimis de pe un dispozitiv ale cărui chei nu se potrivesc</string>
+    <string name="chat_list_select">Selectează o conversație</string>
+    <string name="chat_message_discard">Renunță</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Mesajul este prea lung cu %1$s caracter</item>
+        <item quantity="few">Mesajul este prea lung cu %1$s caractere</item>
+        <item quantity="other">Mesajul este prea lung cu %1$s de caractere</item>
+    </plurals>
 </resources>

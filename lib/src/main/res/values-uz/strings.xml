@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Hozircha xabarlar yoʻq</string>
     <string name="game_chat_input_placeholder">Xabar yozing</string>
     <string name="game_chat_send">Xabar yuborish</string>
-    <string name="game_chat_subject_you">Siz</string>
 
     <string name="common_not_saved">Saqlanmadi</string>
     <string name="auth_server_url">Server URL</string>
@@ -350,4 +349,9 @@
     <string name="sync_conflict">Serverda oʻzgartirilgan</string>
     <string name="sync_missing">Serverda endi yoʻq</string>
     <string name="sync_refused">Server rad etdi</string>
+    <string name="game_system_score_agreed">Hisob kelishildi</string>
+    <string name="game_system_score_accept">%1$s hisobni qabul qildi</string>
+    <string name="game_system_score_resume">%1$s oʻyinni davom ettirdi</string>
+    <string name="game_not_found">Oʻyin topilmadi</string>
+    <string name="game_chat_move_played_you">Siz %1$s oʻynadingiz</string>
 </resources>

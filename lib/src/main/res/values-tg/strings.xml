@@ -117,7 +117,6 @@
     <string name="game_chat_empty">То ҳол ягон паём нест</string>
     <string name="game_chat_input_placeholder">Паёмеро чоп кунед</string>
     <string name="game_chat_send">Паём фиристодан</string>
-    <string name="game_chat_subject_you">Шумо</string>
 
     <string name="common_not_saved">Захира нашуд</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Дар сервер тағйир ёфт</string>
     <string name="sync_missing">Дигар дар сервер нест</string>
     <string name="sync_refused">Сервер рад кард</string>
+    <string name="game_system_score_agreed">Ҳисоб мувофиқа шуд</string>
+    <string name="game_system_score_accept">%1$s ҳисобро қабул кард</string>
+    <string name="game_system_score_resume">%1$s бозиро идома дод</string>
+    <string name="game_not_found">Бозӣ ёфт нашуд</string>
+    <string name="game_chat_move_played_you">Шумо %1$s бозӣ кардед</string>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Hervat spel</string>
     <string name="go_error_score_resume_failed">Kon nie spel hervat nie</string>
     <string name="go_error_score_accept_failed">Kon nie telling aanvaar nie</string>
+    <string name="go_chat_player_passed">%1$s het gepas</string>
+    <string name="go_chat_you_passed">Jy het gepas</string>
 </resources>

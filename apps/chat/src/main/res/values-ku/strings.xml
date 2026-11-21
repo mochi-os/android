@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Qediya</string>
     <string name="chat_encryption_key">Mifteya vegerê</string>
     <string name="chat_encryption_restore">Vegerîne</string>
-    <string name="chat_encryption_recovery_refused">Ev ne mifteya te ya vegerê ye</string>
     <string name="chat_verification_own">Cîhaza xwe verifîke bike</string>
     <string name="chat_verification_compare">Kontrol bike ku heman emoji li ser ekrana din xuya dibin.</string>
     <string name="chat_verification_requested_own">Yek ji cîhazên te yên din dixwaze vê verifîke bike.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s dixwaze te verifîke bike.</string>
     <string name="chat_typing_one">%1$s dinivîse...</string>
     <string name="chat_typing_many">%1$s dinivîsin...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s bersiv</item>
-        <item quantity="other">%1$s bersiv</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s bersiva berê</item>
         <item quantity="other">%1$s bersivên berê</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Peyamên berî ku ev hesab li Mochi were zêdekirin şîfrekirî ne û li vir nayên xwendin</string>
     <string name="chat_message_excluded">Tenê ji bo cîhazên din şîfrekirî ye</string>
     <string name="chat_setup">Saz bike</string>
+    <string name="chat_jump_bottom">Biçe binî</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Biçe %1$s peyama nû</item>
+        <item quantity="other">Biçe %1$s peyamên nû</item>
+    </plurals>
+    <string name="chat_message_distrusted">Ji amûreke ku tu bawer pê nakî hatiye şandin</string>
+    <string name="chat_message_mismatched">Ji amûreke ku mifteyên wê li hev nayên hatiye şandin</string>
+    <string name="chat_list_select">Chatê hilbijêre</string>
+    <string name="chat_message_discard">Bavêje</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Peyam %1$s tîp ji sînorê dirêjtir e</item>
+        <item quantity="other">Peyam %1$s tîp ji sînorê dirêjtir e</item>
+    </plurals>
 </resources>

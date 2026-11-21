@@ -24,6 +24,16 @@ class MessageListTest {
     private val lateEvening = 1772407800L
 
     @Test
+    fun `a search marks its matches in the message's own text, after a capital dotted İ too`() {
+        // İ lowercases to two characters, so positions found in a lowercased
+        // copy fell one place late, and past the end near it.
+        val marked = highlightQuery("İyi akşamlar dostlar canım", "LAR")
+        assertEquals("İyi akşamlar dostlar canım", marked.text)
+        assertEquals(listOf("lar", "lar"), marked.spanStyles.map { span -> marked.text.substring(span.start, span.end) })
+        assertEquals(listOf("lar"), highlightQuery("İyi akşamlar", "lar").let { last -> last.spanStyles.map { span -> last.text.substring(span.start, span.end) } })
+    }
+
+    @Test
     fun `the last index counts headers and the load-older row, not messages`() {
         val messages = listOf(message("a", lateEvening), message("b", lateEvening + 60))
         val grouped = groupMessagesByDate(messages, utc)

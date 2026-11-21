@@ -28,6 +28,8 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.userMessage
+import org.mochios.android.i18n.AppContext
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
 import org.mochios.android.websocket.MochiWebSocket
@@ -42,6 +44,7 @@ import org.mochios.chat.repository.ChatRepository
 import org.mochios.chat.ui.chat.ChatViewModel
 import org.mochios.chat.ui.encryption.EncryptionEvent
 import org.mochios.chat.ui.encryption.EncryptionViewModel
+import org.mochios.chat.ui.encryption.VERIFICATIONS_OPEN
 import org.mochios.chat.ui.encryption.VerificationViewModel
 import org.mochios.chat.ui.newchat.NewChatViewModel
 import org.mochios.chat.ui.privacy.PrivacyViewModel
@@ -94,6 +97,9 @@ class NetworksViewModelsTest {
     /** The server's side of the conversation's websocket, once the client is connected. */
     @Volatile private var frames: WebSocket? = null
 
+    /** Whether every websocket handshake is refused. */
+    @Volatile private var refuseSockets = false
+
     /** How many times recovery was asked to be set up. */
     @Volatile private var setups = 0
 
@@ -102,8 +108,20 @@ class NetworksViewModelsTest {
     /** What the send answers. */
     @Volatile private var sendAnswer = """{"id": "n1"}"""
 
+    /** The status a recovery key is refused with, and the server's words; 0 takes it. */
+    @Volatile private var recoverStatus = 0
+    @Volatile private var recoverError = ""
+
+    /** The status the directory search answers with. */
+    @Volatile private var searchStatus = 200
+
+    /** Held, the next read of the encryption overview waits for it. */
+    @Volatile private var encryptionGate: java.util.concurrent.CountDownLatch? = null
+
     @Before
     fun begin() {
+        // The messages of refusals are read in the app's words.
+        AppContext.set(context)
         server = MockWebServer()
         server.dispatcher = object : Dispatcher() {
             override fun dispatch(request: RecordedRequest): MockResponse {
@@ -111,7 +129,7 @@ class NetworksViewModelsTest {
                 val query = request.path.orEmpty().substringAfter("?", "")
                 requests.add(Taken(path, query, request.body.readUtf8()))
                 return when (path) {
-                    "/_/websocket" -> MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
+                    "/_/websocket" -> if (refuseSockets) MockResponse().setResponseCode(503) else MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
                         override fun onOpen(webSocket: WebSocket, response: Response) {
                             frames = webSocket
                         }
@@ -151,14 +169,26 @@ class NetworksViewModelsTest {
                     } else {
                         MockResponse().setResponseCode(createStatus).setBody("""{"error": "refused", "message": "This member does not accept chats from you"}""")
                     }
-                    "/chat/c1/-/encryption" -> ok("""{"account": "m1", "status": {"network": "matrix", "address": "@me:m.example", "device": "D", "fingerprint": "abc", "signing": false}, "people": [{"id": "@carol:m.example", "name": "Carol"}]}""")
+                    "/chat/-/person/search" -> if (searchStatus == 200) {
+                        ok("""{"results": [{"id": "stranger", "name": "Stranger"}]}""")
+                    } else {
+                        MockResponse().setResponseCode(searchStatus).setBody("""{"error": "The directory is down"}""")
+                    }
+                    "/chat/c1/-/encryption" -> encryptionGate.let { gate ->
+                        gate?.await(5, java.util.concurrent.TimeUnit.SECONDS)
+                        ok("""{"account": "m1", "status": {"network": "matrix", "address": "@me:m.example", "device": "D", "fingerprint": "abc", "signing": false}, "people": [{"id": "@carol:m.example", "name": "Carol"}]}""")
+                    }
                     "/chat/c1/-/encryption/devices" -> ok("""{"devices": [{"id": "7", "fingerprint": "f", "verified": false, "own": false}, {"id": "D", "fingerprint": "g", "own": true}]}""")
                     "/chat/c1/-/encryption/trust" -> ok("""{}""")
                     "/chat/c1/-/encryption/setup" -> {
                         setups++
                         if (setups == 1) ok("""{"password": true}""") else ok("""{"recovery": "KEY one"}""")
                     }
-                    "/chat/c1/-/encryption/recover" -> ok("""{"restored": 3}""")
+                    "/chat/c1/-/encryption/recover" -> if (recoverStatus == 0) {
+                        ok("""{"restored": 3}""")
+                    } else {
+                        MockResponse().setResponseCode(recoverStatus).setBody("""{"error": "$recoverError"}""")
+                    }
                     "/chat/-/encryption/verifications" -> ok("""{"verifications": $verifications}""")
                     "/chat/-/encryption/act" -> ok("""{}""")
                     else -> MockResponse().setResponseCode(404)
@@ -230,7 +260,7 @@ class NetworksViewModelsTest {
     private fun conversation(): ChatViewModel {
         val model = ChatViewModel(
             SavedStateHandle(mapOf("chatId" to "c1")),
-            repository, socket, session, PinnedChatsStore(context), context, UnreadChatsStore(context),
+            repository, socket, session, PinnedChatsStore(context, session), context, UnreadChatsStore(context, session),
         )
         until("the conversation") { model.uiState.value.chat.id == "c1" }
         return model
@@ -431,13 +461,68 @@ class NetworksViewModelsTest {
     }
 
     @Test
-    fun `a messaging address handed over from people starts the conversation at once`() {
+    fun `a messaging address handed over fills in the picker, and starts the conversation only on the tap`() {
         val model = NewChatViewModel(
             SavedStateHandle(mapOf("account" to "x1", "address" to "dave@xmpp.example", "name" to "Dave")),
             repository,
         )
+        until("the picker") { !model.uiState.value.isLoading }
+        settle()
+        assertEquals("nothing started on opening", 0, count("/chat/-/create"))
+        assertEquals("x1", model.uiState.value.account)
+        assertEquals("dave@xmpp.example", model.uiState.value.addresses)
+        assertEquals("Dave", model.uiState.value.groupName)
+        model.createRemote()
         until("the chat") { model.uiState.value.createdChatId == "n9" }
         assertEquals("name=Dave&members=dave%40xmpp.example&account=x1", sent("/chat/-/create"))
+    }
+
+    @Test
+    fun `an address handed over for an account the user does not have fills in nothing`() {
+        val model = NewChatViewModel(
+            SavedStateHandle(mapOf("account" to "someone-else", "address" to "dave@xmpp.example", "name" to "Dave")),
+            repository,
+        )
+        until("the picker") { !model.uiState.value.isLoading }
+        settle()
+        assertEquals(0, count("/chat/-/create"))
+        assertEquals("", model.uiState.value.account)
+    }
+
+    @Test
+    fun `a friend handed over is picked, and nothing is started until the tap`() {
+        friends = """[{"id": "friend", "name": "Friend", "chat": ""}]"""
+        val model = NewChatViewModel(SavedStateHandle(mapOf("friend" to "friend")), repository)
+        until("the screen") { !model.uiState.value.isLoading || model.uiState.value.createdChatId != null }
+        settle()
+        assertEquals(0, count("/chat/-/create"))
+        assertNull(model.uiState.value.createdChatId)
+        assertEquals(listOf("friend"), model.uiState.value.picked.map { it.id })
+    }
+
+    @Test
+    fun `a friend handed over with a chat already opens it, creating nothing`() {
+        friends = """[{"id": "friend", "name": "Friend", "chat": "c7"}]"""
+        val model = NewChatViewModel(SavedStateHandle(mapOf("friend" to "friend")), repository)
+        until("the chat") { model.uiState.value.createdChatId == "c7" }
+        settle()
+        assertEquals(0, count("/chat/-/create"))
+    }
+
+    @Test
+    fun `a directory search that fails says so, not that no one matched`() {
+        val model = NewChatViewModel(SavedStateHandle(), repository)
+        until("the picker") { !model.uiState.value.isLoading }
+        searchStatus = 500
+        model.updateSearchQuery("stra")
+        until("the search") { count("/chat/-/person/search") == 1 && !model.uiState.value.isSearchingDirectory }
+        assertEquals("The directory is down", model.uiState.value.searchError?.message)
+        assertTrue(model.uiState.value.directory.isEmpty())
+        searchStatus = 200
+        model.updateSearchQuery("stran")
+        assertNull("cleared by the next search", model.uiState.value.searchError)
+        until("the people") { model.uiState.value.directory.isNotEmpty() }
+        assertNull(model.uiState.value.searchError)
     }
 
     @Test
@@ -536,8 +621,81 @@ class NetworksViewModelsTest {
     }
 
     @Test
+    fun `a refused recovery key says why in the server's words, whichever refusal it was`() {
+        for ((status, words) in listOf(
+            400 to "That is not your recovery key",
+            409 to "No recovery is set up for this account",
+            502 to "The recovery key could not be used. The backup is unreadable",
+        )) {
+            recoverStatus = status
+            recoverError = words
+            val model = encryption()
+            model.openRecovery()
+            model.setRecovery("KEY")
+            model.recover()
+            until("the refusal") { model.uiState.value.refusal != null && !model.uiState.value.recovering }
+            assertEquals(words, model.uiState.value.refusal!!.userMessage())
+            assertEquals("the dialog stays open on the key", "KEY", model.uiState.value.recovery)
+            model.setRecovery("KEY2")
+            assertNull("a key changed clears it", model.uiState.value.refusal)
+        }
+    }
+
+    @Test
+    fun `a person's devices opened while the overview is read again stay open`() {
+        val model = encryption()
+        encryptionGate = java.util.concurrent.CountDownLatch(1)
+        val reads = count("/chat/c1/-/encryption")
+        model.load()
+        until("the read") { count("/chat/c1/-/encryption") > reads }
+        model.toggle("@carol:m.example")
+        encryptionGate!!.countDown()
+        encryptionGate = null
+        settle()
+        assertTrue("@carol:m.example" in model.uiState.value.open)
+    }
+
+    @Test
+    fun `a verification is read on the user's own socket's word, not on a timer while it is up`() {
+        val model = VerificationViewModel(repository, socket, context)
+        val watch = CoroutineScope(Dispatchers.Main).launch { model.watch() }
+        try {
+            until("the first read") { count("/chat/-/encryption/verifications") >= 1 }
+            until("the user's socket") { frames != null && socket.isLive("chat") }
+            settle()
+            val before = count("/chat/-/encryption/verifications")
+            // Past both timers: nothing is read while the socket is up.
+            repeat(4) { idle(20_000) }
+            settle()
+            assertEquals("no timer while the socket is up", before, count("/chat/-/encryption/verifications"))
+            frames!!.send("""{"event": "verification", "account": "m1", "flow": "f", "phase": "ready"}""")
+            settle()
+            assertEquals("read on the frame", before + 1, count("/chat/-/encryption/verifications"))
+        } finally {
+            watch.cancel()
+        }
+    }
+
+    @Test
+    fun `a verification is read on a timer while the user's own socket is down`() {
+        // No socket to open: every handshake is refused.
+        refuseSockets = true
+        val model = VerificationViewModel(repository, socket, context)
+        val watch = CoroutineScope(Dispatchers.Main).launch { model.watch() }
+        try {
+            until("the first read") { count("/chat/-/encryption/verifications") >= 1 }
+            val before = count("/chat/-/encryption/verifications")
+            idle(VERIFICATIONS_OPEN + 100)
+            settle()
+            assertTrue("read on the timer", count("/chat/-/encryption/verifications") > before)
+        } finally {
+            watch.cancel()
+        }
+    }
+
+    @Test
     fun `a verification under way is shown, its steps go to the server, and how it ended is said once`() {
-        val model = VerificationViewModel(repository, context)
+        val model = VerificationViewModel(repository, socket, context)
         val said = mutableListOf<String>()
         // Listening from the start: the end is said inside runBlocking, past the main looper.
         val listen = CoroutineScope(Dispatchers.Main.immediate).launch { model.events.collect { said += it } }
@@ -558,7 +716,7 @@ class NetworksViewModelsTest {
 
     @Test
     fun `a verification closed is cancelled and not shown again`() {
-        val model = VerificationViewModel(repository, context)
+        val model = VerificationViewModel(repository, socket, context)
         runBlocking { model.read() }
         model.close()
         until("the cancel") { sent("/chat/-/encryption/act") != null }

@@ -81,4 +81,6 @@
     <string name="go_score_resume">ఆట తిరిగి ప్రారంభించండి</string>
     <string name="go_error_score_resume_failed">ఆట తిరిగి ప్రారంభించడంలో విఫలమైంది</string>
     <string name="go_error_score_accept_failed">స్కోర్ అంగీకరించడంలో విఫలమైంది</string>
+    <string name="go_chat_player_passed">%1$s పాస్ చేశారు</string>
+    <string name="go_chat_you_passed">మీరు పాస్ చేశారు</string>
 </resources>

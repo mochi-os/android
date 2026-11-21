@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Готово</string>
     <string name="chat_encryption_key">Ключ відновлення</string>
     <string name="chat_encryption_restore">Відновити</string>
-    <string name="chat_encryption_recovery_refused">Це не ваш ключ відновлення</string>
     <string name="chat_verification_own">Перевірка вашого пристрою</string>
     <string name="chat_verification_compare">Переконайтеся, що на іншому екрані з\'явилися ті самі емодзі.</string>
     <string name="chat_verification_requested_own">Інший ваш пристрій хоче перевірити цей.</string>
@@ -160,12 +159,6 @@
     <string name="chat_verification_requested">%1$s хоче перевірити вас.</string>
     <string name="chat_typing_one">%1$s друкує...</string>
     <string name="chat_typing_many">%1$s друкують...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s відповідь</item>
-        <item quantity="few">%1$s відповіді</item>
-        <item quantity="many">%1$s відповідей</item>
-        <item quantity="other">%1$s відповіді</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s попередня відповідь</item>
         <item quantity="few">%1$s попередні відповіді</item>
@@ -187,4 +180,21 @@
     <string name="chat_message_earlier">Повідомлення з часу до додавання цього облікового запису в Mochi зашифровані, і їх не можна прочитати тут</string>
     <string name="chat_message_excluded">Зашифровано лише для інших пристроїв</string>
     <string name="chat_setup">Налаштувати</string>
+    <string name="chat_jump_bottom">Перейти вниз</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Перейти до %1$s нового повідомлення</item>
+        <item quantity="few">Перейти до %1$s нових повідомлень</item>
+        <item quantity="many">Перейти до %1$s нових повідомлень</item>
+        <item quantity="other">Перейти до %1$s нового повідомлення</item>
+    </plurals>
+    <string name="chat_message_distrusted">Надіслано з пристрою, якому ви не довіряєте</string>
+    <string name="chat_message_mismatched">Надіслано з пристрою, ключі якого не збігаються</string>
+    <string name="chat_list_select">Виберіть чат</string>
+    <string name="chat_message_discard">Відхилити</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Повідомлення довше допустимого на %1$s символ</item>
+        <item quantity="few">Повідомлення довше допустимого на %1$s символи</item>
+        <item quantity="many">Повідомлення довше допустимого на %1$s символів</item>
+        <item quantity="other">Повідомлення довше допустимого на %1$s символу</item>
+    </plurals>
 </resources>

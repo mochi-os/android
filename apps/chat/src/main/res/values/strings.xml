@@ -8,6 +8,7 @@
     <string name="chat_list_search">Search</string>
     <string name="chat_list_new">New chat</string>
     <string name="chat_list_empty">No chats yet</string>
+    <string name="chat_list_select">Select a chat</string>
     <string name="chat_list_filter_groups">Groups</string>
     <string name="chat_list_no_groups">No group chats</string>
 
@@ -37,6 +38,19 @@
     <string name="chat_attachment_move_down">Move down</string>
     <string name="chat_attachment_label">File</string>
     <string name="chat_message_deleted">This message was deleted</string>
+    <string name="chat_message_distrusted">Sent from a device you distrusted</string>
+    <string name="chat_message_mismatched">Sent from a device whose keys do not match</string>
+    <string name="chat_message_discard">Discard</string>
+    <string name="chat_message_length" translatable="false">%1$s/%2$s</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Message is %1$s character too long</item>
+        <item quantity="other">Message is %1$s characters too long</item>
+    </plurals>
+    <string name="chat_jump_bottom">Jump to bottom</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Jump to %1$s new message</item>
+        <item quantity="other">Jump to %1$s new messages</item>
+    </plurals>
     <string name="chat_search_hint">Search in chat</string>
     <string name="chat_message_forward">Forward</string>
     <string name="chat_message_reply">Reply</string>
@@ -148,10 +162,6 @@
     <string name="chat_thread_title">Thread</string>
     <string name="chat_thread_reply">Reply in thread</string>
     <string name="chat_thread_earlier">Show earlier replies</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s reply</item>
-        <item quantity="other">%1$s replies</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s earlier reply</item>
         <item quantity="other">%1$s earlier replies</item>
@@ -187,7 +197,6 @@
     <string name="chat_encryption_done">Done</string>
     <string name="chat_encryption_key">Recovery key</string>
     <string name="chat_encryption_restore">Restore</string>
-    <string name="chat_encryption_recovery_refused">That is not your recovery key</string>
     <plurals name="chat_encryption_restored">
         <item quantity="one">%1$s message key restored</item>
         <item quantity="other">%1$s message keys restored</item>

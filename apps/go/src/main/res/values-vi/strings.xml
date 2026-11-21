@@ -81,4 +81,6 @@
     <string name="go_score_resume">Tiếp tục ván đấu</string>
     <string name="go_error_score_resume_failed">Không tiếp tục ván đấu được</string>
     <string name="go_error_score_accept_failed">Không chấp nhận điểm số được</string>
+    <string name="go_chat_player_passed">%1$s đã bỏ lượt</string>
+    <string name="go_chat_you_passed">Bạn đã bỏ lượt</string>
 </resources>

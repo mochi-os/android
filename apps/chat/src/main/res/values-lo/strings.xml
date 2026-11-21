@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">ສຳເລັດແລ້ວ</string>
     <string name="chat_encryption_key">ກະແຈກູ້ຄືນ</string>
     <string name="chat_encryption_restore">ກູ້ຄືນ</string>
-    <string name="chat_encryption_recovery_refused">ນີ້ບໍ່ແມ່ນກະແຈກູ້ຄືນຂອງທ່ານ</string>
     <string name="chat_verification_own">ຢືນຢັນອຸປະກອນຂອງທ່ານ</string>
     <string name="chat_verification_compare">ກວດເບິ່ງວ່າອີໂມຈິດຽວກັນປາກົດຢູ່ໜ້າຈໍອີກເຄື່ອງ.</string>
     <string name="chat_verification_requested_own">ອຸປະກອນອື່ນຂອງທ່ານຕ້ອງການຢືນຢັນອຸປະກອນນີ້.</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s ຕ້ອງການຢືນຢັນທ່ານ.</string>
     <string name="chat_typing_one">%1$s ກຳລັງພິມ...</string>
     <string name="chat_typing_many">%1$s ກຳລັງພິມ...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s ການຕອບກັບ</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s ການຕອບກັບກ່ອນໜ້າ</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">ຂໍ້ຄວາມກ່ອນທີ່ບັນຊີນີ້ຖືກເພີ່ມໃສ່ Mochi ຖືກເຂົ້າລະຫັດ ແລະ ບໍ່ສາມາດອ່ານໄດ້ຢູ່ບ່ອນນີ້</string>
     <string name="chat_message_excluded">ເຂົ້າລະຫັດສຳລັບອຸປະກອນອື່ນເທົ່ານັ້ນ</string>
     <string name="chat_setup">ຕັ້ງຄ່າ</string>
+    <string name="chat_jump_bottom">ໄປຫາລຸ່ມສຸດ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">ໄປຫາ %1$s ຂໍ້ຄວາມໃໝ່</item>
+    </plurals>
+    <string name="chat_message_distrusted">ສົ່ງມາຈາກອຸປະກອນທີ່ທ່ານບໍ່ເຊື່ອຖື</string>
+    <string name="chat_message_mismatched">ສົ່ງມາຈາກອຸປະກອນທີ່ກະແຈບໍ່ກົງກັນ</string>
+    <string name="chat_list_select">ເລືອກສົນທະນາ</string>
+    <string name="chat_message_discard">ຖິ້ມ</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">ຂໍ້ຄວາມຍາວເກີນ %1$s ຕົວອັກສອນ</item>
+    </plurals>
 </resources>

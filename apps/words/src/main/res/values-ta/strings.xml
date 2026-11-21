@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">இதுவரை ஆட்டங்கள் இல்லை.</string>
     <string name="words_new_game_choose_opponents">எதிராளிகளைத் தேர்ந்தெடுக்கவும்</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s வீரர்கள்</string>
     <string name="words_new_game_no_friends_subtitle">விளையாடத் தொடங்க மக்கள் பயன்பாட்டில் நண்பர்களைச் சேர்க்கவும்.</string>
     <string name="words_detail_title">ஆட்டம்</string>
     <string name="words_detail_status_opponent_move">%1$s-ன் நகர்வு</string>
     <string name="words_detail_status_winner_wins">%1$s வெற்றி பெற்றார்</string>
     <string name="words_detail_player_fallback">வீரர் %1$s</string>
-    <string name="words_detail_player_count">%1$s வீரர்கள்</string>
-    <string name="words_detail_label_tiles_left">%1$s ஓடுகள் மீதம்</string>
     <string name="words_detail_action_open_chat">அரட்டையைத் திற</string>
     <string name="words_detail_action_more">ஆட்டச் செயல்கள்</string>
     <string name="words_detail_exchange_count">மாற்று (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">செல்லுபடியாகும் சொற்கள் எதுவும் உருவாகவில்லை</string>
     <string name="words_validation_offline">சரிபார்ப்பு ஆஃப்லைனில் உள்ளது — நீங்கள் இன்னும் சமர்ப்பிக்கலாம்.</string>
     <string name="words_validation_unknown_words">தெரியாத சொற்களைக் கொண்டுள்ளது. நீங்கள் இன்னும் சமர்ப்பிக்கலாம்.</string>
+    <string name="words_detail_label_tiles">மீதமுள்ள டைல்கள்</string>
+    <string name="words_detail_submit_score">சமர்ப்பி +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3ச</string>
+    <string name="words_board_premium_double_word">2ச</string>
+    <string name="words_board_premium_triple_letter">3எ</string>
+    <string name="words_board_premium_double_letter">2எ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s வீரர்</item>
+        <item quantity="other">%1$s வீரர்கள்</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s வீரர்</item>
+        <item quantity="other">%1$s வீரர்கள்</item>
+    </plurals>
 </resources>

@@ -117,7 +117,6 @@
     <string name="game_chat_empty">هێشتا هیچ پەیامێک نییە</string>
     <string name="game_chat_input_placeholder">نامەیەک بنووسە</string>
     <string name="game_chat_send">نامە بنێرە</string>
-    <string name="game_chat_subject_you">تۆ</string>
 
     <string name="common_not_saved">پاشەکەوت نەکرا</string>
 
@@ -349,4 +348,9 @@
     <string name="sync_conflict">لەسەر ڕاژەکار گۆڕدرا</string>
     <string name="sync_missing">چیتر لەسەر ڕاژەکار نییە</string>
     <string name="sync_refused">لەلایەن ڕاژەکارەوە ڕەتکرایەوە</string>
+    <string name="game_system_score_agreed">ڕێککەوتن لەسەر خاڵ</string>
+    <string name="game_system_score_accept">%1$s خاڵەکەی قبوڵ کرد</string>
+    <string name="game_system_score_resume">%1$s یاری دەستپێکردەوە</string>
+    <string name="game_not_found">یاری نەدۆزرایەوە</string>
+    <string name="game_chat_move_played_you">تۆ یاریت کرد %1$s</string>
 </resources>

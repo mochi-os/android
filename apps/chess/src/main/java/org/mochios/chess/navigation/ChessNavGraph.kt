@@ -62,7 +62,6 @@ fun NavGraphBuilder.chessNavGraph(
             navController = navController,
             gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
             onOpenNotifications = onOpenNotifications,
-            onOpenLink = onOpenLink,
         )
     }
 }

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Reia jocul</string>
     <string name="go_error_score_resume_failed">Reluarea jocului a eșuat</string>
     <string name="go_error_score_accept_failed">Acceptarea scorului a eșuat</string>
+    <string name="go_chat_player_passed">%1$s a pasat</string>
+    <string name="go_chat_you_passed">Ai pasat</string>
 </resources>

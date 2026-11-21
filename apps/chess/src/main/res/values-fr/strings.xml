@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Match nul</string>
     <string name="chess_status_check_your_move">Échec — à votre tour</string>
     <string name="chess_status_your_move">À votre tour</string>
-    <string name="chess_move_subject_you">Vous</string>
     <string name="chess_promotion_title">Promouvoir en :</string>
 
     <string name="chess_resign_message">Êtes-vous sûr de vouloir abandonner ? %1$s gagnera la partie.</string>
@@ -63,4 +62,6 @@
     <string name="chess_ws_reconnecting">Reconnexion…</string>
     <string name="chess_piece_white">%1$s blanc</string>
     <string name="chess_piece_black">%1$s noir</string>
+    <string name="chess_move_played_you">Vous avez joué %1$s</string>
+    <string name="chess_move_capture_you">Vous avez pris %1$s</string>
 </resources>

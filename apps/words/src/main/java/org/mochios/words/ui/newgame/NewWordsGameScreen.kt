@@ -46,6 +46,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -182,6 +183,7 @@ fun NewWordsGameScreen(
                     InlineErrorState(
                         message = uiState.friendsError?.userMessage()
                             ?: stringResource(MochiR.string.error_unexpected),
+                        onRetry = { viewModel.loadFriends() },
                     )
                 }
 
@@ -216,10 +218,12 @@ fun NewWordsGameScreen(
 
             if (selectedFriends.isNotEmpty()) {
                 Spacer(modifier = Modifier.size(8.dp))
+                val players = selectedFriends.size + 1
                 Text(
-                    text = stringResource(
-                        R.string.words_new_game_player_count,
-                        LocalFormat.current.formatNumber(selectedFriends.size + 1),
+                    text = pluralStringResource(
+                        R.plurals.words_new_game_players,
+                        players,
+                        LocalFormat.current.formatNumber(players),
                     ),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,

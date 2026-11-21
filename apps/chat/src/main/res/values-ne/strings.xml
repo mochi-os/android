@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">सम्पन्न</string>
     <string name="chat_encryption_key">रिकभरी कुञ्जी</string>
     <string name="chat_encryption_restore">पुनर्स्थापना गर्नुहोस्</string>
-    <string name="chat_encryption_recovery_refused">यो तपाईंको रिकभरी कुञ्जी होइन</string>
     <string name="chat_verification_own">आफ्नो उपकरण प्रमाणित गर्नुहोस्</string>
     <string name="chat_verification_compare">अर्को स्क्रिनमा उही इमोजी देखिन्छन् कि जाँच गर्नुहोस्।</string>
     <string name="chat_verification_requested_own">तपाईंको अर्को उपकरणले यसलाई प्रमाणित गर्न चाहन्छ।</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s तपाईंलाई प्रमाणित गर्न चाहनुहुन्छ।</string>
     <string name="chat_typing_one">%1$s टाइप गर्दै हुनुहुन्छ...</string>
     <string name="chat_typing_many">%1$s टाइप गर्दै हुनुहुन्छ...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s जवाफ</item>
-        <item quantity="other">%1$s जवाफहरू</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s पहिलेको जवाफ</item>
         <item quantity="other">%1$s पहिलेका जवाफहरू</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">यो खाता Mochi मा थपिनुअघिका सन्देशहरू इन्क्रिप्ट गरिएका छन् र यहाँ पढ्न सकिँदैन</string>
     <string name="chat_message_excluded">अन्य उपकरणहरूका लागि मात्र इन्क्रिप्ट गरिएको</string>
     <string name="chat_setup">सेटअप गर्नुहोस्</string>
+    <string name="chat_jump_bottom">तल जानुहोस्</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s नयाँ सन्देशमा जानुहोस्</item>
+        <item quantity="other">%1$s नयाँ सन्देशहरूमा जानुहोस्</item>
+    </plurals>
+    <string name="chat_message_distrusted">तपाईंले विश्वास नगरेको यन्त्रबाट पठाइएको</string>
+    <string name="chat_message_mismatched">कुञ्जीहरू मेल नखाने यन्त्रबाट पठाइएको</string>
+    <string name="chat_list_select">च्याट छान्नुहोस्</string>
+    <string name="chat_message_discard">हटाउनुहोस्</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">सन्देश %1$s वर्णले बढी लामो छ</item>
+        <item quantity="other">सन्देश %1$s वर्णले बढी लामो छ</item>
+    </plurals>
 </resources>

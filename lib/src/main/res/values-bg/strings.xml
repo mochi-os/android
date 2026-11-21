@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Все още няма съобщения</string>
     <string name="game_chat_input_placeholder">Въведете съобщение</string>
     <string name="game_chat_send">Изпрати съобщение</string>
-    <string name="game_chat_subject_you">Вие</string>
 
     <string name="common_not_saved">Не е запазено</string>
 
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Променено на сървъра</string>
     <string name="sync_missing">Вече не е на сървъра</string>
     <string name="sync_refused">Отказано от сървъра</string>
+    <string name="game_system_score_agreed">Резултатът е съгласуван</string>
+    <string name="game_system_score_accept">%1$s прие резултата</string>
+    <string name="game_system_score_resume">%1$s поднови играта</string>
+    <string name="game_not_found">Играта не е намерена</string>
+    <string name="game_chat_move_played_you">Изиграхте %1$s</string>
 </resources>

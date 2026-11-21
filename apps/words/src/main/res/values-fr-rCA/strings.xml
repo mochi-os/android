@@ -16,7 +16,6 @@
     <string name="words_new_game_title">Nouvelle partie</string>
     <string name="words_new_game_choose_opponents">Choisir des adversaires</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s joueurs</string>
     <string name="words_new_game_language">Langue</string>
     <string name="words_new_game_language_uk">Anglais (R.-U.)</string>
     <string name="words_new_game_language_us">Anglais (É.-U.)</string>
@@ -33,8 +32,6 @@
     <string name="words_detail_status_opponent_resigned">L\'adversaire a abandonné — vous gagnez!</string>
     <string name="words_detail_status_you_resigned">Vous avez abandonné</string>
     <string name="words_detail_player_fallback">Joueur %1$s</string>
-    <string name="words_detail_player_count">%1$s joueurs</string>
-    <string name="words_detail_label_tiles_left">%1$s tuiles restantes</string>
     <string name="words_detail_action_shuffle">Mélanger le chevalet</string>
     <string name="words_detail_action_pass">Passer</string>
     <string name="words_detail_action_exchange">Échanger des tuiles</string>
@@ -70,4 +67,5 @@
     <string name="words_move_error_first_move_two_tiles">Le premier coup doit placer au moins 2 tuiles</string>
     <string name="words_move_error_not_connected">Les tuiles doivent toucher des tuiles déjà sur le plateau</string>
     <string name="words_move_error_no_words">Aucun mot valide formé</string>
+    <string name="words_detail_submit_score">Soumettre +%1$s</string>
 </resources>

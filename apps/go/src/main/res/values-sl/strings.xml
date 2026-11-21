@@ -78,4 +78,6 @@
     <string name="go_score_resume">Nadaljuj igro</string>
     <string name="go_error_score_resume_failed">Nadaljevanje igre ni uspelo</string>
     <string name="go_error_score_accept_failed">Sprejetje rezultata ni uspelo</string>
+    <string name="go_chat_player_passed">%1$s je izpustil potezo</string>
+    <string name="go_chat_you_passed">Preskočili ste potezo</string>
 </resources>

@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Remis</string>
     <string name="chess_status_check_your_move">Skak — dit træk</string>
     <string name="chess_status_your_move">Dit træk</string>
-    <string name="chess_move_subject_you">Dig</string>
     <string name="chess_promotion_title">Forfrem til:</string>
 
     <string name="chess_resign_message">Er du sikker på, at du vil opgive? %1$s vinder spillet.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Hvid %1$s</string>
     <string name="chess_piece_black">Sort %1$s</string>
+    <string name="chess_move_played_you">Du spillede %1$s</string>
+    <string name="chess_move_capture_you">Du tog %1$s</string>
 </resources>

@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">暂无棋局。</string>
     <string name="words_new_game_choose_opponents">选择对手</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s 名玩家</string>
     <string name="words_new_game_no_friends_subtitle">在联系人应用中添加朋友以开始游戏。</string>
     <string name="words_detail_title">棋局</string>
     <string name="words_detail_status_opponent_move">%1$s 的回合</string>
     <string name="words_detail_status_winner_wins">%1$s 获胜</string>
     <string name="words_detail_player_fallback">玩家 %1$s</string>
-    <string name="words_detail_player_count">%1$s 名玩家</string>
-    <string name="words_detail_label_tiles_left">剩余 %1$s 块</string>
     <string name="words_detail_action_open_chat">打开聊天</string>
     <string name="words_detail_action_more">棋局操作</string>
     <string name="words_detail_exchange_count">交换 (%1$s)</string>
@@ -71,4 +68,17 @@
     <string name="words_move_error_no_words">未组成有效单词</string>
     <string name="words_validation_offline">验证服务离线 — 你仍然可以提交。</string>
     <string name="words_validation_unknown_words">包含未知单词。你仍然可以提交。</string>
+    <string name="words_detail_label_tiles">剩余字母</string>
+    <string name="words_detail_submit_score">提交 +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">词×3</string>
+    <string name="words_board_premium_double_word">词×2</string>
+    <string name="words_board_premium_triple_letter">字×3</string>
+    <string name="words_board_premium_double_letter">字×2</string>
+    <plurals name="words_new_game_players">
+        <item quantity="other">%1$s 名玩家</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="other">%1$s 名玩家</item>
+    </plurals>
 </resources>

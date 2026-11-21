@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">ຍັງບໍ່ມີເກມ.</string>
     <string name="words_new_game_choose_opponents">ເລືອກຄູ່ຕໍ່ສູ້</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">ຜູ້ຫຼິ້ນ %1$s ຄົນ</string>
     <string name="words_new_game_no_friends_subtitle">ເພີ່ມໝູ່ໃນແອັບ “ບຸກຄົນ” ເພື່ອເລີ່ມຫຼິ້ນ.</string>
     <string name="words_detail_title">ເກມ</string>
     <string name="words_detail_status_opponent_move">ການເຄື່ອນໄຫວຂອງ %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s ຊະນະ</string>
     <string name="words_detail_player_fallback">ຜູ້ຫຼິ້ນ %1$s</string>
-    <string name="words_detail_player_count">ຜູ້ຫຼິ້ນ %1$s ຄົນ</string>
-    <string name="words_detail_label_tiles_left">ເຫຼືອ %1$s ແຜ່ນ</string>
     <string name="words_detail_action_open_chat">ເປີດການສົນທະນາ</string>
     <string name="words_detail_action_more">ການດຳເນີນການເກມ</string>
     <string name="words_detail_exchange_count">ແລກປ່ຽນ (%1$s)</string>
@@ -71,4 +68,17 @@
     <string name="words_move_error_no_words">ບໍ່ມີຄຳທີ່ຖືກຕ້ອງເກີດຂຶ້ນ</string>
     <string name="words_validation_offline">ການກວດສອບອອບລາຍ — ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
     <string name="words_validation_unknown_words">ມີຄຳທີ່ບໍ່ຮູ້ຈັກ. ທ່ານຍັງສາມາດສົ່ງໄດ້.</string>
+    <string name="words_detail_label_tiles">ແຜ່ນປ້າຍເຫຼືອ</string>
+    <string name="words_detail_submit_score">ສົ່ງ +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3ຄ</string>
+    <string name="words_board_premium_double_word">2ຄ</string>
+    <string name="words_board_premium_triple_letter">3ອ</string>
+    <string name="words_board_premium_double_letter">2ອ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="other">ຜູ້ຫຼິ້ນ %1$s ຄົນ</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="other">ຜູ້ຫຼິ້ນ %1$s ຄົນ</item>
+    </plurals>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">راند ٻيهر شروع ڪريو</string>
     <string name="go_error_score_resume_failed">راند ٻيهر شروع ڪرڻ ۾ ناڪام</string>
     <string name="go_error_score_accept_failed">اسڪور قبول ڪرڻ ۾ ناڪام</string>
+    <string name="go_chat_player_passed">%1$s پاس ڪيو</string>
+    <string name="go_chat_you_passed">توهان پاس ڪيو</string>
 </resources>

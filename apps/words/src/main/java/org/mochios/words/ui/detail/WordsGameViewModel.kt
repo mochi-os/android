@@ -25,8 +25,9 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.GameChat
+import org.mochios.android.ui.components.GameChatPage
 import org.mochios.android.util.REFRESH_DEBOUNCE
-import org.mochios.android.util.mergeMessage
 import org.mochios.android.websocket.REOPEN
 import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.DraftStatus
@@ -60,14 +61,9 @@ sealed class DropTarget {
     object None : DropTarget()
 }
 
+/** The game's state; its chat is [WordsGameViewModel.chat]'s. */
 data class WordsGameDetailUiState(
     val isLoading: Boolean = true,
-    val isLoadingMessages: Boolean = false,
-    val isLoadingMoreMessages: Boolean = false,
-    val messagesError: Boolean = false,
-    val hasMoreMessages: Boolean = false,
-    /** The server's own "<created>:<id>" cursor, not a derived timestamp. */
-    val nextMessageCursor: String? = null,
     val error: MochiError? = null,
     val game: Game? = null,
     val myIdentity: String = "",
@@ -89,7 +85,6 @@ data class WordsGameDetailUiState(
     val isResigning: Boolean = false,
     val isDeleting: Boolean = false,
     val isCreatingRematch: Boolean = false,
-    val messages: List<GameMessage> = emptyList(),
     val showResignDialog: Boolean = false,
     val createdRematchId: String? = null,
     val gameDeleted: Boolean = false,
@@ -117,8 +112,23 @@ class WordsGameViewModel @Inject constructor(
     /** Whether [gameJob] resets local state, which a refresh replacing it must keep. */
     private var gameJobResets = false
 
-    /** The pending or in-flight messages fetch; cancelled when a newer one starts. */
-    private var messagesJob: Job? = null
+    /**
+     * The game's chat; a refresh keeps the older pages already read. A failed
+     * first page is shown with Retry, and an older page's failure is said.
+     */
+    val chat = GameChat(
+        scope = viewModelScope,
+        fetch = { before ->
+            // The newest page holds up to 100 rows; older pages the server's default.
+            val page = repository.getMessages(gameId, before = before, limit = if (before == null) 100 else null)
+            GameChatPage(page.messages, page.more == true, page.cursor)
+        },
+        post = { body -> repository.sendMessage(gameId, body) },
+        key = { row -> row.id },
+        created = { row -> row.created },
+        match = ::messageKey,
+        report = { error -> _uiState.update { it.copy(transientToast = error.userMessage()) } },
+    )
 
     private var resumedBefore = false
 
@@ -248,73 +258,16 @@ class WordsGameViewModel @Inject constructor(
     }
 
     /** Fetch the newest page of messages now, cancelling any pending fetch. */
-    fun loadMessages() {
-        messagesJob?.cancel()
-        messagesJob = viewModelScope.launch {
-            fetchMessages()
-        }
-    }
+    fun loadMessages() = chat.load()
 
     /**
      * Refetch the newest page of messages in the background, after
-     * [REFRESH_DEBOUNCE], cancelling the previous fetch.
+     * [REFRESH_DEBOUNCE], cancelling the previous fetch. It folds into the
+     * pages already read rather than replacing them.
      */
-    private fun refreshMessages() {
-        messagesJob?.cancel()
-        messagesJob = viewModelScope.launch {
-            delay(REFRESH_DEBOUNCE)
-            fetchMessages()
-        }
-    }
+    private fun refreshMessages() = chat.refresh()
 
-    private suspend fun fetchMessages() {
-        _uiState.update { it.copy(isLoadingMessages = true) }
-        try {
-            val response = repository.getMessages(gameId, before = null, limit = 100)
-            // Server returns newest-first; render oldest-first.
-            val ordered = response.messages.sortedBy { it.created }
-            _uiState.update {
-                it.copy(
-                    messages = ordered,
-                    isLoadingMessages = false,
-                    hasMoreMessages = response.more == true,
-                    nextMessageCursor = response.cursor,
-                )
-            }
-        } catch (e: CancellationException) {
-            throw e
-        } catch (e: Exception) {
-            Log.d(TAG, "Message load failed", e)
-            _uiState.update { it.copy(isLoadingMessages = false) }
-        }
-    }
-
-    fun loadMoreMessages() {
-        val current = _uiState.value
-        if (current.isLoadingMoreMessages || !current.hasMoreMessages) return
-        val cursor = current.nextMessageCursor ?: return
-        viewModelScope.launch {
-            _uiState.update { it.copy(isLoadingMoreMessages = true, messagesError = false) }
-            try {
-                val response = repository.getMessages(gameId, before = cursor)
-                _uiState.update {
-                    it.copy(
-                        isLoadingMoreMessages = false,
-                        messages = (response.messages + it.messages)
-                            .distinctBy { message -> message.id }
-                            .sortedBy { message -> message.created },
-                        hasMoreMessages = response.more == true,
-                        nextMessageCursor = response.cursor,
-                    )
-                }
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                Log.d(TAG, "Older messages failed to load", e)
-                _uiState.update { it.copy(isLoadingMoreMessages = false, messagesError = true) }
-            }
-        }
-    }
+    fun loadMoreMessages() = chat.loadMore()
 
     // ─── WebSocket bridge ──────────────────────────────────────────────
 
@@ -331,19 +284,9 @@ class WordsGameViewModel @Inject constructor(
             }
             "message" -> {
                 if (message != null) {
-                    // The frame carries no id, and a synthesised one both
-                    // misses the REST uid and collides within a second, so
-                    // dedupe on content.
-                    _uiState.update { state ->
-                        state.copy(
-                            messages = mergeMessage(
-                                state.messages,
-                                message,
-                                key = ::messageKey,
-                                created = { row -> row.created },
-                            ),
-                        )
-                    }
+                    // Keyed by the stored row's id, which the frame carries;
+                    // an older server's row stands in until the page brings it.
+                    chat.receive(message)
                 } else {
                     refreshMessages()
                 }
@@ -351,7 +294,10 @@ class WordsGameViewModel @Inject constructor(
         }
     }
 
-    /** Content key for chat dedupe; see [onWebsocketEvent]. */
+    /**
+     * A row's content, matching an older server's frame, which carries no id,
+     * to the stored row that replaces it. Rows are keyed by their ids.
+     */
     private fun messageKey(message: GameMessage): String =
         "${message.created}|${message.body}|${message.name}|${message.type}"
 
@@ -771,27 +717,12 @@ class WordsGameViewModel @Inject constructor(
 
     /**
      * [onFinished] reports whether the send succeeded, so the composer clears
-     * the draft only then.
+     * the draft only then; a failure is said, as every other action's is.
      */
-    fun sendChatMessage(
-        body: String,
-        onError: (MochiError) -> Unit = {},
-        onFinished: (Boolean) -> Unit = {},
-    ) {
-        val trimmed = body.trim()
-        if (trimmed.isEmpty()) {
-            onFinished(false)
-            return
-        }
-        viewModelScope.launch {
-            try {
-                repository.sendMessage(gameId, trimmed)
-                refreshMessages()
-                onFinished(true)
-            } catch (e: Exception) {
-                onError(e.toMochiError())
-                onFinished(false)
-            }
+    fun sendChatMessage(body: String, onFinished: (Boolean) -> Unit = {}) {
+        chat.send(body) { error ->
+            if (error != null) _uiState.update { it.copy(transientToast = error.userMessage()) }
+            onFinished(error == null)
         }
     }
 

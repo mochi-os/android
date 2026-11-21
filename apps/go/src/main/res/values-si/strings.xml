@@ -81,4 +81,6 @@
     <string name="go_score_resume">ක්‍රීඩාව නැවත ආරම්භ කරන්න</string>
     <string name="go_error_score_resume_failed">ක්‍රීඩාව නැවත ආරම්භ කිරීමට අසමත් විය</string>
     <string name="go_error_score_accept_failed">ලකුණු පිළිගැනීමට අසමත් විය</string>
+    <string name="go_chat_player_passed">%1$s මගහැරියා</string>
+    <string name="go_chat_you_passed">ඔබ මඟහැරියා</string>
 </resources>

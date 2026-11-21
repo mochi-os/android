@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Lokið</string>
     <string name="chat_encryption_key">Endurheimtarlykill</string>
     <string name="chat_encryption_restore">Endurheimta</string>
-    <string name="chat_encryption_recovery_refused">Þetta er ekki endurheimtarlykillinn þinn</string>
     <string name="chat_verification_own">Sannprófa tækið þitt</string>
     <string name="chat_verification_compare">Gakktu úr skugga um að sömu tjáningartákn birtist á hinum skjánum.</string>
     <string name="chat_verification_requested_own">Annað af tækjunum þínum vill sannprófa þetta tæki.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s vill sannprófa þig.</string>
     <string name="chat_typing_one">%1$s er að skrifa...</string>
     <string name="chat_typing_many">%1$s eru að skrifa...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s svar</item>
-        <item quantity="other">%1$s svör</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s eldra svar</item>
         <item quantity="other">%1$s eldri svör</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Skilaboð frá því áður en þessum aðgangi var bætt við Mochi eru dulkóðuð og ekki er hægt að lesa þau hér</string>
     <string name="chat_message_excluded">Aðeins dulkóðuð fyrir önnur tæki</string>
     <string name="chat_setup">Setja upp</string>
+    <string name="chat_jump_bottom">Fara neðst</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Fara í %1$s ný skilaboð</item>
+        <item quantity="other">Fara í %1$s ný skilaboð</item>
+    </plurals>
+    <string name="chat_message_distrusted">Sent úr tæki sem þú vantreystir</string>
+    <string name="chat_message_mismatched">Sent úr tæki þar sem lyklarnir passa ekki</string>
+    <string name="chat_list_select">Veldu spjall</string>
+    <string name="chat_message_discard">Henda</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Skilaboðin eru %1$s staf of löng</item>
+        <item quantity="other">Skilaboðin eru %1$s stöfum of löng</item>
+    </plurals>
 </resources>

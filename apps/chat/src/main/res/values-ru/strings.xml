@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Готово</string>
     <string name="chat_encryption_key">Ключ восстановления</string>
     <string name="chat_encryption_restore">Восстановить</string>
-    <string name="chat_encryption_recovery_refused">Это не ваш ключ восстановления</string>
     <string name="chat_verification_own">Подтверждение вашего устройства</string>
     <string name="chat_verification_compare">Убедитесь, что на другом экране появились те же эмодзи.</string>
     <string name="chat_verification_requested_own">Другое ваше устройство хочет подтвердить это.</string>
@@ -160,12 +159,6 @@
     <string name="chat_verification_requested">%1$s хочет подтвердить вас.</string>
     <string name="chat_typing_one">%1$s печатает...</string>
     <string name="chat_typing_many">%1$s печатают...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s ответ</item>
-        <item quantity="few">%1$s ответа</item>
-        <item quantity="many">%1$s ответов</item>
-        <item quantity="other">%1$s ответа</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s более ранний ответ</item>
         <item quantity="few">%1$s более ранних ответа</item>
@@ -187,4 +180,21 @@
     <string name="chat_message_earlier">Сообщения, отправленные до добавления этого аккаунта в Mochi, зашифрованы и не могут быть прочитаны здесь</string>
     <string name="chat_message_excluded">Зашифровано только для других устройств</string>
     <string name="chat_setup">Настроить</string>
+    <string name="chat_jump_bottom">Перейти вниз</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Перейти к %1$s новому сообщению</item>
+        <item quantity="few">Перейти к %1$s новым сообщениям</item>
+        <item quantity="many">Перейти к %1$s новым сообщениям</item>
+        <item quantity="other">Перейти к %1$s новым сообщениям</item>
+    </plurals>
+    <string name="chat_message_distrusted">Отправлено с устройства, которому вы не доверяете</string>
+    <string name="chat_message_mismatched">Отправлено с устройства, ключи которого не совпадают</string>
+    <string name="chat_list_select">Выберите чат</string>
+    <string name="chat_message_discard">Отменить</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Сообщение длиннее допустимого на %1$s символ</item>
+        <item quantity="few">Сообщение длиннее допустимого на %1$s символа</item>
+        <item quantity="many">Сообщение длиннее допустимого на %1$s символов</item>
+        <item quantity="other">Сообщение длиннее допустимого на %1$s символа</item>
+    </plurals>
 </resources>

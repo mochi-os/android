@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -49,6 +48,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -61,7 +61,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -76,13 +75,14 @@ import com.github.bhlangonijr.chesslib.Board
 import com.github.bhlangonijr.chesslib.Side
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.VisibleEntityEffect
 import org.mochios.android.ui.components.ErrorState
-import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
+import org.mochios.android.ui.components.GameChatColumn
 import org.mochios.android.ui.components.GameChatMessage
-import org.mochios.android.ui.components.GameChatPanel
+import org.mochios.android.ui.components.GameChatState
 import org.mochios.android.ui.components.GameStatusBar
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameTopBarTitle
@@ -96,8 +96,10 @@ import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiSheetHeader
+import org.mochios.android.ui.components.MissingGame
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.rememberReopened
 import org.mochios.android.ui.components.StoneColor
 import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.StreamWsStatus
@@ -109,7 +111,6 @@ import org.mochios.chess.model.opponentAvatarUrl
 import org.mochios.chess.navigation.ChessApp
 import org.mochios.chess.ui.detail.board.CapturedPiecesStrip
 import org.mochios.chess.ui.detail.board.ChessBoard
-import org.mochios.chess.ui.detail.board.capturedPiecesFromFen
 import org.mochios.chess.ui.router.CHESS_FEATURE
 import org.mochios.android.R as MochiR
 
@@ -127,7 +128,11 @@ fun ChessGameDetailScreen(
 ) {
 
     val state by viewModel.uiState.collectAsState()
+    val chat by viewModel.chat.state.collectAsState()
     val context = LocalContext.current
+    val reopened = rememberReopened(CHESS_FEATURE, viewModel.gameId)
+    // One draft for the side panel and the phone's sheet, kept across both.
+    val draft = rememberSaveable { mutableStateOf("") }
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
 
@@ -220,7 +225,7 @@ fun ChessGameDetailScreen(
     // The server does not reliably record a winner on a resignation, and the
     // status would then tell whoever did not resign that they had. The system
     // row names the player who did, so it decides when it is loaded.
-    val resignedBy = state.messages.lastOrNull { message ->
+    val resignedBy = chat.messages.lastOrNull { message ->
         message.type == "system" && message.event == "resign"
     }?.member
     val statusText = if (game != null) {
@@ -296,6 +301,16 @@ fun ChessGameDetailScreen(
         ) {
             when {
                 state.isLoading && game == null -> LoadingState()
+                state.error is MochiError.NotFoundError && game == null -> MissingGame(
+                    feature = CHESS_FEATURE,
+                    id = viewModel.gameId,
+                    reopened = reopened,
+                    onEmpty = {
+                        navController.navigate(ChessApp.gameDetail(LastViewedStore.ALL)) {
+                            popUpTo(ChessApp.GAME) { inclusive = true }
+                        }
+                    },
+                )
                 state.error != null && game == null -> ErrorState(
                     message = state.error?.userMessage()
                         ?: stringResource(MochiR.string.error_unexpected),
@@ -305,6 +320,8 @@ fun ChessGameDetailScreen(
                 else -> {
                     GameContent(
                         state = state,
+                        chat = chat,
+                        draft = draft,
                         game = game,
                         myIdentity = myIdentity,
                         myColor = myColor,
@@ -315,6 +332,7 @@ fun ChessGameDetailScreen(
                         onDeclineDraw = viewModel::declineDraw,
                         onSendChat = viewModel::sendChat,
                         onLoadMoreChat = viewModel::loadMoreOlder,
+                        onRetryChat = viewModel.chat::load,
                         wsStatus = controller?.status?.collectAsState(initial = StreamWsStatus.CONNECTING)?.value,
                     )
                 }
@@ -364,14 +382,16 @@ fun ChessGameDetailScreen(
                 MochiSheetHeader(
                     title = stringResource(R.string.chess_chat_title),
                 )
-                ChatPanel(
-                    state = state,
-                    myIdentity = state.identity,
-                    onSend = { body ->
-                        viewModel.sendChat(body)
-                    },
+                GameChatColumn(
+                    chat = chat,
+                    message = GameMessage::toChatMessage,
+                    currentUserIdentity = state.identity,
                     onLoadMore = viewModel::loadMoreOlder,
+                    onRetry = viewModel.chat::load,
+                    onSend = viewModel::sendChat,
                     modifier = Modifier.weight(1f),
+                    draft = draft,
+                    moveMessageRenderer = { msg, isSent -> { ChessMoveRow(msg, isSent) } },
                 )
             }
         }
@@ -383,6 +403,8 @@ fun ChessGameDetailScreen(
 @Composable
 private fun GameContent(
     state: ChessGameUiState,
+    chat: GameChatState<GameMessage>,
+    draft: MutableState<String>,
     game: Game,
     myIdentity: String,
     myColor: Char,
@@ -391,8 +413,9 @@ private fun GameContent(
     onMove: (String, String, String?) -> Unit,
     onAcceptDraw: () -> Unit,
     onDeclineDraw: () -> Unit,
-    onSendChat: (String) -> Unit,
+    onSendChat: (String, (Boolean) -> Unit) -> Unit,
     onLoadMoreChat: () -> Unit,
+    onRetryChat: () -> Unit,
     wsStatus: StreamWsStatus?,
 ) {
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
@@ -427,13 +450,17 @@ private fun GameContent(
                         ),
                 ) {
                     ChatHeader(wsStatus = wsStatus)
-                    ChatPanel(
-                        state = state,
-                        myIdentity = myIdentity,
-                        onSend = onSendChat,
+                    GameChatColumn(
+                        chat = chat,
+                        message = GameMessage::toChatMessage,
+                        currentUserIdentity = myIdentity,
                         onLoadMore = onLoadMoreChat,
+                        onRetry = onRetryChat,
+                        onSend = onSendChat,
                         modifier = Modifier.weight(1f),
+                        draft = draft,
                         composerWindowInsets = ComposeBarDefaults.WindowInsets,
+                        moveMessageRenderer = { msg, isSent -> { ChessMoveRow(msg, isSent) } },
                     )
                 }
             }
@@ -468,8 +495,7 @@ private fun BoardPane(
 ) {
     val opponentName = game.opponentName(myIdentity)
 
-    val capturedPair = remember(game.fen) { capturedPiecesFromFen(game.fen) }
-    val (capturedByWhite, capturedByBlack) = capturedPair
+    val (capturedByWhite, capturedByBlack) = state.captured
     val capturedByMe = if (myColor == 'w') capturedByWhite else capturedByBlack
     val capturedByOpponent = if (myColor == 'w') capturedByBlack else capturedByWhite
 
@@ -726,76 +752,15 @@ private fun ChatHeader(wsStatus: StreamWsStatus?) {
 }
 
 @Composable
-private fun ChatPanel(
-    state: ChessGameUiState,
-    myIdentity: String,
-    onSend: (String) -> Unit,
-    onLoadMore: () -> Unit,
-    modifier: Modifier = Modifier,
-    // Which host is showing this panel decides who lifts the composer for the
-    // keyboard. The default suits the phone's sheet, which lifts its own
-    // content; the tablet's side panel sits in the screen body and has to ask.
-    composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
-) {
-    var draft by rememberSaveable { mutableStateOf("") }
-
-    Column(modifier = modifier.fillMaxSize()) {
-        val mapped = remember(state.messages) {
-            state.messages.map { m ->
-                GameChatMessage(
-                    id = m.id,
-                    game = m.game,
-                    member = m.member,
-                    name = m.name,
-                    body = m.body,
-                    type = m.type,
-                    event = m.event,
-                    created = m.created,
-                )
-            }
-        }
-        GameChatPanel(
-            messages = mapped,
-            currentUserIdentity = myIdentity,
-            isLoading = state.isLoading,
-            hasMore = state.hasMore,
-            isLoadingMore = state.isLoadingMore,
-            onLoadMore = onLoadMore,
-            modifier = Modifier.weight(1f),
-            moveMessageRenderer = { msg, isSent -> { ChessMoveRow(msg, isSent) } },
-            systemMessageRenderer = { msg -> { ChessSystemRow(msg) } },
-        )
-        ComposeBar(
-            value = draft,
-            onValueChange = { draft = it },
-            onSend = {
-                val toSend = draft.trim()
-                if (toSend.isNotEmpty()) {
-                    onSend(toSend)
-                    draft = ""
-                }
-            },
-            isSending = state.isSendingChat,
-            placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
-            sendLabel = stringResource(MochiR.string.game_chat_send),
-            // One line, and the keyboard's action key sends: a game chat
-            // message is a sentence, not a comment body.
-            maxLines = 1,
-            sendOnImeAction = true,
-            windowInsets = composerWindowInsets,
-        )
-    }
-}
-
-@Composable
 private fun ChessMoveRow(message: GameChatMessage, isSent: Boolean) {
     val san = message.body
     val isCapture = san.contains('x')
-    val subject = if (isSent) stringResource(R.string.chess_move_subject_you) else message.name
-    val text = if (isCapture) {
-        stringResource(R.string.chess_move_capture, subject, san)
-    } else {
-        stringResource(R.string.chess_move_played, subject, san)
+    // Separate sentences for the viewer: the verb agrees with its subject.
+    val text = when {
+        isSent && isCapture -> stringResource(R.string.chess_move_capture_you, san)
+        isSent -> stringResource(R.string.chess_move_played_you, san)
+        isCapture -> stringResource(R.string.chess_move_capture, message.name, san)
+        else -> stringResource(R.string.chess_move_played, message.name, san)
     }
     Row(
         modifier = Modifier.fillMaxWidth().padding(vertical = 1.dp),
@@ -805,34 +770,6 @@ private fun ChessMoveRow(message: GameChatMessage, isSent: Boolean) {
             text = text,
             style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-            textAlign = TextAlign.Center,
-        )
-    }
-}
-
-@Composable
-private fun ChessSystemRow(message: GameChatMessage) {
-    // Localise per viewer from the structured event kind; legacy rows (no
-    // event) fall back to the server-stored English body. Mirrors web's
-    // chat-message-list system branch.
-    val text = when (message.event) {
-        "resign" -> stringResource(MochiR.string.game_system_resign, message.name)
-        "draw_offer" -> stringResource(MochiR.string.game_system_draw_offer, message.name)
-        "draw_accept" -> stringResource(MochiR.string.game_system_draw_accept)
-        "draw_decline" -> stringResource(MochiR.string.game_system_draw_decline, message.name)
-        else -> message.body
-    }
-    Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 2.dp),
-        horizontalArrangement = Arrangement.Center,
-    ) {
-        Text(
-            text = text,
-            style = MaterialTheme.typography.labelSmall.copy(
-                fontSize = 11.sp,
-                fontStyle = FontStyle.Italic,
-            ),
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center,
         )
     }
@@ -907,3 +844,14 @@ private fun EmptyState() {
 
 /** Board width cap, matching go and words so every board reads the same size. */
 private val BOARD_MAX_WIDTH = 560.dp
+
+private fun GameMessage.toChatMessage(): GameChatMessage = GameChatMessage(
+    id = id,
+    game = game,
+    member = member,
+    name = name,
+    body = body,
+    type = type,
+    event = event,
+    created = created,
+)

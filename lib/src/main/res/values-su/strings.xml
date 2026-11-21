@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Tacan aya pesen</string>
     <string name="game_chat_input_placeholder">Ketik pesen</string>
     <string name="game_chat_send">Kirim pesen</string>
-    <string name="game_chat_subject_you">Anjeun</string>
 
     <string name="common_not_saved">Teu disimpen</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Dirobih di server</string>
     <string name="sync_missing">Tos teu aya di server</string>
     <string name="sync_refused">Ditolak ku server</string>
+    <string name="game_system_score_agreed">Skor disatujuan</string>
+    <string name="game_system_score_accept">%1$s narima skor</string>
+    <string name="game_system_score_resume">%1$s neruskeun kaulinan</string>
+    <string name="game_not_found">Kaulinan teu kapendak</string>
+    <string name="game_chat_move_played_you">Anjeun maén %1$s</string>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">เล่นต่อ</string>
     <string name="go_error_score_resume_failed">ไม่สามารถเล่นต่อได้</string>
     <string name="go_error_score_accept_failed">ไม่สามารถยอมรับคะแนนได้</string>
+    <string name="go_chat_player_passed">%1$s ข้ามตา</string>
+    <string name="go_chat_you_passed">คุณผ่าน</string>
 </resources>

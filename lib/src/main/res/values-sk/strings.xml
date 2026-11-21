@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Zatiaľ žiadne správy</string>
     <string name="game_chat_input_placeholder">Napíšte správu</string>
     <string name="game_chat_send">Odoslať správu</string>
-    <string name="game_chat_subject_you">Vy</string>
 
     <string name="common_not_saved">Neuložené</string>
     <string name="app_brand">Mochi</string>
@@ -353,4 +352,9 @@
     <string name="sync_conflict">Zmenené na serveri</string>
     <string name="sync_missing">Už nie je na serveri</string>
     <string name="sync_refused">Odmietnuté serverom</string>
+    <string name="game_system_score_agreed">Skóre odsúhlasené</string>
+    <string name="game_system_score_accept">%1$s prijal skóre</string>
+    <string name="game_system_score_resume">%1$s pokračoval v hre</string>
+    <string name="game_not_found">Hra sa nenašla</string>
+    <string name="game_chat_move_played_you">Hrali ste %1$s</string>
 </resources>

@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Încă nu există partide.</string>
     <string name="words_new_game_choose_opponents">Alegeți adversari</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s jucători</string>
     <string name="words_new_game_no_friends_subtitle">Adăugați prieteni în aplicația Persoane pentru a începe să jucați.</string>
     <string name="words_detail_title">Partidă</string>
     <string name="words_detail_status_opponent_move">Tura lui %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s câștigă</string>
     <string name="words_detail_player_fallback">Jucător %1$s</string>
-    <string name="words_detail_player_count">%1$s jucători</string>
-    <string name="words_detail_label_tiles_left">%1$s piese rămase</string>
     <string name="words_detail_action_open_chat">Deschide chat</string>
     <string name="words_detail_action_more">Acțiuni partidă</string>
     <string name="words_detail_exchange_count">Schimbă (%1$s)</string>
@@ -71,4 +68,21 @@
     <string name="words_move_error_no_words">Niciun cuvânt valid format</string>
     <string name="words_validation_offline">Validare offline — poți totuși să trimiți.</string>
     <string name="words_validation_unknown_words">Conține cuvinte necunoscute. Poți totuși să trimiți.</string>
+    <string name="words_detail_label_tiles">Piese rămase</string>
+    <string name="words_detail_submit_score">Trimite +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">CT</string>
+    <string name="words_board_premium_double_word">CD</string>
+    <string name="words_board_premium_triple_letter">LT</string>
+    <string name="words_board_premium_double_letter">LD</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s jucător</item>
+        <item quantity="few">%1$s jucători</item>
+        <item quantity="other">%1$s de jucători</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s jucător</item>
+        <item quantity="few">%1$s jucători</item>
+        <item quantity="other">%1$s de jucători</item>
+    </plurals>
 </resources>

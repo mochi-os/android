@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Imekamilika</string>
     <string name="chat_encryption_key">Ufunguo wa kurejesha</string>
     <string name="chat_encryption_restore">Rejesha</string>
-    <string name="chat_encryption_recovery_refused">Huu si ufunguo wako wa kurejesha</string>
     <string name="chat_verification_own">Thibitisha kifaa chako</string>
     <string name="chat_verification_compare">Hakikisha kuwa emoji zilezile zinaonekana kwenye skrini nyingine.</string>
     <string name="chat_verification_requested_own">Kifaa chako kingine kinataka kuthibitisha hiki.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s anataka kukuthibitisha.</string>
     <string name="chat_typing_one">%1$s anaandika...</string>
     <string name="chat_typing_many">%1$s wanaandika...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">Jibu %1$s</item>
-        <item quantity="other">Majibu %1$s</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">Jibu %1$s la awali</item>
         <item quantity="other">Majibu %1$s ya awali</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Ujumbe wa kabla akaunti hii kuongezwa kwenye Mochi umesimbwa kwa njia fiche na hauwezi kusomwa hapa</string>
     <string name="chat_message_excluded">Imesimbwa kwa njia fiche kwa vifaa vingine pekee</string>
     <string name="chat_setup">Sanidi</string>
+    <string name="chat_jump_bottom">Nenda chini</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Nenda kwenye ujumbe %1$s mpya</item>
+        <item quantity="other">Nenda kwenye jumbe %1$s mpya</item>
+    </plurals>
+    <string name="chat_message_distrusted">Imetumwa kutoka kwa kifaa usichokiamini</string>
+    <string name="chat_message_mismatched">Imetumwa kutoka kwa kifaa ambacho funguo zake hazilingani</string>
+    <string name="chat_list_select">Chagua mazungumzo</string>
+    <string name="chat_message_discard">Tupa</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Ujumbe umezidi kwa herufi %1$s</item>
+        <item quantity="other">Ujumbe umezidi kwa herufi %1$s</item>
+    </plurals>
 </resources>

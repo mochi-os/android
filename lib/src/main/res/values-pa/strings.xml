@@ -117,7 +117,6 @@
     <string name="game_chat_empty">ਅਜੇ ਕੋਈ ਸੁਨੇਹੇ ਨਹੀਂ</string>
     <string name="game_chat_input_placeholder">ਸੁਨੇਹਾ ਟਾਈਪ ਕਰੋ</string>
     <string name="game_chat_send">ਸੁਨੇਹਾ ਭੇਜੋ</string>
-    <string name="game_chat_subject_you">ਤੁਸੀਂ</string>
 
     <string name="common_not_saved">ਸੰਭਾਲਿਆ ਨਹੀਂ ਗਿਆ</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">ਸਰਵਰ ਉੱਤੇ ਬਦਲਿਆ ਗਿਆ</string>
     <string name="sync_missing">ਹੁਣ ਸਰਵਰ ਉੱਤੇ ਨਹੀਂ ਹੈ</string>
     <string name="sync_refused">ਸਰਵਰ ਨੇ ਅਸਵੀਕਾਰ ਕੀਤਾ</string>
+    <string name="game_system_score_agreed">ਸਕੋਰ \'ਤੇ ਸਹਿਮਤੀ ਹੋਈ</string>
+    <string name="game_system_score_accept">%1$s ਨੇ ਸਕੋਰ ਸਵੀਕਾਰ ਕੀਤਾ</string>
+    <string name="game_system_score_resume">%1$s ਨੇ ਖੇਡ ਮੁੜ ਸ਼ੁਰੂ ਕੀਤੀ</string>
+    <string name="game_not_found">ਖੇਡ ਨਹੀਂ ਮਿਲੀ</string>
+    <string name="game_chat_move_played_you">ਤੁਸੀਂ %1$s ਖੇਡਿਆ</string>
 </resources>

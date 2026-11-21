@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Engin skilaboð ennþá</string>
     <string name="game_chat_input_placeholder">Skrifaðu skilaboð</string>
     <string name="game_chat_send">Senda skilaboð</string>
-    <string name="game_chat_subject_you">Þú</string>
 
     <string name="common_not_saved">Ekki vistað</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Breytt á þjóninum</string>
     <string name="sync_missing">Ekki lengur á þjóninum</string>
     <string name="sync_refused">Þjónninn hafnaði</string>
+    <string name="game_system_score_agreed">Samið um stig</string>
+    <string name="game_system_score_accept">%1$s samþykkti stigin</string>
+    <string name="game_system_score_resume">%1$s hélt leik áfram</string>
+    <string name="game_not_found">Leikur fannst ekki</string>
+    <string name="game_chat_move_played_you">Þú lékst %1$s</string>
 </resources>

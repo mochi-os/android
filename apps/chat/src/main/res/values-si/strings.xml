@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">නිමයි</string>
     <string name="chat_encryption_key">ප්‍රතිසාධන යතුර</string>
     <string name="chat_encryption_restore">ප්‍රතිසාධනය කරන්න</string>
-    <string name="chat_encryption_recovery_refused">මෙය ඔබගේ ප්‍රතිසාධන යතුර නොවේ</string>
     <string name="chat_verification_own">ඔබගේ උපාංගය සත්‍යාපනය කරන්න</string>
     <string name="chat_verification_compare">අනෙක් තිරයේද එම ඉමොජි දිස්වන්නේදැයි පරීක්ෂා කරන්න.</string>
     <string name="chat_verification_requested_own">ඔබගේ වෙනත් උපාංගයක් මෙය සත්‍යාපනය කිරීමට කැමතියි.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s ඔබව සත්‍යාපනය කිරීමට කැමතියි.</string>
     <string name="chat_typing_one">%1$s ටයිප් කරමින් සිටී...</string>
     <string name="chat_typing_many">%1$s ටයිප් කරමින් සිටිති...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s පිළිතුර</item>
-        <item quantity="other">%1$s පිළිතුරු</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s පෙර පිළිතුර</item>
         <item quantity="other">%1$s පෙර පිළිතුරු</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">මෙම ගිණුම Mochi වෙත එක් කිරීමට පෙර පණිවිඩ සංකේතනය කර ඇති අතර ඒවා මෙහි කියවිය නොහැක</string>
     <string name="chat_message_excluded">වෙනත් උපාංග සඳහා පමණක් සංකේතනය කර ඇත</string>
     <string name="chat_setup">සකසන්න</string>
+    <string name="chat_jump_bottom">පහළටම යන්න</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">නව පණිවිඩ %1$sක් වෙත යන්න</item>
+        <item quantity="other">නව පණිවිඩ %1$sක් වෙත යන්න</item>
+    </plurals>
+    <string name="chat_message_distrusted">ඔබ විශ්වාස නොකළ උපාංගයකින් යවන ලදී</string>
+    <string name="chat_message_mismatched">යතුරු නොගැළපෙන උපාංගයකින් යවන ලදී</string>
+    <string name="chat_list_select">කතාබහක් තෝරන්න</string>
+    <string name="chat_message_discard">ඉවත ලන්න</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">පණිවිඩය අකුරු %1$s කින් දිග වැඩියි</item>
+        <item quantity="other">පණිවිඩය අකුරු %1$s කින් දිග වැඩියි</item>
+    </plurals>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Бозиро идома додан</string>
     <string name="go_error_score_resume_failed">Идома додани бозӣ ба анҷом нарасид</string>
     <string name="go_error_score_accept_failed">Қабули натиҷа ба анҷом нарасид</string>
+    <string name="go_chat_player_passed">%1$s гузашт</string>
+    <string name="go_chat_you_passed">Шумо гузаштед</string>
 </resources>

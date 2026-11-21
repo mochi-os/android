@@ -272,9 +272,9 @@ fun GoBoard(
                 // uses a ring).
                 if (lastMove != null) {
                     val (lr, lc) = lastMove
-                    // The stone check matters: lastMove is never cleared, so
-                    // once a reply captures that stone the marker would sit on
-                    // a bare intersection. Web guards the same way.
+                    // lastMove comes from the game's record, which names only
+                    // points holding its stone; the check keeps any other
+                    // caller's marker off a bare intersection too.
                     val stillThere = lr in 0 until size && lc in 0 until size &&
                         game.getStone(lr, lc) != GoGame.EMPTY
                     if (stillThere) {

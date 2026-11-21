@@ -26,7 +26,6 @@
     <string name="settings_radius_none">Keine</string>
     <string name="settings_background_off">Keine</string>
     <string name="settings_title">Einstellungen</string>
-    <string name="game_chat_subject_you">Du</string>
     <string name="auth_privacy_public">Öffentlich</string>
     <string name="auth_privacy_private">Privat</string>
     <string name="common_notifications">Benachrichtigungen</string>

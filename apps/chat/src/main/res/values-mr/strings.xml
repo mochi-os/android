@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">पूर्ण</string>
     <string name="chat_encryption_key">रिकव्हरी की</string>
     <string name="chat_encryption_restore">पुनर्संचयित करा</string>
-    <string name="chat_encryption_recovery_refused">ही तुमची रिकव्हरी की नाही</string>
     <string name="chat_verification_own">तुमचे डिव्हाइस पडताळा</string>
     <string name="chat_verification_compare">दुसऱ्या स्क्रीनवर तेच इमोजी दिसत आहेत का ते तपासा.</string>
     <string name="chat_verification_requested_own">तुमच्या इतर डिव्हाइसपैकी एकाला हे डिव्हाइस पडताळायचे आहे.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s तुम्हाला पडताळू इच्छितात.</string>
     <string name="chat_typing_one">%1$s टाइप करत आहे...</string>
     <string name="chat_typing_many">%1$s टाइप करत आहेत...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s उत्तर</item>
-        <item quantity="other">%1$s उत्तरे</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s आधीचे उत्तर</item>
         <item quantity="other">%1$s आधीची उत्तरे</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">हे खाते Mochi मध्ये जोडण्यापूर्वीचे मेसेज एन्क्रिप्ट केलेले आहेत आणि ते येथे वाचता येत नाहीत</string>
     <string name="chat_message_excluded">फक्त इतर डिव्हाइससाठी एन्क्रिप्ट केलेला</string>
     <string name="chat_setup">सेट अप करा</string>
+    <string name="chat_jump_bottom">तळाशी जा</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s नवीन संदेशावर जा</item>
+        <item quantity="other">%1$s नवीन संदेशांवर जा</item>
+    </plurals>
+    <string name="chat_message_distrusted">तुम्ही विश्वास न ठेवलेल्या डिव्हाइसवरून पाठवले</string>
+    <string name="chat_message_mismatched">की जुळत नसलेल्या डिव्हाइसवरून पाठवले</string>
+    <string name="chat_list_select">चॅट निवडा</string>
+    <string name="chat_message_discard">टाकून द्या</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">संदेश %1$s वर्णाने जास्त लांब आहे</item>
+        <item quantity="other">संदेश %1$s वर्णांनी जास्त लांब आहे</item>
+    </plurals>
 </resources>

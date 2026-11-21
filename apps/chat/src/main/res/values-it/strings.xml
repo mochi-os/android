@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Fatto</string>
     <string name="chat_encryption_key">Chiave di recupero</string>
     <string name="chat_encryption_restore">Ripristina</string>
-    <string name="chat_encryption_recovery_refused">Questa non è la tua chiave di recupero</string>
     <string name="chat_verification_own">Verifica il tuo dispositivo</string>
     <string name="chat_verification_compare">Controlla che sull\'altro schermo compaiano le stesse emoji.</string>
     <string name="chat_verification_requested_own">Un altro dei tuoi dispositivi vuole verificare questo.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s vuole verificarti.</string>
     <string name="chat_typing_one">%1$s sta scrivendo...</string>
     <string name="chat_typing_many">%1$s stanno scrivendo...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s risposta</item>
-        <item quantity="other">%1$s risposte</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s risposta precedente</item>
         <item quantity="other">%1$s risposte precedenti</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">I messaggi precedenti all\'aggiunta di questo account a Mochi sono crittografati e non possono essere letti qui</string>
     <string name="chat_message_excluded">Crittografato solo per altri dispositivi</string>
     <string name="chat_setup">Configura</string>
+    <string name="chat_jump_bottom">Vai in fondo</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Vai a %1$s nuovo messaggio</item>
+        <item quantity="other">Vai a %1$s nuovi messaggi</item>
+    </plurals>
+    <string name="chat_message_distrusted">Inviato da un dispositivo che hai segnato come non attendibile</string>
+    <string name="chat_message_mismatched">Inviato da un dispositivo le cui chiavi non corrispondono</string>
+    <string name="chat_list_select">Seleziona una chat</string>
+    <string name="chat_message_discard">Scarta</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Il messaggio supera il limite di %1$s carattere</item>
+        <item quantity="other">Il messaggio supera il limite di %1$s caratteri</item>
+    </plurals>
 </resources>

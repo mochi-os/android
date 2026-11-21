@@ -32,7 +32,7 @@ class ReconnectNowTest {
         server = MockWebServer()
         repeat(8) { server.enqueue(MockResponse().setResponseCode(503)) }
         server.start()
-        socket = MochiWebSocket(OkHttpClient(), Gson(), NoSession)
+        socket = MochiWebSocket(OkHttpClient(), Gson(), NoSession, deliver = Runnable::run)
     }
 
     @After

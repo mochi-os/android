@@ -14,7 +14,6 @@
     <string name="words_new_game_title">新對局</string>
     <string name="words_new_game_choose_opponents">揀對手</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s 個玩家</string>
     <string name="words_new_game_language">語言</string>
     <string name="words_new_game_language_uk">英文(英式)</string>
     <string name="words_new_game_language_us">英文(美式)</string>
@@ -31,8 +30,6 @@
     <string name="words_detail_status_opponent_resigned">對手認輸 — 你贏咗!</string>
     <string name="words_detail_status_you_resigned">你認咗輸</string>
     <string name="words_detail_player_fallback">玩家 %1$s</string>
-    <string name="words_detail_player_count">%1$s 個玩家</string>
-    <string name="words_detail_label_tiles_left">仲有 %1$s 個字母</string>
     <string name="words_detail_action_shuffle">重排字母架</string>
     <string name="words_detail_action_pass">略過</string>
     <string name="words_detail_action_exchange">換字母</string>
@@ -70,4 +67,17 @@
     <string name="words_move_error_no_words">砌唔到有效嘅字</string>
     <string name="words_validation_offline">驗證離線 — 你仍然可以提交。</string>
     <string name="words_validation_unknown_words">包含未知詞語。你仍然可以提交。</string>
+    <string name="words_detail_label_tiles">剩餘字母</string>
+    <string name="words_detail_submit_score">提交 +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">三倍詞</string>
+    <string name="words_board_premium_double_word">雙倍詞</string>
+    <string name="words_board_premium_triple_letter">三倍字</string>
+    <string name="words_board_premium_double_letter">雙倍字</string>
+    <plurals name="words_new_game_players">
+        <item quantity="other">%1$s 個玩家</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="other">%1$s 個玩家</item>
+    </plurals>
 </resources>

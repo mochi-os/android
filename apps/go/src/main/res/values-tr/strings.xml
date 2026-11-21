@@ -81,4 +81,6 @@
     <string name="go_score_resume">Oyunu sürdür</string>
     <string name="go_error_score_resume_failed">Oyun sürdürülemedi</string>
     <string name="go_error_score_accept_failed">Skor kabul edilemedi</string>
+    <string name="go_chat_player_passed">%1$s pas geçti</string>
+    <string name="go_chat_you_passed">Pas geçtin</string>
 </resources>

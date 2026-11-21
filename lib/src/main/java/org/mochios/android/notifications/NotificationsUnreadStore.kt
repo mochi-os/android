@@ -169,10 +169,11 @@ class NotificationsUnreadStore @Inject constructor(
     /**
      * Everything read: the signed-in account's push rows go, and nothing
      * else - a sign-in prompt, another account's pushes and the push
-     * service's own notice stay.
+     * service's own notice stay. Off the main thread the socket calls back
+     * on, since the account is read from disk.
      */
     private fun cancelAllSystemNotifications() {
-        SystemNotifications.cancelPushes(context, sessionManager.getBoundIdentityBlocking())
+        scope.launch { SystemNotifications.cancelPushes(context, sessionManager.getBoundIdentity()) }
     }
 
     /**

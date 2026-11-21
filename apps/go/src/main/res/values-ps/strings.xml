@@ -81,4 +81,6 @@
     <string name="go_score_resume">لوبه بیا پیل کړه</string>
     <string name="go_error_score_resume_failed">د لوبې بیا پیلول پاتې راغلل</string>
     <string name="go_error_score_accept_failed">د سکور منل پاتې راغلل</string>
+    <string name="go_chat_player_passed">%1$s تېر شو</string>
+    <string name="go_chat_you_passed">تاسو خپل وار تېر کړ</string>
 </resources>

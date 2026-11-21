@@ -117,7 +117,6 @@
     <string name="game_chat_empty">မက်ဆေ့ချ်များ မရှိသေးပါ</string>
     <string name="game_chat_input_placeholder">မက်ဆေ့ ရိုက်ပါ</string>
     <string name="game_chat_send">မက်ဆေ့ပို့မည်</string>
-    <string name="game_chat_subject_you">သင်</string>
 
     <string name="common_not_saved">မသိမ်းဆည်းရသေးပါ</string>
     <string name="app_brand">Mochi</string>
@@ -348,4 +347,9 @@
     <string name="sync_conflict">ဆာဗာတွင် ပြောင်းလဲထားသည်</string>
     <string name="sync_missing">ဆာဗာတွင် မရှိတော့ပါ</string>
     <string name="sync_refused">ဆာဗာက ငြင်းပယ်သည်</string>
+    <string name="game_system_score_agreed">ရမှတ်ကို သဘောတူပြီ</string>
+    <string name="game_system_score_accept">%1$s က ရမှတ်ကို လက်ခံသည်</string>
+    <string name="game_system_score_resume">%1$s က ကစားပွဲကို ပြန်စသည်</string>
+    <string name="game_not_found">ဂိမ်းကို ရှာမတွေ့ပါ</string>
+    <string name="game_chat_move_played_you">သင် %1$s ကို ကစားခဲ့သည်</string>
 </resources>

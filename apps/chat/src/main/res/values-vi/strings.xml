@@ -141,7 +141,6 @@
     <string name="chat_encryption_done">Xong</string>
     <string name="chat_encryption_key">Khoá khôi phục</string>
     <string name="chat_encryption_restore">Khôi phục</string>
-    <string name="chat_encryption_recovery_refused">Đó không phải là khoá khôi phục của bạn</string>
     <string name="chat_verification_own">Xác minh thiết bị của bạn</string>
     <string name="chat_verification_compare">Kiểm tra xem màn hình bên kia có hiển thị cùng các biểu tượng cảm xúc không.</string>
     <string name="chat_verification_requested_own">Một thiết bị khác của bạn muốn xác minh thiết bị này.</string>
@@ -161,9 +160,6 @@
     <string name="chat_verification_requested">%1$s muốn xác minh bạn.</string>
     <string name="chat_typing_one">%1$s đang nhập...</string>
     <string name="chat_typing_many">%1$s đang nhập...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s phản hồi</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s phản hồi trước đó</item>
     </plurals>
@@ -179,4 +175,15 @@
     <string name="chat_message_earlier">Các tin nhắn từ trước khi tài khoản này được thêm vào Mochi đã được mã hóa và không thể đọc tại đây</string>
     <string name="chat_message_excluded">Chỉ được mã hóa cho các thiết bị khác</string>
     <string name="chat_setup">Thiết lập</string>
+    <string name="chat_jump_bottom">Xuống cuối</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Chuyển đến %1$s tin nhắn mới</item>
+    </plurals>
+    <string name="chat_message_distrusted">Được gửi từ một thiết bị bạn đã đánh dấu không tin cậy</string>
+    <string name="chat_message_mismatched">Được gửi từ một thiết bị có khoá không khớp</string>
+    <string name="chat_list_select">Chọn một cuộc trò chuyện</string>
+    <string name="chat_message_discard">Loại bỏ</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Tin nhắn dài quá %1$s ký tự</item>
+    </plurals>
 </resources>

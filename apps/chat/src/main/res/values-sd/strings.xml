@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">مڪمل</string>
     <string name="chat_encryption_key">بحالي ڪنجي</string>
     <string name="chat_encryption_restore">بحال ڪريو</string>
-    <string name="chat_encryption_recovery_refused">هي توهان جي بحالي ڪنجي ناهي</string>
     <string name="chat_verification_own">پنهنجي ڊوائيس جي تصديق ڪريو</string>
     <string name="chat_verification_compare">چيڪ ڪريو ته ٻي اسڪرين تي ساڳيا ايموجي نظر اچن ٿا.</string>
     <string name="chat_verification_requested_own">توهان جي هڪ ٻي ڊوائيس هن جي تصديق ڪرڻ چاهي ٿي.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s توهان جي تصديق ڪرڻ چاهي ٿو.</string>
     <string name="chat_typing_one">%1$s ٽائيپ ڪري رهيو آهي...</string>
     <string name="chat_typing_many">%1$s ٽائيپ ڪري رهيا آهن...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s جواب</item>
-        <item quantity="other">%1$s جواب</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s اڳوڻو جواب</item>
         <item quantity="other">%1$s اڳوڻا جواب</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">هن اڪائونٽ کي Mochi ۾ شامل ڪرڻ کان اڳ جا پيغام انڪرپٽ ٿيل آهن ۽ هتي پڙهي نٿا سگهجن</string>
     <string name="chat_message_excluded">صرف ٻين ڊوائيسز لاءِ انڪرپٽ ٿيل</string>
     <string name="chat_setup">ترتيب ڏيو</string>
+    <string name="chat_jump_bottom">هيٺ وڃو</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s نئين پيغام ڏانهن وڃو</item>
+        <item quantity="other">%1$s نون پيغامن ڏانهن وڃو</item>
+    </plurals>
+    <string name="chat_message_distrusted">ان ڊوائيس تان موڪليل جنهن تي توهان ڀروسو نه ڪيو</string>
+    <string name="chat_message_mismatched">ان ڊوائيس تان موڪليل جنهن جون ڪنجيون نٿيون ملن</string>
+    <string name="chat_list_select">چيٽ چونڊيو</string>
+    <string name="chat_message_discard">رد ڪريو</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">پيغام %1$s اکر وڌيڪ ڊگهو آهي</item>
+        <item quantity="other">پيغام %1$s اکر وڌيڪ ڊگهو آهي</item>
+    </plurals>
 </resources>

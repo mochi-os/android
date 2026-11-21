@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Níl aon teachtaireacht fós</string>
     <string name="game_chat_input_placeholder">Clóscríobh teachtaireacht</string>
     <string name="game_chat_send">Seol teachtaireacht</string>
-    <string name="game_chat_subject_you">Tusa</string>
 
     <string name="common_not_saved">Gan sábháil</string>
     <string name="app_brand">Mochi</string>
@@ -355,4 +354,9 @@
     <string name="sync_conflict">Athraithe ar an bhfreastalaí</string>
     <string name="sync_missing">Níl sé ar an bhfreastalaí a thuilleadh</string>
     <string name="sync_refused">Diúltaithe ag an bhfreastalaí</string>
+    <string name="game_system_score_agreed">Aontaíodh ar an scór</string>
+    <string name="game_system_score_accept">Ghlac %1$s leis an scór</string>
+    <string name="game_system_score_resume">D\'athchromaigh %1$s ar an imirt</string>
+    <string name="game_not_found">Níor aimsíodh an cluiche</string>
+    <string name="game_chat_move_played_you">D\'imir tú %1$s</string>
 </resources>

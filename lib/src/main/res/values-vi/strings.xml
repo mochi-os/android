@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Chưa có tin nhắn</string>
     <string name="game_chat_input_placeholder">Nhập tin nhắn</string>
     <string name="game_chat_send">Gửi tin nhắn</string>
-    <string name="game_chat_subject_you">Bạn</string>
 
     <string name="common_not_saved">Chưa lưu</string>
     <string name="auth_server_url">URL máy chủ</string>
@@ -350,4 +349,9 @@
     <string name="sync_conflict">Đã thay đổi trên máy chủ</string>
     <string name="sync_missing">Không còn trên máy chủ</string>
     <string name="sync_refused">Bị máy chủ từ chối</string>
+    <string name="game_system_score_agreed">Đã thống nhất điểm số</string>
+    <string name="game_system_score_accept">%1$s đã chấp nhận điểm số</string>
+    <string name="game_system_score_resume">%1$s đã chơi tiếp</string>
+    <string name="game_not_found">Không tìm thấy ván đấu</string>
+    <string name="game_chat_move_played_you">Bạn đã đi %1$s</string>
 </resources>

@@ -78,4 +78,6 @@
     <string name="go_score_resume">Ta opp att spelet</string>
     <string name="go_error_score_resume_failed">Klarte ikkje ta opp att spelet</string>
     <string name="go_error_score_accept_failed">Klarte ikkje godta scoren</string>
+    <string name="go_chat_player_passed">%1$s melde pass</string>
+    <string name="go_chat_you_passed">Du passa</string>
 </resources>

@@ -46,9 +46,10 @@ internal fun isDeadPosition(board: Board): Boolean {
 }
 
 /**
- * Drawn after a move, excluding stalemate (the caller reports that separately).
- * No threefold repetition: the board is rebuilt from the FEN each move, so it
- * has no history to repeat.
+ * Drawn after a move, excluding stalemate (the caller reports that
+ * separately), as chess.js's `isDraw()` decides: fifty moves, a dead position,
+ * or the position's third appearance. [board] must carry the game's history,
+ * replayed from its record ([Record]), for the repetition to be seen.
  */
 internal fun isDrawnPosition(board: Board): Boolean =
-    board.halfMoveCounter >= 100 || isDeadPosition(board)
+    board.halfMoveCounter >= 100 || isDeadPosition(board) || board.isRepetition(3)

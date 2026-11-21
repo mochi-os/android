@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Wala pang mensahe</string>
     <string name="game_chat_input_placeholder">Mag-type ng mensahe</string>
     <string name="game_chat_send">Ipadala ang mensahe</string>
-    <string name="game_chat_subject_you">Ikaw</string>
 
     <string name="common_not_saved">Hindi naka-save</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Binago sa server</string>
     <string name="sync_missing">Wala na sa server</string>
     <string name="sync_refused">Tinanggihan ng server</string>
+    <string name="game_system_score_agreed">Napagkasunduan ang iskor</string>
+    <string name="game_system_score_accept">Tinanggap ni %1$s ang iskor</string>
+    <string name="game_system_score_resume">Ipinagpatuloy ni %1$s ang laro</string>
+    <string name="game_not_found">Hindi nahanap ang laro</string>
+    <string name="game_chat_move_played_you">Naglaro ka ng %1$s</string>
 </resources>

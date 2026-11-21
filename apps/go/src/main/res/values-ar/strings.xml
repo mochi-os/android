@@ -81,4 +81,6 @@
     <string name="go_score_resume">استئناف اللعب</string>
     <string name="go_error_score_resume_failed">فشل استئناف اللعب</string>
     <string name="go_error_score_accept_failed">فشل قبول النتيجة</string>
+    <string name="go_chat_player_passed">مرّر %1$s</string>
+    <string name="go_chat_you_passed">تخطيت دورك</string>
 </resources>

@@ -35,7 +35,6 @@ import org.mochios.chat.model.ChatViewResponse
 import org.mochios.chat.model.EncryptionDevice
 import org.mochios.chat.model.EncryptionOverview
 import org.mochios.chat.model.Verification
-import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -87,30 +86,20 @@ class ChatRepository @Inject constructor(
     ): MessageListResponse =
         api.getMessages(chatId, cursor, limit, thread?.ifEmpty { null }).unwrap()
 
-    /** Send a message, into the thread under [thread] where one is named. */
+    /** Send a message without files, into the thread under [thread] where one is named. */
     suspend fun sendMessage(
         chatId: String,
         body: String,
-        files: List<File> = emptyList(),
         reply: String? = null,
         thread: String? = null,
-    ): SendMessageResponse {
-        val under = thread?.ifEmpty { null }
-        if (files.isEmpty()) {
-            return api.sendMessage(chatId, body, reply, under).unwrap()
-        }
-        val bodyPart = body.toRequestBody("text/plain".toMediaTypeOrNull())
-        val replyPart = reply?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val threadPart = under?.toRequestBody("text/plain".toMediaTypeOrNull())
-        val parts = fileStore.fileParts("files", files)
-        return api.sendMessageWithFiles(chatId, bodyPart, replyPart, threadPart, parts).unwrap()
-    }
+    ): SendMessageResponse =
+        api.sendMessage(chatId, body, reply, thread?.ifEmpty { null }).unwrap()
 
+    /** Send a message with the files picked as [uris], the upload's progress told to [tracker]. */
     suspend fun sendMessageFromUris(
         chatId: String,
         body: String,
         uris: List<android.net.Uri>,
-        context: android.content.Context,
         reply: String? = null,
         tracker: UploadTracker? = null,
     ): SendMessageResponse {

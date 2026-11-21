@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Бүттү</string>
     <string name="chat_encryption_key">Калыбына келтирүү ачкычы</string>
     <string name="chat_encryption_restore">Калыбына келтирүү</string>
-    <string name="chat_encryption_recovery_refused">Бул сиздин калыбына келтирүү ачкычыңыз эмес</string>
     <string name="chat_verification_own">Түзмөгүңүздү текшерүү</string>
     <string name="chat_verification_compare">Башка экранда ошол эле эмодзилер көрүнүп турганын текшериңиз.</string>
     <string name="chat_verification_requested_own">Башка түзмөктөрүңүздүн бири бул түзмөктү текшергиси келет.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s сизди текшергиси келет.</string>
     <string name="chat_typing_one">%1$s жазып жатат...</string>
     <string name="chat_typing_many">%1$s жазып жатышат...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s жооп</item>
-        <item quantity="other">%1$s жооп</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s мурунку жооп</item>
         <item quantity="other">%1$s мурунку жооп</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Бул аккаунт Mochi-ге кошулганга чейинки билдирүүлөр шифрленген жана аларды бул жерде окуу мүмкүн эмес</string>
     <string name="chat_message_excluded">Башка түзмөктөр үчүн гана шифрленген</string>
     <string name="chat_setup">Орнотуу</string>
+    <string name="chat_jump_bottom">Эң ылдыйга өтүү</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s жаңы билдирүүгө өтүү</item>
+        <item quantity="other">%1$s жаңы билдирүүгө өтүү</item>
+    </plurals>
+    <string name="chat_message_distrusted">Сиз ишенбеген түзмөктөн жөнөтүлгөн</string>
+    <string name="chat_message_mismatched">Ачкычтары дал келбеген түзмөктөн жөнөтүлгөн</string>
+    <string name="chat_list_select">Чатты тандоо</string>
+    <string name="chat_message_discard">Таштоо</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Билдирүү %1$s белгиге ашып кетти</item>
+        <item quantity="other">Билдирүү %1$s белгиге ашып кетти</item>
+    </plurals>
 </resources>

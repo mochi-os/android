@@ -81,4 +81,6 @@
     <string name="go_score_resume">Tẹ̀síwájú eré náà</string>
     <string name="go_error_score_resume_failed">Kò lè tẹ̀síwájú eré náà</string>
     <string name="go_error_score_accept_failed">Kò lè gba àmì náà</string>
+    <string name="go_chat_player_passed">%1$s fo ìgbà rẹ̀</string>
+    <string name="go_chat_you_passed">O kọjá</string>
 </resources>

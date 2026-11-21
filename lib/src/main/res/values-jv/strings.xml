@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Durung ana pesen</string>
     <string name="game_chat_input_placeholder">Ketik pesen</string>
     <string name="game_chat_send">Kirim pesen</string>
-    <string name="game_chat_subject_you">Sampéyan</string>
 
     <string name="common_not_saved">Durung disimpen</string>
     <string name="app_brand">Mochi</string>
@@ -348,4 +347,9 @@
     <string name="sync_conflict">Diganti ing server</string>
     <string name="sync_missing">Wis ora ana ing server</string>
     <string name="sync_refused">Ditolak server</string>
+    <string name="game_system_score_agreed">Skor disarujuki</string>
+    <string name="game_system_score_accept">%1$s nampa skor</string>
+    <string name="game_system_score_resume">%1$s nerusake dolanan</string>
+    <string name="game_not_found">Game ora ditemokaké</string>
+    <string name="game_chat_move_played_you">Sampéyan main %1$s</string>
 </resources>

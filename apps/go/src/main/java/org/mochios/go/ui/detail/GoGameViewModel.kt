@@ -23,14 +23,18 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.GameChat
+import org.mochios.android.ui.components.GameChatPage
 import org.mochios.android.util.REFRESH_DEBOUNCE
-import org.mochios.android.util.mergeMessage
 import org.mochios.android.websocket.REOPEN
 import org.mochios.go.engine.GoGame
 import org.mochios.go.engine.IllegalMoveException
 import org.mochios.go.engine.Score
 import org.mochios.go.engine.Stone
+import org.mochios.go.engine.lastStone
 import org.mochios.go.model.Game
 import org.mochios.go.model.GameMessage
 import org.mochios.go.model.MoveRequest
@@ -41,25 +45,14 @@ import javax.inject.Inject
 /**
  * UI state for [GoGameDetailScreen]. [game] is the server record, refetched
  * after every mutation; [goGame] is the engine parsed from it, held in state so
- * the screen and [GoBoard] share one legality source. [messages] are
- * created-ascending; [score] is set only once the game is finished.
+ * the screen and [GoBoard] share one legality source; the chat is
+ * [GoGameViewModel.chat]'s. [score] is set only once the game is finished.
  */
 data class GoGameDetailUiState(
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
     val game: Game? = null,
     val goGame: GoGame? = null,
-    val messages: List<GameMessage> = emptyList(),
-    val isLoadingMessages: Boolean = false,
-    val isLoadingMoreMessages: Boolean = false,
-    val hasMoreMessages: Boolean = false,
-
-    /**
-     * Server cursor for the next older page, `"<created>:<id>"` - a bare
-     * `created` drops rows sharing the boundary second.
-     */
-    val nextMessageCursor: String? = null,
-    val messagesError: MochiError? = null,
     val myIdentity: String = "",
     val isMyTurn: Boolean = false,
     val score: Score? = null,
@@ -69,8 +62,6 @@ data class GoGameDetailUiState(
     val isMoving: Boolean = false,
     /** True while a `passTurn()` request is in flight. */
     val isPassing: Boolean = false,
-    /** True while a chat message is being sent. */
-    val isSendingMessage: Boolean = false,
     /** True while the resign request is in flight. */
     val isResigning: Boolean = false,
     /** True while a score accept / resume is in flight. */
@@ -107,9 +98,6 @@ class GoGameViewModel @Inject constructor(
     /** The in-flight game fetch; cancelled when a newer one starts. */
     private var loadJob: Job? = null
 
-    /** The pending or in-flight messages fetch; cancelled when a newer one starts. */
-    private var messagesJob: Job? = null
-
     private var resumedBefore = false
 
     private val _state = MutableStateFlow(GoGameDetailUiState(isLoading = true))
@@ -117,6 +105,20 @@ class GoGameViewModel @Inject constructor(
 
     private val _events = MutableSharedFlow<GoGameDetailEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<GoGameDetailEvent> = _events.asSharedFlow()
+
+    /** The game's chat; a refresh keeps the older pages already read. */
+    val chat = GameChat(
+        scope = viewModelScope,
+        fetch = { before ->
+            val page = repository.getMessages(gameId, before = before)
+            GameChatPage(page.messages, page.more == true, page.cursor)
+        },
+        post = { body -> repository.sendMessage(gameId, body) },
+        key = { row -> row.id },
+        created = { row -> row.created },
+        match = ::messageKey,
+        report = { error -> _events.tryEmit(GoGameDetailEvent.Toast(error.userMessage())) },
+    )
 
     init {
         if (gameId.isNotBlank()) {
@@ -187,6 +189,9 @@ class GoGameViewModel @Inject constructor(
             val score = if (game.status == "finished" && goGame != null) {
                 goGame.score(game.komi)
             } else null
+            // From the record, so the marker follows the opponent's reply too
+            // and a game opened fresh shows one.
+            val lastMove = goGame?.let { engine -> lastStone(game.sgf, engine) }
             _state.update {
                 it.copy(
                     isLoading = false,
@@ -196,6 +201,7 @@ class GoGameViewModel @Inject constructor(
                     myIdentity = myIdentity,
                     isMyTurn = isMyTurn,
                     score = score,
+                    lastMove = lastMove,
                     error = null,
                 )
             }
@@ -213,85 +219,17 @@ class GoGameViewModel @Inject constructor(
         }
     }
 
-    /** Fetch the first page of messages now, cancelling any pending fetch. */
-    fun loadMessages() {
-        messagesJob?.cancel()
-        messagesJob = viewModelScope.launch {
-            fetchMessages()
-        }
-    }
+    /** Fetch the newest page of messages now, cancelling any pending fetch. */
+    fun loadMessages() = chat.load()
 
     /**
-     * Refetch the first page of messages in the background, after
+     * Refetch the newest page of messages in the background, after
      * [REFRESH_DEBOUNCE], cancelling the previous fetch the way [refreshGame]
-     * does.
+     * does. It folds into the pages already read rather than replacing them.
      */
-    private fun refreshMessages() {
-        messagesJob?.cancel()
-        messagesJob = viewModelScope.launch {
-            delay(REFRESH_DEBOUNCE)
-            fetchMessages()
-        }
-    }
+    private fun refreshMessages() = chat.refresh()
 
-    private suspend fun fetchMessages() {
-        _state.update { it.copy(isLoadingMessages = true, messagesError = null) }
-        try {
-            val response = repository.getMessages(gameId)
-            // The endpoint answers oldest-first; sort rather than trust it,
-            // as chess does.
-            _state.update {
-                it.copy(
-                    isLoadingMessages = false,
-                    messages = response.messages.sortedBy { message -> message.created },
-                    hasMoreMessages = response.more == true,
-                    nextMessageCursor = response.cursor,
-                )
-            }
-        } catch (e: CancellationException) {
-            throw e
-        } catch (e: Exception) {
-            currentCoroutineContext().ensureActive()
-            _state.update {
-                it.copy(
-                    isLoadingMessages = false,
-                    messagesError = e.toMochiError(),
-                )
-            }
-        }
-    }
-
-    fun loadMoreMessages() {
-        val current = _state.value
-        if (current.isLoadingMoreMessages || !current.hasMoreMessages) return
-        // The server's own cursor, not a timestamp derived from the list. The
-        // derived form was both wrong (it read the newest message, because the
-        // list was being reversed) and lossy (a bare `created` is the server's
-        // legacy path, which drops rows sharing the boundary second).
-        val cursor = current.nextMessageCursor ?: return
-        viewModelScope.launch {
-            _state.update { it.copy(isLoadingMoreMessages = true) }
-            try {
-                val response = repository.getMessages(gameId, before = cursor)
-                _state.update {
-                    it.copy(
-                        isLoadingMoreMessages = false,
-                        messages = (response.messages + it.messages)
-                            .sortedBy { message -> message.created },
-                        hasMoreMessages = response.more == true,
-                        nextMessageCursor = response.cursor,
-                    )
-                }
-            } catch (e: Exception) {
-                _state.update {
-                    it.copy(
-                        isLoadingMoreMessages = false,
-                        messagesError = e.toMochiError(),
-                    )
-                }
-            }
-        }
-    }
+    fun loadMoreMessages() = chat.loadMore()
 
     // ------------------------------------------------------------------
     // Mutations
@@ -354,14 +292,31 @@ class GoGameViewModel @Inject constructor(
                 refreshGame()
                 // Refresh the log so our own move row appears at once. The
                 // server echoes our own frame too, so this races the echo; the
-                // content-keyed merge keeps the row from appearing twice.
+                // id-keyed merge keeps the row from appearing twice.
                 refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isMoving = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedMoveMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedMoveMessage)),
                 )
-                // Roll back to the server's state on failure.
+                // Take the stone back: the server never took it, and the
+                // refetch below fails as well when the connection is what
+                // failed. Only while the board is still this move's - a
+                // refetch or a frame may have replaced it meanwhile.
+                _state.update {
+                    if (it.goGame !== moved) {
+                        it
+                    } else {
+                        it.copy(
+                            goGame = snapshot.goGame,
+                            game = snapshot.game,
+                            isMyTurn = snapshot.isMyTurn,
+                            lastMove = snapshot.lastMove,
+                        )
+                    }
+                }
+                // Then read the server's state, which holds the move after all
+                // when only its answer was lost.
                 refreshGame()
             }
         }
@@ -406,12 +361,12 @@ class GoGameViewModel @Inject constructor(
                 _state.update { it.copy(isPassing = false) }
                 refreshGame()
                 // As in place(): our own frame is echoed back, so this races it
-                // and the content-keyed merge deduplicates the result.
+                // and the id-keyed merge deduplicates the result.
                 refreshMessages()
             } catch (e: Exception) {
                 _state.update { it.copy(isPassing = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedPassMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedPassMessage)),
                 )
             }
         }
@@ -434,7 +389,7 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isScoreAccepting = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedMessage)),
                 )
             }
         }
@@ -454,31 +409,22 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isScoreResuming = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedMessage)),
                 )
             }
         }
     }
 
-    fun sendChat(body: String, failedSendMessage: String) {
-        val trimmed = body.trim()
-        if (trimmed.isEmpty()) return
-        if (_state.value.isSendingMessage) return
-        _state.update { it.copy(isSendingMessage = true) }
-        viewModelScope.launch {
-            try {
-                repository.sendMessage(gameId, trimmed)
-                _state.update { it.copy(isSendingMessage = false) }
-                // The websocket will deliver the new message back to us
-                // and the panel will append it. As a fallback for offline
-                // websockets, refresh the message list explicitly.
-                refreshMessages()
-            } catch (e: Exception) {
-                _state.update { it.copy(isSendingMessage = false) }
-                _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedSendMessage)),
-                )
+    /**
+     * Send [body]; [onFinished] hears whether it went, so the composer keeps
+     * the words of one that failed, and the failure is said.
+     */
+    fun sendChat(body: String, failedSendMessage: String, onFinished: (Boolean) -> Unit) {
+        chat.send(body) { error ->
+            if (error != null) {
+                _events.tryEmit(GoGameDetailEvent.Toast(error.messageOrFallback(failedSendMessage)))
             }
+            onFinished(error == null)
         }
     }
 
@@ -494,7 +440,7 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isResigning = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedResignMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedResignMessage)),
                 )
             }
         }
@@ -511,7 +457,7 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isDrawOffering = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedOfferMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedOfferMessage)),
                 )
             }
         }
@@ -529,7 +475,7 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isDrawAccepting = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedAcceptMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedAcceptMessage)),
                 )
             }
         }
@@ -547,7 +493,7 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isDrawDeclining = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedDeclineMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedDeclineMessage)),
                 )
             }
         }
@@ -572,7 +518,7 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isCreatingRematch = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedRematchMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedRematchMessage)),
                 )
             }
         }
@@ -590,7 +536,7 @@ class GoGameViewModel @Inject constructor(
             } catch (e: Exception) {
                 _state.update { it.copy(isDeleting = false) }
                 _events.tryEmit(
-                    GoGameDetailEvent.Toast(messageOr(e.toMochiError(), failedDeleteMessage)),
+                    GoGameDetailEvent.Toast(e.toMochiError().messageOrFallback(failedDeleteMessage)),
                 )
             }
         }
@@ -601,9 +547,8 @@ class GoGameViewModel @Inject constructor(
     // ------------------------------------------------------------------
 
     /**
-     * Content key for deduplicating chat rows, as the web does. Ids cannot
-     * serve: websocket frames carry none, so a synthesised id never equals the
-     * server uid on the REST row.
+     * A row's content, matching an older server's frame, which carries no id,
+     * to the stored row that replaces it. Rows are keyed by their ids.
      */
     private fun messageKey(message: GameMessage): String =
         "${message.created}|${message.body}|${message.name}|${message.type}"
@@ -614,18 +559,7 @@ class GoGameViewModel @Inject constructor(
      * state.
      */
     fun applyWsEvent(rawType: String, message: GameMessage?) {
-        if (message != null) {
-            _state.update {
-                it.copy(
-                    messages = mergeMessage(
-                        it.messages,
-                        message,
-                        key = ::messageKey,
-                        created = { row -> row.created },
-                    ),
-                )
-            }
-        }
+        if (message != null) chat.receive(message)
         // Move and system events change the game state; "state" is the
         // snapshot event_sync emits after a P2P convergence repair, and
         // ignoring it left the board showing what the repair replaced, with
@@ -653,23 +587,4 @@ class GoGameViewModel @Inject constructor(
 
     private fun colorFor(game: Game, myIdentity: String): Stone =
         if (game.black == myIdentity) Stone.BLACK else Stone.WHITE
-
-    private fun winnerIdentityFor(game: Game, winnerColor: Stone): String {
-        // The winner is the identity holding `winnerColor`. `game.black`
-        // holds the black player's id; whichever side that isn't is white.
-        val blackId = game.black
-        val whiteId = if (game.identity == blackId) game.opponent else game.identity
-        return if (winnerColor == Stone.BLACK) blackId else whiteId
-    }
-
-    private fun messageOr(error: MochiError, fallback: String): String {
-        return when (error) {
-            is MochiError.AuthError -> error.message ?: fallback
-            is MochiError.ForbiddenError -> error.message ?: fallback
-            is MochiError.NotFoundError -> error.message ?: fallback
-            is MochiError.ServerError -> error.message ?: fallback
-            is MochiError.Unknown -> error.message ?: fallback
-            else -> fallback
-        }
-    }
 }

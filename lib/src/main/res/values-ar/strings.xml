@@ -117,7 +117,6 @@
     <string name="game_chat_empty">لا توجد رسائل بعد</string>
     <string name="game_chat_input_placeholder">اكتب رسالة</string>
     <string name="game_chat_send">إرسال رسالة</string>
-    <string name="game_chat_subject_you">أنت</string>
 
     <string name="common_not_saved">لم يُحفظ</string>
 
@@ -357,4 +356,9 @@
     <string name="sync_conflict">تم تغييره على الخادم</string>
     <string name="sync_missing">لم يعد موجودًا على الخادم</string>
     <string name="sync_refused">رفضه الخادم</string>
+    <string name="game_system_score_agreed">تم الاتفاق على النتيجة</string>
+    <string name="game_system_score_accept">قبل %1$s النتيجة</string>
+    <string name="game_system_score_resume">استأنف %1$s اللعب</string>
+    <string name="game_not_found">لم يتم العثور على اللعبة</string>
+    <string name="game_chat_move_played_you">لعبت %1$s</string>
 </resources>

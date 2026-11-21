@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Хабарламалар әлі жоқ</string>
     <string name="game_chat_input_placeholder">Хабар теріңіз</string>
     <string name="game_chat_send">Хабар жіберу</string>
-    <string name="game_chat_subject_you">Сіз</string>
 
     <string name="common_not_saved">Сақталмады</string>
     <string name="app_brand">Mochi</string>
@@ -350,4 +349,9 @@
     <string name="sync_conflict">Серверде өзгертілген</string>
     <string name="sync_missing">Серверде енді жоқ</string>
     <string name="sync_refused">Сервер қабылдамады</string>
+    <string name="game_system_score_agreed">Есеп келісілді</string>
+    <string name="game_system_score_accept">%1$s есепті қабылдады</string>
+    <string name="game_system_score_resume">%1$s ойынды жалғастырды</string>
+    <string name="game_not_found">Ойын табылмады</string>
+    <string name="game_chat_move_played_you">Сіз %1$s ойнадыңыз</string>
 </resources>

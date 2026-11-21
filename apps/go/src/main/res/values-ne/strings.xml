@@ -81,4 +81,6 @@
     <string name="go_score_resume">खेल पुनः सुरु गर्नुहोस्</string>
     <string name="go_error_score_resume_failed">खेल पुनः सुरु गर्न असफल</string>
     <string name="go_error_score_accept_failed">स्कोर स्वीकार गर्न असफल</string>
+    <string name="go_chat_player_passed">%1$s ले पास गर्नुभयो</string>
+    <string name="go_chat_you_passed">तपाईंले पास गर्नुभयो</string>
 </resources>

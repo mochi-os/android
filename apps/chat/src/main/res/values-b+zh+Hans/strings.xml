@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">完成</string>
     <string name="chat_encryption_key">恢复密钥</string>
     <string name="chat_encryption_restore">恢复</string>
-    <string name="chat_encryption_recovery_refused">这不是您的恢复密钥</string>
     <string name="chat_verification_own">验证您的设备</string>
     <string name="chat_verification_compare">请确认另一个屏幕上显示的是相同的表情符号。</string>
     <string name="chat_verification_requested_own">您的另一台设备想要验证此设备。</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s 想要验证您。</string>
     <string name="chat_typing_one">%1$s 正在输入...</string>
     <string name="chat_typing_many">%1$s 正在输入...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s 条回复</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s 条更早的回复</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">此账户添加到 Mochi 之前的消息已加密，无法在此阅读</string>
     <string name="chat_message_excluded">仅为其他设备加密</string>
     <string name="chat_setup">设置</string>
+    <string name="chat_jump_bottom">跳至底部</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">跳至 %1$s 条新消息</item>
+    </plurals>
+    <string name="chat_message_distrusted">发自你标记为不信任的设备</string>
+    <string name="chat_message_mismatched">发自密钥不匹配的设备</string>
+    <string name="chat_list_select">选择对话</string>
+    <string name="chat_message_discard">放弃</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">消息超出 %1$s 个字符</item>
+    </plurals>
 </resources>

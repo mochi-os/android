@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Kwenziwe</string>
     <string name="chat_encryption_key">Ukhiye wokubuyisela</string>
     <string name="chat_encryption_restore">Buyisela</string>
-    <string name="chat_encryption_recovery_refused">Lo akusona ukhiye wakho wokubuyisela</string>
     <string name="chat_verification_own">Qinisekisa idivayisi yakho</string>
     <string name="chat_verification_compare">Hlola ukuthi ama-emoji afanayo avela kwesinye isikrini.</string>
     <string name="chat_verification_requested_own">Enye yamadivayisi akho ifuna ukuqinisekisa le.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">U-%1$s ufuna ukukuqinisekisa.</string>
     <string name="chat_typing_one">%1$s uyabhala...</string>
     <string name="chat_typing_many">%1$s bayabhala...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">Impendulo %1$s</item>
-        <item quantity="other">Izimpendulo %1$s</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">Impendulo %1$s yangaphambili</item>
         <item quantity="other">Izimpendulo %1$s zangaphambili</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Imilayezo yangaphambi kokuthi le akhawunti yengezwe ku-Mochi ibethelwe futhi ayikwazi ukufundwa lapha</string>
     <string name="chat_message_excluded">Kubethelwe ezinye izisetshenziswa kuphela</string>
     <string name="chat_setup">Setha</string>
+    <string name="chat_jump_bottom">Yeqela phansi</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Yeqela kumlayezo omusha ongu-%1$s</item>
+        <item quantity="other">Yeqela emilayezweni emisha engu-%1$s</item>
+    </plurals>
+    <string name="chat_message_distrusted">Ithunyelwe kudivayisi ongayithembi</string>
+    <string name="chat_message_mismatched">Ithunyelwe kudivayisi okhiye bayo abangafani</string>
+    <string name="chat_list_select">Khetha ingxoxo</string>
+    <string name="chat_message_discard">Lahla</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Umlayezo ude kakhulu ngohlamvu olungu-%1$s</item>
+        <item quantity="other">Umlayezo ude kakhulu ngezinhlamvu ezingu-%1$s</item>
+    </plurals>
 </resources>

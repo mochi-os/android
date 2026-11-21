@@ -5,8 +5,11 @@
 
 package org.mochios.chat.ui.chat
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
@@ -19,6 +22,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
@@ -33,8 +37,14 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -61,6 +71,7 @@ import org.mochios.chat.model.ChatPresence
 import org.mochios.chat.model.ChatQuote
 import org.mochios.chat.model.ReceiptState
 import org.mochios.chat.model.presence
+import org.mochios.android.R as MochiR
 
 /** Whether a conversation is a group, which names each message's sender and who has read it. */
 internal fun isGroupChat(chat: ChatDetail): Boolean = chat.members.size > 2
@@ -187,6 +198,32 @@ internal fun InvitationBar(answering: Boolean, onAccept: () -> Unit, onDecline: 
 }
 
 /**
+ * What a reply in the open thread offers - the same actions as a message of
+ * the main timeline, as far as a reply has them - and the thread's own
+ * unsent replies, edit and search match.
+ *
+ * @param identity the user, whose own replies may be edited and deleted.
+ * @param canWrite whether the conversation takes changes at all.
+ * @param editing whether the box holds an edit of one of the replies.
+ * @param match the reply the search is on, highlighted with [query].
+ */
+internal data class ReplyActions(
+    val identity: String = "",
+    val canWrite: Boolean = false,
+    val editing: Boolean = false,
+    val match: String? = null,
+    val query: String = "",
+    val onEdit: (ChatMessage) -> Unit = {},
+    val onCancelEdit: () -> Unit = {},
+    val onDelete: (ChatMessage) -> Unit = {},
+    val onReact: (String, String) -> Unit = { _, _ -> },
+    val onForward: (ChatMessage) -> Unit = {},
+    val onRetry: (Long) -> Unit = {},
+    val onCopy: (String) -> Unit = {},
+    val onDiscard: (Long) -> Unit = {},
+)
+
+/**
  * A message's thread over the conversation: the message, its replies, and a reply box.
  *
  * @param draft The reply box's text, read only by the box so typing leaves the
@@ -203,16 +240,20 @@ internal fun ThreadSheet(
     onEarlier: () -> Unit,
     onDismiss: () -> Unit,
     draft: State<String>? = null,
+    replies: ReplyActions = ReplyActions(),
 ) {
     MochiBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true),
     ) {
         Column(modifier = Modifier.fillMaxWidth().fillMaxHeight(0.85f)) {
-            ThreadContent(thread, chatId, canWrite, onDraft, onSend, onEarlier, draft)
+            ThreadContent(thread, chatId, canWrite, onDraft, onSend, onEarlier, draft, replies)
         }
     }
 }
+
+/** How many pages of earlier replies are read looking for the search's match in a thread. */
+private const val THREAD_SEARCH_PAGES = 20
 
 @Composable
 internal fun ColumnScope.ThreadContent(
@@ -223,9 +264,27 @@ internal fun ColumnScope.ThreadContent(
     onSend: () -> Unit,
     onEarlier: () -> Unit,
     draft: State<String>? = null,
+    replies: ReplyActions = ReplyActions(),
 ) {
+    val listState = rememberLazyListState()
+    // The search's match in the thread on screen, earlier replies read for it
+    // a page at a time, for at most so many pages.
+    var pages by remember(replies.match) { mutableIntStateOf(0) }
+    LaunchedEffect(replies.match, thread.replies, thread.isLoading) {
+        val match = replies.match ?: return@LaunchedEffect
+        if (thread.isLoading) return@LaunchedEffect
+        val at = thread.replies.indexOfFirst { reply -> reply.id == match }
+        when {
+            at >= 0 -> listState.animateScrollToItem(1 + (if (thread.more) 1 else 0) + at)
+            thread.more && !thread.isLoadingMore && pages < THREAD_SEARCH_PAGES -> {
+                pages++
+                onEarlier()
+            }
+        }
+    }
     MochiSheetHeader(title = stringResource(R.string.chat_thread_title))
     LazyColumn(
+        state = listState,
         modifier = Modifier.fillMaxWidth().weight(1f).padding(horizontal = 16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
@@ -250,10 +309,19 @@ internal fun ColumnScope.ThreadContent(
             thread.error != null && thread.replies.isEmpty() -> item("error") {
                 Text(text = thread.error.userMessage(), color = MaterialTheme.colorScheme.error)
             }
-            else -> items(thread.replies, key = { it.id }) { reply -> ThreadMessage(reply, chatId) }
+            else -> items(thread.replies, key = { it.id }) { reply -> ThreadMessage(reply, chatId, replies) }
+        }
+        items(thread.unsent, key = { "unsent-" + it.key }) { reply ->
+            UnsentRow(
+                message = reply,
+                onRetry = { replies.onRetry(reply.key) },
+                onCopy = { replies.onCopy(reply.text) },
+                onDiscard = { replies.onDiscard(reply.key) },
+                retryEnabled = !thread.isSending,
+            )
         }
     }
-    if (canWrite) {
+    if (canWrite || replies.editing) {
         Reading(draft ?: rememberUpdatedState(thread.draft)) { text ->
             ComposeBar(
                 value = text,
@@ -261,15 +329,42 @@ internal fun ColumnScope.ThreadContent(
                 onSend = onSend,
                 placeholder = stringResource(R.string.chat_thread_reply),
                 isSending = thread.isSending,
-                sendLabel = stringResource(R.string.chat_message_send),
+                sendLabel = if (replies.editing) stringResource(MochiR.string.common_save) else stringResource(R.string.chat_message_send),
+                banner = {
+                    Column {
+                        if (replies.editing) EditComposerPreview(onCancel = replies.onCancelEdit)
+                        LengthLine(text)
+                    }
+                },
             )
         }
     }
 }
 
+/**
+ * A message of the thread: the root, plain, or a reply with [actions], which
+ * offer on a long press what the main timeline offers on a message, and its
+ * reactions beneath.
+ */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-internal fun ThreadMessage(message: ChatMessage, chatId: String) {
-    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
+internal fun ThreadMessage(message: ChatMessage, chatId: String, actions: ReplyActions? = null) {
+    var menu by remember { mutableStateOf(false) }
+    val own = actions != null && message.member == actions.identity
+    val offered = actions != null && !message.deleted
+    Column(
+        verticalArrangement = Arrangement.spacedBy(2.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .then(
+                if (actions?.match == message.id) {
+                    Modifier.background(MaterialTheme.colorScheme.primary.copy(alpha = 0.10f))
+                } else {
+                    Modifier
+                },
+            )
+            .then(if (offered) Modifier.combinedClickable(onClick = {}, onLongClick = { menu = true }) else Modifier),
+    ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(text = message.name, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.SemiBold)
             Spacer(Modifier.width(8.dp))
@@ -305,8 +400,27 @@ internal fun ThreadMessage(message: ChatMessage, chatId: String) {
                     )
                 }
                 if (message.body.isNotEmpty()) {
-                    Text(text = message.body, style = MaterialTheme.typography.bodyMedium)
+                    Text(
+                        text = remember(message.body, actions?.query) { highlightQuery(message.body, actions?.query.orEmpty()) },
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
                 }
+                MessageWarning(message, isOwn = false)
+            }
+        }
+        if (offered) {
+            MessageReactions(message, onReact = { reaction -> actions.onReact(message.id, reaction) })
+            Box {
+                MessageMenu(
+                    expanded = menu,
+                    onDismiss = { menu = false },
+                    onSelect = null,
+                    onReply = null,
+                    onThread = null,
+                    onForward = { actions.onForward(message) },
+                    onEdit = { actions.onEdit(message) }.takeIf { own && actions.canWrite && canEditMessage(message, own) },
+                    onDelete = { actions.onDelete(message) }.takeIf { own && actions.canWrite },
+                )
             }
         }
     }

@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Empate</string>
     <string name="chess_status_check_your_move">Xeque — a sua jogada</string>
     <string name="chess_status_your_move">A sua jogada</string>
-    <string name="chess_move_subject_you">Você</string>
     <string name="chess_promotion_title">Promover a:</string>
 
     <string name="chess_resign_message">Tem a certeza de que quer desistir? %1$s vai ganhar a partida.</string>
@@ -63,4 +62,6 @@
     <string name="chess_ws_reconnecting">A reconectar…</string>
     <string name="chess_piece_white">%1$s branco</string>
     <string name="chess_piece_black">%1$s preto</string>
+    <string name="chess_move_played_you">Você jogou %1$s</string>
+    <string name="chess_move_capture_you">Você capturou %1$s</string>
 </resources>

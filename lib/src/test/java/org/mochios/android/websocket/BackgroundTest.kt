@@ -110,7 +110,7 @@ class BackgroundTest {
             }
         }
         server.start()
-        socket = MochiWebSocket(OkHttpClient(), Gson(), session)
+        socket = MochiWebSocket(OkHttpClient(), Gson(), session, deliver = Runnable::run)
     }
 
     @After

@@ -117,7 +117,6 @@
     <string name="game_chat_empty">اڃا ڪو پيغام نه آهي</string>
     <string name="game_chat_input_placeholder">پيغام ٽائپ ڪريو</string>
     <string name="game_chat_send">پيغام موڪليو</string>
-    <string name="game_chat_subject_you">توھان</string>
 
     <string name="common_not_saved">محفوظ نه ٿيو</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">سرور تي تبديل ٿيو</string>
     <string name="sync_missing">هاڻي سرور تي ناهي</string>
     <string name="sync_refused">سرور رد ڪيو</string>
+    <string name="game_system_score_agreed">اسڪور تي اتفاق ٿيو</string>
+    <string name="game_system_score_accept">%1$s اسڪور قبول ڪيو</string>
+    <string name="game_system_score_resume">%1$s راند ٻيهر شروع ڪئي</string>
+    <string name="game_not_found">راند نه ملي</string>
+    <string name="game_chat_move_played_you">توهان %1$s کيڏيو</string>
 </resources>

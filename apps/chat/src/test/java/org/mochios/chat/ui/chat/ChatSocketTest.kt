@@ -112,7 +112,7 @@ class ChatSocketTest {
                         answered(
                             """{"messages": [
                                 {"id": "m1", "chat": "c1", "member": "b1", "name": "Bea", "body": "$hello", "created": 100, "edited": $edited,
-                                 "reactions": {"like": 1}, "reaction": "like"},
+                                 "reactions": {"like": 1}, "reaction": "like", "warning": "distrusted"},
                                 {"id": "m2", "chat": "c1", "member": "a1", "name": "Al", "body": "Mine", "created": 200,
                                  "edited": 50, "replies": ${1 + earlier}, "latest": 150, "reply": "m1",
                                  "answers": [{"id": "r1", "chat": "c1", "member": "b1", "name": "Bea", "body": "First reply", "created": 150, "thread": "m2"}],
@@ -192,9 +192,9 @@ class ChatSocketTest {
             ChatRepository(api, FileStore(context), context),
             socket,
             session,
-            PinnedChatsStore(context),
+            PinnedChatsStore(context, session),
             context,
-            UnreadChatsStore(context),
+            UnreadChatsStore(context, session),
         )
         until { model.uiState.value.messages.isNotEmpty() && socket.isLive("k1") && peer != null }
         settle()
@@ -238,6 +238,22 @@ class ChatSocketTest {
         assertEquals("absent and 0 are both unencrypted", 0, added.encrypted)
         assertEquals("the echo kept the held row", "f1", model.message("m2")?.attachments?.single()?.id)
         assertEquals("no fetch", fetched, timeline.get())
+    }
+
+    @Test
+    fun `a message's warning comes with it, and an edit's warning replaces it`() {
+        val model = open()
+        assertEquals("the page's", "distrusted", model.message("m1")?.warning)
+        assertEquals("absent is none", "", model.message("m2")?.warning)
+        send("""{"id": "m5", "created": 500, "member": "b1", "name": "Bea", "body": "Odd", "warning": "mismatched"}""")
+        until { model.message("m5") != null }
+        assertEquals("mismatched", model.message("m5")?.warning)
+        send("""{"event": "edit", "message": "m5", "body": "Odd, fixed", "edited": 600, "warning": "distrusted"}""")
+        until { model.message("m5")?.body == "Odd, fixed" }
+        assertEquals("distrusted", model.message("m5")?.warning)
+        send("""{"event": "edit", "message": "m5", "body": "Odd, again", "edited": 700, "warning": ""}""")
+        until { model.message("m5")?.body == "Odd, again" }
+        assertEquals("", model.message("m5")?.warning)
     }
 
     @Test
@@ -398,7 +414,7 @@ class ChatSocketTest {
         assertTrue(tombstone.reactions.isEmpty())
         assertNull(tombstone.reaction)
         assertNull(tombstone.reply)
-        assertEquals(0, tombstone.replies)
+        assertEquals("its thread stays, the replies under it still there", 1, tombstone.replies)
         assertEquals("the others stay", "Hello", model.message("m1")?.body)
         assertEquals("no fetch", fetched, timeline.get())
     }

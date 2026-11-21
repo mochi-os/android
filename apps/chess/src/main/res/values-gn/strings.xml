@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Peteĩcha</string>
     <string name="chess_status_check_your_move">Jaque — nde jere</string>
     <string name="chess_status_your_move">Nde jere</string>
-    <string name="chess_move_subject_you">Nde</string>
     <string name="chess_promotion_title">Emoĩ yvateve:</string>
 
     <string name="chess_resign_message">Añetehápe reñeme\'ẽse? %1$s ipu\'akáta ñembosaráipe.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Morotĩ %1$s</string>
     <string name="chess_piece_black">Hũ %1$s</string>
+    <string name="chess_move_played_you">Nde rembosarái %1$s</string>
+    <string name="chess_move_capture_you">Nde rejagarra %1$s</string>
 </resources>

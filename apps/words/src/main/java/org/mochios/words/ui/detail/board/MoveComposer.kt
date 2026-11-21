@@ -280,7 +280,10 @@ private fun RowScope.MoveButtons(
         // The score rides on the button so the reward sits on the action, not
         // adrift at the end of a scrolling row where it was cut off.
         val label = if (draftScore > 0) {
-            "${stringResource(R.string.words_detail_submit)} +$draftScore"
+            stringResource(
+                R.string.words_detail_submit_score,
+                LocalFormat.current.formatNumber(draftScore),
+            )
         } else {
             stringResource(R.string.words_detail_submit)
         }
@@ -323,7 +326,7 @@ private fun WordChip(word: String, score: Int, state: ValidState) {
             else MaterialTheme.colorScheme.onSurface,
         )
         Text(
-            text = "+$score",
+            text = stringResource(R.string.words_score_gain, LocalFormat.current.formatNumber(score)),
             style = MaterialTheme.typography.labelMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )

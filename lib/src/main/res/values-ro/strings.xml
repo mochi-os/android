@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Încă niciun mesaj</string>
     <string name="game_chat_input_placeholder">Tastează un mesaj</string>
     <string name="game_chat_send">Trimite mesajul</string>
-    <string name="game_chat_subject_you">Tu</string>
 
     <string name="common_not_saved">Nesalvat</string>
     <string name="app_brand">Mochi</string>
@@ -351,4 +350,9 @@
     <string name="sync_conflict">Modificat pe server</string>
     <string name="sync_missing">Nu mai există pe server</string>
     <string name="sync_refused">Refuzat de server</string>
+    <string name="game_system_score_agreed">Scor convenit</string>
+    <string name="game_system_score_accept">%1$s a acceptat scorul</string>
+    <string name="game_system_score_resume">%1$s a reluat jocul</string>
+    <string name="game_not_found">Jocul nu a fost găsit</string>
+    <string name="game_chat_move_played_you">Ai jucat %1$s</string>
 </resources>

@@ -117,7 +117,6 @@
     <string name="game_chat_empty">មិនទាន់មានសារ</string>
     <string name="game_chat_input_placeholder">វាយសារ</string>
     <string name="game_chat_send">ផ្ញើសារ</string>
-    <string name="game_chat_subject_you">អ្នក</string>
 
     <string name="common_not_saved">មិនបានរក្សាទុក</string>
     <string name="app_brand">Mochi</string>
@@ -348,4 +347,9 @@
     <string name="sync_conflict">បានផ្លាស់ប្ដូរនៅលើម៉ាស៊ីនមេ</string>
     <string name="sync_missing">លែងមាននៅលើម៉ាស៊ីនមេ</string>
     <string name="sync_refused">ត្រូវបានម៉ាស៊ីនមេបដិសេធ</string>
+    <string name="game_system_score_agreed">បានយល់ព្រមលើពិន្ទុ</string>
+    <string name="game_system_score_accept">%1$s បានទទួលយកពិន្ទុ</string>
+    <string name="game_system_score_resume">%1$s បានបន្តលេង</string>
+    <string name="game_not_found">រកមិនឃើញល្បែង</string>
+    <string name="game_chat_move_played_you">អ្នកបានលេង %1$s</string>
 </resources>

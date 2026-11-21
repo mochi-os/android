@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Heniz habarlar ýok</string>
     <string name="game_chat_input_placeholder">Habar ýaz</string>
     <string name="game_chat_send">Habar iber</string>
-    <string name="game_chat_subject_you">Sen</string>
 
     <string name="common_not_saved">Ýatda saklanmady</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Serverde üýtgedildi</string>
     <string name="sync_missing">Serverde indi ýok</string>
     <string name="sync_refused">Server tarapyndan ret edildi</string>
+    <string name="game_system_score_agreed">Hasap ylalaşyldy</string>
+    <string name="game_system_score_accept">%1$s hasaby kabul etdi</string>
+    <string name="game_system_score_resume">%1$s oýny dowam etdirdi</string>
+    <string name="game_not_found">Oýun tapylmady</string>
+    <string name="game_chat_move_played_you">Sen %1$s oýnadyň</string>
 </resources>

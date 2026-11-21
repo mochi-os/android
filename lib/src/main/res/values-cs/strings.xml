@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Zatím žádné zprávy</string>
     <string name="game_chat_input_placeholder">Napište zprávu</string>
     <string name="game_chat_send">Odeslat zprávu</string>
-    <string name="game_chat_subject_you">Vy</string>
 
     <string name="common_not_saved">Neuloženo</string>
 
@@ -352,4 +351,9 @@
     <string name="sync_conflict">Změněno na serveru</string>
     <string name="sync_missing">Již není na serveru</string>
     <string name="sync_refused">Odmítnuto serverem</string>
+    <string name="game_system_score_agreed">Skóre dohodnuto</string>
+    <string name="game_system_score_accept">%1$s přijal skóre</string>
+    <string name="game_system_score_resume">%1$s pokračoval ve hře</string>
+    <string name="game_not_found">Hra nebyla nalezena</string>
+    <string name="game_chat_move_played_you">Zahráli jste %1$s</string>
 </resources>

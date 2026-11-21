@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Færdig</string>
     <string name="chat_encryption_key">Gendannelsesnøgle</string>
     <string name="chat_encryption_restore">Gendan</string>
-    <string name="chat_encryption_recovery_refused">Det er ikke din gendannelsesnøgle</string>
     <string name="chat_verification_own">Verificer din enhed</string>
     <string name="chat_verification_compare">Kontrollér, at de samme emoji vises på den anden skærm.</string>
     <string name="chat_verification_requested_own">En af dine andre enheder vil verificere denne.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s vil verificere dig.</string>
     <string name="chat_typing_one">%1$s skriver...</string>
     <string name="chat_typing_many">%1$s skriver...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s svar</item>
-        <item quantity="other">%1$s svar</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s tidligere svar</item>
         <item quantity="other">%1$s tidligere svar</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Beskeder fra før denne konto blev føjet til Mochi er krypterede og kan ikke læses her</string>
     <string name="chat_message_excluded">Kun krypteret til andre enheder</string>
     <string name="chat_setup">Opsæt</string>
+    <string name="chat_jump_bottom">Hop til bunden</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Hop til %1$s ny besked</item>
+        <item quantity="other">Hop til %1$s nye beskeder</item>
+    </plurals>
+    <string name="chat_message_distrusted">Sendt fra en enhed, du ikke stoler på</string>
+    <string name="chat_message_mismatched">Sendt fra en enhed, hvis nøgler ikke stemmer overens</string>
+    <string name="chat_list_select">Vælg en chat</string>
+    <string name="chat_message_discard">Kassér</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Beskeden er %1$s tegn for lang</item>
+        <item quantity="other">Beskeden er %1$s tegn for lang</item>
+    </plurals>
 </resources>

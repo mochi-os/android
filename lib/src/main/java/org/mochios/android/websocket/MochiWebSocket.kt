@@ -5,6 +5,8 @@
 
 package org.mochios.android.websocket
 
+import android.os.Handler
+import android.os.Looper
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Lifecycle
@@ -88,13 +90,27 @@ data class StreamWsEvent(
  * background, dropped, refused, or reconnecting with a fresh token - its
  * subscribers hear a [REOPEN] frame, once the socket is open, and read again
  * what they show.
+ *
+ * Typed events reach their subscribers on the main thread, one frame after
+ * another in the order the socket read them, as every other change to a
+ * screen's state is made there: a subscriber needs no hop of its own, and one
+ * with slow work to do moves it off the main thread itself.
  */
 @Singleton
-class MochiWebSocket @Inject constructor(
-    @param:WebSocketClient private val wsClient: OkHttpClient,
+class MochiWebSocket internal constructor(
+    private val wsClient: OkHttpClient,
     private val gson: Gson,
     private val session: SocketSession,
+    /** Runs a delivery of typed events; the main thread's queue, but in a test of the socket alone. */
+    private val deliver: (Runnable) -> Unit,
 ) {
+    @Inject
+    constructor(
+        @WebSocketClient wsClient: OkHttpClient,
+        gson: Gson,
+        session: SocketSession,
+    ) : this(wsClient, gson, session, mainThread())
+
     /**
      * Everything held for one key: its subscriptions, its socket and the state
      * of the connection, guarded by the entry's own monitor. [entries] maps a
@@ -213,6 +229,8 @@ class MochiWebSocket @Inject constructor(
      *   leaves it, and its caller unsubscribes it.
      * @param mint mints a fresh token for a subscription with no [app], when
      *   core refuses the one it has; see [Mint].
+     * @param onEvent hears each typed event, on the main thread; nothing after
+     *   [unsubscribe].
      * @return the id to hand [unsubscribe].
      */
     fun subscribe(
@@ -754,20 +772,20 @@ class MochiWebSocket @Inject constructor(
      * are told on return that they missed some.
      */
     private fun frame(entry: Entry, webSocket: WebSocket, text: String) {
-        val typed: List<(WebSocketEvent) -> Unit>
+        val typed: Map<String, (WebSocketEvent) -> Unit>
         val raw: List<(StreamWsEvent) -> Unit>
         synchronized(entry) {
             if (entry.socket !== webSocket) return
             if (visible) {
-                typed = entry.subscribers.values.toList()
+                typed = entry.subscribers.toMap()
                 raw = entry.streams.values.toList()
             } else {
-                typed = entry.subscribers.filterKeys { id -> id in entry.residents }.values.toList()
+                typed = entry.subscribers.filterKeys { id -> id in entry.residents }
                 raw = entry.streams.filterKeys { id -> id in entry.residents }.values.toList()
                 if (typed.size + raw.size < entry.subscribers.size + entry.streams.size) entry.muted = true
             }
         }
-        hand(text, typed, raw)
+        hand(entry, text, typed, raw)
     }
 
     /**
@@ -776,19 +794,25 @@ class MochiWebSocket @Inject constructor(
      * with [others].
      */
     private fun reopen(entry: Entry, residents: Boolean, others: Boolean) {
-        val typed: List<(WebSocketEvent) -> Unit>
+        val typed: Map<String, (WebSocketEvent) -> Unit>
         val raw: List<(StreamWsEvent) -> Unit>
         synchronized(entry) {
             val told = { id: String -> if (id in entry.residents) residents else others }
-            typed = entry.subscribers.filterKeys(told).values.toList()
+            typed = entry.subscribers.filterKeys(told)
             raw = entry.streams.filterKeys(told).values.toList()
         }
-        hand(gson.toJson(mapOf("type" to REOPEN)), typed, raw)
+        hand(entry, gson.toJson(mapOf("type" to REOPEN)), typed, raw)
     }
 
+    /**
+     * [text] for [entry]'s [typed] subscribers, by their ids, and its [raw]
+     * streams. The typed events go to the main thread in one delivery, which
+     * skips a subscription dropped while it waited: the screen it fed is gone.
+     */
     private fun hand(
+        entry: Entry,
         text: String,
-        typed: List<(WebSocketEvent) -> Unit>,
+        typed: Map<String, (WebSocketEvent) -> Unit>,
         raw: List<(StreamWsEvent) -> Unit>,
     ) {
         if (typed.isNotEmpty()) {
@@ -798,13 +822,16 @@ class MochiWebSocket @Inject constructor(
                 null
             }
             if (event != null) {
-                for (callback in typed) {
-                    try {
-                        callback(event)
-                    } catch (e: Exception) {
-                        // Swallow callback errors to avoid crashing the websocket
+                deliver(Runnable {
+                    for ((id, callback) in typed) {
+                        if (synchronized(entry) { id !in entry.subscribers }) continue
+                        try {
+                            callback(event)
+                        } catch (e: Exception) {
+                            // Swallow callback errors to avoid crashing the websocket
+                        }
                     }
-                }
+                })
             }
         }
         if (raw.isNotEmpty()) {
@@ -984,6 +1011,12 @@ sealed interface Mint {
  * same frame.
  */
 const val REOPEN = "socket/reopen"
+
+/** Deliveries onto the main thread's queue, which keeps them in the order they were made. */
+private fun mainThread(): (Runnable) -> Unit {
+    val main by lazy { Handler(Looper.getMainLooper()) }
+    return { delivery -> main.post(delivery) }
+}
 
 /**
  * Handshake URL for a subscription to [key] on [server]: core's socket path on

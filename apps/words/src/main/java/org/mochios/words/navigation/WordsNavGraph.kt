@@ -50,7 +50,7 @@ fun NavGraphBuilder.wordsNavGraph(
                     popUpTo(WordsApp.NEW_GAME) { inclusive = true }
                 }
             },
-            onAddFriends = { onOpenLink("people") },
+            onAddFriends = { onOpenLink("people?action=add") },
         )
     }
 
@@ -77,7 +77,6 @@ fun NavGraphBuilder.wordsNavGraph(
             },
             onNewGame = { navController.navigate(WordsApp.NEW_GAME) },
             onOpenNotifications = onOpenNotifications,
-            onOpenLink = onOpenLink,
         )
     }
 }

@@ -81,4 +81,6 @@
     <string name="go_score_resume">રમત ફરી શરૂ કરો</string>
     <string name="go_error_score_resume_failed">રમત ફરી શરૂ કરવામાં નિષ્ફળ</string>
     <string name="go_error_score_accept_failed">સ્કોર સ્વીકારવામાં નિષ્ફળ</string>
+    <string name="go_chat_player_passed">%1$s પાસ થયા</string>
+    <string name="go_chat_you_passed">તમે પાસ કર્યું</string>
 </resources>

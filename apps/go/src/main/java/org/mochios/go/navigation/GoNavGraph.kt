@@ -27,8 +27,8 @@ object GoApp {
 }
 
 /**
- * Wire the Go screens into the parent graph; [onOpenLink] is unused by Go and
- * mirrors People.
+ * Wire the Go screens into the parent graph; [onOpenLink] opens another app's
+ * page, here People's add-friend screen from the new-game form.
  */
 fun NavGraphBuilder.goNavGraph(
     navController: NavController,
@@ -51,7 +51,7 @@ fun NavGraphBuilder.goNavGraph(
                     popUpTo(GoApp.NEW_GAME) { inclusive = true }
                 }
             },
-            onAddFriends = { onOpenLink("people") },
+            onAddFriends = { onOpenLink("people?action=add") },
         )
     }
 
@@ -63,7 +63,6 @@ fun NavGraphBuilder.goNavGraph(
             navController = navController,
             gameId = backStackEntry.arguments?.getString("gameId").orEmpty(),
             onOpenNotifications = onOpenNotifications,
-            onOpenLink = onOpenLink,
         )
     }
 }

@@ -7,43 +7,36 @@ package org.mochios.chat.data
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import org.mochios.android.auth.SessionManager
 import javax.inject.Inject
 import javax.inject.Singleton
-import androidx.core.content.edit
 
 /**
- * Device-local pins (the server has no pin concept), keyed by [chatKey] so the
- * list and the conversation agree.
+ * The chats pinned to the top of the list, on this device and for the account
+ * signed in (the server has no pin concept), by chat id so the list and the
+ * conversation agree.
  */
 @Singleton
 class PinnedChatsStore @Inject constructor(
     @ApplicationContext context: Context,
+    session: SessionManager,
 ) {
-    private val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+    private val chats = AccountChats(context, PREFS, LEGACY, session.getBoundIdentityBlocking(), session.boundIdentity)
 
-    private val _pinned =
-        MutableStateFlow(prefs.getStringSet(KEY, emptySet())?.toSet() ?: emptySet())
-    val pinned: StateFlow<Set<String>> = _pinned.asStateFlow()
+    val pinned: StateFlow<Set<String>> = chats.ids
 
-    /** True when [chatKey] is currently pinned. */
-    fun isPinned(chatKey: String): Boolean = chatKey in _pinned.value
-
-    /** Flip the pin state for [chatKey] and persist the new set. */
-    fun toggle(chatKey: String) {
-        if (chatKey.isBlank()) return
-        val next = _pinned.value.toMutableSet()
-        if (!next.add(chatKey)) {
-            next.remove(chatKey)
-        }
-        _pinned.value = next
-        prefs.edit { putStringSet(KEY, next) }
+    /** Flip the pin state for [chat]. */
+    fun toggle(chat: String) {
+        if (chat.isBlank()) return
+        chats.change { pins -> if (chat in pins) pins - chat else pins + chat }
     }
+
+    /** Drop the pins of chats the account's whole list, [listed], no longer has. */
+    fun prune(listed: Set<String>) = chats.prune(listed)
 
     private companion object {
         const val PREFS = "mochi_chat_pins"
-        const val KEY = "pinned_chat_ids"
+        const val LEGACY = "pinned_chat_ids"
     }
 }

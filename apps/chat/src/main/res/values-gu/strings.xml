@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">થઈ ગયું</string>
     <string name="chat_encryption_key">રિકવરી કી</string>
     <string name="chat_encryption_restore">પુનઃસ્થાપિત કરો</string>
-    <string name="chat_encryption_recovery_refused">આ તમારી રિકવરી કી નથી</string>
     <string name="chat_verification_own">તમારું ઉપકરણ ચકાસો</string>
     <string name="chat_verification_compare">બીજી સ્ક્રીન પર સમાન ઇમોજી દેખાય છે કે નહીં તે તપાસો.</string>
     <string name="chat_verification_requested_own">તમારું બીજું એક ઉપકરણ આ ઉપકરણને ચકાસવા માગે છે.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s તમને ચકાસવા માગે છે.</string>
     <string name="chat_typing_one">%1$s ટાઇપ કરી રહ્યા છે...</string>
     <string name="chat_typing_many">%1$s ટાઇપ કરી રહ્યા છે...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s જવાબ</item>
-        <item quantity="other">%1$s જવાબો</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s અગાઉનો જવાબ</item>
         <item quantity="other">%1$s અગાઉના જવાબો</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">આ એકાઉન્ટ Mochi માં ઉમેરાયું તે પહેલાંના સંદેશા એન્ક્રિપ્ટ કરેલા છે અને અહીં વાંચી શકાતા નથી</string>
     <string name="chat_message_excluded">ફક્ત અન્ય ઉપકરણો માટે એન્ક્રિપ્ટ કરેલો</string>
     <string name="chat_setup">સેટ અપ</string>
+    <string name="chat_jump_bottom">નીચે જાઓ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s નવા સંદેશ પર જાઓ</item>
+        <item quantity="other">%1$s નવા સંદેશા પર જાઓ</item>
+    </plurals>
+    <string name="chat_message_distrusted">તમે જેના પર વિશ્વાસ નથી કર્યો તેવા ઉપકરણથી મોકલાયેલ</string>
+    <string name="chat_message_mismatched">જેની કી મેળ ખાતી નથી તેવા ઉપકરણથી મોકલાયેલ</string>
+    <string name="chat_list_select">ચેટ પસંદ કરો</string>
+    <string name="chat_message_discard">છોડી દો</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">સંદેશ મર્યાદા કરતાં %1$s અક્ષર લાંબો છે</item>
+        <item quantity="other">સંદેશ મર્યાદા કરતાં %1$s અક્ષરો લાંબો છે</item>
+    </plurals>
 </resources>

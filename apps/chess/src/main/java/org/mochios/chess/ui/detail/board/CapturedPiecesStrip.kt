@@ -26,11 +26,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.github.bhlangonijr.chesslib.Board
 import com.github.bhlangonijr.chesslib.Piece
 import com.github.bhlangonijr.chesslib.PieceType
 import com.github.bhlangonijr.chesslib.Side
 import org.mochios.chess.R
+import org.mochios.chess.engine.Record
+import org.mochios.chess.engine.loadPosition
 import org.mochios.android.i18n.LocalFormat
 
 /**
@@ -60,46 +61,52 @@ private val STARTING_COUNTS: Map<PieceType, Int> = mapOf(
 data class CapturedPiece(val type: PieceType, val count: Int)
 
 /**
- * (captured by White, captured by Black), derived from the position as starting
- * counts minus what remains, not from the move history.
+ * (captured by White, captured by Black), read from the game's [record]: the
+ * moves that took something, on top of whatever its starting position already
+ * lacked. Counting the position alone credits a promoted pawn as a capture. A
+ * record lost to an older client starts at the position, which then gives its
+ * count alone.
  */
-fun capturedPiecesFromFen(fen: String): Pair<List<CapturedPiece>, List<CapturedPiece>> {
-    return try {
-        val board = Board()
-        board.loadFromFen(fen)
-
-        val whiteByType = mutableMapOf<PieceType, Int>()
-        val blackByType = mutableMapOf<PieceType, Int>()
-
-        // Count what's left on the board, per side, per type.
-        for (piece in board.boardToArray()) {
-            if (piece == null || piece == Piece.NONE) continue
-            val type = piece.pieceType ?: continue
-            if (type !in STARTING_COUNTS) continue
-            val bucket = if (piece.pieceSide == Side.WHITE) whiteByType else blackByType
-            bucket[type] = (bucket[type] ?: 0) + 1
-        }
-
-        // captured by White = starting Black pieces - remaining Black pieces
-        // (i.e. things White has taken).
-        val capturedByWhite = CAPTURED_ORDER.mapNotNull { type ->
-            val start = STARTING_COUNTS[type] ?: return@mapNotNull null
-            val remaining = blackByType[type] ?: 0
-            val taken = start - remaining
-            if (taken > 0) CapturedPiece(type, taken) else null
-        }
-        val capturedByBlack = CAPTURED_ORDER.mapNotNull { type ->
-            val start = STARTING_COUNTS[type] ?: return@mapNotNull null
-            val remaining = whiteByType[type] ?: 0
-            val taken = start - remaining
-            if (taken > 0) CapturedPiece(type, taken) else null
-        }
-        capturedByWhite to capturedByBlack
-    } catch (_: Exception) {
-        // Defensive — if the FEN is malformed, render nothing.
-        emptyList<CapturedPiece>() to emptyList<CapturedPiece>()
+fun capturedPieces(record: Record): Pair<List<CapturedPiece>, List<CapturedPiece>> {
+    val (white, black) = missing(record.start)
+    for (move in record.moves) {
+        val type = move.captured ?: continue
+        // White taking a piece leaves Black without it, and the other way round.
+        val loser = if (move.side == Side.WHITE) black else white
+        loser[type] = (loser[type] ?: 0) + 1
     }
+    return pieces(black) to pieces(white)
 }
+
+/**
+ * What White and Black lack of their starting sets in [fen]. A piece above its
+ * starting count is a promoted pawn, so it is counted back as that pawn rather
+ * than as a pawn taken.
+ */
+private fun missing(fen: String): Pair<MutableMap<PieceType, Int>, MutableMap<PieceType, Int>> {
+    val board = loadPosition(fen) ?: return mutableMapOf<PieceType, Int>() to mutableMapOf()
+    fun side(side: Side): MutableMap<PieceType, Int> {
+        val have = CAPTURED_ORDER.associateWith { type -> board.getPieceLocation(Piece.make(side, type)).size }
+        val gone = mutableMapOf<PieceType, Int>()
+        var promoted = 0
+        for (type in CAPTURED_ORDER) {
+            if (type == PieceType.PAWN) continue
+            val start = STARTING_COUNTS.getValue(type)
+            promoted += (have.getValue(type) - start).coerceAtLeast(0)
+            gone[type] = (start - have.getValue(type)).coerceAtLeast(0)
+        }
+        gone[PieceType.PAWN] = (STARTING_COUNTS.getValue(PieceType.PAWN) - have.getValue(PieceType.PAWN) - promoted)
+            .coerceAtLeast(0)
+        return gone
+    }
+    return side(Side.WHITE) to side(Side.BLACK)
+}
+
+private fun pieces(counts: Map<PieceType, Int>): List<CapturedPiece> =
+    CAPTURED_ORDER.mapNotNull { type ->
+        val count = counts[type] ?: 0
+        if (count > 0) CapturedPiece(type, count) else null
+    }
 
 /**
  * Row of captured-piece glyphs with `×N` suffixes, in the colour of the pieces

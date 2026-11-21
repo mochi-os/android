@@ -81,4 +81,6 @@
     <string name="go_score_resume">Spiel fortsetzen</string>
     <string name="go_error_score_resume_failed">Spiel konnte nicht fortgesetzt werden</string>
     <string name="go_error_score_accept_failed">Punktzahl konnte nicht angenommen werden</string>
+    <string name="go_chat_player_passed">%1$s hat gepasst</string>
+    <string name="go_chat_you_passed">Sie haben gepasst</string>
 </resources>

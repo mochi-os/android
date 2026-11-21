@@ -5,7 +5,6 @@
 
 package org.mochios.chat.model
 
-import com.google.gson.annotations.SerializedName
 import org.mochios.android.model.Attachment
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.api.OwnedAddress
@@ -22,6 +21,12 @@ object ChatStatus {
     const val DELETED = "deleted"
     const val INVITED = "invited"
 }
+
+/**
+ * The user's own socket key, chat.star's USER_KEY: what changes outside any
+ * one chat, such as the chat list or a Matrix verification.
+ */
+const val USER_KEY = "chat"
 
 data class Chat(
     val id: String = "",
@@ -130,23 +135,24 @@ data class ChatMessage(
      * read here.
      */
     val encrypted: Int = 0,
+    /**
+     * A Matrix message read from a device the user distrusted ("distrusted")
+     * or one whose keys do not match those it was sent with ("mismatched");
+     * empty for any other, and from a server too old to say.
+     */
+    val warning: String = "",
 )
 
-/** A message hit from `:chat/-/search`. */
+/** A message hit from `:chat/-/search`: in a thread, the [thread] it is a reply in. */
 data class ChatSearchResult(
     val id: String = "",
-    val member: String = "",
-    val name: String = "",
-    val body: String = "",
-    val excerpt: String = "",
-    val created: Long = 0
+    val created: Long = 0,
+    val thread: String = "",
 )
 
 data class Friend(
     val id: String = "",
-    val identity: String = "",
     val name: String = "",
-    @SerializedName("class") val klass: String = "",
     /** The existing one-on-one chat with this person, empty when none. */
     val chat: String = ""
 )

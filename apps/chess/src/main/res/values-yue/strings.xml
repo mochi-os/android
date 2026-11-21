@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="chess_move_subject_you">你</string>
     <string name="chess_open_sidebar">開啟側欄</string>
 
     <string name="chess_app_title">國際象棋</string>
@@ -63,4 +62,6 @@
     <string name="chess_piece_white">白方%1$s</string>
     <string name="chess_piece_black">黑方%1$s</string>
 
+    <string name="chess_move_played_you">你行咗 %1$s</string>
+    <string name="chess_move_capture_you">你食咗 %1$s</string>
 </resources>

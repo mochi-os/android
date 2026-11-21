@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Kwenziwe</string>
     <string name="chat_encryption_key">Isitshixo sokubuyisela</string>
     <string name="chat_encryption_restore">Buyisela</string>
-    <string name="chat_encryption_recovery_refused">Esi asisositshixo sakho sokubuyisela</string>
     <string name="chat_verification_own">Qinisekisa isixhobo sakho</string>
     <string name="chat_verification_compare">Jonga ukuba ii-emoji ezifanayo ziyavela kwesinye isikrini.</string>
     <string name="chat_verification_requested_own">Esinye sezixhobo zakho sifuna ukuqinisekisa esi.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">U-%1$s ufuna ukukuqinisekisa.</string>
     <string name="chat_typing_one">%1$s uyachwetheza...</string>
     <string name="chat_typing_many">%1$s bayachwetheza...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">Impendulo %1$s</item>
-        <item quantity="other">Iimpendulo %1$s</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">Impendulo %1$s yangaphambili</item>
         <item quantity="other">Iimpendulo %1$s zangaphambili</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Imiyalezo yangaphambi kokuba le akhawunti yongezwe ku-Mochi ifihliwe kwaye ayinakufundwa apha</string>
     <string name="chat_message_excluded">Kufihliwe kwezinye izixhobo kuphela</string>
     <string name="chat_setup">Misela</string>
+    <string name="chat_jump_bottom">Yiya ezantsi</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Yiya kumyalezo omtsha</item>
+        <item quantity="other">Yiya kwimiyalezo emitsha engu-%1$s</item>
+    </plurals>
+    <string name="chat_message_distrusted">Ithunyelwe kwisixhobo ongasithembiyo</string>
+    <string name="chat_message_mismatched">Ithunyelwe kwisixhobo izitshixo zaso ezingahambelaniyo</string>
+    <string name="chat_list_select">Khetha incoko</string>
+    <string name="chat_message_discard">Lahla</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Umyalezo mde kakhulu ngonobumba ongu-%1$s</item>
+        <item quantity="other">Umyalezo mde kakhulu ngoonobumba abangu-%1$s</item>
+    </plurals>
 </resources>

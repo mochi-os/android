@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Все още няма партии.</string>
     <string name="words_new_game_choose_opponents">Изберете противници</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s играчи</string>
     <string name="words_new_game_no_friends_subtitle">Добавете приятели в приложението Хора, за да започнете да играете.</string>
     <string name="words_detail_title">Партия</string>
     <string name="words_detail_status_opponent_move">Ход на %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s печели</string>
     <string name="words_detail_player_fallback">Играч %1$s</string>
-    <string name="words_detail_player_count">%1$s играчи</string>
-    <string name="words_detail_label_tiles_left">%1$s плочки остават</string>
     <string name="words_detail_action_open_chat">Отвори чат</string>
     <string name="words_detail_action_more">Действия в партията</string>
     <string name="words_detail_exchange_count">Размени (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Не са образувани валидни думи</string>
     <string name="words_validation_offline">Проверката е офлайн — все пак можете да изпратите.</string>
     <string name="words_validation_unknown_words">Съдържа непознати думи. Все пак можете да изпратите.</string>
+    <string name="words_detail_label_tiles">Оставащи плочки</string>
+    <string name="words_detail_submit_score">Изпрати +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3Д</string>
+    <string name="words_board_premium_double_word">2Д</string>
+    <string name="words_board_premium_triple_letter">3Б</string>
+    <string name="words_board_premium_double_letter">2Б</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s играч</item>
+        <item quantity="other">%1$s играчи</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s играч</item>
+        <item quantity="other">%1$s играчи</item>
+    </plurals>
 </resources>

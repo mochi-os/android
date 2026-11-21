@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Hêj tu peyam tune</string>
     <string name="game_chat_input_placeholder">Peyamekê binivîse</string>
     <string name="game_chat_send">Peyamê bişîne</string>
-    <string name="game_chat_subject_you">Tu</string>
 
     <string name="common_not_saved">Nehat tomarkirin</string>
     <string name="auth_server_url">URLa pêşkêşkerê</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Li ser serverê hat guhertin</string>
     <string name="sync_missing">Êdî li ser serverê nîne</string>
     <string name="sync_refused">Ji aliyê serverê ve hat redkirin</string>
+    <string name="game_system_score_agreed">Li ser encamê hat lihevkirin</string>
+    <string name="game_system_score_accept">%1$s encam qebûl kir</string>
+    <string name="game_system_score_resume">%1$s lîstik ji nû ve dest pê kir</string>
+    <string name="game_not_found">Lîstik nehat dîtin</string>
+    <string name="game_chat_move_played_you">Te %1$s lîst</string>
 </resources>

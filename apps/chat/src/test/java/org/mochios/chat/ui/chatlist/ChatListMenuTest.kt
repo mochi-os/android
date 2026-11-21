@@ -14,6 +14,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
+import okhttp3.Response
 import okhttp3.WebSocket
 import okhttp3.WebSocketListener
 import okhttp3.mockwebserver.Dispatcher
@@ -29,6 +30,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.FileStore
+import org.mochios.android.push.VisibleEntity
 import org.mochios.android.websocket.MochiWebSocket
 import org.mochios.android.websocket.SocketSession
 import org.mochios.chat.R
@@ -83,6 +85,15 @@ class ChatListMenuTest {
     /** c1's unread count as the server lists it. */
     @Volatile private var count = 3
 
+    /** Whether the list holds c2, which a test deletes. */
+    @Volatile private var second = true
+
+    /** Held, the next read of the list waits for it. */
+    @Volatile private var listGate: CountDownLatch? = null
+
+    /** The server's end of each socket, by its key. */
+    private val peers = java.util.concurrent.ConcurrentHashMap<String, WebSocket>()
+
     private val events = mutableListOf<ChatListEvent>()
     private var collector: Job? = null
 
@@ -95,9 +106,11 @@ class ChatListMenuTest {
                 return when {
                     path == "/chat/-/list" -> {
                         lists.incrementAndGet()
+                        listGate?.await(5, TimeUnit.SECONDS)
+                        val two = if (second) """{"id": "c2", "name": "Two", "members": 3, "unread": 0},""" else ""
                         ok(
                             """[{"id": "c1", "name": "One", "members": 3, "unread": $count},
-                            {"id": "c2", "name": "Two", "members": 3, "unread": 0},
+                            $two
                             {"id": "c3", "name": "Three", "members": 3, "unread": 0, "status": "invited"}]""",
                         )
                     }
@@ -111,6 +124,10 @@ class ChatListMenuTest {
                     path == "/chat/c2/-/view" -> ok("""{"chat": {"id": "c2", "key": "k2", "name": "Two"}, "identity": "a1"}""")
                     path == "/chat/c2/-/messages" -> ok("""{"messages": [{"id": "m1", "chat": "c2", "body": "Hello"}], "more": false}""")
                     path == "/_/websocket" -> MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
+                        override fun onOpen(webSocket: WebSocket, response: Response) {
+                            peers[request.requestUrl?.queryParameter("key").orEmpty()] = webSocket
+                        }
+
                         override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
                             webSocket.close(code, reason)
                         }
@@ -137,8 +154,8 @@ class ChatListMenuTest {
             }
         })
         repository = ChatRepository(api, FileStore(context), context)
-        unread = UnreadChatsStore(context)
-        model = ChatListViewModel(repository, PinnedChatsStore(context), unread)
+        unread = UnreadChatsStore(context, session)
+        model = ChatListViewModel(repository, PinnedChatsStore(context, session), unread, socket, session)
         collector = CoroutineScope(Dispatchers.Main).launch { model.events.collect { events += it } }
         until { model.uiState.value.chats.size == 3 }
     }
@@ -158,6 +175,14 @@ class ChatListMenuTest {
         while (!done()) {
             shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS)
             check(System.currentTimeMillis() < deadline) { "timed out" }
+            Thread.sleep(10)
+        }
+    }
+
+    /** Lets what is under way land: a debounced read and its answer. */
+    private fun settleFor() {
+        repeat(20) {
+            shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS)
             Thread.sleep(10)
         }
     }
@@ -214,17 +239,85 @@ class ChatListMenuTest {
     fun `opening the chat clears a mark of unread`() {
         model.markUnread("c2")
         assertTrue("c2" in unread.marked.value)
-        ChatViewModel(
-            SavedStateHandle(mapOf("chatId" to "c2")),
-            repository,
-            socket,
-            session,
-            PinnedChatsStore(context),
-            context,
-            unread,
-        )
-        until { reads.contains("c2") }
+        // On screen, as the chat's screen registers itself: read by a reader.
+        val shown = Any()
+        VisibleEntity.show(shown, "chat", "c2", marksRead = true, socketKey = "k2")
+        try {
+            ChatViewModel(
+                SavedStateHandle(mapOf("chatId" to "c2")),
+                repository,
+                socket,
+                session,
+                PinnedChatsStore(context, session),
+                context,
+                unread,
+            )
+            until { reads.contains("c2") }
+            assertFalse("c2" in unread.marked.value)
+        } finally {
+            VisibleEntity.hide(shown)
+        }
+    }
+
+    @Test
+    fun `the list is read again when the user's own socket says it changed`() {
+        until { peers["chat"] != null && socket.isLive("chat") }
+        val before = lists.get()
+        count = 7
+        peers["chat"]!!.send("""{"event": "list"}""")
+        peers["chat"]!!.send("""{"event": "list"}""")
+        settleFor()
+        assertEquals("one read for the burst", before + 1, lists.get())
+        assertEquals(7, chat("c1").unread)
+        peers["chat"]!!.send("""{"event": "verification", "account": "m1", "flow": "f", "phase": "ready"}""")
+        repeat(10) {
+            shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS)
+            Thread.sleep(10)
+        }
+        assertEquals("a verification is not the list", before + 1, lists.get())
+    }
+
+    @Test
+    fun `the list is read again as the drawer opens and as the screen comes back`() {
+        val before = lists.get()
+        model.onScreenResumed()
+        settleFor()
+        assertEquals("the first resume comes with the first read", before, lists.get())
+        model.onScreenResumed()
+        settleFor()
+        assertEquals("a return reads it", before + 1, lists.get())
+        model.onDrawerOpened()
+        settleFor()
+        assertEquals("the drawer opening reads it", before + 2, lists.get())
+    }
+
+    @Test
+    fun `a search typed while the list is read again stays`() {
+        listGate = CountDownLatch(1)
+        model.markRead("c1")
+        gate.countDown()
+        until { events.isNotEmpty() && lists.get() >= 2 }
+        model.setQuery("Tw")
+        listGate!!.countDown()
+        listGate = null
+        repeat(10) {
+            shadowOf(Looper.getMainLooper()).idleFor(50, TimeUnit.MILLISECONDS)
+            Thread.sleep(10)
+        }
+        assertEquals("Tw", model.uiState.value.query)
+    }
+
+    @Test
+    fun `marks and pins of chats the list no longer has are dropped`() {
+        model.markUnread("c2")
+        model.togglePin("c2")
+        model.togglePin("c1")
+        second = false
+        model.load()
+        until { model.uiState.value.chats.none { it.id == "c2" } }
         assertFalse("c2" in unread.marked.value)
+        assertFalse("c2" in model.pinned.value)
+        assertTrue("c1" in model.pinned.value)
     }
 
     @Test

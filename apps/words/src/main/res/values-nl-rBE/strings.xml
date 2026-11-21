@@ -51,4 +51,6 @@
     <string name="words_move_error_no_words">Geen geldige woorden gevormd</string>
     <string name="words_validation_offline">Validatie offline — je kunt toch indienen.</string>
     <string name="words_validation_unknown_words">Bevat onbekende woorden. Je kunt toch indienen.</string>
+    <string name="words_detail_label_tiles">Stenen over</string>
+    <string name="words_detail_submit_score">Indienen +%1$s</string>
 </resources>

@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Patta</string>
     <string name="chess_status_check_your_move">Scacco — la tua mossa</string>
     <string name="chess_status_your_move">La tua mossa</string>
-    <string name="chess_move_subject_you">Tu</string>
     <string name="chess_promotion_title">Promuovi a:</string>
 
     <string name="chess_resign_message">Sei sicuro di voler abbandonare? %1$s vincerà la partita.</string>
@@ -63,4 +62,6 @@
     <string name="chess_ws_reconnecting">Riconnessione…</string>
     <string name="chess_piece_white">%1$s bianco</string>
     <string name="chess_piece_black">%1$s nero</string>
+    <string name="chess_move_played_you">Hai giocato %1$s</string>
+    <string name="chess_move_capture_you">Hai preso %1$s</string>
 </resources>

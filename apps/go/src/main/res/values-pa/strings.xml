@@ -81,4 +81,6 @@
     <string name="go_score_resume">ਖੇਡ ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
     <string name="go_error_score_resume_failed">ਖੇਡ ਮੁੜ ਸ਼ੁਰੂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
     <string name="go_error_score_accept_failed">ਸਕੋਰ ਸਵੀਕਾਰ ਕਰਨ ਵਿੱਚ ਅਸਫਲ</string>
+    <string name="go_chat_player_passed">%1$s ਨੇ ਪਾਸ ਕੀਤਾ</string>
+    <string name="go_chat_you_passed">ਤੁਸੀਂ ਪਾਸ ਕੀਤਾ</string>
 </resources>

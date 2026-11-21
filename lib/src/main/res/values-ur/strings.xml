@@ -117,7 +117,6 @@
     <string name="game_chat_empty">ابھی تک کوئی پیغامات نہیں</string>
     <string name="game_chat_input_placeholder">پیغام ٹائپ کریں</string>
     <string name="game_chat_send">پیغام بھیجیں</string>
-    <string name="game_chat_subject_you">آپ</string>
 
     <string name="common_not_saved">محفوظ نہیں ہوا</string>
     <string name="auth_server_url">سرور URL</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">سرور پر تبدیل کیا گیا</string>
     <string name="sync_missing">اب سرور پر موجود نہیں</string>
     <string name="sync_refused">سرور نے مسترد کر دیا</string>
+    <string name="game_system_score_agreed">اسکور پر اتفاق ہو گیا</string>
+    <string name="game_system_score_accept">%1$s نے اسکور قبول کیا</string>
+    <string name="game_system_score_resume">%1$s نے کھیل دوبارہ شروع کیا</string>
+    <string name="game_not_found">کھیل نہیں ملا</string>
+    <string name="game_chat_move_played_you">آپ نے %1$s کھیلا</string>
 </resources>

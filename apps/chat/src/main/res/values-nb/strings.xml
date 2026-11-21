@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Ferdig</string>
     <string name="chat_encryption_key">Gjenopprettingsnøkkel</string>
     <string name="chat_encryption_restore">Gjenopprett</string>
-    <string name="chat_encryption_recovery_refused">Det er ikke gjenopprettingsnøkkelen din</string>
     <string name="chat_verification_own">Verifiser enheten din</string>
     <string name="chat_verification_compare">Kontroller at de samme emojiene vises på den andre skjermen.</string>
     <string name="chat_verification_requested_own">En av de andre enhetene dine vil verifisere denne.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s vil verifisere deg.</string>
     <string name="chat_typing_one">%1$s skriver...</string>
     <string name="chat_typing_many">%1$s skriver...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s svar</item>
-        <item quantity="other">%1$s svar</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s tidligere svar</item>
         <item quantity="other">%1$s tidligere svar</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Meldinger fra før denne kontoen ble lagt til i Mochi er krypterte og kan ikke leses her</string>
     <string name="chat_message_excluded">Kun kryptert for andre enheter</string>
     <string name="chat_setup">Sett opp</string>
+    <string name="chat_jump_bottom">Hopp til bunnen</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Hopp til %1$s ny melding</item>
+        <item quantity="other">Hopp til %1$s nye meldinger</item>
+    </plurals>
+    <string name="chat_message_distrusted">Sendt fra en enhet du ikke stoler på</string>
+    <string name="chat_message_mismatched">Sendt fra en enhet der nøklene ikke stemmer</string>
+    <string name="chat_list_select">Velg en samtale</string>
+    <string name="chat_message_discard">Forkast</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Meldingen er %1$s tegn for lang</item>
+        <item quantity="other">Meldingen er %1$s tegn for lang</item>
+    </plurals>
 </resources>

@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Ukulingana</string>
     <string name="chess_status_check_your_move">Check — ihambo yakho</string>
     <string name="chess_status_your_move">Umqhubo wakho</string>
-    <string name="chess_move_subject_you">Wena</string>
     <string name="chess_promotion_title">Nyusa ibe:</string>
 
     <string name="chess_resign_message">Uqinisekile ukuba ufuna ukunikezela? %1$s uza kuphumelela umdlalo.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">%1$s eMhlophe</string>
     <string name="chess_piece_black">%1$s eMnyama</string>
+    <string name="chess_move_played_you">Wena udlale %1$s</string>
+    <string name="chess_move_capture_you">Wena uthathe u-%1$s</string>
 </resources>

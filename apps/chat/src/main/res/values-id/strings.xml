@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Selesai</string>
     <string name="chat_encryption_key">Kunci pemulihan</string>
     <string name="chat_encryption_restore">Pulihkan</string>
-    <string name="chat_encryption_recovery_refused">Itu bukan kunci pemulihan Anda</string>
     <string name="chat_verification_own">Verifikasi perangkat Anda</string>
     <string name="chat_verification_compare">Periksa apakah emoji yang sama muncul di layar lainnya.</string>
     <string name="chat_verification_requested_own">Salah satu perangkat Anda yang lain ingin memverifikasi perangkat ini.</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s ingin memverifikasi Anda.</string>
     <string name="chat_typing_one">%1$s sedang mengetik...</string>
     <string name="chat_typing_many">%1$s sedang mengetik...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s balasan</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s balasan sebelumnya</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">Pesan dari sebelum akun ini ditambahkan ke Mochi terenkripsi dan tidak dapat dibaca di sini</string>
     <string name="chat_message_excluded">Hanya terenkripsi untuk perangkat lain</string>
     <string name="chat_setup">Siapkan</string>
+    <string name="chat_jump_bottom">Lompat ke bawah</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Lompat ke %1$s pesan baru</item>
+    </plurals>
+    <string name="chat_message_distrusted">Dikirim dari perangkat yang tidak Anda percayai</string>
+    <string name="chat_message_mismatched">Dikirim dari perangkat yang kuncinya tidak cocok</string>
+    <string name="chat_list_select">Pilih obrolan</string>
+    <string name="chat_message_discard">Buang</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Pesan kelebihan %1$s karakter</item>
+    </plurals>
 </resources>

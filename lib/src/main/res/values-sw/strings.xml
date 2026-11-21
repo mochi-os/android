@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Hakuna ujumbe bado</string>
     <string name="game_chat_input_placeholder">Andika ujumbe</string>
     <string name="game_chat_send">Tuma ujumbe</string>
-    <string name="game_chat_subject_you">Wewe</string>
 
     <string name="common_not_saved">Haijahifadhiwa</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Imebadilishwa kwenye seva</string>
     <string name="sync_missing">Haipo tena kwenye seva</string>
     <string name="sync_refused">Imekataliwa na seva</string>
+    <string name="game_system_score_agreed">Alama zimekubaliwa</string>
+    <string name="game_system_score_accept">%1$s amekubali alama</string>
+    <string name="game_system_score_resume">%1$s ameendelea kucheza</string>
+    <string name="game_not_found">Mchezo haukupatikana</string>
+    <string name="game_chat_move_played_you">Umecheza %1$s</string>
 </resources>

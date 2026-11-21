@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Durung ana dolanan.</string>
     <string name="words_new_game_choose_opponents">Pilih mungsuh</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s pamain</string>
     <string name="words_new_game_no_friends_subtitle">Tambahake kanca ing aplikasi Wong kanggo miwiti dolanan.</string>
     <string name="words_detail_title">Game</string>
     <string name="words_detail_status_opponent_move">Langkah %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s menang</string>
     <string name="words_detail_player_fallback">Pamain %1$s</string>
-    <string name="words_detail_player_count">%1$s pamain</string>
-    <string name="words_detail_label_tiles_left">Kari %1$s ubin</string>
     <string name="words_detail_action_open_chat">Bukak chat</string>
     <string name="words_detail_action_more">Aksi game</string>
     <string name="words_detail_exchange_count">Tukar (%1$s)</string>
@@ -71,4 +68,17 @@
     <string name="words_move_error_no_words">Ora ana tembung sah sing kabentuk</string>
     <string name="words_validation_offline">Validasi offline — sampeyan isih bisa ngirim.</string>
     <string name="words_validation_unknown_words">Ngandhut tembung sing ora dikenal. Sampeyan isih bisa ngirim.</string>
+    <string name="words_detail_label_tiles">Ubin kari</string>
+    <string name="words_detail_submit_score">Kirim +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3T</string>
+    <string name="words_board_premium_double_word">2T</string>
+    <string name="words_board_premium_triple_letter">3A</string>
+    <string name="words_board_premium_double_letter">2A</string>
+    <plurals name="words_new_game_players">
+        <item quantity="other">%1$s pamain</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="other">%1$s pamain</item>
+    </plurals>
 </resources>

@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Gotowe</string>
     <string name="chat_encryption_key">Klucz odzyskiwania</string>
     <string name="chat_encryption_restore">Przywróć</string>
-    <string name="chat_encryption_recovery_refused">To nie jest Twój klucz odzyskiwania</string>
     <string name="chat_verification_own">Zweryfikuj swoje urządzenie</string>
     <string name="chat_verification_compare">Sprawdź, czy na drugim ekranie pojawiają się te same emoji.</string>
     <string name="chat_verification_requested_own">Inne z Twoich urządzeń chce zweryfikować to urządzenie.</string>
@@ -160,12 +159,6 @@
     <string name="chat_verification_requested">%1$s chce Cię zweryfikować.</string>
     <string name="chat_typing_one">%1$s pisze...</string>
     <string name="chat_typing_many">%1$s piszą...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s odpowiedź</item>
-        <item quantity="few">%1$s odpowiedzi</item>
-        <item quantity="many">%1$s odpowiedzi</item>
-        <item quantity="other">%1$s odpowiedzi</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s wcześniejsza odpowiedź</item>
         <item quantity="few">%1$s wcześniejsze odpowiedzi</item>
@@ -187,4 +180,21 @@
     <string name="chat_message_earlier">Wiadomości sprzed dodania tego konta do Mochi są zaszyfrowane i nie można ich tu odczytać</string>
     <string name="chat_message_excluded">Zaszyfrowana tylko dla innych urządzeń</string>
     <string name="chat_setup">Skonfiguruj</string>
+    <string name="chat_jump_bottom">Przejdź na dół</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Przejdź do %1$s nowej wiadomości</item>
+        <item quantity="few">Przejdź do %1$s nowych wiadomości</item>
+        <item quantity="many">Przejdź do %1$s nowych wiadomości</item>
+        <item quantity="other">Przejdź do %1$s nowej wiadomości</item>
+    </plurals>
+    <string name="chat_message_distrusted">Wysłano z urządzenia, któremu nie ufasz</string>
+    <string name="chat_message_mismatched">Wysłano z urządzenia, którego klucze się nie zgadzają</string>
+    <string name="chat_list_select">Wybierz czat</string>
+    <string name="chat_message_discard">Odrzuć</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Wiadomość jest za długa o %1$s znak</item>
+        <item quantity="few">Wiadomość jest za długa o %1$s znaki</item>
+        <item quantity="many">Wiadomość jest za długa o %1$s znaków</item>
+        <item quantity="other">Wiadomość jest za długa o %1$s znaku</item>
+    </plurals>
 </resources>

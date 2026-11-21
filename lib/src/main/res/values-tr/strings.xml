@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Henüz mesaj yok</string>
     <string name="game_chat_input_placeholder">Bir mesaj yaz</string>
     <string name="game_chat_send">Mesaj gönder</string>
-    <string name="game_chat_subject_you">Sen</string>
 
     <string name="common_not_saved">Kaydedilmedi</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Sunucuda değiştirildi</string>
     <string name="sync_missing">Artık sunucuda yok</string>
     <string name="sync_refused">Sunucu tarafından reddedildi</string>
+    <string name="game_system_score_agreed">Skor kabul edildi</string>
+    <string name="game_system_score_accept">%1$s skoru kabul etti</string>
+    <string name="game_system_score_resume">%1$s oyuna devam etti</string>
+    <string name="game_not_found">Oyun bulunamadı</string>
+    <string name="game_chat_move_played_you">%1$s oynadın</string>
 </resources>

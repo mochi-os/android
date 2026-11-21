@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Tapos na</string>
     <string name="chat_encryption_key">Key sa pagbawi</string>
     <string name="chat_encryption_restore">Ibalik</string>
-    <string name="chat_encryption_recovery_refused">Hindi iyan ang iyong key sa pagbawi</string>
     <string name="chat_verification_own">Beripikahin ang iyong device</string>
     <string name="chat_verification_compare">Tingnan kung parehong emoji ang lumalabas sa kabilang screen.</string>
     <string name="chat_verification_requested_own">Gusto ng isa mo pang device na beripikahin ito.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">Gusto kang beripikahin ni %1$s.</string>
     <string name="chat_typing_one">Nagta-type si %1$s...</string>
     <string name="chat_typing_many">Nagta-type sina %1$s...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s tugon</item>
-        <item quantity="other">%1$s tugon</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s naunang tugon</item>
         <item quantity="other">%1$s naunang tugon</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Ang mga mensahe mula bago idagdag ang account na ito sa Mochi ay naka-encrypt at hindi mababasa rito</string>
     <string name="chat_message_excluded">Naka-encrypt para lang sa ibang mga device</string>
     <string name="chat_setup">I-set up</string>
+    <string name="chat_jump_bottom">Pumunta sa ibaba</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Pumunta sa %1$s bagong mensahe</item>
+        <item quantity="other">Pumunta sa %1$s na bagong mensahe</item>
+    </plurals>
+    <string name="chat_message_distrusted">Ipinadala mula sa device na hindi mo pinagkakatiwalaan</string>
+    <string name="chat_message_mismatched">Ipinadala mula sa device na hindi tugma ang mga key</string>
+    <string name="chat_list_select">Pumili ng chat</string>
+    <string name="chat_message_discard">Itapon</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Lampas ng %1$s karakter ang mensahe</item>
+        <item quantity="other">Lampas ng %1$s karakter ang mensahe</item>
+    </plurals>
 </resources>

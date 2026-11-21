@@ -10,12 +10,14 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
@@ -60,6 +62,8 @@ data class EncryptionUiState(
     /** The recovery key being entered, while that dialog is open. */
     val recovery: String? = null,
     val recovering: Boolean = false,
+    /** Why the server refused the key entered, shown in its dialog until the key changes. */
+    val refusal: MochiError? = null,
 )
 
 /**
@@ -88,12 +92,16 @@ class EncryptionViewModel @Inject constructor(
 
     fun load() {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = _uiState.value.overview == null, error = null)
+            _uiState.update { state -> state.copy(isLoading = state.overview == null, error = null) }
             try {
+                // The answer first, then the state as it stands by then: a
+                // key dialog closed or a person's devices opened meanwhile stay so.
                 val overview = repository.encryption(chatId)
-                _uiState.value = _uiState.value.copy(overview = overview, isLoading = false)
+                _uiState.update { state -> state.copy(overview = overview, isLoading = false) }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
+                _uiState.update { state -> state.copy(isLoading = false, error = e.toMochiError()) }
             }
         }
     }
@@ -187,33 +195,38 @@ class EncryptionViewModel @Inject constructor(
     }
 
     fun openRecovery() {
-        _uiState.value = _uiState.value.copy(recovery = "")
+        _uiState.update { state -> state.copy(recovery = "", refusal = null) }
     }
 
     fun setRecovery(key: String) {
-        if (_uiState.value.recovery == null) return
-        _uiState.value = _uiState.value.copy(recovery = key)
+        _uiState.update { state -> if (state.recovery == null) state else state.copy(recovery = key, refusal = null) }
     }
 
-    /** Take a recovery key set up on another client, which restores the history's keys. */
+    /**
+     * Take a recovery key set up on another client, which restores the
+     * history's keys. A refusal says why in the dialog, in the server's words:
+     * a key that is not the account's, no recovery set up, or the key's
+     * backup failing to open.
+     */
     fun recover() {
         val key = _uiState.value.recovery?.trim().orEmpty()
         if (key.isEmpty() || _uiState.value.recovering) return
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(recovering = true)
+            _uiState.update { state -> state.copy(recovering = true, refusal = null) }
             try {
                 val restored = repository.recover(chatId, key)
                 _events.tryEmit(EncryptionEvent.Restored(restored))
-                _uiState.value = _uiState.value.copy(recovering = false, recovery = null)
+                _uiState.update { state -> state.copy(recovering = false, recovery = null) }
                 load()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(recovering = false)
-                say(said(e, application.getString(R.string.chat_encryption_recovery_refused)))
+                _uiState.update { state -> state.copy(recovering = false, refusal = e.toMochiError()) }
             }
         }
     }
 
     fun closeRecovery() {
-        _uiState.value = _uiState.value.copy(recovery = null)
+        _uiState.update { state -> state.copy(recovery = null, refusal = null) }
     }
 }

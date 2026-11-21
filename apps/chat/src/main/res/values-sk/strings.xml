@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Hotovo</string>
     <string name="chat_encryption_key">Kľúč na obnovenie</string>
     <string name="chat_encryption_restore">Obnoviť</string>
-    <string name="chat_encryption_recovery_refused">Toto nie je váš kľúč na obnovenie</string>
     <string name="chat_verification_own">Overiť vaše zariadenie</string>
     <string name="chat_verification_compare">Skontrolujte, či sa na druhej obrazovke zobrazujú rovnaké emoji.</string>
     <string name="chat_verification_requested_own">Iné z vašich zariadení chce overiť toto zariadenie.</string>
@@ -160,11 +159,6 @@
     <string name="chat_verification_requested">%1$s vás chce overiť.</string>
     <string name="chat_typing_one">%1$s píše...</string>
     <string name="chat_typing_many">%1$s píšu...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s odpoveď</item>
-        <item quantity="few">%1$s odpovede</item>
-        <item quantity="other">%1$s odpovedí</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s staršia odpoveď</item>
         <item quantity="few">%1$s staršie odpovede</item>
@@ -184,4 +178,19 @@
     <string name="chat_message_earlier">Správy z obdobia pred pridaním tohto účtu do Mochi sú šifrované a nedajú sa tu prečítať</string>
     <string name="chat_message_excluded">Šifrovaná iba pre iné zariadenia</string>
     <string name="chat_setup">Nastaviť</string>
+    <string name="chat_jump_bottom">Prejsť na koniec</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Prejsť na %1$s novú správu</item>
+        <item quantity="few">Prejsť na %1$s nové správy</item>
+        <item quantity="other">Prejsť na %1$s nových správ</item>
+    </plurals>
+    <string name="chat_message_distrusted">Odoslané zo zariadenia, ktorému nedôverujete</string>
+    <string name="chat_message_mismatched">Odoslané zo zariadenia, ktorého kľúče sa nezhodujú</string>
+    <string name="chat_list_select">Vybrať chat</string>
+    <string name="chat_message_discard">Zahodiť</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Správa je o %1$s znak dlhšia</item>
+        <item quantity="few">Správa je o %1$s znaky dlhšia</item>
+        <item quantity="other">Správa je o %1$s znakov dlhšia</item>
+    </plurals>
 </resources>

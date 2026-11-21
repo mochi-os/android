@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">រួចរាល់</string>
     <string name="chat_encryption_key">កូនសោស្តារ</string>
     <string name="chat_encryption_restore">ស្តារ</string>
-    <string name="chat_encryption_recovery_refused">នោះមិនមែនជាកូនសោស្តាររបស់អ្នកទេ</string>
     <string name="chat_verification_own">ផ្ទៀងផ្ទាត់ឧបករណ៍របស់អ្នក</string>
     <string name="chat_verification_compare">ពិនិត្យមើលថាអេម៉ូជីដូចគ្នាបង្ហាញនៅលើអេក្រង់ម្ខាងទៀត។</string>
     <string name="chat_verification_requested_own">ឧបករណ៍មួយទៀតរបស់អ្នកចង់ផ្ទៀងផ្ទាត់ឧបករណ៍នេះ។</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s ចង់ផ្ទៀងផ្ទាត់អ្នក។</string>
     <string name="chat_typing_one">%1$s កំពុងវាយ...</string>
     <string name="chat_typing_many">%1$s កំពុងវាយ...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s ការឆ្លើយតប</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s ការឆ្លើយតបមុនៗ</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">សារពីមុនពេលគណនីនេះត្រូវបានបញ្ចូលទៅក្នុង Mochi ត្រូវបានអ៊ិនគ្រីប ហើយមិនអាចអាននៅទីនេះបានទេ</string>
     <string name="chat_message_excluded">បានអ៊ិនគ្រីបសម្រាប់ឧបករណ៍ផ្សេងទៀតតែប៉ុណ្ណោះ</string>
     <string name="chat_setup">រៀបចំ</string>
+    <string name="chat_jump_bottom">ទៅក្រោមបំផុត</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">ទៅកាន់សារថ្មីចំនួន %1$s</item>
+    </plurals>
+    <string name="chat_message_distrusted">បានផ្ញើពីឧបករណ៍ដែលអ្នកមិនទុកចិត្ត</string>
+    <string name="chat_message_mismatched">បានផ្ញើពីឧបករណ៍ដែលកូនសោមិនត្រូវគ្នា</string>
+    <string name="chat_list_select">ជ្រើសរើសការសន្ទនា</string>
+    <string name="chat_message_discard">បោះចោល</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">សារវែងលើស %1$s តួអក្សរ</item>
+    </plurals>
 </resources>

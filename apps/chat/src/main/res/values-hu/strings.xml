@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Kész</string>
     <string name="chat_encryption_key">Helyreállítási kulcs</string>
     <string name="chat_encryption_restore">Visszaállítás</string>
-    <string name="chat_encryption_recovery_refused">Ez nem az Ön helyreállítási kulcsa</string>
     <string name="chat_verification_own">Saját eszköz ellenőrzése</string>
     <string name="chat_verification_compare">Ellenőrizze, hogy ugyanazok az emojik jelennek-e meg a másik képernyőn.</string>
     <string name="chat_verification_requested_own">Egy másik eszköze ellenőrizni szeretné ezt az eszközt.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s ellenőrizni szeretné Önt.</string>
     <string name="chat_typing_one">%1$s gépel...</string>
     <string name="chat_typing_many">%1$s gépelnek...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s válasz</item>
-        <item quantity="other">%1$s válasz</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s korábbi válasz</item>
         <item quantity="other">%1$s korábbi válasz</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">A fiók Mochihoz adása előtti üzenetek titkosítottak, és itt nem olvashatók</string>
     <string name="chat_message_excluded">Csak más eszközökre titkosítva</string>
     <string name="chat_setup">Beállítás</string>
+    <string name="chat_jump_bottom">Ugrás az aljára</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Ugrás %1$s új üzenethez</item>
+        <item quantity="other">Ugrás %1$s új üzenethez</item>
+    </plurals>
+    <string name="chat_message_distrusted">Olyan eszközről küldve, amelyet nem megbízhatónak jelöltél</string>
+    <string name="chat_message_mismatched">Olyan eszközről küldve, amelynek kulcsai nem egyeznek</string>
+    <string name="chat_list_select">Csevegés kiválasztása</string>
+    <string name="chat_message_discard">Elvetés</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Az üzenet %1$s karakterrel hosszabb a megengedettnél</item>
+        <item quantity="other">Az üzenet %1$s karakterrel hosszabb a megengedettnél</item>
+    </plurals>
 </resources>

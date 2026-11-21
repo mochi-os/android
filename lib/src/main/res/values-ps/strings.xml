@@ -117,7 +117,6 @@
     <string name="game_chat_empty">تر اوسه هیڅ پیغامونه نشته</string>
     <string name="game_chat_input_placeholder">پیغام ولیکئ</string>
     <string name="game_chat_send">پیغام ولېږئ</string>
-    <string name="game_chat_subject_you">تاسو</string>
 
     <string name="common_not_saved">نه دي خوندي شوي</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">په سرور کې بدل شو</string>
     <string name="sync_missing">نور په سرور کې نشته</string>
     <string name="sync_refused">سرور رد کړ</string>
+    <string name="game_system_score_agreed">پر پایله موافقه وشوه</string>
+    <string name="game_system_score_accept">%1$s پایله ومنله</string>
+    <string name="game_system_score_resume">%1$s لوبه بیا پیل کړه</string>
+    <string name="game_not_found">لوبه ونه موندل شوه</string>
+    <string name="game_chat_move_played_you">تاسو %1$s ولوباوه</string>
 </resources>

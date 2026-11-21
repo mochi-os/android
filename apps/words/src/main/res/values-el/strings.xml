@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Δεν υπάρχουν ακόμη παρτίδες.</string>
     <string name="words_new_game_choose_opponents">Επιλέξτε αντιπάλους</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s παίκτες</string>
     <string name="words_new_game_no_friends_subtitle">Προσθέστε φίλους στην εφαρμογή Άτομα για να αρχίσετε να παίζετε.</string>
     <string name="words_detail_title">Παρτίδα</string>
     <string name="words_detail_status_opponent_move">Σειρά του %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s κερδίζει</string>
     <string name="words_detail_player_fallback">Παίκτης %1$s</string>
-    <string name="words_detail_player_count">%1$s παίκτες</string>
-    <string name="words_detail_label_tiles_left">%1$s πλακίδια απομένουν</string>
     <string name="words_detail_action_open_chat">Άνοιγμα συνομιλίας</string>
     <string name="words_detail_action_more">Ενέργειες παρτίδας</string>
     <string name="words_detail_exchange_count">Ανταλλαγή (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Δεν σχηματίστηκαν έγκυρες λέξεις</string>
     <string name="words_validation_offline">Ο έλεγχος είναι εκτός σύνδεσης — μπορείς να υποβάλεις παρ\' όλα αυτά.</string>
     <string name="words_validation_unknown_words">Περιέχει άγνωστες λέξεις. Μπορείς να υποβάλεις παρ\' όλα αυτά.</string>
+    <string name="words_detail_label_tiles">Πλακίδια που απομένουν</string>
+    <string name="words_detail_submit_score">Υποβολή +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3Λ</string>
+    <string name="words_board_premium_double_word">2Λ</string>
+    <string name="words_board_premium_triple_letter">3Γ</string>
+    <string name="words_board_premium_double_letter">2Γ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s παίκτης</item>
+        <item quantity="other">%1$s παίκτες</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s παίκτης</item>
+        <item quantity="other">%1$s παίκτες</item>
+    </plurals>
 </resources>

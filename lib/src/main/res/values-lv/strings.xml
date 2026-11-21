@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Vēl nav ziņojumu</string>
     <string name="game_chat_input_placeholder">Ierakstiet ziņu</string>
     <string name="game_chat_send">Sūtīt ziņu</string>
-    <string name="game_chat_subject_you">Jūs</string>
 
     <string name="common_not_saved">Nav saglabāts</string>
     <string name="app_brand">Mochi</string>
@@ -351,4 +350,9 @@
     <string name="sync_conflict">Mainīts serverī</string>
     <string name="sync_missing">Vairs nav serverī</string>
     <string name="sync_refused">Serveris noraidīja</string>
+    <string name="game_system_score_agreed">Rezultāts saskaņots</string>
+    <string name="game_system_score_accept">%1$s pieņēma rezultātu</string>
+    <string name="game_system_score_resume">%1$s atsāka spēli</string>
+    <string name="game_not_found">Spēle nav atrasta</string>
+    <string name="game_chat_move_played_you">Jūs spēlējāt %1$s</string>
 </resources>

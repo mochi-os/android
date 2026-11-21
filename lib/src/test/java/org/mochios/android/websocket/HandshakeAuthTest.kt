@@ -39,7 +39,7 @@ class HandshakeAuthTest {
         server = MockWebServer()
         repeat(4) { server.enqueue(MockResponse().setResponseCode(503)) }
         server.start()
-        socket = MochiWebSocket(OkHttpClient(), Gson(), session)
+        socket = MochiWebSocket(OkHttpClient(), Gson(), session, deliver = Runnable::run)
     }
 
     @After

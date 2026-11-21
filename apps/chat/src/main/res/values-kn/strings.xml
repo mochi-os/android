@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">ಮುಗಿಯಿತು</string>
     <string name="chat_encryption_key">ರಿಕವರಿ ಕೀ</string>
     <string name="chat_encryption_restore">ಮರುಸ್ಥಾಪಿಸಿ</string>
-    <string name="chat_encryption_recovery_refused">ಇದು ನಿಮ್ಮ ರಿಕವರಿ ಕೀ ಅಲ್ಲ</string>
     <string name="chat_verification_own">ನಿಮ್ಮ ಸಾಧನವನ್ನು ಪರಿಶೀಲಿಸಿ</string>
     <string name="chat_verification_compare">ಇನ್ನೊಂದು ಪರದೆಯಲ್ಲಿ ಅದೇ ಎಮೋಜಿಗಳು ಕಾಣಿಸುತ್ತವೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ.</string>
     <string name="chat_verification_requested_own">ನಿಮ್ಮ ಇನ್ನೊಂದು ಸಾಧನವು ಇದನ್ನು ಪರಿಶೀಲಿಸಲು ಬಯಸುತ್ತದೆ.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s ನಿಮ್ಮನ್ನು ಪರಿಶೀಲಿಸಲು ಬಯಸುತ್ತಾರೆ.</string>
     <string name="chat_typing_one">%1$s ಟೈಪ್ ಮಾಡುತ್ತಿದ್ದಾರೆ...</string>
     <string name="chat_typing_many">%1$s ಟೈಪ್ ಮಾಡುತ್ತಿದ್ದಾರೆ...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s ಪ್ರತ್ಯುತ್ತರ</item>
-        <item quantity="other">%1$s ಪ್ರತ್ಯುತ್ತರಗಳು</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ಹಿಂದಿನ ಪ್ರತ್ಯುತ್ತರ</item>
         <item quantity="other">%1$s ಹಿಂದಿನ ಪ್ರತ್ಯುತ್ತರಗಳು</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">ಈ ಖಾತೆಯನ್ನು Mochi ಗೆ ಸೇರಿಸುವ ಮೊದಲಿನ ಸಂದೇಶಗಳು ಎನ್‌ಕ್ರಿಪ್ಟ್ ಆಗಿವೆ ಮತ್ತು ಇಲ್ಲಿ ಓದಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
     <string name="chat_message_excluded">ಇತರ ಸಾಧನಗಳಿಗೆ ಮಾತ್ರ ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ</string>
     <string name="chat_setup">ಸೆಟಪ್ ಮಾಡಿ</string>
+    <string name="chat_jump_bottom">ಕೆಳಕ್ಕೆ ಹೋಗಿ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s ಹೊಸ ಸಂದೇಶಕ್ಕೆ ಹೋಗಿ</item>
+        <item quantity="other">%1$s ಹೊಸ ಸಂದೇಶಗಳಿಗೆ ಹೋಗಿ</item>
+    </plurals>
+    <string name="chat_message_distrusted">ನೀವು ನಂಬದ ಸಾಧನದಿಂದ ಕಳುಹಿಸಲಾಗಿದೆ</string>
+    <string name="chat_message_mismatched">ಕೀಗಳು ಹೊಂದಿಕೆಯಾಗದ ಸಾಧನದಿಂದ ಕಳುಹಿಸಲಾಗಿದೆ</string>
+    <string name="chat_list_select">ಚಾಟ್ ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="chat_message_discard">ತಿರಸ್ಕರಿಸಿ</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">ಸಂದೇಶವು ಮಿತಿಗಿಂತ %1$s ಅಕ್ಷರ ಉದ್ದವಾಗಿದೆ</item>
+        <item quantity="other">ಸಂದೇಶವು ಮಿತಿಗಿಂತ %1$s ಅಕ್ಷರಗಳಷ್ಟು ಉದ್ದವಾಗಿದೆ</item>
+    </plurals>
 </resources>

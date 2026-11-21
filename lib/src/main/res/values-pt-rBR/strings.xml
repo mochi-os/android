@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Ainda não há mensagens</string>
     <string name="game_chat_input_placeholder">Digite uma mensagem</string>
     <string name="game_chat_send">Enviar mensagem</string>
-    <string name="game_chat_subject_you">Você</string>
 
     <string name="common_not_saved">Não salvo</string>
     <string name="auth_server_url">URL do servidor</string>
@@ -320,4 +319,7 @@
     <string name="person_unknown">Desconhecido</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="game_system_score_agreed">Pontuação acordada</string>
+    <string name="game_system_score_accept">%1$s aceitou a pontuação</string>
+    <string name="game_system_score_resume">%1$s retomou o jogo</string>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Nastavi igru</string>
     <string name="go_error_score_resume_failed">Nastavak igre nije uspio</string>
     <string name="go_error_score_accept_failed">Prihvatanje rezultata nije uspjelo</string>
+    <string name="go_chat_player_passed">%1$s je preskočio potez</string>
+    <string name="go_chat_you_passed">Preskočili ste potez</string>
 </resources>

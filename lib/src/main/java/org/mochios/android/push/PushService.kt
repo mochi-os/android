@@ -88,6 +88,11 @@ class PushService : Service() {
     // identity -> its drain, run one at a time.
     private val drainers = java.util.concurrent.ConcurrentHashMap<String, Drainer>()
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
+    // The socket hands its pushes over on the main thread; each is delivered
+    // off it, one at a time in the order they came, since delivering one reads
+    // the sealed distributor store and posts to the tray.
+    private val deliveries = Dispatchers.IO.limitedParallelism(1)
     private var accountsJob: Job? = null
 
     // A network coming up cuts short the wait of a channel whose first token
@@ -218,7 +223,9 @@ class PushService : Service() {
                                 }
                             }
                         },
-                        onEvent = { event -> handleEvent(event, account.server, credentials[identity] ?: token, identity) },
+                        onEvent = { event ->
+                            scope.launch(deliveries) { handleEvent(event, account.server, credentials[identity] ?: token, identity) }
+                        },
                     )
                 }
             } finally {

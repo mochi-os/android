@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Fet</string>
     <string name="chat_encryption_key">Clau de recuperació</string>
     <string name="chat_encryption_restore">Restaura</string>
-    <string name="chat_encryption_recovery_refused">Aquesta no és la vostra clau de recuperació</string>
     <string name="chat_verification_own">Verificació del vostre dispositiu</string>
     <string name="chat_verification_compare">Comproveu que apareixen els mateixos emojis a l\'altra pantalla.</string>
     <string name="chat_verification_requested_own">Un altre dels vostres dispositius vol verificar aquest.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s us vol verificar.</string>
     <string name="chat_typing_one">%1$s està escrivint...</string>
     <string name="chat_typing_many">%1$s estan escrivint...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s resposta</item>
-        <item quantity="other">%1$s respostes</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s resposta anterior</item>
         <item quantity="other">%1$s respostes anteriors</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Els missatges d\'abans que aquest compte s\'afegís a Mochi estan xifrats i no es poden llegir aquí</string>
     <string name="chat_message_excluded">Xifrat només per a altres dispositius</string>
     <string name="chat_setup">Configura</string>
+    <string name="chat_jump_bottom">Vés al final</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Vés a %1$s missatge nou</item>
+        <item quantity="other">Vés a %1$s missatges nous</item>
+    </plurals>
+    <string name="chat_message_distrusted">Enviat des d\'un dispositiu que has marcat com a no fiable</string>
+    <string name="chat_message_mismatched">Enviat des d\'un dispositiu les claus del qual no coincideixen</string>
+    <string name="chat_list_select">Selecciona un xat</string>
+    <string name="chat_message_discard">Descarta</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">El missatge té %1$s caràcter de més</item>
+        <item quantity="other">El missatge té %1$s caràcters de més</item>
+    </plurals>
 </resources>

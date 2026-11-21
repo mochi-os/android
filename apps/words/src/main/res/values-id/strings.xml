@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Belum ada pertandingan.</string>
     <string name="words_new_game_choose_opponents">Pilih lawan</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s pemain</string>
     <string name="words_new_game_no_friends_subtitle">Tambahkan teman di aplikasi Orang untuk mulai bermain.</string>
     <string name="words_detail_title">Pertandingan</string>
     <string name="words_detail_status_opponent_move">Giliran %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s menang</string>
     <string name="words_detail_player_fallback">Pemain %1$s</string>
-    <string name="words_detail_player_count">%1$s pemain</string>
-    <string name="words_detail_label_tiles_left">%1$s ubin tersisa</string>
     <string name="words_detail_action_open_chat">Buka obrolan</string>
     <string name="words_detail_action_more">Tindakan pertandingan</string>
     <string name="words_detail_exchange_count">Tukar (%1$s)</string>
@@ -71,4 +68,17 @@
     <string name="words_move_error_no_words">Tidak ada kata valid yang terbentuk</string>
     <string name="words_validation_offline">Validasi offline — kamu tetap bisa mengirim.</string>
     <string name="words_validation_unknown_words">Berisi kata yang tidak dikenal. Kamu tetap bisa mengirim.</string>
+    <string name="words_detail_label_tiles">Ubin tersisa</string>
+    <string name="words_detail_submit_score">Kirim +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3K</string>
+    <string name="words_board_premium_double_word">2K</string>
+    <string name="words_board_premium_triple_letter">3H</string>
+    <string name="words_board_premium_double_letter">2H</string>
+    <plurals name="words_new_game_players">
+        <item quantity="other">%1$s pemain</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="other">%1$s pemain</item>
+    </plurals>
 </resources>

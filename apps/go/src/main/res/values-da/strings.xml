@@ -81,4 +81,6 @@
     <string name="go_score_resume">Genoptag spil</string>
     <string name="go_error_score_resume_failed">Kunne ikke genoptage spillet</string>
     <string name="go_error_score_accept_failed">Kunne ikke acceptere scoren</string>
+    <string name="go_chat_player_passed">%1$s meldte pas</string>
+    <string name="go_chat_you_passed">Du meldte pas</string>
 </resources>

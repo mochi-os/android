@@ -254,11 +254,9 @@ class ForumViewModel @Inject constructor(
     private fun subscribeWebSocket(forumKey: String) {
         if (forumKey.isBlank() || subscriptionId != null) return
         val serverUrl = sessionManager.getServerUrlBlocking()
-        // The socket calls back on its own thread. The frame is handled on the
-        // main one, where every other change to this screen's state is made.
-        subscriptionId = webSocket.subscribe(serverUrl, forumKey, app = "forums") { event ->
-            viewModelScope.launch { frame(event) }
-        }
+        // The socket hands each frame over on the main thread, where every
+        // other change to this screen's state is made.
+        subscriptionId = webSocket.subscribe(serverUrl, forumKey, app = "forums") { event -> frame(event) }
     }
 
     private fun frame(event: WebSocketEvent) {

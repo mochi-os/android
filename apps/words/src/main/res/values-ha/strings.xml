@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Babu wasanni tukuna.</string>
     <string name="words_new_game_choose_opponents">Zaɓi abokan hamayya</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">\'Yan wasa %1$s</string>
     <string name="words_new_game_no_friends_subtitle">Ƙara abokai a manhajar Mutane don fara wasa.</string>
     <string name="words_detail_title">Wasa</string>
     <string name="words_detail_status_opponent_move">Motsin %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s ya yi nasara</string>
     <string name="words_detail_player_fallback">Ɗan wasa %1$s</string>
-    <string name="words_detail_player_count">\'Yan wasa %1$s</string>
-    <string name="words_detail_label_tiles_left">Sauran tayal %1$s</string>
     <string name="words_detail_action_open_chat">Buɗe hira</string>
     <string name="words_detail_action_more">Ayyukan wasa</string>
     <string name="words_detail_exchange_count">Musanya (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Ba a samar da wata kalma mai inganci ba</string>
     <string name="words_validation_offline">Tabbatarwa ba ta kan layi ba — har yanzu kana iya aikawa.</string>
     <string name="words_validation_unknown_words">Yana ƙunshe da kalmomin da ba a sani ba. Har yanzu kana iya aikawa.</string>
+    <string name="words_detail_label_tiles">Sauran tiles</string>
+    <string name="words_detail_submit_score">Aikawa +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3K</string>
+    <string name="words_board_premium_double_word">2K</string>
+    <string name="words_board_premium_triple_letter">3H</string>
+    <string name="words_board_premium_double_letter">2H</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">Ɗan wasa %1$s</item>
+        <item quantity="other">\'Yan wasa %1$s</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">Ɗan wasa %1$s</item>
+        <item quantity="other">\'Yan wasa %1$s</item>
+    </plurals>
 </resources>

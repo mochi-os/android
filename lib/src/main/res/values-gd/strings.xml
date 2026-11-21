@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Chan eil teachdaireachdan ann fhathast</string>
     <string name="game_chat_input_placeholder">Sgrìobh teachdaireachd</string>
     <string name="game_chat_send">Cuir teachdaireachd</string>
-    <string name="game_chat_subject_you">Thusa</string>
 
     <string name="common_not_saved">Gun sàbhaladh</string>
     <string name="app_brand">Mochi</string>
@@ -353,4 +352,9 @@
     <string name="sync_conflict">Air atharrachadh air an fhrithealaiche</string>
     <string name="sync_missing">Chan eil e air an fhrithealaiche tuilleadh</string>
     <string name="sync_refused">Dhiùlt am frithealaiche e</string>
+    <string name="game_system_score_agreed">Chaidh aontachadh ris an sgòr</string>
+    <string name="game_system_score_accept">Ghabh %1$s ris an sgòr</string>
+    <string name="game_system_score_resume">Thòisich %1$s a\' cluich a-rithist</string>
+    <string name="game_not_found">Cha deach an geama a lorg</string>
+    <string name="game_chat_move_played_you">Chluich thu %1$s</string>
 </resources>

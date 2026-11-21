@@ -12,10 +12,12 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.leaveRouter
 import org.mochios.android.util.navigateFromDrawer
 import org.mochios.chat.ui.chat.ChatScreen
 import org.mochios.chat.ui.newchat.NewChatScreen
+import org.mochios.chat.ui.router.CHAT_FEATURE
 import org.mochios.chat.ui.router.ChatRouter
 import org.mochios.chat.ui.settings.ChatSettingsScreen
 
@@ -77,8 +79,8 @@ fun NavGraphBuilder.chatNavGraph(
             onNewChat = { navController.navigate(ChatApp.newChat()) },
             onSettings = { id -> navController.navigate(ChatApp.chatSettings(id)) },
             onChatDeleted = {
-                // The chat no longer exists locally — drop back to the router so
-                // last-viewed re-resolves instead of reopening a missing chat.
+                // The chat no longer exists locally, and is forgotten as last
+                // viewed: the router resolves to another, or to none.
                 navController.navigate(ChatApp.ROUTER) {
                     popUpTo(ChatApp.CHAT) { inclusive = true }
                 }
@@ -98,9 +100,6 @@ fun NavGraphBuilder.chatNavGraph(
                 nullable = false
             }
         },
-        deepLinks = listOf(
-            navDeepLink { uriPattern = "mochi://chat/with?friend={friend}&account={account}&address={address}&name={name}" }
-        )
     ) {
         NewChatScreen(
             onBack = { navController.popBackStack() },
@@ -118,13 +117,16 @@ fun NavGraphBuilder.chatNavGraph(
     composable(
         route = ChatApp.CHAT_SETTINGS,
         arguments = listOf(navArgument("chatId") { type = NavType.StringType })
-    ) {
+    ) { backStackEntry ->
+        val chatId = backStackEntry.arguments?.getString("chatId").orEmpty()
         ChatSettingsScreen(
             onBack = { navController.popBackStack() },
             onChatLeft = {
-                // Navigate to the router rather than pop back to it: it removes
-                // itself from the stack once it resolves, so there is no entry
-                // to pop to.
+                // Deleted here: forgotten as last viewed, or the router would
+                // open it again. Navigate to the router rather than pop back to
+                // it: it removes itself from the stack once it resolves, so
+                // there is no entry to pop to.
+                LastViewedStore.drop(navController.context, CHAT_FEATURE, chatId)
                 navController.navigate(ChatApp.ROUTER) {
                     popUpTo(ChatApp.CHAT) { inclusive = true }
                 }

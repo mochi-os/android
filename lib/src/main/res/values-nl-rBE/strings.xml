@@ -116,7 +116,6 @@
     <string name="game_chat_empty">Nog geen berichten</string>
     <string name="game_chat_input_placeholder">Typ een bericht</string>
     <string name="game_chat_send">Bericht versturen</string>
-    <string name="game_chat_subject_you">U</string>
 
     <string name="common_not_saved">Niet opgeslagen</string>
     <string name="app_brand">Mochi</string>
@@ -313,4 +312,8 @@
     <string name="person_unknown">Onbekend</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="game_system_score_agreed">Score overeengekomen</string>
+    <string name="game_system_score_accept">%1$s heeft de score geaccepteerd</string>
+    <string name="game_system_score_resume">%1$s heeft het spel hervat</string>
+    <string name="game_chat_move_played_you">U speelde %1$s</string>
 </resources>

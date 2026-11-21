@@ -78,4 +78,6 @@
     <string name="go_score_resume">Endelea na mchezo</string>
     <string name="go_error_score_resume_failed">Imeshindwa kuendelea na mchezo</string>
     <string name="go_error_score_accept_failed">Imeshindwa kukubali alama</string>
+    <string name="go_chat_player_passed">%1$s aliruka zamu</string>
+    <string name="go_chat_you_passed">Umepita</string>
 </resources>

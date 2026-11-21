@@ -10,7 +10,6 @@ import org.mochios.android.api.unwrap
 import org.mochios.chess.api.ChessApi
 import org.mochios.chess.model.CreateGameResponse
 import org.mochios.chess.model.Game
-import org.mochios.chess.model.GameMessage
 import org.mochios.chess.model.GameViewResponse
 import org.mochios.chess.model.GetMessagesResponse
 import org.mochios.chess.model.MoveRequest
@@ -64,17 +63,8 @@ class ChessRepository @Inject constructor(
         try { api.getMessages(game, before, limit).unwrap() } catch (e: Exception) { throw e.toMochiError() }
 
     /** Append a chat message to the game. Returns the row UID of the new message. */
-    suspend fun sendMessage(game: String, body: String): GameMessage {
-        try {
-            val response = api.sendMessage(game, body).unwrap()
-            // Server returns just the id; the caller usually optimistically
-            // pre-populated the row, so we hand back a minimal stub for any
-            // callers that want one without doing a follow-up list call.
-            return GameMessage(id = response.id, game = game, body = body, type = "message")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
-    }
+    suspend fun sendMessage(game: String, body: String): String =
+        try { api.sendMessage(game, body).unwrap().id } catch (e: Exception) { throw e.toMochiError() }
 
     /**
      * Submit a move; returns the id of the move message row.

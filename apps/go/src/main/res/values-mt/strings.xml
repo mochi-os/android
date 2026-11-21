@@ -81,4 +81,6 @@
     <string name="go_score_resume">Kompli l-logħob</string>
     <string name="go_error_score_resume_failed">Ma rnexxiex jitkompla l-logħob</string>
     <string name="go_error_score_accept_failed">Ma rnexxiex jiġi aċċettat l-iscore</string>
+    <string name="go_chat_player_passed">%1$s għadda</string>
+    <string name="go_chat_you_passed">Int għaddejt</string>
 </resources>

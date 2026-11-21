@@ -65,6 +65,13 @@ data class Game(
      */
     val canOfferDraw: Boolean
         get() = status == "active" && drawOffer.isNullOrEmpty()
+
+    /**
+     * Whether the game is still being played: `active`, or `scoring`, where
+     * both players have passed and each must accept the count or play on.
+     */
+    val isLive: Boolean
+        get() = status == "active" || status == "scoring"
 }
 
 /**

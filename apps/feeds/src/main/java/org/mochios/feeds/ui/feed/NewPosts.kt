@@ -12,9 +12,9 @@ import kotlinx.coroutines.flow.update
 import java.util.concurrent.ConcurrentHashMap
 
 /**
- * The count of new posts written in the bar beside the refresh button.
- * Websocket frames arrive on the socket's own thread, so both the seen set
- * and the counter have to be safe to touch from there.
+ * The count of new posts written in the bar beside the refresh button. Frames
+ * reach it on the main thread; the seen set and the counter stay safe to
+ * touch from any thread.
  */
 internal class NewPosts {
     private val seen = ConcurrentHashMap.newKeySet<String>()

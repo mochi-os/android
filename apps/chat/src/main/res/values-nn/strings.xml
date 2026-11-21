@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Ferdig</string>
     <string name="chat_encryption_key">Gjenopprettingsnøkkel</string>
     <string name="chat_encryption_restore">Gjenopprett</string>
-    <string name="chat_encryption_recovery_refused">Det er ikkje gjenopprettingsnøkkelen din</string>
     <string name="chat_verification_own">Stadfest eininga di</string>
     <string name="chat_verification_compare">Sjekk at dei same emojiane kjem fram på den andre skjermen.</string>
     <string name="chat_verification_requested_own">Ei av dei andre einingane dine vil stadfeste denne.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s vil stadfeste deg.</string>
     <string name="chat_typing_one">%1$s skriv...</string>
     <string name="chat_typing_many">%1$s skriv...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s svar</item>
-        <item quantity="other">%1$s svar</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s tidlegare svar</item>
         <item quantity="other">%1$s tidlegare svar</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Meldingar frå før denne kontoen vart lagd til i Mochi er krypterte og kan ikkje lesast her</string>
     <string name="chat_message_excluded">Berre kryptert for andre einingar</string>
     <string name="chat_setup">Sett opp</string>
+    <string name="chat_jump_bottom">Hopp til botnen</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Hopp til %1$s ny melding</item>
+        <item quantity="other">Hopp til %1$s nye meldingar</item>
+    </plurals>
+    <string name="chat_message_distrusted">Sendt frå ei eining du ikkje stolar på</string>
+    <string name="chat_message_mismatched">Sendt frå ei eining der nøklane ikkje stemmer</string>
+    <string name="chat_list_select">Vel ein prat</string>
+    <string name="chat_message_discard">Forkast</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Meldinga er %1$s teikn for lang</item>
+        <item quantity="other">Meldinga er %1$s teikn for lang</item>
+    </plurals>
 </resources>

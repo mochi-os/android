@@ -33,7 +33,6 @@ data class ChessGameListUiState(
     val games: List<Game> = emptyList(),
     val identity: String? = null,
     val error: MochiError? = null,
-    val newGameDialogOpen: Boolean = false,
     val activeSidebar: List<ChessSidebarGame> = emptyList(),
     val completedSidebar: List<ChessSidebarGame> = emptyList(),
 )
@@ -119,7 +118,6 @@ class ChessGameListViewModel @Inject constructor(
             id = id,
             opponentId = opponentId(identity),
             opponentName = opponentName(identity),
-            updated = updated,
         )
     }
 }

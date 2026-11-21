@@ -153,7 +153,6 @@
     <string name="chat_encryption_done">完成</string>
     <string name="chat_encryption_key">復原金鑰</string>
     <string name="chat_encryption_restore">還原</string>
-    <string name="chat_encryption_recovery_refused">呢條唔係你嘅復原金鑰</string>
     <string name="chat_verification_own">驗證你嘅裝置</string>
     <string name="chat_verification_title">驗證 %1$s</string>
     <string name="chat_verification_compare">睇吓另一個螢幕係咪顯示一樣嘅表情符號。</string>
@@ -165,9 +164,6 @@
     <string name="chat_verification_mismatched">表情符號唔一樣,所以取消咗驗證</string>
     <string name="chat_verification_cancelled">驗證取消咗</string>
     <string name="chat_verification_failed">驗證做唔落去</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s 個回覆</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s 個之前嘅回覆</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_refused">對話被拒絕</string>
     <string name="chat_refused_friends_only">%1$s 只接受朋友嘅對話。</string>
     <string name="chat_setup">設定</string>
+    <string name="chat_list_select">揀一個對話</string>
+    <string name="chat_message_distrusted">由你唔信任嘅裝置發出</string>
+    <string name="chat_message_mismatched">由密鑰唔吻合嘅裝置發出</string>
+    <string name="chat_message_discard">捨棄</string>
+    <string name="chat_jump_bottom">跳到最底</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">訊息超出 %1$s 個字元</item>
+    </plurals>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">跳到 %1$s 條新訊息</item>
+    </plurals>
 </resources>

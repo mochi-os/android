@@ -23,7 +23,9 @@ import org.mochios.android.ui.components.LastViewedStore
 fun ChessRouter(onResolve: (gameId: String) -> Unit) {
     val context = LocalContext.current
     LaunchedEffect(Unit) {
-        val target = LastViewedStore.get(context, CHESS_FEATURE) ?: LastViewedStore.ALL
+        // Marked as reopened, so a game deleted elsewhere gives way to the
+        // empty pane instead of an error at every launch.
+        val target = LastViewedStore.restore(context, CHESS_FEATURE)
         onResolve(target)
     }
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

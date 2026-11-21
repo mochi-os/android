@@ -117,7 +117,6 @@
     <string name="game_chat_empty">暂无消息</string>
     <string name="game_chat_input_placeholder">输入消息</string>
     <string name="game_chat_send">发送消息</string>
-    <string name="game_chat_subject_you">您</string>
 
     <string name="common_not_saved">未保存</string>
     <string name="auth_server_url">服务器 URL</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">已在服务器上更改</string>
     <string name="sync_missing">已不在服务器上</string>
     <string name="sync_refused">被服务器拒绝</string>
+    <string name="game_system_score_agreed">已同意计分</string>
+    <string name="game_system_score_accept">%1$s已接受计分</string>
+    <string name="game_system_score_resume">%1$s已继续对局</string>
+    <string name="game_not_found">未找到对局</string>
+    <string name="game_chat_move_played_you">您走了 %1$s</string>
 </resources>

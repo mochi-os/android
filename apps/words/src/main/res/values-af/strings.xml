@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Nog geen speletjies nie.</string>
     <string name="words_new_game_choose_opponents">Kies teenstanders</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s spelers</string>
     <string name="words_new_game_no_friends_subtitle">Voeg vriende in die Mense-toepassing by om te begin speel.</string>
     <string name="words_detail_title">Spel</string>
     <string name="words_detail_status_opponent_move">%1$s se skuif</string>
     <string name="words_detail_status_winner_wins">%1$s wen</string>
     <string name="words_detail_player_fallback">Speler %1$s</string>
-    <string name="words_detail_player_count">%1$s spelers</string>
-    <string name="words_detail_label_tiles_left">%1$s teëls oor</string>
     <string name="words_detail_action_open_chat">Maak klets oop</string>
     <string name="words_detail_action_more">Spelaksies</string>
     <string name="words_detail_exchange_count">Ruil (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Geen geldige woorde gevorm nie</string>
     <string name="words_validation_offline">Validasie is vanlyn — jy kan steeds indien.</string>
     <string name="words_validation_unknown_words">Bevat onbekende woorde. Jy kan steeds indien.</string>
+    <string name="words_detail_label_tiles">Teëls oor</string>
+    <string name="words_detail_submit_score">Dien in +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3W</string>
+    <string name="words_board_premium_double_word">2W</string>
+    <string name="words_board_premium_triple_letter">3L</string>
+    <string name="words_board_premium_double_letter">2L</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s speler</item>
+        <item quantity="other">%1$s spelers</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s speler</item>
+        <item quantity="other">%1$s spelers</item>
+    </plurals>
 </resources>

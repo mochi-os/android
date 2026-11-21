@@ -81,4 +81,6 @@
     <string name="go_score_resume">Ipagpatuloy ang laro</string>
     <string name="go_error_score_resume_failed">Nabigong ipagpatuloy ang laro</string>
     <string name="go_error_score_accept_failed">Nabigong tanggapin ang score</string>
+    <string name="go_chat_player_passed">Nag-pass si %1$s</string>
+    <string name="go_chat_you_passed">Pumasa ka</string>
 </resources>

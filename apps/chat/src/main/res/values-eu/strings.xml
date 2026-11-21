@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Eginda</string>
     <string name="chat_encryption_key">Berreskuratze-gakoa</string>
     <string name="chat_encryption_restore">Berrezarri</string>
-    <string name="chat_encryption_recovery_refused">Hori ez da zure berreskuratze-gakoa</string>
     <string name="chat_verification_own">Egiaztatu zure gailua</string>
     <string name="chat_verification_compare">Egiaztatu emoji berak agertzen direla beste pantailan.</string>
     <string name="chat_verification_requested_own">Zure beste gailu batek hau egiaztatu nahi du.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s erabiltzaileak egiaztatu nahi zaitu.</string>
     <string name="chat_typing_one">%1$s idazten ari da...</string>
     <string name="chat_typing_many">%1$s idazten ari dira...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s erantzun</item>
-        <item quantity="other">%1$s erantzun</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">aurreko %1$s erantzun</item>
         <item quantity="other">aurreko %1$s erantzun</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Kontu hau Mochira gehitu aurreko mezuak enkriptatuta daude eta ezin dira hemen irakurri</string>
     <string name="chat_message_excluded">Beste gailuetarako soilik enkriptatua</string>
     <string name="chat_setup">Konfiguratu</string>
+    <string name="chat_jump_bottom">Joan behera</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Joan mezu berri batera</item>
+        <item quantity="other">Joan %1$s mezu berritara</item>
+    </plurals>
+    <string name="chat_message_distrusted">Fidagarritzat ez duzun gailu batetik bidalia</string>
+    <string name="chat_message_mismatched">Gakoak bat ez datozen gailu batetik bidalia</string>
+    <string name="chat_list_select">Hautatu txat bat</string>
+    <string name="chat_message_discard">Baztertu</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Mezuak %1$s karaktere gehiegi ditu</item>
+        <item quantity="other">Mezuak %1$s karaktere gehiegi ditu</item>
+    </plurals>
 </resources>

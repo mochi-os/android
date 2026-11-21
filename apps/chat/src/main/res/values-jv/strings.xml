@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Rampung</string>
     <string name="chat_encryption_key">Kunci pemulihan</string>
     <string name="chat_encryption_restore">Pulihaké</string>
-    <string name="chat_encryption_recovery_refused">Kuwi dudu kunci pemulihan sampeyan</string>
     <string name="chat_verification_own">Verifikasi piranti sampeyan</string>
     <string name="chat_verification_compare">Priksa manawa emoji sing padha katon ing layar liyané.</string>
     <string name="chat_verification_requested_own">Salah siji piranti liyané sampeyan pengin verifikasi piranti iki.</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s pengin verifikasi sampeyan.</string>
     <string name="chat_typing_one">%1$s lagi ngetik...</string>
     <string name="chat_typing_many">%1$s lagi ngetik...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s balesan</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s balesan sadurungé</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">Pesen saka sadurunge akun iki ditambahake menyang Mochi dienkripsi lan ora bisa diwaca ing kene</string>
     <string name="chat_message_excluded">Mung dienkripsi kanggo piranti liya</string>
     <string name="chat_setup">Setel</string>
+    <string name="chat_jump_bottom">Mlumpat menyang ngisor</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Mlumpat menyang %1$s pesen anyar</item>
+    </plurals>
+    <string name="chat_message_distrusted">Dikirim saka piranti sing ora sampeyan percaya</string>
+    <string name="chat_message_mismatched">Dikirim saka piranti sing kunciné ora cocog</string>
+    <string name="chat_list_select">Pilih chat</string>
+    <string name="chat_message_discard">Buwang</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Pesen kedawan %1$s karakter</item>
+    </plurals>
 </resources>

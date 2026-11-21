@@ -81,4 +81,6 @@
     <string name="go_score_resume">Pokračovat ve hře</string>
     <string name="go_error_score_resume_failed">Nepodařilo se pokračovat ve hře</string>
     <string name="go_error_score_accept_failed">Nepodařilo se přijmout skóre</string>
+    <string name="go_chat_player_passed">%1$s vynechal tah</string>
+    <string name="go_chat_you_passed">Pasovali jste</string>
 </resources>

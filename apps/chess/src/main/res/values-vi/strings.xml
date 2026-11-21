@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Hòa</string>
     <string name="chess_status_check_your_move">Chiếu — đến lượt bạn</string>
     <string name="chess_status_your_move">Lượt của bạn</string>
-    <string name="chess_move_subject_you">Bạn</string>
     <string name="chess_promotion_title">Phong cấp thành:</string>
 
     <string name="chess_resign_message">Bạn có chắc muốn xin thua không? %1$s sẽ thắng ván cờ.</string>
@@ -63,4 +62,6 @@
     <string name="chess_ws_reconnecting">Đang kết nối lại…</string>
     <string name="chess_piece_white">%1$s trắng</string>
     <string name="chess_piece_black">%1$s đen</string>
+    <string name="chess_move_played_you">Bạn đã đi %1$s</string>
+    <string name="chess_move_capture_you">Bạn đã ăn %1$s</string>
 </resources>

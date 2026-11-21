@@ -81,4 +81,6 @@
     <string name="go_score_resume">ສືບຕໍ່ຫຼິ້ນ</string>
     <string name="go_error_score_resume_failed">ສືບຕໍ່ຫຼິ້ນລົ້ມເຫຼວ</string>
     <string name="go_error_score_accept_failed">ຮັບເອົາຄະແນນລົ້ມເຫຼວ</string>
+    <string name="go_chat_player_passed">%1$s ຂ້າມຕາ</string>
+    <string name="go_chat_you_passed">ທ່ານຜ່ານ</string>
 </resources>

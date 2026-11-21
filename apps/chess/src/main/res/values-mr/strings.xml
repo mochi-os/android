@@ -32,7 +32,6 @@
     <string name="chess_status_draw">बरोबरी</string>
     <string name="chess_status_check_your_move">चेक — तुमची चाल</string>
     <string name="chess_status_your_move">तुमची चाल</string>
-    <string name="chess_move_subject_you">तुम्ही</string>
     <string name="chess_promotion_title">बढती द्या:</string>
 
     <string name="chess_resign_message">तुम्हाला खरंच राजीनामा द्यायचा आहे का? %1$s खेळ जिंकेल.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">पांढरा %1$s</string>
     <string name="chess_piece_black">काळा %1$s</string>
+    <string name="chess_move_played_you">तुम्ही %1$s खेळलात</string>
+    <string name="chess_move_capture_you">तुम्ही %1$s घेतलात</string>
 </resources>

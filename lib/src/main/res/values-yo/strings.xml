@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Kò sí ìránṣẹ́ síbẹ̀</string>
     <string name="game_chat_input_placeholder">Tẹ ìránṣẹ́</string>
     <string name="game_chat_send">Fi ìránṣẹ́ ránṣẹ́</string>
-    <string name="game_chat_subject_you">Ìwọ</string>
 
     <string name="common_not_saved">Kò tí ì fipamọ́</string>
     <string name="auth_server_url">URL olùṣẹ́</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">A ti yí i padà lórí olùṣẹ́</string>
     <string name="sync_missing">Kò sí lórí olùṣẹ́ mọ́</string>
     <string name="sync_refused">Olùṣẹ́ kọ̀ ọ́</string>
+    <string name="game_system_score_agreed">Ti fohùnṣọ̀kan lórí àmì</string>
+    <string name="game_system_score_accept">%1$s ti gba àmì náà</string>
+    <string name="game_system_score_resume">%1$s ti bẹ̀rẹ̀ eré padà</string>
+    <string name="game_not_found">A kò rí eré náà</string>
+    <string name="game_chat_move_played_you">O ṣe %1$s</string>
 </resources>

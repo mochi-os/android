@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">अहिलेसम्म कुनै खेल छैन।</string>
     <string name="words_new_game_choose_opponents">प्रतिद्वन्द्वीहरू छनोट गर्नुहोस्</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s खेलाडी</string>
     <string name="words_new_game_no_friends_subtitle">खेल्न सुरु गर्न मानिसहरू एपमा साथीहरू थप्नुहोस्।</string>
     <string name="words_detail_title">खेल</string>
     <string name="words_detail_status_opponent_move">%1$s को चाल</string>
     <string name="words_detail_status_winner_wins">%1$s जित्यो</string>
     <string name="words_detail_player_fallback">खेलाडी %1$s</string>
-    <string name="words_detail_player_count">%1$s खेलाडी</string>
-    <string name="words_detail_label_tiles_left">%1$s टाइल बाँकी</string>
     <string name="words_detail_action_open_chat">च्याट खोल्नुहोस्</string>
     <string name="words_detail_action_more">खेल कार्यहरू</string>
     <string name="words_detail_exchange_count">साट्नुहोस् (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">कुनै मान्य शब्द बनेन</string>
     <string name="words_validation_offline">प्रमाणीकरण अफलाइन छ — तपाईं अझै पनि पेस गर्न सक्नुहुन्छ।</string>
     <string name="words_validation_unknown_words">अज्ञात शब्दहरू छन्। तपाईं अझै पनि पेस गर्न सक्नुहुन्छ।</string>
+    <string name="words_detail_label_tiles">बाँकी टाइलहरू</string>
+    <string name="words_detail_submit_score">पेस गर्नुहोस् +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3श</string>
+    <string name="words_board_premium_double_word">2श</string>
+    <string name="words_board_premium_triple_letter">3अ</string>
+    <string name="words_board_premium_double_letter">2अ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s खेलाडी</item>
+        <item quantity="other">%1$s खेलाडी</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s खेलाडी</item>
+        <item quantity="other">%1$s खेलाडी</item>
+    </plurals>
 </resources>

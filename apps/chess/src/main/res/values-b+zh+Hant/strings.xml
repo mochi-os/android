@@ -32,7 +32,6 @@
     <string name="chess_status_draw">和局</string>
     <string name="chess_status_check_your_move">將軍——輪到您下棋</string>
     <string name="chess_status_your_move">輪到您</string>
-    <string name="chess_move_subject_you">您</string>
     <string name="chess_promotion_title">升變為:</string>
 
     <string name="chess_resign_message">確定要認輸嗎?%1$s 將贏得比賽。</string>
@@ -63,4 +62,6 @@
     <string name="chess_ws_reconnecting">重新連線…</string>
     <string name="chess_piece_white">白方%1$s</string>
     <string name="chess_piece_black">黑方%1$s</string>
+    <string name="chess_move_played_you">您走了 %1$s</string>
+    <string name="chess_move_capture_you">您吃掉了 %1$s</string>
 </resources>

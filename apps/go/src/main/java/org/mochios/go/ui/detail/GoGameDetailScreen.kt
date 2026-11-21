@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.consumeWindowInsets
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -29,6 +30,7 @@ import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Delete
 import androidx.compose.material.icons.outlined.Flag
 import androidx.compose.material.icons.outlined.Handshake
+import androidx.compose.material.icons.outlined.PlayArrow
 import androidx.compose.material.icons.outlined.Refresh
 import androidx.compose.material.icons.outlined.SkipNext
 import androidx.compose.material3.CircularProgressIndicator
@@ -46,11 +48,13 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -68,11 +72,11 @@ import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.GameChatColumn
 import org.mochios.android.ui.components.GameChatMessage
-import org.mochios.android.ui.components.GameChatPanel
+import org.mochios.android.ui.components.GameChatState
 import org.mochios.android.ui.components.GameStatusBar
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameTopBarTitle
@@ -85,10 +89,13 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MissingGame
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.NotificationBell
-import org.mochios.android.ui.components.Reading
 import org.mochios.android.ui.components.StoneColor
+import org.mochios.android.ui.components.frameRowId
+import org.mochios.android.ui.components.rememberReopened
+import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.go.R
 import org.mochios.android.i18n.LocalFormat
@@ -198,7 +205,7 @@ fun GoGameDetailScreen(
                     // Synthesise a GameMessage row for chat/move/system events
                     // so the chat panel updates without waiting for the
                     // round-trip refresh that applyWsEvent kicks off.
-                    val msg = synthesiseMessage(ev.type, ev.body, ev.member, ev.name, ev.event, ev.created)
+                    val msg = frameMessage(ev)
                     viewModel.applyWsEvent(ev.type, msg)
                 }
             }
@@ -206,7 +213,10 @@ fun GoGameDetailScreen(
         onDispose { job?.cancel() }
     }
 
-    val composer = remember { mutableStateOf("") }
+    // One draft for the side panel and the phone's sheet, kept across both.
+    val composer = rememberSaveable { mutableStateOf("") }
+    val chat by viewModel.chat.state.collectAsState()
+    val reopened = rememberReopened(GO_FEATURE, viewModel.gameId)
 
     val opponentName = game?.opponentName(state.myIdentity).orEmpty()
     val opponentFingerprint = when {
@@ -225,7 +235,7 @@ fun GoGameDetailScreen(
     // The server does not reliably record a winner on a resignation, and the
     // status would then tell whoever did not resign that they had. The system
     // row names the player who did, so it decides when it is loaded.
-    val resignedBy = state.messages.lastOrNull { message ->
+    val resignedBy = chat.messages.lastOrNull { message ->
         message.type == "system" && message.event == "resign"
     }?.member
     val statusLabel = if (game != null) {
@@ -280,15 +290,17 @@ fun GoGameDetailScreen(
                             }
                         }
                         GoActionsMenu(
-                            isActive = isActive,
+                            game = game,
+                            myIdentity = state.myIdentity,
                             canPass = canPass,
-                            canOfferDraw = game.canOfferDraw,
                             passing = state.isPassing,
                             drawOffering = state.isDrawOffering,
+                            resuming = state.isScoreResuming,
                             rematching = state.isCreatingRematch,
                             onPass = { showPassDialog = true },
                             onOfferDraw = { viewModel.offerDraw(errDrawOffer) },
                             onResign = { showResignDialog = true },
+                            onResume = { viewModel.resumeScoring(errScoreResume) },
                             onRematch = { viewModel.rematch(errRematch) },
                             onDelete = { showDeleteDialog = true },
                         )
@@ -305,6 +317,24 @@ fun GoGameDetailScreen(
                         .padding(padding),
                     contentAlignment = Alignment.Center,
                 ) { CircularProgressIndicator() }
+            }
+            state.error is MochiError.NotFoundError && game == null -> {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(padding),
+                ) {
+                    MissingGame(
+                        feature = GO_FEATURE,
+                        id = viewModel.gameId,
+                        reopened = reopened,
+                        onEmpty = {
+                            navController.navigate(GoApp.gameDetail(LastViewedStore.ALL)) {
+                                popUpTo(GoApp.GAME) { inclusive = true }
+                            }
+                        },
+                    )
+                }
             }
             state.error != null && game == null -> {
                 Box(
@@ -436,38 +466,19 @@ fun GoGameDetailScreen(
                                     .fillMaxHeight(),
                             ) {
                                 ChatHeader()
-                                ChatBody(
-                                    state = state,
+                                ChatColumn(
+                                    chat = chat,
+                                    myIdentity = state.myIdentity,
+                                    draft = composer,
                                     onLoadMore = { viewModel.loadMoreMessages() },
                                     onRetry = { viewModel.loadMessages() },
+                                    onSend = { body, done -> viewModel.sendChat(body, errSend, done) },
                                     modifier = Modifier.weight(1f),
+                                    // The wide-layout side panel sits in the
+                                    // screen body, not the sheet, so this one
+                                    // consumes the keyboard inset itself.
+                                    composerWindowInsets = ComposeBarDefaults.WindowInsets,
                                 )
-                                Reading(composer) { text ->
-                                    ComposeBar(
-                                        // The wide-layout side panel sits in the
-                                        // screen body, not the sheet, so this one
-                                        // consumes the keyboard inset itself.
-                                        windowInsets = ComposeBarDefaults.WindowInsets,
-                                        value = text,
-                                        onValueChange = { composer.value = it },
-                                        onSend = {
-                                            val body = composer.value
-                                            if (body.isNotBlank()) {
-                                                viewModel.sendChat(body, errSend)
-                                                composer.value = ""
-                                            }
-                                        },
-                                        isSending = state.isSendingMessage,
-                                        placeholder = stringResource(
-                                            MochiR.string.game_chat_input_placeholder,
-                                        ),
-                                        sendLabel = stringResource(MochiR.string.game_chat_send),
-                                        // One line, and the keyboard's action key sends: a game
-                                        // chat message is a sentence, not a comment body.
-                                        maxLines = 1,
-                                        sendOnImeAction = true,
-                                    )
-                                }
                             }
                         }
                     }
@@ -543,30 +554,14 @@ fun GoGameDetailScreen(
                             MochiSheetHeader(
                                 title = stringResource(R.string.go_chat_title),
                             )
-                            ChatBody(
-                                state = state,
+                            ChatColumn(
+                                chat = chat,
+                                myIdentity = state.myIdentity,
+                                draft = composer,
                                 onLoadMore = { viewModel.loadMoreMessages() },
                                 onRetry = { viewModel.loadMessages() },
+                                onSend = { body, done -> viewModel.sendChat(body, errSend, done) },
                                 modifier = Modifier.weight(1f),
-                            )
-                            ComposeBar(
-                                value = composer.value,
-                                onValueChange = { composer.value = it },
-                                onSend = {
-                                    val body = composer.value
-                                    if (body.isNotBlank()) {
-                                        viewModel.sendChat(body, errSend)
-                                        composer.value = ""
-                                    }
-                                },
-                                isSending = state.isSendingMessage,
-                                placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
-                                sendLabel = stringResource(MochiR.string.game_chat_send),
-                                // One line, and the keyboard's action key sends: a game chat
-                                // message is a sentence, not a comment body.
-                                maxLines = 1,
-                                sendOnImeAction = true,
-                                windowInsets = ComposeBarDefaults.NoWindowInsets,
                             )
                         }
                     }
@@ -586,21 +581,28 @@ fun GoGameDetailScreen(
 /**
  * Overflow menu for the detail top bar: the moves left open to the viewer,
  * which depends on whose turn it is and whether the game is still running.
+ * While the score is being agreed the game is neither playable nor over. The
+ * player still deciding answers in the scoring banner and has no menu; the
+ * one who has accepted gets Resume play, so an opponent who never answers
+ * cannot strand the game. Rematch and Delete wait until the game has ended.
  */
 @Composable
-private fun GoActionsMenu(
-    isActive: Boolean,
+internal fun GoActionsMenu(
+    game: Game,
+    myIdentity: String,
     canPass: Boolean,
-    canOfferDraw: Boolean,
     passing: Boolean,
     drawOffering: Boolean,
+    resuming: Boolean,
     rematching: Boolean,
     onPass: () -> Unit,
     onOfferDraw: () -> Unit,
     onResign: () -> Unit,
+    onResume: () -> Unit,
     onRematch: () -> Unit,
     onDelete: () -> Unit,
 ) {
+    if (game.status == "scoring" && game.scoring != myIdentity) return
     var expanded by remember { mutableStateOf(false) }
     Box {
         MochiIconButton(onClick = { expanded = true }) {
@@ -613,7 +615,17 @@ private fun GoActionsMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false },
         ) {
-            if (isActive) {
+            if (game.status == "scoring") {
+                MochiDropdownMenuItem(
+                    text = { Text(stringResource(R.string.go_score_resume)) },
+                    onClick = {
+                        expanded = false
+                        onResume()
+                    },
+                    leadingIcon = { Icon(Icons.Outlined.PlayArrow, contentDescription = null) },
+                    enabled = !resuming,
+                )
+            } else if (game.status == "active") {
                 if (canPass) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.go_action_pass)) },
@@ -625,7 +637,7 @@ private fun GoActionsMenu(
                         enabled = !passing,
                     )
                 }
-                if (canOfferDraw) {
+                if (game.canOfferDraw) {
                     MochiDropdownMenuItem(
                         text = { Text(stringResource(R.string.go_action_offer_draw)) },
                         onClick = {
@@ -738,46 +750,47 @@ private fun ChatHeader() {
     HorizontalDivider(thickness = 1.dp)
 }
 
+/** The shared game chat column with go's move rows; system rows are the library's. */
 @Composable
-private fun ChatBody(
-    state: GoGameDetailUiState,
+private fun ChatColumn(
+    chat: GameChatState<GameMessage>,
+    myIdentity: String,
+    draft: MutableState<String>,
     onLoadMore: () -> Unit,
     onRetry: () -> Unit,
+    onSend: (String, (Boolean) -> Unit) -> Unit,
     modifier: Modifier = Modifier,
+    composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
 ) {
-    val mappedMessages = remember(state.messages) {
-        state.messages.map { it.toChatMessage() }
-    }
-    GameChatPanel(
-        messages = mappedMessages,
-        currentUserIdentity = state.myIdentity,
-        isLoading = state.isLoadingMessages,
-        isError = state.messagesError != null,
-        hasMore = state.hasMoreMessages,
-        isLoadingMore = state.isLoadingMoreMessages,
+    GameChatColumn(
+        chat = chat,
+        message = GameMessage::toChatMessage,
+        currentUserIdentity = myIdentity,
         onLoadMore = onLoadMore,
         onRetry = onRetry,
-        moveMessageRenderer = { msg, isSent -> { GoMoveMessageRow(msg, isSent) } },
-        // System messages already arrive localised (or close to it) from
-        // the Starlark layer, so the default renderer in [GameChatPanel]
-        // is fine. We still register an explicit slot to keep the
-        // moveMessageRenderer hook symmetric.
-        systemMessageRenderer = { msg -> { DefaultSystemMessage(msg) } },
+        onSend = onSend,
         modifier = modifier,
+        draft = draft,
+        composerWindowInsets = composerWindowInsets,
+        moveMessageRenderer = { msg, isSent -> { GoMoveMessageRow(msg, isSent) } },
     )
 }
 
 @Composable
-private fun GoMoveMessageRow(message: GameChatMessage, isSent: Boolean) {
-    // Reuse the lib's shared "<subject> played <move>" pattern so all
-    // games (chess / go / words) speak in the same voice. The subject is
-    // "You" for the local player, the opponent's display name otherwise.
-    val subject = if (isSent) {
-        stringResource(MochiR.string.game_chat_subject_you)
-    } else {
-        message.name
+internal fun GoMoveMessageRow(message: GameChatMessage, isSent: Boolean) {
+    // A pass is its own sentence, and "You" its own string, since in many
+    // languages the verb agrees with its subject. The server marks a pass
+    // with its event; rows stored before the marker carry only the body
+    // "Pass".
+    val pass = message.event == "pass" || message.body == "Pass"
+    // The lib's shared move sentences, so all games (chess / go / words)
+    // speak in the same voice.
+    val text = when {
+        pass && isSent -> stringResource(R.string.go_chat_you_passed)
+        pass -> stringResource(R.string.go_chat_player_passed, message.name)
+        isSent -> stringResource(MochiR.string.game_chat_move_played_you, message.body)
+        else -> stringResource(MochiR.string.game_chat_move_played, message.name, message.body)
     }
-    val text = stringResource(MochiR.string.game_chat_move_played, subject, message.body)
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -788,34 +801,6 @@ private fun GoMoveMessageRow(message: GameChatMessage, isSent: Boolean) {
             text = text,
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-        )
-    }
-}
-
-@Composable
-private fun DefaultSystemMessage(message: GameChatMessage) {
-    // Localise per viewer from the structured event kind; legacy rows (no
-    // event) fall back to the server-stored English body. Mirrors web's
-    // chat-message-list system branch.
-    val text = when (message.event) {
-        "resign" -> stringResource(MochiR.string.game_system_resign, message.name)
-        "draw_offer" -> stringResource(MochiR.string.game_system_draw_offer, message.name)
-        "draw_accept" -> stringResource(MochiR.string.game_system_draw_accept)
-        "draw_decline" -> stringResource(MochiR.string.game_system_draw_decline, message.name)
-        else -> message.body
-    }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 2.dp),
-        horizontalArrangement = Arrangement.Center,
-    ) {
-        Text(
-            text = text,
-            style = MaterialTheme.typography.labelSmall.copy(
-                fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
-            ),
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
     }
 }
@@ -995,28 +980,23 @@ private fun GameMessage.toChatMessage(): GameChatMessage = GameChatMessage(
     created = created,
 )
 
-private fun synthesiseMessage(
-    type: String,
-    body: String?,
-    member: String?,
-    name: String?,
-    event: String?,
-    created: Long,
-): GameMessage? {
-    if (type != "message" && type != "move" && type != "system") return null
-    val resolvedBody = body ?: return null
+/**
+ * The chat row a chat, move or system frame adds. Its id is the stored row's,
+ * which the frame carries; an older server's frame gets one unique on this
+ * device ([frameRowId]), never one made of the time and sender, which two
+ * messages in one second share.
+ */
+internal fun frameMessage(event: StreamWsEvent): GameMessage? {
+    if (event.type != "message" && event.type != "move" && event.type != "system") return null
+    val body = event.body ?: return null
     return GameMessage(
-        // The server's `mochi.uid()` IDs aren't echoed in the websocket
-        // frame, so we synthesise a stable but unique id from the timestamp
-        // + type + member. Collisions are vanishingly unlikely (two events
-        // would need to share epoch second + type + sender).
-        id = "ws-$type-$created-${member.orEmpty()}",
+        id = frameRowId(event.raw["id"]),
         game = "",
-        member = member.orEmpty(),
-        name = name.orEmpty(),
-        body = resolvedBody,
-        type = type,
-        event = event.orEmpty(),
-        created = created,
+        member = event.member.orEmpty(),
+        name = event.name.orEmpty(),
+        body = body,
+        type = event.type,
+        event = event.event.orEmpty(),
+        created = event.created,
     )
 }

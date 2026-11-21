@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Ingen partier ennå.</string>
     <string name="words_new_game_choose_opponents">Velg motstandere</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s spillere</string>
     <string name="words_new_game_no_friends_subtitle">Legg til venner i Personer-appen for å begynne å spille.</string>
     <string name="words_detail_title">Parti</string>
     <string name="words_detail_status_opponent_move">%1$s sin tur</string>
     <string name="words_detail_status_winner_wins">%1$s vinner</string>
     <string name="words_detail_player_fallback">Spiller %1$s</string>
-    <string name="words_detail_player_count">%1$s spillere</string>
-    <string name="words_detail_label_tiles_left">%1$s brikker igjen</string>
     <string name="words_detail_action_open_chat">Åpne chat</string>
     <string name="words_detail_action_more">Partihandlinger</string>
     <string name="words_detail_exchange_count">Bytt (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Ingen gyldige ord dannet</string>
     <string name="words_validation_offline">Validering er frakoblet — du kan fortsatt sende inn.</string>
     <string name="words_validation_unknown_words">Inneholder ukjente ord. Du kan fortsatt sende inn.</string>
+    <string name="words_detail_label_tiles">Brikker igjen</string>
+    <string name="words_detail_submit_score">Send inn +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">TO</string>
+    <string name="words_board_premium_double_word">DO</string>
+    <string name="words_board_premium_triple_letter">TB</string>
+    <string name="words_board_premium_double_letter">DB</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s spiller</item>
+        <item quantity="other">%1$s spillere</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s spiller</item>
+        <item quantity="other">%1$s spillere</item>
+    </plurals>
 </resources>

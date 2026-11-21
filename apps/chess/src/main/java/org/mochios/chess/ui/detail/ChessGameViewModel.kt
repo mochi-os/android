@@ -8,16 +8,10 @@ package org.mochios.chess.ui.detail
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.github.bhlangonijr.chesslib.Board
-import com.github.bhlangonijr.chesslib.Side
-import com.github.bhlangonijr.chesslib.Square
-import com.github.bhlangonijr.chesslib.move.Move
-import com.github.bhlangonijr.chesslib.move.MoveList
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.async
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -25,37 +19,39 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.components.GameChat
+import org.mochios.android.ui.components.GameChatPage
 import org.mochios.android.util.REFRESH_DEBOUNCE
-import org.mochios.android.util.mergeMessages
+import org.mochios.chess.engine.Record
 import org.mochios.chess.engine.isDrawnPosition
 import org.mochios.chess.model.Game
 import org.mochios.chess.model.GameMessage
-import org.mochios.chess.model.GameViewResponse
-import org.mochios.chess.model.GetMessagesResponse
 import org.mochios.chess.model.messageKey
 import org.mochios.chess.model.MoveRequest
 import org.mochios.chess.repository.ChessRepository
+import org.mochios.chess.ui.detail.board.CapturedPiece
+import org.mochios.chess.ui.detail.board.capturedPieces
 import javax.inject.Inject
 
 /**
  * Detail-screen state. [error] holds only load and refresh failures; mutation
- * failures surface as [ChessGameEvent.Toast].
+ * failures surface as [ChessGameEvent.Toast]. The chat is [ChessGameViewModel.chat]'s.
  */
 data class ChessGameUiState(
     val game: Game? = null,
     val identity: String = "",
-    val messages: List<GameMessage> = emptyList(),
-    val hasMore: Boolean = false,
-    val nextCursor: String? = null,
     val isLoading: Boolean = false,
     val isRefreshing: Boolean = false,
-    val isLoadingMore: Boolean = false,
     val error: MochiError? = null,
     val lastMove: Pair<String, String>? = null,
+    /** (taken by White, taken by Black), from the record. */
+    val captured: Pair<List<CapturedPiece>, List<CapturedPiece>> = emptyList<CapturedPiece>() to emptyList(),
     val pendingMove: Boolean = false,
     val isResigning: Boolean = false,
     val isDrawOffering: Boolean = false,
@@ -63,7 +59,6 @@ data class ChessGameUiState(
     val isDrawDeclining: Boolean = false,
     val isDeleting: Boolean = false,
     val isRematching: Boolean = false,
-    val isSendingChat: Boolean = false,
 )
 
 /**
@@ -98,6 +93,19 @@ class ChessGameViewModel @Inject constructor(
     private val _events = MutableSharedFlow<ChessGameEvent>(extraBufferCapacity = 8)
     val events: SharedFlow<ChessGameEvent> = _events.asSharedFlow()
 
+    /** The game's chat, read beside the game rather than after it. */
+    val chat = GameChat(
+        scope = viewModelScope,
+        fetch = { before ->
+            val page = repo.getMessages(gameId, before = before)
+            GameChatPage(page.messages, page.more, page.cursor)
+        },
+        post = { body -> repo.sendMessage(gameId, body) },
+        key = ::messageKey,
+        created = { row -> row.created },
+        report = { error -> _events.tryEmit(ChessGameEvent.Toast(error.userMessage())) },
+    )
+
     /** The pending or in-flight refresh; cancelled when a newer one starts. */
     private var refreshJob: Job? = null
 
@@ -109,18 +117,19 @@ class ChessGameViewModel @Inject constructor(
 
     // ---- Loading ----
 
+    /** Read the game and its chat at once, rather than one after the other. */
     fun load() {
+        chat.load()
         viewModelScope.launch {
             _uiState.value = _uiState.value.copy(isLoading = true, error = null)
             try {
-                val (view, msgs) = fetch()
+                val view = repo.getGame(gameId)
+                val record = replay(view.game)
                 _uiState.value = _uiState.value.copy(
                     game = view.game,
                     identity = view.identity,
-                    messages = msgs.messages.sortedBy { it.created },
-                    hasMore = msgs.more,
-                    nextCursor = msgs.cursor,
-                    lastMove = deriveLastMove(view.game.pgn),
+                    lastMove = record?.last?.let { move -> move.from to move.to },
+                    captured = captures(record),
                     isLoading = false,
                 )
             } catch (e: Exception) {
@@ -149,29 +158,23 @@ class ChessGameViewModel @Inject constructor(
      * Refetch the game and messages. Each call cancels the previous refresh
      * and waits [REFRESH_DEBOUNCE] first, so a burst of websocket frames and
      * action results - our own move's echo lands with the move's response -
-     * makes one fetch, and only the latest one updates the board.
+     * makes one fetch, and only the latest one updates the board. The chat
+     * folds its newest page into the pages already read.
      */
     fun refresh() {
+        chat.refresh()
         refreshJob?.cancel()
         refreshJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
-                val (view, msgs) = fetch()
+                val view = repo.getGame(gameId)
+                val record = replay(view.game)
                 _uiState.value = _uiState.value.copy(
                     game = view.game,
                     identity = view.identity,
-                    // refresh() runs on every websocket frame: merge so
-                    // loadMoreOlder's pages survive, and leave
-                    // hasMore/nextCursor alone - they describe how far back we
-                    // have paged.
-                    messages = mergeMessages(
-                        _uiState.value.messages,
-                        msgs.messages,
-                        key = ::messageKey,
-                        created = { row -> row.created },
-                    ),
-                    lastMove = deriveLastMove(view.game.pgn),
+                    lastMove = record?.last?.let { move -> move.from to move.to },
+                    captured = captures(record),
                     isRefreshing = false,
                     error = null,
                 )
@@ -186,110 +189,53 @@ class ChessGameViewModel @Inject constructor(
         }
     }
 
-    /**
-     * The game and its newest messages, read at once rather than one after
-     * the other. The game's failure is the one shown, whichever answers first:
-     * the messages' is said only once the game has come.
-     */
-    private suspend fun fetch(): Pair<GameViewResponse, GetMessagesResponse> = coroutineScope {
-        val messages = async {
-            try {
-                Result.success(repo.getMessages(gameId))
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                Result.failure(e)
-            }
-        }
-        val view = repo.getGame(gameId)
-        view to messages.await().getOrThrow()
-    }
-
-    fun loadMoreOlder() {
-        val cursor = _uiState.value.nextCursor ?: return
-        if (_uiState.value.isLoadingMore) return
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoadingMore = true)
-            try {
-                val older = repo.getMessages(gameId, before = cursor)
-                _uiState.value = _uiState.value.copy(
-                    messages = mergeMessages(
-                        _uiState.value.messages,
-                        older.messages,
-                        key = ::messageKey,
-                        created = { row -> row.created },
-                    ),
-                    hasMore = older.more,
-                    nextCursor = older.cursor,
-                    isLoadingMore = false,
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoadingMore = false)
-                emitToast(e.toMochiError())
-            }
-        }
-    }
+    fun loadMoreOlder() = chat.loadMore()
 
     // ---- Move submission ----
 
     /**
-     * Compute the post-move FEN/PGN/SAN locally, apply it optimistically and
-     * POST; a rejection triggers [refresh].
+     * Play the move on the game's record, show it at once and POST the record
+     * it makes. The record is replayed from the stored PGN, so the PGN sent
+     * extends it, and the draw test sees every position the game has had. A
+     * refused move takes the board back to where it was before any refresh
+     * can, since with no connection that refresh fails too.
      */
     fun submitMove(from: String, to: String, promotion: String?) {
         val game = _uiState.value.game ?: return
         if (game.status != "active") return
         if (_uiState.value.pendingMove) return
+        val record = Record.resume(game.fen, game.pgn) ?: return
+        val played = record.play(from, to, promotion) ?: return
+        val board = record.board
 
+        // Terminal-state hints from the position the move reached.
+        var status: String? = null
+        var winner: String? = null
+        if (board.isMated) {
+            status = "checkmate"
+            winner = _uiState.value.identity
+        } else if (board.isStaleMate) {
+            status = "stalemate"
+        } else if (isDrawnPosition(board)) {
+            status = "draw"
+        }
+
+        val moved = game.copy(fen = record.fen, pgn = record.pgn)
+        val before = _uiState.value
+        _uiState.update {
+            it.copy(game = moved, lastMove = from to to, captured = captures(record), pendingMove = true)
+        }
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(pendingMove = true)
             try {
-                // Build a fresh board and apply the move locally.
-                val board = Board()
-                board.loadFromFen(game.fen)
-                val moveText = buildMoveText(from, to, promotion)
-                val move = Move(moveText, board.sideToMove)
-                if (!board.isMoveLegal(move, true)) {
-                    _uiState.value = _uiState.value.copy(pendingMove = false)
-                    return@launch
-                }
-                val san = computeSan(game.fen, move)
-                val ok = board.doMove(move)
-                if (!ok) {
-                    _uiState.value = _uiState.value.copy(pendingMove = false)
-                    return@launch
-                }
-                val newFen = board.fen
-                val newPgn = appendMoveToPgn(game.pgn, san, board)
-
-                // Derive terminal-state hints from the post-move position.
-                var status: String? = null
-                var winner: String? = null
-                if (board.isMated) {
-                    status = "checkmate"
-                    winner = _uiState.value.identity
-                } else if (board.isStaleMate) {
-                    status = "stalemate"
-                } else if (isDrawnPosition(board)) {
-                    status = "draw"
-                }
-
-                // Optimistically swap in the post-move state so the board
-                // reflects the move while the request is in flight.
-                _uiState.value = _uiState.value.copy(
-                    game = game.copy(fen = newFen, pgn = newPgn),
-                    lastMove = from to to,
-                )
-
                 repo.move(
                     game = gameId,
                     request = MoveRequest(
                         from = from,
                         to = to,
                         promotion = promotion,
-                        fen = newFen,
-                        pgn = newPgn,
-                        san = san,
+                        fen = moved.fen,
+                        pgn = moved.pgn,
+                        san = played.san,
                         status = status,
                         winner = winner,
                     ),
@@ -297,31 +243,33 @@ class ChessGameViewModel @Inject constructor(
                 // Refresh authoritative state (game.status / winner /
                 // draw_offer reset / etc. updated by the server).
                 refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(pendingMove = false)
+                // Only while the board still shows this move: a refresh that
+                // landed meanwhile already holds the server's position.
+                _uiState.update { state ->
+                    if (state.game == moved) {
+                        state.copy(game = game, lastMove = before.lastMove, captured = before.captured)
+                    } else {
+                        state
+                    }
+                }
                 emitToast(e.toMochiError())
                 refresh()
             } finally {
-                _uiState.value = _uiState.value.copy(pendingMove = false)
+                _uiState.update { it.copy(pendingMove = false) }
             }
         }
     }
 
     // ---- Chat ----
 
-    fun sendChat(body: String) {
-        val trimmed = body.trim()
-        if (trimmed.isEmpty()) return
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSendingChat = true)
-            try {
-                repo.sendMessage(gameId, trimmed)
-                refresh()
-            } catch (e: Exception) {
-                emitToast(e.toMochiError())
-            } finally {
-                _uiState.value = _uiState.value.copy(isSendingChat = false)
-            }
+    /** Send [body]; [onFinished] hears whether it went, and a failure is said. */
+    fun sendChat(body: String, onFinished: (Boolean) -> Unit) {
+        chat.send(body) { error ->
+            if (error != null) _events.tryEmit(ChessGameEvent.Toast(error.userMessage()))
+            onFinished(error == null)
         }
     }
 
@@ -440,57 +388,14 @@ class ChessGameViewModel @Inject constructor(
     }
 
     /**
-     * From/to of the last move, replayed from the full [pgn]. SAN only replays
-     * from the starting position, so a single page of move messages would start
-     * mid-game and throw or mis-resolve.
+     * [game]'s record, replayed off the main thread: the last move it marks
+     * and the captures it counts. A record that does not replay to the
+     * position marks no move, as on the web: marking a move from some other
+     * game's history is worse than marking none.
      */
-    private fun deriveLastMove(pgn: String): Pair<String, String>? {
-        if (pgn.isBlank()) return null
-        return try {
-            val list = MoveList()
-            list.loadFromSan(pgn)
-            val last = list.lastOrNull() ?: return null
-            last.from.value().lowercase() to last.to.value().lowercase()
-        } catch (_: Exception) {
-            null
-        }
-    }
+    private suspend fun replay(game: Game): Record? =
+        withContext(Dispatchers.Default) { Record.resume(game.fen, game.pgn) }
 
-    private fun buildMoveText(from: String, to: String, promotion: String?): String {
-        return if (promotion.isNullOrBlank()) "${from.lowercase()}${to.lowercase()}"
-        else "${from.lowercase()}${to.lowercase()}${promotion.lowercase()}"
-    }
-
-    private fun computeSan(fenBefore: String, move: Move): String {
-        return try {
-            val board = Board()
-            board.loadFromFen(fenBefore)
-            val list = MoveList(fenBefore)
-            list.add(move)
-            val sans = list.toSanArray()
-            sans.lastOrNull() ?: move.toString()
-        } catch (_: Exception) {
-            move.toString()
-        }
-    }
-
-    /**
-     * Append [san] to the server's header-less PGN, numbering each White move
-     * from the post-move board.
-     */
-    private fun appendMoveToPgn(existing: String, san: String, postMoveBoard: Board): String {
-        // halfMoveCounter resets on captures and pawn moves; the full-move
-        // counter is the move number.
-        val fullMove = postMoveBoard.moveCounter
-        val sideAfter = postMoveBoard.sideToMove
-        val sep = if (existing.isEmpty()) "" else " "
-        val prefix = if (sideAfter == Side.BLACK) {
-            // we just moved White → start a new move pair "N. san"
-            "${fullMove}. $san"
-        } else {
-            // we just moved Black → append "san" to the running pair
-            san
-        }
-        return existing + sep + prefix
-    }
+    private fun captures(record: Record?): Pair<List<CapturedPiece>, List<CapturedPiece>> =
+        record?.let(::capturedPieces) ?: (emptyList<CapturedPiece>() to emptyList())
 }

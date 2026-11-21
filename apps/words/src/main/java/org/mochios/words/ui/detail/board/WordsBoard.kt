@@ -5,6 +5,7 @@
 
 package org.mochios.words.ui.detail.board
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
@@ -38,9 +39,11 @@ import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import org.mochios.words.R
 import org.mochios.words.engine.BOARD_SIZE
 import org.mochios.words.engine.Board
 import org.mochios.words.engine.Placement
@@ -344,14 +347,16 @@ private fun BoardCell(
                 tint = Color(0xFFB0578F),
                 modifier = Modifier.fillMaxSize(0.5f),
             )
-            premium != PremiumType.NONE -> Text(
-                text = premiumLabel(premium),
-                style = MaterialTheme.typography.labelSmall.copy(
-                    fontSize = 7.sp,
-                    fontWeight = FontWeight.SemiBold,
-                ),
-                color = premiumTextColor(premium),
-            )
+            else -> premiumLabel(premium)?.let { label ->
+                Text(
+                    text = stringResource(label),
+                    style = MaterialTheme.typography.labelSmall.copy(
+                        fontSize = 7.sp,
+                        fontWeight = FontWeight.SemiBold,
+                    ),
+                    color = premiumTextColor(premium),
+                )
+            }
         }
     }
 }
@@ -390,13 +395,14 @@ private fun premiumColor(t: PremiumType): Color = when (t) {
     PremiumType.NONE -> Color.Transparent
 }
 
-private fun premiumLabel(t: PremiumType): String = when (t) {
-    PremiumType.TW -> "TW"
-    PremiumType.DW -> "DW"
-    PremiumType.TL -> "TL"
-    PremiumType.DL -> "DL"
-    PremiumType.ST -> ""
-    PremiumType.NONE -> ""
+/** The abbreviation an empty premium square shows; the start square shows a star. */
+@StringRes
+private fun premiumLabel(t: PremiumType): Int? = when (t) {
+    PremiumType.TW -> R.string.words_board_premium_triple_word
+    PremiumType.DW -> R.string.words_board_premium_double_word
+    PremiumType.TL -> R.string.words_board_premium_triple_letter
+    PremiumType.DL -> R.string.words_board_premium_double_letter
+    PremiumType.ST, PremiumType.NONE -> null
 }
 
 private fun premiumTextColor(t: PremiumType): Color = when (t) {

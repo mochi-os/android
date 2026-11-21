@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.toMochiError
 import org.mochios.android.ui.components.LoadState
 import org.mochios.android.util.Paging
@@ -186,7 +186,7 @@ class MyListingsViewModel @Inject constructor(
                     listings = _state.value.listings.filterNot { it.id == listing.id },
                 )
             } catch (e: Exception) {
-                val msg = errorMessageOrFallback(e.toMochiError(), failureFallback)
+                val msg = e.toMochiError().messageOrFallback(failureFallback)
                 _events.emit(MyListingsEvent.Toast(msg))
             }
         }
@@ -198,25 +198,13 @@ class MyListingsViewModel @Inject constructor(
                 val response = repo.relistListing(listing.id)
                 _events.emit(MyListingsEvent.NavigateToEdit(response.listing.id))
             } catch (e: Exception) {
-                val msg = errorMessageOrFallback(e.toMochiError(), failureFallback)
+                val msg = e.toMochiError().messageOrFallback(failureFallback)
                 _events.emit(MyListingsEvent.Toast(msg))
             }
         }
     }
 
     // ---- Helpers ----
-
-    private fun errorMessageOrFallback(error: MochiError, fallback: String): String {
-        val server = when (error) {
-            is MochiError.AuthError -> error.message
-            is MochiError.ForbiddenError -> error.message
-            is MochiError.NotFoundError -> error.message
-            is MochiError.ServerError -> error.message
-            is MochiError.Unknown -> error.message
-            else -> null
-        }
-        return server?.takeIf { it.isNotBlank() } ?: fallback
-    }
 
     /**
      * Apply the local title substring filter on top of the server-supplied

@@ -78,4 +78,6 @@
     <string name="go_score_resume">Retomar a partida</string>
     <string name="go_error_score_resume_failed">Non se puido retomar a partida</string>
     <string name="go_error_score_accept_failed">Non se puido aceptar a puntuación</string>
+    <string name="go_chat_player_passed">%1$s pasou</string>
+    <string name="go_chat_you_passed">Pasaches</string>
 </resources>

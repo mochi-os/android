@@ -13,16 +13,17 @@ import org.mochios.go.model.Game
 import org.mochios.go.model.opponentAvatarUrl
 
 /**
- * Drawer rows for the Go app: one per game, active games first, each headed
- * by its section. [myIdentity] resolves the opponent, since `opponent_name`
- * names the invitee on both peers.
+ * Drawer rows for the Go app: one per game, live games first, each headed by
+ * its section. A game being scored is live: it waits on its players' answer.
+ * [myIdentity] resolves the opponent, since `opponent_name` names the invitee
+ * on both peers.
  */
 @Composable
 fun goDrawerItems(games: List<Game>, myIdentity: String): List<DrawerItem> {
     val activeLabel = stringResource(R.string.go_sidebar_active)
     val completedLabel = stringResource(R.string.go_sidebar_completed)
-    val active = games.filter { game -> game.status == "active" }
-    val completed = games.filterNot { game -> game.status == "active" }
+    val active = games.filter { game -> game.isLive }
+    val completed = games.filterNot { game -> game.isLive }
     return buildList {
         for (game in active) add(game.toDrawerItem(myIdentity, activeLabel))
         for (game in completed) add(game.toDrawerItem(myIdentity, completedLabel))

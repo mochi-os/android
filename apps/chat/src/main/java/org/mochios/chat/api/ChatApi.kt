@@ -5,7 +5,6 @@
 
 package org.mochios.chat.api
 
-import com.google.gson.annotations.SerializedName
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import org.mochios.android.api.Slow
@@ -96,7 +95,9 @@ data class MarkReadResponse(val read: Long = 0)
 
 data class SearchResponse(
     val query: String = "",
-    val results: List<ChatSearchResult> = emptyList()
+    val results: List<ChatSearchResult> = emptyList(),
+    /** The messages the threads of the results that are replies are under; absent from an older server. */
+    val roots: List<ChatMessage> = emptyList(),
 )
 
 /** What accepting an invitation answers: the conversation, now active. */

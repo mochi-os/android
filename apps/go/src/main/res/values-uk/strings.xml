@@ -81,4 +81,6 @@
     <string name="go_score_resume">Відновити гру</string>
     <string name="go_error_score_resume_failed">Не вдалося відновити гру</string>
     <string name="go_error_score_accept_failed">Не вдалося прийняти оцінку</string>
+    <string name="go_chat_player_passed">%1$s пропустив хід</string>
+    <string name="go_chat_you_passed">Ви спасували</string>
 </resources>

@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Пакуль няма паведамленняў</string>
     <string name="game_chat_input_placeholder">Увядзіце паведамленне</string>
     <string name="game_chat_send">Адправіць паведамленне</string>
-    <string name="game_chat_subject_you">Вы</string>
 
     <string name="common_not_saved">Не захавана</string>
 
@@ -353,4 +352,9 @@
     <string name="sync_conflict">Зменена на серверы</string>
     <string name="sync_missing">Больш няма на серверы</string>
     <string name="sync_refused">Адхілена серверам</string>
+    <string name="game_system_score_agreed">Лік узгоднены</string>
+    <string name="game_system_score_accept">%1$s прыняў лік</string>
+    <string name="game_system_score_resume">%1$s узнавіў гульню</string>
+    <string name="game_not_found">Гульня не знойдзена</string>
+    <string name="game_chat_move_played_you">Вы зрабілі ход %1$s</string>
 </resources>

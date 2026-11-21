@@ -61,7 +61,11 @@ import org.mochios.chat.ui.encryption.SetupState
 import org.mochios.chat.ui.encryption.VerificationDialog
 import org.mochios.chat.ui.encryption.VerificationViewModel
 import org.mochios.chat.ui.encryption.VerificationWatcher
+import com.google.gson.Gson
+import okhttp3.OkHttpClient
 import okhttp3.mockwebserver.Dispatcher
+import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.SocketSession
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import okhttp3.mockwebserver.RecordedRequest
@@ -384,6 +388,7 @@ class NetworksScreenTest {
                 }
         }
         server.start()
+        var socket: MochiWebSocket? = null
         try {
             val context = RuntimeEnvironment.getApplication()
             val api = Retrofit.Builder()
@@ -391,7 +396,16 @@ class NetworksScreenTest {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(ChatApi::class.java)
-            val model = VerificationViewModel(ChatRepository(api, FileStore(context), context), context)
+            val base = server.url("/").toString().trimEnd('/')
+            socket = MochiWebSocket(OkHttpClient(), Gson(), object : SocketSession {
+                override suspend fun serverUrl(): String = base
+
+                override suspend fun token(app: String): String? = null
+
+                override suspend fun invalidate(app: String) {
+                }
+            })
+            val model = VerificationViewModel(ChatRepository(api, FileStore(context), context), socket, context)
             val owner = Owner().apply { registry.currentState = Lifecycle.State.RESUMED }
             rule.setContent {
                 CompositionLocalProvider(LocalLifecycleOwner provides owner) {
@@ -413,6 +427,7 @@ class NetworksScreenTest {
             rule.runOnIdle { owner.registry.currentState = Lifecycle.State.RESUMED }
             idleUntil { reads.get() == 2 }
         } finally {
+            socket?.disconnectAll()
             server.shutdown()
         }
     }
@@ -624,6 +639,30 @@ class NetworksScreenTest {
         rule.onNodeWithText("Your recovery key").assertIsDisplayed()
         rule.onNodeWithText("EsTc abcd").assertIsDisplayed()
         rule.onNodeWithText("Done").assertIsDisplayed()
+    }
+
+    @Test
+    fun `the recovery key is copied as a secret, and its dialog kept out of screenshots`() {
+        var host: android.content.Context? = null
+        rule.setContent {
+            host = androidx.compose.ui.platform.LocalContext.current
+            SetupDialog(SetupState(recovery = "EsTc abcd"), onPassword = {}, onSetup = {}, onClose = {})
+        }
+        val window = (host as android.app.Activity).window
+        assertEquals(
+            "kept out of screenshots, recordings and Recents",
+            android.view.WindowManager.LayoutParams.FLAG_SECURE,
+            window.attributes.flags and android.view.WindowManager.LayoutParams.FLAG_SECURE,
+        )
+        rule.onNodeWithText("EsTc abcd").performClick()
+        rule.waitForIdle()
+        val clipboard = RuntimeEnvironment.getApplication().getSystemService(android.content.ClipboardManager::class.java)
+        assertEquals("EsTc abcd", clipboard.primaryClip?.getItemAt(0)?.text?.toString())
+        assertEquals(
+            "kept out of the clipboard's preview",
+            true,
+            clipboard.primaryClipDescription?.extras?.getBoolean(android.content.ClipDescription.EXTRA_IS_SENSITIVE),
+        )
     }
 
     @Test

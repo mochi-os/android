@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Oraindik mezurik ez</string>
     <string name="game_chat_input_placeholder">Idatzi mezu bat</string>
     <string name="game_chat_send">Bidali mezua</string>
-    <string name="game_chat_subject_you">Zu</string>
 
     <string name="common_not_saved">Ez da gorde</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Zerbitzarian aldatu da</string>
     <string name="sync_missing">Jada ez dago zerbitzarian</string>
     <string name="sync_refused">Zerbitzariak baztertu du</string>
+    <string name="game_system_score_agreed">Puntuazioa adostuta</string>
+    <string name="game_system_score_accept">%1$s(e)k puntuazioa onartu du</string>
+    <string name="game_system_score_resume">%1$s(e)k partidari berrekin dio</string>
+    <string name="game_not_found">Ez da partida aurkitu</string>
+    <string name="game_chat_move_played_you">%1$s jokatu duzu</string>
 </resources>

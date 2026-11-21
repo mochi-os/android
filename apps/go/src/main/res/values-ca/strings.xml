@@ -81,4 +81,6 @@
     <string name="go_score_resume">Reprèn la partida</string>
     <string name="go_error_score_resume_failed">No s\'ha pogut reprendre la partida</string>
     <string name="go_error_score_accept_failed">No s\'ha pogut acceptar la puntuació</string>
+    <string name="go_chat_player_passed">%1$s ha passat</string>
+    <string name="go_chat_you_passed">Has passat</string>
 </resources>

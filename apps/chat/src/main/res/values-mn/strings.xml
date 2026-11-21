@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Дууссан</string>
     <string name="chat_encryption_key">Сэргээх түлхүүр</string>
     <string name="chat_encryption_restore">Сэргээх</string>
-    <string name="chat_encryption_recovery_refused">Энэ таны сэргээх түлхүүр биш</string>
     <string name="chat_verification_own">Төхөөрөмжөө баталгаажуулах</string>
     <string name="chat_verification_compare">Нөгөө дэлгэц дээр ижил эможи гарч байгаа эсэхийг шалгана уу.</string>
     <string name="chat_verification_requested_own">Таны өөр нэг төхөөрөмж энэ төхөөрөмжийг баталгаажуулахыг хүсэж байна.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s таныг баталгаажуулахыг хүсэж байна.</string>
     <string name="chat_typing_one">%1$s бичиж байна...</string>
     <string name="chat_typing_many">%1$s бичиж байна...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s хариу</item>
-        <item quantity="other">%1$s хариу</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s өмнөх хариу</item>
         <item quantity="other">%1$s өмнөх хариу</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Энэ бүртгэлийг Mochi-д нэмэхээс өмнөх мессежүүд шифрлэгдсэн тул энд уншиж болохгүй</string>
     <string name="chat_message_excluded">Зөвхөн бусад төхөөрөмжид шифрлэгдсэн</string>
     <string name="chat_setup">Тохируулах</string>
+    <string name="chat_jump_bottom">Доош очих</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s шинэ мессеж рүү очих</item>
+        <item quantity="other">%1$s шинэ мессеж рүү очих</item>
+    </plurals>
+    <string name="chat_message_distrusted">Таны итгэдэггүй төхөөрөмжөөс илгээсэн</string>
+    <string name="chat_message_mismatched">Түлхүүрүүд нь таарахгүй төхөөрөмжөөс илгээсэн</string>
+    <string name="chat_list_select">Чат сонгох</string>
+    <string name="chat_message_discard">Хаях</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Мессеж %1$s тэмдэгтээр хэт урт байна</item>
+        <item quantity="other">Мессеж %1$s тэмдэгтээр хэт урт байна</item>
+    </plurals>
 </resources>

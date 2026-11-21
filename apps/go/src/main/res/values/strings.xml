@@ -50,6 +50,8 @@
     <string name="go_delete_message">This game will be removed from your list. This can\'t be undone.</string>
     <string name="go_delete_confirm">Delete</string>
     <string name="go_chat_title">Chat</string>
+    <string name="go_chat_you_passed">You passed</string>
+    <string name="go_chat_player_passed">%1$s passed</string>
     <string name="go_draw_offered_waiting">Draw offered — waiting for %1$s</string>
     <string name="go_draw_offered_received">%1$s offered a draw</string>
     <string name="go_draw_accept">Accept</string>

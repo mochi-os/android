@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Sõnumeid veel pole</string>
     <string name="game_chat_input_placeholder">Sisesta sõnum</string>
     <string name="game_chat_send">Saada sõnum</string>
-    <string name="game_chat_subject_you">Sina</string>
 
     <string name="common_not_saved">Salvestamata</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Serveris muudetud</string>
     <string name="sync_missing">Pole enam serveris</string>
     <string name="sync_refused">Server keeldus</string>
+    <string name="game_system_score_agreed">Skooris kokku lepitud</string>
+    <string name="game_system_score_accept">%1$s nõustus skooriga</string>
+    <string name="game_system_score_resume">%1$s jätkas mängu</string>
+    <string name="game_not_found">Mängu ei leitud</string>
+    <string name="game_chat_move_played_you">Sa mängisid %1$s</string>
 </resources>

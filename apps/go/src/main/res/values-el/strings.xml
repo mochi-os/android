@@ -81,4 +81,6 @@
     <string name="go_score_resume">Συνέχιση παιχνιδιού</string>
     <string name="go_error_score_resume_failed">Αποτυχία συνέχισης του παιχνιδιού</string>
     <string name="go_error_score_accept_failed">Αποτυχία αποδοχής της βαθμολογίας</string>
+    <string name="go_chat_player_passed">Ο/Η %1$s πέρασε</string>
+    <string name="go_chat_you_passed">Είπατε πάσο</string>
 </resources>

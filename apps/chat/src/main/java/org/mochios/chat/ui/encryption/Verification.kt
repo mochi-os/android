@@ -28,7 +28,8 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -36,11 +37,17 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.selects.select
+import kotlinx.coroutines.withTimeoutOrNull
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
 import org.mochios.android.ui.components.MochiAlertDialog
 import org.mochios.android.ui.components.WhileStarted
+import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
+import org.mochios.android.websocket.StreamWsStatus
 import org.mochios.chat.R
+import org.mochios.chat.model.USER_KEY
 import org.mochios.chat.model.Verification
 import org.mochios.chat.model.verificationShown
 import org.mochios.chat.repository.ChatRepository
@@ -54,9 +61,12 @@ internal fun said(error: Throwable, fallback: String): String {
     return mochi.message?.takeIf { it.isNotBlank() } ?: fallback
 }
 
-/** How often the verifications are read: often while one is under way. */
-private const val VERIFICATIONS_OPEN = 1_500L
-private const val VERIFICATIONS_IDLE = 6_000L
+/**
+ * How often the verifications are read while the user's own socket is down,
+ * which otherwise says when one changes: often while one is under way.
+ */
+internal const val VERIFICATIONS_OPEN = 5_000L
+internal const val VERIFICATIONS_IDLE = 30_000L
 
 data class VerificationUiState(
     val verifications: List<Verification> = emptyList(),
@@ -75,6 +85,7 @@ data class VerificationUiState(
 @HiltViewModel
 class VerificationViewModel @Inject constructor(
     private val repository: ChatRepository,
+    private val webSocket: MochiWebSocket,
     private val application: Application,
 ) : ViewModel() {
 
@@ -89,11 +100,53 @@ class VerificationViewModel @Inject constructor(
     private val seen = mutableSetOf<String>()
     private val told = mutableSetOf<String>()
 
-    /** Read the verifications for as long as the caller keeps this running. */
-    suspend fun watch() {
-        while (true) {
-            read()
-            delay(if (_uiState.value.verifications.any { it.open }) VERIFICATIONS_OPEN else VERIFICATIONS_IDLE)
+    /**
+     * Follow the verifications for as long as the caller keeps this running:
+     * read once now, and again whenever the user's own socket says one
+     * started or moved, or opens again after being down. Only while that
+     * socket is down are they read on a timer.
+     */
+    suspend fun watch(): Unit = coroutineScope {
+        val stream = webSocket.openStream(USER_KEY, app = "chat")
+        // A verification started or moved, or the socket opened again: read.
+        val changed = Channel<Unit>(Channel.CONFLATED)
+        // The socket came up: the timer stops, with nothing to read for it.
+        val up = Channel<Unit>(Channel.CONFLATED)
+        try {
+            launch {
+                stream.events.collect { event ->
+                    if (event.type == REOPEN || event.event == "verification") changed.trySend(Unit)
+                }
+            }
+            launch {
+                var live = false
+                stream.status.collect { status ->
+                    val now = status == StreamWsStatus.CONNECTED
+                    if (now && !live) up.trySend(Unit)
+                    // Down: read once, then on the timer.
+                    if (live && !now) changed.trySend(Unit)
+                    live = now
+                }
+            }
+            while (true) {
+                read()
+                while (true) {
+                    if (stream.status.value == StreamWsStatus.CONNECTED) {
+                        changed.receive()
+                        break
+                    }
+                    val every = if (_uiState.value.verifications.any { it.open }) VERIFICATIONS_OPEN else VERIFICATIONS_IDLE
+                    val reads = withTimeoutOrNull(every) {
+                        select<Boolean> {
+                            changed.onReceive { true }
+                            up.onReceive { false }
+                        }
+                    } ?: true
+                    if (reads) break
+                }
+            }
+        } finally {
+            stream.close()
         }
     }
 

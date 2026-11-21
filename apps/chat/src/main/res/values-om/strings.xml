@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Xumurame</string>
     <string name="chat_encryption_key">Furtuu deebii</string>
     <string name="chat_encryption_restore">Deebisi</string>
-    <string name="chat_encryption_recovery_refused">Kun furtuu deebii kee miti</string>
     <string name="chat_verification_own">Meeshaa kee mirkaneessi</string>
     <string name="chat_verification_compare">Emoojiin wal fakkaatan iskiriinii isa kaan irratti akka mul\'atan mirkaneessi.</string>
     <string name="chat_verification_requested_own">Meeshaa kee kan biraa tokko kana mirkaneessuu barbaada.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s si mirkaneessuu barbaada.</string>
     <string name="chat_typing_one">%1$s barreessaa jira...</string>
     <string name="chat_typing_many">%1$s barreessaa jiru...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">deebii %1$s</item>
-        <item quantity="other">deebiiwwan %1$s</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">deebii duraanii %1$s</item>
         <item quantity="other">deebiiwwan duraanii %1$s</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Ergaawwan osoo herregni kun Mochi irratti hin dabalamin dura turan icciitiin eegamaniiru, asitti dubbifamuu hin danda\'an</string>
     <string name="chat_message_excluded">Meeshaalee biroo qofaaf icciitiin eegame</string>
     <string name="chat_setup">Qophaa\'i</string>
+    <string name="chat_jump_bottom">Gara jalaatti darbi</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Gara ergaa haaraa %1$s deemi</item>
+        <item quantity="other">Gara ergaawwan haaraa %1$s deemi</item>
+    </plurals>
+    <string name="chat_message_distrusted">Meeshaa ati hin amanne irraa ergame</string>
+    <string name="chat_message_mismatched">Meeshaa furtuuwwan isaa wal hin simne irraa ergame</string>
+    <string name="chat_list_select">Haasawa fili</string>
+    <string name="chat_message_discard">Gati</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Ergaan qubee %1$s dabalataan dheeraa dha</item>
+        <item quantity="other">Ergaan qubee %1$s dabalataan dheeraa dha</item>
+    </plurals>
 </resources>

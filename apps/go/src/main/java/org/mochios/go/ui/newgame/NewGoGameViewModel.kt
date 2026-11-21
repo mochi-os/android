@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.util.NaturalCompare
 import org.mochios.go.model.NewGameFriend
 import org.mochios.go.repository.GoRepository
 import javax.inject.Inject
@@ -52,7 +53,7 @@ class NewGoGameViewModel @Inject constructor(
                 // The server orders friends by an intrinsic column, so the
                 // consumer sorts the names - case- and accent-insensitively.
                 val friends = repo.getNewGameFriends()
-                    .sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+                    .sortedWith(compareBy(NaturalCompare) { friend -> friend.name })
                 _uiState.value = _uiState.value.copy(
                     friends = friends,
                     friendsLoading = false,

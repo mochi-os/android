@@ -5,11 +5,14 @@
 
 package org.mochios.chat.navigation
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.createGraph
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -65,6 +68,12 @@ class RoutesTest {
         open(ChatApp.newChat(AWKWARD)).let { (_, awkward) ->
             assertEquals(AWKWARD, awkward.getString("friend"))
         }
+    }
+
+    @Test
+    fun `no link from outside the app opens the new chat screen, which would start a chat unasked`() {
+        assertTrue("the graph's links are searched", navigation.graph.hasDeepLink(Uri.parse("https://example.org/chat/c1")))
+        assertFalse(navigation.graph.hasDeepLink(Uri.parse("mochi://chat/with?friend=f&account=a&address=b&name=n")))
     }
 
     private companion object {

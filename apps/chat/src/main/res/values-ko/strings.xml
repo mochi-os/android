@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">완료</string>
     <string name="chat_encryption_key">복구 키</string>
     <string name="chat_encryption_restore">복원</string>
-    <string name="chat_encryption_recovery_refused">회원님의 복구 키가 아니에요</string>
     <string name="chat_verification_own">내 기기 확인</string>
     <string name="chat_verification_compare">다른 화면에 같은 이모지가 표시되는지 확인하세요.</string>
     <string name="chat_verification_requested_own">회원님의 다른 기기에서 이 기기를 확인하려고 해요.</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s님이 회원님을 확인하려고 해요.</string>
     <string name="chat_typing_one">%1$s님이 입력 중...</string>
     <string name="chat_typing_many">%1$s님이 입력 중...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">답글 %1$s개</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">이전 답글 %1$s개</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">이 계정을 Mochi에 추가하기 전의 메시지는 암호화되어 있어 여기서 읽을 수 없습니다</string>
     <string name="chat_message_excluded">다른 기기용으로만 암호화됨</string>
     <string name="chat_setup">설정</string>
+    <string name="chat_jump_bottom">맨 아래로 이동</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">새 메시지 %1$s개로 이동</item>
+    </plurals>
+    <string name="chat_message_distrusted">신뢰하지 않음으로 표시한 기기에서 보냈어요</string>
+    <string name="chat_message_mismatched">키가 일치하지 않는 기기에서 보냈어요</string>
+    <string name="chat_list_select">채팅 선택</string>
+    <string name="chat_message_discard">버리기</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">메시지가 %1$s자 초과되었습니다</item>
+    </plurals>
 </resources>

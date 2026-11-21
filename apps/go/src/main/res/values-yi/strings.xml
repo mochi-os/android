@@ -81,4 +81,6 @@
     <string name="go_score_resume">פֿאָרזעצט דאָס שפּיל</string>
     <string name="go_error_score_resume_failed">ניט געלונגען פֿאָרזעצן דאָס שפּיל</string>
     <string name="go_error_score_accept_failed">ניט געלונגען אָנצונעמען די צאָל</string>
+    <string name="go_chat_player_passed">%1$s האט דורכגעלאזט</string>
+    <string name="go_chat_you_passed">איר האָט געפּאַסט</string>
 </resources>

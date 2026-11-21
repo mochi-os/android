@@ -71,4 +71,5 @@
     <string name="go_new_game_komi_hint">Points ajoutés au pointage des Blancs pour compenser le fait que les Noirs jouent en premier</string>
     <string name="go_new_game_start">Commencer la partie</string>
 
+    <string name="go_chat_player_passed">%1$s a passé</string>
 </resources>

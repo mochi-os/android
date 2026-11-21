@@ -81,4 +81,6 @@
     <string name="go_score_resume">Riprendi la partita</string>
     <string name="go_error_score_resume_failed">Impossibile riprendere la partita</string>
     <string name="go_error_score_accept_failed">Impossibile accettare il punteggio</string>
+    <string name="go_chat_player_passed">%1$s ha passato</string>
+    <string name="go_chat_you_passed">Hai passato</string>
 </resources>

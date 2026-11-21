@@ -81,4 +81,5 @@
     <string name="go_score_resume">Reanudar el juego</string>
     <string name="go_error_score_resume_failed">Error al reanudar el juego</string>
     <string name="go_error_score_accept_failed">Error al aceptar la puntuación</string>
+    <string name="go_chat_player_passed">%1$s pasó</string>
 </resources>

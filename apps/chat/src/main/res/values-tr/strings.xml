@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Tamamlandı</string>
     <string name="chat_encryption_key">Kurtarma anahtarı</string>
     <string name="chat_encryption_restore">Geri yükle</string>
-    <string name="chat_encryption_recovery_refused">Bu sizin kurtarma anahtarınız değil</string>
     <string name="chat_verification_own">Cihazınızı doğrulayın</string>
     <string name="chat_verification_compare">Diğer ekranda aynı emojilerin göründüğünü kontrol edin.</string>
     <string name="chat_verification_requested_own">Diğer cihazlarınızdan biri bu cihazı doğrulamak istiyor.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s sizi doğrulamak istiyor.</string>
     <string name="chat_typing_one">%1$s yazıyor...</string>
     <string name="chat_typing_many">%1$s yazıyor...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s yanıt</item>
-        <item quantity="other">%1$s yanıt</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s önceki yanıt</item>
         <item quantity="other">%1$s önceki yanıt</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Bu hesap Mochi\'ye eklenmeden önceki mesajlar şifrelidir ve burada okunamaz</string>
     <string name="chat_message_excluded">Yalnızca diğer cihazlar için şifreli</string>
     <string name="chat_setup">Kur</string>
+    <string name="chat_jump_bottom">En alta git</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s yeni mesaja git</item>
+        <item quantity="other">%1$s yeni mesaja git</item>
+    </plurals>
+    <string name="chat_message_distrusted">Güvenmediğiniz bir cihazdan gönderildi</string>
+    <string name="chat_message_mismatched">Anahtarları eşleşmeyen bir cihazdan gönderildi</string>
+    <string name="chat_list_select">Bir sohbet seç</string>
+    <string name="chat_message_discard">At</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Mesaj %1$s karakter fazla uzun</item>
+        <item quantity="other">Mesaj %1$s karakter fazla uzun</item>
+    </plurals>
 </resources>

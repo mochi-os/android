@@ -19,8 +19,8 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
+import org.mochios.android.api.messageOrFallback
 import org.mochios.android.api.toMochiError
-import org.mochios.android.api.userMessage
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.files.Downloads
 import org.mochios.android.files.Upload
@@ -332,17 +332,5 @@ class AttachmentsViewModel @Inject constructor(
         if (added.isEmpty()) return existing
         val ids = existing.map { it.id }.toSet()
         return existing + added.filter { it.id !in ids }
-    }
-}
-
-private fun MochiError.messageOrFallback(fallback: String): String {
-    return when (this) {
-        is MochiError.AuthError -> message ?: fallback
-        is MochiError.ForbiddenError -> message ?: fallback
-        is MochiError.NotFoundError -> message ?: fallback
-        is MochiError.ServerError -> message ?: fallback
-        is MochiError.Unknown -> message ?: fallback
-        is MochiError.NetworkError -> userMessage()
-        is MochiError.Local -> userMessage()
     }
 }

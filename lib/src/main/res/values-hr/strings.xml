@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Još nema poruka</string>
     <string name="game_chat_input_placeholder">Upišite poruku</string>
     <string name="game_chat_send">Pošalji poruku</string>
-    <string name="game_chat_subject_you">Vi</string>
 
     <string name="common_not_saved">Nije spremljeno</string>
     <string name="app_brand">Mochi</string>
@@ -351,4 +350,9 @@
     <string name="sync_conflict">Promijenjeno na poslužitelju</string>
     <string name="sync_missing">Više nije na poslužitelju</string>
     <string name="sync_refused">Poslužitelj je odbio</string>
+    <string name="game_system_score_agreed">Rezultat dogovoren</string>
+    <string name="game_system_score_accept">%1$s je prihvatio rezultat</string>
+    <string name="game_system_score_resume">%1$s je nastavio igru</string>
+    <string name="game_not_found">Igra nije pronađena</string>
+    <string name="game_chat_move_played_you">Odigrali ste %1$s</string>
 </resources>

@@ -61,6 +61,12 @@ data class WebSocketEvent(
     val edited: Long? = null,
     /** A chat message: 1 where it came encrypted. Older servers leave it out. */
     val encrypted: Int? = null,
+    /**
+     * A chat message or edit: "distrusted" or "mismatched" where it was read
+     * from a device the user distrusted or one whose keys do not match. Older
+     * servers leave it out.
+     */
+    val warning: String? = null,
     /** A chat reaction event: the message's counts by reaction. */
     val reactions: Map<String, Int>? = null,
     /**

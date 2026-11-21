@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Klar</string>
     <string name="chat_encryption_key">Återställningsnyckel</string>
     <string name="chat_encryption_restore">Återställ</string>
-    <string name="chat_encryption_recovery_refused">Det är inte din återställningsnyckel</string>
     <string name="chat_verification_own">Verifiera din enhet</string>
     <string name="chat_verification_compare">Kontrollera att samma emoji visas på den andra skärmen.</string>
     <string name="chat_verification_requested_own">En av dina andra enheter vill verifiera den här.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s vill verifiera dig.</string>
     <string name="chat_typing_one">%1$s skriver...</string>
     <string name="chat_typing_many">%1$s skriver...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s svar</item>
-        <item quantity="other">%1$s svar</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s tidigare svar</item>
         <item quantity="other">%1$s tidigare svar</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Meddelanden från innan det här kontot lades till i Mochi är krypterade och kan inte läsas här</string>
     <string name="chat_message_excluded">Endast krypterat för andra enheter</string>
     <string name="chat_setup">Konfigurera</string>
+    <string name="chat_jump_bottom">Hoppa längst ned</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Hoppa till %1$s nytt meddelande</item>
+        <item quantity="other">Hoppa till %1$s nya meddelanden</item>
+    </plurals>
+    <string name="chat_message_distrusted">Skickat från en enhet du inte litar på</string>
+    <string name="chat_message_mismatched">Skickat från en enhet vars nycklar inte stämmer</string>
+    <string name="chat_list_select">Välj en chatt</string>
+    <string name="chat_message_discard">Kasta</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Meddelandet är %1$s tecken för långt</item>
+        <item quantity="other">Meddelandet är %1$s tecken för långt</item>
+    </plurals>
 </resources>

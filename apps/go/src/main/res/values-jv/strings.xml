@@ -81,4 +81,6 @@
     <string name="go_score_resume">Nerusaké game</string>
     <string name="go_error_score_resume_failed">Gagal nerusaké game</string>
     <string name="go_error_score_accept_failed">Gagal nampa skor</string>
+    <string name="go_chat_player_passed">%1$s ngliwati giliran</string>
+    <string name="go_chat_you_passed">Sampéyan nglewati giliran</string>
 </resources>

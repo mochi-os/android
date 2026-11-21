@@ -81,4 +81,6 @@
     <string name="go_score_resume">Jatka peliä</string>
     <string name="go_error_score_resume_failed">Pelin jatkaminen epäonnistui</string>
     <string name="go_error_score_accept_failed">Pisteiden hyväksyminen epäonnistui</string>
+    <string name="go_chat_player_passed">%1$s passasi</string>
+    <string name="go_chat_you_passed">Passasit</string>
 </resources>

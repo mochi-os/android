@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Aínda non hai mensaxes</string>
     <string name="game_chat_input_placeholder">Escribe unha mensaxe</string>
     <string name="game_chat_send">Enviar mensaxe</string>
-    <string name="game_chat_subject_you">Ti</string>
 
     <string name="common_not_saved">Sen gardar</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Cambiado no servidor</string>
     <string name="sync_missing">Xa non está no servidor</string>
     <string name="sync_refused">Rexeitado polo servidor</string>
+    <string name="game_system_score_agreed">Puntuación acordada</string>
+    <string name="game_system_score_accept">%1$s aceptou a puntuación</string>
+    <string name="game_system_score_resume">%1$s retomou a partida</string>
+    <string name="game_not_found">Non se atopou a partida</string>
+    <string name="game_chat_move_played_you">Xogaches %1$s</string>
 </resources>

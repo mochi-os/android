@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Դեռ հաղորդագրություններ չկան</string>
     <string name="game_chat_input_placeholder">Մուտքագրեք հաղորդագրություն</string>
     <string name="game_chat_send">Ուղարկել հաղորդագրությունը</string>
-    <string name="game_chat_subject_you">Դուք</string>
 
     <string name="common_not_saved">Չպահպանված</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Փոխվել է սերվերում</string>
     <string name="sync_missing">Այլևս սերվերում չէ</string>
     <string name="sync_refused">Մերժվել է սերվերի կողմից</string>
+    <string name="game_system_score_agreed">Հաշիվը համաձայնեցված է</string>
+    <string name="game_system_score_accept">%1$s-ն ընդունեց հաշիվը</string>
+    <string name="game_system_score_resume">%1$s-ը վերսկսեց խաղը</string>
+    <string name="game_not_found">Խաղը չի գտնվել</string>
+    <string name="game_chat_move_played_you">Դուք խաղացիք %1$s</string>
 </resources>

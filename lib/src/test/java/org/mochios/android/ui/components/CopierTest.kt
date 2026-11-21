@@ -5,9 +5,16 @@
 
 package org.mochios.android.ui.components
 
+import android.content.ClipDescription
 import android.content.ClipboardManager
 import android.content.Context
+import android.os.PersistableBundle
+import androidx.compose.foundation.layout.Column
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.performClick
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull
 import org.junit.Rule
@@ -33,6 +40,11 @@ class CopierTest {
     private fun clipboard(): String? {
         val manager = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         return manager.primaryClip?.getItemAt(0)?.text?.toString()
+    }
+
+    private fun extras(): PersistableBundle? {
+        val manager = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        return manager.primaryClipDescription?.extras
     }
 
     private fun copier(): Copier {
@@ -81,6 +93,25 @@ class CopierTest {
         rule.waitForIdle()
         assertEquals("abc", clipboard())
         assertNull(ShadowToast.getLatestToast())
+    }
+
+    @Test
+    @Config(sdk = [35])
+    fun `a data chip holding a secret copies it as a sensitive clip, and any other plainly`() {
+        rule.setContent {
+            Column {
+                DataChip(value = "recovery key", sensitive = true, modifier = Modifier.testTag("secret"))
+                DataChip(value = "identifier", modifier = Modifier.testTag("plain"))
+            }
+        }
+        rule.onNodeWithTag("secret").performClick()
+        rule.waitForIdle()
+        assertEquals("recovery key", clipboard())
+        assertEquals(true, extras()?.getBoolean(ClipDescription.EXTRA_IS_SENSITIVE))
+        rule.onNodeWithTag("plain").performClick()
+        rule.waitForIdle()
+        assertEquals("identifier", clipboard())
+        assertEquals(false, extras()?.getBoolean(ClipDescription.EXTRA_IS_SENSITIVE) ?: false)
     }
 
     @Test

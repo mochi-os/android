@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Баробар</string>
     <string name="chess_status_check_your_move">Чек — навбати шумо</string>
     <string name="chess_status_your_move">Ҳаракати шумо</string>
-    <string name="chess_move_subject_you">Шумо</string>
     <string name="chess_promotion_title">Тарфеъ ба:</string>
 
     <string name="chess_resign_message">Шумо мутмаин ҳастед, ки мехоҳед таслим шавед? %1$s бозиро мебарад.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Сафед %1$s</string>
     <string name="chess_piece_black">Сиёҳ %1$s</string>
+    <string name="chess_move_played_you">Шумо %1$s бозӣ кардед</string>
+    <string name="chess_move_capture_you">Шумо %1$s гирифтед</string>
 </resources>

@@ -141,7 +141,6 @@
     <string name="chat_encryption_done">Дайын</string>
     <string name="chat_encryption_key">Қалпына келтіру кілті</string>
     <string name="chat_encryption_restore">Қалпына келтіру</string>
-    <string name="chat_encryption_recovery_refused">Бұл сіздің қалпына келтіру кілтіңіз емес</string>
     <string name="chat_verification_own">Құрылғыңызды тексеру</string>
     <string name="chat_verification_compare">Басқа экранда бірдей эмодзилер көрсетілгенін тексеріңіз.</string>
     <string name="chat_verification_requested_own">Басқа құрылғыларыңыздың бірі осы құрылғыны тексергісі келеді.</string>
@@ -161,10 +160,6 @@
     <string name="chat_verification_requested">%1$s сізді тексергісі келеді.</string>
     <string name="chat_typing_one">%1$s жазып жатыр...</string>
     <string name="chat_typing_many">%1$s жазып жатыр...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s жауап</item>
-        <item quantity="other">%1$s жауап</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ертеректегі жауап</item>
         <item quantity="other">%1$s ертеректегі жауап</item>
@@ -182,4 +177,17 @@
     <string name="chat_message_earlier">Бұл аккаунт Mochi-ге қосылғанға дейінгі хабарламалар шифрланған және оларды мұнда оқу мүмкін емес</string>
     <string name="chat_message_excluded">Тек басқа құрылғылар үшін шифрланған</string>
     <string name="chat_setup">Орнату</string>
+    <string name="chat_jump_bottom">Төменге өту</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s жаңа хабарламаға өту</item>
+        <item quantity="other">%1$s жаңа хабарламаға өту</item>
+    </plurals>
+    <string name="chat_message_distrusted">Сіз сенбейтін құрылғыдан жіберілген</string>
+    <string name="chat_message_mismatched">Кілттері сәйкес келмейтін құрылғыдан жіберілген</string>
+    <string name="chat_list_select">Чатты таңдау</string>
+    <string name="chat_message_discard">Алып тастау</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Хабарлама шектен %1$s таңбаға ұзын</item>
+        <item quantity="other">Хабарлама шектен %1$s таңбаға ұзын</item>
+    </plurals>
 </resources>

@@ -117,7 +117,6 @@
     <string name="game_chat_empty">עדיין אין הודעות</string>
     <string name="game_chat_input_placeholder">הקלד הודעה</string>
     <string name="game_chat_send">שלח הודעה</string>
-    <string name="game_chat_subject_you">אתה</string>
 
     <string name="common_not_saved">לא נשמר</string>
     <string name="app_brand">Mochi</string>
@@ -353,4 +352,9 @@
     <string name="sync_conflict">שונה בשרת</string>
     <string name="sync_missing">כבר לא קיים בשרת</string>
     <string name="sync_refused">נדחה על ידי השרת</string>
+    <string name="game_system_score_agreed">הוסכם על התוצאה</string>
+    <string name="game_system_score_accept">%1$s קיבל את התוצאה</string>
+    <string name="game_system_score_resume">%1$s חידש את המשחק</string>
+    <string name="game_not_found">המשחק לא נמצא</string>
+    <string name="game_chat_move_played_you">שיחקת %1$s</string>
 </resources>

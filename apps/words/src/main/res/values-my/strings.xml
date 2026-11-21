@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">ဂိမ်းများ မရှိသေးပါ။</string>
     <string name="words_new_game_choose_opponents">ပြိုင်ဘက်များ ရွေးချယ်ပါ</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">ကစားသမား %1$s ဦး</string>
     <string name="words_new_game_no_friends_subtitle">ကစားရန် “လူများ” အက်ပ်တွင် သူငယ်ချင်းများ ထည့်ပါ။</string>
     <string name="words_detail_title">ဂိမ်း</string>
     <string name="words_detail_status_opponent_move">%1$s ၏ အလှည့်</string>
     <string name="words_detail_status_winner_wins">%1$s နိုင်သည်</string>
     <string name="words_detail_player_fallback">ကစားသမား %1$s</string>
-    <string name="words_detail_player_count">ကစားသမား %1$s ဦး</string>
-    <string name="words_detail_label_tiles_left">ကြွေပြား %1$s ခု ကျန်</string>
     <string name="words_detail_action_open_chat">စကားပြောခန်း ဖွင့်ရန်</string>
     <string name="words_detail_action_more">ဂိမ်း လုပ်ဆောင်ချက်များ</string>
     <string name="words_detail_exchange_count">လဲလှယ် (%1$s)</string>
@@ -71,4 +68,17 @@
     <string name="words_move_error_no_words">မှန်ကန်သော စကားလုံး မဖြစ်ပေါ်ပါ</string>
     <string name="words_validation_offline">အတည်ပြုစစ်ဆေးမှု အော့ဖ်လိုင်းဖြစ်နေသည် — သင် ဆက်လက်တင်သွင်းနိုင်ပါသေးသည်။</string>
     <string name="words_validation_unknown_words">မသိသော စကားလုံးများ ပါဝင်နေသည်။ သင် ဆက်လက်တင်သွင်းနိုင်ပါသေးသည်။</string>
+    <string name="words_detail_label_tiles">ကျန် tile</string>
+    <string name="words_detail_submit_score">တင်ပြမည် +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3စ</string>
+    <string name="words_board_premium_double_word">2စ</string>
+    <string name="words_board_premium_triple_letter">3အ</string>
+    <string name="words_board_premium_double_letter">2အ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="other">ကစားသမား %1$s ဦး</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="other">ကစားသမား %1$s ဦး</item>
+    </plurals>
 </resources>

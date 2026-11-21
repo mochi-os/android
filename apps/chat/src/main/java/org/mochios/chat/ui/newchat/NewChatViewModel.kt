@@ -59,6 +59,8 @@ data class NewChatUiState(
     val searchQuery: String = "",
     val isLoading: Boolean = false,
     val isSearchingDirectory: Boolean = false,
+    /** Why the directory search failed, until the next search: not "No matching people". */
+    val searchError: MochiError? = null,
     val isCreating: Boolean = false,
     val error: MochiError? = null,
     /** A create a member's chat policy refused, shown as a dialog of its own. */
@@ -99,13 +101,12 @@ class NewChatViewModel @Inject constructor(
     private val repository: ChatRepository,
 ) : ViewModel() {
 
-    /** Friend identity pre-selected via deep-link (mochi://chat/with?friend=X). */
+    /** A friend to chat with, as people hands one over (chat/new?friend=X). */
     private val preselectFriend: String = savedStateHandle["friend"] ?: ""
 
     /**
-     * A contact's messaging address on another network, from people
-     * (mochi://chat/with?account=A&address=B&name=C): the conversation there
-     * already is, or a new one.
+     * A contact's messaging address on another network, as people hands one
+     * over (chat/new?account=A&address=B&name=C).
      */
     private val handoffAccount: String = savedStateHandle["account"] ?: ""
     private val handoffAddress: String = savedStateHandle["address"] ?: ""
@@ -126,57 +127,36 @@ class NewChatViewModel @Inject constructor(
                 val friends = data.friends.sortedWith(compareBy(NaturalCompare) { it.name })
                 _uiState.value = _uiState.value.copy(me = data.name, accounts = data.accounts, offered = data.offered)
 
-                if (handoffAccount.isNotBlank() && handoffAddress.isNotBlank()) {
-                    try {
-                        val chatId = repository.createChat(handoffName.trim(), listOf(handoffAddress), handoffAccount).id
-                        _uiState.value = _uiState.value.copy(friends = friends, createdChatId = chatId.ifEmpty { null }, isLoading = chatId.isNotEmpty())
-                    } catch (e: Exception) {
-                        // The picker, on that account with the address filled
-                        // in, so the user can retry.
-                        _uiState.value = _uiState.value.copy(
-                            friends = friends,
-                            isLoading = false,
-                            account = handoffAccount,
-                            addresses = handoffAddress,
-                            groupName = handoffName,
-                            groupNameEdited = handoffName.isNotBlank(),
-                            error = e.toMochiError(),
-                        )
-                    }
+                // What the screen was handed fills the picker in; nothing is
+                // started until the user taps to start it. Whatever opened the
+                // screen, a link from anywhere included, can only propose.
+                if (handoffAccount.isNotBlank() && handoffAddress.isNotBlank() && data.accounts.any { it.id == handoffAccount }) {
+                    _uiState.value = _uiState.value.copy(
+                        friends = friends,
+                        isLoading = false,
+                        account = handoffAccount,
+                        addresses = handoffAddress,
+                        groupName = handoffName,
+                        groupNameEdited = handoffName.isNotBlank(),
+                    )
                     return@launch
                 }
 
-                // Deep-link entry with a friend: open or create the 1-on-1
-                // directly. isLoading stays true so the picker never flashes
-                // before the screen navigates away.
+                // A friend: the one-to-one chat with them opens where there is
+                // one; otherwise they are picked, to start one with a tap.
                 val target = preselectFriend
                     .takeIf { it.isNotBlank() }
                     ?.let { id -> friends.firstOrNull { it.id == id } }
-                if (target != null) {
-                    try {
-                        val chatId = target.chat.ifBlank {
-                            repository.createChat(target.name, listOf(target.id)).id
-                        }
-                        _uiState.value = _uiState.value.copy(friends = friends, createdChatId = chatId)
-                    } catch (e: Exception) {
-                        // Create failed: drop the user onto the picker with the friend
-                        // pre-selected and the error shown, so they can retry instead of
-                        // hitting a dead-end error screen.
-                        _uiState.value = _uiState.value.copy(
-                            friends = friends,
-                            isLoading = false,
-                            picked = listOf(target),
-                            error = e.toMochiError(),
-                        )
-                        refreshExisting()
-                    }
+                if (target != null && target.chat.isNotBlank()) {
+                    _uiState.value = _uiState.value.copy(friends = friends, createdChatId = target.chat)
                     return@launch
                 }
-
                 _uiState.value = _uiState.value.copy(
                     friends = friends,
                     isLoading = false,
+                    picked = listOfNotNull(target),
                 )
+                if (target != null) refreshExisting()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
             }
@@ -281,7 +261,7 @@ class NewChatViewModel @Inject constructor(
     private var searchJob: Job? = null
 
     fun updateSearchQuery(query: String) {
-        _uiState.value = _uiState.value.copy(searchQuery = query)
+        _uiState.value = _uiState.value.copy(searchQuery = query, searchError = null)
         searchJob?.cancel()
         val trimmed = query.trim()
         if (trimmed.length < 2) {
@@ -291,19 +271,22 @@ class NewChatViewModel @Inject constructor(
         searchJob = viewModelScope.launch {
             delay(SEARCH_DEBOUNCE)
             _uiState.value = _uiState.value.copy(isSearchingDirectory = true)
-            val directory = try {
+            try {
                 val friendIds = _uiState.value.friends.map { friend -> friend.id }.toSet()
-                repository.personSearch(trimmed)
+                val directory = repository.personSearch(trimmed)
                     .filter { person -> person.id !in friendIds }
-                    .map { person ->
-                        Friend(id = person.id, identity = person.id, name = person.name, chat = "")
-                    }
+                    .map { person -> Friend(id = person.id, name = person.name, chat = "") }
+                _uiState.value = _uiState.value.copy(directory = directory, isSearchingDirectory = false)
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                emptyList()
+                // The search did not run: said as such, not as no one found.
+                _uiState.value = _uiState.value.copy(
+                    directory = emptyList(),
+                    isSearchingDirectory = false,
+                    searchError = e.toMochiError(),
+                )
             }
-            _uiState.value = _uiState.value.copy(directory = directory, isSearchingDirectory = false)
         }
     }
 

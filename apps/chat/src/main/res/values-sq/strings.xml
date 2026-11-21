@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Përfunduar</string>
     <string name="chat_encryption_key">Çelësi i rikuperimit</string>
     <string name="chat_encryption_restore">Rivendos</string>
-    <string name="chat_encryption_recovery_refused">Ky nuk është çelësi juaj i rikuperimit</string>
     <string name="chat_verification_own">Verifikoni pajisjen tuaj</string>
     <string name="chat_verification_compare">Kontrolloni që të njëjtat emoji shfaqen në ekranin tjetër.</string>
     <string name="chat_verification_requested_own">Një tjetër nga pajisjet tuaja dëshiron ta verifikojë këtë.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s dëshiron t\'ju verifikojë.</string>
     <string name="chat_typing_one">%1$s po shkruan...</string>
     <string name="chat_typing_many">%1$s po shkruajnë...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s përgjigje</item>
-        <item quantity="other">%1$s përgjigje</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s përgjigje e mëparshme</item>
         <item quantity="other">%1$s përgjigje të mëparshme</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Mesazhet nga para se kjo llogari të shtohej në Mochi janë të enkriptuara dhe nuk mund të lexohen këtu</string>
     <string name="chat_message_excluded">I enkriptuar vetëm për pajisje të tjera</string>
     <string name="chat_setup">Konfiguro</string>
+    <string name="chat_jump_bottom">Shko në fund</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Shko te %1$s mesazh i ri</item>
+        <item quantity="other">Shko te %1$s mesazhe të reja</item>
+    </plurals>
+    <string name="chat_message_distrusted">Dërguar nga një pajisje që e shënove si të pabesueshme</string>
+    <string name="chat_message_mismatched">Dërguar nga një pajisje çelësat e së cilës nuk përputhen</string>
+    <string name="chat_list_select">Zgjidh një bisedë</string>
+    <string name="chat_message_discard">Hidh</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Mesazhi është %1$s karakter më i gjatë</item>
+        <item quantity="other">Mesazhi është %1$s karaktere më i gjatë</item>
+    </plurals>
 </resources>

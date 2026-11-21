@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">पूर्ण</string>
     <string name="chat_encryption_key">रिकवरी कुंजी</string>
     <string name="chat_encryption_restore">पुनर्स्थापित करें</string>
-    <string name="chat_encryption_recovery_refused">यह आपकी रिकवरी कुंजी नहीं है</string>
     <string name="chat_verification_own">अपना डिवाइस वेरिफ़ाई करें</string>
     <string name="chat_verification_compare">जाँचें कि दूसरी स्क्रीन पर वही इमोजी दिखाई दे रहे हैं।</string>
     <string name="chat_verification_requested_own">आपका एक अन्य डिवाइस इसे वेरिफ़ाई करना चाहता है।</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s आपको वेरिफ़ाई करना चाहते हैं।</string>
     <string name="chat_typing_one">%1$s टाइप कर रहे हैं...</string>
     <string name="chat_typing_many">%1$s टाइप कर रहे हैं...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s उत्तर</item>
-        <item quantity="other">%1$s उत्तर</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s पिछला उत्तर</item>
         <item quantity="other">%1$s पिछले उत्तर</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">इस खाते को Mochi में जोड़े जाने से पहले के संदेश एन्क्रिप्टेड हैं और यहाँ पढ़े नहीं जा सकते</string>
     <string name="chat_message_excluded">केवल अन्य डिवाइस के लिए एन्क्रिप्टेड</string>
     <string name="chat_setup">सेट अप करें</string>
+    <string name="chat_jump_bottom">सबसे नीचे जाएँ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s नए मैसेज पर जाएँ</item>
+        <item quantity="other">%1$s नए मैसेज पर जाएँ</item>
+    </plurals>
+    <string name="chat_message_distrusted">ऐसे डिवाइस से भेजा गया जिस पर आपने भरोसा नहीं किया</string>
+    <string name="chat_message_mismatched">ऐसे डिवाइस से भेजा गया जिसकी कुंजियाँ मेल नहीं खातीं</string>
+    <string name="chat_list_select">एक चैट चुनें</string>
+    <string name="chat_message_discard">त्यागें</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">संदेश सीमा से %1$s वर्ण लंबा है</item>
+        <item quantity="other">संदेश सीमा से %1$s वर्ण लंबा है</item>
+    </plurals>
 </resources>

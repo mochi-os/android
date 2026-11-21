@@ -333,9 +333,8 @@ class NotificationsViewModel @Inject constructor(
             "notifications",
             app = "notifications",
         ) { event ->
-            // The socket calls back on its own thread; the list changes on the
-            // main one, as everything else that changes it does.
-            viewModelScope.launch { framed(event) }
+            // On the main thread, where everything else that changes the list does.
+            framed(event)
         }
     }
 

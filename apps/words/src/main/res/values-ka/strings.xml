@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">ჯერ არ არის თამაშები.</string>
     <string name="words_new_game_choose_opponents">აირჩიეთ მოწინააღმდეგეები</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s მოთამაშე</string>
     <string name="words_new_game_no_friends_subtitle">დაამატეთ მეგობრები „ადამიანები“ აპლიკაციაში თამაშის დასაწყებად.</string>
     <string name="words_detail_title">თამაში</string>
     <string name="words_detail_status_opponent_move">%1$s-ის სვლა</string>
     <string name="words_detail_status_winner_wins">იგებს %1$s</string>
     <string name="words_detail_player_fallback">მოთამაშე %1$s</string>
-    <string name="words_detail_player_count">%1$s მოთამაშე</string>
-    <string name="words_detail_label_tiles_left">დარჩა %1$s ფილა</string>
     <string name="words_detail_action_open_chat">ჩატის გახსნა</string>
     <string name="words_detail_action_more">თამაშის მოქმედებები</string>
     <string name="words_detail_exchange_count">გაცვლა (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">სწორი სიტყვა არ შედგა</string>
     <string name="words_validation_offline">ვალიდაცია ხაზგარეშეა — მაინც შეგიძლიათ გაგზავნა.</string>
     <string name="words_validation_unknown_words">შეიცავს უცნობ სიტყვებს. მაინც შეგიძლიათ გაგზავნა.</string>
+    <string name="words_detail_label_tiles">დარჩენილი ფილები</string>
+    <string name="words_detail_submit_score">გაგზავნა +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">ს×3</string>
+    <string name="words_board_premium_double_word">ს×2</string>
+    <string name="words_board_premium_triple_letter">ა×3</string>
+    <string name="words_board_premium_double_letter">ა×2</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s მოთამაშე</item>
+        <item quantity="other">%1$s მოთამაშე</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s მოთამაშე</item>
+        <item quantity="other">%1$s მოთამაშე</item>
+    </plurals>
 </resources>

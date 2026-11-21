@@ -81,4 +81,6 @@
     <string name="go_score_resume">Tapha itti fufi</string>
     <string name="go_error_score_resume_failed">Tapha itti fufuun hin milkoofne</string>
     <string name="go_error_score_accept_failed">Qabxii fudhachuun hin milkoofne</string>
+    <string name="go_chat_player_passed">%1$s dabarse</string>
+    <string name="go_chat_you_passed">Ati dabarsite</string>
 </resources>

@@ -29,7 +29,6 @@
     <string name="settings_radius_none">Aucun</string>
     <string name="settings_background_off">Aucun</string>
     <string name="settings_title">Paramètres</string>
-    <string name="game_chat_subject_you">Vous</string>
     <string name="auth_privacy_public">Public</string>
     <string name="auth_privacy_private">Privé</string>
     <string name="common_notifications">Notifications</string>

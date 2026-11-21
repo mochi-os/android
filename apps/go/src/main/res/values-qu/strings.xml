@@ -81,4 +81,6 @@
     <string name="go_score_resume">Pukllayta kutimanta qallariy</string>
     <string name="go_error_score_resume_failed">Pukllayta mana kutimanta qallariyta atikurqanchu</string>
     <string name="go_error_score_accept_failed">Puntajeta chaskiyta mana atinchu</string>
+    <string name="go_chat_player_passed">%1$s pasarqan</string>
+    <string name="go_chat_you_passed">Qam pasarqanki</string>
 </resources>

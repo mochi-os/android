@@ -10,10 +10,11 @@ import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
- * Positional superko: a move may not recreate the position before it. The FEN
- * carries the single ko point, but a snapshot from the server arrives with that
- * field cleared, so `previousGrid` is what actually refuses the retake - and it
- * was carried and never read.
+ * Ko by position: a move may not recreate the position before the last move.
+ * The FEN carries the single ko point, but a snapshot from the server arrives
+ * with that field cleared, so `previousGrid` is what actually refuses the
+ * retake. Only that one position is compared, so this is the basic ko rule,
+ * not superko.
  */
 class SuperkoTest {
 
@@ -36,7 +37,7 @@ class SuperkoTest {
     @Test
     fun `the same move is legal when no previous position is known`() {
         // The positive control: without `previousGrid` the point is an
-        // ordinary capture, so the refusal above is superko and not suicide or
+        // ordinary capture, so the refusal above is ko and not suicide or
         // occupancy.
         val game = GoGame("$after w 1 0 - 0")
         assertTrue(game.isLegal(1, 1))

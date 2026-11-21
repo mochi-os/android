@@ -28,4 +28,6 @@
     <string name="go_score_resume">Spel hervatten</string>
     <string name="go_error_score_resume_failed">Spel hervatten mislukt</string>
     <string name="go_error_score_accept_failed">Score aanvaarden mislukt</string>
+    <string name="go_chat_player_passed">%1$s heeft gepast</string>
+    <string name="go_chat_you_passed">U paste</string>
 </resources>

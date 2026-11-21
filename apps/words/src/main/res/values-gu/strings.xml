@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">હજી સુધી કોઈ રમત નથી.</string>
     <string name="words_new_game_choose_opponents">પ્રતિસ્પર્ધીઓ પસંદ કરો</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s ખેલાડીઓ</string>
     <string name="words_new_game_no_friends_subtitle">રમવાનું શરૂ કરવા લોકો એપમાં મિત્રો ઉમેરો.</string>
     <string name="words_detail_title">ગેમ</string>
     <string name="words_detail_status_opponent_move">%1$s ની ચાલ</string>
     <string name="words_detail_status_winner_wins">%1$s જીત્યા</string>
     <string name="words_detail_player_fallback">ખેલાડી %1$s</string>
-    <string name="words_detail_player_count">%1$s ખેલાડીઓ</string>
-    <string name="words_detail_label_tiles_left">%1$s ટાઇલ્સ બાકી</string>
     <string name="words_detail_action_open_chat">ચેટ ખોલો</string>
     <string name="words_detail_action_more">ગેમ ક્રિયાઓ</string>
     <string name="words_detail_exchange_count">બદલો (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">કોઈ માન્ય શબ્દ બન્યો નથી</string>
     <string name="words_validation_offline">માન્યતા ઑફલાઇન છે — તેમ છતાં તમે સબમિટ કરી શકો છો.</string>
     <string name="words_validation_unknown_words">અજાણ્યા શબ્દો ધરાવે છે. તેમ છતાં તમે સબમિટ કરી શકો છો.</string>
+    <string name="words_detail_label_tiles">બાકી ટાઇલ્સ</string>
+    <string name="words_detail_submit_score">સબમિટ કરો +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">શ×3</string>
+    <string name="words_board_premium_double_word">શ×2</string>
+    <string name="words_board_premium_triple_letter">અ×3</string>
+    <string name="words_board_premium_double_letter">અ×2</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s ખેલાડી</item>
+        <item quantity="other">%1$s ખેલાડીઓ</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s ખેલાડી</item>
+        <item quantity="other">%1$s ખેલાડીઓ</item>
+    </plurals>
 </resources>

@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Nog geen boodskappe nie</string>
     <string name="game_chat_input_placeholder">Tik \'n boodskap</string>
     <string name="game_chat_send">Stuur boodskap</string>
-    <string name="game_chat_subject_you">Jy</string>
 
     <string name="common_not_saved">Nie gestoor nie</string>
 
@@ -351,4 +350,9 @@
     <string name="sync_conflict">Op die bediener verander</string>
     <string name="sync_missing">Nie meer op die bediener nie</string>
     <string name="sync_refused">Deur die bediener geweier</string>
+    <string name="game_system_score_agreed">Telling ooreengekom</string>
+    <string name="game_system_score_accept">%1$s het die telling aanvaar</string>
+    <string name="game_system_score_resume">%1$s het die spel hervat</string>
+    <string name="game_not_found">Speletjie nie gevind nie</string>
+    <string name="game_chat_move_played_you">Jy het %1$s gespeel</string>
 </resources>

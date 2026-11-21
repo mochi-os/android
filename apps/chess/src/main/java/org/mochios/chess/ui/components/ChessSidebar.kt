@@ -12,8 +12,8 @@ import org.mochios.chess.R
 import org.mochios.chess.model.opponentAvatarUrl
 
 /**
- * Drawer for the chess app: active and completed games (newest `updated`
- * first), a New game row, and an optional socket status row.
+ * Drawer for the chess app: active and completed games, each newest
+ * `updated` first.
  */
 @Composable
 fun chessDrawerItems(
@@ -43,5 +43,4 @@ data class ChessSidebarGame(
     val id: String,
     val opponentId: String,
     val opponentName: String,
-    val updated: Long = 0,
 )

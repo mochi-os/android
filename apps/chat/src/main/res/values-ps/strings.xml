@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">ترسره شو</string>
     <string name="chat_encryption_key">د بیا رغونې کیلي</string>
     <string name="chat_encryption_restore">بیرته راګرځول</string>
-    <string name="chat_encryption_recovery_refused">دا ستاسو د بیا رغونې کیلي نه ده</string>
     <string name="chat_verification_own">خپله وسیله تصدیق کړئ</string>
     <string name="chat_verification_compare">وګورئ چې په بله پرده هماغه ایموجي ښکاري.</string>
     <string name="chat_verification_requested_own">ستاسو یوه بله وسیله غواړي دا تصدیق کړي.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s غواړي تاسو تصدیق کړي.</string>
     <string name="chat_typing_one">%1$s لیکي...</string>
     <string name="chat_typing_many">%1$s لیکي...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s ځواب</item>
-        <item quantity="other">%1$s ځوابونه</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s پخوانی ځواب</item>
         <item quantity="other">%1$s پخواني ځوابونه</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">د دې حساب Mochi ته له ورزیاتېدو مخکې پیغامونه کوډ شوي دي او دلته نشي لوستل کېدای</string>
     <string name="chat_message_excluded">یوازې د نورو وسیلو لپاره کوډ شوی</string>
     <string name="chat_setup">تنظیم</string>
+    <string name="chat_jump_bottom">پای ته لاړ شئ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s نوي پیغام ته لاړ شئ</item>
+        <item quantity="other">%1$s نویو پیغامونو ته لاړ شئ</item>
+    </plurals>
+    <string name="chat_message_distrusted">له هغې وسیلې لیږل شوی چې تاسو پرې باور نه لرئ</string>
+    <string name="chat_message_mismatched">له هغې وسیلې لیږل شوی چې کیلي یې سره سمې نه دي</string>
+    <string name="chat_list_select">یوه چټ وټاکئ</string>
+    <string name="chat_message_discard">ړنګول</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">پیغام %1$s توری ډېر اوږد دی</item>
+        <item quantity="other">پیغام %1$s توري ډېر اوږد دی</item>
+    </plurals>
 </resources>

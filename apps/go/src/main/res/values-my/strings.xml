@@ -81,4 +81,6 @@
     <string name="go_score_resume">ကစားခြင်း ဆက်လုပ်မည်</string>
     <string name="go_error_score_resume_failed">ကစားခြင်း ဆက်လုပ်၍ မရပါ</string>
     <string name="go_error_score_accept_failed">ရမှတ်ကို လက်ခံ၍ မရပါ</string>
+    <string name="go_chat_player_passed">%1$s ကျော်သွားသည်</string>
+    <string name="go_chat_you_passed">သင် ကျော်ခဲ့သည်</string>
 </resources>

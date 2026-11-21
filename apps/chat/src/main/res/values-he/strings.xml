@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">בוצע</string>
     <string name="chat_encryption_key">מפתח שחזור</string>
     <string name="chat_encryption_restore">שחזר</string>
-    <string name="chat_encryption_recovery_refused">זה לא מפתח השחזור שלך</string>
     <string name="chat_verification_own">אימות המכשיר שלך</string>
     <string name="chat_verification_compare">בדוק שאותם אמוג\'י מופיעים במסך השני.</string>
     <string name="chat_verification_requested_own">מכשיר אחר שלך רוצה לאמת את המכשיר הזה.</string>
@@ -160,11 +159,6 @@
     <string name="chat_verification_requested">%1$s רוצה לאמת אותך.</string>
     <string name="chat_typing_one">%1$s מקליד/ה...</string>
     <string name="chat_typing_many">%1$s מקלידים...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s תגובה</item>
-        <item quantity="two">%1$s תגובות</item>
-        <item quantity="other">%1$s תגובות</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s תגובה קודמת</item>
         <item quantity="two">%1$s תגובות קודמות</item>
@@ -184,4 +178,19 @@
     <string name="chat_message_earlier">הודעות מלפני שהחשבון הזה נוסף ל-Mochi מוצפנות ואי אפשר לקרוא אותן כאן</string>
     <string name="chat_message_excluded">מוצפנת למכשירים אחרים בלבד</string>
     <string name="chat_setup">הגדר</string>
+    <string name="chat_jump_bottom">דילוג לתחתית</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">דילוג להודעה חדשה אחת</item>
+        <item quantity="two">דילוג לשתי הודעות חדשות</item>
+        <item quantity="other">דילוג ל-%1$s הודעות חדשות</item>
+    </plurals>
+    <string name="chat_message_distrusted">נשלח ממכשיר שסימנת כלא מהימן</string>
+    <string name="chat_message_mismatched">נשלח ממכשיר שהמפתחות שלו אינם תואמים</string>
+    <string name="chat_list_select">בחר שיחה</string>
+    <string name="chat_message_discard">מחיקה</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">ההודעה חורגת מהמגבלה ב-%1$s תו</item>
+        <item quantity="two">ההודעה חורגת מהמגבלה ב-%1$s תווים</item>
+        <item quantity="other">ההודעה חורגת מהמגבלה ב-%1$s תווים</item>
+    </plurals>
 </resources>

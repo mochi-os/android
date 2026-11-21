@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">ఇంకా గేమ్‌లు లేవు.</string>
     <string name="words_new_game_choose_opponents">ప్రత్యర్థులను ఎంచుకోండి</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s ఆటగాళ్లు</string>
     <string name="words_new_game_no_friends_subtitle">ఆడటం ప్రారంభించడానికి వ్యక్తులు యాప్‌లో స్నేహితులను జోడించండి.</string>
     <string name="words_detail_title">ఆట</string>
     <string name="words_detail_status_opponent_move">%1$s యొక్క మూవ్</string>
     <string name="words_detail_status_winner_wins">%1$s గెలిచారు</string>
     <string name="words_detail_player_fallback">ప్లేయర్ %1$s</string>
-    <string name="words_detail_player_count">%1$s ఆటగాళ్లు</string>
-    <string name="words_detail_label_tiles_left">%1$s టైల్స్ మిగిలి ఉన్నాయి</string>
     <string name="words_detail_action_open_chat">చాట్ తెరవండి</string>
     <string name="words_detail_action_more">ఆట చర్యలు</string>
     <string name="words_detail_exchange_count">మార్చు (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">చెల్లుబాటు అయ్యే పదాలు ఏవీ ఏర్పడలేదు</string>
     <string name="words_validation_offline">ధ్రువీకరణ ఆఫ్‌లైన్‌లో ఉంది — మీరు ఇప్పటికీ సమర్పించవచ్చు.</string>
     <string name="words_validation_unknown_words">తెలియని పదాలు ఉన్నాయి. మీరు ఇప్పటికీ సమర్పించవచ్చు.</string>
+    <string name="words_detail_label_tiles">మిగిలిన టైల్‌లు</string>
+    <string name="words_detail_submit_score">సమర్పించండి +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3ప</string>
+    <string name="words_board_premium_double_word">2ప</string>
+    <string name="words_board_premium_triple_letter">3అ</string>
+    <string name="words_board_premium_double_letter">2అ</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s ఆటగాడు</item>
+        <item quantity="other">%1$s ఆటగాళ్లు</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s ఆటగాడు</item>
+        <item quantity="other">%1$s ఆటగాళ్లు</item>
+    </plurals>
 </resources>

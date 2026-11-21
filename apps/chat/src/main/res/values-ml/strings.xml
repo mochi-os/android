@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">പൂർത്തിയായി</string>
     <string name="chat_encryption_key">വീണ്ടെടുക്കൽ കീ</string>
     <string name="chat_encryption_restore">പുനഃസ്ഥാപിക്കുക</string>
-    <string name="chat_encryption_recovery_refused">ഇത് നിങ്ങളുടെ വീണ്ടെടുക്കൽ കീ അല്ല</string>
     <string name="chat_verification_own">നിങ്ങളുടെ ഡിവൈസ് സ്ഥിരീകരിക്കുക</string>
     <string name="chat_verification_compare">മറ്റേ സ്ക്രീനിലും ഇതേ ഇമോജി ദൃശ്യമാകുന്നുണ്ടോ എന്ന് പരിശോധിക്കുക.</string>
     <string name="chat_verification_requested_own">നിങ്ങളുടെ മറ്റൊരു ഡിവൈസ് ഇതിനെ സ്ഥിരീകരിക്കാൻ ആഗ്രഹിക്കുന്നു.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s നിങ്ങളെ സ്ഥിരീകരിക്കാൻ ആഗ്രഹിക്കുന്നു.</string>
     <string name="chat_typing_one">%1$s ടൈപ്പ് ചെയ്യുന്നു...</string>
     <string name="chat_typing_many">%1$s ടൈപ്പ് ചെയ്യുന്നു...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s മറുപടി</item>
-        <item quantity="other">%1$s മറുപടികൾ</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s മുമ്പത്തെ മറുപടി</item>
         <item quantity="other">%1$s മുമ്പത്തെ മറുപടികൾ</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">ഈ അക്കൗണ്ട് Mochi-യിൽ ചേർക്കുന്നതിന് മുമ്പുള്ള സന്ദേശങ്ങൾ എൻക്രിപ്റ്റ് ചെയ്തതാണ്, അവ ഇവിടെ വായിക്കാൻ കഴിയില്ല</string>
     <string name="chat_message_excluded">മറ്റ് ഉപകരണങ്ങൾക്ക് മാത്രം എൻക്രിപ്റ്റ് ചെയ്തത്</string>
     <string name="chat_setup">സജ്ജമാക്കുക</string>
+    <string name="chat_jump_bottom">താഴേക്ക് പോകുക</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s പുതിയ സന്ദേശത്തിലേക്ക് പോകുക</item>
+        <item quantity="other">%1$s പുതിയ സന്ദേശങ്ങളിലേക്ക് പോകുക</item>
+    </plurals>
+    <string name="chat_message_distrusted">നിങ്ങൾ വിശ്വസിക്കാത്ത ഒരു ഉപകരണത്തിൽ നിന്ന് അയച്ചത്</string>
+    <string name="chat_message_mismatched">കീകൾ പൊരുത്തപ്പെടാത്ത ഒരു ഉപകരണത്തിൽ നിന്ന് അയച്ചത്</string>
+    <string name="chat_list_select">ഒരു ചാറ്റ് തിരഞ്ഞെടുക്കുക</string>
+    <string name="chat_message_discard">ഉപേക്ഷിക്കുക</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">സന്ദേശം %1$s പ്രതീകം അധികമാണ്</item>
+        <item quantity="other">സന്ദേശം %1$s പ്രതീകങ്ങൾ അധികമാണ്</item>
+    </plurals>
 </resources>

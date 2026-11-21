@@ -74,3 +74,14 @@ fun MochiError.userMessage(): String {
         is MochiError.Local -> ctx.getString(messageRes)
     }
 }
+
+/**
+ * The line for an action that failed: the server's own message when it sent
+ * one, [userMessage] when the request never reached it (no connection, a
+ * timeout, a local check), and otherwise [fallback], which names the action -
+ * "Failed to make move" says more than a bare "Not found" or "Server error".
+ */
+fun MochiError.messageOrFallback(fallback: String): String = when (this) {
+    is MochiError.NetworkError, is MochiError.Local -> userMessage()
+    else -> message?.takeIf { it.isNotBlank() } ?: fallback
+}

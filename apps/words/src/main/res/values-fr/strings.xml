@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Aucune partie pour le moment.</string>
     <string name="words_new_game_choose_opponents">Choisir les adversaires</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s joueurs</string>
     <string name="words_new_game_no_friends_subtitle">Ajoutez des amis dans l\'application Personnes pour commencer à jouer.</string>
     <string name="words_detail_title">Partie</string>
     <string name="words_detail_status_opponent_move">Tour de %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s a gagné</string>
     <string name="words_detail_player_fallback">Joueur %1$s</string>
-    <string name="words_detail_player_count">%1$s joueurs</string>
-    <string name="words_detail_label_tiles_left">%1$s tuiles restantes</string>
     <string name="words_detail_action_open_chat">Ouvrir la discussion</string>
     <string name="words_detail_action_more">Actions de la partie</string>
     <string name="words_detail_exchange_count">Échanger (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Aucun mot valide formé</string>
     <string name="words_validation_offline">Validation hors ligne — vous pouvez quand même valider.</string>
     <string name="words_validation_unknown_words">Contient des mots inconnus. Vous pouvez quand même valider.</string>
+    <string name="words_detail_label_tiles">Tuiles restantes</string>
+    <string name="words_detail_submit_score">Envoyer +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">MT</string>
+    <string name="words_board_premium_double_word">MD</string>
+    <string name="words_board_premium_triple_letter">LT</string>
+    <string name="words_board_premium_double_letter">LD</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s joueur</item>
+        <item quantity="other">%1$s joueurs</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s joueur</item>
+        <item quantity="other">%1$s joueurs</item>
+    </plurals>
 </resources>

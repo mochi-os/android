@@ -117,7 +117,6 @@
     <string name="game_chat_empty">L-ebda messaġġi s\'issa</string>
     <string name="game_chat_input_placeholder">Ittajpja messaġġ</string>
     <string name="game_chat_send">Ibgħat messaġġ</string>
-    <string name="game_chat_subject_you">Int</string>
 
     <string name="common_not_saved">Mhux salvat</string>
     <string name="app_brand">Mochi</string>
@@ -356,4 +355,9 @@
     <string name="sync_conflict">Inbidel fuq is-server</string>
     <string name="sync_missing">M\'għadux fuq is-server</string>
     <string name="sync_refused">Miċħud mis-server</string>
+    <string name="game_system_score_agreed">Il-punteġġ ġie maqbul</string>
+    <string name="game_system_score_accept">%1$s aċċetta l-punteġġ</string>
+    <string name="game_system_score_resume">%1$s kompla jilgħab</string>
+    <string name="game_not_found">Il-logħba ma nstabitx</string>
+    <string name="game_chat_move_played_you">Int lgħabt %1$s</string>
 </resources>

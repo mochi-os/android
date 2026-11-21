@@ -284,6 +284,8 @@ fun NewChatScreen(
                             when {
                                 uiState.isSearchingDirectory ->
                                     CircularProgressIndicator(modifier = Modifier.size(24.dp))
+                                uiState.searchError != null ->
+                                    SearchFailed(uiState.searchError!!.userMessage())
                                 uiState.searchQuery.isBlank() && uiState.friends.isEmpty() ->
                                     Text(
                                         text = stringResource(R.string.chat_new_no_friends),
@@ -307,6 +309,12 @@ fun NewChatScreen(
                                     friend = friend,
                                     onToggle = { viewModel.toggleSelect(friend) }
                                 )
+                            }
+                            // Friends matched, but the directory could not be searched.
+                            uiState.searchError?.let { error ->
+                                item("search-error") {
+                                    SearchFailed(error.userMessage(), Modifier.padding(horizontal = 16.dp, vertical = 12.dp))
+                                }
                             }
                         }
                     }
@@ -342,6 +350,17 @@ fun NewChatScreen(
             }
         }
     }
+}
+
+/** Why the directory search failed, where its results would be. */
+@Composable
+private fun SearchFailed(message: String, modifier: Modifier = Modifier) {
+    Text(
+        text = message,
+        color = MaterialTheme.colorScheme.error,
+        style = MaterialTheme.typography.bodyMedium,
+        modifier = modifier,
+    )
 }
 
 @Composable

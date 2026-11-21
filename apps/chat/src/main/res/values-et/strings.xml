@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Tehtud</string>
     <string name="chat_encryption_key">Taastevõti</string>
     <string name="chat_encryption_restore">Taasta</string>
-    <string name="chat_encryption_recovery_refused">See pole teie taastevõti</string>
     <string name="chat_verification_own">Kontrolli oma seadet</string>
     <string name="chat_verification_compare">Veenduge, et teisel ekraanil kuvatakse samad emojid.</string>
     <string name="chat_verification_requested_own">Üks teie teistest seadmetest soovib seda seadet kontrollida.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s soovib teid kontrollida.</string>
     <string name="chat_typing_one">%1$s kirjutab...</string>
     <string name="chat_typing_many">%1$s kirjutavad...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s vastus</item>
-        <item quantity="other">%1$s vastust</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s varasem vastus</item>
         <item quantity="other">%1$s varasemat vastust</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Sõnumid ajast enne selle konto Mochisse lisamist on krüpteeritud ja neid ei saa siin lugeda</string>
     <string name="chat_message_excluded">Krüpteeritud ainult teistele seadmetele</string>
     <string name="chat_setup">Seadista</string>
+    <string name="chat_jump_bottom">Mine lõppu</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Liigu %1$s uue sõnumi juurde</item>
+        <item quantity="other">Liigu %1$s uue sõnumi juurde</item>
+    </plurals>
+    <string name="chat_message_distrusted">Saadetud seadmest, mida sa ei usalda</string>
+    <string name="chat_message_mismatched">Saadetud seadmest, mille võtmed ei klapi</string>
+    <string name="chat_list_select">Vali vestlus</string>
+    <string name="chat_message_discard">Loobu</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Sõnum on %1$s märgi võrra liiga pikk</item>
+        <item quantity="other">Sõnum on %1$s märgi võrra liiga pikk</item>
+    </plurals>
 </resources>

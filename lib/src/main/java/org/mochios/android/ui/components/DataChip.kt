@@ -37,7 +37,9 @@ enum class Truncate { NONE, MIDDLE, END }
  * truncation matches web's rule - first 10 and last 10 characters once the
  * value exceeds 24 - and the clipboard always gets the full value. [wrap]
  * breaks a value too long for one line over several, for one the user has to
- * read in full, such as a password to type on another device.
+ * read in full, such as a password to type on another device. A [sensitive]
+ * value, a secret, is copied as one, which the system keeps out of its
+ * clipboard preview and keyboards out of their history.
  */
 @OptIn(ExperimentalComposeUiApi::class, ExperimentalFoundationApi::class)
 @Composable
@@ -47,6 +49,7 @@ fun DataChip(
     truncate: Truncate = Truncate.NONE,
     copyable: Boolean = true,
     wrap: Boolean = false,
+    sensitive: Boolean = false,
 ) {
     val copier = rememberCopier()
     val haptic = LocalHapticFeedback.current
@@ -59,7 +62,7 @@ fun DataChip(
     }
 
     val onCopy: () -> Unit = {
-        copier.copy(value)
+        copier.copy(value, sensitive = sensitive)
     }
 
     val interactionModifier = if (copyable) {

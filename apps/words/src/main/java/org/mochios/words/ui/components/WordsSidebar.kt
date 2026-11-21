@@ -6,6 +6,7 @@
 package org.mochios.words.ui.components
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import org.mochios.android.ui.components.DrawerItem
 import org.mochios.words.R
@@ -36,13 +37,17 @@ fun wordsDrawerItems(
 }
 
 /**
- * "N players", for a game whose seats have no names yet. A game always seats
- * two to four, so the singular form never arises and the plain string - which
- * every catalogue already carries - is enough.
+ * "N players", for a game whose seats have no names yet. A plural, though a
+ * game seats two to four: several languages word two differently from three
+ * and four.
  */
 @Composable
 private fun GameListItem.playersLabel(): String =
-    stringResource(R.string.words_detail_player_count, LocalFormat.current.formatNumber(player_count))
+    pluralStringResource(
+        R.plurals.words_detail_players,
+        player_count,
+        LocalFormat.current.formatNumber(player_count),
+    )
 
 private fun GameListItem.toDrawerItem(
     myIdentity: String,

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Qhubeka nomdlalo</string>
     <string name="go_error_score_resume_failed">Kuhlulekile ukuqhubeka nomdlalo</string>
     <string name="go_error_score_accept_failed">Kuhlulekile ukwamukela amaphuzu</string>
+    <string name="go_chat_player_passed">%1$s udlulisile</string>
+    <string name="go_chat_you_passed">Wena udlulile</string>
 </resources>

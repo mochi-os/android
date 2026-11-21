@@ -81,4 +81,6 @@
     <string name="go_score_resume">Ailddechrau chwarae</string>
     <string name="go_error_score_resume_failed">Methwyd ailddechrau\'r chwarae</string>
     <string name="go_error_score_accept_failed">Methwyd derbyn y sgôr</string>
+    <string name="go_chat_player_passed">Pasiodd %1$s</string>
+    <string name="go_chat_you_passed">Pasioch</string>
 </resources>

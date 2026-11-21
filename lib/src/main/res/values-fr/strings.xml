@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Aucun message pour le moment</string>
     <string name="game_chat_input_placeholder">Tapez un message</string>
     <string name="game_chat_send">Envoyer un message</string>
-    <string name="game_chat_subject_you">Vous</string>
 
     <string name="common_not_saved">Non enregistré</string>
     <string name="app_brand">Mochi</string>
@@ -350,4 +349,9 @@
     <string name="sync_conflict">Modifié sur le serveur</string>
     <string name="sync_missing">N\'est plus sur le serveur</string>
     <string name="sync_refused">Refusé par le serveur</string>
+    <string name="game_system_score_agreed">Score convenu</string>
+    <string name="game_system_score_accept">%1$s a accepté le score</string>
+    <string name="game_system_score_resume">%1$s a repris la partie</string>
+    <string name="game_not_found">Partie introuvable</string>
+    <string name="game_chat_move_played_you">Vous avez joué %1$s</string>
 </resources>

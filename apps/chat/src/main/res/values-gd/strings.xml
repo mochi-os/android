@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Deiseil</string>
     <string name="chat_encryption_key">Iuchair aisig</string>
     <string name="chat_encryption_restore">Aiseag</string>
-    <string name="chat_encryption_recovery_refused">Chan e sin an iuchair aisig agad</string>
     <string name="chat_verification_own">Dearbh an t-inneal agad</string>
     <string name="chat_verification_compare">Dèan cinnteach gu bheil na h-aon emoji a\' nochdadh air an sgrìn eile.</string>
     <string name="chat_verification_requested_own">Tha inneal eile agad airson an t-inneal seo a dhearbhadh.</string>
@@ -160,12 +159,6 @@
     <string name="chat_verification_requested">Tha %1$s airson do dhearbhadh.</string>
     <string name="chat_typing_one">Tha %1$s a\' sgrìobhadh...</string>
     <string name="chat_typing_many">Tha %1$s a\' sgrìobhadh...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s fhreagairt</item>
-        <item quantity="two">%1$s fhreagairt</item>
-        <item quantity="few">%1$s freagairtean</item>
-        <item quantity="other">%1$s freagairt</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s fhreagairt nas tràithe</item>
         <item quantity="two">%1$s fhreagairt nas tràithe</item>
@@ -187,4 +180,21 @@
     <string name="chat_message_earlier">Tha teachdaireachdan o mus deach an cunntas seo a chur ri Mochi crioptaichte agus cha ghabh an leughadh an-seo</string>
     <string name="chat_message_excluded">Crioptaichte airson uidheaman eile a-mhàin</string>
     <string name="chat_setup">Suidhich</string>
+    <string name="chat_jump_bottom">Leum gun bhonn</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Leum gu %1$s teachdaireachd ùr</item>
+        <item quantity="two">Leum gu %1$s theachdaireachd ùr</item>
+        <item quantity="few">Leum gu %1$s teachdaireachdan ùra</item>
+        <item quantity="other">Leum gu %1$s teachdaireachd ùr</item>
+    </plurals>
+    <string name="chat_message_distrusted">Air a chur o uidheam anns nach eil earbsa agad</string>
+    <string name="chat_message_mismatched">Air a chur o uidheam nach eil na h-iuchraichean aige a\' freagairt</string>
+    <string name="chat_list_select">Tagh cabadaich</string>
+    <string name="chat_message_discard">Tilg air falbh</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Tha an teachdaireachd %1$s charactar ro fhada</item>
+        <item quantity="two">Tha an teachdaireachd %1$s charactar ro fhada</item>
+        <item quantity="few">Tha an teachdaireachd %1$s caractaran ro fhada</item>
+        <item quantity="other">Tha an teachdaireachd %1$s caractar ro fhada</item>
+    </plurals>
 </resources>

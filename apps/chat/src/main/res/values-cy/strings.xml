@@ -141,7 +141,6 @@
     <string name="chat_encryption_done">Wedi gorffen</string>
     <string name="chat_encryption_key">Allwedd adfer</string>
     <string name="chat_encryption_restore">Adfer</string>
-    <string name="chat_encryption_recovery_refused">Nid dyna eich allwedd adfer</string>
     <string name="chat_verification_own">Dilysu eich dyfais</string>
     <string name="chat_verification_compare">Gwiriwch fod yr un emoji yn ymddangos ar y sgrin arall.</string>
     <string name="chat_verification_requested_own">Mae un arall o\'ch dyfeisiau eisiau dilysu\'r un hon.</string>
@@ -161,14 +160,6 @@
     <string name="chat_verification_requested">Mae %1$s eisiau eich dilysu.</string>
     <string name="chat_typing_one">Mae %1$s yn teipio...</string>
     <string name="chat_typing_many">Mae %1$s yn teipio...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="zero">%1$s ateb</item>
-        <item quantity="one">%1$s ateb</item>
-        <item quantity="two">%1$s ateb</item>
-        <item quantity="few">%1$s ateb</item>
-        <item quantity="many">%1$s ateb</item>
-        <item quantity="other">%1$s ateb</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="zero">%1$s ateb cynharach</item>
         <item quantity="one">%1$s ateb cynharach</item>
@@ -194,4 +185,25 @@
     <string name="chat_message_earlier">Mae negeseuon o cyn i\'r cyfrif hwn gael ei ychwanegu at Mochi wedi\'u hamgryptio ac ni ellir eu darllen yma</string>
     <string name="chat_message_excluded">Wedi\'i amgryptio ar gyfer dyfeisiau eraill yn unig</string>
     <string name="chat_setup">Gosod</string>
+    <string name="chat_jump_bottom">Neidio i\'r gwaelod</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="zero">Neidio i %1$s negeseuon newydd</item>
+        <item quantity="one">Neidio i %1$s neges newydd</item>
+        <item quantity="two">Neidio i %1$s neges newydd</item>
+        <item quantity="few">Neidio i %1$s neges newydd</item>
+        <item quantity="many">Neidio i %1$s neges newydd</item>
+        <item quantity="other">Neidio i %1$s neges newydd</item>
+    </plurals>
+    <string name="chat_message_distrusted">Anfonwyd o ddyfais nad ydych yn ymddiried ynddi</string>
+    <string name="chat_message_mismatched">Anfonwyd o ddyfais nad yw ei hallweddau\'n cyfateb</string>
+    <string name="chat_list_select">Dewiswch sgwrs</string>
+    <string name="chat_message_discard">Hepgor</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="zero">Mae\'r neges %1$s nod yn rhy hir</item>
+        <item quantity="one">Mae\'r neges %1$s nod yn rhy hir</item>
+        <item quantity="two">Mae\'r neges %1$s nod yn rhy hir</item>
+        <item quantity="few">Mae\'r neges %1$s nod yn rhy hir</item>
+        <item quantity="many">Mae\'r neges %1$s nod yn rhy hir</item>
+        <item quantity="other">Mae\'r neges %1$s nod yn rhy hir</item>
+    </plurals>
 </resources>

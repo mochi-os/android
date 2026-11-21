@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Fertig</string>
     <string name="chat_encryption_key">Wiederherstellungsschlüssel</string>
     <string name="chat_encryption_restore">Wiederherstellen</string>
-    <string name="chat_encryption_recovery_refused">Das ist nicht dein Wiederherstellungsschlüssel</string>
     <string name="chat_verification_own">Dein Gerät verifizieren</string>
     <string name="chat_verification_compare">Prüfe, ob auf dem anderen Bildschirm dieselben Emoji erscheinen.</string>
     <string name="chat_verification_requested_own">Eines deiner anderen Geräte möchte dieses verifizieren.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s möchte dich verifizieren.</string>
     <string name="chat_typing_one">%1$s tippt...</string>
     <string name="chat_typing_many">%1$s tippen...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s Antwort</item>
-        <item quantity="other">%1$s Antworten</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s frühere Antwort</item>
         <item quantity="other">%1$s frühere Antworten</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Nachrichten aus der Zeit, bevor dieses Konto zu Mochi hinzugefügt wurde, sind verschlüsselt und können hier nicht gelesen werden</string>
     <string name="chat_message_excluded">Nur für andere Geräte verschlüsselt</string>
     <string name="chat_setup">Einrichten</string>
+    <string name="chat_jump_bottom">Nach unten springen</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Zu %1$s neuen Nachricht springen</item>
+        <item quantity="other">Zu %1$s neuen Nachrichten springen</item>
+    </plurals>
+    <string name="chat_message_distrusted">Von einem Gerät gesendet, dem du nicht vertraust</string>
+    <string name="chat_message_mismatched">Von einem Gerät gesendet, dessen Schlüssel nicht übereinstimmen</string>
+    <string name="chat_list_select">Chat auswählen</string>
+    <string name="chat_message_discard">Verwerfen</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Die Nachricht ist %1$s Zeichen zu lang</item>
+        <item quantity="other">Die Nachricht ist %1$s Zeichen zu lang</item>
+    </plurals>
 </resources>

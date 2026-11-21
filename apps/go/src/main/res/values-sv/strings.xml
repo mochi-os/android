@@ -81,4 +81,6 @@
     <string name="go_score_resume">Återuppta partiet</string>
     <string name="go_error_score_resume_failed">Kunde inte återuppta partiet</string>
     <string name="go_error_score_accept_failed">Kunde inte godkänna poängen</string>
+    <string name="go_chat_player_passed">%1$s passade</string>
+    <string name="go_chat_you_passed">Du passade</string>
 </resources>

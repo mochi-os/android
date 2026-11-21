@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Inga meddelanden ännu</string>
     <string name="game_chat_input_placeholder">Skriv ett meddelande</string>
     <string name="game_chat_send">Skicka meddelande</string>
-    <string name="game_chat_subject_you">Du</string>
 
     <string name="common_not_saved">Inte sparat</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Ändrad på servern</string>
     <string name="sync_missing">Finns inte längre på servern</string>
     <string name="sync_refused">Avvisad av servern</string>
+    <string name="game_system_score_agreed">Resultat överenskommet</string>
+    <string name="game_system_score_accept">%1$s godkände resultatet</string>
+    <string name="game_system_score_resume">%1$s återupptog spelet</string>
+    <string name="game_not_found">Spelet hittades inte</string>
+    <string name="game_chat_move_played_you">Du spelade %1$s</string>
 </resources>

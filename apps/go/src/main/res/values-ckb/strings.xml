@@ -81,4 +81,6 @@
     <string name="go_score_resume">بەردەوامبوونی یاری</string>
     <string name="go_error_score_resume_failed">بەردەوامبوونی یاری سەرکەوتوو نەبوو</string>
     <string name="go_error_score_accept_failed">وەرگرتنی خاڵ سەرکەوتوو نەبوو</string>
+    <string name="go_chat_player_passed">%1$s تێپەڕی</string>
+    <string name="go_chat_you_passed">تۆ نۆرەکەت تێپەڕاند</string>
 </resources>

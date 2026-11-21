@@ -106,7 +106,7 @@ class SocketRaceTest {
                 })
         }
         server.start()
-        socket = MochiWebSocket(client, Gson(), session)
+        socket = MochiWebSocket(client, Gson(), session, deliver = Runnable::run)
     }
 
     @After

@@ -141,7 +141,6 @@
     <string name="chat_encryption_done">Lest</string>
     <string name="chat_encryption_key">Ċavetta ta\' rkupru</string>
     <string name="chat_encryption_restore">Restawra</string>
-    <string name="chat_encryption_recovery_refused">Din mhix iċ-ċavetta ta\' rkupru tiegħek</string>
     <string name="chat_verification_own">Ivverifika l-apparat tiegħek</string>
     <string name="chat_verification_compare">Iċċekkja li l-istess emoji jidhru fuq l-iskrin l-ieħor.</string>
     <string name="chat_verification_requested_own">Apparat ieħor tiegħek irid jivverifika dan.</string>
@@ -161,13 +160,6 @@
     <string name="chat_verification_requested">%1$s irid jivverifikak.</string>
     <string name="chat_typing_one">%1$s qed jikteb...</string>
     <string name="chat_typing_many">%1$s qed jiktbu...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s tweġiba</item>
-        <item quantity="two">%1$s tweġibiet</item>
-        <item quantity="few">%1$s tweġibiet</item>
-        <item quantity="many">%1$s tweġiba</item>
-        <item quantity="other">%1$s tweġiba</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s tweġiba preċedenti</item>
         <item quantity="two">%1$s tweġibiet preċedenti</item>
@@ -191,4 +183,23 @@
     <string name="chat_message_earlier">Il-messaġġi minn qabel ma dan il-kont ġie miżjud ma\' Mochi huma kriptati u ma jistgħux jinqraw hawn</string>
     <string name="chat_message_excluded">Kriptat għal apparati oħra biss</string>
     <string name="chat_setup">Issettja</string>
+    <string name="chat_jump_bottom">Aqbeż għall-qiegħ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Aqbeż għal %1$s messaġġ ġdid</item>
+        <item quantity="two">Aqbeż għal %1$s messaġġi ġodda</item>
+        <item quantity="few">Aqbeż għal %1$s messaġġi ġodda</item>
+        <item quantity="many">Aqbeż għal %1$s messaġġ ġdid</item>
+        <item quantity="other">Aqbeż għal %1$s messaġġ ġdid</item>
+    </plurals>
+    <string name="chat_message_distrusted">Mibgħut minn apparat li mmarkajt bħala mhux fdat</string>
+    <string name="chat_message_mismatched">Mibgħut minn apparat li ċ-ċwievet tiegħu ma jaqblux</string>
+    <string name="chat_list_select">Agħżel chat</string>
+    <string name="chat_message_discard">Armi</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Il-messaġġ għandu %1$s karattru żejjed</item>
+        <item quantity="two">Il-messaġġ għandu %1$s karattri żejda</item>
+        <item quantity="few">Il-messaġġ għandu %1$s karattri żejda</item>
+        <item quantity="many">Il-messaġġ għandu %1$s-il karattru żejjed</item>
+        <item quantity="other">Il-messaġġ għandu %1$s karattru żejjed</item>
+    </plurals>
 </resources>

@@ -30,7 +30,6 @@
     <string name="settings_radius_none">無</string>
     <string name="settings_background_off">無</string>
     <string name="settings_title">設定</string>
-    <string name="game_chat_subject_you">你</string>
     <string name="auth_privacy_public">公開</string>
     <string name="auth_privacy_private">私人</string>
     <string name="common_notifications">通知</string>
@@ -348,4 +347,9 @@
     <string name="sync_conflict">伺服器上面已經改咗</string>
     <string name="sync_missing">伺服器上面已經冇咗</string>
     <string name="sync_refused">被伺服器拒絕</string>
+    <string name="game_not_found">搵唔到遊戲</string>
+    <string name="game_chat_move_played_you">你行咗 %1$s</string>
+    <string name="game_system_score_accept">%1$s 接受咗分數</string>
+    <string name="game_system_score_agreed">雙方同意分數</string>
+    <string name="game_system_score_resume">%1$s 恢復咗對局</string>
 </resources>

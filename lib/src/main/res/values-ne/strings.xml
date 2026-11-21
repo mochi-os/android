@@ -117,7 +117,6 @@
     <string name="game_chat_empty">अहिलेसम्म कुनै सन्देश छैन</string>
     <string name="game_chat_input_placeholder">सन्देश टाइप गर्नुहोस्</string>
     <string name="game_chat_send">सन्देश पठाउनुहोस्</string>
-    <string name="game_chat_subject_you">तपाईं</string>
 
     <string name="common_not_saved">सुरक्षित गरिएको छैन</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">सर्भरमा परिवर्तन गरियो</string>
     <string name="sync_missing">अब सर्भरमा छैन</string>
     <string name="sync_refused">सर्भरद्वारा अस्वीकृत</string>
+    <string name="game_system_score_agreed">स्कोरमा सहमति भयो</string>
+    <string name="game_system_score_accept">%1$s ले स्कोर स्वीकार गर्नुभयो</string>
+    <string name="game_system_score_resume">%1$s ले खेल पुनः सुरु गर्नुभयो</string>
+    <string name="game_not_found">खेल फेला परेन</string>
+    <string name="game_chat_move_played_you">तपाईंले %1$s खेल्नुभयो</string>
 </resources>

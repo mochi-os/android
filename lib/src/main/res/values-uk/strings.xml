@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Повідомлень ще немає</string>
     <string name="game_chat_input_placeholder">Введіть повідомлення</string>
     <string name="game_chat_send">Надіслати повідомлення</string>
-    <string name="game_chat_subject_you">Ви</string>
 
     <string name="common_not_saved">Не збережено</string>
     <string name="app_brand">Mochi</string>
@@ -353,4 +352,9 @@
     <string name="sync_conflict">Змінено на сервері</string>
     <string name="sync_missing">Більше немає на сервері</string>
     <string name="sync_refused">Відхилено сервером</string>
+    <string name="game_system_score_agreed">Рахунок узгоджено</string>
+    <string name="game_system_score_accept">%1$s прийняв рахунок</string>
+    <string name="game_system_score_resume">%1$s відновив гру</string>
+    <string name="game_not_found">Гру не знайдено</string>
+    <string name="game_chat_move_played_you">Ви зіграли %1$s</string>
 </resources>

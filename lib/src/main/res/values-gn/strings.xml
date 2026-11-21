@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Ndaipóri ñe\'ẽmondo gueteri</string>
     <string name="game_chat_input_placeholder">Ehai ñe\'ẽmondo</string>
     <string name="game_chat_send">Emondo ñe\'ẽmondo</string>
-    <string name="game_chat_subject_you">Nde</string>
 
     <string name="app_brand">Mochi</string>
     <string name="auth_server_url">Mohendaha URL</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Oñemoambue mohendahápe</string>
     <string name="sync_missing">Ndaipóriveima mohendahápe</string>
     <string name="sync_refused">Mohendaha omboyke</string>
+    <string name="game_system_score_agreed">Puntaje oñemoneĩ</string>
+    <string name="game_system_score_accept">%1$s omoneĩ puntaje</string>
+    <string name="game_system_score_resume">%1$s oñepyrũ jey ñembosarái</string>
+    <string name="game_not_found">Ñembosarái ndojejuhúi</string>
+    <string name="game_chat_move_played_you">Nde rembosarái %1$s</string>
 </resources>

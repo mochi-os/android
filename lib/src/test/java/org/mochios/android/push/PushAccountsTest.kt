@@ -84,7 +84,7 @@ class PushAccountsTest {
 
             override suspend fun invalidate(app: String) {
             }
-        })
+        }, deliver = Runnable::run)
     }
 
     @After

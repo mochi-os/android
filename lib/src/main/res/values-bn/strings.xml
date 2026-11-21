@@ -117,7 +117,6 @@
     <string name="game_chat_empty">এখনও কোনো বার্তা নেই</string>
     <string name="game_chat_input_placeholder">একটি বার্তা টাইপ করুন</string>
     <string name="game_chat_send">বার্তা পাঠান</string>
-    <string name="game_chat_subject_you">আপনি</string>
 
     <string name="common_not_saved">সংরক্ষণ করা হয়নি</string>
 
@@ -349,4 +348,9 @@
     <string name="sync_conflict">সার্ভারে পরিবর্তিত হয়েছে</string>
     <string name="sync_missing">আর সার্ভারে নেই</string>
     <string name="sync_refused">সার্ভার প্রত্যাখ্যান করেছে</string>
+    <string name="game_system_score_agreed">স্কোরে সম্মতি হয়েছে</string>
+    <string name="game_system_score_accept">%1$s স্কোর গ্রহণ করেছেন</string>
+    <string name="game_system_score_resume">%1$s খেলা আবার শুরু করেছেন</string>
+    <string name="game_not_found">গেম পাওয়া যায়নি</string>
+    <string name="game_chat_move_played_you">আপনি %1$s খেলেছেন</string>
 </resources>

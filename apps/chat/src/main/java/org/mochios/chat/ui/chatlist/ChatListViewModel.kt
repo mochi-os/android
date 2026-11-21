@@ -10,23 +10,33 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
+import org.mochios.android.auth.SessionManager
 import org.mochios.android.util.NaturalCompare
+import org.mochios.android.util.REFRESH_DEBOUNCE
+import org.mochios.android.util.REOPEN_GRACE
+import org.mochios.android.websocket.MochiWebSocket
+import org.mochios.android.websocket.REOPEN
 import org.mochios.chat.R
 import org.mochios.chat.data.PinnedChatsStore
 import org.mochios.chat.data.UnreadChatsStore
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatStatus
+import org.mochios.chat.model.USER_KEY
 import org.mochios.chat.repository.ChatRepository
 import javax.inject.Inject
+import kotlin.time.Duration
 
 /** Which chats the drawer list shows, as the web's chips above its chat list. */
 enum class ChatFilter { ALL, UNREAD, GROUPS }
@@ -35,10 +45,23 @@ data class ChatListUiState(
     val chats: List<Chat> = emptyList(),
     val query: String = "",
     val filter: ChatFilter = ChatFilter.ALL,
+    /** Whether the list has been read at all, so an empty one is known to be empty. */
+    val loaded: Boolean = false,
     val isLoading: Boolean = false,
-    val isRefreshing: Boolean = false,
+    /** Why the list could not be read. */
     val error: MochiError? = null,
 )
+
+/** What the drawer shows in place of a list it has no chats for. */
+enum class ChatListShown { LOADING, FAILED, EMPTY, LISTED }
+
+/** The drawer's state: the list, or why there is none to show, a read under way included. */
+internal fun ChatListUiState.shown(): ChatListShown = when {
+    chats.isNotEmpty() -> ChatListShown.LISTED
+    error != null -> ChatListShown.FAILED
+    !loaded || isLoading -> ChatListShown.LOADING
+    else -> ChatListShown.EMPTY
+}
 
 /** What a list menu action came to, for the screen to say. */
 sealed interface ChatListEvent {
@@ -52,6 +75,8 @@ class ChatListViewModel @Inject constructor(
     private val repository: ChatRepository,
     private val pinnedStore: PinnedChatsStore,
     private val unreadStore: UnreadChatsStore,
+    private val webSocket: MochiWebSocket,
+    private val sessionManager: SessionManager,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ChatListUiState())
@@ -66,44 +91,79 @@ class ChatListViewModel @Inject constructor(
     private val _events = MutableSharedFlow<ChatListEvent>(extraBufferCapacity = 4)
     val events: SharedFlow<ChatListEvent> = _events.asSharedFlow()
 
+    /** The pending or in-flight read of the list; a newer one replaces it. */
+    private var readJob: Job? = null
+
+    /** The user's own socket, which says when the list changed. */
+    private var subscription: String? = null
+
+    /** Whether the screen has resumed before: its first resume comes as init reads. */
+    private var resumed = false
+
     init {
         load()
+        subscription = webSocket.subscribe(sessionManager.getServerUrlBlocking(), USER_KEY, app = "chat") { event ->
+            // A chat came or went, or its name, members, order or count moved;
+            // or the socket was down, and missed whatever did.
+            if (event.event == "list" || event.type == REOPEN) reload(REFRESH_DEBOUNCE)
+        }
     }
 
+    /** Read the list, the drawer saying so while it has nothing to show. */
     fun load() {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isLoading = true, error = null)
-            try {
-                val chats = repository.listChats()
-                _uiState.value = _uiState.value.copy(chats = chats, isLoading = false)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false, error = e.toMochiError())
-            }
+        readJob?.cancel()
+        _uiState.update { state -> state.copy(isLoading = true, error = null) }
+        readJob = viewModelScope.launch { read() }
+    }
+
+    /** Read the list again with no spinner, after [wait]: a burst of frames makes one read. */
+    fun reload(wait: Duration = Duration.ZERO) {
+        readJob?.cancel()
+        readJob = viewModelScope.launch {
+            delay(wait)
+            read()
         }
     }
 
-    fun refresh() {
-        viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isRefreshing = true)
-            try {
-                val chats = repository.listChats()
-                _uiState.value = _uiState.value.copy(chats = chats, isRefreshing = false, error = null)
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isRefreshing = false, error = e.toMochiError())
-            }
+    /**
+     * The screen's ON_RESUME, back from settings, a new chat or the
+     * background. A socket opening again says so once it is open, and the
+     * read its frame sets off is the return's; otherwise the return reads now.
+     */
+    fun onScreenResumed() {
+        if (!resumed) {
+            resumed = true
+            return
         }
+        if (webSocket.reopening(USER_KEY)) reload(REOPEN_GRACE) else reload()
     }
 
-    /** The list's chats read again with no spinner, as after a menu action. */
-    private suspend fun reload() {
+    /** The drawer opened: the list as it is now, unread counts and order with it. */
+    fun onDrawerOpened() = reload()
+
+    /**
+     * The list as the server has it, setting it in the state as it then is:
+     * a search typed or a chip tapped meanwhile stays. A successful read is
+     * the account's whole list, so pins and marks of chats it no longer has
+     * are dropped.
+     */
+    private suspend fun read() {
         try {
             val chats = repository.listChats()
-            _uiState.value = _uiState.value.copy(chats = chats)
+            val listed = chats.map { chat -> chat.id }.toSet()
+            pinnedStore.prune(listed)
+            unreadStore.prune(listed)
+            _uiState.update { state -> state.copy(chats = chats, loaded = true, isLoading = false, error = null) }
         } catch (e: CancellationException) {
             throw e
-        } catch (_: Exception) {
-            // The list keeps what it shows.
+        } catch (e: Exception) {
+            _uiState.update { state -> state.copy(isLoading = false, error = e.toMochiError()) }
         }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        subscription?.let { id -> webSocket.unsubscribe(id) }
     }
 
     /** Pin [chat] to the top of the list, or unpin it; pins stay on this device. */
@@ -141,17 +201,17 @@ class ChatListViewModel @Inject constructor(
     }
 
     private fun setUnread(chat: String, unread: Int) {
-        _uiState.value = _uiState.value.copy(
-            chats = _uiState.value.chats.map { if (it.id == chat) it.copy(unread = unread) else it },
-        )
+        _uiState.update { state ->
+            state.copy(chats = state.chats.map { if (it.id == chat) it.copy(unread = unread) else it })
+        }
     }
 
     fun setQuery(query: String) {
-        _uiState.value = _uiState.value.copy(query = query)
+        _uiState.update { state -> state.copy(query = query) }
     }
 
     fun setFilter(filter: ChatFilter) {
-        _uiState.value = _uiState.value.copy(filter = filter)
+        _uiState.update { state -> state.copy(filter = filter) }
     }
 
     /** The chats the search and chip leave, keeping [open], the conversation on screen. */
@@ -172,18 +232,6 @@ class ChatListViewModel @Inject constructor(
         )
     }
 
-    fun deleteLeftChat(chatId: String) {
-        viewModelScope.launch {
-            try {
-                repository.deleteChat(chatId)
-                _uiState.value = _uiState.value.copy(
-                    chats = _uiState.value.chats.filterNot { it.id == chatId }
-                )
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(error = e.toMochiError())
-            }
-        }
-    }
 }
 
 /**

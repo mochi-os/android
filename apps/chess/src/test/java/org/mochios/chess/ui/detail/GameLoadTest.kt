@@ -7,6 +7,9 @@ package org.mochios.chess.ui.detail
 
 import android.os.Looper
 import androidx.lifecycle.SavedStateHandle
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -19,9 +22,12 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mochios.android.api.MochiError
+import org.mochios.android.i18n.AppContext
 import org.mochios.chess.api.ChessApi
+import org.mochios.chess.engine.START
 import org.mochios.chess.repository.ChessRepository
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import retrofit2.Retrofit
@@ -53,20 +59,26 @@ class GameLoadTest {
     /** Whether the messages read is refused, at once. */
     @Volatile private var broken = false
 
+    /** Whether every read and write after the first load fails, as with no connection. */
+    @Volatile private var down = false
+
     @Before
     fun begin() {
+        AppContext.set(RuntimeEnvironment.getApplication())
         server = MockWebServer()
         server.dispatcher = object : Dispatcher() {
             override fun dispatch(request: RecordedRequest): MockResponse {
                 return when (request.path.orEmpty().substringBefore("?")) {
                     "/chess/g1/-/view" -> {
+                        if (down) return MockResponse().setResponseCode(503)
                         if (messaged.await(2, TimeUnit.SECONDS)) overlapped.incrementAndGet()
                         if (gone) {
                             MockResponse().setResponseCode(404).setBody("""{"error": "not_found"}""")
                         } else {
-                            ok("""{"game": {"id": "g1", "status": "active", "pgn": ""}, "identity": "me"}""")
+                            ok("""{"game": {"id": "g1", "status": "active", "white": "me", "fen": "$START", "pgn": ""}, "identity": "me"}""")
                         }
                     }
+                    "/chess/g1/-/move", "/chess/g1/-/send" -> MockResponse().setResponseCode(503)
                     "/chess/g1/-/messages" -> {
                         messaged.countDown()
                         if (broken) {
@@ -108,9 +120,12 @@ class GameLoadTest {
     @Test
     fun `the game and its messages are read at once, on opening and on a frame`() {
         val model = model()
-        until { model.uiState.value.game != null && !model.uiState.value.isLoading }
+        until {
+            model.uiState.value.game != null && !model.uiState.value.isLoading &&
+                model.chat.state.value.messages.isNotEmpty()
+        }
         assertEquals("THE POINT: the messages were asked for while the game's answer was held", 1, overlapped.get())
-        assertEquals(listOf("m1"), model.uiState.value.messages.map { it.id })
+        assertEquals(listOf("m1"), model.chat.state.value.messages.map { it.id })
         messaged = CountDownLatch(1)
         model.refresh()
         until { overlapped.get() == 2 && !model.uiState.value.isRefreshing }
@@ -123,7 +138,6 @@ class GameLoadTest {
         until { model.uiState.value.error != null }
         assertTrue(model.uiState.value.error is MochiError.NotFoundError)
         assertNull(model.uiState.value.game)
-        assertTrue(model.uiState.value.messages.isEmpty())
     }
 
     @Test
@@ -136,5 +150,32 @@ class GameLoadTest {
             "THE POINT: the messages' refusal, answered first, took the game's place",
             model.uiState.value.error is MochiError.NotFoundError,
         )
+    }
+
+    @Test
+    fun `a refused move takes the board back, though the refresh fails too`() {
+        val model = model()
+        until { model.uiState.value.game != null && !model.uiState.value.isLoading }
+        down = true
+        model.submitMove("e2", "e4", null)
+        assertEquals("the move shows at once", "e4", model.uiState.value.lastMove?.second)
+        until { !model.uiState.value.pendingMove && model.uiState.value.error != null }
+        assertEquals("THE POINT: the position before the move", START, model.uiState.value.game?.fen)
+        assertEquals("", model.uiState.value.game?.pgn)
+        assertNull(model.uiState.value.lastMove)
+    }
+
+    @Test
+    fun `a chat message that fails to send says so and is not cleared`() {
+        val model = model()
+        until { model.uiState.value.game != null && !model.uiState.value.isLoading }
+        val toasts = mutableListOf<ChessGameEvent>()
+        val collecting = CoroutineScope(Dispatchers.Main.immediate).launch { model.events.collect { event -> toasts += event } }
+        var sent: Boolean? = null
+        model.sendChat("good game") { result -> sent = result }
+        until { sent != null && toasts.isNotEmpty() }
+        collecting.cancel()
+        assertEquals("THE POINT: the composer keeps the words", false, sent)
+        assertTrue(toasts.single() is ChessGameEvent.Toast)
     }
 }

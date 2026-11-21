@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Կատարված է</string>
     <string name="chat_encryption_key">Վերականգնման բանալի</string>
     <string name="chat_encryption_restore">Վերականգնել</string>
-    <string name="chat_encryption_recovery_refused">Սա ձեր վերականգնման բանալին չէ</string>
     <string name="chat_verification_own">Ստուգել ձեր սարքը</string>
     <string name="chat_verification_compare">Համոզվեք, որ մյուս էկրանին նույն էմոջիներն են երևում։</string>
     <string name="chat_verification_requested_own">Ձեր մյուս սարքերից մեկը ցանկանում է ստուգել այս սարքը։</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s-ը ցանկանում է ստուգել ձեզ։</string>
     <string name="chat_typing_one">%1$s գրում է...</string>
     <string name="chat_typing_many">%1$s գրում են...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s պատասխան</item>
-        <item quantity="other">%1$s պատասխան</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ավելի վաղ պատասխան</item>
         <item quantity="other">%1$s ավելի վաղ պատասխան</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Այս հաշիվը Mochi-ին ավելացնելուց առաջվա հաղորդագրությունները գաղտնագրված են և այստեղ չեն կարող կարդացվել</string>
     <string name="chat_message_excluded">Գաղտնագրված է միայն այլ սարքերի համար</string>
     <string name="chat_setup">Կարգավորել</string>
+    <string name="chat_jump_bottom">Անցնել ներքև</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Անցնել %1$s նոր հաղորդագրությանը</item>
+        <item quantity="other">Անցնել %1$s նոր հաղորդագրությանը</item>
+    </plurals>
+    <string name="chat_message_distrusted">Ուղարկվել է սարքից, որին դուք չեք վստահում</string>
+    <string name="chat_message_mismatched">Ուղարկվել է սարքից, որի բանալիները չեն համընկնում</string>
+    <string name="chat_list_select">Ընտրել զրույց</string>
+    <string name="chat_message_discard">Հրաժարվել</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Հաղորդագրությունը թույլատրվածից %1$s նիշով երկար է</item>
+        <item quantity="other">Հաղորդագրությունը թույլատրվածից %1$s նիշով երկար է</item>
+    </plurals>
 </resources>

@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Menu
@@ -20,8 +21,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.SnackbarHost
-import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -31,10 +30,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -76,11 +72,9 @@ fun GoGameListScreen(
     navController: NavController,
     gameId: String,
     onOpenNotifications: () -> Unit,
-    onOpenLink: (String) -> Unit = {},
     viewModel: GoGameListViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val snackbarHostState = remember { SnackbarHostState() }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val drawerScope = rememberCoroutineScope()
     val context = LocalContext.current
@@ -101,18 +95,6 @@ fun GoGameListScreen(
         }
         lifecycleOwner.lifecycle.addObserver(observer)
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
-    }
-
-    // Side-effect events from the ViewModel.
-    LaunchedEffect(Unit) {
-        viewModel.events.collect { event ->
-            when (event) {
-                is GoGameListEvent.Toast -> snackbarHostState.showSnackbar(event.message)
-                is GoGameListEvent.OpenGame -> {
-                    navController.navigate(GoApp.gameDetail(event.gameId))
-                }
-            }
-        }
     }
 
     MochiListDrawer(
@@ -155,7 +137,6 @@ fun GoGameListScreen(
             )
         } else {
             Scaffold(
-                snackbarHost = { SnackbarHost(snackbarHostState) },
                 topBar = {
                     TopAppBar(
                         title = { Text(stringResource(R.string.go_app_title)) },
@@ -175,23 +156,51 @@ fun GoGameListScreen(
                     )
                 },
             ) { padding ->
-                PullToRefreshBox(
-                    isRefreshing = uiState.isRefreshing,
+                GamesPane(
+                    uiState = uiState,
                     onRefresh = { viewModel.refresh() },
+                    onRetry = { viewModel.loadGames() },
+                    onNewGame = { navController.navigate(GoApp.NEW_GAME) },
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(padding),
-                ) {
+                )
+            }
+        }
+    }
+}
+
+/**
+ * The pane beside the drawer while no game is open, pulled down to read the
+ * games again. The pull reaches only scrollable content, so the pane is a
+ * one-item list filling the screen.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+internal fun GamesPane(
+    uiState: GoGameListUiState,
+    onRefresh: () -> Unit,
+    onRetry: () -> Unit,
+    onNewGame: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    PullToRefreshBox(
+        isRefreshing = uiState.isRefreshing,
+        onRefresh = onRefresh,
+        modifier = modifier,
+    ) {
+        LazyColumn(modifier = Modifier.fillMaxSize()) {
+            item {
+                Box(modifier = Modifier.fillParentMaxSize()) {
                     when {
                         uiState.isLoading && uiState.games.isEmpty() -> LoadingState()
                         uiState.error != null && uiState.games.isEmpty() -> ErrorState(
-                            message = uiState.error?.userMessage()
-                                ?: stringResource(MochiR.string.error_unexpected),
-                            onRetry = { viewModel.loadGames() },
+                            message = uiState.error.userMessage(),
+                            onRetry = onRetry,
                         )
                         else -> GamesEmptyPane(
                             hasGames = uiState.games.isNotEmpty(),
-                            onNewGame = { navController.navigate(GoApp.NEW_GAME) },
+                            onNewGame = onNewGame,
                         )
                     }
                 }

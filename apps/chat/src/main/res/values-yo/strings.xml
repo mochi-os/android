@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Ti parí</string>
     <string name="chat_encryption_key">Kọ́kọ́rọ́ ìmúpadàbọ̀sípò</string>
     <string name="chat_encryption_restore">Mú padà</string>
-    <string name="chat_encryption_recovery_refused">Èyí kì í ṣe kọ́kọ́rọ́ ìmúpadàbọ̀sípò rẹ</string>
     <string name="chat_verification_own">Jẹ́rìí sí ẹ̀rọ rẹ</string>
     <string name="chat_verification_compare">Ṣàyẹ̀wò pé àwọn emoji kan náà farahàn lórí ìbòjú kejì.</string>
     <string name="chat_verification_requested_own">Ọ̀kan lára àwọn ẹ̀rọ rẹ mìíràn fẹ́ jẹ́rìí sí èyí.</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s fẹ́ jẹ́rìí sí ọ.</string>
     <string name="chat_typing_one">%1$s ń tẹ̀wé...</string>
     <string name="chat_typing_many">%1$s ń tẹ̀wé...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">Àwọn ìdáhùn %1$s</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">Àwọn ìdáhùn %1$s ti tẹ́lẹ̀</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">Àwọn ìránṣẹ́ láti ìgbà kí a tó fi àkọọ́lẹ̀ yìí kún Mochi ni a ti fi kóòdù pa mọ́, a kò sì lè kà wọ́n níbí</string>
     <string name="chat_message_excluded">A fi kóòdù pa mọ́ fún àwọn ẹ̀rọ mìíràn nìkan</string>
     <string name="chat_setup">Ṣètò</string>
+    <string name="chat_jump_bottom">Fò lọ sí ìsàlẹ̀</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Fò lọ sí ìfiránṣẹ́ tuntun %1$s</item>
+    </plurals>
+    <string name="chat_message_distrusted">A fi ránṣẹ́ láti ẹ̀rọ tí o kò gbẹ́kẹ̀lé</string>
+    <string name="chat_message_mismatched">A fi ránṣẹ́ láti ẹ̀rọ tí àwọn kọ́kọ́rọ́ rẹ̀ kò bára mu</string>
+    <string name="chat_list_select">Yan chat kan</string>
+    <string name="chat_message_discard">Sọnu</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Ìfiránṣẹ́ náà gùn jù lọ pẹ̀lú àmì %1$s</item>
+    </plurals>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Repran jwèt la</string>
     <string name="go_error_score_resume_failed">Echwe pou repran jwèt la</string>
     <string name="go_error_score_accept_failed">Echwe pou aksepte eskò a</string>
+    <string name="go_chat_player_passed">%1$s pase</string>
+    <string name="go_chat_you_passed">Ou pase</string>
 </resources>

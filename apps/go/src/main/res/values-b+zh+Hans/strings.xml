@@ -81,4 +81,6 @@
     <string name="go_score_resume">恢复对局</string>
     <string name="go_error_score_resume_failed">恢复对局失败</string>
     <string name="go_error_score_accept_failed">接受得分失败</string>
+    <string name="go_chat_player_passed">%1$s跳过了回合</string>
+    <string name="go_chat_you_passed">您停了一手</string>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Վերսկսել խաղը</string>
     <string name="go_error_score_resume_failed">Չհաջողվեց վերսկսել խաղը</string>
     <string name="go_error_score_accept_failed">Չհաջողվեց ընդունել միավորը</string>
+    <string name="go_chat_player_passed">%1$s-ը բաց թողեց քայլը</string>
+    <string name="go_chat_you_passed">Դուք բաց թողեցիք քայլը</string>
 </resources>

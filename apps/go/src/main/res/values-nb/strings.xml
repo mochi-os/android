@@ -81,4 +81,6 @@
     <string name="go_score_resume">Gjenoppta spill</string>
     <string name="go_error_score_resume_failed">Kunne ikke gjenoppta spillet</string>
     <string name="go_error_score_accept_failed">Kunne ikke godta poengsummen</string>
+    <string name="go_chat_player_passed">%1$s meldte pass</string>
+    <string name="go_chat_you_passed">Du passet</string>
 </resources>

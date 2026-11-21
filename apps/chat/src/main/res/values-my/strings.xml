@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">ပြီးပါပြီ</string>
     <string name="chat_encryption_key">ပြန်လည်ရယူရေးသော့</string>
     <string name="chat_encryption_restore">ပြန်ဆယ်ယူ</string>
-    <string name="chat_encryption_recovery_refused">၎င်းသည် သင်၏ ပြန်လည်ရယူရေးသော့ မဟုတ်ပါ</string>
     <string name="chat_verification_own">သင်၏ ကိရိယာကို အတည်ပြုမည်</string>
     <string name="chat_verification_compare">အခြားစခရင်ပေါ်တွင် တူညီသော အီမိုဂျီများ ပေါ်နေကြောင်း စစ်ဆေးပါ။</string>
     <string name="chat_verification_requested_own">သင်၏ အခြားကိရိယာတစ်ခုက ဤကိရိယာကို အတည်ပြုလိုသည်။</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s က သင့်ကို အတည်ပြုလိုသည်။</string>
     <string name="chat_typing_one">%1$s စာရိုက်နေသည်...</string>
     <string name="chat_typing_many">%1$s စာရိုက်နေကြသည်...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">ပြန်ဖြေချက် %1$s ခု</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">အရင်က ပြန်ဖြေချက် %1$s ခု</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">ဤအကောင့်ကို Mochi သို့ မထည့်မီက မက်ဆေ့ဂျ်များကို ကုဒ်ဝှက်ထားသဖြင့် ဤနေရာတွင် ဖတ်၍မရပါ</string>
     <string name="chat_message_excluded">အခြားစက်များအတွက်သာ ကုဒ်ဝှက်ထားသည်</string>
     <string name="chat_setup">ပြင်ဆင်မည်</string>
+    <string name="chat_jump_bottom">အောက်ဆုံးသို့ သွားရန်</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">မက်ဆေ့ဂျ်အသစ် %1$s ခုသို့ သွားရန်</item>
+    </plurals>
+    <string name="chat_message_distrusted">သင်မယုံကြည်သော စက်မှ ပို့ထားသည်</string>
+    <string name="chat_message_mismatched">သော့များ မကိုက်ညီသော စက်မှ ပို့ထားသည်</string>
+    <string name="chat_list_select">ချတ်တစ်ခုကို ရွေးချယ်ပါ</string>
+    <string name="chat_message_discard">ဖျက်ပစ်ရန်</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">မက်ဆေ့ချ်သည် စာလုံး %1$s လုံး ပိုရှည်နေသည်</item>
+    </plurals>
 </resources>

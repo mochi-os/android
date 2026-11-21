@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Klaar</string>
     <string name="chat_encryption_key">Herstelsleutel</string>
     <string name="chat_encryption_restore">Herstel</string>
-    <string name="chat_encryption_recovery_refused">Dit is nie jou herstelsleutel nie</string>
     <string name="chat_verification_own">Verifieer jou toestel</string>
     <string name="chat_verification_compare">Kontroleer dat dieselfde emoji op die ander skerm verskyn.</string>
     <string name="chat_verification_requested_own">Nog een van jou toestelle wil hierdie een verifieer.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s wil jou verifieer.</string>
     <string name="chat_typing_one">%1$s is besig om te tik...</string>
     <string name="chat_typing_many">%1$s is besig om te tik...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s antwoord</item>
-        <item quantity="other">%1$s antwoorde</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s vroeëre antwoord</item>
         <item quantity="other">%1$s vroeëre antwoorde</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Boodskappe van voordat hierdie rekening by Mochi gevoeg is, is geënkripteer en kan nie hier gelees word nie</string>
     <string name="chat_message_excluded">Slegs vir ander toestelle geënkripteer</string>
     <string name="chat_setup">Stel op</string>
+    <string name="chat_jump_bottom">Spring na onder</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Spring na %1$s nuwe boodskap</item>
+        <item quantity="other">Spring na %1$s nuwe boodskappe</item>
+    </plurals>
+    <string name="chat_message_distrusted">Gestuur vanaf \'n toestel wat jy nie vertrou nie</string>
+    <string name="chat_message_mismatched">Gestuur vanaf \'n toestel waarvan die sleutels nie ooreenstem nie</string>
+    <string name="chat_list_select">Kies \'n geselsie</string>
+    <string name="chat_message_discard">Gooi weg</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Die boodskap is %1$s karakter te lank</item>
+        <item quantity="other">Die boodskap is %1$s karakters te lank</item>
+    </plurals>
 </resources>

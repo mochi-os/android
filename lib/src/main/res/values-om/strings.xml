@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Hanga ammaatti ergaawwan hin jiran</string>
     <string name="game_chat_input_placeholder">Ergaa barreessi</string>
     <string name="game_chat_send">Ergaa ergi</string>
-    <string name="game_chat_subject_you">Ati</string>
 
     <string name="common_not_saved">Hin kuufamne</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Seerverii irratti jijjiirame</string>
     <string name="sync_missing">Kana booda seerverii irra hin jiru</string>
     <string name="sync_refused">Seerveriin dide</string>
+    <string name="game_system_score_agreed">Qabxiin walii galame</string>
+    <string name="game_system_score_accept">%1$s qabxii fudhate</string>
+    <string name="game_system_score_resume">%1$s taphicha itti fufe</string>
+    <string name="game_not_found">Taphni hin argamne</string>
+    <string name="game_chat_move_played_you">Ati %1$s taphatte</string>
 </resources>

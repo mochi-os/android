@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Готово</string>
     <string name="chat_encryption_key">Ключ за възстановяване</string>
     <string name="chat_encryption_restore">Възстанови</string>
-    <string name="chat_encryption_recovery_refused">Това не е вашият ключ за възстановяване</string>
     <string name="chat_verification_own">Потвърди устройството си</string>
     <string name="chat_verification_compare">Проверете дали на другия екран се показват същите емоджита.</string>
     <string name="chat_verification_requested_own">Друго от устройствата ви иска да потвърди това.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s иска да ви потвърди.</string>
     <string name="chat_typing_one">%1$s пише...</string>
     <string name="chat_typing_many">%1$s пишат...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s отговор</item>
-        <item quantity="other">%1$s отговора</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s по-ранен отговор</item>
         <item quantity="other">%1$s по-ранни отговора</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Съобщенията отпреди добавянето на този профил в Mochi са шифровани и не могат да бъдат прочетени тук</string>
     <string name="chat_message_excluded">Шифровано само за други устройства</string>
     <string name="chat_setup">Настройка</string>
+    <string name="chat_jump_bottom">Към края</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Към %1$s ново съобщение</item>
+        <item quantity="other">Към %1$s нови съобщения</item>
+    </plurals>
+    <string name="chat_message_distrusted">Изпратено от устройство, което сте отбелязали като ненадеждно</string>
+    <string name="chat_message_mismatched">Изпратено от устройство, чиито ключове не съвпадат</string>
+    <string name="chat_list_select">Изберете чат</string>
+    <string name="chat_message_discard">Отхвърли</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Съобщението е с %1$s знак по-дълго от позволеното</item>
+        <item quantity="other">Съобщението е с %1$s знака по-дълго от позволеното</item>
+    </plurals>
 </resources>

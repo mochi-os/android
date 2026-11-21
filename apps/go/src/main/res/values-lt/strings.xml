@@ -81,4 +81,6 @@
     <string name="go_score_resume">Tęsti žaidimą</string>
     <string name="go_error_score_resume_failed">Nepavyko tęsti žaidimo</string>
     <string name="go_error_score_accept_failed">Nepavyko priimti rezultato</string>
+    <string name="go_chat_player_passed">%1$s praleido ėjimą</string>
+    <string name="go_chat_you_passed">Jūs praleidote ėjimą</string>
 </resources>

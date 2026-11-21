@@ -81,4 +81,6 @@
     <string name="go_score_resume">Jätka mängu</string>
     <string name="go_error_score_resume_failed">Mängu jätkamine ebaõnnestus</string>
     <string name="go_error_score_accept_failed">Skoori vastuvõtmine ebaõnnestus</string>
+    <string name="go_chat_player_passed">%1$s jättis käigu vahele</string>
+    <string name="go_chat_you_passed">Sa passisid</string>
 </resources>

@@ -78,4 +78,6 @@
     <string name="go_score_resume">Rifillo lojën</string>
     <string name="go_error_score_resume_failed">Rifillimi i lojës dështoi</string>
     <string name="go_error_score_accept_failed">Pranimi i rezultatit dështoi</string>
+    <string name="go_chat_player_passed">%1$s kaloi radhën</string>
+    <string name="go_chat_you_passed">Ti kalove</string>
 </resources>

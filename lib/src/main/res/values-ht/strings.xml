@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Poko gen mesaj</string>
     <string name="game_chat_input_placeholder">Tape yon mesaj</string>
     <string name="game_chat_send">Voye mesaj</string>
-    <string name="game_chat_subject_you">Ou</string>
 
     <string name="common_not_saved">Pa anrejistre</string>
     <string name="app_brand">Mochi</string>
@@ -348,4 +347,9 @@
     <string name="sync_conflict">Chanje sou sèvè a</string>
     <string name="sync_missing">Pa sou sèvè a ankò</string>
     <string name="sync_refused">Sèvè a refize l</string>
+    <string name="game_system_score_agreed">Yo dakò sou nòt la</string>
+    <string name="game_system_score_accept">%1$s aksepte nòt la</string>
+    <string name="game_system_score_resume">%1$s rekòmanse jwe</string>
+    <string name="game_not_found">Nou pa jwenn jwèt la</string>
+    <string name="game_chat_move_played_you">Ou jwe %1$s</string>
 </resources>

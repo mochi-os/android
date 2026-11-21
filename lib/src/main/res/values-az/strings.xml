@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Hələ mesaj yoxdur</string>
     <string name="game_chat_input_placeholder">Mesaj yazın</string>
     <string name="game_chat_send">Mesaj göndər</string>
-    <string name="game_chat_subject_you">Siz</string>
 
     <string name="common_not_saved">Saxlanmadı</string>
 
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Serverdə dəyişdirilib</string>
     <string name="sync_missing">Artıq serverdə yoxdur</string>
     <string name="sync_refused">Server tərəfindən rədd edildi</string>
+    <string name="game_system_score_agreed">Hesab razılaşdırıldı</string>
+    <string name="game_system_score_accept">%1$s hesabı qəbul etdi</string>
+    <string name="game_system_score_resume">%1$s oyunu davam etdirdi</string>
+    <string name="game_not_found">Oyun tapılmadı</string>
+    <string name="game_chat_move_played_you">Siz %1$s oynadınız</string>
 </resources>

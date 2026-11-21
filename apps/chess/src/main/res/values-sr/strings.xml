@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Реми</string>
     <string name="chess_status_check_your_move">Шах — ваш потез</string>
     <string name="chess_status_your_move">Твој потез</string>
-    <string name="chess_move_subject_you">Ти</string>
     <string name="chess_promotion_title">Унапреди у:</string>
 
     <string name="chess_resign_message">Да ли сте сигурни да желите да предате? %1$s ће победити у игри.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Бели %1$s</string>
     <string name="chess_piece_black">Црно %1$s</string>
+    <string name="chess_move_played_you">Одиграли сте %1$s</string>
+    <string name="chess_move_capture_you">Узели сте %1$s</string>
 </resources>

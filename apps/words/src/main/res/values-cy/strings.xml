@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Dim gemau eto.</string>
     <string name="words_new_game_choose_opponents">Dewiswch wrthwynebwyr</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s chwaraewr</string>
     <string name="words_new_game_no_friends_subtitle">Ychwanegwch ffrindiau yn yr ap Pobl i ddechrau chwarae.</string>
     <string name="words_detail_title">Gêm</string>
     <string name="words_detail_status_opponent_move">Symudiad %1$s</string>
     <string name="words_detail_status_winner_wins">Mae %1$s yn ennill</string>
     <string name="words_detail_player_fallback">Chwaraewr %1$s</string>
-    <string name="words_detail_player_count">%1$s chwaraewr</string>
-    <string name="words_detail_label_tiles_left">%1$s teilsen ar ôl</string>
     <string name="words_detail_action_open_chat">Agor sgwrs</string>
     <string name="words_detail_action_more">Camau gweithredu\'r gêm</string>
     <string name="words_detail_exchange_count">Cyfnewid (%1$s)</string>
@@ -71,4 +68,27 @@
     <string name="words_move_error_no_words">Ni ffurfiwyd unrhyw air dilys</string>
     <string name="words_validation_offline">Dilysu all-lein — gallwch gyflwyno o hyd.</string>
     <string name="words_validation_unknown_words">Mae\'n cynnwys geiriau anhysbys. Gallwch gyflwyno o hyd.</string>
+    <string name="words_detail_label_tiles">Teils ar ôl</string>
+    <string name="words_detail_submit_score">Cyflwyno +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3G</string>
+    <string name="words_board_premium_double_word">2G</string>
+    <string name="words_board_premium_triple_letter">3Ll</string>
+    <string name="words_board_premium_double_letter">2Ll</string>
+    <plurals name="words_new_game_players">
+        <item quantity="zero">%1$s chwaraewr</item>
+        <item quantity="one">%1$s chwaraewr</item>
+        <item quantity="two">%1$s chwaraewr</item>
+        <item quantity="few">%1$s chwaraewr</item>
+        <item quantity="many">%1$s chwaraewr</item>
+        <item quantity="other">%1$s chwaraewr</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="zero">%1$s chwaraewr</item>
+        <item quantity="one">%1$s chwaraewr</item>
+        <item quantity="two">%1$s chwaraewr</item>
+        <item quantity="few">%1$s chwaraewr</item>
+        <item quantity="many">%1$s chwaraewr</item>
+        <item quantity="other">%1$s chwaraewr</item>
+    </plurals>
 </resources>

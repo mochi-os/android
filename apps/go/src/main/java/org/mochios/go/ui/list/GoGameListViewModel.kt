@@ -8,11 +8,8 @@ package org.mochios.go.ui.list
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
@@ -36,12 +33,6 @@ data class GoGameListUiState(
     val identity: String? = null,
 )
 
-/** Side-effect events the screen listens for (snackbar + open-game nav). */
-sealed class GoGameListEvent {
-    data class Toast(val message: String) : GoGameListEvent()
-    data class OpenGame(val gameId: String) : GoGameListEvent()
-}
-
 @HiltViewModel
 class GoGameListViewModel @Inject constructor(
     private val repo: GoRepository,
@@ -50,9 +41,6 @@ class GoGameListViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(GoGameListUiState())
     val uiState: StateFlow<GoGameListUiState> = _uiState.asStateFlow()
-
-    private val _events = MutableSharedFlow<GoGameListEvent>(extraBufferCapacity = 8)
-    val events: SharedFlow<GoGameListEvent> = _events.asSharedFlow()
 
     private var resumedBefore = false
 

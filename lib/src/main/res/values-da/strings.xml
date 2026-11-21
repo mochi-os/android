@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Ingen beskeder endnu</string>
     <string name="game_chat_input_placeholder">Skriv en besked</string>
     <string name="game_chat_send">Send besked</string>
-    <string name="game_chat_subject_you">Dig</string>
 
     <string name="common_not_saved">Ikke gemt</string>
 
@@ -351,4 +350,9 @@
     <string name="sync_conflict">Ændret på serveren</string>
     <string name="sync_missing">Findes ikke længere på serveren</string>
     <string name="sync_refused">Afvist af serveren</string>
+    <string name="game_system_score_agreed">Resultat aftalt</string>
+    <string name="game_system_score_accept">%1$s accepterede resultatet</string>
+    <string name="game_system_score_resume">%1$s genoptog spillet</string>
+    <string name="game_not_found">Spillet blev ikke fundet</string>
+    <string name="game_chat_move_played_you">Du spillede %1$s</string>
 </resources>

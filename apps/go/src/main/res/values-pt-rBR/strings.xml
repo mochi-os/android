@@ -49,4 +49,5 @@
     <string name="go_score_resume">Retomar o jogo</string>
     <string name="go_error_score_resume_failed">Falha ao retomar o jogo</string>
     <string name="go_error_score_accept_failed">Falha ao aceitar a pontuação</string>
+    <string name="go_chat_player_passed">%1$s passou</string>
 </resources>

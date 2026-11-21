@@ -117,7 +117,6 @@
     <string name="game_chat_empty">තවම පණිවිඩ නැත</string>
     <string name="game_chat_input_placeholder">පණිවිඩයක් ටයිප් කරන්න</string>
     <string name="game_chat_send">පණිවිඩය යවන්න</string>
-    <string name="game_chat_subject_you">ඔබ</string>
 
     <string name="common_not_saved">සුරැකී නැත</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">සේවාදායකයේ වෙනස් කර ඇත</string>
     <string name="sync_missing">තවදුරටත් සේවාදායකයේ නැත</string>
     <string name="sync_refused">සේවාදායකය ප්‍රතික්ෂේප කළේය</string>
+    <string name="game_system_score_agreed">ලකුණු එකඟ විය</string>
+    <string name="game_system_score_accept">%1$s ලකුණු පිළිගත්තා</string>
+    <string name="game_system_score_resume">%1$s ක්‍රීඩාව නැවත ආරම්භ කළා</string>
+    <string name="game_not_found">ක්‍රීඩාව හමු නොවීය</string>
+    <string name="game_chat_move_played_you">ඔබ %1$s ක්‍රීඩා කළා</string>
 </resources>

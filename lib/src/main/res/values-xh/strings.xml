@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Akukho miyalezo okwangoku</string>
     <string name="game_chat_input_placeholder">Bhala umyalezo</string>
     <string name="game_chat_send">Thumela umyalezo</string>
-    <string name="game_chat_subject_you">Wena</string>
 
     <string name="common_not_saved">Akugcinwanga</string>
     <string name="auth_server_url">I-URL yeseva</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Itshintshiwe kwiseva</string>
     <string name="sync_missing">Ayisekho kwiseva</string>
     <string name="sync_refused">Yaliwe yiseva</string>
+    <string name="game_system_score_agreed">Kuvunyelwene ngamanqaku</string>
+    <string name="game_system_score_accept">%1$s uwamkele amanqaku</string>
+    <string name="game_system_score_resume">%1$s uqhubekile nokudlala</string>
+    <string name="game_not_found">Umdlalo awufumanekanga</string>
+    <string name="game_chat_move_played_you">Wena udlale %1$s</string>
 </resources>

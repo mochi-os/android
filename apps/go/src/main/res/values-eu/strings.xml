@@ -78,4 +78,6 @@
     <string name="go_score_resume">Berrekin partida</string>
     <string name="go_error_score_resume_failed">Ezin izan da partida berrekin</string>
     <string name="go_error_score_accept_failed">Ezin izan da puntuazioa onartu</string>
+    <string name="go_chat_player_passed">%1$s(e)k pasatu du</string>
+    <string name="go_chat_you_passed">Pasa egin duzu</string>
 </resources>

@@ -32,7 +32,6 @@
     <string name="chess_status_draw">תּיקו</string>
     <string name="chess_status_check_your_move">שאַך — אײַער גאַנג</string>
     <string name="chess_status_your_move">אײַער צוג</string>
-    <string name="chess_move_subject_you">איר</string>
     <string name="chess_promotion_title">פֿאַרהייב צו:</string>
 
     <string name="chess_resign_message">זענט איר זיכער איר ווילט רעזיגנירן? %1$s וועט געווינען די שפּיל.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">ווײַס %1$s</string>
     <string name="chess_piece_black">שוואַרץ %1$s</string>
+    <string name="chess_move_played_you">איר האָט געשפּילט %1$s</string>
+    <string name="chess_move_capture_you">איר האָט גענומען %1$s</string>
 </resources>

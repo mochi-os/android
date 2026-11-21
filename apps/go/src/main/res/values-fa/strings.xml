@@ -81,4 +81,6 @@
     <string name="go_score_resume">از سرگیری بازی</string>
     <string name="go_error_score_resume_failed">از سرگیری بازی ناموفق بود</string>
     <string name="go_error_score_accept_failed">پذیرش امتیاز ناموفق بود</string>
+    <string name="go_chat_player_passed">%1$s رد کرد</string>
+    <string name="go_chat_you_passed">نوبت خود را رد کردید</string>
 </resources>

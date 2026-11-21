@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">ਹੋ ਗਿਆ</string>
     <string name="chat_encryption_key">ਰਿਕਵਰੀ ਕੁੰਜੀ</string>
     <string name="chat_encryption_restore">ਬਹਾਲ ਕਰੋ</string>
-    <string name="chat_encryption_recovery_refused">ਇਹ ਤੁਹਾਡੀ ਰਿਕਵਰੀ ਕੁੰਜੀ ਨਹੀਂ ਹੈ</string>
     <string name="chat_verification_own">ਆਪਣੇ ਡਿਵਾਈਸ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
     <string name="chat_verification_compare">ਜਾਂਚ ਕਰੋ ਕਿ ਦੂਜੀ ਸਕ੍ਰੀਨ \'ਤੇ ਉਹੀ ਇਮੋਜੀ ਦਿਖਾਈ ਦਿੰਦੇ ਹਨ।</string>
     <string name="chat_verification_requested_own">ਤੁਹਾਡਾ ਕੋਈ ਹੋਰ ਡਿਵਾਈਸ ਇਸ ਡਿਵਾਈਸ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ।</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s ਤੁਹਾਡੀ ਪੁਸ਼ਟੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹਨ।</string>
     <string name="chat_typing_one">%1$s ਟਾਈਪ ਕਰ ਰਹੇ ਹਨ...</string>
     <string name="chat_typing_many">%1$s ਟਾਈਪ ਕਰ ਰਹੇ ਹਨ...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s ਜਵਾਬ</item>
-        <item quantity="other">%1$s ਜਵਾਬ</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ਪਹਿਲਾਂ ਵਾਲਾ ਜਵਾਬ</item>
         <item quantity="other">%1$s ਪਹਿਲਾਂ ਵਾਲੇ ਜਵਾਬ</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">ਇਸ ਖਾਤੇ ਨੂੰ Mochi ਵਿੱਚ ਜੋੜਨ ਤੋਂ ਪਹਿਲਾਂ ਦੇ ਸੁਨੇਹੇ ਇਨਕ੍ਰਿਪਟ ਕੀਤੇ ਹੋਏ ਹਨ ਅਤੇ ਇੱਥੇ ਪੜ੍ਹੇ ਨਹੀਂ ਜਾ ਸਕਦੇ</string>
     <string name="chat_message_excluded">ਸਿਰਫ਼ ਹੋਰ ਡਿਵਾਈਸਾਂ ਲਈ ਇਨਕ੍ਰਿਪਟ ਕੀਤਾ</string>
     <string name="chat_setup">ਸੈੱਟ ਅੱਪ ਕਰੋ</string>
+    <string name="chat_jump_bottom">ਸਭ ਤੋਂ ਹੇਠਾਂ ਜਾਓ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s ਨਵੇਂ ਸੁਨੇਹੇ \'ਤੇ ਜਾਓ</item>
+        <item quantity="other">%1$s ਨਵੇਂ ਸੁਨੇਹਿਆਂ \'ਤੇ ਜਾਓ</item>
+    </plurals>
+    <string name="chat_message_distrusted">ਉਸ ਡਿਵਾਈਸ ਤੋਂ ਭੇਜਿਆ ਜਿਸ \'ਤੇ ਤੁਸੀਂ ਭਰੋਸਾ ਨਹੀਂ ਕੀਤਾ</string>
+    <string name="chat_message_mismatched">ਉਸ ਡਿਵਾਈਸ ਤੋਂ ਭੇਜਿਆ ਜਿਸ ਦੀਆਂ ਕੁੰਜੀਆਂ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀਆਂ</string>
+    <string name="chat_list_select">ਚੈਟ ਚੁਣੋ</string>
+    <string name="chat_message_discard">ਛੱਡ ਦਿਓ</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">ਸੁਨੇਹਾ %1$s ਅੱਖਰ ਜ਼ਿਆਦਾ ਲੰਮਾ ਹੈ</item>
+        <item quantity="other">ਸੁਨੇਹਾ %1$s ਅੱਖਰ ਜ਼ਿਆਦਾ ਲੰਮਾ ਹੈ</item>
+    </plurals>
 </resources>

@@ -78,8 +78,8 @@ class GoRepository @Inject constructor(
 
     /**
      * Pass. On the second consecutive pass the caller sends `status =
-     * "finished"` with winner and scores so the server records the end in one
-     * round trip.
+     * "scoring"` with the counted scores as a proposal, which both players
+     * then accept or play on from.
      */
     suspend fun pass(gameId: String, request: PassRequest): String =
         api.pass(gameId, request).unwrap().id

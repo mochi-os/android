@@ -38,14 +38,11 @@
     <string name="words_sidebar_empty">Пакуль няма партый.</string>
     <string name="words_new_game_choose_opponents">Выберыце суперніка</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s гульцоў</string>
     <string name="words_new_game_no_friends_subtitle">Дадайце сяброў у праграме Людзі, каб пачаць гуляць.</string>
     <string name="words_detail_title">Партыя</string>
     <string name="words_detail_status_opponent_move">Ход %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s выйграў</string>
     <string name="words_detail_player_fallback">Гулец %1$s</string>
-    <string name="words_detail_player_count">%1$s гульцоў</string>
-    <string name="words_detail_label_tiles_left">Засталося %1$s плітак</string>
     <string name="words_detail_action_open_chat">Адкрыць чат</string>
     <string name="words_detail_action_more">Дзеянні партыі</string>
     <string name="words_detail_exchange_count">Абмяняць (%1$s)</string>
@@ -68,4 +65,23 @@
     <string name="words_move_error_no_words">Не ўтворана ніводнага слушнага слова</string>
     <string name="words_validation_offline">Праверка недаступная — вы ўсё роўна можаце адправіць.</string>
     <string name="words_validation_unknown_words">Утрымлівае невядомыя словы. Вы ўсё роўна можаце адправіць.</string>
+    <string name="words_detail_label_tiles">Засталося плітачак</string>
+    <string name="words_detail_submit_score">Адправіць +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3С</string>
+    <string name="words_board_premium_double_word">2С</string>
+    <string name="words_board_premium_triple_letter">3Л</string>
+    <string name="words_board_premium_double_letter">2Л</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s гулец</item>
+        <item quantity="few">%1$s гульцы</item>
+        <item quantity="many">%1$s гульцоў</item>
+        <item quantity="other">%1$s гульца</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s гулец</item>
+        <item quantity="few">%1$s гульцы</item>
+        <item quantity="many">%1$s гульцоў</item>
+        <item quantity="other">%1$s гульца</item>
+    </plurals>
 </resources>

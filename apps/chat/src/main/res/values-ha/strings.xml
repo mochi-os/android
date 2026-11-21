@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">An gama</string>
     <string name="chat_encryption_key">Maɓallin dawowa</string>
     <string name="chat_encryption_restore">Maidowa</string>
-    <string name="chat_encryption_recovery_refused">Wannan ba maɓallin dawowarka ba ne</string>
     <string name="chat_verification_own">Tabbatar da na\'urarka</string>
     <string name="chat_verification_compare">Duba cewa emoji iri ɗaya ne suka bayyana a ɗayan allon.</string>
     <string name="chat_verification_requested_own">Ɗaya daga cikin sauran na\'urorinka yana son tabbatar da wannan.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s yana son tabbatar da kai.</string>
     <string name="chat_typing_one">%1$s yana rubutu...</string>
     <string name="chat_typing_many">%1$s suna rubutu...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">Amsa %1$s</item>
-        <item quantity="other">Amsoshi %1$s</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">Amsa %1$s ta baya</item>
         <item quantity="other">Amsoshi %1$s na baya</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Saƙonnin kafin a ƙara wannan asusun zuwa Mochi an ɓoye su kuma ba za a iya karanta su a nan ba</string>
     <string name="chat_message_excluded">An ɓoye shi don wasu na\'urori kawai</string>
     <string name="chat_setup">Saitawa</string>
+    <string name="chat_jump_bottom">Tsallaka zuwa ƙasa</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Tsallaka zuwa sabon saƙo %1$s</item>
+        <item quantity="other">Tsallaka zuwa sabbin saƙonni %1$s</item>
+    </plurals>
+    <string name="chat_message_distrusted">An aiko daga na\'urar da ba ka amince da ita ba</string>
+    <string name="chat_message_mismatched">An aiko daga na\'urar da maɓallanta ba su dace ba</string>
+    <string name="chat_list_select">Zaɓi chat</string>
+    <string name="chat_message_discard">Watsar</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Saƙon ya wuce iyaka da harafi %1$s</item>
+        <item quantity="other">Saƙon ya wuce iyaka da haruffa %1$s</item>
+    </plurals>
 </resources>

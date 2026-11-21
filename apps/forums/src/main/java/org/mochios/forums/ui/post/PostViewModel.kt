@@ -132,15 +132,13 @@ class PostViewModel @Inject constructor(
 
     private fun subscribeWebSocket(forumKey: String) {
         if (forumKey.isBlank() || subscriptionId != null) return
-        // The socket calls back on its own thread. The frame is handled on the
-        // main one, where every other change to this screen's state is made.
+        // The socket hands each frame over on the main thread, where every
+        // other change to this screen's state is made.
         subscriptionId = webSocket.subscribe(
             sessionManager.getServerUrlBlocking(),
             forumKey,
             app = "forums",
-        ) { event ->
-            viewModelScope.launch { frame(event) }
-        }
+        ) { event -> frame(event) }
     }
 
     private fun frame(event: WebSocketEvent) {

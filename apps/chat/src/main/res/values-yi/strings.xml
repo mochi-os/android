@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">געטאָן</string>
     <string name="chat_encryption_key">צוריקשטעל־שליסל</string>
     <string name="chat_encryption_restore">אויפֿשטעלן</string>
-    <string name="chat_encryption_recovery_refused">דאָס איז ניט אײַער צוריקשטעל־שליסל</string>
     <string name="chat_verification_own">פֿאַריפֿיצירן אײַער מיטל</string>
     <string name="chat_verification_compare">קאָנטראָלירט אַז די זעלביקע עמאָדזשי זײַנען אויפֿן אַנדערן עקראַן.</string>
     <string name="chat_verification_requested_own">אַן אַנדער מיטל פֿון אײַך וויל פֿאַריפֿיצירן דאָס דאָזיקע.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s וויל אײַך פֿאַריפֿיצירן.</string>
     <string name="chat_typing_one">%1$s טיפּט...</string>
     <string name="chat_typing_many">%1$s טיפּן...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s ענטפֿער</item>
-        <item quantity="other">%1$s ענטפֿערס</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s פֿריִערדיקער ענטפֿער</item>
         <item quantity="other">%1$s פֿריִערדיקע ענטפֿערס</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">בריוו פֿון איידער דער חשבון איז צוגעגעבן געוואָרן צו Mochi זענען פֿאַרשיפֿרירט און מע קען זיי דאָ נישט לייענען</string>
     <string name="chat_message_excluded">פֿאַרשיפֿרירט נאָר פֿאַר אַנדערע מכשירים</string>
     <string name="chat_setup">שטעל אויף</string>
+    <string name="chat_jump_bottom">שפּרינגען אַראָפּ</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">שפּרינגען צו %1$s נײַעם מעסעדזש</item>
+        <item quantity="other">שפּרינגען צו %1$s נײַע מעסעדזשעס</item>
+    </plurals>
+    <string name="chat_message_distrusted">געשיקט פֿון אַ מכשיר וואָס איר טרויט ניט</string>
+    <string name="chat_message_mismatched">געשיקט פֿון אַ מכשיר וועמענס שליסלען שטימען ניט</string>
+    <string name="chat_list_select">קלײַב אַ שמועס</string>
+    <string name="chat_message_discard">אַװעקװאַרפֿן</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">די מעלדונג איז %1$s אות צו לאַנג</item>
+        <item quantity="other">די מעלדונג איז %1$s אותיות צו לאַנג</item>
+    </plurals>
 </resources>

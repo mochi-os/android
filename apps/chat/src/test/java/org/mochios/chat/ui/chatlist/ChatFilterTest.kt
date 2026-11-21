@@ -5,9 +5,11 @@
 
 package org.mochios.chat.ui.chatlist
 
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
+import org.mochios.android.api.MochiError
 import org.mochios.chat.model.Chat
 import org.mochios.chat.model.ChatStatus
 
@@ -15,6 +17,16 @@ class ChatFilterTest {
 
     private val direct = Chat(id = "d", name = "Dung Nguyen Tien", members = 2, unread = 3)
     private val group = Chat(id = "g", name = "Weekend trip", members = 4)
+
+    @Test
+    fun `the drawer says loading, failed or empty, never empty for a list that failed`() {
+        assertEquals(ChatListShown.LOADING, ChatListUiState().shown())
+        assertEquals(ChatListShown.FAILED, ChatListUiState(error = MochiError.NetworkError()).shown())
+        assertEquals("a failure after a read is still a failure", ChatListShown.FAILED, ChatListUiState(loaded = true, error = MochiError.NetworkError()).shown())
+        assertEquals(ChatListShown.EMPTY, ChatListUiState(loaded = true).shown())
+        assertEquals("an empty list read again", ChatListShown.LOADING, ChatListUiState(loaded = true, isLoading = true).shown())
+        assertEquals(ChatListShown.LISTED, ChatListUiState(chats = listOf(direct), loaded = true, error = MochiError.NetworkError()).shown())
+    }
 
     @Test
     fun `all keeps every chat`() {

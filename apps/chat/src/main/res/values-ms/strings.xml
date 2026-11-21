@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Selesai</string>
     <string name="chat_encryption_key">Kunci pemulihan</string>
     <string name="chat_encryption_restore">Pulihkan</string>
-    <string name="chat_encryption_recovery_refused">Itu bukan kunci pemulihan anda</string>
     <string name="chat_verification_own">Sahkan peranti anda</string>
     <string name="chat_verification_compare">Pastikan emoji yang sama dipaparkan pada skrin yang satu lagi.</string>
     <string name="chat_verification_requested_own">Satu lagi peranti anda ingin mengesahkan peranti ini.</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s ingin mengesahkan anda.</string>
     <string name="chat_typing_one">%1$s sedang menaip...</string>
     <string name="chat_typing_many">%1$s sedang menaip...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s balasan</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s balasan terdahulu</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">Mesej dari sebelum akaun ini ditambahkan ke Mochi disulitkan dan tidak boleh dibaca di sini</string>
     <string name="chat_message_excluded">Disulitkan untuk peranti lain sahaja</string>
     <string name="chat_setup">Sediakan</string>
+    <string name="chat_jump_bottom">Pergi ke bawah</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Pergi ke %1$s mesej baharu</item>
+    </plurals>
+    <string name="chat_message_distrusted">Dihantar daripada peranti yang tidak anda percayai</string>
+    <string name="chat_message_mismatched">Dihantar daripada peranti yang kuncinya tidak sepadan</string>
+    <string name="chat_list_select">Pilih sembang</string>
+    <string name="chat_message_discard">Buang</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Mesej terlalu panjang sebanyak %1$s aksara</item>
+    </plurals>
 </resources>

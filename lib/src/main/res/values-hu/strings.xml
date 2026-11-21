@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Még nincsenek üzenetek</string>
     <string name="game_chat_input_placeholder">Írjon egy üzenetet</string>
     <string name="game_chat_send">Üzenet küldése</string>
-    <string name="game_chat_subject_you">Ön</string>
 
     <string name="common_not_saved">Nincs mentve</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Módosult a kiszolgálón</string>
     <string name="sync_missing">Már nincs a kiszolgálón</string>
     <string name="sync_refused">A kiszolgáló elutasította</string>
+    <string name="game_system_score_agreed">Eredmény elfogadva</string>
+    <string name="game_system_score_accept">%1$s elfogadta az eredményt</string>
+    <string name="game_system_score_resume">%1$s folytatta a játékot</string>
+    <string name="game_not_found">A játék nem található</string>
+    <string name="game_chat_move_played_you">Ön lépett: %1$s</string>
 </resources>

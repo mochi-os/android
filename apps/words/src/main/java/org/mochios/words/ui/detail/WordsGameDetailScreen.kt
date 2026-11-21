@@ -51,11 +51,13 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -82,13 +84,14 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import kotlin.math.roundToInt
+import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
 import org.mochios.android.push.VisibleEntityEffect
-import org.mochios.android.ui.components.ComposeBar
 import org.mochios.android.ui.components.ComposeBarDefaults
 import org.mochios.android.ui.components.ErrorState
+import org.mochios.android.ui.components.GameChatColumn
 import org.mochios.android.ui.components.GameChatMessage
-import org.mochios.android.ui.components.GameChatPanel
+import org.mochios.android.ui.components.GameChatState
 import org.mochios.android.ui.components.GameStatusBar
 import org.mochios.android.ui.components.GameHeaderStat
 import org.mochios.android.ui.components.GameTopBarTitle
@@ -99,8 +102,12 @@ import org.mochios.android.ui.components.MochiDropdownMenu
 import org.mochios.android.ui.components.MochiDropdownMenuItem
 import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
+import org.mochios.android.ui.components.MissingGame
 import org.mochios.android.ui.components.MochiSheetHeader
 import org.mochios.android.ui.components.NotificationBell
+import org.mochios.android.ui.components.frameRowId
+import org.mochios.android.ui.components.rememberReopened
+import org.mochios.android.websocket.StreamWsEvent
 import org.mochios.android.websocket.rememberStreamWebSocket
 import org.mochios.words.R
 import org.mochios.words.engine.BOARD_SIZE
@@ -126,7 +133,6 @@ import org.mochios.android.i18n.LocalFormat
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WordsGameDetailScreen(
-    @Suppress("UNUSED_PARAMETER") gameId: String,
     onBack: () -> Unit,
     onOpenGame: (String) -> Unit,
     onOpenNotifications: () -> Unit,
@@ -138,6 +144,7 @@ fun WordsGameDetailScreen(
     val context = LocalContext.current
     val game = state.game
     val snackbar = remember { SnackbarHostState() }
+    val reopened = rememberReopened(WORDS_FEATURE, viewModel.gameId)
 
     // Every mutation writes its failure here — a rejected move, pass, exchange,
     // resign, delete or rematch. Nothing rendered it, so all six presented as
@@ -180,18 +187,7 @@ fun WordsGameDetailScreen(
     )
     LaunchedEffect(controller) {
         controller?.events?.collect { event ->
-            val msg = if (event.type == "message") {
-                GameMessage(
-                    id = (event.raw["id"] as? String) ?: "ws_${event.created}_${event.member ?: ""}",
-                    game = state.game?.id.orEmpty(),
-                    member = event.member.orEmpty(),
-                    name = event.name.orEmpty(),
-                    body = event.body.orEmpty(),
-                    type = event.type,
-                    created = event.created,
-                )
-            } else null
-            viewModel.onWebsocketEvent(event.type, msg)
+            viewModel.onWebsocketEvent(event.type, frameMessage(event, state.game?.id.orEmpty()))
         }
     }
 
@@ -304,6 +300,14 @@ fun WordsGameDetailScreen(
                         CircularProgressIndicator()
                     }
                 }
+                state.error is MochiError.NotFoundError && game == null -> {
+                    MissingGame(
+                        feature = WORDS_FEATURE,
+                        id = viewModel.gameId,
+                        reopened = reopened,
+                        onEmpty = onBack,
+                    )
+                }
                 state.error != null && game == null -> {
                     ErrorState(
                         error = state.error!!,
@@ -319,7 +323,6 @@ fun WordsGameDetailScreen(
                     onDismissMobileChat = { showMobileChat = false },
                     showDeleteDialog = showDeleteDialog,
                     onDismissDeleteDialog = { showDeleteDialog = false },
-                    onOpenNotifications = onOpenNotifications,
                 )
             }
         }
@@ -406,11 +409,13 @@ private fun GameDetailContent(
     onDismissMobileChat: () -> Unit,
     showDeleteDialog: Boolean,
     onDismissDeleteDialog: () -> Unit,
-    @Suppress("UNUSED_PARAMETER") onOpenNotifications: () -> Unit,
 ) {
     val myIdentity = state.myIdentity
     val isActive = game.status == "active"
     val isMyTurn = isActive && game.current_turn == game.my_player_number
+    val chat by viewModel.chat.state.collectAsState()
+    // One draft for the side panel and the phone's sheet, kept across both.
+    val draft = rememberSaveable { mutableStateOf("") }
 
     // Derive board, draft, scores from the engine.
     val board = remember(game.board) { parseBoard(game.board) }
@@ -530,7 +535,7 @@ private fun GameDetailContent(
                             isMe = player.isMe,
                         )
                     }
-                    GameHeaderStat(label = header.tilesLeftLabel)
+                    GameHeaderStat(label = header.tilesLeftLabel, value = header.tilesLeft)
                     if (header.playersLabel != null) {
                         GameHeaderStat(label = header.playersLabel)
                     }
@@ -646,18 +651,17 @@ private fun GameDetailContent(
                         .fillMaxHeight(),
                     color = MaterialTheme.colorScheme.surface,
                 ) {
-                    GameChatColumn(
-                        messages = state.messages,
-                        myIdentity = myIdentity,
-                        isLoading = state.isLoadingMessages,
-                        isError = state.messagesError,
-                        hasMore = state.hasMoreMessages,
-                        isLoadingMore = state.isLoadingMoreMessages,
-                        onLoadMore = { viewModel.loadMoreMessages() },
-                        onRetry = { viewModel.loadMessages() },
-                        onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
-                        composerWindowInsets = ComposeBarDefaults.WindowInsets,
-                    )
+                    Column(modifier = Modifier.fillMaxSize()) {
+                        WordsChatTitle()
+                        WordsChatColumn(
+                            chat = chat,
+                            myIdentity = myIdentity,
+                            draft = draft,
+                            viewModel = viewModel,
+                            modifier = Modifier.weight(1f),
+                            composerWindowInsets = ComposeBarDefaults.WindowInsets,
+                        )
+                    }
                 }
             }
         }
@@ -754,17 +758,12 @@ private fun GameDetailContent(
                     MochiSheetHeader(
                         title = stringResource(R.string.words_detail_chat_title),
                     )
-                    GameChatColumn(
-                        messages = state.messages,
+                    WordsChatColumn(
+                        chat = chat,
                         myIdentity = myIdentity,
-                        isLoading = state.isLoadingMessages,
-                        isError = state.messagesError,
-                        hasMore = state.hasMoreMessages,
-                        isLoadingMore = state.isLoadingMoreMessages,
-                        onLoadMore = { viewModel.loadMoreMessages() },
-                        onRetry = { viewModel.loadMessages() },
-                        onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
-                        showTitle = false,
+                        draft = draft,
+                        viewModel = viewModel,
+                        modifier = Modifier.weight(1f),
                     )
                 }
             }
@@ -891,24 +890,54 @@ private fun WordsActionsMenu(
 }
 
 @Composable
-private fun GameChatColumn(
-    messages: List<GameMessage>,
+private fun WordsChatTitle() {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 12.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(
+            text = stringResource(R.string.words_detail_chat_title),
+            style = MaterialTheme.typography.titleSmall.copy(
+                fontWeight = FontWeight.SemiBold,
+            ),
+        )
+    }
+}
+
+/**
+ * The chat row a message frame adds; moves and system frames read the game
+ * again instead. Its id is the stored row's, which the frame carries; an older
+ * server's frame gets one unique on this device ([frameRowId]), never one made
+ * of the time and sender, which two messages in one second share.
+ */
+internal fun frameMessage(event: StreamWsEvent, game: String): GameMessage? {
+    if (event.type != "message") return null
+    return GameMessage(
+        id = frameRowId(event.raw["id"]),
+        game = game,
+        member = event.member.orEmpty(),
+        name = event.name.orEmpty(),
+        body = event.body.orEmpty(),
+        type = event.type,
+        created = event.created,
+    )
+}
+
+/** The shared game chat column with words' move rows; system rows are the library's. */
+@Composable
+private fun WordsChatColumn(
+    chat: GameChatState<GameMessage>,
     myIdentity: String,
-    isLoading: Boolean,
-    isError: Boolean,
-    hasMore: Boolean,
-    isLoadingMore: Boolean,
-    onLoadMore: () -> Unit,
-    onRetry: () -> Unit,
-    onSend: (String, (Boolean) -> Unit) -> Unit,
-    // Which host is showing this column decides who lifts the composer for the
-    // keyboard. The default suits the phone's sheet, which lifts its own
-    // content; the tablet's side panel sits in the screen body and has to ask.
+    draft: MutableState<String>,
+    viewModel: WordsGameViewModel,
+    modifier: Modifier = Modifier,
     composerWindowInsets: WindowInsets = ComposeBarDefaults.NoWindowInsets,
-    showTitle: Boolean = true,
 ) {
-    val chatMessages = remember(messages) {
-        messages.map { msg ->
+    GameChatColumn(
+        chat = chat,
+        message = { msg ->
             GameChatMessage(
                 id = msg.id,
                 game = msg.game,
@@ -919,80 +948,16 @@ private fun GameChatColumn(
                 event = msg.event,
                 created = msg.created,
             )
-        }
-    }
-    var chatDraft by remember { mutableStateOf("") }
-    var isSending by remember { mutableStateOf(false) }
-
-    Column(
-        modifier = Modifier
-            .fillMaxHeight()
-            .fillMaxWidth(),
-    ) {
-        if (showTitle) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 12.dp, vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-            ) {
-                Text(
-                    text = stringResource(R.string.words_detail_chat_title),
-                    style = MaterialTheme.typography.titleSmall.copy(
-                        fontWeight = FontWeight.SemiBold,
-                    ),
-                )
-            }
-        }
-        Box(
-            modifier = Modifier
-                .weight(1f, fill = true)
-                .fillMaxWidth(),
-        ) {
-            GameChatPanel(
-                messages = chatMessages,
-                currentUserIdentity = myIdentity,
-                isLoading = isLoading,
-                isError = isError,
-                hasMore = hasMore,
-                isLoadingMore = isLoadingMore,
-                onLoadMore = onLoadMore,
-                onRetry = onRetry,
-                moveMessageRenderer = { msg, isSent ->
-                    {
-                        WordsMoveRow(msg = msg, isSent = isSent)
-                    }
-                },
-                systemMessageRenderer = { msg ->
-                    {
-                        WordsSystemRow(msg)
-                    }
-                },
-                modifier = Modifier.fillMaxSize(),
-            )
-        }
-        ComposeBar(
-            value = chatDraft,
-            onValueChange = { chatDraft = it },
-            onSend = {
-                if (chatDraft.isNotBlank() && !isSending) {
-                    isSending = true
-                    onSend(chatDraft) { sent ->
-                        isSending = false
-                        if (sent) chatDraft = ""
-                    }
-                }
-            },
-            isSending = isSending,
-            placeholder = stringResource(MochiR.string.game_chat_input_placeholder),
-            sendLabel = stringResource(MochiR.string.game_chat_send),
-            // One line, and the keyboard's action key sends: a game chat
-            // message is a sentence, not a comment body.
-            maxLines = 1,
-            sendOnImeAction = true,
-            windowInsets = composerWindowInsets,
-        )
-    }
+        },
+        currentUserIdentity = myIdentity,
+        onLoadMore = { viewModel.loadMoreMessages() },
+        onRetry = { viewModel.loadMessages() },
+        onSend = { body, done -> viewModel.sendChatMessage(body, onFinished = done) },
+        modifier = modifier,
+        draft = draft,
+        composerWindowInsets = composerWindowInsets,
+        moveMessageRenderer = { msg, isSent -> { WordsMoveRow(msg = msg, isSent = isSent) } },
+    )
 }
 
 @Composable
@@ -1027,30 +992,6 @@ private fun WordsMoveRow(msg: GameChatMessage, isSent: Boolean) {
     }
 }
 
-@Composable
-private fun WordsSystemRow(message: GameChatMessage) {
-    // Localise per viewer from the structured event kind; legacy rows (and
-    // REST-loaded resigns, which don't persist the event column) fall back to
-    // the server-stored English body. Words only emits a resign system event.
-    val text = when (message.event) {
-        "resign" -> stringResource(MochiR.string.game_system_resign, message.name)
-        else -> message.body
-    }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 2.dp),
-        horizontalArrangement = Arrangement.Center,
-    ) {
-        Text(
-            text = text,
-            style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
-            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
-            textAlign = TextAlign.Center,
-        )
-    }
-}
-
 // ─── Header model ─────────────────────────────────────────────────────
 
 /**
@@ -1073,7 +1014,9 @@ data class WordsHeaderModel(
     val title: String,
     val status: String,
     val players: List<WordsHeaderPlayer>,
+    /** "Tiles left", a label beside [tilesLeft] rather than a sentence, as the web shows it. */
     val tilesLeftLabel: String,
+    val tilesLeft: String,
     /** "N players", shown only for a game with more than two seats. */
     val playersLabel: String?,
     val opponentId: String,
@@ -1183,11 +1126,16 @@ internal fun buildHeaderModel(game: Game, myIdentity: String): WordsHeaderModel 
         title = title,
         status = status,
         players = players,
-        tilesLeftLabel = resources.getString(R.string.words_detail_label_tiles_left, format.formatNumber(game.bag_count)),
-        // A game always seats two to four, so the singular never arises and the
-        // plain string - which every catalogue already carries - is enough.
+        tilesLeftLabel = resources.getString(R.string.words_detail_label_tiles),
+        tilesLeft = format.formatNumber(game.bag_count),
+        // A plural, though only three and four reach it: several languages
+        // word three differently from four.
         playersLabel = if (game.player_count > 2) {
-            resources.getString(R.string.words_detail_player_count, format.formatNumber(game.player_count))
+            resources.getQuantityString(
+                R.plurals.words_detail_players,
+                game.player_count,
+                format.formatNumber(game.player_count),
+            )
         } else {
             null
         },

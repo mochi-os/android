@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Dim negeseuon eto</string>
     <string name="game_chat_input_placeholder">Teipiwch neges</string>
     <string name="game_chat_send">Anfon neges</string>
-    <string name="game_chat_subject_you">Chi</string>
 
     <string name="common_not_saved">Heb ei gadw</string>
 
@@ -358,4 +357,9 @@
     <string name="sync_conflict">Wedi newid ar y gweinydd</string>
     <string name="sync_missing">Dim ar y gweinydd mwyach</string>
     <string name="sync_refused">Gwrthodwyd gan y gweinydd</string>
+    <string name="game_system_score_agreed">Cytunwyd ar y sgôr</string>
+    <string name="game_system_score_accept">Derbyniodd %1$s y sgôr</string>
+    <string name="game_system_score_resume">Ailddechreuodd %1$s chwarae</string>
+    <string name="game_not_found">Heb ddod o hyd i\'r gêm</string>
+    <string name="game_chat_move_played_you">Chwaraeoch %1$s</string>
 </resources>

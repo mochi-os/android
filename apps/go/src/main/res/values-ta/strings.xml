@@ -81,4 +81,6 @@
     <string name="go_score_resume">ஆட்டத்தைத் தொடர</string>
     <string name="go_error_score_resume_failed">ஆட்டத்தைத் தொடர முடியவில்லை</string>
     <string name="go_error_score_accept_failed">மதிப்பெண்ணை ஏற்க முடியவில்லை</string>
+    <string name="go_chat_player_passed">%1$s தவிர்த்தார்</string>
+    <string name="go_chat_you_passed">நீங்கள் தவிர்த்தீர்கள்</string>
 </resources>

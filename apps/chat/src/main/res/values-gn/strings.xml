@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Oĩma</string>
     <string name="chat_encryption_key">Llave jeguerujeyrã</string>
     <string name="chat_encryption_restore">Emoĩ jey</string>
-    <string name="chat_encryption_recovery_refused">Kóva ndaha\'éi nde llave jeguerujeyrã</string>
     <string name="chat_verification_own">Ehechajey ne mba\'e\'oka</string>
     <string name="chat_verification_compare">Ehecha ambue pantállape ojehechápa umi emoji peteĩchagua.</string>
     <string name="chat_verification_requested_own">Peteĩ ne ambue mba\'e\'oka oipota ohechajey kóva.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s oipota nde rehechajey.</string>
     <string name="chat_typing_one">%1$s ohai hína...</string>
     <string name="chat_typing_many">%1$s ohai hína...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s mbohovái</item>
-        <item quantity="other">%1$s mbohovái</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s mbohovái ymaguare</item>
         <item quantity="other">%1$s mbohovái ymaguare</item>
@@ -181,4 +176,15 @@
     <string name="chat_message_earlier">Ñe\'ẽmondo ko cuenta oñembojoapy mboyve Mochi-pe ñemiguáva ha ndaikatúi oñemoñe\'ẽ ko\'ápe</string>
     <string name="chat_message_excluded">Ñemiguáva ambue dispositivo-pe ĝuarãnte</string>
     <string name="chat_setup">Emboheko</string>
+    <string name="chat_jump_bottom">Eho guýpe</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">Eho %1$s ñe\'ẽmondo pyahúpe</item>
+    </plurals>
+    <string name="chat_message_distrusted">Oñemondo peteĩ dispositivo nderejeroviáiva guive</string>
+    <string name="chat_message_mismatched">Oñemondo peteĩ dispositivo ilave ndojojoguáiva guive</string>
+    <string name="chat_list_select">Eiporavo peteĩ chat</string>
+    <string name="chat_message_discard">Mboyke</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Marandu ipukueterei %1$s tai rupi</item>
+    </plurals>
 </resources>

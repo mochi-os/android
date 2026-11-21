@@ -6,6 +6,7 @@
 package org.mochios.android.ui.components
 
 import android.content.Context
+import java.util.concurrent.ConcurrentHashMap
 
 /**
  * Persists the most recently opened item id per feature, so the next launch
@@ -19,8 +20,33 @@ object LastViewedStore {
     /** Special id meaning the feature's all-items aggregate view. */
     const val ALL = "__all__"
 
+    /** The id each feature's router reopened at launch, until its screen asks [reopened]. */
+    private val reopening = ConcurrentHashMap<String, String>()
+
     fun get(context: Context, feature: String): String? =
         prefs(context).getString(feature, null)?.takeIf { it.isNotBlank() }
+
+    /**
+     * The item a router opens at launch: the one last viewed, or [ALL]. Its
+     * screen learns from [reopened] that nobody asked for it this time.
+     */
+    fun restore(context: Context, feature: String): String {
+        val id = get(context, feature) ?: return ALL
+        reopening[feature] = id
+        return id
+    }
+
+    /**
+     * Whether [id] is the item [restore] reopened, rather than one opened from
+     * a link, a notification or the drawer. Answers once: a later opening of
+     * the same item was asked for.
+     */
+    fun reopened(feature: String, id: String): Boolean = reopening.remove(feature, id)
+
+    /** Forget [id], gone from the server, if it is the one stored. */
+    fun drop(context: Context, feature: String, id: String) {
+        if (get(context, feature) == id) clear(context, feature)
+    }
 
     fun set(context: Context, feature: String, id: String) {
         if (id.isBlank()) return

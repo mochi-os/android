@@ -79,8 +79,7 @@ class GoGame private constructor(
 
     /**
      * Place a stone of the current turn; throws [IllegalMoveException] for an
-     * occupied point, ko retake or suicide. Ko is the single recorded ko point
-     * (simple ko, not superko), matching the TS engine.
+     * occupied point, ko retake or suicide (see [isLegal]).
      */
     fun place(row: Int, col: Int): GoGame {
         if (!isLegal(row, col)) {
@@ -153,8 +152,11 @@ class GoGame private constructor(
 
     /**
      * True if placing a stone of the current turn at ([row], [col]) is
-     * legal. Implements bounds, occupancy, ko, suicide and positional-superko
-     * checks.
+     * legal: on the board, on an empty point, not suicide, and not a ko
+     * retake. Ko is checked against the recorded ko point and against the
+     * position before the last move, which a server snapshot leaves as the
+     * only record; no earlier position is compared, so this is the basic ko
+     * rule, not superko.
      */
     fun isLegal(row: Int, col: Int): Boolean {
         // Out of bounds.
@@ -184,10 +186,9 @@ class GoGame private constructor(
         val placedGroup = findGroup(test, row, col)
         if (placedGroup.liberties.isEmpty()) return false
 
-        // Positional superko: the resulting position must not repeat the one
-        // before this move. `previousGrid` is carried for exactly this, and
-        // was read by nothing, so a repeat-position cycle was legal here while
-        // the web engine and the server refused it.
+        // Ko by position: the result must not repeat the position before the
+        // last move. A snapshot from the server clears the ko point, so this
+        // is what refuses the immediate retake there.
         val previous = previousGrid
         if (previous != null && sameGrid(test, previous)) return false
 

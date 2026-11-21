@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Encara no hi ha missatges</string>
     <string name="game_chat_input_placeholder">Escriu un missatge</string>
     <string name="game_chat_send">Envia missatge</string>
-    <string name="game_chat_subject_you">Tu</string>
 
     <string name="common_not_saved">No s\'ha desat</string>
 
@@ -351,4 +350,9 @@
     <string name="sync_conflict">Canviat al servidor</string>
     <string name="sync_missing">Ja no és al servidor</string>
     <string name="sync_refused">Rebutjat pel servidor</string>
+    <string name="game_system_score_agreed">Puntuació acordada</string>
+    <string name="game_system_score_accept">%1$s ha acceptat la puntuació</string>
+    <string name="game_system_score_resume">%1$s ha reprès la partida</string>
+    <string name="game_not_found">No s\'ha trobat la partida</string>
+    <string name="game_chat_move_played_you">Has jugat %1$s</string>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Eñepyrũ jey ñembosarái</string>
     <string name="go_error_score_resume_failed">Ndaikatúi oñepyrũ jey ñembosarái</string>
     <string name="go_error_score_accept_failed">Ndaikatúi oñemoneĩ puntaje</string>
+    <string name="go_chat_player_passed">%1$s ohasa</string>
+    <string name="go_chat_you_passed">Nde rehasa</string>
 </resources>

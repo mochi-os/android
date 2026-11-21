@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Valmis</string>
     <string name="chat_encryption_key">Palautusavain</string>
     <string name="chat_encryption_restore">Palauta</string>
-    <string name="chat_encryption_recovery_refused">Tämä ei ole palautusavaimesi</string>
     <string name="chat_verification_own">Vahvista laitteesi</string>
     <string name="chat_verification_compare">Tarkista, että toisella näytöllä näkyvät samat emojit.</string>
     <string name="chat_verification_requested_own">Toinen laitteesi haluaa vahvistaa tämän laitteen.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s haluaa vahvistaa sinut.</string>
     <string name="chat_typing_one">%1$s kirjoittaa...</string>
     <string name="chat_typing_many">%1$s kirjoittavat...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s vastaus</item>
-        <item quantity="other">%1$s vastausta</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s aiempi vastaus</item>
         <item quantity="other">%1$s aiempaa vastausta</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Viestit ajalta ennen tämän tilin lisäämistä Mochiin ovat salattuja, eikä niitä voi lukea täällä</string>
     <string name="chat_message_excluded">Salattu vain muille laitteille</string>
     <string name="chat_setup">Aseta</string>
+    <string name="chat_jump_bottom">Siirry alas</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Siirry %1$s uuteen viestiin</item>
+        <item quantity="other">Siirry %1$s uuteen viestiin</item>
+    </plurals>
+    <string name="chat_message_distrusted">Lähetetty laitteelta, johon et luota</string>
+    <string name="chat_message_mismatched">Lähetetty laitteelta, jonka avaimet eivät täsmää</string>
+    <string name="chat_list_select">Valitse keskustelu</string>
+    <string name="chat_message_discard">Hylkää</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Viesti on %1$s merkin liian pitkä</item>
+        <item quantity="other">Viesti on %1$s merkkiä liian pitkä</item>
+    </plurals>
 </resources>

@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Gotovo</string>
     <string name="chat_encryption_key">Ključ za oporavak</string>
     <string name="chat_encryption_restore">Vrati</string>
-    <string name="chat_encryption_recovery_refused">To nije vaš ključ za oporavak</string>
     <string name="chat_verification_own">Provjeri svoj uređaj</string>
     <string name="chat_verification_compare">Provjerite pojavljuju li se isti emojiji na drugom zaslonu.</string>
     <string name="chat_verification_requested_own">Jedan od vaših drugih uređaja želi provjeriti ovaj.</string>
@@ -160,11 +159,6 @@
     <string name="chat_verification_requested">%1$s vas želi provjeriti.</string>
     <string name="chat_typing_one">%1$s tipka...</string>
     <string name="chat_typing_many">%1$s tipkaju...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s odgovor</item>
-        <item quantity="few">%1$s odgovora</item>
-        <item quantity="other">%1$s odgovora</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s raniji odgovor</item>
         <item quantity="few">%1$s ranija odgovora</item>
@@ -184,4 +178,19 @@
     <string name="chat_message_earlier">Poruke od prije dodavanja ovog računa u Mochi šifrirane su i ne mogu se ovdje pročitati</string>
     <string name="chat_message_excluded">Šifrirano samo za druge uređaje</string>
     <string name="chat_setup">Postavi</string>
+    <string name="chat_jump_bottom">Skoči na dno</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Skoči na %1$s novu poruku</item>
+        <item quantity="few">Skoči na %1$s nove poruke</item>
+        <item quantity="other">Skoči na %1$s novih poruka</item>
+    </plurals>
+    <string name="chat_message_distrusted">Poslano s uređaja koji ste označili kao nepouzdan</string>
+    <string name="chat_message_mismatched">Poslano s uređaja čiji se ključevi ne podudaraju</string>
+    <string name="chat_list_select">Odaberite razgovor</string>
+    <string name="chat_message_discard">Odbaci</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Poruka je predugačka za %1$s znak</item>
+        <item quantity="few">Poruka je predugačka za %1$s znaka</item>
+        <item quantity="other">Poruka je predugačka za %1$s znakova</item>
+    </plurals>
 </resources>

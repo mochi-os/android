@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Tiada mesej lagi</string>
     <string name="game_chat_input_placeholder">Taip mesej</string>
     <string name="game_chat_send">Hantar mesej</string>
-    <string name="game_chat_subject_you">Anda</string>
 
     <string name="common_not_saved">Tidak disimpan</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Diubah pada pelayan</string>
     <string name="sync_missing">Tiada lagi pada pelayan</string>
     <string name="sync_refused">Ditolak oleh pelayan</string>
+    <string name="game_system_score_agreed">Skor dipersetujui</string>
+    <string name="game_system_score_accept">%1$s menerima skor</string>
+    <string name="game_system_score_resume">%1$s menyambung permainan</string>
+    <string name="game_not_found">Permainan tidak ditemui</string>
+    <string name="game_chat_move_played_you">Anda bermain %1$s</string>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Ath-thòisich an geama</string>
     <string name="go_error_score_resume_failed">Cha b\' urrainn an geama ath-thòiseachadh</string>
     <string name="go_error_score_accept_failed">Cha do ghabh ris an sgòr</string>
+    <string name="go_chat_player_passed">Leig %1$s seachad</string>
+    <string name="go_chat_you_passed">Leig thu seachad</string>
 </resources>

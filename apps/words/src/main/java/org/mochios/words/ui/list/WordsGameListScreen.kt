@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -23,6 +24,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -73,7 +75,6 @@ fun WordsGameListScreen(
     onGameClosed: () -> Unit,
     onNewGame: () -> Unit,
     onOpenNotifications: () -> Unit,
-    onOpenLink: (String) -> Unit = {},
     viewModel: WordsGameListViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsState()
@@ -129,7 +130,6 @@ fun WordsGameListScreen(
     ) {
         if (selectedGameId.isNotEmpty()) {
             WordsGameDetailScreen(
-                gameId = selectedGameId,
                 onBack = onGameClosed,
                 onOpenGame = onGameClick,
                 onOpenNotifications = onOpenNotifications,
@@ -156,7 +156,40 @@ fun WordsGameListScreen(
                     )
                 },
             ) { padding ->
-                Box(modifier = Modifier.fillMaxSize().padding(padding)) {
+                GamesPane(
+                    uiState = uiState,
+                    onRefresh = { viewModel.refresh() },
+                    onRetry = viewModel::load,
+                    onNewGame = onNewGame,
+                    modifier = Modifier.fillMaxSize().padding(padding),
+                )
+            }
+        }
+    }
+}
+
+/**
+ * The pane beside the drawer while no game is open, pulled down to read the
+ * games again as chess and go do. The pull needs scrollable content to reach
+ * it, so the pane is a one-item list filling the screen.
+ */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+internal fun GamesPane(
+    uiState: WordsGameListUiState,
+    onRefresh: () -> Unit,
+    onRetry: () -> Unit,
+    onNewGame: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    PullToRefreshBox(
+        isRefreshing = uiState.isRefreshing,
+        onRefresh = onRefresh,
+        modifier = modifier,
+    ) {
+        LazyColumn(modifier = Modifier.fillMaxSize()) {
+            item {
+                Box(modifier = Modifier.fillParentMaxSize()) {
                     when {
                         uiState.isLoading && uiState.games.isEmpty() -> {
                             Box(
@@ -167,10 +200,7 @@ fun WordsGameListScreen(
                             }
                         }
                         uiState.error != null && uiState.games.isEmpty() -> {
-                            ErrorState(
-                                error = uiState.error!!,
-                                onRetry = viewModel::load,
-                            )
+                            ErrorState(error = uiState.error, onRetry = onRetry)
                         }
                         else -> GamesEmptyPane(
                             hasGames = uiState.games.isNotEmpty(),

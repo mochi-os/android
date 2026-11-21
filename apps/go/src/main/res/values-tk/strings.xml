@@ -81,4 +81,6 @@
     <string name="go_score_resume">Oýny dowam etdir</string>
     <string name="go_error_score_resume_failed">Oýny dowam etdirip bolmady</string>
     <string name="go_error_score_accept_failed">Baly kabul edip bolmady</string>
+    <string name="go_chat_player_passed">%1$s geçdi</string>
+    <string name="go_chat_you_passed">Sen geçdiň</string>
 </resources>

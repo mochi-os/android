@@ -20,4 +20,5 @@
     <string name="go_new_game_komi_label">Komi</string>
     <string name="go_new_game_komi_field_label">Komi</string>
 
+    <string name="go_chat_player_passed">%1$s pasó</string>
 </resources>

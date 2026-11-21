@@ -7,6 +7,8 @@ package org.mochios.words.ui
 
 import androidx.compose.ui.test.junit4.createComposeRule
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -46,8 +48,10 @@ class CountFormatTest {
         rule.setContent { model = buildHeaderModel(game, "me") }
         rule.waitForIdle()
         val header = model!!
-        assertEquals("86 قطعة متبقية", header.tilesLeftLabel)
-        assertEquals("3 لاعبون", header.playersLabel)
+        assertEquals("86", header.tilesLeft)
+        // The sentence's words are the catalogue's; its number is in plain digits.
+        assertTrue(header.playersLabel!!.contains("3"))
+        assertFalse(header.playersLabel!!.contains("٣"))
         assertEquals("لاعب 3", header.players.first { player -> player.playerNumber == 3 }.label)
     }
 }

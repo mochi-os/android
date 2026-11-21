@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Tukuyata</string>
     <string name="chat_encryption_key">Qhispiyaña llave</string>
     <string name="chat_encryption_restore">Kutiyama</string>
-    <string name="chat_encryption_recovery_refused">Akax janiw qhispiyaña llavemäkiti</string>
     <string name="chat_verification_own">Dispositivoma chiqanchaña</string>
     <string name="chat_verification_compare">Yaqha pantallan kikpa emojinakax uñstaski uk uñakipam.</string>
     <string name="chat_verification_requested_own">Mä yaqha dispositivomaw akar chiqanchañ muni.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s jumar chiqanchañ muni.</string>
     <string name="chat_typing_one">%1$s qillqaskiwa...</string>
     <string name="chat_typing_many">%1$s qillqasipkiwa...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s jaysawi</item>
-        <item quantity="other">%1$s jaysawinaka</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s nayra jaysawi</item>
         <item quantity="other">%1$s nayra jaysawinaka</item>
@@ -181,4 +176,15 @@
     <string name="chat_message_earlier">Aka cuenta Mochi ukar yapxatañkama mensajenakax imantatawa, akanx janiw ullañjamäkiti</string>
     <string name="chat_message_excluded">Yaqha dispositivonakatakikiw imantata</string>
     <string name="chat_setup">Wakichaña</string>
+    <string name="chat_jump_bottom">Aynacharu saraña</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">%1$s machaq mensajenakaru saraña</item>
+    </plurals>
+    <string name="chat_message_distrusted">Jan atinisitam aparatut apayata</string>
+    <string name="chat_message_mismatched">Llavenakapax jan kikpakiti uka aparatut apayata</string>
+    <string name="chat_list_select">Mä chat ajllim</string>
+    <string name="chat_message_discard">Jaqsuña</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">Yatiyawix %1$s qillqanakampi sinti jach\'awa</item>
+    </plurals>
 </resources>

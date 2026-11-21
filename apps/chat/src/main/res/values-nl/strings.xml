@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Klaar</string>
     <string name="chat_encryption_key">Herstelsleutel</string>
     <string name="chat_encryption_restore">Herstellen</string>
-    <string name="chat_encryption_recovery_refused">Dat is niet je herstelsleutel</string>
     <string name="chat_verification_own">Je apparaat verifiëren</string>
     <string name="chat_verification_compare">Controleer of dezelfde emoji op het andere scherm verschijnen.</string>
     <string name="chat_verification_requested_own">Een ander apparaat van je wil dit apparaat verifiëren.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s wil je verifiëren.</string>
     <string name="chat_typing_one">%1$s typt...</string>
     <string name="chat_typing_many">%1$s typen...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s reactie</item>
-        <item quantity="other">%1$s reacties</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s eerdere reactie</item>
         <item quantity="other">%1$s eerdere reacties</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Berichten van voordat dit account aan Mochi werd toegevoegd zijn versleuteld en kunnen hier niet worden gelezen</string>
     <string name="chat_message_excluded">Alleen versleuteld voor andere apparaten</string>
     <string name="chat_setup">Instellen</string>
+    <string name="chat_jump_bottom">Naar beneden</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Ga naar %1$s nieuw bericht</item>
+        <item quantity="other">Ga naar %1$s nieuwe berichten</item>
+    </plurals>
+    <string name="chat_message_distrusted">Verzonden vanaf een apparaat dat je niet vertrouwt</string>
+    <string name="chat_message_mismatched">Verzonden vanaf een apparaat waarvan de sleutels niet overeenkomen</string>
+    <string name="chat_list_select">Kies een chat</string>
+    <string name="chat_message_discard">Verwerpen</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Bericht is %1$s teken te lang</item>
+        <item quantity="other">Bericht is %1$s tekens te lang</item>
+    </plurals>
 </resources>

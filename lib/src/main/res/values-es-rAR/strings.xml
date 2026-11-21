@@ -34,7 +34,6 @@
     <string name="settings_radius_none">Ninguno</string>
     <string name="settings_background_off">Ninguno</string>
     <string name="settings_title">Configuración</string>
-    <string name="game_chat_subject_you">Vos</string>
     <string name="auth_privacy_public">Público</string>
     <string name="auth_privacy_private">Privado</string>
     <string name="common_notifications">Notificaciones</string>
@@ -281,4 +280,5 @@
     <string name="person_unknown">Desconocido</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
+    <string name="game_not_found">No se encontró la partida</string>
 </resources>

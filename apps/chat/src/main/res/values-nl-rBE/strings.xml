@@ -139,7 +139,6 @@
     <string name="chat_encryption_done">Klaar</string>
     <string name="chat_encryption_key">Herstelsleutel</string>
     <string name="chat_encryption_restore">Herstellen</string>
-    <string name="chat_encryption_recovery_refused">Dat is niet uw herstelsleutel</string>
     <string name="chat_verification_own">Uw apparaat verifiëren</string>
     <string name="chat_verification_compare">Controleer of dezelfde emoji op het andere scherm verschijnen.</string>
     <string name="chat_verification_requested_own">Een ander apparaat van u wil dit apparaat verifiëren.</string>
@@ -158,4 +157,13 @@
     <string name="chat_message_earlier">Berichten van voordat dit account aan Mochi werd toegevoegd zijn versleuteld en kunnen hier niet worden gelezen</string>
     <string name="chat_message_excluded">Alleen versleuteld voor andere apparaten</string>
     <string name="chat_setup">Instellen</string>
+    <string name="chat_jump_bottom">Spring naar beneden</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Spring naar %1$s nieuw bericht</item>
+        <item quantity="other">Spring naar %1$s nieuwe berichten</item>
+    </plurals>
+    <string name="chat_message_distrusted">Verzonden vanaf een apparaat dat u niet vertrouwt</string>
+    <string name="chat_message_mismatched">Verzonden vanaf een apparaat waarvan de sleutels niet overeenkomen</string>
+    <string name="chat_list_select">Selecteer een chat</string>
+    <string name="chat_message_discard">Verwerpen</string>
 </resources>

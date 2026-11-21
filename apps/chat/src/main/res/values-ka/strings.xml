@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">მზადაა</string>
     <string name="chat_encryption_key">აღდგენის გასაღები</string>
     <string name="chat_encryption_restore">აღდგენა</string>
-    <string name="chat_encryption_recovery_refused">ეს არ არის თქვენი აღდგენის გასაღები</string>
     <string name="chat_verification_own">თქვენი მოწყობილობის შემოწმება</string>
     <string name="chat_verification_compare">დარწმუნდით, რომ მეორე ეკრანზე იგივე ემოჯი ჩანს.</string>
     <string name="chat_verification_requested_own">თქვენს სხვა მოწყობილობას სურს ამ მოწყობილობის შემოწმება.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s-ს სურს თქვენი შემოწმება.</string>
     <string name="chat_typing_one">%1$s ბეჭდავს...</string>
     <string name="chat_typing_many">%1$s ბეჭდავენ...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s პასუხი</item>
-        <item quantity="other">%1$s პასუხი</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ადრინდელი პასუხი</item>
         <item quantity="other">%1$s ადრინდელი პასუხი</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">შეტყობინებები ამ ანგარიშის Mochi-ში დამატებამდე დაშიფრულია და აქ ვერ წაიკითხება</string>
     <string name="chat_message_excluded">დაშიფრულია მხოლოდ სხვა მოწყობილობებისთვის</string>
     <string name="chat_setup">დაყენება</string>
+    <string name="chat_jump_bottom">ბოლოში გადასვლა</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s ახალ შეტყობინებაზე გადასვლა</item>
+        <item quantity="other">%1$s ახალ შეტყობინებაზე გადასვლა</item>
+    </plurals>
+    <string name="chat_message_distrusted">გაგზავნილია მოწყობილობიდან, რომელიც არასანდოდ მონიშნეთ</string>
+    <string name="chat_message_mismatched">გაგზავნილია მოწყობილობიდან, რომლის გასაღებები არ ემთხვევა</string>
+    <string name="chat_list_select">ჩატის არჩევა</string>
+    <string name="chat_message_discard">გადაგდება</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">შეტყობინება ლიმიტს %1$s სიმბოლოთი აღემატება</item>
+        <item quantity="other">შეტყობინება ლიმიტს %1$s სიმბოლოთი აღემატება</item>
+    </plurals>
 </resources>

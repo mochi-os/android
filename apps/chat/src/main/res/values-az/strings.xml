@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Hazırdır</string>
     <string name="chat_encryption_key">Bərpa açarı</string>
     <string name="chat_encryption_restore">Bərpa et</string>
-    <string name="chat_encryption_recovery_refused">Bu sizin bərpa açarınız deyil</string>
     <string name="chat_verification_own">Cihazınızı təsdiqləyin</string>
     <string name="chat_verification_compare">Digər ekranda eyni emojilərin göründüyünü yoxlayın.</string>
     <string name="chat_verification_requested_own">Digər cihazlarınızdan biri bu cihazı təsdiqləmək istəyir.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s sizi təsdiqləmək istəyir.</string>
     <string name="chat_typing_one">%1$s yazır...</string>
     <string name="chat_typing_many">%1$s yazır...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s cavab</item>
-        <item quantity="other">%1$s cavab</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s əvvəlki cavab</item>
         <item quantity="other">%1$s əvvəlki cavab</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Bu hesab Mochi-yə əlavə edilməzdən əvvəlki mesajlar şifrələnib və burada oxuna bilməz</string>
     <string name="chat_message_excluded">Yalnız digər cihazlar üçün şifrələnib</string>
     <string name="chat_setup">Quraşdır</string>
+    <string name="chat_jump_bottom">Aşağı keç</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s yeni mesaja keç</item>
+        <item quantity="other">%1$s yeni mesaja keç</item>
+    </plurals>
+    <string name="chat_message_distrusted">Etibar etmədiyiniz cihazdan göndərilib</string>
+    <string name="chat_message_mismatched">Açarları uyğun gəlməyən cihazdan göndərilib</string>
+    <string name="chat_list_select">Söhbət seç</string>
+    <string name="chat_message_discard">At</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Mesaj limitdən %1$s simvol uzundur</item>
+        <item quantity="other">Mesaj limitdən %1$s simvol uzundur</item>
+    </plurals>
 </resources>

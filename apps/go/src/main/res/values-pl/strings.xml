@@ -81,4 +81,6 @@
     <string name="go_score_resume">Wznów grę</string>
     <string name="go_error_score_resume_failed">Nie udało się wznowić gry</string>
     <string name="go_error_score_accept_failed">Nie udało się zaakceptować wyniku</string>
+    <string name="go_chat_player_passed">%1$s spasował</string>
+    <string name="go_chat_you_passed">Spasowałeś</string>
 </resources>

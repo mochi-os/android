@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">完了</string>
     <string name="chat_encryption_key">リカバリーキー</string>
     <string name="chat_encryption_restore">復元</string>
-    <string name="chat_encryption_recovery_refused">これはあなたのリカバリーキーではありません</string>
     <string name="chat_verification_own">デバイスを認証</string>
     <string name="chat_verification_compare">もう一方の画面に同じ絵文字が表示されていることを確認してください。</string>
     <string name="chat_verification_requested_own">あなたの別のデバイスがこのデバイスの認証を求めています。</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s があなたの認証を求めています。</string>
     <string name="chat_typing_one">%1$s が入力中...</string>
     <string name="chat_typing_many">%1$s が入力中...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s件の返信</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">以前の返信%1$s件</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">このアカウントを Mochi に追加する前のメッセージは暗号化されているため、ここでは読めません</string>
     <string name="chat_message_excluded">他のデバイス専用に暗号化されています</string>
     <string name="chat_setup">設定</string>
+    <string name="chat_jump_bottom">一番下へ移動</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">%1$s件の新着メッセージへ移動</item>
+    </plurals>
+    <string name="chat_message_distrusted">信頼しないと設定したデバイスから送信されました</string>
+    <string name="chat_message_mismatched">鍵が一致しないデバイスから送信されました</string>
+    <string name="chat_list_select">チャットを選択</string>
+    <string name="chat_message_discard">破棄</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">メッセージが%1$s文字超過しています</item>
+    </plurals>
 </resources>

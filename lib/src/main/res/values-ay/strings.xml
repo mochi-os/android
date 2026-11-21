@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Janira mensajenak</string>
     <string name="game_chat_input_placeholder">Mä mensaje qillqam</string>
     <string name="game_chat_send">Mensaje apayaña</string>
-    <string name="game_chat_subject_you">Juma</string>
 
 
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Servidoran mayjt\'ayatawa</string>
     <string name="sync_missing">Janiw servidoran utjxiti</string>
     <string name="sync_refused">Servidorax janiw katuqkiti</string>
+    <string name="game_system_score_agreed">Puntaje amtasitawa</string>
+    <string name="game_system_score_accept">%1$s puntaje iyawsawayi</string>
+    <string name="game_system_score_resume">%1$s anatx wasitat qalltäna</string>
+    <string name="game_not_found">Anata janiw jikxatatäkiti</string>
+    <string name="game_chat_move_played_you">Jumax %1$s anatawayta</string>
 </resources>

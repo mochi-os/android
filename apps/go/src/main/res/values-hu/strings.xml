@@ -81,4 +81,6 @@
     <string name="go_score_resume">Játék folytatása</string>
     <string name="go_error_score_resume_failed">Nem sikerült folytatni a játékot</string>
     <string name="go_error_score_accept_failed">Nem sikerült elfogadni a pontszámot</string>
+    <string name="go_chat_player_passed">%1$s passzolt</string>
+    <string name="go_chat_you_passed">Ön passzolt</string>
 </resources>

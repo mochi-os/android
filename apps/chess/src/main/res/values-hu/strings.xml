@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Döntetlen</string>
     <string name="chess_status_check_your_move">Sakk — Ön következik</string>
     <string name="chess_status_your_move">Az ön lépése</string>
-    <string name="chess_move_subject_you">Ön</string>
     <string name="chess_promotion_title">Átváltoztatás:</string>
 
     <string name="chess_resign_message">Biztosan feladja? %1$s fog nyerni.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Világos %1$s</string>
     <string name="chess_piece_black">Sötét %1$s</string>
+    <string name="chess_move_played_you">Ön lépett: %1$s</string>
+    <string name="chess_move_capture_you">Ön elvette: %1$s</string>
 </resources>

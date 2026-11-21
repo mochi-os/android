@@ -81,4 +81,6 @@
     <string name="go_score_resume">Anata sarantayaña</string>
     <string name="go_error_score_resume_failed">Anataxa mayamp qalltaña janiw atkiti</string>
     <string name="go_error_score_accept_failed">Puntaje iyaw saña janiw atkiti</string>
+    <string name="go_chat_player_passed">%1$s pasiwa</string>
+    <string name="go_chat_you_passed">Jumax pasawayta</string>
 </resources>

@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Ende pa mesazhe</string>
     <string name="game_chat_input_placeholder">Shkruaj një mesazh</string>
     <string name="game_chat_send">Dërgo mesazhin</string>
-    <string name="game_chat_subject_you">Ti</string>
 
     <string name="common_not_saved">I paruajtur</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Ndryshuar në server</string>
     <string name="sync_missing">Nuk është më në server</string>
     <string name="sync_refused">Refuzuar nga serveri</string>
+    <string name="game_system_score_agreed">Rezultati u miratua</string>
+    <string name="game_system_score_accept">%1$s pranoi rezultatin</string>
+    <string name="game_system_score_resume">%1$s vazhdoi lojën</string>
+    <string name="game_not_found">Loja nuk u gjet</string>
+    <string name="game_chat_move_played_you">Ti luajte %1$s</string>
 </resources>

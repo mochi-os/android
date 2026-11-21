@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Tasapeli</string>
     <string name="chess_status_check_your_move">Šakki — sinun vuorosi</string>
     <string name="chess_status_your_move">Sinun siirtosi</string>
-    <string name="chess_move_subject_you">Sinä</string>
     <string name="chess_promotion_title">Korota:</string>
 
     <string name="chess_resign_message">Haluatko varmasti luovuttaa? %1$s voittaa pelin.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Valkoinen %1$s</string>
     <string name="chess_piece_black">Musta %1$s</string>
+    <string name="chess_move_played_you">Pelasit %1$s</string>
+    <string name="chess_move_capture_you">Otit %1$s</string>
 </resources>

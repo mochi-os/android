@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Taules</string>
     <string name="chess_status_check_your_move">Escac — el teu moviment</string>
     <string name="chess_status_your_move">El teu torn</string>
-    <string name="chess_move_subject_you">Tu</string>
     <string name="chess_promotion_title">Promociona a:</string>
 
     <string name="chess_resign_message">Segur que vols rendir-te? %1$s guanyarà la partida.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">%1$s blanca</string>
     <string name="chess_piece_black">Negres %1$s</string>
+    <string name="chess_move_played_you">Has jugat %1$s</string>
+    <string name="chess_move_capture_you">Has capturat %1$s</string>
 </resources>

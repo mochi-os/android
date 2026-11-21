@@ -78,4 +78,6 @@
     <string name="go_score_resume">Продолжи ја играта</string>
     <string name="go_error_score_resume_failed">Неуспешно продолжување на играта</string>
     <string name="go_error_score_accept_failed">Неуспешно прифаќање на резултатот</string>
+    <string name="go_chat_player_passed">%1$s пропушти потег</string>
+    <string name="go_chat_you_passed">Вие преминавте</string>
 </resources>

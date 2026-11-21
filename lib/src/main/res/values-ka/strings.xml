@@ -117,7 +117,6 @@
     <string name="game_chat_empty">შეტყობინებები ჯერ არ არის</string>
     <string name="game_chat_input_placeholder">ჩაწერეთ შეტყობინება</string>
     <string name="game_chat_send">შეტყობინების გაგზავნა</string>
-    <string name="game_chat_subject_you">თქვენ</string>
 
     <string name="common_not_saved">არ შენახულა</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">შეიცვალა სერვერზე</string>
     <string name="sync_missing">აღარ არის სერვერზე</string>
     <string name="sync_refused">სერვერმა უარყო</string>
+    <string name="game_system_score_agreed">ანგარიში შეთანხმებულია</string>
+    <string name="game_system_score_accept">%1$s-მა ანგარიში მიიღო</string>
+    <string name="game_system_score_resume">%1$s-მა თამაში განაახლა</string>
+    <string name="game_not_found">თამაში ვერ მოიძებნა</string>
+    <string name="game_chat_move_played_you">თქვენ ითამაშეთ %1$s</string>
 </resources>

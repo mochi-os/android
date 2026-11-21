@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Amma taphni hin jiru.</string>
     <string name="words_new_game_choose_opponents">Mormitoota filadhu</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s taphattoota</string>
     <string name="words_new_game_no_friends_subtitle">Taphachuu jalqabuuf appii Namoota keessatti hiriyoota dabali.</string>
     <string name="words_detail_title">Tapha</string>
     <string name="words_detail_status_opponent_move">Tarkaanfii %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s mo\'ata</string>
     <string name="words_detail_player_fallback">Taphataa %1$s</string>
-    <string name="words_detail_player_count">%1$s taphattoota</string>
-    <string name="words_detail_label_tiles_left">Raakiwwan %1$s hafan</string>
     <string name="words_detail_action_open_chat">Chaattii bani</string>
     <string name="words_detail_action_more">Gochaalee taphaa</string>
     <string name="words_detail_exchange_count">Jijjiirraa (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Jechi sirrii ta\'e hin uumamne</string>
     <string name="words_validation_offline">Mirkaneessuun offline — amma illee galchuu dandeessa.</string>
     <string name="words_validation_unknown_words">Jechoota hin beekamne qabata. Amma illee galchuu dandeessa.</string>
+    <string name="words_detail_label_tiles">Raakiwwan hafan</string>
+    <string name="words_detail_submit_score">Galchaa +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3J</string>
+    <string name="words_board_premium_double_word">2J</string>
+    <string name="words_board_premium_triple_letter">3Q</string>
+    <string name="words_board_premium_double_letter">2Q</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s taphataa</item>
+        <item quantity="other">%1$s taphattoota</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s taphataa</item>
+        <item quantity="other">%1$s taphattoota</item>
+    </plurals>
 </resources>

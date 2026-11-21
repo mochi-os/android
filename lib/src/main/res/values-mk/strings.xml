@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Сè уште нема пораки</string>
     <string name="game_chat_input_placeholder">Внесете порака</string>
     <string name="game_chat_send">Испрати порака</string>
-    <string name="game_chat_subject_you">Вие</string>
 
     <string name="common_not_saved">Не е зачувано</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Изменето на серверот</string>
     <string name="sync_missing">Повеќе не е на серверот</string>
     <string name="sync_refused">Одбиено од серверот</string>
+    <string name="game_system_score_agreed">Резултатот е договорен</string>
+    <string name="game_system_score_accept">%1$s го прифати резултатот</string>
+    <string name="game_system_score_resume">%1$s ја продолжи играта</string>
+    <string name="game_not_found">Играта не е пронајдена</string>
+    <string name="game_chat_move_played_you">Вие игравте %1$s</string>
 </resources>

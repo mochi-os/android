@@ -81,4 +81,6 @@
     <string name="go_score_resume">대국 재개</string>
     <string name="go_error_score_resume_failed">대국 재개에 실패했어요</string>
     <string name="go_error_score_accept_failed">점수 수락에 실패했어요</string>
+    <string name="go_chat_player_passed">%1$s님이 패스했어요</string>
+    <string name="go_chat_you_passed">본인이 패스했습니다</string>
 </resources>

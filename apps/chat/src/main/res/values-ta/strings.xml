@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">முடிந்தது</string>
     <string name="chat_encryption_key">மீட்பு விசை</string>
     <string name="chat_encryption_restore">மீட்டெடு</string>
-    <string name="chat_encryption_recovery_refused">இது உங்கள் மீட்பு விசை அல்ல</string>
     <string name="chat_verification_own">உங்கள் சாதனத்தைச் சரிபார்</string>
     <string name="chat_verification_compare">மற்ற திரையில் அதே ஈமோஜிகள் தோன்றுகின்றனவா எனச் சரிபாருங்கள்.</string>
     <string name="chat_verification_requested_own">உங்கள் மற்றொரு சாதனம் இதைச் சரிபார்க்க விரும்புகிறது.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s உங்களைச் சரிபார்க்க விரும்புகிறார்.</string>
     <string name="chat_typing_one">%1$s தட்டச்சு செய்கிறார்...</string>
     <string name="chat_typing_many">%1$s தட்டச்சு செய்கிறார்கள்...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s பதில்</item>
-        <item quantity="other">%1$s பதில்கள்</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s முந்தைய பதில்</item>
         <item quantity="other">%1$s முந்தைய பதில்கள்</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">இந்தக் கணக்கு Mochi-இல் சேர்க்கப்படுவதற்கு முந்தைய செய்திகள் மறையாக்கப்பட்டுள்ளன, அவற்றை இங்கே படிக்க முடியாது</string>
     <string name="chat_message_excluded">பிற சாதனங்களுக்கு மட்டும் மறையாக்கப்பட்டது</string>
     <string name="chat_setup">அமைக்க</string>
+    <string name="chat_jump_bottom">கீழே செல்</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s புதிய செய்திக்குச் செல்</item>
+        <item quantity="other">%1$s புதிய செய்திகளுக்குச் செல்</item>
+    </plurals>
+    <string name="chat_message_distrusted">நீங்கள் நம்பகமற்றதாகக் குறித்த சாதனத்திலிருந்து அனுப்பப்பட்டது</string>
+    <string name="chat_message_mismatched">விசைகள் பொருந்தாத சாதனத்திலிருந்து அனுப்பப்பட்டது</string>
+    <string name="chat_list_select">ஒரு அரட்டையை தேர்ந்தெடு</string>
+    <string name="chat_message_discard">நிராகரி</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">செய்தி %1$s எழுத்து அதிகமாக உள்ளது</item>
+        <item quantity="other">செய்தி %1$s எழுத்துகள் அதிகமாக உள்ளன</item>
+    </plurals>
 </resources>

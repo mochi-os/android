@@ -32,7 +32,6 @@
     <string name="chess_status_draw">Реми</string>
     <string name="chess_status_check_your_move">Шах — вашият ход</string>
     <string name="chess_status_your_move">Вашият ход</string>
-    <string name="chess_move_subject_you">Вие</string>
     <string name="chess_promotion_title">Повиши до:</string>
 
     <string name="chess_resign_message">Сигурни ли сте, че искате да се откажете? %1$s ще спечели играта.</string>
@@ -64,4 +63,6 @@
 
     <string name="chess_piece_white">Бели %1$s</string>
     <string name="chess_piece_black">Черен %1$s</string>
+    <string name="chess_move_played_you">Изиграхте %1$s</string>
+    <string name="chess_move_capture_you">Взехте %1$s</string>
 </resources>

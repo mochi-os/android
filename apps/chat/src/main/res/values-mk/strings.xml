@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Готово</string>
     <string name="chat_encryption_key">Клуч за обновување</string>
     <string name="chat_encryption_restore">Врати</string>
-    <string name="chat_encryption_recovery_refused">Ова не е вашиот клуч за обновување</string>
     <string name="chat_verification_own">Потврдете го вашиот уред</string>
     <string name="chat_verification_compare">Проверете дали истите емоџи се појавуваат на другиот екран.</string>
     <string name="chat_verification_requested_own">Друг од вашите уреди сака да го потврди овој.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s сака да ве потврди.</string>
     <string name="chat_typing_one">%1$s пишува...</string>
     <string name="chat_typing_many">%1$s пишуваат...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s одговор</item>
-        <item quantity="other">%1$s одговори</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s претходен одговор</item>
         <item quantity="other">%1$s претходни одговори</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Пораките од пред оваа сметка да биде додадена во Mochi се шифрирани и не можат да се прочитаат тука</string>
     <string name="chat_message_excluded">Шифрирано само за други уреди</string>
     <string name="chat_setup">Поставете</string>
+    <string name="chat_jump_bottom">Скокни до дното</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Скокни до %1$s нова порака</item>
+        <item quantity="other">Скокни до %1$s нови пораки</item>
+    </plurals>
+    <string name="chat_message_distrusted">Испратено од уред што го означивте како недоверлив</string>
+    <string name="chat_message_mismatched">Испратено од уред чии клучеви не се совпаѓаат</string>
+    <string name="chat_list_select">Изберете разговор</string>
+    <string name="chat_message_discard">Отфрли</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Пораката е подолга за %1$s знак</item>
+        <item quantity="other">Пораката е подолга за %1$s знаци</item>
+    </plurals>
 </resources>

@@ -78,4 +78,6 @@
     <string name="go_score_resume">Sambung semula permainan</string>
     <string name="go_error_score_resume_failed">Gagal menyambung semula permainan</string>
     <string name="go_error_score_accept_failed">Gagal menerima skor</string>
+    <string name="go_chat_player_passed">%1$s melepasi giliran</string>
+    <string name="go_chat_you_passed">Anda melepaskan giliran</string>
 </resources>

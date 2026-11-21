@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Ei vielä viestejä</string>
     <string name="game_chat_input_placeholder">Kirjoita viesti</string>
     <string name="game_chat_send">Lähetä viesti</string>
-    <string name="game_chat_subject_you">Sinä</string>
 
     <string name="common_not_saved">Ei tallennettu</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Muutettu palvelimella</string>
     <string name="sync_missing">Ei enää palvelimella</string>
     <string name="sync_refused">Palvelin hylkäsi</string>
+    <string name="game_system_score_agreed">Pisteistä sovittu</string>
+    <string name="game_system_score_accept">%1$s hyväksyi pisteet</string>
+    <string name="game_system_score_resume">%1$s jatkoi peliä</string>
+    <string name="game_not_found">Peliä ei löytynyt</string>
+    <string name="game_chat_move_played_you">Pelasit %1$s</string>
 </resources>

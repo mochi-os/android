@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Δεν υπάρχουν ακόμη μηνύματα</string>
     <string name="game_chat_input_placeholder">Πληκτρολογήστε ένα μήνυμα</string>
     <string name="game_chat_send">Αποστολή μηνύματος</string>
-    <string name="game_chat_subject_you">Εσείς</string>
 
     <string name="common_not_saved">Δεν αποθηκεύτηκε</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Άλλαξε στον διακομιστή</string>
     <string name="sync_missing">Δεν υπάρχει πλέον στον διακομιστή</string>
     <string name="sync_refused">Απορρίφθηκε από τον διακομιστή</string>
+    <string name="game_system_score_agreed">Το σκορ συμφωνήθηκε</string>
+    <string name="game_system_score_accept">Ο/Η %1$s αποδέχτηκε το σκορ</string>
+    <string name="game_system_score_resume">Ο/Η %1$s συνέχισε το παιχνίδι</string>
+    <string name="game_not_found">Το παιχνίδι δεν βρέθηκε</string>
+    <string name="game_chat_move_played_you">Παίξατε %1$s</string>
 </resources>

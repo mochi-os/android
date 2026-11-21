@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">పూర్తయింది</string>
     <string name="chat_encryption_key">రికవరీ కీ</string>
     <string name="chat_encryption_restore">పునరుద్ధరించండి</string>
-    <string name="chat_encryption_recovery_refused">ఇది మీ రికవరీ కీ కాదు</string>
     <string name="chat_verification_own">మీ పరికరాన్ని ధృవీకరించండి</string>
     <string name="chat_verification_compare">అవే ఎమోజీలు మరొక స్క్రీన్‌పై కనిపిస్తున్నాయో లేదో తనిఖీ చేయండి.</string>
     <string name="chat_verification_requested_own">మీ ఇతర పరికరాల్లో ఒకటి దీనిని ధృవీకరించాలనుకుంటోంది.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s మిమ్మల్ని ధృవీకరించాలనుకుంటున్నారు.</string>
     <string name="chat_typing_one">%1$s టైప్ చేస్తున్నారు...</string>
     <string name="chat_typing_many">%1$s టైప్ చేస్తున్నారు...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s జవాబు</item>
-        <item quantity="other">%1$s జవాబులు</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s మునుపటి జవాబు</item>
         <item quantity="other">%1$s మునుపటి జవాబులు</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">ఈ ఖాతాను Mochiలో జోడించడానికి ముందు వచ్చిన సందేశాలు ఎన్‌క్రిప్ట్ చేయబడ్డాయి, వాటిని ఇక్కడ చదవలేరు</string>
     <string name="chat_message_excluded">ఇతర పరికరాల కోసం మాత్రమే ఎన్‌క్రిప్ట్ చేయబడింది</string>
     <string name="chat_setup">సెటప్ చేయండి</string>
+    <string name="chat_jump_bottom">కిందికి వెళ్లండి</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s కొత్త సందేశానికి వెళ్లండి</item>
+        <item quantity="other">%1$s కొత్త సందేశాలకు వెళ్లండి</item>
+    </plurals>
+    <string name="chat_message_distrusted">మీరు విశ్వసించని పరికరం నుండి పంపబడింది</string>
+    <string name="chat_message_mismatched">కీలు సరిపోలని పరికరం నుండి పంపబడింది</string>
+    <string name="chat_list_select">ఒక చాట్‌ను ఎంచుకోండి</string>
+    <string name="chat_message_discard">విస్మరించు</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">సందేశం %1$s అక్షరం ఎక్కువగా ఉంది</item>
+        <item quantity="other">సందేశం %1$s అక్షరాలు ఎక్కువగా ఉంది</item>
+    </plurals>
 </resources>

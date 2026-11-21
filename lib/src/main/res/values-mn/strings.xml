@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Зурвас алга</string>
     <string name="game_chat_input_placeholder">Зурвас бичих</string>
     <string name="game_chat_send">Зурвас илгээх</string>
-    <string name="game_chat_subject_you">Та</string>
 
     <string name="common_not_saved">Хадгалаагүй</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Сервер дээр өөрчлөгдсөн</string>
     <string name="sync_missing">Сервер дээр байхгүй болсон</string>
     <string name="sync_refused">Сервер татгалзсан</string>
+    <string name="game_system_score_agreed">Оноогоор тохиролцсон</string>
+    <string name="game_system_score_accept">%1$s оноог хүлээн зөвшөөрлөө</string>
+    <string name="game_system_score_resume">%1$s тоглоомоо үргэлжлүүллээ</string>
+    <string name="game_not_found">Тоглоом олдсонгүй</string>
+    <string name="game_chat_move_played_you">Та %1$s-г тоглосон</string>
 </resources>

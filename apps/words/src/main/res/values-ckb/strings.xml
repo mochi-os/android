@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">هێشتا هیچ یارییەک نییە.</string>
     <string name="words_new_game_choose_opponents">بەرامبەرەکان هەڵبژێرە</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s یاریزان</string>
     <string name="words_new_game_no_friends_subtitle">بۆ دەستپێکردنی یاری، هاوڕێ زیاد بکە لە ئەپی خەڵک.</string>
     <string name="words_detail_title">یاری</string>
     <string name="words_detail_status_opponent_move">نۆرەی %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s بردیەوە</string>
     <string name="words_detail_player_fallback">یاریزانی %1$s</string>
-    <string name="words_detail_player_count">%1$s یاریزان</string>
-    <string name="words_detail_label_tiles_left">%1$s پارچە ماوە</string>
     <string name="words_detail_action_open_chat">کردنەوەی گفتوگۆ</string>
     <string name="words_detail_action_more">کردارەکانی یاری</string>
     <string name="words_detail_exchange_count">گۆڕینەوە (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">هیچ وشەیەکی دروست پێکنەهات</string>
     <string name="words_validation_offline">پشتڕاستکردنەوە بێ ئینتەرنێتە — هێشتا دەتوانیت بینێریت.</string>
     <string name="words_validation_unknown_words">وشەی نەناسراوی تێدایە. هێشتا دەتوانیت بینێریت.</string>
+    <string name="words_detail_label_tiles">پارچە ماوەکان</string>
+    <string name="words_detail_submit_score">ناردن +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">و×3</string>
+    <string name="words_board_premium_double_word">و×2</string>
+    <string name="words_board_premium_triple_letter">پ×3</string>
+    <string name="words_board_premium_double_letter">پ×2</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s یاریزان</item>
+        <item quantity="other">%1$s یاریزان</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s یاریزان</item>
+        <item quantity="other">%1$s یاریزان</item>
+    </plurals>
 </resources>

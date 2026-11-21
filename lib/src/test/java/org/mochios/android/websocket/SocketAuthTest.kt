@@ -84,7 +84,7 @@ class SocketAuthTest {
             }
         }
         server.start()
-        socket = MochiWebSocket(OkHttpClient(), Gson(), session)
+        socket = MochiWebSocket(OkHttpClient(), Gson(), session, deliver = Runnable::run)
     }
 
     @After
@@ -157,7 +157,7 @@ class SocketAuthTest {
             override fun loadForRequest(url: HttpUrl): List<Cookie> =
                 listOf(Cookie.Builder().domain(url.host).path("/").name("session").value("signed-in").build())
         }
-        val jarred = MochiWebSocket(OkHttpClient.Builder().cookieJar(signedIn).build(), Gson(), session)
+        val jarred = MochiWebSocket(OkHttpClient.Builder().cookieJar(signedIn).build(), Gson(), session, deliver = Runnable::run)
         try {
             val cookies = ConcurrentLinkedQueue<String>()
             jarred.subscribe(url(), "unifiedpush", token = "fresh", account = "a2") {}

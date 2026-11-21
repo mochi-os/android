@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Inga partier än.</string>
     <string name="words_new_game_choose_opponents">Välj motståndare</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">%1$s spelare</string>
     <string name="words_new_game_no_friends_subtitle">Lägg till vänner i Personer-appen för att börja spela.</string>
     <string name="words_detail_title">Parti</string>
     <string name="words_detail_status_opponent_move">%1$ss tur</string>
     <string name="words_detail_status_winner_wins">%1$s vinner</string>
     <string name="words_detail_player_fallback">Spelare %1$s</string>
-    <string name="words_detail_player_count">%1$s spelare</string>
-    <string name="words_detail_label_tiles_left">%1$s brickor kvar</string>
     <string name="words_detail_action_open_chat">Öppna chatt</string>
     <string name="words_detail_action_more">Partiåtgärder</string>
     <string name="words_detail_exchange_count">Byt (%1$s)</string>
@@ -71,4 +68,19 @@
     <string name="words_move_error_no_words">Inga giltiga ord bildades</string>
     <string name="words_validation_offline">Valideringen är offline – du kan ändå skicka in draget.</string>
     <string name="words_validation_unknown_words">Innehåller okända ord. Du kan ändå skicka in draget.</string>
+    <string name="words_detail_label_tiles">Brickor kvar</string>
+    <string name="words_detail_submit_score">Skicka +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">TO</string>
+    <string name="words_board_premium_double_word">DO</string>
+    <string name="words_board_premium_triple_letter">TB</string>
+    <string name="words_board_premium_double_letter">DB</string>
+    <plurals name="words_new_game_players">
+        <item quantity="one">%1$s spelare</item>
+        <item quantity="other">%1$s spelare</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="one">%1$s spelare</item>
+        <item quantity="other">%1$s spelare</item>
+    </plurals>
 </resources>

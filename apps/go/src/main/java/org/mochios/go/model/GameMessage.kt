@@ -19,7 +19,8 @@ data class GameMessage(
     val type: String = "message",
     /**
      * For `system` rows: `resign | draw_offer | draw_accept | draw_decline`,
-     * used to localise the notice; empty rows fall back to [body].
+     * used to localise the notice; for `move` rows, `pass` on a pass. Empty
+     * rows fall back to [body].
      */
     val event: String = "",
     val created: Long = 0,

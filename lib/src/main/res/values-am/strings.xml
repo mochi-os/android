@@ -117,7 +117,6 @@
     <string name="game_chat_empty">እስካሁን መልዕክቶች የሉም</string>
     <string name="game_chat_input_placeholder">መልዕክት ይተይቡ</string>
     <string name="game_chat_send">መልዕክት ይላኩ</string>
-    <string name="game_chat_subject_you">እርስዎ</string>
 
     <string name="common_not_saved">አልተቀመጠም</string>
 
@@ -349,4 +348,9 @@
     <string name="sync_conflict">በአገልጋዩ ላይ ተቀይሯል</string>
     <string name="sync_missing">ከእንግዲህ በአገልጋዩ ላይ የለም</string>
     <string name="sync_refused">በአገልጋዩ ውድቅ ተደርጓል</string>
+    <string name="game_system_score_agreed">ውጤት ተስማምቷል</string>
+    <string name="game_system_score_accept">%1$s ውጤቱን ተቀብሏል</string>
+    <string name="game_system_score_resume">%1$s ጨዋታውን ቀጥሏል</string>
+    <string name="game_not_found">ጨዋታው አልተገኘም</string>
+    <string name="game_chat_move_played_you">እርስዎ %1$s ተጫውተዋል</string>
 </resources>

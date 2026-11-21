@@ -5,7 +5,6 @@
 
 package org.mochios.words.api
 
-import okhttp3.ResponseBody
 import org.mochios.android.api.ApiResponse
 import org.mochios.words.model.CreateGameRequest
 import org.mochios.words.model.CreateGameResponse
@@ -29,7 +28,6 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 import retrofit2.http.Query
-import retrofit2.http.Streaming
 
 /**
  * Retrofit binding for the actions declared in `apps/words/app.json`.
@@ -96,16 +94,4 @@ interface WordsApi {
 
     @POST("{gameId}/-/delete")
     suspend fun delete(@Path("gameId") gameId: String): Response<ApiResponse<DeleteResponse>>
-
-    /**
-     * Raw bytes, no `{"data": ...}` envelope; the server proxies to the
-     * player's owning peer. Coil can load the same URL directly.
-     */
-    @Streaming
-    @GET("{gameId}/-/user/{user}/asset/{asset}")
-    suspend fun getUserAsset(
-        @Path("gameId") gameId: String,
-        @Path("user") user: String,
-        @Path("asset") asset: String,
-    ): Response<ResponseBody>
 }

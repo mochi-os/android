@@ -58,6 +58,7 @@ import org.mochios.android.ui.components.MochiIconButton
 import org.mochios.android.ui.components.MochiOutlinedButton
 import org.mochios.android.ui.components.MochiTextButton
 import org.mochios.android.ui.components.MochiTextField
+import org.mochios.android.ui.components.SecureWindow
 import org.mochios.android.ui.components.StatusBadge
 import org.mochios.android.ui.components.StatusTone
 import org.mochios.android.util.NaturalCompare
@@ -108,6 +109,7 @@ fun EncryptionSection(viewModel: EncryptionViewModel = hiltViewModel()) {
         RecoverDialog(
             key = key,
             busy = uiState.recovering,
+            refusal = uiState.refusal?.userMessage(),
             onKey = viewModel::setRecovery,
             onRestore = viewModel::recover,
             onClose = viewModel::closeRecovery,
@@ -370,9 +372,13 @@ internal fun SetupDialog(
         title = stringResource(if (shown) R.string.chat_encryption_key_title else R.string.chat_encryption_setup),
         content = when {
             shown -> ({
+                // The key opens the account's whole encrypted history: kept
+                // out of screenshots, screen recordings and Recents, and out
+                // of the clipboard's preview and keyboards' history.
+                SecureWindow()
                 Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     Text(stringResource(R.string.chat_encryption_key_keep))
-                    DataChip(value = setup.recovery, wrap = true)
+                    DataChip(value = setup.recovery, wrap = true, sensitive = true)
                 }
             })
             setup.asked -> ({
@@ -408,19 +414,30 @@ internal fun RecoverDialog(
     onKey: (String) -> Unit,
     onRestore: () -> Unit,
     onClose: () -> Unit,
+    refusal: String? = null,
 ) {
     MochiAlertDialog(
         onDismissRequest = onClose,
         title = stringResource(R.string.chat_encryption_recover),
         content = {
-            MochiTextField(
-                value = key,
-                onValueChange = onKey,
-                label = { Text(stringResource(R.string.chat_encryption_key)) },
-                singleLine = true,
-                textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
-                modifier = Modifier.fillMaxWidth(),
-            )
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                MochiTextField(
+                    value = key,
+                    onValueChange = onKey,
+                    label = { Text(stringResource(R.string.chat_encryption_key)) },
+                    singleLine = true,
+                    isError = refusal != null,
+                    textStyle = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Monospace),
+                    modifier = Modifier.fillMaxWidth(),
+                )
+                if (refusal != null) {
+                    Text(
+                        text = refusal,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.error,
+                    )
+                }
+            }
         },
         confirmText = stringResource(R.string.chat_encryption_restore),
         onConfirm = onRestore,

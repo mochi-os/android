@@ -6,42 +6,35 @@
 package org.mochios.chat.data
 
 import android.content.Context
-import androidx.core.content.edit
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
+import org.mochios.android.auth.SessionManager
 import javax.inject.Inject
 import javax.inject.Singleton
 
 /**
- * Chats marked unread from the list, kept on this device as the web keeps
- * them in its browser: the server has no such mark. Reading the chat, by
- * opening it or by Mark as read, clears it.
+ * Chats marked unread from the list, kept on this device for the account
+ * signed in, as the web keeps them in its browser: the server has no such
+ * mark. Reading the chat, by opening it or by Mark as read, clears it.
  */
 @Singleton
 class UnreadChatsStore @Inject constructor(
     @ApplicationContext context: Context,
+    session: SessionManager,
 ) {
-    private val prefs = context.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
+    private val chats = AccountChats(context, PREFS, LEGACY, session.getBoundIdentityBlocking(), session.boundIdentity)
 
-    private val _marked =
-        MutableStateFlow(prefs.getStringSet(KEY, emptySet())?.toSet() ?: emptySet())
-    val marked: StateFlow<Set<String>> = _marked.asStateFlow()
+    val marked: StateFlow<Set<String>> = chats.ids
 
-    fun mark(chat: String) = save(_marked.value + chat)
+    fun mark(chat: String) = chats.change { marks -> marks + chat }
 
-    fun clear(chat: String) {
-        if (chat in _marked.value) save(_marked.value - chat)
-    }
+    fun clear(chat: String) = chats.change { marks -> marks - chat }
 
-    private fun save(next: Set<String>) {
-        _marked.value = next
-        prefs.edit { putStringSet(KEY, next) }
-    }
+    /** Drop the marks of chats the account's whole list, [listed], no longer has. */
+    fun prune(listed: Set<String>) = chats.prune(listed)
 
     private companion object {
         const val PREFS = "mochi_chat_unread"
-        const val KEY = "marked_chat_ids"
+        const val LEGACY = "marked_chat_ids"
     }
 }

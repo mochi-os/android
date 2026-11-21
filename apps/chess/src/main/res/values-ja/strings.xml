@@ -32,7 +32,6 @@
     <string name="chess_status_draw">引き分け</string>
     <string name="chess_status_check_your_move">チェック — あなたの番です</string>
     <string name="chess_status_your_move">あなたの番です</string>
-    <string name="chess_move_subject_you">あなた</string>
     <string name="chess_promotion_title">昇格先:</string>
 
     <string name="chess_resign_message">本当に投了しますか?%1$sの勝ちになります。</string>
@@ -63,4 +62,6 @@
     <string name="chess_ws_reconnecting">再接続中…</string>
     <string name="chess_piece_white">白の%1$s</string>
     <string name="chess_piece_black">黒の%1$s</string>
+    <string name="chess_move_played_you">あなたが%1$sを指しました</string>
+    <string name="chess_move_capture_you">あなたが%1$sを取りました</string>
 </resources>

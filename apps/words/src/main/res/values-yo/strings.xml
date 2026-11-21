@@ -40,14 +40,11 @@
     <string name="words_sidebar_empty">Kò sí eré síbẹ̀.</string>
     <string name="words_new_game_choose_opponents">Yan àwọn alátakò</string>
     <string name="words_new_game_opponents_hint">(1-3)</string>
-    <string name="words_new_game_player_count">Eléré %1$s</string>
     <string name="words_new_game_no_friends_subtitle">Fi àwọn ọ̀rẹ́ kún un nínú ohun èlò Àwọn ènìyàn láti bẹ̀rẹ̀ eré.</string>
     <string name="words_detail_title">Eré</string>
     <string name="words_detail_status_opponent_move">Ìṣíkiri ti %1$s</string>
     <string name="words_detail_status_winner_wins">%1$s borí</string>
     <string name="words_detail_player_fallback">Eléré %1$s</string>
-    <string name="words_detail_player_count">Eléré %1$s</string>
-    <string name="words_detail_label_tiles_left">Táìlì %1$s ló kù</string>
     <string name="words_detail_action_open_chat">Ṣí ìfọ̀rọ̀wérọ̀</string>
     <string name="words_detail_action_more">Àwọn ìṣe eré</string>
     <string name="words_detail_exchange_count">Pààrọ̀ (%1$s)</string>
@@ -71,4 +68,17 @@
     <string name="words_move_error_no_words">Kò sí ọ̀rọ̀ tó tọ́ tí a dá</string>
     <string name="words_validation_offline">Ìfọwọ́sí kò sí lórí Íńtánẹ́ẹ̀tì — o ṣì lè fi sílẹ̀.</string>
     <string name="words_validation_unknown_words">Ó ní àwọn ọ̀rọ̀ tí a kò mọ̀. O ṣì lè fi sílẹ̀.</string>
+    <string name="words_detail_label_tiles">Tiles tó kù</string>
+    <string name="words_detail_submit_score">Fi sí ilẹ̀ +%1$s</string>
+    <string name="words_score_gain">+%1$s</string>
+    <string name="words_board_premium_triple_word">3Ọ</string>
+    <string name="words_board_premium_double_word">2Ọ</string>
+    <string name="words_board_premium_triple_letter">3L</string>
+    <string name="words_board_premium_double_letter">2L</string>
+    <plurals name="words_new_game_players">
+        <item quantity="other">Eléré %1$s</item>
+    </plurals>
+    <plurals name="words_detail_players">
+        <item quantity="other">Eléré %1$s</item>
+    </plurals>
 </resources>

@@ -27,6 +27,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.toMochiError
@@ -36,6 +37,7 @@ import org.mochios.android.files.UploadTracker
 import org.mochios.android.model.Attachment
 import org.mochios.android.model.WebSocketEvent
 import org.mochios.android.push.VisibleEntity
+import org.mochios.android.ui.components.LastViewedStore
 import org.mochios.android.util.REFRESH_DEBOUNCE
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.android.util.mergeNewest
@@ -58,6 +60,7 @@ import org.mochios.chat.model.Typists
 import org.mochios.chat.model.presence
 import org.mochios.chat.model.typing
 import org.mochios.chat.repository.ChatRepository
+import org.mochios.chat.ui.router.CHAT_FEATURE
 import javax.inject.Inject
 
 data class ChatUiState(
@@ -69,27 +72,37 @@ data class ChatUiState(
     /** The server's cursor for the next (older) page; null on the last. */
     val cursor: String? = null,
     val isLoading: Boolean = false,
-    val isRefreshing: Boolean = false,
     val isLoadingMore: Boolean = false,
     val isSending: Boolean = false,
     /** A failure with nothing loaded; the page shows it in place of the list. */
     val error: MochiError? = null,
     /** A failure over a loaded conversation, shown once as a toast. */
     val notice: MochiError? = null,
-    /** The composer text, held here so a failed send keeps it. */
+    /** The composer text, held here so a failed send can put it back. */
     val draft: String = "",
     val pendingAttachments: List<Uri> = emptyList(),
+    /** Messages whose send failed while the composer held the next one, each to retry or copy. */
+    val unsent: List<Unsent> = emptyList(),
     val searchOpen: Boolean = false,
     val searchQuery: String = "",
-    val searchMatchIds: List<String> = emptyList(),
+    /** The search's matches, newest first. */
+    val searchMatches: List<SearchMatch> = emptyList(),
     val searchMatchIndex: Int = 0,
+    /** The messages the threads of the search's matches are under, by id. */
+    val searchRoots: Map<String, ChatMessage> = emptyMap(),
+    /** How many older pages have been read looking for the active match. */
+    val searchPages: Int = 0,
     val forwardMessageIds: List<String> = emptyList(),
     val forwardChats: List<Chat> = emptyList(),
     val forwardFriends: List<Friend> = emptyList(),
     val forwardLoading: Boolean = false,
+    /** The chat or friend the messages are being forwarded to, while that is under way. */
+    val forwarding: String? = null,
     val replyingTo: ChatMessage? = null,
-    /** The message being edited; the composer pre-fills and Send becomes Save. */
+    /** The message being edited; the composer shows [editDraft] and Send becomes Save. */
     val editing: ChatMessage? = null,
+    /** The edit's text, apart from [draft], which waits with the reply target and files for the edit to end. */
+    val editDraft: String = "",
     val selectionMode: Boolean = false,
     val selectedIds: Set<String> = emptySet(),
     val isPinned: Boolean = false,
@@ -117,7 +130,26 @@ data class ThreadState(
     val draft: String = "",
     val isSending: Boolean = false,
     val error: MochiError? = null,
+    /** Replies whose send failed while the box held the next one. */
+    val unsent: List<Unsent> = emptyList(),
 )
+
+/**
+ * A message whose send failed after the composer was given the next one: its
+ * text, files, the message it replied to and the thread it was a reply in,
+ * with why, to retry or copy.
+ */
+data class Unsent(
+    val key: Long,
+    val text: String,
+    val attachments: List<Uri> = emptyList(),
+    val reply: ChatMessage? = null,
+    val thread: String = "",
+    val error: MochiError,
+)
+
+/** A search match: the message, and the thread it is a reply in, empty on the main timeline. */
+data class SearchMatch(val id: String, val thread: String = "")
 
 @HiltViewModel
 class ChatViewModel @Inject constructor(
@@ -134,7 +166,6 @@ class ChatViewModel @Inject constructor(
     suspend fun fileName(uri: Uri): String = repository.fileName(uri)
 
     private val chatId: String = savedStateHandle["chatId"] ?: ""
-    val serverUrl: String = sessionManager.getServerUrlBlocking().trimEnd('/')
 
     private val _uiState = MutableStateFlow(ChatUiState())
     val uiState: StateFlow<ChatUiState> = _uiState.asStateFlow()
@@ -170,6 +201,15 @@ class ChatViewModel @Inject constructor(
     /** When the user's typing was last told, by the uptime clock; null before the first. */
     private var typingSent: Long? = null
 
+    /** Whether the reader is at the newest message, as the screen last said. */
+    private var bottom = true
+
+    /** Messages are here that were not read: the screen was not showing, or the reader was up the list. */
+    private var unseen = false
+
+    /** The key the next unsent message is listed by. */
+    private var unsentKey = 0L
+
     // One-shot toast messages (already localised) — e.g. forward success/failure.
     private val _events = MutableSharedFlow<String>(extraBufferCapacity = 4)
     val events: SharedFlow<String> = _events.asSharedFlow()
@@ -178,7 +218,7 @@ class ChatViewModel @Inject constructor(
         load()
         viewModelScope.launch {
             pinnedStore.pinned.collect { pins ->
-                _uiState.value = _uiState.value.copy(isPinned = chatId in pins)
+                _uiState.update { state -> state.copy(isPinned = chatId in pins) }
             }
         }
     }
@@ -233,7 +273,7 @@ class ChatViewModel @Inject constructor(
             try {
                 repository.leaveChat(chatId, deleteLocally)
                 if (deleteLocally) {
-                    _uiState.value = _uiState.value.copy(chatDeleted = true)
+                    gone()
                 } else {
                     load()
                 }
@@ -251,11 +291,21 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.deleteChat(chatId)
-                _uiState.value = _uiState.value.copy(chatDeleted = true)
+                gone()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
+    }
+
+    /**
+     * The chat is no longer the user's: deleted here, or an invitation
+     * declined. It is forgotten as the one last viewed, or the router would
+     * open it again, and the screen leaves it.
+     */
+    private fun gone() {
+        LastViewedStore.drop(application, CHAT_FEATURE, chatId)
+        _uiState.update { state -> state.copy(chatDeleted = true) }
     }
 
     fun load() {
@@ -279,12 +329,47 @@ class ChatViewModel @Inject constructor(
                     receipts = msgs.receipts,
                     isLoading = false
                 )
+                // Kept as the one to reopen only once it has loaded: an id from a
+                // link or notification may name a chat that is gone.
+                LastViewedStore.set(application, CHAT_FEATURE, chatId)
                 subscribeWebSocket(view.chat.key)
-                markRead()
+                readIfShown()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isLoading = false).failed(e.toMochiError())
+                val error = e.toMochiError()
+                // Gone, or the user is no longer in it: the router must not open it again.
+                if (error is MochiError.NotFoundError || error is MochiError.ForbiddenError) {
+                    LastViewedStore.drop(application, CHAT_FEATURE, chatId)
+                }
+                _uiState.update { state -> state.copy(isLoading = false).failed(error) }
             }
         }
+    }
+
+    /**
+     * Mark the chat read for a reader: one whose screen is showing and who is
+     * at the newest message. Otherwise what came is held until [shown] or
+     * [atBottom] says the reader has it in front of them.
+     */
+    private fun readIfShown() {
+        if (VisibleEntity.isShowing("chat", chatId) && bottom) {
+            unseen = false
+            markRead()
+        } else {
+            unseen = true
+        }
+    }
+
+    /** The screen is back in front of the user: what came while it was not is read now. */
+    fun shown() {
+        if (unseen) readIfShown()
+    }
+
+    /** Whether the reader [at] the newest message, held read until they come down to it. */
+    fun atBottom(at: Boolean) {
+        bottom = at
+        if (at && unseen) readIfShown()
     }
 
     /**
@@ -313,7 +398,6 @@ class ChatViewModel @Inject constructor(
         refreshJob?.cancel()
         refreshJob = viewModelScope.launch {
             delay(REFRESH_DEBOUNCE)
-            _uiState.value = _uiState.value.copy(isRefreshing = true)
             try {
                 val seen = frames
                 val msgs = repository.getMessages(chatId, limit = MESSAGE_PAGE_SIZE)
@@ -333,21 +417,22 @@ class ChatViewModel @Inject constructor(
                 // the paged-in scrollback, and keep the older-end cursor - the
                 // refetch's only points below its own newest page.
                 val stitched = merged !== msgs.messages && held.isNotEmpty()
-                _uiState.value = _uiState.value.copy(
-                    messages = merged,
-                    more = if (stitched) _uiState.value.more else msgs.more,
-                    cursor = if (stitched) _uiState.value.cursor else msgs.cursor,
-                    receipts = msgs.receipts,
-                    isRefreshing = false,
-                    error = null
-                )
+                _uiState.update { state ->
+                    state.copy(
+                        messages = merged,
+                        more = if (stitched) state.more else msgs.more,
+                        cursor = if (stitched) state.cursor else msgs.cursor,
+                        receipts = msgs.receipts,
+                        error = null,
+                    )
+                }
                 // Read only by a reader: a frame or a reopened socket refreshes a
                 // chat that sits behind another screen, or in the background, too.
-                if (VisibleEntity.isShowing("chat", chatId)) markRead()
+                readIfShown()
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.copy(isRefreshing = false).failed(e.toMochiError())
+                _uiState.update { state -> state.failed(e.toMochiError()) }
             }
         }
     }
@@ -395,44 +480,38 @@ class ChatViewModel @Inject constructor(
         }
     }
 
-    /** Delete messages (delete-for-everyone). The server only removes the ones
-     *  the caller owns; refresh reflects the resulting tombstones. */
+    /**
+     * Delete messages for everyone. The server deletes only the caller's own
+     * and lists those it did, which become tombstones here at once, as the
+     * delete frame makes them for every other member.
+     */
     fun deleteMessages(messageIds: List<String>) {
         if (messageIds.isEmpty()) return
         viewModelScope.launch {
             try {
-                repository.deleteMessages(chatId, messageIds)
-                // Drop them locally first: the merge in refresh() keeps rows the
-                // newest page does not mention, so a message the server omits
-                // rather than tombstoning would otherwise come straight back.
-                val gone = messageIds.toSet()
-                _uiState.value = _uiState.value.copy(
-                    messages = _uiState.value.messages.filterNot { gone.contains(it.id) },
-                )
-                refresh()
+                val deleted = repository.deleteMessages(chatId, messageIds).deleted
+                deleted.forEach { id -> withdraw(id) }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.failed(e.toMochiError())
+                _uiState.update { state -> state.failed(e.toMochiError()) }
             }
         }
     }
 
-    /** Toggle a reaction on a message (pass "none"/"" to clear). Updates the
-     *  affected message in place from the server's returned counts. */
+    /**
+     * Toggle a reaction on a message (pass "none"/"" to clear), on the main
+     * timeline or in the open thread, set from the server's returned counts.
+     */
     fun react(messageId: String, reaction: String) {
         viewModelScope.launch {
             try {
                 val res = repository.react(chatId, messageId, reaction)
-                _uiState.value = _uiState.value.copy(
-                    messages = _uiState.value.messages.map { m ->
-                        if (m.id == messageId) {
-                            m.copy(reactions = res.reactions, reaction = res.reaction)
-                        } else {
-                            m
-                        }
-                    }
-                )
+                patch(messageId) { message -> message.copy(reactions = res.reactions, reaction = res.reaction) }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.failed(e.toMochiError())
+                _uiState.update { state -> state.failed(e.toMochiError()) }
             }
         }
     }
@@ -440,49 +519,76 @@ class ChatViewModel @Inject constructor(
     // ---------------- message search ----------------
 
     fun openSearch() {
-        _uiState.value = _uiState.value.copy(
-            searchOpen = true, searchQuery = "", searchMatchIds = emptyList(), searchMatchIndex = 0,
-        )
+        _uiState.update { state ->
+            state.copy(searchOpen = true, searchQuery = "", searchMatches = emptyList(), searchMatchIndex = 0, searchPages = 0)
+        }
     }
 
     fun closeSearch() {
         searchJob?.cancel()
-        _uiState.value = _uiState.value.copy(
-            searchOpen = false, searchQuery = "", searchMatchIds = emptyList(), searchMatchIndex = 0,
-        )
+        _uiState.update { state ->
+            state.copy(searchOpen = false, searchQuery = "", searchMatches = emptyList(), searchMatchIndex = 0, searchPages = 0)
+        }
     }
 
     /**
-     * Debounced server-side search (2+ chars, as on web); match ids are
-     * newest-first so match 1 is the latest hit.
+     * Debounced server-side search (2+ chars, as on web); matches are
+     * newest-first so match 1 is the latest hit. A reply in a thread comes
+     * with the thread it is in, and the message that thread is under.
      */
     fun setSearchQuery(query: String) {
-        _uiState.value = _uiState.value.copy(searchQuery = query, searchMatchIndex = 0)
+        _uiState.update { state -> state.copy(searchQuery = query, searchMatchIndex = 0, searchPages = 0) }
         searchJob?.cancel()
         val trimmed = query.trim()
         if (trimmed.length < 2) {
-            _uiState.value = _uiState.value.copy(searchMatchIds = emptyList())
+            _uiState.update { state -> state.copy(searchMatches = emptyList()) }
             return
         }
         searchJob = viewModelScope.launch {
             delay(SEARCH_DEBOUNCE)
             try {
                 val res = repository.search(chatId, trimmed)
-                val ids = res.results
+                val matches = res.results
                     .sortedByDescending { result -> result.created }
-                    .map { result -> result.id }
-                _uiState.value = _uiState.value.copy(searchMatchIds = ids, searchMatchIndex = 0)
+                    .map { result -> SearchMatch(result.id, result.thread) }
+                val roots = res.roots.associateBy { root -> root.id }
+                _uiState.update { state ->
+                    state.copy(searchMatches = matches, searchRoots = roots, searchMatchIndex = 0, searchPages = 0)
+                }
             } catch (e: CancellationException) {
                 throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.failed(e.toMochiError())
+                _uiState.update { state -> state.failed(e.toMochiError()) }
             }
         }
     }
 
     /** Select which match is active — its message is scrolled to and highlighted. */
     fun setSearchMatchIndex(index: Int) {
-        _uiState.value = _uiState.value.copy(searchMatchIndex = index)
+        _uiState.update { state -> state.copy(searchMatchIndex = index, searchPages = 0) }
+    }
+
+    /**
+     * Bring the active match on screen. A reply in a thread is never on the
+     * main timeline, so its thread opens; a message of the main timeline not
+     * yet loaded is looked for one older page at a time, for at most
+     * [SEARCH_PAGES] pages a match, as the web looks.
+     */
+    fun seekMatch() {
+        val state = _uiState.value
+        val match = state.searchMatches.getOrNull(state.searchMatchIndex) ?: return
+        if (match.thread.isNotEmpty()) {
+            if (state.thread?.root?.id == match.thread) return
+            val root = state.messages.find { message -> message.id == match.thread }
+                ?: state.searchRoots[match.thread]
+                ?: return
+            openThread(root)
+            return
+        }
+        if (state.messages.any { message -> message.id == match.id }) return
+        if (!state.more || state.isLoadingMore || state.searchPages >= SEARCH_PAGES) return
+        _uiState.update { current -> current.copy(searchPages = current.searchPages + 1) }
+        loadMoreOlder()
     }
 
     // ---------------- forward ----------------
@@ -517,52 +623,55 @@ class ChatViewModel @Inject constructor(
         }
     }
 
+    /** Close the forward sheet; a forward under way still goes, once. */
     fun closeForward() {
-        _uiState.value = _uiState.value.copy(
-            forwardMessageIds = emptyList(), forwardChats = emptyList(),
-            forwardFriends = emptyList(), forwardLoading = false,
-        )
+        _uiState.update { state ->
+            state.copy(
+                forwardMessageIds = emptyList(), forwardChats = emptyList(),
+                forwardFriends = emptyList(), forwardLoading = false,
+            )
+        }
     }
 
     /** Forward the messages currently open in the forward sheet to the chat [destination]. */
-    fun forwardToChat(destination: String) {
-        val messageIds = _uiState.value.forwardMessageIds
-        if (messageIds.isEmpty()) return
-        viewModelScope.launch {
-            try {
-                repository.forwardMessages(chatId, messageIds, destination)
-                _uiState.value = _uiState.value.copy(
-                    forwardMessageIds = emptyList(),
-                    forwardChats = emptyList(),
-                    forwardFriends = emptyList(),
-                    selectionMode = false,
-                    selectedIds = emptySet(),
-                )
-                _events.emit(application.getString(R.string.chat_forward_success))
-            } catch (e: Exception) {
-                _uiState.value = _uiState.value.failed(e.toMochiError())
-            }
-        }
+    fun forwardToChat(destination: String) = forward(destination) { messageIds ->
+        repository.forwardMessages(chatId, messageIds, destination)
     }
 
     /** Forward the open messages to [memberId]'s 1-on-1 chat. The server reuses
      *  or creates that chat atomically after validating the messages. */
-    fun forwardToFriend(memberId: String) {
-        val messageIds = _uiState.value.forwardMessageIds
-        if (messageIds.isEmpty()) return
+    fun forwardToFriend(memberId: String) = forward(memberId) { messageIds ->
+        repository.forwardToFriend(chatId, messageIds, memberId)
+    }
+
+    /**
+     * The open messages forwarded to [destination] by [send], once: a tap
+     * while one is under way is refused, as the sheet shows that row busy and
+     * the others off, so the messages never go twice.
+     */
+    private fun forward(destination: String, send: suspend (List<String>) -> Unit) {
+        val state = _uiState.value
+        val messageIds = state.forwardMessageIds
+        if (messageIds.isEmpty() || state.forwarding != null) return
+        _uiState.update { current -> current.copy(forwarding = destination) }
         viewModelScope.launch {
             try {
-                repository.forwardToFriend(chatId, messageIds, memberId)
-                _uiState.value = _uiState.value.copy(
-                    forwardMessageIds = emptyList(),
-                    forwardChats = emptyList(),
-                    forwardFriends = emptyList(),
-                    selectionMode = false,
-                    selectedIds = emptySet(),
-                )
+                send(messageIds)
+                _uiState.update { current ->
+                    current.copy(
+                        forwardMessageIds = emptyList(),
+                        forwardChats = emptyList(),
+                        forwardFriends = emptyList(),
+                        forwarding = null,
+                        selectionMode = false,
+                        selectedIds = emptySet(),
+                    )
+                }
                 _events.emit(application.getString(R.string.chat_forward_success))
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.failed(e.toMochiError())
+                _uiState.update { current -> current.copy(forwarding = null).failed(e.toMochiError()) }
             }
         }
     }
@@ -581,27 +690,35 @@ class ChatViewModel @Inject constructor(
     // ---------------- edit ----------------
 
     /**
-     * Start editing [message]. Editing and replying are mutually exclusive:
-     * the composer has one body, and a reply-to on an edit would be discarded
-     * by the server anyway.
+     * Start editing [message], in the main composer or, for a reply in the
+     * open thread, in the thread's. The edit has a text of its own: what was
+     * being written, the message it replied to and its files wait, untouched,
+     * for the edit to end.
      */
     fun startEdit(message: ChatMessage) {
-        _uiState.value = _uiState.value.copy(editing = message, replyingTo = null, draft = message.body)
+        _uiState.update { state -> state.copy(editing = message, editDraft = message.body) }
     }
 
-    /** Clears the composer too, so the old text never leaks into a new message. */
+    fun setEditDraft(text: String) {
+        _uiState.update { state -> if (state.editing == null) state else state.copy(editDraft = text) }
+    }
+
+    /** The edit ends; the composer has what it had before it began. */
     fun cancelEdit() {
-        _uiState.value = _uiState.value.copy(editing = null, draft = "")
+        _uiState.update { state -> state.copy(editing = null, editDraft = "") }
     }
 
     /**
      * Save the edit. The server stamps `edited` and fans the new body out to
      * the other members; refresh so this client shows what they will see
-     * rather than a locally-guessed row.
+     * rather than a locally-guessed row. A text past [MESSAGE_MAXIMUM] is not
+     * sent: the composer says by how much it is over.
      */
     fun saveEdit() {
-        val message = _uiState.value.editing ?: return
-        val trimmed = _uiState.value.draft.trim()
+        val state = _uiState.value
+        val message = state.editing ?: return
+        val trimmed = state.editDraft.trim()
+        if (overLimit(trimmed)) return
         if (trimmed.isEmpty() || trimmed == message.body) {
             cancelEdit()
             return
@@ -609,10 +726,15 @@ class ChatViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.editMessage(chatId, message.id, trimmed)
-                _uiState.value = _uiState.value.copy(editing = null, draft = "")
+                _uiState.update { current ->
+                    if (current.editing?.id == message.id) current.copy(editing = null, editDraft = "") else current
+                }
                 refresh()
+                if (message.thread.isNotEmpty()) loadThread()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.failed(e.toMochiError())
+                _uiState.update { current -> current.failed(e.toMochiError()) }
             }
         }
     }
@@ -650,26 +772,57 @@ class ChatViewModel @Inject constructor(
         openForward(_uiState.value.selectedIds.toList())
     }
 
-    /** Send the composer draft. It is only cleared once the server accepted it. */
+    /**
+     * Send the composer's message. Its text, files and reply target leave the
+     * composer as the send starts, so whatever is typed meanwhile belongs to
+     * the next message; a send that fails puts them back if the composer is
+     * still empty, and lists the message as unsent otherwise. A text past
+     * [MESSAGE_MAXIMUM] is not sent, its files not uploaded: the composer
+     * says by how much it is over.
+     */
     fun sendMessage() {
-        val trimmed = _uiState.value.draft.trim()
-        val attachments = _uiState.value.pendingAttachments
-        if (trimmed.isEmpty() && attachments.isEmpty()) return
-        val reply = _uiState.value.replyingTo?.id
+        val state = _uiState.value
+        if (state.isSending) return
+        val text = state.draft.trim()
+        if (text.isEmpty() && state.pendingAttachments.isEmpty()) return
+        if (overLimit(text)) return
+        // The message leaves the composer, which the user may then write the next one in.
+        _uiState.update { current -> current.sending() }
+        send(text, state.pendingAttachments, state.replyingTo)
+    }
+
+    /** Send again a message whose send failed; it leaves the unsent list while it goes. */
+    fun retry(key: Long) {
+        val state = _uiState.value
+        if (state.isSending) return
+        val message = state.unsent.find { unsent -> unsent.key == key } ?: return
+        _uiState.update { current -> current.copy(unsent = current.unsent.filterNot { unsent -> unsent.key == key }) }
+        if (message.thread.isNotEmpty()) {
+            sendReply(message.thread, message.text)
+        } else {
+            // From its row, not the composer, which keeps the next message.
+            _uiState.update { current -> current.copy(isSending = true) }
+            send(message.text, message.attachments, message.reply)
+        }
+    }
+
+    /** Give up on a message whose send failed. */
+    fun discard(key: Long) {
+        _uiState.update { state -> state.copy(unsent = state.unsent.filterNot { unsent -> unsent.key == key }) }
+    }
+
+    private fun send(text: String, attachments: List<Uri>, reply: ChatMessage?) {
         viewModelScope.launch {
-            _uiState.value = _uiState.value.copy(isSending = true)
             try {
                 if (attachments.isEmpty()) {
-                    val sent = repository.sendMessage(chatId, trimmed, reply = reply)
-                    _uiState.value = _uiState.value.afterSend(sent = true)
+                    val sent = repository.sendMessage(chatId, text, reply = reply?.id)
                     sent.unsent.orEmpty().forEach { _events.emit(it) }
                     refresh()
                 } else {
                     tracker.track {
                         val sent = repository.sendMessageFromUris(
-                            chatId, trimmed, attachments, application, reply = reply, tracker = tracker,
+                            chatId, text, attachments, reply = reply?.id, tracker = tracker,
                         )
-                        _uiState.value = _uiState.value.afterSend(sent = true)
                         // What the message went without on another network.
                         sent.unsent.orEmpty().forEach { _events.emit(it) }
                         // Inside the upload, so the files in flight give way
@@ -677,10 +830,13 @@ class ChatViewModel @Inject constructor(
                         refresh()
                     }
                 }
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value = _uiState.value.failed(e.toMochiError())
+                val failed = Unsent(unsentKey++, text, attachments, reply, error = e.toMochiError())
+                _uiState.update { state -> state.unsent(failed) }
             } finally {
-                _uiState.value = _uiState.value.copy(isSending = false)
+                _uiState.update { state -> state.copy(isSending = false) }
             }
         }
     }
@@ -721,8 +877,12 @@ class ChatViewModel @Inject constructor(
         while (true) {
             if (_uiState.value.chat.presence()) {
                 try {
+                    // The answer first, then the state as it stands by then:
+                    // the request lasts as long as the other server takes.
                     val presence = repository.presence(chatId)
-                    _uiState.value = _uiState.value.copy(presence = presence)
+                    _uiState.update { state -> state.copy(presence = presence) }
+                } catch (e: CancellationException) {
+                    throw e
                 } catch (_: Exception) {
                     // A presence the server could not ask is shown as none.
                 }
@@ -783,8 +943,15 @@ class ChatViewModel @Inject constructor(
         loadThread(debounced = false)
     }
 
+    /** Close the thread, and any edit of one of its replies with it. */
     fun closeThread() {
-        _uiState.value = _uiState.value.copy(thread = null)
+        _uiState.update { state ->
+            if (state.editing?.thread?.isNotEmpty() == true) {
+                state.copy(thread = null, editing = null, editDraft = "")
+            } else {
+                state.copy(thread = null)
+            }
+        }
     }
 
     /**
@@ -862,25 +1029,61 @@ class ChatViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(thread = thread.copy(draft = text))
     }
 
-    /** Reply in the open thread; the draft is only cleared once the server took it. */
+    /**
+     * Reply in the open thread. As in the main composer, the text leaves the
+     * box as the send starts; a send that fails puts it back if the box is
+     * still empty, and lists the reply as unsent in the thread otherwise.
+     */
     fun sendThreadReply() {
         val thread = _uiState.value.thread ?: return
         val text = thread.draft.trim()
-        if (text.isEmpty() || thread.isSending) return
-        _uiState.value = _uiState.value.copy(thread = thread.copy(isSending = true))
+        if (text.isEmpty() || thread.isSending || overLimit(text)) return
+        // The reply leaves the box, which the user may then write the next one in.
+        _uiState.update { state -> state.copy(thread = state.thread?.copy(draft = "")) }
+        sendReply(thread.root.id, text)
+    }
+
+    /** Send again a reply whose send failed. */
+    fun retryReply(key: Long) {
+        val thread = _uiState.value.thread ?: return
+        if (thread.isSending) return
+        val reply = thread.unsent.find { unsent -> unsent.key == key } ?: return
+        _uiState.update { state ->
+            state.copy(thread = state.thread?.copy(unsent = thread.unsent.filterNot { unsent -> unsent.key == key }))
+        }
+        sendReply(thread.root.id, reply.text)
+    }
+
+    /** Give up on a reply whose send failed. */
+    fun discardReply(key: Long) {
+        _uiState.update { state ->
+            state.copy(thread = state.thread?.let { thread -> thread.copy(unsent = thread.unsent.filterNot { unsent -> unsent.key == key }) })
+        }
+    }
+
+    /** [text] sent into [root]'s thread; a box holding the next reply keeps it. */
+    private fun sendReply(root: String, text: String) {
+        _uiState.update { state -> state.copy(thread = state.thread?.copy(isSending = true)) }
         viewModelScope.launch {
             try {
-                repository.sendMessage(chatId, text, thread = thread.root.id)
-                _uiState.value.thread?.let { current ->
-                    _uiState.value = _uiState.value.copy(thread = current.copy(isSending = false, draft = ""))
-                }
+                repository.sendMessage(chatId, text, thread = root)
+                _uiState.update { state -> state.copy(thread = state.thread?.copy(isSending = false)) }
                 loadThread()
                 refresh()
+            } catch (e: CancellationException) {
+                throw e
             } catch (e: Exception) {
-                _uiState.value.thread?.let { current ->
-                    _uiState.value = _uiState.value.copy(thread = current.copy(isSending = false))
+                val failed = Unsent(unsentKey++, text, thread = root, error = e.toMochiError())
+                _uiState.update { state ->
+                    val thread = state.thread?.takeIf { thread -> thread.root.id == root }
+                    when {
+                        // The thread closed meanwhile: the reply waits with the
+                        // conversation's unsent messages, to go into it again.
+                        thread == null -> state.copy(unsent = state.unsent + failed)
+                        thread.draft.isBlank() -> state.copy(thread = thread.copy(isSending = false, draft = text)).failed(failed.error)
+                        else -> state.copy(thread = thread.copy(isSending = false, unsent = thread.unsent + failed))
+                    }
                 }
-                _uiState.value = _uiState.value.failed(e.toMochiError())
             }
         }
     }
@@ -912,7 +1115,8 @@ class ChatViewModel @Inject constructor(
             try {
                 repository.decline(chatId)
                 _events.emit(application.getString(R.string.chat_invitation_declined))
-                _uiState.value = _uiState.value.copy(answering = false, chatDeleted = true)
+                _uiState.update { state -> state.copy(answering = false) }
+                gone()
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(answering = false).failed(e.toMochiError())
             }
@@ -921,61 +1125,58 @@ class ChatViewModel @Inject constructor(
 
     private fun subscribeWebSocket(key: String) {
         if (key.isEmpty() || subscriptionId != null) return
-        viewModelScope.launch {
-            val serverUrl = sessionManager.getServerUrlBlocking()
-            subscriptionId = webSocket.subscribe(serverUrl, key, app = "chat") { event ->
-                val ev = event.event
-                when {
-                    event.type == REOPEN -> catchUp()
-                    ev == "rename" -> {
-                        val newName = event.name ?: return@subscribe
-                        _uiState.value = _uiState.value.copy(
-                            chat = _uiState.value.chat.copy(name = newName)
-                        )
-                    }
-                    ev == "leave" || ev == "member/remove" -> {
-                        val memberId = event.member ?: return@subscribe
-                        _uiState.value = _uiState.value.copy(
-                            chat = _uiState.value.chat.copy(
-                                members = _uiState.value.chat.members.filterNot { it.id == memberId }
-                            )
-                        )
-                    }
-                    ev == "removed" -> {
-                        _uiState.value = _uiState.value.copy(
-                            chat = _uiState.value.chat.copy(status = ChatStatus.REMOVED)
-                        )
-                    }
-                    ev == "member/add" -> {
-                        // Refresh members from server
-                        viewModelScope.launch {
-                            try {
-                                val members = repository.getMembers(chatId)
-                                _uiState.value = _uiState.value.copy(
-                                    chat = _uiState.value.chat.copy(members = members)
-                                )
-                            } catch (_: Exception) { }
-                        }
-                    }
-                    // The socket calls back on its own thread; these change the
-                    // list on the main one, as everything else that changes it does.
-                    ev == "delete" -> viewModelScope.launch { deleted(event) }
-                    ev == "edit" -> viewModelScope.launch { revised(event) }
-                    ev == "reaction" -> viewModelScope.launch { reacted(event) }
-                    ev == "decrypted" -> {
-                        // A message whose keys came: its text and files are read again.
-                        refresh()
-                        if (_uiState.value.thread != null) loadThread()
-                    }
-                    ev == "typing" -> {
-                        typed(event.member.orEmpty(), event.name.orEmpty(), event.typing == false, event.held)
-                    }
-                    ev == "receipt" -> {
-                        received(event.member.orEmpty(), event.delivered ?: 0, event.displayed ?: 0)
-                    }
-                    ev == null && event.body != null -> viewModelScope.launch { arrived(event) }
+        val serverUrl = sessionManager.getServerUrlBlocking()
+        // The socket hands each frame over on the main thread, where every
+        // other change to the state is made.
+        subscriptionId = webSocket.subscribe(serverUrl, key, app = "chat") { event -> framed(event) }
+    }
+
+    /** One frame from the chat's socket, applied to what is held. */
+    internal fun framed(event: WebSocketEvent) {
+        val ev = event.event
+        when {
+            event.type == REOPEN -> catchUp()
+            ev == "rename" -> {
+                val newName = event.name ?: return
+                _uiState.update { state -> state.copy(chat = state.chat.copy(name = newName)) }
+            }
+            ev == "leave" || ev == "member/remove" -> {
+                val memberId = event.member ?: return
+                _uiState.update { state ->
+                    state.copy(chat = state.chat.copy(members = state.chat.members.filterNot { it.id == memberId }))
                 }
             }
+            ev == "removed" -> {
+                _uiState.update { state -> state.copy(chat = state.chat.copy(status = ChatStatus.REMOVED)) }
+            }
+            ev == "member/add" -> {
+                // The members as the server now has them.
+                viewModelScope.launch {
+                    try {
+                        val members = repository.getMembers(chatId)
+                        _uiState.update { state -> state.copy(chat = state.chat.copy(members = members)) }
+                    } catch (e: CancellationException) {
+                        throw e
+                    } catch (_: Exception) {
+                        // The members stay as they were; the next read brings the new one.
+                    }
+                }
+            }
+            ev == "delete" -> deleted(event)
+            ev == "edit" -> revised(event)
+            ev == "reaction" -> reacted(event)
+            ev == "decrypted" -> {
+                // A message whose keys came: its text and files are read again.
+                refresh()
+                if (_uiState.value.thread != null) loadThread()
+            }
+            ev == "typing" -> {
+                typed(event.member.orEmpty(), event.name.orEmpty(), event.typing == false, event.held)
+            }
+            ev == "receipt" -> {
+                received(event.member.orEmpty(), event.delivered ?: 0, event.displayed ?: 0)
+            }
+            ev == null && event.body != null -> arrived(event)
         }
     }
 
@@ -1088,6 +1289,15 @@ class ChatViewModel @Inject constructor(
             patch(summary.first, summary.second::on)
             return
         }
+        withdraw(id)
+    }
+
+    /**
+     * Message [id], deleted for everyone, as a tombstone wherever it is held,
+     * no longer counted where it was a reply, when no frame says how its
+     * thread now stands.
+     */
+    private fun withdraw(id: String) {
         val state = _uiState.value
         val reply = state.thread?.replies?.find { held -> held.id == id && !held.deleted }
             ?: state.messages.firstNotNullOfOrNull { root -> root.answers.find { held -> held.id == id } }
@@ -1130,14 +1340,16 @@ class ChatViewModel @Inject constructor(
             refresh()
             return
         }
-        patch(id) { message -> message.rewritten(body, edited) }
+        // The edit's warning replaces the message's; an older server's says none.
+        val warning = event.warning.orEmpty()
+        patch(id) { message -> message.rewritten(body, edited, warning) }
         // A reply in its root's bubble, held there with the thread closed.
         val state = _uiState.value
         if (state.messages.any { root -> root.answers.any { held -> held.id == id } }) {
             _uiState.value = state.copy(
                 messages = state.messages.map { root ->
                     if (root.answers.any { held -> held.id == id }) {
-                        root.copy(answers = root.answers.patched(id) { held -> held.rewritten(body, edited) })
+                        root.copy(answers = root.answers.patched(id) { held -> held.rewritten(body, edited, warning) })
                     } else {
                         root
                     }
@@ -1213,6 +1425,9 @@ class ChatViewModel @Inject constructor(
 
         /** Messages fetched per page on load, refresh, and load-more. */
         const val MESSAGE_PAGE_SIZE = 30
+
+        /** How many older pages are read looking for one search match, as the web reads. */
+        const val SEARCH_PAGES = 20
     }
 }
 
@@ -1225,12 +1440,36 @@ internal fun ChatUiState.failed(error: MochiError): ChatUiState =
     if (messages.isEmpty()) copy(error = error) else copy(notice = error)
 
 /**
- * The composer after a send attempt. Only a send the server accepted clears
- * the draft, its attachments and the reply target; a failed one keeps them
- * all, so the text is there to retry or copy out.
+ * The state as a send starts: the message leaves the composer, which the
+ * user may then write the next one in.
  */
-internal fun ChatUiState.afterSend(sent: Boolean): ChatUiState =
-    if (sent) copy(draft = "", pendingAttachments = emptyList(), replyingTo = null) else this
+internal fun ChatUiState.sending(): ChatUiState =
+    copy(draft = "", pendingAttachments = emptyList(), replyingTo = null, isSending = true)
+
+/**
+ * The state after [message]'s send failed. Into a composer still empty it
+ * goes back, text, files and reply target, with the failure said once; a
+ * composer holding the next message keeps it, and [message] is listed as
+ * unsent, saying why itself.
+ */
+internal fun ChatUiState.unsent(message: Unsent): ChatUiState =
+    if (message.thread.isEmpty() && draft.isBlank() && pendingAttachments.isEmpty() && replyingTo == null) {
+        copy(draft = message.text, pendingAttachments = message.attachments, replyingTo = message.reply).failed(message.error)
+    } else {
+        copy(unsent = unsent + message)
+    }
+
+/** The longest message the server takes, in code points, as the web counts it. */
+internal const val MESSAGE_MAXIMUM = 10_000
+
+/** From how long a message the composer shows its length, as the web shows it. */
+internal const val MESSAGE_COUNTED = MESSAGE_MAXIMUM - 500
+
+/** How long [text] is as the server counts it: in code points. */
+internal fun length(text: String): Int = text.codePointCount(0, text.length)
+
+/** Whether [text] is longer than a message may be. */
+internal fun overLimit(text: String): Boolean = length(text) > MESSAGE_MAXIMUM
 
 /**
  * Whether the list should follow to the newest message. Only an append - a
@@ -1269,6 +1508,7 @@ internal fun frameMessage(chat: String, event: WebSocketEvent): ChatMessage? {
         quote = frameQuote(event.quote),
         thread = event.thread.orEmpty(),
         encrypted = event.encrypted ?: 0,
+        warning = event.warning.orEmpty(),
     )
 }
 
@@ -1355,7 +1595,10 @@ internal fun List<ChatMessage>.patched(id: String, transform: (ChatMessage) -> C
     return toMutableList().apply { set(index, transform(get(index))) }
 }
 
-/** A message deleted for everyone, as the messages page shows one. */
+/**
+ * A message deleted for everyone, as the messages page shows one. Its thread
+ * stays, counted, for the members' replies under it are still there to read.
+ */
 internal fun ChatMessage.tombstone(): ChatMessage = copy(
     deleted = true,
     body = "",
@@ -1364,16 +1607,16 @@ internal fun ChatMessage.tombstone(): ChatMessage = copy(
     quote = null,
     reactions = emptyMap(),
     reaction = null,
-    replies = 0,
-    latest = 0,
+    warning = "",
 )
 
 /**
  * An edit of this message, applied only if newer than what is held: edits
  * cross on the way, and the last writer wins. A tombstone is never rewritten.
+ * The edit's [warning] replaces the message's.
  */
-internal fun ChatMessage.rewritten(body: String, edited: Long): ChatMessage =
-    if (deleted || this.edited >= edited) this else copy(body = body, edited = edited)
+internal fun ChatMessage.rewritten(body: String, edited: Long, warning: String = ""): ChatMessage =
+    if (deleted || this.edited >= edited) this else copy(body = body, edited = edited, warning = warning)
 
 /** [block]'s answer as a [Result], except a cancellation, which still cancels. */
 private suspend fun <T> attempt(block: suspend () -> T): Result<T> = try {

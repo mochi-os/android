@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Atlikta</string>
     <string name="chat_encryption_key">Atkūrimo raktas</string>
     <string name="chat_encryption_restore">Atkurti</string>
-    <string name="chat_encryption_recovery_refused">Tai ne jūsų atkūrimo raktas</string>
     <string name="chat_verification_own">Jūsų įrenginio patvirtinimas</string>
     <string name="chat_verification_compare">Patikrinkite, ar kitame ekrane rodomi tie patys jaustukai.</string>
     <string name="chat_verification_requested_own">Kitas jūsų įrenginys nori patvirtinti šį.</string>
@@ -160,11 +159,6 @@
     <string name="chat_verification_requested">%1$s nori jus patvirtinti.</string>
     <string name="chat_typing_one">%1$s rašo...</string>
     <string name="chat_typing_many">%1$s rašo...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s atsakymas</item>
-        <item quantity="few">%1$s atsakymai</item>
-        <item quantity="other">%1$s atsakymų</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ankstesnis atsakymas</item>
         <item quantity="few">%1$s ankstesni atsakymai</item>
@@ -184,4 +178,19 @@
     <string name="chat_message_earlier">Žinutės iš laiko prieš pridedant šią paskyrą prie Mochi yra užšifruotos ir jų čia perskaityti negalima</string>
     <string name="chat_message_excluded">Užšifruota tik kitiems įrenginiams</string>
     <string name="chat_setup">Nustatyti</string>
+    <string name="chat_jump_bottom">Pereiti į apačią</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Pereiti prie %1$s naujos žinutės</item>
+        <item quantity="few">Pereiti prie %1$s naujų žinučių</item>
+        <item quantity="other">Pereiti prie %1$s naujų žinučių</item>
+    </plurals>
+    <string name="chat_message_distrusted">Išsiųsta iš įrenginio, kuriuo nepasitikite</string>
+    <string name="chat_message_mismatched">Išsiųsta iš įrenginio, kurio raktai nesutampa</string>
+    <string name="chat_list_select">Pasirinkite pokalbį</string>
+    <string name="chat_message_discard">Atmesti</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Žinutė %1$s simboliu per ilga</item>
+        <item quantity="few">Žinutė %1$s simboliais per ilga</item>
+        <item quantity="other">Žinutė %1$s simbolių per ilga</item>
+    </plurals>
 </resources>

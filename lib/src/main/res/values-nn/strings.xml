@@ -116,7 +116,6 @@
     <string name="game_chat_empty">Ingen meldingar enno</string>
     <string name="game_chat_input_placeholder">Skriv ei melding</string>
     <string name="game_chat_send">Send melding</string>
-    <string name="game_chat_subject_you">Du</string>
 
     <string name="common_not_saved">Ikkje lagra</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">Endra på tenaren</string>
     <string name="sync_missing">Ikkje lenger på tenaren</string>
     <string name="sync_refused">Avvist av tenaren</string>
+    <string name="game_system_score_agreed">Resultat avtalt</string>
+    <string name="game_system_score_accept">%1$s godtok resultatet</string>
+    <string name="game_system_score_resume">%1$s tok opp att spelet</string>
+    <string name="game_not_found">Fann ikkje spelet</string>
+    <string name="game_chat_move_played_you">Du spelte %1$s</string>
 </resources>

@@ -81,4 +81,6 @@
     <string name="go_score_resume">Atosaigh an imirt</string>
     <string name="go_error_score_resume_failed">Theip ar atosú na himeartha</string>
     <string name="go_error_score_accept_failed">Theip ar ghlacadh leis an scór</string>
+    <string name="go_chat_player_passed">Rith %1$s</string>
+    <string name="go_chat_you_passed">Lig tú do sheal thart</string>
 </resources>

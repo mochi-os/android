@@ -39,7 +39,8 @@ import org.mochios.android.api.userMessage
 @Composable
 fun ErrorState(
     error: MochiError,
-    onRetry: (() -> Unit)? = null
+    modifier: Modifier = Modifier,
+    onRetry: (() -> Unit)? = null,
 ) {
     val icon = when (error) {
         is MochiError.NetworkError -> Icons.Default.SignalWifiOff
@@ -47,7 +48,7 @@ fun ErrorState(
         is MochiError.ForbiddenError -> Icons.Default.Lock
         else -> Icons.Default.ErrorOutline
     }
-    ErrorState(icon = icon, message = error.userMessage(), onRetry = onRetry)
+    ErrorState(icon = icon, message = error.userMessage(), onRetry = onRetry, modifier = modifier)
 }
 
 /**
@@ -57,19 +58,21 @@ fun ErrorState(
 @Composable
 fun ErrorState(
     message: String,
-    onRetry: (() -> Unit)? = null
+    modifier: Modifier = Modifier,
+    onRetry: (() -> Unit)? = null,
 ) {
-    ErrorState(icon = Icons.Default.ErrorOutline, message = message, onRetry = onRetry)
+    ErrorState(icon = Icons.Default.ErrorOutline, message = message, onRetry = onRetry, modifier = modifier)
 }
 
 @Composable
 private fun ErrorState(
     icon: ImageVector,
     message: String,
-    onRetry: (() -> Unit)?
+    modifier: Modifier,
+    onRetry: (() -> Unit)?,
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(horizontal = 24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,

@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Taýýar</string>
     <string name="chat_encryption_key">Dikeldiş açary</string>
     <string name="chat_encryption_restore">Dikeld</string>
-    <string name="chat_encryption_recovery_refused">Bu siziň dikeldiş açaryňyz däl</string>
     <string name="chat_verification_own">Enjamyňyzy tassyklaň</string>
     <string name="chat_verification_compare">Beýleki ekranda şol bir emojileriň görünýändigini barlaň.</string>
     <string name="chat_verification_requested_own">Beýleki enjamlaryňyzyň biri bu enjamy tassyklamak isleýär.</string>
@@ -160,10 +159,6 @@
     <string name="chat_verification_requested">%1$s sizi tassyklamak isleýär.</string>
     <string name="chat_typing_one">%1$s ýazýar...</string>
     <string name="chat_typing_many">%1$s ýazýarlar...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s jogap</item>
-        <item quantity="other">%1$s jogap</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s öňki jogap</item>
         <item quantity="other">%1$s öňki jogap</item>
@@ -181,4 +176,17 @@
     <string name="chat_message_earlier">Bu hasap Mochi-de goşulmazdan öňki habarlar şifrlenen we olary şu ýerde okap bolmaýar</string>
     <string name="chat_message_excluded">Diňe beýleki enjamlar üçin şifrlenen</string>
     <string name="chat_setup">Düzmek</string>
+    <string name="chat_jump_bottom">Aşaga geç</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">%1$s täze habara geç</item>
+        <item quantity="other">%1$s täze habara geç</item>
+    </plurals>
+    <string name="chat_message_distrusted">Ynanmaýan enjamyňyzdan iberildi</string>
+    <string name="chat_message_mismatched">Açarlary gabat gelmeýän enjamdan iberildi</string>
+    <string name="chat_list_select">Söhbet saýla</string>
+    <string name="chat_message_discard">Taşla</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Habar %1$s nyşan artyk uzyn</item>
+        <item quantity="other">Habar %1$s nyşan artyk uzyn</item>
+    </plurals>
 </resources>

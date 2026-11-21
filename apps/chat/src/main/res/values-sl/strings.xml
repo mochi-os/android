@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Končano</string>
     <string name="chat_encryption_key">Ključ za obnovitev</string>
     <string name="chat_encryption_restore">Obnovi</string>
-    <string name="chat_encryption_recovery_refused">To ni vaš ključ za obnovitev</string>
     <string name="chat_verification_own">Preverjanje vaše naprave</string>
     <string name="chat_verification_compare">Preverite, ali se na drugem zaslonu prikažejo isti emojiji.</string>
     <string name="chat_verification_requested_own">Ena od vaših drugih naprav želi preveriti to napravo.</string>
@@ -160,12 +159,6 @@
     <string name="chat_verification_requested">%1$s vas želi preveriti.</string>
     <string name="chat_typing_one">%1$s tipka...</string>
     <string name="chat_typing_many">%1$s tipkajo...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s odgovor</item>
-        <item quantity="two">%1$s odgovora</item>
-        <item quantity="few">%1$s odgovori</item>
-        <item quantity="other">%1$s odgovorov</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s starejši odgovor</item>
         <item quantity="two">%1$s starejša odgovora</item>
@@ -187,4 +180,21 @@
     <string name="chat_message_earlier">Sporočila izpred dodajanja tega računa v Mochi so šifrirana in jih tukaj ni mogoče prebrati</string>
     <string name="chat_message_excluded">Šifrirano samo za druge naprave</string>
     <string name="chat_setup">Nastavi</string>
+    <string name="chat_jump_bottom">Skoči na dno</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Skoči na %1$s novo sporočilo</item>
+        <item quantity="two">Skoči na %1$s novi sporočili</item>
+        <item quantity="few">Skoči na %1$s nova sporočila</item>
+        <item quantity="other">Skoči na %1$s novih sporočil</item>
+    </plurals>
+    <string name="chat_message_distrusted">Poslano z naprave, ki ji ne zaupate</string>
+    <string name="chat_message_mismatched">Poslano z naprave, katere ključi se ne ujemajo</string>
+    <string name="chat_list_select">Izberite pogovor</string>
+    <string name="chat_message_discard">Zavrzi</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Sporočilo je predolgo za %1$s znak</item>
+        <item quantity="two">Sporočilo je predolgo za %1$s znaka</item>
+        <item quantity="few">Sporočilo je predolgo za %1$s znake</item>
+        <item quantity="other">Sporočilo je predolgo za %1$s znakov</item>
+    </plurals>
 </resources>

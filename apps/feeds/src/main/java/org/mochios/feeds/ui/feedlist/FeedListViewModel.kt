@@ -187,8 +187,8 @@ class FeedListViewModel @Inject constructor(
     /**
      * Refetch the feeds without a spinner. Each call cancels the pending fetch
      * and waits [wait] first, so a burst of frames across the feeds makes one
-     * request. Frames call from the sockets' own threads, so the swap of the
-     * pending fetch is made one call at a time.
+     * request. The socket hands frames over on the main thread; the lock keeps
+     * the swap of the pending fetch one call at a time for any other caller.
      */
     fun refreshSilently(wait: Duration = REFRESH_DEBOUNCE) = synchronized(this) {
         feedsJob?.cancel()

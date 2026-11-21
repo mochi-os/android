@@ -117,7 +117,6 @@
     <string name="game_chat_empty">अबहीं तक कौनो संदेश नइखे</string>
     <string name="game_chat_input_placeholder">एगो संदेश टाइप करीं</string>
     <string name="game_chat_send">संदेश भेजीं</string>
-    <string name="game_chat_subject_you">आप</string>
 
 
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">सर्वर पर बदलल गइल</string>
     <string name="sync_missing">अब सर्वर पर नइखे</string>
     <string name="sync_refused">सर्वर अस्वीकार क दिहलस</string>
+    <string name="game_system_score_agreed">स्कोर पर सहमति</string>
+    <string name="game_system_score_accept">%1$s स्कोर स्वीकार कइलें</string>
+    <string name="game_system_score_resume">%1$s खेल फेर से शुरू कइलें</string>
+    <string name="game_not_found">खेल ना मिलल</string>
+    <string name="game_chat_move_played_you">रउरा %1$s खेलनीं</string>
 </resources>

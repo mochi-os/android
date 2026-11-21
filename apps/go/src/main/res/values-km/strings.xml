@@ -81,4 +81,6 @@
     <string name="go_score_resume">បន្តលេង</string>
     <string name="go_error_score_resume_failed">បរាជ័យក្នុងការបន្តលេង</string>
     <string name="go_error_score_accept_failed">បរាជ័យក្នុងការទទួលយកពិន្ទុ</string>
+    <string name="go_chat_player_passed">%1$s បានរំលង</string>
+    <string name="go_chat_you_passed">អ្នកបានរំលងវេន</string>
 </resources>

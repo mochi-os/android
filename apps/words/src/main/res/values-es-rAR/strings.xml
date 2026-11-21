@@ -27,4 +27,5 @@
     <string name="words_move_error_first_move_two_tiles">La primera jugada tiene que colocar al menos 2 fichas</string>
     <string name="words_move_error_not_connected">Las fichas tienen que conectarse con las fichas del tablero</string>
     <string name="words_move_error_no_words">No se formó ninguna palabra válida</string>
+    <string name="words_detail_submit_score">Enviá +%1$s</string>
 </resources>

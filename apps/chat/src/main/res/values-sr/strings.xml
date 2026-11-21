@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">Готово</string>
     <string name="chat_encryption_key">Кључ за опоравак</string>
     <string name="chat_encryption_restore">Врати</string>
-    <string name="chat_encryption_recovery_refused">То није ваш кључ за опоравак</string>
     <string name="chat_verification_own">Верификуј свој уређај</string>
     <string name="chat_verification_compare">Проверите да ли се исти емоџији појављују на другом екрану.</string>
     <string name="chat_verification_requested_own">Један од ваших других уређаја жели да верификује овај.</string>
@@ -160,11 +159,6 @@
     <string name="chat_verification_requested">%1$s жели да вас верификује.</string>
     <string name="chat_typing_one">%1$s куца...</string>
     <string name="chat_typing_many">%1$s куцају...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="one">%1$s одговор</item>
-        <item quantity="few">%1$s одговора</item>
-        <item quantity="other">%1$s одговора</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="one">%1$s ранији одговор</item>
         <item quantity="few">%1$s ранија одговора</item>
@@ -184,4 +178,19 @@
     <string name="chat_message_earlier">Поруке из времена пре додавања овог налога у Mochi су шифроване и не могу се овде прочитати</string>
     <string name="chat_message_excluded">Шифровано само за друге уређаје</string>
     <string name="chat_setup">Подеси</string>
+    <string name="chat_jump_bottom">Иди на дно</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="one">Иди на %1$s нову поруку</item>
+        <item quantity="few">Иди на %1$s нове поруке</item>
+        <item quantity="other">Иди на %1$s нових порука</item>
+    </plurals>
+    <string name="chat_message_distrusted">Послато са уређаја који сте означили као непоуздан</string>
+    <string name="chat_message_mismatched">Послато са уређаја чији се кључеви не подударају</string>
+    <string name="chat_list_select">Изабери чет</string>
+    <string name="chat_message_discard">Одбаци</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="one">Порука је предугачка за %1$s знак</item>
+        <item quantity="few">Порука је предугачка за %1$s знака</item>
+        <item quantity="other">Порука је предугачка за %1$s знакова</item>
+    </plurals>
 </resources>

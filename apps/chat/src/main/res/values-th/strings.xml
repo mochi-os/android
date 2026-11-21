@@ -140,7 +140,6 @@
     <string name="chat_encryption_done">เสร็จสิ้น</string>
     <string name="chat_encryption_key">คีย์กู้คืน</string>
     <string name="chat_encryption_restore">กู้คืน</string>
-    <string name="chat_encryption_recovery_refused">นี่ไม่ใช่คีย์กู้คืนของคุณ</string>
     <string name="chat_verification_own">ยืนยันอุปกรณ์ของคุณ</string>
     <string name="chat_verification_compare">ตรวจสอบว่าอีโมจิเดียวกันปรากฏบนหน้าจออีกเครื่อง</string>
     <string name="chat_verification_requested_own">อุปกรณ์อื่นของคุณต้องการยืนยันอุปกรณ์นี้</string>
@@ -160,9 +159,6 @@
     <string name="chat_verification_requested">%1$s ต้องการยืนยันคุณ</string>
     <string name="chat_typing_one">%1$s กำลังพิมพ์...</string>
     <string name="chat_typing_many">%1$s กำลังพิมพ์...</string>
-    <plurals name="chat_thread_replies">
-        <item quantity="other">%1$s การตอบกลับ</item>
-    </plurals>
     <plurals name="chat_thread_earlier_count">
         <item quantity="other">%1$s การตอบกลับก่อนหน้า</item>
     </plurals>
@@ -178,4 +174,15 @@
     <string name="chat_message_earlier">ข้อความจากก่อนที่จะเพิ่มบัญชีนี้ใน Mochi ถูกเข้ารหัสไว้และไม่สามารถอ่านได้ที่นี่</string>
     <string name="chat_message_excluded">เข้ารหัสสำหรับอุปกรณ์อื่นเท่านั้น</string>
     <string name="chat_setup">ตั้งค่า</string>
+    <string name="chat_jump_bottom">ไปที่ล่างสุด</string>
+    <plurals name="chat_jump_newer">
+        <item quantity="other">ไปที่ %1$s ข้อความใหม่</item>
+    </plurals>
+    <string name="chat_message_distrusted">ส่งจากอุปกรณ์ที่คุณไม่เชื่อถือ</string>
+    <string name="chat_message_mismatched">ส่งจากอุปกรณ์ที่คีย์ไม่ตรงกัน</string>
+    <string name="chat_list_select">เลือกแชต</string>
+    <string name="chat_message_discard">ละทิ้ง</string>
+    <plurals name="chat_message_too_long">
+        <item quantity="other">ข้อความยาวเกิน %1$s ตัวอักษร</item>
+    </plurals>
 </resources>

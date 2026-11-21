@@ -81,4 +81,6 @@
     <string name="go_score_resume">Lîstikê bidomîne</string>
     <string name="go_error_score_resume_failed">Domandina lîstikê neserkeftî bû</string>
     <string name="go_error_score_accept_failed">Qebûlkirina skorê neserkeftî bû</string>
+    <string name="go_chat_player_passed">%1$s derbas kir</string>
+    <string name="go_chat_you_passed">Te dora xwe derbas kir</string>
 </resources>

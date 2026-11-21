@@ -117,7 +117,6 @@
     <string name="game_chat_empty">Babu saƙonni tukuna</string>
     <string name="game_chat_input_placeholder">Buga saƙo</string>
     <string name="game_chat_send">Aika saƙo</string>
-    <string name="game_chat_subject_you">Kai</string>
 
     <string name="common_not_saved">Ba a ajiye ba</string>
     <string name="app_brand">Mochi</string>
@@ -349,4 +348,9 @@
     <string name="sync_conflict">An canza a kan sabar</string>
     <string name="sync_missing">Ba ya kan sabar yanzu</string>
     <string name="sync_refused">Sabar ta ƙi</string>
+    <string name="game_system_score_agreed">An amince da maki</string>
+    <string name="game_system_score_accept">%1$s ya karɓi maki</string>
+    <string name="game_system_score_resume">%1$s ya ci gaba da wasa</string>
+    <string name="game_not_found">Ba a sami wasan ba</string>
+    <string name="game_chat_move_played_you">Ka yi %1$s</string>
 </resources>
