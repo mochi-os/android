@@ -126,7 +126,6 @@
     <string name="common_retry">Reintentar</string>
     <string name="access_add_rule_title">Agregar regla de acceso</string>
     <string name="access_level_manage">Administrar</string>
-    <string name="notifications_clear">Borrar notificaciones</string>
     <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">Acerca de</string>
     <string name="game_chat_load_more">Cargar mensajes anteriores</string>

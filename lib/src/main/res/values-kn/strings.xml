@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">ಖಾತೆಯನ್ನು ಅಮಾನತುಗೊಳಿಸಲಾಗಿದೆ</string>
     <string name="common_back">ಹಿಂದೆ</string>
     <string name="common_close">ಮುಚ್ಚಿ</string>
+    <string name="common_clear_search">ಹುಡುಕಾಟ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="drawer_open">ಮೆನು ತೆರೆಯಿರಿ</string>
     <string name="common_cancel">ರದ್ದುಮಾಡಿ</string>
     <string name="common_filter">ಫಿಲ್ಟರ್</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">ಪ್ರವೇಶ ನಿಯಮವನ್ನು ಸೇರಿಸಿ</string>
     <string name="access_level_manage">ನಿರ್ವಹಿಸಿ</string>
     <string name="access_level_react">ಪ್ರತಿಕ್ರಿಯಿಸಿ</string>
-    <string name="notifications_clear">ಅಧಿಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸಿ</string>
     <string name="entity_avatar_alt">%1$s ಗಾಗಿ ಅವತಾರ್</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">ನವೀಕರಣಗಳಿಗಾಗಿ ಪರಿಶೀಲಿಸಿ</string>
     <string name="about_up_to_date">ನವೀಕೃತವಾಗಿದೆ</string>
     <string name="about_check_downloading">ಆವೃತ್ತಿ %1$s ಲಭ್ಯವಿದೆ, ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">ನವೀಕರಣ ಸರ್ವರ್ ಅನ್ನು ತಲುಪಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ</string>
     <string name="about_check_download_failed">ಡೌನ್‌ಲೋಡ್ ವಿಫಲವಾಗಿದೆ</string>
     <string name="notifications_clear_all_title">ಎಲ್ಲ ಅಧಿಸೂಚನೆಗಳನ್ನು ತೆರವುಗೊಳಿಸುವುದೇ?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ದಪ್ಪ</string>
     <string name="format_italic">ಓರೆ</string>
     <string name="format_link">ಲಿಂಕ್</string>
+    <string name="format_link_text">ಪಠ್ಯ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">ಶೀರ್ಷಿಕೆ</string>
     <string name="format_code">ಕೋಡ್</string>
     <string name="format_list">ಬುಲೆಟ್ ಪಟ್ಟಿ</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" ಗಾಗಿ ಪ್ರವೇಶ ನಿಯಮವನ್ನು ತೆಗೆದುಹಾಕುವುದೇ?</string>
     <string name="color_picker_custom">ಕಸ್ಟಮ್</string>
     <string name="color_picker_clear">ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="color_picker_white">ಬಿಳಿ</string>
+    <string name="color_picker_slate">ಸ್ಲೇಟ್ ಬೂದು</string>
+    <string name="color_picker_red">ಕೆಂಪು</string>
+    <string name="color_picker_orange">ಕಿತ್ತಳೆ</string>
+    <string name="color_picker_amber">ಅಂಬರ್</string>
+    <string name="color_picker_green">ಹಸಿರು</string>
+    <string name="color_picker_teal">ನೀಲಿ-ಹಸಿರು</string>
+    <string name="color_picker_cyan">ಸಯಾನ್</string>
+    <string name="color_picker_blue">ನೀಲಿ</string>
+    <string name="color_picker_violet">ನೇರಳೆ</string>
+    <string name="color_picker_pink">ಗುಲಾಬಿ</string>
+    <string name="color_picker_black">ಕಪ್ಪು</string>
     <string name="common_refresh">ರಿಫ್ರೆಶ್ ಮಾಡಿ</string>
     <string name="launcher_add_to_home">ಮುಖಪುಟಕ್ಕೆ ಸೇರಿಸಿ</string>
     <string name="common_continue">ಮುಂದುವರಿಸಿ</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">ಓದದ</string>
     <string name="person_unknown">ಅಜ್ಞಾತ</string>
+    <string name="group_unknown">ಅಜ್ಞಾತ ಗುಂಪು</string>
     <string name="format_time_seconds_short">%1$sಸೆ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…</string>

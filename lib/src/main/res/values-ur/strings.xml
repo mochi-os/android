@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">اکاؤنٹ معطل</string>
     <string name="common_back">واپس</string>
     <string name="common_close">بند کریں</string>
+    <string name="common_clear_search">تلاش صاف کریں</string>
+    <string name="drawer_open">مینو کھولیں</string>
     <string name="common_cancel">منسوخ کریں</string>
     <string name="common_filter">فلٹر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">رسائی قانون شامل کریں</string>
     <string name="access_level_manage">منظم کریں</string>
     <string name="access_level_react">ردعمل دیں</string>
-    <string name="notifications_clear">اطلاعات صاف کریں</string>
     <string name="entity_avatar_alt">%1$s کا اوتار</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">اپڈیٹس چیک کریں</string>
     <string name="about_up_to_date">تازہ ترین ہے</string>
     <string name="about_check_downloading">ورژن %1$s دستیاب ہے، ڈاؤن لوڈ ہو رہا ہے…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">اپڈیٹ سرور تک پہنچنا ممکن نہ ہوا</string>
     <string name="about_check_download_failed">ڈاؤن لوڈ ناکام</string>
     <string name="notifications_clear_all_title">تمام اطلاعات صاف کریں؟</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">جلی</string>
     <string name="format_italic">ترچھا</string>
     <string name="format_link">لنک</string>
+    <string name="format_link_text">متن</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">سرخی</string>
     <string name="format_code">کوڈ</string>
     <string name="format_list">نکاتی فہرست</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" کے لیے رسائی کا اصول ہٹائیں؟</string>
     <string name="color_picker_custom">اپنی مرضی کا</string>
     <string name="color_picker_clear">صاف کریں</string>
+    <string name="color_picker_white">سفید</string>
+    <string name="color_picker_slate">سلیٹی</string>
+    <string name="color_picker_red">سرخ</string>
+    <string name="color_picker_orange">نارنجی</string>
+    <string name="color_picker_amber">کہربائی</string>
+    <string name="color_picker_green">سبز</string>
+    <string name="color_picker_teal">نیلگوں سبز</string>
+    <string name="color_picker_cyan">آسمانی</string>
+    <string name="color_picker_blue">نیلا</string>
+    <string name="color_picker_violet">بنفشی</string>
+    <string name="color_picker_pink">گلابی</string>
+    <string name="color_picker_black">سیاہ</string>
     <string name="common_refresh">ریفریش کریں</string>
     <string name="launcher_add_to_home">ہوم اسکرین میں شامل کریں</string>
     <string name="common_continue">جاری رکھیں</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">غیر پڑھی</string>
     <string name="person_unknown">نامعلوم</string>
+    <string name="group_unknown">نامعلوم گروپ</string>
     <string name="format_time_seconds_short">%1$sس</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ڈاؤن لوڈ ہو رہی ہے…</string>

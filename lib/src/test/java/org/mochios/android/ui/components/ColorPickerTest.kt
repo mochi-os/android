@@ -11,7 +11,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.test.SemanticsMatcher
+import androidx.compose.ui.test.assert
+import androidx.compose.ui.test.assertIsNotSelected
+import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.hasClickAction
+import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.hasSetTextAction
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -108,6 +115,22 @@ class ColorPickerTest {
     fun `a colour that is no preset opens the picker by itself`() {
         show("#123456")
         assertEquals(1, boxes())
+    }
+
+    @Test
+    fun `each preset is a named radio button, the chosen one selected`() {
+        show(COLOR_PICKER_PRESETS[2])
+        val red = rule.onNodeWithContentDescription("Red")
+        red.assertIsSelected()
+        red.assert(SemanticsMatcher.expectValue(SemanticsProperties.Role, Role.RadioButton))
+        rule.onNodeWithContentDescription("Blue").assertIsNotSelected()
+        val names = listOf("White", "Slate", "Red", "Orange", "Amber", "Green", "Teal", "Cyan", "Blue", "Violet", "Pink", "Black")
+        names.forEach { name -> rule.onNodeWithContentDescription(name).assertExists() }
+
+        rule.onNodeWithContentDescription("Blue").performClick()
+        rule.waitForIdle()
+        assertEquals("#60a5fa", hex)
+        rule.onNodeWithContentDescription("Blue").assertIsSelected()
     }
 
     @Test

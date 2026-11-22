@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Konto suspenderet</string>
     <string name="common_back">Tilbage</string>
     <string name="common_close">Luk</string>
+    <string name="common_clear_search">Ryd søgning</string>
+    <string name="drawer_open">Åbn menu</string>
     <string name="common_cancel">Annuller</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">Tilføj adgangsregel</string>
     <string name="access_level_manage">Administrer</string>
     <string name="access_level_react">Reager</string>
-    <string name="notifications_clear">Ryd notifikationer</string>
     <string name="entity_avatar_alt">Avatar for %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -216,6 +217,7 @@
     <string name="about_check_updates">Søg efter opdateringer</string>
     <string name="about_up_to_date">Opdateret</string>
     <string name="about_check_downloading">Version %1$s er tilgængelig, downloader…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Kunne ikke nå opdateringsserveren</string>
     <string name="about_check_download_failed">Download mislykkedes</string>
     <string name="notifications_clear_all_title">Ryd alle notifikationer?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Fed</string>
     <string name="format_italic">Kursiv</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">tekst</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Overskrift</string>
     <string name="format_code">Kode</string>
     <string name="format_list">Punktliste</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Fjern adgangsregel for \"%1$s\"?</string>
     <string name="color_picker_custom">Brugerdefineret</string>
     <string name="color_picker_clear">Ryd</string>
+    <string name="color_picker_white">Hvid</string>
+    <string name="color_picker_slate">Skifergrå</string>
+    <string name="color_picker_red">Rød</string>
+    <string name="color_picker_orange">Orange</string>
+    <string name="color_picker_amber">Rav</string>
+    <string name="color_picker_green">Grøn</string>
+    <string name="color_picker_teal">Blågrøn</string>
+    <string name="color_picker_cyan">Cyan</string>
+    <string name="color_picker_blue">Blå</string>
+    <string name="color_picker_violet">Violet</string>
+    <string name="color_picker_pink">Lyserød</string>
+    <string name="color_picker_black">Sort</string>
     <string name="common_refresh">Opdater</string>
     <string name="launcher_add_to_home">Føj til startskærm</string>
     <string name="common_continue">Fortsæt</string>
@@ -342,6 +358,7 @@
     </plurals>
     <string name="drawer_unread">Ulæste</string>
     <string name="person_unknown">Ukendt</string>
+    <string name="group_unknown">Ukendt gruppe</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Downloader %1$s…</string>

@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Тіркелгі тоқтатылды</string>
     <string name="common_back">Артқа</string>
     <string name="common_close">Жабу</string>
+    <string name="common_clear_search">Іздеуді тазалау</string>
+    <string name="drawer_open">Мәзірді ашу</string>
     <string name="common_cancel">Болдырмау</string>
     <string name="common_filter">Сүзгі</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Қол жеткізу ережесін қосу</string>
     <string name="access_level_manage">Басқару</string>
     <string name="access_level_react">Реакция</string>
-    <string name="notifications_clear">Хабарландыруларды тазалау</string>
     <string name="entity_avatar_alt">%1$s аватары</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s - %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Жаңартуларды тексеру</string>
     <string name="about_up_to_date">Соңғы нұсқа</string>
     <string name="about_check_downloading">%1$s нұсқасы қолжетімді, жүктелуде…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Жаңарту серверіне қосыла алмады</string>
     <string name="about_check_download_failed">Жүктеп алу сәтсіз аяқталды</string>
     <string name="notifications_clear_all_title">Барлық хабарландырулар тазалансын ба?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Қалың</string>
     <string name="format_italic">Көлбеу</string>
     <string name="format_link">Сілтеме</string>
+    <string name="format_link_text">мәтін</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Тақырып</string>
     <string name="format_code">Код</string>
     <string name="format_list">Маркерлі тізім</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">\"%1$s\" үшін қатынау ережесі жойылсын ба?</string>
     <string name="color_picker_custom">Реттелетін</string>
     <string name="color_picker_clear">Тазалау</string>
+    <string name="color_picker_white">Ақ</string>
+    <string name="color_picker_slate">Тақтатас сұр</string>
+    <string name="color_picker_red">Қызыл</string>
+    <string name="color_picker_orange">Қызғылт сары</string>
+    <string name="color_picker_amber">Кәріптас</string>
+    <string name="color_picker_green">Жасыл</string>
+    <string name="color_picker_teal">Көкшіл жасыл</string>
+    <string name="color_picker_cyan">Көгілдір</string>
+    <string name="color_picker_blue">Көк</string>
+    <string name="color_picker_violet">Күлгін</string>
+    <string name="color_picker_pink">Қызғылт</string>
+    <string name="color_picker_black">Қара</string>
     <string name="common_refresh">Жаңарту</string>
     <string name="launcher_add_to_home">Негізгі экранға қосу</string>
     <string name="common_continue">Жалғастыру</string>
@@ -341,6 +357,7 @@
     </plurals>
     <string name="drawer_unread">Оқылмаған</string>
     <string name="person_unknown">Белгісіз</string>
+    <string name="group_unknown">Белгісіз топ</string>
     <string name="format_time_seconds_short">%1$s сек</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s жүктелуде…</string>

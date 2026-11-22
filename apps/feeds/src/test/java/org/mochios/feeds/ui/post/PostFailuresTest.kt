@@ -86,6 +86,8 @@ class PostFailuresTest {
                         pinned = 1_700_000_000L
                         ok("""{"post": "p1", "pinned": $pinned}""")
                     }
+                    "/feeds/f1/-/members/search" ->
+                        MockResponse().setResponseCode(403).setBody("""{"error": "Not allowed"}""")
                     "/feeds/f1/-/p1/react" -> if (refuse) {
                         MockResponse().setResponseCode(403).setBody("""{"error": "Not allowed"}""")
                     } else {
@@ -202,5 +204,19 @@ class PostFailuresTest {
         until { count("/feeds/f1/-/p1") > reads }
         settle()
         assertEquals("the server's pin stands", 1_700_000_000L, model.post.value!!.pinned)
+    }
+
+    @Test
+    fun `a refused mention search reaches the field instead of reading as no one found`() {
+        val model = page()
+        val failure = runCatching { runBlocking { model.searchMembers("al") } }.exceptionOrNull()
+        assertNotNull("THE POINT: the comment field's search refusal is thrown", failure)
+    }
+
+    @Test
+    fun `a refused mention search in the composer reaches the field instead of reading as no one found`() {
+        val composer = CreatePostViewModel(SavedStateHandle(mapOf("feedId" to "f1")), repository, context)
+        val failure = runCatching { runBlocking { composer.searchMembers("al") } }.exceptionOrNull()
+        assertNotNull("THE POINT: the composer's search refusal is thrown", failure)
     }
 }

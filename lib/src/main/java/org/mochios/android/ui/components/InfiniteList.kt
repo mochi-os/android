@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import org.mochios.android.api.MochiError
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Where a paged list's next page stands. The caller owns it: [Loading] while a
@@ -110,7 +111,7 @@ fun <T> InfiniteList(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp),
+                        .padding(LocalSpacing.current.gap(16.dp)),
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator()
@@ -120,7 +121,7 @@ fun <T> InfiniteList(
                 InlineErrorState(
                     error = load.error,
                     onRetry = onLoadMore,
-                    modifier = Modifier.padding(horizontal = 16.dp),
+                    modifier = Modifier.padding(horizontal = LocalSpacing.current.gap(16.dp)),
                 )
             }
             LoadState.Idle -> Unit

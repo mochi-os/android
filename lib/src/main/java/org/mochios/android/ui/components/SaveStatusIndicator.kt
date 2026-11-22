@@ -22,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Lifecycle of an auto-saved edit, driving a [SaveStatusIndicator].
@@ -39,6 +40,7 @@ fun SaveStatusIndicator(
     modifier: Modifier = Modifier,
 ) {
     if (status == SaveStatus.Idle) return
+    val gap = LocalSpacing.current.gap(6.dp)
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
@@ -49,7 +51,7 @@ fun SaveStatusIndicator(
                     modifier = Modifier.size(14.dp),
                     strokeWidth = 2.dp,
                 )
-                Spacer(modifier = Modifier.width(6.dp))
+                Spacer(modifier = Modifier.width(gap))
                 Text(
                     text = stringResource(R.string.common_saving),
                     style = MaterialTheme.typography.labelSmall,
@@ -64,7 +66,7 @@ fun SaveStatusIndicator(
                     modifier = Modifier.size(14.dp),
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                Spacer(modifier = Modifier.width(6.dp))
+                Spacer(modifier = Modifier.width(gap))
                 Text(
                     text = stringResource(R.string.common_saved),
                     style = MaterialTheme.typography.labelSmall,
@@ -79,7 +81,7 @@ fun SaveStatusIndicator(
                     modifier = Modifier.size(14.dp),
                     tint = MaterialTheme.colorScheme.error,
                 )
-                Spacer(modifier = Modifier.width(6.dp))
+                Spacer(modifier = Modifier.width(gap))
                 Text(
                     text = stringResource(R.string.common_not_saved),
                     style = MaterialTheme.typography.labelSmall,

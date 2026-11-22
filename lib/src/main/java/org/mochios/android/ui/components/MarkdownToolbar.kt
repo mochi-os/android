@@ -31,6 +31,7 @@ import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * The strip under a markdown field: the marks a body is written in, applied to
@@ -56,7 +57,7 @@ fun MarkdownToolbar(
         modifier = modifier
             .fillMaxWidth()
             .horizontalScroll(rememberScrollState()),
-        horizontalArrangement = Arrangement.spacedBy(2.dp),
+        horizontalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(2.dp)),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         ToolButton(Icons.Filled.FormatBold, R.string.format_bold) {
@@ -65,8 +66,10 @@ fun MarkdownToolbar(
         ToolButton(Icons.Filled.FormatItalic, R.string.format_italic) {
             onBodyChange(body.wrappedIn("_"))
         }
+        val caption = stringResource(R.string.format_link_text)
+        val address = stringResource(R.string.format_link_address)
         ToolButton(Icons.Filled.Link, R.string.format_link) {
-            onBodyChange(body.linked())
+            onBodyChange(body.linked(caption, address))
         }
         ToolButton(Icons.Filled.Title, R.string.format_heading) {
             onBodyChange(body.linesPrefixed("## "))
@@ -86,7 +89,7 @@ fun MarkdownToolbar(
 fun MarkdownToolbarSeparator() {
     VerticalDivider(
         modifier = Modifier
-            .padding(horizontal = 6.dp)
+            .padding(horizontal = LocalSpacing.current.gap(6.dp))
             .height(20.dp),
     )
 }
@@ -124,15 +127,17 @@ fun TextFieldValue.wrappedIn(
 /**
  * A markdown link, with the half the user still has to write left selected -
  * the address when they had text in hand, the text when they did not.
+ * [caption] and [address] are the stand-ins written for the halves still to
+ * come, in the writer's language; left selected, typing replaces them.
  */
-fun TextFieldValue.linked(): TextFieldValue {
+fun TextFieldValue.linked(caption: String, address: String): TextFieldValue {
     val start = selection.min
     val end = selection.max
     val selected = text.substring(start, end)
-    val label = selected.ifEmpty { LINK_LABEL }
-    val link = "[$label]($LINK_TARGET)"
+    val label = selected.ifEmpty { caption }
+    val link = "[$label]($address)"
     val placeholderStart = if (selected.isEmpty()) start + 1 else start + label.length + 3
-    val placeholder = if (selected.isEmpty()) label else LINK_TARGET
+    val placeholder = if (selected.isEmpty()) label else address
     return TextFieldValue(
         text = text.replaceRange(start, end, link),
         selection = TextRange(placeholderStart, placeholderStart + placeholder.length),
@@ -158,7 +163,3 @@ fun TextFieldValue.linesPrefixed(marker: String): TextFieldValue {
         selection = TextRange(lineStart + marked.length),
     )
 }
-
-/** Stand-ins a tap leaves selected, so typing replaces them. */
-private const val LINK_LABEL = "text"
-private const val LINK_TARGET = "url"

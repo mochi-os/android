@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">መለያ ታግዷል</string>
     <string name="common_back">ተመለስ</string>
     <string name="common_close">ዝጋ</string>
+    <string name="common_clear_search">ፍለጋ አጽዳ</string>
+    <string name="drawer_open">ምናሌ ክፈት</string>
     <string name="common_cancel">ይቅር</string>
     <string name="common_filter">ማጣሪያ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">የመዳረሻ ደንብ አክል</string>
     <string name="access_level_manage">ያስተዳድሩ</string>
     <string name="access_level_react">ምላሽ ይስጡ</string>
-    <string name="notifications_clear">ማሳወቂያዎችን አጽዳ</string>
     <string name="entity_avatar_alt">ለ%1$s አምሳያ</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">ዝመናዎችን ይፈትሹ</string>
     <string name="about_up_to_date">ወቅታዊ ነው</string>
     <string name="about_check_downloading">ስሪት %1$s ይገኛል፣ በማውረድ ላይ…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">የዝመና አገልጋይ ላይ መድረስ አልተቻለም</string>
     <string name="about_check_download_failed">ማውረድ አልተሳካም</string>
     <string name="notifications_clear_all_title">ሁሉንም ማሳወቂያዎች ይጥረጉ?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ደማቅ</string>
     <string name="format_italic">ሰያፍ</string>
     <string name="format_link">አገናኝ</string>
+    <string name="format_link_text">ጽሁፍ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">ርዕስ</string>
     <string name="format_code">ኮድ</string>
     <string name="format_list">ነጥብ ዝርዝር</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">የ\"%1$s\" የመዳረሻ ደንብ ይወገድ?</string>
     <string name="color_picker_custom">ብጁ</string>
     <string name="color_picker_clear">አጽዳ</string>
+    <string name="color_picker_white">ነጭ</string>
+    <string name="color_picker_slate">የሰሌዳ ግራጫ</string>
+    <string name="color_picker_red">ቀይ</string>
+    <string name="color_picker_orange">ብርቱካናማ</string>
+    <string name="color_picker_amber">አምበር</string>
+    <string name="color_picker_green">አረንጓዴ</string>
+    <string name="color_picker_teal">ሰማያዊ አረንጓዴ</string>
+    <string name="color_picker_cyan">ሳያን</string>
+    <string name="color_picker_blue">ሰማያዊ</string>
+    <string name="color_picker_violet">ወይን ጠጅ</string>
+    <string name="color_picker_pink">ሮዝ</string>
+    <string name="color_picker_black">ጥቁር</string>
     <string name="common_refresh">አድስ</string>
     <string name="launcher_add_to_home">ወደ መነሻ ማያ ገጽ ያክሉ</string>
     <string name="common_continue">ቀጥል</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">ያልተነበበ</string>
     <string name="person_unknown">ያልታወቀ</string>
+    <string name="group_unknown">ያልታወቀ ቡድን</string>
     <string name="format_time_seconds_short">%1$sሰከ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s በማውረድ ላይ…</string>

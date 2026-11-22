@@ -41,6 +41,8 @@ data class ProjectSettingsUiState(
     val prefix: String = "",
     val userSearchResults: List<Person> = emptyList(),
     val groups: List<Group> = emptyList(),
+    val isLoadingGroups: Boolean = false,
+    val groupsError: MochiError? = null,
     val actionMessage: Int? = null
 )
 
@@ -209,13 +211,22 @@ class ProjectSettingsViewModel @Inject constructor(
     }
 
     fun loadGroups() {
+        // Loading at once, so the dialog never says there are no groups
+        // before the answer.
+        _uiState.value = _uiState.value.copy(isLoadingGroups = true, groupsError = null)
         viewModelScope.launch {
             try {
                 val groups = repository.getGroups()
                     .sortedWith(compareBy(NaturalCompare) { group -> group.name })
-                _uiState.value = _uiState.value.copy(groups = groups)
-            } catch (_: Exception) {
-                _uiState.value = _uiState.value.copy(groups = emptyList())
+                _uiState.value = _uiState.value.copy(groups = groups, isLoadingGroups = false)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    groups = emptyList(),
+                    isLoadingGroups = false,
+                    groupsError = e.toMochiError(),
+                )
             }
         }
     }

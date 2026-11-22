@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Konto zawieszone</string>
     <string name="common_back">Wstecz</string>
     <string name="common_close">Zamknij</string>
+    <string name="common_clear_search">Wyczyść wyszukiwanie</string>
+    <string name="drawer_open">Otwórz menu</string>
     <string name="common_cancel">Anuluj</string>
     <string name="common_filter">Filtr</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Dodaj regułę dostępu</string>
     <string name="access_level_manage">Zarządzanie</string>
     <string name="access_level_react">Reakcje</string>
-    <string name="notifications_clear">Wyczyść powiadomienia</string>
     <string name="entity_avatar_alt">Awatar użytkownika %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Sprawdź aktualizacje</string>
     <string name="about_up_to_date">Aktualne</string>
     <string name="about_check_downloading">Wersja %1$s dostępna, pobieranie…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Nie udało się połączyć z serwerem aktualizacji</string>
     <string name="about_check_download_failed">Pobieranie nie powiodło się</string>
     <string name="notifications_clear_all_title">Wyczyścić wszystkie powiadomienia?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Pogrubienie</string>
     <string name="format_italic">Kursywa</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">tekst</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Nagłówek</string>
     <string name="format_code">Kod</string>
     <string name="format_list">Lista punktowana</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Usunąć regułę dostępu dla „%1$s”?</string>
     <string name="color_picker_custom">Niestandardowy</string>
     <string name="color_picker_clear">Wyczyść</string>
+    <string name="color_picker_white">Biały</string>
+    <string name="color_picker_slate">Łupkowy</string>
+    <string name="color_picker_red">Czerwony</string>
+    <string name="color_picker_orange">Pomarańczowy</string>
+    <string name="color_picker_amber">Bursztynowy</string>
+    <string name="color_picker_green">Zielony</string>
+    <string name="color_picker_teal">Morski</string>
+    <string name="color_picker_cyan">Cyjan</string>
+    <string name="color_picker_blue">Niebieski</string>
+    <string name="color_picker_violet">Fioletowy</string>
+    <string name="color_picker_pink">Różowy</string>
+    <string name="color_picker_black">Czarny</string>
     <string name="common_refresh">Odśwież</string>
     <string name="launcher_add_to_home">Dodaj do ekranu głównego</string>
     <string name="common_continue">Kontynuuj</string>
@@ -344,6 +360,7 @@
     </plurals>
     <string name="drawer_unread">Nieprzeczytane</string>
     <string name="person_unknown">Nieznany</string>
+    <string name="group_unknown">Nieznana grupa</string>
     <string name="format_time_seconds_short">%1$s s</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Pobieranie %1$s…</string>

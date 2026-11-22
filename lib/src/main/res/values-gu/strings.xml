@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">ખાતું સ્થગિત</string>
     <string name="common_back">પાછળ</string>
     <string name="common_close">બંધ કરો</string>
+    <string name="common_clear_search">શોધ સાફ કરો</string>
+    <string name="drawer_open">મેનૂ ખોલો</string>
     <string name="common_cancel">રદ કરો</string>
     <string name="common_filter">ફિલ્ટર</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -178,7 +180,6 @@
     <string name="access_add_rule_title">ઍક્સેસ નિયમ ઉમેરો</string>
     <string name="access_level_manage">વ્યવસ્થાપિત કરો</string>
     <string name="access_level_react">પ્રતિક્રિયા આપો</string>
-    <string name="notifications_clear">સૂચનાઓ સાફ કરો</string>
     <string name="entity_avatar_alt">%1$s માટે અવતાર</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -214,6 +215,7 @@
     <string name="about_check_updates">અપડેટ્સ માટે તપાસો</string>
     <string name="about_up_to_date">અદ્યતન છે</string>
     <string name="about_check_downloading">સંસ્કરણ %1$s ઉપલબ્ધ છે, ડાઉનલોડ થઈ રહ્યું છે…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">અપડેટ સર્વર સુધી પહોંચી શકાયું નહીં</string>
     <string name="about_check_download_failed">ડાઉનલોડ નિષ્ફળ</string>
     <string name="notifications_clear_all_title">બધી સૂચનાઓ સાફ કરવી છે?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ઘાટા</string>
     <string name="format_italic">ત્રાંસા</string>
     <string name="format_link">લિંક</string>
+    <string name="format_link_text">ટેક્સ્ટ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">મથાળું</string>
     <string name="format_code">કોડ</string>
     <string name="format_list">બુલેટ યાદી</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" માટે ઍક્સેસ નિયમ દૂર કરીએ?</string>
     <string name="color_picker_custom">કસ્ટમ</string>
     <string name="color_picker_clear">સાફ કરો</string>
+    <string name="color_picker_white">સફેદ</string>
+    <string name="color_picker_slate">સ્લેટ રાખોડી</string>
+    <string name="color_picker_red">લાલ</string>
+    <string name="color_picker_orange">નારંગી</string>
+    <string name="color_picker_amber">એમ્બર</string>
+    <string name="color_picker_green">લીલો</string>
+    <string name="color_picker_teal">વાદળી-લીલો</string>
+    <string name="color_picker_cyan">સ્યાન</string>
+    <string name="color_picker_blue">વાદળી</string>
+    <string name="color_picker_violet">જાંબલી</string>
+    <string name="color_picker_pink">ગુલાબી</string>
+    <string name="color_picker_black">કાળો</string>
     <string name="common_refresh">રિફ્રેશ કરો</string>
     <string name="launcher_add_to_home">હોમ સ્ક્રીન પર ઉમેરો</string>
     <string name="common_continue">ચાલુ રાખો</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">વાંચ્યા વગરની</string>
     <string name="person_unknown">અજાણ્યું</string>
+    <string name="group_unknown">અજાણ્યું ગ્રુપ</string>
     <string name="format_time_seconds_short">%1$sસે</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ડાઉનલોડ થઈ રહ્યું છે…</string>

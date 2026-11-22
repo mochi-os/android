@@ -5,92 +5,74 @@
 
 package org.mochios.android.notifications
 
+import kotlinx.coroutines.CancellationException
 import org.mochios.android.api.toMochiError
 import org.mochios.android.api.unwrap
+import org.mochios.android.api.unwrapEmpty
 import javax.inject.Inject
 import javax.inject.Singleton
 
+/**
+ * The notifications app's calls. Each throws a [org.mochios.android.api.MochiError]
+ * carrying the server's own refusal, so a screen shows the server's reason
+ * rather than a bare status.
+ */
 @Singleton
 class NotificationsRepository @Inject constructor(
     private val api: NotificationsApi,
 ) {
 
-    suspend fun list(): NotificationsListResponse {
-        try {
-            val resp = api.list()
-            if (resp.isSuccessful) return resp.body() ?: NotificationsListResponse()
-            throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    private inline fun <T> request(block: () -> T): T = try {
+        block()
+    } catch (e: CancellationException) {
+        throw e
+    } catch (e: Exception) {
+        throw e.toMochiError()
     }
 
-    suspend fun count(): NotificationsCount {
-        try {
-            val resp = api.count()
-            if (resp.isSuccessful) return resp.body()?.data ?: NotificationsCount()
-            throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    // An empty body on a success is a valid answer for these four (no rows,
+    // no count, no topic yet), so only a refusal throws.
+
+    suspend fun list(): NotificationsListResponse = request {
+        val resp = api.list()
+        resp.unwrapEmpty()
+        resp.body() ?: NotificationsListResponse()
     }
 
-    suspend fun markRead(id: String) {
-        try {
-            val resp = api.read(id)
-            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    suspend fun count(): NotificationsCount = request {
+        val resp = api.count()
+        resp.unwrapEmpty()
+        resp.body()?.data ?: NotificationsCount()
     }
 
-    suspend fun markAllRead() {
-        try {
-            val resp = api.readAll()
-            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    suspend fun markRead(id: String) = request {
+        api.read(id).unwrapEmpty()
     }
 
-    suspend fun categories(): List<NotificationCategory> {
-        try {
-            val resp = api.categories()
-            if (resp.isSuccessful) return resp.body()?.data ?: emptyList()
-            throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    suspend fun markAllRead() = request {
+        api.readAll().unwrapEmpty()
+    }
+
+    suspend fun categories(): List<NotificationCategory> = request {
+        val resp = api.categories()
+        resp.unwrapEmpty()
+        resp.body()?.data ?: emptyList()
     }
 
     /** The topic [notification] belongs to, or null when the server holds no row for it yet. */
-    suspend fun topic(notification: MochiNotification): NotificationTopic? {
-        try {
-            val resp = api.topic(notification.app, notification.topic, notification.`object`)
-            if (resp.isSuccessful) return resp.body()?.data
-            throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    suspend fun topic(notification: MochiNotification): NotificationTopic? = request {
+        val resp = api.topic(notification.app, notification.topic, notification.`object`)
+        resp.unwrapEmpty()
+        resp.body()?.data
     }
 
     /** Moves [notification]'s topic to [category], or back to unassigned when null. */
-    suspend fun setCategory(notification: MochiNotification, category: String?) {
-        try {
-            val resp = api.setCategory(notification.app, notification.topic, notification.`object`, category.orEmpty())
-            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    suspend fun setCategory(notification: MochiNotification, category: String?) = request {
+        api.setCategory(notification.app, notification.topic, notification.`object`, category.orEmpty()).unwrapEmpty()
     }
 
-    suspend fun clearAll() {
-        try {
-            val resp = api.clearAll()
-            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    suspend fun clearAll() = request {
+        api.clearAll().unwrapEmpty()
     }
 
     /**
@@ -98,13 +80,8 @@ class NotificationsRepository @Inject constructor(
      * while the session is still valid - the request needs the notifications
      * app token.
      */
-    suspend fun removeAccount(id: String) {
-        try {
-            val resp = api.removeAccount(id)
-            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
-        } catch (e: Exception) {
-            throw e.toMochiError()
-        }
+    suspend fun removeAccount(id: String) = request {
+        api.removeAccount(id).unwrapEmpty()
     }
 
     // RSS feeds of the notifications. Each throws the server's own refusal.

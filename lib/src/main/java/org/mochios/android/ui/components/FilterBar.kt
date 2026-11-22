@@ -31,6 +31,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 
 /**
  * One single-choice filter in a [FilterBar]. A [current] value missing from
@@ -91,7 +93,7 @@ fun FilterBar(
                         filter = filter,
                         labelled = labelled,
                         singleLine = true,
-                        modifier = Modifier.padding(vertical = 4.dp),
+                        modifier = Modifier.padding(vertical = LocalSpacing.current.gap(4.dp)),
                     )
                 }
                 search?.invoke()
@@ -152,8 +154,8 @@ private fun ChoiceChips(
         onSelect = filter.onSelect,
         modifier = modifier,
         singleLine = singleLine,
-        contentPadding = if (singleLine) PaddingValues(horizontal = 16.dp) else PaddingValues(0.dp),
-        verticalSpacing = 4.dp,
+        contentPadding = if (singleLine) spaced(PaddingValues(horizontal = 16.dp)) else PaddingValues(0.dp),
+        verticalSpacing = LocalSpacing.current.gap(4.dp),
         leading = if (labelled) {
             {
                 Text(
@@ -170,17 +172,18 @@ private fun ChoiceChips(
 
 @Composable
 private fun ChoiceSheet(filters: List<ChoiceFilter>, onDismiss: () -> Unit) {
+    val gap = LocalSpacing.current.gap(8.dp)
     FilterSheet(
         title = stringResource(R.string.common_filter),
         onDismiss = onDismiss,
-        sectionSpacing = 8.dp,
+        sectionSpacing = gap,
     ) {
         filters.forEach { filter ->
             Text(
                 text = filter.label,
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Medium,
-                modifier = Modifier.padding(top = 8.dp),
+                modifier = Modifier.padding(top = gap),
             )
             ChoiceChips(filter = filter, labelled = false, singleLine = false)
         }
@@ -194,12 +197,13 @@ private fun ActiveChips(filters: List<ChoiceFilter>) {
     if (set.isEmpty()) {
         return
     }
+    val spacing = LocalSpacing.current
     FlowRow(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+            .padding(horizontal = spacing.gap(16.dp), vertical = spacing.gap(4.dp)),
+        horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
+        verticalArrangement = Arrangement.spacedBy(spacing.gap(4.dp)),
     ) {
         set.forEach { filter ->
             val value = filter.options

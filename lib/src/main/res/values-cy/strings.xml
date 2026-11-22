@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Cyfrif wedi\'i atal</string>
     <string name="common_back">Yn ôl</string>
     <string name="common_close">Cau</string>
+    <string name="common_clear_search">Clirio chwiliad</string>
+    <string name="drawer_open">Agor dewislen</string>
     <string name="common_cancel">Canslo</string>
     <string name="common_filter">Hidlo</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">Ychwanegu rheol mynediad</string>
     <string name="access_level_manage">Rheoli</string>
     <string name="access_level_react">Ymateb</string>
-    <string name="notifications_clear">Clirio hysbysiadau</string>
     <string name="entity_avatar_alt">Afatar ar gyfer %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">Gwirio am ddiweddariadau</string>
     <string name="about_up_to_date">Yn gyfredol</string>
     <string name="about_check_downloading">Mae fersiwn %1$s ar gael, yn lawrlwytho…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Methu cyrraedd y gweinydd diweddaru</string>
     <string name="about_check_download_failed">Methwyd â lawrlwytho</string>
     <string name="notifications_clear_all_title">Clirio pob hysbysiad?</string>
@@ -303,6 +305,8 @@
     <string name="format_bold">Trwm</string>
     <string name="format_italic">Italig</string>
     <string name="format_link">Dolen</string>
+    <string name="format_link_text">testun</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Pennawd</string>
     <string name="format_code">Cod</string>
     <string name="format_list">Rhestr fwled</string>
@@ -328,6 +332,18 @@
     <string name="access_remove_message">Tynnu\'r rheol mynediad ar gyfer \"%1$s\"?</string>
     <string name="color_picker_custom">Wedi\'i addasu</string>
     <string name="color_picker_clear">Clirio</string>
+    <string name="color_picker_white">Gwyn</string>
+    <string name="color_picker_slate">Llechen</string>
+    <string name="color_picker_red">Coch</string>
+    <string name="color_picker_orange">Oren</string>
+    <string name="color_picker_amber">Ambr</string>
+    <string name="color_picker_green">Gwyrdd</string>
+    <string name="color_picker_teal">Gwyrddlas</string>
+    <string name="color_picker_cyan">Syan</string>
+    <string name="color_picker_blue">Glas</string>
+    <string name="color_picker_violet">Fioled</string>
+    <string name="color_picker_pink">Pinc</string>
+    <string name="color_picker_black">Du</string>
     <string name="common_refresh">Adnewyddu</string>
     <string name="launcher_add_to_home">Ychwanegu at y sgrin gartref</string>
     <string name="common_continue">Parhau</string>
@@ -349,6 +365,7 @@
     </plurals>
     <string name="drawer_unread">Heb ddarllen</string>
     <string name="person_unknown">Anhysbys</string>
+    <string name="group_unknown">Grŵp anhysbys</string>
     <string name="format_time_seconds_short">%1$se</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Yn lawrlwytho %1$s…</string>

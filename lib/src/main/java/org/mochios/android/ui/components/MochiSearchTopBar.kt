@@ -81,7 +81,7 @@ fun MochiSearchTopBar(
                         MochiIconButton(onClick = { onQueryChange("") }) {
                             Icon(
                                 Icons.Default.Close,
-                                contentDescription = stringResource(R.string.common_close),
+                                contentDescription = stringResource(R.string.common_clear_search),
                             )
                         }
                     }

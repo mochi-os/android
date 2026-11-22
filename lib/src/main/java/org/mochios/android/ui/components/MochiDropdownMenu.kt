@@ -25,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.PopupProperties
+import org.mochios.android.ui.theme.spaced
 
 /** Narrowest a menu may be, so short labels still read as a panel rather than a chip. */
 private val MenuMinWidth = 200.dp
@@ -103,7 +104,7 @@ fun MochiDropdownMenuItem(
         trailingIcon = trailingIcon ?: if (selected) SelectedCheck else null,
         enabled = enabled,
         colors = resolvedColors,
-        contentPadding = ItemPadding
+        contentPadding = spaced(ItemPadding)
     )
 }
 
@@ -118,6 +119,6 @@ private val SelectedCheck: @Composable () -> Unit = {
  */
 @Composable
 fun MochiDropdownMenuDivider(modifier: Modifier = Modifier) {
-    HorizontalDivider(modifier = modifier.padding(ItemPadding))
+    HorizontalDivider(modifier = modifier.padding(spaced(ItemPadding)))
 }
 

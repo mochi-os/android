@@ -26,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * One row of [ClassListTab] — an object class as the design screens list it.
@@ -72,6 +73,7 @@ fun ClassListTab(
     onClassClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val spacing = LocalSpacing.current
     Box(modifier = modifier.fillMaxSize()) {
         if (classes.isEmpty()) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -91,7 +93,7 @@ fun ClassListTab(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable { onClassClick(cls.id) }
-                            .padding(horizontal = 16.dp, vertical = 16.dp),
+                            .padding(horizontal = spacing.gap(16.dp), vertical = spacing.gap(16.dp)),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
@@ -106,7 +108,7 @@ fun ClassListTab(
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
-                    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
+                    HorizontalDivider(modifier = Modifier.padding(horizontal = spacing.gap(16.dp)))
                 }
             }
         }

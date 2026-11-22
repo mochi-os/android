@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Účet pozastavený</string>
     <string name="common_back">Späť</string>
     <string name="common_close">Zavrieť</string>
+    <string name="common_clear_search">Vymazať vyhľadávanie</string>
+    <string name="drawer_open">Otvoriť menu</string>
     <string name="common_cancel">Zrušiť</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Pridať pravidlo prístupu</string>
     <string name="access_level_manage">Spravovať</string>
     <string name="access_level_react">Reagovať</string>
-    <string name="notifications_clear">Vymazať oznámenia</string>
     <string name="entity_avatar_alt">Avatar pre %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Skontrolovať aktualizácie</string>
     <string name="about_up_to_date">Aktuálna verzia</string>
     <string name="about_check_downloading">Verzia %1$s je dostupná, sťahuje sa…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Nepodarilo sa kontaktovať server aktualizácií</string>
     <string name="about_check_download_failed">Sťahovanie zlyhalo</string>
     <string name="notifications_clear_all_title">Vymazať všetky oznámenia?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Tučné</string>
     <string name="format_italic">Kurzíva</string>
     <string name="format_link">Odkaz</string>
+    <string name="format_link_text">text</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Nadpis</string>
     <string name="format_code">Kód</string>
     <string name="format_list">Zoznam s odrážkami</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Odstrániť pravidlo prístupu pre „%1$s“?</string>
     <string name="color_picker_custom">Vlastné</string>
     <string name="color_picker_clear">Vymazať</string>
+    <string name="color_picker_white">Biela</string>
+    <string name="color_picker_slate">Bridlicová</string>
+    <string name="color_picker_red">Červená</string>
+    <string name="color_picker_orange">Oranžová</string>
+    <string name="color_picker_amber">Jantárová</string>
+    <string name="color_picker_green">Zelená</string>
+    <string name="color_picker_teal">Modrozelená</string>
+    <string name="color_picker_cyan">Azúrová</string>
+    <string name="color_picker_blue">Modrá</string>
+    <string name="color_picker_violet">Fialová</string>
+    <string name="color_picker_pink">Ružová</string>
+    <string name="color_picker_black">Čierna</string>
     <string name="common_refresh">Obnoviť</string>
     <string name="launcher_add_to_home">Pridať na domovskú obrazovku</string>
     <string name="common_continue">Pokračovať</string>
@@ -344,6 +360,7 @@
     </plurals>
     <string name="drawer_unread">Neprečítané</string>
     <string name="person_unknown">Neznáme</string>
+    <string name="group_unknown">Neznáma skupina</string>
     <string name="format_time_seconds_short">%1$s s</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Sťahuje sa %1$s…</string>

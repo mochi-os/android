@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Cuntas ar fionraí</string>
     <string name="common_back">Ar ais</string>
     <string name="common_close">Dún</string>
+    <string name="common_clear_search">Glan cuardach</string>
+    <string name="drawer_open">Oscail roghchlár</string>
     <string name="common_cancel">Cealaigh</string>
     <string name="common_filter">Scag</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -178,7 +180,6 @@
     <string name="access_add_rule_title">Cuir riail rochtana leis</string>
     <string name="access_level_manage">Bainistigh</string>
     <string name="access_level_react">Frithghníomhaigh</string>
-    <string name="notifications_clear">Glan fógraí</string>
     <string name="entity_avatar_alt">Abhatár do %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Seiceáil le haghaidh nuashonruithe</string>
     <string name="about_up_to_date">Cothrom le dáta</string>
     <string name="about_check_downloading">Tá leagan %1$s ar fáil, á íoslódáil…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Níorbh fhéidir teagmháil a dhéanamh leis an bhfreastalaí nuashonraithe</string>
     <string name="about_check_download_failed">Theip ar an íoslódáil</string>
     <string name="notifications_clear_all_title">Glan gach fógra?</string>
@@ -301,6 +303,8 @@
     <string name="format_bold">Trom</string>
     <string name="format_italic">Iodálach</string>
     <string name="format_link">Nasc</string>
+    <string name="format_link_text">téacs</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Ceannteideal</string>
     <string name="format_code">Cód</string>
     <string name="format_list">Liosta urchar</string>
@@ -326,6 +330,18 @@
     <string name="access_remove_message">An bhfuil fonn ort riail rochtana \"%1$s\" a bhaint?</string>
     <string name="color_picker_custom">Saincheaptha</string>
     <string name="color_picker_clear">Glan</string>
+    <string name="color_picker_white">Bán</string>
+    <string name="color_picker_slate">Sclátliath</string>
+    <string name="color_picker_red">Dearg</string>
+    <string name="color_picker_orange">Oráiste</string>
+    <string name="color_picker_amber">Ómra</string>
+    <string name="color_picker_green">Glas</string>
+    <string name="color_picker_teal">Glasghorm</string>
+    <string name="color_picker_cyan">Cian</string>
+    <string name="color_picker_blue">Gorm</string>
+    <string name="color_picker_violet">Corcairghorm</string>
+    <string name="color_picker_pink">Bándearg</string>
+    <string name="color_picker_black">Dubh</string>
     <string name="common_refresh">Athnuaigh</string>
     <string name="launcher_add_to_home">Cuir leis an scáileán baile</string>
     <string name="common_continue">Lean ar aghaidh</string>
@@ -346,6 +362,7 @@
     </plurals>
     <string name="drawer_unread">Gan léamh</string>
     <string name="person_unknown">Anaithnid</string>
+    <string name="group_unknown">Grúpa anaithnid</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s á íoslódáil…</string>

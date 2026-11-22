@@ -22,7 +22,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.Appearance
-import org.mochios.android.i18n.Density
 import org.mochios.android.i18n.FontPref
 import org.mochios.android.i18n.FontSizePref
 import org.mochios.android.i18n.Radius
@@ -104,9 +103,6 @@ private val DarkColorScheme = darkColorScheme(
  *  Radius preferences below are left as the reader set them. */
 val LocalEntityRadius = compositionLocalOf { 16.dp }
 
-/** Density multiplier applied by spacing-aware components. 1.0 = default. */
-val LocalDensityScale = compositionLocalOf { 1.0f }
-
 /**
  * The accent hue and chroma the identity colours are struck from.
  *
@@ -166,8 +162,8 @@ fun MochiTheme(
         applyFontPreferences(MochiTypography, preferences?.font, preferences?.fontSize)
     }
 
-    // Radius + density bridges. Cards / spacing-aware components read these
-    // composition locals; passing null keeps the defaults (12dp / 1.0×).
+    // Radius + density bridges. Cards and the layout primitives read these
+    // composition locals; passing null keeps the defaults (16dp, comfortable).
     val radiusDp = when (preferences?.radius) {
         Radius.NONE -> 0
         Radius.SMALL -> 6
@@ -175,7 +171,7 @@ fun MochiTheme(
         Radius.LARGE -> 28
         Radius.THEME, null -> 16
     }
-    val densityScale = preferences?.density?.scale ?: 1.0f
+    val spacing = Spacing.of(preferences?.density)
 
     val seedPalette = remember(colorScheme.primary) {
         val (_, chroma, hue) = oklchOf(colorScheme.primary)
@@ -186,7 +182,7 @@ fun MochiTheme(
 
     CompositionLocalProvider(
         LocalEntityRadius provides radiusDp.dp,
-        LocalDensityScale provides densityScale,
+        LocalSpacing provides spacing,
         LocalSeedPalette provides seedPalette
     ) {
         MaterialTheme(
@@ -197,15 +193,13 @@ fun MochiTheme(
     }
 }
 
-private fun applyFontPreferences(
+internal fun applyFontPreferences(
     base: Typography,
     font: FontPref?,
     fontSize: FontSizePref?
 ): Typography {
     val family = when (font) {
-        // We don't ship a dyslexia-friendly font; SansSerif is the safest
-        // fallback (clearer letterforms than Serif in most system fonts).
-        FontPref.DYSLEXIA -> FontFamily.SansSerif
+        FontPref.DYSLEXIA -> AtkinsonHyperlegibleFontFamily
         FontPref.SERIF -> FontFamily.Serif
         // SYSTEM means the reader asked for their device font, so it has to
         // opt out of Inter rather than collapse into it the way it used to

@@ -75,7 +75,7 @@ fun OptionScreen(
         submitLabel = stringResource(
             if (isColumn) MochiR.string.common_add else MochiR.string.common_save
         ),
-        submitEnabled = isReady && formState.canSave && !uiState.isSaving,
+        submitEnabled = isReady && formState.canSave,
         isBusy = uiState.isSaving,
         error = uiState.error,
         onBack = onBack,

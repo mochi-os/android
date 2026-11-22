@@ -6,6 +6,7 @@
 package org.mochios.android.ui.components
 
 import android.content.Context
+import android.os.Build
 import android.text.Spanned
 import android.text.StaticLayout
 import android.text.TextUtils
@@ -42,14 +43,22 @@ class ClickableLinkTextView @JvmOverloads constructor(
     /**
      * When true, the text is truncated to the view's bounded height with a
      * literal "…" appended; `ellipsize = END` does not draw on Markwon
-     * `Spanned` content. Set [fullText] alongside so the un-truncated source
-     * stays available.
+     * `Spanned` content, whose spannable text the view lays out dynamically,
+     * and a dynamic layout ignores `maxLines`' ellipsis. Set [fullText]
+     * alongside so the un-truncated source stays available.
      */
     var clampToHeight = false
 
     /**
-     * The complete, un-truncated text to clamp from when [clampToHeight] is
-     * set. Separate from `text`, which may already be truncated.
+     * The most lines the text may take, truncated as [clampToHeight] does when
+     * it needs more. Set [fullText] alongside; `maxLines` stays uncapped.
+     */
+    var clampToLines = Int.MAX_VALUE
+
+    /**
+     * The complete, un-truncated text to clamp from when [clampToHeight] or
+     * [clampToLines] is set. Separate from `text`, which may already be
+     * truncated.
      */
     var fullText: CharSequence? = null
 
@@ -59,7 +68,6 @@ class ClickableLinkTextView @JvmOverloads constructor(
     private var downX = 0f
     private var downY = 0f
     private var pendingLink: ClickableSpan? = null
-    private var touchedTableRow = false
     private var imageAlt: String? = null
     private var longPressFired = false
     private val touchSlop = ViewConfiguration.get(context).scaledTouchSlop
@@ -73,28 +81,45 @@ class ClickableLinkTextView @JvmOverloads constructor(
         }
     }
 
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+    override fun onMeasure(widthMeasure: Int, heightMeasureSpec: Int) {
+        val widthMeasureSpec = tableWidth(widthMeasure)
         val source = fullText
-        if (clampToHeight && !source.isNullOrEmpty()) {
+        if (!source.isNullOrEmpty()) {
             val heightMode = MeasureSpec.getMode(heightMeasureSpec)
-            // Only meaningful when the parent bounds our height (EXACTLY from a
-            // weighted slot, or AT_MOST). Unbounded → nothing to fit against.
-            if (heightMode == MeasureSpec.EXACTLY || heightMode == MeasureSpec.AT_MOST) {
-                val available = MeasureSpec.getSize(heightMeasureSpec) -
-                    compoundPaddingTop - compoundPaddingBottom
-                val width = MeasureSpec.getSize(widthMeasureSpec) -
-                    compoundPaddingLeft - compoundPaddingRight
-                if (available > 0 && width > 0) {
-                    val clamped = truncateToHeight(source, width, available)
-                    // Guard against re-truncating our own output each pass (which
-                    // would loop): only swap the text when it actually changes.
-                    if (text?.toString() != clamped.toString()) {
-                        text = clamped
-                    }
+            // A height is only meaningful when the parent bounds ours (EXACTLY
+            // from a weighted slot, or AT_MOST). Unbounded → nothing to fit against.
+            val bounded = heightMode == MeasureSpec.EXACTLY || heightMode == MeasureSpec.AT_MOST
+            val available = if (clampToHeight && bounded) {
+                MeasureSpec.getSize(heightMeasureSpec) - compoundPaddingTop - compoundPaddingBottom
+            } else {
+                Int.MAX_VALUE
+            }
+            val width = MeasureSpec.getSize(widthMeasureSpec) -
+                compoundPaddingLeft - compoundPaddingRight
+            val limited = available != Int.MAX_VALUE || clampToLines != Int.MAX_VALUE
+            if (limited && available > 0 && width > 0) {
+                val clamped = truncated(source, width, clampToLines, available)
+                // Guard against re-truncating our own output each pass (which
+                // would loop): only swap the text when it actually changes.
+                if (text?.toString() != clamped.toString()) {
+                    text = clamped
                 }
             }
         }
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
+
+    /**
+     * A table row reports no width until it has been drawn once, so a body
+     * holding a table, measured to fit its content, would come out as wide as
+     * its other text, or zero wide with none, and draw the table in that.
+     * Such a body takes the whole width it is offered.
+     */
+    private fun tableWidth(spec: Int): Int {
+        if (MeasureSpec.getMode(spec) != MeasureSpec.AT_MOST) return spec
+        val shown = (fullText ?: text) as? Spanned ?: return spec
+        if (shown.getSpans(0, shown.length, TableRowSpan::class.java).isEmpty()) return spec
+        return MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(spec), MeasureSpec.EXACTLY)
     }
 
     /**
@@ -115,25 +140,37 @@ class ClickableLinkTextView @JvmOverloads constructor(
             .obtain(text, 0, text.length, paint, width)
             .setLineSpacing(lineSpacingExtra, lineSpacingMultiplier)
             .setIncludePad(includeFontPadding)
+            // Wrapped as the view wraps it: with the builder's defaults a cut
+            // could fit in a line count the view then exceeds, pushing the
+            // ellipsis out of sight.
+            .setBreakStrategy(breakStrategy)
+            .setHyphenationFrequency(hyphenationFrequency)
+            .setJustificationMode(justificationMode)
+            .apply {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    setUseLineSpacingFromFallbacks(isFallbackLineSpacing)
+                }
+            }
             .build()
 
     /**
-     * Return [source] truncated to fit [available] px tall at [width], ending
-     * in a literal ellipsis. `ellipsize = END` does not draw on Markwon
-     * `Spanned` content.
+     * Return [source] truncated to at most [lines] lines and [available] px
+     * tall at [width], ending in a literal ellipsis, or [source] itself when
+     * it fits. `ellipsize = END` does not draw on Markwon `Spanned` content.
      */
-    private fun truncateToHeight(source: CharSequence, width: Int, available: Int): CharSequence {
+    private fun truncated(source: CharSequence, width: Int, lines: Int, available: Int): CharSequence {
+        fun fits(layout: StaticLayout) = layout.lineCount <= lines && layout.height <= available
         val full = staticLayout(source, width)
-        if (full.height <= available) return source
+        if (fits(full)) return source
         var fit = 0
-        while (fit < full.lineCount && full.getLineBottom(fit) <= available) fit++
+        while (fit < full.lineCount && fit < lines && full.getLineBottom(fit) <= available) fit++
         if (fit <= 0) fit = 1
         var cut = full.getLineEnd(fit - 1)
         while (cut > 0 && source[cut - 1].isWhitespace()) cut--
-        // Drop a word at a time until "<text>…" fits the available height.
+        // Drop a word at a time until "<text>…" fits.
         while (cut > 0) {
             val candidate = TextUtils.concat(source.subSequence(0, cut), ELLIPSIS)
-            if (staticLayout(candidate, width).height <= available) break
+            if (fits(staticLayout(candidate, width))) break
             var previous = cut
             while (previous > 0 && !source[previous - 1].isWhitespace()) previous--
             while (previous > 0 && source[previous - 1].isWhitespace()) previous--
@@ -156,11 +193,9 @@ class ClickableLinkTextView @JvmOverloads constructor(
                 imageAlt = if (onImageLongPress != null) imageAltAt(event) else null
                 if (imageAlt != null) {
                     pendingLink = null
-                    touchedTableRow = false
                     postDelayed(longPressRunnable, longPressTimeout)
                 } else {
                     pendingLink = linkAt(event)
-                    touchedTableRow = pendingLink == null && tableRowAt(event)
                 }
             }
             MotionEvent.ACTION_MOVE -> {
@@ -181,10 +216,7 @@ class ClickableLinkTextView @JvmOverloads constructor(
                     if (!longPressFired && !moved) onNonLinkClick?.invoke()
                 } else if (!moved) {
                     val link = pendingLink
-                    when {
-                        link != null -> link.onClick(this)
-                        !touchedTableRow -> onNonLinkClick?.invoke()
-                    }
+                    if (link != null) link.onClick(this) else onNonLinkClick?.invoke()
                 }
             }
             MotionEvent.ACTION_CANCEL -> {
@@ -194,13 +226,16 @@ class ClickableLinkTextView @JvmOverloads constructor(
         }
         // Over an image with alt text: we own the gesture (tap + long-press).
         if (imageAlt != null) return true
-        // Regular link tap: consume so we fire it ourselves on UP.
+        // A link, in the text or in a table cell: consume so we fire it
+        // ourselves on UP. No movement method is relied on for either: a
+        // selectable view has the platform's, which knows nothing of links.
         if (pendingLink != null) return true
-        // Table rows: let TableAwareMovementMethod dispatch into the cell.
-        if (touchedTableRow) return super.onTouchEvent(event)
-        // Non-link: unchanged — consume only when a card-level handler is set;
-        // otherwise defer to the TextView (text selection).
-        return onNonLinkClick != null
+        // Plain text under a card-level handler: the card's tap.
+        if (onNonLinkClick != null) return true
+        // Plain text otherwise: TextView's own handling, where a long-press or
+        // a double tap starts a selection. A view that cannot select leaves
+        // the touch to its parent.
+        return isTextSelectable && super.onTouchEvent(event)
     }
 
     private fun imageAltAt(event: MotionEvent): String? {
@@ -223,7 +258,8 @@ class ClickableLinkTextView @JvmOverloads constructor(
     /**
      * Find a link span near the touch. The default per-glyph hit test makes
      * short links / URLs very hard to tap, so widen the hit area by the touch
-     * slop on each side: a near-miss still opens the link.
+     * slop on each side: a near-miss still opens the link. On a table row the
+     * link is looked for in the cell under the touch instead.
      */
     private fun linkAt(event: MotionEvent): ClickableSpan? {
         val spanned = text as? Spanned ?: return null
@@ -235,6 +271,9 @@ class ClickableLinkTextView @JvmOverloads constructor(
         val right = layout.getLineRight(line)
         // Reject taps clearly off the line's text (beyond one slop of either end).
         if (x < left - touchSlop || x > right + touchSlop) return null
+        val offset = layout.getOffsetForHorizontal(line, x.coerceIn(left, right))
+        val row = spanned.getSpans(offset, offset, TableRowSpan::class.java).firstOrNull()
+        if (row != null) return cellLinkAt(row, x.toInt(), y - layout.getLineTop(line))
         val xLeft = (x - touchSlop).coerceIn(left, right)
         val xRight = (x + touchSlop).coerceIn(left, right)
         val o1 = layout.getOffsetForHorizontal(line, xLeft)
@@ -243,18 +282,18 @@ class ClickableLinkTextView @JvmOverloads constructor(
     }
 
     /**
-     * Markwon renders a table row as a ReplacementSpan; links inside cells are
-     * invisible to this outer layout. Treat any tap on a row as a link tap so
-     * TableAwareMovementMethod can dispatch into the cell.
+     * The link at [x] and [y] (from the row's top) in a Markwon table [row].
+     * A row is one replacement character in this view's text, and its cells
+     * are laid out apart from it, so their links are found the way Markwon's
+     * TableAwareMovementMethod finds them. The cells are laid out when the row
+     * is first drawn; before that there is no link to find.
      */
-    private fun tableRowAt(event: MotionEvent): Boolean {
-        val spanned = text as? Spanned ?: return false
-        val layout = layout ?: return false
-        val x = event.x.toInt() - totalPaddingLeft + scrollX
-        val y = event.y.toInt() - totalPaddingTop + scrollY
-        val line = layout.getLineForVertical(y)
-        if (x < layout.getLineLeft(line) || x > layout.getLineRight(line)) return false
-        val offset = layout.getOffsetForHorizontal(line, x.toFloat())
-        return spanned.getSpans(offset, offset, TableRowSpan::class.java).isNotEmpty()
+    private fun cellLinkAt(row: TableRowSpan, x: Int, y: Int): ClickableSpan? {
+        val width = row.cellWidth()
+        if (width <= 0) return null
+        val cell = row.findLayoutForHorizontalOffset(x) ?: return null
+        val offset = cell.getOffsetForHorizontal(cell.getLineForVertical(y), (x % width).toFloat())
+        val text = cell.text as? Spanned ?: return null
+        return text.getSpans(offset, offset, ClickableSpan::class.java).firstOrNull()
     }
 }

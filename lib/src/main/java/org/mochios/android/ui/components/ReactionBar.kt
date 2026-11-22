@@ -48,8 +48,10 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupPositionProvider
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.ReactionCount
 import org.mochios.android.model.ReactionType
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A row of reaction pills with a trailing add/change affordance. The add icon
@@ -68,6 +70,7 @@ fun ReactionBar(
 ) {
     var showPicker by remember { mutableStateOf(false) }
     val shape = RoundedCornerShape(16.dp)
+    val spacing = LocalSpacing.current
 
     // Single source of truth for the bar's sizing: the emoji text style and the
     // add-icon size measured to match the emoji's laid-out height.
@@ -97,8 +100,8 @@ fun ReactionBar(
 
     FlowRow(
         modifier = modifier,
-        horizontalArrangement = Arrangement.spacedBy(4.dp),
-        verticalArrangement = Arrangement.spacedBy(4.dp)
+        horizontalArrangement = Arrangement.spacedBy(spacing.gap(4.dp)),
+        verticalArrangement = Arrangement.spacedBy(spacing.gap(4.dp))
     ) {
         for (reaction in visibleOthers) {
             ReactionPill(
@@ -115,10 +118,10 @@ fun ReactionBar(
                     .clip(shape)
                     .background(MaterialTheme.colorScheme.surfaceVariant)
                     .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), shape)
-                    .padding(horizontal = 8.dp, vertical = 4.dp)
+                    .padding(horizontal = spacing.gap(8.dp), vertical = spacing.gap(4.dp))
             ) {
                 Text(
-                    text = "+$hiddenCount",
+                    text = stringResource(R.string.media_grid_more_count, LocalFormat.current.formatNumber(hiddenCount)),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -145,7 +148,7 @@ fun ReactionBar(
                         .background(MaterialTheme.colorScheme.surfaceVariant)
                         .border(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f), shape)
                         .clickable { showPicker = true }
-                        .padding(horizontal = 4.dp, vertical = 4.dp),
+                        .padding(spacing.gap(4.dp)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
@@ -185,7 +188,7 @@ private fun ReactionPill(
                 shape
             )
             .clickable(onClick = onClick)
-            .padding(horizontal = 4.dp, vertical = 4.dp)
+            .padding(LocalSpacing.current.gap(4.dp))
     ) {
         Text(
             text = reaction.type.emoji,
@@ -193,7 +196,7 @@ private fun ReactionPill(
         )
         if (reaction.count > 1) {
             Text(
-                text = " ${reaction.count}",
+                text = " ${LocalFormat.current.formatNumber(reaction.count)}",
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -257,7 +260,7 @@ private fun ReactionPickerPopup(
  * to the anchor's trailing edge, and flips above when there's no room below.
  */
 @Composable
-private fun rememberBelowEndPositionProvider(gap: Dp = 4.dp): PopupPositionProvider {
+private fun rememberBelowEndPositionProvider(gap: Dp = LocalSpacing.current.gap(4.dp)): PopupPositionProvider {
     val gapPx = with(LocalDensity.current) { gap.roundToPx() }
     return remember(gapPx) {
         object : PopupPositionProvider {
@@ -289,6 +292,7 @@ private fun ReactionPicker(
     onClear: () -> Unit = {}
 ) {
     val shape = RoundedCornerShape(24.dp)
+    val spacing = LocalSpacing.current
 
     FlowRow(
         modifier = Modifier
@@ -296,9 +300,9 @@ private fun ReactionPicker(
             .background(MaterialTheme.colorScheme.surface)
             .border(1.dp, MaterialTheme.colorScheme.outlineVariant, shape)
             .widthIn(max = 248.dp)
-            .padding(6.dp),
-        horizontalArrangement = Arrangement.spacedBy(2.dp),
-        verticalArrangement = Arrangement.spacedBy(2.dp)
+            .padding(spacing.gap(6.dp)),
+        horizontalArrangement = Arrangement.spacedBy(spacing.gap(2.dp)),
+        verticalArrangement = Arrangement.spacedBy(spacing.gap(2.dp))
     ) {
         for (type in ReactionType.entries) {
             Box(
@@ -313,7 +317,7 @@ private fun ReactionPicker(
                         }
                     )
                     .clickable { onSelect(type) }
-                    .padding(8.dp),
+                    .padding(spacing.gap(8.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
@@ -328,7 +332,7 @@ private fun ReactionPicker(
                 modifier = Modifier
                     .clip(CircleShape)
                     .clickable { onClear() }
-                    .padding(horizontal = 12.dp, vertical = 8.dp),
+                    .padding(horizontal = spacing.gap(12.dp), vertical = spacing.gap(8.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 Text(

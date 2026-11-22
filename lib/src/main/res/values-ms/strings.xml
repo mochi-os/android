@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Akaun digantung</string>
     <string name="common_back">Kembali</string>
     <string name="common_close">Tutup</string>
+    <string name="common_clear_search">Kosongkan carian</string>
+    <string name="drawer_open">Buka menu</string>
     <string name="common_cancel">Batal</string>
     <string name="common_filter">Tapis</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Tambah peraturan akses</string>
     <string name="access_level_manage">Urus</string>
     <string name="access_level_react">Bertindak balas</string>
-    <string name="notifications_clear">Kosongkan pemberitahuan</string>
     <string name="entity_avatar_alt">Avatar untuk %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Semak kemas kini</string>
     <string name="about_up_to_date">Terkini</string>
     <string name="about_check_downloading">Versi %1$s tersedia, memuat turun…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Tidak dapat menghubungi pelayan kemas kini</string>
     <string name="about_check_download_failed">Muat turun gagal</string>
     <string name="notifications_clear_all_title">Kosongkan semua pemberitahuan?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Tebal</string>
     <string name="format_italic">Condong</string>
     <string name="format_link">Pautan</string>
+    <string name="format_link_text">teks</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Tajuk</string>
     <string name="format_code">Kod</string>
     <string name="format_list">Senarai bulet</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Alih keluar peraturan akses untuk \"%1$s\"?</string>
     <string name="color_picker_custom">Tersuai</string>
     <string name="color_picker_clear">Kosongkan</string>
+    <string name="color_picker_white">Putih</string>
+    <string name="color_picker_slate">Kelabu batu loh</string>
+    <string name="color_picker_red">Merah</string>
+    <string name="color_picker_orange">Jingga</string>
+    <string name="color_picker_amber">Kuning ambar</string>
+    <string name="color_picker_green">Hijau</string>
+    <string name="color_picker_teal">Hijau kebiruan</string>
+    <string name="color_picker_cyan">Sian</string>
+    <string name="color_picker_blue">Biru</string>
+    <string name="color_picker_violet">Ungu</string>
+    <string name="color_picker_pink">Merah jambu</string>
+    <string name="color_picker_black">Hitam</string>
     <string name="common_refresh">Muat semula</string>
     <string name="launcher_add_to_home">Tambah ke skrin utama</string>
     <string name="common_continue">Teruskan</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Belum dibaca</string>
     <string name="person_unknown">Tidak diketahui</string>
+    <string name="group_unknown">Kumpulan tidak diketahui</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Memuat turun %1$s…</string>

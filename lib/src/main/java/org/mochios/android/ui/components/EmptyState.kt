@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * The shared empty state: a tinted circular badge over a title, an optional
@@ -99,6 +100,7 @@ private fun EmptyStateLayout(
     action: (@Composable () -> Unit)?,
     badge: @Composable () -> Unit
 ) {
+    val spacing = LocalSpacing.current
     Column(
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -116,7 +118,7 @@ private fun EmptyStateLayout(
             badge()
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(16.dp)))
 
         Text(
             text = title,
@@ -126,7 +128,7 @@ private fun EmptyStateLayout(
         )
 
         if (subtitle != null) {
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
             Text(
                 text = subtitle,
                 style = MaterialTheme.typography.bodyMedium,
@@ -136,7 +138,7 @@ private fun EmptyStateLayout(
         }
 
         if (action != null) {
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(24.dp)))
             action()
         }
     }

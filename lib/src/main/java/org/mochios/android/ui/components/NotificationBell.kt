@@ -32,6 +32,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.notifications.NotificationsUnreadStore
 
 @EntryPoint
@@ -85,6 +86,7 @@ fun CountBadge(
     modifier: Modifier = Modifier,
 ) {
     if (count <= 0) return
+    val format = LocalFormat.current
     Box(
         modifier = modifier
             .offset(x = (-4).dp, y = 4.dp)
@@ -93,7 +95,7 @@ fun CountBadge(
             .padding(horizontal = 5.dp, vertical = 1.dp),
     ) {
         Text(
-            text = if (count > 99) "99+" else count.toString(),
+            text = if (count > 99) "${format.formatNumber(99)}+" else format.formatNumber(count),
             style = MaterialTheme.typography.labelSmall,
             color = content,
         )

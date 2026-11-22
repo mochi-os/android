@@ -24,6 +24,7 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * How to truncate a value too long for the available width. [MIDDLE] keeps head
@@ -53,6 +54,7 @@ fun DataChip(
 ) {
     val copier = rememberCopier()
     val haptic = LocalHapticFeedback.current
+    val spacing = LocalSpacing.current
 
     val displayValue = when (truncate) {
         Truncate.MIDDLE -> middleTruncate(value)
@@ -82,7 +84,7 @@ fun DataChip(
             .clip(RoundedCornerShape(6.dp))
             .background(MaterialTheme.colorScheme.surfaceContainerHighest)
             .then(interactionModifier)
-            .padding(horizontal = 8.dp, vertical = 2.dp),
+            .padding(horizontal = spacing.gap(8.dp), vertical = spacing.gap(2.dp)),
         horizontalArrangement = Arrangement.Start,
         verticalAlignment = Alignment.CenterVertically,
     ) {

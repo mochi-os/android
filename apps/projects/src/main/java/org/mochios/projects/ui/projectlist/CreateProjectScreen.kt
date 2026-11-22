@@ -128,7 +128,7 @@ fun CreateProjectScreen(
     // one, so an empty list is a failed fetch the template step shows.
     val usesTemplate = backupJson == null
     val goesToTemplate = step == STEP_DETAILS && usesTemplate
-    val canContinue = !uiState.isCreating && if (step == STEP_DETAILS) {
+    val canContinue = if (step == STEP_DETAILS) {
         name.isNotBlank()
     } else {
         selectedTemplate != null

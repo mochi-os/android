@@ -50,7 +50,6 @@
     <string name="access_revoke">Widerrufen</string>
     <string name="access_add_rule_title">Zugriffsregel hinzufügen</string>
     <string name="access_level_manage">Verwalten</string>
-    <string name="notifications_clear">Benachrichtigungen löschen</string>
     <string name="push_service_action_hide">Ausblenden</string>
     <string name="settings_language">Sprache</string>
     <string name="settings_reset">Zurücksetzen</string>

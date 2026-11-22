@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Kontua etenda</string>
     <string name="common_back">Atzera</string>
     <string name="common_close">Itxi</string>
+    <string name="common_clear_search">Garbitu bilaketa</string>
+    <string name="drawer_open">Ireki menua</string>
     <string name="common_cancel">Utzi</string>
     <string name="common_filter">Iragazi</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -126,7 +128,6 @@
     <string name="common_retry">Saiatu berriro</string>
     <string name="access_add_rule_title">Gehitu sarbide araua</string>
     <string name="access_level_manage">Kudeatu</string>
-    <string name="notifications_clear">Garbitu jakinarazpenak</string>
     <string name="lightbox_position">%1$s / %2$s</string>
     <string name="about_label">Honi buruz</string>
     <string name="game_chat_load_more">Kargatu mezu zaharragoak</string>
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Egiaztatu eguneraketak</string>
     <string name="about_up_to_date">Egunean</string>
     <string name="about_check_downloading">%1$s bertsioa eskuragarri, deskargatzen…</string>
+    <string name="about_download_percent">%% %1$s</string>
     <string name="about_check_network_error">Ezin izan da eguneraketa-zerbitzarira iritsi</string>
     <string name="about_check_download_failed">Deskargak huts egin du</string>
     <string name="notifications_clear_all_title">Jakinarazpen guztiak garbitu?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Lodia</string>
     <string name="format_italic">Etzana</string>
     <string name="format_link">Esteka</string>
+    <string name="format_link_text">testua</string>
+    <string name="format_link_address">URLa</string>
     <string name="format_heading">Izenburua</string>
     <string name="format_code">Kodea</string>
     <string name="format_list">Buletdun zerrenda</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">«%1$s» sarbide-araua kendu?</string>
     <string name="color_picker_custom">Pertsonalizatua</string>
     <string name="color_picker_clear">Garbitu</string>
+    <string name="color_picker_white">Zuria</string>
+    <string name="color_picker_slate">Arbel-grisa</string>
+    <string name="color_picker_red">Gorria</string>
+    <string name="color_picker_orange">Laranja</string>
+    <string name="color_picker_amber">Anbarra</string>
+    <string name="color_picker_green">Berdea</string>
+    <string name="color_picker_teal">Berde urdinxka</string>
+    <string name="color_picker_cyan">Ziana</string>
+    <string name="color_picker_blue">Urdina</string>
+    <string name="color_picker_violet">Morea</string>
+    <string name="color_picker_pink">Arrosa</string>
+    <string name="color_picker_black">Beltza</string>
     <string name="common_refresh">Freskatu</string>
     <string name="launcher_add_to_home">Gehitu hasierako pantailara</string>
     <string name="common_continue">Jarraitu</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Irakurri gabea</string>
     <string name="person_unknown">Ezezaguna</string>
+    <string name="group_unknown">Talde ezezaguna</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s deskargatzen…</string>

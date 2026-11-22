@@ -26,6 +26,7 @@ import androidx.compose.material3.SheetState
 import androidx.compose.material3.SheetValue
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,6 +40,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.platform.SoftwareKeyboardController
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 
 /**
  * App-wide [ModalBottomSheet] wrapper. The app runs edge to edge, so a plain
@@ -76,10 +79,11 @@ fun MochiBottomSheet(
  */
 @Composable
 fun MochiDragHandle() {
+    val spacing = LocalSpacing.current
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 16.dp, bottom = 12.dp),
+            .padding(top = spacing.gap(16.dp), bottom = spacing.gap(12.dp)),
         contentAlignment = Alignment.Center,
     ) {
         Box(
@@ -94,10 +98,13 @@ fun MochiDragHandle() {
 /**
  * The padding every sheet gives its content under its header: 16dp at the
  * sides, as the header's title is inset, 16dp below the header's divider and
- * 24dp above the bottom edge. Content that runs edge to edge, such as a chat's
- * messages or a record's tabs, goes without it.
+ * 24dp above the bottom edge, each at the reader's density. Content that runs
+ * edge to edge, such as a chat's messages or a record's tabs, goes without it.
  */
-val MochiSheetPadding = PaddingValues(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 24.dp)
+val MochiSheetPadding: PaddingValues
+    @Composable
+    @ReadOnlyComposable
+    get() = spaced(PaddingValues(start = 16.dp, top = 16.dp, end = 16.dp, bottom = 24.dp))
 
 /**
  * A full-height sheet for content the user types in. While the keyboard is up,

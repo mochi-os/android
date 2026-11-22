@@ -33,6 +33,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import kotlinx.coroutines.launch
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.update.DownloadState
 import org.mochios.android.update.UpdateChecker
 import org.mochios.android.update.UpdateInstaller
@@ -123,12 +125,13 @@ fun AboutDialog(onDismiss: () -> Unit) {
             onDismiss()
         },
         content = {
+            val spacing = LocalSpacing.current
             Column(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
                 Text(stringResource(R.string.about_version, version))
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(spacing.gap(16.dp)))
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     MochiOutlinedButton(
                         onClick = {
@@ -163,7 +166,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                     // Only until the download starts reporting — after that the
                     // progress bar below is the indicator, and two at once is noise.
                     if (state is CheckUi.Checking && running == null) {
-                        Spacer(modifier = Modifier.size(12.dp))
+                        Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
                         CircularProgressIndicator(
                             modifier = Modifier.size(20.dp),
                             strokeWidth = 2.dp,
@@ -179,7 +182,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
                         stringResource(R.string.about_check_downloading, running.version),
                         isError = false,
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier.fillMaxWidth(),
@@ -188,9 +191,12 @@ fun AboutDialog(onDismiss: () -> Unit) {
                             progress = { running.percent / 100f },
                             modifier = Modifier.weight(1f),
                         )
-                        Spacer(modifier = Modifier.size(8.dp))
+                        Spacer(modifier = Modifier.size(spacing.gap(8.dp)))
                         Text(
-                            text = "${running.percent}%",
+                            text = stringResource(
+                                R.string.about_download_percent,
+                                LocalFormat.current.formatNumber(running.percent),
+                            ),
                             style = MaterialTheme.typography.labelMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -213,7 +219,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
 
 @Composable
 private fun AboutStatus(text: String, isError: Boolean) {
-    Spacer(modifier = Modifier.height(8.dp))
+    Spacer(modifier = Modifier.height(LocalSpacing.current.gap(8.dp)))
     Text(
         text = text,
         style = MaterialTheme.typography.bodySmall,

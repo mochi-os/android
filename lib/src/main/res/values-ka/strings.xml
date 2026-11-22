@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">ანგარიში შეჩერებულია</string>
     <string name="common_back">უკან</string>
     <string name="common_close">დახურვა</string>
+    <string name="common_clear_search">ძიების გასუფთავება</string>
+    <string name="drawer_open">მენიუს გახსნა</string>
     <string name="common_cancel">გაუქმება</string>
     <string name="common_filter">ფილტრი</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">წვდომის წესის დამატება</string>
     <string name="access_level_manage">მართვა</string>
     <string name="access_level_react">რეაგირება</string>
-    <string name="notifications_clear">შეტყობინებების გასუფთავება</string>
     <string name="entity_avatar_alt">%1$s-ის ავატარი</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">განახლებების შემოწმება</string>
     <string name="about_up_to_date">უახლესი ვერსიაა</string>
     <string name="about_check_downloading">ვერსია %1$s ხელმისაწვდომია, მიმდინარეობს ჩამოტვირთვა…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">განახლების სერვერთან დაკავშირება ვერ მოხერხდა</string>
     <string name="about_check_download_failed">ჩამოტვირთვა ვერ მოხერხდა</string>
     <string name="notifications_clear_all_title">გსურთ ყველა შეტყობინების გასუფთავება?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">მუქი</string>
     <string name="format_italic">დახრილი</string>
     <string name="format_link">ბმული</string>
+    <string name="format_link_text">ტექსტი</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">სათაური</string>
     <string name="format_code">კოდი</string>
     <string name="format_list">მარკირებული სია</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">წავშალოთ წვდომის წესი „%1$s“-ისთვის?</string>
     <string name="color_picker_custom">მორგებული</string>
     <string name="color_picker_clear">გასუფთავება</string>
+    <string name="color_picker_white">თეთრი</string>
+    <string name="color_picker_slate">ფიქლისფერი</string>
+    <string name="color_picker_red">წითელი</string>
+    <string name="color_picker_orange">ნარინჯისფერი</string>
+    <string name="color_picker_amber">ქარვისფერი</string>
+    <string name="color_picker_green">მწვანე</string>
+    <string name="color_picker_teal">ზღვისფერი</string>
+    <string name="color_picker_cyan">ციანი</string>
+    <string name="color_picker_blue">ლურჯი</string>
+    <string name="color_picker_violet">იისფერი</string>
+    <string name="color_picker_pink">ვარდისფერი</string>
+    <string name="color_picker_black">შავი</string>
     <string name="common_refresh">განახლება</string>
     <string name="launcher_add_to_home">მთავარ ეკრანზე დამატება</string>
     <string name="common_continue">გაგრძელება</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">წაუკითხავი</string>
     <string name="person_unknown">უცნობი</string>
+    <string name="group_unknown">უცნობი ჯგუფი</string>
     <string name="format_time_seconds_short">%1$s წმ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">იტვირთება %1$s…</string>

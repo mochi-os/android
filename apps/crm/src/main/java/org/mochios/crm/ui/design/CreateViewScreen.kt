@@ -45,7 +45,7 @@ fun CreateViewScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.crm_views_add_dialog_title),
         submitLabel = stringResource(R.string.crm_classes_create),
-        submitEnabled = details != null && formState.canSave && !uiState.isCreating,
+        submitEnabled = details != null && formState.canSave,
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

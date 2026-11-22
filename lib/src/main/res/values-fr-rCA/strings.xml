@@ -52,7 +52,6 @@
     <string name="access_revoke">Révoquer</string>
     <string name="access_add_rule_title">Ajouter une règle d\'accès</string>
     <string name="access_level_manage">Gérer</string>
-    <string name="notifications_clear">Effacer les notifications</string>
     <string name="push_service_action_hide">Masquer</string>
     <string name="settings_language">Langue</string>
     <string name="settings_reset">Réinitialiser</string>

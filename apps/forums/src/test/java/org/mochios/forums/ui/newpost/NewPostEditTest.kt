@@ -85,6 +85,8 @@ class NewPostEditTest {
                             )
                         }
                     "/forums/f1/-/p1/edit" -> ok("{}")
+                    "/forums/f1/-/members/search" ->
+                        MockResponse().setResponseCode(403).setBody("""{"error": "Not allowed"}""")
                     else -> MockResponse().setResponseCode(404)
                 }
             }
@@ -200,5 +202,11 @@ class NewPostEditTest {
         wait { model.uiState.value.original is Original.Loaded }
         rule.waitForIdle()
         rule.onAllNodesWithText(context.getString(org.mochios.forums.R.string.forums_post_title_field)).assertCountEquals(1)
+    }
+
+    @Test
+    fun `a refused mention search reaches the field instead of reading as no one found`() {
+        val failure = runCatching { kotlinx.coroutines.runBlocking { edit().searchMembers("al") } }.exceptionOrNull()
+        assertTrue("THE POINT: the search's refusal is thrown, got $failure", failure != null)
     }
 }

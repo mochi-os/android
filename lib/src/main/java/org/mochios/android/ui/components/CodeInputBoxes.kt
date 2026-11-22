@@ -26,6 +26,23 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
+
+/**
+ * The digits of [raw] as ASCII, at most [length] of them, for a one-time-code
+ * field. A keyboard may write Arabic-Indic, Devanagari or full-width digits,
+ * and the server compares a code against 0-9 alone, so each digit of any
+ * script becomes its ASCII digit; anything that is not a digit is dropped.
+ */
+fun codeDigits(raw: String, length: Int): String = buildString {
+    var index = 0
+    while (index < raw.length && this.length < length) {
+        val point = raw.codePointAt(index)
+        val digit = Character.digit(point, 10)
+        if (digit >= 0) append('0' + digit)
+        index += Character.charCount(point)
+    }
+}
 
 /**
  * Segmented one-time-code input: [length] boxes over a single digit-only value.
@@ -43,7 +60,7 @@ fun CodeInputBoxes(
     BasicTextField(
         value = value,
         onValueChange = { raw ->
-            val sanitised = raw.filter { char -> char.isDigit() }.take(length)
+            val sanitised = codeDigits(raw, length)
             if (sanitised != value) {
                 onValueChange(sanitised)
                 if (sanitised.length == length) {
@@ -62,7 +79,7 @@ fun CodeInputBoxes(
             Row(modifier = Modifier.fillMaxWidth()) {
                 repeat(length) { index ->
                     if (index > 0) {
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(LocalSpacing.current.gap(8.dp)))
                     }
                     CodeCell(
                         char = value.getOrNull(index),
@@ -98,7 +115,7 @@ private fun CodeCell(
                 color = borderColor,
                 shape = RoundedCornerShape(8.dp)
             )
-            .padding(4.dp),
+            .padding(LocalSpacing.current.gap(4.dp)),
         contentAlignment = Alignment.Center
     ) {
         Text(

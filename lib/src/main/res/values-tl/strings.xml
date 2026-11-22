@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Na-suspend ang account</string>
     <string name="common_back">Bumalik</string>
     <string name="common_close">Isara</string>
+    <string name="common_clear_search">Burahin ang paghahanap</string>
+    <string name="drawer_open">Buksan ang menu</string>
     <string name="common_cancel">Kanselahin</string>
     <string name="common_filter">I-filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Magdagdag ng panuntunan sa pag-access</string>
     <string name="access_level_manage">Pamahalaan</string>
     <string name="access_level_react">Mag-react</string>
-    <string name="notifications_clear">I-clear ang mga abiso</string>
     <string name="entity_avatar_alt">Avatar para kay %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Tingnan kung may update</string>
     <string name="about_up_to_date">Pinakabago na</string>
     <string name="about_check_downloading">Available ang bersyon %1$s, dina-download…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Hindi maabot ang update server</string>
     <string name="about_check_download_failed">Nabigo ang pag-download</string>
     <string name="notifications_clear_all_title">I-clear ang lahat ng abiso?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Makapal</string>
     <string name="format_italic">Pahilis</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">teksto</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Pamagat</string>
     <string name="format_code">Code</string>
     <string name="format_list">Tuldok na listahan</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Alisin ang panuntunan sa access para sa \"%1$s\"?</string>
     <string name="color_picker_custom">Pasadya</string>
     <string name="color_picker_clear">Burahin</string>
+    <string name="color_picker_white">Puti</string>
+    <string name="color_picker_slate">Abuhing slate</string>
+    <string name="color_picker_red">Pula</string>
+    <string name="color_picker_orange">Kahel</string>
+    <string name="color_picker_amber">Amber</string>
+    <string name="color_picker_green">Berde</string>
+    <string name="color_picker_teal">Asul-berde</string>
+    <string name="color_picker_cyan">Siyan</string>
+    <string name="color_picker_blue">Asul</string>
+    <string name="color_picker_violet">Lila</string>
+    <string name="color_picker_pink">Rosas</string>
+    <string name="color_picker_black">Itim</string>
     <string name="common_refresh">I-refresh</string>
     <string name="launcher_add_to_home">Idagdag sa home screen</string>
     <string name="common_continue">Magpatuloy</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Hindi pa nabasa</string>
     <string name="person_unknown">Hindi alam</string>
+    <string name="group_unknown">Hindi kilalang grupo</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Dina-download ang %1$s…</string>

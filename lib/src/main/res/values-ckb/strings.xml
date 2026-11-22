@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">هەژمار ڕاگیراوە</string>
     <string name="common_back">گەڕانەوە</string>
     <string name="common_close">داخستن</string>
+    <string name="common_clear_search">پاککردنەوەی گەڕان</string>
+    <string name="drawer_open">کردنەوەی لیست</string>
     <string name="common_cancel">هەڵوەشاندنەوە</string>
     <string name="common_filter">فلتەر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">زیادکردنی ڕێسای دەستپێگەیشتن</string>
     <string name="access_level_manage">بەڕێوەبردن</string>
     <string name="access_level_react">کاردانەوە</string>
-    <string name="notifications_clear">ئاگادارکردنەوەکان پاک بکەرەوە</string>
     <string name="entity_avatar_alt">وێنۆچکە بۆ %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">پشکنینی نوێکردنەوەکان</string>
     <string name="about_up_to_date">نوێترین وەشان</string>
     <string name="about_check_downloading">وەشانی %1$s بەردەستە، داگرتن…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">نەتوانرا بگاتە سێرڤەری نوێکردنەوە</string>
     <string name="about_check_download_failed">داگرتن سەرکەوتوو نەبوو</string>
     <string name="notifications_clear_all_title">هەموو ئاگادارکردنەوەکان بسڕیتەوە؟</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ئەستوور</string>
     <string name="format_italic">لار</string>
     <string name="format_link">بەستەر</string>
+    <string name="format_link_text">دەق</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">سەردێڕ</string>
     <string name="format_code">کۆد</string>
     <string name="format_list">لیستی خاڵدار</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">یاسای دەستپێگەیشتن بۆ \"%1$s\" لابردرێت؟</string>
     <string name="color_picker_custom">تایبەت</string>
     <string name="color_picker_clear">پاککردنەوە</string>
+    <string name="color_picker_white">سپی</string>
+    <string name="color_picker_slate">خۆڵەمێشی شین</string>
+    <string name="color_picker_red">سوور</string>
+    <string name="color_picker_orange">پرتەقاڵی</string>
+    <string name="color_picker_amber">کارەبایی</string>
+    <string name="color_picker_green">سەوز</string>
+    <string name="color_picker_teal">سەوزی شین</string>
+    <string name="color_picker_cyan">فیرۆزەیی</string>
+    <string name="color_picker_blue">شین</string>
+    <string name="color_picker_violet">وەنەوشەیی</string>
+    <string name="color_picker_pink">پەمەیی</string>
+    <string name="color_picker_black">ڕەش</string>
     <string name="common_refresh">نوێکردنەوە</string>
     <string name="launcher_add_to_home">زیادکردن بۆ شاشەی سەرەکی</string>
     <string name="common_continue">بەردەوامبوون</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">نەخوێندراوە</string>
     <string name="person_unknown">نەناسراو</string>
+    <string name="group_unknown">گرووپی نەناسراو</string>
     <string name="format_time_seconds_short">%1$sچ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">داگرتنی %1$s…</string>

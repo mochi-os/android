@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">A ti dádúró àkáǹtì</string>
     <string name="common_back">Padà</string>
     <string name="common_close">Tì</string>
+    <string name="common_clear_search">Pa àwárí rẹ́</string>
+    <string name="drawer_open">Ṣí ìtòlẹ́sẹẹsẹ</string>
     <string name="common_cancel">Fagilé</string>
     <string name="common_filter">Yọ́</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Fi òfin ìráyè kún</string>
     <string name="access_level_manage">Ṣàkóso</string>
     <string name="access_level_react">Fèsì</string>
-    <string name="notifications_clear">Pa àwọn ìfitónilétí rẹ́</string>
     <string name="entity_avatar_alt">Àwòrán fún %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Yẹ àwọn ìmúdójúìwọ̀n wò</string>
     <string name="about_up_to_date">Ó ti wà ní tuntun</string>
     <string name="about_check_downloading">Ẹ̀yà %1$s wà, ń gbà sílẹ̀…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Kò lè dé sí olùpín ìmúdójúìwọ̀n</string>
     <string name="about_check_download_failed">Ìgbàsílẹ̀ kùnà</string>
     <string name="notifications_clear_all_title">Pa gbogbo àwọn ìfitónilétí rẹ́?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Nípọn</string>
     <string name="format_italic">Wíwọ́</string>
     <string name="format_link">Ọ̀nà àsopọ̀</string>
+    <string name="format_link_text">ọ̀rọ̀</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Àkọlé</string>
     <string name="format_code">Kóòdù</string>
     <string name="format_list">Àkójọ oníàmì</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Yọ òfin ìwọlé fún \"%1$s\" kúrò?</string>
     <string name="color_picker_custom">Àdáni</string>
     <string name="color_picker_clear">Pa rẹ́</string>
+    <string name="color_picker_white">Funfun</string>
+    <string name="color_picker_slate">Eérú dúdú</string>
+    <string name="color_picker_red">Pupa</string>
+    <string name="color_picker_orange">Ọsàn</string>
+    <string name="color_picker_amber">Àmbà</string>
+    <string name="color_picker_green">Àwọ̀ ewé</string>
+    <string name="color_picker_teal">Búlúù-ewé</string>
+    <string name="color_picker_cyan">Búlúù fẹ́ẹ́rẹ́</string>
+    <string name="color_picker_blue">Búlúù</string>
+    <string name="color_picker_violet">Àlùkò</string>
+    <string name="color_picker_pink">Pínkì</string>
+    <string name="color_picker_black">Dúdú</string>
     <string name="common_refresh">Tún kí</string>
     <string name="launcher_add_to_home">Fi sii loju iboju ile</string>
     <string name="common_continue">Tẹ̀síwájú</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Àìkà</string>
     <string name="person_unknown">Aláìmọ̀</string>
+    <string name="group_unknown">Àwùjọ tí a kò mọ̀</string>
     <string name="format_time_seconds_short">ìṣẹ́jú-àáyá %1$s</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Ń gba %1$s sílẹ̀…</string>

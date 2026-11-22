@@ -58,7 +58,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.launcher.openHome
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 
 /**
  * Universal drawer entry each app adapts its own row type into, so one
@@ -140,7 +143,7 @@ fun MochiListDrawer(
                         modifier = Modifier
                             .fillMaxWidth()
                             .weight(1f),
-                        contentPadding = PaddingValues(vertical = 4.dp),
+                        contentPadding = spaced(PaddingValues(vertical = 4.dp)),
                     ) {
                         if (items.isEmpty() && emptyState != null) {
                             item(key = "empty") { emptyState() }
@@ -205,7 +208,7 @@ fun DrawerTitle(title: String) {
         text = title,
         style = MaterialTheme.typography.titleSmall,
         color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 12.dp),
+        modifier = Modifier.padding(spaced(PaddingValues(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 12.dp))),
     )
 }
 
@@ -237,13 +240,13 @@ fun MochiHomeRow(drawerState: DrawerState) {
 @Composable
 private fun DrawerSectionHeader(title: String, showDivider: Boolean) {
     if (showDivider) {
-        HorizontalDivider(modifier = Modifier.padding(top = 8.dp))
+        HorizontalDivider(modifier = Modifier.padding(top = LocalSpacing.current.gap(8.dp)))
     }
     Text(
         text = title,
         style = MaterialTheme.typography.labelMedium,
         color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.padding(start = 24.dp, end = 24.dp, top = 16.dp, bottom = 4.dp),
+        modifier = Modifier.padding(spaced(PaddingValues(start = 24.dp, end = 24.dp, top = 16.dp, bottom = 4.dp))),
     )
 }
 
@@ -258,11 +261,12 @@ fun DrawerActionRow(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val spacing = LocalSpacing.current
     Row(
         modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(horizontal = 24.dp, vertical = 10.dp),
+            .padding(horizontal = spacing.gap(24.dp), vertical = spacing.gap(10.dp)),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Icon(
@@ -271,7 +275,7 @@ fun DrawerActionRow(
             modifier = Modifier.size(24.dp),
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        Spacer(modifier = Modifier.size(12.dp))
+        Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
         Text(
             text = title,
             style = MaterialTheme.typography.bodyLarge,
@@ -295,6 +299,7 @@ fun DrawerSwitchRow(
     enabled: Boolean = true,
     status: String? = null,
 ) {
+    val spacing = LocalSpacing.current
     Row(
         modifier = modifier
             .fillMaxWidth()
@@ -304,7 +309,7 @@ fun DrawerSwitchRow(
                 role = Role.Switch,
                 onValueChange = onCheckedChange,
             )
-            .padding(horizontal = 24.dp, vertical = 10.dp),
+            .padding(horizontal = spacing.gap(24.dp), vertical = spacing.gap(10.dp)),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Icon(
@@ -313,7 +318,7 @@ fun DrawerSwitchRow(
             modifier = Modifier.size(24.dp),
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        Spacer(modifier = Modifier.size(12.dp))
+        Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = title,
@@ -327,7 +332,7 @@ fun DrawerSwitchRow(
                 )
             }
         }
-        Spacer(modifier = Modifier.size(12.dp))
+        Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
         Switch(
             checked = checked,
             onCheckedChange = null,
@@ -357,6 +362,7 @@ private fun DrawerItemRow(
     var menuOpen by remember { mutableStateOf(false) }
     val moreOptions = stringResource(R.string.common_more_options)
     val unreadLabel = stringResource(R.string.drawer_unread)
+    val spacing = LocalSpacing.current
     Box {
     Row(
         modifier = Modifier
@@ -386,7 +392,7 @@ private fun DrawerItemRow(
                     )
                 }
             )
-            .padding(horizontal = 24.dp, vertical = 10.dp),
+            .padding(horizontal = spacing.gap(24.dp), vertical = spacing.gap(10.dp)),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         when {
@@ -397,7 +403,7 @@ private fun DrawerItemRow(
                     seed = item.seed ?: item.id,
                     size = 32.dp,
                 )
-                Spacer(modifier = Modifier.size(12.dp))
+                Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
             }
 
             // A seed with no icon and no avatar URL still gets a circle:
@@ -411,7 +417,7 @@ private fun DrawerItemRow(
                     seed = item.seed,
                     size = 32.dp,
                 )
-                Spacer(modifier = Modifier.size(12.dp))
+                Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
             }
 
             item.seed != null && item.icon != null && !pinned -> {
@@ -420,7 +426,7 @@ private fun DrawerItemRow(
                     icon = item.icon,
                     size = 32.dp,
                 )
-                Spacer(modifier = Modifier.size(12.dp))
+                Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
             }
 
             item.icon != null -> {
@@ -441,7 +447,7 @@ private fun DrawerItemRow(
                         )
                     }
                 }
-                Spacer(modifier = Modifier.size(12.dp))
+                Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
             }
         }
         Column(modifier = Modifier.weight(1f)) {
@@ -464,7 +470,7 @@ private fun DrawerItemRow(
             }
         }
         if (item.trailingIcon != null) {
-            Spacer(modifier = Modifier.size(8.dp))
+            Spacer(modifier = Modifier.size(spacing.gap(8.dp)))
             Icon(
                 imageVector = item.trailingIcon,
                 contentDescription = null,
@@ -473,15 +479,15 @@ private fun DrawerItemRow(
             )
         }
         if (item.unread > 0) {
-            Spacer(modifier = Modifier.size(8.dp))
+            Spacer(modifier = Modifier.size(spacing.gap(8.dp)))
             Badge(
                 containerColor = MaterialTheme.colorScheme.error,
                 contentColor = MaterialTheme.colorScheme.onError,
             ) {
-                Text(text = item.unread.toString())
+                Text(text = LocalFormat.current.formatNumber(item.unread))
             }
         } else if (item.dot) {
-            Spacer(modifier = Modifier.size(8.dp))
+            Spacer(modifier = Modifier.size(spacing.gap(8.dp)))
             Badge(
                 containerColor = MaterialTheme.colorScheme.error,
                 modifier = Modifier.semantics { contentDescription = unreadLabel },

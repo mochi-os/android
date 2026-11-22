@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Konto peatatud</string>
     <string name="common_back">Tagasi</string>
     <string name="common_close">Sulge</string>
+    <string name="common_clear_search">Tühjenda otsing</string>
+    <string name="drawer_open">Ava menüü</string>
     <string name="common_cancel">Tühista</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -126,7 +128,6 @@
     <string name="common_retry">Proovi uuesti</string>
     <string name="access_add_rule_title">Lisa juurdepääsureegel</string>
     <string name="access_level_manage">Halda</string>
-    <string name="notifications_clear">Tühjenda teavitused</string>
     <string name="game_chat_load_more">Laadi vanemaid sõnumeid</string>
     <string name="game_chat_move_played">%1$s mängis %2$s</string>
 
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Otsi uuendusi</string>
     <string name="about_up_to_date">Ajakohane</string>
     <string name="about_check_downloading">Versioon %1$s on saadaval, allalaadimine…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Uuendusserveriga ei õnnestunud ühendust luua</string>
     <string name="about_check_download_failed">Allalaadimine ebaõnnestus</string>
     <string name="notifications_clear_all_title">Kustutada kõik teavitused?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Paks</string>
     <string name="format_italic">Kaldkiri</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">tekst</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Pealkiri</string>
     <string name="format_code">Kood</string>
     <string name="format_list">Täpploend</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Kas eemaldada juurdepääsureegel „%1$s“ jaoks?</string>
     <string name="color_picker_custom">Kohandatud</string>
     <string name="color_picker_clear">Tühjenda</string>
+    <string name="color_picker_white">Valge</string>
+    <string name="color_picker_slate">Kiltkivihall</string>
+    <string name="color_picker_red">Punane</string>
+    <string name="color_picker_orange">Oranž</string>
+    <string name="color_picker_amber">Merevaik</string>
+    <string name="color_picker_green">Roheline</string>
+    <string name="color_picker_teal">Sinakasroheline</string>
+    <string name="color_picker_cyan">Tsüaan</string>
+    <string name="color_picker_blue">Sinine</string>
+    <string name="color_picker_violet">Violetne</string>
+    <string name="color_picker_pink">Roosa</string>
+    <string name="color_picker_black">Must</string>
     <string name="common_refresh">Värskenda</string>
     <string name="launcher_add_to_home">Lisa avakuvale</string>
     <string name="common_continue">Jätka</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Lugemata</string>
     <string name="person_unknown">Tundmatu</string>
+    <string name="group_unknown">Tundmatu grupp</string>
     <string name="format_time_seconds_short">%1$s s</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s allalaadimine…</string>

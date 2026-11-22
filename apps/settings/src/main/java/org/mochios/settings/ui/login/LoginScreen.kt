@@ -60,6 +60,7 @@ import org.mochios.android.R as MochiR
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.ui.components.CopyButton
+import org.mochios.android.ui.components.codeDigits
 import org.mochios.android.ui.components.rememberCopier
 import org.mochios.android.util.webUri
 import org.mochios.android.api.userMessage
@@ -488,7 +489,7 @@ private fun TotpSection(enabled: Boolean, onSetup: () -> Unit, onDisable: () -> 
 }
 
 @Composable
-private fun TotpSetupDialog(
+internal fun TotpSetupDialog(
     secret: String,
     url: String,
     onCancel: () -> Unit,
@@ -541,7 +542,7 @@ private fun TotpSetupDialog(
                 Spacer(Modifier.height(8.dp))
                 MochiTextField(
                     value = code,
-                    onValueChange = { code = it.filter { c -> c.isDigit() }.take(6) },
+                    onValueChange = { code = codeDigits(it, 6) },
                     label = { Text(stringResource(R.string.account_totp_code)) },
                     singleLine = true,
                 )

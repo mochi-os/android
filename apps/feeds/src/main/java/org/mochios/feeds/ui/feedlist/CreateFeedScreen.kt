@@ -49,7 +49,7 @@ fun CreateFeedScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.feeds_create_feed),
         submitLabel = stringResource(R.string.feeds_create),
-        submitEnabled = name.isNotBlank() && !uiState.isCreating,
+        submitEnabled = name.isNotBlank(),
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

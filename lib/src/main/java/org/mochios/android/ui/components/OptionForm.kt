@@ -20,6 +20,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Wording for [OptionForm], resolved by the feature from its own strings.
@@ -120,6 +121,7 @@ fun OptionForm(
     modifier: Modifier = Modifier,
     showIcon: Boolean = true
 ) {
+    val spacing = LocalSpacing.current
     Column(modifier = modifier) {
         MochiTextField(
             value = state.name,
@@ -128,9 +130,9 @@ fun OptionForm(
             singleLine = true,
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(16.dp)))
         Text(labels.colour, style = MaterialTheme.typography.labelMedium)
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
         ColorPicker(
             hex = state.colour,
             onHexChange = { hex -> state.colour = hex },
@@ -138,9 +140,9 @@ fun OptionForm(
             onClear = { state.colour = "" },
         )
         if (showIcon) {
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(16.dp)))
             Text(labels.icon, style = MaterialTheme.typography.labelMedium)
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
             MochiTextField(
                 value = state.icon,
                 onValueChange = { value -> state.icon = value },

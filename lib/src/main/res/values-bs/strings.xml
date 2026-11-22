@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Račun suspendovan</string>
     <string name="common_back">Nazad</string>
     <string name="common_close">Zatvori</string>
+    <string name="common_clear_search">Očisti pretragu</string>
+    <string name="drawer_open">Otvori meni</string>
     <string name="common_cancel">Otkaži</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">Dodaj pravilo pristupa</string>
     <string name="access_level_manage">Upravljanje</string>
     <string name="access_level_react">Reagovanje</string>
-    <string name="notifications_clear">Očisti obavještenja</string>
     <string name="entity_avatar_alt">Avatar za %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">Provjeri ažuriranja</string>
     <string name="about_up_to_date">Ažurirano</string>
     <string name="about_check_downloading">Verzija %1$s dostupna, preuzimanje…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Server za ažuriranja nije dostupan</string>
     <string name="about_check_download_failed">Preuzimanje nije uspjelo</string>
     <string name="notifications_clear_all_title">Obrisati sva obavještenja?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Podebljano</string>
     <string name="format_italic">Kurziv</string>
     <string name="format_link">Veza</string>
+    <string name="format_link_text">tekst</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Naslov</string>
     <string name="format_code">Kod</string>
     <string name="format_list">Lista sa tačkama</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">Ukloniti pravilo pristupa za \"%1$s\"?</string>
     <string name="color_picker_custom">Prilagođeno</string>
     <string name="color_picker_clear">Očisti</string>
+    <string name="color_picker_white">Bijela</string>
+    <string name="color_picker_slate">Škriljasta</string>
+    <string name="color_picker_red">Crvena</string>
+    <string name="color_picker_orange">Narandžasta</string>
+    <string name="color_picker_amber">Jantarna</string>
+    <string name="color_picker_green">Zelena</string>
+    <string name="color_picker_teal">Plavozelena</string>
+    <string name="color_picker_cyan">Cijan</string>
+    <string name="color_picker_blue">Plava</string>
+    <string name="color_picker_violet">Ljubičasta</string>
+    <string name="color_picker_pink">Roza</string>
+    <string name="color_picker_black">Crna</string>
     <string name="common_refresh">Osvježi</string>
     <string name="launcher_add_to_home">Dodaj na početni ekran</string>
     <string name="common_continue">Nastavi</string>
@@ -342,6 +358,7 @@
     </plurals>
     <string name="drawer_unread">Nepročitano</string>
     <string name="person_unknown">Nepoznato</string>
+    <string name="group_unknown">Nepoznata grupa</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Preuzimanje datoteke %1$s…</string>

@@ -553,7 +553,7 @@ fun SubscribeCalendarScreen(
         CreateEntityScaffold(
             title = title,
             submitLabel = stringResource(R.string.calendars_subscribe_submit),
-            submitEnabled = uiState.url.isNotBlank() && !uiState.isBusy,
+            submitEnabled = uiState.url.isNotBlank(),
             isBusy = uiState.isBusy,
             error = uiState.error,
             onBack = back,

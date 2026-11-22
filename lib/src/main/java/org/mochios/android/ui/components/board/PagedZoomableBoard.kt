@@ -52,6 +52,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.first
 import org.mochios.android.ui.components.dnd.DragState
+import org.mochios.android.ui.theme.LocalSpacing
 import kotlin.math.abs
 import kotlin.math.roundToInt
 
@@ -75,8 +76,8 @@ fun PagedZoomableBoard(
     modifier: Modifier = Modifier,
     columnDragState: DragState? = null,
     state: LazyListState = rememberLazyListState(),
-    pagedPeekPadding: Dp = 24.dp,
-    pageSpacing: Dp = 8.dp,
+    pagedPeekPadding: Dp = LocalSpacing.current.gap(24.dp),
+    pageSpacing: Dp = LocalSpacing.current.gap(8.dp),
     zoomScale: Float = 0.55f,
     edgeScrollThreshold: Dp = 56.dp,
     edgeScrollSpeedPerFrameDp: Dp = 14.dp,
@@ -170,7 +171,7 @@ fun PagedZoomableBoard(
     BoxWithConstraints(
         modifier = modifier
             .fillMaxSize()
-            .padding(vertical = 8.dp)
+            .padding(vertical = LocalSpacing.current.gap(8.dp))
             .onGloballyPositioned { coords -> viewport = coords.boundsInRoot() },
     ) {
         // Pages keep one width at every scale, so their content does not

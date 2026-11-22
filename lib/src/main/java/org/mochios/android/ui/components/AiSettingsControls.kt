@@ -12,16 +12,13 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuAnchorType
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,6 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.model.Account
+import org.mochios.android.ui.theme.LocalSpacing
 
 /** Matches template placeholders like `{{posts}}` in a prompt. */
 private val PROMPT_VARIABLE_REGEX = Regex("\\{\\{\\s*([a-zA-Z0-9_]+)\\s*\\}\\}")
@@ -59,51 +57,8 @@ fun AiSettingRow(label: String, control: @Composable () -> Unit) {
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.weight(1f),
         )
-        Spacer(Modifier.width(12.dp))
+        Spacer(Modifier.width(LocalSpacing.current.gap(12.dp)))
         Box(modifier = Modifier.weight(1.4f)) { control() }
-    }
-}
-
-/**
- * Read-only field showing [value]; tapping it picks from [options] by index.
- *
- * @param value Text currently shown in the field.
- * @param options Labels to choose between.
- * @param onSelect Called with the index of the chosen option.
- */
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun OptionDropdownField(
-    value: String,
-    options: List<String>,
-    onSelect: (Int) -> Unit
-) {
-    var expanded by remember { mutableStateOf(false) }
-
-    ExposedDropdownMenuBox(
-        expanded = expanded,
-        onExpandedChange = { open -> expanded = open },
-    ) {
-        MochiTextField(
-            value = value,
-            onValueChange = { },
-            readOnly = true,
-            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-            modifier = Modifier
-                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                .fillMaxWidth(),
-        )
-        ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-            options.forEachIndexed { index, label ->
-                MochiDropdownMenuItem(
-                    text = { Text(label) },
-                    onClick = {
-                        onSelect(index)
-                        expanded = false
-                    },
-                )
-            }
-        }
     }
 }
 
@@ -126,13 +81,24 @@ fun ChoiceRow(
     onSelect: (String) -> Unit
 ) {
     AiSettingRow(label = label) {
+        var expanded by remember { mutableStateOf(false) }
         val selectedLabel = options.firstOrNull { entry -> entry.first == selected }?.second
             ?: fallbackLabel
-        OptionDropdownField(
+        MochiDropdownField(
             value = selectedLabel,
-            options = options.map { entry -> entry.second }
-        ) { index ->
-            onSelect(options[index].first)
+            expanded = expanded,
+            onExpandedChange = { open -> expanded = open },
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            options.forEach { (value, optionLabel) ->
+                MochiDropdownMenuItem(
+                    text = { Text(optionLabel) },
+                    onClick = {
+                        expanded = false
+                        onSelect(value)
+                    },
+                )
+            }
         }
     }
 }
@@ -163,7 +129,6 @@ fun aiAccountOptions(defaultLabel: String, accounts: List<Account>): List<Pair<S
  * @param onSaveCustom Called with the draft when Save is pressed.
  * @param onResetDefault Called when the prompt is put back to the default.
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AiPromptField(
     label: String,
@@ -176,47 +141,38 @@ fun AiPromptField(
     onResetDefault: () -> Unit
 ) {
     val custom = stored.isNotBlank()
-    var editing by remember(custom) { mutableStateOf(custom) }
+    // Saveable, so a prompt being typed survives a rotation or a theme change.
+    var editing by rememberSaveable(custom) { mutableStateOf(custom) }
     val seed = if (custom) stored else template
-    var draft by remember(seed) { mutableStateOf(seed) }
+    var draft by rememberSaveable(seed) { mutableStateOf(seed) }
+    val spacing = LocalSpacing.current
 
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp))) {
         AiSettingRow(label = label) {
             var expanded by remember { mutableStateOf(false) }
             val valueLabel = if (editing) customLabel else defaultLabel
-            ExposedDropdownMenuBox(
+            MochiDropdownField(
+                value = valueLabel,
                 expanded = expanded,
                 onExpandedChange = { open -> expanded = open },
+                modifier = Modifier.fillMaxWidth(),
             ) {
-                MochiTextField(
-                    value = valueLabel,
-                    onValueChange = { },
-                    readOnly = true,
-                    trailingIcon = {
-                        ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
+                MochiDropdownMenuItem(
+                    text = { Text(defaultLabel) },
+                    onClick = {
+                        expanded = false
+                        editing = false
+                        draft = template
+                        onResetDefault()
                     },
-                    modifier = Modifier
-                        .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                        .fillMaxWidth(),
                 )
-                ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
-                    MochiDropdownMenuItem(
-                        text = { Text(defaultLabel) },
-                        onClick = {
-                            expanded = false
-                            editing = false
-                            draft = template
-                            onResetDefault()
-                        },
-                    )
-                    MochiDropdownMenuItem(
-                        text = { Text(customLabel) },
-                        onClick = {
-                            expanded = false
-                            editing = true
-                        },
-                    )
-                }
+                MochiDropdownMenuItem(
+                    text = { Text(customLabel) },
+                    onClick = {
+                        expanded = false
+                        editing = true
+                    },
+                )
             }
         }
 
@@ -230,7 +186,7 @@ fun AiPromptField(
             )
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(12.dp)),
             ) {
                 MochiButton(
                     onClick = { onSaveCustom(draft) },

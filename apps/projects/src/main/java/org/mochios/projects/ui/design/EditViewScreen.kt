@@ -55,7 +55,7 @@ fun EditViewScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.projects_views_edit_dialog_title),
         submitLabel = stringResource(MochiR.string.common_save),
-        submitEnabled = view != null && formState.canSave && !uiState.isSaving,
+        submitEnabled = view != null && formState.canSave,
         isBusy = uiState.isSaving,
         error = uiState.error,
         onBack = onBack,

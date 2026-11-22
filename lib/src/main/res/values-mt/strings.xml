@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Kont sospiż</string>
     <string name="common_back">Lura</string>
     <string name="common_close">Agħlaq</string>
+    <string name="common_clear_search">Naddaf it-tiftix</string>
+    <string name="drawer_open">Iftaħ menu</string>
     <string name="common_cancel">Ikkanċella</string>
     <string name="common_filter">Iffiltra</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Żid regola ta\' aċċess</string>
     <string name="access_level_manage">Immaniġġja</string>
     <string name="access_level_react">Irreaġixxi</string>
-    <string name="notifications_clear">Neħħi n-notifiki</string>
     <string name="entity_avatar_alt">Avatar għal %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Iċċekkja għal aġġornamenti</string>
     <string name="about_up_to_date">Aġġornat</string>
     <string name="about_check_downloading">Verżjoni %1$s disponibbli, tniżżel…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Ma rnexxiex jilħaq is-server tal-aġġornamenti</string>
     <string name="about_check_download_failed">It-tniżżil falla</string>
     <string name="notifications_clear_all_title">Tnaddaf in-notifiki kollha?</string>
@@ -302,6 +304,8 @@
     <string name="format_bold">Grassett</string>
     <string name="format_italic">Korsiv</string>
     <string name="format_link">Ħolqa</string>
+    <string name="format_link_text">test</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Intestatura</string>
     <string name="format_code">Kodiċi</string>
     <string name="format_list">Lista bil-punti</string>
@@ -327,6 +331,18 @@
     <string name="access_remove_message">Tneħħi r-regola ta\' aċċess għal \"%1$s\"?</string>
     <string name="color_picker_custom">Personalizzat</string>
     <string name="color_picker_clear">Naddaf</string>
+    <string name="color_picker_white">Abjad</string>
+    <string name="color_picker_slate">Griż tal-ardesija</string>
+    <string name="color_picker_red">Aħmar</string>
+    <string name="color_picker_orange">Oranġjo</string>
+    <string name="color_picker_amber">Ambra</string>
+    <string name="color_picker_green">Aħdar</string>
+    <string name="color_picker_teal">Aħdar fil-blu</string>
+    <string name="color_picker_cyan">Ċjan</string>
+    <string name="color_picker_blue">Blu</string>
+    <string name="color_picker_violet">Vjola</string>
+    <string name="color_picker_pink">Roża</string>
+    <string name="color_picker_black">Iswed</string>
     <string name="common_refresh">Aġġorna</string>
     <string name="launcher_add_to_home">Żid mal-iskrin tad-dar</string>
     <string name="common_continue">Kompli</string>
@@ -347,6 +363,7 @@
     </plurals>
     <string name="drawer_unread">Mhux moqri</string>
     <string name="person_unknown">Mhux magħruf</string>
+    <string name="group_unknown">Grupp mhux magħruf</string>
     <string name="format_time_seconds_short">%1$ssek</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Qed jitniżżel %1$s…</string>

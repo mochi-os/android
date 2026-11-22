@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">حساب تعلیق شد</string>
     <string name="common_back">بازگشت</string>
     <string name="common_close">بستن</string>
+    <string name="common_clear_search">پاک کردن جست‌وجو</string>
+    <string name="drawer_open">باز کردن منو</string>
     <string name="common_cancel">لغو</string>
     <string name="common_filter">فیلتر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -126,7 +128,6 @@
     <string name="common_retry">تلاش دوباره</string>
     <string name="access_add_rule_title">افزودن قاعده دسترسی</string>
     <string name="access_level_manage">مدیریت</string>
-    <string name="notifications_clear">پاک کردن اعلان‌ها</string>
     <string name="game_chat_load_more">بارگذاری پیام‌های قدیمی‌تر</string>
     <string name="game_chat_move_played">%1$s %2$s را بازی کرد</string>
 
@@ -214,6 +215,7 @@
     <string name="about_check_updates">بررسی به‌روزرسانی‌ها</string>
     <string name="about_up_to_date">به‌روز است</string>
     <string name="about_check_downloading">نسخه %1$s در دسترس است، در حال دانلود…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">دسترسی به سرور به‌روزرسانی ممکن نشد</string>
     <string name="about_check_download_failed">دانلود ناموفق بود</string>
     <string name="notifications_clear_all_title">همه اعلان‌ها پاک شوند؟</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">پررنگ</string>
     <string name="format_italic">کج</string>
     <string name="format_link">پیوند</string>
+    <string name="format_link_text">متن</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">عنوان</string>
     <string name="format_code">کد</string>
     <string name="format_list">فهرست نشانه‌دار</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">قانون دسترسی برای «%1$s» حذف شود؟</string>
     <string name="color_picker_custom">سفارشی</string>
     <string name="color_picker_clear">پاک کردن</string>
+    <string name="color_picker_white">سفید</string>
+    <string name="color_picker_slate">خاکستری لوحی</string>
+    <string name="color_picker_red">قرمز</string>
+    <string name="color_picker_orange">نارنجی</string>
+    <string name="color_picker_amber">کهربایی</string>
+    <string name="color_picker_green">سبز</string>
+    <string name="color_picker_teal">سبزآبی</string>
+    <string name="color_picker_cyan">فیروزه‌ای</string>
+    <string name="color_picker_blue">آبی</string>
+    <string name="color_picker_violet">بنفش</string>
+    <string name="color_picker_pink">صورتی</string>
+    <string name="color_picker_black">سیاه</string>
     <string name="common_refresh">تازه‌سازی</string>
     <string name="launcher_add_to_home">افزودن به صفحه اصلی</string>
     <string name="common_continue">ادامه</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">خوانده‌نشده</string>
     <string name="person_unknown">ناشناخته</string>
+    <string name="group_unknown">گروه ناشناخته</string>
     <string name="format_time_seconds_short">%1$s ثانیه</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">در حال دانلود %1$s…</string>

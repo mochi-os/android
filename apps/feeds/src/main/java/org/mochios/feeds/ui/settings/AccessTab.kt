@@ -37,7 +37,9 @@ import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.format.personName
 import org.mochios.android.ui.components.AccessCandidate
+import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.components.AccessLabels
 import org.mochios.android.ui.components.AccessRulesSection
 import org.mochios.android.ui.components.MochiAlertDialog
@@ -80,6 +82,8 @@ fun AccessTab(
     val members by viewModel.members.collectAsState()
     val searchResults by viewModel.userSearchResults.collectAsState()
     val groups by viewModel.groups.collectAsState()
+    val isLoadingGroups by viewModel.isLoadingGroups.collectAsState()
+    val groupsError by viewModel.groupsError.collectAsState()
     var memberQuery by remember { mutableStateOf("") }
     val resources = LocalResources.current
     // The member a removal or block waits on the owner's say-so for; the
@@ -132,11 +136,13 @@ fun AccessTab(
                 selected = { name -> resources.getString(R.string.feeds_access_selected, name) }
             ),
             users = searchResults.map { user ->
-                AccessCandidate(user.id, user.name.ifBlank { user.id })
+                AccessCandidate(user.id, personName(user.name, fingerprint(user.id)))
             },
             groups = groups.map { group ->
                 AccessCandidate("@${group.id}", group.name, group.id)
             },
+            groupsLoading = isLoadingGroups,
+            groupsError = groupsError,
             onSearchUsers = { query -> viewModel.searchUsers(query) },
             onLoadGroups = { viewModel.loadGroups() },
             onSetAccess = { subject, level, onDone -> viewModel.setAccess(subject, level, onDone) },

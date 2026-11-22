@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Hisob toʻxtatildi</string>
     <string name="common_back">Orqaga</string>
     <string name="common_close">Yopish</string>
+    <string name="common_clear_search">Qidiruvni tozalash</string>
+    <string name="drawer_open">Menyuni ochish</string>
     <string name="common_cancel">Bekor qilish</string>
     <string name="common_filter">Filtr</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Kirish qoidasini qo\'shish</string>
     <string name="access_level_manage">Boshqarish</string>
     <string name="access_level_react">Reaksiya</string>
-    <string name="notifications_clear">Bildirishnomalarni tozalash</string>
     <string name="entity_avatar_alt">%1$s uchun avatar</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Yangilanishlarni tekshirish</string>
     <string name="about_up_to_date">Yangilangan</string>
     <string name="about_check_downloading">%1$s versiyasi mavjud, yuklab olinmoqda…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Yangilanish serveriga ulanib bo\'lmadi</string>
     <string name="about_check_download_failed">Yuklab olib boʻlmadi</string>
     <string name="notifications_clear_all_title">Barcha bildirishnomalar tozalansinmi?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Qalin</string>
     <string name="format_italic">Kursiv</string>
     <string name="format_link">Havola</string>
+    <string name="format_link_text">matn</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Sarlavha</string>
     <string name="format_code">Kod</string>
     <string name="format_list">Belgili roʻyxat</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">\"%1$s\" uchun kirish qoidasi olib tashlansinmi?</string>
     <string name="color_picker_custom">Maxsus</string>
     <string name="color_picker_clear">Tozalash</string>
+    <string name="color_picker_white">Oq</string>
+    <string name="color_picker_slate">Shifer kulrang</string>
+    <string name="color_picker_red">Qizil</string>
+    <string name="color_picker_orange">Toʻq sariq</string>
+    <string name="color_picker_amber">Qahrabo</string>
+    <string name="color_picker_green">Yashil</string>
+    <string name="color_picker_teal">Koʻk-yashil</string>
+    <string name="color_picker_cyan">Moviy</string>
+    <string name="color_picker_blue">Koʻk</string>
+    <string name="color_picker_violet">Binafsha</string>
+    <string name="color_picker_pink">Pushti</string>
+    <string name="color_picker_black">Qora</string>
     <string name="common_refresh">Yangilash</string>
     <string name="launcher_add_to_home">Bosh ekranga qo‘shish</string>
     <string name="common_continue">Davom etish</string>
@@ -341,6 +357,7 @@
     </plurals>
     <string name="drawer_unread">Oʻqilmagan</string>
     <string name="person_unknown">Nomaʼlum</string>
+    <string name="group_unknown">Nomaʼlum guruh</string>
     <string name="format_time_seconds_short">%1$s son</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s yuklab olinmoqda…</string>

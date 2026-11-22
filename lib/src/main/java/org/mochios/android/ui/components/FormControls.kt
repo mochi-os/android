@@ -19,7 +19,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -30,68 +29,11 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-
-/**
- * A list filter: a button reading `label: value` that drops down the choices,
- * with an "any" entry at the top that clears the filter.
- *
- * @param label Name of the thing being filtered, shown before the value.
- * @param current Selected value, or null when the filter is off.
- * @param options Choices as value-to-label pairs.
- * @param anyLabel Label of the entry that clears the filter.
- * @param onSelect Called with the chosen value, or null for [anyLabel].
- * @param modifier Modifier applied to the control.
- */
-@Composable
-fun FilterDropdown(
-    label: String,
-    current: String?,
-    options: List<Pair<String, String>>,
-    anyLabel: String,
-    onSelect: (String?) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    var expanded by remember { mutableStateOf(false) }
-    val currentLabel = options.firstOrNull { option -> option.first == current }?.second ?: anyLabel
-
-    Box(modifier = modifier) {
-        MochiOutlinedButton(
-            onClick = { expanded = true },
-            modifier = Modifier.fillMaxWidth(),
-        ) {
-            Text(text = "$label: $currentLabel", maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Icon(Icons.Default.ArrowDropDown, contentDescription = null)
-        }
-        MochiDropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false },
-        ) {
-            MochiDropdownMenuItem(
-                text = { Text(anyLabel) },
-                onClick = {
-                    expanded = false
-                    onSelect(null)
-                },
-                selected = current == null,
-            )
-            options.forEach { (value, optionLabel) ->
-                MochiDropdownMenuItem(
-                    text = { Text(optionLabel) },
-                    onClick = {
-                        expanded = false
-                        onSelect(value)
-                    },
-                    selected = current == value,
-                )
-            }
-        }
-    }
-}
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A labelled single-choice field: a caption above a button that drops down the
- * choices. Unlike [FilterDropdown] the selection cannot be cleared; an unset
- * field shows no value.
+ * choices. The selection cannot be cleared; an unset field shows no value.
  *
  * @param label Caption above the field.
  * @param options Choices as value-to-label pairs.
@@ -109,7 +51,7 @@ fun LabeledSelectField(
     var expanded by rememberSaveable { mutableStateOf(false) }
     val current = options.firstOrNull { option -> option.first == selected }?.second.orEmpty()
 
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(6.dp))) {
         FieldLabel(text = label, icon = icon)
         Box {
             MochiOutlinedButton(
@@ -175,7 +117,7 @@ fun MetaRow(label: String, value: String) {
 fun FieldLabel(text: String, icon: ImageVector? = null) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(6.dp),
+        horizontalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(6.dp)),
     ) {
         if (icon != null) Icon(icon, contentDescription = null, modifier = Modifier.size(16.dp))
         Text(text = text, style = MaterialTheme.typography.labelMedium)

@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Cunntas air a chur à bith</string>
     <string name="common_back">Air ais</string>
     <string name="common_close">Dùin</string>
+    <string name="common_clear_search">Falamhaich an lorg</string>
+    <string name="drawer_open">Fosgail an clàr-taice</string>
     <string name="common_cancel">Sguir dheth</string>
     <string name="common_filter">Sìolachan</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -178,7 +180,6 @@
     <string name="access_add_rule_title">Cuir ris riaghailt inntrigidh</string>
     <string name="access_level_manage">Stiùirich</string>
     <string name="access_level_react">Dèan ath-bhualadh</string>
-    <string name="notifications_clear">Falamhaich na brathan</string>
     <string name="entity_avatar_alt">Avatar airson %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Thoir sùil airson ùrachaidhean</string>
     <string name="about_up_to_date">Cho ùr \'s a ghabhas</string>
     <string name="about_check_downloading">Tha tionndadh %1$s ri làimh, ’ga luchdadh a-nuas…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Cha b\' urrainn ruigsinn air an fhrithealaiche ùrachaidh</string>
     <string name="about_check_download_failed">Dh’fhàillig an luchdadh a-nuas</string>
     <string name="notifications_clear_all_title">A bheil thu airson gach brath fhalmhachadh?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Trom</string>
     <string name="format_italic">Eadailteach</string>
     <string name="format_link">Ceangal</string>
+    <string name="format_link_text">teacsa</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Ceann-sgrìobhadh</string>
     <string name="format_code">Còd</string>
     <string name="format_list">Liosta puingean</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">A bheil thu airson riaghailt inntrigidh \"%1$s\" a thoirt air falbh?</string>
     <string name="color_picker_custom">Gnàthaichte</string>
     <string name="color_picker_clear">Falamhaich</string>
+    <string name="color_picker_white">Geal</string>
+    <string name="color_picker_slate">Glas-sglèata</string>
+    <string name="color_picker_red">Dearg</string>
+    <string name="color_picker_orange">Orains</string>
+    <string name="color_picker_amber">Òmar</string>
+    <string name="color_picker_green">Uaine</string>
+    <string name="color_picker_teal">Gorm-uaine</string>
+    <string name="color_picker_cyan">Saidhan</string>
+    <string name="color_picker_blue">Gorm</string>
+    <string name="color_picker_violet">Fiolaid</string>
+    <string name="color_picker_pink">Pinc</string>
+    <string name="color_picker_black">Dubh</string>
     <string name="common_refresh">Ath-nuadhaich</string>
     <string name="launcher_add_to_home">Cuir ris an sgrìn-dachaigh</string>
     <string name="common_continue">Lean air adhart</string>
@@ -344,6 +360,7 @@
     </plurals>
     <string name="drawer_unread">Gun leughadh</string>
     <string name="person_unknown">Neo-aithnichte</string>
+    <string name="group_unknown">Buidheann neo-aithnichte</string>
     <string name="format_time_seconds_short">%1$sd</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">A’ luchdadh a-nuas %1$s…</string>

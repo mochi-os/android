@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Konto suspendert</string>
     <string name="common_back">Tilbake</string>
     <string name="common_close">Lukk</string>
+    <string name="common_clear_search">Tøm søk</string>
+    <string name="drawer_open">Åpne meny</string>
     <string name="common_cancel">Avbryt</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Legg til tilgangsregel</string>
     <string name="access_level_manage">Administrer</string>
     <string name="access_level_react">Reager</string>
-    <string name="notifications_clear">Fjern varsler</string>
     <string name="entity_avatar_alt">Avatar for %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Se etter oppdateringer</string>
     <string name="about_up_to_date">Oppdatert</string>
     <string name="about_check_downloading">Versjon %1$s er tilgjengelig, laster ned…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Kunne ikke nå oppdateringsserveren</string>
     <string name="about_check_download_failed">Nedlastingen mislyktes</string>
     <string name="notifications_clear_all_title">Fjern alle varsler?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Fet</string>
     <string name="format_italic">Kursiv</string>
     <string name="format_link">Lenke</string>
+    <string name="format_link_text">tekst</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Overskrift</string>
     <string name="format_code">Kode</string>
     <string name="format_list">Punktliste</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Fjerne tilgangsregel for «%1$s»?</string>
     <string name="color_picker_custom">Tilpasset</string>
     <string name="color_picker_clear">Tøm</string>
+    <string name="color_picker_white">Hvit</string>
+    <string name="color_picker_slate">Skifergrå</string>
+    <string name="color_picker_red">Rød</string>
+    <string name="color_picker_orange">Oransje</string>
+    <string name="color_picker_amber">Rav</string>
+    <string name="color_picker_green">Grønn</string>
+    <string name="color_picker_teal">Blågrønn</string>
+    <string name="color_picker_cyan">Cyan</string>
+    <string name="color_picker_blue">Blå</string>
+    <string name="color_picker_violet">Fiolett</string>
+    <string name="color_picker_pink">Rosa</string>
+    <string name="color_picker_black">Svart</string>
     <string name="common_refresh">Oppdater</string>
     <string name="launcher_add_to_home">Legg til startskjerm</string>
     <string name="common_continue">Fortsett</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Uleste</string>
     <string name="person_unknown">Ukjent</string>
+    <string name="group_unknown">Ukjent gruppe</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Laster ned %1$s…</string>

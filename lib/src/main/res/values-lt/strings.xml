@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Paskyra sustabdyta</string>
     <string name="common_back">Atgal</string>
     <string name="common_close">Uždaryti</string>
+    <string name="common_clear_search">Išvalyti paiešką</string>
+    <string name="drawer_open">Atidaryti meniu</string>
     <string name="common_cancel">Atšaukti</string>
     <string name="common_filter">Filtras</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Pridėti prieigos taisyklę</string>
     <string name="access_level_manage">Valdyti</string>
     <string name="access_level_react">Reaguoti</string>
-    <string name="notifications_clear">Išvalyti pranešimus</string>
     <string name="entity_avatar_alt">%1$s avataras</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Tikrinti, ar yra naujinių</string>
     <string name="about_up_to_date">Naujausia versija</string>
     <string name="about_check_downloading">Versija %1$s prieinama, atsisiunčiama…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Nepavyko pasiekti naujinių serverio</string>
     <string name="about_check_download_failed">Atsisiųsti nepavyko</string>
     <string name="notifications_clear_all_title">Išvalyti visus pranešimus?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Paryškintas</string>
     <string name="format_italic">Kursyvas</string>
     <string name="format_link">Nuoroda</string>
+    <string name="format_link_text">tekstas</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Antraštė</string>
     <string name="format_code">Kodas</string>
     <string name="format_list">Ženklelinis sąrašas</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Pašalinti prieigos taisyklę „%1$s“?</string>
     <string name="color_picker_custom">Pasirinktinis</string>
     <string name="color_picker_clear">Išvalyti</string>
+    <string name="color_picker_white">Balta</string>
+    <string name="color_picker_slate">Skalūno pilka</string>
+    <string name="color_picker_red">Raudona</string>
+    <string name="color_picker_orange">Oranžinė</string>
+    <string name="color_picker_amber">Gintarinė</string>
+    <string name="color_picker_green">Žalia</string>
+    <string name="color_picker_teal">Žalsvai mėlyna</string>
+    <string name="color_picker_cyan">Žydra</string>
+    <string name="color_picker_blue">Mėlyna</string>
+    <string name="color_picker_violet">Violetinė</string>
+    <string name="color_picker_pink">Rožinė</string>
+    <string name="color_picker_black">Juoda</string>
     <string name="common_refresh">Atnaujinti</string>
     <string name="launcher_add_to_home">Pridėti į pradinį ekraną</string>
     <string name="common_continue">Tęsti</string>
@@ -344,6 +360,7 @@
     </plurals>
     <string name="drawer_unread">Neperskaityta</string>
     <string name="person_unknown">Nežinoma</string>
+    <string name="group_unknown">Nežinoma grupė</string>
     <string name="format_time_seconds_short">%1$s sek.</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Atsisiunčiama %1$s…</string>

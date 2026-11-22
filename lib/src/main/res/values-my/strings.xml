@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">အကောင့် ဆိုင်းငံ့ထားသည်</string>
     <string name="common_back">နောက်သို့</string>
     <string name="common_close">ပိတ်မည်</string>
+    <string name="common_clear_search">ရှာဖွေမှု ရှင်းမည်</string>
+    <string name="drawer_open">မီနူးကို ဖွင့်</string>
     <string name="common_cancel">မလုပ်တော့ပါ</string>
     <string name="common_filter">စိစစ်</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">ဝင်ရောက်ခွင့်စည်းမျဉ်းထည့်ပါ</string>
     <string name="access_level_manage">စီမံပါ</string>
     <string name="access_level_react">တုံ့ပြန်ပါ</string>
-    <string name="notifications_clear">အကြောင်းကြားချက်များကို ရှင်းလင်းပါ</string>
     <string name="entity_avatar_alt">%1$s အတွက် အသွင်ပုံ</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">အပ်ဒိတ်များ စစ်ဆေးပါ</string>
     <string name="about_up_to_date">နောက်ဆုံးဗားရှင်းဖြစ်သည်</string>
     <string name="about_check_downloading">ဗားရှင်း %1$s ရနိုင်သည်၊ ဒေါင်းလုဒ်ဆွဲနေသည်…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">အပ်ဒိတ်ဆာဗာသို့ ဆက်သွယ်၍မရပါ</string>
     <string name="about_check_download_failed">ဒေါင်းလုဒ် မအောင်မြင်ပါ</string>
     <string name="notifications_clear_all_title">အကြောင်းကြားချက်အားလုံးကို ရှင်းလင်းမည်လား?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">စာလုံးမည်း</string>
     <string name="format_italic">စာလုံးစောင်း</string>
     <string name="format_link">လင့်ခ်</string>
+    <string name="format_link_text">စာသား</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">ခေါင်းစဉ်</string>
     <string name="format_code">ကုဒ်</string>
     <string name="format_list">အချက်စာရင်း</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" အတွက် ဝင်ရောက်ခွင့်စည်းမျဉ်းကို ဖယ်ရှားမလား။</string>
     <string name="color_picker_custom">စိတ်ကြိုက်</string>
     <string name="color_picker_clear">ရှင်းမည်</string>
+    <string name="color_picker_white">အဖြူ</string>
+    <string name="color_picker_slate">ကျောက်သင်ပုန်းမီးခိုး</string>
+    <string name="color_picker_red">အနီ</string>
+    <string name="color_picker_orange">လိမ္မော်</string>
+    <string name="color_picker_amber">ပယင်းရောင်</string>
+    <string name="color_picker_green">အစိမ်း</string>
+    <string name="color_picker_teal">စိမ်းပြာ</string>
+    <string name="color_picker_cyan">ပြာနု</string>
+    <string name="color_picker_blue">အပြာ</string>
+    <string name="color_picker_violet">ခရမ်း</string>
+    <string name="color_picker_pink">ပန်းရောင်</string>
+    <string name="color_picker_black">အနက်</string>
     <string name="common_refresh">ပြန်စစ်ဆေး</string>
     <string name="launcher_add_to_home">ပင်မစခရင် သို့ ထည့်</string>
     <string name="common_continue">ဆက်လက်လုပ်ဆောင်မည်</string>
@@ -339,6 +355,7 @@
     </plurals>
     <string name="drawer_unread">မဖတ်ရသေး</string>
     <string name="person_unknown">မသိရသော</string>
+    <string name="group_unknown">မသိရသော အုပ်စု</string>
     <string name="format_time_seconds_short">%1$sစက္ကန့်</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ကို ဒေါင်းလုဒ်ဆွဲနေသည်…</string>

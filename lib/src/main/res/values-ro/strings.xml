@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Cont suspendat</string>
     <string name="common_back">Înapoi</string>
     <string name="common_close">Închide</string>
+    <string name="common_clear_search">Golește căutarea</string>
+    <string name="drawer_open">Deschide meniul</string>
     <string name="common_cancel">Anulează</string>
     <string name="common_filter">Filtrează</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Adaugă regulă de acces</string>
     <string name="access_level_manage">Gestionează</string>
     <string name="access_level_react">Reacționează</string>
-    <string name="notifications_clear">Șterge notificările</string>
     <string name="entity_avatar_alt">Avatar pentru %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Verifică actualizările</string>
     <string name="about_up_to_date">La zi</string>
     <string name="about_check_downloading">Versiunea %1$s este disponibilă, se descarcă…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Serverul de actualizări nu a putut fi contactat</string>
     <string name="about_check_download_failed">Descărcarea a eșuat</string>
     <string name="notifications_clear_all_title">Ștergeți toate notificările?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Aldin</string>
     <string name="format_italic">Cursiv</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">text</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Titlu</string>
     <string name="format_code">Cod</string>
     <string name="format_list">Listă cu marcatori</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">Eliminați regula de acces pentru „%1$s”?</string>
     <string name="color_picker_custom">Personalizat</string>
     <string name="color_picker_clear">Golește</string>
+    <string name="color_picker_white">Alb</string>
+    <string name="color_picker_slate">Ardezie</string>
+    <string name="color_picker_red">Roșu</string>
+    <string name="color_picker_orange">Portocaliu</string>
+    <string name="color_picker_amber">Chihlimbar</string>
+    <string name="color_picker_green">Verde</string>
+    <string name="color_picker_teal">Verde-albăstrui</string>
+    <string name="color_picker_cyan">Cyan</string>
+    <string name="color_picker_blue">Albastru</string>
+    <string name="color_picker_violet">Violet</string>
+    <string name="color_picker_pink">Roz</string>
+    <string name="color_picker_black">Negru</string>
     <string name="common_refresh">Reîmprospătează</string>
     <string name="launcher_add_to_home">Adaugă pe ecranul de pornire</string>
     <string name="common_continue">Continuă</string>
@@ -342,6 +358,7 @@
     </plurals>
     <string name="drawer_unread">Necitit</string>
     <string name="person_unknown">Necunoscut</string>
+    <string name="group_unknown">Grup necunoscut</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Se descarcă %1$s…</string>

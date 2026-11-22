@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">I-akhawunti imisiwe okwesikhashana</string>
     <string name="common_back">Emuva</string>
     <string name="common_close">Vala</string>
+    <string name="common_clear_search">Sula usesho</string>
+    <string name="drawer_open">Vula imenyu</string>
     <string name="common_cancel">Khansela</string>
     <string name="common_filter">Hlunga</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Engeza umthetho wokufinyelela</string>
     <string name="access_level_manage">Phatha</string>
     <string name="access_level_react">Sabela</string>
-    <string name="notifications_clear">Sula izaziso</string>
     <string name="entity_avatar_alt">I-avatar ka-%1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Hlola izibuyekezo</string>
     <string name="about_up_to_date">Kusebenza kwesakamuva</string>
     <string name="about_check_downloading">Inguqulo %1$s iyatholakala, iyalandwa…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Ayikwazanga ukufinyelela iseva yezibuyekezo</string>
     <string name="about_check_download_failed">Ukulanda kuhlulekile</string>
     <string name="notifications_clear_all_title">Sula zonke izaziso?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Okugqamile</string>
     <string name="format_italic">Okutshekile</string>
     <string name="format_link">Isixhumanisi</string>
+    <string name="format_link_text">umbhalo</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Isihloko</string>
     <string name="format_code">Ikhodi</string>
     <string name="format_list">Uhlu lwamachashazi</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Susa umthetho wokufinyelela we-\"%1$s\"?</string>
     <string name="color_picker_custom">Okuzenzelwe</string>
     <string name="color_picker_clear">Sula</string>
+    <string name="color_picker_white">Mhlophe</string>
+    <string name="color_picker_slate">Mpunga</string>
+    <string name="color_picker_red">Bomvu</string>
+    <string name="color_picker_orange">Owolintshi</string>
+    <string name="color_picker_amber">Okuphuzi okunsundu</string>
+    <string name="color_picker_green">Luhlaza</string>
+    <string name="color_picker_teal">Luhlaza-okwesibhakabhaka</string>
+    <string name="color_picker_cyan">Okwesibhakabhaka</string>
+    <string name="color_picker_blue">Luhlaza okwesibhakabhaka</string>
+    <string name="color_picker_violet">Nsomi</string>
+    <string name="color_picker_pink">Pinki</string>
+    <string name="color_picker_black">Mnyama</string>
     <string name="common_refresh">Vuselela</string>
     <string name="launcher_add_to_home">Engeza kwisikrini sasekhaya</string>
     <string name="common_continue">Qhubeka</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Okungafundwanga</string>
     <string name="person_unknown">Akwaziwa</string>
+    <string name="group_unknown">Iqembu elingaziwa</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s iyalandwa…</string>

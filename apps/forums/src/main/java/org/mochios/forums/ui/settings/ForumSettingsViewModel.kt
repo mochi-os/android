@@ -54,6 +54,8 @@ data class ForumSettingsUiState(
     val aiAccounts: List<org.mochios.android.model.Account> = emptyList(),
     val userSearchResults: List<org.mochios.forums.model.User> = emptyList(),
     val groups: List<org.mochios.forums.model.Group> = emptyList(),
+    val isLoadingGroups: Boolean = false,
+    val groupsError: MochiError? = null,
 )
 
 @HiltViewModel
@@ -232,13 +234,22 @@ class ForumSettingsViewModel @Inject constructor(
     }
 
     fun loadGroups() {
+        // Loading at once, so the dialog never says there are no groups
+        // before the answer.
+        _uiState.value = _uiState.value.copy(isLoadingGroups = true, groupsError = null)
         viewModelScope.launch {
             try {
                 val groups = repository.listGroups()
                     .sortedWith(compareBy(NaturalCompare) { it.name })
-                _uiState.value = _uiState.value.copy(groups = groups)
-            } catch (_: Exception) {
-                _uiState.value = _uiState.value.copy(groups = emptyList())
+                _uiState.value = _uiState.value.copy(groups = groups, isLoadingGroups = false)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                _uiState.value = _uiState.value.copy(
+                    groups = emptyList(),
+                    isLoadingGroups = false,
+                    groupsError = e.toMochiError(),
+                )
             }
         }
     }

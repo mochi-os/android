@@ -13,11 +13,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.key
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 
 private val YOUTUBE_REGEX = Regex("""(?:youtube\.com/watch\?v=|youtu\.be/)([\w-]+)""")
 private val VIMEO_REGEX = Regex("""vimeo\.com/(\d+)""")
@@ -71,31 +76,60 @@ fun VideoEmbed(
         """.trimIndent()
     }
 
-    AndroidView(
-        factory = { context ->
-            WebView(context).apply {
-                // The frame holds a third-party player, and a default client
-                // follows whatever it navigates to inside a 200 dp view with
-                // no address bar. Only the embed itself loads here; anything
-                // else is refused (the user can still open the link normally).
-                webViewClient = object : WebViewClient() {
-                    override fun shouldOverrideUrlLoading(
-                        view: WebView,
-                        request: WebResourceRequest,
-                    ): Boolean = true
-                }
-                webChromeClient = WebChromeClient()
-                settings.javaScriptEnabled = true
-                settings.domStorageEnabled = true
-                settings.mediaPlaybackRequiresUserGesture = false
+    // The view on screen, for the lifecycle observer below.
+    val shown = remember { arrayOfNulls<WebView>(1) }
+    val owner = LocalLifecycleOwner.current
+    DisposableEffect(owner) {
+        // A WebView left running in the background goes on playing; paused,
+        // its player stops with it.
+        val observer = LifecycleEventObserver { _, event ->
+            when (event) {
+                Lifecycle.Event.ON_PAUSE -> shown[0]?.onPause()
+                Lifecycle.Event.ON_RESUME -> shown[0]?.onResume()
+                else -> Unit
             }
-        },
-        update = { webView ->
-            webView.loadDataWithBaseURL(null, html, "text/html", "UTF-8", null)
-        },
-        modifier = modifier
-            .fillMaxWidth()
-            .height(200.dp)
-            .clip(RoundedCornerShape(8.dp))
-    )
+        }
+        owner.lifecycle.addObserver(observer)
+        onDispose { owner.lifecycle.removeObserver(observer) }
+    }
+
+    // Keyed on the page: a different video gets a view of its own, loaded as it
+    // is made, and the one before is ended as below.
+    key(html) {
+        AndroidView(
+            factory = { context ->
+                WebView(context).apply {
+                    // The frame holds a third-party player, and a default client
+                    // follows whatever it navigates to inside a 200 dp view with
+                    // no address bar. Only the embed itself loads here; anything
+                    // else is refused (the user can still open the link normally).
+                    webViewClient = object : WebViewClient() {
+                        override fun shouldOverrideUrlLoading(
+                            view: WebView,
+                            request: WebResourceRequest,
+                        ): Boolean = true
+                    }
+                    webChromeClient = WebChromeClient()
+                    settings.javaScriptEnabled = true
+                    settings.domStorageEnabled = true
+                    settings.mediaPlaybackRequiresUserGesture = false
+                    loadDataWithBaseURL(null, html, "text/html", "UTF-8", null)
+                    shown[0] = this
+                }
+            },
+            // A WebView taken off the screen keeps its renderer, its page and
+            // the player in it, sound and all, until it is collected; this
+            // ends them as the post closes.
+            onRelease = { view ->
+                if (shown[0] === view) shown[0] = null
+                view.stopLoading()
+                view.loadUrl("about:blank")
+                view.destroy()
+            },
+            modifier = modifier
+                .fillMaxWidth()
+                .height(200.dp)
+                .clip(RoundedCornerShape(8.dp))
+        )
+    }
 }

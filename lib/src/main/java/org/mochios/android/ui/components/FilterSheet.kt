@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * The frame every filter sheet shares: a fully expanded bottom sheet whose
@@ -39,8 +40,8 @@ fun FilterSheet(
     onDismiss: () -> Unit,
     modifier: Modifier = Modifier,
     headerAction: (@Composable RowScope.() -> Unit)? = null,
-    sectionSpacing: Dp = 16.dp,
-    bottomSpacing: Dp = 24.dp,
+    sectionSpacing: Dp = LocalSpacing.current.gap(16.dp),
+    bottomSpacing: Dp = LocalSpacing.current.gap(24.dp),
     content: @Composable ColumnScope.() -> Unit,
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -56,7 +57,7 @@ fun FilterSheet(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp)
+                .padding(horizontal = LocalSpacing.current.gap(16.dp))
                 .verticalScroll(rememberScrollState())
                 .padding(top = sectionSpacing),
             verticalArrangement = Arrangement.spacedBy(sectionSpacing),

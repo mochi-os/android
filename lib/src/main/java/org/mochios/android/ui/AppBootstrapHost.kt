@@ -41,6 +41,8 @@ import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.account.MochiAccount
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.format.personName
+import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.auth.AuthNavigation
 import org.mochios.android.ui.auth.AuthViewModel
 import org.mochios.android.ui.auth.IdentityScreen
@@ -281,7 +283,7 @@ private fun SingleAccountConfirm(
 }
 
 @Composable
-private fun AccountPicker(
+internal fun AccountPicker(
     accounts: List<MochiAccount.Snapshot>,
     onPick: (MochiAccount.Snapshot) -> Unit,
     onDifferent: () -> Unit
@@ -301,7 +303,8 @@ private fun AccountPicker(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.fillMaxWidth()) {
-                    Text(account.name.takeIf { it.isNotBlank() } ?: account.identity)
+                    // An account without a name reads as its fingerprint, never its id.
+                    Text(personName(account.name, account.fingerprint ?: fingerprint(account.identity)))
                     Text(
                         text = account.server,
                         style = MaterialTheme.typography.bodySmall,

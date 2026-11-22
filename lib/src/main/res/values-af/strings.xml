@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Rekening opgeskort</string>
     <string name="common_back">Terug</string>
     <string name="common_close">Sluit</string>
+    <string name="common_clear_search">Maak soektog skoon</string>
+    <string name="drawer_open">Maak kieslys oop</string>
     <string name="common_cancel">Kanselleer</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -138,6 +140,7 @@
     <string name="about_check_updates">Kyk vir opdaterings</string>
     <string name="about_up_to_date">Op datum</string>
     <string name="about_check_downloading">Weergawe %1$s beskikbaar, besig om af te laai…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Kon nie opdateringbediener bereik nie</string>
     <string name="about_check_download_failed">Aflaai het misluk</string>
     <string name="notifications_clear_all_title">Vee alle kennisgewings uit?</string>
@@ -162,7 +165,6 @@
     <string name="common_expand">Vou uit</string>
     <string name="access_add_rule_title">Voeg toegangsreël by</string>
     <string name="access_level_manage">Bestuur</string>
-    <string name="notifications_clear">Vee kennisgewings uit</string>
     <string name="lightbox_position">%1$s / %2$s</string>
     <string name="format_range">%1$s – %2$s</string>
     <string name="format_day_time">%1$s · %2$s</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Vet</string>
     <string name="format_italic">Kursief</string>
     <string name="format_link">Skakel</string>
+    <string name="format_link_text">teks</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Opskrif</string>
     <string name="format_code">Kode</string>
     <string name="format_list">Kolpuntlys</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Verwyder toegangsreël vir \"%1$s\"?</string>
     <string name="color_picker_custom">Pasgemaak</string>
     <string name="color_picker_clear">Maak skoon</string>
+    <string name="color_picker_white">Wit</string>
+    <string name="color_picker_slate">Leigrys</string>
+    <string name="color_picker_red">Rooi</string>
+    <string name="color_picker_orange">Oranje</string>
+    <string name="color_picker_amber">Amber</string>
+    <string name="color_picker_green">Groen</string>
+    <string name="color_picker_teal">Blougroen</string>
+    <string name="color_picker_cyan">Siaan</string>
+    <string name="color_picker_blue">Blou</string>
+    <string name="color_picker_violet">Violet</string>
+    <string name="color_picker_pink">Pienk</string>
+    <string name="color_picker_black">Swart</string>
     <string name="common_refresh">Verfris</string>
     <string name="launcher_add_to_home">Voeg by tuisskerm</string>
     <string name="common_continue">Gaan voort</string>
@@ -342,6 +358,7 @@
     </plurals>
     <string name="drawer_unread">Ongelees</string>
     <string name="person_unknown">Onbekend</string>
+    <string name="group_unknown">Onbekende groep</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Besig om %1$s af te laai…</string>

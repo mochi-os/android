@@ -62,6 +62,7 @@ class ObjectEditsTest {
     @Before
     fun begin() {
         server = CrmServer(context)
+        server.on("-/users/search") { MockResponse().setResponseCode(403).setBody("""{"error": "Not allowed"}""") }
         server.on("p1/-/objects/o1") {
             reads?.let { held ->
                 arrived.countDown()
@@ -183,5 +184,11 @@ class ObjectEditsTest {
             failures.map { failure -> failure.message }.toSet(),
         )
         assertNull(model.uiState.value.error)
+    }
+
+    @Test
+    fun `a refused mention search reaches the field instead of reading as no one found`() {
+        val failure = runCatching { kotlinx.coroutines.runBlocking { model.searchUsers("al") } }.exceptionOrNull()
+        org.junit.Assert.assertTrue("THE POINT: the search's refusal is thrown, got $failure", failure != null)
     }
 }

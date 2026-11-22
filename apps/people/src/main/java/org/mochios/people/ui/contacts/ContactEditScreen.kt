@@ -135,7 +135,7 @@ fun ContactEditScreen(
         CreateEntityScaffold(
             title = stringResource(R.string.people_contact_new_title),
             submitLabel = stringResource(R.string.people_contact_create),
-            submitEnabled = form.valid && !uiState.isSaving && !uiState.isLoading,
+            submitEnabled = form.valid && !uiState.isLoading,
             isBusy = uiState.isSaving,
             error = uiState.error,
             onBack = onBack,

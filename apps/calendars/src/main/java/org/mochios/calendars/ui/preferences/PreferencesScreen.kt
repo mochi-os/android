@@ -217,7 +217,7 @@ internal fun PreferencesContent(
         title = stringResource(R.string.calendars_preferences),
         submitLabel = stringResource(MochiR.string.common_save),
         submitEnabled = draft != null && draft.hours.finish > draft.hours.start &&
-            draft != uiState.opened && !uiState.isBusy,
+            draft != uiState.opened,
         isBusy = uiState.isBusy,
         error = uiState.error,
         onBack = onBack,

@@ -160,4 +160,22 @@ class FormatTest {
             .formatTimeRange(afternoon, afternoon + 3_600, "UTC", "Europe/London", now = afternoon)
         assertEquals("Monday, Sep 28 · 15:04～17:04", range)
     }
+
+    /** Persian writes its own digits by default, which a `%d` clock picked up. */
+    @Test
+    fun `a duration is written as a clock in Latin digits whatever the language`() {
+        val before = Locale.getDefault()
+        Locale.setDefault(Locale.forLanguageTag("fa"))
+        try {
+            val format = format(TimeFormat.H24, Platform(Locale.ENGLISH, english))
+            assertEquals("0:00", format.formatDuration(0))
+            assertEquals("1:05", format.formatDuration(65_400))
+            assertEquals("59:59", format.formatDuration(3_599_999))
+            assertEquals("1:00:00", format.formatDuration(3_600_000))
+            assertEquals("12:03:09", format.formatDuration(43_389_000))
+            assertEquals("nothing below zero", "0:00", format.formatDuration(-5_000))
+        } finally {
+            Locale.setDefault(before)
+        }
+    }
 }

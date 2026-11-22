@@ -368,8 +368,7 @@ internal fun CalendarSettingsContent(
     CreateEntityScaffold(
         title = stringResource(MochiR.string.settings_title),
         submitLabel = stringResource(MochiR.string.common_save),
-        submitEnabled = calendar != null && uiState.changed && uiState.name.isNotBlank() &&
-            !uiState.isBusy,
+        submitEnabled = calendar != null && uiState.changed && uiState.name.isNotBlank(),
         isBusy = uiState.isBusy,
         error = uiState.error,
         onBack = onBack,

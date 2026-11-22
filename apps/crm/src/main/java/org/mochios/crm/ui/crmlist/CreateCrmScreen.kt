@@ -86,7 +86,7 @@ fun CreateCrmScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.crm_create_title),
         submitLabel = stringResource(R.string.crm_create_action),
-        submitEnabled = name.isNotBlank() && !uiState.isCreating,
+        submitEnabled = name.isNotBlank(),
         isBusy = uiState.isCreating,
         upload = upload,
         error = uiState.error,

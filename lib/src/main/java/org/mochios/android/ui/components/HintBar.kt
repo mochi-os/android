@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A strip across the top of a screen saying how to do what the user has just
@@ -32,11 +33,12 @@ fun HintBar(
     onClose: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val spacing = LocalSpacing.current
     Row(
         modifier = modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surfaceVariant)
-            .padding(start = 16.dp),
+            .padding(start = spacing.gap(16.dp)),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
@@ -45,7 +47,7 @@ fun HintBar(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier
                 .weight(1f)
-                .padding(vertical = 8.dp),
+                .padding(vertical = spacing.gap(8.dp)),
         )
         MochiIconButton(onClick = onClose) {
             Icon(Icons.Default.Close, contentDescription = stringResource(R.string.common_close))

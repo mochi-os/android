@@ -54,7 +54,7 @@ class MimeSafetyTest {
     @Test
     fun `ordinary media and documents pass through unchanged`() {
         for (type in listOf(
-            "image/png", "image/jpeg", "image/svg+xml",
+            "image/png", "image/jpeg",
             "video/mp4", "audio/mpeg",
             "text/plain", "text/csv",
             "application/pdf", "application/zip",
@@ -76,6 +76,26 @@ class MimeSafetyTest {
         assertEquals(OPAQUE_MIME, coerceMimeType("text/html"))
         assertEquals(OPAQUE_MIME, coerceMimeType("text/xml"))
         assertEquals(OPAQUE_MIME, coerceMimeType("application/xhtml+xml"))
+    }
+
+    /** The same documents as text/xml, XHTML and XSLT included. */
+    @Test
+    fun `generic xml is opaque`() {
+        assertEquals(OPAQUE_MIME, coerceMimeType("application/xml"))
+    }
+
+    /** An SVG carries script and foreignObject HTML though it sits under image/. */
+    @Test
+    fun `an svg image is opaque despite the image prefix`() {
+        assertEquals(OPAQUE_MIME, coerceMimeType("image/svg+xml"))
+        assertEquals(OPAQUE_MIME, coerceMimeType("IMAGE/SVG+XML; charset=utf-8"))
+    }
+
+    /** Any XML-based type, named or not, is rendered as XML. */
+    @Test
+    fun `every xml-suffixed type is opaque`() {
+        assertEquals(OPAQUE_MIME, coerceMimeType("application/mathml+xml"))
+        assertEquals(OPAQUE_MIME, coerceMimeType("text/vnd.example+xml"))
     }
 
     @Test

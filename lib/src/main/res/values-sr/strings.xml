@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Налог суспендован</string>
     <string name="common_back">Назад</string>
     <string name="common_close">Затвори</string>
+    <string name="common_clear_search">Очисти претрагу</string>
+    <string name="drawer_open">Отвори мени</string>
     <string name="common_cancel">Откажи</string>
     <string name="common_filter">Филтер</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Додај правило приступа</string>
     <string name="access_level_manage">Управљање</string>
     <string name="access_level_react">Реаговање</string>
-    <string name="notifications_clear">Обриши обавештења</string>
     <string name="entity_avatar_alt">Аватар за %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Провери ажурирања</string>
     <string name="about_up_to_date">Ажурирано</string>
     <string name="about_check_downloading">Верзија %1$s доступна, преузимање…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Није могуће доћи до сервера за ажурирање</string>
     <string name="about_check_download_failed">Преузимање није успело</string>
     <string name="notifications_clear_all_title">Обрисати сва обавештења?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Подебљано</string>
     <string name="format_italic">Курзив</string>
     <string name="format_link">Веза</string>
+    <string name="format_link_text">текст</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Наслов</string>
     <string name="format_code">Код</string>
     <string name="format_list">Листа са тачкама</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">Уклонити правило приступа за „%1$s“?</string>
     <string name="color_picker_custom">Прилагођено</string>
     <string name="color_picker_clear">Очисти</string>
+    <string name="color_picker_white">Бела</string>
+    <string name="color_picker_slate">Шкриљаста</string>
+    <string name="color_picker_red">Црвена</string>
+    <string name="color_picker_orange">Наранџаста</string>
+    <string name="color_picker_amber">Ћилибарна</string>
+    <string name="color_picker_green">Зелена</string>
+    <string name="color_picker_teal">Плавозелена</string>
+    <string name="color_picker_cyan">Цијан</string>
+    <string name="color_picker_blue">Плава</string>
+    <string name="color_picker_violet">Љубичаста</string>
+    <string name="color_picker_pink">Ружичаста</string>
+    <string name="color_picker_black">Црна</string>
     <string name="common_refresh">Освежи</string>
     <string name="launcher_add_to_home">Додај на почетни екран</string>
     <string name="common_continue">Настави</string>
@@ -342,6 +358,7 @@
     </plurals>
     <string name="drawer_unread">Непрочитано</string>
     <string name="person_unknown">Непознато</string>
+    <string name="group_unknown">Непозната група</string>
     <string name="format_time_seconds_short">%1$s с</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Преузима се %1$s…</string>

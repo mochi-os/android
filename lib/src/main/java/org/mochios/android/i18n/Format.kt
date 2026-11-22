@@ -328,6 +328,24 @@ class Format(
         return "$numStr ${units[i]}"
     }
 
+    /**
+     * A length of time as a player's clock reads it: "m:ss", or "h:mm:ss" from
+     * an hour on. Written in Latin digits like every other number the app
+     * shows; a `%d` format would write the locale's own digits instead.
+     */
+    fun formatDuration(milliseconds: Long): String {
+        val total = (milliseconds / 1000).coerceAtLeast(0L)
+        val hours = total / 3600
+        val minutes = (total % 3600) / 60
+        val seconds = total % 60
+        val second = seconds.toString().padStart(2, '0')
+        return if (hours > 0) {
+            "$hours:${minutes.toString().padStart(2, '0')}:$second"
+        } else {
+            "$minutes:$second"
+        }
+    }
+
 
     /**
      * The zone [formatDate] and [formatDateTime] render in. Anything bucketing

@@ -179,6 +179,10 @@ class FeedSettingsViewModel @Inject constructor(
     // Groups for access control
     private val _groups = MutableStateFlow<List<Group>>(emptyList())
     val groups: StateFlow<List<Group>> = _groups.asStateFlow()
+    private val _isLoadingGroups = MutableStateFlow(false)
+    val isLoadingGroups: StateFlow<Boolean> = _isLoadingGroups.asStateFlow()
+    private val _groupsError = MutableStateFlow<MochiError?>(null)
+    val groupsError: StateFlow<MochiError?> = _groupsError.asStateFlow()
 
     // Members tab
     private val _members = MutableStateFlow<List<Member>>(emptyList())
@@ -679,12 +683,21 @@ class FeedSettingsViewModel @Inject constructor(
     }
 
     fun loadGroups() {
+        // Loading at once, so the dialog never says there are no groups
+        // before the answer.
+        _isLoadingGroups.value = true
+        _groupsError.value = null
         viewModelScope.launch {
             try {
                 _groups.value = repository.getGroups()
                     .sortedWith(compareBy(NaturalCompare) { it.name })
-            } catch (_: Exception) {
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
                 _groups.value = emptyList()
+                _groupsError.value = e.toMochiError()
+            } finally {
+                _isLoadingGroups.value = false
             }
         }
     }

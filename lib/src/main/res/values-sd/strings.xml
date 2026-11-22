@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">اڪائونٽ معطل</string>
     <string name="common_back">واپس</string>
     <string name="common_close">بند ڪريو</string>
+    <string name="common_clear_search">ڳولا صاف ڪريو</string>
+    <string name="drawer_open">مينيو کوليو</string>
     <string name="common_cancel">منسوخ ڪريو</string>
     <string name="common_filter">فلٽر</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">رسائي جو قاعدو شامل ڪريو</string>
     <string name="access_level_manage">منظم ڪريو</string>
     <string name="access_level_react">ردِعمل</string>
-    <string name="notifications_clear">اطلاعون صاف ڪريو</string>
     <string name="entity_avatar_alt">%1$s لاءِ اوتار</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">تازه ڪاريون ڏسو</string>
     <string name="about_up_to_date">تازو آھي</string>
     <string name="about_check_downloading">ورزن %1$s دستياب آهي، ڊائونلوڊ ٿي رهيو آهي…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">اپڊيٽ سرور تائين پھچي نه سگھيو</string>
     <string name="about_check_download_failed">ڊائون لوڊ ناڪام ٿيو</string>
     <string name="notifications_clear_all_title">سڀ اطلاع صاف ڪجن؟</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ٿلهو</string>
     <string name="format_italic">ترڇو</string>
     <string name="format_link">لنڪ</string>
+    <string name="format_link_text">ٽيڪسٽ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">عنوان</string>
     <string name="format_code">ڪوڊ</string>
     <string name="format_list">نقطي واري فهرست</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" لاءِ رسائي جو قاعدو هٽايو؟</string>
     <string name="color_picker_custom">ڪسٽم</string>
     <string name="color_picker_clear">صاف ڪريو</string>
+    <string name="color_picker_white">اڇو</string>
+    <string name="color_picker_slate">سليٽي</string>
+    <string name="color_picker_red">ڳاڙهو</string>
+    <string name="color_picker_orange">نارنگي</string>
+    <string name="color_picker_amber">ڪهربائي</string>
+    <string name="color_picker_green">سائو</string>
+    <string name="color_picker_teal">نيرو سائو</string>
+    <string name="color_picker_cyan">آسماني</string>
+    <string name="color_picker_blue">نيرو</string>
+    <string name="color_picker_violet">واڱڻائي</string>
+    <string name="color_picker_pink">گلابي</string>
+    <string name="color_picker_black">ڪارو</string>
     <string name="common_refresh">ريفريش</string>
     <string name="launcher_add_to_home">هوم اسڪرين تي شامل ڪريو</string>
     <string name="common_continue">جاري رکو</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">اڻ پڙهيل</string>
     <string name="person_unknown">اڻڄاتل</string>
+    <string name="group_unknown">اڻڄاتل گروپ</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ڊائونلوڊ ٿي رهيو آهي…</string>

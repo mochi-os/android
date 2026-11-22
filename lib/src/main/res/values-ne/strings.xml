@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">खाता निलम्बित गरियो</string>
     <string name="common_back">पछाडि</string>
     <string name="common_close">बन्द गर्नुहोस्</string>
+    <string name="common_clear_search">खोजी खाली गर्नुहोस्</string>
+    <string name="drawer_open">मेनु खोल्नुहोस्</string>
     <string name="common_cancel">रद्द गर्नुहोस्</string>
     <string name="common_filter">फिल्टर</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">पहुँच नियम थप्नुहोस्</string>
     <string name="access_level_manage">व्यवस्थापन गर्नुहोस्</string>
     <string name="access_level_react">प्रतिक्रिया दिनुहोस्</string>
-    <string name="notifications_clear">सूचनाहरू हटाउनुहोस्</string>
     <string name="entity_avatar_alt">%1$s को अवतार</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">अपडेटहरू जाँच गर्नुहोस्</string>
     <string name="about_up_to_date">अद्यावधिक छ</string>
     <string name="about_check_downloading">संस्करण %1$s उपलब्ध छ, डाउनलोड हुँदैछ…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">अपडेट सर्भरमा पुग्न सकिएन</string>
     <string name="about_check_download_failed">डाउनलोड असफल भयो</string>
     <string name="notifications_clear_all_title">सबै सूचनाहरू हटाउने हो?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">मोटो</string>
     <string name="format_italic">छड्के</string>
     <string name="format_link">लिङ्क</string>
+    <string name="format_link_text">पाठ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">शीर्षक</string>
     <string name="format_code">कोड</string>
     <string name="format_list">बुलेट सूची</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" का लागि पहुँच नियम हटाउने?</string>
     <string name="color_picker_custom">अनुकूलन</string>
     <string name="color_picker_clear">खाली गर्नुहोस्</string>
+    <string name="color_picker_white">सेतो</string>
+    <string name="color_picker_slate">स्लेट खैरो</string>
+    <string name="color_picker_red">रातो</string>
+    <string name="color_picker_orange">सुन्तला</string>
+    <string name="color_picker_amber">एम्बर</string>
+    <string name="color_picker_green">हरियो</string>
+    <string name="color_picker_teal">निलो-हरियो</string>
+    <string name="color_picker_cyan">सायन</string>
+    <string name="color_picker_blue">निलो</string>
+    <string name="color_picker_violet">बैजनी</string>
+    <string name="color_picker_pink">गुलाबी</string>
+    <string name="color_picker_black">कालो</string>
     <string name="common_refresh">रिफ्रेस गर्नुहोस्</string>
     <string name="launcher_add_to_home">गृह स्क्रिनमा थप्नुहोस्</string>
     <string name="common_continue">जारी राख्नुहोस्</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">नपढिएका</string>
     <string name="person_unknown">अज्ञात</string>
+    <string name="group_unknown">अज्ञात समूह</string>
     <string name="format_time_seconds_short">%1$sसे</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s डाउनलोड हुँदैछ…</string>

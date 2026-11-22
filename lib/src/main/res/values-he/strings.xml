@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">החשבון הושעה</string>
     <string name="common_back">חזור</string>
     <string name="common_close">סגור</string>
+    <string name="common_clear_search">נקה חיפוש</string>
+    <string name="drawer_open">פתח תפריט</string>
     <string name="common_cancel">ביטול</string>
     <string name="common_filter">סינון</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -176,7 +178,6 @@
     <string name="access_add_rule_title">הוספת כלל גישה</string>
     <string name="access_level_manage">ניהול</string>
     <string name="access_level_react">תגובה</string>
-    <string name="notifications_clear">ניקוי התראות</string>
     <string name="entity_avatar_alt">תמונת פרופיל של %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -214,6 +215,7 @@
     <string name="about_check_updates">בדוק עדכונים</string>
     <string name="about_up_to_date">מעודכן</string>
     <string name="about_check_downloading">גרסה %1$s זמינה, מוריד…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">לא ניתן היה להגיע לשרת העדכונים</string>
     <string name="about_check_download_failed">ההורדה נכשלה</string>
     <string name="notifications_clear_all_title">לנקות את כל ההתראות?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">מודגש</string>
     <string name="format_italic">נטוי</string>
     <string name="format_link">קישור</string>
+    <string name="format_link_text">טקסט</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">כותרת</string>
     <string name="format_code">קוד</string>
     <string name="format_list">רשימת תבליטים</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">להסיר את כלל הגישה עבור \"%1$s\"?</string>
     <string name="color_picker_custom">מותאם אישית</string>
     <string name="color_picker_clear">נקה</string>
+    <string name="color_picker_white">לבן</string>
+    <string name="color_picker_slate">אפור צפחה</string>
+    <string name="color_picker_red">אדום</string>
+    <string name="color_picker_orange">כתום</string>
+    <string name="color_picker_amber">ענבר</string>
+    <string name="color_picker_green">ירוק</string>
+    <string name="color_picker_teal">טורקיז כהה</string>
+    <string name="color_picker_cyan">ציאן</string>
+    <string name="color_picker_blue">כחול</string>
+    <string name="color_picker_violet">סגול</string>
+    <string name="color_picker_pink">ורוד</string>
+    <string name="color_picker_black">שחור</string>
     <string name="common_refresh">רענן</string>
     <string name="launcher_add_to_home">הוספה למסך הבית</string>
     <string name="common_continue">המשך</string>
@@ -344,6 +360,7 @@
     </plurals>
     <string name="drawer_unread">לא נקראו</string>
     <string name="person_unknown">לא ידוע</string>
+    <string name="group_unknown">קבוצה לא ידועה</string>
     <string name="format_time_seconds_short">%1$s שנ\'</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">מוריד את %1$s…</string>

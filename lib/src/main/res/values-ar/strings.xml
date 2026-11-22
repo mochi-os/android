@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">تم تعليق الحساب</string>
     <string name="common_back">رجوع</string>
     <string name="common_close">إغلاق</string>
+    <string name="common_clear_search">مسح البحث</string>
+    <string name="drawer_open">فتح القائمة</string>
     <string name="common_cancel">إلغاء</string>
     <string name="common_filter">تصفية</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">إضافة قاعدة وصول</string>
     <string name="access_level_manage">إدارة</string>
     <string name="access_level_react">تفاعل</string>
-    <string name="notifications_clear">مسح الإشعارات</string>
     <string name="entity_avatar_alt">صورة رمزية لـ %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">التحقق من التحديثات</string>
     <string name="about_up_to_date">محدّث</string>
     <string name="about_check_downloading">الإصدار %1$s متاح، جارٍ التنزيل…</string>
+    <string name="about_download_percent">%1$s‎%%‎</string>
     <string name="about_check_network_error">تعذر الوصول إلى خادم التحديث</string>
     <string name="about_check_download_failed">فشل التنزيل</string>
     <string name="notifications_clear_all_title">مسح جميع الإشعارات؟</string>
@@ -302,6 +304,8 @@
     <string name="format_bold">غامق</string>
     <string name="format_italic">مائل</string>
     <string name="format_link">رابط</string>
+    <string name="format_link_text">نص</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">عنوان</string>
     <string name="format_code">تعليمات برمجية</string>
     <string name="format_list">قائمة نقطية</string>
@@ -327,6 +331,18 @@
     <string name="access_remove_message">إزالة قاعدة الوصول لـ \"%1$s\"؟</string>
     <string name="color_picker_custom">مخصص</string>
     <string name="color_picker_clear">مسح</string>
+    <string name="color_picker_white">أبيض</string>
+    <string name="color_picker_slate">رمادي أردوازي</string>
+    <string name="color_picker_red">أحمر</string>
+    <string name="color_picker_orange">برتقالي</string>
+    <string name="color_picker_amber">كهرماني</string>
+    <string name="color_picker_green">أخضر</string>
+    <string name="color_picker_teal">أزرق مخضر</string>
+    <string name="color_picker_cyan">سماوي</string>
+    <string name="color_picker_blue">أزرق</string>
+    <string name="color_picker_violet">بنفسجي</string>
+    <string name="color_picker_pink">وردي</string>
+    <string name="color_picker_black">أسود</string>
     <string name="common_refresh">تحديث</string>
     <string name="launcher_add_to_home">إضافة إلى الشاشة الرئيسية</string>
     <string name="common_continue">متابعة</string>
@@ -348,6 +364,7 @@
     </plurals>
     <string name="drawer_unread">غير المقروءة</string>
     <string name="person_unknown">غير معروف</string>
+    <string name="group_unknown">مجموعة غير معروفة</string>
     <string name="format_time_seconds_short">%1$s ث</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">جارٍ تنزيل %1$s…</string>

@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Hesap askıya alındı</string>
     <string name="common_back">Geri</string>
     <string name="common_close">Kapat</string>
+    <string name="common_clear_search">Aramayı temizle</string>
+    <string name="drawer_open">Menüyü aç</string>
     <string name="common_cancel">İptal</string>
     <string name="common_filter">Filtrele</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Erişim kuralı ekle</string>
     <string name="access_level_manage">Yönet</string>
     <string name="access_level_react">Tepki ver</string>
-    <string name="notifications_clear">Bildirimleri temizle</string>
     <string name="entity_avatar_alt">%1$s için avatar</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Güncellemeleri denetle</string>
     <string name="about_up_to_date">Güncel</string>
     <string name="about_check_downloading">%1$s sürümü mevcut, indiriliyor…</string>
+    <string name="about_download_percent">%%%1$s</string>
     <string name="about_check_network_error">Güncelleme sunucusuna ulaşılamadı</string>
     <string name="about_check_download_failed">İndirme başarısız oldu</string>
     <string name="notifications_clear_all_title">Tüm bildirimler temizlensin mi?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Kalın</string>
     <string name="format_italic">İtalik</string>
     <string name="format_link">Bağlantı</string>
+    <string name="format_link_text">metin</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Başlık</string>
     <string name="format_code">Kod</string>
     <string name="format_list">Madde işaretli liste</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" için erişim kuralı kaldırılsın mı?</string>
     <string name="color_picker_custom">Özel</string>
     <string name="color_picker_clear">Temizle</string>
+    <string name="color_picker_white">Beyaz</string>
+    <string name="color_picker_slate">Arduvaz grisi</string>
+    <string name="color_picker_red">Kırmızı</string>
+    <string name="color_picker_orange">Turuncu</string>
+    <string name="color_picker_amber">Kehribar</string>
+    <string name="color_picker_green">Yeşil</string>
+    <string name="color_picker_teal">Deniz mavisi</string>
+    <string name="color_picker_cyan">Camgöbeği</string>
+    <string name="color_picker_blue">Mavi</string>
+    <string name="color_picker_violet">Mor</string>
+    <string name="color_picker_pink">Pembe</string>
+    <string name="color_picker_black">Siyah</string>
     <string name="common_refresh">Yenile</string>
     <string name="launcher_add_to_home">Ana ekrana ekle</string>
     <string name="common_continue">Devam et</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Okunmamış</string>
     <string name="person_unknown">Bilinmiyor</string>
+    <string name="group_unknown">Bilinmeyen grup</string>
     <string name="format_time_seconds_short">%1$s sn</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s indiriliyor…</string>

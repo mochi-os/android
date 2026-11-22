@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Compte suspès</string>
     <string name="common_back">Enrere</string>
     <string name="common_close">Tanca</string>
+    <string name="common_clear_search">Esborra la cerca</string>
+    <string name="drawer_open">Obre el menú</string>
     <string name="common_cancel">Cancel·la</string>
     <string name="common_filter">Filtra</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -138,6 +140,7 @@
     <string name="about_check_updates">Comprova si hi ha actualitzacions</string>
     <string name="about_up_to_date">Al dia</string>
     <string name="about_check_downloading">Versió %1$s disponible, baixant…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">No s\'ha pogut connectar amb el servidor d\'actualitzacions</string>
     <string name="about_check_download_failed">Ha fallat la baixada</string>
     <string name="notifications_clear_all_title">Voleu esborrar totes les notificacions?</string>
@@ -162,7 +165,6 @@
     <string name="common_expand">Desplega</string>
     <string name="access_add_rule_title">Afegeix una regla d\'accés</string>
     <string name="access_level_manage">Gestiona</string>
-    <string name="notifications_clear">Esborra les notificacions</string>
     <string name="lightbox_position">%1$s / %2$s</string>
     <string name="format_range">%1$s – %2$s</string>
     <string name="format_day_time">%1$s · %2$s</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Negreta</string>
     <string name="format_italic">Cursiva</string>
     <string name="format_link">Enllaç</string>
+    <string name="format_link_text">text</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Encapçalament</string>
     <string name="format_code">Codi</string>
     <string name="format_list">Llista de pics</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Voleu eliminar la regla d\'accés per a «%1$s»?</string>
     <string name="color_picker_custom">Personalitzat</string>
     <string name="color_picker_clear">Esborra</string>
+    <string name="color_picker_white">Blanc</string>
+    <string name="color_picker_slate">Pissarra</string>
+    <string name="color_picker_red">Vermell</string>
+    <string name="color_picker_orange">Taronja</string>
+    <string name="color_picker_amber">Ambre</string>
+    <string name="color_picker_green">Verd</string>
+    <string name="color_picker_teal">Verd blavós</string>
+    <string name="color_picker_cyan">Cian</string>
+    <string name="color_picker_blue">Blau</string>
+    <string name="color_picker_violet">Violeta</string>
+    <string name="color_picker_pink">Rosa</string>
+    <string name="color_picker_black">Negre</string>
     <string name="common_refresh">Actualitza</string>
     <string name="launcher_add_to_home">Afegeix a la pantalla d\'inici</string>
     <string name="common_continue">Continua</string>
@@ -342,6 +358,7 @@
     </plurals>
     <string name="drawer_unread">No llegides</string>
     <string name="person_unknown">Desconegut</string>
+    <string name="group_unknown">Grup desconegut</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">S\'està baixant %1$s…</string>

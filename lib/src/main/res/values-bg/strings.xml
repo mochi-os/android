@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Акаунтът е спрян</string>
     <string name="common_back">Назад</string>
     <string name="common_close">Затвори</string>
+    <string name="common_clear_search">Изчисти търсенето</string>
+    <string name="drawer_open">Отвори менюто</string>
     <string name="common_cancel">Отказ</string>
     <string name="common_filter">Филтър</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">Добавяне на правило за достъп</string>
     <string name="access_level_manage">Управление</string>
     <string name="access_level_react">Реакция</string>
-    <string name="notifications_clear">Изчистване на известията</string>
     <string name="entity_avatar_alt">Аватар на %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">Проверка за актуализации</string>
     <string name="about_up_to_date">Актуална версия</string>
     <string name="about_check_downloading">Версия %1$s е налична, изтегляне…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Сървърът за актуализации е недостъпен</string>
     <string name="about_check_download_failed">Изтеглянето е неуспешно</string>
     <string name="notifications_clear_all_title">Изчистване на всички известия?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Получер</string>
     <string name="format_italic">Курсив</string>
     <string name="format_link">Връзка</string>
+    <string name="format_link_text">текст</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Заглавие</string>
     <string name="format_code">Код</string>
     <string name="format_list">Списък с точки</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Да се премахне ли правилото за достъп за „%1$s“?</string>
     <string name="color_picker_custom">Персонализирано</string>
     <string name="color_picker_clear">Изчисти</string>
+    <string name="color_picker_white">Бяло</string>
+    <string name="color_picker_slate">Шистово сиво</string>
+    <string name="color_picker_red">Червено</string>
+    <string name="color_picker_orange">Оранжево</string>
+    <string name="color_picker_amber">Кехлибарено</string>
+    <string name="color_picker_green">Зелено</string>
+    <string name="color_picker_teal">Синьозелено</string>
+    <string name="color_picker_cyan">Циан</string>
+    <string name="color_picker_blue">Синьо</string>
+    <string name="color_picker_violet">Виолетово</string>
+    <string name="color_picker_pink">Розово</string>
+    <string name="color_picker_black">Черно</string>
     <string name="common_refresh">Опресни</string>
     <string name="launcher_add_to_home">Добавяне към началния екран</string>
     <string name="common_continue">Продължи</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Непрочетени</string>
     <string name="person_unknown">Неизвестно</string>
+    <string name="group_unknown">Неизвестна група</string>
     <string name="format_time_seconds_short">%1$s сек</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Изтегляне на %1$s…</string>

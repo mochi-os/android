@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Ο λογαριασμός ανεστάλη</string>
     <string name="common_back">Πίσω</string>
     <string name="common_close">Κλείσιμο</string>
+    <string name="common_clear_search">Εκκαθάριση αναζήτησης</string>
+    <string name="drawer_open">Άνοιγμα μενού</string>
     <string name="common_cancel">Ακύρωση</string>
     <string name="common_filter">Φίλτρο</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -126,7 +128,6 @@
     <string name="common_retry">Δοκιμή ξανά</string>
     <string name="access_add_rule_title">Προσθήκη κανόνα πρόσβασης</string>
     <string name="access_level_manage">Διαχείριση</string>
-    <string name="notifications_clear">Εκκαθάριση ειδοποιήσεων</string>
     <string name="game_chat_load_more">Φόρτωση παλαιότερων μηνυμάτων</string>
     <string name="game_chat_move_played">Ο/Η %1$s έπαιξε %2$s</string>
 
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Έλεγχος για ενημερώσεις</string>
     <string name="about_up_to_date">Ενημερωμένο</string>
     <string name="about_check_downloading">Η έκδοση %1$s είναι διαθέσιμη, γίνεται λήψη…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Δεν ήταν δυνατή η σύνδεση με τον διακομιστή ενημερώσεων</string>
     <string name="about_check_download_failed">Η λήψη απέτυχε</string>
     <string name="notifications_clear_all_title">Διαγραφή όλων των ειδοποιήσεων;</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Έντονα</string>
     <string name="format_italic">Πλάγια</string>
     <string name="format_link">Σύνδεσμος</string>
+    <string name="format_link_text">κείμενο</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Επικεφαλίδα</string>
     <string name="format_code">Κώδικας</string>
     <string name="format_list">Λίστα κουκκίδων</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Κατάργηση κανόνα πρόσβασης για «%1$s»;</string>
     <string name="color_picker_custom">Προσαρμοσμένο</string>
     <string name="color_picker_clear">Εκκαθάριση</string>
+    <string name="color_picker_white">Λευκό</string>
+    <string name="color_picker_slate">Γκρι σχιστόλιθου</string>
+    <string name="color_picker_red">Κόκκινο</string>
+    <string name="color_picker_orange">Πορτοκαλί</string>
+    <string name="color_picker_amber">Κεχριμπαρένιο</string>
+    <string name="color_picker_green">Πράσινο</string>
+    <string name="color_picker_teal">Γαλαζοπράσινο</string>
+    <string name="color_picker_cyan">Κυανό</string>
+    <string name="color_picker_blue">Μπλε</string>
+    <string name="color_picker_violet">Βιολετί</string>
+    <string name="color_picker_pink">Ροζ</string>
+    <string name="color_picker_black">Μαύρο</string>
     <string name="common_refresh">Ανανέωση</string>
     <string name="launcher_add_to_home">Προσθήκη στην αρχική οθόνη</string>
     <string name="common_continue">Συνέχεια</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Μη αναγνωσμένες</string>
     <string name="person_unknown">Άγνωστο</string>
+    <string name="group_unknown">Άγνωστη ομάδα</string>
     <string name="format_time_seconds_short">%1$sδ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Λήψη %1$s…</string>

@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Akaunti imesimamishwa</string>
     <string name="common_back">Rudi</string>
     <string name="common_close">Funga</string>
+    <string name="common_clear_search">Futa utafutaji</string>
+    <string name="drawer_open">Fungua menyu</string>
     <string name="common_cancel">Ghairi</string>
     <string name="common_filter">Chuja</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Ongeza sheria ya ufikiaji</string>
     <string name="access_level_manage">Simamia</string>
     <string name="access_level_react">Jibu</string>
-    <string name="notifications_clear">Futa arifa</string>
     <string name="entity_avatar_alt">Picha ya wasifu ya %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Angalia masasisho</string>
     <string name="about_up_to_date">Imesasishwa</string>
     <string name="about_check_downloading">Toleo %1$s linapatikana, inapakua…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Haikuweza kufikia seva ya masasisho</string>
     <string name="about_check_download_failed">Upakuaji umeshindwa</string>
     <string name="notifications_clear_all_title">Futa arifa zote?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Herufi nzito</string>
     <string name="format_italic">Italiki</string>
     <string name="format_link">Kiungo</string>
+    <string name="format_link_text">maandishi</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Kichwa</string>
     <string name="format_code">Msimbo</string>
     <string name="format_list">Orodha ya vitone</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Ondoa sheria ya ufikiaji ya \"%1$s\"?</string>
     <string name="color_picker_custom">Maalum</string>
     <string name="color_picker_clear">Futa</string>
+    <string name="color_picker_white">Nyeupe</string>
+    <string name="color_picker_slate">Kijivu-bluu</string>
+    <string name="color_picker_red">Nyekundu</string>
+    <string name="color_picker_orange">Rangi ya chungwa</string>
+    <string name="color_picker_amber">Kaharabu</string>
+    <string name="color_picker_green">Kijani</string>
+    <string name="color_picker_teal">Kijani-bluu</string>
+    <string name="color_picker_cyan">Siani</string>
+    <string name="color_picker_blue">Bluu</string>
+    <string name="color_picker_violet">Zambarau</string>
+    <string name="color_picker_pink">Waridi</string>
+    <string name="color_picker_black">Nyeusi</string>
     <string name="common_refresh">Onyesha upya</string>
     <string name="launcher_add_to_home">Ongeza kwenye skrini ya nyumbani</string>
     <string name="common_continue">Endelea</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Ambazo hazijasomwa</string>
     <string name="person_unknown">Haijulikani</string>
+    <string name="group_unknown">Kikundi kisichojulikana</string>
     <string name="format_time_seconds_short">%1$ssek</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Inapakua %1$s…</string>

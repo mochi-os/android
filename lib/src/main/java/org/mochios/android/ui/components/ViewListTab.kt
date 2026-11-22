@@ -27,10 +27,6 @@ import androidx.compose.material.icons.filled.Dashboard
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.DragHandle
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuAnchorType
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -41,10 +37,13 @@ import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.listSaver
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -65,6 +64,7 @@ import org.mochios.android.ui.components.dnd.isTarget
 import org.mochios.android.ui.components.dnd.rememberDragState
 import org.mochios.android.ui.components.dnd.reorderActions
 import org.mochios.android.ui.components.dnd.reorderedAgainst
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A saved board or list view, as the design screens list and edit one.
@@ -231,6 +231,7 @@ fun ViewListTab(
     val allFields = remember(fields) {
         fields.values.flatten().distinctBy { field -> field.id }
     }
+    val spacing = LocalSpacing.current
 
     Scaffold(
         floatingActionButton = {
@@ -244,7 +245,7 @@ fun ViewListTab(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(padding)
-                    .padding(32.dp),
+                    .padding(spacing.gap(32.dp)),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.Center
             ) {
@@ -253,7 +254,7 @@ fun ViewListTab(
                     style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
                 Text(
                     text = labels.emptySubtitle,
                     style = MaterialTheme.typography.bodySmall,
@@ -273,7 +274,7 @@ fun ViewListTab(
                     item(key = "preview") {
                         preview(
                             topView,
-                            Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+                            Modifier.padding(horizontal = spacing.gap(16.dp), vertical = spacing.gap(12.dp))
                         )
                     }
                 }
@@ -323,6 +324,7 @@ private fun ViewRow(
     onReorder: (List<String>) -> Unit
 ) {
     val insertionColour = MaterialTheme.colorScheme.primary
+    val spacing = LocalSpacing.current
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -356,7 +358,7 @@ private fun ViewRow(
                 )
             }
             .clickable(onClick = onEdit)
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+            .padding(horizontal = spacing.gap(16.dp), vertical = spacing.gap(12.dp)),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
@@ -367,7 +369,7 @@ private fun ViewRow(
                 .size(20.dp)
                 .draggableItem(state = dragState, itemId = view.id)
         )
-        Spacer(modifier = Modifier.width(8.dp))
+        Spacer(modifier = Modifier.width(spacing.gap(8.dp)))
         Icon(
             imageVector = if (view.viewtype == "board") Icons.Default.Dashboard
             else Icons.AutoMirrored.Filled.FormatListBulleted,
@@ -375,7 +377,7 @@ private fun ViewRow(
             tint = MaterialTheme.colorScheme.primary,
             modifier = Modifier.size(24.dp)
         )
-        Spacer(modifier = Modifier.width(12.dp))
+        Spacer(modifier = Modifier.width(spacing.gap(12.dp)))
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = view.name,
@@ -427,7 +429,14 @@ private fun ViewRow(
  * @param initialView View being edited, or null for a new view.
  */
 @Stable
-class ViewFormState(private val initialView: ViewListItem?) {
+class ViewFormState(initialView: ViewListItem?) {
+
+    /** The saved view the form edits, the preview's base; null for a new view. */
+    private var initialView by mutableStateOf(initialView)
+
+    /** Whether the form has been filled from a saved view. */
+    var isSeeded by mutableStateOf(initialView != null)
+        private set
 
     /** Name typed into the form. */
     var name by mutableStateOf(initialView?.name ?: "")
@@ -473,6 +482,28 @@ class ViewFormState(private val initialView: ViewListItem?) {
         border = border.ifBlank { "" }
     )
 
+    /**
+     * Takes [view] as the saved view the form edits, and fills the form from
+     * it the first time only, so a later reload of that view does not
+     * overwrite what the user has typed since.
+     */
+    fun seed(view: ViewListItem) {
+        initialView = view
+        if (isSeeded) {
+            return
+        }
+        name = view.name
+        viewtype = view.viewtype
+        columns = view.columns
+        rows = view.rows
+        sort = view.sort
+        direction = view.direction
+        border = view.border
+        filter = view.filter
+        classes = view.classes.toSet()
+        isSeeded = true
+    }
+
     /** The view as it would look saved, for the live preview. */
     fun toPreview() = ViewListItem(
         id = initialView?.id ?: "preview",
@@ -488,17 +519,63 @@ class ViewFormState(private val initialView: ViewListItem?) {
         rank = initialView?.rank ?: 0,
         border = border
     )
+
+    companion object {
+
+        /**
+         * Keeps the typed values across configuration changes. The saved view
+         * is not kept: the screen hands it back through [seed].
+         */
+        val Saver = listSaver<ViewFormState, Any>(
+            save = { state ->
+                listOf(
+                    state.name,
+                    state.viewtype,
+                    state.columns,
+                    state.rows,
+                    state.sort,
+                    state.direction,
+                    state.border,
+                    state.filter,
+                    ArrayList(state.classes),
+                    state.isSeeded,
+                )
+            },
+            restore = { values ->
+                ViewFormState(null).apply {
+                    name = values[0] as String
+                    viewtype = values[1] as String
+                    columns = values[2] as String
+                    rows = values[3] as String
+                    sort = values[4] as String
+                    direction = values[5] as String
+                    border = values[6] as String
+                    filter = values[7] as String
+                    @Suppress("UNCHECKED_CAST")
+                    classes = (values[8] as List<String>).toSet()
+                    isSeeded = values[9] as Boolean
+                }
+            }
+        )
+    }
 }
 
 /**
- * Remembers a [ViewFormState] for [initialView], reseeded when the view changes.
+ * Remembers a [ViewFormState] that survives configuration changes, filled from
+ * [initialView] once it is known and not again when it reloads.
  *
- * @param initialView View being edited, or null for a new view.
+ * @param initialView View being edited, or null for a new view (or one not
+ *   loaded yet).
  * @return The remembered form state.
  */
 @Composable
-fun rememberViewFormState(initialView: ViewListItem? = null): ViewFormState =
-    remember(initialView) { ViewFormState(initialView) }
+fun rememberViewFormState(initialView: ViewListItem? = null): ViewFormState {
+    val state = rememberSaveable(saver = ViewFormState.Saver) { ViewFormState(initialView) }
+    LaunchedEffect(state, initialView) {
+        if (initialView != null) state.seed(initialView)
+    }
+    return state
+}
 
 /**
  * The fields of a view: name, type, board grouping, filter, sort and class
@@ -535,11 +612,12 @@ fun ViewForm(
     var rowsExpanded by remember { mutableStateOf(false) }
     var sortExpanded by remember { mutableStateOf(false) }
     var borderExpanded by remember { mutableStateOf(false) }
+    val spacing = LocalSpacing.current
 
     Column(modifier = modifier) {
         if (preview != null) {
             preview(state.toPreview(), Modifier)
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(12.dp)))
         }
         MochiTextField(
             value = state.name,
@@ -549,10 +627,10 @@ fun ViewForm(
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(12.dp)))
 
         Text(labels.typeLabel, style = MaterialTheme.typography.labelMedium)
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
         SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
             SegmentedButton(
                 selected = state.viewtype == "board",
@@ -584,7 +662,7 @@ fun ViewForm(
             }
         }
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(12.dp)))
 
         if (state.viewtype == "board") {
             FieldDropdown(
@@ -596,7 +674,7 @@ fun ViewForm(
                 onExpandedChange = { expanded -> columnsExpanded = expanded },
                 onSelect = { selected -> state.columns = selected }
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
 
             FieldDropdown(
                 label = labels.rowsField,
@@ -608,7 +686,7 @@ fun ViewForm(
                 onSelect = { selected -> state.rows = selected },
                 allowNone = true
             )
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
 
             FieldDropdown(
                 label = labels.borderField,
@@ -622,7 +700,7 @@ fun ViewForm(
             )
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
 
         MochiTextField(
             value = state.filter,
@@ -632,7 +710,7 @@ fun ViewForm(
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
 
         FieldDropdown(
             label = labels.sortBy,
@@ -648,10 +726,10 @@ fun ViewForm(
             extraOptions = sortOptions
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
 
         Text(labels.direction, style = MaterialTheme.typography.labelMedium)
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
         SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
             SegmentedButton(
                 selected = state.direction == "asc",
@@ -670,12 +748,12 @@ fun ViewForm(
         }
 
         if (classes.size > 1) {
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(12.dp)))
             Text(labels.filterClasses, style = MaterialTheme.typography.labelMedium)
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
             FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(6.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(6.dp)),
+                verticalArrangement = Arrangement.spacedBy(spacing.gap(4.dp))
             ) {
                 classes.forEach { cls ->
                     FilterChip(
@@ -695,7 +773,6 @@ fun ViewForm(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun FieldDropdown(
     label: String,
@@ -708,55 +785,45 @@ private fun FieldDropdown(
     allowNone: Boolean = false,
     extraOptions: List<Pair<String, String>> = emptyList()
 ) {
+    // A field this picker does not offer (deleted since, or no longer of the
+    // type it takes) reads as none, never as its id.
     val selectedName = fields.find { field -> field.id == selectedId }?.name
         ?: extraOptions.find { option -> option.first == selectedId }?.second
-        ?: if (selectedId.isBlank() && allowNone) noneLabel else selectedId
+        ?: if (selectedId.isBlank() && !allowNone) "" else noneLabel
 
-    ExposedDropdownMenuBox(
+    MochiDropdownField(
+        value = selectedName,
         expanded = expanded,
-        onExpandedChange = onExpandedChange
+        onExpandedChange = onExpandedChange,
+        label = label,
+        modifier = Modifier.fillMaxWidth(),
     ) {
-        MochiTextField(
-            value = selectedName,
-            onValueChange = {},
-            readOnly = true,
-            label = { Text(label) },
-            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-            modifier = Modifier
-                .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                .fillMaxWidth()
-        )
-        ExposedDropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { onExpandedChange(false) }
-        ) {
-            if (allowNone) {
-                MochiDropdownMenuItem(
-                    text = { Text(noneLabel) },
-                    onClick = {
-                        onSelect("")
-                        onExpandedChange(false)
-                    },
-                )
-            }
-            extraOptions.forEach { (value, displayLabel) ->
-                MochiDropdownMenuItem(
-                    text = { Text(displayLabel) },
-                    onClick = {
-                        onSelect(value)
-                        onExpandedChange(false)
-                    },
-                )
-            }
-            fields.forEach { field ->
-                MochiDropdownMenuItem(
-                    text = { Text(field.name) },
-                    onClick = {
-                        onSelect(field.id)
-                        onExpandedChange(false)
-                    },
-                )
-            }
+        if (allowNone) {
+            MochiDropdownMenuItem(
+                text = { Text(noneLabel) },
+                onClick = {
+                    onSelect("")
+                    onExpandedChange(false)
+                },
+            )
+        }
+        extraOptions.forEach { (value, displayLabel) ->
+            MochiDropdownMenuItem(
+                text = { Text(displayLabel) },
+                onClick = {
+                    onSelect(value)
+                    onExpandedChange(false)
+                },
+            )
+        }
+        fields.forEach { field ->
+            MochiDropdownMenuItem(
+                text = { Text(field.name) },
+                onClick = {
+                    onSelect(field.id)
+                    onExpandedChange(false)
+                },
+            )
         }
     }
 }

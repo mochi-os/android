@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">खाता निलंबित कइल गइल</string>
     <string name="common_back">वापस</string>
     <string name="common_close">बंद करीं</string>
+    <string name="common_clear_search">खोज साफ करीं</string>
+    <string name="drawer_open">मेनू खोलीं</string>
     <string name="common_cancel">रद्द करीं</string>
     <string name="common_filter">फिल्टर</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">पहुँच नियम जोड़ीं</string>
     <string name="access_level_manage">प्रबंधन</string>
     <string name="access_level_react">प्रतिक्रिया</string>
-    <string name="notifications_clear">सूचना साफ करीं</string>
     <string name="entity_avatar_alt">%1$s खातिर अवतार</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">अपडेट खोजीं</string>
     <string name="about_up_to_date">अद्यतन बा</string>
     <string name="about_check_downloading">वर्जन %1$s उपलब्ध बा, डाउनलोड हो रहल बा…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">अपडेट सर्वर ले नइखे पहुँचल जा सकत</string>
     <string name="about_check_download_failed">डाउनलोड असफल भइल</string>
     <string name="notifications_clear_all_title">सब सूचना मिटाईं?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">बोल्ड</string>
     <string name="format_italic">तिरछा</string>
     <string name="format_link">लिंक</string>
+    <string name="format_link_text">टेक्स्ट</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">शीर्षक</string>
     <string name="format_code">कोड</string>
     <string name="format_list">बुलेट सूची</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" खातिर पहुँच नियम हटावल जाव?</string>
     <string name="color_picker_custom">अनुकूलित</string>
     <string name="color_picker_clear">साफ करीं</string>
+    <string name="color_picker_white">सफेद</string>
+    <string name="color_picker_slate">स्लेटी</string>
+    <string name="color_picker_red">लाल</string>
+    <string name="color_picker_orange">नारंगी</string>
+    <string name="color_picker_amber">अंबर</string>
+    <string name="color_picker_green">हरियर</string>
+    <string name="color_picker_teal">हरियर-नीला</string>
+    <string name="color_picker_cyan">आसमानी</string>
+    <string name="color_picker_blue">नीला</string>
+    <string name="color_picker_violet">बैंगनी</string>
+    <string name="color_picker_pink">गुलाबी</string>
+    <string name="color_picker_black">करिया</string>
     <string name="common_refresh">रिफ्रेश करीं</string>
     <string name="launcher_add_to_home">होम स्क्रीन पर जोड़ीं</string>
     <string name="common_continue">जारी रखीं</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">अनपढ़ल</string>
     <string name="person_unknown">अनजान</string>
+    <string name="group_unknown">अनजान समूह</string>
     <string name="format_time_seconds_short">%1$sसे</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s डाउनलोड हो रहल बा…</string>

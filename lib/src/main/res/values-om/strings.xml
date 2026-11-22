@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Akkaawuntiin yeroof dhaabbate</string>
     <string name="common_back">Duuba</string>
     <string name="common_close">Cufi</string>
+    <string name="common_clear_search">Barbaadii cilliisi</string>
+    <string name="drawer_open">Menyuu bani</string>
     <string name="common_cancel">Haquu</string>
     <string name="common_filter">Filannoo</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Seera seensaa dabali</string>
     <string name="access_level_manage">Bulchi</string>
     <string name="access_level_react">Deebii miiraa kenni</string>
-    <string name="notifications_clear">Beeksisa qulqulleessi</string>
     <string name="entity_avatar_alt">Awwaataara %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Haaromsa sakatta\'i</string>
     <string name="about_up_to_date">Haaromfameera</string>
     <string name="about_check_downloading">Versiyiin %1$s ni jira, buufamaa jira…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Sarvarii haaromsaa bira gahuu hin dandeenye</string>
     <string name="about_check_download_failed">Buufachuun hin milkoofne</string>
     <string name="notifications_clear_all_title">Beeksisawwan hunda haquu?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Furdaa</string>
     <string name="format_italic">Jallataa</string>
     <string name="format_link">Geessituu</string>
+    <string name="format_link_text">barreeffama</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Mata duree</string>
     <string name="format_code">Koodii</string>
     <string name="format_list">Tarree qabxii</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Seera argannoo \"%1$s\" haquu?</string>
     <string name="color_picker_custom">Mataa keetiin</string>
     <string name="color_picker_clear">Cilliisi</string>
+    <string name="color_picker_white">Adii</string>
+    <string name="color_picker_slate">Daalacha</string>
+    <string name="color_picker_red">Diimaa</string>
+    <string name="color_picker_orange">Burtukaanii</string>
+    <string name="color_picker_amber">Ambarii</string>
+    <string name="color_picker_green">Magariisa</string>
+    <string name="color_picker_teal">Magariisa cuquliisaa</string>
+    <string name="color_picker_cyan">Cuquliisa ifaa</string>
+    <string name="color_picker_blue">Cuquliisa</string>
+    <string name="color_picker_violet">Diimaa cuquliisaa</string>
+    <string name="color_picker_pink">Diimaa ifaa</string>
+    <string name="color_picker_black">Gurraacha</string>
     <string name="common_refresh">Haaromsi</string>
     <string name="launcher_add_to_home">Iskrii manaatti dabali</string>
     <string name="common_continue">Itti fufi</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Hin dubbifamne</string>
     <string name="person_unknown">Hin beekamu</string>
+    <string name="group_unknown">Garee hin beekamne</string>
     <string name="format_time_seconds_short">%1$s sek</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s buufamaa jira…</string>

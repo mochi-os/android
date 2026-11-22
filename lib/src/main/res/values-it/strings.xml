@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Account sospeso</string>
     <string name="common_back">Indietro</string>
     <string name="common_close">Chiudi</string>
+    <string name="common_clear_search">Cancella ricerca</string>
+    <string name="drawer_open">Apri menu</string>
     <string name="common_cancel">Annulla</string>
     <string name="common_filter">Filtro</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Aggiungi regola di accesso</string>
     <string name="access_level_manage">Gestisci</string>
     <string name="access_level_react">Reagisci</string>
-    <string name="notifications_clear">Cancella notifiche</string>
     <string name="entity_avatar_alt">Avatar di %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Verifica aggiornamenti</string>
     <string name="about_up_to_date">Aggiornato</string>
     <string name="about_check_downloading">Versione %1$s disponibile, download in corso…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Impossibile raggiungere il server degli aggiornamenti</string>
     <string name="about_check_download_failed">Download non riuscito</string>
     <string name="notifications_clear_all_title">Cancellare tutte le notifiche?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Grassetto</string>
     <string name="format_italic">Corsivo</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">testo</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Titolo</string>
     <string name="format_code">Codice</string>
     <string name="format_list">Elenco puntato</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">Rimuovere la regola di accesso per «%1$s»?</string>
     <string name="color_picker_custom">Personalizzato</string>
     <string name="color_picker_clear">Cancella</string>
+    <string name="color_picker_white">Bianco</string>
+    <string name="color_picker_slate">Ardesia</string>
+    <string name="color_picker_red">Rosso</string>
+    <string name="color_picker_orange">Arancione</string>
+    <string name="color_picker_amber">Ambra</string>
+    <string name="color_picker_green">Verde</string>
+    <string name="color_picker_teal">Verde acqua</string>
+    <string name="color_picker_cyan">Ciano</string>
+    <string name="color_picker_blue">Blu</string>
+    <string name="color_picker_violet">Viola</string>
+    <string name="color_picker_pink">Rosa</string>
+    <string name="color_picker_black">Nero</string>
     <string name="common_refresh">Aggiorna</string>
     <string name="launcher_add_to_home">Aggiungi alla schermata Home</string>
     <string name="common_continue">Continua</string>
@@ -341,6 +357,7 @@
     </plurals>
     <string name="drawer_unread">Da leggere</string>
     <string name="person_unknown">Sconosciuto</string>
+    <string name="group_unknown">Gruppo sconosciuto</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Download di %1$s…</string>

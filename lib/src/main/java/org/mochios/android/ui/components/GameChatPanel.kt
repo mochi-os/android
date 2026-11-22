@@ -50,6 +50,8 @@ import java.util.TimeZone
 import org.mochios.android.R
 import org.mochios.android.api.MochiError
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 
 /**
  * A single chat message in a game-scoped chat panel. [type] is "message",
@@ -148,13 +150,13 @@ fun GameChatPanel(
     LazyColumn(
         state = listState,
         modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(2.dp),
+        contentPadding = spaced(PaddingValues(horizontal = 12.dp, vertical = 8.dp)),
+        verticalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(2.dp)),
     ) {
         if (hasMore) {
             item(key = "__load-more") {
                 Box(
-                    modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp),
+                    modifier = Modifier.fillMaxWidth().padding(vertical = LocalSpacing.current.gap(6.dp)),
                     contentAlignment = Alignment.Center,
                 ) {
                     if (isLoadingMore) {
@@ -306,7 +308,7 @@ internal fun groupMessagesByDay(messages: List<GameChatMessage>, zone: TimeZone)
 private fun DateSeparator(epochSeconds: Long) {
     val format = LocalFormat.current
     Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp),
+        modifier = Modifier.fillMaxWidth().padding(vertical = LocalSpacing.current.gap(6.dp)),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -336,7 +338,7 @@ private fun SystemMessageRow(message: GameChatMessage) {
         else -> message.body
     }
     Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 2.dp),
+        modifier = Modifier.fillMaxWidth().padding(vertical = LocalSpacing.current.gap(2.dp)),
         horizontalArrangement = Arrangement.Center,
     ) {
         Text(
@@ -360,7 +362,7 @@ private fun DefaultMoveRow(message: GameChatMessage, isSent: Boolean) {
         stringResource(R.string.game_chat_move_played, message.name, message.body)
     }
     Row(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 1.dp),
+        modifier = Modifier.fillMaxWidth().padding(vertical = LocalSpacing.current.gap(1.dp)),
         horizontalArrangement = Arrangement.Center,
     ) {
         Text(
@@ -375,8 +377,9 @@ private fun DefaultMoveRow(message: GameChatMessage, isSent: Boolean) {
 @Composable
 private fun ChatBubble(message: GameChatMessage, isSent: Boolean) {
     val format = LocalFormat.current
+    val spacing = LocalSpacing.current
     Column(
-        modifier = Modifier.fillMaxWidth().padding(vertical = 1.dp),
+        modifier = Modifier.fillMaxWidth().padding(vertical = spacing.gap(1.dp)),
         horizontalAlignment = if (isSent) Alignment.End else Alignment.Start,
     ) {
         Row(verticalAlignment = Alignment.Bottom) {
@@ -400,7 +403,7 @@ private fun ChatBubble(message: GameChatMessage, isSent: Boolean) {
                     .widthIn(max = 320.dp)
                     .clip(bubbleShape)
                     .background(bg)
-                    .padding(horizontal = 10.dp, vertical = 6.dp),
+                    .padding(horizontal = spacing.gap(10.dp), vertical = spacing.gap(6.dp)),
             ) {
                 if (!isSent) {
                     Text(
@@ -408,7 +411,7 @@ private fun ChatBubble(message: GameChatMessage, isSent: Boolean) {
                         style = MaterialTheme.typography.labelSmall.copy(fontSize = 11.sp),
                         color = MaterialTheme.colorScheme.primary,
                     )
-                    Spacer(Modifier.height(2.dp))
+                    Spacer(Modifier.height(spacing.gap(2.dp)))
                 }
                 Text(
                     text = message.body,
@@ -422,7 +425,7 @@ private fun ChatBubble(message: GameChatMessage, isSent: Boolean) {
                     text = format.formatDateTime(message.created),
                     style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp),
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                    modifier = Modifier.padding(top = 2.dp),
+                    modifier = Modifier.padding(top = spacing.gap(2.dp)),
                 )
             }
         }
@@ -431,8 +434,9 @@ private fun ChatBubble(message: GameChatMessage, isSent: Boolean) {
 
 @Composable
 private fun EmptyChatPanel(modifier: Modifier = Modifier) {
+    val spacing = LocalSpacing.current
     Column(
-        modifier = modifier.fillMaxSize().padding(16.dp),
+        modifier = modifier.fillMaxSize().padding(spacing.gap(16.dp)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
@@ -442,7 +446,7 @@ private fun EmptyChatPanel(modifier: Modifier = Modifier) {
             modifier = Modifier.size(32.dp),
             tint = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.4f),
         )
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(spacing.gap(8.dp)))
         Text(
             text = stringResource(R.string.game_chat_empty),
             style = MaterialTheme.typography.labelSmall,
@@ -453,9 +457,10 @@ private fun EmptyChatPanel(modifier: Modifier = Modifier) {
 
 @Composable
 private fun ChatSkeletons(modifier: Modifier = Modifier) {
+    val spacing = LocalSpacing.current
     Column(
-        modifier = modifier.fillMaxSize().padding(12.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp, alignment = Alignment.Bottom),
+        modifier = modifier.fillMaxSize().padding(spacing.gap(12.dp)),
+        verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp), alignment = Alignment.Bottom),
     ) {
         repeat(3) { i ->
             val isLeft = i % 2 == 0

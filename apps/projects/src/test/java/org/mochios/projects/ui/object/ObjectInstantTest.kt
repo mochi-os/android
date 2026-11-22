@@ -98,6 +98,8 @@ class ObjectInstantTest {
                         writes.add(path to request.body.readUtf8())
                         ok("{}")
                     }
+                    path == "/projects/-/users/search" ->
+                        MockResponse().setResponseCode(403).setBody("""{"error": "Not allowed"}""")
                     path == "/_/websocket" -> MockResponse().withWebSocketUpgrade(object : WebSocketListener() {
                         override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
                             webSocket.close(code, reason)
@@ -237,5 +239,11 @@ class ObjectInstantTest {
             "/projects/p1/-/objects/o1/requests/q1/update",
             writes.firstOrNull { it.first.endsWith("/requests/q1/update") }?.first,
         )
+    }
+
+    @Test
+    fun `a refused mention search reaches the field instead of reading as no one found`() {
+        val failure = runCatching { runBlocking { model.searchUsers("al") } }.exceptionOrNull()
+        assertTrue("THE POINT: the search's refusal is thrown, got $failure", failure != null)
     }
 }

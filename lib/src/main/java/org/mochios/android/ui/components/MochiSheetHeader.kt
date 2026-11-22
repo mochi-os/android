@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * The header every bottom sheet opens with: [title] on the left, after
@@ -53,19 +54,20 @@ fun MochiSheetHeader(
     leading: (@Composable () -> Unit)? = null,
     actions: @Composable RowScope.() -> Unit = {},
 ) {
+    val spacing = LocalSpacing.current
     Column(modifier = modifier.fillMaxWidth()) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
-                .heightIn(min = 48.dp)
-                .padding(start = 16.dp, end = 4.dp),
+                .heightIn(min = spacing.control(48.dp))
+                .padding(start = spacing.gap(16.dp), end = spacing.gap(4.dp)),
         ) {
             if (leading != null) {
                 leading()
-                Spacer(Modifier.width(12.dp))
+                Spacer(Modifier.width(spacing.gap(12.dp)))
             }
-            Column(modifier = Modifier.weight(1f).padding(end = 8.dp)) {
+            Column(modifier = Modifier.weight(1f).padding(end = spacing.gap(8.dp))) {
                 Text(
                     text = title,
                     style = MaterialTheme.typography.titleLarge,

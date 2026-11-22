@@ -139,13 +139,17 @@ private fun InitialsPlaceholder(
     }
 }
 
-private fun initialsOf(name: String): String {
+internal fun initialsOf(name: String): String {
     val trimmed = name.trim()
     if (trimmed.isEmpty()) return "?"
     val parts = trimmed.split(Regex("\\s+")).filter { it.isNotEmpty() }
+    // A word's first code point, whole: an emoji or a letter outside the
+    // Basic Multilingual Plane is two UTF-16 units, and half of one draws as
+    // a replacement glyph.
+    fun lead(word: String) = String(Character.toChars(word.codePointAt(0)))
     return when {
-        parts.size >= 2 -> "${parts[0].first()}${parts[1].first()}".uppercase()
-        else -> String(Character.toChars(parts[0].codePointAt(0))).uppercase()
+        parts.size >= 2 -> (lead(parts[0]) + lead(parts[1])).uppercase()
+        else -> lead(parts[0]).uppercase()
     }
 }
 

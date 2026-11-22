@@ -27,6 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import org.mochios.android.ui.theme.LocalEntityRadius
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Narrowest corner a dialog may round to, matching [MochiDropdownMenu]'s floor.
@@ -145,7 +146,7 @@ fun MochiAlertDialog(
                             modifier = Modifier.size(ConfirmSpinnerSize),
                             strokeWidth = ConfirmSpinnerStroke,
                         )
-                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                        Spacer(Modifier.width(LocalSpacing.current.gap(ButtonDefaults.IconSpacing)))
                     }
                     Text(confirmText)
                 }
@@ -174,7 +175,7 @@ fun MochiAlertDialog(
                 } else {
                     Column {
                         Text(it, style = titleStyle ?: LocalTextStyle.current, textAlign = titleAlign)
-                        Spacer(Modifier.height(SubtitleGap))
+                        Spacer(Modifier.height(LocalSpacing.current.gap(SubtitleGap)))
                         Text(
                             subtitle,
                             style = MaterialTheme.typography.bodyMedium,

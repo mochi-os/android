@@ -45,6 +45,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.flow.Flow
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Wording for [SavedListScaffold]. Each feature keeps its own translated
@@ -134,15 +136,16 @@ fun <T> SavedListScaffold(
                 )
             }
         } else {
+            val spacing = LocalSpacing.current
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 contentPadding = PaddingValues(
-                    top = padding.calculateTopPadding() + 8.dp,
-                    bottom = padding.calculateBottomPadding() + 24.dp,
-                    start = 12.dp,
-                    end = 12.dp,
+                    top = padding.calculateTopPadding() + spacing.gap(8.dp),
+                    bottom = padding.calculateBottomPadding() + spacing.gap(24.dp),
+                    start = spacing.gap(12.dp),
+                    end = spacing.gap(12.dp),
                 ),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
             ) {
                 items(items, key = { item -> key(item) }) { item ->
                     card(item)
@@ -178,7 +181,7 @@ fun SavedPostCard(
     content: @Composable ColumnScope.() -> Unit
 ) {
     MochiCard(modifier = Modifier.fillMaxWidth().clickable(onClick = onClick)) {
-        Column(modifier = Modifier.padding(12.dp), content = content)
+        Column(modifier = Modifier.padding(LocalSpacing.current.card(horizontal = 12.dp, vertical = 12.dp)), content = content)
     }
 }
 
@@ -199,9 +202,10 @@ fun SavedPostFooter(
     unsaveLabel: String,
     onUnsave: () -> Unit
 ) {
+    val spacing = LocalSpacing.current
     Row(
         verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.padding(top = 8.dp),
+        modifier = Modifier.padding(top = spacing.gap(8.dp)),
     ) {
         val hasTags = tagCount > 0
         val tagColor = MaterialTheme.colorScheme.onSurfaceVariant
@@ -212,14 +216,14 @@ fun SavedPostFooter(
             modifier = Modifier.size(18.dp),
         )
         if (hasTags) {
-            Spacer(modifier = Modifier.width(4.dp))
+            Spacer(modifier = Modifier.width(spacing.gap(4.dp)))
             Text(
-                text = "$tagCount",
+                text = LocalFormat.current.formatNumber(tagCount),
                 style = MaterialTheme.typography.labelMedium,
                 color = tagColor,
             )
         }
-        Spacer(modifier = Modifier.width(12.dp))
+        Spacer(modifier = Modifier.width(spacing.gap(12.dp)))
         MochiIconButton(onClick = onUnsave, modifier = Modifier.size(28.dp)) {
             Icon(
                 Icons.Filled.Bookmark,

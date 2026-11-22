@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">ระงับบัญชีแล้ว</string>
     <string name="common_back">ย้อนกลับ</string>
     <string name="common_close">ปิด</string>
+    <string name="common_clear_search">ล้างการค้นหา</string>
+    <string name="drawer_open">เปิดเมนู</string>
     <string name="common_cancel">ยกเลิก</string>
     <string name="common_filter">กรอง</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">เพิ่มกฎการเข้าถึง</string>
     <string name="access_level_manage">จัดการ</string>
     <string name="access_level_react">ตอบรีแอ็กชัน</string>
-    <string name="notifications_clear">ล้างการแจ้งเตือน</string>
     <string name="entity_avatar_alt">อวาตาร์ของ %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">ตรวจหาการอัปเดต</string>
     <string name="about_up_to_date">เป็นเวอร์ชันล่าสุดแล้ว</string>
     <string name="about_check_downloading">เวอร์ชัน %1$s พร้อมใช้งาน กำลังดาวน์โหลด…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์อัปเดตได้</string>
     <string name="about_check_download_failed">ดาวน์โหลดไม่สำเร็จ</string>
     <string name="notifications_clear_all_title">ล้างการแจ้งเตือนทั้งหมด?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ตัวหนา</string>
     <string name="format_italic">ตัวเอียง</string>
     <string name="format_link">ลิงก์</string>
+    <string name="format_link_text">ข้อความ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">หัวเรื่อง</string>
     <string name="format_code">โค้ด</string>
     <string name="format_list">รายการหัวข้อย่อย</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">นำกฎการเข้าถึงสำหรับ \"%1$s\" ออกหรือไม่</string>
     <string name="color_picker_custom">กำหนดเอง</string>
     <string name="color_picker_clear">ล้าง</string>
+    <string name="color_picker_white">ขาว</string>
+    <string name="color_picker_slate">เทาหินชนวน</string>
+    <string name="color_picker_red">แดง</string>
+    <string name="color_picker_orange">ส้ม</string>
+    <string name="color_picker_amber">อำพัน</string>
+    <string name="color_picker_green">เขียว</string>
+    <string name="color_picker_teal">เขียวอมฟ้า</string>
+    <string name="color_picker_cyan">ฟ้า</string>
+    <string name="color_picker_blue">น้ำเงิน</string>
+    <string name="color_picker_violet">ม่วง</string>
+    <string name="color_picker_pink">ชมพู</string>
+    <string name="color_picker_black">ดำ</string>
     <string name="common_refresh">รีเฟรช</string>
     <string name="launcher_add_to_home">เพิ่มไปยังหน้าจอหลัก</string>
     <string name="common_continue">ดำเนินการต่อ</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">ยังไม่ได้อ่าน</string>
     <string name="person_unknown">ไม่ทราบ</string>
+    <string name="group_unknown">กลุ่มที่ไม่รู้จัก</string>
     <string name="format_time_seconds_short">%1$s วิ.</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">กำลังดาวน์โหลด %1$s…</string>

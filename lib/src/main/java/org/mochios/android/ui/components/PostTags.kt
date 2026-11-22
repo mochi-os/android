@@ -8,6 +8,7 @@ package org.mochios.android.ui.components
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -42,6 +43,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.interestColor
+import org.mochios.android.ui.theme.spaced
 
 /**
  * A post tag as the shared tag UI needs it. [qid] is the entity behind the tag,
@@ -69,20 +74,21 @@ fun PostTagsButton(
     onAdjustInterest: ((qid: String, direction: String) -> Unit)? = null,
     // Tapping a tag's label shows only the posts carrying it, as on the web.
     onFilter: ((label: String) -> Unit)? = null,
-    horizontalPadding: Dp = 6.dp,
+    horizontalPadding: Dp = LocalSpacing.current.gap(6.dp),
     iconSize: Dp = 18.dp,
     countStyle: TextStyle = MaterialTheme.typography.labelMedium,
     tint: Color = MaterialTheme.colorScheme.onSurfaceVariant,
 ) {
     var open by remember { mutableStateOf(false) }
     var newLabel by remember { mutableStateOf("") }
+    val spacing = LocalSpacing.current
 
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = modifier
             .clip(RoundedCornerShape(8.dp))
             .clickable { open = true }
-            .padding(horizontal = horizontalPadding, vertical = 4.dp)
+            .padding(horizontal = horizontalPadding, vertical = spacing.gap(4.dp))
     ) {
         val hasTags = tags.isNotEmpty()
         Icon(
@@ -92,8 +98,8 @@ fun PostTagsButton(
             tint = tint
         )
         if (hasTags) {
-            Spacer(modifier = Modifier.width(4.dp))
-            Text(text = "${tags.size}", style = countStyle, color = tint)
+            Spacer(modifier = Modifier.width(spacing.gap(4.dp)))
+            Text(text = LocalFormat.current.formatNumber(tags.size), style = countStyle, color = tint)
         }
     }
 
@@ -152,7 +158,7 @@ fun PostTagsButton(
                 },
                 modifier = Modifier
                     .width(260.dp)
-                    .padding(horizontal = 12.dp, vertical = 4.dp),
+                    .padding(horizontal = spacing.gap(12.dp), vertical = spacing.gap(4.dp)),
             )
         }
     }
@@ -169,12 +175,13 @@ private fun TagMenuRow(
     // user-global interest model. Free-text tags render as plain labels.
     val qid = tag.qid
     val tunable = !qid.isNullOrEmpty() && onAdjustInterest != null
-    val labelColor = tag.interest?.let { interestColor(it) } ?: MaterialTheme.colorScheme.onSurface
+    val labelColor = tag.interest?.let { interestColor(it.toDouble()) } ?: MaterialTheme.colorScheme.onSurface
+    val spacing = LocalSpacing.current
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .width(260.dp)
-            .padding(start = 12.dp, end = 4.dp, top = 2.dp, bottom = 2.dp)
+            .padding(spaced(PaddingValues(start = 12.dp, end = 4.dp, top = 2.dp, bottom = 2.dp)))
     ) {
         Text(
             text = "#${tag.label}",
@@ -189,7 +196,7 @@ private fun TagMenuRow(
                         Modifier
                             .clip(RoundedCornerShape(4.dp))
                             .clickable { onFilter(tag.label) }
-                            .padding(vertical = 6.dp)
+                            .padding(vertical = spacing.gap(6.dp))
                     } else {
                         Modifier
                     }
@@ -234,14 +241,4 @@ private fun TagMenuRow(
             }
         }
     }
-}
-
-/**
- * Diverging interest scale: red (-) to grey (0) to green (+), hue carrying the
- * sign and saturation the strength. Keep in sync with web's interestColor().
- */
-private fun interestColor(interest: Float): Color {
-    val magnitude = (kotlin.math.abs(interest) / 100f).coerceIn(0f, 1f)
-    val hue = if (interest >= 0f) 145f else 4f
-    return Color.hsl(hue, 0.06f + magnitude * 0.72f, 0.50f - magnitude * 0.03f)
 }

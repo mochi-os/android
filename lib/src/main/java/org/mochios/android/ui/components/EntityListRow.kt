@@ -33,6 +33,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.theme.LocalEntityRadius
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Canonical Mochi list row for entity collections (chats, feeds, forums,
@@ -99,7 +100,7 @@ fun EntityListRow(
             colors = ListItemDefaults.colors(
                 containerColor = MaterialTheme.colorScheme.surfaceContainerLow
             ),
-            modifier = Modifier.padding(horizontal = 4.dp)
+            modifier = Modifier.padding(horizontal = LocalSpacing.current.gap(4.dp))
         )
     }
 }

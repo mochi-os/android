@@ -7,9 +7,9 @@ package org.mochios.android.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -51,11 +51,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.takeOrElse
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 import kotlin.math.roundToInt
 
 /** The web picker's twelve presets (`PRESET_COLOURS`): white and slate, a spectrum, then black. */
@@ -72,6 +76,22 @@ val COLOR_PICKER_PRESETS = listOf(
     "#a78bfa", // violet
     "#f472b6", // pink
     "#000000", // black
+)
+
+/** What a screen reader calls each of [COLOR_PICKER_PRESETS]. */
+private val COLOR_PICKER_NAMES = mapOf(
+    "#ffffff" to R.string.color_picker_white,
+    "#94a3b8" to R.string.color_picker_slate,
+    "#f87171" to R.string.color_picker_red,
+    "#fb923c" to R.string.color_picker_orange,
+    "#fbbf24" to R.string.color_picker_amber,
+    "#4ade80" to R.string.color_picker_green,
+    "#2dd4bf" to R.string.color_picker_teal,
+    "#22d3ee" to R.string.color_picker_cyan,
+    "#60a5fa" to R.string.color_picker_blue,
+    "#a78bfa" to R.string.color_picker_violet,
+    "#f472b6" to R.string.color_picker_pink,
+    "#000000" to R.string.color_picker_black,
 )
 
 // Sized for a phone: the picker sits inside dialogs and a scrolling profile
@@ -152,20 +172,25 @@ fun ColorPicker(
     val hueBrush = remember {
         Brush.horizontalGradient((0..6).map { step -> Color.hsv(step * 60f, 1f, 1f) })
     }
+    val spacing = LocalSpacing.current
 
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(16.dp)) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(spacing.gap(16.dp))) {
         // ── Preset swatches (wrap by width) ──
         val swatches: @Composable () -> Unit = {
             presets.forEach { preset ->
                 val selected = hexText.equals(preset, ignoreCase = true)
+                // A preset of the caller's own has no name, so it reads as
+                // its hex, as the hex box shows it.
+                val name = COLOR_PICKER_NAMES[preset.lowercase()]?.let { id -> stringResource(id) } ?: preset
                 // Ring + inner gap + colour fill: the border sits on the outer
                 // edge, padding opens a gap, then the fill is a smaller circle.
+                // One of the swatches is chosen, so each is a radio button.
                 Box(
                     modifier = Modifier
                         .size(PRESET_SIZE)
                         .clip(CircleShape)
-                        .clickable {
-                            val colour = parseHexColour(preset) ?: return@clickable
+                        .selectable(selected = selected, role = Role.RadioButton) {
+                            val colour = parseHexColour(preset) ?: return@selectable
                             val (h, s, v) = rgbToHsv(colour)
                             hue = h
                             sat = s
@@ -173,6 +198,7 @@ fun ColorPicker(
                             hexText = preset
                             onHexState.value(preset)
                         }
+                        .semantics { contentDescription = name }
                         .border(
                             width = 2.dp,
                             color = if (selected) MaterialTheme.colorScheme.onSurface
@@ -188,22 +214,23 @@ fun ColorPicker(
         if (collapsible) {
             // The swatches wrap among themselves, so the Custom toggle stays on
             // their first line however narrow the row, as on the web. The first
-            // line is set down to sit level with the toggle's middle.
+            // line is set down to sit level with the toggle's middle, at the
+            // height the density gives the button.
             val toggle = maxOf(
-                ButtonDefaults.MinHeight,
+                spacing.control(ButtonDefaults.MinHeight),
                 LocalMinimumInteractiveComponentSize.current.takeOrElse { 0.dp },
             )
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
                 verticalAlignment = Alignment.Top,
             ) {
                 FlowRow(
                     modifier = Modifier
                         .weight(1f, fill = false)
                         .padding(top = (toggle - PRESET_SIZE) / 2),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
+                    verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
                 ) {
                     swatches()
                 }
@@ -216,7 +243,7 @@ fun ColorPicker(
                                 .background(colour)
                                 .border(1.dp, MaterialTheme.colorScheme.outlineVariant, CircleShape),
                         )
-                        Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                        Spacer(Modifier.width(spacing.gap(ButtonDefaults.IconSpacing)))
                     }
                     Text(stringResource(R.string.color_picker_custom))
                     Icon(
@@ -229,8 +256,8 @@ fun ColorPicker(
         } else {
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
+                verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
             ) {
                 swatches()
             }
@@ -352,7 +379,7 @@ fun ColorPicker(
             // ── Preview + hex + whatever the caller adds ──
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(12.dp)),
             ) {
                 val previewColour = parseHexColour(hexText.trim())
                 Box(

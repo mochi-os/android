@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Mba\'ete oñembopytu\'u</string>
     <string name="common_back">Ejevy</string>
     <string name="common_close">Mboty</string>
+    <string name="common_clear_search">Embopotĩ jeheka</string>
+    <string name="drawer_open">Eipe\'a menú</string>
     <string name="common_cancel">Heja</string>
     <string name="common_filter">Mbogua</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -178,7 +180,6 @@
     <string name="access_add_rule_title">Embojuaju jeike léi</string>
     <string name="access_level_manage">Sãmbyhy</string>
     <string name="access_level_react">Ereacciona</string>
-    <string name="notifications_clear">Embogue momarandukuéra</string>
     <string name="entity_avatar_alt">Ta\'anga %1$s peguarã</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Eheka ñembohekopyahu</string>
     <string name="about_up_to_date">Ipyahúma</string>
     <string name="about_check_downloading">Versión %1$s oĩ, oñemboguejy…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Ndaikatúi og̃uahẽ ñembohekopyahu mohendahápe</string>
     <string name="about_check_download_failed">Ndaikatúi oñemboguejy</string>
     <string name="notifications_clear_all_title">¿Embogue opa momarandu?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Negrita</string>
     <string name="format_italic">Cursiva</string>
     <string name="format_link">Juajuha</string>
+    <string name="format_link_text">jehaipyre</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Myakãha</string>
     <string name="format_code">Código</string>
     <string name="format_list">Kyta tysỹi</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">¿Embogue jeike léi \"%1$s\" peg̃uarã?</string>
     <string name="color_picker_custom">Ñemomba\'e</string>
     <string name="color_picker_clear">Embopotĩ</string>
+    <string name="color_picker_white">Morotĩ</string>
+    <string name="color_picker_slate">Hũngy</string>
+    <string name="color_picker_red">Pytã</string>
+    <string name="color_picker_orange">Narã</string>
+    <string name="color_picker_amber">Sa\'yju pytãngy</string>
+    <string name="color_picker_green">Hovyũ</string>
+    <string name="color_picker_teal">Hovy hovyũ</string>
+    <string name="color_picker_cyan">Hovy hesakã</string>
+    <string name="color_picker_blue">Hovy</string>
+    <string name="color_picker_violet">Hovy pytã</string>
+    <string name="color_picker_pink">Pytãngy</string>
+    <string name="color_picker_black">Hũ</string>
     <string name="common_refresh">Embohekopyahu</string>
     <string name="launcher_add_to_home">Embojuaju óga rovetãme</string>
     <string name="common_continue">Tenonde</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Noñemoñe\'ẽiva</string>
     <string name="person_unknown">Ojekuaa\'ỹva</string>
+    <string name="group_unknown">Atypy ojekuaa\'ỹva</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Oñemboguejy %1$s…</string>

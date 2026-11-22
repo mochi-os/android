@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Explicit "Load more" affordance for paginated lists: a tap fetches the next
@@ -30,7 +31,7 @@ fun LoadMoreButton(
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(LocalSpacing.current.gap(16.dp)),
         contentAlignment = Alignment.Center,
     ) {
         MochiOutlinedButton(

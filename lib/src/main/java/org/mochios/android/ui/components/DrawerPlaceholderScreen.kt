@@ -19,13 +19,15 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import org.mochios.android.R
 
 /**
  * What a drawer-backed feature shows before anything is selected: the title
  * bar with its hamburger, and a centred line telling the viewer to pick
  * something from the drawer.
  *
- * @param title Screen title, reused as the hamburger's content description.
+ * @param title Screen title.
  * @param message Centred prompt shown in place of content.
  * @param onOpenDrawer Called when the hamburger is pressed.
  */
@@ -42,7 +44,7 @@ fun DrawerPlaceholderScreen(
                 title = { Text(title) },
                 navigationIcon = {
                     MochiIconButton(onClick = onOpenDrawer) {
-                        Icon(Icons.Default.Menu, contentDescription = title)
+                        Icon(Icons.Default.Menu, contentDescription = stringResource(R.string.drawer_open))
                     }
                 }
             )

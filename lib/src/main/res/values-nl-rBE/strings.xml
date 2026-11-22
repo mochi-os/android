@@ -172,7 +172,6 @@
     <string name="access_add_rule_title">Toegangsregel toevoegen</string>
     <string name="access_level_manage">Beheren</string>
     <string name="access_level_react">Reageren</string>
-    <string name="notifications_clear">Meldingen wissen</string>
     <string name="entity_avatar_alt">Avatar voor %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>

@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Titled card section with an optional description and trailing action, holding
@@ -35,10 +36,11 @@ fun Section(
     headerAlignment: Alignment.Vertical = Alignment.Top,
     content: @Composable ColumnScope.() -> Unit,
 ) {
+    val spacing = LocalSpacing.current
     MochiCard(
         modifier = modifier.fillMaxWidth(),
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(spacing.card(horizontal = 16.dp, vertical = 16.dp))) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = headerAlignment,
@@ -50,7 +52,7 @@ fun Section(
                         fontWeight = FontWeight.Bold,
                     )
                     if (description != null) {
-                        Spacer(modifier = Modifier.padding(top = 4.dp))
+                        Spacer(modifier = Modifier.padding(top = spacing.gap(4.dp)))
                         Text(
                             text = description,
                             style = MaterialTheme.typography.bodyMedium,
@@ -59,11 +61,11 @@ fun Section(
                     }
                 }
                 if (action != null) {
-                    Spacer(modifier = Modifier.padding(start = 8.dp))
+                    Spacer(modifier = Modifier.padding(start = spacing.gap(8.dp)))
                     action()
                 }
             }
-            Spacer(modifier = Modifier.padding(top = 8.dp))
+            Spacer(modifier = Modifier.padding(top = spacing.gap(8.dp)))
             Column(
                 verticalArrangement = Arrangement.spacedBy(0.dp),
                 content = content,
@@ -84,10 +86,11 @@ fun FieldRow(
     description: String? = null,
     value: @Composable () -> Unit,
 ) {
+    val spacing = LocalSpacing.current
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp),
+            .padding(vertical = spacing.gap(8.dp)),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Column(modifier = Modifier.weight(1f)) {
@@ -101,11 +104,11 @@ fun FieldRow(
                     text = description,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
-                    modifier = Modifier.padding(top = 2.dp),
+                    modifier = Modifier.padding(top = spacing.gap(2.dp)),
                 )
             }
         }
-        Spacer(modifier = Modifier.padding(start = 8.dp))
+        Spacer(modifier = Modifier.padding(start = spacing.gap(8.dp)))
         Row(
             horizontalArrangement = Arrangement.End,
             verticalAlignment = Alignment.CenterVertically,

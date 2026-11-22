@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Account opgeschort</string>
     <string name="common_back">Terug</string>
     <string name="common_close">Sluiten</string>
+    <string name="common_clear_search">Zoekopdracht wissen</string>
+    <string name="drawer_open">Menu openen</string>
     <string name="common_cancel">Annuleren</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Toegangsregel toevoegen</string>
     <string name="access_level_manage">Beheren</string>
     <string name="access_level_react">Reageren</string>
-    <string name="notifications_clear">Meldingen wissen</string>
     <string name="entity_avatar_alt">Avatar van %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Controleren op updates</string>
     <string name="about_up_to_date">Up-to-date</string>
     <string name="about_check_downloading">Versie %1$s beschikbaar, downloaden…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Kan updateserver niet bereiken</string>
     <string name="about_check_download_failed">Download mislukt</string>
     <string name="notifications_clear_all_title">Alle meldingen wissen?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Vet</string>
     <string name="format_italic">Cursief</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">tekst</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Kop</string>
     <string name="format_code">Code</string>
     <string name="format_list">Opsommingslijst</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Toegangsregel voor \"%1$s\" verwijderen?</string>
     <string name="color_picker_custom">Aangepast</string>
     <string name="color_picker_clear">Wissen</string>
+    <string name="color_picker_white">Wit</string>
+    <string name="color_picker_slate">Leisteen</string>
+    <string name="color_picker_red">Rood</string>
+    <string name="color_picker_orange">Oranje</string>
+    <string name="color_picker_amber">Amber</string>
+    <string name="color_picker_green">Groen</string>
+    <string name="color_picker_teal">Blauwgroen</string>
+    <string name="color_picker_cyan">Cyaan</string>
+    <string name="color_picker_blue">Blauw</string>
+    <string name="color_picker_violet">Violet</string>
+    <string name="color_picker_pink">Roze</string>
+    <string name="color_picker_black">Zwart</string>
     <string name="common_refresh">Vernieuwen</string>
     <string name="launcher_add_to_home">Toevoegen aan startscherm</string>
     <string name="common_continue">Doorgaan</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Ongelezen</string>
     <string name="person_unknown">Onbekend</string>
+    <string name="group_unknown">Onbekende groep</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s downloaden…</string>

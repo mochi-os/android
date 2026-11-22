@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Cuenta sayt\'ayata</string>
     <string name="common_back">Kutt\'aña</string>
     <string name="common_close">Jist\'antaña</string>
+    <string name="common_clear_search">Thaqhawi q\'umachaña</string>
+    <string name="drawer_open">Menú jist\'arma</string>
     <string name="common_cancel">Jaytaña</string>
     <string name="common_filter">Filtro</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">Mantañ kamachi yapxataña</string>
     <string name="access_level_manage">Apnaqaña</string>
     <string name="access_level_react">Reaccionaña</string>
-    <string name="notifications_clear">Yatiyawinak chhaqtayaña</string>
     <string name="entity_avatar_alt">%1$s ukan avatarapa</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">Machaqachawinak uñakipaña</string>
     <string name="about_up_to_date">Machaqachatäxiwa</string>
     <string name="about_check_downloading">Versión %1$s utjiwa, apaqaskiwa…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Machaqachañ servidorar jan puriñ atipki</string>
     <string name="about_check_download_failed">Apaqañax pantjatawa</string>
     <string name="notifications_clear_all_title">¿Taqi yatiyäwinak q\'umachañati?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Thuru qillqa</string>
     <string name="format_italic">K\'umu qillqa</string>
     <string name="format_link">Enlace</string>
+    <string name="format_link_text">texto</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">P\'iqincha</string>
     <string name="format_code">Código</string>
     <string name="format_list">Chimpu lista</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">¿\"%1$s\" mantañataki kamachi apsuñati?</string>
     <string name="color_picker_custom">Personalizado</string>
     <string name="color_picker_clear">Q\'umachaña</string>
+    <string name="color_picker_white">Janq\'u</string>
+    <string name="color_picker_slate">Ch\'ixi</string>
+    <string name="color_picker_red">Wila</string>
+    <string name="color_picker_orange">Naranja</string>
+    <string name="color_picker_amber">Q\'illu ch\'umphi</string>
+    <string name="color_picker_green">Ch\'uxña</string>
+    <string name="color_picker_teal">Ch\'uxña larama</string>
+    <string name="color_picker_cyan">Qhana larama</string>
+    <string name="color_picker_blue">Larama</string>
+    <string name="color_picker_violet">Kulli</string>
+    <string name="color_picker_pink">Wila janq\'u</string>
+    <string name="color_picker_black">Ch\'iyara</string>
     <string name="common_refresh">Machaqachama</string>
     <string name="launcher_add_to_home">Qallta uñstäwir uchaña</string>
     <string name="common_continue">Sarantaña</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Jan ullt\'ata</string>
     <string name="person_unknown">Jan uñt\'ata</string>
+    <string name="group_unknown">Jan uñt\'at tama</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s apaqaskiwa…</string>

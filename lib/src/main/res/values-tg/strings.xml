@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Ҳисоб боздошта шуд</string>
     <string name="common_back">Бозгашт</string>
     <string name="common_close">Пӯшидан</string>
+    <string name="common_clear_search">Тоза кардани ҷустуҷӯ</string>
+    <string name="drawer_open">Кушодани меню</string>
     <string name="common_cancel">Бекор кардан</string>
     <string name="common_filter">Филтр</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Илова кардани қоидаи дастрасӣ</string>
     <string name="access_level_manage">Идора кардан</string>
     <string name="access_level_react">Аксуламал</string>
-    <string name="notifications_clear">Пок кардани огоҳиномаҳо</string>
     <string name="entity_avatar_alt">Аватар барои %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Санҷидани навсозиҳо</string>
     <string name="about_up_to_date">Навтарин нусха</string>
     <string name="about_check_downloading">Версияи %1$s дастрас аст, боргирӣ…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Ба сервери навсозӣ пайваст шуда нашуд</string>
     <string name="about_check_download_failed">Боргирӣ ноком шуд</string>
     <string name="notifications_clear_all_title">Ҳамаи огоҳномаҳо тоза карда шаванд?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Ғафс</string>
     <string name="format_italic">Хам</string>
     <string name="format_link">Пайванд</string>
+    <string name="format_link_text">матн</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Сарлавҳа</string>
     <string name="format_code">Код</string>
     <string name="format_list">Рӯйхати нишонадор</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Қоидаи дастрасӣ барои «%1$s» нест карда шавад?</string>
     <string name="color_picker_custom">Танзимшаванда</string>
     <string name="color_picker_clear">Тоза кардан</string>
+    <string name="color_picker_white">Сафед</string>
+    <string name="color_picker_slate">Хокистарии сланг</string>
+    <string name="color_picker_red">Сурх</string>
+    <string name="color_picker_orange">Норинҷӣ</string>
+    <string name="color_picker_amber">Каҳрабоӣ</string>
+    <string name="color_picker_green">Сабз</string>
+    <string name="color_picker_teal">Кабуди сабзтоб</string>
+    <string name="color_picker_cyan">Осмонӣ</string>
+    <string name="color_picker_blue">Кабуд</string>
+    <string name="color_picker_violet">Бунафш</string>
+    <string name="color_picker_pink">Гулобӣ</string>
+    <string name="color_picker_black">Сиёҳ</string>
     <string name="common_refresh">Нав кардан</string>
     <string name="launcher_add_to_home">Ба экрани асосӣ илова кардан</string>
     <string name="common_continue">Идома</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Хонданашуда</string>
     <string name="person_unknown">Номаълум</string>
+    <string name="group_unknown">Гурӯҳи номаълум</string>
     <string name="format_time_seconds_short">%1$s сон</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Боргирии %1$s…</string>

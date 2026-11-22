@@ -27,6 +27,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 
 /** Placeholder standing in for a stored secret. Never the value itself. */
 private const val MASK = "••••••••"
@@ -68,7 +69,7 @@ fun SecretField(
             modifier = Modifier.weight(1f),
         )
         if (value.isNotEmpty()) {
-            Spacer(Modifier.width(8.dp))
+            Spacer(Modifier.width(LocalSpacing.current.gap(8.dp)))
             MochiButton(
                 onClick = {
                     onSave(value)
@@ -81,7 +82,7 @@ fun SecretField(
                         modifier = Modifier.size(ButtonDefaults.IconSize),
                         strokeWidth = 2.dp,
                     )
-                    Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                    Spacer(Modifier.width(LocalSpacing.current.gap(ButtonDefaults.IconSpacing)))
                 }
                 Text(stringResource(R.string.common_save))
             }

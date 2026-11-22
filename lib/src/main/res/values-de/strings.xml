@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Konto ausgesetzt</string>
     <string name="common_back">Zurück</string>
     <string name="common_close">Schließen</string>
+    <string name="common_clear_search">Suche leeren</string>
+    <string name="drawer_open">Menü öffnen</string>
     <string name="common_cancel">Abbrechen</string>
     <string name="common_filter">Filter</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -126,7 +128,6 @@
     <string name="common_retry">Erneut versuchen</string>
     <string name="access_add_rule_title">Zugriffsregel hinzufügen</string>
     <string name="access_level_manage">Verwalten</string>
-    <string name="notifications_clear">Benachrichtigungen löschen</string>
     <string name="game_chat_load_more">Ältere Nachrichten laden</string>
     <string name="game_chat_move_played">%1$s spielte %2$s</string>
 
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Nach Updates suchen</string>
     <string name="about_up_to_date">Aktuell</string>
     <string name="about_check_downloading">Version %1$s verfügbar, wird heruntergeladen…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Update-Server nicht erreichbar</string>
     <string name="about_check_download_failed">Download fehlgeschlagen</string>
     <string name="notifications_clear_all_title">Alle Benachrichtigungen löschen?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Fett</string>
     <string name="format_italic">Kursiv</string>
     <string name="format_link">Link</string>
+    <string name="format_link_text">Text</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Überschrift</string>
     <string name="format_code">Code</string>
     <string name="format_list">Aufzählungsliste</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Zugriffsregel für „%1$s“ entfernen?</string>
     <string name="color_picker_custom">Benutzerdefiniert</string>
     <string name="color_picker_clear">Leeren</string>
+    <string name="color_picker_white">Weiß</string>
+    <string name="color_picker_slate">Schiefergrau</string>
+    <string name="color_picker_red">Rot</string>
+    <string name="color_picker_orange">Orange</string>
+    <string name="color_picker_amber">Bernstein</string>
+    <string name="color_picker_green">Grün</string>
+    <string name="color_picker_teal">Petrol</string>
+    <string name="color_picker_cyan">Cyan</string>
+    <string name="color_picker_blue">Blau</string>
+    <string name="color_picker_violet">Violett</string>
+    <string name="color_picker_pink">Rosa</string>
+    <string name="color_picker_black">Schwarz</string>
     <string name="common_refresh">Aktualisieren</string>
     <string name="launcher_add_to_home">Zum Startbildschirm hinzufügen</string>
     <string name="common_continue">Fortfahren</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Ungelesen</string>
     <string name="person_unknown">Unbekannt</string>
+    <string name="group_unknown">Unbekannte Gruppe</string>
     <string name="format_time_seconds_short">%1$s Sek.</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s wird heruntergeladen…</string>

@@ -227,11 +227,6 @@ class AppBootstrapViewModel @Inject constructor(
         viewModelScope.launch { bootstrap() }
     }
 
-    /** Force a re-evaluation (e.g. after AccountManager update). */
-    fun refresh() {
-        viewModelScope.launch { evaluate() }
-    }
-
     /**
      * User-initiated logout. The stage flips to NeedsLogin synchronously,
      * before clearAll and MochiAccount.remove emit, so the observers above

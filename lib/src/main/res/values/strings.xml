@@ -71,6 +71,9 @@
     <!-- Common UI vocabulary -->
     <string name="common_back">Back</string>
     <string name="common_close">Close</string>
+    <string name="common_clear_search">Clear search</string>
+    <!-- The hamburger button that opens the navigation drawer -->
+    <string name="drawer_open">Open menu</string>
     <string name="common_cancel">Cancel</string>
     <string name="common_continue">Continue</string>
     <string name="common_open_settings">Open settings</string>
@@ -141,6 +144,8 @@
     <string name="person_picker_directory">Directory</string>
     <!-- A person with no name and no fingerprint to show instead -->
     <string name="person_unknown">Unknown</string>
+    <!-- An access rule's group that the server gave no name for -->
+    <string name="group_unknown">Unknown group</string>
 
     <!-- Place picker -->
     <string name="place_picker_name">Place name</string>
@@ -182,7 +187,6 @@
     <string name="view_list_sorted_descending">sorted descending</string>
 
     <!-- Notifications -->
-    <string name="notifications_clear">Clear notifications</string>
     <string name="notifications_permission_reason">Mochi needs permission to show notifications, so you hear about new messages, replies and reminders.</string>
     <string name="notifications_permission_blocked">Notifications are turned off for Mochi. You can turn them on in the app\'s notification settings.</string>
 
@@ -271,6 +275,8 @@
     <string name="about_check_updates">Check for updates</string>
     <string name="about_up_to_date">Up to date</string>
     <string name="about_check_downloading">Version %1$s available, downloading…</string>
+    <!-- How far the update's download has got: the number, then the percent sign where the language puts it -->
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Couldn\'t reach update server</string>
     <string name="about_check_download_failed">Download failed</string>
     <string name="about_check_background">Continue in background</string>
@@ -407,6 +413,9 @@
     <string name="format_bold">Bold</string>
     <string name="format_italic">Italic</string>
     <string name="format_link">Link</string>
+    <!-- The stand-ins the Link button writes into a draft as [text](url), left selected so typing replaces them: the words a link shows, and its web address -->
+    <string name="format_link_text">text</string>
+    <string name="format_link_address">url</string>
     <string name="format_heading">Heading</string>
     <string name="format_code">Code</string>
     <string name="format_list">Bullet list</string>
@@ -454,6 +463,19 @@
     <string name="zone_attribution" translatable="false">© OpenStreetMap contributors</string>
     <string name="color_picker_custom">Custom</string>
     <string name="color_picker_clear">Clear</string>
+    <!-- The colour picker's preset swatches, named for a screen reader -->
+    <string name="color_picker_white">White</string>
+    <string name="color_picker_slate">Slate</string>
+    <string name="color_picker_red">Red</string>
+    <string name="color_picker_orange">Orange</string>
+    <string name="color_picker_amber">Amber</string>
+    <string name="color_picker_green">Green</string>
+    <string name="color_picker_teal">Teal</string>
+    <string name="color_picker_cyan">Cyan</string>
+    <string name="color_picker_blue">Blue</string>
+    <string name="color_picker_violet">Violet</string>
+    <string name="color_picker_pink">Pink</string>
+    <string name="color_picker_black">Black</string>
     <string name="launcher_add_to_home">Add to home screen</string>
     <string name="upload_progress">Upload progress</string>
     <string name="upload_processing">Processing…</string>

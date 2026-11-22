@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">アカウントを停止しました</string>
     <string name="common_back">戻る</string>
     <string name="common_close">閉じる</string>
+    <string name="common_clear_search">検索をクリア</string>
+    <string name="drawer_open">メニューを開く</string>
     <string name="common_cancel">キャンセル</string>
     <string name="common_filter">フィルター</string>
     <string name="common_filter_chip">%1$s:%2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">アクセス規則を追加</string>
     <string name="access_level_manage">管理</string>
     <string name="access_level_react">リアクション</string>
-    <string name="notifications_clear">通知をクリア</string>
     <string name="entity_avatar_alt">%1$sのアバター</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">アップデートを確認</string>
     <string name="about_up_to_date">最新です</string>
     <string name="about_check_downloading">バージョン %1$s が利用可能、ダウンロード中…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">アップデートサーバーに接続できませんでした</string>
     <string name="about_check_download_failed">ダウンロードに失敗しました</string>
     <string name="notifications_clear_all_title">すべての通知を消去しますか?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">太字</string>
     <string name="format_italic">斜体</string>
     <string name="format_link">リンク</string>
+    <string name="format_link_text">テキスト</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">見出し</string>
     <string name="format_code">コード</string>
     <string name="format_list">箇条書き</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">「%1$s」のアクセスルールを削除しますか？</string>
     <string name="color_picker_custom">カスタム</string>
     <string name="color_picker_clear">クリア</string>
+    <string name="color_picker_white">白</string>
+    <string name="color_picker_slate">スレート</string>
+    <string name="color_picker_red">赤</string>
+    <string name="color_picker_orange">オレンジ</string>
+    <string name="color_picker_amber">アンバー</string>
+    <string name="color_picker_green">緑</string>
+    <string name="color_picker_teal">ティール</string>
+    <string name="color_picker_cyan">シアン</string>
+    <string name="color_picker_blue">青</string>
+    <string name="color_picker_violet">バイオレット</string>
+    <string name="color_picker_pink">ピンク</string>
+    <string name="color_picker_black">黒</string>
     <string name="common_refresh">更新</string>
     <string name="launcher_add_to_home">ホーム画面に追加</string>
     <string name="common_continue">続行</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">未読</string>
     <string name="person_unknown">不明</string>
+    <string name="group_unknown">不明なグループ</string>
     <string name="format_time_seconds_short">%1$s秒</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s をダウンロード中…</string>

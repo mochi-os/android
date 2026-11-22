@@ -111,7 +111,6 @@
     <string name="access_add_rule_title">新增存取規則</string>
     <string name="access_level_manage">管理</string>
     <string name="access_level_react">回應</string>
-    <string name="notifications_clear">清除通知</string>
     <string name="entity_avatar_alt">%1$s 的頭像</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -270,7 +269,8 @@
     <string name="lightbox_comments">留言</string>
     <string name="common_not_found">找不到</string>
     <string name="format_link">連結</string>
-    <string name="format_code">驗證碼</string>
+    <string name="format_link_address">網址</string>
+    <string name="format_code">程式碼</string>
     <string name="rss_revoke_confirm">撤銷</string>
     <string name="rss_revoke">撤銷存取權</string>
     <string name="rss_revoke_title">撤銷 RSS 存取權？</string>

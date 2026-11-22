@@ -558,15 +558,11 @@ class PostDetailViewModel @Inject constructor(
         }
     }
 
-    suspend fun searchMembers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> {
-        return try {
-            repository.searchMembers(feedId, query).map {
-                org.mochios.android.ui.components.MentionSuggestion(id = it.id, name = it.name)
-            }
-        } catch (_: Exception) {
-            emptyList()
+    // A failure goes on to the mention field, which says why nothing was found.
+    suspend fun searchMembers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> =
+        repository.searchMembers(feedId, query).map {
+            org.mochios.android.ui.components.MentionSuggestion(id = it.id, name = it.name)
         }
-    }
 
     private fun loadTags() {
         viewModelScope.launch {

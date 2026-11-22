@@ -71,12 +71,13 @@ enum class Appearance {
     }
 }
 
-enum class Density(val scale: Float) {
-    /** Use whatever the theme/Compose defaults give. */
-    THEME(1.0f),
-    COMPACT(0.85f),
-    COMFORTABLE(1.0f),
-    SPACIOUS(1.20f);
+/** The Density preference; ui/theme/Spacing gives each its factors. */
+enum class Density {
+    /** Whatever the theme chooses: comfortable for every shipped theme. */
+    THEME,
+    COMPACT,
+    COMFORTABLE,
+    SPACIOUS;
 
     companion object {
         fun fromString(s: String?): Density = when (s) {

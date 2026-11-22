@@ -9,6 +9,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
@@ -23,6 +24,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 
 /**
  * What a button is for, which is what decides its colour.
@@ -58,6 +61,11 @@ enum class MochiButtonTone {
  * Drop-in for [androidx.compose.material3.Button] — same parameter names and
  * order — with [tone] added ahead of the colour parameters. Pass [colors] only
  * for something no tone covers; it wins over [tone] when both are given.
+ *
+ * This and the outlined and text buttons set their padding and height at the
+ * reader's density ([LocalSpacing]). Material holds a button at 40dp or taller
+ * from inside, so a compact density narrows the padding but cannot lower the
+ * button; a spacious one raises it, as the web's taller controls do.
  */
 @Composable
 fun MochiButton(
@@ -69,13 +77,13 @@ fun MochiButton(
     colors: ButtonColors? = null,
     elevation: ButtonElevation? = ButtonDefaults.buttonElevation(),
     border: BorderStroke? = null,
-    contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
+    contentPadding: PaddingValues = spaced(ButtonDefaults.ContentPadding),
     interactionSource: MutableInteractionSource? = null,
     content: @Composable RowScope.() -> Unit,
 ) {
     Button(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.defaultMinSize(minHeight = LocalSpacing.current.control(ButtonDefaults.MinHeight)),
         enabled = enabled,
         shape = shape,
         colors = colors ?: filledColors(tone),
@@ -108,13 +116,13 @@ fun MochiOutlinedButton(
     colors: ButtonColors? = null,
     elevation: ButtonElevation? = null,
     border: BorderStroke? = null,
-    contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
+    contentPadding: PaddingValues = spaced(ButtonDefaults.ContentPadding),
     interactionSource: MutableInteractionSource? = null,
     content: @Composable RowScope.() -> Unit,
 ) {
     OutlinedButton(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.defaultMinSize(minHeight = LocalSpacing.current.control(ButtonDefaults.MinHeight)),
         enabled = enabled,
         shape = shape,
         colors = colors ?: outlinedColors(tone),
@@ -142,13 +150,13 @@ fun MochiTextButton(
     colors: ButtonColors? = null,
     elevation: ButtonElevation? = null,
     border: BorderStroke? = null,
-    contentPadding: PaddingValues = ButtonDefaults.TextButtonContentPadding,
+    contentPadding: PaddingValues = spaced(ButtonDefaults.TextButtonContentPadding),
     interactionSource: MutableInteractionSource? = null,
     content: @Composable RowScope.() -> Unit,
 ) {
     TextButton(
         onClick = onClick,
-        modifier = modifier,
+        modifier = modifier.defaultMinSize(minHeight = LocalSpacing.current.control(ButtonDefaults.MinHeight)),
         enabled = enabled,
         shape = shape,
         colors = colors ?: textColors(tone),

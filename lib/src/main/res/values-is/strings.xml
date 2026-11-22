@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Reikningur frystur</string>
     <string name="common_back">Til baka</string>
     <string name="common_close">Loka</string>
+    <string name="common_clear_search">Hreinsa leit</string>
+    <string name="drawer_open">Opna valmynd</string>
     <string name="common_cancel">Hætta við</string>
     <string name="common_filter">Sía</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Bæta við aðgangsreglu</string>
     <string name="access_level_manage">Stjórna</string>
     <string name="access_level_react">Bregðast við</string>
-    <string name="notifications_clear">Hreinsa tilkynningar</string>
     <string name="entity_avatar_alt">Auðkennismynd fyrir %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Leita að uppfærslum</string>
     <string name="about_up_to_date">Allt uppfært</string>
     <string name="about_check_downloading">Útgáfa %1$s er tiltæk, sæki…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Náðist ekki samband við uppfærsluþjón</string>
     <string name="about_check_download_failed">Niðurhal mistókst</string>
     <string name="notifications_clear_all_title">Hreinsa allar tilkynningar?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Feitletrað</string>
     <string name="format_italic">Skáletrað</string>
     <string name="format_link">Tengill</string>
+    <string name="format_link_text">texti</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Fyrirsögn</string>
     <string name="format_code">Kóði</string>
     <string name="format_list">Punktalisti</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Fjarlægja aðgangsreglu fyrir „%1$s“?</string>
     <string name="color_picker_custom">Sérsniðið</string>
     <string name="color_picker_clear">Hreinsa</string>
+    <string name="color_picker_white">Hvítt</string>
+    <string name="color_picker_slate">Steingrátt</string>
+    <string name="color_picker_red">Rautt</string>
+    <string name="color_picker_orange">Appelsínugult</string>
+    <string name="color_picker_amber">Rafgult</string>
+    <string name="color_picker_green">Grænt</string>
+    <string name="color_picker_teal">Blágrænt</string>
+    <string name="color_picker_cyan">Ljósblátt</string>
+    <string name="color_picker_blue">Blátt</string>
+    <string name="color_picker_violet">Fjólublátt</string>
+    <string name="color_picker_pink">Bleikt</string>
+    <string name="color_picker_black">Svart</string>
     <string name="common_refresh">Endurnýja</string>
     <string name="launcher_add_to_home">Bæta við heimaskjá</string>
     <string name="common_continue">Halda áfram</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Ólesið</string>
     <string name="person_unknown">Óþekkt</string>
+    <string name="group_unknown">Óþekktur hópur</string>
     <string name="format_time_seconds_short">%1$s sek</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Sæki %1$s…</string>

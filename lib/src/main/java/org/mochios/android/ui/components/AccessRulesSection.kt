@@ -50,8 +50,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.api.MochiError
 import org.mochios.android.format.formatFingerprint
 import org.mochios.android.model.AccessRule
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.util.fingerprint
 
 /**
@@ -157,8 +159,13 @@ data class AccessLabels(
  * @param labels Feature-specific wording.
  * @param users Candidates matching the dialog's current user search.
  * @param groups Groups the feature offers, loaded via [onLoadGroups].
+ * @param groupsLoading Whether [groups] are being loaded; the group segment
+ *   shows a spinner rather than [AccessLabels.noGroups] until they are.
+ * @param groupsError Why [groups] could not be loaded; the group segment
+ *   shows it with a retry.
  * @param onSearchUsers Called as the user search text changes.
- * @param onLoadGroups Called the first time the group segment is opened.
+ * @param onLoadGroups Called when the group segment is opened with no groups,
+ *   and by its retry.
  * @param onSetAccess Called with a subject, the level to grant it, and a
  *   callback to report whether that succeeded. The add dialog stays open, its
  *   button spinning, until the callback runs, and closes only on success.
@@ -182,8 +189,11 @@ fun AccessRulesSection(
     onLoadGroups: () -> Unit,
     onSetAccess: (String, String, (Boolean) -> Unit) -> Unit,
     onRevoke: (String, (Boolean) -> Unit) -> Unit,
-    isLoading: Boolean = false
+    isLoading: Boolean = false,
+    groupsLoading: Boolean = false,
+    groupsError: MochiError? = null
 ) {
+    val unknownGroup = stringResource(R.string.group_unknown)
     var showAddDialog by remember { mutableStateOf(false) }
     // Whether a rule added in the dialog is being saved; it stays open until then.
     var adding by remember { mutableStateOf(false) }
@@ -205,7 +215,7 @@ fun AccessRulesSection(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 24.dp),
+                        .padding(vertical = LocalSpacing.current.gap(24.dp)),
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator()
@@ -217,7 +227,7 @@ fun AccessRulesSection(
                     labels.empty,
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(top = 8.dp)
+                    modifier = Modifier.padding(top = LocalSpacing.current.gap(8.dp))
                 )
             }
 
@@ -228,7 +238,7 @@ fun AccessRulesSection(
                         levels = levels,
                         levelLabel = levelLabel,
                         roleLabel = labels.rowRoleLabel,
-                        subjectLabel = subjectLabel(rule, labels),
+                        subjectLabel = subjectLabel(rule, labels, unknownGroup),
                         onLevelChange = { level -> onSetAccess(rule.subject, level) {} },
                         onRevoke = { removing = rule }
                     )
@@ -245,6 +255,9 @@ fun AccessRulesSection(
             labels = labels,
             users = users,
             groups = groups,
+            groupsLoading = groupsLoading,
+            groupsError = groupsError,
+            unknownGroup = unknownGroup,
             onSearchUsers = onSearchUsers,
             onLoadGroups = onLoadGroups,
             busy = adding,
@@ -263,7 +276,7 @@ fun AccessRulesSection(
         MochiAlertDialog(
             onDismissRequest = { if (!revoking) removing = null },
             title = stringResource(R.string.access_remove_title),
-            text = stringResource(R.string.access_remove_message, subjectLabel(rule, labels)),
+            text = stringResource(R.string.access_remove_message, subjectLabel(rule, labels, unknownGroup)),
             confirmText = stringResource(R.string.access_remove),
             onConfirm = {
                 revoking = true
@@ -294,13 +307,14 @@ private fun subjectRank(rule: AccessSubjectRule): Int = when {
 /**
  * Display label for a subject, mapping the wildcard subjects to friendly names
  * and otherwise preferring the resolved name. A person the server did not name
- * is shown by the fingerprint of their id, never the id.
+ * is shown by the fingerprint of their id, and a group by [unknownGroup],
+ * never the id.
  */
-internal fun subjectLabel(rule: AccessSubjectRule, labels: AccessLabels): String = when {
+internal fun subjectLabel(rule: AccessSubjectRule, labels: AccessLabels, unknownGroup: String): String = when {
     rule.subject == "*" -> labels.subjectAnyone
     rule.subject == "+" -> labels.subjectAuthenticated
     !rule.name.isNullOrBlank() -> rule.name
-    rule.subject.startsWith("@") || rule.subject.startsWith("#") -> rule.subject
+    rule.subject.startsWith("@") || rule.subject.startsWith("#") -> unknownGroup
     else -> formatFingerprint(fingerprint(rule.subject))
 }
 
@@ -326,10 +340,11 @@ private fun AccessRuleRow(
     onLevelChange: (String) -> Unit,
     onRevoke: () -> Unit
 ) {
+    val spacing = LocalSpacing.current
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 12.dp)
+            .padding(vertical = spacing.gap(12.dp))
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Icon(
@@ -338,7 +353,7 @@ private fun AccessRuleRow(
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(24.dp)
             )
-            Spacer(Modifier.width(12.dp))
+            Spacer(Modifier.width(spacing.gap(12.dp)))
             Text(
                 text = subjectLabel,
                 modifier = Modifier.weight(1f),
@@ -351,7 +366,7 @@ private fun AccessRuleRow(
                     text = stringResource(R.string.access_owner),
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(end = 12.dp)
+                    modifier = Modifier.padding(end = spacing.gap(12.dp))
                 )
             } else {
                 MochiIconButton(onClick = onRevoke) {
@@ -400,6 +415,9 @@ private fun AddAccessDialog(
     labels: AccessLabels,
     users: List<AccessCandidate>,
     groups: List<AccessCandidate>,
+    groupsLoading: Boolean,
+    groupsError: MochiError?,
+    unknownGroup: String,
     onSearchUsers: (String) -> Unit,
     onLoadGroups: () -> Unit,
     busy: Boolean,
@@ -412,9 +430,14 @@ private fun AddAccessDialog(
     var selectedName by remember { mutableStateOf("") }
     var level by remember { mutableStateOf(defaultLevel) }
     var levelExpanded by remember { mutableStateOf(false) }
+    // Whether this dialog has asked for the groups: until it has, an empty
+    // list is one not loaded yet, not a feature without groups.
+    var requested by remember { mutableStateOf(false) }
+    val spacing = LocalSpacing.current
 
     LaunchedEffect(tab) {
-        if (tab == 1 && groups.isEmpty()) {
+        if (loadsGroups(tab, groups, groupsLoading)) {
+            requested = true
             onLoadGroups()
         }
     }
@@ -453,7 +476,7 @@ private fun AddAccessDialog(
                     )
                 }
 
-                Spacer(Modifier.height(16.dp))
+                Spacer(Modifier.height(spacing.gap(16.dp)))
 
                 when (tab) {
                     0 -> {
@@ -461,7 +484,7 @@ private fun AddAccessDialog(
                             text = labels.searchUsers,
                             style = MaterialTheme.typography.labelLarge
                         )
-                        Spacer(Modifier.height(8.dp))
+                        Spacer(Modifier.height(spacing.gap(8.dp)))
                         MochiTextField(
                             value = userQuery,
                             onValueChange = { value ->
@@ -475,7 +498,7 @@ private fun AddAccessDialog(
                             modifier = Modifier.fillMaxWidth()
                         )
                         if (users.isNotEmpty()) {
-                            Spacer(Modifier.height(8.dp))
+                            Spacer(Modifier.height(spacing.gap(8.dp)))
                             MochiCard(
                                 modifier = Modifier.fillMaxWidth(),
                                 colors = mochiDialogCardColors()
@@ -501,33 +524,19 @@ private fun AddAccessDialog(
                             text = labels.selectGroup,
                             style = MaterialTheme.typography.labelLarge
                         )
-                        Spacer(Modifier.height(8.dp))
-                        if (groups.isEmpty()) {
-                            Text(
-                                text = labels.noGroups,
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(vertical = 8.dp)
-                            )
-                        } else {
-                            MochiCard(
-                                modifier = Modifier.fillMaxWidth(),
-                                colors = mochiDialogCardColors()
-                            ) {
-                                groups.forEach { group ->
-                                    SubjectOption(
-                                        icon = Icons.Outlined.Group,
-                                        title = group.name,
-                                        subtitle = group.detail,
-                                        selected = selectedSubject == group.subject,
-                                        onClick = {
-                                            selectedSubject = group.subject
-                                            selectedName = group.name
-                                        }
-                                    )
-                                }
-                            }
-                        }
+                        Spacer(Modifier.height(spacing.gap(8.dp)))
+                        GroupChoices(
+                            shown = groupsShown(groups, groupsLoading, groupsError, requested),
+                            groups = groups,
+                            error = groupsError,
+                            noGroups = labels.noGroups,
+                            selectedSubject = selectedSubject,
+                            onSelect = { group ->
+                                selectedSubject = group.subject
+                                selectedName = group.name
+                            },
+                            onRetry = onLoadGroups,
+                        )
                     }
 
                     else -> {
@@ -535,7 +544,7 @@ private fun AddAccessDialog(
                             text = labels.selectRule,
                             style = MaterialTheme.typography.labelLarge
                         )
-                        Spacer(Modifier.height(8.dp))
+                        Spacer(Modifier.height(spacing.gap(8.dp)))
                         MochiCard(
                             modifier = Modifier.fillMaxWidth(),
                             colors = mochiDialogCardColors()
@@ -565,14 +574,14 @@ private fun AddAccessDialog(
                 }
 
                 if (selectedSubject.isNotBlank()) {
-                    Spacer(Modifier.height(16.dp))
+                    Spacer(Modifier.height(spacing.gap(16.dp)))
                     HorizontalDivider()
-                    Spacer(Modifier.height(12.dp))
+                    Spacer(Modifier.height(spacing.gap(12.dp)))
                     Text(
-                        text = labels.selected(selectedName.ifBlank { selectedSubject }),
+                        text = chosenLabel(selectedSubject, selectedName, labels, unknownGroup),
                         style = MaterialTheme.typography.bodyMedium
                     )
-                    Spacer(Modifier.height(8.dp))
+                    Spacer(Modifier.height(spacing.gap(8.dp)))
                     MochiDropdownField(
                         value = levelLabel(level),
                         expanded = levelExpanded,
@@ -602,6 +611,79 @@ private fun AddAccessDialog(
     )
 }
 
+/** What the add dialog's group segment shows. */
+internal enum class GroupsShown { Loading, Failed, None, Offered }
+
+/**
+ * The group segment's state. Until the dialog has [requested] the groups, an
+ * empty list is one not loaded yet, not a feature without groups; and "no
+ * groups" is said only of a load that found none.
+ */
+internal fun groupsShown(
+    groups: List<AccessCandidate>,
+    loading: Boolean,
+    error: MochiError?,
+    requested: Boolean,
+): GroupsShown = when {
+    groups.isNotEmpty() -> GroupsShown.Offered
+    loading || (!requested && error == null) -> GroupsShown.Loading
+    error != null -> GroupsShown.Failed
+    else -> GroupsShown.None
+}
+
+/** Whether opening [tab] asks for the groups: the group segment, none in hand and none on the way. */
+internal fun loadsGroups(tab: Int, groups: List<AccessCandidate>, loading: Boolean): Boolean =
+    tab == 1 && groups.isEmpty() && !loading
+
+/** The line confirming the chosen subject, by name and never by id. */
+internal fun chosenLabel(subject: String, name: String, labels: AccessLabels, unknownGroup: String): String =
+    labels.selected(subjectLabel(AccessSubjectRule(subject = subject, level = "", name = name), labels, unknownGroup))
+
+/** The add dialog's group segment: the groups, or why there are none to pick. */
+@Composable
+internal fun GroupChoices(
+    shown: GroupsShown,
+    groups: List<AccessCandidate>,
+    error: MochiError?,
+    noGroups: String,
+    selectedSubject: String,
+    onSelect: (AccessCandidate) -> Unit,
+    onRetry: () -> Unit,
+) {
+    val spacing = LocalSpacing.current
+    when (shown) {
+        GroupsShown.Loading -> Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = spacing.gap(8.dp)),
+            contentAlignment = Alignment.Center
+        ) {
+            CircularProgressIndicator(modifier = Modifier.size(24.dp), strokeWidth = 2.dp)
+        }
+        GroupsShown.Failed -> error?.let { failure -> InlineErrorState(error = failure, onRetry = onRetry) }
+        GroupsShown.None -> Text(
+            text = noGroups,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(vertical = spacing.gap(8.dp))
+        )
+        GroupsShown.Offered -> MochiCard(
+            modifier = Modifier.fillMaxWidth(),
+            colors = mochiDialogCardColors()
+        ) {
+            groups.forEach { group ->
+                SubjectOption(
+                    icon = Icons.Outlined.Group,
+                    title = group.name,
+                    subtitle = group.detail,
+                    selected = selectedSubject == group.subject,
+                    onClick = { onSelect(group) }
+                )
+            }
+        }
+    }
+}
+
 /** A selectable subject row inside the add dialog's option list. */
 @Composable
 private fun SubjectOption(
@@ -611,6 +693,7 @@ private fun SubjectOption(
     selected: Boolean,
     onClick: () -> Unit
 ) {
+    val gap = LocalSpacing.current.gap(12.dp)
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -622,7 +705,7 @@ private fun SubjectOption(
                     Color.Transparent
                 }
             )
-            .padding(horizontal = 12.dp, vertical = 12.dp),
+            .padding(gap),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(
@@ -631,7 +714,7 @@ private fun SubjectOption(
             tint = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.size(20.dp)
         )
-        Spacer(Modifier.width(12.dp))
+        Spacer(Modifier.width(gap))
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = title,

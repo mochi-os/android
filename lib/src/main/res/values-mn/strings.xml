@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Бүртгэлийг түр зогсоосон</string>
     <string name="common_back">Буцах</string>
     <string name="common_close">Хаах</string>
+    <string name="common_clear_search">Хайлтыг цэвэрлэх</string>
+    <string name="drawer_open">Цэс нээх</string>
     <string name="common_cancel">Цуцлах</string>
     <string name="common_filter">Шүүлтүүр</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Хандалтын дүрэм нэмэх</string>
     <string name="access_level_manage">Удирдах</string>
     <string name="access_level_react">Хариу үзүүлэх</string>
-    <string name="notifications_clear">Мэдэгдлүүдийг арилгах</string>
     <string name="entity_avatar_alt">%1$s-н зураг</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Шинэчлэлт шалгах</string>
     <string name="about_up_to_date">Шинэчлэгдсэн</string>
     <string name="about_check_downloading">%1$s хувилбар боломжтой, татаж байна…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Шинэчлэлтийн серверт холбогдож чадсангүй</string>
     <string name="about_check_download_failed">Татаж чадсангүй</string>
     <string name="notifications_clear_all_title">Бүх мэдэгдлийг арилгах уу?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Тод</string>
     <string name="format_italic">Налуу</string>
     <string name="format_link">Холбоос</string>
+    <string name="format_link_text">текст</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Гарчиг</string>
     <string name="format_code">Код</string>
     <string name="format_list">Тэмдэгт жагсаалт</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\"-ийн хандалтын дүрмийг устгах уу?</string>
     <string name="color_picker_custom">Захиалгат</string>
     <string name="color_picker_clear">Цэвэрлэх</string>
+    <string name="color_picker_white">Цагаан</string>
+    <string name="color_picker_slate">Шифер саарал</string>
+    <string name="color_picker_red">Улаан</string>
+    <string name="color_picker_orange">Улбар шар</string>
+    <string name="color_picker_amber">Хув</string>
+    <string name="color_picker_green">Ногоон</string>
+    <string name="color_picker_teal">Хөх ногоон</string>
+    <string name="color_picker_cyan">Цэнхэр</string>
+    <string name="color_picker_blue">Хөх</string>
+    <string name="color_picker_violet">Нил ягаан</string>
+    <string name="color_picker_pink">Ягаан</string>
+    <string name="color_picker_black">Хар</string>
     <string name="common_refresh">Сэргээх</string>
     <string name="launcher_add_to_home">Үндсэн дэлгэцэнд нэмэх</string>
     <string name="common_continue">Үргэлжлүүлэх</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Уншаагүй</string>
     <string name="person_unknown">Үл мэдэгдэх</string>
+    <string name="group_unknown">Үл мэдэгдэх бүлэг</string>
     <string name="format_time_seconds_short">%1$s сек</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s татаж байна…</string>

@@ -47,7 +47,7 @@ fun CreateGroupScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.people_groups_create),
         submitLabel = stringResource(R.string.people_groups_create),
-        submitEnabled = !nameInvalid && !uiState.isCreating,
+        submitEnabled = !nameInvalid,
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

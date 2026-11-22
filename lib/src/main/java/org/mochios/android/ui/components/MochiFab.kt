@@ -6,7 +6,6 @@
 package org.mochios.android.ui.components
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.FloatingActionButtonElevation
@@ -47,42 +46,6 @@ fun MochiFab(
         elevation = elevation,
         interactionSource = interactionSource,
         content = content,
-    )
-}
-
-/**
- * The app's extended floating action button: a [MochiFab] that also says what
- * it does.
- *
- * Worth the extra width when the icon alone would not name the action, or when
- * the screen's one action deserves to be read rather than guessed. Drop-in for
- * [androidx.compose.material3.ExtendedFloatingActionButton], with [tone] added.
- */
-@Composable
-fun MochiExtendedFab(
-    text: @Composable () -> Unit,
-    icon: @Composable () -> Unit,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    tone: MochiButtonTone = MochiButtonTone.Primary,
-    expanded: Boolean = true,
-    shape: Shape = FloatingActionButtonDefaults.extendedFabShape,
-    containerColor: Color? = null,
-    contentColor: Color? = null,
-    elevation: FloatingActionButtonElevation = FloatingActionButtonDefaults.elevation(),
-    interactionSource: MutableInteractionSource? = null,
-) {
-    ExtendedFloatingActionButton(
-        text = text,
-        icon = icon,
-        onClick = onClick,
-        modifier = modifier,
-        expanded = expanded,
-        shape = shape,
-        containerColor = containerColor ?: fabContainerColor(tone),
-        contentColor = contentColor ?: fabContentColor(tone),
-        elevation = elevation,
-        interactionSource = interactionSource,
     )
 }
 

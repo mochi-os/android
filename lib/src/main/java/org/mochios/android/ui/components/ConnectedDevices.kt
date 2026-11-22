@@ -65,6 +65,8 @@ import org.mochios.android.auth.SessionManager
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatTimestamp
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 import org.mochios.android.util.NaturalCompare
 import org.mochios.android.util.characters
 
@@ -288,8 +290,8 @@ fun ConnectedDevicesScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding),
-            contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
+            contentPadding = spaced(PaddingValues(16.dp)),
+            verticalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(16.dp)),
         ) {
             // The same for every device, so on show until a new password
             // brings its own copy of them.
@@ -396,10 +398,11 @@ private fun AddDeviceDialog(
  */
 @Composable
 private fun DetailsSection(addressLabel: String, address: String, username: String) {
+    val spacing = LocalSpacing.current
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.padding(spacing.card(horizontal = 16.dp, vertical = 16.dp)),
+            verticalArrangement = Arrangement.spacedBy(spacing.gap(12.dp)),
         ) {
             CredentialRow(addressLabel, address)
             if (username.isNotEmpty()) {
@@ -422,10 +425,11 @@ private fun CredentialsSection(
     onDone: () -> Unit,
 ) {
     SecureWindow()
+    val spacing = LocalSpacing.current
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.padding(spacing.card(horizontal = 16.dp, vertical = 16.dp)),
+            verticalArrangement = Arrangement.spacedBy(spacing.gap(12.dp)),
         ) {
             CredentialRow(addressLabel, address)
             CredentialRow(stringResource(R.string.devices_username), username)
@@ -471,7 +475,7 @@ private fun LabelledRow(label: String, content: @Composable RowScope.() -> Unit)
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(8.dp)),
     ) {
         Text(
             text = label,
@@ -501,9 +505,16 @@ internal fun deviceDates(device: Device, format: Format): String {
 
 @Composable
 private fun DeviceRow(device: Device, onDelete: () -> Unit) {
+    val spacing = LocalSpacing.current
     MochiCard(modifier = Modifier.fillMaxWidth()) {
         Row(
-            modifier = Modifier.padding(start = 16.dp, top = 8.dp, end = 4.dp, bottom = 8.dp),
+            // A card's padding, short at the end where the delete button's own room makes up the rest.
+            modifier = Modifier.padding(
+                start = 16.dp * spacing.horizontal,
+                top = 8.dp * spacing.vertical,
+                end = 4.dp * spacing.horizontal,
+                bottom = 8.dp * spacing.vertical,
+            ),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Icon(
@@ -511,7 +522,7 @@ private fun DeviceRow(device: Device, onDelete: () -> Unit) {
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
             )
-            Spacer(Modifier.width(12.dp))
+            Spacer(Modifier.width(spacing.gap(12.dp)))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = device.name,

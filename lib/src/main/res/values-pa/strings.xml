@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">ਖਾਤਾ ਮੁਅੱਤਲ ਕੀਤਾ ਗਿਆ</string>
     <string name="common_back">ਵਾਪਸ</string>
     <string name="common_close">ਬੰਦ ਕਰੋ</string>
+    <string name="common_clear_search">ਖੋਜ ਸਾਫ਼ ਕਰੋ</string>
+    <string name="drawer_open">ਮੇਨੂ ਖੋਲ੍ਹੋ</string>
     <string name="common_cancel">ਰੱਦ ਕਰੋ</string>
     <string name="common_filter">ਫਿਲਟਰ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">ਪਹੁੰਚ ਨਿਯਮ ਜੋੜੋ</string>
     <string name="access_level_manage">ਪ੍ਰਬੰਧ ਕਰੋ</string>
     <string name="access_level_react">ਪ੍ਰਤੀਕਿਰਿਆ</string>
-    <string name="notifications_clear">ਸੂਚਨਾਵਾਂ ਸਾਫ਼ ਕਰੋ</string>
     <string name="entity_avatar_alt">%1$s ਲਈ ਅਵਤਾਰ</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">ਅੱਪਡੇਟਾਂ ਲਈ ਚੈੱਕ ਕਰੋ</string>
     <string name="about_up_to_date">ਅੱਪ ਟੂ ਡੇਟ</string>
     <string name="about_check_downloading">ਵਰਜਨ %1$s ਉਪਲਬਧ ਹੈ, ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">ਅੱਪਡੇਟ ਸਰਵਰ ਤੱਕ ਨਹੀਂ ਪਹੁੰਚ ਸਕੇ</string>
     <string name="about_check_download_failed">ਡਾਊਨਲੋਡ ਅਸਫਲ ਰਿਹਾ</string>
     <string name="notifications_clear_all_title">ਸਾਰੀਆਂ ਸੂਚਨਾਵਾਂ ਸਾਫ਼ ਕਰਨੀਆਂ ਹਨ?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ਗੂੜ੍ਹਾ</string>
     <string name="format_italic">ਟੇਢਾ</string>
     <string name="format_link">ਲਿੰਕ</string>
+    <string name="format_link_text">ਟੈਕਸਟ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">ਸਿਰਲੇਖ</string>
     <string name="format_code">ਕੋਡ</string>
     <string name="format_list">ਬੁਲੇਟ ਸੂਚੀ</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" ਲਈ ਪਹੁੰਚ ਨਿਯਮ ਹਟਾਈਏ?</string>
     <string name="color_picker_custom">ਕਸਟਮ</string>
     <string name="color_picker_clear">ਸਾਫ਼ ਕਰੋ</string>
+    <string name="color_picker_white">ਚਿੱਟਾ</string>
+    <string name="color_picker_slate">ਸਲੇਟੀ</string>
+    <string name="color_picker_red">ਲਾਲ</string>
+    <string name="color_picker_orange">ਸੰਤਰੀ</string>
+    <string name="color_picker_amber">ਅੰਬਰ</string>
+    <string name="color_picker_green">ਹਰਾ</string>
+    <string name="color_picker_teal">ਨੀਲਾ-ਹਰਾ</string>
+    <string name="color_picker_cyan">ਆਸਮਾਨੀ</string>
+    <string name="color_picker_blue">ਨੀਲਾ</string>
+    <string name="color_picker_violet">ਜਾਮਨੀ</string>
+    <string name="color_picker_pink">ਗੁਲਾਬੀ</string>
+    <string name="color_picker_black">ਕਾਲਾ</string>
     <string name="common_refresh">ਰਿਫਰੈਸ਼</string>
     <string name="launcher_add_to_home">ਹੋਮ ਸਕਰੀਨ ਵਿੱਚ ਜੋੜੋ</string>
     <string name="common_continue">ਜਾਰੀ ਰੱਖੋ</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">ਅਣ-ਪੜ੍ਹਿਆ</string>
     <string name="person_unknown">ਅਣਜਾਣ</string>
+    <string name="group_unknown">ਅਣਜਾਣ ਗਰੁੱਪ</string>
     <string name="format_time_seconds_short">%1$sਸਕਿੰਟ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ਡਾਊਨਲੋਡ ਹੋ ਰਹੀ ਹੈ…</string>

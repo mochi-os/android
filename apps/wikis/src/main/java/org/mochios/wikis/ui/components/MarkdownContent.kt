@@ -5,6 +5,7 @@
 
 package org.mochios.wikis.ui.components
 
+import android.content.Intent
 import android.net.Uri
 import android.text.Spannable
 import android.text.SpannableStringBuilder
@@ -68,7 +69,9 @@ import org.mochios.android.ui.components.ClickableLinkTextView
 import org.mochios.android.ui.components.CoilImagesPlugin
 import org.mochios.android.ui.components.CopyButton
 import org.mochios.android.ui.components.LightboxScreen
-import org.mochios.android.util.webUri
+import org.mochios.android.util.LINKED_ADDRESSES
+import org.mochios.android.util.isMailUrl
+import org.mochios.android.util.linkUri
 import java.text.Normalizer
 
 /**
@@ -170,8 +173,10 @@ fun MarkdownContent(
             .usePlugin(TaskListPlugin.create(context))
             // LinkifyPlugin auto-links bare URLs in the text. We *don't*
             // want it to fight our LinkResolver on already-linked markdown,
-            // but it only adds spans where none exist, so it's safe.
-            .usePlugin(LinkifyPlugin.create())
+            // but it only adds spans where none exist, so it's safe. Only
+            // what the resolver opens is linked: a phone number drawn as a
+            // link would take the tap and do nothing.
+            .usePlugin(LinkifyPlugin.create(LINKED_ADDRESSES))
             .usePlugin(object : AbstractMarkwonPlugin() {
                 override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
                     // LinkResolver fires for every `LinkSpan` click —
@@ -336,9 +341,9 @@ private fun ProseSegment(
     AndroidView(
         factory = { ctx ->
             ClickableLinkTextView(ctx).apply {
-                // TableAwareMovementMethod (wraps LinkMovementMethod) so links
-                // inside Markwon table cells are tappable — plain
-                // LinkMovementMethod can't dispatch clicks into TableRowSpans.
+                // A tapped link, in a table cell too, is dispatched by the view
+                // itself; Markwon's movement method lets a keyboard step
+                // through the links.
                 movementMethod = TableAwareMovementMethod.create()
                 textSize = 16f
                 setTextColor(textColor)
@@ -792,15 +797,19 @@ private class WikiLinkResolver(
             return
         }
 
-        // The link text is peer-authored page content: only web schemes may
-        // leave the app. Anything else — tel:, intent:, another app's custom
-        // scheme — is dropped rather than launched.
-        val uri = webUri(resolved) ?: return
+        // The link text is peer-authored page content: only web and e-mail
+        // addresses may leave the app. Anything else — tel:, intent:, another
+        // app's custom scheme — is dropped rather than launched.
+        val uri = linkUri(resolved) ?: return
         try {
-            val intent = CustomTabsIntent.Builder().build()
-            intent.launchUrl(view.context, uri)
+            if (isMailUrl(resolved)) {
+                // A draft in the mail app; a Custom Tab shows only web pages.
+                view.context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+            } else {
+                CustomTabsIntent.Builder().build().launchUrl(view.context, uri)
+            }
         } catch (_: Exception) {
-            // No browser; swallow so a bad link doesn't crash the page.
+            // No browser or mail app; swallow so a bad link doesn't crash the page.
             // Markwon's default behaviour here is to throw, which would
             // propagate to the user.
         }

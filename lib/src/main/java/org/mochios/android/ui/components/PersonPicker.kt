@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -64,6 +65,8 @@ import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.format.personName
 import org.mochios.android.model.User
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.mochios.android.util.fingerprint
 
@@ -198,6 +201,7 @@ private fun PersonPickerField(
     // on tap instead of a below→above blink on every open.
     var searchFocused by remember { mutableStateOf(false) }
     val density = LocalDensity.current
+    val spacing = LocalSpacing.current
     val configuration = LocalConfiguration.current
     val popupPositionProvider = remember(searchFocused) {
         FieldPopupPositionProvider(anchorAbove = searchFocused)
@@ -312,7 +316,7 @@ private fun PersonPickerField(
                         .width(with(density) { anchorWidth.toDp() })
                         .heightIn(max = maxPopupHeight)
                 ) {
-                    Column(modifier = Modifier.padding(vertical = 8.dp)) {
+                    Column(modifier = Modifier.padding(vertical = spacing.gap(8.dp))) {
                         MochiTextField(
                             value = query,
                             onValueChange = { newQuery ->
@@ -332,11 +336,11 @@ private fun PersonPickerField(
                             singleLine = true,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = 8.dp)
+                                .padding(horizontal = spacing.gap(8.dp))
                                 .onFocusChanged { state -> searchFocused = state.isFocused }
                         )
 
-                        Spacer(modifier = Modifier.size(8.dp))
+                        Spacer(modifier = Modifier.size(spacing.gap(8.dp)))
                         HorizontalDivider()
 
                         val isEmpty = memberMatches.isEmpty() &&
@@ -346,7 +350,7 @@ private fun PersonPickerField(
                                 text = stringResource(R.string.person_picker_no_people),
                                 style = MaterialTheme.typography.bodyMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+                                modifier = Modifier.padding(horizontal = spacing.gap(16.dp), vertical = spacing.gap(12.dp))
                             )
                         } else {
                             val rowClick: (User) -> Unit = { user ->
@@ -416,7 +420,7 @@ private fun SectionHeader(text: String) {
         text = text,
         style = MaterialTheme.typography.labelMedium,
         color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 4.dp)
+        modifier = Modifier.padding(spaced(PaddingValues(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 4.dp)))
     )
 }
 
@@ -430,7 +434,7 @@ private fun NoneRow(onClick: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(start = 52.dp, end = 16.dp, top = 12.dp, bottom = 12.dp)
+            .padding(spaced(PaddingValues(start = 52.dp, end = 16.dp, top = 12.dp, bottom = 12.dp)))
     )
 }
 
@@ -445,6 +449,7 @@ private fun PersonRow(
     onClick: () -> Unit,
     enabled: Boolean = true
 ) {
+    val spacing = LocalSpacing.current
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -457,7 +462,7 @@ private fun PersonRow(
                     Color.Transparent
                 }
             )
-            .padding(horizontal = 12.dp, vertical = 8.dp),
+            .padding(horizontal = spacing.gap(12.dp), vertical = spacing.gap(8.dp)),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(
@@ -473,14 +478,14 @@ private fun PersonRow(
                 )
             }
         }
-        Spacer(modifier = Modifier.size(8.dp))
+        Spacer(modifier = Modifier.size(spacing.gap(8.dp)))
         EntityAvatar(
             name = user.name,
             src = personAvatarPath(user.fingerprint),
             seed = user.fingerprint,
             size = 32.dp
         )
-        Spacer(modifier = Modifier.size(12.dp))
+        Spacer(modifier = Modifier.size(spacing.gap(12.dp)))
         Text(
             text = user.name,
             style = MaterialTheme.typography.bodyLarge,

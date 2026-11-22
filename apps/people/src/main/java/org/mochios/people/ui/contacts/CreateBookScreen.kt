@@ -87,7 +87,7 @@ fun CreateBookScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.people_books_create),
         submitLabel = stringResource(R.string.people_books_create),
-        submitEnabled = name.isNotBlank() && !uiState.isCreating,
+        submitEnabled = name.isNotBlank(),
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

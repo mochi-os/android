@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Kont sispann</string>
     <string name="common_back">Retounen</string>
     <string name="common_close">Fèmen</string>
+    <string name="common_clear_search">Efase rechèch</string>
+    <string name="drawer_open">Ouvri meni</string>
     <string name="common_cancel">Anile</string>
     <string name="common_filter">Filtre</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -178,7 +180,6 @@
     <string name="access_add_rule_title">Ajoute règ aksè</string>
     <string name="access_level_manage">Jere</string>
     <string name="access_level_react">Reyaji</string>
-    <string name="notifications_clear">Efase notifikasyon</string>
     <string name="entity_avatar_alt">Avatar pou %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Tcheke pou mizajou</string>
     <string name="about_up_to_date">Ajou</string>
     <string name="about_check_downloading">Vèsyon %1$s disponib, l ap telechaje…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Pa t kapab jwenn sèvè mizajou a</string>
     <string name="about_check_download_failed">Telechajman an echwe</string>
     <string name="notifications_clear_all_title">Efase tout notifikasyon?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Gra</string>
     <string name="format_italic">Italik</string>
     <string name="format_link">Lyen</string>
+    <string name="format_link_text">tèks</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Tit</string>
     <string name="format_code">Kòd</string>
     <string name="format_list">Lis ak pwen</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Retire règ aksè pou \"%1$s\"?</string>
     <string name="color_picker_custom">Pèsonalize</string>
     <string name="color_picker_clear">Efase</string>
+    <string name="color_picker_white">Blan</string>
+    <string name="color_picker_slate">Gri adwaz</string>
+    <string name="color_picker_red">Wouj</string>
+    <string name="color_picker_orange">Zoranj</string>
+    <string name="color_picker_amber">Anb</string>
+    <string name="color_picker_green">Vèt</string>
+    <string name="color_picker_teal">Ble-vèt</string>
+    <string name="color_picker_cyan">Syan</string>
+    <string name="color_picker_blue">Ble</string>
+    <string name="color_picker_violet">Vyolèt</string>
+    <string name="color_picker_pink">Woz</string>
+    <string name="color_picker_black">Nwa</string>
     <string name="common_refresh">Rafrechi</string>
     <string name="launcher_add_to_home">Ajoute sou ekran akèy la</string>
     <string name="common_continue">Kontinye</string>
@@ -339,6 +355,7 @@
     </plurals>
     <string name="drawer_unread">Pa li</string>
     <string name="person_unknown">Enkoni</string>
+    <string name="group_unknown">Gwoup enkoni</string>
     <string name="format_time_seconds_short">%1$ss</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Ap telechaje %1$s…</string>

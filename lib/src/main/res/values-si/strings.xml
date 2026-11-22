@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">ගිණුම අත්හිටුවා ඇත</string>
     <string name="common_back">ආපසු</string>
     <string name="common_close">වසන්න</string>
+    <string name="common_clear_search">සෙවුම හිස් කරන්න</string>
+    <string name="drawer_open">මෙනුව විවෘත කරන්න</string>
     <string name="common_cancel">අවලංගු කරන්න</string>
     <string name="common_filter">පෙරහන</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">ප්‍රවේශ නීතිය එක් කරන්න</string>
     <string name="access_level_manage">කළමනාකරණය</string>
     <string name="access_level_react">ප්‍රතික්‍රියා</string>
-    <string name="notifications_clear">දැනුම්දීම් හිස් කරන්න</string>
     <string name="entity_avatar_alt">%1$s සඳහා අවතාරය</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">යාවත්කාලීන සඳහා පරීක්ෂා කරන්න</string>
     <string name="about_up_to_date">යාවත්කාලීනයි</string>
     <string name="about_check_downloading">අනුවාදය %1$s තිබේ, බාගත වෙමින්…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">යාවත්කාලීන සේවාදායකය වෙත ළඟා විය නොහැකි විය</string>
     <string name="about_check_download_failed">බාගත කිරීම අසාර්ථක විය</string>
     <string name="notifications_clear_all_title">සියලුම දැනුම්දීම් ඉවත් කරන්නද?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">තද</string>
     <string name="format_italic">ඇල</string>
     <string name="format_link">සබැඳිය</string>
+    <string name="format_link_text">පෙළ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">ශීර්ෂය</string>
     <string name="format_code">කේතය</string>
     <string name="format_list">බුලට් ලැයිස්තුව</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" සඳහා ප්‍රවේශ නීතිය ඉවත් කරන්නද?</string>
     <string name="color_picker_custom">අභිරුචි</string>
     <string name="color_picker_clear">හිස් කරන්න</string>
+    <string name="color_picker_white">සුදු</string>
+    <string name="color_picker_slate">ස්ලේට් අළු</string>
+    <string name="color_picker_red">රතු</string>
+    <string name="color_picker_orange">තැඹිලි</string>
+    <string name="color_picker_amber">ඇම්බර්</string>
+    <string name="color_picker_green">කොළ</string>
+    <string name="color_picker_teal">නිල්-කොළ</string>
+    <string name="color_picker_cyan">සයන්</string>
+    <string name="color_picker_blue">නිල්</string>
+    <string name="color_picker_violet">දම්</string>
+    <string name="color_picker_pink">රෝස</string>
+    <string name="color_picker_black">කළු</string>
     <string name="common_refresh">අලුත් කරන්න</string>
     <string name="launcher_add_to_home">මුල් තිරයට එක් කරන්න</string>
     <string name="common_continue">ඉදිරියට</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">නොකියවූ</string>
     <string name="person_unknown">නොදන්නා</string>
+    <string name="group_unknown">නොදන්නා කණ්ඩායම</string>
     <string name="format_time_seconds_short">%1$sතත්</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s බාගත වෙමින්…</string>

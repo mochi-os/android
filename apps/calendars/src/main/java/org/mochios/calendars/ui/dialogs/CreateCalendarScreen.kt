@@ -96,7 +96,7 @@ fun CreateCalendarScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.calendars_create),
         submitLabel = stringResource(R.string.calendars_create_submit),
-        submitEnabled = uiState.name.isNotBlank() && !uiState.isBusy,
+        submitEnabled = uiState.name.isNotBlank(),
         isBusy = uiState.isBusy,
         error = uiState.error,
         onBack = onBack,

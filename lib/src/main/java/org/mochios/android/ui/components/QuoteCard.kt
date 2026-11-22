@@ -29,6 +29,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.util.isWebUrl
 import org.mochios.android.util.openWeb
 
@@ -53,6 +54,7 @@ fun QuoteCard(
 ) {
     val context = LocalContext.current
     val label = name.ifEmpty { address }
+    val spacing = LocalSpacing.current
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -60,7 +62,7 @@ fun QuoteCard(
             .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(10.dp))
             .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f))
             .then(if (isWebUrl(url)) Modifier.clickable { openWeb(context, url) } else Modifier)
-            .padding(12.dp),
+            .padding(spacing.card(horizontal = 12.dp, vertical = 12.dp)),
     ) {
         if (label.isNotEmpty()) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -70,7 +72,7 @@ fun QuoteCard(
                     seed = seed.ifEmpty { address },
                     size = 20.dp,
                 )
-                Spacer(modifier = Modifier.width(6.dp))
+                Spacer(modifier = Modifier.width(spacing.gap(6.dp)))
                 Text(
                     text = label,
                     style = MaterialTheme.typography.labelMedium,
@@ -80,7 +82,7 @@ fun QuoteCard(
                     modifier = Modifier.weight(1f, fill = false),
                 )
                 if (address.isNotEmpty() && name.isNotEmpty()) {
-                    Spacer(modifier = Modifier.width(6.dp))
+                    Spacer(modifier = Modifier.width(spacing.gap(6.dp)))
                     Text(
                         text = address,
                         style = MaterialTheme.typography.labelSmall,
@@ -91,7 +93,7 @@ fun QuoteCard(
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
         }
         if (text.isNotEmpty()) {
             Text(
@@ -102,7 +104,7 @@ fun QuoteCard(
             )
         }
         if (isWebUrl(image)) {
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
             AsyncImage(
                 model = image,
                 contentDescription = null,

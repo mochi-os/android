@@ -94,6 +94,21 @@ val InterFontFamily = FontFamily(
 )
 
 /**
+ * Atkinson Hyperlegible, the face the "Dyslexia-friendly" font preference
+ * applies, as the web applies it for the same account-wide setting. It ships
+ * only in the APK: the four static cuts the web loads, regular and bold,
+ * upright and italic. A weight between the two resolves to the nearer cut by
+ * the usual font-matching rules (Medium to regular, SemiBold to bold), so the
+ * type scale keeps its hierarchy without a cut being faked.
+ */
+val AtkinsonHyperlegibleFontFamily = FontFamily(
+    Font(R.font.atkinson_hyperlegible_regular, FontWeight.Normal, FontStyle.Normal),
+    Font(R.font.atkinson_hyperlegible_italic, FontWeight.Normal, FontStyle.Italic),
+    Font(R.font.atkinson_hyperlegible_bold, FontWeight.Bold, FontStyle.Normal),
+    Font(R.font.atkinson_hyperlegible_bold_italic, FontWeight.Bold, FontStyle.Italic),
+)
+
+/**
  * The Mochi type scale.
  *
  * Two deliberate departures from the stock Material 3 table, both aimed at the

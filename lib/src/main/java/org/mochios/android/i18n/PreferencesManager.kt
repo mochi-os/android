@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import org.mochios.android.api.unwrapEmpty
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
 import org.mochios.android.auth.ShellApi
@@ -104,8 +105,7 @@ class PreferencesManager @Inject internal constructor(
         publish()
         try {
             val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
-            val resp = api.setPreferences("Bearer $token", mapOf(key to value))
-            if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+            api.setPreferences("Bearer $token", mapOf(key to value)).unwrapEmpty()
         } catch (e: Throwable) {
             settle(key, pick)
             publish()
@@ -167,8 +167,7 @@ class PreferencesManager @Inject internal constructor(
      *  preferences row so the next read returns the defaults. */
     suspend fun resetPreferences() {
         val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
-        val resp = api.resetPreferences("Bearer $token")
-        if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        api.resetPreferences("Bearer $token").unwrapEmpty()
         refresh()
     }
 
@@ -178,8 +177,7 @@ class PreferencesManager @Inject internal constructor(
     suspend fun resetKeys(keys: List<String>) {
         if (keys.isEmpty()) return
         val token = settingsToken() ?: throw IllegalStateException("settings token unavailable")
-        val resp = api.unsetPreferences("Bearer $token", keys)
-        if (!resp.isSuccessful) throw RuntimeException("HTTP ${resp.code()}")
+        api.unsetPreferences("Bearer $token", keys).unwrapEmpty()
         refresh()
     }
 

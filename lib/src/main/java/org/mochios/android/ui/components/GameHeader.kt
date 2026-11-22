@@ -37,6 +37,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /** Stone colour used by [GameHeaderStoneDot] in chess/go. */
 enum class StoneColor { WHITE, BLACK }
@@ -65,7 +66,7 @@ fun GameTopBarTitle(
                 seed = opponentFingerprint,
                 size = 32.dp,
             )
-            Spacer(Modifier.width(8.dp))
+            Spacer(Modifier.width(LocalSpacing.current.gap(8.dp)))
         }
         Text(
             text = title,
@@ -92,11 +93,12 @@ fun GameStatusBar(
     modifier: Modifier = Modifier,
     stats: @Composable RowScope.() -> Unit,
 ) {
+    val spacing = LocalSpacing.current
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
+            .padding(vertical = spacing.gap(8.dp)),
+        verticalArrangement = Arrangement.spacedBy(spacing.gap(6.dp)),
     ) {
         // The scroller spans the pane so the chips run to both edges; the
         // gutter is padding on its content, which scrolls with it. It matches
@@ -106,7 +108,7 @@ fun GameStatusBar(
                 .fillMaxWidth()
                 .horizontalScroll(rememberScrollState())
                 .padding(horizontal = STATUS_GUTTER),
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
+            horizontalArrangement = Arrangement.spacedBy(spacing.gap(6.dp)),
             verticalAlignment = Alignment.CenterVertically,
             content = stats,
         )
@@ -128,7 +130,7 @@ fun GameStatusBar(
                         .clip(CircleShape)
                         .background(dotColor),
                 )
-                Spacer(Modifier.width(6.dp))
+                Spacer(Modifier.width(spacing.gap(6.dp)))
             }
             Text(
                 text = status,
@@ -177,7 +179,7 @@ fun RowScope.GameHeaderStat(
         label = {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                horizontalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(4.dp)),
                 modifier = Modifier.widthIn(max = 160.dp),
             ) {
                 Text(
@@ -234,5 +236,5 @@ fun GameHeaderStoneDot(color: StoneColor) {
     )
 }
 
-/** Gutter on the status strip's content, matching the top bar's. */
+/** Gutter on the status strip's content, matching the top bar's, which keeps its size at every density. */
 private val STATUS_GUTTER = 16.dp

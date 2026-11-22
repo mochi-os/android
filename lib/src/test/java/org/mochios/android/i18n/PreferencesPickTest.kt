@@ -22,6 +22,8 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
 import org.mochios.android.auth.AuthApi
 import org.mochios.android.auth.AuthRepository
 import org.mochios.android.auth.SessionManager
@@ -85,10 +87,15 @@ class PreferencesPickTest {
             return Response.success(mapOf())
         }
 
-        override suspend fun unsetPreferences(token: String, keys: List<String>) = Response.success(mapOf<String, Any>())
+        override suspend fun unsetPreferences(token: String, keys: List<String>): Response<Map<String, Any>> =
+            if (clearing == null) Response.success(mapOf()) else Response.error(403, clearing!!.toResponseBody())
 
-        override suspend fun resetPreferences(token: String) = Response.success(mapOf<String, Any>())
+        override suspend fun resetPreferences(token: String): Response<Map<String, Any>> =
+            if (clearing == null) Response.success(mapOf()) else Response.error(403, clearing!!.toResponseBody())
     }
+
+    /** The server's refusal of a reset or an unset, or null to accept them. */
+    @Volatile private var clearing: String? = null
 
     private val shell = object : ShellApi {
         override suspend fun boot(body: ShellRequest): Response<Map<String, Any>> = Response.success(mapOf())
@@ -156,6 +163,28 @@ class PreferencesPickTest {
         assertTrue(result.isFailure)
         assertEquals("12h", raw("time_format"))
         assertEquals(TimeFormat.H12, manager.preferences.value.timeFormat)
+    }
+
+    @Test
+    fun `a refused pick throws the server's reason`() {
+        val save = pick("time_format", "24h")
+        answer(false)
+        val error = runBlocking { save.await() }.exceptionOrNull()!!.toMochiError()
+        assertEquals(MochiError.ServerError(500, "Refused"), error)
+    }
+
+    @Test
+    fun `a refused reset throws the server's reason`() {
+        clearing = """{"error":"forbidden","message":"Nicht erlaubt"}"""
+        val error = runBlocking { runCatching { manager.resetPreferences() } }.exceptionOrNull()!!.toMochiError()
+        assertEquals(MochiError.ForbiddenError("Nicht erlaubt", "forbidden"), error)
+    }
+
+    @Test
+    fun `a refused unset throws the server's reason`() {
+        clearing = """{"error":"forbidden","message":"Nicht erlaubt"}"""
+        val error = runBlocking { runCatching { manager.resetKeys(listOf("maps")) } }.exceptionOrNull()!!.toMochiError()
+        assertEquals(MochiError.ForbiddenError("Nicht erlaubt", "forbidden"), error)
     }
 
     @Test

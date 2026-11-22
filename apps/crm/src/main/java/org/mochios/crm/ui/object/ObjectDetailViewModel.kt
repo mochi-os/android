@@ -537,15 +537,11 @@ class ObjectDetailViewModel @Inject constructor(
         _uiState.value = _uiState.value.copy(activity = change(_uiState.value.activity))
     }
 
-    suspend fun searchUsers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> {
-        return try {
-            repository.searchUsers(query).map {
-                org.mochios.android.ui.components.MentionSuggestion(id = it.id.toString(), name = it.name)
-            }
-        } catch (_: Exception) {
-            emptyList()
+    // A failure goes on to the mention field, which says why nothing was found.
+    suspend fun searchUsers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> =
+        repository.searchUsers(query).map {
+            org.mochios.android.ui.components.MentionSuggestion(id = it.id.toString(), name = it.name)
         }
-    }
 
     // PersonPicker expects List<User>. Person.id is an entity-id string; we
     // round-trip it via User.fingerprint since User.id is a (numeric) Int.

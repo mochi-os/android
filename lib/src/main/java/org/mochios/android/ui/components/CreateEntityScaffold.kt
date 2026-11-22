@@ -45,6 +45,7 @@ import org.mochios.android.R
 import org.mochios.android.files.Upload
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * The chrome every "create a feed / forum / wiki / project" screen wears: a top
@@ -56,7 +57,8 @@ import org.mochios.android.api.userMessage
  *
  * @param title Screen title.
  * @param submitLabel Label of the submit button.
- * @param submitEnabled Whether the form may be submitted.
+ * @param submitEnabled Whether the form may be submitted; the button is also
+ *   off while [isBusy], so a caller need not repeat it.
  * @param isBusy Whether a create request is in flight.
  * @param error Last failure, shown above the button; null hides the line.
  * @param onBack Called by the top bar's back button.
@@ -79,6 +81,7 @@ fun CreateEntityScaffold(
     actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (PaddingValues) -> Unit
 ) {
+    val spacing = LocalSpacing.current
     Scaffold(
         topBar = {
             TopAppBar(
@@ -101,7 +104,7 @@ fun CreateEntityScaffold(
                         .fillMaxWidth()
                         .imePadding()
                         .navigationBarsPadding()
-                        .padding(horizontal = 16.dp, vertical = 12.dp)
+                        .padding(horizontal = spacing.gap(16.dp), vertical = spacing.gap(12.dp))
                 ) {
                     error?.let { failure ->
                         Text(
@@ -109,15 +112,15 @@ fun CreateEntityScaffold(
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.error
                         )
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
                     }
                     if (upload != null) {
                         UploadProgress(upload)
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
                     }
                     MochiButton(
                         onClick = onSubmit,
-                        enabled = submitEnabled,
+                        enabled = submitEnabled && !isBusy,
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         if (isBusy) {
@@ -139,7 +142,7 @@ fun CreateEntityScaffold(
 
 /**
  * The scrolling body of a [CreateEntityScaffold]: the scaffold's padding, a
- * scroll, and the 16dp inset the create screens share.
+ * scroll, and the 16dp inset the create screens share, at the reader's density.
  *
  * @param padding Inner padding handed to the scaffold's content slot.
  * @param fields The form's fields, stacked.
@@ -154,7 +157,7 @@ fun CreateEntityForm(
             .fillMaxSize()
             .padding(padding)
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 16.dp, vertical = 16.dp),
+            .padding(LocalSpacing.current.gap(16.dp)),
         content = fields
     )
 }
@@ -178,6 +181,7 @@ fun LabeledSwitchRow(
     labelStyle: TextStyle = LocalTextStyle.current,
     icon: ImageVector? = null,
 ) {
+    val spacing = LocalSpacing.current
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -185,14 +189,14 @@ fun LabeledSwitchRow(
     ) {
         if (icon != null) {
             Icon(icon, contentDescription = null, modifier = Modifier.size(16.dp))
-            Spacer(Modifier.width(6.dp))
+            Spacer(Modifier.width(spacing.gap(6.dp)))
         }
         Text(
             text = label,
             style = labelStyle,
             modifier = Modifier
                 .weight(1f)
-                .padding(end = 16.dp)
+                .padding(end = spacing.gap(16.dp))
         )
         Switch(
             checked = checked,

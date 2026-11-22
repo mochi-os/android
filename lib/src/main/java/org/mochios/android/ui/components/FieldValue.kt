@@ -32,6 +32,7 @@ import org.mochios.android.format.formatFingerprint
 import org.mochios.android.i18n.Format
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Checklist
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.util.fingerprint
 import java.time.LocalDate
 
@@ -164,8 +165,9 @@ fun FieldValue(display: FieldDisplay, modifier: Modifier = Modifier, compact: Bo
         MaterialTheme.typography.bodyMedium
     }
     val muted = MaterialTheme.colorScheme.onSurfaceVariant
+    val spacing = LocalSpacing.current
     val icon = if (compact) 12.dp else 16.dp
-    val gap = if (compact) 4.dp else 6.dp
+    val gap = spacing.gap(if (compact) 4.dp else 6.dp)
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
         when (display) {
             is FieldDisplay.Choice -> {
@@ -206,11 +208,11 @@ fun FieldValue(display: FieldDisplay, modifier: Modifier = Modifier, compact: Bo
                 Row(
                     modifier = Modifier
                         .background(tint.copy(alpha = 0.1f), MaterialTheme.shapes.small)
-                        .padding(horizontal = 6.dp, vertical = 2.dp),
+                        .padding(horizontal = spacing.gap(6.dp), vertical = spacing.gap(2.dp)),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
                     Icon(Icons.Outlined.CheckBox, contentDescription = null, modifier = Modifier.size(icon), tint = tint)
-                    Spacer(modifier = Modifier.width(4.dp))
+                    Spacer(modifier = Modifier.width(spacing.gap(4.dp)))
                     Line(display.text, style, tint)
                 }
             }

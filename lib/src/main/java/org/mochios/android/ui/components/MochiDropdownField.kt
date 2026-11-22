@@ -29,6 +29,7 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.ui.theme.LocalEntityRadius
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A closed dropdown: the chosen value, a label over it, and a chevron.
@@ -66,6 +67,7 @@ fun MochiDropdownField(
     menuContent: @Composable ColumnScope.() -> Unit,
 ) {
     val radius = LocalEntityRadius.current
+    val spacing = LocalSpacing.current
     val shown = value.ifEmpty { placeholder.orEmpty() }
     val valueColor = when {
         !enabled -> MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
@@ -97,7 +99,7 @@ fun MochiDropdownField(
                         MaterialTheme.colorScheme.surfaceContainerHighest
                     }
                 )
-                .padding(horizontal = 16.dp, vertical = 12.dp),
+                .padding(horizontal = spacing.gap(16.dp), vertical = spacing.gap(12.dp)),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Column(modifier = Modifier.weight(1f)) {

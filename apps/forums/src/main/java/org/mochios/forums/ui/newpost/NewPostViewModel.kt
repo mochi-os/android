@@ -249,12 +249,9 @@ class NewPostViewModel @Inject constructor(
     /** Backs the body field's `@mention` autocomplete with this forum's members. */
     suspend fun searchMembers(query: String): List<MentionSuggestion> {
         if (forumId.isBlank()) return emptyList()
-        return try {
-            repository.searchMembers(forumId, query).members.map { member ->
-                MentionSuggestion(id = member.id, name = member.name)
-            }
-        } catch (_: Exception) {
-            emptyList()
+        // A failure goes on to the mention field, which says why nothing was found.
+        return repository.searchMembers(forumId, query).members.map { member ->
+            MentionSuggestion(id = member.id, name = member.name)
         }
     }
 

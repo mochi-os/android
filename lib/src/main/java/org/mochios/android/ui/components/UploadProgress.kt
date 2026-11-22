@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.files.Upload
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Byte progress of an upload, as the web draws it: a filling bar with "1.2 MB
@@ -43,7 +44,7 @@ fun UploadProgress(upload: Upload?, modifier: Modifier = Modifier) {
     Row(
         modifier = modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        horizontalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(8.dp)),
     ) {
         val bar = Modifier
             .weight(1f)
@@ -83,15 +84,16 @@ fun UploadProgress(upload: Upload?, modifier: Modifier = Modifier) {
 fun UploadFiles(upload: Upload?, modifier: Modifier = Modifier) {
     if (upload == null) return
     val format = LocalFormat.current
+    val spacing = LocalSpacing.current
     Column(
         modifier = modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
+        verticalArrangement = Arrangement.spacedBy(spacing.gap(6.dp)),
     ) {
         upload.files.forEach { file ->
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
             ) {
                 FileKindIcon(type = "", name = file.name, modifier = Modifier.size(20.dp))
                 Text(

@@ -60,6 +60,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.files.Upload
 import org.mochios.android.files.rememberFileLabel
 import org.mochios.android.model.FileKind
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Defaults for [ComposeBar], chiefly the keyboard-inset choice.
@@ -215,6 +216,7 @@ fun ComposeBar(
         if (requireText) value.text.isNotBlank() else value.text.isNotBlank() || pending.isNotEmpty()
     val busy = isSending || upload != null
     val canSend = enabled && !busy && hasContent
+    val spacing = LocalSpacing.current
 
     Surface(
         modifier = modifier.fillMaxWidth(),
@@ -231,23 +233,23 @@ fun ComposeBar(
                 modifier = Modifier
                     .fillMaxWidth()
                     .windowInsetsPadding(appliedInsets)
-                    .padding(horizontal = 8.dp, vertical = 8.dp),
+                    .padding(spacing.gap(8.dp)),
             ) {
                 val sending = upload?.files.orEmpty()
                 if (sending.isNotEmpty()) {
                     FlowRow(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
+                        verticalArrangement = Arrangement.spacedBy(spacing.gap(4.dp)),
                     ) {
                         sending.forEach { file -> UploadChip(file) }
                     }
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
                 } else if (attachments != null && pending.isNotEmpty()) {
                     FlowRow(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(4.dp),
+                        horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
+                        verticalArrangement = Arrangement.spacedBy(spacing.gap(4.dp)),
                     ) {
                         pending.forEachIndexed { index, uri ->
                             val label = rememberFileLabel(
@@ -273,11 +275,11 @@ fun ComposeBar(
                             )
                         }
                     }
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
                 }
                 if (upload != null) {
-                    UploadProgress(upload, modifier = Modifier.padding(horizontal = 4.dp))
-                    Spacer(modifier = Modifier.height(4.dp))
+                    UploadProgress(upload, modifier = Modifier.padding(horizontal = spacing.gap(4.dp)))
+                    Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
                 }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -333,7 +335,7 @@ fun ComposeBar(
                     }
 
                     trailingContent?.invoke(this)
-                    Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.width(spacing.gap(8.dp)))
                     MochiIconButton(onClick = submit, enabled = canSend) {
                         if (busy) {
                             CircularProgressIndicator(modifier = Modifier.padding(4.dp))
@@ -348,7 +350,7 @@ fun ComposeBar(
                         text = errorMessage,
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.error,
-                        modifier = Modifier.padding(start = 12.dp, top = 4.dp),
+                        modifier = Modifier.padding(start = spacing.gap(12.dp), top = spacing.gap(4.dp)),
                     )
                 }
             }

@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">অ্যাকাউন্ট স্থগিত করা হয়েছে</string>
     <string name="common_back">ফিরে যান</string>
     <string name="common_close">বন্ধ করুন</string>
+    <string name="common_clear_search">অনুসন্ধান পরিষ্কার করুন</string>
+    <string name="drawer_open">মেনু খুলুন</string>
     <string name="common_cancel">বাতিল করুন</string>
     <string name="common_filter">ফিল্টার</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -174,7 +176,6 @@
     <string name="access_add_rule_title">অ্যাক্সেস নিয়ম যোগ করুন</string>
     <string name="access_level_manage">পরিচালনা</string>
     <string name="access_level_react">প্রতিক্রিয়া</string>
-    <string name="notifications_clear">বিজ্ঞপ্তি পরিষ্কার করুন</string>
     <string name="entity_avatar_alt">%1$s-এর অ্যাভাটার</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -212,6 +213,7 @@
     <string name="about_check_updates">আপডেট খুঁজুন</string>
     <string name="about_up_to_date">হালনাগাদ আছে</string>
     <string name="about_check_downloading">সংস্করণ %1$s উপলব্ধ, ডাউনলোড হচ্ছে…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">আপডেট সার্ভারে পৌঁছানো যায়নি</string>
     <string name="about_check_download_failed">ডাউনলোড ব্যর্থ হয়েছে</string>
     <string name="notifications_clear_all_title">সব বিজ্ঞপ্তি মুছবেন?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">গাঢ়</string>
     <string name="format_italic">বাঁকা</string>
     <string name="format_link">লিঙ্ক</string>
+    <string name="format_link_text">টেক্সট</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">শিরোনাম</string>
     <string name="format_code">কোড</string>
     <string name="format_list">বুলেট তালিকা</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" এর জন্য অ্যাক্সেস নিয়ম সরাবেন?</string>
     <string name="color_picker_custom">কাস্টম</string>
     <string name="color_picker_clear">পরিষ্কার করুন</string>
+    <string name="color_picker_white">সাদা</string>
+    <string name="color_picker_slate">স্লেট ধূসর</string>
+    <string name="color_picker_red">লাল</string>
+    <string name="color_picker_orange">কমলা</string>
+    <string name="color_picker_amber">অ্যাম্বার</string>
+    <string name="color_picker_green">সবুজ</string>
+    <string name="color_picker_teal">নীলচে সবুজ</string>
+    <string name="color_picker_cyan">সায়ান</string>
+    <string name="color_picker_blue">নীল</string>
+    <string name="color_picker_violet">বেগুনি</string>
+    <string name="color_picker_pink">গোলাপি</string>
+    <string name="color_picker_black">কালো</string>
     <string name="common_refresh">রিফ্রেশ</string>
     <string name="launcher_add_to_home">হোম স্ক্রিনে যোগ করুন</string>
     <string name="common_continue">চালিয়ে যান</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">অপঠিত</string>
     <string name="person_unknown">অজানা</string>
+    <string name="group_unknown">অজানা গ্রুপ</string>
     <string name="format_time_seconds_short">%1$sসে</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ডাউনলোড হচ্ছে…</string>

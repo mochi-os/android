@@ -33,6 +33,7 @@ import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.notifications.MochiNotification
 import org.mochios.android.notifications.NotificationCategory
 import org.mochios.android.notifications.ordered
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * One notification as a card: who or what it is from, its title, text and
@@ -47,6 +48,7 @@ fun NotificationCard(
     actions: @Composable RowScope.() -> Unit = {},
 ) {
     val format = LocalFormat.current
+    val spacing = LocalSpacing.current
     MochiCard(
         modifier = modifier
             .fillMaxWidth()
@@ -55,10 +57,10 @@ fun NotificationCard(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
     ) {
-        Column(modifier = Modifier.padding(12.dp)) {
+        Column(modifier = Modifier.padding(spacing.card(horizontal = 12.dp, vertical = 12.dp))) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(12.dp)),
             ) {
                 // Always render a leading avatar so rows align: a person photo
                 // when there's a sender, otherwise an app-seeded monogram so the
@@ -72,7 +74,7 @@ fun NotificationCard(
                 )
                 Column(
                     modifier = Modifier.weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(6.dp),
+                    verticalArrangement = Arrangement.spacedBy(spacing.gap(6.dp)),
                 ) {
                     Text(
                         text = notification.title,
@@ -95,7 +97,7 @@ fun NotificationCard(
                         modifier = Modifier
                             .clip(CircleShape)
                             .background(MaterialTheme.colorScheme.secondaryContainer)
-                            .padding(horizontal = 6.dp),
+                            .padding(horizontal = spacing.gap(6.dp)),
                     ) {
                         Text(
                             text = "×${format.formatNumber(notification.count)}",

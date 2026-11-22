@@ -9,6 +9,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.text.util.Linkify
 import org.mochios.android.api.OwnedAddress
 import org.mochios.android.i18n.Flights
 import org.mochios.android.i18n.Maps
@@ -34,6 +35,30 @@ fun isWebUrl(url: String): Boolean {
  * Every site that launches or downloads a peer's URL goes through here.
  */
 fun webUri(url: String): Uri? = if (isWebUrl(url)) Uri.parse(url) else null
+
+/**
+ * Whether a peer-supplied URL is an e-mail address, `mailto:`. Opening one
+ * starts a draft in the user's mail app, which sends nothing until they do.
+ */
+fun isMailUrl(url: String): Boolean {
+    val colon = url.indexOf(':')
+    return colon >= 0 && url.substring(0, colon).equals("mailto", ignoreCase = true)
+}
+
+/**
+ * Resolve a link in a peer's rendered text - a post, a comment, a wiki page -
+ * to a [Uri] when it is a web or an e-mail address, null otherwise. The
+ * renderers link bare text for exactly these two kinds ([LINKED_ADDRESSES]),
+ * so nothing is drawn as a link that a tap would not open.
+ */
+fun linkUri(url: String): Uri? = if (isWebUrl(url) || isMailUrl(url)) Uri.parse(url) else null
+
+/**
+ * The kinds of address a renderer links in bare text, as a [Linkify] mask:
+ * web and e-mail addresses, the schemes [linkUri] opens. Never phone numbers,
+ * which nothing opens.
+ */
+const val LINKED_ADDRESSES = Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES
 
 /**
  * Whether an account's address on a profile is one the profile links: a web

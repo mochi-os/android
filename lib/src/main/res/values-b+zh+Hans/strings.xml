@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">账户已暂停</string>
     <string name="common_back">返回</string>
     <string name="common_close">关闭</string>
+    <string name="common_clear_search">清除搜索</string>
+    <string name="drawer_open">打开菜单</string>
     <string name="common_cancel">取消</string>
     <string name="common_filter">筛选</string>
     <string name="common_filter_chip">%1$s:%2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">添加访问规则</string>
     <string name="access_level_manage">管理</string>
     <string name="access_level_react">回应</string>
-    <string name="notifications_clear">清除通知</string>
     <string name="entity_avatar_alt">%1$s 的头像</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">检查更新</string>
     <string name="about_up_to_date">已是最新版本</string>
     <string name="about_check_downloading">版本 %1$s 可用，正在下载…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">无法连接到更新服务器</string>
     <string name="about_check_download_failed">下载失败</string>
     <string name="notifications_clear_all_title">清除所有通知？</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">粗体</string>
     <string name="format_italic">斜体</string>
     <string name="format_link">链接</string>
+    <string name="format_link_text">文本</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">标题</string>
     <string name="format_code">代码</string>
     <string name="format_list">项目符号列表</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">移除「%1$s」的访问规则？</string>
     <string name="color_picker_custom">自定义</string>
     <string name="color_picker_clear">清除</string>
+    <string name="color_picker_white">白色</string>
+    <string name="color_picker_slate">石板灰</string>
+    <string name="color_picker_red">红色</string>
+    <string name="color_picker_orange">橙色</string>
+    <string name="color_picker_amber">琥珀色</string>
+    <string name="color_picker_green">绿色</string>
+    <string name="color_picker_teal">蓝绿色</string>
+    <string name="color_picker_cyan">青色</string>
+    <string name="color_picker_blue">蓝色</string>
+    <string name="color_picker_violet">紫罗兰色</string>
+    <string name="color_picker_pink">粉色</string>
+    <string name="color_picker_black">黑色</string>
     <string name="common_refresh">刷新</string>
     <string name="launcher_add_to_home">添加到主屏幕</string>
     <string name="common_continue">继续</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">未读</string>
     <string name="person_unknown">未知</string>
+    <string name="group_unknown">未知群组</string>
     <string name="format_time_seconds_short">%1$s 秒</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">正在下载 %1$s…</string>

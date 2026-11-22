@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * The colours a [StatusBadge] wears: a pale [background] under dark
@@ -126,13 +127,14 @@ fun StatusBadge(
     val dark = MaterialTheme.colorScheme.surface.luminance() < 0.5f
     val background = if (dark) tone.darkBackground else tone.background
     val foreground = if (dark) tone.darkForeground else tone.foreground
+    val spacing = LocalSpacing.current
     Row(
         modifier = modifier
             .clip(RoundedCornerShape(999.dp))
             .background(background)
             .padding(
-                horizontal = if (compact) 8.dp else 10.dp,
-                vertical = if (compact) 3.dp else 5.dp,
+                horizontal = spacing.gap(if (compact) 8.dp else 10.dp),
+                vertical = spacing.gap(if (compact) 3.dp else 5.dp),
             ),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -143,7 +145,7 @@ fun StatusBadge(
                 tint = foreground,
                 modifier = Modifier.size(if (compact) 12.dp else 14.dp),
             )
-            Spacer(Modifier.width(4.dp))
+            Spacer(Modifier.width(spacing.gap(4.dp)))
         }
         Text(
             text = label,

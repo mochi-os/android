@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.api.MochiError
 import org.mochios.android.api.userMessage
+import org.mochios.android.ui.theme.LocalSpacing
 
 @Composable
 fun ErrorState(
@@ -71,10 +72,11 @@ private fun ErrorState(
     modifier: Modifier,
     onRetry: (() -> Unit)?,
 ) {
+    val spacing = LocalSpacing.current
     Column(
         modifier = modifier
             .fillMaxSize()
-            .padding(horizontal = 24.dp),
+            .padding(horizontal = spacing.gap(24.dp)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
@@ -85,7 +87,7 @@ private fun ErrorState(
             tint = MaterialTheme.colorScheme.error.copy(alpha = 0.7f)
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(16.dp)))
 
         Text(
             text = message,
@@ -97,10 +99,10 @@ private fun ErrorState(
         )
 
         if (onRetry != null) {
-            Spacer(modifier = Modifier.height(24.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(24.dp)))
             MochiButton(onClick = onRetry) {
                 Icon(Icons.Default.Refresh, contentDescription = null, modifier = Modifier.size(ButtonDefaults.IconSize))
-                Spacer(Modifier.width(ButtonDefaults.IconSpacing))
+                Spacer(Modifier.width(spacing.gap(ButtonDefaults.IconSpacing)))
                 Text(stringResource(R.string.common_retry))
             }
         }
@@ -128,8 +130,9 @@ fun InlineErrorState(
     onRetry: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
+    val spacing = LocalSpacing.current
     Column(
-        modifier = modifier.fillMaxWidth().padding(vertical = 8.dp),
+        modifier = modifier.fillMaxWidth().padding(vertical = spacing.gap(8.dp)),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
@@ -139,7 +142,7 @@ fun InlineErrorState(
                 modifier = Modifier.size(16.dp),
                 tint = MaterialTheme.colorScheme.error,
             )
-            Spacer(Modifier.width(6.dp))
+            Spacer(Modifier.width(spacing.gap(6.dp)))
             Text(
                 text = message,
                 style = MaterialTheme.typography.bodySmall,

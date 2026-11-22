@@ -20,18 +20,21 @@ private val SAFE_PREFIXES = listOf("image/", "video/", "audio/", "text/")
  * prefix but are not safe: the attachment is peer-supplied, so handing one to a
  * browser puts attacker-authored HTML inside chrome the user reads as Mochi's.
  * The opaque origin stops it reaching app data; it does not stop it asking for
- * a password.
+ * a password. Generic XML is rendered the same way (XHTML and XSLT among it),
+ * and an SVG image carries script and `foreignObject` HTML, so every `+xml`
+ * type is treated as one of these too.
  */
 private val RENDERED_TYPES = setOf(
     "text/html",
     "text/xml",
-    "application/xhtml+xml",
+    "application/xml",
 )
+
+private const val RENDERED_SUFFIX = "+xml"
 
 private val SAFE_TYPES = setOf(
     "application/pdf",
     "application/json",
-    "application/xml",
     "application/zip",
     "application/rtf",
     "application/epub+zip",
@@ -59,8 +62,9 @@ fun coerceMimeType(candidate: String): String {
     if (type.isEmpty()) return OPAQUE_MIME
     // A wildcard would let the chooser offer every handler, installer included.
     if (type.contains('*')) return OPAQUE_MIME
+    // Before the safe list and the prefixes, both of which a rendered type matches.
+    if (type in RENDERED_TYPES || type.endsWith(RENDERED_SUFFIX)) return OPAQUE_MIME
     if (type in SAFE_TYPES) return type
-    if (type in RENDERED_TYPES) return OPAQUE_MIME
     if (SAFE_PREFIXES.any { type.startsWith(it) }) return type
     return OPAQUE_MIME
 }

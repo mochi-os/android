@@ -531,12 +531,9 @@ class CreatePostViewModel @Inject constructor(
     suspend fun searchMembers(query: String): List<org.mochios.android.ui.components.MentionSuggestion> {
         val feedId = _selectedFeed.value
         if (feedId.isEmpty()) return emptyList()
-        return try {
-            repository.searchMembers(feedId, query).map {
-                org.mochios.android.ui.components.MentionSuggestion(id = it.id, name = it.name)
-            }
-        } catch (_: Exception) {
-            emptyList()
+        // A failure goes on to the mention field, which says why nothing was found.
+        return repository.searchMembers(feedId, query).map {
+            org.mochios.android.ui.components.MentionSuggestion(id = it.id, name = it.name)
         }
     }
 }

@@ -22,6 +22,7 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * The refresh button of a timeline's top bar. Posts that arrive after the list
@@ -47,7 +48,7 @@ fun RefreshButton(
         modifier = Modifier.semantics { stateDescription = label },
     ) {
         RefreshIcon()
-        Spacer(Modifier.width(4.dp))
+        Spacer(Modifier.width(LocalSpacing.current.gap(4.dp)))
         Text(
             text = LocalFormat.current.formatNumber(count),
             style = MaterialTheme.typography.titleMedium,

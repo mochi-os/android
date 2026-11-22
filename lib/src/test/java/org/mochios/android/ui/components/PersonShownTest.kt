@@ -11,6 +11,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mochios.android.account.MochiAccount
+import org.mochios.android.ui.AccountPicker
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
 
@@ -73,11 +75,61 @@ class PersonShownTest {
 
     @Test
     fun `an access rule names its subject, never by id`() {
-        assertEquals("Anyone", subjectLabel(AccessSubjectRule("*", "view"), labels))
-        assertEquals("Signed in", subjectLabel(AccessSubjectRule("+", "view"), labels))
-        assertEquals("Ada", subjectLabel(AccessSubjectRule(ada, "view", name = "Ada"), labels))
-        assertEquals("6MF-gfL-93a", subjectLabel(AccessSubjectRule(ada, "view"), labels))
-        assertEquals("6MF-gfL-93a", subjectLabel(AccessSubjectRule(ada, "view", name = " "), labels))
-        assertEquals("Friends", subjectLabel(AccessSubjectRule("@friends", "view", name = "Friends"), labels))
+        assertEquals("Anyone", subjectLabel(AccessSubjectRule("*", "view"), labels, "Unknown group"))
+        assertEquals("Signed in", subjectLabel(AccessSubjectRule("+", "view"), labels, "Unknown group"))
+        assertEquals("Ada", subjectLabel(AccessSubjectRule(ada, "view", name = "Ada"), labels, "Unknown group"))
+        assertEquals("6MF-gfL-93a", subjectLabel(AccessSubjectRule(ada, "view"), labels, "Unknown group"))
+        assertEquals("6MF-gfL-93a", subjectLabel(AccessSubjectRule(ada, "view", name = " "), labels, "Unknown group"))
+        assertEquals("Friends", subjectLabel(AccessSubjectRule("@friends", "view", name = "Friends"), labels, "Unknown group"))
+    }
+
+    @Test
+    fun `an account with no name is offered by its fingerprint`() {
+        rule.setContent {
+            AccountPicker(
+                accounts = listOf(MochiAccount.Snapshot(identity = ada, name = "", server = "https://example.com", fingerprint = null, session = "s")),
+                onPick = {},
+                onDifferent = {},
+            )
+        }
+        rule.onNodeWithText("6MF-gfL-93a").assertExists()
+        rule.onNodeWithText(ada).assertDoesNotExist()
+    }
+
+    @Test
+    fun `a group the server did not name is an unknown group, never its id`() {
+        assertEquals("Unknown group", subjectLabel(AccessSubjectRule("@g1", "view"), labels, "Unknown group"))
+        assertEquals("Unknown group", subjectLabel(AccessSubjectRule("@g1", "view", name = ""), labels, "Unknown group"))
+    }
+
+    @Test
+    fun `an unnamed group's rule row reads unknown group`() {
+        rule.setContent {
+            AccessRulesSection(
+                rules = listOf(AccessSubjectRule("@g1", "view")),
+                levels = listOf("view"),
+                defaultLevel = "view",
+                levelLabel = { level -> level },
+                labels = labels,
+                users = emptyList(),
+                groups = emptyList(),
+                onSearchUsers = {},
+                onLoadGroups = {},
+                onSetAccess = { _, _, _ -> },
+                onRevoke = { _, _ -> },
+            )
+        }
+        rule.onNodeWithText("Unknown group").assertExists()
+        rule.onNodeWithText("@g1").assertDoesNotExist()
+    }
+
+    /** The add dialog's confirmation of the subject chosen in it. */
+    @Test
+    fun `a chosen subject with no name is confirmed by fingerprint or as an unknown group`() {
+        val chosen = labels.copy(selected = { name -> "Chosen: $name" })
+        assertEquals("Chosen: 6MF-gfL-93a", chosenLabel(ada, "", chosen, "Unknown group"))
+        assertEquals("Chosen: Unknown group", chosenLabel("@g1", "", chosen, "Unknown group"))
+        assertEquals("Chosen: Ada", chosenLabel(ada, "Ada", chosen, "Unknown group"))
+        assertEquals("Chosen: Anyone", chosenLabel("*", "", chosen, "Unknown group"))
     }
 }

@@ -11,10 +11,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Checkbox
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExposedDropdownMenuAnchorType
-import androidx.compose.material3.ExposedDropdownMenuBox
-import androidx.compose.material3.ExposedDropdownMenuDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
@@ -29,6 +25,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A field type offered by [FieldForm].
@@ -178,7 +175,6 @@ fun rememberFieldFormState(): FieldFormState =
  * @param modifier Modifier applied to the form's column.
  * @param types Types to offer, in picker order: every field type by default.
  */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FieldForm(
     state: FieldFormState,
@@ -188,6 +184,7 @@ fun FieldForm(
 ) {
     var typeExpanded by remember { mutableStateOf(false) }
     val typeLabel = types.find { type -> type.key == state.fieldtype }?.label ?: state.fieldtype
+    val spacing = LocalSpacing.current
 
     Column(modifier = modifier) {
         MochiTextField(
@@ -197,39 +194,25 @@ fun FieldForm(
             singleLine = true,
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(modifier = Modifier.height(8.dp))
-        ExposedDropdownMenuBox(
+        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
+        MochiDropdownField(
+            value = typeLabel,
             expanded = typeExpanded,
-            onExpandedChange = { expanded -> typeExpanded = expanded }
+            onExpandedChange = { expanded -> typeExpanded = expanded },
+            label = labels.type,
+            modifier = Modifier.fillMaxWidth(),
         ) {
-            MochiTextField(
-                value = typeLabel,
-                onValueChange = {},
-                readOnly = true,
-                label = { Text(labels.type) },
-                trailingIcon = {
-                    ExposedDropdownMenuDefaults.TrailingIcon(expanded = typeExpanded)
-                },
-                modifier = Modifier
-                    .menuAnchor(ExposedDropdownMenuAnchorType.PrimaryNotEditable)
-                    .fillMaxWidth()
-            )
-            ExposedDropdownMenu(
-                expanded = typeExpanded,
-                onDismissRequest = { typeExpanded = false }
-            ) {
-                types.forEach { type ->
-                    MochiDropdownMenuItem(
-                        text = { Text(type.label) },
-                        onClick = {
-                            state.fieldtype = type.key
-                            typeExpanded = false
-                        },
-                    )
-                }
+            types.forEach { type ->
+                MochiDropdownMenuItem(
+                    text = { Text(type.label) },
+                    onClick = {
+                        state.fieldtype = type.key
+                        typeExpanded = false
+                    },
+                )
             }
         }
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
         CheckboxRow(
             label = labels.required,
             checked = state.isRequired,

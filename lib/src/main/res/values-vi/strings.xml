@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Đã tạm ngưng tài khoản</string>
     <string name="common_back">Quay lại</string>
     <string name="common_close">Đóng</string>
+    <string name="common_clear_search">Xóa tìm kiếm</string>
+    <string name="drawer_open">Mở menu</string>
     <string name="common_cancel">Hủy</string>
     <string name="common_filter">Bộ lọc</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Thêm quy tắc truy cập</string>
     <string name="access_level_manage">Quản lý</string>
     <string name="access_level_react">Phản ứng</string>
-    <string name="notifications_clear">Xóa thông báo</string>
     <string name="entity_avatar_alt">Ảnh đại diện của %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Kiểm tra cập nhật</string>
     <string name="about_up_to_date">Đã là phiên bản mới nhất</string>
     <string name="about_check_downloading">Đã có phiên bản %1$s, đang tải xuống…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Không thể kết nối tới máy chủ cập nhật</string>
     <string name="about_check_download_failed">Tải xuống thất bại</string>
     <string name="notifications_clear_all_title">Xóa tất cả thông báo?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Đậm</string>
     <string name="format_italic">Nghiêng</string>
     <string name="format_link">Liên kết</string>
+    <string name="format_link_text">văn bản</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Tiêu đề</string>
     <string name="format_code">Mã</string>
     <string name="format_list">Danh sách dấu đầu dòng</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">Xóa quy tắc truy cập cho \"%1$s\"?</string>
     <string name="color_picker_custom">Tùy chỉnh</string>
     <string name="color_picker_clear">Xóa</string>
+    <string name="color_picker_white">Trắng</string>
+    <string name="color_picker_slate">Xám đá phiến</string>
+    <string name="color_picker_red">Đỏ</string>
+    <string name="color_picker_orange">Cam</string>
+    <string name="color_picker_amber">Hổ phách</string>
+    <string name="color_picker_green">Xanh lá</string>
+    <string name="color_picker_teal">Xanh mòng két</string>
+    <string name="color_picker_cyan">Xanh lơ</string>
+    <string name="color_picker_blue">Xanh dương</string>
+    <string name="color_picker_violet">Tím</string>
+    <string name="color_picker_pink">Hồng</string>
+    <string name="color_picker_black">Đen</string>
     <string name="common_refresh">Làm mới</string>
     <string name="launcher_add_to_home">Thêm vào màn hình chính</string>
     <string name="common_continue">Tiếp tục</string>
@@ -341,6 +357,7 @@
     </plurals>
     <string name="drawer_unread">Chưa đọc</string>
     <string name="person_unknown">Không rõ</string>
+    <string name="group_unknown">Nhóm không xác định</string>
     <string name="format_time_seconds_short">%1$s giây</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Đang tải xuống %1$s…</string>

@@ -173,7 +173,6 @@
     <string name="access_add_rule_title">Adicionar regra de acesso</string>
     <string name="access_level_manage">Gerenciar</string>
     <string name="access_level_react">Reagir</string>
-    <string name="notifications_clear">Limpar notificações</string>
     <string name="entity_avatar_alt">Avatar de %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -307,6 +306,8 @@
     <string name="access_remove_message">Remover a regra de acesso de \"%1$s\"?</string>
     <string name="color_picker_custom">Personalizado</string>
     <string name="color_picker_clear">Limpar</string>
+    <string name="color_picker_teal">Verde-azulado</string>
+    <string name="color_picker_pink">Rosa</string>
     <string name="common_refresh">Atualizar</string>
     <string name="launcher_add_to_home">Adicionar à tela inicial</string>
     <string name="common_continue">Continuar</string>

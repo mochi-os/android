@@ -30,6 +30,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A board column collapsed to a strip, as [PagedZoomableBoard] draws a page its
@@ -46,9 +47,10 @@ fun CollapsedBoardColumn(
     colour: Color? = null,
     highlighted: Boolean = false,
 ) {
+    val spacing = LocalSpacing.current
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
         modifier = modifier
             .fillMaxSize()
             .clip(MaterialTheme.shapes.medium)
@@ -64,7 +66,7 @@ fun CollapsedBoardColumn(
                 role = Role.Button,
                 onClick = onExpand,
             )
-            .padding(vertical = 12.dp),
+            .padding(vertical = spacing.gap(12.dp)),
     ) {
         if (colour != null) {
             Box(

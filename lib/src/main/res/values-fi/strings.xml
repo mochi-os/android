@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Tili jäädytetty</string>
     <string name="common_back">Takaisin</string>
     <string name="common_close">Sulje</string>
+    <string name="common_clear_search">Tyhjennä haku</string>
+    <string name="drawer_open">Avaa valikko</string>
     <string name="common_cancel">Peruuta</string>
     <string name="common_filter">Suodata</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -126,7 +128,6 @@
     <string name="common_retry">Yritä uudelleen</string>
     <string name="access_add_rule_title">Lisää käyttöoikeussääntö</string>
     <string name="access_level_manage">Hallinnoi</string>
-    <string name="notifications_clear">Tyhjennä ilmoitukset</string>
     <string name="game_chat_load_more">Lataa vanhempia viestejä</string>
     <string name="game_chat_move_played">%1$s pelasi %2$s</string>
 
@@ -214,6 +215,7 @@
     <string name="about_check_updates">Tarkista päivitykset</string>
     <string name="about_up_to_date">Ajan tasalla</string>
     <string name="about_check_downloading">Versio %1$s saatavilla, ladataan…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Päivityspalvelimeen ei saatu yhteyttä</string>
     <string name="about_check_download_failed">Lataus epäonnistui</string>
     <string name="notifications_clear_all_title">Tyhjennetäänkö kaikki ilmoitukset?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Lihavointi</string>
     <string name="format_italic">Kursivointi</string>
     <string name="format_link">Linkki</string>
+    <string name="format_link_text">teksti</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Otsikko</string>
     <string name="format_code">Koodi</string>
     <string name="format_list">Luettelomerkit</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Poistetaanko käyttöoikeussääntö kohteelle ”%1$s”?</string>
     <string name="color_picker_custom">Mukautettu</string>
     <string name="color_picker_clear">Tyhjennä</string>
+    <string name="color_picker_white">Valkoinen</string>
+    <string name="color_picker_slate">Liuskeenharmaa</string>
+    <string name="color_picker_red">Punainen</string>
+    <string name="color_picker_orange">Oranssi</string>
+    <string name="color_picker_amber">Meripihka</string>
+    <string name="color_picker_green">Vihreä</string>
+    <string name="color_picker_teal">Sinivihreä</string>
+    <string name="color_picker_cyan">Syaani</string>
+    <string name="color_picker_blue">Sininen</string>
+    <string name="color_picker_violet">Violetti</string>
+    <string name="color_picker_pink">Vaaleanpunainen</string>
+    <string name="color_picker_black">Musta</string>
     <string name="common_refresh">Päivitä</string>
     <string name="launcher_add_to_home">Lisää aloitusnäytölle</string>
     <string name="common_continue">Jatka</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Lukemattomat</string>
     <string name="person_unknown">Tuntematon</string>
+    <string name="group_unknown">Tuntematon ryhmä</string>
     <string name="format_time_seconds_short">%1$s s</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Ladataan %1$s…</string>

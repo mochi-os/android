@@ -45,6 +45,17 @@ class LinksTest {
     }
 
     @Test
+    fun `an e-mail link is told by its scheme, and only by its scheme`() {
+        assertTrue(isMailUrl("mailto:ada@example.org"))
+        assertTrue(isMailUrl("MAILTO:ada@example.org"))
+        assertFalse(isMailUrl("https://example.org/mailto:ada@example.org"))
+        assertFalse(isMailUrl("tel:+15551234567"))
+        assertFalse(isMailUrl("ada@example.org"))
+        // A mail link is not a web link: webUri's callers keep refusing it.
+        assertFalse(isWebUrl("mailto:ada@example.org"))
+    }
+
+    @Test
     fun `relative and malformed input is refused`() {
         // No scheme at all — a relative path must not launch.
         assertFalse(isWebUrl("attachments/abc"))

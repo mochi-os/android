@@ -22,12 +22,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Slim single-line text field for inline edit rows. Unlike [MochiTextField]
  * it omits the 56 dp minimum height and the wide content padding, so it sits
  * flush beside a label and buttons; it borrows [mochiTextFieldColors] so the
- * inline row reads as the same tonal field as a full-size one.
+ * inline row reads as the same tonal field as a full-size one. Its height and
+ * padding follow the reader's density ([LocalSpacing]).
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -41,13 +43,14 @@ fun CompactTextField(
     keyboardActions: KeyboardActions = KeyboardActions.Default,
 ) {
     val interactionSource = remember { MutableInteractionSource() }
+    val spacing = LocalSpacing.current
     val textStyle = MaterialTheme.typography.bodyMedium.copy(
         color = MaterialTheme.colorScheme.onSurface,
     )
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
-        modifier = modifier.heightIn(min = 40.dp),
+        modifier = modifier.heightIn(min = spacing.control(40.dp)),
         enabled = enabled,
         singleLine = true,
         textStyle = textStyle,
@@ -73,7 +76,7 @@ fun CompactTextField(
                         )
                     }
                 },
-                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp),
+                contentPadding = PaddingValues(horizontal = spacing.gap(12.dp), vertical = spacing.gap(8.dp)),
             )
         },
     )

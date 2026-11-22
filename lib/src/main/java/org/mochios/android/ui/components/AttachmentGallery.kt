@@ -53,6 +53,7 @@ import kotlinx.coroutines.launch
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.model.Attachment
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.api.OwnedAddress
 import org.mochios.android.util.AttachmentOpener
 
@@ -110,15 +111,17 @@ fun AttachmentGallery(
         (previewUrlBuilder ?: thumbnailUrlBuilder)?.invoke(attachment) ?: resolvedUrl(attachment)
     }
 
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    val spacing = LocalSpacing.current
+
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp))) {
         if (images.isNotEmpty()) {
             // The wrap-thumbnail layout is used for tight surfaces (comments) and
             // whenever a per-item delete is offered, since a delete badge needs to
             // overlay each image (the magazine MediaGrid has no per-cell slot).
             if (compact || onDelete != null) {
                 FlowRow(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
+                    verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp))
                 ) {
                     images.forEachIndexed { index, image ->
                         Box {
@@ -180,8 +183,8 @@ fun AttachmentGallery(
 
         if (files.isNotEmpty()) {
             FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp)),
+                verticalArrangement = Arrangement.spacedBy(spacing.gap(4.dp))
             ) {
                 for (file in files) {
                     FileChip(
@@ -288,7 +291,7 @@ private fun VideoThumbnail(
         contentAlignment = Alignment.Center
     ) {
         // VideoFrame routes to VideoFrameFetcher, which range-extracts the
-        // opening frame and caches it in Coil's memory cache.
+        // opening frame at the tile's size and keeps it in Coil's caches.
         AsyncImage(
             model = videoFrame(frameUrl),
             contentDescription = video.name,
@@ -428,6 +431,7 @@ fun AttachmentLightbox(
         initialIndex = initialIndex.coerceIn(0, (shown.size - 1).coerceAtLeast(0)),
         onDismiss = onDismiss,
         captions = shown.map { (image, _) -> image.caption },
+        descriptions = shown.map { (image, _) -> image.caption.ifEmpty { image.name } },
         commentCount = commentCount?.let { count -> { index -> shown.getOrNull(index)?.first?.let(count) ?: 0 } },
         comments = comments?.let { slot -> { index -> shown.getOrNull(index)?.first?.let { slot(it) } } },
         commentsInitiallyOpen = commentsInitiallyOpen,

@@ -7,7 +7,6 @@ package org.mochios.android.ui.components
 
 import android.content.Context
 import android.text.Spanned
-import android.text.TextUtils
 import android.view.View
 import android.widget.TextView
 import androidx.compose.material3.MaterialTheme
@@ -30,7 +29,8 @@ import io.noties.markwon.ext.tasklist.TaskListPlugin
 import io.noties.markwon.html.HtmlPlugin
 import io.noties.markwon.linkify.LinkifyPlugin
 import org.mochios.android.R
-import org.mochios.android.util.webUri
+import org.mochios.android.util.LINKED_ADDRESSES
+import org.mochios.android.util.linkUri
 
 @Composable
 fun HtmlContent(
@@ -61,11 +61,10 @@ fun HtmlContent(
 
     AndroidView(
         factory = { ctx ->
+            // Links, table cells among them, are dispatched by the view
+            // itself, so it needs no link movement method: being selectable
+            // installs the platform's own in place of any set here.
             ClickableLinkTextView(ctx).apply {
-                // TableAwareMovementMethod (wraps LinkMovementMethod) so links
-                // inside Markwon table cells are tappable — plain
-                // LinkMovementMethod can't dispatch clicks into TableRowSpans.
-                movementMethod = TableAwareMovementMethod.create()
                 textSize = 16f
                 setTextColor(textColor)
                 // Selectable so the user can long-press to pick text inside
@@ -78,25 +77,22 @@ fun HtmlContent(
         update = { textView ->
             textView.setTextColor(textColor)
             val view = textView as ClickableLinkTextView
+            // A cut preview is drawn from a copy of the body ending in "…"
+            // (onMeasure, from fullText below): the text's own ellipsis draws
+            // nothing on this content.
+            val truncated = clampToBoundedHeight || maxLines != Int.MAX_VALUE
             view.clampToHeight = clampToBoundedHeight
-            // The clamped preview drops text selection. Toggling selection
-            // clears the movement method, so re-assert it; guarded so other
+            view.clampToLines = maxLines
+            // A cut preview drops text selection: a tap on it belongs to the
+            // card around it, which opens the whole body. Guarded so other
             // callers keep selection and don't thrash.
-            val wantSelectable = !clampToBoundedHeight
+            val wantSelectable = !truncated
             if (textView.isTextSelectable != wantSelectable) {
                 textView.setTextIsSelectable(wantSelectable)
-                textView.movementMethod = TableAwareMovementMethod.create()
+                // Dropping selection drops the platform's movement method too;
+                // Markwon's lets a keyboard step through the links instead.
+                if (!wantSelectable) textView.movementMethod = TableAwareMovementMethod.create()
                 view.shownMarkdown = null
-            }
-            if (clampToBoundedHeight) {
-                // Truncation (with an appended "…") is done in onMeasure from the
-                // bounded height, against fullText below — leave maxLines uncapped.
-                textView.maxLines = Int.MAX_VALUE
-            } else {
-                textView.maxLines = maxLines
-                if (maxLines != Int.MAX_VALUE) {
-                    textView.ellipsize = TextUtils.TruncateAt.END
-                }
             }
             view.onNonLinkClick = onClick
             textView.passThroughTouches = passThroughTouches
@@ -104,11 +100,11 @@ fun HtmlContent(
             textView.imageAltByUrl = altByUrl
             if (view.shownMarkdown !== spanned) {
                 markwon.setParsedMarkdown(textView, spanned)
-                view.shownMarkdown = if (clampToBoundedHeight) null else spanned
+                view.shownMarkdown = if (truncated) null else spanned
             }
-            // Source for height-clamped truncation; null when not clamping so
-            // onMeasure leaves the text alone for every other caller.
-            view.fullText = if (clampToBoundedHeight) spanned else null
+            // Source for the truncation; null when not cutting so onMeasure
+            // leaves the text alone for every other caller.
+            view.fullText = if (truncated) spanned else null
             onTextViewReady?.invoke(textView)
         },
         modifier = modifier
@@ -145,15 +141,17 @@ private fun buildMarkwon(context: Context): Markwon =
         .usePlugin(TablePlugin.create(context))
         .usePlugin(StrikethroughPlugin.create())
         .usePlugin(TaskListPlugin.create(context))
-        .usePlugin(LinkifyPlugin.create())
+        // Bare text is linked only for what the resolver below opens: a
+        // phone number drawn as a link would take the tap and do nothing.
+        .usePlugin(LinkifyPlugin.create(LINKED_ADDRESSES))
         // The body is peer-authored content; Markwon's default resolver
-        // fires ACTION_VIEW on whatever scheme a link carries. Only web
-        // links may leave the app — tel:, intent:, file: and custom
-        // schemes are dropped rather than launched.
+        // fires ACTION_VIEW on whatever scheme a link carries. Only web and
+        // e-mail addresses may leave the app — tel:, intent:, file: and
+        // custom schemes are dropped rather than launched.
         .usePlugin(object : AbstractMarkwonPlugin() {
             override fun configureConfiguration(builder: MarkwonConfiguration.Builder) {
                 builder.linkResolver { view, link ->
-                    webUri(link)?.let { LinkResolverDef().resolve(view, it.toString()) }
+                    linkUri(link)?.let { LinkResolverDef().resolve(view, it.toString()) }
                 }
             }
         })

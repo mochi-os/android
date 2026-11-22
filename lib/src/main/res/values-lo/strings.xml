@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">ບັນຊີຖືກລະງັບ</string>
     <string name="common_back">ກັບຄືນ</string>
     <string name="common_close">ປິດ</string>
+    <string name="common_clear_search">ລ້າງການຄົ້ນຫາ</string>
+    <string name="drawer_open">ເປີດເມນູ</string>
     <string name="common_cancel">ຍົກເລີກ</string>
     <string name="common_filter">ຕົວກອງ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">ເພີ່ມກົດການເຂົ້າເຖິງ</string>
     <string name="access_level_manage">ຈັດການ</string>
     <string name="access_level_react">ຕອບສະໜອງ</string>
-    <string name="notifications_clear">ລ້າງການແຈ້ງເຕືອນ</string>
     <string name="entity_avatar_alt">ຮູບໂປຣໄຟລ໌ສຳລັບ %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">ກວດຫາການອັບເດດ</string>
     <string name="about_up_to_date">ເປັນເວີຊັນລ່າສຸດແລ້ວ</string>
     <string name="about_check_downloading">ເວີຊັນ %1$s ມີໃຫ້, ກຳລັງດາວໂຫລດ…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">ບໍ່ສາມາດເຂົ້າເຖິງເຊີບເວີອັບເດດໄດ້</string>
     <string name="about_check_download_failed">ດາວໂຫຼດບໍ່ສຳເລັດ</string>
     <string name="notifications_clear_all_title">ລ້າງການແຈ້ງເຕືອນທັງໝົດບໍ?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ຕົວໜາ</string>
     <string name="format_italic">ຕົວອຽງ</string>
     <string name="format_link">ລິ້ງ</string>
+    <string name="format_link_text">ຂໍ້ຄວາມ</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">ຫົວຂໍ້</string>
     <string name="format_code">ໂຄ້ດ</string>
     <string name="format_list">ລາຍການຈຸດ</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">ລຶບກົດການເຂົ້າເຖິງສຳລັບ \"%1$s\" ບໍ?</string>
     <string name="color_picker_custom">ກຳນົດເອງ</string>
     <string name="color_picker_clear">ລ້າງ</string>
+    <string name="color_picker_white">ຂາວ</string>
+    <string name="color_picker_slate">ສີເທົາຫີນ</string>
+    <string name="color_picker_red">ແດງ</string>
+    <string name="color_picker_orange">ສົ້ມ</string>
+    <string name="color_picker_amber">ສີອຳພັນ</string>
+    <string name="color_picker_green">ຂຽວ</string>
+    <string name="color_picker_teal">ຂຽວອົມຟ້າ</string>
+    <string name="color_picker_cyan">ຟ້າອ່ອນ</string>
+    <string name="color_picker_blue">ຟ້າ</string>
+    <string name="color_picker_violet">ມ່ວງ</string>
+    <string name="color_picker_pink">ບົວ</string>
+    <string name="color_picker_black">ດຳ</string>
     <string name="common_refresh">ໂຫຼດໃໝ່</string>
     <string name="launcher_add_to_home">ເພີ່ມເຂົ້າໃນໜ້າຈໍຫຼັກ</string>
     <string name="common_continue">ຕໍ່</string>
@@ -339,6 +355,7 @@
     </plurals>
     <string name="drawer_unread">ຍັງບໍ່ໄດ້ອ່ານ</string>
     <string name="person_unknown">ບໍ່ຮູ້ຈັກ</string>
+    <string name="group_unknown">ກຸ່ມທີ່ບໍ່ຮູ້ຈັກ</string>
     <string name="format_time_seconds_short">%1$s ວິ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">ກຳລັງດາວໂຫລດ %1$s…</string>

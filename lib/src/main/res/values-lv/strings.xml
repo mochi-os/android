@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Konts apturēts</string>
     <string name="common_back">Atpakaļ</string>
     <string name="common_close">Aizvērt</string>
+    <string name="common_clear_search">Notīrīt meklēšanu</string>
+    <string name="drawer_open">Atvērt izvēlni</string>
     <string name="common_cancel">Atcelt</string>
     <string name="common_filter">Filtrēt</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Pievienot piekļuves noteikumu</string>
     <string name="access_level_manage">Pārvaldīt</string>
     <string name="access_level_react">Reaģēt</string>
-    <string name="notifications_clear">Notīrīt paziņojumus</string>
     <string name="entity_avatar_alt">%1$s attēls</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Pārbaudīt atjauninājumus</string>
     <string name="about_up_to_date">Aktuāls</string>
     <string name="about_check_downloading">Versija %1$s pieejama, lejupielādē…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Neizdevās sasniegt atjauninājumu serveri</string>
     <string name="about_check_download_failed">Lejupielāde neizdevās</string>
     <string name="notifications_clear_all_title">Notīrīt visus paziņojumus?</string>
@@ -299,6 +301,8 @@
     <string name="format_bold">Treknraksts</string>
     <string name="format_italic">Kursīvs</string>
     <string name="format_link">Saite</string>
+    <string name="format_link_text">teksts</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Virsraksts</string>
     <string name="format_code">Kods</string>
     <string name="format_list">Aizzīmju saraksts</string>
@@ -324,6 +328,18 @@
     <string name="access_remove_message">Vai noņemt piekļuves noteikumu “%1$s”?</string>
     <string name="color_picker_custom">Pielāgots</string>
     <string name="color_picker_clear">Notīrīt</string>
+    <string name="color_picker_white">Balta</string>
+    <string name="color_picker_slate">Slānekļa pelēka</string>
+    <string name="color_picker_red">Sarkana</string>
+    <string name="color_picker_orange">Oranža</string>
+    <string name="color_picker_amber">Dzintara</string>
+    <string name="color_picker_green">Zaļa</string>
+    <string name="color_picker_teal">Zilganzaļa</string>
+    <string name="color_picker_cyan">Ciāna</string>
+    <string name="color_picker_blue">Zila</string>
+    <string name="color_picker_violet">Violeta</string>
+    <string name="color_picker_pink">Rozā</string>
+    <string name="color_picker_black">Melna</string>
     <string name="common_refresh">Atsvaidzināt</string>
     <string name="launcher_add_to_home">Pievienot sākuma ekrānam</string>
     <string name="common_continue">Turpināt</string>
@@ -342,6 +358,7 @@
     </plurals>
     <string name="drawer_unread">Nelasīti</string>
     <string name="person_unknown">Nezināms</string>
+    <string name="group_unknown">Nezināma grupa</string>
     <string name="format_time_seconds_short">%1$s s</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Lejupielādē %1$s…</string>

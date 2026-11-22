@@ -33,6 +33,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshotFlow
@@ -50,6 +51,7 @@ import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -57,9 +59,12 @@ import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 import org.mochios.android.R
+import org.mochios.android.api.MochiError
+import org.mochios.android.api.toMochiError
 import org.mochios.android.model.PlaceData
 import org.mochios.android.places.NominatimPlace
 import org.mochios.android.places.NominatimService
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.util.SEARCH_DEBOUNCE
 import org.osmdroid.events.MapEventsReceiver
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
@@ -85,7 +90,6 @@ private const val MAX_DISPLAY_NAME_LENGTH = 80
 private fun truncate(text: String, max: Int = MAX_DISPLAY_NAME_LENGTH): String =
     if (text.length <= max) text else text.substring(0, max - 1) + "…"
 
-@OptIn(FlowPreview::class)
 @Composable
 fun PlacePicker(
     place: PlaceData?,
@@ -93,14 +97,32 @@ fun PlacePicker(
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
+    val service = remember(context) { nominatimService(context) }
+    PlacePicker(place = place, onPlaceSelected = onPlaceSelected, service = service, modifier = modifier)
+}
+
+/** [PlacePicker] over a given geocoder. */
+@OptIn(FlowPreview::class)
+@Composable
+internal fun PlacePicker(
+    place: PlaceData?,
+    onPlaceSelected: (PlaceData) -> Unit,
+    service: NominatimService,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
     val scope = rememberCoroutineScope()
-    val service = remember(context) { nominatimService(context) }
+    // The map's tap receiver is made once, with the view; it calls the latest
+    // callback, not the one of the first composition.
+    val select by rememberUpdatedState(onPlaceSelected)
 
     var nameText by rememberSaveable { mutableStateOf(place?.name ?: "") }
     var suggestions by remember { mutableStateOf<List<NominatimPlace>>(emptyList()) }
     var searching by remember { mutableStateOf(false) }
     var noResults by remember { mutableStateOf(false) }
+    // A lookup that failed, which is not one that found nothing.
+    var searchError by remember { mutableStateOf<MochiError?>(null) }
     var suppressSearch by remember { mutableStateOf(false) }
 
     val mapView = remember {
@@ -167,34 +189,42 @@ fun PlacePicker(
                     suggestions = emptyList()
                     searching = false
                     noResults = false
+                    searchError = null
                     return@collect
                 }
                 searching = true
                 noResults = false
-                val results = runCatching { service.search(trimmed) }.getOrDefault(emptyList())
-                suggestions = results
-                searching = false
-                noResults = results.isEmpty()
+                searchError = null
+                try {
+                    val results = service.search(trimmed)
+                    suggestions = results
+                    noResults = results.isEmpty()
+                } catch (e: CancellationException) {
+                    throw e
+                } catch (e: Exception) {
+                    suggestions = emptyList()
+                    searchError = e.toMochiError()
+                } finally {
+                    searching = false
+                }
             }
     }
 
+    // A picked suggestion is a new place: nothing the old one carried (its
+    // country, state or city) describes it.
     fun selectSuggestion(s: NominatimPlace) {
         suppressSearch = true
         nameText = s.displayName
         suggestions = emptyList()
         searching = false
         noResults = false
-        val updated = (place ?: PlaceData()).copy(
-            name = s.displayName,
-            lat = s.lat,
-            lon = s.lon,
-            category = s.category
-        )
-        onPlaceSelected(updated)
+        searchError = null
+        onPlaceSelected(s.toPlaceData())
         moveMarker(s.lat, s.lon, s.displayName, zoom = 14.0)
     }
 
     val reverseJob = remember { arrayOfNulls<Job>(1) }
+    val spacing = LocalSpacing.current
 
     Column(modifier = modifier) {
         Box(modifier = Modifier.fillMaxWidth()) {
@@ -220,8 +250,9 @@ fun PlacePicker(
             )
         }
 
+        val failure = searchError
         if (suggestions.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
             Surface(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -237,7 +268,7 @@ fun PlacePicker(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable { selectSuggestion(s) }
-                                .padding(horizontal = 12.dp, vertical = 8.dp)
+                                .padding(horizontal = spacing.gap(12.dp), vertical = spacing.gap(8.dp))
                         ) {
                             Icon(
                                 imageVector = Icons.Filled.LocationOn,
@@ -245,7 +276,7 @@ fun PlacePicker(
                                 tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.size(18.dp)
                             )
-                            Spacer(modifier = Modifier.size(8.dp))
+                            Spacer(modifier = Modifier.size(spacing.gap(8.dp)))
                             Column(modifier = Modifier.fillMaxWidth()) {
                                 Text(
                                     text = s.name,
@@ -264,17 +295,20 @@ fun PlacePicker(
                     }
                 }
             }
+        } else if (failure != null && nameText.trim().length >= 2) {
+            Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
+            InlineErrorState(error = failure)
         } else if (noResults && nameText.trim().length >= 2) {
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
             Text(
                 text = stringResource(R.string.place_picker_no_results),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
+                modifier = Modifier.padding(horizontal = spacing.gap(12.dp), vertical = spacing.gap(4.dp))
             )
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
 
         AndroidView(
             factory = {
@@ -282,27 +316,35 @@ fun PlacePicker(
                     val receiver = object : MapEventsReceiver {
                         override fun singleTapConfirmedHelper(p: GeoPoint): Boolean {
                             // Drop a marker immediately and emit the lat/lon now.
+                            // The point is a new place: the name as typed, and
+                            // nothing that described the old position.
                             moveMarker(p.latitude, p.longitude, nameText)
-                            val current = (place ?: PlaceData()).copy(
+                            val current = PlaceData(
                                 name = nameText,
                                 lat = p.latitude,
                                 lon = p.longitude
                             )
-                            onPlaceSelected(current)
+                            select(current)
 
                             // Reverse-geocode in the background to fill in the name.
                             reverseJob[0]?.cancel()
                             reverseJob[0] = scope.launch {
                                 // Tiny delay so the marker render isn't blocked by network.
                                 delay(50)
-                                val reverse = runCatching {
+                                // Without a name for the point, the pin keeps the typed one.
+                                val reverse = try {
                                     service.reverse(p.latitude, p.longitude)
-                                }.getOrNull() ?: return@launch
+                                } catch (e: CancellationException) {
+                                    throw e
+                                } catch (_: Exception) {
+                                    null
+                                } ?: return@launch
                                 val display = reverse.displayName
                                 suppressSearch = true
                                 nameText = display
                                 suggestions = emptyList()
-                                onPlaceSelected(
+                                searchError = null
+                                select(
                                     current.copy(
                                         name = display,
                                         category = reverse.category

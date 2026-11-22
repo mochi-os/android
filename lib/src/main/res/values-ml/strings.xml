@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">അക്കൗണ്ട് സസ്പെൻഡ് ചെയ്തു</string>
     <string name="common_back">തിരികെ</string>
     <string name="common_close">അടയ്ക്കുക</string>
+    <string name="common_clear_search">തിരയൽ മായ്ക്കുക</string>
+    <string name="drawer_open">മെനു തുറക്കുക</string>
     <string name="common_cancel">റദ്ദാക്കുക</string>
     <string name="common_filter">ഫിൽട്ടർ</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">ആക്സസ് നിയമം ചേർക്കുക</string>
     <string name="access_level_manage">നിയന്ത്രിക്കുക</string>
     <string name="access_level_react">പ്രതികരിക്കുക</string>
-    <string name="notifications_clear">അറിയിപ്പുകൾ മായ്ക്കുക</string>
     <string name="entity_avatar_alt">%1$s-നുള്ള അവതാർ</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s - %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">അപ്ഡേറ്റുകൾ പരിശോധിക്കുക</string>
     <string name="about_up_to_date">ഏറ്റവും പുതിയത്</string>
     <string name="about_check_downloading">പതിപ്പ് %1$s ലഭ്യമാണ്, ഡൗൺലോഡ് ചെയ്യുന്നു…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">അപ്ഡേറ്റ് സെർവറിലേക്ക് എത്താൻ കഴിഞ്ഞില്ല</string>
     <string name="about_check_download_failed">ഡൗൺലോഡ് പരാജയപ്പെട്ടു</string>
     <string name="notifications_clear_all_title">എല്ലാ അറിയിപ്പുകളും മായ്ക്കണോ?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">ബോൾഡ്</string>
     <string name="format_italic">ഇറ്റാലിക്</string>
     <string name="format_link">ലിങ്ക്</string>
+    <string name="format_link_text">ടെക്സ്റ്റ്</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">തലക്കെട്ട്</string>
     <string name="format_code">കോഡ്</string>
     <string name="format_list">ബുള്ളറ്റ് ലിസ്റ്റ്</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" എന്നതിനുള്ള ആക്‌സസ് നിയമം നീക്കംചെയ്യണോ?</string>
     <string name="color_picker_custom">ഇഷ്ടാനുസൃതം</string>
     <string name="color_picker_clear">മായ്ക്കുക</string>
+    <string name="color_picker_white">വെള്ള</string>
+    <string name="color_picker_slate">സ്ലേറ്റ് ചാരം</string>
+    <string name="color_picker_red">ചുവപ്പ്</string>
+    <string name="color_picker_orange">ഓറഞ്ച്</string>
+    <string name="color_picker_amber">ആംബർ</string>
+    <string name="color_picker_green">പച്ച</string>
+    <string name="color_picker_teal">നീലപ്പച്ച</string>
+    <string name="color_picker_cyan">സിയാൻ</string>
+    <string name="color_picker_blue">നീല</string>
+    <string name="color_picker_violet">വയലറ്റ്</string>
+    <string name="color_picker_pink">പിങ്ക്</string>
+    <string name="color_picker_black">കറുപ്പ്</string>
     <string name="common_refresh">പുതുക്കുക</string>
     <string name="launcher_add_to_home">ഹോം സ്ക്രീനിലേക്ക് ചേർക്കുക</string>
     <string name="common_continue">തുടരുക</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">വായിക്കാത്തവ</string>
     <string name="person_unknown">അജ്ഞാതം</string>
+    <string name="group_unknown">അജ്ഞാത ഗ്രൂപ്പ്</string>
     <string name="format_time_seconds_short">%1$sസെ</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ഡൗൺലോഡ് ചെയ്യുന്നു…</string>

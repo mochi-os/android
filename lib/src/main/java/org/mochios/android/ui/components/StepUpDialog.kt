@@ -36,8 +36,12 @@ import kotlinx.coroutines.job
 import kotlinx.coroutines.launch
 import org.mochios.android.util.webUri
 import org.mochios.android.R
+import org.mochios.android.api.messageOrFallback
+import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
 import org.mochios.android.auth.StepUpClient
 import org.mochios.android.auth.StepUpResult
+import org.mochios.android.ui.theme.LocalSpacing
 
 // Brand names stay verbatim in Latin script in every locale.
 private val OAUTH_LABELS = mapOf(
@@ -84,20 +88,42 @@ fun StepUpDialog(
     val errPasskey = stringResource(R.string.stepup_error_passkey)
     val errOauth = stringResource(R.string.stepup_error_oauth)
 
+    // Asks the server to email a code. The code field appears only once the
+    // send succeeded; a failed one leaves the Send button and says why.
+    suspend fun send() {
+        try {
+            client.send()
+            sent = true
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            error = e.toMochiError().userMessage()
+        }
+    }
+
     // On first composition: learn the user's factors and, if email is the only
     // offered factor, send the code right away.
     LaunchedEffect(Unit) {
         try {
             val methods = client.methods()
             remaining = methods
-            val linked = runCatching { client.oauthProviders() }.getOrDefault(emptyList())
+            // The linked providers only add a way in; without them the
+            // dialog still offers the code factors.
+            val linked = try {
+                client.oauthProviders()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                emptyList()
+            }
             providers = linked
             if (methods.contains("email") && linked.isEmpty()) {
-                runCatching { client.send() }
-                sent = true
+                send()
             }
-        } catch (_: Exception) {
-            error = errStart
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            error = e.toMochiError().messageOrFallback(errStart)
         } finally {
             loading = false
         }
@@ -125,8 +151,13 @@ fun StepUpDialog(
             try {
                 apply(run())
                 reset()
-            } catch (_: Exception) {
-                error = errCode
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // The server's reason (its own "incorrect or expired" among
+                // them) or the network line; the fixed sentence only when
+                // the failure carries neither.
+                error = e.toMochiError().messageOrFallback(errCode)
             } finally {
                 busy = false
             }
@@ -147,8 +178,10 @@ fun StepUpDialog(
             error = null
             try {
                 apply(client.passkey())
-            } catch (_: Exception) {
-                error = errPasskey
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                error = e.toMochiError().messageOrFallback(errPasskey)
             } finally {
                 busy = false
             }
@@ -186,8 +219,8 @@ fun StepUpDialog(
                 }
             } catch (e: CancellationException) {
                 throw e
-            } catch (_: Exception) {
-                error = errOauth
+            } catch (e: Exception) {
+                error = e.toMochiError().messageOrFallback(errOauth)
             } finally {
                 if (waiting === self) waiting = null
             }
@@ -204,17 +237,20 @@ fun StepUpDialog(
         onDismissRequest = { if (!busy) leave() },
         title = stringResource(R.string.stepup_title),
         content = {
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            val spacing = LocalSpacing.current
+            Column(verticalArrangement = Arrangement.spacedBy(spacing.gap(12.dp))) {
                 Text(
                     stringResource(R.string.stepup_description),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 if (loading) {
-                    CircularProgressIndicator(modifier = Modifier.padding(8.dp))
+                    CircularProgressIndicator(modifier = Modifier.padding(spacing.gap(8.dp)))
                 } else {
                     if (remaining.contains("email")) {
                         if (sent) {
+                            // The emailed code is mixed-case letters and digits,
+                            // as the login screen's email code is.
                             MochiTextField(
                                 value = emailCode,
                                 onValueChange = { emailCode = it },
@@ -222,7 +258,7 @@ fun StepUpDialog(
                                 singleLine = true,
                                 enabled = !locked,
                                 keyboardOptions = KeyboardOptions(
-                                    keyboardType = KeyboardType.Number,
+                                    keyboardType = KeyboardType.Text,
                                     imeAction = ImeAction.Done,
                                 ),
                                 modifier = Modifier.fillMaxWidth(),
@@ -231,7 +267,7 @@ fun StepUpDialog(
                                 onClick = {
                                     scope.launch {
                                         error = null
-                                        runCatching { client.send() }.onSuccess { sent = true }
+                                        send()
                                     }
                                 },
                                 enabled = !locked,
@@ -241,7 +277,7 @@ fun StepUpDialog(
                                 onClick = {
                                     scope.launch {
                                         error = null
-                                        runCatching { client.send() }.onSuccess { sent = true }
+                                        send()
                                     }
                                 },
                                 enabled = !locked,
@@ -252,7 +288,7 @@ fun StepUpDialog(
                     if (remaining.contains("totp")) {
                         MochiTextField(
                             value = totpCode,
-                            onValueChange = { totpCode = it.filter { c -> c.isDigit() }.take(6) },
+                            onValueChange = { totpCode = codeDigits(it, 6) },
                             label = { Text(stringResource(R.string.stepup_totp_label)) },
                             singleLine = true,
                             enabled = !locked,

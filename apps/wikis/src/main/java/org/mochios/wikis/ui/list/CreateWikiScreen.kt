@@ -50,7 +50,7 @@ fun CreateWikiScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.wikis_create_title),
         submitLabel = stringResource(R.string.wikis_create_submit),
-        submitEnabled = name.trim().isNotEmpty() && !uiState.isCreating,
+        submitEnabled = name.trim().isNotEmpty(),
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

@@ -53,6 +53,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.util.Area
 import org.mochios.android.util.Atlas
 import org.mochios.android.util.Viewport
@@ -102,8 +103,9 @@ fun ZoneMap(
     val chosen = MaterialTheme.colorScheme.primary
     val tint = chosen.copy(alpha = 0.35f)
     val format = LocalFormat.current
+    val spacing = LocalSpacing.current
 
-    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+    Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(spacing.gap(4.dp))) {
         BoxWithConstraints(
             modifier = Modifier
                 .fillMaxWidth()
@@ -163,7 +165,7 @@ fun ZoneMap(
                 modifier = Modifier
                     .align(Alignment.BottomEnd)
                     .background(MaterialTheme.colorScheme.surface.copy(alpha = 0.6f), RoundedCornerShape(3.dp))
-                    .padding(horizontal = 3.dp),
+                    .padding(horizontal = spacing.gap(3.dp)),
             )
         }
         val named = pointed ?: selected
@@ -175,7 +177,7 @@ fun ZoneMap(
             modifier = Modifier
                 .fillMaxWidth()
                 .then(if (pointed != null) Modifier.clickable { onSelect(pointed) } else Modifier)
-                .padding(vertical = 2.dp),
+                .padding(vertical = spacing.gap(2.dp)),
         )
     }
 }
@@ -215,6 +217,7 @@ fun ZonePicker(
             offsets[zone].orEmpty().contains(wanted, ignoreCase = true)
     val places = listed.filter { (zone, others) -> found(zone, others) }.keys.toList()
     val waters = sea.filter { found(it, emptyList()) }
+    val spacing = LocalSpacing.current
 
     @Composable
     fun Choice(zone: String, label: String, offset: String?) {
@@ -223,7 +226,7 @@ fun ZonePicker(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable { onSelect(zone) }
-                .padding(horizontal = 4.dp, vertical = 10.dp),
+                .padding(horizontal = spacing.gap(4.dp), vertical = spacing.gap(10.dp)),
         ) {
             Text(
                 text = label,
@@ -236,7 +239,7 @@ fun ZonePicker(
                     text = offset,
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(start = 12.dp),
+                    modifier = Modifier.padding(start = spacing.gap(12.dp)),
                 )
             }
         }
@@ -247,7 +250,7 @@ fun ZonePicker(
         title = title,
         dismissText = stringResource(R.string.common_cancel),
         content = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp))) {
                 ZoneMap(
                     selected = shown,
                     pointed = pointed,
@@ -268,7 +271,7 @@ fun ZonePicker(
                     items(places, key = { it }) { zone -> Choice(zone, Zones.label(zone), offsets[zone]) }
                     if (waters.isNotEmpty()) {
                         item(key = "sea") {
-                            Box(modifier = Modifier.padding(start = 4.dp, top = 12.dp, bottom = 4.dp)) {
+                            Box(modifier = Modifier.padding(start = spacing.gap(4.dp), top = spacing.gap(12.dp), bottom = spacing.gap(4.dp))) {
                                 Text(
                                     text = stringResource(R.string.zone_sea),
                                     style = MaterialTheme.typography.labelMedium,

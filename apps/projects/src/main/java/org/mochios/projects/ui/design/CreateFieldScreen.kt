@@ -45,7 +45,7 @@ fun CreateFieldScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.projects_field_add_field_dialog_title),
         submitLabel = stringResource(R.string.projects_classes_create),
-        submitEnabled = formState.canSave && !uiState.isCreating,
+        submitEnabled = formState.canSave,
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

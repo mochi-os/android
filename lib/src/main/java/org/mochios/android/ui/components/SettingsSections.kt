@@ -30,6 +30,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -38,6 +39,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Identity row with a fixed-width label so values align in a column.
@@ -53,7 +55,7 @@ fun IdentityRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 8.dp),
+            .padding(vertical = LocalSpacing.current.gap(8.dp)),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
@@ -100,14 +102,17 @@ fun InlineTextEditor(
     clearLabel: String? = null,
     transform: (String) -> String = { text -> text }
 ) {
-    var isEditing by remember { mutableStateOf(false) }
-    var draft by remember(value) { mutableStateOf(value) }
+    // Saveable, so an edit under way survives a rotation or a theme change.
+    // The pencil and cancel reseed the draft, so a reload of [value] while
+    // editing does not overwrite what has been typed.
+    var isEditing by rememberSaveable { mutableStateOf(false) }
+    var draft by rememberSaveable { mutableStateOf(value) }
 
     if (isEditing) {
         Row(
             modifier = modifier,
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(4.dp)
+            horizontalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(4.dp))
         ) {
             MochiTextField(
                 value = draft,
@@ -241,12 +246,13 @@ fun BannerSection(
     onSave: (String) -> Unit
 ) {
     val focusManager = LocalFocusManager.current
+    val spacing = LocalSpacing.current
 
     Section(title = title, description = description) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 8.dp)
+                .padding(top = spacing.gap(8.dp))
         ) {
             MochiTextField(
                 value = draft,
@@ -255,8 +261,8 @@ fun BannerSection(
                 maxLines = 8,
                 modifier = Modifier.fillMaxWidth()
             )
-            Spacer(modifier = Modifier.height(8.dp))
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Spacer(modifier = Modifier.height(spacing.gap(8.dp)))
+            Row(horizontalArrangement = Arrangement.spacedBy(spacing.gap(8.dp))) {
                 MochiButton(
                     onClick = {
                         onSave(draft)
@@ -383,12 +389,13 @@ fun SubscriberSettings(
     isBusy: Boolean = false,
     keepOpen: Boolean = false
 ) {
+    val gap = LocalSpacing.current.gap(16.dp)
     Column(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .padding(gap),
+        verticalArrangement = Arrangement.spacedBy(gap)
     ) {
         identity()
 

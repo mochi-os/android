@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Обліковий запис призупинено</string>
     <string name="common_back">Назад</string>
     <string name="common_close">Закрити</string>
+    <string name="common_clear_search">Очистити пошук</string>
+    <string name="drawer_open">Відкрити меню</string>
     <string name="common_cancel">Скасувати</string>
     <string name="common_filter">Фільтр</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Додати правило доступу</string>
     <string name="access_level_manage">Керування</string>
     <string name="access_level_react">Реакція</string>
-    <string name="notifications_clear">Очистити сповіщення</string>
     <string name="entity_avatar_alt">Аватар для %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Перевірити оновлення</string>
     <string name="about_up_to_date">Актуальна версія</string>
     <string name="about_check_downloading">Версія %1$s доступна, завантаження…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Не вдалося звʼязатися із сервером оновлень</string>
     <string name="about_check_download_failed">Не вдалося завантажити</string>
     <string name="notifications_clear_all_title">Очистити всі сповіщення?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Жирний</string>
     <string name="format_italic">Курсив</string>
     <string name="format_link">Посилання</string>
+    <string name="format_link_text">текст</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Заголовок</string>
     <string name="format_code">Код</string>
     <string name="format_list">Маркований список</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Вилучити правило доступу для «%1$s»?</string>
     <string name="color_picker_custom">Користувацький</string>
     <string name="color_picker_clear">Очистити</string>
+    <string name="color_picker_white">Білий</string>
+    <string name="color_picker_slate">Сланцевий</string>
+    <string name="color_picker_red">Червоний</string>
+    <string name="color_picker_orange">Помаранчевий</string>
+    <string name="color_picker_amber">Бурштиновий</string>
+    <string name="color_picker_green">Зелений</string>
+    <string name="color_picker_teal">Синьо-зелений</string>
+    <string name="color_picker_cyan">Блакитний</string>
+    <string name="color_picker_blue">Синій</string>
+    <string name="color_picker_violet">Фіолетовий</string>
+    <string name="color_picker_pink">Рожевий</string>
+    <string name="color_picker_black">Чорний</string>
     <string name="common_refresh">Оновити</string>
     <string name="launcher_add_to_home">Додати на головний екран</string>
     <string name="common_continue">Продовжити</string>
@@ -344,6 +360,7 @@
     </plurals>
     <string name="drawer_unread">Непрочитані</string>
     <string name="person_unknown">Невідомо</string>
+    <string name="group_unknown">Невідома група</string>
     <string name="format_time_seconds_short">%1$s с</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Завантаження %1$s…</string>

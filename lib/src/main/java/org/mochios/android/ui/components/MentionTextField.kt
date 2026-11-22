@@ -21,16 +21,18 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
-import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.collectLatest
-import kotlinx.coroutines.flow.debounce
-import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.ensureActive
+import org.mochios.android.api.toMochiError
+import org.mochios.android.api.userMessage
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.util.SEARCH_DEBOUNCE
 
 data class MentionSuggestion(
@@ -85,7 +87,6 @@ fun MentionTextField(
 /**
  * [MentionTextField] for a caller that drives the cursor as well as the text.
  */
-@OptIn(FlowPreview::class)
 @Composable
 fun MentionTextField(
     value: TextFieldValue,
@@ -101,58 +102,43 @@ fun MentionTextField(
     // its border spans the full box rather than wrapping the text.
     fillHeight: Boolean = false
 ) {
-    var suggestions by remember { mutableStateOf<List<MentionSuggestion>>(emptyList()) }
-    var mentionQuery by remember { mutableStateOf<String?>(null) }
-    var mentionStart by remember { mutableStateOf(-1) }
+    // The mention being written is read from the value itself, whoever set
+    // it, rather than remembered from the field's own edits: text the caller
+    // replaces takes its mention, or the lack of one, with it.
+    val mention = mentionAt(value)
+    val start = mention?.start
+    val query = mention?.query?.takeIf { it.isNotEmpty() }
+    var lookup by remember { mutableStateOf<Lookup?>(null) }
+    val search by rememberUpdatedState(onSearch)
+    val current by rememberUpdatedState(value)
+    val change by rememberUpdatedState(onValueChange)
+    val spacing = LocalSpacing.current
 
-    // Debounce mention search
-    LaunchedEffect(mentionQuery) {
-        snapshotFlow { mentionQuery }
-            .debounce(SEARCH_DEBOUNCE)
-            .distinctUntilChanged()
-            .collectLatest { query ->
-                if (query != null && query.isNotEmpty()) {
-                    suggestions = try { onSearch(query) } catch (_: Exception) { emptyList() }
-                } else {
-                    suggestions = emptyList()
-                }
-            }
+    // A keystroke restarts the wait, so only a pause searches; what is shown
+    // stays until the next results land.
+    LaunchedEffect(start, query) {
+        if (start == null || query == null) {
+            lookup = null
+            return@LaunchedEffect
+        }
+        delay(SEARCH_DEBOUNCE)
+        lookup = try {
+            val found = search(query)
+            // A search that swallowed its own cancellation must not land
+            // over a newer query.
+            ensureActive()
+            Lookup(start, found, null)
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            Lookup(start, emptyList(), e.toMochiError().userMessage())
+        }
     }
 
     Column(modifier = modifier) {
         MochiTextField(
             value = value,
-            onValueChange = { newValue ->
-                onValueChange(newValue)
-
-                // Detect @mention trigger
-                val cursor = newValue.selection.start
-                val text = newValue.text
-                if (cursor > 0) {
-                    // Find the @ before cursor
-                    val beforeCursor = text.substring(0, cursor)
-                    val atIndex = beforeCursor.lastIndexOf('@')
-                    if (atIndex >= 0) {
-                        val between = beforeCursor.substring(atIndex + 1)
-                        // Only trigger if no space in the mention query and @ is at start or preceded by space
-                        if (!between.contains(' ') && !between.contains('\n') &&
-                            (atIndex == 0 || text[atIndex - 1] == ' ' || text[atIndex - 1] == '\n')
-                        ) {
-                            mentionQuery = between
-                            mentionStart = atIndex
-                        } else {
-                            mentionQuery = null
-                            suggestions = emptyList()
-                        }
-                    } else {
-                        mentionQuery = null
-                        suggestions = emptyList()
-                    }
-                } else {
-                    mentionQuery = null
-                    suggestions = emptyList()
-                }
-            },
+            onValueChange = onValueChange,
             label = label,
             placeholder = placeholder,
             maxLines = maxLines,
@@ -165,7 +151,18 @@ fun MentionTextField(
             }
         )
 
-        if (suggestions.isNotEmpty()) {
+        // Results belong to the mention they were found for: one begun
+        // elsewhere in the text shows nothing until its own arrive.
+        val shown = lookup?.takeIf { query != null && it.start == start }
+        val failure = shown?.failure
+        if (failure != null) {
+            Text(
+                text = failure,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = spacing.gap(12.dp), vertical = spacing.gap(8.dp))
+            )
+        } else if (shown != null && shown.suggestions.isNotEmpty()) {
             MochiCard(
                 modifier = Modifier.fillMaxWidth(),
                 shape = mochiPopupShape(),
@@ -175,28 +172,21 @@ fun MentionTextField(
                 elevation = CardDefaults.cardElevation(defaultElevation = MochiPopupElevation)
             ) {
                 LazyColumn(modifier = Modifier.heightIn(max = 160.dp)) {
-                    items(suggestions.take(5)) { suggestion ->
+                    items(shown.suggestions.take(5)) { suggestion ->
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    // Replace @query with @[name]
-                                    val text = value.text
-                                    val replacement = "@[${suggestion.name}] "
-                                    val before = text.substring(0, mentionStart)
-                                    val after = text.substring(
-                                        (mentionStart + 1 + (mentionQuery?.length ?: 0))
-                                            .coerceAtMost(text.length)
-                                    )
-                                    val newText = before + replacement + after
-                                    val newCursor = before.length + replacement.length
-                                    onValueChange(
-                                        TextFieldValue(newText, TextRange(newCursor))
-                                    )
-                                    mentionQuery = null
-                                    suggestions = emptyList()
+                                    // Read at the tap, from the value the field
+                                    // holds now, so the replacement indexes the
+                                    // text it was found in.
+                                    val now = current
+                                    val at = mentionAt(now)?.takeIf { it.start == shown.start }
+                                        ?: return@clickable
+                                    change(mentioned(now, at, suggestion.name))
+                                    lookup = null
                                 }
-                                .padding(horizontal = 12.dp, vertical = 8.dp)
+                                .padding(horizontal = spacing.gap(12.dp), vertical = spacing.gap(8.dp))
                         ) {
                             Text(
                                 text = suggestion.name,
@@ -208,4 +198,38 @@ fun MentionTextField(
             }
         }
     }
+}
+
+/** An @mention being written: where its @ is, and what follows it up to the cursor. */
+internal data class Mention(val start: Int, val query: String)
+
+/** What a search for the mention whose @ is at [start] found, or the line saying why it failed. */
+private class Lookup(val start: Int, val suggestions: List<MentionSuggestion>, val failure: String?)
+
+/**
+ * The mention [value]'s cursor is in, or null: an @ at the start of the text
+ * or after a space or line break, with neither between it and the cursor.
+ */
+internal fun mentionAt(value: TextFieldValue): Mention? {
+    val text = value.text
+    val cursor = value.selection.start
+    if (cursor <= 0 || cursor > text.length) return null
+    val at = text.lastIndexOf('@', cursor - 1)
+    if (at < 0) return null
+    val query = text.substring(at + 1, cursor)
+    if (query.contains(' ') || query.contains('\n')) return null
+    if (at > 0 && text[at - 1] != ' ' && text[at - 1] != '\n') return null
+    return Mention(at, query)
+}
+
+/**
+ * [value] with [mention], which must be [mentionAt]'s answer for it, written
+ * out as @[name] and a space, and the cursor after them.
+ */
+internal fun mentioned(value: TextFieldValue, mention: Mention, name: String): TextFieldValue {
+    val text = value.text
+    val replacement = "@[$name] "
+    val before = text.substring(0, mention.start)
+    val after = text.substring(mention.start + 1 + mention.query.length)
+    return TextFieldValue(before + replacement + after, TextRange(before.length + replacement.length))
 }

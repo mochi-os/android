@@ -47,7 +47,7 @@ fun CreateForumScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.forums_create_title),
         submitLabel = stringResource(R.string.forums_create_action),
-        submitEnabled = name.isNotBlank() && !uiState.isCreating,
+        submitEnabled = name.isNotBlank(),
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

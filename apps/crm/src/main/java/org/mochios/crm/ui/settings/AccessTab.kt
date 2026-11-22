@@ -112,6 +112,8 @@ fun AccessTab(
             groups = uiState.groups.map { group ->
                 AccessCandidate("@${group.id}", group.name, group.id)
             },
+            groupsLoading = uiState.isLoadingGroups,
+            groupsError = uiState.groupsError,
             onSearchUsers = { query -> viewModel.searchUsers(query) },
             onLoadGroups = { viewModel.loadGroups() },
             onSetAccess = { subject, level, onDone -> viewModel.setAccess(subject, level, onDone) },

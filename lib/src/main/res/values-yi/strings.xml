@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">קאָנטע אויפֿגעהאַנגען</string>
     <string name="common_back">צוריק</string>
     <string name="common_close">פֿאַרמאַכן</string>
+    <string name="common_clear_search">רייניקן זוכן</string>
+    <string name="drawer_open">עפֿן מעניו</string>
     <string name="common_cancel">אָפּזאָגן</string>
     <string name="common_filter">פֿילטער</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">צולײגן אַ צוטריט־כּלל</string>
     <string name="access_level_manage">פֿאַרוואַלטן</string>
     <string name="access_level_react">רעאַגירן</string>
-    <string name="notifications_clear">רייניקן מעלדונגען</string>
     <string name="entity_avatar_alt">אַװאַטאַר פֿאַר %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">זוכט אויפדאַטירונגען</string>
     <string name="about_up_to_date">אויפן נייַעסטן</string>
     <string name="about_check_downloading">ווערסיע %1$s פֿאַראַן, אַראָפּלאָדן…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">האָט נישט געקענט דערגרייכן דעם אויפדאַטירונג סערווער</string>
     <string name="about_check_download_failed">אַראָפּלאָדן דורכגעפֿאַלן</string>
     <string name="notifications_clear_all_title">באַזייטיקט אַלע מעלדונגען?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">פֿעט</string>
     <string name="format_italic">קורסיוו</string>
     <string name="format_link">לינק</string>
+    <string name="format_link_text">טעקסט</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">קעפּל</string>
     <string name="format_code">קאָד</string>
     <string name="format_list">רשימה מיט פּינטלעך</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">אַראָפּנעמען די צוטריט־כּלל פֿאַר \"%1$s\"?</string>
     <string name="color_picker_custom">אָנגעפּאַסט</string>
     <string name="color_picker_clear">רייניקן</string>
+    <string name="color_picker_white">ווײַס</string>
+    <string name="color_picker_slate">שיפֿער־גרוי</string>
+    <string name="color_picker_red">רויט</string>
+    <string name="color_picker_orange">אָראַנזש</string>
+    <string name="color_picker_amber">בורשטין</string>
+    <string name="color_picker_green">גרין</string>
+    <string name="color_picker_teal">בלוי־גרין</string>
+    <string name="color_picker_cyan">ציאַן</string>
+    <string name="color_picker_blue">בלוי</string>
+    <string name="color_picker_violet">פֿיאָלעט</string>
+    <string name="color_picker_pink">ראָז</string>
+    <string name="color_picker_black">שוואַרץ</string>
     <string name="common_refresh">דערפֿריש</string>
     <string name="launcher_add_to_home">לייגן צו היים עקראַן</string>
     <string name="common_continue">ממשיך</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">אומגעלייענט</string>
     <string name="person_unknown">אומבאַקאַנט</string>
+    <string name="group_unknown">אומבאַקאַנטע גרופּע</string>
     <string name="format_time_seconds_short">%1$sס</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ווערט אַראָפּגעלאָדן…</string>

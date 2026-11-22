@@ -35,6 +35,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import org.mochios.android.R
+import org.mochios.android.ui.theme.LocalSpacing
 import org.mochios.android.util.AttachmentOpener
 import org.mochios.android.util.OPAQUE_MIME
 
@@ -77,12 +78,13 @@ fun UnopenedFileDialog(
         dismissText = stringResource(R.string.common_cancel),
         dismissEnabled = !saving,
         content = {
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            val spacing = LocalSpacing.current
+            Column(verticalArrangement = Arrangement.spacedBy(spacing.gap(8.dp))) {
                 Text(
                     text = stringResource(R.string.common_file_actions_text),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.padding(bottom = 8.dp),
+                    modifier = Modifier.padding(bottom = spacing.gap(8.dp)),
                 )
                 MochiButton(
                     onClick = { saver.launch(file) },
@@ -92,7 +94,7 @@ fun UnopenedFileDialog(
                     Icon(Icons.Outlined.Download, contentDescription = null)
                     Text(
                         text = stringResource(R.string.common_file_save_to_device),
-                        modifier = Modifier.padding(start = 8.dp),
+                        modifier = Modifier.padding(start = spacing.gap(8.dp)),
                     )
                 }
                 MochiOutlinedButton(
@@ -110,7 +112,7 @@ fun UnopenedFileDialog(
                     Icon(Icons.Outlined.Share, contentDescription = null)
                     Text(
                         text = stringResource(R.string.common_file_share),
-                        modifier = Modifier.padding(start = 8.dp),
+                        modifier = Modifier.padding(start = spacing.gap(8.dp)),
                     )
                 }
             }

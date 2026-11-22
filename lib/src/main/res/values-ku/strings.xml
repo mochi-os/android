@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Hesab hat sekinandin</string>
     <string name="common_back">Vegere</string>
     <string name="common_close">Bigire</string>
+    <string name="common_clear_search">Lêgerînê paqij bike</string>
+    <string name="drawer_open">Menûyê veke</string>
     <string name="common_cancel">Betal bike</string>
     <string name="common_filter">Parzûna</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Qaîdeya gihîştinê zêde bike</string>
     <string name="access_level_manage">Rêvebirin</string>
     <string name="access_level_react">Bertek</string>
-    <string name="notifications_clear">Agahdariyan paqij bike</string>
     <string name="entity_avatar_alt">Avatara %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Li nûvekirinan bigere</string>
     <string name="about_up_to_date">Nûjen e</string>
     <string name="about_check_downloading">Guhertoya %1$s heye, tê daxistin…</string>
+    <string name="about_download_percent">%%%1$s</string>
     <string name="about_check_network_error">Nekarî bigihîje servera nûvekirinê</string>
     <string name="about_check_download_failed">Daxistin têk çû</string>
     <string name="notifications_clear_all_title">Hemû agahdarî bên paqijkirin?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Stûr</string>
     <string name="format_italic">Xwar</string>
     <string name="format_link">Girêdan</string>
+    <string name="format_link_text">nivîs</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Sernav</string>
     <string name="format_code">Kod</string>
     <string name="format_list">Lîsteya xalan</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Rêbaza gihîştinê ya \"%1$s\" were rakirin?</string>
     <string name="color_picker_custom">Taybet</string>
     <string name="color_picker_clear">Paqij bike</string>
+    <string name="color_picker_white">Spî</string>
+    <string name="color_picker_slate">Gewr</string>
+    <string name="color_picker_red">Sor</string>
+    <string name="color_picker_orange">Porteqalî</string>
+    <string name="color_picker_amber">Kehrebayî</string>
+    <string name="color_picker_green">Kesk</string>
+    <string name="color_picker_teal">Kesk-şîn</string>
+    <string name="color_picker_cyan">Şînê vekirî</string>
+    <string name="color_picker_blue">Şîn</string>
+    <string name="color_picker_violet">Mor</string>
+    <string name="color_picker_pink">Pembe</string>
+    <string name="color_picker_black">Reş</string>
     <string name="common_refresh">Nûjen bike</string>
     <string name="launcher_add_to_home">Li ekrana malê zêde bike</string>
     <string name="common_continue">Berdewam bike</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Nexwendî</string>
     <string name="person_unknown">Nediyar</string>
+    <string name="group_unknown">Koma nediyar</string>
     <string name="format_time_seconds_short">%1$sç</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s tê daxistin…</string>

@@ -48,7 +48,7 @@ fun CreateClassScreen(
     CreateEntityScaffold(
         title = stringResource(R.string.crm_classes_add_dialog_title),
         submitLabel = stringResource(R.string.crm_classes_create),
-        submitEnabled = name.isNotBlank() && !uiState.isCreating,
+        submitEnabled = name.isNotBlank(),
         isBusy = uiState.isCreating,
         error = uiState.error,
         onBack = onBack,

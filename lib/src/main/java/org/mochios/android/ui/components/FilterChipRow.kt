@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A row of filter chips, one per option, the app's one way to lay out a set of
@@ -46,8 +47,8 @@ fun <T> FilterChipRow(
     modifier: Modifier = Modifier,
     singleLine: Boolean = false,
     contentPadding: PaddingValues = PaddingValues(0.dp),
-    horizontalSpacing: Dp = 8.dp,
-    verticalSpacing: Dp = 8.dp,
+    horizontalSpacing: Dp = LocalSpacing.current.gap(8.dp),
+    verticalSpacing: Dp = LocalSpacing.current.gap(8.dp),
     leading: (@Composable () -> Unit)? = null,
 ) {
     val chips: @Composable () -> Unit = {

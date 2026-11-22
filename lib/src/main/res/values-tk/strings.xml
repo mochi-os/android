@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Hasap togtadyldy</string>
     <string name="common_back">Yza</string>
     <string name="common_close">Ýapmak</string>
+    <string name="common_clear_search">Gözlegi arassalamak</string>
+    <string name="drawer_open">Menýuny aç</string>
     <string name="common_cancel">Ýatyrmak</string>
     <string name="common_filter">Süzgüç</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Giriş düzgünini goş</string>
     <string name="access_level_manage">Dolandyr</string>
     <string name="access_level_react">Reaksiýa bildir</string>
-    <string name="notifications_clear">Bildirişleri arassala</string>
     <string name="entity_avatar_alt">%1$s üçin awatar</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Täzelenmeleri barla</string>
     <string name="about_up_to_date">Iň soňky wersiýa</string>
     <string name="about_check_downloading">%1$s wersiýasy elýeterli, ýüklenýär…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Täzeleniş serweri elýeterli däl</string>
     <string name="about_check_download_failed">Ýükläp almak başartmady</string>
     <string name="notifications_clear_all_title">Ähli bildirişleri arassalamalymy?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Galyň</string>
     <string name="format_italic">Gyşyk</string>
     <string name="format_link">Salgy</string>
+    <string name="format_link_text">tekst</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Sözbaşy</string>
     <string name="format_code">Kod</string>
     <string name="format_list">Nokatly sanaw</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\" üçin giriş düzgüni aýrylsynmy?</string>
     <string name="color_picker_custom">Hususy</string>
     <string name="color_picker_clear">Arassalamak</string>
+    <string name="color_picker_white">Ak</string>
+    <string name="color_picker_slate">Gök çal</string>
+    <string name="color_picker_red">Gyzyl</string>
+    <string name="color_picker_orange">Mämişi</string>
+    <string name="color_picker_amber">Kährebaý</string>
+    <string name="color_picker_green">Ýaşyl</string>
+    <string name="color_picker_teal">Gök-ýaşyl</string>
+    <string name="color_picker_cyan">Açyk gök</string>
+    <string name="color_picker_blue">Gök</string>
+    <string name="color_picker_violet">Benewşe</string>
+    <string name="color_picker_pink">Gülgüne</string>
+    <string name="color_picker_black">Gara</string>
     <string name="common_refresh">Täzele</string>
     <string name="launcher_add_to_home">Esasy ekrana goş</string>
     <string name="common_continue">Dowam etmek</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">Okalmadyk</string>
     <string name="person_unknown">Näbelli</string>
+    <string name="group_unknown">Näbelli topar</string>
     <string name="format_time_seconds_short">%1$ssek</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s ýüklenýär…</string>

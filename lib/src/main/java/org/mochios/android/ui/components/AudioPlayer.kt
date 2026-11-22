@@ -26,6 +26,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -37,17 +38,19 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.media3.common.C
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
-import androidx.media3.exoplayer.ExoPlayer
 import kotlinx.coroutines.delay
 import org.mochios.android.R
 import org.mochios.android.api.OwnedAddress
+import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * Compact inline player for one of the app's own audio attachments, streamed
- * with a credential. Drives [ExoPlayer] directly rather than Media3's
+ * with a credential. Drives an ExoPlayer directly rather than Media3's
  * `PlayerView` so the row is plain Compose and themes inside a chat bubble.
  */
 @Composable
@@ -71,21 +74,48 @@ private fun AudioPlayer(
     modifier: Modifier,
 ) {
     val context = LocalContext.current
-    val exoPlayer = remember(url, own) { assetPlayer(context, url, own) }
+    key(url, own) {
+        AudioRow(
+            build = {
+                assetPlayer(context, url, own, C.AUDIO_CONTENT_TYPE_MUSIC).apply {
+                    setMediaItem(MediaItem.fromUri(url))
+                    prepare()
+                }
+            },
+            modifier = modifier,
+        )
+    }
+}
 
+/**
+ * The player's row. The player itself is made by [build] on the first tap of
+ * play, not with the row: a thread holding several audio attachments opened a
+ * player, a decoder and a download for each as it scrolled into view, for
+ * clips mostly never played. Until then the clock reads zero, since an
+ * attachment carries no length. The player is released when the row leaves
+ * composition, and paused when the app goes to the background.
+ */
+@Composable
+internal fun AudioRow(
+    build: () -> Player,
+    modifier: Modifier = Modifier,
+) {
+    var player by remember { mutableStateOf<Player?>(null) }
     var isPlaying by remember { mutableStateOf(false) }
     var durationMs by remember { mutableLongStateOf(0L) }
     var positionMs by remember { mutableLongStateOf(0L) }
 
-    DisposableEffect(url, own) {
+    val current = player
+    DisposableEffect(current) {
+        if (current == null) return@DisposableEffect onDispose {}
         val listener = object : Player.Listener {
             override fun onPlaybackStateChanged(state: Int) {
                 if (state == Player.STATE_READY) {
-                    durationMs = exoPlayer.duration.coerceAtLeast(0L)
+                    durationMs = current.duration.coerceAtLeast(0L)
                 }
                 if (state == Player.STATE_ENDED) {
-                    exoPlayer.seekTo(0)
-                    exoPlayer.playWhenReady = false
+                    current.seekTo(0)
+                    current.playWhenReady = false
                 }
             }
 
@@ -93,23 +123,27 @@ private fun AudioPlayer(
                 isPlaying = playing
             }
         }
-        exoPlayer.addListener(listener)
-        exoPlayer.setMediaItem(MediaItem.fromUri(url))
-        exoPlayer.prepare()
+        current.addListener(listener)
+        // What the player reported before the listener was on.
+        isPlaying = current.isPlaying
+        if (current.playbackState == Player.STATE_READY) durationMs = current.duration.coerceAtLeast(0L)
 
         onDispose {
-            exoPlayer.removeListener(listener)
-            exoPlayer.release()
+            current.removeListener(listener)
+            current.release()
         }
     }
 
+    PauseInBackground(current, resume = false)
+
     // Poll the play head while playing; ExoPlayer has no per-frame callback.
-    LaunchedEffect(isPlaying) {
+    LaunchedEffect(isPlaying, current) {
+        if (current == null) return@LaunchedEffect
         while (isPlaying) {
-            positionMs = exoPlayer.currentPosition
+            positionMs = current.currentPosition
             delay(200)
         }
-        positionMs = exoPlayer.currentPosition
+        positionMs = current.currentPosition
     }
 
     val fraction = if (durationMs > 0L) {
@@ -117,15 +151,17 @@ private fun AudioPlayer(
     } else {
         0f
     }
+    val format = LocalFormat.current
 
     Row(
         modifier = modifier,
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(4.dp)
+        horizontalArrangement = Arrangement.spacedBy(LocalSpacing.current.gap(4.dp))
     ) {
         MochiIconButton(
             onClick = {
-                if (isPlaying) exoPlayer.pause() else exoPlayer.play()
+                val active = player ?: build().also { made -> player = made }
+                if (active.playWhenReady) active.pause() else active.play()
             }
         ) {
             Icon(
@@ -144,14 +180,14 @@ private fun AudioPlayer(
             modifier = Modifier
                 .weight(1f)
                 .height(24.dp)
-                .pointerInput(durationMs) {
+                .pointerInput(durationMs, current) {
                     detectTapGestures { offset ->
-                        seekToX(exoPlayer, durationMs, offset.x, size.width) { positionMs = it }
+                        seekToX(current, durationMs, offset.x, size.width) { positionMs = it }
                     }
                 }
-                .pointerInput(durationMs) {
+                .pointerInput(durationMs, current) {
                     detectHorizontalDragGestures { change, _ ->
-                        seekToX(exoPlayer, durationMs, change.position.x, size.width) { positionMs = it }
+                        seekToX(current, durationMs, change.position.x, size.width) { positionMs = it }
                     }
                 },
             contentAlignment = Alignment.CenterStart
@@ -170,7 +206,7 @@ private fun AudioPlayer(
         }
 
         Text(
-            text = "${formatClock(positionMs)} / ${formatClock(durationMs)}",
+            text = "${format.formatDuration(positionMs)} / ${format.formatDuration(durationMs)}",
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -179,27 +215,14 @@ private fun AudioPlayer(
 
 /** Seeks [player] to the fraction of [durationMs] at horizontal pixel [x] of [width]. */
 private fun seekToX(
-    player: ExoPlayer,
+    player: Player?,
     durationMs: Long,
     x: Float,
     width: Int,
     onSeek: (Long) -> Unit
 ) {
-    if (durationMs <= 0L || width <= 0) return
+    if (player == null || durationMs <= 0L || width <= 0) return
     val target = ((x / width).coerceIn(0f, 1f) * durationMs).toLong()
     onSeek(target)
     player.seekTo(target)
-}
-
-/** Formats a millisecond position as `m:ss` (or `h:mm:ss` past an hour). */
-private fun formatClock(ms: Long): String {
-    val totalSeconds = (ms / 1000).coerceAtLeast(0L)
-    val hours = totalSeconds / 3600
-    val minutes = (totalSeconds % 3600) / 60
-    val seconds = totalSeconds % 60
-    return if (hours > 0L) {
-        "%d:%02d:%02d".format(hours, minutes, seconds)
-    } else {
-        "%d:%02d".format(minutes, seconds)
-    }
 }

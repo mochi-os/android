@@ -23,7 +23,9 @@ import androidx.compose.ui.platform.LocalResources
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import org.mochios.android.format.personName
 import org.mochios.android.ui.components.AccessCandidate
+import org.mochios.android.util.fingerprint
 import org.mochios.android.ui.components.AccessLabels
 import org.mochios.android.ui.components.AccessRulesSection
 import org.mochios.android.ui.components.AccessSubjectRule
@@ -112,11 +114,13 @@ fun AccessTab(
             // The fingerprint is the subject the server knows a person by,
             // where one is resolved.
             users = state.userSearchResults.map { user ->
-                AccessCandidate(user.fingerprint ?: user.id, user.name.ifBlank { user.id })
+                AccessCandidate(user.fingerprint ?: user.id, personName(user.name, user.fingerprint ?: fingerprint(user.id)))
             },
             groups = state.groups.map { group ->
                 AccessCandidate("@${group.id}", group.name, group.id)
             },
+            groupsLoading = state.isLoadingGroups,
+            groupsError = state.groupsError,
             onSearchUsers = { query -> viewModel.searchUsers(query) },
             onLoadGroups = { viewModel.loadGroups() },
             onSetAccess = { subject, level, onDone -> viewModel.setAccess(subject, level, onDone) },

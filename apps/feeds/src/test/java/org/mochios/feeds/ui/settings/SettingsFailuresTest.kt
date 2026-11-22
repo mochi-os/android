@@ -20,6 +20,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -215,6 +216,17 @@ class SettingsFailuresTest {
         model.loadAiPrompts()
         until { model.error.value != null }
         assertNotNull("THE POINT: the prompts' failure is said", model.error.value)
+    }
+
+    @Test
+    fun `groups load at once, and groups that cannot be read are said, not taken for none`() {
+        val model = settings()
+        refused = setOf("/feeds/-/groups")
+        model.loadGroups()
+        assertTrue("THE POINT: loading from the call, before the answer", model.isLoadingGroups.value)
+        until { !model.isLoadingGroups.value }
+        assertNotNull("THE POINT: the failure is kept for the dialog to show", model.groupsError.value)
+        assertTrue(model.groups.value.isEmpty())
     }
 
     @Test

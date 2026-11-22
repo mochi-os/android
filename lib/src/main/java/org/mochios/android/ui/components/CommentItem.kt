@@ -67,6 +67,7 @@ import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
 import org.mochios.android.i18n.formatRelativeTime
 import org.mochios.android.model.Attachment
+import org.mochios.android.ui.theme.LocalSpacing
 
 /**
  * A single comment row: header, body, attachments, and a trailing [actions]
@@ -99,7 +100,7 @@ fun CommentItem(
     onEditTextChange: (String) -> Unit = {},
     onSaveEdit: () -> Unit = {},
     onCancelEdit: () -> Unit = {},
-    horizontalPadding: Dp = 16.dp,
+    horizontalPadding: Dp = LocalSpacing.current.gap(16.dp),
     anchorThumbnailUrl: OwnedAddress? = null,
     anchorCaption: String = "",
     onOpenAnchor: (() -> Unit)? = null,
@@ -133,6 +134,7 @@ fun CommentItem(
     val expandLabel = stringResource(R.string.common_expand)
     val highlight = MaterialTheme.colorScheme.primary
     val shape = RoundedCornerShape(8.dp)
+    val spacing = LocalSpacing.current
 
     Row(
         modifier = modifier
@@ -140,7 +142,7 @@ fun CommentItem(
             .height(IntrinsicSize.Min)
     ) {
         if (depth > 0) {
-            val lead = horizontalPadding + 16.dp * (depth - 1).coerceAtMost(4)
+            val lead = horizontalPadding + spacing.gap(16.dp) * (depth - 1).coerceAtMost(4)
             // The bar is 2dp; its touch area reaches a little to either side,
             // ending where the comment's own content begins.
             val reach = minOf(lead, 4.dp)
@@ -148,7 +150,7 @@ fun CommentItem(
             Box(
                 modifier = Modifier
                     .fillMaxHeight()
-                    .width(reach + 12.dp)
+                    .width(reach + spacing.gap(12.dp))
                     .then(
                         if (onCollapseParent != null) {
                             Modifier.clickable(
@@ -176,14 +178,14 @@ fun CommentItem(
         Column(
             modifier = Modifier
                 .weight(1f)
-                .padding(end = horizontalPadding, top = 8.dp, bottom = 8.dp)
+                .padding(end = horizontalPadding, top = spacing.gap(8.dp), bottom = spacing.gap(8.dp))
                 .then(
                     if (highlighted) {
                         Modifier
                             .clip(shape)
                             .background(highlight.copy(alpha = 0.1f))
                             .border(1.dp, highlight.copy(alpha = 0.3f), shape)
-                            .padding(horizontal = 10.dp, vertical = 6.dp)
+                            .padding(horizontal = spacing.gap(10.dp), vertical = spacing.gap(6.dp))
                     } else {
                         Modifier
                     }
@@ -209,7 +211,7 @@ fun CommentItem(
                     seed = seed,
                     size = 20.dp,
                 )
-                Spacer(modifier = Modifier.width(6.dp))
+                Spacer(modifier = Modifier.width(spacing.gap(6.dp)))
                 Text(
                     text = displayName,
                     style = MaterialTheme.typography.labelMedium,
@@ -218,7 +220,7 @@ fun CommentItem(
                     modifier = if (onName != null) Modifier.clickable(onClick = onName) else Modifier,
                 )
                 if (badge != null) {
-                    Spacer(modifier = Modifier.width(6.dp))
+                    Spacer(modifier = Modifier.width(spacing.gap(6.dp)))
                     Text(
                         text = badge,
                         style = MaterialTheme.typography.labelSmall,
@@ -227,17 +229,17 @@ fun CommentItem(
                         modifier = Modifier
                             .clip(RoundedCornerShape(4.dp))
                             .background(highlight.copy(alpha = 0.1f))
-                            .padding(horizontal = 4.dp, vertical = 1.dp),
+                            .padding(horizontal = spacing.gap(4.dp), vertical = spacing.gap(1.dp)),
                     )
                 }
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(spacing.gap(8.dp)))
                 Text(
                     text = LocalFormat.current.formatRelativeTime(created),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 if (folded) {
-                    Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.width(spacing.gap(8.dp)))
                     Text(
                         text = pluralStringResource(
                             R.plurals.comment_collapsed_replies,
@@ -251,7 +253,7 @@ fun CommentItem(
                     )
                 }
                 if (!folded && edited > 0) {
-                    Spacer(modifier = Modifier.width(4.dp))
+                    Spacer(modifier = Modifier.width(spacing.gap(4.dp)))
                     Text(
                         text = stringResource(R.string.comment_edited),
                         style = MaterialTheme.typography.labelSmall,
@@ -259,7 +261,7 @@ fun CommentItem(
                     )
                 }
                 if (!folded && anchorThumbnailUrl != null) {
-                    Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.width(spacing.gap(8.dp)))
                     AnchorChip(
                         thumbnailUrl = anchorThumbnailUrl,
                         caption = anchorCaption,
@@ -270,7 +272,7 @@ fun CommentItem(
 
             if (folded) return@Column
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
 
             if (isEditing) {
                 CommentEditor(
@@ -286,7 +288,7 @@ fun CommentItem(
                 )
 
                 if (attachments.isNotEmpty()) {
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
                     AttachmentGallery(
                         attachments = attachments,
                         urlBuilder = attachmentUrl,
@@ -295,7 +297,7 @@ fun CommentItem(
                     )
                 }
 
-                Spacer(modifier = Modifier.height(4.dp))
+                Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
                 Row(verticalAlignment = Alignment.CenterVertically, content = actions)
             }
         }
@@ -313,6 +315,7 @@ private fun AnchorChip(
     onClick: (() -> Unit)?,
 ) {
     val description = stringResource(R.string.comment_anchor_open)
+    val spacing = LocalSpacing.current
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
@@ -330,7 +333,7 @@ private fun AnchorChip(
             shape = RoundedCornerShape(4.dp),
         )
         if (caption.isNotEmpty()) {
-            Spacer(modifier = Modifier.width(4.dp))
+            Spacer(modifier = Modifier.width(spacing.gap(4.dp)))
             Text(
                 text = caption,
                 style = MaterialTheme.typography.labelSmall,
@@ -460,7 +463,7 @@ fun CommentThreadBack(onClick: () -> Unit, modifier: Modifier = Modifier) {
             contentDescription = null,
             modifier = Modifier.size(18.dp),
         )
-        Spacer(modifier = Modifier.width(6.dp))
+        Spacer(modifier = Modifier.width(LocalSpacing.current.gap(6.dp)))
         Text(stringResource(R.string.comment_all))
     }
 }

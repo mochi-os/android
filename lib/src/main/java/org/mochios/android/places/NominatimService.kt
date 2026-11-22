@@ -15,6 +15,7 @@ import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.HttpUrl.Companion.toHttpUrl
+import org.mochios.android.api.MochiError
 import org.mochios.android.model.PlaceData
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
@@ -70,6 +71,12 @@ class NominatimService @Inject constructor(
         private const val USER_AGENT = "org.mochios.android/1.0"
     }
 
+    /**
+     * The places matching [query]; none for a query too short to look up.
+     * Throws when the lookup fails - a refused request as a [MochiError], an
+     * unreadable answer or no connection as [MochiError.NetworkError] - so a
+     * failed search never reads as one that found nothing.
+     */
     suspend fun search(query: String, limit: Int = 8): List<NominatimPlace> {
         val trimmed = query.trim()
         if (trimmed.length < 2) return emptyList()
@@ -86,10 +93,12 @@ class NominatimService @Inject constructor(
                 .header("Accept", "application/json")
                 .build()
             client.newCall(request).execute().use { response ->
-                if (!response.isSuccessful) return@use emptyList<NominatimPlace>()
-                val body = response.body?.string() ?: return@use emptyList<NominatimPlace>()
+                if (!response.isSuccessful) throw refusal(response.code)
+                val body = response.body?.string() ?: throw MochiError.NetworkError()
+                // Anything but a JSON list came from a proxy or a portal, not
+                // the geocoder.
                 val arr = runCatching { JsonParser.parseString(body).asJsonArray }
-                    .getOrNull() ?: return@use emptyList<NominatimPlace>()
+                    .getOrNull() ?: throw MochiError.NetworkError()
                 arr.mapNotNull { el ->
                     val obj = el.asJsonObject
                     val display = obj.get("display_name")?.asString ?: return@mapNotNull null
@@ -111,6 +120,14 @@ class NominatimService @Inject constructor(
                 }
             }
         }
+    }
+
+    // The geocoder's refusals are not Mochi's {error, message}, so only the
+    // status says what went wrong.
+    private fun refusal(code: Int): MochiError = when (code) {
+        403 -> MochiError.ForbiddenError()
+        in 500..599 -> MochiError.ServerError(code)
+        else -> MochiError.Unknown(code = code)
     }
 
     suspend fun reverse(lat: Double, lon: Double): NominatimPlace? {

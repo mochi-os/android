@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import org.mochios.android.ui.theme.LocalSpacing
 
 /** Collapses the runs of whitespace a markdown body carries into single spaces. */
 private fun flatten(text: String): String = text.replace(Regex("\\s+"), " ").trim()
@@ -54,12 +55,13 @@ fun ReplyComposerBanner(
     modifier: Modifier = Modifier,
 ) {
     val flattened = flatten(preview)
+    val spacing = LocalSpacing.current
 
     Row(
         modifier = modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surfaceVariant)
-            .padding(start = 12.dp, top = 6.dp, bottom = 6.dp),
+            .padding(start = spacing.gap(12.dp), top = spacing.gap(6.dp), bottom = spacing.gap(6.dp)),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Icon(
@@ -68,7 +70,7 @@ fun ReplyComposerBanner(
             tint = MaterialTheme.colorScheme.primary,
             modifier = Modifier.size(18.dp),
         )
-        Spacer(Modifier.width(8.dp))
+        Spacer(Modifier.width(spacing.gap(8.dp)))
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = label,

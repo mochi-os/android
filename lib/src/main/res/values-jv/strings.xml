@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Akun digantung</string>
     <string name="common_back">Bali</string>
     <string name="common_close">Tutup</string>
+    <string name="common_clear_search">Resiki panggolékan</string>
+    <string name="drawer_open">Bukak menu</string>
     <string name="common_cancel">Batal</string>
     <string name="common_filter">Saring</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -177,7 +179,6 @@
     <string name="access_add_rule_title">Tambah aturan akses</string>
     <string name="access_level_manage">Atur</string>
     <string name="access_level_react">Reaksi</string>
-    <string name="notifications_clear">Resiki notifikasi</string>
     <string name="entity_avatar_alt">Avatar kanggo %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="format_range">%1$s – %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Priksa nganyari</string>
     <string name="about_up_to_date">Wis paling anyar</string>
     <string name="about_check_downloading">Versi %1$s kasedhiya, ngundhuh…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">Ora bisa nyambung server nganyari</string>
     <string name="about_check_download_failed">Gagal ngundhuh</string>
     <string name="notifications_clear_all_title">Resiki kabeh notifikasi?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">Kandel</string>
     <string name="format_italic">Miring</string>
     <string name="format_link">Tautan</string>
+    <string name="format_link_text">teks</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Judhul</string>
     <string name="format_code">Kode</string>
     <string name="format_list">Dhaptar poin</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">Busak aturan akses kanggo \"%1$s\"?</string>
     <string name="color_picker_custom">Khusus</string>
     <string name="color_picker_clear">Resiki</string>
+    <string name="color_picker_white">Putih</string>
+    <string name="color_picker_slate">Abu-abu watu</string>
+    <string name="color_picker_red">Abang</string>
+    <string name="color_picker_orange">Oranye</string>
+    <string name="color_picker_amber">Ambar</string>
+    <string name="color_picker_green">Ijo</string>
+    <string name="color_picker_teal">Ijo biru</string>
+    <string name="color_picker_cyan">Biru enom</string>
+    <string name="color_picker_blue">Biru</string>
+    <string name="color_picker_violet">Wungu</string>
+    <string name="color_picker_pink">Jambon</string>
+    <string name="color_picker_black">Ireng</string>
     <string name="common_refresh">Muat manèh</string>
     <string name="launcher_add_to_home">Tambah ing layar utama</string>
     <string name="common_continue">Terus</string>
@@ -339,6 +355,7 @@
     </plurals>
     <string name="drawer_unread">Durung diwaca</string>
     <string name="person_unknown">Ora dimangerteni</string>
+    <string name="group_unknown">Grup sing ora dimangerteni</string>
     <string name="format_time_seconds_short">%1$sdt</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Ngundhuh %1$s…</string>

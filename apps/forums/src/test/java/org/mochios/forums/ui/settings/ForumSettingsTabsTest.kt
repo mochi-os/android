@@ -173,6 +173,17 @@ class ForumSettingsTabsTest {
     }
 
     @Test
+    fun `groups load at once, and groups that cannot be read are said, not taken for none`() {
+        val model = settings()
+        model.loadGroups()
+        assertTrue("THE POINT: loading from the call, before the answer", model.uiState.value.isLoadingGroups)
+        answered { !model.uiState.value.isLoadingGroups }
+        // The server answers no groups route here, so the read fails.
+        assertTrue("THE POINT: the failure is kept for the dialog to show", model.uiState.value.groupsError != null)
+        assertTrue(model.uiState.value.groups.isEmpty())
+    }
+
+    @Test
     fun `the AI tab shows the account the forum holds, and a mode change keeps it`() {
         settings { AiTab(it) }
         // THE POINT: the owner's own answer names the account; the row has none.

@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">Аккаунт приостановлен</string>
     <string name="common_back">Назад</string>
     <string name="common_close">Закрыть</string>
+    <string name="common_clear_search">Очистить поиск</string>
+    <string name="drawer_open">Открыть меню</string>
     <string name="common_cancel">Отмена</string>
     <string name="common_filter">Фильтр</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">Добавить правило доступа</string>
     <string name="access_level_manage">Управление</string>
     <string name="access_level_react">Реакции</string>
-    <string name="notifications_clear">Очистить уведомления</string>
     <string name="entity_avatar_alt">Аватар для %1$s</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">Проверить обновления</string>
     <string name="about_up_to_date">Актуальная версия</string>
     <string name="about_check_downloading">Версия %1$s доступна, загрузка…</string>
+    <string name="about_download_percent">%1$s %%</string>
     <string name="about_check_network_error">Не удалось связаться с сервером обновлений</string>
     <string name="about_check_download_failed">Не удалось скачать</string>
     <string name="notifications_clear_all_title">Очистить все уведомления?</string>
@@ -300,6 +302,8 @@
     <string name="format_bold">Полужирный</string>
     <string name="format_italic">Курсив</string>
     <string name="format_link">Ссылка</string>
+    <string name="format_link_text">текст</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">Заголовок</string>
     <string name="format_code">Код</string>
     <string name="format_list">Маркированный список</string>
@@ -325,6 +329,18 @@
     <string name="access_remove_message">Удалить правило доступа для «%1$s»?</string>
     <string name="color_picker_custom">Пользовательский</string>
     <string name="color_picker_clear">Очистить</string>
+    <string name="color_picker_white">Белый</string>
+    <string name="color_picker_slate">Грифельный</string>
+    <string name="color_picker_red">Красный</string>
+    <string name="color_picker_orange">Оранжевый</string>
+    <string name="color_picker_amber">Янтарный</string>
+    <string name="color_picker_green">Зелёный</string>
+    <string name="color_picker_teal">Сине-зелёный</string>
+    <string name="color_picker_cyan">Голубой</string>
+    <string name="color_picker_blue">Синий</string>
+    <string name="color_picker_violet">Фиолетовый</string>
+    <string name="color_picker_pink">Розовый</string>
+    <string name="color_picker_black">Чёрный</string>
     <string name="common_refresh">Обновить</string>
     <string name="launcher_add_to_home">Добавить на главный экран</string>
     <string name="common_continue">Продолжить</string>
@@ -344,6 +360,7 @@
     </plurals>
     <string name="drawer_unread">Непрочитанные</string>
     <string name="person_unknown">Неизвестно</string>
+    <string name="group_unknown">Неизвестная группа</string>
     <string name="format_time_seconds_short">%1$s с</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">Скачивание %1$s…</string>

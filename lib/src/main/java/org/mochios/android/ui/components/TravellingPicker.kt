@@ -16,6 +16,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.model.PlaceData
+import org.mochios.android.ui.theme.LocalSpacing
 
 @Composable
 fun TravellingPicker(
@@ -25,24 +26,25 @@ fun TravellingPicker(
     onDestinationSelected: (PlaceData) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val spacing = LocalSpacing.current
     Column(modifier = modifier) {
         Text(
             text = stringResource(R.string.place_origin),
             style = MaterialTheme.typography.labelLarge
         )
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
         PlacePicker(
             place = origin,
             onPlaceSelected = onOriginSelected
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(24.dp)))
 
         Text(
             text = stringResource(R.string.place_destination),
             style = MaterialTheme.typography.labelLarge
         )
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.height(spacing.gap(4.dp)))
         PlacePicker(
             place = destination,
             onPlaceSelected = onDestinationSelected

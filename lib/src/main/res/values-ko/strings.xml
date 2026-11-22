@@ -17,6 +17,8 @@
     <string name="auth_error_suspended_title">계정이 정지되었어요</string>
     <string name="common_back">뒤로</string>
     <string name="common_close">닫기</string>
+    <string name="common_clear_search">검색 지우기</string>
+    <string name="drawer_open">메뉴 열기</string>
     <string name="common_cancel">취소</string>
     <string name="common_filter">필터</string>
     <string name="common_filter_chip">%1$s: %2$s</string>
@@ -175,7 +177,6 @@
     <string name="access_add_rule_title">접근 규칙 추가</string>
     <string name="access_level_manage">관리</string>
     <string name="access_level_react">반응</string>
-    <string name="notifications_clear">알림 지우기</string>
     <string name="entity_avatar_alt">%1$s의 아바타</string>
     <string name="media_grid_more_count">+%1$s</string>
     <string name="lightbox_position">%1$s / %2$s</string>
@@ -213,6 +214,7 @@
     <string name="about_check_updates">업데이트 확인</string>
     <string name="about_up_to_date">최신 버전입니다</string>
     <string name="about_check_downloading">버전 %1$s 사용 가능, 다운로드 중…</string>
+    <string name="about_download_percent">%1$s%%</string>
     <string name="about_check_network_error">업데이트 서버에 연결할 수 없습니다</string>
     <string name="about_check_download_failed">다운로드 실패</string>
     <string name="notifications_clear_all_title">모든 알림을 지우시겠습니까?</string>
@@ -298,6 +300,8 @@
     <string name="format_bold">굵게</string>
     <string name="format_italic">기울임꼴</string>
     <string name="format_link">링크</string>
+    <string name="format_link_text">텍스트</string>
+    <string name="format_link_address">URL</string>
     <string name="format_heading">제목</string>
     <string name="format_code">코드</string>
     <string name="format_list">글머리 기호 목록</string>
@@ -323,6 +327,18 @@
     <string name="access_remove_message">\"%1$s\"의 접근 규칙을 제거할까요?</string>
     <string name="color_picker_custom">사용자 지정</string>
     <string name="color_picker_clear">지우기</string>
+    <string name="color_picker_white">흰색</string>
+    <string name="color_picker_slate">슬레이트</string>
+    <string name="color_picker_red">빨간색</string>
+    <string name="color_picker_orange">주황색</string>
+    <string name="color_picker_amber">호박색</string>
+    <string name="color_picker_green">초록색</string>
+    <string name="color_picker_teal">청록색</string>
+    <string name="color_picker_cyan">시안</string>
+    <string name="color_picker_blue">파란색</string>
+    <string name="color_picker_violet">보라색</string>
+    <string name="color_picker_pink">분홍색</string>
+    <string name="color_picker_black">검은색</string>
     <string name="common_refresh">새로고침</string>
     <string name="launcher_add_to_home">홈 화면에 추가</string>
     <string name="common_continue">계속</string>
@@ -340,6 +356,7 @@
     </plurals>
     <string name="drawer_unread">읽지 않음</string>
     <string name="person_unknown">알 수 없음</string>
+    <string name="group_unknown">알 수 없는 그룹</string>
     <string name="format_time_seconds_short">%1$s초</string>
     <string name="format_time_pair">%1$s %2$s</string>
     <string name="downloads_started">%1$s 다운로드 중…</string>

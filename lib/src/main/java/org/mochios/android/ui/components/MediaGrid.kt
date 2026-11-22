@@ -10,6 +10,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,6 +31,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import org.mochios.android.R
 import org.mochios.android.i18n.LocalFormat
+import org.mochios.android.ui.theme.LocalSpacing
+import org.mochios.android.ui.theme.spaced
 
 /**
  * Grid of image attachments in the conventional Mochi layout: one full-width,
@@ -59,6 +62,7 @@ fun MediaGrid(
 
     val displayCount = minOf(urls.size, maxDisplay)
     val shape = RoundedCornerShape(10.dp)
+    val gap = LocalSpacing.current.gap(4.dp)
 
     fun thumbOrUrl(i: Int): Any = thumbnailUrls?.getOrNull(i) ?: urls[i]
     fun describe(i: Int): String? = contentDescriptions?.getOrNull(i)
@@ -90,7 +94,7 @@ fun MediaGrid(
         }
         2 -> {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(4.dp),
+                horizontalArrangement = Arrangement.spacedBy(gap),
                 modifier = modifier.fillMaxWidth()
             ) {
                 for (i in 0 until 2) {
@@ -109,7 +113,7 @@ fun MediaGrid(
         }
         else -> {
             Column(
-                verticalArrangement = Arrangement.spacedBy(4.dp),
+                verticalArrangement = Arrangement.spacedBy(gap),
                 modifier = modifier
             ) {
                 Box(
@@ -123,7 +127,7 @@ fun MediaGrid(
                     captionFor(0)?.let { AttachmentCaptionScrim(it, Modifier.align(Alignment.BottomCenter)) }
                 }
                 Row(
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(gap),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     for (i in 1 until displayCount) {
@@ -186,7 +190,7 @@ fun AttachmentCaptionScrim(caption: String, modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.labelSmall,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis,
-            modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp)
+            modifier = Modifier.padding(spaced(PaddingValues(horizontal = 6.dp, vertical = 4.dp)))
         )
     }
 }
